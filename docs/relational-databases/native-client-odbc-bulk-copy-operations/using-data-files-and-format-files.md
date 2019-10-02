@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Datendateien und Formatdateien | Microsoft-Dokumentation
+title: Verwenden von Datendateien und Format Dateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], data files
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fae3c62d923d2e52fd454493b7d1218608b233e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5110057262eb09acc40f3c546184f7ee75b784a8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134254"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707791"
 ---
 # <a name="using-data-files-and-format-files"></a>Verwenden von Datendateien und Formatdateien
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,17 +31,17 @@ ms.locfileid: "68134254"
 
   Das einfachste Massenkopierprogramm geht wie folgt vor:  
   
-1.  Aufrufe [Bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) an Massenkopieren (Set BCP_OUT) aus einer Tabelle oder Sicht in einer Datendatei.  
+1.  Ruft [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf, um das Massen kopieren (Set BCP_OUT) aus einer Tabelle oder Sicht in eine Datendatei anzugeben.  
   
-2.  Aufrufe [Bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) um den Massenkopiervorgang auszuführen.  
+2.  Ruft [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) auf, um den Massen Kopiervorgang auszuführen.  
   
- Die Datendatei wird im einheitlichen Modus erstellt. Daher werden Daten aus allen Spalten in der Tabelle oder Sicht in der Datendatei im gleichen Format wie in der Datenbank gespeichert. Die Datei kann dann mit derselben Vorgehensweise auf einen Server massenkopiert werden, mit der Ausnahme, dass DB_IN statt DB_OUT festgelegt wird. Dies funktioniert jedoch nur, wenn sowohl die Quell- als auch die Zieltabellen genau dieselbe Struktur aufweisen. Die resultierende Datendatei kann auch eingegeben werden, um die **Bcp** Hilfsprogramm mithilfe der **/n** (einheitlicher Modus) wechseln.  
+ Die Datendatei wird im einheitlichen Modus erstellt. Daher werden Daten aus allen Spalten in der Tabelle oder Sicht in der Datendatei im gleichen Format wie in der Datenbank gespeichert. Die Datei kann dann mit derselben Vorgehensweise auf einen Server massenkopiert werden, mit der Ausnahme, dass DB_IN statt DB_OUT festgelegt wird. Dies funktioniert jedoch nur, wenn sowohl die Quell- als auch die Zieltabellen genau dieselbe Struktur aufweisen. Die resultierende Datendatei kann auch mit dem Schalter **/n** (einheitlicher Modus) als Eingabe für das **bcp** -Hilfsprogramm verwendet werden.  
   
  So führen Sie einen Massenkopiervorgang des Resultsets einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung aus, anstatt direkt aus einer Tabelle oder Sicht zu kopieren:  
   
-1.  Rufen Sie **Bcp_init** Massenkopieren angeben, aber geben Sie NULL für den Tabellennamen an.  
+1.  Geben Sie **bcp_init** an, um das Massen kopieren anzugeben, geben Sie jedoch NULL für den Tabellennamen an.  
   
-2.  Rufen Sie [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) mit *eOption* auf BCPHINTS festgelegt und *iValue* auf einen Zeiger auf eine SQLTCHAR-Zeichenfolge, die mit der Transact-SQL-Anweisung festgelegt.  
+2.  Ruft [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) auf, wenn *eOption* auf BCPHINTS festgelegt und *iValue* auf einen Zeiger auf eine SQLTCHAR-Zeichenfolge festgelegt ist, die die Transact-SQL-Anweisung enthält.  
   
 3.  Rufen Sie **bcp_exec** auf, um den Massenkopiervorgang auszuführen.  
 
@@ -49,15 +49,15 @@ ms.locfileid: "68134254"
 
  Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kann jede Anweisung sein, die ein Resultset generiert. Die Datendatei wird mit dem ersten Resultset der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung erstellt. Beim Massenkopieren wird jedes Resultset nach dem ersten ignoriert, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung mehrere Resultsets generiert.  
   
- Rufen Sie zum Erstellen einer Datendatei in die Spalte Daten in einem anderen Format als in der Tabelle gespeichert [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) aufrufen, um anzugeben, wie viele Spalten geändert werden soll, klicken Sie dann [Bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) für jede Spalte, deren Format Sie möchten ändern. Dies erfolgt nach dem Aufruf **Bcp_init** aber vor dem Aufrufen **Bcp_exec**. **Bcp_colfmt** gibt das Format, in dem die Daten der Spalte in der Datendatei gespeichert ist. Sie können beim Massenkopieren von herunter- oder hochskalieren verwendet werden. Sie können auch **Bcp_colfmt** um die Zeilen- und Spaltenabschlusszeichen festzulegen. Z. B. wenn die Daten keine Tabulatorzeichen enthalten, können Sie erstellen eine Datei mit Tabstopptrennzeichen mit **Bcp_colfmt** das Tabulatorzeichen als Abschlusszeichen für jede Spalte festgelegt.  
+ Wenn Sie eine Datendatei erstellen möchten, in der Spaltendaten in einem anderen Format als in der Tabelle gespeichert werden, rufen Sie [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) auf, um anzugeben, wie viele Spalten geändert werden, und rufen Sie dann [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) für jede Spalte auf, deren Format Sie ändern möchten. Dies erfolgt nach dem Aufrufen von **bcp_init** , aber vor dem Aufrufen von **bcp_exec**. **bcp_colfmt** gibt das Format an, in dem die Daten der Spalte in der Datendatei gespeichert werden. Sie kann verwendet werden, wenn ein Massen Kopiervorgang oder ein Massen Kopiervorgang durch Sie können auch **bcp_colfmt** verwenden, um die Zeilen-und Spalten Terminatoren festzulegen. Wenn die Daten z. b. keine Tabulator Zeichen enthalten, können Sie eine durch Tabstopps getrennte Datei erstellen, indem Sie **bcp_colfmt** verwenden, um das Tabstopp Zeichen als Abschluss Zeichen für die einzelnen Spalten festzulegen.  
   
- Beim Massenkopieren und Verwenden von **Bcp_colfmt**, Sie können ganz einfach erstellen eine Formatdatei beschreiben die Datendatei, die Sie, durch den Aufruf erstellt haben [Bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) nach dem letzten Aufruf von **Bcp_colfmt**.  
+ Wenn Sie den Massen Kopiervorgang und die Verwendung von **bcp_colfmt**durchführen, können Sie problemlos eine Format Datei erstellen, die die Datendatei beschreibt, die Sie durch Aufrufen von [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) nach dem letzten Aufruf von **bcp_colfmt**erstellt haben.  
   
- Beim Massenkopieren aus einer Datendatei, die durch eine Formatdatei beschrieben wird, lesen Sie die Formatdatei durch Aufrufen von [Bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) nach **Bcp_init** aber vor **Bcp_exec**.  
+ Beim Massen kopieren aus einer Datendatei, die von einer Format Datei beschrieben wird, lesen Sie die Format Datei durch Aufrufen von [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) nach **bcp_init** , aber vor **bcp_exec**.  
   
- Die **Bcp_control** -Funktion steuert verschiedene Optionen beim Massenkopieren in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus einer Datendatei. **Bcp_control** Legt Optionen fest, wie z. B. die maximale Anzahl von Fehlern vor dem Beenden, wird die Zeile in der Datei auf dem für das Massenkopieren, die Zeile, auf Beenden und die Batchgröße zu beginnen.  
+ Die **bcp_control** -Funktion steuert mehrere Optionen beim Massen Kopieren von Daten aus einer Datendatei in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **bcp_control** legt Optionen fest, z. b. die maximale Anzahl von Fehlern vor dem Beenden, die Zeile in der Datei, in der der Massen Kopiervorgang gestartet werden soll, die Zeile, für die der Vorgang beendet werden soll, und die Batch Größe.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Durchführen von Massenkopiervorgängen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [Ausführen von Massen Kopier &#40;Vorgängen (ODBC)&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Massenkopierfunktionen | Microsoft-Dokumentation
+title: Massen Kopierfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - functions [ODBC]
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4e448675621b77fc79089e651daa5c822a5b87e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce1ee4536769ea1531a11ca3d57f049310ade042
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099417"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707593"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>SQL Server-Treibererweiterungen: Funktionen für Massenkopiervorgänge
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68099417"
 
   ODBC (Open Database Connectivity) ist eine Win32-Anwendungsprogrammierschnittstelle von Microsoft, mit deren Hilfe Anwendungen auf Daten in ODBC-Datenquellen zugreifen. In der Referenz zum ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sind nicht sämtliche ODBC-Funktionsaufrufe dokumentiert. Es werden nur diejenigen Funktionen besprochen, die über treiberspezifische Parameter verfügen oder ein treiberspezifisches Verhalten zeigen, wenn sie mit dem ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwendet werden.  
   
- Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client entspricht der Spezifikation für ODBC 3.51. Eine umfassende Referenz zu ODBC 3.51 benötigen, laden Sie das Microsoft Data Access Components SDK vom die [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173), oder zeigen Sie die [ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
+ Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client entspricht der Spezifikation für ODBC 3.51. Um eine umfassende Referenz zu ODBC 3,51 zu erhalten, laden Sie das Microsoft Data Access Components SDK aus dem [Developer Center für Datenzugriff und-Speicherung](https://go.microsoft.com/fwlink?linkid=4173)herunter, oder zeigen Sie die [ODBC-Programmier Referenz](https://go.microsoft.com/fwlink/?LinkId=45250) Online an.  
  
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische API-Erweiterung für Massenkopierfunktionen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treibers ermöglicht es Clientanwendungen, einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle auf schnelle Weise Datenzeilen hinzuzufügen bzw. Datenzeilen aus einer Tabelle zu extrahieren.  Bei der Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client können Sie die Massenkopierfunktionen (BCP) in SQLNCLI11.LIB und SQLNCLI.H nutzen.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68099417"
 -   [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Treibererweiterungen](https://msdn.microsoft.com/library/1043bc93-965d-4939-bd1c-21e9d8d3e9ac)   
- [Durchführen von Massenkopiervorgängen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [Treiber Erweiterungen für SQL Server](https://msdn.microsoft.com/library/1043bc93-965d-4939-bd1c-21e9d8d3e9ac)   
+ [Ausführen von Massen Kopier &#40;Vorgängen (ODBC)&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

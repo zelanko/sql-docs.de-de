@@ -1,5 +1,5 @@
 ---
-title: Bcp_colfmt | Microsoft-Dokumentation
+title: bcp_colfmt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce1182decfb5afe63e43aa527d89d1ebc44d179a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a08973bcfadb88750129fd440eeabb3f69bb2ddb
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895719"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707711"
 ---
-# <a name="bcpcolfmt"></a>bcp_colfmt
+# <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Gibt das Quell- oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat **Bcp_colfmt** gibt das Format einer vorhandenen Datendatei verwendet, die als Quelle der Daten in einem Massenkopiervorgang in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle. Bei Verwendung als Zielformat die Datendatei wird erstellt mithilfe der mit angegebenen Spaltenformate **Bcp_colfmt**.  
+  Gibt das Quell- oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat gibt **bcp_colfmt** das Format einer vorhandenen Datendatei an, die in einem Massen Kopiervorgang in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle als Datenquelle verwendet wird. Bei Verwendung als Zielformat wird die Datendatei mithilfe der mit **bcp_colfmt**angegebenen Spalten Formate erstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,19 +54,19 @@ RETCODE bcp_colfmt (
  Die Ordnungsnummer der Spalte in der Benutzerdatendatei, für die das Format angegeben wird. Die erste Spalte ist 1.  
   
  *eUserDataType*  
- Der Datentyp dieser Spalte in der Benutzerdatei. Wenn der Datentyp der entsprechenden Spalte in der Datenbanktabelle (*IdxServerColumn*), das Massenkopieren konvertiert die Daten Wenn möglich.  
+ Der Datentyp dieser Spalte in der Benutzerdatei. Wenn Sie sich vom Datentyp der entsprechenden Spalte in der Datenbanktabelle (*idxServerColumn*) unterscheiden, werden die Daten nach Möglichkeit durch Massen kopieren konvertiert.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Unterstützung für SQLXML und SQLUDT Datentyptoken in die *eUserDataType* Parameter.  
+ in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurde die Unterstützung für die Datentyp Token SQLXML und SQLUDT im *eUserDataType* -Parameter eingeführt.  
   
- Die *eUserDataType* Parameter aufgelistet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyptoken in sqlncli.h, nicht die ODBC-C-datentypenumeratoren. Sie können beispielsweise mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen SQLCHARACTER-Typs eine Zeichenfolge vom ODBC-Typ SQL_C_CHAR angeben.  
+ Der *eUserDataType* -Parameter wird durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp Token in sqlncli. h, nicht die ODBC-C-Datentyp Enumeratoren, aufgelistet. Sie können beispielsweise mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen SQLCHARACTER-Typs eine Zeichenfolge vom ODBC-Typ SQL_C_CHAR angeben.  
   
  Um die Standarddatendarstellung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp anzugeben, legen Sie diesen Parameter auf 0 fest.  
   
- Für einen Massenkopiervorgang von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datei, wenn *eUserDataType* SQLDECIMAL oder sqlnumeric festgelegt:  
+ Bei einem Massen Kopiervorgang aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datei, wenn *eUserDataType* auf SqlDecimal oder SQLNUMERIC festgelegt ist:  
   
--   Wenn die Quellspalte nicht **decimal** oder **numerischen**, werden verwendet, die standardmäßige Genauigkeit und Dezimalstellenanzahl.  
+-   Wenn die Quell Spalte nicht **Dezimal** oder **numerisch**ist, werden die Standardgenauigkeit und die Standardskala verwendet.  
   
--   Wenn die Quellspalte **decimal** oder **numerischen**, Genauigkeit und Dezimalstellen der Quellspalte verwendet werden.  
+-   Wenn die Quell Spalte **Dezimal** oder **numerisch**ist, werden die Genauigkeit und die Dezimalstellen der Quell Spalte verwendet.  
   
  *cbIndicator*  
  Die Länge eines Längen-/NULL-Indikators innerhalb der Spaltendaten in Byte. Gültige Indikatorlängenwerte sind 0 (wenn kein Indikator verwendet wird), 1, 2, 4 oder 8.  
@@ -82,11 +82,11 @@ RETCODE bcp_colfmt (
  *cbUserData*  
  Die maximale Länge (in Byte) der Daten dieser Spalte in der Benutzerdatei, ohne die Länge eines Längenindikators oder Abschlusszeichens.  
   
- Festlegen von *CbUserData* auf SQL_NULL_DATA wird angegeben, dass alle Werte in der datendateispalte sind, oder auf NULL festgelegt werden soll.  
+ Wenn Sie *cbUserData* auf SQL_NULL_DATA festlegen, wird angegeben, dass alle Werte in der Datendatei Spalte auf NULL festgelegt werden sollen.  
   
- Festlegen von *CbUserData* auf SQL_VARLEN_DATA gibt an, dass das System die Länge der Daten in jeder Spalte bestimmen soll. Für einige Spalten könnte dies bedeuten, dass ein Längen-/NULL-Indikator generiert wird, der den Daten in einer Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorangestellt wird, oder dass der Indikator in Daten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kopiert werden, erwartet wird.  
+ Das Festlegen von *cbUserData* auf SQL_VARLEN_DATA gibt an, dass das System die Länge der Daten in den einzelnen Spalten bestimmen soll. Für einige Spalten könnte dies bedeuten, dass ein Längen-/NULL-Indikator generiert wird, der den Daten in einer Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorangestellt wird, oder dass der Indikator in Daten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kopiert werden, erwartet wird.  
   
- Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichen und Binärdatentypen *CbUserData* bcp_length_variable, bcp_length_null, 0 oder ein positiver Wert sein kann. Wenn *CbUserData* auf sql_varlen_data festgelegt, verwendet das System entweder den Längenindikator, sofern vorhanden, oder eine abschlusszeichensequenz, um die Länge der Daten zu bestimmen. Wenn sowohl ein Längenindikator als auch eine Abschlusszeichensequenz angegeben sind, wird beim Massenkopieren der Wert verwendet, der zu der kleineren zu kopierenden Datenmenge führt. Wenn *CbUserData* auf sql_varlen_data festgelegt, die Daten der Typ ist ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichen oder Binärtyp, und weder ein Längenindikator noch eine abschlusszeichensequenz angegeben ist, gibt das System eine Fehlermeldung zurück.  
+ Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zeichen-und Binär Datentypen kann *cbUserData* SQL_VARLEN_DATA, SQL_NULL_DATA, 0 oder ein positiver Wert sein. Wenn *cbUserData* SQL_VARLEN_DATA ist, verwendet das System entweder den Längen Indikator, falls vorhanden, oder eine Abschluss Zeichen Sequenz, um die Länge der Daten zu bestimmen. Wenn sowohl ein Längenindikator als auch eine Abschlusszeichensequenz angegeben sind, wird beim Massenkopieren der Wert verwendet, der zu der kleineren zu kopierenden Datenmenge führt. Wenn *cbUserData* SQL_VARLEN_DATA ist, ist der Datentyp ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zeichen oder Binärtyp, und weder ein Längen Indikator noch eine Abschluss Zeichen Sequenz angegeben, gibt das System eine Fehlermeldung zurück.  
   
  Wenn *cbUserData* 0 oder ein positiver Wert ist, verwendet das System *cbUserData* als maximale Datenlänge. Wenn jedoch zusätzlich zu einem positiven *cbUserData*-Wert ein Längenindikator oder eine Abschlusszeichensequenz angegeben ist, bestimmt das System die Datenlänge mit der Methode, die zu der kleineren zu kopierenden Datenmenge führt.  
   
@@ -105,7 +105,7 @@ RETCODE bcp_colfmt (
  Die Länge (in Byte) der Abschlusszeichensequenz, die für diese Spalte verwendet werden soll. Wenn kein Abschlusszeichen vorhanden ist oder in den Daten gewünscht wird, legen Sie diesen Wert auf 0 fest.  
   
  *idxServerCol*  
- Ist die Ordnungsposition der Spalte in der Datenbanktabelle an. Die erste Spaltennummer ist 1. Die Ordnungsposition einer Spalte wird von [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)ausgegeben.  
+ Die Ordinalposition der Spalte in der Datenbanktabelle. Die erste Spaltennummer ist 1. Die Ordnungsposition einer Spalte wird von [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)ausgegeben.  
   
  Wenn dieser Wert 0 ist, wird beim Massenkopieren die Spalte in der Datendatei ignoriert.  
   
@@ -113,7 +113,7 @@ RETCODE bcp_colfmt (
  SUCCEED oder FAIL.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Bcp_colfmt** -Funktion können Sie das Benutzerdateiformat für Massenkopieren angeben. Für Massenkopieren besteht ein Format aus folgenden Bestandteilen:  
+ Mit der **bcp_colfmt** -Funktion können Sie das Benutzerdatei Format für Massen Kopien angeben. Für Massenkopieren besteht ein Format aus folgenden Bestandteilen:  
   
 -   Eine Zuordnung von Benutzerdateispalten zu Datenbankspalten  
   
@@ -127,24 +127,24 @@ RETCODE bcp_colfmt (
   
 -   Die Länge der optionalen abschließenden Bytesequenz  
   
- Jeder Aufruf von **Bcp_colfmt** gibt das Format für eine benutzerdateispalte an. Z. B. um die Standardeinstellungen für drei Spalten in einer Datendatei für die Benutzer mit fünf Spalten zu ändern, rufen Sie zuerst [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** , und rufen dann **Bcp_colfmt** fünfmal, drei dieser Aufrufe Ihr bentuzerdefiniertes Format. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 und *CbIndicator*, *CbUserData*, und *CbUserDataTerm* auf 0 (null) SQL_VARLEN "_Data", und 0 bzw. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
+ Jeder **bcp_colfmt** -Aufrufe gibt das Format für eine Benutzerdatei Spalte an. Um z. b. die Standardeinstellungen für drei Spalten in einer fünf spaltigen Benutzer Datendatei zu ändern, rufen Sie zuerst [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** auf, und rufen Sie dann **bcp_colfmt** fünfmal auf, wobei drei dieser Aufrufe Ihr benutzerdefiniertes Format festlegen. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 fest, und legen Sie *cbIndicator*, *cbUserData*und *cbUserDataTerm* auf 0, SQL_VARLEN_DATA bzw. 0 fest. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
- Für *CbIndicator*, ein Wert von 8, um einen großen Werttyp anzugeben ist jetzt gültig. Wenn das Präfix für ein Feld angegeben wird, dessen entsprechende Spalte den neuen max-Typ aufweist, kann dafür nur 8 festgelegt werden. Weitere Informationen finden Sie unter [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
+ Für *cbIndicator*ist der Wert 8, um anzugeben, dass ein großer Werttyp nun gültig ist. Wenn das Präfix für ein Feld angegeben wird, dessen entsprechende Spalte den neuen max-Typ aufweist, kann dafür nur 8 festgelegt werden. Weitere Informationen finden Sie unter [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
   
- Die **Bcp_columns** -Funktion muss aufgerufen werden, vor allen Aufrufen von **Bcp_colfmt**.  
+ Die **bcp_columns** -Funktion muss vor allen Aufrufen von **bcp_colfmt**aufgerufen werden.  
   
- Rufen Sie **Bcp_colfmt** einmal für jede Spalte in der Benutzerdatei.  
+ Sie müssen **bcp_colfmt** einmal für jede Spalte in der Benutzerdatei abrufen.  
   
- Aufrufen von **Bcp_colfmt** mehr als einmal für eine benutzerdateispalte einen Fehler.  
+ Das mehrmalige Aufrufen von **bcp_colfmt** für eine Benutzerdatei Spalte verursacht einen Fehler.  
   
- Sie brauchen nicht alle Daten in einer Benutzerdatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle kopieren. Um eine Spalte zu überspringen, geben Sie das Format der Daten für die Spalte an, indem die *IdxServerCol* Parameter auf 0. Wenn Sie eine Spalte überspringen möchten, müssen Sie ihren Typ angeben.  
+ Sie brauchen nicht alle Daten in einer Benutzerdatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle kopieren. Um eine Spalte zu überspringen, geben Sie das Format der Daten für die Spalte an, indem Sie den *idxServerCol* -Parameter auf 0 festlegen. Wenn Sie eine Spalte überspringen möchten, müssen Sie ihren Typ angeben.  
   
- Die [Bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) Funktion kann verwendet werden, um die Formatspezifikation persistent zu speichern.  
+ Die [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) -Funktion kann verwendet werden, um die Format Spezifikation beizubehalten.  
   
-## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>'bcp_colfmt'-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
- Informationen zu den Arten der Verwendung der *eUserDataType* -Parameter für Datum/Uhrzeit-Datentypen, finden Sie unter [Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen &#40;OLEDB- und ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="bcp_colfmt-support-for-enhanced-date-and-time-features"></a>'bcp_colfmt'-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
+ Informationen zu den Typen, die mit dem *eUserDataType* -Parameter für Datums-/Uhrzeittypen verwendet werden, finden Sie unter [Massen &#40;Kopier Änderungen für verbesserte&#41;Datums-und Uhrzeit Typen OLE DB und ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Verbesserungen &#40;bei Datum und&#41;Uhrzeit (ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Massenkopierfunktionen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

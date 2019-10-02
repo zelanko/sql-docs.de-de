@@ -1,8 +1,8 @@
 ---
-title: Installieren von SSMA-Komponenten auf SQLServer (OracleToSQL) | Microsoft-Dokumentation
+title: Installieren von SSMA-Komponenten auf SQL Server (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 10/01/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -13,97 +13,103 @@ ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 2ce13298c61595d5e5641cb89bffb28fd277e0d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259733"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713309"
 ---
-# <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Installieren von SSMA-Komponenten auf SQL Server (OracleToSQL)
-Zusätzlich zum Installieren von SSMA, müssen Sie auch den Komponenten installieren, auf dem Computer, auf denen ausgeführt wird, ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Zu diesen Komponenten gehören der SSMA-Erweiterungspaket, unterstützt die Datenmigration und Oracle-Anbieter, um die Verbindung mit Server-zu-Server zuzulassen.  
+# <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Installieren von SSMA-Komponenten auf SQL Server (oracleto SQL)
+
+Zusätzlich zur Installation von SSMA müssen Sie auch Komponenten auf dem Computer installieren, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Diese Komponenten umfassen das SSMA-Erweiterungspaket, das die Datenmigration unterstützt, und Oracle-Anbieter, um die Server-zu-Server-Konnektivität zu ermöglichen.  
   
-## <a name="ssma-for-oracle-extension-pack"></a>SSMA für Oracle-Erweiterungspaket  
-Der SSMA-Erweiterungspaket fügt die Datenbanken, **Sysdb** und **Ssmatesterdb**, mit der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Datenbank **Sysdb** enthält die Tabellen und gespeicherte Prozeduren, die erforderlich sind, zum Migrieren von Daten sowie die benutzerdefinierten Funktionen, die Oracle-Systemfunktionen zu emulieren. Die **Ssmatesterdb** Datenbank enthält die Tabellen und Prozeduren, die von der Komponente Tester erforderlich sind.  
+## <a name="ssma-for-oracle-extension-pack"></a>SSMA für Oracle-Erweiterungspaket
+
+Das SSMA-Erweiterungspaket fügt der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Datenbanken **sysdb** und **ssmatesterdb** hinzu. Die Datenbank **sysdb** enthält die Tabellen und gespeicherten Prozeduren, die zum Migrieren von Daten und benutzerdefinierten Funktionen erforderlich sind, die Oracle-Systemfunktionen emulieren. Die **ssmatesterdb** -Datenbank enthält die Tabellen und Prozeduren, die für die Tester-Komponente erforderlich sind.  
   
-Darüber hinaus beim Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträge, wenn Server Side Data Migration-Engine verwendet wird, für die Migration der das.  
+Wenn Sie Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrieren, erstellt SSMA außerdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentaufträge, wenn die serverseitige Daten Migrations-Engine zum Migrieren der Daten verwendet wird.  
   
-### <a name="prerequisites"></a>Vorraussetzungen  
-Vor der Installation von SSMA für Oracle-Server-Komponenten auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], stellen Sie sicher, dass das System die folgenden Anforderungen erfüllt:  
+### <a name="prerequisites"></a>Erforderliche Komponenten
+
+Stellen Sie vor der Installation der SSMA für Oracle-Serverkomponenten auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicher, dass das System die folgenden Anforderungen erfüllt:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz installiert ist. SSMA ist SQL Server 2008 Express Edition nicht unterstützt.  
+- die Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist installiert. SSMA unterstützt nicht SQL Server 2008 Express Edition.
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 oder höher.  
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 oder eine höhere Version.  
   
--   Der Oracle-Client-Anbieter oder OLE DB-Anbieter für Oracle und Verbindung mit der Oracle-Datenbank, die Sie migrieren möchten. Sie können den Anbieter aus der Oracle-Produktdatenträger oder Oracle-Website installieren.  
+- Den Oracle-Client Anbieter oder den OLE DB-Anbieter für Oracle und die Verbindung mit der Oracle-Datenbank, die Sie migrieren möchten. Sie können Anbieter auf dem Oracle-Produkt Medium oder auf der Oracle-Website installieren.  
   
--   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst muss ausgeführt werden, während der Installation. Wird verwendet, um eine Liste der Instanzen des Auffüllen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Setup-Assistenten. Sie können die Deaktivieren der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst nach der Installation.  
+- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser Dienst muss während der Installation ausgeführt werden. Diese wird verwendet, um eine Liste der Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Setup-Assistenten aufzufüllen. Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser Dienst nach der Installation deaktivieren.  
   
     > [!NOTE]  
-    > Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst wird ausgeführt, aber Sie noch nicht sehe, dass eine Liste von Instanzen im Setup, müssen Sie UDP-Port 1434 zulassen. Sie können Windows-Firewall verwenden, um vorübergehend den Port zulassen, oder Sie können Windows-Firewall vorübergehend deaktivieren. Möglicherweise müssen auch vorübergehend deaktivieren, antivirus-Software. Stellen Sie sicher, dass Firewalls und antivirus-Software nach der Installation zu ermöglichen.  
+    > Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser Dienst ausgeführt wird, während des Setups immer noch keine Liste der Instanzen angezeigt wird, müssen Sie die Blockierung des UDP-Ports 1434 deaktivieren. Mit der Windows-Firewall können Sie den Port vorübergehend entsperren, oder Sie können die Windows-Firewall temporär deaktivieren. Möglicherweise müssen Sie die Antivirussoftware auch vorübergehend deaktivieren. Stellen Sie sicher, dass Sie nach der Installation Firewalls und Antivirensoftware aktivieren.  
   
-### <a name="installing-the-extension-pack"></a>Das Erweiterungspaket installieren  
-Sie können vor dem Migrieren von Daten auf, das Erweiterungspaket installieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+### <a name="installing-the-extension-pack"></a>Installieren des Erweiterungspakets
+
+Sie können das Erweiterungspaket jederzeit installieren, bevor Sie Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrieren.  
   
 > [!IMPORTANT]  
-> Um das Erweiterungspaket installieren zu können, muss Sie Mitglied der **Sysadmin** -Serverrolle auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Um das Erweiterungspaket zu installieren, müssen Sie Mitglied der **sysadmin** -Server Rolle auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sein.  
   
-**Das Erweiterungspaket installieren**  
+**So installieren Sie das Erweiterungspaket**
   
-1.  Wenn Sie dies noch nicht getan haben, extrahieren Sie alle Dateien aus der SSMA-Zip-Datei.  
+1. Wenn Sie dies noch nicht getan haben, extrahieren Sie alle Dateien aus der SSMA-ZIP-Datei.  
   
-    Je nach Version WinZip haben, können Sie entweder Doppelklicken Sie auf die Datei, oder mit der rechten Maustaste in der das und auswählen **alle extrahieren** oder **in WinZip öffnen**. Befolgen Sie die Anweisungen in der WinZip-Benutzeroberfläche zum Extrahieren der Dateien ein.  
+    Abhängig von der Version von WinZip, die Sie haben, können Sie entweder auf die Datei doppelklicken oder mit der rechten Maustaste auf die Datei klicken und dann **Alle extrahieren** oder **in WinZip öffnen**auswählen. Befolgen Sie die Anweisungen in der WinZip-Benutzeroberfläche, um die Dateien zu extrahieren.  
   
-2.  Kopieren Sie SSMA für Oracle-Erweiterungspaket aus. *n*. Install.exe, wobei *n* ist, auf dem Computer, auf denen ausgeführt wird, die Nummer des Builds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2. Kopieren Sie **SSMA für das Oracle-Erweiterungspaket. *n*. Installieren Sie. exe** (wobei *n* für die Buildnummer steht) für den Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
-3.  Doppelklicken Sie SSMA für Oracle-Erweiterungspaket aus. *n*. Install.exe.  
+3. Doppelklicken Sie auf **SSMA for Oracle Extension Pack. *n*. Installieren Sie. exe**.  
   
-4.  Klicken Sie auf der Seite Willkommen auf **Weiter**.  
+4. Wählen Sie auf der Seite **Willkommen** die Option **weiter**aus.  
   
-5.  Lesen Sie auf der Seite Lizenzbedingungen den Lizenzvertrag. Wenn Sie zustimmen, wählen Sie die **ich stimme den Bedingungen des Lizenzvertrags** , und klicken Sie dann auf **Weiter**.  
+5. Lesen Sie auf der Seite **Endbenutzer-Lizenzvertrag** den Lizenzvertrag. Wenn Sie zustimmen, aktivieren Sie das Kontrollkästchen **Ich stimme den Bedingungen des Lizenzvertrags** zu, und klicken Sie dann auf **weiter**.  
   
-6.  Klicken Sie auf der Seite Installationstyp auswählen auf **Standard**.  
+6. Wählen Sie auf der Seite Setuptyp **auswählen** die Option **typisch**aus.  
   
-7.  Klicken Sie auf der Seite Installationsbereit auf **installieren**.  
+7. Wählen Sie auf der Seite **Installationsbereit** **Installieren**aus.  
   
-8.  Klicken Sie auf den abgeschlossen-der erste Schritt der Installationsseite auf **Weiter**.  
+8. Wählen Sie auf der Seite **der erste Schritt der Installation ist abgeschlossen** die Option **weiter**aus.  
   
-    Ein neues Dialogfeld wird angezeigt, in dem Sie die Instanz von auswählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Erweiterung-Paketinstallation.  
+    Ein neues Dialogfeld wird angezeigt, in dem Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Extension Pack-Installation auswählen.  
   
-9. Wählen Sie die Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in dem Sie migrieren von Oracle-Schemas, und klicken Sie dann auf **Weiter**.  
+9. Wählen Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, zu der Sie Oracle-Schemas migrieren möchten, und klicken Sie dann auf **weiter**.  
   
-    Die Standardinstanz hat den gleichen Namen wie der Computer an. Benannte Instanzen werden ein umgekehrter Schrägstrich und der Instanzname folgt.  
+    Die Standard Instanz hat denselben Namen wie der Computer. Auf benannte Instanzen folgt ein umgekehrter Schrägstrich und der Instanzname.  
   
-10. Klicken Sie auf der Verbindungsseite, wählen Sie die Authentifizierungsmethode aus, und klicken Sie dann auf **Weiter**.  
+10. Wählen Sie auf der Seite Verbindung die Authentifizierungsmethode aus, und klicken Sie dann auf **weiter**.  
   
-    Windows-Authentifizierung wird Ihre Windows-Anmeldeinformationen verwenden, um zu versuchen, melden Sie sich mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Bei Auswahl von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung, geben Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldename und Kennwort.  
+    Die Windows-Authentifizierung verwendet Ihre Windows-Anmelde Informationen, um sich bei der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzumelden. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung auswählen, müssen Sie einen Anmelde Namen und ein Kennwort für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeben.  
   
-11. Wählen Sie auf der nächsten Seite **installieren Dienstprogramme Datenbank** *n*, wobei *n* ist die Versionsnummer, und klicken Sie dann auf **Weiter**.  
+11. Wählen Sie auf der nächsten Seite **Utilities Database** *n*, wobei *n* die Versionsnummer ist, und klicken Sie dann auf **weiter**.  
   
-    Die **Sysdb** Datenbank erstellt wird und die benutzerdefinierten Funktionen und gespeicherten Prozeduren werden in dieser Datenbank erstellt.  
+    Die **sysdb** -Datenbank wird erstellt, und die benutzerdefinierten Funktionen und gespeicherten Prozeduren werden in dieser Datenbank erstellt.  
   
-    Wenn **Tester-Datenbank installieren** Option wird überprüft der Tester **Ssmatesterdb** Datenbank erstellt wird.  
+    Wenn die Option zum **Installieren der Tester-Datenbank** aktiviert ist, wird die Testversion der **ssmatesterdb** -Datenbank erstellt.  
   
-12. So installieren Sie die Hilfsprogramme in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Option **Ja**, und klicken Sie dann auf **Weiter**. Um den Assistenten zu beenden, klicken Sie auf **keine**.  
+12. Um die Hilfsprogramme auf einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu installieren, wählen Sie **Ja**und dann **weiter**aus, oder klicken Sie auf " **Nein**", um den Assistenten zu beenden.  
   
-13. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mit dem Sqlcmd-Hilfsprogramm, führen Sie das folgende Skript aus, um CLR zu aktivieren:  
+13. Führen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mit dem Hilfsprogramm sqlcmd das folgende Skript aus, um CLR zu aktivieren:  
   
-    ```  
+    ```
     sp_configure 'clr enabled', 1  
     GO  
     RECONFIGURE  
     GO  
-    ```  
-    Wenn die CLR nicht aktiviert ist, wird die folgende Fehlermeldung Verbindungsaufbau SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+    ```
+
+    Wenn CLR nicht aktiviert ist, erhalten Sie den folgenden Fehler, wenn SSMA eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt:  
   
-    SSMA konnten die Erweiterung Pack Assembly Versionsinformationen nicht abgerufen werden. Installieren Sie das Pack für die Erweiterung auf dem Datenbankserver.  
+    SSMA konnte die Versionsinformationen der Erweiterungspaket-Assembly nicht abrufen. Installieren Sie das Erweiterungspaket auf dem Datenbankserver erneut.  
   
-### <a name="sql-server-database-objects"></a>SQL Server-Datenbankobjekten  
-Nach der Installation der Erweiterung Pack werden Sie eine finden Sie unter einem **ssma_oracle.bcp_migration_packages** Tabelle eine **ssma_oracle.db_storage** Tabelle und ein **ssma_oracle.db_error_list** -Tabelle in der **Sysdb** Datenbank. Sie sehen auch viele gespeicherte Prozeduren und benutzerdefinierten Funktionen in der **Ssma_oracle** Schema.  
+### <a name="sql-server-database-objects"></a>Datenbankobjekte SQL Server  
+
+Nachdem Sie das Erweiterungspaket installiert haben, wird eine **ssma_oracle. bcp _migration_packages** -Tabelle in der **sysdb** -Datenbank angezeigt.
+
+Jedes Mal, wenn Sie Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrieren, erstellt SSMA einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftrag. Diese Aufträge heißen **ssma_oracle Data Migration Package {GUID}** und werden im Ordner "Aufträge" im Knoten "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angezeigt.  
   
-Jedes Mal, die Sie zum Migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA erstellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag. Diese Aufträge werden mit dem Namen **Ssma_oracle Migration Datenpaket {GUID}** , und in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Knoten der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Ordner "Aufträge".  
-  
-## <a name="see-also"></a>Siehe auch  
-[Installieren von SSMA für Oracle-Client &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[Migrieren von Oracle zu SQLServer-Datenbanken &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
-  
+## <a name="see-also"></a>Siehe auch
+
+[Installieren von SSMA für den &#40;Oracle-Client oracleto SQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[Migrieren von Oracle- &#40;Datenbanken zu SQL Server oracleto SQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
