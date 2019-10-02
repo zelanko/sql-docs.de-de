@@ -1558,6 +1558,8 @@
       href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
     - name: Oracle CDC-Datenbanken
       href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
+    - name: Problembehandlung
+      href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
     - name: Change Data Capture Designer für Oracle von Attunity – Referenz zur F1-Hilfe
       href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
       items:

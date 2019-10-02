@@ -2406,14 +2406,14 @@
           href: ../connect/jdbc/validating-user-input.md
         - name: Anwendungssicherheit
           href: ../connect/jdbc/application-security.md
-        - name: Verwenden der SSL-Verschlüsselung
+        - name: Verwenden von Verschlüsselung
           href: ../connect/jdbc/using-ssl-encryption.md
           items:
-            - name: Grundlegendes zur SSL-Unterstützung
+            - name: Verstehen der Verschlüsselungsunterstützung
               href: ../connect/jdbc/understanding-ssl-support.md
-            - name: Herstellen von Verbindungen mit SSL-Verschlüsselung
+            - name: Herstellen von Verbindungen mit einer Verschlüsselung
               href: ../connect/jdbc/connecting-with-ssl-encryption.md
-            - name: Konfigurieren des Clients für SSL-Verschlüsselung
+            - name: Konfigurieren des Clients für die Verschlüsselung
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: FIPS-Modus
           href: ../connect/jdbc/fips-mode.md
