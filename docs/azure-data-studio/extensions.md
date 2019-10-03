@@ -26,8 +26,8 @@ Erweiterungen werden vom Azure Data Studio-Team (Microsoft) sowie von der Dritta
 
 ## <a name="add-azure-data-studio-extensions"></a>Hinzufügen von Azure Data Studio-Erweiterungen
 
-1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, klicken Sie auf das Symbol für Erweiterungen, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
-    Sie können auch schnell auf den Erweiterungs-Manager zugreifen, indem Sie auf `Ctrl+Shift+X` (Windows/Linux) oder `Command+Shift+X` (Mac) drücken.
+1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, klicken Sie auf das Symbol für Erweiterungen, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.\
+    Sie können auch schnell auf den Erweiterungs-Manager zugreifen, indem Sie auf `Ctrl+Shift+X` (Windows/Linux) oder `Command+Shift+X` (Mac) drücken.\
     ![Erweiterungs-Manager-Symbol](media/extensions/extension-manager-icon.png)
 
 2. Wählen Sie eine verfügbare Erweiterung aus, um deren Details anzuzeigen.

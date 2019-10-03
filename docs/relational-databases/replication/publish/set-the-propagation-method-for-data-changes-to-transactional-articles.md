@@ -120,11 +120,11 @@ ms.locfileid: "68769778"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **\@publication**, den Namen des Artikels für **\@article**, das zu veröffentlichende Datenbankobjekt für **\@source_object**, einen Wert für die **\@schema_option**-Bitmaske, der den Wert **0x02** enthält (aktiviert die automatische Erstellung benutzerdefinierter gespeicherter Prozeduren), und mindestens einen der folgenden Parameter an:  
   
-    -   **\@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins_* article_name*** an, wobei ***article_name*** der für **\@article** festgelegte Wert ist.  
+    -   **\@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins_* article_name* ** an, wobei ***article_name*** der für **\@article** festgelegte Wert ist.  
   
-    -   **\@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel_*article_name*** oder **XCALL sp_MSdel_* article_name*** an, wobei ***article_name*** der für **\@article** angegebene Wert ist.  
+    -   **\@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel_*article_name* oder**  **XCALL sp_MSdel_* article_name* ** an, wobei ***article_name*** der für **\@article** angegebene Wert ist.  
   
-    -   **\@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd_* article_name***, **CALL sp_MSupd_* article_name***, **XCALL sp_MSupd*_article_name*** oder **MCALL sp_MSupd_* article_name*** an, wobei ***article_name*** der für **\@article** angegebene Wert ist.  
+    -   **\@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd_* article_name* **, **CALL sp_MSupd_* article_name* **, **XCALL sp_MSupd*_article_name* ** oder **MCALL sp_MSupd_* article_name* ** an, wobei ***article_name*** der für **\@article** angegebene Wert ist.  
   
     > [!NOTE]  
     >  Für jeden der obigen Befehlsparameter gilt: Sie können einen selbst gewählten Namen für die gespeicherten Prozeduren angeben, die von der Replikation generiert werden.  
@@ -140,11 +140,11 @@ ms.locfileid: "68769778"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **\@publication**, den Namen des Artikels für **\@article**, das zu veröffentlichende Datenbankobjekt für **\@source_object**, einen Wert für die **\@schema_option**-Bitmaske, der den Wert **0x02** enthält (aktiviert die automatische Erstellung benutzerdefinierter gespeicherter Prozeduren), und mindestens einen der folgenden Parameter an:  
   
-    -   **\@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins_* article_name*** an, wobei ***article_name*** der für **\@article** festgelegte Wert ist.  
+    -   **\@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins_* article_name* ** an, wobei ***article_name*** der für **\@article** festgelegte Wert ist.  
   
-    -   **\@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel_*article_name*** oder **XCALL sp_MSdel_* article_name*** an, wobei ***article_name*** der für **\@article** angegebene Wert ist.  
+    -   **\@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel_*article_name* oder**  **XCALL sp_MSdel_* article_name* ** an, wobei ***article_name*** der für **\@article** angegebene Wert ist.  
   
-    -   **\@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd_* article_name***, **CALL sp_MSupd_* article_name***, **XCALL sp_MSupd*_article_name***, **MCALL sp_MSupd_* article_name*** an, wobei ***article_name*** der für **\@article** angegebene Wert ist.  
+    -   **\@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd_* article_name* **, **CALL sp_MSupd_* article_name* **, **XCALL sp_MSupd*_article_name* **, **MCALL sp_MSupd_* article_name* ** an, wobei ***article_name*** der für **\@article** angegebene Wert ist.  
   
     > [!NOTE]  
     >  Für jeden der obigen Befehlsparameter gilt: Sie können einen selbst gewählten Namen für die gespeicherten Prozeduren angeben, die von der Replikation generiert werden.  
