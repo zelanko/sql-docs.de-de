@@ -207,8 +207,6 @@
               items:
                 - name: azdata
                   href: big-data-cluster/reference-azdata.md
-                - name: Steuerung
-                  href: big-data-cluster/reference-azdata-control.md
                 - name: Notebook
                   href: big-data-cluster/reference-azdata-notebook.md
                 - name: sql
@@ -4160,8 +4158,8 @@
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: In SQL Server 2016 als veraltet markiert
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: In SQL Server 2016 nicht mehr unterstützte Funktionen
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md
+        - name: In SQL Server nicht mehr unterstützte Funktionen
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
         - name: Grundlegende Änderungen in SQL Server 2017
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: Grundlegende Änderungen in SQL Server 2016
