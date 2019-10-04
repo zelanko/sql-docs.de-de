@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04393e7a43ef240fb8a48de49352b183d79a9208
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 3395b237e08a10033819eeed74057cc7319d7f11
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714742"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952020"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Erstellen von Partitions basierten Modellen in R auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ In diesem Tutorial erfahren Sie mehr über die Partitions basierte Modellierung 
 > * Erstellen und trainieren Sie Modelle für jede Partition, und speichern Sie die Objekte in der Datenbank.
 > * Prognostizieren Sie die Wahrscheinlichkeit der Tip-Ergebnisse für jedes Partitions Modell, indem Sie Beispiel Daten verwenden, die für diesen Zweck reserviert sind.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
  
 Um dieses Tutorial abzuschließen, benötigen Sie Folgendes:
 
@@ -167,14 +167,12 @@ GO
 
 ### <a name="parallel-execution"></a>Parallele Ausführung
 
-Beachten Sie, dass die [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) -Eingaben  **@parallel= 1**enthalten, die zum Aktivieren der parallelen Verarbeitung verwendet werden. Im Gegensatz zu früheren Versionen bietet das Setting  **@parallel= 1** in SQL Server 2019 einen stärkeren Hinweis für den Abfrageoptimierer, sodass die parallele Ausführung zu einem viel wahrscheinlicheren Ergebnis wird.
+Beachten Sie, dass die [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) -Eingaben `@parallel=1` enthalten, die zum Aktivieren der parallelen Verarbeitung verwendet werden. Im Gegensatz zu früheren Versionen bietet das Festlegen von `@parallel=1` in SQL Server 2019 einen stärkeren Hinweis für den Abfrageoptimierer, sodass die parallele Ausführung zu einem viel wahrscheinlicheren Ergebnis wird.
 
-Standardmäßig wird der Abfrageoptimierer tendenziell unter  **@parallel= 1** für Tabellen mit mehr als 256 Zeilen ausgeführt. Wenn Sie dies jedoch explizit behandeln können, indem Sie  **@parallel= 1** wie in diesem Skript gezeigt festlegen.
+Standardmäßig wird der Abfrageoptimierer tendenziell unter `@parallel=1` für Tabellen mit mehr als 256 Zeilen ausgeführt. Wenn Sie dies jedoch explizit behandeln können, indem Sie `@parallel=1` festlegen, wie in diesem Skript gezeigt.
 
 > [!Tip]
-> Für Schulungs Arbeitsthreads können Sie mit beliebigen Trainings **@parallel** Skripts verwenden, auch solche, die nicht-Microsoft-RX-Algorithmen verwenden. In der Regel bieten nur revoscaler-Algorithmen (mit dem RX-Präfix) Parallelität in Trainingsszenarien in SQL Server. Mit dem neuen Parameter können Sie jedoch ein Skript parallelisieren, das Funktionen aufruft, einschließlich Open Source-R-Funktionen, die nicht speziell mit dieser Funktion entwickelt wurden. Dies funktioniert, da Partitionen für bestimmte Threads eine Affinität aufweisen, sodass alle in einem Skript aufgerufenen Vorgänge auf Partitions Basis im angegebenen Thread ausgeführt werden.
-
-<a name="training-step"></a>
+> Für Schulungs Arbeitsthreads können Sie `@parallel` mit beliebigen Trainings Skripts verwenden, auch solche, die nicht-Microsoft-RX-Algorithmen verwenden. In der Regel bieten nur revoscaler-Algorithmen (mit dem RX-Präfix) Parallelität in Trainingsszenarien in SQL Server. Mit dem neuen Parameter können Sie jedoch ein Skript parallelisieren, das Funktionen aufruft, einschließlich Open Source-R-Funktionen, die nicht speziell mit dieser Funktion entwickelt wurden. Dies funktioniert, weil Partitionen für bestimmte Threads eine Affinität aufweisen, sodass alle in einem Skript aufgerufenen Vorgänge auf Partitions Basis ausgeführt werden, und zwar auf dem Wert @ no__t-0<a name="training-step"></a>
 
 ## <a name="run-the-procedure-and-train-the-model"></a>Führen Sie die Prozedur aus, und trainieren Sie das Modell.
 

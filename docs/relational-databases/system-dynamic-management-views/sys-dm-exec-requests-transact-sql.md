@@ -1,10 +1,10 @@
 ---
 title: sys. DM _exec_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
-ms.author: sstein
+ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbd23a685507b62529477d6ef92dbbbd1980c5c1
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326165"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923778"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -47,7 +47,7 @@ Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion
 |database_id|**smallint**|ID der Datenbank, für die die Anforderung ausgeführt wird. Lässt keine NULL-Werte zu.|  
 |user_id|**int**|ID des Benutzers, der die Anforderung gesendet hat. Lässt keine NULL-Werte zu.|  
 |connection_id|**uniqueidentifier**|ID der Verbindung, über die die Anforderung eingetroffen ist. Lässt NULL-Werte zu.|  
-|blocking_session_id|**smallint**|ID der Sitzung, die die Anforderung blockiert. Wenn diese Spalte den Wert NULL aufweist, wird die Anforderung nicht blockiert, oder die Sitzungsinformationen der blockierenden Sitzung sind nicht verfügbar (bzw. können nicht identifiziert werden).<br /><br /> -2 = Der Besitzer der blockierenden Ressource ist eine verwaiste verteilte Transaktion.<br /><br /> -3 = Der Besitzer der blockierenden Ressource ist eine verzögerte Wiederherstellungstransaktion.<br /><br /> -4 = Die Sitzungs-ID des Besitzers des blockierenden Latches konnte zu diesem Zeitpunkt aufgrund von internen Latchstatusübergängen nicht bestimmt werden.|  
+|blocking_session_id|**smallint**|ID der Sitzung, die die Anforderung blockiert. Wenn diese Spalte NULL oder gleich 0 (null) ist, wird die Anforderung nicht blockiert, oder die Sitzungsinformationen der blockierenden Sitzung sind nicht verfügbar (oder können nicht identifiziert werden).<br /><br /> -2 = Der Besitzer der blockierenden Ressource ist eine verwaiste verteilte Transaktion.<br /><br /> -3 = Der Besitzer der blockierenden Ressource ist eine verzögerte Wiederherstellungstransaktion.<br /><br /> -4 = Die Sitzungs-ID des Besitzers des blockierenden Latches konnte zu diesem Zeitpunkt aufgrund von internen Latchstatusübergängen nicht bestimmt werden.|  
 |wait_type|**nvarchar(60)**|Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte den Wartetyp zurück. Lässt NULL-Werte zu.<br /><br /> Weitere Informationen zu warte Typen finden Sie unter [sys. DM _os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte die Dauer des aktuellen Wartevorgangs in Millisekunden an. Lässt keine NULL-Werte zu.|  
 |last_wait_type|**nvarchar(60)**|Wenn diese Anforderung zuvor bereits blockiert war, gibt diese Spalte den Typ des letzten Wartevorgangs zurück. Lässt keine NULL-Werte zu.|  
@@ -77,7 +77,7 @@ Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion
 |ansi_padding|**bit**|1 = ANSI_PADDING ist für die Anforderung auf ON festgelegt.<br /><br /> Andernfalls ist der Wert 0.<br /><br /> Lässt keine NULL-Werte zu.|  
 |ansi_nulls|**bit**|1 = ANSI_NULLS ist für die Anforderung auf ON festgelegt. Andernfalls ist der Wert 0.<br /><br /> Lässt keine NULL-Werte zu.|  
 |concat_null_yields_null|**bit**|1 = CONCAT_NULL_YIELDS_NULL ist für die Anforderung auf ON festgelegt. Andernfalls ist der Wert 0.<br /><br /> Lässt keine NULL-Werte zu.|  
-|transaction_isolation_level|**smallint**|Isolationsstufe, mit der die Transaktion für diese Anforderung erstellt wird. Lässt keine NULL-Werte zu.<br /><br /> 0 = Unspecified<br /><br /> 1 = ReadUncomitted<br /><br /> 2 = ReadCommitted<br /><br /> 3 = Repeatable<br /><br /> 4 = Serializable<br /><br /> 5 = Momentaufnahme|  
+|transaction_isolation_level|**smallint**|Isolationsstufe, mit der die Transaktion für diese Anforderung erstellt wird. Lässt keine NULL-Werte zu.<br /> 0 = Unspecified<br /> 1 = ReadUncomitted<br /> 2 = ReadCommitted<br /> 3 = Repeatable<br /> 4 = Serializable<br /> 5 = Momentaufnahme|  
 |lock_timeout|**int**|Sperrtimeout für diese Anforderung (in Millisekunden). Lässt keine NULL-Werte zu.|  
 |deadlock_priority|**int**|DEADLOCK_PRIORITY-Einstellung für die Anforderung. Lässt keine NULL-Werte zu.|  
 |row_count|**bigint**|Anzahl von Zeilen, die von dieser Anforderung an den Client zurückgegeben wurden. Lässt keine NULL-Werte zu.|  
@@ -96,6 +96,7 @@ Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion
 |is_resumable |**bit** |**Gilt für**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt an, ob die Anforderung ein fort Setz barer Index Vorgang ist. |  
 |page_resource |**binary(8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Eine 8-Byte-hexadezimale Darstellung der Seiten Ressource, `wait_resource` wenn die Spalte eine Seite enthält. Weitere Informationen finden Sie unter [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Gilt für**: Hyperskalierung von Azure SQL-Datenbank<br /><br /> Anzahl von Seiten Server Lesevorgängen, die von dieser Anforderung ausgeführt werden. Lässt keine NULL-Werte zu.|  
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Hinweise 
 Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus. Zeitwerte, die von dieser dynamischen Verwaltungssicht zurückgegeben werden, schließen nicht die im präemptiven Modus verbrachte Zeit ein.
@@ -125,14 +126,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Suchen aller Sperren, die ein ausgeführter Batch enthält
 
-Im folgenden Beispiel wird **sys. DM _exec_requests** abgefragt, um den interessanten Batch zu `transaction_id` suchen und dessen aus der Ausgabe zu kopieren.
+Im folgenden Beispiel wird **sys. DM _exec_requests** abgefragt, um den interessanten Batch zu suchen und dessen `transaction_id` aus der Ausgabe zu kopieren.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-Verwenden Sie dann, um Sperrinformationen zu finden, `transaction_id` das mit der Systemfunktion **sys. DM _tran_locks**kopierte.  
+Verwenden Sie dann zum Suchen von Sperrinformationen den kopierten `transaction_id` mit der Systemfunktion **sys. DM _tran_locks**.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

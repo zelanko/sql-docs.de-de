@@ -1,5 +1,5 @@
 ---
-title: Erweiterte Konfiguration für mehrere Websites (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
+title: Erweiterte Konfiguration mehrerer Websites (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 01ed7ed806cc064b05180347fa41905b57c4c98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096828"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952669"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Erweiterte Konfiguration mehrerer Websites (einheitlicher SSRS-Modus)
   In diesem Dialogfeld können Sie die URLs erstellen und verwalten, mit denen Sie einen Berichtsserver oder den Berichts-Manager aufrufen. Im Dialogfeld **Erweiterte Konfiguration mehrerer Websites** können Sie weitere URLs erstellen, benutzerdefinierte URLs, die einen Hostheadernamen enthalten oder in denen eine IP-Adresse im Format IPv4 oder IPv6 angegeben ist.  
@@ -40,12 +40,12 @@ ms.locfileid: "66096828"
   
 -   Mit**127.0.0.1** wird auf localhost zugegriffen. Dieser Wert unterstützt die lokale Verwaltung auf dem Berichtsservercomputer. Wenn Sie nur diesen Wert auswählen, können nur Benutzer, die lokal auf dem Berichtsservercomputer angemeldet sind, auf die Anwendung zugreifen.  
   
--   *Nnn.nnn.nnn.nnn* ist die IPv4-Adresse einer Netzwerkkarte auf Ihrem Computer. Wenn Ihr Netzwerk IPv6-Adressen verwendet, werden die IP-Adresse einem 128-Bit-Wert, der 8 4-Byte-Feldern, die ähnlich wie das folgende Format: \<Header >:*Nnnn:nnnn:nnnn:nnnn*.  
+-   *Nnn.nnn.nnn.nnn* ist die IPv4-Adresse einer Netzwerkkarte auf Ihrem Computer. Wenn Ihr Netzwerk IPv6-Adressierung verwendet, ist die IP-Adresse ein 128-Bit-Wert von 8 4-Byte-Feldern ähnlich dem folgenden Format: \<header >:*nnnn: nnnn: nnnn: nnnn*.  
   
      Wenn Sie mehrere Karten haben, wird für jede Karte eine IP-Adresse angezeigt. Wenn Sie nur diesen Wert auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostname, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können mit localhost nicht auf einen Berichtsserver zugreifen, und Sie können nicht die IP-Adressen der anderen Netzwerkkarten verwenden, die auf dem Berichtsservercomputer installiert sind.  
   
  **Port**  
- Gibt den Port an, den dieser Berichtsserver auf Anforderungen prüft. Port 80 ist der Standardport. Wenn Sie Port 80 verwenden, ist es ist nicht notwendig, diesen in die URL zu übernehmen. Wenn Sie eine andere Portnummer verwenden, Sie müssen immer enthalten sie in der URL (z. B. http://localhost:8181/reports).  
+ Gibt den Port an, den dieser Berichtsserver auf Anforderungen prüft. Port 80 ist der Standardport. Wenn Sie Port 80 verwenden, ist es ist nicht notwendig, diesen in die URL zu übernehmen. Wenn Sie eine andere Portnummer verwenden, müssen Sie Sie immer in die URL einschließen (z. b. http://localhost:8181/reports).  
   
  **Hostheader**  
  Wenn Sie bereits einen Hostheader in einem Domänennamenserver definiert haben, der auf Ihrem Computer aufgelöst wird, können Sie diesen Hostheader in einer URL angeben, die Sie für den Zugriff auf den Berichtsserver konfigurieren.  

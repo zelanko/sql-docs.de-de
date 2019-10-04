@@ -1,5 +1,5 @@
 ---
-title: Dienstkonto (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
+title: Dienst Konto (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,22 +9,22 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092181"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952396"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Dienstkonto (einheitlicher SSRS-Modus)
   Auf der Seite Dienstkonto können Sie angeben, unter welchem Konto der Berichtsserverdienst ausgeführt wird. Dieses Konto wird ursprünglich beim Setup konfiguriert. Sie können es ändern, wenn Sie das Konto oder das Kennwort ändern möchten. Der Report Server-Webdienst, der Berichts-Manager und die Hintergrundverarbeitungsanwendung werden unter der Dienstidentität ausgeführt, die auf dieser Seite angegeben wird.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus.  
   
- Das Konto, das Sie für den Berichtsserver-Dienst angeben, muss über entsprechende Berechtigungen verfügen, um auf die Registrierung, die Berichtsserver-Programmdateien und die Berichtsserver-Datenbank zugreifen zu können. Die Berechtigungen für das Konto werden beim Festlegen des Kontos mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager automatisch konfiguriert. Wenn Sie das Dienstkonto für die Verbindung mit der Berichtsserver-Datenbank verwenden, den Konfigurations-Manager eine datenbankanmeldung für das Konto erstellt und konfiguriert Berechtigungen für die Datenbank durch Zuweisen des Kontos zur RSExecRole für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, hostet die Berichtsserver-Datenbank. Die Berichtsserver-Datenbank ist der einzige Datenspeicher, in den ein Berichtsserver schreibt. Das Dienstkonto benötigt keine Berechtigungen für andere Datenspeicher.  
+ Das Konto, das Sie für den Berichtsserver-Dienst angeben, muss über entsprechende Berechtigungen verfügen, um auf die Registrierung, die Berichtsserver-Programmdateien und die Berichtsserver-Datenbank zugreifen zu können. Die Berechtigungen für das Konto werden beim Festlegen des Kontos mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager automatisch konfiguriert. Wenn Sie das Dienst Konto verwenden, um eine Verbindung mit der Berichts Server-Datenbank herzustellen, erstellt der Configuration Manager einen Daten Bank Anmelde Namen für das Konto und konfiguriert die Daten Bank Berechtigungen, indem er das Konto der Rolle RSExecRole für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zuweist, die den Bericht hostet. Server Datenbank. Die Berichtsserver-Datenbank ist der einzige Datenspeicher, in den ein Berichtsserver schreibt. Das Dienstkonto benötigt keine Berechtigungen für andere Datenspeicher.  
   
  Um diese Seite zu öffnen, starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und klicken Sie auf den Link im Navigationsbereich. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -32,11 +32,11 @@ ms.locfileid: "66092181"
 >  Es wird nachdrücklich empfohlen, immer den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager zum Aktualisieren des Kontos oder des Kennworts zu verwenden. Mithilfe des Konfigurations-Managers wird sichergestellt, dass andere interne Einstellungen, die von der Dienstidentität abhängen, automatisch aktualisiert werden.  
   
 ## <a name="options"></a>Optionen  
- **Verwenden eines integrierten Kontos**  
+ **Integriertes Konto verwenden**  
  Wählen Sie **Netzwerkdienst**, **Lokales System**oder **Lokaler Dienst** aus der Liste aus. Es wird empfohlen, die Einstellung **Netzwerkdienst** zu verwenden; Sie können das Konto jedoch für jedes verfügbare Konto konfigurieren.  
   
- **Ein anderes Konto verwenden**  
- Wählen Sie diese Option aus, um ein Windows-Benutzerkonto anzugeben. Sie können ein lokales Windows-Benutzerkonto oder ein Domänen-Benutzerkonto eingeben. Geben Sie ein Domänenkonto im folgenden Format:  *\<Domäne >\\< Benutzer\>* . Geben Sie ein lokales Windows-Benutzerkonto im folgenden Format:  *\<Computername >\\< Benutzer\>* . Sie können nur ein vorhandenes Konto auswählen. Während der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration kann kein neues Konto erstellt werden.  
+ **Anderes Konto verwenden**  
+ Wählen Sie diese Option aus, um ein Windows-Benutzerkonto anzugeben. Sie können ein lokales Windows-Benutzerkonto oder ein Domänen-Benutzerkonto eingeben. Geben Sie ein Domänen Konto im folgenden Format an: *\< Domäne > \\ < Benutzer @ no__t-3*. Geben Sie ein lokales Windows-Benutzerkonto im folgenden Format an: *\< Computername > \\ < Benutzer @ no__t-3*. Sie können nur ein vorhandenes Konto auswählen. Während der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration kann kein neues Konto erstellt werden.  
   
  Die maximale Zeichenlänge für das Konto beträgt 20 Zeichen.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66092181"
  Wenn Sie den Kontotyp wechseln (wenn Sie beispielsweise ein Windows-Konto durch ein anderes oder ein integriertes Konto durch ein Windows-Domänenkonto ersetzen), werden Sie aufgefordert, eine Sicherungskopie des Verschlüsselungsschlüssels zu erstellen. Die Sicherungskopie wird automatisch wiederhergestellt, sobald Sie das neue Konto auswählen.  
   
 > [!NOTE]  
->  Jedes Mal, wenn Sie das Dienstkonto verändern, werden Sie vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager aufgefordert, den Verschlüsselungsschlüssel zu sichern und wiederherzustellen. Diese Schritte sind notwendig, weil sie sicherstellen, dass der Berichtsserver weiterhin auf die verschlüsselten Daten zugreifen kann. Weitere Informationen zu diesen Aktionen finden Sie unter [Verschlüsselungsschlüssel &#40;einheitlicher SSRS-Modus&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
+>  Jedes Mal, wenn Sie das Dienstkonto verändern, werden Sie vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager aufgefordert, den Verschlüsselungsschlüssel zu sichern und wiederherzustellen. Diese Schritte sind notwendig, weil sie sicherstellen, dass der Berichtsserver weiterhin auf die verschlüsselten Daten zugreifen kann. Weitere Informationen zu diesen Aktionen finden Sie unter [Verschlüsselungsschlüssel &#40;SSRS im einheitlichen&#41;Modus](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
- Falls Sie außerdem mit einem Berichtsserver arbeiten, der für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, und Sie das Dienstkonto mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager ändern, müssen Sie außerdem die SharePoint-Zentraladministration öffnen und die Seite [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **in der** verwenden, um die Berichtsserver- und Instanzeneinstellungen erneut anzuwenden. Mit diesem Schritt wird dem neuen Dienstkonto Zugriff auf die SharePoint-Datenbanken gewährt. Dies ist für die Integration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mit einem SharePoint-Produkt bzw. einer SharePoint-Technologie erforderlich. Weitere Informationen über das Gewähren des Datenbankzugriffs in der SharePoint-Zentraladministration finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;Reporting Services SharePoint Mode&#41; ](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) und [ Installation von SharePoint-Modus von Reporting Services &#40;SharePoint 2010 und SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+ Falls Sie außerdem mit einem Berichtsserver arbeiten, der für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, und Sie das Dienstkonto mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager ändern, müssen Sie außerdem die SharePoint-Zentraladministration öffnen und die Seite [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **in der** verwenden, um die Berichtsserver- und Instanzeneinstellungen erneut anzuwenden. Mit diesem Schritt wird dem neuen Dienstkonto Zugriff auf die SharePoint-Datenbanken gewährt. Dies ist für die Integration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mit einem SharePoint-Produkt bzw. einer SharePoint-Technologie erforderlich. Weitere Informationen zum Gewähren von Datenbankzugriff in der SharePoint-zentral Administration finden Sie unter [Konfiguration und Verwaltung eines Berichts &#40;Servers Reporting Services SharePoint&#41; -Modus](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) und [Reporting Services SharePoint-Modus. Installation &#40;von SharePoint 2010 und SharePoint&#41;2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
 ## <a name="choosing-an-account"></a>Auswählen eines Kontos  
  Geben Sie am besten ein Konto an, das über Berechtigungen für Netzwerkverbindungen verfügt und auf die Netzwerkdomänencontroller und die SMTP-Server oder -Gateways des Unternehmens zugreifen kann. In der folgenden Tabelle werden die Konten zusammengefasst und Empfehlungen für ihre Verwendung gegeben.  
@@ -73,6 +73,6 @@ ms.locfileid: "66092181"
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Konfigurieren eines Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
- [Reporting Services-Konfigurations-Manager-F1-Hilfethemen &#40;einheitlicher SSRS-Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Konfigurations-Manager für Reporting Services F1-Hilfe &#40;Themen SSRS im einheitlichen Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

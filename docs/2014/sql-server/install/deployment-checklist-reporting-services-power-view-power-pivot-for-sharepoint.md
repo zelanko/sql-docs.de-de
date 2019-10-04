@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: be1c0b23afa8110fcf32b969e93fae7d9bf7f324
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f1eb0f6892192e5ed328386e6730ec3b1c41f05b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890592"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952553"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>Bereitstellungs Checkliste: Reporting Services, Power View und PowerPivot für SharePoint
   Verwenden Sie die folgende Prüfliste, um diese BI-Funktionen in derselben SharePoint-Farm zu installieren: PowerPivot für SharePoint, Berichts-Generator und [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Diese Prüfliste empfiehlt zwar eine bestimmte Installationsreihenfolge, Sie können diese Funktionen jedoch praktisch in beliebiger Reihenfolge installieren. Die Prüfliste geht davon aus, dass die folgenden Produkte oder Funktionen installiert sind:  
   
 1.  SharePoint Server 2010 mit Service Pack 1 (SP1)  
   
-2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Datenbank-Engine  
+2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Datenbank-Engine  
   
 3.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services und Reporting Services-Add-In  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68890592"
 >   
 >  In dieser Prüfliste wird davon ausgegangen, dass die Farm während der Konfiguration von PowerPivot für SharePoint mit dem PowerPivot-Konfigurationstool konfiguriert wird. Alternativ können Sie den SharePoint-Produktkonfigurations-Assistenten verwenden. Mit beiden Vorgehensweisen erhalten Sie eine funktionstüchtige Farm, die PowerPivot für SharePoint unterstützt.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Sie müssen lokaler Administrator sein, um SQL Server-Setup auszuführen.  
   
  SharePoint Server 2010 Enterprise Edition ist für PowerPivot für SharePoint erforderlich. Sie können auch die Evaluation Enterprise Edition verwenden.  
@@ -66,10 +66,10 @@ ms.locfileid: "68890592"
 |Schritt|Link|  
 |----------|----------|  
 |Führen Sie das Vorbereitungstool für SharePoint 2010-Produkte aus.|Sie müssen über die Installationsmedien für SharePoint 2010 verfügen. Das Vorbereitungstool heißt "PrerequisiteInstaller.exe" auf dem Installationsmedium.|  
-|Installieren Sie SharePoint Server 2010 Enterprise Edition oder die Testversion hiervon.|Sie können bei der Installation von SharePoint auswählen, dass Sie die Farm später nach Abschluss des Setups durch Ausführen des Konfigurations-Assistenten für SharePoint 2010-Produkte konfigurieren möchten. Wenn Sie auf die Konfiguration der Farm warten, können Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eine Datenbank-Engine Instanz, die in einem späteren Schritt installiert wird, als Datenbankserver der Farm verwenden. Sie konfigurieren die Farm mithilfe des PowerPivot-Konfigurationstools. Dieses schließt Aktionen zum Bereitstellen der Farm ein, wenn die Farm noch nicht konfiguriert wurde.|  
-|Installieren Sie SharePoint Server 2010 SP1.|Laden Sie SP1 [https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)von herunter.|  
+|Installieren Sie SharePoint Server 2010 Enterprise Edition oder die Testversion hiervon.|Sie können bei der Installation von SharePoint auswählen, dass Sie die Farm später nach Abschluss des Setups durch Ausführen des Konfigurations-Assistenten für SharePoint 2010-Produkte konfigurieren möchten. Wenn Sie auf die Konfiguration der Farm warten, können Sie eine [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Datenbank-Engine Instanz verwenden, die in einem späteren Schritt als Datenbankserver der Farm installiert wird. Sie konfigurieren die Farm mithilfe des PowerPivot-Konfigurationstools. Dieses schließt Aktionen zum Bereitstellen der Farm ein, wenn die Farm noch nicht konfiguriert wurde.|  
+|Installieren Sie SharePoint Server 2010 SP1.|Laden Sie SP1 von [https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)herunter.|  
 |Führen Sie das Setup von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aus, um die Datenbank-Engine und PowerPivot für SharePoint zu installieren.|[Installieren von PowerPivot für SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> In Schritt 1 wird die Vorgehensweise bei der Installation von PowerPivot für SharePoint beschrieben Achten Sie darauf, dass Sie in diesem Schritt auf der Seite für die Setuprolle das Kontrollkästchen aktivieren, durch das die Datenbank-Engine der Rolle hinzugefügt wird. Dadurch wird die Datenbank-Engine Ihrer Installation hinzugefügt, sodass Sie Sie als Datenbankserver der Farm verwenden können, wenn Sie die Farm im nächsten Schritt konfigurieren. Wenn die Farm bereits konfiguriert ist, können Sie diesen Schritt jedoch überspringen.<br /><br /> In Schritt 2 werden Sie aufgefordert, den Server zu konfigurieren. Wählen Sie für diesen Schritt das PowerPivot-Konfigurationstool aus. Es sind verschiedene Ansätze verfügbar, die Verwendung des Konfigurationstools ist für eine eigenständige Installation jedoch die effizienteste Methode.<br /><br /> Wenn SharePoint 2010 installiert, aber nicht konfiguriert wird, werden durch dieses Tool Aktionen ausgewählt, die die Farm, eine Standardwebanwendung und eine Stammwebsitesammlung erstellen. Stellen Sie sicher, diese Optionen aktiviert ist, damit die Farm erstellt wird. Wenn Sie die Farm bereits konfiguriert haben, lässt das Tool diese Aktionen aus und bietet nur die für die Konfiguration von PowerPivot für SharePoint erforderlichen Aktionen an.<br /><br /> In Schritt 3 werden Sie angewiesen, die SQL Server 2008 R2-Version des OLE DB-Anbieters von Analysis Services zu installieren. Dieser Schritt ist wichtig, damit auch Versionen einer Arbeitsmappe unterstützt werden, die die mit der SQL Server 2008 R2-Version von PowerPivot für Excel erstellt wurden.|  
-|Überprüfen Sie, ob die Farm betriebsbereit ist.|Starten Sie zuerst die Zentraladministration, und vergewissern Sie sich, dass diese verfügbar ist. Öffnen Sie als nächstes die Team Website, http://localhost indem Sie eingeben.  Es sollte eine SharePoint-Teamwebsite angezeigt werden.|  
+|Überprüfen Sie, ob die Farm betriebsbereit ist.|Starten Sie zuerst die Zentraladministration, und vergewissern Sie sich, dass diese verfügbar ist. Öffnen Sie als nächstes die Team Website, indem Sie http://localhost eingeben.  Es sollte eine SharePoint-Teamwebsite angezeigt werden.|  
 |Überprüfen Sie, ob PowerPivot für SharePoint betriebsbereit ist.|[Überprüfen der PowerPivot für SharePoint-Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)<br /><br /> In dieser Task wird der PowerPivot-Datenzugriff mithilfe einer Beispielarbeitsmappe geprüft, die Sie hochladen.|  
 |Führen Sie das Setup von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aus, um Reporting Services und das Reporting Services-Add-In zu installieren und zu konfigurieren.|[Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)<br /><br /> Sie können bei der Installation von Reporting Services optional der Funktionsstruktur des Setups eine zusätzliche Analysis Services-Instanz hinzufügen, wenn Sie eine zweite Ressource zum Hosten von Tabellendaten benötigen. Die zusätzliche Analysis Services-Instanz wird verwendet, um tabellarische Modelldatenbanken zu hosten, die Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellen. Tabellendatenbanken sind eine gültige Datenquelle für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]-Berichte.<br /><br /> [Installieren von Analysis Services im Tabellenmodus](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)|  
 |Überprüfen Sie, ob der Reporting Services betriebsbereit ist.|[Verify a Reporting Services Installation (Überprüfen einer Installation von Reporting Services)](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  
