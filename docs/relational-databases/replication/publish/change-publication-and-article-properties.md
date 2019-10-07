@@ -17,12 +17,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c9e96d5ebbe71273204b39ed5d387ecab598654a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764360"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710961"
 ---
 # <a name="change-publication-and-article-properties"></a>Ändern von Veröffentlichungs- und Artikeleigenschaften
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "68764360"
 |und Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels|**sp_droparticle**|Alle Parameter|Artikel können vor dem Erstellen von Abonnements gelöscht werden. Bei Verwendung von gespeicherten Prozeduren kann ein Abonnement eines Artikels gelöscht werden; wird dagegen [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwendet, muss das gesamte Abonnement gelöscht, neu erstellt und synchronisiert werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
-|Ändern eines Spaltenfilters|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
+|Ändern eines Spaltenfilters|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Hinzufügen eines Zeilenfilters|**sp_articlefilter**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
-|Löschen eines Zeilenfilters|**sp_articlefilter**|**@article**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
-|Ändern eines Zeilenfilters|**sp_articlefilter**|**@filter_clause**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
+|Löschen eines Zeilenfilters|**sp_articlefilter**|`@article`|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
+|Ändern eines Zeilenfilters|**sp_articlefilter**|`@filter_clause`|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Ändern eines Zeilenfilters|**sp_changearticle**|**filter**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Ändern von Schemaoptionen|**sp_changearticle**|**schema_option**|Neue Momentaufnahme|  
 |Ändern der Art und Weise, wie vor dem Anwenden der Momentaufnahme mit Tabellen auf dem Abonnenten umgegangen wird|**sp_changearticle**|**pre_creation_cmd**|Neue Momentaufnahme|  
@@ -58,7 +58,7 @@ ms.locfileid: "68764360"
 |Ändern des INSERT-, UPDATE- oder DELETE-Befehls|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Ändern des Zieltabellennamens|**sp_changearticle**|**dest_table**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Ändern des Besitzers der Zieltabelle (Schema)|**sp_changearticle**|**destination_owner**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
-|Ändern der Datentypzuordnungen (gilt nur für Oracle-Veröffentlichungen)|**sp_changearticlecolumndatatype**|**@type**<br /><br /> **@length**<br /><br /> **@precision**<br /><br /> **@scale**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
+|Ändern der Datentypzuordnungen (gilt nur für Oracle-Veröffentlichungen)|**sp_changearticlecolumndatatype**|`@type` <br /><br /> `@length` <br /><br /> `@precision`<br /><br /> `@scale`|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Veröffentlichungseigenschaften für die Mergereplikation  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68764360"
 |Ändern der Skripts vor und nach der Momentaufnahme|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Neue Momentaufnahme (auch bei Änderung des Skriptinhalts notwendig)<br /><br /> Zum Anwenden des neuen Skripts auf den Abonnenten ist eine erneute Initialisierung erforderlich.|  
 |Hinzufügen eines Joinfilters oder logischen Datensatzes|**sp_addmergefilter**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Löschen eines Joinfilters oder logischen Datensatzes|**sp_dropmergefilter**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
-|Ändern eines Joinfilters oder logischen Datensatzes|**sp_changemergefilter**|**@property**<br /><br /> **@value**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
+|Ändern eines Joinfilters oder logischen Datensatzes|**sp_changemergefilter**|`@property`<br /><br /> `@value`|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Deaktivieren der Verwendung parametrisierter Filter (das Aktivieren parametrisierter Filter erfordert keine besonderen Aktionen)|**sp_changemergepublication**|Wert **false** für **dynamic_filters**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Aktivieren oder Deaktivieren der Verwendung von vorausberechneten Partitionen|**sp_changemergepublication**|**use_partition_groups**|Neue Momentaufnahme|  
 |Aktivieren bzw. Deaktivieren der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] -Partitionsoptimierung|**sp_changemergepublication**|**keep_partition_changes**|Erneutes Initialisieren von Abonnements|  
@@ -86,7 +86,7 @@ ms.locfileid: "68764360"
 |Löschen eines Artikels, der den zuletzt parametrisierten Filter in der Veröffentlichung enthält|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Löschen eines Artikels, der einem Joinfilter oder einem logischen Datensatz übergeordnet ist (mit der Nebenwirkung, dass der Join gelöscht wird).|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Löschen eines Artikels in allen anderen Fällen|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme|  
-|Einbinden eines Spaltenfilters, der zuvor nicht veröffentlicht wurde|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
+|Einbinden eines Spaltenfilters, der zuvor nicht veröffentlicht wurde|**sp_mergearticlecolumn**|`@column`<br /><br /> `@operation`|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Hinzufügen, Löschen oder Ändern eines Zeilenfilters|**sp_changemergearticle**|**subset_filterclause**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements<br /><br /> Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.<br /><br /> Wenn ein Artikel in keinem Joinfilter enthalten ist, können Sie den Artikel löschen und mit einem anderen Zeilenfilter wieder hinzufügen. Das erneute Initialisieren des gesamten Abonnements ist nicht notwendig. Informationen zum Hinzufügen und Löschen von Artikeln finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Ändern von Schemaoptionen|**sp_changemergearticle**|**schema_option**|Neue Momentaufnahme|  
 |Ändern der Nachverfolgung auf Spaltenebene in die Nachverfolgung auf Zeilenebene (beim Ändern der Nachverfolgung auf Zeilenebene in die Nachverfolgung auf Spaltenebene sind keine gesonderten Aktionen notwendig)|**sp_changemergearticle**|Wert **false** für **column_tracking**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  

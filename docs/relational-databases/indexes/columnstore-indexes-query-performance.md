@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009373"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816716"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore-Indizes: Abfrageleistung
 
@@ -154,8 +154,6 @@ Die Weitergabe von Zeichenfolgenprädikaten nutzt zur Verbesserung der Abfragele
 Bei der Zeichenfolgenprädikatweitergabe berechnet die Abfrageausführung das Prädikat anhand der Werte im Wörterbuch. Wenn sich dies qualifiziert, werden alle Zeilen mit Bezug auf den Wörterbuchwert automatisch qualifiziert. Dies verbessert die Leistung auf zwei Arten:
 1.  Es wird nur die qualifizierte Zeile zurückgegeben, wodurch die Anzahl der Zeilen reduziert wird, die aus dem SCAN-Knoten übertragen werden müssen. 
 2.  Die Anzahl von Zeichenfolgenvergleichen wird maßgeblich verringert. In diesem Beispiel sind nur 100 Zeichenfolgenvergleiche gegenüber einer Millionen Vergleiche erforderlich. Wie im Folgenden beschrieben gibt es einige Einschränkungen:    
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   Keine Zeichenfolgenprädikatweitergabe für Deltazeilengruppen. Es gibt kein Wörterbuch für Spalten in Deltazeilengruppen.    
     -   Keine Weitergabe von Zeichenfolgenprädikaten, wenn die Einträge im Wörterbuch eine Größe von 64 KB überschreiten.    
