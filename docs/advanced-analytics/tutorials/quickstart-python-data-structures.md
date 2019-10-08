@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: HT
+ms.openlocfilehash: c09c9ad4625520054f2d3f103ec055c37764aed2
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006059"
+ms.locfileid: "72008429"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Schnellstart: Verarbeiten von Datentypen und Objekten mithilfe von python in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ Folgende Konzepte sollten im Vordergrund aufgeführt werden:
 - Ein einzelner Wert eines Daten Rahmens wird als Zelle bezeichnet, und der Zugriff erfolgt über den Index.
 
 Wie würden Sie das einzelne Ergebnis einer Berechnung als Datenrahmen verfügbar machen, wenn ein Data. Frame eine tabellarische Struktur erfordert? Eine Antwort ist die Darstellung des einzelnen skalarwerts als Reihe, die leicht in einen Datenrahmen konvertiert werden kann. 
+
+> [!NOTE]
+> Beim Zurückgeben von Datumsangaben verwendet python in SQL DateTime mit einem eingeschränkten Datumsbereich von 1753-01-01 (-53690) bis 9999-12-31 (2958463). 
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
