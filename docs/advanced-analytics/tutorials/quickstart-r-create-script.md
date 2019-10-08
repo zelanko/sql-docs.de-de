@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Erstellen und führen Sie einfache R-Skripts in einer SQL Server Instanz mit SQL Server Machine Learning Services aus.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d723fa9b90659eb31e96626a3a85c1299c17fa2f
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: e49b01d3c3a4ac743d6614d66cc7864aee946460
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150313"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006038"
 ---
 # <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Schnellstart: Erstellen und Ausführen einfacher R-Skripts mit SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ print(c(c, d))
 
 1. Öffnen Sie **SQL Server Management Studio** , und stellen Sie eine Verbindung mit Ihrer SQL Server Instanz her
 
-1. Übergeben Sie das gesamte R-Skript `sp_execute_external_script` an die gespeicherte Prozedur.
+1. Übergeben Sie das gesamte R-Skript an die gespeicherte Prozedur `sp_execute_external_script`.
 
-   Das Skript wird durch das `@script` -Argument übermittelt. Alles innerhalb des `@script` Arguments muss gültiger R-Code sein.
+   Das Skript wird durch das `@script`-Argument übermittelt. Alles innerhalb des `@script`-Arguments muss gültiger R-Code sein.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -62,7 +62,7 @@ print(c(c, d))
     '
     ```
 
-1. Das korrekte Ergebnis wird berechnet, und die `print` R-Funktion gibt das Ergebnis an das Fenster **Meldungen** zurück.
+1. Das korrekte Ergebnis wird berechnet, und die R-`print`-Funktion gibt das Ergebnis an das Fenster **Meldungen** zurück.
 
    Dies sollte in etwa wie folgt aussehen.
 
@@ -85,14 +85,14 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-Zu den Eingaben `sp_execute_external_script` für die gespeicherte Prozedur gehören:
+Eingaben für die gespeicherte Prozedur `sp_execute_external_script` umfassen Folgendes:
 
 | | |
 |-|-|
 | @language | definiert die aufzurufende Spracherweiterung, in diesem Fall R |
 | @script | definiert die Befehle, die an die R-Laufzeit übermittelt werden. Ihr gesamtes R-Skript muss von diesem Argument als Unicode-Text umschlossen sein. Sie können den Text auch einer Variablen des Typs **nvarchar** hinzufügen und dann die Variable |
 | @input_data_1 | von der Abfrage zurückgegebene Daten, die an die R-Laufzeit zurückgegeben werden, die die Daten zurückgibt, die als Datenrahmen SQL Server werden. |
-|MIT RESULTSETS | Klausel definiert das Schema der zurückgegebenen Datentabelle für SQL Server, wobei "Hallo Welt" als Spaltenname " **int** " für den Datentyp hinzugefügt wird. |
+|WITH RESULT SETS | Klausel definiert das Schema der zurückgegebenen Datentabelle für SQL Server, wobei "Hallo Welt" als Spaltenname " **int** " für den Datentyp hinzugefügt wird. |
 
 Der Befehl gibt den folgenden Text aus:
 
@@ -102,7 +102,7 @@ Der Befehl gibt den folgenden Text aus:
 
 ## <a name="use-inputs-and-outputs"></a>Verwenden von Eingaben und Ausgaben
 
-Standardmäßig `sp_execute_external_script` akzeptiert ein einzelnes Dataset als Eingabe, das in der Regel in Form einer gültigen SQL-Abfrage angegeben wird. Anschließend wird ein einzelner R-Datenrahmen als Ausgabe zurückgegeben.
+Standardmäßig akzeptiert `sp_execute_external_script` ein einzelnes Dataset als Eingabe, das in der Regel in Form einer gültigen SQL-Abfrage angegeben wird. Anschließend wird ein einzelner R-Datenrahmen als Ausgabe zurückgegeben.
 
 Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp_execute_external_script`: **Input DataSet** und **outputdataset**.
 
@@ -122,7 +122,7 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
     GO
     ```
 
-1. Verwenden Sie `SELECT` die-Anweisung, um die Tabelle abzufragen.
+1. Verwenden Sie die `SELECT`-Anweisung, um die Tabelle abzufragen.
   
     ```sql
     SELECT *
@@ -133,7 +133,7 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
 
     ![Inhalt der rtestdata-Tabelle](./media/select-rtestdata.png)
 
-1. Führen Sie das folgende R-Skript aus. Die Daten werden mithilfe der `SELECT` -Anweisung aus der-Tabelle abgerufen, an die R-Laufzeit weitergeleitet, und die Daten werden als Datenrahmen zurückgegeben. Die `WITH RESULT SETS` -Klausel definiert das Schema der zurückgegebenen Datentabelle für SQL, wobei der Spaltenname *newcolname*hinzugefügt wird.
+1. Führen Sie das folgende R-Skript aus. Sie ruft die Daten aus der Tabelle mithilfe der `SELECT`-Anweisung ab, übergibt sie durch die R-Laufzeit und gibt die Daten als Datenrahmen zurück. Die `WITH RESULT SETS`-Klausel definiert das Schema der zurückgegebenen Datentabelle für SQL, wobei der Spaltenname *newcolname*hinzugefügt wird.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -157,12 +157,12 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    Beachten Sie, dass R groß-und Kleinschreibung beachtet. Die im R-Skript (**SQL_out**, **SQL_in**) verwendeten Eingabe-und Ausgabevariablen müssen mit den Namen, die `@input_data_1_name` mit `@output_data_1_name`und definiert sind, einschließlich Case
+    Beachten Sie, dass R groß-und Kleinschreibung beachtet. Die im R-Skript (**SQL_out**, **SQL_in**) verwendeten Eingabe-und Ausgabevariablen müssen mit den Namen, die mit `@input_data_1_name` und `@output_data_1_name` definiert sind, einschließlich Case, identisch sein.
 
    > [!TIP]
    > Nur eine Eingabedataset kann als Parameter übergeben werden, und Sie können nur ein Dataset zurückgeben. Allerdings können Sie andere Datasets innerhalb Ihres R-Codes aufrufen und Ausgaben und andere Typen zusätzlich zum Dataset zurückgeben. Sie können auch das Schlüsselwort OUTPUT zu einem beliebigen Parameter hinzufügen, damit es mit den Ergebnissen zurückgegeben wird.
 
-1. Sie können Werte auch nur mit dem R-Skript ohne Eingabedaten generieren (`@input_data_1` ist auf "blank" festgelegt).
+1. Sie können Werte auch nur mit dem R-Skript ohne Eingabedaten generieren (`@input_data_1` ist auf Blank festgelegt).
 
    Das folgende Skript gibt den Text "Hello" und "World" aus.
 
@@ -178,7 +178,7 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
 
     **Ergebnisse**
 
-    ![Abfragen von Ergebnissen @script mithilfe von als Eingabe](./media/r-data-generated-output.png)
+    ![Abfrageergebnisse mit @script als Eingabe](./media/r-data-generated-output.png)
 
 ## <a name="check-r-version"></a>R-Version überprüfen
 
@@ -190,7 +190,7 @@ EXECUTE sp_execute_external_script @language = N'R'
 GO
 ```
 
-Die R `print` -Funktion gibt die Version an das Fenster **Meldungen** zurück. In der folgenden Beispielausgabe sehen Sie, dass R Version 3.4.4 in diesem Fall installiert ist.
+Die R `print`-Funktion gibt die Version an das Fenster **Meldungen** zurück. In der folgenden Beispielausgabe sehen Sie, dass R Version 3.4.4 in diesem Fall installiert ist.
 
 **Ergebnisse**
 
@@ -232,7 +232,7 @@ WITH result sets((
             ));
 ```
 
-Die Ausgabe erfolgt `installed.packages()` in R und wird als Resultset zurückgegeben.
+Die Ausgabe erfolgt in R `installed.packages()` und wird als Resultset zurückgegeben.
 
 **Ergebnisse**
 
@@ -240,13 +240,13 @@ Die Ausgabe erfolgt `installed.packages()` in R und wird als Resultset zurückge
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Um ein Machine Learning-Modell mithilfe von R in SQL Server zu erstellen, befolgen Sie diese Schnellstartanleitung:
+Um zu erfahren, wie Datenstrukturen verwendet werden, wenn R in SQL Server Machine Learning Services verwendet wird, befolgen Sie diese Schnellstartanleitung:
 
 > [!div class="nextstepaction"]
-> [Erstellen und bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
+> [Verarbeiten von Datentypen und Objekten mithilfe von R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
 
-Weitere Informationen zu SQL Server Machine Learning Services finden Sie in den folgenden Artikeln.
+Weitere Informationen zur Verwendung von R in SQL Server Machine Learning Services finden Sie in den folgenden Artikeln:
 
-- [Verarbeiten von Datentypen und Objekten mithilfe von R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
 - [Schreiben von erweiterten R-Funktionen mit SQL Server Machine Learning Services](quickstart-r-functions.md)
+- [Erstellen und bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 - [Was ist SQL Server Machine Learning Services (python und R)?](../what-is-sql-server-machine-learning.md)

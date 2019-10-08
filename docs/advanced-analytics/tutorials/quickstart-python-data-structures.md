@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Datentypen und Datenobjekten in Python arbeiten und SQL Server mit SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3606072fefa9b74adcfdb914d02e4e82c11e0eb
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-ms.translationtype: MT
+ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199435"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006059"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Schnellstart: Verarbeiten von Datentypen und Objekten mithilfe von python in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ SQL Server basiert auf dem python **Pandas** -Paket, das hervorragend für die A
 
 Folgende Konzepte sollten im Vordergrund aufgeführt werden:
 
-+ Ein Datenrahmen ist eine Tabelle mit _mehreren_ Spalten.
-+ Eine einzelne Spalte eines Daten Rahmens ist ein Listen ähnliches Objekt, das als Reihe bezeichnet wird.
-+ Ein einzelner Wert eines Daten Rahmens wird als Zelle bezeichnet, und der Zugriff erfolgt über den Index.
+- Ein Datenrahmen ist eine Tabelle mit _mehreren_ Spalten.
+- Eine einzelne Spalte eines Daten Rahmens ist ein Listen ähnliches Objekt, das als Reihe bezeichnet wird.
+- Ein einzelner Wert eines Daten Rahmens wird als Zelle bezeichnet, und der Zugriff erfolgt über den Index.
 
 Wie würden Sie das einzelne Ergebnis einer Berechnung als Datenrahmen verfügbar machen, wenn ein Data. Frame eine tabellarische Struktur erfordert? Eine Antwort ist die Darstellung des einzelnen skalarwerts als Reihe, die leicht in einen Datenrahmen konvertiert werden kann. 
 
@@ -203,11 +203,12 @@ Nun geben Sie bestimmte Werte aus zwei Folge mathematischen Ergebnissen in einem
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Als Nächstes erstellen Sie ein Vorhersagemodell mithilfe von python in SQL Server.
+Weitere Informationen zum Schreiben erweiterter python-Funktionen in SQL Server finden Sie in diesem Schnellstart:
 
 > [!div class="nextstepaction"]
-> [Erstellen und bewerten eines Vorhersagemodells in python](quickstart-python-train-score-model.md)
+> [Schreiben erweiterter python-Funktionen mit SQL Server Machine Learning Services](quickstart-python-functions.md)
 
-Weitere Informationen zum SQL Server Machine Learning Services finden Sie unter:
+Weitere Informationen zur Verwendung von python in SQL Server Machine Learning Services finden Sie in den folgenden Artikeln:
 
+- [Erstellen und bewerten eines Vorhersagemodells in python](quickstart-python-train-score-model.md)
 - [Was ist SQL Server Machine Learning Services (python und R)?](../what-is-sql-server-machine-learning.md)

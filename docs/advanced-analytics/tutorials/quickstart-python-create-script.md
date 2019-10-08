@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Erstellen und führen Sie einfache python-Skripts in einer SQL Server Instanz mit SQL Server Machine Learning Services aus.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6f7fe62f746a8f6e74ebdf9f766b76c0edc720a
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: ecf99f1ae70cf44b32955ae164dbe3017bdf5f24
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71204297"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006118"
 ---
 # <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Schnellstart: Erstellen und Ausführen einfacher python-Skripts mit SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ print(c, d)
 
 1. Öffnen Sie ein neues Abfragefenster in **SQL Server Management Studio** , das mit Ihrer SQL Server-Instanz verbunden ist.
 
-1. Übergeben Sie das gesamte Python-Skript `sp_execute_external_script` an die gespeicherte Prozedur.
+1. Übergeben Sie das gesamte Python-Skript an die gespeicherte Prozedur `sp_execute_external_script`.
 
-   Das Skript wird durch das `@script` -Argument übermittelt. Alles innerhalb des `@script` Arguments muss gültiger Python-Code sein.
+   Das Skript wird durch das `@script`-Argument übermittelt. Alles innerhalb des `@script`-Arguments muss gültiger Python-Code sein.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -60,7 +60,7 @@ print(c, d)
     '
     ```
 
-1. Das korrekte Ergebnis wird berechnet, und die `print` python-Funktion gibt das Ergebnis an das Fenster **Meldungen** zurück.
+1. Das korrekte Ergebnis wird berechnet, und die python-`print`-Funktion gibt das Ergebnis an das Fenster **Meldungen** zurück.
 
    Dies sollte in etwa wie folgt aussehen.
 
@@ -83,7 +83,7 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-Zu den Eingaben `sp_execute_external_script` für die gespeicherte Prozedur gehören:
+Eingaben für die gespeicherte Prozedur `sp_execute_external_script` umfassen Folgendes:
 
 | | |
 |-|-|
@@ -100,7 +100,7 @@ Der Befehl gibt den folgenden Text aus:
 
 ## <a name="use-inputs-and-outputs"></a>Verwenden von Eingaben und Ausgaben
 
-Standardmäßig `sp_execute_external_script` akzeptiert ein einzelnes Dataset als Eingabe, das in der Regel in Form einer gültigen SQL-Abfrage angegeben wird. Anschließend wird ein einzelner python-Datenrahmen als Ausgabe zurückgegeben.
+Standardmäßig akzeptiert `sp_execute_external_script` ein einzelnes Dataset als Eingabe, das in der Regel in Form einer gültigen SQL-Abfrage angegeben wird. Anschließend wird ein einzelner python-Datenrahmen als Ausgabe zurückgegeben.
 
 Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp_execute_external_script`: **Input DataSet** und **outputdataset**.
 
@@ -120,7 +120,7 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
     GO
     ```
 
-1. Verwenden Sie `SELECT` die-Anweisung, um die Tabelle abzufragen.
+1. Verwenden Sie die `SELECT`-Anweisung, um die Tabelle abzufragen.
   
     ```sql
     SELECT *
@@ -131,7 +131,7 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
 
     ![Inhalt der Tabelle "pythontestdata"](./media/select-pythontestdata.png)
 
-1. Führen Sie das folgende Python-Skript aus. Die Daten werden mithilfe der `SELECT` -Anweisung aus der-Tabelle abgerufen, an die python-Laufzeit weitergeleitet, und die Daten werden als Datenrahmen zurückgegeben. Die `WITH RESULT SETS` -Klausel definiert das Schema der zurückgegebenen Datentabelle für SQL, wobei der Spaltenname *newcolname*hinzugefügt wird.
+1. Führen Sie das folgende Python-Skript aus. Sie ruft die Daten aus der Tabelle mithilfe der `SELECT`-Anweisung ab, übergibt sie durch die python-Laufzeit und gibt die Daten als Datenrahmen zurück. Die `WITH RESULT SETS`-Klausel definiert das Schema der zurückgegebenen Datentabelle für SQL, wobei der Spaltenname *newcolname*hinzugefügt wird.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -160,7 +160,7 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
    > [!TIP]
    > Nur eine Eingabedataset kann als Parameter übergeben werden, und Sie können nur ein Dataset zurückgeben. Allerdings können Sie andere Datasets innerhalb Ihres python-Codes abrufen und können zusätzlich zum DataSet Ausgaben anderer Typen zurückgeben. Sie können auch das Schlüsselwort OUTPUT zu einem beliebigen Parameter hinzufügen, damit es mit den Ergebnissen zurückgegeben wird.
 
-1. Sie können Werte auch nur mit dem Python-Skript ohne Eingabedaten generieren (`@input_data_1` ist auf "blank" festgelegt).
+1. Sie können Werte auch nur mit dem Python-Skript ohne Eingabedaten generieren (`@input_data_1` ist auf Blank festgelegt).
 
    Das folgende Skript gibt den Text "Hello" und "World" aus.
 
@@ -177,7 +177,7 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
 
    **Ergebnisse**
 
-   ![Abfragen von Ergebnissen @script mithilfe von als Eingabe](./media/python-data-generated-output.png)
+   ![Abfrageergebnisse mit @script als Eingabe](./media/python-data-generated-output.png)
 
 > [!NOTE]
 > Python verwendet führende Leerzeichen, um-Anweisungen zu gruppieren. Wenn das imeingebetteten Python-Skript mehrere Zeilen umfasst, wie im vorangehenden Skript, versuchen Sie daher nicht, die python-Befehle als Übereinstimmung mit den SQL-Befehlen einzuschließen. Dieses Skript erzeugt z. b. einen Fehler:
@@ -206,7 +206,7 @@ print(sys.version)
 GO
 ```
 
-Die python `print` -Funktion gibt die Version an das Fenster **Meldungen** zurück. In der folgenden Beispielausgabe können Sie sehen, dass die Python-Version 3.5.2 in diesem Fall installiert ist.
+Die python-`print`-Funktion gibt die Version an das Fenster **Meldungen** zurück. In der folgenden Beispielausgabe können Sie sehen, dass die Python-Version 3.5.2 in diesem Fall installiert ist.
 
 **Ergebnisse**
 
@@ -231,7 +231,7 @@ for i in pip.get_installed_distributions():
 GO
 ```
 
-Die Ausgabe erfolgt `pip.get_installed_distributions()` in Python und wird als `STDOUT` Nachrichten zurückgegeben.
+Die Ausgabe erfolgt in python von `pip.get_installed_distributions()` und wird als `STDOUT`-Meldungen zurückgegeben.
 
 **Ergebnisse**
 
@@ -254,12 +254,13 @@ toolz 0.8.2
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Um ein Machine Learning-Modell mithilfe von python in SQL Server zu erstellen, befolgen Sie diese Schnellstartanleitung:
+Um zu erfahren, wie Datenstrukturen bei der Verwendung von python in SQL Server Machine Learning Services verwendet werden, befolgen Sie diese Schnellstartanleitung:
 
 > [!div class="nextstepaction"]
-> [Erstellen und bewerten eines Vorhersagemodells in Python mit SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
+> [Verarbeiten von Datentypen und Objekten mithilfe von python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
-Weitere Informationen zu SQL Server Machine Learning Services finden Sie in den folgenden Artikeln.
+Weitere Informationen zur Verwendung von python in SQL Server Machine Learning Services finden Sie in den folgenden Artikeln:
 
-- [Verarbeiten von Datentypen und Objekten mithilfe von python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
+- [Schreiben erweiterter python-Funktionen mit SQL Server Machine Learning Services](quickstart-python-functions.md)
+- [Erstellen und bewerten eines Vorhersagemodells in Python mit SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
 - [Was ist SQL Server Machine Learning Services (python und R)?](../what-is-sql-server-machine-learning.md)
