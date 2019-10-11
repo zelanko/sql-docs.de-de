@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 998ff896f28d0d162a0de29c3b787a7a60b5a2e7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769207"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174005"
 ---
-# <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
+# <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Fügt einer vorhandenen Mergeveröffentlichung einen Artikel hinzu. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
@@ -73,47 +73,47 @@ sp_addmergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, die den Artikel enthält. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` ist der Name der Veröffentlichung, die den Artikel enthält. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @article = ] 'article'`Der Name des Artikels. Der Name muss innerhalb der Veröffentlichung eindeutig sein. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Artikel* muss sich auf dem lokalen Computer [!INCLUDE[msCoName](../../includes/msconame-md.md)] befinden, auf dem ausgeführt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird, und muss den Regeln für Bezeichner entsprechen.  
+`[ @article = ] 'article'` ist der Name des Artikels. Der Name muss innerhalb der Veröffentlichung eindeutig sein. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Artikel* muss sich auf dem lokalen Computer mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befinden und den Regeln für Bezeichner entsprechen.  
   
-`[ @source_object = ] 'source_object'`Das Datenbankobjekt, das veröffentlicht werden soll. *source_object* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Weitere Informationen zu den Objekttypen, die mithilfe der Mergereplikation veröffentlicht werden können, finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+`[ @source_object = ] 'source_object'` ist das Datenbankobjekt, das veröffentlicht werden soll. *source_object* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Weitere Informationen zu den Objekttypen, die mithilfe der Mergereplikation veröffentlicht werden können, finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
-`[ @type = ] 'type'`Der Typ des Artikels. *Type ist vom Datentyp* **vom Datentyp sysname**. der Standardwert ist **Table**. die folgenden Werte sind möglich:  
+`[ @type = ] 'type'` ist der Artikeltyp. *Type ist vom Datentyp* **vom Datentyp sysname**. der Standardwert ist **Table**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Tabelle** vorgegebene|Tabelle mit Schema und Daten. Die Replikation überwacht die Tabelle, um die zu replizierenden Daten zu ermitteln.|  
+|**Tabelle** (Standard)|Tabelle mit Schema und Daten. Die Replikation überwacht die Tabelle, um die zu replizierenden Daten zu ermitteln.|  
 |**nur Func-Schema**|Funktion vom Typ schema only.|  
-|**indizierte Sicht** **nur Schema**|Indizierte Sicht vom Typ schema only.|  
+|nur **indiziertes Sicht** **Schema**|Indizierte Sicht vom Typ schema only.|  
 |**nur proc-Schema**|Nur gespeicherte Prozedur mit Schema|  
 |**nur Synonym Schema**|Nur Synonym mit Schema|  
 |**nur Schema anzeigen**|Sicht vom Typ schema only.|  
   
-`[ @description = ] 'description'`Ist eine Beschreibung des Artikels. die *Beschreibung* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
+`[ @description = ] 'description'` ist eine Beschreibung des Artikels. die *Beschreibung* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
   
-`[ @column_tracking = ] 'column_tracking'`Die Einstellung für die Nachverfolgung auf Spaltenebene. *column_tracking* ist vom Datentyp **nvarchar (10)** und hat den Standardwert false. **true**schaltet die Spalten Nachverfolgung ein. **false** deaktiviert die Spalten Nachverfolgung und lässt die Konflikterkennung auf Zeilenebene zu. Wenn die Tabelle bereits in anderen Mergereplikationen veröffentlicht ist, müssen Sie denselben Wert für die Spaltenprotokollierung verwenden, der von bereits bestehenden Artikeln für diese Tabelle verwendet wird. Dieser Parameter ist nur für Tabellenartikel spezifisch.  
+`[ @column_tracking = ] 'column_tracking'` ist die Einstellung für die Nachverfolgung auf Spaltenebene. *column_tracking* ist vom Datentyp **nvarchar (10)** und hat den Standardwert false. **true**schaltet die Spalten Nachverfolgung ein. **false** deaktiviert die Spalten Nachverfolgung und lässt die Konflikterkennung auf Zeilenebene zu. Wenn die Tabelle bereits in anderen Mergereplikationen veröffentlicht ist, müssen Sie denselben Wert für die Spaltenprotokollierung verwenden, der von bereits bestehenden Artikeln für diese Tabelle verwendet wird. Dieser Parameter ist nur für Tabellenartikel spezifisch.  
   
 > [!NOTE]  
 >  Falls die Zeilennachverfolgung zur Konflikterkennung verwendet wird (Standardeinstellung), kann die Basistabelle maximal 1.024 Spalten enthalten. Die Spalten müssen jedoch im Artikel gefiltert werden, sodass maximal 246 Spalten veröffentlicht werden. Wenn Spaltennachverfolgung verwendet wird, kann die Basistabelle maximal 246 Spalten enthalten.  
   
-`[ @status = ] 'status'`Der Status des Artikels. *Status* ist vom Datentyp **nvarchar (10)** und hat den Standardwert **unsynchronisiert**. Wenn **aktiv**, wird das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle ausgeführt. Wenn die Synchronisierungs Datei **nicht synchronisiert**ist, wird das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle beim nächsten Ausführen des Momentaufnahmen-Agent ausgeführt.  
+`[ @status = ] 'status'` ist der Status des Artikels. *Status* ist vom Datentyp **nvarchar (10)** und hat den Standardwert **unsynchronisiert**. Wenn **aktiv**, wird das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle ausgeführt. Wenn die **Synchronisierungs Datei nicht synchronisiert**ist, wird das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle beim nächsten Ausführen des Momentaufnahmen-Agent ausgeführt.  
   
-`[ @pre_creation_cmd = ] 'pre_creation_cmd'`Gibt an, was das System tun soll, wenn die Tabelle beim Anwenden der Momentaufnahme auf dem Abonnenten vorhanden ist. *pre_creation_cmd* ist vom Datentyp **nvarchar (10)** . die folgenden Werte sind möglich:  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'` gibt an, was das System tun soll, wenn die Tabelle beim Anwenden der Momentaufnahme auf dem Abonnenten vorhanden ist. *pre_creation_cmd* ist vom Datentyp **nvarchar (10)** . die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |**gar**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
 |**delete**|Ein Löschvorgang wird auf der Grundlage der WHERE-Klausel im Teilmengenfilter ausgegeben.|  
-|**Löschen** vorgegebene|Die Tabelle wird vor dem erneuten Erstellen gelöscht. Erforderlich zur unter [!INCLUDE[msCoName](../../includes/msconame-md.md)] Stützung [!INCLUDE[ssEW](../../includes/ssew-md.md)] von-Abonnenten.|  
+|**Drop** (Standard)|Die Tabelle wird vor dem erneuten Erstellen gelöscht. Erforderlich, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]-Abonnenten zu unterstützen.|  
 |**truncate**|Schneidet die Zieltabelle ab.|  
   
-`[ @creation_script = ] 'creation_script'`Der Pfad und der Name eines optionalen Artikel Schema Skripts, mit dem der Artikel in der Abonnement Datenbank erstellt wird. *creation_script* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
+`[ @creation_script = ] 'creation_script'` ist der Pfad und Name eines optionalen Artikel Schema Skripts, mit dem der Artikel in der Abonnement Datenbank erstellt wird. *creation_script* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Erstellungsskripts werden auf [!INCLUDE[ssEW](../../includes/ssew-md.md)]-Abonnenten nicht ausgeführt.  
   
-`[ @schema_option = ] schema_option`Ist eine Bitmap der Schema Generierungs Option für den angegebenen Artikel. *schema_option* ist **Binär (8)** und kann das [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt mindestens eines der folgenden Werte.  
+`[ @schema_option = ] schema_option` ist eine Bitmap der Schema Generierungs Option für den angegebenen Artikel. *schema_option* ist **Binär (8)** und kann das [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt mindestens eines der folgenden Werte.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -144,17 +144,17 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x4000000**|Repliziert Indizes für **XML** -Spalten.|  
 |**0x8000000**|Erstellt Schemas, die noch nicht auf dem Abonnenten vorhanden sind.|  
 |**0x10000000**|Konvertiert **XML** -Spalten in **ntext** auf dem Abonnenten.|  
-|**0x20000000**|Konvertiert große Objekt Datentypen (**nvarchar (max)** , **varchar (max)** und **varbinary (max)** ), die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in eingeführt wurden, in Datentypen [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], die in unterstützt werden.|  
+|**0x20000000**|Konvertiert große Objekt Datentypen (**nvarchar (max)** , **varchar (max)** und **varbinary (max)** ), die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurden, in Datentypen, die auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] unterstützt werden.|  
 |**0x40000000**|Repliziert Berechtigungen.|  
 |**0x80000000**|Versucht, Abhängigkeiten von Objekten zu löschen, die nicht Teil der Veröffentlichung sind.|  
-|**0x100000000**|Verwenden Sie diese Option, um das FILESTREAM-Attribut zu replizieren, wenn es für **varbinary (max)** -Spalten angegeben wird. Geben Sie diese Option nicht an, wenn Sie Tabellen auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten replizieren. Das Replizieren von Tabellen mit FILESTREAM- [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Spalten auf Abonnenten wird unabhängig davon, wie diese Schema Option festgelegt ist, nicht unterstützt. Siehe Verwandte Option **0x800000000**.|  
-|**0x200000000**|Konvertiert Datums-und Uhrzeit Datentypen (**Date**, **time**, **DateTimeOffset**und **datetime2**), [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] die in eingeführt wurden, in Datentypen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in früheren Versionen von unterstützt werden.|  
+|**0x100000000**|Verwenden Sie diese Option, um das FILESTREAM-Attribut zu replizieren, wenn es für **varbinary (max)** -Spalten angegeben wird. Geben Sie diese Option nicht an, wenn Sie Tabellen auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten replizieren. Das Replizieren von Tabellen mit FILESTREAM-Spalten auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Abonnenten wird unabhängig davon, wie diese Schema Option festgelegt ist, nicht unterstützt. Siehe Verwandte Option **0x800000000**.|  
+|**0x200000000**|Konvertiert Datums-und Uhrzeit Datentypen (**Date**, **time**, **DateTimeOffset**und **datetime2**), die in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingeführt wurden, in Datentypen, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden.|  
 |**0x400000000**|Repliziert die Komprimierungsoption für Daten und Indizes. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 |**0x800000000**|Legen Sie diese Option fest, um FILESTREAM-Daten in einer eigenen Dateigruppe auf dem Abonnenten zu speichern. Wenn diese Option nicht festgelegt wird, werden FILESTREAM-Daten in der Standarddateigruppe gespeichert. Bei der Replikation werden keine Dateigruppen erstellt. Daher müssen Sie beim Festlegen dieser Option die Dateigruppe erstellen, bevor Sie die Momentaufnahme auf dem Abonnenten anwenden. Weitere Informationen zum Erstellen von Objekten vor dem Anwenden der Momentaufnahme finden Sie unter [Ausführen von Skripts vor und nach dem Anwenden der](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)Momentaufnahme.<br /><br /> Siehe Verwandte Option **0x100000000**.|  
-|**0x1000000000**|Konvertiert Common Language Runtime (CLR)-benutzerdefinierten Typen (User-Defined Types, UDTs) in **varbinary (max)** , sodass Spalten vom Typ UDT auf Abonnenten repliziert werden können, auf denen ausgeführt [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]wird.|  
-|**0x2000000000**|Konvertiert den **hierarchyid** -Datentyp in **varbinary (max)** , sodass Spalten vom Typ **hierarchyid** auf Abonnenten repliziert werden können, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]auf denen ausgeführt wird. Weitere Informationen zur Verwendung von **hierarchyid** -Spalten in replizierten Tabellen finden Sie unter [ &#40;hierarchyid Transact-&#41;SQL](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+|**0x1000000000**|Konvertiert Common Language Runtime (CLR) benutzerdefinierten Typen (User-Defined Types, UDTs) in **varbinary (max)** , sodass Spalten vom Typ UDT auf Abonnenten repliziert werden können, die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ausführen.|  
+|**0x2000000000**|Konvertiert den **hierarchyid** -Datentyp in **varbinary (max)** , sodass Spalten vom Typ **hierarchyid** auf Abonnenten repliziert werden können, auf denen [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ausgeführt wird. Weitere Informationen zur Verwendung von **hierarchyid** -Spalten in replizierten Tabellen finden Sie unter [ &#40;hierarchyid Transact-&#41;SQL](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Repliziert die gefilterten Indizes in der Tabelle. Weitere Informationen zu gefilterten Indizes finden Sie unter [Erstellen von gefilterten Indizes](../../relational-databases/indexes/create-filtered-indexes.md).|  
-|**0x8000000000**|Konvertiert den **geography** -Datentyp und den **Geometry** -Datentyp in **varbinary (max)** , sodass Spalten dieser Typen auf Abonnenten repliziert [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]werden können, auf denen ausgeführt wird.|  
+|**0x8000000000**|Konvertiert den **geography** -Datentyp und den **Geometry** -Datentyp in **varbinary (max)** , sodass Spalten dieser Typen auf Abonnenten repliziert werden können, auf denen [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ausgeführt wird.|  
 |**0x10000000000**|Repliziert Indizes für Spalten vom Typ **geography** und **Geometry**.|  
   
  Bei einem Wert von NULL generiert das System automatisch eine gültige Schemaoption für den Artikel. Die **Standard Schema-Options** Tabelle im Abschnitt "Hinweise" zeigt den Wert an, der basierend auf dem Artikeltyp ausgewählt wird. Außerdem sind nicht alle *schema_option* -Werte für jeden Typ von Replikation und Artikeltyp gültig. Die in den Hinweisen angegebene **gültige Schema Options** Tabelle zeigt die Optionen an, die für einen bestimmten Artikeltyp angegeben werden können.  
@@ -162,55 +162,55 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Der *schema_option* -Parameter wirkt sich nur auf Replikations Optionen der Anfangs Momentaufnahme aus. Nachdem das ursprüngliche Schema vom Momentaufnahmen-Agent generiert und auf dem Abonnenten angewendet wurde, erfolgt die Replikation der Veröffentlichungs Schema Änderungen auf dem Abonnenten basierend auf den Regeln für die Schema Änderungs Replikation und der *replicate_ddl* -Parametereinstellung. in [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)angegeben. Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-`[ @subset_filterclause = ] 'subset_filterclause'`Eine WHERE-Klausel, die das horizontale Filtern eines Tabellen Artikels ohne das Wort enthält, in dem er enthalten ist. *subset_filterclause* ist vom Datentyp **nvarchar (1000)** . der Standardwert ist eine leere Zeichenfolge.  
+`[ @subset_filterclause = ] 'subset_filterclause'` ist eine WHERE-Klausel, die das horizontale Filtern eines Tabellen Artikels ohne das darin enthaltene Wort angibt. *subset_filterclause* ist vom Datentyp **nvarchar (1000)** . der Standardwert ist eine leere Zeichenfolge.  
   
 > [!IMPORTANT]  
 >  Aus Leistungsgründen ist es empfehlenswert, keine Funktionen auf Spaltennamen in Klauseln für parametrisierte Zeilenfilter anzuwenden, wie z. B. `LEFT([MyColumn]) = SUSER_SNAME()`. Wenn Sie [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) in einer Filter Klausel verwenden und den HOST_NAME-Wert überschreiben, müssen Sie möglicherweise Datentypen mithilfe von [Convert](../../t-sql/functions/cast-and-convert-transact-sql.md)konvertieren. Weitere Informationen zu bewährten Methoden für diesen Fall finden Sie im Abschnitt "Überschreiben des HOST_NAME ()-Werts" in [parametrisierten Zeilen filtern](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-`[ @article_resolver = ] 'article_resolver'`Ist der com-basierte Konflikt Löser, der zum Auflösen von Konflikten im Tabellen Artikel verwendet wird, oder die .NET Framework Assembly, die aufgerufen wurde, um benutzerdefinierte Geschäftslogik für den Tabellen Artikel auszuführen. *article_resolver* ist vom Datentyp **varchar (255)** und hat den Standardwert NULL. Verfügbare Werte für diesen Parameter sind im Abschnitt zu benutzerdefinierten Konfliktlösern von [!INCLUDE[msCoName](../../includes/msconame-md.md)] aufgelistet. Wenn der bereitgestellte Wert nicht zu den Konfliktlösern von [!INCLUDE[msCoName](../../includes/msconame-md.md)] zählt, dann verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den angegebenen Konfliktlöser anstelle des vom System bereitgestellten Konfliktlösers. Verwenden Sie **sp_enumcustomresolvers** , um die Liste der verfügbaren benutzerdefinierten Konflikt Löser aufzuzählen. Weitere Informationen finden Sie unter [Ausführen von Geschäftslogik während der Mergesynchronisierung](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md) und [Erweiterte Konflikterkennung und-Lösung](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)bei der Mergereplikation  
+`[ @article_resolver = ] 'article_resolver'` ist der com-basierte Konflikt Löser, der zum Auflösen von Konflikten im Tabellen Artikel verwendet wird, oder die .NET Framework Assembly, die aufgerufen wurde, um benutzerdefinierte Geschäftslogik auf dem Tabellen Artikel auszuführen. *article_resolver* ist vom Datentyp **varchar (255)** und hat den Standardwert NULL. Verfügbare Werte für diesen Parameter sind im Abschnitt zu benutzerdefinierten Konfliktlösern von [!INCLUDE[msCoName](../../includes/msconame-md.md)] aufgelistet. Wenn der bereitgestellte Wert nicht zu den Konfliktlösern von [!INCLUDE[msCoName](../../includes/msconame-md.md)] zählt, dann verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den angegebenen Konfliktlöser anstelle des vom System bereitgestellten Konfliktlösers. Verwenden Sie **sp_enumcustomresolvers** , um die Liste der verfügbaren benutzerdefinierten Konflikt Löser aufzuzählen. Weitere Informationen finden Sie unter [Ausführen von Geschäftslogik während der Mergesynchronisierung](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md) und [Erweiterte Konflikterkennung und-Lösung bei der Mergereplikation](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
-`[ @resolver_info = ] 'resolver_info'`Wird verwendet, um zusätzliche Informationen anzugeben, die von einem benutzerdefinierten Konflikt Löser benötigt werden. Einige der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Konfliktlöser erfordern eine Spalte, die als Eingabe für den Konfliktlöser dient. *resolver_info* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Weitere Informationen finden Sie unter [Microsoft COM-basierte Konfliktlöser](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+`[ @resolver_info = ] 'resolver_info'` wird verwendet, um zusätzliche Informationen anzugeben, die von einem benutzerdefinierten Konflikt Löser benötigt werden. Einige der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Konfliktlöser erfordern eine Spalte, die als Eingabe für den Konfliktlöser dient. *resolver_info* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Weitere Informationen finden Sie unter [Microsoft COM-basierte Konfliktlöser](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-`[ @source_owner = ] 'source_owner'`Der Name des Besitzers des *source_object*. *source_owner* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei NULL wird der aktuelle Benutzer als Besitzer angenommen.  
+`[ @source_owner = ] 'source_owner'` ist der Name des Besitzers des *source_object*. *source_owner* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei NULL wird der aktuelle Benutzer als Besitzer angenommen.  
   
-`[ @destination_owner = ] 'destination_owner'`Der Besitzer des Objekts in der Abonnement Datenbank, wenn es sich nicht um ' dbo ' handelt. *destination_owner* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei NULL wird dbo als Besitzer angenommen.  
+`[ @destination_owner = ] 'destination_owner'` ist der Besitzer des Objekts in der Abonnement Datenbank, wenn nicht "dbo". *destination_owner* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei NULL wird dbo als Besitzer angenommen.  
   
-`[ @vertical_partition = ] 'column_filter'`Aktiviert und deaktiviert die Spalten Filterung für einen Tabellen Artikel. *vertical_partition* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
+`[ @vertical_partition = ] 'column_filter'` aktiviert und deaktiviert die Spalten Filterung für einen Tabellen Artikel. *vertical_partition* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
   
  **false** gibt an, dass keine vertikale Filterung vorhanden ist und alle Spalten veröffentlicht werden.  
   
  **true** löscht alle Spalten außer den deklarierten Primärschlüssel-und ROWGUID-Spalten. Spalten werden mithilfe von **sp_mergearticlecolumn**hinzugefügt.  
   
-`[ @auto_identity_range = ] 'automatic_identity_range'`Aktiviert und deaktiviert die automatische Behandlung von Identitäts Bereichen für diesen Tabellen Artikel zu einer Veröffentlichung zu dem Zeitpunkt, zu dem Sie erstellt wird. *auto_identity_range* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **true** aktiviert die automatische Handhabung von Identitäts Bereichen, während **false** Sie deaktiviert.  
+`[ @auto_identity_range = ] 'automatic_identity_range'` aktiviert und deaktiviert die automatische Behandlung von Identitäts Bereichen für diesen Tabellen Artikel in einer Veröffentlichung zum Zeitpunkt der Erstellung. *auto_identity_range* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **true** aktiviert die automatische Handhabung von Identitäts Bereichen, während **false** Sie deaktiviert.  
   
 > [!NOTE]  
 >  *auto_identity_range* wurde als veraltet markiert und wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Sie sollten die *identityrangemanagementoption* zum Angeben der Optionen für die Identitäts Bereichs Verwaltung verwenden. Weitere Informationen finden Sie unter [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-`[ @pub_identity_range = ] pub_identity_range`Steuert die Größe des Identitäts Bereichs, der einem Abonnenten mit einem Server Abonnement zugewiesen wird, wenn die automatische Identitäts Bereichs Verwaltung verwendet wird. Dieser Identitätsbereich ist für einen Wiederveröffentlichungsabonnenten für die Zuordnung zu dessen Abonnenten reserviert. *pub_identity_range* ist vom Datentyp **bigint**und hat den Standardwert NULL. Sie müssen diesen Parameter angeben, wenn " *identityrangemanagementoption* " auf " **Auto** " festgelegt ist oder wenn *auto_identity_range* **true**ist.  
+`[ @pub_identity_range = ] pub_identity_range` steuert die Größe des Identitäts Bereichs, der einem Abonnenten mit einem Server Abonnement zugewiesen wird, wenn die automatische Identitäts Bereichs Verwaltung verwendet wird. Dieser Identitätsbereich ist für einen Wiederveröffentlichungsabonnenten für die Zuordnung zu dessen Abonnenten reserviert. *pub_identity_range* ist vom Datentyp **bigint**und hat den Standardwert NULL. Sie müssen diesen Parameter angeben, wenn " *identityrangemanagementoption* " auf " **Auto** " festgelegt ist oder wenn *auto_identity_range* **true**ist.  
   
-`[ @identity_range = ] identity_range`Steuert die Größe des Identitäts Bereichs, der dem Verleger und dem Abonnenten zugeordnet wird, wenn die automatische Identitäts Bereichs Verwaltung verwendet wird. *identity_range* ist vom Datentyp **bigint**und hat den Standardwert NULL. Sie müssen diesen Parameter angeben, wenn " *identityrangemanagementoption* " auf " **Auto** " festgelegt ist oder wenn *auto_identity_range* **true**ist.  
+`[ @identity_range = ] identity_range` steuert die Größe des Identitäts Bereichs, der dem Verleger und dem Abonnenten zugeordnet wird, wenn die automatische Identitäts Bereichs Verwaltung verwendet wird. *identity_range* ist vom Datentyp **bigint**und hat den Standardwert NULL. Sie müssen diesen Parameter angeben, wenn " *identityrangemanagementoption* " auf " **Auto** " festgelegt ist oder wenn *auto_identity_range* **true**ist.  
   
 > [!NOTE]  
->  *identity_range* steuert die Größe des Identitäts Bereichs bei der Wiederveröffentlichung von Abonnenten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die frühere Versionen von verwenden.  
+>  *identity_range* steuert die Größe des Identitäts Bereichs bei der Wiederveröffentlichung von Abonnenten mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-`[ @threshold = ] threshold`Prozentwert, der steuert, wann der Merge-Agent einen neuen Identitäts Bereich zuweist. Wenn der in *Schwellenwert* angegebene Prozentsatz der Werte verwendet wird, erstellt der Merge-Agent einen neuen Identitäts Bereich. der *Schwellenwert* ist vom Datentyp **int**und hat den Standardwert NULL. Sie müssen diesen Parameter angeben, wenn " *identityrangemanagementoption* " auf " **Auto** " festgelegt ist oder wenn *auto_identity_range* **true**ist.  
+`[ @threshold = ] threshold`-Prozentwert, der steuert, wann der Merge-Agent einen neuen Identitäts Bereich zuweist. Wenn der in *Schwellenwert* angegebene Prozentsatz der Werte verwendet wird, erstellt der Merge-Agent einen neuen Identitäts Bereich. der *Schwellenwert* ist vom Datentyp **int**und hat den Standardwert NULL. Sie müssen diesen Parameter angeben, wenn " *identityrangemanagementoption* " auf " **Auto** " festgelegt ist oder wenn *auto_identity_range* **true**ist.  
   
-`[ @verify_resolver_signature = ] verify_resolver_signature`Gibt an, ob eine digitale Signatur überprüft wird, bevor ein Konflikt Löser bei der Mergereplikation verwendet wird. *verify_resolver_signature* ist vom Datentyp **int**und hat den Standardwert 1.  
+`[ @verify_resolver_signature = ] verify_resolver_signature` gibt an, ob eine digitale Signatur überprüft wird, bevor ein Konflikt Löser bei der Mergereplikation verwendet wird. *verify_resolver_signature* ist vom Datentyp **int**und hat den Standardwert 1.  
   
  der Wert **0** gibt an, dass die Signatur nicht überprüft wird.  
   
  der Wert **1** gibt an, dass die Signatur überprüft wird, um festzustellen, ob Sie aus einer vertrauenswürdigen Quelle ist.  
   
-`[ @destination_object = ] 'destination_object'`Der Name des Objekts in der Abonnement Datenbank. *destination_object* ist vom **@source_object** **Datentyp vom Datentyp sysname**und hat den Standardwert. Dieser Parameter kann nur angegeben werden, wenn der Artikel vom Typ schema only ist, wie z. B. ein Artikel für gespeicherte Prozeduren, Sichten und UDFs. Wenn es sich bei dem angegebenen Artikel um einen Tabellen Artikel handelt *@source_object* , überschreibt der Wert in den Wert in *destination_object*.  
+`[ @destination_object = ] 'destination_object'` ist der Name des Objekts in der Abonnement Datenbank. *destination_object* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **\@source_object**. Dieser Parameter kann nur angegeben werden, wenn der Artikel vom Typ schema only ist, wie z. B. ein Artikel für gespeicherte Prozeduren, Sichten und UDFs. Wenn es sich bei dem angegebenen Artikel um einen Tabellen Artikel handelt, überschreibt der Wert in *@source_object* den Wert in *destination_object*.  
   
-`[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`Aktiviert oder deaktiviert die Verwendung des interaktiven Konflikt Lösers für einen Artikel. *allow_interactive_resolver* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **true** aktiviert die Verwendung des interaktiven Konflikt Lösers für den Artikel. **false** deaktiviert es.  
+`[ @allow_interactive_resolver = ] 'allow_interactive_resolver'` aktiviert oder deaktiviert die Verwendung des interaktiven Konflikt Lösers für einen Artikel. *allow_interactive_resolver* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **true** aktiviert die Verwendung des interaktiven Konflikt Lösers für den Artikel. **false** deaktiviert es.  
   
 > [!NOTE]  
 >  Der interaktive Konfliktlöser wird von [!INCLUDE[ssEW](../../includes/ssew-md.md)]-Abonnenten nicht unterstützt.  
   
-`[ @fast_multicol_updateproc = ] 'fast_multicol_updateproc'`Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten.  
+`[ @fast_multicol_updateproc = ] 'fast_multicol_updateproc'` dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten.  
   
-`[ @check_permissions = ] check_permissions`Ist eine Bitmap der Berechtigungen auf Tabellenebene, die überprüft werden, wenn die Merge-Agent Änderungen auf den Verleger anwendet. Wenn der vom Mergeprozess verwendete Benutzername bzw. das Benutzerkonto auf dem Verleger nicht über die entsprechenden Tabellenberechtigungen verfügt, werden die ungültigen Änderungen als Konflikte protokolliert. *check_permissions* ist vom Datentyp **int**und kann das [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt mindestens eines der folgenden Werte.  
+`[ @check_permissions = ] check_permissions` ist eine Bitmap der Berechtigungen auf Tabellenebene, die überprüft werden, wenn der Merge-Agent Änderungen auf den Verleger anwendet. Wenn der vom Mergeprozess verwendete Benutzername bzw. das Benutzerkonto auf dem Verleger nicht über die entsprechenden Tabellenberechtigungen verfügt, werden die ungültigen Änderungen als Konflikte protokolliert. *check_permissions* ist vom Datentyp **int**und kann das [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt mindestens eines der folgenden Werte.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -219,39 +219,39 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x20**|Überprüft Berechtigungen auf dem Verleger, bevor auf einem Abonnenten ausgeführte Updatevorgänge hochgeladen werden können.|  
 |**0x40**|Überprüft Berechtigungen auf dem Verleger, bevor auf einem Abonnenten ausgeführte Löschvorgänge hochgeladen werden können.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist vom Typ **Bit**und hat den Standardwert 0.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist vom Typ **Bit**und hat den Standardwert 0.  
   
  **0** gibt an, dass das Hinzufügen eines Artikels nicht dazu führt, dass die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
   
  **1** gibt an, dass das Hinzufügen eines Artikels möglicherweise dazu führt, dass die Momentaufnahme ungültig ist, und wenn Abonnements vorhanden sind, die eine neue Momentaufnahme erfordern, erteilt die Berechtigung, dass die vorhandene Momentaufnahme als veraltet markiert und eine neue Momentaufnahme generiert wird. *force_invalidate_snapshot* wird auf **1** festgelegt, wenn ein Artikel einer Veröffentlichung mit einer vorhandenen Momentaufnahme hinzugefügt wird.  
   
-`[ @published_in_tran_pub = ] 'published_in_tran_pub'`Gibt an, dass ein Artikel in einer Mergeveröffentlichung auch in einer Transaktions Veröffentlichung veröffentlicht wird. *published_in_tran_pub* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **true** gibt an, dass der Artikel auch in einer Transaktions Veröffentlichung veröffentlicht wird.  
+`[ @published_in_tran_pub = ] 'published_in_tran_pub'` gibt an, dass ein Artikel in einer Mergeveröffentlichung auch in einer Transaktions Veröffentlichung veröffentlicht wird. *published_in_tran_pub* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **true** gibt an, dass der Artikel auch in einer Transaktions Veröffentlichung veröffentlicht wird.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise erfordert, dass vorhandene Abonnements erneut initialisiert werden. *force_reinit_subscription* ist vom Typ **Bit**und hat den Standardwert 0.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise erfordert, dass vorhandene Abonnements erneut initialisiert werden. *force_reinit_subscription* ist vom Typ **Bit**und hat den Standardwert 0.  
   
  der Wert **0** gibt an, dass das Hinzufügen eines Artikels nicht dazu führt, dass das Abonnement erneut initialisiert wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die Neuinitialisierung vorhandener Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen durchgeführt.  
   
  **1** bedeutet, dass Änderungen am Mergeartikel bewirken, dass vorhandene Abonnements erneut initialisiert werden, und es wird die Berechtigung für die erneute Initialisierung des Abonnements erteilt. *force_reinit_subscription* wird auf **1** festgelegt, wenn *subset_filterclause* einen parametrisierten Zeilen Filter angibt.  
   
-`[ @logical_record_level_conflict_detection = ] 'logical_record_level_conflict_detection'`Gibt die Ebene der Konflikterkennung für einen Artikel an, der Mitglied eines logischen Datensatzes ist. *logical_record_level_conflict_detection* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
+`[ @logical_record_level_conflict_detection = ] 'logical_record_level_conflict_detection'` gibt die Ebene der Konflikterkennung für einen Artikel an, der Mitglied eines logischen Datensatzes ist. *logical_record_level_conflict_detection* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
   
  **true** gibt an, dass ein Konflikt erkannt wird, wenn Änderungen an einer beliebigen Stelle im logischen Datensatz vorgenommen werden.  
   
  **false** gibt an, dass die Standard Konflikterkennung verwendet wird, wie von *column_tracking*angegeben. Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 > [!NOTE]  
->  Da logische Datensätze von [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten nicht unterstützt werden, müssen Sie den Wert **false** für *logical_record_level_conflict_detection* angeben, um diese Abonnenten zu unterstützen.  
+>  Da logische Datensätze von [!INCLUDE[ssEW](../../includes/ssew-md.md)]-Abonnenten nicht unterstützt werden, müssen Sie den Wert **false** für *logical_record_level_conflict_detection* angeben, um diese Abonnenten zu unterstützen.  
   
-`[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'`Gibt die Ebene der Konfliktlösung für einen Artikel an, der Mitglied eines logischen Datensatzes ist. *logical_record_level_conflict_resolution* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
+`[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'` gibt die Ebene der Konfliktlösung für einen Artikel an, der Mitglied eines logischen Datensatzes ist. *logical_record_level_conflict_resolution* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
   
  **true** gibt an, dass der gesamte gewinnende logische Datensatz den verlorenen logischen Datensatz überschreibt.  
   
  **false** gibt an, dass gewinnende Zeilen nicht auf den logischen Datensatz beschränkt sind. Wenn *logical_record_level_conflict_detection* auf **true**festgelegt ist, muss *logical_record_level_conflict_resolution* auch auf **true**festgelegt werden. Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 > [!NOTE]  
->  Da logische Datensätze von [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten nicht unterstützt werden, müssen Sie den Wert **false** für *logical_record_level_conflict_resolution* angeben, um diese Abonnenten zu unterstützen.  
+>  Da logische Datensätze von [!INCLUDE[ssEW](../../includes/ssew-md.md)]-Abonnenten nicht unterstützt werden, müssen Sie den Wert **false** für *logical_record_level_conflict_resolution* angeben, um diese Abonnenten zu unterstützen.  
   
-`[ @partition_options = ] partition_options`Definiert die Art und Weise, in der Daten im Artikel partitioniert werden. Dies ermöglicht Leistungsoptimierungen, wenn alle Zeilen nur zu einer einzigen Partition oder zu einem einzigen Abonnement gehören. *partition_options* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
+`[ @partition_options = ] partition_options` definiert die Art und Weise, in der Daten im Artikel partitioniert werden. Dies ermöglicht Leistungsoptimierungen, wenn alle Zeilen nur zu einer einzigen Partition oder zu einem einzigen Abonnement gehören. *partition_options* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -263,9 +263,9 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Wenn die Quell Tabelle für einen Artikel bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss der Wert von *partition_options* für beide Artikel identisch sein.  
   
-`[ @processing_order = ] processing_order`Gibt die Verarbeitungsreihenfolge von Artikeln in einer Mergeveröffentlichung an. *processing_order* ist vom Datentyp **int**und hat den Standardwert 0. **0** gibt an, dass der Artikel nicht sortiert ist, und jeder andere Wert stellt den Ordinalwert der Verarbeitungsreihenfolge für diesen Artikel dar. Artikel werden in der Reihenfolge vom niedrigsten zum höchsten Wert verarbeitet. Wenn zwei Artikel denselben Wert aufweisen, wird die Verarbeitungsreihenfolge durch die Reihenfolge der Artikel Spitzname in der [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) -Systemtabelle bestimmt. Weitere Informationen finden Sie unter [Specify Merge Replication properties (Angeben von Mergereplikationseigenschaften)](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
+`[ @processing_order = ] processing_order` gibt die Verarbeitungsreihenfolge von Artikeln in einer Mergeveröffentlichung an. *processing_order* ist vom Datentyp **int**und hat den Standardwert 0. **0** gibt an, dass der Artikel nicht sortiert ist, und jeder andere Wert stellt den Ordinalwert der Verarbeitungsreihenfolge für diesen Artikel dar. Artikel werden in der Reihenfolge vom niedrigsten zum höchsten Wert verarbeitet. Wenn zwei Artikel denselben Wert aufweisen, wird die Verarbeitungsreihenfolge durch die Reihenfolge der Artikel Spitzname in der [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) -Systemtabelle bestimmt. Weitere Informationen finden Sie unter [Specify Merge Replication properties (Angeben von Mergereplikationseigenschaften)](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
-`[ @subscriber_upload_options = ] subscriber_upload_options`Definiert Einschränkungen für Updates, die auf einem Abonnenten mit einem Client Abonnement vorgenommen werden. Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
+`[ @subscriber_upload_options = ] subscriber_upload_options` definiert Einschränkungen für Updates, die auf einem Abonnenten mit einem Client Abonnement vorgenommen werden. Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -278,7 +278,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Wenn die Quell Tabelle für einen Artikel bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss der Wert von *subscriber_upload_options* für beide Artikel identisch sein.  
   
-`[ @identityrangemanagementoption = ] identityrangemanagementoption`Gibt an, wie die Identitäts Bereichs Verwaltung für den Artikel behandelt wird. die *identityrangemanagementoption* ist vom Datentyp **nvarchar (10)** . die folgenden Werte sind möglich:  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption` gibt an, wie die Identitäts Bereichs Verwaltung für den Artikel behandelt wird. die *identityrangemanagementoption* ist vom Datentyp **nvarchar (10)** . die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -289,7 +289,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  Aus Gründen der Abwärtskompatibilität wird der Wert von *auto_identity_range* aktiviert, wenn der Wert von *identityrangemanagementoption* NULL ist. Wenn der Wert von *identityrangemanagementoption* jedoch nicht NULL ist, wird der Wert von *auto_identity_range* ignoriert. Weitere Informationen finden Sie unter [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-`[ @delete_tracking = ] 'delete_tracking'`Gibt an, ob Löschvorgänge repliziert werden. *delete_tracking* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true. **false** gibt an, dass Löschvorgänge nicht repliziert werden, und **true** gibt an, dass Löschvorgänge repliziert werden. Dies ist das übliche Verhalten der Mergereplikation Wenn *delete_tracking* auf **false**festgelegt ist, müssen auf dem Abonnenten gelöschte Zeilen manuell auf dem Verleger entfernt werden, und auf dem Verleger gelöschte Zeilen müssen manuell auf dem Abonnenten entfernt werden.  
+`[ @delete_tracking = ] 'delete_tracking'` gibt an, ob Löschvorgänge repliziert werden. *delete_tracking* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true. **false** gibt an, dass Löschvorgänge nicht repliziert werden, und **true** gibt an, dass Löschvorgänge repliziert werden. Dies ist das übliche Verhalten der Mergereplikation Wenn *delete_tracking* auf **false**festgelegt ist, müssen auf dem Abonnenten gelöschte Zeilen manuell auf dem Verleger entfernt werden, und auf dem Verleger gelöschte Zeilen müssen manuell auf dem Abonnenten entfernt werden.  
   
 > [!IMPORTANT]  
 >  Wenn *delete_tracking* auf **false** festgelegt wird, führt dies zu einer nicht Konvergenz. Wenn die Quell Tabelle für einen Artikel bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss der Wert von *delete_tracking* für beide Artikel identisch sein.  
@@ -297,12 +297,12 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *delete_tracking* -Optionen können nicht über den **Assistenten für neue Veröffentlichung** oder das Dialogfeld **Veröffentlichungs Eigenschaften** festgelegt werden.  
   
-`[ @compensate_for_errors = ] 'compensate_for_errors'`Gibt an, ob kompensierende Aktionen ausgeführt werden, wenn während der Synchronisierung Fehler auftreten. *compensate_for_errors i*s **nvarchar (5)** , der Standardwert ist false. Wenn diese Einstellung auf " **true**" festgelegt ist, führen Änderungen, die während der Synchronisierung nicht auf einen Abonnenten oder Verleger angewendet werden können, immer zu kompensierenden Aktionen, um ein falsch konfigurierter Abonnent, der einen Fehler generiert, kann jedoch dazu führen, dass Änderungen auf anderen Abonnenten und Verlegern rückgängig gemacht werden. **false** deaktiviert diese kompensierenden Aktionen. die Fehler werden jedoch weiterhin mit der Kompensierung protokolliert, und nachfolgende Zusammenführungen versuchen weiterhin, die Änderungen zu übernehmen, bis Sie erfolgreich sind.  
+`[ @compensate_for_errors = ] 'compensate_for_errors'` gibt an, ob kompensierende Aktionen ausgeführt werden, wenn während der Synchronisierung Fehler auftreten. *compensate_for_errors i*s **nvarchar (5)** , der Standardwert ist false. Wenn diese Einstellung auf " **true**" festgelegt ist, führen Änderungen, die während der Synchronisierung nicht auf einen Abonnenten oder Verleger angewendet werden können, immer zu kompensierenden Aktionen, um ein falsch konfigurierter Abonnent, der einen Fehler generiert, kann jedoch dazu führen, dass Änderungen auf anderen Abonnenten und Verlegern rückgängig gemacht werden. **false** deaktiviert diese kompensierenden Aktionen. die Fehler werden jedoch weiterhin mit der Kompensierung protokolliert, und nachfolgende Zusammenführungen versuchen weiterhin, die Änderungen zu übernehmen, bis Sie erfolgreich sind.  
   
 > [!IMPORTANT]  
 >  Möglicherweise hat es den Anschein, dass Daten in den betroffenen Zeilen nicht konvergent sind. Beheben Sie jedoch ggf. aufgetretene Fehler, können Änderungen übernommen werden, und die Daten konvergieren. Wenn die Quell Tabelle für einen Artikel bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss der Wert von *compensate_for_errors* für beide Artikel identisch sein.  
   
-`[ @stream_blob_columns = ] 'stream_blob_columns'`Gibt an, dass eine Datenstrom Optimierung beim Replizieren Binary Large Object Spalten verwendet werden soll. *stream_blob_columns* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. " **true** " bedeutet, dass die Optimierung versucht wird. *stream_blob_columns* ist auf true festgelegt, wenn FILESTREAM aktiviert ist. Dadurch werden die Replikation der FILESTREAM-Daten optimal ausgeführt und die Arbeitsspeicherauslastung reduziert. Um FILESTREAM-Tabellen Artikel zu zwingen, kein BLOB-Streaming zu verwenden, verwenden Sie **sp_changemergearticle** , um *stream_blob_columns* auf false festzulegen.  
+`[ @stream_blob_columns = ] 'stream_blob_columns'` gibt an, dass eine Datenstrom Optimierung beim Replizieren Binary Large Object Spalten verwendet werden soll. *stream_blob_columns* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. " **true** " bedeutet, dass die Optimierung versucht wird. *stream_blob_columns* ist auf true festgelegt, wenn FILESTREAM aktiviert ist. Dadurch werden die Replikation der FILESTREAM-Daten optimal ausgeführt und die Arbeitsspeicherauslastung reduziert. Um FILESTREAM-Tabellen Artikel zu zwingen, kein BLOB-Streaming zu verwenden, verwenden Sie **sp_changemergearticle** , um *stream_blob_columns* auf false festzulegen.  
   
 > [!IMPORTANT]  
 >  Durch Aktivieren dieser Arbeitsspeicheroptimierung kann die Leistung des Merge-Agents bei der Synchronisierung beeinträchtigt werden. Die Option sollte nur verwendet werden, wenn Spalten mit Megabytes von Daten repliziert werden.  
@@ -334,11 +334,11 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**nur Func-Schema**|**0x01**|  
 |**nur indiziertes Sicht Schema**|**0x01**|  
 |**nur proc-Schema**|**0x01**|  
-|**table**|**0x0c034und**  -  höher kompatible Veröffentlichungen mit einer Momentaufnahme im einheitlichen Modus.[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **0x08034FF1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und spätere kompatible Veröffentlichungen mit einer Momentaufnahme im Zeichenmodus.|  
+|**table**|**0x0c034bd1** -  @ no__t-2 und spätere kompatible Veröffentlichungen mit einer Momentaufnahme im einheitlichen Modus.<br /><br /> **0x08034FF1** -  @ no__t-2 und spätere kompatible Veröffentlichungen mit einer Momentaufnahme im Zeichenmodus.|  
 |**nur Schema anzeigen**|**0x01**|  
   
 > [!NOTE]  
->  Wenn die Veröffentlichung frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt, ist die Standardschema Option für die- **Tabelle** **0x30034FF1**.  
+>  Wenn die Veröffentlichung frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt, ist die Standardschema Option für die **Tabelle** **0x30034FF1**.  
   
 ## <a name="valid-schema-option-table"></a>Tabelle gültiger Schemaoptionen  
  In der folgenden Tabelle werden die zulässigen Werte *schema_option* abhängig vom Artikeltyp beschrieben.  

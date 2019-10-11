@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68702795"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712918"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen
 
@@ -46,7 +46,7 @@ In der folgenden Tabelle sind die verfügbaren Schlüsselwörter und Attribute n
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 und höher, nur DSN)| | LMW |
-| [Keepaliveingeterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 und höher, nur DSN) | | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +, nur DSN) | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -116,6 +116,8 @@ In der folgenden Tabelle sind die verfügbaren Schlüsselwörter und Attribute n
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
+| [ClientCertificate](../../connect/odbc/dsn-connection-string-attribute.md#clientcertificate) | | LMW | 
+| [Clientkey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
 Hier sind einige Schlüsselwörter für Verbindungszeichenfolgen und Verbindungsattribute aufgeführt, die nicht in den Artikeln [Using Connection String Keywords with SQL Server Native Client (Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client)](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) und [SQLSetConnectAttr Function (SQLSetConnectAttr-Funktion)](../../odbc/reference/syntax/sqlsetconnectattr-function.md) dokumentiert sind.
@@ -190,6 +192,31 @@ Steuert die Verwendung von „SET FMTONLY“ für Metadaten bei der Verbindung m
 |-|-|
 |Nein|(Standard) Verwenden von „sp_describe_first_result_set“ für Metadaten, wenn verfügbar. |
 |Ja| Verwenden von „SET FMTONLY“ für Metadaten. |
+
+
+## <a name="clientcertificate"></a>ClientCertificate
+
+Gibt das Zertifikat an, das für die Authentifizierung verwendet werden soll. Folgende Optionen sind verfügbar: 
+
+| Optionswert | und Beschreibung |
+|-|-|
+| sha1:`<hash_value>` | Der ODBC-Treiber verwendet den SHA1-Hash, um ein Zertifikat im Windows-Zertifikat Speicher zu finden. |
+| subject:`<subject>` | Der ODBC-Treiber verwendet subject, um ein Zertifikat im Windows-Zertifikat Speicher zu finden. |
+| Datei: `<file_location>` [, Kennwort: `<password>`] | Der ODBC-Treiber verwendet eine Zertifikatsdatei. |
+
+Falls das Zertifikat im PFX-Format vorliegt und der private Schlüssel im PFX-Zertifikat Kenn Wort geschützt ist, ist das Kenn Wort Schlüsselwort erforderlich. Für Zertifikate im PEM-und der-Format ist das clientkey-Attribut erforderlich.
+
+
+## <a name="clientkey"></a>Clientkey
+
+Gibt den Speicherort des privaten Schlüssels für PEM-oder der-Zertifikate an, der durch das ClientCertificate-Attribut angegeben wird. Format: 
+
+| Optionswert | und Beschreibung |
+|-|-|
+| Datei: `<file_location>` [, Kennwort: `<password>`] | Gibt den Speicherort der Datei mit dem privaten Schlüssel an. |
+
+Wenn die private Schlüsseldatei Kenn Wort geschützt ist, ist das Schlüsselwort "Password" erforderlich. Wenn das Kennwort beliebige ","-Zeichen enthält, wird unmittelbar nach jedem ein zusätzliches ","-Zeichen hinzugefügt. Wenn das Kennwort z. b. "a, b, c" lautet, ist das in der Verbindungs Zeichenfolge vorhandene Kennwort "a", "b", "c". 
+    
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 

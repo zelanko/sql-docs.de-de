@@ -1,5 +1,5 @@
 ---
-title: Sp_table_validation (Transact-SQL) | Microsoft-Dokumentation
+title: sp_table_validation (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 42d2535dedb1161a78362f17a1ad7c79ca49bb87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096124"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173557"
 ---
-# <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
+# <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Zeilenanzahl- oder Prüfsummeninformationen für eine Tabelle oder indizierte Sicht zurück oder vergleicht die angegebenen Zeilenanzahl- oder Prüfsummeninformationen mit der angegebenen Tabelle oder indizierten Sicht. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank und auf dem Abonnenten für die Abonnementdatenbank ausgeführt. *Nicht für Oracle-Verleger unterstützt*.  
+  Gibt Zeilenanzahl- oder Prüfsummeninformationen für eine Tabelle oder indizierte Sicht zurück oder vergleicht die angegebenen Zeilenanzahl- oder Prüfsummeninformationen mit der angegebenen Tabelle oder indizierten Sicht. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank und auf dem Abonnenten für die Abonnementdatenbank ausgeführt. *Wird für Oracle-Verleger nicht unterstützt*.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,52 +45,52 @@ sp_table_validation [ @table = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @table = ] 'table'` Ist der Name der Tabelle. *Tabelle* ist **Sysname**, hat keinen Standardwert.  
+`[ @table = ] 'table'` ist der Name der Tabelle. *Table* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @expected_rowcount = ] expected_rowcountOUTPUT` Gibt an, ob die erwartete Anzahl von Zeilen in der Tabelle zurückgegeben werden soll. *Expected_rowcount* ist **Int**, hat den Standardwert NULL. Mit NULL wird die tatsächliche Zeilenanzahl als Ausgabeparameter zurückgegeben. Wenn ein Wert angegeben wird, wird dieser mit der tatsächlichen Zeilenanzahl verglichen, um etwaige Unterschiede festzustellen.  
+`[ @expected_rowcount = ] expected_rowcountOUTPUT` gibt an, ob die erwartete Anzahl von Zeilen in der Tabelle zurückgegeben werden soll. *expected_rowcount* ist vom Datentyp **int**und hat den Standardwert NULL. Mit NULL wird die tatsächliche Zeilenanzahl als Ausgabeparameter zurückgegeben. Wenn ein Wert angegeben wird, wird dieser mit der tatsächlichen Zeilenanzahl verglichen, um etwaige Unterschiede festzustellen.  
   
-`[ @expected_checksum = ] expected_checksumOUTPUT` Gibt an, ob die erwartete Prüfsumme für die Tabelle zurückgegeben werden soll. *Expected_checksum* ist **numerischen**, hat den Standardwert NULL. Mit NULL wird die tatsächliche Prüfsumme als Ausgabeparameter zurückgegeben. Wenn ein Wert angegeben wird, wird dieser mit der tatsächlichen Prüfsumme verglichen, um etwaige Unterschiede festzustellen.  
+`[ @expected_checksum = ] expected_checksumOUTPUT` gibt an, ob die erwartete Prüfsumme für die Tabelle zurückgegeben werden soll. *expected_checksum* ist vom Typ **numeric**und hat den Standardwert NULL. Mit NULL wird die tatsächliche Prüfsumme als Ausgabeparameter zurückgegeben. Wenn ein Wert angegeben wird, wird dieser mit der tatsächlichen Prüfsumme verglichen, um etwaige Unterschiede festzustellen.  
   
-`[ @rowcount_only = ] type_of_check_requested` Gibt an, welcher Typ von Prüfsumme oder Zeilenanzahl berechnet werden soll. *Type_of_check_requested* ist **Smallint**, hat den Standardwert **1**.  
+`[ @rowcount_only = ] type_of_check_requested` gibt an, welche Art von Prüfsumme oder Zeilen Anzahl durchgeführt werden soll. *type_of_check_requested* ist vom Datentyp **smallint**. der Standardwert ist **1**.  
   
- Wenn **0**, eine Zeilenzählung und eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 kompatible prüfsummenberechnung.  
+ Wenn der Wert **0**ist, führen Sie eine Zeilen Anzahl und eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0-kompatible Prüfsumme aus.  
   
- Wenn **1**, nur eine Zeilenzählung durchgeführt.  
+ Wenn **1**, wird nur eine Überprüfung der Zeilen Anzahl durchgeführt.  
   
- Wenn **2**, Zeilenanzahl und binäre Prüfsumme.  
+ Wenn **2**, führen Sie eine Zeilen Anzahl und eine binäre Prüfsumme aus.  
   
-`[ @owner = ] 'owner'` Ist der Name des Besitzers der Tabelle. *Besitzer* ist **Sysname**, hat den Standardwert NULL.  
+`[ @owner = ] 'owner'` ist der Name des Besitzers der Tabelle. *Owner* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @full_or_fast = ] full_or_fast` Wird die Methode, die zum Berechnen der Zeilenanzahl verwendet wird. *Full_or_fast* ist **Tinyint**, hat den Standardwert **2**, und kann einen der folgenden Werte sein.  
+`[ @full_or_fast = ] full_or_fast` ist die Methode, die zum Berechnen der Zeilen Anzahl verwendet wird. *full_or_fast* ist vom Datentyp **tinyint**. der Standardwert ist **2**. die folgenden Werte sind möglich.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |**0**|Führt eine vollständige Zählung mit COUNT(*) durch.|  
-|**1**|Führt eine schnelle Zählung von **sysindexes.rows**. Zählen der Zeilen im **"sysindexes"** ist wesentlich schneller als das Zählen von Zeilen in der eigentlichen Tabelle. Aber da **"sysindexes"** nur verzögert aktualisiert, die Zeilenanzahl möglicherweise nicht ganz genau.|  
-|**2** (Standardwert)|Führt eine bedingte schnelle Zählung durch, indem zunächst versucht wird, die schnelle Methode anzuwenden. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *Expected_rowcount* NULL ist und die gespeicherte Prozedur wird verwendet, um den Wert abzurufen, wird immer eine vollständige Zählung mit COUNT(*) verwendet.|  
+|**1**|Führt eine schnelle Anzahl von **sysindexes. Rows**aus. Das zählen von Zeilen in **sysindexes** ist wesentlich schneller als das zählen der Zeilen in der eigentlichen Tabelle. Da **sysindexes** jedoch verzögert aktualisiert wird, ist die Zeilen Anzahl möglicherweise nicht korrekt.|  
+|**2** (Standardwert)|Führt eine bedingte schnelle Zählung durch, indem zunächst versucht wird, die schnelle Methode anzuwenden. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *expected_rowcount* den Wert NULL hat und die gespeicherte Prozedur verwendet wird, um den Wert zu erhalten, wird immer eine vollständige Anzahl (*) verwendet.|  
   
-`[ @shutdown_agent = ] shutdown_agent` Wenn der Verteilungs-Agent ausgeführt wird, **Sp_table_validation**, gibt an, ob der Verteilungs-Agent sofort nach dem Abschluss der Überprüfung heruntergefahren werden soll. *Shutdown_agent* ist **Bit**, hat den Standardwert **0**. Wenn **0**, Replikations-Agent nicht heruntergefahren. Wenn **1**Fehler 20578 wird ausgelöst, und der Replikations-Agent das Signal zum Herunterfahren. Dieser Parameter wird ignoriert, wenn **Sp_table_validation** direkt von einem Benutzer ausgeführt wird.  
+`[ @shutdown_agent = ] shutdown_agent` gibt an, ob die Verteilungs-Agent sofort nach Abschluss der Überprüfung heruntergefahren werden soll, wenn die Verteilungs-Agent **sp_table_validation**ausgeführt wird. *shutdown_agent* ist vom Typ **Bit**. der Standardwert ist **0**. Bei **0**wird der Replikations-Agent nicht heruntergefahren. Wenn der Wert **1**ist, wird Fehler 20578 ausgelöst, und der Replikations-Agent wird zum Herunterfahren signalisiert. Dieser Parameter wird ignoriert, wenn **sp_table_validation** direkt von einem Benutzer ausgeführt wird.  
   
-`[ @table_name = ] table_name` Ist der Tabellenname der für ausgabemeldungen verwendeten Sicht. *TABLE_NAME* ist **Sysname**, hat den Standardwert **@table** .  
+`[ @table_name = ] table_name` ist der Tabellenname der Sicht, die für Ausgabe Nachrichten verwendet wird. *table_name* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **\@table**.  
   
-`[ @column_list = ] 'column_list'` Ist die Liste der Spalten, die in der Prüfsummenfunktion verwendet werden soll. *Column_list* ist **nvarchar(4000)** , hat den Standardwert NULL. Aktiviert die Überprüfung von Mergeartikeln, um eine Spaltenliste anzugeben, die berechnete Spalten und Timestampspalten ausschließt.  
+`[ @column_list = ] 'column_list'` ist die Liste der Spalten, die in der Prüfsummen Funktion verwendet werden sollen. *column_list* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL. Aktiviert die Überprüfung von Mergeartikeln, um eine Spaltenliste anzugeben, die berechnete Spalten und Timestampspalten ausschließt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Wenn die Prüfsumme in der Tabelle ausführen, eine Prüfsumme überprüfen und die erwartete Prüfsumme gleich ist. **Sp_table_validation** gibt eine Meldung, dass die Tabelle die Überprüfung bestanden. Andernfalls wird eine Meldung zurückgegeben, die besagt, dass die Tabelle möglicherweise nicht mehr synchronisiert ist, und der Unterschied zwischen der erwarteten und der tatsächlichen Zeilenanzahl wird angezeigt.  
+ Wenn eine Prüfsummen Überprüfung durchgeführt wird und die erwartete Prüfsumme der Prüfsumme in der Tabelle gleicht, gibt **sp_table_validation** eine Meldung zurück, dass die Tabelle die Überprüfung der Prüfsumme bestanden hat. Andernfalls wird eine Meldung zurückgegeben, die besagt, dass die Tabelle möglicherweise nicht mehr synchronisiert ist, und der Unterschied zwischen der erwarteten und der tatsächlichen Zeilenanzahl wird angezeigt.  
   
- Wenn die Anzahl in der Tabelle ausführen, eine Zeilenanzahl überprüfen und die erwartete Anzahl von Zeilen gleich ist. **Sp_table_validation** gibt eine Meldung, dass die Tabelle die Überprüfung bestanden. Andernfalls wird eine Meldung zurückgegeben, die besagt, dass die Tabelle möglicherweise nicht mehr synchronisiert ist, und der Unterschied zwischen der erwarteten und der tatsächlichen Zeilenanzahl wird angezeigt.  
+ Wenn die Überprüfung der Zeilen Anzahl und die erwartete Anzahl von Zeilen der Anzahl in der Tabelle entsprechen, gibt **sp_table_validation** eine Meldung zurück, dass die Tabelle die Überprüfung der Zeilen Anzahl bestanden hat. Andernfalls wird eine Meldung zurückgegeben, die besagt, dass die Tabelle möglicherweise nicht mehr synchronisiert ist, und der Unterschied zwischen der erwarteten und der tatsächlichen Zeilenanzahl wird angezeigt.  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_table_validation** wird in allen Replikationstypen verwendet. **Sp_table_validation** wird für Oracle-Verlegern nicht unterstützt.  
+ **sp_table_validation** wird für alle Replikations Typen verwendet. **sp_table_validation** wird für Oracle-Verleger nicht unterstützt.  
   
- Der Prüfsummenalgorithmus berechnet eine zyklische 32-Bit-Redundanzprüfung (CRC, Redundancy Check) des gesamten Zeilenbilds auf der Seite. Er überprüft Spalten nicht selektiv und kann nicht für eine Sicht oder eine vertikale Partition der Tabelle ausgeführt werden. Darüber hinaus lässt die prüfsummenberechnung den Inhalt der **Text** und **Image** -Spalten (entwurfsbedingt).  
+ Der Prüfsummenalgorithmus berechnet eine zyklische 32-Bit-Redundanzprüfung (CRC, Redundancy Check) des gesamten Zeilenbilds auf der Seite. Er überprüft Spalten nicht selektiv und kann nicht für eine Sicht oder eine vertikale Partition der Tabelle ausgeführt werden. Außerdem überspringt die Prüfsumme den Inhalt von **Text** -und **Image** -Spalten (Entwurfs bedingt).  
   
- Beim Ausführen einer Prüfsummenberechnung muss die Struktur der Tabelle auf den beiden Servern identisch sein. Das heißt, für die Tabellen müssen dieselben Spalten in derselben Reihenfolge vorhanden sein, dieselben Datentypen und Längen, und sie müssen dieselben NULL- bzw. NOT NULL-Bedingungen aufweisen. Wenn auf dem Verleger beispielsweise CREATE TABLE und dann ALTER TABLE zum Hinzufügen von Spalten ausgeführt wurden, aber das auf dem Abonnenten angewendete Skript ein einfaches CREATE für eine Tabelle darstellt, dann ist die Struktur nicht dieselbe. Wenn Sie nicht sicher sind, dass die Struktur der beiden Tabellen identisch ist, sehen Sie sich [Syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) und vergewissern Sie sich, dass der Offset in den einzelnen Tabellen identisch ist.  
+ Beim Ausführen einer Prüfsummenberechnung muss die Struktur der Tabelle auf den beiden Servern identisch sein. Das heißt, für die Tabellen müssen dieselben Spalten in derselben Reihenfolge vorhanden sein, dieselben Datentypen und Längen, und sie müssen dieselben NULL- bzw. NOT NULL-Bedingungen aufweisen. Wenn auf dem Verleger beispielsweise CREATE TABLE und dann ALTER TABLE zum Hinzufügen von Spalten ausgeführt wurden, aber das auf dem Abonnenten angewendete Skript ein einfaches CREATE für eine Tabelle darstellt, dann ist die Struktur nicht dieselbe. Wenn Sie nicht sicher sind, dass die Struktur der beiden Tabellen identisch ist, betrachten Sie [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) , und vergewissern Sie sich, dass der Offset in den einzelnen Tabellen identisch ist.  
   
- Gleitkommawerte sind wahrscheinlich Prüfsumme Unterschiede zu generieren, wenn im Zeichenmodus **Bcp** verwendet wurde, dies ist der Fall, wenn die Veröffentlichung nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten. Diese Unterschiede sind durch geringfügige und unvermeidbare Genauigkeitsunterschiede bedingt, die auftreten, wenn Konvertierungen in den und aus dem Zeichenmodus durchgeführt werden.  
+ Gleit Komma Werte generieren wahrscheinlich Prüfsummen Unterschiede, wenn **bcp** im Zeichenmodus verwendet wurde. Dies ist der Fall, wenn die Veröffentlichung nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten enthält. Diese Unterschiede sind durch geringfügige und unvermeidbare Genauigkeitsunterschiede bedingt, die auftreten, wenn Konvertierungen in den und aus dem Zeichenmodus durchgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Auszuführende **Sp_table_validation**, benötigen Sie SELECT-Berechtigungen für die Tabelle, die überprüft wird.  
+ Zum Ausführen von **sp_table_validation**benötigen Sie SELECT-Berechtigungen für die Tabelle, die überprüft wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   

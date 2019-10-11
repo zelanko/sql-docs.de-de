@@ -15,12 +15,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0129290734cfc374ab8b563fab14692a7b59fe6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1737524acd1397a30299e7c5147ae9a6cb10efc6
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893317"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173688"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "68893317"
  Das neue Verbindungsverhalten ist clientseitig implementiert und daher kein spezifisches Verhalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Verbindungsserver und Delegierung  
- Beim Einrichten von Verbindungsservern wird der Parameter **@provstr** von [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) verwendet, um den SPN für den Server und Failoverpartner festzulegen. Die Vorteile dieser Vorgehensweise sind die gleichen wie die bei der Angabe von SPNs in Client-Verbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen herzustellen, die die Kerberos-Authentifizierung verwenden.  
+ Wenn verknüpfte Server erstellt werden, kann der **\@provstr-** Parameter von [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) verwendet werden, um den Server und die Failoverpartner-SPNs anzugeben. Die Vorteile dieser Vorgehensweise sind die gleichen wie die bei der Angabe von SPNs in Client-Verbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen herzustellen, die die Kerberos-Authentifizierung verwenden.  
   
  Delegierung über Verbindungsserver erfordert die Kerberos-Authentifizierung.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "68893317"
   
 -   Sicherheit: Gibt der angegebene SPN geschützte Informationen offen?  
   
--   Angeht Zum Aktivieren der Verwendung von Standard-SPNs muss das Dienst Konto, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dem die Instanz ausgeführt wird, über ausreichende Berechtigungen zum Aktualisieren der Active Directory auf dem KDC verfügen.  
+-   Angeht Zum Aktivieren der Verwendung von Standard-SPNs muss das Dienst Konto, in dem die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ausgeführt wird, über ausreichende Berechtigungen zum Aktualisieren der Active Directory auf dem KDC verfügen.  
   
--   Transparenz und Speicherort Transparenz: Wie wirkt es sich auf die SPNs einer Anwendung aus, wenn die Datenbank in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine andere Instanz verschoben wird? Dies gilt für sowohl den Prinzipalserver als auch seinen Failoverpartner, wenn Sie die Datenbankspiegelung verwenden. Wie wirkt es sich auf Anwendungen aus, wenn eine Serveränderung bedeutet, dass SPNs geändert werden müssen? Werden die Änderungen verwaltet?  
+-   Transparenz und Speicherort Transparenz: Wie wirkt es sich auf die SPNs einer Anwendung aus, wenn die Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verschoben wird? Dies gilt für sowohl den Prinzipalserver als auch seinen Failoverpartner, wenn Sie die Datenbankspiegelung verwenden. Wie wirkt es sich auf Anwendungen aus, wenn eine Serveränderung bedeutet, dass SPNs geändert werden müssen? Werden die Änderungen verwaltet?  
   
 ## <a name="specifying-the-spn"></a>Angeben des SPN  
  Sie können einen SPN in Dialogfeldern und Code angeben. In diesem Abschnitt wird erläutert, wie Sie einen SPN angeben können.  

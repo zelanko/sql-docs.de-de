@@ -8368,6 +8368,8 @@
               href: azure-data-studio/schema-compare-extension.md
             - name: PowerShell-Erweiterung
               href: azure-data-studio/powershell-extension.md
+            - name: Erweiterung für die verwaltete Instanz (Vorschauversion)
+              href: azure-data-studio/azure-sql-managed-instance-extension.md
             - name: SandDance-Erweiterung (Vorschauversion)
               href: azure-data-studio/sanddance-extension.md
         - name: Erweiterungserstellung

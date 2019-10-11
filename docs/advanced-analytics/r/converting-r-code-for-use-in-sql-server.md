@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 536be600d319335173dbf112ec2d8f67cc7bf14b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 713c5cc8de5daecec77ff984a22f85b220ece2a2
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715739"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251341"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Konvertieren von R-Code für die Ausführung in SQL Server Instanzen (in der Datenbank)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Der Code erfordert jedoch möglicherweise wesentliche Änderungen, wenn eine der
 
 + Sie verwenden R-Bibliotheken, die auf das Netzwerk zugreifen oder auf SQL Server nicht installiert werden können.
 + Der Code führt getrennte Aufrufe von Datenquellen außerhalb SQL Server aus, z. b. Excel-Arbeitsblätter, Dateien auf Freigaben und andere Datenbanken. 
-+ Sie möchten den Code im *@script* -Parameter von [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ausführen und die gespeicherte Prozedur ebenfalls parametrisieren.
++ Sie möchten den Code im *\@script-* Parameter von [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ausführen und die gespeicherte Prozedur ebenfalls parametrisieren.
 + Die ursprüngliche Lösung umfasst mehrere Schritte, die in einer Produktionsumgebung effizienter sein können, wenn Sie unabhängig ausgeführt werden, wie z. b. Daten Vorbereitung oder Featureentwicklung im Vergleich zu Modell Schulungen,-Bewertungen oder-Berichten.
 + Sie möchten die Leistungsoptimierung verbessern, indem Sie Bibliotheken ändern, eine parallele Ausführung verwenden oder einige Verarbeitungsvorgänge auf SQL Server verlagern. 
 
@@ -56,9 +56,9 @@ Der Code erfordert jedoch möglicherweise wesentliche Änderungen, wenn eine der
 
 + Stellen Sie eine Prüfliste der möglichen Probleme bei Datentypen zusammen.
 
-    Alle R-Datentypen werden von SQL Server Machine Learning-Diensten unterstützt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Unterstützt jedoch eine größere Vielfalt von Datentypen als R. Daher werden einige implizite Datentyp Konvertierungen beim Senden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Daten an R durchgeführt und umgekehrt. Möglicherweise müssen Sie einige Daten explizit umwandeln oder konvertieren. 
+    Alle R-Datentypen werden von SQL Server Machine Learning-Diensten unterstützt. Allerdings unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine größere Vielfalt von Datentypen als R. Daher werden einige implizite Datentyp Konvertierungen beim Senden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten an R und umgekehrt ausgeführt. Möglicherweise müssen Sie einige Daten explizit umwandeln oder konvertieren. 
 
-    NULL-Werte werden unterstützt. Allerdings verwendet R das `na` Daten Konstrukt, um einen fehlenden Wert darzustellen, der einem NULL-Wert ähnelt.
+    NULL-Werte werden unterstützt. Allerdings verwendet R das `na`-Daten Konstrukt, um einen fehlenden Wert darzustellen, der einem NULL-Wert ähnelt.
 
 + Entfernen Sie die Abhängigkeit von Daten, die von r nicht verwendet werden können. beispielsweise können ROWID-und GUID-Datentypen aus SQL Server nicht von r genutzt werden und Fehler generieren.
 
@@ -92,7 +92,7 @@ Wie viel Sie Ihren Code ändern, hängt davon ab, ob Sie den R-Code von einem Re
 
     Wenn Sie z. b. die Daten in eine Tabelle einfügen möchten, müssen Sie die **with Result Set** -Klausel verwenden, um das Schema anzugeben.
 
-    Das Ausgabe Schema ist auch erforderlich, wenn das R-Skript das `@parallel=1`-Argument verwendet. Grund hierfür ist, dass mehrere Prozesse von SQL Server zum Ausführen der Abfrage möglicherweise parallel erstellt und die Ergebnisse am Ende gesammelten werden. Daher muss das Ausgabe Schema vorbereitet werden, bevor die parallelen Prozesse erstellt werden können.
+    Das Ausgabe Schema ist auch erforderlich, wenn das R-Skript das Argument `@parallel=1` verwendet. Grund hierfür ist, dass mehrere Prozesse von SQL Server zum Ausführen der Abfrage möglicherweise parallel erstellt und die Ergebnisse am Ende gesammelten werden. Daher muss das Ausgabe Schema vorbereitet werden, bevor die parallelen Prozesse erstellt werden können.
     
     In anderen Fällen können Sie das Ergebnis Schema unterdrücken, indem Sie die-Option **mit nicht definierten Resultsets**verwenden. Diese Anweisung gibt das DataSet aus dem R-Skript zurück, ohne die Spalten zu benennen oder die SQL-Datentypen anzugeben.
 
@@ -106,7 +106,7 @@ Wie viel Sie Ihren Code ändern, hängt davon ab, ob Sie den R-Code von einem Re
 
 + Führen Sie alle Abfragen im Voraus aus, und überprüfen Sie die SQL Server Abfrage Pläne, um Aufgaben zu identifizieren, die parallel ausgeführt werden können.
 
-    Wenn die Eingabe Abfrage parallelisiert werden kann, legen `@parallel=1` Sie als Teil ihrer Argumente auf [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)fest. 
+    Wenn die Eingabe Abfrage parallelisiert werden kann, legen Sie `@parallel=1` als Teil ihrer Argumente auf [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)fest. 
 
     Eine Parallelverarbeitung mit diesem Flag ist in der Regel jedes Mal möglich, wenn SQL Server mit partitionierten Tabellen arbeiten oder eine Abfrage zwischen mehreren Prozessen verteilen kann und die Ergebnisse am Ende aggregiert. Eine Parallelverarbeitung mit diesem Flag ist nicht möglich, wenn Sie Modelle mithilfe von Algorithmen trainieren, die ein Lesen aller Daten voraussetzen, oder wenn Sie Aggregate erstellen müssen.
 

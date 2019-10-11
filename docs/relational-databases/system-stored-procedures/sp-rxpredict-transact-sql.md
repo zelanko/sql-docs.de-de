@@ -16,19 +16,19 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9cd9bb481ec54f9d99c80aba54241827c2a118cf
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 38eeb94dad960af3dc0f15921dbba717e819c828
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471074"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252031"
 ---
-# <a name="sprxpredict"></a>sp_rxPredict  
+# <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Generiert einen vorhergesagten Wert für eine angegebene Eingabe, bestehend aus einem Machine Learning-Modell, das in einem binären Format in einer SQL Server-Datenbank gespeichert ist.
 
-Bietet eine Bewertung für R-und python Machine Learning-Modelle nahezu in Echtzeit. `sp_rxPredict`ist eine gespeicherte Prozedur, die als Wrapper für die `rxPredict` R-Funktion in [revoscaler](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) und [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)bereitgestellt wird, und die [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) -python-Funktion in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) und [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Sie ist in C++ geschrieben und wird speziell für Bewertungs Vorgänge optimiert.
+Bietet eine Bewertung für R-und python Machine Learning-Modelle nahezu in Echtzeit. `sp_rxPredict` ist eine gespeicherte Prozedur, die als Wrapper für die R-Funktion von `rxPredict` in [revoscaler](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) und [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)bereitgestellt wird, und die python-Funktion [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) und [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Sie ist in C++ geschrieben und wird speziell für Bewertungs Vorgänge optimiert.
 
 Obwohl das Modell mit R oder python erstellt werden muss, kann es nach der Serialisierung und Speicherung in einem binären Format auf einer Instanz der Datenbank-Engine auch dann von dieser Datenbank-Engine-Instanz genutzt werden, wenn die R-oder python-Integration nicht installiert ist. Weitere Informationen finden Sie unter [Echtzeitbewertung mit sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
 
@@ -60,7 +60,7 @@ Um die Verwendung der gespeicherten Prozedur zu aktivieren, muss SQLCLR für die
 > [!NOTE]
 > Es gibt Sicherheits Implikationen, wenn diese Option aktiviert wird. Verwenden Sie eine alternative Implementierung, z. b. die [Transact-SQL-Vorhersage](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017) Funktion, wenn SQLCLR auf dem Server nicht aktiviert werden kann.
 
-Der Benutzer benötigt `EXECUTE` die-Berechtigung für die Datenbank.
+Der Benutzer benötigt die `EXECUTE`-Berechtigung für die Datenbank.
 
 ### <a name="supported-algorithms"></a>Unterstützte Algorithmen
 
@@ -120,7 +120,7 @@ Um das Modell zu erstellen und zu trainieren, verwenden Sie einen der unterstüt
 
 Die folgenden Modelltypen werden nicht unterstützt:
 
-+ Modelle mit den `rxGlm` Algorithmen `rxNaiveBayes` oder in revoscaler
++ Modelle, die die Algorithmen "`rxGlm`" oder "`rxNaiveBayes`" in revoscaler verwenden
 + PMML-Modelle in R
 + Modelle, die mit anderen Bibliotheken von Drittanbietern erstellt wurden 
 
@@ -135,9 +135,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-Zusätzlich zu einer gültigen SQL-Abfrage müssen die Eingabedaten in *@inputData* Spalten enthalten, die mit den Spalten im gespeicherten Modell kompatibel sind.
+Zusätzlich zu einer gültigen SQL-Abfrage müssen die Eingabedaten in *\@inputdata* Spalten enthalten, die mit den Spalten im gespeicherten Modell kompatibel sind.
 
-`sp_rxPredict`unterstützt nur die folgenden .net-Spaltentypen: Double, float, Short, ushort, Long, ULONG und String. Möglicherweise müssen Sie nicht unterstützte Typen in ihren Eingabedaten herausfiltern, bevor Sie Sie für die Echtzeitbewertung verwenden. 
+`sp_rxPredict` unterstützt nur die folgenden .net-Spaltentypen: Double, float, Short, ushort, Long, ULONG und String. Möglicherweise müssen Sie nicht unterstützte Typen in ihren Eingabedaten herausfiltern, bevor Sie Sie für die Echtzeitbewertung verwenden. 
 
   Weitere Informationen zu entsprechenden SQL-Typen finden Sie unter [SQL-CLR-Typzuordnung](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) oder [Mapping von CLR-Parameter Daten](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

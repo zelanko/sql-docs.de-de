@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cleanup_temporal_history | Microsoft-Dokumentation
+title: sys. sp_cleanup_temporal_history | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.service: sql-database
@@ -9,19 +9,19 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 111986a771b9cfb156c0d37688565b39401411f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f382af39620fde58480b9fa02178901cb882dab
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037232"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251998"
 ---
-# <a name="sysspcleanuptemporalhistory-transact-sql"></a>Sys. sp_cleanup_temporal_history (Transact-SQL)
+# <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys. sp_cleanup_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-Entfernt alle Zeilen aus der temporalen Verlaufstabelle, die konfigurierten HISTORY_RETENTION-Zeitraum innerhalb einer einzelnen Transaktion zu entsprechen.
+Entfernt alle Zeilen aus einer temporalen Verlaufs Tabelle, die mit dem konfigurierten HISTORY_RETENTION Zeitraum innerhalb einer einzelnen Transaktion identisch sind
   
 ## <a name="syntax"></a>Syntax  
 ```  
@@ -30,26 +30,26 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
   
 ## <a name="arguments"></a>Argumente  
 
-*@table_name*
+*\@table_name*
 
-Der Name der temporalen Tabelle für die Aufbewahrung Cleanup aufgerufen wird.
+Der Name der temporalen Tabelle, für die die Beibehaltungs Bereinigung aufgerufen wird.
 
 *schema_name*
 
-Der Name des Schemas, zu der aktuellen temporalen Tabelle gehört
+Der Name des Schemas, zu dem die aktuelle Temporale Tabelle gehört.
 
-*Row_count_var* [Ausgabe]
+*row_count_var* [Ausgabe]
 
-Die Output-Parameter, der Anzahl der gelöschten Zeilen zurückgibt. Dieser Parameter gibt zurück, wenn die Verlaufstabelle einen gruppierten columnstore-Index hat, immer 0.
+Der Output-Parameter, der die Anzahl der gelöschten Zeilen zurückgibt. Wenn in der Verlaufs Tabelle ein gruppierter columnstore--Index verwendet wird, gibt dieser Parameter immer 0 zurück.
   
 ## <a name="remarks"></a>Hinweise
-Diese gespeicherte Prozedur kann nur mit temporalen Tabellen verwendet werden, begrenzte Beibehaltungsdauer angegeben haben.
-Verwenden Sie diese gespeicherte Prozedur nur, wenn Sie sofort alle veraltete Zeilen aus der Verlaufstabelle bereinigen möchten. Sie sollten wissen, dass es erhebliche Auswirkungen auf das Datenbankprotokoll und die e/a-Subsystem kann wie alle geeignete Zeilen innerhalb derselben Transaktion gelöscht. 
+Diese gespeicherte Prozedur kann nur für temporale Tabellen verwendet werden, für die eine begrenzte Beibehaltungs Dauer festgelegt wurde.
+Verwenden Sie diese gespeicherte Prozedur nur, wenn Sie alle veralteten Zeilen aus der Verlaufs Tabelle sofort bereinigen müssen. Sie sollten wissen, dass sich dies erheblich auf das Daten Bank Protokoll und das e/a-Subsystem auswirken kann, wenn alle berechtigten Zeilen innerhalb derselben Transaktion gelöscht werden. 
 
-Es wird immer empfohlen, dass veraltete von entfernt Zeilen mit der minimalen Auswirkungen auf die normale arbeitsauslastungen und die Datenbank im Allgemeinen von einer internen Hintergrundtask zur Bereinigung abhängig zu sein.
+Es wird immer empfohlen, sich auf eine interne Hintergrundaufgabe für die Bereinigung zu verlassen, bei der veraltete Zeilen mit minimalen Auswirkungen auf die regulären Workloads und die Datenbank im allgemeinen entfernt werden.
 
 ## <a name="permissions"></a>Berechtigungen  
- Benötigen Sie Db_owner-Berechtigungen.  
+ Erfordert db_owner-Berechtigungen.  
 
 ## <a name="example"></a>Beispiel
 
@@ -61,4 +61,4 @@ select @rowcnt
 
 ## <a name="see-also"></a>Siehe auch
 
-[Temporale Tabellen mit Aufbewahrungsrichtlinie](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)
+[Aufbewahrungs Richtlinie für temporale Tabellen](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)
