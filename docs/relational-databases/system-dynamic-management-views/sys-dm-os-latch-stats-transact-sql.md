@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_latch_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys. DM _os_latch_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -18,40 +18,39 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 853fa815c431c720ed76f1cef693eb5ac5bf1f8c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265820"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289401"
 ---
-# <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
+# <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt Informationen zu allen nach Klassen sortierten Latchwartevorgängen zurück.  
+Gibt Informationen zu allen nach Klassen sortierten Latchwartevorgängen zurück. 
   
 > [!NOTE]  
->  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_latch_stats**.  
+> Verwenden Sie den Namen **sys. DM _pdw_nodes_os_latch_stats**, um dies von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] aus aufzurufen.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Name der Latchklasse.|  
 |waiting_requests_count|**bigint**|Anzahl der Wartevorgänge auf Latches in dieser Klasse. Dieser Leistungsindikator wird beim Starten eines Latchwartevorgangs erhöht.|  
-|wait_time_ms|**bigint**|Gesamtwartezeit auf Latches in dieser Klasse (in Millisekunden).<br /><br /> **Hinweis**: Diese Spalte wird alle fünf Minuten während eines latchwartevorgangs und am Ende eines latchwartevorgangs aktualisiert.|  
+|wait_time_ms|**bigint**|Gesamtwartezeit auf Latches in dieser Klasse (in Millisekunden).<br /><br /> **Hinweis**: Diese Spalte wird alle fünf Minuten während eines latchwartens und am Ende eines Latchwartevorgangs aktualisiert.|  
 |max_wait_time_ms|**bigint**|Maximale Zeitdauer, die ein Speicherobjekt auf diesen Latch gewartet hat. Wenn dieser Wert ungewöhnlich hoch ist, kann dies ein Hinweis auf einen internen Deadlock sein.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
-
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist `VIEW SERVER STATE`-Berechtigung erforderlich.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Ebenen ist die `VIEW DATABASE STATE`-Berechtigung in der Datenbank erforderlich. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]-Tarifen (Standard und Basic) ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
   
 ## <a name="remarks"></a>Hinweise  
- Sys. dm_os_latch_stats kann verwendet werden, zum Identifizieren der Quelle von latchkonflikten anhand die relative Anzahl und der Wartezeiten für die verschiedenen latchklassen. In einigen Fällen können Sie Latchkonflikte möglicherweise lösen oder reduzieren. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
+ sys. DM _os_latch_stats kann zum Identifizieren der Quelle von Latchkonflikten verwendet werden, indem die relativen warte Zahlen und Wartezeiten für die verschiedenen Latchklassen überprüft werden. In einigen Fällen können Sie Latchkonflikte möglicherweise lösen oder reduzieren. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
   
- Sie können den Inhalt der Sys. dm_os_latch_stats zurücksetzen, indem Sie mithilfe von `DBCC SQLPERF` wie folgt:  
+Sie können den Inhalt von "sys. DM _os_latch_stats" zurücksetzen, indem Sie `DBCC SQLPERF` wie folgt verwenden:  
   
-```  
+```sql  
 DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR);  
 GO  
 ```  
@@ -62,14 +61,14 @@ GO
 >  Diese Statistiken werden nicht persistent gespeichert, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird. Alle Daten stellen einen Gesamtwert seit dem letzten Zurücksetzen der Statistiken oder dem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar.  
   
 ## <a name="latches"></a>Latches  
- Ein Latch ist ein Lightweight-Synchronisierungsobjekt, das von verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten verwendet wird. Ein Latch wird in erster Linie zum Synchronisieren von Datenbankseiten verwendet. Jedem Latch wird eine einzelne Zuordnungseinheit zugeordnet.  
+ Ein Latch ist ein internes Lightweight-Synchronisierungs Objekt, das einer Sperre ähnelt, die von verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten verwendet wird. Ein Latch wird hauptsächlich zum Synchronisieren von Datenbankseiten bei Vorgängen wie dem Puffer-oder Dateizugriff verwendet. Jedem Latch wird eine einzelne Zuordnungseinheit zugeordnet. 
   
  Ein Latchwartevorgang findet dann statt, wenn der Latch nicht sofort erteilt werden kann, da er von einem anderen Thread in einem in Konflikt stehenden Modus beansprucht wird. Im Gegensatz zu Sperren wird ein Latch unmittelbar nach dem Vorgang freigegeben, selbst bei Schreibvorgängen.  
   
  Latches werden nach Klassen gruppiert, die auf Komponenten und der Verwendung basieren. 0 oder mehr Latches einer bestimmten Klasse können zu jeder Zeit in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz vorhanden sein.  
   
 > [!NOTE]  
->  Sys. dm_os_latch_stats verfolgt Latchanforderungen nicht nach, die sofort erteilt werden soll, oder die ohne warten einen Fehler.  
+> `sys.dm_os_latch_stats` verfolgt keine Latchanforderungen, die sofort erteilt wurden oder die nicht gewartet werden konnten.  
   
  Die folgende Tabelle enthält kurze Beschreibungen der verschiedenen Latchklassen.  
   
@@ -101,7 +100,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Wird zum Synchronisieren differenzieller Sicherungsvorgänge mit DBCC verwendet.|  
 |BACKUP_OPERATION|Wird für die interne Datenstruktursynchronisierung in einem Sicherungsvorgang verwendet, wie z. B. in einer Datenbank-, Protokoll- oder Dateisicherung.|  
 |BACKUP_FILE_HANDLE|Wird zum Synchronisieren von Vorgängen zum Öffnen von Dateien während einer Wiederherstellung verwendet.|  
-|BUFFER|Wird zum Synchronisieren des kurzfristigen Zugriffs auf Datenbankseiten verwendet. Vor dem Lesen oder Ändern von Datenbankseiten ist ein Pufferlatch erforderlich. Pufferlatchkonflikte können ein Hinweis auf unterschiedliche Probleme sein, darunter Hotpages und langsame E/A-Vorgänge.<br /><br /> Diese Latchklasse umfasst alle möglichen Verwendungen von Seitenlatches. Sys. dm_os_wait_stats macht einen Unterschied zwischen Seitenlatch-Wartevorgängen, die entstehen durch e/a-Vorgänge und Lese- und Schreibvorgänge auf der Seite.|  
+|BUFFER|Wird zum Synchronisieren des kurzfristigen Zugriffs auf Datenbankseiten verwendet. Vor dem Lesen oder Ändern von Datenbankseiten ist ein Pufferlatch erforderlich. Pufferlatchkonflikte können ein Hinweis auf unterschiedliche Probleme sein, darunter Hotpages und langsame E/A-Vorgänge.<br /><br /> Diese Latchklasse umfasst alle möglichen Verwendungen von Seitenlatches. sys. DM _os_wait_stats macht einen Unterschied zwischen Seitenlatch-warte Vorgängen, die durch e/a-Vorgänge verursacht werden, und Lese-und Schreibvorgängen auf der Seite.|  
 |BUFFER_POOL_GROW|Wird für die Synchronisierung des internen Puffer-Managers während Erweiterungen des Pufferpools verwendet.|  
 |DATABASE_CHECKPOINT|Wird für die Serialisierung von Prüfpunkten in einer Datenbank verwendet.|  
 |CLR_PROCEDURE_HASHTABLE|Nur interne Verwendung.|  
@@ -122,7 +121,7 @@ GO
 |FCB|Wird zum Synchronisieren des Zugriffs auf den Dateikontrollblock verwendet.|  
 |FCB_REPLICA|Nur interne Verwendung.|  
 |FGCB_ALLOC|Wird zum Synchronisieren des Zugriffs auf Roundrobin-Zuordnungsinformationen in einer Dateigruppe verwendet.|  
-|FGCB_ADD_REMOVE|Verwenden Sie zum Synchronisieren des Zugriffs auf Dateigruppen für hinzufügen, löschen, Größe und Position Dateivorgänge.|  
+|FGCB_ADD_REMOVE|Verwenden Sie, um den Zugriff auf Dateigruppen für Vorgänge zum Hinzufügen, löschen, vergrößern und Verkleinern von Dateien zu synchronisieren.|  
 |FILEGROUP_MANAGER|Nur interne Verwendung.|  
 |FILE_MANAGER|Nur interne Verwendung.|  
 |FILESTREAM_FCB|Nur interne Verwendung.|  
@@ -165,7 +164,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Nur interne Verwendung.|  
 |SERVICE_BROKER_HOST_NAME|Nur interne Verwendung.|  
 |SERVICE_BROKER_READ_CACHE|Nur interne Verwendung.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Verwendet, um eine Ebene instanzzuordnung Waiter Warteschlangen zu synchronisieren. Pro Datenbank-ID, die Version der Datenbank und die Warteschlangen-ID-Tupel ist eine Warteschlange vorhanden. Konflikte bei Latches dieser Klasse kann auftreten, wenn viele Verbindungen sind: In einem WAITFOR(RECEIVE) Zustand zu warten. Aufrufen von WAITFOR(RECEIVE); mehr als das Timeout WAITFOR; Empfangen einer Nachricht an; ein Commit oder Rollback der Transaktion, die die WAITFOR(RECEIVE) enthält; Sie können die Anzahl von Konflikten reduzieren, durch Verringern der Anzahl der Threads im Wartezustand WAITFOR(RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Wird verwendet, um eine Zuordnung auf Instanzebene von kellnerwarteschlangen Pro Datenbank-ID, Daten Bank Version und Warteschlangen-ID-Tupel ist eine Warteschlange vorhanden. Konflikte bei Latches dieser Klasse können auftreten, wenn viele Verbindungen bestehen: In einem WAITFOR-Wartezustand (Receive); Aufrufen von WAITFOR (Receive); Überschreiten des WAITFOR-Timeouts Empfangen einer Nachricht; Commit oder Rollback der Transaktion, die WAITFOR (Receive) enthält; Sie können die Konflikte verringern, indem Sie die Anzahl der Threads in einem WAITFOR-Wartestatus (Receive) verringern. |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Nur interne Verwendung.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Nur interne Verwendung.|  
 |SERVICE_BROKER_TRANSPORT|Nur interne Verwendung.|  
@@ -195,11 +194,6 @@ GO
 |KTM_VIRTUAL_CLOCK|Nur interne Verwendung.|  
   
 ## <a name="see-also"></a>Siehe auch  
- 
- [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
- 
- [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
-  
-  
-
-
+[DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
+[SQL Server mit dem Betriebs System verbundene dynamische &#40;Verwaltungs Sichten Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[SQL Server, Latches-Objekt](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

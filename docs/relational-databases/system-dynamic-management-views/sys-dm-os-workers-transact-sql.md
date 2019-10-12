@@ -20,12 +20,12 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 822f4fea2764c6420da731845e8defc05807d3cf
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261657"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289353"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,9 +82,8 @@ ms.locfileid: "72261657"
  Wird ein auf ein Ereignis wartender Arbeitsthread signalisiert, wird der Arbeitsthread an der vordersten Stelle in der ausführbaren Warteschlange platziert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht diesen Vorgang tausendmal nacheinander. Danach wird der Arbeitsthread an das Ende der Warteschlange verschoben. Wenn ein Arbeitsthread an das Ende der Warteschlange verschoben wird, wirkt sich dies negativ auf die Leistung aus.  
   
 ## <a name="permissions"></a>Berechtigungen
-
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist `VIEW SERVER STATE`-Berechtigung erforderlich.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Ebenen ist die `VIEW DATABASE STATE`-Berechtigung in der Datenbank erforderlich. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]-Tarifen (Standard und Basic) ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Ebenen ist die `VIEW DATABASE STATE`-Berechtigung in der Datenbank erforderlich. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]-Tarifen "Standard" und "Basic" ist die Mitgliedschaft in der `Server Admin`-Rolle oder ein `Azure Active Directory admin`-Konto erforderlich.   
 
 ## <a name="examples"></a>Beispiele  
  Sie können die folgende Abfrage verwenden, um herauszufinden, wie lange ein Arbeitsthread bereits im Status SUSPENDED oder RUNNABLE ausgeführt wird.  
@@ -137,6 +136,6 @@ SELECT
  Wenn `w_runnable` und `w_suspended` gleich sind, stellt dies in der Ausgabe die Zeit dar, die sich der Arbeitsthread im Status SUSPENDED befindet. Andernfalls stellt `w_runnable` die Zeit dar, die der Arbeitsthread im Status RUNNABLE verbringt. In der Ausgabe befindet sich die Sitzung `52` `SUSPENDED` Millisekunden lang im Status `35,094`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server mit dem Betriebs System verbundene dynamische &#40;Verwaltungs Sichten Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
- [Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#DOP)       
- [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md)    
+[SQL Server mit dem Betriebs System verbundene dynamische &#40;Verwaltungs Sichten Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md)    
