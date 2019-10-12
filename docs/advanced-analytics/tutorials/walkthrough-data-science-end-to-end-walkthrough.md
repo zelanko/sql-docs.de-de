@@ -3,30 +3,30 @@ title: Tutorial für Datenanalysten mit R-Sprache
 description: Tutorial, das zeigt, wie Sie eine End-to-End-R-Lösung für Daten bankübergreifende Analysen erstellen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 10/11/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d494329a52f73d489350792b6f43e138f3618a8
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ad7f5a500f740e4a302f814ec9523dfb33ecc68b
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714667"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278277"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: SQL-Entwicklung für R-Datenanalysten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In diesem Tutorial für Datenanalysten erfahren Sie, wie Sie eine End-to-End-Lösung für die Vorhersage Modellierung erstellen, die auf der Unterstützung von R-Features in SQL Server 2016 oder SQL Server 2017 basiert. In diesem Tutorial wird eine [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) -Datenbank auf SQL Server verwendet. 
 
-Sie verwenden eine Kombination aus R- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Code, Daten und benutzerdefinierten SQL-Funktionen, um ein Klassifizierungs Modell zu erstellen, das die Wahrscheinlichkeit angibt, dass der Treiber einen Tipp für eine bestimmte Taxifahrt erhält. Außerdem stellen Sie das R-Modell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in bereit und verwenden Serverdaten zum Generieren von Bewertungen basierend auf dem Modell.
+Sie verwenden eine Kombination aus R-Code, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten und benutzerdefinierten SQL-Funktionen, um ein Klassifizierungs Modell zu erstellen, das die Wahrscheinlichkeit angibt, dass der Treiber einen Trinkgeld für eine bestimmte Taxifahrt erhält. Sie stellen das R-Modell auch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereit und verwenden Serverdaten zum Generieren von Bewertungen basierend auf dem Modell.
 
 Dieses Beispiel kann auf alle Arten von realen Problemen erweitert werden, wie z. b. das Vorhersagen von Kunden Antworten auf Verkaufskampagnen oder das Vorhersagen von Ausgaben oder Anwesenheits Veranstaltungen. Da das Modell aus einer gespeicherten Prozedur aufgerufen werden kann, können Sie es problemlos in eine Anwendung einbetten.
 
-Da die exemplarische Vorgehensweise entworfen wurde, um r [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]-Entwickler in einzuführen, wird r nach Möglichkeit verwendet. Dies bedeutet jedoch nicht, dass R notwendigerweise das beste Tool für jede Aufgabe ist. In vielen Fällen stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine bessere Leistung bereit, besonders für Aufgaben wie Datenaggregation und Featureentwicklung.  Solche Aufgaben profitieren besonders von neuen Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], wie z.B. von speicheroptimierten Columnstore-Indizes. Wir versuchen, auf mögliche Optimierungen zu verweisen.
+Da die exemplarische Vorgehensweise entworfen wurde, um r-Entwickler in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] einzuführen, wird r nach Möglichkeit verwendet. Dies bedeutet jedoch nicht, dass R notwendigerweise das beste Tool für jede Aufgabe ist. In vielen Fällen stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine bessere Leistung bereit, besonders für Aufgaben wie Datenaggregation und Featureentwicklung.  Solche Aufgaben profitieren besonders von neuen Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], wie z.B. von speicheroptimierten Columnstore-Indizes. Wir versuchen, auf mögliche Optimierungen zu verweisen.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 + [SQL Server Machine Learning Services mit r-Integration](../install/sql-machine-learning-services-windows-install.md#verify-installation) oder [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
@@ -38,18 +38,21 @@ Da die exemplarische Vorgehensweise entworfen wurde, um r [!INCLUDE[rsql_product
 
 + Eine r-IDE wie rstudio oder das integrierte rgui-Tool, das in R enthalten ist
 
-Es wird empfohlen, diese exemplarische Vorgehensweise auf einer Client Arbeitsstation auszuführen. Sie müssen in der Lage sein, im gleichen Netzwerk eine Verbindung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer herzustellen, auf dem SQL Server und die R-Sprache aktiviert sind. Anweisungen zur Arbeitsstations Konfiguration finden [Sie unter Einrichten eines Data Science Clients für die R-Entwicklung](../r/set-up-a-data-science-client.md).
+Es wird empfohlen, diese exemplarische Vorgehensweise auf einer Client Arbeitsstation auszuführen. Sie müssen in der Lage sein, im gleichen Netzwerk eine Verbindung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computer herzustellen, auf dem SQL Server und die R-Sprache aktiviert sind. Anweisungen zur Arbeitsstations Konfiguration finden [Sie unter Einrichten eines Data Science Clients für die R-Entwicklung](../r/set-up-a-data-science-client.md).
 
-Alternativ können Sie die exemplarische Vorgehensweise auf einem Computer ausführen, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowohl als auch eine R-Entwicklungsumgebung hat, aber wir empfehlen diese Konfiguration nicht für eine Produktionsumgebung. Wenn Sie Client und Server auf demselben Computer platzieren müssen, achten Sie darauf, dass Sie einen zweiten Satz von Microsoft r-Bibliotheken zum Senden eines R-Skripts von einem Remote Client installieren. Verwenden Sie die R-Bibliotheken nicht, die in den Programmdateien der SQL Server Instanz installiert sind. Insbesondere, wenn Sie einen Computer verwenden, benötigen Sie die revoscaler-Bibliothek an beiden Speicherorten, um Client-und Server Vorgänge zu unterstützen.
+Alternativ können Sie die exemplarische Vorgehensweise auf einem Computer ausführen, der sowohl [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als auch eine R-Entwicklungsumgebung hat, aber wir empfehlen diese Konfiguration nicht für eine Produktionsumgebung. Wenn Sie Client und Server auf demselben Computer platzieren müssen, achten Sie darauf, dass Sie einen zweiten Satz von Microsoft r-Bibliotheken zum Senden eines R-Skripts von einem Remote Client installieren. Verwenden Sie die R-Bibliotheken nicht, die in den Programmdateien der SQL Server Instanz installiert sind. Insbesondere, wenn Sie einen Computer verwenden, benötigen Sie die revoscaler-Bibliothek an beiden Speicherorten, um Client-und Server Vorgänge zu unterstützen.
 
 + C:\programme\microsoft\r Client\R_SERVER\library\RevoScaleR 
 + C:\Programme\Microsoft SQL server\mssql14. MSSQLSERVER\R_SERVICES\library\RevoScaleR
+
+> [!NOTE]
+> Wenn Sie [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/) oder den [Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/)anstelle des R-Clients verwenden, lautet der Pfad zu revoscaler "c:\programme\microsoft\ml Server\R_SERVER\library\RevoScaleR
 
 <a name="add-packages"></a>
 
 ## <a name="additional-r-packages"></a>Zusätzliche R-Pakete
 
-Diese exemplarische Vorgehensweise erfordert einige R-Bibliotheken, die nicht standardmäßig als [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]Teil von installiert werden. Sie müssen die Pakete auf dem Client installieren, auf dem Sie die Lösung entwickeln, und auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Computer, auf dem Sie die Lösung bereitstellen.
+Diese exemplarische Vorgehensweise erfordert einige R-Bibliotheken, die nicht standardmäßig als Teil von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] installiert werden. Sie müssen die Pakete sowohl auf dem Client, auf dem Sie die Lösung entwickeln, als auch auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computer installieren, auf dem Sie die Lösung bereitstellen.
 
 ### <a name="on-a-client-workstation"></a>Auf einer Client Arbeitsstation
 
@@ -80,9 +83,9 @@ Sie haben mehrere Optionen für die Installation von Paketen auf SQL Server. SQL
   install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   ```
-  In diesem Beispiel wird die R grep-Funktion verwendet, um den Vektor der verfügbaren Pfade zu durchsuchen und den Pfad zu finden, der "Programmdateien" enthält. Weitere Informationen finden [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)Sie unter.
+  In diesem Beispiel wird die R grep-Funktion verwendet, um den Vektor der verfügbaren Pfade zu durchsuchen und den Pfad zu finden, der "Programmdateien" enthält. Weitere Informationen finden Sie unter [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep).
 
-  Wenn Sie der Ansicht sind, dass die Pakete bereits installiert sind, überprüfen Sie die `installed.packages()`Liste der installierten Pakete durch Ausführen von.
+  Wenn Sie der Ansicht sind, dass die Pakete bereits installiert sind, überprüfen Sie die Liste der installierten Pakete, indem Sie `installed.packages()` ausführen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

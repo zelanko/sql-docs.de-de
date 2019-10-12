@@ -4286,6 +4286,8 @@
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
             - name: Ändern des Datenbank-Kompatibilitätsmodus mithilfe des Abfrageoptimierungs-Assistenten
               href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+            - name: Neueste Updates für SQL Server
+              href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
     - name: Konfiguration
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -5064,10 +5066,6 @@
                   href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
                 - name: Definieren einer logischen Datensatzbeziehung
                   href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-                - name: Konfigurieren der Websynchronisierung
-                  href: relational-databases/replication/configure-web-synchronization.md
-                - name: Konfigurieren von IIS für die Websynchronisierung
-                  href: relational-databases/replication/configure-iis-for-web-synchronization.md
                 - name: Konfigurieren von IIS 7 für die Websynchronisierung
                   href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
                 - name: Lösen von Datenkonflikten

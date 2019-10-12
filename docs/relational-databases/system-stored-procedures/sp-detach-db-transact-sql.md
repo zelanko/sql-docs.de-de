@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 195da55ed9d4d76298e3a5cbbd44ed562f69da06
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000807"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278180"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +45,16 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'database_name'`Der Name der Datenbank, die getrennt werden soll. *database_name* ist ein Wert vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
+`[ @dbname = ] 'database_name'` ist der Name der Datenbank, die getrennt werden soll. *database_name* ist ein Wert vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @skipchecks = ] 'skipchecks'`Gibt an, ob die Update Statistik übersprungen oder ausgeführt werden soll. *wobei skipchecks "* ist ein **nvarchar (10)** -Wert mit dem Standardwert NULL. Um die Update Statistik zu überspringen, geben Sie **true**an Um Update Statistics explizit auszuführen, geben Sie **false**an.  
+`[ @skipchecks = ] 'skipchecks'` gibt an, ob die Update Statistik übersprungen oder ausgeführt werden soll. *wobei skipchecks "* ist ein **nvarchar (10)** -Wert mit dem Standardwert NULL. Um die Update Statistik zu überspringen, geben Sie **true**an Um Update Statistics explizit auszuführen, geben Sie **false**an.  
   
  UPDATE STATISTICS wird standardmäßig ausgeführt, um Informationen zu den Daten in den Tabellen und Indizes zu aktualisieren. Das Ausführen von UPDATE STATISTICS ist nützlich für Datenbanken, die auf Nur-Lese-Medien verschoben werden sollen.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Gibt an, dass die Volltextindex Datei, die der zu trennende Datenbank zugeordnet ist, während des Trenn Vorgangs der Datenbank nicht gelöscht wird. *Keepfulltextindexfile* ist ein **nvarchar (10)** -Wert mit dem Standardwert **true**. Wenn *keepfulltextindexfile* den Wert **false**aufweist, werden alle der Datenbank zugeordneten Volltextindex Dateien und die Metadaten des voll Text Indexes gelöscht, es sei denn, die Datenbank ist schreibgeschützt. Wenn NULL oder **true**, werden voll Text bezogene Metadaten beibehalten.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` gibt an, dass die Volltextindex Datei, die der zu trennende Datenbank zugeordnet ist, während des Trenn Vorgangs der Datenbank nicht gelöscht wird. *Keepfulltextindexfile* ist ein **nvarchar (10)** -Wert mit dem Standardwert **true**. Wenn *keepfulltextindexfile* den Wert **false**aufweist, werden alle der Datenbank zugeordneten Volltextindex Dateien und die Metadaten des voll Text Indexes gelöscht, es sei denn, die Datenbank ist schreibgeschützt. Wenn NULL oder **true**, werden voll Text bezogene Metadaten beibehalten.  
   
 > [!IMPORTANT]
->  Der **@keepfulltextindexfile** -Parameter wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diesen Parameter beim Entwickeln neuer Anwendungen nicht, und planen Sie so bald wie möglich das Ändern von Anwendungen, in denen er zurzeit verwendet wird.  
+>  Der **\@keepfulltextindexfile** -Parameter wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Verwenden Sie diesen Parameter beim Entwickeln neuer Anwendungen nicht, und planen Sie so bald wie möglich das Ändern von Anwendungen, in denen er zurzeit verwendet wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Bevor Sie die Datenbank auf SINGLE_USER festlegen, müssen Sie überprüfen, ob die AUTO_UPDATE_STATISTICS_ASYNC-Option auf OFF festgelegt ist. Wenn diese Option auf ON festgelegt ist, stellt der Hintergrundthread, der zum Aktualisieren von Statistiken verwendet wird, eine Verbindung mit der Datenbank her, und Sie können im Einzelbenutzermodus nicht auf die Datenbank zugreifen. Weitere Informationen finden Sie unter [Festlegen des Einzelbenutzermodus für eine Datenbank](../databases/set-a-database-to-single-user-mode.md).
 
- Beispielsweise erhält die folgende `ALTER DATABASE` Anweisung exklusiven Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank, nachdem alle aktuellen Benutzer die Verbindung mit der Datenbank getrennt haben.  
+ Beispielsweise erhält die folgende `ALTER DATABASE`-Anweisung exklusiven Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank, nachdem alle aktuellen Benutzer die Verbindung mit der Datenbank getrennt haben.  
   
 ```  
 USE master;  
@@ -121,7 +121,7 @@ GO
  Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die Mitgliedschaft in der **db_owner** -Rolle der Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank getrennt, wobei *wobei skipchecks "* auf true festgelegt ist.  
+ Im folgenden Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank getrennt, wobei *wobei skipchecks "* auf true festgelegt ist.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
