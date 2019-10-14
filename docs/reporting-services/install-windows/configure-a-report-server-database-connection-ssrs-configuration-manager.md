@@ -7,13 +7,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 04/26/2019
-ms.openlocfilehash: 86f3d1834212ff17125abc9a124eb10d3f7e9be5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 10/09/2019
+ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264984"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239371"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (SSRS-Konfigurations-Manager)
 
@@ -105,6 +105,13 @@ Sie können ein Windows-Benutzerkonto für die Verbindung zwischen Berichtsserve
 #### <a name="using-a-sql-server-login"></a>Verwenden eines SQL Server-Anmeldenamens
 
 Sie können einen einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen festlegen, mit dem die Verbindung zur Berichtsserver-Datenbank hergestellt wird. Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden und sich die Berichtsserver-Datenbank auf einem Remotecomputer befindet, sollten Sie die Übertragung der Daten zwischen den Servern mithilfe von IPSec schützen. Wenn Sie einen Datenbank-Anmeldenamen verwenden, müssen Sie die Berichtsserver-Datenbank jedes Mal aktualisieren, wenn Sie das Kennwort oder das Konto ändern.  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Wenn Sie ein Azure SQL-verwaltete Instanz zum Hosten von Reporting Services 2019-Datenbanken verwenden, ist die Unterstützung auf die Verwendung SQL Server Anmelde Informationen für die Verbindung beschränkt.
+
+::: moniker-end
 
 ### <a name="database-permissions"></a>Datenbankberechtigungen
 

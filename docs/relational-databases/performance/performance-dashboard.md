@@ -14,12 +14,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 1d3a404aecf987be2fa0c2638fa3abb8c6f3ea0c
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559481"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041166"
 ---
 # <a name="performance-dashboard"></a>Leistungsdashboard
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Das Leistungsdashboard wird als neue Registerkarte angezeigt. Im folgenden Beisp
   
 ![Hauptbildschirm des Leistungsdashboards](../../relational-databases/performance/media/perf_dashboard.png "Hauptbildschirm des Leistungsdashboards")  
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 Der Bericht **Fehlende Indizes** zeigt möglicherweise fehlende Indizes an, die der Abfrageoptimierer während der Abfragekompilierung identifiziert hat. Sie müssen jedoch nicht allen Empfehlungen die gleiche Beachtung schenken. Microsoft empfiehlt, die Indizes mit einem höheren Ergebnis als 100.000 für die Erstellung auszuwerten, da bei diesen die meisten Verbesserungen für Benutzerabfragen zu erwarten sind. 
 
 > [!TIP]
@@ -78,7 +78,7 @@ Der Bericht **Wartevorgänge** filtert alle Wartezeiten im Leerlauf und Ruhezust
 Die Berichte **Ressourcenintensive Abfragen** werden zurückgesetzt, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird, da die Daten in den zugrunde liegenden DMVs gelöscht werden. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] gibt es ausführliche Informationen zu ressourcenintensiven Abfragen im Abfragespeicher. 
 
 > [!NOTE]
-> Das Leistungsdashboard wurde für [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602) erstmals als eigenständiger Download freigegeben und später für [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063) aktualisiert.
+> Das Leistungsdashboard wurde für [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) erstmals als eigenständiger Download freigegeben und später für [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063) aktualisiert.
 
 ## <a name="permissions"></a>Berechtigungen  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Berechtigungen `VIEW SERVER STATE` und `ALTER TRACE` benötigt. In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.

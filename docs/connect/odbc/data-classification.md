@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 75688cc1e5155c83501204f1634d320b9ae7d8be
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264003"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041130"
 ---
 # <a name="data-classification"></a>Datenklassifizierung
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -57,7 +57,7 @@ SQLRETURN SQLGetDescField(
  *BufferLength*  
  Der Länge des Ausgabepuffers in Bytes
 
- *Stringlengthptr* Ausgeben Ein Zeiger auf den Puffer, in dem die Gesamtzahl der für die Rückgabe in *ValuePtr*verfügbaren Bytes zurückgegeben werden soll.
+ *Stringlengthptr* [output] Zeiger auf den Puffer, in dem die Gesamtzahl der für die Rückgabe in *ValuePtr*verfügbaren Bytes zurückgegeben werden soll.
  
 > [!NOTE]
 > Wenn die Größe des Puffers unbekannt ist, kann er durch Aufrufen von SQLGetDescField mit *ValuePtr* als NULL und untersuchen des Werts von *stringlengthptr*ermittelt werden.
@@ -69,9 +69,9 @@ Bei einem erfolgreichen Aufrufen von SQLGetDescField enthält der Puffer, auf de
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt`, und `cc cc` sind Multibytezeichen-Ganzzahlen, die mit dem geringsten signifikanten Byte an der niedrigsten Adresse gespeichert werden.
+> `nn nn`, `tt tt` und `cc cc` sind Multibytezeichen-Ganzzahlen, die mit dem am wenigsten signifikanten Byte der niedrigsten Adresse gespeichert werden.
 
-*`sensitivitylabel`* und *`informationtype`* sind beide in der Form.
+*`sensitivitylabel`* und *`informationtype`* haben beide die Form.
 
  `nn [n bytes name] ii [i bytes id]`
 
@@ -79,13 +79,13 @@ Bei einem erfolgreichen Aufrufen von SQLGetDescField enthält der Puffer, auf de
 
  `nn nn [n sensitivityprops]`
 
-Für jede Spalte *(c)* sind *n* 4 Byte *`sensitivityprops`* vorhanden:
+Für jede Spalte *(c)* sind *n* 4-Byte- *`sensitivityprops`* vorhanden:
 
  `ss ss tt tt`
 
-s-Index in das *`sensitivitylabels`* Array, `FF FF` wenn keine Bezeichnung
+s-Index in das *`sensitivitylabels`* -Array, `FF FF`, wenn keine Bezeichnung
 
-t-Index in das *`informationtypes`* Array, `FF FF` wenn keine Bezeichnung
+t-Index in das *`informationtypes`* -Array, `FF FF`, wenn keine Bezeichnung
 
 
 <br><br>
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>Codebeispiel
-Test Anwendung, die das Lesen von Daten Klassifizierungs Metadaten veranschaulicht. Unter Windows kann es mit einer Verbindungs `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` Zeichenfolge kompiliert und mit einer SQL-Abfrage ausgeführt werden (die klassifizierte Spalten zurückgibt) als Parameter:
+Test Anwendung, die das Lesen von Daten Klassifizierungs Metadaten veranschaulicht. Unter Windows kann er mit `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` kompiliert und mit einer Verbindungs Zeichenfolge und einer SQL-Abfrage (die klassifizierte Spalten zurückgibt) als Parameter ausgeführt werden:
 
 ```
 #ifdef _WIN32
@@ -241,5 +241,26 @@ int main(int argc, char **argv)
     }
     return 0;
 }
+```
+
+## <a name="bkmk-version"></a>Unterstützte Version
+Microsoft ODBC Driver 17,2 ermöglicht das Abrufen von Daten Klassifizierungs Informationen über `SQLGetDescField`, wenn `FieldIdentifier` auf `SQL_CA_SS_DATA_CLASSIFICATION` (1237) festgelegt ist. 
+
+Beginnend mit dem Microsoft ODBC-Treiber 17.4.1.1 Es ist möglich, die von einem Server unterstützte Version der Datenklassifizierung über `SQLGetDescField` mithilfe des Feld Bezeichners `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) abzurufen. In 17.4.1.1 wird die unterstützte Daten Klassifizierungs Version auf "2" festgelegt.
+
+ 
+
+Beginnend mit 17.4.2.1 wurde die Standardversion der Datenklassifizierung eingeführt, die auf "1" festgelegt ist, und der Versions Treiber meldet SQL Server als unterstützt. Das neue Verbindungs Attribut `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) kann es der Anwendung ermöglichen, die unterstützte Version der Datenklassifizierung von "1" bis zur maximalen Unterstützung zu ändern.  
+
+Beispiel: 
+
+Um die Version festzulegen, sollte dieser Rückruf direkt vor dem SQLCONNECT-oder SQLDriverConnect-Befehl durchgeführt werden:
+```
+ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
+```
+
+Der Wert der derzeit unterstützten Version der Datenklassifizierung kann über den SQLGetConnectAttr-Befehl zurückgezogen werden: 
+```
+ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
 

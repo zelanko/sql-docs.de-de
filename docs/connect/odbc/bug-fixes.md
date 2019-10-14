@@ -13,18 +13,26 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 9aba2495e5f4661c7c042125608f34d577cddfe3
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 2b939db6ac0f89075b39ba74eadb0e86e63e3980
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702810"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041222"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste der behobenen Fehler
 
-Diese Seite enthält eine Liste von Fehlern, die in jedem Release behoben wurden [!INCLUDE[msCoName](../../includes/msconame_md.md)] , beginnend mit ODBC Driver 17 für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+Diese Seite enthält eine Liste von Fehlern, die in jeder Version behoben werden, beginnend mit [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17,4 für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-1742-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)]-ODBC-Treiber 17.4.2 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+ - Behebung eines Problems, bei dem die Prozess-ID und der Anwendungsname nicht ordnungsgemäß an SQL Server gesendet werden (für sys. DM _exec_sessions Analysis) (Linux)
+ - Entfernte redundante Abhängigkeit von libuuid (Linux)
+ - Behebung eines Fehlers beim Senden von UTF8-Daten an SQL Server 2019
+ - Behebung eines Fehlers, bei dem Gebiets Schemas, die auf "@euro" enden, nicht ordnungsgemäß erkannt wurden (Linux)
+ - Korrektur für XML-Daten, die fälschlicherweise zurückgegeben werden, wenn Sie als Output-Parameter abgerufen werden, wenn Always Encrypted
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)]-ODBC-Treiber 17,4 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Behebung von zeitweiligen hängen, wenn mehrere aktive Resultsets (Mars) aktiviert sind
 - Beheben Sie die Verbindungs Resilienz, wenn die asynchrone Benachrichtigung aktiviert ist.
@@ -36,13 +44,13 @@ Diese Seite enthält eine Liste von Fehlern, die in jedem Release behoben wurden
 - Korrigieren des Importierens von sql_variant-Spalten mit mehr als 7992 Bytes mithilfe von bcp
 - Korrektur des Sendevorgangs für die korrekte Codierung an den Server für schmale Zeichendaten
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17,3 für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)]-ODBC-Treiber 17,3 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Korrigieren des Speicherlecks für das TCP-Sende Benachrichtigungs Ereignis
 - Behobene neudefinitions Problem der Enumeration-_SQL_FILESTREAM_DESIRED_ACCESS in der msodbcsql. h-Header Datei
 - Korrigiert: fehlende ACCESS_TOKEN und Authentifizierungs bezogene Definition in der msodbcsql. h-Header Datei für Linux
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17,2 für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)]-ODBC-Treiber 17,2 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Es wurde eine Fehlermeldung zur Azure Active Directory Authentifizierung korrigiert.
 - Korrigieren der Codierungs Erkennung, wenn Gebiets Schema Umgebungsvariablen anders festgelegt werden
@@ -55,7 +63,7 @@ Diese Seite enthält eine Liste von Fehlern, die in jedem Release behoben wurden
 - Korrigiert eines Cache Problems bei Verwendung der Adal-Authentifizierung unter Windows
 - Es wurde ein Problem behoben, bei dem Ablauf Verfolgungs Protokolle unter Windows gesperrt und überschrieben wurden.
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17,1 für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)]-ODBC-Treiber 17,1 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Eine Verzögerung von 1 Sekunde wurde beim Aufrufen von SQLFreeHandle mit aktiviertem Mars und dem Verbindungs Attribut "verschlüsseln = ja" korrigiert.
 - Es wurde ein Absturz von Fehler 22003 in SQLGetData korrigiert, wenn die Puffergröße kleiner ist als die abgerufenen Daten (Windows).
@@ -65,7 +73,7 @@ Diese Seite enthält eine Liste von Fehlern, die in jedem Release behoben wurden
 - Eine Warnung für den MacOS-Installer wurde korrigiert.
 - Das Senden eines falschen Zustands an den SQL Server während des Wiederherstellungs Versuchs der Sitzung wurde korrigiert, wenn die verbindungsresilienz und das Verbindungs Pooling aktiviert sind, sodass die Sitzung vom Server gelöscht wird.
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Ein Fehler wurde behoben, bei dem bei Verwendung der Kerberos-Authentifizierung Massen Einfügung mit dem Fehler "Zugriff verweigert" fehlgeschlagen ist.
 - Problem Umgehung für einen unixodbc-Fehler in Version unten 2.3.1 entfernt (der Treiber hat die Größe bestimmter an unixodbc übergebenen Puffer verdoppelt)
