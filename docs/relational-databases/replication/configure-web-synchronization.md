@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25357798ed5a0340b46e787ad041ae6d9f19d7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903101"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710311"
 ---
 # <a name="configure-web-synchronization"></a>Websynchronisierung konfigurieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "67903101"
   
      Weitere Informationen zu den erforderlichen Berechtigungen für die Agents finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
--   Geben Sie das Domänenkonto an, das auch vom Merge-Agent verwendet wird, wenn Sie auf der Seite **Webserverinformationen** des Assistenten für neue Abonnements ein Konto und ein Kennwort oder wenn Sie Werte für die Parameter **@internet_url** und **@internet_login** von [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Dieses Konto muss über Leseberechtigungen für die Momentaufnahmefreigabe verfügen.  
+-   Geben Sie das Domänenkonto an, das auch vom Merge-Agent verwendet wird, wenn Sie auf der Seite **Webserverinformationen** des Assistenten für neue Abonnements ein Konto und ein Kennwort oder für die Parameter `@internet_url` und `@internet_login` von [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) Werte angeben. Dieses Konto muss über Leseberechtigungen für die Momentaufnahmefreigabe verfügen.  
   
 -   Jede Veröffentlichung sollte ein separates virtuelles Verzeichnis für IIS verwenden.  
   

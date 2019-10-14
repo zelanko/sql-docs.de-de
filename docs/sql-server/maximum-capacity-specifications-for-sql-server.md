@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045643"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687371"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "68045643"
 |Spalten in GROUP BY, ORDER BY||Begrenzung nur durch die Anzahl von Bytes||  
 |Spalten oder Ausdrücke in einer GROUP BY WITH CUBE- oder WITH ROLLUP-Anweisung||10||  
 |Spalten pro Indexschlüssel||32|Wenn die Tabelle einen oder mehrere XML-Indizes enthält, ist der Gruppierungsschlüssel der Benutzertabelle auf 31 Spalten beschränkt, da die XML-Spalte dem Gruppierungsschlüssel des primären XML-Index hinzugefügt wird. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]können Sie Nichtschlüsselspalten in den nicht gruppierten Index aufnehmen, um die Beschränkung auf maximal 32 Schlüsselspalten zu vermeiden. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
-|Spalten pro Fremdschlüssel||32||  
-|Spalten pro Primärschlüssel||32||  
-|Spalten pro Tabelle (keine breite Tabelle)||1\.024||  
-|Spalten pro breiter Tabelle||30.000||  
-|Spalten pro SELECT-Anweisung||4\.096||  
-|Spalten pro INSERT-Anweisung||4\.096||  
+|Spalten pro Fremdschlüssel oder Primärschlüssel||32||  
+|Spalten pro `INSERT`-Anweisung||4\.096||  
+|Spalten pro `SELECT`-Anweisung||4\.096||  
+|Spaltenanzahl pro Tabelle||1\.024|Tabellen, die Sparsespaltensätze enthalten, umfassen bis zu 30.000 Spalten. Siehe [Sparsespaltensätze](../relational-databases/tables/use-column-sets.md).|  
+|Spalten pro `UPDATE`-Anweisung||4\.096|Es gelten verschiedene Grenzwerte für [Sparsespaltensätze](../relational-databases/tables/use-column-sets.md).|  
+|Spalten pro Sicht||1\.024||  
 |Verbindungen pro Client||Höchstwert konfigurierter Verbindungen||  
 |Datenbankgröße||524.272 Terabytes||  
 |Datenbanken pro Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32.767||  
@@ -99,7 +99,6 @@ ms.locfileid: "68045643"
 |Statistiken für nicht indizierte Spalten||30.000|| 
 |Tabellen pro SELECT-Anweisung||Begrenzung nur durch verfügbare Ressourcen||  
 |Trigger pro Tabelle||Begrenzung durch die Anzahl der Objekte in einer Datenbank|Zu den Datenbankobjekten zählen Tabellen, Sichten, gespeicherte Prozeduren, benutzerdefinierte Funktionen, Trigger, Regeln, Standardwerte und Einschränkungen. Die Summe aller Objekte in einer Datenbank kann 2.147.483.647 nicht übersteigen.|  
-|Spalten pro UPDATE-Anweisung (breite Tabellen)||4096||  
 |Benutzerverbindungen||32.767||  
 |XML-Indizes||249||  
   

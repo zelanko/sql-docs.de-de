@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f3689bdad636d7df4281975167984425a8049aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000625"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682054"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Genauigkeit, Dezimalstellen und Länge (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ Genauigkeit gibt die Anzahl der Ziffern einer Zahl an. Dezimalstellen gibt die A
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist die maximale Standardgenauigkeit der Datentypen **numeric** und **decimal** 38. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist das Standardmaximum 28.
   
-Die Länge für einen numerischen Datentyp ist die Anzahl der Bytes, die zum Speichern der Zahl verwendet werden. Die Länge für einen Zeichenfolgen- oder einen Unicode-Datentyp ist die Anzahl der Zeichen. Die Länge der Datentypen **binary**, **varbinary** und **image** entspricht der Anzahl von Bytes. Ein **int**-Datentyp kann z.B. 10 Stellen enthalten, wird in 4 Bytes gespeichert und nimmt keine Dezimaltrennzeichen an. Der **int**-Datentyp hat eine Genauigkeit von 10 und eine Länge von 4. Er weist 0 Dezimalstellen auf.
+Die Länge für einen numerischen Datentyp ist die Anzahl der Bytes, die zum Speichern der Zahl verwendet werden. Für varchar und char stellt die Länge einer Zeichenfolge die Anzahl der Bytes dar. Für nvarchar und nchar stellt die Länge einer Zeichenfolge die Anzahl der Bytepaare dar. Die Länge der Datentypen **binary**, **varbinary** und **image** entspricht der Anzahl von Bytes. Ein **int**-Datentyp kann z.B. 10 Stellen enthalten, wird in 4 Bytes gespeichert und nimmt keine Dezimaltrennzeichen an. Der **int**-Datentyp hat eine Genauigkeit von 10 und eine Länge von 4. Er weist 0 Dezimalstellen auf.
   
-Wenn zwei Ausdrücke vom Datentyp **char**, **varchar**, **binary** oder **varbinary** verkettet werden, ist die Länge des sich ergebenden Ausdrucks die Summe der Längen der beiden Ausgangsausdrücke bis zu einer Länge von 8.000 Zeichen.
+Wenn zwei Ausdrücke vom Datentyp **char**, **varchar**, **binary** oder **varbinary** verkettet werden, ist die Länge des sich ergebenden Ausdrucks die Summe der Längen der beiden Quellausdrücke bis zu einer Länge von 8.000 Bytes.
   
-Wenn zwei Ausdrücke vom Datentyp **nchar** oder **nvarchar** verkettet werden, ist die Länge des sich ergebenden Ausdrucks die Summe der Längen der beiden Ausgangsausdrücke bis zu einer Länge von 4.000 Zeichen.
+Wenn zwei Ausdrücke vom Datentyp **nchar** oder **nvarchar** verkettet werden, ist die Länge des sich ergebenden Ausdrucks die Summe der Längen der beiden Ausgangsausdrücke bis zu einer Länge von 4.000 Bytepaaren.
   
 Wenn zwei Ausdrücke vom selben Datentyp, aber mit verschiedenen Längen mit UNION, EXCEPT oder INTERSECT verglichen werden, entspricht die sich ergebende Länge der längeren Länge der beiden Ausdrücke.
   

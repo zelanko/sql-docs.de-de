@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31e3101499ff046d6741dbbc7b86fdf196deec3e
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096926"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713270"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Konfigurieren von verteilten Transaktionen für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,8 @@ Bei einer verteilten Transaktion arbeiten Clientanwendungen mit dem Microsoft Di
 
 In [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] werden verteilte Transaktionen für Datenbanken in einer Verfügbarkeitsgruppe nicht verhindert – selbst wenn die Verfügbarkeitsgruppe nicht für verteilte Transaktionen konfiguriert ist. Wenn eine Verfügbarkeitsgruppe jedoch nicht für verteilte Transaktionen konfiguriert ist, kann es vorkommen, dass das Failover in manchen Situationen fehlschlägt. Insbesondere neue [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz des primären Replikats ist möglicherweise nicht in der Lage, Transaktionsergebnisse vom DTC abzurufen. Um der [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz nach einem Failover das Abrufen der Ergebnisse unsicherer Transaktionen vom DTC zu ermöglichen, konfigurieren Sie die Verfügbarkeitsgruppe für verteilte Transaktionen. 
 
+DTC ist nicht an der Verarbeitung von Verfügbarkeitsgruppen beteiligt, es sei denn, eine Datenbank ist auch Mitglied eines Failoverclusters. Innerhalb einer Verfügbarkeitsgruppe wird die Konsistenz zwischen Replikaten von der Verfügbarkeitsgruppenlogik verwaltet: Das primäre Replikat schließt den Commit nicht ab und bestätigt den Commit an die aufrufende Funktion, bis das sekundäre Replikat bestätigt hat, dass die Protokolldatensätze im permanenten Speicher dauerhaft gespeichert wurden. Erst dann deklariert das primäre Replikat die Transaktion als abgeschlossen. Im asynchronen Modus wird nicht gewartet, bis das sekundäre Replikat die Bestätigung durchführt, und es besteht explizit die Wahrscheinlichkeit, dass eine geringe Datenmenge verloren geht.
+
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Bevor Sie eine Verfügbarkeitsgruppe so konfigurieren, dass verteilte Transaktionen unterstützt werden, müssen die folgenden Voraussetzungen erfüllt sein:
@@ -50,6 +52,8 @@ Bevor Sie eine Verfügbarkeitsgruppe so konfigurieren, dass verteilte Transaktio
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>Erstellen einer Verfügbarkeitsgruppe für verteilte Transaktionen
 
 Konfigurieren Sie eine Verfügbarkeitsgruppe so, dass sie verteilte Transaktionen unterstützt. Legen Sie für die Verfügbarkeitsgruppe fest, dass sich jede Datenbank als Ressourcenmanager registrieren kann. In diesem Artikel wird erläutert, wie Sie eine Verfügbarkeitsgruppe so konfiguriert werden kann, dass jede Datenbank im DTC Ressourcenmanager sein kann.
+
+
 
 Die Erstellung von Verfügbarkeitsgruppen für verteilte Transaktionen ist ab [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] möglich. Um eine Verfügbarkeitsgruppe für verteilte Transaktionen zu erstellen, müssen Sie `DTC_SUPPORT = PER_DB` in die Definition einer Verfügbarkeitsgruppe einschließen. Das folgende Skript erstellt eine Verfügbarkeitsgruppe für verteilte Transaktionen. 
 

@@ -19,12 +19,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bec94a3aaa6faab3fa88d4cd2b0d21a2bdcfd29e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d5b1f22408ecffd2ec3250441239bb423e921b66
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768612"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710284"
 ---
 # <a name="disable-publishing-and-distribution"></a>Deaktivieren der Veröffentlichung und Verteilung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68768612"
 7.  Führen Sie auf dem Verteiler [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) aus, um die Verteilerbezeichnung vom Server zu entfernen.  
   
     > [!NOTE]  
-    >  Wenn nicht alle Replikationsveröffentlichungs- und Verteilungsobjekte gelöscht wurden, bevor Sie [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) und [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)ausführen, geben diese Prozeduren einen Fehler zurück. Damit alle replikationsbezogenen Objekte gelöscht werden, wenn ein Verleger oder ein Verteiler gelöscht wird, muss der **@no_checks** -Parameter auf **1**. Wenn ein Verleger oder Verteiler offline oder nicht erreichbar ist, kann der **@ignore_distributor** -Parameter auf **1** festgelegt werden, damit der Verleger/Verteiler gelöscht werden kann: Jedoch müssen verbleibende Veröffentlichungs- und Verteilungsobjekte manuell entfernt werden.  
+    > Wenn nicht alle Replikationsveröffentlichungs- und Verteilungsobjekte gelöscht wurden, bevor Sie [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) und [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)ausführen, geben diese Prozeduren einen Fehler zurück. Damit alle replikationsbezogenen Objekte gelöscht werden, wenn ein Verleger oder ein Verteiler gelöscht wird, muss der Parameter `@no_checks` auf **1** festgelegt werden. Wenn ein Verleger oder Verteiler offline oder nicht erreichbar ist, kann der Parameter `@ignore_distributor` auf **1** festgelegt werden, damit der Verleger/Verteiler gelöscht werden kann. Alle verbleibenden Veröffentlichungs- und Verteilungsobjekte müssen jedoch manuell entfernt werden.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Dieses Beispielskript entfernt Replikationsobjekte aus der Abonnementdatenbank.  

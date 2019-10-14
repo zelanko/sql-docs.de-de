@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 904ca2ccc3992ae6c4f03f03da8c70761ec5e907
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2e0407382f1a0986add69a4b47e9cbb2eebc4d34
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768400"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710741"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Anzeigen und Ändern von Replikationssicherheitseinstellungen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -252,10 +252,10 @@ ms.locfileid: "68768400"
   
 #### <a name="to-change-all-instances-of-a-stored-password-at-a-replication-server"></a>So ändern Sie alle Instanzen eines gespeicherten Kennworts auf einem Replikationsserver  
   
-1.  Führen Sie auf einem Server in einer Replikationstopologie für die Masterdatenbank [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)aus. Geben Sie das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Konto oder den [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen, dessen Kennwort geändert wird, für **@login** sowie das neue Kennwort für das Konto oder den Anmeldenamen für **@password** . Damit wird jede Instanz des Kennworts geändert, die von allen Agents auf dem Server beim Herstellen einer Verbindung mit anderen Servern in der Topologie verwendet wird.  
+1.  Führen Sie auf einem Server in einer Replikationstopologie für die Masterdatenbank [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)aus. Geben Sie das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Konto oder den [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldenamen, dessen Kennwort geändert wird, für `@login` sowie das neue Kennwort für das Konto oder den Anmeldenamen für `@password` an. Damit wird jede Instanz des Kennworts geändert, die von allen Agents auf dem Server beim Herstellen einer Verbindung mit anderen Servern in der Topologie verwendet wird.  
   
     > [!NOTE]  
-    >  Wenn nur der Anmeldename und das Kennwort für eine Verbindung mit einem bestimmten Server in der Topologie geändert werden soll (z. B. der Verteiler oder der Abonnent), geben Sie den Namen dieses Servers für **@server** .  
+    >  Wenn nur der Anmeldename und das Kennwort für eine Verbindung mit einem bestimmten Server in der Topologie geändert werden soll (z. B. der Verteiler oder der Abonnent), geben Sie den Namen dieses Servers für `@server` an.  
   
 2.  Wiederholen Sie Schritt 1 für jeden Server in der Replikationstopologie, für den das Kennwort aktualisiert werden muss.  
   
@@ -264,30 +264,30 @@ ms.locfileid: "68768400"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>So ändern Sie die Sicherheitseinstellungen für den Momentaufnahme-Agent  
   
-1.  Führen Sie [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)auf dem Verleger unter Angabe von **@publication** . Damit werden die aktuellen Sicherheitseinstellungen für den Momentaufnahme-Agent zurückgegeben.  
+1.  Führen Sie [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) auf dem Verleger unter Angabe von `@publication` aus. Damit werden die aktuellen Sicherheitseinstellungen für den Momentaufnahme-Agent zurückgegeben.  
   
-2.  Führen Sie [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)auf dem Verleger unter Angabe von **@publication** und einer oder mehrerer der folgenden zu ändernden Sicherheitseinstellungen aus:  
+2.  Führen Sie [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) auf dem Verleger unter Angabe von `@publication` und einer oder mehrerer der folgenden zu ändernden Sicherheitseinstellungen aus:  
   
-    -   Geben Sie **@job_login** und **@job_password** .  
+    -   Geben Sie `@job_login` und `@job_password` an, um das Windows-Konto, unter dem der Agent ausgeführt wird, oder auch nur das Kennwort für dieses Konto zu ändern.  
   
-    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird, geben Sie den Wert **1** oder **0** für **@publisher_security_mode** .  
+    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird, geben Sie den Wert **1** oder **0** für `@publisher_security_mode` an.  
   
-    -   Wenn Sie den beim Herstellen einer Verbindung mit dem Verleger verwendeten Sicherheitsmodus von **1** in **0** oder einen für diese Verbindung verwendeten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen ändern, geben Sie **@publisher_login** und **@publisher_password** .  
+    -   Wenn Sie den beim Herstellen einer Verbindung mit dem Verleger verwendeten Sicherheitsmodus von **1** in **0** oder einen für diese Verbindung verwendeten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen ändern, geben Sie `@publisher_login` und `@publisher_password` an.  
   
     > [!IMPORTANT]  
     >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>So ändern Sie die Sicherheitseinstellungen für den Protokolllese-Agent  
   
-1.  Führen Sie [sp_helplogreader_agent](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)auf dem Verleger unter Angabe von **@publisher** . Damit werden die aktuellen Sicherheitseinstellungen für den Protokolllese-Agent zurückgegeben.  
+1.  Führen Sie [sp_helplogreader_agent](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) auf dem Verleger unter Angabe von `@publisher` aus. Damit werden die aktuellen Sicherheitseinstellungen für den Protokolllese-Agent zurückgegeben.  
   
-2.  Führen Sie [sp_changelogreader_agent](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)auf dem Verleger unter Angabe von **@publication** und einer oder mehrerer der folgenden zu ändernden Sicherheitseinstellungen aus:  
+2.  Führen Sie [sp_changelogreader_agent](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) auf dem Verleger unter Angabe von `@publication` und einer oder mehrerer der folgenden zu ändernden Sicherheitseinstellungen aus:  
   
-    -   Geben Sie **@job_login** und **@job_password** .  
+    -   Geben Sie `@job_login` und `@job_password` an, um das Windows-Konto, unter dem der Agent ausgeführt wird, oder auch nur das Kennwort für dieses Konto zu ändern.  
   
-    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird, geben Sie den Wert **1** oder **0** für **@publisher_security_mode** .  
+    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird, geben Sie den Wert **1** oder **0** für `@publisher_security_mode` an.  
   
-    -   Wenn Sie den beim Herstellen einer Verbindung mit dem Verleger verwendeten Sicherheitsmodus von **1** in **0** oder einen für diese Verbindung verwendeten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen ändern, geben Sie **@publisher_login** und **@publisher_password** .  
+    -   Wenn Sie den beim Herstellen einer Verbindung mit dem Verleger verwendeten Sicherheitsmodus von **1** in **0** oder einen für diese Verbindung verwendeten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen ändern, geben Sie `@publisher_login` und `@publisher_password` an.  
   
     > [!NOTE]  
     >  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
@@ -297,17 +297,17 @@ ms.locfileid: "68768400"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>So ändern Sie die Sicherheitseinstellungen für den Verteilungs-Agent eines Pushabonnements  
   
-1.  Führen Sie [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)auf dem Verleger unter Angabe von **@publication** und **@subscriber** . Damit werden die Abonnementeigenschaften zurückgegeben, einschließlich der Sicherheitseinstellungen für den Verteilungs-Agent, der auf dem Verteiler ausgeführt wird.  
+1.  Führen Sie [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank unter Angabe von `@publication` und `@subscriber` aus. Damit werden die Abonnementeigenschaften zurückgegeben, einschließlich der Sicherheitseinstellungen für den Verteilungs-Agent, der auf dem Verteiler ausgeführt wird.  
   
-2.  Führen Sie [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)auf dem Verleger unter Angabe von **@publication** , **@subscriber** , **@subscriber_db** , den Wert **all** für **@article** , den Namen der Sicherheitseigenschaft für **@property** und den neuen Wert der Eigenschaft für **@value** .  
+2.  Führen Sie [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank unter Angabe von `@publication`, `@subscriber`, `@subscriber_db**`, den Wert `all` für `@article`, den Namen der Sicherheitseigenschaft für `@property` und den neuen Wert der Eigenschaft für `@value` aus.  
   
 3.  Wiederholen Sie Schritt 2 für jede der folgenden Sicherheitseigenschaften, die geändert wird:  
   
-    -   Geben Sie den Wert **distrib_job_password** für **@property** und ein neues Kennwort für **@value** . Wenn Sie das Konto ändern, wiederholen Sie Schritt 2, und geben Sie den Wert **distrib_job_login** für **@property** und das neue Windows-Konto für **@value** .  
+    -   Geben Sie den Wert **distrib_job_password** für `@property` und ein neues Kennwort für `@value` an, um das Windows-Konto, unter dem der Agent ausgeführt wird, oder auch nur das Kennwort für dieses Konto zu ändern. Wenn Sie das Konto ändern, wiederholen Sie Schritt 2, und geben Sie den Wert **distrib_job_login** für `@property` und das neue Windows-Konto für `@value` an.  
   
-    -   Um den zum Herstellen der Verbindung mit dem Abonnenten verwendeten Sicherheitsmodus zu ändern, geben Sie den Wert **subscriber_security_mode** für **@property** und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für **@value** .  
+    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Abonnenten verwendet wird, geben Sie den Wert **subscriber_security_mode** für `@property` und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für `@value` an.  
   
-    -   Wenn Sie den Sicherheitsmodus für den Abonnenten in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **subscriber_password** für **@property** und das neue Kennwort für **@value** . Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **subscriber_login** für **@property** und den neuen Anmeldenamen für **@value** .  
+    -   Wenn Sie den Sicherheitsmodus für den Abonnenten in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **subscriber_password** für `@property` und das neue Kennwort für `@value` an. Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **subscriber_login** für `@property` und den neuen Anmeldenamen für `@value` an.  
   
     > [!NOTE]  
     >  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
@@ -317,38 +317,38 @@ ms.locfileid: "68768400"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>So ändern Sie die Sicherheitseinstellungen für den Verteilungs-Agent eines Pullabonnements  
   
-1.  Führen Sie auf dem Abonnenten [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)auf dem Verleger unter Angabe von **@publication** . Damit werden die Abonnementeigenschaften zurückgegeben, einschließlich der Sicherheitseinstellungen für den Verteilungs-Agent, der auf dem Abonnenten ausgeführt wird.  
+1.  Führen Sie auf dem Abonnenten [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) unter Angabe von `@publication` aus. Damit werden die Abonnementeigenschaften zurückgegeben, einschließlich der Sicherheitseinstellungen für den Verteilungs-Agent, der auf dem Abonnenten ausgeführt wird.  
   
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)auf dem Verleger unter Angabe von **@publisher** , **@publisher_db** , **@publication** , den Namen der Sicherheitseigenschaft für **@property** und den neuen Wert der Eigenschaft für **@value** .  
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md) unter Angabe von `@publisher`, `@publisher_db`, `@publication`, den Namen der Sicherheitseigenschaft für `@property` und den neuen Wert der Eigenschaft für `@value` aus.  
   
 3.  Wiederholen Sie Schritt 2 für jede der folgenden Sicherheitseigenschaften, die geändert wird:  
   
-    -   Geben Sie den Wert **distrib_job_password** für **@property** und ein neues Kennwort für **@value** . Wenn Sie das Konto ändern, wiederholen Sie Schritt 2, und geben Sie den Wert **distrib_job_login** für **@property** und das neue Windows-Konto für **@value** .  
+    -   Geben Sie den Wert **distrib_job_password** für `@property` und ein neues Kennwort für `@value` an, um das Windows-Konto, unter dem der Agent ausgeführt wird, oder auch nur das Kennwort für dieses Konto zu ändern. Wenn Sie das Konto ändern, wiederholen Sie Schritt 2, und geben Sie den Wert **distrib_job_login** für `@property` und das neue Windows-Konto für `@value` an.  
   
-    -   Um den zum Herstellen der Verbindung mit dem Verteiler verwendeten Sicherheitsmodus zu ändern, geben Sie den Wert **distributor_security_mode** für **@property** und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für **@value** .  
+    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verteiler verwendet wird, geben Sie den Wert **distributor_security_mode** für `@property` und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für `@value` an.  
   
-    -   Wenn Sie den Sicherheitsmodus für den Verteiler in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **distributor_password** für **@property** und das neue Kennwort für **@value** . Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **distributor_login** für **@property** und den neuen Anmeldenamen für **@value** .  
+    -   Wenn Sie den Sicherheitsmodus für den Verteiler in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **distributor_password** für `@property` und das neue Kennwort für `@value` an. Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **distributor_login** für `@property` und den neuen Anmeldenamen für `@value` an.  
   
     > [!NOTE]  
     >  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>So ändern Sie die Sicherheitseinstellungen für den Merge-Agent eines Pushabonnements  
   
-1.  Führen Sie [sp_helpmergesubscription](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)auf dem Verleger unter Angabe von **@publication** , **@subscriber** und **@subscriber_db** . Damit werden die Abonnementeigenschaften zurückgegeben, einschließlich der Sicherheitseinstellungen für den Merge-Agent, der auf dem Verteiler ausgeführt wird.  
+1.  Führen Sie [sp_helpmergesubscription](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank unter Angabe von `@publication`, `@subscriber,` und `@subscriber_db` aus. Damit werden die Abonnementeigenschaften zurückgegeben, einschließlich der Sicherheitseinstellungen für den Merge-Agent, der auf dem Verteiler ausgeführt wird.  
   
-2.  Führen Sie [sp_changemergesubscription](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)auf dem Verleger unter Angabe von **@publication** , **@subscriber** , **@subscriber_db** , den Namen der Sicherheitseigenschaft für **@property** und den neuen Wert der Eigenschaft für **@value** .  
+2.  Führen Sie [sp_changemergesubscription](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank unter Angabe von `@publication`, `@subscriber`, `@subscriber_db`, den Namen der Sicherheitseigenschaft für `@property` und den neuen Wert der Eigenschaft für `@value` aus.  
   
 3.  Wiederholen Sie Schritt 2 für jede der folgenden Sicherheitseigenschaften, die geändert wird:  
   
-    -   Geben Sie den Wert **merge_job_password** für **@property** und ein neues Kennwort für **@value** . Wenn Sie das Konto ändern, wiederholen Sie Schritt 2, und geben Sie den Wert **merge_job_login** für **@property** und das neue Windows-Konto für **@value** .  
+    -   Geben Sie den Wert **merge_job_password** für `@property` und ein neues Kennwort für `@value` an, um das Windows-Konto, unter dem der Agent ausgeführt wird, oder auch nur das Kennwort für dieses Konto zu ändern. Wenn Sie das Konto ändern, wiederholen Sie Schritt 2, und geben Sie den Wert **merge_job_login** für `@property` und das neue Windows-Konto für `@value` an.  
   
-    -   Um den zum Herstellen der Verbindung mit dem Abonnenten verwendeten Sicherheitsmodus zu ändern, geben Sie den Wert **subscriber_security_mode** für **@property** und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für **@value** .  
+    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Abonnenten verwendet wird, geben Sie den Wert **subscriber_security_mode** für `@property` und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für `@value` an.  
   
-    -   Wenn Sie den Sicherheitsmodus für den Abonnenten in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **subscriber_password** für **@property** und das neue Kennwort für **@value** . Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **subscriber_login** für **@property** und den neuen Anmeldenamen für **@value** .  
+    -   Wenn Sie den Sicherheitsmodus für den Abonnenten in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **subscriber_password** für `@property` und das neue Kennwort für `@value` an. Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **subscriber_login** für `@property` und den neuen Anmeldenamen für `@value` an.  
   
-    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird, geben Sie den Wert **publisher_security_mode** für **@property** und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für **@value** .  
+    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird, geben Sie den Wert **publisher_security_mode** für `@property` und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für `@value` an.  
   
-    -   Wenn Sie den Sicherheitsmodus für den Verleger in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **publisher_password** für **@property** und das neue Kennwort für **@value** . Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **publisher_login** für **@property** und den neuen Anmeldenamen für **@value** .  
+    -   Wenn Sie den Sicherheitsmodus für den Verleger in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **publisher_password** für `@property` und das neue Kennwort für `@value` an. Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **publisher_login** für `@property` und den neuen Anmeldenamen für `@value` an.  
   
     > [!NOTE]  
     >  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
@@ -358,30 +358,30 @@ ms.locfileid: "68768400"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>So ändern Sie die Sicherheitseinstellungen für den Merge-Agent eines Pullabonnements  
   
-1.  Führen Sie auf dem Abonnenten [sp_helpmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)auf dem Verleger unter Angabe von **@publication** . Damit werden die Abonnementeigenschaften zurückgegeben, einschließlich der Sicherheitseinstellungen für den Merge-Agent, der auf dem Abonnenten ausgeführt wird.  
+1.  Führen Sie auf dem Abonnenten [sp_helpmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) unter Angabe von ``@publication`` aus. Damit werden die Abonnementeigenschaften zurückgegeben, einschließlich der Sicherheitseinstellungen für den Merge-Agent, der auf dem Abonnenten ausgeführt wird.  
   
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)auf dem Verleger unter Angabe von **@publisher** , **@publisher_db** , **@publication** , den Namen der Sicherheitseigenschaft für **@property** und den neuen Wert der Eigenschaft für **@value** .  
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md) unter Angabe von `@publisher`, `@publisher_db`, `@publication`, den Namen der Sicherheitseigenschaft für `@property` und den neuen Wert der Eigenschaft für `@value` aus.  
   
 3.  Wiederholen Sie Schritt 2 für jede der folgenden Sicherheitseigenschaften, die geändert wird:  
   
-    -   Geben Sie den Wert **merge_job_password** für **@property** und ein neues Kennwort für **@value** . When changing the account itself, repeat Step 2 specifying a value of **merge_job_login** für **@property** und das neue Windows-Konto für **@value** .  
+    -   Geben Sie den Wert **merge_job_password** für `@property` und ein neues Kennwort für `@value` an, um das Windows-Konto, unter dem der Agent ausgeführt wird, oder auch nur das Kennwort für dieses Konto zu ändern. Wenn Sie das Konto ändern, wiederholen Sie Schritt 2, und geben Sie den Wert **merge_job_login** für `@property` und das neue Windows-Konto für `@value` an.  
   
-    -   Um den zum Herstellen der Verbindung mit dem Verteiler verwendeten Sicherheitsmodus zu ändern, geben Sie den Wert **distributor_security_mode** für **@property** und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für **@value** .  
+    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verteiler verwendet wird, geben Sie den Wert **distributor_security_mode** für `@property` und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für `@value` an.  
   
-    -   Wenn Sie den Sicherheitsmodus für den Verteiler in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **distributor_password** für **@property** und das neue Kennwort für **@value** . Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **distributor_login** für **@property** und den neuen Anmeldenamen für **@value** .  
+    -   Wenn Sie den Sicherheitsmodus für den Verteiler in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **distributor_password** für `@property` und das neue Kennwort für `@value` an. Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **distributor_login** für `@property` und den neuen Anmeldenamen für `@value` an.  
   
-    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird, geben Sie den Wert **publisher_security_mode** für **@property** und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für **@value** .  
+    -   Zum Ändern des Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird, geben Sie den Wert **publisher_security_mode** für `@property` und den Wert **1** (integrierte Windows-Authentifizierung) oder **0** (SQL Server-Authentifizierung) für `@value` an.  
   
-    -   Wenn Sie den Sicherheitsmodus für den Verleger in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **publisher_password** für **@property** und das neue Kennwort für **@value** . Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **publisher_login** für **@property** und den neuen Anmeldenamen für **@value** .  
+    -   Wenn Sie den Sicherheitsmodus für den Verleger in die SQL Server-Authentifizierung oder die Anmeldeinformationen für die SQL Server-Authentifizierung ändern, geben Sie den Wert **publisher_password** für `@property` und das neue Kennwort für `@value` an. Wiederholen Sie Schritt 2, und geben Sie dabei den Wert **publisher_login** für `@property` und den neuen Anmeldenamen für `@value` an.  
   
     > [!NOTE]  
     >  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent-to-generate-a-filtered-snapshot-for-a-subscriber"></a>So ändern Sie die Sicherheitseinstellungen für den Momentaufnahme-Agent zum Generieren einer gefilterten Momentaufnahme für einen Abonnenten  
   
-1.  Führen Sie [sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)auf dem Verleger unter Angabe von **@publication** . Notieren Sie den Wert **job_name** im Resultset für die zu ändernde Partition des Abonnenten.  
+1.  Führen Sie [sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md) auf dem Verleger unter Angabe von `@publication` aus. Notieren Sie den Wert **job_name** im Resultset für die zu ändernde Partition des Abonnenten.  
   
-2.  Führen Sie [sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)auf dem Verleger unter Angabe von **@publication** , den in Schritt 1 abgerufenen Wert für **@dynamic_snapshot_jobname** und ein neues Kennwort für **@job_password** oder den Anmeldenamen und das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird, für **@job_login** und **@job_password** .  
+2.  Führen Sie [sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md) auf dem Verleger unter Angabe von `@publication`, den in Schritt 1 abgerufenen Wert für `dynamic_snapshot_jobname` und ein neues Kennwort für `@job_password` oder den Anmeldenamen und das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird, für `@job_login` und `@job_password` aus.  
   
     > [!IMPORTANT]  
     >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -390,7 +390,7 @@ ms.locfileid: "68768400"
   
 1.  Führen Sie auf dem Verteiler [sp_helpqreader_agent](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)aus. Damit wird das aktuelle Windows-Konto zurückgegeben, unter dem der Warteschlangenlese-Agent ausgeführt wird.  
   
-    -   Führen Sie auf dem Verteiler [sp_changeqreader_agent](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)aus, und geben Sie dabei die Einstellungen des Windows-Kontos für **@job_login** und **@job_passwsord** .  
+    -   Führen Sie auf dem Verteiler [sp_changeqreader_agent](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md) aus, und geben Sie dabei die Einstellungen des Windows-Kontos für `@job_login` und `@job_password` an.  
   
     > [!NOTE]  
     >  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten. Es gibt einen Warteschlangenlese-Agent für jede Verteilungsdatenbank. Wenn Sie die Sicherheitseinstellungen eines Agents ändern, wirkt sich dies auf alle Veröffentlichungen auf allen Verlegern aus, die diese Verteilungsdatenbank verwenden.  
@@ -399,9 +399,9 @@ ms.locfileid: "68768400"
   
 #### <a name="to-change-security-mode-used-by-an-immediate-updating-subscriber-when-connecting-to-the-publisher"></a>So ändern Sie den Sicherheitsmodus, der von einem Abonnenten mit sofortigem Update beim Herstellen einer Verbindung mit dem Verleger verwendet wird  
   
-1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)aus. Geben Sie **@publisher** , **@publication** , den Namen der Veröffentlichungsdatenbank für **@publisher_db** und einen der folgenden Werte für **@security_mode** an:  
+1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)aus. Geben Sie `@publisher`, `@publication`, den Namen der Veröffentlichungsdatenbank für `@publisher_db`und einen der folgenden Werte für `@security_mode`an:  
   
-    -   **0** zum Verwenden der SQL Server-Authentifizierung, wenn Updates beim Verleger vorgenommen werden. Diese Option erfordert auf dem Verleger die Angabe gültiger Anmeldeinformationen für **@login** und **@password** .  
+    -   **0** zum Verwenden der SQL Server-Authentifizierung, wenn Updates beim Verleger vorgenommen werden. Diese Option erfordert auf dem Verleger die Angabe gültiger Anmeldeinformationen für `@login` und `@password`.  
   
     -   **1** , um den Sicherheitskontext des Benutzers zu verwenden, der Änderungen am Abonnenten vornimmt, wenn eine Verbindung mit dem Verleger hergestellt wird. Weitere Informationen zu den in Verbindung mit diesem Sicherheitsmodus geltenden Beschränkungen finden Sie unter [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) .  
   
@@ -409,12 +409,12 @@ ms.locfileid: "68768400"
   
 #### <a name="to-change-the-password-for-a-remote-distributor"></a>So ändern Sie das Kennwort für einen Remoteverteiler  
   
-1.  Führen Sie auf dem Verteiler für die Verteilungsdatenbank [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)aus, und geben Sie dabei das neue Kennwort dieses Anmeldenamens für **@password** .  
+1.  Führen Sie auf dem Verteiler für die Verteilungsdatenbank [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) aus, und geben Sie dabei das neue Kennwort dieses Anmeldenamens für `@password` an.  
   
     > [!IMPORTANT]  
     >  Ändern Sie das Kennwort für **distributor_admin** nicht direkt.  
   
-2.  Führen Sie auf jedem Verteiler, der diesen Remoteverteiler verwendet, [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)aus, und geben Sie dabei das Kennwort aus Schritt 1 für **@password** .  
+2.  Führen Sie auf jedem Verteiler, der diesen Remoteverteiler verwendet, [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) aus, und geben Sie dabei das Kennwort aus Schritt 1 für `@password` an.  
   
 ##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
   

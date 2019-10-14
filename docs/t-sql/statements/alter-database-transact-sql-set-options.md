@@ -21,7 +21,7 @@ helpviewer_keywords:
 - offline database state [SQL Server]
 - snapshot isolation framework option
 - checksums [SQL Server]
-- Automatic Tuning
+- Automatic tuning
 - query plan regression correction
 - auto_create_statistics
 - auto_update_statistics
@@ -30,24 +30,24 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227178"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952756"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
-Legt Datenbankoptionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] fest. Informationen zu anderen ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Legt Datenbankoptionen in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] fest. Informationen zu anderen ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
 Klicken Sie auf eine der folgenden Registerkarten, um Syntax, Argumente, Hinweise, Berechtigungen und Beispiele für eine bestimmte SQL-Version anzuzeigen, mit der Sie arbeiten.
 
 Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Wählen Sie ein Produkt.
+## <a name="select-a-product"></a>Auswählen eines Produkts
 
-Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meisten interessiert. Mit nur einem Klick erhalten Sie auf dieser Webseite unterschiedliche Inhalte, die zu dem Produkt passen, das Sie ausgewählt haben.
+Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meisten interessiert. Dadurch werden Ihnen auf dieser Webseite unterschiedliche Inhalte angezeigt, die zu dem von Ihnen ausgewählten Produkt passen.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -63,7 +63,7 @@ Datenbankspiegelung, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] und Kompati
 Datenbankweit gültige Konfigurationen werden zum Festlegen mehrerer Datenbankkonfigurationen auf der Ebene einzelner Datenbanken verwendet. Weitere Informationen finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 > [!NOTE]
-> Viele DATABASE SET-Optionen können mithilfe von [SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md) konfiguriert werden; häufig werden sie bei der Verbindung von Anwendungen konfiguriert. Die **ALTER DATABASE SET**-Werte werden durch SET-Optionen auf Sitzungsebene überschrieben. Die unten beschriebenen Datenbankoptionen entsprechen Werten, die für Sitzungen festgelegt werden können, von denen explizit keine weiteren Werte für SET-Optionen bereitgestellt werden.
+> Viele DATABASE SET-Optionen können mithilfe von [SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md) für die aktuelle Sitzung konfiguriert werden; häufig werden sie bei der Verbindung von Anwendungen konfiguriert. Die **ALTER DATABASE SET**-Werte werden durch SET-Optionen auf Sitzungsebene überschrieben. Die in den folgenden Abschnitten beschriebenen Datenbankoptionen entsprechen Werten, die Sie für Sitzungen festlegen können, von denen explizit keine weiteren Werte für SET-Optionen bereitgestellt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -303,7 +303,7 @@ Führt die Aktion in der aktuellen Datenbank aus. `CURRENT` wird nicht in allen 
 **\<accelerated_database_recovery> ::=**         
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
-Aktiviert die [schnellere Datenbankwiederherstellung](../../relational-databases/accelerated-database-recovery-management.md) (Accelerated Database Recovery, ADR) für jede Datenbank. ADR ist in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] standardmäßig auf **OFF** festgelegt. Mit dieser Syntax können Sie optional eine bestimmte Dateigruppe für die Daten des persistenten Versionsspeichers festlegen. Wenn keine Dateigruppe angegeben wird, wird der PVS in der PRIMARY-Dateigruppe gespeichert. Beispiele und weitere Informationen finden Sie unter [Schnellere Datenbankwiederherstellung](../../relational-databases/accelerated-database-recovery-management.md).
+Aktiviert die [schnellere Datenbankwiederherstellung](../../relational-databases/accelerated-database-recovery-management.md) (Accelerated Database Recovery, ADR) für jede Datenbank. Die Standardeinstellung für ADR in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ist „OFF“. Mit dieser Syntax verfügen Sie über die Option, eine bestimmte Dateigruppe für die Daten des persistenten Versionsspeichers (PVS) festzulegen. Wenn keine Dateigruppe angegeben wird, wird der PVS in der PRIMARY-Dateigruppe gespeichert. Beispiele und weitere Informationen finden Sie unter [Schnellere Datenbankwiederherstellung](../../relational-databases/accelerated-database-recovery-management.md).
 
 **\<auto_option> ::=**        
 
@@ -313,7 +313,7 @@ Steuert automatische Optionen.
 ON        
 Die Datenbank wird ordnungsgemäß heruntergefahren, und ihre Ressourcen werden freigegeben, nachdem der letzte Benutzer die Anwendung beendet hat.
 
-Die Datenbank wird automatisch wieder geöffnet, wenn ein Benutzer versucht, die Datenbank erneut zu verwenden. Beispielsweise durch Ausgeben einer `USE database_name`-Anweisung. Die Datenbank kann mit auf ON festgelegtem AUTO_CLOSE ordnungsgemäß heruntergefahren werden. Ist dies der Fall, wird die Datenbank erst dann wieder geöffnet, wenn ein Benutzer versucht, die Datenbank beim nächsten Neustart von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verwenden.
+Die Datenbank wird automatisch wieder geöffnet, wenn ein Benutzer versucht, die Datenbank erneut zu verwenden. Dieses Verhalten (erneutes Öffnen) tritt auf, wenn ein Benutzer eine `USE database_name`-Anweisung ausgibt. Die Datenbank kann mit auf ON festgelegtem AUTO_CLOSE ordnungsgemäß heruntergefahren werden. Ist dies der Fall, wird die Datenbank erst dann wieder geöffnet, wenn ein Benutzer versucht, die Datenbank beim nächsten Neustart von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verwenden.
 
 OFF        
 Die Datenbank bleibt nach dem Beenden der Verwendung durch den letzten Benutzer geöffnet.
@@ -321,20 +321,20 @@ Die Datenbank bleibt nach dem Beenden der Verwendung durch den letzten Benutzer 
 Die Option AUTO_CLOSE ist sehr nützlich für Desktopdatenbanken, da mit ihrer Hilfe Datenbankdateien wie reguläre Dateien verwaltet werden können. Sie können verschoben, zur Sicherung kopiert oder sogar per E-Mail an andere Benutzer gesendet werden. AUTO_CLOSE ist ein asynchroner Prozess. Das wiederholte Öffnen und Schließen der Datenbank beeinträchtigt nicht die Leistung.
 
 > [!NOTE]
-> Die AUTO_CLOSE-Option ist in einer eigenständigen Datenbank oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nicht verfügbar.
+> Die AUTO_CLOSE-Option ist nicht in einer eigenständigen Datenbank oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verfügbar.
 > Sie können den Status dieser Option mithilfe der Spalte `is_auto_close_on` in der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) oder der `IsAutoClose`-Eigenschaft der [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion ermitteln.
 >
-> Ist AUTO_CLOSE auf ON festgelegt, geben einige Spalten in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht sowie die [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion den Wert NULL zurück, da die Datenbank nicht für den Abruf der Daten verfügbar ist. Führen Sie eine USE-Anwendung zum Öffnen der Datenbank aus, um dieses Problem zu beheben.
+> Ist AUTO_CLOSE auf ON festgelegt, geben einige Spalten in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht sowie die [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion den Wert NULL zurück, da die Datenbank nicht für den Abruf der Daten verfügbar ist. Führen Sie eine USE-Anweisung zum Öffnen der Datenbank aus, um dieses Problem zu beheben.
 >
 > Für die Datenbankspiegelung muss AUTO_CLOSE deaktiviert sein (OFF).
 
-Wenn die Datenbank auf AUTOCLOSE = ON festgelegt ist, wird mit einem Vorgang, bei dem das automatische Beenden der Datenbank initiiert wird, der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 oder höher enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll für jeden geleerten Cachespeicher im Plancache folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den "%2!s!"-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden.“ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Wenn die Datenbank auf AUTOCLOSE = ON festgelegt ist, wird mit einem Vorgang, bei dem das automatische Beenden der Datenbank initiiert wird, der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 oder höher enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll für jeden geleerten Cachespeicher im Plancache folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den Cachespeicher ‚%s‘ (Bestandteil des Plancache) ‚%d‘ Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden.“ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }        
 ON        
-Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten in Abfrageprädikaten, um Abfragepläne und die Abfrageleistung zu verbessern. Diese Statistiken für einzelne Spalten werden erstellt, wenn der Abfrageoptimierer Abfragen kompiliert. Die Statistiken für einzelne Spalten werden nur für Spalten erstellt, die noch nicht der ersten Spalte eines vorhandenen Statistikobjekts entsprechen.
+Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten in Abfrageprädikaten, um Abfragepläne sowie die Abfrageleistung zu verbessern. Diese Statistiken für einzelne Spalten werden erstellt, wenn der Abfrageoptimierer Abfragen kompiliert. Die Statistiken für einzelne Spalten werden nur für Spalten erstellt, die noch nicht der ersten Spalte eines vorhandenen Statistikobjekts entsprechen.
 
-Der Standardwert ist **ON**. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
+Die Standardeinstellung ist ON. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
 
 OFF        
 Der Abfrageoptimierer erstellt beim Kompilieren von Abfragen keine Statistiken für einzelne Spalten in Abfrageprädikaten. Das Festlegen dieser Option auf OFF kann zu suboptimalen Abfrageplänen und einer beeinträchtigten Abfrageleistung führen.
@@ -346,14 +346,14 @@ Weitere Informationen finden Sie im Abschnitt „Verwenden der datenbankweiten S
 INCREMENTAL = ON | **OFF**        
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Legen Sie AUTO_CREATE_STATISTICS auf ON und INCREMENTAL auf ON fest. Diese Einstellung erstellt automatisch Statistiken als inkrementell, wann immer inkrementelle Statistiken unterstützt werden. Der Standardwert ist **OFF**. Weitere Informationen finden Sie unter [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
+Legen Sie AUTO_CREATE_STATISTICS auf ON und INCREMENTAL auf ON fest. Dadurch werden automatisch erstellte Statistiken als inkrementell festgelegt, wenn inkrementelle Statistiken unterstützt werden. Der Standardwert ist OFF. Weitere Informationen finden Sie unter [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
 <a name="auto_shrink"></a> AUTO_SHRINK { ON | **OFF** } ON        
 Die Datenbankdateien sind Kandidaten für das periodische Verkleinern.
 
-Sowohl Daten- als auch Protokolldateien können automatisch verkleinert werden. AUTO_SHRINK reduziert die Größe des Transaktionsprotokolls nur, wenn Sie die Datenbank auf das SIMPLE-Wiederherstellungsmodell festlegen oder das Protokoll sichern. Ist diese Option auf OFF festgelegt, werden die Datenbankdateien während der periodisch ausgeführten Überprüfung auf nicht verwendeten Speicherplatz nicht automatisch verkleinert.
+Sowohl Daten- als auch Protokolldateien können automatisch verkleinert werden. AUTO_SHRINK reduziert die Größe des Transaktionsprotokolls nur, wenn Sie die Datenbank auf das SIMPLE-Wiederherstellungsmodell festlegen oder das Protokoll sichern. Wenn Sie AUTO_SHRINK auf OFF festlegen, werden die Datenbankdateien während der periodisch ausgeführten Überprüfung auf nicht verwendeten Speicherplatz nicht automatisch verkleinert.
 
-Durch die Option AUTO_SHRINK werden Dateien dann verkleinert, wenn mehr als 25 Prozent der Datei aus nicht verwendetem Speicherplatz bestehen. Die Option bewirkt, dass die Datei, auf eine von zwei Größen verkleinert wird. Sie wird auf den jeweils größeren Wert verkleinert:
+Die Option AUTO_SHRINK verkleinert eine Datei, wenn mehr als 25 Prozent dieser aus nicht verwendetem Speicherplatz bestehen. Die Datei wird auf eine von zwei Größen verkleinert (je nachdem, welche größer ist):
 
 - die Größe, bei der 25 Prozent der Datei aus nicht verwendetem Speicherplatz bestehen
 - die Größe der Datei, als sie erstellt wurde
@@ -372,11 +372,11 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte `is_auto_sh
 ON        
 Gibt an, dass der Abfrageoptimierer Statistiken aktualisiert, wenn sie von einer Abfrage verwendet werden und veraltet sein könnten. Statistiken sind veraltet, wenn die Datenverteilung in der Tabelle oder indizierten Sicht durch die Vorgänge INSERT, UPDATE, DELETE oder MERGE geändert wurde. Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, indem er die Anzahl von Datenänderungen seit der letzten Statistikaktualisierung ermittelt und sie mit einem Schwellenwert vergleicht. Der Schwellenwert basiert auf der Anzahl von Zeilen in der Tabelle oder indizierten Sicht.
 
-Bevor der Abfrageoptimierer eine Abfrage kompiliert und einen zwischengespeicherten Abfrageplan ausführt, sucht er nach veralteten Statistiken. Der Abfrageoptimierer ermittelt anhand der Spalten, Tabellen und indizierten Sichten im Abfrageprädikat, welche Statistiken veraltet sein könnten. Der Abfrageoptimierer ermittelt diese Informationen, bevor er eine Abfrage kompiliert. Vor dem Ausführen eines zwischengespeicherten Abfrageplans überprüft das [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ob der Abfrageplan auf aktuelle Statistiken verweist.
+Bevor der Abfrageoptimierer eine Abfrage kompiliert und einen zwischengespeicherten Abfrageplan ausführt, sucht er nach veralteten Statistiken. Der Abfrageoptimierer ermittelt anhand der Spalten, Tabellen und indizierten Sichten im Abfrageprädikat, welche Statistiken veraltet sein könnten. Der Abfrageoptimierer ermittelt diese Informationen, bevor er eine Abfrage kompiliert. Vor dem Ausführen eines zwischengespeicherten Abfrageplans stellt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] sicher, dass der Abfrageplan auf aktuelle Statistiken verweist.
 
 Die AUTO_UPDATE_STATISTICS-Option gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der CREATE STATISTICS-Anweisung generierte Statistiken erstellt wurden. Diese Option gilt auch für gefilterte Statistiken.
 
-Der Standardwert ist **ON**. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
+Der Standardwert ist ON. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
 
 Verwenden Sie die AUTO_UPDATE_STATISTICS_ASYNC-Option, um anzugeben, ob die Statistiken synchron oder asynchron aktualisiert werden.
 
@@ -389,14 +389,14 @@ Weitere Informationen finden Sie im Abschnitt „Verwenden der datenbankweiten S
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | **OFF** }        
 ON        
-Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option asynchron sind. Der Abfrageoptimierer wartet nicht, bis Statistikupdates abgeschlossen sind, bevor Abfragen kompiliert werden.
+Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option asynchron sind. Der Abfrageoptimierer wartet nicht, bis Statistikaktualisierungen abgeschlossen sind, bevor Abfragen kompiliert werden.
 
 Das Festlegen dieser Option auf ON hat nur dann Auswirkungen, wenn AUTO_UPDATE_STATISTICS auf ON festgelegt ist.
 
-Die AUTO_UPDATE_STATISTICS_ASYNC-Option ist standardmäßig auf **OFF** festgelegt, sodass der Abfrageoptimierer Statistiken synchron aktualisiert.
+Die Standardeinstellung der Option AUTO_UPDATE_STATISTICS_ASYNC ist „OFF“, und der Abfrageoptimierer aktualisiert Statistiken synchron.
 
 OFF        
-Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option asynchron sind. Der Abfrageoptimierer wartet, bis Statistikupdates abgeschlossen sind, bevor Abfragen kompiliert werden.
+Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option synchron sind. Der Abfrageoptimierer wartet, bis Statistikupdates abgeschlossen sind, bevor Abfragen kompiliert werden.
 
 > [!NOTE]
 > Das Festlegen dieser Option auf OFF hat nur dann Auswirkungen, wenn AUTO_UPDATE_STATISTICS auf ON festgelegt ist.
@@ -408,16 +408,16 @@ Weitere Informationen dazu, wann synchrone bzw. asynchrone Statistikupdates verw
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)])
 
-Aktiviert bzw. deaktiviert die Option `FORCE_LAST_GOOD_PLAN`automatische Optimierung[ für ](../../relational-databases/automatic-tuning/automatic-tuning.md).
+Aktiviert bzw. deaktiviert `FORCE_LAST_GOOD_PLAN`, die Option für [automatische Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
 FORCE_LAST_GOOD_PLAN = { ON | **OFF** }        
 ON        
 Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erzwingt automatisch den neusten bekannten, geeigneten Plan bei [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Abfragen, bei denen neue Abfragepläne negative Auswirkungen auf die Leistung haben. Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] überwacht regelmäßig die Abfrageleistung der [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Abfrage mit dem erzwungenen Plan.
 
-Wenn die Leistung verbessert wurde, verwendet die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] weiterhin den neusten bekannten, geeigneten Plan. Wenn die Leistung nicht verbessert wurde, erstellt die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] einen neuen Abfrageplan. Die Anweisung schlägt fehl, wenn der Abfragedatenspeicher nicht aktiviert ist oder sich im *Lesen/Schreiben*-Modus befindet.
+Wenn die Leistung verbessert wurde, verwendet die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] weiterhin den neusten bekannten, geeigneten Plan. Wenn die Leistung nicht verbessert wurde, erstellt die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] einen neuen Abfrageplan. Die Anweisung schlägt fehl, wenn der Abfragespeicher nicht aktiviert ist oder sich nicht im *Lese-/Schreibmodus* befindet.
 
 OFF        
-Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] meldet potentielle Einbußen im Hinblick auf die Abfrageleistung, die von Änderungen des Abfrageplans in der [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)-Sicht hervorgerufen werden könnten. Diese Empfehlungen werden allerdings nicht automatisch angewendet. Der Benutzer kann aktive Empfehlungen überwachen und ermittelte Probleme beheben, indem er die in der Sicht aufgeführten [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Skripts anwendet. Der Standardwert ist **OFF**.
+Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] meldet potentielle Einbußen im Hinblick auf die Abfrageleistung, die von Änderungen des Abfrageplans in der [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)-Sicht hervorgerufen werden könnten. Diese Empfehlungen werden allerdings nicht automatisch angewendet. Benutzer können aktive Empfehlungen überwachen und ermittelte Probleme beheben, indem sie die in der Sicht aufgeführten [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Skripts anwenden. Der Standardwert ist OFF.
 
 **\<change_tracking_option> ::=**         
 **Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
@@ -530,7 +530,7 @@ Kann verwendet werden, um einen zuvor angehaltenen Verschlüsselungsscan fortzus
 
 Weitere Informationen finden Sie unter [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) und [Transparent Data Encryption in Azure SQL-Datenbank](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
-Wenn die Verschlüsselung auf Datenbankebene aktiviert wird, werden alle Dateigruppen verschlüsselt. Alle neuen Dateigruppen erben die verschlüsselte Eigenschaft. Wenn Dateigruppen in der Datenbank als **READ ONLY** festgelegt sind, schlägt der Datenbankverschlüsselungsvorgang fehl.
+Wenn die Verschlüsselung auf Datenbankebene aktiviert wird, werden alle Dateigruppen verschlüsselt. Alle neuen Dateigruppen erben die verschlüsselte Eigenschaft. Wenn Dateigruppen in der Datenbank als READ ONLY festgelegt sind, tritt beim Datenbankverschlüsselungsvorgang ein Fehler auf.
 
 Sie können den sowohl den Verschlüsselungsstatus der Datenbank als auch den Status des Verschlüsselungsscans mithilfe der dynamischen Verwaltungssicht [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) anzeigen.
 
@@ -552,7 +552,7 @@ Erfordert die `ALTER DATABASE`-Berechtigung für die Betreffdatenbank, um eine D
 
 Sie können den Status dieser Option ermitteln, indem Sie die Spalten `state` und `state_desc` in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht untersuchen. Sie können den Status auch durch Untersuchen der `Status`-Eigenschaft der [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion bestimmen. Weitere Informationen finden Sie unter [Database States](../../relational-databases/databases/database-states.md).
 
-Eine Datenbank, die als RESTORING gekennzeichnet ist, kann nicht auf OFFLINE, ONLINE oder EMERGENCY festgelegt werden. Eine Datenbank kann den Status RESTORING aufweisen, während ein Wiederherstellungsvorgang aktiv ist oder wenn ein Wiederherstellungsvorgang einer Datenbank oder Protokolldatei aufgrund einer beschädigten Sicherungsdatei fehlschlägt.
+Für eine Datenbank, die als RESTORING gekennzeichnet ist, kann nicht OFFLINE, ONLINE oder EMERGENCY festgelegt werden. Eine Datenbank kann den Status RESTORING aufweisen, während ein Wiederherstellungsvorgang aktiv ist oder wenn ein Wiederherstellungsvorgang einer Datenbank oder Protokolldatei aufgrund einer beschädigten Sicherungsdatei fehlschlägt.
 
 **\<db_update_option> ::=**        
 
@@ -642,7 +642,7 @@ Datenbankmodule in einem Identitätswechselkontext können nicht auf Ressourcen 
 
 TRUSTWORTHY wird auf OFF festgelegt, wenn die Datenbank angefügt wird.
 
-Standardmäßig ist TRUSTWORTHY für alle Systemdatenbanken mit Ausnahme der msdb-Datenbank auf OFF festgelegt. Für die model-Datenbank und für die tempdb-Datenbank kann der Wert nicht geändert werden. Für die master-Datenbank sollten Sie die Option TRUSTWORTHY niemals auf ON festlegen.
+Standardmäßig ist TRUSTWORTHY für alle Systemdatenbanken mit Ausnahme der msdb-Datenbank auf OFF festgelegt. Der Wert kann für die „model“- und „tempdb“-Datenbanken nicht geändert werden. Für die master-Datenbank sollten Sie die Option TRUSTWORTHY niemals auf ON festlegen.
 
 Für das Festlegen dieser Option ist die `CONTROL SERVER`-Berechtigung für die Datenbank erforderlich.
 
@@ -711,7 +711,7 @@ Die Datenbank erstellt die ersten Seiten immer mit gleichartigen Blöcken. OFF i
 ON        
 Die Datenbank erstellt die ersten Seiten immer mit gemischten Blöcken.
 
-Diese Einstellung ist für alle Systemdatenbanken auf **ON** festgelegt. **tempdb** ist die einzige Systemdatenbank, die die OFF-Einstellung unterstützt.
+Diese Einstellung ist für alle Systemdatenbanken auf ON festgelegt. **tempdb** ist die einzige Systemdatenbank, die die OFF-Einstellung unterstützt.
 
 **\<PARAMETERIZATION_option> ::=**        
 
@@ -730,13 +730,13 @@ Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `is_parameteriza
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 ON | **OFF** | CLEAR [ ALL ]        
-Steuert, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers. Weitere Informationen finden Sie unter [Verwendungsszenarios für den Abfragespeicher](../../relational-databases/performance/query-store-usage-scenarios.md).
+Überprüft, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers. Weitere Informationen finden Sie unter [Verwendungsszenarios für den Abfragespeicher](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON        
 Aktiviert den Abfragespeicher.
 
 OFF        
-Deaktiviert den Abfragespeicher. **OFF** ist der Standardwert.
+Deaktiviert den Abfragespeicher. OFF ist der Standardwert.
 
 CLEAR        
 Entfernt den Inhalt des Abfragespeichers.
@@ -748,7 +748,7 @@ READ_WRITE
 In diesem Modus sammelt und speichert der Abfragespeicher Angaben zum Abfrageplan und statistische Informationen zur Laufzeitausführung.
 
 READ_ONLY        
-In diesem Modus können Informationen aus dem Abfragespeicher gelesen werden, es werden jedoch keine neuen Informationen hinzugefügt. Wenn der maximal ausgegebene Speicherplatz des Abfragespeichers ausgelastet ist, wird der Betriebsmodus in READ_ONLY geändert.
+Im diesem Modus können Informationen aus dem Abfragespeicher gelesen werden, es werden jedoch keine neuen Informationen hinzugefügt. Wenn der maximal ausgegebene Speicherplatz des Abfragespeichers ausgelastet ist, wird der Betriebsmodus in READ_ONLY geändert.
 
 CLEANUP_POLICY        
 Beschreibt die Datenaufbewahrungsrichtlinie des Abfragespeichers. STALE_QUERY_THRESHOLD_DAYS bestimmt die Anzahl an Tagen, für die die Informationen für eine Abfrage im Abfragespeicher aufbewahrt werden. STALE_QUERY_THRESHOLD_DAYS weist den Typ **bigint** auf.
@@ -759,6 +759,10 @@ Bestimmt die Häufigkeit, mit der in den Abfragespeicher geschriebene Daten auf 
 MAX_STORAGE_SIZE_MB        
 Bestimmt den Speicherplatz, der vom Abfragespeicher belegt wird. MAX_SIZE_MB weist den Typ **bigint** auf.
 
+> [!NOTE]
+> Die Begrenzung MAX_STORAGE_SIZE_MB wird nicht erzwungen. Die Speichergröße wird nur überprüft, wenn der Abfragespeicher Daten auf einen Datenträger schreibt. Dieses Intervall wird durch die Option DATA_FLUSH_INTERVAL_SECONDS oder die Option **Datenleerungsintervall** im Dialogfeld des [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]-Abfragespeichers festgelegt. Der Standardwert des Intervalls liegt bei 900 Sekunden (oder 15 Minuten).       
+> Wenn der Abfragespeicher die Begrenzung MAX_STORAGE_SIZE_MB zwischen Speichergrößenüberprüfungen überschritten hat, geht er in den schreibgeschützten Modus über. Bei Aktivierung von SIZE_BASED_CLEANUP_MODE wird auch der Bereinigungsmechanismus zum Erzwingen der Begrenzung MAX_STORAGE_SIZE_MB ausgelöst. 
+
 INTERVAL_LENGTH_MINUTES        
 Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitfenster aggregiert. Dieses feste Zeitfenster wird mit dem Argument INTERVAL_LENGTH_MINUTES konfiguriert. INTERVAL_LENGTH_MINUTES weist den Typ **bigint** auf.
 
@@ -766,7 +770,7 @@ SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }
 Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert.
 
 AUTO        
-Eine auf der Größe basierende Bereinigung wird automatisch aktiviert, wenn die Größe auf dem Datenträger 90 Prozent von **max_storage_size_mb** übersteigt. Ein auf der Größe basierendes Cleanup entfernt die am wenigsten aufwendigen und die ältesten Abfragen. Bei ungefähr 80 Prozent von **max_storage_size_mb** wird dieser Vorgang angehalten. Dieser Wert ist der Standardkonfigurationswert.
+Eine auf der Größe basierende Bereinigung wird automatisch aktiviert, wenn die Größe auf dem Datenträger 90 % von **MAX_STORAGE_SIZE_MB** erreicht. Ein auf der Größe basierendes Cleanup entfernt die am wenigsten aufwendigen und die ältesten Abfragen. Bei ungefähr 80 % von **MAX_STORAGE_SIZE_MB** wird dieser Vorgang angehalten. Dieser Wert ist der Standardkonfigurationswert.
 
 OFF        
 Eine auf der Größe basierte Bereinigung wird nicht automatisch aktiviert.
@@ -786,7 +790,7 @@ AUTO
 Relevante Abfragen werden anhand der Ausführungsanzahl und des Ressourcenverbrauchs erfasst. Dies ist der Standardkonfigurationswert für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Keine        
-Es werden keine weiteren neuen Abfragen erfasst. Der Abfragedatenspeicher sammelt weiterhin Statistiken zur Kompilierung und Runtime für Abfragen, die bereits erfasst wurden. Verwenden Sie diese Konfiguration mit Bedacht, da dadurch möglicherweise wichtige Abfragen verloren gehen.
+Es werden keine weiteren neuen Abfragen erfasst. Der Abfragespeicher sammelt weiterhin Statistiken zur Kompilierung und Runtime für Abfragen, die bereits erfasst wurden. Verwenden Sie diese Konfiguration mit Bedacht, da dadurch möglicherweise wichtige Abfragen verloren gehen.
 
 CUSTOM        
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
@@ -810,10 +814,10 @@ EXECUTION_COUNT
 Definiert die Häufigkeit, mit der eine Abfrage im Auswertungszeitraum ausgeführt wird. Der Standardwert ist 30, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage mindestens 30 Mal an einem Tag ausgeführt werden muss, um im Abfragespeicher persistent gespeichert zu werden. EXECUTION_COUNT ist vom Typ **int**.
 
 TOTAL_COMPILE_CPU_TIME_MS        
-Definiert die gesamte verstrichene Kompilierungs-CPU-Zeit, die eine Abfrage über den Auswertungszeitraum in Anspruch nimmt. Der Standardwert ist 1.000, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage insgesamt mindestens eine Sekunde CPU-Zeit während der Abfragekompilierung an einem Tag verbraucht haben muss, um im Abfragespeicher persistent gespeichert zu werden. TOTAL_COMPILE_CPU_TIME_MS ist vom Typ **int**.
+Definiert die gesamte verstrichene Kompilierungs-CPU-Zeit, die eine Abfrage über den Auswertungszeitraum in Anspruch nimmt. Der Standardwert ist 1000, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage insgesamt mindestens eine Sekunde CPU-Zeit während der Abfragekompilierung an einem Tag verbraucht haben muss, um im Abfragespeicher persistent gespeichert zu werden. TOTAL_COMPILE_CPU_TIME_MS ist vom Typ **int**.
 
 TOTAL_EXECUTION_CPU_TIME_MS        
-Definiert die gesamte verstrichene Ausführungs-CPU-Zeit, die eine Abfrage über den Auswertungszeitraum in Anspruch nimmt. Der Standardwert ist 100, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage insgesamt mindestens 100 ms CPU-Zeit während der Ausführung an einem Tag verbraucht haben muss, um im Abfragespeicher persistent gespeichert zu werden. TOTAL_EXECUTION_CPU_TIME_MS ist vom Typ **int**.
+Definiert die gesamte verstrichene Ausführungs-CPU-Zeit, die eine Abfrage über den Auswertungszeitraum in Anspruch nimmt. Der Standardwert ist 100, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage insgesamt mindestens 100 ms CPU-Zeit während der Ausführung an einem Tag verbraucht haben muss, um im Abfragespeicher persistent gespeichert zu werden. TOTAL_EXECUTION_CPU_TIME_MS ist vom Typ **int**.
 
 **\<recovery_option> ::=**         
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -872,7 +876,7 @@ Beachten Sie beim Verwenden der PAGE_VERIFY-Option die folgenden wichtigen Punkt
 - PAGE_VERIFY kann festgelegt werden, ohne die Datenbank offline zu schalten, zu sperren oder die Parallelität der Datenbank anderweitig zu beeinträchtigen.
 - CHECKSUM und TORN_PAGE_DETECTION schließen sich gegenseitig aus. Beide Optionen können nicht gleichzeitig aktiviert werden.
 
-Bei Entdecken einer zerrissenen Seite oder eines Prüfsummenfehlers können Sie eine Wiederherstellung ausführen, indem Sie die Daten wiederherstellen oder den Index u. U. neu erstellen, wenn der Fehler auf Indexseiten beschränkt ist. Führen Sie DBCC CHECKDB aus, um bei einem Prüfsummenfehler den Typ der betroffenen Datenbankseite(n) zu bestimmen. Weitere Informationen zu RESTORE-Optionen finden Sie unter [RESTORE-Argumente](../../t-sql/statements/restore-statements-arguments-transact-sql.md). Auch wenn das Datenbeschädigungsproblem durch das Wiederherstellen der Daten behoben wird, sollte die eigentliche Ursache, wie z.B. ein Datenträger-Hardwarefehler, diagnostiziert und baldmöglichst behoben werden, um wiederholte Fehler zu vermeiden.
+Bei Entdecken einer zerrissenen Seite oder eines Prüfsummenfehlers können Sie eine Wiederherstellung ausführen, indem Sie die Daten wiederherstellen oder den Index u.U. neu erstellen, wenn der Fehler auf Indexseiten beschränkt ist. Führen Sie DBCC CHECKDB aus, um bei einem Prüfsummenfehler den Typ der betroffenen Datenbankseite(n) zu bestimmen. Weitere Informationen zu RESTORE-Optionen finden Sie unter [RESTORE-Argumente](../../t-sql/statements/restore-statements-arguments-transact-sql.md). Auch wenn das Datenbeschädigungsproblem durch das Wiederherstellen der Daten behoben wird, sollte die eigentliche Ursache, wie z.B. ein Datenträger-Hardwarefehler, diagnostiziert und baldmöglichst behoben werden, um wiederholte Fehler zu vermeiden.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wiederholt Lesevorgänge, die wegen eines Prüfsummenfehlers, einer zerrissenen Seite oder eines anderen E/A-Fehlers fehlschlagen, vier Mal. Ist der Lesevorgang bei einem dieser Wiederholungsversuche erfolgreich, wird eine Meldung in das Fehlerprotokoll geschrieben. Der Befehl, der den Lesevorgang ausgelöst hat, wird fortgesetzt. Schlagen alle Wiederholungsversuche fehl, schlägt der Befehl mit Fehlermeldung 824 fehl.
 
@@ -960,7 +964,7 @@ Aktiviert die Momentaufnahmeoption auf Datenbankebene. Wenn die Option aktiviert
 OFF        
 Deaktiviert die Momentaufnahmeoption auf Datenbankebene. Transaktionen können die SNAPSHOT-Isolationsstufe für Transaktionen nicht angeben.
 
-Wenn Sie ALLOW_SNAPSHOT_ISOLATION auf einen neuen Status festlegen (von ON zu OFF oder von OFF zu ON), gibt ALTER DATABASE die Kontrolle erst dann an den Aufrufer zurück, wenn ein Commit aller bestehenden Transaktionen in der Datenbank ausgeführt wurde. Hat die Datenbank bereits den in der ALTER DATABASE-Anweisung angegebenen Status, wird die Kontrolle direkt an den Aufrufer zurückgegeben. Erfolgt keine schnelle Rückgabe durch die ALTER DATABASE-Anweisung, verwenden Sie [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md), um zu bestimmen, ob lang andauernde Transaktionen vorhanden sind. Wird die ALTER DATABASE-Anweisung abgebrochen, bleibt die Datenbank in dem Status, in dem sie sich vor dem Start von ALTER DATABASE befand. In der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht wird der Status von Isolationstransaktionen von Momentaufnahmen in der Datenbank angegeben. Ist **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, wird ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF für 6 Sekunden angehalten und der Vorgang anschließend wiederholt.
+Wenn Sie ALLOW_SNAPSHOT_ISOLATION auf einen neuen Status festlegen (von ON zu OFF oder von OFF zu ON), gibt ALTER DATABASE die Kontrolle erst dann an den Aufrufer zurück, wenn ein Commit aller bestehenden Transaktionen in der Datenbank ausgeführt wurde. Hat die Datenbank bereits den in der ALTER DATABASE-Anweisung angegebenen Status, wird die Kontrolle direkt an den Aufrufer zurückgegeben. Wenn keine schnelle Rückgabe durch die ALTER DATABASE-Anweisung erfolgt, verwenden Sie [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md), um zu bestimmen, ob lang andauernde Transaktionen vorhanden sind. Wird die ALTER DATABASE-Anweisung abgebrochen, bleibt die Datenbank in dem Status, in dem sie sich vor dem Start von ALTER DATABASE befand. In der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht wird der Status von Isolationstransaktionen von Momentaufnahmen in der Datenbank angegeben. Ist **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, wird ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF für 6 Sekunden angehalten und der Vorgang anschließend wiederholt.
 
 Sie können den Status von ALLOW_SNAPSHOT_ISOLATION nicht ändern, wenn die Datenbank OFFLINE ist.
 
@@ -974,12 +978,12 @@ Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `snapshot_isolat
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-Aktiviert die Option Read-Committed Snapshot auf Datenbankebene. Wenn die Option aktiviert ist, beginnen DML-Anweisungen mit der Generierung von Zeilenversionen, auch wenn keine Transaktion die Momentaufnahmeisolation verwendet. Sobald diese Option aktiviert ist, verwenden Transaktionen, die die Read Committed-Isolationsstufe angeben, anstelle von Sperren die Zeilenversionsverwaltung. Wenn eine Transaktion auf der Read Committed-Isolationsstufe ausgeführt wird, sehen alle Anweisungen eine Momentaufnahme der Daten, wie sie beim Start der Anweisung vorlagen.
+Aktiviert die Option Read-Committed Snapshot auf Datenbankebene. Wenn die Option aktiviert ist, beginnen DML-Anweisungen mit der Generierung von Zeilenversionen, auch wenn keine Transaktion die Momentaufnahmeisolation verwendet. Sobald diese Option aktiviert ist, verwenden Transaktionen, die die Read Committed-Isolationsstufe angeben, anstelle von Sperren die Zeilenversionsverwaltung. Wenn eine Transaktion auf der READ COMMITTED-Isolationsstufe ausgeführt wird, sehen alle Anweisungen eine Momentaufnahme der Daten, wie sie beim Start der Anweisung vorlagen.
 
 OFF        
 Deaktiviert die Option Read-Committed-Snapshot auf Datenbankebene. Transaktionen, die die READ COMMITTED-Isolationsstufe angeben, verwenden Sperren.
 
-Wenn READ_COMMITTED_SNAPSHOT auf ON oder OFF festgelegt werden soll, dürfen außer der Verbindung, die den ALTER DATABASE-Befehl ausführt, dürfen keine aktiven Verbindungen zur Datenbank bestehen. Die Datenbank muss sich jedoch nicht im Einzelbenutzermodus befinden. Sie können den Status dieser Option nicht ändern, wenn die Datenbank OFFLINE ist.
+Wenn READ_COMMITTED_SNAPSHOT auf ON oder OFF festgelegt werden soll, dürfen außer der Verbindung, die den ALTER DATABASE-Befehl ausführt, keine aktiven Verbindungen zur Datenbank bestehen. Die Datenbank muss sich jedoch nicht im Einzelbenutzermodus befinden. Sie können den Status dieser Option nicht ändern, wenn die Datenbank OFFLINE ist.
 
 Wenn Sie READ_COMMITTED_SNAPSHOT in einer READ_ONLY-Datenbank festlegen, wird die Einstellung beibehalten, wenn die Datenbank später auf READ_WRITE festgelegt wird.
 
@@ -1001,7 +1005,7 @@ Erhöht nicht die Isolationsstufe für Transaktionen für interpretierte [!INCLU
 
 Sie können den Status von MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT nicht ändern, wenn die Datenbank OFFLINE ist.
 
-Die Standardoption ist **OFF**.
+Die Standardoption ist OFF.
 
 Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `is_memory_optimized_elevate_to_snapshot_on` in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht ermittelt werden.
 
@@ -1009,7 +1013,7 @@ Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `is_memory_optim
 
 Steuert die ANSI-Kompatibilitätsoptionen auf der Datenbankebene.
 
-ANSI_NULL_DEFAULT { ON | **OFF** } Legt den Standardwert (NULL oder NOT NULL) einer Spalte oder [CLR user-defined type](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) fest, für den die NULL-Zulässigkeit nicht explizit in den CREATE TABLE- oder ALTER TABLE-Anweisungen festgelegt wurde. Spalten, die mit Einschränkungen definiert werden, folgen den Einschränkungsregeln, egal wie diese Einstellung lautet.
+ANSI_NULL_DEFAULT { ON | **OFF** } Legt den Standardwert (NULL oder NOT NULL) einer Spalte oder den [CLR-benutzerdefinierten Typ](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) fest, für den die NULL-Zulässigkeit nicht explizit in den CREATE TABLE- oder ALTER TABLE-Anweisungen festgelegt wurde. Spalten, die mit Einschränkungen definiert werden, folgen den Einschränkungsregeln, egal wie diese Einstellung lautet.
 
 ON        
 Der Standardwert für eine nicht definierte Spalte ist NULL.
@@ -1090,7 +1094,7 @@ Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad](../
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }        
 ON        
-Das Ergebnis einer Verkettungsoperation ist NULL, wenn einer der Operanden NULL ist. Wenn z. B. die Zeichenfolge "This is" und NULL verkettet wird, ist das Ergebnis NULL statt "This is".
+Das Ergebnis einer Verkettungsoperation ist NULL, wenn einer der Operanden NULL ist. Wenn z. B. die Zeichenfolge „This is“ und NULL verkettet werden und NULL den NULL-Wert anstelle des „This is“-Werts zurückgibt.
 
 OFF        
 Der Nullwert wird als leere Zeichenfolge behandelt.
@@ -1098,7 +1102,7 @@ Der Nullwert wird als leere Zeichenfolge behandelt.
 > [WICHTIG] CONCAT_NULL_YIELDS_NULL muss auf ON festgelegt sein, wenn Sie Indizes auf berechneten Spalten oder indizierten Sichten erstellen oder ändern.
 
 > [!IMPORTANT]
-> In einer späteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird CONCAT_NULL_YIELDS_NULL immer auf ON festgelegt, und jede Anwendung, für die die Option explizit auf OFF festgelegt wurde, löst einen Fehler aus. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.
+> In zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird CONCAT_NULL_YIELDS_NULL immer auf ON festgelegt, und jede Anwendung, die für die Option explizit OFF festlegt, löst einen Fehler aus. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.
 
 Einstellungen auf Verbindungsebene, die mithilfe der SET-Anweisung festgelegt werden, überschreiben die Standardeinstellung der Datenbank für CONCAT_NULL_YIELDS_NULL. ODBC- und OLE DB-Clients geben standardmäßig eine SET-Anweisung aus, durch die CONCAT_NULL_YIELDS_NULL für die Sitzung auf ON festgelegt wird, wenn sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Weitere Informationen finden Sie unter [SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).
 
@@ -1126,7 +1130,7 @@ ON
 Es wird ein Fehler generiert, wenn ein Genauigkeitsverlust in einem Ausdruck auftritt.
 
 OFF        
-Bei Genauigkeitsverlusten werden keine Fehlermeldungen generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert.
+Bei einem Genauigkeitsverlust wird keine Fehlermeldung generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert.
 
 > [!IMPORTANT]
 > NUMERIC_ROUNDABORT muss auf OFF festgelegt sein, wenn Sie Indizes auf berechneten Spalten oder indizierten Sichten erstellen oder ändern.
@@ -1179,7 +1183,7 @@ Gibt an, dass die Anforderung fehlschlägt, wenn diese Änderung des Datenbankst
 ## <a name="SettingOptions"></a> Festlegen von Optionen
 Verwenden Sie die [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht oder [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md), um die aktuellen Einstellungen für Datenbankoptionen abzurufen.
 
-Wenn Sie eine Datenbankoption festlegen, tritt die Änderung sofort in Kraft.
+Wenn Sie eine Datenbankoption festlegen, tritt die neue Einstellung sofort in Kraft.
 
 Sie können die Standardwerte einer Datenbankoption für alle neu erstellten Datenbanken ändern. Hierzu ändern Sie die entsprechende Datenbankoption in der Modelldatenbank.
 
@@ -1226,7 +1230,7 @@ Der Plancache wird auch in den folgenden Szenarios geleert.
 - Sie stellen eine Datenbanksicherung wieder her.
 - Sie trennen eine Datenbank.
 
-Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden geleerten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den "%2!s!"-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden.“. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden geleerten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den ‚%s‘-Cachespeicher (Bestandteil des Plancache) %d Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden“. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 ## <a name="examples"></a>Beispiele
 
@@ -1243,7 +1247,7 @@ GO
 ```
 
 ### <a name="b-setting-the-database-to-read_only"></a>B. Festlegen der Datenbank auf READ_ONLY
-Das Ändern des Status einer Datenbank oder Dateigruppe auf READ_ONLY oder READ_WRITE erfordert den exklusiven Zugriff auf die Datenbank. Im folgenden Beispiel wird die Datenbank auf den `SINGLE_USER`-Modus festgelegt, um exklusiven Zugriff zu erhalten. Anschließend wird in dem Beispiel der Status der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf `READ_ONLY` festgelegt und der Zugriff auf die Datenbank an alle Benutzer zurückgegeben.
+Für die Änderung des Status einer Datenbank oder Dateigruppe in READ_ONLY oder READ_WRITE wird der exklusive Zugriff auf die Datenbank benötigt. Im folgenden Beispiel wird die Datenbank auf den `SINGLE_USER`-Modus festgelegt, um exklusiven Zugriff zu erhalten. Anschließend wird in dem Beispiel der Status der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf `READ_ONLY` festgelegt und der Zugriff auf die Datenbank an alle Benutzer zurückgegeben.
 
 > [!NOTE]
 > In diesem Beispiel wird die Beendigungsoption `WITH ROLLBACK IMMEDIATE` in der ersten `ALTER DATABASE`-Anweisung verwendet. Für alle unvollständigen Transaktionen wird ein Rollback ausgeführt, und alle anderen Verbindungen zur [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank werden sofort getrennt.
@@ -1557,7 +1561,7 @@ Steuert automatische Optionen.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }        
 ON        
-Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten in Abfrageprädikaten, um Abfragepläne und die Abfrageleistung zu verbessern. Diese Statistiken für einzelne Spalten werden erstellt, wenn der Abfrageoptimierer Abfragen kompiliert. Die Statistiken für einzelne Spalten werden nur für Spalten erstellt, die noch nicht der ersten Spalte eines vorhandenen Statistikobjekts entsprechen.
+Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten in Abfrageprädikaten, um Abfragepläne sowie die Abfrageleistung zu verbessern. Diese Statistiken für einzelne Spalten werden erstellt, wenn der Abfrageoptimierer Abfragen kompiliert. Die Statistiken für einzelne Spalten werden nur für Spalten erstellt, die noch nicht der ersten Spalte eines vorhandenen Statistikobjekts entsprechen.
 
 Der Standardwert ist ON. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
 
@@ -1596,7 +1600,7 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte `is_auto_sh
 ON        
 Gibt an, dass der Abfrageoptimierer Statistiken aktualisiert, wenn sie von einer Abfrage verwendet werden und veraltet sein könnten. Statistiken sind veraltet, wenn die Datenverteilung in der Tabelle oder indizierten Sicht durch die Vorgänge INSERT, UPDATE, DELETE oder MERGE geändert wurde. Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, indem er die Anzahl von Datenänderungen seit der letzten Statistikaktualisierung ermittelt und sie mit einem Schwellenwert vergleicht. Der Schwellenwert basiert auf der Anzahl von Zeilen in der Tabelle oder indizierten Sicht.
 
-Bevor der Abfrageoptimierer eine Abfrage kompiliert und einen zwischengespeicherten Abfrageplan ausführt, sucht er nach veralteten Statistiken. Der Abfrageoptimierer ermittelt anhand der Spalten, Tabellen und indizierten Sichten im Abfrageprädikat, welche Statistiken veraltet sein könnten. Der Abfrageoptimierer ermittelt diese Informationen, bevor er eine Abfrage kompiliert. Vor dem Ausführen eines zwischengespeicherten Abfrageplans überprüft das [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ob der Abfrageplan auf aktuelle Statistiken verweist.
+Bevor der Abfrageoptimierer eine Abfrage kompiliert und einen zwischengespeicherten Abfrageplan ausführt, sucht er nach veralteten Statistiken. Der Abfrageoptimierer ermittelt anhand der Spalten, Tabellen und indizierten Sichten im Abfrageprädikat, welche Statistiken veraltet sein könnten. Der Abfrageoptimierer ermittelt diese Informationen, bevor er eine Abfrage kompiliert. Vor dem Ausführen eines zwischengespeicherten Abfrageplans stellt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] sicher, dass der Abfrageplan auf aktuelle Statistiken verweist.
 
 Die AUTO_UPDATE_STATISTICS-Option gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der CREATE STATISTICS-Anweisung generierte Statistiken erstellt wurden. Diese Option gilt auch für gefilterte Statistiken.
 
@@ -1613,14 +1617,14 @@ Weitere Informationen finden Sie im Abschnitt „Statistikoptionen“ unter [Sta
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | **OFF** }        
 ON        
-Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option asynchron sind. Der Abfrageoptimierer wartet nicht, bis Statistikupdates abgeschlossen sind, bevor Abfragen kompiliert werden.
+Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option asynchron sind. Der Abfrageoptimierer wartet nicht, bis Statistikaktualisierungen abgeschlossen sind, bevor Abfragen kompiliert werden.
 
 Das Festlegen dieser Option auf ON hat nur dann Auswirkungen, wenn AUTO_UPDATE_STATISTICS auf ON festgelegt ist.
 
 Die AUTO_UPDATE_STATISTICS_ASYNC-Option ist standardmäßig auf OFF festgelegt, sodass der Abfrageoptimierer Statistiken synchron aktualisiert.
 
 OFF        
-Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option asynchron sind. Der Abfrageoptimierer wartet, bis Statistikupdates abgeschlossen sind, bevor Abfragen kompiliert werden.
+Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option synchron sind. Der Abfrageoptimierer wartet, bis Statistikupdates abgeschlossen sind, bevor Abfragen kompiliert werden.
 
 Das Festlegen dieser Option auf OFF hat nur dann Auswirkungen, wenn AUTO_UPDATE_STATISTICS auf ON festgelegt ist.
 
@@ -1641,7 +1645,7 @@ INHERIT
 Durch das Verwenden des Werts INHERIT wird die Standardkonfiguration vom übergeordneten Server geerbt. Dies ist besonders nützlich, wenn Sie die Konfiguration für die automatische Optimierung auf einem übergeordneten Server anpassen möchten und alle Datenbanken auf dem Server diese benutzerdefinierten Einstellung erben sollen. Beachten Sie, dass die drei Optimierungsoptionen FORCE_LAST_GOOD_PLAN, CREATE_INDEX und DROP_INDEX auf diesen Datenbanken auf DEFAULT festgelegt sein müssen, damit die Vererbung funktioniert.
 
 CUSTOM        
-Durch das Verwenden des Werts CUSTOM müssen Sie die Optionen für die automatische Optimierung, die für die Datenbanken verfügbar sind, manuell konfigurieren.
+Durch das Verwenden des CUSTOM-Werts müssen Sie alle in den Datenbanken verfügbaren Optionen für die automatische Optimierung benutzerdefiniert konfigurieren.
 
 Aktiviert oder deaktiviert die automatische Indexverwaltungsoption `CREATE_INDEX` der [automatischen Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
@@ -1653,7 +1657,7 @@ ON
 Wenn diese Option aktiviert ist, werden fehlende Indizes automatisch für eine Datenbank generiert. Nach der Indexerstellung wird überprüft, ob sich die Leistung der Workload verbessert hat. Wenn ein erstellter Index die Workloadleistung nicht mehr verbessert, wird er automatisch zurückgesetzt. Automatische erstellte Indizes werden als systemgenerierte Indizes gekennzeichnet.
 
 OFF        
-Fehlende Indizes werden nicht automatisch für die Datenbank generiert.
+Fehlende Indizes werden nicht automatisch in der Datenbank generiert.
 
 Aktiviert oder deaktiviert die automatische Indexverwaltungsoption `DROP_INDEX` der [automatischen Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
@@ -1674,10 +1678,10 @@ DEFAULT
 Standardeinstellungen werden vom Server geerbt. In diesem Fall werden die Optionen für das Aktivieren oder Deaktivieren der einzelnen Features für die automatische Optimierung auf Serverebene definiert.
 
 ON        
-Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erzwingt automatisch den neusten bekannten, geeigneten Plan bei [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Abfragen, bei denen neue Abfragepläne negative Auswirkungen auf die Leistung haben. Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] überwacht regelmäßig die Abfrageleistung der [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Abfrage mit dem erzwungenen Plan. Wenn die Leistung verbessert wurde, verwendet die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] weiterhin den neusten bekannten, geeigneten Plan. Wenn die Leistung nicht verbessert wurde, erstellt die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] einen neuen Abfrageplan. Die Anweisung schlägt fehl, wenn der Abfragedatenspeicher nicht aktiviert ist oder sich im *Lesen/Schreiben*-Modus befindet.
+Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erzwingt automatisch den neusten bekannten, geeigneten Plan bei [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Abfragen, bei denen neue Abfragepläne negative Auswirkungen auf die Leistung haben. Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] überwacht regelmäßig die Abfrageleistung der [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Abfrage mit dem erzwungenen Plan. Wenn die Leistung verbessert wurde, verwendet die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] weiterhin den neusten bekannten, geeigneten Plan. Wenn die Leistung nicht verbessert wurde, erstellt die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] einen neuen Abfrageplan. Bei der Anweisung tritt ein Fehler auf, wenn der Abfragespeicher nicht aktiviert ist oder sich nicht im *Lese-/Schreibmodus* befindet.
 
 OFF        
-Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] meldet potentielle Einbußen im Hinblick auf die Abfrageleistung, die von Änderungen des Abfrageplans in der [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)-Sicht hervorgerufen werden könnten. Diese Empfehlungen werden allerdings nicht automatisch angewendet. Der Benutzer kann aktive Empfehlungen überwachen und ermittelte Probleme beheben, indem er die in der Sicht aufgeführten [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Skripts anwendet. Dies ist der Standardwert.
+Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] meldet potentielle Einbußen im Hinblick auf die Abfrageleistung, die von Änderungen des Abfrageplans in der [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)-Sicht hervorgerufen werden könnten. Diese Empfehlungen werden allerdings nicht automatisch angewendet. Benutzer können aktive Empfehlungen überwachen und ermittelte Probleme beheben, indem sie die in der Sicht aufgeführten [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Skripts anwenden. Dies ist der Standardwert.
 
 **\<change_tracking_option> ::=**        
 
@@ -1725,7 +1729,7 @@ Steuert den Status der Datenbankverschlüsselung.
 ENCRYPTION { ON | OFF }        
 Legt fest, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) werden soll. Weitere Informationen finden Sie unter [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) und [Transparent Data Encryption in Azure SQL-Datenbank](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
-Wenn die Verschlüsselung auf Datenbankebene aktiviert wird, werden alle Dateigruppen verschlüsselt. Alle neuen Dateigruppen erben die verschlüsselte Eigenschaft. Wenn Dateigruppen in der Datenbank als **READ ONLY** festgelegt sind, schlägt der Datenbankverschlüsselungsvorgang fehl.
+Wenn die Verschlüsselung auf Datenbankebene aktiviert wird, werden alle Dateigruppen verschlüsselt. Alle neuen Dateigruppen erben die verschlüsselte Eigenschaft. Wenn Dateigruppen in der Datenbank als READ ONLY festgelegt sind, tritt beim Datenbankverschlüsselungsvorgang ein Fehler auf.
 
 Der Verschlüsselungsstatus der Datenbank wird mit der dynamischen Verwaltungssicht [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) angezeigt.
 
@@ -1752,7 +1756,7 @@ Sie müssen über exklusiven Zugriff auf die Datenbank verfügen, um diesen Stat
 Steuert den Benutzerzugriff auf die Datenbank.
 
 RESTRICTED_USER        
-Ermöglicht nur Mitgliedern der festen Datenbankrolle `db_owner` und der festen Serverrollen `dbcreator` und `sysadmin` eine Verbindung mit der Datenbank, begrenzt jedoch nicht deren Anzahl. Alle Verbindungen zur Datenbank werden in dem durch die Beendigungsklausel der ALTER DATABASE-Anweisung angegebenen Zeitraum getrennt. Sobald die Datenbank in den Status RESTRICTED_USER gewechselt hat, werden Verbindungsversuche von nicht qualifizierten Benutzern abgelehnt. **RESTRICTED_USER** kann mit einer verwalteten SQL-Datenbank-Instanz nicht geändert werden.
+Ermöglicht nur Mitgliedern der festen Datenbankrolle `db_owner` und der festen Serverrollen `dbcreator` und `sysadmin` eine Verbindung mit der Datenbank, begrenzt jedoch nicht deren Anzahl. Alle Verbindungen zur Datenbank werden in dem durch die Beendigungsklausel der ALTER DATABASE-Anweisung angegebenen Zeitraum getrennt. Sobald die Datenbank in den Status RESTRICTED_USER gewechselt hat, werden Verbindungsversuche von nicht qualifizierten Benutzern abgelehnt. **RESTRICTED_USER** kann nicht mit einer verwalteten SQL-Datenbankinstanz geändert werden.
 
 MULTI_USER        
 Alle Benutzer, die über die entsprechenden Berechtigungen für die Verbindung mit der Datenbank verfügen, sind zugelassen.
@@ -1788,7 +1792,7 @@ Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `is_parameteriza
 **\<query_store_options> ::=**        
 
 ON | OFF | CLEAR [ ALL ]        
-Steuert, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers.
+Überprüft, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers.
 
 ON        
 Aktiviert den Abfragespeicher.
@@ -1815,13 +1819,13 @@ INTERVAL_LENGTH_MINUTES
 Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitfenster aggregiert. Dieses feste Zeitfenster wird mit dem Argument INTERVAL_LENGTH_MINUTES konfiguriert. INTERVAL_LENGTH_MINUTES weist den Typ **bigint** auf.
 
 SIZE_BASED_CLEANUP_MODE        
-Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert:
+Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert.
 
 OFF        
-Ein auf der Größe basiertes Cleanup wird nicht automatisch aktiviert.
+Eine auf der Größe basierte Bereinigung wird nicht automatisch aktiviert.
 
 AUTO        
-Ein auf der Größe basierendes Cleanup wird automatisch aktiviert, wenn die Größe auf dem Datenträger 90 Prozent von **max_storage_size_mb** übersteigt. Ein auf der Größe basierendes Cleanup entfernt die am wenigsten aufwendigen und die ältesten Abfragen. Bei ungefähr 80 Prozent von **max_storage_size_mb** wird dieser Vorgang angehalten. Dies ist der Standardkonfigurationswert.
+Eine auf der Größe basierende Bereinigung wird automatisch aktiviert, wenn die Größe auf dem Datenträger 90 Prozent von **max_storage_size_mb** übersteigt. Ein auf der Größe basierendes Cleanup entfernt die am wenigsten aufwendigen und die ältesten Abfragen. Bei ungefähr 80 Prozent von **max_storage_size_mb** wird dieser Vorgang angehalten. Dies ist der Standardkonfigurationswert.
 
 SIZE_BASED_CLEANUP_MODE ist vom Typ **nvarchar**.
 
@@ -1835,7 +1839,7 @@ AUTO
 Relevante Abfragen werden anhand der Ausführungsanzahl und des Ressourcenverbrauchs erfasst. Dies ist der Standardkonfigurationswert für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Keine        
-Es werden keine weiteren neuen Abfragen erfasst. Der Abfragedatenspeicher sammelt weiterhin Statistiken zur Kompilierung und Runtime für Abfragen, die bereits erfasst wurden. Verwenden Sie diese Konfiguration mit Bedacht, da dadurch möglicherweise wichtige Abfragen verloren gehen.
+Es werden keine weiteren neuen Abfragen erfasst. Der Abfragespeicher sammelt weiterhin Statistiken zur Kompilierung und Runtime für Abfragen, die bereits erfasst wurden. Verwenden Sie diese Konfiguration mit Bedacht, da dadurch möglicherweise wichtige Abfragen verloren gehen.
 
 QUERY_CAPTURE_MODE ist vom Typ **nvarchar**.
 
@@ -1853,7 +1857,7 @@ Aktiviert die Momentaufnahmeoption auf Datenbankebene. Wenn die Option aktiviert
 OFF        
 Deaktiviert die Momentaufnahmeoption auf Datenbankebene. Transaktionen können die SNAPSHOT-Isolationsstufe für Transaktionen nicht angeben.
 
-Wenn Sie ALLOW_SNAPSHOT_ISOLATION auf einen neuen Status festlegen (von ON zu OFF oder von OFF zu ON), gibt ALTER DATABASE die Kontrolle erst dann an den Aufrufer zurück, wenn ein Commit aller bestehenden Transaktionen in der Datenbank ausgeführt wurde. Hat die Datenbank bereits den in der ALTER DATABASE-Anweisung angegebenen Status, wird die Kontrolle direkt an den Aufrufer zurückgegeben. Erfolgt keine schnelle Rückgabe durch die ALTER DATABASE-Anweisung, verwenden Sie [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md), um zu bestimmen, ob lang andauernde Transaktionen vorhanden sind. Wird die ALTER DATABASE-Anweisung abgebrochen, bleibt die Datenbank in dem Status, in dem sie sich vor dem Start von ALTER DATABASE befand. In der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht wird der Status von Isolationstransaktionen von Momentaufnahmen in der Datenbank angegeben. Ist **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, wird ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF für 6 Sekunden angehalten und der Vorgang anschließend wiederholt.
+Wenn Sie ALLOW_SNAPSHOT_ISOLATION auf einen neuen Status festlegen (von ON zu OFF oder von OFF zu ON), gibt ALTER DATABASE die Kontrolle erst dann an den Aufrufer zurück, wenn ein Commit aller bestehenden Transaktionen in der Datenbank ausgeführt wurde. Hat die Datenbank bereits den in der ALTER DATABASE-Anweisung angegebenen Status, wird die Kontrolle direkt an den Aufrufer zurückgegeben. Wenn keine schnelle Rückgabe durch die ALTER DATABASE-Anweisung erfolgt, verwenden Sie [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md), um zu bestimmen, ob lang andauernde Transaktionen vorhanden sind. Wird die ALTER DATABASE-Anweisung abgebrochen, bleibt die Datenbank in dem Status, in dem sie sich vor dem Start von ALTER DATABASE befand. In der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht wird der Status von Isolationstransaktionen von Momentaufnahmen in der Datenbank angegeben. Ist **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, wird ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF für 6 Sekunden angehalten und der Vorgang anschließend wiederholt.
 
 Sie können den Status von ALLOW_SNAPSHOT_ISOLATION nicht ändern, wenn die Datenbank OFFLINE ist.
 
@@ -1867,12 +1871,12 @@ Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `snapshot_isolat
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-Aktiviert die Option Read-Committed Snapshot auf Datenbankebene. Wenn die Option aktiviert ist, beginnen DML-Anweisungen mit der Generierung von Zeilenversionen, auch wenn keine Transaktion die Momentaufnahmeisolation verwendet. Sobald diese Option aktiviert ist, verwenden Transaktionen, die die Read Committed-Isolationsstufe angeben, anstelle von Sperren die Zeilenversionsverwaltung. Wenn eine Transaktion auf der Read Committed-Isolationsstufe ausgeführt wird, sehen alle Anweisungen eine Momentaufnahme der Daten, wie sie beim Start der Anweisung vorlagen.
+Aktiviert die Option Read-Committed Snapshot auf Datenbankebene. Wenn die Option aktiviert ist, beginnen DML-Anweisungen mit der Generierung von Zeilenversionen, auch wenn keine Transaktion die Momentaufnahmeisolation verwendet. Sobald diese Option aktiviert ist, verwenden Transaktionen, die die READ COMMITTED-Isolationsstufe angeben, anstelle von Sperren die Zeilenversionsverwaltung. Wenn eine Transaktion auf der READ COMMITTED-Isolationsstufe ausgeführt wird, sehen alle Anweisungen eine Momentaufnahme der Daten, wie sie beim Start der Anweisung vorlagen.
 
 OFF        
 Deaktiviert die Option Read-Committed-Snapshot auf Datenbankebene. Transaktionen, die die READ COMMITTED-Isolationsstufe angeben, verwenden Sperren.
 
-Wenn READ_COMMITTED_SNAPSHOT auf ON oder OFF festgelegt werden soll, dürfen außer der Verbindung, die den ALTER DATABASE-Befehl ausführt, dürfen keine aktiven Verbindungen zur Datenbank bestehen. Die Datenbank muss sich jedoch nicht im Einzelbenutzermodus befinden. Sie können den Status dieser Option nicht ändern, wenn die Datenbank OFFLINE ist.
+Wenn READ_COMMITTED_SNAPSHOT auf ON oder OFF festgelegt werden soll, dürfen außer der Verbindung, die den ALTER DATABASE-Befehl ausführt, keine aktiven Verbindungen zur Datenbank bestehen. Die Datenbank muss sich jedoch nicht im Einzelbenutzermodus befinden. Sie können den Status dieser Option nicht ändern, wenn die Datenbank OFFLINE ist.
 
 Wenn Sie READ_COMMITTED_SNAPSHOT in einer READ_ONLY-Datenbank festlegen, wird die Einstellung beibehalten, wenn die Datenbank später auf READ_WRITE festgelegt wird.
 
@@ -2018,7 +2022,7 @@ ON
 Es wird ein Fehler generiert, wenn ein Genauigkeitsverlust in einem Ausdruck auftritt.
 
 OFF        
-Bei Genauigkeitsverlusten werden keine Fehlermeldungen generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert.
+Bei einem Genauigkeitsverlust wird keine Fehlermeldung generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert.
 
 > [!IMPORTANT]
 > NUMERIC_ROUNDABORT muss auf OFF festgelegt sein, wenn Sie Indizes auf berechneten Spalten oder indizierten Sichten erstellen oder ändern.
@@ -2070,7 +2074,7 @@ Gibt an, dass die Anforderung fehlschlägt, wenn diese Änderung des Datenbankst
 
 Verwenden Sie die [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht oder [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md), um die aktuellen Einstellungen für Datenbankoptionen abzurufen.
 
-Wenn Sie eine Datenbankoption festlegen, tritt die Änderung sofort in Kraft.
+Wenn Sie eine Datenbankoption festlegen, tritt die neue Einstellung sofort in Kraft.
 
 Sie können die Standardwerte einer Datenbankoption für alle neu erstellten Datenbanken ändern. Hierzu ändern Sie die entsprechende Datenbankoption in der Modelldatenbank.
 
@@ -2096,7 +2100,7 @@ Nicht alle Datenbankoptionen verwenden die WITH \<termination>-Klausel oder kön
 ## <a name="examples"></a>Beispiele
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. Festlegen der Datenbank auf READ_ONLY
-Das Ändern des Status einer Datenbank oder Dateigruppe auf READ_ONLY oder READ_WRITE erfordert den exklusiven Zugriff auf die Datenbank. Im folgenden Beispiel wird die Datenbank in den `RESTRICTED_USER`-Modus gesetzt, um eingeschränkten Zugriff zu erhalten. Anschließend wird in dem Beispiel der Status der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf `READ_ONLY` festgelegt und der Zugriff auf die Datenbank an alle Benutzer zurückgegeben.
+Für die Änderung des Status einer Datenbank oder Dateigruppe in READ_ONLY oder READ_WRITE wird der exklusive Zugriff auf die Datenbank benötigt. Im folgenden Beispiel wird die Datenbank in den `RESTRICTED_USER`-Modus gesetzt, um eingeschränkten Zugriff zu erhalten. Anschließend wird in dem Beispiel der Status der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf `READ_ONLY` festgelegt und der Zugriff auf die Datenbank an alle Benutzer zurückgegeben.
 
 ```sql
 USE master;
@@ -2335,9 +2339,9 @@ Steuert automatische Optionen.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }        
 ON        
-Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten in Abfrageprädikaten, um Abfragepläne und die Abfrageleistung zu verbessern. Diese Statistiken für einzelne Spalten werden erstellt, wenn der Abfrageoptimierer Abfragen kompiliert. Die Statistiken für einzelne Spalten werden nur für Spalten erstellt, die noch nicht der ersten Spalte eines vorhandenen Statistikobjekts entsprechen.
+Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten in Abfrageprädikaten, um Abfragepläne sowie die Abfrageleistung zu verbessern. Diese Statistiken für einzelne Spalten werden erstellt, wenn der Abfrageoptimierer Abfragen kompiliert. Die Statistiken für einzelne Spalten werden nur für Spalten erstellt, die noch nicht der ersten Spalte eines vorhandenen Statistikobjekts entsprechen.
 
-Der Standardwert ist **ON**. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
+Der Standardwert ist ON. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
 
 OFF        
 Der Abfrageoptimierer erstellt beim Kompilieren von Abfragen keine Statistiken für einzelne Spalten in Abfrageprädikaten. Das Festlegen dieser Option auf OFF kann zu suboptimalen Abfrageplänen und einer beeinträchtigten Abfrageleistung führen.
@@ -2374,7 +2378,7 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte `is_auto_sh
 ON        
 Gibt an, dass der Abfrageoptimierer Statistiken aktualisiert, wenn sie von einer Abfrage verwendet werden und veraltet sein könnten. Statistiken sind veraltet, wenn die Datenverteilung in der Tabelle oder indizierten Sicht durch die Vorgänge INSERT, UPDATE, DELETE oder MERGE geändert wurde. Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, indem er die Anzahl von Datenänderungen seit der letzten Statistikaktualisierung ermittelt und sie mit einem Schwellenwert vergleicht. Der Schwellenwert basiert auf der Anzahl von Zeilen in der Tabelle oder indizierten Sicht.
 
-Bevor der Abfrageoptimierer eine Abfrage kompiliert und einen zwischengespeicherten Abfrageplan ausführt, sucht er nach veralteten Statistiken. Der Abfrageoptimierer ermittelt anhand der Spalten, Tabellen und indizierten Sichten im Abfrageprädikat, welche Statistiken veraltet sein könnten. Der Abfrageoptimierer ermittelt diese Informationen, bevor er eine Abfrage kompiliert. Vor dem Ausführen eines zwischengespeicherten Abfrageplans überprüft das [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ob der Abfrageplan auf aktuelle Statistiken verweist.
+Bevor der Abfrageoptimierer eine Abfrage kompiliert und einen zwischengespeicherten Abfrageplan ausführt, sucht er nach veralteten Statistiken. Der Abfrageoptimierer ermittelt anhand der Spalten, Tabellen und indizierten Sichten im Abfrageprädikat, welche Statistiken veraltet sein könnten. Der Abfrageoptimierer ermittelt diese Informationen, bevor er eine Abfrage kompiliert. Vor dem Ausführen eines zwischengespeicherten Abfrageplans stellt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] sicher, dass der Abfrageplan auf aktuelle Statistiken verweist.
 
 Die AUTO_UPDATE_STATISTICS-Option gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der CREATE STATISTICS-Anweisung generierte Statistiken erstellt wurden. Diese Option gilt auch für gefilterte Statistiken.
 
@@ -2391,14 +2395,14 @@ Weitere Informationen finden Sie im Abschnitt „Verwenden der datenbankweiten S
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | **OFF** }        
 ON        
-Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option asynchron sind. Der Abfrageoptimierer wartet nicht, bis Statistikupdates abgeschlossen sind, bevor Abfragen kompiliert werden.
+Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option asynchron sind. Der Abfrageoptimierer wartet nicht, bis Statistikaktualisierungen abgeschlossen sind, bevor Abfragen kompiliert werden.
 
 Das Festlegen dieser Option auf ON hat nur dann Auswirkungen, wenn AUTO_UPDATE_STATISTICS auf ON festgelegt ist.
 
 Die AUTO_UPDATE_STATISTICS_ASYNC-Option ist standardmäßig auf OFF festgelegt, sodass der Abfrageoptimierer Statistiken synchron aktualisiert.
 
 OFF        
-Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option asynchron sind. Der Abfrageoptimierer wartet, bis Statistikupdates abgeschlossen sind, bevor Abfragen kompiliert werden.
+Gibt an, dass Statistikupdates für die AUTO_UPDATE_STATISTICS-Option synchron sind. Der Abfrageoptimierer wartet, bis Statistikupdates abgeschlossen sind, bevor Abfragen kompiliert werden.
 
 Das Festlegen dieser Option auf OFF hat nur dann Auswirkungen, wenn AUTO_UPDATE_STATISTICS auf ON festgelegt ist.
 
@@ -2409,14 +2413,14 @@ Weitere Informationen dazu, wann synchrone bzw. asynchrone Statistikupdates verw
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **Gilt für:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-Aktiviert bzw. deaktiviert die Option `FORCE_LAST_GOOD_PLAN`automatische Optimierung[ für ](../../relational-databases/automatic-tuning/automatic-tuning.md).
+Aktiviert bzw. deaktiviert `FORCE_LAST_GOOD_PLAN`, die Option für [automatische Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
 FORCE_LAST_GOOD_PLAN = { ON | **OFF** }        
 ON        
-Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erzwingt automatisch den neusten bekannten, geeigneten Plan bei [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Abfragen, bei denen neue Abfragepläne negative Auswirkungen auf die Leistung haben. Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] überwacht regelmäßig die Abfrageleistung der [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Abfrage mit dem erzwungenen Plan. Wenn die Leistung verbessert wurde, verwendet die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] weiterhin den neusten bekannten, geeigneten Plan. Wenn die Leistung nicht verbessert wurde, erstellt die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] einen neuen Abfrageplan. Die Anweisung schlägt fehl, wenn der Abfragedatenspeicher nicht aktiviert ist oder sich im *Lesen/Schreiben*-Modus befindet.
+Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erzwingt automatisch den neusten bekannten, geeigneten Plan bei [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Abfragen, bei denen neue Abfragepläne negative Auswirkungen auf die Leistung haben. Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] überwacht regelmäßig die Abfrageleistung der [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Abfrage mit dem erzwungenen Plan. Wenn die Leistung verbessert wurde, verwendet die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] weiterhin den neusten bekannten, geeigneten Plan. Wenn die Leistung nicht verbessert wurde, erstellt die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] einen neuen Abfrageplan. Bei der Anweisung tritt ein Fehler auf, wenn der Abfragespeicher nicht aktiviert ist oder sich nicht im *Lese-/Schreibmodus* befindet.
 
 OFF        
-Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] meldet potentielle Einbußen im Hinblick auf die Abfrageleistung, die von Änderungen des Abfrageplans in der [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)-Sicht hervorgerufen werden könnten. Diese Empfehlungen werden allerdings nicht automatisch angewendet. Der Benutzer kann aktive Empfehlungen überwachen und ermittelte Probleme beheben, indem er die in der Sicht aufgeführten [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Skripts anwendet. Dies ist der Standardwert.
+Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] meldet potentielle Einbußen im Hinblick auf die Abfrageleistung, die von Änderungen des Abfrageplans in der [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)-Sicht hervorgerufen werden könnten. Diese Empfehlungen werden allerdings nicht automatisch angewendet. Benutzer können aktive Empfehlungen überwachen und ermittelte Probleme beheben, indem sie die in der Sicht aufgeführten [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Skripts anwenden. Dies ist der Standardwert.
 
 **\<change_tracking_option> ::=**        
 
@@ -2464,7 +2468,7 @@ Steuert den Status der Datenbankverschlüsselung.
 ENCRYPTION { ON | **OFF** }        
 Legt fest, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) werden soll. Weitere Informationen finden Sie unter [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) und [Transparent Data Encryption in Azure SQL-Datenbank](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
-Wenn die Verschlüsselung auf Datenbankebene aktiviert wird, werden alle Dateigruppen verschlüsselt. Alle neuen Dateigruppen erben die verschlüsselte Eigenschaft. Wenn Dateigruppen in der Datenbank als **READ ONLY** festgelegt sind, schlägt der Datenbankverschlüsselungsvorgang fehl.
+Wenn die Verschlüsselung auf Datenbankebene aktiviert wird, werden alle Dateigruppen verschlüsselt. Alle neuen Dateigruppen erben die verschlüsselte Eigenschaft. Wenn Dateigruppen in der Datenbank als READ ONLY festgelegt sind, tritt beim Datenbankverschlüsselungsvorgang ein Fehler auf.
 
 Der Verschlüsselungsstatus der Datenbank wird mit der dynamischen Verwaltungssicht [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) angezeigt.
 
@@ -2488,7 +2492,7 @@ Sie müssen über exklusiven Zugriff auf die Datenbank verfügen, um diesen Stat
 Steuert den Benutzerzugriff auf die Datenbank.
 
 RESTRICTED_USER        
-Ermöglicht nur Mitgliedern der festen Datenbankrolle `db_owner` und der festen Serverrollen `dbcreator` und `sysadmin` eine Verbindung mit der Datenbank, begrenzt jedoch nicht deren Anzahl. Alle Verbindungen zur Datenbank werden in dem durch die Beendigungsklausel der ALTER DATABASE-Anweisung angegebenen Zeitraum getrennt. Sobald die Datenbank in den Status RESTRICTED_USER gewechselt hat, werden Verbindungsversuche von nicht qualifizierten Benutzern abgelehnt. **RESTRICTED_USER** kann mit einer verwalteten SQL-Datenbank-Instanz nicht geändert werden.
+Ermöglicht nur Mitgliedern der festen Datenbankrolle `db_owner` und der festen Serverrollen `dbcreator` und `sysadmin` eine Verbindung mit der Datenbank, begrenzt jedoch nicht deren Anzahl. Alle Verbindungen zur Datenbank werden in dem durch die Beendigungsklausel der ALTER DATABASE-Anweisung angegebenen Zeitraum getrennt. Sobald die Datenbank in den Status RESTRICTED_USER gewechselt hat, werden Verbindungsversuche von nicht qualifizierten Benutzern abgelehnt. **RESTRICTED_USER** kann nicht mit einer verwalteten SQL-Datenbankinstanz geändert werden.
 
 MULTI_USER        
 Alle Benutzer, die über die entsprechenden Berechtigungen für die Verbindung mit der Datenbank verfügen, sind zugelassen.
@@ -2523,7 +2527,7 @@ Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `is_parameteriza
 **\<query_store_options> ::=**        
 
 ON | OFF | CLEAR [ ALL ]        
-Steuert, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers.
+Überprüft, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers.
 
 ON        
 Aktiviert den Abfragespeicher.
@@ -2550,13 +2554,13 @@ INTERVAL_LENGTH_MINUTES
 Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitfenster aggregiert. Dieses feste Zeitfenster wird mit dem Argument INTERVAL_LENGTH_MINUTES konfiguriert. INTERVAL_LENGTH_MINUTES weist den Typ **bigint** auf.
 
 SIZE_BASED_CLEANUP_MODE        
-Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert:
+Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert.
 
 OFF        
-Ein auf der Größe basiertes Cleanup wird nicht automatisch aktiviert.
+Eine auf der Größe basierte Bereinigung wird nicht automatisch aktiviert.
 
 AUTO        
-Ein auf der Größe basierendes Cleanup wird automatisch aktiviert, wenn die Größe auf dem Datenträger 90 Prozent von **max_storage_size_mb** übersteigt. Ein auf der Größe basierendes Cleanup entfernt die am wenigsten aufwendigen und die ältesten Abfragen. Bei ungefähr 80 Prozent von **max_storage_size_mb** wird dieser Vorgang angehalten. Dies ist der Standardkonfigurationswert.
+Eine auf der Größe basierende Bereinigung wird automatisch aktiviert, wenn die Größe auf dem Datenträger 90 Prozent von **max_storage_size_mb** übersteigt. Ein auf der Größe basierendes Cleanup entfernt die am wenigsten aufwendigen und die ältesten Abfragen. Bei ungefähr 80 Prozent von **max_storage_size_mb** wird dieser Vorgang angehalten. Dies ist der Standardkonfigurationswert.
 
 SIZE_BASED_CLEANUP_MODE ist vom Typ **nvarchar**.
 
@@ -2570,7 +2574,7 @@ AUTO
 Relevante Abfragen werden anhand der Ausführungsanzahl und des Ressourcenverbrauchs erfasst. Dies ist der Standardkonfigurationswert für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Keine        
-Es werden keine weiteren neuen Abfragen erfasst. Der Abfragedatenspeicher sammelt weiterhin Statistiken zur Kompilierung und Runtime für Abfragen, die bereits erfasst wurden. Verwenden Sie diese Konfiguration mit Bedacht, da dadurch möglicherweise wichtige Abfragen verloren gehen.
+Es werden keine weiteren neuen Abfragen erfasst. Der Abfragespeicher sammelt weiterhin Statistiken zur Kompilierung und Runtime für Abfragen, die bereits erfasst wurden. Verwenden Sie diese Konfiguration mit Bedacht, da dadurch möglicherweise wichtige Abfragen verloren gehen.
 
 QUERY_CAPTURE_MODE ist vom Typ **nvarchar**.
 
@@ -2583,12 +2587,12 @@ Bestimmt die Isolationsstufe für Transaktionen.
 
 ALLOW_SNAPSHOT_ISOLATION { ON | OFF }        
 ON        
-Aktiviert die Momentaufnahmeoption auf Datenbankebene. Wenn die Option aktiviert ist, beginnen DML-Anweisungen mit der Generierung von Zeilenversionen, auch wenn keine Transaktion die Momentaufnahmeisolation verwendet. Sobald diese Option aktiviert ist, können Transaktionen die SNAPSHOT-Transaktionsisolationsstufe angeben. Wenn eine Transaktion auf der SNAPSHOT-Isolationsebene ausgeführt wird, sehen alle Anweisungen eine Momentaufnahme der Daten, wie sie beim Start der Transaktion vorlagen. Greift eine Transaktion, die auf der SNAPSHOT-Isolationsstufe ausgeführt wird, auf Daten in mehreren Datenbanken zu, muss entweder in allen Datenbanken ALLOW_SNAPSHOT_ISOLATION auf ON festgelegt sein oder jede Anweisung in der Transaktion muss Sperrhinweise für alle Verweise in einer FROM-Klausel verwenden, die auf eine Tabelle in einer Datenbank verweisen, bei der ALLOW_SNAPSHOT_ISOLATION auf OFF festgelegt ist.
+Aktiviert die Momentaufnahmeoption auf Datenbankebene. Wenn die Option aktiviert ist, beginnen DML-Anweisungen mit der Generierung von Zeilenversionen, auch wenn keine Transaktion die Momentaufnahmeisolation verwendet. Nachdem diese Option aktiviert wurde, können Transaktionen die SNAPSHOT-Transaktionsisolationsstufe angeben. Wenn eine Transaktion auf der SNAPSHOT-Isolationsebene ausgeführt wird, sehen alle Anweisungen eine Momentaufnahme der Daten, wie sie beim Start der Transaktion vorlagen. Greift eine Transaktion, die auf der SNAPSHOT-Isolationsstufe ausgeführt wird, auf Daten in mehreren Datenbanken zu, muss entweder in allen Datenbanken ALLOW_SNAPSHOT_ISOLATION auf ON festgelegt sein oder jede Anweisung in der Transaktion muss Sperrhinweise für alle Verweise in einer FROM-Klausel verwenden, die auf eine Tabelle in einer Datenbank verweisen, bei der ALLOW_SNAPSHOT_ISOLATION auf OFF festgelegt ist.
 
 OFF        
 Deaktiviert die Momentaufnahmeoption auf Datenbankebene. Transaktionen können die SNAPSHOT-Isolationsstufe für Transaktionen nicht angeben.
 
-Wenn Sie ALLOW_SNAPSHOT_ISOLATION auf einen neuen Status festlegen (von ON zu OFF oder von OFF zu ON), gibt ALTER DATABASE die Kontrolle erst dann an den Aufrufer zurück, wenn ein Commit aller bestehenden Transaktionen in der Datenbank ausgeführt wurde. Hat die Datenbank bereits den in der ALTER DATABASE-Anweisung angegebenen Status, wird die Kontrolle direkt an den Aufrufer zurückgegeben. Erfolgt keine schnelle Rückgabe durch die ALTER DATABASE-Anweisung, verwenden Sie [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md), um zu bestimmen, ob lang andauernde Transaktionen vorhanden sind. Wird die ALTER DATABASE-Anweisung abgebrochen, bleibt die Datenbank in dem Status, in dem sie sich vor dem Start von ALTER DATABASE befand. In der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht wird der Status von Isolationstransaktionen von Momentaufnahmen in der Datenbank angegeben. Ist **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, wird ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF für 6 Sekunden angehalten und der Vorgang anschließend wiederholt.
+Wenn Sie ALLOW_SNAPSHOT_ISOLATION auf einen neuen Status festlegen (von ON zu OFF oder von OFF zu ON), gibt ALTER DATABASE die Kontrolle erst dann an den Aufrufer zurück, wenn ein Commit aller bestehenden Transaktionen in der Datenbank ausgeführt wurde. Hat die Datenbank bereits den in der ALTER DATABASE-Anweisung angegebenen Status, wird die Kontrolle direkt an den Aufrufer zurückgegeben. Wenn keine schnelle Rückgabe durch die ALTER DATABASE-Anweisung erfolgt, verwenden Sie [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md), um zu bestimmen, ob lang andauernde Transaktionen vorhanden sind. Wird die ALTER DATABASE-Anweisung abgebrochen, bleibt die Datenbank in dem Status, in dem sie sich vor dem Start von ALTER DATABASE befand. In der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht wird der Status von Isolationstransaktionen von Momentaufnahmen in der Datenbank angegeben. Ist **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON, wird ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF für 6 Sekunden angehalten und der Vorgang anschließend wiederholt.
 
 Sie können den Status von ALLOW_SNAPSHOT_ISOLATION nicht ändern, wenn die Datenbank OFFLINE ist.
 
@@ -2602,12 +2606,12 @@ Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `snapshot_isolat
 
 READ_COMMITTED_SNAPSHOT { ON | **OFF** }        
 ON        
-Aktiviert die Option Read-Committed Snapshot auf Datenbankebene. Wenn die Option aktiviert ist, beginnen DML-Anweisungen mit der Generierung von Zeilenversionen, auch wenn keine Transaktion die Momentaufnahmeisolation verwendet. Sobald diese Option aktiviert ist, verwenden Transaktionen, die die Read Committed-Isolationsstufe angeben, anstelle von Sperren die Zeilenversionsverwaltung. Wenn eine Transaktion auf der Read Committed-Isolationsstufe ausgeführt wird, sehen alle Anweisungen eine Momentaufnahme der Daten, wie sie beim Start der Anweisung vorlagen.
+Aktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene. Wenn die Option aktiviert ist, beginnen DML-Anweisungen mit der Generierung von Zeilenversionen, auch wenn keine Transaktion die Momentaufnahmeisolation verwendet. Nachdem diese Option aktiviert wurde, verwenden Transaktionen, die die READ COMMITTED-Isolationsstufe angeben, anstelle von Sperren die Zeilenversionsverwaltung. Wenn eine Transaktion auf der READ COMMITTED-Isolationsstufe ausgeführt wird, sehen alle Anweisungen eine Momentaufnahme der Daten, wie sie beim Start der Anweisung vorlagen.
 
 OFF        
-Deaktiviert die Option Read-Committed-Snapshot auf Datenbankebene. Transaktionen, die die READ COMMITTED-Isolationsstufe angeben, verwenden Sperren.
+Deaktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene. Transaktionen, die die READ COMMITTED-Isolationsstufe angeben, verwenden Sperren.
 
-Wenn READ_COMMITTED_SNAPSHOT auf ON oder OFF festgelegt werden soll, dürfen außer der Verbindung, die den ALTER DATABASE-Befehl ausführt, dürfen keine aktiven Verbindungen zur Datenbank bestehen. Die Datenbank muss sich jedoch nicht im Einzelbenutzermodus befinden. Sie können den Status dieser Option nicht ändern, wenn die Datenbank OFFLINE ist.
+Wenn READ_COMMITTED_SNAPSHOT auf ON oder OFF festgelegt werden soll, dürfen außer der Verbindung, die den ALTER DATABASE-Befehl ausführt, keine aktiven Verbindungen zur Datenbank bestehen. Die Datenbank muss sich jedoch nicht im Einzelbenutzermodus befinden. Sie können den Status dieser Option nicht ändern, wenn die Datenbank OFFLINE ist.
 
 Wenn Sie READ_COMMITTED_SNAPSHOT in einer READ_ONLY-Datenbank festlegen, wird die Einstellung beibehalten, wenn die Datenbank später auf READ_WRITE festgelegt wird.
 
@@ -2753,7 +2757,7 @@ ON
 Es wird ein Fehler generiert, wenn ein Genauigkeitsverlust in einem Ausdruck auftritt.
 
 OFF        
-Bei Genauigkeitsverlusten werden keine Fehlermeldungen generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert.
+Bei einem Genauigkeitsverlust wird keine Fehlermeldung generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert.
 
 > [!IMPORTANT]
 > NUMERIC_ROUNDABORT muss auf OFF festgelegt sein, wenn Sie Indizes auf berechneten Spalten oder indizierten Sichten erstellen oder ändern.
@@ -2798,14 +2802,14 @@ Gibt an, dass die Anforderung fehlschlägt, wenn diese Änderung des Datenbankst
 
 Verwenden Sie die [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht oder [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md), um die aktuellen Einstellungen für Datenbankoptionen abzurufen.
 
-Wenn Sie eine Datenbankoption festlegen, tritt die Änderung sofort in Kraft.
+Wenn Sie eine Datenbankoption festlegen, tritt die neue Einstellung sofort in Kraft.
 
 Sie können die Standardwerte einer Datenbankoption für alle neu erstellten Datenbanken ändern. Hierzu ändern Sie die entsprechende Datenbankoption in der Modelldatenbank.
 
 ## <a name="examples"></a>Beispiele
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. Festlegen der Datenbank auf READ_ONLY
-Das Ändern des Status einer Datenbank oder Dateigruppe auf READ_ONLY oder READ_WRITE erfordert den exklusiven Zugriff auf die Datenbank. Im folgenden Beispiel wird die Datenbank in den `RESTRICTED_USER`-Modus gesetzt, um eingeschränkten Zugriff zu erhalten. Anschließend wird in dem Beispiel der Status der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf `READ_ONLY` festgelegt und der Zugriff auf die Datenbank an alle Benutzer zurückgegeben.
+Für die Änderung des Status einer Datenbank oder Dateigruppe in READ_ONLY oder READ_WRITE wird der exklusive Zugriff auf die Datenbank benötigt. Im folgenden Beispiel wird die Datenbank in den `RESTRICTED_USER`-Modus gesetzt, um eingeschränkten Zugriff zu erhalten. Anschließend wird in dem Beispiel der Status der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf `READ_ONLY` festgelegt und der Zugriff auf die Datenbank an alle Benutzer zurückgegeben.
 
 ```sql
 USE master;
@@ -2942,24 +2946,18 @@ SET
 
 <query_store_option> ::=
 {
-    QUERY_STORE
-    {
- = OFF
-        | = ON
-    }
+    QUERY_STORE { OFF |  ON }
 }
 
 <result_set_caching_option> ::=
 {
-    RESULT_SET_CACHING { ON | OFF }
+    RESULT_SET_CACHING {ON | OFF}
 }
 
 <snapshot_option> ::=
 {
     READ_COMMITTED_SNAPSHOT {ON | OFF }
 }
-
-
 
 ```
 
@@ -2973,10 +2971,11 @@ Der Name der Datenbank, die geändert werden soll.
 Steuert automatische Optionen.
 
 AUTO_CREATE_STATISTICS { **ON** | OFF }        
-ON        
-Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten in Abfrageprädikaten, um Abfragepläne und die Abfrageleistung zu verbessern. Diese Statistiken für einzelne Spalten werden erstellt, wenn der Abfrageoptimierer Abfragen kompiliert. Die Statistiken für einzelne Spalten werden nur für Spalten erstellt, die noch nicht der ersten Spalte eines vorhandenen Statistikobjekts entsprechen.
 
-Der Standardwert ist **ON**. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
+ON        
+Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten in Abfrageprädikaten, um Abfragepläne sowie die Abfrageleistung zu verbessern. Diese Statistiken für einzelne Spalten werden erstellt, wenn der Abfrageoptimierer Abfragen kompiliert. Die Statistiken für einzelne Spalten werden nur für Spalten erstellt, die noch nicht der ersten Spalte eines vorhandenen Statistikobjekts entsprechen.
+
+Der Standardwert ist ON. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
 
 OFF        
 Der Abfrageoptimierer erstellt beim Kompilieren von Abfragen keine Statistiken für einzelne Spalten in Abfrageprädikaten. Das Festlegen dieser Option auf OFF kann zu suboptimalen Abfrageplänen und einer beeinträchtigten Abfrageleistung führen.
@@ -2990,6 +2989,7 @@ Weitere Informationen finden Sie im Abschnitt „Verwenden der datenbankweiten S
 Steuert den Status der Datenbankverschlüsselung.
 
 ENCRYPTION { ON | OFF }        
+
 ON        
 Legt fest, dass die Datenbank verschlüsselt wird.
 
@@ -2998,27 +2998,32 @@ Legt fest, dass die Datenbank nicht verschlüsselt wird.
 
 Weitere Informationen finden Sie unter „Transparent Data Encryption“ und „Transparent Data Encryption in Azure SQL-Datenbank“.
 
-Wenn die Verschlüsselung auf Datenbankebene aktiviert wird, werden alle Dateigruppen verschlüsselt. Alle neuen Dateigruppen erben die verschlüsselte Eigenschaft. Wenn Dateigruppen in der Datenbank als READ ONLY festgelegt sind, schlägt der Datenbankverschlüsselungsvorgang fehl.
+Wenn die Verschlüsselung auf Datenbankebene aktiviert wird, werden alle Dateigruppen verschlüsselt. Alle neuen Dateigruppen erben die verschlüsselte Eigenschaft. Wenn Dateigruppen in der Datenbank als READ ONLY festgelegt sind, tritt beim Datenbankverschlüsselungsvorgang ein Fehler auf.
+
 Sie können sowohl den Verschlüsselungsstatus der Datenbank als auch den Status des Verschlüsselungsscans mithilfe der dynamischen Verwaltungssicht „sys.dm_database_encryption_keys“ anzeigen.
 
-**\<query_store_option> ::=**        
+**<query_store_option> ::=**        
 
-ON | **OFF**        
 Steuert, ob der Abfragespeicher in diesem Data Warehouse aktiviert ist.
+
+QUERY_STORE { ON |  **OFF**  }
 
 ON        
 Aktiviert den Abfragespeicher.
 
 OFF        
+
 Deaktiviert den Abfragespeicher. OFF ist der Standardwert.
 
 > [!NOTE]
 > Für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] müssen Sie `ALTER DATABASE SET QUERY_STORE` aus der Benutzerdatenbank ausführen. Ein Ausführen dieser Anweisung aus einer anderen Data Warehouse-Instanz wird nicht unterstützt.
 
-**\<result_set_caching_option> ::=**         
+**<result_set_caching_option> ::=**         
 **Gilt für**: Azure SQL Data Warehouse (Vorschau)
 
-Sie müssen während der Ausführung dieses Befehls mit der `master`-Datenbank verbunden sein.  Änderungen an dieser Datenbankeinstellung werden sofort wirksam.  Speicherkosten fallen durch das Zwischenspeichern von Abfrageresultsets an. Nachdem das Zwischenspeichern von Ergebnissen für eine Datenbank deaktiviert wurde, werden zuvor dauerhaft zwischengespeicherte Ergebnisse sofort aus dem Azure SQL Data Warehouse-Speicher gelöscht. Eine neue Spalte namens „is_result_set_caching_on“ wurde in [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) eingeführt, um die Einstellung für die Zwischenspeicherung von Ergebnissen für eine Datenbank anzuzeigen.  
+Steuert, ob das Abfrageergebnis in der Datenbank zwischengespeichert wird.
+
+RESULT_SET_CACHING {ON | OFF}
 
 ON        
 Gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets im Azure SQL Data Warehouse-Speicher zwischengespeichert werden.
@@ -3035,6 +3040,8 @@ Befehl|Wie|%DWResultCacheDb%|
 | | |
 
 ### <a name="remarks"></a>Remarks
+Sie müssen während der Ausführung dieses Befehls mit der `master`-Datenbank verbunden sein.  Änderungen an dieser Datenbankeinstellung werden sofort wirksam.  Speicherkosten fallen durch das Zwischenspeichern von Abfrageresultsets an. Nachdem das Zwischenspeichern von Ergebnissen für eine Datenbank deaktiviert wurde, werden zuvor dauerhaft zwischengespeicherte Ergebnisse sofort aus dem Azure SQL Data Warehouse-Speicher gelöscht. Eine neue Spalte namens „is_result_set_caching_on“ wurde in [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) eingeführt, um die Einstellung für die Zwischenspeicherung von Ergebnissen für eine Datenbank anzuzeigen.  
+
 Zwischengespeicherte Resultsets werden wieder für eine Abfrage verwendet, wenn die folgenden Anforderungen erfüllt sind:
 
 1. Der Benutzer, der die Abfrage ausführt, hat Zugriff auf alle in der Abfrage verwiesenen Tabellen.
@@ -3045,12 +3052,12 @@ Sobald das Zwischenspeichern von Resultsets für eine Datenbank aktiviert ist (O
 
 Abfragen mit umfangreichen Resultsets (z. B. > 1 Million Zeilen) werden bei der ersten Ausführung möglicherweise langsamer ausgeführt, wenn der Ergebniscache erstellt wird.
 
-**<snapshot_option> ::=**        
+**<snapshot_option> ::=**         
+**Gilt für**: Azure SQL Data Warehouse (Vorschau)
 
-Berechnet die Isolationsstufe für die Transaktionen.
+Steuert die Transaktionsisolationsstufe einer Datenbank.
 
 READ_COMMITTED_SNAPSHOT  { ON | **OFF** }        
-**Gilt für**: Azure SQL Data Warehouse (Vorschau)
 
 ON        
 Aktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene.
@@ -3058,9 +3065,10 @@ Aktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene.
 OFF        
 Deaktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene.
 
-Wenn Sie für eine Datenbank die Option READ_COMMITTED_SNAPSHOT auf ON oder OFF festlegen, werden alle aktiven Verbindungen getrennt. Sie sollten diese Änderung innerhalb des Datenbankwartungsfensters vornehmen oder warten, bis die Verbindung mit der Datenbank (mit Ausnahme der Verbindung, die zur Ausführung des ALTER DATABASE-Befehls verwendet wird) getrennt wird.  Die Datenbank muss sich nicht im Einzelbenutzermodus befinden.  Die Einstellung READ_COMMITTED_SNAPSHOT kann nicht auf Sitzungsebene geändert werden.  Sie können mithilfe der Spalte „is_read_committed_snapshot_on“ in „sys.databases“ überprüfen, welche Einstellung für die Datenbank festgelegt ist.
+### <a name="remarks"></a>Remarks
+Sie müssen während der Ausführung dieses Befehls mit der `master`-Datenbank verbunden sein. Wenn Sie für eine Benutzerdatenbank die Option READ_COMMITTED_SNAPSHOT auf ON oder OFF festlegen, werden alle aktiven Verbindungen mit dieser Datenbank getrennt. Sie sollten diese Änderung innerhalb des Datenbankwartungsfensters vornehmen oder warten, bis mit Ausnahme der Verbindung, die zur Ausführung des ALTER DATABASE-Befehls verwendet wird, keine Verbindung mehr mit der Datenbank besteht.  Die Datenbank muss sich nicht im Einzelbenutzermodus befinden. Die Einstellung READ_COMMITTED_SNAPSHOT kann nicht auf Sitzungsebene geändert werden.  Sie können mithilfe der Spalte „is_read_committed_snapshot_on“ in „sys.databases“ überprüfen, welche Einstellung für die Datenbank festgelegt ist.
 
-Wenn für eine Datenbank READ_COMMITTED_SNAPSHOT aktiviert ist, werden Abfragen möglicherweise langsamer ausgeführt, wenn mehrere Datenversionen vorliegen und nach einer Version gesucht wird. Lange Transaktionen können außerdem zu einer größeren Datenbank führen, wenn von diesen Transaktionen Änderungen vorgenommen werden, die die Bereinigung von Versionen verhindern.  
+Wenn für eine Datenbank READ_COMMITTED_SNAPSHOT aktiviert ist, werden Abfragen möglicherweise langsamer ausgeführt, wenn mehrere Datenversionen vorliegen und nach einer Version gesucht wird. Lange geöffnete Transaktionen können ebenfalls zu einer Vergrößerung der Datenbank führen. Dieses Problem tritt auf, wenn von diesen Transaktionen Datenänderungen vorgenommen werden, die die Versionsbereinigung blockieren.  
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -3070,56 +3078,33 @@ Ein Benutzer benötigt die ALTER-Berechtigung für eine Datenbank, um die Option
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="a-enabling-the-query-store"></a>A. Aktivieren des Abfragespeichers
-Im folgenden Beispiel wird der Abfragespeicher aktiviert.
+### <a name="check-statistics-setting-for-a-database"></a>Überprüfen der Statistikeinstellung für eine Datenbank
+
+```sql
+SELECT name, is_auto_create_stats_on FROM sys.databases
+```
+### <a name="enable-query-store-for-a-database"></a>Aktivieren des Abfragespeichers für eine Datenbank
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON;
 ```
 
-### <a name="b-enable-result-set-caching-for-a-database"></a>B. Aktivieren der Zwischenspeicherung von Resultsets für eine Datenbank
+### <a name="enable-result-set-caching-for-a-database"></a>Aktivieren der Zwischenspeicherung von Resultsets für eine Datenbank
 
 ```sql
 ALTER DATABASE [database_name]
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="c-disable-result-set-caching-for-a-database"></a>C. Deaktivieren der Zwischenspeicherung von Resultsets für eine Datenbank
-
-```sql
-ALTER DATABASE [database_name]  
-SET RESULT_SET_CACHING OFF;
-```
-
-### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. Überprüfen der Einstellung für die Zwischenspeicherung von Resultsets für eine Datenbank
+### <a name="check-result-set-caching-setting-for-a-database"></a>Überprüfen der Einstellung für die Zwischenspeicherung von Resultsets für eine Datenbank
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="e-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>E. Überprüfen der Anzahl von Abfragen mit Resultset-Cachetreffern oder -fehlern
-
-```sql
-SELECT  
-Queries=CacheHits+CacheMisses,
-CacheHits,
-CacheMisses
-CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
-FROM  
-(SELECT  
-CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
-r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
-s.step_index = 0 then s.request_id else null end) ,
-CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
-s.request_id else null end)
-     FROM sys.dm_pdw_request_steps s  
-     JOIN sys.dm_pdw_exec_requests r  
-     ON s.request_id = r.request_id) A;
-```
-
-### <a name="f-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>F. Überprüfen auf Resultsetcachetreffer oder -fehler für eine Abfrage
+### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Überprüfen auf Resultsetcachetreffer oder -fehler für eine Abfrage
 
 ```sql
 If
@@ -3131,7 +3116,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="g-check-for-all-queries-with-result-set-cache-hits"></a>G. Überprüfen auf alle Abfragen mit Resultset-Cachetreffern
+### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Überprüfen auf alle Abfragen mit Resultset-Cachetreffern
 
 ```sql
 SELECT *  
@@ -3139,7 +3124,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
-### <a name="h-enable-read_committed_snapshot-option-for-a-database"></a>H. Aktivieren der Option READ_COMMITTED_SNAPSHOT für eine Datenbank
+### <a name="enable-the-read_committed_snapshot-option-for-a-database"></a>Aktivieren der Option READ_COMMITTED_SNAPSHOT für eine Datenbank
 
 ```sql
 ALTER DATABASE MyDatabase  

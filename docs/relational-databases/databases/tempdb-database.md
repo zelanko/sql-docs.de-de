@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: f75bbb285ea99eba41accc76851db997c54d1027
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326118"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708255"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
 
@@ -219,7 +219,7 @@ Weitere Informationen zu Verbesserungen der Leistung in tempdb finden Sie im fol
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Speicheroptimierte TempDB-Metadaten
 
-Bislang stellten TempDB-Metadatenkonflikte einen Engpass für die Skalierbarkeit vieler Workloads auf SQL Server dar. Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte tempdb-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden.  Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte tempdb-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden. Verwenden Sie das folgende Skript, um dieses neue Feature zu aktivieren:
+Bislang stellten TempDB-Metadatenkonflikte einen Engpass für die Skalierbarkeit vieler Workloads auf SQL Server dar. Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte tempdb-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden. Zur Verwendung dieser neuen Funktion führen Sie das folgende Skript aus:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -244,7 +244,8 @@ Bei dieser Implementierung sind einige Einschränkungen zu beachten:
     COMMIT TRAN
     ```
 3. Abfragen für speicheroptimierte Tabellen unterstützen keine Sperr- und Isolationshinweise, sodass bei Abfragen für speicheroptimierte TempDB-Katalogsichten Sperr- und Isolationshinweise nicht berücksichtigt werden. Wie bei anderen Systemkatalogsichten in SQL Server erfolgen alle Transaktionen für Systemsichten in READ COMMITTED-Isolation (oder in diesem Fall in READ COMMITTED SNAPSHOT-Isolation).
-4. [Columnstore-Indizes](../indexes/columnstore-indexes-overview.md) können nicht für temporäre Tabellen erstellt werden, wenn speicheroptimierte tempdb-Metadaten aktiviert sind.
+4. [Columnstore-Indizes](../indexes/columnstore-indexes-overview.md) können nicht für temporäre Tabellen erstellt werden, wenn speicheroptimierte TempDB-Metadaten aktiviert sind.
+5. Aufgrund der Einschränkung für Columnstore-Indizes wird die Verwendung der gespeicherten Systemprozedur „sp_estimate_data_compression_savings“ mit den Datenkomprimierungsparametern „COLUMNSTORE“ oder „COLUMNSTORE_ARCHIVE“ nicht unterstützt, wenn speicheroptimierte TempDB-Metadaten aktiviert sind.
 
 > [!NOTE] 
 > Diese Einschränkungen gelten nur beim Verweisen auf TempDB-Systemsichten, und Sie können beim Zugriff auf eine speicheroptimierte Tabelle in einer Benutzerdatenbank bei Bedarf eine temporäre Tabelle in derselben Transaktion erstellen.

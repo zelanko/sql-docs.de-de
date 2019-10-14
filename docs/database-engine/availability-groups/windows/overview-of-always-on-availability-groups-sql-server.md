@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742933"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974381"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68742933"
   
  Man unterscheidet drei Failovertypen: automatisches Failover, manuelles Failover und erzwungenes Failover (mit möglichem Datenverlust). Die von einem bestimmten sekundären Replikat unterstützten Failovertypen hängen von seinem Verfügbarkeitsmodus und beim Modus für synchrone Commits vom Failovermodus für das primäre Replikat und das sekundäre Zielreplikat ab:  
   
--   Der Modus für synchrone Commits unterstützt zwei Failovertypen:*geplantes manuelles Failover* und *automatisches Failover*, wenn das sekundäre Zielreplikat derzeit mit „avt1“ synchronisiert wird. Die Unterstützung für diese Formen des Failovers hängt von der Einstellung der *Failovermoduseigenschaft* der Failoverpartner ab. Ist der Failovermodus für das primäre oder sekundäre Replikat auf "manuell" festgelegt, wird nur ein manuelles Failover für dieses sekundäre Replikat unterstützt. Ist der Failovermodus für das primäre und sekundäre Replikat auf "automatisch" festgelegt, wird sowohl das automatische als auch das manuelle Failover auf diesem sekundären Replikat unterstützt.  
+-   Der Modus für synchrone Commits unterstützt die beiden Failovertypen *geplantes manuelles Failover* und *automatisches Failover*, wenn das sekundäre Zielreplikat zum gegebenen Zeitpunkt mit dem primären Replikat synchronisiert wird. Die Unterstützung für diese Formen des Failovers hängt von der Einstellung der *Failovermoduseigenschaft* der Failoverpartner ab. Ist der Failovermodus für das primäre oder sekundäre Replikat auf "manuell" festgelegt, wird nur ein manuelles Failover für dieses sekundäre Replikat unterstützt. Ist der Failovermodus für das primäre und sekundäre Replikat auf "automatisch" festgelegt, wird sowohl das automatische als auch das manuelle Failover auf diesem sekundären Replikat unterstützt.  
   
     -   **Geplantes manuelles Failover** (ohne Datenverlust)  
   

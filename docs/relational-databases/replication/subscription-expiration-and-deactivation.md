@@ -21,12 +21,12 @@ ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b3d561e331cae739514b2e38c5c885653c44ce46
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 87c3a091e4a6ce3ef9462e6e0d730bcea56c18bc
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768353"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710716"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Abonnementablauf und -deaktivierung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68768353"
  Weitere Informationen zum Festlegen von Beibehaltungsdauern finden Sie unter [Festlegen des Ablaufdatums für Abonnements](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Festlegen der Beibehaltungsdauer für die Verteilung bei Transaktionsveröffentlichungen &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md), und [Verleger- und Verteilereigenschaften](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
 ## <a name="transactional-replication"></a>Transaktionsreplikation  
- Die Transaktionsreplikation verwendet die maximale Beibehaltungsdauer für die Verteilung (die **@max_distretention** -Parameter von [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) und die Beibehaltungsdauer für die Veröffentlichung (die **@retention** -Parameter von [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
+ Die Transaktionsreplikation verwendet die maximale Beibehaltungsdauer für die Verteilung (`@max_distretention`-Parameter von [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) und die Beibehaltungsdauer für die Veröffentlichung (`@retention`-Parameter von [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
   
 -   Falls ein Abonnement nicht innerhalb der maximalen Beibehaltungsdauer für die Verteilung (standardmäßig 72 Stunden) synchronisiert wird und Änderungen in der Verteilungsdatenbank vorliegen, die noch nicht an den Abonnenten übermittelt wurden, wird das Abonnement vom Auftrag **Verteilungscleanup** , der auf dem Verteiler ausgeführt wird, als deaktiviert gekennzeichnet. Das Abonnement muss erneut initialisiert werden.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68768353"
      Wenn ein Pushabonnement abläuft, wird es vollständig entfernt. Bei Pullabonnements ist dies nicht der Fall. Sie müssen einen Cleanup der Pullabonnements auf dem Abonnenten ausführen. Weitere Informationen finden Sie unter [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Mergereplikation  
- Bei der Mergereplikation wird die Beibehaltungsdauer der Veröffentlichung (die **@retention** und **@retention_period_unit** -Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)) verwendet. Wenn ein Abonnement abläuft, muss es erneut initialisiert werden, da Metadaten für das Abonnement entfernt werden. Abonnements, die nicht erneut initialisiert werden, werden vom Auftrag **Cleanup abgelaufener Abonnements** gelöscht, der auf dem Verleger ausgeführt wird. Dieser Auftrag wird standardmäßig einmal pro Tag ausgeführt, und es werden dabei alle Pushabonnements gelöscht, die seit einem Zeitraum, der der doppelten Beibehaltungsdauer der Veröffentlichung entspricht, nicht synchronisiert wurden. Beispiel:  
+ Bei der Mergereplikation wird die Beibehaltungsdauer der Veröffentlichung (`@retention`- und `@retention_period_unit`-Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)) verwendet. Wenn ein Abonnement abläuft, muss es erneut initialisiert werden, da Metadaten für das Abonnement entfernt werden. Abonnements, die nicht erneut initialisiert werden, werden vom Auftrag **Cleanup abgelaufener Abonnements** gelöscht, der auf dem Verleger ausgeführt wird. Dieser Auftrag wird standardmäßig einmal pro Tag ausgeführt, und es werden dabei alle Pushabonnements gelöscht, die seit einem Zeitraum, der der doppelten Beibehaltungsdauer der Veröffentlichung entspricht, nicht synchronisiert wurden. Beispiel:  
   
 -   Wenn eine Veröffentlichung eine Beibehaltungsdauer von 14 Tagen aufweist, kann ein Abonnement ablaufen, wenn es nicht innerhalb von 14 Tagen synchronisiert wurde.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68768353"
   
     -   Die Replikation kann der Cleanup von Metadaten aus den Veröffentlichungs- und Abonnementdatenbanken erst ausführen, wenn das Ablaufdatum erreicht ist. Geben Sie keinen zu hohen Wert für die Beibehaltungsdauer an, da dies zu einer Beeinträchtigung der Replikationsleistung führen kann. Es wird empfohlen, eine niedrigere Einstellung zu verwenden, wenn Sie zuverlässig einschätzen können, dass alle Abonnenten innerhalb dieser Zeitspanne regelmäßig synchronisiert werden.  
   
-    -   Es ist möglich anzugeben, dass die Abonnements nie ablaufen (Wert 0 für **@retention** ), aber es wird dringend empfohlen, diesen Wert nicht zu verwenden, da kein Cleanup der Metadaten durchgeführt werden darf.  
+    -   Es ist möglich anzugeben, dass die Abonnements nie ablaufen (Wert 0 für `@retention`), aber es wird dringend empfohlen, diesen Wert nicht zu verwenden, da Metadaten nicht bereinigt werden können.  
   
 -   Die Beibehaltungsdauer für alle Wiederveröffentlichungen muss auf einen Wert festgelegt werden, der gleich oder niedriger ist als die auf dem ursprünglichen Verleger festgelegte Beibehaltungsdauer. Verwenden Sie zudem dieselben Beibehaltungsdauerwerte für Veröffentlichungen für alle Verleger und ihre alternativen Synchronisierungspartner. Das Verwenden unterschiedlicher Werte kann zu mangelnder Konvergenz der Daten führen. Wenn Sie die Beibehaltungsdauer der Veröffentlichung ändern müssen, sollten Sie den Abonnenten erneut initialisieren, um sicherzustellen, dass die Daten konvergieren.  
   

@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ddbb104690c4ded69b1c15628e2f509644c11cb3
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 000ba97314d3d2c7efaf75a42e91b4843e69733d
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809871"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682068"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql-preview"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL) (Vorschau)
 
@@ -42,17 +42,19 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 Der Name der materialisierten Sicht.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
-Bei einer Änderung der zugrunde liegenden Tabellen in der Definition einer materialisierten Sicht bleiben alle inkrementellen Änderungen in den Basistabellen für die materialisierte Sicht erhalten.  Die Auswahl einer materialisierten Sicht schließt das Überprüfen der gruppierten Columnstore-Struktur für die materialisierte Struktur und das Anwenden dieser inkrementellen Änderungen ein.   Wenn eine große Anzahl von inkrementellen Änderungen beibehalten wurden, setzt dies die Leistung bei Auswahlvorgängen herab.  Benutzer können die materialisierte Sicht neu erstellen, um die gruppierte Columnstore-Struktur neu zu erstellen und alle inkrementellen Änderungen in den Basistabellen zu konsolidieren.
-  
+Die Data Warehouse-Engine fügt zu jeder betroffenen Sicht Nachverfolgungszeilen zur Darstellung der Änderungen hinzu, damit materialisierte Sichten stets mit Datenänderungen in Basistabellen aktualisiert werden. Die Auswahl einer materialisierten Sicht schließt das Überprüfen des gruppierten Columnstore-Index der Sicht und das Anwenden inkrementeller Änderungen ein.  Die Nachverfolgungszeilen (TOTAL_ROWS - BASE_VIEW_ROWS) werden erst gelöscht, wenn Benutzer die materialisierte Sicht neu erstellen (REBUILD).  
+
+Das Overheadverhältnis wird als TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS) berechnet.  Wenn der Wert hoch ist, wird die SELECT-Leistung beeinträchtigt.  Benutzer können die materialisierte Sicht neu erstellen, um das Overheadverhältnis zu verringern.
+
 ## <a name="permissions"></a>Berechtigungen  
   
 Erfordert die VIEW DATABASE STATE-Berechtigung.  
 
-## <a name="example"></a>Beispiel  
+## <a name="examples"></a>Beispiele  
 
-Dieses Beispiel gibt den verwendeten Deltaspeicher für eine materialisierte Sicht zurück.
+### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>A. Dieses Beispiel gibt das Overheadverhältnis einer materialisierten Sicht zurück.
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
@@ -66,15 +68,82 @@ Ausgabe:
 
 </br>
 
-|OBJECT_ID |BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|4567|0|0|0.0|
+### <a name="b-this-example-shows-how-the-materialized-view-overhead-increases-as-data-changes-in-base-tables"></a>B. Dieses Beispiel zeigt, wie sich der Overhead der materialisierten Sicht vergrößert, wenn sich Daten in Basistabellen ändern.
 
-</br>
+Erstellen einer Tabelle
+```sql
+CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
+```
+Einfügen von fünf Zeilen in t1
+```sql
+INSERT INTO t1 VALUES (1, 1, 1)
+INSERT INTO t1 VALUES (2, 2, 2) 
+INSERT INTO t1 VALUES (3, 3, 3) 
+INSERT INTO t1 VALUES (4, 4, 4) 
+INSERT INTO t1 VALUES (5, 5, 5) 
+```
+Erstellen materialisierter Sichten (MV1)
+```sql
+CREATE materialized view MV1 
+WITH (DISTRIBUTION = HASH(c1))  
+AS
+SELECT c1, count(*) total_number 
+FROM dbo.t1 where c1 < 3
+GROUP BY c1  
+```
+Bei der Auswahl aus der materialisierten Sicht werden zwei Zeilen zurückgegeben.
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+Überprüfen Sie vor der Änderung von Daten in der Basistabelle den Overhead der materialisierten Sicht.
+```sql
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+Ausgabe:
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|789|0|2|2.0|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1,00000000000000000 |
+
+Aktualisieren Sie die Basistabelle.  Diese Abfrage aktualisiert dieselbe Spalte in derselben Zeile 100 mal mit demselben Wert.  Der Inhalt der materialisierten Sicht ändert sich nicht.
+```sql
+DECLARE @p int
+SELECT @p = 1
+WHILE (@p < 101)
+BEGIN
+UPDATE t1 SET c1 = 1 WHERE c1 = 1
+SELECT @p = @p+1
+END  
+```
+
+Bei der Auswahl aus der materialisierten Sicht wird dasselbe Ergebnis wie zuvor zurückgegeben.  
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+Nachstehend finden Sie die Ausgabe von DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1").  Der materialisierten Sicht werden 100 Zeilen hinzugefügt (total_row - base_view_rows), und das Overheadverhältnis (overhead_ratio) wird erhöht. 
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|102 |51,00000000000000000 |
+
+Nachdem die materialisierte Sicht neu erstellt wurde, werden alle Nachverfolgungszeilen für Änderungen inkrementeller Daten gelöscht, und das Overheadverhältnis der Sicht wird verringert.  
+
+```sql
+ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
+go
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+Ausgabe
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1,00000000000000000 |
 
 ## <a name="see-also"></a>Siehe auch
 

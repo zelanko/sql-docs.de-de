@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227192"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713214"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -91,6 +91,12 @@ ALTER DATABASE SCOPED CONFIGURATION
 }
 ```
 
+> [!IMPORTANT]
+> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] haben sich einige Optionsnamen geändert:      
+> -  `DISABLE_INTERLEAVED_EXECUTION_TVF` wurde in `INTERLEAVED_EXECUTION_TVF` geändert
+> -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` wurde in `BATCH_MODE_MEMORY_GRANT_FEEDBACK` geändert
+> -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` wurde in `BATCH_MODE_ADAPTIVE_JOINS` geändert
+
 ## <a name="arguments"></a>Argumente
 
 FOR SECONDARY
@@ -113,6 +119,9 @@ Gibt die MAXDOP-Standardeinstellung an, die für Anweisungen verwendet werden so
 Mithilfe der Option Max. Grad an Parallelität kann die Anzahl der Prozessoren beschränkt werden, die bei der Ausführung paralleler Pläne verwendet werden. SQL Server berücksichtigt die Ausführung paralleler Pläne für Abfragen, DDL-Indizierungsoperationen (Datendefinitionssprache, Data Definition Language), parallele Einfügevorgänge, Onlineausführung von ALTER COLUMN, parallele Sammlung von Statistiken sowie die statische und keysetgesteuerte Cursorauffüllung.
 
 Informationen zum Festlegen dieser Option auf Instanzebene finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+
+> [!NOTE]
+> In Azure SQL-Datenbank wird der **maximale Grad an Parallelität** auf Serverebene immer auf 0 festgelegt. Der maximale Grad an Parallelität kann für jede Datenbank, wie im aktuellen Artikel beschrieben, konfiguriert werden. Empfehlungen zur optimalen Konfiguration vom maximalen Grad an Parallelität finden Sie im Abschnitt [Zusätzliche Ressourcen](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources).
 
 > [!TIP]
 > Fügen Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP** hinzu, um dies auf Abfrageebene zu erreichen.
@@ -351,6 +360,11 @@ Bei Abfragen für dreiteilige Namen werden die Einstellungen für die aktuelle D
 Das Ereignis `ALTER_DATABASE_SCOPED_CONFIGURATION` wird als DLL-Ereignis hinzugefügt, mit dem ein DDL-Trigger ausgelöst werden kann, und ist ein untergeordnetes Ereignis der Triggergruppe `ALTER_DATABASE_EVENTS`.
 
 Datenbankweit gültige Konfigurationseinstellungen werden zusammen mit der Datenbank übertragen, was bedeutet, dass die vorhandenen Konfigurationseinstellungen bei der Wiederherstellung oder dem Anfügen einer bestimmten Datenbank erhalten bleiben.
+
+Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] haben sich einige Optionsnamen geändert:      
+-  `DISABLE_INTERLEAVED_EXECUTION_TVF` wurde in `INTERLEAVED_EXECUTION_TVF` geändert
+-  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` wurde in `BATCH_MODE_MEMORY_GRANT_FEEDBACK` geändert
+-  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` wurde in `BATCH_MODE_ADAPTIVE_JOINS` geändert
 
 ## <a name="limitations-and-restrictions"></a>Einschränkungen
 

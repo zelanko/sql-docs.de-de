@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0168db6a35606f3495d66eae87a0671672a6e99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140142"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711067"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Parametrisierte Filter – Parametrisierte Zeilenfilter
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "68140142"
   
      Durch Eingabe eines anderen Wertes als den Namen des Abonnenten oder Verteilers kann diese Funktion überschrieben werden. In der Regel überschreiben Anwendungen diese Funktion mit sinnvolleren Werten, z. B. einem Vertriebsmitarbeiternamen oder einer Vertriebsmitarbeiter-ID. Weitere Informationen finden Sie im Abschnitt zu "Überschreiben des HOST_NAME()-Werts" weiter unten in diesem Thema.  
   
- Der Wert, der von der Systemfunktion zurückgegeben wird, wird mit der von Ihnen angegebenen Spalte in der gefilterten Tabelle verglichen. Danach werden die entsprechenden Daten auf den Abonnenten heruntergeladen. Dieser Vergleich erfolgt sowohl bei der Initialisierung des Abonnements (damit in der Anfangsmomentaufnahme nur die relevanten Daten enthalten sind) als auch bei jeder Abonnementsynchronisierung. Wenn eine Änderung auf dem Abonnenten dazu führt, dass eine Zeile aus einer Partition herausgenommen wird, wird diese Zeile standardmäßig auf dem Abonnenten gelöscht. (Dieses Verhalten kann mit dem **@allow_partition_realignment** -Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) gesteuert werden.)  
+ Der Wert, der von der Systemfunktion zurückgegeben wird, wird mit der von Ihnen angegebenen Spalte in der gefilterten Tabelle verglichen. Danach werden die entsprechenden Daten auf den Abonnenten heruntergeladen. Dieser Vergleich erfolgt sowohl bei der Initialisierung des Abonnements (damit in der Anfangsmomentaufnahme nur die relevanten Daten enthalten sind) als auch bei jeder Abonnementsynchronisierung. Wenn eine Änderung auf Verlegerebene dazu führt, dass eine Zeile aus einer Partition entfernt wird, wird diese Zeile standardmäßig auch auf Abonnentenebene gelöscht. (Dieses Verhalten kann mithilfe des Parameters `@allow_partition_realignment` von [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) gesteuert werden.)  
   
 > [!NOTE]  
 >  Bei Vergleichen für parametrisierte Filter wird in jedem Fall die Datenbanksortierung verwendet. Wenn die Datenbanksortierung z. B. ohne Unterscheidung von Groß- und Kleinschreibung erfolgt, die Tabellen- oder Spaltensortierung dagegen mit, wird beim Vergleich nicht zwischen Groß-/Kleinschreibung unterschieden.  
   
-### <a name="filtering-with-susersname"></a>Filtern mit SUSER_SNAME()  
+### <a name="filtering-with-suser_sname"></a>Filtern mit SUSER_SNAME()  
  Sehen Sie sich die **Employee-Tabelle** in der [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] -Beispieldatenbank an. Diese Tabelle enthält die **LoginID**-Spalte, in der Sie die Domäne und den Anmeldenamen (Anmelde-ID) für jeden Mitarbeiter in der Form*domain\login*finden. Wenn Sie diese Tabelle so filtern möchten, dass alle Mitarbeiter nur die Daten erhalten, die für sie jeweils relevant sind, geben Sie folgende Filterklausel an:  
   
 ```  
@@ -62,7 +62,7 @@ LoginID = SUSER_SNAME()
   
  Nehmen wir z. B. an, der Wert für einen der Mitarbeiter ist 'adventure-works\john5'. Wenn der Merge-Agent eine Verbindung mit dem Verleger herstellt, verwendet dieser den Anmeldenamen, den Sie bei der Erstellung des Abonnements angegeben haben (in diesem Fall 'adventure-works\john5'). Der Merge-Agent vergleicht dann den von SUSER_SNAME() zurückgegebenen Wert mit den Werten in der Tabelle und lädt nur die Zeile herunter, die in der **LoginID** -Spalte den Wert 'adventure-works\john5' enthält.  
   
-### <a name="filtering-with-hostname"></a>Filtern mit HOST_NAME()  
+### <a name="filtering-with-host_name"></a>Filtern mit HOST_NAME()  
  Sehen Sie sich die **HumanResources.Employee** -Tabelle an. Nehmen wir an, diese Tabelle enthält eine **ComputerName** -Spalte, in der die Namen der Computer der einzelnen Mitarbeiter aufgeführt sind. Die Einträge weisen die Form '*name_computertype*' auf. Wenn Sie diese Tabelle so filtern möchten, dass alle Mitarbeiter nur die Daten erhalten, die für sie jeweils relevant sind, geben Sie folgende Filterklausel an:  
   
 ```  
@@ -82,7 +82,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 > [!IMPORTANT]  
 >  Der Wert für die HOST_NAME()-Funktion kann überschrieben werden. Daher können Filter, die HOST_NAME() enthalten, nicht für die Steuerung des Zugriffs auf Datenpartitionen verwendet werden. Für die Steuerung des Zugriffs auf Datenpartitionen sollten Sie daher SUSER_SNAME(), SUSER_SNAME() in Kombination mit HOST_NAME() oder statische Zeilenfilter verwenden.  
   
-#### <a name="overriding-the-hostname-value"></a>Überschreiben des HOST_NAME()-Wertes  
+#### <a name="overriding-the-host_name-value"></a>Überschreiben des HOST_NAME()-Wertes  
  Wie bereits erwähnt, gibt HOST_NAME() den Namen des Computers zurück, der eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellt. Bei der Verwendung parametrisierter Filter wird dieser Wert häufig überschrieben, indem bei der Abonnementerstellung ein anderer Wert angegeben wird. Daraufhin wird durch die HOST_NAME()-Funktion nicht der Name des Computers, sondern der von Ihnen angegebene Wert zurückgegeben.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Der Mitarbeiterin Pamela Ansman-Wolfe wurde z. B. eine Mitarbeiter-ID von 280 zugewiesen. Geben Sie bei der Erstellung eines Abonnements für diese Mitarbeiterin als Wert für HOST-NAME() die Mitarbeiternummer (hier: 280) an. Wenn der Merge-Agent eine Verbindung mit dem Verleger hergestellt hat, vergleicht er den von HOST_NAME() zurückgegebenen Wert mit den Werten in der Tabelle und lädt nur die Zeile herunter, bei der der Wert 280 in der **EmployeeID** -Spalte enthalten ist.  
   
 > [!IMPORTANT]
->  Die HOST_NAME()-Funktion gibt einen **nchar** -Wert zurück, sodass Sie CONVERT verwenden müssen, wenn es sich bei der Spalte in der Filterklausel um eine numerische Spalte handelt (wie im Beispiel oben). Zur Verbesserung der Leistung sollten Funktionen nicht auf Spaltennamen in Klauseln für parametrisierte Zeilenfilter (wie `CONVERT(nchar,EmployeeID) = HOST_NAME()`) angewendet werden. Gehen Sie stattdessen wie im folgenden Beispiel vor: `EmployeeID = CONVERT(int,HOST_NAME())`. Diese Klausel kann zwar für den **@subset_filterclause** -Parameter von [@subset_filterclause](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)verwendet werden, in der Regel aber nicht im Assistenten für neue Veröffentlichung. (Der Assistent führt die Filterklausel aus, um sie zu überprüfen, erhält dabei aber ein negatives Ergebnis, weil der Computername nicht in einen **int**als dynamische Filter bezeichnet). Wenn Sie mit dem Assistenten für neue Veröffentlichung arbeiten, sollten Sie vor dem Erstellen einer Momentaufnahme für die Veröffentlichung `CONVERT(nchar,EmployeeID) = HOST_NAME()` im Assistenten angeben und dann [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) verwenden, um die Klausel in `EmployeeID = CONVERT(int,HOST_NAME())` zu ändern.  
+>  Die HOST_NAME()-Funktion gibt einen **nchar** -Wert zurück, sodass Sie CONVERT verwenden müssen, wenn es sich bei der Spalte in der Filterklausel um eine numerische Spalte handelt (wie im Beispiel oben). Zur Verbesserung der Leistung sollten Funktionen nicht auf Spaltennamen in Klauseln für parametrisierte Zeilenfilter (wie `CONVERT(nchar,EmployeeID) = HOST_NAME()`) angewendet werden. Gehen Sie stattdessen wie im folgenden Beispiel vor: `EmployeeID = CONVERT(int,HOST_NAME())`. Diese Klausel kann zwar für den Parameter `@subset_filterclause` von [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) verwendet werden, in der Regel aber nicht im Assistenten für neue Veröffentlichung. (Der Assistent führt die Filterklausel aus, um sie zu überprüfen, allerdings wird dabei ein Fehler ausgelöst, weil der Computername nicht in **int** konvertiert werden kann.) Wenn Sie mit dem Assistenten für neue Veröffentlichung arbeiten, sollten Sie vor dem Erstellen einer Momentaufnahme für die Veröffentlichung `CONVERT(nchar,EmployeeID) = HOST_NAME()` im Assistenten angeben und dann [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) verwenden, um die Klausel in `EmployeeID = CONVERT(int,HOST_NAME())` zu ändern.  
   
  **So überschreiben Sie den HOST_NAME()-Wert**  
   
@@ -103,7 +103,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: Geben Sie auf der Seite **HOST\_NAME\(\)-Werte** des Assistenten für neue Abonnements einen Wert an. Weitere Informationen zum Erstellen von Abonnements finden Sie unter [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md).  
   
--   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: Geben Sie für den **@hostname** -Parameter von [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (bei Pushabonnements) oder von [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (bei Pullabonnements) einen Wert an.  
+-   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: Geben Sie für den Parameter `@hostname` von [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (bei Pushabonnements) oder von [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (bei Pullabonnements) einen Wert an.  
   
 -   Merge-Agent: Geben Sie in der Befehlszeile oder per Agent-Profil einen Wert für den Parameter **-Hostname** an. Weitere Informationen zum Merge-Agent finden Sie unter [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). Weitere Informationen zu Agentprofilen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
