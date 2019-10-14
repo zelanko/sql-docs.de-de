@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326021"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961958"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>SQL Server 2019-Erweiterung für Azure Data Studio (Vorschauversion)
 
-Die SQL Server 2019-Erweiterung für Azure Data Studio (Vorschauversion) umfasst die Unterstützung von neuen Features und Tools, die im Lieferumfang von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] enthalten sind. Dies umfasst die Unterstützung für die Vorschau von [Big-Data-Clustern für SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), eine integrierte [Notebookfunktion](../big-data-cluster/notebooks-guidance.md), und einen PolyBase-[Assistenten für die Erstellung externer Tabellen](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
+Die SQL Server 2019-Erweiterung für Azure Data Studio (Vorschauversion) umfasst die Unterstützung von neuen Features und Tools, die im Lieferumfang von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] enthalten sind. Dies umfasst die Unterstützung für die Vorschau von [Big Data-Clustern für SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), eine integrierte [Notebookumgebung](../big-data-cluster/notebooks-guidance.md) und einen [Assistenten für die Erstellung externer Tabellen](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json) in PolyBase.
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Installieren der Erweiterung für SQL Server 2019 (Vorschauversion)
 
@@ -33,7 +33,7 @@ Damit Sie die Erweiterung für SQL Server 2019 (Vorschauversion) installieren 
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|11. September 2019 |0.16.0
    |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|11. September 2019 |0.16.0
 
-1. Klicken Sie in Azure Data Studio im Menü **Datei** auf die Option **Install Extension from VSIX Package** (Erweiterung aus VSIX-Paket installieren), und wählen Sie die heruntergeladene VSIX-Datei aus.
+1. Klicken Sie in Azure Data Studio im Menü **Datei** auf die Option **Erweiterung aus VSIX-Paket installieren**, und wählen Sie die heruntergeladene VSIX-Datei aus.
 
 1. Klicken Sie auf **Ja**, wenn Sie aufgefordert werden, die Installation zu bestätigen, und warten Sie auf die Benachrichtigung, dass die Installation erfolgreich abgeschlossen wurde.
 
@@ -61,7 +61,7 @@ Damit Sie die Erweiterung für SQL Server 2019 (Vorschauversion) installieren 
 
 * Der Verbindungstyp **SQL Server big data cluster** (Big-Data-Cluster für SQL Server) wurde aus dieser Version entfernt. Alle Funktionen, die zuvor über die Verbindung mit dem Big-Data-Cluster für SQL Server zur Verfügung standen, sind jetzt Teil der SQL Server-Verbindung.
 * Die HDFS-Suche ist über den Ordner **Data Services** möglich.
-* Für Notebooks funktionieren PySpark und andere Big-Data-Kernels, wenn eine Verbindung mit der SQL Server-Masterinstanz im Big-Data-Cluster für SQL Server besteht.
+* Bei Notebooks funktionieren PySpark und andere Big Data-Kernel, wenn eine Verbindung mit der SQL Server-Masterinstanz im Big Data-Cluster für SQL Server besteht.
 * Assistent für die Erstellung externer Tabellen:
   * Das Erstellen externer Tabelle mithilfe von vorhandenen externen Datenquellen wird nun unterstützt.
   * Die Leistung verschiedener Funktionen des Assistenten wurde verbessert.
@@ -82,15 +82,15 @@ Damit Sie die Erweiterung für SQL Server 2019 (Vorschauversion) installieren 
 
 ## <a name="release-notes-v0102"></a>Hinweise zu Version 0.10.2
 ### <a name="sql-server-2019-support"></a>Unterstützung für SQL Server 2019
-Die Unterstützung für SQL Server 2019 wurde aktualisiert. Beim Herstellen einer Verbindung mit einer Big-Data-Clusterinstanz für SQL Server wird ein neuer _Data Services_-Ordner in der Explorer-Strukturansicht angezeigt. Dies umfasst Startpunkte für Aktionen wie das Öffnen eines neuen Notebooks für die Verbindung, das Übermitteln von Spark-Aufträgen und das Arbeiten mit HDFS. Beachten Sie, dass für einige Aktionen wie _Create External Data_ (Externe Daten erstellen) über eine HDFS-Datei bzw. einen HDFS-Ordner die Erweiterung für _SQL Server 2019 (Vorschauversion)_ installiert werden muss.
+Die Unterstützung für SQL Server 2019 wurde aktualisiert. Nach dem Herstellen einer Verbindung mit einer Big Data-Clusterinstanz für SQL Server wird ein neuer _Data Services_-Ordner in der Explorer-Strukturansicht angezeigt. Der Ordner enthält Startpunkte für Aktionen wie das Öffnen eines neuen Notebooks für die Verbindung, das Übermitteln von Spark-Aufträgen und das Arbeiten mit HDFS. Für einige Aktionen wie _Create External Data_ (Erstellen externer Daten) über eine HDFS-Datei bzw. einen HDFS-Ordner muss die Erweiterung für _SQL Server 2019 (Vorschauversion)_ installiert werden.
 
 ### <a name="notebook-support"></a>Notebook-Unterstützung
 Wir haben in dieser Version wichtige Updates an der Benutzeroberfläche für Notebooks vorgenommen. Der Fokus lag dabei darauf, dass freigegebene Notebooks einfach gelesen werden können. Deshalb werden die Konturen um Zellen jetzt nur noch angezeigt, wenn mit dem Mauszeiger darauf gezeigt oder auf diese geklickt wird. Außerdem wurde Hoversupport für einfache Aktionen auf Zellenebene hinzugefügt, sodass nun nicht mehr auf die Zellen geklickt werden muss, und der Ausführungsstatus ist nun genauer, da u. a. eine Ausführungsanzahl und eine animierte Schaltfläche _zum Beenden der Ausführung_ hinzugefügt wurde. Zudem wurden Tastenkombinationen für die Optionen _New Notebook_ (Neues Notebook, `Ctrl+Shift+N`), _Run Cell_ (Zelle ausführen, `F5`), _New Code Cell_ (Neue Codezelle, `Ctrl+Shift+C`) und _New Text Cell_ (Neue Textzelle, `Ctrl+Shift+T`) hinzugefügt. In Zukunft sollen alle wichtigen Aktionen über Tastenkombinationen gestartet werden. Sie können uns gern Feedback zu noch fehlenden Tastenkombinationen geben.
 
 Weitere Verbesserungen und Fehlerbehebungen:
-* Die Benutzer der Erweiterung für _SQL Server 2019 (Vorschauversion)_ werden jetzt dazu aufgefordert, ein Installationsverzeichnis für Python-Abhängigkeiten auszuwählen. Außerdem ist Python nicht mehr in der `.vsix file` enthalten, wodurch die Gesamtgröße der Erweiterung verringert wird. Die Python-Abhängigkeiten werden zur Unterstützung der Kernel für Spark und Python3 benötigt. Wenn Sie diese Kernel verwenden möchten, muss diese Erweiterung deshalb installiert sein.
+* Die Benutzer der Erweiterung für _SQL Server 2019 (Vorschauversion)_ werden jetzt dazu aufgefordert, ein Installationsverzeichnis für Python-Abhängigkeiten auszuwählen. Außerdem ist Python nicht mehr in der `.vsix file` enthalten, wodurch die Gesamtgröße der Erweiterung verringert wird. Die Python-Abhängigkeiten unterstützen Kernel für Spark und Python3.
 * Neue Notebooks können nun über die Befehlszeile gestartet werden. Über die Argumente `--command=notebook.command.new --server=myservername` sollten Sie ein neues Notebook öffnen und eine Verbindung mit diesem Server herstellen können.
-* Es wurden Leistungskorrekturen für Notebooks mit sehr langen Codezellen vorgenommen. Wenn Codezellen mehr als 250 Zeilen umfassen, werden sie nun mit einer Scrollleiste versehen.
+* Es wurden Leistungskorrekturen für Notebooks mit sehr langen Codezellen vorgenommen. Bei Codezellen mit mehr als 250 Zeilen wird eine Scrollleiste hinzugefügt.
 * IPYNB-Dateien werden nun besser unterstützt. Es werden jetzt alle Versionen ab Version 3 unterstützt. Hinweis: Dateien werden beim Speichern auf Version 4 oder höher aktualisiert.
 * Die Benutzereinstellung `notebook.enabled` wurde entfernt, da der integrierte Notebookviewer jetzt stabil ist.
 * Das Design mit hohem Kontrast wird nun mit einer Reihe von Korrekturen des Objektlayouts unterstützt.

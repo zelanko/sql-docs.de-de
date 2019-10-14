@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 818b3265e72a1e7a311ea031b0583f68d30f4f4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fab59450a2403eadc080a5f246c0911b164eba3a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113919"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710811"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Angeben von Artikeltypen (Replikationsprogrammierung mit Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,27 +33,27 @@ ms.locfileid: "68113919"
   
 ### <a name="to-publish-a-table-article-in-a-transactional-or-snapshot-publication"></a>So veröffentlichen Sie einen Tabellenartikel in einer Transaktions- oder Momentaufnahmeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie einen der folgenden Werte für **@type** an, um den Typ des Artikels zu definieren:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie einen der folgenden Werte für `@type` an, um den Typ des Artikels zu definieren:  
   
-    -   **logbased** &ndash; ein protokollbasierter Tabellenartikel, der der Standard für die Transaktions- und Momentaufnahmereplikation ist. Die Replikation generiert automatisch die gespeicherte Prozedur, die für das horizontale Filtern verwendet wird, sowie die Sicht, die einen vertikal gefilterten Artikel definiert.  
+    -   `logbased`: Ein protokollbasierter Tabellenartikel, der den Standardwert für die Transaktions- und Momentaufnahmereplikation darstellt. Die Replikation generiert automatisch die gespeicherte Prozedur, die für das horizontale Filtern verwendet wird, sowie die Sicht, die einen vertikal gefilterten Artikel definiert.  
   
-    -   **logbased manualfilter** &ndash; ein protokollbasierter, horizontal gefilterter Artikel, in dem die gespeicherte Prozedur für das horizontale Filtern manuell vom Benutzer erstellt und definiert sowie für **@filter** aus. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+    -   `logbased manualfilter`: Ein protokollbasierter, horizontal gefilterter Artikel, in dem die gespeicherte Prozedur für das horizontale Filtern manuell vom Benutzer erstellt und definiert wird, und der für `@filter` angegeben wird. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-    -   **logbased manualview** &ndash; ein protokollbasierter, vertikal gefilterter Artikel, in dem die Sicht, die den vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@sync_object** aus. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -  `logbased manualview`: Ein protokollbasierter, vertikal gefilterter Artikel, in dem die Sicht, die den vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert wird, und der für `@sync_object` angegeben wird. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
-    -   **logbased manualboth** &ndash; ein protokollbasierter, horizontal und vertikal gefilterter Artikel, in dem sowohl die gespeicherte Prozedur für das horizontale Filtern als auch die Sicht, die den vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@filter** und **@sync_object** angegeben werden. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -   `logbased manualboth`: Ein protokollbasierter, horizontal und vertikal gefilterter Artikel, in dem sowohl die gespeicherte Prozedur für das horizontale Filtern als auch die Sicht, die den vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert wird, und der für `@filter` bzw. `@sync_object` angegeben wird. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
      Damit wird ein neuer Artikel für die Veröffentlichung definiert. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
-2.  Führen Sie für **logbased manualboth** -Artikel und **logbased manualfilter** -Artikel [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus, um die gespeicherte Filterprozedur für einen horizontal gefilterten Artikel zu generieren. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+2.  Führen Sie für die Artikel `logbased manualboth` und `logbased manualfilter` [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus, um die gespeicherte Filterprozedur für einen horizontal gefilterten Artikel zu generieren. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-3.  Führen Sie für Artikel vom Typ **logbased manualboth**, **logbased manualview**und **logbased manualfilter** [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus, um die Sicht zu generieren, die den vertikal gefilterten Artikel definiert. Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+3.  Führen Sie für die Artikel `logbased manualboth`, `logbased manualview` und `logbased manualfilter` [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus, um die Sicht zu generieren, die den vertikal gefilterten Artikel definiert. Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>So veröffentlichen Sie einen Artikel für eine Sicht oder eine indizierte Sicht in einer Transaktions- oder Momentaufnahmeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie einen der folgenden Werte für **@type** an, um den Typ des Artikels zu definieren:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie einen der folgenden Werte für `@type` an, um den Typ des Artikels zu definieren:  
   
     -   **indexed view logbased** &ndash; ein Artikel für eine protokollbasierte, indizierte Sicht. Die Replikation generiert automatisch die gespeicherte Prozedur, die für das horizontale Filtern verwendet wird, sowie die Sicht, die einen vertikal gefilterten Artikel definiert.  
   
@@ -61,11 +61,11 @@ ms.locfileid: "68113919"
   
     -   **indexed view schema only** &ndash; ein Artikel für eine indizierte Sicht vom Typ schema only. Die Basistabelle muss ebenfalls repliziert werden.  
   
-    -   **indexed view logbased manualfilter** &ndash; ein protokollbasierter, horizontal gefilterter Artikel für eine indizierte Sicht, in dem die gespeicherte Prozedur für das horizontale Filtern manuell vom Benutzer erstellt und definiert sowie für **@filter** aus. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+    -   **indexed view logbased manualfilter**: Ein protokollbasierter, horizontal gefilterter Artikel für eine indizierte Sicht, in dem die gespeicherte Prozedur für das horizontale Filtern manuell vom Benutzer erstellt und definiert wird, und der für `@filter` angegeben wird. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-    -   **indexed view logbased manualview** &ndash; ein protokollbasierter, gefilterter Artikel für eine indizierte Sicht, in dem die Sicht, die einen vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@sync_object** aus. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualview**: Ein protokollbasierter, gefilterter Artikel für eine indizierte Sicht, in dem die Sicht, die einen vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert wird, und der für `@sync_object` angegeben wird. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
-    -   **indexed view logbased manualboth** &ndash; ein protokollbasierter, gefilterter Artikel für eine indizierte Sicht, in dem sowohl die gespeicherte Prozedur für das horizontale Filtern als auch die Sicht, die einen vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@filter** und **@sync_object** angegeben werden. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualboth**: Ein protokollbasierter, gefilterter Artikel für eine indizierte Sicht, in dem sowohl die gespeicherte Prozedur für das horizontale Filtern als auch die Sicht, die einen vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert wird, und der für `@filter` bzw. `@sync_object` angegeben wird. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
      Damit wird ein neuer Artikel für die Veröffentlichung definiert. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68113919"
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>So veröffentlichen Sie einen Artikel für eine gespeicherte Prozedur, für die Ausführung einer gespeicherten Prozedur oder für eine benutzerdefinierte Funktion in einer Transaktions- oder Momentaufnahmeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie einen der folgenden Werte für **@type** an, um den Typ des Artikels zu definieren:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie einen der folgenden Werte für `@type` an, um den Typ des Artikels zu definieren:  
   
     -   **proc schema only** &ndash; ein Artikel für eine gespeicherte Prozedur vom Typ schema only.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68113919"
   
 ### <a name="to-publish-a-table-or-view-article-in-a-merge-publication"></a>So veröffentlichen Sie einen Tabellen- oder Sichtartikel in einer Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)aus. Geben Sie einen der folgenden Werte für **@type** an, um den Typ des Artikels zu definieren:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)aus. Geben Sie einen der folgenden Werte für `@type` an, um den Typ des Artikels zu definieren:  
   
     -   **table** &ndash; ein Tabellenartikel.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68113919"
   
 ### <a name="to-publish-a-stored-procedure-or-user-defined-function-article-in-a-merge-publication"></a>So veröffentlichen Sie einen Artikel für eine gespeicherte Prozedur oder eine benutzerdefinierte Funktion in einer Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)aus. Geben Sie einen der folgenden Werte für **@type** an, um den Typ des Artikels zu definieren:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)aus. Geben Sie einen der folgenden Werte für `@type` an, um den Typ des Artikels zu definieren:  
   
     -   **func schema only** &ndash; ein Artikel für eine benutzerdefinierte Funktion vom Typ schema only.  
   

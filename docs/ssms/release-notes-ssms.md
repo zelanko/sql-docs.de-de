@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 09/24/2019
-ms.openlocfilehash: 776f251e574ae2fa8165e4dd4d4feee6a5cf9968
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.date: 10/03/2019
+ms.openlocfilehash: eedec59438b13f9a2e9ac92562921ef0504b8f58
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326084"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816796"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -41,23 +41,23 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="ssms-183"></a>SSMS 18.3 
+## <a name="ssms-1831"></a>SSMS 18.3.1
 
-Herunterladen: [SSMS 18.3 herunterladen](download-sql-server-management-studio-ssms.md)  
-Buildnummer: 15.0.18178.0  
-Releasedatum: 23. September 2019
+Herunterladen: [Herunterladen von SSMS 18.3.1](download-sql-server-management-studio-ssms.md)  
+Buildnummer: 15.0.18183.0  
+Releasedatum: 2. Oktober 2019
 
-SSMS 18.3 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA). Frühere Versionen von SSMS finden Sie weiter unten im Abschnitt [Vorgängerversionen von SSMS](release-notes-ssms.md#previous-ssms-releases).
+SSMS 18.3.1 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA). Frühere Versionen von SSMS finden Sie weiter unten im Abschnitt [Vorgängerversionen von SSMS](release-notes-ssms.md#previous-ssms-releases).
 
-18.3 ist ein Update von 18.2 mit den folgenden neuen Elementen und Fehlerbehebungen.
+18.3.1 ist ein Update von 18.2 mit den folgenden neuen Elementen und Fehlerbehebungen.
 
-## <a name="whats-new-in-183"></a>Neues in Version 18.3
+## <a name="whats-new-in-1831"></a>Neues in Version 18.3.1
 
 | Neues Element | Details |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Datenklassifizierung | Hinzufügen von Datenklassifizierungsinformationen zur Spalteneigenschaften-Benutzeroberfläche (*Informationstyp*, *Informationstyp-ID*, *Vertraulichkeitsbezeichnung* und *Vertraulichkeitsbezeichnungs-ID* werden auf der Benutzeroberfläche von SSMS nicht verfügbar gemacht). |
-| IntelliSense/Editor | Aktualisierte Unterstützung für vor Kurzem zu SQL Server 2019 hinzugefügte Features (Beispiel: „ALTER SERVER CONFIGURATION“). | 
-| Integration Services | Fügen Sie ein neues Auswahlmenü „itemr `Tools > Migrate to Azure > Configure Azure-enabled DTExec`“ hinzu, das Ausführungen von SSIS-Paketen in der Azure-SSIS Integration Runtime als SSIS-Paket ausführen-Aktivitäten in ADF-Pipelines aufruft. |
+| IntelliSense/Editor | Aktualisierte Unterstützung für vor Kurzem zu SQL Server 2019 hinzugefügte Features (Beispiel: „ALTER SERVER CONFIGURATION“). |
+| Integration Services | Fügen Sie ein neues Auswahlmenü `Tools > Migrate to Azure > Configure Azure-enabled DTExec` hinzu, das Ausführungen von SSIS-Paketen in der Azure-SSIS Integration Runtime als SSIS-Paket ausführen-Aktivitäten in ADF-Pipelines aufruft. |
 | SMO/Skripterstellung | Hinzugefügte Unterstützung für Supportskripts der UNIQUE-Einschränkung von Azure SQL DW. |
 | SMO/Skripterstellung | Datenklassifizierung </br> Hinzugefügte Unterstützung für SQL Version 10 (SQL 2008) und höher. </br> Neues Vertraulichkeitsattribut ‚rank‘ für SQL Version 15 (SQL 2019) und höher sowie Azure SQL DB. |
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../sql-assessment-api/sql-assessment-api-overview.md): Hinzugefügte Versionsverwaltung zum Regelsatzformat. |
@@ -65,7 +65,7 @@ SSMS 18.3 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA). 
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../sql-assessment-api/sql-assessment-api-overview.md): Hinzugefügte Unterstützung für verwaltete Azure SQL Datenbank-Instanzen. |
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../sql-assessment-api/sql-assessment-api-overview.md): Aktualisierte Standardansicht von Cmdlets zum Anzeigen von Ergebnissen als Tabelle. |
 
-## <a name="bug-fixes-in-183"></a>Fehlerkorrekturen in Version 18.3
+## <a name="bug-fixes-in-1831"></a>Fehlerkorrekturen in Version 18.3.1
 
 | Neues Element | Details |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -82,11 +82,12 @@ SSMS 18.3 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA). 
 | SSMS allgemein | Es wurde ein Problem in der XEvent-Benutzeroberfläche behoben, bei dem das Zeigen auf das Raster die Auswahl von Zeilen bewirkte. </br></br> Weitere Details finden Sie im UserVoice-Beitrag: [Die Benutzeroberfläche für erweiterte Ereignisse von SSMS wählt beim Draufzeigen Aktionen aus](https://feedback.azure.com/forums/908035/suggestions/38262124). |
 | Importieren von Flatfiles | Das Problem wurde behoben, dass „Flatfile importieren“ nicht alle Daten importierte, da dem Benutzer die Wahl zwischen der Erkennung einfacher und Rich-Datentypen gegeben wurde.</br></br> Weitere Details finden Sie im UserVoice-Beitrag: [SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989) (SSMS-Befehl „Flatfile importieren“ importiert nicht alle Daten). |
 | Integration Services | Neuer Vorgangstyp *StartNonCatalogExecution* für den SSIS-Vorgangsbericht wurde hinzugefügt.|
+| Integration Services | Es wurde ein Problem in den Azure Data Factory-Pipelines behoben, das von dem Azure-aktivierten `DTExec`-Dienstprogramm generiert wurde, um den richtigen Parametertyp zu verwenden. (explizit für 18.3.1) |
 | SMO/Skripterstellung | Es wurde ein Problem behoben, das bewirkte, dass SMO beim Abrufen von Eigenschaften Fehler auslöste, wenn **SMO.Server.SetDefaultInitFields(true)** verwendet wurde.|
 | Benutzeroberfläche des Abfragespeichers | Es wurde ein Problem behoben, bei dem die Y-Achse nicht skalierte, wenn in der Ansicht *Nachverfolgte Abfrage* die *Ausführungsanzahl* ausgewählt war. |
 | Sicherheitsrisikobewertung | Das Löschen und Genehmigen der Basislinie für Azure SQL DBs wurde deaktiviert.|
 
-### <a name="known-issues-183"></a>Bekannte Probleme (18.3)
+### <a name="known-issues-1831"></a>Bekannte Probleme (18.3.1)
 
 - Das Datenbankdiagramm, das von einem auf Computer A ausgeführten SSMS erstellt wurde, kann nicht auf Computer B geändert werden (SSMS stürzt ab). Weitere Informationen finden Sie unter [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649).
 

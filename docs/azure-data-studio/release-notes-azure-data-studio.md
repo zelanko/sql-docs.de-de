@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/11/2019
-ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.date: 10/03/2019
+ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878625"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816647"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](download.md)**
+
+## <a name="october-2019"></a>Oktober 2019
+
+2\. Oktober 2019 &nbsp; / &nbsp; Version: 1.12.0
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Release der Erweiterung für den Abfrageverlauf | Die Erweiterung für den SQL-Verlauf speichert alle früheren Abfragen, die in einer Azure Data Studio-Sitzung ausgeführt wurden, und listet diese in Ausführungsreihenfolge auf. Benutzern werden die Optionen „Abfrage öffnen“, „Abfrage ausführen“, „Abfrage löschen“, „Abfrageverlauf anhalten“ oder „Alle Einträge im Abfrageverlauf löschen“ angezeigt. |
+| Neue Kopieren/Einfügen-Optionen für Ergebnisse | Wir haben weitere Möglichkeiten zum Kopieren und Einfügen von Ergebnissen aus dem Ergebnisraster hinzugefügt. |
+| Update für PowerShell-Erweiterung |  |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Bekannte Probleme
+- Notebooks
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) In seltenen Fällen, in denen das Notebook falsch serialisiert wurde
 
 ## <a name="september-2019"></a>September 2019
 

@@ -13,14 +13,14 @@ ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 62e6868e84fcdf6b861b2b03906c1ea5319f457a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9e2db420febd0bd4a607b23a6b69a014fa8d197c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68765958"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711056"
 ---
-# <a name="mssqleng021798"></a>MSSQL_ENG021798
+# <a name="mssql_eng021798"></a>MSSQL_ENG021798
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Meldungsdetails  
@@ -41,7 +41,7 @@ ms.locfileid: "68765958"
   
 -   Die gespeicherte Prozedur **sp_addpublication** wird vor [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) ausgeführt. Dies gilt für alle Transaktionsveröffentlichungen.  
   
--   Die gespeicherte Prozedur **sp_addpublication** wird vor [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) ausgeführt. Dies gilt für Transaktionsveröffentlichungen, für die Abonnements mit verzögertem Update über eine Warteschlange aktiviert sind (d. h., für den **@allow_queued_tran** -Parameter von **sp_addpublication**ist der Wert TRUE ausgewählt).  
+-   Die gespeicherte Prozedur **sp_addpublication** wird vor [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) ausgeführt. Dies gilt für Transaktionsveröffentlichungen, für die Abonnements mit verzögertem Update über eine Warteschlange aktiviert sind (d. h., für den `@allow_queued_tran`-Parameter von **sp_addpublication** ist der Wert TRUE ausgewählt).  
   
  Die gespeicherten Prozeduren **sp_addlogreader_agent** und **sp_addqreader_agent** erstellen jeweils einen Agentauftrag und ermöglichen Ihnen, das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto anzugeben, unter dem der Agent ausgeführt wird. Für Benutzer, die die Rolle **sysadmin** besitzen, werden Agentaufträge implizit erstellt, wenn **sp_addlogreader_agent** und **sp_addqreader_agent** nicht ausgeführt werden. Die Agents werden im Kontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkontos auf dem Verteiler ausgeführt. Obwohl **sp_addlogreader_agent** und **sp_addqreader_agent** für Benutzer in der **sysadmin** -Rolle nicht erforderlich sind, empfiehlt sich als bewährte Sicherheitsmethode, ein separates Konto für die Agents anzugeben. Weitere Informationen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   

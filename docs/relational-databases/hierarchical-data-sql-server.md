@@ -1,7 +1,7 @@
 ---
 title: Hierarchische Daten (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/03/2017
+ms.date: 10/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 018866c81a84455bd3480a523dbdc2fffaa538c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035849"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974254"
 ---
 # <a name="hierarchical-data-sql-server"></a>Hierarchische Daten (SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Beispiel für eine serialisierbare Transaktion  
- Für den **Org_BreadthFirst** -Index stellt sicher, dass **@last_child** mittels einer Bereichssuche ermittelt wird. Zusätzlich zu anderen Fehlerfällen könnte eine Anwendung prüfen, ob eine Verletzung aufgrund doppelter Schlüssel darauf hindeutet, dass versucht wurde, mehrere Angestellte mit der gleichen ID einzufügen, weshalb **@last_child** neu berechnet werden muss. Im folgenden Code werden eine serialisierbare Transaktion und ein Breitensuchindex verwendet, um den neuen Knotenwert zu berechnen:  
+ Für den **Org_BreadthFirst** -Index stellt sicher, dass **@last_child** mittels einer Bereichssuche ermittelt wird. Zusätzlich zu anderen Fehlerfällen könnte eine Anwendung prüfen, ob eine Verletzung aufgrund doppelter Schlüssel darauf hindeutet, dass versucht wurde, mehrere Angestellte mit der gleichen ID einzufügen, weshalb **@last_child** neu berechnet werden muss. Mit dem folgenden Code wird der neue Knotenwert in einer serialisierbaren Transaktion berechnet:  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -343,9 +343,12 @@ DECLARE @last_child hierarchyid
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  
 BEGIN TRANSACTION   
   
-UPDATE Org_T2   
-SET @last_child = LastChild = EmployeeId.GetDescendant(LastChild,NULL)  
-WHERE EmployeeId = @mgrid  
+SELECT @last_child  =  EmployeeId.GetDescendant(LastChild,NULL)
+FROM Org_T2
+WHERE EmployeeId = @mgrid
+
+UPDATE Org_T2 SET LastChild = @last_child  WHERE EmployeeId = @mgrid
+
 INSERT Org_T2 (EmployeeId, EmployeeName)   
     VALUES(@last_child, @EmpName)  
 COMMIT  
@@ -509,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> Verschieben von Teilstrukturen  
- Ein anderer allgemeiner Vorgang ist das Verschieben von Teilstrukturen. Die Prozedur unten macht die Teilstruktur **@oldMgr** (einschließlich **@oldMgr**) zu einer Teilstruktur von **@newMgr**bedeutend schneller.  
+ Ein anderer allgemeiner Vorgang ist das Verschieben von Teilstrukturen. Die Prozedur unten macht die Teilstruktur **@oldMgr** (einschließlich **@oldMgr** ) zu einer Teilstruktur von **@newMgr** bedeutend schneller.  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

@@ -53,14 +53,14 @@ helpviewer_keywords:
 - USE HINT query hint
 - QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-author: VanMSFT
+author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
-ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
+ms.openlocfilehash: 6c219db3dd5deda9201c0c629eb057b3162b0e49
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71207736"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713189"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -182,23 +182,23 @@ Durch Angeben von KEEP PLAN wird sichergestellt, dass eine Abfrage nicht zu häu
 KEEPFIXED PLAN  
 Zwingt den Abfrageoptimierer, die Abfrage aufgrund von Änderungen in den Statistiken nicht erneut zu kompilieren. Durch Angabe von KEEPFIXED PLAN wird sichergestellt, dass eine Abfrage nur dann erneut kompiliert wird, wenn das Schema der zugrunde liegenden Tabellen geändert wird oder für diese Tabellen **sp_recompile** ausgeführt wird.  
   
-IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
 Verhindert, dass die Abfrage einen nicht gruppierten speicheroptimierten Columnstore-Index verwendet. Wenn die Abfrage den Abfragehinweis enthält, der die Verwendung des Columnstore-Indexes verhindert, sowie einen Indexhinweis, der die Verwendung eines Columnstore-Index festlegt, besteht ein Konflikt zwischen den Hinweisen, und die Abfrage gibt einen Fehler zurück.  
   
-MAX_GRANT_PERCENT = _percent_  
+MAX_GRANT_PERCENT = _percent_     
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+
 Die maximale Größe der Arbeitsspeicherzuweisung in Prozent. Die Abfrage überschreitet diese Begrenzung garantiert nicht. Die tatsächliche Begrenzung kann niedriger sein, wenn die Resource Governor-Einstellung niedriger ist als die durch diesen Hinweis angegebene Begrenzung. Gültige Werte liegen in einem Bereich zwischen 0,0 und 100,0.  
   
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-MIN_GRANT_PERCENT = _percent_  
+MIN_GRANT_PERCENT = _percent_        
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+
 Die minimale Größe der Arbeitsspeicherzuweisung in PERCENT = % der Standardbegrenzung. Die Abfrage kann MAX (benötigter Speicher, Mindestzuweisung) garantiert abrufen, da zumindest der für das Starten einer Abfrage benötigte Speicher erforderlich ist. Gültige Werte liegen in einem Bereich zwischen 0,0 und 100,0.  
-  
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-MAXDOP _number_  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ 
+MAXDOP _number_      
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Überschreibt die Konfigurationsoption **max degree of parallelism** von **sp_configure**. Überschreibt auch den Resource Governor für die Abfrage, die diese Option angibt. Der MAXDOP-Abfragehinweis kann den mit sp_configure konfigurierten Wert überschreiten. Wenn MAXDOP den mit der Ressourcenkontrolle konfigurierten Wert überschreitet, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] den MAXDOP-Wert der Ressourcenkontrolle, wie unter [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md) beschrieben. Alle mit der Konfigurationsoption **Max. Grad an Parallelität** verwendeten semantischen Regeln gelten auch für die Verwendung des MAXDOP-Abfragehinweises. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
@@ -215,7 +215,7 @@ Aufgrund dieses Fehlers wird für alle Änderungen aufgrund der Anweisung ein Ro
 Weitere Informationen finden Sie unter [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).     
   
 NO_PERFORMANCE_SPOOL    
- **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
 Verhindert, dass ein Spool-Operator zu Abfrageplänen hinzugefügt wird (mit Ausnahme der Pläne, bei denen der Spool-Operator eine gültige Update-Semantik garantieren muss). In einigen Szenarios kann der Spool-Operator die Leistung beeinträchtigen. Der Spool-Operator verwendet beispielsweise „tempdb“. Wenn in den Spool-Vorgängen viele Abfragen gleichzeitig ausgeführt werden, kann es zu einem tempdb-Konflikt kommen.  
   
@@ -269,13 +269,17 @@ Die folgenden Hinweisnamen werden unterstützt:
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    Bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Plan mit minimaler Selektivität generiert, wenn AND-Prädikate für Filter geschätzt werden, die bei der Korrelation berücksichtigt werden sollen. Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137, wenn es mit dem Kardinalitätsschätzungsmodell von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und früheren Versionen verwendet wird, und hat ähnliche Auswirkungen, wenn das [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 mit dem Kardinalitätsschätzungsmodell von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder einer neueren Version verwendet wird.
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
-   Deaktiviert Adaptive Joins im Batchmodus. Weitere Informationen finden Sie unter [Adaptive Joins im Batchmodus](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins). **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   Deaktiviert Adaptive Joins im Batchmodus. Weitere Informationen finden Sie unter [Adaptive Joins im Batchmodus](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).     
+   **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   Deaktiviert das Feedback zur Speicherzuweisung im Batchmodus. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Batchmodus](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback). **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   Deaktiviert das Feedback zur Speicherzuweisung im Batchmodus. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Batchmodus](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).     
+   **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  Deaktiviert die verzögerte Kompilierung von Tabellenvariablen. Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvariablen](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation). **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+  Deaktiviert die verzögerte Kompilierung von Tabellenvariablen. Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvariablen](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).     
+  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
-   Deaktiviert die verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen. Weitere Informationen finden Sie unter [Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs). **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   Deaktiviert die verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen. Weitere Informationen finden Sie unter [Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).     
+   **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    Weist den Abfrageprozessor an, bei der Generierung eines Abfrageplans keine Sortiervorgänge (Batch-Sortierung) für optimierte Joins geschachtelter Schleifen zu verwenden. Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -290,11 +294,14 @@ Die folgenden Hinweisnamen werden unterstützt:
 *  'DISABLE_PARAMETER_SNIFFING'      
    Weist den Abfrageoptimierer an, die durchschnittliche Datenverteilung zu verwenden, während er eine Abfrage mit einem oder mehreren Parametern kompiliert. Diese Anweisung macht den Abfrageplan unabhängig von dem Parameterwert, der beim Kompilieren der Abfrage zuerst verwendet wurde. Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 oder der Einstellung `PARAMETER_SNIFFING = OFF` für die [Datenbankweit gültige Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
-  Deaktiviert das Feedback zur Speicherzuweisung im Zeilenmodus. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Zeilenmodus](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  Deaktiviert das Feedback zur Speicherzuweisung im Zeilenmodus. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Zeilenmodus](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).      
+  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
-  Deaktiviert das Inlining benutzerdefinierter Skalarfunktionen. Weitere Informationen finden Sie unter [Scalar UDF Inlining (Inlining benutzerdefinierter Skalarfunktionen)](../../relational-databases/user-defined-functions/scalar-udf-inlining.md). **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
+  Deaktiviert das Inlining benutzerdefinierter Skalarfunktionen. Weitere Informationen finden Sie unter [Scalar UDF Inlining (Inlining benutzerdefinierter Skalarfunktionen)](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).     
+  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
 * 'DISALLOW_BATCH_MODE'    
-  Deaktiviert die Batchmodusausführung. Weitere Informationen finden Sie unter [Ausführungsmodi](../../relational-databases/query-processing-architecture-guide.md#execution-modes). **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  Deaktiviert die Batchmodusausführung. Weitere Informationen finden Sie unter [Ausführungsmodi](../../relational-databases/query-processing-architecture-guide.md#execution-modes).     
+  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Aktiviert automatisch generierte Schnellstatistiken (Histogrammzusatz) für alle führenden Indexspalten, für welche die Kardinalitätsschätzung erforderlich ist. Das für die Kardinalitätsschätzung verwendete Histogramm wird zum Zeitpunkt der Abfragekompilierung angepasst, damit der tatsächliche Höchst- und Mindestwert in dieser Spalte berücksichtigt werden. Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
@@ -304,7 +311,8 @@ Die folgenden Hinweisnamen werden unterstützt:
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
    Zwingt den Abfrageoptimierer, das Modell [Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md) von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und Vorgängerversionen zu verwenden. Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 oder der Einstellung `LEGACY_CARDINALITY_ESTIMATION = ON` für die [Datenbankweit gültige Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 *  QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n          
- Erzwingt das Verhalten des Abfrageoptimierers auf Abfrageebene. Dieses Verhalten tritt auf, wenn die Abfrage mit Datenbank-Kompatibilitätsgrad _n_ kompiliert wird, wobei _n_ ein unterstützter Datenbank-Kompatibilitätsgrad ist. Unter [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) finden Sie eine Liste der zurzeit unterstützten Werte für _n_. **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
+ Erzwingt das Verhalten des Abfrageoptimierers auf Abfrageebene. Dieses Verhalten tritt auf, wenn die Abfrage mit Datenbank-Kompatibilitätsgrad _n_ kompiliert wird, wobei _n_ ein unterstützter Datenbank-Kompatibilitätsgrad ist. Unter [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) finden Sie eine Liste der zurzeit unterstützten Werte für _n_.      
+   **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
    > [!NOTE]
    > Der Hinweis QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n überschreibt keine standardmäßigen oder älteren Einstellungen für die Kardinalitätsschätzung, wenn er durch eine datenbankweite Konfiguration, ein Ablaufverfolgungsflag oder einen anderen Abfragehinweis wie QUERYTRACEON erzwungen wurde.   
@@ -312,7 +320,8 @@ Die folgenden Hinweisnamen werden unterstützt:
    > Weitere Informationen zu diesem Hinweis finden Sie unter [Developer's Choice: Hinting Query Execution model (Von Entwicklern inspiriert: Modell für die Ausführung von Hinweisabfragen)](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
     
 *  'QUERY_PLAN_PROFILE'      
- Aktiviert einfache Profilerstellung für die Abfrage. Wenn eine Abfrage, die diesen neuen Hinweis enthält, abgeschlossen wird, wird ein neues erweitertes Ereignis, query_plan_profile, ausgelöst. Dieses erweiterte Ereignis macht Ausführungsstatistiken und ein tatsächliches Ausführungsplan-XML verfügbar, das dem erweiterten Ereignis query_post_execution_showplan ähnelt, aber nur für Abfragen, die den neuen Hinweis enthalten. **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
+ Aktiviert einfache Profilerstellung für die Abfrage. Wenn eine Abfrage, die diesen neuen Hinweis enthält, abgeschlossen wird, wird ein neues erweitertes Ereignis, query_plan_profile, ausgelöst. Dieses erweiterte Ereignis macht Ausführungsstatistiken und ein tatsächliches Ausführungsplan-XML verfügbar, das dem erweiterten Ereignis query_post_execution_showplan ähnelt, aber nur für Abfragen, die den neuen Hinweis enthalten.    
+   **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
 
    > [!NOTE]
    > Wenn Sie das Sammeln des erweiterten Ereignisses query_post_execution_showplan aktivieren, wird dadurch jeder Abfrage, die auf dem Server ausgeführt wird, eine Standard-Profilerstellungsinfrastruktur hinzugefügt, was die Gesamtleistung des Servers beeinträchtigen kann.      
@@ -453,8 +462,6 @@ GO
 ### <a name="f-using-maxdop"></a>F. Verwenden von MAXDOP  
  Im folgenden Beispiel wird der MAXDOP-Abfragehinweis verwendet. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
 ```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
@@ -582,8 +589,6 @@ GO
 ```  
 ### <a name="l-using-use-hint"></a>L. Verwenden von USE HINT  
  Im folgenden Beispiel werden der RECOMPILE- und der USE HINT-Abfragehinweis verwendet. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
-  
-**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ```sql  
 SELECT * FROM Person.Address  

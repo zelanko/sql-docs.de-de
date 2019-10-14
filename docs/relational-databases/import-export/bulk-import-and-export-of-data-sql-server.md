@@ -1,7 +1,7 @@
 ---
 title: Massenimport und -export von Daten (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/20/2017
+ms.date: 09/25/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,47 +25,52 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35ea6c3e64329f005d6ef97b23699b2dda43ed56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 462df4c5acf09d5de57a237c8fd68e5a394fb0dc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035844"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680816"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Massenimport und -export von Daten (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt den Massenexport von Daten (*Massendaten*) aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle und den Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht. 
-  
--   Der*Massenexport* bezieht sich auf das Kopieren von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle in eine Datendatei.
 
--   Beim*Massenimport* werden Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle geladen. Sie können beispielsweise Daten von einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Anwendung in eine Datendatei exportieren und dann einen Massenimport der Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ausführen.  
- 
-##  <a name="MethodsForBuliIE"></a> Methoden für den Massenimport und -export von Daten  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Massenexport von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle und der Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht unterstützt. Dazu stehen die folgenden grundlegenden Methoden zur Verfügung.  
- 
-  
-|Methode|und Beschreibung|Importiert Daten|Exportiert Daten|  
-|------------|-----------------|------------------|------------------|  
-|[bcp (Hilfsprogramm)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Ein Befehlszeilenprogramm (Bcp.exe), mit dem Massenexporte und -importe von Daten ausgeführt und Formatdateien generiert werden können.|Ja|Ja|  
-|[BULK INSERT-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, mit der Daten direkt aus einer Datendatei in eine Datenbanktabelle oder nicht partitionierte Sicht importiert werden.|Ja|Nein|  
-|[INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, bei der mit dem OPENROWSET-Massenrowsetanbieter ein Massenimport von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle ausgeführt wird. Dabei wird die OPENROWSET(BULK…)-Funktion angegeben, um Daten in einer INSERT-Anweisung auszuwählen.|Ja|Nein| 
-|[SQL Server-Import/Export-Assistent](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|Der Assistent erstellt einfache Pakete, die Daten zwischen vielen häufigen Datenformaten, einschließlich Datenbanken, Kalkulationstabellen und Textdateien, importieren und exportieren.|Ja|Ja|  
-  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt den Massenexport von Daten (*Massendaten*) aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle und den Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht.
+
+- Der*Massenexport* bezieht sich auf das Kopieren von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle in eine Datendatei.
+- Beim*Massenimport* werden Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle geladen. Sie können beispielsweise Daten von einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Anwendung in eine Datendatei exportieren und dann einen Massenimport der Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ausführen.
+
+## <a name="MethodsForBuliIE"></a> Methoden für den Massenimport und -export von Daten
+
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Massenexport von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle und der Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht unterstützt. Dazu stehen die folgenden grundlegenden Methoden zur Verfügung.
+
+|Methode|und Beschreibung|Importiert Daten|Exportiert Daten|
+|------------|-----------------|------------------|------------------|
+|[bcp (Hilfsprogramm)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Ein Befehlszeilenprogramm (Bcp.exe), mit dem Massenexporte und -importe von Daten ausgeführt und Formatdateien generiert werden können.|Ja|Ja|
+|[BULK INSERT-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, mit der Daten direkt aus einer Datendatei in eine Datenbanktabelle oder nicht partitionierte Sicht importiert werden.|Ja|Nein|
+|[INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, bei der mit dem OPENROWSET-Massenrowsetanbieter ein Massenimport von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle ausgeführt wird. Dabei wird die OPENROWSET(BULK…)-Funktion angegeben, um Daten in einer INSERT-Anweisung auszuwählen.|Ja|Nein|
+|[SQL Server-Import/Export-Assistent](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|Der Assistent erstellt einfache Pakete, die Daten zwischen vielen häufigen Datenformaten, einschließlich Datenbanken, Kalkulationstabellen und Textdateien, importieren und exportieren.|Ja|Ja|
+
 > [!IMPORTANT]
-> CSV (Comma-Separated Value)-Dateien werden von SQL Server-Massenimportvorgängen nicht unterstützt. In manchen Fällen kann jedoch eine CSV-Datei als Datendatei für einen Massenimport von Daten in SQL Server verwendet werden. Das Feldabschlusszeichen einer CSV-Datei muss kein Komma sein. Weitere Informationen finden Sie unter [Vorbereiten von Daten für den Massenexport oder -import (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
+> Regeln zur Verwendung von CSV-Dateien (durch Trennzeichen getrennte Dateien) als Datendatei für den Massenimport von Daten in SQL Server finden Sie unter [Vorbereiten von Daten für den Massenexport oder -import (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
 > [!NOTE]
-> Nur das Hilfsprogramm „bcp“ wird von Azure SQL-Datenbank und Azure SQL Data Warehouse zum Importieren und Exportieren von Dateien unterstützt, die durch Trennzeichen getrennt sind.
-  
-##  <a name="FFs"></a> Formatdateien  
- Das Hilfsprogramm [bcp](../../tools/bcp-utility.md) sowie die Anweisungen [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [INSERT... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) unterstützen alle die Verwendung einer als *Formatdatei* bezeichneten speziellen Datei zum Speichern von Formatinformationen für jedes Feld in einer Datendatei. In einer Formatdatei können auch Informationen zu der korrespondierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle enthalten sein. Über die Formatdatei können alle Formatinformationen bereitgestellt werden, die für den Massenexport von Daten aus einer Instanz und für den Massenimport von Daten in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erforderlich sind.  
-  
- Formatdateien bieten eine flexible Möglichkeit zum Interpretieren von Daten, wie diese in der Datendatei während des Imports vorhanden sind, und zum Formatieren von Daten in der Datendatei während des Exports. Durch diese Flexibilität besteht nicht mehr die Notwendigkeit, einen speziellen Code für das Interpretieren der Daten zu schreiben oder die Daten für die speziellen Anforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder der externen Anwendung umzuformatieren. Wenn Sie beispielsweise einen Massenexport von Daten ausführen, die in eine Anwendung geladen werden sollen, für die durch Trennzeichen getrennte Werte erforderlich sind, können Sie eine Formatdatei verwenden, um Kommas als Feldabschlusszeichen in den exportierten Daten einzufügen.  
-  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Arten von Formatdateien: XML-Formatdateien und Nicht-XML-Formatdateien.  
-  
- Formatdateien können nur mithilfe des Hilfsprogramms [bcp](../../tools/bcp-utility.md) generiert werden. Weitere Informationen finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md). Weitere Informationen zu Formatdateien finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
-  
+> Nur das Hilfsprogramm „bcp“ wird von Azure SQL Data Warehouse zum Importieren und Exportieren von durch Trennzeichen getrennte Dateien unterstützt.
+
+## <a name="FFs"></a> Formatdateien
+
+Das Hilfsprogramm [bcp](../../tools/bcp-utility.md) sowie die Anweisungen [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [INSERT... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) unterstützen alle die Verwendung einer als *Formatdatei* bezeichneten speziellen Datei zum Speichern von Formatinformationen für jedes Feld in einer Datendatei. In einer Formatdatei können auch Informationen zu der korrespondierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle enthalten sein. Über die Formatdatei können alle Formatinformationen bereitgestellt werden, die für den Massenexport von Daten aus einer Instanz und für den Massenimport von Daten in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erforderlich sind.
+
+> [!IMPORTANT]
+> Das Hilfsprogramm „bcp“ kann nicht zum Importieren oder Exportieren von Daten zwischen Azure Blob Storage und Azure SQL-Datenbank verwendet werden. Verwenden Sie hierzu die Anweisungen [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).
+
+Formatdateien bieten eine flexible Möglichkeit zum Interpretieren von Daten, wie diese in der Datendatei während des Imports vorhanden sind, und zum Formatieren von Daten in der Datendatei während des Exports. Durch diese Flexibilität besteht nicht mehr die Notwendigkeit, einen speziellen Code für das Interpretieren der Daten zu schreiben oder die Daten für die speziellen Anforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder der externen Anwendung umzuformatieren. Wenn Sie beispielsweise einen Massenexport von Daten ausführen, die in eine Anwendung geladen werden sollen, für die durch Trennzeichen getrennte Werte erforderlich sind, können Sie eine Formatdatei verwenden, um Kommas als Feldabschlusszeichen in den exportierten Daten einzufügen.
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Arten von Formatdateien: XML-Formatdateien und Nicht-XML-Formatdateien.
+
+Formatdateien können nur mithilfe des Hilfsprogramms [bcp](../../tools/bcp-utility.md) generiert werden. Weitere Informationen finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md). Weitere Informationen zu Formatdateien finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
+
 > [!NOTE]
 > Wenn keine Formatdatei während eines Massenexport- oder Massenimportvorgangs zur Verfügung steht, können Sie die Standardformatierung mithilfe der Befehlszeile überschreiben.
 
@@ -77,15 +82,12 @@ ms.locfileid: "68035844"
 |[Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)|
 |[Beibehalten von Identitätswerten beim Massenimport von Daten (SQL Server)](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)|
 |[Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Erstellen einer Formatdatei (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Massenimport von Daten mithilfe einer Formatdatei (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Auslassen eines Datenfelds mithilfe einer Formatdatei (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)|
- 
-  
-## <a name="more-information"></a>Weitere Informationen  
- [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [Beispiele für den Massenimport und -export von XML-Dokumenten &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)   
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)   
- [Kopieren von Datenbanken auf andere Server](../../relational-databases/databases/copy-databases-to-other-servers.md)   
- [Ausführen von Massenladen von XML-Daten &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)   
- [Durchführen von Massenkopiervorgängen](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)   
 
-  
-  
+## <a name="more-information"></a>Weitere Informationen
+
+- [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)
+- [Beispiele für den Massenimport und -export von XML-Dokumenten &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)
+- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)
+- [Kopieren von Datenbanken auf andere Server](../../relational-databases/databases/copy-databases-to-other-servers.md)
+- [Ausführen von Massenladen von XML-Daten &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)
+- [Durchführen von Massenkopiervorgängen](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)

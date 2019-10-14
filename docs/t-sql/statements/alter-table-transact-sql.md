@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63f1b415471e8793e66bd3e90acc6f6be987904e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889819"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823624"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -473,6 +473,9 @@ Wenn Sie Always Encrypted mit Secure Enclaves verwenden, können Sie alle Versch
 *column_name*  
 Der Name der Spalte, die geändert, hinzugefügt oder gelöscht werden soll. *column_name* darf maximal 128 Zeichen lang sein. Bei neuen Spalten, die mit einem **timestamp**-Datentyp erstellt wurden, ist *column_name* nicht erforderlich. Der Name **timestamp** wird verwendet, wenn Sie *column_name* nicht für eine Spalte vom Datentyp **timestamp** angeben.
 
+> [!NOTE]
+> Neue Spalten werden hinzugefügt, nachdem alle vorhandenen Spalten in der Tabelle geändert wurden.
+
 [ _type\_schema\_name_ **.** ] _type\_name_  
 Der neue Datentyp für die geänderte Spalte oder der Datentyp für die hinzugefügte Spalte. *type_name* kann für vorhandene Spalten von partitionierten Tabellen nicht angegeben werden. *type_name* kann einen der folgenden Typen aufweisen:
 
@@ -614,6 +617,9 @@ Die Syntax ALTER TABLE... ADD/DROP/ALTER INDEX wird nur für speicheroptimierte 
 
 ADD  
 Gibt an, dass eine oder mehrere Spaltendefinitionen, Definitionen berechneter Spalten oder Tabelleneinschränkungen hinzugefügt werden. Alternativ dazu werden die Spalten hinzugefügt, die das System zur Systemversionsverwaltung verwendet. Für speicheroptimierte Tabellen kann ein Index hinzugefügt werden.
+
+> [!NOTE]
+> Neue Spalten werden hinzugefügt, nachdem alle vorhandenen Spalten in der Tabelle geändert wurden.
 
 > [!IMPORTANT]
 > Wenn keine ALTER TABLE-Anweisung verwendet wird, werden die Anweisungen [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) und [PAD_INDEX](alter-table-index-option-transact-sql.md) nicht für Indizes auf speicheroptimierten Tabellen unterstützt.
@@ -975,7 +981,7 @@ IF EXISTS
 
 Löscht die Spalte oder Einschränkung nur, wenn diese bereits vorhanden ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 Verwenden Sie [INSERT](../../t-sql/statements/insert-transact-sql.md), um neue Datenzeilen hinzuzufügen. Verwenden Sie [DELETE](../../t-sql/statements/delete-transact-sql.md) oder [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md), um Datenzeilen zu entfernen. Verwenden Sie [UPDATE](../../t-sql/queries/update-transact-sql.md), um die Werte in vorhandenen Zeilen zu ändern.
 

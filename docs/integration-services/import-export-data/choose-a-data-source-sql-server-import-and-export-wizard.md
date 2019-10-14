@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 275ac725c0bde283fa45feccd4479c95cc71126b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b707b2b31c15c565353f0ff581ca1f4d7308a25b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296398"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951945"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Datenquelle auswählen (SQL Server-Import/Export-Assistent)
 
@@ -28,7 +28,7 @@ ms.locfileid: "71296398"
 Weitere Informationen zu Datenquellen, die Sie verwenden können, finden Sie unter [Welche Datenquellen und -ziele kann ich verwenden?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 > [!NOTE]
-> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import- und Export-Assistent nutzt SQL Server Integration Services (SSIS). Daher gelten dieselben Einschränkungen, die für SSIS gelten, auch für den Assistenten.  Z. B. die Spalten „ErrorCode“ und „ErrorColumn“, die standardmäßig hinzugefügt werden, wie in [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md) beschrieben.
+> Der Import- und Export-Assistent von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nutzt SQL Server Integration Services (SSIS). Daher gelten dieselben Einschränkungen, die für SSIS gelten, auch für den Assistenten.  Z. B. die Spalten „ErrorCode“ und „ErrorColumn“, die standardmäßig hinzugefügt werden, wie in [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md) beschrieben.
 
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>Screenshot der Seite „Datenquelle auswählen“ 
 Die folgende Abbildung zeigt den oberen Teil der Seite **Datenquelle auswählen** im Assistenten, der sich nicht ändert. Auf den restlichen Seiten finden Sie verschiedene Optionen, die von der von Ihnen ausgewählten Datenquelle abhängig sind.

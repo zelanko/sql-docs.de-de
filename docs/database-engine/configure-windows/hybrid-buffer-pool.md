@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 8bbc7670f3a4d6d8a017e7284c5a661d38594f08
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251057"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823571"
 ---
 # <a name="hybrid-buffer-pool"></a>Hybrider Pufferpool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,8 @@ Standardmäßig ist der hybride Pufferpool im Datenbankbereich aktiviert.
 Das folgende Beispiel gibt den aktuellen Status der Systemkonfiguration des hybriden Pufferpools für eine Instanz von SQL Server zurück.
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 Das folgende Beispiel gibt zwei Tabellen zurück:
@@ -95,9 +93,9 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Bewährte Methoden für den hybriden Pufferpool
 
-Es wird nicht empfohlen, den hybriden Pufferpool für Instanzen mit weniger als 16 GB RAM zu aktivieren.
-
 Verwenden Sie beim Formatieren Ihres PMEM-Geräts unter Windows die größte verfügbare Zuordnungseinheit für NTFS (2 MB in Windows Server 2019), und stellen Sie sicher, dass das Gerät für DAX (DirectAccess) formatiert wurde.
+
+Aktivieren Sie für eine optimale Leistung unter Windows das [Sperren von Seiten im Speicher](./enable-the-lock-pages-in-memory-option-windows.md).
 
 Dateigrößen müssen ein Vielfaches von 2 MB sein (Modulo 2 MB muss 0 (Null) sein).
 

@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419610"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961788"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -51,7 +51,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 <table_option> ::=
     {
-        <cci_option> --default for Azure SQL Data Warehouse
+       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
@@ -63,8 +64,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )
 
-<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
-  
 <data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
@@ -165,7 +164,7 @@ Erstellt eine oder mehrere Tabellenpartitionen. Diese Partitionen sind horizonta
 
 ### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Option für sortierten gruppierten Columnstore-Index (Vorschau für Azure SQL Data Warehouse)
 
-„Sortierter Columnstore-Index“ ist der Standard für das Erstellen von Tabellen in Azure SQL Data Warehouse.  Die Angabe „ORDER“ wird standardmäßig mit „COMPOUND“-Schlüsseln umgesetzt.  Die Sortierung erfolgt immer in aufsteigender Reihenfolge. Wenn keine ORDER-Klausel angegeben ist, wird der Columnstore nicht sortiert. Aufgrund des Sortiervorgangs kann es bei einer Tabelle mit sortiertem geclustertem Columnstore-Index zu längeren Datenladezeiten kommen als bei nicht sortierten geclusterten Columnstore-Indizes. Wenn Sie beim Laden von Daten mehr tempdb-Speicherplatz benötigen, können Sie die Datenmenge pro Einfügung verringern.
+„Gruppierter Columnstore-Index“ (Clustered Columnstore Index, CCI) ist der Standard für das Erstellen von Tabellen in Azure SQL Data Warehouse.  Daten im CCI werden nicht sortiert, bevor sie in Spaltensegmente komprimiert werden.  Beim Erstellen eines CCI mit ORDER werden die Daten vor dem Hinzufügen zu Indexsegmenten sortiert, und die Abfrageleistung kann verbessert werden. Weitere Informationen finden Sie unter [Leistungsoptimierung mit einem gruppierten Columnstore-Index](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci).  
 
 Benutzer können die Spalte „column_store_order_ordinal“ in „sys.index_columns“ für die Spalte(n) nach der die Tabelle sortiert ist und nach der Sequenz der Sortierung abfragen.  
 
@@ -379,17 +378,6 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> C. Erstellen eines sortierten gruppierten Columnstore-Index
-
-Das folgende Beispiel zeigt, wie ein sortierter gruppierter Columnstore-Index erstellt wird. Der Index ist nach SHIPDATE sortiert.
-
-```sql
-CREATE TABLE Lineitem  
-WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
-AS  
-SELECT * FROM ext_Lineitem
-```
-
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>Beispiele für temporäre Tabellen
 
@@ -432,11 +420,22 @@ WITH
   )  
 ;  
 ```  
- 
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> E. Erstellen eines sortierten gruppierten Columnstore-Index
+
+Das folgende Beispiel zeigt, wie ein sortierter gruppierter Columnstore-Index erstellt wird. Der Index ist nach SHIPDATE sortiert.
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
+
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>Beispiele für die Tabellenverteilung
 
-### <a name="RoundRobin"></a> E. Erstellen einer ROUND_ROBIN-Tabelle  
+### <a name="RoundRobin"></a> F. Erstellen einer ROUND_ROBIN-Tabelle  
  Im folgenden Beispiel wird eine ROUND_ROBIN-Tabelle mit drei Spalten und ohne Partitionen erstellt. Die Daten werden in allen Verteilungen verteilt. Die Tabelle wird mit einem gruppierten Columnstore-Index erstellt, der im Vergleich zu einem Heap oder einem gruppierten Rowstore-Index eine bessere Leistung und Datensicherung gewährleistet.  
   
 ```sql
@@ -449,7 +448,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> F. Erstellen einer mittels Hash verteilten Tabelle
+### <a name="HashDistributed"></a> G. Erstellen einer mittels Hash verteilten Tabelle
 
  Im folgenden Beispiel wird dieselbe Tabelle wie im vorherigen Beispiel erstellt. Allerdings werden bei dieser Tabelle die Zeilen (in der `id`-Spalte) gezielt verteilt statt wie bei einer ROUND_ROBIN-Tabelle zufällig verteilt. Die Tabelle wird mit einem gruppierten Columnstore-Index erstellt, der im Vergleich zu einem Heap oder einem gruppierten Rowstore-Index eine bessere Leistung und Datensicherung gewährleistet.  
   
@@ -467,7 +466,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> G. Erstellen einer replizierten Tabelle  
+### <a name="Replicated"></a> H. Erstellen einer replizierten Tabelle  
  Im folgenden Beispiel wird eine replizierte Tabelle ähnlich wie im vorherigen Beispiel erstellt. Replizierte Tabellen werden vollständig auf alle Computeknoten kopiert. Dank dieser Kopie auf allen Computeknoten wird die Anzahl der Datenverschiebungen für Abfragen reduziert. Dieses Beispiel wird mit einem CLUSTERED INDEX erstellt, wodurch eine bessere Datenkomprimierung als bei einem Heap erzielt wird. Ein Heap enthält möglicherweise nicht genügend Zeilen, um eine gute CLUSTERED COLUMNSTORE INDEX-Komprimierung zu erreichen.  
   
 ```sql
@@ -487,7 +486,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Beispiele für Tabellenpartitionen
 
-###  <a name="PartitionedTable"></a> H. Erstellen einer partitionierten Tabelle
+###  <a name="PartitionedTable"></a> I. Erstellen einer partitionierten Tabelle
 
  Im folgenden Beispiel wird dieselbe Tabelle wie in Beispiel A erstellt, jedoch mit einer RANGE LEFT-Partitionierung für die `id`-Spalte. Es werden vier Partitionsbegrenzungswerte angegeben, sodass sich fünf Partitionen ergeben.  
   
@@ -522,7 +521,7 @@ WITH
 - Partition 4: 30 <= col < 40
 - Partition 5: 40 <= col  
   
-### <a name="OnePartition"></a> I. Erstellen einer partitionierten Tabelle mit einer Partition
+### <a name="OnePartition"></a> J. Erstellen einer partitionierten Tabelle mit einer Partition
 
  Im folgende Beispiel wird eine partitionierte Tabelle mit einer Partition erstellt. Es wird kein Begrenzungswert angegeben, sodass sich nur eine Partition ergibt.  
   
@@ -539,7 +538,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. Erstellen einer Tabelle mit Datumspartitionierung
+### <a name="DatePartition"></a> K. Erstellen einer Tabelle mit Datumspartitionierung
 
  Im folgenden Beispiel wird eine neue Tabelle mit dem Namen `myTable` mit Partitionierung in einer `date`-Spalte erstellt. Durch die Verwendung von RANGE RIGHT und Datumsangaben für die Begrenzungswerte werden in alle Partitionen die Daten eines Monats eingefügt.  
   
