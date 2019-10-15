@@ -1,5 +1,5 @@
 ---
-title: Sp_help_fulltext_system_components (Transact-SQL) | Microsoft-Dokumentation
+title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +18,17 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 949d22b0acdd4cc6d1e9d865f4f65e847d87aa46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055050"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304885"
 ---
-# <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
+# <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  Gibt Informationen über die registrierten Wörtertrennungen, Filter und Protokollhandler zurück. **Sp_help_fulltext_system_components** gibt auch eine Liste der Bezeichner von Datenbanken und Volltextkatalogen, die die angegebene Komponente verwendet haben.  
+  Gibt Informationen über die registrierten Wörtertrennungen, Filter und Protokollhandler zurück. **sp_help_fulltext_system_components** gibt auch eine Liste der Bezeichner von Datenbanken und Volltextkatalogen zurück, die die angegebene Komponente verwendet haben.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +45,9 @@ sp_help_fulltext_system_components
  'all'  
  Gibt Informationen für alle Volltextkomponenten zurück.  
   
-`[ @component_type = ] component_type` Gibt den Typ der Komponente. *Component_type* kann einen der folgenden sein:  
+`[ @component_type = ] component_type` gibt den Komponententyp an. *component_type* kann eines der folgenden sein:  
   
--   **wörtertrennung**  
+-   **Wörter Trennung**  
   
 -   **filter**  
   
@@ -55,9 +55,9 @@ sp_help_fulltext_system_components
   
 -   **fullpath**  
   
- Wenn ein vollständiger Pfad angegeben wird, *Param* muss auch angegeben werden, durch den vollständigen Pfad zur Komponenten-DLL, oder es wird eine Fehlermeldung zurückgegeben.  
+ Wenn ein vollständiger Pfad angegeben wird, muss auch *param* mit dem vollständigen Pfad zur Komponenten-DLL angegeben werden, oder es wird eine Fehlermeldung zurückgegeben.  
   
-`[ @param = ] param` Abhängig vom Komponententyp kann dies ist eine der folgenden: ein Gebietsschemabezeichner (LCID), die Dateierweiterung mit "." Präfix, der vollständige Komponentenname des protokollhandlers oder der vollständige Pfad zur Komponenten-DLL.  
+`[ @param = ] param` ist abhängig vom Komponententyp einer der folgenden: ein Gebiets Schema Bezeichner (Locale Identifier, LCID), die Dateierweiterung mit "."-Präfix, der vollständige Komponenten Name des Protokoll Handlers oder der vollständige Pfad zur Komponenten-DLL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -67,14 +67,14 @@ sp_help_fulltext_system_components
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|Typ der Komponente. Einer der folgenden Typen:<br /><br /> Filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
+|**componenttype**|**sysname**|Typ der Komponente. Einer der folgenden Typen:<br /><br /> filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
 |**componentname**|**sysname**|Name der Komponente.|  
 |**clsid**|**uniqueidentifier**|Klassenbezeichner der Komponente.|  
 |**fullpath**|**nvarchar(256)**|Pfad zum Speicherort der Komponente.<br /><br /> NULL = Aufrufer ist kein Mitglied der festen Serverrolle **serveradmin** .|  
 |**version**|**nvarchar(30)**|Version der Komponente.|  
-|**Hersteller**|**sysname**|Name des Herstellers der Komponente.|  
+|**Bauers**|**sysname**|Name des Herstellers der Komponente.|  
   
- Das folgende Resultset wird nur zurückgegeben, wenn ein oder mehr als ein Volltextkatalog vorhanden ist, verwendet *Component_type*.  
+ Das folgende Resultset wird nur zurückgegeben, wenn mindestens ein voll Text Katalog vorhanden ist, der *component_type*verwendet.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
@@ -82,7 +82,7 @@ sp_help_fulltext_system_components
 |**ftcatid**|**int**|ID des Volltextkatalogs.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **öffentliche** Rolle Benutzer sehen jedoch nur Informationen zu den Volltextkatalogen, die für die sie die VIEW DEFINITION-Berechtigung verfügen. Nur Mitglieder der der **Serveradmin** Serverrolle sehen Werte in der **Fullpath** Spalte.  
+ Erfordert die Mitgliedschaft in der **Public** -Rolle. Benutzer können jedoch nur Informationen zu den Volltextkatalogen anzeigen, für die Sie über die View Definition-Berechtigung verfügen. Nur Mitglieder der Server Rolle **serveradmin** können Werte in der Spalte **FullPath** sehen.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode ist besonders beim Vorbereiten eines Upgrades wichtig. Führen Sie die gespeicherte Prozedur innerhalb einer bestimmten Datenbank aus, und ermitteln Sie mithilfe der Ausgabe, ob das Upgrade Auswirkungen auf einen bestimmten Katalog haben wird.  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Bestimmen, ob eine bestimmte Wörtertrennung registriert ist  
- Im folgenden Beispiel wird die Wörtertrennung für die türkische Sprache (LCID = 1055) aufgeführt, wenn diese auf dem System installiert und auf der Dienstinstanz registriert wurde. In diesem Beispiel gibt an, den Parameternamen, **@component_type** und **@param** .  
+ Im folgenden Beispiel wird die Wörtertrennung für die türkische Sprache (LCID = 1055) aufgeführt, wenn diese auf dem System installiert und auf der Dienstinstanz registriert wurde. In diesem Beispiel werden die Parameternamen **\@component_type** und **\@param**angegeben.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -136,9 +136,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anzeigen oder Ändern von registrierten filtern und Wörtertrennungen](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
+ [Anzeigen oder Ändern von registrierten Filtern und Wörter](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)Trennungen    
  [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [Volltextsuche und semantische Suche von gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Gespeicherte Prozeduren &#40;für die voll Text Suche und die semantische Suche Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

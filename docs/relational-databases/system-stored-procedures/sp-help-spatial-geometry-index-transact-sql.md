@@ -1,5 +1,5 @@
 ---
-title: Sp_help_spatial_geometry_index (Transact-SQL) | Microsoft-Dokumentation
+title: sp_help_spatial_geometry_index (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 054c6e51747cdc6764ce99672f041b4e65746f30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2e5d935fc3d6db5d243ec4b76841f13a60e5a11
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085107"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304855"
 ---
-# <a name="sphelpspatialgeometryindex-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
+# <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Namen und Werte für einen angegebenen Satz von Eigenschaften über einen **geometry** -Räumlichkeitsindex zurück. Das Ergebnis wird in einem Tabellenformat zurückgegeben. Sie können wählen, ob ein Kernsatz von Eigenschaften oder alle Eigenschaften des Indexes zurückgegeben werden sollen.  
@@ -54,7 +54,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen Menge enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird `sp_help_spatial_geometry_index` um den räumlichkeitsindex **SIndx_SpatialTable_geometry_col2** für Tabelle definierten **Geometry_col** für das angegebene Abfragebeispiel in **@qs** . Dieses Beispiel gibt nur die Kerneigenschaften des angegebenen Indexes zurück.  
+ Im folgenden Beispiel wird `sp_help_spatial_geometry_index` verwendet, um den räumlichen Index **SIndx_SpatialTable_geometry_col2** , der in der Tabelle **geometry_col** für das angegebene Abfrage Beispiel in **\@QS**definiert ist, zu untersuchen. Dieses Beispiel gibt nur die Kerneigenschaften des angegebenen Indexes zurück.  
   
 ```  
 declare @qs geometry  
@@ -63,7 +63,7 @@ exec sp_help_spatial_geometry_index 'geometry_col', 'SIndx_SpatialTable_geometry
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Prozeduren für Räumlichkeitsindizes](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Gespeicherte Prozeduren für räumliche Indizes](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)   
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  

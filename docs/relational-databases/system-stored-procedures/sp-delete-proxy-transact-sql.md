@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_proxy (Transact-SQL) | Microsoft-Dokumentation
+title: sp_delete_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a5750e7a2346f55d97e19ba58db548f726b38cd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009194"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305107"
 ---
-# <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
+# <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Entfernt den angegebenen Proxy.  
@@ -40,9 +40,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @proxy_id = ] id` Die Proxy-ID des zu entfernenden Proxys. Die *Proxy_id* ist **Int**, hat den Standardwert NULL.  
+`[ @proxy_id = ] id` die Proxy-ID des zu entfernenden Proxys. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` Der Name des zu entfernenden Proxys. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @proxy_name = ] 'proxy_name'` den Namen des zu entfernenden Proxys. *Proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -51,12 +51,12 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  None  
   
 ## <a name="remarks"></a>Hinweise  
- Entweder **@proxy_name** oder **@proxy_id** muss angegeben werden. Wenn beide Argumente angegeben werden, müssen sie sich beide auf denselben Proxy beziehen. Andernfalls erzeugt die gespeicherte Prozedur einen Fehler.  
+ Es muss entweder **\@proxy_name** oder **\@proxy_id** angegeben werden. Wenn beide Argumente angegeben werden, müssen sie sich beide auf denselben Proxy beziehen. Andernfalls erzeugt die gespeicherte Prozedur einen Fehler.  
   
  Wenn ein Auftragsschritt auf den angegebenen Proxy verweist, kann der Proxy nicht gelöscht werden und die gespeicherte Prozedur erzeugt einen Fehler.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können nur Mitglieder von der **Sysadmin** feste Serverrolle **Sp_delete_proxy**.  
+ Standardmäßig können nur Mitglieder der festen Server Rolle **sysadmin** **sp_delete_proxy**ausführen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Proxy `Catalog application proxy` gelöscht.  

@@ -1,5 +1,5 @@
 ---
-title: Sp_attach_db (Transact-SQL) | Microsoft-Dokumentation
+title: sp_attach_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cf96da996996a98a965d2563c729321318ac400c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046204"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305270"
 ---
-# <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
+# <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fügt eine Datenbank an einen Server an.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Es wird empfohlen, dass die Verwendung von CREATE DATABASE *Database_name* FOR ATTACH stattdessen. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] empfiehlt es sich, stattdessen CREATE DATABASE *database_name* for Attach zu verwenden. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 > [!NOTE]  
->  Um mehrere Protokolldateien neu zu erstellen, wenn eine oder mehrere einen neuen Speicherort aufweisen, verwenden Sie CREATE DATABASE *Database_name* FOR ATTACH_REBUILD_LOG.  
+>  Verwenden Sie CREATE DATABASE *database_name* for ATTACH_REBUILD_LOG, um mehrere Protokolldateien neu zu erstellen, wenn mindestens ein Speicherort vorhanden ist.  
   
 > [!IMPORTANT]  
 >  Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Datenbanken können bösartigen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema oder die physische Datenbankstruktur ändert. Bevor Sie eine Datenbank aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, führen Sie auf einem Nichtproduktionsserver [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) für die Datenbank aus. Überprüfen Sie außerdem den Code in der Datenbank, z.B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code.  
@@ -47,9 +47,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbnam_ '` Ist der Name der Datenbank, die an den Server angefügt werden. Der Name muss eindeutig sein. *Dbname* ist **Sysname**, hat den Standardwert NULL.  
+`[ @dbname = ] 'dbnam_ '` ist der Name der Datenbank, die an den Server angefügt werden soll. Der Name muss eindeutig sein. *dbname* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @filename1 = ] 'filename_n'` Ist der physische Name, einschließlich des Pfads einer Datenbankdatei an. *Filename_n* ist **nvarchar(260)** , hat den Standardwert NULL. Sie können bis zu 16 Dateinamen angeben. Die Parameternamen beginnen mit **@filename1** und werden bis **@filename16** . Die Liste der Dateinamen muss mindestens die primäre Datei einschließen. Die primäre Datei enthält die Systemtabellen, die auf andere Dateien in der Datenbank zeigen. Die Liste muss außerdem alle Dateien enthalten, die nach dem Trennen der Datenbank verschoben wurden.  
+`[ @filename1 = ] 'filename_n'` ist der physische Name der Datenbankdatei, einschließlich des Pfads. *filename_n* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. Sie können bis zu 16 Dateinamen angeben. Die Parameternamen beginnen bei **\@dateiname1** und erhöhen zu **\@dateiname16**. Die Liste der Dateinamen muss mindestens die primäre Datei einschließen. Die primäre Datei enthält die Systemtabellen, die auf andere Dateien in der Datenbank zeigen. Die Liste muss außerdem alle Dateien enthalten, die nach dem Trennen der Datenbank verschoben wurden.  
   
 > [!NOTE]  
 >  Dieses Argument entspricht dem FILENAME-Parameter der CREATE DATABASE-Anweisung. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -63,7 +63,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  None  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Sp_attach_db** gespeicherte Prozedur sollte nur ausgeführt werden, für Datenbanken, die zuvor vom Datenbankserver getrennt wurden, mithilfe eines expliziten **Sp_detach_db** Vorgang oder für kopierte Datenbanken. Wenn Sie mehr als 16 Dateien angeben müssen, verwenden Sie CREATE DATABASE *Database_name* FOR ATTACH oder CREATE DATABASE *Database_name* FOR_ATTACH_REBUILD_LOG. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Die gespeicherte Prozedur **sp_attach_db** sollte nur für Datenbanken ausgeführt werden, die zuvor vom Datenbankserver getrennt wurden, indem ein expliziter **sp_detach_db** -Vorgang oder kopierte Datenbanken verwendet wurden. Wenn Sie mehr als 16 Dateien angeben müssen, verwenden Sie CREATE DATABASE *database_name* for Attach oder CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
  Wird für eine Datei kein Pfad angegeben, wird davon ausgegangen, dass sie sich am zuletzt bekannten Speicherort befindet. Wenn Sie eine Datei an einem anderen Speicherort verwenden möchten, müssen Sie den neuen Speicherort angeben.  
   
@@ -83,7 +83,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  Wird eine Datenbank zum ersten Mal an eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt oder wiederhergestellt, ist noch keine Kopie des Datenbank-Hauptschlüssels (verschlüsselt vom Diensthauptschlüssel) auf dem Server gespeichert. Der Datenbank-Hauptschlüssel (Database Master Key, DMK) muss mithilfe der Anweisung **OPEN MASTER KEY** entschlüsselt werden. Nachdem der Datenbank-Hauptschlüssel entschlüsselt wurde, können Sie für die Zukunft die automatische Entschlüsselung aktivieren, indem Sie die Anweisung **ALTER MASTER KEY REGENERATE** verwenden. Auf diese Weise können Sie eine Kopie des mit dem Diensthauptschlüssel (Service Master Key, SMK) verschlüsselten Datenbank-Hauptschlüssels für den Server bereitstellen. Wenn eine Datenbank von einer früheren Version aktualisiert wurde, sollte der DMK neu generiert werden, damit er den neueren AES-Algorithmus verwendet. Weitere Informationen zum Neugenerieren des DMK finden Sie unter [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). Die zum Neugenerieren des DMK zum Upgrade auf AES erforderliche Zeit hängt von der Anzahl der Objekte ab, die durch den DMK geschützt werden. Der DMK muss nur einmal auf AES aktualisiert und neu generiert werden. Dies hat keine Auswirkungen auf zukünftige Neugenerierungen im Rahmen einer Schlüsselrotationsstrategie.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Weitere Informationen dazu, wie Berechtigungen behandelt werden, wenn eine Datenbank angefügt wird, finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Informationen dazu, wie Berechtigungen verarbeitet werden, wenn eine Datenbank angefügt wird, finden Sie unter [CREATE DATABASE &#40;SQL Server&#41;Transact-SQL](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Dateien von [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] an den aktuellen Server angefügt.  

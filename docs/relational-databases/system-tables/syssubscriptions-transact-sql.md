@@ -1,5 +1,5 @@
 ---
-title: Syssubscriptions (Transact-SQL) | Microsoft-Dokumentation
+title: sysabonnements (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6a067c02b9ec9b8f662dab2ada0de537243fe0a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 251dbb143c1b5aa150cc094ce67943dd0139ee6d
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68029572"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305011"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,19 +35,19 @@ ms.locfileid: "68029572"
 |**srvid**|**smallint**|Die Server-ID des Abonnenten.|  
 |**dest_db**|**sysname**|Der Name der Zieldatenbank.|  
 |**status**|**tinyint**|Status des Abonnements:<br /><br /> **0** = inaktiv.<br /><br /> **1** = abonniert.<br /><br /> **2** = aktiv.|  
-|**sync_type**|**tinyint**|Der Typ der Erstsynchronisierung:<br /><br /> **1** = Automatic.<br /><br /> **2** = keine|  
+|**sync_type**|**tinyint**|Der Typ der Erstsynchronisierung:<br /><br /> **1** = automatisch.<br /><br /> **2** = keine|  
 |**login_name**|**sysname**|Der Anmeldename, der beim Hinzufügen des Abonnements verwendet wird.|  
 |**subscription_type**|**int**|Der Typ des Abonnements:<br /><br /> 0 = Push - der Verteilungs-Agent wird auf dem Verteiler ausgeführt.<br /><br /> 1 = Pull - der Verteilungs-Agent wird auf dem Abonnenten ausgeführt.|  
-|**distribution_jobid**|**binary(16)**|Die Auftrags-ID des Verteilungs-Agents.|  
+|**distribution_jobid**|**binary(16)**|Die Auftrags-ID der Verteilungs-Agent.|  
 |**timestamp**|**timestamp**|Der Timestamp.|  
-|**update_mode**|**tinyint**|Updatemodus:<br /><br /> **0** = nur Lesezugriff.<br /><br /> **1** = sofortiges Aktualisieren.|  
-|**loopback_detection**|**bit**|Gilt für Abonnements, die Teil einer bidirektionalen Transaktionsreplikationstopologie sind. Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **0** = sendet zurück.<br /><br /> **1** unterstützt = sendet nicht zurück.|  
+|**update_mode**|**tinyint**|Updatemodus:<br /><br /> **0** = schreibgeschützt.<br /><br /> **1** = sofortige Aktualisierung.|  
+|**loopback_detection**|**bit**|Gilt für Abonnements, die Teil einer bidirektionalen Transaktionsreplikationstopologie sind. Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **0** = sendet zurück.<br /><br /> **1** = sendet nicht zurück.|  
 |**queued_reinit**|**bit**|Gibt an, ob der Artikel für die Initialisierung oder erneute Initialisierung markiert ist. Der Wert **1** gibt an, dass der abonnierte Artikel für die Initialisierung oder erneute Initialisierung markiert ist.|  
-|**nosync_type**|**tinyint**|Der Typ der Abonnementinitialisierung:<br /><br /> **0** = automatisch (Momentaufnahme)<br /><br /> **1** = nur replikationsunterstützung<br /><br /> **2** = Initialisierung von einer Sicherung<br /><br /> **3** = Initialisierung von einer protokollfolgenummer (LSN)<br /><br /> Weitere Informationen finden Sie unter den **@sync_type** Parameter [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).|  
+|**nosync_type**|**tinyint**|Der Typ der Abonnementinitialisierung:<br /><br /> **0** = automatisch (Momentaufnahme)<br /><br /> **1** = nur Replikations Unterstützung<br /><br /> **2** = mit Sicherung initialisieren<br /><br /> **3** = Initialisieren von der Protokoll Folge Nummer (Log Sequence Number, LSN)<br /><br /> Weitere Informationen finden Sie unter dem **\@sync_type-** Parameter von [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).|  
 |**srvname**|**sysname**|Den Namen des Abonnenten.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Replikations Tabellen &#40;Transact&#41;-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

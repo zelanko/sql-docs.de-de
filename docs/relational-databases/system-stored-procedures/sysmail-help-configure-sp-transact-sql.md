@@ -1,5 +1,5 @@
 ---
-title: Sysmail_help_configure_sp (Transact-SQL) | Microsoft-Dokumentation
+title: sysmail_help_configure_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4b0d4fb1f3c233ad8e7eedf91802da35fbbb1d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909073"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304746"
 ---
-# <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
+# <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Zeigt Konfigurationseinstellungen für Datenbank-E-Mail an.  
@@ -39,14 +39,14 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@parameter_name** =] **"***Parameter_name***"**  
- Der Name der abzurufenden Konfigurationseinstellung. Wenn angegeben, wird der Wert der Konfigurationseinstellung zurückgegeben, der **@parameter_value** OUTPUT-Parameter. Wenn kein **@parameter_name** angegeben ist, wird diese gespeicherte Prozedur gibt ein Resultset mit allen Datenbank-Mail-Konfigurationseinstellungen in der Instanz zurück.  
+ [ **@parameter_name** =] **"***parameter_name***"**  
+ Der Name der abzurufenden Konfigurationseinstellung. Wenn angegeben, wird der Wert der Konfigurationseinstellung im **\@parameter_value Output-** Parameter zurückgegeben. Wenn keine **\@parameter_name** angegeben wird, gibt diese gespeicherte Prozedur ein Resultset zurück, das alle Datenbank-E-Mail Konfigurationseinstellungen in der-Instanz enthält.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn kein **@parameter_name** angegeben ist, gibt ein Resultset mit den folgenden Spalten zurück.  
+ Wenn keine **\@parameter_name** angegeben wird, gibt ein Resultset mit den folgenden Spalten zurück.  
   
 ||||  
 |-|-|-|  
@@ -58,7 +58,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>Hinweise  
  Die gespeicherte Prozedur **sysmail_help_configure_sp** führt die aktuellen Konfigurationseinstellungen für Datenbank-E-Mail für die Instanz auf.  
   
- Wenn eine **@parameter_name** angegeben ist, wird jedoch kein Ausgabeparameter für bereitgestellt **@parameter_value** , diese gespeicherte Prozedur erzeugt keine Ausgabe.  
+ Wenn ein **\@parameter_name** angegeben wird, für **\@parameter_value**jedoch kein Output-Parameter bereitgestellt wird, erzeugt diese gespeicherte Prozedur keine Ausgabe.  
   
  Die gespeicherte Prozedur **sysmail_help_configure_sp** befindet sich in der **msdb** -Datenbank und im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen aufgerufen werden.  
   
@@ -89,6 +89,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Datenbank-E-Mail gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

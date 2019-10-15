@@ -1,5 +1,5 @@
 ---
-title: Sp_unsetapprole (Transact-SQL) | Microsoft-Dokumentation
+title: sp_unsetapprole (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 65fe8e1496fba4e622d63f1ce560aba4c1acfb83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9cf190198859bb3202dc2bcc62b066e5995d8fed
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022244"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305170"
 ---
-# <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
+# <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Deaktiviert eine Anwendungsrolle und setzt den Sicherheitskontext auf den vorherigen Kontext zurück.  
@@ -39,8 +39,8 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **@cookie**  
- Gibt das Cookie an, das beim Aktivieren der Anwendungsrolle erstellt wurde. Das Cookie wird erstellt, indem [Sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary(8000)** .  
+ **\@ Cookie**  
+ Gibt das Cookie an, das beim Aktivieren der Anwendungsrolle erstellt wurde. Das Cookie wird von [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)erstellt. **varbinary(8000)** .  
   
 > [!NOTE]  
 >  Der **OUTPUT** -Parameter des Cookies für **sp_setapprole** ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(50)** zurück. Anwendungen müssen weiterhin **varbinary(8000)** reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einer zukünftigen Version erhöht wird.  

@@ -1,5 +1,5 @@
 ---
-title: Sp_setapprole (Transact-SQL) | Microsoft-Dokumentation
+title: sp_setapprole (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/12/2018
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de85505295ceff98f404b2ba4c1effe3946fdbe5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104432"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304965"
 ---
-# <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
+# <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
@@ -45,24 +45,24 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>Argumente
 
-`[ @rolename = ] 'role'` Ist der Name der Anwendungsrolle in der aktuellen Datenbank definiert. *Rolle* ist **Sysname**, hat keinen Standardwert. *role* muss in der aktuellen Datenbank vorhanden sein.  
+`[ @rolename = ] 'role'` ist der Name der in der aktuellen Datenbank definierten Anwendungs Rolle. *Role* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. *role* muss in der aktuellen Datenbank vorhanden sein.  
   
-`[ @password = ] { encrypt N'password' }` Wird zum Aktivieren der Anwendungsrolle erforderliche Kennwort. *Kennwort* ist **Sysname**, hat keinen Standardwert. *Kennwort* können mithilfe der ODBC verborgen werden **verschlüsseln** Funktion. Bei Verwendung der **verschlüsseln** -Funktion, das Kennwort muss in eine Unicode-Zeichenfolge konvertiert werden, indem platzieren **N** vor dem ersten Anführungszeichen.  
+`[ @password = ] { encrypt N'password' }` ist das Kennwort, das zum Aktivieren der Anwendungs Rolle erforderlich ist. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Das *Kennwort* kann mithilfe der ODBC-Funktion " **verschlüsseln** " verdeckt werden. Wenn Sie die Funktion " **verschlüsseln** " verwenden, muss das Kennwort in eine Unicode-Zeichenfolge konvertiert werden, indem **N** vor dem ersten Anführungszeichen platziert wird.  
   
- Die Encrypt-Option wird für Verbindungen, verwendet wird, nicht unterstützt **SqlClient**.  
+ Die Verschlüsselungsoption wird für Verbindungen, die **SqlClient**verwenden, nicht unterstützt.  
   
 > [!IMPORTANT]  
-> Die ODBC **verschlüsseln** Funktion stellt keine Verschlüsselung bereit. Diese Funktion ist zum Schützen von Kennwörtern, die über ein Netzwerk übertragen werden, nicht empfehlenswert. Verwenden Sie SSL oder IPSec, um diese Informationen über ein Netzwerk zu übertragen.
+> Die ODBC-Funktion zum **verschlüsseln** bietet keine Verschlüsselung. Diese Funktion ist zum Schützen von Kennwörtern, die über ein Netzwerk übertragen werden, nicht empfehlenswert. Verwenden Sie SSL oder IPSec, um diese Informationen über ein Netzwerk zu übertragen.
   
- **@encrypt = 'none'**  
+ **@encrypt = "None"**  
  Gibt an, dass keine Verbergung verwendet wird. Das Kennwort wird als Nur-Text an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übergeben. Dies ist die Standardeinstellung.  
   
- **@encrypt= 'Odbc'**  
- Gibt an, dass ODBC das Kennwort mithilfe der ODBC verbirgt **verschlüsseln** Funktion vor dem Senden des Kennworts für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Dies ist nur mit einem ODBC-Client oder dem OLE DB-Anbieter für SQL Server möglich.  
+ **@encrypt = ' ODBC '**  
+ Gibt an, dass ODBC das Kennwort mithilfe der ODBC- **Verschlüsselungs** Funktion verbirgt, bevor das Kennwort an den [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gesendet wird. Dies ist nur mit einem ODBC-Client oder dem OLE DB-Anbieter für SQL Server möglich.  
   
-`[ @fCreateCookie = ] true | false` Gibt an, ob ein Cookie erstellt werden. **"true"** wird implizit in 1 konvertiert. **"false"** wird implizit in 0 konvertiert.  
+`[ @fCreateCookie = ] true | false` gibt an, ob ein Cookie erstellt werden soll. **true** wird implizit in 1 konvertiert. **false** wird implizit in 0 konvertiert.  
   
-`[ @cookie = ] @cookie OUTPUT` Gibt einen Output-Parameter, um das Cookie enthalten. Das Cookie wird nur generiert, wenn der Wert des **@fCreateCookie** ist **"true"** . **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` gibt einen Ausgabeparameter an, der das Cookie enthalten soll. Das Cookie wird nur generiert, wenn der Wert **\@fikreatecookie** **true**ist. **varbinary(8000)**  
   
 > [!NOTE]  
 > Der **OUTPUT** -Cookieparameter für **sp_setapprole** ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(50)** zurück. Anwendungen müssen weiterhin **varbinary(8000)** reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einer zukünftigen Version erhöht wird.
@@ -73,17 +73,17 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## <a name="remarks"></a>Hinweise
 
- Eine durch **sp_setapprole**aktivierte Anwendungsrolle bleibt aktiv, bis der Benutzer die Serververbindung trennt oder bis er **sp_unsetapprole**ausführt. **Sp_setapprole** ausgeführt werden kann, nur durch direkte [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. **Sp_setapprole** kann nicht innerhalb einer anderen gespeicherten Prozedur oder innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
+ Eine durch **sp_setapprole**aktivierte Anwendungsrolle bleibt aktiv, bis der Benutzer die Serververbindung trennt oder bis er **sp_unsetapprole**ausführt. **sp_setapprole** kann nur durch direkte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen ausgeführt werden. **sp_setapprole** kann nicht innerhalb einer anderen gespeicherten Prozedur oder innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
  Eine Übersicht über Anwendungsrollen finden Sie unter [Application Roles](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!IMPORTANT]  
-> Um das Kennwort für die Anwendungsrolle zu schützen, wenn sie über ein Netzwerk übertragen werden, sollten Sie immer eine verschlüsselte Verbindung verwenden, wenn Sie eine Anwendungsrolle zu aktivieren.
-> Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **verschlüsseln** Option wird nicht unterstützt, indem **SqlClient**. Wenn Sie Anmeldeinformationen speichern müssen, verschlüsseln Sie sie mit den CryptoAPI-Funktionen. Der Parameter *Kennwort* wird als unidirektionaler Hash gespeichert. Um die Kompatibilität mit früheren Versionen von beizubehalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Kennwortrichtlinie zur Komplexität wird nicht erzwungen, indem **Sp_addapprole**. Verwenden Sie zum Erzwingen der Kennwortrichtlinie zur Komplexität [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md).  
+> Um das Kennwort der Anwendungs Rolle zu schützen, wenn es über ein Netzwerk übertragen wird, sollten Sie immer eine verschlüsselte Verbindung verwenden, wenn Sie eine Anwendungs Rolle aktivieren.
+> Die Option "[!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC- **Verschlüsselung** " wird von **SqlClient**nicht unterstützt. Wenn Sie Anmeldeinformationen speichern müssen, verschlüsseln Sie sie mit den CryptoAPI-Funktionen. Das Parameter *Kennwort* wird als unidirektionaler Hash gespeichert. Um die Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beizubehalten, wird die Kenn Wort Komplexitäts Richtlinie von **sp_addapprole**nicht erzwungen. Verwenden Sie zum Erzwingen der Richtlinie für die Kenn Wort Komplexität [Create Application Role](../../t-sql/statements/create-application-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die Mitgliedschaft in **öffentliche** und Kenntnis des Kennworts für die Rolle.  
+Erfordert die Mitgliedschaft in **öffentlichem** und Kenntnis des Kennworts für die Rolle.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -118,4 +118,4 @@ GO
 
 ## <a name="see-also"></a>Siehe auch
 
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [gespeicherte Sicherheitsprozeduren &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [CREATE APPLICATION ROLE &#40;Transact-SQL&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) [DROP APPLICATION ROLE &#40;Transact-SQL&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) [Sp_unsetapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)
+ [Gespeicherte System &#40;Prozeduren Transact&#41; -SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) - [Sicherheit gespeicherte Prozeduren &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [Create Application role &#40;Transact-SQL&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) [Drop Application role &#40; Transact-SQL&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) [sp_unsetapprole &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)

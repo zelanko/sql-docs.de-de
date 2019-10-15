@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d54f307ce71418af0b43ebae5353d2c6200e677
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: 6c96dd49b0fc9b92c645d5c12c5f5cf0fc50e023
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341979"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305246"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ Der Produktname der OLE DB-Datenquelle, die als Verbindungsserver hinzugefügt w
 Der eindeutige Programmbezeichner (Programmatic Identifier, PROGID) des OLE DB-Anbieters, der dieser Datenquelle entspricht. *provider_name* muss für den angegebenen OLE DB Anbieter, der auf dem aktuellen Computer installiert ist, eindeutig sein. *provider_name* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. Wenn *provider_name* jedoch ausgelassen wird, wird sqlncli verwendet. 
 
 > [!NOTE]
-> Die Verwendung von SQLNCLI leitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an die neueste Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter weiter. Es wird erwartet, dass der OLE DB Anbieter mit der angegebenen ProgID in der Registrierung registriert wird.
+> Die Verwendung von SQLNCLI leitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an die neueste Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter weiter. Es wird vorausgesetzt, dass der OLE DB-Anbieter mit der angegebenen PROGID in der Registrierung registriert ist.
 
 > [!IMPORTANT] 
-> Der vorherige Microsoft OLE DB-Anbieter für SQL Server (SQLOLEDB) und SQL Server Native Client OLE DB-Anbieter (SQLNCLI) bleiben veraltet, und es wird nicht empfohlen, für neue Entwicklungsarbeiten zu verwenden. Verwenden Sie stattdessen den neuen [Microsoft OLE DB-Treiber für SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (msoledbsql), der mit den neuesten Server Funktionen aktualisiert wird.
+> Der vorherige Microsoft OLE DB-Anbieter für SQL Server (SQLOLEDB) und SQL Server Native Client OLE DB-Anbieter (SQLNCLI) bleiben als veraltet markiert und sollten nicht mehr für neue Bereitstellungen verwendet werden. Verwenden Sie stattdessen den neuen [Microsoft OLE DB-Treiber für SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), der mit den aktuellsten Serverfeatures aktualisiert wird.
   
 [@datasrc =] *\'data_source @ no__t-3*          
  Der Name der Datenquelle, wie er vom OLE DB-Anbieter interpretiert wird. *data_source* ist vom Datentyp **nvarchar (** 4000 **)** . *data_source* wird als DBPROP_INIT_DATASOURCE-Eigenschaft zum Initialisieren des OLE DB Anbieters übermittelt.  
@@ -67,10 +67,10 @@ Der eindeutige Programmbezeichner (Programmatic Identifier, PROGID) des OLE DB-A
 [@provstr =] *\'provider_string @ no__t-3*          
  Die für den OLE DB-Anbieter spezifische Verbindungszeichenfolge, die eine eindeutige Datenquelle identifiziert. *provider_string* ist vom Datentyp **nvarchar (** 4000 **)** und hat den Standardwert NULL. *provstr* wird entweder an IDataInitialize weitergeleitet oder als DBPROP_INIT_PROVIDERSTRING-Eigenschaft festgelegt, um den OLE DB-Anbieter zu initialisieren.  
   
- Wenn der Verbindungs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server für den Native Client OLE DB-Anbieter erstellt wird, kann die Instanz mit dem Server Schlüsselwort as Server = Server*Name*\\*instanceName* angegeben werden, um eine bestimmte Instanz von anzugeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Server* Name ist der Name des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, und *instanceName* ist der Name der spezifischen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mit der der Benutzer verbunden wird.  
+ Wenn der Verbindungs Server für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client OLE DB-Anbieter erstellt wird, kann die Instanz mit dem Server Schlüsselwort als Server = Server*Name*\\*instanceName* angegeben werden, um eine bestimmte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzugeben. *Server* Name ist der Name des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, und *instanceName* ist der Name der spezifischen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der der Benutzer verbunden wird.  
   
 > [!NOTE]
-> Der Zugriff auf eine gespiegelte Datenbank ist nur dann möglich, wenn eine Verbindungszeichenfolge den Datenbanknamen enthält. Dieser Name ist notwendig, um Failoverversuche des Datenzugriffsanbieters zu ermöglichen. Die Datenbank kann im-Parameter **@provstr** oder **@catalog** im-Parameter angegeben werden. Optional kann in der Verbindungszeichenfolge auch ein Failoverpartnername angegeben werden.  
+> Der Zugriff auf eine gespiegelte Datenbank ist nur dann möglich, wenn eine Verbindungszeichenfolge den Datenbanknamen enthält. Dieser Name ist notwendig, um Failoverversuche des Datenzugriffsanbieters zu ermöglichen. Die Datenbank kann im Parameter **\@provstr** oder **\@catalog** angegeben werden. Optional kann in der Verbindungszeichenfolge auch ein Failoverpartnername angegeben werden.  
   
 [@catalog =] *\'catalog @ no__t-3*       
  Der Katalog, der verwendet werden soll, wenn eine Verbindung mit dem OLE DB-Anbieter hergestellt wird. *catalog* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. der *Katalog* wird als DBPROP_INIT_CATALOG-Eigenschaft zum Initialisieren des OLE DB Anbieters übermittelt. Wenn der Verbindungsserver für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert wird, verweist catalog auf die Standarddatenbank, der der Verbindungsserver zugeordnet ist.  
@@ -86,22 +86,22 @@ Der eindeutige Programmbezeichner (Programmatic Identifier, PROGID) des OLE DB-A
   
 |OLE DB-Remotedatenquelle|OLE DB-Anbieter|product_name|provider_name|data_source|location|provider_string|catalog|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (Standard)||||||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter||**SQLNCLI**|Netzwerkname von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (für Standardinstanz)|||Datenbankname (optional)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter||**SQLNCLI**|*Servername*\\*instanceName* (für eine bestimmte Instanz)|||Datenbankname (optional)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (Standard)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter||**SQLNCLI**|Netzwerkname von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (für Standardinstanz)|||Datenbankname (optional)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter||**SQLNCLI**|*Servername*\\*instanceName* (für eine bestimmte Instanz)|||Datenbankname (optional)|  
 |Oracle, Version 8 und höher|Oracle-Anbieter für OLE DB|Any|**OraOLEDB.Oracle**|Alias für die Oracle-Datenbank||||  
 |Access/Jet|Microsoft OLE DB-Anbieter für Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Vollständiger Pfad der Jet-Datenbankdatei||||  
 |ODBC-Datenquelle (ODBC data source)|Microsoft OLE DB-Anbieter für ODBC|Any|**MSDASQL**|System-DSN der ODBC-Datenquelle||||  
 |ODBC-Datenquelle (ODBC data source)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für ODBC|Any|**MSDASQL**|||ODBC-Verbindungszeichenfolge||  
 |Dateisystem|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für den Indexdienst|Any|**MSIDXS**|Katalogname von Indexdienstleistung||||  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Kalkulationstabelle|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Vollständiger Pfad der Excel-Datei||Excel 5,0||  
-|IBM DB2-Datenbank|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für DB2|Any|**DB2OLEDB**|||Weitere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Informationen finden Sie unter OLE DB Provider für DB2-Dokumentation.|Katalogname der DB2-Datenbank|  
+|IBM DB2-Datenbank|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für DB2|Any|**DB2OLEDB**|||Weitere Informationen finden Sie unter [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider für DB2-Dokumentation.|Katalogname der DB2-Datenbank|  
   
- <sup>1</sup> diese Art der Einrichtung eines Verbindungs Servers erzwingt, dass der Name des Verbindungs Servers mit dem Netzwerknamen der Remote Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]identisch ist. Verwenden Sie *data_source* , um den Server anzugeben.  
+ <sup>1</sup> diese Art der Einrichtung eines Verbindungs Servers erzwingt, dass der Name des Verbindungs Servers mit dem Netzwerknamen der Remote Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identisch ist. Verwenden Sie *data_source* , um den Server anzugeben.  
   
  <sup>2</sup> "Any" gibt an, dass der Produktname etwas sein kann.  
   
- Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ist der Anbieter, der mit verwendet wird, wenn kein Anbieter Name angegeben ist oder wenn als Produktname angegeben wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Selbst wenn Sie den älteren Anbieternamen, SQLOLEDB, angeben, wird er beim persistenten Speichern im Katalog in SQLNCLI geändert.  
+ Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ist der Anbieter, der mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, wenn kein Anbieter Name angegeben ist oder wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Produktname angegeben wird. Selbst wenn Sie den älteren Anbieternamen, SQLOLEDB, angeben, wird er beim persistenten Speichern im Katalog in SQLNCLI geändert.  
   
  Mit den Parametern *data_source*, *Location*, *provider_string*und *catalog* werden die Datenbank oder Datenbanken identifiziert, auf die der Verbindungs Server verweist. Falls einer dieser Parameter den Wert NULL hat, wird die entsprechende OLE DB-Initialisierungseigenschaft nicht festgelegt.  
   
@@ -110,10 +110,10 @@ Der eindeutige Programmbezeichner (Programmatic Identifier, PROGID) des OLE DB-A
  **sp_addlinkedserver** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
 > [!IMPORTANT]
-> Wenn ein Verbindungs Server mithilfe von **sp_addlinkedserver**erstellt wird, wird für alle lokalen Anmeldungen eine standardmäßige selbst Zuordnung hinzugefügt. Für nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anbieter können authentifizierte Anmeldungen möglicherweise Zugriff auf den Anbieter unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto erhalten. Administratoren sollten eventuell `sp_droplinkedsrvlogin <linkedserver_name>, NULL` verwenden, um die globale Zuordnung zu entfernen.  
+> Wenn ein Verbindungs Server mithilfe von **sp_addlinkedserver**erstellt wird, wird für alle lokalen Anmeldungen eine standardmäßige selbst Zuordnung hinzugefügt. Bei nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anbietern können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-authentifizierte Anmeldungen möglicherweise Zugriff auf den Anbieter unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst Konto erhalten. Administratoren sollten eventuell `sp_droplinkedsrvlogin <linkedserver_name>, NULL` verwenden, um die globale Zuordnung zu entfernen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die `sp_addlinkedserver` -Anweisung erfordert `ALTER ANY LINKED SERVER` die-Berechtigung. (Das [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Dialogfeld **neuer Verbindungs Server** wird so implementiert, dass die Mitgliedschaft in der `sysadmin` Server Rolle "Fixed" erforderlich ist.)  
+ Die `sp_addlinkedserver`-Anweisung erfordert die Berechtigung "`ALTER ANY LINKED SERVER`". (Das Dialogfeld **neuer Verbindungs Server** @no__t 0 wird so implementiert, dass die Mitgliedschaft in der `sysadmin`-Server Rolle erforderlich ist.)  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -139,10 +139,10 @@ EXEC sp_addlinkedserver
    @datasrc=N'S1\instance1';  
 ```  
 
- Im folgenden Beispiel wird mithilfe des `S1_instance1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieters [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Verbindungs Server für eine Instanz von erstellt.  
+ Im folgenden Beispiel wird ein Verbindungs Server `S1_instance1` für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters erstellt.  
  
 > [!IMPORTANT] 
-> SQL Server Native Client OLE DB Anbieter (SQLNCLI) ist weiterhin veraltet, und es wird nicht empfohlen, ihn für neue Entwicklungsarbeiten zu verwenden. Verwenden Sie stattdessen den neuen [Microsoft OLE DB-Treiber für SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (msoledbsql), der mit den neuesten Server Funktionen aktualisiert wird.
+> Der SQL Server Native Client OLE DB-Anbieter (SQLNCLI) bleibt als veraltet markiert und sollte nicht mehr für neue Bereitstellungen verwendet werden. Verwenden Sie stattdessen den neuen [Microsoft OLE DB-Treiber für SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), der mit den aktuellsten Serverfeatures aktualisiert wird.
   
 ```sql  
 EXEC sp_addlinkedserver     
@@ -156,7 +156,7 @@ EXEC sp_addlinkedserver
  Der Microsoft.Jet.OLEDB.4.0-Anbieter stellt eine Verbindung mit Microsoft Access-Datenbanken her, die das 2002-2003-Format verwenden. Im folgenden Beispiel wird der Verbindungsserver `SEATTLE Mktg` erstellt.  
   
 > [!NOTE]  
-> In diesem Beispiel wird davon [!INCLUDE[msCoName](../../includes/msconame-md.md)] ausgegangen, dass sowohl der Zugriff als auch die **Northwind** -Beispieldatenbank installiert sind und dass sich die **Northwind** -Datenbank in c:\msoffice\access\samplesbefindet.  
+> In diesem Beispiel wird davon ausgegangen, dass sowohl [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Zugriff als auch die **Northwind** -Beispieldatenbank installiert sind und dass sich die **Northwind** -Datenbank unter c:\msoffice\access\samplesbefindet.  
   
 ```sql  
 EXEC sp_addlinkedserver   
@@ -170,7 +170,7 @@ GO
  Der Microsoft.ACE.OLEDB.12.0-Anbieter stellt eine Verbindung mit Microsoft Access-Datenbanken her, die das 2007-Format verwenden. Im folgenden Beispiel wird der Verbindungsserver `SEATTLE Mktg` erstellt.  
   
 > [!NOTE]  
-> In diesem Beispiel wird davon [!INCLUDE[msCoName](../../includes/msconame-md.md)] ausgegangen, dass sowohl der Zugriff als auch die **Northwind** -Beispieldatenbank installiert sind und dass sich die **Northwind** -Datenbank in c:\msoffice\access\samplesbefindet.  
+> In diesem Beispiel wird davon ausgegangen, dass sowohl [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Zugriff als auch die **Northwind** -Beispieldatenbank installiert sind und dass sich die **Northwind** -Datenbank unter c:\msoffice\access\samplesbefindet.  
   
 ```sql  
 EXEC sp_addlinkedserver   
@@ -197,7 +197,7 @@ GO
 ```  
   
 ### <a name="d-using-the-microsoft-ole-db-provider-for-excel-spreadsheet"></a>D. Verwenden des Microsoft OLE DB-Anbieters für Excel-Arbeitsblätter  
- Um eine Verbindungs Server Definition mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für Jet für den Zugriff auf eine Excel-Tabelle im 1997-2003-Format zu erstellen, erstellen Sie zunächst einen benannten Bereich in Excel, indem Sie die Spalten und Zeilen des Excel-Arbeitsblatts angeben, die ausgewählt werden sollen. Auf den Namen des Bereichs kann dann als Tabellenname in einer verteilten Abfrage verwiesen werden.  
+ Erstellen Sie zunächst einen benannten Bereich in Excel, indem Sie die Spalten und Zeilen des Excel-Arbeitsblatts angeben, um eine Verbindungs Server Definition zu erstellen, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)]-OLE DB Anbieter für Jet für den Zugriff auf eine Excel-Tabelle im 1997-2003-Format verwendet. Auf den Namen des Bereichs kann dann als Tabellenname in einer verteilten Abfrage verwiesen werden.  
   
 ```sql  
 EXEC sp_addlinkedserver 'ExcelSource',  
@@ -284,14 +284,14 @@ EXEC sp_addlinkedserver
        Default Schema=admin;';  
 ```  
   
-### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. Hinzufügen [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] eines als Verbindungs Server für die Verwendung mit verteilten Abfragen in Cloud-und lokalen Datenbanken  
+### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. Hinzufügen eines [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] als Verbindungs Server zur Verwendung mit verteilten Abfragen in Cloud-und lokalen Datenbanken  
  Sie können eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] als Verbindungsserver hinzufügen und diesen dann für verteilte Abfragen verwenden, die lokale Datenbanken und Clouddatenbanken umfassen. Dies ist eine Komponente für Daten Bank Hybridlösungen, die lokale Unternehmensnetzwerke und die Azure-Cloud umfassen.  
   
- Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Box-Produkt enthält das Feature für verteilte Abfragen, mit dem Sie Abfragen zum Kombinieren von Daten aus lokalen Datenquellen und Daten aus Remote Quellen (einschließlich Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht-Datenquellen), die als Verbindungs Server definiert sind, schreiben können. Jede [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (außer der virtuellen Masterdatenbank) kann als einzelner Verbindungsserver hinzugefügt und wie jede andere Datenbank direkt in Datenbankanwendungen verwendet werden.  
+ Das Produkt "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" enthält das Feature "verteilte Abfrage", mit dem Sie Abfragen zum Kombinieren von Daten aus lokalen Datenquellen und Daten aus Remote Quellen (einschließlich Daten aus nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquellen), die als Verbindungs Server definiert sind, schreiben können. Jede [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (außer der virtuellen Masterdatenbank) kann als einzelner Verbindungsserver hinzugefügt und wie jede andere Datenbank direkt in Datenbankanwendungen verwendet werden.  
   
- Die Vorteile der Verwendung einer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sind: Verwaltbarkeit, Hochverfügbarkeit, Skalierbarkeit, ein vertrautes Entwicklungsmodell sowie ein relationales Datenmodell. Auf welche Weise eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] von Ihrer Datenbank in der Cloud verwendet wird, richtet sich nach den Anwendungsanforderungen. Sie können alle Daten gleichzeitig auf eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verschieben oder einige Daten stufenweise umlagern, während die übrigen Daten in der lokalen Umgebung verbleiben. Für eine solche Hybrid Datenbankanwendung [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] kann nun als Verbindungs Server hinzugefügt werden, und die Datenbankanwendung kann verteilte Abfragen ausgeben, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] um Daten aus und lokalen Datenquellen zu kombinieren.  
+ Die Vorteile der Verwendung einer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sind: Verwaltbarkeit, Hochverfügbarkeit, Skalierbarkeit, ein vertrautes Entwicklungsmodell sowie ein relationales Datenmodell. Auf welche Weise eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] von Ihrer Datenbank in der Cloud verwendet wird, richtet sich nach den Anwendungsanforderungen. Sie können alle Daten gleichzeitig auf eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verschieben oder einige Daten stufenweise umlagern, während die übrigen Daten in der lokalen Umgebung verbleiben. Für eine solche Hybrid Datenbankanwendung können [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] jetzt als Verbindungs Server hinzugefügt werden, und die Datenbankanwendung kann verteilte Abfragen ausgeben, um Daten aus [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-und lokalen Datenquellen zu kombinieren.  
   
- Im folgenden finden Sie ein einfaches Beispiel für das Herstellen einer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Verbindung mit einer mithilfe von verteilten Abfragen:  
+ Im folgenden finden Sie ein einfaches Beispiel für das Herstellen einer Verbindung mit einem [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mithilfe verteilter Abfragen:  
   
 ```sql  
 -- Configure the linked server  

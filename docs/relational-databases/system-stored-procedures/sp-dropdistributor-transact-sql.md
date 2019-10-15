@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 032ecf59a3ffba4a7a7a6f4739c92b688858d501
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a82a3bedf78eb69dfc4a1736e212164341077601
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768869"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304976"
 ---
-# <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
+# <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Deinstalliert den Verteiler. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank mit Ausnahme der Verteilungsdatenbank ausgeführt.  
@@ -38,13 +38,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @no_checks = ] no_checks`Gibt an, ob nach abhängigen Objekten gesucht werden soll, bevor der Verteiler gelöscht wird. *no_checks* ist vom Typ **Bit**. der Standardwert ist 0.  
+`[ @no_checks = ] no_checks` gibt an, ob nach abhängigen Objekten gesucht werden soll, bevor der Verteiler gelöscht wird. *no_checks* ist vom Typ **Bit**. der Standardwert ist 0.  
   
  Bei **0**überprüft **sp_dropdistributor** , ob alle Veröffentlichungs-und Verteilungs Objekte zusätzlich zum Verteiler gelöscht wurden.  
   
  Bei **1**löscht **sp_dropdistributor** alle Veröffentlichungs-und Verteilungs Objekte vor der Deinstallieren des Verteilers.  
   
-`[ @ignore_distributor = ] ignore_distributor`Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**.  
+`[ @ignore_distributor = ] ignore_distributor` gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**.  
   
  Bei **0**stellt **sp_dropdistributor** eine Verbindung mit dem Verteiler her und entfernt alle Replikations Objekte. Wenn **sp_dropdistributor** keine Verbindung mit dem Verteiler herstellen kann, schlägt die gespeicherte Prozedur fehl.  
   
@@ -56,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>Hinweise  
  **sp_dropdistributor** wird für alle Replikations Typen verwendet.  
   
- Wenn andere Verleger-oder Verteilungs Objekte auf dem Server vorhanden sind, schlägt **@no_checks** sp_dropdistributor fehl, es sei denn, ist auf **1**festgelegt.  
+ Wenn andere Verleger-oder Verteilungs Objekte auf dem Server vorhanden sind, schlägt **sp_dropdistributor** fehl, es sei denn, **\@no_checks** wird auf **1**festgelegt.  
   
  Diese gespeicherte Prozedur muss ausgeführt werden, nachdem die Verteilungs Datenbank durch Ausführen von **sp_dropdistributiondb**gelöscht wurde.  
   
