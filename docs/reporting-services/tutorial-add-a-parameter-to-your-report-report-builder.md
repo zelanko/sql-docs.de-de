@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63041722"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252138"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
 In diesem Tutorial fügen Sie einen Parameter zu einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht hinzu, sodass Leser des Berichts Berichtsdaten für einen Wert oder mehrere Werte filtern können. 
@@ -142,9 +142,9 @@ Wenn Sie einer Abfrage einen Abfrageparameter hinzufügen, erstellt der Berichts
     WHERE StoreID = (@StoreID)  
     ```  
   
-    Das Dialogfeld **WHERE** -Klausel beschränkt die abgerufenen Daten auf die Geschäfts-ID, die vom Abfrageparameter *@StoreID* .  
+    Die **WHERE**-Klausel beschränkt die abgerufenen Daten auf die Geschäfts-ID, die vom Abfrageparameter *\@StoreID* angegeben wird.  
   
-4.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Dialogfeld **Abfrageparameter definieren** wird geöffnet, und Sie werden aufgefordert, einen Wert für den Abfrageparameter *@StoreID* .  
+4.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Dialogfeld **Abfrageparameter definieren** wird geöffnet, und Sie werden aufgefordert, einen Wert für den Abfrageparameter *\@StoreID* einzugeben.  
   
 5.  Geben Sie im Feld **Parameterwert**die Zahl **200**ein.  
   
@@ -156,7 +156,7 @@ Wenn Sie einer Abfrage einen Abfrageparameter hinzufügen, erstellt der Berichts
   
 8.  Erweitern Sie im Berichtsdatenbereich den Ordner **Parameter** .  
   
-Beachten Sie, dass nun ein Berichtsparameter namens *@StoreID* existiert sowie ein Bereich „Parameter“, in dem Sie die Berichtsparameter erstellen können.   
+Beachten Sie, dass nun ein Berichtsparameter namens *StoreID\@* existiert sowie ein Bereich „Parameter“, in dem Sie die Berichtsparameter erstellen können.   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -169,7 +169,7 @@ Nachdem Sie einen Berichtsparameter erstellt haben, können Sie die Standardwert
   
 Standardmäßig weist der Parameter, den Sie erstellt haben, den Datentyp **Text**auf. Da es sich bei der Geschäfts-ID um eine ganze Zahl handelt, können Sie den Datentyp in „Integer“ ändern.  
   
-1.  Klicken Sie im Berichtsdatenbereich unter dem Knoten **Parameter** mit der rechten Maustaste auf *@StoreID* , und klicken Sie anschließend auf **Parametereigenschaften**.  
+1.  Klicken Sie im Berichtsdatenbereich unter dem Knoten **Parameter** mit der rechten Maustaste auf *\@StoreID*, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
 2.  Geben Sie im Feld **Eingabeaufforderung** **Geschäfts-ID?** ein. Dieser Text wird auf der Berichts-Viewer-Symbolleiste angezeigt, wenn Sie den Bericht ausführen.  
   
@@ -179,7 +179,7 @@ Standardmäßig weist der Parameter, den Sie erstellt haben, den Datentyp **Text
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen. Der Berichts-Viewer zeigt die Eingabeaufforderung **Store Identifier?** für *@StoreID* .  
+6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen. Der Berichts-Viewer zeigt die Eingabeaufforderung **Geschäfts-ID?** für *\@StoreID* an.  
   
 7.  Geben Sie auf der Berichts-Viewer-Symbolleiste neben Geschäfts-ID die Zahl **200**ein, und klicken anschließend auf **Bericht anzeigen**.  
   
@@ -220,7 +220,7 @@ Nachdem Sie ein Dataset erstellt haben, um verfügbare Werte bereitzustellen, ä
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>So stellen Sie verfügbare Werte für einen Parameter aus einem Dataset bereit  
   
-1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf den Parameter *@StoreID* , und klicken Sie anschließend auf **Parametereigenschaften**.  
+1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf den Parameter *\@StoreID*, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
 2.  Klicken Sie auf **Verfügbare Werte**und anschließend auf **Werte aus Abfrage abrufen**.  
   
@@ -253,7 +253,7 @@ Sie können einen Standardwert für jeden Berichtsparameter angeben, damit der B
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID* , und klicken Sie anschließend auf **Parametereigenschaften**.  
+2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *\@StoreID*, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
 3.  Klicken Sie auf **Standardwerte**und anschließend auf **Werte aus Abfrage abrufen**.  
   
@@ -265,13 +265,13 @@ Sie können einen Standardwert für jeden Berichtsparameter angeben, damit der B
   
 7.  Zeigen Sie eine Vorschau des Berichts an.  
   
-For *@StoreID* zeigt der Berichts-Viewer den Wert „Contoso North America Online Store“ an, da es sich um den ersten Wert aus dem Resultset für das Dataset **Geschäfte**. Im Bericht wird die verkaufte Menge von Digitalkameras für die Geschäfts-ID **199**angezeigt.  
+Für *\@StoreID* zeigt der Berichts-Viewer den Wert „Contoso North America Online Store“ an, da es sich um den ersten Wert aus dem Resultset für das Dataset **Stores** handelt. Im Bericht wird die verkaufte Menge von Digitalkameras für die Geschäfts-ID **199**angezeigt.  
   
 ### <a name="to-specify-a-custom-default-value"></a>So geben Sie einen benutzerdefinierten Standardwert an  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID* , und klicken Sie anschließend auf **Parametereigenschaften**.  
+2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *\@StoreID*, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
 3.  Klicken Sie auf **Standardwerte** > **Werte angeben** > **Hinzufügen**. Eine neue Wertzeile wird hinzugefügt.  
   
@@ -281,7 +281,7 @@ For *@StoreID* zeigt der Berichts-Viewer den Wert „Contoso North America Onlin
   
 6.  Zeigen Sie eine Vorschau des Berichts an.  
   
-For *@StoreID* zeigt der Report Viewer „Contoso Catalog Store“ an, da dies der Anzeigename für die Geschäfts-ID **200**. Im Bericht werden die verkauften Mengen für Zubehör, Camcorder und digitale SLR-Kameras für die Geschäfts-ID **200**angezeigt.  
+Für *\@StoreID* zeigt der Report Viewer „Contoso Catalog Store“ an, da dies der Anzeigename der Geschäfts-ID **200** ist. Im Bericht werden die verkauften Mengen für Zubehör, Camcorder und digitale SLR-Kameras für die Geschäfts-ID **200**angezeigt.  
   
 ## <a name="NameValue"></a>4d. Suchen eines Name-Wert-Paares  
 Ein Dataset kann sowohl den Bezeichner als auch das entsprechende Namensfeld enthalten. Wenn Sie nur einen Bezeichner haben, können Sie in einem von Ihnen erstellten Dataset, das Name-Wert-Paare enthält, nach dem entsprechenden Namen suchen.  
@@ -323,7 +323,7 @@ Wenn die Leser des Berichts Fragen zu einem Bericht hat, ist es hilfreich, die a
   
 2.  Klicken Sie mit der rechten Maustaste auf die Fußzeile > **Einfügen** > **Textfeld**. Ziehen Sie das Textfeld neben das Textfeld mit dem Zeitstempel. Vergrößern Sie die Breite des Textfelds mit dem seitlichen Ziehpunkt.  
   
-3.  Ziehen Sie im Berichtsdatenbereich den Parameter *@StoreID* in das Textfeld. Im Textfeld wird `[@StoreID]`angezeigt.  
+3.  Ziehen Sie im Berichtsdatenbereich den Parameter *\@StoreID* in das Textfeld. Im Textfeld wird `[@StoreID]`angezeigt.  
   
 4.  Um die Parameterbezeichnung anzuzeigen, klicken Sie auf das Textfeld, bis der Einfügecursor nach dem vorhandenen Ausdruck angezeigt wird, geben Sie ein Leerzeichen ein, und ziehen Sie dann eine andere Kopie des Parameters im Berichtsdatenbereich in das Textfeld. Im Textfeld wird `[@StoreID] [@StoreID]`angezeigt.  
   
@@ -371,7 +371,7 @@ Wenn Sie einen einwertigen Parameter in einen mehrwertigen Parameter ändern mö
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID* , und klicken Sie anschließend auf **Parametereigenschaften**.  
+2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *\@StoreID*, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
 3.  Aktivieren Sie **Mehrere Werte zulassen**.  
   

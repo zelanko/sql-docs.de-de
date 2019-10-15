@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: a22cf1c2da261805309c8ac223a8535afbcd34d1
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: e7a3d7b7f67abae251041ff2b702d93b60228958
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152741"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173146"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Versionshinweise zu Microsoft ODBC Driver for SQL Server für Linux und macOS
 
@@ -35,6 +35,19 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## <a name="1742-october-2019"></a>17.4.2, Oktober 2019
+
+| Neues Feature | Details |
+| :------------ | :------ |
+| Unterstützung für zusätzliche Azure Key Vault Endpunkte | Siehe [Verwenden von Always Encrypted mit dem ODBC-Treiber](../using-always-encrypted-with-the-odbc-driver.md). |
+| Unterstützung für das Festlegen der Daten Klassifizierungs Version | Siehe [Data Classification (Datenklassifizierung)](../data-classification.md#bkmk-version) |
+| Fehlerbehebungen | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| &nbsp; | &nbsp; |
+
+**Bekanntes Problem:**
+
+Wenn Sie Always Encrypted mit sicheren Enklaven und Azure Key Vault verwenden, können ungerade Schlüssel Pfadlängen zu Fehlern bei der CMK-Signatur Überprüfung führen. Wenn dieses Problem auftritt, versuchen Sie, die Länge des KEYPATH um ein Zeichen zu ändern, indem Sie den AKV-Schlüssel umbenennen.
+
 ## <a name="174-august-2019"></a>17.4, August 2019
 
 | Neues Feature | Details |

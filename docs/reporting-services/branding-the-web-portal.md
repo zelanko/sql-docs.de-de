@@ -8,12 +8,12 @@ description: In diesem Artikel erfahren Sie, wie Sie die Darstellung des Webport
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65429cd58796d27025a929e95c6682449e456425
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199415"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251913"
 ---
 # <a name="branding-the-web-portal"></a>Branding des Webportals
 
@@ -75,7 +75,7 @@ Wenn beispielsweise die colors.json-Datei die folgenden Werte hätte.
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-Die verarbeitete Ausgabe wird die **@primaryButtonBg** LESS-Variable aufrufen und sicherstellen, dass sie der JSON-Eigenschaft, genannt **primary**, zugeordnet wird, die in diesem Beispiel #009900 ist. Daher würde die richtige CSS ausgegeben werden.  
+Die verarbeitete Ausgabe ruft die LESS-Variable **\@primaryButtonBg** auf und stellt sicher, dass sie der JSON-Eigenschaft **primary** zugeordnet wird, die in diesem Beispiel #009900 ist. Daher würde die richtige CSS ausgegeben werden.  
   
     .btn-primary {   
         color:#ffffff;   

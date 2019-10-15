@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576000"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278231"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Dateifreigabeübermittlung in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine Dateifreigabe-Übermittlungserweiterung, mit deren Hilfe ein Bericht an einen Ordner übermittelt werden kann. Diese Erweiterung ist standardmäßig verfügbar und erfordert keine zusätzliche Konfiguration. Damit die Dateiübermittlung erfolgreich ist, müssen Sie Schreibberechtigungen für den freigegebenen Ordner erteilen. Das Konto, das Schreibberechtigungen erfordert, kann entweder mit Anmeldeinformationen im Abonnement oder mit einem **Dateifreigabekonto** für den Berichtsserver konfiguriert sein. Weitere Informationen zum Datenfreigabekonto finden Sie unter [Abonnementeinstellungen und ein Dateifreigabekonto &#40;Konfigurations-Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Außerdem müssen Benutzer, die auf die Berichte zugreifen wollen, über Leseberechtigungen für den freigegebenen Ordner verfügen.  
@@ -72,7 +72,7 @@ ms.locfileid: "65576000"
   
  **Überschreiben:** Sie können Optionen zum Überschreiben angeben, um den Dateinamen bei jeder Berichtsübermittlung oder Erstellung einer neuen Datei wiederzuverwenden. Zum Überschreiben der Datei müssen Sie den gleichen Dateinamen und die gleiche Erweiterung verwenden.  
   
- Ein andere Möglichkeit, eindeutige Dateinamen für jede Übermittlung zu erstellen, ist das Einschließen eines Timestamps in den Dateinamen. Dazu fügen Sie die **@timestamp** -Variable dem Dateinamen hinzu (z.B. *CompanySales@timestamp* ). Auf diese Weise ist der Dateiname per definitionem eindeutig und wird daher niemals überschrieben.  
+ Ein andere Möglichkeit, eindeutige Dateinamen für jede Übermittlung zu erstellen, ist das Einschließen eines Timestamps in den Dateinamen. Dazu fügen Sie die Variable **\@timestamp** dem Dateinamen hinzu (z. B. *CompanySales@timestamp* ). Auf diese Weise ist der Dateiname per definitionem eindeutig und wird daher niemals überschrieben.  
   
  Die folgende Abbildung zeigt ein Beispiel der Einstellungen für ein Abonnement, für das die Dateifreigabeübermittlung konfiguriert wurde.  
   
