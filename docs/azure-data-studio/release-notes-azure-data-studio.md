@@ -9,17 +9,28 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/03/2019
-ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.date: 10/08/2019
+ms.openlocfilehash: 991bc20600936ac61ab291db68d9e5f7728b96b5
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816647"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041121"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](download.md)**
+
+## <a name="october-2019-hotfix"></a>Oktober 2019 (Hotfix)
+
+8\. Oktober 2019 &nbsp; / &nbsp; Version: 1.12.1
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Das Problem, dass Anführungszeichen und umgekehrte Schrägstriche in Notebooks nicht richtig als Escapezeichen umgesetzt werden konnten, wurde behoben. |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019"></a>Oktober 2019
 
