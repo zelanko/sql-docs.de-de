@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 4: Festlegen von Domänenregeln | Microsoft-Dokumentation'
+title: 'Aufgabe 4: Festlegen von Domänen Regeln | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -10,55 +10,55 @@ ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489075"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381740"
 ---
-# <a name="task-4-setting-domain-rules"></a>Aufgabe 4: Festlegen von Domänenregeln
-  In dieser Aufgabe erstellen Sie eine Regel für die **Contact Email** Domäne zu überprüfen, ob die e-Mail-Adresse endet **@adventure-works.com** . Finden Sie unter [Erstellen einer Domänenregel](https://msdn.microsoft.com/library/hh510397.aspx) Weitere Informationen auf der Seite.  
+# <a name="task-4-setting-domain-rules"></a>Aufgabe 4: Festlegen von Domänenregeln
+  In dieser Aufgabe erstellen Sie eine Regel für die **Kontakt-e-Mail** -Domäne, um zu prüfen, ob die e-Mail-Adresse mit **\@adventure-Works.com**endet. Weitere Informationen zu dieser Seite finden Sie im Thema [Erstellen einer Domänen Regel](https://msdn.microsoft.com/library/hh510397.aspx) .  
   
-1.  Klicken Sie auf **Contact Email** in die **Domänenliste**.  
+1.  Klicken Sie in der **Domänen Liste**auf **Contact Email** .  
   
-2.  Wechseln Sie zu der **Domänenregeln** Registerkarte im rechten Bereich.  
+2.  Wechseln Sie im rechten Bereich zur Registerkarte **Domänen Regeln** .  
   
-     ![Fügen Sie eine neue Symbolleisten-Schaltfläche in einer Domäne Regel](../../2014/tutorials/media/et-settingdomainrules-01.jpg "Hinzufügen einer neuen Domäne (Symbolleistenschaltfläche)")  
+     ![Symbolleisten Schaltfläche für neue Domänen Regel hinzufügen](../../2014/tutorials/media/et-settingdomainrules-01.jpg "Symbolleisten Schaltfläche für neue Domänen Regel hinzufügen")  
   
-3.  Klicken Sie im rechten Bereich auf **Fügt eine neue domänenregel hinzu** auf der Symbolleiste (siehe Bild), um eine Regel hinzuzufügen.  
+3.  Klicken Sie im rechten Bereich auf der Symbolleiste auf die Schaltfläche **neue Domänen Regel hinzufügen** (siehe Abbildung), um eine Regel hinzuzufügen.  
   
-4.  Typ **e-Mail-Überprüfung** für die **Regelname** , und drücken Sie **EINGABETASTE**. Die **Active** Kontrollkästchen sollte standardmäßig aktiviert werden. Dieses Steuerelement ermöglicht Ihnen, eine Regel temporär zu deaktivieren.  
+4.  Geben Sie als **Regelname** **e-Mail-Überprüfung** ein, und drücken **Sie** Das Kontrollkästchen **aktiv** sollte standardmäßig aktiviert sein. Dieses Steuerelement ermöglicht Ihnen, eine Regel temporär zu deaktivieren.  
   
-5.  In der **erstellen Sie eine Regel** Bereich, klicken Sie auf **Pfeil nach unten**, und wählen Sie **Wert endet mit**.  
+5.  Klicken Sie im Bereich **Regel erstellen** auf **Pfeil nach unten**, und wählen Sie **Wert endet mit**aus.  
   
-6.  Typ **@adventure-works.com** in das Textfeld ein und drücken Sie **Registerkarte**. Sie können weitere Bedingungen hinzufügen, indem Sie auf **neue Bedingung hinzufügen, um die ausgewählte Klausel** Symbolleisten-Schaltfläche in der **erstellen Sie eine Regel** Bereich.  
+6.  Geben Sie im Textfeld **\@adventure-Works.com** ein, und drücken Sie die **Tab**-Taste. Sie können weitere Bedingungen hinzufügen, indem Sie im Bereich **Regel erstellen** **auf der Symbolleiste der ausgewählten Klausel auf neue Bedingung hinzufügen** klicken.  
   
-     ![E-Mail-Überprüfungsregel](../../2014/tutorials/media/et-settingdomainrules-02.jpg "e-Mail-Überprüfungsregel")  
+     ![Validierungs Regel für e-Mail](../../2014/tutorials/media/et-settingdomainrules-02.jpg "Validierungs Regel für e-Mail")  
   
-7.  Klicken Sie auf **ausgewählte domänenregel für Testdaten ausführen** auf der Symbolleiste im rechten Bereich auf die Regel anhand von Beispieldaten zu testen.  
+7.  Klicken Sie auf der Symbolleiste im rechten Bereich auf die Schaltfläche **ausgewählte Domänen Regel für Testdaten ausführen** , um die Regel mit Beispiel Daten zu testen.  
   
-     ![Ausführen die Domänenregel auf die Schaltfläche "Test-Daten-Symbolleiste"](../../2014/tutorials/media/et-settingdomainrules-03.jpg "Domänenregel auf die Schaltfläche \"Test-Daten-Symbolleiste\" ausführen.")  
+     ![Symbolleisten Schaltfläche "Domänen Regel für Testdaten ausführen"](../../2014/tutorials/media/et-settingdomainrules-03.jpg "Symbolleisten Schaltfläche "Domänen Regel für Testdaten ausführen"")  
   
-8.  In der **Testdomänenregel** Dialogfeld klicken Sie auf **Fügt einen neuen testbegriff für die domänenregel** auf der Symbolleiste auf die Schaltfläche.  
+8.  Klicken Sie im Dialogfeld **Test Domänen Regel** auf der Symbolleiste auf **einen neuen Test Begriff für die Domänen Regel hinzufügen** .  
   
-     ![Testen Sie das Dialogfeld "Regel" Domäne](../../2014/tutorials/media/et-settingdomainrules-04.jpg "testen Sie das Dialogfeld \"Regel\" Domäne")  
+     ![Dialog Feld "Domänen Regel testen"](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Dialog Feld "Domänen Regel testen"")  
   
-9. Typ **frank7@adventure-works.com** (einen gültigen Wert) in der **Contact Email** Spalte.  
+9. Geben Sie in der Spalte **Kontakt-e-Mail** **frank7\@adventure-Works.com** (gültiger Wert) ein.  
   
-10. Wiederholen Sie die vorherigen beiden Schritte hinzufügen **joe2@adventure-work.com** (einen ungültigen Wert ohne den ").  
+10. Wiederholen Sie die vorherigen beiden Schritte, um **Joe2\@adventure-work.com** hinzuzufügen (ein ungültiger Wert ohne ' ').  
   
-11. Klicken Sie auf die letzte Schaltfläche (**testet die Domänenregeln für alle Begriffe**) auf der Symbolleiste auf die Eingabedaten für die Regel zu testen.  
+11. Klicken Sie auf der Symbolleiste auf die letzte Schaltfläche (**Testen Sie die Domänen Regel nach allen Begriffen**), um die Eingabedaten für die Regel zu testen.  
   
-     ![Testet die Domänenregeln für alle Begriffe (Symbolleistenschaltfläche)](../../2014/tutorials/media/et-settingdomainrules-05.jpg "testet die Domänenregeln für alle Begriffe (Symbolleistenschaltfläche)")  
+     ![Symbolleisten Schaltfläche "Domänen Regel auf allen Begriffen testen"](../../2014/tutorials/media/et-settingdomainrules-05.jpg "Symbolleisten Schaltfläche "Domänen Regel auf allen Begriffen testen"")  
   
 12. Beachten Sie, dass der erste Eintrag als gültiges Element und der zweite als ungültiges Element angezeigt wird.  
   
-     ![Domänenregeltests](../../2014/tutorials/media/et-settingdomainrules-06.jpg "Domänenregeltests")  
+     ![Test Domänen Regel Ergebnisse](../../2014/tutorials/media/et-settingdomainrules-06.jpg "Test Domänen Regel Ergebnisse")  
   
-13. Klicken Sie auf **schließen** schließen die **Testdomänenregel** Dialogfeld.  
+13. Klicken Sie auf **Schließen** , um das Dialogfeld **Domänen Regel testen** zu schließen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 5: Festlegung Begriffsbasierter basierend Beziehungen](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [Aufgabe 5: Festlegung begriffsbasierter Beziehungen](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

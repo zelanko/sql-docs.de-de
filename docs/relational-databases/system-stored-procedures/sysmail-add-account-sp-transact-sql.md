@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 32b8c8b1bbac53b099afc64f06a0eb5137292555
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: d382d8ee7a871244213467b7a46bdc5b864c55cb
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006089"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381903"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Erstellt ein neues Datenbank-E-Mail-Konto, in dem Informationen zu einem SMTP-Konto gespeichert sind.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,11 +53,11 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="arguments"></a>Argumente  
 `[ @account_name = ] 'account_name'` den Namen des hinzu zufügenden Kontos. *account_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
-`[ @email_address = ] 'email_address'` die e-Mail-Adresse, von der die Nachricht gesendet werden soll. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. *email_address* ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert. Beispielsweise kann ein Konto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent eine e-Mail von der Adresse **SqlAgent@Adventure-Works.com** senden.  
+`[ @email_address = ] 'email_address'` die e-Mail-Adresse, von der die Nachricht gesendet werden soll. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. *email_address* ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert. Beispielsweise kann ein Konto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent e-Mail von der Adresse **SQLAgent\@Adventure-Works.com**senden.  
   
 `[ @display_name = ] 'display_name'` der Anzeige Name, der in e-Mail-Nachrichten von diesem Konto verwendet werden soll. *display_name* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. Beispielsweise kann ein Konto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent den Namen **SQL Server-Agent automatisierten Mailer** in e-Mail-Nachrichten anzeigen.  
   
-`[ @replyto_address = ] 'replyto_address'` die Adresse, an die Antworten auf Nachrichten von diesem Konto gesendet werden. *replyto_address* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. Antworten auf ein Konto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent können z. b. an den Datenbankadministrator **danw@Adventure-Works.com** weitergeleitet werden.  
+`[ @replyto_address = ] 'replyto_address'` die Adresse, an die Antworten auf Nachrichten von diesem Konto gesendet werden. *replyto_address* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. Antworten auf ein Konto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent können z. b. an den Datenbankadministrator **danw\@Adventure-Works.com**weitergeleitet werden.  
   
 `[ @description = ] 'description'` ist eine Beschreibung für das Konto. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL.  
   
@@ -80,7 +80,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Datenbank-E-Mail stellt separate Parameter für **\@email_address**, **\@display_name**und **\@replyto_address**bereit. Der Parameter " **\@email_address** " ist die Adresse, von der die Nachricht gesendet wird. Der Parameter " **\@display_name** " ist der Name, der im Feld **from:** der e-Mail-Nachricht angezeigt wird. Der Parameter " **\@replyto_address** " ist die Adresse, an die Antworten auf die e-Mail-Nachricht gesendet werden. Beispiel: Ein Konto, das für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet wird, soll E-Mail-Nachrichten von einer E-Mail-Adresse senden, die nur für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet wird. Nachrichten von dieser Adresse sollen über einen Anzeigenamen verfügen, sodass die Empfänger problemlos feststellen können, dass die Nachricht vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent gesendet wurde. Wenn ein Empfänger auf die Nachricht antwortet, soll die Antwort an den Datenbankadministrator und nicht an die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendete Adresse gesendet werden. In diesem Szenario verwendet das Konto **SqlAgent@Adventure-Works.com** als e-Mail-Adresse. Der Anzeige Name ist auf **SQL Server-Agent automatisierten Mailer**festgelegt. Das Konto verwendet **danw@Adventure-Works.com** als Antwort auf die Adresse, sodass Antworten auf Nachrichten, die von diesem Konto gesendet werden, an den Datenbankadministrator anstatt an die e-Mail-Adresse für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent gesendet werden. Durch die Bereitstellung unabhängiger Einstellungen für diese drei Parameter ermöglicht es Datenbank-E-Mail Ihnen, die Konfiguration von Nachrichten an Ihre Anforderungen anzupassen.  
   
  Der **\@mailserver_type-** Parameter unterstützt den Wert **' SMTP '** .  
@@ -104,7 +104,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
  [Erstellen Sie ein Datenbank-E-Mail Konto](../../relational-databases/database-mail/create-a-database-mail-account.md) .  
  [Datenbank-E-Mail gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
