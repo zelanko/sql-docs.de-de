@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7553b584a37685fd7fb9455423e55c27c8343e72
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710390"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041200"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,14 +116,14 @@ ms.locfileid: "71710390"
 ## <a name="logins-and-object-ownership"></a>Benutzernamen und Objektbesitz  
   
 ### <a name="are-logins-and-passwords-replicated"></a>Werden Benutzernamen und Kennwörter repliziert?  
- Nein. Für die Übertragung von Benutzernamen und Kennwörtern von einem Verleger an einen oder mehrere Abonnenten können Sie ein DTS-Paket erstellen.  
+ Nein. Sie können ein SSIS-Paket erstellen, um Anmeldungen und Passwörter von einem Verleger an einen oder mehrere Abonnenten zu übertragen.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>Was sind Schemas, und wie werden sie repliziert?  
  Ab [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *Schema* zwei Bedeutungen:  
   
--   Die Definition eines Objekts, beispielsweise als CREATE TABLE-Anweisung. Bei der Replikation werden standardmäßig die Definitionen aller replizierten Objekte auf den Abonnenten kopiert.  
+-   Die Definition eines Objekts, beispielsweise als `CREATE TABLE`-Anweisung. Bei der Replikation werden standardmäßig die Definitionen aller replizierten Objekte auf den Abonnenten kopiert.  
   
--   Der Namespace, in dem ein Objekt erstellt wird: \<Datenbank>. \<Schema>. \<Objekt>. Schemas werden mit der CREATE SCHEMA-Anweisung definiert.  
+-   Der Namespace, in dem ein Objekt erstellt wird: \<Datenbank>. \<Schema>. \<Objekt>. Schemas werden mit der `CREATE SCHEMA`-Anweisung definiert.  
   
 -   Im Assistenten für neue Veröffentlichung weist die Replikation in Bezug auf Schemas und den Objektbesitz das folgende Standardverhalten auf:  
   
@@ -178,7 +178,7 @@ ms.locfileid: "71710390"
  Es gibt unterschiedliche Mechanismen für die Neuerstellung von Indizes. Sie können alle ohne besondere Berücksichtigung der Replikation mit folgender Ausnahme verwendet werden: Für Tabellen in Transaktionsveröffentlichungen sind Primärschlüssel erforderlich, sodass Primärschlüssel in diesen Tabellen nicht gelöscht und neu erstellt werden können.  
   
 ### <a name="how-do-i-add-or-change-indexes-on-publication-and-subscription-databases"></a>Wie kann ich in Veröffentlichungs- und Abonnementdatenbanken Indizes hinzufügen bzw. ändern?  
- Auf dem Verleger oder auf Abonnenten können Indizes ohne besondere Berücksichtigung der Replikation hinzugefügt werden (beachten Sie jedoch, dass Indizes die Leistung beeinträchtigen können). CREATE INDEX und ALTER INDEX werden nicht repliziert. Wenn Sie also beispielsweise auf dem Verleger einen Index hinzufügen oder ändern, müssen Sie denselben Hinzufüge- oder Änderungsvorgang auf dem Abonnenten vornehmen, wenn er dort reflektiert werden soll.  
+ Auf dem Verleger oder auf Abonnenten können Indizes ohne besondere Berücksichtigung der Replikation hinzugefügt werden (beachten Sie jedoch, dass Indizes die Leistung beeinträchtigen können). `CREATE INDEX` und `ALTER INDEX` werden nicht repliziert. Wenn Sie also beispielsweise auf dem Verleger einen Index hinzufügen oder ändern, müssen Sie denselben Hinzufüge- oder Änderungsvorgang auf dem Abonnenten vornehmen, wenn er dort reflektiert werden soll.  
   
 ### <a name="how-do-i-move-or-rename-files-for-databases-involved-in-replication"></a>Wie kann ich Dateien für an einer Replikation beteiligte Datenbanken verschieben bzw. umbenennen?  
  In Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]war zum Verschieben oder zum Umbenennen von Datenbankdateien ein Trennen und erneutes Anfügen der Datenbank erforderlich. Da das Trennen einer replizierten Datenbank nicht möglich ist, musste die Replikation zuerst von diesen Datenbanken entfernt werden. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]können Sie Dateien ohne Trennen und erneutes Anfügen der Datenbank verschieben und umbenennen. Dies hat keine Auswirkungen auf die Replikation. Weitere Informationen zum Verschieben und Umbenennen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
@@ -187,7 +187,7 @@ ms.locfileid: "71710390"
  Löschen Sie zuerst mit [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) oder im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** den Artikel aus der Veröffentlichung, und löschen Sie ihn dann mit `DROP <Object>` aus der Datenbank. Artikel in Momentaufnahme- oder Transaktionsveröffentlichungen können nach dem Hinzufügen von Abonnements nicht mehr gelöscht werden; zuerst müssen die Abonnements gelöscht werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Wie kann ich in einer veröffentlichten Tabelle Spalten hinzufügen bzw. löschen?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt zahlreiche Schemaänderungen für veröffentliche Objekte einschließlich des Hinzufügens und Löschens von Spalten. Führen Sie beispielsweise ALTER TABLE … DROP COLUMN auf dem Verleger aus, damit die Anweisung auf die Abonnenten repliziert und dann zum Löschen der Spalte ausgeführt wird. Auf Abonnenten, auf denen Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ausgeführt werden, wird das Hinzufügen und Löschen von Spalten über die gespeicherten Prozeduren [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) und [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)unterstützt. Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt zahlreiche Schemaänderungen für veröffentliche Objekte einschließlich des Hinzufügens und Löschens von Spalten. Führen Sie beispielsweise `ALTER TABLE … DROP COLUMN` auf dem Verleger aus, damit die Anweisung auf die Abonnenten repliziert und dann zum Löschen der Spalte ausgeführt wird. Auf Abonnenten, auf denen Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ausgeführt werden, wird das Hinzufügen und Löschen von Spalten über die gespeicherten Prozeduren [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) und [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)unterstützt. Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Replikationswartung  
   

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952756"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251354"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -3029,18 +3029,36 @@ ON
 Gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets im Azure SQL Data Warehouse-Speicher zwischengespeichert werden.
 
 OFF        
-Gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets nicht im Azure SQL Data Warehouse-Speicher zwischengespeichert werden. Benutzer können feststellen, ob eine Abfrage mit einem Ergebniscachetreffer oder -fehler ausgeführt wurde, indem sie sys.pdw_request_steps mit einer bestimmten request_id abfragen.   Liegt ein Cachetreffer vor, enthält das Abfrageergebnis einen einzigen Schritt mit den folgenden Details:
-
-|**Spaltenname** |**Ist gleich** |**ReplTest1** |
-|----|----|----|
-| operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-Befehl|Wie|%DWResultCacheDb%|
-| | |
+Gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets nicht im Azure SQL Data Warehouse-Speicher zwischengespeichert werden. 
 
 ### <a name="remarks"></a>Remarks
-Sie müssen während der Ausführung dieses Befehls mit der `master`-Datenbank verbunden sein.  Änderungen an dieser Datenbankeinstellung werden sofort wirksam.  Speicherkosten fallen durch das Zwischenspeichern von Abfrageresultsets an. Nachdem das Zwischenspeichern von Ergebnissen für eine Datenbank deaktiviert wurde, werden zuvor dauerhaft zwischengespeicherte Ergebnisse sofort aus dem Azure SQL Data Warehouse-Speicher gelöscht. Eine neue Spalte namens „is_result_set_caching_on“ wurde in [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) eingeführt, um die Einstellung für die Zwischenspeicherung von Ergebnissen für eine Datenbank anzuzeigen.  
+Sie müssen während der Ausführung dieses Befehls mit der `master`-Datenbank verbunden sein.  Änderungen an dieser Datenbankeinstellung werden sofort wirksam.  Speicherkosten fallen durch das Zwischenspeichern von Abfrageresultsets an. Nachdem das Zwischenspeichern von Ergebnissen für eine Datenbank deaktiviert wurde, werden zuvor dauerhaft zwischengespeicherte Ergebnisse sofort aus dem Azure SQL Data Warehouse-Speicher gelöscht. 
+
+Führen Sie diesen Befehl aus, um die Cachekonfiguration der Ergebnismenge einer Datenbank zu überprüfen.  Wenn das Zwischenspeichern der Ergebnismenge aktiviert ist (ON), gibt is_result_set_caching_on 1 zurück.
+
+```sql
+
+SELECT name, is_result_set_caching_on FROM sys.databases 
+WHERE name = <'Your_Database_Name'>
+
+```
+
+Führen Sie diesen Befehl aus, um zu überprüfen, ob eine Abfrage mit einem Cachetreffer oder Cachefehler ausgeführt wurde.  Wenn es einen Cachetreffer gibt, gibt result_cache_hit 1 zurück. 
+
+```sql
+
+SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+WHERE request_id = <'Your_Query_Request_ID'>
+
+```
+
+Sobald das Zwischenspeichern von Resultsets für eine Datenbank aktiviert ist (ON), werden Ergebnisse für alle Abfragen zwischengespeichert, bis der Cache voll ist. Ausgenommen sind folgende Abfragen:
+
+- Abfragen mit nicht-deterministischen Funktionen wie DateTime.Now() 
+- Abfragen mit benutzerdefinierten Funktionen
+- Abfragen zur Rückgabe von Daten mit einer Zeilengröße größer als 64 KB   
+
+Abfragen mit umfangreichen Resultsets (z. B. > 1 Million Zeilen) werden bei der ersten Ausführung möglicherweise langsamer ausgeführt, wenn der Ergebniscache erstellt wird.
 
 Zwischengespeicherte Resultsets werden wieder für eine Abfrage verwendet, wenn die folgenden Anforderungen erfüllt sind:
 
@@ -3048,9 +3066,6 @@ Zwischengespeicherte Resultsets werden wieder für eine Abfrage verwendet, wenn 
 1. Die neue und die vorherige Abfrage, die die Zwischenspeicherung des Resultsets generierte, stimmen genau überein.
 1. In der Tabelle, aus der das zwischengespeicherte Resultset generiert wurde, wurden keine Daten oder Schemata verändert.  
 
-Sobald das Zwischenspeichern von Resultsets für eine Datenbank aktiviert ist (ON), werden Ergebnisse für alle Abfragen zwischengespeichert, bis der Cache voll ist. Ausgenommen sind Abfragen, die nicht deterministische Funktionen wie „DateTime.Now()“ verwenden und Abfragen, die Daten mit einer Zeilengröße von mehr als 64 KB zurückgeben.   
-
-Abfragen mit umfangreichen Resultsets (z. B. > 1 Million Zeilen) werden bei der ersten Ausführung möglicherweise langsamer ausgeführt, wenn der Ergebniscache erstellt wird.
 
 **<snapshot_option> ::=**         
 **Gilt für**: Azure SQL Data Warehouse (Vorschau)

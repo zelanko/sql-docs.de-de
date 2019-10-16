@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06237e28f9ba75e798da1af57964cc8b251d0b26
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974408"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006068"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -196,7 +196,7 @@ Der Timeoutwert, der festlegt, wie lange die Ressourcen-DLL der SQL Server-Daten
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
-HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
+HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
 Wechselt mit dem HADR-Clusterkontext der Serverinstanz zum angegebenen WSFC (Windows Server Failover Cluster). Der *HADR-Clusterkontext* bestimmt, welcher WSFC die Metadaten für die von der Serverinstanz gehosteten Verfügbarkeitsreplikate verwaltet. Verwenden Sie die SET HADR CLUSTER CONTEXT-Option nur während einer clusterübergreifenden Migration von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] zu einer Instanz von [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] oder höher auf einem neuen WSFC.  
   
 Sie können den HADR-Clusterkontext nur vom lokalen WSFC zu einem Remote-WSFC wechseln. Dann können Sie sich entschließen, vom Remote-WSFC zum lokalen WSFC wieder zurückzuwechseln. Der HADR-Clusterkontext kann nur zu einem Remotecluster wechseln, wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Verfügbarkeitsreplikate hostet.  
@@ -258,7 +258,7 @@ Deaktiviert die automatische Softwarepartitionierung, um große NUMA-Hardwarekno
 
 **\<memory_optimized> ::=**
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
 ON <br>
 Aktiviert alle Features auf Instanzebene, die Teil der [In-Memory Database](../../relational-databases/in-memory-database.md)-Featurefamilie sind. Hierzu gehören derzeit [speicheroptimierte tempdb-Metadaten](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) und der [hybride Pufferpool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Diese Option erfordert einen Neustart, um wirksam zu werden.
@@ -284,9 +284,11 @@ Diese Anweisung erfordert keinen Neustart von [!INCLUDE[ssNoVersion](../../inclu
 Diese Anweisung unterstützt keine DDL-Trigger.  
   
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert ALTER SETTINGS-Berechtigungen für die Prozessaffinitätsoption. ALTER SETTINGS- und VIEW SERVER STATE-Berechtigungen für Diagnoseprotokoll- und Failoverclustereigenschaften-Optionen und die CONTROL SERVER-Berechtigung für die HADR-Clusterkontextoption.  
-  
-Erfordert die ALTER SERVER STATE-Berechtigung für die Option Pufferpoolerweiterung.  
+Erfordert:
+- `ALTER SETTINGS`-Berechtigungen für die Prozessaffinitätsoption.
+- `ALTER SETTINGS`- und `VIEW SERVER STATE`-Berechtigungen für das Diagnoseprotokoll und Optionen für die Failoverclustereigenschaften.
+- `CONTROL SERVER`-Berechtigung für die HADR-Clusterkontextoption.  
+- `ALTER SERVER STATE`-Berechtigung für die Pufferpoolerweiterungsoption.  
   
 Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]-Ressourcen-DLL wird unter dem lokalen Systemkonto ausgeführt. Deshalb muss das lokale Systemkonto über Lese- und Schreibzugriff auf den in der Diagnoseprotokolloption angegebenen Pfad verfügen.  
   
@@ -337,14 +339,14 @@ SET PROCESS AFFINITY CPU=60 TO 200;
 #### <a name="d-setting-affinity-to-cpu-0-on-a-system-that-has-two-cpus"></a>D. Festlegen der Affinität auf einem System, das über zwei CPUs verfügt, für CPU 0  
 Im folgenden Beispiel wird die Affinität auf einem Computer, der über zwei CPUs verfügt, auf `CPU=0` festgelegt. Vor Ausführung der folgenden Anweisung ist die interne Affinitätsbitmaske 00.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET PROCESS AFFINITY CPU=0;  
 ```  
   
 #### <a name="e-setting-affinity-to-auto"></a>E. Festlegen der Affinität auf AUTO  
 Im folgenden Beispiel wird die Affinität auf `AUTO` festgelegt.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION  
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713214"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261012"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -114,17 +114,22 @@ Geben Sie ein Abfrageplanhandle an, um einen einzelnen Abfrageplan aus dem Planc
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
-Gibt die MAXDOP-Standardeinstellung an, die für Anweisungen verwendet werden sollte. 0 ist der Standardwert und gibt an, dass die Serverkonfiguration stattdessen verwendet wird. Mit der MAXDOP-Einstellung im Datenbankbereich wird der **max. Grad an Parallelität** auf der Serverebene von sp_configure überschrieben (sofern sie nicht auf 0 festgelegt ist). Abfragehinweise können die MAXDOP-Einstellung im Datenbankbereich weiterhin überschreiben, damit bestimmte Abfragen optimiert werden können, für die andere Einstellungen erforderlich sind. All diese Einstellungen werden durch die MAXDOP-Einstellung für die Arbeitsauslastungsgruppe begrenzt.
+Gibt die Standardeinstellung **Max. Grad an Parallelität (MAXDOP)** an, die für Anweisungen verwendet werden sollte. 0 ist der Standardwert und gibt an, dass die Serverkonfiguration stattdessen verwendet wird. Mit der MAXDOP-Einstellung im Datenbankbereich wird der **max. Grad an Parallelität** auf der Serverebene von sp_configure überschrieben (sofern sie nicht auf 0 festgelegt ist). Abfragehinweise können die MAXDOP-Einstellung im Datenbankbereich weiterhin überschreiben, damit bestimmte Abfragen optimiert werden können, für die andere Einstellungen erforderlich sind. All diese Einstellungen werden durch die MAXDOP-Einstellung für die [Arbeitsauslastungsgruppe]() begrenzt.
 
-Mithilfe der Option Max. Grad an Parallelität kann die Anzahl der Prozessoren beschränkt werden, die bei der Ausführung paralleler Pläne verwendet werden. SQL Server berücksichtigt die Ausführung paralleler Pläne für Abfragen, DDL-Indizierungsoperationen (Datendefinitionssprache, Data Definition Language), parallele Einfügevorgänge, Onlineausführung von ALTER COLUMN, parallele Sammlung von Statistiken sowie die statische und keysetgesteuerte Cursorauffüllung.
+Sie können mithilfe der MAXDOP-Option die Anzahl der Prozessoren beschränken, die für die Ausführung paralleler Pläne verwendet werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Ausführung paralleler Pläne für Abfragen, DDL-Indizierungsoperationen (Datendefinitionssprache, Data Definition Language, DDL), parallele Einfügevorgänge, Onlineausführung von ALTER COLUMN, parallele Sammlung von Statistiken sowie die statische und keysetgesteuerte Cursorauffüllung.
+
+> [!NOTE]
+> Die Grenze **Max. Grad an Parallelität** wird pro [Task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) festgelegt. Es handelt sich nicht um eine Grenze pro [Anforderung](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) oder pro Abfrage. Das bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Abfrage mehrere Tasks erzeugen kann, die einem [Scheduler](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md). 
 
 Informationen zum Festlegen dieser Option auf Instanzebene finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 > [!NOTE]
-> In Azure SQL-Datenbank wird der **maximale Grad an Parallelität** auf Serverebene immer auf 0 festgelegt. Der maximale Grad an Parallelität kann für jede Datenbank, wie im aktuellen Artikel beschrieben, konfiguriert werden. Empfehlungen zur optimalen Konfiguration vom maximalen Grad an Parallelität finden Sie im Abschnitt [Zusätzliche Ressourcen](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources).
+> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] wird die Konfiguration **Max. Grad an Parallelität** auf Serverebene immer auf 0 festgelegt. Der maximale Grad an Parallelität kann für jede Datenbank, wie im aktuellen Artikel beschrieben, konfiguriert werden. Empfehlungen zur optimalen Konfiguration vom maximalen Grad an Parallelität finden Sie im Abschnitt [Zusätzliche Ressourcen](#additional-resources).
 
 > [!TIP]
-> Fügen Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP** hinzu, um dies auf Abfrageebene zu erreichen.
+> Verwenden Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**, um dies auf Abfrageebene zu erreichen.    
+> Verwenden Sie die [Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **Max. Grad an Parallelität (MAXDOP)** , um dies auf Serverebene zu erreichen.     
+> Verwenden Sie die [Konfigurationsoption für die Resource Governor-Arbeitsauslastunggruppe](../../t-sql/statements/create-workload-group-transact-sql.md), **MAX_DOP**, um dies auf Arbeitsauslastungebene zu erreichen.    
 
 PRIMARY
 
@@ -550,13 +555,13 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 [Richtlinien für Onlineindexvorgänge](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-## <a name="more-information"></a>Weitere Informationen
-
-- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
-- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
-- [Datenbank- und Dateikatalogsichten](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
-- [Serverkonfigurationsoptionen](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
-- [Funktionsweise von Onlineindexvorgängen](../../relational-databases/indexes/how-online-index-operations-work.md)
-- [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md)
-- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+## <a name="more-information"></a>Weitere Informationen   
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
+ [Empfehlung und Richtlinien für die Konfigurationsoption „Max. Grad an Parallelität“ im SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
+ [Datenbank- und Dateikatalogsichten](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
+ [Serverkonfigurationsoptionen](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
+ [Funktionsweise von Onlineindexvorgängen](../../relational-databases/indexes/how-online-index-operations-work.md)    
+ [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md)    
+ [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
+ [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    

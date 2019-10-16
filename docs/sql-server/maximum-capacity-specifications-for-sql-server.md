@@ -1,6 +1,6 @@
 ---
 title: Spezifikationen der maximalen Kapazität für SQL Server | Microsoft-Dokumentation
-ms.date: 11/06/2017
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687371"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008439"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,8 @@ ms.locfileid: "71687371"
 |Sperren pro Verbindung||Maximale Anzahl Sperren pro Server||  
 |Sperren pro Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Begrenzung nur durch Arbeitsspeicher|Dieser Wert dient der statischen Sperrenzuordnung. Dynamische Sperren sind nur durch den Arbeitsspeicher beschränkt.|  
 |Schachtelungsebenen gespeicherter Prozeduren||32|Wenn eine gespeicherte Prozedur auf mehr als 64 Datenbanken zugreift oder sich mehr als 2 Datenbanken überlappen, wird eine Fehlermeldung angezeigt.|  
-|Geschachtelte Unterabfragen||32||  
+|Geschachtelte Unterabfragen||32||    
+|Geschachtelte Transaktionen||4\.294.967.296||     
 |Schachtelungsebenen für Trigger||32||  
 |Nicht gruppierte Indizes pro Tabelle||999||  
 |Anzahl unterschiedlicher Ausdrücke in der GROUP BY-Klausel bei Vorhandensein eines der folgenden Ausdrücke: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  
