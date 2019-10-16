@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b9443f1c33a89dd5eb51c143f23e65c2a12e3d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119144"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278192"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +194,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-Wenn *date* als Variable oder Tabellenspalte angegeben ist und der Datentyp für diese Variable oder Spalte nicht über das angegebene *datepart*-Argument verfügt, gibt `DATEPART` den Fehler 9810 zurück. Im folgenden Beispiel hat die Variable *@t* den Datentyp **time**. Bei der Ausführung würde ein Fehler auftreten, weil der Datumsteil „year“ für den **time**-Datentyp ungültig ist:
+Wenn *date* als Variable oder Tabellenspalte angegeben ist und der Datentyp für diese Variable oder Spalte nicht über das angegebene *datepart*-Argument verfügt, gibt `DATEPART` den Fehler 9810 zurück. Im folgenden Beispiel hat die Variable *\@t* den Datentyp **time**. Bei der Ausführung würde ein Fehler auftreten, weil der Datumsteil „year“ für den **time**-Datentyp ungültig ist:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
@@ -210,7 +210,7 @@ SELECT DATEPART(microsecond, '00:00:01.1234567'); -- Returns 123456
 SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 `DATEPART` kann in den Klauseln SELECT <Liste>, WHERE, HAVING, GROUP BY und ORDER BY verwendet werden.
   
 In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wandelt DATEPART Zeichenfolgenliterale implizit in den **datetime2**-Typ um. Daher unterstützt DATENAME das Format YDM nicht, wenn das Datum als Zeichenfolge übergeben wird. Sie müssen die Zeichenfolge explizit in den Typ **datetime** oder **smalldatetime** umwandeln, um das YDM-Format zu verwenden.

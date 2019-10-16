@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0f92c1a492ff23c8d783927c6e462c2147b72b9c
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 095680b9ff4fcfd58c1d655acaba7e07f70fcffb
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809767"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251991"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
@@ -37,7 +37,9 @@ Gilt für Azure SQL Data Warehouse (Vorschauversion)
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
+
+Führen Sie diesen Befehl aus, wenn Sie mit der Benutzerdatenbank verbunden sind, für die Sie die Einstellung result_set_caching konfigurieren möchten.
 
 **ON**   
 Aktiviert das Zwischenspeichern von Resultsets für die aktuelle Sitzung.  Das Zwischenspeichern eines Resultsets kann für eine Sitzung nicht aktiviert werden (ON), wenn es auf Datenbankebene deaktiviert (OFF) ist.

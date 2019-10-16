@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea6501c4bfd516b99d53f9ac7e90a2cd0d59ba8c
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: e78ab71081c991b5e42726ed4dd594e016f324f0
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026225"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72260329"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -96,7 +96,8 @@ REQUEST_MAX_CPU_TIME_SEC = *value*
 Gibt die maximale CPU-Zeit in Sekunden an, die eine Anforderung beanspruchen kann. *value* muss 0 (null) oder ein positiver Integer sein. Die Standardeinstellung für *value* ist 0 (null), also unbegrenzt.
 
 > [!NOTE]
-> Resource Governor verhindert nicht, dass eine Anforderung bei Erreichung des maximalen Zeitlimits fortgesetzt wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded (Ereignisklasse)](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
+> Resource Governor verhindert nicht, dass eine Anforderung bei Erreichung des maximalen Zeitlimits fortgesetzt wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded (Ereignisklasse)](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).     
+
 > [!IMPORTANT]
 > Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 bricht Resource Governor mit [Ablaufverfolgungsflag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) eine Anforderung ab, wenn die maximale Zeit überschritten wird.
 
@@ -107,13 +108,17 @@ Gibt die maximale Zeit in Sekunden an, die eine Abfrage auf das Freiwerden einer
 > Eine Abfrage schlägt nicht grundsätzlich fehl, wenn das Timeout der Arbeitsspeicherzuweisung erreicht wird. Eine Abfrage schlägt nur fehl, wenn zu viele Abfragen gleichzeitig ausgeführt werden. Andernfalls könnte die Abfrage nur die minimale Arbeitsspeicherzuweisung nutzen, was zu reduzierter Abfrageleistung führen kann.
 
 MAX_DOP = *value*     
-Gibt den maximalen Grad der Parallelität (DOP) für parallele Anforderungen an. *value* muss 0 (null) oder ein positiver Integer sein. Der zulässige Bereich für *value* liegt zwischen 0 und 64. Die *value*-Standardeinstellung 0 verwendet die globale Einstellung. MAX_DOP wird wie folgt behandelt:
+Gibt den **maximalen Grad an Parallelität (MAXDOP)** für die parallele Ausführung von Abfragen an. *value* muss 0 (null) oder ein positiver Integer sein. Der zulässige Bereich für *value* liegt zwischen 0 und 64. Die *value*-Standardeinstellung 0 verwendet die globale Einstellung. MAX_DOP wird wie folgt behandelt:
 
-- MAX_DOP als Abfragehinweis wird so lange verwendet, wie die Arbeitsauslastungsgruppe MAX_DOP nicht überschritten wird. Wenn der Wert des MAXDOP-Abfragehinweises den mit der Ressourcenkontrolle konfigurierten Wert überschreitet, verwendet die Datenbank-Engine den MAXDOP-Wert der Ressourcenkontrolle.
-- ###MAX_DOP als Abfragehinweis überschreibt immer sp_configure 'max. Grad an Parallelität'.
-- Die Arbeitsauslastungsgruppe MAX_DOP überschreibt sp_configure 'Max. Grad an Parallelität'.
-- Wenn die Abfrage zur Kompilierzeit als seriell (MAX_DOP = 1 ) markiert ist, kann sie zur Laufzeit nicht wieder in parallel geändert werden, und zwar unabhängig von der Arbeitsauslastungsgruppe oder der sp_configure-Einstellung.
-- Nach der Konfiguration kann DOP nur bei Arbeitsspeicher-Engpässen verringert werden. Die Neukonfiguration der Arbeitsauslastungsgruppe ist während des Wartens in der Speicherzuweisungs-Warteschlange nicht sichtbar.
+> [!NOTE]
+> MAX_DOP für die Arbeitsauslastungsgruppe überschreibt die [Serverkonfiguration des maximalen Grads an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) und **MAXDOP** für die auf die [Datenbank beschränkte Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+
+> [!TIP]
+> Verwenden Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**, um dies auf Abfrageebene zu erreichen. Die Festlegung des maximalen Grads an Parallelität als Abfragehinweis gilt, solange der MAX_DOP-Wert der Arbeitsauslastungsgruppe nicht überschritten wird. Wenn der MAXDOP-Wert des Abfragehinweises den von Resource Governor konfigurierten Wert überschreitet, verwendet [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den `MAX_DOP`-Wert von Resource Governor. Der [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) für MAXDOP überschreibt stets die [Serverkonfiguration des maximalen Grads an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).      
+>   
+> Um dies auf Datenbankebene zu erreichen, verwenden Sie den **MAXDOP**-Wert der auf die [Datenbank beschränkten Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).      
+>   
+> Verwenden Sie die [Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **Max. Grad an Parallelität (MAXDOP)** , um dies auf Serverebene zu erreichen.     
 
 GROUP_MAX_REQUESTS = *value*     
 Gibt die maximale Anzahl gleichzeitiger Anforderungen an, die in der Arbeitsauslastungsgruppe ausgeführt werden können. *value* muss 0 (null) oder ein positiver Integer sein. Der Standardwert von *value* ist 0 (null) und lässt eine unbegrenzte Anzahl von Anforderungen zu. Wenn die maximale Anzahl gleichzeitiger Anforderungen erreicht wird, kann sich ein Benutzer dieser Gruppe zwar anmelden, wird jedoch in den Wartezustand versetzt, bis die Anzahl gleichzeitiger Anforderungen unter den angegebenen Wert gefallen ist.
@@ -134,22 +139,23 @@ Die Arbeitsauslastungsgruppe kann einen externen Ressourcenpool angeben. Sie kö
 - Ein Ressourcenpool für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Arbeitsauslastungen und Abfragen
 - Ein externer Ressourcenpool für externe Prozesse. Weitere Informationen finden Sie unter [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 Wenn `REQUEST_MEMORY_GRANT_PERCENT` verwendet wird, kann die Indexerstellung verwendet werden, um mehr Arbeitsbereichsspeicher als ursprünglich zugewiesen zu verwenden, damit eine bessere Leistung erzielt wird. Diese besondere Behandlung wird von der Ressourcenkontrolle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt. Die Zuweisung anfänglichen und zusätzlichen Arbeitsspeichers wird jedoch durch den Ressourcenpool und die Einstellungen der Arbeitsauslastungsgruppe begrenzt.
+
+Der Grenzwert `MAX_DOP` wird [taskbezogen](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) festgelegt. Es handelt sich nicht um einen [anforderungs](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)- oder abfragebezogenen Grenzwert. Das bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Abfrage mehrere Tasks erzeugen kann, die einem [Planer](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md).
+
+Wenn `MAX_DOP` verwendet wird und die Abfrage zur Kompilierzeit als seriell markiert ist, kann sie zur Laufzeit nicht wieder in parallel geändert werden, und zwar unabhängig von der Arbeitsauslastungsgruppe oder Serverkonfigurationseinstellung. Nach der Konfiguration von `MAX_DOP` kann dieser Wert nur bei Arbeitsspeicherengpässen verringert werden. Die Neukonfiguration der Arbeitsauslastungsgruppe ist während des Wartens in der Speicherzuweisungs-Warteschlange nicht sichtbar.
 
 ### <a name="index-creation-on-a-partitioned-table"></a>Indexerstellung für eine partitionierte Tabelle
 
 Der durch die Indexerstellung für nicht ausgerichtete partitionierte Tabellen belegte Arbeitsspeicher ist proportional zur Anzahl der beteiligten Partitionen. Wenn der insgesamt erforderliche Arbeitsspeicher die Grenze (`REQUEST_MAX_MEMORY_GRANT_PERCENT`) übersteigt, die pro Abfrage von der Resource Governor-Arbeitsauslastungsgruppe festgelegt wurde, kann die Indexerstellung möglicherweise nicht erfolgreich ausgeführt werden. Da die Arbeitsauslastungsgruppe *„default“* Abfragen zulässt, die die pro Abfrage festgelegte Grenze für mindestens erforderlichen Arbeitsspeicher übersteigen, können Benutzer dieselbe Indexerstellung in Arbeitsauslastungsgruppen des Typs *„default“* ausführen. Voraussetzung ist, dass der Ressourcenpool *„default“* über ausreichend Gesamtarbeitsspeicher verfügt, um eine solche Abfrage ausführen zu können.
 
 ## <a name="permissions"></a>Berechtigungen
-
 Erfordert die `CONTROL SERVER`-Berechtigung.
 
 ## <a name="example"></a>Beispiel
 
-- Erstellen einer Arbeitsauslastungsgruppe namens „newReports“
-
-Sie verwendet die Standardeinstellungen der Ressourcenkontrolle und befindet sich in deren Standardpool. Im Beispiel wird der `default`-Pool angegeben, wobei dies jedoch nicht erforderlich ist.
+Erstellen Sie eine Arbeitsauslastungsgruppe namens `newReports`, die Resource Governor-Standardeinstellungen verwendet und sich im Resource Governor-Standardpool befindet. Im Beispiel wird der `default`-Pool angegeben, wobei dies jedoch nicht erforderlich ist.
 
 ```sql
 CREATE WORKLOAD GROUP newReports

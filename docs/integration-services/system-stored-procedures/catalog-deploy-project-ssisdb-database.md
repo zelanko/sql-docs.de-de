@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 77ddbd16decffcf5250fbd1de6ba087e9647f0ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281166"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251327"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (SSISDB-Datenbank)
 
@@ -72,7 +72,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   Ein Parameter verweist auf ein Objekt, das nicht vorhanden ist, ein Parameter versucht, ein bereits vorhandenes Objekt zu erstellen, oder ein Parameter ist aus anderen Gründen ungültig  
   
--   Der Wert des Parameters *@project_name* stimmt nicht mit dem Namen des Projekts in der Bereitstellungsdatei überein  
+-   Der Wert des Parameters *\@project_name* stimmt nicht mit dem Namen des Projekts in der Bereitstellungsdatei überein  
   
 -   Der Benutzer verfügt nicht über ausreichende Berechtigungen  
   

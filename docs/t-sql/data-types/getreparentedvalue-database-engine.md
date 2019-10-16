@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3d8b691febc1f52074451a777c7e163be8e10f80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077964"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278367"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ Ein **hierarchyid**-Wert, der den Knoten darstellt. Ersetzen Sie den _OldRoot_ A
   
 **CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 Wird verwendet, um die Struktur durch Verschieben von Knoten von _oldRoot_ nach _newRoot_ zu ändern. „GetReparentedValue“ wird zum Verschieben eines Hierarchieknotens an eine neue Position in der Hierarchie verwendet. Der **hierarchyid**-Datentyp stellt die hierarchische Struktur dar, setzt sie jedoch nicht durch. Benutzer müssen sicherstellen, dass der hierarchyid-Wert für die neue Position angemessen strukturiert ist. Mit einem eindeutigen Index für den **hierarchyid**-Datentyp können Sie doppelte Einträge vermeiden. Ein Beispiel für die Verschiebung einer vollständigen Teilstruktur finden Sie unter [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Vergleichen von zwei Knotenpositionen  
-Im folgenden Beispiel wird der aktuelle hierarchyid-Wert eines Knotens gezeigt. Des Weiteren wird der **hierarchyid**-Wert gezeigt, den der Knoten aufweist, wenn Sie ihn an die Position des Nachfolgers des **@NewParent** -Knotens verschieben. Zur Darstellung der hierarchischen Beziehungen wird die `ToString()`-Methode verwendet.
+Im folgenden Beispiel wird der aktuelle hierarchyid-Wert eines Knotens gezeigt. Des Weiteren wird der Wert **hierarchyid** gezeigt, den der Knoten aufweist, wenn Sie ihn an die Position des Nachfolgers des Knotens **\@NewParent** verschieben. Zur Darstellung der hierarchischen Beziehungen wird die `ToString()`-Methode verwendet.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

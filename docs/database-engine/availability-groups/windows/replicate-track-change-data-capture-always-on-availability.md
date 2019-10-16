@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8eef8241d5c8413f3722f11854074d415399165b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014337"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251963"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replikation, Änderungsnachverfolgung und Change Data Capture (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "68014337"
     ```  
   
     > [!NOTE]  
-    >  Sie sollten die Aufträge im Vorfeld für alle möglichen Failoverziele erstellen und sie als deaktiviert kennzeichnen, bis das Verfügbarkeitsreplikat auf einem Host zum neuen primären Replikat wird. Die CDC-Aufträge, die auf der alten primären Datenbank ausgeführt werden, sollten auch deaktiviert werden, wenn die lokale Datenbank zur sekundären Datenbank wird. Verwenden Sie zum Deaktivieren und Aktivieren von Aufträgen die *@enabled* -Option von [sp_update_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Weitere Informationen zum Erstellen von CDC-Aufträgen finden Sie unter [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)unterstützt.  
+    >  Sie sollten die Aufträge im Vorfeld für alle möglichen Failoverziele erstellen und sie als deaktiviert kennzeichnen, bis das Verfügbarkeitsreplikat auf einem Host zum neuen primären Replikat wird. Die CDC-Aufträge, die auf der alten primären Datenbank ausgeführt werden, sollten auch deaktiviert werden, wenn die lokale Datenbank zur sekundären Datenbank wird. Verwenden Sie zum Deaktivieren und Aktivieren von Aufträgen die *\@enabled*-Option von [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Weitere Informationen zum Erstellen von CDC-Aufträgen finden Sie unter [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)unterstützt.  
   
 -   **Hinzufügen von CDC-Rollen zu einem primären Always On-Datenbankreplikat**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68014337"
   
      Zum Suchen des sekundären Replikats kann der Verfügbarkeitsgruppenlistener-Name oder der Name des expliziten Knotens verwendet werden. Wenn der Verfügbarkeitsgruppenlistener-Name verwendet wird, wird der Zugriff für alle passenden sekundären Replikate gewährt.  
   
-     Wenn **sp_addlinkedserver** zum Erstellen eines Verbindungsservers verwendet wird, um auf das sekundäre Element zuzugreifen, wird der *@datasrc* -Parameter für den Verfügbarkeitsgruppenlistener-Namen oder den expliziten Servernamen verwendet, und der *@provstr* -Parameter wird verwendet, um die schreibgeschützte Absicht anzugeben.  
+     Wenn **sp_addlinkedserver** zum Erstellen eines Verbindungsservers verwendet wird, um auf das sekundäre Element zuzugreifen, wird der *\@datasrc*-Parameter für den Verfügbarkeitsgruppenlistener-Namen oder den expliziten Servernamen verwendet, und der *\@provstr*-Parameter wird verwendet, um die schreibgeschützte Absicht anzugeben.  
   
     ```sql  
     EXEC sp_addlinkedserver   
@@ -201,7 +201,7 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
 -   Die Verlegerinstanzen erfüllen alle zur Teilnahme an einer Always On-Verfügbarkeitsgruppe erforderlichen Voraussetzungen. Weitere Informationen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)unterstützt.  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Beschränkungen  
  Unterstützte Kombinationen der Replikation in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 |||||  

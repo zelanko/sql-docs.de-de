@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476307"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174659"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -33,7 +33,7 @@ Zeigt den verwendeten Speicherplatz im Resultsetcache für eine Azure [!INCLUDE[
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 Der `DBCC SHOWRESULTCACHESPACEUSED`-Befehl akzeptiert keine Parameter und gibt den verwendeten Speicherplatz der Datenbank zurück, für die der Befehl ausgeführt wird.
 
@@ -42,7 +42,12 @@ Die maximale Größe des Resultsetcaches beträgt 1 TB pro Datenbank.  Azure SQL
 - Alle 48 Stunden, wenn das Resultset nicht verwendet wurde.
 - Bei Annäherung an die maximale Größe für den Resultsetcache.
 
-Benutzer können den Resultsetcache für eine Datenbank manuell leeren, indem sie das Feature für den Resultsetcache deaktivieren oder den Befehl `DBCC DROPRESULTSETCACHE` verwenden.   Das Anhalten einer Datenbank führt nicht dazu, dass der Resultsetcache geleert wird.  
+Um den Resultsetcache einer Datenbank manuell zu leeren, können Benutzer eine der folgenden Optionen wählen:
+
+- Festlegen der Resultsetcache-Funktion für die Datenbank auf OFF
+- Ausführen von `DBCC DROPRESULTSETCACHE` bei bestehender Verbindung mit der Datenbank 
+
+Das Anhalten einer Datenbank führt nicht dazu, dass der Resultsetcache geleert wird.  
 
 ## <a name="permissions"></a>Berechtigungen
 

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959012"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278244"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Lernprogramm: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten – [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -54,7 +54,7 @@ Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* e
 
    ![Widget für die Schnellsuche](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Bearbeiten Sie die Spalte **Email** in der ersten Zeile, geben Sie *orlando0@adventure-works.com* ein, und drücken Sie die **EINGABETASTE**, um die Änderung zu speichern.
+1. Bearbeiten Sie die Spalte **Email** in der ersten Zeile. Geben Sie *orlando0\@adventure-works.com* ein, und drücken Sie die **EINGABETASTE**, um die Änderung zu speichern.
 
    ![Bearbeiten von Daten](./media/tutorial-sql-editor/edit-data.png)
 
@@ -182,7 +182,7 @@ Die gespeicherte Prozedur ist jetzt erstellt, und der Bereich **ERGEBNISSE** zei
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Verwenden von „Abfrageergebnisse als JSON speichern“ zum Testen der gespeicherten Prozedur „setCustomer“
 
-Die im vorherigen Abschnitt erstellte gespeicherte Prozedur *setCustomer* erfordert JSON-Daten für die Übergabe an den *@json_val* -Parameter. In diesem Abschnitt wird erläutert, wie Sie ordnungsgemäß formatierte JSON-Daten zum Übergeben an den Parameter erhalten, damit Sie die gespeicherte Prozedur testen können.
+Die im vorherigen Abschnitt erstellte gespeicherte Prozedur *setCustomer* erfordert JSON-Daten für die Übergabe an den *\@json_val*-Parameter. In diesem Abschnitt wird erläutert, wie Sie ordnungsgemäß formatierte JSON-Daten zum Übergeben an den Parameter erhalten, damit Sie die gespeicherte Prozedur testen können.
 
 1. Klicken Sie in der Randleiste **SERVER** mit der rechten Maustaste auf die Tabelle *dbo.Customers*, und klicken Sie auf **SELECT TOP 1000 Rows**.
 

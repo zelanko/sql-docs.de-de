@@ -29,12 +29,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 704bcba5e6b21ade748c7a549f5b88c131fa578c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121881"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252047"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -122,8 +122,8 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  Zum Konvertieren eines Werts in den [!INCLUDE[tsql](../../includes/tsql-md.md)]**bigint**-Datentyp müssen Sie **%I64d** angeben.  
   
- *@local_variable*  
- Eine Variable eines beliebigen Zeichendatentyps, die eine Zeichenfolge enthält, die auf die gleiche Weise wie *msg_str* formatiert ist. *@local_variable* muss auf **char** oder **varchar** festgelegt oder implizit in diese Datentypen konvertierbar sein.  
+ *\@local_variable*  
+ Eine Variable eines beliebigen Zeichendatentyps, die eine Zeichenfolge enthält, die auf die gleiche Weise wie *msg_str* formatiert ist. *\@local_variable* muss auf **char** oder **varchar** festgelegt oder implizit in diese Datentypen konvertierbar sein.  
   
  *severity*  
  Ist der benutzerdefinierte Schweregrad, der dieser Meldung zugeordnet ist. Wird *msg_id* zum Auslösen einer mithilfe von „sp_addmessage“ erstellten benutzerdefinierten Meldung verwendet, überschreibt der in RAISERROR angegebene Schweregrad den Schweregrad in „sp_addmessage“.  
@@ -163,7 +163,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
 |NOWAIT|Sendet Meldungen sofort an den Client.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|Legt die Werte @@ERROR und ERROR_NUMBER unabhängig vom Schweregrad auf *msg_id* oder 50000 fest.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Die von RAISERROR generierten Fehler sind mit Fehlern vergleichbar, die durch den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Code generiert werden. Die von RAISERROR angegebenen Werte werden von den Systemfunktionen ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE und @@ERROR gemeldet. Wird RAISERROR mit einem Schweregrad von 11 oder höher in einem TRY-Block ausgeführt, wird die Steuerung an den zugeordneten CATCH-Block übertragen. Der Fehler wird an den Aufrufer zurückgegeben, wenn RAISERROR ausgeführt wird:  
   
 -   Außerhalb des Bereichs eines beliebigen TRY-Blocks.  

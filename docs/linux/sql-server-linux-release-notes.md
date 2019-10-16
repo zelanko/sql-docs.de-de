@@ -3,17 +3,17 @@ title: Versionshinweise für SQL Server 2017 für Linux
 description: In diesem Artikel werden Versionshinweise und unterstützte Features für SQL Server 2017 für Linux aufgeführt. Es werden sowohl Versionshinweise zum neuesten Release als auch zu einigen früheren Releases aufgeführt.
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 10/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 93472679a524214010ccc2d10eacfd37d7e001e8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 568790caac848c0823c58bd004ffca8546650340
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763146"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278265"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server 2017 für Linux
 
@@ -46,6 +46,7 @@ In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[ssSQL17](../inclu
 
 | Release               | Versionsoptionen       | Veröffentlichungsdatum |
 |-----------------------|---------------|--------------|
+| [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
 | [CU16](#CU16)         | 14.0.3223.3   | 2019-08-01   |
 | [CU15](#CU15)         | 14.0.3162.1   | 23.5.2019   |
 | [CU14](#CU14)         | 14.0.3076.1   | 25.3.2019   |
@@ -78,9 +79,23 @@ Führen Sie den entsprechenden Updatebefehl für jedes Paket durch, wenn Sie vor
 - [Install SQL Server Integration Services (Installieren von SQL Server Integration Services)](sql-server-linux-setup-ssis.md)
 - [Aktivieren des SQL Server-Agents](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU17"></a> CU17 (Oktober 2019)
+
+Dies ist das CU17-Release (Cumulative Update 17) von [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Version für dieses Release ist 14.0.3238.1. Informationen zu den Fehlerbehebungen und Verbesserungen in diesem Release finden Sie unter [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4515579).
+
+### <a name="package-details"></a>Paketdetails
+
+Für manuelle oder offline durchgeführte Paketinstallationen können Sie die RPM- und Debian-Pakete herunterladen, die in der folgenden Tabelle aufgeführt werden:
+
+| Paket | Paketversion | Downloads |
+|-----|-----|-----|
+| Red Hat RPM-Paket | 14.0.3238.1-19 | [RPM-Engine-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3238.1-19.x86_64.rpm)</br>[RPM-Hochverfügbarkeitspaket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3238.1-19.x86_64.rpm)</br>[RPM-Paket für Volltextsuche](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3238.1-19.x86_64.rpm)</br>[SSIS-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM-Paket | 14.0.3238.1-19 | [RPM-Engine-Paket (mssql-server)](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3238.1-19.x86_64.rpm)</br>[RPM-Hochverfügbarkeitspaket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3238.1-19.x86_64.rpm)</br>[RPM-Paket für Volltextsuche](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3238.1-19.x86_64.rpm) | 
+| Debian-Paket für Ubuntu 16.04 | 14.0.3238.1-19 | [Debian-Engine-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3238.1-19_amd64.deb)</br>[Debian-Hochverfügbarkeitspaket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3238.1-19_amd64.deb)</br>[Debian-Paket für Volltextsuche](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3238.1-19_amd64.deb)<br/>[SSIS-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU16"></a> CU16 (August 2019)
 
-Dies ist das CU16-Release (Cumulative Update 16) von [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Version für dieses Release lautet 14.0.3223.3. Informationen zu den Fehlerbehebungen und Verbesserungen in diesem Release finden Sie unter [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4498951).
+Dies ist das CU16-Release (Cumulative Update 16) von [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Version für dieses Release lautet 14.0.3223.3. Informationen zu den Fehlerbehebungen und Verbesserungen in diesem Release finden Sie unter [https://support.microsoft.com/en-us/help/4508218](https://support.microsoft.com/en-us/help/4508218).
 
 ### <a name="whats-new"></a>Neues
 
@@ -572,7 +587,7 @@ In den folgenden Schnellstarts finden Sie Informationen zu den ersten Schritten:
 - [Installieren unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installation unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Ausführung in Docker](quickstart-install-connect-ubuntu.md)
+- [Ausführen unter Docker](quickstart-install-connect-ubuntu.md)
 - [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Ausführen und Verbinden – Cloud](quickstart-install-connect-clouds.md)
 

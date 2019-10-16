@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2532e7c2a173441cf804cdc5bdcd9be8e69bb135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988461"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251931"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Konfigurieren der Replikation mit Always On-Verfügbarkeitsgruppen
 
@@ -32,7 +32,7 @@ ms.locfileid: "67988461"
   
  Die Verteilungsdatenbank kann nicht in eine Verfügbarkeitsgruppe mit SQL Server 2012 und SQL Server 2014 eingefügt werden. Das Einfügen der Verteilungsdatenbank in eine Verfügbarkeitsgruppe wird erst ab SQL 2016 unterstützt. Weitere Informationen finden Sie unter [Konfigurieren einer Verteilungsdatenbank in einer Verfügbarkeitsgruppe](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
-1.  Konfigurieren Sie Verteilung beim Verteiler. Wenn gespeicherte Prozeduren zur Konfiguration verwendet werden, führen Sie **sp_adddistributor**aus. Verwenden Sie den *@password* -Parameter, um das Kennwort zu identifizieren, das verwendet wird, wenn ein Remoteverleger eine Verbindung mit dem Verteiler herstellt. Das Kennwort wird auch bei jedem Remoteverleger benötigt, wenn der Remoteverteiler eingerichtet wird.  
+1.  Konfigurieren Sie Verteilung beim Verteiler. Wenn gespeicherte Prozeduren zur Konfiguration verwendet werden, führen Sie **sp_adddistributor**aus. Verwenden Sie den *\@password* -Parameter, um das Kennwort zu identifizieren, das verwendet wird, wenn ein Remoteverleger eine Verbindung mit dem Verteiler herstellt. Das Kennwort wird auch bei jedem Remoteverleger benötigt, wenn der Remoteverteiler eingerichtet wird.  
   
     ```  
     USE master;  

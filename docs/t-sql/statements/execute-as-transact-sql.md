@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9d174dab31e6a3f508d3d3858b87844854f6ee7e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161340"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252217"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -69,8 +69,7 @@ ms.locfileid: "70161340"
 > [!IMPORTANT]  
 >  Für die Dauer des Kontextwechsels zum Datenbankbenutzer schlägt die Anweisung bei jedem Versuch, auf Ressourcen außerhalb der Datenbank zuzugreifen, fehl. Dies schließt USE-*Datenbankanweisungen*, verteilte Abfragen und Abfragen ein, die auf eine andere Datenbank mit drei- oder vierteiligen Bezeichnern verweisen.  
   
- **'** *name* **'**  
- Ein gültiger Benutzer- oder Anmeldename. *name* muss ein Mitglied der festen Serverrolle **sysadmin** sein oder als Prinzipal in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) bzw. [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vorhanden sein.  
+ *name* ist ein gültiger Benutzer- oder Anmeldename. *name* muss ein Mitglied der festen Serverrolle **sysadmin** sein oder als Prinzipal in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) bzw. [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vorhanden sein.  
   
  *name* kann als lokale Variable angegeben werden.  
   
@@ -83,10 +82,10 @@ ms.locfileid: "70161340"
   
  Weitere Informationen zum Zurücksetzen auf den vorherigen Kontext finden Sie unter [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO * *@***varbinary_variable*  
- Gibt an, dass der Ausführungskontext nur auf den vorherigen Kontext zurückgesetzt werden kann, wenn die aufrufende REVERT WITH COOKIE-Anweisung den richtigen * *@***varbinary_variable*-Wert enthält. [!INCLUDE[ssDE](../../includes/ssde-md.md)] übergibt das Cookie an * *@***varbinary_variable*. Die **COOKIE INTO**-Option kann nur auf der Ad-hoc-Ebene verwendet werden.  
+ COOKIE INTO @*varbinary_variable*  
+ Gibt an, dass der Ausführungskontext nur auf den vorherigen Kontext zurückgesetzt werden kann, wenn die aufrufende REVERT WITH COOKIE-Anweisung den richtigen @*varbinary_variable*-Wert enthält. [!INCLUDE[ssDE](../../includes/ssde-md.md)] übergibt das Cookie an @*varbinary_variable*. Die **COOKIE INTO**-Option kann nur auf der Ad-hoc-Ebene verwendet werden.  
   
- **@** *varbinary_variable* entspricht **varbinary(8000)** .  
+ @*varbinary_variable* entspricht **varbinary(8000)** .  
   
 > [!NOTE]  
 >  Der **OUTPUT**-Cookieparameter ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(100)** zurück. Anwendungen müssen **varbinary(8000)** reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einem zukünftigen Release erhöht wird.  
@@ -97,7 +96,7 @@ Bei Verwendung außerhalb eines Moduls weist die Anweisung keine Aktion auf.
  > [!NOTE]  
 >  Diese Option ist in SQL Data Warehouse nicht verfügbar.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Die Änderung des Ausführungskontexts bleibt wirksam, bis eine der folgenden Bedingungen auftritt:  
   
 -   Eine andere EXECUTE AS-Anweisung wird ausgeführt.  

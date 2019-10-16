@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 549b8d9e18db73cb91c9707ac51f2db52d368d0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ab78eab73526568736dea8c4aef1525b2607c93
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073729"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72162562"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Die Beispieldatenbanken und Beispiele werden nicht standardmäßig mit [!INCLUDE
 1.  Melden Sie sich bei Windows als Mitglied der Administratorgruppe an, und öffnen Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
 2.  Klicken Sie im Dialogfeld **Verbindung mit Server herstellen** auf **Abbrechen**.  
 3.  Wenn Registrierte Server nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Registrierte Server**.
-4.  Wählen Sie in der Symbolleiste „Registrierte Server“ die Option **Datenbank-Engine** aus, erweitern Sie **Datenbank-Engine**, klicken Sie mit der rechten Maustaste auf **Lokale Servergruppen**, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Lokale Server registrieren**. Es werden alle auf dem Computer installierten Instanzen von [!INCLUDE[ssDE](../includes/ssde-md.md)] angezeigt. Die Standardinstanz hat keinen Namen und wird mit dem Computernamen angezeigt. Eine benannte Instanz wird als der Computername, gefolgt von einem umgekehrten Schrägstrich (\\) und dem Namen der Instanz, angezeigt. Für [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] hat die Instanz den Namen *<Computername>* \sqlexpress, es sei denn, der Name wurde während des Setups geändert.  
+4.  Wählen Sie in der Symbolleiste „Registrierte Server“ die Option **Datenbank-Engine** aus, erweitern Sie **Datenbank-Engine**, klicken Sie mit der rechten Maustaste auf **Lokale Servergruppen**, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Lokale Server registrieren**. Erweitern Sie **Lokale Servergruppen**, um alle Instanzen der auf dem Computer installierten [!INCLUDE[ssDE](../includes/ssde-md.md)] anzuzeigen. Die Standardinstanz hat keinen Namen und wird mit dem Computernamen angezeigt. Eine benannte Instanz wird als der Computername, gefolgt von einem umgekehrten Schrägstrich (\\) und dem Namen der Instanz, angezeigt. Für [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] hat die Instanz den Namen *<Computername>* \sqlexpress, es sei denn, der Name wurde während des Setups geändert.  
 
 [!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

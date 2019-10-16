@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d01bb0a6d61220daa49b60dce1cb173f344d9f84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076740"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278285"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68076740"
   
 -   Ein DACPAC ist eine Windows-Datei mit einer Erweiterung DACPAC. Die Datei unterstützt ein offenes Format. Es besteht aus mehreren XML-Abschnitten, die Details der DACPAC-Herkunft bereitstellen, sowie den Objekten in der Datenbank und anderen Eigenschaften. Ein erfahrener Benutzer kann die Datei mit dem Hilfsprogramm "DacUnpack.exe" entpacken, das mit dem Produkt geliefert wird, um jeden Abschnitt genauer zu überprüfen.  
   
--   Der Benutzer muss ein Mitglied der dbmanager-Rolle sein, oder er muss der CREATE DATABASE-Berechtigung zugeordnet sein, um eine Datenbank zu erstellen, einschließlich dem Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Der Benutzer muss ein Mitglied der dbmanager-Rolle sein, oder er muss der DROP DATABASE-Berechtigung zugeordnet sein, um eine Datenbank löschen zu können.  
+-   Der Benutzer muss Mitglied der Rolle **dbmanager** sein oder über die Berechtigung **CREATE DATABASE** verfügen, um eine Datenbank zu erstellen, einschließlich Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Der Benutzer muss Mitglied der Rolle **dbmanager** sein oder **DROP DATABASE**-Berechtigungen erhalten haben, um eine Datenbank löschen zu können.  
   
 ## <a name="dac-tools"></a>DAC-Tools  
  Ein DACPAC kann nahtlos von mehreren Tools, die im Lieferumfang von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthalten sind, verwendet werden. Diese Tools erfüllen die Anforderungen verschiedener physischer Benutzer, indem DACPAC als interoperable Einheit verwendet wird.  
@@ -64,7 +64,7 @@ ms.locfileid: "68076740"
   
     -   Sie können einen DACPAC in ein Datenbankprojekt importieren und weiterhin die Datenbank entwerfen.  
   
-        SQL Server Data Tools unterstützt auch Local DB für eine nicht verbundene, clientseitige Datenbankanwendungsentwicklung. Der Entwickler kann eine Momentaufnahme dieser lokalen Datenbank erstellen, um in einer DACPAC-Datei enthaltenen DACPAC zu erstellen.  
+        SQL Server Data Tools unterstützt auch Local DB für eine nicht verbundene, clientseitige Datenbankanwendungsentwicklung. Der Entwickler kann eine Momentaufnahme dieser lokalen Datenbank erstellen, um einen in einer DACPAC-Datei enthaltenen DACPAC zu erstellen.  
   
     -   Unabhängig davon kann der Entwickler ein Datenbankprojekt direkt in einer Datenbank veröffentlichen, und zwar ohne ein DACPAC zu generieren. Der Veröffentlichungsvorgang weist ein ähnliches Verwalten auf wie der Bereitstellungsvorgang anderer Tools.  
   
@@ -96,8 +96,7 @@ ms.locfileid: "68076740"
 -   **UPGRADE**: Eine Datenbank kann mit einer DACPAC-Datei aktualisiert werden. Ein Upgrade wird sogar auf Datenbanken, die zuvor nicht als Datenebenenanwendungen registriert waren, unterstützt, doch aufgrund des Upgrades wird die Datenbank implizit registriert.  
   
 ## <a name="bacpac"></a>BACPAC  
- Eine BACPAC-Datei ist eine Windows-Datei mit der Erweiterung ".bacpac", die das Schema und die Daten einer Datenbank kapselt. Der Hauptzweck einer BACPAC-Datei besteht darin, eine Datenbank von einem Server auf einen anderen zu verschieben – oder eine [Datenbank von einem lokalen Server zur Cloud zu migrieren](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/) – und eine vorhandene Datenbank in einem offenen Format zu archivieren.  
-  
+ Eine BACPAC-Datei ist eine Windows-Datei mit der Erweiterung „.bacpac“, die das Schema und die Daten einer Datenbank kapselt. Der Hauptzweck einer BACPAC-Datei besteht darin, eine Datenbank von einem Server auf einen anderen zu verschieben – oder eine [Datenbank von einem lokalen Server zur Cloud zu migrieren](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/) – und eine vorhandene Datenbank in einem offenen Format zu archivieren.  
  Das BACPAC-Dateiformat ist ein offenes Dateiformat (vergleichbar mit DACPAC). Die Schemainhalte von BACPAC sind mit DACPAC identisch. Die Daten in einer BACPAC-Datei werden im JSON-Format gespeichert.  
   
  DACPAC und BACPAC sind ähnlich, aber sie zielen auf andere Szenarien ab. Ein DACPAC dient zum Erfassen und Bereitstellen von Schemas, einschließlich der Aktualisierung einer vorhandenen Datenbank. DACPAC-Dateien werden primär zum Bereitstellen eines streng definierten Schemas für die Entwicklung, Tests und anschließenden Produktionsumgebungen genutzt. Umgekehrt kann das Produktionsschema erfasst und erneut in Test- und Entwicklungsumgebungen angewendet werden.  

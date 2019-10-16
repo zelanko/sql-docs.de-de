@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: 3f5b4cbe56d395b88dc756d823b526b05b2fde74
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816804"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251391"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 
@@ -44,7 +44,7 @@ SSMS ist kostenlos!
 
 **SSMS 18.3.1 ist jetzt verfügbar und ist die neueste Version mit allgemeiner Verfügbarkeit (GA, General Availability) von *SQL Server Management Studio* mit Unterstützung für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-**[![Download](../ssdt/media/download.png) SQL Server Management Studio 18.3.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=2105412)**
+**[SQL Server Management Studio 18.3.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=2105412)**
 
 SSMS 18.3.1 ist die aktuelle Version von SSMS mit allgemeiner Verfügbarkeit (GA, General Availability). Wenn Sie eine frühere allgemein verfügbare Version von SSMS 18 installiert haben, wird diese durch die Installation von SSMS 18.3.1 auf 18.3.1 aktualisiert. Wenn Sie eine ältere *Vorschauversion* von SSMS 18.x installiert haben, müssen Sie diese vor der Installation von SSMS 18.3.1 deinstallieren.
 
@@ -75,8 +75,8 @@ SQL Server Management Studio 18.3.1:
 | Neues Element | Details |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Datenklassifizierung | Hinzufügen von Datenklassifizierungsinformationen zur Spalteneigenschaften-Benutzeroberfläche (*Informationstyp*, *Informationstyp-ID*, *Vertraulichkeitsbezeichnung* und *Vertraulichkeitsbezeichnungs-ID* werden auf der Benutzeroberfläche von SSMS nicht verfügbar gemacht). |
-| IntelliSense/Editor | Aktualisierte Unterstützung für Features, die SQL Server 2019 vor Kurzem hinzugefügt wurden (z.B. "ALTER SERVER CONFIGURATION"). |
-| Integration Services | Fügen Sie ein neues Auswahlmenü „itemr `Tools > Migrate to Azure > Configure Azure-enabled DTExec`“ hinzu, das Ausführungen von SSIS-Paketen in der Azure-SSIS Integration Runtime als SSIS-Paket ausführen-Aktivitäten in ADF-Pipelines aufruft. |
+| IntelliSense/Editor | Aktualisierte Unterstützung für vor Kurzem zu SQL Server 2019 hinzugefügte Features (Beispiel: ALTER SERVER CONFIGURATION). |
+| Integration Services | Fügen Sie ein neues Auswahlmenü `Tools > Migrate to Azure > Configure Azure-enabled DTExec` hinzu, das Ausführungen von SSIS-Paketen in der Azure-SSIS Integration Runtime als SSIS-Paket ausführen-Aktivitäten in ADF-Pipelines aufruft. |
 | SMO/Skripterstellung | Hinzugefügte Unterstützung für Supportskripts der UNIQUE-Einschränkung von Azure SQL DW. |
 | SMO/Skripterstellung | Datenklassifizierung: Hinzugefügte Unterstützung für SQL Version 10 (SQL 2008) und höher.  Neues Vertraulichkeitsattribut ‚rank‘ für SQL Version 15 (SQL 2019) und höher sowie Azure SQL DB. |
 

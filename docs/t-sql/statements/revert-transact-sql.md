@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082397"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252176"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ REVERT
   
 ## <a name="arguments"></a>Argumente  
  WITH COOKIE = @*varbinary_variable*  
- Gibt das Cookie an, das in einer entsprechenden eigenständigen [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)-Anweisung erstellt wurde. *@varbinary_variable* ist vom Datentyp **varbinary(100)** .  
+ Gibt das Cookie an, das in einer entsprechenden eigenständigen [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)-Anweisung erstellt wurde. *\@varbinary_variable* entspricht **varbinary(100)** .  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  REVERT kann in einem Modul, wie einer gespeicherten Prozedur oder benutzerdefinierten Funktion, oder in einer eigenständigen Anweisung angegeben werden. Innerhalb eines Moduls kann REVERT nur auf EXECUTE AS-Anweisungen angewendet werden, die im Modul definiert sind. So gibt beispielsweise die folgende gespeicherte Prozedur eine `EXECUTE AS`-Anweisung aus, gefolgt von einer `REVERT`-Anweisung.  
   
 ```  
@@ -77,9 +77,9 @@ EXECUTE dbo.usp_myproc;
  Als eigenständige Anweisung wird REVERT auf EXECUTE AS-Anweisungen angewendet, die in einem Batch oder einer Sitzung definiert sind. REVERT hat keinerlei Auswirkungen, wenn die entsprechende EXECUTE AS-Anweisung die WITH NO REVERT-Klausel enthält. In diesem Fall bleibt der Ausführungskontext so lange wirksam, bis die Sitzung gelöscht wird.  
   
 ## <a name="using-revert-with-cookie"></a>Verwenden von REVERT WITH COOKIE  
- Die zum Festlegen des Ausführungskontexts einer Sitzung verwendete EXECUTE AS-Anweisung kann die optionale Klausel WITH NO REVERT COOKIE = @*varbinary_variable* enthalten. Wird diese Anweisung ausgeführt, übergibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] das Cookie an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *@varbinary_variable* -Wert enthält.  
+ Die zum Festlegen des Ausführungskontexts einer Sitzung verwendete EXECUTE AS-Anweisung kann die optionale Klausel WITH NO REVERT COOKIE = @*varbinary_variable* enthalten. Wird diese Anweisung ausgeführt, übergibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] das Cookie an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *\@varbinary_variable*-Wert enthält.  
   
- Dieser Mechanismus eignet sich für eine Umgebung, in der Verbindungs-Pooling verwendet wird. Verbindungs-Pooling bezeichnet die Verwaltung einer Gruppe von Datenbankverbindungen für die Wiederverwendung durch Anwendungen durch mehrere Endbenutzer. Da der an *@varbinary_variable* übergebene Wert nur dem Aufrufer der EXECUTE AS-Anweisung (in diesem Fall die Anwendung) bekannt ist, kann der Aufrufer sicherstellen, dass der eingerichtete Ausführungskontext nicht von dem Endbenutzer geändert werden kann, der die Anwendung aufruft. Nach dem Wiederherstellen des Ausführungskontexts kann die Anwendung einen Kontextwechsel zu einem anderen Prinzipal durchführen.  
+ Dieser Mechanismus eignet sich für eine Umgebung, in der Verbindungs-Pooling verwendet wird. Verbindungs-Pooling bezeichnet die Verwaltung einer Gruppe von Datenbankverbindungen für die Wiederverwendung durch Anwendungen durch mehrere Endbenutzer. Da der an *\@varbinary_variable* übergebene Wert nur dem Aufrufer der EXECUTE AS-Anweisung (in diesem Fall die Anwendung) bekannt ist, kann der Aufrufer sicherstellen, dass der eingerichtete Ausführungskontext nicht von dem Endbenutzer geändert werden kann, der die Anwendung aufruft. Nach dem Wiederherstellen des Ausführungskontexts kann die Anwendung einen Kontextwechsel zu einem anderen Prinzipal durchführen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Es sind keine Berechtigungen erforderlich.  

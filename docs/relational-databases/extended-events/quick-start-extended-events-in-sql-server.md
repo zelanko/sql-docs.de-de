@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016851"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251536"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Schnellstart: Erweiterte Ereignisse in SQL Server
 
@@ -410,7 +410,7 @@ Im **Objekt-Explorer**von SSMS können Sie mit der rechten Maustaste auf Ihren S
 Es gibt unzählige Szenarien für die effektive Verwendung von erweiterten Ereignissen. Die folgenden Artikel bieten Beispielszenarien, die Sperren einbeziehen, die während der Abfragen eingerichtet wurden.
 
 
-Bestimmte Szenarien für Ereignissitzungen, die auf den Zugriff von Sperren ausgerichtet sind, werden in den folgenden Artikeln beschrieben. Die Artikel zeigen auch einige erweiterten Techniken, z. B. die Verwendung von **@dbid** und der dynamischen `EXECUTE (@YourSqlString)`-Anweisung:
+Bestimmte Szenarien für Ereignissitzungen, die auf den Zugriff von Sperren ausgerichtet sind, werden in den folgenden Artikeln beschrieben. Die Artikel zeigen auch einige erweiterten Techniken, z. B. die Verwendung von **\@dbid** und der dynamischen `EXECUTE (@YourSqlString)`-Anweisung:
 
 - [Suchen der Objekte, die über die meisten Sperren verfügen](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - Dieses Szenario verwendet „target package0.histogram“, mit dem die Rohereignisdaten vor der Anzeige verarbeitet werden.
