@@ -118,7 +118,7 @@ ms.locfileid: "69493936"
   
      Beachten Sie, dass das **Reseller Sales-Sales Amount** -Measure jetzt durch das **Country-Region** -Attribut in der benutzerdefinierten **Geographies** -Hierarchie richtig dimensioniert ist, wie in der folgenden Abbildung dargestellt.  
   
-     ![Beziehung definieren (Dialogfeld] ) (../../2014/tutorials/media/l5-referencedrelationship-5.gif "Beziehung definieren (Dialogfeld") )  
+     ![Beziehung definieren \(Dialogfeld\)](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Beziehung definieren \(Dialogfeld\)")  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
  [Definieren einer Faktenbeziehung](lesson-5-2-defining-a-fact-relationship.md)  
