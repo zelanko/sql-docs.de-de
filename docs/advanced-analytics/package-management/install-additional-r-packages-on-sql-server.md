@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3b5a55ec16c7dfa2f16dbae62674a475fb39c5d7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: f8ce5c7bcf12a2431c2de779912d2e309c628cb1
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70275675"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542141"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installieren neuer R-Pakete mit sqlmlutils
 
@@ -23,15 +23,15 @@ ms.locfileid: "70275675"
 In diesem Artikel wird beschrieben, wie Sie Funktionen im [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) -Paket verwenden, um neue R-Pakete in einer Instanz von SQL Server Machine Learning Services oder SQL Server R Services zu installieren. Die von Ihnen installierten Pakete können in R-Skripts verwendet werden, die in-Database mit der [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL-Anweisung ausgeführt werden.
 
 > [!NOTE]
-> Der Standard- `install.packages` R-Befehl wird nicht zum Hinzufügen von r-Paketen auf SQL Server empfohlen. Verwenden Sie stattdessen **sqlmlutils** , wie in diesem Artikel beschrieben.
+> Der Standard-r-`install.packages` Befehl wird nicht zum Hinzufügen von r-Paketen auf SQL Server empfohlen. Verwenden Sie stattdessen **sqlmlutils** , wie in diesem Artikel beschrieben.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Prerequisites
 
 - Installieren Sie [R](https://www.r-project.org) und [rstudio Desktop](https://www.rstudio.com/products/rstudio/download/) auf dem Client Computer, mit dem Sie eine Verbindung mit SQL Server herstellen. Sie können eine beliebige R-IDE zum Ausführen von Skripts verwenden, aber in diesem Artikel wird von rstudio ausgegangen.
 
 - Installieren Sie [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) oder [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) auf dem Client Computer, den Sie verwenden, um eine Verbindung mit SQL Server herzustellen. Sie können andere Daten Bank Verwaltungs-oder Abfrage Tools verwenden, aber in diesem Artikel wird davon ausgegangen, Azure Data Studio oder SSMS zu verwenden.
 
-### <a name="other-considerations"></a>Andere Überlegungen
+### <a name="other-considerations"></a>Weitere Überlegungen
 
 - R-Skript, das in SQL Server ausgeführt wird, kann nur Pakete verwenden, die in der standardinstanzbibliothek SQL Server können Pakete nicht aus externen Bibliotheken laden, auch wenn sich diese Bibliothek auf demselben Computer befindet. Dies umfasst auch R-Bibliotheken, die mit anderen Microsoft-Produkten installiert werden
 
@@ -50,7 +50,7 @@ Das **sqlmlutils** -Paket ist von dem **rodbcext** -Paket abhängig, und **rodbc
 
 Wenn der Client Computer über Internet Zugriff verfügt, können Sie **sqlmlutils** und die abhängigen Pakete Online herunterladen und installieren.
 
-1. Laden Sie die aktuelle **sqlmlutils** -Zip https://github.com/Microsoft/sqlmlutils/tree/master/R/dist -Datei von auf den Client Computer herunter. Entzippen Sie die Datei nicht.
+1. Laden Sie die neueste ZIP-Datei von **sqlmlutils** vom https://github.com/Microsoft/sqlmlutils/tree/master/R/dist auf den Client Computer herunter. Entzippen Sie die Datei nicht.
 
 1. Öffnen Sie eine **Eingabeaufforderung** , und führen Sie die folgenden Befehle aus, um die Pakete **sqlmlutils** und **rodbcext**zu installieren. Ersetzen Sie den vollständigen Pfad der heruntergeladenen ZIP-Datei von **sqlmlutils** (in diesem Beispiel wird davon ausgegangen, dass sich die Datei im Ordner "Dokumente" befindet). Das **rodbcext** -Paket wurde Online und installiert gefunden.
 
@@ -72,7 +72,7 @@ Auf einem Computer mit Internet Zugriff:
 
 1. Installieren Sie **minicran**. Weitere Informationen finden Sie unter [install minicran](create-a-local-package-repository-using-minicran.md#install-minicran) .
 
-1. Führen Sie in rstudio das folgende R-Skript aus, um ein lokales Repository des Pakets **rodbcext**zu erstellen. In diesem Beispiel wird das Repository im Ordner `c:\downloads\rodbcext`erstellt.
+1. Führen Sie in rstudio das folgende R-Skript aus, um ein lokales Repository des Pakets **rodbcext**zu erstellen. In diesem Beispiel wird das Repository im Ordner `c:\downloads\rodbcext` erstellt.
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -100,16 +100,16 @@ Auf einem Computer mit Internet Zugriff:
 
    ::: moniker-end
 
-   Verwenden Sie als Wert die Version von R, die auf SQL Server installiert ist. `Rversion` Verwenden Sie den folgenden T-SQL-Befehl, um die installierte Version zu überprüfen.
+   Verwenden Sie für den `Rversion` Wert die Version von R, die auf SQL Server installiert ist. Verwenden Sie den folgenden T-SQL-Befehl, um die installierte Version zu überprüfen.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. Laden Sie die neueste ZIP-Datei von **sqlmlutils** aus https://github.com/Microsoft/sqlmlutils/tree/master/R/dist herunter (Entzippen Sie die Datei nicht). Laden Sie beispielsweise die Datei in `c:\downloads\sqlmlutils_0.7.1.zip`herunter.
+1. Laden Sie die neueste ZIP-Datei von **sqlmlutils** aus https://github.com/Microsoft/sqlmlutils/tree/master/R/dist herunter (Entzippen Sie die Datei nicht). Laden Sie die Datei beispielsweise in `c:\downloads\sqlmlutils_0.7.1.zip` herunter.
 
-1. Kopieren Sie den gesamten **rodbcext** -Repository`c:\downloads\rodbcext`-Ordner () und die **sqlmlutils** -ZIP-Datei (`c:\downloads\sqlmlutils_0.7.1.zip`) auf den Client Computer. Kopieren Sie diese z. b. in `c:\temp\packages` den Ordner auf dem Client Computer.
+1. Kopieren Sie den gesamten Ordner **rodbcext** Repository (`c:\downloads\rodbcext`) und die ZIP-Datei **sqlmlutils** (`c:\downloads\sqlmlutils_0.7.1.zip`) auf den Client Computer. Kopieren Sie diese z. b. in den Ordner `c:\temp\packages` auf dem Client Computer.
 
 Öffnen Sie auf dem Client Computer, mit dem Sie eine Verbindung mit SQL Server herstellen, eine Eingabeaufforderung, und führen Sie die folgenden Befehle zum Installieren von **rodbcext** und dann **sqlmlutils**aus.
 
@@ -128,15 +128,13 @@ Wenn der Client Computer, mit dem Sie eine Verbindung mit SQL Server herstellen,
 
 1. Öffnen Sie auf dem Client Computer rstudio, und erstellen Sie eine neue **R-Skript** Datei.
 
-1. Verwenden Sie das folgende R-Skript, um **das Paket mit** **sqlmlutils**zu installieren. Ersetzen Sie Ihre eigenen SQL Server Daten bankverbindungs Informationen.
+1. Verwenden Sie das folgende R-Skript, um **das Paket mit** **sqlmlutils**zu installieren. Ersetzen Sie Ihre eigenen SQL Server Daten bankverbindungs Informationen (wenn Sie keine Windows-Authentifizierung verwenden, fügen Sie `uid`-und `pwd`-Parameter hinzu).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -151,7 +149,7 @@ Weitere Informationen zum Installieren von **minicran**finden Sie unter [install
 
 Auf einem Computer mit Internet Zugriff:
 
-1. Führen Sie das folgende R-Skript aus, um ein lokales Repository für den **Kleber**zu erstellen. In diesem Beispiel wird der Repository- `c:\downloads\glue`Ordner in erstellt.
+1. Führen Sie das folgende R-Skript aus, um ein lokales Repository für den **Kleber**zu erstellen. In diesem Beispiel wird der Repository-Ordner in `c:\downloads\glue` erstellt.
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -180,28 +178,26 @@ Auf einem Computer mit Internet Zugriff:
    ::: moniker-end
 
 
-   Verwenden Sie als Wert die Version von R, die auf SQL Server installiert ist. `Rversion` Verwenden Sie den folgenden T-SQL-Befehl, um die installierte Version zu überprüfen.
+   Verwenden Sie für den `Rversion` Wert die Version von R, die auf SQL Server installiert ist. Verwenden Sie den folgenden T-SQL-Befehl, um die installierte Version zu überprüfen.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. Kopieren Sie den gesamten Ordner für den`c:\downloads\glue` **kleberepository** () auf den Client Computer. Kopieren Sie diese z. b. in `c:\temp\packages\glue`den Ordner.
+1. Kopieren Sie den gesamten Ordner für den **kleberepository** (`c:\downloads\glue`) auf den Client Computer. Kopieren Sie diese z. b. in den Ordner `c:\temp\packages\glue`.
 
 Auf dem Client Computer:
 
 1. Öffnen Sie rstudio, und erstellen Sie eine neue **R-Skript** Datei.
 
-1. Verwenden Sie das folgende R-Skript, um **das Paket mit** **sqlmlutils**zu installieren. Ersetzen Sie Ihre eigenen SQL Server Daten bankverbindungs Informationen.
+1. Verwenden Sie das folgende R-Skript, um **das Paket mit** **sqlmlutils**zu installieren. Ersetzen Sie Ihre eigenen SQL Server Daten bankverbindungs Informationen (wenn Sie keine Windows-Authentifizierung verwenden, fügen Sie `uid`-und `pwd`-Parameter hinzu).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
    localRepo = "c:/temp/packages/glue"
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos=paste0("file:///",localRepo))

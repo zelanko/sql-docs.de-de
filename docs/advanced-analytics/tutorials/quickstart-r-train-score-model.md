@@ -10,24 +10,31 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 9acfe1e546c332801e9a5c1a7d97758053d9a0f4
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005980"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542123"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Schnellstart: Erstellen und bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In dieser Schnellstartanleitung erstellen und trainieren Sie ein Vorhersagemodell mithilfe von R. speichern Sie das Modell in einer Tabelle in Ihrer SQL Server Instanz, und verwenden Sie dann das Modell, um Werte aus neuen Daten mithilfe [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)vorherzusagen.
 
-Das Modell, das Sie in dieser Schnellstartanleitung verwenden, ist ein einfaches generalisiertes lineares Modell (GLM), das die Wahrscheinlichkeit vorhersagt, dass ein Fahrzeug mit einer manuellen Übertragung ausgestattet wurde. Verwenden Sie das in R enthaltene DataSet **mtcars** .
+Sie erstellen und führen zwei gespeicherte Prozeduren aus, die in SQL ausgeführt werden. Der erste verwendet das **mtcars** -DataSet, das in R enthalten ist, und generiert ein einfaches generelles lineares Modell (GLM), das die Wahrscheinlichkeit vorhersagt, dass ein Fahrzeug mit einer manuellen Übertragung ausgestattet wurde. Das zweite Verfahren dient der Bewertung: Es wird das im ersten Verfahren generierte Modell aufgerufen, um einen Satz von Vorhersagen basierend auf neuen Daten auszugeben. Wenn Sie R-Code in einer gespeicherten SQL-Prozedur platzieren, sind Vorgänge in SQL enthalten, sind wiederverwendbar und können von anderen gespeicherten Prozeduren und Client Anwendungen aufgerufen werden.
 
 > [!TIP]
-> Wenn Sie ein Aktualisierungs Programm für lineare Modelle benötigen, testen Sie dieses Tutorial, das den Prozess der Anpassung eines Modells mithilfe von rxlinmod beschreibt:  [Fitting Linear Models (Anpassen linearer Modelle)](/machine-learning-server/r/how-to-revoscaler-linear-model)
+> Wenn Sie ein Aktualisierungs Programm für lineare Modelle benötigen, testen Sie dieses Tutorial, das den Prozess der Anpassung eines Modells mithilfe von rxlinmod: [Anpassen linearer Modelle](/machine-learning-server/r/how-to-revoscaler-linear-model) beschreibt.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+Durch die Durchführung dieses Schnellstarts lernen Sie Folgendes:
+
+> [!div class="checklist"]
+> - Einbetten von R-Code in eine gespeicherte Prozedur
+> - Übergeben von Eingaben an Ihren Code mithilfe von Eingaben für die gespeicherte Prozedur
+> - Verwenden gespeicherter Prozeduren zum operationalisieren von Modellen
+
+## <a name="prerequisites"></a>Prerequisites
 
 - Diese Schnellstartanleitung erfordert Zugriff auf eine Instanz von SQL Server mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) , auf der die R-Sprache installiert ist.
 
@@ -41,7 +48,7 @@ Um das Modell zu erstellen, erstellen Sie Quelldaten für das Training, erstelle
 
 ### <a name="create-the-source-data"></a>Erstellen der Quelldaten
 
-1. Öffnen Sie **SQL Server Management Studio** , und stellen Sie eine Verbindung mit Ihrer SQL Server Instanz her
+1. Öffnen Sie SSMS, stellen Sie eine Verbindung mit Ihrer SQL Server Instanz her, und öffnen Sie ein neues Abfragefenster.
 
 1. Erstellen Sie eine Tabelle zum Speichern der Trainingsdaten.
 
@@ -124,7 +131,7 @@ Als nächstes speichern Sie das Modell in einer SQL-Datenbank, sodass Sie es fü
    ```
 
    > [!TIP]
-   > Wenn Sie diesen Code ein zweites Mal ausführen, wird dieser Fehler angezeigt: "Verletzung der PRIMARY KEY-Einschränkung... Ein doppelter Schlüssel kann in das Objekt dbo. stopping_distance_models "nicht eingefügt werden. Eine Möglichkeit zur Vermeidung dieses Fehlers besteht darin, den Namen für jedes neue Modell zu aktualisieren. Sie können den Namen z.B. in einen aussagekräftigeren Namen ändern und den Modelltyp, den Erstellungstag usw. mit aufnehmen.
+   > Wenn Sie diesen Code ein zweites Mal ausführen, erhalten Sie den folgenden Fehler: "Verletzung der PRIMARY KEY-Einschränkung... Ein doppelter Schlüssel kann in das Objekt dbo. stopping_distance_models "nicht eingefügt werden. Eine Möglichkeit zur Vermeidung dieses Fehlers besteht darin, den Namen für jedes neue Modell zu aktualisieren. Sie können den Namen z.B. in einen aussagekräftigeren Namen ändern und den Modelltyp, den Erstellungstag usw. mit aufnehmen.
 
      ```sql
      UPDATE GLM_models
@@ -170,7 +177,7 @@ Um Vorhersagen basierend auf Ihrem Modell zu erhalten, schreiben Sie ein SQL-Skr
 1. Ruft die neuen Eingabedaten ab
 1. Ruft eine R-Vorhersagefunktion auf, die mit dem Modell kompatibel ist
 
-Im Laufe der Zeit kann die Tabelle mehrere R-Modelle enthalten, die alle mit unterschiedlichen Parametern oder Algorithmen erstellt wurden oder auf unterschiedlichen Teilmengen von Daten trainiert wurden. In diesem Beispiel verwenden wir das Modell mit dem Namen "`default model`".
+Im Laufe der Zeit kann die Tabelle mehrere R-Modelle enthalten, die alle mit unterschiedlichen Parametern oder Algorithmen erstellt wurden oder auf unterschiedlichen Teilmengen von Daten trainiert wurden. In diesem Beispiel verwenden wir das Modell mit dem Namen `default model`.
 
 ```sql
 DECLARE @glmmodel varbinary(max) = 

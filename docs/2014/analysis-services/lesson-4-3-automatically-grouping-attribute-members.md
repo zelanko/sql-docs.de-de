@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69890837"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Automatisches Gruppieren von Attributelementen
@@ -44,11 +44,11 @@ ms.locfileid: "69890837"
   
 4.  Wählen Sie im Bereich **Attribute** den Eintrag **Yearly Income**aus.  
   
-5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **automatisch** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.  
+5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **automatisch** , und ändern Sie den Wert für die **DiscretizationBucketCount** -Eigenschaft in `5`.  
   
      Die folgende Abbildung zeigt die geänderten Eigenschaften für **Yearly Income**.  
   
-     ![Geänderte Eigenschaften für Jahreseinkommen] (../../2014/tutorials/media/l4-discretizationmethod-1.gif "Geänderte Eigenschaften für Jahreseinkommen")  
+     ![Geänderte Eigenschaften für Jahreseinkommen](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Geänderte Eigenschaften für Jahreseinkommen")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Gruppieren von Attributhierarchieelementen in der Employee-Dimension  
   
@@ -62,11 +62,11 @@ ms.locfileid: "69890837"
   
 4.  Wählen Sie im Bereich **Attribute** den Eintrag **Sick Leave Hours**aus.  
   
-5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Cluster** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.  
+5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Cluster** , und ändern Sie den Wert für die **DiscretizationBucketCount** -Eigenschaft in `5`.  
   
 6.  Wählen Sie im Bereich **Attribute** den Eintrag **Vacation Hours**aus.  
   
-7.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Equal Areas** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.  
+7.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Equal Areas** , und ändern Sie den Wert für die **DiscretizationBucketCount** -Eigenschaft in `5`.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Durchsuchen der geänderten Attributhierarchien  
   
@@ -94,7 +94,7 @@ ms.locfileid: "69890837"
   
      Die folgende Abbildung zeigt Verkäufe dimensioniert nach krankheitsbedingten Ausfallstunden der Angestellten.  
   
-     ![Umsätze durch Mitarbeiter krank] (../../2014/tutorials/media/l4-discretizationmethod-2.gif "Umsätze durch Mitarbeiter krank")  
+     ![Umsätze durch Mitarbeiter krank](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Umsätze durch Mitarbeiter krank")  
   
 10. Entfernen Sie die **Sick Leave Hours** -Attributhierarchie aus dem Spaltenbereich des Bereichs **Daten** .  
   
@@ -122,10 +122,10 @@ ms.locfileid: "69890837"
   
      Beachten Sie, dass jetzt drei Gruppen von Elementen des **Vacation Hours** -Attributs vorhanden sind, die Verkaufswerte für Produkte aufweisen. Die anderen sieben Gruppen enthalten Elemente ohne Verkaufsdaten.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Ausblenden und Deaktivieren von Attributhierarchien](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68889609"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
@@ -26,7 +26,7 @@ ms.locfileid: "68889609"
  In diesem Thema wird die grundlegende Architektur von Analysis Services bei der Ausführung im mehrdimensionalen und Data Mining-Modus erläutert. Weitere Informationen zu anderen Modi finden Sie unter tabellarische Tabellen [ &#40;Modellierung (&#41; SSAS](../../tabular-models/tabular-models-ssas.md) ) und [Vergleichen von &#40;tabellarischen&#41;und mehrdimensionalen SSAS-Lösungen](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
   
 ## <a name="basic-architecture"></a>Grundlegende Architektur  
- Eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz kann mehrere Datenbanken enthalten, und eine Datenbank kann gleichzeitig OLAP-Objekte und Data Mining-Objekte enthalten. Anwendungen stellen eine Verbindung mit einer angegebenen Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer angegebenen Datenbank her. Ein Servercomputer kann mehrere Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] hosten. Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] werden als "\<Servername >\\< instancename\>" bezeichnet. Die folgende Abbildung zeigt alle erwähnten Beziehungen zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekten.  
+ Eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz kann mehrere Datenbanken enthalten, und eine Datenbank kann gleichzeitig OLAP-Objekte und Data Mining-Objekte enthalten. Anwendungen stellen eine Verbindung mit einer angegebenen Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer angegebenen Datenbank her. Ein Servercomputer kann mehrere Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] hosten. Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] werden als "\<ServerName > \\ < instancename \>" bezeichnet. Die folgende Abbildung zeigt alle erwähnten Beziehungen zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekten.  
   
  ![AMO-Objekte, die Objekte ausführen](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO-Objekte, die Objekte ausführen")  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68889609"
  Jedes Datenbankobjekt enthält mindestens ein Cubeobjekt. Ein Cube wird durch seine Measures und Dimensionen definiert. Die Measures und Dimensionen in einem Cube werden aus Tabellen und Sichten der Datenquellensicht abgeleitet, auf der der Cube basiert bzw. die von den Measure- und Dimensionsdefinitionen generiert wird.  
   
 ## <a name="object-inheritance"></a>Objektvererbung  
- Das ASSL-Objektmodell enthält zahlreiche wiederkehrende Elementgruppen. Beispielsweise definiert die Element Gruppe "`Dimensions` enthalten `Hierarchies`" die Dimensions Hierarchie eines Elements. Sowohl `Cubes` als auch `MeasureGroups` enthalten die Elementgruppe "`Dimensions` enthalten `Hierarchies`".  
+ Das ASSL-Objektmodell enthält zahlreiche wiederkehrende Elementgruppen. Die Element Gruppe "`Dimensions` enthalten `Hierarchies`" definiert z. b. die Dimensions Hierarchie eines Elements. Sowohl `Cubes` als auch `MeasureGroups` enthalten die Elementgruppe "`Dimensions` enthalten `Hierarchies`".  
   
  Wenn dies nicht ausdrücklich überschrieben wird, erbt ein Element die Details dieser wiederkehrenden Elementgruppe von der höheren Ebene. Beispielsweise sind die `Translations` für eine `CubeDimension` die gleichen wie die `Translations` für sein Vorgängerelement `Cube`.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68889609"
 ### <a name="aggregates"></a>Aggregate  
  Anwender des Produkts im geschäftlichen Bereich, die einen Cube verwenden, können beliebige Measurewerte für jedes Element in jeder Dimension bestimmen, unabhängig von der Ebene des Elements innerhalb der Dimension, da Werte von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] auf höheren Ebenen als erforderlich aggregiert werden. Beispielsweise können die measurenwerte in der obigen Abbildung gemäß einer Standardkalender Hierarchie aggregiert werden, indem die Calendar Time-Hierarchie in der Time-Dimension verwendet wird, wie im folgenden Diagramm dargestellt.  
   
- ![Diagramm der Measures, die entlang der Zeitdimension organisiert](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif " sind Diagramm der Measures, die entlang der Zeitdimension organisiert") sind  
+ ![Diagramm der Measures, die entlang der Zeitdimension organisiert sind](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "Diagramm der Measures, die entlang der Zeitdimension organisiert sind")  
   
  Ergänzend zur Aggregation von Measures mithilfe einer einzigen Dimension können Sie Measures mithilfe von Kombinationen von Elementen unterschiedlicher Dimensionen aggregieren. Auf diese Weise ist es Anwendern des Produkts im geschäftlichen Bereich möglich, in mehreren Dimensionen gleichzeitig Measures auszuwerten. Wenn ein Anwender des Produkts im geschäftlichen Bereich z. B. die Quartalsimporte analysieren möchte, die per Luftfracht aus der östlichen und der westlichen Hemisphäre eingetroffen sind, kann der Anwender eine Abfrage an den Cube eingeben, um das folgende Dataset abzurufen.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68889609"
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Zuordnen von Measures, Attributen und Hierarchien  
  Die Measures, Attribute und Hierarchien des Cubes in dem Beispiel werden aus den folgenden Spalten in den Fakten- und Dimensionstabellen des Cubes abgeleitet.  
   
-|Measure oder Attribut (Ebene)|Member|Quelltabelle|Quellspalte|Beispielspaltenwert|  
+|Measure oder Attribut (Ebene)|Element|Quelltabelle|Quellspalte|Beispielspaltenwert|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |Packages-Measure|Nicht verfügbar|ImportsFactTable|Pakete|12|  
 |Last-Measure|Nicht verfügbar|ImportsFactTable|Letzter|May-03-99|  
@@ -123,7 +123,7 @@ ms.locfileid: "68889609"
   
  Das hier dargestellte Beispiel enthält nur eine einzige Faktentabelle. Wenn ein Cube mehrere Faktentabellen enthält, werden die Measures aus jeder Faktentabelle in Measuregruppen organisiert, und eine Measuregruppe wird mithilfe von definierten Dimensionsbeziehungen mit einer bestimmten Gruppe von Dimensionen verbunden. Diese Beziehungen werden durch Angeben der teilnehmenden Tabellen in der Datenquellensicht und der Granularität der Beziehung definiert. **Verwandte Themen:** [Dimensions Beziehungen](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
   
   

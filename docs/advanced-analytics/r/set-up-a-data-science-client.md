@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69633634"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Einrichten eines Data Science-Clients für die R-Entwicklung auf SQL Server
@@ -29,7 +29,7 @@ In diesem Artikel erfahren Sie, wie Sie eine Entwicklungs Arbeitsstation für R-
 Zum Überprüfen der Installation können Sie das integrierte **rgui** -Tool verwenden, wie in diesem Artikel beschrieben, oder Sie können [die Bibliotheken](#install-ide) mit rstudio oder einer anderen IDE verknüpfen, die Sie normalerweise verwenden.
 
 > [!Note]
-> Eine Alternative zur Installation der Client Bibliothek ist die Verwendung eines [eigenständigen Servers](../install/sql-machine-learning-standalone-windows-install.md) als Rich Client, den einige Kunden für eine tiefere szenarioarbeit bevorzugen. Ein eigenständiger Server ist vollständig von SQL Server entkoppelt, aber da er die gleichen R-Bibliotheken hat, können Sie ihn als Client für SQL Server in-Database-Analyse verwenden. Sie können Sie auch für nicht-SQL-bezogene Arbeiten verwenden, einschließlich der Möglichkeit, Daten von anderen Daten Plattformen zu importieren und zu modellieren. Wenn Sie einen eigenständigen Server installieren, finden Sie die ausführbare R-Datei an `C:\Program Files\Microsoft SQL Server\140\R_SERVER`diesem Speicherort:. Um die Installation zu überprüfen, [Öffnen Sie eine r-Konsolen-App](#R-tools) , um Befehle mithilfe von r. exe an diesem Speicherort auszuführen.
+> Eine Alternative zur Installation der Client Bibliothek ist die Verwendung eines [eigenständigen Servers](../install/sql-machine-learning-standalone-windows-install.md) als Rich Client, den einige Kunden für eine tiefere szenarioarbeit bevorzugen. Ein eigenständiger Server ist vollständig von SQL Server entkoppelt, aber da er die gleichen R-Bibliotheken hat, können Sie ihn als Client für SQL Server in-Database-Analyse verwenden. Sie können Sie auch für nicht-SQL-bezogene Arbeiten verwenden, einschließlich der Möglichkeit, Daten von anderen Daten Plattformen zu importieren und zu modellieren. Wenn Sie einen eigenständigen Server installieren, finden Sie die ausführbare R-Datei an diesem Speicherort: `C:\Program Files\Microsoft SQL Server\140\R_SERVER`. Um die Installation zu überprüfen, [Öffnen Sie eine r-Konsolen-App](#R-tools) , um Befehle mithilfe von r. exe an diesem Speicherort auszuführen.
 
 ## <a name="commonly-used-tools"></a>Häufig verwendete Tools
 
@@ -51,7 +51,7 @@ Die R-Pakete von Microsoft sind in mehreren Produkten und Diensten verfügbar. E
 
 3. Erstellen Sie eine MKL_CBWR-System Umgebungsvariable, um eine konsistente Ausgabe in Intel Math Kernel Library (MKL)-Berechnungen sicherzustellen.
 
-  + Klicken Sie in der Systemsteuerung auf **System-und Sicherheits** > **System** > **Erweiterte Systemeinstellungen** > **Umgebungsvariablen**.
+  + Klicken Sie in der Systemsteuerung auf **System-und Sicherheits**  > **System**  > **Erweiterte Systemeinstellungen**  > **Umgebungsvariablen**.
   + Erstellen Sie eine neue System Variable mit dem Namen **MKL_CBWR**, wobei der Wert auf **Auto**festgelegt ist.
 
 ## <a name="2---locate-executables"></a>2\. ausführbare Dateien suchen
@@ -75,7 +75,7 @@ Wenn Sie r mit SQL Server installieren, erhalten Sie dieselben R-Tools, die für
 
   Wenn Sie eine R-Sitzung aus einem Microsoft-Programmordner starten, werden von mehreren Paketen, einschließlich revoscaler, automatisch geladen. 
 
-2. Geben `print(Revo.version)` Sie an der Eingabeaufforderung ein, um revoscaler-Paket Versionsinformationen zurückzugeben. Sie sollten über die Version 9.2.1 oder 9.3.0 für revoscaler verfügen.
+2. Geben Sie `print(Revo.version)` an der Eingabeaufforderung ein, um die Informationen zur revoscaler-Paketversion zurückzugeben. Sie sollten über die Version 9.2.1 oder 9.3.0 für revoscaler verfügen.
 
 3. Geben Sie in der R-Eingabeaufforderung **Search ()** ein, um eine Liste der installierten Pakete zu finden.
 
@@ -106,9 +106,9 @@ Wenn für den Code Pakete erforderlich sind, die nicht standardmäßig mit SQL S
 
 In den folgenden Schritten wird von der Demo Database, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md)und Windows-Authentifizierung ausgegangen.
 
-1. Öffnen Sie die **rgui** auf der Client Arbeitsstation. Wechseln Sie z. b `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` . zu, und doppelklicken Sie auf **rgui. exe** , um ihn zu starten.
+1. Öffnen Sie die **rgui** auf der Client Arbeitsstation. Wechseln Sie z. b. `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64`, und doppelklicken Sie auf " **rgui. exe** ", um Sie zu starten.
 
-2. Revoscaler wird automatisch geladen. Bestätigen Sie, dass revoscaler betriebsbereit ist, indem Sie diesen Befehl ausführen`print(Revo.version)`
+2. Revoscaler wird automatisch geladen. Bestätigen Sie, dass revoscaler betriebsbereit ist, indem Sie folgenden Befehl ausführen: `print(Revo.version)`
 
 3. Geben Sie ein Demoskript ein, das auf dem Remote Server ausgeführt wird. Sie müssen das folgende Beispielskript so ändern, dass ein gültiger Name für eine Remote SQL Server-Instanz enthalten ist. Diese Sitzung beginnt als lokale Sitzung, die **rxsummary** -Funktion wird jedoch auf der Remote SQL Server-Instanz ausgeführt.
 
@@ -128,7 +128,7 @@ In den folgenden Schritten wird von der Demo Database, [NYCTaxi_Sample](../tutor
 
   **Ergebnisse:**
 
-  Dieses Skript stellt eine Verbindung mit einer Datenbank auf dem Remote Server her, stellt eine Abfrage bereit, erstellt `cc` eine computekontexts-Anweisung für die Remote Codeausführung und stellt dann die revoscaler-Funktion **rxsummary** bereit, um eine statistische Zusammenfassung der Abfrage zurückzugeben. Folgen.
+  Dieses Skript stellt eine Verbindung mit einer Datenbank auf dem Remote Server her, stellt eine Abfrage bereit, erstellt einen computekontext `cc` Anweisung für die Remote Codeausführung und stellt dann die revoscaler-Funktion **rxsummary** bereit, um eine statistische Zusammenfassung der Abfrageergebnisse zurückzugeben.
 
   ```R
     Call:
@@ -185,7 +185,7 @@ In den folgenden Schritten wird von der Demo Database, [NYCTaxi_Sample](../tutor
 
   Der folgende Screenshot zeigt die Ausgabe des Eingabe-und Punkt Diagramms.
 
-   Punkt ![Diagramm in rgui] Punkt (media/rclient-setup-scatterplot.png "Diagramm für NYC Taxi-Demodaten")
+   ![Punkt Diagramm in rgui](media/rclient-setup-scatterplot.png "Punkt Diagramm für NYC Taxi-Demodaten")
 
 <a name="install-ide"></a>
 
@@ -201,7 +201,7 @@ Wenn Sie [rstudio](https://www.rstudio.com/)verwenden, können Sie die Umgebung 
 
 1. Überprüfen Sie die auf SQL Server installierten R-Paketversionen. Weitere Informationen finden Sie unter [Get R Package Information](../package-management/r-package-information.md).
 
-1. Installieren Sie Microsoft R Client oder eine der eigenständigen Serveroptionen, um revoscaler und andere r-Pakete hinzuzufügen, einschließlich der von Ihrer SQL Server Instanz verwendeten Basis-r-Verteilung. Wählen Sie eine Version auf derselben Ebene oder niedriger (Pakete sind abwärts kompatibel), die die gleichen Paketversionen wie auf dem Server bereitstellt. Versionsinformationen finden Sie in der Versions Zuordnung in diesem Artikel: [Aktualisieren Sie die R-und python-Komponenten](../install/upgrade-r-and-python.md).
+1. Installieren Sie Microsoft R Client oder eine der eigenständigen Serveroptionen, um revoscaler und andere r-Pakete hinzuzufügen, einschließlich der von Ihrer SQL Server Instanz verwendeten Basis-r-Verteilung. Wählen Sie eine Version auf derselben Ebene oder niedriger (Pakete sind abwärts kompatibel), die die gleichen Paketversionen wie auf dem Server bereitstellt. Versionsinformationen finden Sie in der Versions Zuordnung in diesem Artikel: [Upgrade von R-und python-Komponenten](../install/upgrade-r-and-python.md).
 
 1. Aktualisieren Sie in rstudio [ihren R-Pfad](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) so, dass er auf die r-Umgebung verweist, die revoscaler, Microsoft R Open und andere Microsoft-Pakete bereitstellt. 
 
@@ -227,11 +227,11 @@ In diesem Beispiel wird Visual Studio 2017 Community Edition verwendet, wobei di
 
 1. Wählen Sie im Menü **Datei** die Option **neu** aus, und wählen Sie dann **Projekt**aus.
 
-2. Der linke Bereich enthält eine Liste vorinstallierter Vorlagen. Klicken Sie auf **r**, und wählen Sie **r Project**aus. Geben`dbtest` Sie im Feld Name ein, und klicken Sie auf **OK**. 
+2. Der linke Bereich enthält eine Liste vorinstallierter Vorlagen. Klicken Sie auf **r**, und wählen Sie **r Project**aus. Geben Sie im Feld **Name** `dbtest` ein, und klicken Sie auf **OK**. 
 
   Visual Studio erstellt einen neuen Projektordner und eine Standardskript Datei, `Script.R`. 
 
-3. Geben `.libPaths()` Sie in die erste Zeile der Skriptdatei ein, und drücken Sie dann STRG + EINGABETASTE.
+3. Geben Sie `.libPaths()` in der ersten Zeile der Skriptdatei ein, und drücken Sie dann STRG + EINGABETASTE.
 
   Der aktuelle R-Bibliotheks Pfad sollte im **R Interactive** Fenster angezeigt werden. 
 
