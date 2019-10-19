@@ -17,14 +17,14 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68811038"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *in-Memory-columnstore--Index* speichert und verwaltet Daten mithilfe von Spalten basiertem Datenspeicher und Spalten basierter Abfrage Verarbeitung. Columnstore-Indizes sind optimal für Data Warehousing-Arbeitsauslastungen geeignet, die hauptsächlich Massenladevorgänge und schreibgeschützte Abfragen ausführen. Verwenden Sie den Columnstore-Index, um eine bis zu **zehnfache Abfrageleistung** gegenüber der herkömmlichen zeilenorientierten Speicherung und eine bis zu **siebenfache Datenkomprimierung** im Vergleich zur unkomprimierten Datengröße zu erzielen.  
+  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *columnstore--Index im Arbeitsspeicher* speichert und verwaltet Daten mithilfe von Spalten basiertem Datenspeicher und Spalten basierter Abfrage Verarbeitung. Columnstore-Indizes sind optimal für Data Warehousing-Arbeitsauslastungen geeignet, die hauptsächlich Massenladevorgänge und schreibgeschützte Abfragen ausführen. Verwenden Sie den Columnstore-Index, um eine bis zu **zehnfache Abfrageleistung** gegenüber der herkömmlichen zeilenorientierten Speicherung und eine bis zu **siebenfache Datenkomprimierung** im Vergleich zur unkomprimierten Datengröße zu erzielen.  
   
 > [!NOTE]  
 >  Wir sehen den gruppierten Columnstore-Index als Standard für das Speichern von großen Data Warehousing-Faktentabellen an und erwarten, dass er in den meisten Data Warehousing-Szenarien verwendet wird. Da der gruppierte Columnstore-Index aktualisierbar ist, kann die Arbeitsauslastung eine große Anzahl von Einfüge-, Update- und Löschvorgängen ausführen.  
@@ -90,7 +90,7 @@ ms.locfileid: "68811038"
   
 -   Er benötigt zusätzlichen Speicherplatz, um eine Kopie der Spalten im Index zu speichern.  
   
--   Er wird aktualisiert, indem der Index neu erstellt wird oder Partitionen gewechselt werden. Er kann nicht mit DML-Vorgängen wie Einfüge-, Update- und Löschvorgängen aktualisiert werden.  
+-   Wird aktualisiert, indem der Index neu erstellt oder Partitionen ein-und ausgeschaltet wird. Sie kann nicht mit DML-Vorgängen wie INSERT, Update und DELETE aktualisiert werden.  
   
 -   Er kann mit anderen Indizes der Tabelle kombiniert werden.  
   
@@ -125,19 +125,19 @@ ms.locfileid: "68811038"
   
 -   Jedes Spaltensegment wird zusammenhängend komprimiert und auf physischen Medien gespeichert.  
   
- ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+ ![Spalten Segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Spaltensegment")  
   
  Nicht gruppierter Columnstore-Index  
  Ein *nonclustered columnstore index* ist ein schreibgeschützter Index, der für einen vorhandenen gruppierten Index oder eine Heaptabelle erstellt wird. Er enthält eine Kopie einer Teilmenge von Spalten, die maximal alle Spalten in der Tabelle umfassen kann. Die Tabelle ist schreibgeschützt, während Sie einen nicht gruppierten columnstore--Index enthält.  
   
  Ein nicht gruppierter Columnstore-Index bietet eine Möglichkeit, über einen Columnstore-Index zum Ausführen von Analyseabfragen zu verfügen, während gleichzeitig schreibgeschützte Vorgänge für die ursprüngliche Tabelle ausgeführt werden.  
   
- ![Nicht gruppierter columnstore--Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Nicht gruppierter columnstore--Index")  
+ ![Nicht gruppierter columnstore--Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Nicht gruppierter Columnstore-Index")  
   
  Gruppierter Columnstore-Index  
  Ein *clustered columnstore index* ist der physische Speicher für die gesamte Tabelle und der einzige Index für die Tabelle. Der gruppierte Index kann aktualisiert werden. Sie können Einfüge-, Lösch- und Updatevorgänge für den Index ausführen und per Massenladen Daten in den Index laden.  
   
- ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+ ![Gruppierter columnstore-Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Gruppierter Columnstore-Index")  
   
  Um die Fragmentierung der Spaltensegmente zu verringern und die Leistung zu verbessern, können einige Daten im Columnstore-Index vorübergehend in einer Zeilenspeichertabelle, die als Deltastore bezeichnet wird, sowie eine B-Struktur der IDs für gelöschte Zeilen gespeichert werden. Die Deltastore-Vorgänge werden im Hintergrund verarbeitet. Damit die richtigen Abfrageergebnisse zurückgegeben werden, kombiniert der gruppierte Columnstore-Index Abfrageergebnisse aus dem Columnstore und dem Deltastore.  
   
@@ -155,12 +155,12 @@ ms.locfileid: "68811038"
   
  ![Laden von Daten in einen columnstore--Index](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Laden von Daten in einen columnstore--Index")  
   
- Eine Tabelle mit einem nicht gruppierten Columnstore-Index ist so lange schreibgeschützt, bis der Index gelöscht oder deaktiviert wird. Um die Tabelle und den nicht gruppierten Columnstore-Index zu aktualisieren, können Sie Partitionen wechseln. Sie können den Index auch deaktivieren, die Tabelle aktualisieren und den Index dann neu erstellen.  
+ Eine Tabelle mit einem nicht gruppierten Columnstore-Index ist so lange schreibgeschützt, bis der Index gelöscht oder deaktiviert wird. Um die Tabelle und den nicht gruppierten columnstore--Index zu aktualisieren, können Sie Partitionen ein-und ausschalten. Sie können den Index auch deaktivieren, die Tabelle aktualisieren und den Index dann neu erstellen.  
   
  Weitere Informationen finden Sie unter [Using Nonclustered Columnstore Indexes](indexes.md).  
   
 ###  <a name="dataload_cci"></a>Laden von Daten in einen gruppierten columnstore-Index  
- ![Laden in einen geclusterten Columnstore-Index](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
+ ![Laden in einen gruppierten columnstore--Index](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Laden in einen gruppierten columnstore--Index")  
   
  Wie das Diagramm nahe legt, führt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zum Laden von Daten in einen gruppierten Columnstore-Index Folgendes aus:  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68811038"
   
 -   [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)  
   
-### <a name="metadata"></a>Metadaten  
+### <a name="metadata"></a>Browser  
  Alle Spalten in einem Columnstore-Index werden in den Metadaten als eingeschlossene Spalten gespeichert. Der Columnstore-Index weist keine Schlüsselspalten auf.  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
