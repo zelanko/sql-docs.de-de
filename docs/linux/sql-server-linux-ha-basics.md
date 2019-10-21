@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809952"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586757"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Grundlagen zur SQL Server-Verfügbarkeit für Linux-Bereitstellungen
 
@@ -76,7 +76,7 @@ Auch mit Samba, der Linux-Variante von Server Message Block (SMB), können Freig
 
 Sie können auch SMB-Freigaben verwenden, die auf Windows statt Linux basieren. Die Voraussetzungen dafür sind, dass der Samba-Client auf dem Linux-Server richtig konfiguriert ist, der [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] hostet, und dass die Freigabe über die richtigen Zugriffsberechtigungen verfügt. In einer Umgebung mit mehreren Betriebssystemen kann so beispielsweise eine vorhandene Infrastruktur für Linux-basierte [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Bereitstellungen verwendet werden.
 
-Wichtig ist, dass die bereitgestellte Samba-Version mit SMB 3.0 kompatibel sein sollte. Seit der Einführung der SMB-Unterstützung in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)] müssen alle Freigaben SMB 3.0 unterstützen. Wenn Sie für die Freigabe Samba statt Windows Server verwenden, sollte die Samba-basierte Freigabe mindestens Samba 4.0 verwenden. Idealerweise sollte jedoch die Version 4.3 oder höher eingesetzt werden, da diese SMB 3.1.1 unterstützt. Viele hilfreiche Informationen zu SMB und Linux finden Sie unter [SMB3 in Samba (SMB 3.0 für Samba)](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+Wichtig ist, dass die bereitgestellte Samba-Version mit SMB 3.0 kompatibel sein sollte. Seit der Einführung der SMB-Unterstützung in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)] müssen alle Freigaben SMB 3.0 unterstützen. Wenn Sie für die Freigabe Samba statt Windows Server verwenden, sollte die Samba-basierte Freigabe mindestens Samba 4.0 verwenden. Idealerweise sollte jedoch die Version 4.3 oder höher eingesetzt werden, da diese SMB 3.1.1 unterstützt. Viele hilfreiche Informationen zu SMB und Linux finden Sie unter [SMB3 in Samba (SMB 3.0 für Samba)](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Eine weitere Option ist eine NFS-Freigabe (Network File System). Diese kann allerdings nur für Linux-basierte, nicht aber für Windows-basierte Bereitstellungen von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] verwendet werden.
 
