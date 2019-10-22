@@ -1,6 +1,6 @@
 ---
 title: Online Dokumentation für SQL Server 2014 | Microsoft-Dokumentation
-ms.date: 05/25/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a66e558abcd1835674915955d0cda65eff58f8c0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a943685156ce9ec0ed3c94f4650c5a8222bff445
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887757"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688775"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Onlinedokumentation für SQLServer 2014
 
@@ -59,7 +59,7 @@ SQL Server 2016 und spätere Versionen sind [hier](https://docs.microsoft.com/sq
   
 -   [SQL Server-Ressourcencenter](https://www.microsoft.com/sql-server/sql-server-2017-resources)  
   
--   [SQL Server-TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
+-   [SQL Server-Dokumentation](https://go.microsoft.com/fwlink/?linkid=28107)  
   
 -   [SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
@@ -69,9 +69,9 @@ SQL Server 2016 und spätere Versionen sind [hier](https://docs.microsoft.com/sq
 
 ## <a name="previous-versions-gm2014"></a>SQL Server 2005, 2008, 2012, 2016 und höher
 
-[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+[!INCLUDE[previous versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 
  [Hilfe zu SQL Server-Konfigurations-Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
