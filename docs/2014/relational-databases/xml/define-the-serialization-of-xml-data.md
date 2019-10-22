@@ -1,7 +1,7 @@
 ---
 title: Definieren der Serialisierung von XML-Daten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 759c0200c644913e21262c914957cfa1dcbada5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39f3ccc462fb063ecb314b1e9968dcfa8a095cbb
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637578"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688887"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definieren der Serialisierung von XML-Daten
   Beim expliziten oder impliziten Umwandeln des XML-Datentyps in eine SQL-Zeichenfolge oder einen Binärtyp wird der Inhalt des XML-Datentyps entsprechend der in diesem Thema beschriebenen Regeln serialisiert.  
@@ -31,10 +31,10 @@ ms.locfileid: "62637578"
 ## <a name="serialization-encoding"></a>Serialisierungscodierung  
  Wenn der SQL-Zieltyp VARBINARY ist, erfolgt die Serialisierung des Ergebnisses in UTF-16 mit einer UTF-16-Markierung für die Bytereihenfolge am Anfang, jedoch ohne eine XML-Deklaration. Wenn der Zieltyp zu klein ist, wird ein Fehler ausgelöst.  
   
- Zum Beispiel:  
+ Beispiel:  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
  Dies ist das Ergebnis:  
@@ -45,27 +45,27 @@ select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))
   
  Wenn der SQL-Zieltyp NVARCHAR oder NCHAR ist, erfolgt die Serialisierung des Ergebnisses in UTF-16 ohne die Markierung für die Bytereihenfolge am Anfang und ohne eine XML-Deklaration. Wenn der Zieltyp zu klein ist, wird ein Fehler ausgelöst.  
   
- Zum Beispiel:  
+ Beispiel:  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
  Dies ist das Ergebnis:  
   
 ```  
-<??/>  
+<Δ/>  
 ```  
   
  Wenn der SQL-Zieltyp VARCHAR oder NCHAR ist, erfolgt die Serialisierung des Ergebnisses in der Codierung, die der Codepage der Datenbanksortierung entspricht, ohne Markierung zur Bytereihenfolge oder XML-Deklaration. Wenn der Zieltyp zu klein ist oder der Wert nicht zur Codeseite der Zielsortierung zugeordnet werden kann, wird ein Fehler ausgelöst.  
   
- Zum Beispiel:  
+ Beispiel:  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- Dies kann zu einem Fehler führen, wenn der Codepage für die aktuelle Sortierung das Unicode-Zeichen darstellen kann??, oder es wird es in der speziellen Codierung dar.  
+ Dies kann zu einem Fehler führen, wenn die Codepage der aktuellen Sortierung das Unicode-Zeichen &#x10300;nicht darstellen kann, oder Sie stellt Sie in der spezifischen Codierung dar.  
   
  Beim Zurückgeben der XML-Ergebnisse an die Clientseite werden die Daten in UTF-16-Codierung gesendet. Der clientseitige Anbieter macht die Daten dann entsprechend seinen API-Regeln verfügbar.  
   
@@ -87,9 +87,9 @@ select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))
   
 -   Um Textknoten zu schützen, die ausschließlich Leerzeichen enthalten, wird eines der Leerzeichen – zumeist das letzte – beim Ändern in Entitäten zu dessen numerischem Zeichenverweis. Auf diese Weise bleibt der Leerzeichentextknoten beim Neuanalysieren erhalten, und zwar unabhängig von der Einstellung zur Handhabung von Leerzeichen beim Analysieren.  
   
- Zum Beispiel:  
+ Beispiel:  
   
-```  
+```sql
 declare @u NVARCHAR(50)  
 set @u = N'<a a="  
     '+NCHAR(0xD800)+NCHAR(0xDF00)+N'>">   '+NCHAR(0xA)+N'</a>'  
@@ -100,19 +100,19 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
 ```  
 <a a="  
-    ????>">     
+    𐌀>">     
 </a>  
 ```  
   
  Wenn Sie die letzte Leerzeichenschutzregel nicht anwenden wollen, können Sie die explizite CONVERT-Option 1 beim Umwandeln von **xml** in einen Zeichenfolgen- oder Binärtyp verwenden. Sie können z. B. folgende Aktionen ausführen, um das Ändern in Entitäten zu vermeiden:  
   
-```  
+```sql
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
  Beachten Sie, dass die [query()-Methode (xml-Datentyp)](/sql/t-sql/xml/query-method-xml-data-type) eine xml-Datentypinstanz ergibt. Deshalb wird jedes Ergebnis der **query()** -Methode, das in einen Zeichenfolgen- oder Binärtyp umgewandelt wird, entsprechend den zuvor beschriebenen Regeln in Entitäten geändert. Wenn Sie Zeichenfolgenwerte erhalten wollen, die nicht in Entitäten geändert wurden, sollten Sie stattdessen die [value()-Methode (xml-Datentyp)](/sql/t-sql/xml/value-method-xml-data-type) verwenden. Es folgt ein Beispiel zum Verwenden der **query()** -Methode:  
   
-```  
+```sql
 declare @x xml  
 set @x = N'<a>This example contains an entitized char: <.</a>'  
 select @x.query('/a/text()')  
@@ -126,7 +126,7 @@ This example contains an entitized char: <.
   
  Es folgt ein Beispiel zum Verwenden der **query(** )-Methode:  
   
-```  
+```sql
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
@@ -141,7 +141,7 @@ This example contains an entitized char: <.
   
  So wird z. B. der xs:double-Wert 1.34e1 zu 13.4 serialisiert, wie das im folgenden Beispiel gezeigt wird.  
   
-```  
+```sql
 declare @x xml  
 set @x =''  
 select CAST(@x.query('1.34e1') as nvarchar(50))  
@@ -149,7 +149,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  Es wird der Zeichenfolgenwert 13.4 zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Typumwandlungsregeln in XQuery](/sql/xquery/type-casting-rules-in-xquery)   
  [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
