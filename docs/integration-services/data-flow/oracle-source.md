@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7444c5710663eb601aa3c8ce2287869a8083f814
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553211"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545069"
 ---
 # <a name="oracle-source"></a>Oracle-Quelle
 
@@ -54,7 +54,7 @@ Die benutzerdefinierten Eigenschaften der Oracle-Quelle wie unten beschrieben. A
 |AccessMode|Ganze Zahl (Enumeration)|Der zum Zugreifen auf die Datenbank verwendete Modus. Die möglichen Werte sind **Tabellenname** und **SQL-Befehl**. Die Standardeinstellung ist der **Tabellenname**.|
 |BatchSize|Integer|Die Größe des Batches für den Massenladevorgang. Dies ist die Anzahl der als Array extrahierten Datensätze. <br>Diese Eigenschaft wird nur vom **Erweiterten Editor** festgelegt.|
 |DefaultCodePage|Integer|Die zu verwendende Codepage, wenn die Datenquelle keine Codepageinformationen enthält. <br>Diese Eigenschaft wird nur vom **Erweiterten Editor** festgelegt.|
-|PreFetchCount|Integer|Die Anzahl der vorab abgerufenen Zeilen. <br>Diese Eigenschaft wird nur vom **Erweiterten Editor** festgelegt.|
+|PreFetchCount|Integer|Die Anzahl der vorab abgerufenen Zeilen <br>Diese Eigenschaft wird nur vom **Erweiterten Editor** festgelegt.|
 |SqlCommand|Zeichenfolge|Der SQL-Befehl, der ausgeführt werden soll, wenn AccessMode auf SQL-Befehl festgelegt wird.|
 |TableName|Zeichenfolge|Der Name der Tabelle mit den Daten, die verwendet werden, wenn AccessMode auf „Tabellenname“ festgelegt wird.|
 

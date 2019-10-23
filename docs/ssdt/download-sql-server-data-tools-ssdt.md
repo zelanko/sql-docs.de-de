@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fc8925b4257631561b6b68ed144becbadece639
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 7ddf814a849dfd0272f87dec2e2d7650c557d0be
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383788"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545089"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Herunterladen und Installieren von SQL Server Data Tools (SSDT) für Visual Studio
 
@@ -32,12 +32,12 @@ In Visual Studio 2019 wurde die erforderliche Funktionalität zur Unterstützung
 Wenn Sie bereits über eine Lizenz für Visual Studio 2019 verfügen:
 
 - Installieren Sie für Projekte von SQL-Datenbank die Datenspeicher- und Verarbeitungsworkload für Visual Studio.
-- Installieren Sie für Analysis Services-, Integration Services- oder Reporting Services-Projekte die geeigneten Erweiterungen aus dem Marketplace.
+- Installieren Sie für Analysis Services-, Integration Services- oder Reporting Services-Projekte die geeigneten [Erweiterungen](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) aus dem Marketplace.
 
 Wenn Sie noch keine Lizenz für Visual Studio 2019 besitzen:
 
 - Installieren Sie [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
-- Installieren Sie nach Bedarf die Erweiterung Analysis Services, Integration Services oder Reporting Services.
+- Installieren Sie nach Bedarf die [Erweiterung](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) Analysis Services, Integration Services oder Reporting Services.
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>Änderungen in SSDT für Visual Studio 2017
 

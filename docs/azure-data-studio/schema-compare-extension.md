@@ -3,39 +3,72 @@ title: Schemavergleich-Erweiterung
 titleSuffix: Azure Data Studio
 description: Installieren und Verwenden der Schemavergleich-Erweiterung (Vorschau) für Azure Data Studio
 ms.custom: seodec18
-ms.date: 06/06/2019
+ms.date: 10/03/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a51d64202d3d906b3106092084628b0a961297ea
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959325"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381820"
 ---
 # <a name="schema-compare-extension-preview"></a>Schemavergleicherweiterung (Vorschauversion)
-Die Schemavergleich-Erweiterung bietet eine benutzerfreundliche Umgebung, in der DACPAC-Dateien und Datenbanken verglichen und die Änderungen aus der Quelle auf das Ziel angewendet werden können.
+Die Schemavergleicherweiterung bietet eine benutzerfreundliche Umgebung, in der zwei Datenbankdefinitionen verglichen und die Unterschiede aus der Quelle auf das Ziel angewendet werden können.
 
-Diese Umgebung befindet sich derzeit in der ersten Vorschauphase. Probleme und Featureanforderungen können Sie [hier](https://github.com/microsoft/azuredatastudio/issues) mitteilen.
+Diese Funktion befindet sich derzeit in der ersten Vorschauversion. Probleme und Featureanforderungen können Sie [hier](https://github.com/microsoft/azuredatastudio/issues) mitteilen.
 
-## <a name="install-the-schema-compare-extension"></a>Installieren der Schemavergleich-Erweiterung
 
-1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, wählen Sie das Symbol für Erweiterungen aus, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
-2. Wählen Sie eine verfügbare Erweiterung aus, um deren Details anzuzeigen.
-1. Wählen Sie die gewünschte Erweiterung (Schemavergleich) aus, und **Installieren** Sie diese.
+## <a name="features"></a>Funktionen
 
-## <a name="how-do-i-start-a-schema-comparison"></a>Wie wird ein Schemavergleich gestartet?
-* Der Haupteinstiegspunkt für einen Schemavergleich ist ein Rechtsklick auf eine Datenbank im Objekt-Explorer und dann Klicken auf **Schemavergleich**.
-* Ein Benutzer kann das Dialogfeld „Schemavergleich“ auch über die Befehlspalette öffnen (STRG+UMSCHALT+P), indem er nach **Schemavergleich** sucht.
+* Vergleichen von Schemas von zwei DACPAC-Dateien oder -Datenbanken
+* Anzeigen von Ergebnissen als Aktionen, die für das Ziel durchgeführt werden müssen, damit dieses der Quelle entspricht
+* Selektives Ausschließen von in den Ergebnissen aufgeführten Aktionen
+* Festlegen von Optionen, die den Bereich des Vergleichs steuern
+* Anwenden von Änderungen auf das Ziel oder Generieren eines Skripts mit der gleichen Auswirkung
+* Speichern des Vergleichs
 
-## <a name="why-would-i-use-the-schema-compare"></a>Warum sollte ich Schemavergleich verwenden?
-Schemavergleich wurde erstellt, um die Möglichkeit hinzuzufügen, die Schemas von DACPAC-Dateien und Datenbanken zu vergleichen und die Änderungen anzuwenden.
+![Schemavergleich: Beispielvergleich](media/extensions/schema-compare-extension/schema-compare.png)
+
+
+## <a name="why-would-i-use-the-schema-compare-extension"></a>Warum sollte ich die Schemavergleicherweiterung verwenden?
+
+Es kann mühsam sein, unterschiedliche Datenbankversionen manuell zu verwalten und zu synchronisieren. Mit der Schemavergleicherweiterung wird der Vergleichsprozess von Datenbanken vereinfacht, und Sie erhalten volle Kontrolle beim Synchronisieren dieser Datenbanken. Sie können nach bestimmten Unterschieden und Unterschiedkategorien filtern, bevor Sie die Änderungen anwenden. Die Schemavergleicherweiterung ist ein zuverlässiges Tool, mit dem Sie Zeit und Code sparen.
+
+![Schemavergleich: Dialogfeld „Optionen“](media/extensions/schema-compare-extension/schema-compare-options.png)
+
+
+## <a name="install-the-extension"></a>Installieren der Erweiterung
+
+1. Klicken Sie auf das Symbol „Erweiterungen“, um die verfügbaren Erweiterungen anzuzeigen.
+
+    ![Erweiterungs-Manager-Symbol](media/extensions/extension-manager-icon.png)
+
+2. Suchen Sie nach der Erweiterung **Schemavergleich**, und wählen Sie sie aus, um die Details anzuzeigen. Klicken Sie auf **Installieren**, um die Erweiterung hinzuzufügen.
+
+3. Klicken Sie nach der Installation auf **Erneut laden**, um die Erweiterung in Azure Data Studio zu aktivieren (nur bei der ersten Installation einer Erweiterung erforderlich).
+
+
+## <a name="launch-a-schema-compare"></a>Starten des Schemavergleichs
+
+1. Führen Sie einen **Rechtsklick** auf eine Datenbank im Objekt-Explorer durch, und klicken Sie dann auf **Schemavergleich**, um das Dialogfeld „Schemavergleich“ zu öffnen. Die Datenbank, die Sie auswählen, wird als Quelldatenbank im Vergleich festgelegt.
+
+    ![Menü zum Starten des Schemavergleichs](media/extensions/schema-compare-extension/schema-compare-launch.png)
+
+
+2. Klicken Sie auf jeweiligen Auslassungspunkte (...) neben Quelle und Ziel, um die Quelle und das Ziel Ihres Schemavergleichs zu ändern, und klicken Sie dann auf „OK“.
+
+    ![Auswahl von Schemavergleichsquelle- und ziel](media/extensions/schema-compare-extension/schema-compare-select-source-target.png)
+
+3. Klicken Sie auf die Schaltfläche **Optionen** in der Symbolleiste, um Ihren Vergleich anzupassen.
+
+4. Klicken Sie auf **Vergleichen**, um die Ergebnisse des Vergleichs anzuzeigen.
+
 
 ## <a name="next-steps"></a>Nächste Schritte
+
 Weitere Informationen zu Schemavergleich finden Sie in der zugehörigen [Dokumentation](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions).
-
-

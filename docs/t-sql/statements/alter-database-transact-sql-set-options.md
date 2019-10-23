@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 62074eb9c621c2243a079a21ae9bbcba66c930cd
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251354"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586710"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -3051,20 +3051,8 @@ SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
-
-Sobald das Zwischenspeichern von Resultsets für eine Datenbank aktiviert ist (ON), werden Ergebnisse für alle Abfragen zwischengespeichert, bis der Cache voll ist. Ausgenommen sind folgende Abfragen:
-
-- Abfragen mit nicht-deterministischen Funktionen wie DateTime.Now() 
-- Abfragen mit benutzerdefinierten Funktionen
-- Abfragen zur Rückgabe von Daten mit einer Zeilengröße größer als 64 KB   
-
-Abfragen mit umfangreichen Resultsets (z. B. > 1 Million Zeilen) werden bei der ersten Ausführung möglicherweise langsamer ausgeführt, wenn der Ergebniscache erstellt wird.
-
-Zwischengespeicherte Resultsets werden wieder für eine Abfrage verwendet, wenn die folgenden Anforderungen erfüllt sind:
-
-1. Der Benutzer, der die Abfrage ausführt, hat Zugriff auf alle in der Abfrage verwiesenen Tabellen.
-1. Die neue und die vorherige Abfrage, die die Zwischenspeicherung des Resultsets generierte, stimmen genau überein.
-1. In der Tabelle, aus der das zwischengespeicherte Resultset generiert wurde, wurden keine Daten oder Schemata verändert.  
+### <a name="permissions"></a>Berechtigungen
+Ein Benutzer muss entweder über die Serverebenenprinzipal-Anmeldung verfügen, die durch den Bereitstellungsprozess erstellt wurde, oder ein Mitglied der `dbmanager`-Datenbankrolle sein, um die Option RESULT_SET_CACHING festlegen zu können.  
 
 
 **<snapshot_option> ::=**         
@@ -3085,10 +3073,7 @@ Sie müssen während der Ausführung dieses Befehls mit der `master`-Datenbank v
 
 Wenn für eine Datenbank READ_COMMITTED_SNAPSHOT aktiviert ist, werden Abfragen möglicherweise langsamer ausgeführt, wenn mehrere Datenversionen vorliegen und nach einer Version gesucht wird. Lange geöffnete Transaktionen können ebenfalls zu einer Vergrößerung der Datenbank führen. Dieses Problem tritt auf, wenn von diesen Transaktionen Datenänderungen vorgenommen werden, die die Versionsbereinigung blockieren.  
 
-## <a name="permissions"></a>Berechtigungen
-
-Ein Benutzer muss entweder über die Serverebenenprinzipal-Anmeldung verfügen, die durch den Bereitstellungsprozess erstellt wurde, oder ein Mitglied der `dbmanager`-Datenbankrolle sein, um die Option RESULT_SET_CACHING festlegen zu können.  
-
+### <a name="permissions"></a>Berechtigungen
 Ein Benutzer benötigt die ALTER-Berechtigung für eine Datenbank, um die Option READ_COMMITTED_SNAPSHOT festlegen zu können.
 
 ## <a name="examples"></a>Beispiele
@@ -3119,26 +3104,6 @@ SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Überprüfen auf Resultsetcachetreffer oder -fehler für eine Abfrage
-
-```sql
-If
-(SELECT step_index  
-FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
-SELECT 1 as is_cache_hit  
-ELSE
-SELECT 0 as is_cache_hit;
-```
-
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Überprüfen auf alle Abfragen mit Resultset-Cachetreffern
-
-```sql
-SELECT *  
-FROM sys.dm_pdw_request_steps  
-WHERE command like '%DWResultCacheDb%' and step_index = 0;
-```
-
 ### <a name="enable-the-read_committed_snapshot-option-for-a-database"></a>Aktivieren der Option READ_COMMITTED_SNAPSHOT für eine Datenbank
 
 ```sql
@@ -3148,6 +3113,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>Siehe auch
 
+- [Leistungsoptimierung mit Resultsetcaching](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

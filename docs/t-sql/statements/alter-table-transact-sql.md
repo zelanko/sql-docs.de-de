@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 44c5a4c9a39f60616574a479637d3ab97230784c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823624"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304845"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -806,7 +806,7 @@ Gibt die zulässigen Methoden der Sperrenausweitung für eine Tabelle an.
 AUTO  
 Mit dieser Option kann die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die für das Tabellenschema geeignete Granularität der Sperrenausweitung auswählen.
 
-- Wenn die Tabelle partitioniert ist, wird die Sperrenausweitung bis zur Partition erlaubt. Nach der Ausweitung der Sperre auf die Partitionsebene wird die Sperrenausweitung nicht bis zur TABLE-Granularität fortgeführt.
+- Wenn die Tabelle partitioniert ist, ist die Sperrenausweitung bis zur Heap- oder B-Struktur (HoBT)-Granularität zulässig. Dies bedeutet, dass eine Ausweitung auf Partitionsebene zulässig ist. Nach der Ausweitung der Sperre auf die HoBT-Ebene wird die Sperrenausweitung nicht bis zur TABLE-Granularität fortgeführt.
 - Wenn die Tabelle nicht partitioniert ist, wird die Sperre bis zur TABLE-Granularität ausgeweitet.
 
 TABLE  

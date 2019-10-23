@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ba569631723bc456ceae2429d7c0fa8acac9769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031669"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586780"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,13 @@ Die Seite ist die grundlegende Einheit für die Datenspeicherung in [!INCLUDE[ss
 
 Die grundlegende Einheit für die Datenspeicherung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist die Seite. Der Speicherplatz, der einer Datendatei (MDF- oder NDF-Datei) in einer Datenbank zugeordnet wird, ist logisch in Seiten unterteilt, die fortlaufend von 0 bis n nummeriert sind. Datenträger-E/A-Operationen werden auf Seitenebene ausgeführt. Dies bedeutet, dass SQL Server ganze Datenseiten liest oder schreibt.
 
-Blöcke sind Auflistungen von acht physisch zusammenhängenden Seiten; sie werden zum effizienten Verwalten der Seiten verwendet. Alle Seiten werden in Blöcken gespeichert.
+Blöcke sind Auflistungen von acht physisch zusammenhängenden Seiten; sie werden zum effizienten Verwalten der Seiten verwendet. Alle Seiten sind in Blöcke unterteilt.
 
 ### <a name="pages"></a>Seiten
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beträgt die Seitengröße 8 KB. Dies bedeutet, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbanken über 128 Seiten pro 1 MB verfügen. Jede Seite beginnt mit einem 96 Byte umfassenden Header, der zum Speichern von Systeminformationen zu der betreffenden Seite verwendet wird. Diese Informationen umfassen die Seitennummer, den Typ der Seite, den Umfang des freien Speicherplatzes auf der Seite und die ID der Zuordnungseinheit, die Besitzer der Seite ist.
+Wenn Sie ein normales Buch in die Hand nehmen, dann ist der gesamte Inhalt auf Seiten geschrieben. Ähnlich wie bei einem Buch sind auch die Datenzeilen in SQL Server auf Seiten geschrieben. Bei einem Buch sind alle Seiten gleich groß. Bei SQL Server haben alle Datenseiten ebenso dieselbe Größe: 8 Kilobyte. In einem Buch enthalten die meisten Seiten die Daten, also den Hauptinhalt des Buchs, und einige Seiten enthalten Metadaten über den Inhalt, also z. B. das Inhaltsverzeichnis und der Index. SQL Server unterscheidet sich nicht sehr davon: die meisten Seiten enthalten die tatsächlichen Datenzeilen, die von Benutzer gespeichert wurden. Diese Seiten werden Datenseiten und Text-/Bildseiten (in Sonderfällen) genannt. Die Indexseiten enthalten Indexverweise darüber, wo die Daten zu finden sind. Dann gibt es noch Systemseiten, die eine Vielzahl von Metadaten über die Organisation der Daten speichern (PFS-, GAM-, SGAM-, IAM-, DCM-, BCM--Seiten). In der Tabelle unten erhalten Sie Informationen zu Seitentypen sowie deren Beschreibung.
+
+Wie bereits erwähnt, beträgt in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Seitengröße 8 KB. Dies bedeutet, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbanken über 128 Seiten pro 1 MB verfügen. Jede Seite beginnt mit einem 96 Byte umfassenden Header, der zum Speichern von Systeminformationen zu der betreffenden Seite verwendet wird. Diese Informationen umfassen die Seitennummer, den Typ der Seite, den Umfang des freien Speicherplatzes auf der Seite und die ID der Zuordnungseinheit, die Besitzer der Seite ist.
 
 Die folgende Tabelle zeigt die Seitentypen, die in Datendateien einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank verwendet werden.
 

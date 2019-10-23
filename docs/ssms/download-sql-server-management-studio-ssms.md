@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: a51b0a3da9fda396b23f6ddcf9121fe7a30ec202
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251391"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542210"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 
@@ -40,11 +40,7 @@ Verwenden Sie SSMS zum Abfragen, Entwerfen und Verwalten Ihrer Datenbanken und D
 
 SSMS ist kostenlos!
 
-## <a name="download-ssms-1831"></a>Herunterladen von SSMS 18.3.1
-
-**SSMS 18.3.1 ist jetzt verfügbar und ist die neueste Version mit allgemeiner Verfügbarkeit (GA, General Availability) von *SQL Server Management Studio* mit Unterstützung für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
-
-**[SQL Server Management Studio 18.3.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=2105412)**
+## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[Herunterladen von SSMS](https://aka.ms/ssmsfullsetup)
 
 SSMS 18.3.1 ist die aktuelle Version von SSMS mit allgemeiner Verfügbarkeit (GA, General Availability). Wenn Sie eine frühere allgemein verfügbare Version von SSMS 18 installiert haben, wird diese durch die Installation von SSMS 18.3.1 auf 18.3.1 aktualisiert. Wenn Sie eine ältere *Vorschauversion* von SSMS 18.x installiert haben, müssen Sie diese vor der Installation von SSMS 18.3.1 deinstallieren.
 
@@ -59,6 +55,9 @@ Wenn Sie Kommentare oder Vorschläge haben oder Probleme melden möchten, erreic
 Durch die Installation von SSMS 18.x erfolgt weder ein Upgrade noch eine Ersetzung der SSMS-Version 17.x oder früher Versionen. SSMS 18.x wird parallel zu früheren Versionen installiert, damit beide Versionen zur Verfügung stehen.
 
 Wenn ein Computer parallele SSMS-Installationen enthält, sollten Sie sich vergewissern, dass Sie die richtige Version für Ihre speziellen Anforderungen starten. Die neueste Version heißt **Microsoft SQL Server Management Studio 18**.
+
+> [!Note]
+> Wenn Sie von einer nicht englischsprachigen Version auf diese Seite zugreifen und den neuesten Inhalt anzeigen möchten, besuchen Sie diese Seite auf [English](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15). Sie können verschiedene Sprachen von der englischsprachigen Website herunterladen, indem Sie [available languages](#available-languages-ssms-1831) (verfügbare Sprachen) auswählen.
 
 ## <a name="available-languages-ssms-1831"></a>Verfügbare Sprachen (SSMS 18.3.1)
 
@@ -76,7 +75,7 @@ SQL Server Management Studio 18.3.1:
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Datenklassifizierung | Hinzufügen von Datenklassifizierungsinformationen zur Spalteneigenschaften-Benutzeroberfläche (*Informationstyp*, *Informationstyp-ID*, *Vertraulichkeitsbezeichnung* und *Vertraulichkeitsbezeichnungs-ID* werden auf der Benutzeroberfläche von SSMS nicht verfügbar gemacht). |
 | IntelliSense/Editor | Aktualisierte Unterstützung für vor Kurzem zu SQL Server 2019 hinzugefügte Features (Beispiel: ALTER SERVER CONFIGURATION). |
-| Integration Services | Fügen Sie ein neues Auswahlmenü `Tools > Migrate to Azure > Configure Azure-enabled DTExec` hinzu, das Ausführungen von SSIS-Paketen in der Azure-SSIS Integration Runtime als SSIS-Paket ausführen-Aktivitäten in ADF-Pipelines aufruft. |
+| Integration Services | Fügen Sie ein neues Auswahlmenü `Tools > Migrate to Azure > Configure Azure-enabled DTExec` hinzu, das Ausführungen von SQL Server Integration Services-Paketen (SSIS) in der Azure-SSIS Integration Runtime als SSIS-Paket ausführen-Aktivitäten in ADF-Pipelines aufruft. |
 | SMO/Skripterstellung | Hinzugefügte Unterstützung für Supportskripts der UNIQUE-Einschränkung von Azure SQL DW. |
 | SMO/Skripterstellung | Datenklassifizierung: Hinzugefügte Unterstützung für SQL Version 10 (SQL 2008) und höher.  Neues Vertraulichkeitsattribut ‚rank‘ für SQL Version 15 (SQL 2019) und höher sowie Azure SQL DB. |
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f86922211e670cb59b4541071e9e7d7f67302bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2dde7bedad58273cb207b05f54824c9c5ddff5c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068156"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305850"
 ---
-# <a name="mssqlserver10521"></a>MSSQLSERVER_10521
+# <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -30,10 +30,10 @@ ms.locfileid: "68068156"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|PG_PARAM_NEEDED|  
-|Meldungstext|Die Planhinweisliste „%.\*ls“ kann nicht erstellt werden, weil **@type** als „%ls“ angegeben wurde und der „%ls“-Parameter NULL ist. Dieser Typ erfordert einen Wert ungleich NULL für den Parameter. Geben Sie einen Wert ungleich NULL für den Parameter an, oder ändern Sie den Typ in einen Typ, der NULL-Werte für den Parameter zulässt.|  
+|Meldungstext|Die Planhinweisliste '%.\*ls' kann nicht erstellt werden, weil **\@type** als '%ls' angegeben wurde und der '%ls'-Parameter NULL ist. Dieser Typ erfordert einen Wert ungleich NULL für den Parameter. Geben Sie einen Wert ungleich NULL für den Parameter an, oder ändern Sie den Typ in einen Typ, der NULL-Werte für den Parameter zulässt.|  
   
 ## <a name="explanation"></a>Erklärung  
-Der in **@type** angegebene Typ erfordert einen Wert ungleich NULL für den angegebenen Parameter. Es wurde jedoch ein NULL-Wert angegeben.  
+Der in **\@type** angegebene Typ erfordert einen Wert ungleich NULL für den angegebenen Parameter. Es wurde jedoch ein NULL-Wert angegeben.  
   
 ## <a name="user-action"></a>Benutzeraktion  
 Geben Sie einen Wert ungleich NULL für den Parameter an, oder ändern Sie den Typ in einen Typ, der NULL-Werte für den Parameter zulässt.  

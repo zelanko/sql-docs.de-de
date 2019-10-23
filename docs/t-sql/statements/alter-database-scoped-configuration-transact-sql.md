@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261012"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589996"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -114,12 +114,12 @@ Geben Sie ein Abfrageplanhandle an, um einen einzelnen Abfrageplan aus dem Planc
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
-Gibt die Standardeinstellung **Max. Grad an Parallelität (MAXDOP)** an, die für Anweisungen verwendet werden sollte. 0 ist der Standardwert und gibt an, dass die Serverkonfiguration stattdessen verwendet wird. Mit der MAXDOP-Einstellung im Datenbankbereich wird der **max. Grad an Parallelität** auf der Serverebene von sp_configure überschrieben (sofern sie nicht auf 0 festgelegt ist). Abfragehinweise können die MAXDOP-Einstellung im Datenbankbereich weiterhin überschreiben, damit bestimmte Abfragen optimiert werden können, für die andere Einstellungen erforderlich sind. All diese Einstellungen werden durch die MAXDOP-Einstellung für die [Arbeitsauslastungsgruppe]() begrenzt.
+Gibt die Standardeinstellung **Max. Grad an Parallelität (MAXDOP)** an, die für Anweisungen verwendet werden sollte. 0 ist der Standardwert und gibt an, dass die Serverkonfiguration stattdessen verwendet wird. Mit der MAXDOP-Einstellung im Datenbankbereich wird der **max. Grad an Parallelität** auf der Serverebene von sp_configure überschrieben (sofern sie nicht auf 0 festgelegt ist). Abfragehinweise können die MAXDOP-Einstellung im Datenbankbereich weiterhin überschreiben, damit bestimmte Abfragen optimiert werden können, für die andere Einstellungen erforderlich sind. All diese Einstellungen werden durch die MAXDOP-Einstellung für die [Arbeitsauslastungsgruppe](create-workload-group-transact-sql.md) begrenzt.
 
 Sie können mithilfe der MAXDOP-Option die Anzahl der Prozessoren beschränken, die für die Ausführung paralleler Pläne verwendet werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Ausführung paralleler Pläne für Abfragen, DDL-Indizierungsoperationen (Datendefinitionssprache, Data Definition Language, DDL), parallele Einfügevorgänge, Onlineausführung von ALTER COLUMN, parallele Sammlung von Statistiken sowie die statische und keysetgesteuerte Cursorauffüllung.
 
 > [!NOTE]
-> Die Grenze **Max. Grad an Parallelität** wird pro [Task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) festgelegt. Es handelt sich nicht um eine Grenze pro [Anforderung](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) oder pro Abfrage. Das bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Abfrage mehrere Tasks erzeugen kann, die einem [Scheduler](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md). 
+> Die Grenze **Max. Grad an Parallelität** wird pro [Task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) festgelegt. Es handelt sich nicht um eine Grenze pro [Anforderung](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) oder pro Abfrage. Das bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Abfrage mehrere Tasks erzeugen kann, die einem [Planer](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md). 
 
 Informationen zum Festlegen dieser Option auf Instanzebene finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 

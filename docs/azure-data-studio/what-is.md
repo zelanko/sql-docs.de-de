@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
-ms.openlocfilehash: a7fbde0a4dab0becdaa9fb7b59221e57fd81c59e
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.date: 10/15/2019
+ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822615"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545052"
 ---
 # <a name="what-is-azure-data-studio"></a>Was ist Azure Data Studio?
 
@@ -68,6 +68,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 - Sie können die meisten administrativen Aufgaben mit sqlcmd oder PowerShell über das integrierte Terminal ausführen.
 - Sie benötigen nur selten die Funktionen eines Assistenten.
 - Sie müssen keine umfassende oder detaillierte administrative Konfiguration durchführen.
+- Ziel 
 
 **Verwenden Sie SQL Server Management Studio in folgenden Fällen**:
 - Sie verbringen einen Großteil Ihrer Zeit mit Aufgaben für die Datenbankverwaltung.
@@ -117,6 +118,8 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 |Ergebnisse in Text||Ja|
 |Räumlicher Viewer||Ja|
 |SQLCMD||Ja|
+|Notebooks|Ja||
+|Abfrage als Ausschnitt speichern|Ja||
 
 ### <a name="operating-system-support"></a>Betriebssystemunterstützung
 
@@ -139,6 +142,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 |Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Sicherung/Wiederherstellung|Ja|Ja|
+|Big Data-Cluster-Unterstützung|Ja||
 |Flatfile-Import|Vorschau|Ja|
 |SQL-Agent|Vorschau|Ja|
 |SQL Profiler|Vorschau|Ja|
@@ -160,6 +164,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 |Template Explorer||Ja|
 |Sicherheitsrisikobewertung||Ja|
 |XEvent-Verwaltung||Ja|
+|Integration der SQL-Bewertungs-API||Ja|
 
 ## <a name="next-steps"></a>Nächste Schritte
 

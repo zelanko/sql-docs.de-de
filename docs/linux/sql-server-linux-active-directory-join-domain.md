@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027339"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305275"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Verknüpfen eines Hosts für SQL Server für Linux mit einer Active Directory-Domäne
 
@@ -197,9 +197,9 @@ Führen Sie die folgenden Schritte aus, um einen SQL Server-Host mit einer Acti
    ```
 
    > [!NOTE]
-   > - Wenn der Befehl **id user@contoso.com** `No such user` zurückgibt, vergewissern Sie sich, ob der SSSD-Dienst erfolgreich gestartet wurde, indem Sie den Befehl `sudo systemctl status sssd` ausführen. Wenn der Dienst ausgeführt, aber der Fehler weiterhin angezeigt wird, können Sie versuchen, die ausführliche Protokollierung für SSSD zu aktivieren. Weitere Informationen finden Sie in der Red Hat-Dokumentation zur [Behandlung von Problemen mit SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - Wenn der Befehl **id user\@contoso.com** `No such user` zurückgibt, vergewissern Sie sich, ob der SSSD-Dienst erfolgreich gestartet wurde, indem Sie den Befehl `sudo systemctl status sssd` ausführen. Wenn der Dienst ausgeführt, aber der Fehler weiterhin angezeigt wird, können Sie versuchen, die ausführliche Protokollierung für SSSD zu aktivieren. Weitere Informationen finden Sie in der Red Hat-Dokumentation zur [Behandlung von Problemen mit SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > - Wenn der Befehl **kinit user@CONTOSO.COM** `KDC reply did not match expectations while getting initial credentials` zurückgibt, vergewissern Sie sich, dass Sie den Bereichsnamen in Großbuchstaben angegeben haben.
+   > - Wenn der Befehl **kinit user\@CONTOSO.COM** `KDC reply did not match expectations while getting initial credentials` zurückgibt, vergewissern Sie sich, dass Sie den Bereichsnamen in Großbuchstaben angegeben haben.
 
 Weitere Informationen finden Sie in der Red Hat-Dokumentation zum [Ermitteln und Verknüpfen von Identitätsdomänen](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c2a266c6cedcec3e11a57fcb08f152789a74097a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55fdc5242b43e3aa2f25b601edc1439cbbec3ece
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014264"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517947"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Fortsetzen einer Verfügbarkeitsdatenbank (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ ms.locfileid: "68014264"
 1.  Stellen Sie eine Verbindung mit der Serverinstanz her, die das sekundäre Replikat hostet, dessen Datenbank Sie fortsetzen möchten.  
   
 2.  Setzen Sie die sekundäre Datenbank mithilfe der folgenden [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)-Anweisung fort:  
-  
-     ALTER DATABASE *database_name* SET HADR RESUME  
+
+     ALTER DATABASE *database_name* SET HADR RESUME;
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So setzen Sie eine sekundäre Datenbank fort**  

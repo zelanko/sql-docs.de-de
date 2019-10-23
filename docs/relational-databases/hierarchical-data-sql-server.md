@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974254"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304954"
 ---
 # <a name="hierarchical-data-sql-server"></a>Hierarchische Daten (SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Beispiel für eine serialisierbare Transaktion  
- Für den **Org_BreadthFirst** -Index stellt sicher, dass **@last_child** mittels einer Bereichssuche ermittelt wird. Zusätzlich zu anderen Fehlerfällen könnte eine Anwendung prüfen, ob eine Verletzung aufgrund doppelter Schlüssel darauf hindeutet, dass versucht wurde, mehrere Angestellte mit der gleichen ID einzufügen, weshalb **@last_child** neu berechnet werden muss. Mit dem folgenden Code wird der neue Knotenwert in einer serialisierbaren Transaktion berechnet:  
+ Der **Org_BreadthFirst**-Index stellt sicher, dass **\@last_child** mittels einer Bereichssuche ermittelt wird. Zusätzlich zu anderen Fehlerfällen könnte eine Anwendung prüfen, ob eine Verletzung aufgrund doppelter Schlüssel darauf hindeutet, dass versucht wurde, mehrere Angestellte mit der gleichen ID einzufügen, weshalb **\@last_child** neu berechnet werden muss. Mit dem folgenden Code wird der neue Knotenwert in einer serialisierbaren Transaktion berechnet:  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -512,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> Verschieben von Teilstrukturen  
- Ein anderer allgemeiner Vorgang ist das Verschieben von Teilstrukturen. Die Prozedur unten macht die Teilstruktur **@oldMgr** (einschließlich **@oldMgr** ) zu einer Teilstruktur von **@newMgr** bedeutend schneller.  
+ Ein anderer allgemeiner Vorgang ist das Verschieben von Teilstrukturen. Die Prozedur unten macht die Teilstruktur **\@oldMgr** (einschließlich **\@oldMgr**) zu einer Teilstruktur von **\@newMgr**.  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

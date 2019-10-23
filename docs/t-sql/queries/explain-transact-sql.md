@@ -10,18 +10,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6cb2bdc652eb77908c044b640d315a90da8cf428
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: da38a5171694f1f563e67d4be6a852527fd0377b
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809808"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542192"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  Gibt den Abfrageplan für eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisung an, ohne die Anweisung auszuführen. Verwenden Sie **EXPLAIN**, um eine Vorschau der Vorgänge zu erhalten, die Datenverschiebungen erfordern, und um die ungefähren Kosten der Abfragevorgänge anzuzeigen. `WITH RECOMMENDATIONS` gilt für Azure SQL Data Warehouse (Vorschau).
+  Gibt den Abfrageplan für eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisung an, ohne die Anweisung auszuführen. Verwenden Sie EXPLAIN, um eine Vorschau der Vorgänge zu erhalten, die Datenverschiebungen erfordern, und um die ungefähren Kosten der Abfragevorgänge anzuzeigen. `WITH RECOMMENDATIONS` gilt für Azure SQL Data Warehouse (Vorschau).
   
  Weitere Informationen zu Abfrageplänen finden Sie unter „Understanding Query Plans“ (Informationen zu Abfrageplänen) in der [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
   
@@ -35,9 +35,12 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 ## <a name="arguments"></a>Argumente
 
  *SQL_statement*  
- Die [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisung, auf der **EXPLAIN** ausgeführt wird. *SQL_statement* kann einer der folgenden Befehle sein: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT** und **CREATE REMOTE TABLE**.
 
-*WITH_RECOMMENDATIONS*: Gibt den Abfrageplan mit Empfehlungen zur Leistungsoptimierung der SQL-Anweisung zurück.  
+ Die [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisung, auf der EXPLAIN ausgeführt wird. *SQL_statement* kann einer der folgenden Befehle sein: SELECT, INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE.
+
+*WITH_RECOMMENDATIONS* (Vorschau)
+
+Gibt den Abfrageplan mit Empfehlungen zur Leistungsoptimierung der SQL-Anweisung zurück.  
   
 ## <a name="permissions"></a>Berechtigungen
 
@@ -310,7 +313,7 @@ GO
 **Übermitteln einer EXPLAIN-Anweisung mit WITH_RECOMMENDATIONS**
 
 ```sql
--- EXPLAIN WITH_RECOMMENDATIONS
+EXPLAIN WITH_RECOMMENDATIONS
 select count(*)
 from ((select distinct c_last_name, c_first_name, d_date
        from store_sales, date_dim, customer
@@ -326,7 +329,7 @@ from ((select distinct c_last_name, c_first_name, d_date
 ) top_customers
 ```
 
-**Beispielausgabe für EXPLAIN WITH_RECOMMENDATIONS** (Vorschau)
+**Beispielausgabe für EXPLAIN WITH_RECOMMENDATIONS**  
 
 Die Ausgabe unten umfasst das Erstellen einer empfohlenen materialisierten Sicht namens „View1“.  
 

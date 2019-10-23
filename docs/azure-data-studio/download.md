@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.custom: seodec18
-ms.date: 10/08/2019
+ms.date: 10/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: d56bf097bc38670fb7bad83933a1a48800172d5b
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: b7a9e9a13b5b19e2450ab1d4b12aea7a97cdc206
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72173155"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313654"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
@@ -29,9 +29,9 @@ Laden Sie das neueste *Release vom Oktober* herunter, und installieren Sie es:
 
 |Platform|Herunterladen|Veröffentlichungsdatum| Versionsoptionen |
 |:---|:---|:---|:---|
-|Windows|[Benutzer-Installationsprogramm (empfohlen)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[System-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|8\. Oktober 2019 |1.12.1|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|8\. Oktober 2019 |1.12.1|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://azuredatastudiobuilds.blob.core.windows.net/releases/1.12.1/azuredatastudio-linux-1.12.1.tar.gz)|8\. Oktober 2019 |1.12.1|
+|Windows|[Benutzer-Installationsprogramm (empfohlen)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[System-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|11. Oktober 2019 |1.12.2|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|11. Oktober 2019 |1.12.2|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105132)|11. Oktober 2019 |1.12.2|
 
 Weitere Informationen über die neueste Version finden Sie in den [Versionshinweisen](release-notes.md).
 
@@ -68,7 +68,7 @@ Das *Benutzer-Installationsprogramm* wird empfohlen, da dafür keine Administrat
 ## <a name="get-azure-data-studio-for-linux"></a>Azure Data Studio für Linux
 
 1. Laden Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] für Linux herunter, indem Sie eines der Installationsprogramme oder das Archiv „tar.gz“ verwenden:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2103004)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2105131)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)
 1. Öffnen Sie ein neues Terminalfenster, und geben Sie die folgenden Befehle ein, um die Datei zu extrahieren und [!INCLUDE[name-sos](../includes/name-sos-short.md)] zu starten:
