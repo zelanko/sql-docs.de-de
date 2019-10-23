@@ -1,4 +1,4 @@
----
+﻿---
 title: Deinstallieren einer vorhandenen SQL Server-Instanz (Setup) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/11/2019
