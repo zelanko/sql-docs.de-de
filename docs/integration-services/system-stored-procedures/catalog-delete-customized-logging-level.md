@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0e2e4a0176625a98f190afbe7ce09f6644b5d64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b35576dc6a583f21f88547b40bc68ff23644cc72
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023434"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295487"
 ---
 # <a name="catalogdelete_customized_logging_level"></a>catalog.delete_customized_logging_level 
 
@@ -39,7 +39,7 @@ delete_customized_logging_level [ @level_name = ] level_name
   
  Das Argument *level_name* ist vom Typ **nvarchar(128)** .  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="return-codes"></a>Rückgabecodes  
  0 (Erfolg)  

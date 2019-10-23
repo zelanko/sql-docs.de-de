@@ -1,5 +1,5 @@
 ---
-title: Sp_sequence_get_range (Transact-SQL) | Microsoft-Dokumentation
+title: sp_sequence_get_range (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/08/2015
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e92b9ec98ee08579164c403fe1be6ff6ef47816
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fd136eddc1aba4dc5a927d6ca027c17dfb38485
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104506"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304761"
 ---
-# <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
+# <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Gibt einen Bereich von Sequenzwerten eines Sequenzobjekts zurück. Das Sequenzobjekt generiert die angeforderte Anzahl der Werte, gibt diese aus und stellt Metadaten bezüglich des Bereichs für die Anwendung bereit.  
   
- Eine weitere Informationen zu Sequenznummern finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Weitere Informationen zu Sequenznummern finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,27 +51,27 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @sequence_name = ] N'sequence'` Der Name des Sequenzobjekts. Das Schema ist optional. *Sequence_name* ist **nvarchar(776)** .  
+`[ @sequence_name = ] N'sequence'` den Namen des Sequenz Objekts. Das Schema ist optional. *sequence_name* ist vom Datentyp **nvarchar (776)** .  
   
-`[ @range_size = ] range_size` Die Anzahl der Werte aus der Sequenz abgerufen werden soll. **@range_size** ist **Bigint**.  
+`[ @range_size = ] range_size` die Anzahl der Werte, die aus der Sequenz abgerufen werden sollen. **\@range_size** ist **bigint**.  
   
-`[ @range_first_value = ] range_first_value` Output-Parameter gibt den ersten (Minimal- oder Maximalwert) Wert des Sequenzobjekts zum Berechnen des angeforderten Bereichs zurück. **@range_first_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
+der Output-Parameter `[ @range_first_value = ] range_first_value` gibt den ersten (minimalen oder maximalen) Wert des Sequenz Objekts zurück, mit dem der angeforderte Bereich berechnet wird. **\@range_first_value** ist **sql_variant** mit dem gleichen Basistyp wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
   
-`[ @range_last_value = ] range_last_value` Der optionale Ausgabeparameter gibt den letzten Wert des angeforderten Bereichs zurück. **@range_last_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
+`[ @range_last_value = ] range_last_value` Optionale Ausgabeparameter gibt den letzten Wert des angeforderten Bereichs zurück. **\@range_last_value** ist **sql_variant** mit dem gleichen Basistyp wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
   
-`[ @range_cycle_count = ] range_cycle_count` Der optionale Ausgabeparameter gibt die Anzahl der Fälle, in denen das Sequenzobjekt, um den angeforderten Bereich zurück. **@range_cycle_count** ist **Int**.  
+`[ @range_cycle_count = ] range_cycle_count` Optionale Ausgabeparameter gibt die Anzahl der Wiederholungen zurück, die das Sequenz Objekt durchlaufen hat, um den angeforderten Bereich zurückzugeben. **\@range_cycle_count** ist vom Datentyp **int**.  
   
-`[ @sequence_increment = ] sequence_increment` Der optionale Ausgabeparameter gibt die Schrittweite für das Sequenzobjekt, das zum Berechnen des angeforderten Bereichs zurück. **@sequence_increment** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
+`[ @sequence_increment = ] sequence_increment` Optionale Ausgabeparameter gibt das Inkrement des Sequenz Objekts zurück, mit dem der angeforderte Bereich berechnet wird. **\@sequence_increment** ist **sql_variant** mit dem gleichen Basistyp wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
   
-`[ @sequence_min_value = ] sequence_min_value` Der optionale Ausgabeparameter gibt den Mindestwert des Sequenzobjekts zurück. **@sequence_min_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
+`[ @sequence_min_value = ] sequence_min_value` Optionale Ausgabeparameter gibt den minimalen Wert des Sequenz Objekts zurück. **\@sequence_min_value** ist **sql_variant** mit dem gleichen Basistyp wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
   
-`[ @sequence_max_value = ] sequence_max_value` Der optionale Ausgabeparameter gibt den Maximalwert des Sequenzobjekts zurück. **@sequence_max_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
+`[ @sequence_max_value = ] sequence_max_value` Optionale Ausgabeparameter gibt den maximalen Wert des Sequenz Objekts zurück. **\@sequence_max_value** ist **sql_variant** mit dem gleichen Basistyp wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- Sp_sequence_get_rangeis in der Sys. Schema kann als sys.sp_sequence_get_range verwiesen werden.  
+ sp_sequence_get_rangeis in sys. auf das Schema und kann als sys. sp_sequence_get_range verwiesen werden.  
   
 ### <a name="cycling-sequences"></a>Zyklussequenzen  
  Falls erforderlich, durchläuft das Sequenzobjekt die entsprechende Anzahl von Zyklen, um den angeforderten Bereich zu versorgen. Die Anzahl der Zyklussequenzen wird mit dem `@range_cycle_count`-Parameter an den Aufrufer zurückgegeben.  
@@ -88,7 +88,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  Erfordert die UPDATE-Berechtigung für das Sequenzobjekt oder das Schema des Sequenzobjekts.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele verwenden eine Sequenzobjekt, das mit dem Namen Test.RangeSeq. Verwenden Sie die folgende Anweisung aus, um die Test.RangeSeq Sequenz zu erstellen.  
+ In den folgenden Beispielen wird ein Sequenz Objekt mit dem Namen Test. rangeseq verwendet. Verwenden Sie die folgende Anweisung, um die Test. rangeseq-Sequenz zu erstellen.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -106,7 +106,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
   
 ### <a name="a-retrieving-a-range-of-sequence-values"></a>A. Abrufen eines Bereichs von Sequenzwerten  
- Die folgende Anweisung werden vier Sequenznummern aus dem Test.RangeSeq Sequence-Objekt und die erste Nummer an den Benutzer zurückgibt.  
+ Mit der folgenden Anweisung werden vier Sequenznummern aus dem "Test. rangeseq"-Sequenz Objekt abgerufen, und die erste der Zahlen wird an den Benutzer zurückgegeben.  
   
 ```  
 DECLARE @range_first_value sql_variant ,   
@@ -122,7 +122,7 @@ SELECT @range_first_value_output AS FirstNumber ;
 ```  
   
 ### <a name="b-returning-all-output-parameters"></a>B. Zurückgeben aller Ausgabeparameter  
- Im folgenden Beispiel werden alle Ausgabewerte von der Sp_sequence_get_range-Prozedur zurückgegeben.  
+ Im folgenden Beispiel werden alle Ausgabewerte der sp_sequence_get_range-Prozedur zurückgegeben.  
   
 ```  
 DECLARE    
@@ -157,7 +157,7 @@ SELECT
  Eine Änderung des `@range_size`-Arguments in einen sehr großen Wert wie 75 führt dazu, dass das Sequenzobjekt Zyklen durchläuft. Überprüfen Sie das `@range_cycle_count`-Argument, um zu ermitteln, ob und in welchem Ausmaß Zyklen vom Sequenzobjekt durchlaufen wurden.  
   
 ### <a name="c-example-using-adonet"></a>C. Beispiel für die Verwendung von ADO.NET  
- Im folgenden Beispiel wird eine Reihe von der Test.RangeSeq mithilfe von ADO.NET.  
+ Im folgenden Beispiel wird ein Bereich aus dem Test. rangeseq mithilfe von ADO.net abgerufen.  
   
 ```  
 SqlCommand cmd = new SqlCommand();  

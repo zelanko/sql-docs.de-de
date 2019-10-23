@@ -1,6 +1,6 @@
 ---
 title: Spezifikationen der maximalen Kapazität für SQL Server | Microsoft-Dokumentation
-ms.date: 11/06/2017
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045643"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008439"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "68045643"
 |Spalten in GROUP BY, ORDER BY||Begrenzung nur durch die Anzahl von Bytes||  
 |Spalten oder Ausdrücke in einer GROUP BY WITH CUBE- oder WITH ROLLUP-Anweisung||10||  
 |Spalten pro Indexschlüssel||32|Wenn die Tabelle einen oder mehrere XML-Indizes enthält, ist der Gruppierungsschlüssel der Benutzertabelle auf 31 Spalten beschränkt, da die XML-Spalte dem Gruppierungsschlüssel des primären XML-Index hinzugefügt wird. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]können Sie Nichtschlüsselspalten in den nicht gruppierten Index aufnehmen, um die Beschränkung auf maximal 32 Schlüsselspalten zu vermeiden. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
-|Spalten pro Fremdschlüssel||32||  
-|Spalten pro Primärschlüssel||32||  
-|Spalten pro Tabelle (keine breite Tabelle)||1\.024||  
-|Spalten pro breiter Tabelle||30.000||  
-|Spalten pro SELECT-Anweisung||4\.096||  
-|Spalten pro INSERT-Anweisung||4\.096||  
+|Spalten pro Fremdschlüssel oder Primärschlüssel||32||  
+|Spalten pro `INSERT`-Anweisung||4\.096||  
+|Spalten pro `SELECT`-Anweisung||4\.096||  
+|Spaltenanzahl pro Tabelle||1\.024|Tabellen, die Sparsespaltensätze enthalten, umfassen bis zu 30.000 Spalten. Siehe [Sparsespaltensätze](../relational-databases/tables/use-column-sets.md).|  
+|Spalten pro `UPDATE`-Anweisung||4\.096|Es gelten verschiedene Grenzwerte für [Sparsespaltensätze](../relational-databases/tables/use-column-sets.md).|  
+|Spalten pro Sicht||1\.024||  
 |Verbindungen pro Client||Höchstwert konfigurierter Verbindungen||  
 |Datenbankgröße||524.272 Terabytes||  
 |Datenbanken pro Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32.767||  
@@ -85,7 +85,8 @@ ms.locfileid: "68045643"
 |Sperren pro Verbindung||Maximale Anzahl Sperren pro Server||  
 |Sperren pro Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Begrenzung nur durch Arbeitsspeicher|Dieser Wert dient der statischen Sperrenzuordnung. Dynamische Sperren sind nur durch den Arbeitsspeicher beschränkt.|  
 |Schachtelungsebenen gespeicherter Prozeduren||32|Wenn eine gespeicherte Prozedur auf mehr als 64 Datenbanken zugreift oder sich mehr als 2 Datenbanken überlappen, wird eine Fehlermeldung angezeigt.|  
-|Geschachtelte Unterabfragen||32||  
+|Geschachtelte Unterabfragen||32||    
+|Geschachtelte Transaktionen||4\.294.967.296||     
 |Schachtelungsebenen für Trigger||32||  
 |Nicht gruppierte Indizes pro Tabelle||999||  
 |Anzahl unterschiedlicher Ausdrücke in der GROUP BY-Klausel bei Vorhandensein eines der folgenden Ausdrücke: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  
@@ -99,7 +100,6 @@ ms.locfileid: "68045643"
 |Statistiken für nicht indizierte Spalten||30.000|| 
 |Tabellen pro SELECT-Anweisung||Begrenzung nur durch verfügbare Ressourcen||  
 |Trigger pro Tabelle||Begrenzung durch die Anzahl der Objekte in einer Datenbank|Zu den Datenbankobjekten zählen Tabellen, Sichten, gespeicherte Prozeduren, benutzerdefinierte Funktionen, Trigger, Regeln, Standardwerte und Einschränkungen. Die Summe aller Objekte in einer Datenbank kann 2.147.483.647 nicht übersteigen.|  
-|Spalten pro UPDATE-Anweisung (breite Tabellen)||4096||  
 |Benutzerverbindungen||32.767||  
 |XML-Indizes||249||  
   

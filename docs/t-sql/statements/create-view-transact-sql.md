@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
+ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938881"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038877"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -158,14 +158,14 @@ OR ALTER
   
  Wenn eine Sicht mit WITH VIEW_METADATA erstellt wird, sind alle enthaltenen Spalten außer der Spalte **timestamp** aktualisierbar, wenn die Sicht den Trigger INSTEAD OF INSERT oder INSTEAD OF UPDATE aufweist. Weitere Informationen zu aktualisierbaren Sichten finden Sie unter Hinweise.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Eine Sicht kann nur in der aktuellen Datenbank erstellt werden. Bei CREATE VIEW muss es sich um die erste Anweisung in einem Abfragebatch handeln. Für eine Sicht sind maximal 1.024 Spalten zulässig.  
   
  Wenn eine Abfrage für eine Sicht durchgeführt wird, überprüft [!INCLUDE[ssDE](../../includes/ssde-md.md)], ob alle Datenbankobjekte, auf die in der Anweisung verwiesen wird, vorhanden sind, ob sie im Kontext der Anweisung gültig sind und ob Datenänderungsanweisungen gegen die Regeln der Datenintegrität verstoßen. Schlägt eine Überprüfung fehl, wird eine Fehlermeldung zurückgegeben. Andernfalls wird die Aktion in eine Aktion für die zugrunde liegende Tabelle bzw. Tabellen übersetzt.  
   
  Wenn eine Sicht von einer Tabelle oder Sicht abhängt, die gelöscht wurde, erzeugt [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Fehlermeldung, wenn jemand versucht, die Sicht zu verwenden. Wenn eine neue Tabelle oder Sicht, deren Struktur sich nicht von der vorherigen Basistabelle unterscheidet, erstellt wird, um die gelöschte zu ersetzen, wird die Sicht wieder verwendbar. Wenn sich die Struktur der neuen Tabelle oder Sicht ändert, muss die Sicht gelöscht und neu erstellt werden.  
   
- Wenn eine Sicht nicht mit der SCHEMABINDING-Klausel erstellt wurde, sollte [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) ausgeführt werden, nachdem Änderungen an den der Sicht zugrunde liegenden Objekten vorgenommen wurden, die die Definition der Sicht betreffen. Andernfalls liefert die Abfrage der Sicht möglicherweise unerwartete Ergebnisse.  
+ Wenn eine Sicht nicht mit der SCHEMABINDING-Klausel erstellt wurde, führen Sie [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) aus, nachdem Änderungen an den der Sicht zugrunde liegenden Objekten vorgenommen wurden, die die Definition der Sicht betreffen. Andernfalls liefert die Abfrage der Sicht möglicherweise unerwartete Ergebnisse.  
   
  Beim Erstellen einer Sicht werden die Informationen zu dieser in den folgenden Katalogsichten gespeichert: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) und [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). Der Text der CREATE VIEW-Anweisung wird in der Katalogsicht [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) gespeichert.  
   
@@ -245,11 +245,11 @@ FROM Tn;
   
 1.  Die SELECT-`list`  
   
-    -   In der Spaltenliste der Sichtdefinition sollten alle Spalten der Mitgliedstabellen aufgeführt sein.  
+    -   In der Spaltenliste der Sichtdefinition wählen Sie alle Spalten der Mitgliedstabellen aus.  
   
-    -   Die Spalten an derselben Ordnungsposition jeder `select list` sollten denselben Typ haben, einschließlich Sortierungen. Es ist nicht ausreichend, wenn die Spalten implizit konvertierbar sind, wie dies für UNION generell der Fall ist.  
+    -   Stellen Sie sicher, dass die Spalten an derselben Ordnungsposition jeder `select list` denselben Typ aufweisen, einschließlich Sortierungen. Es ist nicht ausreichend, wenn die Spalten implizit konvertierbar sind, wie dies für UNION generell der Fall ist.  
   
-         Demnach muss mindestens eine Spalte (z. B. `<col>`) in allen SELECT-Listen an derselben Ordnungsposition vorhanden sein. Diese `<col>`-Spalte sollte so definiert sein, dass die Mitgliedstabellen `T1, ..., Tn` über CHECK-Einschränkungen `C1, ..., Cn` verfügen, die entsprechend in `<col>` definiert sind.  
+         Demnach muss mindestens eine Spalte (z. B. `<col>`) in allen SELECT-Listen an derselben Ordnungsposition vorhanden sein. Definieren Sie `<col>` so, dass die Mitgliedstabellen `T1, ..., Tn` über CHECK-Einschränkungen `C1, ..., Cn` verfügen, die entsprechend in `<col>` definiert sind.  
   
          Die für `C1` definierte Einschränkung `T1` muss die folgende Form haben:  
   
@@ -263,7 +263,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   Die Einschränkungen müssen so festgelegt sein, dass jeder angegebene Wert von `<col>` höchstens eine der Einschränkungen `C1, ..., Cn` erfüllt, sodass die Einschränkungen eine Gruppe von getrennten oder nicht überlappenden Intervallen bilden. Die `<col>`-Spalte, für die die getrennten Einschränkungen definiert sind, wird Partitionierungsspalte genannt. Beachten Sie, dass die Partitionierungsspalte in den zugrunde liegenden Tabellen unterschiedliche Namen haben kann. Die Einschränkungen sollten sich im enabled- und trusted-Status befinden, damit sie die zuvor genannten Bedingungen für die Partitionierungsspalte erfüllen. Wenn die Einschränkungen deaktiviert sind, aktivieren Sie die Einschränkungsprüfung erneut mit der Option CHECK CONSTRAINT *constraint_name* von ALTER TABLE. Verwenden Sie die Option WITH CHECK, um die Einschränkungen zu überprüfen.  
+    -   Die Einschränkungen müssen so festgelegt sein, dass jeder angegebene Wert von `<col>` höchstens eine der Einschränkungen `C1, ..., Cn` erfüllt, sodass die Einschränkungen eine Gruppe von getrennten oder nicht überlappenden Intervallen bilden. Die `<col>`-Spalte, für die die getrennten Einschränkungen definiert sind, wird Partitionierungsspalte genannt. Beachten Sie, dass die Partitionierungsspalte in den zugrunde liegenden Tabellen unterschiedliche Namen haben kann. Die Einschränkungen müssen sich im enabled- und trusted-Status befinden, damit sie die zuvor genannten Bedingungen für die Partitionierungsspalte erfüllen. Wenn die Einschränkungen deaktiviert sind, aktivieren Sie die Einschränkungsprüfung erneut mit der Option CHECK CONSTRAINT *constraint_name* von ALTER TABLE. Verwenden Sie die Option WITH CHECK, um die Einschränkungen zu überprüfen.  
   
          Die folgenden Beispiele zeigen gültige Einschränkungsgruppen:  
   
@@ -280,7 +280,7 @@ FROM Tn;
   
     -   Eine berechnete Spalte, eine Identitätspalte, eine Standardspalte oder eine **timestamp**-Spalte darf hierfür nicht verwendet werden.  
   
-    -   Wenn es für eine Spalte einer Mitgliedstabelle mehrere Einschränkungen gibt, ignoriert die Datenbank-Engine alle diese Einschränkungen und berücksichtigt sie nicht, wenn ermittelt wird, ob die Sicht eine partitionierte Sicht ist. Damit die Bedingungen für partitionierte Sichten erfüllt werden, sollte es für die Partitionierungsspalte nur eine Partitionierungseinschränkung geben.  
+    -   Wenn es für eine Spalte einer Mitgliedstabelle mehrere Einschränkungen gibt, ignoriert die Datenbank-Engine alle diese Einschränkungen und berücksichtigt sie nicht, wenn ermittelt wird, ob die Sicht eine partitionierte Sicht ist. Damit die Bedingungen für partitionierte Sichten erfüllt werden, stellen Sie sicher, dass es für die Partitionierungsspalte nur eine Partitionierungseinschränkung gibt.  
   
     -   Für Partitionierungsspalten gelten keine Einschränkungen hinsichtlich der Aktualisierbarkeit.  
   
@@ -294,16 +294,16 @@ FROM Tn;
   
     -   Die Mitgliedstabellen dürfen nicht über Indizes verfügen, die für berechnete Spalten der Tabelle erstellt werden.  
   
-    -   Für alle Mitgliedstabellen sollte gelten, dass ihre PRIMARY KEY-Einschränkungen auf gleich vielen Spalten basieren.  
+    -   Für alle Mitgliedstabellen gilt, dass ihre PRIMARY KEY-Einschränkungen auf gleich vielen Spalten basieren.  
   
-    -   Alle Mitgliedstabellen einer Sicht sollten dieselbe Einstellung für die ANSI-Auffüllung aufweisen. Diese Einstellung kann entweder mit der Option **Benutzeroptionen** in **sp_configure** oder mit der SET-Anweisung festgelegt werden.  
+    -   Alle Mitgliedstabellen einer Sicht weisen dieselbe Einstellung für die ANSI-Auffüllung auf. Diese Einstellung kann entweder mit der Option **Benutzeroptionen** in **sp_configure** oder mit der SET-Anweisung festgelegt werden.  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>Bedingungen für das Ändern von Daten in partitionierten Sichten  
  Die folgenden Einschränkungen gelten für Anweisungen, die Daten in partitionierten Sichten ändern:  
   
--   Die INSERT-Anweisung muss für alle Spalten in der Sicht Werte bereitstellen, auch wenn die zugrunde liegenden Mitgliedstabellen über eine DEFAULT-Einschränkung für diese Spalten verfügen oder NULL-Werte zulassen. Für diese Spalten in der Mitgliedstabelle, die über DEFAULT-Definitionen verfügen, können die Anweisungen nicht explizit das DEFAULT-Schlüsselwort verwenden.  
+-   Die INSERT-Anweisung stellt für alle Spalten in der Sicht Werte bereit, auch wenn die zugrunde liegenden Mitgliedstabellen über eine DEFAULT-Einschränkung für diese Spalten verfügen oder NULL-Werte zulassen. Für diese Spalten in der Mitgliedstabelle, die über DEFAULT-Definitionen verfügen, können die Anweisungen nicht explizit das DEFAULT-Schlüsselwort verwenden.  
   
--   Der in die Partitionierungsspalte eingefügte Wert sollte mindestens eine der zugrunde liegenden Einschränkungen erfüllen. Andernfalls schlägt die INSERT-Aktion mit einer Einschränkungsverletzung fehl.  
+-   Der in die Partitionierungsspalte eingefügte Wert erfüllt mindestens eine der zugrunde liegenden Einschränkungen. Andernfalls schlägt die INSERT-Aktion mit einer Einschränkungsverletzung fehl.  
   
 -   In einer UPDATE-Anweisung darf das Schlüsselwort DEFAULT nicht als Wert in der SET-Klausel angegeben werden. Dies gilt selbst dann, wenn in der entsprechenden Mitgliedstabelle ein DEFAULT-Wert definiert ist.  
   
@@ -325,7 +325,7 @@ FROM Tn;
   
 -   Eine verteilte Transaktion wird gestartet, um die Unteilbarkeit bei allen durch die Aktualisierung betroffenen Knoten sicherzustellen.  
   
--   Die Option XACT_ABORT SET sollte auf ON festgelegt werden, damit INSERT-, UPDATE- oder DELETE-Anweisungen funktionieren.  
+-   Legen Sie die Option XACT_ABORT SET auf ON fest, damit INSERT-, UPDATE- oder DELETE-Anweisungen funktionieren.  
   
 -   Alle Spalten in Remotetabellen des Typs **smallmoney**, auf die in einer partitionierten Sicht verwiesen wird, werden als **money** zugeordnet. Daher müssen die entsprechenden Spalten (in der gleichen Ordnungsposition in der Auswahlliste) in den lokalen Tabellen auch den Typ **money** aufweisen.  
   
@@ -340,7 +340,7 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>Überlegungen zur Replikation  
  Die folgenden Überlegungen sind erforderlich, wenn Sie partitionierte Sichten für Mitgliedstabellen erstellen, die an der Replikation beteiligt sind:  
   
--   Wenn die zugrunde liegenden Tabellen an der Merge- oder Transaktionsreplikation mit Updateabonnements beteiligt sind, sollte die Spalte **uniqueidentifier** ebenfalls in der Auswahlliste enthalten sein.  
+-   Wenn die zugrunde liegenden Tabellen an der Merge- oder Transaktionsreplikation mit Updateabonnements beteiligt sind, stellen Sie sicher, dass die Spalte **uniqueidentifier** ebenfalls in der Auswahlliste enthalten ist. 
   
      Alle INSERT-Aktionen für die partitionierte Sicht müssen einen NEWID()-Wert für die Spalte **uniqueidentifier** bereitstellen. Alle UPDATE-Aktionen für die Spalte **uniqueidentifier** müssen NEWID() als Wert bereitstellen, da das DEFAULT-Schlüsselwort nicht verwendet werden kann.  
   

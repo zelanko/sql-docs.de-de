@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0146d58a1495ad5c17625edbb9b9c6f2d295cfb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fc237875d0ba5b4f28838609f6b172c55ffe0e90
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985301"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296751"
 ---
 # <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
 
@@ -52,7 +52,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
   
  Das Argument *property_value* ist vom Typ **bigint**.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="return-codes"></a>Rückgabecodes  
  0 (Erfolg)  

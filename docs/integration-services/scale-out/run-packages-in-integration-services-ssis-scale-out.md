@@ -12,12 +12,12 @@ author: haoqian
 ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 25dc76122c8b4d1e68df4e83e3e1bd01d6f51890
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092636"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305072"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ausführen von Paketen in SSIS Scale Out (SQL Server Integration Services)
 
@@ -65,7 +65,7 @@ Nachdem Sie Pakete auf dem Integration Services-Server bereitgestellt haben, kö
 
 1.  Erstellen Sie Ausführungen.
 
-    Rufen Sie für jedes Paket `[catalog].[create_execution]` auf. Legen Sie den Parameter **@runinscaleout** auf `True` fest. Sind nicht alle Scale Out-Workercomputer berechtigt, das Paket auszuführen, legen Sie den Parameter **@useanyworker** auf `False` fest. Weitere Informationen zu dieser gespeicherten Prozedur und dem Parameter **@useanyworker** finden Sie unter [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
+    Rufen Sie für jedes Paket `[catalog].[create_execution]` auf. Legen Sie den Parameter **\@runinscaleout** auf `True` fest. Sind nicht alle Scale Out-Workercomputer berechtigt, das Paket auszuführen, legen Sie den Parameter **\@useanyworker** auf `False` fest. Weitere Informationen zu dieser gespeicherten Prozedur und dem Parameter **\@useanyworker** finden Sie unter [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
 2. Legen Sie Ausführungsparameter fest.
 
@@ -77,7 +77,7 @@ Nachdem Sie Pakete auf dem Integration Services-Server bereitgestellt haben, kö
 
 4. Starten Sie die Ausführungen.
 
-    Rufen Sie `[catalog].[start_execution]` auf. Legen Sie den Parameter **@retry_count** fest, um anzugeben, wie oft versucht werden soll, ein Paket auszuführen, wenn ein Fehler auftritt.
+    Rufen Sie `[catalog].[start_execution]` auf. Legen Sie den Parameter **\@retry_count** fest, um anzugeben, wie oft versucht werden soll, ein Paket auszuführen, wenn ein Fehler auftritt.
     
 ### <a name="example"></a>Beispiel
 Im folgenden Beispiel werden zwei Pakete in Scale Out mit einem Scale Out-Worker ausgeführt: `package1.dtsx` und `package2.dtsx`.  
@@ -118,7 +118,7 @@ Führen Sie die folgenden Schritte aus, um den Standardausführungsmodus für Pa
 
 2.  Legen Sie im Dialogfeld **Katalogeigenschaften** für den **serverweiten Standardausführungsmodus** die Option **Scale Out** fest.
 
-Nachdem Sie diesen Standardausführungsmodus festgelegt haben, müssen Sie den **@runinscaleout** -Parameter nicht mehr angeben, wenn Sie die gespeicherte Prozedur `[catalog].[create_execution]` aufrufen. Pakete werden in Scale Out automatisch ausgeführt. 
+Nachdem Sie diesen Standardausführungsmodus festgelegt haben, müssen Sie den **\@runinscaleout**-Parameter nicht mehr angeben, wenn Sie die gespeicherte Prozedur `[catalog].[create_execution]` aufrufen. Pakete werden in Scale Out automatisch ausgeführt. 
 
 ![Ausführungsmodus](media/exe-mode.PNG)
 

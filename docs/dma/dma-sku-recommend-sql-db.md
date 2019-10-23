@@ -1,6 +1,6 @@
 ---
-title: Identifizieren Sie die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank (Data Migration Assistant) | Microsoft-Dokumentation
-description: Erfahren Sie, wie Sie Data Migration Assistant mit um der rechten Seite Azure SQL-Datenbank-SKU für Ihre lokale Datenbank zu identifizieren.
+title: Ermitteln der richtigen Azure SQL-Datenbank-SKU für Ihre lokale Datenbank (Datenmigrations-Assistent) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Datenmigrations-Assistent verwenden können, um die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank zu identifizieren.
 ms.custom: ''
 ms.date: 05/06/2019
 ms.prod: sql
@@ -14,55 +14,55 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 7d87df240d4b83e53ef8f670609d2c896df7fe62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054674"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586736"
 ---
-# <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identifizieren Sie das Recht Azure SQL-Datenbank/verwaltete Instanz SKU für Ihre lokale Datenbank
+# <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Ermitteln der richtigen Azure SQL-Datenbank/verwaltete Instanz-SKU für Ihre lokale Datenbank
 
-Migrieren von Datenbanken in die Cloud können kompliziert, sein, insbesondere, wenn versucht wird, die beste Azure-Datenbank-Ziel und die SKU für Ihre Datenbank auszuwählen. Unser Ziel mit der Database Migration Assistant (DMA) ist, können Sie diese Fragen zu beheben, und stellen Ihre Datenbankmigration, die durch die Bereitstellung dieser SKU-Empfehlungen in einer benutzerfreundlichen Ausgabe erleichtern.
+Das Migrieren von Datenbanken in die Cloud kann kompliziert sein, insbesondere beim Versuch, das beste Azure-Daten Bank Ziel und die SKU für Ihre Datenbank auszuwählen. Das Ziel des Daten Bank Migration Assistant (DMA) ist es, diese Fragen zu beantworten und die Daten Bank Migration zu vereinfachen, indem Sie diese SKU-Empfehlungen in einer benutzerfreundlichen Ausgabe bereitstellen.
 
-Dieser Artikel konzentriert sich auf DMAs-Azure SQL-Datenbank-SKU-Empfehlungen-Funktion. Azure SQL-Datenbank verfügt über mehrere Bereitstellungsoptionen zur Verfügung, einschließlich:
+Dieser Artikel konzentriert sich auf das Azure SQL-Datenbank-Empfehlungs Feature von DMA. Azure SQL-Datenbank verfügt über mehrere Bereitstellungs Optionen, einschließlich:
 
-- Einzeldatenbank
-- Pools für elastische Datenbanken
-- verwaltete Instanz
+- Einzel Datenbank
+- Elastische Pools
+- Verwaltete Instanz
 
-Die Funktion, die Sie sowohl den empfohlenen Azure SQL-einzeldatenbanken identifizieren kann die SKU-Empfehlungen oder die verwaltete Instanz abhängig von den Computern, auf dem Ihre Datenbanken gehostet erfassten Leistungsindikatoren von SKU. Das Feature bietet Empfehlungen in Bezug auf Preise, Ebenen, computeebene, maximale Datengröße, sowie und geschätzte Kosten pro Monat. Darüber hinaus die Möglichkeit, einzelne Bulk Bereitstellen von Datenbanken und verwaltete Instanzen in Azure für alle empfohlenen Datenbanken.
+Mit dem Feature "SKU-Empfehlungen" können Sie sowohl die empfohlene Azure SQL-Datenbank-SKU für einzelne Datenbanken als auch eine verwaltete Instanz ermitteln, die auf Leistungsindikatoren basiert, die von den Computern gesammelt werden Die-Funktion bietet Empfehlungen im Zusammenhang mit Tarif, computeebene und maximaler Datengröße sowie geschätzten Kosten pro Monat. Außerdem bietet es die Möglichkeit, eine Massen Bereitstellung einzelner Datenbanken und verwalteter Instanzen in Azure für alle empfohlenen Datenbanken bereitzustellen.
 
 > [!NOTE]
-> Diese Funktion ist derzeit nur über die Befehlszeilenschnittstelle (CLI) verfügbar.
+> Diese Funktion ist zurzeit nur über die Befehlszeilenschnittstelle (CLI) verfügbar.
 
-Im folgenden werden die Anweisungen, um die Ihnen helfen, bestimmen die Azure SQL-Datenbank-SKU-Empfehlungen und die entsprechenden einzelne Datenbanken oder verwaltete Instanzen in Azure unter Verwendung von DMA bereitstellen.
+Im folgenden finden Sie Anweisungen zum Ermitteln der Azure SQL-Datenbank-SKU-Empfehlungen und zum Bereitstellen der entsprechenden Einzel Datenbanken oder verwalteten Instanzen in Azure mithilfe von DMA.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Prerequisites
 
-- Herunterladen und installieren Sie die neueste Version des [DMA](https://aka.ms/get-dma). Wenn Sie bereits eine frühere Version des Tools verfügen, öffnen Sie sie aus, und werden Sie aufgefordert, DMA aktualisieren.
-- Stellen Sie sicher, dass Ihr Computer verfügt über [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher, das Ausführen aller Skripts erforderlich ist. Informationen zu Findoug, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und installieren Sie Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
-- Stellen Sie sicher, dass Ihr Computer über das Azure Powershell-Modul installiert verfügt. Weitere Informationen finden Sie im Artikel [Installieren des Azure PowerShell-Moduls](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
-- Überprüfen Sie, ob die PowerShell-Datei **SkuRecommendationDataCollectionScript.ps1**, die erforderlich ist, um das Erfassen der Leistungsindikatoren im Ordner "DMA" installiert ist.
-- Stellen Sie sicher, dass der Computer, die auf dem Sie diesen Prozess durchführen, müssen über Administratorberechtigungen auf dem Computer verfügt, die Ihre Datenbanken gehostet werden.
+- Laden Sie die neueste Version von [DMA](https://aka.ms/get-dma)herunter, und installieren Sie Sie. Wenn Sie bereits über eine frühere Version des Tools verfügen, öffnen Sie Sie, und Sie werden aufgefordert, DMA zu aktualisieren.
+- Stellen Sie sicher, dass auf Ihrem Computer [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher angegeben ist, die zum Ausführen aller Skripts erforderlich ist. Informationen zu findoug, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und Installieren von Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+- Stellen Sie sicher, dass auf Ihrem Computer das Azure PowerShell-Modul installiert ist. Weitere Informationen finden Sie im Artikel [Installieren des Azure PowerShell Moduls](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Vergewissern Sie sich, dass die PowerShell-Datei **SkuRecommendationDataCollectionScript. ps1**, die zum Erfassen der Leistungsindikatoren erforderlich ist, im DMA-Ordner installiert ist.
+- Stellen Sie sicher, dass der Computer, auf dem Sie diesen Prozess ausführen, über Administrator Berechtigungen für den Computer verfügt, auf dem die Datenbanken gehostet werden.
 
-## <a name="collect-performance-counters"></a>Erfassen von Leistungsindikatoren
+## <a name="collect-performance-counters"></a>Leistungsindikatoren erfassen
 
-Der erste Schritt im Prozess wird zum Sammeln von Leistungsindikatoren für Ihre Datenbanken. Sie können Leistungsindikatoren sammeln, durch Ausführen eines PowerShell-Befehls auf dem Computer, der Ihre Datenbanken hostet. DMA bietet Ihnen eine Kopie dieses PowerShell-Datei, aber Sie können auch eine eigene Methode verwenden, um die Leistungsindikatoren auf Ihrem Computer zu aufzeichnen.
+Der erste Schritt im Prozess besteht darin, Leistungsindikatoren für Ihre Datenbanken zu erfassen. Sie können Leistungsindikatoren erfassen, indem Sie einen PowerShell-Befehl auf dem Computer ausführen, der die-Datenbanken hostet. DMA bietet Ihnen eine Kopie dieser PowerShell-Datei, aber Sie können auch Ihre eigene Methode verwenden, um Leistungsindikatoren von Ihrem Computer zu erfassen.
 
-Sie müssen diese Aufgabe einzeln für jede Datenbank ausführen. Auf einem Computer erfassten Leistungsindikatoren können verwendet werden, empfehlen die SKU für alle Datenbanken auf dem Computer gehostet wird.
+Diese Aufgabe muss nicht für jede Datenbank einzeln durchgeführt werden. Die von einem Computer gesammelten Leistungsindikatoren können verwendet werden, um die SKU für alle auf dem Computer gehosteten Datenbanken zu empfehlen.
 
-1. Suchen Sie im Ordner "DMA" die PowerShell-Datei SkuRecommendationDataCollectionScript.ps1 aus. Diese Datei ist erforderlich, um die Leistungsindikatoren erfassen.
+1. Suchen Sie im DMA-Ordner die PowerShell-Datei SkuRecommendationDataCollectionScript. ps1. Diese Datei ist erforderlich, um die Leistungsindikatoren zu erfassen.
 
-    ![PowerShell-Datei, die im Ordner "DMA" angezeigt](../dma/media/dma-sku-recommend-data-collection-file.png)
+    ![Im DMA-Ordner angezeigte PowerShell-Datei](../dma/media/dma-sku-recommend-data-collection-file.png)
 
-2. Führen Sie das PowerShell-Skript mit den folgenden Argumenten:
-    - **ComputerName**: Der Name des Computers, auf dem Ihre Datenbanken gehostet werden soll.
-    - **OutputFilePath**: Pfad der Ausgabedatei um die erfassten Leistungsindikatoren zu speichern.
-    - **CollectionTimeInSeconds**: Die Zeitspanne, in dem Sie Leistungsindikatordaten sammeln möchten. Erfassen von Leistungsindikatoren für mindestens 40 Minuten, um eine sinnvolle Empfehlung zu erhalten. Je länger die Dauer der Erfassung, desto genauer sind die empfohlen werden. Stellen Sie außerdem sicher, dass die Workloads ausgeführt werden, für die gewünschten Datenbanken aus, um genauere Empfehlungen zu aktivieren.
-    - **DbConnectionString**: Die Verbindungszeichenfolge, die auf die master-Datenbank gehostet wird, auf dem Computer, von dem Sie Leistungsindikatordaten erfassen.
+2. Führen Sie das PowerShell-Skript mit den folgenden Argumenten aus:
+    - **Computername**: der Name des Computers, auf dem die Datenbanken gehostet werden.
+    - **Outputfilepath**: der Ausgabe Dateipfad zum Speichern der gesammelten Leistungsindikatoren.
+    - **Collectiontimeinseconds**: die Zeitspanne, in der Leistungsdaten gesammelt werden sollen. Erfassen Sie Leistungsindikatoren für mindestens 40 Minuten, um eine sinnvolle Empfehlung zu erhalten. Wenn die Dauer der Erfassung länger dauert, desto genauer ist die Empfehlung. Stellen Sie außerdem sicher, dass die Workloads für die gewünschten Datenbanken ausgeführt werden, um genauere Empfehlungen zu ermöglichen.
+    - **DbConnectionString**: die Verbindungs Zeichenfolge, die auf die Master-Datenbank verweist, die auf dem Computer gehostet wird, von dem aus Sie Leistungs Leistungsdaten sammeln.
 
-    Hier ist ein Beispielaufruf aus:
+    Hier ist ein Beispiel Aufruf:
 
     ```
     .\SkuRecommendationDataCollectionScript.ps1
@@ -72,54 +72,54 @@ Sie müssen diese Aufgabe einzeln für jede Datenbank ausführen. Auf einem Comp
      -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
 
-    Nachdem der Befehl ausgeführt wurde, gibt der Prozess eine Datei, einschließlich der Leistungsindikatoren auf den Speicherort an, die, den Sie angegeben haben. Sie können als Eingabe für den nächsten Teil des Prozesses, in dem die SKU-Empfehlungen für einzeldatenbanken und Optionen für verwaltete Instanzen enthalten sind, diese Datei verwenden.
+    Nachdem der Befehl ausgeführt wurde, gibt der Prozess eine Datei mit Leistungsindikatoren an den von Ihnen angegebenen Speicherort aus. Sie können diese Datei als Eingabe für den nächsten Teil des Prozesses verwenden, der SKU-Empfehlungen für Optionen für Einzel Datenbanken und verwaltete Instanzen bereitstellt.
 
-## <a name="use-the-dma-cli-to-get-sku-recommendations"></a>Verwenden der DMA-CLI zum Abrufen von SKU-Empfehlungen
+## <a name="use-the-dma-cli-to-get-sku-recommendations"></a>Verwenden der DMA-CLI, um SKU-Empfehlungen zu erhalten
 
-Verwenden Sie die Leistung Leistungsindikatoren Ausgabedatei, die Sie als Eingabe für diesen Prozess erstellt haben.
+Verwenden Sie die Leistungsindikator-Ausgabedatei, die Sie als Eingabe für diesen Prozess erstellt haben.
 
-Für die einzelnen Datenbank-Option bietet DMA Empfehlungen für die einzelnen Azure SQL-Datenbank-Datenbank Preise Tarif der computeebene und die maximale Datengröße für jede Datenbank auf Ihrem Computer. Wenn Sie mehrere Datenbanken auf Ihrem Computer verfügen, können Sie auch die Datenbanken angeben, für die Empfehlungen werden soll. DMA wird auch Sie die geschätzten monatlichen Kosten für jede Datenbank bereitstellen.
+Für die Einzeldaten Bankoption bietet DMA Empfehlungen für den Tarif der einzelnen Datenbanken der Azure SQL-Datenbank, die computeebene und die maximale Datengröße für jede Datenbank auf dem Computer. Wenn Sie über mehrere Datenbanken auf dem Computer verfügen, können Sie auch die Datenbanken angeben, für die Sie Empfehlungen erhalten möchten. DMA bietet Ihnen außerdem die geschätzten monatlichen Kosten für die einzelnen Datenbanken.
 
-Für die verwaltete Instanz unterstützen die Empfehlungen für ein per Lift & Shift-Szenario. Daher wird Sie DMA mit Empfehlungen für die verwaltete Azure SQL-Datenbank-Instanz, Tarif, der computeebene, und die maximale Datengröße für die Gruppe von Datenbanken auf Ihrem Computer bereitstellen. In diesem Fall, wenn Sie über mehrere Datenbanken auf Ihrem Computer verfügen, können Sie auch die Datenbanken angeben für die Empfehlungen werden soll. DMA wird auch Sie die geschätzten monatlichen Kosten für die verwaltete Instanz bereitstellen.
+Für verwaltete Instanzen unterstützen die Empfehlungen ein Lift-and-Shift-Szenario. DMA bietet Ihnen daher Empfehlungen für den Tarif der verwalteten Azure SQL-Datenbank-Instanz, die computeebene und die maximale Datengröße für die Gruppe der Datenbanken auf dem Computer. Wenn Sie auf Ihrem Computer über mehrere Datenbanken verfügen, können Sie auch die Datenbanken angeben, für die Sie Empfehlungen erhalten möchten. DMA bietet Ihnen außerdem die geschätzten monatlichen Kosten für die verwaltete Instanz.
 
-Um die DMA-CLI verwenden, um SKU-Empfehlungen, an der Eingabeaufforderung zu erhalten, führen Sie dmacmd.exe mit den folgenden Argumenten aus:
+Wenn Sie die DMA-CLI verwenden möchten, um SKU-Empfehlungen zu erhalten, führen Sie an der Eingabeaufforderung dmacmd. exe mit den folgenden Argumenten aus:
 
-- **/ Action = SkuRecommendation**: Geben Sie dieses Argument zum Ausführen von SKU-Bewertungen.
-- **/SkuRecommendationInputDataFilePath**: Der Pfad zur Leistungsindikatordatei erfasst, im vorherigen Abschnitt.
-- **/SkuRecommendationTsvOutputResultsFilePath**: Der Pfad zu die Ausgeben von Ergebnissen im TSV-Format zu schreiben.
-- **/SkuRecommendationJsonOutputResultsFilePath**: Der Pfad zu die Ausgabeergebnisse im JSON-Format zu schreiben.
-- **/SkuRecommendationHtmlResultsFilePath**: Pfad zu die Ausgeben von Ergebnissen im HTML-Format zu schreiben.
+- **/Action = skuempfehlungs**: Geben Sie dieses Argument ein, um SKU-Bewertungen auszuführen.
+- **/SkuRecommendationInputDataFilePath**: der Pfad zu der im vorherigen Abschnitt gesammelten Datei mit der gegen Datei.
+- **/SkuRecommendationTsvOutputResultsFilePath**: der Pfad zum Schreiben der Ausgabe ergibt das TSV-Format.
+- **/SkuRecommendationJsonOutputResultsFilePath**: der Pfad zum Schreiben der Ausgabe ergibt das JSON-Format.
+- **/SkuRecommendationHtmlResultsFilePath**: der Pfad zum Schreiben der Ausgabe ergibt das HTML-Format.
 
-Außerdem wählen Sie eine der folgenden Argumente:
+Wählen Sie außerdem eines der folgenden Argumente aus:
 
-- Zu verhindern, dass Price-Aktualisierung
-  - **/SkuRecommendationPreventPriceRefresh**: Wenn auf "true" festgelegt, wird verhindert, dass die Preis-Aktualisierung auftreten und geht davon aus Standardpreise. Verwenden Sie, wenn im offline-Modus ausgeführt wird. Wenn Sie diesen Parameter nicht verwenden, müssen Sie die Parameter unten, um den aktuellen Preisen basierend auf eine bestimmte Region angeben.
-- Die aktuellen Preisen zu erhalten
-  - **/SkuRecommendationCurrencyCode**: Die Währung, in dem Preise angezeigt werden (z.B.) "US").
-  - **/SkuRecommendationOfferName**: Das Angebot benennen (z.B.) "MS-AZR - 0003P"). Weitere Informationen finden Sie unter den [Microsoft Azure-Angebotsdetails](https://azure.microsoft.com/support/legal/offer-details/) Seite.
-    - **/ SkuRecommendationRegionName**: Der Regionsname (z. B. "USA, Westen").
-    - **/SkuRecommendationSubscriptionId**: Die Abonnement-ID.
-    - **/AzureAuthenticationTenantId**: Die Authentication-Mandant.
-    - **/AzureAuthenticationClientId**: Die Client-ID der AAD-app für die Authentifizierung verwendet werden soll.
-    - Eine der folgenden Authentifizierungsoptionen:
+- Preis Aktualisierung verhindern
+  - **/SkuRecommendationPreventPriceRefresh**: Wenn der Wert auf true festgelegt ist, wird die Preis Aktualisierung verhindert, und es werden die Standardpreise angenommen. Verwenden Sie, wenn Sie im Offline Modus ausgeführt werden. Wenn Sie diesen Parameter nicht verwenden, müssen Sie die unten aufgeführten Parameter angeben, um die aktuellen Preise basierend auf einem bestimmten Bereich zu erhalten.
+- Aktuelle Preise erhalten
+  - **/SkuRecommendationCurrencyCode**: die Währung, in der die Preise angezeigt werden (z. b. "USD").
+  - **/SkuRecommendationOfferName**: der Angebots Name (z. b. "MS-AZR-0003p"). Weitere Informationen finden Sie auf der Seite [Microsoft Azure Angebots Details](https://azure.microsoft.com/support/legal/offer-details/) .
+    - **/SkuRecommendationRegionName**: der Name der Region (z. b. "westus").
+    - **/SkuRecommendationSubscriptionId**: die Abonnement-ID.
+    - **/AzureAuthenticationTenantId**: der Authentifizierungs Mandant.
+    - **/AzureAuthenticationClientId**: die Client-ID der Aad-APP, die für die Authentifizierung verwendet wird.
+    - Eine der folgenden Authentifizierungs Optionen:
       - Interaktiv
-        - **AzureAuthenticationInteractiveAuthentication**: Auf "true" für ein Popupfenster Authentifizierung festgelegt ist.
-      - Zertifikatbasiert
-        - **AzureAuthenticationCertificateStoreLocation**: Legen Sie auf den Speicherort des Zertifikats (z. B. "CurrentUser").
-        - **AzureAuthenticationCertificateThumbprint**: Legen Sie auf den Fingerabdruck des Zertifikats.
-      - Token-basierte
-        - **AzureAuthenticationToken**: Legen Sie auf das Zertifikatstoken.
+        - **Azureauthenticationinteractiveauthentication**: bei einem Popup Fenster für die Authentifizierung auf true festgelegt.
+      - Zertifikat basiert
+        - **Azureauthenticationcertifierestoreloation:** auf den Zertifikat Speicherort (z. b. "CurrentUser") festgelegt.
+        - **Azureauthenticationcertifichanethumbprint**: Legen Sie den Fingerabdruck des Zertifikats fest.
+      - Tokenbasiert
+        - **Azureauthenticationtoken**: wird auf das Zertifikat Token festgelegt.
 
 > [!NOTE]
-> Rufen Sie die Client-ID und die Mandanten-ID für die interaktive Authentifizierung müssen Sie eine neue AAD-Anwendung zu konfigurieren. Weitere Informationen zur Authentifizierung und Abrufen dieser Anmeldeinformationen in diesem Artikel [Microsoft Azure Billing-API-Codebeispielen: RateCard-API](https://azure.microsoft.com/resources/samples/billing-python-ratecard-api/), befolgen Sie die Anweisungen unter **Schritt 1: Konfigurieren Sie eine systemeigene Clientanwendung in Ihrem AAD-Mandanten**.
+> Um ClientID und tenantid für die interaktive Authentifizierung zu erhalten, müssen Sie eine neue Aad-Anwendung konfigurieren. Weitere Informationen zur Authentifizierung und zum erhalten dieser Anmelde Informationen finden Sie im Artikel [Microsoft Azure Abrechnungs-API-Code Beispiele: Ratecard-API](https://github.com/Azure-Samples/billing-dotnet-ratecard-api). Befolgen Sie die Anweisungen unter **Schritt 1: Konfigurieren einer nativen Client Anwendung in Ihrem Aad-Mandanten**.
 
-Es ist schließlich ein optionales Argument, die, das Sie verwenden können, zum Angeben der Datenbanken für die Empfehlungen werden soll: 
+Schließlich gibt es ein optionales Argument, das Sie verwenden können, um die Datenbanken anzugeben, für die Sie Empfehlungen wünschen: 
 
-- **/SkuRecommendationDatabasesToRecommend**: Eine Liste der Datenbanken für die sich Empfehlungen erstellen lassen. Die Datenbank Namen Groß-/Kleinschreibung beachtet werden müssen (1) finden Sie in der CSV-Eingabedateien, (2) jede durch doppelte Anführungszeichen eingeschlossen sein und (3) jeweils durch ein Leerzeichen zwischen Namen getrennt werden (z. B. /SkuRecommendationDatabasesToRecommend "Database1" = "" database2 "" "Database3") . Das Auslassen dieses Parameters stellen Sie sicher, dass Empfehlungen für alle Benutzerdatenbanken, die in der Datei für die CSV-Eingabedateien angegebenen bereitgestellt werden.  
+- **/SkuRecommendationDatabasesToRecommend**: eine Liste der Datenbanken, für die Empfehlungen zu erstellen sind. Bei den Datenbanknamen muss die Groß-/Kleinschreibung beachtet werden, und (1) muss (1) in der Eingabe. CSV enthalten sein, (2) jede in doppelte Anführungszeichen eingeschlossen ist und (3) jeweils durch ein einzelnes Leerzeichen zwischen den Namen (z. b./SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3") getrennt werden. . Wenn Sie diesen Parameter weglassen, stellen Sie sicher, dass die Empfehlungen für alle Benutzer Datenbanken bereitgestellt werden, die in der CSV-Eingabedatei  
 
-Im folgenden sind einige Beispiel-Aufrufe:
+Im folgenden finden Sie einige Beispiel Aufrufe:
 
-**Beispiel 1: Abrufen von Empfehlungen mit Standard-Preisen. Verwenden Sie bei der Ausführung im Offlinemodus befindet oder wenn Sie keine Anmeldeinformationen für die Authentifizierung verfügen.**
+**Beispiel 1: erhalten von Empfehlungen mit Standardpreisen. Verwenden Sie, wenn Sie im Offline Modus ausgeführt werden oder wenn Sie nicht über Anmelde Informationen für die Authentifizierung verfügen.**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -130,7 +130,7 @@ Im folgenden sind einige Beispiel-Aufrufe:
 /SkuRecommendationPreventPriceRefresh=true
 ```
 
-**Beispiel 2: Dient zum Abrufen von Empfehlungen mit aktuellen Preisen für den angegebenen Bereich (z. B. "UKWest").**
+**Beispiel 2: erhalten von Empfehlungen mit den neuesten Preisen für die angegebene Region (z. b. "ukwest").**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -147,7 +147,7 @@ Im folgenden sind einige Beispiel-Aufrufe:
 /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
-**Beispiel 3: Abrufen von Empfehlungen für bestimmte Datenbanken (z.B.) “TPCDS1G,EDW_3G,TPCDS10G”).**
+**Beispiel 3: erhalten von Empfehlungen für bestimmte Datenbanken (z. b. "TPCDS1G, EDW_3G, TPCDS10G").**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation 
@@ -165,76 +165,76 @@ Im folgenden sind einige Beispiel-Aufrufe:
 /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
-Einzeldatenbank Empfehlungen wird die TSV-Ausgabedatei wie folgt aussehen:
+Für einzelne Daten Bank Empfehlungen sieht die TSV-Ausgabedatei wie folgt aus:
 
-![PowerShell-Single-Db-Datei im Ordner "DMA" angezeigt](../dma/media/dma-sku-recommend-single-db-recommendations.png)
+![Im DMA-Ordner angezeigte PowerShell-einzeldb-Datei](../dma/media/dma-sku-recommend-single-db-recommendations.png)
 
-Für die verwaltete Instanz Recommendations wird die TSV-Ausgabedatei wie folgt aussehen:
+Bei Empfehlungen für verwaltete Instanzen sieht die TSV-Ausgabedatei wie folgt aus:
 
-![PowerShell-verwaltete Instanz-Datei im Ordner "DMA" angezeigt](../dma/media/dma-sku-recommend-mi-recommendations.png)
+![Im DMA-Ordner angezeigte PowerShell-Datei für verwaltete Instanzen](../dma/media/dma-sku-recommend-mi-recommendations.png)
 
 Eine Beschreibung der einzelnen Spalten in der Ausgabedatei folgt.
 
-- **DatabaseName** -der Name der Datenbank.
-- **MetricType** -Tier-empfohlen, Azure SQL-Datenbank einzelnen Datenbank/verwaltete Instanz.
-- **MetricValue** -SKU-Azure SQL-Datenbank empfohlen, einzelne Datenbank/verwaltete Instanz.
-- **PricePerMonth** – die geschätzte Preis pro Monat für die entsprechende SKU.
+- **DatabaseName** : der Name Ihrer Datenbank.
+- **Metrictype** : Empfohlene Azure SQL-Datenbank-Ebene einer Einzel Datenbank/verwalteten Instanz.
+- **Metricvalue** -Empfohlene Azure SQL-Datenbank-SKU für einzelne Datenbank/verwaltete Instanzen.
+- Preisgestaltung – der geschätzte Preis **pro Monat für** die entsprechende SKU.
 - **RegionName** – der Name der Region für die entsprechende SKU. 
-- **IsTierRecommended** – Wir stellen eine minimale SKU-Empfehlung für jede Ebene. Klicken Sie dann Heuristiken, um zu bestimmen, den richtigen Tarif für Ihre Datenbank angewendet. Dies spiegelt wider, welcher Tarif für die Datenbank empfohlen. 
-- **ExclusionReasons** -dieser Wert ist leer, wenn eine Ebene empfohlen wird. Für jede Ebene, die nicht empfohlen, bieten wir die Gründe, warum sie ausgewählt haben, wurde nicht, an.
-- **AppliedRules** – eine kurze Notation der Regeln, die angewendet wurden.
+- **Istierrecommended** : Wir legen eine minimale SKU-Empfehlung für jede Ebene an. Anschließend wenden wir Heuristik an, um die richtige Ebene für Ihre Datenbank zu ermitteln. Dies gibt an, welche Ebene für die Datenbank empfohlen wird. 
+- **Exclusionreasons** : dieser Wert ist leer, wenn eine Ebene empfohlen wird. Für jede Ebene, die nicht empfohlen wird, geben wir die Gründe dafür an, warum Sie nicht ausgewählt wurden.
+- **Appliedrules** : eine kurze Schreibweise der angewendeten Regeln.
 
-Die endgültige empfohlener Tarif (d. h. **MetricType**) und Wert (z. B. **MetricValue**)-gefunden, in denen die **IsTierRecommended** Spalte ist "true" – gibt die Mindest-SKU erforderlich für Ihre Abfragen mit einer Erfolgsrate ähnlich wie Ihre lokalen Datenbanken in Azure ausführen. Für die verwaltete Instanz unterstützt DMA derzeit Empfehlungen für die am häufigsten verwendeten 8vcore zu 40vcore SKUs. Beispielsweise wird ist die empfohlene Mindest-SKU S4 beim Tarif "standard" und dann auf S3 auswählen oder unter dazu führen, dass Abfragen zu einem Timeout oder nicht ausgeführt.
+Der letzte Empfohlene Tarif (d. h. **metrictype**) und der Wert (d. h. **metricvalue**), in dem die Spalte " **istierrecommended** " den Wert "true" aufweist, entsprechen der minimalen SKU, die für die Ausführung Ihrer Abfragen in Azure erforderlich ist, mit einer Erfolgsrate ähnlich der lokale Datenbanken Für eine verwaltete Instanz unterstützt DMA derzeit Empfehlungen für die am häufigsten verwendeten SKUs von 8vcore zu 40vcore. Wenn z. b. die empfohlene minimale SKU S4 für den Standard--Wert ist, führt die Auswahl von S3 oder unten dazu, dass für Abfragen ein Timeout auftritt oder die Ausführung fehlschlägt.
 
-Die HTML-Datei enthält diese Informationen in einem grafischen Format. Es bietet eine benutzerfreundliche Möglichkeit zum Anzeigen der endgültigen Empfehlung aus, und Bereitstellung der nächsten Teils des Prozesses. Weitere Informationen zu der HTML-Ausgabe wird im folgenden Abschnitt.
+Diese Informationen sind in der HTML-Datei in einem grafischen Format enthalten. Es bietet eine benutzerfreundliche Möglichkeit, die abschließende Empfehlung anzuzeigen und den nächsten Teil des Prozesses bereitzustellen. Weitere Informationen zur HTML-Ausgabe finden Sie im folgenden Abschnitt.
 
-## <a name="provision-recommended-skus-to-azure"></a>Empfohlene SKUs in Azure bereitstellen
+## <a name="provision-recommended-skus-to-azure"></a>Bereitstellen von empfohlenen SKUs in Azure
 
-Mit nur wenigen Klicks können Sie die Empfehlungen wurde für das bereitstellen, Ziel-SKUs in Azure, zu denen Sie Ihre Datenbanken migrieren können. Sie können die HTML-Datei verwenden, zur Eingabe der Azure-Abonnement; Auswählen des Tarifs, compute-Ebene und maximale Größe der Daten für Ihre Datenbanken; und generiert ein Skript zum Bereitstellen Ihrer Datenbanken. Sie können dieses Skript mithilfe von PowerShell ausführen.
+Mit nur wenigen Klicks können Sie die für die Bereitstellung von Ziel-SKUs identifizierten Empfehlungen in Azure verwenden, auf die Sie Ihre Datenbanken migrieren können. Sie können die HTML-Datei verwenden, um ein Azure-Abonnement einzugeben. Wählen Sie Tarif, COMPUTE-Ebene und maximale Datengröße für Ihre Datenbanken aus. und generieren Sie ein Skript, um Ihre Datenbanken bereitzustellen. Sie können dieses Skript mithilfe von PowerShell ausführen.
 
-Können Sie diesen Prozess auf einem einzelnen Computer durchführen, oder Sie können auf mehreren Computern, um zu bestimmen, die SKU-Empfehlungen nach Maß ausführen. DMA erleichtert derzeit eine einfache und skalierbare benutzererfahrung durch die Unterstützung des gesamten Prozesses über die Befehlszeilenschnittstelle.
+Sie können diesen Vorgang auf einem einzelnen Computer ausführen, oder Sie können ihn auf mehreren Computern ausführen, um SKU-Empfehlungen in der Skala zu ermitteln. DMA ist zurzeit eine einfache und skalierbare Benutzeroberfläche, da der gesamte Prozess über die Befehlszeilenschnittstelle unterstützt wird.
 
-Geben Sie die Bereitstellungsinformationen, und nehmen Sie Änderungen an die Empfehlungen, aktualisieren Sie die HTML-Datei wie folgt.
+Um Bereitstellungs Informationen einzugeben und Änderungen an den Empfehlungen vorzunehmen, aktualisieren Sie die HTML-Datei wie folgt.
 
-**Empfehlungen für einzeldatenbanken**
+**Für Einzeldaten Bank Empfehlungen**
 
-![Azure SQL-Datenbank-SKU-Empfehlungen-Bildschirm](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
+![Azure SQL DB-SKU-Empfehlungen (Bildschirm)](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
-1. Öffnen Sie die HTML-Datei, und geben Sie die folgende Informationen:
-    - **Abonnement-ID** – die Abonnement-ID des Azure-Abonnements, die Sie Datenbanken bereitstellen möchten.
-    - **Ressourcengruppe** : die Ressourcengruppe, zu dem Sie die Datenbanken bereitstellen möchten. Geben Sie eine Ressourcengruppe, die vorhanden ist.
-    - **Region** : die Region, in dem Datenbanken bereitstellen. Stellen Sie sicher, dass Ihr Abonnement die Eintrag Region unterstützt.
-    - **Servername** – Azure SQL-Datenbank-Server an, die Datenbanken, die bereitgestellt werden sollen. Wenn Sie einen Servernamen, der nicht vorhanden ist eingeben, wird sie erstellt.
-    - **Admin Username** -Admin-Benutzername für den Server.
-    - **Administratorkennwort** -das Kennwort für den Server-Administrator. Das Kennwort muss mindestens acht Zeichen und nicht länger als 128 Zeichen lang sein. Das Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten: englische Großbuchstaben, Buchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht-alphanumerische Zeichen (!, $, #, % usw..). Das Kennwort darf nicht enthalten, alle oder einen Teil (3 + aufeinander folgenden Buchstaben) aus dem Benutzernamen.
+1. Öffnen Sie die HTML-Datei, und geben Sie die folgenden Informationen ein:
+    - **Abonnement-ID** : die Abonnement-ID des Azure-Abonnements, für das Sie die Datenbanken bereitstellen möchten.
+    - **Ressourcengruppe** : die Ressourcengruppe, in der Sie die Datenbanken bereitstellen möchten. Geben Sie eine Ressourcengruppe ein, die vorhanden ist.
+    - **Region** : die Region, in der Datenbanken bereitgestellt werden. Stellen Sie sicher, dass Ihr Abonnement die SELECT-Region unterstützt.
+    - **Server Name** : der Azure SQL-Datenbankserver, auf dem die Datenbanken bereitgestellt werden sollen. Wenn Sie einen Servernamen eingeben, der nicht vorhanden ist, wird er erstellt.
+    - **Administrator Benutzername** : der Benutzername des Server Administrators.
+    - **Administrator Kennwort** : das Server Administrator Kennwort. Das Kennwort muss mindestens acht Zeichen lang sein und darf nicht länger als 128 Zeichen sein. Ihr Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten – englische Großbuchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht alphanumerische Zeichen (!, $, #,% usw.). Das Kennwort darf nicht ganz oder teilweise (3 + aufeinander folgende Buchstaben) aus dem Benutzernamen enthalten.
 
-2. Empfehlungen für jede Datenbank, und ändern Sie den Tarif, compute-Ebene und die maximale Datengröße je nach Bedarf. Achten Sie darauf, dass Sie alle Datenbanken deaktivieren, die nicht derzeit bereitgestellt werden sollen.
+2. Überprüfen Sie die Empfehlungen für jede Datenbank, und ändern Sie den Tarif, die computeebene und die maximale Datengröße nach Bedarf. Stellen Sie sicher, dass Sie alle Datenbanken deaktivieren, die Sie zurzeit nicht bereitstellen möchten.
 
-3. Wählen Sie **Bereitstellung Skript generieren**, speichern Sie das Skript, und führen Sie ihn dann in PowerShell.
+3. Wählen Sie **Bereitstellungs Skript generieren**aus, speichern Sie das Skript, und führen Sie es dann in PowerShell aus.
 
-    Dieser Prozess sollte alle Datenbanken erstellen, die Sie in der HTML-Seite ausgewählt.
+    Dieser Prozess sollte alle Datenbanken erstellen, die Sie auf der HTML-Seite ausgewählt haben.
 
-**Für die verwaltete Instanz recommendations**
+**Empfehlungen für verwaltete Instanzen**
 
-![Azure SQL-MI-SKU-Empfehlungen-Bildschirm](../dma/media/dma-sku-recommend-mi-recommendations1.png)
+![Azure SQL-SKU-Empfehlungen (Bildschirm)](../dma/media/dma-sku-recommend-mi-recommendations1.png)
 
-1. Öffnen Sie die HTML-Datei, und geben Sie die folgende Informationen:
-    - **Abonnement-ID** – die Abonnement-ID des Azure-Abonnements, die Sie Datenbanken bereitstellen möchten.
-    - **Ressourcengruppe** : die Ressourcengruppe, zu dem Sie die Datenbanken bereitstellen möchten. Geben Sie eine Ressourcengruppe, die vorhanden ist.
-    - **Region** : die Region, in dem Datenbanken bereitstellen. Stellen Sie sicher, dass Ihr Abonnement die Eintrag Region unterstützt.
-    - **Instanzname** – die Instanz von Azure verwalteten SQL-Instanz, die Datenbanken migriert werden soll. Der Instanzname darf nur Kleinbuchstaben, Zahlen, und "-", aber nicht beginnen oder enden mit "-" oder mehr als 63 Zeichen lang sein.
-    - **Instanzen von Admin Username** : der Administratorbenutzername für die Instanz. Stellen Sie sicher, dass Ihr Anmeldename die folgenden Anforderungen erfüllt: Es ist ein SQL-Bezeichner, und keinen typischen Systemnamen (z. B. Admin, Administrator, sa, Root, Dbmanager, Loginmanager usw.), oder ein integrierter Datenbankbenutzer oder-Rolle (z. B. Dbo, Guest, Public usw.). Stellen Sie sicher, dass Ihr Name keine Leerzeichen, Unicode-Zeichen oder nicht alphabetische Zeichen enthält und dass es nicht mit Zahlen oder Symbolen beginnt. 
-    - **Instanzen von Admin-Kennwort** -das Administratorkennwort für die Instanz. Ihr Kennwort muss mindestens 16 Zeichen und nicht länger als 128 Zeichen lang sein. Das Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten: englische Großbuchstaben, Buchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht-alphanumerische Zeichen (!, $, #, % usw..). Das Kennwort darf nicht enthalten, alle oder einen Teil (3 + aufeinander folgenden Buchstaben) aus dem Benutzernamen.
-    - **Vnet-Name** – die VNet-Name, unter dem die verwaltete Instanz bereitgestellt werden sollen. Geben Sie den Namen einer vorhandenen VNet aus.
-    - **Name des Subnetzes** – die Subnetznamen an, die unter dem die verwaltete Instanz bereitgestellt werden sollen. Geben Sie den Subnetnamen einer vorhandenen aus.
+1. Öffnen Sie die HTML-Datei, und geben Sie die folgenden Informationen ein:
+    - **Abonnement-ID** : die Abonnement-ID des Azure-Abonnements, für das Sie die Datenbanken bereitstellen möchten.
+    - **Ressourcengruppe** : die Ressourcengruppe, in der Sie die Datenbanken bereitstellen möchten. Geben Sie eine Ressourcengruppe ein, die vorhanden ist.
+    - **Region** : die Region, in der Datenbanken bereitgestellt werden. Stellen Sie sicher, dass Ihr Abonnement die SELECT-Region unterstützt.
+    - **Instanzname** – die Instanz von Azure SQL verwaltete Instanz, zu der Sie die Datenbanken migrieren möchten. Der Instanzname darf nur Kleinbuchstaben, Ziffern und "-" enthalten. er darf jedoch nicht mit "-" beginnen oder enden oder mehr als 63 Zeichen enthalten.
+    - **Instanzadministrator-Benutzername** – der Administrator Benutzername der Instanz. Stellen Sie sicher, dass Ihr Anmelde Name die folgenden Anforderungen erfüllt: Es handelt sich um einen SQL-Bezeichner und nicht um einen typischen Systemnamen (wie z. b. admin, Administrator, Sa, root, DBManager, loginmanager usw.) oder einen integrierten Datenbankbenutzer oder eine integrierte Rolle (z. b. dbo, Guest, Public usw.). Stellen Sie sicher, dass der Name keine Leerzeichen, Unicode-Zeichen oder nicht alphabetische Zeichen enthält und nicht mit Zahlen oder Symbolen beginnt. 
+    - **Instanzadministratorkennwort** : das Instanz-Administrator Kennwort. Ihr Kennwort muss mindestens 16 Zeichen lang sein und darf nicht länger als 128 Zeichen sein. Ihr Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten – englische Großbuchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht alphanumerische Zeichen (!, $, #,% usw.). Das Kennwort darf nicht ganz oder teilweise (3 + aufeinander folgende Buchstaben) aus dem Benutzernamen enthalten.
+    - **Vnet-Name** – der Name des vnets, unter dem die verwaltete Instanz bereitgestellt werden soll. Geben Sie einen vorhandenen vnet-Namen ein.
+    - **Subnetzname** – der Name des Subnetzes, unter dem die verwaltete Instanz bereitgestellt werden soll. Geben Sie einen vorhandenen Subnetznamen ein.
 
-2. Empfehlungen für jede Instanz, und ändern Sie den Tarif, die Computeknoten-Ebene und die maximale Datengröße je nach Bedarf. Die Empfehlungen auf 8vcore zu 40vcore SKUs derzeit beschränkt sind, besteht weiterhin die Option zum 64vcore und 80vcore SKUs bereitstellen, falls gewünscht. Achten Sie darauf, dass Sie alle Instanzen deaktivieren, die nicht derzeit bereitgestellt werden sollen.
+2. Überprüfen Sie die Empfehlungen für jede Instanz, und ändern Sie den Tarif, die computeebene und die maximale Datengröße nach Bedarf. Obwohl die Empfehlungen derzeit auf die SKUs 8vcore und 40vcore beschränkt sind, besteht weiterhin die Möglichkeit, bei Bedarf 64vcore-und 80vcore-SKUs bereitzustellen. Stellen Sie sicher, dass Sie alle Instanzen deaktivieren, die Sie zurzeit nicht bereitstellen möchten.
 
-    Dieser Prozess sollte alle Datenbanken erstellen, die Sie in der HTML-Seite ausgewählt.
+    Dieser Prozess sollte alle Datenbanken erstellen, die Sie auf der HTML-Seite ausgewählt haben.
 
     > [!NOTE]
-    > Erstellen von verwalteten Instanzen in einem Subnetz (insbesondere bei der ersten) kann mehrere Stunden dauern. Nachdem Sie das Bereitstellungsskript über PowerShell können Sie den Status Ihrer Bereitstellung im Azure-Portal überprüfen.
+    > Das Erstellen verwalteter Instanzen in einem Subnetz (insbesondere zum ersten Mal) kann mehrere Stunden in Anspruch nehmen. Nachdem Sie das Bereitstellungs Skript über PowerShell ausgeführt haben, können Sie den Status Ihrer Bereitstellung im Azure-Portal überprüfen.
 
 ## <a name="next-step"></a>Nächster Schritt
 
-- Eine vollständige Liste der Befehle für die Ausführung von DMA über die Befehlszeilenschnittstelle, finden Sie im Artikel [ausführen Data Migration Assistant über die Befehlszeile](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017).
+- Eine komplette Liste der Befehle zum Ausführen von DMA über die CLI finden Sie im Artikel [Ausführen von Datenmigrations-Assistent von der Befehlszeile aus](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017).

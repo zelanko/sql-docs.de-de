@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653354"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680836"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -223,8 +223,8 @@ Gibt an, dass alle Zeilen von *target_table, die mit den von \<table_source> ON 
 Die MERGE-Anweisung kann höchstens über zwei WHEN MATCHED-Klauseln verfügen. Wenn zwei Klauseln angegeben werden, muss die erste Klausel von einer AND \<search_condition>-Klausel begleitet werden. Für jede gegebene Zeile wird die zweite WHEN MATCHED-Klausel nur angewendet, wenn die erste nicht angewendet wurde. Wenn zwei WHEN MATCHED-Klauseln vorhanden sind, muss die eine eine UPDATE-Aktion und die andere eine DELETE-Aktion angeben. Wenn UPDATE in der \<merge_matched>-Klausel angegeben wird und mehr als eine Zeile aus \<table_source> basierend auf \<merge_search_condition> mit einer Zeile in *target_table* übereinstimmt, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück. Die MERGE-Anweisung kann dieselbe Zeile nicht mehrmals aktualisieren oder dieselbe Zeile aktualisieren und löschen.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Gibt an, dass für jede Zeile, die von \<table_source> ON \<merge_search_condition> zurückgegeben wird und nicht mit einer Zeile in *target_table* übereinstimmt, aber eine zusätzliche Suchbedingung erfüllt (falls vorhanden), eine Zeile in *target_table* eingefügt wird. Die einzufügenden Werte werden durch die \<merge_not_matched>-Klausel angegeben. Die MERGE-Anweisung kann nur über eine WHEN NOT MATCHED-Klausel verfügen.  
-  
+Gibt an, dass für jede Zeile, die von \<table_source> ON \<merge_search_condition> zurückgegeben wird und nicht mit einer Zeile in *target_table* übereinstimmt, aber eine zusätzliche Suchbedingung erfüllt (falls vorhanden), eine Zeile in *target_table* eingefügt wird. Die einzufügenden Werte werden durch die \<merge_not_matched>-Klausel angegeben. Die MERGE-Anweisung kann nur über eine WHEN NOT MATCHED [ BY TARGET ]-Klausel verfügen.
+
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 Gibt an, dass alle Zeilen von *target_table, die nicht mit den von \<table_source> ON \<merge_search_condition> zurückgegebenen Zeilen übereinstimmen und alle zusätzlichen Suchbedingungen erfüllen, gemäß der \<merge_matched>-Klausel aktualisiert oder gelöscht werden.  
   
@@ -285,7 +285,7 @@ Gibt die Suchbedingungen an, die zum Angeben von \<merge_search_condition> oder 
 \<Graph-Suchmuster >  
 Gibt das Graph-Vergleichsmuster an. Weitere Informationen zu den Argumenten für diese Klausel finden Sie unter [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 Mindestens eine der drei MATCHED-Klauseln muss angegeben werden, dies kann jedoch in beliebiger Reihenfolge erfolgen. Eine Variable in derselben MATCHED-Klausel kann nicht mehr als einmal aktualisiert werden.  
   

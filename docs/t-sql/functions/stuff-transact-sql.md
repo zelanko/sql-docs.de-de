@@ -24,12 +24,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 564edb184c5b9d56159c6b931557daf85beeb295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117716"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342001"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  Ein ganzzahliger Wert, der die Position angibt, ab der Zeichen gelöscht werden sollen und an der anschließend eine andere Zeichenfolge eingefügt werden soll. Falls *start* negativ oder 0 (null) ist, wird eine NULL-Zeichenfolge zurückgegeben. Wenn *start* länger als das erste *character_expression*-Element ist, wird eine NULL-Zeichenfolge zurückgegeben. *start* kann vom Typ **bigint** sein.  
   
  *length*  
- Eine ganze Zahl, die festlegt, wie viele Zeichen gelöscht werden sollen. Falls *length* negativ ist, wird eine NULL-Zeichenfolge zurückgegeben. Wenn *length* länger als das erste *character_expression*-Element ist, wird bis zum letzten Zeichen im letzten *character_expression*-Element alles gelöscht.  Wenn *length* 0 (null) ist, wird das Element vor dem ersten Zeichen der Zeichenfolge vorgenommen. *length* kann vom Datentyp **bigint** sein.
+ Eine ganze Zahl, die festlegt, wie viele Zeichen gelöscht werden sollen. Falls *length* negativ ist, wird eine NULL-Zeichenfolge zurückgegeben. Wenn *length* länger als das erste *character_expression*-Element ist, wird bis zum letzten Zeichen im letzten *character_expression*-Element alles gelöscht.  Wenn *length* null ist, erfolgt die Einfügung an der Position *start*, und es werden keine Zeichen gelöscht. *length* kann vom Datentyp **bigint** sein.
 
  *replaceWith_expression*  
  Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichendaten. *character_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten darstellen. Dieser Ausdruck ersetzt ab *start* *length*-Zeichen durch *character_expression*. Wenn `NULL` als *replaceWith_expression* angegeben ist, werden die Zeichen entfernt, ohne zusätzliche Zeichen einzufügen.   
@@ -60,7 +60,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt Zeichendaten zurück, wenn *character_expression* einer der unterstützten Zeichendatentypen ist. Gibt Binärdaten zurück, wenn *character_expression* einer der unterstützten Binärdatentypen ist.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Falls die Startposition oder die Länge negativ oder die Startposition größer als die Länge der ersten Zeichenfolge ist, wird eine Nullzeichenfolge zurückgegeben. Wenn die Startposition 0 ist, wird ein NULL-Wert zurückgegeben. Wenn es sich um mehr zu löschende Zeichen handelt als die erste Zeichenfolge aufweist, wird die erste Zeichenfolge bis auf das erste Zeichen gelöscht.  
 
 Wenn der Ergebniswert größer als der vom Rückgabetyp unterstützte Höchstwert ist, wird ein Fehler ausgegeben.  

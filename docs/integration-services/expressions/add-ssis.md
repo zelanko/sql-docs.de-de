@@ -12,14 +12,14 @@ helpviewer_keywords:
 - add operator (+)
 - adding expressions
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 553bd2c7e9c5b86219856cf9a6e0928fbddc89a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0b733b2f19cb4bb8af3096d65a2c3099832aea10
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088939"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297719"
 ---
 # <a name="-add-ssis"></a>+ (Addieren) (SSIS)
 
@@ -43,7 +43,7 @@ numeric_expression1 + numeric_expression2
 ## <a name="result-types"></a>Ergebnistypen  
  Die Ergebnistypen werden von den Datentypen der beiden Argumente bestimmt. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Wenn einer der Operanden NULL ist, ist das Ergebnis NULL.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  

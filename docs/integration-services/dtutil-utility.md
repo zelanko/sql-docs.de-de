@@ -23,14 +23,14 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f0293a6b1be32c5b4b7dbb12ca3319f75859edf1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 19f179ae869a175ea6238ba4ade9e5f87d663e08
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057693"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297799"
 ---
 # <a name="dtutil-utility"></a>dtutil Utility
 
@@ -128,7 +128,7 @@ dtutil /option [value] [/option [value]]...
 |5|Das Hilfsprogramm konnte das angeforderte Paket nicht laden.|  
 |6|Das Hilfsprogramm konnte die Befehlszeile nicht auflösen, da sie syntaktische oder semantische Fehler enthielt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Es ist nicht möglich, Befehlsdateien oder Umleitungen für **dtutil**zu verwenden.  
   
  Die Reihenfolge der Optionen in der Befehlszeile ist unerheblich.  

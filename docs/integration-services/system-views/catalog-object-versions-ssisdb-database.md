@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6607558f06a054e80a5e6bc6c7a7f96e07f65630
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7dac194c0ceb54eeb716b9cf5ec676e7fe120d8f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934667"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296516"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions (SSISDB-Datenbank)
 
@@ -38,7 +38,7 @@ ms.locfileid: "67934667"
 |restored_by|**nvarchar(128)**|Der Name des Benutzers, der das Objekt wiederhergestellt hat.|  
 |last_restored_time|**datetimeoffset**|Datum und Uhrzeit, zu denen das Objekt zuletzt wiederhergestellt wurde.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  In dieser Sicht wird eine Zeile für jede Version eines Objekts im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

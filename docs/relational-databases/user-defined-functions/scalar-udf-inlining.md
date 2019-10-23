@@ -2,7 +2,7 @@
 title: Inlining benutzerdefinierter Skalarfunktionen in Datenbanken von Microsoft SQL Server | Microsoft-Dokumentation
 description: In diesem Artikel wird das Inlining benutzerdefinierter Skalarfunktionen erläutert, um die Leistung von Abfragen zu verbessern, die benutzerdefinierte Skalarfunktionen in SQL Server (2018 und höher) und Azure SQL-Datenbank aufrufen.
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030338"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517999"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dieser Artikel stellt eine Einführung in das Inlining benutzerdefinierter Skalarfunktionen dar. Dabei handelt es sich um ein Feature für die intelligente Abfrageverarbeitung. Durch dieses Feature wird die Leistung von Abfragen verbessert, die benutzerdefinierte Skalarfunktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aufrufen.
 
@@ -154,7 +154,8 @@ Für eine benutzerdefinierte T-SQL-Skalarfunktion kann ein Inlining durchgeführ
 - Die benutzerdefinierte Funktion verwendet die `EXECUTE AS CALLER`-Klausel (Standardverhalten, wenn die `EXECUTE AS`-Klausel nicht angegeben wurde).
 - Die benutzerdefinierte Funktion verweist nicht auf Tabellenvariablen oder Tabellenwertparameter.
 - Die Abfrage, die eine benutzerdefinierte Skalarfunktion aufruft, verweist in der `GROUP BY`-Klausel nicht auf einen Aufruf einer benutzerdefinierten Skalarfunktion.
-- Die Abfrage, die eine benutzerdefinierte Skalarfunktion in der Auswahlliste mit der `DISTINCT`-Klausel aufruft, verweist in der `ORDER BY`-Klausel nicht auf einen Aufruf einer benutzerdefinierten Skalarfunktion.
+- Die Abfrage, die eine benutzerdefinierte Skalarfunktion in der Auswahlliste mit der `DISTINCT`-Klausel aufruft, verfügt nicht über eine `ORDER BY`-Klausel.
+- Die benutzerdefinierte Funktion wird in der `ORDER BY`-Klausel nicht verwendet.
 - Die benutzerdefinierte Funktion wird nicht nativ kompiliert (Interop wird unterstützt).
 - Die benutzerdefinierte Funktion wird nicht in einer berechneten Spalte oder in der Definition einer CHECK-Einschränkung verwendet.
 - Die benutzerdefinierte Funktion verweist nicht auf benutzerdefinierte Typen.

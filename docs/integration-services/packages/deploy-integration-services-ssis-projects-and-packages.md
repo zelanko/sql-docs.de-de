@@ -1,10 +1,10 @@
 ---
 title: Bereitstellen von SQL Server Integration Services-Projekten und -Paketen (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -16,33 +16,33 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d00e1dfcbab82984c83c4f4a0c24ee17ad60ee39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951869"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680962"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt zwei Bereitstellungsmodelle: das Projektbereitstellungsmodell und das Legacy-Paketbereitstellungsmodell. Mithilfe des Projektbereitstellungsmodells können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen.  
   
 Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Legacy-Paketbereitstellung &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  Das Projektbereitstellungsmodell wurde in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]eingeführt. Mit diesem Bereitstellungsmodell konnten Sie keine Pakete bereitstellen, ohne das gesamte Projekt bereitzustellen. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] wurde die Funktion für inkrementelle Paketbereitstellung eingeführt, mit der Sie ein oder mehrere Pakete bereitstellen können, ohne das gesamte Projekt bereitzustellen.  
+>  Das Projektbereitstellungsmodell wurde in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]eingeführt. Mit diesem Bereitstellungsmodell konnten Sie keine Pakete bereitstellen, ohne das gesamte Projekt bereitzustellen. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] wurde die Funktion für inkrementelle Paketbereitstellung eingeführt, mit der Sie ein oder mehrere Pakete bereitstellen können, ohne das gesamte Projekt bereitzustellen.
 
 > [!NOTE]
 > In diesem Artikel wird beschrieben, wie Sie SSIS-Pakete allgemein und lokal bereitstellen. Sie können SSIS-Pakete auch auf folgenden Plattformen bereitstellen:
 > - **Die Microsoft Azure-Cloud**. Weitere Informationen finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 > - **Linux**. Weitere Informationen finden Sie unter [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](../../linux/sql-server-linux-migrate-ssis.md).
 
-## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Vergleich von Projektbereitstellungsmodell und Legacy-Paketbereitstellungsmodells  
+## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Vergleich von Projektbereitstellungsmodell und Legacy-Paketbereitstellungsmodells
+
  Der Typ von Bereitstellungsmodell, den Sie für ein Projekt auswählen, bestimmt, welche Entwicklungs- und Verwaltungsoptionen für dieses Projekt verfügbar sind. In der folgenden Tabelle werden Unterschiede und Ähnlichkeiten der Verwendung des Projektbereitstellungsmodells und des Paketbereitstellungsmodells dargestellt.  
   
 |Bei Verwendung des Projektbereitstellungsmodells|Bei Verwendung des Legacy-Paketbereitstellungsmodells|  
@@ -58,9 +58,8 @@ Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Le
 |Während der Ausführung werden Ereignisse, die vom Paket erzeugt werden, automatisch aufgezeichnet und im Katalog gespeichert. Sie können diese Ereignisse mit Transact-SQL-Sichten abfragen.|Während der Ausführung werden Ereignisse, die von einem Paket erzeugt werden, nicht automatisch aufgezeichnet. Dem Paket muss ein Protokollanbieter zum Aufzeichnen von Ereignissen hinzugefügt werden.|  
 |Pakete werden in einem separaten Windows-Prozess ausgeführt.|Pakete werden in einem separaten Windows-Prozess ausgeführt.|  
 |SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|  
-  
- Das Projektbereitstellungsmodell wurde in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]eingeführt. Wenn Sie dieses Modell verwendet haben, konnten Sie keine Pakete bereitstellen, ohne das gesamte Projekt bereitzustellen. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] wurde die Funktion für inkrementelle Paketbereitstellung eingeführt, mit der Sie Pakete in einem vorhandenen oder neuen Projekt bereitstellen können, ohne das gesamte Projekt bereitzustellen.   
-  
+
+
 ## <a name="features-of-project-deployment-model"></a>Funktionen des Projektbereitstellungsmodells  
  In der folgenden Tabelle sind die Funktionen aufgeführt, die für Projekte, die nur für das Projektbereitstellungsmodell entwickelt wurden, verfügbar sind.  
   
@@ -79,9 +78,10 @@ Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Le
 
 Wenn Sie das SSIS-Standarddienstkonto ändern, müssen Sie möglicherweise zusätzliche Berechtigungen für das vom Standard abweichende Dienstkonto erteilen, bevor Sie erfolgreich Pakete bereitstellen können. Wenn das vom Standard abweichende Dienstkonto nicht über die erforderlichen Berechtigungen verfügt, wird Ihnen möglicherweise folgende Fehlermeldung angezeigt.
 
-*.NET Framework-Fehler beim Ausführen der benutzerdefinierten Routine oder des benutzerdefinierten Aggregats „deploy_project_internal“: System.ComponentModel.Win32Exception: A required privilege is not held by the client. (System.ComponentModel.Win32Exception: Dem Client fehlt ein erforderliches Recht.)*
+`A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
+System.ComponentModel.Win32Exception: A required privilege is not held by the client.`
 
-Dieser Fehler ist in der Regel das Ergebnis fehlender DCOM-Berechtigungen. Führen Sie folgende Schritte aus, um den Fehler zu beheben:
+Dieser Fehler ist in der Regel das Ergebnis fehlender DCOM-Berechtigungen. Gehen Sie folgendermaßen vor, um den Fehler zu beheben:
 
 1.  Öffnen Sie die Konsole **Komponentendienste**, oder führen Sie „Dcomcnfg.exe“ aus.
 2.  Erweitern Sie **Komponentendienste** > **Computer** > **Arbeitsplatz** > **DCOM-Konfiguration** in der Konsole **Komponentendienste**.
@@ -92,8 +92,9 @@ Dieser Fehler ist in der Regel das Ergebnis fehlender DCOM-Berechtigungen. Führ
 7.  Fügen Sie im Dialogfeld **Berechtigung** das vom Standard abweichende Dienstkonto hinzu, und erteilen Sie bei Bedarf die Berechtigungen **Zulassen**. In der Regel verfügt ein Konto über die Berechtigungen **Lokaler Start** und **Lokale Aktivierung**.
 8.  Klicken Sie zweimal auf **OK**, und schließen Sie anschließend die Konsole **Komponentendienste**.
 
-Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und den erforderlichen Berechtigungen des SSIS-Dienstkontos finden Sie im folgenden Blogbeitrag.  
-[System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project (System.ComponentModel.Win32Exception: Dem Client fehlt beim Bereitstellen des SSIS-Projekts ein erforderliches Recht)](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und zu den Berechtigungen, die für das SSIS-Dienstkonto erforderlich sind, finden Sie im folgenden Blogbeitrag:
+ 
+- [System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project (System.ComponentModel.Win32Exception: Dem Client fehlt beim Bereitstellen des SSIS-Projekts ein erforderliches Recht)](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   In der aktuellen Version von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server ermöglicht es Ihnen, Pakete zu verwalten und auszuführen sowie mit Umgebungen Laufzeitwerte für Pakete zu konfigurieren.  
@@ -105,7 +106,7 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und den er
   
 1.  Erstellen Sie einen SSISDB-Katalog, falls noch nicht geschehen. Weitere Informationen finden Sie im [SSIS-Katalog](../../integration-services/catalog/ssis-catalog.md).  
   
-2.  Konvertieren Sie das Projekt mit dem Assistenten für die Konvertierung von **Integration Services-Projekten** ins Projektbereitstellungsmodell. Weitere Informationen finden Sie in den folgenden Anweisungen: [So konvertieren Sie ein Projekt in das Projektbereitstellungsmodell](#convert)  
+2.  Konvertieren Sie das Projekt in das Projektbereitstellungsmodell, indem Sie den **Assistenten zum Konvertieren von Integration Services-Projekten** ausführen. Weitere Informationen finden Sie in den folgenden Anweisungen: [So konvertieren Sie ein Projekt in das Projektbereitstellungsmodell](#convert)  
   
     -   Wenn Sie das Projekt in [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] oder höher erstellt haben, verwendet das Projekt standardmäßig das Projektbereitstellungsmodell.  
   
@@ -144,17 +145,17 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und den er
   
 1.  Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], und wählen Sie dann im Menü **Projekt** die Option **Bereitstellen** aus, um den **Bereitstellungs-Assistent für Integration Services**zu starten.  
   
-     -oder-  
+     oder  
   
      Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] den Knoten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** im Objekt-Explorer, und navigieren Sie anschließend zum Projektordner des bereitzustellenden Projekts. Klicken Sie mit der rechten Maustaste auf den Ordner **Projekte** , und klicken Sie anschließend auf **Projekt bereitstellen**.  
   
-     -oder-  
+     oder  
   
      Führen Sie an der Eingabeaufforderung **isdeploymentwizard.exe** unter dem Pfad **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**aus. Auf 64-Bit-Computern steht auch eine 32-Bit-Version des Tools unter **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**zur Verfügung.  
   
 2.  Klicken Sie auf der Seite **Quelle auswählen** auf **Projektbereitstellungsdatei** , um die Bereitstellungsdatei für das Projekt auszuwählen.  
   
-     -oder-  
+     oder  
   
      Klicken Sie auf **Integration Services-Katalog** , um ein Projekt auszuwählen, das bereits im SSISDB-Katalog bereitgestellt wurde.  
   
@@ -167,7 +168,7 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und den er
   
 1.  Führen Sie an der Eingabeaufforderung **isdeploymentwizard.exe** unter dem Pfad **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**aus. Auf 64-Bit-Computern steht auch eine 32-Bit-Version des Tools unter **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**zur Verfügung.  
   
-2.  Wechseln Sie auf der Seite **Quelle auswählen** zu **Paketbereitstellungsmodell**. Wählen Sie dann den Ordner aus, der die Quellpakete enthält, und konfigurieren Sie die Pakete.  
+2.  Wechseln Sie auf der Seite **Quelle auswählen** zu **Paketbereitstellungsmodell**. Wählen Sie dann den Ordner aus, der Quellpakete enthält, und konfigurieren Sie die Pakete.  
   
 3.  Schließen Sie den Assistenten ab. Führen Sie die restlichen Schritte aus, die in [Paketbereitstellungsmodell](#PackageModel)beschrieben werden.  
   
@@ -179,7 +180,7 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und den er
   
 3.  Wenn die Seite **Einführung** angezeigt wird, klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
   
-4.  Wechseln Sie auf der Seite **Quelle auswählen** zu **Paketbereitstellungsmodell**. Wählen Sie dann den Ordner aus, der die Quellpakete enthält, und konfigurieren Sie die Pakete.  
+4.  Wechseln Sie auf der Seite **Quelle auswählen** zu **Paketbereitstellungsmodell**. Wählen Sie dann den Ordner aus, der Quellpakete enthält, und konfigurieren Sie die Pakete.  
   
 5.  Schließen Sie den Assistenten ab. Führen Sie die restlichen Schritte aus, die in [Paketbereitstellungsmodell](#PackageModel)beschrieben werden.  
   
@@ -266,8 +267,7 @@ static void Main()
 
 ## <a name="convert-to-package-deployment-model-dialog-box"></a>In Paketbereitstellungsmodell konvertieren (Dialogfeld)
   Mit dem Befehl **In Paketbereitstellungsmodell konvertieren** können Sie ein Paket auf dem Paketbereitstellungsmodell konvertieren, nachdem das Projekt und jedes Paket im Projekt auf Kompatibilität mit dem Modell überprüft wurden. Wenn ein Paket für ein Projektbereitstellungsmodell eindeutige Funktionen verwendet, z. B. Parameter, dann kann das Paket nicht konvertiert werden.  
-  
-### <a name="task-list"></a>Aufgabenliste  
+
  Für das Konvertieren eines Pakets auf ein Paketbereitstellungsmodell sind zwei Schritte erforderlich.  
   
 1.  Wenn Sie den Befehl **In Paketbereitstellungsmodell konvertieren** aus dem Menü **Projekt** auswählen, werden das Projekt und jedes Paket auf Kompatibilität mit diesem Modell überprüft. Die Ergebnisse werden in der Tabelle **Ergebnisse** angezeigt.  
@@ -276,7 +276,8 @@ static void Main()
   
 2.  Wenn das Projekt und alle Pakete den Kompatibilitätstest bestehen, klicken Sie auf **OK** , um das Paket zu konvertieren.  
   
-> **HINWEIS:** Verwenden Sie den Assistenten für die Konvertierung von **Integration Services-Projekten**, um ein Projekt ins Projektbereitstellungsmodell zu konvertieren. Weitere Informationen finden Sie unter [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
+> [!NOTE]
+> Verwenden Sie den **Assistenten für die Konvertierung von Integration Services-Projekten**, um ein Projekt ins Projektbereitstellungsmodell zu konvertieren. Weitere Informationen finden Sie unter [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## <a name="integration-services-deployment-wizard"></a>Bereitstellungs-Assistent für Integration Services
   Die **Bereitstellungs-Assistent für Integration Services** unterstützt zwei Bereitstellungsmodelle:
@@ -287,14 +288,15 @@ static void Main()
  
  Das **Paketbereitstellungsmodell** ermöglicht Ihnen, aktualisierte Pakete im SSIS-Katalog bereitzustellen, ohne dass Sie das ganze Projekt bereitstellen müssen. 
  
- > **HINWEIS:** Die Standardbereitstellung für den Assistenten ist das Projektbereitstellungsmodell.  
+ > [!NOTE]
+ > Die Standardbereitstellung für den Assistenten ist das Projektbereitstellungsmodell.  
   
 ### <a name="launch-the-wizard"></a>Starten des Assistenten
 Starten Sie den Assistenten auf eine der folgenden Arten:
 
  - Eingeben von **SQL Server Bereitstellungs-Assistent** in Windows Search 
 
-**OR**
+ oder
 
  - Suchen Sie nach der ausführbaren Datei **ISDeploymentWizard.exe** im SQL Server-Installationsordner, zum Beispiel: „C:\Programme (x86)\Microsoft SQL Server\130\DTS\Binn“. 
  
@@ -304,61 +306,70 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>Quellen auswählen  
+#### <a name="select-source"></a>Quellen auswählen
+
  Um eine von Ihnen erstellte Projektbereitstellungsdatei bereitzustellen, wählen Sie **Projektbereitstellungsdatei** aus, und geben Sie den Pfad für die ISPAC-Datei ein. Um ein Projekt bereitzustellen, das sich im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog befindet, wählen Sie **Integration Services-Katalog**aus und geben dann den Servernamen und den Pfad zum Projekt im Katalog ein. Klicken Sie auf **Weiter** , um die Seite **Ziel auswählen** zu sehen.  
   
-#### <a name="select-destination"></a>Ziel auswählen  
+#### <a name="select-destination"></a>Ziel auswählen
+
  Um den Zielordner für das Projekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog auszuwählen, geben Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ein, oder klicken Sie auf **Durchsuchen** , um aus einer Liste von Servern auszuwählen. Geben Sie den Projektpfad in SSISDB ein, oder klicken Sie auf **Durchsuchen** , um ihn auszuwählen. Klicken Sie auf **Weiter** , um die Seite **Überprüfen** zu sehen.  
   
-#### <a name="review-and-deploy"></a>Überprüfen (und Bereitstellen)  
+#### <a name="review-and-deploy"></a>Überprüfen (und Bereitstellen)
+
  Diese Seite erlaubt Ihnen die Überprüfung der von Ihnen vorgenommenen Einstellungen. Sie können Ihre Auswahl ändern, indem Sie auf **Zurück**klicken oder indem Sie auf einen der Schritte im linken Bereich klicken. Klicken Sie auf **Bereitstellen** , um den Bereitstellungsprozess zu starten.  
   
-#### <a name="results"></a>Ergebnisse  
- Nachdem der Bereitstellungsvorgang abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern...** , um die Ergebnisse in einer XML-Datei zu speichern, oder klicken Sie auf **Schließen**, um den Assistenten zu beenden.
+#### <a name="results"></a>Ergebnisse
+
+ Nachdem der Bereitstellungsvorgang abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern...**, um die Ergebnisse in einer XML-Datei zu speichern, oder klicken Sie auf **Schließen**, um den Assistenten zu beenden.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>Quellen auswählen  
+#### <a name="select-source"></a>Quellen auswählen
+
  Die Seite **Quelle auswählen** im **Bereitstellungs-Assistenten für Integration Services** zeigt die Einstellungen speziell für das Paketbereitstellungsmodell an, wenn Sie die Option **Paketbereitstellung** als **Bereitstellungsmodell**gewählt haben.  
   
- Zum Auswählen der Quellpakete klicken Sie auf die Schaltfläche **Durchsuchen…** , um den **Ordner** auszuwählen, der die Pakete enthält, oder geben Sie den Ordnerpfad in das Textfeld **Paketordnerpfad** ein, und klicken Sie am unteren Seitenrand auf die Schaltfläche **Aktualisieren**. Jetzt sollten Sie alle Pakete im angegebenen Ordner im Listenfeld sehen. Standardmäßig sind alle Pakete ausgewählt. Klicken Sie das **Kontrollkästchen** in der ersten Spalte, um auszuwählen, welche Pakete an den Server bereitgestellt werden sollen.  
+ Klicken Sie zum Auswählen der Quellpakete auf die Schaltfläche **Durchsuchen...**, um den **Ordner** auszuwählen, der die Pakete enthält, oder geben Sie den Ordnerpfad in das Textfeld **Paketordnerpfad** ein, und klicken Sie auf die Schaltfläche **Aktualisieren** am unteren Seitenrand. Jetzt sollten Sie alle Pakete im angegebenen Ordner im Listenfeld sehen. Standardmäßig sind alle Pakete ausgewählt. Klicken Sie das **Kontrollkästchen** in der ersten Spalte, um auszuwählen, welche Pakete an den Server bereitgestellt werden sollen.  
   
- Beziehen Sie sich auf die Spalten **Status** und **Meldung** , um den Status des Pakets zu überprüfen. Falls der Status auf **Bereit** oder **Warnung**steht, würde der Bereitstellungs-Assistent den Bereitstellungsvorgang nicht blockieren. Falls hingegen der Status auf **Fehler**steht, setzt der Assistent die Bereitstellung der ausgewählten Pakete nicht fort. Klicken Sie auf den Link in der Spalte **Meldung** , um sich die detaillierteren Warn-/Fehlermeldungen anzeigen zu lassen.  
+ Beziehen Sie sich auf die Spalten **Status** und **Meldung** , um den Status des Pakets zu überprüfen. Falls der Status auf **Bereit** oder **Warnung**steht, würde der Bereitstellungs-Assistent den Bereitstellungsvorgang nicht blockieren. Wenn der Status auf **Fehler** festgelegt ist, setzt der Assistent die Bereitstellung der ausgewählten Pakete nicht fort. Klicken Sie zum Anzeigen der detaillierten Warn- oder Fehlermeldungen auf den Link in der Spalte **Meldung**.  
   
- Falls die sensiblen Daten oder Paketdaten mit einem Kennwort verschlüsselt sind, geben Sie das Kennwort in die Spalte **Kennwort** ein, und klicken Sie auf die Schaltfläche **Aktualisieren** , um zu überprüfen, ob das Kennwort akzeptiert wird. Falls das Kennwort korrekt ist, ändert sich der Status auf **Bereit** , und die Warnmeldung verschwindet. Falls es mehrere Pakete mit dem gleichen Kennwort gibt, wählen Sie die Pakete mit dem gleichen Verschlüsselungskennwort aus, geben Sie das Kennwort in das Textfeld **Kennwort** ein, und klicken Sie auf die Schaltfläche **Anwenden** . Das Kennwort würde auf die ausgewählten Pakete angewendet werden.  
+ Falls die sensiblen Daten oder Paketdaten mit einem Kennwort verschlüsselt sind, geben Sie das Kennwort in die Spalte **Kennwort** ein, und klicken Sie auf die Schaltfläche **Aktualisieren** , um zu überprüfen, ob das Kennwort akzeptiert wird. Falls das Kennwort korrekt ist, ändert sich der Status auf **Bereit** , und die Warnmeldung verschwindet. Wenn mehrere Pakete mit dem gleichen Kennwort vorhanden sind, wählen Sie die Pakete mit dem gleichen Verschlüsselungskennwort aus, geben Sie das Kennwort in das Textfeld **Kennwort** ein, und klicken Sie auf die Schaltfläche **Anwenden**. Das Kennwort würde auf die ausgewählten Pakete angewendet werden.  
   
  Falls der Status aller ausgewählten Pakete nicht auf **Fehler**steht, ist die Schaltfläche **Weiter** aktiviert. Sie können also mit dem Paketbereitstellungsvorgang fortfahren.  
   
-#### <a name="select-destination"></a>Ziel auswählen  
- Klicken Sie, nachdem Sie die Paketquellen ausgewählt haben, auf die Schaltfläche **Weiter** , um auf die Seite **Ziel auswählen** zu wechseln. Pakete müssen an ein Projekt im SSIS-Katalog (SSISDB) bereitgestellt werden. Stellen Sie daher vor der Bereitstellung von Paketen sicher, dass das Zielprojekt bereits im SSIS-Katalog existiert. Erstellen Sie andernfalls ein leeres Projekt. Auf der Seite **Ziel auswählen** geben Sie den Namen des Servers in das Textfeld **Servername** ein, oder klicken Sie auf die Schaltfläche **Durchsuchen...** , um eine Serverinstanz auszuwählen. Klicken Sie dann neben dem Textfeld **Pfad** auf die Schaltfläche **Durchsuchen...** , um das Zielprojekt anzugeben. Klicken Sie auf **Neues Projekt…** , um ein leeres Projekt als Zielprojekt zu erstellen, falls das Projekt noch nicht existiert. Das Projekt **MUSS** unter einem Ordner erstellt werden.  
+#### <a name="select-destination"></a>Ziel auswählen
+
+ Nachdem Sie die Paketquellen ausgewählt haben, klicken Sie auf die Schaltfläche **Weiter**, um zur Seite **Ziel auswählen** zu wechseln. Pakete müssen an ein Projekt im SSIS-Katalog (SSISDB) bereitgestellt werden. Stellen Sie vor dem Bereitstellen von Paketen sicher, dass das Zielprojekt bereits im SSIS-Katalog vorhanden ist. Erstellen Sie ein leeres Projekt, falls ein Projekt nicht vorhanden ist. Geben Sie auf der Seite **Ziel auswählen** den Servernamen in das Textfeld **Servername** ein, oder klicken Sie auf die Schaltfläche **Durchsuchen...**, um eine Serverinstanz auszuwählen. Klicken Sie dann auf die Schaltfläche **Durchsuchen...** neben dem Textfeld **Pfad**, um das Zielprojekt anzugeben. Wenn das Projekt nicht vorhanden ist, klicken Sie auf die Schaltfläche **Neues Projekt...**, um ein leeres Projekt als Zielprojekt zu erstellen. Das Projekt muss unter einem Ordner erstellt werden.  
   
-#### <a name="review-and-deploy"></a>Überprüfen und bereitstellen  
- Klicken Sie auf der Seite **Ziel auswählen** auf **Weiter** , um auf die Seite **Überprüfung** im **Bereitstellungs-Assistenten für Integration Services**zu wechseln. Auf der Seite zur Überprüfung können Sie sich den Bericht zur Bereitstellungsaktion ansehen. Klicken Sie nach der Überprüfung auf die Schaltfläche **Bereitstellen** , um die Bereitstellungsaktion auszuführen.  
+#### <a name="review-and-deploy"></a>Überprüfen und bereitstellen
+
+ Klicken Sie auf der Seite **Ziel auswählen** auf **Weiter** , um auf die Seite **Überprüfung** im **Bereitstellungs-Assistenten für Integration Services**zu wechseln. Auf der Seite zur Überprüfung können Sie sich den Bericht zur Bereitstellungsaktion ansehen. Klicken Sie nach der Überprüfung auf die Schaltfläche **Bereitstellen**, um die Bereitstellungsaktion auszuführen.  
   
-#### <a name="results"></a>Ergebnisse  
- Nachdem die Bereitstellung abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Auf der Seite **Ergebnisse** sehen Sie die Ergebnisse aus jedem Schritt des Bereitstellungsvorgangs. Klicken Sie auf der Seite **Ergebnisse** entweder auf **Bericht speichern** zum Speichern des Bereitstellungsberichts oder auf **Schließen** zum Schließen des Assistenten.  
+#### <a name="results"></a>Ergebnisse
+
+ Nachdem die Bereitstellung abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Überprüfen Sie die Ergebnisse der einzelnen Schritte im Bereitstellungsprozess auf der Seite **Ergebnisse**. Klicken Sie auf **Bericht speichern**, um den Bereitstellungsbericht zu speichern, oder auf **Schließen**, um den Assistenten zu schließen.  
 
 ## <a name="create-and-map-a-server-environment"></a>Erstellen und Zuordnen einer Serverumgebung
+
   Sie erstellen eine Serverumgebung, um Laufzeitwerte für Pakete festzulegen, die in einem auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitgestellten Projekt enthalten sind. Anschließend können Sie die Umgebungsvariablen Parametern für ein bestimmtes Paket, für Einstiegspunktpakete oder für alle Pakete in einem angegebenen Projekt zuordnen. Ein Einstiegspunktpaket ist in der Regel ein übergeordnetes Paket, von dem ein untergeordnetes Paket ausgeführt wird.  
   
 > [!IMPORTANT]  
 >  Ein Paket kann jeweils nur mit den Werten ausgeführt werden, die in einer einzelnen Serverumgebung enthalten sind.  
   
- Sie können Sichten nach einer Liste von Serverumgebungen, Umgebungsverweisen und Umgebungsvariablen abfragen. Sie können auch gespeicherte Prozeduren aufrufen, um Umgebungen, Umgebungsverweise und Umgebungsvariablen hinzuzufügen, zu löschen und zu ändern. Weitere Informationen finden Sie im Abschnitt **Serverumgebungen, Servervariablen und Serverumgebungsverweise** im [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
+ Sie können Sichten nach einer Liste von Serverumgebungen, Umgebungsverweisen und Umgebungsvariablen abfragen. Sie können auch gespeicherte Prozeduren aufrufen, um Umgebungen, Umgebungsverweise und Umgebungsvariablen hinzuzufügen, zu löschen und zu ändern. Weitere Informationen finden Sie im Abschnitt **Serverumgebungen, Servervariablen und Serverumgebungsverweise** im [SSIS-Katalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>So erstellen und verwenden Sie eine Serverumgebung  
   
-1.  Erweitern Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] den Knoten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Kataloge> **SSISDB** im Objekt-Explorer, und navigieren Sie zum Ordner **Umgebungen** für das Projekt, für das Sie eine Umgebung erstellen können.  
+1.  Erweitern Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] den Knoten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Kataloge **SSISDB** im Objekt-Explorer, und suchen Sie den Ordner **Umgebungen** des Projekts, für das Sie eine Umgebung erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Umgebungen**, und klicken Sie dann auf **Umgebung erstellen**.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Umgebungen** , und klicken Sie dann auf **Umgebung erstellen**.  
   
-3.  Geben Sie einen Namen für die Umgebung und optional eine Beschreibung ein, und klicken Sie dann auf **OK**.  
+3.  Geben Sie einen Namen für die Umgebung ein, und fügen Sie optional eine Beschreibung hinzu. Klicken Sie auf **OK**.  
   
 4.  Klicken Sie mit der rechten Maustaste auf die neue Umgebung, und klicken Sie dann auf **Eigenschaften**.  
   
 5.  Gehen Sie auf der Seite **Variablen** wie folgt vor, um eine Variable hinzuzufügen.  
   
-    1.  Wählen Sie den **Typ** für die Variable aus. Der Name der Variablen **muss nicht** mit dem Namen des Projektparameters übereinstimmen, den Sie der Variablen zuordnen.  
+    1.  Wählen Sie den **Typ** für die Variable aus. Der Name der Variablen muss nicht mit dem Namen des Projektparameters identisch sein, den Sie der Variablen zuordnen.  
   
     2.  Geben Sie eine optionale **Beschreibung** für die Variable ein.  
   
@@ -378,7 +389,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
     2.  Wählen Sie im Bereich **Anmeldenamen oder Rollen** den Benutzer oder die Rolle aus, dem bzw. der Sie Berechtigungen erteilen oder verweigern möchten.  
   
-    3.  Klicken Sie im Bereich **Explizit** neben den einzelnen Berechtigungen auf **Erteilen** oder **Verweigern** .  
+    3.  Wählen Sie im Bereich **Explizit** neben jeder Berechtigung die Optionen **Erteilen** oder **Verweigern** aus.  
   
 7.  Um ein Skript für die Umgebung zu erstellen, klicken Sie auf **Skript**. Das Skript wird standardmäßig in einem neuen Abfrage-Editor-Fenster angezeigt.  
   
@@ -393,7 +404,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 11. Klicken Sie mit der rechten Maustaste erneut auf das Projekt, und klicken Sie dann auf **Konfigurieren**.  
   
-12. Um die Umgebungsvariable einem Parameter zuzuordnen, den Sie dem Paket zur Entwurfszeit hinzugefügt haben, oder einem Parameter, der beim Konvertieren des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekts in das Projektbereitstellungsmodell generiert wurde, gehen Sie wie folgt vor.  
+12. Gehen Sie folgendermaßen vor, um die Umgebungsvariable einem Parameter zuzuordnen, den Sie dem Paket zur Entwurfszeit hinzugefügt haben, oder einem Parameter, der generiert wurde, als Sie das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt in das Projektbereitstellungsmodell konvertiert haben:
   
     1.  Klicken Sie auf der Seite **Parameter** auf der Registerkarte **Parameter** neben dem Feld **Wert** auf die Schaltfläche zum Durchsuchen.  
   
@@ -401,19 +412,20 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 13. Um die Umgebungsvariable einer Eigenschaft des Verbindungs-Managers zuzuordnen, gehen Sie wie folgt vor. Parameter für die Eigenschaften des Verbindungs-Managers werden automatisch auf dem SSIS-Server generiert.  
   
-    1.  Klicken Sie auf der Seite **Parameter** auf der Registerkarte **Verbindungs-Manager** neben dem Feld **Wert** auf die Schaltfläche zum Durchsuchen.  
+    1.  Klicken Sie auf der Registerkarte **Verbindungs-Manager** auf der Seite **Parameter** auf die Schaltfläche **Durchsuchen** neben dem Feld **Wert**.  
   
     2.  Klicken Sie auf **Umgebungsvariable verwenden**, und wählen Sie dann die Umgebungsvariable aus, die Sie erstellt haben.  
   
 14. Klicken Sie zweimal auf **OK** , um die Änderungen zu speichern.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Bereitstellen und Ausführen von SSIS-Paketen mithilfe von gespeicherten Prozeduren
-  Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt für die Verwendung des Projektbereitstellungsmodells konfigurieren, können Sie gespeicherte Prozeduren im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Katalog verwenden, um das Projekt bereitzustellen und die Pakete auszuführen. Informationen zum Projektbereitstellungsmodell finden Sie unter [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+
+  Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt für die Verwendung des Projektbereitstellungsmodells konfigurieren, können Sie gespeicherte Prozeduren im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Katalog verwenden, um das Projekt bereitzustellen und die Pakete auszuführen. Informationen zum Projektbereitstellungsmodell finden Sie unter [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md#compare-project-deployment-model-and-legacy-package-deployment-model).  
   
  Sie können auch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] zum Bereitstellen des Projekts und zum Ausführen der Pakete verwenden. Weitere Informationen finden Sie in den im Abschnitt **Siehe auch** aufgeführten Themen.  
   
 > [!TIP]
->  Die Transact-SQL-Anweisungen für die im nachstehenden Verfahren aufgelisteten gespeicherten Prozeduren – mit Ausnahme von catalog.deploy_project – können problemlos generiert werden, indem Sie folgende Schritte ausführen:  
+>  Die Transact-SQL-Anweisungen für die im nachstehenden Verfahren aufgelisteten gespeicherten Prozeduren – mit Ausnahme von catalog.deploy_project – können problemlos generiert werden, indem Sie folgende Schritte ausführen:
 > 
 >  1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Knoten **Integration Services-Kataloge** im Objekt-Explorer und navigieren Sie zu dem Paket, das Sie ausführen möchten.  
 > 2.  Klicken Sie mit der rechten Maustaste auf das Paket, und klicken Sie dann auf **Ausführen**.  
@@ -426,9 +438,9 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 1.  Rufen Sie [catalog.deploy_project &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) auf, um das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt bereitzustellen, das das Paket für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server enthält.  
   
-     Um den binären Inhalt der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projektbereitstellungsdatei abzurufen, verwenden Sie für den *@project_stream* -Parameter eine SELECT-Anweisung mit der OPENROWSET-Funktion und dem BULK-Rowsetanbieter. Der BULK-Rowsetanbieter ermöglicht es Ihnen, Daten aus einer Datei zu lesen. Das SINGLE_BLOB-Argument für den BULK-Rowsetanbieter gibt den Inhalt der Datendatei als einzeiliges, einspaltiges Rowset vom Typ "varbinary(max)" zurück. Weitere Informationen finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
+     Verwenden Sie zum Abrufen des binären Inhalts der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projektbereitstellungsdatei für den _\@project_stream_-Parameter eine SELECT-Anweisung mit der OPENROWSET-Funktion und dem BULK-Rowsetanbieter. Der BULK-Rowsetanbieter ermöglicht es Ihnen, Daten aus einer Datei zu lesen. Das SINGLE_BLOB-Argument für den BULK-Rowsetanbieter gibt den Inhalt der Datendatei als einzeiliges, einspaltiges Rowset vom Typ "varbinary(max)" zurück. Weitere Informationen finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
-     Im folgenden Beispiel wird das SSISPackages_ProjectDeployment-Projekt im Ordner „SSIS-Pakete“ auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt. Die Binärdaten werden aus der Projektdatei (SSISPackage_ProjectDeployment.ispac) gelesen und im *@ProjectBinary* -Parameter des Typs „varbinary(max)“ gespeichert. Der *@ProjectBinary* -Parameterwert wird dem *@project_stream* -Parameter zugewiesen.  
+     Im folgenden Beispiel wird das SSISPackages_ProjectDeployment-Projekt im Ordner „SSIS-Pakete“ auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt. Die Binärdaten werden aus der Projektdatei (SSISPackage_ProjectDeployment.ispac) gelesen und im _\@ProjectBinary-Parameter des Typs „varbinary(max)“ gespeichert. Der Parameterwert _\@ProjectBinary_ wird dem Parameter _\@project_stream_ zugewiesen.  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  
@@ -480,7 +492,8 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
     ```  
   
-### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>So stellen Sie ein Projekt mithilfe von gespeicherten Prozeduren zwischen Servern bereit  
+### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>So stellen Sie ein Projekt mithilfe von gespeicherten Prozeduren zwischen Servern bereit
+
  Sie können mit den gespeicherten Prozeduren [catalog.get_project &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md) und [catalog.deploy_project &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) ein Projekt von Server zu Server bereitstellen.  
   
  Bevor Sie die gespeicherten Prozeduren ausführen, müssen Sie die folgenden Schritte ausführen.  
@@ -547,7 +560,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], und klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt. Klicken Sie anschließend auf **In Projektbereitstellungsmodell konvertieren**.  
   
--   Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie anschließend die Option **Pakete importieren**aus.  
+-   Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit der rechten Maustaste auf den Knoten **Projekte** im **Integration Services-Katalog**, und wählen Sie **Pakete importieren** aus.  
   
  Abhängig davon, ob Sie den Assistenten zum Konvertieren von **Integration Services-Projekten** von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus.   
   

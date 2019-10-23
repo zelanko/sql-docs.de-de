@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121329"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710722"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-zu-Peer - Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,19 @@ ms.locfileid: "68121329"
   
 -   Der Verteilungs-Agent-Parameter **-SubscriptionStreams** und der Protokolllese-Agent-Parameter **-MaxCmdsInTran**.  
   
--   Die Artikeleigenschaften **@destination_owner** und **@destination_table** bezeichnet werden.
+-   Die Artikeleigenschaften `@destination_owner` und `@destination_table`.
 
 -   Die Peer-zu-Peer-Transaktionsreplikation unterstützt keine Erstellung von unidirektionalen Transaktionsabonnements an eine Peer-zu-Peer-Veröffentlichung.   
   
  Für folgende Eigenschaften gelten spezielle Bedingungen:  
   
--   Für die Veröffentlichungseigenschaft **@allow_initialize_from_backup** ist der Wert **true**bezeichnet werden.  
+-   Für die Veröffentlichungseigenschaft `@allow_initialize_from_backup` ist der Wert **true** erforderlich.  
   
--   Für die Artikeleigenschaft **@replicate_ddl** ist der Wert **true**erforderlich; für **@identityrangemanagementoption** ist der Wert **manual**erforderlich; und für **@status** muss der Wert auf **24** festgelegt werden.  
+-   Für die Artikeleigenschaft `@replicate_ddl` ist der Wert **true** erforderlich; für `@identityrangemanagementoption` ist der Wert **manual** erforderlich; und für `@status` muss die Option **24** festgelegt sein.  
   
--   Der Wert für die Artikeleigenschaften **@ins_cmd** , **@del_cmd** und **@upd_cmd** darf nicht auf **SQL**bezeichnet werden.  
+-   Der Wert für die Artikeleigenschaften `@ins_cmd`, `@del_cmd` und `@upd_cmd` darf nicht auf **SQL** festgelegt werden.  
   
--   Für die Abonnementeigenschaft **@sync_type** ist der Wert **none** oder **automatic**bezeichnet werden.  
+-   Für die Abonnementeigenschaft `@sync_type` ist der Wert **none** oder **automatic** erforderlich.  
   
 ### <a name="maintenance-considerations"></a>Überlegungen in Bezug auf die Wartung  
  Für einige Aktionen muss das System in den inaktiven Status versetzt werden. Dazu müssen alle Aktivitäten an veröffentlichten Tabellen in allen Knoten beendet werden, und es muss sichergestellt werden, dass jeder Knoten alle Änderungen von allen anderen Knoten erhalten hat.  

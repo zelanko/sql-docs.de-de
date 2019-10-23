@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0a8e9207e22a0e9bb4fbb75d872697fc9d2ff76e
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476307"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452834"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68476307"
 
 Zeigt den verwendeten Speicherplatz im Resultsetcache für eine Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Datenbank.
   
-![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,16 +33,9 @@ Zeigt den verwendeten Speicherplatz im Resultsetcache für eine Azure [!INCLUDE[
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 Der `DBCC SHOWRESULTCACHESPACEUSED`-Befehl akzeptiert keine Parameter und gibt den verwendeten Speicherplatz der Datenbank zurück, für die der Befehl ausgeführt wird.
-
-Die maximale Größe des Resultsetcaches beträgt 1 TB pro Datenbank.  Azure SQL Data Warehouse entfernt automatisch Einträge im Resultsetcache:
-
-- Alle 48 Stunden, wenn das Resultset nicht verwendet wurde.
-- Bei Annäherung an die maximale Größe für den Resultsetcache.
-
-Benutzer können den Resultsetcache für eine Datenbank manuell leeren, indem sie das Feature für den Resultsetcache deaktivieren oder den Befehl `DBCC DROPRESULTSETCACHE` verwenden.   Das Anhalten einer Datenbank führt nicht dazu, dass der Resultsetcache geleert wird.  
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -60,6 +53,7 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
 
 ## <a name="see-also"></a>Siehe auch
 
+[Leistungsoptimierung mit Resultsetcaching](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

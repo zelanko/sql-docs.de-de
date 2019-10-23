@@ -1,34 +1,36 @@
 ---
-title: Erstellen eines Ressourcenpools für R und python
-description: Definieren Sie einen SQL Server Ressourcenpool für R-oder python-Prozesse auf einer SQL Server Datenbank-Engine-Instanz.
+title: Erstellen eines Ressourcenpools für python und R
+description: Erfahren Sie, wie Sie einen Ressourcenpool für die Verwaltung von Python-und R-Arbeits Auslastungen in SQL Server Machine Learning Services erstellen und verwenden können.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 10/01/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 882b9b15fbba567f30172d625af3867b27ae387e
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 8e8c48665c2928a0c8133892cc0029b4bd82c4cc
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715905"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71714324"
 ---
-# <a name="how-to-create-a-resource-pool-for-sql-server-machine-learning-services"></a>Erstellen eines Ressourcenpools für SQL Server Machine Learning Services
+# <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>Erstellen eines Ressourcenpools für SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird beschrieben, wie Sie einen Ressourcenpool speziell für die Verwaltung von Machine Learning-Workloads für R und python in SQL Server erstellen und verwenden können. Es wird davon ausgegangen, dass Sie die Machine Learning-Features bereits installiert und aktiviert haben und die Instanz neu konfigurieren möchten, um eine präzisere Verwaltung der Ressourcen zu unterstützen, die von einem externen Prozess wie R oder python verwendet werden.
+Erfahren Sie, wie Sie einen Ressourcenpool für die Verwaltung von Python-und R-Arbeits Auslastungen in SQL Server Machine Learning Services erstellen und verwenden können. 
 
 Der Prozess umfasst mehrere Schritte:
 
-1.  Überprüfen Sie den Status vorhandener Ressourcenpools. Es ist wichtig, dass Sie verstehen, welche Dienste vorhandene Ressourcen verwenden.
-2.  Ändern Sie Server Ressourcenpools.
-3.  Erstellen Sie einen neuen Ressourcenpool für externe Prozesse.
-4.  Erstellen Sie eine Klassifizierungs Funktion, um externe Skript Anforderungen zu identifizieren.
-5.  Vergewissern Sie sich, dass der neue externe Ressourcenpool R-oder python-Aufträge von den angegebenen Clients oder Konten Erfassungs basiert.
+1. Überprüfen Sie den Status vorhandener Ressourcenpools. Es ist wichtig, dass Sie verstehen, welche Dienste vorhandene Ressourcen verwenden.
+2. Ändern Sie Server Ressourcenpools.
+3. Erstellen Sie einen neuen Ressourcenpool für externe Prozesse.
+4. Erstellen Sie eine Klassifizierungs Funktion, um externe Skript Anforderungen zu identifizieren.
+5. Vergewissern Sie sich, dass der neue externe Ressourcenpool R-oder python-Aufträge von den angegebenen Clients oder Konten Erfassungs basiert.
 
-##  <a name="bkmk_ReviewStatus"></a>Überprüfen des Status der vorhandenen Ressourcenpools
+<a name="bkmk_ReviewStatus"></a>
+
+##  <a name="review-the-status-of-existing-resource-pools"></a>Überprüfen des Status vorhandener Ressourcenpools
   
 1.  Verwenden Sie eine-Anweisung wie die folgende, um die Ressourcen zu überprüfen, die dem Standard Pool für den-Server zugeordnet sind.
   
@@ -162,9 +164,9 @@ Um zu überprüfen, ob die Änderungen vorgenommen wurden, sollten Sie die Konfi
 
     |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |1|internal|Mittel|25|0|0|0|0|1|2|
-    |2|default|Mittel|25|0|0|0|0|2|2|
-    |256|ds_wg|Mittel|25|0|0|0|0|2|256|
+    |1|Interner Pool (internal)|Medium|25|0|0|0|0|1|2|
+    |2|default|Medium|25|0|0|0|0|2|2|
+    |256|ds_wg|Medium|25|0|0|0|0|2|256|
   
 2.  Verwenden Sie die neue Katalog Sicht [sys. resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), um alle externen Ressourcenpools anzuzeigen.
   
@@ -193,9 +195,9 @@ Um zu überprüfen, ob die Änderungen vorgenommen wurden, sollten Sie die Konfi
 
 Weitere Informationen zum Verwalten von Server Ressourcen finden Sie unter:
 
-+  [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md) 
++ [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md) 
 + [Resource Governor zugehörige dynamische Verwaltungs &#40;Sichten Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 Eine Übersicht über die Ressourcenkontrolle für Machine Learning finden Sie unter:
 
-+  [Ressourcenkontrolle für Machine Learning Services](../../advanced-analytics/r/resource-governance-for-r-services.md)
++ [Verwalten von Python-und R-Arbeits Auslastungen mit Resource Governor in SQL Server Machine Learning Services](resource-governor.md)

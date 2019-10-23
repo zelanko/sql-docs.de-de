@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 01654df047d2dc78014c6e8c41edbb370d15da60
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: HT
+ms.openlocfilehash: d8422146e3569ff991ef16179e54f0f78961fc79
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874393"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016866"
 ---
 # <a name="download-and-install-sqlpackage"></a>Herunterladen und Installieren von „Sqlpackage“
 
@@ -24,10 +24,10 @@ Laden Sie die neueste.NET Framework-Version und die MacOS- und Linux-Vorschau he
 
 |Platform|Herunterladen|Veröffentlichungsdatum|Versionsoptionen|Erstellen
 |:---|:---|:---|:---|:---|
-|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2102893)|6. September 2019|18,3|15.0.4532.1|
-|macOS .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102894)|6. September 2019| 18,3|15.0.4532.1|
-|Linux .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102978)|6. September 2019| 18,3|15.0.4532.1|
-|Windows .net Core (Vorschau)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102979)|6. September 2019| 18,3|15.0.4532.1|
+|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2102893)|13. September 2019|18.3.1|15.0.4538.1|
+|macOS .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102894)|13. September 2019| 18.3.1|15.0.4538.1|
+|Linux .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102978)|13. September 2019| 18.3.1|15.0.4538.1|
+|Windows .net Core (Vorschau)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102979)|13. September 2019| 18.3.1|15.0.4538.1|
 
 Weitere Informationen über die neueste Version finden Sie in den [Versionshinweisen](release-notes-sqlpackage.md).
 
@@ -46,7 +46,7 @@ Dieses Release von sqlpackage enthält das standardmäßige Windows Installation
 
 1. Laden Sie [„sqlpackage“ für Windows](https://go.microsoft.com/fwlink/?linkid=2102979) herunter.
 2. Zum Extrahieren der Datei klicken Sie mit der rechten Maustaste auf die Datei in Windows-Explorer, und wählen Sie "Alle extrahieren..." aus, und wählen Sie das Zielverzeichnis aus.
-3. Öffnen Sie ein neues Terminal Fenster, und wechseln Sie zu dem Speicherort, an dem Sqlpackage entfernt wurde:
+3. Öffnen Sie ein neues Terminal Fenster, und wechseln Sie zu dem Speicherort, an dem Sqlpackage extrahiert wurde:
 
    **ZIP-Installation:**
 

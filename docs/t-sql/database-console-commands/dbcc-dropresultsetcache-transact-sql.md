@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e0f4646d6c67931bbbede9b44b97a52251b1b024
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 86320f3c3f8288d92234356d43b1a7e8559a4929
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809914"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452850"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE  (Transact-SQL)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68809914"
 
 Entfernt alle Einträge im Resultsetcache aus einer Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Datenbank.
   
-![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,9 +37,18 @@ DBCC DROPRESULTSETCACHE
 ## <a name="permissions"></a>Berechtigungen
 
 Erfordert die Mitgliedschaft in der festen Serverrolle DB_OWNER.
-  
+
+## <a name="remarks"></a>Remarks
+
+- Dieser Befehl leert den Resultsetcache für alle Abfragen.  
+
+- Durch das Deaktivieren der Resultsetcache-Funktion für eine Datenbank werden auch alle zwischengespeicherten Ergebnisse gelöscht.  
+
+- Wenn Sie eine Datenbank mit aktiviertem Resultsetcache anhalten, werden die im Cache gespeicherten Ergebnisse nicht gelöscht.  
+
 ## <a name="see-also"></a>Siehe auch
 
+[Leistungsoptimierung mit Resultsetcaching](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

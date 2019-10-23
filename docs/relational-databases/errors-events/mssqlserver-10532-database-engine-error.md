@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fa07d4adada303c9e1b2470879574f554992bf36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 050f1c4e1c47458e513e02d16eb3ea6dc7e842a8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060758"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005986"
 ---
-# <a name="mssqlserver10532"></a>MSSQLSERVER_10532
+# <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -30,13 +30,13 @@ ms.locfileid: "68060758"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|PG_NO_ELIGIBLE_STMT|  
-|Meldungstext|Die Planhinweisliste „%.\*ls“ kann nicht erstellt werden, weil der mit **@plan_handle** angegebene Batch bzw. das Modul keine geeignete Anweisung für eine Planhinweisliste enthält. Geben Sie einen anderen Wert für **@plan_handle** an.|  
+|Meldungstext|Die Planhinweisliste '%.\*ls' kann nicht erstellt werden, weil der mit **\@plan_handle** angegebene Batch bzw. das Modul keine geeignete Anweisung für eine Planhinweisliste enthält. Geben Sie einen anderen Wert für **\@plan_handle** an.|  
   
 ## <a name="explanation"></a>Erklärung  
-Der mit **@plan_handle** angegebene Batch bzw. das Modul enthält keine geeignete Anweisung für eine Planhinweisliste.  
+Der mit **\@plan_handle** angegebene Batch bzw. das Modul enthält keine geeignete Anweisung für eine Planhinweisliste.  
   
 ## <a name="user-action"></a>Benutzeraktion  
-Geben Sie einen anderen Wert für **@plan_handle** an.  
+Geben Sie einen anderen Wert für **\@plan_handle** an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Planhinweislisten](~/relational-databases/performance/plan-guides.md)  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: c70ba17073030f4fbbe4851fffb84a4c4a30fbbc
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 817367c20c2495f29e5d889cc64e5c13a43e9b1e
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988139"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278249"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Konfigurieren von SQL Server-Containerimages in Docker
 
@@ -25,6 +25,9 @@ In diesem Artikel wird erläutert, wie Sie das [mssql-server-linux-Containerimag
 
 > [!NOTE]
 > In diesem Artikel liegt der Fokus auf dem Image „mssql-sever-linux“. Das Windows-Image wird hier zwar nicht behandelt, aber auf der [Docker Hub-Seite zu „mssql-server-windows“](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) erhalten Sie weitere Informationen.
+
+> [!IMPORTANT]
+> Bevor Sie sich für die Ausführung eines SQL Server-Containers für Anwendungsfälle in der Produktion entscheiden, lesen Sie unsere [Richtlinie zur Unterstützung von SQL Server-Containern](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server), um sicherzustellen, dass Sie mit einer unterstützten Konfiguration arbeiten.
 
 ## <a name="pull-and-run-the-container-image"></a>Übertragen mithilfe von Pull und Ausführen von Containerimages
 

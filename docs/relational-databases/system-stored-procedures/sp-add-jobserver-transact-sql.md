@@ -1,5 +1,5 @@
 ---
-title: Sp_add_jobserver (Transact-SQL) | Microsoft-Dokumentation
+title: sp_add_jobserver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078201"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305237"
 ---
-# <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
+# <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Weist einem Auftrag einen bestimmten Zielserver zu.  
@@ -40,14 +40,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` Die ID des Auftrags. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id` die ID des Auftrags. *job_id* ist vom Datentyp **uniqueidentifier**. der Standardwert ist NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` den Namen des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+>  Es muss entweder *job_id* oder *job_name* angegeben werden, aber beide können nicht angegeben werden.  
   
-`[ @server_name = ] 'server'` Der Name des Servers, an dem Ziel des Auftrags. *Server* ist **nvarchar(30)** , hat den Standardwert ist N'(Local)' ". *Server* kann es sich um **(LOCAL)** für einen lokalen Server oder den Namen eines vorhandenen Zielservers.  
+`[ @server_name = ] 'server'` den Namen des Servers an, an dem der Auftrag ausgerichtet werden soll. der *Server* ist vom Datentyp **nvarchar (30)** , der Standardwert ist N ' (local) '. der *Server* kann entweder **(local)** für einen lokalen Server oder der Name eines vorhandenen Zielservers sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -56,7 +56,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  None  
   
 ## <a name="remarks"></a>Hinweise  
- **@automatic_post** vorhanden **Sp_add_jobserver**, jedoch nicht unter den Argumenten aufgeführt. **@automatic_post** ist für die interne Verwendung reserviert.  
+ **@no__t 1automatic_post** ist in **sp_add_jobserver**vorhanden, wird aber nicht unter Argumente aufgeführt. **\@automatic_post** ist für die interne Verwendung reserviert.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
@@ -71,7 +71,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_add_jobserver** für Aufträge, die mehrere Server einbeziehen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_add_jobserver** für Aufträge ausführen, die mehrere Server umfassen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -79,7 +79,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Im folgenden Beispiel wird die Ausführung des Auftrags `NightlyBackups` dem lokalen Server zugewiesen.  
   
 > [!NOTE]  
->  In diesem Beispiel wird vorausgesetzt, dass die `NightlyBackups` Auftrag ist bereits vorhanden.  
+>  In diesem Beispiel wird davon ausgegangen, dass der `NightlyBackups`-Auftrag bereits vorhanden ist.  
   
 ```  
 USE msdb ;  

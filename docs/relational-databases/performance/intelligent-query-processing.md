@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65395c9ab5b97d27f38497b64bbab9c7b6a072a3
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: be17617a400f760d0c5cd5eaa98124d066f19a4c
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553289"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713218"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 
@@ -49,7 +49,7 @@ In der folgenden Tabelle sind Details zu allen Features der intelligenten Abfrag
 ## <a name="batch-mode-adaptive-joins"></a>Adaptive Joins im Batchmodus
 Mit dem Feature „Adaptive Joins im Batchmodus“ wird es ermöglicht, die Wahl der Join-Methode ([Hashjoin oder Join geschachtelter Schleifen](../../relational-databases/performance/joins.md)) auf den Zeitpunkt **nach** der Überprüfung der ersten Eingabe zu verzögern, indem ein einzelner zwischengespeicherter Plan verwendet wird. Der Operator für adaptive Joins definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. Daher kann Ihr Plan während der Ausführung dynamisch zu einer passenderen Joinstrategie wechseln.
 
-Weitere Informationen finden Sie unter [Grundlegendes zu adaptiven Joins](../../relational-databases/performance/joins.md#adaptive).
+Weitere Informationen, z. B. zum Deaktivieren adaptiver Joins ohne Änderung des Kompatibilitätsgrads, finden Sie unter [Grundlegendes zu adaptiven Joins](../../relational-databases/performance/joins.md#adaptive).
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Feedback zur Speicherzuweisung im Batchmodus
 Der Plan nach der Ausführung einer Abfrage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält den für die Ausführung mindestens erforderlichen Speicherplatz und die ideale Speicherzuweisungsgröße, sodass alle Zeilen in den Speicher passen. Es gibt Leistungseinbußen, wenn die Speicherzuweisungsgrößen falsch sind. Zu große Zuweisungen führen zu verschwendetem Speicherplatz und geringerer Parallelität. Nicht ausreichende Speicherzuweisungen führen zu teuren Überläufen auf den Datenträger. Für wiederholte Workloads berechnet das Feedback zur Speicherzuweisung im Batchmodus den tatsächlich erforderlichen Speicherplatz für eine Abfrage neu und aktualisiert anschließend den Zuweisungswert des zwischengespeicherten Plans. Wenn eine identische Abfrageanweisung ausgeführt wird, verwendet die Abfrage die angepasste Speicherzuweisungsgröße. Dadurch werden zu hohe Speicherzuweisungen verringert, die die Parallelität beeinträchtigen, und Probleme bei zu gering geschätzten Speicherzuweisungen behoben, die teuren Überläufe auf den Datenträger verursachen.
@@ -95,7 +95,7 @@ Das Feedback zur Speicherzuweisung kann im Datenbank- oder Anweisungsbereich dea
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
@@ -123,7 +123,7 @@ Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfig
 
 ## <a name="row-mode-memory-grant-feedback"></a>Feedback zur Speicherzuweisung im Zeilenmodus
 
-**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (öffentliche Vorschauversion)
 
 > [!NOTE]
 > Feedback zur Speicherzuweisung im Zeilenmodus ist eine öffentliche Previewfunktion.  
@@ -173,7 +173,6 @@ OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfiguration oder einer Ablaufverfolgungsflageinstellung.
 
 ## <a name="interleaved-execution-for-mstvfs"></a>Verschachtelte Ausführung für MSTVFs
-
 Bei der verschachtelten Ausführung verwenden Sie die tatsächliche Zeilenanzahl aus der Funktion, um besser informierte Entscheidungen zum Downstream-Abfrageplan zu treffen. Weitere Informationen zu Tabellenwertfunktionen mit mehreren Anweisungen (MSTVFs) finden Sie unter [Tabellenwertfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 Eine verschachtelte Ausführung ändert die unidirektionale Grenze zwischen der Optimierungs- und der Ausführungsphase für eine Ausführung mit einer Abfrage. Zudem können Pläne damit auf Grundlage der überarbeiteten Kardinalitätsschätzungen angepasst werden. Wenn Sie bei der Optimierung auf einen möglichen Kandidaten für eine verschachtelte Ausführung (bei der es sich aktuell um **Tabellenfunktionen mit mehreren Anweisungen (MSTVFs)** handelt) stoßen, wird die Optimierung unterbrochen, die entsprechende Unterstruktur ausgeführt, die genauen Kardinalitätsschätzungen erfasst, und anschließend wird die Optimierung für Downstreamvorgänge wiederaufgenommen.   
@@ -238,14 +237,13 @@ Eine Anweisung mit `OPTION (RECOMPILE)` erstellt einen neuen Plan mit der überl
 Pläne mit der verschachtelten Ausführung können erzwungen werden. Der Plan ist die Version mit angepassten Kardinalitätsschätzungen auf Grundlage der ersten Ausführung.    
 
 ### <a name="disabling-interleaved-execution-without-changing-the-compatibility-level"></a>Deaktivieren von geschachtelte Ausführung ohne Änderung des Kompatibilitätsgrads
-
 Geschachtelte Ausführung kann im Datenbank- oder Anweisungsbereich deaktiviert werden, während der Datenbankkompatibilitätsgrad weiterhin bei 140 und höher bleibt.  Um geschachtelte Ausführung für alle Abfrageausführungen zu deaktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
 
 ```sql
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
@@ -256,7 +254,7 @@ Um geschachtelte Ausführung für alle Abfrageausführungen wieder zu aktivieren
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
@@ -280,11 +278,9 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 
 Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfiguration oder einer Ablaufverfolgungsflageinstellung.
 
-
 ## <a name="table-variable-deferred-compilation"></a>Verzögerte Kompilierung von Tabellenvariablen
 
-> [!NOTE]
-> Die verzögerte Kompilierung von Tabellenvariablen ist ein Feature in der öffentlichen Preview.  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (öffentliche Vorschauversion)
 
 Die verzögerte Kompilierung von Tabellenvariablen verbessert die Qualität des Abfrageplans und die Gesamtleistung für Abfragen mit Verweisen auf Tabellenvariablen. Während der Optimierung und der ersten Kompilierung propagiert diese Funktion Kardinalitätsschätzungen, die auf tatsächlichen Tabellenvariablen-Zeilenzahlen basieren. Diese genauen Zeilenzahlinformationen werden für die Optimierung der nachgelagerten Planvorgänge verwendet.
 
@@ -296,8 +292,7 @@ Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvar
 
 ## <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
-> [!NOTE]
-> Das Inlining benutzerdefinierter Skalarfunktion ist eine Previewfunktion.  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (öffentliche Vorschauversion)
 
 Das skalare UDF-Inlining wandelt [skalare UDFs](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) automatisch in relationale Ausdrücke um. Diese werden in die aufrufende SQL-Abfrage eingebettet. Diese Transformation verbessert die Leistung von Workloads, die skalare UDFs nutzen. Skalares UDF-Inlining ermöglicht eine kostenbasierte Optimierung der Vorgänge innerhalb von UDFs. Die Ergebnisse sind effiziente, mengenorientierte und parallele statt ineffiziente, iterative, serielle Ausführungspläne. Dieses Feature ist standardmäßig unter dem Datenbank-Kompatibilitätsgrad 150 aktiviert.
 
@@ -305,8 +300,7 @@ Weitere Informationen finden Sie unter [Inlining benutzerdefinierter Skalarfunkt
 
 ## <a name="approximate-query-processing"></a>Geschätzte Abfrageverarbeitung
 
-> [!NOTE]
-> **APPROX_COUNT_DISTINCT** ist eine öffentliche Previewfunktion.  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (öffentliche Vorschauversion)
 
 Die geschätzte Abfrageverarbeitung ist eine neue Featurefamilie. Sie stellt Aggregationen über große Datasets hinweg bereit, bei denen die Reaktionsfähigkeit wichtiger ist als die absolute Präzision. Ein Beispiel ist die Berechnung eines **COUNT(DISTINCT())** über 10 Milliarden Zeilen für die Anzeige auf einem Dashboard. In diesem Fall ist absolute Genauigkeit nicht wichtig, aber die Reaktionsfähigkeit ist es jedoch. Diese neue **APPROX_COUNT_DISTINCT**-Aggregatfunktion gibt die ungefähre Anzahl von eindeutigen Ungleich-Null-Werten in einer Gruppe zurück.
 
@@ -314,13 +308,11 @@ Weitere Informationen finden Sie unter [APPROX_COUNT_DISTINCT (Transact-SQL)](..
 
 ## <a name="batch-mode-on-rowstore"></a>Batchmodus bei Rowstore 
 
-> [!NOTE]
-> Batchmodus bei Rowstore ist eine öffentliche Previewfunktion.  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (öffentliche Vorschauversion) 
 
 Batchmodus bei Rowstore ermöglicht die Ausführung im Batchmodus für Analyseworkloads, die keine Columnstore-Indizes erfordern.  Dieses Feature unterstützt die Ausführung im Batchmodus und Bitmapfilter für On-Disk-Heaps und B-Struktur-Indizes. Batchmodus bei Rowstore ermöglicht die Unterstützung aller vorhandenen batchmodusfähigen Operatoren.
 
 ### <a name="background"></a>Hintergrund
-
 Mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde ein neues Feature zur Beschleunigung analytischer Workloads eingeführt: Columnstore-Indizes. Wir haben die Anwendungsfälle erweitert und die Leistung von Columnstore-Indizes in allen nachfolgenden Releases verbessert. Bisher wurden diese Funktionen so dargestellt und dokumentiert, als ob es sich um genau ein Feature handeln würde. Sie erstellen die Columnstore-Indizes in Ihren Tabellen. Und Ihre analytische Workload wird schneller ausgeführt. Es gibt jedoch zwei miteinander zusammenhängende, aber unterschiedliche Gruppen von Technologien:
 - **Columnstore**-Indizes erlauben Analyseabfragen nur den Zugriff auf die Daten in den Spalten, die sie benötigen. Die Seitenkomprimierung im Spaltenspeicherformat ist ebenfalls effektiver als die Komprimierung in traditionellen **Rowstore**-Indizes. 
 - Mit der Verarbeitung im **Batchmodus** verarbeiten Abfrageoperatoren Daten effizienter. Die Verarbeitung erfolgt für ein Batch an Zeilen und nicht für jede Zeile einzeln. Zahlreiche weitere Verbesserungen der Skalierbarkeit sind an die Batchmodusverarbeitung gebunden. Weitere Informationen zum Batchmodus finden Sie unter [Ausführungsmodi](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
@@ -342,7 +334,6 @@ Columnstore-Indizes sind keine gute Option für einige Anwendungen. Eine Anwendu
 Für einige hybride Transaktions-/Analyseworkloads wird der Vorteil von Columnstore-Indizes für Analyseabfragen durch den Mehraufwand bei den Transaktionsaspekten einer Workload zunichte gemacht. Solche Szenarien können die CPU-Auslastung allein durch die Batchverarbeitung verbessern. Aus diesem Grund berücksichtigt der Batchmodus des Rowstore-Features den Batchmodus für alle Abfragen. Es spielt keine Rolle, welche Indizes beteiligt sind.
 
 ### <a name="workloads-that-might-benefit-from-batch-mode-on-rowstore"></a>Workloads, die vom Batchmodus auf Rowstore profitieren können
-
 Die folgenden Workloads können vom Batchmodus auf Rowstore profitieren:
 * Ein signifikanten Teil der Workload besteht aus analytischen Abfragen. Normalerweise haben diese Abfragen Operatoren wie Joins oder Aggregate, die Hunderttausende von Zeilen oder mehr verarbeiten.
 * Die Workload ist CPU-gebunden. Wenn der Engpass E/A ist, empfehlen wir weiterhin, dass Sie einen Columnstore-Index nach Möglichkeit in Betracht ziehen.
@@ -352,7 +343,6 @@ Die folgenden Workloads können vom Batchmodus auf Rowstore profitieren:
 > Batchmodus bei Rowstore kann nur bei der Verringerung des CPU-Verbrauchs helfen. Wenn Ihr Engpass E/A-bezogen ist und Daten nicht bereits zwischengespeichert werden („kalter“ Cache), verbessert Batchmodus bei Rowstore die verstrichene Zeit nicht. Ähnlich gilt, dass, wenn auf dem Computer nicht genügend Arbeitsspeicher zum Zwischenspeichern aller Daten vorhanden ist, eine Leistungsverbesserung unwahrscheinlich ist.
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>Welche Änderungen mit dem Batchmodus auf Rowstore verbunden sind
-
 Vom Wechsel zum Kompatibilitätsgrad 150 abgesehen, müssen Sie auf Ihrer Seite nichts ändern, um den Batchmodus auf Rowstore für mögliche Workloads zu aktivieren.
 
 Auch wenn eine Abfrage keine Tabelle mit einem Columnstore-Index beinhaltet, verwendet der Abfrageprozessor jetzt Heuristik, um zu entscheiden, ob der Batchmodus berücksichtigt wird. Die Heuristik umfasst diese Überprüfungen:
@@ -361,18 +351,20 @@ Auch wenn eine Abfrage keine Tabelle mit einem Columnstore-Index beinhaltet, ver
 
 Wenn der Batch-modus bei Rowstow verwendet wird, sehen Sie den tatsächlichen Ausführungsmodus als **Batchmodus** im Abfrageplan. Der Scan-Operator verwendet den Batchmodus für On-Disk-Heaps und B-Struktur-Indizes. Diese Überprüfung im Batchmodus kann Batchmodus-Bitmapfilter auswerten. Vielleicht finden Sie auch andere Batchmodusoperatoren im Plan. Beispielsweise Hashjoins, hashbasierte Aggregate, Sortierungen, Fensteraggregate, Filter, Verkettung und Skalarwertberechnungs-Operatoren.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Remarks
+Abfragepläne verwenden nicht immer den Batchmodus. Der Abfrageoptimierer entscheidet möglicherweise, dass der Batchmodus für die Abfrage nicht sinnvoll ist. 
 
-* Abfragepläne verwenden nicht immer den Batchmodus. Der Abfrageoptimierer entscheidet möglicherweise, dass der Batchmodus für die Abfrage nicht sinnvoll ist. 
-* Der Suchbereich des Abfrageoptimierers ändert sich. Wenn Sie also einen Zeilenmodusplan erhalten, ist er möglicherweise nicht derselbe wie der Plan, den Sie in einem niedrigeren Kompatibilitätsgrad erhalten. Und wenn Sie einen Batchmodusplan erhalten, ist er möglicherweise nicht derselbe wie der Plan, den Sie mit einem Columnstore-Index erhalten. 
-* Aufgrund des neuen Batchmodus-Rowstore-Scans können Pläne sich auch für Abfragen ändern, die Columnstore- und Rowstore-Indizes mischen.
-* Aktuell bestehen folgende Einschränkungen für den neuen Batchmodus bei Rowstorescans: 
-    * Er funktioniert nicht bei In-Memory-OLTP-Tabellen und kann ausschließlich für Indizes verwendet werden, die sich auf Datenträgerheaps oder in B-Strukturen befinden. 
-    * Er funktioniert auch nicht, wenn eine LOB-Spalte abgerufen oder gefiltert wird. Diese Einschränkung betrifft Spaltensätze mit geringer Dichte und XML-Spalten.
-* Es gibt Abfragen, für die der Batchmodus auch bei Columnstore-Indizes nicht verwendet wird. Beispiele sind Abfragen, die Cursor enthalten. Dieselben Ausschlüsse gelten auch für den Batchmodus bei Rowstore.
+Der Suchbereich des Abfrageoptimierers ändert sich. Wenn Sie also einen Zeilenmodusplan erhalten, ist er möglicherweise nicht derselbe wie der Plan, den Sie in einem niedrigeren Kompatibilitätsgrad erhalten. Und wenn Sie einen Batchmodusplan erhalten, ist er möglicherweise nicht derselbe wie der Plan, den Sie mit einem Columnstore-Index erhalten. 
+
+Aufgrund des neuen Batchmodus-Rowstore-Scans können Pläne sich auch für Abfragen ändern, die Columnstore- und Rowstore-Indizes mischen.
+
+Aktuell bestehen folgende Einschränkungen für den neuen Batchmodus bei Rowstorescans: 
+- Er funktioniert nicht bei In-Memory-OLTP-Tabellen und kann ausschließlich für Indizes verwendet werden, die sich auf Datenträgerheaps oder in B-Strukturen befinden. 
+- Er funktioniert auch nicht, wenn eine LOB-Spalte abgerufen oder gefiltert wird. Diese Einschränkung betrifft Spaltensätze mit geringer Dichte und XML-Spalten.
+
+Es gibt Abfragen, für die der Batchmodus auch bei Columnstore-Indizes nicht verwendet wird. Beispiele sind Abfragen, die Cursor enthalten. Dieselben Ausschlüsse gelten auch für den Batchmodus bei Rowstore.
 
 ### <a name="configure-batch-mode-on-rowstore"></a>Konfigurieren des Batchmodus bei Rowstore
-
 Die datenbankweite **BATCH_MODE_ON_ROWSTORE**-Konfiguration ist standardmäßig aktiviert. Sie deaktiviert den Batchmodus bei Rowstore, ohne dass eine Änderung des Datenbank-Kompatibilitätgrads erforderlich ist:
 
 ```sql

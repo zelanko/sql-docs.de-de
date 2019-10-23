@@ -12,18 +12,18 @@ helpviewer_keywords:
 - C2WTS
 - WSS_WPG
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e08be032df493913cc6cebf5ae29d583f26c86ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81bc6c12720d4b841e21191db5811d583d4c5edc
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096552"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952274"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) und Reporting Services
-  Claims to Windows Token Service (c2WTS) von SharePoint ist erforderlich, mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus sollten Sie Windows-Authentifizierung für Datenquellen verwenden, die außerhalb der SharePoint-Farm liegen. Dies gilt auch, wenn der Benutzer über die Windows-Authentifizierung auf die Datenquellen zugreift, weil die Kommunikation zwischen dem Web-Front-End (WFE) und dem gemeinsamen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst immer der forderungsbasierten Authentifizierung unterliegt.  
+  Der SharePoint-claims to Windows Token Service (c2WTS) ist mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-SharePoint-Modus erforderlich, wenn Sie die Windows-Authentifizierung für Datenquellen verwenden möchten, die sich außerhalb der SharePoint-Farm befinden. Dies gilt auch, wenn der Benutzer über die Windows-Authentifizierung auf die Datenquellen zugreift, weil die Kommunikation zwischen dem Web-Front-End (WFE) und dem gemeinsamen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst immer der forderungsbasierten Authentifizierung unterliegt.  
   
  c2WTS wird auch dann benötigt, auch sich die Datenquelle(n) auf demselben Computer wie der gemeinsame Dienst befinden. In diesem Szenario ist jedoch keine eingeschränkte Delegierung erforderlich.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66096552"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
   
 > [!NOTE]  
->  Hinweis: Einige der Konfigurationsschritte ändern möglicherweise oder funktionieren möglicherweise nicht in bestimmten farmtopologien. Bei der Installation eines einzelnen Servers werden beispielsweise keine Windows Identity Foundations-c2WTS-Dienste unterstützt, sodass Claims to Windows Token-Delegierungsszenarien innerhalb dieser Farmkonfiguration nicht zulässig sind.  
+>  Hinweis: Einige der Konfigurationsschritte können sich ändern oder in bestimmten Farmtopologien möglicherweise nicht funktionieren. Bei der Installation eines einzelnen Servers werden beispielsweise keine Windows Identity Foundations-c2WTS-Dienste unterstützt, sodass Claims to Windows Token-Delegierungsszenarien innerhalb dieser Farmkonfiguration nicht zulässig sind.  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>Grundlegende Schritte für die c2WTS-Konfiguration  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66096552"
   
     -   Anmelden als Dienst  
   
-     Das Konto, das Sie für c2WTS verwenden, außerdem muss für die eingeschränkte Delegierung mit Protokollübergang konfiguriert werden und benötigt Berechtigungen, um die Delegierung an Dienste, die dies erforderlich ist, für die Kommunikation mit (d. h. SQL Server-Engine, SQL Server Analysis Services). Zum Konfigurieren der Delegierung können Sie das Active Directory-Benutzer und Computer-Snap-in.  
+     Das Konto, das Sie für c2WTS verwenden, muss außerdem für die eingeschränkte Delegierung mit Protokoll Übergang konfiguriert werden. Außerdem benötigt es Berechtigungen zum Delegieren an die Dienste, mit denen es kommunizieren muss (d. h. SQL Server-Engine SQL Server Analysis Services). Zum Konfigurieren der Delegierung können Sie das Snap-in "Active Directory-Benutzer und-Computer" verwenden.  
   
     1.  Klicken Sie mit der rechten Maustaste auf jedes Dienstkonto, und öffnen Sie das Eigenschaftendialogfeld. Klicken Sie im Dialogfeld auf die Registerkarte **Delegierung** .  
   
@@ -61,17 +61,17 @@ ms.locfileid: "66096552"
   
     2.  Wesentliche Konfigurationsoptionen auf der Registerkarte "Delegierung":  
   
-        -   Wählen Sie "Benutzer bei Delegierungen angegebener Dienste vertrauen"  
+        -   Wählen Sie "diesen Benutzer nur bei Delegierungen angegebener Dienste vertrauen" aus.  
   
-        -   Wählen Sie "Beliebiges Authentifizierungsprotokoll verwenden"  
+        -   Wählen Sie "beliebiges Authentifizierungsprotokoll verwenden" aus.  
   
-         Weitere Informationen finden Sie im Abschnitt "Konfigurieren der eingeschränkten Kerberos-Delegierung für Computer und Dienstkonten" im folgenden Whitepaper [Konfigurieren der Kerberos-Authentifizierung für SharePoint 2010 und SQL Server 2008 R2-Produkte](http://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
+         Weitere Informationen finden Sie im Abschnitt "Konfigurieren der eingeschränkten Kerberos-Delegierung für Computer und Dienst Konten" im folgenden Whitepaper: [Konfigurieren der Kerberos-Authentifizierung für SharePoint 2010-und SQL Server 2008 R2-Produkte](http://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx) .  
   
-2.  Konfigurieren von c2WTS 'AllowedCallers'  
+2.  Konfigurieren von c2WTS ' ' ' Zuweisung ' '  
   
-     c2WTS erfordert explizit die Identitäten der 'Aufrufer' in der Konfigurationsdatei aufgelisteten **c2wtshost.exe.config**. c2WTS akzeptiert keine Anforderungen sämtlicher authentifizierter Benutzer im System, es sei denn, sie zu diesem Zweck konfiguriert ist. In diesem Fall entspricht der „Aufrufer“ der WSS_WPG-Windows-Gruppe. Die Datei c2wtshost.exe.config wird im folgenden Ordner gespeichert:  
+     c2WTS erfordert, dass die Identitäten der "Aufrufer" in der Konfigurationsdatei **Datei c2wtshost. exe. config**explizit aufgeführt sind. c2WTS akzeptiert keine Anforderungen von allen authentifizierten Benutzern im System, es sei denn, dies ist dafür konfiguriert. In diesem Fall entspricht der „Aufrufer“ der WSS_WPG-Windows-Gruppe. Die Datei c2wtshost.exe.config wird im folgenden Ordner gespeichert:  
   
-     **\Program Files\Windows Identity Foundation\v3.5\c2wtshost.exe.config**  
+     **\Programme\Windows Identity foundation\v3.5 \c2wtshost.exe.config**  
   
      Im folgenden Beispiel wird die Konfigurationsdatei gezeigt:  
   
@@ -94,12 +94,12 @@ ms.locfileid: "66096552"
   
     1.  Konfigurieren Sie den Dienst für die Verwendung des Dienstkontos, das Sie im vorangehenden Schritt konfiguriert haben.  
   
-    2.  Ändern Sie den Starttyp in "**automatische**", und starten Sie den Dienst.  
+    2.  Ändern Sie den Starttyp in "**automatisch**", und starten Sie den Dienst.  
   
-4.  Starten Sie die SharePoint-"Claims to Windows Token Service": Starten Sie den Claims to Windows Token Service über die SharePoint-Zentraladministration auf der Seite **Dienste auf dem Server verwalten**. Der Dienst sollte auf dem Server gestartet werden, auf dem die Aktion ausgeführt wird. Wenn Sie z.B. über einen WFE-Server und einen Anwendungsserver verfügen, auf dem der gemeinsame Dienst von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ausgeführt wird, müssen Sie C2WTS nur auf dem Anwendungsserver starten. c2WTS wird auf dem WFE-Server nicht benötigt.  
+4.  Starten Sie den SharePoint-claims to Windows Token Service: Starten Sie den Claims to Windows Token Service über die SharePoint-Zentraladministration auf der Seite **Dienste auf dem Server verwalten**. Der Dienst sollte auf dem Server gestartet werden, auf dem die Aktion ausgeführt wird. Wenn Sie z.B. über einen WFE-Server und einen Anwendungsserver verfügen, auf dem der gemeinsame Dienst von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ausgeführt wird, müssen Sie C2WTS nur auf dem Anwendungsserver starten. c2WTS wird auf dem WFE-Server nicht benötigt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ansprüche an den Windows-Tokendienst (c2WTS) () (Übersicht)https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
- [Übersicht über die Kerberos-Authentifizierung für Microsoft SharePoint 2010-Produkte)https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
+ [Übersicht über claims to Windows Token Service (c2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
+ [Übersicht über die Kerberos-Authentifizierung für Microsoft SharePoint 2010-Produkte (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
   
   

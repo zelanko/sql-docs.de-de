@@ -13,12 +13,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e7a186efb5da3ef509f3ada02e301d0777ffd2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895371"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517969"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Lernprogramm: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Für dieses Tutorial benötigen Sie SQL Server, SQL Server Management Studio (SS
    - Eine beliebige Version von SQL Server (SQL Server Express und SQL Server Compact ausgeschlossen) Diese Editionen können nicht als Replikationsverleger fungieren.   
    - Die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert.  
   
-- Installieren Sie auf dem Abonnentenserver (Ziel) eine beliebige Edition von SQL Server mit Ausnahme von [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Die in diesem Tutorial erstellte Veröffentlichung bietet keine Unterstützung für [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
+- Installieren Sie auf dem Abonnentenserver (Ziel) eine beliebige Edition von SQL Server mit Ausnahme von SQL Server Express oder SQL Server Compact. Die Veröffentlichung, die in diesem Tutorial erstellt wird, unterstützt weder SQL Server Express noch SQL Server Compact. 
 
 - Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
@@ -81,7 +81,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull
     ![Seiten „Veröffentlichungstyp“ und „Abonnententypen“](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   
    
-6. Erweitern Sie auf der Seite **Artikel** den Knoten **Tabellen**. Wählen Sie die folgenden drei Tabellen aus: **Employee**, **SalesOrderHeader** und **SalesOrderDetail**. Wählen Sie **Weiter**aus.  
+6. Erweitern Sie auf der Seite **Artikel** den Knoten **Tabellen**. Wählen Sie die folgenden drei Tabellen aus: **Employee**, **SalesOrderHeader** und **SalesOrderDetail**. Wählen Sie **Weiter** aus.  
 
    ![Tabellenauswahl auf der Seite „Artikel“](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
 
@@ -130,7 +130,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull
     ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID] 
     ```  
   
-    d. Klicken Sie unter **Geben Sie Joinoptionen an** auf die Option **Eindeutiger Schlüssel**, und klicken Sie anschließend auf **OK**. Wählen Sie **Weiter**aus. 
+    d. Klicken Sie unter **Geben Sie Joinoptionen an** auf die Option **Eindeutiger Schlüssel**, und klicken Sie anschließend auf **OK**. Wählen Sie **Weiter** aus. 
 
     ![Optionsauswahl zum Hinzufügen eines weiteren Joins für Verkaufsaufträge](media/tutorial-replicating-data-with-mobile-clients/joinsalestables.png)
   
@@ -138,7 +138,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull
 
     ![Optionsauswahl zum sofortigen Erstellen einer Momentaufnahme](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. Wählen Sie auf der Seite **Agentsicherheit** die Option **Sicherheitseinstellungen** aus. Geben Sie zuerst <*Name_des_Verlegercomputers*> **\repl_snapshot** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Klicken Sie anschließend auf **OK**. Wählen Sie **Weiter**aus.  
+22. Wählen Sie auf der Seite **Agentsicherheit** die Option **Sicherheitseinstellungen** aus. Geben Sie zuerst <*Name_des_Verlegercomputers*> **\repl_snapshot** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Klicken Sie anschließend auf **OK**. Wählen Sie **Weiter** aus.  
 
     ![Optionsauswahl zum Festlegen der Sicherheit für den Momentaufnahme-Agent](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -208,7 +208,7 @@ In diesem Abschnitt erfahren Sie, wie Sie der zuvor erstellten Mergeveröffentli
 
    ![Optionsauswahl für die Sicherheit für den Merge-Agent](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
-9. Legen Sie auf der Seite **Synchronisierungszeitplan** den **Agentzeitplan** auf **Nur bedarfsgesteuert ausführen** fest. Wählen Sie **Weiter**aus.  
+9. Legen Sie auf der Seite **Synchronisierungszeitplan** den **Agentzeitplan** auf **Nur bedarfsgesteuert ausführen** fest. Wählen Sie **Weiter** aus.  
 
    ![Auswahl "Nur bedarfsgesteuert ausführen" für den Agent](media/tutorial-replicating-data-with-mobile-clients/mergesyncschedule.png)
   

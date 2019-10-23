@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff1027a3a791ef0151e61982445cafff7be40329
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fc0cde616bc03be4a984d8de518770b490e4a89a
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715420"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199344"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Lernprogramme für die SQL Server R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,8 @@ In diesem Artikel werden die Lernprogramme für r-Sprache für Daten bankübergr
 
 | Link | Beschreibung |
 |------|-------------|
-| [Schnellstart: Verwenden von R in T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md) | Der erste von mehreren Schnellstarts zeigt die grundlegende Syntax zum Aufrufen einer R-Funktion mithilfe eines T-SQL-Abfrage-Editors, z. b. SQL Server Management Studio. |
-| [Tutorial: Erlernen von Daten Bank basierter R-Analysen für Datenanalysten](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Für R-Entwickler, die neue SQL Server haben, wird in diesem Tutorial erläutert, wie Sie allgemeine Data Science Aufgaben in SQL Server durcharbeiten. Laden und visualisieren Sie Daten, trainieren Sie ein Modell, und speichern Sie es in SQL Server, und verwenden Sie das Modell für die Predictive Analytics. |
+| [Schnellstart: Einfache R-Skripts erstellen und ausführen](quickstart-r-create-script.md) | Der erste von mehreren Schnellstarts zeigt die grundlegende Syntax zum Aufrufen einer R-Funktion mithilfe eines T-SQL-Abfrage-Editors, z. b. SQL Server Management Studio. |
+| [Tutorial: Erlernen von Daten Bank basierter R-Analysen für Datenanalysten](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Für R-Entwickler, die neu in SQL Server sind, wird in diesem Tutorial erläutert, wie allgemeine Data Science Aufgaben in SQL Server ausgeführt werden. Laden und visualisieren Sie Daten, trainieren Sie ein Modell, und speichern Sie es in SQL Server, und verwenden Sie das Modell für die Predictive Analytics. |
 | [Tutorial: Erlernen von Daten Bank basierter R-Analysen für SQL-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Erstellen Sie eine komplette R-Lösung, und stellen [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie Sie mithilfe von Tools bereit. Konzentriert sich auf das Verschieben einer Lösung in die Produktion. Sie erfahren, wie Sie R-Code in einer gespeicherten Prozedur umschließen können, ein R-Modell in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank speichern können und parametrisierte Aufrufe des R-Modells für die Vorhersage durchführen können. |
 | [Tutorial: Ausführliche Informationen zum revoscalepr](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Erfahren Sie, wie Sie die Funktionen in den revoscaler-Paketen verwenden. Verschieben von Daten zwischen R und SQL Server und Umschalten von computekontexten an eine bestimmte Aufgabe. Erstellen Sie Modelle und Diagramme, und verschieben Sie Sie zwischen Ihrer Entwicklungsumgebung und dem Datenbankserver. |
 

@@ -1,5 +1,5 @@
 ---
-title: GetFileNamespacePath (Transact-SQL) | Microsoft-Dokumentation
+title: GetFilename NamespacePath (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab369b619bc0ad378292cf71573ab973dc056c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101428"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278331"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,8 @@ ms.locfileid: "68101428"
 |**0**|Gibt den relativen Pfad innerhalb des Verzeichnisses auf Datenbankebene zurück.<br /><br /> Standardwert|  
 |**1**|Gibt den vollständigen UNC-Pfad zurück, der mit `\\computer_name`beginnt.|  
   
- *@option*  
- Ein ganzzahliger Ausdruck, der definiert, wie die Serverkomponente des Pfads formatiert werden soll. *@option* Dabei kann es sich um einen der folgenden Werte aufweisen:  
+ *\@-Option*  
+ Ein ganzzahliger Ausdruck, der definiert, wie die Serverkomponente des Pfads formatiert werden soll. die *Option "\@"* kann einen der folgenden Werte aufweisen:  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -64,14 +64,14 @@ ms.locfileid: "68101428"
   
  Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz in einem Failovercluster gruppiert ist, ist der Computername, der als Teil dieses Pfads zurückgegeben wird, der virtuelle Hostname für die gruppierte Instanz.  
   
- Wenn die Datenbank zu einer Always On-verfügbarkeitsgruppe gehört die **FileTableRootPath** Funktion gibt den virtuellen Netzwerknamen (VNN) statt des Computernamens zurück.  
+ Wenn die Datenbank zu einer Always on-Verfügbarkeits Gruppe gehört, gibt die **filetablerootpath** -Funktion anstelle des Computer namens den Namen des virtuellen Netzwerks (vnn) zurück.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Der von der **GetFileNamespacePath** -Funktion zurückgegebene Pfad ist ein logischer Verzeichnis- oder Dateipfad im folgenden Format:  
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   
- Dieser logische Pfad ist keine direkte Entsprechung eines physischen NTFS-Pfads. Es wird von FILESTREAMs-Dateisystem-Filtertreiber und der FILESTREAM-Agent auf den physischen Pfad übersetzt. Durch diese Unterscheidung zwischen dem logischen und dem physischen Pfad kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten intern neu organisieren, ohne die Gültigkeit des Pfads zu beeinträchtigen.  
+ Dieser logische Pfad ist keine direkte Entsprechung eines physischen NTFS-Pfads. Er wird vom Dateisystem-Filtertreiber von FILESTREAM und vom FileStream-Agent in den physischen Pfad übersetzt. Durch diese Unterscheidung zwischen dem logischen und dem physischen Pfad kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten intern neu organisieren, ohne die Gültigkeit des Pfads zu beeinträchtigen.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
  Um Code und Anwendungen vom aktuellen Computer und von der Datenbank unabhängig zu halten, sollten Sie keinen Code schreiben, der auf absoluten Dateipfaden basiert. Rufen Sie stattdessen den vollständigen Pfad für eine Datei mit der Funktion **FileTableRootPath** und der Funktion **GetFileNamespacePath** zur Laufzeit ab, wie im folgenden Beispiel gezeigt. Die **GetFileNamespacePath** -Funktion gibt standardmäßig den relativen Pfad der Datei unter dem Stammpfad der Datenbank zurück.  

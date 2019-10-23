@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 90bc0d33b00f77f942dd736ff1e1904f5d2e7396
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 2e3452a6aad04d0d524e4eb0e6bd473fd39a2bf7
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276462"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542150"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installieren von Python-Paketen mit sqlmlutils
 
@@ -25,9 +25,9 @@ In diesem Artikel wird beschrieben, wie Sie Funktionen im [**sqlmlutils**](https
 Weitere Informationen zu Paket Speicherort und Installations Pfaden finden [Sie unter Get python Package Information](../package-management/python-package-information.md).
 
 > [!NOTE]
-> Der Python `pip install` -Standardbefehl wird nicht zum Hinzufügen von Python-Paketen auf SQL Server empfohlen. Verwenden Sie stattdessen **sqlmlutils** , wie in diesem Artikel beschrieben.
+> Der Standard-Python-`pip install` Befehl wird nicht zum Hinzufügen von Python-Paketen auf SQL Server empfohlen. Verwenden Sie stattdessen **sqlmlutils** , wie in diesem Artikel beschrieben.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Prerequisites
 
 + Es muss [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) mit der python-Sprachoption installiert sein.
 
@@ -35,7 +35,7 @@ Weitere Informationen zu Paket Speicherort und Installations Pfaden finden [Sie 
 
 + Installieren Sie [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) oder [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) auf dem Client Computer, den Sie verwenden, um eine Verbindung mit SQL Server herzustellen. Sie können andere Daten Bank Verwaltungs-oder Abfrage Tools verwenden, aber in diesem Artikel wird davon ausgegangen, Azure Data Studio oder SSMS zu verwenden.
 
-### <a name="other-considerations"></a>Andere Überlegungen
+### <a name="other-considerations"></a>Weitere Überlegungen
 
 + Pakete müssen Python 3,5-kompatibel sein und unter Windows ausgeführt werden.
 
@@ -58,9 +58,9 @@ Weitere Informationen zu Paket Speicherort und Installations Pfaden finden [Sie 
 
 Um **sqlmlutils**verwenden zu können, müssen Sie es zunächst auf dem Client Computer installieren, mit dem Sie eine Verbindung mit SQL Server herstellen.
 
-1. Laden Sie die aktuelle **sqlmlutils** -Zip https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist -Datei von auf den Client Computer herunter. Entzippen Sie die Datei nicht.
+1. Laden Sie die neueste ZIP-Datei von **sqlmlutils** vom https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist auf den Client Computer herunter. Entzippen Sie die Datei nicht.
 
-1. Öffnen Sie eine **Eingabeaufforderung** , und führen Sie den folgenden Befehl aus, um das **sqlmlutils** -Paket zu installieren. Ersetzen Sie den vollständigen Pfad der heruntergeladenen ZIP-Datei von **sqlmlutils** . in diesem Beispiel wird `c:\temp\sqlmlutils_0.6.0.zip`davon ausgegangen, dass die heruntergeladene Datei ist.
+1. Öffnen Sie eine **Eingabeaufforderung** , und führen Sie den folgenden Befehl aus, um das **sqlmlutils** -Paket zu installieren. Ersetzen Sie den vollständigen Pfad der heruntergeladenen ZIP-Datei von **sqlmlutils** . in diesem Beispiel wird davon ausgegangen, dass die heruntergeladene Datei `c:\temp\sqlmlutils_0.6.0.zip` ist.
 
    ```console
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
@@ -76,11 +76,11 @@ Wenn der Client Computer, mit dem Sie eine Verbindung mit SQL Server herstellen,
 
 1. Öffnen Sie auf dem Client Computer **python** oder eine python-Umgebung.
 
-1. Verwenden Sie die folgenden Befehle, um das **Text Tools-** Paket zu installieren. Ersetzen Sie Ihre eigenen SQL Server Daten bankverbindungs Informationen.
+1. Verwenden Sie die folgenden Befehle, um das **Text Tools-** Paket zu installieren. Ersetzen Sie Ihre eigenen SQL Server Daten bankverbindungs Informationen (wenn Sie keine Windows-Authentifizierung verwenden, fügen Sie `uid`-und `pwd`-Parameter hinzu).
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 
@@ -90,13 +90,13 @@ Wenn der Client Computer, den Sie für die Verbindung mit SQL Server verwenden, 
 
 #### <a name="on-a-computer-with-internet-access"></a>Auf einem Computer mit Internetzugriff
 
-1. Öffnen Sie eine **Eingabeaufforderung** , und führen Sie den folgenden Befehl aus, um einen lokalen Ordner zu erstellen, der das **Text-Tools-** Paket enthält. In diesem Beispiel wird der `c:\temp\text-tools`Ordner erstellt.
+1. Öffnen Sie eine **Eingabeaufforderung** , und führen Sie den folgenden Befehl aus, um einen lokalen Ordner zu erstellen, der das **Text-Tools-** Paket enthält. In diesem Beispiel wird der Ordner `c:\temp\text-tools` erstellt.
 
    ```console
    pip download text-tools -d c:\temp\text-tools
    ```
 
-1. Kopieren Sie `text-tools` den Ordner auf den Client Computer. Im folgenden Beispiel wird davon ausgegangen, dass `c:\temp\packages\text-tools`Sie es in kopiert haben.
+1. Kopieren Sie den Ordner `text-tools` auf den Client Computer. Im folgenden Beispiel wird davon ausgegangen, dass Sie es in `c:\temp\packages\text-tools` kopiert haben.
 
 #### <a name="on-the-client-computer"></a>Auf dem Client Computer
 
@@ -104,17 +104,17 @@ Verwenden Sie **sqlmlutils** , um jedes Paket (WHL-Datei) zu installieren **, da
 
 In diesem Beispiel gibt es keine Abhängigkeiten von **Text Tools** , daher gibt es nur eine Datei aus dem `text-tools` Ordner, die Sie installieren können. Im Gegensatz dazu enthält ein Paket, wie z. b. **scikit-Plot** , 11 Abhängigkeiten. Sie finden also 12 Dateien im Ordner (das **scikit-Plot-** Paket und die 11 abhängigen Pakete), und Sie installieren jede dieser Dateien.
 
-Führen Sie das folgende Python-Skript aus. Ersetzen Sie Ihre eigenen SQL Server Daten bankverbindungs Informationen sowie den tatsächlichen Dateipfad und-Namen des Pakets. Wiederholen `sqlmlutils.SQLPackageManager` Sie die Anweisung für jede Paketdatei im Ordner.
+Führen Sie das folgende Python-Skript aus. Ersetzen Sie den tatsächlichen Dateipfad und-Namen des Pakets und ihre eigenen SQL Server Daten bankverbindungs Informationen (wenn Sie keine Windows-Authentifizierung verwenden, fügen Sie `uid`-und `pwd`-Parameter hinzu). Wiederholen Sie die `sqlmlutils.SQLPackageManager`-Anweisung für jede Paketdatei im Ordner.
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
 sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
 ```
 
 ## <a name="use-the-package-in-sql-server"></a>Verwenden Sie das Paket in SQL Server
 
-Sie können das Paket jetzt in einem Python-Skript in SQL Server verwenden. Zum Beispiel:
+Sie können das Paket jetzt in einem Python-Skript in SQL Server verwenden. Beispiel:
 
 ```python
 EXECUTE sp_execute_external_script

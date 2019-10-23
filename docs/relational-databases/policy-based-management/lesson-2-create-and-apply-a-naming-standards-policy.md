@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be32b0412b71f4f6e6ca2044bfdd6ead682572c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9da0204a19161b918c1a19d5babe28f707f3af52
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087173"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173661"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio s
   
 2.  Geben Sie im Dialogfeld **Neue Bedingung erstellen** im Feld **Name** den Namen **Finanz_Tabellen**ein.  
     1. Wählen Sie in der Liste **Facet** die Option **Mehrteiliger Name**aus. 
-    1. Geben Sie im Bereich **Ausdruck** im Feld **Feld** die Option **@Name** aus, wählen Sie im Feld **Operator** die Option **Like** aus, und geben Sie in das Feld **Wert** den Namen ```'fintbl%'``` ein, um zu erzwingen, dass alle Tabellennamen mit den Buchstaben **fintbl** anfangen.
+    1. Geben Sie im Bereich **Ausdruck** im Feld **Feld** die Option **\@Name** aus, wählen Sie im Feld **Operator** die Option **Like** aus, und geben Sie in das Feld **Wert** den Namen ```'fintbl%'``` ein, um zu erzwingen, dass alle Tabellennamen mit den Buchstaben **fintbl** anfangen.
     1. Geben Sie auf der Seite **Beschreibung** die Beschreibung **Finanz_Tabellen-Namen müssen mit fintbl beginnen**ein, und klicken Sie anschließend auf **OK** , um die Bedingung zu erstellen.  
 
     ![Tabellenbedingung „Finance“](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)

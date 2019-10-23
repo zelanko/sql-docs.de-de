@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5a494dd0ea0a4c5691bee93cd1a973132d6c4d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902520"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680971"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Lektion 1.8: Kommentieren und Formatieren des Pakets aus Lektion 1 
 
@@ -55,7 +55,7 @@ In dieser Aufgabe verwenden Sie die Formatierungsfeatures von [!INCLUDE[ssNoVers
   
     Wenn der Text im Feld „Anmerkung“ umschlossen werden soll, müssen Sie den Cursor an der Stelle platzieren, an der eine neue Zeile beginnen soll, und dann die **EINGABETASTE** drücken.  
   
-    Wenn Sie keinen Text in das Feld „Anmerkung“ eingeben, wird es nicht mehr angezeigt, sobald Sie außerhalb des Felds klicken.  
+    Wenn Sie keinen Text in das Feld „Anmerkung“ eingeben, wird es nicht mehr angezeigt, sobald Sie außerhalb des Felds klicken.  Wenn Sie Text in das Feld „Anmerkung“ einfügen möchten, kopieren Sie daher den Text in die Zwischenablage, bevor Sie „Anmerkung hinzufügen“ auswählen. 
   
 ## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe
 [Schritt 9: Testen des Tutorialpakets aus Lektion 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  

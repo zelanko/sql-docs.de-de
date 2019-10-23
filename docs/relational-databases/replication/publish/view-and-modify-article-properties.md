@@ -22,12 +22,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfbe6ede99184ea806b24bb7f8565b616a561cd
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 61a55d8b72669fb83425e74b9888bd254b076378
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769748"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710801"
 ---
 # <a name="view-and-modify-article-properties"></a>Anzeigen und Ändern von Artikeleigenschaften
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -104,29 +104,29 @@ ms.locfileid: "68769748"
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften eines Artikels an, der zu einer Momentaufnahme- oder einer Transaktionsveröffentlichung gehört  
   
-1.  Führen Sie [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)aus, und geben Sie dabei den Namen der Veröffentlichung für den **@publication** -Parameter und den Namen des Artikels für den **@article** -Parameter an. Wenn Sie **@article** nicht angeben, werden Informationen zu allen Artikeln in der Veröffentlichung zurückgegeben.  
+1.  Führen Sie [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md) aus, und geben Sie dabei den Namen der Veröffentlichung für den Parameter `@publication` und den Namen des Artikels für den Parameter `@article` an. Wenn Sie `@article` nicht angeben, werden Informationen zu allen Artikeln in der Veröffentlichung zurückgegeben.  
   
 2.  Führen Sie [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) aus, damit die Tabellenartikel alle in der Basistabelle verfügbaren Spalten auflisten.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>So ändern Sie die Eigenschaften eines Artikels, der zu einer Momentaufnahme- oder einer Transaktionsveröffentlichung gehört  
   
-1.  Führen Sie [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)aus, und geben Sie dabei die zu ändernde Artikeleigenschaft im **@property** -Parameter und den neuen Wert dieser Eigenschaft im **@value** -Parameter an.  
+1.  Führen Sie [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) aus, und geben Sie dabei die zu ändernde Artikeleigenschaft für den Parameter `@property` und den neuen Wert dieser Eigenschaft für den Parameter `@value` an.  
   
     > [!NOTE]  
-    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **@force_invalidate_snapshot** angeben, und wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert **1** für **@force_reinit_subscription** . Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert `1` für `@force_invalidate_snapshot` angeben. Wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert `1` für `@force_reinit_subscription` angeben. Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>So zeigen Sie die Eigenschaften eines Artikels an, der zu einer Mergeveröffentlichung gehört  
   
-1.  Führen Sie [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)aus, und geben Sie dabei den Namen der Veröffentlichung für den **@publication** -Parameter und den Namen des Artikels für den **@article** -Parameter an. Wenn Sie diese Parameter nicht angeben, werden Informationen zu allen Artikeln einer Veröffentlichung oder des Verlegers zurückgegeben.  
+1.  Führen Sie [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) aus, und geben Sie dabei den Namen der Veröffentlichung für den Parameter `@publication` und den Namen des Artikels für den Parameter `@article` an. Wenn Sie diese Parameter nicht angeben, werden Informationen zu allen Artikeln einer Veröffentlichung oder des Verlegers zurückgegeben.  
   
 2.  Führen Sie [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) aus, damit die Tabellenartikel alle in der Basistabelle verfügbaren Spalten auflisten.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>So ändern Sie die Eigenschaften eines Artikels, der zu einer Mergeveröffentlichung gehört  
   
-1.  Führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)aus, und geben Sie dabei die zu ändernde Artikeleigenschaft im **@property** -Parameter und den neuen Wert dieser Eigenschaft im **@value** -Parameter an.  
+1.  Führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, und geben Sie dabei die zu ändernde Artikeleigenschaft für den Parameter `@property` und den neuen Wert dieser Eigenschaft für den Parameter `@value` an.  
   
     > [!NOTE]  
-    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **@force_invalidate_snapshot** angeben, und wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert **1** für **@force_reinit_subscription** . Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert `1` für `@force_invalidate_snapshot` angeben. Wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert `1` für `@force_reinit_subscription` angeben. Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel für eine Transaktionsreplikation werden die Eigenschaften des veröffentlichten Artikels zurückgegeben.  

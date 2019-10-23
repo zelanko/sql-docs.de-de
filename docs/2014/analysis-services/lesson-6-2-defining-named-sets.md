@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493896"
 ---
 # <a name="defining-named-sets"></a>Definieren von benannten Mengen
@@ -32,11 +32,11 @@ ms.locfileid: "69493896"
   
      Wenn Sie eine neue Berechnung auf der Registerkarte **Berechnungen** definieren, sollten Sie daran denken, dass Berechnungen in der Reihenfolge aufgelöst werden, in der sie im Bereich **Skriptplaner** angezeigt werden. Ihr Fokus innerhalb dieses Bereichs bestimmt beim Erstellen einer neuen Berechnung die Reihenfolge, in der die Berechnung ausgeführt wird. Eine neue Berechnung wird unmittelbar nach der Berechnung definiert, die gerade den Fokus besitzt.  
   
-3.  Ändern Sie `[Core Products]`im Feld Name den Namen der neuen benannten Menge in.  
+3.  Ändern Sie im Feld **Name** den Namen der neuen benannten Menge in `[Core Products]`.  
   
      Achten Sie im Bereich **Skriptplaner** auf das spezielle Symbol, das eine benannte Menge von einem Skriptbefehl oder einem berechneten Element unterscheidet.  
   
-4.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** die `Members`Option **Product**, **Kategorie**, und dann **Alle Produkte**.  
+4.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** nacheinander **Product**, **Category**, `Members` und dann **Alle Produkte**.  
   
     > [!NOTE]  
     >  Wenn Sie keine Metadaten im Bereich **Berechnungstools** anzeigen können, klicken Sie auf der Symbolleiste auf **Verbindung wiederherstellen** . Funktioniert dies nicht, müssen Sie möglicherweise den Cube verarbeiten oder die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]starten.  
@@ -47,11 +47,11 @@ ms.locfileid: "69493896"
   
 ## <a name="defining-a-large-resellers-named-set"></a>Definieren der benannten Menge Large Resellers  
   
-1.  Klicken Sie mit `[Core Products]` der rechten Maustaste in den Bereich **Skript Planer** , und klicken Sie dann auf **neue benannte Menge**.  
+1.  Klicken Sie mit der rechten Maustaste auf `[Core Products]` im Bereich **Skript Planer** , und klicken Sie dann auf **neue benannte Menge**.  
   
-2.  Ändern Sie `[Large Resellers]`im Feld Name den Namen dieser benannten Menge in.  
+2.  Ändern Sie im Feld **Name** den Namen dieser benannten Menge in `[Large Resellers]`.  
   
-3.  Geben`Exists()`Sie im Feld **Ausdruck** ein.  
+3.  Geben Sie im Feld **Ausdruck** `Exists()` ein.  
   
      Mithilfe der Exists-Funktion geben Sie die Menge von Elementen aus der Attributhierarchie „Name des Wiederverkäufers“ zurück, die sich mit der Menge von Elementen in der Attributhierarchie „Anzahl von Mitarbeitern“ mit den meisten Mitarbeitern überschneidet.  
   
@@ -69,19 +69,19 @@ ms.locfileid: "69493896"
   
      Nachdem Sie nun die erste Menge für den vorhandenen Mengen Ausdruck definiert haben, können Sie die zweite Menge hinzufügen: die Menge der Elemente der Reseller-Dimension, die die größte Anzahl von Mitarbeitern enthält.  
   
-7.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** die Option **Number of Employees** in `Members`der Reseller-Dimension, und erweitern Sie dann **All Resellers**.  
+7.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** die Option **Number of Employees** in der Reseller-Dimension, erweitern Sie `Members`, und erweitern Sie dann **All Resellers**.  
   
      Die Elemente dieser Attributhierarchie werden nicht gruppiert.  
   
 8.  Öffnen Sie den Dimensions-Designer für die **Reseller** -Dimension, und klicken Sie anschließend im Bereich **Attribute** auf **Number of Employees** .  
   
-9. Ändern `DiscretizationMethod` Sie im Eigenschaftenfenster die-Eigenschaft in **automatisch**, und ändern Sie dann `DiscretizationBucketCount` die- `5`Eigenschaft in. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+9. Ändern Sie im Eigenschaftenfenster die `DiscretizationMethod`-Eigenschaft in **automatisch**, und ändern Sie dann die Eigenschaft `DiscretizationBucketCount` in `5`. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
 10. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Analysis Services Tutorial bereitstellen**.  
   
 11. Wechseln Sie nach der erfolgreichen Bereitstellung zum Cube-Designer für den Cube des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Tutorials, und klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Verbindung wiederherstellen** .  
   
-12. Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** die Option **Number of Employees** in `Members`der **Reseller** -Dimension, und erweitern Sie dann **All Resellers**.  
+12. Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** die Option **Number of Employees** in der **Reseller** -Dimension, erweitern Sie `Members`, und erweitern Sie dann **All Resellers**.  
   
      Beachten Sie, dass die Elemente dieser Attributhierarchie jetzt in fünf Gruppen enthalten sind, nummeriert von 0 bis 4. Die Zahl einer Gruppe wird angezeigt, wenn Sie den Zeiger auf diese Gruppe richten, um einen InfoTip anzuzeigen. Für den Bereich `2 -17`sollte der InfoTipp `[Reseller].[Number of Employees].&[0]`enthalten.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493896"
   
      Die folgende Abbildung zeigt den Bereich **Berechnungs Ausdrücke** für die `[Large Resellers]` benannte Menge.  
   
-     Bereich ![für Berechnungs Ausdrücke für [Large Resellers]] Bereich (../../2014/tutorials/media/l6-named-set-02.gif "für Berechnungs Ausdrücke für [Large Resellers]")  
+     ![Bereich für Berechnungs Ausdrücke für [Large Resellers]](../../2014/tutorials/media/l6-named-set-02.gif "Bereich für Berechnungs Ausdrücke für [Large Resellers]")  
   
 14. Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Skriptansicht**, und überprüfen Sie die beiden benannten Mengen, die gerade dem Berechnungsskript hinzugefügt wurden.  
   
@@ -117,13 +117,13 @@ ms.locfileid: "69493896"
   
 5.  Erweitern Sie die Product-Dimension, und fügen Sie dem Zeilenbereich dann Kategorie und Unterkategorie hinzu, wie in der folgenden Abbildung dargestellt.  
   
-     Member ![des SubCategory-Attributs] Member (../../2014/tutorials/media/l6-named-set-03.gif "des SubCategory-Attributs")  
+     ![Member des SubCategory-Attributs](../../2014/tutorials/media/l6-named-set-03.gif "Member des SubCategory-Attributs")  
   
 6.  Ziehen Sie **Core Products** im Bereich **Metadaten** in der **Product** -Dimension in den Filterbereich.  
   
      Nur das **Bike** -Element des **Category** -Attributs und Elemente der **Bike** -Unterkategorien verbleiben im Cube. Das liegt daran, dass die benannte Menge **Core Products** (Kernprodukte) zur Definition eines Teilcubes verwendet wird. Durch diesen Teilcube werden die Elemente des **Category** -Attributs in der **Product** -Dimension innerhalb des Teilcubes auf die Elemente der benannten Menge **Core Products** beschränkt, wie in der folgenden Abbildung dargestellt.  
   
-     Member ![der benannten Gruppe "Core-Produkt] " Member (../../2014/tutorials/media/l6-named-set-04.gif "der benannten Gruppe \"Core-Produkt") "  
+     ![Member der benannten Gruppe "Core-Produkt"](../../2014/tutorials/media/l6-named-set-04.gif "Member der benannten Gruppe "Core-Produkt"")  
   
 7.  Erweitern Sie im Bereich **Metadaten** den Eintrag **Reseller**, und fügen Sie dem Filterbereich **Large Resellers** hinzu.  
   
@@ -131,11 +131,11 @@ ms.locfileid: "69493896"
   
      ![Filter Bereich mit zwei benannten Mengen](../../2014/tutorials/media/l6-named-set-05.gif "Filter Bereich mit zwei benannten Mengen")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Lektion 7: Definieren von &#40;KPIs für Key Performance Indicator&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Lektion 7: Definieren von KPIs &#40;Key Performance Indicator&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Einbeziehen](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Berechnungen](multidimensional-models-olap-logical-cube-objects/calculations.md)    
  [Erstellen von benannten Mengen](multidimensional-models/create-named-sets.md)  
   
   

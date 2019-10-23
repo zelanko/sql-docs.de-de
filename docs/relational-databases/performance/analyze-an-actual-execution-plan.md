@@ -1,7 +1,7 @@
 ---
 title: Analysieren eines tatsächlichen Ausführungsplans | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,18 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0f23ceb75856db921e4c6303a8013d351f364e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68219594"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289321"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Analysieren eines tatsächlichen Ausführungsplans
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In diesem Thema wird das Analysieren tatsächlicher grafischer Ausführungspläne mithilfe des Plananalysefeatures von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] beschrieben. 
+
+In diesem Thema wird das Analysieren tatsächlicher grafischer Ausführungspläne mithilfe des Plananalysefeatures von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] beschrieben. Dieses Feature ist ab [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Version 17.4, verfügbar. Wir empfehlen generell, [die neueste Version von SSMS zu installieren](../../ssms/download-sql-server-management-studio-ssms.md).
 
 > [!NOTE]
 > Tatsächliche Ausführungspläne werden nach der Ausführung der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen oder -Batches generiert. Deshalb enthält ein tatsächlicher Ausführungsplan Laufzeitinformationen wie die tatsächliche Anzahl der Zeilen, Nutzungsmetriken der Ressourcen oder Laufzeitwarnungen (falls vorhanden). Weitere Informationen finden Sie unter [Anzeigen eines tatsächlichen Ausführungsplans](../../relational-databases/performance/display-an-actual-execution-plan.md).

@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: e114c4991d5f3df10537e459263b49152c466f99
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.date: 10/03/2019
+ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
+ms.sourcegitcommit: cf268c4e39edf00a8552466e9440e79e6a5d0084
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70274830"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72166714"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Erweitern der Funktionalität von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -26,9 +26,11 @@ Erweiterungen werden vom Azure Data Studio-Team (Microsoft) sowie von der Dritta
 
 ## <a name="add-azure-data-studio-extensions"></a>Hinzufügen von Azure Data Studio-Erweiterungen
 
-1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, klicken Sie auf das Symbol für Erweiterungen, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
-    Sie können auch schnell auf den Erweiterungs-Manager zugreifen, indem Sie auf `Ctrl+Shift+X` (Windows/Linux) oder `Command+Shift+X` (Mac) drücken.
+1. Greifen Sie auf die verfügbaren Erweiterungen zu, indem Sie auf das Symbol „Erweiterungen“ klicken oder **Erweiterungen** im Menü **Ansicht** auswählen.
+
     ![Erweiterungs-Manager-Symbol](media/extensions/extension-manager-icon.png)
+
+    Sie können auch schnell auf den Erweiterungs-Manager zugreifen, indem Sie `Ctrl+Shift+X` (Windows/Linux) oder `Command+Shift+X` (Mac) drücken.
 
 2. Wählen Sie eine verfügbare Erweiterung aus, um deren Details anzuzeigen.
     ![Details zur Erweiterung](media/extensions/extension-details.png)
@@ -36,6 +38,8 @@ Erweiterungen werden vom Azure Data Studio-Team (Microsoft) sowie von der Dritta
 3. Wählen Sie die gewünschte Erweiterung aus, und **installieren** Sie diese.
 
 4. Klicken Sie nach der Installation auf **Erneut laden**, um die Erweiterung in Azure Data Studio zu aktivieren (nur bei der ersten Installation einer Erweiterung erforderlich).
+
+Wenn Sie Probleme beim Zugriff auf den Erweiterungs-Manager von Azure Data Studio haben, können Sie die benötigte Erweiterung aus unserem [GitHub-Wiki](https://github.com/microsoft/azuredatastudio/wiki/List-of-Extensions) herunterladen.
 
 
 ## <a name="access-installed-azure-data-studio-extensions"></a>Zugreifen auf installierte Azure Data Studio-Erweiterungen

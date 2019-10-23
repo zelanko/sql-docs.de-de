@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a44e10601821638acde5997cce8e0b3fbf664076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9b5f7628f0284cb4662f0cf88bff1fd80cb2014e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038459"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295228"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (SSISDB-Datenbank)
 
@@ -31,7 +31,7 @@ ms.locfileid: "68038459"
 |property_name|**nvarchar(256)**|Der Name der Katalogeigenschaft.|  
 |property_value|**nvarchar(256)**|Der Wert der Katalogeigenschaft.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  In dieser Sicht wird eine Zeile für jede Katalogeigenschaft angezeigt.
   
 |Eigenschaftsname|und Beschreibung|  

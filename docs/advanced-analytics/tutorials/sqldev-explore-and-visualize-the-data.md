@@ -9,18 +9,18 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2c204e06edd830d8036b6d0119ce1aff1a9c6833
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68715369"
 ---
-# <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: Untersuchen und Visualisieren der Daten
+# <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: untersuchen und Visualisieren der Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
 
-In diesem Schritt überprüfen Sie die Beispiel Daten und generieren dann einige Plots mithilfe von [rxhistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) aus [revoscaler](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) und der generischen [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) -Funktion in Basis-R. Diese R-Funktionen sind bereits in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]enthalten.
+In diesem Schritt überprüfen Sie die Beispiel Daten und generieren dann einige Plots mithilfe von [rxhistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) aus [revoscaler](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) und der generischen [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) -Funktion in Basis-R. Diese R-Funktionen sind bereits in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] enthalten.
 
 Ein wichtiges Ziel dieser Lektion ist das Aufrufen von R-Funktionen aus [!INCLUDE[tsql](../../includes/tsql-md.md)] in gespeicherten Prozeduren und das Speichern der Ergebnisse in Anwendungsdatei Formaten:
 
@@ -34,13 +34,13 @@ Ein wichtiges Ziel dieser Lektion ist das Aufrufen von R-Funktionen aus [!INCLUD
 
 Das Entwickeln einer Data Science-Lösung bringt normalerweise die intensive Untersuchung und Visualisierung von Daten mit sich. Nehmen Sie sich also zunächst eine Minute Zeit, um die Beispiel Daten zu überprüfen, sofern noch nicht geschehen.
 
-Im ursprünglichen öffentlichen DataSet wurden die Taxi-IDs und die Fahrt Datensätze in separaten Dateien bereitgestellt. Um die Verwendung der Beispiel Daten zu vereinfachen, wurden die beiden ursprünglichen Datasets mit den Spalten " _Medallion_", " _\_Hack License_" und " _Pickup\_DateTime_" verknüpft.  Die Datensätze wurden ebenso auf Stichproben reduziert, um nur 1 % der ursprünglichen Anzahl der Datensätze zu erhalten. Der auf Stichproben reduzierte Datensatz hat 1.703.957 Zeilen und 23 Spalten.
+Im ursprünglichen öffentlichen DataSet wurden die Taxi-IDs und die Fahrt Datensätze in separaten Dateien bereitgestellt. Um die Verwendung der Beispiel Daten zu vereinfachen, wurden die beiden ursprünglichen Datasets mit den Spalten " _Medallion_", " _Hack \_license_" und " _Pickup \_datetime_" verknüpft.  Die Datensätze wurden ebenso auf Stichproben reduziert, um nur 1 % der ursprünglichen Anzahl der Datensätze zu erhalten. Der auf Stichproben reduzierte Datensatz hat 1.703.957 Zeilen und 23 Spalten.
 
 **Taxi-IDs**
   
 -   Die Spalte " _Medallion_ " stellt die eindeutige ID-Nummer des Taxis dar.
   
--   Die Spalte " _Hack\_-Lizenz_ " enthält die Lizenznummer des Taxi Treibers (anonymisiert).
+-   Die _Hack-\_license_ Spalte enthält die Lizenznummer des Taxi Treibers (anonymisiert).
   
 **Datensätze von Fahrten und Fahrpreisen**
   
@@ -48,22 +48,22 @@ Im ursprünglichen öffentlichen DataSet wurden die Taxi-IDs und die Fahrt Daten
   
 -   Jeder Fahrpreisdatensatz enthält die Zahlungsinformationen wie die Zahlungsart, der Gesamtbetrag und den Fahrtpreis.
   
--   Die letzten drei Spalten können für verschiedene Machine Learning-Tasks verwendet werden. Die _Tip\_Amount_ -Spalte enthält fortlaufende numerische Werte und kann als Bezeichnungs Spalte für die Regressionsanalyse verwendet werden. Die Spalte _tipped_ verfügt nur über Ja/Nein-Werte und wird für die binäre Klassifikation verwendet. Die _Tip\_-Klassen_ Spalte verfügt über mehrere **Klassen Bezeichnungen** und kann daher als Bezeichnung für Klassifizierungs Aufgaben mit mehreren Klassen verwendet werden.
+-   Die letzten drei Spalten können für verschiedene Machine Learning-Tasks verwendet werden. Die _Tip \_amount_ **-Spalte enthält** fortlaufende numerische Werte und kann als Bezeichnungs Spalte für die Regressionsanalyse verwendet werden. Die Spalte _tipped_ verfügt nur über Ja/Nein-Werte und wird für die binäre Klassifikation verwendet. Die _Tip \_class_ -Spalte verfügt über mehrere **Klassen Bezeichnungen** und kann daher als Bezeichnung für Klassifizierungs Aufgaben mit mehreren Klassen verwendet werden.
   
     Diese exemplarische Vorgehensweise enthält nur die binäre Klassifizierungsaufgabe. Sie können gerne versuchen, Modelle für die anderen beiden Machine Learning-Tasks und für mehrklassige Klassifizierung zu erstellen.
   
--   Die Werte, die für die Beschriftungs Spalten verwendet werden, basieren alle auf der _Tip\_Amount_ -Spalte, die diese Geschäftsregeln verwendet:
+-   Die Werte, die für die Bezeichnungs Spalten verwendet werden, basieren alle auf der _Tip \_amount_ -Spalte unter Verwendung der folgenden Geschäftsregeln:
   
-    |Name der abgeleiteten Spalte|Regel|
+    |Name der abgeleiteten Spalte|Rule|
     |-|-|
      |tipped|If tip_amount > 0, tipped = 1, otherwise tipped = 0|
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>Erstellen einer gespeicherten Prozedur mithilfe von rxhistogram zum Zeichnen der Daten
 
-Um das Diagramm zu erstellen, verwenden Sie [rxhistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), eine der erweiterten R-Funktionen, die in [revoscaler](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)bereitgestellt werden. In diesem Schritt wird ein Histogramm auf der Grundlage von [!INCLUDE[tsql](../../includes/tsql-md.md)] Daten aus einer Abfrage gezeichnet. Sie können diese Funktion in einer gespeicherten Prozedur ( **plotrxhistogram**) einschließen.
+Um das Diagramm zu erstellen, verwenden Sie [rxhistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), eine der erweiterten R-Funktionen, die in [revoscaler](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)bereitgestellt werden. In diesem Schritt wird ein Histogramm auf der Grundlage von Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage gezeichnet. Sie können diese Funktion in einer gespeicherten Prozedur ( **plotrxhistogram**) einschließen.
 
-1. Klicken [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in Objekt-Explorer mit der rechten Maustaste auf die **NYCTaxi_Sample** -Datenbank, und wählen Sie **neue Abfrage**aus.
+1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample** , und wählen Sie **neue Abfrage**aus.
 
 2. Fügen Sie das folgende Skript ein, um eine gespeicherte Prozedur zu erstellen, die das Histogramm erstellt. Dieses Beispiel heißt **rplotrxhistogram*.
 
@@ -94,7 +94,7 @@ Folgende wichtige Punkte sind in diesem Skript zu verstehen:
   
 + Die Variable `@query` definiert den Abfragetext (`'SELECT tipped FROM nyctaxi_sample'`), der an das R-Skript als das Argument für die Skripteingabevariable, `@input_data_1`, übergeben wird. Für R-Skripts, die als externe Prozesse ausgeführt werden, sollten Sie über eine eins-zu-Eins-Zuordnung zwischen Eingaben für Ihr Skript und Eingaben für die gespeicherte System Prozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) verfügen, die die R-Sitzung auf SQL Server startet.
   
-+ Innerhalb des R-Skripts wird eine`image_file`Variable () zum Speichern des Bilds definiert. 
++ Innerhalb des R-Skripts wird eine Variable (`image_file`) zum Speichern des Bilds definiert. 
 
 + Die **rxhistogram** -Funktion aus der revoscaler-Bibliothek wird aufgerufen, um die Zeichnung zu generieren.
   
@@ -114,7 +114,7 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
   
     **Ergebnisse**
     
-    *Plot* *0xffd8ffe000104a4649...*
+    *plot0xffd8ffe000104a4649.* ..
   
 2. Öffnen Sie eine PowerShell-Eingabeaufforderung, und führen Sie den folgenden Befehl aus, um den entsprechenden Instanznamen, Datenbanknamen, Benutzernamen und Anmelde Informationen als Argumente anzugeben. Für diejenigen, die Windows-Identitäten verwenden, können Sie **-U** und **-P** durch **-T**ersetzen.
   
@@ -157,7 +157,7 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
   
 4.  Die Ausgabedatei wird im gleichen Verzeichnis erstellt, in dem Sie den PowerShell-Befehl ausgeführt haben. Um die Grafik anzuzeigen, öffnen Sie einfach die Datei plot.jpg.
   
-    ![Taxifahrten mit und ohne Trinkgeld](media/rsql-devtut-tippedornot.jpg "Taxifahrten mit und ohne Trinkgeld")  
+    ![Taxifahrten mit und ohne Tipps](media/rsql-devtut-tippedornot.jpg "Taxifahrten mit und ohne Tipps")  
   
 ## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Erstellen einer gespeicherten Prozedur mithilfe von Hist-und mehreren Ausgabeformaten
 
@@ -165,7 +165,7 @@ Datenanalysten generieren in der Regel mehrere Datenvisualisierungen, um Einblic
 
 Diese gespeicherte Prozedur verwendet die **Hist** -Funktion, um das Histogramm zu erstellen, wobei die Binärdaten in beliebte Formate wie exportiert werden. JPG,. PDF und. PNG. 
 
-1. Klicken [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in Objekt-Explorer mit der rechten Maustaste auf die **NYCTaxi_Sample** -Datenbank, und wählen Sie **neue Abfrage**aus.
+1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample** , und wählen Sie **neue Abfrage**aus.
 
 2. Fügen Sie das folgende Skript ein, um eine gespeicherte Prozedur zu erstellen, die das Histogramm erstellt. Dieses Beispiel heißt " **rplothist** ".
   
@@ -264,21 +264,21 @@ Die Zahlen in den Dateinamen werden nach dem Zufallsprinzip generiert, um sicher
 
 Um das Diagramm anzuzeigen, öffnen Sie den Zielordner, und überprüfen Sie die Dateien, die vom R-Code in der gespeicherten Prozedur erstellt wurden.
 
-1. Wechseln Sie in den in der stdout-Meldung aufgeführten Ordner (in diesem Beispiel ist dies c:\temp\plots).\)
+1. Wechseln Sie in den Ordner, der in der stdout-Meldung angegeben ist (in diesem Beispiel ist dies c:\temp\plots \)
 
-2. Öffnen `rHistogram_Tipped.jpg` Sie, um die Anzahl von Fahrten mit einem Trinkgeld und den Fahrten anzuzeigen, die keinen Tipp haben. (Dieses Histogramm ähnelt dem, das Sie im vorherigen Schritt generiert haben.)
+2. Öffnen Sie `rHistogram_Tipped.jpg`, um die Anzahl der Fahrten mit einem Trinkgeld und die Fahrten anzuzeigen, die keinen Tipp erhalten haben. (Dieses Histogramm ähnelt dem, das Sie im vorherigen Schritt generiert haben.)
 
-3. Öffnen `rHistograms_Tip_and_Fare_Amount.pdf` Sie, um die Verteilung von Trink Geldbeträgen anzuzeigen, die für die Kosten Beträge gezeichnet werden.
+3. Öffnen Sie `rHistograms_Tip_and_Fare_Amount.pdf`, um die Verteilung von Trink Geldbeträgen anzuzeigen, die mit den Tarifen des Fahrpreises gezeichnet werden.
     
   ![Histogramm mit tip_amount und fare_amount](media/rsql-devtut-tipamtfareamt.PNG "Histogramm mit tip_amount und fare_amount")
 
-4. Öffnen `rXYPlots_Tip_vs_Fare_Amount.pdf` Sie, um ein Punkt Diagramm mit dem Fahrpreis auf der x-Achse und dem trinkgeldbetrag auf der y-Achse anzuzeigen.
+4. Öffnen Sie `rXYPlots_Tip_vs_Fare_Amount.pdf`, um ein Punkt Diagramm mit dem Fahrpreis auf der x-Achse und dem trinkgeldbetrag auf der y-Achse anzuzeigen.
 
    ![trinkgeldbetrag über Fahr Preisbetrag gezeichnet](media/rsql-devtut-tipamtbyfareamt.PNG "trinkgeldbetrag über Fahr Preisbetrag gezeichnet")
 
 ## <a name="next-lesson"></a>Nächste Lektion
 
-[Lektion 2: Erstellen von Datenfunktionen mit T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Lektion 2: Erstellen von Datenfunktionen mit T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 

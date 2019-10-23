@@ -1,7 +1,7 @@
 ---
 title: Sicherheit bei temporalen Tabellen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/21/2016
+ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb721a010e53a0f642a3f045f9dc36ec2f104cad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b22210bdcabf1972e7fa76d7871ebd94e1f23ff5
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999429"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452898"
 ---
 # <a name="temporal-table-security"></a>Sicherheit bei temporale Tabellen
 
@@ -33,7 +33,7 @@ Um die Sicherheitsaspekte zu verstehen, die für temporale Tabellen relevant sin
 |Das Aktivieren bzw. Deaktivieren der Systemversionsverwaltung erfordert die höchsten Berechtigungen für betroffene Objekte|Das Aktivieren und Deaktivieren von SYSTEM_VERSIONING erfordert die CONTROL-Berechtigung sowohl für die aktuelle Tabelle als auch für die Verlaufstabelle|
 |Verlaufsdaten können nicht direkt geändert werden|Wenn SYSTEM_VERSIONING ON ist, können die Benutzer Verlaufsdaten nicht ändern, unabhängig davon, über welche tatsächlichen Berechtigungen sie für die aktuelle Tabelle oder die Verlaufstabelle verfügen. Das umfasst sowohl Daten- als auch Schemaänderungen|
 |Das Abfragen von Verlaufsdaten erfordert die **SELECT** -Berechtigung für die Verlaufstabelle|Nur weil ein Benutzer über die **SELECT** -Berechtigung für die aktuelle Tabelle verfügt, bedeutet das nicht, dass er über die **SELECT** -Berechtigung für die Verlaufstabelle verfügt.|
-|Überwachungsoberflächenvorgänge wirken sich auf Verlaufstabellen in spezifischen Arten aus:|Die Überwachung von Verlaufstabellen erfasst regelmäßig alle direkten Versuche auf die Daten zuzugreifen (unabhängig davon, ob sie erfolgreich waren oder nicht).<br /><br /> **SELECT** mit der Erweiterung für temporale Abfragen zeigt, dass dieser Vorgang Auswirkungen auf die Verlaufstabelle hatte.<br /><br /> **CREATE/ALTER** temporale Tabellen machen die Information verfügbar, dass Berechtigungsüberprüfungen für die Verlaufstabelle ebenfalls durchgeführt werden. Die Überwachungsdatei enthält einen zusätzlichen Datensatz für die Verlaufstabelle.<br /><br /> DML-Vorgänge auf der aktuellen Tabelle zeigen auf, dass die Verlaufstabelle betroffen war, aber „additional_info“ bietet den erforderlichen Zusammenhang (DML war ein Ergebnis von „system_versioning“).|
+|Überwachungsoberflächenvorgänge wirken sich auf Verlaufstabellen in spezifischen Arten aus:|Überwachungseinstellungen aus der aktuellen Tabelle werden nicht automatisch auf die Verlaufstabelle angewendet. Die Überwachung muss explizit für die Verlaufstabelle aktiviert werden.<br /><br /> Sobald dies geschehen ist, erfasst die Überwachung von Verlaufstabellen regelmäßig alle direkten Versuche auf die Daten zuzugreifen (unabhängig davon, ob sie erfolgreich waren oder nicht).<br /><br /> **SELECT** mit der Erweiterung für temporale Abfragen zeigt, dass dieser Vorgang Auswirkungen auf die Verlaufstabelle hatte.<br /><br /> **CREATE/ALTER** temporale Tabellen machen die Information verfügbar, dass Berechtigungsüberprüfungen für die Verlaufstabelle ebenfalls durchgeführt werden. Die Überwachungsdatei enthält einen zusätzlichen Datensatz für die Verlaufstabelle.<br /><br /> DML-Vorgänge auf der aktuellen Tabelle zeigen auf, dass die Verlaufstabelle betroffen war, aber „additional_info“ bietet den erforderlichen Zusammenhang (DML war ein Ergebnis von „system_versioning“).|
 
 ## <a name="performing-schema-operations"></a>Ausführen von Schemavorgängen
 
@@ -63,7 +63,7 @@ Wenn SYSTEM_VERSIONING auf ON festgelegt ist, werden Schemaänderungsvorgänge b
 |Berechtigung erforderlich|**CREATE TABLE** -Berechtigung in der Datenbank<br /><br /> **ALTER** -Berechtigung für die Schemas, in denen die aktuellen Tabellen und Verlaufstabellen erstellt werden|**CREATE TABLE** -Berechtigung in der Datenbank<br /><br /> **ALTER** -Berechtigung für das Schema, in dem die aktuelle Tabelle erstellt wird<br /><br /> **CONTROL** -Berechtigung für die Verlaufstabelle, die als Teil der **CREATE TABLE** -Anweisung zum Erstellen der temporalen Tabelle angegeben wurde|
 |Überwachen von|Die Überwachung zeigt, dass Benutzer versucht haben, zwei Objekte zu erstellen. Der Vorgang kann fehlschlagen, entweder aufgrund fehlender Berechtigungen zum Erstellen einer Tabelle in der Datenbank, oder aufgrund fehlender Berechtigungen für das Ändern von Schemas in einer der Tabellen.|Die Überwachung zeigt, dass eine temporale Tabelle erstellt wurde. Der Vorgang kann fehlschlagen, entweder aufgrund fehlender Berechtigungen zum Erstellen einer Tabelle in der Datenbank, aufgrund der fehlenden Berechtigungen zum Ändern des Schemas für die temporale Tabelle, oder aufgrund der fehlenden Berechtigungen für die Verlaufstabelle.|
 
-## <a name="security-of-the-alter-temporal-table-set-systemversioning-onoff-statement"></a>Sicherheit der Anweisung ALTER Temporal TABLE SET (SYSTEM_VERSIONING ON/OFF)
+## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>Sicherheit der Anweisung ALTER Temporal TABLE SET (SYSTEM_VERSIONING ON/OFF)
 
 ||Erstellen einer neuen Verlaufstabelle|Wiederverwenden einer vorhandenen Verlaufstabelle|
 |-|------------------------------|----------------------------------|

@@ -47,26 +47,24 @@
   items:
     - name: Python
       items:
-        - name: Überprüfen der Verfügbarkeit von Python in SQL Server
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: Hallo Welt in Python und SQL
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: Arbeiten mit Eingaben und Ausgaben
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Python-Datenstrukturen und SQL
+        - name: Erstellen von Python-Skripts
+          href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+        - name: Arbeiten mit Datentypen und Objekten
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: Trainieren und Verwenden Ihres ersten Modells
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+        - name: Schreiben von Python-Funktionen
+          href: ../advanced-analytics/tutorials/quickstart-python-functions.md
+        - name: Trainieren und Bewerten eines Modells
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
         - name: Erstellen von R-Skripts
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: Trainieren und Bewerten eines Modells
-          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
         - name: Arbeiten mit Datentypen und Objekten
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
         - name: Schreiben von R-Funktionen
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
+        - name: Trainieren und Bewerten eines Modells
+          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: Lernprogramme
   items:
     - name: Python
@@ -259,28 +257,26 @@
               href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
     - name: Verwaltung
       items:
-        - name: Verwalten der Integration
-          href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
         - name: Monitor
           items:
             - name: Überwachen mithilfe von SSMS-Berichten
-              href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
+              href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
             - name: Überwachung mit DMVs
               href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
             - name: Erweiterte Ereignisse
               items:
-                - name: Erweiterte Ereignisse
-                  href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
-                - name: Erweiterte Ereignisse PREDICT T-SQL
-                  href: ../advanced-analytics/xe-event-predict-tsql.md
+                - name: Überwachung mithilfe erweiterter Ereignisse
+                  href: ../advanced-analytics/administration/extended-events.md
+                - name: Überwachung von PREDICT SQL
+                  href: ../advanced-analytics/administration/extended-events-predict-tsql.md
         - name: Skalieren der Skriptausführung
-          href: ../advanced-analytics/administration/modify-user-account-pool.md
+          href: ../advanced-analytics/administration/scale-concurrent-execution-external-scripts.md
         - name: Resource Governor
           items:
             - name: Verwenden des Resource Governor
-              href: ../advanced-analytics/administration/resource-governance.md
+              href: ../advanced-analytics/administration/resource-governor.md
             - name: Erstellen eines Ressourcenpools
-              href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
+              href: ../advanced-analytics/administration/create-external-resource-pool.md
     - name: Security
       items:
         - name: Erteilen von Berechtigungen für Benutzer

@@ -1,7 +1,7 @@
 ---
 title: Tabellen- und Zeilengröße in speicheroptimierten Tabellen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/27/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: in-memory-oltp
@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62466041"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688901"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
   Eine speicheroptimierte Tabelle besteht aus einer Auflistung von Zeilen und Indizes, die Zeiger auf die Zeilen enthalten. In einer speicheroptimierten Tabelle dürfen Zeilen eine maximale Länge von 8.060 Bytes aufweisen. Wenn Sie eine Vorstellung von der Größe einer speicheroptimierten Tabelle haben, können Sie besser einschätzen, ob Ihr Computer über genügend Arbeitsspeicher verfügt.  
@@ -34,7 +34,7 @@ ms.locfileid: "62466041"
   
  Die folgende Abbildung zeigt eine Tabelle mit Indizes und Zeilen, die wiederum Zeilenüberschriften und Text enthalten:  
   
- ![Speicheroptimierte Tabelle](../../database-engine/media/hekaton-guide-1.gif "Speicheroptimierte Tabelle")  
+ ![Speicheroptimierte Tabelle.](../../database-engine/media/hekaton-guide-1.gif "Speicher optimierte Tabelle.")  
 Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.  
   
  Die Größe einer Tabelle im Arbeitsspeicher in Bytes wird wie folgt berechnet:  
@@ -70,13 +70,13 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
  In der folgenden Tabelle wird die Berechnung der Zeilentextgröße beschrieben, die wie folgt angegeben wird: [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns].  
   
-|Abschnitt|Größe|Kommentare|  
+|Abschnitt|Schriftgrad|Kommentare|  
 |-------------|----------|--------------|  
-|Spalten flacher Typen|SUM([size of shallow types])<br /><br /> **Größe der einzelnen Typen lautet wie folgt aus:**<br /><br /> Bit: 1<br /><br /> Tinyint: 1<br /><br /> Smallint: 2<br /><br /> Int: 4<br /><br /> Real: 4<br /><br /> Smalldatetime: 4<br /><br /> Smallmoney: 4<br /><br /> Bigint: 8<br /><br /> Datetime: 8<br /><br /> Datetime2: 8<br /><br /> Float: 8<br /><br /> Money: 8<br /><br /> Numeric (Genauigkeit < = 18) &#124; 8<br /><br /> Time: 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier: 16||  
-|Auffüllung flacher Spalten|Dabei sind folgende Werte möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die gesamte Datengröße der flachen Spalten eine ungerade Zahl darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
-|Offsetarray für Spalten tiefer Typen|Dabei sind folgende Werte möglich:<br /><br /> 0, wenn keine Spalten tiefer Typen vorhanden sind<br /><br /> 2 + 2 * [number of deep type columns] andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Spalten flacher Typen|SUM([size of shallow types])<br /><br /> **Die Größe der einzelnen Typen lautet wie folgt:**<br /><br /> Bit: 1<br /><br /> Tinyint: 1<br /><br /> Smallint: 2<br /><br /> Int: 4<br /><br /> Real: 4<br /><br /> Smalldatetime: 4<br /><br /> Smallmoney: 4<br /><br /> Bigint: 8<br /><br /> Datetime: 8<br /><br /> Datetime2: 8<br /><br /> Float: 8<br /><br /> Money: 8<br /><br /> Numeric (Precision < = 18) &#124; 8<br /><br /> Time: 8<br /><br /> Numeric (Precision > 18) &#124; 16<br /><br /> Uniqueidentifier: 16||  
+|Auffüllung flacher Spalten|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die gesamte Datengröße der flachen Spalten eine ungerade Zahl darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Offsetarray für Spalten tiefer Typen|Folgende Werte sind möglich:<br /><br /> 0, wenn keine Spalten tiefer Typen vorhanden sind<br /><br /> 2 + 2 * [number of deep type columns] andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |NULL-Array|[number of nullable columns] / 8, aufgerundet auf vollständige Bytes.|Das Array verfügt über ein Bit pro Spalte, die NULL zulässt. Dies wird auf vollständige Bytes aufgerundet.|  
-|NULL-Arrayauffüllung|Dabei sind folgende Werte möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die Größe des NULL-Arrays eine ungerade Anzahl von Bytes darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|NULL-Arrayauffüllung|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die Größe des NULL-Arrays eine ungerade Anzahl von Bytes darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |Auffüllung|Wenn keine Spalten tiefer Typen vorhanden sind: 0<br /><br /> Wenn Spalten tiefer Typen vorhanden sind, wird eine 0-7-Byte-Auffüllung hinzugefügt, basierend auf der größten Ausrichtung, die für eine flache Spalte erforderlich ist. Jede flache Spalte erfordert eine Ausrichtung gleich ihrer Größe, wie oben beschrieben. Nur GUID-Spalten erfordern eine Ausrichtung von einem Byte (nicht 16) und numerische Spalten immer eine Ausrichtung von 8 Bytes (nie 16). Die größte Ausrichtungsanforderung unter allen flachen Spalten wird verwendet, und eine 0-7-Byte-Auffüllung wird so hinzugefügt, dass die bisherige Gesamtgröße (ohne die Spalten tiefer Typen) ein Vielfaches der erforderlichen Ausrichtung ergibt.|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |Spalten tiefer Typen mit fester Länge|SUM([size of fixed length deep type columns])<br /><br /> Die Größe jeder Spalte lautet wie folgt:<br /><br /> i für char(i) und binary(i).<br /><br /> 2 * i für nchar(i)|Spalten tiefer Typen mit fester Länge sind Spalten des Typs char(i), nchar(i) oder binary(i).|  
 |Spalten tiefer Typen mit variabler Länge [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> Die berechnete Größe jeder Spalte lautet wie folgt:<br /><br /> i für varchar(i) und varbinary(i)<br /><br /> 2 * i für nvarchar(i)|Diese Zeile wird nur auf [computed row body size] angewendet.<br /><br /> Spalten tiefer Typen mit variabler Länge sind Spalten des Typs varchar(i), nvarchar(i) oder varbinary(i). Die berechnete Größe wird durch die maximale Länge (i) der Spalte bestimmt.|  
@@ -91,29 +91,29 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
  Die folgende Abbildung veranschaulicht die Zeilenstruktur für eine Tabelle mit zwei Indizes:  
   
- ![Zeilenstruktur für eine Tabelle mit zwei Indizes.](../../database-engine/media/hekaton-tables-4.gif "Row structure for a table that has two indexes.")  
+ ![Zeilen Struktur für eine Tabelle, die über zwei Indizes verfügt.](../../database-engine/media/hekaton-tables-4.gif "Zeilen Struktur für eine Tabelle, die über zwei Indizes verfügt.")  
   
  Die Zeitstempel für Beginn und Ende geben den Zeitraum an, in dem eine bestimmte Zeilenversion gültig ist. Für Transaktionen, die in diesem Intervall beginnen, ist diese Zeilenversion sichtbar. Weitere Informationen finden Sie unter [Transaktionen in speicheroptimierten Tabellen](memory-optimized-tables.md).  
   
  Die Indexzeiger zeigen auf die nächste Zeile in der Kette, die dem Hashbucket angehört. Die folgende Abbildung veranschaulicht die Struktur einer Tabelle mit zwei Spalten (Name, Ort) und mit zwei Indizes: einem für den Spaltennamen und einen für den Spaltenort.  
   
- ![Die Struktur einer Tabelle mit zwei Spalten und Indizes.](../../database-engine/media/hekaton-tables-5.gif "Structure of a table with two columns and indexes.")  
+ ![Struktur einer Tabelle mit zwei Spalten und Indizes.](../../database-engine/media/hekaton-tables-5.gif "Struktur einer Tabelle mit zwei Spalten und Indizes.")  
   
  In dieser Abbildung werden die Namen John und Jane zum ersten Hashbucket hinzugefügt. Susan wird dem zweiten Hashbucket hinzugefügt. Die Städte Beijing (Peking) und Bogota werden dem ersten Hashbucket hinzugefügt. Paris und Prag werden dem zweiten Hashbucket hinzugefügt.  
   
  Somit ergeben sie folgende Ketten für den Hashindex für Namen:  
   
--   Erste Bucket: (John, Peking (Beijing)); (John, Paris); (Jane, Prag)  
+-   Erster Bucket: (John, Beijing (Peking)); (John, Paris); (Jane, Prag)  
   
 -   Zweiter Bucket: (Susan, Bogota)  
   
  Die Ketten für den Index für die Stadt lauten wie folgt:  
   
--   Erste Bucket: (John, Peking (Beijing)), (Susan, Bogota)  
+-   Erster Bucket: (John, Beijing (Peking)), (Susan, Bogota)  
   
 -   Zweiter Bucket: (John, Paris), (Jane, Prag)  
   
- Einen endzeitstempel??? (Unendlichkeit) gibt an, dass es sich um die aktuell gültige Version der Zeile handelt. Die Zeile wurde nicht aktualisiert oder gelöscht, seitdem diese Zeilenversion geschrieben wurde.  
+ Ein Endzeit Stempel &#x221e; (unendlich) gibt an, dass dies die aktuell gültige Version der Zeile ist. Die Zeile wurde nicht aktualisiert oder gelöscht, seitdem diese Zeilenversion geschrieben wurde.  
   
  Eine Zeit, die größer als 200 ist, enthält die Tabelle die folgenden Zeilen:  
   
@@ -147,9 +147,9 @@ CREATE TABLE dbo.Orders (
 GO  
 ```  
   
- Beachten Sie, dass diese Tabelle einen Hashindex und einen nicht gruppierten Index (den Primärschlüssel) aufweist. Darüber hinaus weist sie drei Spalten fester Länge und eine Spalte variabler Länge auf, wobei eine der Spalten NULL-Werte zulässt (OrderDescription). Nehmen wir an, die Orders-Tabelle hat 8379 Zeilen, und die durchschnittliche Länge der Werte in der OrderDescription-Spalte beträgt 78 Zeichen.  
+ Beachten Sie, dass diese Tabelle einen Hashindex und einen nicht gruppierten Index (den Primärschlüssel) aufweist. Darüber hinaus weist sie drei Spalten fester Länge und eine Spalte variabler Länge auf, wobei eine der Spalten NULL-Werte zulässt (OrderDescription). Nehmen wir an, die Orders-Tabelle hat 8379 Zeilen, und die durchschnittliche Länge der Werte in der orderdescription-Spalte beträgt 78 Zeichen.  
   
- Um die Tabellengröße zu ermitteln, ermitteln Sie zuerst die Größe der Indizes. Der bucket_count-Wert für beide Indizes wird mit 10000 angegeben. Dies wird auf die nächste Potenz von 2 aufgerundet: 16384. Daher ergibt sich die Gesamtgröße der Indizes für die Orders-Tabelle wie folgt:  
+ Um die Tabellengröße zu ermitteln, ermitteln Sie zuerst die Größe der Indizes. Der bucket_count-Wert für beide Indizes wird mit 10000 angegeben. Dieser wird auf die nächste Zweierpotenz aufgerundet: 16384. Daher ergibt sich die Gesamtgröße der Indizes für die Orders-Tabelle wie folgt:  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -198,7 +198,7 @@ GO
   
     -   Die Gesamtauffüllung beträgt 24 - 22 = 2 Bytes.  
   
--   Es wurden keine Spalten tiefer Typen fester Länge (Spalten tiefer Typen mit fester Länge: 0.).  
+-   Es sind keine Spalten tiefer Typen mit fester Länge vorhanden (Spalten tiefer Typen mit fester Länge: 0.).  
   
 -   Die tatsächliche Größe der Spalte tiefen Typs ist 2 * 78 = 156. Die einzelne Spalte tiefen Typs OrderDescription hat den Typ nvarchar.  
   
@@ -222,7 +222,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Speicheroptimierte Tabellen](memory-optimized-tables.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

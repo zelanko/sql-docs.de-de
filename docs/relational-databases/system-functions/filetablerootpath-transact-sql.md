@@ -1,5 +1,5 @@
 ---
-title: FileTableRootPath (Transact-SQL) | Microsoft-Dokumentation
+title: Filetablerootpath (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80651e82fb643d044f4c953481dde2114adcadda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042860"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251237"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
 ## <a name="arguments"></a>Argumente  
  *FileTable_name*  
- Der Name der FileTable. *FileTable_name* ist vom Typ **Nvarchar**. Dies ist ein optionaler Parameter. Der Standardwert ist die aktuelle Datenbank. Angeben von *Schema_name* ist ebenfalls optional. Übergeben Sie NULL für *FileTable_name* Standardparameterwert zu verwenden  
+ Der Name der FileTable. *FileTable_name* ist vom Typ **nvarchar**. Dies ist ein optionaler Parameter. Der Standardwert ist die aktuelle Datenbank. Die Angabe von *schema_name* ist ebenfalls optional. Sie können NULL für *FileTable_name* übergeben, um den Standardparameter Wert zu verwenden.  
   
- *@option*  
- Ein ganzzahliger Ausdruck, der definiert, wie die Serverkomponente des Pfads formatiert werden soll. *@option* Dabei kann es sich um einen der folgenden Werte aufweisen:  
+ *\@-Option*  
+ Ein ganzzahliger Ausdruck, der definiert, wie die Serverkomponente des Pfads formatiert werden soll. die *Option "\@"* kann einen der folgenden Werte aufweisen:  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -52,16 +52,16 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
 ## <a name="return-type"></a>Rückgabetyp  
  **nvarchar(4000)**  
   
- Wenn die Datenbank zu einer Always On-verfügbarkeitsgruppe gehört die **FileTableRootPath** Funktion gibt den virtuellen Netzwerknamen (VNN) statt des Computernamens zurück.  
+ Wenn die Datenbank zu einer Always on-Verfügbarkeits Gruppe gehört, gibt die **filetablerootpath** -Funktion anstelle des Computer namens den Namen des virtuellen Netzwerks (vnn) zurück.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Die **FileTableRootPath** Funktion gibt NULL zurück, wenn eine der folgenden Bedingungen zutrifft:  
+ Die **filetablerootpath** -Funktion gibt NULL zurück, wenn eine der folgenden Bedingungen zutrifft:  
   
--   Der Wert des *FileTable_name* ist ungültig.  
+-   Der Wert von *FileTable_name* ist ungültig.  
   
 -   Der Aufrufer hat keine ausreichende Berechtigung zum Verweisen auf die angegebene Tabelle oder die aktuelle Datenbank auf.  
   
--   Die FILESTREAM-Option von *Database_directory* ist nicht für die aktuelle Datenbank festgelegt.  
+-   Die FILESTREAM-Option von *database_directory* ist für die aktuelle Datenbank nicht festgelegt.  
   
  Weitere Informationen finden Sie unter [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
@@ -83,14 +83,14 @@ WHERE Name = N'document.docx';
 ## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
- Die **FileTableRootPath** -Funktion erfordert:  
+ Die **filetablerootpath** -Funktion erfordert Folgendes:  
   
 -   SELECT-Berechtigung für die FileTable, um den Stammpfad einer bestimmten FileTable abzurufen.  
   
--   **Db_datareader** oder höhere Berechtigung, um den Stammpfad für die aktuelle Datenbank abzurufen.  
+-   **db_datareader** oder höher, um den Stammpfad für die aktuelle Datenbank zu erhalten.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele zeigen das Aufrufen der **FileTableRootPath** Funktion.  
+ In den folgenden Beispielen wird gezeigt, wie die **filetablerootpath** -Funktion aufgerufen wird.  
   
 ```  
 USE MyDocumentDatabase;  

@@ -1,7 +1,7 @@
 ---
 title: Verwenden von PIVOT und UNPIVOT | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559420"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305177"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM: Verwenden von PIVOT und UNPIVOT
 
@@ -62,7 +62,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 Die Spaltenbezeichner in der `UNPIVOT`-Klausel folgen der Katalogsortierung. Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] wird immer die Sortierung `SQL_Latin1_General_CP1_CI_AS` verwendet. Bei teilweise eigenständigen [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Datenbanken wird immer die Sortierung `Latin1_General_100_CI_AS_KS_WS_SC` verwendet. Wenn die Spalte mit anderen Spalten kombiniert wird, ist eine COLLATE-Klausel (`COLLATE DATABASE_DEFAULT`) erforderlich, um Konflikte zu vermeiden.  
 
   
@@ -153,7 +153,7 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-Die von der Spalte `EmployeeID` zurückgegebenen eindeutigen Werte werden zu Feldern im endgültigen Resultset. Das Ergebnis ist eine Spalte für jede `EmployeeID`-Nummer, die in der PIVOT-Klausel angegeben war: In diesem Fall die Mitarbeiter `164`, `198`, `223`, `231` und `233`. Die `PurchaseOrderID`-Spalte dient als Wertspalte, für die die in der endgültigen Ausgabe zurückgegebenen Spalten, die auch als Gruppierungsspalten bezeichnet werden, gruppiert sind. In diesem Fall werden die Gruppierungsspalten durch die `COUNT`-Funktion aggregiert. Beachten Sie, dass eine Warnmeldung darauf hinweist, dass eventuell vorhandene NULL-Werte, die sich in der `PurchaseOrderID`-Spalte befinden, bei der Berechnung der `COUNT`-Funktion für die einzelnen Mitarbeiter nicht berücksichtigt werden.  
+Die von der Spalte `EmployeeID` zurückgegebenen eindeutigen Werte werden zu Feldern im endgültigen Resultset. Das Ergebnis ist eine Spalte für jede `EmployeeID`-Nummer, die in der PIVOT-Klausel angegeben war: In diesem Fall die Mitarbeiter `250`, `251`, `256`, `257` und `260`. Die `PurchaseOrderID`-Spalte dient als Wertspalte, für die die in der endgültigen Ausgabe zurückgegebenen Spalten, die auch als Gruppierungsspalten bezeichnet werden, gruppiert sind. In diesem Fall werden die Gruppierungsspalten durch die `COUNT`-Funktion aggregiert. Beachten Sie, dass eine Warnmeldung darauf hinweist, dass eventuell vorhandene NULL-Werte, die sich in der `PurchaseOrderID`-Spalte befinden, bei der Berechnung der `COUNT`-Funktion für die einzelnen Mitarbeiter nicht berücksichtigt werden.  
   
 > [!IMPORTANT]  
 >  Beim Verwenden der Aggregatfunktionen mit `PIVOT` werden eventuell vorhandene NULL-Werte in der Wertespalte bei der Berechnung der Aggregation nicht berücksichtigt.  

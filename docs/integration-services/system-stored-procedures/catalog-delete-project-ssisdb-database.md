@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: daa98eea8582d65ae0653d9de407d9908cc11ac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a48cb51b363d036f57dfd4f175ab862645ebca1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007927"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296789"
 ---
 # <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project (SSISDB-Datenbank)
 
@@ -63,7 +63,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Alle Objekte und Umgebungsverweise des entsprechenden Projekts werden zusammen mit dem Projekt gelöscht. Die Versionen des Projekts und die relevanten Vorgangsdatensätze werden jedoch bis zur nächsten Ausführung des Vorgangscleanupauftrags beibehalten.  
   
   

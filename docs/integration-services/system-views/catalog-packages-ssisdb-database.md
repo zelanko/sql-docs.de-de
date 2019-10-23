@@ -11,14 +11,14 @@ helpviewer_keywords:
 - packages view [Integration Services]
 - catalog.packages view [Integration Services]
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a921aaeebc57ab72f75c980b0877a9fa0723fdca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aea0d3c07482c7c54dc5adb8956b290791f29111
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997848"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295167"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB-Datenbank)
 
@@ -46,7 +46,7 @@ ms.locfileid: "67997848"
 |validation_status|**char(1)**|Der Status der Überprüfung.|  
 |last_validation_time|**datetimeoffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  In dieser Sicht wird eine Zeile für jedes Paket im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

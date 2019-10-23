@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 31c745a585adf26b521054cbcd0234fd4087a114
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745446"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542176"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Konfigurieren von Bereitstellungs Einstellungen für Cluster Ressourcen und-Dienste
 
@@ -151,11 +151,11 @@ Wenn Sie dieselben Konfigurationen für einen Dienst, der mehreren Ressourcen zu
 
 Sie können einen beliebigen JSON-Format-Editor verwenden (z. B. VS Code), um die Konfigurationsdateien für Ihre Clusterbereitstellung anzupassen. Verwenden Sie den Befehl **azdata bdc config**, um für diese Bearbeitungen Skripts zu erstellen und sie zu automatisieren. In diesem Artikel wird erläutert, wie Sie Big-Data-Clusterbereitstellungen konfigurieren, indem Sie Bereitstellungskonfigurationsdateien ändern. Er enthält Beispiele zum Ändern der Konfiguration für verschiedene Szenarios. Weitere Informationen zur Verwendung von Konfigurationsdateien in Bereitstellungen finden Sie im [Leitfaden zur Bereitstellung](deployment-guidance.md#configfile).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Prerequisites
 
 - [Installieren Sie azdata](deploy-install-azdata.md).
 
-- Bei jedem der Beispiele in diesem Abschnitt wird davon ausgegangen, dass Sie eine Kopie einer der Standardkonfigurationen erstellt haben. Weitere Informationen finden Sie unter [Create a custom configuration (Erstellen einer benutzerdefinierten Konfiguration)](deployment-guidance.md#customconfig). Der folgende Befehl erstellt z. b. ein Verzeichnis `custom` mit dem Namen, das zwei JSON-Bereitstellungs Konfigurationsdateien, **BDC. JSON** und **Control. JSON**, basierend auf der Standardkonfiguration **AKS-dev-Test** enthält:
+- Bei jedem der Beispiele in diesem Abschnitt wird davon ausgegangen, dass Sie eine Kopie einer der Standardkonfigurationen erstellt haben. Weitere Informationen finden Sie unter [Create a custom configuration (Erstellen einer benutzerdefinierten Konfiguration)](deployment-guidance.md#customconfig). Der folgende Befehl erstellt z. b. ein Verzeichnis mit dem Namen `custom`, das zwei JSON-Bereitstellungs Konfigurationsdateien, **BDC. JSON** und **Control. JSON**, basierend auf der Standardkonfiguration **AKS-dev-Test** enthält:
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
@@ -539,18 +539,8 @@ Die folgende Datei **patch.json** führt die folgenden Änderungen durch:
       "op": "add",
       "path": "spec.services.hdfs.resources/-",
       "value": "spark-0"
-    },
-    {
-      "op": "add",
-      "path": "spec.services.spark.settings",
-      "value": {
-        "DriverMemory": "2g",
-        "DriverCores": "1",
-        "ExecutorInstances": "2",
-        "ExecutorMemory": "2g",
-        "ExecutorCores": "1"
-      }
     }
+   }
   ]
 }
 ```
@@ -576,7 +566,7 @@ Um den Container, der elasticsearch ausführt, für die Ausführung im privilegi
 }
 ```
 
-Sie können die Datei " **Control. JSON** " Bearbeiten und den obigen Abschnitt der **Spezifikation**hinzufügen. Sie können aber auch eine Patchdatei **elasticsearch-Patch. JSON** wie unten beschrieben erstellen und die Datei " **config. JSON** " mithilfe der **azdata** CLI Patchen:
+Sie können die Datei " **Control. JSON** " Bearbeiten und den obigen Abschnitt der **Spezifikation**hinzufügen, oder Sie können eine Patchdatei **elasticsearch-Patch. JSON** wie unten beschrieben erstellen und die Datei " **Control. JSON** " mithilfe der **azdata** -CLI Patchen:
 
 ```json
 {
@@ -635,4 +625,4 @@ azdata bdc config patch --config-file control.json --patch-file elasticsearch-pa
 > Es wird empfohlen, die **max_map_count** -Einstellung manuell auf jedem Host im Kubernetes-Cluster manuell zu aktualisieren, gemäß den Anweisungen in [diesem Artikel](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Verwenden von Konfigurationsdateien in Big Data Cluster Bereitstellungen finden [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-guidance.md#configfile)Sie unter Bereitstellen von auf Kubernetes.
+Weitere Informationen zum Verwenden von Konfigurationsdateien in Big Data Cluster Bereitstellungen finden Sie unter Bereitstellen [von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] auf Kubernetes](deployment-guidance.md#configfile).

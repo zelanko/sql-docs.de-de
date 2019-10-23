@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5426210ad558e776dd2ad92246bc526ebf37c2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934767"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008462"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Upgraden oder Patchen replizierter Datenbanken
 
@@ -104,7 +104,7 @@ In diesen Schritten wird die Reihenfolge dargestellt, in der Upgrades für Repli
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>Schritte für die parallele Migration des Verteilers zu Windows Server 2012 R2
-Wenn Sie ein Upgrade Ihrer SQL Server-Instanz auf SQL Server 2016 (oder höher) planen und Ihr aktuelles Betriebssystem Windows Server 2008 (oder 2008 R2) ist, müssen Sie ein paralleles Upgrade auf Windows Server 2012 R2 oder höher für das Betriebssystem ausführen. Der Grund für dieses Zwischenupgrade des Betriebssystems ist, dass Windows Server 2008 bzw. 2008 R2 die Installation von SQL Server 2016 und direkte Upgrades von Failoverclustern nicht zulässt. Die folgenden Schritte können Sie sowohl in einer eigenständigen SQL Server-Instanz als auch innerhalb einer Always On-Failoverclusterinstanz (FCI) ausführen.
+Wenn Sie ein Upgrade Ihrer SQL Server-Instanz auf SQL Server 2016 (oder höher) planen und Ihr aktuelles Betriebssystem Windows Server 2008 (oder 2008 R2) ist, müssen Sie für das Betriebssystem ein paralleles Upgrade auf Windows Server 2012 R2 oder höher ausführen. Der Grund für dieses zwischengeschaltete Betriebssystemupgrade ist, dass SQL Server 2016 nicht auf einem Server mit Windows Server 2008/2008 R2 installiert werden kann und für Windows Server 2008/2008 R2 kein direktes Upgrade auf Windows Server 2016 möglich ist. Obwohl ein direktes Upgrade von Windows Server 2008/2008 R2 auf Windows Server 2012 und anschließend auf Windows Server 2016 möglich ist, wird dies aufgrund der Ausfallzeit und der höheren Komplexität, die einen einfachen Rollbackpfad verhindern, generell nicht empfohlen. Ein paralleles Upgrade ist der einzige Upgradepfad, der für zu einem Failovercluster gehörige SQL Server-Instanzen verfügbar ist.  Die folgenden Schritte können Sie sowohl in einer eigenständigen SQL Server-Instanz als auch innerhalb einer Always On-Failoverclusterinstanz (FCI) ausführen.
 
 1. Richten Sie eine neue SQL Server-Instanz (entweder eigenständig oder in einem Always On-Failovercluster) mit der gleichen Edition und Version des Windows Server 2012 R2/2016-Verteilers und einem anderen Windows-Cluster sowie SQL Server-FCI-Namen bzw. eigenständigen Hostnamen. Führen Sie keine Änderungen an der Verzeichnisstruktur durch, um sicherzustellen, dass sich die ausführbaren Replikations-Agents, Replikationsordner und Datenbankdateipfade in der neuen Umgebung im gleichen Pfad befinden. Damit werden die erforderlichen Schritte nach der Migration bzw. dem Upgrade reduziert.
 1. Stellen Sie sicher, dass Ihre Replikation synchronisiert ist, und beenden Sie dann alle Replikations-Agents. 

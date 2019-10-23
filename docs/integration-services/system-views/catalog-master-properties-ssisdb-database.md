@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 537b9a1d1b0fb84ba26c56aeb2f897d268bb2d03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3ce06430094825bf3268836657661930fea058e4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104854"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296623"
 ---
 # <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties (SSISDB-Datenbank)
 
@@ -31,7 +31,7 @@ Zeigt die Eigenschaften des ausgewählten [!INCLUDE[ssISnoversion](../../include
 |property_name|**nvarchar(256)**|Der Name der Scale Out Master-Eigenschaft.|  
 |property_value|**nvarchar(max)**|Der Wert der Scale Out Master-Eigenschaft.|
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 In dieser Sicht wird für jede Scale Out Master-Eigenschaft eine Zeile angezeigt. In dieser Sicht werden folgende Eigenschaften angezeigt:
 
 |Eigenschaftsname|und Beschreibung|  

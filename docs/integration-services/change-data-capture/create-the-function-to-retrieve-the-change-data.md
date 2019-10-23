@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e4da506162bc50e4089c0077b4b2e94854282c3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060836"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251986"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Erstellen der Funktion zum Abrufen der Änderungsdaten
 
@@ -80,7 +80,7 @@ ms.locfileid: "68060836"
 > [!NOTE]  
 >  Weitere Informationen über die Syntax dieser gespeicherten Prozedur und ihre Parameter finden Sie unter [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
   
- Die gespeicherte Funktion generiert immer eine Wrapperfunktion, um alle Änderungen aus allen Aufzeichnungsinstanzen zurückzugeben. Wenn der *@supports_net_changes* -Parameter während der Erstellung der Aufzeichnungsinstanz festgelegt wurde, generiert die gespeicherte Prozedur außerdem eine Wrapperfunktion, die die Nettoänderungen von jeder entsprechenden Aufzeichnungsinstanz zurückgibt.  
+ Die gespeicherte Funktion generiert immer eine Wrapperfunktion, um alle Änderungen aus allen Aufzeichnungsinstanzen zurückzugeben. Wenn der *\@supports_net_changes*-Parameter während der Erstellung der Aufzeichnungsinstanz festgelegt wurde, generiert die gespeicherte Prozedur außerdem eine Wrapperfunktion, die die Nettoänderungen von jeder entsprechenden Aufzeichnungsinstanz zurückgibt.  
   
  Die gespeicherte Prozedur gibt ein Resultset mit zwei Spalten zurück:  
   
@@ -112,7 +112,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Grundlegendes zu den von der gespeicherten Prozedur erstellten Funktionen und deren Verwendung  
- Um die Zeitachse der aufgezeichneten Änderungsdaten systematisch abzuarbeiten, gehen die generierten Wrapperfunktionen davon aus, dass der *@end_time* -Parameter für ein Intervall der *@start_time* -Parameter für das folgende Intervall ist. Wenn diese Konvention eingehalten wird, kann die generierte Wrapperfunktion folgende Aufgaben ausführen:  
+ Um die Zeitachse der aufgezeichneten Änderungsdaten systematisch abzuarbeiten, gehen die generierten Wrapperfunktionen davon aus, dass der *\@end_time*-Parameter für ein Intervall der *\@start_time*-Parameter für das folgende Intervall ist. Wenn diese Konvention eingehalten wird, kann die generierte Wrapperfunktion folgende Aufgaben ausführen:  
   
 -   Zuordnung der Datums-/Zeitwerte zu den intern verwendeten LSN-Werten  
   
@@ -130,7 +130,7 @@ deallocate #hfunctions
   
 -   Die Werte für Startdatum und -uhrzeit sowie für Enddatum und -uhrzeit für das Intervall. Während die Wrapperfunktionen Datums-/Zeitwerte als Endpunkte für das Abfrageintervall verwenden, verwenden die Change Data Capture-Funktionen zwei LSN-Werte als Endpunkte.  
   
--   Den Zeilenfilter. Für die Wrapperfunktionen und die Change Data Capture-Funktionen ist der *@row_filter_option* -Parameter identisch. Weitere Informationen finden Sie unter [cdc.fn_cdc_get_all_changes_&#60;Aufzeichnungsinstanz&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) und [cdc.fn_cdc_get_net_changes_&#60;Aufzeichnungsinstanz&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+-   Den Zeilenfilter. Für die Wrapperfunktionen und die Change Data Capture-Funktionen ist der *\@row_filter_option*-Parameter identisch. Weitere Informationen finden Sie unter [cdc.fn_cdc_get_all_changes_&#60;Aufzeichnungsinstanz&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) und [cdc.fn_cdc_get_net_changes_&#60;Aufzeichnungsinstanz&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
  Das von den Wrapperfunktionen zurückgegebene Resultset enthält folgende Daten:  
   
@@ -138,7 +138,7 @@ deallocate #hfunctions
   
 -   Eine Spalte mit dem Namen __CDC_OPERATION, die ein Feld mit einem oder zwei Zeichen verwendet, um den der Zeile zugeordneten Vorgang zu kennzeichnen. Folgende Werte sind für dieses Feld gültig: „I“ für „insert“ (einfügen), „D“ für delete (löschen), „UO“ für „update old values“ (alte Werte aktualisieren) und „UN“ für „update new values“ (neue Werte aktualisieren).  
   
--   Updateflags, wenn Sie diese anfordern, die als bit-Spalten hinter dem Vorgangscode in der vom *@update_flag_list* -Parameter festgelegten Reihenfolge angezeigt werden. Diese Spalten werden bezeichnet, indem „_uflag“ an den zugeordneten Spaltennamen angehängt wird.  
+-   Updateflags, wenn Sie diese anfordern, die als bit-Spalten hinter dem Vorgangscode in der vom *\@update_flag_list*-Parameter festgelegten Reihenfolge angezeigt werden. Diese Spalten werden bezeichnet, indem „_uflag“ an den zugeordneten Spaltennamen angehängt wird.  
   
  Wenn Ihr Paket eine Wrapperfunktion aufruft, die alle Änderungen abfragt, gibt die Wrapperfunktion außerdem die Spalten __CDC_STARTLSN und \__CDC_SEQVAL zurück. Diese beiden Spalten sind die erste bzw. die zweite Spalte des Resultsets. Die Wrapperfunktion sortiert das Resultset außerdem auf der Grundlage dieser beiden Spalten.  
   

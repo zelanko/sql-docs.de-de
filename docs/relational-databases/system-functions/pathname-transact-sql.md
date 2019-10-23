@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140581"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251951"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt den Pfad eines FILESTREAM BLOB (Binary Large Object) zurück. Die OpenSqlFilestream-API verwendet diesen Pfad ein Handle zurück, die eine Anwendung zum Arbeiten mit BLOB-Daten mithilfe von Win32-APIs verwenden können. PathName ist schreibgeschützt.  
+  Gibt den Pfad eines FILESTREAM BLOB (Binary Large Object) zurück. Die OpenSqlFilestream-API verwendet diesen Pfad zum Zurückgeben eines Handles, das eine Anwendung verwenden kann, um mit den BLOB-Daten mithilfe von Win32-APIs zu arbeiten. PathName ist schreibgeschützt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *column_name*  
  Der Spaltenname einer **varbinary(max)** FILESTREAM-Spalte. *column_name* muss ein Spaltenname sein. Es kann sich hierbei weder um einen Ausdruck noch um das Ergebnis einer CAST- oder CONVERT-Anweisung handeln.  
   
- Des Pfadnamens für eine Spalte des anderen Datentyps oder für eine **'varbinary(max)'** Columnthat verfügt nicht über das FILESTREAM-Speicher-Attribut wird dazu führen, dass einen Fehler während der Kompilierung.  
+ Wenn der Pfadname für eine Spalte eines beliebigen anderen Datentyps oder für eine **varbinary (max)** -Spalte angefordert wird, die nicht über das FILESTREAM-Speicher Attribut verfügt, führt dies zu einem Kompilierzeitfehler der Abfrage.  
   
- *@option*  
- Ein ganzzahliger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , der definiert, wie die Serverkomponente des Pfads formatiert werden soll. *@option* Dabei kann es sich um eine der folgenden Werte sein. Die Standardeinstellung ist 0.  
+ *\@-Option*  
+ Ein ganzzahliger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , der definiert, wie die Serverkomponente des Pfads formatiert werden soll. die *Option "\@"* kann einen der folgenden Werte aufweisen. Die Standardeinstellung ist 0.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -54,11 +54,11 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 |2|Gibt den vollständigen Serverpfad zurück, z. B.: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
- Ein Bitwert, der definiert, wie den Namen des Servers in einer Always On-verfügbarkeitsgruppe zurückgegeben werden sollen.  
+ Ein Bitwert, der definiert, wie der Servername in einer Always on Verfügbarkeits Gruppe zurückgegeben werden soll.  
   
- Wenn die Datenbank nicht zu einer Always On-verfügbarkeitsgruppe gehört, wird der Wert dieses Arguments ignoriert. Der Computername wird immer im Pfad verwendet.  
+ Wenn die Datenbank nicht zu einer Always on-Verfügbarkeits Gruppe gehört, wird der Wert dieses Arguments ignoriert. Der Computername wird immer im Pfad verwendet.  
   
- Wenn die Datenbank zu einer Always On-verfügbarkeitsgruppe gehört zu gruppieren, klicken Sie dann den Wert der *Use_replica_computer_name* hat folgende Auswirkungen auf die Ausgabe der **Pfadnamen** Funktion:  
+ Wenn die Datenbank zu einer Always on-Verfügbarkeits Gruppe gehört, hat der Wert von *use_replica_computer_name* die folgenden Auswirkungen auf die Ausgabe der **pathname** -Funktion:  
   
 |Wert|Description|  
 |-----------|-----------------|  

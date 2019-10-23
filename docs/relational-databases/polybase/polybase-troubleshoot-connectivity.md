@@ -6,34 +6,38 @@ ms.reviewer: mikeray
 ms.technology: polybase
 ms.devlang: ''
 ms.topic: conceptual
-ms.date: 04/23/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3ac5c5fa9a19b88ef25702ae4f6c3359fd302892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f937ba5ff6fe4d9c0837d861bf75253f24bbf33b
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062007"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823589"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Sie können ein interaktives, in PolyBase integriertes Diagnosetool verwenden, um Probleme bei der Authentifizierung zu beheben, wenn Sie PolyBase mit einem durch Kerberos gesicherte Hadoop-Cluster verwenden. 
+Sie können interaktive, in PolyBase integrierte Diagnosefunktionen verwenden, um Probleme bei der Authentifizierung leichter zu beheben, wenn Sie PolyBase mit einem durch Kerberos gesicherten Hadoop-Cluster verwenden. 
 
-Dieser Artikel dient als Hilfestellung beim Debuggingprozess solcher Probleme mit diesem Tool.
+Dieser Artikel dient als Hilfestellung beim Debuggingprozess für solche Probleme mithilfe dieser integrierten Diagnosefunktionen.
+
+> [!TIP]
+> Sie müssen nicht unbedingt wie in dieser Anleitung beschrieben vorgehen, sondern können auch den [Tester für HDFS Kerberos](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/hdfs-kerberos-tester) für HDFS Kerberos-Verbindungen für PolyBase verwenden, wenn beim Erstellen einer externen Tabelle in einem mit Kerberos gesicherten HDFS-Cluster Fehler auftreten.
+> Dieses Tool hilft Ihnen dabei, Probleme zu vermeiden, die nicht mit SQL Server in Zusammenhang stehen, damit Sie sich auf die Behebung von Problemen mit dem HDFS Kerberos-Setup konzentrieren können, d. h. mit Fehlkonfigurationen von Benutzernamen bzw. Kennwörtern oder des Kerberos-Clustersetups.      
+> Dieses Tool ist vollständig unabhängig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es ist als Jupyter Notebook-Instanz verfügbar und erfordert Azure Data Studio.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-1. SQL Server 2016 RTM CU6/SQL Server 2016 SP1 CU3/SQL Server 2017 oder höher mit installiertem PolyBase
+1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6/[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3/[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] oder höher und PolyBase
 1. Ein Hadoop-Cluster (Cloudera oder Hortonworks), das durch Kerberos gesicherte wird (Active Directory oder MIT)
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="introduction"></a>Einführung
-
 Diese bietet allgemeine Informationen, um sich mit dem Kerberos-Protokoll vertraut zu machen. Daran sind drei Akteure beteiligt:
 
 1. der Kerberos-Client (SQL Server)
@@ -44,10 +48,10 @@ Jede von Hadoop gesicherte Ressource wird im **Schlüsselverteilungscenter (Key 
 
 Wenn in PolyBase die Authentifizierung mit einer durch Kerberos gesicherten Ressource angefordert wird, kommt es zu folgendem Handshake aus vier Zyklen:
 
-1. SQL Server stellt eine Verbindung mit dem KDC her und ruft das TGT für den Benutzer ab. Das TGT wird mit dem privaten Schlüssel des KDC verschlüsselt.
-1. SQL Server ruft die durch Hadoop gesicherte Ressource, HDFS, auf und bestimmt, für welchen SPN sie ein ST benötigt.
-1. SQL Server kehrt zum KDC zurück, übergibt das TGT und fordert ein ST an, um auf die gegebene gesicherte Ressource zugreifen zu können. Das ST wird mit dem privaten Schlüssel des gesicherten Diensts verschlüsselt.
-1. SQL Server leitet das ST an Hadoop weiter und wird authentifiziert, damit eine Sitzung für diesen Dienst erstellt werden kann.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine Verbindung mit dem KDC her und ruft ein TGT für den Benutzer ab. Das TGT wird mit dem privaten Schlüssel des KDC verschlüsselt.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruft die durch Hadoop gesicherte Ressource, HDFS, auf und bestimmt, für welchen SPN sie ein ST benötigt.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kehrt zum KDC zurück, übergibt das TGT und fordert ein ST an, um auf die gegebene gesicherte Ressource zugreifen zu können. Das ST wird mit dem privaten Schlüssel des gesicherten Diensts verschlüsselt.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] leitet das ST an Hadoop weiter und wird authentifiziert, damit eine Sitzung für diesen Dienst erstellt werden kann.
 
 ![](./media/polybase-sqlserver.png)
 
@@ -68,7 +72,7 @@ Diese Dateien befinden sich unter:
 
 `\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
-Der Standardwert für SQL Server 2016 lautet z.B. `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
+Der Standardwert für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] lautet z. B. `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
 Zum Aktualisieren von **core-site.xml** fügen Sie die drei untenstehenden Eigenschaften hinzu. Legen Sie die Werte passend zur Umgebung fest:
 
@@ -89,10 +93,10 @@ Zum Aktualisieren von **core-site.xml** fügen Sie die drei untenstehenden Eigen
 
 Die anderen XMLs müssen später auch aktualisiert werden, wenn Weitergabevorgänge gewünscht sind. Wenn jedoch nur diese eine Datei konfiguriert ist, sollte der Zugriff auf das HDFS-Dateisystem zumindest möglich sein.
 
-Das Tool wird unabhängig von SQL Server ausgeführt. Dies bedeutet, dass es weder ausgeführt noch neu gestartet werden muss, wenn die Konfigurations-XMLs aktualisiert wurden. Um das Tool auszuführen, führen Sie die folgenden Befehle auf dem Host mit SQL Server aus:
+Das Tool wird unabhängig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt. Das bedeutet, dass es weder ausgeführt noch neu gestartet werden muss, nachdem die Konfigurations-XMLs aktualisiert wurden. Sie können das Tool ausführen, indem Sie die folgenden Befehle auf dem Host mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen:
 
 ```cmd
-> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
+> cd C:\Program Files\Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -117,8 +121,7 @@ Die Ausgabe ist für das erweiterte Debuggen ausführlich. Allerdings gibt es nu
 Die folgenden Auszüge stammen aus einem KDC von MIT. Am Ende dieses Artikels finden Sie vollständige Beispielausgaben sowohl von MIT als auch von AD.
 
 ## <a name="checkpoint-1"></a>Prüfpunkt 1
-
-Es sollte einen Hexdump eines Tickets mit `Server Principal = krbtgt/MYREALM.COM@MYREALM.COM` geben. Dies gibt an, das SQL Server erfolgreich im KDC authentifiziert wurde und ein TGT erhalten hat. Falls dies nicht der Fall ist, liegt das Problem bei SQL Server und dem KDC, und nicht bei Hadoop.
+Es sollte einen Hexdump eines Tickets mit `Server Principal = krbtgt/MYREALM.COM@MYREALM.COM` geben. Dies gibt an, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfolgreich im KDC authentifiziert wurde und ein TGT erhalten hat. Falls dies nicht der Fall ist, liegt das Problem bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem KDC, nicht bei Hadoop.
 
 PolyBase unterstützt **keine** Vertrauensstellungen zwischen AD und MIT und muss mit dem gleichen KDC wie das Hadoop-Cluster. In derartigen Umgebungen können Sie ein Dienstkonto manuelle erstellen und dieses dann zur Authentifizierung verwenden.
 
@@ -147,7 +150,6 @@ PolyBase unterstützt **keine** Vertrauensstellungen zwischen AD und MIT und mus
 ```
 
 ## <a name="checkpoint-2"></a>Prüfpunkt 2
-
 PolyBase versucht auf das Hadoop Distributed File System (HDFS) zuzugreifen. Dies schlägt fehl, da die Anforderung nicht das erforderliche Dienstticket enthalten hat.
 
 ```cmd
@@ -159,8 +161,7 @@ PolyBase versucht auf das Hadoop Distributed File System (HDFS) zuzugreifen. Die
 ```
 
 ## <a name="checkpoint-3"></a>Prüfpunkt 3
-
-Ein zweiter Hexdump gibt an, dass SQL Server das TGT erfolgreich verwendet und das zutreffende Dienstticket für des SPN den Namenknotens vom KDC erhalten hat.
+Ein zweiter Hexdump lässt darauf schließen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das TGT erfolgreich verwendet und das zutreffende Dienstticket für den SPN des Namenknotens vom KDC erhalten hat.
 
 ```cmd
  >>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, #bytes=664 
@@ -186,8 +187,7 @@ Ein zweiter Hexdump gibt an, dass SQL Server das TGT erfolgreich verwendet und d
 ```
 
 ## <a name="checkpoint-4"></a>Prüfpunkt 4
-
-Zuletzt sollten die Eigenschaften des Zielpfads mit einer Bestätigungsmeldung ausgegeben werden. Die Dateieigenschaften bestätigen, dass SQL Server von Hadoop mithilfe des Diensttickets authentifiziert und eine Sitzung für den Zugriff auf die gesicherte Ressource gewährt wurde.
+Zuletzt sollten die Eigenschaften des Zielpfads mit einer Bestätigungsmeldung ausgegeben werden. Die Dateieigenschaften bestätigen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Hadoop mithilfe des Diensttickets authentifiziert und eine Sitzung für den Zugriff auf die gesicherte Ressource gewährt wurde.
 
 Wenn Sie hier angelangt sind bedeutet dies, dass (a) die drei Akteure ordnungsgemäß miteinander kommunizieren können, (b) „core-site.xml“ und „jaas.conf“ korrekt sind und dass (c) Ihr KDC Ihre Anmeldeinformationen erkannt hat.
 
@@ -197,7 +197,6 @@ Wenn Sie hier angelangt sind bedeutet dies, dass (a) die drei Akteure ordnungsge
 ```
 
 ## <a name="common-errors"></a>Häufige Fehler
-
 Wenn das Tool ausgeführt wurde und die Eigenschaften den Zielpfads *nicht* ausgegeben wurden (Prüfpunkt 4), wird eine Ausnahme ausgelöst. Überprüfen Sie diese und bestimmen Sie, an welcher Stelle sie in den vier Schritten aufgetreten ist. Beachten Sie dabei die folgenden häufig auftretenden Probleme, die möglicherweise aufgetreten sein können, in dieser Reihenfolge:
 
 | Ausnahme und Meldungen | Ursache | 
@@ -213,11 +212,10 @@ Wenn das Tool ausgeführt wurde und die Eigenschaften den Zielpfads *nicht* ausg
 ## <a name="debugging-tips"></a>Tipps zum Debuggen
 
 ### <a name="mit-kdc"></a>KDC von MIT  
-
 Alle im KDC registrierten SPN, einschließlich Administratoren, können angezeigt werden, indem Sie **kadmin.local** > (admin login) > **listprincs** im Host des KDC oder einem beliebigen KDC-Client ausführen. Wenn Kerberos auf dem Hadoop-Cluster richtig konfiguriert ist, sollte es für jeden der im Cluster verfügbaren Dienste eine SPN geben (z.B.: `nn`, `dn`, `rm`, `yarn`, `spnego` usw.). Die entsprechenden Schlüsseltabellendateien (Kennwortersatz) werden standardmäßig unter **/etc/security/keytabs** angezeigt. Sie werden mit dem privaten Schlüssel des KDC verschlüsselt.  
 
 Ziehen Sie auch in Betracht, [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) zu verwenden, um die Administratoranmeldeinformationen lokal im KDC zu überprüfen. Es kann z. B. so verwendet werden: `kinit identity@MYREALM.COM`. Wenn Sie nach einem Kennwort gefragt werden, zeigt dies an, dass die Identität existiert.  
-Die Protokolle des KDC stehen standardmäßig unter **/var/log/krb5kdc.log** zur Verfügung. Dazu gehören auch alle Ticketanforderungen, einschließlich der Client-IP, von der die Anforderung ausgegangen ist. Es sollten zwei Anforderungen von der IP des Computers mit SQL Server angezeigt werden, auf dem das Tool ausgeführt wurde: die erste vom authentifizierender Server als **AS\_REQ** und die zweite **TGS\_REQ** für das Dienstticket vom Ticket-Granting-Server.
+Die Protokolle des KDC stehen standardmäßig unter **/var/log/krb5kdc.log** zur Verfügung. Dazu gehören auch alle Ticketanforderungen, einschließlich der Client-IP, von der die Anforderung ausgegangen ist. Es sollten zwei Anforderungen von der IP des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computers angezeigt werden, auf dem das Tool ausgeführt wurde: die erste vom authentifizierenden Server als **AS\_REQ** und die zweite als **TGS\_REQ** für das Dienstticket vom TGT.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -226,16 +224,14 @@ Die Protokolle des KDC stehen standardmäßig unter **/var/log/krb5kdc.log** zur
 ```
 
 ### <a name="active-directory"></a>Active Directory 
-
 In Active Directory können Sie sich die SPN anschauen, indem Sie an die folgende Stelle navigieren: Einstellungen > Active Directory-Benutzer und -Computer > *MyRealm*  > *MyOrganizationUnit* (MeinBereich > MeineOrganisationeinheit). Wenn Kerberos auf dem Hadoop-Cluster richtig konfiguriert ist, gibt es für jeden der verfügbaren Dienste eine SPN (z. B.: `nn`, `dn`, `rm`, `yarn`, `spnego` usw.).
 
 ### <a name="general-debugging-tips"></a>Allgemeine Tipps zum Debuggen
-
 Wenn Sie die Protokolle ansehen und Kerberos-Probleme debuggen, die unabhängig vom SQL Server-PolyBase-Feature sind, ist es hilfreich, sich bereits etwas mit Java auszukennen.
 
 Sollten Sie dennoch Probleme mit dem Zugriff auf Kerberos haben, führen Sie zum Debuggen die folgenden Schritte aus:
 
-1. Stellen Sie sicher, dass Sie auf die Kerberos-HDFS-Daten von außerhalb der SQL Server-Instanz aus zugreifen können. Sie haben folgende Möglichkeiten: 
+1. Vergewissern Sie sich, dass Sie von außerhalb der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aus auf die Kerberos HDFS-Daten zugreifen können. Sie haben folgende Möglichkeiten: 
 
     - Schreiben eines eigenen Java-Programms
     - Verwenden der `HdfsBridge`-Klasse aus dem PolyBase-Installationsordner Beispiel:
@@ -253,10 +249,9 @@ Sollten Sie dennoch Probleme mit dem Zugriff auf Kerberos haben, führen Sie zum
 3. Bei der Active Directory-Kerberos-Authentifizierung sollten Sie darauf achten, dass das zwischengespeicherte Ticket angezeigt wird, wenn Sie unter Windows den `klist`-Befehl ausführen.
     - Melden Sie sich bei PolyBase an, und führen Sie `klist` und `klist tgt` in der Eingabeaufforderung aus, um zu überprüfen, ob das KDC, der Benutzername und die Verschlüsselungstypen korrekt sind.
 
-4.  Wenn KDC nur AES256 unterstützt, müssen [JCE-Richtliniendateien](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installiert sein.
+4. Wenn KDC nur AES256 unterstützt, müssen [JCE-Richtliniendateien](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installiert sein.
 
 ## <a name="see-also"></a>Siehe auch
-
 [Integrating PolyBase with Cloudera using Active Directory Authentication (Integration von PolyBase in Cloudera mit der Active Directory-Authentifizierung)](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Cloudera’s Guide to setting up Kerberos for CDH (Cloudera-Leitfaden: Einrichten von Kerberos für CDH)](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP (Hortonworks-Leitfaden: Einrichten von Kerberos für HDP)](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  

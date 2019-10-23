@@ -1,7 +1,7 @@
 ---
 title: Bereitstellen mit einem Bash-Skript in einem Kubernetes-Einzelknotencluster
 titleSuffix: SQL Server big data clusters
-description: Verwenden Sie ein Bash-Bereitstellungs Skript [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] zum Bereitstellen eines für einen kubeadm-Cluster mit einem einzelnen Knoten.
+description: Verwenden Sie ein Bash-Bereitstellungs Skript zum Bereitstellen einer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] für einen kubeadm-Cluster mit einem einzelnen Knoten.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652346"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341837"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Bereitstellen mit einem Bash-Skript in einem Kubernetes-Einzelknotencluster
 
@@ -34,7 +34,7 @@ In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um eine
 - Aktualisieren Sie vorhandene Pakete mithilfe der folgenden Befehle, um sicherzustellen, dass das Betriebssystem Image auf dem neuesten Stand ist.
 
    ``` bash
-   sudo apt update&&apt upgrade -y
+   sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 
@@ -85,4 +85,4 @@ Das [Cleanup-BDC.sh](https://raw.githubusercontent.com/microsoft/sql-server-samp
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Informationen zu den ersten Schritten mit der Verwendung von [Big Data Clustern finden Sie unter Tutorial: Laden von Beispiel Daten in einen SQL Server Big Data](tutorial-load-sample-data.md)Cluster.
+Informationen zu den ersten Schritten mit der Verwendung von Big Data Clustern finden Sie im [tutorial: Laden von Beispiel Daten in eine SQL Server Big Data Cluster @ no__t-0.

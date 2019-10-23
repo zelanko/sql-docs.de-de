@@ -1,5 +1,5 @@
 ---
-title: sp_add_trusted_assembly (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sp_add_trusted_assembly (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c9e7fad6c73cd5dd32673db6fc1ab841eb20994
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb34a814780a46c12c65948bd0b552effaacda4d
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106553"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452871"
 ---
-# <a name="sysspaddtrustedassembly-transact-sql"></a>sp_add_trusted_assembly (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_add_trusted_assembly-transact-sql"></a>sys. sp_add_trusted_assembly (Transact-SQL)  
+[!INCLUDE[tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md.md)]
 
-Fügt eine Assembly zur Liste der vertrauenswürdigen Assemblys für den Server an.
+Fügt der Liste der vertrauenswürdigen Assemblys für den Server eine Assembly hinzu.
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
 ## <a name="syntax"></a>Syntax
@@ -40,36 +40,36 @@ sp_add_trusted_assembly
     [ , [ @description = ] 'description' ]
 ```  
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 
-Diese Prozedur fügt eine Assembly [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
+Diese Prozedur fügt [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)eine Assembly hinzu.
 
 ## <a name="arguments"></a>Argumente
 
-[ @hash =] '*Wert*"  
-Der Hashwert des SHA2_512 der Assembly, die die Liste der vertrauenswürdigen Assemblys für den Server hinzu. Vertrauenswürdige können Assemblys laden, wenn [CLR strict Security](../../database-engine/configure-windows/clr-strict-security.md) aktiviert ist, auch wenn die Assembly nicht signiert ist oder die Datenbank ist nicht als vertrauenswürdig gekennzeichnet.
+[@hash =] "*Wert*"  
+Der SHA2_512-Hashwert der Assembly, die der Liste der vertrauenswürdigen Assemblys für den Server hinzugefügt werden soll. Vertrauenswürdige Assemblys werden möglicherweise geladen, wenn [CLR Strict Security](../../database-engine/configure-windows/clr-strict-security.md) aktiviert ist, auch wenn die Assembly nicht signiert ist oder die Datenbank nicht als vertrauenswürdig gekennzeichnet ist.
 
-[ @description =] '*Beschreibung*"  
-Optionale benutzerdefinierte Beschreibung der Assembly. Microsoft empfiehlt die Verwendung des kanonischen Namens, der den einfachen Namen, Versionsnummer, Kultur, öffentlichen Schlüssel und Architektur der Assembly, die vertrauen codiert. Dieser Wert eindeutig identifiziert die Assembly, auf der Seite der common Language Runtime (CLR) und entspricht der Wert Clr_name in sys.assemblies. 
+[@description =] '*Beschreibung*'  
+Optionale benutzerdefinierte Beschreibung der Assembly. Microsoft empfiehlt die Verwendung des kanonischen Namens, der den einfachen Namen, die Versionsnummer, die Kultur, den öffentlichen Schlüssel und die Architektur der Assembly codiert, die als vertrauenswürdig eingestuft wird. Durch diesen Wert wird die Assembly auf der Seite "Common Language Runtime (CLR)" eindeutig identifiziert, und Sie ist mit dem clr_name-Wert in sys. Assemblys identisch. 
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die Mitgliedschaft in der `sysadmin` -Serverrolle sein oder `CONTROL SERVER` Berechtigung.
+Erfordert die Mitgliedschaft in der Server Rolle "`sysadmin`" oder "`CONTROL SERVER`".
 
 ## <a name="examples"></a>Beispiele  
 
-Im folgenden Beispiel wird eine Assembly namens `pointudt` zur Liste der vertrauenswürdigen Assemblys für den Server. Diese Werte stehen über [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
+Im folgenden Beispiel wird eine Assembly mit dem Namen `pointudt` der Liste der vertrauenswürdigen Assemblys für den Server hinzugefügt. Diese Werte sind in [sys.](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)Assemblys verfügbar.     
 
 ```  
 EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7BF3B5E8D8F09503F3E62370CE742BBC96FE3394477214B84C7C1B0F7A04DCC788FA99C2C09DFCCC, 
 N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarchitecture=msil';
 ```  
 
-## <a name="see-also"></a>Siehe auch  
-  [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
-  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+  [sys. sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
+  [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
-  [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)  
+  [CLR Strict Security](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

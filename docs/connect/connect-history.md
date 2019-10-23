@@ -8,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c0fcc2172cca192c8c7580450ab50b4416f9ec2d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a0eb869cf19f128515951421efddc229aa785cdd
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154183"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72451839"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Treiber Verlauf für Microsoft SQL Server
 
@@ -39,7 +39,7 @@ Es gibt drei verschiedene Generationen von Microsoft OLE DB-Anbietern für SQL S
 
 ## <a name="adonet"></a>ADO.NET
 
-ADO.net wurde mit dem Microsoft .NET Framework eingeführt und wird weiterhin verbessert und gewartet. Es ist eine Kernkomponente des Microsoft .NET-Frameworks. Weitere Informationen finden Sie unter [Microsoft ADO.net for SQL Server](ado-net/microsoft-ado-net-for-sql-server.md).
+ADO.net wurde mit dem Microsoft .NET Framework eingeführt und wird weiterhin verbessert und gewartet. Es ist eine Kernkomponente des Microsoft .NET-Frameworks. Weitere Informationen finden Sie unter [Microsoft ADO.net for SQL Server](ado-net/microsoft-ado-net-sql-server.md).
 
 ## <a name="jdbc"></a>JDBC
 
@@ -108,7 +108,7 @@ Diese Komponenten werden in der aktuellen Version von MDAC/WDac weiterhin unters
 * **Msdads:** Mit dem Microsoft OLE DB-Anbieter für die Daten Strukturierung (msdads) können Sie hierarchische Beziehungen zwischen Schlüsseln, Feldern oder Rowsets in einer Anwendung erstellen. Seit MDAC 2,1 wurden keine größeren Features Verbesserungen vorgenommen. Dieser Anbieter ist veraltet. Microsoft empfiehlt, anstelle von msdads XML zu verwenden.
 * **Oracle ODBC-und Oracle-OLE DB:** Der Microsoft Oracle ODBC-Treiber (Oracle ODBC) und Microsoft OLE DB-Anbieter für Oracle (Oracle OLE DB) ermöglichen den Zugriff auf Oracle-Datenbankserver. Sie werden mithilfe von OCI (Oracle callinterface) Version 7 erstellt und bieten vollständige Unterstützung für Oracle 7. Außerdem wird die Oracle 7-Emulation verwendet, um eine eingeschränkte Unterstützung für Oracle 8-Datenbanken bereitzustellen. Oracle unterstützt keine Anwendungen mehr, die OCI-Aufrufe der Version 7 verwenden. Diese Technologien sind veraltet. Wenn Sie Oracle-Datenquellen verwenden, sollten Sie zu den von Oracle bereitgestellten Treibern und Anbietern migrieren.
 * **RDS:** Remote Data Services (RDS) ist ein proprietärer Microsoft-Mechanismus für den Zugriff auf remoterecordsetobjekte über das Internet oder ein Intranet. RDS ist veraltet. seit MDAC 2,1 wurden keine größeren Funktions Verbesserungen an RDS vorgenommen. Microsoft hat den .NET Framework veröffentlicht, der über umfangreiche SOAP-Funktionen verfügt und RDS-Komponenten ersetzt. Alle RDS-Serverkomponenten werden nach Windows 7 aus dem Betriebssystem entfernt.
-* **JRO:** Jet Replication Objects (JRO) ist veraltet. JRO wird in ADO mit Jet-Daten*Banken (. mdb) verwendet, um Jet-Datenbanken (. mdb) zu erstellen und zu komprimieren und die Jet-Replikations Verwaltung auszuführen. MDAC 2,7 ist die letzte Version. JRO ist auf dem 64-Bit-Windows-Betriebssystem nicht verfügbar. JRO wird im Microsoft Access 2007-Dateiformat (* . accdb) nicht unterstützt.
+* **JRO:** Jet Replication Objects (JRO) ist veraltet. JRO wird in ADO mit Jet-Datenbanken ( *. mdb) verwendet, um Jet-Datenbanken (. mdb) zu erstellen und zu komprimieren und die Jet-Replikations Verwaltung auszuführen. MDAC 2,7 ist die letzte Version. JRO ist auf dem 64-Bit-Windows-Betriebssystem nicht verfügbar. JRO wird im Microsoft Access 2007-Dateiformat (* . accdb) nicht unterstützt.
 * **Unterstützung für 16-Bit-ODBC:** Wenn Sie 16-Bit-Anwendungen verwenden, sollten Sie zu einer 32-Bit-Anwendung migrieren. die 16-Bit-Funktionalität ist veraltet und wird aus 64-Bit-Betriebssystemen entfernt. Weitere Informationen finden Sie im [Knowledge Base-Artikel 896458](https://support.microsoft.com/kb/896458).
 * **OleDb Simple Provider (msdaosp):** Der einfache OLEDB-Anbieter bietet ein Framework für das schnelle Entwickeln von OLE DB Anbietern über einfache Daten. Msdaosp ist veraltet.
 * **ODBC-Cursor Bibliothek:** Die ODBC-Cursor Bibliothek (ODBCCR32. dll) stellt eingeschränkte Client seitige Daten Cursor bereit. Die ODBC-Cursor Bibliothek ist veraltet. in Ihrer Anwendung können serverseitige Cursor Implementierungen als Ersatz verwendet werden.

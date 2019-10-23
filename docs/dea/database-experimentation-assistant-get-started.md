@@ -1,6 +1,6 @@
 ---
-title: Erste Schritte mit der Datenbank-experimentieren-Assistenten für SQL Server-upgrades
-description: Erste Schritte mit der Datenbank-experimentieren-Assistenten
+title: Beginnen Sie mit der Assistent für Datenbankexperimente für SQL Server Upgrades
+description: Beginnen Sie mit Assistent für Datenbankexperimente
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -12,153 +12,154 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 2e5affa5310c4443cd8458dfc987a506ada5982d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9fe162b2a9bc0db4a2a49648eecb76c5802f57c0
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058950"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381774"
 ---
-# <a name="get-started-with-database-experimentation-assistant"></a>Erste Schritte mit der Datenbank-experimentieren-Assistenten
+# <a name="get-started-with-database-experimentation-assistant"></a>Beginnen Sie mit Assistent für Datenbankexperimente
 
-Datenbank experimentieren-Assistenten (DEA) ist ein A / B-testlösung für Änderungen in SQL Server-Umgebungen wie Upgrades oder neue Indizes. DEA hilft bei Evaluierung, wie die arbeitsauslastung auf dem Quellserver (in der aktuellen Umgebung) in die neue Umgebung ausführt. DEA führt Sie durch das Ausführen eines A / B-Tests von drei Schritten: 
+Assistent für Datenbankexperimente (DEA) ist eine A/B-Testlösung für Änderungen in SQL Server Umgebungen, z. B. Upgrades oder neue Indizes. Mithilfe von DEA können Sie bewerten, wie die Arbeitsauslastung auf dem Quell Server (in Ihrer aktuellen Umgebung) in der neuen Umgebung durchgeführt wird. Mithilfe von DEA werden Sie durch die Ausführung eines A/B-Tests geführt, indem Sie drei Schritte ausführen: 
 
 - Erfassung
-- Wiedergeben
+- Zugeben
 - Analyse
 
-Dieser Artikel führt Sie durch die folgenden Schritte aus.
+Dieser Artikel führt Sie durch die folgenden Schritte.
 
 ## <a name="capture"></a>Erfassung
 
-Der erste Schritt des SQL Server A / B-Tests ist, um eine Ablaufverfolgung auf dem Quellserver zu erfassen. Der Quellserver ist in der Regel dem Produktionsserver. Ablaufverfolgungsdateien erfassen Sie die gesamte abfragearbeitsauslastung auf diesem Server, einschließlich Zeitstempeln. Diese Ablaufverfolgung wird später auf Zielservern für die Analyse wiedergegeben. Der Bericht bietet Einblicke in den Unterschied in Bezug auf die Leistung der Workload zwischen zwei Zielservern.
+Der erste Schritt SQL Server a/B-Tests besteht darin, eine Ablauf Verfolgung auf dem Quell Server zu erfassen. Der Quell Server ist normalerweise der Produktionsserver. Ablauf Verfolgungs Dateien erfassen die gesamte Arbeitsauslastung der Abfrage auf diesem Server, einschließlich Zeitstempel. Später wird diese Ablauf Verfolgung für die Analyse auf ihren Ziel Servern wiedergegeben. Der Analysebericht bietet Einblicke in den Unterschied in der Leistung der Arbeitsauslastung zwischen den beiden Ziel Servern.
 
 Weitere Überlegungen:
 
-- Bevor Sie Ihrer Erfassung Ablaufverfolgung starten, stellen Sie sicher, dass Sie die Datenbanken sichern von dem Sie eine Ablaufverfolgung aufzeichnen.
-- DEA Benutzer muss für die Verbindung mit der Datenbank mithilfe der Windows-Authentifizierung konfiguriert werden.
-- Ein SQL Server-Dienstkonto erfordert Zugriff auf den Pfad der Quelldatei-Ablaufverfolgung.
+- Stellen Sie sicher, dass Sie die Datenbanken sichern, von denen Sie eine Ablauf Verfolgung erfassen, bevor Sie mit der Erfassung der Ablauf Verfolgung beginnen.
+- Ein DEA-Benutzer muss konfiguriert werden, um mithilfe der Windows-Authentifizierung eine Verbindung mit der Datenbank herzustellen.
+- Ein SQL Server-Dienst Konto erfordert Zugriff auf den Pfad der Quelldatei für die Ablauf Verfolgungs Datei.
+- Damit von DEA bestimmt wird, ob die Leistung einer Abfrage verbessert oder beeinträchtigt wird, muss diese Abfrage mindestens 15 Mal während des Erfassungs Zeitraums ausgeführt werden.  
 
-Um eine Ablaufverfolgung auf dem Quellserver zu erfassen:
+So erfassen Sie eine Ablauf Verfolgung auf dem Quell Server:
 
-1. Wechseln Sie in DEA zu **alle erfasst** wählen Sie im linken Menü das Symbol "Kamera".
+1. Wechseln Sie in der DEA zu **alle** Erfassungen, indem Sie im linken Menü das Kamerasymbol auswählen.
 
-   ![Im linken Navigationsmenü](./media/database-experimentation-assistant-get-started/dea-get-started-leftnav.png)
+   ![Linkes Navigationsmenü](./media/database-experimentation-assistant-get-started/dea-get-started-leftnav.png)
 
-1. Geben Sie ein, oder wählen Sie die folgende Informationen:
+1. Geben Sie folgende Informationen ein, oder wählen Sie Sie aus:
 
-   - **Ablaufverfolgungsname**: Der Dateiname für die neue Datei, die Sie erstellen. Vermeiden Sie eine Ablaufverfolgung ein, mit dem der Rollover-Benennungskonvention, z. B. CaptureName\_"nnn".
-   - **Dauer**: Die Dauer für die Erfassung.
-   - **SQL Server-Instanzname**: Die SQL Server-Instanz, von der Sie eine Ablaufverfolgung erfassen möchten.
-   - **Name der Datenbank**: Der Name der Datenbank auf dem Computer mit SQL Server, möchten Sie eine Ablaufverfolgung zu erfassen. Wenn leer, wird die Ablaufverfolgung aus allen Datenbanken auf dem Server erfasst.
-   - **Pfad zum Speichern von Ablaufverfolgungs-Quelldatei auf SQL Server-Computer**: Der Ordnerpfad, in dem die Ablaufverfolgungsdatei gespeichert werden soll.
+   - Ablauf **Verfolgungs Name**: der Dateiname für die neue Ablauf Verfolgungs Datei, die Sie erstellen. Vermeiden Sie einen Ablauf Verfolgungs Namen, der die Benennungs Konvention für Rolloverdateien verwendet, z. b. capturename @ no__t-0nnn.
+   - **Dauer**: die Dauer für die Erfassung.
+   - **SQL Server Instanzname**: die SQL Server Instanz, von der Sie eine Ablauf Verfolgung aufzeichnen möchten.
+   - **Datenbankname**: der Name der Datenbank auf dem Computer, auf dem SQL Server ausgeführt wird und für den Sie eine Ablauf Verfolgung aufzeichnen möchten. Wenn das Feld leer gelassen wird, wird die Ablauf Verfolgung von allen Datenbanken auf dem Server aufgezeichnet.
+   - **Pfad zum Speichern der Quelldatei der Ablauf Verfolgung auf SQL Server Computer**: der Ordner Pfad, in dem Sie die Ablauf Verfolgungs Datei speichern möchten.
 
-1. Stellen Sie sicher, dass die Zieldatenbank gesichert wurde. Wählen Sie das Kontrollkästchen für die Datenbank an.
-1. Wählen Sie **starten** um die Erfassung zu starten.
+1. Stellen Sie sicher, dass die Zieldatenbank gesichert ist. Aktivieren Sie dann das Kontrollkästchen Datenbank.
+1. Wählen Sie **starten** , um die Erfassung zu starten.
 
-Sie können den Fortschritt Ihrer Erfassung, einschließlich Startzeit, Dauer und verbleibende Zeit anzeigen. Sie können auch eine neue Aufzeichnung starten, während Sie warten, dass dieser Erfassung, um den Vorgang abzuschließen. Wenn Ihrer Erfassung abgeschlossen ist, verwenden Sie die Ausgabedatei der Ablaufverfolgung die zweite Phase gestartet: die Ablaufverfolgungsdatei auf Zielservern wiedergeben.
+Sie können den Status der Erfassung anzeigen, einschließlich Startzeit, Dauer und verbleibende Zeit. Sie können auch eine neue Erfassung starten, während Sie auf den Abschluss dieser Erfassung warten. Wenn Ihre Erfassung abgeschlossen ist, verwenden Sie die Ausgabedatei der Ablauf Verfolgung, um die zweite Phase zu starten: Wiedergeben der Ablauf Verfolgungs Datei auf den Ziel Servern.
 
-Häufig gestellte Fragen zur Erfassung der Ablaufverfolgung finden Sie unter den [erfassen – häufig gestellte Fragen](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture).
+Häufig gestellte Fragen zur Erfassung von Ablauf Verfolgungs Informationen finden Sie in den [FAQ](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture).
 
-## <a name="replay"></a>Wiedergeben
+## <a name="replay"></a>Zugeben
 
-Im zweiten Schritt des SQL Server A / B-Tests ist die Ablaufverfolgungsdatei wiedergegeben, die auf Zielservern erfasst wurde. Klicken Sie dann erfassen Sie umfangreiche Ablaufverfolgung aus der Replays für die Analyse und. 
+Der zweite Schritt SQL Server A/B-Tests ist die Wiedergabe der Ablauf Verfolgungs Datei, die auf den Ziel Servern aufgezeichnet wurde. Erfassen Sie dann umfassende Ablauf Verfolgungen aus den Wiedergaben für die Analyse. 
 
-Sie die Ablaufverfolgungsdatei auf Zielservern zwei wiedergeben: eine, die den Quellserver (Ziel 1) imitiert und eine, die die vorgeschlagene Änderung (Ziel 2) imitiert. Der Hardwarekonfigurationen für Ziel 1 und 2 des Ziels sollte so ähnlich wie möglich sein, damit SQL Server die leistungsbezogenen Auswirkungen der vorgeschlagenen Änderungen genau analysieren können.
+Sie geben die Ablauf Verfolgungs Datei auf zwei Ziel Servern wieder: eine, die ihren Quell Server imitiert (Ziel 1), und eine, die ihre vorgeschlagene Änderung imitiert (Ziel 2). Die Hardware Konfigurationen von Ziel 1 und Ziel 2 sollten so ähnlich wie möglich sein, damit SQL Server die Leistungs Auswirkung ihrer vorgeschlagenen Änderungen genau analysieren kann.
 
 Weitere Überlegungen:
 
-- Um Replay auszuführen, müssen Ihre Computer zum Ausführen der Distributed Replay (DReplay) ablaufverfolgungen eingerichtet werden. Weitere Informationen finden Sie unter [Distributed Replay Controller- und Clientdienste Setup](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/).
-- Stellen Sie sicher, dass Sie die Datenbanken auf Ihrem Zielserver wiederherstellen, indem Sie mithilfe der Sicherung des Quellservers.
-- Abfrage in SQL Server-Cache kann sich auf die auswertungsergebnisse auswirken. Es wird empfohlen, dass Sie die SQL Server-Dienst (MSSQLSERVER) neu starten, in der dienstanwendung zur Verbesserung der Konsistenz in der auswertungsergebnisse.
+- Zum Ausführen von Replay müssen die Computer so eingerichtet sein, dass Distributed Replay (dreplay)-Ablauf Verfolgungen ausgeführt werden. Weitere Informationen finden Sie unter [Distributed Replay Controller-und Client Setup](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/).
+- Stellen Sie sicher, dass Sie die Datenbanken auf ihren Ziel Servern wiederherstellen, indem Sie die Sicherung vom Quell Server verwenden.
+- Das Zwischenspeichern von Abfragen in SQL Server kann die Auswertungs Ergebnisse beeinflussen. Es wird empfohlen, den SQL Server-Dienst (MSSQLSERVER) in der Dienste-Anwendung neu zu starten, um die Konsistenz der Bewertungsergebnisse zu verbessern.
 
-Die Ablaufverfolgungsdatei wiedergegeben werden soll:
+So geben Sie die Ablauf Verfolgungs Datei wieder:
 
-1. Wählen Sie die Play-Symbol im linken Menü zu wechseln, in DEA, **alle Wiedergaben**. Die Liste der letzten Replays, die während der Sitzung ausgeführt werden soll, wenn vorhanden, angezeigt werden. Wählen Sie zum Starten einer neuen Wiedergabe **neue wiedergeben**.
+1. Wählen Sie in der DEA im linken Menü das Symbol wiedergeben aus, um zu **allen Wiederholungen**zu wechseln. Die Liste der bisherigen Wiederholungen, die während der Sitzung ausgeführt werden, wird ggf. angezeigt. Wählen Sie **neue Wiedergabe**aus, um eine neue Wiedergabe zu starten.
 
-1. Geben Sie ein, oder wählen Sie die folgende Informationen:
+1. Geben Sie folgende Informationen ein, oder wählen Sie Sie aus:
 
-   - **Name der Wiedergabe**: Der Dateiname für die ablaufverfolgungswiedergabe.
-   - **Der Name des Controllercomputers**: Der Name des dem Distributed Replay Controller-Computer.
-   - **Pfad zum Ablaufverfolgungs-Quelldatei auf Controller**: Der Dateipfad für die Ablaufverfolgungs-Quelldatei aus [erfassen](#capture).
-   - **SQL Server-Instanzname**: Der Name der SQL Server-Instanz auf dem die Quelle Ablaufverfolgung wiedergegeben werden soll.
-   - **Pfad zum Speichern von Ziel-Ablaufverfolgungsdatei auf SQL Server-Computer**: Der Ordnerpfad für die Wiedergabe Ergebnisdatei der Ablaufverfolgung.
+   - **Replay Name**: der Dateiname für die Wiedergabe Ablauf Verfolgung.
+   - **Controller Computername**: der Name des Distributed Replay Controller Computers.
+   - **Pfad zur Quelldatei der Ablauf Verfolgung auf dem Controller**: der Dateipfad für die Quelldatei der Ablauf Verfolgung von [Capture](#capture).
+   - **SQL Server Instanzname**: der Name der SQL Server Instanz, auf der die Quell Ablauf Verfolgung wiedergegeben werden soll.
+   - **Pfad zum Speichern der Ziel Ablauf Verfolgungs Datei auf SQL Server Computer**: der Ordner Pfad für die resultierende Wiedergabe Datei der Ablauf Verfolgung.
 
-1. Wählen Sie das Kontrollkästchen zum Wiederherstellen der Sicherung aus dem ersten Schritt ein.
+1. Aktivieren Sie das Kontrollkästchen, um die Sicherung aus dem ersten Schritt wiederherzustellen.
 
-1. Wählen Sie **starten** um die Wiedergabe zu starten. 
+1. Wählen Sie **starten** aus, um die Wiedergabe zu starten. 
 
-Sie können den Status Ihrer Wiedergabe anzeigen. Nachdem Sie die Quell-Ablaufverfolgung auf Zielservern wiedergeben, können Sie einen Bericht zu generieren.
+Sie können den Status ihrer Wiedergabe anzeigen. Nachdem Sie die Quell Ablauf Verfolgung auf beiden Ziel Servern wiedergegeben haben, können Sie einen Analysebericht generieren.
 
-Häufig gestellte Fragen zur Wiedergabe finden Sie unter den [wiedergeben – häufig gestellte Fragen](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
+Allgemeine Fragen zur Wiedergabe finden Sie in den häufig gestellten Fragen zur wieder [Gabe](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
 
 ## <a name="analysis"></a>Analyse
 
-Der letzte Schritt ist, um einen Analysebericht zu generieren, das Wiedergeben von ablaufverfolgungen mit. Der Analysebericht können Sie wertvolle Einblicke in die Auswirkungen auf die Leistung der vorgeschlagenen Änderung an.
+Der letzte Schritt besteht darin, einen Analysebericht mithilfe der Wiedergabe Ablauf Verfolgungen zu generieren. Der Analysebericht kann Ihnen helfen, Einblicke in die Auswirkungen auf die Leistung der vorgeschlagenen Änderung zu erhalten.
 
 Weitere Überlegungen:
 
-- Wenn eine oder mehrere Komponenten fehlen, wird eine Seite über erforderliche Komponenten und Links zu Downloads angezeigt, wenn Sie versuchen, einen neuen Bericht (Internetverbindung erforderlich) zu generieren.
-- Um einen Bericht anzuzeigen, der in einer früheren Version des Tools generiert wurde, müssen Sie zunächst das Schema aktualisieren.
+- Wenn eine oder mehrere Komponenten fehlen, wird eine Seite mit Links zu Downloads angezeigt, die angezeigt wird, wenn Sie versuchen, einen neuen Analysebericht zu generieren (Internetverbindung erforderlich).
+- Um einen Bericht anzuzeigen, der in einer früheren Version des Tools generiert wurde, müssen Sie zuerst das Schema aktualisieren.
 
 So generieren Sie einen Analysebericht:
 
-1. Navigieren Sie im linken Menü zu **Analyseberichte**. Verbinden Sie mit dem Computer mit SQL Server, in dem Sie Ihre Berichtsserver-Datenbanken gespeichert. Eine Liste aller Berichte auf dem Server angezeigt. Wählen Sie zum Erstellen eines neuen Berichts **neuer Bericht**.
+1. Wechseln Sie im linken Menü zu **Analyseberichte**. Stellen Sie eine Verbindung mit dem Computer her, auf dem SQL Server ausgeführt wird Eine Liste aller Berichte auf dem Server wird angezeigt. Um einen neuen Bericht zu erstellen, wählen Sie **neuer Bericht**aus.
 
-1. Geben Sie ein, oder wählen Sie die Informationen, die erforderlich ist, um einen Bericht zu generieren:
+1. Geben Sie die zum Generieren eines Berichts erforderlichen Informationen ein, oder wählen Sie Sie aus:
 
-   - **Name des Berichts**: Der Name der der Analysebericht zu erstellen.
-   - **Ablaufverfolgung für SQL-Zielserver 1**: Der Pfad für die Ablaufverfolgungsdatei aus der Wiedergabe auf 1.
-   - **Ablaufverfolgung für SQL-Zielserver 2**: Der Pfad für die Ablaufverfolgungsdatei aus der Wiedergabe auf Ziel-2.
+   - **Report Name**: der Name des zu erstellenden Analyse Berichts.
+   - Ablauf **Verfolgung für Ziel 1 SQL Server**: der Pfad für die Ablauf Verfolgungs Datei von der Wiedergabe an Ziel 1.
+   - Ablauf **Verfolgung für Ziel 2 SQL Server**: der Pfad für die Ablauf Verfolgungs Datei von der Wiedergabe an Ziel 2.
 
-1. Wählen Sie **starten** zum Generieren des Berichts. Der neue Bericht wird am oberen Rand der Liste angezeigt. Das Symbol neben dem Bericht wird ein grünes Häkchen aus, wenn der Bericht generiert wurde.
+1. Wählen Sie **starten** aus, um den Bericht zu generieren. Der neue Bericht wird oben in der Liste angezeigt. Das Symbol neben dem Bericht wird zu einem grünen Häkchen, wenn der Bericht generiert wurde.
 
-Sehen Sie sich nun der Analysebericht gewinnen Erkenntnisse aus Ihrer ein / B-Tests.
+Zeigen Sie nun den Analysebericht an, um Einblicke zu erhalten, die von Ihrem A/B-Test bereitgestellt werden
 
-Häufig gestellte Fragen zu Berichten finden Sie unter den [Analyse – häufig gestellte Fragen](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports).
+Häufig gestellte Fragen zu Analyseberichten finden Sie in den häufig gestellten Fragen zur [Analyse](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports).
 
-### <a name="analysis-report"></a>Analysebericht zu
+### <a name="analysis-report"></a>Analysebericht
 
-Auf der ersten Seite des Berichts sehen Sie Versions- und Buildnummer Informationen für den Zielserver, die auf denen das Experiment ausgeführt wurde. Können Sie anpassen, die Vertraulichkeit oder Toleranz für die ein Schwellenwert / B-Test-Analyse. Standardmäßig ist der Schwellenwert auf 5 % festgelegt. Leistungsverbesserungen, die größer als oder gleich 5 % ist, wird als kategorisiert **verbesserte**. Wählen Sie Optionen im Dropdown-Menü auf den Bericht mit anderen Leistungsschwellenwerte auswerten.
+Auf der ersten Seite des Berichts wird die Versions-und Buildinformationen für die Zielserver angezeigt, auf denen das Experiment ausgeführt wurde. Mit dem Schwellenwert können Sie die Empfindlichkeit oder Toleranz Ihrer A/B-Test Analyse anpassen. Standardmäßig ist der Schwellenwert auf 5% festgelegt. Alle Verbesserungen bei der Leistung von mehr als oder gleich 5% werden als **verbessert**kategorisiert. Wählen Sie im Dropdown Menü Optionen aus, um den Bericht mithilfe verschiedener Leistungs Schwellenwerte auszuwerten.
 
 ![Schwellenwert](https://msdnshared.blob.core.windows.net/media/2017/03/threshold.jpg)
 
-Zwei Kreisdiagramme zeigen die Auswirkungen auf die Leistung des Unterschieds zwischen den zwei Zielservern für Ihre Workload. Das linke Diagramm basiert auf der Anzahl von Ausführungen. Das rechte Diagramm basiert auf unterschiedlichen Abfragen. Es gibt fünf mögliche Kategorien:
+Zwei Kreis Diagramme veranschaulichen die Auswirkungen auf die Leistung des Unterschieds zwischen den beiden Ziel Servern für ihre Arbeitsauslastung. Das linke Diagramm basiert auf der Ausführungs Anzahl. Das rechte Diagramm basiert auf unterschiedlichen Abfragen. Es gibt fünf mögliche Kategorien:
 
-- **Verbesserte**:  Statistisch gesehen führte die Abfrage auf Ziel 2 als Ziel 1 eine bessere.
-- **Heruntergestuft**: Statistisch gesehen führte die Abfrage auf Ziel 2 als Ziel 1 schlechter.
-- **Gleiche**: Es gibt keine statistischen Unterschied für die Abfrage zwischen Ziel 1 und 2 für Ziel.
-- **Kann nicht ausgewertet werden**: Die Größe der Stichprobe für die Abfrage ist zu klein für statistische Analysen. Für A / B-Tests Analysis, DEA erfordert mindestens 30 Ausführungen für jedes Ziel verfügen, die gleichen Abfragen.
-- **Fehler:** Die Abfrage, die sich mindestens einmal auf eines der Ziele Fehler aufgetreten.
+- **Verbessert**: statistisch lief die Abfrage auf Ziel 2 besser als auf Ziel 1.
+- Herunter **gestuft: statistisch**führte die Abfrage auf Ziel 2 zu einer schlechteren Leistung als auf Ziel 1.
+- **Identisch**: Es gibt keinen statistischen Unterschied Zwischenziel 1 und Ziel 2.
+- **Auswerten nicht**möglich: die Stichprobengröße für die Abfrage ist zu klein für statistische Analysen. Für eine/B-Test Analyse benötigt DEA die gleichen Abfragen, damit für jedes Ziel mindestens 30 Ausführungen vorhanden sind.
+- **Fehler**: die Abfrage hat mindestens ein Mal für eines der Ziele einen Fehler ausgegeben.
 
 ![Kreisdiagramm](./media/database-experimentation-assistant-get-started/dea-get-started-piechart.png)
 
-Wählen Sie ein Segment, um einen Drilldown in einer bestimmten Kategorie und Leistungsmetriken, einschließlich der **kann nicht ausgewertet werden** kreisslice angezeigt.
+Wählen Sie einen Slice aus, um einen Drilldown in eine bestimmte Kategorie auszuführen und Leistungsmetriken zu erhalten
 
-Drilldown für eine Leistung ändern Kategorie zeigt eine Liste von Abfragen in dieser Kategorie. Die **Fehler** Seite enthält drei Registerkarten:
+Auf der drilldownseite für eine Leistungs Änderungs Kategorie wird eine Liste der Abfragen in dieser Kategorie angezeigt. Die **Fehler** Seite enthält drei Registerkarten:
 
-- **Neue Fehler**: Fehler, die für die Ziel-2 jedoch nicht für Ziel 1 angezeigt.
-- **Vorhandenen Fehler**: Fehler, die auf Ziel 1 und 2 für Ziel angezeigt.
-- **Fehler aufgelöst**: Fehler, die auf dem Ziel 1 jedoch nicht auf Ziel 2 angezeigt.
+- **Neue Fehler**: Fehler, die auf Ziel 2, aber nicht auf Ziel 1 aufgetreten sind.
+- **Vorhandene Fehler**: Fehler, die auf Ziel 1 und Ziel 2 aufgetreten sind.
+- Behobene **Fehler**: Fehler, die auf Ziel 1 aufgetreten sind, aber nicht auf Ziel 2.
 
-   ![Fehler (Seite)](./media/database-experimentation-assistant-get-started/dea-get-started-errorpage.png)
+   ![Fehlerseite](./media/database-experimentation-assistant-get-started/dea-get-started-errorpage.png)
 
-Wählen Sie eine Abfrage, fahren Sie mit einer **Zusammenfassung** Seite für diese Abfrage.
+Wählen Sie eine Abfrage aus, um zu einer **Vergleichs Zusammenfassungs** Seite für diese Abfrage zu wechseln.
 
-Die **Vergleich Zusammenfassung** Seite zeigt zusammenfassende Statistiken für diese Abfrage. Die Zusammenfassung enthält die Anzahl der Ausführungen, durchschnittliche Dauer, CPU-Mittelwert, mittlere Lese-/Schreibvorgänge und Fehleranzahl.
+Auf der Seite **Vergleichs Zusammenfassung** werden Zusammenfassungs Statistiken für diese Abfrage angezeigt. Die Zusammenfassung enthält die Anzahl der Ausführungen, die durchschnittliche Dauer, die mittlere CPU, durchschnittliche Lese-/Schreibvorgänge und die Fehler Anzahl.
 
-![Zusammenfassende Statistiken](./media/database-experimentation-assistant-get-started/dea-get-started-summarystats.png)
+![Zusammenfassungs Statistiken](./media/database-experimentation-assistant-get-started/dea-get-started-summarystats.png)
 
-Wenn die Abfrage eine Abfrage für Fehler, die **Fehlerinformationen** Registerkarte zeigt Informationen zu diesem Fehler. Die **Informationen zum Planen der** Registerkarte zeigt Informationen über die Abfragepläne, die für die Abfrage auf das Ziel 1 und 2 für Ziel verwendet werden.
+Wenn es sich bei der Abfrage um eine Fehler Abfrage handelt, werden auf der Registerkarte **Fehlerinformationen** Weitere Informationen zum Fehler angezeigt. Die Registerkarte **Abfrage Plan Informationen** enthält Informationen zu den Abfrage Plänen, die für die Abfrage auf Ziel 1 und Ziel 2 verwendet werden.
 
 ![Abfrageplan](./media/database-experimentation-assistant-get-started/dea-get-started-queryplan.png)
 
-Wählen Sie auf jeder Seite des Analyseberichts der **Drucken** Schaltfläche oben Recht, alles zu drucken, der angezeigt wird.
+Wählen Sie auf einer beliebigen Seite des Analyse Berichts oben rechts die Schaltfläche **Drucken** aus, um alle sichtbaren Elemente zu drucken.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Weitere Informationen, um eine Ablaufverfolgungsdatei zu erstellen, die ein Protokoll mit Ereignissen, die auf einem Server auftreten, finden Sie unter [Ablaufverfolgung erfassen](database-experimentation-assistant-capture-trace.md).
+- Informationen zum Erstellen einer Ablauf Verfolgungs Datei, die ein Protokoll der Ereignisse enthält, die auf einem Server auftreten, finden Sie unter [Capture Trace](database-experimentation-assistant-capture-trace.md).
 
-- Für einen 19-minütige Einführung in DEA und Demonstrationen im folgenden Video:
+- Sehen Sie sich das folgende Video an, um die Einführung von DEA und Demo in 19 Minuten zu demonstrieren:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

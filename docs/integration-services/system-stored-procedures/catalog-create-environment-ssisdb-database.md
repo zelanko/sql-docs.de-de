@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7871b8225e6574067befb3ab8a90af1875410def
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77fea02dc933b63fff97b359673ab702e63f50ea
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110383"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295566"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (SSISDB-Datenbank)
 
@@ -68,7 +68,7 @@ catalog.create_environment [@folder_name =] folder_name
   
 -   Im angegebenen Ordner ist bereits eine Umgebung mit dem gleichen Namen vorhanden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Der Umgebungsname muss innerhalb des Ordners eindeutig sein.  
   
   

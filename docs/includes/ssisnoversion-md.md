@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: db8c8d81dea213ff033ec1262440c0006b7cc0ff
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68165385"
 ---
  Integration Services 

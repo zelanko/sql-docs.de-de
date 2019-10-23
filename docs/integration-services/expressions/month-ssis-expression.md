@@ -11,14 +11,14 @@ helpviewer_keywords:
 - dates [Integration Services], MONTH
 - MONTH function
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 54c699bff247ccf66200f08b6779c80ab1ad84d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 29e4b7af3c9799f5b0c396c8b66aa4f7caa5804f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941213"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297479"
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS-Ausdruck)
 
@@ -35,13 +35,13 @@ MONTH(date)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *date*  
+ *Datum*  
  Ein Datum in einem beliebigen Datumsformat.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  MONTH gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Ein Datumsliteral muss explizit in einen der date-Datentypen umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  

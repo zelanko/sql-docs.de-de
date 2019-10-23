@@ -1,38 +1,27 @@
 ---
-title: Erweiterte Ereignisse für die Überwachung von PREDICT-Anweisungen
+title: 'Monitor: Vorhersagen von T-SQL mit erweiterten Ereignissen'
+description: Erfahren Sie, wie Sie erweiterte Ereignisse verwenden, um Vorhersage-T-SQL-Anweisungen in SQL Server Machine Learning Services zu überwachen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 09/24/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 283e128285fc50b9109d7950b171e30224fb9692
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 958ac3e24a9deec231e7fd4d5da14477d693f4de
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714642"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71714304"
 ---
-# <a name="extended-events-for-monitoring-predict-statements"></a>Erweiterte Ereignisse für die Überwachung von PREDICT-Anweisungen
+# <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Überwachen Sie die Vorhersage von T-SQL-Anweisungen mit erweiterten Ereignissen in SQL Server Machine Learning Services
 
-In diesem Artikel werden die in SQL Server bereitgestellten erweiterten Ereignisse beschrieben, mit denen Sie Aufträge überwachen und analysieren können, die [Vorhersagen](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) verwenden, um die Echtzeitbewertung in SQL Server auszuführen.
-
-Die Echtzeitbewertung generiert Bewertungen aus einem Machine Learning-Modell, das in SQL Server gespeichert wurde. Die Vorhersagefunktion erfordert keine externe Laufzeit, wie z. b. R oder python, sondern nur ein Modell, das mit einem bestimmten Binärformat erstellt wurde. Weitere Informationen finden Sie unter [Echtzeit-Bewertung](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
-
-## <a name="prerequisites"></a>Vorraussetzungen
-
-Allgemeine Informationen zu erweiterten Ereignissen (manchmal auch als xevents bezeichnet) und zum Nachverfolgen von Ereignissen in einer Sitzung finden Sie in den folgenden Artikeln:
-
-+ [Konzepte und Architektur für erweiterte Ereignisse](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [Einrichten der Ereignis Erfassung in SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [Verwalten von Ereignis Sitzungen im Objekt-Explorer](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
+Erfahren Sie, wie Sie erweiterte Ereignisse verwenden, um [Vorhersage](../../t-sql/queries/predict-transact-sql.md) -T-SQL-Anweisungen in SQL Server Machine Learning Services zu überwachen.
 
 ## <a name="table-of-extended-events"></a>Tabelle erweiterter Ereignisse
 
-Die folgenden erweiterten Ereignisse sind in allen Versionen von SQL Server verfügbar, die die Anweisung [T-SQL-Vorhersage](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) einschließlich SQL Server für Linux und Azure SQL-Datenbank unterstützen. 
-
-Die T-SQL-Vorhersage Anweisung wurde in SQL Server 2017 eingeführt. 
+Die folgenden erweiterten Ereignisse sind in allen Versionen von SQL Server verfügbar, die die [Vorhersage](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) -T-SQL-Anweisung unterstützen. 
 
 |NAME |object_type|description| 
 |----|----|----|
@@ -47,7 +36,9 @@ Die T-SQL-Vorhersage Anweisung wurde in SQL Server 2017 eingeführt.
 Führen Sie die folgende Abfrage in SQL Server Management Studio aus, um eine Liste aller für diese Ereignisse zurückgegebenen Spalten anzuzeigen:
 
 ```sql
-SELECT * FROM sys.dm_xe_object_columns WHERE object_name LIKE `predict%'
+SELECT * 
+FROM sys.dm_xe_object_columns 
+WHERE object_name LIKE `predict%'
 ```
 
 ## <a name="examples"></a>Beispiele
@@ -84,3 +75,11 @@ FROM sys.dm_os_memory_objects
 WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 ```
 
+## <a name="next-steps"></a>Nächste Schritte
+
+Weitere Informationen zu erweiterten Ereignissen (manchmal auch als xevents bezeichnet) und zum Nachverfolgen von Ereignissen in einer Sitzung finden Sie in den folgenden Artikeln:
+
++ [Überwachen von Python-und R-Skripts mit erweiterten Ereignissen in SQL Server Machine Learning Services](extended-events.md)
++ [Konzepte und Architektur für erweiterte Ereignisse](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
++ [Einrichten der Ereignis Erfassung in SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
++ [Verwalten von Ereignis Sitzungen im Objekt-Explorer](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)

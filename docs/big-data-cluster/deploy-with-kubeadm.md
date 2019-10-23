@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eb9971d326948715fa68e2eb1d3e9e8d73e06558
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030290"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688299"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Kubernetes auf mehreren Computern für SQL Server-Big Data-Cluster-Bereitstellungen
 
@@ -33,6 +33,9 @@ In [diesem ](deployment-script-single-node-kubeadm.md) Thema finden Sie auch ein
    - 8 CPUs
    - 64GB Arbeitsspeicher
    - 100GB Speicher
+ 
+> [!Important] 
+> Stellen Sie vor dem Starten der Big Data Cluster Bereitstellung sicher, dass die Uhren über alle Kubernetes Knoten hinweg synchronisiert werden, auf die die Bereitstellung abzielt. Der Big Data-Cluster verfügt über integrierte Integritäts Eigenschaften für verschiedene Dienste, bei denen es sich um Zeit empfindliche Dienste handelt, und Takt Abweichungen können zu einem falschen Status führen.
 
 ## <a name="prepare-the-machines"></a>Vorbereiten der Computer
 
@@ -126,7 +129,7 @@ Nachdem Sie die vorherigen Befehle auf den einzelnen Computern ausgeführt haben
    kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
    helm init
    kubectl apply -f rbac.yaml
-   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
    kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
    ```
 

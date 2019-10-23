@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e1e74c9d14c93cf44a7da5db4795a1524d238be
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f60aa3684778a7347b1ffd613a924c3bf0b7b94a
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715274"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271939"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installieren von SQL Server Machine Learning-R-und python-Komponenten über die Befehlszeile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNo
 | /IACCEPTROPENLICENSETERMS  | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung der Open Source-R-Komponenten akzeptiert haben. |
 | /IACCEPTPYTHONLICENSETERMS | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung der python-Komponenten akzeptiert haben. |
 | /IACCEPTSQLSERVERLICENSETERMS | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung von SQL Server akzeptiert haben.|
-| /MRCACHEDIRECTORY | Für das Offline-Setup wird der Ordner mit den CAB-Dateien der R-Komponente festgelegt. |
+| MRCACHEDIRECTORY | Für das Offline-Setup wird der Ordner mit den CAB-Dateien der R-Komponente festgelegt. |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -68,7 +68,7 @@ Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNo
 | /IACCEPTROPENLICENSETERMS  | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung der Open Source-R-Komponenten akzeptiert haben. |
 | /IACCEPTPYTHONLICENSETERMS | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung der python-Komponenten akzeptiert haben. |
 | /IACCEPTSQLSERVERLICENSETERMS | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung von SQL Server akzeptiert haben.|
-| /MRCACHEDIRECTORY | Für das Offline-Setup wird der Ordner mit den CAB-Dateien der R-Komponente festgelegt. |
+| MRCACHEDIRECTORY | Für das Offline-Setup wird der Ordner mit den CAB-Dateien der R-Komponente festgelegt. |
 | /MPYCACHEDIRECTORY | Zur künftigen Verwendung reserviert. Verwenden Sie% Temp%, um die CAB-Dateien von python-Komponenten für die Installation auf Computern zu speichern, die keine Internetverbindung haben. |
 ::: moniker-end
 
@@ -201,14 +201,14 @@ Um den Installationsstatus der-Instanz zu überprüfen und häufige Probleme zu 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-R-Entwickler können mit einigen einfachen Beispielen beginnen und die Grundlagen der Funktionsweise von R mit SQL Server kennenlernen. Informationen zu den nächsten Schritten finden Sie unter den folgenden Links:
+R-Entwickler können mit einigen einfachen Beispielen loslegen und die Grundlagen der Funktionen von R unter SQL Server kennenlernen. Informationen zu den nächsten Schritten finden Sie unter den folgenden Links:
 
-+ [Tutorial: Ausführen von R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: Daten bankübergreifende Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Ausführen von R in T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Python-Entwickler können mit den folgenden Tutorials erfahren, wie Sie python mit SQL Server verwenden:
+Python-Entwickler können in den folgenden Tutorials erfahren, wie Python mit SQL Server verwendet werden kann:
 
-+ [Tutorial: Ausführen von python in T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutorial: Daten bankübergreifende Analysen für python-Entwickler](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutorial: Ausführen von Python in T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutorial: Datenbankinterne Analysen für Python-Entwickler](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Beispiele für Machine Learning, die auf realen Szenarios basieren, finden Sie unter [Machine Learning-Tutorials](../tutorials/machine-learning-services-tutorials.md).
+Praxisbeispiele für die Verwendung von Machine Learning finden Sie unter [Tutorials für Machine Learning](../tutorials/machine-learning-services-tutorials.md).

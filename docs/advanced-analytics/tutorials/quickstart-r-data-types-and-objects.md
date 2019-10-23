@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Datentypen und Datenobjekten in R arbeiten und mit SQL Server Machine Learning Services SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 0e490821194e909643e5307e833f093363cb9558
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149956"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006012"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Schnellstart: Verarbeiten von Datentypen und Objekten mithilfe von R in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,12 +114,12 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-Wie Sie sehen können, hatte eine geringfügige Änderung in der R-Syntax einen großen Einfluss auf das Schema der Ergebnisse. Wir gehen nicht in den Grund ein, aber die Unterschiede in R-Datentypen werden im *Abschnitt* ["Advanced R" von Hadley Wickham](http://adv-r.had.co.nz)ausführlich erläutert.
+Wie Sie sehen können, hatte eine geringfügige Änderung in der R-Syntax einen großen Einfluss auf das Schema der Ergebnisse. Wir gehen nicht *in den Grund* ein, aber die Unterschiede in R-Datentypen werden im Abschnitt ["Advanced R" von Hadley Wickham](http://adv-r.had.co.nz)ausführlich erläutert.
 
 Jetzt müssen Sie nur Bedenken, dass Sie die erwarteten Ergebnisse überprüfen müssen, wenn Sie R-Objekte in Datenrahmen umwandeln müssen.
 
 > [!TIP]
-> Sie können auch R-Identitäts Funktionen, wie z `is.matrix`. `is.vector`b., verwenden, um Informationen über die interne Datenstruktur zurückzugeben.
+> Sie können auch R-Identitäts Funktionen, wie z. b. `is.matrix` `is.vector`, verwenden, um Informationen über die interne Datenstruktur zurückzugeben.
 
 ## <a name="implicit-conversion-of-data-objects"></a>Implizite Konvertierung von Datenobjekten
 
@@ -164,7 +164,7 @@ Im Hintergrund wird die Spalte mit drei Werten in eine einspaltige Matrix konver
 |120|130|140|150|
 |1200|1300|1400|1500|
 
-Beachten Sie jedoch, was geschieht, wenn Sie die Größe des Arrays `y`ändern.
+Beachten Sie jedoch, was geschieht, wenn Sie die Größe des Arrays `y` ändern.
 
 ```sql
 execute sp_execute_external_script
@@ -197,7 +197,7 @@ Warum? Da die beiden Argumente in diesem Fall als Vektoren derselben Länge beha
 
 R bietet hervorragend für die Arbeit mit Vektoren verschiedener Größen und für die Kombination dieser Spalten ähnlichen Strukturen in Datenrahmen. Vektorenlisten können aussehen wie eine Tabelle, aber sie befolgen nicht alle Regeln, die Datenbanktabellen steuern.
 
-Zum Beispiel legt das folgende Skript ein numerisches Array der Länge 6 fest und speichert es in der R-Variable `df1`. Das numerische Array wird anschließend mit den ganzen Zahlen der rtestdata-Tabelle kombiniert, die drei (3) Werte enthält, um einen neuen Datenrahmen,, `df2`zu erstellen.
+Zum Beispiel legt das folgende Skript ein numerisches Array der Länge 6 fest und speichert es in der R-Variable `df1`. Das numerische Array wird anschließend mit den ganzen Zahlen der rtestdata-Tabelle kombiniert, die drei (3) Werte enthält, um einen neuen Datenrahmen zu erstellen, `df2`.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -305,6 +305,7 @@ Weitere Informationen zum Schreiben von erweiterten R-Funktionen in SQL Server f
 > [!div class="nextstepaction"]
 > [Schreiben von erweiterten R-Funktionen mit SQL Server Machine Learning Services](quickstart-r-functions.md)
 
-Weitere Informationen zum SQL Server Machine Learning Services finden Sie unter:
+Weitere Informationen zur Verwendung von R in SQL Server Machine Learning Services finden Sie in den folgenden Artikeln:
 
+- [Erstellen und bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 - [Was ist SQL Server Machine Learning Services (python und R)?](../what-is-sql-server-machine-learning.md)

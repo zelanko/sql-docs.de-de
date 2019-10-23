@@ -1,5 +1,5 @@
 ---
-title: Sp_addtype (Transact-SQL) | Microsoft-Dokumentation
+title: sp_addtype (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4e52fb6700d0af133a687c8b93e28cd12f72221c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab825ce5eb1310f3ff502965e409731b8741932e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117939"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305135"
 ---
-# <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
+# <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt einen Aliasdatentyp.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] verwenden Sie stattdessen [Create Type](../../t-sql/statements/create-type-transact-sql.md) .  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +44,9 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @typename = ] type` Ist der Name des aliasdatentyps. Namen müssen den Regeln für Alias entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md) und muss in jeder Datenbank eindeutig sein. *Typ* ist **Sysname**, hat keinen Standardwert.  
+`[ @typename = ] type` ist der Name des Alias Datentyps. Alias Datentyp Namen müssen den Regeln für Bezeichner [entsprechen und in](../../relational-databases/databases/database-identifiers.md) jeder Datenbank eindeutig sein. *Type ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @phystype = ] system_data_type` Der physische oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Datentyp, die auf dem der Aliasdatentyp basiert. *System_data_type* ist **Sysname**und hat keinen Standardwert und kann diese Werte sind möglich:  
+`[ @phystype = ] system_data_type` ist der physische oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Datentyp, auf dem der Alias Datentyp basiert. *system_data_type* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 ||||  
 |-|-|-|  
@@ -59,7 +59,7 @@ sp_addtype [ @typename = ] type,
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
- Alle Parameter, die Leerzeichen oder Satzzeichen enthalten, müssen in einfachen Anführungszeichen stehen. Weitere Informationen zu den verfügbaren Datentypen, finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+ Alle Parameter, die Leerzeichen oder Satzzeichen enthalten, müssen in einfachen Anführungszeichen stehen. Weitere Informationen zu den verfügbaren Datentypen finden Sie unter [Datentypen &#40;Transact&#41;-SQL](../../t-sql/data-types/data-types-transact-sql.md).  
   
  *n*  
  Eine nicht negative ganze Zahl, die die Länge für den ausgewählten Datentyp angibt.  
@@ -70,10 +70,10 @@ sp_addtype [ @typename = ] type,
  *s*  
  Eine nicht negative ganze Zahl, die die maximale Anzahl der Dezimalstellen angibt, die nach dem Dezimalzeichen gespeichert werden können. Diese Zahl muss kleiner oder gleich der Gesamtzahl der Stellen sein. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'` Gibt an, wie der Aliasdatentyp null-Werte behandelt. *Null_type* ist **Varchar (** 8 **)** , hat den Standardwert NULL und muss in einfache Anführungszeichen ('NULL', 'NOT NULL' oder 'NONULL') eingeschlossen werden. Wenn *Null_type* nicht explizit durch definiert **Sp_addtype**, wird er auf die aktuelle Standard-NULL-Zulässigkeit festgelegt. Verwenden Sie die GETANSINULL-Systemfunktion, um die aktuelle Standard-NULL-Zulässigkeit zu ermitteln. Diese kann mithilfe der SET-Anweisung oder ALTER DATABASE angepasst werden. Die NULL-Zulässigkeit sollte explizit definiert werden. Wenn **@phystype** ist **Bit**, und **@nulltype** nicht angegeben ist, wird der Standardwert ist NULL.  
+`[ @nulltype = ] 'null_type'` gibt an, wie der Alias Datentyp NULL-Werte behandelt. *null_type* ist vom Datentyp **varchar (** 8 **)** und hat den Standardwert NULL und muss in einfache Anführungszeichen (' NULL ', ' not NULL ' oder ' nonull ') eingeschlossen werden. Wenn *null_type* nicht explizit durch **sp_addtype**definiert ist, wird es auf die aktuelle standardmäßige NULL-Zulässigkeit festgelegt. Verwenden Sie die GETANSINULL-Systemfunktion, um die aktuelle Standard-NULL-Zulässigkeit zu ermitteln. Diese kann mithilfe der SET-Anweisung oder ALTER DATABASE angepasst werden. Die NULL-Zulässigkeit sollte explizit definiert werden. Wenn **\@phystype** den Wert **Bit**hat und **\@nulltype** nicht angegeben wird, ist der Standardwert not NULL.  
   
 > [!NOTE]  
->  Die *Null_type* -Parameter definiert nur die standardmäßige NULL-Zulässigkeit für diesen Datentyp. Wenn der Aliasdatentyp beim Erstellen der Tabelle verwendet und die NULL-Zulässigkeit explizit definiert wurde, hat diese Vorrang vor der definierten NULL-Zulässigkeit. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) und [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+>  Der *null_type* -Parameter definiert nur die standardmäßige NULL-Zulässigkeit für diesen Datentyp. Wenn der Aliasdatentyp beim Erstellen der Tabelle verwendet und die NULL-Zulässigkeit explizit definiert wurde, hat diese Vorrang vor der definierten NULL-Zulässigkeit. Weitere Informationen finden Sie unter [alter Table &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) und [Create Table &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -84,22 +84,22 @@ sp_addtype [ @typename = ] type,
 ## <a name="remarks"></a>Hinweise  
  Der Name eines Aliasdatentyps muss in der Datenbank eindeutig sein, aber Aliasdatentypen mit unterschiedlichen Namen können dieselbe Definition aufweisen.  
   
- Ausführen von **Sp_addtype** erstellt einen Aliasdatentyp, die in angezeigt wird. die **sys.types** -Katalogsicht für eine bestimmte Datenbank. Wenn der Aliasdatentyp in allen neuen benutzerdefinierten Datenbanken verfügbar sein muss, fügen sie **Modell**. Nach der Erstellung eines Aliasdatentyps können Sie diesen mit CREATE TABLE oder ALTER TABLE verwenden sowie Standards und Regeln an den Aliasdatentyp binden. Alle skalaren Aliasdatentypen, die mit **Sp_addtype** befinden sich die **Dbo** Schema.  
+ Beim Ausführen von **sp_addtype** wird ein Alias Datentyp erstellt, der in der **sys. types** -Katalog Sicht für eine bestimmte Datenbank angezeigt wird. Wenn der Alias Datentyp in allen neuen benutzerdefinierten Datenbanken verfügbar sein muss, fügen Sie ihn dem **Modell**hinzu. Nach der Erstellung eines Aliasdatentyps können Sie diesen mit CREATE TABLE oder ALTER TABLE verwenden sowie Standards und Regeln an den Aliasdatentyp binden. Alle skalaren Alias Datentypen, die mit **sp_addtype** erstellt werden, sind im **dbo** -Schema enthalten.  
   
- Aliasdatentypen erben die Standardsortierung der Datenbank. Die Sortierungen von Spalten und Variablen von Aliastypen sind in definiert die [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE-, ALTER TABLE und DECLARE @*Local_variable* Anweisungen. Eine Änderung der Standardsortierung der Datenbank gilt nur für neue Spalten und Variablen des Typs; sie wirkt sich nicht auf die Sortierung bereits vorhandener Spalten und Variablen aus.  
+ Aliasdatentypen erben die Standardsortierung der Datenbank. Die Sortierungen von Spalten und Variablen von Alias Typen werden in den Anweisungen [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE und DECLARE @*local_variable* definiert. Eine Änderung der Standardsortierung der Datenbank gilt nur für neue Spalten und Variablen des Typs; sie wirkt sich nicht auf die Sortierung bereits vorhandener Spalten und Variablen aus.  
   
 > [!IMPORTANT]  
->  Aus Gründen der Abwärtskompatibilität die **öffentliche** Datenbankrolle wird automatisch gewährt die REFERENCES-Berechtigung für Aliasdatentypen, die mit **Sp_addtype**. Beachten Sie, wann die Aliasdatentypen erstellt werden, mithilfe der CREATE TYPE-Anweisung anstelle von **Sp_addtype**, erfolgt keine automatische solche erteilen.  
+>  Aus Gründen der Abwärtskompatibilität wird der **Public** -Daten Bank Rolle automatisch die REFERENCES-Berechtigung für Alias Datentypen erteilt, die mit **sp_addtype**erstellt werden. Hinweis Wenn Alias Datentypen mithilfe der CREATE TYPE-Anweisung anstelle von **sp_addtype**erstellt werden, erfolgt keine automatische Erteilung.  
   
- Aliasdatentypen können nicht definiert werden, indem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Zeitstempel**, **Tabelle**, **Xml**, **varchar(max)** , **nvarchar(max)** oder **'varbinary(max)'** -Datentypen.  
+ Alias Datentypen können nicht mit den Datentypen "@no__t **-0"** , " **Table**", " **XML**", " **varchar (max)** ", " **nvarchar (max)** " oder " **varbinary (max)** " definiert werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Db_owner** oder **Db_ddladmin** festen Datenbankrolle.  
+ Erfordert die Mitgliedschaft in der Daten Bank Rolle " **db_owner** " oder " **db_ddladmin** ".  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. Erstellen eines Aliasdatentyps, der keine NULL-Werte zulässt  
- Das folgende Beispiel erstellt einen Aliasdatentyp namens `ssn` (Sozialversicherungsnummer), basiert auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-bereitgestellten **Varchar** -Datentyp. Der `ssn`-Datentyp wird für Spalten mit 11-stelligen Sozialversicherungsnummern verwendet (999-99-9999). Diese Spalte darf nicht den Wert NULL aufweisen.  
+ Im folgenden Beispiel wird ein Alias Datentyp mit dem Namen `ssn` (Sozialversicherungsnummer) erstellt, der auf dem von @no__t -1 angegebenen **varchar** -Datentyp basiert. Der `ssn`-Datentyp wird für Spalten mit 11-stelligen Sozialversicherungsnummern verwendet (999-99-9999). Diese Spalte darf nicht den Wert NULL aufweisen.  
   
  Beachten Sie, dass `varchar(11)` in einfachen Anführungszeichen steht, da es Satzzeichen (Klammern) enthält.  
   
@@ -132,7 +132,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherter &#40;Prozeduren Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

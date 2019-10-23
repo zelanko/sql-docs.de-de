@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8b9e1151d5a757f42420c90519c79c3793cfef16
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354603"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250953"
 ---
-# <a name="configure-a-distributed-always-on-availability-group"></a>Konfigurieren verteilter Always On-Verfügbarkeitsgruppen  
+# <a name="configure-an-always-on-distributed-availability-group"></a>Konfigurieren verteilter Always On-Verfügbarkeitsgruppen  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Zum Erstellen einer verteilten Verfügbarkeitsgruppe müssen Sie zwei Verfügbarkeitsgruppen mit eigenen Listenern erstellen. Anschließend kombinieren Sie diese Verfügbarkeitsgruppen zu einer verteilten Verfügbarkeitsgruppe. Die folgenden Schritte stellen ein einfaches Beispiel in Transact-SQL dar. Dieses Beispiel deckt nicht alle Details zum Erstellen von Verfügbarkeitsgruppen und Listenern ab, stattdessen legt es den Schwerpunkt auf die Herausarbeitung der wichtigsten Anforderungen.
@@ -178,6 +178,19 @@ GO
   
 > [!NOTE]  
 >  Die **LISTENER_URL** gibt den Listener für jede Verfügbarkeitsgruppe zusammen mit dem Datenbankspiegelungs-Endpunkt der Verfügbarkeitsgruppe an. In diesem Beispiel ist das Port `5022` (nicht Port `60173` , der zum Erstellen des Listeners verwendet wurde). Wenn Sie beispielsweise in Azure einen Lastenausgleich verwenden, [fügen Sie eine Regel für den Lastenausgleich für den Port der verteilten Verfügbarkeitsgruppe hinzu](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Fügen Sie zusätzlich zum SQL Server-Instanzport die Regel für den Listenerport hinzu. 
+
+### <a name="cancel-automatic-seeding-to-forwarder"></a>Abbrechen des automatischen Seedings für die Weiterleitung
+Falls es erforderlich ist, die Initialisierung der Weiterleitung abzubrechen, bevor die zwei Verfügbarkeitsgruppen synchronisiert werden, ändern Sie die verteilte Verfügbarkeitsgruppe mit ALTER, indem Sie den SEEDING_MODE-Parameter der Weiterleitung auf MANUAL festlegen und das Seeding sofort abbrechen. Führen Sie den Befehl für die globale primäre Datenbank aus: 
+
+```sql
+-- Cancel automatic seeding.  Connect to global primary but specify DAG AG2
+ALTER AVAILABILITY GROUP [distributedag]   
+   MODIFY  
+   AVAILABILITY GROUP ON  
+   'ag2' WITH  
+   (  SEEDING_MODE = MANUAL  );   
+```
+
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Verknüpfen der verteilten Verfügbarkeitsgruppe auf dem zweiten Cluster  
  Verknüpfen Sie anschließend die verteilte Veerfügbarkeitsgruppe auf dem zweiten WSFC.  
@@ -218,7 +231,7 @@ Zurzeit wird nur manuelles Failover unterstützt. So führen Sie ein manuelles F
 1. Warten Sie, bis die verteilte Verfügbarkeitsgruppe synchronisiert wurde.
 1. Legen Sie die Rolle der verteilten Verfügbarkeitsgruppe für das globale, primäre Replikat auf `SECONDARY` fest.
 1. Testen Sie die Failoverbereitschaft.
-1. Führen Sie ein Failover für die primäre Verfügbarkeitsgruppe aus.
+1. Führen Sie einen Failover der primären Verfügbarkeitsgruppe aus.
 
 In den folgenden Transact-SQL-Beispielen werden die ausführlichen Schritte zum Ausführen eines Failover für die verteilte Verfügbarkeitsgruppe namens `distributedag` veranschaulicht:
 

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - DTS [Integration Services], about Integration Services
 - data integration [Integration Services]
 - Data Transformation Services
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 782f1fb04ae8167c342bbe39f1f640f090c8c434
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2fbf040bd24ce3da81497001213e953f7436d863
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912502"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296866"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -45,7 +45,7 @@ Mithilfe der grafischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md
 
 Weitere Informationen zum Installieren von SQL Server Integration Services mit SQL Server und weitere Downloads, die Sie möglicherweise wünschen oder benötigen, finden Sie unter [Installieren von Integration Services](install-windows/install-integration-services.md).
 
-##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) Ressourcen
+##  <a name="info_tipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) Ressourcen
 -   [Erhalten Sie Hilfe im SSIS-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
 -   [Erhalten Sie Hilfe auf Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  
 -   [Folgen Sie dem SSIS-Teamblog](https://blogs.msdn.microsoft.com/ssis/)

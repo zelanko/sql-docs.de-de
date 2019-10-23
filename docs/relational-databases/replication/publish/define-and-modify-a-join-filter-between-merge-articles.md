@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4155bdd03dfc809eee26e505cb842404524cbe59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d695ccd9545c6bc839edcc1b0644c1f1a4d84ab8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907799"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710904"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "67907799"
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus um einen oder mehrere ähnliche Artikel, auch bekannt als untergeordnete Artikel, für die Veröffentlichung zu definieren. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)aus. Geben Sie **@publication** , einen eindeutigen Namen für diesen Filter für **@filtername** , den Namen des in Schritt 2 erstellten untergeordneten Artikels für **@article** , den Namen des übergeordneten Artikels, mit dem ein Join hergestellt wird, für **@join_articlename** und einen der folgenden Werte für **@join_unique_key** an:  
+3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)aus. Geben Sie `@publication`, einen eindeutigen Namen für diesen Filter für `@filtername`, den Namen des in Schritt 2 erstellten untergeordneten Artikels für `@article`, den Namen des übergeordneten Artikels, mit dem ein Join hergestellt wird, für `@join_articlename` und einen der folgenden Werte für `@join_unique_key` an:  
   
     -   **0** &ndash; gibt einen n:1- oder einen n:n-Join zwischen den übergeordneten und den untergeordneten Artikeln an.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "67907799"
      Damit wird ein Joinfilter zwischen den beiden Artikeln definiert.  
   
     > [!CAUTION]  
-    >  Legen Sie **@join_unique_key** nur dann auf **1** fest, wenn eine Einschränkung für die verknüpfte Spalte in der zugrunde liegenden Tabelle für den übergeordneten Artikel vorliegt, die die Eindeutigkeit sicherstellt. Wird **@join_unique_key** fälschlicherweise auf **1** festgelegt, kann dies zu mangelnder Konvergenz der Daten führen.  
+    >  Legen Sie `@join_unique_key` nur dann auf **1** fest, wenn eine Einschränkung für die verknüpfte Spalte in der zugrunde liegenden Tabelle für den übergeordneten Artikel vorliegt, die die Eindeutigkeit sicherstellt. Wird `@join_unique_key` fälschlicherweise auf **1** festgelegt, kann dies zu einer Nichtkonvergenz der Daten führen.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  In diesem Beispiel wird ein Artikel für eine Mergeveröffentlichung definiert, bei der der `SalesOrderDetail` -Tabellenartikel anhand der `SalesOrderHeader` -Tabelle gefiltert wird, dies selbst mithilfe eines statischen Zeilenfilters gefiltert wird. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  

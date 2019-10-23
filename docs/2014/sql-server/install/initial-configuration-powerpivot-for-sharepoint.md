@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e331f25811255569261fb30c2869b428843ebfc5
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 0b7fee687c45dd0b96197e6c920971661c6b70dc
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530912"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952450"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Anfängliche Konfiguration (PowerPivot für SharePoint)
   Verwenden Sie die Schritte in diesem Thema, um eine ursprüngliche Installation von PowerPivot für SharePoint zu konfigurieren. Die einfachste Möglichkeit zur Konfiguration einer ursprünglichen Installation ist die Verwendung des PowerPivot-Konfigurationstools. Dieses Tool automatisiert alle unten beschriebenen Konfigurationsschritte.  
@@ -103,13 +103,13 @@ ms.locfileid: "69530912"
   
 3.  Wählen Sie **SQL Server Power Pivot-Dienst Anwendung**aus. Wenn diese Option nicht in der Liste angezeigt wird, wurde PowerPivot für SharePoint nicht installiert oder die Lösung nicht bereitgestellt.  
   
-4.  Geben Sie auf der Seite **neue Power Pivot-Dienst Anwendung erstellen** einen Namen für die Anwendung ein. Der Standardwert ist PowerPivotServiceApplication\<Number >. Wenn Sie mehrere PowerPivot-Dienstanwendungen erstellen, hilft ein aussagekräftiger Name anderen Administratoren, den Verwendungszweck der Anwendung zu verstehen.  
+4.  Geben Sie auf der Seite **neue Power Pivot-Dienst Anwendung erstellen** einen Namen für die Anwendung ein. Der Standardwert ist PowerPivotServiceApplication @ no__t-0number >. Wenn Sie mehrere PowerPivot-Dienstanwendungen erstellen, hilft ein aussagekräftiger Name anderen Administratoren, den Verwendungszweck der Anwendung zu verstehen.  
   
 5.  Erstellen Sie unter Anwendungspool einen neuen Anwendungspool, und wählen Sie ein Sicherheitskonto aus. Ein Domänenbenutzerkonto ist erforderlich.  
   
 6.  Wählen Sie unter **Datenbankserver**einen Datenbankserver aus, auf dem die-Dienst Anwendungsdatenbank erstellt werden soll. Der Standardwert entspricht der SQL Server-Datenbank-Engine-Instanz, die die Datenbanken für die Farmkonfiguration hostet.  
   
-7.  Der Standardwert unter **Datenbankname**ist PowerPivotServiceApplication1_\<GUID >. Der Standardname für die Datenbank entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.  
+7.  Der Standardwert unter **Datenbankname**ist PowerPivotServiceApplication1_ @ no__t-1guid >. Der Standardname für die Datenbank entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.  
   
 8.  Der Standardwert unter **Datenbankauthentifizierung**lautet Windows-Authentifizierung. Wenn Sie **SQL-Authentifizierung**auswählen, finden Sie im SharePoint-Administratorhandbuch bewährte Methoden zur Verwendung dieses Authentifizierungstyps in einer SharePoint-Bereitstellung.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "69530912"
   
 5.  Geben Sie unter **Datenbank**die SQL Server Instanz an, die die Datenbank für diese Dienst Anwendung hostet. Der Standardwert entspricht der SQL Server-Datenbank-Engine-Instanz, die die Datenbanken für die Farmkonfiguration hostet.  
   
-6.  Geben Sie unter **Datenbankname**den Namen der Datenbank der Dienst Anwendung ein. Der Standardwert ist Secure_Store_Service_DB_\<GUID >. Der Standardname entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.  
+6.  Geben Sie unter **Datenbankname**den Namen der Datenbank der Dienst Anwendung ein. Der Standardwert ist Secure_Store_Service_DB_ @ no__t-0guid >. Der Standardname entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.  
   
 7.  Der Standardwert unter **Datenbankauthentifizierung**lautet Windows-Authentifizierung. Wenn Sie die SQL-Authentifizierung auswählen, finden Sie im SharePoint-Administratorhandbuch eine Anleitung zum Verwenden des Authentifizierungstyps in der Farm.  
   
@@ -201,14 +201,14 @@ ms.locfileid: "69530912"
  PowerPivot für SharePoint erfasst Informationen zur PowerPivot-Verwendung überall in der Farm mithilfe der Infrastruktur zur Sammlung von SharePoint-Verwendungsdaten. Obwohl Verwendungsdaten immer Teil einer SharePoint-Installation sind, müssen sie möglicherweise aktiviert werden, damit sie verwendet werden können. Anweisungen finden Sie unter [Konfigurieren der Sammlung von Verwendungs &#40;Daten für PowerPivot für SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint).  
   
 ##  <a name="Upload"></a>Schritt 7: Vergrößern der maximalen Uploadgröße für SharePoint-Webanwendungen und Excel Services  
- Da PowerPivot-Arbeitsmappen sehr groß werden können, kann es sinnvoll sein, die maximale Dateigröße zu erhöhen. Es gibt zwei Einstellungen für die Dateigröße, die konfiguriert werden müssen: Maximale Uploadgröße für die Webanwendung und maximale Arbeitsmappengröße in Excel Services. Die maximale Dateigröße sollte in beiden Anwendungen auf den gleichen Wert festgelegt werden. Anweisungen finden Sie unter [Konfigurieren der maximalen &#40;Dateiuploadgröße PowerPivot für SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint).  
+ Da PowerPivot-Arbeitsmappen sehr groß werden können, kann es sinnvoll sein, die maximale Dateigröße zu erhöhen. Es gibt zwei Einstellungen für die Dateigröße, die konfiguriert werden müssen: Maximale Uploadgröße für die Webanwendung und maximale Arbeitsmappengröße in Excel Services. Die maximale Dateigröße sollte in beiden Anwendungen auf den gleichen Wert festgelegt werden. Anweisungen finden Sie unter [Konfigurieren der maximalen Dateiuploadgröße &#40;PowerPivot für SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint).  
   
 ##  <a name="activatePP"></a>Schritt 8: Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen  
  Die Funktionsaktivierung auf der Ebene der Websitesammlung stellt Anwendungsseiten und Vorlagen zur Verfügung, z. B. Konfigurationsseiten für geplante Datenaktualisierungen und Anwendungsseiten für den PowerPivot-Katalog und Datenfeedbibliotheken.  
   
 1.  Klicken Sie auf einer SharePoint-Website auf **Websiteaktionen**.  
   
-     Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie häufig auf eine SharePoint-Website zugreifen können\<, indem Sie http://Computername > eingeben, um die Stammweb Site Sammlung zu öffnen.  
+     Standardmäßig wird auf SharePoint-Webanwendungen über Port 80 zugegriffen. Dies bedeutet, dass Sie häufig auf eine SharePoint-Website zugreifen können, indem Sie http://\<computername > eingeben, um die Stammweb Site Sammlung zu öffnen.  
   
 2.  Klicken Sie auf **Siteeinstellungen**.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "69530912"
   
  Durch die Installation des Anbieters funktionieren Arbeitsmappen, die in der Datenverbindungszeichenfolge auf MSOLAP.4 verweisen, erwartungsgemäß auf einem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot-Server. Die Installation des SQL Server 2008 R2 OLE DB-Anbieters ist eine alternative Methode zum Aktualisieren der in einer früheren Version von PowerPivot für Excel erstellten Arbeitsmappen.  
   
- Sie können den Anbieter von der [Seite SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=159570)herunterladen. Suchen Sie nach **Microsoft® Analysis Services OLE DB-Anbieter für Microsoft® SQL Server® 2008 R2**, und laden Sie das x64-Paket `SQLServer2008_ASOLEDB10.msi` des-Installationsprogramms herunter.  
+ Sie können den Anbieter von der [Seite SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=159570)herunterladen. Suchen Sie nach **Microsoft® Analysis Services OLE DB-Anbieter für Microsoft® SQL Server® 2008 R2**, und laden Sie das x64-Paket des `SQLServer2008_ASOLEDB10.msi`-Installationsprogramms herunter.  
   
  Weitere Informationen zum Installieren des Anbieters, einschließlich der Überprüfungs Schritte, finden Sie unter [install the Analysis Services OLE DB-Anbieter on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
@@ -236,7 +236,7 @@ ms.locfileid: "69530912"
   
  Um die PowerPivot-Integration in eine SharePoint-Website zu überprüfen, gehen Sie wie folgt vor:  
   
-1.  Öffnen Sie in einem Browser die Webanwendung, die Sie erstellt haben. Wenn Sie Standardwerte verwendet haben, können Sie http://\<Ihren Computernamen in der URL-Adresse > angeben.  
+1.  Öffnen Sie in einem Browser die Webanwendung, die Sie erstellt haben. Wenn Sie Standardwerte verwendet haben, können Sie http://\<your Computername in der URL-Adresse > angeben.  
   
 2.  Überprüfen Sie, ob der PowerPivot-Datenzugriff und die Verarbeitungsfunktionen in der Anwendung verfügbar sind. Überprüfen Sie hierzu das Vorhandensein von durch PowerPivot bereitgestellte Bibliotheksvorlagen:  
   
@@ -256,7 +256,7 @@ ms.locfileid: "69530912"
   
 5.  Wählen Sie unter Servertyp die Option **Analysis Services**aus.  
   
-6.  Geben Sie  **\<**  **\<unter Servername den Namen Servername > \powerpivot**ein, wobei Servername > der Name des Computers ist, auf dem sich die PowerPivot für SharePoint Installation befindet.  
+6.  Geben Sie unter Servername den Namen **\<Server-Name > \powerpivot**ein, wobei **\<server-Name >** der Name des Computers ist, auf dem sich die PowerPivot für SharePoint-Installation befindet.  
   
 7.  Klicken Sie auf **Verbinden**.  
   
@@ -290,13 +290,13 @@ ms.locfileid: "69530912"
   
  Je nach Konfiguration der PowerPivot-Dienstanwendung wird der PowerPivot-Systemdienst der Standardverbindungsgruppe hinzugefügt und somit für alle Webanwendungen verfügbar gemacht, die Standardverbindungen verwenden. Wenn Sie die Webanwendungen jedoch so konfiguriert haben, dass sie benutzerdefinierte Verbindungslisten für Dienstanwendungen verwenden, müssen Sie jeder SharePoint-Webanwendung, für die Sie die PowerPivot-Datenverarbeitung aktivieren möchten, die PowerPivot-Dienstanwendung hinzufügen. Weitere Informationen finden Sie unter [Verbinden einer Power Pivot-Dienst Anwendung mit einer SharePoint-Webanwendung in der zentral Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca).  
   
- Wenn Sie mit der Zeit feststellen, dass zusätzlicher Datenspeicher und zusätzliche Verarbeitungskapazität erforderlich sind, können Sie der Farm eine zweite Serverinstanz mit PowerPivot für SharePoint hinzufügen. Der Installationsvorgang ist fast identisch mit den Schritten, die Sie ausgeführt haben, um den ersten Server hinzuzufügen, mit Ausnahme der Anforderungen, wie Sie Instanznamen und Dienstkontoinformationen angeben. Anweisungen finden [Sie unter Bereitstellungs Prüfliste: Horizontales Skalieren durch Hinzufügen von Power Pivot-Servern zu einer](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)SharePoint 2010-Farm.  
+ Wenn Sie mit der Zeit feststellen, dass zusätzlicher Datenspeicher und zusätzliche Verarbeitungskapazität erforderlich sind, können Sie der Farm eine zweite Serverinstanz mit PowerPivot für SharePoint hinzufügen. Der Installationsvorgang ist fast identisch mit den Schritten, die Sie ausgeführt haben, um den ersten Server hinzuzufügen, mit Ausnahme der Anforderungen, wie Sie Instanznamen und Dienstkontoinformationen angeben. Anweisungen finden Sie unter [deployment Checkliste: Horizontales Skalieren durch Hinzufügen von Power Pivot-Servern zu einer SharePoint 2010-Farm @ no__t-0.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Von den-Editionen unterstützte Funktionen SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [Funktionen, die von den Editionen von SQL Server 2014   unterstützt werden](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
  [Konfigurieren von Power Pivot-Dienst Konten](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [Erstellen und Konfigurieren einer Power Pivot-Dienst Anwendung in der zentral Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)   
- [Bereitstellen von Power Pivot-Lösungen in SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)   
+ Bereitstellen [von Power Pivot-Lösungen in SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)   
  [Aktivieren der Power Pivot-Funktions Integration für Website Sammlungen in der zentral Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)   
  [PowerPivot für SharePoint 2010-Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

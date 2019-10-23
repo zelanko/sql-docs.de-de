@@ -11,14 +11,14 @@ helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86add979aa790e438454c319dee68b8df95a6669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d4750f030dc1193ef8ed8be1b14198ca21e99be6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968099"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288723"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS-Ausdruck)
 
@@ -41,7 +41,7 @@ NULL(typespec)
 ## <a name="result-types"></a>Ergebnistypen  
  Ein beliebiger gültiger Datentyp mit einem NULL-Wert.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  NULL gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Parameter sind erforderlich, um einen NULL-Wert für bestimmte Datentypen anzufordern. In der folgenden Tabelle sind diese Datentypen und die zugehörigen Parameter aufgelistet.  

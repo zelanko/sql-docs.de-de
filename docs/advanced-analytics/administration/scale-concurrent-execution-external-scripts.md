@@ -3,30 +3,33 @@ title: Skalieren der gleichzeitigen Ausführung externer Skripts
 description: Konfigurieren Sie die parallele oder gleichzeitige R-und python-Skriptausführung in einem Benutzerkonten Pool, um SQL Server Machine Learning Services zu skalieren.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/17/2018
+ms.date: 09/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a5a0cd5ab05f7675ce011fe5205cbba3432725f4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
+ms.openlocfilehash: 262810be3ad1fd246c6f60383e28d456c6b79e08
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715863"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71714334"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Skalieren der gleichzeitigen Ausführung externer Skripts in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Im Rahmen des Installationsprozesses für [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] wird ein neuer Windows-*Benutzerkontenpool* erstellt, um die Ausführung von Aufgaben vom [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]-Dienst zu unterstützen. Der Zweck dieser workerkonten ist die Isolierung der gleichzeitigen Ausführung externer Skripts durch verschiedene SQL-Benutzer.
+Erfahren Sie mehr über workerkonten für SQL Server Machine Learning Services und wie Sie die Standardkonfiguration ändern können, um die Anzahl der gleichzeitigen Ausführung externer Skripts zu skalieren.
 
-Dieser Artikel beschreibt die Standardkonfiguration und-Kapazität für die workerkonten und zeigt, wie die Standardkonfiguration geändert wird, um die Anzahl der gleichzeitigen Ausführung externer Skripts in SQL Server Machine Learning Services zu skalieren.
+Im Rahmen des Installationsvorgangs für Machine Learning Services wird ein neuer Windows- *Benutzerkonten Pool* erstellt, um die Ausführung von Tasks durch den [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]-Dienst zu unterstützen. Der Zweck dieser workerkonten ist die Isolierung der gleichzeitigen Ausführung externer Skripts durch unterschiedliche SQL Server Benutzer.
+
+> [!Note]
+> In SQL Server 2019 verfügt **sqlrusergroup** nur über einen Member, bei dem es sich um das einzige SQL Server-Launchpad Dienst Konto anstelle mehrerer workerkonten handelt. In diesem Artikel werden die workerkonten für SQL Server 2016 und 2017 beschrieben.
 
 ## <a name="worker-account-group"></a>Worker-Konto Gruppe
 
 Eine Windows-Konto Gruppe wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup für jede Instanz erstellt, auf der Machine Learning installiert und aktiviert ist.
 
-- In einer Standardinstanz ist der Gruppenname **SQLRUserGroup**. Der Name ist identisch, unabhängig davon, ob Sie R oder python oder beides verwenden.
+- In einer Standardinstanz ist der Gruppenname **SQLRUserGroup**. Der Name ist identisch, unabhängig davon, ob Sie python oder R oder beides verwenden.
 - In einer benannten Instanz erhält der Standardgruppenname den Instanznamen als Suffix, z.B. **SQLRUserGroupMyInstanceName**.
 
 Standardmäßig enthält der Benutzerkontenpool 20 Benutzerkonten. In den meisten Fällen sind 20 mehr als ausreichend, um Machine Learning-Aufgaben zu unterstützen, aber Sie können die Anzahl der Konten ändern. Die maximale Anzahl von Konten ist 100.
@@ -35,9 +38,6 @@ Standardmäßig enthält der Benutzerkontenpool 20 Benutzerkonten. In den meiste
 - In einer benannten Instanz sind die Konten nach dem Instanznamen benannt, z.B **MyInstanceName01** bis **MyInstanceName20**.
 
 Wenn mehr als eine Instanz Machine Learning verwendet, verfügt der Computer über mehrere Benutzergruppen. Eine Gruppe kann nicht zwischen Instanzen freigegeben werden.
-
-> [!Note]
-> In SQL Server 2019 verfügt **sqlrusergroup** nur über einen Member, bei dem es sich um das einzige SQL Server-Launchpad Dienst Konto anstelle mehrerer workerkonten handelt.
 
 <a name = "HowToChangeGroup"> </a>
 
@@ -56,17 +56,15 @@ Die jeweiligen Kennwörter der Benutzerkonten werden nach dem Zufallsprinzip gen
 
 ## <a name="managing-workloads"></a>Verwalten von Workloads
 
-Die Anzahl der Konten in diesem Pool bestimmt, wie viele externe Skript Sitzungen gleichzeitig aktiv sein können.  Standardmäßig werden 20 Konten erstellt. Dies bedeutet, dass 20 verschiedene Benutzer gleichzeitig über aktive R-oder python-Sitzungen verfügen können. Sie können die Anzahl von workerkonten erhöhen, wenn Sie erwarten, dass mehr als 20 gleichzeitige Skripts ausgeführt werden.
+Die Anzahl der Konten in diesem Pool bestimmt, wie viele externe Skript Sitzungen gleichzeitig aktiv sein können.  Standardmäßig werden 20 Konten erstellt. Dies bedeutet, dass 20 verschiedene Benutzer gleichzeitig aktive python-oder R-Sitzungen haben können. Sie können die Anzahl von workerkonten erhöhen, wenn Sie erwarten, dass mehr als 20 gleichzeitige Skripts ausgeführt werden.
 
-Wenn derselbe Benutzer mehrere externe Skripts gleichzeitig ausführt, wird für alle von diesem Benutzer ausgeführten Sitzungen dasselbe Workerkonto verwendet. Beispielsweise kann für einen einzelnen Benutzer 100 verschiedene R-Skripts gleichzeitig ausgeführt werden, solange die Ressourcen zulässig sind, aber alle Skripts werden mit einem einzigen Workerkonto ausgeführt.
+Wenn derselbe Benutzer mehrere externe Skripts gleichzeitig ausführt, wird für alle von diesem Benutzer ausgeführten Sitzungen dasselbe Workerkonto verwendet. Beispielsweise kann für einen einzelnen Benutzer 100 verschiedene python-oder R-Skripts gleichzeitig ausgeführt werden, solange die Ressourcen zulässig sind, aber alle Skripts werden mit einem einzigen Workerkonto ausgeführt.
 
-Die Anzahl von workerkonten, die Sie unterstützen können, und die Anzahl der gleichzeitigen Sitzungen, die ein einzelner Benutzer ausführen kann, wird nur durch Server Ressourcen beschränkt. Für gewöhnlich ist der Arbeitsspeicher der erste Engpass beim Verwenden der R-Laufzeit.
+Die Anzahl von workerkonten, die Sie unterstützen können, und die Anzahl der gleichzeitigen Sitzungen, die ein einzelner Benutzer ausführen kann, wird nur durch Server Ressourcen beschränkt. In der Regel ist der Arbeitsspeicher der erste Engpass, der bei der Verwendung der Python-oder R-Laufzeit auftritt.
 
 Die Ressourcen, die von Python-oder R-Skripts verwendet werden können, werden SQL Server gesteuert. Es wird empfohlen, dass Sie die Ressourcenauslastung mit SQL Server DMVs überwachen oder sich Leistungsindikatoren im verknüpften Windows-Auftragsobjekt anschauen; so können Sie die Arbeitsspeicherauslastung des Servers entsprechend anpassen. Wenn Sie über SQL Server Enterprise Edition verfügen, können Sie Ressourcen zuweisen, die zum Ausführen externer Skripts verwendet werden, indem Sie einen [externen Ressourcenpool](how-to-create-a-resource-pool.md)konfigurieren.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Konfigurieren der Kapazität finden Sie in den folgenden Artikeln:
-
-- [SQL Server Konfiguration für R Services](../../advanced-analytics/r/sql-server-configuration-r-services.md)
-- [Leistungs Fallstudie für R Services](../../advanced-analytics/r/performance-case-study-r-services.md)
+- [Überwachen der Python-und R-Skriptausführung mit benutzerdefinierten Berichten in SQL Server Management Studio](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
+- [Überwachen von SQL Server Machine Learning Services mithilfe dynamischer Verwaltungs Sichten (DMVs)](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)

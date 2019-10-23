@@ -17,12 +17,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c349569d2f0973a3085337eb171a17d9cee21c82
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69633405"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711022"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "69633405"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) aus, und geben Sie **\@publication** an. Dadurch wird eine Liste aller für die Veröffentlichung bereitgestellten Überwachungstoken zurückgegeben. Beachten Sie die **tracer_id** für das zu löschende Überwachungstoken im Resultset.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) aus. Geben Sie hierbei **\@publication** und die ID des zu löschenden Überwachungstokens aus Schritt 2 für **@tracer_id** an.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) aus. Geben Sie hierbei **\@publication** und die ID des zu löschenden Überwachungstokens aus Schritt 2 für `@tracer_id` an.  
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel wird ein Überwachungstoken-Datensatz bereitgestellt, und dann werden mithilfe der zurückgegebenen ID des bereitgestellten Überwachungstokens Latenzinformationen angezeigt.  

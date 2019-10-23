@@ -1,7 +1,7 @@
 ---
 title: Feststellen, welche Abfragen Sperren enthalten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,26 +17,26 @@ ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 413e395a865245b4e4a6c3c7705e654e6855c245
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f6bdf2ed730330e03068473e5db9f82015caacc
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021914"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589984"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>Feststellen, welche Abfragen Sperren enthalten
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Datenbankadministratoren müssen oft die Quelle von Sperren identifizieren, die die Datenbankleistung beeinträchtigen.  
+Datenbankadministratoren müssen oft die Quelle von Sperren identifizieren, die die Datenbankleistung beeinträchtigen.  
   
- Sie vermuten z. B., dass eine Blockierung ein Leistungsproblem am Server verursacht. Bei der Abfrage von sys.dm_exec_requests befinden sich mehrere Sitzungen im angehaltenen Modus, wobei der jeweilige Wartetyp darauf hinweist, dass es sich bei der Ressource, auf die gewartet wird, um eine Sperre handelt.  
+Sie vermuten z. B., dass eine Blockierung ein Leistungsproblem am Server verursacht. Bei der Abfrage von sys.dm_exec_requests befinden sich mehrere Sitzungen im angehaltenen Modus, wobei der jeweilige Wartetyp darauf hinweist, dass es sich bei der Ressource, auf die gewartet wird, um eine Sperre handelt.  
   
- Bei der Abfrage von sys.dm_tran_locks zeigen die Ergebnisse, dass viele Sperren ausstehen. Für die Sitzungen, denen die Sperren erteilt wurden, werden jedoch keine aktiven Anforderungen in sys.dm_exec_requests angezeigt.  
+Bei der Abfrage von sys.dm_tran_locks zeigen die Ergebnisse, dass viele Sperren ausstehen. Für die Sitzungen, denen die Sperren erteilt wurden, werden jedoch keine aktiven Anforderungen in sys.dm_exec_requests angezeigt.  
   
- In diesem Beispiel wird eine Möglichkeit gezeigt, wie Sie die Abfrage, die die Sperre aufgenommen hat, den Abfrageplan und den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Stapel zum Zeitpunkt, als die Sperre bewirkt wurde, bestimmen können. Darüber hinaus veranschaulicht dieses Beispiel, wie das Paarbildungsziel in einer Extended Events-Sitzung verwendet wird.  
+In diesem Beispiel wird eine Möglichkeit gezeigt, wie Sie die Abfrage, die die Sperre aufgenommen hat, den Abfrageplan und den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Stapel zum Zeitpunkt, als die Sperre bewirkt wurde, bestimmen können. Darüber hinaus veranschaulicht dieses Beispiel, wie das Paarbildungsziel in einer Extended Events-Sitzung verwendet wird.  
   
- Um diese Aufgabe auszuführen, müssen Sie mit dem Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] den folgenden Vorgang durchführen.  
+Um diese Aufgabe auszuführen, müssen Sie mit dem Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] den folgenden Vorgang durchführen.  
   
 > [!NOTE]  
 >  In diesem Beispiel wird die AdventureWorks-Datenbank verwendet.  
@@ -45,7 +45,7 @@ ms.locfileid: "68021914"
   
 1.  Führen Sie im Abfrage-Editor die folgenden Anweisungen aus.  
   
-    ```  
+    ```sql
     -- Perform cleanup.   
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='FindBlockers')  
         DROP EVENT SESSION FindBlockers ON SERVER  
@@ -88,12 +88,11 @@ ms.locfileid: "68021914"
     --  
     ALTER EVENT SESSION FindBlockers ON SERVER  
     STATE = START  
-  
     ```  
   
 2.  Nach Ausführung einer Arbeitsauslastung auf dem Server geben Sie die folgenden Anweisungen im Abfrage-Editor aus, um die Abfragen zu ermitteln, die noch Sperren enthalten.  
   
-    ```  
+    ```sql
     --  
     -- The pair matching targets report current unpaired events using   
     -- the sys.dm_xe_session_targets dynamic management view (DMV)  
@@ -150,11 +149,17 @@ ms.locfileid: "68021914"
   
 3.  Löschen Sie nach dem Identifizieren der Probleme alle temporären Tabellen und die Ereignissitzung.  
   
-    ```  
+    ```sql
     DROP TABLE #unmatched_locks  
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
-  
+
+> [!NOTE]
+> Die vorangehenden Transact-SQL-Codebeispiele werden lokal auf SQL Server ausgeführt, können jedoch auf _Azure SQL-Datenbank nicht ordnungsgemäß ausgeführt werden._ Die Kernteile des Beispiels, die direkt Ereignisse wie `ADD EVENT sqlserver.lock_acquired` einbeziehen, funktionieren ebenfalls auf Azure SQL-Datenbank. Vorläufige Elemente wie `sys.server_event_sessions` müssen jedoch für die Azure SQL-Datenbank-Pendats wie `sys.database_event_sessions` angepasst werden, damit das Beispiel ausgeführt werden kann.
+> Weitere Informationen zu diesen kleinen Unterschieden zwischen einer lokalen SQL Server-Instanz und Azure SQL-Datenbank finden Sie in den folgenden Artikeln:
+> - [Erweiterte Ereignisse in Azure SQL-Datenbank](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
+> - [Systemobjekte, die erweiterte Ereignisse unterstützen](xevents-references-system-objects.md)
+
 ## <a name="see-also"></a>Weitere Informationen  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
 title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von pyodbc | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 10/09/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30ba3db5e23d95128aecbb5cc8974faeb6d58d75
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: faa2d63e0d1104665768ea436986b8fd3a52c107
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016841"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251781"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von pyodbc
 
@@ -62,7 +62,7 @@ while row:
   
 ## <a name="step-3--insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
-In diesem Beispiel erfahren Sie, wie Sie eine [Insert](../../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher ausführen, Parameter übergeben, die Ihre Anwendung vor dem SQL- [einschleusungs](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert schützen.    
+In diesem Beispiel erfahren Sie, wie Sie eine [Insert](../../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher ausführen, Parameter übergeben, die Ihre Anwendung vor dem [SQL-einschleusungs](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert schützen.    
   
   
 ```python
@@ -76,7 +76,24 @@ while row:
     print 'Inserted Product key is ' + str(row[0]) 
     row = cursor.fetchone()
 ```  
-  `      
-  ## <a name="next-steps"></a>Nächste Schritte  
+
+## <a name="azure-active-directory-aad-and-the-connection-string"></a>Azure Active Directory (AAD) und Verbindungs Zeichenfolge
+
+pyODBC verwendet den Microsoft ODBC Driver for SQL Server.
+Wenn Ihre Version des ODBC-Treibers 17,1 oder höher ist, können Sie den interaktiven Aad-Modus des ODBC-Treibers über pyodbc verwenden.
+Diese Aad Interactive-Option funktioniert, wenn Python und pyodbc dem ODBC-Treiber gestatten, das Dialogfeld zu öffnen.
+Diese Option ist nur unter dem Windows-Betriebssystem verfügbar.
+
+### <a name="example-connection-string-for-aad-interactive-authentication"></a>Beispiel Verbindungs Zeichenfolge für die interaktive Aad-Authentifizierung
+
+Hier ist ein Beispiel für eine ODBC-Verbindungs Zeichenfolge, die die interaktive Aad-Authentifizierung angibt
+
+- `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
+
+Ausführliche Informationen zu den Aad-Authentifizierungs Optionen des ODBC-Treibers finden Sie im folgenden Artikel:
+
+- [Verwenden von Azure Active Directory mit dem ODBC-Treiber](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords)
+
+## <a name="next-steps"></a>Nächste Schritte
   
 Weitere Informationen finden Sie im [python Developer Center](https://azure.microsoft.com/develop/python/).

@@ -9,17 +9,57 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/11/2019
-ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.date: 10/11/2019
+ms.openlocfilehash: c77d22b01b824906e4d5c32311bfe20258fa3c61
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878625"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313622"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](download.md)**
+
+## <a name="october-2019-hotfix-2"></a>Oktober 2019 (Hotfix 2)
+
+11. Oktober 2019 &nbsp; / &nbsp; Version: 1.12.2
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Der automatische Start von EH im Überprüfungsmodus wird deaktiviert. |  |
+| &nbsp; | &nbsp; |
+
+## <a name="october-2019-hotfix"></a>Oktober 2019 (Hotfix)
+
+8\. Oktober 2019 &nbsp; / &nbsp; Version: 1.12.1
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Das Problem, dass Anführungszeichen und umgekehrte Schrägstriche in Notebooks nicht richtig als Escapezeichen umgesetzt werden konnten, wurde behoben. |  |
+| &nbsp; | &nbsp; |
+
+## <a name="october-2019"></a>Oktober 2019
+
+2\. Oktober 2019 &nbsp; / &nbsp; Version: 1.12.0
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Release der Erweiterung für den Abfrageverlauf | Die Erweiterung für den SQL-Verlauf speichert alle früheren Abfragen, die in einer Azure Data Studio-Sitzung ausgeführt wurden, und listet diese in Ausführungsreihenfolge auf. Benutzern werden die Optionen „Abfrage öffnen“, „Abfrage ausführen“, „Abfrage löschen“, „Abfrageverlauf anhalten“ oder „Alle Einträge im Abfrageverlauf löschen“ angezeigt. |
+| Neue Kopieren/Einfügen-Optionen für Ergebnisse | Wir haben weitere Möglichkeiten zum Kopieren und Einfügen von Ergebnissen aus dem Ergebnisraster hinzugefügt. |
+| Update für PowerShell-Erweiterung |  |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Bekannte Probleme
+- Notebooks
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) In seltenen Fällen, in denen das Notebook falsch serialisiert wurde
 
 ## <a name="september-2019"></a>September 2019
 

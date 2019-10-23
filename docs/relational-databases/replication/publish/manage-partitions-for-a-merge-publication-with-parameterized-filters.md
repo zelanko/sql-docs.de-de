@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e454850de56674a594b23585aaf1f5af1f3549a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1171d30f7b21b99a3d4a396937b1e94c58787859
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002681"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710894"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Verwalten von Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,25 +103,25 @@ ms.locfileid: "68002681"
   
 #### <a name="to-view-information-on-existing-partitions"></a>So zeigen Sie Informationen zu vorhandenen Partitionen an  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md) aus. Geben Sie den Namen der Veröffentlichung für **@publication** . (Optional) Geben Sie **@suser_sname** oder **@host_name** an, damit nur Informationen basierend auf einem einzelnen Filterkriterium zurückgegeben werden.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md) aus. Geben Sie den Namen der Veröffentlichung für `@publication` an. (Optional) Geben Sie `@suser_sname` oder `@host_name` an, damit nur Informationen basierend auf einem einzelnen Filterkriterium zurückgegeben werden.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>So können Sie eine neue Partition definieren und eine neue partitionierte Momentaufnahme generieren  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) aus. Geben Sie den Namen der Veröffentlichung für **@publication** und den parametrisierten Wert an, der die Partition für eines der folgenden Elemente definiert:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) aus. Geben Sie den Namen der Veröffentlichung für `@publication` und den parametrisierten Wert an, der die Partition für eines der folgenden Elemente definiert:  
   
-    -   **@suser_sname** – wenn der parametrisierte Filter durch den von [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) zurückgegebenen Wert definiert wird.  
+    -   `@suser_sname`: wenn der parametrisierte Filter durch den von [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) zurückgegebenen Wert definiert wird.  
   
-    -   **@host_name** – wenn der parametrisierte Filter durch den von [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) zurückgegebenen Wert definiert wird.  
+    -   `@host_name`: wenn der parametrisierte Filter durch den von [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) zurückgegebenen Wert definiert wird.  
   
 2.  Erstellen und initialisieren Sie die parametrisierte Momentaufnahme für diese neue Partition. Weitere Informationen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>So löschen Sie eine Partition  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md) aus. Geben Sie den Namen der Veröffentlichung für **@publication** und den parametrisierten Wert an, der die Partition für eines der folgenden Elemente definiert:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md) aus. Geben Sie den Namen der Veröffentlichung für `@publication` und den parametrisierten Wert an, der die Partition für eines der folgenden Elemente definiert:  
   
-    -   **@suser_sname** – wenn der parametrisierte Filter durch den von [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) zurückgegebenen Wert definiert wird.  
+    -   `@suser_sname`: wenn der parametrisierte Filter durch den von [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) zurückgegebenen Wert definiert wird.  
   
-    -   **@host_name** – wenn der parametrisierte Filter durch den von [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) zurückgegebenen Wert definiert wird.  
+    -   `@host_name`: wenn der parametrisierte Filter durch den von [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) zurückgegebenen Wert definiert wird.  
   
      Dadurch werden zudem der Momentaufnahmeauftrag und alle Momentaufnahmedateien für die Partition entfernt.  
   
@@ -165,5 +165,6 @@ ms.locfileid: "68002681"
 ## <a name="see-also"></a>Weitere Informationen  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+  
   
   

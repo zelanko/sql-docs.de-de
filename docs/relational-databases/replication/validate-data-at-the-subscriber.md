@@ -17,12 +17,12 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769289"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710765"
 ---
 # <a name="validate-replicated-data"></a>Überprüfen von replizierten Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
 
 #### <a name="all-articles"></a>Alle Artikel 
   
-1.  Führen Sie beim Verleger für die Veröffentlichungsdatenbank [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md) aus. Geben Sie **@publication** und einen der folgenden Werte für **@rowcount_only** an:  
+1.  Führen Sie beim Verleger für die Veröffentlichungsdatenbank [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md) aus. Geben Sie `@publication` und einen der folgenden Werte für `@rowcount_only` an:  
   
     -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)    
     -   **2** - Zeilenanzahl und binäre Prüfsumme  
@@ -120,7 +120,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
   
 #### <a name="single-article"></a>Einzelner Artikel  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) aus. Geben Sie **@publication** , den Namen des Artikels für **@article** und einen der folgenden Werte für **@rowcount_only** an:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) aus. Geben Sie `@publication`, den Namen des Artikels für `@article` und einen der folgenden Werte für `@rowcount_only` an:  
   
     -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)    
     -   **2** - Zeilenanzahl und binäre Prüfsumme  
@@ -134,9 +134,9 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
 #### <a name="single-subscriber"></a>Einzelner Abonnent 
   
 1.  Öffnen Sie auf dem Verleger für die Veröffentlichungsdatenbank eine explizite Transaktion mit [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md).    
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md) aus. Geben Sie die Veröffentlichung für **@publication** , den Namen des Abonnenten für **@subscriber** und den Namen der Abonnementdatenbank für **@destination_db** verfügbar sind.    
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md) aus. Geben Sie die Veröffentlichung für `@publication`, den Namen des Abonnenten für `@subscriber` und den Namen der Abonnementdatenbank für `@destination_db` an.    
 3.  (Optional) Wiederholen Sie Schritt 2 für jedes zu überprüfende Abonnement.    
-4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) aus. Geben Sie **@publication** , den Namen des Artikels für **@article** und einen der folgenden Werte für **@rowcount_only** an:    
+4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) aus. Geben Sie `@publication`, den Namen des Artikels für `@article` und einen der folgenden Werte für `@rowcount_only` an:    
     -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)    
     -   **2** - Zeilenanzahl und binäre Prüfsumme  
   
@@ -214,7 +214,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
     3.  Zeigen Sie die Informationen auf der Registerkarte **Synchronisierungsverlauf** im Textbereich **Letzte Meldung der ausgewählten Sitzung** an.  
 
 ### <a name="using-transact-sql"></a>Verwenden von Transact-SQL
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md) aus. Geben Sie **@publication** , den Namen des Abonnenten für **@subscriber** , den Namen der Abonnementdatenbank für **@subscriber_db** und einen der folgenden Werte für **@level** an:   
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md) aus. Geben Sie `@publication`, den Namen des Abonnenten für `@subscriber`, den Namen der Abonnementdatenbank für `@subscriber_db` und einen der folgenden Werte für `@level` an:   
     -   **1** - Nur Überprüfung der Zeilenzählung    
     -   **3** - Überprüfung der Zeilenzählung und binären Prüfsumme  
   
@@ -241,7 +241,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
     3.  Zeigen Sie die Informationen auf der Registerkarte **Synchronisierungsverlauf** im Textbereich **Letzte Meldung der ausgewählten Sitzung** an. 
   
 ### <a name="using-transact-sql"></a>Verwenden von Transact-SQL
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md) aus. Geben Sie **@publication** und einen der folgenden Werte für **@level** an:    
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md) aus. Geben Sie `@publication` und einen der folgenden Werte für `@level` an:    
     -   **1** - Nur Überprüfung der Zeilenzählung   
     -   **3** - Überprüfung der Zeilenzählung und binären Prüfsumme  
   

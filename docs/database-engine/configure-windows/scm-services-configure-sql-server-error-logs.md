@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a4da039e1fcc41570fcead275bbe4b2cb0be5797
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: 21737a329fdd6bf68f1bf7df5f4df4511b26cfd9
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731102"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688326"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM-Dienste: Konfigurieren von SQL Server-Fehlerprotokollen
 
@@ -38,7 +38,7 @@ ms.locfileid: "68731102"
   
       **Maximale Anzahl von Fehlerprotokolldateien**
 
-      Gibt die maximale Anzahl der erstellten Fehlerprotokolldateien vor der Wiederverwendung an. Der Standardwert ist 6. Dies entspricht der Anzahl der vorhergehenden Sicherungsprotokolle, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor der Wiederverwendung beibehält.
+      Gibt die maximale Anzahl der erstellten Fehlerprotokolldateien vor der Wiederverwendung an. Der Standardwert ist „6“: ein aktuelles Sicherungsprotokoll und fünf vorherige, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor dem Wiederverwenden speichert.
 
     B. Größe der Protokolldatei
 

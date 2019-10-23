@@ -1,10 +1,10 @@
 ---
 title: Integration Services-Projekte und -Projektmappen (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/24/2016
+ms.date: 09/20/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -16,25 +16,24 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ba2eaa75299181de8d8599ca67c53dfb85ac08e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057450"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680980"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>SQL Server Integration Services-Projekte und Projektmappen (SSIS)
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die Entwicklung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen bereit.  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Pakete werden in Projekten gespeichert. Sie müssen die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Umgebung installieren, um [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Projekte zu erstellen und zu verwenden. Weitere Informationen finden Sie unter [Installieren von Integration Services](../integration-services/install-windows/install-integration-services.md).  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Pakete werden in Projekten gespeichert. Sie müssen [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) installieren, um [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekte zu erstellen und zu verwenden. Weitere Informationen finden Sie unter [Installieren von Integration Services](../integration-services/install-windows/install-integration-services.md).  
   
- Wenn Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]erstellen, enthält das Dialogfeld **Neues Projekt** die Vorlage **Integration Services-Projekt** . Diese Projektvorlage erstellt ein neues Projekt, das ein einzelnes Paket enthält.  
+ Wenn Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]erstellen, enthält das Dialogfeld **Neues Projekt** die Vorlage **Integration Services-Projekt** . Diese Projektvorlage erstellt ein neues Projekt, das ein einzelnes Paket enthält.
   
 ## <a name="projects-and-solutions"></a>Projekte und Projektmappen  
  Projekte werden in Projektmappen gespeichert. Sie können zuerst eine Projektmappe erstellen und dann ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt hinzufügen. Falls keine Projektmappe vorhanden ist, erstellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] automatisch eine Projektmappe für Sie, wenn Sie das Projekt erstellen. Eine Projektmappe kann mehrere Projekte unterschiedlichen Typs enthalten.  
@@ -65,40 +64,46 @@ ms.locfileid: "68057450"
 ## <a name="folders-in-integration-services-projects"></a>Ordner in SQL Server Integration Services-Projekten  
  Im folgenden Diagramm werden die Ordner in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]veranschaulicht.  
   
- ![Ordner in einem Integration Services-Projekt](../integration-services/media/solutionexplorer.gif "Folders in an Integration Services project")  
+![ssis-solution-explorer.png](media/ssis-solution-explorer.png)
   
  In der folgende Tabelle werden die Ordner in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt beschrieben.  
   
 |Ordner|und Beschreibung|  
-|------------|-----------------|  
+|------------|-----------------|
+|Verbindungs-Manager|Enthält Projektverbindungs-Manager. Weitere Informationen finden Sie unter [Integration Services-Verbindungen (SSIS)](../integration-services/connection-manager/integration-services-ssis-connections.md).|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Pakete|Enthält Pakete. Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../integration-services/integration-services-ssis-packages.md).|  
+|Paketteile|Enthält Paketteile, die wieder verwendet oder importiert werden können. Weitere Informationen finden Sie unter [Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).
 |Sonstiges|Enthält Dateien, die sich von Paketdateien unterscheiden.|  
   
 ## <a name="files-in-integration-services-projects"></a>Dateien in SQL Server Integration Services-Projekten  
- Wenn Sie einer Projektmappe ein neues oder vorhandenes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt hinzufügen, erstellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Projektdateien mit den Erweiterungen DTPROJ, DTPROJ.USER und DATABASE.  
+ Wenn Sie einer Projektmappe ein neues oder vorhandenes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt hinzufügen, erstellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Projektdateien mit den Erweiterungen DTPROJ, DTPROJ.USER, DATABASE und PROJECT.PARAMS. 
   
 -   Die DTPROJ-Datei enthält Informationen zu Projektkonfigurationen und Elementen wie Pakete.  
   
 -   Die DTPROJ.USER-Datei enthält Informationen zu Ihren Einstellungen für das Verwenden dieses Projekts.  
   
--   Die DATABASE-Datei enthält Informationen, die [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] zum Öffnen des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts benötigt.  
+-   Die DATABASE-Datei enthält Informationen, die [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] zum Öffnen des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts benötigt.
+
+-   Die PROJECT.PARAMS-Datei enthält Informationen zu den [Projektparametern](integration-services-ssis-package-and-project-parameters.md).
   
 ## <a name="version-targeting-in-integration-services-projects"></a>Versionsauswahl in Integration Services-Projekten  
- In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]können Sie Pakete für SQL Server 2016, SQL Server 2014 oder SQL Server 2012 erstellen, verwalten und ausführen.  
+ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie Pakete für SQL Server 2017, 2016, 2014 oder 2012 erstellen, verwalten und ausführen.  
   
- Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen. Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften**auf die Eigenschaft **TargetServerVersion** , und wählen Sie dann SQL Server 2016, 2014 oder 2012 aus.  
+ Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen. Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften** auf die Eigenschaft **TargetServerVersion**, und wählen Sie dann SQL Server 2017, 2016, 2014 oder 2012 aus.  
   
  ![TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
- 
+
 ## <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts  
   
 1.  Öffnen Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
-3.  Wählen Sie im Dialogfeld **Neues Projekt** im Bereich **Vorlagen** die Vorlage **Integration Services-Projekt** aus.  
+3.  Wählen Sie im Dialogfeld **Neues Projekt** die Option **Business Intelligence** und dann die Vorlage **Integration Services-Projekt** aus.  
   
-     Die **Integration Services-Projekt** -Vorlage erstellt ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt, das ein einzelnes, leeres Paket enthält.  
+     Die **Integration Services-Projekt** -Vorlage erstellt ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt, das ein einzelnes, leeres Paket enthält.
+
+  ![ssis-ssdt-new-project.png](media/ssis-ssdt-new-project.png)
   
 4.  (Optional) Bearbeiten Sie den Projektnamen und den Speicherort.  
   
@@ -113,16 +118,6 @@ ms.locfileid: "68057450"
     > **HINWEIS:** Klicken Sie im Menü **Extras** auf **Optionen**, und erweitern Sie den Knoten **Quellcodeverwaltung**, um das ausgewählte Quellcodeverwaltungs-Plug-In anzuzeigen und zu ändern und um die Umgebung für die Quellcodeverwaltung zu konfigurieren.  
   
 8.  Klicken Sie auf **OK** , um die Projektmappe dem **Projektmappen-Explorer** und das Projekt der Projektmappe hinzuzufügen.  
-  
-## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>Wählen der Zielversion eines Projekt und der zugehörigen Pakete  
-  
-1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen.  
-  
-2.  Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften**auf die Eigenschaft **TargetServerVersion** , und wählen Sie dann SQL Server 2016, 2014 oder 2012 aus.  
-  
-     ![TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
-  
- Sie können Pakete für SQL Server 2016, SQL Server 2014 oder SQL Server 2012 erstellen, verwalten und ausführen.  
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>Importieren eines bestehenden Projekts mit dem Assistenten zum Importieren von Projekten
   
@@ -144,7 +139,7 @@ ms.locfileid: "68057450"
   
 9. Wenn Sie aus einer **ISPAC-Datei** importieren, geben Sie den Pfad einschließlich Dateinamen im Textfeld **Pfad** ein. Klicken Sie auf **Durchsuchen** , um zu dem Ordner zu navigieren, in dem die Projektmappe gespeichert werden soll. Geben Sie den Dateinamen im Textfeld **Dateiname** ein, und klicken Sie auf **Öffnen**.  
   
-     Wenn Sie aus einem **Integration Services-Katalog**importieren, geben Sie den Datenbankinstanznamen im Textfeld **Servername** ein, oder klicken Sie auf **Durchsuchen** und wählen Sie die Datenbankinstanz aus, die den Katalog enthält.  
+     Wenn Sie aus einem **Integration Services-Katalog** importieren, geben Sie den Datenbankinstanznamen im Textfeld **Servername** ein, oder klicken Sie auf **Durchsuchen**, und wählen Sie die Datenbankinstanz aus, die den Katalog enthält.  
   
      Klicken Sie auf **Durchsuchen** neben dem Textfeld **Pfad** , erweitern Sie den Ordner im Katalog, wählen Sie das Projekt aus, das Sie importieren möchten, und klicken Sie auf **OK**.  
   
@@ -217,5 +212,9 @@ Sie können Objekte in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-
   
 4.  Klicken Sie mit der rechten Maustaste auf das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt, in das kopiert werden soll, und klicken Sie auf **Einfügen**.  
   
-     Die Elemente werden automatisch in den richtigen Ordner kopiert. Wenn Sie in das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt Elemente kopieren, die keine Pakete darstellen, werden die Elemente in den Ordner **Sonstiges** kopiert.  
-     
+     Die Elemente werden automatisch in den richtigen Ordner kopiert. Wenn Sie in das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt Elemente kopieren, die keine Pakete darstellen, werden die Elemente in den Ordner **Sonstiges** kopiert.  
+
+## <a name="next-steps"></a>Nächste Schritte
+
+- Herunterladen und Installieren von [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [SSIS-Tutorials: Erstellen eines einfachen ETL-Pakets](ssis-how-to-create-an-etl-package.md)

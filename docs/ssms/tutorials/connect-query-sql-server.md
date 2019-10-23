@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 105bcea172a91496c664578befc33f022b5c8d9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256708"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708332"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Lernprogramm: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio (SSMS)
 
@@ -109,9 +109,10 @@ In diesem Abschnitt erstellen Sie nun eine Tabelle in der neuen Datenbank „Tut
    ![Ändern der Datenbank](media/connect-query-sql-server/changedb.png)
 
 2. Fügen Sie den folgenden T-SQL-Codeausschnitt in das Abfragefenster ein, wählen Sie ihn aus, und klicken Sie auf **Ausführen** (oder drücken Sie F5).  
-   Sie können entweder den vorhandenen Text im Abfragefenster ersetzen oder weiteren Text am Ende anfügen. Um den gesamten Code im Abfragefenster auszuführen, klicken Sie auf **Ausführen**. Wenn Sie nur einen Teil des Codes ausführen möchten, markieren Sie diese Stelle, und klicken Sie anschließend auf **Ausführen**.  
+   Sie können entweder den vorhandenen Text im Abfragefenster ersetzen oder weiteren Text am Ende anfügen. Um den gesamten Code im Abfragefenster auszuführen, klicken Sie auf **Ausführen**. Wenn Sie den Text angehängt haben, und Sie nur den Teil des Textes ausführen möchten, markieren Sie also diesen Teil, und wählen Sie dann **Ausführen** aus.  
   
    ```sql
+   USE [TutorialDB]
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL

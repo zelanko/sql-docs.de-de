@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 560e752e5559b0e79a4f123443d200ca70532ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63221965"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041060"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Installieren von SQL Server mit PowerShell Desired State Configuration
 
@@ -28,7 +28,7 @@ Haben Sie sich jemals durch die Installationsoberfläche von SQL Server geklickt
 
 Noch schlimmer ist jedoch, dass Sie nun die gesamte Installation in Frage stellen. „Was habe ich noch vergessen?“ Fragen Sie sich möglicherweise.
 
-Erfahren Sie mehr über [PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/powershell/dsc/overview). Mithilfe von DSC können Sie eine Konfigurationsvorlage erstellen, die Sie für zahlreiche Server wiederverwenden können. Je nach Build müssen Sie möglicherweise einige der Setupparameter anpassen. Dies sollte jedoch kein Problem darstellen, da Sie alle Standardeinstellungen beibehalten können. Damit wird vermieden, dass die Eingabe eines wichtigen Parameters vergessen wird.
+Erfahren Sie mehr über [PowerShell Desired State Configuration (DSC)](/powershell/scripting/dsc/overview/overview). Mithilfe von DSC können Sie eine Konfigurationsvorlage erstellen, die Sie für zahlreiche Server wiederverwenden können. Je nach Build müssen Sie möglicherweise einige der Setupparameter anpassen. Dies sollte jedoch kein Problem darstellen, da Sie alle Standardeinstellungen beibehalten können. Damit wird vermieden, dass die Eingabe eines wichtigen Parameters vergessen wird.
 
 In diesem Artikel wird das Setup einer eigenständigen Instanz von SQL Server 2017 unter Windows Server 2016 mithilfe der DSC-Ressource **SqlServerDsc** erläutert. Vorkenntnisse zu DSC sind hilfreich, da die Funktionsweise von DSC nicht genauer erläutert wird.
 
@@ -213,7 +213,7 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 
 ## <a name="see-also"></a>Siehe auch
 
-[Windows PowerShell DSC – Übersicht](https://docs.microsoft.com/powershell/dsc/overview)
+[Windows PowerShell DSC – Übersicht](/powershell/scripting/dsc/overview/overview)
 
 [Install SQL Server from the command prompt (Installieren von SQL Server über die Eingabeaufforderung)](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 

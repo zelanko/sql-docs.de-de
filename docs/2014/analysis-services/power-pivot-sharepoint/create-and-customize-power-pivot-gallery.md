@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 305ae31522a54a776c989f4b8f4b0c4ceabe6658
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "70874399"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Erstellen und Anpassen von PowerPivot-Katalogen
@@ -34,7 +34,7 @@ ms.locfileid: "70874399"
   
 -   [Wechseln zur Theatersicht oder Katalogsicht](#switch)  
   
-##  <a name="prereq"></a> Erforderliche Komponenten  
+##  <a name="prereq"></a> Prerequisites  
   
 -   Sie müssen über Silverlight verfügen. Silverlight kann heruntergeladen und über Microsoft Update installiert werden. Wenn Sie eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogbibliothek mithilfe eines Browsers anzeigen, der nicht über Silverlight verfügt, klicken Sie auf den Link auf der Seite, um die Anwendung zu installieren. Nach der Installation müssen Sie den Browser schließen und erneut öffnen.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70874399"
     >  Für den Power Pivot-Katalog ist Microsoft Silverlight erforderlich.  Silverlight wird vom Microsoft Edge-Browser nicht unterstützt.   
     > Um den Inhalt der Bibliothek in Microsoft Edge anzuzeigen, klicken Sie in Power Pivot Katalog auf die Registerkarte **Bibliothek** , und ändern Sie dann die Dokument Bibliotheks Ansicht in **alle Dokumente**.    
     > Um die Standardansicht zu ändern, klicken Sie auf die Registerkarte **Bibliothek** und dann auf „Ansicht ändern“. Klicken Sie auf „Zur Standardansicht machen“, und klicken Sie dann auf „OK“, um die Standardansicht zu speichern.  
-    >  Weitere Informationen dazu, was Microsoft Edge unterstützt, finden Sie im Windows [-Blog, A Break From the Past, Part 2: Ich stimme zu, dass ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Weitere Informationen dazu, was Microsoft Edge unterstützt, finden Sie im Windows-Blog, [A Break From the Past, Part 2: Sprichwort Goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Sie müssen Websitebesitzer sein, um eine Bibliothek erstellen zu können.  
   
@@ -59,18 +59,18 @@ ms.locfileid: "70874399"
   
  Die Vorschaubilder beruhen auf dem Rendering der Arbeitsmappe in Excel Services. Die Darstellung im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog sollte mit der Anzeige einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe in einem Browser übereinstimmen. Die Vorschauoberfläche ist jedoch begrenzt. Teile einer Arbeitsmappe oder eines Berichts werden u. U. in Anpassung an den verfügbaren Platz gekürzt. Sie müssen unter Umständen eine Arbeitsmappe oder einen Bericht öffnen, um das gesamte Dokument anzuzeigen.  
   
- Das Aktualisieren von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappendaten aus externen Datenquellen wird im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog vollständig unterstützt, erfordert jedoch zusätzliche Konfigurationseinstellungen. Ein Farm- oder Dienstadministrator muss den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog als vertrauenswürdigen Excel Services-Speicherort hinzufügen. Weitere Informationen finden Sie unter [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ Das Aktualisieren von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappendaten aus externen Datenquellen wird im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog vollständig unterstützt, erfordert jedoch zusätzliche Konfigurationseinstellungen. Ein Farm- oder Dienstadministrator muss den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog als vertrauenswürdigen Excel Services-Speicherort hinzufügen. Weitere Informationen finden Sie unter [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a>Erstellen des Power Pivot-Katalogs  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog wird erstellt, wenn Sie [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] mithilfe der Installationsoption Neuer Server installieren. Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] einer vorhandenen Farm hinzugefügt haben oder eine zusätzliche Bibliothek benötigen, können Sie für Ihre Anwendung oder Website eine neue erstellen.  
   
-1.  1.  **SharePoint 2010**: Klicken Sie in der oberen linken Ecke der Homepage Ihrer Website auf **Website Aktionen** .  
+1.  1.  **SharePoint 2010**: Klicken Sie in der oberen linken Ecke der Homepage Ihrer Website auf **Websiteaktionen** .  
   
     2.  Klicken Sie auf **Weitere Optionen**.  
   
     3.  Klicken Sie unter Bibliotheken auf **PowerPivot-Katalog**.  
   
-    1.  **SharePoint 2013**: Klicken Sie auf das Einstellungssymbol Share ![Point]-Einstellungen(../media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen"). Klicken Sie auf **Websiteinhalt**.  
+    1.  **SharePoint 2013**: Klicken Sie auf das Einstellungssymbol ![SharePoint-Einstellungen](../media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen"). Klicken Sie auf **Websiteinhalt**.  
   
     2.  Klicken Sie auf **App hinzufügen**.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "70874399"
   
 2.  Klicken Sie im Menüband auf **Bibliothek**.  
   
-3.  **SharePoint 2010:** Klicken Sie in benutzerdefinierte Ansichten auf **diese Ansicht ändern**.  
+3.  **SharePoint 2010:** Klicken Sie unter Benutzerdefinierte Ansichten auf **Ansicht ändern**.  
   
      **SharePoint 2013:** Klicken Sie unter **Ansichten verwalten**auf **Ansicht ändern**.  
   
@@ -132,11 +132,11 @@ ms.locfileid: "70874399"
   
  In der folgenden Tabelle werden die verschiedenen Layouts zum Darstellen von Miniaturansichtsskizzen jeder in der Vorschau angezeigten Seite beschrieben:  
   
-|Anzeigen|Beschreibung|  
+|Anzeigen|Description|  
 |----------|-----------------|  
 |Katalogsicht (Standard)|Die Katalogsicht ist die Standardsicht für einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog. Die Vorschau wird links angezeigt. Daneben werden kleinere Miniaturansichten der einzelnen Arbeitsblätter in sequenzieller Reihenfolge von links nach rechts angezeigt.|  
 |Alle Dokumente|Dies ist das Standardlayout für Dokumentbibliotheken. Sie können diese Sicht auswählen, um einzelne Dokumente zu verwalten oder Bibliotheksinhalte in einem Listenformat anzuzeigen.<br /><br /> Verwenden Sie diese Sicht, um Eigenschaften zu bearbeiten und einzelne Dokumente zu löschen oder zu verschieben.<br /><br /> Wenn Sie die Versionsverwaltung aktiviert haben, müssen Sie Dokumente unter Verwendung dieser Sicht in der Bibliothek einchecken oder auschecken.|  
-|Theatersicht und Karussellsicht|Hierbei handelt es sich um spezielle Sichten, die am besten bei der Darstellung einer kleinen Anzahl verwandter Dokumente funktionieren. Die vollständige Drehung von Miniaturansichten beinhaltet sämtliche Seiten in allen Dokumenten in der Bibliothek. Bei einer großen Dokumentanzahl sind diese Sichten für Benutzer, die eine bestimmte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe suchen oder öffnen möchten, weniger geeignet.<br /><br /> Theater Ansicht: Der Vorschaubereich wird zentriert. Kleinere Miniaturansichten jedes Arbeitsblatts werden beidseitig unten auf der Seite angezeigt.<br /><br /> Karussell Ansicht: Der Vorschaubereich wird zentriert. Die Miniaturansichten direkt vor und nach der aktuellen Miniaturansicht werden angrenzend an den Vorschaubereich angezeigt.|  
+|Theatersicht und Karussellsicht|Hierbei handelt es sich um spezielle Sichten, die am besten bei der Darstellung einer kleinen Anzahl verwandter Dokumente funktionieren. Die vollständige Drehung von Miniaturansichten beinhaltet sämtliche Seiten in allen Dokumenten in der Bibliothek. Bei einer großen Dokumentanzahl sind diese Sichten für Benutzer, die eine bestimmte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe suchen oder öffnen möchten, weniger geeignet.<br /><br /> Theatersicht: Der Vorschaubereich wird zentriert. Kleinere Miniaturansichten jedes Arbeitsblatts werden beidseitig unten auf der Seite angezeigt.<br /><br /> Karussellsicht: Der Vorschaubereich wird zentriert. Die Miniaturansichten direkt vor und nach der aktuellen Miniaturansicht werden angrenzend an den Vorschaubereich angezeigt.|  
   
 ### <a name="switch-to-a-different-view"></a>Wechseln zu einer anderen Sicht  
   
@@ -146,10 +146,10 @@ ms.locfileid: "70874399"
   
 3.  Wählen Sie unter Ansichten verwalten in Aktuelle Ansicht die zu verwendende Ansicht aus der Liste aus. Zu den vordefinierten Sichten gehören die Katalogsicht, Theatersicht und Karussellsicht. Alternativ können Sie Alle Dokumente auswählen, wenn Sie Dokumente in der Bibliothek verschieben, löschen oder verwalten möchten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Behandeln von Problemen bei einer PowerPivot für SharePoint Installation](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
- [Verwenden des Power Pivot-Katalogs](use-power-pivot-gallery.md)   
- [Erstellen eines vertrauenswürdigen Speicher Orts für Power Pivot-Websites in der zentral Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ Problembehandlung bei [einer PowerPivot für SharePoint-Installation](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)    
+ [Verwenden des Power Pivot](use-power-pivot-gallery.md) -Katalogs    
+ [Erstellen eines vertrauenswürdigen Speicher Orts für Power Pivot-Websites in der zentral Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)    
  [Löschen des PowerPivot-Katalogs](delete-power-pivot-gallery.md)  
   
   

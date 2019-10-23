@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493865"
 ---
 # <a name="defining-a-fact-relationship"></a>Definieren einer Faktenbeziehung
@@ -63,15 +63,15 @@ ms.locfileid: "69493865"
   
 13. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-14. Wählen Sie im Bereich **Attribute** des Dimensions-Designers für die Dimension **Internet Sales Order Details** die Option **Sales Order Number**aus, und ändern Sie dann die Eigenschaft **Name** in der Eigenschaftenfenster auf.`Item Description.`  
+14. Wählen Sie im Bereich **Attribute** des Dimensions-Designers für die Dimension **Internet Sales Order Details** die Option **Sales Order Number**aus, und ändern Sie dann die Eigenschaft **Name** im Eigenschaftenfenster in `Item Description.`  
   
-15. Klicken Sie in der Eigenschafts Zelle **namecolenn** auf die Schaltfläche zum Durchsuchen **(...)** . Wählen Sie im Dialogfeld **Namensspalte** den Eintrag **Produkt** in der **Quelltabelle** -Liste aus, wählen Sie **EnglishProductName** für die **Quellspalte**aus, und klicken Sie anschließend auf **OK**.  
+15. Klicken Sie in der Eigenschafts Zelle **namecolenn** auf die Schaltfläche zum Durchsuchen **(...)** . Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quell Tabelle** den Eintrag **Product** aus, wählen Sie für die **Spalte Quelle**die Option **englische ProductName** aus, und klicken Sie dann auf **OK**.  
   
 16. Fügen Sie das **Sales Order Number** -Attribut zur Dimension hinzu, indem Sie die **SalesOrderNumber** -Spalte aus der **InternetSales** -Tabelle in den Bereich **Datenquellensicht** zum Bereich **Attribute** ziehen.  
   
-17. Ändern Sie **die Name** -Eigenschaft des neuen **Sales Order Number** - `Order Number`Attributs in, und ändern Sie die **OrderBy** -Eigenschaft in **Key**.  
+17. Ändern Sie die **Name** -Eigenschaft des neuen **Sales Order Number** -Attributs in `Order Number`, und ändern Sie die **OrderBy** -Eigenschaft in **Key**.  
   
-18. Erstellen Sie im Bereich **Hierarchien** eine **Internet Sales Orders** -Benutzer Hierarchie, die `Order Number` die-und- **Element Beschreibungs** Ebenen in dieser Reihenfolge enthält.  
+18. Erstellen Sie im Bereich **Hierarchien** eine **Internet Sales Orders** -Benutzer Hierarchie, die die `Order Number`-und **Element Beschreibungs** Ebenen in dieser Reihenfolge enthält.  
   
 19. Wählen Sie im Bereich **Attribute** **Internet Sales Order Details**aus, und überprüfen Sie anschließend den Wert für die **StorageMode** -Eigenschaft im Eigenschaftenfenster.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493865"
   
      Die folgende Abbildung zeigt die Faktenbeziehungseigenschaften im Dialogfeld **Beziehung definieren** .  
   
-     ![Beziehung definieren (Dialogfeld] ) (../../2014/tutorials/media/l5-factrelationship-2.gif "Beziehung definieren (Dialogfeld") )  
+     ![Beziehung definieren (Dialogfeld)](../../2014/tutorials/media/l5-factrelationship-2.gif "Beziehung definieren (Dialogfeld)")  
   
 3.  Klicken Sie auf **Abbrechen**.  
   
@@ -117,10 +117,10 @@ ms.locfileid: "69493865"
   
      ![Dimensionierung von Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensionierung von Internet Sales-Sales Amount")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Definieren einer m:n-Beziehung](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Dimensionsbeziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definieren von Faktenbeziehungen und Faktenbeziehungseigenschaften](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d199fff8243584ee86dd97f97bcc3b8b68beb3dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063114"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710431"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,27 +156,27 @@ ms.locfileid: "68063114"
   
     -   Der Wert 1 für **enabled_for_het_sub** bedeutet, dass Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten unterstützt werden.  
   
-    -   Wenn der Wert für **enabled_for_het_sub** 0 ist, führen Sie [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) aus, wobei Sie **enabled_for_het_sub** für **@property** und **true** für **@value** angeben.  
+    -   Wenn der Wert von **enabled_for_het_sub** 0 ist, führen Sie [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) aus, und geben Sie **enabled_for_het_sub** für `@property` und **true** für `@value` an.  
   
         > [!NOTE]  
         >  Bevor Sie **enabled_for_het_sub** zu **true**ändern, müssen Sie alle vorhandenen Abonnements für die Veröffentlichung löschen. Sie können **enabled_for_het_sub** nicht auf **true** festlegen, wenn die Veröffentlichung auch Abonnements mit Update unterstützt. Die Änderung von **enabled_for_het_sub** beeinflusst andere Veröffentlichungseigenschaften. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) aus. Geben Sie **@publication** , **@subscriber** , den Wert **(Standardziel)** für **@destination_db** , den Wert **push** für **@subscription_type** und den Wert 3 für **@subscriber_type** (den OLE DB-Anbieter) an.  
+3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) aus. Geben Sie `@publication`, `@subscriber`, den Wert `(default destination)` für `@destination_db`, den Wert **push** für `@subscription_type` und den Wert 3 für `@subscriber_type` (gibt einen OLE DB-Anbieter an) an.  
   
 4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) aus. Geben Sie Folgendes an:  
   
-    -   Die Parameter **@subscriber** und **@publication** .  
+    -   Die Parameter `@subscriber` und `@publication`.  
   
-    -   Den Wert **(Standardziel)** für **@subscriber_db** ,  
+    -   Den Wert **(Standardziel)** für `@subscriber_db`.  
   
-    -   Die Eigenschaften der Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle für **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** und **@subscriber_catalog** erstellt wird.  
+    -   Die Eigenschaften der Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquelle für `@subscriber_provider`, `@subscriber_datasrc`, `@subscriber_location`, `@subscriber_provider_string` und `@subscriber_catalog`.  
   
-    -   Die Parameter [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen, unter denen der Verteilungs-Agent auf dem Verteiler für **@job_login** und **@job_password** erstellt wird.  
+    -   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Windows-Anmeldeinformationen, unter denen der Verteilungs-Agent auf dem Verteiler für `@job_login` und `@job_password` ausgeführt wird.  
   
-        > [!NOTE]  
-        >  Für Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die mit **@job_login** und **@job_password** erstellt wird. Der Verteilungs-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her.  
+       > [!NOTE]  
+       > Bei Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die von `@job_login` und `@job_password` angegebenen Windows-Anmeldeinformationen verwendet. Der Verteilungs-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her.  
   
-    -   Den Wert **0** für **@subscriber_security_mode** und die Anmeldeinformationen des OLE DB-Anbieters für **@subscriber_login** und **@subscriber_password** erstellt wird.  
+    -   Den Wert **0** für `@subscriber_security_mode` und die Anmeldeinformationen des OLE DB-Anbieters für `@subscriber_login` und `@subscriber_password`.  
   
     -   Einen Zeitplan für den Verteilungs-Agentauftrag für dieses Abonnement. Weitere Informationen finden Sie unter [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   

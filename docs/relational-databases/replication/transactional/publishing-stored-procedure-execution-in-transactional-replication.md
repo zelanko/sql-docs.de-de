@@ -15,12 +15,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 25aa20472daec1e20113627b4cbd778dfa142002
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769335"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710733"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Veröffentlichen der Ausführung von gespeicherten Prozeduren in der Transaktionsreplikation
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Veröffentlichen der Ausführung einer gespeicherten Prozedur in einer Transaktionsveröffentlichung &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Replikationsprogrammierung mit Transact-SQL: Führen Sie [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) aus, und geben Sie anschließend für den **@type** -Parameter den Wert 'serializable proc exec' (empfohlen) oder 'proc exec' an. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Replikationsprogrammierung mit Transact-SQL: Führen Sie [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) aus, und geben Sie dabei für den Parameter `@type` die Werte „serializable proc exec“ (empfohlen) oder „proc exec“ an. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Ändern der Prozedur auf dem Abonnenten  
  Standardmäßig wird die Definition der gespeicherten Prozedur auf dem Verleger an jeden Abonnenten weitergegeben. Sie können aber auch die gespeicherte Prozedur auf dem Abonnenten ändern. Dies ist dann sinnvoll, wenn auf dem Verleger und dem Abonnenten eine unterschiedliche Logik ausgeführt werden soll. Gehen wir als Beispiel von **sp_big_delete**aus, einer gespeicherten Prozedur auf dem Verleger mit zwei Funktionen: Zum einen löscht die Prozedur 1.000.000 Zeilen aus der replizierten **big_table1** -Tabelle, zum anderen aktualisiert sie die nicht replizierte **big_table2**-Tabelle. Um den Bedarf an Netzwerkressourcen zu reduzieren, sollten Sie das Löschen der 1 Million Zeilen als gespeicherte Prozedur weitergeben, indem Sie **sp_big_delete**veröffentlichen. Auf dem Abonnenten können Sie **sp_big_delete** so ändern, dass nur die 1 Million Zeilen gelöscht werden, ohne ein nachfolgendes Update von **big_table2**auszuführen.  
@@ -90,7 +90,7 @@ COMMIT TRANSACTION T2
   
  Sperren werden länger aufrecht erhalten, wenn Sie die Prozedur in einer serialisierbaren Transaktion ausführen, und können zu reduzierter Parallelität führen.  
   
-## <a name="the-xactabort-setting"></a>Die XACT_ABORT-Einstellung  
+## <a name="the-xact_abort-setting"></a>Die XACT_ABORT-Einstellung  
  Beim Replizieren der Ausführung einer gespeicherten Prozedur sollte die Einstellung XACT_ABORT für die Sitzung, die die gespeicherte Prozedur ausführt, ON angeben. Wenn für XACT_ABORT die Einstellung OFF festgelegt ist und während der Ausführung der Prozedur auf dem Verleger ein Fehler auftritt, kommt es auch auf dem Abonnenten zum selben Fehler, was wiederum zum Ausfall des Verteilungs-Agents führt. Durch Angeben von ON für XACT_ABORT wird sichergestellt, dass alle Fehler, zu denen es bei der Ausführung auf dem Verleger kommt, ein Rollback der gesamten Ausführung auslösen, sodass der Ausfall des Verteilungs-Agents vermieden wird. Weitere Informationen zum Festlegen von XACT_ABORT finden Sie unter [SET XACT_ABORT &#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md).  
   
  Wenn für XACT_ABORT OFF angegeben werden muss, geben Sie den **-SkipErrors** -Parameter für den Verteilungs-Agent an. Auf diese Weise kann der Agent auch dann die Änderungen auf den Abonnenten anwenden, wenn es zu einem Fehler kommt.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 7fb220f8a5a33d33e2ee9177efd9fe2f713b7439
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
-ms.translationtype: HT
+ms.openlocfilehash: ad2f4eaadfb2140facc5bebd8d1f70cf163d1380
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70774175"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016879"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Versionshinweise zu „SqlPackage.exe“
 
@@ -35,14 +35,14 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
-## <a name="183-sqlpackage"></a>18.3 sqlpackage
+## <a name="1831-sqlpackage"></a>18.3.1 sqlpackage
 
 |Platform|Herunterladen|Veröffentlichungsdatum|Versionsoptionen|Erstellen
 |:---|:---|:---|:---|:---|
-|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2102893)|6. September 2019|18,3|15.0.4532.1|
-|macOS .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102894)|6. September 2019| 18,3|15.0.4532.1|
-|Linux .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102978)|6. September 2019| 18,3|15.0.4532.1|
-|Windows .net Core (Vorschau)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102979)|6. September 2019| 18,3|15.0.4532.1|
+|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2102893)|13. September 2019|18.3.1|15.0.4538.1|
+|macOS .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102894)|13. September 2019| 18.3.1|15.0.4538.1|
+|Linux .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102978)|13. September 2019| 18.3.1|15.0.4538.1|
+|Windows .net Core (Vorschau)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102979)|13. September 2019| 18.13.1|15.0.4538.1|
 
 ### <a name="features"></a>Funktionen
 

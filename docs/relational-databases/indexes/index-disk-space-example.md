@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: caf70d087a7df27248457df40f6ceb4d3ab9e3d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909720"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816692"
 ---
 # <a name="index-disk-space-example"></a>Beispiel für den zum Speichern eines Indexes belegten Speicherplatz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,7 @@ ms.locfileid: "67909720"
   
 3.  Ermitteln des zusätzlichen temporären Speicherplatzes für die Sortierung.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
+     Im Folgenden werden die Speicherplatzanforderungen für das Sortieren in **tempdb** (wobei SORT_IN_TEMPDB auf ON festgelegt wurde) sowie das Sortieren am Zielspeicherort gezeigt (wobei SORT_IN_TEMPDB auf OFF festgelegt wurde).  
   
     1.  Wenn SORT_IN_TEMPDB auf ON festgelegt wurde, muss für **tempdb** ausreichend Speicherplatz zum Speichern des größten Indexes vorhanden sein (1 Million * 200 Byte ~ 200 MB). Der Füllfaktor wird bei der Sortieroperation nicht berücksichtigt.  
   

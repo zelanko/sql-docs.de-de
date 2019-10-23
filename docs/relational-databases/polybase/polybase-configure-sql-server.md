@@ -4,16 +4,16 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5b75a57e233882540208a428e94f6aca139cd946
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: e71fc7c603ad5ca975a3e55ee1bbd41601b85387
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307617"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816775"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in SQL Server
 
@@ -39,42 +39,42 @@ In diesem Abschnitt werden die folgenden Transact-SQL-Befehle verwendet:
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1.  Erstellen Sie datenbankweit gültige Anmeldeinformationen für den Zugriff auf die MongoDB-Quelle.
+1. Erstellen Sie datenbankweit gültige Anmeldeinformationen für den Zugriff auf die SQL Server-Quelle. Das folgende Beispiel erstellt eine Anmeldeinformation für die externe Datenquelle mit `IDENTITY = 'username'` und `SECRET = 'password'`.
 
     ```sql
-    /*  specify credentials to external data source
-    *  IDENTITY: user name for external source.  
-    *  SECRET: password for external source.
-    */
-    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
-    WITH IDENTITY = 'username', Secret = 'password';
+    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
+    WITH IDENTITY = 'username', SECRET = 'password';
     ```
 
-1. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle.
+1. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle. Im folgenden Beispiel:
+
+   - wird eine externe Datenquelle mit dem Namen `SQLServerInstance` erstellt.
+   - werden externe Datenquellen (`LOCATION = '<vendor>://<server>[:<port>]'`) identifiziert. Im Beispiel verweist sie auf eine SQL Server-Standardinstanz.
+   - wird identifiziert, ob die Berechnung zur Quelle (`PUSHDOWN`) gepusht werden soll. `PUSHDOWN` ist standardmäßig `ON`.
+
+   Schließlich werden im Beispiel die zuvor erstellten Anmeldeinformationen verwendet.
 
     ```sql
-    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *  CREDENTIAL: the database scoped credential, created above.
-    */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( LOCATION = 'sqlserver://SqlServer',
-    -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = SQLServerCredentials);
+        WITH ( LOCATION = 'sqlserver://SqlServer',
+        PUSHDOWN = ON,
+        CREDENTIAL = SQLServerCredentials);
     ```
 
-1. **Optional:** Erstellen Sie Statistiken für eine externe Tabelle.
+1. Optional erstellen Sie Statistiken für eine externe Tabelle.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+  Damit eine optimale Abfrageleistung erzielt werden kann, sollten Sie Statistiken für externe Tabellenspalten erstellen, insbesondere für die Spalten, die für Joins, Filter und Aggregate verwendet werden.
 
-    We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
-
-    ```sql
-    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;
-    ```
+  ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY)
+    WITH FULLSCAN;
+  ```
 
 >[!IMPORTANT] 
 >Sobald Sie eine externe Datenquelle erstellt haben, können Sie über den Befehl [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) eine abfragbare Tabelle für diese Quelle erstellen.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 
 ## <a name="sql-server-connector-compatible-types"></a>Mit dem SQL Server-Connector kompatible Typen
 

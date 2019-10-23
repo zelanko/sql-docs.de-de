@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b8956be43328bba679eef2d1fb4304cc4b4
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: ab49b1f0323e8582f573db1d611b7114cba6dcaf
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929685"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589753"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -59,7 +59,7 @@ Weitere Informationen:
 -   [Columnstore-Indizes: Übersicht](../../relational-databases/indexes/columnstore-indexes-overview.md)  
 -   [Columnstore-Indizes: Zusammenfassung der Features](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -109,8 +109,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
     [ORDER (column [,...n] ) ] -- in preview
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
+
 ```
-  
 ## <a name="arguments"></a>Argumente  
 
 Einige Optionen sind nicht in allen Datenbank-Engine-Versionen verfügbar. Die folgende Tabelle enthält die Versionen, in denen die Optionen in GRUPPIERTEN COLUMNSTORE- und NICHT GRUPPIERTEN COLUMNSTORE-INDIZES eingeführt wurden:
@@ -396,7 +396,7 @@ In einer Tabelle mit einem gruppierten Columnstore-Index können keine Cursor od
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]-spezifische Einschränkungen**  
 Diese Einschränkungen gelten nur für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Mit diesem Release wurden aktualisierbare gruppierte Columnstore-Indizes eingeführt. Nicht gruppierte Columnstore-Indizes waren noch schreibgeschützt.  
 
--   Änderungsnachverfolgung. Im Zusammenhang mit nicht gruppierten Columnstore-Indizes (NCCI) kann Change Data Capture nicht verwendet werden, weil diese Indizes schreibgeschützt sind. Für gruppierte Columnstore-Indizes (CCI) kann Change Data Capture verwendet werden.  
+-   Änderungsnachverfolgung. Für Columnstore-Indizes kann keine Änderungsnachverfolgung verwendet werden.  
 -   Change Data Capture. Im Zusammenhang mit nicht gruppierten Columnstore-Indizes (NCCI) kann Change Data Capture nicht verwendet werden, weil diese Indizes schreibgeschützt sind. Für gruppierte Columnstore-Indizes (CCI) kann Change Data Capture verwendet werden.  
 -   Lesbares sekundäres Replikat. Auf einen gruppierten Columnstore-Index (CCI) kann nicht über ein lesbares sekundäres Replikat einer lesbaren Always On-Verfügbarkeitsgruppe zugegriffen werden.  Auf einen nicht gruppierten Columnstore-Index (NCCI) kann über ein lesbares sekundäres Replikat zugegriffen werden.  
 -   Mehrere aktive Resultsets (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] verwendet MARS für schreibgeschützte Verbindungen für Tabellen mit einem Columnstore-Index. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt MARS jedoch nicht für gleichzeitige DML-Vorgänge (Datenbearbeitungssprache) für eine Tabelle mit einem Columnstore-Index. In diesem Fall beendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verbindung und bricht die Transaktionen ab.  

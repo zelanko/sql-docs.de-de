@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a65afba9455fb475b760439e92ad8d4d38a70be8
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a8143bae69e85ecf0056dcb9433707a681a69077
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715648"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271890"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Leistung für R Services-Daten Optimierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Es gibt zwei Möglichkeiten, die Parallelisierung mit R in SQL Server zu erreich
 
     Wenn das R-Skript parallelisiert werden kann, und wenn die SQL-Abfrage parallelisiert werden kann, erstellt die Datenbank-Engine mehrere parallele Prozesse. Die maximale Anzahl von Prozessen, die erstellt werden können, entspricht der Einstellung **Max. Grad an Parallelität** (MAXDOP) für die-Instanz. Alle Prozesse führen dann dasselbe Skript aus, empfangen aber nur einen Teil der Daten.
     
-    Daher ist diese Methode für Skripts, die alle Daten anzeigen müssen, z. b. beim Trainieren eines Modells, nicht nützlich. Es ist jedoch nützlich, wenn Tasks wie die Batchvorhersage parallel ausgeführt werden. Weitere Informationen zur Verwendung von Parallelität mit `sp_execute_external_script`finden Sie im Abschnitt **Erweiterte Tipps: parallele Verarbeitung** der [Verwendung von R-Code in Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
+    Daher ist diese Methode für Skripts, die alle Daten anzeigen müssen, z. b. beim Trainieren eines Modells, nicht nützlich. Es ist jedoch nützlich, wenn Tasks wie die Batchvorhersage parallel ausgeführt werden. Weitere Informationen zur Verwendung von Parallelität mit `sp_execute_external_script`finden Sie im Abschnitt **Erweiterte Tipps: parallele Verarbeitung** der [Verwendung von R-Code in Transact-SQL](../tutorials/quickstart-r-create-script.md).
 
 -   **Verwenden Sie "numtasks = 1".** Wenn Sie **RX** -Funktionen in einem SQL Server computekontext verwenden, legen Sie den Wert des _numtasks_ -Parameters auf die Anzahl der Prozesse fest, die Sie erstellen möchten. Die Anzahl der erstellten Prozesse darf nicht größer sein als **MAXDOP**. die tatsächliche Anzahl der erstellten Prozesse wird jedoch von der Datenbank-Engine bestimmt und ist möglicherweise kleiner als Sie angefordert haben.
 

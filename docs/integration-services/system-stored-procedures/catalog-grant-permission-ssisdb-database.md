@@ -11,14 +11,14 @@ helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: acf530363e942b35b69b9b53c0c2b23ed7bb874a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9053a5ab4ac64bea8104ce7d9079bf891ffa887a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007751"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296769"
 ---
 # <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission (SSISDB-Datenbank)
 
@@ -78,7 +78,7 @@ catalog.grant_permission [ @object_type = ] object_type
 
 Dieses Verfahren kann nicht durch Anmeldevorgänge aufgerufen werden, die von SQL Server authentifiziert wurden. Es kann nicht durch die SA-Anmeldung aufgerufen werden.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Mit dieser gespeicherten Prozedur können Sie die in der folgenden Tabelle beschriebenen Typen von Berechtigungen gewähren:  
   
 |permission_type-Wert|Berechtigungsname|Berechtigungsbeschreibung|Anwendbare Objekttypen|  

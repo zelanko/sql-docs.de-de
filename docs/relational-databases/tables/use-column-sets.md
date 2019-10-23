@@ -14,12 +14,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc1a13d0ed05560558e0386ea051d3a9aaa85f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140366"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326136"
 ---
 # <a name="use-column-sets"></a>Verwenden von Spaltensätzen
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68140366"
   
  Verwenden Sie Spaltensätze, wenn die Tabelle eine große Anzahl an Spalten enthält und es sehr aufwändig ist, jede Spalte einzeln zu verarbeiten. Außerdem verbessert sich die Anwendungsleistung, wenn zum Auswählen und Einfügen von Daten bei Tabellen mit sehr vielen Spalten Spaltensätze verwendet werden. Die Leistung von Spaltensätzen kann jedoch beeinträchtigt werden, wenn für die Spalten in der Tabelle sehr viele Indizes definiert werden. Das liegt daran, dass in diesem Fall für einen Ausführungsplan mehr Arbeitsspeicher erforderlich ist.  
   
- Zum Definieren eines Spaltensatzes verwenden Sie die Schlüsselwörter *<Spaltensatzname>* FOR ALL_SPARSE_COLUMNS in der [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)-Anweisung oder in der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)-Anweisung.  
+ Zum Definieren eines Spaltensatzes verwenden Sie die Schlüsselwörter *<spaltensatzname>* FOR ALL_SPARSE_COLUMNS in der [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)-Anweisung oder in der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)-Anweisung.  
   
 ## <a name="guidelines-for-using-column-sets"></a>Richtlinien zum Verwenden von Spaltensätzen  
  Wenn Sie Spaltensätze verwenden, beachten Sie die folgenden Richtlinien:  
@@ -91,14 +91,14 @@ ms.locfileid: "68140366"
 -   Spalten mit geringer Dichte, die NULL-Werte enthalten, werden in der XML-Darstellung des Spaltensatzes nicht berücksichtigt.  
   
 > [!WARNING]  
->  Durch das Hinzufügen eines Spaltensatzes ändert sich das Verhalten von SELECT *-Abfragen. Statt der einzelnen Sparsespalten wird der Spaltensatz als XML-Spalte zurückgegeben. Schema-Designer und Softwareentwickler müssen darauf achten, dass der Code vorhandener Anwendungen hierdurch nicht gestört wird.  
+>  Durch das Hinzufügen eines Spaltensatzes ändert sich das Verhalten von `SELECT *`-Abfragen. Statt der einzelnen Sparsespalten wird der Spaltensatz als XML-Spalte zurückgegeben. Schema-Designer und Softwareentwickler müssen darauf achten, dass der Code vorhandener Anwendungen hierdurch nicht gestört wird.  
   
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Einfügen und Ändern von Daten in einem Spaltensatz  
  Zur Änderung von Daten in einem Spaltensatz verwenden Sie die Namen der einzelnen Spalten. Sie können auch auf den Namen des Spaltensatzes verweisen und die Werte des Spaltensatzes angeben, indem Sie das XML-Format des Spaltensatzes verwenden. Spalten mit geringer Dichte können in der XML-Spalte in beliebiger Reihenfolge angezeigt werden.  
   
  Wenn Sie die Werte von Sparsespalten mit dem XML-Spaltensatz einfügen bzw. aktualisieren, werden die Werte, die in die zugrunde liegenden Sparsespalten eingefügt werden, automatisch vom **xml** -Datentyp konvertiert. Bei numerischen Spalten werden leere Werte im XML-Format in leere Zeichenfolgen konvertiert. Hierdurch wird der Wert 0 in die numerische Spalte eingefügt, wie im folgenden Beispiel gezeigt.  
   
-```  
+```sql  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
 GO  
 INSERT t(cs) VALUES ('<i/>');  
@@ -109,7 +109,7 @@ GO
   
  In diesem Beispiel wurde kein Wert für die Spalte `i`angegeben, und der Wert `0` wurde eingefügt.  
   
-## <a name="using-the-sqlvariant-data-type"></a>Verwenden des sql_variant-Datentyps  
+## <a name="using-the-sql_variant-data-type"></a>Verwenden des sql_variant-Datentyps  
  Der **sql_variant** -Datentyp kann mehrere unterschiedliche Datentypen speichern, z.B. **int**, **char**und **date**. Spaltensätze geben Datentypinformationen zu Dezimalstellen, Genauigkeit und Gebietsschema, die mit einem **sql_variant** -Wert verknüpft sind, in der generierten XML-Spalte als Attribute aus. Wenn Sie versuchen, diese Attribute in einer benutzerdefinierten XML-Anweisung als Eingabe für einen INSERT- oder UPDATE-Vorgang für einen Spaltensatz bereitzustellen, sind einige dieser Attribute obligatorisch, und anderen wird ein Standardwert zugewiesen. In der folgenden Tabelle sind die Datentypen und die Standardwerte aufgeführt, die vom Server generiert werden, wenn der Wert nicht angegeben wird.  
   
 |Datentyp|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Maximale Länge|Genauigkeit|Dezimalstellen|  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  Diese Tabelle hat nur fünf Spalten, um die Anzeige und das Lesen zu erleichtern.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -166,7 +166,7 @@ GO
 ### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Einfügen von Daten in eine Tabelle anhand der Namen der Sparsespalten  
  In den folgenden Beispielen werden zwei Zeilen in die in Beispiel A erstellte Tabelle eingefügt. Hierzu werden die Namen der Sparsespalten verwendet, und auf den Spaltensatz wird nicht verwiesen.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, ProductionSpecification, ProductionLocation)  
 VALUES (1, 'Tire Spec 1', 'AXZZ217', 27);  
 GO  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. Einfügen von Daten in eine Tabelle anhand des Spaltensatznamens  
  Im folgenden Beispiel wird eine dritte Zeile in die in Beispiel A erstellte Tabelle eingefügt. Diesmal werden die Namen der Sparsespalten nicht verwendet. Stattdessen wird der Name des Spaltensatzes verwendet, und der INSERT-Vorgang gibt die Werte für zwei der vier Sparsespalten im XML-Format zurück.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, SpecialPurposeColumns)  
 VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>');  
 GO  
@@ -188,24 +188,23 @@ GO
 ### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Prüfen der Ergebnisse eines Spaltensatzes bei Verwendung von SELECT *  
  Im folgenden Beispiel werden alle Spalten der Tabelle ausgewählt, die einen Spaltensatz enthält. Es wird eine XML-Spalte mit den kombinierten Werten der Sparsespalten zurückgegeben. Die Sparsespalten werden nicht einzeln zurückgegeben.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>`  
-  
- `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation> 
+ ```
   
 ### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. Prüfen der Ergebnisse der Auswahl des Spaltensatzes nach Name  
  Da die Produktionsabteilung nicht an den Marketingdaten interessiert ist, wird in diesem Beispiel eine `WHERE` -Klausel zur Einschränkung der Ausgabe hinzugefügt. In diesem Beispiel wird der Name des Spaltensatzes verwendet.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns  
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -213,16 +212,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1     Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
-  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>  
+ ```
+ 
 ### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. Prüfen der Ergebnisse der Auswahl von Sparsespalten nach Name  
  Auch wenn eine Tabelle einen Spaltensatz enthält, können Sie eine Abfrage anhand der einzelnen Spaltennamen durchführen, wie im folgenden Beispiel gezeigt.  
   
-```  
+```sql  
 SELECT DocID, Title, ProductionSpecification, ProductionLocation   
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -230,16 +229,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        ProductionSpecification ProductionLocation`  
-  
- `1     Tire Spec 1  AXZZ217                 27`  
-  
- `3     Tire Spec 2  AXW9R411                38`  
-  
+ ```
+ DocID  Title        ProductionSpecification ProductionLocation`  
+ 1      Tire Spec 1  AXZZ217                 27`  
+ 3      Tire Spec 2  AXW9R411                38`  
+ ```
+ 
 ### <a name="g-updating-a-table-by-using-a-column-set"></a>G. Aktualisieren einer Tabelle mithilfe eines Spaltensatzes  
  Im folgenden Beispiel wird der dritte Datensatz mit neuen Werten für beide Sparsespalten aktualisiert, die von der Zeile verwendet werden.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification><ProductionLocation>38</ProductionLocation>'  
 WHERE DocID = 3 ;  
@@ -251,7 +250,7 @@ GO
   
  Im folgenden Beispiel wird der dritte Datensatz aktualisiert, es wird jedoch nur der Wert für eine der beiden Spalten mit Werten angegeben. Die zweite Spalte `ProductionLocation` ist nicht in der `UPDATE` -Anweisung enthalten und wird auf NULL aktualisiert.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification>'  
 WHERE DocID = 3 ;  

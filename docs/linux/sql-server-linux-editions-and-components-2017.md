@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 927b3366c609eae4d98787ead646e8b613bfdcba
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154656"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687387"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2017 unter Linux
 
@@ -161,15 +161,15 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|Dedizierte Administratorverbindung|Ja|Ja|Ja|Ja, mit Ablaufverfolgungsflag|Ja, mit Ablaufverfolgungsflag|   
+|Dedizierte Administratorverbindung|Ja|Ja|Ja|Ja, mit Ablaufverfolgungsflag|   
 |PowerShell-Skriptunterstützung|Ja|Ja|Ja|Ja| 
 |Unterstützung für Komponentenvorgänge der Datenschichtanwendung: Extrahieren, Bereitstellen, Aktualisieren, Löschen|Ja|Ja|Ja|Ja| 
-|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|Ja|Ja|Ja|Nein|Nein|   
-|Sammler von Leistungsdaten|Ja|Ja|Ja|Nein|Nein| 
-|Standardleistungsberichte|Ja|Ja|Ja|Nein|Nein| 
-|Planhinweislisten und Planeinfrierung für Planhinweislisten|Ja|Ja|Ja|Nein|Nein|   
+|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|Ja|Ja|Ja|Nein|  
+|Sammler von Leistungsdaten|Ja|Ja|Ja|Nein|
+|Standardleistungsberichte|Ja|Ja|Ja|Nein|
+|Planhinweislisten und Planeinfrierung für Planhinweislisten|Ja|Ja|Ja|Nein| 
 |Direkte Abfrage von indizierten Sichten (mittels NOEXPAND-Hinweis)|Ja|Ja|Ja|Ja| 
-|Automatische Wartung für indizierte Sichten|Ja|Ja|Ja|Nein|Nein| 
+|Automatische Wartung für indizierte Sichten|Ja|Ja|Ja|Nein|
 |Verteilte partitionierte Sichten|Ja|Nein|Nein|Nein| 
 |Parallele Indexvorgänge|Ja|Nein|Nein|Nein|  
 |Automatische Verwendung indizierter Sichten mittels Abfrageoptimierer|Ja|Nein|Nein|Nein| 
@@ -188,10 +188,10 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |MERGE- und UPSERT-Funktionen|Ja|Ja|Ja|Ja|   
 |Datums- und Uhrzeitdatentypen|Ja|Ja|Ja|Ja|  
 |Internationalisierungsunterstützung|Ja|Ja|Ja|Ja| 
-|Volltextsuche und semantische Suche|Ja|Ja|Ja|Ja|Nein| 
-|Angabe der Sprache in einer Abfrage|Ja|Ja|Ja|Ja|Nein|   
-|Service Broker (Messaging)|Ja|Ja|Nein (nur Client)|Nein (nur Client)|Nein (nur Client)|   
-|Transact-SQL-Endpunkte|Ja|Ja|Ja|Nein|Nein| 
+|Volltextsuche und semantische Suche|Ja|Ja|Ja|Ja|
+|Angabe der Sprache in einer Abfrage|Ja|Ja|Ja|Ja|
+|Service Broker (Messaging)|Ja|Ja|Nein (nur Client)|Nein (nur Client)|
+|Transact-SQL-Endpunkte|Ja|Ja|Ja|Nein|
 |Diagramm|Ja|Ja|Ja|Ja|  
 
 

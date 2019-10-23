@@ -4,19 +4,19 @@ titleSuffix: ''
 description: In diesem Artikel wird erläutert, wie Sie SQL Server Machine Learning Services unter Windows installieren. Sie können Machine Learning Services verwenden, um Python-und R-Skripts in der-Datenbank auszuführen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/20/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28e4681808348df97e61709745e9b59e0a44d3be
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: bdd1a9e20379ae66335baa7d3c415cf68e570d47
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634557"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271917"
 ---
-# <a name="install-sql-server-machine-learning-services-on-windows"></a>Installieren von SQL Server Machine Learning Services unter Windows
+# <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installieren von SQL Server Machine Learning Services (python und R) unter Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -295,7 +295,7 @@ Zum Installieren und Verwalten von R-Paketen können Sie Benutzergruppen für di
 
 R-Entwickler können mit einigen einfachen Beispielen loslegen und die Grundlagen der Funktionen von R unter SQL Server kennenlernen. Informationen zu den nächsten Schritten finden Sie unter den folgenden Links:
 
-+ [Tutorial: Ausführen von R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Ausführen von R in T-SQL](../tutorials/quickstart-r-create-script.md)
 + [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python-Entwickler können in den folgenden Tutorials erfahren, wie Python mit SQL Server verwendet werden kann:

@@ -1,7 +1,7 @@
 ---
 title: Überwachen der Leistung mit dem Abfragespeicher | Microsoft -Dokumentation
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 09/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0b0fc97b52f6c79ef14944b3d807ac259dd6727
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e72ba4eed90fbd8218b9f0ed3942744fd75fcd90
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018766"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163910"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,13 +52,14 @@ ms.locfileid: "68018766"
 Mit der **ALTER DATABASE** -Anweisung können Sie den Abfragespeicher aktivieren. Beispiel:  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
+ALTER DATABASE AdventureWorks2012 
+SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE); 
 ```  
   
 Weitere Syntaxoptionen im Zusammenhang mit dem Abfragespeicher finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 > [!NOTE]  
-> Sie können den Abfragespeicher nicht für die **master** - oder **tempdb** -Datenbank aktivieren.  
+> Der Abfragespeicher kann für die **master**- oder **tempdb**-Datenbank nicht aktiviert werden.  
  
 > [!IMPORTANT]
 > Informationen zum Aktivieren des Abfragespeichers und dazu, wie Sie ihn an Ihre Arbeitsauslastung angepasst halten, finden Sie unter [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
@@ -71,9 +72,17 @@ Weitere Syntaxoptionen im Zusammenhang mit dem Abfragespeicher finden Sie unter 
 > [!NOTE]
 > Der Abfragespeicher sammelt Pläne für DML-Anweisungen wie SELECT, INSERT, UPDATE, DELETE, MERGE und BULK INSERT.
 
- Durch **Wartestatistiken** erhalten Sie weitere Informationen, die Ihnen bei der Problembehandlung der Leistung in SQL Server helfen können. Lange Zeit waren Wartestatistiken nur auf Instanzebene verfügbar, wodurch es schwierig war, sie der tatsächlichen Abfrage zuzuordnen. In SQL Server 2017 und Azure SQL-Datenbank haben wir eine weitere Dimension im Abfragedatenspeicher hinzugefügt, die Wartestatistiken nachverfolgt. 
+> [!NOTE]  
+> Der Abfragespeicher sammelt standardmäßig keine Daten für systemintern kompilierte gespeicherte Prozeduren. Verwenden Sie [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md), um die Datensammlung für systemintern kompilierte gespeicherte Prozeduren zu aktivieren.
 
- Häufige Szenarios für die Verwendung des Abfragespeichers:  
+Durch **Wartestatistiken** erhalten Sie weitere Informationen, die Ihnen bei der Problembehandlung der Leistung in [!INCLUDE[ssde_md](../../includes/ssde_md.md)] helfen können. Lange Zeit waren Wartestatistiken nur auf Instanzebene verfügbar, wodurch es schwierig war, sie einer bestimmten Abfrage zuzuordnen. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] bietet der Abfragespeicher eine Dimension, die Wartestatistiken nachverfolgt. Im folgenden Beispiel wird der Abfragespeicher zum Sammeln von Wartestatistiken aktiviert.
+
+```sql
+ALTER DATABASE AdventureWorks2012 
+SET QUERY_STORE = ON ( WAIT_STATS_CAPTURE_MODE = ON );
+```
+
+Häufige Szenarios für die Verwendung des Abfragespeichers:  
   
 -   Schnelles Auffinden und Beheben von Regressionen der Planleistung durch Erzwingung des vorherigen Abfrageplans Korrigieren von Abfragen, die in der Vergangenheit aufgrund von Änderungen am Ausführungsplan die Leistung vermindert haben  
 -   Bestimmen der Ausführungshäufigkeit einer Abfrage in einem festgelegten Zeitraum mit Unterstützung eines DBAs bei der Behandlung von Leistungsproblemen mit Ressourcen  
@@ -101,7 +110,7 @@ INNER JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
-##  <a name="Regressed"></a> Verwenden der Funktion „Zurückgestellte Abfragen“  
+##  <a name="Regressed"></a> Verwenden der Funktion „Rückläufige Abfragen“  
 Aktualisieren Sie nach der Aktivierung des Abfragespeichers den Datenbankbereich im Objekt-Explorer-Bereich, um den Abschnitt **Abfragespeicher** hinzuzufügen.  
   
 ![SQL Server 2016-Abfragespeicherstruktur im SSMS-Objekt-Explorer](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016-Abfragespeicherstruktur im SSMS-Objekt-Explorer")![SQL Server 2017-Abfragespeicherstruktur im SSMS-Objekt-Explorer](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017-Abfragespeicherstruktur im SSMS-Objekt-Explorer") 
@@ -113,9 +122,10 @@ Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuze
   
 Wählen Sie eine Abfrage und einen Plan aus, und klicken Sie anschließend auf **Plan erzwingen**, um einen Plan zu erzwingen. Sie können nur Pläne erzwingen, die mit dem Abfrageplanfeature gespeichert wurden und sich noch im Abfrageplancache befinden.
 
-##  <a name="Waiting"></a> Suchen von Warteanfragen
+##  <a name="Waiting"></a> Suchen von Wartestatistiken zu Abfragen
+Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sind im Abfragespeicher Wartestatistiken pro Abfrage im Zeitverlauf verfügbar. 
 
-Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sind im Abfragespeicher Wartestatistiken pro Abfrage über Zeit verfügbar. Im Abfragespeicher werden Wartetypen in **Wartekategorien** zusammengefasst. Die Zuordnung von Wartekategorien zu Wartetypen finden Sie unter [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
+Im Abfragespeicher werden Wartetypen in **Wartekategorien** zusammengefasst. Die Zuordnung von Wartekategorien zu Wartetypen finden Sie unter [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
 
 Wählen Sie **Abfragewartestatistiken** aus, um den Bereich **Abfragewartestatistiken** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 oder höher zu öffnen. Der Bereich „Abfragewartestatistiken“ zeigt ein Balkendiagramm mit den wichtigsten Wartekategorien im Abfragespeicher an. Verwenden Sie die Dropdownliste im oberen Bereich, um ein Aggregatkriterium für die Wartezeit auszuwählen: avg, max, min, std dev oder **total** (Standard).
 
@@ -152,7 +162,7 @@ Konfigurieren Sie das `STALE_QUERY_THRESHOLD_DAYS`-Argument, um die Anzahl der T
 Bestimmt die Häufigkeit, mit der in den Abfragespeicher geschriebene Daten auf Datenträger gespeichert werden. Um die Leistung zu optimieren, werden durch den Abfragespeicher gesammelte Daten asynchron auf den Datenträger geschrieben. Die Häufigkeit, mit der diese asynchrone Übertragung auftritt, wird mit `DATA_FLUSH_INTERVAL_SECONDS` konfiguriert. Der Standardwert ist **900** (15 Minuten).  
   
 *MAX_STORAGE_SIZE_MB*  
-Konfiguriert die maximale Größe des Abfragespeichers. Wenn die Daten im Abfragespeicher die `MAX_STORAGE_SIZE_MB`-Grenze erreichen, ändert sich der Status des Abfragespeichers automatisch von Lese-/ Schreibzugriff in den schreibgeschützten Modus, und es werden keine neuen Daten mehr erfasst.  Der Standardwert ist 100 MB. Der Standardwert für die Premium Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] liegt bei **1 GB**, für die Basic Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] bei **10 MB**.
+Konfiguriert die maximale Größe des Abfragespeichers. Wenn die Daten im Abfragespeicher die `MAX_STORAGE_SIZE_MB`-Grenze erreichen, ändert sich der Status des Abfragespeichers automatisch von Lese-/Schreibzugriff in den schreibgeschützten Modus, und es werden keine neuen Daten mehr erfasst. Der Standardwert ist **100 MB** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] durch [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] beträgt der Standardwert **1 GB**. Der Standardwert für die Premium Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] liegt bei **1 GB**, für die Basic Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] bei **10 MB**.
   
 *INTERVAL_LENGTH_MINUTES*  
 Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitintervall aggregiert. Dieses feste Zeitintervall wird mit `INTERVAL_LENGTH_MINUTES` konfiguriert. Der Standardwert lautet **60**. 
@@ -161,7 +171,7 @@ Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung i
 Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert. **AUTO** (Standardeinstellung) oder OFF sind möglich.  
   
 *QUERY_CAPTURE_MODE*  
-Gibt an, ob der Abfragespeicher alle oder, ausgehend von der Anzahl der Ausführungen und dem Ressourcenverbrauch, nur relevante Abfragen erfasst, oder ob der Abfragespeicher das Hinzufügen neuer Abfragen beendet und nur aktuelle Abfragen nachverfolgt. **ALL** (alle Abfragen erfassen), AUTO (seltene Abfragen und Abfragen mit minimaler Kompilierungs- und Ausführungsdauer ignorieren) oder NONE (neue Abfragen nicht mehr erfassen) ist möglich. Der Standardwert für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) ist gleich ALL, während er für Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gleich AUTO ist.
+Gibt an, ob der Abfragespeicher alle oder, ausgehend von der Anzahl der Ausführungen und dem Ressourcenverbrauch, nur relevante Abfragen erfasst, oder ob der Abfragespeicher das Hinzufügen neuer Abfragen beendet und nur aktuelle Abfragen nachverfolgt. **ALL** (alle Abfragen erfassen), AUTO (seltene Abfragen und Abfragen mit minimaler Kompilierungs- und Ausführungsdauer ignorieren), CUSTOM (benutzerdefinierte Erfassungsrichtlinie) oder NONE (neue Abfragen nicht mehr erfassen) ist möglich. Der Standardwert lautet **ALL** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] durch [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] lautet der Standardwert **AUTO**. Der Standardwert für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ist **AUTO**.
   
 *MAX_PLANS_PER_QUERY*  
 Eine ganze Zahl, die die maximale Anzahl von Plänen darstellt, die für jede Abfrage beibehalten werden. Der Standardwert ist **200**.  
@@ -279,6 +289,8 @@ SET QUERY_STORE (
     WAIT_STATS_CAPTURE_MODE = ON 
 );  
 ```  
+
+  Eine vollständige Liste der Konfigurationsoptionen finden Sie unter [ALTER DATABASE SET-Optionen (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
   
  **Bereinigen des Speicherplatzes**  
   
@@ -290,7 +302,9 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  Sie können auch nur Ad-hoc-Abfragedaten löschen, da diese evtl. für die Abfrageoptimierung und Plananalyse weniger wichtig sind, aber trotzdem viel Platz einnehmen.  
   
- **Löschen von Ad-hoc-Abfragen** : Hiermit löschen Sie Abfragen, die nur einmal ausgeführt wurden und mehr als 24 Stunden alt sind.  
+ **Löschen von Ad-hoc-Abfragen** 
+ 
+ Hiermit löschen Sie Abfragen, die nur einmal ausgeführt wurden und mehr als 24 Stunden alt sind.  
   
 ```sql  
 DECLARE @id int  
@@ -328,7 +342,6 @@ DEALLOCATE adhoc_queries_cursor;
 -   **sp_query_store_reset_exec_stats**, um Laufzeitstatistiken für einen bestimmten Plan zu löschen.  
 -   **sp_query_store_remove_plan**, um einen einzelnen Plan zu entfernen.  
  
-  
 ###  <a name="Peformance"></a> Leistungsüberwachung und Problembehandlung  
  Der Abfragespeicher protokolliert den Verlauf der Kompilierungs- und Laufzeitmetriken während der Abfrageausführungen, sodass Sie Fragen zu Ihrer Arbeitsauslastung stellen können.  
   
@@ -584,7 +597,7 @@ Durch die Verwendung von **sp_query_store_force_plan** können Sie ausschließli
 
 #### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Erzwingen eines Plans für schnelle Vorwärts- und statische Cursor
   
-Mit dem CTP 2.3-Abfragespeicher in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können Sie Abfrageausführungspläne für schnelle Vorwärtscursor und statische Cursor (T-SQL und API) erzwingen. Das Erzwingen kann über `sp_query_store_force_plan` oder über SQL Server Management Studio-Abfragespeicherberichte erfolgen.
+Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 unterstützt der Abfragespeicher die Möglichkeit, Abfrageausführungspläne für schnelle Vorwärtscursor und statische Cursor ([!INCLUDE[tsql](../../includes/tsql-md.md)] und API) zu erzwingen. Das Erzwingen wird durch `sp_query_store_force_plan` oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Abfragespeicherberichte unterstützt.
 
 ### <a name="remove-plan-forcing-for-a-query"></a>Aufheben der Erzwingung eines Plans für eine Abfrage
 
@@ -593,8 +606,6 @@ Wenn Sie wieder den Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../includes/
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
-
-
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Best Practices für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   

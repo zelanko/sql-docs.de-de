@@ -1,7 +1,7 @@
 ---
 title: Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5eefebaf1d68a29a654bb407c46ad5871164d2d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095195"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517976"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "68095195"
      Gibt die Anzahl von Überwachungsdateien an, die erstellt werden können, und zwar bis zu 2.147.483.647. Diese Option ist nur verfügbar, wenn **Unbegrenzt** deaktiviert ist.  
   
      **Maximale Dateigröße**  
-     Gibt die maximale Größe für eine Überwachungsdatei entweder in Megabyte (MB), Gigabyte (GB) oder Terabyte (TB) an. Sie können zwischen 1024 MB und 2.147.483.647 TB angeben. Durch Aktivieren des Kontrollkästchen **Unbegrenzt** gibt es keine Begrenzung der Dateigröße. Die Angabe eines Werts kleiner 1024 MB löst einen Fehler aus. Das Kontrollkästchen **Unbegrenzt** ist standardmäßig aktiviert.  
+     Gibt die maximale Größe für eine Überwachungsdatei entweder in Megabyte (MB), Gigabyte (GB) oder Terabyte (TB) an. Sie können eine Zahl bis 2.147.483.647 angeben. Durch Aktivieren des Kontrollkästchen **Unbegrenzt** gibt es keine Begrenzung der Dateigröße. Das Kontrollkästchen **Unbegrenzt** ist standardmäßig aktiviert.  
   
      **Speicherplatz reservieren** (Kontrollkästchen)  
      Gibt an, dass der auf dem Datenträger vorab zugeordnete Speicherplatz der festgelegten maximalen Dateigröße entspricht. Diese Einstellung kann nur verwendet werden, wenn das Kontrollkästchen **Unbegrenzt** unter **Maximale Dateigröße** deaktiviert ist. Dieses Kontrollkästchen ist standardmäßig deaktiviert.  

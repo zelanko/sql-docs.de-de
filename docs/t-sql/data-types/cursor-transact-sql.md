@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f97fdcba1cfed8ca28c39afdec92275aa6ba5d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c25550ed5e985f643f81b0b41e749f007eef0df3
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125945"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682078"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Ein Datentyp für Variablen oder für OUTPUT-Parameter von gespeicherten Prozeduren, die einen Verweis auf einen Cursor enthalten.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 Folgende Vorgänge können auf Variablen und Parameter vom Datentyp **cursor** verweisen:
--   Die Anweisungen DECLARE *@local_variable* und SET *@local_variable* .  
+-   Die Anweisungen DECLARE *\@local_variable* und SET *\@local_variable*.  
 -   Die Cursoranweisungen OPEN, FETCH, CLOSE und DEALLOCATE.  
 -   Ausgabeparameter der gespeicherten Prozedur.  
 -   Die CURSOR_STATUS-Funktion.  

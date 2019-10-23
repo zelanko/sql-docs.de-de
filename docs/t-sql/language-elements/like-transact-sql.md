@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68122181"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816822"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,7 +82,7 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Ergebniswert  
  LIKE gibt TRUE zurück, wenn *match_expression* dem angegebenen *pattern* entspricht.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Bei Zeichenfolgenvergleichen mithilfe von LIKE werden alle Zeichen in der Musterzeichenfolge berücksichtigt. Die zu berücksichtigenden Zeichen umfassen alle führenden oder nachfolgenden Leerzeichen. Wenn in einer Vergleichsabfrage LIKE 'abc ' (abc, gefolgt von einem Leerzeichen) verwendet wird, um Zeilen zurückzugeben, die dem Muster abc ähnlich sind, werden keine Zeilen zurückgegeben, die den Wert abc (abc ohne Leerzeichen) enthalten. Nachfolgende Leerzeichen in dem Ausdruck, der mit dem Muster verglichen wird, werden jedoch ignoriert. Wenn in einer Abfrage LIKE 'abc' (abc ohne Leerzeichen) verwendet wird, um Zeilen zurückzugeben, die dem Muster abc ähnlich sind, werden alle Zeilen zurückgegeben, die mit abc anfangen und null oder mehr nachfolgende Leerzeichen enthalten.  
   
  Ein Zeichenfolgenvergleich mithilfe eines Musters, das Daten der Typen **char** und **varchar** enthält, ist bei Verwendung des LIKE-Operators möglicherweise aufgrund der Art und Weise, in der die Daten für jeden Datentyp gespeichert werden, nicht erfolgreich. Im folgenden Beispiel wird eine lokale **char**-Variable an eine gespeicherte Prozedur übergeben. Mit einem Mustervergleich sollen dann alle Mitarbeiter gefunden werden, deren Nachnamen mit den angegebenen Zeichen beginnen.  
@@ -192,7 +192,7 @@ GO
 |LIKE 'abc[def]'|abcd, abce und abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>Mustervergleich mit der ESCAPE-Klausel  
- Sie können nach Zeichenfolgen suchen, die ein oder mehrere Platzhalterzeichen enthalten. Die discounts-Tabelle in der customers-Datenbank kann beispielsweise Rabattwerte mit einem Prozentzeichen (%) speichern. Um nach dem Prozentzeichen als Zeichen und nicht als Platzhalterzeichen zu suchen, müssen das ESCAPE-Schlüsselwort und das Escapezeichen angegeben werden. Eine Beispieldatenbank enthält beispielsweise eine comment-Spalte, die den Text 30% enthält. Wenn Sie in den Zeilen der comment-Spalte nach der Zeichenfolge "30%" suchen, geben Sie eine WHERE-Klausel wie `WHERE comment LIKE '%30!%%' ESCAPE '!'` an. Werden ESCAPE und das Escapezeichen nicht angegeben, gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle Zeilen zurück, die die Zeichenfolge 30 enthalten.  
+ Sie können nach Zeichenfolgen suchen, die ein oder mehrere Platzhalterzeichen enthalten. Die discounts-Tabelle in der customers-Datenbank kann beispielsweise Rabattwerte mit einem Prozentzeichen (%) speichern. Um nach dem Prozentzeichen als Zeichen und nicht als Platzhalterzeichen zu suchen, müssen das ESCAPE-Schlüsselwort und das Escapezeichen angegeben werden. Eine Beispieldatenbank enthält beispielsweise eine comment-Spalte, die den Text 30% enthält. Wenn Sie in den Zeilen der comment-Spalte nach der Zeichenfolge "30%" suchen, geben Sie eine WHERE-Klausel wie `WHERE comment LIKE '%30!%%' ESCAPE '!'` an. Werden ESCAPE und das Escapezeichen nicht angegeben, gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle Zeilen zurück, die die Zeichenfolge 30! enthalten.  
   
  Wenn im LIKE-Muster auf ein Escapezeichen kein Zeichen folgt, ist das Muster nicht gültig, und das LIKE-Muster gibt FALSE zurück. Wenn es sich beim Zeichen nach einem Escapezeichen nicht um ein Platzhalterzeichen handelt, wird das Escapezeichen verworfen und das folgende Zeichen als reguläres Zeichen im Muster behandelt. Zu diesen Platzhalterzeichen gehören das Prozentzeichen (%), der Unterstrich (_) und die linke eckige Klammer ([), wenn sie in doppelte eckige Klammern ([ ]) eingeschlossen sind. Innerhalb doppelter eckiger Klammern ([ ]) können Escapezeichen verwendet werden; dem Caretzeichen (^), dem Bindestrich (-) sowie der rechten eckigen Klammer (]) kann ein Escapezeichen vorangestellt werden.  
   

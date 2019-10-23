@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 16ac264f89c541f0a864f8b47ed008fa254f181c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095417"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952172"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Verschlüsselungsschlüssel (einheitlicher SSRS-Modus)
   Verwenden Sie die Seite "Verschlüsselungsschlüssel", um den symmetrischen Schlüssel zu verwalten, der zum Ver- und Entschlüsseln von Daten auf einem Berichtsserver verwendet wird. Die Verwaltung der Verschlüsselungsschlüssel ist ein wichtiger Teil der Berichtsserverkonfiguration. Der symmetrische Schlüssel wird automatisch beim Erstellen der Berichtsserver-Datenbank erstellt und angewendet. Erstellen Sie eine Sicherungskopie des symmetrischen Schlüssels, sodass Routinewartungsvorgänge durchgeführt werden können. Für die folgenden Wartungsaufgaben ist es erforderlich, dass Sie über eine gültige Kopie des symmetrischen Schlüssels verfügen:  
@@ -45,15 +45,15 @@ ms.locfileid: "66095417"
  Um diese Seite zu öffnen, starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und klicken Sie auf den Link im Navigationsbereich. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Optionen  
- **Backup**  
+ **Mindestsicherung**  
  Kopiert den symmetrischen Schlüssel in eine von Ihnen angegebene Datei. Der symmetrische Schlüssel wird nie als Nur-Text-Datei gespeichert. Sie müssen ein Kennwort eingeben, um die Datei zu schützen.  
   
  **Restore**  
  Wendet eine zuvor gespeicherte Kopie des symmetrischen Schlüssels auf die Berichtsserver-Datenbank an. Sie müssen ein Kennwort angeben, um die Dateisperre aufzuheben.  
   
- Die vorherige Kopie des symmetrischen Schlüssels für die Berichtsserverinstanz, mit der Sie gerade verbunden sind, wird von der wiederhergestellten Version überschrieben. Nachdem Sie den symmetrischen Schlüssel wiederhergestellt haben, müssen Sie alle Berichtsserver initialisieren, die die Berichtsserver-Datenbank verwenden. Weitere Informationen zur Initialisierung von Berichtsservern finden Sie unter [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Die vorherige Kopie des symmetrischen Schlüssels für die Berichtsserverinstanz, mit der Sie gerade verbunden sind, wird von der wiederhergestellten Version überschrieben. Nachdem Sie den symmetrischen Schlüssel wiederhergestellt haben, müssen Sie alle Berichtsserver initialisieren, die die Berichtsserver-Datenbank verwenden. Weitere Informationen zum Initialisieren von Berichts Servern finden Sie unter [Initialisieren eines Berichts &#40;Servers SSRS&#41;Configuration Manager](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
- **Änderung**  
+ **Klima**  
  Erstellt den symmetrischen Schlüssel neu und verschlüsselt alle verschlüsselten Werte in der Berichtsserver-Datenbank neu. Beenden Sie den Berichtsserver-Dienst, bevor Sie den symmetrischen Schlüssel neu erstellen.  
   
  Im Falle einer Bereitstellung für horizontales Skalieren werden alle Kopien des symmetrischen Schlüssels durch aktuellere Versionen ersetzt. Bevor Sie den symmetrischen Schlüssel ändern, müssen Sie die Liste mit den Servern prüfen, die der Bereitstellung für horizontales Skalieren hinzugefügt werden, um zu verifizieren, ob nur gültige Berichtsserverinstanzen Zugriff auf den neuen Schlüssel erhalten. Die Server, die Teil einer Bereitstellung für horizontales Skalieren sind, sind auf der Seite **Bereitstellung für horizontales Skalieren** aufgeführt. Beenden Sie den Dienst auf jedem Berichtsserver, bevor Sie den Schlüssel neu erstellen.  
@@ -68,7 +68,7 @@ ms.locfileid: "66095417"
  Es gibt keinen automatischen Vorgang zum Aktualisieren dieser Informationen. Jeder Bericht, jedes Abonnement und jede freigegebene Datenquelle, die gespeicherte Anmeldeinformationen und Verbindungszeichenfolgen verwendet, muss aktualisiert werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Reporting Services-Konfigurations-Manager-F1-Hilfethemen &#40;einheitlicher SSRS-Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Konfigurations-Manager für Reporting Services F1-Hilfe &#40;Themen SSRS im&#41;einheitlichen Modus](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 66aeb6b6e13de8cc076d2ff1b4c77d4fadf2b94a
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174271"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688315"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Bereitstellen auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
@@ -66,6 +66,9 @@ Führen Sie den Befehl **kubectl** aus, um sich die Clusterkonfiguration anzeige
 ```bash
 kubectl config view
 ```
+
+> [!Important] 
+> Stellen Sie sicher, dass die Uhren über alle Kubernetes Knoten synchronisiert werden, die für die Bereitstellung als Ziel verwendet werden, wenn Sie die Bereitstellung auf einem Cluster mit mehreren Knoten über kubeadm durchlaufen, bevor Sie die Big Data Cluster Bereitstellung starten. Der Big Data-Cluster verfügt über integrierte Integritäts Eigenschaften für verschiedene Dienste, bei denen es sich um Zeit empfindliche Dienste handelt, und Takt Abweichungen können zu einem falschen Status führen.
 
 Nachdem Sie den Kubernetes-Cluster konfiguriert haben, können Sie mit der Bereitstellung eines neuen Big-Data-Clusters für SQL Server fortfahren. Wenn Sie ein Upgrade von einer vorherigen Version durchführen, finden Sie weitere Informationen unter [Upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md).
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 22d705e22ad3c90736b65d9dfd6c24d76f239335
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68185422"
 ---
-SQL Server
+SQL Server

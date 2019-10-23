@@ -13,12 +13,12 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fa2f5a4694b8f8f9f59a5663d996777d0c78df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986656"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251292"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Verwenden des Abfragespeichers mit In-Memory-OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Es gibt jedoch einige Aspekte, die Benutzer bei der Verwendung des Abfragespeich
   
 -   Wenn der Abfragespeicher aktiviert ist, werden Abfragen, Pläne und Kompilierzeitstatistiken standardmäßig erfasst. Die Erfassung von Laufzeitstatistiken ist jedoch nicht aktiviert, sofern Sie diese nicht explizit mit [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) aktivieren.  
   
--   Wenn Sie *@new_collection_value* auf 0 festlegen, erfasst der Abfragespeicher keine Laufzeitstatistiken mehr für die betroffene Prozedur oder für die gesamte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  
+-   Wenn Sie *\@new_collection_value* auf 0 festlegen, erfasst der Abfragespeicher keine Laufzeitstatistiken mehr für die betroffene Prozedur oder für die gesamte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.  
   
 -   Der mit [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) konfigurierte Wert wird nicht beibehalten. Stellen Sie nach dem Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicher, dass Sie die Statistikerfassung erneut überprüfen und konfigurieren.  
   

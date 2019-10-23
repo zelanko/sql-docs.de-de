@@ -3,17 +3,17 @@ title: Überwachen der Python-und R-Skriptausführung mithilfe von DMVs
 description: Verwenden Sie dynamische Verwaltungs Sichten (DMVs), um die Ausführung externer python-und R-Skripts in SQL Server Machine Learning Services zu überwachen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/13/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70978406"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "71713179"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Überwachen von SQL Server Machine Learning Services mithilfe dynamischer Verwaltungs Sichten (DMVs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,17 +38,17 @@ Weitere allgemeine Informationen zu DMVs finden Sie unter [dynamische System Ver
 
 ## <a name="dynamic-management-views"></a>Dynamische Verwaltungssichten
 
-Die folgenden dynamischen Verwaltungs Sichten können beim Überwachen von Machine Learning-Workloads in SQL Server verwendet werden. Um die DMVs abzufragen, benötigen `VIEW SERVER STATE` Sie die-Berechtigung für die-Instanz.
+Die folgenden dynamischen Verwaltungs Sichten können beim Überwachen von Machine Learning-Workloads in SQL Server verwendet werden. Zum Abfragen der DMVs benötigen Sie `VIEW SERVER STATE`-Berechtigung für die-Instanz.
 
-| Dynamische Verwaltungssicht | Typ | Beschreibung |
+| Dynamische Verwaltungssicht | Geben Sie | Description |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Ausführung | Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript ausführt. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Ausführung | Gibt eine Zeile für jeden Typ von externer Skriptanforderung zurück. |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Ausführung | Gibt eine Zeile pro Leistungsindikator zurück, der vom Server verwaltet wird. Wenn Sie die Such Bedingung `WHERE object_name LIKE '%External Scripts%'`verwenden, können Sie anhand dieser Informationen festzustellen, wie viele Skripts ausgeführt wurden, welche Skripts mit welchem Authentifizierungsmodus ausgeführt wurden oder wie viele R-oder python-Aufrufe für die Instanz insgesamt ausgegeben wurden. |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Ausführung | Gibt eine Zeile pro Leistungsindikator zurück, der vom Server verwaltet wird. Wenn Sie die Such Bedingung `WHERE object_name LIKE '%External Scripts%'` verwenden, können Sie diese Informationen verwenden, um anzuzeigen, wie viele Skripts ausgeführt wurden, welche Skripts mit welchem Authentifizierungsmodus ausgeführt wurden oder wie viele R-oder python-Aufrufe für die Instanz insgesamt ausgegeben wurden. |
 | [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | Resource Governor | Gibt Informationen über den aktuellen Status des externen Ressourcenpools in Resource Governor, die aktuelle Konfiguration von Ressourcenpools und Ressourcenpool Statistiken zurück. |
 | [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Resource Governor | Gibt Informationen zur CPU-Affinität zur aktuellen externen Ressourcenpool Konfiguration in Resource Governor zurück. Gibt eine Zeile pro Zeitplanungsmodul in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] zurück, wobei jedes Zeitplanungsmodul einem einzelnen Prozessor zugeordnet ist. Mithilfe dieser Sicht können Sie den Zustand eines Zeitplanungsmoduls überwachen oder Endlostasks identifizieren. |
 
-Weitere Informationen zum über [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Wachen von Instanzen finden Sie unter [Katalog Sichten](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) und [Resource Governor verwandte dynamische Verwaltungs Sichten](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
+Weitere Informationen zum Überwachen von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Instanzen finden Sie unter [Katalog Sichten](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) und [Resource Governor verwandte dynamische Verwaltungs Sichten](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
 
 ## <a name="settings-and-configuration"></a>Einstellungen und Konfiguration
 
@@ -78,12 +78,12 @@ WHERE name = 'external scripts enabled';
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | Beschreibung |
+| Column | Description |
 |--------|-------------|
-| IsMLServicesInstalled | Gibt 1 zurück, wenn SQL Server-Machine Learning Services für die-Instanz installiert ist. Andernfalls wird 0 zurückgegeben. |
+| Ismlservicesinstalliert | Gibt 1 zurück, wenn SQL Server-Machine Learning Services für die-Instanz installiert ist. Andernfalls wird 0 zurückgegeben. |
 | Externalscriptsenabled | Gibt 1 zurück, wenn externe Skripts für die-Instanz aktiviert sind. Andernfalls wird 0 zurückgegeben. |
-| ImpliedAuthenticationEnabled | Gibt 1 zurück, wenn die implizite Authentifizierung aktiviert ist. Andernfalls wird 0 zurückgegeben. Die Konfiguration für die implizite Authentifizierung wird überprüft, indem überprüft wird, ob eine Anmeldung für sqlrusergroup vorhanden ist. |
-| IsTcpEnabled | Gibt 1 zurück, wenn das TCP/IP-Protokoll für die-Instanz aktiviert ist. Andernfalls wird 0 zurückgegeben. Weitere Informationen finden Sie unter [Standard SQL Server Netzwerkprotokoll Konfiguration](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md). |
+| Impliedauthenticationaktivierte | Gibt 1 zurück, wenn die implizite Authentifizierung aktiviert ist. Andernfalls wird 0 zurückgegeben. Die Konfiguration für die implizite Authentifizierung wird überprüft, indem überprüft wird, ob eine Anmeldung für sqlrusergroup vorhanden ist. |
+| Istcpabled | Gibt 1 zurück, wenn das TCP/IP-Protokoll für die-Instanz aktiviert ist. Andernfalls wird 0 zurückgegeben. Weitere Informationen finden Sie unter [Standard SQL Server Netzwerkprotokoll Konfiguration](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md). |
 
 ## <a name="active-sessions"></a>Aktive Sitzungen
 
@@ -106,12 +106,12 @@ ON s.session_id = r.session_id;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | Beschreibung |
+| Column | Description |
 |--------|-------------|
 | session_id | Identifiziert die einer aktiven primären Verbindung zugeordnete Sitzung. |
 | blocking_session_id | ID der Sitzung, die die Anforderung blockiert. Wenn diese Spalte den Wert NULL aufweist, wird die Anforderung nicht blockiert, oder die Sitzungsinformationen der blockierenden Sitzung sind nicht verfügbar (bzw. können nicht identifiziert werden). |
 | status | Status der Anforderung. |
-| database_name | Der Name der aktuellen Datenbank für jede Sitzung. |
+| Datenbankname | Der Name der aktuellen Datenbank für jede Sitzung. |
 | login_name | SQL Server Anmelde Name, unter dem die Sitzung gerade ausgeführt wird. |
 | wait_time | Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte die Dauer des aktuellen Wartevorgangs in Millisekunden an. Lässt keine NULL-Werte zu. |
 | wait_type | Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte den Wartetyp zurück. Weitere Informationen zu warte Typen finden Sie unter [sys. DM _os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
@@ -121,7 +121,7 @@ Die Abfrage gibt die folgenden Spalten zurück:
 | reads | Anzahl der von dieser Anforderung ausgeführten Lesevorgänge. |
 | logical_reads | Anzahl der von dieser Anforderung ausgeführten logischen Lesevorgänge. |
 | writes | Anzahl der von dieser Anforderung ausgeführten Schreibvorgänge. |
-| language | Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |
+| Sprache | Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |
 | degree_of_parallelism | Zahl, die die Anzahl von parallelen Prozessen angibt, die erstellt wurden. Dieser Wert kann sich von der Anzahl von parallelen Prozessen unterscheiden, die angefordert wurden. |
 | external_user_name | Das Windows-Workerkonto, unter dem das Skript ausgeführt wurde. |
 
@@ -142,9 +142,9 @@ ORDER BY language, counter_name;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | Beschreibung |
+| Column | Description |
 |--------|-------------|
-| language | Name der registrierten externen Skriptsprache. |
+| Sprache | Name der registrierten externen Skriptsprache. |
 | counter_name | Name einer registrierten externen Skriptfunktion. |
 | counter_value | Gesamtanzahl der Instanzen, die von der registrierten externen Skriptfunktion auf dem Server aufgerufen wurden. Dieser Wert ist kumulativ und beginnt mit dem Zeitpunkt, zu dem das Feature auf der Instanz installiert wurde. Der Wert kann nicht zurückgesetzt werden. |
 
@@ -164,13 +164,13 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys. DM _os_performance_counters** gibt die folgenden Leistungsindikatoren für externe Skripts aus:
 
-| Leistungsindikator | Beschreibung |
+| Leistungsindikator | Description |
 |---------|-------------|
 | Total Executions | Anzahl externer Prozesse, die von lokalen oder Remote Aufrufen gestartet werden. |
-| Parallel Executions | Gibt an, wie oft ein Skript die  _\@parallele_ Spezifikation enthielt und [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ob ein paralleler Abfrageplan generiert und verwendet werden konnte. |
+| Parallel Executions | Gibt an, wie oft ein Skript die _\@parallel_ Spezifikation enthielt und dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] einen parallelen Abfrageplan generieren und verwenden konnte. |
 | Streaming Executions | Gibt an, wie oft das Streaming-Feature aufgerufen wurde. |
 | SQL CC Executions | Anzahl externer Skripts, die ausgeführt werden, wenn der-Befehl Remote instanziiert wurde und SQL Server als computekontext verwendet wurde. |
-| Implied Auth. Anmeldungen | Gibt an, wie oft ein ODBC-Loopback-Rückruf mit implizierter Authentifizierung durchgeführt wurde. Das heißt, der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] hat den-Befehl im Auftrag des Benutzers ausgeführt, der die Skript Anforderung sendet. |
+| Implizite Authentifizierung. Anmeldungen | Gibt an, wie oft ein ODBC-Loopback-Rückruf mit implizierter Authentifizierung durchgeführt wurde. Das heißt, der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] hat den-Befehl im Auftrag des Benutzers ausgeführt, der die Skript Anforderung sendet. |
 | Total Execution Time (ms) | Verstrichene Zeit zwischen dem Aufruf und dem Abschluss des Aufrufes. |
 | Execution Errors | Gibt an, wie oft Skripts Fehler gemeldet haben. Diese Anzahl umfasst keine R-oder python-Fehler. |
 
@@ -178,7 +178,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 Anzeigen von Informationen zum Arbeitsspeicher, der vom Betriebssystem, SQL Server und den externen Pools verwendet wird.
 
-![Ausgabe der Speicher] Auslastungs Abfrage (media/dmv-memory-usage.png "Ausgabe der Speicher") Auslastungs Abfrage
+![Ausgabe der Speicher Auslastungs Abfrage](media/dmv-memory-usage.png "Ausgabe der Speicher Auslastungs Abfrage")
 
 Führen Sie die folgende Abfrage aus, um diese Ausgabe zu erhalten. Weitere Informationen zu den verwendeten dynamischen Verwaltungs Sichten finden Sie unter [sys. DM _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) und [sys. DM _os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md).
 
@@ -192,7 +192,7 @@ FROM sys.dm_os_sys_info;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | Beschreibung |
+| Column | Description |
 |--------|-------------|
 | physical_memory_kb | Die Gesamtmenge an physischem Arbeitsspeicher auf dem Computer. |
 | committed_kb | Der zugesicherte Speicher in Kilobyte (KB) im Speicher-Manager. Reservierter Arbeitsspeicher im Speicher-Manager ist nicht eingeschlossen. |
@@ -200,7 +200,7 @@ Die Abfrage gibt die folgenden Spalten zurück:
 
 ## <a name="memory-configuration"></a>Konfiguration des Arbeitsspeichers
 
-Anzeigen von Informationen zur maximalen Arbeitsspeicher Konfiguration als Prozentsatz von SQL Server und externen Ressourcenpools. Wenn SQL Server mit dem Standardwert `max server memory (MB)`ausgeführt wird, wird er als 100% des Betriebssystem Arbeitsspeichers betrachtet.
+Anzeigen von Informationen zur maximalen Arbeitsspeicher Konfiguration als Prozentsatz von SQL Server und externen Ressourcenpools. Wenn SQL Server mit dem Standardwert `max server memory (MB)` ausgeführt wird, wird er als 100% des Betriebssystem Arbeitsspeichers angesehen.
 
 ![Ausgabe der Arbeitsspeicher-Konfigurations Abfrage](media/dmv-memory-configuration.png "Ausgabe der Arbeitsspeicher-Konfigurations Abfrage")
 
@@ -221,7 +221,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | Beschreibung |
+| Column | Description |
 |--------|-------------|
 | NAME | Der Name des externen Ressourcenpools oder SQL Server. |
 | max_memory_percent | Der maximale Arbeitsspeicher, der von SQL Server oder dem externen Ressourcenpool verwendet werden kann. |
@@ -246,9 +246,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Spalte | Beschreibung |
+| Column | Description |
 |--------|-------------|
-| pool_name | Name des Ressourcenpools. SQL Server Ressourcenpools wird das Präfix `SQL Server` vorangestellt, und externen Ressourcenpools wird `External Pool`das Präfix vorangestellt.
+| pool_name | Name des Ressourcenpools. SQL Server Ressourcenpools ist das Präfix `SQL Server` und externen Ressourcenpools wird `External Pool` vorangestellt.
 | total_cpu_usage_hours | Die kumulierte CPU-Auslastung in Millisekunden seit dem Zurücksetzen der Ressourcen-govenstatistiken. |
 | read_io_completed_total | Die Gesamtanzahl der E/A-Lesevorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken abgeschlossen wurden. |
 | write_io_completed_total | Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken abgeschlossen wurden. |
@@ -275,12 +275,12 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 Die zurückgegebenen Spalten lauten:
 
-| Spalte | Beschreibung |
+| Column | Description |
 |--------|-------------|
-| Package | Der Name des installierten Pakets. |
-| Version | Version des Pakets. |
+| Paket | Der Name des installierten Pakets. |
+| Versionsoptionen | Version des Pakets. |
 | Depends (Abhängig) | Listet die Pakete auf, von denen das installierte Paket abhängt. |
-| Lizenz | Lizenz für das installierte Paket. |
+| License (Lizenz) | Lizenz für das installierte Paket. |
 | LibPath | Das Verzeichnis, in dem Sie das Paket finden können. |
 
 ### <a name="installed-packages-for-python"></a>Installierte Pakete für python
@@ -301,11 +301,11 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 Die zurückgegebenen Spalten lauten:
 
-| Spalte | Beschreibung |
+| Column | Description |
 |--------|-------------|
-| Package | Der Name des installierten Pakets. |
-| Version | Version des Pakets. |
-| Speicherort | Das Verzeichnis, in dem Sie das Paket finden können. |
+| Paket | Der Name des installierten Pakets. |
+| Versionsoptionen | Version des Pakets. |
+| Location | Das Verzeichnis, in dem Sie das Paket finden können. |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

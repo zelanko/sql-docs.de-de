@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77c095ac35d9b3068882be81d0ddf6293904f8bb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810337"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127360"
 ---
 # <a name="database-engine-errors"></a>Datenbank-Engine – Fehler
 
@@ -4904,15 +4904,15 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   11108   |   16  |   Nein  |   Der Anbieter konnte eine erforderliche Eigenschaft nicht unterstützen. |
 |   11109   |   16  |   Nein  |   Der Anbieter unterstützt keinen Indexscan für diese Datenquelle.    |
 |   11201   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil der FROM-Dienstname fehlt. Nachrichtenabsender: "%ls". |
-|   11202   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der FROM-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'. |
+|   11202   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der FROM-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'. |
 |   11203   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz fehlt. Nachrichtenabsender: "%ls". |
-|   11204   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz die maximale Größe von %d Bytes überschreitet. Broker-Instanz: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.   |
+|   11204   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz die maximale Größe von %d Bytes überschreitet. Broker-Instanz: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.   |
 |   11205   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname fehlt. Nachrichtenabsender: '%ls'.  |
-|   11206   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.   |
+|   11206   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.   |
 |   11207   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname fehlt. Nachrichtenabsender: '%ls'.    |
-|   11208   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname die maximale Größe von %d Bytes überschreitet. Vertragsname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'. |
+|   11208   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname die maximale Größe von %d Bytes überschreitet. Vertragsname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'. |
 |   11209   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil die Konversations-ID keiner aktiven Konversation zugeordnet werden konnte. Nachrichtenabsender: "%ls".  |
-|   11210   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienst nicht gefunden wurde. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.  |
+|   11210   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienst nicht gefunden wurde. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.  |
 |   11211   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Benutzer nicht die Berechtigung für den Zugriff auf die Zieldatenbank besitzt. Datenbank-ID: %d. Nachrichtenabsender: &amp;quot;%ls&amp;quot;.    |
 |   11212   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil der Konversationsendpunkt bereits geschlossen wurde.  |
 |   11213   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil sie nicht die erste Nachricht in der Konversation ist.  |
@@ -4999,7 +4999,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   11297   |   16  |   Nein  |   Eine beschädigte Nachricht wurde empfangen. Der Offset des privaten Variablendatensegments ist falsch.   |
 |   11298   |   16  |   Nein  |   Eine beschädigte Nachricht wurde empfangen. Der Offset des öffentlichen Variablendatensegments ist falsch.    |
 |   11299   |   10  |   Nein  |   Eine beschädigte Nachricht wurde empfangen. Eine Nachricht, die nicht Teil einer Sequenz ist, besaß eine Sequenznummer ungleich Null. Folgende Nachricht ist betroffen: Konversations-ID '%.*ls', Initiator: %d und Nachrichtensequenznummer: %I64d. |
-|   11300   |   10  |   Ja |   Fehler beim Ausführen eines Commits für einen schreibgeschützten XDES (Transaktionsdeskriptor) oder TEMPDB-XDES. Der Server wird heruntergefahren.    |
+|   11300   |   10  |   Ja |   Fehler beim Ausführen eines Commits für einen schreibgeschützten XDES (Transaktionsdeskriptor) oder TEMPDB-XDES. Der Server wird heruntergefahren.   |
 |   11301   |   10  |   Ja |   Fehler beim Ausführen einer Transaktionsbenachrichtigung für das %p-Objekt, %d-Ereignis. |
 |   11302   |   10  |   Ja |   Fehler beim Rollback. Die Datenbank wird heruntergefahren (Speicherort: %d).   |
 |   11303   |   10  |   Ja |   Fehler beim Freigeben von reserviertem Protokollspeicherplatz: %ls-Speicherplatz %I64d, Code %d, Status %d. |

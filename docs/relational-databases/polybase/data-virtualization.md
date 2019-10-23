@@ -1,24 +1,24 @@
 ---
-title: Virtualisieren externer Daten in SQL Server 2019 CTP 2.0 | Microsoft-Dokumentation
+title: Virtualisieren externer Daten in SQL Server 2019 | Microsoft-Dokumentation
 description: Auf dieser Seite wird die Verwendung des Assistenten zum Erstellen externer Tabellen für relationale Datenquellen detailliert beschrieben.
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 719584bda1a289694c6e5ff7483e320073323be4
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418766"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710592"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Verwenden des Assistenten für externe Tabellen mit relationalen Datenquellen
 
-Eine der wichtigsten Funktionen in SQL Server 2019 CTP 2.0 ist die Datenvirtualisierung. Dabei können die Daten ihren ursprünglichen Speicherort beibehalten. Diese Daten können Sie in einer SQL Server-Instanz *virtualisieren*, sodass sie wie in jeder anderen Tabelle in SQL Server abgefragt werden können. Dadurch werden weniger ETL-Vorgänge benötigt. Dieser Prozess wird durch die Verwendung von PolyBase-Connectors ermöglicht. Weitere Informationen finden Sie unter [Erste Schritte mit PolyBase](polybase-guide.md).
+Eine der wichtigsten Funktionen in SQL Server 2019 ist die Datenvirtualisierung. Dabei können die Daten ihren ursprünglichen Speicherort beibehalten. Diese Daten können Sie in einer SQL Server-Instanz *virtualisieren*, sodass sie wie in jeder anderen Tabelle in SQL Server abgefragt werden können. Dadurch werden weniger ETL-Vorgänge benötigt. Dieser Prozess wird durch die Verwendung von PolyBase-Connectors ermöglicht. Weitere Informationen finden Sie unter [Erste Schritte mit PolyBase](polybase-guide.md).
 
 ## <a name="start-the-external-table-wizard"></a>Starten des Assistenten für externe Tabellen
 
@@ -44,10 +44,7 @@ In diesem Schritt sollten Sie einen Datenbankhauptschlüssel erstellen. Sie müs
 ![Erstellen eines Datenbankhauptschlüssels](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> Wenn Sie bereits über einen Datenbankhauptschlüssel verfügen, sind die Eingabefelder eingeschränkt, und Sie können diesen Schritt auslassen. Klicken Sie auf **Weiter**, um fortzufahren.
-
-> [!NOTE]
-> Wenn Sie kein sicheres Kennwort auswählen, erledigt dies der Assistent im letzten Schritt. Dies ist ein bekanntes Problem.
+> Wenn Sie bereits über einen Datenbankhauptschlüssel verfügen, wird dieser Schritt automatisch umgangen.
 
 ## <a name="enter-external-data-source-credentials"></a>Eingeben von Anmeldeinformationen für die externe Datenquelle
 
