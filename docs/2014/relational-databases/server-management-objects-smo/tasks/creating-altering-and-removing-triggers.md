@@ -12,15 +12,15 @@ ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4f6cf3b1e988d12a39096d46275058d080a23c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31430674d88d8aa5b820823a16dc18d110b9dd9a
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211897"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782311"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>Erstellen, Ändern und Löschen von Trigger
-  In SMO werden Trigger durch das <xref:Microsoft.SqlServer.Management.Smo.Trigger>-Objekt dargestellt. Die [!INCLUDE[tsql](../../../includes/tsql-md.md)] Code, der ausgeführt wird, wenn der Trigger, die ausgelöst wird, festgelegt ist, indem Sie die <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> Eigenschaft des Trigger-Objekts. Der Typ des Triggers wird über andere Eigenschaften des <xref:Microsoft.SqlServer.Management.Smo.Trigger>-Objekts gesetzt, beispielsweise durch die <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>-Eigenschaft. Hierbei handelt es sich um eine boolesche Eigenschaft, die angibt, ob der Trigger durch ein `UPDATE` von Datensätzen auf der übergeordneten Tabelle ausgelöst wird.  
+  In SMO werden Trigger durch das <xref:Microsoft.SqlServer.Management.Smo.Trigger>-Objekt dargestellt. Der [!INCLUDE[tsql](../../../includes/tsql-md.md)] Code, der ausgeführt wird, wenn der ausgelöste Auslösen von der <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A>-Eigenschaft des triggerobjekts festgelegt wird. Der Typ des Triggers wird über andere Eigenschaften des <xref:Microsoft.SqlServer.Management.Smo.Trigger>-Objekts gesetzt, beispielsweise durch die <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>-Eigenschaft. Hierbei handelt es sich um eine boolesche Eigenschaft, die angibt, ob der Trigger durch ein `UPDATE` von Datensätzen auf der übergeordneten Tabelle ausgelöst wird.  
   
  Das <xref:Microsoft.SqlServer.Management.Smo.Trigger>-Objekt stellt herkömmlicherweise Datenbearbeitungssprachentrigger (DML) dar. In [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] und höheren Versionen werden auch DDL (Data Definition Language)-Trigger unterstützt. DDL-Trigger werden durch das <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger>-Objekt und das <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger>-Objekt dargestellt.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68211897"
 ## <a name="creating-altering-and-removing-a-trigger-in-visual-c"></a>Erstellen, Ändern und Löschen eines Triggers in Visual C#  
  Dieses Codebeispiel zeigt, wie ein UPDATE-Trigger für eine vorhandene Tabelle mit dem Namen `Sales`in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt und eingefügt wird. Der Trigger sendet eine Erinnerungsmitteilung, wenn die Tabelle aktualisiert oder ein neuer Datensatz eingefügt wird.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server mysrv;  
@@ -68,19 +68,18 @@ ms.locfileid: "68211897"
 ## <a name="creating-altering-and-removing-a-trigger-in-powershell"></a>Erstellen, Ändern und Löschen eines Triggers in PowerShell  
  Dieses Codebeispiel zeigt, wie ein UPDATE-Trigger für eine vorhandene Tabelle mit dem Namen `Sales`in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt und eingefügt wird. Der Trigger sendet eine Erinnerungsmitteilung, wenn die Tabelle aktualisiert oder ein neuer Datensatz eingefügt wird.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
   
 #Get reference to the trigger's target table  
-$mytab = get-item Sales.Customer  
+$mytab = Get-Item Sales.Customer  
   
 # Define a Trigger object variable by supplying the parent table, schema ,and name in the constructor.  
-$tr  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Trigger `  
--argumentlist $mytab, "Sales"  
+$tr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Trigger -argumentlist $mytab, "Sales"  
   
-# Set TextMode property to False, then set other properties to define the trigger.   
+# Set TextMode property to False, then set other properties to define the trigger.
 $tr.TextMode = $false  
 $tr.Insert = $true  
 $tr.Update = $true  
@@ -88,11 +87,9 @@ $tr.InsertOrder = [Microsoft.SqlServer.Management.SMO.Agent.ActivationOrder]::Fi
 $tr.TextBody = " RAISERROR('Notify Customer Relations',16,10) "  
 $tr.ImplementationType = [Microsoft.SqlServer.Management.SMO.ImplementationType]::TransactSql  
   
-# Create the trigger on the instance of SQL Server.   
+# Create the trigger on the instance of SQL Server.
 $tr.Create()  
   
-#Remove the trigger.   
+#Remove the trigger.
 $tr.Drop()  
 ```  
-  
-  

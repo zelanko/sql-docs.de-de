@@ -12,12 +12,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55e6f1788b5187d64f929070e93ab15b6fd7a8c9
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7f7f71e75d2afd12de9ff381bdc61b739eb192db
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810958"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782468"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Erstellen, Ändern und Löschen von Indizes
   In der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects-Hierarchie (SMO) werden Indizes durch das <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt dargestellt. Die indizierten Spalten werden durch eine Auflistung von <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn>-Objekten dargestellt, die von der <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>-Eigenschaft dargestellt werden.  
@@ -30,7 +30,7 @@ ms.locfileid: "68810958"
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Erstellen eines nicht gruppierten, zusammengesetzten Indexes in Visual Basic  
  In diesem Codebeispiel wird veranschaulicht, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>-Eigenschaft für einen nicht gruppierten Index auf `False` fest.  
   
-```  
+```vb
 ' /r:Microsoft.SqlServer.Smo.dll  
 ' /r:Microsoft.SqlServer.ConnectionInfo.dll  
 ' /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -80,14 +80,13 @@ Public Class A
         ' Remove the index from the table.   
         idx.Drop()  
     End Sub  
-End Class  
-  
+End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Erstellen eines nicht gruppierten, zusammengesetzten Index in Visual C#  
  In diesem Codebeispiel wird veranschaulicht, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>-Eigenschaft für einen nicht gruppierten Index auf `False` fest.  
   
-```  
+```csharp
 // /r:Microsoft.SqlServer.Smo.dll  
 // /r:Microsoft.SqlServer.ConnectionInfo.dll  
 // /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -138,25 +137,24 @@ public class A {
       // Remove the index from the table.   
       idx.Drop();  
    }  
-}  
-  
+}
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Erstellen eines nicht gruppierten, zusammengesetzten Index in PowerShell  
  In diesem Codebeispiel wird veranschaulicht, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>-Eigenschaft für einen nicht gruppierten Index auf `False` fest.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
   
 #Get a reference to the table  
-$tb = get-item HumanResources.Employee  
+$tb = Get-Item HumanResources.Employee  
   
-#Define an Index object variable by providing the parent table and index name in the constructor.   
+#Define an Index object variable by providing the parent table and index name in the constructor.
 $idx = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "TestIndex"  
   
-#Add indexed columns to the index.   
+#Add indexed columns to the index.
 $icol1 = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
 -argumentlist $idx, "BusinessEntityId", $true  
 $idx.IndexedColumns.Add($icol1)  
@@ -165,28 +163,28 @@ $icol2 = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `
 -argumentlist $idx, "HireDate", $true  
 $idx.IndexedColumns.Add($icol2)  
   
-#Set the index properties.   
-$idx.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriUniqueKey   
+#Set the index properties.
+$idx.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriUniqueKey
 $idx.IsClustered = $false  
 $idx.FillFactor = 50  
   
-#Create the index on the instance of SQL Server.   
+#Create the index on the instance of SQL Server.
 $idx.Create()  
   
-#Modify the page locks property.   
-$idx.DisallowPageLocks = $true  
+#Modify the page locks property.
+$idx.DisallowPageLocks = $true
   
-#Run the Alter method to make the change on the instance of SQL Server.   
+#Run the Alter method to make the change on the instance of SQL Server.
 $idx.Alter()  
   
-#Remove the index from the table.   
+#Remove the index from the table.
 $idx.Drop();  
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Erstellen eines XML-Index in Visual Basic  
  Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-Schemaauflistung mit dem Namen MySampleCollection, die in [Using XML Schemas](using-xml-schemas.md)erstellt wird. XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
-```  
+```vb
 ' /r:Microsoft.SqlServer.Smo.dll  
 ' /r:Microsoft.SqlServer.ConnectionInfo.dll  
 ' /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -242,14 +240,13 @@ Public Class A
         ' Create the XML index on the instance of SQL Server.   
         i.Create()  
     End Sub  
-End Class  
-  
+End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Erstellen eines XML-Index in Visual C#  
  Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-Schemaauflistung mit dem Namen MySampleCollection, die in [Using XML Schemas](using-xml-schemas.md)erstellt wird. XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
-```  
+```csharp
 // /r:Microsoft.SqlServer.Smo.dll  
 // /r:Microsoft.SqlServer.ConnectionInfo.dll  
 // /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -305,61 +302,56 @@ public class A {
       // Create the XML index on the instance of SQL Server.   
       i.Create();  
    }  
-}  
-  
+}
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>Erstellen eines XML-Index in PowerShell  
  Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-Schemaauflistung mit dem Namen MySampleCollection, die in [Using XML Schemas](using-xml-schemas.md)erstellt wird. XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-#Define a Table object variable and add an XML type column.   
-#This sample requires that an XML schema type called MySampleCollection exists on the database.   
+#Define a Table object variable and add an XML type column.
+#This sample requires that an XML schema type called MySampleCollection exists on the database.
 #See sample on Creating an XML schema to do this  
 $tb = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Table -argumentlist $db, "XmlTable"  
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::Xml("MySampleCollection")  
 $col1 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"XMLValue", $Type  
 $tb.Columns.Add($col1)  
   
-#Add another integer column that can be made into a unique, primary key.   
+#Add another integer column that can be made into a unique, primary key.
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::Int  
 $col2 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Number", $Type  
 $col2.Nullable = $false  
 $tb.Columns.Add($col2)  
   
-#Create the table of the instance of SQL Server.   
+#Create the table of the instance of SQL Server.
 $tb.Create()  
   
-#Create a unique, clustered, primary key index on the integer column. This is required for an XML index.   
-#Define an Index object variable by providing the parent table and index name in the constructor.   
-$cp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "clusprimindex"          
+#Create a unique, clustered, primary key index on the integer column. This is required for an XML index.
+#Define an Index object variable by providing the parent table and index name in the constructor.
+$cp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "clusprimindex"
 $cp.IsClustered = $true;  
 $cp.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriPrimaryKey;  
   
-#Create and add an indexed column to the index.   
-$cpcol = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
--argumentlist $cp, "Number", $true  
+#Create and add an indexed column to the index.
+$cpcol = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn -argumentlist $cp, "Number", $true  
 $cp.IndexedColumns.Add($cpcol)  
 $cp.Create()  
   
 #Define and XML Index object variable by supplying the parent table and  
-# the XML index name arguments in the constructor.   
-$i = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "xmlindex"   
+# the XML index name arguments in the constructor.
+$i = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "xmlindex"
   
-#Create and add an indexed column to the index.   
-$ic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
--argumentlist $i, "XMLValue", $true    
+#Create and add an indexed column to the index.
+$ic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn -argumentlist $i, "XMLValue", $true
 $i.IndexedColumns.Add($ic)  
   
 #Create the XML index on the instance of SQL Server  
 $i.Create()  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  <xref:Microsoft.SqlServer.Management.Smo.Index>  
-  
-  

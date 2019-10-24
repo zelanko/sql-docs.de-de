@@ -12,12 +12,12 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5f7b7b6e12e6905492a1ea7d48a75ebc6be0e689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e37dcf69a09d92236e0b8f4f97cb99541f1c7532
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101041"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783250"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Ändern der Standardübermittlungserweiterung für Reporting Services
   Sie können [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurationseinstellungen ändern, um die Standardübermittlungserweiterung in der Liste **Übermittelt von** einer Abonnementdefinitionsseite zu ändern. Sie können die Konfiguration z. B. so ändern, dass beim Erstellen eines neuen Abonnements durch den Benutzer standardmäßig eine Dateifreigabeübermittlung statt einer E-Mail-Übermittlung ausgewählt wird. Sie können auch die Reihenfolge der in der Benutzeroberfläche aufgeführten Übermittlungserweiterungen ändern.  
@@ -29,11 +29,11 @@ ms.locfileid: "66101041"
 ## <a name="default-native-mode-report-server-configuration"></a>Standardkonfiguration für einen Berichtsserver im einheitlichen Modus  
  Die Reihenfolge der Übermittlungserweiterungen im Berichts-Manager in der Liste **Übermittelt von** basiert auf der Reihenfolge der Übermittlungserweiterungseinträge in der Datei **RSReportServer.config** . Im folgenden Bild wird E-Mail zuerst in der Liste angezeigt und ist standardmäßig ausgewählt.  
   
- ![Standardliste der Übermittlungserweiterungen](../media/ssrs-default-delivery.png "default list of delivery extensions")  
+ ![Standardliste der Übermittlungs Erweiterungen](../media/ssrs-default-delivery.png "Standardliste der Übermittlungs Erweiterungen")  
   
  Im Folgenden ist der Standardabschnitt von **RSReportServer.config** dargestellt, der die Standardübermittlungserweiterung und die Reihenfolge steuert, in der diese im Berichts-Manager angezeigt werden. Beachten Sie, dass die E-Mail in der Datei zuerst angezeigt und als Standard festgelegt wird.  
   
-```  
+```xml
 <DeliveryUI>  
      <Extension Name="Report Server Email" Type="Microsoft.ReportingServices.EmailDeliveryProvider.EmailDeliveryProviderControl,ReportingServicesEmailDeliveryProvider">  
           <DefaultDeliveryExtension>True</DefaultDeliveryExtension>  
@@ -53,7 +53,7 @@ ms.locfileid: "66101041"
   
      Öffnen Sie die Datei RSReportServer.config in einem Text-Editor. Weitere Informationen zur Konfigurationsdatei finden Sie unter [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md). Nach Änderung der Konfiguration sieht die Benutzeroberfläche wie folgt aus:  
   
-     ![Geänderte Liste der Übermittlungserweiterungen](../media/ssrs-modified-delivery.png "modified list of delivery extensions")  
+     ![geänderte Liste der Übermittlungs Erweiterungen](../media/ssrs-modified-delivery.png "geänderte Liste der Übermittlungs Erweiterungen")  
   
 2.  Ändern Sie den Abschnitt DeliveryUI wie folgt und beachten Sie die wichtigsten Änderungen:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66101041"
   
      **Ereignis-ID:** 109  
   
-     **Quelle:** Report Server-Windows-Dienst (Instanzname)  
+     **Quelle:** Berichtsserver-Windows-Dienst (Instanzname)  
   
      Die Datei „RSReportServer.config“ wurde geändert.  
   
@@ -100,22 +100,20 @@ ms.locfileid: "66101041"
   
 2.  Sie können diesen Schritt überspringen, wenn Sie den Namen Ihrer [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendung bereits kennen. Verwenden Sie den folgende PowerShell-Befehl zum Auflisten der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendungen in der SharePoint-Farm.  
   
-    ```  
-    get-sprsserviceapplication | format-list *  
+    ```powershell
+    Get-SPRSServiceApplication | Format-List *  
     ```  
   
 3.  Führen Sie den folgenden PowerShell-Befehl zum Überprüfen der aktuellen Standardübermittlungserweiterung für die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendung „ssrsapp“ aus.  
   
+    ```powershell
+    $app = Get-SPRSServiceApplication | Where {$_.name -Like "ssrsapp*"};
+    Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
-    $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
   
-    ```  
-  
-## <a name="see-also"></a>Siehe auch  
- [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
- [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)    
+ [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)    
  [Dateifreigabeübermittlung in Reporting Services](file-share-delivery-in-reporting-services.md)   
- [E-Mail Delivery in Reporting Services (E-Mail-Übermittlung in Reporting Services)](e-mail-delivery-in-reporting-services.md)   
- [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
-  
-  
+ [E-Mail-Übermittlung in Reporting Services](e-mail-delivery-in-reporting-services.md)   
+ [Konfigurieren eines Berichts Servers für die e &#40;-Mail-Übermittlung von SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

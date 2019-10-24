@@ -17,29 +17,29 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917914"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782667"
 ---
 # <a name="validate-a-dac-package"></a>Überprüfen eines DAC-Pakets
   Es wird empfohlen, den Inhalt eines DAC-Pakets vor der Bereitstellung in der Produktionsumgebung sowie die Upgradeaktionen vor dem Aktualisieren einer vorhandenen DAC zu überprüfen. Dies gilt insbesondere für die Bereitstellung von Paketen, die nicht im Unternehmen entwickelt wurden.  
   
-1.  **Vorbereitungen:**  [Voraussetzungen](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **So aktualisieren Sie eine DAC:**  [Anzeigen des Inhalts einer DAC](#ViewDACContents), [Anzeigen der Datenbankänderungen](#ViewDBChanges), [Anzeigen der Upgradeaktionen](#ViewUpgradeActions), [Vergleichen von DACs](#CompareDACs)  
+2.  **So aktualisieren Sie eine DAC mit:**  [Anzeigen des Inhalts einer DAC](#ViewDACContents), [Anzeigen von Datenbankänderungen](#ViewDBChanges), [Anzeigen von Upgradeaktionen](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> Erforderliche Komponenten  
- Das Bereitstellen eines DAC-Pakets aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche DACs können schädlichen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine DAC aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, stellen Sie sie auf einer isolierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Testinstanz bereit, führen [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) für die Datenbank aus und überprüfen außerdem den Code, z. B. gespeicherte Prozeduren oder sonstigen benutzerdefinierten Code.  
+##  <a name="Prerequisites"></a> Prerequisites  
+ Das Bereitstellen eines DAC-Pakets aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche DACs können schädlichen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine DAC aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, stellen Sie sie auf einer isolierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Testinstanz bereit, führen [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) für die Datenbank aus und überprüfen außerdem den Code, z. B. gespeicherte Prozeduren oder sonstigen benutzerdefinierten Code.  
   
 ##  <a name="ViewDACContents"></a> Anzeigen des Inhalts einer DAC  
  Es gibt zwei Vorgehensweisen, um den Inhalt eines Datenebenenanwendungs-Pakets (DAC) anzuzeigen. Sie können das DAC-Paket in ein DAC-Projekt in SQL Server Developer Tools importieren. Der Inhalt des Pakets kann in einen Ordner entpackt werden.  
   
  **Anzeigen einer DAC in SQL Server Developer Tools**  
   
-1.  Öffnen Sie das Menü **Datei**, und klicken Sie auf **Neu** und dann auf **Projekt...**.  
+1.  Öffnen Sie das Menü **Datei**, und klicken Sie auf **Neu** und dann auf **Projekt...** .  
   
 2.  Wählen Sie die **SQL Server** -Projektvorlage aus, und geben Sie **Name**, **Speicherort**und **Projektmappenname**ein.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62917914"
   
 4.  Weitere Informationen zur Verwendung des Assistenten finden Sie unter [Upgrade einer Datenebenenanwendung](upgrade-a-data-tier-application.md).  
   
- **Anzeigen von Datenbankänderungen mithilfe von PowerShell**  
+### <a name="view-database-changes-by-using-powershell"></a>Anzeigen von Datenbankänderungen mithilfe von PowerShell
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, die die anzuzeigende DAC enthält.  
   
@@ -84,15 +84,14 @@ ms.locfileid: "62917914"
   
 4.  Rufen Sie mit der `GetDatabaseChanges()`-Methode ein `ChangeResults`-Objekt ab, und übergeben Sie das Objekt an eine Textdatei, um einen einfachen Bericht der neuen, gelöschten und geänderten Objekte zu generieren.  
   
-### <a name="view-database-changes-example-powershell"></a>Anzeigen eines Beispiels für Datenbankänderungen (PowerShell)  
- **Anzeigen eines Beispiels für Datenbankänderungen (PowerShell)**  
+### <a name="view-database-changes-example-powershell"></a>Anzeigen eines Beispiels für Datenbankänderungen (PowerShell)
   
  Im folgenden Beispiel werden alle Datenbankänderungen gemeldet, die in einer bereitgestellten DAC namens "MyApplicaiton" vorgenommen wurden.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -133,15 +132,14 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  Schließen Sie den Dateidatenstrom, der zum Lesen der DAC-Paketdatei verwendet wurde.  
   
-### <a name="view-upgrade-actions-example-powershell"></a>Anzeigen eines Beispiels für Upgradeaktionen (PowerShell)  
- **Anzeigen eines Beispiels für Upgradeaktionen (PowerShell)**  
+### <a name="view-upgrade-actions-example-powershell"></a>Anzeigen eines Beispiels für Upgradeaktionen (PowerShell)
   
  Im folgenden Beispiel werden die Transact-SQL-Anweisungen gemeldet, die zum Aktualisieren der DAC "MyApplicaiton" auf das in einer MyApplicationVNext.dacpac-Datei definierte Schema ausgeführt werden würde.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -170,9 +168,7 @@ $fileStream.Close()
   
  Entpacken Sie alternativ die DACs in separate Ordner. Anschließend können Sie die Unterschiede mit einem Vergleichstool wie dem Hilfsprogramm "WinDiff" analysieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenebenenanwendungen](data-tier-applications.md)   
  [Bereitstellen einer Datenebenenanwendung](deploy-a-data-tier-application.md)   
  [Upgrade einer Datenebenenanwendung](upgrade-a-data-tier-application.md)  
-  
-  

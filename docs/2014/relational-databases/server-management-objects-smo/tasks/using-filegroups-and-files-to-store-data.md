@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Dateigruppen und Dateien zur Store-Daten | Microsoft-Dokumentation
+title: Verwenden von Dateigruppen und Dateien zum Speichern von Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: efeb2de880834723f37755a47618ece97d31af65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 270df8181fe42f48619736ba858dc0c16d9e30c7
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270749"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781812"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Verwenden von Dateigruppen und Dateien zur Speicherung von Daten
   Datendateien werden zur Speicherung von Datenbankdateien verwendet. Die Datendateien werden in Dateigruppen unterteilt. Das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A>-Eigenschaft, die auf ein <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>-Objekt verweist. Jedes <xref:Microsoft.SqlServer.Management.Smo.FileGroup>-Objekt in dieser Auflistung verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A>-Eigenschaft. Diese Eigenschaft bezieht sich auf eine <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection>-Auflistung, die alle Datendateien enthält, die zur Datenbank gehören. Eine Dateigruppe wird prinzipiell verwendet, um Dateien zu gruppieren, die zur Speicherung eines Datenbankobjekts genutzt werden. Ein Grund für die Verteilung eines Datenbankobjekts über mehrere Dateien ist die Verbesserung der Leistung, insbesondere wenn die Dateien auf unterschiedlichen Laufwerken gespeichert sind.  
@@ -29,7 +29,7 @@ ms.locfileid: "63270749"
  Jede automatisch erstellte Datenbank verfügt über eine Dateigruppe mit dem Namen "Primary" und eine Datendatei, die den gleichen Namen hat wie die Datenbank. Den Auflistungen können weitere Dateien und Gruppen hinzugefügt werden.  
   
 ## <a name="examples"></a>Beispiele  
- Für die folgenden Codebeispiele müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [erstellen Sie eine Visual Basic-SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) und [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Für die folgenden Codebeispiele müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) und [Erstellen eines Visual&#35; C SMO-Projekts in Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-basic"></a>Hinzufügen von Dateigruppen und Datendateien zu einer Datenbank in Visual Basic  
  Die primäre Dateigruppe und die Datendatei werden automatisch mit Standardeigenschaftswerten erstellt. Im Codebeispiel werden einige Eigenschaftswerte angegeben, die Sie verwenden können. Andernfalls werden die Standardeigenschaftswerte verwendet.  
@@ -39,7 +39,7 @@ ms.locfileid: "63270749"
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-c"></a>Hinzufügen von Dateigruppen und Datendateien zu einer Datenbank in Visual C#  
  Die primäre Dateigruppe und die Datendatei werden automatisch mit Standardeigenschaftswerten erstellt. Im Codebeispiel werden einige Eigenschaftswerte angegeben, die Sie verwenden können. Andernfalls werden die Standardeigenschaftswerte verwendet.  
   
-```  
+```csharp
 {  
             Server srv = new Server();  
             //Reference the AdventureWorks2012 database.   
@@ -62,7 +62,7 @@ ms.locfileid: "63270749"
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-powershell"></a>Hinzufügen von Dateigruppen und Datendateien zu einer Datenbank in PowerShell  
  Die primäre Dateigruppe und die Datendatei werden automatisch mit Standardeigenschaftswerten erstellt. Im Codebeispiel werden einige Eigenschaftswerte angegeben, die Sie verwenden können. Andernfalls werden die Standardeigenschaftswerte verwendet.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\default\Databases\  
   
@@ -91,7 +91,7 @@ $df1.Create()
 ## <a name="creating-altering-and-removing-a-log-file-in-visual-c"></a>Erstellen, Ändern und Löschen einer Protokolldatei in Visual C#  
  Im Codebeispiel wird ein <xref:Microsoft.SqlServer.Management.Smo.LogFile>-Objekt erstellt, eine der Eigenschaften geändert und das Objekt dann aus der Datenbank gelöscht.  
   
-```  
+```csharp
 //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
             //Reference the AdventureWorks2012 database.   
@@ -105,18 +105,17 @@ $df1.Create()
             lf1.Growth = 6;  
             //Run the Create method to create the log file on the instance of SQL Server.   
             lf1.Create();  
-            //Alter the growth percentage.   
+            //Alter the growth percentage.
             lf1.Growth = 7;  
             lf1.Alter();  
-            //Remove the log file.   
-            lf1.Drop();  
-  
+            //Remove the log file.
+            lf1.Drop();
 ```  
   
 ## <a name="creating-altering-and-removing-a-log-file-in-powershell"></a>Erstellen, Ändern und Löschen einer Protokolldatei in PowerShell  
  Im Codebeispiel wird ein <xref:Microsoft.SqlServer.Management.Smo.LogFile>-Objekt erstellt, eine der Eigenschaften geändert und das Objekt dann aus der Datenbank gelöscht.  
   
-```  
+```powershell
 #Load the assembly containing the enums used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlEnum")  
   
@@ -148,12 +147,9 @@ $lf1.Create()
 #Alter a value and drop the log file  
 $lf1.Growth = 7.0  
 $lf1.Alter()  
-$lf1.Drop()  
-  
+$lf1.Drop()
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Datenbankdateien und Dateigruppen](../../databases/database-files-and-filegroups.md)  
-  
-  

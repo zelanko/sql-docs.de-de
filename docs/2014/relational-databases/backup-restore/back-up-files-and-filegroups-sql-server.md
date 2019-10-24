@@ -16,12 +16,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c686e5eb9bb44517aa1636dc28c972f6782f8bfe
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62923010"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782750"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Sichern von Dateien und Dateigruppen (SQL Server)
   In diesem Thema wird beschrieben, wie Sie Dateien und Dateigruppen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell sichern. Wenn eine vollständige Datenbanksicherung wegen der Größe der Datenbank und aufgrund von Leistungsanforderungen nicht möglich ist, können Sie stattdessen eine Dateisicherung ausführen. Eine *Dateisicherung* enthält alle Daten in einer oder mehreren Dateien (oder Dateigruppen). Weitere Informationen finden Sie unter [Vollständige Dateisicherungen &#40;SQL Server&#41;](full-file-backups-sql-server.md) und [Differenzielle Sicherungen &#40;SQL Server&#41;](differential-backups-sql-server.md).  
@@ -34,9 +34,9 @@ ms.locfileid: "62923010"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
--   **So sichern Sie Dateien und Dateigruppen mit**  
+-   **So sichern Sie Dateien und Dateigruppen mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,13 +44,13 @@ ms.locfileid: "62923010"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
 -   Die BACKUP-Anweisung ist nicht in einer expliziten oder implizierten Transaktion zulässig.  
   
--   Im einfachen Wiederherstellungsmodell müssen alle Dateien mit Lese-/Schreibzugriff zusammen gesichert werden. Dies hilft Ihnen, die Datenbank bis zu einem bestimmten Zeitpunkt wiederherzustellen. Verwenden Sie die Option READ_WRITE_FILEGROUPS, statt die Dateien bzw. Dateigruppen mit Lese-/Schreibzugriff einzeln anzugeben. Mit dieser Option werden alle Dateigruppen mit Lese-/Schreibzugriff in der Datenbank gesichert. Eine Sicherung, die durch Angeben von READ_WRITE_FILEGROUPS erstellt wird, wird als *Teilsicherung* bezeichnet. Weitere Informationen finden Sie unter [Teilsicherungen &#40;SQL Server&#41;](partial-backups-sql-server.md).  
+-   Im einfachen Wiederherstellungsmodell müssen alle Dateien mit Lese-/Schreibzugriff zusammen gesichert werden. Dies hilft Ihnen, die Datenbank bis zu einem bestimmten Zeitpunkt wiederherzustellen. Verwenden Sie die Option READ_WRITE_FILEGROUPS, statt die Dateien bzw. Dateigruppen mit Lese-/Schreibzugriff einzeln anzugeben. Mit dieser Option werden alle Dateigruppen mit Lese-/Schreibzugriff in der Datenbank gesichert. Eine Sicherung, die durch Angeben von READ_WRITE_FILEGROUPS erstellt wird, wird als *Teilsicherung*bezeichnet. Weitere Informationen finden Sie unter [Teilsicherungen &#40;SQL Server&#41;](partial-backups-sql-server.md).  
   
 -   Weitere Informationen zu Einschränkungen finden Sie unter [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
@@ -58,22 +58,22 @@ ms.locfileid: "62923010"
   
 -   Standardmäßig wird bei jedem erfolgreichen Sicherungsvorgang dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und dem Systemereignisprotokoll ein Eintrag hinzugefügt. Wenn Sie das Protokoll regelmäßig sichern, kann die Anzahl dieser Erfolgsmeldungen schnell ansteigen, d. h., es entstehen sehr große Fehlerprotokolle, die das Suchen nach anderen Meldungen erschweren können. In solchen Fällen können Sie diese Protokolleinträge mithilfe des Ablaufverfolgungsflags 3226 unterdrücken, wenn keines der Skripts von diesen Einträgen abhängig ist. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **db_owner** und **db_backupoperator** verfügen standardmäßig über BACKUP DATABASE- und BACKUP LOG-Berechtigungen.  
   
  Besitz- und Berechtigungsprobleme im Zusammenhang mit der physischen Datei des Sicherungsmediums können den Sicherungsvorgang beeinträchtigen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss über Lese- und Schreibberechtigungen für das Medium verfügen. Das Konto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, muss Schreibberechtigungen haben. Allerdings prüft die gespeicherte Prozedur [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), die den Systemtabellen einen Eintrag für ein Sicherungsmedium hinzufügt, nicht die Dateizugriffsberechtigungen. Solche Probleme mit der physischen Datei des Sicherungsmediums treten möglicherweise erst auf, wenn auf die physische Ressource zugegriffen wird, um einen Sicherungs- oder Wiederherstellungsvorgang auszuführen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-back-up-database-files-and-filegroups"></a>So sichern Sie Datenbankdateien und Dateigruppen  
   
-1.  Stellen Sie eine Verbindung mit der entsprechenden Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und klicken Sie danach im Objekt-Explorer auf den Servernamen, um die Serverstruktur zu erweitern.  
+1.  Klicken Sie im Objekt-Explorer nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]auf den Servernamen, um die Serverstruktur zu erweitern.  
   
 2.  Erweitern Sie **Datenbanken**, und wählen Sie je nach Datenbank eine Benutzerdatenbank aus, oder erweitern Sie **Systemdatenbanken** , und wählen Sie eine Systemdatenbank aus.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern**. Das Dialogfeld **Datenbank sichern** wird angezeigt.  
+3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Tasks**, und klicken Sie dann auf **Sichern**. Das Dialogfeld **Datenbank sichern** wird angezeigt.  
   
 4.  Überprüfen Sie im Listenfeld **Datenbank** den Datenbanknamen. Sie können optional eine andere Datenbank aus der Liste auswählen.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62923010"
   
     -   Um den Sicherungssatz nach einer bestimmten Anzahl von Tagen ablaufen zu lassen, klicken Sie auf **Nach** (die Standardoption). Geben Sie dann die Anzahl von Tagen ein, nach deren Ablauf der Sicherungssatz ablaufen soll. Dieser Wert kann zwischen 0 und 99999 Tagen liegen. Ein Wert von 0 Tagen bedeutet, dass der Sicherungssatz nicht abläuft.  
   
-         Der Standardwert wird im Dialogfeld **Servereigenschaften** (Seite **Datenbankeinstellungen** ) über die Option**Standardbeibehaltung für Sicherungsmedien (in Tagen)** festgelegt. Um auf diese Option zuzugreifen, klicken Sie mit der rechten Maustaste auf den Servernamen im Objekt-Explorer, und wählen Sie die Eigenschaften aus. Wählen Sie anschließend die Seite **Datenbankeinstellungen** aus.  
+         Der Standardwert wird in der Option **Standardbeibehaltung für Sicherungsmedien (in Tagen)** des Dialogfelds **Servereigenschaften** (Seite**Datenbankeinstellungen** ) festgelegt. Um auf diese Option zuzugreifen, klicken Sie mit der rechten Maustaste auf den Servernamen im Objekt-Explorer, und wählen Sie die Eigenschaften aus. Wählen Sie anschließend die Seite **Datenbankeinstellungen** aus.  
   
     -   Zum Speichern des Sicherungssatzes an einem bestimmten Datum klicken Sie auf **Am**. Geben Sie das Datum ein, an dem der Sicherungssatz abläuft.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62923010"
     > [!NOTE]  
     >  Die Optionen im Abschnitt **Transaktionsprotokoll** sind inaktiv, es sei denn, Sie sichern ein Transaktionsprotokoll (wie im Abschnitt **Sicherungstyp** der Seite **Allgemein** angegeben).  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist abhängig vom Wert der Serverkonfigurationsoption **backup-compression default** . Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren**aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren**aktivieren.  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist vom Wert der Serverkonfigurationsoption **Komprimierungsstandard für Sicherung** abhängig. Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren**aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren**aktivieren.  
   
      **So zeigen Sie die aktuelle Standardeinstellung für die Sicherungskomprimierung (Option "backup compression default") an**  
   
@@ -163,10 +163,10 @@ ms.locfileid: "62923010"
     |FILE **=** _logischer_Dateiname_|Gibt den logischen Namen einer Datei an, die in die Dateisicherung eingeschlossen werden soll.|  
     |FILEGROUP **=** _logischer_Dateigruppenname_|Gibt den logischen Namen einer Dateigruppe an, die in die Dateisicherung eingeschlossen werden soll. Beim einfachen Wiederherstellungsmodell wird die Dateigruppensicherung nur für eine schreibgeschützte Dateigruppe unterstützt.|  
     |[ **,** ...*f* ]|Stellt einen Platzhalter dar, der anzeigt, dass mehrere Dateien und Dateigruppen angegeben werden können. Für die Anzahl der Dateien oder Dateigruppen gibt es keine Einschränkungen.|  
-    |*Sicherungsmedium* [ **,** ...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK &#124; TAPE } **=** _physischer_Sicherungsmediumname_<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.|  
-    |WITH *mit_Optionen* [ **,** ...*o* ]|Optional können eine oder mehrere zusätzliche Optionen (z. B. DIFFERENTIAL) angegeben werden.<br /><br /> Hinweis: Für eine differenzielle Dateisicherung ist eine vollständige Dateisicherung als Basis erforderlich. Weitere Informationen finden Sie unter [Erstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).|  
+    |*backup_device* [ **,** ...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK &#124; TAPE } **=** _physischer_Sicherungsmediumname_<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.|  
+    |WITH *with_options* [ **,** ...*o* ]|Optional können eine oder mehrere zusätzliche Optionen (z. B. DIFFERENTIAL) angegeben werden.<br /><br /> Hinweis: Für eine differenzielle Dateisicherung ist eine vollständige Dateisicherung als Basis erforderlich. Weitere Informationen finden Sie unter [Erstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).|  
   
-2.  Bei Verwendung des vollständigen Wiederherstellungsmodells müssen Sie auch das Transaktionsprotokoll sichern. Es müssen ausreichend Protokollsicherungen vorhanden sein, die alle Dateisicherungen umfassen, ausgehend von der ersten Dateisicherung, damit ein vollständiger Dateisicherungssatz für die Wiederherstellung der Datenbank verwendet werden kann. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)vorbereiten.  
+2.  Bei Verwendung des vollständigen Wiederherstellungsmodells müssen Sie auch das Transaktionsprotokoll sichern. Es müssen ausreichend Protokollsicherungen vorhanden sein, die alle Dateisicherungen umfassen, ausgehend von der ersten Dateisicherung, damit ein vollständiger Dateisicherungssatz für die Wiederherstellung der Datenbank verwendet werden kann. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)wiederherstellen können.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  In den folgenden Beispielen werden eine oder mehrere Dateien der sekundären Dateigruppen der `Sales` -Datenbank gesichert. Für diese Datenbank wird das vollständige Wiederherstellungsmodell verwendet, und es sind die folgenden sekundären Dateigruppen vorhanden:  
@@ -215,30 +215,27 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
   
-1.  Verwenden Sie das `Backup-SqlDatabase`-Cmdlet, und geben Sie `Files` als Wert für den `-BackupAction`-Parameter an. Geben Sie zusätzlich einen der folgenden Parameter an:  
+Verwenden Sie das `Backup-SqlDatabase`-Cmdlet, und geben Sie `Files` als Wert für den `-BackupAction`-Parameter an. Geben Sie zusätzlich einen der folgenden Parameter an:  
   
-    -   Um eine bestimmte Datei zu sichern, geben die `-DatabaseFile` *Zeichenfolge* -Parameter, in denen *Zeichenfolge* ist eine oder mehrere Datenbankdateien gesichert werden soll.  
+    -   Um eine bestimmte Datei zu sichern, geben Sie den `-DatabaseFile`*String* -Parameter an, wobei *String* mindestens einer zu sichernden Datenbankdatei entspricht.  
   
-    -   Um alle Dateien in einer bestimmten Dateigruppe zu sichern, geben die `-DatabaseFileGroup` *Zeichenfolge* -Parameter, in denen *Zeichenfolge* ist einer oder mehreren Datenbankdateigruppen gesichert werden soll.  
+    -   Um alle Dateien in einer bestimmten Datei Gruppe zu sichern, geben Sie den `-DatabaseFileGroup`*String* -Parameter an, wobei *String* mindestens einer zu sichernden Daten Bank Dateigruppe entspricht.  
   
      Im folgenden Beispiel wird eine vollständige Dateisicherung von jeder Datei in der sekundären Dateigruppe "FileGroup1" und "FileGroup2" in der `MyDB` -Datenbank erstellt. Die Sicherungen werden am standardmäßigen Sicherungsspeicherort der Serverinstanz `Computer\Instance`erstellt.  
   
-    ```  
-    --Enter this command at the PowerShell command prompt, C:\PS>  
+    ```powershell
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Files -DatabaseFileGroup "FileGroup1","FileGroup2"  
     ```  
   
- **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
+Informationen zum Einrichten und Verwenden des SQL Server PowerShell Anbieters finden Sie unter [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md).
   
--   [SQL Server PowerShell-Anbieter](../../powershell/sql-server-powershell-provider.md)  
-  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Sicherungsverlauf und Headerinformationen &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   
- [Datenbank sichern &#40;Seite „Allgemein“&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
- [Datenbank sichern &#40;Seite „Sicherungsoptionen“&#41;](back-up-database-backup-options-page.md)   
+ [Datenbank sichern &#40;Seite Allgemein&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
+ [Datenbank sichern &#40;Seite 'Sicherungsoptionen'&#41;](back-up-database-backup-options-page.md)   
  [Vollständige Dateisicherungen &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Differenzielle Sicherungen &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Dateiwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](file-restores-full-recovery-model.md)   
