@@ -1,5 +1,5 @@
 ---
-title: Beispiel für eine Konfiguration mit Mindestberechtigungen für PowerPivot für SharePoint 2013 | Microsoft-Dokumentation
+title: Beispiel für eine Konfiguration mit minimalen Berechtigungen für PowerPivot für SharePoint 2013 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f24ee3e02daaaa906c8285cd6d78dacb9973c6ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 147664030dd6e52c4bfaf17efd6fa7aea35d53ae
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079889"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782782"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Beispiel für eine PowerPivot für SharePoint 2013-Konfiguration mit Mindestberechtigungen
   In diesem Thema wird eine PowerPivot für SharePoint 2013-Konfiguration mit Mindestberechtigungen anhand eines Beispiels veranschaulicht. Bei der Konfiguration wird für jede der drei Komponenten ein anderes Konto verwendet, von denen jedes über Mindestberechtigungen verfügt.  
   
 ## <a name="summary-of-accounts"></a>Übersicht der Konten  
- PowerPivot für SharePoint 2013 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienstkonten finden Sie unter [konfigurieren Windows-Dienstkonten und-Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot für SharePoint 2013 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienst Konten finden Sie unter [Konfigurieren von Windows-Dienst Konten und-Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx).  
   
  In der folgenden Tabelle werden die Eigenschaften der drei Konten zusammengefasst, die in diesem Beispiel für eine Konfiguration mit Mindestberechtigungen verwendet werden.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66079889"
 |Analysis Services-Dienstkonto|**SPsvc**|  
   
 ### <a name="the-sharepoint-administrator-account-spadmin"></a>Das SharePoint-Administratorkonto (SpAdmin)  
- **SPAdmin** ist ein Domänenkonto, das Sie zum Installieren und Konfigurieren der Farm verwenden. Konto zum Ausführen von den SharePoint-Konfigurations-Assistenten und das PowerPivot-Konfigurationstool für SharePoint 2013 **SPAdmin** Konto ist das einzige Konto, das lokale Administratorrechte erforderlich sind. Vor dem Ausführen des PowerPivot-Konfigurationstools, die **SPAdmin** -Konto Berechtigungen für die SQL Server-Datenbankinstanz, auf SharePoint Inhalts- und Konfigurationsdatenbanken einrichtet. Damit Sie das SPAdmin-Konto in einem Szenario mit Mindestberechtigungen konfigurieren können, muss es Mitglied in den Rollen **securityadmin** und **dbcreator**sein.  
+ **SPAdmin** ist ein Domänenkonto, das Sie zum Installieren und Konfigurieren der Farm verwenden. Dabei handelt es sich um das Konto, mit dem der SharePoint-Konfigurations-Assistent und das Power Pivot-Konfigurations Tool für SharePoint 2013 ausgeführt werden. das **SPAdmin** -Konto ist das einzige Konto, für das lokale Administrator Rechte erforderlich sind. Vor dem Ausführen des Power Pivot-Konfigurationstools gewähren Sie dem **SPAdmin** -Konto Berechtigungen für die SQL Server-Daten Bank Instanz, auf der SharePoint Inhalts-und Konfigurations Datenbanken erstellt. Damit Sie das SPAdmin-Konto in einem Szenario mit Mindestberechtigungen konfigurieren können, muss es Mitglied in den Rollen **securityadmin** und **dbcreator**sein.  
   
 ### <a name="the-farm-account-spfarm"></a>Das Farmkonto (SPFarm)  
  **SPFarm** ist ein Domänenkonto, das der SharePoint-Timerdienst und die Webanwendung der Zentraladministration für den Zugriff auf die SharePoint-Inhaltsdatenbank verwenden. Dieses Konto muss nicht als lokaler Administrator eingerichtet sein. Der SharePoint-Konfigurations-Assistent gewährt die entsprechenden Mindestberechtigungen in der SQL Server-Back-End-Datenbank. Die Mindestberechtigung für die SQL Server-Konfiguration ist die Mitgliedschaft in den Rollen **securityadmin** und **dbcreator**.  
@@ -40,7 +40,7 @@ ms.locfileid: "66079889"
 ### <a name="the-service-account-for-powerpivot-service-spsvc"></a>Das Dienstkonto für den PowerPivot-Dienst (SPsvc)  
  Wenn eine neue SharePoint-Farm vor dem Ausführen des PowerPivot-Konfigurationstools noch nicht konfiguriert wurde, werden standardmäßig folgende Anwendungen vom PowerPivot-Konfigurationstool erstellt:  
   
--   PowerPivot-Service-Anwendung.  
+-   Power Pivot-Dienst Anwendung.  
   
 -   Excel Services-Anwendung  
   
@@ -50,19 +50,19 @@ ms.locfileid: "66079889"
   
  **So erstellen Sie ein neues SPsvc-Domänenkonto, das als SharePoint-Dienstkonto verwendet werden soll**  
   
-1.  Klicken Sie im SharePoint-Zentraladministration auf **Sicherheit**.  
+1.  Klicken Sie in der SharePoint-zentral Administration auf **Sicherheit**.  
   
-2.  Klicken Sie auf **Dienstkonten konfigurieren**  
+2.  Klicken Sie auf **Dienst Konten konfigurieren** .  
   
-3.  Klicken Sie auf **neues verwaltetes Konto registrieren**.  
+3.  Klicken Sie auf **Neues verwaltetes Konto registrieren**.  
   
  Das **SPSvc** -Konto verfügt über keine lokalen Administratorberechtigungen, und SPsvc verfügt über keine Berechtigungen in der SharePoint-Datenbank. Die einzigen Berechtigungen, die SPsvc erfordert, sind Administratorrechte für die PowerPivot-Instanz von Analysis Services.  
   
  **So konfigurieren Sie den entsprechenden Anwendungspool für die Verwendung des SPsvc-Kontos**  
   
-1.  Klicken Sie im SharePoint-Zentraladministration auf **Sicherheit**.  
+1.  Klicken Sie in der SharePoint-zentral Administration auf **Sicherheit**.  
   
-2.  Klicken Sie auf **Dienstkonten konfigurieren**.  
+2.  Klicken Sie auf **Dienst Konten konfigurieren**.  
   
 3.  Wählen Sie den von der PowerPivot-Dienstanwendung verwendeten Dienstanwendungspool aus. Wählen Sie dann das SPSvc-Konto aus.  
   
@@ -72,10 +72,7 @@ ms.locfileid: "66079889"
   
 2.  Führen Sie den folgenden PowerShell-Code aus:  
   
-    ```  
+    ```powershell
     $webApp = Get-SPWebApplication "http://<servername>"  
-    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")  
-  
+    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")
     ```  
-  
-  
