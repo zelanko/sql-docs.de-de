@@ -15,12 +15,12 @@ ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a732ccf71e0b52b83ae1fabdef88235595d4c194
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50ed3ac0703429f7848a7eb7b4fc9413a0f3e5cf
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188757"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783377"
 ---
 # <a name="view-a-job"></a>View a Job
   In diesem Thema wird beschrieben, wie Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen können.  
@@ -29,7 +29,7 @@ ms.locfileid: "68188757"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So zeigen Sie einen Auftrag an mit**  
   
@@ -39,12 +39,12 @@ ms.locfileid: "68188757"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
  Sie können nur die Aufträge anzeigen, die Sie besitzen, es sei denn, Sie sind ein Mitglied der festen Serverrolle **sysadmin** . Mitglieder dieser Rolle können alle Aufträge anzeigen. Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-a-job"></a>So zeigen Sie einen Auftrag an  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68188757"
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```  
+    ```sql
     -- lists all aspects of the information for the job NightlyBackups.  
     USE msdb ;  
     GO  
@@ -75,9 +75,7 @@ ms.locfileid: "68188757"
     GO  
     ```  
   
-##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
+##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
  **So zeigen Sie einen Auftrag an**  
   
  Verwenden Sie die `Job`-Klasse in einer von Ihnen ausgewählten Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

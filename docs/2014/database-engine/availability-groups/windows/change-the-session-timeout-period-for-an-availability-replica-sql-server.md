@@ -14,12 +14,12 @@ ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce0b7de068162e98f4a5f768a8024459852c2d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1408d970093fde0e2efea9662b56b9f099d6b0b4
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62792070"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783033"
 ---
 # <a name="change-the-session-timeout-period-for-an-availability-replica-sql-server"></a>Ändern des Sitzungstimeouts für ein Verfügbarkeitsreplikat (SQL Server)
   In diesem Thema wird beschrieben, wie das Sitzungstimeout eines AlwaysOn-Verfügbarkeitsreplikats mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]konfiguriert wird. Das Sitzungstimeout ist eine Replikateigenschaft, die steuert, wie lange (in Sekunden) ein Verfügbarkeitsreplikat auf eine Pingantwort von einem verbundenen Replikat wartet, bevor die Verbindung als fehlgeschlagen betrachtet wird. Standardmäßig wartet ein Replikat 10 Sekunden auf eine Pingantwort. Diese Replikateigenschaft wendet nur die Verbindung zwischen einem angegebenen sekundären Replikat und dem primären Replikat der Verfügbarkeitsgruppe an. Weitere Informationen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "62792070"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Ändern des Sitzungstimeouts mit:**  
   
@@ -40,21 +40,21 @@ ms.locfileid: "62792070"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Prerequisites  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat hostet.  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
  Es wird empfohlen, einen Timeoutzeitraum von 10 Sekunden oder mehr zu wählen. Wenn Sie diesen Wert auf weniger als 10 Sekunden festlegen, verpasst ein stark ausgelastetes System möglicherweise PINGs und meldet einen falschen Fehler.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So ändern Sie das Sitzungstimeout für ein Verfügbarkeitsreplikat**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Verfügbarkeitsreplikat hostet, und erweitern Sie die Serverstruktur.  
@@ -88,7 +88,8 @@ ms.locfileid: "62792070"
     ```  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
- **So ändern Sie das Sitzungstimeout für ein Verfügbarkeitsreplikat**  
+
+### <a name="to-change-the-session-timeout-period-for-an-availability-replica"></a>So ändern Sie das Sitzungstimeout für ein Verfügbarkeitsreplikat
   
 1.  Ändern Sie das Verzeichnis (`cd`) zur Serverinstanz, die das primäre Replikat hostet.  
   
@@ -96,19 +97,14 @@ ms.locfileid: "62792070"
   
      Mit dem folgenden Befehl wird der Zeitraum für das Sitzungstimeout z. B. auf 15 Sekunden festgelegt.  
   
-    ```  
-    Set-SqlAvailabilityReplica -SessionTimeout 15 `   
-    -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
+    ```powershell
+    Set-SqlAvailabilityReplica -SessionTimeout 15 -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   
     > [!NOTE]  
     >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das `Get-Help`-Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
- **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
+Informationen zum Einrichten und Verwenden des SQL Server PowerShell Anbieters finden Sie unter [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md).
   
--   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

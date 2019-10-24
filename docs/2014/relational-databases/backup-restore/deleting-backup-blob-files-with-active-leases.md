@@ -10,12 +10,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e4550f64d815c40b4069c2e62e9eee7ffd0cf1d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154761"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783057"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Löschen von BLOB-Sicherungsdateien mit aktiver Lease
   Beim Sichern oder Wiederherstellen von Azure Storage erhält SQL Server eine unbegrenzte Lease, um exklusiven Zugriff auf das BLOB zu sperren. Nachdem die Sicherung oder Wiederherstellung erfolgreich abgeschlossen wurde, wird die Lease wieder freigegeben. Wenn eine Sicherung oder Wiederherstellung fehlschlägt, wird im Rahmen des Sicherungsvorgangs versucht, ungültige BLOBs zu bereinigen. Kann die Sicherung jedoch aufgrund eines längeren bzw. dauerhaften Netzwerkverbindungsfehlers nicht ausgeführt werden, ist der Sicherungsvorgang u. U. nicht in der Lage, auf das BLOB zuzugreifen, sodass das BLOB verwaist ist. Dies bedeutet, dass das BLOB erst wieder beschreibbar ist bzw. gelöscht werden kann, nachdem die Lease freigegeben wurde. In diesem Thema wird beschrieben, wie die Lease freigegeben und das BLOB gelöscht wird.  
@@ -29,29 +29,28 @@ ms.locfileid: "70154761"
 ## <a name="managing-orphaned-blobs"></a>Verwalten verwaister BLOBs  
  In den folgenden Schritten wird beschrieben, wie nach einem fehlerhaften Sicherungs- oder Wiederherstellungsvorgang ein Cleanup ausgeführt wird. Sämtliche Schritte können mithilfe von PowerShell-Skripts ausgeführt werden. Im folgenden Abschnitt finden Sie ein Codebeispiel:  
   
-1.  **Identifizieren von blobspeicher mit Leases:** Falls Sie über ein Skript oder einen Prozess zum Ausführen der Sicherungsvorgänge verfügen, können Sie den Fehler möglicherweise innerhalb des Skripts oder Prozesses ermitteln und die Blobs entsprechend bereinigen.   Sie können die BLOBs mit aktiven Leases auch mithilfe der LeaseStats-Eigenschaft und LeastState-Eigenschaft identifizieren. Nachdem Sie die BLOBs identifiziert haben, sollten Sie die Liste überprüfen, sicherstellen, dass die Sicherungsdatei gültig ist, und erst dann das BLOB löschen.  
+1.  **Ermitteln von BLOBs, die über Leases verfügen:** Falls Sie über ein Skript oder einen Prozess zum Ausführen der Sicherungsvorgänge verfügen, können Sie den Fehler möglicherweise innerhalb des Skripts oder Prozesses ermitteln und die BLOBs entsprechend bereinigen.   Sie können die BLOBs mit aktiven Leases auch mithilfe der LeaseStats-Eigenschaft und LeastState-Eigenschaft identifizieren. Nachdem Sie die BLOBs identifiziert haben, sollten Sie die Liste überprüfen, sicherstellen, dass die Sicherungsdatei gültig ist, und erst dann das BLOB löschen.  
   
 2.  **Unterbrechen der Lease:** Durch eine autorisierte Anforderung kann die Lease ohne Angabe einer Lease-ID unterbrochen werden. Weitere Informationen finden Sie [hier](https://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  SQL Server gibt eine Lease-ID aus, um während des Wiederherstellungsvorgangs einen exklusiven Zugriff zu gewährleisten. Die ID für die Wiederherstellungslease lautet BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Löschen des BLOBs:** Um ein BLOB zu löschen, das über eine aktive Leasedauer verfügt, müssen Sie zunächst die Leasedauer unterbrechen.  
+3.  **Löschen des BLOBs:** Um ein BLOB zu löschen, das über eine aktive Lease verfügt, müssen Sie zunächst die Lease unterbrechen.  
   
 ###  <a name="Code_Example"></a> Beispiel für ein PowerShell-Skript  
- **Wichtig WennSie\* PowerShell 2,0 ausführen, haben Sie möglicherweise Probleme beim Laden der Assembly "Microsoft WindowsAzure. Storage. dll". \* \* \*** Es wird empfohlen, ein Upgrade auf PowerShell 3.0 auszuführen, um das Problem zu beheben. Sie können auch die folgende Problemumgehung für PowerShell 2.0 verwenden:  
+ **\* \* wichtigen \* \*** Wenn Sie PowerShell 2,0 ausführen, haben Sie möglicherweise Probleme beim Laden der Assembly "Microsoft WindowsAzure. Storage. dll". Es wird empfohlen, ein Upgrade auf PowerShell 3.0 auszuführen, um das Problem zu beheben. Sie können auch die folgende Problemumgehung für PowerShell 2.0 verwenden:  
   
 -   Lassen Sie die .NET 2.0- und .NET 4.0-Assemblys zur Laufzeit laden. Dazu erstellen Sie eine Datei powershell.exe.config bzw. ändern eine bereits vorhandene Datei mit folgendem Code:  
   
-    ```  
-    <?xml version="1.0"?>   
-    <configuration>   
-        <startup useLegacyV2RuntimeActivationPolicy="true">   
-            <supportedRuntime version="v4.0.30319"/>   
-            <supportedRuntime version="v2.0.50727"/>   
-        </startup>   
-    </configuration>  
-  
+    ```xml
+    <?xml version="1.0"?>
+    <configuration>
+        <startup useLegacyV2RuntimeActivationPolicy="true">
+            <supportedRuntime version="v4.0.30319"/>
+            <supportedRuntime version="v2.0.50727"/>
+        </startup>
+    </configuration>
     ```  
   
  Das folgende Beispiel veranschaulicht, wie BLOBs mit aktiven Leases identifiziert und die Leases anschließend unterbrochen werden. Das Beispiel zeigt auch, wie Sie nach freigegebenen Lease-IDs filtern.  
@@ -80,11 +79,11 @@ ms.locfileid: "70154761"
   
      **Leases werden unterbrochen**  
   
-     **Bei der Lease für die \<Blob-URL> handelt es sich um eine Wiederherstellungslease: Diese Meldung wird nur bei einem Blob mit einer Wiederherstellungslease angezeigt, die noch aktiv ist.**  
+     **Die Lease für die \<Blob-URL> ist eine Wiederherstellungslease: Diese Meldung wird nur bei einem Blob mit einer Wiederherstellungslease angezeigt, die noch aktiv ist.**  
   
      **Die Lease für die \<Blob-URL> ist keine Wiederherstellungslease. Die Lease für \<Blob-URL> wird unterbrochen.**  
   
-```  
+```powershell
 param(  
        [Parameter(Mandatory=$true)]  
        [string]$storageAccount,  
@@ -104,34 +103,32 @@ $bytes = [System.IO.File]::ReadAllBytes($storageAssemblyPath)
 [System.Reflection.Assembly]::Load($bytes)  
   
 $cred = New-Object 'Microsoft.WindowsAzure.Storage.Auth.StorageCredentials' $storageAccount, $storageKey  
-  
 $client = New-Object 'Microsoft.WindowsAzure.Storage.Blob.CloudBlobClient' "https://$storageAccount.blob.core.windows.net", $cred  
-  
 $container = $client.GetContainerReference($blobContainer)  
   
 #list all the blobs  
-$allBlobs = $container.ListBlobs()   
+$allBlobs = $container.ListBlobs()
   
 $lockedBlobs = @()  
 # filter blobs that are have Lease Status as "locked"  
 foreach($blob in $allBlobs)  
 {  
-    $blobProperties = $blob.Properties   
+    $blobProperties = $blob.Properties
     if($blobProperties.LeaseStatus -eq "Locked")  
     {  
         $lockedBlobs += $blob  
-  
     }  
 }  
   
 if ($lockedBlobs.Count -eq 0)  
-    {   
-        Write-Host " There are no blobs with locked lease status"  
-    }  
+{
+    Write-Host " There are no blobs with locked lease status"  
+}
+
 if($lockedBlobs.Count -gt 0)  
 {  
-    write-host "Breaking leases"  
-    foreach($blob in $lockedBlobs )   
+    Write-Host "Breaking leases"  
+    foreach($blob in $lockedBlobs )
     {  
         try  
         {  
@@ -149,11 +146,8 @@ if($lockedBlobs.Count -gt 0)
         Write-Host "Breaking lease on $($blob.Uri)"  
         $blob.BreakLease($(New-TimeSpan), $null, $null, $null) | Out-Null  
     }  
-}  
-  
+}
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  
-  

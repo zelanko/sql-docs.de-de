@@ -16,12 +16,12 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 183acf0bf1e6e92483989545a710769501fa946d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85cd7335290a619a7dd7b5e2cfcb729879bdaf6f
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814138"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782951"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server)
   In diesem Thema wird beschrieben, wie eine sekundäre Datenbank aus einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]entfernt wird.  
@@ -30,7 +30,7 @@ ms.locfileid: "62814138"
   
      [Erforderliche Komponenten](#Prerequisites)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So entfernen Sie eine sekundäre Datenbank mit**  
   
@@ -42,19 +42,19 @@ ms.locfileid: "62814138"
   
 -   **Nachverfolgung:**  [Nach dem Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a>   
 ###  <a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
   
 -   Dieser Task wird nur für sekundäre Replikate unterstützt. Sie müssen mit der Serverinstanz verbunden sein, auf der das sekundäre Replikat gehostet wird, aus dem die Datenbank entfernt werden soll.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So entfernen Sie eine sekundäre Datenbank aus einer Verfügbarkeitsgruppe**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, auf der das sekundäre Replikat gehostet wird, aus dem Sie mindestens eine sekundäre Datenbanken entfernen möchten, und erweitern Sie die Serverstruktur.  
@@ -86,7 +86,7 @@ ms.locfileid: "62814138"
   
      Im folgenden Beispiel wird die sekundäre Datenbank *MyDb2* aus ihrer Verfügbarkeitsgruppe entfernt.  
   
-    ```  
+    ```sql
     ALTER DATABASE MyDb2 SET HADR OFF;  
     GO  
     ```  
@@ -96,13 +96,12 @@ ms.locfileid: "62814138"
   
 1.  Ändern Sie das Verzeichnis (`cd`) in die Serverinstanz, die das sekundäre Replikat hostet.  
   
-2.  Verwenden Sie das **Remove-SqlAvailabilityDatabase** -Cmdlet, und geben Sie dabei den Namen der Verfügbarkeitsdatenbank an, die aus der Verfügbarkeitsgruppe entfernt werden soll. Wenn Sie mit einer Serverinstanz verbunden sind, auf der ein sekundäres Replikat gehostet wird, wird nur die lokale sekundäre Datenbank aus der Verfügbarkeitsgruppe entfernt.  
+2.  Verwenden Sie das Cmdlet **Remove-SqlAvailabilityDatabase** , und geben Sie dabei den Namen der Verfügbarkeitsdatenbank an, die aus der Verfügbarkeitsgruppe entfernt werden soll. Wenn Sie mit einer Serverinstanz verbunden sind, auf der ein sekundäres Replikat gehostet wird, wird nur die lokale sekundäre Datenbank aus der Verfügbarkeitsgruppe entfernt.  
   
      Beispielsweise wird durch den folgenden Befehl die sekundäre Datenbank `MyDb8` aus dem sekundären Replikat entfernt, das von der Serverinstanz `SecondaryComputer\Instance`gehostet wird. Die Daten der entfernten sekundären Datenbanken werden nicht mehr synchronisiert. Dieser Befehl wirkt sich nicht auf die primäre Datenbank oder andere sekundäre Datenbanken aus.  
   
-    ```  
-    Remove-SqlAvailabilityDatabase `  
-    -Path SQLSERVER:\Sql\SecondaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb8  
+    ```powershell
+    Remove-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\SecondaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb8  
     ```  
   
     > [!NOTE]  
@@ -112,7 +111,7 @@ ms.locfileid: "62814138"
   
 -   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe  
+##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe  
  Wenn eine sekundäre Datenbank entfernt wird, wird sie nicht mehr der Verfügbarkeitsgruppe hinzugefügt, und alle Informationen zur entfernten sekundären Datenbank werden von der Verfügbarkeitsgruppe verworfen. Die entfernte sekundäre Datenbank wechselt in den Status RESTORING.  
   
 > [!TIP]  
@@ -128,8 +127,6 @@ ms.locfileid: "62814138"
   
      Weitere Informationen finden Sie unter [Wiederherstellen einer Datenbank ohne Wiederherstellung von Daten &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
  [Entfernen einer primären Datenbank aus einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
-  
-  

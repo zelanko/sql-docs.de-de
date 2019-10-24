@@ -13,12 +13,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7605f4e5fd2fd6601cf1d132b438187edeeb29fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00cf7a7fab52640cc3fc19a3d9da051d281be7c2
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62792040"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783011"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe (SQL Server)
   In diesem Thema wird beschrieben, wie ein sekundäres Replikat einer vorhandenen AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]hinzugefügt wird.  
@@ -27,7 +27,7 @@ ms.locfileid: "62792040"
   
      [Voraussetzungen und Einschränkungen](#PrerequisitesRestrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Hinzufügen eines Replikats mit:**  
   
@@ -48,12 +48,12 @@ ms.locfileid: "62792040"
   
  Weitere Informationen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-##  <a name="Security"></a> Sicherheit  
+##  <a name="Security"></a> Security  
   
 ###  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So fügen Sie ein Replikat hinzu**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Verfügbarkeitsreplikat hostet, und erweitern Sie die Serverstruktur.  
@@ -81,7 +81,7 @@ ms.locfileid: "62792040"
   
      Beispielsweise wird durch die folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung ein neues Replikat für eine Verfügbarkeitsgruppe namens `MyAG` auf der von `COMPUTER04`gehosteten Standardserverinstanz, deren Endpunkt-URL `TCP://COMPUTER04.Adventure-Works.com:5022'`lautet, erstellt. Das Replikat unterstützt ein manuelles Failover und den Verfügbarkeitsmodus für asynchrone Commits.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAG ADD REPLICA ON 'COMPUTER04'   
        WITH (  
              ENDPOINT_URL = 'TCP://COMPUTER04.Adventure-Works.com:5022',  
@@ -99,7 +99,7 @@ ms.locfileid: "62792040"
   
      Beispielsweise wird mit dem folgenden Befehl einer vorhandenen Verfügbarkeitsgruppe namens `MyAg`ein Verfügbarkeitsreplikat hinzugefügt. Das Replikat unterstützt ein manuelles Failover und den Verfügbarkeitsmodus für asynchrone Commits. In der sekundären Rolle unterstützt dieses Replikat Verbindungen mit Lesezugriff, sodass Sie die schreibgeschützte Verarbeitung auf dieses Replikat auslagern können.  
   
-    ```  
+    ```powershell
     $agPath = "SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg"  
     $endpointURL = "TCP://PrimaryServerName.domain.com:5022"  
     $failoverMode = "Manual"  
@@ -121,7 +121,7 @@ ms.locfileid: "62792040"
   
 -   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Hinzufügen eines sekundären Replikats  
+##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Hinzufügen eines sekundären Replikats  
  Zum Hinzufügen eines Replikats für eine vorhandene Verfügbarkeitsgruppe müssen Sie die folgenden Schritte ausführen:  
   
 1.  Stellen Sie eine Verbindung mit der Serverinstanz her, die das neue sekundäre Replikat hosten wird.  
@@ -149,11 +149,11 @@ ms.locfileid: "62792040"
   
 -   [Ändern des Sitzungstimeouts für ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
  [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [Verwenden Sie das AlwaysOn &#40;-&#41; Dashboard SQL Server Management Studio](use-the-always-on-dashboard-sql-server-management-studio.md)    
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

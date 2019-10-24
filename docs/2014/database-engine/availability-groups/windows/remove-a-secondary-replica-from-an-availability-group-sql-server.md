@@ -15,12 +15,12 @@ ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 91a19eebfb03019fdbd928a340c139a23d9f27d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b927483f5e57272460f1c2f0f1c4b1bca56a3abe
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814076"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782934"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>Entfernen einer sekundären Replikats aus einer Verfügbarkeitsgruppe (SQL Server)
   In diesem Thema wird beschrieben, wie ein sekundäres Replikat aus einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]entfernt wird.  
@@ -31,7 +31,7 @@ ms.locfileid: "62814076"
   
      [Erforderliche Komponenten](#Prerequisites)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So entfernen Sie ein sekundäres Replikat mit**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62814076"
   
 -   **Nachverfolgung:**  [Nach dem Entfernen eines sekundären Replikats](#PostBestPractices)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -51,16 +51,16 @@ ms.locfileid: "62814076"
   
 -   Nur ein sekundäres Replikat kann aus einer Verfügbarkeitsgruppe entfernt werden.  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Prerequisites  
   
 -   Sie benötigen eine Verbindung zur Serverinstanz, die das primäre Replikat der Verfügbarkeitsgruppe hostet.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So entfernen Sie ein sekundäres Replikat**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Verfügbarkeitsreplikat hostet, und erweitern Sie die Serverstruktur.  
@@ -92,7 +92,7 @@ ms.locfileid: "62814076"
   
      Im folgenden Codebeispiel wird ein sekundäres Replikat aus der *MyAG* -Verfügbarkeitsgruppe entfernt. Das sekundäre Zielreplikat befindet sich auf der Serverinstanz *HADR_INSTANCE* auf dem Computer *COMPUTER02*.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  
     ```  
   
@@ -105,9 +105,8 @@ ms.locfileid: "62814076"
   
      Beispielsweise wird durch den folgenden Befehl das Verfügbarkeitsreplikat auf dem `MyReplica` -Server von der Verfügbarkeitsgruppe namens `MyAg`entfernt.  Dieser Befehl muss auf der Serverinstanz ausgeführt werden, von der das primäre Replikat der Verfügbarkeitsgruppe gehostet wird.  
   
-    ```  
-    Remove-SqlAvailabilityReplica `   
-    -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
+    ```powershell
+    Remove-SqlAvailabilityReplica -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   
     > [!NOTE]  
@@ -117,14 +116,12 @@ ms.locfileid: "62814076"
   
 -   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a> Nächster Schritt: Nach dem Entfernen eines sekundären Replikats  
+##  <a name="PostBestPractices"></a> Nachverfolgung: Nach dem Entfernen eines sekundären Replikats  
  Wenn Sie ein Replikat angeben, das derzeit nicht verfügbar ist, wird beim Onlineschalten des Replikats festgestellt, dass es entfernt wurde.  
   
  Wird ein Replikat entfernt, empfängt es keine Daten mehr. Nachdem für ein sekundäres Replikat bestätigt wurde, dass es aus dem globalen Speicher entfernt wurde, entfernt das Replikat die Verfügbarkeitsgruppeneinstellungen aus seinen Datenbanken, die auf der lokalen Serverinstanz im Status RECOVERING verbleiben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)   
  [Entfernen einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)  
-  
-  

@@ -15,12 +15,12 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017171"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782787"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   In diesem Thema wird beschrieben, wie Sie die Mitgliedschaft der Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder SQL Server Management Objects ändern können.  
@@ -31,7 +31,7 @@ ms.locfileid: "63017171"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie die Mitgliedschaft einer Auftragskategorie mit**  
   
@@ -41,16 +41,16 @@ ms.locfileid: "63017171"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>So ändern Sie die Mitgliedschaft einer Auftragskategorie  
   
-1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, auf dem Sie eine Auftragskategorie bearbeiten möchten.  
+1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, auf dem Sie eine Auftragskategorie bearbeiten möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63017171"
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```  
+    ```sql
     -- adding a new job category to the "NightlyBackups" job  
     USE msdb ;  
     GO  
@@ -84,11 +84,9 @@ ms.locfileid: "63017171"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [Sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
-##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
+##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
  **So ändern Sie die Mitgliedschaft einer Auftragskategorie**  
   
  Verwenden Sie die `JobCategory`-Klasse in einer von Ihnen ausgewählten Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell.  
-  
-  

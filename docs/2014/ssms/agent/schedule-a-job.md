@@ -14,19 +14,19 @@ ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abb84377c48778d0c7244c13620fe192b5421ad6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5037448a3ec3cb3590e6fd649d83878bb573f48c
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666762"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783179"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   In diesem Thema wird beschrieben, wie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag geplant wird.  
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So planen Sie einen Auftrag mit**  
   
@@ -36,12 +36,12 @@ ms.locfileid: "62666762"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-and-attach-a-schedule-to-a-job"></a>So erstellen Sie einen Zeitplan und weisen ihn einem Auftrag zu  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62666762"
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
     -- creates a schedule named NightlyJobs.   
@@ -109,9 +109,7 @@ ms.locfileid: "62666762"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) und [Sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) und [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql).  
   
-##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
+##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
  Verwenden Sie die `JobSchedule`-Klasse in einer von Ihnen ausgewählten Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter[SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

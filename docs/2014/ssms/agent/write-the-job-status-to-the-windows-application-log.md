@@ -16,14 +16,14 @@ ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 526e95490644b4fddae3e02e9ee73b57c00797c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211273"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783373"
 ---
-# <a name="write-the-job-status-to-the-windows-application-log"></a>Schreiben des Auftragsstatus in das Windows-Anwendungsprotokoll
+# <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
   In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] konfigurieren müssen, damit der Auftragsstatus mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], oder SQL Server Management Objects in das Windows Anwendungsereignisprotokoll geschrieben wird.  
   
  Sie stellen sicher, dass Datenbankadministratoren wissen, wann Aufträge fertig gestellt sind und wie oft diese ausgeführt werden. Zu den typischen Auftragsantworten gehören folgende:  
@@ -38,7 +38,7 @@ ms.locfileid: "68211273"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So schreiben Sie den Auftragsstatus in das Windows-Anwendungsprotokoll, und zwar mit**  
   
@@ -46,12 +46,12 @@ ms.locfileid: "68211273"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-write-job-status-to-the-windows-application-log"></a>So schreiben Sie den Auftragsstatus in das Windows-Anwendungsprotokoll  
   
@@ -69,19 +69,16 @@ ms.locfileid: "68211273"
   
     -   Klicken Sie auf**Beim Abschluss des Auftrags** , um den Auftragsstatus unabhängig vom Abschlussstatus zu protokollieren.  
   
-##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
- **So schreiben Sie den Auftragsstatus in das Windows-Anwendungsprotokoll**  
+##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
+
+### <a name="to-write-job-status-to-the-windows-application-log"></a>So schreiben Sie den Auftragsstatus in das Windows-Anwendungsprotokoll
   
  Rufen Sie die `EventLogLevel`-Eigenschaft der `Job`-Klasse in einer Programmiersprache Ihrer Wahl auf, z. B. Visual Basic, Visual C# oder PowerShell.  
   
  Im folgenden Codebeispiel wird der Auftrag so festgelegt, dass bei Abschluss der Auftragsausführung ein Betriebssystem-Ereignisprotokolleintrag generiert wird.  
   
- **PowerShell**  
-  
-```  
+```powershell
 $srv = new-object Microsoft.SqlServer.Management.Smo.Server("(local)")  
 $jb = new-object Microsoft.SqlServer.Management.Smo.Agent.Job($srv.JobServer, "Test Job")  
 $jb.EventLogLevel = [Microsoft.SqlServer.Management.Smo.Agent.CompletionAction]::Always  
 ```  
-  
-  

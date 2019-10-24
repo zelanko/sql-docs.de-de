@@ -15,12 +15,12 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c81f5b22aa61dce596896ccd90bfb1d56054742d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62789294"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782969"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)
   In diesem Thema wird beschrieben, wie ein manuelles Failover ohne Datenverlust (ein *geplantes manuelles Failover*) in einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausgeführt wird. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Bei einem geplanten manuellen Failover geht wie bei jedem [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Failover ein sekundäres Replikat zur primären Rolle und gleichzeitig das frühere primäre Replikat zur sekundären Rolle über.  
@@ -31,7 +31,7 @@ ms.locfileid: "62789294"
 >  Wenn das sekundäre und primäre Replikat für den automatischen Failovermodus konfiguriert sind, kann das sekundäre Replikat nach der Synchronisierung auch als Ziel für ein automatisches Failover dienen. Weitere Informationen finden Sie unter [Verfügbarkeitsmodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](availability-modes-always-on-availability-groups.md).  
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -49,16 +49,16 @@ ms.locfileid: "62789294"
 -   Das sekundäre Zielreplikat muss gerade mit dem primären Replikat synchronisiert werden. Dies erfordert, dass alle sekundären Datenbanken auf diesem sekundären Replikat mit der Verfügbarkeitsgruppe verknüpft und mit ihren entsprechenden primären Datenbanken synchronisiert sein müssen (das heißt, die lokalen sekundären Datenbanken müssen den Status SYNCHRONIZED aufweisen).  
   
     > [!TIP]  
-    >  Um die Failoverbereitschaft eines sekundären Replikats zu ermitteln, fragen Sie die **is_failover_ready**-Spalte in der dynamischen Verwaltungssicht [sys.dm_hadr_database_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql) ab, oder überprüfen Sie die Spalte **Failoverbereitschaft** des [AlwaysOn-Gruppendashboards](use-the-always-on-dashboard-sql-server-management-studio.md).  
+    >  Um die Failoverbereitschaft eines sekundären Replikats zu ermitteln, fragen Sie die **is_failover_ready** -Spalte in der dynamischen Verwaltungssicht [sys.dm_hadr_database_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql) ab, oder überprüfen Sie die Spalte **Failoverbereitschaft** des [AlwaysOn-Gruppendashboards](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
 -   Dieser Task wird nur für das sekundäre Zielreplikat unterstützt. Sie müssen mit der Serverinstanz verbunden sein, auf der das sekundäre Zielreplikat gehostet wird.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So führen Sie manuell ein Failover für eine Verfügbarkeitsgruppe aus**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Serverinstanz her, die ein sekundäres Replikat der Verfügbarkeitsgruppe hostet, für die ein Failover ausgeführt werden muss, und erweitern Sie die Serverstruktur.  
@@ -78,11 +78,11 @@ ms.locfileid: "62789294"
   
      ALTER AVAILABILITY GROUP *Gruppenname* FAILOVER  
   
-     Dabei ist *Gruppenname* der Name der Verfügbarkeitsgruppe.  
+     Dabei ist *group_name* der Name der Verfügbarkeitsgruppe.  
   
      Im folgenden Beispiel wird manuell ein Failover der *MyAg* -Verfügbarkeitsgruppe zum verbundenen sekundären Replikat ausgeführt.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAg FAILOVER;  
     ```  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62789294"
   
      Im folgenden Beispiel wird manuell ein Failover der *MyAg* -Verfügbarkeitsgruppe zum sekundären Replikat mit dem angegebenen Pfad ausgeführt.  
   
-    ```  
+    ```powershell
     Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg  
     ```  
   
@@ -106,14 +106,12 @@ ms.locfileid: "62789294"
   
 -   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Aufrufen der SQL Server PowerShell-Hilfe](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nachdem Sie manuell ein Failover einer Verfügbarkeitsgruppe  
+##  <a name="FollowUp"></a> Nachverfolgung: Nach dem manuellen Ausführen eines Failovers für eine Verfügbarkeitsgruppe  
  Wenn Sie ein Failover außerhalb des [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] der Verfügbarkeitsgruppe ausgeführt haben, passen Sie die Quorumabstimmungen der WSFC-Knoten an die Konfiguration der neuen Verfügbarkeitsgruppe an. Weitere Informationen finden Sie unter [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
+ [Failover-und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41; ](failover-and-failover-modes-always-on-availability-groups.md)    
  [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
-  
-  

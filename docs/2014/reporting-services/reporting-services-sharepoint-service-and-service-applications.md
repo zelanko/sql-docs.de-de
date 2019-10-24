@@ -1,5 +1,5 @@
 ---
-title: Reporting Services-SharePoint-Dienst und-dienstanwendungen | Microsoft-Dokumentation
+title: Reporting Services SharePoint-Dienst und-Dienst Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 035cc8b8de493761b79ac391f2f543f96c941507
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93a8092dc9ed731349a1948a74e3950eb32f4f47
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66102870"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783159"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services-SharePoint-Dienst und -Dienstanwendungen
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus basiert auf der SharePoint-Dienstarchitektur und verwendet einen SharePoint-Dienst sowie mindestens eine Dienstanwendung. Beim Erstellen einer Dienstanwendung wird der Dienst verfügbar gemacht und die Datenbank der Dienstanwendung generiert. Sie können mehrere Reporting Services-Dienstanwendungen erstellen, doch für die meisten Bereitstellungsszenarien ist eine Dienstanwendung ausreichend.  
@@ -62,19 +62,19 @@ ms.locfileid: "66102870"
   
 1.  Fügen Sie das Anwendungspoolobjekt des Anwendungspoolnamens einer Variablen hinzu, die an die neue Aktion übergeben wird.  
   
-    ```  
-    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
+    ```powershell
+    $appPoolName = Get-SPServiceApplicationPool "<application pool name>"  
     ```  
   
 2.  Erstellen Sie die Dienstanwendung mit einem von Ihnen angegebenen Namen und Anwendungspool.  
   
-    ```  
+    ```powershell
     New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  Rufen Sie das neue Dienstanwendungsobjekt ab, und übergeben Sie das Objekt in die Pipe des neuen Proxy-Cmdlets.  
   
-    ```  
+    ```powershell
     Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
@@ -83,6 +83,4 @@ ms.locfileid: "66102870"
 |Aufgabe|Link|  
 |----------|----------|  
 |Verwalten der Einstellungen der Dienstanwendung|[Manage a Reporting Services SharePoint Service Application (Verwalten einer Reporting Services-SharePoint-Dienstanwendung)](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)|  
-|Führen Sie für die Dienstanwendung (einschließlich zugehöriger Komponenten wie Verschlüsselungsschlüssel und Proxy) eine Sicherung und Wiederherstellung aus.|[Sichern und Wiederherstellen von Reporting Services-SharePoint-Dienstanwendungen](../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
-  
-  
+|Führen Sie für die Dienstanwendung (einschließlich zugehöriger Komponenten wie Verschlüsselungsschlüssel und Proxy) eine Sicherung und Wiederherstellung aus.|[Backup and Restore Reporting Services SharePoint Service Applications (Sichern und Wiederherstellen von Reporting Services-SharePoint-Dienstanwendungen)](../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
