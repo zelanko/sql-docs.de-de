@@ -23,7 +23,7 @@ ms.locfileid: "68065454"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Von der Anwendung **sqllogship** werden ein Sicherungs-, Kopier- oder Wiederherstellungsvorgang und zugeordnete Cleanuptasks für eine Protokollversandkonfiguration ausgeführt. Der Vorgang wird in einer bestimmten Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für eine bestimmte Datenbank ausgeführt.  
   
- Informationen zu den Syntaxkonventionen finden Sie unter ![Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)").  
+ ![Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)").Informationen zu den Syntaxkonventionen finden Sie unter [Topic link icon](../tools/command-prompt-utility-reference-database-engine.md)  
   
 ## <a name="syntax"></a>Syntax  
   
