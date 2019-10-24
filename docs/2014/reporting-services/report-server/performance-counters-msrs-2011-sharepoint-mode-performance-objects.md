@@ -1,5 +1,5 @@
 ---
-title: Leistungsindikatoren für den MSRS 2014 Web Service SharePoint Mode und den MSRS 2014 Windows Service SharePoint-Modus, Leistungsobjekte (SharePoint-Modus) | Microsoft-Dokumentation
+title: Leistungsindikatoren für den MSRS 2014-Webdienst im SharePoint-Modus und den MSRS 2014-Windows-Dienst im SharePoint-Modus, Leistungs Objekte (SharePoint-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d994fa563870f01f4a9ca8824b5372587eca804b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23dd102c0144761d3c84d0735357318f27666706
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66103694"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782834"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Leistungsindikatoren für den MSRS 2014-Webdienst im SharePoint-Modus und den MSRS 2014-Windows-Dienst im SharePoint-Modus, Leistungsobjekte (SharePoint-Modus)
   In diesem Thema werden Leistungsindikatoren für die Leistungsobjekte `MSRS 2014 Web Service SharePoint Mode` und `MSRS 2014 Windows Service SharePoint Mode` beschrieben, die Teil einer Bereitstellung von [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] im SharePoint-Modus sind.  
@@ -36,13 +36,13 @@ ms.locfileid: "66103694"
   
  **In diesem Thema:**  
   
--   [Leistungsindikatoren für MSRS 2014 Web Service SharePoint-Modus](#bkmk_webservice)  
+-   [Leistungsindikatoren für den MSRS 2014-Webdienst im SharePoint-Modus](#bkmk_webservice)  
   
--   [Leistungsindikatoren für MSRS 2014 Windows Service SharePoint-Modus](#bkmk_windowsservice)  
+-   [Leistungsindikatoren für den MSRS 2014-Windows-Dienst im SharePoint Modus](#bkmk_windowsservice)  
   
 -   [Zurückgeben von Listen mithilfe von PowerShell-Cmdlets](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> Leistungsindikatoren für MSRS 2014 Web Service SharePoint-Modus  
+##  <a name="bkmk_webservice"></a>Leistungsindikatoren für den MSRS 2014-Webdienst im SharePoint-Modus  
  Mit dem `MSRS 2014 Web Service SharePoint Mode`-Leistungsobjekt wird die Berichtsserverleistung überwacht. Dieses Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen der Verarbeitung auf einem Berichtsserver, die in der Regel über interaktive Vorgänge zum Anzeigen von Berichten gestartet wird. Bei der Einrichtung dieses Leistungsindikators können Sie diesen auf alle Instanzen von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] anwenden oder spezifische Instanzen auswählen. Diese Leistungsindikatoren werden zurückgesetzt, sobald [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] den Berichtsserver-Webdienst beendet.  
   
  In der folgenden Tabelle werden die im `MSRS 2014 Web Service SharePoint Mode`-Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
@@ -55,7 +55,7 @@ ms.locfileid: "66103694"
 |`Cache Misses/Sec`|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Bericht aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  
 |`Cache Misses/Sec (Semantic Models)`|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Modell aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  
 |`First Session Requests/Sec`|Die Anzahl neuer Benutzersitzungen, die pro Sekunde aus dem Berichtsservercache gestartet werden.|  
-|`Memory Cache Hits/Sec`|Die Angabe, wie oft pro Sekunde Berichte aus dem In-Memory-Cache abgerufen werden. Der*Arbeitsspeichercache* ist ein Bestandteil des Caches, der Berichte im CPU-Arbeitsspeicher speichert. Wenn der In-Memory-Cache verwendet wird, ruft der Berichtsserver keinen zwischengespeicherten Inhalt von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab.|  
+|`Memory Cache Hits/Sec`|Die Angabe, wie oft pro Sekunde Berichte aus dem In-Memory-Cache abgerufen werden. Der*In-Memory-Cache* ist ein Bestandteil des Caches, der Berichte im CPU-Speicher speichert. Wenn der In-Memory-Cache verwendet wird, ruft der Berichtsserver keinen zwischengespeicherten Inhalt von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab.|  
 |`Memory Cache Misses/Sec`|Die Anzahl, wie oft Berichte pro Sekunde nicht aus dem Arbeitsspeichercache abgerufen werden konnten.|  
 |`Next Session Requests/Sec`|Die Anzahl der Anforderungen für Berichte, die in einer vorhandenen Sitzung geöffnet sind, pro Sekunde (z. B. Berichte, die aus der Momentaufnahme einer Sitzung gerendert wurden).|  
 |`Report Requests`|Die Anzahl der Berichte, die derzeit aktiv sind und vom Berichtsserver verarbeitet werden.|  
@@ -72,7 +72,7 @@ ms.locfileid: "66103694"
 |`Total Reports Executed`|Die Gesamtzahl der erfolgreich ausgeführten Berichte, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, sobald der Berichtsserver-Webdienst von [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] beendet wird.|  
 |`Total Requests`|Die Gesamtzahl der Anforderungen an den Berichtsserver, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, sobald der Berichtsserver-Webdienst von [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] beendet wird.|  
   
-##  <a name="bkmk_windowsservice"></a> Leistungsindikatoren für MSRS 2014 Windows Service SharePoint-Modus  
+##  <a name="bkmk_windowsservice"></a>Leistungsindikatoren für den MSRS 2014-Windows-Dienst im SharePoint Modus  
  Mit diesem `MSRS 2014 Windows Service SharePoint Mode`-Leistungsobjekt wird der Berichtsserver-Windows-Dienst überwacht. Das Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen der Berichtsverarbeitung, die über geplante Vorgänge gestartet wird. Zu geplanten Vorgängen zählen Abonnierung und Übermittlung, Momentaufnahmen zur Berichtsausführung und der Berichtsverlauf. Bei der Einrichtung dieses Leistungsindikators können Sie diesen auf alle Instanzen von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] anwenden oder spezifische Instanzen auswählen.  
   
  In der folgenden Tabelle werden die im `MSRS 2014 Windows Service SharePoint mode`-Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
@@ -96,7 +96,7 @@ ms.locfileid: "66103694"
 |`Delivers/Sec`|Die Anzahl der Berichtsübermittlungen pro Sekunde, von jeder Übermittlungserweiterung.|  
 |`Events/Sec`|Die Anzahl der pro Sekunde verarbeiteten Ereignisse. Zu den überwachten Ereignissen gehören `SnapshotUpdated` und `TimedSubscription`.|  
 |`First Session Requests/Sec`|Die Anzahl neuer Berichtsausführungssitzungen, die pro Sekunde erstellt wurden.|  
-|`Memory Cache Hits/Sec`|Die Angabe, wie oft pro Sekunde Berichte aus dem In-Memory-Cache abgerufen werden. Der*Arbeitsspeichercache* ist ein Bestandteil des Caches, der Berichte im CPU-Arbeitsspeicher speichert. Wenn der In-Memory-Cache verwendet wird, ruft der Berichtsserver keinen zwischengespeicherten Inhalt von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab.|  
+|`Memory Cache Hits/Sec`|Die Angabe, wie oft pro Sekunde Berichte aus dem In-Memory-Cache abgerufen werden. Der*In-Memory-Cache* ist ein Bestandteil des Caches, der Berichte im CPU-Speicher speichert. Wenn der In-Memory-Cache verwendet wird, ruft der Berichtsserver keinen zwischengespeicherten Inhalt von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab.|  
 |`Memory Cache Misses/Sec`|Die Angabe, wie oft Berichte pro Sekunde nicht aus dem In-Memory-Cache abgerufen werden können.|  
 |`Next Session Requests/Sec`|Die Anzahl der Anforderungen für Berichte, die in einer vorhandenen Sitzung geöffnet sind, pro Sekunde (z. B. Berichte, die aus der Momentaufnahme einer Sitzung gerendert wurden).|  
 |`Report Requests`|Die Anzahl der Berichte, die derzeit aktiv sind und vom Berichtsserver verarbeitet werden. Verwenden Sie diesen Leistungsindikator, um die Zwischenspeicherungsstrategie auszuwerten. Es können u. U. wesentlich mehr Anforderungen als generierte Berichte vorhanden sein.|  
@@ -120,23 +120,25 @@ ms.locfileid: "66103694"
 |`Total Snapshot Updates`|Die Gesamtanzahl der Updates von Berichtsausführungs-Momentaufnahmen.|  
   
 ##  <a name="bkmk_powershell"></a> Zurückgeben von Listen mithilfe von PowerShell-Cmdlets  
- ![Betrifft PowerShell](../media/rs-powershellicon.jpg "PowerShell related content")Das folgende Windows PowerShell-Skript gibt die Indikatorensätze zurück, bei denen CounterSetName mit „msr“ beginnt:  
+ ![PowerShell-bezogener Inhalt](../media/rs-powershellicon.jpg "PowerShell-bezogener Inhalt") Das folgende Windows PowerShell-Skript gibt die Indikatorensätze zurück, bei denen countersetname mit "MSR" beginnt.  
   
-```  
-get-counter -listset msr*  
-Returns a list with the following information  
+```powershell
+Get-Counter -ListSet msr*
+```
+
+Gibt eine Liste mit den folgenden Informationen zurück:
+
+```
 CounterSetName     : MSRS 2014 Windows Service SharePoint Mode  
 CounterSetName     : MSRS 2014 Web Service SharePoint Mode  
 ```  
   
- Das folgende Windows PowerShell-Skript gibt die Liste der Leistungsindikatoren für CounterSetName "MSRS 2014 Windows Service SharePoint Mode" zurück.  
+ Mit dem folgenden Windows PowerShell-Skript wird die Liste der Leistungsindikatoren für countersetname "MSRS 2014 Windows-Dienst im SharePoint-Modus" zurückgegeben.  
   
-```  
-(get-counter -listset "MSRS 2014 Windows Service SharePoint Mode").paths  
+```powershell
+(Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Leistung des Berichtsservers](monitoring-report-server-performance.md)   
- [Leistungsindikatoren für den MSRS 2014 Webdienst und den MSRS 2014 Windows-Dienst, Leistungsobjekte &#40;im einheitlichen Modus&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
-  
-  
+ [Leistungsindikatoren für den MSRS 2014-Webdienst und den MSRS 2014-Windows &#40;-Dienst-Leistungs Objekte im einheitlichen Modus&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  

@@ -22,12 +22,12 @@ ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 190b8f0ec6ac647ee45a07181af1bd7094199dcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd5575c94c9a74623efaa80c9470c54982a41d0d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088683"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783112"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Verwenden der Datenbank-Engine-Cmdlets
   Windows PowerShell-Cmdlets sind Einzelfunktionsbefehle, für die i. d. R. eine Verb-Substantiv-Namenskonvention gilt, z. B. **Get-Help** oder **Set-MachineName**. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter für Windows PowerShell bietet für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]spezifische Cmdlets.  
@@ -43,7 +43,7 @@ ms.locfileid: "66088683"
 ### <a name="partial-parameter-names"></a>Partielle Parameternamen  
  Sie müssen nicht den ganzen Namen eines Cmdlet-Parameters angeben. Sie müssen nur so viele Zeichen des Namens eingeben, dass dieser eindeutig von den anderen Parametern unterschieden werden kann, die von dem Cmdlet unterstützt werden. In diesen Beispielen werden drei Methoden zum Angeben des Parameters **Invoke-Sqlcmd-QueryTimeout** veranschaulicht:  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTimeout 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTime 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3  
@@ -58,9 +58,9 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 |Beschreibt die Verwendung von `Encode-Sqlname` und `Decode-Sqlname` zum Verarbeiten von SQL Server-Bezeichnern, die in Windows PowerShell-Pfaden nicht unterstützte Zeichen enthalten.|[Codierung und Decodierung von SQL Server-Bezeichnern](../powershell/encode-and-decode-sql-server-identifiers.md)|  
 |Beschreibt die Verwendung von `Convert-UrnToPath` zum Konvertieren eines URN (Uniform Resource Name, einheitlicher Name für Ressourcen) für SQL Server-Verwaltbarkeitsobjekte in den entsprechenden Pfad des SQL Server-Anbieters.|[Konvertieren von URNs in SQL Server-Anbieterpfade](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server PowerShell-Anbieter](../powershell/sql-server-powershell-provider.md)   
- [SQL Server-PowerShell](../powershell/sql-server-powershell.md)   
- [Übersicht über die PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
+ [Übersicht über PowerShell-Cmdlets für &#40;AlwaysOn-Verfügbarkeitsgruppen SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63065618"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783239"
 ---
 # <a name="altering-memory-optimized-tables"></a>Ändern von speicheroptimierten Tabellen
   Das Ausführen von Änderungsvorgängen (ALTER) in speicheroptimierten Tabellen wird nicht unterstützt. Hierzu zählen beispielsweise das Ändern von bucket_count, das Hinzufügen oder Entfernen eines Indexes und das Hinzufügen oder Entfernen einer Spalte. Dieses Thema stellt Richtlinien zum Aktualisieren speicheroptimierter Tabellen bereit.  
@@ -63,13 +63,13 @@ ms.locfileid: "63065618"
     select @permissions  
     ```  
   
-4.  Erstellen Sie eine Kopie der Tabelle, und kopieren Sie die Daten aus der ursprünglichen Tabelle in die Tabellenkopie. Die Kopie kann erstellt werden, mithilfe des folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>.  
+4.  Erstellen Sie eine Kopie der Tabelle, und kopieren Sie die Daten aus der ursprünglichen Tabelle in die Tabellenkopie. Die Kopie kann mithilfe der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]<sup>1</sup>erstellt werden.  
   
     ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     Es ist genügend Arbeitsspeicher verfügbar, `T_copy` ist möglicherweise eine Speicheroptimierte Tabelle, wodurch die Daten schneller kopieren.<sup> 2</sup>  
+     Wenn genügend Arbeitsspeicher verfügbar ist, kann `T_copy` eine Speicher optimierte Tabelle sein, wodurch die Daten schneller kopiert werden. <sup>2</sup>  
   
 5.  Löschen Sie die schemagebundenen Objekte, die auf die ursprüngliche Tabelle verweisen.  
   
@@ -83,14 +83,16 @@ ms.locfileid: "63065618"
   
 10. Starten Sie die Arbeitsauslastung auf `T`.  
   
- <sup>1</sup> Beachten Sie, dass `T_copy` wird beibehalten, auf dem Datenträger in diesem Beispiel. Wenn eine Sicherung von `T` verfügbar ist, kann `T_copy` eine nicht dauerhafte oder eine temporäre Tabelle sein.  
+ <sup>1</sup> beachten Sie, dass in diesem Beispiel `T_copy` auf dem Datenträger persistent gespeichert wird. Wenn eine Sicherung von `T` verfügbar ist, kann `T_copy` eine nicht dauerhafte oder eine temporäre Tabelle sein.  
   
- <sup>2</sup> muss genügend Arbeitsspeicher für `T_copy`. Der Arbeitsspeicher wird bei `DROP TABLE` nicht sofort freigegeben. Wenn `T_copy` speicheroptimiert ist, muss genügend Arbeitsspeicher für zwei zusätzliche Kopien von `T` verfügbar sein. Wenn `T_copy` eine datenträgerbasierte Tabelle ist, wird nur Speicher für eine zusätzliche Kopie von `T` benötigt, da der Garbage Collector erst entsprechende Schritte ausführen muss, nachdem die alte Version von `T` gelöscht wurde.  
+ <sup>2</sup> für `T_copy` muss genügend Arbeitsspeicher zur vorhanden sein. Der Arbeitsspeicher wird bei `DROP TABLE` nicht sofort freigegeben. Wenn `T_copy` speicheroptimiert ist, muss genügend Arbeitsspeicher für zwei zusätzliche Kopien von `T` verfügbar sein. Wenn `T_copy` eine datenträgerbasierte Tabelle ist, wird nur Speicher für eine zusätzliche Kopie von `T` benötigt, da der Garbage Collector erst entsprechende Schritte ausführen muss, nachdem die alte Version von `T` gelöscht wurde.  
   
 ## <a name="changing-schema-powershell"></a>Ändern des Schemas (PowerShell)  
  Die folgenden PowerShell-Skripts bereiten Schemaänderungen vor und generieren diese, indem Skripts für die Tabelle und die zugehörigen Berechtigungen erstellt werden.  
   
- Syntax: prepare_schema_change. ps1 *Server_name ** Db_name`schema_name`Table_name*  
+```powershell
+prepare_schema_change.ps1 <serverName> <databaseName> <schemaName> <tableName>
+```
   
  Dieses Skript erwartet als Argumente eine Tabelle und erstellt im aktuellen Ordner ein Skript für das Objekt und dessen Berechtigungen sowie für verweisende schemagebundene Objekte und deren Berechtigungen. Insgesamt werden 7 Skripts für das Aktualisieren des Schemas der Eingabetabelle generiert:  
   
@@ -108,11 +110,10 @@ ms.locfileid: "63065618"
   
 -   Löscht die temporäre Tabelle.  
   
- Das Skript für Schritt 4 sollte entsprechend geändert werden, um die gewünschten Schemaänderungen festzulegen. Wenn alle Änderungen in den Spalten der Tabelle vorhanden sind, sollte die Skripts für Schritt 5 (Kopieren von Daten aus der temporären Tabelle) und 6 (gespeicherte Prozeduren neu erstellen) nach Bedarf aktualisiert werden.  
+ Das Skript für Schritt 4 sollte entsprechend geändert werden, um die gewünschten Schemaänderungen festzulegen. Wenn in den Spalten der Tabelle Änderungen vorgenommen werden, sollten die Skripts für die Schritte 5 (Kopieren von Daten aus temporärer Tabelle) und 6 (gespeicherte Prozeduren neu erstellen) nach Bedarf aktualisiert werden.  
   
-```sql  
-# Prepare for schema changes by scripting out the table, as well as associated permissions  
-# --------  
+```powershell
+# Prepare for schema changes by scripting out the table, as well as associated permissions
 # Usage: prepare_schema_change.ps1 server_name db_name schema_name table_name  
 # stop execution once an error occurs  
 $ErrorActionPreference="Stop"  
@@ -129,7 +130,7 @@ $object = $args[3]
   
 $object_heap = "$object$(Get-Random)"  
   
-[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SMO") | out-null  
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SMO") | Out-Null  
   
 $server =  New-Object ("Microsoft.SqlServer.Management.SMO.Server") ($servername)  
 $scripter = New-Object ("Microsoft.SqlServer.Management.SMO.Scripter") ($server)  
@@ -142,18 +143,18 @@ if($tableUrn.Count -eq 0)
 }  
   
 ## initialize scripting object  
-$scriptingOptions = New-Object ("Microsoft.SqlServer.Management.SMO.ScriptingOptions")   
+$scriptingOptions = New-Object ("Microsoft.SqlServer.Management.SMO.ScriptingOptions")
 $scriptingOptions.Permissions = $True  
 $scriptingOptions.ScriptDrops = $True  
   
 $scripter.Options = $scriptingOptions;  
   
-write-host "(1) Scripting SELECT INTO $object_heap for table [$object] to 1_copy_to_heap_for_$schema`_$object.sql"  
+Write-Host "(1) Scripting SELECT INTO $object_heap for table [$object] to 1_copy_to_heap_for_$schema`_$object.sql"  
 Echo "SELECT * INTO $schema.$object_heap FROM $schema.$object WITH (SNAPSHOT)" | Out-File "1_copy_to_heap_$schema`_$object.sql";  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(2) Scripting DROP for procs schema-bound to [$object] 2_drop_procs_$schema`_$object.sql"  
+Write-Host "(2) Scripting DROP for procs schema-bound to [$object] 2_drop_procs_$schema`_$object.sql"  
 ## query referencing schema-bound objects  
 $dt = $server.Databases[$database].ExecuteWithResults("select r.referencing_schema_name, r.referencing_entity_name  
 from sys.dm_sql_referencing_entities ('$schema.$object', 'OBJECT') as r join sys.sql_modules m on r.referencing_id=m.object_id  
@@ -162,71 +163,69 @@ where r.is_caller_dependent = 0 and m.is_schema_bound=1;")
 ## initialize out file  
 Echo "" | Out-File "2_drop_procs_$schema`_$object.sql"  
 ## loop through schema-bound objects  
-Foreach ($t in $dt.Tables)  
+ForEach ($t In $dt.Tables)  
 {    
-   Foreach ($r in $t.Rows)  
+   ForEach ($r In $t.Rows)  
    {    
       ## script object   
       $so =  $server.Databases[$database].StoredProcedures[$r[1], $r[0]]  
       $scripter.Script($so) | Out-File -Append "2_drop_procs_$schema`_$object.sql"  
    }  
 }  
-write-host "--done--"  
-write-host ""  
-  
-write-host "(3) Scripting DROP table for [$object] to 3_drop_table_$schema`_$object.sql"  
-$scripter.Script($tableUrn) | Out-File "3_drop_table_$schema`_$object.sql";  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
+Write-Host "(3) Scripting DROP table for [$object] to 3_drop_table_$schema`_$object.sql"
+$scripter.Script($tableUrn) | Out-File "3_drop_table_$schema`_$object.sql";
+Write-Host "--done--"  
+Write-Host ""  
   
 ## now script creates  
 $scriptingOptions.ScriptDrops = $False  
   
-write-host "(4) Scripting CREATE table and permissions for [$object] to !please_edit_4_create_table_$schema`_$object.sql"  
-write-host "***** rename this script to 4_create_table.sql after completing the updates to the schema"  
+Write-Host "(4) Scripting CREATE table and permissions for [$object] to !please_edit_4_create_table_$schema`_$object.sql"  
+Write-Host "***** rename this script to 4_create_table.sql after completing the updates to the schema"
 $scripter.Script($tableUrn) | Out-File "!please_edit_4_create_table_$schema`_$object.sql";  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(5) Scripting INSERT INTO table from heap and UPDATE STATISTICS for [$object] to 5_copy_from_heap_$schema`_$object.sql"  
-write-host "[update this script if columns are added to or removed from the table]"  
+Write-Host "(5) Scripting INSERT INTO table from heap and UPDATE STATISTICS for [$object] to 5_copy_from_heap_$schema`_$object.sql"  
+Write-Host "[update this script if columns are added to or removed from the table]"  
 Echo "INSERT INTO [$schema].[$object] SELECT * FROM [$schema].[$object_heap]; UPDATE STATISTICS [$schema].[$object] WITH FULLSCAN, NORECOMPUTE" | Out-File "5_copy_from_heap_$schema`_$object.sql";  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(6) Scripting CREATE PROC and permissions for procedures schema-bound to [$object] to 6_create_procs_$schema`_$object.sql"  
-write-host "[update the procedure definitions if columns are renamed or removed]"  
+Write-Host "(6) Scripting CREATE PROC and permissions for procedures schema-bound to [$object] to 6_create_procs_$schema`_$object.sql"  
+Write-Host "[update the procedure definitions if columns are renamed or removed]"  
 ## initialize out file  
 Echo "" | Out-File "6_create_procs_$schema`_$object.sql"  
 ## loop through schema-bound objects  
-Foreach ($t in $dt.Tables)  
+ForEach ($t In $dt.Tables)  
 {    
-   Foreach ($r in $t.Rows)  
+   ForEach ($r In $t.Rows)  
    {    
       ## script the schema-bound object  
       $so =  $server.Databases[$database].StoredProcedures[$r[1], $r[0]]  
-      foreach($s in $scripter.Script($so))  
+      ForEach($s In $scripter.Script($so))  
         {  
             Echo $s | Out-File -Append "6_create_procs_$schema`_$object.sql"  
             Echo "GO" | Out-File -Append "6_create_procs_$schema`_$object.sql"  
         }  
    }  
 }  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(7) Scripting DROP $object_heap to 7_drop_heap_$schema`_$object.sql"  
+Write-Host "(7) Scripting DROP $object_heap to 7_drop_heap_$schema`_$object.sql"  
 Echo "DROP TABLE $schema.$object_heap" | Out-File "7_drop_heap_$schema`_$object.sql";  
-write-host "--done--"  
-write-host ""  
-  
+Write-Host "--done--"  
+Write-Host ""  
 ```  
   
  Das folgende PowerShell-Skript führt die Schemaänderungen aus, für die im vorherigen Beispiel ein Skript erstellt wurde. Dieses Skript erwartet eine Tabelle als Argument und führt die Schemaänderungsskripts aus, die für diese Tabelle und die zugehörigen gespeicherten Prozeduren generiert wurden.  
   
- Usage: execute_schema_change.ps1 *server_name**db_name`schema_name`table_name*  
+ Syntax: execute_schema_change. ps1 *Servername * * db_name `schema_name`table_name*  
   
-```sql  
+```powershell
 # stop execution once an error occurs  
 $ErrorActionPreference="Stop"  
   
@@ -240,7 +239,7 @@ $database = $args[1]
 $schema = $args[2]  
 $object = $args[3]  
   
-[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SMO") | out-null  
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SMO") | Out-Null  
   
 $server =  New-Object ("Microsoft.SqlServer.Management.SMO.Server") ($servername)  
 $database = $server.Databases[$database]  
@@ -258,43 +257,41 @@ $5 = Get-Item "5_copy_from_heap_$schema`_$object.sql"
 $6 = Get-Item "6_create_procs_$schema`_$object.sql"  
 $7 = Get-Item "7_drop_heap_$schema`_$object.sql"  
   
-write-host "(1) Running SELECT INTO heap for table [$object] from 1_copy_to_heap_for_$schema`_$object.sql"  
+Write-Host "(1) Running SELECT INTO heap for table [$object] from 1_copy_to_heap_for_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $1.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(2) Running DROP for procs schema-bound from [$object] 2_drop_procs_$schema`_$object.sql"  
+Write-Host "(2) Running DROP for procs schema-bound from [$object] 2_drop_procs_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $2.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(3) Running DROP table for [$object] to 4_drop_table_$schema`_$object.sql"  
+Write-Host "(3) Running DROP table for [$object] to 4_drop_table_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $3.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(4) Running CREATE table and permissions for [$object] from 4_create_table_$schema`_$object.sql"  
+Write-Host "(4) Running CREATE table and permissions for [$object] from 4_create_table_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $4.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(5) Running INSERT INTO table from heap for [$object] and UPDATE STATISTICS from 5_copy_from_heap_$schema`_$object.sql"  
+Write-Host "(5) Running INSERT INTO table from heap for [$object] and UPDATE STATISTICS from 5_copy_from_heap_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $5.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(6) Running CREATE PROC and permissions for procedures schema-bound to [$object] from 6_create_procs_$schema`_$object.sql"  
+Write-Host "(6) Running CREATE PROC and permissions for procedures schema-bound to [$object] from 6_create_procs_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $6.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(7) Running DROP heap from 7_drop_heap_$schema`_$object.sql"  
+Write-Host "(7) Running DROP heap from 7_drop_heap_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $7.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Speicheroptimierte Tabellen](memory-optimized-tables.md)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
