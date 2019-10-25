@@ -1,6 +1,6 @@
 ---
-title: Data Mining-Erweiterungen (DMX)-Datenbearbeitungsanweisungen | Microsoft-Dokumentation
-ms.date: 06/07/2018
+title: Daten Bearbeitungsanweisungen (DMX) | Microsoft-Dokumentation
+ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
@@ -8,28 +8,28 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fe94bd1291100dda6680737fe06c96a08e52f0ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14464ec054826cd9072d059a8ad308da51e50b03
+ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071066"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890499"
 ---
 # <a name="dmx-statements---data-manipulation"></a>DMX-Anweisungen – Datenbearbeitung
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   In der folgenden Tabelle sind die Anweisungen aufgeführt, die zur Data Mining-Datenbearbeitungssprache in Data Mining-Erweiterungen (DMX) gehören.  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
-|[LÖSCHEN SIE &#40;DMX&#41;](../dmx/delete-dmx.md)|Löscht den trainierten Inhalt aus einem Miningmodell.|  
-|[FÜGEN SIE IN &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Trainiert ein Miningmodell.|  
-|[WÄHLEN SIE &#40;DMX&#41;](../dmx/select-dmx.md)|Durchsucht ein Miningmodell.|  
-|[&#60;quelldatenabfrage&#62;](../dmx/source-data-query.md)|Fragt Datenquellen für beide **INSERT INTO** und **wählen** Anweisungen.|  
-|[UPDATE &#40;DMX&#41;](../dmx/update-dmx.md)|Ändert den Inhalt des Miningmodells.|  
+|[Löschen &#40;von DMX&#41;](../dmx/delete-dmx.md)|Löscht den trainierten Inhalt aus einem Miningmodell.|  
+|[Einfügen in &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Trainiert ein Miningmodell.|  
+|[DMX auswählen &#40;&#41;](../dmx/select-dmx.md)|Durchsucht ein Miningmodell.|  
+|[&#60;Quelldaten Abfrage&#62;](../dmx/source-data-query.md)|Fragt Datenquellen sowohl für **INSERT INTO** -als auch für **Select** -Anweisungen ab.|  
+|[DMX aktualisieren &#40;&#41;](../dmx/update-dmx.md)|Ändert den Inhalt des Miningmodells.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
