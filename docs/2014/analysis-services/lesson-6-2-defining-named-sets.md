@@ -123,7 +123,7 @@ ms.locfileid: "69493896"
   
      Nur das **Bike** -Element des **Category** -Attributs und Elemente der **Bike** -Unterkategorien verbleiben im Cube. Das liegt daran, dass die benannte Menge **Core Products** (Kernprodukte) zur Definition eines Teilcubes verwendet wird. Durch diesen Teilcube werden die Elemente des **Category** -Attributs in der **Product** -Dimension innerhalb des Teilcubes auf die Elemente der benannten Menge **Core Products** beschränkt, wie in der folgenden Abbildung dargestellt.  
   
-     ![Member der benannten Gruppe "Core-Produkt"](../../2014/tutorials/media/l6-named-set-04.gif "Member der benannten Gruppe "Core-Produkt"")  
+     ![Member der benannten Gruppe Core-Produkt](../../2014/tutorials/media/l6-named-set-04.gif "Member der benannten Gruppe Core-Produkt")  
   
 7.  Erweitern Sie im Bereich **Metadaten** den Eintrag **Reseller**, und fügen Sie dem Filterbereich **Large Resellers** hinzu.  
   
