@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893136"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798219"
 ---
 # <a name="manage-job-steps"></a>Verwalten von Auftragsschritten
   Ein Auftragsschritt ist eine Aktion, die der Auftrag auf einer Datenbank oder einem Server ausführt. Jeder Auftrag muss mindestens einen Auftragsschritt aufweisen. Folgende Auftragsschritte sind möglich:  
@@ -75,7 +75,7 @@ ms.locfileid: "68893136"
   
 -   Den Prozessexitcode, der zurückgegeben wird, wenn der Befehl erfolgreich ausgeführt wurde.  
   
--   Den auszuführenden Befehl. Beim Ausführen eines Betriebssystembefehls handelt es sich hierbei einfach um den Befehl selbst. Für ein externes Programm lauten der Name des Programms und die Argumente des Programms z.B. folgendermaßen: **C:\Programme\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   Den auszuführenden Befehl. Beim Ausführen eines Betriebssystembefehls handelt es sich hierbei einfach um den Befehl selbst. Bei einem externen Programm ist dies der Name des Programms und die Argumente für das Programm, z. B.: **C:\Programme\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**.  
   
     > [!NOTE]  
     >  Sie müssen den vollständigen Pfad zur ausführbaren Datei angeben, wenn diese sich nicht in dem Verzeichnis befindet, das im Systempfad oder dem Pfad für den Benutzer angegeben ist, als der der Auftragsschritt ausgeführt wird.  
@@ -101,7 +101,7 @@ ms.locfileid: "68893136"
   
 -   Eine vorhandene PowerShell-Skriptdatei, die geöffnet werden soll.  
   
- Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell-Subsystem öffnet eine PowerShell-Sitzung und lädt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Snap-Ins. Das als Auftragsschrittbefehl verwendete PowerShell-Skript kann auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Anbieter und auf Cmdlets verweisen. Weitere Informationen über das Schreiben von PowerShell-Skripts mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Snap-Ins finden Sie unter [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ Das PowerShell-Subsystem des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents öffnet eine PowerShell-Sitzung und lädt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Snap-Ins. Das PowerShell-Skript, das als Auftrags Schritt Befehl verwendet wird, kann auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Anbieter und-Cmdlets verweisen. Weitere Informationen über das Schreiben von PowerShell-Skripts mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Snap-Ins finden Sie unter [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX-Skript-Auftragsschritte  
   
@@ -128,8 +128,7 @@ oServer.LoginSecure = True
 oServer.Connect "(local)"  
 'Disconnect and destroy the server object  
 oServer.DisConnect  
-Set oServer = nothing  
-  
+Set oServer = nothing
 ```  
   
 ## <a name="replication-job-steps"></a>Replikationsauftragsschritte  
@@ -199,7 +198,7 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**Beschreibung**|**Thema**|  
+|**Description**|**Thema**|  
 |Beschreibt, wie ein Auftragsschritt mit einem ausführbaren Programm erstellt wird.|[Erstellen eines CmdExec-Auftragsschritts](create-a-cmdexec-job-step.md)|  
 |Beschreibt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Berechtigungen zurückgesetzt werden.|[Konfigurieren eines Benutzers zum Erstellen und Verwalten von SQL Server-Agent-Aufträgen](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Beschreibt, wie ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritt erstellt wird.|[Erstellen eines Transact-SQL-Auftragsschritts](create-a-transact-sql-job-step.md)|  
@@ -210,9 +209,7 @@ Set oServer = nothing
 |Beschreibt, wie Auftragsschrittdetails im Dialogfeld Auftragsschritt-Eigenschaften angezeigt werden.|[Anzeigen von Auftragsschrittinformationen](view-job-step-information.md)|  
 |Beschreibt, wie ein Auftragsschrittprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents gelöscht wird.|[Löschen eines Auftragsschrittprotokolls](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [dbo. sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [dbo. sysjobstepslogs &#40;Transact-SQL&#41; ](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql) -   
  [Erstellen von Aufträgen](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
-  
-  

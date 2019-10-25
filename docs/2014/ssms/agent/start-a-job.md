@@ -14,12 +14,12 @@ ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c375c8776f7c33b445676e45ce70839353d469f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211322"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798176"
 ---
 # <a name="start-a-job"></a>Start a Job
   In diesem Thema wird beschrieben, wie Sie das Ausführen eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects starten können.  
@@ -28,7 +28,7 @@ ms.locfileid: "68211322"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So starten Sie einen Auftrag an mit**  
   
@@ -38,14 +38,14 @@ ms.locfileid: "68211322"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
-#### <a name="to-start-a-job"></a>So starten Sie einen Auftrag  
+### <a name="to-start-a-job"></a>So starten Sie einen Auftrag  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie dann diese Instanz.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68211322"
   
 ##  <a name="TSQL"></a> Verwenden von Transact-SQL  
   
-#### <a name="to-start-a-job"></a>So starten Sie einen Auftrag  
+### <a name="to-start-a-job"></a>So starten Sie einen Auftrag  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68211322"
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```  
+    ```sql
     -- starts a job named Weekly Sales Data Backup.    
     USE msdb ;  
     GO  
@@ -80,9 +80,8 @@ ms.locfileid: "68211322"
   
  Weitere Informationen finden Sie unter [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
   
-##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
- **So starten Sie einen Auftrag**  
+##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
+
+### <a name="to-start-a-job"></a>So starten Sie einen Auftrag
   
  Rufen Sie die `Start`-Methode der `Job`-Klasse in einer Programmiersprache Ihrer Wahl auf, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

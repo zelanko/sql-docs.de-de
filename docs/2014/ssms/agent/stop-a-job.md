@@ -14,12 +14,12 @@ ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f334834ff1deecebbc719ec71fb8348c13e4f68e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245811"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798153"
 ---
 # <a name="stop-a-job"></a>Stop a Job
   In diesem Thema wird das Beenden eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags beschrieben. Ein Auftrag ist eine festgelegte Reihe von Aktionen, die der SQL Server-Agent ausführt.  
@@ -28,7 +28,7 @@ ms.locfileid: "63245811"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So halten Sie einen Auftrag an mit**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63245811"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -46,10 +46,10 @@ ms.locfileid: "63245811"
   
 -   Bei einem Multiserverauftrag wird eine STOP-Anweisung für den Auftrag an alle Zielserver des Auftrags gesendet.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-stop-a-job"></a>So beenden Sie einen Auftrag  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63245811"
   
 ##  <a name="TSQL"></a> Verwenden von Transact-SQL  
   
-#### <a name="to-stop-a-job"></a>So beenden Sie einen Auftrag  
+### <a name="to-stop-a-job"></a>So beenden Sie einen Auftrag  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63245811"
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```  
+    ```sql
     -- stops a job named Weekly Sales Data Backup  
     USE msdb ;  
     GO  
@@ -79,11 +79,10 @@ ms.locfileid: "63245811"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [Sp_stop_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_stop_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
   
-##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
- **So beenden Sie einen Auftrag**  
+##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
+
+### <a name="to-stop-a-job"></a>So beenden Sie einen Auftrag
   
  Rufen Sie die `Stop`-Methode der `Job`-Klasse in einer Programmiersprache Ihrer Wahl auf, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

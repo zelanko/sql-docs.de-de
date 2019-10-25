@@ -10,12 +10,12 @@ ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fcc82b03ff6d44e8c7c85088f625feb6bd8102f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc19a1813e81847912ac43f607cead8423850af5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108358"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796368"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Verwalten einer Reporting Services-SharePoint-Dienstanwendung
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendungen werden über die SharePoint-Zentraladministration verwaltet. Die Seiten für die Verwaltung und Eigenschaften ermöglichen es Ihnen, die Konfiguration der Dienstanwendung sowie allgemeine Verwaltungsaufgaben zu aktualisieren.  
@@ -43,7 +43,7 @@ ms.locfileid: "66108358"
   
 2.  Klicken Sie neben dem Namen der Dienstanwendung oder auf die Spalte **Typ** . Dadurch wird die gesamte Zeile ausgewählt. Klicken Sie anschließend im SharePoint-Menüband auf **Eigenschaften** .  
   
- Weitere Informationen zu dienstanwendungseigenschaften finden Sie unter [Schritt 3: Erstellen einer Reporting Services-Dienstanwendung](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
+ Weitere Informationen zu Dienstanwendungseigenschaften finden Sie unter [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
   
 ##  <a name="bkmk_openpages"></a> So öffnen Sie Verwaltungsseiten für Dienstanwendungen  
  Zum Öffnen der Verwaltungsseiten für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung gehen Sie wie folgt vor:  
@@ -90,7 +90,7 @@ ms.locfileid: "66108358"
   
 |Einstellung|Kommentare|  
 |-------------|--------------|  
-|Protokollierung der Ausführung aktivieren|Der Standardwert ist TRUE.<br /><br /> Geben Sie an, ob der Berichtsserver Ablaufverfolgungsprotokolle generiert, und geben Sie die Anzahl von Tagen für die Beibehaltung der Protokolle an. auf Dienstanwendungen verwalten. Die Protokolle werden auf dem Berichtsservercomputer im Ordner \Microsoft SQL Server\MSSQL.n\ReportServer\Log gespeichert. Bei jedem Neustart des Diensts wird eine neue Protokolldatei begonnen. Weitere Informationen zu Protokolldateien finden Sie unter [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).|  
+|Protokollierung der Ausführung aktivieren|Der Standardwert ist TRUE.<br /><br /> Geben Sie an, ob der Berichtsserver Ablaufverfolgungsprotokolle generiert, und geben Sie die Anzahl von Tagen für die Beibehaltung der Protokolle an. erforderlich. Die Protokolle werden auf dem Berichtsservercomputer im Ordner \Microsoft SQL Server\MSSQL.n\ReportServer\Log gespeichert. Bei jedem Neustart des Diensts wird eine neue Protokolldatei begonnen. Weitere Informationen zu Protokolldateien finden Sie unter [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).|  
 |Beibehaltungsdauer des Ausführungsprotokolls in Tagen|Der Standard ist 60 Tage.|  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt die SharePoint-ULS-Protokollierung.  Weitere Informationen finden Sie unter [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -117,7 +117,7 @@ ms.locfileid: "66108358"
 ##  <a name="bkmk_managejobs"></a> Verwalten von Aufträgen  
  Sie können aktive Aufträge anzeigen und löschen, beispielsweise Aufträge, die von Berichtsabonnements und datengesteuerten Abonnements erstellt werden. Die Seite wird nicht zum Verwalten von Abonnements, sondern von Aufträgen verwendet, die von einem Abonnement ausgelöst werden. Beispielsweise generiert ein Abonnement, das planmäßig stündlich einmal ausgeführt wird, jede Stunde einen Auftrag, der auf der Seite **Aufträge verwalten** angezeigt wird.  
   
- ![Verwalten gerade ausgeführter Aufträge](media/ssrs-manage-jobs.gif "manage running jobs")  
+ ![Verwalten von laufenden Aufträgen](media/ssrs-manage-jobs.gif "Verwalten von laufenden Aufträgen")  
   
 ##  <a name="bkmk_keymgt"></a> Schlüsselverwaltung  
  Die folgende Tabelle fasst die Schlüsselverwaltungsseiten zusammen.  
@@ -125,7 +125,7 @@ ms.locfileid: "66108358"
 > [!IMPORTANT]  
 >  Aus Sicherheitsgründen empfiehlt es sich, den Reporting Services-Verschlüsselungsschlüssel in regelmäßigen Abständen zu ändern. Ein guter Zeitpunkt, um den Schlüssel zu ändern, liegt direkt im Anschluss an ein größeres Versionsupgrade von Reporting Services. Indem der Schlüssel nach einem Upgrade geändert wird, lassen sich zusätzliche Dienstunterbrechungen, die durch eine Änderung des Reporting Services-Verschlüsselungsschlüssels außerhalb des Upgradezyklus verursacht würden, minimieren.  
   
-|Seite|Description|  
+|Page|Description|  
 |----------|-----------------|  
 |Sichern des Verschlüsselungsschlüssels|1.) Geben Sie in die Felder **Kennwort:** und **Kennwort bestätigen:** ein Kennwort ein, und klicken Sie auf **Exportieren**. Eine Warnung wird angezeigt, wenn das eingegebene Kennwort nicht den Komplexitätsanforderungen der Domänenrichtlinie entspricht.<br /><br /> 2.) Sie werden aufgefordert, einen Dateispeicherort zum Speichern der Schlüsseldatei anzugeben. Speichern Sie ggf. die Schlüsseldatei auf einem separaten Computer und nicht auf dem Computer, auf dem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ausgeführt wird. Der Standarddateiname entspricht dem Namen der Dienstanwendung.|  
 |Wiederherstellen von Verschlüsselungsschlüsseln|1.) Geben Sie den Speicherort der Schlüsseldatei in das Feld **Dateispeicherort** ein, oder navigieren Sie zum Speicherort.<br /><br /> 2.) Geben Sie im Feld **Kennwort** das Kennwort ein, mit dem die Verschlüsselungsdatei gesichert wurde.<br /><br /> 3.) Klicken Sie auf **OK**.|  
@@ -145,17 +145,17 @@ ms.locfileid: "66108358"
   
  Sie können jedes beliebige Windows-Benutzerkonto verwenden. Für optimale Ergebnisse wählen Sie ein Konto aus, das über Leseberechtigungen und Netzwerkanmeldungsberechtigungen verfügt, um Verbindungen mit anderen Computern zu unterstützen. Es muss über Leseberechtigungen für ein externes Image oder eine Datendatei verfügen, das bzw. die in einem Bericht verwendet werden soll. Geben Sie nur dann ein lokales Konto ein, wenn alle Berichtsdatenquellen und externen Images auf dem Berichtsservercomputer gespeichert sind. Verwenden Sie das Konto nur für die unbeaufsichtigte Berichtsverarbeitung.  
   
- ![PowerShell-Inhalt](media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell-bezogener Inhalt](media/rs-powershellicon.jpg "PowerShell-bezogener Inhalt")  
   
  Nachfolgend finden Sie einen beispielhaften PowerShell-Befehl, mit dem die Liste von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendungen mit der UEAccount-Eigenschaft zurückgegeben wird:  
   
-```  
-Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
+```powershell
+Get-SPRSServiceApplication | Select typename, name, service, ueaccountname  
 ```  
   
  Weitere Informationen finden Sie unter [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>-Option enthalten  
  **Ausführungskonto angeben**  
  Wählen Sie diese Option aus, um ein Konto anzugeben.  
   
@@ -171,7 +171,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> E-Mail-Einstellungen  
  Verwenden Sie diese Seite, um die SMTP (Simple Mail Transport Protocol)-Einstellungen anzugeben, mit denen die E-Mail-Übermittlung des Berichtsservers aktiviert wird. Mit der E-Mail-Übermittlungserweiterung des Berichtsservers können Sie Berichte oder Benachrichtigungen über Berichtsverarbeitungen mithilfe von E-Mail-Abonnements verteilen. Für die Berichtsserver-E-Mail-Übermittlungserweiterung sind ein SMTP-Server und eine E-Mail-Adresse erforderlich, die im Feld "Von:" verwendet wird.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>-Option enthalten  
  **SMTP-Server verwenden**  
  Gibt an, ob die Berichtsserver-E-Mail über einen SMTP-Server geleitet wird.  
   

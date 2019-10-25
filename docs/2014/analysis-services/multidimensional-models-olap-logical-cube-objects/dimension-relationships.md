@@ -20,12 +20,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1fe1521f2eebaa4413b49c315f17a6b1b6a5914
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68887936"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797620"
 ---
 # <a name="dimension-relationships"></a>Dimensionsbeziehungen
   Durch die Dimensionsverwendung werden die Beziehungen zwischen Cubedimensionen und den Measuregruppen in einem Cube definiert. Bei einer Cubedimension handelt es sich um eine Instanz einer Datenbankdimension, die in einem bestimmten Cube verwendet wird. Ein Cube kann über Cubedimensionen verfügen (und verfügt oft über solche), die nicht direkt mit einer Measuregruppe verknüpft sind, die jedoch möglicherweise über eine andere Dimension oder Measuregruppe indirekt mit der Measuregruppe verknüpft sind. Wenn Sie einem Cube eine Datenbankdimension oder Measuregruppe hinzufügen, versucht [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Dimensionsverwendung zu bestimmen, indem die Beziehungen zwischen den Dimensionstabellen und Faktentabellen in der Datenquellensicht des Cubes sowie die Beziehungen zwischen Attributen einer Dimension untersucht werden. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] legt die Einstellungen für die Dimensionsverwendung für die erkannten Beziehungen automatisch fest.  
@@ -38,11 +38,11 @@ ms.locfileid: "68887936"
 ## <a name="reference-dimension-relationships"></a>Bezugsdimensionsbeziehungen  
  Eine Bezugsdimensionsbeziehung zwischen einer Cubedimension und einer Measuregruppe ist vorhanden, wenn die Schlüsselspalte für die Dimension über einen Schlüssel in einer anderen Dimensionstabelle indirekt mit der Faktentabelle verknüpft ist, wie in der folgenden Abbildung gezeigt.  
   
- ![Logisches Diagramm, referenzierte Dimensions Beziehung](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension1.gif "Logisches Diagramm, referenzierte Dimensions Beziehung")  
+ ![Logisches Diagramm, referenzierte Dimensions Beziehung](../../analysis-services/dev-guide/media/as-refdimension1.gif "Logisches Diagramm, referenzierte Dimensions Beziehung")  
   
  Eine Bezugsdimensionsbeziehung stellt die Beziehung zwischen Dimensionstabellen und einer Faktentabelle in einem Schneeflocken-Schemaentwurf dar. Wenn Dimensionstabellen in einem Schneeflockenschema verbunden sind, können Sie eine einzelne Dimension mithilfe von Spalten aus mehreren Tabellen definieren, oder Sie können separate Dimensionen basierend auf den separaten Dimensionstabellen definieren und anschließend mithilfe der Einstellung für die Bezugsdimensionsbeziehung einen Link zwischen ihnen definieren. Die folgende Abbildung zeigt eine Faktentabelle namens **InternetSales**und zwei Dimensionstabellen namens **Customer** und **Geography**in einem Schneeflockenschema.  
   
- ![Logisches Schema, referenzierte Dimensions Beziehung](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdim-schema1.gif "Logisches Schema, referenzierte Dimensions Beziehung")  
+ ![Logisches Schema, referenzierte Dimensions Beziehung](../../analysis-services/dev-guide/media/as-refdim-schema1.gif "Logisches Schema, referenzierte Dimensions Beziehung")  
   
  Sie können eine Dimension mit der **Customer** -Tabelle als Haupttabelle der Dimension erstellen und die **Geography** -Tabelle als verknüpfte Tabelle einschließen. Anschließend wird eine reguläre Beziehung zwischen der Dimension und der InternetSales-Measuregruppe definiert.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "68887936"
   
  Es gibt keine Begrenzung der Anzahl der Bezugsdimensionen, die miteinander verkettet werden können, wie in der folgenden Abbildung gezeigt.  
   
- ![Logisches Diagramm, referenzierte Dimensions Beziehung](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension2.gif "Logisches Diagramm, referenzierte Dimensions Beziehung")  
+ ![Logisches Diagramm, referenzierte Dimensions Beziehung](../../analysis-services/dev-guide/media/as-refdimension2.gif "Logisches Diagramm, referenzierte Dimensions Beziehung")  
   
  Weitere Informationen zu referenzierten Beziehungen finden Sie unter [Definieren einer referenzierten Beziehung und Eigenschaften der referenzierten Beziehung](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="fact-dimension-relationships"></a>Faktendimensionsbeziehungen  
  Faktendimensionen, die häufig als degenerierte Dimensionen bezeichnet werden, sind Standarddimensionen, die aus Attributspalten in Faktentabellen statt aus Attributspalten in Dimensionstabellen erstellt werden. Nützliche Dimensionsdaten werden manchmal in einer Faktentabelle gespeichert, um die Duplizierung zu reduzieren. Im folgenden Diagramm wird z. B. die **FactResellerSales** -Faktentabelle aus der [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] -Beispieldatenbank angezeigt.  
   
- ![Spalten in der Fakten Tabelle können Dimensionen unterstützen.](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-factdim.gif "Spalten in der Fakten Tabelle können Dimensionen unterstützen.")  
+ ![Spalten in der Fakten Tabelle können Dimensionen unterstützen.](../../analysis-services/dev-guide/media/as-factdim.gif "Spalten in der Fakten Tabelle können Dimensionen unterstützen.")  
   
  Die Tabelle enthält Attributinformationen nicht nur für jede Zeile einer von einem Wiederverkäufer aufgegebenen Bestellung, sondern auch zu der Bestellung selbst. Die im vorherigen Diagramm eingekreisten Attribute identifizieren die Informationen in der **FactResellerSales** -Tabelle, die als Attribute in einer Dimension verwendet werden können. In diesem Fall werden zwei zusätzliche Informationen, die Transporteurkennung und die vom Wiederverkäufer ausgegebene Nummer der Bestellung, durch die Attributspalten CarrierTrackingNumber und CustomerPONumber dargestellt. Diese Informationen sind interessant, z. b. sind die Benutzer definitiv daran interessiert, aggregierte Informationen, z. b. die Gesamtproduktkosten, für alle Bestellungen zu sehen, die unter einer einzigen nach Verfolgungs Nummer ausgeliefert werden. Aber ohne eine Dimension gibt es keine Möglichkeit, Daten für diese beiden Attribute zu organisieren oder zu aggregieren.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68887936"
 ## <a name="many-to-many-dimension-relationships"></a>m:n-Dimensionsbeziehungen  
  In den meisten Dimensionen ist jedes Faktum mit einem und nur einem Dimensionselement verknüpft, und ein einzelnes Dimensionselement kann mehreren Fakten zugeordnet sein. In der Terminologie von relationalen Datenbanken wird dies als 1:n-Beziehung bezeichnet. Es ist jedoch oft nützlich, ein einzelnes Faktum mit mehreren Dimensionselementen zu verknüpfen. Ein Bankkunde verfügt z. B. möglicherweise über mehrere Konten (Giro-, Sparbuch-, Kreditkarten- und Investmentkonten), und ein Konto kann auch über gemeinsame oder mehrere Besitzer verfügen. Die aus diesen Beziehungen erstellte Customer-Dimension hätte dann mehrere Elemente, die mit einer einzelnen Kontotransaktion verknüpft sind.  
   
- ![Logische Schema/m:n-Dimensionsbeziehung](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-many-dimension1.gif "Logische Schema/m:n-Dimensionsbeziehung")  
+ ![Logische Schema/m:n-Dimensionsbeziehung](../../analysis-services/dev-guide/media/as-many-dimension1.gif "Logische Schema/m:n-Dimensionsbeziehung")  
   
  mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] können Sie eine m:n-Beziehung zwischen einer Dimension und einer Fakten Tabelle definieren.  
   

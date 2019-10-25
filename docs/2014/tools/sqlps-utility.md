@@ -13,18 +13,18 @@ ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ff96b99ee7982be89126e79687dbc8a2215f42f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187044"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798138"
 ---
 # <a name="sqlps-utility"></a>sqlps (Hilfsprogramm)
   Das Hilfsprogramm `sqlps` startet eine Windows PowerShell 2.0-Sitzung mit geladenem und registriertem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-PowerShell-Anbieter sowie geladenen und registrierten Cmdlets. Sie können PowerShell-Befehle oder -Skripts eingeben, die die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -PowerShell-Komponenten verwenden, sodass Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und ihre Objekte verwendet werden können.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen das `sqlps`-PowerShell-Modul. Weitere Informationen zu den `sqlps` -Modul finden Sie unter [Importieren des SQLPS-Moduls](../database-engine/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen das `sqlps`-PowerShell-Modul. Weitere Informationen zum `sqlps`-Modul finden Sie unter [Importieren des sqlps-Moduls](../database-engine/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,28 +54,28 @@ ms.locfileid: "63187044"
  Gibt an, dass das Hilfsprogramm `sqlps` kein Benutzerprofil lädt. In Benutzerprofilen werden häufig verwendete Aliase, Funktionen und Variablen zur Verwendung in mehreren PowerShell-Sitzungen aufgezeichnet.  
   
  **-OutPutFormat** { **Text** | **XML** }  
- Gibt an, dass die `sqlps` Ausgabe des Hilfsprogramms formatiert werden entweder als Textzeichenfolgen (**Text**) oder in einem serialisierten CLIXML-Format (**XML**).  
+ Gibt an, dass die Ausgabe des `sqlps` Hilfsprogramms entweder als Text Zeichenfolgen (**Text**) oder in einem serialisierten CliXML-Format (**XML**) formatiert werden soll.  
   
  **-InPutFormat** { **Text** | **XML** }  
- Gibt an, die Eingabe in die `sqlps` Hilfsprogramm formatiert ist entweder als Textzeichenfolgen (**Text**) oder in einem serialisierten CLIXML-Format (**XML**).  
+ Gibt an, dass die Eingabe für das `sqlps`-Hilfsprogramm entweder als Text Zeichenfolgen (**Text**) oder in einem serialisierten CliXML-Format (**XML**) formatiert ist.  
   
  **-Command**  
- Gibt den Befehl an, der vom Hilfsprogramm `sqlps` ausgeführt werden soll. Die `sqlps` Hilfsprogramm ausgeführt wird, den Befehl und dann beendet, es sei denn, **- NoExit** ist ebenfalls angegeben. Geben Sie nach **-Command**keine anderen Schalter an, denn diese werden als Befehlsparameter gelesen.  
+ Gibt den Befehl an, der vom Hilfsprogramm `sqlps` ausgeführt werden soll. Das Hilfsprogramm `sqlps` führt den Befehl aus und wird dann beendet, es sei denn, es ist auch " **-NoExit** " Geben Sie nach **-Command**keine anderen Schalter an, denn diese werden als Befehlsparameter gelesen.  
   
  **-**  
- **-Command-** gibt an, dass die `sqlps` Hilfsprogramm, um die Eingabe aus der Standardeingabe lesen.  
+ **-Command-** gibt an, dass das `sqlps`-Hilfsprogramm die Eingabe aus der Standardeingabe gelesen hat.  
   
  *script_block* [ **-args**_argument_array_ ]  
- Gibt einen Block von PowerShell-Befehlen an, die ausgeführt werden sollen. Der Block muss in geschweifte Klammern ({}) eingeschlossen werden. *Script_block* kann nur angegeben werden, wenn die `sqlps` Hilfsprogramm heißt entweder **PowerShell** oder einem anderen `sqlps` Sitzung des Hilfsprogramms. *Argument_array* ist ein Array von PowerShell-Variablen, das die Argumente für die PowerShell-Befehle in *script_block*enthält.  
+ Gibt einen Block von PowerShell-Befehlen an, die ausgeführt werden sollen. Der Block muss in geschweifte Klammern ({}) eingeschlossen werden. *Script_block* kann nur angegeben werden, wenn das `sqlps`-Hilfsprogramm entweder von **PowerShell** oder einer anderen `sqlps` Utility-Sitzung aufgerufen wird. *Argument_array* ist ein Array von PowerShell-Variablen, das die Argumente für die PowerShell-Befehle in *script_block*enthält.  
   
  *string* [ *command_parameters* ]  
- Gibt eine Zeichenfolge an, die die auszuführenden PowerShell-Befehle enthält. Verwenden Sie das Format **"& { *`command`* }"** . Die Anführungszeichen geben eine Zeichenfolge, und der Aufrufoperator (&) bewirkt, dass die `sqlps` Hilfsprogramm zum Ausführen des Befehls.  
+ Gibt eine Zeichenfolge an, die die auszuführenden PowerShell-Befehle enthält. Verwenden Sie das Format **"& {*`command`*}"**. Die Anführungszeichen geben eine Zeichenfolge an, und der Aufruf Operator (&) bewirkt, dass das Hilfsprogramm `sqlps` den Befehl ausführen.  
   
- [ **-?** |  **-Help** ]  
+ [ **-?** | **-Help** ]  
  Zeigt eine Syntaxzusammenfassung der Optionen des Hilfsprogramms `sqlps` an.  
   
-## <a name="remarks"></a>Hinweise  
- Die `sqlps` Dienstprogramm startet die PowerShell-Umgebung (PowerShell.exe) und lädt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Modul. Das Modul, das auch mit dem Namen `sqlps`, lädt und registriert diese [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Snap-ins:  
+## <a name="remarks"></a>Bemerkungen  
+ Das `sqlps`-Hilfsprogramm startet die PowerShell-Umgebung (PowerShell. exe) und lädt das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Modul. Das Modul, das auch `sqlps`benannt ist, lädt und registriert diese [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Snap-Ins:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
   
@@ -95,31 +95,30 @@ ms.locfileid: "63187044"
   
 -   Verwenden Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieterpfade, um durch die Hierarchie der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekte zu navigieren.  
   
- In der Standardeinstellung die `sqlps` Hilfsprogramm ausgeführt wird, mit die Skriptausführungsrichtlinie auf **Restricted**. Dadurch wird die Ausführung von PowerShell-Skripts verhindert. Mit dem Cmdlet **Set-ExecutionPolicy** können Sie die Ausführung signierter Skripts oder beliebiger anderer Skripts ermöglichen. Führen Sie nur Skripts aus vertrauenswürdigen Quellen aus, und sichern Sie alle Eingabe- und Ausgabedateien, indem Sie die geeigneten NTFS-Berechtigungen verwenden. Weitere Informationen zum Aktivieren von PowerShell-Skripts finden Sie unter [Ausführen der Windows PowerShell-Skripts](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/).  
+ Standardmäßig wird das `sqlps`-Hilfsprogramm mit der Skript Ausführungs Richtlinie auf **restricted**festgelegt. Dadurch wird die Ausführung von PowerShell-Skripts verhindert. Mit dem Cmdlet **Set-ExecutionPolicy** können Sie die Ausführung signierter Skripts oder beliebiger anderer Skripts ermöglichen. Führen Sie nur Skripts aus vertrauenswürdigen Quellen aus, und sichern Sie alle Eingabe- und Ausgabedateien, indem Sie die geeigneten NTFS-Berechtigungen verwenden. Weitere Informationen zum Aktivieren von PowerShell-Skripts finden Sie unter [Ausführen der Windows PowerShell-Skripts](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/).  
   
  Die Version des Hilfsprogramms `sqlps` in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] wurde als Windows PowerShell 1.0-Mini-Shell implementiert. Mini-Shells weisen bestimmte Einschränkungen auf; Benutzer können beispielsweise keine anderen als die von der Mini-Shell geladenen Snap-Ins laden. Diese Einschränkungen gelten nicht für die [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Version und höhere Versionen des Hilfsprogramms, die dahingehend geändert wurden, dass sie das `sqlps`-Modul verwenden.  
   
 ## <a name="examples"></a>Beispiele  
- **A. Ausführen des sqlps-Hilfsprogramms im interaktiven Standardmodus ohne Copyrightinformationen**  
+
+### <a name="a-run-the-sqlps-utility-in-default-interactive-mode-without-the-copyright-banner"></a>A. Ausführen des Hilfsprogramms sqlps im interaktiven Standardmodus ohne Copyrightinformationen
   
-```  
+```cmd
 sqlps -NoLogo  
 ```  
   
- **B. Ausführen eines SQL Server PowerShell-Skripts über die Eingabeaufforderung**  
+### <a name="b-run-a-sql-server-powershell-script-from-the-command-prompt"></a>B. Ausführen eines SQL Server PowerShell-Skripts von der Eingabeaufforderung
   
-```  
+```cmd
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C. Ausführen eines SQL Server PowerShell-Skripts über die Eingabeaufforderung und weitere Ausführung nach Abschluss des Skripts**  
+### <a name="c-run-a-sql-server-powershell-script-from-the-command-prompt-and-keep-running-after-the-script-completes"></a>C. Ausführen eines SQL Server PowerShell-Skripts von der Eingabeaufforderung und weitere Ausführung nach Abschluss des Skripts
   
-```  
+```cmd
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server-PowerShell](../powershell/sql-server-powershell.md)  
-  
-  

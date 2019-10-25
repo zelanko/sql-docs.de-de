@@ -16,12 +16,12 @@ ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c18c22cf4db3f442050c739aaf68e159fd1cc230
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1afac17b04c968c6685e356e3bbc8101161a36b3
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754658"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797902"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Der Datenbankspiegelungs-Endpunkt (SQL Server)
   Um in [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] oder an der Datenbankspiegelung teilzunehmen, benötigt eine Serverinstanz ihren eigenen *Datenbank-Spiegelungsendpunkt*. Dieser Endpunkt ist ein auf einen bestimmten Zweck ausgerichteter Endpunkt, der ausschließlich dafür verwendet wird, diese Verbindungen von anderen Serverinstanzen zu empfangen. Auf einer angegebenen Serverinstanz verwendet jeder [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] oder jede Datenbankspiegelungsverbindung zu einer beliebigen anderen Serverinstanz einen einzelnen Datenbankspiegelungs-Endpunkt.  
@@ -40,14 +40,14 @@ ms.locfileid: "62754658"
   
  In der folgenden Abbildung wird veranschaulicht, wie zwei Serverinstanzen auf demselben Server eindeutig identifiziert werden. Die Server-Netzwerkadressen beider Serverinstanzen enthalten denselben Systemnamen, `MYSYSTEM`, und Domänennamen, `Adventure-Works.MyDomain.com`. Damit das System Verbindungen an eine Serverinstanz routen kann, enthält eine Server-Netzwerkadresse die dem Spiegelungsendpunkt einer bestimmten Serverinstanz zugeordnete Portnummer.  
   
- ![Server network addresses of a default instance (Server-Netzwerkadressen einer Standardinstanz)](../media/dbm-2-instances-ports-1-system.gif "Server network addresses of a default instance (Server-Netzwerkadressen einer Standardinstanz)")  
+ ![Server-Netzwerkadressen einer Standard Instanz](../media/dbm-2-instances-ports-1-system.gif "Server-Netzwerkadressen einer Standard Instanz")  
   
  Standardmäßig enthält eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen Datenbank-Spiegelungsendpunkt. Diese müssen manuell als Teil des Einrichtungsprozesses einer Datenbankspiegelungssitzung erstellt werden. Der Systemadministrator muss einen separaten Endpunkt in jeder Serverinstanz erstellen, die an der Datenbankspiegelung teilnehmen soll. Hinweis: Wenn mehr als eine Serverinstanz auf einem angegebenen Computer einen Datenbank-Spiegelungsendpunkt erfordert, müssen Sie für jeden Endpunkt eine andere Portnummer angeben.  
   
 > [!IMPORTANT]  
 >  Falls der Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, über eine Firewall verfügt, muss die Firewall so konfiguriert sein, dass für den im Endpunkt angegebenen Port eingehende und ausgehende Verbindungen zugelassen werden.  
   
- Für die Datenbankspiegelung und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]werden Authentifizierung und Verschlüsselung am Endpunkt konfiguriert. Weitere Informationen finden Sie unter [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+ Für die Datenbankspiegelung und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]werden Authentifizierung und Verschlüsselung am Endpunkt konfiguriert. Weitere Informationen finden Sie unter [Transport Sicherheit für Daten Bank Spiegelung &#40;und&#41;AlwaysOn-Verfügbarkeitsgruppen SQL Server](transport-security-database-mirroring-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  Ein bereits verwendeter Datenbankspiegelungs-Endpunkt darf nicht neu konfiguriert werden. Die Serverinstanzen verwenden die Endpunkte der anderen Instanzen, um sich einen Überblick über die Status der anderen Systeme zu verschaffen. Wird der Endpunkt neu konfiguriert, ist ein erneutes Starten möglich, was von den anderen Serverinstanzen als Fehler aufgefasst werden könnte. Dies ist vor allem im Modus für den automatischen Failovermodus wichtig, bei dem das Neukonfigurieren des Endpunkts auf einem Partner zur Ausführung eines Failovers führen könnte.  
@@ -58,7 +58,7 @@ ms.locfileid: "62754658"
   
 -   Wenn jede Serverinstanz unter einem Domänendienstkonto ausgeführt wird, können Sie die Windows-Authentifizierung für Ihre Datenbankspiegelungs-Endpunkte verwenden. Falls alle Serverinstanzen unter demselben Domänenbenutzerkonto ausgeführt werden, sind die richtigen Benutzeranmeldenamen automatisch in beiden **master** -Datenbanken vorhanden. Dadurch wird die Sicherheitskonfiguration für die Verfügbarkeitsdatenbanken vereinfacht und wird somit empfohlen.  
   
-     Wenn Serverinstanzen, die die Verfügbarkeitsreplikate für eine Verfügbarkeitsgruppe hosten, als unterschiedliche Konten ausgeführt werden, muss die Anmeldung für die Konten in der **master** -Datenbank auf der anderen Remoteserverinstanz erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen gewährt werden, damit eine Verbindung mit dem Datenbankspiegelungs-Endpunkt dieser Serverinstanz hergestellt werden kann. Weitere Informationen [Einrichten von Anmeldekonten für die Datenbankspiegelung oder AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
+     Wenn Serverinstanzen, die die Verfügbarkeitsreplikate für eine Verfügbarkeitsgruppe hosten, als unterschiedliche Konten ausgeführt werden, muss die Anmeldung für die Konten in der **master** -Datenbank auf der anderen Remoteserverinstanz erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen gewährt werden, damit eine Verbindung mit dem Datenbankspiegelungs-Endpunkt dieser Serverinstanz hergestellt werden kann. Weitere Informationen finden [Sie unter Einrichten von Anmeldekonten für die Daten Bank &#40;Spiegelung oder AlwaysOn-Verfügbarkeitsgruppen SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
      Wenn die Serverinstanzen die Windows-Authentifizierung verwenden, können Sie Datenbankspiegelungs-Endpunkte mit [!INCLUDE[tsql](../../includes/tsql-md.md)], PowerShell oder dem Assistenten für neue Verfügbarkeitsgruppen erstellen.  
   
@@ -67,11 +67,12 @@ ms.locfileid: "62754658"
   
 -   Wenn eine Serverinstanz unter einem integrierten Konto, z. B. lokales System, lokaler Dienst oder Netzwerkdienst, oder unter einem Nicht-Domänenkonto ausgeführt wird, müssen Sie Zertifikate zur Endpunktauthentifizierung verwenden. Wenn Sie Zertifikate für die Datenbankspiegelungs-Endpunkte verwenden, muss der Systemadministrator jede Serverinstanz so konfigurieren, dass Zertifikate sowohl für ausgehende als auch für eingehende Verbindungen verwendet werden.  
   
-     Es gibt keine automatische Methode zum Konfigurieren der Datenbankspiegelungssicherheit mithilfe von Zertifikaten. Sie müssen entweder die CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder den PowerShell-Cmdlet `New-SqlHadrEndpoint` verwenden. Weitere Informationen finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Informationen zum Aktivieren der Zertifikatauthentifizierung auf einer Serverinstanz finden Sie unter [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+     Es gibt keine automatische Methode zum Konfigurieren der Datenbankspiegelungssicherheit mithilfe von Zertifikaten. Sie müssen entweder die CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder den PowerShell-Cmdlet `New-SqlHadrEndpoint` verwenden. Weitere Informationen finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)konfigurieren. Informationen zum Aktivieren der Zertifikat Authentifizierung auf einer Serverinstanz finden Sie unter [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;(Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)).  
   
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **So konfigurieren Sie einen Datenbankspiegelungs-Endpunkt**  
+
+### <a name="to-configure-a-database-mirroring-endpoint"></a>So konfigurieren Sie einen Datenbankspiegelungs-Endpunkt
   
 -   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -92,10 +93,8 @@ ms.locfileid: "62754658"
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
   
-## <a name="see-also"></a>Siehe auch  
- [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [Problembehandlung für die Datenbankspiegelungskonfiguration (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Transport Sicherheit für Daten Bank Spiegelung &#40;und&#41; AlwaysOn-Verfügbarkeitsgruppen SQL Server](transport-security-database-mirroring-always-on-availability.md)   
+ [Problembehandlung für die Datenbankspiegelungskonfiguration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [sys. DM _hadr_availability_replica_states &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql) -   
+ [sys. DM _db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

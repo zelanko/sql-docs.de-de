@@ -13,12 +13,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: b4eea3e75ed57dcf69c8d8c5bcaedf3aef1fa9f5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68889609"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797638"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
   Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. Mehr **dimensionaler und Data Mining-Modus** unterstützt herkömmliche OLAP-und Data Mining. Der **tabellarische Modus** unterstützt tabellarische Modelle. Der **integrierte SharePoint-Modus** bezieht sich auf eine Instanz von Analysis Services, die als PowerPivot für SharePoint installiert wurde und zum Laden und Abfragen von Excel-oder Power Pivot-Datenmodellen in einer-Arbeitsmappe verwendet wird.  
@@ -26,9 +26,9 @@ ms.locfileid: "68889609"
  In diesem Thema wird die grundlegende Architektur von Analysis Services bei der Ausführung im mehrdimensionalen und Data Mining-Modus erläutert. Weitere Informationen zu anderen Modi finden Sie unter tabellarische Tabellen [ &#40;Modellierung (&#41; SSAS](../../tabular-models/tabular-models-ssas.md) ) und [Vergleichen von &#40;tabellarischen&#41;und mehrdimensionalen SSAS-Lösungen](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
   
 ## <a name="basic-architecture"></a>Grundlegende Architektur  
- Eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz kann mehrere Datenbanken enthalten, und eine Datenbank kann gleichzeitig OLAP-Objekte und Data Mining-Objekte enthalten. Anwendungen stellen eine Verbindung mit einer angegebenen Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer angegebenen Datenbank her. Ein Servercomputer kann mehrere Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] hosten. Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] werden als "\<ServerName > \\ < instancename \>" bezeichnet. Die folgende Abbildung zeigt alle erwähnten Beziehungen zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekten.  
+ Eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz kann mehrere Datenbanken enthalten, und eine Datenbank kann gleichzeitig OLAP-Objekte und Data Mining-Objekte enthalten. Anwendungen stellen eine Verbindung mit einer angegebenen Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer angegebenen Datenbank her. Ein Servercomputer kann mehrere Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] hosten. Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] werden als "\<Servername >\\< instancename\>" bezeichnet. Die folgende Abbildung zeigt alle erwähnten Beziehungen zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekten.  
   
- ![AMO-Objekte, die Objekte ausführen](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO-Objekte, die Objekte ausführen")  
+ ![AMO-Objekte, die Objekte ausführen](../../dev-guide/media/amo-runningobjects.gif "AMO-Objekte, die Objekte ausführen")  
   
  Basisklassen sind der minimale Satz von Objekten, der für die Erstellung eines Cubes erforderlich ist. Dieser minimale Satz von Objekten ist eine Dimension, eine Measuregruppe und eine Partition. Eine Aggregation ist optional.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68889609"
 ## <a name="example"></a>Beispiel  
  Der Imports-Cube enthält die beiden Measures Packages und Last sowie die drei verwandten Dimensionen Route, Source und Time.  
   
- ![Cube-Beispiel 1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Cube-Beispiel 1")  
+ ![Cube-Beispiel 1](../../dev-guide/media/cubeintro1.gif "Cube-Beispiel 1")  
   
  Die kleineren alphanumerischen Werte um den Cube herum stellen die Elemente der Dimension dar. Beispiele für Elemente sind ground (Element der Route-Dimension), Africa (Element der Source-Dimension) und 1st quarter (Element der Time-Dimension).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68889609"
 ### <a name="aggregates"></a>Aggregate  
  Anwender des Produkts im geschäftlichen Bereich, die einen Cube verwenden, können beliebige Measurewerte für jedes Element in jeder Dimension bestimmen, unabhängig von der Ebene des Elements innerhalb der Dimension, da Werte von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] auf höheren Ebenen als erforderlich aggregiert werden. Beispielsweise können die measurenwerte in der obigen Abbildung gemäß einer Standardkalender Hierarchie aggregiert werden, indem die Calendar Time-Hierarchie in der Time-Dimension verwendet wird, wie im folgenden Diagramm dargestellt.  
   
- ![Diagramm der Measures, die entlang der Zeitdimension organisiert sind](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "Diagramm der Measures, die entlang der Zeitdimension organisiert sind")  
+ ![Diagramm der Measures, die entlang der Zeitdimension organisiert sind](../../dev-guide/media/cubeintro2.gif "Diagramm der Measures, die entlang der Zeitdimension organisiert sind")  
   
  Ergänzend zur Aggregation von Measures mithilfe einer einzigen Dimension können Sie Measures mithilfe von Kombinationen von Elementen unterschiedlicher Dimensionen aggregieren. Auf diese Weise ist es Anwendern des Produkts im geschäftlichen Bereich möglich, in mehreren Dimensionen gleichzeitig Measures auszuwerten. Wenn ein Anwender des Produkts im geschäftlichen Bereich z. B. die Quartalsimporte analysieren möchte, die per Luftfracht aus der östlichen und der westlichen Hemisphäre eingetroffen sind, kann der Anwender eine Abfrage an den Cube eingeben, um das folgende Dataset abzurufen.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68889609"
 |||3rd quarter|6119|1444|4675|30.09.1999|18.09.1999|30.09.1999|  
 |||Viertes Quartal|7818|2126|5692|29.12.1999|22.12.1999|29.12.1999|  
   
- Wenn ein Cube definiert wurde, können Sie neue Aggregationen erstellen, oder Sie können vorhandene Aggregationen ändern, um Optionen festzulegen, die angeben, ob Aggregationen während der Verarbeitung im Voraus oder zum Zeitpunkt der Abfrage berechnet werden. **Verwandte Themen:** [Aggregationen und Aggregations Entwürfe](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ Wenn ein Cube definiert wurde, können Sie neue Aggregationen erstellen, oder Sie können vorhandene Aggregationen ändern, um Optionen festzulegen, die angeben, ob Aggregationen während der Verarbeitung im Voraus oder zum Zeitpunkt der Abfrage berechnet werden. **Verwandte Themen:**[Aggregationen und Aggregations Entwürfe](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Zuordnen von Measures, Attributen und Hierarchien  
  Die Measures, Attribute und Hierarchien des Cubes in dem Beispiel werden aus den folgenden Spalten in den Fakten- und Dimensionstabellen des Cubes abgeleitet.  
@@ -119,9 +119,9 @@ ms.locfileid: "68889609"
   
  In der obigen Tabelle hat jede Zeile die gleichen Werte für die Spalten **RouteKey**, **SourceKey**und **TimeKey** , die angeben, dass diese Zeilen zur gleichen Cubezelle beitragen.  
   
- In dem hier dargestellten Beispiel geht es um einen sehr einfachen Cube, der nur eine einzige Measuregruppe enthält und bei dem alle Dimensionstabellen in einem Sternschema mit der Faktentabelle verknüpft sind. In weiteres häufiges Schema ist das Schneeflockenschema, in dem mindestens eine Dimensionstabelle mit einer anderen Dimensionstabelle und nicht direkt mit der Faktentabelle verknüpft wird. **Verwandte Themen:** [Dimensionen &#40;Analysis Services Mehrdimensionale Daten&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ In dem hier dargestellten Beispiel geht es um einen sehr einfachen Cube, der nur eine einzige Measuregruppe enthält und bei dem alle Dimensionstabellen in einem Sternschema mit der Faktentabelle verknüpft sind. In weiteres häufiges Schema ist das Schneeflockenschema, in dem mindestens eine Dimensionstabelle mit einer anderen Dimensionstabelle und nicht direkt mit der Faktentabelle verknüpft wird. **Verwandte Themen:**[Dimensionen &#40;Analysis Services Mehrdimensionale Daten&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- Das hier dargestellte Beispiel enthält nur eine einzige Faktentabelle. Wenn ein Cube mehrere Faktentabellen enthält, werden die Measures aus jeder Faktentabelle in Measuregruppen organisiert, und eine Measuregruppe wird mithilfe von definierten Dimensionsbeziehungen mit einer bestimmten Gruppe von Dimensionen verbunden. Diese Beziehungen werden durch Angeben der teilnehmenden Tabellen in der Datenquellensicht und der Granularität der Beziehung definiert. **Verwandte Themen:** [Dimensions Beziehungen](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ Das hier dargestellte Beispiel enthält nur eine einzige Faktentabelle. Wenn ein Cube mehrere Faktentabellen enthält, werden die Measures aus jeder Faktentabelle in Measuregruppen organisiert, und eine Measuregruppe wird mithilfe von definierten Dimensionsbeziehungen mit einer bestimmten Gruppe von Dimensionen verbunden. Diese Beziehungen werden durch Angeben der teilnehmenden Tabellen in der Datenquellensicht und der Granularität der Beziehung definiert. **Verwandte Themen:**[Dimensions Beziehungen](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  

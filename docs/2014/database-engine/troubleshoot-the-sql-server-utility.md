@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung bei SQL Server-Hilfsprogramm | Microsoft-Dokumentation
+title: Problembehandlung beim SQL Server-Hilfsprogramm | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62842526"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797778"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Problembehandlung beim SQL Server-Hilfsprogramm
-  Die Behebung von Problemen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm kann das Auflösen eines fehlgeschlagenen Vorgangs zur Registrierung einer Instanz von SQL Server mit einem UCP, die Behebung von Fehlern bei Datensammlungen, die zu grauen Symbolen in der Listenansicht der verwalteten Instanzen auf einem UCP führen, die Abhilfe für Leistungsengpässe oder das Beheben von Problemen mit der Ressourcenintegrität umfassen. Weitere Informationen zum Beheben von Problemen mit der ressourcenintegrität identifizierte eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ucp stammen, finden Sie unter [Problembehandlung bei SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  Die Behebung von Problemen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm kann das Auflösen eines fehlgeschlagenen Vorgangs zur Registrierung einer Instanz von SQL Server mit einem UCP, die Behebung von Fehlern bei Datensammlungen, die zu grauen Symbolen in der Listenansicht der verwalteten Instanzen auf einem UCP führen, die Abhilfe für Leistungsengpässe oder das Beheben von Problemen mit der Ressourcenintegrität umfassen. Weitere Informationen zum Beheben von Ressourcen Integritätsproblemen, die durch einen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-UCP identifiziert werden, finden Sie unter Problembehandlung [SQL Server Resource Health &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Fehlgeschlagener Vorgang, eine Instanz von SQL Server in ein SQL Server-Hilfsprogramm zu registrieren  
  Wenn Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung für die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für die Registrierung verwenden, und Sie geben ein Proxykonto an, das zu einer anderen Active Directory-Domäne gehört als die Domäne, wo sich der UCP befindet, ist die Instanzüberprüfung erfolgreich, aber der Registrierungsvorgang schlägt mit der folgenden Fehlermeldung fehl:  
   
  Beim Ausführen einer Transact-SQL-Anweisung oder eines Batches ist eine Ausnahme aufgetreten. (Microsoft.SqlServer.ConnectionInfo)  
   
- Weitere Informationen:  Informationen zu Windows NT-Gruppe oder-Benutzer konnten nicht abgerufen "\<DomainName\AccountName >', Fehlercode 0 x 5. (Microsoft SQL Server, Fehler: 15404)  
+ Weitere Informationen: Konnte keine Informationen zu Windows NT Gruppe/Benutzer abrufen '\<DomainName\AccountName>', Fehlercode 0x5. (Microsoft SQL Server, Fehler: 15404)  
   
  Das Problem tritt im folgenden Beispielszenario auf:  
   
@@ -35,11 +35,11 @@ ms.locfileid: "62842526"
   
 3.  Die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die in das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm registriert werden soll, ist auch ein Element von "Domain_1."  
   
-4.  Während des Registrierungsvorgangs eine Verbindung mit der Instanz [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mit "sa" zu registrieren. Geben Sie ein Proxykonto bei "Domain_2" an.  
+4.  Stellen Sie während des Registrierungsvorgangs eine Verbindung mit der Instanz von her, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], um sich mit "SA" zu registrieren. Geben Sie ein Proxykonto bei "Domain_2" an.  
   
 5.  Die Überprüfung ist erfolgreich, aber die Registrierung schlägt fehl.  
   
- Die problemumgehung für dieses Problem, das im Beispiel oben besteht darin, für die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Sie beim Registrieren der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm mit "sa", und geben Sie ein Proxykonto an, von "Domain_1."  
+ Die Problem Umgehung für dieses Problem besteht im obigen Beispiel darin, eine Verbindung mit der Instanz von herzustellen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] um sich mit "SA" beim [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hilfsprogramm anzumelden und ein Proxy Konto von "Domain_1" bereitzustellen.  
   
 ## <a name="failed-wmi-validation"></a>Fehlgeschlagene WMI-Überprüfung  
  Wenn WMI nicht ordnungsgemäß auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]konfiguriert wird, zeigen die Vorgänge für das Erstellen des UCPs und die Registrierung verwalteter Instanzen eine Warnung an, der Vorgang wird jedoch nicht blockiert. Wenn Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Kontokonfiguration ändern, sodass der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent nicht über die Berechtigung für die erforderlichen WMI-Klassen verfügt, lädt die Datensammlung auf der betroffenen verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht zum UCP hoch. Dies führt im UCP zu grauen Symbolen.  
@@ -48,9 +48,9 @@ ms.locfileid: "62842526"
   
  Die vereinfachten Fehlermeldungen sind:  
   
- Ausführung des Befehls wird beendet, da die Shellvariable "ErrorActionPreference" auf Beenden festgelegt wurde: Zugriff verweigert.  
+ Die Befehlsausführung wurde beendet, da die Shellvariable "ErrorActionPreference" auf Beenden festgelegt wurde: Zugriff verweigert.  
   
- FEHLER: \<Datum und Uhrzeit (MM/TT/JJJJ hh: mm:) >: Abgefangene Ausnahme beim Sammeln von CPU-Eigenschaften.  Eine WMI-Abfrage könnte fehlgeschlagen sein.  WARNUNG:  
+ Fehler: \<Datum/Uhrzeit (mm/dd/yyyy HH: mm: SS) >: abgefangene Ausnahme beim Sammeln von CPU-Eigenschaften.  Eine WMI-Abfrage könnte fehlgeschlagen sein.  WARNUNG:  
   
  Um dieses Problem zu beheben, überprüfen Sie die folgenden Konfigurationseinstellungen:  
   
@@ -102,7 +102,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Wenn die Datensammlung oder das Hochladen von Daten aufgrund von Timeoutproblemen scheitern, aktualisieren Sie die Funktion dbo.fn_sysutility_mi_get_collect_script() in der MSDB-Datenbank. Fügen Sie insbesondere in der Funktion "Invoke-BulkCopyCommand()" die folgende Zeile hinzu:  
   
-    ```  
+    ```
     $bulkCopy.BulkCopyTimeout=180  
     ```  
   
@@ -114,9 +114,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  Erweitern Sie im **Objekt-Explorer**von SSMS den Knoten **Sicherheit** und dann den Knoten **Anmeldeinformationen** .  
   
-    2.  Mit der rechten Maustaste auf **UtilityAgentProxyCredential_\<GUID >** , und wählen Sie **Eigenschaften**.  
+    2.  Klicken Sie mit der rechten Maustaste auf **UtilityAgentProxyCredential_\<GUID >** und wählen Sie **Eigenschaften**aus.  
   
-    3.  Aktualisieren Sie im Dialogfeld Eigenschaften für Anmeldeinformationen Anmeldeinformationen nach Bedarf für die **UtilityAgentProxyCredential_\<GUID >** Anmeldeinformationen.  
+    3.  Aktualisieren Sie im Dialogfeld Eigenschaften für Anmelde Informationen die Anmelde Informationen für die **UtilityAgentProxyCredential_-\<GUID >** Anmelde Informationen nach Bedarf.  
   
     4.  Klicken Sie auf **OK** , um die Änderung zu bestätigen.  
   
@@ -124,13 +124,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Der SQL Server-Browserdienst auf dem UCP sollte gestartet werden und für den automatischen Start konfiguriert sein. Wenn die Verwendung des SQL Server-Browserdiensts in Ihrer Organisation verhindert wird, führen Sie die folgenden Schritte aus, damit eine verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Verbindung mit dem UCP herstellen kann:  
   
-    1.  Klicken Sie auf der Windows-Taskleiste der verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], klicken Sie auf **starten**, klicken Sie dann auf **ausführen...** .  
+    1.  Klicken Sie in der Windows-Taskleiste der verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]auf **Start**, und klicken Sie dann auf **Ausführen**.  
   
     2.  Geben Sie im dafür vorgesehenen Feld **cliconfg.exe**ein, und klicken Sie auf OK.  
   
     3.  Sobald Sie aufgefordert werden, die EXE-Datei für das SQL Server-Clientkonfigurationsprogramm zu starten, klicken Sie auf**Weiter**.  
   
-    4.  Auf der **SQL Server-Clientkonfigurationsprogramm** wählen Sie im Dialogfeld die **Alias** Registerkarte, und klicken Sie dann **hinzufügen...** .  
+    4.  Wählen Sie im Dialogfeld **SQL Server Client-Netzwerk Hilfsprogramm** die Registerkarte **Alias** aus, und klicken Sie dann auf **hinzufügen.**  
   
     5.  Im Dialogfeld **Netzwerkbibliothekskonfiguration hinzufügen** :  
   
@@ -164,8 +164,6 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     5.  Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits beim UCP registriert war, bevor der Benutzer dieser Gruppe hinzugefügt wurde, starten Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Dienst neu.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Fehlerbehebung für die SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)  
-  
-  
+ [Fehlerbehebung für die SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

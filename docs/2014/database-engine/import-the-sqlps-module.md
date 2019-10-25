@@ -10,19 +10,19 @@ ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 303d4cb75ad678ddd0c0f49e204566fc8a0d2c2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34859c0c516c61a73e31dbf752ab274188c6343a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064730"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797870"
 ---
 # <a name="import-the-sqlps-module"></a>Importieren des SQLPS-Moduls
   Es wird empfohlen, zur Verwaltung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] über PowerShell das `sqlps`-Modul in eine Windows PowerShell 2.0-Umgebung zu importieren. Das Modul lädt und registriert die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Snap-Ins und -Verwaltbarkeitsassemblys.  
   
 1.  **Vorbereitungen:**  [Sicherheit](#Security)  
   
-2.  **Das Modul zu laden:**  [Laden des Sqlps-Moduls](#LoadSqlps)  
+2.  **So laden Sie das Modul:**  [Laden des sqlps-Moduls](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Nach dem Importieren des `sqlps`-Moduls in Windows PowerShell stehen Ihnen folgende Möglichkeiten zur Verfügung:  
@@ -40,31 +40,27 @@ ms.locfileid: "66064730"
 > [!NOTE]  
 >  Die in den Namen von zwei SQL Server-Cmdlets (`Encode-Sqlname` und `Decode-Sqlname`) verwendeten Verben entsprechen nicht den genehmigten Verben für Windows PowerShell 2.0. Dies hat keine Auswirkungen auf den Vorgang, aber von Windows PowerShell wird eine Warnung ausgegeben, wenn das `sqlps`-Modul in eine Sitzung importiert wird.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
  Standardmäßig wird Windows PowerShell mit auf **Restricted**festgelegter Skriptausführungsrichtlinie ausgeführt. Dadurch wird die Ausführung von Windows PowerShell-Skripts verhindert. Zum Laden des `sqlps`-Moduls können Sie das `Set-ExecutionPolicy`-Cmdlet verwenden, um die Ausführung signierter Skripts oder beliebiger anderer Skripts zu ermöglichen. Führen Sie nur Skripts aus vertrauenswürdigen Quellen aus, und sichern Sie alle Eingabe- und Ausgabedateien, indem Sie die geeigneten NTFS-Berechtigungen verwenden. Weitere Informationen zum Aktivieren von Windows PowerShell-Skripts finden Sie unter [Ausführen der Windows PowerShell-Skripts](https://docs.microsoft.com/powershell/scripting/setup/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows).  
   
 ##  <a name="LoadSqlps"></a> Laden des sqlps-Moduls  
- **So laden Sie das sqlps-Modul in Windows PowerShell**  
+
+### <a name="to-load-the-sqlps-module-in-windows-powershell"></a>So laden Sie das sqlps-Modul in Windows PowerShell
   
 1.  Verwenden Sie das `Set-ExecutionPolicy`-Cmdlet, um die entsprechende Skriptausführungsrichtlinie festzulegen.  
   
-2.  Verwenden der `Import-Module` -Cmdlet zum Importieren des Sqlps-Moduls. Geben Sie den `DisableNameChecking`-Parameter an, wenn Sie die Warnung zu `Encode-Sqlname` und `Decode-Sqlname` unterdrücken möchten.  
+2.  Verwenden Sie das Cmdlet "`Import-Module`", um das sqlps-Modul zu importieren. Geben Sie den `DisableNameChecking`-Parameter an, wenn Sie die Warnung zu `Encode-Sqlname` und `Decode-Sqlname` unterdrücken möchten.  
   
 ### <a name="example-powershell"></a>Beispiel (PowerShell)  
  In diesem Beispiel wird das `sqlps`-Modul bei deaktivierter Namensüberprüfung geladen.  
   
-```  
+```powershell
 ## Import the SQL Server Module.  
   
 Import-Module "sqlps" -DisableNameChecking  
-  
 ```  
-  
 
-  
-## <a name="see-also"></a>Siehe auch  
- [SQL Server-PowerShell](../powershell/sql-server-powershell.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [SQL Server PowerShell-Anbieter](../powershell/sql-server-powershell-provider.md)   
  [Verwenden der Datenbank-Engine-Cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
-  
-  

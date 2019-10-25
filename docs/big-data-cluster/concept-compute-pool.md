@@ -1,7 +1,7 @@
 ---
 title: Was sind Computepools?
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel wird der computepool in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]einer beschrieben.
+description: Dieser Artikel beschreibt den computepool in einer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6156d23fa55690224cd6df82e5f4bafe10e4d1ab
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 420c4705d86eb55b6b99a6cf432cb95f3b9a6694
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653084"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798236"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Was sind Computepools in einem Big-Data-Cluster für SQL Server?
 
@@ -28,11 +28,11 @@ Ein Computepool besteht aus mindestens einem Compute-Pod, der in Kubernetes ausg
 
 ## <a name="scale-out-groups"></a>Erweiterungsgruppen
 
-Ein Computepool kann als PolyBase-Erweiterungsgruppe für verteilte Abfragen über verschiedene Datenquellen fungieren, etwa HDFS, Oracle, MongoDB oder TerradData. Durch Verwenden von Computepods in Kubernetes können Big Data-Cluster das Erstellen und Konfigurieren von Computepods für PolyBase-Erweiterungsgruppen automatisieren.
+Ein computepool kann als polybase-Erweiterungsgruppe für verteilte Abfragen für verschiedene Datenquellen (z. b. HDFS, Oracle, MongoDb oder Teradata) fungieren. Durch Verwenden von Computepods in Kubernetes können Big Data-Cluster das Erstellen und Konfigurieren von Computepods für PolyBase-Erweiterungsgruppen automatisieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]zu finden Sie in den folgenden Ressourcen:
+Weitere Informationen zum [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]finden Sie in den folgenden Ressourcen:
 
 - [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] -Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]-Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

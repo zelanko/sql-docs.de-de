@@ -1,5 +1,5 @@
 ---
-title: Starten, beenden, anhalten, fortsetzen und starten Sie die Datenbank-Engine, SQL Server-Agent oder SQL Server-Browser-Dienst neu. | Microsoft-Dokumentation
+title: Starten, anhalten, anhalten, fortsetzen, Neustarten des Datenbank-Engine, SQL Server-Agent oder SQL Server-Browser Dienstanbieter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -40,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808743"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797954"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers
   In diesem Thema wird beschrieben- und wie [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]- und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager- und der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]- und **net** commands from a command prompt- und [!INCLUDE[tsql](../../includes/tsql-md.md)]- und or PowerShell.  
@@ -56,7 +56,7 @@ ms.locfileid: "62808743"
   
     -   [Zusätzliche Informationen](#MoreInformation)  
   
-    -   [Sicherheit](#Security)  
+    -   [Security](#Security)  
   
 -   **Anweisungen mit:**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62808743"
   
     -   [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Services"></a> Was ist die Funktion des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Diensts, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Diensts und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdiensts?  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten sind ausführbare Programme, die als Windows-Dienst ausgeführt werden. Programme, die als Windows-Dienst ausgeführt werden, lassen sich ohne Anzeige von Aktivitäten auf dem Computerbildschirm weiterhin ausführen.  
@@ -112,18 +112,18 @@ ms.locfileid: "62808743"
   
 -   Im Fall der Ausführung auf einem Cluster lässt sich der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Dienst am besten mittels Clusterverwaltung verwalten.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Standardmäßig können nur Mitglieder der lokalen Administratorgruppe einen Dienst starten, beenden, anhalten, fortsetzen oder neu starten. Informationen dazu, wie Sie es Nichtadministratoren ermöglichen, Dienste zu verwalten, finden Sie unter [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349)(So erteilen Sie Benutzern die Berechtigung zum Verwalten von Diensten in Windows Server 2003). (Dieser Vorgang ist bei anderen Versionen von Windows ähnlich.)  
   
- Beenden der [!INCLUDE[ssDE](../../includes/ssde-md.md)] mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` Befehl erfordert die Mitgliedschaft in der **Sysadmin** oder **Serveradmin** festen Serverrollen und ist nicht übertragbar.  
+ Das Beenden des [!INCLUDE[ssDE](../../includes/ssde-md.md)] mit dem Befehl [!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN` erfordert die Mitgliedschaft in den festen Server Rollen **sysadmin** oder **serveradmin** und ist nicht übertragbar.  
   
 ##  <a name="SSCMProcedure"></a> Verwenden des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers  
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>So wird eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
-1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
+1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, dann auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], danach auf **Konfigurationstools**, und klicken Sie auf **SQL Server-Konfigurations-Manager**.  
   
 2.  Wenn das Dialogfeld **Benutzerkontensteuerung** angezeigt wird, klicken Sie auf **Ja**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62808743"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-includessnoversionincludesssnoversion-mdmd-browser-or-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>So wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser oder eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Instanz gestartet, beendet, angehalten, fortgesetzt oder neu gestartet  
   
-1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
+1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, dann auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], danach auf **Konfigurationstools**, und klicken Sie auf **SQL Server-Konfigurations-Manager**.  
   
 2.  Wenn das Dialogfeld **Benutzerkontensteuerung** angezeigt wird, klicken Sie auf **Ja**.  
   
@@ -264,7 +264,7 @@ ms.locfileid: "62808743"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- Weitere Informationen zu den `SHUTDOWN` -Anweisung finden Sie unter [Herunterfahren &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
+ Weitere Informationen zur `SHUTDOWN`-Anweisung finden Sie unter [Shutdown &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
   
@@ -281,8 +281,7 @@ ms.locfileid: "62808743"
     ```powershell  
     # Get a reference to the ManagedComputer class.  
     CD SQLSERVER:\SQL\computername  
-    $Wmi = (get-item .).ManagedComputer  
-  
+    $Wmi = (Get-Item .).ManagedComputer
     ```  
   
 3.  Identifizieren Sie den Dienst, den Sie beenden oder starten möchten. Wählen Sie eine der folgenden Zeilen aus. Ersetzen Sie `instancename` durch den Namen der benannten Instanz.  
@@ -338,8 +337,6 @@ ms.locfileid: "62808743"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Starten von SQL Server mit Minimalkonfiguration](start-sql-server-with-minimal-configuration.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Starten Sie von SQL Server mit Minimalkonfiguration](start-sql-server-with-minimal-configuration.md)   
  [Von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
-  
-  

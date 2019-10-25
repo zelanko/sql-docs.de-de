@@ -16,12 +16,12 @@ ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62755294"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797927"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)
   In diesem Thema wird beschrieben, wie ein Datenbankspiegelungs-Endpunkt in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird, der die Windows-Authentifizierung verwendet. Um die Datenbankspiegelung oder [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] unterstützen zu können, benötigt jede Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Datenspiegelungs-Endpunkt. Eine Serverinstanz kann nur über einen Datenbankspiegelungsendpunkt verfügen, der einen einzelnen Port besitzt. Ein Datenbankspiegelungsendpunkt kann einen beliebigen Port verwenden, der auf dem lokalen System verfügbar ist, wenn der Endpunkt erstellt wird. Alle Datenbankspiegelungssitzungen auf einer Serverinstanz lauschen an diesem Port, und alle eingehenden Verbindungen für die Datenbankspiegelung verwenden diesen Port.  
@@ -31,13 +31,13 @@ ms.locfileid: "62755294"
   
  **In diesem Thema**  
   
--   **Vorbereitungen:**  [Sicherheit](#Security)  
+-   **Before you begin:**  [Security](#Security)  
   
--   **So erstellen Sie einen Datenbankspiegelungsendpunkt:**  [Transact-SQL](#TsqlProcedure)  
+-   **Erstellen eines Datenbankspiegelungs-Endpunkts mit:** [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
  Die Authentifizierungs- und Verschlüsselungsmethoden der Serverinstanz werden vom Systemadministrator festgelegt.  
   
 > [!IMPORTANT]  
@@ -52,12 +52,12 @@ ms.locfileid: "62755294"
   
 1.  Stellen Sie eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, für die Sie einen Endpunkt für die Datenbankspiegelung erstellen möchten.  
   
-2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
+2.  Klicken Sie auf der Standardleiste auf **Neue Abfrage**.  
   
 3.  Ermitteln Sie mithilfe der folgenden Anweisung, ob ein Endpunkt für die Datenbankspiegelung bereits vorhanden ist:  
   
-    ```  
-    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
+    ```sql
+    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;
     ```  
   
     > [!IMPORTANT]  
@@ -79,13 +79,13 @@ ms.locfileid: "62755294"
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { *\<Algorithmus>* } ]  
   
      ]  
   
-     [ **,** ] ROLE = *\<Rolle>*  
+     [**,**] ROLE = *\<Rolle>*  
   
      )  
   
@@ -106,11 +106,11 @@ ms.locfileid: "62755294"
         > [!IMPORTANT]  
         >  Für jede Serverinstanz ist ein und nur ein eindeutiger Überwachungsport erforderlich.  
   
-    -   Bei der Windows-Authentifizierung ist die AUTHENTICATION-Option optional, es sei denn, der Endpunkt soll nur NTLM oder Kerberos zum Authentifzieren von Verbindungen verwenden. *\<Autorisierungsmethode >* gibt die Methode zum Authentifizieren von Verbindungen als eine der folgenden verwendet: NTLM, KERBEROS oder NEGOTIATE. Die Standardeinstellung, NEGOTIATE, bewirkt, dass der Endpunkt das Aushandlungsprotokoll von Windows verwendet, um NTLM oder Kerberos auszuwählen. Die Verbindungsverhandlung ermöglicht abhängig von der Authentifizierungsebene des gegenüberliegenden Endpunktes Verbindungen mit oder ohne Authentifizierung.  
+    -   Bei der Windows-Authentifizierung ist die AUTHENTICATION-Option optional, es sei denn, der Endpunkt soll nur NTLM oder Kerberos zum Authentifzieren von Verbindungen verwenden. *\<Autorisierungsmethode>* gibt die Methode zum Authentifizieren von Verbindungen an: NTLM, KERBEROS oder NEGOTIATE. Die Standardeinstellung, NEGOTIATE, bewirkt, dass der Endpunkt das Aushandlungsprotokoll von Windows verwendet, um NTLM oder Kerberos auszuwählen. Die Verbindungsverhandlung ermöglicht abhängig von der Authentifizierungsebene des gegenüberliegenden Endpunktes Verbindungen mit oder ohne Authentifizierung.  
   
     -   ENCRYPTION wird standardmäßig auf REQUIRED festgelegt. Dies bedeutet, dass alle Verbindungen mit diesem Endpunkt Verschlüsselungen verwenden müssen. Sie können die Verschlüsselung jedoch auch deaktivieren oder als optional für einen Endpunkt festlegen. Die Alternativen lauten folgendermaßen:  
   
-        |Wert|Definition|  
+        |value|Definition|  
         |-----------|----------------|  
         |DISABLED|Gibt an, dass über eine Verbindung gesendete Daten nicht verschlüsselt werden.|  
         |SUPPORTED|Gibt an, dass die Daten nur verschlüsselt werden, wenn der gegenüberliegende Endpunkt SUPPORTED oder REQUIRED angibt.|  
@@ -118,7 +118,7 @@ ms.locfileid: "62755294"
   
          Wenn ein Endpunkt Verschlüsselung erfordert, muss für den anderen Endpunkt ENCRYPTION auf SUPPORTED oder REQUIRED festgelegt werden.  
   
-    -   *\<Algorithmus>* stellt die Option zum Angeben der Verschlüsselungsstandards für den Endpunkt bereit. Der Wert des  *\<Algorithmus >* kann einer der folgenden Algorithmen oder Kombination aus Algorithmen sein: RC4, AES, AES RC4 oder RC4 AES.  
+    -   *\<Algorithmus>* stellt die Option zum Angeben der Verschlüsselungsstandards für den Endpunkt bereit. Der Wert von *\<Algorithmus>* kann einer der folgenden Algorithmen oder eine Kombination aus Algorithmen sein: RC4, AES, AES RC4 oder RC4 AES.  
   
          AES RC4 gibt an, dass dieser Endpunkt den Verschlüsselungsalgorithmus verhandelt, wobei der AES-Algorithmus bevorzugt wird. RC4 AES gibt an, dass dieser Endpunkt den Verschlüsselungsalgorithmus verhandelt, wobei der RC4-Algorithmus bevorzugt wird. Wenn beide Endpunkte beide Algorithmen angeben, jedoch in unterschiedlicher Reihenfolge, gewinnt der Endpunkt, der die Verbindung annimmt.  
   
@@ -130,14 +130,14 @@ ms.locfileid: "62755294"
          Damit eine Serverinstanz als eine Rolle für eine Datenbankspiegelungssitzung und eine andere Rolle für eine andere Sitzung fungieren kann, geben Sie ROLE=ALL an. Wenn Sie eine Serverinstanz auf die Partner- oder Zeugenrolle beschränken möchten, geben Sie ROLE=PARTNER bzw. ROLE=WITNESS an.  
   
         > [!NOTE]  
-        >  Weitere Informationen zu Datenbank-Spiegelungsoptionen für verschiedene Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+        >  Weitere Informationen zu den Optionen für die Daten Bank Spiegelung für verschiedene Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie unter [von den-Editionen unterstützte Funktionen SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
      Eine vollständige Beschreibung der CREATE ENDPOINT-Syntax finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)erstellt wird, der die Windows-Authentifizierung verwendet.  
   
     > [!NOTE]  
     >  Um einen vorhandenen Endpunkt zu ändern, verwenden Sie [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)erstellt wird, der die Windows-Authentifizierung verwendet.  
   
-###  <a name="TsqlExample"></a> Beispiel: Erstellen von Endpunkten mit Unterstützung für Datenbank-Spiegelungssitzung (Transact-SQL)  
+###  <a name="TsqlExample"></a> Beispiel: Erstellen von Endpunkten mit Unterstützung der Datenbankspiegelung (Transact-SQL)  
  Im folgenden Beispiel werden Datenbankspiegelungs-Endpunkte für die Standardserverinstanzen auf drei separaten Computersystemen erstellt:  
   
 |Rolle der Serverinstanz|Name des Hostcomputers|  
@@ -153,7 +153,7 @@ ms.locfileid: "62755294"
 > [!IMPORTANT]  
 >  Jede Serverinstanz kann nur einen Endpunkt besitzen. Wenn Sie daher wollen, dass eine Serverinstanz in einigen Sitzungen als Partner und in anderen als Zeuge agiert, müssen Sie ROLE=ALL festlegen.  
   
-```  
+```sql
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  
@@ -178,9 +178,10 @@ GO
 ```  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **So konfigurieren Sie einen Datenbankspiegelungs-Endpunkt**  
+
+### <a name="to-configure-a-database-mirroring-endpoint"></a>So konfigurieren Sie einen Datenbankspiegelungs-Endpunkt
   
--   [Erstellen Sie eine Datenbank mit dem Datenbankspiegelungs-Endpunkts für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Erstellen eines Datenbankspiegelungs- &#40;Endpunkts für AlwaysOn-Verfügbarkeitsgruppen SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
@@ -196,12 +197,10 @@ GO
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [Angeben einer Servernetzwerkadresse (Datenbankspiegelung)](specify-a-server-network-address-database-mirroring.md)   
  [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
-  
-  
