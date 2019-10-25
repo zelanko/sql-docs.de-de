@@ -22,12 +22,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d37a00e0a4fb71672f3bedcfc0e1651a7c42ce71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0ea3b81f69b46fbb829879f9976cb45a11ab803
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66099711"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783345"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Skripts für Bereitstellungs- und Verwaltungsaufgaben
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt die Verwendung von Skripts, um routinemäßige Installations-, Bereitstellungs- und Verwaltungsaufgaben zu automatisieren. Die Bereitstellung eines Berichtsservers stellt einen aus mehreren Schritten bestehenden Vorgang dar. Sie müssen mehrere Tools und Prozesse verwenden, um eine Bereitstellung zu konfigurieren. Es gibt kein einzelnes Programm oder Verfahren, das zum Automatisieren aller zugehörigen Aufgaben verwendet werden kann.  
@@ -52,7 +52,7 @@ ms.locfileid: "66099711"
 |Konfigurieren der Verbindung mit der Berichtsserver-Datenbank.|Wenn Sie die Verbindungszeichenfolge, das Konto oder Kennwort oder den Authentifizierungstyp ändern möchten, führen Sie das Hilfsprogramm **rsconfig** zum Konfigurieren der Verbindung aus. Weitere Informationen finden Sie unter [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (SSRS-Konfigurations-Manager)](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) und [rsconfig-Hilfsprogramm (SSRS)](rsconfig-utility-ssrs.md).<br /><br /> Mit rsconfig.exe können Sie die Datenbank nicht erstellen oder aktualisieren. Die Datenbank und RSExecRole müssen bereits vorhanden sein.|  
 |Konfigurieren Sie eine Bereitstellung für horizontales Skalieren.|Wählen Sie eine der folgenden Vorgehensweisen zum Automatisieren der Bereitstellung für horizontales Skalieren aus:<br /><br /> Führen Sie das Hilfsprogramm rskeymgmt.exe aus, um die Berichtsserverinstanzen in einer vorhandenen Installation zusammenzuführen. Weitere Informationen finden Sie unter [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren (SSRS-Konfigurations-Manager)](../install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).<br /><br /> Schreiben Sie benutzerdefinierten Code, der für den Berichtsserver-WMI-Anbieter ausgeführt wird.|  
 |Sichern Sie Verschlüsselungsschlüssel.|Wählen Sie eine der folgenden Vorgehensweisen zum Automatisieren der Sicherung der Verschlüsselungsschlüssel aus:<br /><br /> Führen Sie das Hilfsprogramm rskeymgmt.exe aus, um die Schlüssel zu sichern. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).<br /><br /> Schreiben Sie benutzerdefinierten Code, der für den Berichtsserver-WMI-Anbieter ausgeführt wird.|  
-|Konfigurieren Sie Berichtsserver-E-Mail-Optionen.|Schreiben Sie benutzerdefinierten Code, der für den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -WMI-Anbieter ausgeführt wird. Der Anbieter unterstützt eine Teilmenge der E-Mail-Konfigurationseinstellungen.<br /><br /> Obwohl die Datei RSReportServer.config alle Einstellungen enthält, verwenden Sie die Datei nicht in automatisierter Art und Weise. Verwenden Sie insbesondere keine Batchdatei, um die Datei auf einen anderen Berichtsserver zu kopieren. Jede Konfigurationsdatei enthält für die aktuelle Instanz spezifische Werte. Diese Werte sind in anderen Berichtsserverinstanzen ungültig.<br /><br /> Weitere Informationen zu den Einstellungen finden Sie unter [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
+|Konfigurieren Sie Berichtsserver-E-Mail-Optionen.|Schreiben Sie benutzerdefinierten Code, der für den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -WMI-Anbieter ausgeführt wird. Der Anbieter unterstützt eine Teilmenge der E-Mail-Konfigurationseinstellungen.<br /><br /> Obwohl die Datei RSReportServer.config alle Einstellungen enthält, verwenden Sie die Datei nicht in automatisierter Art und Weise. Verwenden Sie insbesondere keine Batchdatei, um die Datei auf einen anderen Berichtsserver zu kopieren. Jede Konfigurationsdatei enthält für die aktuelle Instanz spezifische Werte. Diese Werte sind in anderen Berichtsserverinstanzen ungültig.<br /><br /> Weitere Informationen zu den Einstellungen finden Sie unter [Konfigurieren eines Berichts Servers für die e &#40;-Mail-&#41;Übermittlung (SSRS) Configuration Manager](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
 |Konfigurieren Sie das Konto für die unbeaufsichtigte Ausführung.|Wählen Sie eine der folgenden Vorgehensweisen zum Automatisieren der Konfiguration des Kontos für die unbeaufsichtigte Ausführung aus:<br /><br /> Führen Sie das Hilfsprogramm rsconfig.exe aus, um das Konto zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung (SSRS-Konfigurations-Manager)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).<br /><br /> Schreiben Sie benutzerdefinierten Code, der den Berichtsserver-WMI-Anbieter aufruft.|  
 |Stellen Sie vorhandenen Inhalt auf einem anderen Berichtsserver bereit, einschließlich der Ordnerhierarchie, Rollenzuweisungen, Berichte, Abonnements, Zeitpläne, Datenquellen und Ressourcen.|Die beste Möglichkeit, eine vorhandene Berichtsserverumgebung neu zu erstellen, besteht im Kopieren der Berichtsserver-Datenbank in eine neue Berichtsserverinstanz.<br /><br /> Eine alternative Vorgehensweise besteht im Schreiben von benutzerdefiniertem Code, der vorhandenen Berichtsserverinhalt programmgesteuert neu erstellt. Beachten Sie jedoch, dass Abonnements, Berichtsmomentaufnahmen und der Berichtsverlauf nicht programmgesteuert neu erstellt werden können.<br /><br /> Für manche Bereitstellungen empfiehlt es sich, beide Verfahren zusammen zu verwenden (d. h., Wiederherstellen einer Berichtsserver-Datenbank und anschließendes Ausführen von benutzerdefiniertem Code, der die Berichtsserver-Datenbank für eine bestimmte Installation ändert).<br /><br /> Ein ausführliches Beispiel finden Sie unter [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).<br /><br /> Weitere Informationen zum Verschieben von Berichtsserver-Datenbanken finden Sie unter [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md). Weitere Informationen zum programmgesteuerten Erstellen einer Berichtsserverumgebung finden Sie in diesem Thema im Abschnitt "Migrieren von Berichtsserverinhalt und -ordnern mithilfe von Skripts".|  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66099711"
 > [!TIP]  
 >  Ein ausführliches Beispiel finden Sie unter [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-```  
+```vb
 Public Sub Main()  
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
@@ -120,15 +120,13 @@ Public Sub Main()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [GenerateDatabaseCreationScript-Methode &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
  [GenerateDatabaseRightsScript-Methode &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
  [GenerateDatabaseUpgradeScript-Methode &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
- [Installieren von SQLServer 2014 über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+ [Installieren Sie SQL Server 2014 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Browserunterstützung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Planen der Unterstützung &#40;von Reporting Services und Power View Browsers&#41; Reporting Services 2014](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services-Tools](reporting-services-tools.md)  
-  
-  
