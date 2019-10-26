@@ -18,12 +18,12 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5110057262eb09acc40f3c546184f7ee75b784a8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 6ddd9e8d0fb8b5c22dc73d0a11b6257583be07a8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707791"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907519"
 ---
 # <a name="using-data-files-and-format-files"></a>Verwenden von Datendateien und Formatdateien
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,8 +45,6 @@ ms.locfileid: "71707791"
   
 3.  Rufen Sie **bcp_exec** auf, um den Massenkopiervorgang auszuführen.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kann jede Anweisung sein, die ein Resultset generiert. Die Datendatei wird mit dem ersten Resultset der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung erstellt. Beim Massenkopieren wird jedes Resultset nach dem ersten ignoriert, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung mehrere Resultsets generiert.  
   
  Wenn Sie eine Datendatei erstellen möchten, in der Spaltendaten in einem anderen Format als in der Tabelle gespeichert werden, rufen Sie [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) auf, um anzugeben, wie viele Spalten geändert werden, und rufen Sie dann [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) für jede Spalte auf, deren Format Sie ändern möchten. Dies erfolgt nach dem Aufrufen von **bcp_init** , aber vor dem Aufrufen von **bcp_exec**. **bcp_colfmt** gibt das Format an, in dem die Daten der Spalte in der Datendatei gespeichert werden. Sie kann verwendet werden, wenn ein Massen Kopiervorgang oder ein Massen Kopiervorgang durch Sie können auch **bcp_colfmt** verwenden, um die Zeilen-und Spalten Terminatoren festzulegen. Wenn die Daten z. b. keine Tabulator Zeichen enthalten, können Sie eine durch Tabstopps getrennte Datei erstellen, indem Sie **bcp_colfmt** verwenden, um das Tabstopp Zeichen als Abschluss Zeichen für die einzelnen Spalten festzulegen.  
@@ -55,9 +53,9 @@ ms.locfileid: "71707791"
   
  Beim Massen kopieren aus einer Datendatei, die von einer Format Datei beschrieben wird, lesen Sie die Format Datei durch Aufrufen von [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) nach **bcp_init** , aber vor **bcp_exec**.  
   
- Die **bcp_control** -Funktion steuert mehrere Optionen beim Massen Kopieren von Daten aus einer Datendatei in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **bcp_control** legt Optionen fest, z. b. die maximale Anzahl von Fehlern vor dem Beenden, die Zeile in der Datei, in der der Massen Kopiervorgang gestartet werden soll, die Zeile, für die der Vorgang beendet werden soll, und die Batch Größe.  
+ Die **bcp_control** -Funktion steuert mehrere Optionen beim Massen Kopieren in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus einer Datendatei. **bcp_control** legt Optionen fest, z. b. die maximale Anzahl von Fehlern vor dem Beenden, die Zeile in der Datei, in der der Massen Kopiervorgang gestartet werden soll, die Zeile, für die der Vorgang beendet werden soll, und die Batch Größe.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausführen von Massen Kopier &#40;Vorgängen (ODBC)&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

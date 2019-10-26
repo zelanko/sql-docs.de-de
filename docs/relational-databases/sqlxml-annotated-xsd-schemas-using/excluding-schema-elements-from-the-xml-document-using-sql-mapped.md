@@ -1,5 +1,5 @@
 ---
-title: 'Ausschließen von Schemaelementen aus dem XML-Dokument mit Sql: zugeordnet | Microsoft-Dokumentation'
+title: 'Ausschließen von Schema Elementen aus dem XML-Dokument mithilfe von SQL: zugeordnet | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,30 +23,30 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e92b8b90793a82df9c38b819630070373e6e8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d466ad57d7644f73d7fdd44df62aac6a0c2a1b0b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067128"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905960"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Ausschließen von Schemaelementen aus dem XML-Dokument mithilfe von „sql:mapped“
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Aufgrund der Standardzuordnung werden alle Elemente und Attribute im XSD-Schema einer Datenbanktabelle/-sicht und -spalte zugeordnet. Wenn ein Element im XSD-Schema erstellen, auf Sie keiner Datenbanktabelle (Sicht) oder – Spalte zugeordnet, und nicht in der XML-Code angezeigt, werden sollen, können Sie angeben der **Sql: zugeordnet** Anmerkung.  
+  Aufgrund der Standardzuordnung werden alle Elemente und Attribute im XSD-Schema einer Datenbanktabelle/-sicht und -spalte zugeordnet. Wenn Sie ein Element im XSD-Schema erstellen möchten, das keiner Datenbanktabelle (Sicht) oder Spalte zugeordnet ist und nicht in der XML-Datei angezeigt wird, können Sie die **SQL:** zugeordnete Anmerkung angeben.  
   
- Die **Sql: zugeordnet** -Anmerkung ist besonders hilfreich, wenn das Schema kann nicht geändert werden oder wenn das Schema zum Validieren von XML aus anderen Datenquellen und noch Daten enthält, die nicht in der Datenbank gespeichert werden. Die **Sql: zugeordnet** -Anmerkung unterscheidet sich von **Sql: ist Konstante** , die nicht zugeordneten Elemente und Attribute im XML-Dokument nicht angezeigt werden.  
+ Die **SQL:** zugeordnete Anmerkung ist besonders nützlich, wenn das Schema nicht geändert werden kann oder wenn das Schema verwendet wird, um XML aus anderen Quellen zu validieren und noch Daten enthält, die nicht in der Datenbank gespeichert sind. Die **SQL:** zugeordnete Anmerkung unterscheidet sich von **SQL: is-constant** in, dass die nicht zugeordneten Elemente und Attribute nicht im XML-Dokument angezeigt werden.  
   
- Die **Sql: zugeordnet** -Anmerkung akzeptiert einen booleschen Wert (0 = False, 1 = True). Zulässig sind die Werte 0, 1, true und false.  
+ Die **SQL:** zugeordnete Anmerkung nimmt einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false.  
   
 ## <a name="examples"></a>Beispiele  
- Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Angeben der "sql:mapped"-Anmerkung  
- Angenommen, Sie haben ein XSD-Schema von einer anderen Quelle. Dieses XSD-Schema besteht aus einem  **\<Person.Contact >** -Element mit **ContactID**, **FirstName**, **"LastName"** , und **HomeAddress** Attribute.  
+ Angenommen, Sie haben ein XSD-Schema von einer anderen Quelle. Dieses XSD-Schema besteht aus einem **\<Person. Contact >** -Element mit den Attributen **ContactID**, **FirstName**, **LastName**und **HomeAddress** .  
   
- Beim Zuordnen dieses XSD-Schema der Person.Contact-Tabelle in der AdventureWorks-Datenbank **Sql: zugeordnet** angegeben ist, auf die **HomeAddress** Attribut, da der Startseite keine in die Employees-Tabelle gespeichert werden die Adressen der Angestellten. Daher wird dieses Attribut nicht der Datenbank zugeordnet und nicht im resultierenden XML-Dokument zurückgegeben, wenn eine XPath-Abfrage mit dem Zuordnungsschema ausgeführt wird.  
+ Beim Zuordnen dieses XSD-Schemas zur Person. Contact-Tabelle in der AdventureWorks-Datenbank wird **SQL: zugeordnet** im **HomeAddress** -Attribut angegeben, da in der Employees-Tabelle nicht die Privatadressen von Mitarbeitern gespeichert werden. Daher wird dieses Attribut nicht der Datenbank zugeordnet und nicht im resultierenden XML-Dokument zurückgegeben, wenn eine XPath-Abfrage mit dem Zuordnungsschema ausgeführt wird.  
   
- Für den Rest des Schemas wird eine Standardzuordnung durchgeführt. Die  **\<Person.Contact >** Element wird der Person.Contact-Tabelle zugeordnet, und alle Attribute den Spalten mit demselben Namen in der Person.Contact-Tabelle zugeordnet.  
+ Für den Rest des Schemas wird eine Standardzuordnung durchgeführt. Die **\<Person. Contact >** -Element wird der Person. Contact-Tabelle zugeordnet, und alle Attribute werden den gleichnamigen Spalten in der Person. Contact-Tabelle zugeordnet.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -63,7 +63,7 @@ ms.locfileid: "68067128"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
 1.  Kopieren Sie den oben stehenden Schemacode, und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen sql-mapped.xml.  
   
@@ -85,9 +85,7 @@ ms.locfileid: "68067128"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dies ist das Resultset:  
   
@@ -105,9 +103,9 @@ ms.locfileid: "68067128"
 </ROOT>  
 ```  
   
- Beachten Sie, dass die ContactID, FirstName und LastName vorhanden sind, HomeAddress wird nicht verwendet werden, da das Zuordnungsschema für 0 angegeben die **Sql: zugeordnet** Attribut.  
+ Beachten Sie, dass "ContactID", "FirstName" und "LastName" vorhanden sind, aber "HomeAddress" nicht ist, weil das Zuordnungsschema "0" für das Attribut " **SQL:**  
   
-## <a name="see-also"></a>Siehe auch  
- [Standardzuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Standard Zuordnung von XSD-Elementen und-Attributen zu Tabellen &#40;und Spalten SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

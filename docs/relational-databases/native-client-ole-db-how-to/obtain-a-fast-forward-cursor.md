@@ -13,14 +13,14 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75402ddc6c04ef9487f544fb070a143138cf66ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec168903543e42dff34d03086949bee79829f328
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110126"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909539"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>Abrufen eines FAST_FORWARD-Cursors
+# <a name="obtain-a-fast_forward-cursor"></a>Abrufen eines FAST_FORWARD-Cursors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -31,15 +31,13 @@ ms.locfileid: "68110126"
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
-### <a name="to-obtain-fastforward-cursor"></a>So rufen Sie einen FAST_FORWARD-Cursor ab  
+### <a name="to-obtain-fast_forward-cursor"></a>So rufen Sie einen FAST_FORWARD-Cursor ab  
   
 1.  Stellen Sie eine Verbindung mit der Datenquelle her.  
   
 2.  Legen Sie die Rowseteigenschaften DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT und DBPROP_OWNUPDATEDELETE auf VARIANT_TRUE fest.  
   
 3.  Führen Sie den Befehl aus.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie Sie die Rowseteigenschaften zum Abrufen eines FAST_FORWARD-Cursors festlegen. Nach dem Festlegen der Eigenschaften wird eine SELECT-Anweisung ausgeführt, um die Name-Spalte der Purchasing.Vendor-Tabelle in der AdventureWorks-Datenbank abzurufen und anzuzeigen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  

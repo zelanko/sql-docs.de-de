@@ -1,5 +1,5 @@
 ---
-title: Ändern der SQL Server-Dienst erweiterten Eigenschaften mithilfe von VBScript | Microsoft-Dokumentation
+title: Ändern der erweiterten Eigenschaften des SQL Server Dienstanbieter mithilfe von VBScript | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90632548114577475735a6dfca9244c84c09ab2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f46fa55f330274b6966f6181a022c3895dec4f9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139437"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909198"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit VBScript
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  In diesem Abschnitt wird beschrieben, wie ein VBScript-Programm erstellen, die die Version der installierten Instanzen von auflistet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die auf einem Computer ausgeführt werden.  
+  In diesem Abschnitt wird beschrieben, wie Sie ein VBScript-Programm erstellen, das die Version der installierten Instanzen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auflistet, die auf einem Computer ausgeführt werden.  
   
  Mit dem Codebeispiel werden die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die auf dem Computer ausgeführt werden, und deren Version aufgeführt.  
   
@@ -41,9 +41,7 @@ ms.locfileid: "68139437"
   
 5.  Speichern Sie die Datei.  
   
-6.  Führen Sie das Skript durch Eingabe **Cscript test.vbs** an der Eingabeaufforderung.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+6.  Führen Sie das Skript aus, indem Sie **cscript Test. VSB** an der Eingabeaufforderung eingeben.  
 
 ## <a name="example"></a>Beispiel  
   

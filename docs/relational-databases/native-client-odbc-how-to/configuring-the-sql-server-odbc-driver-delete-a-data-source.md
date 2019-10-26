@@ -13,12 +13,12 @@ ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbd14b4f784f93f78c317268799571220da3a3c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 714823ca585e85d8c1c3840da37630d975b9fdb6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939575"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908214"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Konfigurieren des SQL Server-ODBC-Treibers: Löschen einer Datenquelle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,15 +30,13 @@ ms.locfileid: "67939575"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>So löschen Sie eine Datenquelle mit dem ODBC-Administrator  
   
-1.  In **Systemsteuerung**öffnen **Verwaltung**, und doppelklicken Sie dann entweder **ODBC-Datenquellen (64-Bit)** oder **ODBC-Datenquellen (32-Bit)** . Stattdessen können Sie auch odbcad32.exe über die Eingabeaufforderung ausführen:  
+1.  Öffnen Sie in der **Systemsteuerung**die Option **Verwaltung**, und doppelklicken Sie dann auf **ODBC-Datenquellen (64-Bit)** oder **ODBC-Datenquellen (32 Bit)** . Stattdessen können Sie auch odbcad32.exe über die Eingabeaufforderung ausführen:  
   
 2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** .  
   
-3.  Wählen Sie die Datenquelle zu löschen.  
+3.  Wählen Sie die zu löschende Datenquelle aus.  
   
 4.  Klicken Sie auf **Entfernen**, und bestätigen Sie dann das Löschen.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Beispiel  
  Rufen Sie [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) entweder mit ODBC_REMOVE_DSN oder mit ODBC_REMOVE_SYS_DSN als zweitem Parameter auf, um eine Datenquelle programmgesteuert zu löschen.  
@@ -62,7 +60,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Hinzufügen einer Datenquelle &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Hinzufügen einer ODBC-Datenquelle &#40;&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

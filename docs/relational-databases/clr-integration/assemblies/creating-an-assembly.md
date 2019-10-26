@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87416b9cea3aee133493f93f97c9ccf11823cde7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9493567f33cf07dbfa9ae4f19d037a7db6157eda
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027930"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907398"
 ---
 # <a name="creating-an-assembly"></a>Erstellen von Assemblys
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   Die Assembly, die aufgerufen wird oder auf die verwiesen wird, wurde in derselben Datenbank erstellt.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Festlegen der Sicherheit beim Erstellen von Assemblys  
- Beim Erstellen einer Assembly in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank können Sie eine Festlegen von drei verschiedenen Sicherheitsstufen in der Ihr Code ausgeführt: **Sichere**, **EXTERNAL_ACCESS**, oder **UNSAFE**. Beim Ausführen der **CREATE ASSEMBLY** -Anweisung werden bestimmte Überprüfungen für die Code-Assembly durchgeführt, aufgrund derer die Assembly möglicherweise nicht beim Server registriert werden kann. Weitere Informationen finden Sie unter dem Beispiel für den Identitätswechsel auf [CodePlex](https://msftengprodsamples.codeplex.com/).  
+ Wenn Sie eine Assembly in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank erstellenerstellt wird, erstellt können Sie eine von drei verschiedenen Sicherheitsstufen festlegenerstellt wird, erstellt mit der der Code ausgeführt werden soll: **SAFE**erstellt wird, erstellt **EXTERNAL_ACCESS**erstellt wird, erstellt or **UNSAFE**. Beim Ausführen der **CREATE ASSEMBLY** -Anweisung werden bestimmte Überprüfungen für die Code-Assembly durchgeführt, aufgrund derer die Assembly möglicherweise nicht beim Server registriert werden kann. Weitere Informationen finden Sie unter dem Beispiel für den Identitätswechsel auf [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **SAFE** ist der Standardberechtigungssatz und funktioniert für die meisten Szenarien. Um eine bestimmte Sicherheitsstufe anzugeben, ändern Sie die Syntax der CREATE ASSEMBLY-Anweisung wie folgt:  
   
@@ -69,7 +69,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  Wird der Code in einer Assembly mit eingestellter **SAFE** -Berechtigung ausgeführt, können Berechnungen und Datenzugriffe im Server ausschließlich über den prozessinternen verwalteten Anbieter erfolgen.  
   
-### <a name="creating-externalaccess-and-unsafe-assemblies"></a>Erstellen von EXTERNAL_ACCESS- und UNSAFE-Assemblys  
+### <a name="creating-external_access-and-unsafe-assemblies"></a>Erstellen von EXTERNAL_ACCESS- und UNSAFE-Assemblys  
  **EXTERNAL_ACCESS** wird für Szenarien verwendet, in denen der Code auf Ressourcen außerhalb des Servers zugreift, z. B. Datei-, Netzwerk-, Registrierungs- und Umgebungsvariablen. Immer wenn der Server auf eine externe Ressource zugreift, verwendet er den Sicherheitskontext des Benutzers, der den verwalteten Code aufruft.  
   
  **UNSAFE** wird für Situationen verwendet, in denen eine Assembly nicht eindeutig als sicher eingestuft werden kann oder zusätzlichen Zugriff auf beschränkte Ressourcen benötigt, z. B. die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32-API.  
@@ -79,8 +79,6 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  Die Assembly wurde mit einem starken Namen oder Authenticode mit Zertifikat signiert. Der starke Name (oder das Zertifikat) wird in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als asymmetrischer Schlüssel (oder Zertifikat) erstellt und verfügt über eine zugehörige Anmeldung mit **EXTERNAL ACCESS ASSEMBLY** -Berechtigung (für Assemblys mit externem Zugriff) oder **UNSAFE ASSEMBLY** -Berechtigung (für unsichere Assemblys).  
   
 2.  Der Datenbankbesitzer (DBO) hat die Berechtigung **EXTERNAL ACCESS ASSEMBLY** (für **EXTERNAL ACCESS** -Assemblys) oder **UNSAFE ASSEMBLY** (für **UNSAFE** -Assemblys), und für die Datenbank ist [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) auf **ON**eingestellt.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Die beiden oben aufgeführten Bedingungen werden auch zur Assemblyladezeit (dazu gehört auch die Ausführung) überprüft. Mindestens eine der Bedingungen muss erfüllt sein, um die Assembly zu laden.  
   
@@ -131,11 +129,11 @@ WITH PERMISSION_SET = UNSAFE;
   
  Weitere Informationen zu den Berechtigungen für die verschiedenen Einstellungen finden Sie unter [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwalten von CLR-Integrationsassemblys](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Verwalten von CLR-INTEGRA  tionsassemblys](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
  [Ändern einer Assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
- [Löschen von Assemblys](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
- [Codezugriffssicherheit für CLR-Integration](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+ Löschen [eines](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md) Assembly   
+   der [CLR-Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
  [TRUSTWORTHY-Datenbankeigenschaft](../../../relational-databases/security/trustworthy-database-property.md)   
  [Zulassen von teilweise vertrauenswürdigen Aufrufern](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   

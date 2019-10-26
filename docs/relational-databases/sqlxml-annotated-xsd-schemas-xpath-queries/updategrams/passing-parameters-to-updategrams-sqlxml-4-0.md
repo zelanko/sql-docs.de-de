@@ -1,5 +1,5 @@
 ---
-title: Übergeben von Parametern an Updategramms (SQLXML 4.0) | Microsoft-Dokumentation
+title: Übergeben von Parametern an Updategrams (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,31 +17,31 @@ ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c557c96701ce9587125acccbb12f408d465a07b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc2617796c5abf7f94e85fc6397b780ea9c401c4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018495"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907829"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Übergeben von Parametern an Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Updategrams sind Vorlagen. Daher können Sie ihnen Parameter übergeben. Weitere Informationen zum Übergeben von Parametern an Vorlagen finden Sie unter [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  
+  Updategrams sind Vorlagen. Daher können Sie ihnen Parameter übergeben. Weitere Informationen zum Übergeben von Parametern an Vorlagen finden Sie unter [Updategram &#40;Security Überlegungen SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  
   
- Mit Updategrams können Sie NULL als Parameterwert übergeben. Um die NULL-Parameterwert zu übergeben, geben Sie die **Nullvalue** Attribut. Der Wert, der zugewiesen wird die **Nullvalue** Attribut klicken Sie dann als der Parameterwert bereitgestellt wird. Updategrams behandeln diesen Wert als NULL.  
+ Mit Updategrams können Sie NULL als Parameterwert übergeben. Um den NULL-Parameterwert zu übergeben, geben Sie das **NullValue** -Attribut an. Der Wert, der dem **NullValue** -Attribut zugewiesen wird, wird dann als Parameterwert bereitgestellt. Updategrams behandeln diesen Wert als NULL.  
   
 > [!NOTE]  
->  In  **\<SQL: Header >** und  **\<Updg:header >** , geben Sie die **Nullvalue** nicht als qualifizierte, während im  **\<updg: Sync >** , Sie geben die **Nullvalue** als qualifiziert (z. B. **updg: NullValue**).  
+>  In **\<SQL: Header >** und **\<updg: Header->** sollten Sie **NullValue** als nicht qualifiziert angeben. in **\<updg: Sync >** geben Sie den **Nullwert** als qualifiziert an (z. b. **updg: NullValue**).  
   
 ## <a name="examples"></a>Beispiele  
- Um funktionierende Beispiele, die mit den folgenden Beispielen erstellen, müssen Sie die Anforderungen, die im angegebenen erfüllen [Anforderungen für die Ausführung von SQLXML-Beispielen](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Wenn Sie in den folgenden Beispielen funktionierende Beispiele erstellen möchten, müssen Sie die unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)angegebenen Anforderungen erfüllen.  
   
- Beachten Sie bevor Sie die updategrambeispiele verwenden Folgendes ein:  
+ Beachten Sie vor der Verwendung der Update Gram-Beispiele Folgendes:  
   
--   Die Beispiele verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   Die Beispiele verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Update grams, die Mapping-Schemas verwenden, finden Sie unter [Angeben eines Mappingschemas mit Anmerkungen in einem &#40;Update Gram SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. Übergeben von Parametern an ein Updategram  
- In diesem Beispiel ändert das Updategram den Nachnamen eines Angestellten in der HumanResources.Shift-Tabelle. Das Updategram werden zwei Parameter übergeben: ShiftID, die zur eindeutigen Identifizierung der Schicht, und nennen Sie verwendet wird.  
+ In diesem Beispiel ändert das Updategram den Nachnamen eines Angestellten in der HumanResources.Shift-Tabelle. An das Updategram werden zwei Parameter übergeben: ShiftID zur eindeutigen Identifizierung der Schicht und Name.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -64,9 +64,7 @@ ms.locfileid: "68018495"
   
 1.  Kopieren Sie das oben angegebene Updategram in Editor, und speichern Sie es als Datei unter UpdategramWithParameters.xml.  
   
-2.  Bereiten Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs) in [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) das Updategram ausgeführt wird, indem Sie die folgenden Zeilen nach dem Hinzufügen der `cmd.Properties("Output Stream").Value = outStream`:  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+2.  Bereiten Sie das SQLXML 4,0-Testskript (Sqlxml4test. vb) [mithilfe von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) zum Ausführen des Update grams vor, indem Sie nach dem `cmd.Properties("Output Stream").Value = outStream`die folgenden Zeilen hinzufügen:  
 
     ```  
     cmd.NamedParameters = True  
@@ -101,7 +99,7 @@ ms.locfileid: "68018495"
   
 1.  Kopieren Sie das oben angegebene Updategram in Editor, und speichern Sie es als Datei unter UpdategramPassingNullvalues.xml.  
   
-2.  Bereiten Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs) in [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) das Updategram ausgeführt wird, indem Sie die folgenden Zeilen nach dem Hinzufügen der `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Bereiten Sie das SQLXML 4,0-Testskript (Sqlxml4test. vb) [mithilfe von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) zum Ausführen des Update grams vor, indem Sie nach dem `cmd.Properties("Output Stream").Value = outStream`die folgenden Zeilen hinzufügen:  
   
     ```  
     cmd.NamedParameters = True  
@@ -110,7 +108,7 @@ ms.locfileid: "68018495"
     cmd.Parameters.Append cmd.CreateParameter("@ManagerID",  3, 1, 0, Null)  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Sicherheitsüberlegungen &#40;zu Update grams SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

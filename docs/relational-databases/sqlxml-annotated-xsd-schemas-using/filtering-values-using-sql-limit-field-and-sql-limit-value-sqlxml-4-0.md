@@ -1,5 +1,5 @@
 ---
-title: "Filtern von Werten mithilfe von ' SQL: Limit-Field und ' SQL: Limit-Wert (SQLXML 4.0) | Microsoft-Dokumentation"
+title: "Filtern von Werten mit ' SQL: limit-field ' und ' SQL: limit-value ' (SQLXML 4,0) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,23 +19,23 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ac64cc0ff2f16b70000ff4bc33d0f5fd114f872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067113"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906098"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtern von Werten mit 'sql:limit-field' und 'sql:limit-value' (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Sie können Zeilen, die von einer Datenbankabfrage zurückgegeben werden, mit einem Grenzwert beschränken. Die **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen werden verwendet, die Datenbankspalte, die Grenzwerte enthält, identifizieren und an einen bestimmten Grenzwert, zum Filtern der Daten verwendet werden soll zurückgegeben.  
+  Sie können Zeilen, die von einer Datenbankabfrage zurückgegeben werden, mit einem Grenzwert beschränken. Die **SQL: limit-field-** und **SQL: limit-value-** Anmerkungen werden verwendet, um die Daten Bank Spalte zu identifizieren, die einschränkende Werte enthält, und um einen bestimmten Einschränkungs Wert anzugeben, der zum Filtern der zurückgegebenen Daten verwendet werden soll.  
   
- Die **' SQL: Limit-Feld** -Anmerkung verwendet, um eine Spalte identifizieren, die einen Grenzwert enthält; es ist für jeden zugeordneten Elemente oder Attribute zulässig.  
+ Die **SQL: limit-field-** Anmerkung wird verwendet, um eine Spalte zu identifizieren, die einen einschränkenden Wert enthält. Es ist für jedes zugeordnete Element oder Attribut zulässig.  
   
- Die **' SQL: Limit-Wert** -Anmerkung verwendet, um die nur von begrenztem Wert in der Spalte anzugeben, die im angegebenen die **' SQL: Limit-Feld** Anmerkung. Die **' SQL: Limit-Wert** Anmerkung ist optional. Wenn **' SQL: Limit-Wert** ist nicht angegeben wird, wird ein NULL-Wert verwendet.  
+ Die **SQL: limit-value-** Anmerkung wird verwendet, um den begrenzten Wert in der Spalte anzugeben, die in der **SQL: limit-field-** Anmerkung angegeben wird. Die **SQL: limit-value-** Anmerkung ist optional. Wenn **SQL: limit-value** nicht angegeben wird, wird ein NULL-Wert angenommen.  
   
 > [!NOTE]  
->  Bei der Arbeit mit einer **' SQL: Limit-Feld** , in dem die zugeordnete SQL-Spalte ist vom Typ **echte**, SQLXML 4.0 führt die Konvertierung für die **' SQL: Limit-Wert** gemäß den Angaben in der XML-Schemas als ein **Nvarchar** angegebenen Wert. Hierzu müssen Dezimalgrenzwerte mithilfe der vollständigen wissenschaftlichen Schreibweise angegeben werden. Weitere Informationen finden Sie im Folgenden unter Beispiel B.  
+>  Beim Arbeiten mit einem **SQL: Limit-Feld** , bei dem die zugeordnete SQL-Spalte vom Typ " **Real**" ist, führt SQLXML 4,0 eine Konvertierung für den **Wert "SQL: limit-value** " gemäß den Angaben in XML-Schemas als **nvarchar** -Wert durch. Hierzu müssen Dezimalgrenzwerte mithilfe der vollständigen wissenschaftlichen Schreibweise angegeben werden. Weitere Informationen finden Sie im Folgenden unter Beispiel B.  
   
 ## <a name="examples"></a>Beispiele  
  Um mithilfe dieser Daten funktionstüchtige Beispiele zu erstellen, muss Folgendes installiert sein:  
@@ -55,7 +55,7 @@ ms.locfileid: "68067113"
   
  Ein Kunde kann eine Liefer- und/oder eine Rechnungsadresse haben. Die AddressType-Spaltenwerte sind Shipping (Lieferadresse) und Billing (Rechnungsadresse).  
   
- Dies ist das Zuordnungsschema, in dem die **"ShipTo"** -Schemaattribut der StreetAddress-Spalte in der Addresses-Beziehung zugeordnet. Die für dieses Attribut zurückgegebenen Werte sind beschränkt auf Lieferadressen durch Angabe der **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen. Auf ähnliche Weise die **"BillTo"** Schemaattribut gibt nur die Rechnungsadresse eines Kunden zurück.  
+ Dies ist das Zuordnungs Schema, in dem das **ShipTo** -Schema Attribut der Spalte "StreetAddress" in der Beziehung "Adressen" zugeordnet wird. Die Werte, die für dieses Attribut zurückgegeben werden, sind nur durch Angabe der Werte " **SQL: limit-field** " und " **SQL: limit-value** " auf Versandadressen beschränkt. Ebenso gibt das Attribut " **BillTo** Schema" nur die Abrechnungsadresse eines Kunden zurück.  
   
  Das ist das Schema:  
   
@@ -99,9 +99,9 @@ ms.locfileid: "68067113"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
-1.  Erstellen Sie zwei Tabellen in der **Tempdb** Datenbank:  
+1.  Erstellen Sie zwei Tabellen in der **tempdb** -Datenbank:  
   
     ```  
     USE tempdb  
@@ -148,9 +148,7 @@ ms.locfileid: "68067113"
   
 5.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dies ist das Ergebnis:  
   
@@ -174,7 +172,7 @@ ms.locfileid: "68067113"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Dies ist das Zuordnungsschema, in dem die **"OrderID"** Attribut in den Bestellungsdetails der OrderID-Spalte in der Orders-Beziehung zugeordnet. Die für dieses Attribut zurückgegebenen Werte sind beschränkt auf jene, deren Wert der 2.0000000e-001 (0,2) gemäß der Einstellung für die **Discount** -Attribut mit der **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen.  
+ Dies ist das Zuordnungs Schema, in dem das **OrderID** -Attribut in den Bestelldetails der OrderID-Spalte in der Orders-Beziehung zugeordnet wird. Die für dieses Attribut zurückgegebenen Werte sind auf die Werte beschränkt, die den Wert 0000000e e-001 (0,2) aufweisen, wie für das **Discount** -Attribut mithilfe der **SQL: limit-field-** und **SQL: limit-value-** Anmerkungen angegeben.  
   
  Das ist das Schema:  
   
@@ -218,9 +216,9 @@ ms.locfileid: "68067113"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
-1.  Erstellen Sie zwei Tabellen in der **Tempdb** Datenbank:  
+1.  Erstellen Sie zwei Tabellen in der **tempdb** -Datenbank:  
   
     ```  
     USE tempdb  
@@ -308,10 +306,10 @@ ms.locfileid: "68067113"
     </root>  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [Nchar und Nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [nchar und nvarchar &#40;Transact-SQL&#41; ](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Mithilfe von Schemas mit Anmerkungen in XSD in Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Verwenden von XSD-Schemas mit Anmerkungen in &#40;Abfragen SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

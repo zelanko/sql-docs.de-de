@@ -14,12 +14,12 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62a21ebe62cb9a62172ffc63e15ced0deb6a23b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3a1e8f9076cce34de811713455c914f41b5814d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908162"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908052"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Abrufen von Zeilen mithilfe von Lesezeichen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,8 +41,6 @@ ms.locfileid: "67908162"
 4.  Legen Sie für die Spalte, die als Lesezeichen verwendet werden soll das **dwFlag** -Feld der Bindungsstruktur auf das DBCOLUMNSINFO_ISBOOKMARK-Flag fest.  
   
 5.  Verwenden Sie **IRowsetLocate::GetRowsAt** , um Zeilen abzurufen und dabei mit der Zeile, die in einem Lesezeichen als Offset angegeben wird, zu beginnen.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie Zeilen mithilfe eines Lesezeichens abgerufen werden. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  

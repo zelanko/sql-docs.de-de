@@ -14,17 +14,17 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c6c99edd1d52e3175dcd8793bd4bf7afcd605b7
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148335"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909039"
 ---
 # <a name="scripting"></a>Skripterstellung
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Die Skripterstellung in SMO wird durch <xref:Microsoft.SqlServer.Management.Smo.Scripter> das-Objekt und seine untergeordneten Objekte oder die **Skript** Methode für einzelne Objekte gesteuert. Das <xref:Microsoft.SqlServer.Management.Smo.Scripter> -Objekt steuert die Zuordnung von Abhängigkeitsbeziehungen für-Objekte in einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Die Skripterstellung in SMO wird durch das <xref:Microsoft.SqlServer.Management.Smo.Scripter> Objekt und seine untergeordneten Objekte oder die **Skript** Methode für einzelne Objekte gesteuert. Das <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekt steuert die Zuordnung von Abhängigkeitsbeziehungen für-Objekte in einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Die erweiterte Skripterstellung mithilfe des <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekts und dessen untergeordneten Objekten ist ein Prozess, der aus drei Phasen besteht:  
   
@@ -33,8 +33,6 @@ ms.locfileid: "70148335"
 2.  Listengenerierung  
   
 3.  Skriptgenerierung  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Die Ermittlungsphase verwendet das <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>-Objekt. Bei einer URN-Liste mit Objekten gibt die <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A>-Methode des <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>-Objekts ein <xref:Microsoft.SqlServer.Management.Smo.DependencyTree>-Objekt für die Objekte in der URN-Liste zurück. Der boolesche *fParents* -Parameter wird verwendet, um auszuwählen, ob die übergeordneten Elemente oder die untergeordneten Elemente des angegebenen Objekts erkannt werden sollen. Die Abhängigkeitsstruktur kann in dieser Phase geändert werden.  
   

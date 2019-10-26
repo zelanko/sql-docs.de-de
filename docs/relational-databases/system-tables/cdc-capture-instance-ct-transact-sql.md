@@ -1,5 +1,5 @@
 ---
-title: CDC. &lt;Capture_instance&gt;_CT (Transact-SQL) | Microsoft-Dokumentation
+title: CDC.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -17,74 +17,72 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e4ad2d32c313919ed4446a5506f22e9048e09288
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119312"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908394"
 ---
-# <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC.&lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die Änderungstabelle, die erstellt wird, wenn Change Data Capture für eine Quelltabelle aktiviert wird. Für jeden Einfüge- oder Löschvorgang, der in der Quelltabelle ausgeführt wird, gibt die Tabelle eine Zeile zurück, für jeden Updatevorgang in der Quelltabelle gibt sie zwei Zeilen zurück. Wird der Name der Änderungstabelle bei der Aktivierung der Quelltabelle nicht angegeben, wird der Name abgeleitet. Das Format des Namens ist die cdc. *Capture_instance*_CT, in denen *Capture_instance* ist den Schemanamen der Quelltabelle und dem Quelltabellennamen im Format *Schema_table*. Z. B. wenn die Tabelle **Person.Address** in die **AdventureWorks** -Beispieldatenbank für Change Data Capture aktiviert ist, der Name der abgeleiteten Tabelle **cdc. Person_Address_CT**.  
+  Die Änderungstabelle, die erstellt wird, wenn Change Data Capture für eine Quelltabelle aktiviert wird. Für jeden Einfüge- oder Löschvorgang, der in der Quelltabelle ausgeführt wird, gibt die Tabelle eine Zeile zurück, für jeden Updatevorgang in der Quelltabelle gibt sie zwei Zeilen zurück. Wird der Name der Änderungstabelle bei der Aktivierung der Quelltabelle nicht angegeben, wird der Name abgeleitet. Das Format des Namens ist CDC. *capture_instance*_CT wobei *capture_instance* der Schema Name der Quell Tabelle und der Name der Quell Tabelle im Format *schema_table*ist. Wenn beispielsweise die Tabelle **Person. Address** in der **AdventureWorks** -Beispieldatenbank für Change Data Capture aktiviert ist, ist der Name der abgeleiteten Änderungs Tabelle **CDC. Person_Address_CT**.  
   
- Es wird empfohlen, die Sie **die Systemtabellen nicht direkt Abfragen**. Führen Sie stattdessen die [CDC. fn_cdc_get_all_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) und [CDC. fn_cdc_get_net_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) Funktionen.  
+ Es wird empfohlen, **die Systemtabellen nicht direkt abzufragen**. Führen Sie stattdessen die Funktionen [CDC. fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) und [CDC. fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) aus.  
   
 
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**__$start_lsn**|**binary(10)**|Protokollfolgenummer (LSN, Log Sequence Number), die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Z. B. wenn ein Delete-Vorgang in der Quelltabelle zwei Zeilen entfernt, die Änderungstabelle enthält zwei Zeilen, die jeweils mit dem gleichen **__ $Start_lsn** Wert.|  
-|**__$end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hat diese Spalte immer den Wert NULL.|  
+|**__$start_lsn**|**binary(10)**|Protokollfolgenummer (LSN, Log Sequence Number), die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Wenn z. b. bei einem Löschvorgang in der Quell Tabelle zwei Zeilen entfernt werden, enthält die Änderungs Tabelle zwei Zeilen, die jeweils denselben **__ $ start_lsn** -Wert aufweisen.|  
+|**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hat diese Spalte immer den Wert NULL.|  
 |**__$seqval**|**binary(10)**|Sequenzwert, der verwendet wird, um die Zeilenänderungen innerhalb einer Transaktion zu sortieren.|  
 |**__$operation**|**int**|Identifiziert den Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Kann einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Aktualisieren (alte Werte)<br /><br /> Spaltendaten verfügen vor der Ausführung der UPDATE-Anweisung über Zeilenwerte.<br /><br /> 4 = Aktualisieren (neue Werte)<br /><br /> Spaltendaten verfügen nach der Ausführung der UPDATE-Anweisung über Zeilenwerte.|  
-|**__$update_mask**|**varbinary(128)**|Eine Bitmaske, die basierend auf den Spaltenordnungszahlen der Änderungstabelle, die geänderte Spalten identifiziert.|  
+|**__$update_mask**|**varbinary(128)**|Eine Bitmaske, die auf den Spalten Ordnungen der Änderungs Tabelle basiert, die die geänderten Spalten identifiziert.|  
 |*\<erfasste Quelltabellenspalten>*|variiert|Bei den verbleibenden Spalten in der Änderungstabelle handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Tabellen identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle in diese Tabelle aufgenommen.|  
-|**__$command_id** |**int** |Verfolgt die Reihenfolge der Vorgänge innerhalb einer Transaktion. |  
+|**__ $ command_id** |**int** |Verfolgt die Reihenfolge der Vorgänge innerhalb einer Transaktion. |  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 
-Die `__$command_id` Spalte wurde die Spalte wurde in ein kumulatives Update in Versionen 2012 bis 2016 eingeführt. Informationen zu Version und herunterladen, finden Sie unter im Knowledge Base-Artikel 3030352 unter [zu beheben: Die Änderungstabelle sortiert wird, ist nicht ordnungsgemäß nach aktualisierten Zeilen nach der Aktivierung von Change Data capture für eine Microsoft SQL Server-Datenbank](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Weitere Informationen finden Sie unter [CDC-Funktionen kann nach dem Upgrade auf die neueste CU für SQL Server 2012, 2014 und 2016 unterbrechen](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+Die Spalte `__$command_id` Spalte wurde in einem kumulativen Update in den Versionen 2012 bis 2016 eingeführt. Informationen zur Version und zum Herunterladen finden Sie im KB-Artikel 3030352 unter [Korrektur: die Änderungs Tabelle wird nach dem Aktivieren von Change Data Capture für eine Microsoft SQL Server Datenbank falsch für aktualisierte Zeilen angeordnet](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Weitere Informationen finden Sie unter unter [Brechung der CDC-Funktion nach dem Upgrade auf das neueste Cu für SQL Server 2012, 2014 und 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
 ## <a name="captured-column-data-types"></a>Datentypen von aufgezeichneten Spalten  
  Die in dieser Tabelle enthaltenen aufgezeichneten Spalten haben denselben Datentyp und Wert wie die entsprechenden Quellspalten. Hierbei gelten folgende Ausnahmen:  
   
--   **Zeitstempel** als Spalten definiert sind **binary(8)** .  
+-   **Timestamp** -Spalten werden als **Binary (8)** definiert.  
   
--   **Identität** Spalten definiert werden, entweder als **Int** oder **Bigint**.  
+-   **Identitäts** Spalten werden entweder als **int** oder **bigint**definiert.  
   
  Die Werte in diesen Spalten sind jedoch mit den Quellspaltenwerten identisch.  
   
 ### <a name="large-object-data-types"></a>LOB (Large Object)-Datentypen  
- Spalten des Datentyps **Image**, **Text**, und **Ntext** werden immer zugewiesen eine **NULL** Wert fest, wenn __ $Operation = 1 oder \_ \_$operation = 3. Spalten des Datentyps **'varbinary(max)'** , **varchar(max)** , oder **nvarchar(max)** zugewiesen sind eine **NULL** Wert fest, wenn \_ \_$operation = 3, es sei denn, die Spalte während des Updates geändert wurde. Wenn \_ \_$operation = 1, werden diesen Spalten ihr Wert zum Zeitpunkt der Löschung zugewiesen. Berechnete Spalten, die in einer Aufzeichnungsinstanz, immer enthalten sind den Wert haben **NULL**.  
+ Spalten des Datentyps **Image**, **Text**und **ntext** wird immer ein **null** -Wert zugewiesen, wenn __ $ operation = 1 oder \_\_$Operation = 3 ist. Spalten vom Datentyp **varbinary (max)** , **varchar (max)** oder **nvarchar (max)** wird ein **null** -Wert zugewiesen, wenn \_\_$Operation = 3, es sei denn, die Spalte wurde während des Updates geändert. Wenn \_\_$Operation = 1, werden diesen Spalten zum Zeitpunkt der Löschung ihre Werte zugewiesen. Berechnete Spalten, die in einer Aufzeichnungs Instanz enthalten sind, haben immer den Wert **null**.  
   
- Standardmäßig können einer aufgezeichneten Spalte in einer einzelnen Anweisung vom Typ INSERT, UPDATE, WRITETEXT oder UPDATETEXT maximal 65.536 Bytes oder 64 KB hinzugefügt werden. Sodass auch umfangreichere LOB-Daten unterstützt mithilfe der [Konfigurieren der max Text Repl Size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) eine höhere Maximalgröße angeben. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
+ Standardmäßig können einer aufgezeichneten Spalte in einer einzelnen Anweisung vom Typ INSERT, UPDATE, WRITETEXT oder UPDATETEXT maximal 65.536 Bytes oder 64 KB hinzugefügt werden. Verwenden Sie die [Server Konfigurations Option max text repl size konfigurieren](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) , um diese Größe für die Unterstützung größerer LOB-Daten zu erhöhen. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
 ## <a name="data-definition-language-modifications"></a>Änderungen mithilfe der Datendefinitionssprache (Data Definition Language, DDL)  
- DDL-Änderungen an der Quelltabelle, wie das Hinzufügen oder Löschen von Spalten, in aufgezeichnet werden die [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) Tabelle. Diese Änderungen werden nicht auf die Änderungstabelle angewendet. Die Definition der Änderungstabelle bleibt also konstant. Werden Zeilen in die Änderungstabelle eingefügt, werden während des Aufzeichnungsvorgangs diejenigen Spalten ignoriert, die nicht in der Liste der aufgezeichneten Spalten, die der Quelltabelle zugeordnet ist, aufgeführt sind. Falls in der Liste der aufgezeichneten Spalten eine Spalte angezeigt wird, die sich nicht mehr in der Quelltabelle befindet, wird dieser Spalte ein NULL-Wert zugewiesen.  
+ DDL-Änderungen an der Quell Tabelle (z. b. das Hinzufügen oder Löschen von Spalten) werden in der Tabelle [CDC. DDL _history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) aufgezeichnet. Diese Änderungen werden nicht auf die Änderungstabelle angewendet. Die Definition der Änderungstabelle bleibt also konstant. Werden Zeilen in die Änderungstabelle eingefügt, werden während des Aufzeichnungsvorgangs diejenigen Spalten ignoriert, die nicht in der Liste der aufgezeichneten Spalten, die der Quelltabelle zugeordnet ist, aufgeführt sind. Falls in der Liste der aufgezeichneten Spalten eine Spalte angezeigt wird, die sich nicht mehr in der Quelltabelle befindet, wird dieser Spalte ein NULL-Wert zugewiesen.  
   
- Ändern des Datentyps einer Spalte in der Quelltabelle wird auch in erfasst die [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) Tabelle. Durch diese Änderung wird die Definition der Änderungstabelle jedoch nicht geändert. Der Datentyp der aufgezeichneten Spalte in der Änderungstabelle wird geändert, wenn während des Aufzeichnungsvorgangs der Protokolldatensatz für die an der Quelltabelle vorgenommenen Änderungen gefunden wird.  
+ Das Ändern des Datentyps einer Spalte in der Quell Tabelle wird auch in der Tabelle [CDC. DDL _history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) aufgezeichnet. Durch diese Änderung wird die Definition der Änderungstabelle jedoch nicht geändert. Der Datentyp der aufgezeichneten Spalte in der Änderungstabelle wird geändert, wenn während des Aufzeichnungsvorgangs der Protokolldatensatz für die an der Quelltabelle vorgenommenen Änderungen gefunden wird.  
   
  Falls Sie den Datentyp einer aufgezeichneten Spalte in der Quelltabelle so ändern müssen, dass die Größe des Datentyps verringert wird, stellen Sie mithilfe des folgenden Verfahrens sicher, dass die entsprechende Spalte in der Änderungstabelle erfolgreich geändert werden kann.  
   
-1.  Aktualisieren Sie in der Quelltabelle die Werte in der zu ändernden Spalte, sodass ihre Größe für die geplante Datentypgröße geeignet ist. Angenommen, Sie ändern, dass den Datentyp vom **Int** zu **Smallint**, aktualisieren Sie die Werte auf eine Größe, in der **Smallint** -Bereich von-32.768 bis 32.767.  
+1.  Aktualisieren Sie in der Quelltabelle die Werte in der zu ändernden Spalte, sodass ihre Größe für die geplante Datentypgröße geeignet ist. Wenn Sie z. b. den Datentyp von **int** in **smallint**ändern, aktualisieren Sie die Werte auf eine Größe, die im **smallint** -Bereich (-32.768 bis 32.767) entspricht.  
   
 2.  Führen Sie denselben Updatevorgang in der Änderungstabelle für die entsprechende Spalte aus.  
   
 3.  Ändern Sie die Quelltabelle, indem Sie den neuen Datentyp angeben. Die Datentypänderung wird erfolgreich an die Änderungstabelle weitergegeben.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="data-manipulation-language-modifications"></a>Änderungen mithilfe der Datenbearbeitungssprache (Data Manipulation Language, DDL)  
- Wenn in einer Change Data Capture-aktivierten Quelltabelle Einfüge-, Update- und Löschvorgänge ausgeführt werden, wird im Datenbanktransaktionsprotokoll ein Datensatz dieser DML-Vorgänge angezeigt. Der Change Data Capture-Prozess Ruft Informationen zu diesen Änderungen aus dem Transaktionsprotokoll ab und fügt einer oder zwei Zeilen in die Änderungstabelle zur Aufzeichnung der Änderung. Die Einträge werden in derselben Reihenfolge in die Änderungstabelle eingefügt, in der sie an die Quelltabelle übergeben wurden, obwohl der Commit für Einträge in der Änderungstabelle normalerweise für Gruppen von Änderungen statt für einzelne Einträge ausgeführt werden muss.  
+ Wenn in einer Change Data Capture-aktivierten Quelltabelle Einfüge-, Update- und Löschvorgänge ausgeführt werden, wird im Datenbanktransaktionsprotokoll ein Datensatz dieser DML-Vorgänge angezeigt. Der Change Data Capture Prozess ruft Informationen zu diesen Änderungen aus dem Transaktionsprotokoll ab und fügt der Änderungs Tabelle entweder eine oder zwei Zeilen hinzu, um die Änderung aufzuzeichnen. Die Einträge werden in derselben Reihenfolge in die Änderungstabelle eingefügt, in der sie an die Quelltabelle übergeben wurden, obwohl der Commit für Einträge in der Änderungstabelle normalerweise für Gruppen von Änderungen statt für einzelne Einträge ausgeführt werden muss.  
   
- Im änderungstabelleneintrag die **__ $Start_lsn** Spalte wird verwendet, um die Commit-LSN aufzuzeichnen, die die Änderung an der Quelltabelle zugeordnet ist und die **__ $Seqval Spalte** wird verwendet, um die Änderung innerhalb der Reihenfolge die Transaktion. In Kombination können diese Metadatenspalten verwendet werden, um sicherzustellen, dass die Reihenfolge der Änderungen beim Commit beibehalten wird. Da die Änderungsinformationen beim Aufzeichnungsprozess aus dem Transaktionsprotokoll abgerufen werden, werden die Einträge in der Änderungstabelle nicht synchron mit den entsprechenden Änderungen in der Quelltabelle angezeigt. Stattdessen werden die Änderungen asynchron angezeigt, nachdem die relevanten Änderungseinträge aus dem Transaktionsprotokoll vom Aufzeichnungsprozess verarbeitet wurden.  
+ Innerhalb des Änderungs Tabellen Eintrags wird die Spalte **__ $ start_lsn** verwendet, um die Commit-LSN aufzuzeichnen, die der Änderung in der Quell Tabelle zugeordnet ist, und die **Spalte __ $** * wird verwendet, um die Änderung innerhalb der Transaktion zu sortieren. In Kombination können diese Metadatenspalten verwendet werden, um sicherzustellen, dass die Reihenfolge der Änderungen beim Commit beibehalten wird. Da die Änderungsinformationen beim Aufzeichnungsprozess aus dem Transaktionsprotokoll abgerufen werden, werden die Einträge in der Änderungstabelle nicht synchron mit den entsprechenden Änderungen in der Quelltabelle angezeigt. Stattdessen werden die Änderungen asynchron angezeigt, nachdem die relevanten Änderungseinträge aus dem Transaktionsprotokoll vom Aufzeichnungsprozess verarbeitet wurden.  
   
  Bei Einfüge- und Löschvorgängen werden alle Bits in der Updatemaske festgelegt. Bei Updatevorgängen wird die Updatemaske sowohl in den alten als auch in den neuen Zeilen des Updates entsprechend den Spalten geändert, die während des Updates geändert wurden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys. sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

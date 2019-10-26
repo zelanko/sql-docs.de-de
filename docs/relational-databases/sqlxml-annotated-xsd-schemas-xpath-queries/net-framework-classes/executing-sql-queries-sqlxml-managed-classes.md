@@ -1,5 +1,5 @@
 ---
-title: Ausführen von SQL-Abfragen (SQLXML verwaltete Klassen) | Microsoft-Dokumentation
+title: Ausführen von SQL-Abfragen (verwaltete SQLXML-Klassen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08fc10138a8c0a6c6e55eb0c6f757f9abe0b5b9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ef6d18b4d302cd551db8e7e3e5ab7e96f077a20
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934271"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908463"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Ausführen von SQL-Abfragen (verwaltete SQLXML-Klassen)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Dieses Beispiel zeigt:  
+  In diesem Beispiel wird Folgendes veranschaulicht:  
   
 -   Erstellen von Parametern (SqlXmlParameter-Objekte).  
   
--   Zuweisen von Werten an den Eigenschaften der SqlXmlParameter-Objekte (Name und Wert).  
+-   Zuweisen von Werten zu den Eigenschaften (Name und Wert) von SqlXmlParameter-Objekten.  
   
- In diesem Beispiel wird eine einfache SQL-Abfrage ausgeführt, um Vornamen, Nachnamen und Geburtsdatum des Mitarbeiters abzufragen, dessen Nachname als Parameterwert übergeben wird. Angeben des Parameters ( *"LastName"* ), nur die Value-Eigenschaft festgelegt ist. Die Name-Eigenschaft ist nicht festgelegt, da in dieser Abfrage um einen Positionsparameter handelt und kein Name erforderlich ist.  
+ In diesem Beispiel wird eine einfache SQL-Abfrage ausgeführt, um Vornamen, Nachnamen und Geburtsdatum des Mitarbeiters abzufragen, dessen Nachname als Parameterwert übergeben wird. Bei Angabe des-Parameters (*LastName*) wird nur die Value-Eigenschaft festgelegt. Die Name-Eigenschaft ist nicht festgelegt, da der-Parameter in dieser Abfrage positiontional ist und kein Name erforderlich ist.  
   
- Die CommandType-Eigenschaft des SqlXmlCommand-Objekt, in der Standardeinstellung ist **Sql**. Deshalb wird die Eigenschaft nicht explizit festgelegt.  
+ Die CommandType-Eigenschaft des SqlXmlCommand-Objekts ist standardmäßig **SQL**. Deshalb wird die Eigenschaft nicht explizit festgelegt.  
   
 > [!NOTE]  
 >  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen.  
@@ -99,11 +99,9 @@ public static int Main(String[] args)
   
 3.  Führen Sie DocSample.exe an der Eingabeaufforderung aus.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Um das Beispiel zu testen, muss auf dem Computer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework installiert sein.  
   
- Statt die SQL-Abfragen als Befehlstext anzugeben, können Sie eine Vorlage festlegen (wie im folgenden Codefragment dargestellt), die ein Updategram ausführt (ebenfalls eine Vorlage), um einen Kundendatensatz einzufügen. Sie können Vorlagen und Updategrams in Dateien angeben und Dateien ausführen. Weitere Informationen finden Sie unter [Ausführen von Vorlagendateien mit der CommandText-Eigenschaft](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md).  
+ Statt die SQL-Abfragen als Befehlstext anzugeben, können Sie eine Vorlage festlegen (wie im folgenden Codefragment dargestellt), die ein Updategram ausführt (ebenfalls eine Vorlage), um einen Kundendatensatz einzufügen. Sie können Vorlagen und Updategrams in Dateien angeben und Dateien ausführen. Weitere Informationen finden Sie unter [Ausführen von Vorlagen Dateien mit der CommandText-Eigenschaft](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md).  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -124,7 +122,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>Verwenden von ExecuteToStream  
- Wenn Sie einen vorhandenen Datenstrom haben, können Sie die ExecuteToStream-Methode, statt ein Stream-Objekt erstellt und die Execute-Methode. Der Code aus dem vorherigen Beispiel wird hier überarbeitet, um ExecuteToStream-Methode verwenden:  
+ Wenn Sie über einen vorhandenen Stream verfügen, können Sie die executedestream-Methode verwenden, anstatt ein Stream-Objekt zu erstellen und die Execute-Methode zu verwenden. Der Code aus dem vorherigen Beispiel wird hier überarbeitet, um die executedestream-Methode zu verwenden:  
   
 ```  
 using System;  
@@ -157,6 +155,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  Sie können auch die ExecuteXMLReadermethod verwenden, die ein XmlReader-Objekt zurückgibt. Weitere Informationen finden Sie unter [Ausführen von SQL-Abfragen mithilfe der "ExecuteXMLReader"-Methode](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
+>  Sie können auch die executexmlreadermethod verwenden, die ein XmlReader-Objekt zurückgibt. Weitere Informationen finden Sie unter [Ausführen von SQL-Abfragen mithilfe der ExecuteXmlReader-Methode](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
   

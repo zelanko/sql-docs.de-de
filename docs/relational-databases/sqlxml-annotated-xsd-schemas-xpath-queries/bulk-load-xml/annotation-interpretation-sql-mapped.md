@@ -1,5 +1,5 @@
 ---
-title: 'SQL: zugeordnet (SQLXML 4.0) | Microsoft-Dokumentation'
+title: 'SQL: zugeordnet (SQLXML 4,0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c639a9eaf7165bfc83b141235e1ce0b2ed9bb246
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7711386722d618b35a8d957b680244243b4de5d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055413"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907137"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interpretation von Anmerkungen – sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML-Massenladen verarbeitet die **Sql: zugeordnet** -Anmerkung im XSD-Schema als erwartet, mit deren Hilfe ist, wenn das Zuordnungsschema **Sql: zugeordnet = "false"** für ein Element oder Attribut, XML-Massenladen nicht Es wurde versucht, die zugehörigen Daten in der entsprechenden Spalte zu speichern.  
+  XML-Massen laden verarbeitet die **SQL:** zugeordnete Anmerkung im XSD-Schema erwartungsgemäß, d. h., wenn das Zuordnungsschema für ein beliebiges Element oder Attribut **SQL: zugeordnet = "false"** angibt, versucht XML-Massen laden nicht, die zugeordneten Daten im entsprechende Spalte.  
   
- XML-Massenladen ignoriert Elemente und Attribute, die nicht zugeordnet werden (da sie nicht im Schema beschrieben werden, oder weil sie in der XSD-Schema mit Anmerkungen versehen werden **Sql: zugeordnet = "false"** ). Alle nicht zugeordnete Daten in die Überlaufspalte wechselt, wenn eine solche Spalte angegeben wird, wird mit **SQL: Overflow-Feld**.  
+ XML-Massen laden ignoriert Elemente und Attribute, die nicht zugeordnet sind (entweder weil Sie im Schema nicht beschrieben werden, oder weil Sie im XSD-Schema mit **SQL: zugeordnet = "false"** ) kommentiert werden. Alle nicht zugeordneten Daten werden in die Überlauf Spalte umgewandelt, wenn eine solche Spalte mithilfe von **SQL: overflow-field**angegeben wird.  
   
  Das folgende XSD-Schema ist ein Beispiel dafür:  
   
@@ -55,11 +55,11 @@ ms.locfileid: "68055413"
 </xsd:schema>  
 ```  
   
- Da die **"HomePhone"** -Attribut gibt an, **Sql: zugeordnet = "false"** , XML-Massenladen dieses Attribut nicht in die entsprechende Spalte zugeordnet. Das XSD-Schema identifiziert eine Überlaufspalte (**OverflowColumn**) in der XML-Massenladen diese nicht verbrauchten Daten speichert.  
+ Da das **HomePhone** -Attribut **SQL: zugeordnet = "false"** angibt, ordnet XML-Massen laden dieses Attribut nicht der entsprechenden Spalte zu. Das XSD-Schema identifiziert eine Überlauf Spalte (**OverflowColumn**), in der XML-Massen laden diese nicht verbrauchten Daten speichert.  
   
 ### <a name="to-test-a-working-sample"></a>So testen Sie ein funktionstüchtiges Beispiel  
   
-1.  Erstellen Sie die folgende Tabelle in der **Tempdb** Datenbank:  
+1.  Erstellen Sie die folgende Tabelle in der **tempdb** -Datenbank:  
   
     ```  
     USE tempdb  
@@ -85,8 +85,6 @@ ms.locfileid: "68055413"
     ```  
   
 4.  Speichern Sie dieses [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition-Beispiel (VBScript) unter dem Dateinamen Sample.vbs, und führen Sie es aus, um das XML-Massenladen auszuführen:  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  

@@ -17,18 +17,18 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac0d1d370951ea5daa2d1849d833dcc50abf83bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57a5c840ac796cf0b30e71c70be72d7c3be5a4e0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128871"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909470"
 ---
 # <a name="setting-large-data"></a>Festlegen großer Datenmengen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, können Sie die BLOB-Daten festlegen, indem ein Zeiger auf ein consumerspeicherobjekt übergeben.  
+  Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter können Sie BLOB-Daten festlegen, indem Sie einen Zeiger auf ein Consumer-Speicher Objekt übergeben.  
   
  Der Consumer erstellt ein Speicherobjekt, das die Daten enthält, und übergibt einen Zeiger auf dieses Speicherobjekt an den Anbieter. Anschließend liest der Anbieter Daten vom Consumerspeicherobjekt und schreibt diese in die BLOB-Spalte.  
   
@@ -49,15 +49,13 @@ ms.locfileid: "68128871"
   
 2.  Legen Sie die Eigenschaften in der DBPROPSET_ROWSET-Eigenschaftengruppe so fest, dass das Rowset aktualisiert werden kann.  
   
-3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie das *wType* -Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und legen Sie das *pObject* -Element so fest, dass es auf die von Ihnen erstellte DBOBJECT-Struktur zeigt.  
+3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie das *wType*-Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und legen Sie das *pObject*-Element so fest, dass es auf die von Ihnen erstellte DBOBJECT-Struktur zeigt.  
   
 4.  Erstellen Sie einen Accessor mithilfe der Bindungsinformationen im DBBINDINGS-Strukturarray.  
   
 5.  Rufen Sie **GetNextRows** auf, um die nächsten Zeilen für das Rowset abzurufen. Rufen Sie **GetData** auf, um die Daten aus dem Rowset zu lesen.  
   
 6.  Erstellen Sie ein Speicherobjekt, das die Daten (sowie den Längenindikator) enthält, und rufen Sie anschließend **IRowsetChange::SetData** (oder **IRowsetChange::InsertRow**) mit dem Accessor auf, der die BLOB-Spalte bindet, die die Daten binden soll.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird gezeigt, wie BLOB-Daten festgelegt werden. Im Beispiel wird eine Tabelle erstellt, ein Beispieldatensatz hinzugefügt, dieser Datensatz im Rowset abgerufen und anschließend der Wert des BLOB-Felds festgelegt.  
@@ -723,7 +721,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BLOBs und OLE-Objekte](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Verwenden von Datentypen mit umfangreichen Werten](../../relational-databases/native-client/features/using-large-value-types.md)  
   

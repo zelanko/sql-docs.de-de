@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL) | Microsoft Docs
+title: sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d0443190e3febdb2730c7c8b8bc06786daf6fe7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124248"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909138"
 ---
-# <a name="spfulltextsemanticunregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
+# <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Hebt die Registrierung einer vorhandenen semantischen Sprachstatistikdatenbank in der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf und löscht alle zugeordneten Metadaten.  
   
  Diese Anweisung trennt die Datenbank nicht und entfernt die physische Datenbankdatei nicht aus dem Dateisystem. Nachdem Sie die Registrierung der Datenbank aufgehoben haben, können Sie sie trennen und die physische Datenbankdatei löschen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,23 +47,21 @@ GO
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-set"></a>Resultset  
- Keine  
+ Keine.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Wenn die Registrierung einer semantischen Sprachstatistikdatenbank aufgehoben wird, werden auch alle zugeordneten Metadaten entfernt.  
   
- **sp_fulltext_semantic_unregister_language_statistics_db** performs the following steps:  
+ **sp_fulltext_semantic_unregister_language_statistics_db** führt die folgenden Schritte aus:  
   
 1.  Überprüft, ob keine semantischen Auffüllungen für die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durchgeführt werden.  
   
 2.  Entfernt alle der angegebenen semantischen Sprachstatistikdatenbank zugeordneten Metadaten.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Weitere Informationen finden Sie unter [Installieren und Konfigurieren der semantischen Suche](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
-## <a name="metadata"></a>Metadaten  
- Informationen über die Semantic Language Statistics-Datenbank auf einer Instanz von installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Fragen Sie die Katalogsicht [Sys. fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+## <a name="metadata"></a>Browser  
+ Informationen über die Semantic Language Statistics Datenbank, die auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert ist, erhalten Sie, indem Sie die Katalog Sicht [sys. fulltext_semantic_language_statistics_database &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)Abfragen.  
   
 ## <a name="security"></a>Sicherheit  
   
@@ -71,14 +69,14 @@ GO
  Erfordert CONTROL SERVER-Berechtigungen.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt, wie Sie die Semantic Language Statistics-Datenbank durch Aufrufen von Aufheben der Registrierung **Sp_fulltext_semantic_unregister_language_statistics_db**.  
+ Im folgenden Beispiel wird gezeigt, wie die Registrierung der Semantic Language Statistics-Datenbank durch Aufrufen von **sp_fulltext_semantic_unregister_language_statistics_db**aufgehoben wird.  
   
 ```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren und Konfigurieren der semantischen Suche](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

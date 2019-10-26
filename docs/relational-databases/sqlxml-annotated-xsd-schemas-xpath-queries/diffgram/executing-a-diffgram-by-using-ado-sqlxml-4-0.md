@@ -1,5 +1,5 @@
 ---
-title: Ausführen eines DiffGram-Objekts mit ADO (SQLXML 4.0) | Microsoft-Dokumentation
+title: Ausführen eines DiffGram mithilfe von ADO (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,30 +17,30 @@ ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 764ba5c11e6ec4b41017e9839c46c0e8f4c8d70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3d0b352c31c7661a92cb53f8331d2a8e062aa8a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073472"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909346"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Ausführen eines DiffGram-Objekts mit ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Diese [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Anwendung verwendet ADO, um eine Verbindung mit einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen, und führt dann ein DiffGram-Objekt aus. In dieser Anwendung werden das DiffGram-Objekt und das XSD-Schema in einer Datei gespeichert. Die Anwendung lädt das DiffGram-Objekt aus der angegebenen Datei. Sie können eines der DiffGram-Objekte (und die zugeordneten XSD-Schema) beschriebenen [DiffGram-Beispiele](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+  Diese [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Anwendung verwendet ADO, um eine Verbindung mit einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen, und führt dann ein DiffGram-Objekt aus. In dieser Anwendung werden das DiffGram-Objekt und das XSD-Schema in einer Datei gespeichert. Die Anwendung lädt das DiffGram-Objekt aus der angegebenen Datei. Sie können jedes der DiffGrams (und des zugehörigen XSD-Schemas) verwenden, das unter [DiffGram-Beispiele](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)beschrieben wird.  
   
  Das ist der Ablauf bei der Beispielanwendung:  
   
--   Die **Conn** Objekt (**ADODB. Verbindung**) wird eine Verbindung mit einer ausgeführten Instanz von SQL Server auf einem bestimmten Server.  
+-   Das **conn** -Objekt (**ADODB. Verbindung**) stellt eine Verbindung mit einer laufenden Instanz von SQL Server auf einem bestimmten Server her.  
   
--   Die **Cmd** Objekt (**ADODB.Command**) für die hergestellte Verbindung ausgeführt wird.  
+-   Das **cmd** -Objekt (**ADODB. Command**) wird auf der eingerichteten Verbindung ausgeführt.  
   
 -   Der Befehlsdialekt wird auf DBGUID_MSSQLXML festgelegt.  
   
--   Das DiffGram-Objekt wird in den befehlsdatenstrom kopiert (**StrmIn**) aus einer Datei.  
+-   Das DiffGram-Objekt wird aus einer Datei in den Befehlsdaten Strom (**straumin**) kopiert.  
   
--   Die Befehls Ausgabestream nastaven NA hodnotu der **StrmOut** Objekt (**ADODB. Stream**) auf den Empfang hat Daten zurückgegeben.  
+-   Der Ausgabestream des Befehls wird auf das Objekt " **straumout** " (**ADODB) festgelegt. Stream**), um alle zurückgegebenen Daten zu empfangen.  
   
--   Wenn Sie den SQLOLEDB-Anbieter verwenden, wird die Microsoft SQLXML-Funktionalität standardmäßig von Sqlxmlx.dll bereitgestellt. Verwenden Sie Sqlxml4.dll mit dem SQLOLEDB-Anbieter die **SQLXML Version** Eigenschaft muss festgelegt werden, um **SQLXML.4.0** für den SQLOLEDB-Anbieter **Verbindung** Objekt.  
+-   Wenn Sie den SQLOLEDB-Anbieter verwenden, wird die Microsoft SQLXML-Funktionalität standardmäßig von Sqlxmlx.dll bereitgestellt. Wenn Sie Sqlxml4. dll mit dem SQLOLEDB-Anbieter verwenden möchten, muss die **SQLXML-Version** -Eigenschaft im SQLOLEDB-Anbieter **Verbindungs** Objekt auf **SQLXML. 4.0** festgelegt werden.  
   
 -   Der Befehl (DiffGram) wird ausgeführt.  
   
@@ -86,7 +86,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>So testen Sie das DiffGram-Objekt  
   
-1.  Kopieren Sie in einen Ordner auf Ihrem Computer, eines DiffGram-Objekte und die entsprechenden XSD-Schema aus einem der in den Beispielen in [DiffGram-Beispiele](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+1.  Kopieren Sie in einen Ordner auf Ihrem Computer eines der Diffgrams und das entsprechende XSD-Schema aus einem der Beispiele in [DiffGram-Beispielen](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
 2.  Öffnen Sie Visual Basic, und erstellen Sie ein Standard-EXE-Projekt.  
   
@@ -96,13 +96,11 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  Klicken Sie in der Toolbox auf **CommandButton**, und zeichnen Sie dann auf dem Formular eine Schaltfläche.  
+4.  Klicken Sie in der Toolbox auf **CommandButton**, und zeichnen Sie dann eine Schaltfläche im Formular.  
   
 5.  Doppelklicken Sie auf die Schaltfläche, um den Code zu bearbeiten, und fügen Sie den Anwendungscode aus dem Dokument hinzu.  
   
 6.  Bearbeiten Sie den Code, um das DiffGram-Objekt und die XSD-Dateinamen anzugeben. Bearbeiten Sie außerdem die Verbindungszeichenfolge nach Bedarf.  
   
-7.  Führen Sie die Anwendung. Das Ergebnis der Ausführung hängt davon ab, was für ein DiffGram-Objekt Sie ausführen.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+7.  Führen Sie die Anwendung aus. Das Ergebnis der Ausführung hängt davon ab, was für ein DiffGram-Objekt Sie ausführen.  
 

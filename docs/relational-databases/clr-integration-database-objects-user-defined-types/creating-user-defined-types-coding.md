@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e94662043d3801cc7088533d7f0fbadd638bec5b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 9a26fb1282eb9181af9b1b04f40fd7f7c45c688a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874812"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907465"
 ---
 # <a name="creating-user-defined-types---coding"></a>Erstellen benutzerdefinierter Typen: Codieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- Der **Microsoft. SqlServer. Server** -Namespace enthält die Objekte, die für verschiedene Attribute des UDT erforderlich sind, und der **System. Data. SqlTypes** -Namespace enthält [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Klassen, die System eigene Datentypen darstellen, die für das Stadtverordneten. Es kann natürlich zusätzliche Namespaces geben, die eine Assembly erfordert, um ordnungsgemäß zu funktionieren. Der **Point** -UDT verwendet auch den **System. Text** -Namespace für die Arbeit mit Zeichen folgen.  
+ Der **Microsoft. SqlServer. Server** -Namespace enthält die Objekte, die für verschiedene Attribute des UDT erforderlich sind, und der **System. Data. SqlTypes** -Namespace enthält die Klassen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] System eigenen Datentypen darstellen, die für die Assembly verfügbar sind. Es kann natürlich zusätzliche Namespaces geben, die eine Assembly erfordert, um ordnungsgemäß zu funktionieren. Der **Point** -UDT verwendet auch den **System. Text** -Namespace für die Arbeit mit Zeichen folgen.  
   
 > [!NOTE]  
 >  Visual C++ Database-Objekte, z. b. UDTs, die mit **/clr: pure** kompiliert werden, werden für die Ausführung nicht unterstützt.  
@@ -88,11 +88,11 @@ public struct Point : INullable
 ```  
   
 ## <a name="implementing-nullability"></a>Implementieren von NULL-Zulässigkeit  
- Zusätzlich zum ordnungsgemäßen Angeben der Attribute für die Assemblys muss der UDT auch die NULL-Zulässigkeit unterstützen. UDTs, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in geladen werden, sind NULL-fähig, aber damit der UDT einen Nullwert erkennt, muss der UDT die **System. Data. SqlTypes. INullable** -Schnittstelle implementieren.  
+ Zusätzlich zum ordnungsgemäßen Angeben der Attribute für die Assemblys muss der UDT auch die NULL-Zulässigkeit unterstützen. UDTs, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden, sind NULL-fähig, aber damit der UDT einen Nullwert erkennt, muss der UDT die **System. Data. SqlTypes. INullable** -Schnittstelle implementieren.  
   
  Sie müssen eine Eigenschaft mit dem Namen **IsNull**erstellen, die benötigt wird, um zu bestimmen, ob ein Wert innerhalb von CLR-Code NULL ist. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine NULL-Instanz eines UDTs findet, wird der UDT mit normalen Behandlungsmethoden für NULL-Werte persistent gespeichert. Der Server vergeudet keine Zeit mit dem Serialisieren oder Deserialisieren des UDTs, wenn dies nicht erforderlich ist, und er verschwendet keinen Platz zum Speichern des NULL-UDTs. Diese Überprüfung auf NULL wird jedes Mal durchgeführt, wenn ein UDT von der CLR übernommen wird. Das heißt, dass mit dem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Konstrukt immer überprüft werden kann, ob UDTs NULL sind. Die **IsNull** -Eigenschaft wird vom Server auch verwendet, um zu testen, ob eine Instanz NULL ist. Sobald der Server bestimmt, dass der UDT NULL ist, kann er seine systemeigene NULL-Behandlung verwenden.  
   
- Die " **get ()** "-Methode von " **IsNull** " ist in keiner Weise sondergeschrieben. Wenn eine **Punkt** Variable  **\@**  **pNULList,wirdp.IsNullstandardmäßigals"Null"ausgewertet,nichtals"1".\@** Dies liegt daran, dass das **SqlMethod (OnNullCall)** -Attribut der **IsNull get ()** -Methode standardmäßig auf false festgelegt ist. Da das-Objekt **null**ist und die-Eigenschaft angefordert wird, wird das Objekt nicht deserialisiert, die Methode wird nicht aufgerufen, und der Standardwert "Null" wird zurückgegeben.  
+ Die " **get ()** "-Methode von " **IsNull** " ist in keiner Weise sondergeschrieben. Wenn eine **Punkt** Variable **\@p** **null**ist, wird **\@p. IsNull** standardmäßig "Null" und nicht "1" ausgewertet. Dies liegt daran, dass das **SqlMethod (OnNullCall)** -Attribut der **IsNull get ()** -Methode standardmäßig auf false festgelegt ist. Da das-Objekt **null**ist und die-Eigenschaft angefordert wird, wird das Objekt nicht deserialisiert, die Methode wird nicht aufgerufen, und der Standardwert "Null" wird zurückgegeben.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel ist die `is_Null`-Variable privat und enthält für die Instanz des UDT den Status NULL. Im Code muss ein entsprechender Wert für `is_Null` verwaltet werden. Der UDT muss auch über eine statische Eigenschaft namens **null** verfügen, die eine Instanz des UDT mit einem NULL-Wert zurückgibt. Dadurch kann der UDT einen NULL-Wert zurückgeben, wenn die Instanz auch in der Datenbank tatsächlich NULL ist.  
@@ -138,7 +138,7 @@ public static Point Null
 }  
 ```  
   
-### <a name="is-null-vs-isnull"></a>Ist NULL im Vergleich zu IsNull  
+### <a name="is-null-vs-isnull"></a>IS NULL und IsNull  
  Angenommen, eine Tabelle enthält die Schema Punkte (ID int, Location Point), wobei **Point** ein CLR-UDT ist, und die folgenden Abfragen:  
   
 ```  
@@ -155,7 +155,7 @@ FROM Points
 WHERE location.IsNull = 0;  
 ```  
   
- Beide Abfragen geben die IDs von Punkten mit nicht-**null** -Speicherorten zurück. In Abfrage 1 wird die normale NULL-Behandlung verwendet, und dort ist keine Deserialisierung von UDTs erforderlich. Abfrage 2 hingegen muss jedes Objekt, das nicht**null** ist, deserialisieren und die CLR aufzurufen, um den Wert der **IsNull** -Eigenschaft zu erhalten. Die Verwendung von **is NULL** weist eine bessere Leistung auf, und es sollte nie ein Grund sein, die **IsNull** -Eigenschaft eines UDT [!INCLUDE[tsql](../../includes/tsql-md.md)] aus dem Code zu lesen.  
+ Beide Abfragen geben die IDs von Punkten mit nicht-**null** -Speicherorten zurück. In Abfrage 1 wird die normale NULL-Behandlung verwendet, und dort ist keine Deserialisierung von UDTs erforderlich. Abfrage 2 hingegen muss jedes Objekt, das nicht**null** ist, deserialisieren und die CLR aufzurufen, um den Wert der **IsNull** -Eigenschaft zu erhalten. Die Verwendung von **is NULL** weist eine bessere Leistung auf, und es sollte nie ein Grund sein, die **IsNull** -Eigenschaft eines UDT aus [!INCLUDE[tsql](../../includes/tsql-md.md)] Code zu lesen.  
   
  Was ist also die Verwendung der **IsNull** -Eigenschaft? Zuerst muss im CLR-Code bestimmt werden, ob ein Wert **null** ist. Zweitens benötigt der Server eine Möglichkeit, um zu testen, ob eine Instanz **null**ist, sodass diese Eigenschaft vom Server verwendet wird. Nachdem festgelegt wurde, dass es **null**ist, kann es seine systemeigene NULL-Behandlung verwenden, um es zu verarbeiten.  
   
@@ -543,7 +543,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Die **Microsoft. SqlServer. Server. SqlMethodAttribute** -Klasse stellt benutzerdefinierte Attribute bereit, die verwendet werden können, um Methoden Definitionen zu markieren, um Determinismus, das Verhalten von NULL-anrufen anzugeben und anzugeben, ob eine Methode ein Mutator ist. Bei diesen Eigenschaften werden die Standardwerte vorausgesetzt, und das benutzerdefinierte Attribut wird nur verwendet, wenn ein anderer Wert als der Standardwert erforderlich ist.  
   
 > [!NOTE]  
->  Die **SqlMethodAttribute** -Klasse erbt von der **SqlFunctionAttribute** -Klasse, sodass **SqlMethodAttribute** die **FillRowMethodName** -und **TableDefinition** -Felder von **SqlFunctionAttribute**erbt. Dies impliziert, dass es möglich ist, eine Tabellenwertmethode zu schreiben. Dies ist jedoch nicht der Fall. Die-Methode wird kompiliert, und die Assembly wird bereitgestellt, aber es wird ein Fehler über den **IEnumerable** -Rückgabetyp zur Laufzeit mit der folgenden Meldung ausgelöst: "Die Methode, die Eigenschaft oder das\<Feld ' Name > ' in\<der Klasse ' class > '\<in der Assembly ' > ' weist einen ungültigen Rückgabetyp auf."  
+>  Die **SqlMethodAttribute** -Klasse erbt von der **SqlFunctionAttribute** -Klasse, sodass **SqlMethodAttribute** die **FillRowMethodName** -und **TableDefinition** -Felder von **SqlFunctionAttribute**erbt. Dies impliziert, dass es möglich ist, eine Tabellenwertmethode zu schreiben. Dies ist jedoch nicht der Fall. Die-Methode wird kompiliert, und die Assembly wird bereitgestellt, aber ein Fehler des **IEnumerable** -Rückgabe Typs wird zur Laufzeit mit der folgenden Meldung ausgelöst: "Methode, Eigenschaft oder Feld"\<Name > "in der Klasse"\<class > "in der Assembly"\<der Rückgabetyp der Assembly > ' ist ungültig. "  
   
  In der folgenden Tabelle werden einige der relevanten **Microsoft. SqlServer. Server. SqlMethodAttribute** -Eigenschaften beschrieben, die in UDT-Methoden verwendet werden können, und ihre Standardwerte werden aufgelistet.  
   
@@ -568,13 +568,13 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 > [!NOTE]  
 >  In Abfragen sind Mutatormethoden nicht zulässig. Sie können nur in Zuweisungsanweisungen oder Datenänderungsanweisungen aufgerufen werden. Wenn eine Methode, die als Mutator markiert ist, nicht " **void** " zurückgibt (oder keine **Sub** in Visual Basic), schlägt CREATE Type mit einem Fehler fehl.  
   
- Die folgende Anweisung geht davon aus, dass ein **Dreiecke** -UDT vorhanden ist, der über eine **Rotation** -Methode verfügt Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] Update-Anweisung ruft die **Rotation** -Methode auf:  
+ Die folgende Anweisung geht davon aus, dass ein **Dreiecke** -UDT vorhanden ist, der über eine **Rotation** -Methode verfügt Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Update-Anweisung wird die **Rotation** -Methode aufgerufen:  
   
 ```  
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- Die **Rotation** -Methode wird mit der **SqlMethod** -Attribut Einstellung **IsMutator** auf **true** ergänzt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , damit die Methode als Mutatormethode markieren kann. Der Code legt auch **onnullcallauf** **false**fest, was dem Server anzeigt, dass die Methode einen NULL-Verweis (**Nothing** in Visual Basic) zurückgibt, wenn einer der Eingabeparameter NULL-Verweise ist.  
+ Die **Rotation** -Methode wird mit der **SqlMethod** -Attribut Einstellung **IsMutator** auf **true** ergänzt, damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Methode als Mutatormethode markieren kann. Der Code legt auch **onnullcallauf** **false**fest, was dem Server anzeigt, dass die Methode einen NULL-Verweis (**Nothing** in Visual Basic) zurückgibt, wenn einer der Eingabeparameter NULL-Verweise ist.  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -600,7 +600,7 @@ public void Rotate(double anglex, double angley, double anglez)
  Beim Implementieren eines UDT mit einem benutzerdefinierten Format müssen Sie **Lese** -und **Schreib** Methoden implementieren, die die Microsoft. SqlServer. Server. IBinarySerialize-Schnittstelle implementieren, um die Serialisierung und Deserialisierung von UDT-Daten zu verarbeiten. Sie müssen auch die **MaxByteSize** -Eigenschaft des **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute-Attributs**angeben.  
   
 ### <a name="the-currency-udt"></a>Der UDT Currency  
- Der **Currency** -UDT ist in den CLR-Beispielen enthalten, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert werden können [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], beginnend mit.  
+ Der **Currency** -UDT ist in den CLR-Beispielen enthalten, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], beginnend mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], installiert werden können.  
   
  Der **Currency** -UDT unterstützt die Behandlung von Geldbeträgen im Währungssystem einer bestimmten Kultur. Sie müssen zwei Felder definieren: eine **Zeichenfolge** für **CultureInfo**, die angibt, wer die Währung ausgestellt hat (z. b. en-US), und ein **Decimal** für "Currency **value**", die Geld Menge.  
   
@@ -608,13 +608,11 @@ public void Rotate(double anglex, double angley, double anglez)
   
  Im Code, der in der CLR ausgeführt wird, wird die Länderangabe getrennt vom Währungswert verglichen. Im [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code bestimmen die folgenden Aktionen den Vergleich:  
   
-1.  Legen Sie das Attribut " **isbyteorder** " auf " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] true" fest, um die persistente binäre Darstellung auf dem Datenträger für Vergleiche zu verwenden.  
+1.  Legen Sie das Attribut " **isbyteorder** " auf "true" fest, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die persistente binäre Darstellung auf dem Datenträger für Vergleiche zu verwenden.  
   
-2.  Verwenden Sie die **Write** -Methode für den **Currency** -UDT, um zu bestimmen, wie der UDT auf dem Datenträger gespeichert wird, und damit [!INCLUDE[tsql](../../includes/tsql-md.md)] , wie UDT-Werte verglichen und für Vorgänge angeordnet werden.  
+2.  Verwenden Sie die **Write** -Methode für den **Currency** -UDT, um zu bestimmen, wie der UDT auf dem Datenträger gespeichert wird, und damit, wie UDT-Werte für [!INCLUDE[tsql](../../includes/tsql-md.md)] Vorgänge verglichen und angeordnet werden.  
   
 3.  Speichern Sie den **Currency** -UDT in folgendem Binärformat:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Speichern Sie die Länderangabe als UTF-16-codierte Zeichenfolge für die Bytes 0 bis 19, wobei die Zeichenfolge rechts mit NULL-Zeichen aufgefüllt werden soll.  
   
@@ -748,7 +746,7 @@ public void Read(System.IO.BinaryReader r)
   
  Das komplette Codelisting für den **Currency** -UDT finden Sie unter [SQL Server Datenbank-Engine Beispiele](https://msftengprodsamples.codeplex.com/).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen eines benutzerdefinierten Typs](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

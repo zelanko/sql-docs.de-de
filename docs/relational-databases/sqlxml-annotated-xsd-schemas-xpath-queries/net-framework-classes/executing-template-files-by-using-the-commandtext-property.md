@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Vorlagendateien mit der CommandText-Eigenschaft | Microsoft-Dokumentation
+title: Ausführen von Vorlagen Dateien mit der CommandText-Eigenschaft | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1cb0e0a39f0814051dbd5f2ce009526dd8558f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0992424ed4253bb783ad5713239e213cd2b86278
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934256"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909726"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Ausführen von Vorlagendateien mit der 'CommandText'-Eigenschaft
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In diesem Beispiel wird veranschaulicht, wie die Vorlagendateien, die aus SQL- oder XPath-Abfragen bestehende Vorlagendateien mithilfe der CommandTextproperty angegeben werden können. Statt die SQL- oder XPath-Abfrage als der Wert der CommandText-Eigenschaft anzugeben, können Sie einen Dateinamen als Wert angeben. Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType.TemplateFile angegeben.  
+  In diesem Beispiel wird veranschaulicht, wie Vorlagen Dateien, die aus SQL-oder XPath-Abfragen bestehen, mithilfe von commandtextproperty angegeben werden können. Anstatt die SQL-oder XPath-Abfrage als Wert von CommandText anzugeben, können Sie einen Dateinamen als Wert angeben. Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType. TemplateFile angegeben.  
   
  Diese Vorlage wird von der Beispielanwendung ausgeführt:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67934256"
 </ROOT>  
 ```  
   
- Dies ist der C#-beispielanwendung. Um die Anwendung zu testen, speichern Sie die Vorlage (TemplateFile.xml), und führen Sie dann die Anwendung aus.  
+ Dies ist die C# Beispielanwendung. Um die Anwendung zu testen, speichern Sie die Vorlage (TemplateFile.xml), und führen Sie dann die Anwendung aus.  
   
 > [!NOTE]  
 >  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen.  
@@ -81,7 +81,7 @@ class Test
   
 2.  Speichern Sie die in diesem Beispiel bereitgestellte XML-Vorlage in einem Ordner.  
   
-3.  Speichern Sie die c#-Code (DocSample.cs), der bereitgestellt wird, in diesem Beispiel im selben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
+3.  Speichern Sie C# den Code (DocSample.cs), der in diesem Beispiel bereitgestellt wird, im selben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
   
 4.  Kompilieren Sie den Code. Verwenden Sie zur Kompilierung des Codes an der Eingabeaufforderung die folgende Zeichenfolge:  
   
@@ -93,9 +93,7 @@ class Test
   
 5.  Führen Sie DocSample.exe an der Eingabeaufforderung aus.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- Wenn Sie einen Parameter in eine Vorlage übergeben, muss der Name des Parameters mit at-Zeichen beginnen (@); z. B. p.Name= "\@ContactID", wobei p ein SqlXmlParameter-Objekt.  
+ Wenn Sie einen Parameter an eine Vorlage übergeben, muss der Parameter Name mit einem @-Zeichen (@) beginnen. Beispiel: p.Name = "\@ContactID", wobei p ein SqlXmlParameter-Objekt ist.  
   
  Dies ist die aktualisierte Vorlage, die einen Parameter annimmt.  
   

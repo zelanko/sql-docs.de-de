@@ -1,5 +1,5 @@
 ---
-title: 'SQL: Relationship und Schlüsselsortierregel (SQLXML 4.0) | Microsoft-Dokumentation'
+title: 'SQL: Relationship und die Schlüssel Bestellungs Regel (SQLXML 4,0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d882e38d5c6c049013681f79a828f71e44d027c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cb8807e5a5fe63ee18e6932d6e102175e3d6cc63
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902216"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908737"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interpretation von Anmerkungen – sql:relationship und Schlüsselsortierregel
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Da das XML-Massenladen Datensätze generiert, wenn ihre Knoten in den Bereich gelangen, und diese Datensätze an Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sendet, wenn ihre Knoten den Bereich verlassen, müssen die Daten für den Datensatz im Bereich des Knotens vorhanden sein.  
   
- Betrachten Sie das folgende XSD-Schema, in dem die 1: n Beziehung zwischen  **\<Kunden >** und  **\<Reihenfolge >** -Elementen (ein Kunde kann viele Aufträge vergeben) ist. angegeben unter Verwendung der  **\<SQL: Relationship >** Element:  
+ Beachten Sie das folgende XSD-Schema, in dem die 1: n-Beziehung zwischen **\<Kunden >** und **\<Order >** Elemente (ein Kunde kann viele Aufträge platzieren) mithilfe der **\<SQL: Relationship angegeben wird >** -Element:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -60,7 +60,7 @@ ms.locfileid: "67902216"
 </xsd:schema>  
 ```  
   
- Als die  **\<Kunden >** Elementknoten in den Bereich gelangt, generiert das XML-Massenladen einen Kundendatensatz. Dieser Datensatz bleibt, bis der XML-Massenladen liest  **\</Customer >** . Bei der Verarbeitung der  **\<Reihenfolge >** Elementknoten, XML-Massenladen verwendet  **\<SQL: Relationship >** zum Abrufen des Werts für die CustomerID Fremdschlüsselspalte der CustOrder-Tabelle von der  **\<Kunden >** übergeordnete Element aus, da die  **\<Reihenfolge >** Element gibt nicht an die **"CustomerID"** -Attribut. Dies bedeutet, Sie beim Definieren der  **\<Kunden >** -Element, Sie müssen angeben, die **"CustomerID"** -Attribut im Schema, bevor Sie angeben,  **\<Sql: Beziehung >** . Andernfalls gilt bei einer  **\<Reihenfolge >** Element in den Bereich gelangt, XML-Massenladen wird ein Datensatz für die CustOrder-Tabelle generiert und wenn das XML-Massenladen erreicht die  **\</Order >** Endtag, sendet es den Datensatz zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ohne den Wert für die CustomerID-Fremdschlüsselspalte.  
+ Wenn der **\<Customer->** Elementknoten in den Bereich wechselt, generiert XML-Massen laden einen Kundendaten Satz. Dieser Datensatz bleibt, bis das XML-Massen laden **\</Customer->** liest. Beim Verarbeiten des **\<Order >** Element-Knotens verwendet das XML-Massen laden **\<SQL: Relationship->** , um den Wert der CustomerID-Fremdschlüssel Spalte der CustOrder-Tabelle vom\<übergeordneten Element > **Customer** zu erhalten. Da das **\<Order >** -Element das **CustomerID-** Attribut nicht angibt. Dies bedeutet, dass Sie beim Definieren des **\<Customer >** -Elements das **CustomerID-** Attribut im Schema angeben müssen, bevor Sie **\<SQL: Relationship->** angeben. Andernfalls generiert das XML-Massen laden einen Datensatz für die CustOrder-Tabelle, wenn ein **\<Order >** Element in den Gültigkeitsbereich wechselt, und wenn das XML-Massen laden das **\</Order >** Endtag erreicht, sendet es den Datensatz an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ohne das Wert der CustomerID-Fremdschlüssel Spalte.  
   
  Speichern Sie das in diesem Beispiel bereitgestellte Schema unter dem Dateinamen SampleSchema.xml.  
   
@@ -107,8 +107,6 @@ ms.locfileid: "67902216"
   
 3.  Speichern Sie folgendes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript)-Beispiel unter dem Dateinamen MySample.vbs, und führen Sie es aus, um das XML-Massenladen auszuführen:  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
@@ -119,7 +117,7 @@ ms.locfileid: "67902216"
     set objBL=Nothing  
     ```  
   
-     The result is that XML Bulk Load inserts a NULL value in the CustomerID foreign key column of the CustOrder table. If you revise the XML sample data so that the **\<CustomerID>** child element appears before the **\<Order>** child element, you get the expected result: XML Bulk Load inserts the specified foreign key value into the column.  
+     Als Ergebnis fügt das XML-Massenladen einen NULL-Wert in die CustomerID-Fremdschlüsselspalte der CustOrder-Tabelle ein. Wenn Sie die XML-Beispiel Daten so überarbeiten, dass das **\<CustomerID->** untergeordnete Element vor dem **\<Order >** untergeordneten Element angezeigt wird, erhalten Sie das erwartete Ergebnis: das XML-Massen laden fügt den angegebenen Fremdschlüssel Wert in die Spalte ein.  
   
  Dies ist das entsprechende XDR-Schema:  
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft-Dokumentation
+title: sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7cc47e0543139fde3bc43e0f3cc66641ba8f455d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0bd62fe3462441d4eab9d3d89bce20cf1144131
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045808"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909554"
 ---
-# <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
+# <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert Einstellungen sekundärer Datenbanken.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,54 +51,52 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @restore_delay = ] 'restore_delay'` Die Zeitspanne in Minuten, die der sekundäre Server vor dem Wiederherstellen einer bestimmten Sicherungsdatei wartet. *Restore_delay* ist **Int** und darf nicht NULL sein. Der Standardwert ist 0.  
+`[ @restore_delay = ] 'restore_delay'` die Zeitspanne in Minuten, die der sekundäre Server wartet, bevor er eine angegebene Sicherungsdatei wiederherstellt. *restore_delay* ist vom Datentyp **int** und kann nicht NULL sein. Der Standardwert ist 0.  
   
-`[ @restore_all = ] 'restore_all'` Wenn der Wert gleich 1, der sekundäre Server alle verfügbaren Sicherungen des Transaktionsprotokolls wiederhergestellt, wenn der Wiederherstellungsauftrag ausgeführt wird. Andernfalls wird es beendet, nachdem eine Datei wiederhergestellt wurde. *Restore_all* ist **Bit** und darf nicht NULL sein.  
+`[ @restore_all = ] 'restore_all'` wenn der Wert auf 1 festgelegt ist, stellt der sekundäre Server bei Ausführung des Wiederherstellungs Auftrags alle verfügbaren Transaktionsprotokoll Sicherungen wieder her. Andernfalls wird Sie beendet, nachdem eine Datei wieder hergestellt wurde. *restore_all* ist vom **Bit** und kann nicht NULL sein.  
   
-`[ @restore_mode = ] 'restore_mode'` Der Wiederherstellungsmodus für die sekundäre Datenbank.  
+`[ @restore_mode = ] 'restore_mode'` den Wiederherstellungs Modus für die sekundäre Datenbank.  
   
  0 = Wiederherstellungsprotokoll mit NORECOVERY.  
   
- 1 = das Protokoll mit STANDBY wiederhergestellt.  
+ 1 = RESTORE LOG with Standby.  
   
- *Wiederherstellen* ist **Bit** und darf nicht NULL sein.  
+ *Restore* ist ein **Bit** und kann nicht NULL sein.  
   
-`[ @disconnect_users = ] 'disconnect_users'` Wenn Benutzer 1 festgelegt ist, von der sekundären Datenbank getrennt ist, wenn ein Wiederherstellungsvorgang ausgeführt wird. Standard = 0. *Disconnect_users* ist **Bit** und darf nicht NULL sein.  
+`[ @disconnect_users = ] 'disconnect_users'` wenn der Wert auf 1 festgelegt ist, werden die Benutzer von der sekundären Datenbank getrennt, wenn ein Wiederherstellungs Vorgang ausgeführt wird. Standardwert = 0. *disconnect_users* ist vom **Bit** und kann nicht NULL sein.  
   
-`[ @block_size = ] 'block_size'` Die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *Block_size* ist **Int** hat den Standardwert 1.  
+`[ @block_size = ] 'block_size'` die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *block_size* ist vom Datentyp **int** und hat den Standardwert-1.  
   
-`[ @buffer_count = ] 'buffer_count'` Die Gesamtanzahl von Puffern, die von des Backup- oder Restore-Vorgangs verwendet werden soll. *Buffer_count* ist **Int** hat den Standardwert 1.  
+`[ @buffer_count = ] 'buffer_count'` die Gesamtanzahl der Puffer, die vom Sicherungs-oder Wiederherstellungs Vorgang verwendet werden. *buffer_count* ist vom Datentyp **int** und hat den Standardwert-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'` Die Größe in Bytes, der maximalen Eingabe- oder ausgabeanforderung ausgestellt hat [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf das Sicherungsmedium. *Max_transfersize* ist **Int** und kann NULL sein.  
+`[ @max_transfer_size = ] 'max_transfer_size'` die Größe der maximalen Eingabe-oder Ausgabeanforderung in Bytes an, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an das Sicherungsmedium ausgegeben wird. *max_transfersize* ist vom Datentyp **int** und kann NULL sein.  
   
-`[ @restore_threshold = ] 'restore_threshold'` Die Anzahl der Minuten zwischen Wiederherstellungsvorgängen verstreichen darf, bevor eine Warnung generiert wird, Wiederherstellungsvorgänge an. *Restore_threshold* ist **Int** und darf nicht NULL sein.  
+`[ @restore_threshold = ] 'restore_threshold'` die Anzahl der zulässigen Minuten zwischen Wiederherstellungs Vorgängen, bevor eine Warnung generiert wird. *restore_threshold* ist vom Datentyp **int** und kann nicht NULL sein.  
   
-`[ @threshold_alert = ] 'threshold_alert'` Ist die Warnung ausgelöst wird, wenn die wiederherstellungsschwelle überschritten wird. *Threshold_alert* ist **Int**, hat den Standardwert 14420.  
+`[ @threshold_alert = ] 'threshold_alert'` ist die Warnung, die ausgelöst werden soll, wenn der Wiederherstellungs Schwellenwert überschritten wird. *threshold_alert* ist vom Datentyp **int**und hat den Standardwert 14420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Gibt an, ob eine Warnung wird ausgelöst, wenn *Restore_threshold*überschritten wird. 1 = aktiviert; 0 = deaktiviert. *Threshold_alert_enabled* ist **Bit** und darf nicht NULL sein.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` gibt an, ob eine Warnung ausgelöst wird, wenn *restore_threshold*überschritten wird. 1 = aktiviert; 0 = deaktiviert. *threshold_alert_enabled* ist vom **Bit** und kann nicht NULL sein.  
   
-`[ @history_retention_period = ] 'history_retention_period'` Ist die Zeitdauer in Minuten, die in denen der Verlauf beibehalten werden. *History_retention_period* ist **Int**. Der Wert 1440 wird verwendet, wenn keine Angabe erfolgt.  
+`[ @history_retention_period = ] 'history_retention_period'` ist die Zeitspanne in Minuten, in der der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**. Der Wert 1440 wird verwendet, wenn kein Wert angegeben wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ InclusionThresholdSetting  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_change_log_shipping_secondary_database** muss ausgeführt werden, aus der **master** Datenbank auf dem sekundären Server. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_change_log_shipping_secondary_database** muss von der **Master** -Datenbank auf dem sekundären Server ausgeführt werden. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
   
-1.  Ändert die Einstellungen in der **Log_shipping_secondary_database** Datensätzen, sofern erforderlich.  
+1.  Ändert die Einstellungen in den **log_shipping_secondary_database** -Datensätzen nach Bedarf.  
   
-2.  Ändert den lokalen Überwachungsdatensatz in **Log_shipping_monitor_secondary** auf dem sekundären Server mithilfe bereitgestellter Argumente, falls erforderlich.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+2.  Ändert den lokalen Überwachungsdaten Satz in **log_shipping_monitor_secondary** auf dem sekundären Server mithilfe der angegebenen Argumente, falls erforderlich.  
 
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel wird die Verwendung **Sp_change_log_shipping_secondary_database** Parameter sekundärer Datenbanken für die Datenbank aktualisieren **LogShipAdventureWorks**.  
+ In diesem Beispiel wird die Verwendung von **sp_change_log_shipping_secondary_database** zum Aktualisieren der Parameter der sekundären Datenbank für die **LogShipAdventureWorks**-Datenbank veranschaulicht.  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_secondary_database   
@@ -112,8 +110,8 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ,  @history_retention_period = 14420;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand &#40;SQLServer&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
