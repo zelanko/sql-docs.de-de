@@ -1,7 +1,7 @@
 ---
 title: Erfassen von Daten mit Spark-Aufträgen
 titleSuffix: SQL Server big data clusters
-description: In diesem Tutorial wird veranschaulicht, wie Daten [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] mithilfe von Spark-Aufträgen in Azure Data Studio in den Daten Pool eines erfasst werden.
+description: In diesem Tutorial wird veranschaulicht, wie Daten mithilfe von Spark-Aufträgen in Azure Data Studio in den Daten Pool einer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] erfasst werden.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: e2390da93f9359c2f812bc93ec588490a218ad87
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653297"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916013"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Erfassen von Daten in einem SQL Server-Datenpool mithilfe von Spark-Aufträgen
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Erfassen von Daten in einem SQL Server-Daten Pool mit Spark-Aufträgen
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Tutorial wird veranschaulicht, wie Sie Spark-Aufträge verwenden, um Daten in den [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] [Daten Pool](concept-data-pool.md) eines zu laden. 
+In diesem Tutorial wird veranschaulicht, wie Sie Spark-Aufträge verwenden, um Daten in den [Daten Pool](concept-data-pool.md) einer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]zu laden. 
 
 In diesem Tutorial lernen Sie Folgendes:
 
@@ -32,23 +32,23 @@ In diesem Tutorial lernen Sie Folgendes:
 > [!TIP]
 > Wenn Sie möchten, können Sie ein Skript für die Befehle in diesem Tutorial herunterladen und ausführen. Anweisungen finden Sie in den [Beispielen zu Datenpools](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) auf GitHub.
 
-## <a id="prereqs"></a> Erforderliche Komponenten
+## <a id="prereqs"></a> Prerequisites
 
 - [Big-Data-Tools](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Erweiterung von SQL Server 2019**
-- [Load sample data into your big data cluster (Laden von Beispieldaten in ihren Big-Data-Cluster)](tutorial-load-sample-data.md)
+   - **SQL Server 2019-Erweiterung**
+- [Laden von Beispieldaten in Ihren Big Data-Cluster](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Erstellen einer externen Tabelle im Datenpool
 
 Mit den folgenden Schritten wird eine externe Tabelle mit dem Namen **web_clickstreams_spark_results** im Datenpool erstellt. Diese Tabelle kann dann als Speicherort für die Erfassung von Daten im Big-Data-Cluster verwendet werden.
 
-1. Stellen Sie in Azure Data Studio eine Verbindung mit der SQL Server-Masterinstanz Ihres Big-Data-Clusters her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
+1. Stellen Sie in Azure Data Studio eine Verbindung mit der SQL Server-Masterinstanz Ihres Big Data-Clusters her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
 
 1. Doppelklicken Sie im Fenster **Server** auf die Verbindung, um das Serverdashboard der SQL Server-Masterinstanz anzuzeigen. Wählen Sie **Neue Abfrage** aus.
 
-   ![Abfrage in der SQL Server-Masterinstanz](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
+   ![Abfrage der SQL Server-Masterinstanz](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
 1. Erstellen Sie eine externe Datenquelle für den Datenpool, wenn diese nicht bereits vorhanden ist.
 
@@ -77,49 +77,54 @@ Mit den folgenden Schritten wird eine externe Tabelle mit dem Namen **web_clicks
 
 ## <a name="start-a-spark-streaming-job"></a>Starten eines Spark-Streamingauftrags
 
-Im nächsten Schritt erstellen Sie einen Spark-Streamingauftrag, der Webclickstreamdaten aus dem Speicherpool (HDFS) in die externe Tabelle lädt, die Sie im Datenpool erstellt haben.
+Im nächsten Schritt erstellen Sie einen Spark-Streamingauftrag, der Webclickstreamdaten aus dem Speicherpool (HDFS) in die externe Tabelle lädt, die Sie im Datenpool erstellt haben. Diese Daten wurden/clickstream_data in Laden von [Beispiel Daten in ihren Big Data Cluster](tutorial-load-sample-data.md)hinzugefügt.
 
 1. Stellen Sie in Azure Data Studio eine Verbindung mit der Masterinstanz Ihres Big-Data-Clusters her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem Big-Data-Cluster](connect-to-big-data-cluster.md).
 
-1. Doppelklicken Sie im Fenster **Server** auf die HDFS/Spark-Gatewayverbindung. Wählen Sie dann **New Spark Job** (Neuer Spark-Auftrag) aus.
+2. Erstellen Sie ein neues Notebook, und wählen Sie Spark aus. Scala als Kernel.
 
-   ![Neuer Spark-Auftrag](media/tutorial-data-pool-ingest-spark/hdfs-new-spark-job.png)
+3. Ausführen des Spark-Erfassungs Auftrags
+   1. Konfigurieren der Parameter für den Spark-SQL-Connector
+      ```
+      import org.apache.spark.sql.types._
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
 
-1. Geben Sie im Fenster **Neuer Auftrag** einen Namen in das Feld **Auftragsname** ein.
+      // Change per your installation
+      val user= "username"
+      val password= "****"
+      val database =  "MyTestDatabase"
+      val sourceDir = "/clickstream_data"
+      val datapool_table = "web_clickstreams_spark_results"
+      val datasource_name = "SqlDataPool"
+      val schema = StructType(Seq(
+      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
+      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      ))
 
-1. Wählen Sie im Dropdownmenü **Jar/py File** (JAR-/PY-Datei) die Option **HDFS** aus. Geben Sie dann den folgenden JAR-Dateipfad ein:
+      val hostname = "master-0.master-svc"
+      val port = 1433
+      val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
+      ```
+   2. Definieren und Ausführen des Spark-Auftrags
+      * Jeder Auftrag besteht aus zwei Teilen: "leserstream" und "Write-Stream". Im folgenden wird ein Datenrahmen mit dem oben definierten Schema erstellt und anschließend in die externe Tabelle im Daten Pool geschrieben.
+      ```
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
+      
+      val df = spark.readStream.format("csv").schema(schema).option("header", true).load(sourceDir)
+      val query = df.writeStream.outputMode("append").foreachBatch{ (batchDF: DataFrame, batchId: Long) => 
+                batchDF.write
+                 .format("com.microsoft.sqlserver.jdbc.spark")
+                 .mode("append")
+                  .option("url", url)
+                  .option("dbtable", datapool_table)
+                  .option("user", user)
+                  .option("password", password)
+                  .option("dataPoolDataSource",datasource_name).save()
+               }.start()
 
-   ```text
-   /jar/mssql-spark-lib-assembly-1.0.jar
-   ```
-
-1. Geben Sie `FileStreaming` in das Feld **Main Class** (Hauptklasse) ein.
-
-1. Geben Sie in das Feld **Argumente** den folgenden Text ein, und geben Sie das Kennwort für die SQL Server-Masterinstanz über den Platzhalter `<your_password>` an. 
-
-   ```text
-   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
-   ```
-
-   In der folgenden Tabelle wird jedes Argument beschrieben:
-
-   | Argument | Beschreibung |
-   |---|---|
-   | Servername | Die zum Lesen des Tabellenschemas verwendete SQL Server-Instanz |
-   | Portnummer | Der Port, an dem SQL Server lauscht (Standard: 1433) |
-   | username | Benutzername für die SQL Server-Anmeldung |
-   | Kennwort | Kennwort für die SQL Server-Anmeldung |
-   | Datenbanknamen | Zieldatenbank |
-   | Name der externen Tabelle | Die Tabelle, die für Ergebnisse verwendet werden soll |
-   | Quellverzeichnis für Streaming | Muss ein vollständiger URI sein, z. B. „hdfs:///clickstream_data“ |
-   | Eingabeformat | Kann „csv“, „parquet“ oder „json“ sein |
-   | Prüfpunkt aktivieren | true oder false |
-   | timeout | Zeit (in Millisekunden) zum Ausführen des Auftrags vor dem Beenden |
-
-1. Klicken Sie auf **Submit** (Absenden), um den Auftrag zu übermitteln.
-
-   ![Übermitteln des Spark-Auftrags](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
-
+      query.processAllAvailable()
+      query.awaitTermination(40000)
+      ```
 ## <a name="query-the-data"></a>Abfragen der Daten
 
 Die folgenden Schritte zeigen, dass der Spark-Streamingauftrag die Daten aus HDFS in den Datenpool geladen hat.
@@ -138,7 +143,24 @@ Die folgenden Schritte zeigen, dass der Spark-Streamingauftrag die Daten aus HDF
    SELECT count(*) FROM [web_clickstreams_spark_results];
    SELECT TOP 10 * FROM [web_clickstreams_spark_results];
    ```
+1. Die Daten können auch in Spark abgefragt werden. Der folgende Code gibt beispielsweise die Anzahl der Datensätze in der Tabelle aus:
+   ```
+   def df_read(dbtable: String,
+                url: String,
+                dataPoolDataSource: String=""): DataFrame = {
+        spark.read
+             .format("com.microsoft.sqlserver.jdbc.spark")
+             .option("url", url)
+             .option("dbtable", dbtable)
+             .option("user", user)
+             .option("password", password)
+             .option("dataPoolDataSource", dataPoolDataSource)
+             .load()
+             }
 
+   val new_df = df_read(datapool_table, url, dataPoolDataSource=datasource_name)
+   println("Number of rows is " +  new_df.count)
+   ```
 ## <a name="clean-up"></a>Bereinigung
 
 Verwenden Sie den folgenden Befehl, um die in diesem Tutorial erstellten Datenbankobjekte zu entfernen.
