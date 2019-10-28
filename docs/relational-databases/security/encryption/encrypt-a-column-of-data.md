@@ -16,12 +16,12 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11f30f1f2d4d3435c66792a462ba277fd00350f7
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 84a68ecbdd5d48447b17bbfd256aec982614cb3c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383523"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902983"
 ---
 # <a name="encrypt-a-column-of-data"></a>Verschlüsseln einer Datenspalte
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ Erstellen Sie immer eine Sicherung Ihres Datenbankhauptschlüssels. Weitere Info
 2. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
 3. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     USE AdventureWorks2012;  

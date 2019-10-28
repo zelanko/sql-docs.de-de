@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb169478337e160c63ccd538c2d2f8120de8311f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd20f084aa682e7440a4ce2ea426a19141cbd0c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125026"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903935"
 ---
 # <a name="delete-a-resource-pool"></a>Löschen eines Ressourcenpools
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,10 +46,8 @@ ms.locfileid: "68125026"
   
 3.  Im Fenster **Objekt löschen** wird der Ressourcenpool in der Liste **Zu löschendes Objekt** aufgeführt. Um den Ressourcenpool zu löschen, klicken Sie auf **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!NOTE]  
-    >  If the resource pool that you are trying to delete contains a workload group, this action will fail.  
+    >  Falls der zu löschende Ressourcenpool eine Arbeitsauslastungsgruppe enthält, schlägt dieser Vorgang fehl.  
   
 ##  <a name="DelRPTSQL"></a> Löschen eines Ressourcenpools mit Transact-SQL  
  **So löschen Sie einen Ressourcenpool mit Transact-SQL**  

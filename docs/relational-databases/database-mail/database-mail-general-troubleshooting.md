@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ea44a55a7c58e64f327a97943481dfd63289324
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 304306edc78229899b0660b99df6f6b78b60e6ca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228421"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906073"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Allgemeine Schritte zur Problembehandlung für Datenbank-E-Mail 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,8 +55,6 @@ Sie müssen Mitglied der festen Serverrolle „sysadmin“ sein, um Probleme mit
     ```
 
 1. Führen Sie den folgenden Code aus, um den Standardzustand der Prozedur „sp_configure“ wiederherzustellen, in dem keine erweiterten Optionen angezeigt werden:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql 
     sp_configure 'show advanced', 0; 

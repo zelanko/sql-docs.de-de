@@ -16,17 +16,17 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ded5b442a6a61ba1a6cf2c0313834cce85f674f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca2c6f4967368489e49014e7a97267cb64b9a235
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043186"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903171"
 ---
 # <a name="always-encrypted-database-engine"></a>Immer verschlüsselt (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![Immer verschlüsselt](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
+  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
  Always Encrypted ist eine Funktion zum Schutz sensibler Daten, wie Kreditkartennummern oder Personalausweisnummern (z.B. US-Sozialversicherungsnummern), die in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbanken gespeichert sind. Always Encrypted ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) weiterzugeben. Daher bietet Always Encrypted eine Trennung zwischen denjenigen, die die Daten besitzen (und sie ansehen können) und denjenigen, die die Daten verwalten, (aber keinen Zugriff haben sollten). Always Encrypted stellt sicher, dass Administratoren lokaler Datenbanken, Clouddatenbank-Operatoren oder andere Benutzer mit weitgehenden Rechten, aber ohne Autorisierung, nicht auf die verschlüsselten Daten zugreifen können.So können Kunden ihre sensiblen Daten ruhigen Gewissens außerhalb ihres direkten Kontrollbereichs speichern. Dies ermöglicht Organisationen, ruhende und aktive Daten für die Speicherung in Azure zu verschlüsseln. Daraufhin kann die lokale Datenbankverwaltung an Drittanbieter delegiert oder die Anforderungen an die Sicherheitsfreigaben der eigenen Datenbankadministrationsmitarbeiter reduziert werden.  
   
@@ -61,7 +61,7 @@ Der Server berechnet das Resultset, und für jede verschlüsselte Spalte im Resu
 
 Weitere Informationen zur Entwicklung von Anwendungen mit Always Encrypted mit bestimmten Clienttreibern finden Sie unter [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)(Always Encrypted (Cliententwicklung)).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 Die Entschlüsselung findet über den Client statt. Das bedeutet, dass einige Aktionen, die nur serverseitig auftreten, nicht funktionieren, wenn Always Encrypted verwendet wird. 
 
@@ -82,8 +82,6 @@ Führen Sie folgende Schritte durch, um die Spalte erfolgreich zu aktualisieren:
 
 1. Wählen Sie über die Anweisung SELECT die Datei aus der SSN-Spalte aus, und speichern Sie diese in einem Resultset in der Anwendung. Dadurch kann die Anwendung (*Clienttreiber*) die Spalte entschlüsseln.
 2. Fügen Sie über INSERT die Daten aus dem Resultset in SQL Server ein. 
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  >[!IMPORTANT]
  > In diesem Szenario werden die Daten entschlüsselt, sobald sie zurück an den Server gesendet werden, da die Zielspalte einen regulären Varchar-Typ darstellt, der verschlüsselte Daten nicht akzeptiert. 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4b68ca111fc14682f5e11a6a865d15c0356a954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66526a14c6057be1c99b8690cd6df0db07c40a81
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995316"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905530"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -172,8 +172,6 @@ WHERE    tblPropAuthor.propAuthor = 'David'
 2.  Erstellen Sie ein Assembly und eine benutzerdefinierte Transact-SQL-Funktion, um die CLR-Klasse zu starten.  
   
 3.  Definieren Sie die insert-, update- und delete-Trigger, indem Sie die benutzerdefinierte Funktion zum Verwalten einer Eigenschaftentabelle verwenden.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Dazu erstellen Sie zuerst die Streaming-CLR-Funktion. Der **xml** -Datentyp wird als eine verwaltete SqlXml-Klasse in ADO.NET verfügbar gemacht und unterstützt die **CreateReader()** -Methode, die einen XmlReader zurückgibt.  
   
