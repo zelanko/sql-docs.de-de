@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 39a5ab4ab7159c0915994e555271ba0246f3f896
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212307"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908559"
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "70212307"
   
 -   Lesezugriff auf den **Root\Microsoft\SqlServer\ComputerManagement12** -WMI-Namespace. Standardmäßig verfügt jeder Benutzer durch die Berechtigung Konto aktivieren über Lesezugriff. Weitere Informationen finden Sie im Verfahren "So überprüfen Sie WMI-Berechtigungen" weiter unten in diesem Abschnitt.  
   
--   Leseberechtigung für den Ordner mit den Fehlerprotokolldateien. Standardmäßig befinden sich die Fehlerprotokolldateien unter dem folgenden Pfad (wobei <\<*Laufwerk>* das Laufwerk darstellt, auf dem Sie installiert haben[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und\<*<Instanzname* den Namen der Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] darstellt):  
+-   Leseberechtigung für den Ordner mit den Fehlerprotokolldateien. Standardmäßig befinden sich die Fehlerprotokolldateien unter dem folgenden Pfad (wobei <\<*Laufwerk>* das Laufwerk darstellt, auf dem Sie installiert haben[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und\< *<Instanzname* den Namen der Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] darstellt):  
   
      **\<Laufwerk>:\Programme\Microsoft SQL Server\MSSQL13.\<Instanzname>\MSSQL\Log**  
   
@@ -69,13 +69,13 @@ ms.locfileid: "70212307"
   
      Wenn Sie eine Verbindung mit einem Remotecomputer herstellen möchten, führen Sie folgende Schritte aus:  
   
-    1.  Klicken Sie mit der rechten Maustaste auf **WMI-Kontrolle (Lokal)**, und klicken Sie dann auf **Verbindung mit anderem Computer herstellen**.  
+    1.  Klicken Sie mit der rechten Maustaste auf **WMI-Kontrolle (Lokal)** , und klicken Sie dann auf **Verbindung mit anderem Computer herstellen**.  
   
     2.  Klicken Sie im Dialogfeld **Verwalteten Computer ändern** auf **Anderem Computer**.  
   
     3.  Geben Sie den Namen des Remotecomputers ein, und klicken Sie dann auf **OK**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **WMI-Steuerung (Lokal)** oder **WMI-Steuerung (**_Remotecomputername_**)**, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie mit der rechten Maustaste auf **WMI-Steuerung (Lokal)** oder **WMI-Steuerung (** _Remotecomputername_ **)** , und klicken Sie dann auf **Eigenschaften**.  
   
 4.  Klicken Sie im Dialogfeld **Eigenschaften von WMI-Kontrolle** auf die Registerkarte **Sicherheit** .  
   
@@ -86,8 +86,6 @@ ms.locfileid: "70212307"
 6.  Klicken Sie auf **Sicherheit**.  
   
 7.  Stellen Sie sicher, dass das verwendete Konto über die Berechtigung **Konto aktivieren** verfügt. Diese Berechtigung erlaubt den Lesezugriff auf WMI-Objekte.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="view-log-files"></a>Anzeigen von Protokolldateien  
  Das folgende Verfahren veranschaulicht das Anzeigen von Offlineprotokolldateien über Registrierte Server. Dabei wird Folgendes vorausgesetzt:  

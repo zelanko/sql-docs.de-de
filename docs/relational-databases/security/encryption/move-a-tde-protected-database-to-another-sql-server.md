@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: d405373dbd22b66310768a727f236d7596d05809
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32a4c21e924769a5e498b9fd597be0d51fca8de7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111665"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908371"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,6 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
      Ändert die Datenbank, um TDE zu aktivieren bzw. zu deaktivieren.  
   
 8.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlCreate"></a> Verwenden von Transact-SQL  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f21a974ee9beeeba8b50914092704f1879c5f501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575566"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305048"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>E-Mail-Übermittlung in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine E-Mail-Übermittlungserweiterung, mit der Sie einen Bericht per E-Mail an einzelne Benutzer oder Gruppen senden können. Um einen Bericht per E-Mail zu verteilen, 1) konfigurieren Sie den Berichtsserver für die E-Mail-Zustellung und 2) definieren entweder ein Standardabonnement oder ein datengesteuertes Abonnement. Ein einzelnes Abonnement kann nicht mehrere Berichte in einer einzigen E-Mail-Nachricht übermitteln. Sie können jedoch mehrere Abonnements erstellen.  
@@ -41,9 +41,9 @@ ms.locfileid: "65575566"
   
 -   Senden einer Benachrichtigung in der Betreffzeile einer E-Mail-Nachricht. Standardmäßig enthält die Betreffzeile in der Abonnementdefinition die folgenden Variablen, die bei der Verarbeitung des Abonnements durch berichtsspezifische Informationen ersetzt werden:  
   
-     **@ReportName** gibt den Namen des Berichts an.  
+     **\@ReportName** gibt den Namen des Berichts an.  
   
-     **@ExecutionTime** gibt an, wann der Bericht ausgeführt wurde.  
+     **\@ExecutionTime** gibt an, wann der Bericht ausgeführt wurde.  
   
      Diese Variablen können Sie mit statischem Text kombinieren, und den Text in der Betreffzeile können Sie für jedes Abonnement ändern.  
   

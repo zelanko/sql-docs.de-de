@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f2589588a2caa0c8a4132954b7897a7c128110d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072898"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909486"
 ---
 # <a name="filter-a-trace"></a>Filtern einer Ablaufverfolgung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68072898"
 2.  Bestimmen Sie die Daten und Datenspalten, die die benötigten Informationen enthalten.  
   
 3.  Bestimmen Sie eine Untergruppe der benötigten Daten, und definieren Sie auf der Grundlage dieser Datenuntergruppe Filter.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Beispielsweise möchten Sie nur Ereignisse verfolgen, die länger als eine bestimmte Zeit dauern. In diesem Fall können Sie eine Ablaufverfolgung erstellen, die Ereignisse umfasst, bei denen die Datenspalte **Duration** größer ist als 300 Millisekunden. Ereignisse, deren Ausführung weniger als 300 Millisekunden dauert, werden bei der Ablaufverfolgung nicht berücksichtigt.  
   

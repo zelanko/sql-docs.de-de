@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Azure Active Directory | Microsoft-Dokumentation für SQL Server
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: 44f92e782a497005ea47847301279e4341722d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b459877be731da11b33d13772bbf186ecf72198c
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68213553"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381851"
 ---
 # <a name="using-azure-active-directory"></a>Verwenden von Azure Active Directory
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,18 +29,17 @@ Ab Version 18.2.1 ermöglicht der Microsoft OLE DB-Treiber für SQL Server OLE D
 - Integrierte Azure Active Directory-Authentifizierung
 - SQL-Anmelde-ID und Kennwort
 
-> [!NOTE]  
-> Wenn Sie die folgenden Azure Active Directory Optionen mit dem OLE DB-Treiber verwenden, stellen Sie sicher, dass die [Active Directory-Authentifizierungsbibliothek für SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) installiert wurde:
-> - Azure Active Directory Anmelde-ID und Kennwort
-> - Integrierte Azure Active Directory-Authentifizierung
->
-> Adal ist für die anderen Authentifizierungsmethoden oder OLE DB Vorgänge nicht erforderlich.
+In Version 18,3 wird Unterstützung für die folgenden Authentifizierungsmethoden hinzugefügt:
+- Interaktive Azure Active Directory-Authentifizierung
+- Azure Active Directory-MSI-Authentifizierung
 
 > [!NOTE]
-> Die Verwendung der folgenden Authentifizierungs Modi `DataTypeCompatibility` , auf die (oder die entsprechende- `80` Eigenschaft) festgelegt ist, wird **nicht** unterstützt:
+> Die Verwendung der folgenden Authentifizierungs Modi, bei denen `DataTypeCompatibility` (oder die entsprechende-Eigenschaft) auf `80` festgelegt ist, wird **nicht** unterstützt:
 > - Azure Active Directory Authentifizierung mit Anmelde-ID und Kennwort
 > - Azure Active Directory Authentifizierung mit Zugriffs Token
 > - Integrierte Azure Active Directory-Authentifizierung
+> - Interaktive Azure Active Directory-Authentifizierung
+> - Azure Active Directory-MSI-Authentifizierung
 
 ## <a name="connection-string-keywords-and-properties"></a>Verbindungs Zeichenfolgen-Schlüsselwörter
 Die folgenden Schlüsselwörter für Verbindungs Zeichenfolgen wurden eingeführt, um Azure Active Directory Authentifizierung zu unterstützen:
@@ -54,20 +53,20 @@ Weitere Informationen zu den neuen Schlüsselwörtern/Eigenschaften finden Sie a
 - [Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 - [Initialisierungs- und Autorisierungseigenschaften](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 
-## <a name="encryption-and-certificate-validation"></a>Verschlüsselung und Zertifikat Überprüfung
+## <a name="encryption-and-certificate-validation"></a>Verschlüsselung und Zertifikatüberprüfung
 In diesem Abschnitt werden die Änderungen im Verhalten bei der Verschlüsselung und der Zertifikat Validierung erläutert. Diese Änderungen sind **nur** wirksam, wenn die Verbindungs Zeichenfolgen-Schlüsselwörter für die neue Authentifizierung oder Zugriffs Token verwendet werden (oder die entsprechenden Eigenschaften).
 
 ### <a name="encryption"></a>Verschlüsselung
-Um die Sicherheit zu verbessern, überschreibt der Treiber bei Verwendung der neuen Verbindungs Eigenschaften/-Schlüsselwörter den Standard Verschlüsselungs Wert, `yes`indem er auf festgelegt wird. Überschreiben erfolgt beim Initialisierungs Zeitpunkt des Datenquellen Objekts. Wenn die Verschlüsselung auf irgendeine Weise vor der Initialisierung festgelegt wird, wird der Wert beachtet und nicht überschrieben.
+Um die Sicherheit zu verbessern, überschreibt der Treiber bei Verwendung der neuen Verbindungs Eigenschaften/-Schlüsselwörter den Standard Verschlüsselungs Wert, indem er auf `yes` festgelegt wird. Überschreiben erfolgt beim Initialisierungs Zeitpunkt des Datenquellen Objekts. Wenn die Verschlüsselung auf irgendeine Weise vor der Initialisierung festgelegt wird, wird der Wert beachtet und nicht überschrieben.
 
 > [!NOTE]   
-> In ADO-Anwendungen und Anwendungen, die die `IDBInitialize` -Schnitt `IDataInitialize::GetDataSource`Stelle über abrufen, legt die Kernkomponente, die die-Schnittstelle implementiert `no`, die Verschlüsselung explizit auf den Standardwert fest. Folglich beachten die neuen Authentifizierungs Eigenschaften/-Schlüsselwörter diese Einstellung, und der Verschlüsselungs Wert wird **nicht** überschrieben. Daher wird **empfohlen** , diese Anwendungen explizit festzulegen `Use Encryption for Data=true` , um den Standardwert zu überschreiben.
+> In ADO-Anwendungen und Anwendungen, die die `IDBInitialize`-Schnittstelle über `IDataInitialize::GetDataSource` abrufen, legt die Kernkomponente, die die-Schnittstelle implementiert, die Verschlüsselung explizit auf den Standardwert `no` fest. Folglich beachten die neuen Authentifizierungs Eigenschaften/-Schlüsselwörter diese Einstellung, und der Verschlüsselungs Wert wird **nicht** überschrieben. Daher wird **empfohlen** , dass diese Anwendungen `Use Encryption for Data=true` explizit festlegen, um den Standardwert zu überschreiben.
 
 ### <a name="certificate-validation"></a>Zertifikatüberprüfung
-Um die Sicherheit zu verbessern, berücksichtigen die neuen Verbindungs Eigenschaften `TrustServerCertificate` /-Schlüsselwörter die Einstellung (und die zugehörigen Schlüsselwörter/Eigenschaften der Verbindungs Zeichenfolge) **unabhängig von der Client Verschlüsselungs Einstellung**. Dies hat zur Folge, dass das Serverzertifikat standardmäßig überprüft wird.
+Um die Sicherheit zu verbessern, berücksichtigen die neuen Verbindungs Eigenschaften/-Schlüsselwörter die `TrustServerCertificate` Einstellung (und die entsprechenden Schlüsselwörter/Eigenschaften der Verbindungs Zeichenfolge) **unabhängig von der Client Verschlüsselungs Einstellung**. Dies hat zur Folge, dass das Serverzertifikat standardmäßig überprüft wird.
 
 > [!NOTE]   
-> Die Zertifikat Überprüfung kann auch durch das `Value` -Feld `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` des Registrierungs Eintrags gesteuert werden. Gültige Werte sind `0` und `1`. Der OLE DB Treiber wählt die sicherste Option zwischen der Registrierung und den Einstellungen für die Verbindungs Eigenschaft/das Schlüsselwort aus. Das heißt, der Treiber überprüft das Serverzertifikat, solange mindestens eine der Registrierungs-/Verbindungseinstellungen die Serverzertifikats Überprüfung ermöglicht.
+> Die Zertifikat Überprüfung kann auch über das `Value`-Feld des `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` Registrierungs Eintrags gesteuert werden. Gültige Werte sind `0` und `1`. Der OLE DB Treiber wählt die sicherste Option zwischen der Registrierung und den Einstellungen für die Verbindungs Eigenschaft/das Schlüsselwort aus. Das heißt, der Treiber überprüft das Serverzertifikat, solange mindestens eine der Registrierungs-/Verbindungseinstellungen die Serverzertifikats Überprüfung ermöglicht.
 
 ## <a name="gui-additions"></a>GUI-Ergänzungen
 Die grafische Benutzeroberfläche des Treibers wurde erweitert, um Azure Active Directory Authentifizierung zu ermöglichen. Weitere Informationen finden Sie in den folgenden Themen:
@@ -75,7 +74,7 @@ Die grafische Benutzeroberfläche des Treibers wurde erweitert, um Azure Active 
 - [Konfiguration von Universal Data Link (UDL)](../help-topics/data-link-pages.md)
 
 ## <a name="example-connection-strings"></a>Exemplarische Verbindungszeichenfolgen
-Dieser Abschnitt enthält Beispiele für neue und vorhandene Verbindungs Zeichenfolgen-Schlüsselwörter `IDataInitialize::GetDataSource` , `DBPROP_INIT_PROVIDERSTRING` die mit der-und-Eigenschaft verwendet werden
+In diesem Abschnitt werden Beispiele für neue und vorhandene Verbindungs Zeichenfolgen-Schlüsselwörter angezeigt, die mit `IDataInitialize::GetDataSource` und `DBPROP_INIT_PROVIDERSTRING`-Eigenschaft verwendet werden.
 
 ### <a name="sql-authentication"></a>SQL-Authentifizierung
 - Verwenden von `IDataInitialize::GetDataSource`:
@@ -89,7 +88,7 @@ Dieser Abschnitt enthält Beispiele für neue und vorhandene Verbindungs Zeichen
     - Veraltet:
         > Server = [Server];D atabase = [Datenbank]; UID = [username]; PWD = [Kennwort]; Verschlüsseln = ja
 
-### <a name="integrated-windows-authentication-using-security-support-provider-interface--sspi"></a>Integrierte Windows-Authentifizierung mithilfe der Security Support Provider Interface (SSPI)
+### <a name="integrated-windows-authentication-using-security-support-provider-interface-sspi"></a>Integrierte Windows-Authentifizierung mithilfe der Security Support Provider Interface (SSPI)
 
 - Verwenden von `IDataInitialize::GetDataSource`:
     - Neu:
@@ -102,14 +101,14 @@ Dieser Abschnitt enthält Beispiele für neue und vorhandene Verbindungs Zeichen
     - Veraltet:
         > Server = [Server];D atabase = [Datenbank]; **Trusted_Connection = ja**; Verschlüsseln = ja
 
-### <a name="aad-username-and-password-authentication-using-adal"></a>Aad-Benutzernamen-und Kenn Wort Authentifizierung mit Adal
+### <a name="azure-active-directory-username-and-password-authentication"></a>Azure Active Directory Authentifizierung mit Benutzername und Kennwort
 
 - Verwenden von `IDataInitialize::GetDataSource`:
     > Provider = msoledbsql; Datenquelle = [Server]; anfangs Katalog = [Datenbank]; **Authentifizierung = activedirectorypassword**; Benutzer-ID = [username]; Password = [Kennwort]; Verschlüsselung für Daten verwenden = true
 - Verwenden von `DBPROP_INIT_PROVIDERSTRING`:
     > Server = [Server];D atabase = [Datenbank]; **Authentifizierung = activedirectorypassword**; UID = [username]; PWD = [Kennwort]; Verschlüsseln = ja
 
-### <a name="integrated-azure-active-directory-authentication-using-adal"></a>Integrierte Azure Active Directory Authentifizierung mit Adal
+### <a name="azure-active-directory-integrated-authentication"></a>Integrierte Azure Active Directory-Authentifizierung
 
 - Verwenden von `IDataInitialize::GetDataSource`:
     > Provider = msoledbsql; Datenquelle = [Server]; anfangs Katalog = [Datenbank]; **Authentication = activedirectoryintegrated**; Verschlüsselung für Daten verwenden = true
@@ -121,7 +120,27 @@ Dieser Abschnitt enthält Beispiele für neue und vorhandene Verbindungs Zeichen
 - Verwenden von `IDataInitialize::GetDataSource`:
     > Provider = msoledbsql; Datenquelle = [Server]; anfangs Katalog = [Datenbank]; **Zugriffs Token = [Zugriffs Token]** ; Verschlüsselung für Daten verwenden = true
 - Verwenden von `DBPROP_INIT_PROVIDERSTRING`:
-    > Das Bereitstellen von `DBPROP_INIT_PROVIDERSTRING` Zugriffs Token über wird nicht unter
+    > Das Bereitstellen von Zugriffs Token über `DBPROP_INIT_PROVIDERSTRING` wird nicht unterstützt
+
+### <a name="azure-active-directory-interactive-authentication"></a>Interaktive Azure Active Directory-Authentifizierung
+
+- Verwenden von `IDataInitialize::GetDataSource`:
+    > Provider = msoledbsql; Datenquelle = [Server]; anfangs Katalog = [Datenbank]; **Authentication = activedirectoryinteractive**; Benutzer-ID = [username]; Verschlüsselung für Daten verwenden = true
+- Verwenden von `DBPROP_INIT_PROVIDERSTRING`:
+    > Server = [Server];D atabase = [Datenbank]; **Authentication = activedirectoryinteractive**; UID = [username]; Verschlüsseln = ja
+
+### <a name="azure-active-directory-msi-authentication"></a>Azure Active Directory-MSI-Authentifizierung
+
+- Verwenden von `IDataInitialize::GetDataSource`:
+    - Benutzerseitig zugewiesene verwaltete Identität:
+        > Provider = msoledbsql; Datenquelle = [Server]; anfangs Katalog = [Datenbank]; **Authentication = activedirectorymsi**; Benutzer-ID = [Objekt-ID]; Verschlüsselung für Daten verwenden = true
+    - Systemseitig zugewiesene verwaltete Identität:
+        > Provider = msoledbsql; Datenquelle = [Server]; anfangs Katalog = [Datenbank]; **Authentication = activedirectorymsi**; Verschlüsselung für Daten verwenden = true
+- Verwenden von `DBPROP_INIT_PROVIDERSTRING`:
+    - Benutzerseitig zugewiesene verwaltete Identität:
+        > Server = [Server];D atabase = [Datenbank]; **Authentication = activedirectorymsi**; UID = [Objekt-ID]; Verschlüsseln = ja
+    - Systemseitig zugewiesene verwaltete Identität:
+        > Server = [Server];D atabase = [Datenbank]; **Authentication = activedirectorymsi**; Verschlüsseln = ja
 
 ## <a name="code-samples"></a>Codebeispiele
 
@@ -243,4 +262,4 @@ Cleanup:
 
 - Erfahren Sie mehr über die [Azure Active Directory-Authentifizierung](https://go.microsoft.com/fwlink/?linkid=2073783) bei SQL Server.
 
-- Konfigurieren von Treiber Verbindungen mithilfe von [Schlüsselwörtern für Verbindungs](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) Zeichenfolgen, die vom OLE DB Treiber
+- Konfigurieren von Treiber Verbindungen mithilfe von [Schlüsselwörtern für Verbindungs Zeichenfolgen](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) , die vom OLE DB Treiber

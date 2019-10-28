@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: de6b89d8c561df851b3cbc8696283f1ed95489f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041200"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908776"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Zugreifen auf FileTables mit Datei-E/A-APIs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68041200"
 1.  Datei-E/A-API-Zugriff beginnt in der Regel, indem er einen logischen UNC-Pfad für die Datei oder das Verzeichnis anfordert. Anwendungen können eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung mit der [GetFileNamespacePath](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)-Funktion &#40;Transact-SQL&#41; verwenden, um den logischen Pfad für eine Datei oder ein Verzeichnis abzurufen. Weitere Informationen finden Sie unter [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 2.  Von der Anwendung wird dieser logische Pfad anschließend verwendet, um ein Handle für die Datei oder das Verzeichnis abzurufen und etwas mit dem Objekt auszuführen. Der Pfad kann an jede unterstützte Dateisystem-API-Funktion, z. B. CreateFile() oder CreateDirectory(), übergeben werden, um eine Datei zu erstellen oder zu öffnen und ein Handle abzurufen. Das Handle kann verwendet werden, um dann Daten zu streamen, aufzuzählen oder Verzeichnisse zu organisieren oder um Dateiattribute zu erhalten bzw. festzulegen oder umd Dateien oder Verzeichnisse usw. zu löschen.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="create"></a> Erstellen von Dateien und Verzeichnissen in einer FileTable  
  Eine Datei oder ein Verzeichnis kann in einer FileTable mithilfe von Datei-E/A-APIs, beispielsweise CreateFile oder CreateDirectory, erstellt werden.  

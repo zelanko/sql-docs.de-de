@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 94d4a76233304347865049c118d7b956b8416a44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c884662acb111ab197ebf437d7eaacd5859ebde7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041329"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908792"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68041329"
 4.  Stellen Sie mithilfe von WITH NORECOVERY Datenbanksicherungen wieder her.  
   
 5.  Stellen Sie mithilfe von WITH STOPATMARK Protokolle wieder her.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="considerations-for-using-marked-transactions"></a>Überlegungen zum Verwenden markierter Transaktionen  
  Beachten Sie Folgendes, bevor Sie benannte Markierungen in das Transaktionsprotokoll einfügen:  

@@ -22,12 +22,12 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22a591c770a09e0bd57f4c92116fcf72af45758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123409"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909892"
 ---
 # <a name="get-information-about-a-view"></a>Abrufen von Informationen zu einer Sicht
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,42 +63,40 @@ ms.locfileid: "68123409"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Sicht, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following properties show in the **View Properties** dialog box.  
+     Die folgenden Eigenschaften werden im Dialogfeld **Sichteigenschaften** angezeigt.  
   
-     **Database**  
-     The name of the database containing this view.  
+     **Datenbank**  
+     Name der Datenbank, die diese Sicht enthält.  
   
      **Server**  
-     The name of the current server instance.  
+     Name der aktuellen Serverinstanz.  
   
-     **User**  
-     The name of the user of this connection.  
+     **Benutzer**  
+     Name des Benutzers dieser Verbindung.  
   
-     **Created date**  
-     Displays the date the view was created.  
+     **Erstellt am**  
+     Zeigt das Datum an, an dem die Sicht erstellt wurde.  
   
      **Name**  
-     The name of the current view.  
+     Name der aktuellen Sicht.  
   
      **Schema**  
-     Displays the schema that owns the view.  
+     Zeigt das Schema an, zu dem die Sicht gehört.  
   
-     **System object**  
-     Indicates whether the view is a system object. Values are True and False.  
+     **Systemobjekt**  
+     Gibt an, ob es sich bei der Sicht um ein Systemobjekt handelt. Die Werte sind True und False.  
   
-     **ANSI NULLs**  
-     Indicates if the object was created with the ANSI NULLs option.  
+     **ANSI NULLS**  
+     Gibt an, ob das Objekt mit der Option ANSI NULLS erstellt wurde.  
   
-     **Encrypted**  
-     Indicates whether the view is encrypted. Values are True and False.  
+     **Verschlüsselt**  
+     Gibt an, ob die Sicht verschlüsselt ist. Die Werte sind True und False.  
   
-     **Quoted identifier**  
-     Indicates if the object was created with the quoted identifier option.  
+     **Bezeichner in Anführungszeichen**  
+     Gibt an, ob das Objekt mit der Option Bezeichner in Anführungszeichen erstellt wurde.  
   
-     **Schema bound**  
-     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+     **Schema-gebunden**  
+     Gibt an, ob die Sicht Schema-gebunden ist. Die Werte sind True und False. Informationen zu Schema-gebundenen Sichten finden Sie im Abschnitt SCHEMABINDING von [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Abrufen von Sichteigenschaften mit dem Tool Sicht-Designer  
   

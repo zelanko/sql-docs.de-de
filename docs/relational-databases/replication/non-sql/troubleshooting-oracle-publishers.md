@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3edd60a47ac4cebcdea3f70a0658ce837e3d63ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095647"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907953"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Problembehandlung bei Oracle-Verlegern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,8 +78,6 @@ ms.locfileid: "68095647"
 2.  Führen Sie den SQL-Befehl `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`aus.  
   
 3.  Führen Sie den SQL-Befehl `DROP USER <replication_administrative_user_schema>``CASCADE;`aus.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>SQL Server-Fehler 21663 (Fehlen des Primärschlüssels) wurde ausgelöst  
  Artikel in Transaktionsveröffentlichungen müssen über einen gültigen Primärschlüssel verfügen. Fehlt dieser Primärschlüssel, finden Sie beim Versuch, den Artikel hinzuzufügen, die folgende Fehlermeldung:  

@@ -3,16 +3,16 @@ title: Häufig gestellte Fragen zu SQL Server für Linux
 description: Dieser Artikel enthält Antworten auf häufig gestellte Fragen zu SQL Server für Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/10/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952632"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72929908"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Häufig gestellte Fragen zu SQL Server für Linux
 
@@ -32,7 +32,7 @@ In den folgenden Abschnitten werden häufig gestellte Fragen zu SQL Server für 
 
 1. **Ist SQL Server für Linux identisch mit SQL Server unter Windows?**
 
-   Die zugrunde liegende Datenbank-Engine für SQL Server ist unter Linux und Windows identisch. Einige Features werden derzeit jedoch nicht unter Linux unterstützt. Eine Liste von Features, die unter Linux nicht unterstützt werden, finden Sie unter [Nicht unterstützte Features und Dienste](sql-server-linux-release-notes.md#Unsupported). Überprüfen Sie außerdem die [bekannten Probleme](sql-server-linux-release-notes.md#known-issues). Sofern andere SQL Server-Features und -Dienste nicht in dieser Liste aufgeführt werden, werden sie unter Linux unterstützt.
+   Die zugrunde liegende Datenbank-Engine für SQL Server ist unter Linux und Windows identisch. Einige Features werden derzeit jedoch nicht unter Linux unterstützt. Eine Liste von Features, die unter Linux nicht unterstützt werden, finden Sie unter [Nicht unterstützte Features und Dienste](sql-server-linux-editions-and-components-2019.md#Unsupported). Überprüfen Sie außerdem die [bekannten Probleme](sql-server-linux-release-notes.md#known-issues). Sofern andere SQL Server-Features und -Dienste nicht in dieser Liste aufgeführt werden, werden sie unter Linux unterstützt.
 
 1. **Wie lautet die Unterstützungsrichtlinie für SQL Server?**
 

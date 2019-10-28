@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c763e5846ad4452ac96991c6c440abb3f4626eac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2bb7f9186ba44c094a54c4e44e7d54b29bc30ed0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041506"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908827"
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,8 +164,6 @@ ms.locfileid: "68041506"
      **Seiten**  
   
 7.  Um die im Seitenraster aufgeführten Seiten wiederherzustellen, klicken Sie auf **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Zum Angeben einer Seite in einer RESTORE DATABASE-Anweisung benötigen Sie die Datei-ID der Datei, die die Seite enthält, und die Seiten-ID der Seite. Die erforderliche Syntax lautet wie folgt:  

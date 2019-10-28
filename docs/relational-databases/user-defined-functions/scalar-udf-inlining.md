@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517999"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909319"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
@@ -134,8 +134,6 @@ Wie zuvor erwähnt enthält der Abfrageplan keinen UDF-Operator mehr. Seine Ausw
 1. SQL Server hat den impliziten Join zwischen `CUSTOMER` und `ORDERS` abgeleitet und diesen über einen Joinoperator in einen expliziten transformiert.
 2. SQL Server hat außerdem die implizite `GROUP BY O_CUSTKEY on ORDERS`-Anweisung abgeleitet und „IndexSpool + StreamAggregate“ verwendet, um diese zu implementieren.
 3. SQL Server verwendet nun einen Parallelismus für alle Operatoren.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Je nach Komplexität der Logik in der benutzerdefinierten Funktion kann der resultierende Abfrageplan größer und komplexer werden. Wie Sie sehen können, handelt es sich bei den Vorgängen innerhalb der benutzerdefinierten Funktion nicht mehr um eine Blackbox. Deshalb kann der Abfrageoptimierer diese Vorgänge optimieren und deren Kosten berücksichtigen. Da die benutzerdefinierte Funktion sich nicht mehr im Plan befindet, wird der iterative Aufruf derselben durch einen Plan ersetzt, der den Aufwand, der durch Funktionsaufrufe entsteht, vollständig vermeidet.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769413"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907704"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Lernprogramm: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ In diesem Abschnitt erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../
 
    ![Seite „Veröffentlichungstyp“ mit ausgewähltem Veröffentlichungstyp](media/tutorial-replicating-data-between-continuously-connected-servers/tranrepl.png)
   
-5. Erweitern Sie auf der Seite **Artikel** den Knoten **Tabellen**, und aktivieren Sie das Kontrollkästchen neben **Product**. Erweitern Sie anschließend den Knoten **Product**, und deaktivieren Sie die Kontrollkästchen neben **ListPrice** und **StandardCost**. Wählen Sie **Weiter**aus.  
+5. Erweitern Sie auf der Seite **Artikel** den Knoten **Tabellen**, und aktivieren Sie das Kontrollkästchen neben **Product**. Erweitern Sie anschließend den Knoten **Product**, und deaktivieren Sie die Kontrollkästchen neben **ListPrice** und **StandardCost**. Wählen Sie **Weiter** aus.  
 
    ![Seite „Artikel“ mit ausgewählten Artikeln, die veröffentlicht werden sollen](media/tutorial-replicating-data-between-continuously-connected-servers/replarticles.png)
   
@@ -115,8 +115,6 @@ In diesem Abschnitt erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../
     ![Seite „Assistenten abschließen“ mit dem Veröffentlichungsnamen](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. Klicken Sie nach Erstellung der Veröffentlichung auf **Schließen**, um den Assistenten zu beenden. 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Wenn Ihr SQL Server-Agent bei dem Versuch, die Veröffentlichung zu erstellen, nicht ausgeführt wird, wird möglicherweise die unten abgebildete Fehlermeldung angezeigt. Sie weist darauf hin, dass Ihre Veröffentlichung erfolgreich erstellt wurde, Ihr Momentaufnahmen-Agent jedoch nicht gestartet werden konnte. In diesem Fall müssen Sie den SQL Server-Agent starten und den Momentaufnahmen-Agent anschließend manuell starten. Die Anweisungen für diesen Vorgang finden Sie im folgenden Abschnitt. 
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf28fc78055a2650c1f2ffa6ab13485bf9a71c15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022494"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908747"
 ---
 # <a name="manage-filetables"></a>Verwalten von FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,8 +114,6 @@ GO
 2.  Nicht transaktionaler Zugriff ist auf Datenbankebene aktiviert.  
   
 3.  Ein gültiges Verzeichnis wurde auf Datenbankebene angegeben.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="BasicsEnabling"></a> Deaktivieren und erneutes Aktivieren des FileTable-Namespaces auf Tabellenebene  
  Durch Deaktivieren des FileTable-Namespaces werden alle systemdefinierten Einschränkungen und Trigger deaktiviert, die mit der FileTable erstellt wurden. Dies ist in Situationen hilfreich, in denen eine FileTable in großem Umfang mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Vorgängen ohne den Aufwand der FileTable-Semantikerzwingung neu organisiert werden müssen. Durch diese Vorgänge kann die FileTable jedoch in einem inkonsistenten Status belassen werden, und das erneute Aktivieren des FileTable-Namespaces kann verhindert werden.  

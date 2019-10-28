@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac146dc20fbbf078a7f71dfdbe81b4489ea1849f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934119"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907077"
 ---
 # <a name="statistics"></a>Statistik
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ Zum Erstellen des Histogramms sortiert der Abfrageoptimierer die Spaltenwerte, b
 
 Das folgende Diagramm zeigt ein Histogramm mit sechs Schritten. Der Bereich links vom ersten oberen Grenzwert ist der erste Schritt.
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogramm") 
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
   
 Für jeden der vorherigen Histogrammschritt gilt:
 -   Eine fett formatierte Zeile stellt den oberen Grenzwert (*range_high_key*) und die Häufigkeit des Vorkommens (*equal_rows*) dar.  
@@ -104,7 +104,7 @@ WHERE s.name like '_WA%'
 ORDER BY s.name;  
 ```  
   
-#### <a name="autoupdatestatistics-option"></a>AUTO_UPDATE_STATISTICS (Option)  
+#### <a name="auto_update_statistics-option"></a>AUTO_UPDATE_STATISTICS (Option)  
  Wenn die [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics)-Option zum automatischen Update von Statistiken aktiviert ist, stellt der Abfrageoptimierer fest, wann Statistiken veraltet sein könnten, und aktualisiert diese Statistiken, sobald sie von einer Abfrage verwendet werden. Statistiken sind veraltet, wenn die Datenverteilung in der Tabelle oder indizierten Sicht durch die Vorgänge INSERT, UPDATE, DELETE oder MERGE geändert wurde. Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, indem er die Anzahl von Datenänderungen seit der letzten Statistikaktualisierung ermittelt und sie mit einem Schwellenwert vergleicht. Der Schwellenwert basiert auf der Anzahl von Zeilen in der Tabelle oder indizierten Sicht.  
   
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet einen Schwellenwert basierend auf dem Prozentsatz der geänderten Zeilen. Dies ist unabhängig von der Anzahl der Zeilen in der Tabelle. Der Schwellenwert lautet:
@@ -122,7 +122,7 @@ Die AUTO_UPDATE_STATISTICS-Option gilt für Statistikobjekte, die für Indizes, 
  
 Weitere Informationen zur Steuerung von AUTO_UPDATE_STATISTICS finden Sie unter [Steuern des Verhaltens der automatischen Statistikaktualisierung (AUTO_UPDATE_STATISTICS) in SQL Server](https://support.microsoft.com/help/2754171).
   
-#### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
+#### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  Mit der [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async)-Option für das asynchrone Statistikupdate wird festgelegt, ob der Abfrageoptimierer das synchrone oder asynchrone Statistikupdate verwendet. Die Option für das asynchrone Statistikupdate ist standardmäßig deaktiviert, sodass der Abfrageoptimierer Statistiken synchron aktualisiert. Die AUTO_UPDATE_STATISTICS_ASYNC-Option gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung generierte Statistiken erstellt wurden.  
  
  > [!NOTE]
@@ -161,8 +161,6 @@ Weitere Informationen zur Steuerung von AUTO_UPDATE_STATISTICS finden Sie unter 
 1.  Bei der Indexerstellung berechnet der Abfrageoptimierer Statistiken für Indizes, die sich auf Tabellen oder Sichten beziehen. Diese Statistiken werden für die Schlüsselspalten des Indexes erstellt. Wenn es sich um einen gefilterten Index handelt, erstellt der Abfrageoptimierer gefilterte Statistiken für die gleiche Teilmenge von Zeilen, die für den gefilterten Index angegeben wurden. Weitere Informationen zu gefilterten Indizes finden Sie unter [Erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md) und [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 2.  Der Abfrageoptimierer erstellt Statistiken für einzelne Spalten in Abfrageprädikaten, wenn [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) aktiviert ist.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Bei den meisten Abfragen werden durch diese beiden Methoden zum Erstellen von Statistiken hochwertige Abfragepläne gewährleistet. In einigen Fällen können Sie Abfragepläne verbessern, indem Sie zusätzliche Statistiken mit der [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung erstellen. In diesen zusätzlichen Statistiken können Sie statistische Korrelationen aufzeichnen, die vom Abfrageoptimierer beim Erstellen von Statistiken für Indizes oder einzelne Spalten nicht berücksichtigt werden. Ihre Anwendung kann über zusätzliche statistische Korrelationen in den Tabellendaten verfügen, durch die der Abfrageoptimierer Abfragepläne verbessern kann, wenn sie für die Berechnung von Statistikobjekten zugrunde gelegt werden. Der Abfrageplan kann beispielsweise optimiert werden, indem gefilterte Statistiken für eine Teilmenge von Datenzeilen oder Statistiken für mehrere Spalten für Abfrageprädikatsspalten ausgeführt werden.  
   

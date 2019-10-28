@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 352aa27fd759c14677ed2b674045c55e2b9c0896
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76ad73aa54d05081827a99a5b14c5390a04f3782
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073005"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909270"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1073,8 +1073,6 @@ BEGIN TRANSACTION
   
 1.  Festlegen von einer oder beider Datenbankoptionen `READ_COMMITTED_SNAPSHOT` und `ALLOW_SNAPSHOT_ISOLATION` auf ON.  
 2.  Festlegen der entsprechenden Transaktionsisolationsstufe in einer Anwendung:  
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   Wenn die `READ_COMMITTED_SNAPSHOT`-Datenbankoption auf ON gesetzt ist, verwenden Transaktionen, die die Read Committed-Isolationsstufe festlegen, die Zeilenversionsverwaltung.  
     -   Wenn die `ALLOW_SNAPSHOT_ISOLATION`-Datenbankoption auf ON gesetzt ist, können Transaktionen die Momentaufnahme-Isolationsstufe festlegen.  

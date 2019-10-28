@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 406b27b21d5c212815cd171ceff0ab308fb48aa9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99e605f1ed2a924f504f118dd6d0865fda3229e0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907829"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908588"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Erstellen von aktualisierbaren Abonnements für eine Transaktionsveröffentlichung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,6 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
     Informationen zu den Berechtigungen, die das Verbindungsserverkonto benötigt, finden Sie unter **Abonnements mit verzögertem Update über eine Warteschlange** unter [Hier Linkbeschreibung eingeben](../../../relational-databases/replication/security/secure-the-subscriber.md).
 
 8. Schließen Sie den Assistenten ab.
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Konfigurieren eines aktualisierbaren Abonnements vom Abonnenten aus
 

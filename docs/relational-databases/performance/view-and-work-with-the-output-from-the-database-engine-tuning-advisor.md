@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811358"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907040"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68811358"
 5.  Deaktivieren Sie **Vorhandene Objekte anzeigen** unten auf der Seite **Empfehlungen** im Registerkartenformat. Dadurch werden im Raster nur die Datenbankobjekte angezeigt, auf die in der Empfehlung verwiesen wird. Verwenden Sie die untere Bildlaufleiste, um die Spalte ganz rechts im Empfehlungsraster anzuzeigen, und klicken Sie auf ein Element in der Spalte **Definition** , um das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript anzuzeigen oder zu kopieren, das dieses Objekt in der Datenbank erstellt.  
   
 6.  Wenn Sie alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, die alle Datenbankobjekte in dieser Empfehlung erstellen oder löschen, in einer Skriptdatei speichern möchten, klicken Sie auf **Empfehlungen speichern** im Menü **Aktion** .  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>So zeigen Sie die Optimierungszusammenfassungen und -berichte mithilfe der GUI des Datenbankoptimierungsratgebers an  
   

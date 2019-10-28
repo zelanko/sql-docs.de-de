@@ -14,12 +14,12 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d25137348904fdf3eceb1cc0fceb2a147580f744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a392904b378514bb22816a3c325535fbe94cbacf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092288"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907859"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,8 +122,6 @@ Scan- und Konfliktstatistiken für den Tabellendetailbericht werden aus „sys.d
 3.  Klicken Sie auf **Weiter** , und bestätigen Sie, dass die Liste der Aufgaben Ihren Einstellungen auf der Seite **Optionen für die Prüflistenerstellung konfigurieren** entspricht.  
   
 4.  Klicken Sie auf **Fertig stellen**, und bestätigen Sie, dass die Migrationsprüflistenberichte nur für die von Ihnen ausgewählten Objekte generiert wurden.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Sie können die Genauigkeit der Berichte überprüfen, indem Sie sie mit den Berichten vergleichen, die von den Tools „Speicheroptimierungsratgeber“ und „Ratgeber für native Kompilierung“ erstellt wurden. Weitere Informationen finden Sie unter [Ratgeber für die Speicheroptimierung](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) und [Ratgeber für native Kompilierung](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   

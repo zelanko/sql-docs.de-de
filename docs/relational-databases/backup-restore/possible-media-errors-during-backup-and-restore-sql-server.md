@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ba9cba3a56a76fee51b6b21aec99f8019b59157
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79bfbeec5a22dd387b97977d12b95a0e232125aa
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033642"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908870"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Mögliche Medienfehler während der Sicherung und Wiederherstellung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ ms.locfileid: "68033642"
 2.  Unabhängig davon, ob Seitenprüfsummen vorhanden sind, generiert BACKUP eine separate Sicherungsprüfsumme für den Sicherungsdatenstrom. Bei den Wiederherstellungsvorgängen kann optional die Sicherungsprüfsumme verwendet werden, um zu überprüfen, ob die Sicherung beschädigt ist. Die Sicherungsprüfsumme wird auf den Sicherungsmedien gespeichert, nicht in den Datenbankseiten. Die Sicherungsprüfsumme kann bei der Wiederherstellung optional verwendet werden.  
   
 3.  Der Sicherungssatz erhält die Markierung, dass er Sicherungsprüfsummen enthält (in der **has_backup_checksums** -Spalte von **msdb..backupset**). Weitere Informationen finden Sie unter [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Wenn bei einem Sicherungsvorgang auf dem Sicherungsmedium Sicherungsprüfsummen vorhanden sind, werden standardmäßig die Sicherungsprüfsummen und Seitenprüfsummen von RESTORE- und RESTORE VERIFYONLY-Anweisungen überprüft. Wenn keine Sicherungsprüfsummen vorhanden sind, werden beide Wiederherstellungsvorgänge ohne Überprüfung fortgesetzt, weil ohne Sicherungsprüfsumme vom Wiederherstellungsvorgang keine Seitenprüfsummen verlässlich überprüft werden können.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 05a034bfb174ef3a1d7240bd1d8a3607e9001ddb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 184ead5d82ddad99e3fae781cd41b46569c1dead
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024846"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907492"
 ---
 # <a name="activity-monitor"></a>Aktivitätsmonitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,6 @@ Für die Spalten in den Bereichen **Prozesse**, **Ressourcenwartevorgänge**, **
 2.  Um eine Spalte zu sortieren, klicken Sie auf den Spaltennamen.  
   
 3.  Um eine oder mehrere Spalten zu filtern, klicken Sie in der Spaltenüberschrift auf den Dropdownpfeil, und wählen Sie anschließend einen Wert aus.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="more-information"></a>Weitere Informationen  
    

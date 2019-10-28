@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5e99f31afdef2ed6653cc7a508f2bb5fceebfdb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d7bccf89e8f2043413838e9f55fd8bd4e74dc5f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987399"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907229"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Öffnen des Aktivitätsmonitors (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +57,6 @@ Stellen Sie das Dialogfeld **Verbindung mit Server herstellen** fertig, wenn Sie
 3.  Wählen Sie in der Dropdownliste **Beim Start** die Option **Objekt-Explorer und Aktivitätsmonitor öffnen**aus.  
 
 4.  Klicken Sie auf **OK**.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   

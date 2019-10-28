@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e7ee336c9f81c8d4258e16cf09aa9ffec177e0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110957"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907986"
 ---
 # <a name="oracle-subscribers"></a>Oracle-Abonnenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ ms.locfileid: "68110957"
     |Geben Sie die Hostinformationen zur Identifikation des Datenbanklisteners an.|Der Host ist der Name oder DNS-Alias des Computers, auf dem der Oracle-Listener ausgeführt wird, d. h. normalerweise der Computer, auf dem sich die Datenbank befindet. Für bestimmte Protokolle müssen Sie zusätzliche Informationen angeben. Wenn Sie TCP ausgewählt haben, müssen Sie beispielsweise auch den Port angeben, an dem der Listener Verbindungsanforderungen zur Zieldatenbank überwachen soll. Standardmäßig verwendet die TCP-Konfiguration Port 1521.|  
   
 3.  Erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung, aktivieren Sie sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten, und erstellen Sie dann ein Pushabonnement für den Abonnenten. Weitere Informationen finden Sie unter [Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="setting-directory-permissions"></a>Festlegen von Verzeichnisberechtigungen  
  Dem Konto, unter dem der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst auf dem Verteiler ausgeführt wird, müssen Lese- und Ausführungsberechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt sein, in dem die Oracle-Clientnetzwerksoftware installiert ist.  

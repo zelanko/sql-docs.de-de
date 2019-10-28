@@ -11,12 +11,12 @@ ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 030635af78475eebfa63169b712528b8beeafa38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021922"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909413"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server
 
@@ -164,7 +164,7 @@ Die Datenanzeige wird in einem von Ihnen angegebenen Intervall aktualisiert. Sie
 
 
 
-### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 Anzeigen von .XEL mit der sys.fn_xe_file_target_read_file-Funktion
+### <a name="b4-view-xel-with-sysfn_xe_file_target_read_file-function"></a>B.4 Anzeigen von .XEL mit der sys.fn_xe_file_target_read_file-Funktion
 
 
 Für die Batchverarbeitung kann die folgende Systemfunktion die Datensätze in einer .XEL-Datei im XML-Format generieren:
@@ -180,8 +180,6 @@ Wenn die Zieldaten in SSMS vorhanden sind, können Sie die Daten mit folgenden S
 
 
 1. Setzen Sie den Fokus auf die Datenanzeige.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     - Es werden eine neue Symbolleiste und ein neues Menüelement für erweiterte Ereignisse angezeigt.
 
