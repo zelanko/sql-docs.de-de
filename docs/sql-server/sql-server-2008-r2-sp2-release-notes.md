@@ -3,7 +3,7 @@ title: SQL Server 2008 R2 SP2 Release Notes | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 01/31/2017
+ms.date: 10/15/2019
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b591e7383861e878496553fd8091f8a5137fb8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61afc55e04f7cd317e11c7db527dc97fb80fc7be
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938987"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904253"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Die dynamische Verwaltungsansicht (DMV) **sys.dm_db_stats_properties**wurde hinz
 ## <a name="20-before-you-install"></a>2.0 Vor der Installation  
 Informationen zum Installieren von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Updates finden Sie in der [SQL Server 2008 R2-Wartungsdokumentation](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-Allgemeine Informationen zu den ersten Schritten sowie zur Installation von SQL Server 2008 R2 finden Sie in der SQL Server 2008 R2-Infodatei. Die Infodatei steht auf dem Installationsmedium zur Verfügung. Weitere Informationen finden Sie auch in der [SQL Server-Onlinedokumentation](sql-server-technical-documentation.md) und in den [SQL Server-Foren](https://social.msdn.microsoft.com/Forums/category/sqlserver/).  
+Allgemeine Informationen zu den ersten Schritten sowie zur Installation von SQL Server 2008 R2 finden Sie in der SQL Server 2008 R2-Infodatei. Die Infodatei steht auf dem Installationsmedium zur Verfügung. Weitere Informationen finden Sie auch in den [SQL Server-Foren](https://social.msdn.microsoft.com/Forums/category/sqlserver/).
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Auswählen der richtigen Download- und Installationsdatei  
 Bestimmen Sie mithilfe der folgenden Tabelle, welche Datei heruntergeladen und installiert werden muss. Stellen Sie sicher, dass die Systemanforderungen erfüllt sind, bevor Sie das Service Pack installieren. Die Systemanforderungen sind auf den Downloadseiten angegeben, die mit den Links in der Tabelle verknüpft sind.  

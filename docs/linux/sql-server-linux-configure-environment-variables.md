@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476218"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807466"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Konfigurieren von SQL Server-Einstellungen mit Umgebungsvariablen unter Linux
 
@@ -94,7 +94,7 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, um SQL Server 201
 Dieses Beispiel führt `mssql-conf setup` mit konfigurierten Umgebungsvariablen aus. Die folgenden Umgebungsvariablen werden angegeben:
 
 - **ACCEPT_EULA** akzeptiert die Lizenzbedingungen für Endbenutzer.
-- **MSSSQL_PID** gibt die frei lizenzierte Developer Edition von SQL Server für die Verwendung außerhalb von Produktionsumgebungen an.
+- **MSSQL_PID** gibt die frei lizenzierte Developer Edition von SQL Server für die Verwendung außerhalb von Produktionsumgebungen an.
 - **MSSQL_SA_PASSWORD** legt ein sicheres Kennwort fest.
 - **MSSQL_TCP_PORT** legt 1234 als TCP-Port fest, auf dem SQL Server lauscht.
 
@@ -107,7 +107,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 Dieser Docker-Beispielbefehl verwendet die folgenden Umgebungsvariablen, um einen neuen SQL Server-Container zu erstellen:
 
 - **ACCEPT_EULA** akzeptiert die Lizenzbedingungen für Endbenutzer.
-- **MSSSQL_PID** gibt die frei lizenzierte Developer Edition von SQL Server für die Verwendung außerhalb von Produktionsumgebungen an.
+- **MSSQL_PID** gibt die frei lizenzierte Developer Edition von SQL Server für die Verwendung außerhalb von Produktionsumgebungen an.
 - **MSSQL_SA_PASSWORD** legt ein sicheres Kennwort fest.
 - **MSSQL_TCP_PORT** legt 1234 als TCP-Port fest, auf dem SQL Server lauscht. Dies bedeutet, dass in diesem Beispiel anstelle der Zuordnung von Port 1433 (Standard) zu einem Hostport der benutzerdefinierte TCP-Port mit dem `-p 1234:1234`-Befehl zugeordnet werden muss.
 

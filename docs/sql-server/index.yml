@@ -1,0 +1,140 @@
+### YamlMime:Landing
+title: Technische Dokumentation zu SQL Server
+summary: Technische Dokumentation, die Sie bei Einstieg, Verwaltung, Entwicklung und Arbeit mit SQL Server und verwandten Produkten unterstützt.
+metadata:
+  title: Technische Dokumentation zu SQL Server
+  description: Wählen Sie den Bereich von SQL Server aus, an dem Sie interessiert sind.
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 10/14/2019
+  ms.openlocfilehash: 0290fb90b15b0c8f3660db3c19e9850c4b0617ee
+  ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 10/25/2019
+  ms.locfileid: "72909937"
+landingContent:
+- title: SQL Server
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: SQL Server 2019
+      url: what-s-new-in-sql-server-ver15.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/what-is.md
+    - text: SQL Server unter Linux
+      url: ../linux/sql-server-linux-overview.md
+  - linkListType: quickstart
+    links:
+    - text: Herstellen einer Verbindung mit und Abfragen von SSMS
+      url: ../ssms/tutorials/connect-query-sql-server.md
+    - text: Herstellen einer Verbindung mit und Abfragen von Azure Data Studio
+      url: ../azure-data-studio/quickstart-sql-server.md
+  - linkListType: download
+    links:
+    - text: SQL Server
+      url: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+    - text: SQL Server Management Studio
+      url: ../ssms/download-sql-server-management-studio-ssms.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/download.md
+  - linkListType: reference
+    links:
+    - text: Transact-SQL
+      url: ../t-sql/language-reference.md
+    - text: SQL PowerShell
+      url: ../powershell/sql-server-powershell.md
+    - text: Beispieldatenbanken
+      url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+    - text: Leitfaden zu Interna und Architektur
+      url: https://aka.ms/sqlserverguides
+    - text: Vorgängerversionen von 2005 bis 2014
+      url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
+- title: SQL in Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure SQL-Datenbank – Singleton
+      url: /azure/sql-database/sql-database-single-database
+    - text: Verwaltete Azure SQL-Datenbank-Instanz
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: Azure SQL Data Warehouse
+      url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+    - text: SQL Server auf einer Windows-VM
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+    - text: SQL Server auf einer Linux-VM
+      url: ../linux/quickstart-install-connect-clouds.md
+- title: Verwaltung
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Installieren von SQL Server
+      url: https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server
+    - text: Aktualisieren von SQL Server
+      url: ../database-engine/install-windows/upgrade-sql-server.md
+  - linkListType: overview
+    links:
+    - text: Security
+      url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
+    - text: Überwachen und Optimieren der Leistung
+      url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
+    - text: In-Memory Database
+      url: ..//relational-databases/in-memory-database.md
+    - text: Automatische Optimierung
+      url: ../relational-databases/automatic-tuning/automatic-tuning.md
+    - text: Intelligente Abfrageverarbeitung
+      url: https://aka.ms/IQP
+  - linkListType: concept
+    links:
+    - text: Sichern und Wiederherstellen
+      url: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
+    - text: Always On-Verfügbarkeitsgruppen
+      url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+    - text: Failoverclusterinstanzen
+      url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+    - text: SQL Server-Replikation
+      url: ../relational-databases/replication/sql-server-replication.md
+- title: Business Intelligence
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server Reporting Services (SSRS)
+      url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+    - text: SQL Server Analysis Services (SSAS)
+      url: /analysis-services/analysis-services-overview
+    - text: SQL Server Integration Services (SSIS)
+      url: ../integration-services/sql-server-integration-services.md
+    - text: Azure Data Factory
+      url: https://docs.microsoft.com/azure/data-factory/
+- title: Migration
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Leitfaden zur Datenmigration
+      url: https://datamigration.microsoft.com/
+    - text: Datenbankkompatibilitätszertifizierung
+      url: https://aka.ms/dbcompat
+    - text: Azure Database Migration Service
+      url: https://docs.microsoft.com/azure/dms/dms-overview
+    - text: Datenmigrations-Assistent (DMA)
+      url: ../dma/dma-overview.md
+    - text: Assistent für Datenbankexperimente
+      url: ../dea/database-experimentation-assistant-overview.md
+    - text: SQL Server Migration Assistant (SSMA)
+      url: ../ssma/sql-server-migration-assistant.md
+- title: Big Data und Machine Learning
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Big Data-Cluster für SQL Server
+      url: ../big-data-cluster/big-data-cluster-overview.md
+    - text: Analyseplattformsystem
+      url: https://www.microsoft.com/sql/analytics-platform-system/
+    - text: Machine Learning mit SQL Server
+      url: https://docs.microsoft.com/sql/advanced-analytics/
+    - text: R Services
+      url: ../advanced-analytics/r/sql-server-r-services.md
+    - text: Datenvirtualisierung mit PolyBase
+      url: ../relational-databases/polybase/polybase-guide.md

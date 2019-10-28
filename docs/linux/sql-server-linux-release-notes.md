@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 568790caac848c0823c58bd004ffca8546650340
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278265"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930486"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server 2017 für Linux
 
@@ -392,9 +392,9 @@ Dies ist das allgemein verfügbare Release von [!INCLUDE[ssSQL17](../includes/ss
 
 ### <a name="package-details"></a>Paketdetails
 
-In der folgenden Tabelle werden Paketinformationen und Downloadlinks für die RPM- und Debian-Pakete aufgeführt. Beachten Sie, dass Sie diese Pakete nicht direkt herunterladen müssen, wenn Sie die Schritte der folgenden Installationshandbücher befolgen:
+In der folgenden Tabelle werden Paketinformationen und Downloadlinks für die RPM- und Debian-Pakete aufgeführt. Sie müssen diese Pakete nicht direkt herunterladen, wenn Sie die Schritte der folgenden Installationshandbücher befolgen:
 
-- [Install SQL Server package (Installieren des SQL Server-Pakets)](sql-server-linux-setup.md)
+- [Installieren des SQL Server-Pakets](sql-server-linux-setup.md)
 - [Install Full-text Search package (Installieren des Pakets für die Volltextsuche)](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Agent package (Installieren des SQL Server-Agent-Pakets)](sql-server-linux-setup-sql-agent.md)
 - [Install SQL Server Integration Services (Installieren von SQL Server Integration Services)](sql-server-linux-setup-ssis.md)
@@ -404,42 +404,6 @@ In der folgenden Tabelle werden Paketinformationen und Downloadlinks für die RP
 | Red Hat RPM-Paket | 14.0.1000.169-2 | [RPM-Engine-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[RPM-Hochverfügbarkeitspaket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[RPM-Paket für Volltextsuche](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[RPM-SQL Server-Agent-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[SSIS-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM-Paket | 14.0.1000.169-2 | [RPM-Engine-Paket (mssql-server)](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[RPM-Hochverfügbarkeitspaket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[RPM-Paket für Volltextsuche](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[RPM-SQL Server-Agent-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Debian-Paket für Ubuntu 16.04 | 14.0.1000.169-2 | [Debian-Engine-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Debian-Hochverfügbarkeitspaket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Debian-Paket für Volltextsuche](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Debian-SQL Server-Agent-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[SSIS-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
-
-## <a name="Unsupported"></a> Nicht unterstützte Features und Dienste
-
-Die folgenden Features und Dienste stehen im allgemein verfügbaren Release für Linux nicht zur Verfügung. Die Unterstützung dieser Features wird im Laufe der Zeit ausgeweitet.
-
-| Bereich | Nicht unterstütztes Feature oder Dienst |
-|-----|-----|
-| **Datenbank-Engine** | Transaktionsreplikation |
-| &nbsp; | Mergereplikation |
-| &nbsp; | Change Data Capture (siehe SQL Server-Agent) |
-| &nbsp; | Stretch Database |
-| &nbsp; | PolyBase |
-| &nbsp; | Verteilte Abfrage mit Drittanbieterverbindungen |
-| &nbsp; | Verbindungsserver für andere Datenquellen als [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
-| &nbsp; | Erweiterte gespeicherte Systemprozeduren (XP_CMDSHELL usw.) |
-| &nbsp; | Dateitabelle, FILESTREAM |
-| &nbsp; | CLR-Assemblys mit festgelegter EXTERNAL_ACCESS- oder UNSAFE-Berechtigung |
-| &nbsp; | Pufferpoolerweiterung |
-| **SQL Server-Agent** |  Subsysteme: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
-| &nbsp; | Warnungen |
-| &nbsp; | Protokolllese-Agent |
-| &nbsp; | Change Data Capture (CDC) |
-| &nbsp; | Verwaltete Sicherung |
-| **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
-| **Security** | Erweiterbare Schlüsselverwaltung |
-| &nbsp; | Azure AD-Authentifizierung für Verbindungsserver | 
-| &nbsp; | Azure AD-Authentifizierung für Verfügbarkeitsgruppen | 
-| &nbsp; | Drittanbietertools für Azure AD (Centrify, Vintela, PowerBroker) | 
-| **Dienste** | SQL Server-Browser |
-| &nbsp; | SQL Server R Services |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-| &nbsp; | Distributed Transaction Coordinator (DTC) |
 
 ## <a name="known-issues"></a>Bekannte Probleme
 
@@ -470,8 +434,6 @@ In den folgenden Abschnitten werden bekannte Probleme mit dem allgemein verfügb
 - Die Masterdatenbank kann nicht mit dem Hilfsprogramm „mssql-conf“ verschoben werden. Andere Systemdatenbanken können mit „mssql-conf“ verschoben werden.
 
 - Beim Wiederherstellen einer Datenbank, die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Windows gesichert wurde, müssen Sie die Klausel **WITH MOVE** in der Transact-SQL-Anweisung verwenden.
-
-- Verteilte Transaktionen, die den Microsoft Distributed Transaction Coordinator-Dienst erfordern, werden nicht von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux unterstützt. Verbindungsserver zwischen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden unterstützt, es sei denn, sie umfassen den Distributed Transaction Coordinator-Dienst. Weitere Informationen finden Sie unter [Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux (Verteilte Transaktionen, die den Microsoft Distributed Transaction Coordinator-Dienst erfordern, werden nicht von SQL Server für Linux unterstützt)](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
 
 - Gewisse Algorithmen (Suites mit Verschlüsselungsverfahren) für TLS (Transport Layer Security) funktionieren in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux nicht ordnungsgemäß. Dies führt zu Verbindungsfehlern beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sowie beim Herstellen von Verbindungen zwischen Replikaten in Hochverfügbarkeitsgruppen.
 
@@ -515,7 +477,7 @@ Führen Sie einen der folgenden Schritte aus, um dieses Problem zu umgehen:
 
 1. Verwenden Sie IP-Adressen anstelle von Hostnamen, um das Ziel der TCP-Verbindung anzugeben.
 
-1. Aktivieren Sie IPv6 im Kernel, indem Sie `ipv6.disable=1` aus der boot-Befehlszeile entfernen. Die Vorgehensweise hierfür hängt von der Linux-Verteilung und dem Bootloader (z. B. GRUB) ab. Wenn Sie IPv6 deaktivieren möchten, können Sie dennoch deaktivieren, indem Sie `net.ipv6.conf.all.disable_ipv6 = 1` in der `sysctl`-Konfiguration festlegen (z. B. `/etc/sysctl.conf`). Dadurch wird weiterhin verhindert, dass der Netzwerkadapter des Systems eine IPv6-Adresse erhält, und ermöglicht dennoch die Funktion der sqlservr-Features.
+1. Aktivieren Sie IPv6 im Kernel, indem Sie `ipv6.disable=1` aus der boot-Befehlszeile entfernen. Die Vorgehensweise hierfür hängt von der Linux-Verteilung und dem Bootloader (z. B. GRUB) ab. Wenn Sie IPv6 deaktivieren möchten, können Sie dennoch deaktivieren, indem Sie `net.ipv6.conf.all.disable_ipv6 = 1` in der `sysctl`-Konfiguration festlegen (z.B. `/etc/sysctl.conf`). Dadurch wird weiterhin verhindert, dass der Netzwerkadapter des Systems eine IPv6-Adresse erhält, und ermöglicht dennoch die Funktion der sqlservr-Features.
 
 #### <a name="network-file-system-nfs"></a>Network File System (NFS)
 Wenn Sie **NFS-Remotefreigaben (Network File System)** in der Produktion verwenden, beachten Sie die folgenden Anforderungen für die Unterstützung:

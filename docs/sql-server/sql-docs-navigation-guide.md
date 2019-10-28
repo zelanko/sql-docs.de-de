@@ -1,7 +1,7 @@
 ---
 title: Navigationstipps zur SQL Server-Dokumentation
 description: 'Tipps und Tricks für die Navigation durch die technische Dokumentation von SQL Server: Erläuterungen z. B. zur Hubseite, zum Inhaltsverzeichnis, zur Überschrift sowie zur Verwendung der Brotkrümelnavigation und zur Verwendung des Versionsfilters.'
-ms.date: 07/11/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621720"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904312"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Navigationsleitfaden zur SQL Server-Dokumentation 
 
@@ -93,6 +93,6 @@ Sie können auch allgemeines Feedback zur Dokumentation und Vorschläge unter [h
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Erste Schritte mit der [technischen Dokumentation zu SQL Server](sql-server-technical-documentation.md). 
+- Erste Schritte mit der [technischen Dokumentation zu SQL Server](index.yml).
 - Weitere Informationen zum Übermitteln von Feedback oder zum Erhalten von Hilfe zu SQL Server finden Sie auf der Seite [Hilfe erhalten](sql-server-get-help.md). 
 - Um schnell auf alle Schnellstarts und Tutorials zuzugreifen, besuchen Sie das [SQL Server Education Center](../lp/sql-server/sql-education-center.md).

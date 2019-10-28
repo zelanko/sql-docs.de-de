@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 19a2aab72c1e820e6d07af770a89196662c6fdd1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995883"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783401"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server für Linux mit dem mssql-conf-Tool
 
@@ -510,7 +510,7 @@ Für mssql-conf sind einige weitere Einstellungen verfügbar, mit denen Sie MS D
 | mssql-conf-Einstellung | und Beschreibung |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Konfigurieren von sicheren RPC-Aufrufen für verteilte |Transaktionen
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen |
 | distributedtransaction.maxlogsize | Dateigröße des DTC-Transaktionsprotokolls in MB. Der Standardwert ist 64 MB. |
 | distributedtransaction.memorybuffersize | Puffergröße des Ringspeichers, in dem Ablaufverfolgungen gespeichert werden. Die Größe wird in MB angegeben. Der Standardwert ist 10 MB. |
 | distributedtransaction.servertcpport | Port des MS DTC-RPC-Servers. |

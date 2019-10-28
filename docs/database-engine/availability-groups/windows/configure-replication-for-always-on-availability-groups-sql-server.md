@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251931"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689658"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Konfigurieren der Replikation mit Always On-Verfügbarkeitsgruppen
 
@@ -52,7 +52,7 @@ ms.locfileid: "72251931"
         @security_mode = 1;  
     ```  
   
-3.  Konfigurieren Sie den Remoteverleger. Wenn gespeicherte Prozeduren zur Konfiguration des Verteilers verwendet werden, führen Sie **sp_adddistpublisher**aus. Mit dem Parameter *@security_mode* wird festgelegt, wie die gespeicherte Prozedur zur Verlegerüberprüfung, die von den Replikations-Agents ausgeführt wird, eine Verbindung mit dem aktuellen primären Replikat herstellt. Wenn der Parameter auf 1 festgelegt ist, wird die Windows-Authentifizierung verwendet, um eine Verbindung mit dem aktuellen primären Replikat herzustellen. Wenn er auf 0 festgelegt ist, wird die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung mit den angegebenen Werten für *@login* und *@password* verwendet. Die Anmeldedaten und das Kennwort, die angegeben wurden, müssen bei jedem sekundären Replikat gültig sein, damit die gespeicherte Prozedur zur Überprüfung erfolgreich eine Verbindung mit diesem Replikat herstellen kann.  
+3.  Konfigurieren Sie den Remoteverleger. Wenn gespeicherte Prozeduren zur Konfiguration des Verteilers verwendet werden, führen Sie **sp_adddistpublisher**aus. Mit dem Parameter *\@security_mode* wird festgelegt, wie die gespeicherte Prozedur zur Verlegerüberprüfung, die von den Replikations-Agents ausgeführt wird, eine Verbindung mit dem aktuellen primären Replikat herstellt. Wenn der Parameter auf 1 festgelegt ist, wird die Windows-Authentifizierung verwendet, um eine Verbindung mit dem aktuellen primären Replikat herzustellen. Wenn er auf 0 festgelegt ist, wird die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung mit den angegebenen *\@login*- und *\@password*-Werten verwendet. Die Anmeldedaten und das Kennwort, die angegeben wurden, müssen bei jedem sekundären Replikat gültig sein, damit die gespeicherte Prozedur zur Überprüfung erfolgreich eine Verbindung mit diesem Replikat herstellen kann.  
   
     > [!NOTE]  
     >  Wenn geänderte Replikations-Agents auf einem anderen Computer als dem Verteiler ausgeführt werden, dann ist bei Verwendung der Windows-Authentifizierung zum Herstellen einer Verbindung zum primären Replikat erforderlich, dass die Kerberos-Authentifizierung für die Kommunikation zwischen den Replikathostcomputern konfiguriert wird. Bei Verwendung einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldung zum Herstellen einer Verbindung mit dem aktuellen primären Replikat ist keine Kerberos-Authentifizierung erforderlich.  
@@ -72,7 +72,7 @@ ms.locfileid: "72251931"
   
  **Konfigurieren des Verlegers beim ursprünglichen Verleger**  
   
-1.  Konfigurieren Sie die Remoteverteilung. Wenn gespeicherte Prozeduren zur Konfiguration des Verlegers verwendet werden, führen Sie **sp_adddistributor**aus. Geben Sie den Wert für *@password* an, der verwendet wurde, als **sp_adddistrbutor** beim Verteiler ausgeführt wurde, um die Verteilung einzurichten.  
+1.  Konfigurieren Sie die Remoteverteilung. Wenn gespeicherte Prozeduren zur Konfiguration des Verlegers verwendet werden, führen Sie **sp_adddistributor**aus. Geben Sie den Wert für *\@password* an, der verwendet wurde, als **sp_adddistrbutor** beim Verteiler ausgeführt wurde, um die Verteilung einzurichten.  
   
     ```  
     exec sys.sp_adddistributor  
@@ -122,10 +122,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- Wenn *@installed* gleich 0 ist, muss die Replikation der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installation hinzugefügt werden.  
+ Wenn *\@installed* gleich 0 ist, muss die Replikation der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installation hinzugefügt werden.  
   
 ##  <a name="step4"></a> 4. Konfigurieren des sekundären Replikathosts als Replikationsverleger  
- Ein sekundäres Replikat kann nicht als Replikationsverleger oder Neuverleger fungieren, aber die Replikation kann so konfiguriert werden, dass das sekundäre Replikat nach einem Failover die Rolle übernehmen kann. Konfigurieren Sie beim Verteiler die Verteilung für jeden sekundären Replikathost. Geben Sie die Verteilungsdatenbank und das Arbeitsverzeichnis an, die angegeben wurden, als der ursprüngliche Verleger dem Verteiler hinzugefügt wurde. Wenn Sie gespeicherte Prozeduren zum Konfigurieren der Verteilung verwenden, führen Sie **sp_adddistpublisher** aus, um die Remoteverleger dem Verteiler zuzuordnen. Wenn *@login* und *@password* für den ursprünglichen Verleger verwendet wurden, geben Sie die gleichen Werte für die einzelnen sekundären Replikathosts an, die Sie als Verleger hinzufügen.  
+ Ein sekundäres Replikat kann nicht als Replikationsverleger oder Neuverleger fungieren, aber die Replikation kann so konfiguriert werden, dass das sekundäre Replikat nach einem Failover die Rolle übernehmen kann. Konfigurieren Sie beim Verteiler die Verteilung für jeden sekundären Replikathost. Geben Sie die Verteilungsdatenbank und das Arbeitsverzeichnis an, die angegeben wurden, als der ursprüngliche Verleger dem Verteiler hinzugefügt wurde. Wenn Sie gespeicherte Prozeduren zum Konfigurieren der Verteilung verwenden, führen Sie **sp_adddistpublisher** aus, um die Remoteverleger dem Verteiler zuzuordnen. Wenn *\@login* und *\@password* für den ursprünglichen Verleger verwendet wurden, geben Sie die gleichen Werte für die einzelnen sekundären Replikathosts an, die Sie als Verleger hinzufügen.  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -136,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- Konfigurieren Sie die Verteilung auf jedem sekundären Replikathost. Identifizieren Sie den Verteiler des ursprünglichen Verlegers als Remoteverteiler. Verwenden Sie das Kennwort, das bei der ursprünglichen Ausführung von **sp_adddistributor** auf dem Verteiler verwendet wurde. Wenn gespeicherte Prozeduren zum Konfigurieren der Verteilung verwendet werden, wird der Parameter *@password* von **sp_adddistributor** verwendet, um das Kennwort anzugeben.  
+ Konfigurieren Sie die Verteilung auf jedem sekundären Replikathost. Identifizieren Sie den Verteiler des ursprünglichen Verlegers als Remoteverteiler. Verwenden Sie das Kennwort, das bei der ursprünglichen Ausführung von **sp_adddistributor** auf dem Verteiler verwendet wurde. Wenn gespeicherte Prozeduren zum Konfigurieren der Verteilung verwendet werden, wird der Parameter *\@password* von **sp_adddistributor** verwendet, um das Kennwort anzugeben.  
   
 ```  
 EXEC sp_adddistributor   

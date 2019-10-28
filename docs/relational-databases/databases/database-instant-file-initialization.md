@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ea9ab84a59fd020a7dc5c67b6ad74630e113ee55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037600"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909079"
 ---
 # <a name="database-file-initialization"></a>Datenbankdatei-Initialisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +63,13 @@ So erteilen Sie einem Konto die Berechtigung `Perform volume maintenance tasks` 
 
 1. Starten Sie den SQL Server-Dienst neu.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]
 > Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann diese Berechtigung dem Dienstkonto beim Setup im Rahmen einer Installation erteilt werden. Wenn Sie eine [Installation über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) durchführen, fügen Sie das Argument /SQLSVCINSTANTFILEINIT hinzu oder aktivieren im [Installationsassistenten](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) das Kontrollkästchen *SQL Server-Datenbank-Engine-Dienst Berechtigung zum Ausführen von Volumewartungstasks gewähren*.
 
 > [!NOTE]
 > Für die Versionen von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 über [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 bis hin zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann in der DMV [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) die Spalte *instant_file_initialization_enabled* verwendet werden, um festzustellen, ob die schnelle Dateiinitialisierung aktiviert ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 Wenn *SE_MANAGE_VOLUME_NAME* für das Dienststartkonto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt wurde, wird eine Meldung ähnlich wie die folgende beim Start im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll protokolliert: 
 
 `Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`

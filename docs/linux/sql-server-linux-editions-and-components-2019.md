@@ -1,5 +1,5 @@
 ---
-title: Editionen und unterstützte Funktionen von SQL Server 2017 – Linux
+title: Editionen und unterstützte Funktionen von SQL Server 2019 – Linux
 ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: linux
@@ -21,33 +21,33 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.openlocfilehash: 661d74060d9bb6f7097a5fe50291bdde23e0a591
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: mikeray
+ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
 ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928908"
+ms.locfileid: "72954992"
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2017 unter Linux
+# <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2019 unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieser Artikel bietet detaillierte Informationen zu den Funktionen, die von den verschiedenen Editionen von SQL Server 2017 für Linux unterstützt werden. Informationen zu den Editionen und unterstützten Funktionen von SQL Server für Windows finden Sie unter [SQL Server 2017 – Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
+Dieser Artikel bietet detaillierte Informationen zu den Funktionen, die von den verschiedenen Editionen von SQL Server 2019 für Linux unterstützt werden. Informationen zu den Editionen und unterstützten Funktionen von SQL Server für Windows finden Sie unter [SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
 Die Installationsanforderungen variieren je nach den benötigten Anwendungen. Die verschiedenen Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tragen den individuellen Leistungs-, Laufzeit- und Preisanforderungen von Organisationen und Einzelpersonen Rechnung. Welche [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponenten Sie installieren, hängt auch von den individuellen Anforderungen ab. In den folgenden Abschnitten erfahren Sie, wie Sie die bestmögliche Auswahl unter den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Editionen und Komponenten treffen.  
 
 Die neuesten Versionsanmerkungen und Informationen zu Neuerungen finden Sie über die folgenden Links:
-- [SQL Server 2017 unter Linux: Anmerkungen zu dieser Version](sql-server-linux-release-notes.md)
-- [Neuigkeiten in SQL Server 2017 für Linux](sql-server-linux-whats-new.md)
+- [SQL Server 2019 unter Linux: Anmerkungen zu dieser Version](sql-server-linux-release-notes-2019.md)
+- [Neuigkeiten in SQL Server 2019 für Linux](sql-server-linux-whats-new-2019.md)
 
 Eine Liste der SQL Server-Funktionen, die unter Linux nicht verfügbar sind, finden Sie unter [Nicht unterstützte Funktionen und Services](#Unsupported).
 
 ### <a name="try-sql-server"></a>Testen Sie SQL Server!    
     
-[Herunterladen von SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
+[SQL Server 2019 herunterladen](https://www.microsoft.com/sql-server/sql-server-2019)
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Editionen  
  In der folgenden Tabelle werden die Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beschrieben. 
@@ -66,7 +66,7 @@ Sie können auch nur die Clientkomponenten von [!INCLUDE[ssNoVersion](../include
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Komponenten  
 
-SQL Server 2017 für Linux unterstützt die SQL Server-Datenbank-Engine. In der folgenden Tabelle sind die Features beschrieben, die es in der Datenbank-Engine gibt.   
+SQL Server 2019 für Linux unterstützt die SQL Server-Datenbank-Engine. In der folgenden Tabelle sind die Features beschrieben, die es in der Datenbank-Engine gibt.   
   
 |Serverkomponenten|und Beschreibung|  
 |-----------------------|-----------------|  
@@ -209,17 +209,15 @@ Informationen über die Features von Integration Services (SSIS), die von den ei
 |Planarer und geodätischer Datentyp|Ja|Ja|Ja|Ja| 
 |Erweiterte räumliche Bibliotheken|Ja|Ja|Ja|Ja|   
 |Importieren/Exportieren räumlicher Industriestandard-Datenformate|Ja|Ja|Ja|Ja|   
+
 ## <a name="Unsupported"></a> Nicht unterstützte Features und Dienste
 
-Die folgenden Features und Dienste stehen in SQL Server 2017 für Linux nicht zur Verfügung. Die Unterstützung dieser Features wird im Laufe der Zeit ausgeweitet.
+Die folgenden Features und Dienste stehen in SQL Server 2019 für Linux nicht zur Verfügung. Die Unterstützung dieser Features wird im Laufe der Zeit ausgeweitet.
 
 | Bereich | Nicht unterstütztes Feature oder Dienst |
 |-----|-----|
-| **Datenbank-Engine** | Transaktionsreplikation |
-| &nbsp; | Mergereplikation |
-| &nbsp; | Change Data Capture (siehe SQL Server-Agent) |
+| **Datenbank-Engine** | Mergereplikation |
 | &nbsp; | Stretch Database |
-| &nbsp; | PolyBase |
 | &nbsp; | Verteilte Abfrage mit Drittanbieterverbindungen |
 | &nbsp; | Verbindungsserver für andere Datenquellen als [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
 | &nbsp; | Erweiterte gespeicherte Systemprozeduren (XP_CMDSHELL usw.) |
@@ -228,25 +226,28 @@ Die folgenden Features und Dienste stehen in SQL Server 2017 für Linux nicht zu
 | &nbsp; | Pufferpoolerweiterung |
 | **SQL Server-Agent** |  Subsysteme: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Warnungen |
-| &nbsp; | Protokolllese-Agent |
-| &nbsp; | Change Data Capture (CDC) |
 | &nbsp; | Verwaltete Sicherung |
 | **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
 | **Security** | Erweiterbare Schlüsselverwaltung |
 | &nbsp; | Azure AD-Authentifizierung für Verbindungsserver | 
 | &nbsp; | Azure AD-Authentifizierung für Verfügbarkeitsgruppen | 
 | **Dienste** | SQL Server-Browser |
-| &nbsp; | SQL Server R Services |
+| &nbsp; | SQL Server R Services<sup>1</sup> |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
+
+<sup>1</sup> SQL Server r wird in SQL Server unterstützt, aber SQL Server R Services als separates Paket wird nicht unterstützt.
   
 ## <a name="next-steps"></a>Nächste Schritte
+ [Editionen und unterstützten Funktionen von SQL Server 2017 – Linux](sql-server-linux-editions-and-components-2017.md)  
  [Editionen und unterstützte Funktionen von SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Editionen und unterstützte Funktionen von SQL Server 2017 – Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Editionen und unterstützte Funktionen von SQL Server 2016 – Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [Editionen und unterstützte Funktionen von SQL Server 2014 – Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Installation for SQL Server (Installation für SQLServer 2016)](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [Produktspezifikationen für SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+
+

@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aaa746be1453f874a77af6bbfdf318da0731623
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298273"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807413"
 ---
 # <a name="flexible-file-task"></a>Flexibler Dateitask
 
@@ -35,7 +35,9 @@ Der flexible Dateitask ist eine Komponente des [SQL Server Integration Services 
 Ziehen Sie den flexiblen Dateitask aus der SSIS-Toolbox auf die Designercanvas, um diesen einem Paket hinzuzufügen. Doppelklicken Sie anschließend auf den Task, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie auf **Bearbeiten**, um das Dialogfeld **Flexibler Dateitask-Editor** zu öffnen.
 
 Mit der **Operation**-Eigenschaft wird der auszuführende Dateivorgang angegeben.
-Nur der **Kopiervorgang** wird zurzeit unterstützt.
+Zurzeit werden folgende Vorgänge unterstützt:
+- **Kopiervorgang**
+- **Löschvorgang**
 
 Die folgenden Eigenschaften sind für den **Kopiervorgang** verfügbar.
 
@@ -48,6 +50,12 @@ Die folgenden Eigenschaften sind für den **Kopiervorgang** verfügbar.
 - **DestinationConnection:** Gibt den Zielverbindungs-Manager an.
 - **DestinationFolderPath:** Gibt den Pfad des Zielordners an.
 - **DestinationFileName:** Gibt den Namen der Zieldatei an.
+
+Die folgenden Eigenschaften sind für den **Löschvorgang** verfügbar.
+- **ConnectionType:** Gibt den Typ des Verbindungs-Managers an.
+- **Connection:** Gibt den Verbindungs-Manager an.
+- **FolderPath:** Gibt den Ordnerpfad an.
+- **FileName:** Gibt den Dateinamen an. Wenn diese Angabe leer gelassen wird, wird der Ordner gelöscht. Für Azure Blob Storage wird das Löschen des Ordners nicht unterstützt.
 
 ***Hinweise zur Konfiguration der Dienstprinzipalberechtigung***
 
