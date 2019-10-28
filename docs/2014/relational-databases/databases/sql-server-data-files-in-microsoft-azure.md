@@ -10,19 +10,19 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 445a43d54dc4578f8e93a18d4a13d31912b8494c
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 93a39c50ea81be98e723101d1d1dc076d5569171
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70175697"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797718"
 ---
 # <a name="sql-server-data-files-in-azure"></a>SQL Server-Datendateien in Azure
   SQL Server Datendateien in Azure ermöglicht systemeigene Unterstützung für SQL Server Datenbankdateien, die als Azure-blobspeicher gespeichert sind Sie ermöglicht es Ihnen, eine Datenbank in SQL Server zu erstellen, die lokal oder auf einem virtuellen Computer in Azure ausgeführt wird, wobei ein dedizierter Speicherort für Ihre Daten in Azure BLOB Storage. Diese Erweiterung vereinfacht insbesondere das Verschieben von Datenbanken zwischen Computern mithilfe von Trenn- und Anfügevorgängen. Darüber hinaus bietet Sie einen alternativen Speicherort für Ihre Datenbank-Sicherungsdateien, da Sie eine Wiederherstellung von oder auf Azure Storage ermöglichen. Mit erweiterten Funktionen für das Virtualisieren und Verschieben von Daten sowie für Sicherheit und Verfügbarkeit unterstützt sie verschiedene Hybridlösungen und bietet zusätzlich kostengünstige, einfache Verwaltungsfunktionen für hohe Verfügbarkeit und flexible Skalierung.  
   
  In diesem Thema werden Konzepte und Überlegungen vorgestellt, die für das Speichern von SQL Server Datendateien in Azure Storage Dienst von zentraler Bedeutung sind  
   
- Ein praktisches Beispiel für die Verwendung dieses neuen Features finden Sie im [Tutorial: SQL Server von Datendateien in Azure Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)Dienst.  
+ Ein praktisches Beispiel für die Verwendung dieses neuen Features finden Sie im [Tutorial: SQL Server Datendateien in Azure Storage Dienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  Das folgende Diagramm veranschaulicht, dass Sie mit dieser Erweiterung SQL Server Datenbankdateien als Azure-blobdateien in Azure Storage speichern können, unabhängig davon, wo sich der Server befindet.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "70175697"
 ## <a name="concepts-and-requirements"></a>Konzepte und Anforderungen  
   
 ### <a name="azure-storage-concepts"></a>Azure-Speicherkonzepte  
- Wenn Sie SQL Server Datendateien in Azure verwenden, müssen Sie ein Speicherkonto und einen Container in Azure erstellen. Anschließend müssen Sie SQL Server-Anmeldeinformationen erstellen, die Informationen zur Containerrichtlinie sowie eine SAS (Shared Access Signature, Signatur für gemeinsamen Zugriff) enthalten, die für den Zugriff auf den Container erforderlich ist.  
+ Bei Verwendung von SQL Server-Datendateien in Azure müssen Sie ein Speicherkonto und einen Container in Azure erstellen. Anschließend müssen Sie SQL Server-Anmeldeinformationen erstellen, die Informationen zur Containerrichtlinie sowie eine SAS (Shared Access Signature, Signatur für gemeinsamen Zugriff) enthalten, die für den Zugriff auf den Container erforderlich ist.  
   
  In Azure stellt ein Speicherkonto die höchste Ebene des Namespace für den Zugriff auf BLOB dar. Ein Speicherkonto kann eine unbegrenzte Anzahl von Containern enthalten, solange deren Gesamtgröße 500 TB nicht überschreitet. Aktuelle Informationen zu Speichergrößenbeschränkungen finden Sie unter [Azure-Abonnement und Dienstbeschränkungen, Kontingente und Einschränkungen](https://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/). Ein Container stellt eine Gruppierung eines BLOB-Satzes bereit. Alle BLOBs müssen sich in einem Container befinden. Ein Konto kann eine unbegrenzte Anzahl von Containern enthalten. Analog dazu kann in einem Container auch eine unbegrenzte Anzahl von BLOBs gespeichert werden. Es gibt zwei Arten von BLOBs, die im Azure-Speicher gespeichert werden können: Blockblobs und Seitenblobs. Für die neue Funktion werden Seitenblobs von bis zu 1 TB verwendet, die effizienter sind, wenn Bytebereiche in einer Datei häufig geändert werden. Sie können mit folgendem URL-Format auf BLOBs zugreifen: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
@@ -59,8 +59,7 @@ ms.locfileid: "70175697"
   
  Im folgenden Beispiel wird davon ausgegangen, dass ein Azure Storage Container erstellt wurde und eine Richtlinie mit Lese-, Schreib-, Listen-und Rechte Erstellung erstellt wurde. Beim Erstellen einer Richtlinie für einen Container wird ein SAS-Schlüssel generiert, der gefahrlos unverschlüsselt im Arbeitsspeicher vorgehalten werden kann und von SQL Server für den Zugriff auf die BLOB-Dateien im Container benötigt wird. Ersetzen Sie in den folgenden Codeausschnitt `'your SAS key'` mit einem Eintrag, der dem folgenden ähnelt: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Weitere Informationen finden Sie unter [Erstellen und Verwenden einer Shared Access Signature](https://msdn.microsoft.com/library/azure/jj721951.aspx)  
   
-```  
-  
+```sql
 -- Create a credential  
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
 WITH IDENTITY='SHARED ACCESS SIGNATURE',  
@@ -73,13 +72,13 @@ ON
     FILENAME = 'https://testdb.blob.core.windows.net/data/TestData.mdf' )  
  LOG ON  
 ( NAME = testdb_log,  
-    FILENAME =  'https://testdb.blob.core.windows.net/data/TestLog.ldf')  
-  
+    FILENAME =  'https://testdb.blob.core.windows.net/data/TestLog.ldf')
 ```  
   
- **Wichtiger Hinweis:** Wenn ein Container aktive Verweise auf Datendateien enthält, schlagen Versuche, die entsprechenden SQL Server-Anmeldeinformationen zu löschen, fehl.  
+> [!IMPORTANT]
+> Wenn ein Container aktive Verweise auf Datendateien enthält, schlagen Versuche, die entsprechenden SQL Server-Anmeldeinformationen zu löschen, fehl.  
   
-### <a name="security"></a>Sicherheit  
+### <a name="security"></a>Security  
  Die folgenden Sicherheitsüberlegungen und -anforderungen sollten beim Speichern von SQL Server-Datendateien im Azure-Speicher berücksichtigt werden.  
   
 -   Beim Erstellen eines Containers für den Azure-BLOB-Speicherdienst sollten Sie den Zugriff auf „Privat“ festlegen. Wenn Sie den Zugriff auf „Privat“ festlegen, können die Container- und BLOB-Daten nur vom Besitzer des Azure-Kontos gelesen werden.  
@@ -97,7 +96,7 @@ ON
   
 ###  <a name="bkmk_Limitations"></a> Einschränkungen  
   
--   In der aktuellen Version dieser Funktion wird das speichern `FileStream` von Daten in Azure Storage nicht unterstützt. Sie können Daten `Filestream` in einer Azure Storage integrierten lokalen Datenbank speichern, aber Sie können FILESTREAM-Daten nicht zwischen Computern mithilfe Azure Storage verschieben. Bei `FileStream`-Daten wird empfohlen, die herkömmlichen Verfahren zu verwenden, die bisher zum Verschieben von Dateien (MDF, LDF) in Verbindung mit Filestream-Daten zwischen verschiedenen Computern eingesetzt werden.  
+-   In der aktuellen Version dieser Funktion wird das Speichern von `FileStream` Daten in Azure Storage nicht unterstützt. Sie können `Filestream` Daten in einer Azure Storage integrierten lokalen Datenbank speichern, aber Sie können FILESTREAM-Daten nicht zwischen Computern mithilfe Azure Storage verschieben. Bei `FileStream`-Daten wird empfohlen, die herkömmlichen Verfahren zu verwenden, die bisher zum Verschieben von Dateien (MDF, LDF) in Verbindung mit Filestream-Daten zwischen verschiedenen Computern eingesetzt werden.  
   
 -   Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode **5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“** .  
   
@@ -107,9 +106,9 @@ ON
   
 -   Jedes BLOB kann eine maximale Größe von 1 TB aufweisen. Auf diese Weise wird für die Datenbankdaten- und Protokolldateien, die im Azure-Speicher gespeichert werden können, eine Obergrenze festgelegt.  
   
--   Es ist nicht möglich, In-Memory OLTP-Daten mithilfe des Features „SQL Server-Datendateien in Azure“ in einem Azure-BLOB zu speichern. Dies liegt daran, dass in-Memory-OLTP eine `FileStream` Abhängigkeit von aufweist und in der aktuellen Version dieses Features das `FileStream` Speichern von Daten in Azure Storage nicht unterstützt wird.  
+-   Es ist nicht möglich, In-Memory OLTP-Daten mithilfe des Features „SQL Server-Datendateien in Azure“ in einem Azure-BLOB zu speichern. Dies liegt daran, dass in-Memory-OLTP eine Abhängigkeit von `FileStream` aufweist und in der aktuellen Version dieses Features das Speichern von `FileStream` Daten in Azure Storage nicht unterstützt wird.  
   
--   Wenn Sie SQL Server Datendateien in Azure verwenden, führt SQL Server alle URL-oder Datei Pfad Vergleiche mithilfe der in der `master` -Datenbank festgelegten Sortierung aus.  
+-   Wenn Sie SQL Server Datendateien in Azure verwenden, führt SQL Server alle URL-oder Datei Pfad Vergleiche mithilfe der in der `master`-Datenbank festgelegten Sortierung aus.  
   
 -   `AlwaysOn Availability Groups` werden unterstützt, solange der primären Datenbank keine neuen Datenbankdateien hinzugefügt werden. Wenn für einen Datenbankvorgang in der primären Datenbank eine neue Datei erstellt werden muss, deaktivieren Sie zuerst AlwaysOn-Verfügbarkeitsgruppen im sekundären Knoten. Führen Sie anschließend den Datenbankvorgang in der primären Datenbank aus, und sichern Sie die Datenbank im primären Knoten. Stellen Sie anschließend die Datenbank auf dem sekundären Knoten wieder her, und aktivieren Sie die AlwaysOn-Verfügbarkeitsgruppen im sekundären Knoten. Beachten Sie, dass AlwaysOn-Failoverclusterinstanzen nicht unterstützt werden, wenn Sie das Feature SQL Server Datendateien in Azure verwenden.  
   
@@ -122,10 +121,10 @@ ON
  In SQL Server 2014 können Sie PowerShell-Cmdlets verwenden, um SQL Server Datendateien in Azure BLOB Storage Dienst zu speichern, indem Sie anstelle eines Dateipfads auf einen BLOB Storage URL-Pfad verweisen. Sie können mit folgendem URL-Format auf BLOBs zugreifen: `: http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Unterstützung von SQL Server-Objekten und -Leistungsindikatoren  
- In SQL Server 2014 wurde ein neues SQL Server-Objekt eingeführt, das mit SQL Server-Datendateien im Azure-Speicher verwendet werden kann. Das neue SQL Server Objekt wird als [SQL Server, HTTP_STORAGE_OBJECT,](../performance-monitor/sql-server-http-storage-object.md) aufgerufen und kann vom System Monitor zum Überwachen der Aktivitäten verwendet werden, wenn SQL Server mit Azure Storage ausgeführt wird.  
+ In SQL Server 2014 wurde ein neues SQL Server-Objekt eingeführt, das mit SQL Server-Datendateien im Azure-Speicher verwendet werden kann. Das neue SQL Server-Objekt wird als [SQL Server, HTTP_STORAGE_OBJECT](../performance-monitor/sql-server-http-storage-object.md) aufgerufen und kann vom Systemmonitor verwendet werden, um Aktivitäten bei der Ausführung von SQL Server mit Azure Storage zu überwachen.  
   
 ### <a name="sql-server-management-studio-support"></a>Unterstützung von SQL Server Management Studio  
- SQL Server Management Studio unterstützt die Verwendung der Funktion in mehreren Dialogfeldern. Beispielsweise können Sie den URL-Pfad des Speichercontainers, wie `https://teststorageaccnt.blob.core.windows.net/testcontainer/`, als **Pfad** in mehreren Dialogfeldern eingeben, z.B. **Neue Datenbank**, **Datenbank anfügen** und **Datenbank wiederherstellen**. Weitere Informationen finden Sie unter [Tutorial: SQL Server von Datendateien in Azure Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)Dienst.  
+ SQL Server Management Studio unterstützt die Verwendung der Funktion in mehreren Dialogfeldern. Beispielsweise können Sie den URL-Pfad des Speichercontainers, wie `https://teststorageaccnt.blob.core.windows.net/testcontainer/`, als **Pfad** in mehreren Dialogfeldern eingeben, z.B. **Neue Datenbank**, **Datenbank anfügen** und **Datenbank wiederherstellen**. Weitere Informationen finden Sie im [Tutorial: SQL Server Datendateien in Azure Storage Dienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ### <a name="sql-server-management-objects-support"></a>Unterstützung von SQL Server Management Objects  
  Bei Verwendung von SQL Server-Datendateien in Azure werden alle SQL Server Management Objects (SMO) unterstützt. Wenn ein SMO-Objekt einen Dateipfad erfordert, verwenden Sie das BLOB-URL-Format anstelle eines lokalen Dateipfads, beispielsweise `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Weitere Informationen zu SQL Server Management Objects (SMO) finden Sie unter [SQL Server Management Objects &#40;SMO&#41;-Programmierungshandbuch](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) in der SQL Server-Onlinedokumentation.  
@@ -146,10 +145,10 @@ ON
     Lösung: Dieser Fehler kann angezeigt werden, wenn Sie versuchen, Anmeldeinformationen zu löschen, die noch von einer aktiven Datenbankdatei im Azure-Speicher verwendet werden. Um die Anmeldeinformationen zu löschen, müssen Sie zuerst das zugeordnete BLOB löschen, das diese Datenbankdatei enthält. Um ein BLOB zu löschen, das über eine aktive Leasedauer verfügt, müssen Sie zunächst die Leasedauer unterbrechen.  
   
 -   *Für den Container wurde nicht ordnungsgemäß eine SAS (Shared Access Signature) erstellt.*    
-     Lösung: Stellen Sie sicher, dass eine SAS ordnungsgemäß für den Container erstellt wurde. Lesen Sie die Hinweise in Lektion 2 im [Tutorial: SQL Server von Datendateien in Azure Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)Dienst.  
+     Lösung: Stellen Sie sicher, dass eine SAS ordnungsgemäß für den Container erstellt wurde. Lesen Sie die Hinweise in Lektion 2 im [Tutorial: SQL Server Datendateien in Azure Storage Dienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 -   *SQL Server-Anmeldeinformationen wurden nicht ordnungsgemäß erstellt.*    
-    Lösung: Vergewissern Sie sich, dass Sie für das Feld **Identität** die Option „Shared Access Signature“ verwendet und ordnungsgemäß einen geheimen Schlüssel erstellt haben. Lesen Sie die Hinweise in Lektion 3 im [Tutorial: SQL Server von Datendateien in Azure Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)Dienst.  
+    Lösung: Vergewissern Sie sich, dass Sie für das Feld **Identität** die Option „Shared Access Signature“ verwendet und ordnungsgemäß einen geheimen Schlüssel erstellt haben. Lesen Sie die Hinweise in Lektion 3 im [Tutorial: SQL Server Datendateien in Azure Storage Dienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  **Fehler bei BLOB-Leasedauer:**  
   
@@ -158,10 +157,10 @@ ON
  **Datenbankfehler**  
   
 1.  *Fehler beim Erstellen einer Datenbank*   
-    Lösung: Lesen Sie die Hinweise in Lektion 4 im [Tutorial: SQL Server von Datendateien in Azure Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)Dienst.  
+    Lösung: Lesen Sie die Hinweise in Lektion 4 im [Tutorial: SQL Server Datendateien in Azure Storage Dienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 2.  *Fehler beim Ausführen der ALTER-Anweisung*   
-    Lösung: Stellen Sie sicher, dass die ALTER DATABASE-Anweisung ausgeführt wird, während die Datenbank online ist. Wenn Sie die Datendateien in den Azure-Speicher kopieren, erstellen Sie immer ein Seitenblob und kein Blockblob. Andernfalls erzeugt ALTER DATABASE einen Fehler. Lesen Sie die Hinweise in Lektion 7 im [Tutorial: SQL Server von Datendateien in Azure Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)Dienst.  
+    Lösung: Stellen Sie sicher, dass die ALTER DATABASE-Anweisung ausgeführt wird, während die Datenbank online ist. Wenn Sie die Datendateien in den Azure-Speicher kopieren, erstellen Sie immer ein Seitenblob und kein Blockblob. Andernfalls erzeugt ALTER DATABASE einen Fehler. Lesen Sie die Hinweise in Lektion 7 im [Tutorial: SQL Server Datendateien in Azure Storage Dienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 3.  *Fehlercode 5120: Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“*    
     Lösung: Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode *5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“* .  
@@ -178,5 +177,3 @@ ON
   
 ## <a name="see-also"></a>Siehe auch  
  [Tutorial: SQL Server von Datendateien in Azure Storage Dienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
-  
