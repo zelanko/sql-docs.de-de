@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769352"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907288"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Problembehandlung: Suchen von Fehlern bei SQL Server-Transaktionsreplikationen 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ Bei diesem Vorgang wird die Veröffentlichung erstellt und in den Zustand *Wird 
 1. Transaktionen treten bei Objekten auf, die repliziert werden. Diese werden im Transaktionsprotokoll als „Für Replikation“ gekennzeichnet. 
 2. Der Protokolllese-Agent durchsucht das Transaktionsprotokoll nach Transaktionen, die als „Für Replikation“ gekennzeichnet sind. Anschließend werden diese Transaktionen in der Verteilungsdatenbank gespeichert. 
 3. Der Verteilungs-Agent durchsucht die Verteilungsdatenbank mithilfe des Leserthreads. Anschließend stellt dieser Agent mithilfe des Schreibthreads eine Verbindung zum Abonnenten her, um die Änderung auf diesen anzuwenden.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 In jedem Schritt dieses Vorgangs können Fehler auftreten. Diese zu finden kann der schwierigste Aspekt bei der Behandlung von Synchronisierungsproblemen sein. Dieser Vorgang wird durch die Verwendung des Replikationsmonitors jedoch vereinfacht. 
 

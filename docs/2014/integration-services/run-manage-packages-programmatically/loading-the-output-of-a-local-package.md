@@ -16,36 +16,36 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 57b318ac8062203bd11a0717a4c8077bca9880d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 199a50885e9c01a7027d56f223c7f2248f087998
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766947"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988220"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Laden der Ausgabe eines lokalen Pakets
-  Clientanwendungen können die Ausgabe von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen lesen, wenn diese mithilfe von [!INCLUDE[vstecado](../../includes/vstecado-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielen oder mithilfe der Klassen im **System.IO**-Namespace in Flatfilezielen gespeichert wird. Eine Clientanwendung kann jedoch die Ausgabe eines Pakets auch direkt aus dem Arbeitsspeicher lesen, ohne dass hierfür ein Zwischenschritt zur persistenten Speicherung der Daten erforderlich ist. Der Schlüssel für diese Lösung ist die `Microsoft.SqlServer.Dts.DtsClient` Namespace, der spezielle Implementierungen der enthält die `IDbConnection`, `IDbCommand`, und **IDbDataParameter** Schnittstellen aus der **"System.Data"** Namespace. Die Assembly „Microsoft.SqlServer.Dts.DtsClient.dll“ wird standardmäßig im Verzeichnis **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** installiert.  
+  Clientanwendungen können die Ausgabe von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen lesen, wenn diese mithilfe von [!INCLUDE[vstecado](../../includes/vstecado-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielen oder mithilfe der Klassen im **System.IO**-Namespace in Flatfilezielen gespeichert wird. Eine Clientanwendung kann jedoch die Ausgabe eines Pakets auch direkt aus dem Arbeitsspeicher lesen, ohne dass hierfür ein Zwischenschritt zur persistenten Speicherung der Daten erforderlich ist. Der Schlüssel zu dieser Lösung ist der `Microsoft.SqlServer.Dts.DtsClient`-Namespace, der spezialisierte Implementierungen der Schnittstellen "`IDbConnection`", "`IDbCommand`" und " **IDbDataParameter** " aus dem **System. Data** -Namespace enthält. Die Assembly „Microsoft.SqlServer.Dts.DtsClient.dll“ wird standardmäßig im Verzeichnis **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** installiert.  
   
 > [!NOTE]  
 >  Für die in diesem Artikel beschriebene Vorgehensweise müssen die DelayValidation-Eigenschaft des Datenflusstasks und alle übergeordneten Objekte auf den Standardwert **FALSE** festgelegt werden.  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>Description  
  In dieser Prozedur wird veranschaulicht, wie eine Clientanwendung in verwaltetem Code entwickelt wird, die die Ausgabe eines Pakets mit einem DataReader-Ziel direkt aus dem Arbeitsspeicher lädt. Die hier zusammengefassten Schritte werden in dem folgenden Codebeispiel veranschaulicht.  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>So laden Sie Datenpaketausgabe in eine Clientanwendung  
   
 1.  Konfigurieren Sie in dem Paket ein DataReader-Ziel so, dass die Ausgabe empfangen wird, die in die Clientanwendung gelesen werden soll. Geben Sie dem DataReader-Ziel einen aussagekräftigen Namen, da Sie diesen Namen später in der Clientanwendung verwenden werden. Notieren Sie sich den Namen des DataReader-Ziels.  
   
-2.  Legen Sie in dem Entwicklungsprojekt einen Verweis auf die `Microsoft.SqlServer.Dts.DtsClient` Namespace fest, indem Sie die Assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. Diese Assembly wird standardmäßig im Verzeichnis **C:\Programme\Microsoft SQL Server\100\DTS\Binn** installiert. Importieren Sie den Namespace mithilfe der C#-Anweisung `Using` oder der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports`-Anweisung in den Code.  
+2.  Legen Sie im Entwicklungsprojekt einen Verweis auf den `Microsoft.SqlServer.Dts.DtsClient`-Namespace fest, indem Sie die Assembly **Microsoft. SqlServer. DTS. DtsClient. dll**suchen. Diese Assembly wird standardmäßig im Verzeichnis **C:\Programme\Microsoft SQL Server\100\DTS\Binn** installiert. Importieren Sie den Namespace mithilfe der C#-Anweisung `Using` oder der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports`-Anweisung in den Code.  
   
-3.  Erstellen Sie in Ihrem Code ein Objekt des Typs `DtsClient.DtsConnection` mit einer Verbindungszeichenfolge, die die Befehlszeilenparameter enthält **dtexec.exe** zum Ausführen des Pakets. Weitere Informationen finden Sie unter [dtexec Utility](../packages/dtexec-utility.md). Öffnen Sie dann die Verbindung mit dieser Verbindungszeichenfolge. Sie können auch das **dtexecui**-Hilfsprogramm verwenden, um die erforderliche Verbindungszeichenfolge visuell zu erstellen.  
+3.  Erstellen Sie in Ihrem Code ein Objekt vom Typ `DtsClient.DtsConnection` mit einer Verbindungs Zeichenfolge, die die Befehlszeilenparameter enthält, die **dtexec. exe** zum Ausführen des Pakets benötigt. Weitere Informationen finden Sie unter [dtexec Utility](../packages/dtexec-utility.md). Öffnen Sie dann die Verbindung mit dieser Verbindungszeichenfolge. Sie können auch das **dtexecui**-Hilfsprogramm verwenden, um die erforderliche Verbindungszeichenfolge visuell zu erstellen.  
   
     > [!NOTE]  
     >  Im Beispielcode wird das Laden des Pakets aus dem Dateisystem mithilfe der `/FILE <path and filename>`-Syntax veranschaulicht. Sie können das Paket jedoch auch aus der MSDB-Datenbank mithilfe der `/SQL <package name>`-Syntax oder aus dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket mithilfe der `/DTS \<folder name>\<package name>`-Syntax laden.  
   
 4.  Erstellen Sie ein Objekt vom Typ `DtsClient.DtsCommand`, das die zuvor erstellte `DtsConnection` verwendet und die `CommandText`-Eigenschaft auf den Namen des DataReader-Ziels in dem Paket festlegt. Rufen Sie dann die `ExecuteReader`-Methode des Befehlsobjekts auf, um die Paketergebnisse in ein neues DataReader-Ziel zu laden.  
   
-5.  Optional können Sie die Ausgabe des Pakets indirekt parametrisieren, indem Sie die Auflistung von `DtsDataParameter`-Objekten im `DtsCommand`-Objekt verwenden, um Werte an die in dem Paket definierten Variablen zu übergeben. Innerhalb des Pakets können Sie diese Variablen als Abfrageparameter oder in Ausdrücken verwenden, um die an das DataReader-Ziel zurückgegebenen Ergebnisse zu beeinflussen. Sie müssen diese Variablen definieren, in das Paket in der **DtsClient** Namespace, bevor Sie sie verwenden können die `DtsDataParameter` Objekt von einer Clientanwendung. (Möglicherweise müssen Sie im Fenster **Variablen** auf **Variablenspalten auswählen** auf der Symbolleiste klicken, um die Spalte **Namespace** anzuzeigen.) In Ihrem Client-Code, beim Hinzufügen einer `DtsDataParameter` auf die `Parameters` Auflistung von der `DtsCommand`, lassen Sie auf den DtsClient-Namespaceverweis aus dem Variablennamen. Zum Beispiel:  
+5.  Optional können Sie die Ausgabe des Pakets indirekt parametrisieren, indem Sie die Auflistung von `DtsDataParameter`-Objekten im `DtsCommand`-Objekt verwenden, um Werte an die in dem Paket definierten Variablen zu übergeben. Innerhalb des Pakets können Sie diese Variablen als Abfrageparameter oder in Ausdrücken verwenden, um die an das DataReader-Ziel zurückgegebenen Ergebnisse zu beeinflussen. Sie müssen diese Variablen im Paket im **DtsClient** -Namespace definieren, bevor Sie Sie mit dem `DtsDataParameter`-Objekt aus einer Client Anwendung verwenden können. (Möglicherweise müssen Sie im Fenster **Variablen** auf die Symbolleisten Schaltfläche **Variablen Spalten auswählen** klicken, um die Spalte **Namespace** anzuzeigen.) Wenn Sie in Ihrem Client Code der `Parameters` Auflistung der `DtsCommand`eine `DtsDataParameter` hinzufügen, lassen Sie den DtsClient-Namespace Verweis aus dem Variablennamen Weg. Beispiel:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -63,7 +63,7 @@ ms.locfileid: "62766947"
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Paket ausgeführt, das einen einzelnen Aggregatwert berechnet und den Wert in einem DataReader-Ziel speichert. Dieser Wert wird dann vom DataReader gelesen und in einem Textfeld in einem Windows Form angezeigt.  
   
- Beim Laden der Ausgabe eines Pakets in einer Clientanwendung müssen keine Parameter verwendet werden. Wenn Sie nicht, um einen Parameter zu verwenden möchten, können Sie die Verwendung von Variablen im weglassen der **DtsClient** -Namespace und den Code weglassen, die verwendet die `DtsDataParameter` Objekt.  
+ Beim Laden der Ausgabe eines Pakets in einer Clientanwendung müssen keine Parameter verwendet werden. Wenn Sie keinen Parameter verwenden möchten, können Sie die Verwendung der Variablen im **DtsClient** -Namespace weglassen und den Code weglassen, der das `DtsDataParameter` Objekt verwendet.  
   
 #### <a name="to-create-the-test-package"></a>So erstellen Sie das Testpaket  
   
@@ -81,9 +81,9 @@ ms.locfileid: "62766947"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?  
     ```  
   
-6.  Klicken Sie auf `Parameters` und aktivieren Sie in der **Abfrageparameter festlegen** Dialogfeld ordnen die einzelnen Eingabeparameter in der Abfrage, Parameter0, der dtsclient:: Country-Variablen.  
+6.  Klicken Sie auf `Parameters`, und ordnen Sie im Dialogfeld **Abfrage Parameter festlegen** den einzelnen Eingabeparameter in der Abfrage, Parameter0, der DtsClient:: Country-Variablen zu.  
   
-7.  Fügen Sie dem Datenfluss eine Transformation für das Aggregieren hinzu, und verbinden Sie die Ausgabe der OLE DB-Quelle mit der Transformation. Öffnen Sie den Transformations-Editor für Aggregieren, und konfigurieren Sie diesen so, dass alle Eingabespalten (*) gezählt werden und der Aggregatwert mit dem Alias "CustomerCount" ausgegeben wird.  
+7.  Fügen Sie dem Datenfluss eine Transformation für das Aggregieren hinzu, und verbinden Sie die Ausgabe der OLE DB-Quelle mit der Transformation. Öffnen Sie den Transformations-Editor für Aggregieren, und konfigurieren Sie ihn so, dass er einen "count all"-Vorgang für alle Eingabe Spalten (*) ausführt und den aggregierten Wert mit dem Alias CustomerCount ausgibt.  
   
 8.  Fügen Sie dem Datenfluss ein DatenReader-Ziel hinzu, und verbinden Sie die Ausgabe der Transformation für das Aggregieren mit dem DataReader-Ziel. Im Beispielcode wird "DataReaderDest" als Name des DataReader verwendet. Wählen Sie die einzelne verfügbare Eingabespalte, CustomerCount, für das Ziel aus.  
   
@@ -93,15 +93,15 @@ ms.locfileid: "62766947"
   
 1.  Erstellen Sie eine neue Windows Forms-Anwendung.  
   
-2.  Hinzufügen eines Verweises auf die `Microsoft.SqlServer.Dts.DtsClient` Namespace durch Navigieren zu der Assembly mit demselben Namen in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
+2.  Fügen Sie einen Verweis auf den `Microsoft.SqlServer.Dts.DtsClient`-Namespace hinzu, indem Sie die Assembly mit demselben Namen in **%ProgramFiles%\Microsoft SQL server\100\dz\binn**suchen.  
   
 3.  Kopieren Sie den folgenden Beispielcode, und fügen Sie ihn in das Codemodul für das Formular ein.  
   
-4.  Ändern Sie den Wert, der die `dtexecArgs` -Variablen so, dass diese enthält die erforderlichen Befehlszeilenparameter **dtexec.exe** zum Ausführen des Pakets. Im Beispielcode wird das Paket aus dem Dateisystem geladen.  
+4.  Ändern Sie den Wert der `dtexecArgs`-Variablen nach Bedarf, damit Sie die Befehlszeilenparameter enthält, die **dtexec. exe** zum Ausführen des Pakets benötigt. Im Beispielcode wird das Paket aus dem Dateisystem geladen.  
   
-5.  Ändern Sie den Wert, der die `dataReaderName` -Variablen so, dass diese enthält des Namens des DataReader-Ziels im Paket.  
+5.  Ändern Sie den Wert der `dataReaderName`-Variablen nach Bedarf, damit Sie den Namen des DataReader-Ziels im Paket enthält.  
   
-6.  Setzen Sie eine Schaltfläche und ein Textfeld in das Formular. Der Beispielcode verwendet `btnRun` als Name der Schaltfläche und `txtResults` als Name des Textfelds.  
+6.  Setzen Sie eine Schaltfläche und ein Textfeld in das Formular. Im Beispielcode wird `btnRun` als Name der Schaltfläche verwendet und als Name des Textfelds `txtResults`.  
   
 7.  Führen Sie die Anwendung aus, und klicken Sie auf die Schaltfläche. Nach einer kurzen Pause während der Ausführung des Pakets sollte der von dem Paket berechnete Aggregatwert (die Anzahl von Kunden in Kanada) im Textfeld auf dem Formular angezeigt werden.  
   
@@ -293,9 +293,9 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services Symbol (klein)")immer auf**dem neuesten Stand bleiben mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Programmgesteuertes Laden und Ausführen eines lokalen Pakets](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Programmgesteuertes Laden und Ausführen eines Remotepakets](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
