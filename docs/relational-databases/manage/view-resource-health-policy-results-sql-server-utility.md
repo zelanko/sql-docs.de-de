@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42832ef91f33bbe4e66ad82bc3498106502e7ecb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e10d2bcd280e1c353fb30613a6d65b715caf82e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024450"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907528"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Anzeigen der Ergebnisse zu Ressourcenintegritätsrichtlinien (SQL Server-Hilfsprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,15 +27,13 @@ ms.locfileid: "68024450"
   
 1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) auf **Ansicht**und dann auf **Hilfsprogramm-Explorer** , um den Navigationsbereich des Hilfsprogramm-Explorers anzuzeigen. Um den Inhaltsbereich anzuzeigen, klicken Sie auf **Ansicht**und dann auf **Inhalt des Hilfsprogramm-Explorers**.  
   
-2.  Klicken Sie im Navigationsbereich auf ![](../../relational-databases/manage/media/connect-to-utility.gif "Mit_Hilfsprogramm_verbinden")**Mit Hilfsprogramm verbinden**. Wenn Sie keinen Steuerungspunkt für das Hilfsprogramm erstellt bzw. keine Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Datenschichtanwendungen im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm registriert haben, erhalten Sie weitere Informationen unter [SQL Server-Hilfsprogramm – Features und Aufgaben](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+2.  Klicken Sie im Navigationsbereich auf ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Mit Hilfsprogramm verbinden**. Wenn Sie keinen Steuerungspunkt für das Hilfsprogramm erstellt bzw. keine Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Datenschichtanwendungen im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm registriert haben, erhalten Sie weitere Informationen unter [SQL Server-Hilfsprogramm – Features und Aufgaben](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 3.  Klicken Sie auf den UCP-Knoten, um Zusammenfassungsdaten für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datenschichtanwendungen anzuzeigen (zum Aktualisieren mit der rechten Maustaste klicken). Dashboarddaten werden im Inhaltsbereich angezeigt.  
   
 4.  Klicken Sie auf den Knoten **Verwaltete Instanzen** , um Listenansichtsdaten für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzuzeigen (klicken Sie zum Aktualisieren mit der rechten Maustaste). Listenansichtsdaten werden im Inhaltsbereich angezeigt.  
   
 5.  Klicken Sie auf den Knoten **Bereitgestellte Datenebenenanwendungen** , um Listenansichtsdaten für Datenebenenanwendungen anzuzeigen (klicken Sie zum Aktualisieren mit der rechten Maustaste). Listenansichtsdaten werden im Inhaltsbereich angezeigt.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

@@ -13,12 +13,12 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d144129f296a1e5c131bdc90364e3e2a969d3bdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54fe24ab5a9e07e5cc39e32462e5d412bb8f163b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048639"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907021"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68048639"
 ## <a name="multilinestring-instances"></a>MultiLineString-Instanzen  
  Die nachfolgende Abbildung enthält Beispiele für **MultiLineString** -Instanzen.  
   
- ![Beispiele für MultiLineString-Geometrieinstanzen](../../relational-databases/spatial/media/multilinestring.gif "Examples of geometry MultiLineString instances")  
+ ![Beispiele für MultiLineString-Geometrieinstanzen](../../relational-databases/spatial/media/multilinestring.gif "Beispiele für MultiLineString-Geometrieinstanzen")  
   
  Folgendes wird dargestellt:  
   
@@ -65,8 +65,6 @@ Damit eine **MultiLineString** -Instanz gültig ist, muss sie die folgenden Krit
 1.  Alle Instanzen, die die **MultiLineString** -Instanz beinhalten, müssen gültige **LineString** -Instanzen sein.  
   
 2.  Zwei **LineString** -Instanzen, die die **MultiLineString** -Instanz beinhalten, dürfen sich nicht  im Verlauf eines Intervalls überlappen. Die **LineString** -Instanzen können sich nur mit einer endlichen Anzahl von Punkten überschneiden oder sich selbst oder andere **LineString** -Instanzen berühren.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Im folgenden Beispiel werden drei gültige **MultiLineString** -Instanzen und eine nicht gültige **MultiLineString** -Instanz gezeigt.  
   

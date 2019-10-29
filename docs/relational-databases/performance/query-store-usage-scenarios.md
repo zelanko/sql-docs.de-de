@@ -13,12 +13,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a33a45be38ad49b2ecef68fe64be21b94c08f85
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123212"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909819"
 ---
 # <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "70123212"
   
 -   Setzen Sie die Verwendung des im Verlauf vorhergehenden Plans durch, wenn der sich als besser erwiesen hat. Verwenden Sie die Schaltfläche **Plan erzwingen** in **Zurückgestellte Abfragen**, um die Verwendung des ausgewählten Plans für die Abfrage durchzusetzen.  
   
- ![Abfrage-Store-Nutzung-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
+ ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
  Eine detaillierte Beschreibung des Szenarios finden Sie im Blog [Query Store: A flight data recorder for your database (Abfragespeicher: Ein Flugdatenschreiber für Ihre Datenbank)](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "70123212"
   
  Die Untersuchung lässt sich am einfachsten durch Öffnen von **Abfragen mit dem höchsten Ressourcenverbrauch** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]beginnen. Die Benutzeroberfläche ist in drei Bereiche unterteilt: Ein Histogramm, das die Abfragen mit dem höchsten Ressourcenverbrauch darstellt (links), eine Planzusammenfassung für die ausgewählte Abfrage (rechts) und einen visuellen Abfrageplan für den ausgewählten Plan (unten). Klicken Sie auf die Schaltfläche **Konfigurieren** , um die Anzahl der zu analysierenden Abfragen und das untersuchte Zeitintervall zu steuern. Darüber hinaus können Sie unter verschiedenen Dimensionen des Ressourcenverbrauchs (Dauer, CPU, Arbeitsspeicher, E/A, Anzahl der Ausführungen) und der Baseline (Mittel, Min, Max, Summe, Standardabweichung) wählen.  
   
- ![Abfrage-Store-Nutzung-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
+ ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
  Betrachten Sie die Planzusammenfassung auf der rechten Seite, um den Ausführungsverlauf zu analysieren und sich über die verschiedenen Pläne und ihre Laufzeitstatistik zu informieren. Verwenden Sie den unteren Bereich, um die verschiedenen Pläne zu untersuchen oder sie nebeneinander visuell zu vergleichen (mithilfe der Schaltfläche „Vergleichen“).  
   
@@ -66,8 +66,6 @@ Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet 
 4.  Überprüfen Sie, ob die von der Abfrage verwendeten Indizes defragmentiert sind.  
   
 5.  Ziehen Sie bei aufwändigen Abfragen eine Neuerstellung in Erwägung. Nutzen Sie beispielsweise die Vorteile der Abfrageparametrisierung, und verringern Sie den Einsatz von dynamischem SQL. Implementieren Sie nach dem Lesen der Daten die optimale Logik (führen Sie Datenfilterung auf der Datenbankseite statt auf der Anwendungsseite aus).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ab-testing"></a>A/B-Tests  
  Verwenden Sie den Abfragespeicher, um die Arbeitsleistung vor und nach der beabsichtigten Änderung der Anwendung zu vergleichen. Die folgende Liste enthält eine Reihe von Beispielen, für die der Abfragespeicher eingesetzt werden kann, um den Einfluss der Umgebungs- oder Anwendungsänderung auf die Arbeitsleistung zu beurteilen:  
@@ -100,11 +98,11 @@ Wenden Sie für jedes dieser Szenarien den folgenden Arbeitsablauf an:
   
 In der folgenden Abbildung ist die Abfragespeicheranalyse (Schritt 4) im Fall eines fehlenden, nicht erstellten Index dargestellt. Öffnen Sie den **Bereich Abfragen mit dem höchsten Ressourcenverbrauch** /Planzusammenfassung, um diese Ansicht für die Abfrage zu erstellen, auf die sich die Indexerstellung auswirken soll:  
   
-![Abfrage-Store-Nutzung-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
+![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
 Darüber hinaus können Sie Pläne vor und nach der Indexerstellung vergleichen, indem Sie sie nebeneinander anzeigen. (Symbolleistenoption „Pläne für die ausgewählte Abfrage in einem separaten Fenster vergleichen“, die auf der Symbolleiste mit einem roten Quadrat gekennzeichnet ist.)  
   
-![Abfrage-Store-Nutzung-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
+![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
 Der Plan (plan_id = 1, oben) enthält vor der Indexerstellung einen Hinweis auf einen fehlenden Index, und Sie können durch die Untersuchung bestätigen, dass „Clustered Index Scan“ der Operator mit dem höchsten Ressourcenverbrauch in der Abfrage war (rotes Rechteck).  
   
@@ -117,7 +115,7 @@ Vor [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]waren Benutzer dem Risiko e
   
 Seit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sind alle Änderungen des Abfrageoptimierers an den neuesten [Datenbank-Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) gebunden, sodass Pläne nicht sofort im Moment des Upgrades geändert werden, sondern erst, wenn ein Benutzer `COMPATIBILITY_LEVEL` auf die neuste Version aktualisiert. Diese Möglichkeit gibt Ihnen in Kombination mit dem Abfragespeicher ein großes Maß an Kontrolle über die Abfrageleistung im Upgradeprozess. Der empfohlene Upgradeworkflow ist in der folgenden Abbildung dargestellt:  
   
-![Abfrage-Store-Nutzung-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
 1.  Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ohne den Datenbankkompatibilitätsgrad zu ändern Dadurch werden zwar nicht die neuesten Änderungen des Abfrageoptimierers bereitgestellt, aber es sind neuere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen verfügbar, z.B. der Abfragespeicher.  
   
@@ -141,7 +139,7 @@ Einige Arbeitsauslastungen weisen keine dominierenden Abfragen auf, die sich opt
   
  Die Ansicht **Abfragen mit dem höchstem Ressourcenverbrauch** gibt Ihnen einen ersten Hinweis auf die Ad-hoc-Natur Ihrer Arbeitsauslastung:  
   
-![Abfrage-Store-Nutzung-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
+![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
 Verwenden Sie die Metrik **Ausführungsanzahl** , um zu analysieren, ob Ihre Abfragen mit dem höchsten Ressourcenverbrauch Ad-hoc-Abfragen sind (dafür müssen Sie den Abfragespeicher mit `QUERY_CAPTURE_MODE = ALL`ausführen). Im Diagramm oben können Sie sehen, dass 90% der **Abfragen mit dem höchstem Ressourcenverbrauch** nur einmal ausgeführt werden.  
   
@@ -158,7 +156,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
 Dies ist ein potenzielles Ergebnis, das Sie bei Arbeitsauslastungen mit Ad-hoc-Abfragen erhalten können:  
   
-![Abfrage-Store-Nutzung-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
+![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
   
 Das Abfrageergebnis zeigt, dass trotz der großen Anzahl an Abfragen und Plänen im Abfragespeicher sich deren query_hash und query_plan_hash tatsächlich nicht unterscheiden. Ein Verhältnis zwischen eindeutigen Abfragetexten und eindeutigen Abfragehashes, das erheblich größer als 1 ist, ist ein Hinweis, dass die Arbeitsauslastung einen geeigneten Kandidaten für Parametrisierung darstellt, da der einzige Unterschied zwischen den Abfragen eine literale Konstante (Parameter) ist, die als Teil des Abfragetexts übergeben wird.  
   
@@ -200,7 +198,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 Nach dem Ausführen eines dieser Schritte zeichnet **Abfragen mit höchstem Ressourcenverbrauch** ein anderes Bild Ihrer Arbeitsauslastung.  
   
-![Abfrage-Store-Verwendung – 8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
 In manchen Fällen generiert Ihre Anwendung möglicherweise viele verschiedene Abfragen, die keine geeigneten Kandidaten für automatische Parametrisierung darstellen. In diesem Fall findet sich eine große Anzahl Abfragen im System, das Verhältnis zwischen eindeutigen Abfragen und eindeutigem Abfragehash (`query_hash`) liegt aber wahrscheinlich nahe bei 1.  
   

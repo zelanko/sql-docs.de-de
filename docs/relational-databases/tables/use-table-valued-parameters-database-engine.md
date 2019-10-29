@@ -16,12 +16,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d53f088089ed348e01ae380e0f21dcca420fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140324"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796640"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Verwenden von Tabellenwertparameter (Datenbank-Engine)
 
@@ -57,6 +57,9 @@ Tabellenwertparameter bieten mehr Flexibilität und in einigen Fällen auch eine
 - Weisen eine starke Typbindung auf
 - Ermöglichen die Angabe von Sortierreihenfolge und eindeutigen Schlüsseln über den Client
 - Werden bei der Verwendung in einer gespeicherten Prozedur wie eine temporäre Tabelle zwischengespeichert. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]werden Tabellenwertparameter auch für parametrisierte Abfragen zwischengespeichert.
+
+## <a name="Permissions"></a> Berechtigungen
+Um eine Instanz eines benutzerdefinierten Tabellentyps zu erstellen oder eine gespeicherte Prozedur mit einem Tabellenwertparameter aufzurufen, muss der Benutzer über die EXECUTE-Berechtigung für den Typ oder für das Schema bzw. die Datenbank, das/die den Typ enthält, verfügen.
 
 ## <a name="Restrictions"></a> Einschränkungen
 

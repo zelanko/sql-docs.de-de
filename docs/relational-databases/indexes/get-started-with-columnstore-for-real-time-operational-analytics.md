@@ -11,12 +11,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009492"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908026"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Erste Schritte mit Columnstore für die operative Echtzeitanalyse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70009492"
   
 -   **Datenlatenz.** Die Implementierung von ETL bringt eine zeitliche Verzögerung mit sich, die durch die Ausführung der Analyse bedingt ist. Wenn der ETL-Auftrag beispielsweise am Ende jedes Geschäftstags ausgeführt wird, werden die Analyseabfragen auf Daten ausgeführt, die mindestens einen Tag alt sind. Für viele Unternehmen ist diese Verzögerung nicht akzeptabel, da das Unternehmen von einer Analyse der Daten in Echtzeit abhängig ist. Beispielsweise ist für die Erkennung von Betrugsversuchen eine Echtzeitanalyse der Betriebsdaten erforderlich.  
   
- ![Übersicht über operative Echtzeitanalysen](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "real-time operational analytics overview")  
+ ![Übersicht über Real-Time Operational Analytics](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "Übersicht über Real-Time Operational Analytics")  
   
  Die operative Echtzeitanalyse stellt eine Lösung für diese Herausforderungen bereit.   
         Wenn Analyse- und OLTP-Arbeitsauslastungen auf der gleichen zugrundeliegenden Tabelle ausgeführt werden, tritt keine Zeitverzögerung ein.   In Szenarien, die Echtzeitanalyse verwenden können, lassen sich Kosten und Komplexität stark verringern, da die Notwendigkeit von ETL sowie von Erwerb und Wartung eines separaten Data Warehouses entfallen.  
@@ -84,8 +84,6 @@ ms.locfileid: "70009492"
   
 3.  Das ist alles, was Sie tun müssen!  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Sie können jetzt operative Echtzeitanalyse ausführen, ohne Änderungen an Ihrer Anwendung vornehmen zu müssen.  Die Analyseabfragen werden auf dem Columnstore-Index ausgeführt, während die OLTP-Operationen auch weiterhin auf den OLTP-B-Strukturindizes ausgeführt werden. Die OLTP-Arbeitsauslastungen werden auch weiterhin mit hoher Leistung ausgeführt, bringen jedoch einen gewissen Mehraufwand für die Wartung des Columnstore-Index mit sich. Informationen über Leistungsoptimierungen finden Sie im nächsten Abschnitt.  
   
 ## <a name="blog-posts"></a>Blogbeiträge  
@@ -122,7 +120,7 @@ ms.locfileid: "70009492"
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Beispiel A: Zugriff auf „heiße“ Daten über einen B-Strukturindex, auf „warme“ Daten über einen Columnstore-Index  
  In diesem Beispiel wird eine gefilterte Bedingung (accountkey > 0) verwendet, um festzulegen, welche Zeilen im Columnstore-Index enthalten sind. Dies hat den Zweck, die Filterbedingung und die nachfolgenden Abfragen so zu gestalten, dass auf sich häufig ändernde „heiße“ Daten über den B-Strukturindex, auf die stabileren „warmen“ Daten über den Columnstore-Index zugegriffen wird.  
   
- ![Kombinierte Indizes für „warme“ und „heiße“ Daten](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  
+ ![Kombinierte Indizes für warme und heiße Daten](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Kombinierte Indizes für warme und heiße Daten")  
   
 > [!NOTE]  
 >  Der Abfrageoptimierer zieht den Columnstore-Index für den Abfrageplan in Betracht, wählt ihn aber nicht in jedem Fall. Wenn der Abfrageoptimierer den gefilterten Columnstore-Index wählt, kombiniert er transparent die Zeilen aus dem Columnstore-Index mit den Zeilen, die der Filterbedingung nicht entsprechen, um Echtzeitanalyse zu ermöglichen. Dies unterscheidet sich von einem gewöhnlichen nicht gruppierten gefilterten Index, der nur in Abfragen verwendet werden kann, die sich auf die im Index vorhandenen Zeilen beschränken.  
@@ -165,7 +163,7 @@ Group By customername
   
  Die Analyseabfrage wird mit dem folgenden Abfrageplan ausgeführt. Es ist zu sehen, dass der Zugriff auf die Zeilen, die der Filterbedingung nicht entsprechen, über den gruppierten B-Strukturindex erfolgt.  
   
- ![Abfrageplan](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
+ ![Abfrageplan](../../relational-databases/indexes/media/query-plan-columnstore.png "Abfrageplan")  
   
  Weitere Informationen zu [gefilterten, nicht gruppierten Columnstore-Indizes](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)finden Sie im Blog.  
   

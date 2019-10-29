@@ -1,7 +1,7 @@
 ---
 title: Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/05/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8626b9b1a00d62273165706bda5b742eebab3251
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 7444659676f6f8270b5cc8013c872e492e0cd8c8
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874199"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916056"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70874199"
 
   
 ##  <a name="Logical_Arch"></a> Logische Architektur des Transaktionsprotokolls  
- Das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Transaktionsprotokoll wird logisch so verwendet, als handele es sich um eine Folge von Protokolleinträgen. Jeder Protokolleintrag wird durch eine Protokollsequenznummer (LSN, Log Sequence Number) gekennzeichnet. Jeder neue Protokolleintrag wird an das logische Ende des Protokolls geschrieben und erhält eine LSN, die höher ist als die LSN des vorherigen Eintrags. Protokolleinträge werden nacheinander in der Reihenfolge ihres Erstellens gespeichert. Jeder Protokolleintrag enthält die ID der Transaktion, zu der er gehört. Für jede Transaktion werden alle Protokolleinträge, die mit dieser Transaktion verbunden sind, individuell zu einer Kette verknüpft. Dies erfolgt mithilfe von Rückwärtszeigern, durch die der Rollback der Transaktion beschleunigt wird.  
+ Das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Transaktionsprotokoll wird logisch so verwendet, als handele es sich um eine Folge von Protokolleinträgen. Jeder Protokolleintrag wird durch eine Protokollsequenznummer (LSN, Log Sequence Number) gekennzeichnet. Jeder neue Protokolleintrag wird an das logische Ende des Protokolls geschrieben und erhält eine LSN, die höher ist als die LSN des vorherigen Eintrags. Protokolldatensätze werden in einer seriellen Reihenfolge gespeichert. Wenn LSN2 größer als LSN1 ist, erfolgte die durch den Protokolldatensatz von LSN2 beschriebene Änderung nach der durch den Protokolldatensatz von LSN1 beschriebenen Änderung. Jeder Protokolleintrag enthält die ID der Transaktion, zu der er gehört. Für jede Transaktion werden alle Protokolleinträge, die mit dieser Transaktion verbunden sind, individuell zu einer Kette verknüpft. Dies erfolgt mithilfe von Rückwärtszeigern, durch die der Rollback der Transaktion beschleunigt wird.  
   
  Protokolleinträge für Datenänderungen zeichnen entweder die durchgeführte logische Operation oder die Anfangs- und Endimages der geänderten Daten auf. Ein Anfangsimage ist eine Kopie der Daten vor der Durchführung der Operation. Ein Endimage ist eine Kopie der Daten, nachdem die Operation durchgeführt wurde.  
   
@@ -65,7 +65,9 @@ Im Transaktionsprotokoll werden viele Operationsarten aufgezeichnet. Dazu zähle
   
  Rollback-Operationen werden ebenfalls protokolliert. Jede Transaktion reserviert Speicherplatz im Transaktionsprotokoll, um sicherzustellen, dass ausreichend Speicherplatz vorhanden ist, um einen Rollback infolge einer expliziten Rollback-Anweisung oder im Falle eines Fehlers zu unterstützen. Die Menge des reservierten Speicherplatzes hängt von den in der Transaktion durchgeführten Vorgängen ab, entspricht jedoch im Allgemeinen dem Speicherplatz, der zum Protokollieren der einzelnen Vorgänge verwendet wird. Dieser reservierte Speicherplatz wird freigegeben, sobald die Transaktion abgeschlossen ist.  
   
-<a name="minlsn"></a> Als aktiver Teil des Protokolls bzw. *aktives Protokoll* wird der Abschnitt der Protokolldatei aus dem ersten Protokolldatensatz bezeichnet, der für einen erfolgreichen Rollback der gesamten Datenbank auf den zuletzt geschriebenen Protokolldatensatz benötigt wird. Dies ist der Teil des Protokolls, der für eine vollständige Wiederherstellung der Datenbank erforderlich ist. Vom aktiven Teil des Protokolls kann niemals ein Teil abgeschnitten werden. Die Protokollfolgenummer (Log Sequence Number, LSN) des ersten Protokolldatensatzes wird als **Mindestwiederherstellungs-LSN (*MinLSN*)** bezeichnet.  
+<a name="minlsn"></a> Als aktiver Teil des Protokolls *aktives Protokoll* oder *Protokollfragment* wird der Abschnitt der Protokolldatei aus dem ersten Protokolldatensatz bezeichnet, der für einen erfolgreichen Rollback der gesamten Datenbank auf den zuletzt geschriebenen Protokolldatensatz benötigt wird. Dies ist der Teil des Protokolls, der für eine vollständige [Wiederherstellung](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery) der Datenbank erforderlich ist. Vom aktiven Teil des Protokolls kann niemals ein Teil abgeschnitten werden. Die Protokollfolgenummer (Log Sequence Number, LSN) des ersten Protokolldatensatzes wird als **Mindestwiederherstellungs-LSN (*MinLSN*)** bezeichnet. Weitere Informationen zu Vorgängen, die vom Transaktionsprotokoll unterstützt werden, finden Sie unter [Das Transaktionsprotokoll (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md).  
+
+Durch differenzielle Sicherungen und Protokollsicherungen wird ein späterer Status der Datenbank wiederhergestellt, was wiederum einer höheren LSN entspricht. 
   
 ##  <a name="physical_arch"></a> Physische Architektur des Transaktionsprotokolls  
 Das Transaktionsprotokoll in einer Datenbank erstreckt sich über eine oder mehrere physische Dateien. Konzeptionell ist die Protokolldatei eine Folge von Protokolldatensätzen. Physisch wird die Folge von Protokolldatensätzen effizient in dem Satz physischer Dateien gespeichert, die das Transaktionsprotokoll implementieren. Für jede Datenbank muss mindestens eine Protokolldatei vorhanden sein.  
@@ -231,14 +233,14 @@ Bei der folgenden Abbildung handelt es sich um die vereinfachte Version des Ende
 LSN 148 ist der letzte Eintrag im Transaktionsprotokoll. Zum Zeitpunkt der Verarbeitung des Prüfpunktes, der bei LSN 147 aufgezeichnet wurde, wurde für Tran 1 ein Commit ausgeführt, und Tran 2 war die einzige aktive Transaktion. Hierdurch wird der erste Protokolldatensatz für Tran 2 zum ältesten Protokolleintrag für eine Transaktion, die zum Zeitpunkt des letzten Prüfpunktes aktiviert war. LSN 142, der Eintrag für den Transaktionsbeginn von Tran 2, wird somit zur MinLSN.
 
 ### <a name="long-running-transactions"></a>Lang andauernde Transaktionen
-
-Das aktive Protokoll muss jeden Teil aller Transaktionen umfassen, für die noch kein Commit ausgeführt wurde. Eine Anwendung, die eine Transaktion startet und für diese Transaktion keinen Commit oder Rollback ausführt, verhindert, dass die Datenbank-Engine die MinLSN heraufsetzt. Dies kann zu zwei Arten von Problemen führen:
+Das aktive Protokoll muss jeden Teil aller Transaktionen umfassen, für die noch kein Commit ausgeführt wurde. Eine Anwendung, die eine Transaktion startet und für diese Transaktion keinen Commit oder Rollback ausführt, verhindert, dass [!INCLUDE[ssde_md](../includes/ssde_md.md)] die MinLSN heraufsetzt. Dies kann zu zwei Arten von Problemen führen:
 
 * Wenn das System heruntergefahren wird, nachdem die Transaktion zahlreiche Änderungen vorgenommen hat, für die kein Commit ausgeführt wurde, kann die Wiederherstellungsphase beim nachfolgenden Neustart erheblich länger dauern, als durch die Option **Wiederherstellungsintervall festgelegt** wurde.
 * Das Protokoll kann sehr umfangreich werden, da das Protokoll nicht hinter der MinLSN abgeschnitten werden kann. Dies tritt auch dann auf, wenn die Datenbank das einfache Wiederherstellungsmodell verwendet, bei dem das Transaktionsprotokoll in der Regel bei jedem automatischen Prüfpunkt abgeschnitten wird.
 
-### <a name="replication-transactions"></a>Replikationstransaktionen
+Beginnend mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] und in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] können Sie die Wiederherstellung von Transaktionen mit langer Laufzeit und die oben beschriebenen Probleme durch Verwenden der [verbesserten Wiederherstellung von Datenbanken](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr) vermeiden.  
 
+### <a name="replication-transactions"></a>Replikationstransaktionen
 Der Protokolllese-Agent überwacht das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank und kopiert die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank. Das aktive Protokoll muss alle Transaktionen enthalten, die für die Replikation markiert wurden, die jedoch noch nicht an die Verteilungsdatenbank übermittelt wurden. Wenn diese Transaktionen nicht rechtzeitig repliziert werden, können sie die Kürzung des Protokolls verhindern. Weitere Informationen finden Sie unter [Transaktionsreplikation](../relational-databases/replication/transactional/transactional-replication.md).
 
 ## <a name="see-also"></a>Siehe auch 
@@ -249,6 +251,7 @@ In den folgenden empfohlenen Artikeln und Büchern finden Sie zusätzliche Infor
 [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
 [Datenbankprüfpunkte &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)   
 [Konfigurieren der Serverkonfigurationsoption Wiederherstellungsintervall](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[Verbesserte Wiederherstellung von Datenbanken](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [Erläuterungen zu Protokollierung und Wiederherstellung in SQL Server von Paul Randal](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    

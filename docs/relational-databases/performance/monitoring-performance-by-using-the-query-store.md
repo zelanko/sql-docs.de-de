@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e72ba4eed90fbd8218b9f0ed3942744fd75fcd90
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163910"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909308"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "71163910"
 2.  Wählen Sie im Dialogfeld **Datenbankeigenschaften** die Seite **Abfragespeicher** aus.  
   
 3.  Wählen Sie im Feld **Betriebsmodus (angefordert)** die Option **Lesen und schreiben** aus.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="use-transact-sql-statements"></a>Verwenden von Transact-SQL-Anweisungen  
   
@@ -113,12 +111,12 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> Verwenden der Funktion „Rückläufige Abfragen“  
 Aktualisieren Sie nach der Aktivierung des Abfragespeichers den Datenbankbereich im Objekt-Explorer-Bereich, um den Abschnitt **Abfragespeicher** hinzuzufügen.  
   
-![SQL Server 2016-Abfragespeicherstruktur im SSMS-Objekt-Explorer](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016-Abfragespeicherstruktur im SSMS-Objekt-Explorer")![SQL Server 2017-Abfragespeicherstruktur im SSMS-Objekt-Explorer](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017-Abfragespeicherstruktur im SSMS-Objekt-Explorer") 
+![SQL Server 2016: Abfragespeicherstruktur im Objekt-Explorer in SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016: Abfragespeicherstruktur im Objekt-Explorer in SSMS")   ![SQL Server 2017: Abfragespeicherstruktur im Objekt-Explorer in SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017: Abfragespeicherstruktur im Objekt-Explorer in SSMS") 
   
 Wählen Sie **Zurückgestellte Abfragen** aus, um den Bereich **Zurückgestellte Abfragen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu öffnen. Im Bereich „Regressed Queries“ werden die Abfragen und Pläne im Abfragespeicher angezeigt. Verwenden Sie die Dropdownfelder im oberen Bereich, um Abfragen anhand verschiedener Kriterien zu filtern: **Dauer (ms)** (Standard), CPU-Zeit (ms), Logische Lesevorgänge (KB), Logische Schreibvorgänge (KB), Physische Lesevorgänge (KB), CLR-Zeit (ms), DOP, Arbeitsspeicherverbrauch (KB), Zeilenanzahl, Verwendeter Protokollspeicher (KB), Verwendeter temporärer DB-Speicher (KB) und Wartezeit (ms).  
 Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuzeigen. Schaltflächen stehen zur Verfügung, um die Quellabfrage anzuzeigen, einen Abfrageplan zu erzwingen bzw. seine Erzwingung aufzuheben, zwischen Raster- und Diagrammformaten umzuschalten, ausgewählte Pläne zu vergleichen (wenn mehrere Pläne ausgewählt sind) und die Anzeige zu aktualisieren.  
   
-![Zurückgestellte SQL Server 2016-Abfragen im SSMS-Objekt-Explorer](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Zurückgestellte SQL Server 2016-Abfragen im SSMS-Objekt-Explorer")  
+![SQL Server 2016: Zurückgestellte Abfragen im Objekt-Explorer in SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016: Zurückgestellte Abfragen im Objekt-Explorer in SSMS")  
   
 Wählen Sie eine Abfrage und einen Plan aus, und klicken Sie anschließend auf **Plan erzwingen**, um einen Plan zu erzwingen. Sie können nur Pläne erzwingen, die mit dem Abfrageplanfeature gespeichert wurden und sich noch im Abfrageplancache befinden.
 
@@ -129,11 +127,11 @@ Im Abfragespeicher werden Wartetypen in **Wartekategorien** zusammengefasst. Die
 
 Wählen Sie **Abfragewartestatistiken** aus, um den Bereich **Abfragewartestatistiken** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 oder höher zu öffnen. Der Bereich „Abfragewartestatistiken“ zeigt ein Balkendiagramm mit den wichtigsten Wartekategorien im Abfragespeicher an. Verwenden Sie die Dropdownliste im oberen Bereich, um ein Aggregatkriterium für die Wartezeit auszuwählen: avg, max, min, std dev oder **total** (Standard).
 
- ![SQL Server 2017-Abfragewartestatistiken im SSMS-Objekt-Explorer](../../relational-databases/performance/media/query-store-waits.PNG "SQL Server 2017--Abfragewartestatistiken im SSMS-Objekt-Explorer")
+ ![SQL Server 2017: Statistik der Abfragewartezeit im Objekt-Explorer in SSMS](../../relational-databases/performance/media/query-store-waits.PNG "SQL Server 2017: Statistik der Abfragewartezeit im Objekt-Explorer in SSMS")
 
 Wählen Sie eine Wartekategorie aus, indem Sie auf die Leiste klicken. Eine Detailansicht der ausgewählten Wartekategorie wird angezeigt. Dieses neue Balkendiagramm enthält die Abfragen, die zu dieser Wartekategorie beigetragen haben. 
   
- ![SQL Server 2017-Abfragewartestatistiken (Detailansicht) im SSMS-Objekt-Explorer](../../relational-databases/performance/media/query-store-waits-detail.PNG "SQL Server 2017--Abfragewartestatistiken (Detailansicht) im SSMS-Objekt-Explorer")
+ ![SQL Server 2017: Detailansicht der Statistik der Abfragewartezeit im Objekt-Explorer in SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "SQL Server 2017: Detailansicht der Statistik der Abfragewartezeit im Objekt-Explorer in SSMS")
 
 Verwenden Sie die Dropdownfelder im oberen Bereich, um Abfragen nach verschiedenen Wartezeitkriterien für die ausgewählte Wartekategorie zu filtern: avg, max, min, std dev oder **total** (Standard). Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuzeigen. Über verschiedene Schaltflächen können Sie die Quellabfrage anzeigen, einen Abfrageplan erzwingen und die Erzwingung wieder aufheben und die Ansicht aktualisieren.  
 

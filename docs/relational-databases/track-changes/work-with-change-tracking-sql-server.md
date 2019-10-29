@@ -21,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8348f5d0f77006697abec72b084b36cb7b24e1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dee3fbbeced09ca66c42ab873ad2545655a1b72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057942"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905548"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Verwenden der Änderungsnachverfolgung (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68057942"
   
      Die folgende Abbildung zeigt, wie CHANGETABLE(CHANGES ...) verwendet wird, um Änderungen abzurufen.  
   
-     ![Beispiel für Abfrageausgabe bei der Änderungsnachverfolgung](../../relational-databases/track-changes/media/queryoutput.gif "Beispiel für Abfrageausgabe bei der Änderungsnachverfolgung")  
+     ![Beispiel einer Ausgabe einer Änderungsnachverfolgungs-Abfrage](../../relational-databases/track-changes/media/queryoutput.gif "Beispiel einer Ausgabe einer Änderungsnachverfolgungs-Abfrage")  
   
  CHANGE_TRACKING_CURRENT_VERSION()-Funktion  
  Diese Funktion wird zum Abrufen der aktuellen Version verwendet. Diese wird das nächste Mal verwendet, wenn Änderungen abgerufen werden. Diese Version stellt die Version der letzten Transaktion dar, für die ein Commit ausgeführt wurde.  
@@ -207,8 +207,6 @@ ON
   
 4.  Rufen Sie die Änderungen für die Tabelle SalesOrders mit CHANGETABLE(CHANGES ...) ab.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  In der Datenbank werden zwei Prozesse ausgeführt, die sich auf die von den oben genannten Schritten zurückgegebenen Ergebnisse auswirken können:  
   
 -   Der im Hintergrund ausgeführte Cleanupprozess entfernt Änderungsnachverfolgungsinformationen, die älter sind als die angegebene Beibehaltungsdauer.  
@@ -267,6 +265,10 @@ COMMIT TRAN
   
  Weitere Informationen über Momentaufnahmentransaktion finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
+#### <a name="cleanup-and-snapshot-isolation"></a>Bereinigen und Momentaufnahmeisolation   
+Die Aktivierung von Momentaufnahmeisolation und Änderungsnachverfolgung in derselben Datenbank oder in zwei verschiedenen Datenbanken innerhalb derselben Instanz kann dazu führen, dass der Bereinigungsprozess abgelaufene Zeilen in „sys.syscommittab“ zurücklässt, wenn die Datenbank mit der Momentaufnahmeisolation eine geöffnete Transaktion enthält. Dies kann passieren, da der Bereinigungsprozess der Änderungsnachverfolgung bei der Durchführung der Bereinigung eine instanzweite Untergrenze (die sichere Bereinigungsversion) berücksichtigt. Dadurch wird sichergestellt, dass bei der automatischen Bereinigung der Änderungsnachverfolgung keine Zeilen entfernt werden, die möglicherweise von der geöffneten Transaktion in der Datenbank benötigt werden, für die die Momentaufnahmeisolation aktiviert ist. Halten Sie READ COMMITTED-Momentaufnahmeisolation und Momentaufnahmeisolations-Transaktionen so kurz wie möglich, um sicherzustellen, dass abgelaufene Zeilen von „sys.syscommittab“ zeitnah bereinigt werden. 
+
+
 #### <a name="alternatives-to-using-snapshot-isolation"></a>Alternativen zur Verwendung der Momentaufnahmeisolation  
  Es gibt Alternativen zur Verwendung der Momentaufnahmeisolation, die jedoch einen größeren Aufwand erfordern, um sicherzustellen, dass alle Anwendungsanforderungen erfüllt werden. Gehen Sie wie folgt vor, um sicherzustellen, dass der Wert *last_synchronization_version* gültig ist und dass vor dem Abrufen der Änderungen keine Daten durch den Cleanupprozess entfernt werden:  
   

@@ -1,7 +1,7 @@
 ---
 title: Das Transaktionsprotokoll (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9f57b15f1a46aefad2387eb63b0d2cb14dbe38
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083941"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916033"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,24 +39,24 @@ Informationen zur Transaktionsprotokollarchitektur und den internen Gegebenheite
  Das Transaktionsprotokoll unterstützt die folgenden Vorgänge:  
   
 -   Wiederherstellen einzelner Transaktionen.  
--   Wiederherstellen aller unvollständigen Transaktionen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird.  
+-   Wiederherstellen aller unvollständigen Transaktionen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird. 
 -   Ausführen eines Rollforwards für eine wiederhergestellte Datenbank, Datei, Dateigruppe oder Seite bis zu dem Punkt, an dem der Fehler aufgetreten ist.  
 -   Unterstützen der Transaktionsreplikation.  
 -   Lösungen zur Unterstützung von Hochverfügbarkeit und Notfallwiederherstellung: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], Datenbankspiegelung und Protokollversand.
 
 ### <a name="individual-transaction-recovery"></a>Wiederherstellen einzelner Transaktionen
-Wenn eine Anwendung eine `ROLLBACK`-Anweisung ausgibt oder die Datenbank-Engine einen Fehler erkennt (z.B. die unterbrochene Verbindung mit einem Client), wird anhand der Protokolldatensätze für die Änderungen, die von einer nicht abgeschlossenen Transaktion vorgenommen wurde, ein Rollback ausgeführt. 
+Wenn eine Anwendung eine `ROLLBACK`-Anweisung ausgibt oder wenn [!INCLUDE[ssde_md](../../includes/ssde_md.md)] einen Fehler erkennt, z. B. die unterbrochene Verbindung mit einem Client, werden die Protokolldatensätze verwendet, um für die Änderungen, die von unvollständigen Transaktionen vorgenommen wurden, einen Rollback auszuführen. 
 
 ### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>Wiederherstellen aller unvollständigen Transaktionen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird
-Wenn ein Server ausfällt, bleiben die Datenbanken möglicherweise in einem Status, in dem einige Änderungen nicht vom Puffercache in die Datendateien geschrieben wurden, einige Änderungen von unvollständigen Transaktionen jedoch bereits in den Datendateien vorgenommen wurden. Beim Starten einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird eine Wiederherstellung aller Datenbanken ausgeführt. Für jede Änderung, die im Protokoll aufgezeichnet wurde und die möglicherweise nicht in die Datendateien geschrieben wurde, wird ein Rollforward ausgeführt. Für jede unvollständige Transaktion, die im Transaktionsprotokoll erkannt wird, wird anschließend ein Rollback ausgeführt, um sicherzustellen, dass die Integrität der Datenbank aufrechterhalten wird. 
+Wenn ein Server ausfällt, bleiben die Datenbanken möglicherweise in einem Status, in dem einige Änderungen nicht vom Puffercache in die Datendateien geschrieben wurden, einige Änderungen von unvollständigen Transaktionen jedoch bereits in den Datendateien vorgenommen wurden. Beim Starten einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird eine Wiederherstellung aller Datenbanken ausgeführt. Für jede Änderung, die im Protokoll aufgezeichnet wurde und die möglicherweise nicht in die Datendateien geschrieben wurde, wird ein Rollforward ausgeführt. Für jede unvollständige Transaktion, die im Transaktionsprotokoll erkannt wird, wird anschließend ein Rollback ausgeführt, um sicherzustellen, dass die Integrität der Datenbank aufrechterhalten wird. Weitere Informationen finden Sie unter [Übersicht über Wiederherstellungsvorgänge (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>Ausführen eines Rollforwards für eine wiederhergestellte Datenbank, Datei, Dateigruppe oder Seite bis zu dem Punkt, an dem der Fehler aufgetreten ist
 Nach einem Hardwareverlust oder Datenträgerfehler, der sich auf die Datendateien auswirkt, können Sie die Datenbank so wiederherstellen, wie sie zum Zeitpunkt des Ausfalls vorlag. Sie stellen zuerst die letzte vollständige und die letzte differenzielle Datenbanksicherung und anschließend die nachfolgende Folge von Transaktionsprotokollsicherungen bis zu dem Punkt wieder her, an dem der Fehler aufgetreten ist. 
 
-Beim Wiederherstellen der einzelnen Protokollsicherungen übernimmt die Datenbank-Engine erneut sämtliche im Protokoll aufgezeichneten Änderungen, um für alle Transaktionen einen Rollforward auszuführen. Sobald die letzte Protokollsicherung wiederhergestellt ist, verwendet die Datenbank-Engine die Protokollinformationen, um für sämtliche Transaktionen einen Rollback auszuführen, die zu diesem Zeitpunkt noch nicht abgeschlossen waren. 
+Beim Wiederherstellen der einzelnen Protokollsicherungen übernimmt [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erneut sämtliche im Protokoll aufgezeichneten Änderungen, um für alle Transaktionen einen Rollforward auszuführen. Sobald die letzte Protokollsicherung wiederhergestellt ist, verwendet [!INCLUDE[ssde_md](../../includes/ssde_md.md)] die Protokollinformationen, um für sämtliche Transaktionen einen Rollback auszuführen, die zu diesem Zeitpunkt noch nicht abgeschlossen waren. Weitere Informationen finden Sie unter [Übersicht über Wiederherstellungsvorgänge (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="supporting-transactional-replication"></a>Unterstützen der Transaktionsreplikation
-Der Protokolllese-Agent überwacht das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank und kopiert die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank. Weitere Informationen finden Sie unter [Funktionsweise der Transaktionsreplikation](https://msdn.microsoft.com/library/ms151706.aspx).
+Der Protokolllese-Agent überwacht das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank und kopiert die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank. Weitere Informationen finden Sie unter [Funktionsweise der Transaktionsreplikation](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Unterstützen von Hochverfügbarkeits- und Notfallwiederherstellungslösungen
 Standbyserverlösungen, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], Datenbankspiegelung und Protokollversand hängen in großem Umfang vom Transaktionsprotokoll ab. 
@@ -67,12 +67,14 @@ In einem **Protokollversandszenario** sendet der primäre Server das aktive Tran
 
 In einem **Datenbankspiegelungsszenario** wird jedes Update einer Datenbank (der Prinzipaldatenbank) sofort in einer separaten vollständigen Kopie der Datenbank (der Spiegeldatenbank) reproduziert. Die Prinzipalserverinstanz sendet jeden Protokolldatensatz sofort an die Spiegelserverinstanz, die die eingehenden Protokolldatensätze auf die Spiegeldatenbank anwendet, um kontinuierlich ein Rollforward dafür auszuführen. Weitere Informationen finden Sie unter [Datenbankspiegelung](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
-##  <a name="Characteristics"></a>Transaction Log characteristics
-
+##  <a name="Characteristics"></a>Merkmale von Transaktionsprotokollen
 Merkmale der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Transaktionsprotokolle: 
 -  Das Transaktionsprotokoll wird als eine separate oder mehrere Dateien in der Datenbank implementiert. Der Protokollcache wird getrennt vom Puffercache für Datenseiten verwaltet, woraus sich ein einfacher, schneller und zuverlässiger Code innerhalb des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]s ergibt. Weitere Informationen finden Sie unter [Physische Architektur des Transaktionsprotokolls](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
+
 -  Das Format der Protokolldatensätze und -seiten muss nicht dem Format von Datenseiten entsprechen.
+
 -  Das Transaktionsprotokoll kann in Form mehrerer Dateien implementiert werden. Für die Dateien kann eine automatische Erweiterung durch Festlegen des `FILEGROWTH`-Werts für das Protokoll definiert werden. Auf diese Weise nimmt die Wahrscheinlichkeit ab, dass im Transaktionsprotokoll kein Speicherplatz mehr verfügbar ist. Zudem wird der Verwaltungsaufwand verringert. Weitere Informationen finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+
 -  Der Mechanismus zum erneuten Verwenden des freien Speicherplatzes in den Protokolldateien ist schnell und wirkt sich nur minimal auf den Transaktionsdurchsatz aus.
 
 Informationen zur Transaktionsprotokollarchitektur und den internen Gegebenheiten finden Sie im [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
@@ -136,7 +138,7 @@ Wenn die Transaktionsreplikation aktiviert ist, werden `BULK INSERT`-Vorgänge a
   
 -   [SELECT INTO](../../t-sql/queries/select-into-clause-transact-sql.md)-Vorgänge.  
   
-Wenn die Transaktionsreplikation aktiviert ist, werden SELECT INTO-Vorgänge auch unter dem massenprotokollierten Wiederherstellungsmodell vollständig protokolliert.  
+Wenn die Transaktionsreplikation aktiviert ist, werden `SELECT INTO`-Vorgänge auch unter dem massenprotokollierten Wiederherstellungsmodell vollständig protokolliert.  
   
 -   Teilupdates von Datentypen für hohe Werte mithilfe der `.WRITE`-Klausel in der [UPDATE](../../t-sql/queries/update-transact-sql.md)-Anweisung beim Einfügen oder Anfügen neuer Daten. Beachten Sie, dass die minimale Protokollierung nicht verwendet wird, wenn vorhandene Werte aktualisiert werden. Weitere Informationen zu Datentypen für hohe Werte finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -166,7 +168,9 @@ Wenn die Transaktionsreplikation aktiviert ist, werden SELECT INTO-Vorgänge auc
 **Sichern des Transaktionsprotokolls (vollständiges Wiederherstellungsmodell)**  
   
 -   [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
-  
+
+-   [Sichern des Transaktionsprotokolls bei beschädigter Datenbank (SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)
+
 **Wiederherstellen des Transaktionsprotokolls (vollständiges Wiederherstellungsmodell)**  
   
 -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
@@ -175,7 +179,8 @@ Wenn die Transaktionsreplikation aktiviert ist, werden SELECT INTO-Vorgänge auc
 [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md)   
 [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
-[Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+[Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
+[Übersicht über Wiederherstellungsvorgänge (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)      
 [Datenbankprüfpunkte &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
 [Anzeigen oder Ändern der Eigenschaften einer Datenbank](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
 [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  

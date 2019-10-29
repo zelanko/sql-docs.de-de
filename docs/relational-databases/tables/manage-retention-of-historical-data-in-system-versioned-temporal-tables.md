@@ -11,12 +11,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e569d7676d363dc6526354ed6087a778fccce79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9066f82c01dede49307cd38565f40f263d7ae76f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031627"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909566"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,19 +76,17 @@ ms.locfileid: "68031627"
   
 3.  Geben Sie im Fenster **Azure konfigurieren** Ihre Anmeldeinformationen an. Melden Sie sich bei Microsoft Azure an, oder registrieren Sie sich für ein Konto. Wählen Sie das zu verwendende Abonnement und die Azure-Region aus. Erstellen Sie dann einen neuen Server, oder wählen Sie einen vorhandenen Server aus. Klicken Sie auf **Weiter**.  
   
-     ![Erstellen neuer Azure-Server – Stretch-Datenbank-Assistent](../../relational-databases/tables/media/stretch-wizard-4.png "Erstellen neuer Azure-Server – Stretch-Datenbank-Assistent")  
+     ![Erstellen eines neuen Azure-Servers – Stretch Database-Assistent](../../relational-databases/tables/media/stretch-wizard-4.png "Erstellen eines neuen Azure-Servers – Stretch Database-Assistent")  
   
 4.  Geben Sie im Fenster **Sichere Anmeldeinformationen** ein Kennwort für den Datenbankhauptschlüssel an, um Ihre Anmeldeinformationen für die SQL Server-Quelldatenbank zu schützen, und klicken Sie dann auf „Weiter“.  
   
-     ![Sichere Anmeldeinformationenseite des Stretch-Datenbank-Assistenten](../../relational-databases/tables/media/stretch-wizard-6.png "Sichere Anmeldeinformationenseite des Stretch-Datenbank-Assistenten")  
+     ![Seite „Sichere Anmeldeinformationen“ des Stretch Database-Assistenten](../../relational-databases/tables/media/stretch-wizard-6.png "Seite „Sichere Anmeldeinformationen“ des Stretch Database-Assistenten")  
   
 5.  Geben Sie im Fenster **IP-Adresse auswählen** den IP-Adressbereich für Ihre SQL Server-Instanz an, um Ihrem Azure-Server die Kommunikation mit SQL Server zu ermöglichen (bei Auswahl eines vorhandenen Servers, für den bereits eine Firewallregel vorhanden ist, klicken Sie hier einfach auf „Weiter“, um die vorhandene Firewallregel zu verwenden). Klicken Sie auf **Weiter** dann auf **Fertig stellen**, um Stretch Database zu aktivieren und ein Stretching für die temporale Verlaufstabelle durchzuführen.  
   
-     ![Wählen der IP-Adressseite des Stretch-Datenbank-Assistenten](../../relational-databases/tables/media/stretch-wizard-7.png "Wählen der IP-Adressseite des Stretch-Datenbank-Assistenten")  
+     ![Seite „IP-Adresse auswählen“ des Stretch Database-Assistenten](../../relational-databases/tables/media/stretch-wizard-7.png "Seite „IP-Adresse auswählen“ des Stretch Database-Assistenten")  
   
 6.  Überprüfen Sie nach Abschluss des Assistenten, ob die Datenbank erfolgreich für Stretch aktiviert wurde. Beachten Sie die Symbole im Objekt-Explorer, die angeben, dass für die Datenbank ein Stretching durchgeführt wurde.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **HINWEIS:** Wenn das Aktivieren der Datenbank für Stretch fehlschlägt, überprüfen Sie das Fehlerprotokoll. Ein häufiger Fehler ist eine fehlerhafte Konfiguration der Firewallregel.  
   
@@ -498,7 +496,7 @@ Der Bereinigungsprozess hängt vom Indexlayout der Verlaufstabelle ab. Zu beacht
 
 Der Bereinigungstask für den gruppierten Columnstore entfernt ganze Zeilengruppen auf einmal (die üblicherweise jeweils 1 Mio. Reihen enthalten). Dies ist sehr effizient, vor allem wenn Verlaufsdaten mit einer hohen Geschwindigkeit generiert werden.
 
-![Gruppierte Columnstore-Beibehaltung](../../relational-databases/tables/media/cciretention.png "gruppierte Columnstore-Beibehaltung")
+![Beibehaltung des gruppierten Columnstore](../../relational-databases/tables/media/cciretention.png "Beibehaltung des gruppierten Columnstore")
 
 Die hervorragende Datenkompression und die effiziente Beibehaltungsbereinigung machen den gruppierten Columnstore-Index zur perfekten Lösung für Szenarios, bei denen Ihre Workload in kürzester Zeit eine große Menge an Verlaufsdaten generiert. Dieses Muster ist typisch für intensive Transaktionsverarbeitungs-Workloads, die temporale Tabellen verwenden, um die Änderungsnachverfolgung und -überwachung, Trendanalysen oder die Erfassung von IoT-Daten durchzuführen.
 

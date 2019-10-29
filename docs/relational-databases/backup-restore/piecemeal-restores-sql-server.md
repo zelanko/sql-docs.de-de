@@ -1,7 +1,7 @@
 ---
 title: Schrittweise Wiederherstellungen [SQL Server] | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8dfdfc8ea7d34975046545688cca3f34ed324311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033648"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915997"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Schrittweise Wiederherstellungen [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68033648"
   
      Weitere Informationen zur schrittweisen Wiederherstellung von In-Memory OLTP-Datenbanken finden Sie unter [Schrittweise Sicherung und Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
  Wenn in einer Teilwiederherstellungssequenz eine [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) -Dateigruppe ausgeschlossen wird, wird die Wiederherstellung bis zu einem bestimmten Zeitpunkt nicht unterstützt. Sie können das Fortsetzen der Wiederherstellungssequenz erzwingen. Die FILESTREAM-Dateigruppen, die nicht in die RESTORE-Anweisung eingeschlossen werden, können jedoch zu keinem Zeitpunkt wiederhergestellt werden. Wenn Sie eine Wiederherstellung bis zu einem bestimmten Zeitpunkt erzwingen möchten, geben Sie die CONTINUE_AFTER_ERROR-Option zusammen mit der Option STOPAT, STOPATMARK oder STOPBEFOREMARK an. Diese müssen Sie auch in den folgenden RESTORE LOG-Anweisungen angeben. Wenn Sie CONTINUE_AFTER_ERROR angeben, ist die Teilwiederherstellungssequenz erfolgreich, und die FILESTREAM-Dateigruppe wird nicht mehr wiederherstellbar.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Schrittweise Wiederherstellung mit dem einfachen Wiederherstellungsmodell  
@@ -144,7 +144,7 @@ ms.locfileid: "68033648"
      In der Enterprise Edition kann jede sekundäre Offlinedateigruppe wiederhergestellt werden, während die Datenbank online bleibt. Wenn eine bestimmte schreibgeschützte Datei unbeschädigt und mit der Datenbank konsistent ist, muss die Datei nicht wiederhergestellt werden. Weitere Informationen finden Sie unter [Wiederherstellen einer Datenbank ohne Wiederherstellung von Daten &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
 ### <a name="applying-log-backups"></a>Anwenden von Protokollsicherungen  
- Wenn eine schreibgeschützte Dateigruppe bereits vor der Erstellung der Dateisicherung schreibgeschützt war, ist die Anwendung von Protokollsicherungen auf die Dateigruppe unnötig und wird von der Dateiwiederherstellung ausgelassen. Bei einer Dateigruppe mit Lese-/Schreibzugriff muss eine fortlaufende Kette von Protokollsicherungen auf die letzte vollständige oder differenzielle Wiederherstellung angewendet werden, um die Dateigruppe auf den Stand der aktuellen Protokolldatei zu bringen.  
+ Wenn eine schreibgeschützte Dateigruppe bereits vor der Erstellung der Dateisicherung schreibgeschützt war, ist die Anwendung von Protokollsicherungen auf die Dateigruppe unnötig und wird von der Dateiwiederherstellung ausgelassen. Bei einer Dateigruppe mit Lese-/Schreibzugriff muss eine fortlaufende Kette von Protokollsicherungen auf die letzte vollständige oder differenzielle Wiederherstellung angewendet werden, um die Dateigruppe auf den Stand der aktuellen Protokolldatei zu bringen. Informationen zum Wiederherstellungsprozess finden Sie unter [ (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
   
 ### <a name="examples"></a>Beispiele  
   
@@ -173,13 +173,11 @@ ms.locfileid: "68033648"
   
 4.  Die differenzielle Sicherung, die nach allen anderen Sicherungen ausgeführt wird, die in der ursprünglichen schrittweisen Wiederherstellung gespeichert wurden, um die Daten bis zum ursprünglichen Wiederherstellungszeitpunkt wiederherzustellen.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="see-also"></a>Weitere Informationen  
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [Planen und Ausführen von Wiederherstellungssequenzen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
-  
+ [Planen und Ausführen von Wiederherstellungssequenzen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
+ [Übersicht über Wiederherstellungsvorgänge (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
   

@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec08bd8459e51c3ace52fc4eea433aaa046050b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d4d63a03c2b5b40f7d57fa5c2de5f0abfab3f36
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123561"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783297"
 ---
 # <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Gründe für die Verwendung benutzerdefinierter Funktionen
   
 ##  <a name="FunctionTypes"></a> Funktionstypen  
 **Skalarfunktion**  
- Benutzerdefinierte Skalarfunktionen geben einen einzelnen Datenwert des definierten Datentyps in einer RETURNS-Klausel zurück. Bei einer Inlineskalarfunktion gibt es keinen Funktionshauptteil; der Skalarwert ist das Ergebnis einer einzelnen SELECT-Anweisung. Bei einer aus mehreren Anweisungen bestehenden Skalarfunktion enthält der in einem BEGIN…END-Block definierte Hauptteil der Funktion eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die den einzelnen Wert zurückgeben. Der Rückgabetyp kann ein beliebiger Datentypen mit Ausnahme von **text**, **ntext**, **image**, **cursor**und **timestamp**sein. 
+ Benutzerdefinierte Skalarfunktionen geben einen einzelnen Datenwert des definierten Datentyps in einer RETURNS-Klausel zurück. Bei einer Inlineskalarfunktion ist der zurückgegebene Skalarwert das Ergebnis einer einzelnen Anweisung. Bei einer aus mehreren Anweisungen bestehenden Skalarfunktion kann der Hauptteil der Funktion eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen enthalten, die den einzelnen Wert zurückgeben. Der Rückgabetyp kann ein beliebiger Datentypen mit Ausnahme von **text**, **ntext**, **image**, **cursor**und **timestamp**sein. 
  **[Beispiele.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **Tabellenwertfunktionen**  

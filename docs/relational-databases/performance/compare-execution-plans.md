@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: fc0eb0e3e8cd6a095a6f30f44ee08c520db19e45
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289298"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907665"
 ---
 # <a name="compare-execution-plans"></a>Vergleichen von Ausführungsplänen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Wenn zwei Ausführungspläne verglichen werden, werden Bereiche des Plans, die *
 
 4.  Die verglichenen Plänen öffnen ein neues Fenster, standardmäßig mit einem Plan oben und einem Plan unten. Die Standardauswahl ist das erste Auftreten eines Operators oder Knotens, der den verglichenen Plänen gemeinsam ist, aber Unterschiede zwischen den Plänen aufweist. Alle hervorgehobenen Operatoren und Knoten sind in beiden verglichenen Plänen vorhanden. Wenn Sie einen hervorgehobenen Operator im oberen oder linken Plan auswählen, wird automatisch der entsprechende Operator im unteren oder rechten Plan ausgewählt. Durch die Auswahl des Stammknotenoperators in einem der verglichenen Pläne (der SELECT-Knoten in der Abbildung unten) wird auch der jeweilige Stammknotenoperator im anderen verglichenen Plan ausgewählt.
 
-    ![Planvergleich von zwei gespeicherten Plandateien](../../relational-databases/performance/media/plancomparison-plans.png "Planvergleich von zwei gespeicherten Plandateien")  
+    ![Planen des Vergleichs von zwei gespeicherten Plandateien](../../relational-databases/performance/media/plancomparison-plans.png "Planen des Vergleichs von zwei gespeicherten Plandateien")  
 
      > [!TIP]
      > Sie können die Anzeige des Ausführungsplanvergleichs nebeneinander umschalten, indem Sie mit der rechten Maustaste auf einen leeren Bereich des Ausführungsplans klicken und **Teilerausrichtung umschalten** auswählen.
@@ -75,14 +75,12 @@ Wenn zwei Ausführungspläne verglichen werden, werden Bereiche des Plans, die *
 
 6.  Das Vergleichsnavigationsfenster **Showplananalyse** wird ebenfalls im unteren Bereich geöffnet. Es stehen drei Registerkarten zur Verfügung:
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  Auf der Registerkarte **Anweisungsoptionen** ist die Standardauswahl *Ähnliche Vorgänge hervorheben*, und der gleiche hervorgehobene Operator bzw. Knoten in verglichenen Plänen weist die gleiche Farbe und dasselbe Linienmuster auf. Navigieren Sie zwischen ähnlichen Bereichen in verglichenen Plänen, indem Sie auf ein Linienmuster klicken. Sie können auch Unterschiede in den Plänen anstelle von Ähnlichkeiten hervorheben, indem Sie *Vorgänge hervorheben, die nicht mit ähnlichen Segmenten übereinstimmen* auswählen. 
     
        > [!NOTE]
        > Standardmäßig werden Datenbanknamen beim Vergleichen von Plänen ignoriert, um den Vergleich von Plänen zu ermöglichen, die für Datenbanken erfasst wurden, die unterschiedliche Namen aufweisen, aber das gleiche Schema gemeinsam verwenden. Beispielsweise beim Vergleich von Plänen aus den Datenbanken *ProdDB* und *TestDB*. Dieses Verhalten kann mit der Option *Datenbanknamen beim Vergleichen von Operatoren ignorieren* geändert werden.
 
-       ![Fenster „Showplananalyse“](../../relational-databases/performance/media/plancomparison-analysis.png "Fenster „Showplananalyse“") 
+       ![Showplananalyse-Fenster](../../relational-databases/performance/media/plancomparison-analysis.png "Showplananalyse-Fenster") 
 
     2.  Die Registerkarte **Mehrere Anweisungen** ist beim Vergleichen von Plänen mit mehreren Anweisungen nützlich, weil sie erlaubt, dass das richtige Anweisungspaar verglichen wird.
 
@@ -90,11 +88,11 @@ Wenn zwei Ausführungspläne verglichen werden, werden Bereiche des Plans, die *
 
     3.  Auf der Registerkarte **Szenarien** finden Sie eine automatisierte Analyse einiger der wichtigsten Aspekte, die Sie sich in Bezug auf die Unterschiede in den verglichenen Plänen im Zusammenhang mit der [Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md) ansehen können. Für jeden aufgelisteten Operator im linken Bereich zeigt der rechte Bereich Details zum Szenario im Link *Klicken Sie hier, um weitere Informationen zu diesem Szenario zu erhalten* sowie mögliche Gründe an, um dieses Szenario zu erläutern. 
 
-        ![Verschiedene geschätzte Zeilen](../../relational-databases/performance/media/plancomparison-scenarios.png "Verschiedene geschätzte Zeilen")  
+        ![Unterschiedliche geschätzte Zeilen](../../relational-databases/performance/media/plancomparison-scenarios.png "Unterschiedliche geschätzte Zeilen")  
 
     Wenn dieses Fenster geschlossen ist, klicken Sie mit der rechten Maustaste auf einen leeren Bereich eines verglichenen Plans, und wählen Sie **Optionen für den Showplanvergleich** aus, um es erneut zu öffnen.
 
-    ![Planvergleichsoptionen](../../relational-databases/performance/media/plancomparison-options.png "Planvergleichsoptionen")  
+    ![Planen von Vergleichsoptionen](../../relational-databases/performance/media/plancomparison-options.png "Planen von Vergleichsoptionen")  
 
 ## <a name="to-compare-execution-plans-in-query-store"></a>So vergleichen Sie Ausführungspläne im Abfragespeicher
 
@@ -106,4 +104,4 @@ Wenn zwei Ausführungspläne verglichen werden, werden Bereiche des Plans, die *
 
 3.  Verwenden Sie die Schaltfläche **Pläne für die ausgewählte Abfrage in einem separaten Fenster vergleichen**, um den Planvergleich zu starten. Führen Sie dann die Schritte 4 bis 6 von *So vergleichen Sie Ausführungspläne* aus. 
 
-    ![Showplan vergleichen im Abfragespeicher](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Showplan vergleichen im Abfragespeicher") 
+    ![Vergleichen des Showplans im Abfragespeicher](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Vergleichen des Showplans im Abfragespeicher") 

@@ -13,12 +13,12 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfbe6343432453b26b3283959cf8dd15bfa7cf81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8522e65762e8c27ec65fb5fc4a56db0653b5f5c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048572"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907006"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68048572"
 ## <a name="polygon-instances"></a>Polygon-Instanzen  
  Die nachfolgende Abbildung enthält Beispiele für **MultiPolygon** -Instanzen.  
   
- ![Beispiele für MultiPolygon-Geometrieinstanzen](../../relational-databases/spatial/media/multipolygon.gif "Examples of geometry MultiPolygon instances")  
+ ![Beispiele für MultiPolygon-Geometrieinstanzen](../../relational-databases/spatial/media/multipolygon.gif "Beispiele für MultiPolygon-Geometrieinstanzen")  
   
  Folgendes wird dargestellt:  
   
@@ -64,8 +64,6 @@ Die zweite Instanz im MultiPolygon ist eine LineString-Instanz und keine akzepti
 1.  Alle Instanzen, aus denen die **MultiPolygon** -Instanz besteht, sind gültige **Polygon** -Instanzen. Informationen über gültige **Polygon** -Instanzen finden Sie unter [Polygon](../../relational-databases/spatial/polygon.md).  
   
 2.  Die **Polygon** -Instanzen, aus denen die **MultiPolygon** -Instanz besteht, überschneiden sich nicht.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Im folgende Beispiel werden zwei gültige **MultiPolygon** -Instanzen und eine ungültige **MultiPolygon** -Instanz veranschaulicht.  
   

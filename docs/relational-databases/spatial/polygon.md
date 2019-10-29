@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bd7b379df56f94710a22684c9cc8d662cfb0a396
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69026146"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907208"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -33,7 +33,7 @@ Der äußere und eventuelle innere Ring einer **Polygon** -Instanz definieren di
   
 Die nachfolgende Abbildung enthält Beispiele für **Polygon** -Instanzen.  
   
- ![Beispiele für Polygon-Geometrieinstanzen](../../relational-databases/spatial/media/polygon.gif "Examples of geometry Polygon instances")  
+ ![Beispiele von Polygon-Geometrieinstanzen](../../relational-databases/spatial/media/polygon.gif "Beispiele von Polygon-Geometrieinstanzen")  
   
 Folgendes wird dargestellt:  
   
@@ -42,8 +42,6 @@ Folgendes wird dargestellt:
 2.  Abbildung 2 zeigt eine **Polygon** -Instanz, deren Begrenzung von einem äußeren Ring und zwei inneren Ringen definiert wird. Der Bereich zwischen den inneren Ringen ist Teil des äußeren Rings der **Polygon** -Instanz.  
   
 3.  Abbildung 3 ist eine gültige **Polygon** -Instanz, da sich seine inneren Ringe an einem einzelnen Tangentialpunkt schneiden.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
  Akzeptierte **Polygon** -Instanzen sind Instanzen, die in einer **geometry** -Variablen oder einer **geography** -Variablen gespeichert werden können, ohne dass eine Ausnahme ausgelöst wird. Bei den folgenden **Polygon** -Instanzen handelt es sich um akzeptierte Instanzen:  

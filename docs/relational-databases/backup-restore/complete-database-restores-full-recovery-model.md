@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1220ec831860baee2221004af19d9fd735c03cec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081410"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908970"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Vollständige Datenbankwiederherstellungen (vollständiges Wiederherstellungsmodell)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ Vom Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht ve
 Informationen zur Unterstützung von Sicherungskopien früherer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen finden Sie im Kapitel [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)im Abschnitt „Kompatibilitätsunterstützung“.
   
 ##  <a name="PointOfFailure"></a> Wiederherstellen einer Datenbank bis zum Zeitpunkt des Fehlers  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Zum Wiederherstellen einer Datenbank bis zum Zeitpunkt des Auftretens eines Fehlers werden in der Regel die folgenden grundlegenden Schritte ausgeführt:  
   
@@ -66,7 +64,7 @@ Informationen zur Unterstützung von Sicherungskopien früherer [!INCLUDE[ssNoVe
   
  Die folgende Abbildung stellt diese Wiederherstellungssequenz dar: Wenn ein Fehler aufgetreten ist (1), wird eine Sicherung des Protokollfragments erstellt (2). Danach wird die Datenbank bis zu dem Zeitpunkt des Auftretens des Fehlers wiederhergestellt. Dieser Vorgang umfasst die Wiederherstellung einer Datenbanksicherung, eine nachfolgende differenzielle Sicherung sowie alle Protokollsicherungen nach der differenziellen Sicherung, einschließlich der Sicherung des Protokollfragments.  
   
- ![Vollständige Datenbankwiederherstellung bis zum Auftreten des Fehlers](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "Complete database restore to the time of a failure")  
+ ![Vollständige Datenbankwiederherstellung bis zum Auftreten des Fehlers](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "Vollständige Datenbankwiederherstellung bis zum Auftreten des Fehlers")  
   
 > [!NOTE]  
 >  Informationen zum Wiederherstellen einer Datenbanksicherung auf einer anderen Serverinstanz finden Sie unter [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  

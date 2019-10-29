@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 81bfb5f4e2a69b065d8995823ee87fe9b913d11b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710627"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906889"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Konfigurieren von PolyBase-Erweiterungsgruppen unter Windows
 
@@ -41,8 +41,6 @@ Die folgenden Schritte fassen den Prozess der Erstellung einer PolyBase-Erweiter
 
 5. Optional. Entfernen Sie einen Serverknoten mit [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="example-walk-through"></a>Exemplarische Vorgehensweise
 
 Hier erfahren Sie, wie Sie eine PolyBase-Gruppe mit den folgenden Informationen einrichten:  
@@ -67,7 +65,7 @@ Hier erfahren Sie, wie Sie eine PolyBase-Gruppe mit den folgenden Informationen 
   
 5. Nachdem das Setup abgeschlossen ist, führen Sie **services.msc**aus. Überprüfen Sie, ob SQL Server, die PolyBase-Engine und der PolyBase-Datenverschiebungsdienst ausgeführt werden.
   
-   ![PolyBase-Dienste](../../relational-databases/polybase/media/polybase-services.png "PolyBase services")  
+   ![PolyBase-Dienste](../../relational-databases/polybase/media/polybase-services.png "PolyBase-Dienste")  
   
 ## <a name="select-one-sql-server-as-head-node"></a>Auswählen einer SQL Server-Instanz als Hauptknoten  
   

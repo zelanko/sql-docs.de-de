@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 21cf6f634fd9caa40f3d5685372f24d09567ca2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006132"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909158"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 
@@ -43,7 +43,7 @@ Weitere Informationen zu Änderungen des Abfrageoptimierers, der in [!INCLUDE[ss
 
 Ändern Sie den [Datenbank-Kompatibilitätsgrad](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) auf die Quellversion, und befolgen Sie den empfohlenen Upgradeworkflow wie in folgendem Bild gezeigt:
 
-![Abfrage-Store-Nutzung-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
 
 Weitere Informationen zu diesem Thema finden Sie unter [Aufrechterhalten einer stabilen Leistung während des Upgrades auf SQL Server 2016](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
@@ -107,8 +107,6 @@ Einige Beispiele für nicht SARGable-Prädikate sind:
   -   Dazu kann das Vergleichen aller benutzerdefinierten Codekonstrukte gehören, die in der Datenbank gespeichert sind (z.B. gespeicherte Prozeduren, benutzerdefinierte Funktionen oder Sichten), mit Systemtabellen, die Informationen zu Datentypen beinhalten, die in den zugrunde liegenden Tabellen verwendet werden (z.B. [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. Wenn der gesamte Code nicht bis zum vorherigen Punkt durchsucht werden kann, ändern Sie zum gleichen Zweck den Datentyp für die Tabelle entsprechend einer Variablen-/Parameterdeklaration.
 3. Gründe für die Nützlichkeit der folgenden Konstrukte:
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   -   Funktionen werden als Prädikate verwendet
   -   Platzhaltersuchen

@@ -19,12 +19,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88cfc841f3e8cdf2a04cccdc76eb3bbf7f5e2147
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: 76e375259132528b84cbc0cc85b1f61da49f9b93
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621781"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907836"
 ---
 # <a name="track-data-changes-sql-server"></a>Nachverfolgen von Datenänderungen (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "69621781"
   
  Wie in der folgenden Abbildung gezeigt, werden die an Benutzertabellen vorgenommenen Änderungen in entsprechenden Änderungstabellen aufgezeichnet. Diese Änderungstabellen stellen eine Übersicht über den Änderungsverlauf dar. Die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellten [Change Data Capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)-Funktionen ermöglichen die einfache und systematische Verarbeitung der Änderungsdaten.  
   
- ![Konzeptdarstellung von Change Data Capture](../../relational-databases/track-changes/media/cdcart1.gif "Conceptual illustration of change data capture")  
+ ![Konzeptdarstellung von Change Data Capture](../../relational-databases/track-changes/media/cdcart1.gif "Konzeptdarstellung von Change Data Capture")  
   
 ### <a name="security-model"></a>Sicherheitsmodell  
  In diesem Abschnitt wird das Sicherheitsmodell von Change Data Capture beschrieben.  
@@ -108,8 +108,6 @@ ms.locfileid: "69621781"
 1.  Stellen Sie sicher, dass für die Spiegelung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird.  
   
 2.  Erstellen Sie den Aufzeichnungsauftrag und den Cleanupauftrag für die Spiegelung, nachdem der Prinzipal einen Failover auf die Spiegelung durchgeführt hat. Verwenden Sie zum Erstellen der Aufträge die gespeicherte Prozedur [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Weitere Informationen zur Datenbankspiegelung finden Sie unter [ Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   

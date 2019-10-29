@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: f075ae6e8392b0eae2bb78da588c43f3a5c438b0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ecb0f89cb7093587feb9c7e57be56e2cafaee5a0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710629"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907581"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
 
@@ -60,12 +60,10 @@ Zunächst konfigurieren Sie SQL Server PolyBase für die Verwendung Ihres Hadoop
 
 2. Sie müssen SQL Server mithilfe von **services.msc** neu starten. Durch den Neustart von SQL Server werden folgende Dienste neu gestartet:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    - SQL Server PolyBase-Datenverschiebungsdienst  
    - SQL Server PolyBase-Engine  
   
-   ![Beenden und starten Sie PolyBase-Dienste in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+   ![Beenden und Starten von PolyBase-Diensten in „Services.msc“](../../relational-databases/polybase/media/polybase-stop-start.png "Beenden und Starten von PolyBase-Diensten in „Services.msc“")  
   
 ## <a id="pushdown"></a> Aktivieren der Weitergabeberechnung  
 

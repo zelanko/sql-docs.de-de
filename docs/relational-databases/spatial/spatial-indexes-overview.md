@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d1425b23b98ac0a81aaa0e6e848b405f06cc086
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929822"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909300"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "70929822"
   
  In der folgenden Abbildung wird dargestellt, wie die rechte obere Zelle auf jeder Ebene der Rasterhierarchie in ein Raster der Größe 4&nbsp;x&nbsp;4 zerlegt wird. In Wirklichkeit werden alle Zellen auf diese Art und Weise zerlegt. Wenn beispielsweise ein Raum in vier Ebenen von 4&nbsp;x&nbsp;4-Rastern zerlegt wird, resultieren daraus insgesamt 65.536&nbsp;Zellen auf Ebene&nbsp;4.  
   
- ![Vier Ebenen des rekursiven Mosaiks](../../relational-databases/spatial/media/spndx-recursive-levels-telescoped.gif "Four-levels of recursive tessellation")  
+ ![Vier Ebenen des rekursiven Mosaiks](../../relational-databases/spatial/media/spndx-recursive-levels-telescoped.gif "Vier Ebenen des rekursiven Mosaiks")  
   
 > [!NOTE]  
 >  Die Zerlegung des Raums in einen räumlichen Index ist unabhängig von der Maßeinheit, die die Anwendung verwendet.  
   
  Die Zellen einer Rasterhierarchie werden mithilfe einer Variante der Raum füllenden Hilbert-Kurve linear nummeriert. Zur Veranschaulichung wird hier jedoch eine einfache zeilenweise Nummerierung statt der durch die Hilbert-Kurve erzeugten Nummerierung verwendet. In der folgenden Abbildung wurden bereits verschiedene Polygone, die Gebäude darstellen, und Linien, die Straßen darstellen, in einem 4 x 4-Raster der Ebene 1 platziert. Die Zellen der Ebene 1 werden ab der linken oberen Zelle von 1 bis 16 nummeriert.  
   
- ![Polygone und Linien in einem 4x4-Raster der Ebene 1 platziert](../../relational-databases/spatial/media/spndx-level-1-objects.gif "Polygons and lines placed into a 4x4 level-1 grid")  
+ ![Polygone und Linien, platziert in einem 4x4-Raster der Ebene 1](../../relational-databases/spatial/media/spndx-level-1-objects.gif "Polygone und Linien, platziert in einem 4x4-Raster der Ebene 1")  
   
 #### <a name="grid-density"></a>Rasterdichte  
  Die Anzahl der Zellen entlang der Achsen eines Rasters bestimmt deren *Dichte*: je größer die Anzahl, desto dichter das Raster. Beispielsweise ist ein 8&nbsp;x&nbsp;8-Raster (das 64&nbsp;Zellen ergibt), dichter als ein 4&nbsp;x&nbsp;4-Raster(das 16&nbsp;Zellen ergibt). Die Rasterdichte wird pro Ebene definiert.  
@@ -89,7 +89,7 @@ ms.locfileid: "70929822"
 #### <a name="covering-rule"></a>Überlagerungsregel  
  Wenn ein Objekt eine Zelle völlig bedeckt, heißt es, dass die Zelle vom Objekt *überlagert* wird. In der folgenden Abbildung wird beispielsweise eine Zelle der zweiten Ebene (15.11) völlig vom mittleren Teil eines Oktagons überlagert.  
   
- ![Überlagerungsoptimierung](../../relational-databases/spatial/media/spndx-opt-covering.gif "Covering optimization")  
+ ![Überlagerungsoptimierung](../../relational-databases/spatial/media/spndx-opt-covering.gif "Überlagerungsoptimierung")  
   
  Überlagerte Zellen werden gezählt und im Index verzeichnet. Diese Zellen unterliegen dem Mosaikprozess nicht weiter.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "70929822"
   
  In der folgenden Abbildung wird ein relativ kleines rautenförmiges Polygon durch den Mosaikprozess unterteilt. Für den Index wird der vordefinierte Zellen-pro-Objekt-Grenzwert 16 verwendet, die bei diesem kleinen Objekt nicht erreicht wird. Deshalb wird der Mosaikprozess bis zu Ebene 4 fortgesetzt. Das Polygon befindet sich in den folgenden Zellen der Ebene 1 bis Ebene 3: 4, 4.4 und 4.4.10 und 4.4.14. Bei Verwendung der Tiefste-Zelle-Regel zählt das Mosaik jedoch nur die 12 Zellen auf Ebene 4: 4.4.10.13-15 und 4.4.14.1-3, 4.4.14.5-7 und 4.4.14.9-11.  
   
- ![Tiefste-Zelle-Optimierung](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "Deepest-cell optimization")  
+ ![Tiefste-Zelle-Optimierung](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "Tiefste-Zelle-Optimierung")  
   
 ###  <a name="schemes"></a> Mosaikschemas  
  Das Verhalten eines räumlichen Indexes hängt teilweise von seinem *Mosaikschema*ab. Das Mosaikschema ist datentypspezifisch. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden zwei Mosaikschemas für räumliche Indizes unterstützt:  
@@ -148,7 +148,7 @@ ms.locfileid: "70929822"
   
  Die folgende Abbildung zeigt die Punkte, die durch die Koordinaten **(** _x-min_ **,** _y-min_ **)** und **(** _x-max_ **,** _y-max_ **)** des umgebenden Felds definiert werden. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.  
   
- ![Umgebendes Feld mit Koordinaten und Zelle 0](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Bounding box showing coordinates and cell 0")  
+ ![Umgebendes Feld mit Koordinaten und Zelle 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Umgebendes Feld mit Koordinaten und Zelle 0.")  
   
  Ein umgebendes Feld entspricht zu einem gewissen Teil den räumlichen Daten einer Anwendung. Ob das umgebende Feld des Indexes die in der räumlichen Spalte gespeicherten Daten vollständig oder nur zum Teil enthält, hängt von der Anwendung ab. Nur Vorgänge, die mit Objekten berechnet werden, die vollständig im umgebenden Feld liegen, profitieren vom räumlichen Index. Damit der räumliche Index für eine **geometry** -Spalte den größtmöglichen Nutzen bietet, müssen Sie ein umgebendes Feld angeben, das alle oder die meisten Objekte enthält.  
   
@@ -170,15 +170,13 @@ ms.locfileid: "70929822"
   
 3.  Die vereinfachten Pyramiden werden verbunden, sodass sie eine nicht-euklidische Ebene bilden.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  In der folgenden Illustration wird dieser dreistufige Zerlegungsprozess schematisch dargestellt. In den Pyramiden stellen die gepunkteten Linien die Begrenzungen der vier Facetten jeder Pyramide dar. Die Schritte 1 und 2 veranschaulichen das geodätische Ellipsoid, wobei eine grüne waagrechte Linie den Breitengrad am Äquator und eine Reihe von grünen senkrechten Linien verschiedene Längengrade darstellt. Schritt&nbsp;1 zeigt die Pyramiden, die über die zwei Hemisphären projiziert werden. Schritt&nbsp;2 zeigt, wie die Pyramiden auf eine Ebene reduziert werden. Schritt&nbsp;3 veranschaulicht die reduzierten Pyramiden, nachdem diese zu einer Ebene kombiniert wurden, und zeigt einige projizierte Längengrade. Beachten Sie, dass diese projizierten Linien geglättet sind und eine unterschiedliche Länge haben, die davon abhängt, wo sie auf die Pyramiden auftreffen.  
   
- ![Projektion des Ellipsoids auf eine Ebene](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Projection of the ellipsoid onto a plane")  
+ ![Projektion des Ellipsoids auf eine Ebene](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Projektion des Ellipsoids auf eine Ebene")  
   
  Nachdem der Raum auf eine Ebene projiziert wurde, wird der Raum in die vier Ebenen umfassende Rasterhierarchie zerlegt. In anderen Ebenen können andere Rasterdichten verwendet werden. Die folgende Illustration zeigt die Ebene, nachdem sie in ein 4&nbsp;x&nbsp;4-Raster der Ebene&nbsp;1 zerlegt wurde. Zur Veranschaulichung werden die niedrigeren Ebenen der Rasterhierarchie hier weggelassen. In Wirklichkeit wird die Ebene vollständig in eine vier Ebenen umfassende Rasterhierarchie zerlegt. Nach Abschluss des Zerlegungsprozesses werden die geografischen Daten zeilenweise aus der geography-Spalte gelesen, und der Mosaikprozess wird wiederum für jedes Objekt durchgeführt.  
   
- ![Geografieraster der Ebene 1](../../relational-databases/spatial/media/spndx-geodetic-level1grid.gif "Level-1 geography grid")  
+ ![Geografieraster der Ebene 1](../../relational-databases/spatial/media/spndx-geodetic-level1grid.gif "Geografieraster der Ebene 1")  
   
 ##  <a name="methods"></a> Von räumlichen Indizes unterstützte Methoden  
   

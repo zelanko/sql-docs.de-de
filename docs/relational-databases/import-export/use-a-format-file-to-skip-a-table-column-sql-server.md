@@ -14,12 +14,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1e1c469b7864ed9a454cd8f18fa81903865be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024977"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909255"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +59,6 @@ Sie können eine Nicht-XML-Formatdatei oder eine XML-Formatdatei verwenden, um e
 
 2.   Ändern Sie die Standardformatdatei in einem Text-Editor.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 Die geänderte Formatdatei muss jedes vorhandene Feld der jeweiligen Spalte in der Zieltabelle zuordnen. Es muss ebenfalls angegeben werden, welche Tabellenspalte oder -spalten übersprungen werden sollen. 
 
 Um beispielsweise einen Massenimport von Daten aus `myTestSkipCol2.dat` in die Tabelle `myTestSkipCol` durchzuführen, muss die Formatdatei das erste Datenfeld `Col1` zuordnen, `Col2` überspringen und das zweite Feld `Col3` zuordnen.  
@@ -81,7 +79,7 @@ Mit dem zuvor angeführten Befehl wird die Nicht-XML-Formatdatei `myTestSkipCol_
   
  Im folgenden Screenshot werden Werte in diesen Beispiel-Standardformatzeichendateien gezeigt. 
   
- ![Standardmäßige Nicht-XML-Formatdatei für MyTextSkipCol](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "default non-XML format file for myTestSkipCol")  
+ ![Standardmäßige Nicht-XML-Formatdatei für „myTextSkipCol“](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "Standardmäßige Nicht-XML-Formatdatei für „myTextSkipCol“")  
   
 > [!NOTE]  
 >  Weitere Informationen zu Formatdateifeldern finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  

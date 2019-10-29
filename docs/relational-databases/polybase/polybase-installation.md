@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7823f9e76207802b7f05a21ccd11b5de1fa9d18d
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961968"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908667"
 ---
 # <a name="install-polybase-on-windows"></a>Installieren von PolyBase unter Windows
 
@@ -69,7 +69,7 @@ Wenn Sie PolyBase einmal installiert haben, können Sie dies nicht mehr ändern.
    
 3. Wählen Sie auf der Seite „Funktionsauswahl“ **PolyBase Query Service for External Data** (PolyBase-Abfragedienst für externe Daten).  
 
-   ![PolyBase-Dienste](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
+   ![PolyBase-Dienste](../../relational-databases/polybase/media/install-wizard.png "PolyBase-Dienste")  
    
    >[!NOTE]
    >SQL Server 2019 PolyBase enthält jetzt eine zusätzliche Option **Java-Connector für HDFS-Datenquellen**. Weitere Informationen zu diesem Feature finden Sie im [Blog zu SQL Server-Previewfunktionen](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/).
@@ -90,8 +90,6 @@ Wenn Sie PolyBase einmal installiert haben, können Sie dies nicht mehr ändern.
      Bei dieser Option werden auch Firewallverbindungen des Microsoft Distributed Transaction Coordinator (MSDTC) zugelassen und die MSDTC-Registrierungseinstellungen geändert.  
    
 6. Geben Sie auf der Seite PolyBase-Konfiguration den Portbereich mit mindestens sechs Ports an. SQL Server-Setup weist die ersten sechs verfügbaren Ports aus diesem Bereich zu.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > Nach der Installation müssen Sie das [PolyBase-Feature aktivieren](#enable).
