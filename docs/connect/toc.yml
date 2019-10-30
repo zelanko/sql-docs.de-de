@@ -2507,8 +2507,6 @@
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: Bereitstellen des JDBC-Treibers
           href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: Weitervertreiben des Microsoft JDBC-Treibers
-          href: ../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md
         - name: Suchen von zusätzlichen Informationen zum JDBC-Treiber
           href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
         - name: Supportmatrix für den Microsoft JDBC-Treiber für SQL Server
