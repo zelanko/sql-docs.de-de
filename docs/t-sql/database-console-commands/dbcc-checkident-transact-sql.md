@@ -29,12 +29,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: e6c1f37c72ad1ad5d375f86463fe630400ecf4a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a3c1885d6796977ea48585858fa5d2a271e6a46
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102018"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798372"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 
@@ -42,12 +42,14 @@ ms.locfileid: "68102018"
 
   Überprüft den aktuellen Identitätswert der angegebenen Tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und ändert ihn gegebenenfalls. Sie können DBCC CHECKIDENT auch verwenden, um manuell einen neuen aktuellen Identitätswert für die Identitätsspalte festzulegen.  
   
- ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Artikellinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```console
-  
+
+-- Syntax for SQL Server and Azure SQL Database  
+
 DBCC CHECKIDENT
  (
     table_name  
@@ -55,7 +57,17 @@ DBCC CHECKIDENT
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```console
+-- Syntax for Azure SQL Data Warehouse
+DBCC CHECKIDENT   
+ (   
+    table_name  
+        [RESEED, new_reseed_value ]   
+)  
+[ WITH NO_INFOMSGS ]  
+
+```
 ## <a name="arguments"></a>Argumente
 
  *table_name*  
@@ -73,7 +85,7 @@ DBCC CHECKIDENT
  WITH NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
  Die spezifischen Korrekturen, die am aktuellen Identitätswert vorgenommen werden, sind abhängig von den Parameterangaben.  
   

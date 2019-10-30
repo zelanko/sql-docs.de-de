@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c43f8296c6bb4d25c58ba65516601c37381d7b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082463"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916174"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE-Anweisungen (Transact-SQL)
 
@@ -312,7 +312,6 @@ RESTORE LOG kann eine Dateiliste einschließen, um das Erstellen von Dateien bei
 > Bei einer Datenbank, die das Modell der vollen oder massenprotokollierten Wiederherstellung verwendet, ist in den meisten Fällen die Sicherung des Protokollfragments erforderlich, bevor die Datenbank wiederhergestellt wird. Wenn eine Datenbank ohne vorherige Sicherung des Protokollfragments wiederhergestellt wird, tritt ein Fehler auf. Dies gilt nicht, wenn die RESTORE DATABASE-Anweisung die WITH REPLACE- oder die WITH STOPAT-Klausel enthält, in der eine Zeit oder Transaktion nach dem Ende der Datensicherung angegeben sein muss. Weitere Informationen zu Sicherungen des Protokollfragments finden Sie unter [Protokollfragmentsicherungen](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
 
 ### <a name="comparison-of-recovery-and-norecovery"></a>Vergleich zwischen RECOVERY und NORECOVERY
-
 Ein Rollback wird von der RESTORE-Anweisung über die Optionen [ RECOVERY | NORECOVERY ] gesteuert:
 
 - NORECOVERY gibt an, dass kein Rollback erfolgt. Damit kann das Rollforward die nächste Anweisung in der Sequenz fortsetzen.
@@ -321,10 +320,9 @@ Ein Rollback wird von der RESTORE-Anweisung über die Optionen [ RECOVERY | NORE
 
 - RECOVERY (die Standardeinstellung) gibt an, dass das Rollback erst dann ausgeführt werden kann, wenn das Rollforward für die aktuelle Sicherung abgeschlossen ist.
 
-  Das Wiederherstellen der Datenbank erfordert, dass die gesamte Gruppe der wiederhergestellten Daten (*Rollforwardgruppe*) mit der Datenbank konsistent ist. Wenn das Rollforward für die Rollforwardgruppe nicht weit genug ausgeführt wurde, um die Konsistenz mit der Datenbank herzustellen, und wenn RECOVERY angegeben ist, dann gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus.
+  Das Wiederherstellen der Datenbank erfordert, dass die gesamte Gruppe der wiederhergestellten Daten (*Rollforwardgruppe*) mit der Datenbank konsistent ist. Wenn das Rollforward für die Rollforwardgruppe nicht weit genug ausgeführt wurde, um die Konsistenz mit der Datenbank herzustellen, und wenn RECOVERY angegeben ist, dann gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus. Informationen zum Wiederherstellungsprozess finden Sie unter [ (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ## <a name="compatibility-support"></a>Kompatibilitätsunterstützung
-
 Sicherungen der Datenbanken **master**, **model** und **msdb**, die mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurden, können von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht wiederhergestellt werden.
 
 > [!NOTE]
@@ -337,14 +335,11 @@ Nachdem Sie eine Datenbank einer früheren Version in [!INCLUDE[ssCurrent](../..
 Wird eine Datenbank zum ersten Mal an eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt oder wiederhergestellt, ist noch keine Kopie des Datenbank-Hauptschlüssels (verschlüsselt vom Diensthauptschlüssel) auf dem Server gespeichert. Der Datenbank-Hauptschlüssel (Database Master Key, DMK) muss mithilfe der Anweisung **OPEN MASTER KEY** entschlüsselt werden. Nachdem der Datenbank-Hauptschlüssel entschlüsselt wurde, können Sie für die Zukunft die automatische Entschlüsselung aktivieren, indem Sie die Anweisung **ALTER MASTER KEY REGENERATE** verwenden. Auf diese Weise können Sie eine Kopie des mit dem Diensthauptschlüssel (Service Master Key, SMK) verschlüsselten Datenbank-Hauptschlüssels für den Server bereitstellen. Wenn eine Datenbank von einer früheren Version aktualisiert wurde, sollte der DMK neu generiert werden, damit er den neueren AES-Algorithmus verwendet. Weitere Informationen zum Neugenerieren des DMK finden Sie unter [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). Die zum Neugenerieren des DMK zum Upgrade auf AES erforderliche Zeit hängt von der Anzahl der Objekte ab, die durch den DMK geschützt werden. Der DMK muss nur einmal auf AES aktualisiert und neu generiert werden. Dies hat keine Auswirkungen auf zukünftige Neugenerierungen im Rahmen einer Schlüsselrotationsstrategie.
 
 ## <a name="general-remarks"></a>Allgemeine Hinweise
-
 Wenn bei einer Offlinewiederherstellung die angegebene Datenbank verwendet wird, zwingt RESTORE die Benutzer nach einer kurzen Verzögerung zum Beenden der Datenbankverwendung. Bei der Onlinewiederherstellung einer nicht primären Dateigruppe kann die Datenbank weiter verwendet werden, es sei denn, die zu wiederherstellende Dateigruppe wird offline geschaltet. Alle in der angegebenen Datenbank vorhandenen Daten werden durch die wiederhergestellten Daten ersetzt.
-
-Weitere Informationen zur Datenbankwiederherstellung finden Sie unter [Übersicht über Wiederherstellungsvorgänge](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
 Wiederherstellungsvorgänge über Plattformen hinweg, sogar zwischen unterschiedlichen Prozessortypen, können ausgeführt werden, solange die Sortierung der Datenbank vom Betriebssystem unterstützt wird.
 
-RESTORE kann nach einem Fehler neu gestartet werden. Außerdem können Sie RESTORE anweisen, den Vorgang auch bei Fehlern fortzusetzen und so viele Daten wie möglich wiederherzustellen (siehe die Option CONTINUE_AFTER_ERROR).
+RESTORE kann nach einem Fehler neu gestartet werden. Außerdem können Sie RESTORE anweisen, den Vorgang auch bei Fehlern fortzusetzen und so viele Daten wie möglich wiederherzustellen (siehe die Option `CONTINUE_AFTER_ERROR`).
 
 RESTORE ist nicht in einer expliziten oder implizierten Transaktion zulässig.
 
@@ -384,7 +379,6 @@ Die RESTORE-Anweisung kann auch für folgende Wiederherstellungen verwendet werd
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält Tabellen mit Sicherungs- und Wiederherstellungsverlauf, in denen die Sicherungs- und Wiederherstellungsaktivität für jede Serverinstanz nachverfolgt wird. Beim Ausführen einer Wiederherstellung werden auch die Tabellen mit Sicherungsverläufen geändert. Informationen zu diesen Tabellen finden Sie unter [Sicherungsverlauf und Headerinformationen](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).
 
 ## <a name="REPLACEoption"></a> Auswirkung der REPLACE-Option
-
 REPLACE sollte selten und nur nach sorgfältiger Überlegung verwendet werden. Die Wiederherstellung verhindert normalerweise, dass eine Datenbank versehentlich durch eine andere Datenbank überschrieben wird. Wenn die in einer RESTORE-Anweisung angegebene Datenbank bereits auf dem aktuellen Server vorhanden ist und sich die angegebene GUID der Datenbankfamilie von der im Sicherungssatz aufgezeichneten GUID der Datenbankfamilie unterscheidet, wird die Datenbank nicht wiederhergestellt. Dies ist ein wichtiges Sicherheitselement.
 
 Die Option REPLACE überschreibt verschiedene wichtige Sicherheitsprüfungen, die die Wiederherstellung normalerweise ausführt. Folgende Prüfungen werden überschrieben:
@@ -402,13 +396,11 @@ Die Option REPLACE überschreibt verschiedene wichtige Sicherheitsprüfungen, di
   Beispielsweise könnten irrtümlicherweise Dateien des falschen Typs (z. B. XLS-Dateien) oder Dateien, die von einer anderen Datenbank verwendet werden, die zurzeit nicht online ist, überschrieben werden. Willkürliche Datenverluste sind möglich, wenn vorhandene Dateien überschrieben werden, auch wenn die wiederhergestellte Datenbank vollständig ist.
 
 ## <a name="redoing-a-restore"></a>Wiederholen einer Wiederherstellung
-
 Eine Wiederherstellung kann nicht rückgängig gemacht werden. Sie können jedoch die Auswirkungen des Datenkopiervorgangs und des Rollforwards negieren, indem Sie noch einmal beginnen und pro Datei vorgehen. Um noch einmal zu starten, stellen Sie die gewünschte Datei wieder her und führen dann erneut das Rollforward aus. Wenn Sie beispielsweise versehentlich zu viele Protokollsicherungen wiederhergestellt haben und über den beabsichtigten Endpunkt hinausgegangen sind, müssen Sie die Sequenz neu starten.
 
 Eine Wiederherstellungssequenz kann abgebrochen und neu gestartet werden, indem der gesamte Inhalt der betroffenen Dateien wiederhergestellt wird.
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>Wiederherstellen einer Datenbank aus einer Datenbank-Momentaufnahme
-
 Über einen *Datenbank-Wiederherstellungsvorgang* (angegeben mithilfe der Option DATABASE_SNAPSHOT) wird eine Datenbank mit einer vollständigen Quelle in einen früheren Zustand versetzt, indem sie auf den Zeitpunkt einer Datenbankmomentaufnahme wiederhergestellt wird. Das bedeutet, dass die Quelldatenbank mit Daten von dem Zeitpunkt überschrieben wird, der in der angegebenen Datenbankmomentaufnahme erfasst ist. Derzeit darf nur die Momentaufnahme vorhanden sein, aus der Sie die Datenbank wiederherstellen. Bei diesem Wiederherstellungsvorgang wird das Protokoll neu erstellt (deshalb können Sie für eine wiederhergestellte Datenbank später kein Rollforward bis zum Punkt des Benutzerfehlers durchführen).
 
 Der Datenverlust beschränkt sich auf Updates der Datenbank, die nach der Erstellung der Momentaufnahme vorgenommen wurden. Die Metadaten einer wiederhergestellten Datenbank sind dieselben wie die Metadaten zum Zeitpunkt der Momentaufnahmeerstellung. Durch das Wiederherstellen einer Momentaufnahme werden jedoch alle Volltextkataloge gelöscht.
@@ -416,7 +408,6 @@ Der Datenverlust beschränkt sich auf Updates der Datenbank, die nach der Erstel
 Die Wiederherstellung von einer Datenbankmomentaufnahme ist nicht für die Medienwiederherstellung vorgesehen. Im Gegensatz zu einem normalen Sicherungssatz ist die Datenbankmomentaufnahme eine unvollständige Kopie der Datenbankdateien. Wenn die Datenbank oder die Datenbankmomentaufnahme beschädigt ist, ist die Wiederherstellung von einer Momentaufnahme vermutlich unmöglich. Zudem ist es eher unwahrscheinlich, dass das Problem durch eine Wiederherstellung im Falle einer Beschädigung behoben wird, selbst wenn eine Wiederherstellung möglich ist.
 
 ### <a name="restrictions-on-reverting"></a>Einschränkungen zur Wiederherstellung
-
 Die Wiederherstellung wird unter folgenden Bedingungen nicht unterstützt:
 
 - Die Quelldatenbank enthält schreibgeschützte oder komprimierte Dateigruppen.
@@ -426,19 +417,18 @@ Die Wiederherstellung wird unter folgenden Bedingungen nicht unterstützt:
 Weitere Informationen finden Sie unter [Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).
 
 ## <a name="security"></a>Security
-
 Bei einem Sicherungsvorgang können optional Kennwörter für einen Mediensatz, einen Sicherungssatz oder für beides angegeben werden. Wurde ein Kennwort für einen Mediensatz oder Sicherungssatz definiert, müssen die richtigen Kennwörter in der RESTORE-Anweisung angegeben werden. Über diese Kennwörter werden nicht autorisierte Wiederherstellungsoptionen und unbefugtes Anfügen von Sicherungssätzen an Medien mithilfe der Tools von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhindert. Kennwortgeschützte Medien können nicht mit der Option FORMAT der BACKUP-Anweisung überschrieben werden.
 
 > [!IMPORTANT]
 > Dieses Kennwort bietet also nur unzureichenden Schutz. Es soll vermeiden, dass autorisierte wie nicht autorisierte Benutzer mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tools fehlerhafte Wiederherstellungen durchführen. Es verhindert jedoch nicht das Lesen der Sicherungsdaten mit anderen Mitteln oder das Ersetzen des Kennworts. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Eine bewährte Methode für den Schutz von Sicherungen ist das Verwahren von Sicherungsbändern an einem sicheren Ort oder das Sichern in Datenträgerdateien, die durch eine adäquate Zugriffssteuerungsliste (ACL, Access Control List) geschützt sind. Die ACLs sollten für den Verzeichnisstamm eingerichtet werden, unter dem die Sicherungen erstellt werden.
+
 > [!NOTE]
 > Spezifische Informationen zur Sicherung und Wiederherstellung von SQL Server in Microsoft Azure Blob Storage finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
 ### <a name="permissions"></a>Berechtigungen
+Ist die wiederherzustellende Datenbank nicht vorhanden, muss der Benutzer über `CREATE DATABASE`-Berechtigungen verfügen, um RESTORE ausführen zu können. Ist die Datenbank vorhanden, werden RESTORE-Berechtigungen standardmäßig den Mitgliedern der festen Serverrollen `sysadmin` und `dbcreator` sowie dem Besitzer (`dbo`) der Datenbank erteilt (für die Option `FROM DATABASE_SNAPSHOT` ist die Datenbank immer vorhanden).
 
-Ist die wiederherzustellende Datenbank nicht vorhanden, muss der Benutzer über CREATE DATABASE-Berechtigungen verfügen, um RESTORE ausführen zu können. Ist die Datenbank vorhanden, werden RESTORE-Berechtigungen standardmäßig den Mitgliedern der festen Serverrollen **sysadmin** und **dbcreator** sowie dem Besitzer (**dbo**) der Datenbank erteilt (für die Option FROM DATABASE_SNAPSHOT ist die Datenbank immer vorhanden).
-
-RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.
+RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle `db_owner` nicht über RESTORE-Berechtigungen.
 
 ## <a name="examples"></a> Beispiele
 
@@ -625,7 +615,7 @@ Im folgenden Beispiel wird eine Datenbank mit dem Namen `MyDatabase` wiederherge
 Die Datenbanksicherung ist der neunte Sicherungssatz im Mediensatz auf einem logischen Sicherungsmedium mit dem Namen `MyDatabaseBackups`. Anschließend werden drei Protokollsicherungen, die sich in den nächsten drei Sicherungssätzen (`10`, `11` und `12`) im Medium `MyDatabaseBackups` befinden, mit `WITH NORECOVERY` wiederhergestellt. Nach dem Wiederherstellen der letzten Protokollsicherung wird die Datenbank wiederhergestellt.
 
 > [!NOTE]
-> Die Wiederherstellung wird in einem separaten Schritt ausgeführt, um zu vermeiden, dass sie zu früh ausgeführt wird, d. h., bevor alle Protokollsicherungen wiederhergestellt wurden.
+> Die Wiederherstellung wird in einem separaten Schritt ausgeführt, um zu vermeiden, dass sie zu früh ausgeführt wird, d. h., bevor alle Protokollsicherungen wiederhergestellt wurden. Informationen zum Wiederherstellungsprozess finden Sie unter [ (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 Beachten Sie, dass in der `RESTORE DATABASE`-Anweisung zwei Typen von `FILE`-Optionen vorhanden sind. Mit den `FILE`-Optionen vor dem Namen des Sicherungsmediums werden die logischen Dateinamen der Datenbankdateien angegeben, die aus dem Sicherungssatz wiederhergestellt werden sollen, beispielsweise `FILE = 'MyDatabase_data_1'`. Dieser Sicherungssatz ist nicht die erste Datenbanksicherung im Mediensatz. Daher wird seine Position im Mediensatz mit der Option `FILE` in der `WITH`-Klausel angegeben: `FILE=9`.
 
@@ -683,7 +673,8 @@ Weitere Informationen finden Sie unter [Wiederherstellen einer Datenbank zu eine
 
 Die drei folgenden Beispiele umfassen die Verwendung des Microsoft Azure-Speicherdiensts. Der Speicherkontoname lautet `mystorageaccount`. Der Container für Datendateien heißt `myfirstcontainer`. Der Container für Sicherungsdateien heißt `mysecondcontainer`. Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Auflistungsrechten für jeden Container erstellt. Die SQL Server Anmeldeinformationen wurden mit einer gespeicherten Zugriffssignatur erstellt, die der gespeicherten Zugriffsrichtlinie zugeordnet ist. Spezifische Informationen zur Sicherung und Wiederherstellung von SQL Server in Microsoft Azure Blob Storage finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
-**K1. Wiederherstellen einer vollständigen Datenbanksicherung aus dem Microsoft Azure-Speicherdienst** Eine vollständige Datenbanksicherung in `mysecondcontainer` von `Sales` wird in `myfirstcontainer` wiederhergestellt. `Sales` ist auf dem Server derzeit nicht vorhanden.
+**K1. Wiederherstellen einer vollständigen Datenbanksicherung aus dem Microsoft Azure-Speicherdienst**    
+Eine vollständige Datenbanksicherung in `mysecondcontainer` von `Sales` wird in `myfirstcontainer` wiederhergestellt. `Sales` ist auf dem Server derzeit nicht vorhanden.
 
 ```sql
 RESTORE DATABASE Sales
@@ -717,18 +708,19 @@ RESTORE DATABASE Sales
 
 ## <a name="more-information"></a>Weitere Informationen
 
-- [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [Sichern und Wiederherstellen von Systemdatenbanken (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
-- [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
-- [Sichern und Wiederherstellen von Volltextkatalogen und Indizes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)
-- [Sichern und Wiederherstellen von replizierten Datenbanken](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
-- [BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)
-- [Mediensätze, Medienfamilien und Sicherungssätze](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
-- [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)
-- [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
-- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
-- [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
-- [Sicherungsverlauf und Headerinformationen](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
+[Übersicht über Wiederherstellungsvorgänge (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)     
+[Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)    
+[Sichern und Wiederherstellen von Systemdatenbanken (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)      
+[Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)     
+[Sichern und Wiederherstellen von Volltextkatalogen und Indizes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)      
+[Sichern und Wiederherstellen von replizierten Datenbanken](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)      
+[BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)      
+[Mediensätze, Medienfamilien und Sicherungssätze](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)      
+[RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)     
+[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)     
+[RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)     
+[RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)     
+[Sicherungsverlauf und Headerinformationen](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -806,19 +798,17 @@ Diese Einschränkungen gelten:
 Weitere Informationen finden Sie unter [verwaltete Instanz](/azure/sql-database/sql-database-managed-instance).
 
 ## <a name="restoring-an-encrypted-database"></a>Wiederherstellen einer verschlüsselten Datenbank
-
 Um eine verschlüsselte Datenbank wiederherstellen zu können, muss das Zertifikat oder der asymmetrische Schlüssel verfügbar sein, das oder der zum Verschlüsseln der Datenbank verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel kann die Datenbank nicht wiederhergestellt werden. Darum muss das Zertifikat, das zur Verschlüsselung des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, so lange beibehalten werden, wie die Sicherung benötigt wird. Weitere Informationen finden Sie unter [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 
 ## <a name="permissions"></a>Berechtigungen
-
-Der Benutzer muss über CREATE DATABASE-Berechtigungen verfügen, um RESTORE ausführen zu können.
+Der Benutzer muss über `CREATE DATABASE`-Berechtigungen verfügen, um RESTORE ausführen zu können.
 
 ```sql
 CREATE LOGIN mylogin WITH PASSWORD = 'Very Strong Pwd123!';
 GRANT CREATE ANY DATABASE TO [mylogin];
 ```
 
-RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.
+RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle `db_owner` nicht über RESTORE-Berechtigungen.
 
 ## <a name="examples"></a> Beispiele
 
@@ -935,8 +925,7 @@ RESTORE HEADERONLY Gibt an, dass nur die Headerinformationen für die Sicherung 
 Die RESTORE HEADERONLY-Ergebnisse entsprechen dem Muster der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-RESTORE HEADERONLY-Ergebnisse. Das Ergebnis enthält mehr als 50 Spalten, die nicht alle von [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verwendet werden. Eine Beschreibung der Spalten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-RESTORE HEADERONLY-Ergebnisse finden Sie unter [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).
 
 ## <a name="permissions"></a>Berechtigungen
-
-Erfordert die **CREATE ANY DATABASE**-Berechtigung.
+Erfordert die `CREATE ANY DATABASE`-Berechtigung.
 
 Es ist ein Windows-Konto mit der Berechtigung erforderlich, auf das Sicherungsverzeichnis zuzugreifen und es zu lesen. Sie müssen außerdem den Windows-Kontonamen und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichern.
 
@@ -983,14 +972,13 @@ Für diese Einschränkungen gilt: Die Quellappliance ist die Appliance, von der 
 - Es ist nicht möglich, eine Sicherung, die auf einer Appliance mit SQL Server 2012 PDW-Hardware erstellt wurde, auf einer Appliance mit SQL Server 2008 R2-Hardware wiederherzustellen. Dies gilt auch, wenn die Appliance ursprünglich mit der SQL Server 2008 R2-PDW-Hardware gekauft wurde und mittlerweile mit SQL Server 2012 PDW-Software ausgeführt wird.
 
 ## <a name="locking"></a>Sperren
-
 Sperrt exklusiv das DATABASE-Objekt.
 
 ## <a name="examples"></a>Beispiele
 
 ### <a name="a-simple-restore-examples"></a>A. Einfache Beispiele für RESTORE
 
-Im folgenden Beispiel wird eine vollständige Sicherung auf einer `SalesInvoices2013`-Datenbank wiederhergestellt. Die Sicherungsdateien werden im Verzeichnis „\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full“ gespeichert. Die Datenbank „SalesInvoices2013“ darf auf der Zielappliance nicht bereits vorhanden sein. Andernfalls erzeugt dieser Befehl einen Fehler.
+Im folgenden Beispiel wird eine vollständige Sicherung auf einer `SalesInvoices2013`-Datenbank wiederhergestellt. Die Sicherungsdateien werden im Verzeichnis `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` gespeichert. Die Datenbank „SalesInvoices2013“ darf auf der Zielappliance nicht bereits vorhanden sein. Andernfalls erzeugt dieser Befehl einen Fehler.
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1001,7 +989,7 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 
 Im folgenden Beispiel wird zunächst eine vollständige, anschließend eine differenzielle Sicherung auf der Datenbank „SalesInvoices2013“ wiederhergestellt.
 
-Die vollständige Sicherung der Datenbank wird von der vollständigen Sicherung im Verzeichnis „\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full“ wiederhergestellt. Nach der erfolgreichen Wiederherstellung wird die differenzielle Sicherung auf der Datenbank „SalesInvoices2013“ wiederhergestellt. Die differenzielle Sicherung wird im Verzeichnis „\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff“ gespeichert.
+Die vollständige Sicherung der Datenbank wird von der vollständigen Sicherung im Verzeichnis `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` wiederhergestellt. Nach der erfolgreichen Wiederherstellung wird die differenzielle Sicherung auf der Datenbank „SalesInvoices2013“ wiederhergestellt. Die differenzielle Sicherung wird im Verzeichnis `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` gespeichert.
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1013,7 +1001,7 @@ RESTORE DATABASE SalesInvoices2013
 
 ### <a name="c-restoring-the-backup-header"></a>C. Wiederherstellen des Sicherungsheaders
 
-In diesem Beispiel werden die Headerinformationen für die Datenbanksicherung „\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full“ wiederhergestellt. Der Befehl ergibt eine Zeile mit Informationen für die Sicherung von „Invoices2013Full“.
+In diesem Beispiel werden die Headerinformationen für die Datenbanksicherung `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` wiederhergestellt. Der Befehl ergibt eine Zeile mit Informationen für die Sicherung von „Invoices2013Full“.
 
 ```sql
 RESTORE HEADERONLY
@@ -1024,7 +1012,6 @@ RESTORE HEADERONLY
 Sie können die Headerinformationen verwenden, um den Inhalt einer Sicherung zu überprüfen. Sie können damit auch sicherstellen, dass die Zielappliance für die Wiederherstellung mit der Quellappliance der Sicherung kompatibel ist, bevor Sie mit dem Wiederherstellen der Sicherung beginnen.
 
 ## <a name="see-also"></a>Weitere Informationen
-
-- [BACKUP DATABASE – Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)
+[BACKUP DATABASE – Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
 
 ::: moniker-end

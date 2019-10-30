@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 30a66dbcf9126031caa84cdf0ff7623d2dd16046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927770"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689835"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Datentypsynonyme (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Synonyme für Datentypen werden für die ISO-Kompatibilität in [!INCLUDE[ssNoVe
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-Synonyme für Datentypen können in DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) statt der entsprechenden Basisdatentypnamen verwendet werden. Zu diesen Anweisungen zählen CREATE TABLE, CREATE PROCEDURE und DECLARE *@variable* . Die Synonyme sind allerdings nicht sichtbar, nachdem die Objekte erstellt wurden. Wenn ein Objekt erstellt wird, wird ihm der Basisdatentyp zugewiesen, der dem Synonym zugeordnet ist. Es gibt keinen Protokolleintrag, dem entnommen werden kann, dass das Synonym in der Anweisung angegeben wurde, mit der das Objekt erstellt wurde.
+Synonyme für Datentypen können in DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) statt der entsprechenden Basisdatentypnamen verwendet werden. Zu diesen Anweisungen zählen CREATE TABLE, CREATE PROCEDURE und DECLARE *\@variable*. Die Synonyme sind allerdings nicht sichtbar, nachdem die Objekte erstellt wurden. Wenn ein Objekt erstellt wird, wird ihm der Basisdatentyp zugewiesen, der dem Synonym zugeordnet ist. Es gibt keinen Protokolleintrag, dem entnommen werden kann, dass das Synonym in der Anweisung angegeben wurde, mit der das Objekt erstellt wurde.
   
 Objekten, die von einem Originalobjekt abgeleitet wurden, wie z. B. Spalten eines Resultsets oder Ausdrücke, ist der Basisdatentyp zugewiesen. Alle Metadatenfunktionen, die das Originalobjekt oder jegliches abgeleitete Objekt verwenden, melden den Basisdatentyp, nicht das Synonym, einschließlich:
 

@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41cc9d68ad0ad9c39795f156a17291ce6cdeb33f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099791"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798408"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ Aktualisiert eine Abfrageoptimierungsstatistik für eine Tabelle oder indizierte
   
 Durch das Update von Statistiken wird sichergestellt, dass Abfragen anhand aktueller Statistiken kompiliert werden. Dies führt jedoch dazu, dass Abfragen neu kompiliert werden. Es empfiehlt sich, Statistiken nicht zu oft zu aktualisieren und die Vorteile optimierter Abfragepläne gegen den Zeitaufwand für die Neukompilierung von Abfragen abzuwägen. Die Entscheidung hängt von der verwendeten Anwendung ab. `UPDATE STATISTICS`-Vorgänge können mithilfe von tempdb die Stichprobenzeilen zum Erstellen von Statistiken sortieren.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -125,6 +125,9 @@ Bei **ON** behalten die Statistiken den festgelegten Prozentsatz für die Stichp
  > Wenn AUTO_UPDATE_STATISTICS ausgeführt wird, wird der beibehaltene Prozentsatz für die Stichprobenentnahme verwendet, wenn er verfügbar ist. Wenn er nicht verfügbar ist, wird der Standardprozentsatz verwendet.
  > Das Verhalten von RESAMPLE wird von dieser Option nicht beeinflusst.
  
+ > [!NOTE]
+ > Wenn die Tabelle abgeschnitten wird, übernehmen alle Statistiken, die basierend auf dem abgeschnittenen HoBT erstellt wurden, wieder den Standardstichproben-Prozentsatz.
+ 
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) und [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) machen den beibehaltenen Prozentwert für die Stichprobenentnahme der ausgewählten Statistik verfügbar.
  
@@ -180,7 +183,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="when-to-use-update-statistics"></a>Wann UPDATE STATISTICS verwendet werden sollte  
  Weitere Informationen zur Verwendung von `UPDATE STATISTICS` finden Sie unter [Statistiken](../../relational-databases/statistics/statistics.md).  
