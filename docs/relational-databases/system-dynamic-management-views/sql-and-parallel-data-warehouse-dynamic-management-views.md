@@ -1,5 +1,5 @@
 ---
-title: SQL und Parallel Data Warehouse-dynamische Verwaltungssichten | Microsoft-Dokumentation
+title: SQL and Parallel Data Warehouse Dynamic Management Views | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ ms.assetid: e713365e-d44c-4b66-84c9-81a1bcc32414
 author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b7918fc747ee1886ab6cb45f667d304112bf6f7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 481896da6b53189a7b54f2cb770b0c3a29031d37
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937099"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142737"
 ---
-# <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>Dynamische Verwaltungssichten von SQL und Parallel Datawarehouse
+# <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>SQL and Parallel Data Warehouse Dynamic Management Views
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Dieses Thema enthält die [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dynamische Verwaltungssichten (DMVs).  
+This topic lists the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dynamic management views (DMVs).  
   
- Alle [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] DMVs beginnen mit **sys.dm_pdw**.  
+ All [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] DMVs begin with **sys.dm_pdw**.  
   
-## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dynamische Verwaltungssichten  
- Die folgenden dynamischen Verwaltungssichten gelten für beide [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
+## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Dynamic Management Views  
+ The following dynamic management views apply to both [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
  [sys.dm_pdw_dms_cores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md)  
   
@@ -64,9 +64,21 @@ ms.locfileid: "67937099"
  [sys.dm_pdw_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
   
  [sys.dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
-  
-## <a name="includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Dynamische Verwaltungssichten  
- Die folgenden dynamischen Verwaltungssichten gelten für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nur:  
+
+## <a name="sql-data-warehouse-dynamic-management-views"></a>SQL Data Warehouse Dynamic Management Views
+[sys.dm_pdw_nodes_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md)  
+
+[sys.dm_pdw_nodes_exec_query_profiles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md)  
+
+[sys.dm_pdw_nodes_exec_query_statistics_xml &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-statistics-xml-transact-sql.md)  
+
+[sys.dm_pdw_nodes_exec_sql-text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-sql-text-transact-sql.md)  
+
+[sys.dm_pdw_nodes_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md)  
+
+
+## <a name="includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Dynamic Management Views  
+ The following dynamic management views apply to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:  
   
  [sys.dm_pdw_component_health_active_alerts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)  
   
@@ -88,7 +100,7 @@ ms.locfileid: "67937099"
   
  [sys.dm_pdw_query_stats_xe_file &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-file-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

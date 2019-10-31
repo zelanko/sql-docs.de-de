@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: aba6990fbed5b24d63d4ab5c16e192718aeff305
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68714682"
@@ -73,7 +73,7 @@ Erstellen Sie eine gespeicherte Prozedur, die den *prättipbatchmode*generiert, 
 
     + Sie verwenden eine SELECT-Anweisung, um das gespeicherte Modell aus einer SQL-Tabelle aufzurufen. Das Modell wird aus der Tabelle als **varbinary (max)** -Daten abgerufen, die in der SQL-Variablen  _\@lmodel2_gespeichert sind und als Parameter *mod* an die gespeicherte System Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)übergeben werden.
 
-    + Die Daten, die als Eingaben für die Bewertung verwendet werden, werden als SQL-Abfrage definiert und als Zeichenfolge in der SQL-Variablen  _\@Eingabe_gespeichert. Wenn Daten aus der Datenbank abgerufen werden, werden Sie in einem Datenrahmen mit dem Namen input *DataSet*gespeichert, der lediglich der Standardname für die Eingabedaten für die [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) -Prozedur ist. Sie können bei Bedarf einen anderen Variablennamen definieren, indem Sie den Parameter  *_\@input_data_1_name_* verwenden.
+    + Die Daten, die als Eingaben für die Bewertung verwendet werden, werden als SQL-Abfrage definiert und als Zeichenfolge in der SQL-Variablen  _\@Eingabe_gespeichert. Wenn Daten aus der Datenbank abgerufen werden, werden Sie in einem Datenrahmen mit dem Namen input *DataSet*gespeichert, der lediglich der Standardname für die Eingabedaten für die [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) -Prozedur ist. Sie können bei Bedarf einen anderen Variablennamen definieren, indem Sie den Parameter *_\@input_data_1_name_* verwenden.
 
     + Um die Ergebnisse zu generieren, ruft die gespeicherte Prozedur die RX-Vorhersagefunktion aus der **revoscaler** -Bibliothek auf.
 

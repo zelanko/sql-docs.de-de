@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5ffc2773144d2b1a170e2f087d7abf607af99ef6
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
+ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049859"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182632"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Erfassen von Daten in einem SQL Server-Daten Pool mit Spark-Aufträgen
 
@@ -131,9 +131,9 @@ Im nächsten Schritt erstellen Sie einen Spark-Streamingauftrag, der Webclickstr
 
 Die folgenden Schritte zeigen, dass der Spark-Streamingauftrag die Daten aus HDFS in den Datenpool geladen hat.
 
-1. Bevor Sie die erfassten Daten abfragen, sehen Sie sich die Ausgabe des Aufgabenverlaufs an, um sicherzustellen, dass der Auftrag abgeschlossen wurde.
+1. Bevor Sie die erfassten Daten Abfragen, betrachten Sie den Spark-Ausführungs Status, einschließlich der Yarn-APP-ID, der Spark-Benutzeroberfläche und der Treiber Protokolle.
 
-   ![Spark-Auftragsverlauf](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Details zur Spark-Ausführung](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. Wechseln Sie zurück zum Abfragefenster der SQL Server-Masterinstanz, das Sie zu Beginn des Tutorials geöffnet haben.
 
