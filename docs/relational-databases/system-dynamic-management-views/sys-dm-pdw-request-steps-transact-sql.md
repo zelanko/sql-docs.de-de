@@ -1,5 +1,5 @@
 ---
-title: dm_pdw_request_steps (Transact-SQL) | Microsoft-Dokumentation
+title: sys. DM _pdw_request_steps (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2017
 ms.prod: sql
@@ -12,36 +12,36 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ae1a8aa94eebe6eae203c0b09641b13a18eca9d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 260b822d111f94fc567704cd908cb5632e3bdcaf
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899157"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240775"
 ---
-# <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
+# <a name="sysdm_pdw_request_steps-transact-sql"></a>sys. DM _pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen über alle Schritte, die eine bestimmte Anforderung erstellen, oder -Abfrage im [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Sie enthält eine Zeile pro abfrageschritt.  
+  Enthält Informationen zu allen Schritten, die eine bestimmte Anforderung oder Abfrage in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]bilden. Es wird eine Zeile pro Abfrage Schritt aufgelistet.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Column Name|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|Anforderungs-ID und Step_index stellen Sie den Schlüssel für diese Sicht.<br /><br /> Eindeutige numerische Id der Anforderung zugeordnet ist.|Finden Sie im Anforderungs-ID [dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|step_index|**int**|Anforderungs-ID und Step_index stellen Sie den Schlüssel für diese Sicht.<br /><br /> Die Position dieses Schritts in der Reihenfolge der Schritte, aus denen die Anforderung besteht.|0, um (n-1) für eine Anforderung mit n Schritten.|  
-|operation_type|**nvarchar(35)**|Typ des Vorgangs, der durch diesen Schritt dargestellt.|**DMS Query Plan Operations:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **SQL-Abfrage-Plan-Vorgänge:** 'OnOperation', 'RemoteOperation'<br /><br /> **Andere Vorgänge für den Abfrage-Plan:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Externe Vorgänge für Lesevorgänge:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Externe für MapReduce-Vorgänge:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Externe Vorgänge für Schreibvorgänge:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Weitere Informationen finden Sie unter "Grundlegendes zu Abfragepläne" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
-|distribution_type|**nvarchar(32)**|Die Art der Verteilung, die ausgeführt wird, dass Sie diesen Schritt.|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
-|location_type|**nvarchar(32)**|Gibt an, in dem der Schritt ausgeführt wird.|'Compute', 'Control', 'DMS'|  
-|status|**nvarchar(32)**|Der Status dieses Schritts.|Ausstehend "," wird ausgeführt, abgeschlossen, Fehler, UndoFailed, PendingCancel abgebrochen, rückgängig gemacht werden, wurde abgebrochen|  
-|error_id|**nvarchar(36)**|Eindeutige Id des Fehlers mit diesem Schritt verknüpft ist, sofern vorhanden.|Finden Sie unter Fehler-ID des [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). NULL, wenn kein Fehler aufgetreten ist.|  
-|start_time|**datetime**|Zeitpunkt, zu dem der Schritt Ausführung begonnen hat.|Kleiner oder gleich der aktuellen Zeit und größer oder gleich End_compile_time der Abfrage zu der dieser Schritt gehört. Weitere Informationen zu Abfragen finden Sie unter [dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|end_time|**datetime**|Zeitpunkt, an dem dieser Schritt ausgeführt wurden, wurde abgebrochen oder fehlerhaft.|Kleiner oder gleich der aktuellen Zeit und größer oder gleich Start_time. Schritte, die derzeit in der Ausführung auf NULL festgelegt oder in die Warteschlange eingereiht.|  
-|total_elapsed_time|**int**|Die Gesamtmenge der Mal, wenn der abfrageschritt, in Millisekunden ausgeführt wurde.|Zwischen 0 und der Unterschied zwischen End_time und Start_time. 0 für die Schritte in Warteschlange.<br /><br /> Wenn Total_elapsed_time den maximalen Wert für eine ganze Zahl überschreitet, weiterhin Total_elapsed_time der maximale Wert sein. Diese Bedingung generiert die Warnung "der maximale Wert überschritten wurde."<br /><br /> Der maximale Wert in Millisekunden entspricht rund 24,8 Tage.|  
-|row_count|**bigint**|Gesamtanzahl der Zeilen geändert oder von dieser Anforderung zurückgegeben.|0 für Schritte, die nicht ändern oder Daten zurückgegeben haben. Andernfalls, Anzahl der betroffenen Zeilen.|  
-|Befehl|**nvarchar(4000)**|Enthält den vollständigen Text des Befehls dieses Schritts an.|Eine beliebige gültige Anforderungs-Zeichenfolge für einen Schritt. NULL, wenn der Vorgang des Typs MetaDataCreateOperation ist. Bei mehr als 4000 Zeichen abgeschnitten.|  
+|request_id|**nvarchar(32)**|request_id und step_index bilden den Schlüssel für diese Ansicht.<br /><br /> Eindeutige numerische ID, die der Anforderung zugeordnet ist.|Weitere Informationen finden Sie unter request_id in [sys. DM &#40;_pdw_exec_requests&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|step_index|**int**|request_id und step_index bilden den Schlüssel für diese Ansicht.<br /><br /> Die Position dieses Schritts in der Abfolge der Schritte, die die Anforderung bilden.|0 bis (n-1) für eine Anforderung mit n Schritten.|  
+|operation_type|**nvarchar(35)**|Der Typ des Vorgangs, der durch diesen Schritt dargestellt wird.|**DMS-Abfrageplan Vorgänge:** "Returnoperation", "partitionmuveoperation", "muveoperation", "broadcastmuveoperation", "shufflemuveoperation", "trimmuveoperation", "copyoperation", "distributerepli-tablemuveoperation"<br /><br /> **SQL-Abfrageplan Vorgänge:** "Onoperation", "Remoteoperation"<br /><br /> **Andere Abfrageplan Vorgänge:** ' MetaDataCreateOperation ', ' randomidoperation '<br /><br /> **Externe Vorgänge für Lesevorgänge:** "Hadoopshuffleoperation", "hadooproundrobinoperation", "hadoopbroadcastoperation"<br /><br /> **Externe Vorgänge für MapReduce:** "Hadoopjoboperation", "hdfsdeleteoperation"<br /><br /> **Externe Vorgänge für Schreibvorgänge:** "Externalexportdistributedoperation", "externalexportreplialisiedoperation", "externalexportcontroloperation"<br /><br /> Weitere Informationen finden Sie unter "Grundlegendes zu Abfrage Plänen" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. <br /><br />  Ein Abfrageplan kann auch von den Datenbankeinstellungen beeinflusst werden.  Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-set-options?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest) .|  
+|distribution_type|**nvarchar(32)**|Verteilungstyp dieser Schritt wird durchlaufen.|"Allnodes", "alldistributionen", "allcomputenodes", "computenode", "Distribution", "subsetnodes", "subsetverteilungen", "nicht angegeben"|  
+|location_type|**nvarchar(32)**|Gibt an, wo der Schritt ausgeführt wird.|"Compute", "Control", "DMS"|  
+|status|**nvarchar(32)**|Status dieses Schritts.|Ausstehend, wird ausgeführt, abgeschlossen, Fehler, undofailed, Aktion abbrechen, abgebrochen, rückgängig gemacht, abgebrochen|  
+|error_id|**nvarchar (36)**|Eindeutige ID des Fehlers, der diesem Schritt zugeordnet ist, sofern vorhanden.|Weitere Informationen finden Sie unter error_id of [sys. DM &#40;_pdw_errors&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). NULL, wenn kein Fehler aufgetreten ist.|  
+|start_time|**datetime**|Der Zeitpunkt, zu dem die Ausführung des Schritts gestartet wurde.|Kleiner oder gleich der aktuellen Zeit und größer oder gleich end_compile_time der Abfrage, zu der dieser Schritt gehört. Weitere Informationen zu Abfragen finden Sie unter [sys. DM _pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|end_time|**datetime**|Der Zeitpunkt, zu dem dieser Schritt die Ausführung abgeschlossen hat, abgebrochen wurde oder fehlgeschlagen ist.|Kleiner oder gleich der aktuellen Zeit und größer oder gleich start_time. Auf NULL für Schritte festgelegt, die gerade ausgeführt werden oder in der Warteschlange stehen.|  
+|total_elapsed_time|**int**|Gesamtzeit Spanne in Millisekunden, während der der Abfrage Schritt ausgeführt wurde.|Zwischen 0 und dem Unterschied zwischen end_time und start_time. 0 für Schritte in der Warteschlange.<br /><br /> Wenn total_elapsed_time den maximalen Wert für eine ganze Zahl überschreitet, ist total_elapsed_time weiterhin der Höchstwert. Mit dieser Bedingung wird die Warnung "der Höchstwert wurde überschritten" generiert.<br /><br /> Der maximale Wert in Millisekunden entspricht 24,8 Tagen.|  
+|row_count|**bigint**|Die Gesamtanzahl der von dieser Anforderung geänderten oder zurückgegebenen Zeilen.|0 für Schritte, die keine Daten geändert oder zurückgegeben haben. Andernfalls die Anzahl der betroffenen Zeilen.|  
+|Befehl|**nvarchar(4000)**|Enthält den vollständigen Text des Befehls dieses Schritts.|Eine beliebige gültige Anforderungs Zeichenfolge für einen Schritt. NULL, wenn der Vorgang vom Typ MetaDataCreateOperation ist. Wird abgeschnitten, wenn mehr als 4000 Zeichen enthalten sind.|  
   
- Informationen, die maximale Anzahl Zeilen, die von dieser Sicht beibehalten können, finden Sie im Abschnitt Maximalwerte System anzeigen, die "minimale und maximale Werte" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Informationen über die maximale Anzahl von Zeilen, die in dieser Sicht beibehalten werden, finden Sie im Abschnitt maximale System Sicht Werte im Abschnitt "Mindest-und Höchstwerte" im [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Datawarehouse und Parallel Data Warehouse-dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
