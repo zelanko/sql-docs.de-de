@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 083408cbf75d027e5dc638b52199b6892adae73d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e8fa047a65663f918bfcce4a92692f1c443f77a
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052302"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064665"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68052302"
 > [!IMPORTANT]  
 >  Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] stellt ein Volltextkatalog ein virtuelles Objekt dar, das keiner Dateigruppe angehört. Ein Volltextkatalog ist ein logisches Konzept, das auf eine Gruppe von Volltextindizes verweist.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -97,7 +97,7 @@ CREATE FULLTEXT CATALOG catalog_name
   
  *owner_name* muss zudem über die TAKE OWNERSHIP-Berechtigung im angegebenen Volltextkatalog verfügen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Volltextkatalog-IDs beginnen bei 00005 und werden mit jedem neu erstellten Katalog um eins erhöht.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -106,7 +106,7 @@ CREATE FULLTEXT CATALOG catalog_name
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden ein Volltextkatalog und ein Volltextindex erstellt.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  

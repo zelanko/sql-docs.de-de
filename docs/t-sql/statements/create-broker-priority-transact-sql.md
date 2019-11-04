@@ -25,19 +25,19 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061151"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064683"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Definiert eine Prioritätsebene und die Gruppe von Kriterien, anhand derer bestimmt wird, welchen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversationen die Prioritätsebene zugeordnet wird. Die Prioritätsebene wird jedem Konversationsendpunkt zugeordnet, der die gleiche Kombination aus Verträgen und Diensten verwendet, die für die Konversationspriorität angegeben sind. Die Prioritätswerte liegen zwischen 1 (niedrig) und 10 (hoch). Der Standardwert ist 5.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -110,7 +110,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Gibt die Priorität an, die jedem Konversationsendpunkt zugeordnet werden soll, der die für die Konversationspriorität angegebenen Verträge und Dienste verwendet. *PriorityValue* muss ein ganzahliges Literal zwischen 1 (niedrigste Priorität) und 10 (höchste Priorität) sein. Der Standardwert ist 5.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  In [!INCLUDE[ssSB](../../includes/sssb-md.md)] werden Prioritätsebenen Konversationsendpunkte zugeordnet. Mithilfe der Prioritätsebene wird die Priorität der dem Endpunkt zugeordneten Vorgänge gesteuert. Jede Konversation verfügt über zwei Konversationsendpunkte:  
   
 -   Der Konversationsendpunkt für den Initiator ordnet eine Seite der Konversation dem Initiatordienst und der Initiatorwarteschlange zu. Der Konversationsendpunkt für den Initiator wird beim Ausführen der BEGIN DIALOG-Anweisung erstellt. Zu den dem Konversationsendpunkt für den Initiator zugeordneten Vorgängen zählen folgende:  
@@ -220,7 +220,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. Erstellen von drei Prioritätsebenen für einen Zieldienst mithilfe von Diensten  
  Unterstützt ein System, das drei Leistungsstufen bietet: Gold (hoch), Silber (mittel) und Bronze (niedrig). Es gibt einen Vertrag, aber jede Ebene weist einen separaten Initiatordienst auf. Alle Initiatordienste kommunizieren mit einem zentralen Zieldienst.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -262,7 +262,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. Erstellen von drei Prioritätsebenen für mehrere Dienste mithilfe von Verträgen  
  Unterstützt ein System, das drei Leistungsstufen bietet: Gold (hoch), Silber (mittel) und Bronze (niedrig). Jede Ebene weist einen separaten Vertrag auf. Diese Prioritäten werden für alle Dienste übernommen, auf die von Konversationen verwiesen wird, die die Verträge verwenden.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = GoldContract,  

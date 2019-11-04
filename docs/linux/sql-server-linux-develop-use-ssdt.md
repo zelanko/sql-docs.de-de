@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: c6d5789092ea2bbfc6fd9a8bb20cc7d078eaf6de
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 0a7c16f508621297e39df5cd47bde891b7d8a140
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545045"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033019"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Verwenden von Visual Studio zum Erstellen von Datenbanken für SQL Server für Linux
 
@@ -29,7 +29,7 @@ SQL Server Data Tools (SSDT) wandelt Visual Studio in eine leistungsstarke Umgeb
 
 3. Wählen Sie in der Featureauswahlliste **Microsoft SQL Server Data Tools**, **Git für Windows** und **GitHub-Erweiterung für Visual Studio** aus.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
 
 4. Fahren Sie fort, und schließen Sie die Installation von Visual Studio ab. Dies kann einige Minuten dauern.
 
@@ -47,15 +47,15 @@ SQL Server für Linux wird von SSDT Version 17.0 RC oder höher unterstützt.
 
 3. Klicken Sie im Abschnitt **Lokales Git-Repository** auf der Seite **Verbinden** auf **Neu**.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. Klicken Sie auf **Erstellen**. Nachdem das lokale Git-Repository erstellt wurde, doppelklicken Sie auf **SSDTRepo**.
+4. Klicken Sie auf **Erstellen**. Nachdem das lokale Git-Repository erstellt wurde, doppelklicken Sie auf **SSDTRepo**.
 
-4. Klicken Sie im Abschnitt **Projektmappen** auf **Neu**. Wählen Sie im Dialogfeld **Neues Projekt** unter dem Knoten **Andere Sprachen** die Option **SQL Server** aus.
+5. Klicken Sie im Abschnitt **Projektmappen** auf **Neu**. Wählen Sie im Dialogfeld **Neues Projekt** unter dem Knoten **Andere Sprachen** die Option **SQL Server** aus.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
 
-5. Geben Sie **TutorialDB** als Name ein, und klicken Sie auf **OK**, um ein neues Datenbankprojekt zu erstellen.
+6. Geben Sie **TutorialDB** als Name ein, und klicken Sie auf **OK**, um ein neues Datenbankprojekt zu erstellen.
 
 ## <a name="create-a-new-table-in-the-database-project"></a>Erstellen einer neuen Tabelle im Datenbankprojekt
 
@@ -65,11 +65,11 @@ SQL Server für Linux wird von SSDT Version 17.0 RC oder höher unterstützt.
 
 3. Wählen Sie **Tabelle** unter **Hinzufügen** aus.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
 
 4. Fügen Sie mit dem Tabellen-Designer die zwei Spalten „Name“ `nvarchar(50)` und „Location“ `nvarchar(50)` wie in der Abbildung dargestellt hinzu. SSDT generiert das `CREATE TABLE`-Skript, wenn Sie die Spalten im Designer hinzufügen.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
 
 5. Speichern Sie die Datei **Table1.sql**.
 
@@ -77,7 +77,7 @@ SQL Server für Linux wird von SSDT Version 17.0 RC oder höher unterstützt.
 
 1. Öffnen Sie das Datenbankprojektmenü auf **TutorialDB**, und wählen Sie **Erstellen** aus. SSDT kompiliert SQL-Quellcodedateien in Ihrem Projekt und erstellt eine DACPAC-Datei (Data-tier Application Package, Datenschichtanwendungs-Paket). Diese kann zum Veröffentlichen einer Datenbank auf Ihrer SQL Server-Instanz unter Linux verwendet werden. 
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. Überprüfen Sie in Visual Studio die Builderfolgsmeldung im Fenster **Ausgabe**. 
 
@@ -87,11 +87,11 @@ SQL Server für Linux wird von SSDT Version 17.0 RC oder höher unterstützt.
 
 2. Klicken Sie auf **Bearbeiten**, um Ihre SQL Server-Instanz unter Linux auszuwählen.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
 
 3. Geben Sie im Verbindungsdialogfeld die IP-Adresse oder den Hostnamen Ihrer SQL Server-Instanz unter Linux, Benutzername und Kennwort ein.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
 
 4. Klicken Sie im Veröffentlichungsdialogfeld auf die Schaltfläche **Veröffentlichen**.
 
@@ -99,7 +99,7 @@ SQL Server für Linux wird von SSDT Version 17.0 RC oder höher unterstützt.
 
 6. Klicken Sie auf **Ergebnisse anzeigen** oder **Skript anzeigen**, um Details zum Ergebnis der Datenbankveröffentlichung auf Ihrer Instanz von SQL Server für Linux anzuzeigen.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
 Sie haben erfolgreich eine neue Datenbank auf der SQL Server-Instanz für Linux erstellt und die Grundlagen der Entwicklung einer Datenbank mit einem Datenbankprojekt mit Quellcodeverwaltung gelernt.
 

@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 77bd1b9ccfb2eb93300c16a7fa7a99f87a4c0413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d39f716717fe517fb3274e4c5519606916afb7b
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066090"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064673"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Ändert den Namen, das Kennwort oder das Standardschema einer Anwendungsrolle.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA = *schema_name*  
  Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten durchsucht wird. *schema_name* kann ein Schema sein, das in der Datenbank nicht vorhanden ist.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Falls der neue Anwendungsrollenname bereits in der Datenbank vorhanden ist, wird für die Anweisung ein Fehler gemeldet. Wenn der Name, das Kennwort oder das Standardschema einer Anwendungsrolle geändert wird, wird die der Rolle zugeordnete ID nicht geändert.  
   
 > [!IMPORTANT]  
@@ -79,7 +79,7 @@ ALTER APPLICATION ROLE application_role_name
 ### <a name="a-changing-the-name-of-application-role"></a>A. Ändern des Namens der Anwendungsrolle  
  Im folgenden Beispiel wird der Name der `weekly_receipts`-Anwendungsrolle in `receipts_ledger` geändert.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987Gbv8$76sPYY5m23' ,   
@@ -93,7 +93,7 @@ GO
 ### <a name="b-changing-the-password-of-application-role"></a>B. Ändern des Kennworts der Anwendungsrolle  
  Im folgenden Beispiel wird das Kennwort der `receipts_ledger`-Anwendungsrolle geändert.  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH PASSWORD = '897yUUbv867y$200nk2i';  
 GO  
@@ -102,7 +102,7 @@ GO
 ### <a name="c-changing-the-name-password-and-default-schema"></a>C. Ändern des Namens, des Kennworts und des Standardschemas  
  Im folgenden Beispiel werden der Name, das Kennwort und das Standardschema der `receipts_ledger`-Anwendungsrolle gleichzeitig geändert.  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH NAME = weekly_ledger,   
     PASSWORD = '897yUUbv77bsrEE00nk2i',   

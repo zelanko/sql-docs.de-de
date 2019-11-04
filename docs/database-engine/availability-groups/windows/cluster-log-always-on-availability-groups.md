@@ -10,18 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 288d96a116412eea133e881f2d13b6b4ce5fddb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991292"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240757"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Erstellen und Analysieren der Protokolldatei „CLUSTER.LOG“ für eine Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Als Failoverclusterressource stehen externe Interaktionen zwischen SQL Server, dem WSFC-Cluster (Windows Server-Failovercluster) und der SQL Server-Ressourcen-DLL (hadrres.dll) zur Verfügung, die innerhalb von SQL Server nicht überwacht werden können. Das WSFC-Protokoll, CLUSTER.LOG, kann Probleme im WSFC-Cluster oder in der SQL Server-Ressourcen-DLL diagnostizieren.  
-  
- Die folgende Abbildung stellt die Beziehung zwischen Anwendungen wie SQL Server und Windows Cluster Manager dar, die die Erstellung, die Zerstörung oder Statusänderungen von Verfügbarkeitsgruppenressourcen initiieren.  
+  Als Failoverclusterressource stehen externe Interaktionen zwischen SQL Server, dem WSFC-Cluster (Windows Server-Failovercluster) und der SQL Server-Ressourcen-DLL (hadrres.dll) zur Verfügung, die innerhalb von SQL Server nicht überwacht werden können. Das WSFC-Protokoll, CLUSTER.LOG, kann Probleme im WSFC-Cluster oder in der SQL Server-Ressourcen-DLL diagnostizieren. 
   
 ## <a name="generate-cluster-log"></a>Generieren einer Clusterprotokolldatei  
  Sie können die Clusterprotokolldateien auf zwei Arten generieren:  

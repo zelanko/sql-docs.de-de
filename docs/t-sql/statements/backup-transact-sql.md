@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 867ad139d591827a2159e77bbcdd33dbb85c6b6d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028961"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142861"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -608,7 +608,7 @@ DISK='Y:\SQLServerBackups\AdventureWorks2.bak',
 DISK='Z:\SQLServerBackups\AdventureWorks3.bak'
 WITH FORMAT,
   MEDIANAME = 'AdventureWorksStripedSet0',
-  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database;
+  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database';
 GO
 ```
 
@@ -1205,6 +1205,8 @@ BACKUP DATABASE-Fehler unter den folgenden Bedingungen:
 - Der Speicherplatz auf der Ziel-Netzwerkfreigabe ist nicht ausreichend für die Sicherung. Der BACKUP DATABASE-Befehl bestätigt nicht, dass genügend freier Speicherplatz vorhanden ist, bevor die Sicherung initiiert wird, wodurch bei Ausführen von BACKUP DATABASE ein Fehler wegen unzureichendem Speicherplatz generiert werden kann. Wenn nicht genügend Speicherplatz vorhanden ist, führt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ein Rollback für den Befehl BACKUP DATABASE aus. Führen Sie zum Verkleinern Ihrer Datenbank [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) aus.
 - Versuchen Sie, eine Sicherung innerhalb einer Transaktion zu starten.
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>Allgemeine Hinweise
 
 Verwenden Sie vor dem Ausführen einer Datenbanksicherung [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) zum Verkleinern der Datenbank.
@@ -1217,6 +1219,8 @@ Wenn Sie einen BACKUP-Befehl abbrechen, entfernt [!INCLUDE[ssPDW](../../includes
 
 Vollständige und differenzielle Sicherungen werden in separaten Verzeichnissen gespeichert. Benennungskonventionen werden nicht erzwungen, um anzugeben, dass eine vollständige Sicherung und eine differenzielle Sicherung zusammengehören. Sie können dies über Ihre eigenen Benennungskonventionen nachverfolgen. Alternativ können Sie dies nachverfolgen, indem Sie mithilfe der WITH DESCRIPTION-Option eine Beschreibung hinzufügen und diese dann mithilfe der RESTORE HEADERONLY-Anweisung abrufen.
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 ## <a name="limitations-and-restrictions"></a>Einschränkungen
 
 Sie können keine differenzielle Sicherung der Masterdatenbank ausführen. Nur vollständige Sicherungen der Masterdatenbank werden unterstützt.

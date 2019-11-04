@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b017b3cccbce4f993723d24f952eb605ce36a376
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141098"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064693"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68141098"
   
  Diese Funktion ist inkompatibel mit Datenbankexport über Data-Tier Application Framework (DACFx). Sie müssen alle asymmetrischen Schlüssel vor dem Export löschen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -114,7 +114,7 @@ CREATE ASYMMETRIC KEY asym_key_name
  ENCRYPTION BY PASSWORD = '*password*'  
  Gibt das Kennwort an, mit dem der private Schlüssel verschlüsselt werden soll. Wenn diese Klausel nicht vorhanden ist, wird der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt. *password* kann maximal 128 Zeichen umfassen. *password* muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Ein *asymmetrischer Schlüssel* ist eine sicherungsfähige Entität auf Datenbankebene. Standardmäßig enthält diese Entität sowohl einen öffentlichen als auch einen privaten Schlüssel. Bei einer Ausführung ohne die FROM-Klausel generiert CREATE ASYMMETRIC KEY ein neues Schlüsselpaar. Bei einer Ausführung mit FROM-Klausel importiert CREATE ASYMMETRIC KEY ein Schlüsselpaar aus einer Datei oder einen öffentlichen Schlüssel aus einer Assembly oder DLL-Datei.  
   
  Standardmäßig ist der private Schlüssel mit dem Datenbank-Hauptschlüssel geschützt. Falls kein Datenbank-Hauptschlüssel erstellt wurde, ist ein Kennwort zum Schützen des privaten Schlüssels erforderlich.  
@@ -129,7 +129,7 @@ CREATE ASYMMETRIC KEY asym_key_name
 ### <a name="a-creating-an-asymmetric-key"></a>A. Erstellen eines asymmetrischen Schlüssels  
  Im folgenden Beispiel wird der asymmetrische Schlüssel `PacificSales09` mithilfe des `RSA_2048`-Algorithmus erstellt, und der private Schlüssel wird mit einem Kennwort geschützt.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales09   
     WITH ALGORITHM = RSA_2048   
     ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';   
@@ -139,7 +139,7 @@ GO
 ### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>B. Erstellen eines asymmetrischen Schlüssels aus einer Datei, wobei die Autorisierung an einen Benutzer erteilt wird  
  Im folgenden Beispiel wird der asymmetrische Schlüssel `PacificSales19` aus einem in einer Datei gespeicherten Schlüsselpaar erstellt und der Besitz des asymmetrischen Schlüssels Benutzer `Christina` zugewiesen. Der private Schlüssel ist durch den Datenbankhauptschlüssel geschützt, der vor dem asymmetrischen Schlüssel erstellt werden muss.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales19  
     AUTHORIZATION Christina  
     FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp';  
@@ -149,7 +149,7 @@ GO
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. Erstellen eines asymmetrischen Schlüssels von einem EKM-Anbieter  
  Das folgende Beispiel erstellt den asymmetrischen Schlüssel `EKM_askey1` aus einem Schlüsselpaar, das in einem EKM-Anbieter namens `EKM_Provider1` gespeichert ist, und einem Schlüssel für diesen Anbieter namens `key10_user1`.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   
     FROM PROVIDER EKM_Provider1  
     WITH   

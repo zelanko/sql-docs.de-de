@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5316bb4daa281c0abedd133803965a0b0af63bdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912761"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064655"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67912761"
 > [!IMPORTANT]  
 >  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST und DROP FULLTEXT STOPLIST werden nur bei einem Kompatibilitätsgrad von 100 unterstützt. Bei Kompatibilitätsgraden von 80 und 90 werden diese Anweisungen nicht unterstützt. Bei allen Kompatibilitätsgraden wird die Systemstopliste jedoch automatisch neuen Volltextindizes zugeordnet.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -72,7 +72,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  Gibt den Namen eines Datenbankprinzipals als Besitzer der Stoppliste an. *owner_name* muss der Name eines Prinzipals sein, dessen Mitglied der aktuelle Benutzer ist, oder der aktuelle Benutzer benötigt die IMPERSONATE-Berechtigung für *owner_name*. Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Der Ersteller einer Stoppliste ist deren Besitzer.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -86,7 +86,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ### <a name="a-creating-a-new-full-text-stoplist"></a>A. Erstellen einer neuen Volltextstoppliste  
  Im folgenden Beispiel wird eine neue Volltextstoppliste mit dem Namen `myStoplist` erstellt.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist;  
 GO  
 ```  
@@ -94,7 +94,7 @@ GO
 ### <a name="b-copying-a-full-text-stoplist-from-an-existing-full-text-stoplist"></a>B. Kopieren einer Volltextstoppliste aus einer vorhandenen Volltextstoppliste  
  Im folgenden Beispiel wird eine neue Volltextstoppliste mit dem Namen `myStoplist2` erstellt, indem eine vorhandene AdventureWorks-Stoppliste mit dem Namen `Customers.otherStoplist` kopiert wird.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist2 FROM AdventureWorks.otherStoplist;  
 GO  
 ```  
@@ -102,7 +102,7 @@ GO
 ### <a name="c-copying-a-full-text-stoplist-from-the-system-full-text-stoplist"></a>C. Kopieren einer Volltextstoppliste aus der Volltextstoppliste des Systems  
  Im folgenden Beispiel wird eine neue Volltextstoppliste mit dem Namen `myStoplist3` durch Kopieren aus der Stystemstoppliste erstellt.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;  
 GO  
 ```  

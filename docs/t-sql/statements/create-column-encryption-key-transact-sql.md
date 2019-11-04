@@ -28,19 +28,19 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed1fb6d31d22f04657288e2c924316b891841946
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3789e894f08c4e34cb5ea8861d699f850e365f3
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061083"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064570"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Erstellt einen Spaltenverschlüsselungsschlüssel (Column Encryption Key, CEK) mit den Anfangswerten, die mit den angegebenen Spaltenhauptschlüsseln (Column Master Keys, CMKs) verschlüsselt wurden. Diese Verschlüsselung ist ein Metadatenvorgang. Ein CEK könnte maximal zwei Werte enthalten, was eine CMK-Rotation ermöglicht. Das Erstellen eines CEK ist die Voraussetzung dafür, dass das Feature [Immer verschlüsselt (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) Spalten in der Datenbank verschlüsselt. CEKs können auch mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellt werden. Vor dem Erstellen eines CEK, müssen Sie mithilfe von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder der [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)-Anweisung ein CEK definieren.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -75,7 +75,7 @@ Der verschlüsselte CEK-Wert-BLOB.
 > [!WARNING]  
 >  Verwenden Sie diese Anweisung nie mit CEK-Werten im Klartext. Hierdurch wird die Wirksamkeit des Features beeinträchtigt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 Die CREATE COLUMN ENCRYPTION KEY-Anweisung muss mindestens eine VALUES-Klausel enthalten und darf maximal über zwei Klauseln verfügen. Wenn nur eine angegeben wird, können Sie mit der ALTER COLUMN ENCRYPTION KEY-Anweisung später einen zweiten Wert hinzufügen. Mit derselben Anweisung können Sie auch eine VALUES-Klausel entfernen.  
   
 In der Regel wird ein CEK nur mit einem verschlüsselten Wert erstellt. Manchmal müssen Sie einen CMK drehen. Ersetzen Sie den aktuellen CMK mit dem neuen CMK. Wenn Sie den Schlüssel drehen müssen, fügen Sie einen neuen Wert des Spaltenverschlüsselungsschlüssels hinzu, verschlüsselt mit dem neuen CMK. Diese Rotation stellt sicher, dass Clientanwendungen auf Daten zugreifen können, die mit dem CEK verschlüsselt wurden, während der neue CMK den Clientanwendungen zur Verfügung gestellt wird. Ein Treiber, für den Always Encrypted aktiviert ist, in einer Clientanwendung, die keinen Zugriff auf den neuen Hauptschlüssel hat, greift mit dem CEK-Wert, der mit dem alten CMK verschlüsselt wurde, auf vertrauliche Daten zu.  
@@ -94,7 +94,7 @@ Erfordert die **ALTER ANY COLUMN ENCRYPTION KEY**-Berechtigung.
 ### <a name="a-creating-a-column-encryption-key"></a>A. Erstellen eines CEK  
 Im folgenden Beispiel wird ein CEK mit der Bezeichnung `MyCEK` erstellt.  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
 WITH VALUES  
 (  
@@ -108,8 +108,8 @@ GO
 ### <a name="creating-a-column-encryption-key-with-two-values"></a>Erstellen eines CEK mit zwei Werten  
 Im folgenden Beispiel wird ein CEK mit der Bezeichnung `TwoValueCEK` und zwei Werten erstellt.  
   
-```  
-  
+```sql
+
 CREATE COLUMN ENCRYPTION KEY TwoValueCEK   
 WITH VALUES  
 (  

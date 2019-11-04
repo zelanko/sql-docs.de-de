@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061064"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064564"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Erstellt ein Spaltenhauptschlüssel-Metadatenobjekt in einer Datenbank. Ein Metadateneintrag für einen Spaltenhauptschlüssel stellt einen Schlüssel dar, der in einem externen Schlüsselspeicher gespeichert ist. Der Schlüssel schützt (verschlüsselt) Spaltenverschlüsselungsschlüssel, wenn Sie das Feature [Always Encrypted &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) verwenden. Durch mehrere Spaltenhauptschlüssel wird die regelmäßige Rotation von Schlüsseln ermöglicht und dadurch die Sicherheit erhöht. Erstellen Sie einen Spaltenhauptschlüssel in einem Schlüsselspeicher und das zugehörige Metadatenobjekt in der Datenbank, indem Sie den Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder PowerShell verwenden. Weitere Informationen finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -168,7 +168,7 @@ Gibt an, dass der Spaltenhauptschlüssel Enclave-fähig ist. Sie können alle mi
 Ein binäres Literal, das das Ergebnis des digitalen Signierens von *Schlüsselpfad* und der Einstellung „ENCLAVE_COMPUTATIONS“ mit dem Spaltenhauptschlüssel ist. Die Signatur zeigt an, ob „ENCLAVE_COMPUTATIONS“ angegeben wurde. Die Signatur schützt die signierten Werte vor Änderungen durch nicht autorisierte Benutzer. Ein Always Encrypted-fähiger Clienttreiber überprüft die Signatur und gibt einen Fehler an die Anwendung zurück, wenn die Signatur ungültig ist. Die Signatur muss mit clientseitigen Tools generiert werden. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 
 Erstellen Sie einen Metadateneintrag für einen Spaltenhauptschlüssel, bevor Sie einen Metadateneintrag für einen Spaltenverschlüsselungsschlüssel in der Datenbank erstellen und bevor Spalten in der Datenbank mithilfe von Always Encrypted verschlüsselt werden können. Ein Metadateneintrag für einen Spaltenhauptschlüssel enthält nicht den tatsächlichen Spaltenhauptschlüssel. Der Spaltenhauptschlüssel muss in einem externen Spaltenschlüsselspeicher (außerhalb von SQL Server) gespeichert werden. Der Name des Schlüsselspeicheranbieters und der Pfad des Spaltenhauptschlüssels in den Metadaten müssen für eine Clientanwendung gültig sein. Die Clientanwendung muss den Spaltenhauptschlüssel verwenden, um einen Spaltenverschlüsselungsschlüssel zu entschlüsseln. Der Spaltenverschlüsselungsschlüssel ist mit dem Spaltenhauptschlüssel verschlüsselt. Die Clientanwendung muss auch verschlüsselte Spalten abfragen.
 
@@ -192,7 +192,7 @@ WITH (
   
 Erstellen Sie einen Metadateneintrag für einen Spaltenhauptschlüssel für einen Spaltenhauptschlüssel. Clientanwendungen, die den Anbieter „MSSQL_CNG_STORE“ verwenden, greifen auf den Spaltenhauptschlüssel zu:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -202,7 +202,7 @@ WITH (
   
 Erstellen Sie einen Metadateneintrag für einen Spaltenhauptschlüssel für einen Spaltenhauptschlüssel. Der Spaltenhauptschlüssel wird in Azure Key Vault für Clientanwendungen gespeichert, die den Anbieter „AZURE_KEY_VAULT“ verwenden, um auf den Spaltenhauptschlüssel zuzugreifen.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -212,7 +212,7 @@ WITH (
   
 Erstellen Sie einen Metadateneintrag für einen Spaltenhauptschlüssel für einen Spaltenhauptschlüssel. Der Spaltenhauptschlüssel wird in einem benutzerdefinierten Speicher für Spaltenhauptschlüssel gespeichert:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -222,7 +222,7 @@ WITH (
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Erstellen eines Enclave-fähigen Spaltenhauptschlüssels  
 Im folgenden Beispiel wird ein Metadateneintrag für einen Spaltenhauptschlüssel für einen Enclave-fähigen Spaltenhauptschlüssel erstellt. Der Enclave-fähigen Spaltenhauptschlüssel wird in einem Zertifikatspeicher für Clientanwendungen gespeichert, die den Anbieter „MSSQL_CERTIFICATE_STORE“ verwenden, um auf den Spaltenhauptschlüssel zuzugreifen:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -233,7 +233,7 @@ WITH (
   
 Erstellen Sie einen Metadateneintrag für einen Spaltenhauptschlüssel für einen Enclave-fähigen Spaltenhauptschlüssel. Der Enclave-fähige Spaltenhauptschlüssel wird in Azure Key Vault für Clientanwendungen gespeichert, die den Anbieter „AZURE_KEY_VAULT“ verwenden, um auf den Spaltenhauptschlüssel zuzugreifen.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  

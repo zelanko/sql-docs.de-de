@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaee3cdadacf57e410e27dc1f3e92f2c917f43ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902881"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064640"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt einen neuen Vertrag. Ein Vertrag definiert die in einer [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversation verwendeten Nachrichtentypen und legt fest, welche Seite der Konversation Nachrichten eines bestimmten Typs senden kann. Jede Konversation folgt einem Vertrag. Der initiierende Dienst gibt beim Start der Konversation den Vertrag für die Konversation an. Der Zieldienst gibt die Verträge an, für die der Zieldienst Konversationen annimmt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -75,7 +75,7 @@ CREATE CONTRACT contract_name
  [DEFAULT]  
  Gibt an, dass dieser Vertrag Nachrichten vom Standardnachrichtentyp unterstützt. Standardmäßig enthalten alle Datenbanken einen Nachrichtentyp namens DEFAULT. Dieser Nachrichtentyp verwendet NONE für die Überprüfung. Im Kontext dieser Klausel ist DEFAULT kein Schlüsselwort und muss als Bezeichner begrenzt sein. Microsoft SQL Server stellt auch einen DEFAULT-Vertrag bereit, der den Nachrichtentyp DEFAULT angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Die Reihenfolge von Nachrichtentypen im Vertrag ist nicht von Bedeutung. Nachdem das Ziel die erste Nachricht erhalten hat, ermöglicht [!INCLUDE[ssSB](../../includes/sssb-md.md)] beiden Seiten der Konversation, zu jeder Zeit Nachrichten zu senden, die für die jeweilige Konversationsseite zulässig sind. Kann der Initiator der Konversation beispielsweise den Nachrichtentyp **//Adventure-Works.com/Expenses/SubmitExpense** senden, ermöglicht [!INCLUDE[ssSB](../../includes/sssb-md.md)] dem Initiator das Senden beliebig vieler **SubmitExpense**-Nachrichten zu jeder Zeit im Verlauf der Konversation.  
   
  Die Nachrichtentypen und -richtungen in einem Vertrag können nicht geändert werden. Verwenden Sie die ALTER AUTHORIZATION-Anweisung, wenn Sie den Wert von AUTHORIZATION für einen Vertrag ändern möchten.  
@@ -98,7 +98,7 @@ CREATE CONTRACT contract_name
   
  Im folgenden Beispiel wird ein Aufwandentschädigungsvertrag auf der Basis von drei Nachrichtentypen erstellt.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]           
     VALIDATION = WELL_FORMED_XML ;           

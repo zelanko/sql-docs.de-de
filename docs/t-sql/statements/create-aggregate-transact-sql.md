@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e796155210017addb6801930903a5aa38df71e8
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141131"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064630"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt eine benutzerdefinierte Aggregatfunktion, deren Implementierung in einer Klasse einer Assembly in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] definiert ist. Damit [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Aggregatfunktion an die Implementierung bindet, muss zunächst die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly, die die Implementierung enthält, mithilfe einer CREATE ASSEMBLY-Anweisung in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hochgeladen werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -81,7 +81,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *Assemblyname* [ **.** _Klassenname_ ]  
  Die Assembly, die an die benutzerdefinierte Aggregatfunktion gebunden werden soll, und optional der Name des Schemas, zu dem die Assembly gehört, sowie der Name der Klasse innerhalb der Assembly, die das benutzerdefinierte Aggregat implementiert. Die Assembly muss bereits mit einer CREATE ASSEMBLY-Anweisung in der Datenbank erstellt worden sein. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein und mit dem Namen einer Klasse übereinstimmen, die in der Assembly vorhanden ist. *class_name* kann ein mit dem Namespace qualifizierter Name sein, falls die zum Erstellen der Klasse verwendete Programmiersprache Namespaces verwendet, z.B. C#. Wenn *class_name* nicht angegeben ist, geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon aus, dass der Wert mit *aggregate_name* identisch ist.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Standardmäßig ist die Möglichkeit, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR-Code ausführt, deaktiviert. Sie können Datenbankobjekte erstellen, ändern und löschen, die auf Module für verwalteten Code verweisen. Der Code in diesen Modulen wird jedoch nur in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt, wenn die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) mithilfe von [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) aktiviert wird.  
   
  Die in *assembly_name* angegebene Assemblyklasse und die zugehörigen Methoden sollten alle Anforderungen zum Implementieren einer benutzerdefinierten Aggregatfunktion in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfüllen. Weitere Informationen finden Sie unter [Benutzerdefinierte CLR-Aggregate](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
@@ -94,7 +94,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  In diesem Beispiel wird das `Concatenate`-Aggregat erstellt. Bevor das Aggregat erstellt wird, wird die `StringUtilities.dll`-Assembly in der lokalen Datenbank registriert.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SamplesPath nvarchar(1024)  

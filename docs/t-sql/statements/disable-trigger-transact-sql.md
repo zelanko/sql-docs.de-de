@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cabd08fa2e4ba8797d5fe7fc5e4f623f24cda856
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e2100858c6f18a515db8ee4baf413853ee0a04b
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064583"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Deaktiviert einen Trigger.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,7 +71,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Trigger werden beim Erstellen standardmäßig aktiviert. Durch das Deaktivieren wird ein Trigger nicht gelöscht. Der Trigger ist weiterhin als Objekt in der aktuellen Datenbank vorhanden. Der Trigger wird jedoch bei der Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nicht ausgelöst, für die er programmiert wurde. Trigger können mithilfe von [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) erneut aktiviert werden. Für Tabellen definierte DML-Trigger können auch mithilfe von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) deaktiviert oder aktiviert werden.  
   
  Das Ändern des Triggers durch Verwendung der **ALTER TRIGGER**-Anweisung aktiviert den Trigger.  
@@ -87,7 +87,7 @@ Die folgenden Beispiele werden in der AdventureWorks2012-Datenbank beschrieben.
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. Deaktivieren eines DML-Triggers für eine Tabelle  
  Im folgenden Beispiel wird der Trigger `uAddress` deaktiviert, der für die `Address`-Tabelle erstellt wurde.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ```  
@@ -95,7 +95,7 @@ GO
 ### <a name="b-disabling-a-ddl-trigger"></a>B. Deaktivieren eines DDL-Triggers  
  Im folgenden Beispiel wird der DDL-Trigger `safety` mit Datenbankbereich erstellt und anschließend deaktiviert.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   

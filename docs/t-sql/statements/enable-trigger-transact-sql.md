@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 680d4e62838ed49c72c8b637c19cc00af804c763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64dd9567588e3d3cc5dccf7ee1aef469a888c275
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064556"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Aktiviert einen DML-, DDL- oder LOGON-Trigger.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -67,7 +67,7 @@ Für einen DDL-Trigger wird hiermit angegeben, dass *trigger_name* zur Ausführu
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 Durch das Aktivieren eines Triggers wird dieser nicht neu erstellt. Ein deaktivierter Trigger ist weiterhin als Objekt in der aktuellen Datenbank vorhanden, wird jedoch nicht ausgelöst. Durch das Aktivieren eines Triggers wird dieser ausgelöst, wenn eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ausgeführt wird, für die er ursprünglich programmiert wurde. Trigger werden mit [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) deaktiviert. Für Tabellen definierte DML-Trigger können auch mithilfe von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) deaktiviert oder aktiviert werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -80,7 +80,7 @@ Zum Aktivieren eines DDL-Triggers mit Serverbereich (ON ALL SERVER) oder eines L
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. Aktivieren eines DML-Triggers für eine Tabelle  
 Im folgenden Beispiel wird der `uAddress`-Trigger, der für die `Address`-Tabelle in der AdventureWorks-Datenbank erstellt wurde, deaktiviert und anschließend aktiviert.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ENABLE Trigger Person.uAddress ON Person.Address;  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-enabling-a-ddl-trigger"></a>B. Aktivieren eines DDL-Triggers  
 Im folgenden Beispiel wird der DDL-Trigger `safety` mit einem Datenbankbereich erstellt und anschließend deaktiviert bzw. aktiviert.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -109,7 +109,7 @@ Im folgenden Beispiel werden alle DDL-Trigger aktiviert, die im Serverbereich er
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 ENABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  
