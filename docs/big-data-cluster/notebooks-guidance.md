@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
 ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958296"
@@ -218,4 +218,4 @@ Verwenden Sie den folgenden Code aus dem Terminal, um Pakete zu deinstallieren:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Informationen zum Arbeiten mit einem vorhandenen Notebook finden Sie unter [How to manage notebooks in Azure Data Studio (Verwalten von Notebooks in Azure Data Studio)](notebooks-how-to-manage.md).
+Informationen zum Arbeiten mit einem vorhandenen Notebook finden Sie unter [Vorgehensweise: Verwalten von Notebooks in Azure Data Studio](notebooks-how-to-manage.md).

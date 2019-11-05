@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
 ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958284"
@@ -29,7 +29,7 @@ In diesem Artikel wird davon ausgegangen, dass Sie bereits über ein Notebook ve
 - [Bereitgestellter Big Data-Cluster](quickstart-big-data-cluster-deploy.md)
 - [Big Data-Tools für SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
-   - **Erweiterung für SQL Server 2019**
+   - **Erweiterung von SQL Server 2019**
    - **kubectl**
 
 ## <a name="open-a-notebook"></a>Öffnen eines Notebooks

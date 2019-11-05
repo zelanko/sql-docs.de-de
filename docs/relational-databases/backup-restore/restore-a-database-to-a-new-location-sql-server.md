@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278923"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989561"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Wiederherstellen einer Datenbank an einem neuen Speicherort (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,25 +108,25 @@ ms.locfileid: "70278923"
 2.  Stellen Sie die vollständige Datenbanksicherung mithilfe der [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) -Anweisung wieder her. Standardmäßig werden Daten und Protokolldateien an ihren ursprünglichen Speicherorten wiederhergestellt. Verwenden Sie zum Verschieben einer Datenbank die Option MOVE, um die einzelnen Datenbankdateien zu verschieben und Konflikte mit vorhandenen Dateien zu vermeiden.  
 
   Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Basissyntax für das Wiederherstellen der Datenbank an einem neuen Speicherort und mit neuem Name lautet wie folgt:  
+  ```sql
+  RESTORE DATABASE *new_database_name*  
   
-  RESTORE DATABASE *Name der neuen Datenbank*  
-  
-  FROM *Sicherungsmedium* [ ,...*n* ]  
+  FROM *backup_device* [ ,...*n* ]  
   
   [ WITH  
+ 
+   {  
   
-  {  
+      [ **RECOVERY** | NORECOVERY ]  
   
-  [ **RECOVERY** | NORECOVERY ]  
+      [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
-  
-  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+      [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
   }  
   
   ;  
-  
+  ```
   > [!NOTE] 
   > Wenn Sie sich auf das Verschieben einer Datenbank auf einen anderen Datenträger vorbereiten, sollten Sie überprüfen, ob dieser über genügend Speicherplatz verfügt und ob möglicherweise Konflikte mit vorhandenen Dateien auftreten können. Dazu müssen Sie unter anderem eine [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) -Anweisung verwenden, in der die gleichen MOVE-Parameter angegeben sind, die Sie in der RESTORE DATABASE-Anweisung verwenden möchten.  
   

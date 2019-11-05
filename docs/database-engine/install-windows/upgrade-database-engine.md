@@ -1,7 +1,7 @@
 ---
 title: Upgrade einer Datenbank-Engine | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122962"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531563"
 ---
 # <a name="upgrade-database-engine"></a>Aktualisieren der Datenbank-Engine
 
@@ -41,6 +41,6 @@ ms.locfileid: "70122962"
 
     Weitere Informationen zu neuen Features und verbesserten Verhalten, die nach dem Ändern des Datenbank-Kompatibilitätsgrads verfügbar sind, finden Sie unter [Unterschiede zwischen Kompatibilitätsgraden](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures).
 
-5.  [Nutzen Sie die Vorteile der neuen Features von SQL Server](https://www.microsoft.com/sql-server/sql-server-2017). Nachdem Sie die vorherigen Schritte abgeschlossen haben, können Sie abschließend einige der neuen Verbesserungen der Datenbank-Engine nutzen. Dieser Artikel schlägt einige dieser Erweiterungen vor und stellt Links zu weiteren Informationen bereit.  
+5.  [Nutzen Sie die Vorteile der neuen Features von SQL Server](https://www.microsoft.com/sql-server/sql-server-2019). Nachdem Sie die vorherigen Schritte abgeschlossen haben, können Sie abschließend einige der neuen Verbesserungen der Datenbank-Engine nutzen. Dieser Artikel schlägt einige dieser Erweiterungen vor und stellt Links zu weiteren Informationen bereit.  
   
   
