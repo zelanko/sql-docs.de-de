@@ -1,6 +1,6 @@
 ---
 title: Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
-ms.date: 05/31/2016
+ms.date: 10/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a83f5812347dfc827795de747f9c8119e3ba6245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513292"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988423"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert verschlüsselte Werte in der Berichtsserver-Datenbank und in Konfigurationsdateien. Die meisten verschlüsselten Werte stellen Anmeldeinformationen für den Zugriff auf externe Datenquellen dar, die Daten für Berichte bereitstellen. In diesem Thema werden die verschlüsselten Werte, die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendeten Verschlüsselungsfunktionen sowie andere Arten von gespeicherten, vertraulichen Daten beschrieben, die Sie kennen sollten.  
@@ -51,6 +51,8 @@ ms.locfileid: "62513292"
  Daten in der Berichtsserver-Datenbank werden mithilfe eines symmetrischen Schlüssels verschlüsselt. Es gibt nur einen symmetrischen Schlüssel für jede Berichtsserver-Datenbank. Dieser symmetrische Schlüssel wird selbst durch den öffentlichen Schlüssel eines von Windows generierten asymmetrischen Schlüsselpaares verschlüsselt. Der private Schlüssel wird vom Berichtsserver-Windows-Dienstkonto gehalten.  
   
  In einer Berichtsserverbereitstellung für horizontales Skalieren, bei der mehrere Berichtsserverinstanzen dieselbe Berichtsserver-Datenbank verwenden, wird ein einzelner symmetrischer Schlüssel von allen Berichtsserverknoten verwendet. Jeder Knoten muss über eine Kopie des freigegebenen symmetrischen Schlüssels verfügen. Eine Kopie des symmetrischen Schlüssels wird automatisch für jeden Knoten erstellt, wenn die Bereitstellung für horizontales Skalieren konfiguriert wird. Jeder Knoten verschlüsselt seine Kopie des symmetrischen Schlüssels mithilfe des öffentlichen Schlüssels eines für das jeweilige Windows-Dienstkonto spezifischen Schlüsselpaares. Informationen zur Erstellung des symmetrischen Schlüssels für die Bereitstellung durch einzelne Instanzen oder horizontales Skalieren finden Sie unter [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ 
+ Außerdem kann die Berichts Server-Datenbank ab 2019 mit Transparent Data Encryption in SQL Server konfiguriert werden, um einen zusätzlichen Schutz für Ihre ruhenden Daten bereitzustellen.
   
 > [!NOTE]  
 >  Wenn Sie das Report Server-Windows-Dienstkonto ändern, können die asymmetrischen Schlüssel ihre Gültigkeit verlieren und Serveroperationen dadurch unterbrochen werden. Um dieses Problem zu vermeiden, verwenden Sie immer das Reporting Services-Konfigurationstool, um die Einstellungen des Dienstkontos zu ändern. Wenn Sie das Konfigurationstool verwenden, werden die Schlüssel automatisch aktualisiert. Weitere Informationen finden Sie unter [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  

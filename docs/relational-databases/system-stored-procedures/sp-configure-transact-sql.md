@@ -1,7 +1,7 @@
 ---
 title: sp_configure (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22d8f61af08f183e10910544e42614769b9dafd9
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974350"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536223"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "71974350"
 > [!NOTE]  
 > Informationen zu den Konfigurationsoptionen auf Datenbankebene finden Sie unter [Alter &#40;Database scoped Configuration&#41;Transact-SQL](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Informationen zum Konfigurieren von Soft-NUMA finden Sie unter [Soft &#40;-&#41;NUMA SQL Server](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -74,7 +74,7 @@ RECONFIGURE
 ## <a name="result-sets"></a>Resultsets  
  Bei der Ausführung ohne Parameter gibt **sp_configure** ein Resultset mit fünf Spalten zurück und sortiert die Optionen alphabetisch in aufsteigender Reihenfolge, wie in der folgenden Tabelle dargestellt.  
   
- Die Werte für **config_value** und **run_value** sind nicht automatisch Äquivalent. Nachdem Sie eine Konfigurationseinstellung mithilfe von **sp_configure**aktualisiert haben, muss der Systemadministrator den Wert für die laufende Konfiguration entweder mithilfe von RECONFIGURE oder RECONFIGURE WITH OVERRIDE aktualisieren. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+ Die Werte für **config_value** und **run_value** sind nicht automatisch Äquivalent. Nachdem Sie eine Konfigurationseinstellung mithilfe von **sp_configure**aktualisiert haben, muss der Systemadministrator den Wert für die laufende Konfiguration entweder mithilfe von RECONFIGURE oder RECONFIGURE WITH OVERRIDE aktualisieren. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
@@ -87,6 +87,10 @@ RECONFIGURE
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie **sp_configure** , um Einstellungen auf Serverebene anzuzeigen oder zu ändern. Zum Ändern von Einstellungen auf Datenbankebene können Sie ALTER DATABASE verwenden. Wenn Einstellungen geändert werden sollen, die nur die aktuelle Benutzersitzung betreffen, verwenden Sie die SET-Anweisung.  
   
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
+
 ## <a name="updating-the-running-configuration-value"></a>Aktualisieren des ausgeführten Konfigurationswerts  
  Wenn Sie einen neuen *Wert* für eine *Option*angeben, wird dieser Wert im Resultset in der **config_value** -Spalte angezeigt. Dieser Wert unterscheidet sich anfänglich von dem Wert in der **run_value** -Spalte, in der der aktuell laufende Konfigurations Wert angezeigt wird. Zum Aktualisieren des laufenden Konfigurations Werts in der **run_value** -Spalte muss der Systemadministrator entweder RECONFIGURE oder RECONFIGURE WITH OVERRIDE ausführen.  
   
@@ -95,14 +99,14 @@ RECONFIGURE
 > [!CAUTION]  
 > Ein nicht geeigneter Optionswert kann negative Auswirkungen auf die Konfiguration der Serverinstanz haben. Verwenden Sie RECONFIGURE WITH OVERRIDE mit Sorgfalt.  
   
- Mit der RECONFIGURE-Anweisung werden einige Optionen dynamisch aktualisiert. Für andere Optionen ist jedoch das Beenden und Neustarten des Servers erforderlich. So werden z. b. die Arbeitsspeicher Optionen **Min. Server Arbeitsspeicher** und **Max. Server Arbeitsspeicher** dynamisch in den [!INCLUDE[ssDE](../../includes/ssde-md.md)]; Daher können Sie Sie ändern, ohne den Server neu zu starten. Im Gegensatz dazu erfordert die erneute Konfiguration des laufenden Werts der Option **Füllfaktor** das Neustarten des [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Mit der RECONFIGURE-Anweisung werden einige Optionen dynamisch aktualisiert. Für andere Optionen ist jedoch das Beenden und Neustarten des Servers erforderlich. Beispielsweise werden die Speicheroptionen **Min. Server Arbeitsspeicher** und **Max. Server Arbeitsspeicher** im [!INCLUDE[ssDE](../../includes/ssde-md.md)]dynamisch aktualisiert. Daher können Sie Sie ändern, ohne den Server neu zu starten. Im Gegensatz dazu erfordert das erneute Konfigurieren des laufenden Werts der Option **Füllfaktor** das Neustarten des [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  Nachdem Sie RECONFIGURE für eine Konfigurationsoption ausgeführt haben, können Sie erkennen, ob die Option durch Ausführen von **sp_configure '***option_name***'** dynamisch aktualisiert wurde. Die Werte in den Spalten **run_value** und **config_value** sollten mit einer dynamisch aktualisierten Option verglichen werden. Sie können auch überprüfen, welche Optionen dynamisch sind, indem Sie die **is_dynamic** -Spalte der Katalog Sicht **sys. Konfigurationen** betrachten.  
  
  Die Änderung wird auch in das SQL Server-Fehlerprotokoll geschrieben.
   
 > [!NOTE]  
->  Wenn ein angegebener *Wert* für eine Option zu hoch ist, wird in der **run_value** -Spalte die Tatsache angegeben, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] standardmäßig auf den dynamischen Arbeitsspeicher festgelegt ist, anstatt eine ungültige Einstellung zu verwenden.  
+>  Wenn ein angegebener *Wert* für eine Option zu hoch ist, wird in der **run_value** -Spalte angegeben, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] standardmäßig auf den dynamischen Arbeitsspeicher festgelegt ist, anstatt eine Einstellung zu verwenden, die ungültig ist.  
   
  Weitere Informationen finden Sie unter [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
@@ -125,7 +129,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- Hier ist die Meldung: "Die Konfigurationsoption ' Erweiterte Optionen anzeigen ' wurde von 0 in 1 geändert. Führen Sie zum Installieren die RECONFIGURE-Anweisung aus."  
+ Im Folgenden wird die Meldung aufgeführt: "Die Konfigurationsoption 'show advanced options' wurde von 0 in 1 geändert. Führen Sie zum Installieren die RECONFIGURE-Anweisung aus."  
   
  Führen Sie `RECONFIGURE` aus, und zeigen Sie alle Konfigurationsoptionen an:  
   
@@ -153,7 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- Das Ergebnis gibt den Optionsnamen zurück, gefolgt von den minimalen und maximalen Werten für die Option. **Config_value** ist der Wert, der von [!INCLUDE[ssDW](../../includes/ssdw-md.md)] verwendet wird, wenn die Neukonfiguration beendet ist. **run_value** ist der Wert, der gerade verwendet wird. **config_value** und **run_value** sind in der Regel gleich, sofern der Wert nicht gerade geändert wird.  
+ Das Ergebnis gibt den Optionsnamen zurück, gefolgt von den minimalen und maximalen Werten für die Option. **Config_value** ist der Wert, den [!INCLUDE[ssDW](../../includes/ssdw-md.md)] verwenden, wenn die Neukonfiguration beendet wird. **run_value** ist der Wert, der gerade verwendet wird. **config_value** und **run_value** sind in der Regel gleich, sofern der Wert nicht gerade geändert wird.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. Auflisten der Konfigurationseinstellungen für einen Konfigurationsnamen  
   
