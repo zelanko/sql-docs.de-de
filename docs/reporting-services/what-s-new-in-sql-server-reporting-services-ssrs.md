@@ -8,33 +8,29 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 08/27/2019
-ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 10/30/2019
+ms.openlocfilehash: 0fea81e009d4d281c36d1882ac41835af609294b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123113"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536285"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Neues in SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Erfahren Sie, was in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] geändert wurde. Dieser Artikel behandelt die wesentlichen Features und wird aktualisiert, sobald neue Elemente veröffentlicht wurden.
-
-Die aktuellen Versionsanmerkungen finden Sie in den [Anmerkungen zu SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
+Erfahren Sie mehr über die Neuerungen in den verschiedenen Versionen von SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Dieser Artikel behandelt die wesentlichen Features und wird aktualisiert, sobald neue Elemente veröffentlicht wurden.
 
 Weitere Informationen zu Power BI-Berichtsserver finden Sie unter [Was ist der Power BI-Berichtsserver?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-**Herunterladen** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
-
-Laden Sie SQL Server 2017 Reporting Services im **[Microsoft Download Center herunter](https://www.microsoft.com/download/details.aspx?id=55252)** .
-
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-reporting-services-preview"></a>SQL Server 2019 Reporting Services Preview
+## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Reporting Services Vorschau steht im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=100122)zum Download zur Verfügung.
+![Download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "Download verfügbar ist") **Download**
+
+[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) steht im Microsoft Download Center zum Download zur Verfügung.
 
 ### <a name="azure-sql-managed-instance-support"></a>Unterstützung verwalteter Azure SQL-Instanzen
 
@@ -48,11 +44,27 @@ Mithilfe von Microsoft Berichts-Generator oder SQL Server Data Tools (SSDT) kön
 
 Beim Erstellen von Berichten können Sie Quick Infos verwenden, um Text für jedes Element im Bericht anzugeben. Die Bildschirm Lese Technologie identifiziert diese Quick Infos ordnungsgemäß.
 
+### <a name="azure-active-directory-application-proxy-support"></a>Unterstützung für den Azure Active Directory-Anwendungsproxy
+
+Mit Azure Active Directory-Anwendungsproxy ist es nicht mehr erforderlich, einen eigenen webanwendungsproxy zu verwalten, um einen sicheren Zugriff über Web-Apps oder Mobile Apps zu ermöglichen.
+
+### <a name="transparent-database-encryption"></a>Transparente Datenbankverschlüsselung
+
+SQL Server 2019 unterstützt jetzt die transparente Datenbankverschlüsselung für die SSRS-Katalog Datenbank für Enterprise-und Standard-Editionen. 
+
+### <a name="microsoft-report-builder-update"></a>Update für den Berichts-Generator von Microsoft
+
+Die neu veröffentlichte Version von Berichts-Generator ist vollständig kompatibel mit den Versionen 2016, 2017 und 2019 Reporting Services. Es ist auch mit allen veröffentlichten und unterstützten Versionen von Power BI-Berichtsserver kompatibel.
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-## <a name="ssrs-2017"></a>SSRS 2017
+## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+![Download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "Download verfügbar ist") **Download**
+
+Laden Sie SQL Server 2017 Reporting Services im **[Microsoft Download Center herunter](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
 ### <a name="comments-on-reports"></a>Kommentare zu Berichten
 
@@ -100,7 +112,7 @@ Zum Erstellen mobiler Berichte ist [!INCLUDE[SS_MobileReptPub_Short](../includes
 
 Weitere Informationen zum [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]finden Sie unter [Webportal (einheitlicher SSRS-Modus)](../reporting-services/web-portal-ssrs-native-mode.md).  
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
+![ssRSPortal](../reporting-services/media/ssrsportal.png "SSRS-Portal")  
 
 #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Benutzerdefiniertes Branding für [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -110,7 +122,7 @@ Weitere Informationen zum benutzerdefinierten Branding finden Sie unter [Brandin
 
 #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Key Performance Indicators (KPI) im [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
-Sie erstellen KPIs direkt in der [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] , die sich auf den aktuellen Ordner bezogen haben. Wenn Sie KPIs erstellen, können Sie Datasetfelder wählen und deren Werte zusammenfassen. Sie können auch verwandte Inhalte auswählen, um per Drillthrough zu weiteren Details zu gelangen.
+Sie erstellen KPIs direkt in den [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)], die sich auf den aktuellen Ordner bezogen haben. Wenn Sie KPIs erstellen, können Sie Datasetfelder wählen und deren Werte zusammenfassen. Sie können auch verwandte Inhalte auswählen, um per Drillthrough zu weiteren Details zu gelangen.
 
 ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
 
@@ -129,7 +141,7 @@ Mobile Reporting Services-Berichte sind dedizierte Berichte, die für eine Vielz
 
 Mit dem [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]können Sie mobile SQL Server-Berichte in Ihrem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]erstellen und veröffentlichen.  
 
-![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
+![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "|::ref4::|")  
 
 Weitere Informationen finden Sie unter [Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
 
@@ -137,7 +149,7 @@ Weitere Informationen finden Sie unter [Erstellen und Veröffentlichen von mobil
 
 Die Power BI Mobile-App für iOS auf dem iPad und iPhone kann jetzt auf dem lokalen Berichtsserver gehostete mobile SQL Server-Berichte anzeigen.  
 
-![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
+![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "|::ref5::|")  
 
 Sie können keine Standardverbindung herstellen, ohne einige Änderungen an der Konfiguration vorzunehmen. Weitere Informationen zum Herstellen der Verbindung zwischen der Power BI Mobile-App und dem Berichtsserver finden Sie unter [Aktivieren eines Berichtsservers für einen Zugang zu Power BI von Mobilgeräten](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
 
@@ -155,7 +167,7 @@ Weitere Informationen finden Sie in den folgenden Themen:
 
 ### <a name="microsoft-net-framework-4-support"></a>Microsoft .NET Framework 4-Unterstützung  
 
-[!INCLUDE[ssRSCurrent-md](../includes/ssrscurrent-md.md)]unterstützt die aktuellen Versionen von Microsoft .NET Framework 4, einschließlich Version 4,0 und 4.5.1. Wenn keine Version von .NET Framework 4.x bereits installiert ist, wird .NET 4.0 vom Setup von [!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] während der Installation von Features installiert.  
+[!INCLUDE[ssRSCurrent-md](../includes/ssrscurrent-md.md)] unterstützt die aktuellen Versionen von Microsoft .NET Framework 4, einschließlich Version 4,0 und 4.5.1. Wenn keine Version von .NET Framework 4.x bereits installiert ist, wird .NET 4.0 vom Setup von [!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] während der Installation von Features installiert.  
 
 ### <a name="report-improvements"></a>Verbesserungen an Berichten
 
@@ -165,7 +177,7 @@ Weitere Informationen zur Browserunterstützung von finden Sie unter [Browserunt
 
 **Moderne paginierte Berichte:** Entwerfen Sie moderne paginierte Berichte mit neuen, modernen Formatvorlagen für Diagramme, Messgeräte, Karten und andere Datenvisualisierungen.
 
-**Treemap- und Sunburst-Diagramme:** Verbessern Sie Ihre Berichte mit Diagrammen von Treemap ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") und Sunburst ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"). Diese Diagramme stellen eine gute Möglichkeit zum Anzeigen von hierarchischen Daten dar. Weitere Informationen finden Sie unter [Strukturzuordnung und Sunburst-Diagramme in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Treemap- und Sunburst-Diagramme:** Verbessern Sie Ihre Berichte mit Diagrammen von Treemap ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "|::ref6::|") und Sunburst ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "|::ref7::|"). Diese Diagramme eignen sich hervorragend zum Anzeigen von hierarchischen Daten. Weitere Informationen finden Sie unter [Strukturzuordnung und Sunburst-Diagramme in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Berichtseinbettung:** Sie können jetzt mobile und paginierte Berichte in andere Webseiten und Anwendungen unter Verwendung eines IFRAMEs zusammen mit URL-Parametern einbetten.  
 
@@ -175,7 +187,7 @@ Weitere Informationen zur Browserunterstützung von finden Sie unter [Browserunt
 2. Wählen Sie das Dashboard aus, an das Sie das Element anheften möchten.
 3. Wählen Sie aus, wie oft die Kachel im Dashboard aktualisiert werden soll.
 
-![Hinweis](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") Die Aktualisierung wird von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Abonnements verwaltet, und nachdem das Element angehängt wurde, können Sie das Abonnement bearbeiten und einen anderen Aktualisierungszeitplan konfigurieren.
+![Hinweis](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis") Die Aktualisierung wird über [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Abonnements verwaltet, und nachdem das Element angeheftet wurde, können Sie das Abonnement bearbeiten und einen anderen Aktualisierungszeitplan konfigurieren.
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -193,7 +205,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 Weitere Informationen finden Sie unter [Exportieren von Berichten über URL-Zugriff](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF ersetzt ActiveX für Remote Druck:** Die Berichts-Viewer-Symbolleiste druckt nun per PDF anstelle von ActiveX-Steuerelementen. Der neue Berichts-Viewer wird von den meisten modernen Browsern unterstützt, einschließlich Microsoft Edge. Es müssen keine ActiveX-Steuerelemente heruntergeladen werden! Abhängig vom verwendeten Browser und der von Ihnen installierten [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] PDF-Anzeige Anwendungen und-Dienste wird entweder das Dialogfeld Drucken geöffnet, um den Bericht zu drucken, oder Sie werden aufgefordert, einen herunterzuladen. PDF-Datei. Als Administrator können Sie weiterhin das clientseitige Drucken über [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]deaktivieren.
+**PDF ersetzt ActiveX für Remote Druck:** Die Berichts-Viewer-Symbolleiste druckt nun per PDF anstelle von ActiveX-Steuerelementen. Der neue Berichts-Viewer wird von den meisten modernen Browsern unterstützt, einschließlich Microsoft Edge. Es müssen keine ActiveX-Steuerelemente heruntergeladen werden! Abhängig vom verwendeten Browser und der PDF-Anzeige von Anwendungen und Diensten, die Sie installiert haben, wird [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] entweder das Dialogfeld Drucken geöffnet, um den Bericht zu drucken, oder Sie werden aufgefordert, eine herunterzuladen. PDF-Datei. Als Administrator können Sie weiterhin das clientseitige Drucken über [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]deaktivieren.
 
 Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren des clientseitigen Drucks für Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
@@ -206,7 +218,7 @@ Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren des clientse
 |**Aktivieren und Deaktivieren von Abonnements**. Neue Optionen der Benutzeroberfläche ermöglichen ein schnelles Deaktivieren und Aktivieren von Abonnements. Die deaktivierten Abonnements behalten ihre anderen Konfigurationseigenschaften, z. B. den Zeitplan, bei und können leicht aktiviert werden.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Weitere Informationen finden Sie unter [Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Einheitlicher Modus|  
 |**Abonnementbeschreibung**. Wenn Sie ein neues Abonnement erstellen, können Sie jetzt eine Beschreibung des Berichts als Teil der Abonnementeigenschaften einbeziehen. Die Beschreibung ist auf der Seite zur Abonnementzusammenfassung enthalten.|SharePoint- und einheitlicher Modus|  
 |**Ändern des Abonnementbesitzers**. Verbesserte Benutzeroberfläche zum schnellen Ändern des Besitzers eines Abonnements. Bei früheren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] konnten Administratoren die Abonnementbesitzer mithilfe eines Skripts ändern. Ab Version [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] können Sie Abonnementbesitzer über die Benutzeroberfläche oder ein Skript ändern. Das Ändern des Abonnementbesitzers ist eine häufige Verwaltungsaufgabe, wenn Benutzer Ihr Unternehmen verlassen oder eine andere Funktion übernehmen.|SharePoint- und einheitlicher Modus|  
-|**Freigegebene Anmeldeinformationen für Dateifreigabeabonnements**. Es gibt jetzt zwei Workflows mit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dateifreigabeabonnements:<br /><br /> In diesem Release kann Ihr [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Administrator nun ein einzelnes Dateifreigabekonto konfigurieren, das für mehrere Abonnements verwendet wird. Das Dateifreigabe Konto wird im einheitlichen Modus [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] des Configuration Managers konfiguriert. **Geben Sie ein Dateifreigabe Konto**an. Auf der Seite Abonnement Konfiguration wählen Benutzer **Dateifreigabe Konto verwenden**aus.<br /><br /> Sie können einzelne Abonnements mit spezifischen Anmeldeinformationen für die Zieldateifreigabe konfigurieren.<br /><br /> Sie können beide Ansätze auch kombinieren, sodass einige Dateifreigabeabonnements das zentrale Dateifreigabekonto verwenden, während andere Abonnements bestimmte Anmeldeinformationen nutzen.|Einheitlicher Modus|
+|**Freigegebene Anmeldeinformationen für Dateifreigabeabonnements**. Es gibt jetzt zwei Workflows mit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dateifreigabeabonnements:<br /><br /> In diesem Release kann Ihr [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Administrator nun ein einzelnes Dateifreigabekonto konfigurieren, das für mehrere Abonnements verwendet wird. Das Dateifreigabe Konto wird im [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] einheitlichen Modus von Configuration Manager konfiguriert. **Geben Sie ein Dateifreigabe Konto**an. Auf der Seite Abonnement Konfiguration wählen Benutzer **Dateifreigabe Konto verwenden**aus.<br /><br /> Sie können einzelne Abonnements mit spezifischen Anmeldeinformationen für die Zieldateifreigabe konfigurieren.<br /><br /> Sie können beide Ansätze auch kombinieren, sodass einige Dateifreigabeabonnements das zentrale Dateifreigabekonto verwenden, während andere Abonnements bestimmte Anmeldeinformationen nutzen.|Einheitlicher Modus|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
@@ -219,11 +231,11 @@ Die neue Version von SSDT enthält die Projektvorlagen für [!INCLUDE[ssRSCurren
 |||  
 |-|-|  
 |eine neue|Previous|  
-|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
+|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "|::ref9::|")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "|::ref10::|")|  
 
 **Benutzerdefinierter Parameterbereich** : Sie können jetzt den Parameterbereich anpassen. Mithilfe der Entwurfsoberfläche im Berichts-Generator, können Sie einen Parameter zu einer bestimmten Spalte und Zeile im Parameterbereich ziehen. Sie können Spalten hinzufügen und entfernen, um das Layouts des Bereichs zu ändern. Weitere Informationen finden Sie unter [Benutzerdefiniertes Anpassen des Parameterbereichs in einem Bericht &#40;Berichts-Generator&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)erstellen.  
 
-![Parameterliste im Berichtsdaten- und Parameterbereich](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Parameter list in Report Data pane and in parameters pane")  
+![Parameterliste im Berichtsdaten Bereich und im Parameter Bereich](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "|::ref11::|")  
 
 **Unterstützung hoher DPI-Werte:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] unterstützt die Skalierung sowie Geräte mit hohen DPI-Werten (Punkte pro Zoll).  Weitere Informationen zu hohen DPI-Werten finden Sie in folgenden Themen:  
 
