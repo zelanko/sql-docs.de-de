@@ -1,27 +1,25 @@
 ---
 title: Die DACPAC-Erweiterung für SQL Server
 titleSuffix: Azure Data Studio
-description: Installieren und Verwenden der DACPAC-Erweiterung für SQL Server (Vorschauversion) für Azure Data Studio
+description: Installieren und Verwenden der DACPAC-Erweiterung für SQL Server für Azure Data Studio
 ms.custom: seodec18
-ms.date: 10/21/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 769e6157e7d84702716dfce79d0217efeee83076
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783329"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532418"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>DACPAC-Erweiterung für SQL Server (Vorschauversion)
+# <a name="sql-server-dacpac-extension"></a>Die DACPAC-Erweiterung für SQL Server
 
 **Der Datenschichtanwendungs-Assistent**  macht die Bereitstellung und Extrahierung von DACPAC-Dateien und das Importieren und Exportieren von BACPAC-Dateien einfach.
-
-Diese Funktion befindet sich derzeit in der ersten Vorschauversion. Probleme und Featureanforderungen können Sie [hier](https://github.com/microsoft/azuredatastudio/issues) mitteilen.
 
 
 ## <a name="features"></a>Funktionen
@@ -60,3 +58,4 @@ Klicken Sie zum Starten des Assistenten mit der rechten Maustaste auf den Ordner
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zu DACPACs finden Sie in der zugehörigen [Dokumentation](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017).
+Probleme und Featureanforderungen können Sie [hier](https://github.com/microsoft/azuredatastudio/issues) mitteilen.

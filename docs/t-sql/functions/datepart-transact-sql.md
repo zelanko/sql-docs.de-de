@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 7d3eda2a9f3f3756fd2fdc0095b999dcde189d83
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278192"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988430"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ Diese Funktion gibt eine ganze Zahl zurück, die das angegebene *datepart*-Argum
   
 Unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) finden Sie eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums- und Uhrzeitdatentypen und zugehörige Funktionen.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -119,19 +119,15 @@ In dieser Tabelle werden alle *datepart*-Argumente mit den entsprechenden Rückg
 ## <a name="week-and-weekday-datepart-arguments"></a>datepart-Argumente des Typs week und weekday
 Für das *datepart*-Argument **week** (**wk**, **ww**) oder **weekday** (**dw**) hängt der Rückgabewert `DATEPART` von dem von [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) festgelegten Wert ab.
   
-Der 1. Januar eines Jahres definiert die Anfangszahl für **week**_datepart_. Beispiel:
+Der 1. Januar eines Jahres definiert die Anfangszahl für **week** _datepart_. Beispiel:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
 Hierbei steht *xxxx* für ein beliebiges Jahr.
   
-Diese Tabelle enthält den Rückgabewert für die *datepart*-Argumente **week** und **weekday** für
+In dieser Tabelle wird für jedes „SET DATEFIRST“-Argument der Rückgabewert von **week** und **weekday** *datepart* für '2007-04-21' aufgelistet. Der 1. Januar 2007 ist ein Montag. Der 21. April 2007 ist ein Sonntag. Für Englisch (USA) dient
 
-'2007-04-21'
-
-für jedes SET DATEFIRST-Argument. Der 1. Januar 2007 ist ein Montag. Der 21. April 2007 ist ein Sonntag. Für Englisch (USA) dient
-
-SET DATEFIRST 7 -- ( Sunday )
+`SET DATEFIRST 7 -- ( Sunday )`
 
 als Standardeinstellung. Nachdem Sie DATEFIRST festgelegt haben, verwenden Sie diese empfohlene SQL-Anweisung für die datepart-Tabellenwerte:
 

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) – SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: language-extensions
@@ -9,13 +9,13 @@ ms.topic: language-reference
 author: nelgson
 ms.author: negust
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0a371e328a585e8a559e3c23c28be135f16c208
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3f2911406b902ea4d4e7840676dcf08b0318664d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893415"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536241"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -108,9 +108,9 @@ Dies bietet eine Möglichkeit, einen Satz von Umgebungsvariablen für die Runtim
 
 Dieser Parameter ist für Szenarien mit hybridem Betriebssystem erforderlich. In einer hybriden Architektur muss die Sprache einmal pro Plattform registriert werden. Plattform und Sprachname sind der eindeutige Schlüssel für jede externe Sprache. Wenn keine Plattform angegeben ist, wird vom aktuellen Betriebssystem davon ausgegangen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
-In CTP 3.0 werden **PARAMETERS** und **ENVIRONMENT_VARIABLES** nicht unterstützt.
+Derzeit werden **PARAMETERS** und **ENVIRONMENT_VARIABLES** nicht unterstützt.
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -120,7 +120,7 @@ Zum Bearbeiten einer Bibliothek ist die separate Berechtigung `ALTER ANY EXTERNA
 
 ### <a name="execute-external-script-permission"></a>EXECUTE EXTERNAL SCRIPT-Berechtigung
 
-In SQL Server 2019 werden EXECUTE EXTERNAL SCRIPT-Berechtigungen eingeführt, damit die Ausführung externer Skripts für bestimmte Sprachen gewährt werden kann. Bisher war nur die Datenbankberechtigung EXECUTE ANY EXTERNAL SCRIPT vorhanden, mit der keine Ausführungsberechtigung für eine bestimmte Sprache gewährt werden konnte.
+Sie können EXECUTE EXTERNAL SCRIPT-Berechtigungen verwenden, damit die Ausführung externer Skripts für bestimmte Sprachen gewährt werden kann. Dies unterscheidet sich von der Datenbankberechtigung EXECUTE ANY EXTERNAL SCRIPT, mit der keine Ausführungsberechtigung für eine bestimmte Sprache gewährt werden kann.
 
 Das bedeutet, dass Benutzern ohne **dbo** die Berechtigung zum Ausführen einer bestimmten Sprache erteilt werden muss:
 

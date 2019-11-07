@@ -1,6 +1,6 @@
 ---
-title: Erstellen von Datenfunktionen mithilfe von R-und SQL Server-Funktionen
-description: Tutorial zum Erstellen von Datenfunktionen mit SQL Server Funktionen für Daten bankübergreifende Analysen.
+title: Erstellen von Datenfeatures mithilfe von R und SQL Server-Funktionen
+description: In diesem Tutorial wird erklärt, wie Sie Datenfeatures mithilfe von SQL Server-Funktionen für datenbankinterne Analysen erstellen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
@@ -10,56 +10,56 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: f12c20a54c0811e392eaa85684d7fac1a209c396
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68714694"
 ---
-# <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Erstellen von Datenfunktionen mithilfe von R und SQL Server (Exemplarische Vorgehensweise)
+# <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Erstellen von Datenfeatures mithilfe von R und SQL Server (Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Data Engineering ist ein wichtiger Teil des maschinellen Lernens. Daten erfordern häufig eine Transformation, bevor Sie Sie für die Vorhersage Modellierung verwenden können. Wenn die Daten nicht über die Features verfügen, die Sie benötigen, können Sie diese aus vorhandenen Werten erstellen.
+Data Engineering ist ein wichtiger Teil des maschinellen Lernens. Häufig müssen Daten transformiert werden, bevor Sie sie für die Vorhersagemodellierung verwenden können. Wenn die Daten nicht über die Features verfügen, die Sie benötigen, können Sie diese aus vorhandenen Werten erstellen.
 
-Sie möchten für diesen Modellierungstask möglicherweise lieber die Entfernung in Meilen zwischen zwei Orten haben anstatt die ungefähren Werte für den Breiten- und Längengrad des Abhol- und Zielorts. Zum Erstellen dieses Features berechnen Sie die direkte lineare Entfernung zwischen zwei Punkten, indem Sie die [Haversinus-Formel](https://en.wikipedia.org/wiki/Haversine_formula)verwenden.
+Sie möchten für diesen Modellierungstask möglicherweise lieber die Entfernung in Meilen zwischen zwei Orten haben anstatt die ungefähren Werte für den Breiten- und Längengrad des Abhol- und Zielorts. Zum Erstellen dieses Features berechnen Sie die direkte lineare Entfernung zwischen zwei Punkten mit der [Haversine-Formel](https://en.wikipedia.org/wiki/Haversine_formula).
 
-In diesem Schritt erlernen Sie zwei verschiedene Methoden zum Erstellen eines Features aus Daten:
+In diesem Schritt erlernen Sie zwei unterschiedliche Methoden zum Erstellen eines Features aus Daten:
 
 > [!div class="checklist"]
-> * Verwenden einer benutzerdefinierten R-Funktion
-> * Verwenden einer benutzerdefinierten T-SQL-Funktion in[!INCLUDE[tsql](../../includes/tsql-md.md)]
+> * Mithilfe einer benutzerdefinierten R-Funktion
+> * Mithilfe einer benutzerdefinierten T-SQL-Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
-Ziel ist es, einen neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Satz von Daten zu erstellen, der die ursprünglichen Spalten sowie die neue numerische Funktion *direct_distance*enthält.
+Das Ziel ist es, eine neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datengruppe zu erstellen, die die ursprünglichen Spalten sowie das neue numerische Feature *direct_distance* enthält.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-Dieser Schritt setzt eine laufende R-Sitzung voraus, die auf vorherigen Schritten in dieser exemplarischen Vorgehensweise basiert. Dabei werden die Verbindungs Zeichenfolgen und Datenquellen Objekte verwendet, die in diesen Schritten erstellt werden. Die folgenden Tools und Pakete werden zum Ausführen des Skripts verwendet.
+Bei diesem Schritt wird eine laufende R-Sitzung basierend auf den vorherigen Schritten in dieser Vorgehensweise angenommen. Es werden die Verbindungszeichenfolgen und Datenquellenobjekte verwendet, die in diesen Schritten erstellt wurden. Die folgenden Tools und Pakete werden zum Ausführen des Skripts verwendet.
 
-+ "Rgui. exe" zum Ausführen von R-Befehlen
++ Rgui.exe zum Ausführen von R-Befehlen
 + Management Studio zum Ausführen von T-SQL
 
-## <a name="featurization-using-r"></a>Featurearisierung mithilfe von R
+## <a name="featurization-using-r"></a>Featurebereitstellung mit R
 
 Die Sprache R ist bekannt für ihre großen und vielseitigen statistischen Bibliotheken, doch Sie müssen ggf. weiterhin benutzerdefinierte Datentransformationen erstellen.
 
-Zuerst wird die Art und Weise beschrieben, wie R-Benutzer daran gewöhnt sind: Sie können die Daten auf Ihrem Laptop ablegen und dann eine benutzerdefinierte R-Funktion ( *computedist*) ausführen, die die lineare Entfernung zwischen zwei Punkten berechnet, die durch breiten-und Längengrad Werte angegeben werden.
+Zunächst gehen wir auf die für R-Benutzer bekannte Weise vor: Wir rufen die Daten auf den Laptop ab und führen dann die benutzerdefinierte R-Funktion *ComputeDist* aus, die die Luftlinie zwischen zwei Punkten berechnet und durch Breiten- und Längengradwerte angibt.
 
-1. Beachten Sie, dass das Datenquellen Objekt, das Sie zuvor erstellt haben, nur die obersten 1000 Zeilen erhält. Definieren wir also eine Abfrage, mit der alle Daten abgerufen werden.
+1. Beachten Sie, dass das zuvor erstellte Datenquellenobjekt nur die obersten 1000 Zeilen abruft. Definieren wir also eine Abfrage, mit der alle Daten abgerufen werden.
 
     ```R
     bigQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,  pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude FROM nyctaxi_sample";
     ```
 
-2. Erstellen Sie mithilfe der Abfrage ein neues Datenquellen Objekt.
+2. Erstellen Sie mithilfe der Abfrage ein neues Datenquellenobjekt.
 
     ```R
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [Rxsqlserverdata](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) kann entweder eine Abfrage enthalten, die aus einer gültigen SELECT-Abfrage besteht, die als Argument für den _sqlQuery_ -Parameter bereitgestellt wird, oder den Namen eines Table-Objekts, das als _Tabellen_ Parameter bereitgestellt wird.
+    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) kann entweder eine aus einer gültigen SELECT-Abfrage bestehenden Abfrage verwenden, die als Argument des _sqlQuery_-Parameters bereitgestellt wird, oder den Namen eines Tabellenobjekts, bereitgestellt als _table_-Parameter.
     
-    - Wenn Sie Stichproben von Daten aus einer Tabelle durchführen möchten, müssen Sie den _sqlQuery_ -Parameter verwenden, samplingparameter mithilfe der T-SQL TABLESAMPLE-Klausel definieren und das _rowbuffereing_ -Argument auf false festlegen.
+    - Wenn Sie Stichproben von Daten aus einer Tabelle durchführen möchten, müssen Sie den _sqlQuery_-Parameter verwenden, mithilfe der T-SQL-Klausel TABLESAMPLE Stichprobenparameter definieren und das _rowBuffering_-Argument auf FALSE festlegen.
 
-3. Führen Sie folgenden Code aus, um die benutzerdefinierte R-Funktion zu erstellen. Computedist nimmt zwei Paare von breiten-und Längengrad Werten an und berechnet die lineare Entfernung zwischen Ihnen und gibt den Abstand in Kilometern zurück.
+3. Führen Sie den folgenden Code aus, um die benutzerdefinierte R-Funktion zu erstellen. ComputeDist verwendet zwei Paare von Breiten- und Längengradwerten, berechnet die Luftlinie zwischen diesen und gibt das Ergebnis in Meilen zurück.
 
     ```R
     env <- new.env();
@@ -84,13 +84,13 @@ Zuerst wird die Art und Weise beschrieben, wie R-Benutzer daran gewöhnt sind: S
     + Die erste Zeile definiert eine neue Umgebung. In R kann eine Umgebung verwendet werden, um Namespaces z.B. in Paketen einzuschließen. Sie können die `search()` -Funktion verwenden, um die Umgebungen in Ihrem Arbeitsbereich anzuzeigen. Um die Objekte in einer bestimmten Umgebung anzuzeigen, geben Sie `ls(<envname>)`ein.
     + Die Zeilen, die mit `$env.ComputeDist` beginnen, enthalten den Code, der die Haversine-Formel definiert, die die *Großkreisentfernung* zwischen zwei Punkten auf einer Kugel berechnet.
 
-4. Nachdem Sie die Funktion definiert haben, wenden Sie Sie auf die Daten an, um eine neue Funktions Spalte, *direct_distance*, zu erstellen. Ändern Sie jedoch vor dem Ausführen der Transformation den computekontext in local.
+4. Wenn Sie die Funktion definiert haben, wenden Sie sie auf die Daten an, um eine neue Featurespalte, *direct_distance*, zu erstellen. Ändern Sie jedoch vor dem Ausführen der Transformation den Computekontext in „local“ (lokal).
 
     ```R
     rxSetComputeContext("local");
     ```
 
-5. Verwenden Sie die Funktion [rxdatastep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) , um die featureengineering-Daten abzurufen `env$ComputeDist` , und wenden Sie die Funktion auf die Daten im Arbeitsspeicher an.
+5. Rufen Sie die Funktion [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) auf, um die Featureentwicklungsdaten abzurufen, und wenden Sie die Funktion `env$ComputeDist` auf die Daten im Arbeitsspeicher an.
 
     ```R
     start.time <- proc.time();
@@ -108,15 +108,15 @@ Zuerst wird die Art und Weise beschrieben, wie R-Benutzer daran gewöhnt sind: S
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + Die rxdatastep-Funktion unterstützt verschiedene Methoden zum Ändern von Daten an Ort und Stelle. Weitere Informationen finden Sie in diesem Artikel:  [Transformieren und unterteilen von Daten in "mikrosft R"](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + Die „rxDataStep“-Funktion unterstützt verschiedene Methoden zum Ändern von Daten an Ort und Stelle. Weitere Informationen finden Sie in diesem Artikel:  [Transformieren und Unterteilen von Daten in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
     
-    Bei rxdatastep sollten Sie jedoch einige Punkte beachten: 
+    Hinsichtlich „rxDataStep“ sollten Sie jedoch einige Punkte beachten: 
     
-    In anderen Datenquellen können Sie die Argumente *varstokeep* und *varstodrop*verwenden, diese werden jedoch für SQL Server Datenquellen nicht unterstützt. Daher haben wir in diesem Beispiel das _Transformationen_ -Argument zum Angeben der Pass-Through-Spalten und der transformierten Spalten verwendet. Außerdem kann das _InData_ -Argument bei der Ausführung in einem SQL Server computekontext nur eine SQL Server Datenquelle annehmen.
+    In anderen Datenquellen können Sie die Argumente *varsToKeep* und *varsToDrop* verwenden, jedoch werden diese in SQL Server-Datenquellen nicht unterstützt. Daher haben wir in diesem Beispiel das Argument _transforms_ verwendet, um sowohl die Pass-Through-Spalten als auch die transformierten Spalten anzugeben. Außerdem kann das _inData_-Argument bei der Ausführung in einem SQL Server-Computekontext nur eine SQL Server-Datenquelle verwenden.
 
-    Der vorangehende Code kann auch eine Warnmeldung ausgeben, wenn er für größere Datasets ausgeführt wird. Wenn die Anzahl der Zeilen, die die Anzahl der zu erstellenden Spalten überschreitet, einen festgelegten Wert überschreitet (der Standardwert ist 3 Millionen), gibt rxdatastep eine Warnung aus, und die Anzahl der Zeilen im zurückgegebenen Datenrahmen wird abgeschnitten. Um die Warnung zu entfernen, können Sie das _maxrowsbycols_ -Argument in der rxdatastep-Funktion ändern. Wenn _maxrowsbycols_ jedoch zu groß ist, können beim Laden des Daten Rahmens in den Arbeitsspeicher Probleme auftreten.
+    Der vorangehende Code kann auch eine Warnmeldung ausgeben, wenn er für größere Datasets ausgeführt wird. Wenn die Anzahl der Zeilen mal die Anzahl der erstellten Spalten einen festgelegten Wert überschreitet (der Standardwert ist 3.000.000), gibt „rxDataStep“ eine Warnung aus und die Anzahl der Zeilen im zurückgegebenen Datenrahmen wird abgeschnitten. Sie können das _maxRowsByCols_-Argument in der „rxDataStep“-Funktion ändern, um die Warnung zu entfernen. Wenn _maxRowsByCols_ jedoch zu groß ist, können beim Laden des Datenrahmens in den Arbeitsspeicher Probleme auftreten.
 
-7. Optional können Sie [rxgetvarinfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) aufrufen, um das Schema der transformierten Datenquelle zu überprüfen.
+7. Optional können Sie [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) aufrufen, um das Schema der transformierten Datenquelle zu überprüfen.
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -124,13 +124,13 @@ Zuerst wird die Art und Weise beschrieben, wie R-Benutzer daran gewöhnt sind: S
 
 ## <a name="featurization-using-transact-sql"></a>Featurebereitstellung mit Transact-SQL
 
-In dieser Übung erfahren Sie, wie Sie dieselbe Aufgabe mithilfe von SQL-Funktionen anstelle von benutzerdefinierten R-Funktionen ausführen. 
+In dieser Übung lernen Sie, wie Sie dieselbe Aufgabe mithilfe von SQL-Funktionen anstelle von benutzerdefinierten R-Funktionen ausführen. 
 
-Wechseln Sie zu [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) oder einem anderen Abfrage-Editor, um das T-SQL-Skript auszuführen.
+Wechseln Sie zu [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) oder zu einem anderen Abfrage-Editor, um das T-SQL-Skript auszuführen.
 
-1. Verwenden Sie eine SQL-Funktion mit dem Namen *fncalculatedistance*. Die Funktion sollte bereits in der NYCTaxi_Sample-Datenbank vorhanden sein. Überprüfen Sie in Objekt-Explorer, ob die Funktion vorhanden ist, indem Sie auf diesen Pfad Datenbanken > NYCTaxi_Sample > Programmierbarkeit > Funktionen > Skalarwertfunktionen > dbo. fncalculatedistance.
+1. Verwenden Sie eine SQL-Funktion mit dem Namen *fnCalculateDistance*. Die Funktion sollte bereits in der Datenbank „NYCTaxi_Sample“ vorhanden sein. Stellen Sie im Objekt-Explorer über folgenden Pfad sicher, dass die Funktion vorhanden ist: Datenbanken > NYCTaxi_Sample > Programmierung > Funktionen > Skalarwertfunktionen >  dbo.fnCalculateDistance.
 
-    Wenn die Funktion nicht vorhanden ist, verwenden Sie SQL Server Management Studio, um die Funktion in der NYCTaxi_Sample-Datenbank zu generieren.
+    Falls die Funktion nicht vorhanden ist, generieren Sie diese mithilfe von SQL Server Management Studio in der Datenbank „NYCTaxi_Sample“.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -155,7 +155,7 @@ Wechseln Sie zu [SQL Server Management Studio](https://docs.microsoft.com/sql/ss
     END
     ```
 
-2. Führen Sie in Management Studio in einem neuen Abfragefenster die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung aus einer beliebigen Anwendung aus, die unterstützt [!INCLUDE[tsql](../../includes/tsql-md.md)] , um zu sehen, wie die Funktion funktioniert.
+2. Führen Sie in Management Studio in einem neuen Abfragefenster die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung von einer beliebigen Anwendung aus, die [!INCLUDE[tsql](../../includes/tsql-md.md)] unterstützt, um zu sehen, wie die Funktion arbeitet.
 
     ```sql
     USE nyctaxi_sample
@@ -165,7 +165,7 @@ Wechseln Sie zu [SQL Server Management Studio](https://docs.microsoft.com/sql/ss
     dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) as direct_distance, pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude 
     FROM nyctaxi_sample
     ```
-3. Wenn Sie Werte direkt in eine neue Tabelle einfügen möchten (Sie müssen Sie zuerst erstellen), können Sie eine **into** -Klausel hinzufügen, die den Tabellennamen angibt.
+3. Sie können eine **INTO**-Klausel hinzufügen, die den Tabellennamen angibt, um Werte direkt in eine neue Tabelle (die Sie vorher erstellen müssen) einzufügen.
 
     ```sql
     USE nyctaxi_sample
@@ -177,7 +177,7 @@ Wechseln Sie zu [SQL Server Management Studio](https://docs.microsoft.com/sql/ss
     FROM nyctaxi_sample
     ```
 
-4. Sie können auch die SQL-Funktion aus R-Code abrufen. Wechseln Sie zurück zur rgui, und speichern Sie die SQL-featureabfrage in einer R-Variablen.
+4. Sie können die SQL-Funktion auch über R-Code aufrufen. Wechseln Sie wieder zurück zu Rgui, und speichern Sie die SQL-Featurebereitstellungsabfrage in einer R-Variablen.
 
     ```R
     featureEngineeringQuery = "SELECT tipped, fare_amount, passenger_count,
@@ -189,7 +189,7 @@ Wechseln Sie zu [SQL Server Management Studio](https://docs.microsoft.com/sql/ss
     ```
   
     > [!TIP]
-    > Diese Abfrage wurde geändert, um eine kleinere Stichprobe von Daten zu erhalten, um diese exemplarische Vorgehensweise schneller zu machen. Sie können die TABLESAMPLE-Klausel entfernen, wenn Sie alle Daten erhalten möchten. abhängig von Ihrer Umgebung ist es jedoch möglicherweise nicht möglich, das vollständige DataSet in R zu laden, was zu einem Fehler führt.
+    > Diese Abfrage wurde so geändert, dass sie ein kleineres Datenbeispiel abruft, damit diese exemplarische Vorgehensweise schneller durchgearbeitet werden kann. Sie können die TABLESAMPLE-Klausel entfernen, wenn Sie alle Daten abrufen möchten. Je nach Umgebung kann das vollständige Dataset möglicherweise nicht in R geladen werden, und es wird ein Fehler angezeigt.
   
 5. Verwenden Sie die folgenden Codezeilen, um die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion aus Ihrer R-Umgebung aufzurufen und sie auf die Daten anzuwenden, die in *featureEngineeringQuery* definiert sind.
   
@@ -202,7 +202,7 @@ Wechseln Sie zu [SQL Server Management Studio](https://docs.microsoft.com/sql/ss
       connectionString = connStr)
     ```
   
-6.  Nachdem das neue Feature erstellt wurde, rufen Sie **rxgetvarsinfo** auf, um eine Zusammenfassung der Daten in der Featuretabelle zu erstellen.
+6.  Nachdem das neue Feature erstellt wurde, rufen Sie **rxGetVarsInfo** auf, um eine Zusammenfassung der Daten in der Featuretabelle zu erstellen.
   
     ```R
     rxGetVarInfo(data = featureDataSource)
@@ -226,12 +226,12 @@ Wechseln Sie zu [SQL Server Management Studio](https://docs.microsoft.com/sql/ss
     ```
 
     > [!NOTE]
-    > In einigen Fällen erhalten Sie möglicherweise eine Fehlermeldung wie die folgende: *Die EXECUTE-Berechtigung wurde für das Objekt ' fncalculatedistance ' verweigert* . Wenn dies der Fall ist, stellen Sie sicher, dass der verwendete Anmelde Name über Berechtigungen zum Ausführen von Skripts und Erstellen von Objekten in der Datenbank verfügt, nicht nur auf der-Instanz.
-    > Überprüfen Sie das Schema für das Objekt, fncalculatedistance. Wenn das Objekt vom Datenbankbesitzer erstellt wurde und Ihre Anmeldung zu der Rolle db_datareader gehört, müssen Sie dem Anmelde Namen die expliziten Berechtigungen zum Ausführen des Skripts einräumen.
+    > In einigen Fällen wird Ihnen möglicherweise eine Fehlermeldung ähnlich der folgenden angezeigt: *The EXECUTE permission was denied on the object 'fnCalculateDistance'* (Die EXECUTE-Berechtigung wurde für das Objekt „fnCalculateDistance“ abgelehnt.) Stellen Sie in diesem Fall sicher, dass Sie über die verwendeten Anmeldeinformationen über die Berechtigungen zum Ausführen von Skripts und zum Erstellen von Objekten für die Datenbank und nicht nur für die Instanz verfügen.
+    > Überprüfen Sie das Schema des Objekts „fnCalculateDistance“. Wenn das Objekt vom Datenbankbesitzer erstellt wurde und Ihre Anmeldeinformationen der Rolle „db_datareader“ zugeordnet sind, müssen Sie diesen explizit Berechtigungen zum Ausführen des Skripts erteilen.
 
-## <a name="comparing-r-functions-and-sql-functions"></a>Vergleichen von R-Funktionen und SQL-Funktionen
+## <a name="comparing-r-functions-and-sql-functions"></a>Vergleich von R- und SQL-Funktionen
 
-Merken Sie sich diesen Code, der verwendet wird, um den R-Code zu verwenden?
+Erinnern Sie sich an diesen Codeausschnitt, der zum Stoppen des R-Codes verwendet wurde?
 
 ```R
 start.time <- proc.time()
@@ -240,15 +240,15 @@ used.time <- proc.time() - start.time
 print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""))
 ```
 
-Sie können dies mit dem Beispiel für eine benutzerdefinierte SQL-Funktion verwenden, um zu sehen, wie lange die Datentransformation beim Aufrufen einer SQL-Funktion dauert. Wechseln Sie außerdem zum Wechseln von computekontexten mit rxsetcomputecontext, und vergleichen Sie die Zeitangaben.
+Sie können versuchen, diesen mit dem benutzerdefinierten SQL-Funktionsbeispiel zu verwenden, um festzustellen, wie lange die Datentransformation beim Aufrufen einer SQL-Funktion dauert. Versuchen Sie zudem, mit „rxSetComputeContext“ Computekontexte zu wechseln, und vergleichen Sie die Zeiten.
 
-Abhängig von der Netzwerkgeschwindigkeit und der Hardwarekonfiguration können ihre Zeiten erheblich variieren. In den getesteten Konfigurationen war der Funktions [!INCLUDE[tsql](../../includes/tsql-md.md)] Ansatz schneller als die Verwendung einer benutzerdefinierten R-Funktion. Daher verwenden wir die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktion für diese Berechnungen in nachfolgenden Schritten.
+Ihre Zeiten können abhängig von Ihrer Netzwerkgeschwindigkeit und Ihrer Hardwarekonfiguration stark variieren. In den getesteten Konfigurationen war der Ansatz mit der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion schneller als die Verwendung einer benutzerdefinierten R-Funktion. Daher haben wir in den nachfolgenden Schritten die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion für diese Berechnungen verwendet.
 
 > [!TIP]
-> Sehr häufig ist die Funktionsentwicklung [!INCLUDE[tsql](../../includes/tsql-md.md)] mit schneller als R. T-SQL enthält z. b. schnelle Fenster-und Rang Folge Funktionen, die auf allgemeine Data Science Berechnungen angewendet werden können, z. b. das parallele Verschieben von durchschnitten und *n*-Kacheln. Wählen Sie je nach Daten und Aufgabe die effizienteste Methode.
+> Die Featureentwicklung mit [!INCLUDE[tsql](../../includes/tsql-md.md)] ist sehr oft schneller als mit R. Zum Beispiel enthält T-SQL Windowing- und Rangfolgefunktionen, die auf allgemeine Data Science-Berechnungen wie rollierende gleitende Durchschnitte und *n*-Kacheln angewendet werden können. Wählen Sie je nach Daten und Aufgabe die effizienteste Methode.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
-> [Erstellen eines R-Modells und speichern in SQL](walkthrough-build-and-save-the-model.md)
+> [Erstellen eines R-Modells und Speichern in SQL](walkthrough-build-and-save-the-model.md)
 

@@ -1,88 +1,91 @@
 ---
 title: Sicherheitskonzepte
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel werden die Sicherheits [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Konzepte für beschrieben. Der Artikel umfasst auch eine Beschreibung von Clusterendpunkten und Clusterauthentifizierung.
+description: In diesem Artikel werden Sicherheitskonzepte für Big Data-Cluster für SQL Server beschrieben. Der Artikel umfasst auch eine Beschreibung von Clusterendpunkten und Clusterauthentifizierung.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4e4441f0cc4f19d4784019408bfc5309a5734285
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 35eb5e0a3236d8f016ed5ca99b769d628a4d81ed
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652254"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532380"
 ---
-# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Sicherheitskonzepte für[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Sicherheitskonzepte für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Ein sicherer Big Data-Cluster impliziert konsistente und kohärente Unterstützung für Authentifizierung- und Autorisierungsszenarien sowohl für SQL Server als auch für HDFS/Spark. Authentifizierung ist der Prozess, mit dem die Identität eines Benutzers oder Diensts überprüft und sichergestellt wird, dass der Benutzer oder Dienst das ist, was er zu sein vorgibt. Autorisierung bezieht sich auf das Gewähren oder Verweigern des Zugriffs auf bestimmte Ressourcen basierend auf der Identität des Benutzers, der den Zugriff anfordert. Dieser Schritt wird ausgeführt, nachdem ein Benutzer per Authentifizierung identifiziert wurde.
-
-Im Big Data-Kontext erfolgt die Autorisierung in der Regel über Zugriffssteuerungslisten (Access Control Lists, ACLs), die Benutzeridentitäten bestimmte Berechtigungen zuordnen. HDFS unterstützt die Autorisierung durch Einschränken des Zugriffs auf Dienst-APIs, HDFS-Dateien und Auftragsausführung.
-
 In diesem Artikel werden die wichtigsten sicherheitsbezogenen Konzepte in Big Data-Clustern erläutert.
 
-## <a name="cluster-endpoints"></a>Clusterendpunkte
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] stellen eine kohärente und konsistente Autorisierung und Authentifizierung bereit. Ein Big Data-Cluster kann in Active Directory über eine vollständig automatisierte Bereitstellung integriert werden, die die Active Directory-Integration für eine vorhandene Domäne einrichtet. Sobald ein Big Data-Cluster mit der Active Directory-Integration konfiguriert ist, können Sie vorhandene Identitäten und Benutzergruppen für den einheitlichen Zugriff auf alle Endpunkte nutzen. Wenn Sie externe Tabellen in SQL Server erstellt haben, können Sie außerdem den Zugriff auf Datenquellen steuern, indem Sie den Benutzern und Gruppen von Active Directory Zugriff auf externe Tabellen gewähren und so die Datenzugriffsrichtlinien an einem einzigen Ort zentralisieren.
 
-Es gibt drei Einstiegspunkte für den Big Data-Cluster:
+## <a name="authentication"></a>Authentifizierung
 
-* HDFS/Spark-Gateway (Knox): Dies ist ein HTTPS-basierter Endpunkt. Andere Endpunkte werden per Proxy über diesen Endpunkt geleitet. Ein HDFS/Spark-Gateway wird für den Zugriff auf Dienste wie webHDFS und Livy verwendet. Wenn Sie Verweise auf Knox sehen – dies ist der Endpunkt.
+Die externen Clusterendpunkte unterstützen die Active Directory-Authentifizierung. Das bedeutet, dass Sie Ihre AD-Identität verwenden können, um sich beim Big Data-Cluster zu authentifizieren.
 
-* Controllerendpunkt: Verwaltungsdienst für Big Data-Cluster, der REST-APIs für die Verwaltung des Clusters verfügbar macht. Über diesen Endpunkt wird auch auf einige Tools zugegriffen.
+### <a name="cluster-endpoints"></a>Clusterendpunkte
 
-* Masterinstanz: TDS-Endpunkt für Datenbanktools und Anwendungen zum Herstellen einer Verbindung mit der SQL Server-Masterinstanz im Cluster.
+Es gibt fünf Einstiegspunkte für den Big Data-Cluster:
+
+* Masterinstanz: TDS-Endpunkt für den Zugriff auf die SQL Server-Masterinstanz im Cluster mithilfe von Datenbanktools und Anwendungen wie SSMS oder Azure Data Studio. Wenn Sie HDFS- oder SQL Server-Befehle von azdata verwenden, stellt das Tool je nach Vorgang eine Verbindung mit den anderen Endpunkten her.
+
+* Gateway für den Zugriff auf HDFS-Dateien, Spark (Knox): Dies ist ein HTTPS-basierter Endpunkt. Dieser Endpunkt wird für den Zugriff auf Dienste wie webHDFS und Spark verwendet.
+
+* (Controller-)Endpunkt für den Clusterverwaltungsdienst: Verwaltungsdienst für Big Data-Cluster, der REST-APIs für die Verwaltung des Clusters verfügbar macht. Das azdata-Tool erfordert eine Verbindung mit diesem Endpunkt.
+
+* Verwaltungsproxy: Für den Zugriff auf das Dashboard für die Protokollsuche und das Metrikdashboard.
+
+* Anwendungsproxy: Endpunkt zum Verwalten von Anwendungen, die im Big Data-Cluster bereitgestellt werden.
 
 ![Clusterendpunkte](media/concept-security/cluster_endpoints.png)
 
 Derzeit gibt es keine Option, zusätzliche Ports zu öffnen, um von außen auf den Cluster zuzugreifen.
 
-### <a name="how-endpoints-are-secured"></a>Sichern von Endpunkten
+## <a name="authorization"></a>Autorisierung
 
-Endpunkte im Big Data-Cluster werden über Kennwörter gesichert, die mithilfe von Umgebungsvariablen oder CLI-Befehlen festgelegt oder aktualisiert werden können. Alle internen Clusterkennwörter werden als Kubernetes-Geheimnisse gespeichert.  
+Im gesamten Cluster lässt die integrierte Sicherheit zwischen verschiedenen Komponenten zu, dass die Identität des ursprünglichen Benutzers durch das Ausgeben von Abfragen von Spark und SQL Server bis hin zu HDFS übermittelt werden kann. Wie bereits erwähnt, unterstützen die verschiedenen externen Clusterendpunkte die AD-Authentifizierung.
 
-## <a name="authentication"></a>Authentifizierung
+Für die Verwaltung des Datenzugriffs gibt es im Cluster zwei Ebenen von Autorisierungsüberprüfungen. Die Autorisierung im Kontext von Big Data erfolgt in SQL Server mithilfe der herkömmlichen SQL Server-Berechtigungen für Objekte und in HDFS mit Steuerungslisten (ACLs), die Benutzeridentitäten bestimmten Berechtigungen zuordnen.
 
-Beim Bereitstellen des Clusters wird eine Reihe von Anmeldungen erstellt.
+Ein sicherer Big Data-Cluster impliziert konsistente und kohärente Unterstützung für Authentifizierung- und Autorisierungsszenarien sowohl für SQL Server als auch für HDFS/Spark. Authentifizierung ist der Prozess, mit dem die Identität eines Benutzers oder Diensts überprüft und sichergestellt wird, dass der Benutzer oder Dienst das ist, was er zu sein vorgibt. Autorisierung bezieht sich auf das Gewähren oder Verweigern des Zugriffs auf bestimmte Ressourcen basierend auf der Identität des Benutzers, der den Zugriff anfordert. Dieser Schritt wird ausgeführt, nachdem ein Benutzer per Authentifizierung identifiziert wurde.
 
-Einige dieser Anmeldungen dienen dazu, dass Dienste miteinander kommunizieren können, andere werden von Endbenutzern für den Zugriff auf den Cluster verwendet.
+Im Big Data-Kontext erfolgt die Autorisierung in der Regel über Zugriffssteuerungslisten (Access Control Lists, ACLs), die Benutzeridentitäten bestimmte Berechtigungen zuordnen. HDFS unterstützt die Autorisierung durch Einschränken des Zugriffs auf Dienst-APIs, HDFS-Dateien und Auftragsausführung.
 
-### <a name="end-user-authentication"></a>Authentifizierung von Endbenutzern
-Beim Bereitstellen des Clusters muss mithilfe von Umgebungsvariablen eine Reihe von Kennwörtern für Endbenutzer festgelegt werden. Dies sind Kennwörter, die SQL-Administratoren und Clusteradministratoren für den Zugriff auf Dienste verwenden:
+## <a name="encryption-and-other-security-mechanisms"></a>Verschlüsselung und andere Sicherheitsmechanismen
 
-Benutzername des Controllers:
- + CONTROLLER_USERNAME=<Benutzername_des_Controllers>
+Die Verschlüsselung der Kommunikation zwischen Clients und externen Endpunkten sowie zwischen Komponenten innerhalb des Clusters wird mithilfe von Zertifikaten durch TLS/SSL gesichert.
 
-Kennwort des Controllers:  
- + CONTROLLER_PASSWORD=<Kennwort_des_Controllers>
+Die gesamte Kommunikation zwischen SQL Server-Instanzen, wie z. B. die Kommunikation der SQL-Masterinstanz mit einem Datenpool, wird mithilfe von SQL-Anmeldungen gesichert.
 
-Systemadministratorkennwort für SQL Master: 
- + MSSQL_SA_PASSWORD=<SA_Kennwort_des_Controllers>
+## <a name="basic-administrator-login"></a>Standardanmeldung für Administratoren
 
-Kennwort für den Zugriff auf den HDFS/Spark-Endpunkt:
- + KNOX_PASSWORD=<KNOX_Kennwort>
+Sie können den Cluster entweder im Active Directory-Modus oder nur mithilfe der Standardanmeldung für Administratoren bereitstellen. Für Administratorkontos nur eine Standardanmeldung zu verwenden, ist ein von der Produktion nicht unterstützter Sicherheitsmodus und hauptsächlich für die Auswertung des Produkts vorgesehen.
 
-### <a name="intra-cluster-authentication"></a>Clusterinterne Authentifizierung
+Auch wenn Sie den Active Directory-Modus auswählen, werden Standardanmeldungen für den Clusteradministrator erstellt. Dadurch wird eine „Hintertür“ bereitgestellt, falls die AD-Konnektivität unterbrochen wird.
 
-Beim Bereitstellen des Clusters wird eine Reihe von SQL-Anmeldungen erstellt:
+Bei der Bereitstellung erhält diese Standardanmeldung Administratorberechtigungen im Cluster. Das bedeutet, dass der Benutzer Systemadministrator in der SQL Server-Masterinstanz und Administrator im Clustercontroller ist.
+Hadoop-Komponenten unterstützen die Authentifizierung im gemischten Modus nicht. Dies bedeutet, dass für die Authentifizierung beim Gateway (Knox) nicht eine Standardanmeldung für Administratoren verwendet werden kann.
 
-* In der vom System verwalteten SQL-Controllerinstanz wird eine spezielle SQL-Anmeldung mit der Systemadministratorrolle erstellt. Das Kennwort für diese Anmeldung wird als K8s-Geheimnis aufgezeichnet.
 
-* Eine Systemadministratoranmeldung wird in allen SQL-Instanzen in dem Cluster erstellt, die der Controller besitzt und verwaltet. Diese Anmeldung ist erforderlich, damit der Controller auf diesen Instanzen Verwaltungsaufgaben wie das Setup oder Upgrade von Hochverfügbarkeit ausführen kann. Diese Anmeldungen werden auch für die clusterinterne Kommunikation zwischen SQL-Instanzen verwendet, beispielsweise für die Kommunikation der SQL-Masterinstanz mit einem Datenpool.
+Dies sind die Anmeldeinformationen, die Sie bei der Bereitstellung definieren müssen.
+
+Benutzername des Clusteradministrators:
+ + `AZDATA_USERNAME=<username>`
+
+Kennwort des Benutzeradministrators:  
+ + `AZDATA_PASSWORD=<password>`
 
 > [!NOTE]
-> Im aktuellen Release wird nur die Standardauthentifizierung unterstützt. Eine differenzierte Steuerung des Zugriffs auf HDFS-Objekte und Compute- und Datenpools für SQL-Big Data-Cluster ist noch nicht verfügbar.
-
-## <a name="intra-cluster-communication"></a>Clusterinterne Kommunikation
-
-Die Kommunikation mit Nicht-SQL-Diensten innerhalb des Big Data-Clusters wie z.B. zwischen Livy und Spark oder zwischen Spark und dem Speicherpool wird mithilfe von Zertifikaten gesichert. Die gesamte Kommunikation zwischen SQL Server-Instanzen wird mithilfe von SQL-Anmeldungen gesichert.
+> Beachten Sie, dass der Benutzername „root“ im nicht-AD-Modus in Kombination mit dem oben aufgeführten Kennwort verwendet werden muss, um sich beim Gateway (Knox) für den Zugriff auf HDFS/Spark zu authentifizieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]zu finden Sie in den folgenden Ressourcen:
+Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie in den folgenden Ressourcen:
 
 - [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] -Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]-Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

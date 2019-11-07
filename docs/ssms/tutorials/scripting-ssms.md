@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d4bf028163905763ae87f04e03c0a95ddf4abcaf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263365"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988417"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Erstellen von Skripts für Objekte in SQL Server Management Studio
 
@@ -209,7 +209,7 @@ In diesem Abschnitt wird beschrieben, wie Sie ein Skript für [erweiterte Ereign
 
 4. Erweitern Sie den Knoten **Sitzungen**.
 
-5. Klicken Sie mit der rechten Maustaste auf eine Sitzung und anschließend mit der linken auf **Script Session As** (Skript für Sitzung erstellen als) und dann auf **Neues Abfrage-Editor-Fenster**:
+5. Klicken Sie mit der rechten Maustaste zunächst auf die erweiterte Sitzung, die Sie interessiert, und dann auf **Script Session As** > **CREATE To** > **Neues Abfrage-Editor-Fenster** (Skript für Sitzung als > CREATE in):
 
     ![Erweitertes neues Abfrage-Editorfenster-Sitzung](media/scripting-ssms/scriptxevents.png)
 
