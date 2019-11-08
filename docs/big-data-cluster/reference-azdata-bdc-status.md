@@ -5,29 +5,29 @@ description: Referenzartikel zu azdata bdc status-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 712a5ac51f13450fe5cf6b8cc13400d5666eb4a0
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 974b9587f506e11ccf80d3ea9af04bc1dfa0be86
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155195"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531696"
 ---
 # <a name="azdata-bdc-status"></a>azdata bdc status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Dieser Artikel ist ein Referenz Artikel für **azdata**. 
+Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |
 | --- | --- |
-[azdata bdc status show](#azdata-bdc-status-show) | Zeigt den Status des BDC an.
+[azdata bdc status show](#azdata-bdc-status-show) | Zeigt den BDC-Status an.
 ## <a name="azdata-bdc-status-show"></a>azdata bdc status show
-Zeigt den Status des BDC an.
+Zeigt den BDC-Status an.
 ```bash
 azdata bdc status show [--resource -r] 
                        [--all -a]
@@ -41,15 +41,15 @@ BDC-Status mit allen Instanzen der enthaltenen Ressourcen.
 ```bash
 azdata bdc status show --all
 ```
-BDC-Status der Dienste, die die Control-Ressource enthalten.
+BDC-Status der Dienste, die die Ressource des Steuerelements enthalten.
 ```bash
 azdata bdc status show --resource control
 ```
 ### <a name="optional-parameters"></a>Optionale Parameter
 #### `--resource -r`
-Hiermit werden die dieser Ressource zugeordneten Dienste angezeigt.
+Ruft die Dienste ab, die dieser Ressource zugeordnet sind.
 #### `--all -a`
-Alle Instanzen der einzelnen Ressourcen innerhalb der Dienste anzeigen.
+Zeigt alle Instanzen jeder Ressource innerhalb der Dienste an.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
 Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
@@ -58,12 +58,10 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). 
-
-- Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big-Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).
+Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md). Weitere Informationen zur Installation des `azdata`-Tools finden Sie unter [Installieren von azdata zum Verwalten von Big Data-Clustern für SQL Server 2019](deploy-install-azdata.md).

@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft-Dokumentation
 description: Erstellen von Datenbanksyntax für SQL Server, Azure SQL-Datenbank, Azure SQL Data Warehouse und Analytics Platform System
 ms.custom: ''
-ms.date: 03/18/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cb2dc637dff24b6e3864d3c14f94ea817767de41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6a668b876e97f70ff0324f53689f0d5dfae8f225
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060975"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536264"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -450,7 +450,7 @@ AS SNAPSHOT OF *source_database_name* Gibt an, dass die erstellte Datenbank eine
 
 Weitere Informationen finden Sie im Abschnitt mit Hinweisen unter [Datenbank-Momentaufnahmen](#database-snapshots).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 Die [Masterdatenbank](../../relational-databases/databases/master-database.md) sollte immer dann gesichert werden, wenn eine Benutzerdatenbank erstellt, geändert oder gelöscht wird.
 
@@ -893,14 +893,18 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   | SERVICE_OBJECTIVE =
     { 'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6'
+      | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
+      | 'GP_Fsv2_72'
+      | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
+      | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80'
+      | 'BC_M_128'
       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
@@ -914,17 +918,21 @@ CREATE DATABASE database_name
     [ ( SERVICE_OBJECTIVE =
       { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6'
+      | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
+      | 'GP_Fsv2_72'
+      | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
+      | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80'
+      | 'BC_M_128'
       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
-      | { ELASTIC_POOL(name = <elastic_pool_name>) } )
+      | { ELASTIC_POOL(name = <elastic_pool_name>) } })
    ]
 [;]
 ```
@@ -955,7 +963,7 @@ Gibt die maximale Größe der Datenbank an. MAXSIZE muss für die angegebene EDI
 > [!NOTE]
 > Das Argument **MAXSIZE** gilt nicht für Einzeldatenbanken im Diensttarif „Hyperscale“. Datenbanken im Tarif „Hyperscale“ können bei Bedarf auf bis zu 100 TB skaliert werden. Der SQL-Datenbank-Dienst fügt automatisch Speicher hinzu. Sie müssen keine maximale Größe festlegen.
 
-**DTU-basiertes Modell für einzelne und in einem Pool zusammengefasste Datenbanken auf einem SQL-Datenbankserver**
+**DTU-Modell für einzelne und in einem Pool zusammengefasste Datenbanken auf einem SQL-Datenbankserver**
 
 |**MAXSIZE**|**Grundlegend**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|
@@ -981,77 +989,111 @@ Gibt die maximale Größe der Datenbank an. MAXSIZE muss für die angegebene EDI
 |1024 GB|–|–|√|√|√ (S)|
 |Von 1024 GB bis 4096 GB in Inkrementen von 256 GB* |–|–|–|–|√|√|
 
-\* P11 und P15 ermöglichen, dass die Größe von MAXSIZE bis zu 4 TB beträgt, wobei 1024 GB die Standardgröße darstellt. P11 und P15 können bis zu 4 TB des enthaltenen Speichers ohne Aufpreis verwenden. Im Premium-Tarif ist MAXSIZE mit einer Größe von mehr als 1 TB derzeit in den folgenden Regionen verfügbar: USA, Osten 2; USA, Westen; US Gov Virginia; Europa, Westen; Deutschland, Mitte; Asien, Südosten; Japan, Osten; Australien, Osten; Kanada, Mitte und Kanada, Osten. Zusätzliche Informationen bezüglich der Ressourcenbeschränkungen für das DTU-basierte Modell finden Sie unter [DTU-basierte Ressourceneinschränkungen](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+\* P11 und P15 ermöglichen, dass die Größe von MAXSIZE bis zu 4 TB beträgt, wobei 1024 GB die Standardgröße darstellt. P11 und P15 können bis zu 4 TB des enthaltenen Speichers ohne Aufpreis verwenden. Im Premium-Tarif ist MAXSIZE mit einer Größe von mehr als 1 TB derzeit in den folgenden Regionen verfügbar: USA, Osten 2; USA, Westen; US Gov Virginia; Europa, Westen; Deutschland, Mitte; Asien, Südosten; Japan, Osten; Australien, Osten; Kanada, Mitte und Kanada, Osten. Zusätzliche Informationen bezüglich der Ressourcenbeschränkungen für das DTU-Modell finden Sie unter [DTU-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
-Der MAXSIZE-Wert für das DTU-basierte Modell muss – wenn angegeben –ein gültiger Wert sein, der in der Tabelle oben für die angegebene Dienstebene angezeigt wird.
+Der MAXSIZE-Wert für das DTU-Modell muss – wenn angegeben – ein gültiger Wert sein, der in der Tabelle oben für die festgelegte Dienstebene angezeigt wird.
 
-**vCore-basiertes Modell**
+**V-Kern-Modell**
 
-**Dienstebene „Universell“: Computeplattform der 4. Generation (Teil 1)**
+**Universell – bereitgestellte Computekapazität – Gen4 (Teil 1)**
 
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |Maximale Datengröße (GB)|1024|1024|1024|1536|1536|1536|
 
-**Dienstebene „Universell“: Computeplattform der 4. Generation (Teil 2)**
+**Universell – bereitgestellte Computekapazität – Gen4 (Teil 2)**
 
-|MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24|
+|MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |Maximale Datengröße (GB)|1536|3072|3072|3072|4096|4096|
 
-**Dienstebene „Universell“: Computeplattform der 5. Generation (Teil 1)**
+**Universell – bereitgestellte Computekapazität – Gen5 (Teil 1)**
 
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Maximale Datengröße (GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**Dienstebene „Universell“: Computeplattform der 5. Generation (Teil 2)**
+**Universell – bereitgestellte Computekapazität – Gen5 (Teil 2)**
 
 |MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Maximale Datengröße (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**Dienstebene „Unternehmenskritisch“: Computeplattform der 4. Generation (Teil 1)**
+**Universell – bereitgestellte Computekapazität – Fsv2-Serie (Preview)**
+
+|MAXSIZE|GP_Fsv2_72|
+|:----- | ------: |
+|Maximale Datengröße (GB)|4096|
+
+**Universell – serverlose Computekapazität – Gen5 (Teil 1)**
+
+|MAXSIZE|GP_S_Gen5_1|GP_S_Gen5_2|GP_S_Gen5_4|GP_S_Gen5_6|GP_S_Gen5_8|
+|:----- | ------: |-------: |-------: |-------: |--------: |
+|Max. virtuelle Kerne|1|2|4|6|8|
+
+**Universell – serverlose Computekapazität – Gen5 (Teil 2)**
+
+|MAXSIZE|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|
+|:----- | ------: |-------: |-------: |-------: |
+|Max. virtuelle Kerne|10|12|14|16|
+
+**Unternehmenskritisch – bereitgestellte Computekapazität – Gen4 (Teil 1)**
 
 |Leistungsebene|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |Maximale Datengröße (GB)|1024|1024|1024|1024|1024|1024|
 
-**Dienstebene „Unternehmenskritisch“: Computeplattform der 4. Generation (Teil 2)**
+**Unternehmenskritisch – bereitgestellte Computekapazität – Gen4 (Teil 2)**
 
 |Leistungsebene|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |Maximale Datengröße (GB)|1024|1024|1024|1024|1024|1024|
 
-**Dienstebene „Unternehmenskritisch“: Computeplattform der 5. Generation (Teil 1)**
+**Unternehmenskritisch – bereitgestellte Computekapazität – Gen5 (Teil 1)**
 
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
 |Maximale Datengröße (GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**Dienstebene „Unternehmenskritisch“: Computeplattform der 5. Generation (Teil 2)**
+**Unternehmenskritisch – bereitgestellte Computekapazität – Gen5 (Teil 2)**
 
 |MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Maximale Datengröße (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-Wenn kein `MAXSIZE`-Wert bei Verwendung des vCore-Modells festgelegt ist, beträgt die Standardgröße 32 GB. Zusätzliche Informationen bezüglich der Ressourcenbeschränkungen für das V-Kern-basierte Modell finden Sie unter [V-Kern-basierte Ressourceneinschränkungen](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+**Unternehmenskritisch – bereitgestellte Computekapazität – M-Serie (Preview)**
+
+|MAXSIZE|BC_M_128|
+|:----- | -------: |
+|Maximale Datengröße (GB)|4096|
+
+
+Wenn kein `MAXSIZE`-Wert bei Verwendung des vCore-Modells festgelegt ist, beträgt die Standardgröße 32 GB. Zusätzliche Informationen bezüglich der Ressourcenbeschränkungen für das V-Kern-Modell finden Sie unter [V-Kern-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
 Die folgenden Regeln gelten für das MAXSIZE-Argument und das EDITION-Argument:
 
 - Wenn EDITION angegeben ist, MAXSIZE jedoch nicht, wird der Standardwert für die Edition verwendet. Wenn EDITION beispielsweise auf „Standard“ festgelegt und MAXSIZE nicht angegeben ist, wird MAXSIZE automatisch auf 250 MB festgelegt.
-- Wenn weder MAXSIZE noch EDITION angegeben sind, wird EDITION auf „Universell“ (S0) und MAXSIZE auf 32 GB festgelegt.
+- Wenn weder MAXSIZE noch EDITION angegeben sind, wird EDITION auf `GeneralPurpose` und MAXSIZE auf 32 GB festgelegt.
 
-SERVICE_OBJECTIVE     
+SERVICE_OBJECTIVE
+
 - **Bei einzelnen und in einem Pool zusammengefassten Datenbanken**
 
-  - Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`.
+  - Gibt die Leistungsebene an. Als Dienstziele sind die folgenden Werte verfügbar: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`.
 
-  - **Bei einzelnen Datenbanken im Diensttarif „Hyperscale“**
 
-  Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind: `HS_GEN4_1`, `HS_GEN4_2`, `HS_GEN4_4`, `HS_GEN4_8`, `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
+- **Für serverlose Datenbanken**
 
-Dienstzielbeschreibungen und weitere Informationen zu Größe, Editionen und Dienstzielkombinationen finden Sie unter [Dienstebenen von Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers). Wenn das angegebene SERVICE_OBJECTIVE von der EDITION nicht unterstützt wird, tritt ein Fehler auf. Zum Ändern des SERVICE_OBJECTIVE-Werts von einer Ebene in eine andere (z. B. von S1 in P1) muss auch der EDITION-Wert geändert werden. Dienstzielbeschreibungen und weitere Informationen zu Größe, Editionen und Dienstzielkombinationen finden Sie unter [Azure SQL Database Service Tiers and Performance Levels (Dienstebenen und Leistungsstufen von Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits (DTU-basierte Ressourcenbeschränkungen)](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) und [vCore-based resource limits (vCore-basierte Ressourcenbeschränkungen)](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Die Unterstützung für PRS-Dienstziele wurde entfernt. Wenn Sie Fragen haben, wenden Sie sich an den E-Mail-Alias premium-rs@microsoft.com.
+  - Gibt die Leistungsebene an. Als Dienstziele sind die folgenden Werte verfügbar: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`.
+
+
+- **Bei einzelnen Datenbanken im Diensttarif „Hyperscale“**
+
+  - Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind: `HS_GEN4_1`, `HS_GEN4_2`, `HS_GEN4_4`, `HS_GEN4_8`, `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
+
+
+
+Dienstzielbeschreibungen und weitere Informationen zu Größe, Editionen und Dienstzielkombinationen finden Sie unter [Dienstebenen von Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers). Wenn das angegebene SERVICE_OBJECTIVE von der EDITION nicht unterstützt wird, tritt ein Fehler auf. Zum Ändern des SERVICE_OBJECTIVE-Werts von einer Ebene in eine andere (z. B. von S1 in P1) muss auch der EDITION-Wert geändert werden. Dienstzielbeschreibungen und weitere Informationen zu Größe, Editionen und Dienstzielkombinationen finden Sie unter [Dienstebenen und Leistungsstufen von Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) und [V-Kern-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Die Unterstützung für PRS-Dienstziele wurde entfernt. Wenn Sie Fragen haben, wenden Sie sich an den E-Mail-Alias premium-rs@microsoft.com.
 
 ELASTIC_POOL (name = \<elastic_pool_name>)      
 **Gilt für:** Einzelne und in einem Pool zusammengefasste Datenbanken. Gilt nicht für Datenbanken im Diensttarif „Hyperscale“.
@@ -1071,7 +1113,7 @@ Der Name des [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Servers, auf dem sich
 
 Der Name der zu kopierenden Datenbank.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 Datenbanken in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] weisen einige Standardeinstellungen auf, die beim Erstellen der Datenbank festgelegt werden. Weitere Informationen zu diesen Standardeinstellungen finden Sie in der Liste der Werte unter [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 `MAXSIZE` bietet die Möglichkeit, die Größe der Datenbank zu beschränken. Wenn die Größe der Datenbank den Wert von `MAXSIZE` erreicht, erhalten Sie den Fehlercode 40544. In diesem Fall können Sie keine Daten einfügen oder aktualisieren oder neue Objekte (wie Tabellen, gespeicherte Prozeduren. Sichten und Funktionen) erstellen. Sie können jedoch weiterhin Daten lesen und löschen, Tabellen abschneiden, Tabellen und Indizes löschen sowie Indizes neu erstellen. Anschließend können Sie `MAXSIZE` auf einen Wert aktualisieren, der größer als die aktuelle Datenbankgröße ist, oder Sie löschen einige Daten, um Speicherplatz freizugeben. Eine Verzögerung von bis zu fünfzehn Minuten ist möglich, bevor Sie neue Daten einfügen können.
@@ -1219,7 +1261,7 @@ Gibt die Standardsortierung für die Datenbank an. Als Sortierungsname kann entw
 
 Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 Datenbanken in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] weisen einige Standardeinstellungen auf, die beim Erstellen der Datenbank festgelegt werden. Weitere Informationen zu diesen Standardeinstellungen finden Sie in der Liste der Werte unter [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 > [!IMPORTANT]

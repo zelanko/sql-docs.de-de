@@ -1,51 +1,51 @@
 ---
-title: Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter | Microsoft-Dokumentation
+title: Verwenden von Always Encrypted mit dem .NET Framework-Datenanbieter für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4771d3a0fbf49c2d8c87c96d99b3e387b392e3bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 07351f5fe839f8304e56b5a94818c93255149fa5
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049946"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594450"
 ---
-# <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter
+# <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Verwenden von Always Encrypted mit dem .NET Framework-Datenanbieter für SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Dieser Artikel enthält Informationen zum Entwickeln von .NET-Anwendungen mithilfe von [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) und dem [.NET Framework-Datenanbieter für SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
+Dieser Artikel bietet Informationen zum Entwickeln von .NET-Anwendungen mithilfe von [Always Encrypted](always-encrypted-database-engine.md) oder [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md) und dem [.NET Framework-Datenanbieter für SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
 
-Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Treiber, bei dem „Always Encrypted“ aktiviert ist, z. B. der .NET Framework-Datenanbieter für SQL Server, erreicht dies durch die transparente Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. Weitere Informationen finden Sie unter [Immer verschlüsselt (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
-
+Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Treiber, bei dem „Always Encrypted“ aktiviert ist, z. B. der .NET Framework-Datenanbieter für SQL Server, erreicht dies durch die transparente Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. Weitere Informationen finden Sie unter [Always Encrypted (Cliententwicklung)](always-encrypted-client-development.md) und [Entwickeln von Anwendungen mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-client-development.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Konfigurieren Sie Always Encrypted in Ihrer Datenbank. Dies umfasst die Bereitstellung von Always Encrypted-Schlüsseln und die Einrichtung der Verschlüsselung für ausgewählte Datenbankspalten. Wenn Sie nicht bereits über eine Datenbank verfügen, für die Always Encrypted konfiguriert ist, befolgen Sie die Anweisungen in [Erste Schritte mit Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5).
-- Stellen Sie sicher, dass .NET Framework, Version 4.6 oder höher, auf dem Entwicklungscomputer installiert ist. Weitere Informationen finden Sie unter [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). Sie müssen auch sicherstellen, dass .NET Framework, Version 4.6 oder höher, als .NET Framework-Zielversion in der Entwicklungsumgebung konfiguriert ist. Wenn Sie Visual Studio verwenden, lesenSie [Vorgehensweise: .NET Framework-Version als Ziel](https://msdn.microsoft.com/library/bb398202.aspx). 
+- Konfigurieren Sie Always Encrypted in Ihrer Datenbank. Dies umfasst die Bereitstellung von Always Encrypted-Schlüsseln und die Einrichtung der Verschlüsselung für ausgewählte Datenbankspalten. Wenn Sie nicht bereits über eine Datenbank verfügen, für die Always Encrypted konfiguriert ist, befolgen Sie die Anweisungen in [Erste Schritte mit Always Encrypted](always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- Stellen Sie sicher, dass .NET Framework, Version 4.6.1 oder höher, auf dem Entwicklungscomputer installiert ist. Weitere Informationen finden Sie unter [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). Sie müssen auch sicherstellen, dass .NET Framework, Version 4.6 oder höher, als .NET Framework-Zielversion in der Entwicklungsumgebung konfiguriert ist. Wenn Sie Visual Studio verwenden, lesen Sie [Vorgehensweise: .NET Framework-Version als Ziel](https://msdn.microsoft.com/library/bb398202.aspx). 
 
 > [!NOTE]
-> Der Grad der Unterstützung für Always Encrypted in bestimmten Versionen von .NET Framework variiert. Weitere Informationen finden Sie unten im Referenzabschnitt zur Always Encrypted-API. 
+> Der Grad der Unterstützung für Always Encrypted in bestimmten Versionen von .NET Framework variiert. Weitere Informationen finden Sie unten im Referenzabschnitt zur Always Encrypted-API.
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>Aktivieren von Always Encrypted für Anwendungsabfragen
 Die einfachste Möglichkeit zum Aktivieren der Verschlüsselung von Parametern und der Entschlüsselung von Abfrageergebnissen, die auf verschlüsselte Spalten ausgerichtet sind, besteht im Festlegen des Werts für das Kennwort der Verbindungszeichenfolge der Spaltenverschlüsselungseinstellung auf **Aktiviert**.
 
 Im Folgenden finden Sie ein Beispiel für eine Verbindungszeichenfolge, die „Always Encrypted“ aktiviert:
-```
+
+```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
 SqlConnection connection = new SqlConnection(connectionString);
 ```
 
-Und im Folgenden finden Sie auch ein gleichwertiges Beispiel, das die SqlConnectionStringBuilder.ColumnEncryptionSetting-Eigenschaft verwendet.
+Im Folgenden finden Sie auch ein gleichwertiges Beispiel, das die SqlConnectionStringBuilder.ColumnEncryptionSetting-Eigenschaft verwendet.
 
-```
+```cs
 SqlConnectionStringBuilder strbldr = new SqlConnectionStringBuilder();
 strbldr.DataSource = "server63";
 strbldr.InitialCatalog = "Clinic";
@@ -55,26 +55,42 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 ```
 
 Always Encrypted kann auch für einzelne Abfragen aktiviert werden. Weitere Informationen finden Sie unten in **Kontrollieren der Auswirkungen von Always Encrypted auf die Leistung** .
-Beachten Sie, dass die Aktivierung von Always Encrypted für eine erfolgreiche Verschlüsselung und Entschlüsselung nicht ausreichend ist. Sie müssen auch Folgendes sicherstellen:
+Die Aktivierung von Always Encrypted ist für eine erfolgreiche Verschlüsselung und Entschlüsselung nicht ausreichend. Sie müssen auch Folgendes sicherstellen:
 - Die Anwendung verfügt über die Datenbankberechtigungen *VIEW ANY COLUMN MASTER KEY DEFINITION* und *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* , die für den Zugriff auf die Metadaten in der Datenbank über Always Encrypted-Schlüssel erforderlich sind. Weitere Informationen finden Sie unter [Abschnitt „Berechtigungen“ in Always Encrypted (Datenbank-Engine)](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7).
 - Die Anwendung kann auf den Hauptschlüssel der Spalte zugreifen, der die Spaltenverschlüsselungsschlüssel schützt, mit denen die abgefragten Datenbankspalten verschlüsselt werden.
+
+## <a name="enabling-always-encrypted-with-secure-enclaves"></a>Aktivieren von Always Encrypted mit Secure Enclaves
+
+Ab .NET Framework Version 4.7.2 unterstützt der Treiber [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md). 
+
+Um die Verwendung der Enclave beim Herstellen einer Verbindung mit [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] oder höher zu aktivieren, müssen Sie die Anwendung und den .NET Framework-Datenanbieter für SQL Server konfigurieren, um Enclave-Berechnungen und den Enclave-Nachweis zu aktivieren. 
+
+Allgemeine Informationen zur Clienttreiberrolle in Enclave-Berechnungen und im Enclave-Nachweis finden Sie unter [Entwickeln von Anwendungen mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-client-development.md). 
+
+Konfigurieren der Anwendung:
+
+1. Integrieren Sie das NuGet-Paket [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) in Ihre Anwendung. NuGet ist eine Bibliothek von Enclave-Anbietern, die die clientseitige Logik für Nachweisprotokolle und für die Einrichtung eines sicheren Kanals mit einer Secure Enclave innerhalb von SQL Server implementieren.  
+2. Aktualisieren Sie die Anwendungskonfiguration (z. B. in der Datei „web.config“ oder „app.config“), um die Zuordnung zu einem Enclave-Typ zu definieren, mit dem Ihre [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Instanz konfiguriert wurde. (Weitere Informationen finden Sie unter [Serverkonfigurationsoption „column encryption enclave type“](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).) [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] unterstützt VBS-Enclaves und den Host-Überwachungsdienst für den Nachweis. Daher müssen Sie den VBS-Enclave-Typ der Klasse Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider aus dem NuGet-Paket zuordnen. 
+3. Aktivieren Sie Enclave-Berechnungen für eine Verbindung von Ihrer Anwendung zur Datenbank, indem Sie das Schlüsselwort der Enclave-Nachweis-URL in der Verbindungszeichenfolge auf einen Nachweisendpunkt festlegen. Der Wert des Schlüsselworts sollte auf den Nachweisendpunkt des HGS-Servers festgelegt werden, der in Ihrer Umgebung konfiguriert ist. 
+
+Ein Schritt-für-Schritt-Tutorial finden Sie unter [Tutorial: Entwickeln einer .NET Framework-Anwendung mithilfe von Always Encrypted mit Secure Enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md).
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Abrufen und Ändern von Daten in verschlüsselten Spalten
 
 Nachdem Sie Always Encrypted für Anwendungsabfragen aktiviert haben, können Sie mithilfe der standardmäßigen ADO.NET-APIs (siehe [Abrufen und Ändern von Daten in ADO.NET](https://msdn.microsoft.com/library/ms254937(v=vs.110).aspx)) oder der APIs für [.NET Framework-Datenanbieter für SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx) , die im [System.Data.SqlClient-Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)definiert sind, die Daten in verschlüsselten Datenbankspalten abrufen oder ändern. Vorausgesetzt, dass Ihre Anwendung über die erforderlichen Datenbankberechtigungen verfügt und auf den Hauptschlüssel für die Spalte zugreifen kann, verschlüsselt der .NET Framework-Datenanbieter für SQL Server alle Abfrageparameter, die auf verschlüsselte Spalten ausgerichtet sind, und entschlüsselt die Daten, die von verschlüsselten Spalten abgerufen wurden, die Klartextwerte von .NET-Typen zurückgeben, die den SQL Server-Datentypen entsprechen, die für die Spalten im Datenbankschema festgelegt wurden.
-Wenn Always Encrypted nicht aktiviert ist, tritt bei Abfragen mit Parametern, die auf verschlüsselte Spalten ausgerichtet sind, ein Fehler auf. Abfragen können weiterhin Daten aus verschlüsselten Spalten abrufen, solange die Abfrage keine Parameter für verschlüsselte Spalten enthält. Die .NET Framework-Datenanbieter für SQL Server versuchen jedoch nicht, die aus verschlüsselten Spalten abgerufenen Werte zu entschlüsseln, daher erhält die Anwendung binär verschlüsselte Daten (als Bytearrays).
+Wenn Always Encrypted nicht aktiviert ist, tritt bei Abfragen mit Parametern, die verschlüsselte Spalten anzielen, ein Fehler auf. Abfragen können weiterhin Daten aus verschlüsselten Spalten abrufen, solange die Abfrage keine Parameter für verschlüsselte Spalten enthält. Die .NET Framework-Datenanbieter für SQL Server versuchen jedoch nicht, die aus verschlüsselten Spalten abgerufenen Werte zu entschlüsseln, daher erhält die Anwendung binär verschlüsselte Daten (als Bytearrays).
 
 Die folgende Tabelle fasst das Verhalten von Abfragen in Abhängigkeit davon zusammen, ob Always Encrypted aktiviert ist:
 
-|Abfragemerkmal | Always Encrypted ist aktiviert und die Anwendung kann auf die Schlüssel und Schlüsselmetadaten zugreifen.|Always Encrypted ist aktiviert und die Anwendung kann nicht auf die Schlüssel oder Schlüsselmetadaten zugreifen. | Always Encrypted ist deaktiviert|
+|Abfragemerkmal | Always Encrypted ist aktiviert und die Anwendung kann auf die Schlüssel und Schlüsselmetadaten zugreifen.|Always Encrypted ist aktiviert, und die Anwendung kann nicht auf die Schlüssel oder Schlüsselmetadaten zugreifen. | Always Encrypted ist deaktiviert|
 |:---|:---|:---|:---|
 | Abfragen mit Parametern, die auf verschlüsselte Spalten ausgerichtet sind. | Parameterwerte werden transparent verschlüsselt. | Fehler | Fehler|
 | Abfragen, die Daten von verschlüsselten Spalten ohne Parameter abrufen, die auf verschlüsselte Spalten ausgerichtet sind.| Ergebnisse von verschlüsselten Spalten werden transparent entschlüsselt. Die Anwendung erhält Klartextwerte der .NET-Datentypen, die den SQL Server-Datentypen entsprechen, die für die verschlüsselten Spalten konfiguriert wurden. | Fehler | Ergebnisse von verschlüsselten Spalten werden nicht entschlüsselt. Die Anwendung erhält verschlüsselte Werte als Bytearrays (byte[]). 
 
-Die folgenden Beispiele veranschaulichen das Abrufen und Ändern von Daten in verschlüsselten Spalten. Die Beispiele gehen von der Zieltabelle mit folgendem Schema aus. Beachten Sie, dass die Spalten „SSN“ und „BirthDate“ verschlüsselt werden.
+Die folgenden Beispiele veranschaulichen das Abrufen und Ändern von Daten in verschlüsselten Spalten. Die Beispiele gehen von der Zieltabelle mit folgendem Schema aus. Die Spalten „SSN“ und „BirthDate“ werden verschlüsselt.
 
 
-```
+```sql
 CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1), 
  [SSN] [char](11) COLLATE Latin1_General_BIN2 
  ENCRYPTED WITH (ENCRYPTION_TYPE = DETERMINISTIC, 
@@ -94,11 +110,11 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 
 In diesem Beispiel wird eine Zeile in die Tabelle „Patients“ eingefügt. Beachten Sie Folgendes:
 - Es erfolgt keine spezielle Verschlüsselung im Beispielcode. Der .NET Framework-Datenanbieter für SQL Server erkennt und verschlüsselt die Parameter *paramSSN* und *paramBirthdate* automatisch, die auf verschlüsselte Spalten ausgerichtet sind. Dadurch wird die Verschlüsselung für die Anwendung transparent. 
-- Die in die Datenbankspalten eingefügten Werte, einschließlich der verschlüsselten Spalten, werden als [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) -Objekte übergeben. Während die Verwendung von **SqlParameter** optional ist, wenn Werte an nicht verschlüsselte Spalten gesendet werden (obwohl es dringend empfohlen wird, da es dabei hilft, eine SQL-Einschleusung zu verhindern), ist sie für Werte erforderlich, die auf verschlüsselte Spalten ausgerichtet sind. Wenn die in die Spalten „SSN“ oder „BirthDate“ eingefügten Werte als Literale übergeben werden, die in die Abfrageanweisung eingebettet sind, würde bei der Abfrage ein Fehler auftreten, da der .NET Framework-Datenanbieter für SQL Server die Werte in den verschlüsselten Zielspalten nicht ermittelt könnte, daher würde er die Werte nicht verschlüsseln. Daher würde der Server sie zurückweisen, da sie mit den verschlüsselten Spalten inkompatibel sind.
+- Die in die Datenbankspalten eingefügten Werte, einschließlich der verschlüsselten Spalten, werden als [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) -Objekte übergeben. Während die Verwendung von **SqlParameter** optional ist, wenn Werte an nicht verschlüsselte Spalten gesendet werden (obwohl sie dringend empfohlen wird, da sie dabei hilft, eine SQL-Einschleusung zu verhindern), ist sie für Werte erforderlich, die auf verschlüsselte Spalten ausgerichtet sind. Wenn die in die Spalten „SSN“ oder „BirthDate“ eingefügten Werte als Literale übergeben werden, die in die Abfrageanweisung eingebettet sind, würde bei der Abfrage ein Fehler auftreten, da der .NET Framework-Datenanbieter für SQL Server die Werte in den verschlüsselten Zielspalten nicht ermittelt könnte, daher würde er die Werte nicht verschlüsseln. Daher würde der Server sie zurückweisen, da sie mit den verschlüsselten Spalten inkompatibel sind.
 - Der auf die Spalte „SSN“ ausgerichtete Datentyp des Parameters wird auf eine ANSI-Zeichenfolge (Nicht-Unicode) festgelegt, der dem SQL Server-Datentyp „char/varchar“ zuordnet wird. Wenn der Typ des Parameters eine Unicode-Zeichenfolge (String) ist, die „nchar/nvarchar“ zugeordnet wird, würde bei der Abfrage ein Fehler auftreten, da Always Encrypted keine Konvertierungen von verschlüsselten „nchar/nvarchar“-Werten in verschlüsselte „char/narchar“-Werte unterstützt. Weitere Informationen zu den Datentypzuordnungen finden Sie unter [SQL Server-Datentypzuordnungen](/dotnet/framework/data/adonet/sql-server-data-type-mappings) .
 - Der Datentyp des in die Spalte „BirthDate“ eingefügten Parameters wird mithilfe der [SqlParameter.SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)-Eigenschaft explizit auf den SQL Server-Datentyp festgelegt, anstatt auf die implizite Zuordnung von .NET-Typen zu vertrauen, die bei der Verwendung der [SqlParameter.DbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx)-Eigenschaft angewendet werden. Standardmäßig wird [DateTime Structure](https://msdn.microsoft.com/library/system.datetime.aspx) dem SQL Server-Datentyp „datetime“ zugeordnet. Da der Datentyp der Spalte „BirthDate“ dem Wert „date“ entspricht und Always Encrypted keine Konvertierung von verschlüsselten „datetime“-Werten in verschlüsselte „date“-Werte unterstützt, würde die Verwendung der Standardzuordnung zu einem Fehler führen. 
 
-```
+```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
 using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
 {
@@ -150,9 +166,9 @@ Im folgenden Beispiel wird das Filtern von Daten auf Basis verschlüsselter Wert
 
 
 > [!NOTE]
-> Abfragen können auf Spalten Übereinstimmungsvergleiche ausführen, wenn sie mittels deterministischer Verschlüsselung verschlüsselt sind. Weitere Informationen finden Sie im Abschnitt *Auswählen der deterministischen oder zufälligen Verschlüsselung* des Themas [Always Encrypted (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+> Abfragen können auf Spalten Übereinstimmungsvergleiche ausführen, wenn sie mittels deterministischer Verschlüsselung verschlüsselt sind. Weitere Informationen finden Sie im Abschnitt [Auswählen der deterministischen oder zufälligen Verschlüsselung](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
-```
+```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
     
 using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
@@ -188,7 +204,7 @@ Im folgenden Beispiel wird das Abrufen von binär verschlüsselten Daten aus ver
 - Eine Abfrage, die Daten aus verschlüsselten Spalten mit deaktiviertem Always Encrypted abruft, kann Parameter aufweisen, so lange keiner der Parameter auf eine verschlüsselte Spalte ausgerichtet ist. Die obige Abfrage filtert nach der Spalte „LastName“, die in der Datenbank nicht verschlüsselt ist. Wenn die Abfrage nach „SSN“ oder „BirthDate“ filtert, würde ein Fehler auftreten.
 
 
-```
+```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true";
                 
 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -222,7 +238,7 @@ Dieser Abschnitt beschreibt die allgemeinen Kategorien von Fehlern bei der Abfra
 
 ### <a name="unsupported-data-type-conversion-errors"></a>Konvertierungsfehler durch nicht unterstützte Datentypen
 
-Always Encrypted unterstützt einige Konvertierungen für verschlüsselte Datentypen. Eine ausführliche Liste der unterstützten Typkonvertierungen finden Sie unter [Always Encrypted (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) . Gehen Sie wie folgt vor, um Fehler bei Konvertierung des Datentyps zu vermeiden:
+Always Encrypted unterstützt einige Konvertierungen für verschlüsselte Datentypen. Eine ausführliche Liste der unterstützten Typkonvertierungen finden Sie unter [Always Encrypted](always-encrypted-database-engine.md). Gehen Sie wie folgt vor, um Fehler bei Konvertierung des Datentyps zu vermeiden:
 
 - Legen Sie die Typen der auf die verschlüsselten Spalten ausgerichteten Parameter so fest, dass der SQL Server-Datentyp des Parameters genau dem Typ der Zielspalte entspricht, oder dass eine Konvertierung des SQL Server-Datentyps des Parameters in den Zieltyp der Spalte unterstützt wird. Sie können die gewünschte Zuordnung von .NET-Datentypen zu bestimmten SQL Server-Datentypen mithilfe der „SqlParameter.SqlDbType“-Eigenschaft erzwingen.
 - Überprüfen Sie, ob die Genauigkeit und Dezimalstellenanzahl von Parametern, die auf Spalten der SQL Server-Datentypen „decimal“ und „numeric“ ausgerichtet sind, mit der für die Zielspalte konfigurierten Genauigkeit und Dezimalstellenanzahl identisch sind.  
@@ -233,7 +249,7 @@ Always Encrypted unterstützt einige Konvertierungen für verschlüsselte Datent
 Jeder Wert, der auf eine verschlüsselte Spalte ausgerichtet ist, muss in der Anwendung verschlüsselt werden. Ein Versuch, einen Klartextwert einzufügen bzw. zu ändern oder nach einem Klartextwert für eine verschlüsselte Spalte zu filtern, führt zu einem Fehler wie dem Folgenden:
 
 
-```
+```cs
 System.Data.SqlClient.SqlException (0x80131904): Operand type clash: varchar is incompatible with varchar(8000) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', column_encryption_key_database_name = 'Clinic') collation_name = 'SQL_Latin1_General_CP1_CI_AS'
 ```
 
@@ -242,7 +258,7 @@ Stellen Sie Folgendes sicher, um solche Fehler zu vermeiden:
 - Sie verwenden „SqlParameter“ zum Senden von Daten, die auf verschlüsselte Spalten ausgerichtet sind. Das folgende Beispiel zeigt eine Abfrage, die falsch nach einem Literal bzw. einer Konstante einer verschlüsselten Spalte (SSN) filtert (anstatt das Literal innerhalb eines „SqlParameter“-Objekts zu übergeben). 
 
 
-```
+```cs
 using (SqlCommand cmd = connection.CreateCommand())
 {
    cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
@@ -287,7 +303,7 @@ Der .NET Framework-Datenanbieter für SQL Server enthält die folgenden integrie
 Sie müssen keine Änderungen am Anwendungscode vornehmen, um diese Anbieter zu verwenden, aber beachten Sie Folgendes:
 
 - Sie (oder der Datenbankadministrator) müssen sicherstellen, dass der in den Metadaten des Spaltenhauptschlüssels konfigurierte Anbietername richtig ist und der Pfad des Spaltenhauptschlüssels dem Schlüsselpfadformat entspricht, das für einen angegebenen Anbieter gültig ist. Es wird empfohlen, dass Sie die Schlüssel mithilfe von Tools wie SQL Server Management Studio konfigurieren, die die gültigen Anbieternamen und Schlüsselpfade automatisch generieren, wenn die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) ausgegeben wird. Weitere Informationen finden Sie unter [Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) und [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
-- Sie müssen sicherstellen, dass die Anwendung auf den Schlüssel im Schlüsselspeicher zugreifen kann. Dies kann das Gewähren des Zugriffs auf den Schlüssel und/oder Schlüsselspeicher für die Anwendung (abhängig vom Schlüsselspeicher) oder das Ausführen anderer wichtiger speicherspezifischer Konfigurationsschritte einbeziehen. Für den Zugriff auf einen Schlüsselspeicher, der eine CNG oder CAPI implementiert (z. B. ein Hardwaresicherheitsmodul), müssen Sie sicherstellen, dass eine Bibliothek auf dem Anwendungscomputer installiert ist, die eine CNG oder CAPI für den Speicher implementiert. Weitere Informationen finden Sie unter [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+- Stellen Sie sicher, dass die Anwendung auf den Schlüssel im Schlüsselspeicher zugreifen kann. Dies kann das Gewähren des Zugriffs auf den Schlüssel und/oder Schlüsselspeicher für die Anwendung (abhängig vom Schlüsselspeicher) oder das Ausführen anderer wichtiger speicherspezifischer Konfigurationsschritte einbeziehen. Für den Zugriff auf einen Schlüsselspeicher, der eine CNG oder CAPI implementiert (z. B. ein Hardwaresicherheitsmodul), müssen Sie sicherstellen, dass eine Bibliothek auf dem Anwendungscomputer installiert ist, die eine CNG oder CAPI für den Speicher implementiert. Ausführliche Informationen finden Sie unter [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### <a name="using-azure-key-vault-provider"></a>Verwenden des Azure Key Vault-Anbieters
 
@@ -298,7 +314,7 @@ Azure Key Vault ist eine praktische Möglichkeit zum Speichern von Spaltenhaupts
 Wenn Sie Spaltenhauptschlüssel in einem Schlüsselspeicher speichern möchten, der nicht von einem vorhandenen Anbieter unterstützt wird, können Sie einen benutzerdefinierten Anbieter implementieren, indem Sie die [SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) -Klasse erweitern und den Anbieter mithilfe der [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders.aspx) -Methode registrieren.
 
 
-```
+```cs
 public class MyCustomKeyStoreProvider : SqlColumnEncryptionKeyStoreProvider
     {
         public override byte[] EncryptColumnEncryptionKey(string masterKeyPath, string encryptionAlgorithm, byte[] columnEncryptionKey)
@@ -329,11 +345,11 @@ public class MyCustomKeyStoreProvider : SqlColumnEncryptionKeyStoreProvider
 ### <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>Verwenden von Spaltenhauptschlüssel-Speicheranbietern für die programmgesteuerte Schlüsselbereitstellung
 
 Beim Zugriff auf verschlüsselte Spalten sucht der .NET Framework-Datenanbieter für SQL Server den richtigen Speicheranbieter für Spaltenhauptschlüssel transparent und ruft ihn anschließend auf, um die Spaltenverschlüsselungsschlüssel zu entschlüsseln. In der Regel ruft der normale Anwendungscode die Speicheranbieter für Spaltenhauptschlüssel nicht direkt auf. Sie können einen Anbieter jedoch explizit instanziieren und aufrufen, um Always Encrypted-Schlüssel programmgesteuert bereitzustellen und zu verwalten: Zum Generieren eines verschlüsselten Spaltenverschlüsselungsschlüssels und Entschlüsseln eines Spaltenverschlüsselungsschlüssels (z. B. im Rahmen einer Spaltenhauptschlüsselrotation) Weitere Informationen finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
-Beachten Sie, dass die Implementierung eigener Schlüsselverwaltungstools möglicherweise nur erforderlich ist, wenn Sie einen benutzerdefinierten Schlüsselspeicheranbieter verwenden. Bei der Verwendung von Schlüsseln, die in Schlüsselspeichern (für die integrierte Anbieter vorhanden sind) und/oder in Azure Key Vault gespeichert werden, können Sie vorhandene Tools wie SQL Server Management Studio oder PowerShell verwenden, um Schlüssel zu verwalten und bereitzustellen.
+Die Implementierung eigener Schlüsselverwaltungstools ist möglicherweise nur erforderlich, wenn Sie einen benutzerdefinierten Schlüsselspeicheranbieter verwenden. Bei der Verwendung von Schlüsseln, die in Schlüsselspeichern (für die integrierte Anbieter vorhanden sind) und/oder in Azure Key Vault gespeichert werden, können Sie vorhandene Tools wie SQL Server Management Studio oder PowerShell verwenden, um Schlüssel zu verwalten und bereitzustellen.
 Im folgenden Beispiel wird das Generieren eines Spaltenverschlüsselungsschlüssels und das Verwenden der [SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx) -Klasse zum Verschlüsseln des Schlüssels mit einem Zertifikat veranschaulicht.
 
 
-```
+```cs
 using System.Security.Cryptography;
 static void Main(string[] args)
 {
@@ -370,12 +386,12 @@ In diesem Abschnitt werden die integrierten Leistungsoptimierungen im .NET Frame
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Kontrollieren von Roundtrips zum Abrufen von Metadaten für Abfrageparameter
 
-Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der .NET Framework-Datenanbieter für SQL Server standardmäßig [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage auf, wobei die Abfrageanweisung (ohne Parameterwerte) an SQL Server übergeben wird. Die Abfrageanweisung wird von**sys.sp_describe_parameter_encryption** analysiert, um zu ermitteln, ob Parameter verschlüsselt werden müssen. In diesem Fall gibt sie die verschlüsselungsbezogenen Informationen zurück, die dem .NET Framework-Datenanbieter für SQL Server das Verschlüsseln von Parameterwerten ermöglichen. Das oben beschriebene Verhalten stellt einen hohen Grad an Transparenz für die Clientanwendung sicher. Die Anwendung (und der Anwendungsentwickler) muss nicht beachten, welche Abfragen Zugriff auf verschlüsselte Spalten haben, so lange die auf verschlüsselte Spalten ausgerichteten Werte in „SqlParameter“-Objekten an den .NET Framework-Datenanbieter für SQL Server übergeben werden.
+Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der .NET Framework-Datenanbieter für SQL Server standardmäßig [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage auf, wobei die Abfrageanweisung (ohne Parameterwerte) an SQL Server übergeben wird. Die Abfrageanweisung wird von**sys.sp_describe_parameter_encryption** analysiert, um zu ermitteln, ob Parameter verschlüsselt werden müssen. In diesem Fall gibt sie die verschlüsselungsbezogenen Informationen zurück, die dem .NET Framework-Datenanbieter für SQL Server das Verschlüsseln von Parameterwerten ermöglichen. Das oben beschriebene Verhalten stellt ein hohes Maß an Transparenz für die Clientanwendung sicher. Die Anwendung (und der Anwendungsentwickler) muss nicht beachten, welche Abfragen Zugriff auf verschlüsselte Spalten haben, solange die auf verschlüsselte Spalten ausgerichteten Werte in SqlParameter-Objekten an den .NET Framework-Datenanbieter für SQL Server übergeben werden.
 
 
 ### <a name="query-metadata-caching"></a>Zwischenspeichern von Abfragemetadaten
 
-In .NET Framework 4.6.2 und höher speichert der .NET Framework-Datenanbieter für SQL Server die Ergebnisse von **sys.sp_describe_parameter_encryption** für jede Abfrageanweisung zwischen. Wenn die gleiche Abfrageanweisung mehrfach ausgeführt wird, ruft der Treiber daher **sys.sp_describe_parameter_encryption** nur einmal auf. Die Zwischenspeicherung von Verschlüsselungsmetadaten für Abfrageanweisungen verringert die Leistungskosten beim Abrufen von Metadaten bei der Datenbank erheblich. Die Zwischenspeicherung ist standardmäßig aktiviert. Sie können die Zwischenspeicherung von Parametermetadaten deaktivieren, indem Sie die  [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) -Eigenschaft auf FALSCH festlegen, das wird jedoch mit Ausnahme sehr seltener Fälle, wie dem unten beschriebenen, nicht empfohlen:
+In .NET Framework 4.6.2 und höher speichert der .NET Framework-Datenanbieter für SQL Server die Ergebnisse von **sys.sp_describe_parameter_encryption** für jede Abfrageanweisung zwischen. Wenn die gleiche Abfrageanweisung mehrfach ausgeführt wird, ruft der Treiber daher **sys.sp_describe_parameter_encryption** nur einmal auf. Die Zwischenspeicherung von Verschlüsselungsmetadaten für Abfrageanweisungen verringert die Leistungskosten beim Abrufen von Metadaten bei der Datenbank erheblich. Die Zwischenspeicherung ist standardmäßig aktiviert. Sie können die Zwischenspeicherung von Parametermetadaten deaktivieren, indem Sie die Eigenschaft [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) auf FALSCH festlegen; dies wird jedoch mit Ausnahme seltener Fälle, wie dem unten beschriebenen, nicht empfohlen:
 
 Betrachten Sie eine Datenbank mit zwei verschiedenen Schemas: s1 und s2. Jedes Schema enthält eine Tabelle mit dem gleichen Namen: t. Die Definitionen der s1.t- und s2.t-Tabellen sind mit Ausnahme der verschlüsselungsbezogenen Eigenschaften identisch: Eine Spalte mit dem Namen c ist in s1.t nicht verschlüsselt, in s2.t hingegen schon. Die Datenbank weist zwei Benutzer auf, u1 und u2. Das Standardschema für u1-Benutzer ist s1. Das Standardschema für u2 ist s2. Eine .NET-Anwendung öffnet zwei Verbindungen mit der Datenbank, mit der Identität des u1-Benutzers in der einen Verbindung und der des u2-Benutzers in der anderen Verbindung. Die Anwendung sendet eine Abfrage mit einem Parameter, der auf die Spalte c gerichtet ist, über die Verbindung für Benutzer u1 (das Schema wird von der Abfrage nicht angegeben, sodass vom Standardbenutzerschema ausgegangen wird). Anschließend sendet die Anwendung die gleiche Abfrage über die Verbindung für den u2-Benutzer. Wenn die Zwischenspeicherung von Metadaten aktiviert ist, ist der Cache nach der ersten Abfrage mit Metadaten aufgefüllt, die angeben, dass die Spalte c, auf die die Abfrageparameter verweisen, nicht verschlüsselt ist. Da die zweite Abfrage die gleiche Abfrageanweisung aufweist, werden die im Cache gespeicherten Informationen verwendet. Daher sendet der Treiber die Abfrage, ohne den Parameter zu verschlüsseln (was falsch ist, da die Zielspalte s2.t.c verschlüsselt ist), und legt so den Klartextwert des Parameters dem Server gegenüber offen. Der Server wird diese Inkompatibilität erkennen und den Treiber anweisen, den Cache zu aktualisieren, sodass die Anwendung die Abfrage transparent mit ordnungsgemäß verschlüsseltem Parameterwert erneut sendet. In einem solchen Fall sollte die Zwischenspeicherung deaktiviert werden, um die Offenlegung vertraulicher Werte gegenüber dem Server zu verhindern. 
 
@@ -403,7 +419,7 @@ In dem folgenden Beispiel ist Always Encrypted für die Datenbankverbindung deak
 
 
 
-```
+```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true";
 using (SqlConnection connection = new SqlConnection(connectionString))
 {
@@ -445,7 +461,7 @@ In .NET Framework 4.6.2 und höher werden die Cacheeinträge nach einer konfigur
 
 ## <a name="enabling-additional-protection-for-a-compromised-sql-server"></a>Aktivieren von zusätzlichem Schutz für einen gefährdeten SQL Server
 
-Standardmäßig verlässt sich der *.NET Framework-Datenanbieter für SQL Server* beim Bereitstellen von Metadaten über die in der Datenbank zu verschlüsselnden Spalten und die Art der Verschlüsselung auf das Datenbanksystem (SQL Server oder Azure SQL Database). Die Verschlüsselungsmetadaten ermöglichen dem .NET Framework-Datenanbieter für SQL Server das Verschlüsseln von Abfrageparametern und das Entschlüsseln von Abfrageergebnissen ohne irgendwelche Eingaben von der Anwendung, wodurch sich das Ausmaß der in der Anwendung erforderlichen Änderungen erheblich reduziert. Wenn der SQL Server-Prozess jedoch gefährdet ist und ein Angreifer die Metadaten manipuliert, die von SQL Server an den .NET Framework-Datenanbieter für SQL Server gesendet werden, kann der Angreifer unter Umständen imstande sein, vertrauliche Informationen zu stehlen. In diesem Abschnitt werden APIs beschrieben, die das Bereitstellen einer zusätzlichen Schutzebene gegen diese Art von Angriff unterstützen, um den Preis geringerer Transparenz. 
+Standardmäßig verlässt sich der *.NET Framework-Datenanbieter für SQL Server* beim Bereitstellen von Metadaten über die in der Datenbank zu verschlüsselnden Spalten und die Art der Verschlüsselung auf das Datenbanksystem (SQL Server oder Azure SQL Database). Die Verschlüsselungsmetadaten ermöglichen dem .NET Framework-Datenanbieter für SQL Server das Verschlüsseln von Abfrageparametern und das Entschlüsseln von Abfrageergebnissen ohne irgendwelche Eingaben von der Anwendung, wodurch sich die Anzahl der in der Anwendung erforderlichen Änderungen erheblich reduziert. Wenn der SQL Server-Prozess jedoch gefährdet ist und ein Angreifer die Metadaten manipuliert, die von SQL Server an den .NET Framework-Datenanbieter für SQL Server gesendet werden, kann der Angreifer unter Umständen imstande sein, vertrauliche Informationen zu stehlen. In diesem Abschnitt werden APIs beschrieben, die das Bereitstellen einer zusätzlichen Schutzebene gegen diese Art von Angriff unterstützen, um den Preis geringerer Transparenz. 
 
 ### <a name="forcing-parameter-encryption"></a>Erzwingen von Parameterverschlüsselung 
 
@@ -453,13 +469,13 @@ Bevor der .NET Framework-Datenanbieter für SQL Server eine parametrisierte Abfr
 
 Um einen derartigen Angriff zu verhindern, kann eine Anwendung die [SqlParameter.ForceColumnEncryption](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.forcecolumnencryption.aspx) -Eigenschaft für den Parameter auf WAHR festlegen. Dadurch löst der .NET Framework-Datenanbieter für SQL Server eine Ausnahme aus, wenn die Metadaten, die er vom Server empfangen hat, angeben, dass der Parameter nicht verschlüsselt werden muss.
 
-Beachten Sie, dass die Eigenschaft **SqlParameter.ForceColumnEncryption** zwar beim Verbessern der Sicherheit hilft, jedoch zugleich die Transparenz der Verschlüsselung für die Clientanwendung verringert. Wenn Sie das Datenbankschema aktualisieren, um die Menge der verschlüsselten Spalten zu ändern, müssen Sie möglicherweise auch an der Anwendung Änderungen vornehmen.
+Die Eigenschaft **SqlParameter.ForceColumnEncryption** hilft zwar beim Verbessern der Sicherheit, jedoch verringert sie zugleich die Transparenz der Verschlüsselung für die Clientanwendung. Wenn Sie das Datenbankschema aktualisieren, um die Menge der verschlüsselten Spalten zu ändern, müssen Sie möglicherweise auch an der Anwendung Änderungen vornehmen.
 
 Das folgende Codebeispiel zeigt die Verwendung der **SqlParameter.ForceColumnEncryption** . 
 
 
 
-```
+```cs
 SqlCommand cmd = _sqlconn.CreateCommand(); 
 
 // Use parameterized queries to access Always Encrypted data. 
@@ -485,12 +501,12 @@ Die Verschlüsselungsmetadaten, die SQL Server für Abfrageparameter mit verschl
 
 Um solche Angriffe zu verhindern, kann die Anwendung die Liste der vertrauenswürdigen Schlüsselpfade für einen bestimmten Server mithilfe der Eigenschaft [SqlConnection.ColumnEncryptionTrustedMasterKeyPaths](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths.aspx)festlegen. Wenn der .NET Framework-Datenanbieter für SQL Server einen Schlüsselpfad empfängt, der nicht in der Liste der vertrauenswürdigen Schlüsselpfade aufgeführt ist, löst er eine Ausnahme aus. 
 
-Beachten Sie, dass sich durch das Festlegen vertrauenswürdiger Schlüsselpfade zwar die Sicherheit Ihrer Anwendung verbessert, Sie jedoch am Code und/oder der Konfiguration der Anwendung bei jeder turnusmäßigen Änderung des Spaltenhauptschlüssels Änderungen vornehmen müssen (bei jedem Wechsel des Spaltenhauptschlüsselpfads). 
+Durch das Festlegen vertrauenswürdiger Schlüsselpfade verbessert sich zwar die Sicherheit Ihrer Anwendung, Sie müssen jedoch bei jeder turnusmäßigen Änderung des Spaltenhauptschlüssels (d. h. bei jedem Wechsel des Spaltenhauptschlüsselpfads) Änderungen am Code und/oder an der Konfiguration der Anwendung vornehmen. 
 
 Das folgende Beispiel zeigt die Konfiguration von vertrauenswürdigen Spaltenhauptschlüsselpfaden:
 
 
-```
+```cs
 // Configure trusted key paths to protect against fake key paths sent by a compromised SQL Server instance 
 // First, create a list of trusted key paths for your server 
 List<string> trustedKeyPathList = new List<string>(); 
@@ -512,12 +528,12 @@ Mit „SqlBulkCopy“ können Sie Daten, die bereits verschlüsselt sind und in 
 - Konfigurieren Sie beide Datenbankverbindungen, zur Quelltabelle und zur Zieltabelle, ohne Always Encrypted zu aktivieren. 
 - Legen Sie die Option „AllowEncryptedValueModifications“ fest (siehe [SqlBulkCopyOptions](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopyoptions.aspx)). Hinweis: Gehen Sie bei der Angabe von „AllowEncryptedValueModifications“ mit Bedacht vor, da dies zur Beschädigung der Datenbank führen kann, da der .NET Framework-Datenanbieter für SQL Server nicht überprüft, ob die Daten tatsächlich verschlüsselt oder mit demselben Verschlüsselungstyp, Algorithmus und Schlüssel wie die Zielspalte ordnungsgemäß verschlüsselt wurden.
 
-Beachten Sie, dass die Option „AllowEncryptedValueModifications“ in .NET Framework 4.6.1 und höheren Versionen verfügbar ist.
+Die Option „AllowEncryptedValueModifications“ ist in .NET Framework 4.6.1 und höheren Versionen verfügbar.
 
 Hier folgt ein Beispiel, in dem Daten aus einer Tabelle in eine andere kopiert werden. Es wird angenommen, dass die Spalten „SSN“ und „BirthDate“ verschlüsselt sind.
         
 
-```
+```cs
 static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 {
    string sourceConnectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true";
@@ -568,7 +584,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted-Blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Tutorial zu SQL-Datenbank: Schützen vertraulicher Daten mit Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

@@ -1,42 +1,42 @@
 ---
 title: Bereitstellen von Anwendungen mit „azdata“
 titleSuffix: SQL Server big data clusters
-description: Stellen Sie ein Python-oder R-Skript als [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Anwendung auf bereit.
+description: Stellen Sie ein Python- oder R-Skript als Anwendung in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] bereit.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 93c94b8ca5688bd5c67369849094e20d1dae697e
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
-ms.translationtype: MT
+ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929724"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532522"
 ---
-# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Bereitstellen einer APP auf[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Bereitstellen einer App in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird beschrieben, wie Sie R-und python-Skripts als Anwendung in einem SQL Server 2019 Big Data-Cluster bereitstellen und verwalten.
+In diesem Artikel wird beschrieben, wie Sie R- und Python-Skripts als Anwendung in einem SQL Server 2019-Big Data-Cluster bereitstellen und verwalten.
 
 ## <a name="whats-new-and-improved"></a>Neuerungen und Verbesserungen
 
 - Ein einzelnes Befehlszeilen-Hilfsprogramm zum Verwalten von Cluster und App.
 - Vereinfachte App-Bereitstellung bei gleichzeitiger Bereitstellung einer differenzierten Steuerung durch Spezifikationsdateien.
-- Unterstützung für das Hosting zusätzlicher Anwendungs Typen: SSIS und msprung (neu in CTP 2,3).
-- [Visual Studio Code Erweiterung](app-deployment-extension.md) zum Verwalten der Anwendungs Bereitstellung.
+- Unterstützung für das Hosting zusätzlicher Anwendungstypen: SSIS und MLeap (neu in CTP 2.3)
+- [Visual Studio Code-Erweiterung](app-deployment-extension.md) zum Verwalten der Anwendungsbereitstellung
 
-Anwendungen werden mit dem `azdata`-Befehlszeilen-Hilfsprogramm bereitgestellt und verwaltet. Dieser Artikel enthält Beispiele für die Bereitstellung von Apps über die Befehlszeile. Weitere Informationen zur Verwendung dieses in Visual Studio Code finden Sie unter [Visual Studio Code Erweiterung](app-deployment-extension.md).
+Anwendungen werden mit dem `azdata`-Befehlszeilen-Hilfsprogramm bereitgestellt und verwaltet. Dieser Artikel enthält Beispiele für die Bereitstellung von Apps über die Befehlszeile. Weitere Informationen zur Verwendung in Visual Studio Code finden Sie unter [Visual Studio Code-Erweiterung](app-deployment-extension.md).
 
 Die folgenden Typen von Apps werden unterstützt:
-- R-und python-Apps (Funktionen, Modelle und Apps)
+- R- und Python-Apps (Funktionen, Modelle und Apps)
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [SQL Server 2019: Big Data-Cluster](deployment-guidance.md)
 - [Befehlszeilen-Hilfsprogramm „azdata“](deploy-install-azdata.md)
@@ -45,7 +45,7 @@ Die folgenden Typen von Apps werden unterstützt:
 
 In SQL Server 2019 (Vorschau) können Sie Ihre Anwendung erstellen, löschen, beschreiben, initialisieren, auflisten und aktualisieren. In der folgenden Tabelle werden die Befehle für die Anwendungsbereitstellung beschrieben, die Sie mit **azdata** verwenden können.
 
-|Befehl |Beschreibung |
+|Befehl |und Beschreibung |
 |:---|:---|
 |`azdata login` | Anmelden bei einem Big Data-Cluster für SQL Server |
 |`azdata app create` | Erstellen einer Anwendung. |
@@ -81,9 +81,9 @@ Wenn Sie AKS verwenden, müssen Sie den folgenden Befehl ausführen, um die IP-A
 kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
-## <a name="kubeadm-or-minikube"></a>Kubeadm oder Minikube
+## <a name="kubernetes-clusters-created-with-kubeadm"></a>Mit kubeadm erstellte Kubernetes-Cluster
 
-Wenn Sie kubeadm oder minikube verwenden, führen Sie den folgenden Befehl aus, um die IP-Adresse für die Anmeldung beim Cluster zu erhalten.
+Führen Sie folgenden Befehl aus, um die IP-Adresse für die Anmeldung beim Cluster abzurufen.
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -105,11 +105,11 @@ Der Befehl könnte z.B. wie folgt aussehen:
 azdata app create --spec ./addpy
 ```
 
-Dabei wird vorausgesetzt, dass Sie die Anwendung im `addpy`-Ordner gespeichert haben. Dieser Ordner sollte auch eine Spezifikationsdatei für die Anwendung mit dem Namen `spec.yaml` enthalten. Weitere Informationen zur `spec.yaml` Datei finden Sie auf [der Seite "Anwendungs Bereitstellung](concept-application-deployment.md) ".
+Dabei wird vorausgesetzt, dass Sie die Anwendung im `addpy`-Ordner gespeichert haben. Dieser Ordner sollte auch eine Spezifikationsdatei für die Anwendung mit dem Namen `spec.yaml` enthalten. Auf der Seite [Anwendungsbereitstellung](concept-application-deployment.md) finden Sie weitere Informationen zur `spec.yaml`-Datei.
 
 Um diese Beispiel-App bereitzustellen, erstellen Sie die folgenden Dateien in einem Verzeichnis mit dem Namen `addpy`:
 
-- `add.py`. installiert haben. Kopieren Sie den folgenden Python-Code in diese Datei:
+- `add.py`. Kopieren Sie den folgenden Python-Code in diese Datei:
    ```py
    #add.py
   def add(x, y):
@@ -117,7 +117,7 @@ Um diese Beispiel-App bereitzustellen, erstellen Sie die folgenden Dateien in ei
     return result
   result=add(x,y)
    ```
-- `spec.yaml`. installiert haben. Kopieren Sie den folgenden Code in diese Datei:
+- `spec.yaml`. Kopieren Sie den folgenden Code in diese Datei:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -218,7 +218,7 @@ Der folgende Beispielbefehl veranschaulicht den run-Befehl:
 azdata app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
-Wenn die Ausführung erfolgreich war, sollte die Ausgabe angezeigt werden, wie Sie beim Erstellen der App angegeben haben. Nachfolgend finden Sie ein Beispiel:
+Wenn die Ausführung erfolgreich war, sollte die Ausgabe angezeigt werden, wie Sie beim Erstellen der App angegeben haben. Im Folgenden finden Sie ein Beispiel.
 
 ```json
 {
@@ -241,7 +241,7 @@ Der init-Befehl bietet ein Gerüst mit den relevanten Artefakten, die für die B
 azdata app init --name hello --version v1 --template python
 ```
 
-„hello“ ist der Name des erstellten Ordners.  Sie können mit `cd` in das Verzeichnis wechseln und die generierten Dateien im Ordner überprüfen. "spec. YAML" definiert die APP, z. b. Name, Version und Quellcode. Sie können die Spezifikation bearbeiten, um den Namen, die Version, die Eingabe und die Ausgaben zu ändern.
+„hello“ ist der Name des erstellten Ordners.  Sie können mit `cd` in das Verzeichnis wechseln und die generierten Dateien im Ordner überprüfen. „spec.yaml“ definiert die App, z. B. deren Name, Version und Quellcode. Sie können die Spezifikation bearbeiten, um den Namen, die Version, die Eingabe und die Ausgaben zu ändern.
 
 Im Folgenden finden Sie eine Beispielausgabe des Befehls „init“, die im Ordner enthalten ist.
 
@@ -293,6 +293,6 @@ azdata app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erfahren Sie, wie Sie apps [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] , die in in ihren eigenen Anwendungen bereitgestellt werden, unter Verwenden von [Anwendungen auf Big Data Clustern](big-data-cluster-consume-apps.md) für weitere Informationen integrieren. Weitere Beispiele finden Sie außerdem unter den [Beispielen zur App-Bereitstellung](https://aka.ms/sql-app-deploy).
+Im Artikel [Nutzen von Anwendungen auf Big Data-Clustern](big-data-cluster-consume-apps.md) erfahren Sie, wie Sie Apps, die in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] bereitgestellt wurden, in Ihre eigenen Anwendungen integrieren können. Weitere Beispiele finden Sie außerdem unter den [Beispielen zur App-Bereitstellung](https://aka.ms/sql-app-deploy).
 
-Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]finden Sie unter [was [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]ist?](big-data-cluster-overview.md).
+Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie unter [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

@@ -1,7 +1,7 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916174"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73530931"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE-Anweisungen (Transact-SQL)
 
@@ -345,7 +345,7 @@ RESTORE ist nicht in einer expliziten oder implizierten Transaktion zulässig.
 
 Für das Wiederherstellen einer beschädigten **master**-Datenbank ist eine spezielle Vorgehensweise erforderlich. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).
 
-Durch das Wiederherstellen einer Datenbank wird der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden geleerten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den "%2!s!"-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden.“. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Durch das Wiederherstellen einer Datenbank wird der Plancache für die wiederherzustellende Datenbank gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. 
 
 Um eine Verfügbarkeitsdatenbank wiederherzustellen, stellen Sie zuerst die Datenbank mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wieder her, und fügen Sie dann die Datenbank der Verfügbarkeitsgruppe hinzu.
 
@@ -373,6 +373,10 @@ Die RESTORE-Anweisung kann auch für folgende Wiederherstellungen verwendet werd
 
 > [!NOTE]
 > Aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] importierte Volltextkataloge werden immer noch als Datenbankdateien behandelt. Für diese findet weiterhin die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Prozedur zur Sicherung von Volltextkatalogen Anwendung. Das Anhalten und Fortsetzen des Sicherungsvorgangs ist jedoch nicht mehr erforderlich. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](https://go.microsoft.com/fwlink/?LinkId=107381).
+
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="metadata"></a>Metadaten
 

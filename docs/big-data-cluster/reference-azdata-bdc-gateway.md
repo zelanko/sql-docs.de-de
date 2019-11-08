@@ -1,34 +1,32 @@
 ---
-title: Referenz zum azdata BDC-Gateway
+title: Referenz zu azdata bdc gateway
 titleSuffix: SQL Server big data clusters
-description: Referenz Artikel für azdata BDC-gatewaybefehle.
+description: Referenzartikel zu azdata bdc gateway-Befehlen
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e9784f0ae0d1b94f359f000d97c8a6108de13433
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: b9ad246c43621c6c17a68bff005cf629e6cb30ca
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158295"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531892"
 ---
-# <a name="azdata-bdc-gateway"></a>azdata-BDC-Gateway
+# <a name="azdata-bdc-gateway"></a>azdata bdc gateway
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Dieser Artikel ist ein Referenz Artikel für **azdata**. 
+Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |
 | --- | --- |
-[Status des azdata-BDC-Gateways](reference-azdata-bdc-gateway-status.md) | Status Befehle des Gatewaydiensts.
+[azdata bdc gateway status](reference-azdata-bdc-gateway-status.md) | Statusbefehle für den Gatewaydienst
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). 
-
-- Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big-Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).
+Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md). Weitere Informationen zur Installation des `azdata`-Tools finden Sie unter [Installieren von azdata zum Verwalten von Big Data-Clustern für SQL Server 2019](deploy-install-azdata.md).

@@ -5,22 +5,22 @@ description: Referenzartikel zu azdata bdc spark session-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e8f4103511085bd834d9970e399604c7082ec0b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.openlocfilehash: f1da72349e7594d267ae0d965ddad03cee93017b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708598"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531741"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Dieser Artikel ist ein Referenz Artikel für **azdata**. 
+Der folgende Artikel enthält Referenzinformationen zu `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |
@@ -52,7 +52,7 @@ azdata bdc spark session create [--session-kind -k]
 ### <a name="examples"></a>Beispiele
 Erstellen Sie eine Sitzung.
 ```bash
-azdata bdc spark session create --session-kind pyspark
+azdata spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>Optionale Parameter
 #### `--session-kind -k`
@@ -91,7 +91,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-session-list"></a>azdata bdc spark session list
@@ -102,7 +102,7 @@ azdata bdc spark session list
 ### <a name="examples"></a>Beispiele
 Auflisten aller aktiven Sitzungen.
 ```bash
-azdata bdc spark session list
+azdata spark session list
 ```
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
@@ -112,19 +112,18 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-session-info"></a>azdata bdc spark session info
 Hiermit werden die Sitzungsinformationen für eine aktive Spark-Sitzung abgerufen, die die angegebene ID hat.  Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
 azdata bdc spark session info --session-id -i 
-                              
-```
-### <a name="examples"></a>Beispiele
-Rufen Sie die Sitzungsinformationen für die Sitzung mit der ID 0 ab.
+            ```
+### Examples
+Get session info for session with ID of 0.
 ```bash
-azdata bdc spark session info --session-id 0
+azdata spark session info --session-id 0
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`
@@ -137,19 +136,18 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-session-log"></a>azdata bdc spark session log
 Hiermit werden die Sitzungsprotokolleinträge für eine aktive Spark-Sitzung abgerufen, die die angegebene ID hat.  Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
 azdata bdc spark session log --session-id -i 
-                             
-```
-### <a name="examples"></a>Beispiele
-Rufen Sie das Sitzungsprotokoll für die Sitzung mit der ID 0 ab.
+           ```
+### Examples
+Get session log for session with ID of 0.
 ```bash
-azdata bdc spark session log --session-id 0
+azdata spark session log --session-id 0
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`
@@ -162,19 +160,18 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-session-state"></a>azdata bdc spark session state
 Hiermit wird der Sitzungsstatus für eine aktive Spark-Sitzung abgerufen, die die angegebene ID hat.  Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
 azdata bdc spark session state --session-id -i 
-                               
-```
-### <a name="examples"></a>Beispiele
-Rufen Sie den Sitzungsstatus für die Sitzung mit der ID 0 ab.
+             ```
+### Examples
+Get session state for session with ID of 0.
 ```bash
-azdata bdc spark session state --session-id 0
+azdata spark session state --session-id 0
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`
@@ -187,19 +184,18 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-session-delete"></a>azdata bdc spark session delete
 Hiermit wird eine interaktive Spark-Sitzung gelöscht. Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
 azdata bdc spark session delete --session-id -i 
-                                
-```
-### <a name="examples"></a>Beispiele
-Löschen Sie eine Sitzung.
+              ```
+### Examples
+Delete a session.
 ```bash
-azdata bdc spark session delete --session-id 0
+azdata spark session delete --session-id 0
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`
@@ -218,6 +214,4 @@ Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). 
-
-- Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big-Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).
+Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md). Weitere Informationen zur Installation des `azdata`-Tools finden Sie unter [Installieren von azdata zum Verwalten von Big Data-Clustern für SQL Server 2019](deploy-install-azdata.md).

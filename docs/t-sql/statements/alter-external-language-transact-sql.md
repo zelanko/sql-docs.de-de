@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) – SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: language-extensions
@@ -10,12 +10,12 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a503c77b49b8e57139ded0b29873fc18cd2b342
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1b831047e4c2b8bad166e5ddf5ce3bdc7f8b6165
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893737"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532860"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -106,9 +106,9 @@ Dies bietet eine Möglichkeit, einen Satz von Umgebungsvariablen für die Runtim
 
 Dieser Parameter ist für Szenarien mit hybridem Betriebssystem erforderlich. In einer hybriden Architektur muss die Sprache einmal pro Plattform registriert werden. Plattform und Sprachname sind der eindeutige Schlüssel für jede externe Sprache. Wenn keine Plattform angegeben ist, wird vom aktuellen Betriebssystem davon ausgegangen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
-In CTP 3.0 werden **PARAMETERS** und **ENVIRONMENT_VARIABLES** nicht unterstützt.
+Derzeit werden **PARAMETERS** und **ENVIRONMENT_VARIABLES** nicht unterstützt.
 
 ## <a name="permissions"></a>Berechtigungen
 

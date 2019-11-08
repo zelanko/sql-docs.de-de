@@ -5,22 +5,22 @@ description: Referenzartikel zu azdata bdc hdfs mount-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1d0e248c3a19a032571e77e1250faf82d331630e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 43796ca3dc02804472298b17f8ddaeed946df5bb
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155235"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531835"
 ---
 # <a name="azdata-bdc-hdfs-mount"></a>azdata bdc hdfs mount
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Dieser Artikel ist ein Referenz Artikel für **azdata**. 
+Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |
@@ -59,17 +59,16 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-hdfs-mount-delete"></a>azdata bdc hdfs mount delete
 Löschen von Einbindungen von Remotespeicher in HDFS.
 ```bash
 azdata bdc hdfs mount delete --mount-path -m 
-                             
-```
-### <a name="examples"></a>Beispiele
-Löschen Sie die Einbindung (Mount), die unter „/mounts/adlsv2/data“ für ein ADLS Gen 2-Speicherkonto erstellt wurde.
+           ```
+### Examples
+Delete mount created at /mounts/adlsv2/data for a ADLS Gen 2 storage account.
 ```bash
 azdata bdc hdfs mount delete --mount-path /mounts/adlsv2/data
 ```
@@ -84,17 +83,16 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-hdfs-mount-status"></a>azdata bdc hdfs mount status
 Der Status von Einbindungen (Mounts).
 ```bash
 azdata bdc hdfs mount status [--mount-path -m] 
-                             
-```
-### <a name="examples"></a>Beispiele
-Rufen Sie den Einbindungsstatus nach Pfad ab.
+           ```
+### Examples
+Get mount status by path
 ```bash
 azdata bdc hdfs mount status --mount-path /mounts/hdfs
 ```
@@ -113,17 +111,16 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-hdfs-mount-refresh"></a>azdata bdc hdfs mount refresh
 Aktualisieren des Inhalts einer Einbindung in HDFS.
 ```bash
 azdata bdc hdfs mount refresh --mount-path -m 
-                              
-```
-### <a name="examples"></a>Beispiele
-Aktualisieren Sie die Einbindung, die unter „/mounts/adlsv2/data“ erstellt wurde.
+            ```
+### Examples
+Refresh mount created at /mounts/adlsv2/data.
 ```bash
 azdata bdc hdfs mount refresh --mount-path /mounts/adlsv2/data
 ```
@@ -138,12 +135,10 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). 
-
-- Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big-Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).
+Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md). Weitere Informationen zum Installieren des `azdata`-Tools finden Sie unter [Installieren von azdata zum Verwalten von Big Data-Clustern von SQL Server 2019](deploy-install-azdata.md).

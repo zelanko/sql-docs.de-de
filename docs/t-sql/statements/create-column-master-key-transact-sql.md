@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,19 +24,19 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064564"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593898"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Erstellt ein Spaltenhauptschlüssel-Metadatenobjekt in einer Datenbank. Ein Metadateneintrag für einen Spaltenhauptschlüssel stellt einen Schlüssel dar, der in einem externen Schlüsselspeicher gespeichert ist. Der Schlüssel schützt (verschlüsselt) Spaltenverschlüsselungsschlüssel, wenn Sie das Feature [Always Encrypted &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) verwenden. Durch mehrere Spaltenhauptschlüssel wird die regelmäßige Rotation von Schlüsseln ermöglicht und dadurch die Sicherheit erhöht. Erstellen Sie einen Spaltenhauptschlüssel in einem Schlüsselspeicher und das zugehörige Metadatenobjekt in der Datenbank, indem Sie den Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder PowerShell verwenden. Weitere Informationen finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
+Erstellt ein Spaltenhauptschlüssel-Metadatenobjekt in einer Datenbank. Ein Metadateneintrag für einen Spaltenhauptschlüssel stellt einen Schlüssel dar, der in einem externen Schlüsselspeicher gespeichert ist. Der Schlüssel schützt, also verschlüsselt Spaltenverschlüsselungsschlüssel, wenn Sie [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) oder [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) verwenden. Durch mehrere Spaltenhauptschlüssel wird die regelmäßige Rotation von Schlüsseln ermöglicht und dadurch die Sicherheit erhöht. Erstellen Sie einen Spaltenhauptschlüssel in einem Schlüsselspeicher und das zugehörige Metadatenobjekt in der Datenbank, indem Sie den Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder PowerShell verwenden. Weitere Informationen finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -46,7 +46,7 @@ Erstellt ein Spaltenhauptschlüssel-Metadatenobjekt in einer Datenbank. Ein Meta
 
 ## <a name="syntax"></a>Syntax  
 
-```  
+``` sql 
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
@@ -72,9 +72,7 @@ Der Treiber verwendet dann den Anbieter, um Spaltenverschlüsselungsschlüssel z
   
 Für Always Encrypted aktivierte Clienttreiberbibliotheken enthalten Schlüsselspeicheranbieter für beliebte Schlüsselspeicher.   
   
-Die verfügbaren Anbieter hängen vom Typ und von der Version des Clienttreibers ab. Informationen zu bestimmten Treibern finden Sie in der Always Encrypted-Dokumentation:
-
-[Entwickeln von Anwendungen unter Verwendung von Always Encrypted mit dem .NET Framework-Anbieter für SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+Die verfügbaren Anbieter hängen vom Typ und von der Version des Clienttreibers ab. Informationen zu bestimmten Treibern finden Sie in der Always Encrypted-Dokumentation: [Entwickeln von Anwendungen mithilfe von Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
 
 Die folgende Tabelle enthält die Namen von Systemanbietern:  
@@ -84,7 +82,8 @@ Die folgende Tabelle enthält die Namen von Systemanbietern:
     |'MSSQL_CERTIFICATE_STORE'|Windows-Zertifikatspeicher| 
     |'MSSQL_CSP_PROVIDER'|Ein Speicher, z.B. ein Hardwaresicherheitsmodul (HSM), der Microsoft CryptoAPI unterstützt.|
     |'MSSQL_CNG_STORE'|Ein Speicher, z. B. ein Hardwaresicherheitsmodul (HSM), der Folgendes unterstützt: Cryptography API: Next Generation.|  
-    |'Azure_Key_Vault'|Weitere Informationen finden Sie unter [Erste Schritte mit Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
+    |'AZURE_KEY_VAULT'|Weitere Informationen finden Sie unter [Erste Schritte mit Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
+    |'MSSQL_JAVA_KEYSTORE'| Java-Schlüsselspeicher
   
 
 In Ihrem für Always Encrypted aktivierten Clienttreiber können Sie einen benutzerdefinierten Schlüsselspeicheranbieter einrichten, der Spaltenhauptschlüssel speichert, für die kein integrierter Schlüsselspeicheranbieter vorhanden ist. Die Namen der benutzerdefinierten Schlüsselspeicheranbieter dürfen nicht mit „MSSQL_“ beginnen. Dieses Präfix ist für [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Schlüsselspeicheranbieter reserviert. 
@@ -172,6 +171,7 @@ Ein binäres Literal, das das Ergebnis des digitalen Signierens von *Schlüsselp
 
 Erstellen Sie einen Metadateneintrag für einen Spaltenhauptschlüssel, bevor Sie einen Metadateneintrag für einen Spaltenverschlüsselungsschlüssel in der Datenbank erstellen und bevor Spalten in der Datenbank mithilfe von Always Encrypted verschlüsselt werden können. Ein Metadateneintrag für einen Spaltenhauptschlüssel enthält nicht den tatsächlichen Spaltenhauptschlüssel. Der Spaltenhauptschlüssel muss in einem externen Spaltenschlüsselspeicher (außerhalb von SQL Server) gespeichert werden. Der Name des Schlüsselspeicheranbieters und der Pfad des Spaltenhauptschlüssels in den Metadaten müssen für eine Clientanwendung gültig sein. Die Clientanwendung muss den Spaltenhauptschlüssel verwenden, um einen Spaltenverschlüsselungsschlüssel zu entschlüsseln. Der Spaltenverschlüsselungsschlüssel ist mit dem Spaltenhauptschlüssel verschlüsselt. Die Clientanwendung muss auch verschlüsselte Spalten abfragen.
 
+Es wird empfohlen, Tools wie SQL Server Management Studio (SSMS) oder PowerShell zu verwenden, um Spaltenhauptschlüssel zu verwalten. Solche Tools generieren Signaturen (wenn Sie Always Encrypted mit Secure Enclaves verwenden) und geben automatisch `CREATE COLUMN MASTER KEY`-Anweisungen aus, um Metadatenobjekte für Spaltenverschlüsselungsschlüssel zu erstellen. Weitere Informationen finden Sie unter [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md) und unter [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md). 
 
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -182,7 +182,7 @@ Erfordert die Berechtigung **ALTER ANY COLUMN MASTER KEY**.
 ### <a name="a-creating-a-column-master-key"></a>A. Erstellen eines Spaltenhauptschlüssels  
 Im folgenden Beispiel wird ein Metadateneintrag für einen Spaltenhauptschlüssel für einen Spaltenhauptschlüssel erstellt. Der Spaltenhauptschlüssel wird im Zertifikatspeicher für Clientanwendungen gespeichert, die den Anbieter „MSSQL_CERTIFICATE_STORE“ verwenden, um auf den Spaltenhauptschlüssel zuzugreifen:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -247,6 +247,8 @@ WITH (
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [Always Encrypted &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
-* [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+* [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+* [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+* [Verwalten von Schlüsseln für Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   

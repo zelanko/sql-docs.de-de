@@ -1,26 +1,24 @@
 ---
 title: Schemavergleich-Erweiterung
 titleSuffix: Azure Data Studio
-description: Installieren und Verwenden der Schemavergleich-Erweiterung (Vorschau) für Azure Data Studio
+description: Installieren und Verwenden der Schemavergleicherweiterung für Azure Data Studio
 ms.custom: seodec18
-ms.date: 10/03/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381820"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532543"
 ---
-# <a name="schema-compare-extension-preview"></a>Schemavergleicherweiterung (Vorschauversion)
+# <a name="schema-compare-extension"></a>Schemavergleich-Erweiterung
 Die Schemavergleicherweiterung bietet eine benutzerfreundliche Umgebung, in der zwei Datenbankdefinitionen verglichen und die Unterschiede aus der Quelle auf das Ziel angewendet werden können.
-
-Diese Funktion befindet sich derzeit in der ersten Vorschauversion. Probleme und Featureanforderungen können Sie [hier](https://github.com/microsoft/azuredatastudio/issues) mitteilen.
 
 
 ## <a name="features"></a>Funktionen
@@ -72,3 +70,4 @@ Es kann mühsam sein, unterschiedliche Datenbankversionen manuell zu verwalten u
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zu Schemavergleich finden Sie in der zugehörigen [Dokumentation](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions).
+Probleme und Featureanforderungen können Sie [hier](https://github.com/microsoft/azuredatastudio/issues) mitteilen.

@@ -1,55 +1,55 @@
 ---
-title: Status Referenz für den azdata BDC-Gateway
+title: Referenz zu azdata bdc gateway status
 titleSuffix: SQL Server big data clusters
-description: Referenz Artikel zu Befehlen des azdata BDC-Gatewaystatus.
+description: Referenzartikel zu azdata bdc gateway status-Befehlen
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f627eeedb6877b446deee0a2fc6800269b94b94f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 15e285a2802e223d144a7ec24882311e90b4d83c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158305"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531799"
 ---
-# <a name="azdata-bdc-gateway-status"></a>Status des azdata-BDC-Gateways
+# <a name="azdata-bdc-gateway-status"></a>azdata bdc gateway status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Dieser Artikel ist ein Referenz Artikel für **azdata**. 
+Der folgende Artikel enthält Referenzinformationen zu `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |
 | --- | --- |
-[azdata BDC-Gatewaystatus anzeigen](#azdata-bdc-gateway-status-show) | Status des Gatewaydiensts.
-## <a name="azdata-bdc-gateway-status-show"></a>azdata BDC-Gatewaystatus anzeigen
-Status des Gatewaydiensts.
+[azdata bdc gateway status show](#azdata-bdc-gateway-status-show) | Status des Gatewaydiensts
+## <a name="azdata-bdc-gateway-status-show"></a>azdata bdc gateway status show
+Status des Gatewaydiensts
 ```bash
 azdata bdc gateway status show [--resource -r] 
                                [--all -a]
 ```
 ### <a name="examples"></a>Beispiele
-Status des Gatewaydiensts erhalten.
+Ruft den Status des Gatewaydiensts ab
 ```bash
 azdata bdc gateway status show
 ```
-Status des Gatewaydiensts mit allen Instanzen erhalten.
+Ruft den Status des Gatewaydiensts mit allen Instanzen ab
 ```bash
 azdata bdc gateway status show --all
 ```
-Gibt den Status der gatewayressource innerhalb des Gatewaydiensts an.
+Ruft den Status der Gatewayressource im Gatewaydienst ab
 ```bash
 azdata bdc gateway status show --resource gateway
 ```
 ### <a name="optional-parameters"></a>Optionale Parameter
 #### `--resource -r`
-Diese Ressource in diesem Dienst erhalten.
+Ruft diese Ressource in diesem Dienst ab
 #### `--all -a`
-Alle Instanzen der einzelnen Ressourcen im Dienst anzeigen.
+Zeigt alle Instanzen jeder Ressource im Dienst an
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
 Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
@@ -58,12 +58,10 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). 
-
-- Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big-Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).
+Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md). Weitere Informationen zur Installation des `azdata`-Tools finden Sie unter [Installieren von azdata zum Verwalten von Big Data-Clustern für SQL Server 2019](deploy-install-azdata.md).

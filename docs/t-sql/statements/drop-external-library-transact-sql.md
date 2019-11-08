@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e39accbc9c4d3d45b5842e0431f14cd92908eb0f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 2758b728792c48ef309eb08f545ea4a6953c9e9d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471131"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73530822"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -32,7 +32,7 @@ Löscht eine vorhandene Paketbibliothek. Paketbibliotheken werden von unterstüt
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R, Python und Java werden für die Windows- und die Linux-Plattform in SQL Server 2019 CTP 2.4 unterstützt. 
+> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R, Python und Java werden für die Windows- und die Linux-Plattform in SQL Server 2019 und höher unterstützt. 
 ::: moniker-end
 
 ## <a name="syntax"></a>Syntax
@@ -64,7 +64,7 @@ Zum Löschen einer Bibliothek ist die Berechtigung ALTER ANY EXTERNAL LIBRARY er
 
 Eine Informationsmeldung wird zurückgegeben, wenn die Anweisung erfolgreich war.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 Im Gegensatz zu anderen `DROP`-Anweisungen in SQL Server unterstützt diese Anweisung das Angeben einer optionalen Autorisierungsklausel. Dies ermöglicht einem **dbo** oder Benutzer mit der Rolle **db_owner**, eine Paketbibliothek zu löschen, die von einem normalen Benutzer in die Datenbank hochgeladen wurde.
 

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) – SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 090e854f59e1d2be7291c8c759ef89c8311fd0a0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: cb698f95037cb6ab39c5a98dbf725f9decc66cd0
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471123"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536248"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -34,7 +34,7 @@ Lädt R-, Python- oder Java-Paketdateien vom angegebenen Bytedatenstrom oder Dat
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R, Python und externe Sprachen werden für die Windows- und die Linux-Plattform in SQL Server 2019 CTP 2.4 und höher unterstützt.
+> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. Ab SQL Server 2019 werden R, Python und externe Programmiersprachen auf Windows- und Linux-Plattformen unterstützt.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
@@ -204,7 +204,7 @@ R wird in Azure SQL-Datenbank unterstützt.
 gibt die Sprache des Pakets an. Der Wert kann `R`, `Python` oder der Name einer externen Programmiersprache sein (siehe [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 Bei der R-Sprache müssen bei Verwendung einer Datei Pakete in Form von gezippten Archivdateien mit der Dateiendung .ZIP für Windows vorbereitet werden. 

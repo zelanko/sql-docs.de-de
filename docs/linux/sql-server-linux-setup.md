@@ -4,24 +4,30 @@ titleSuffix: SQL Server
 description: Installieren, aktualisieren und deinstallieren Sie SQL Server unter Linux. In diesem Artikel erhalten Sie Informationen zu Online-, Offline- und unbeaufsichtigten Szenarios.
 author: VanMSFT
 ms.author: vanto
-ms.date: 05/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 7f4b2aa37b20cceaa3269527c95bfa97a2daa311
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032433"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593669"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Leitfaden für die Installation von SQL Server unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Artikel erfahren Sie, wie Sie SQL Server 2017 und SQL Server 2019 (Vorschauversion) unter Linux installieren, aktualisieren und deinstallieren.
+In diesem Artikel erfahren Sie, wie Sie SQL Server 2017 und SQL Server 2019 unter Linux installieren, aktualisieren und deinstallieren.
+
+Informationen zu weiteren Bereitstellungsszenarios finden Sie unter:
+
+- [Windows](../database-engine/install-windows/install-sql-server.md)
+- [Docker-Container](../linux/sql-server-linux-configure-docker.md)
+- [Kubernetes: Big Data-Cluster](../big-data-cluster/deploy-get-started.md)
 
 > [!TIP]
 > Dieser Leitfaden umfasst mehrere Bereitstellungsszenarios. Eine ausführliche Installationsanleitung mit allen erforderlichen Schritten finden Sie in den jeweiligen Schnellstarts:
@@ -34,7 +40,10 @@ Antworten auf häufig gestellte Fragen finden Sie unter [SQL Server on Linux FAQ
 
 ## <a id="supportedplatforms"></a> Unterstützte Plattformen
 
-SQL Server 2017 wird auf Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) und Ubuntu unterstützt. Es wird auch als Docker-Image unterstützt, das in der Docker-Engine unter Linux oder in Docker für Windows/Mac ausgeführt werden kann.
+SQL Server wird unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) und Ubuntu unterstützt. Es wird auch als Docker-Image unterstützt, das in der Docker-Engine unter Linux oder in Docker für Windows/Mac ausgeführt werden kann.
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 | Platform | Unterstützte Version(en) | Herunterladen
 |-----|-----|-----
@@ -43,6 +52,20 @@ SQL Server 2017 wird auf Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise 
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 herunterladen](http://releases.ubuntu.com/xenial/)
 | **Docker-Engine** | ab 1.8 | [Docker herunterladen](https://www.docker.com/get-started)
 
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+| Platform | Unterstützte Version(en) | Herunterladen
+|-----|-----|-----
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 herunterladen](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4 | [SLES v12 herunterladen](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04 | [Ubuntu 16.04 herunterladen](http://releases.ubuntu.com/xenial/)
+| **Docker-Engine** | ab 1.8 | [Docker herunterladen](https://www.docker.com/get-started)
+
+::: moniker-end
+
 Microsoft unterstützt auch die Bereitstellung und Verwaltung von SQL Server-Containern mit OpenShift und Kubernetes.
 
 > [!NOTE]
@@ -50,7 +73,7 @@ Microsoft unterstützt auch die Bereitstellung und Verwaltung von SQL Server-Con
 
 ## <a id="system"></a> Systemanforderungen
 
-Für SQL Server 2017 gelten die folgenden Systemanforderungen unter Linux:
+Für SQL Server gelten die folgenden Systemanforderungen unter Linux:
 
 |||
 |-----|-----|
@@ -63,31 +86,30 @@ Für SQL Server 2017 gelten die folgenden Systemanforderungen unter Linux:
 
 Wenn Sie **NFS-Remotefreigaben (Network File System)** in der Produktion verwenden, beachten Sie die folgenden Supportanforderungen:
 
-- Verwenden Sie NFS in der Version **4.2 oder höher**. Ältere NFS-Versionen unterstützen nicht die erforderlichen Funktionen, wie das Erstellen von Fallocate- oder Sparsedateien, die häufig in modernen Dateisystemen enthalten sind.
+- Verwenden Sie NFS in der Version **4.2 oder höher**. Ältere NFS-Versionen unterstützen nicht die erforderlichen Features, wie das Erstellen von Fallocate- oder Sparsedateien, die häufig in modernen Dateisystemen enthalten sind.
 - Verwenden Sie nur die Verzeichnisse vom Typ **/var/opt/mssql** in der NFS-Bereitstellung. Andere Dateien, wie z. B. die SQL Server-Systembinärdateien, werden nicht unterstützt.
 - Stellen Sie sicher, dass NFS-Clients beim Einbinden der Remotefreigabe die Option „NOLOCK“ verwenden.
 
 ## <a id="repositories"></a> Konfigurieren von Quellrepositorys
 
-Beim Installieren oder Aktualisieren von SQL Server erhalten Sie die aktuelle SQL Server-Version aus Ihrem konfigurierten Microsoft-Repository. In den Schnellstarts wird das **CU**-Repository mit dem kumulativen Update für SQL Server 2017 verwendet. Sie können stattdessen jedoch auch das **GDR**-Repository oder das **Preview (vNext)** -Repository konfigurieren. Weitere Informationen zu Repositorys und deren Konfiguration finden Sie unter [Configure repositories for SQL Server on Linux (Konfigurieren von Repository für SQL Server unter Linux)](sql-server-linux-change-repo.md).
+Beim Installieren oder Aktualisieren von SQL Server erhalten Sie die aktuelle SQL Server-Version aus Ihrem konfigurierten Microsoft-Repository. In den Schnellstarts wird das Update des **CU**-Repositorys für SQL Server verwendet. Sie können stattdessen jedoch ein **GDR**-Repository konfigurieren. Weitere Informationen zu Repositorys und deren Konfiguration finden Sie unter [Configure repositories for SQL Server on Linux (Konfigurieren von Repository für SQL Server unter Linux)](sql-server-linux-change-repo.md).
 
-## <a id="platforms"></a> Installieren von SQL Server 2017
+## <a id="platforms"></a> Installieren von SQL Server
 
-Sie können SQL Server 2017 unter Linux über die Befehlszeile installieren. Eine ausführliche Anleitung mit den einzelnen Schritten finden Sie jeweils unter den folgenden Schnellstarts:
+Sie können SQL Server 2017 oder SQL Server 2019 unter Linux über die Befehlszeile installieren. Eine ausführliche Anleitung mit den einzelnen Schritten finden Sie jeweils unter den folgenden Schnellstarts:
 
-- [Installieren unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Installieren unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Ausführen unter Docker](quickstart-install-connect-docker.md)
-- [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
+| Platform | Installationsschnellstarts |
+|---|---|
+| Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
+| SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |
+| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15) |
+| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15) |
 
-Nach der Installation sollten Sie zusätzliche Konfigurationsänderungen vornehmen, um eine optimale Leistung zu erzielen. Weitere Informationen finden Sie unter [Performance best practices and configuration guidelines for SQL Server on Linux (Bewährte Methoden für die Leistung und Konfigurationsrichtlinien für SQL Server unter Linux)](sql-server-linux-performance-best-practices.md).
+Sie können SQL Server für Linux auch auf einem virtuellen Azure-Computer ausführen. Weitere Informationen finden Sie unter [Bereitstellen eines virtuellen SQL Server-Computers über das Azure-Portal](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json).
 
-## <a id="sqlvnext"></a> Installieren von SQL Server 2019 (Vorschauversion)
+Nach der Installation sollten Sie zusätzliche Konfigurationsänderungen vornehmen, um eine optimale Leistung zu erzielen. Weitere Informationen finden Sie unter [Bewährte Methoden für die Leistung und Konfigurationsrichtlinien für SQL Server für Linux](sql-server-linux-performance-best-practices.md).
 
-Sie können SQL Server 2019 (Vorschauversion) unter Linux ebenfalls über die Links zu den Schnellstarts im vorherigen Abschnitt installieren. Dabei müssen Sie jedoch anstelle des **CU**-Repositorys das **Preview (vNext)** -Repository registrieren. In den Schnellstarts finden Sie Anweisungen hierzu.  
-
-## <a id="upgrade"></a> Aktualisieren von SQL Server
+## <a id="upgrade"></a> Update oder Upgrade von SQL Server
 
 Wenn Sie das Paket **mssql-server** auf die neueste Version aktualisieren möchten, verwenden Sie je nach Plattform einen der folgenden Befehle:
 
@@ -99,8 +121,7 @@ Wenn Sie das Paket **mssql-server** auf die neueste Version aktualisieren möcht
 
 Mit diesen Befehlen laden Sie das neueste Paket herunter, und die Binärdateien unter `/opt/mssql/` werden ersetzt. Benutzergenerierte Datenbanken und Systemdatenbanken sind von diesem Vorgang nicht betroffen.
 
-> [!TIP]
-> Wenn Sie zuerst [Ihr konfiguriertes Repository ändern](sql-server-linux-change-repo.md), wird mit dem Befehl **update** möglicherweise Ihre SQL Server-Version aktualisiert. Dies ist jedoch nur möglich, wenn der Upgradepfad zwischen den Repositorys unterstützt wird.
+Zum Upgraden von SQL Server [ändern Sie zunächst Ihr konfiguriertes Repository](sql-server-linux-change-repo.md) in die gewünschte SQL Server-Version. Verwenden Sie dann denselben **update**-Befehl, um Ihre Version von SQL Server upzugraden. Dies ist nur möglich, wenn der Upgradepfad zwischen den Repositorys unterstützt wird.
 
 ## <a id="rollback"></a> Zurücksetzen von SQL Server
 
@@ -117,7 +138,7 @@ Wenn Sie SQL Server auf eine frühere Version zurücksetzen oder herabstufen mö
    | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
 
 > [!NOTE]
-> Sie können SQL Server nur auf eine Version innerhalb derselben Hauptversion, wie z. B. SQL Server 2017, herabstufen.
+> Sie können nur auf eine Version innerhalb derselben Hauptversion, z. B. SQL Server 2019, herabstufen.
 
 ## <a id="versioncheck"></a> Überprüfen der installierten Version von SQL Server
 
@@ -135,7 +156,7 @@ Gehen Sie zum Überprüfen Ihrer aktuellen Version und Edition von SQL Server un
 
 Wenn Sie das Paket **mssql-server** unter Linux entfernen möchten, verwenden Sie je nach Plattform einen der folgenden Befehle:
 
-| Platform | Befehl(e) zum Entfernen des Pakets |
+| Platform | Befehl(e) zum Entfernen eines Pakets |
 |-----|-----|
 | RHEL | `sudo yum remove mssql-server` |
 | SLES | `sudo zypper remove mssql-server` |
