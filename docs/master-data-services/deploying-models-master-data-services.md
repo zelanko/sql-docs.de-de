@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Modellen (Master Data Services) | Microsoft-Dokumentation
+title: Bereitstellen von Modellen
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3cbd0815109b5242f7f49b791f24cfc348200ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906198"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728292"
 ---
 # <a name="deploying-models-master-data-services"></a>Bereitstellen von Modellen (Master Data Services)
 
@@ -32,11 +32,11 @@ ms.locfileid: "67906198"
 ## <a name="tools-for-deploying-models"></a>Tools zum Bereitstellen von Modellen  
  Sie können je nach Anforderungen mithilfe eines der drei Tools mit Modellpaketen arbeiten.  
   
--   **MDSModelDeploy-Tool:** Verwenden Sie dieses Tool zum Erstellen und Bereitstellen von Modellobjekten und -daten. Falls Sie bei der Installation von MDS den Standardpfad ausgewählt haben, finden Sie dieses Tool unter folgendem Pfad *Laufwerk*:\Programme\Microsoft SQL Server\130\Master Data Services\Configuration.  
+-   **MDSModelDeploy-Tool**: Zum Erstellen und Bereitstellen von Modellobjekten und -daten verwenden Sie das Tool MDSModelDeploy.exe. Falls Sie bei der Installation von MDS den Standardpfad ausgewählt haben, finden Sie dieses Tool unter folgendem Pfad *Laufwerk*:\Programme\Microsoft SQL Server\130\Master Data Services\Configuration.  
   
--   **Modellbereitstellungs-Assistent:** Verwenden Sie diesen Assistenten in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Webanwendung, um Pakete zu erstellen und bereitzustellen, die nur die Modellstruktur enthalten. Sie können diesen Assistenten nicht zur Bereitstellung von Daten verwenden.  
+-   **Modellbereitstellungs-Assistent**: Zum Erstellen und Bereitstellen von Paketen, die nur die Modellstruktur enthalten, verwenden Sie den Assistenten in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung. Sie können diesen Assistenten nicht zur Bereitstellung von Daten verwenden.  
   
--   **Modellpaket-Editor:** Starten Sie den Assistenten für den Modellpaket-Editor über die ausführbare Datei „ModelPackageEditor.exe“, um ein Modellpaket zu bearbeiten. Sie verwenden diesen Assistenten, um ein Paket zu bearbeiten, das vom MDSModelDeploy-Tool oder dem Modellbereitstellungs-Assistenten erstellt wurde. Falls Sie bei der Installation von MDS den Standardpfad ausgewählt haben, finden Sie dieses Tool unter folgendem Pfad *Laufwerk*:\Programme\Microsoft SQL Server\130\Master Data Services\Configuration.  
+-   **Modellpaket-Editor**: Um ein Modellpaket zu bearbeiten, verwenden Sie „ModelPackageEditor.exe“, womit der Assistent für den Modellpaket-Editor gestartet wird. Sie verwenden diesen Assistenten, um ein Paket zu bearbeiten, das vom MDSModelDeploy-Tool oder dem Modellbereitstellungs-Assistenten erstellt wurde. Falls Sie bei der Installation von MDS den Standardpfad ausgewählt haben, finden Sie dieses Tool unter folgendem Pfad *Laufwerk*:\Programme\Microsoft SQL Server\130\Master Data Services\Configuration.  
   
 > [!IMPORTANT]  
 >  Mit dem MDSModelDeploy-Tool können Sie ein neues Modell oder einen Modellklon erstellen oder ein vorhandenes Modell einschließlich seiner Daten aktualisieren. Wenn Sie das MDSModelDeploy-Tool verwenden, um ein vorhandenes Modell inklusive Daten zu aktualisieren, und das Paket keine Entität, kein Attribut oder kein Element enthält, die bzw. das im Zielmodell enthalten ist, wird diese Entität bzw. dieses Attribut oder Element von MDSModelDeploy nicht aus dem Modell gelöscht.  
@@ -67,7 +67,7 @@ ms.locfileid: "67906198"
 ## <a name="sample-packages"></a>Beispielpakete  
  In der Installation von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]sind Beispielpaketdateien enthalten. Diese Paketdateien sind Installationsverzeichnis von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]im Unterverzeichnis Master Data Services\Samples\Packages gespeichert. Wenn Sie diese Beispielspakete mithilfe des Tools MDSModelDeploy bereitstellen, werden Beispielmodelle erstellt und mit Daten aufgefüllt.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

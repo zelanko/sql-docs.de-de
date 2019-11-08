@@ -1,5 +1,5 @@
 ---
-title: Ablaufverfolgung (Master Data Services) | Microsoft-Dokumentation
+title: Ablaufverfolgung
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263981"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727845"
 ---
 # <a name="tracing-master-data-services"></a>Ablaufverfolgung (Master Data Services)
 
@@ -62,11 +62,11 @@ ms.locfileid: "68263981"
   
     |Element|Beschreibung|  
     |-------------|-----------------|  
-    |Uhrzeit|Zeitpunkt des Ablaufverfolgungseintrags.|  
+    |Zeit|Zeitpunkt des Ablaufverfolgungseintrags.|  
     |CorrelationID|Eine Korrelations-ID wird für jede Anforderung zugewiesen. Alle Ablaufverfolgungen, die durch diese Anforderung ausgelöst werden, haben die gleiche Korrelations-ID.<br /><br /> Tritt ein Fehler in der Benutzeroberfläche auf, wird die Korrelations-ID in der Fehlermeldung angezeigt.|  
     |Vorgang|Vorgangsname anfordern. Wenn die Anforderung eine Web-UI-Anforderung ist, ist der Vorgangsname die URL. Wenn die Anforderung eine API-Anforderung ist, ist der Vorgangsname der Dienstname.|  
     |Ebene|Ebene dieses Ablaufverfolgungseintrags.|  
-    |Meldung|Nachrichtentext der Ablaufverfolgung|  
+    |MessageBox|Nachrichtentext der Ablaufverfolgung|  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogbeitrag [Troubleshooting Logging Improvement](https://go.microsoft.com/fwlink/p/?LinkId=615377)(Problembehandlung der Protokollierungsverbesserung) auf msdn.com.  

@@ -1,6 +1,6 @@
 ---
-title: SetValue-Methode (ClientSettingsGeneralFlag-Klasse) | Microsoft-Dokumentation
-ms.custom: ''
+title: SetValue-Methode (ClientSettingsGeneralFlag)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ea41844f5492174b67fedba6b9a2326af9a44eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3f5fce9c795591ca7f8af41762fc9e9438aba2b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089130"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660112"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>SetValue-Methode (ClientSettingsGeneralFlag-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68089130"
 object.SetValue(Value)  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>Bestandteile  
  *object*  
  Ein Objekt der [ClientSettingsGeneralFlag-Klasse](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) , das ein allgemeines Flag für die Servereinstellungen darstellt.  
   

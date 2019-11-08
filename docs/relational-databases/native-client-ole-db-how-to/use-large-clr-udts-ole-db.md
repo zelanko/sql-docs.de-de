@@ -11,18 +11,17 @@ ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3d2ed3b506b6df25ed0559944230822f8886a24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b228a27169a506c1a1b292ee670bd08e4633201f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109914"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73766353"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Verwenden von großen CLR-UDTs (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In diesem Beispiel wird gezeigt, wie Zeilen mit umfangreichen benutzerdefinierten Typen aus einem Resultset abgerufen werden. Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt.  
+  In diesem Beispiel wird gezeigt, wie Zeilen mit umfangreichen benutzerdefinierten Typen aus einem Resultset abgerufen werden. Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel umfasst zwei Projekte. Ein Projekt erstellt eine Assembly (DLL) aus C#-Quellcode. Diese Assembly enthält den CLR-Typ. Der Datenbank wird eine Tabelle hinzugefügt. Eine Spalte in der Tabelle ist von einem in der Assembly definierten Typ. Standardmäßig wird in diesem Beispiel die master-Datenbank verwendet. Das zweite Projekt ist eine systemeigene C-Anwendung, die Daten aus der Tabelle liest.  

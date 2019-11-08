@@ -1,5 +1,5 @@
 ---
-title: Löschen einer Abonnementsicht (Master Data Services) | Microsoft-Dokumentation
+title: Abonnementsichtformate
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ba0152d37b1a050c1e46594ab8a5820606b116c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085614"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728887"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Abonnementsichtformate (Master Data Services)
 

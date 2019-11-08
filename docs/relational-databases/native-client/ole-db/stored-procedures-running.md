@@ -1,5 +1,5 @@
 ---
-title: Ausführen von gespeicherten Prozeduren (OLE DB) | Microsoft-Dokumentation
+title: Ausführen gespeicherter Prozeduren (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b139200b9c4e574fe79ab4a0306368a88b191d4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6329b0ff8f4d502916d2046e404fcecac8fc5869
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031842"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759338"
 ---
-# <a name="stored-procedures---running"></a>Gespeicherte Prozeduren: Ausführen
+# <a name="stored-procedures---running"></a>Gespeicherter Prozeduren: Ausführen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Wenn beim Ausführen von Anweisungen eine gespeicherte Prozedur in der Datenquelle ausgeführt wird (anstelle der Ausführung oder der Vorbereitung einer Anweisung direkt in der Clientanwendung), kann dies folgende Vorteile haben:  
   
@@ -34,11 +33,11 @@ ms.locfileid: "68031842"
   
 -   Bessere Konsistenz  
   
--   Eine höhere Genauigkeit.  
+-   Bessere Genauigkeit.  
   
 -   Zusätzliche Funktionalität  
   
- Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt drei der Mechanismen, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherte Prozeduren verwenden, um Daten zurückzugeben:  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt drei der Mechanismen, die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherten Prozeduren verwendet werden, um Daten zurückzugeben:  
   
 -   Jede SELECT-Anweisung in der Prozedur generiert ein Resultset.  
   
@@ -48,11 +47,11 @@ ms.locfileid: "68031842"
   
  Die Anwendung muss diese Ausgaben von gespeicherten Prozeduren verwenden können.  
   
- Die Rückgabe von Ausgabeparametern und Rückgabewerten erfolgt bei verschiedenen OLE DB-Anbietern zu unterschiedlichen Zeitpunkten während der Ergebnisverarbeitung. Im Fall von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, die Ausgabeparameter und Rückgabecodes beispielsweise erst bereit, nachdem der Consumer abgerufen oder die von der gespeicherten Prozedur zurückgegebenen Resultsets abgebrochen hat. Die Rückgabecodes und die Ausgabeparameter werden im letzten TDS-Paket vom Server zurückgegeben.  
+ Die Rückgabe von Ausgabeparametern und Rückgabewerten erfolgt bei verschiedenen OLE DB-Anbietern zu unterschiedlichen Zeitpunkten während der Ergebnisverarbeitung. Im Fall des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters werden die Ausgabeparameter und Rückgabecodes erst bereitgestellt, wenn der Consumer die von der gespeicherten Prozedur zurückgegebenen Resultsets abgerufen oder abgebrochen hat. Die Rückgabecodes und die Ausgabeparameter werden im letzten TDS-Paket vom Server zurückgegeben.  
   
  Anbieter verwenden die DBPROP_OUTPUTPARAMETERAVAILABILITY-Eigenschaft, um die Rückgabe von Ausgabeparametern und Rückgabewerten zu melden. Bei dieser Eigenschaft handelt es sich um den DBPROPSET_DATASOURCEINFO-Eigenschaftensatz.  
   
- Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter legt die DBPROP_OUTPUTPARAMETERAVAILABILITY-Eigenschaft auf dbpropval_oa_atrowrelease fest, um anzugeben, dass Rückgabecodes und Ausgabeparameter nicht zurückgegeben werden, bis das Resultset verarbeitet oder freigegeben wurde.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter legt die Eigenschaft DBPROP_OUTPUTPARAMETERAVAILABILITY auf DBPROPVAL_OA_ATROWRELEASE fest, um anzugeben, dass Rückgabecodes und Ausgabeparameter erst zurückgegeben werden, wenn das Resultset verarbeitet oder freigegeben wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren](../../../relational-databases/native-client/ole-db/stored-procedures.md)  

@@ -17,12 +17,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 537537ef2f3dd07a27ffcb4d092be2f8719f6ee1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0b01e47f81f153b73c8a57d23c9a75fc8b57ef66
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907373"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761068"
 ---
 # <a name="create-a-distributed-transaction"></a>Erstellen einer verteilten Transaktion
 
@@ -33,7 +33,6 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 /includes/snac-deprecated.md
 -->
 
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
 Eine verteilte Transaktion kann für verschiedene Microsoft SQL-Systeme auf unterschiedliche Weise erstellt werden.
 
@@ -52,7 +51,7 @@ MSDTC wird vom SQL Server Native Client Driver for Open Database Connectivity (O
 3. Die Anwendung aktualisiert einige Daten auf SQL Server Y auf Computer B.
     - Wenn ein Update auf SQL Server Y fehlschlägt, wird für alle Updates, für die kein Commit ausgeführt wurde, in beiden SQL Server Instanzen ein Rollback ausgeführt
 
-4. Schließlich beendet die Anwendung die Transaktion durch Aufrufen von [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md)mit der SQL_COMMIT-Option oder der SQL_ROLLBACK-Option.
+4. Schließlich beendet die Anwendung die Transaktion durch Aufrufen von [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md), entweder mit der Option SQL_COMMIT oder SQL_ROLLBACK.
 
 _(1)_ MSDTC kann ohne ODBC aufgerufen werden. In einem solchen Fall wird MSDTC zum Transaktions-Manager, und die Anwendung verwendet nicht mehr **SQLEndTran**.
 
