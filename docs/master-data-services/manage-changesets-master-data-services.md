@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Changesets (Master Data Services) | Microsoft-Dokumentation
+title: Verwalten von Changesets
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7f428189723987adbbf867facb819a987c502ab7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4afb02cbd6ef9c4301bfb828415f6faa64a875b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054480"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728037"
 ---
 # <a name="manage-changesets-master-data-services"></a>Verwalten von Changesets (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68054480"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] können Sie alle Änderungen nach Modell und Version verwalten.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   

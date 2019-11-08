@@ -1,5 +1,5 @@
 ---
-title: Elemente (Master Data Services) | Microsoft-Dokumentation
+title: Element
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 922ac93eed7235b560def2160b23da72a73a570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092593"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728005"
 ---
 # <a name="members-master-data-services"></a>Elemente (Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "68092593"
   
  In diesem Beispiel stellt die Tabelle eine Entität, die Zeilen in der Tabelle die Elemente und die Spalten in der Tabelle die Attribute dar. Jede Zelle stellt einen Attributwert für ein bestimmtes Element dar.  
   
- ![Als Tabelle dargestellte Master Data Services-Entität](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
+ ![Master Data Services als Tabelle dargestellte Entität](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services als Tabelle dargestellte Entität")  
   
 ## <a name="member-types"></a>Elementtypen  
  Es gibt drei Arten von Elementen: Blattelemente, konsolidierte Elemente und Sammlungselemente.  
@@ -53,14 +53,14 @@ ms.locfileid: "68092593"
 -   In expliziten Hierarchien können konsolidierte Elemente übergeordnete Elemente anderer Elemente innerhalb der Hierarchie sein, oder sie können untergeordnete Elemente sein.  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>Organisieren von Elementen mithilfe von Hierarchien und Auflistungen  
- Hierarchien und Auflistungen können verwendet werden, um Elemente für die Berichterstellung oder Analyse zu gruppieren. Weitere Informationen finden Sie unter [Hierarchien &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) und [Sammlungen &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
+ Hierarchien und Auflistungen können verwendet werden, um Elemente für die Berichterstellung oder Analyse zu gruppieren. Weitere Informationen finden Sie unter [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) und [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="member-example"></a>Beispiel für ein Element  
  Im folgenden Beispiel schließt jedes Element einen Attributwert Name, Code, Subcategory StandardCost, ListPrice und FilePhoto ein.  
   
- ![Entitätstabelle für Fahrradprodukte](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
+ ![Tabelle der Bike-Produkt Entität](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabelle der Bike-Produkt Entität")  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

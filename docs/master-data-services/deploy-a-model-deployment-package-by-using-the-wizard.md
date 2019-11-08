@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen eines Modellbereitstellungspakets mithilfe des Assistenten | Microsoft-Dokumentation
+title: Bereitstellen eines Modell Bereitstellungs Pakets (Assistent)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3c546fd0abb82b87cd3d992b5afd270156e84f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906238"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729397"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Bereitstellen eines Modellbereitstellungspakets mithilfe des Assistenten
 
@@ -29,14 +29,14 @@ ms.locfileid: "67906238"
 > [!IMPORTANT]  
 >  Pakete können nur in der Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitgestellt werden, in der sie erstellt wurden. Dies bedeutet, dass in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] erstellte Pakete nicht in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]bereitgestellt werden können.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Zielumgebung zuzugreifen.  
   
 -   Ein Modellbereitstellungspaket muss vorhanden sein. Weitere Informationen finden Sie unter [Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
--   Sie müssen Administrator in der Umgebung sein, in der Sie das Modell bereitstellen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen Administrator in der Umgebung sein, in der Sie das Modell bereitstellen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>So stellen Sie ein Modellbereitstellungspaket bereit, das ausschließlich Modellobjekte enthält  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67906238"
   
  **Hinweise:**  
   
--   Wenn eine Abonnementansicht im Paket denselben Namen wie eine Abonnementansicht in einem vorhandenen Modell aufweist, wird die folgende Warnung angezeigt: **Die Abonnementansicht des Bereitstellers wurde umbenannt**. Darüber hinaus wird die Sicht als *Modellname.Name der Abonnementsicht*erstellt. Wenn dieser Name bereits verwendet wird, wird die Abonnementsicht nicht erstellt.  
+-   Wenn eine Abonnementsicht im Paket denselben Namen wie eine Abonnementsicht in einem vorhandenen Modell aufweist, wird eine Warnung wie diese angezeigt: **Die Abonnementsicht des Bereitstellers wurde umbenannt**. Darüber hinaus wird die Sicht als *Modellname.Name der Abonnementsicht*erstellt. Wenn dieser Name bereits verwendet wird, wird die Abonnementsicht nicht erstellt.  
   
 -   Der Bereitstellungsprozess umfasst vier Schritte:  
   

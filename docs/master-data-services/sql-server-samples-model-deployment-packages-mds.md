@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server-Beispiele: Modellbereitstellungspakete (MDS) | Microsoft-Dokumentation'
+title: Beispiele für Modell Bereitstellungs Pakete
 ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
-- Master Data Services
+- master data services
 - Beispiel
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 411496c30f9b32d9c011252ce1d345e64a7d02c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085641"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727878"
 ---
-# <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server-Beispiele: Modellbereitstellungspakete (MDS).
+# <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server-Beispiele: Modellbereitstellungspakete (MDS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

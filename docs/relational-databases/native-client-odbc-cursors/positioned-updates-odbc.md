@@ -19,16 +19,15 @@ ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1d8b5df2b2b5255a685ae51b2a182746e9b9c17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1424d4e7ff08cee6dea1e53dfac0e5cf231ea266
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902447"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784387"
 ---
 # <a name="positioned-updates-odbc"></a>Positionierte Updates (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   ODBC unterstützt zwei Methoden für das Ausführen von positionierten Updates in einem Cursor:  
   
@@ -36,7 +35,7 @@ ms.locfileid: "67902447"
   
 -   WHERE CURRENT OF-Klausel  
   
- Gängigere Möglichkeit ist die Verwendung **SQLSetPos**. Es bietet die folgenden Optionen.  
+ Der gängigste Ansatz ist die Verwendung von **SQLSetPos**. Es bietet die folgenden Optionen.  
   
  SQL_POSITION  
  Positioniert den Cursor in einer bestimmten Zeile im aktuellen Rowset.  
@@ -50,39 +49,39 @@ ms.locfileid: "67902447"
  SQL_DELETE  
  Löscht die aktuelle Zeile im Cursor.  
   
- **SQLSetPos** mit einem anweisungsresultset, wenn die Anweisungshandle-Cursorattribute festgelegt sind, auf die Verwendung von Servercursorn verwendet werden kann. Die Resultsetspalten müssen an Programmvariablen gebunden sein. Sobald die Anwendung eine Zeile abgerufen hat aufgerufen **SQLSetPos**(SQL_POSTION) auf, um den Cursor in der Zeile zu positionieren. Die Anwendung könnte dann SQLSetPos(SQL_DELETE) aufrufen, um die aktuelle Zeile zu löschen, oder neue Datenwerte in die gebundenen Programmvariablen verschieben und SQLSetPos(SQL_UPDATE) aufrufen, um die aktuelle Zeile zu aktualisieren.  
+ **SQLSetPos** können mit jedem Anweisungs Ergebnissatz verwendet werden, wenn die Cursor Attribute des Anweisungs Handles für die Verwendung von Server Cursorn festgelegt sind. Die Resultsetspalten müssen an Programmvariablen gebunden sein. Sobald die Anwendung eine Zeile abgerufen hat, ruft Sie **SQLSetPos**(SQL_POSTION) auf, um den Cursor in der Zeile zu positionieren. Die Anwendung könnte dann SQLSetPos(SQL_DELETE) aufrufen, um die aktuelle Zeile zu löschen, oder neue Datenwerte in die gebundenen Programmvariablen verschieben und SQLSetPos(SQL_UPDATE) aufrufen, um die aktuelle Zeile zu aktualisieren.  
   
- Anwendungen können aktualisieren oder löschen Sie eine beliebige Zeile im Rowset mit **SQLSetPos**. Aufrufen von **SQLSetPos** ist eine praktische Alternative zum Erstellen und Ausführen einer SQL-Anweisung. **SQLSetPos** greift auf das aktuelle Rowset und kann verwendet werden, nur nach einem Aufruf von [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
+ Anwendungen können jede Zeile im Rowset mit **SQLSetPos**aktualisieren oder löschen. Das Aufrufen von **SQLSetPos** ist eine bequeme Alternative zum Erstellen und Ausführen einer SQL-Anweisung. **SQLSetPos** funktioniert auf dem aktuellen Rowset und kann nur nach einem [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)-Aufrufvorgang verwendet werden.  
   
- Rowsetgröße wird durch einen Aufruf von [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) mit einem attributsargument von SQL_ATTR_ROW_ARRAY_SIZE. **SQLSetPos** verwendet eine neue Rowsetgröße, aber nur nach einem Aufruf von **SQLFetch** oder **SQLFetchScroll**. Wenn die Rowsetgröße geändert wird, z. B. **SQLSetPos** wird aufgerufen, und klicken Sie dann **SQLFetch** oder **SQLFetchScroll** aufgerufen wird. Der Aufruf von **SQLSetPos** verwendet die alte Rowsetgröße, aber **SQLFetch** oder **SQLFetchScroll** die neue Rowsetgröße verwendet.  
+ Die Rowsetgröße wird durch einen Aufrufen von [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) mit dem Attribut Argument SQL_ATTR_ROW_ARRAY_SIZE festgelegt. **SQLSetPos** verwendet eine neue Rowsetgröße, jedoch erst nach einem-Befehl von **SQLFetch** oder **SQLFetchScroll**. Wenn z. b. die Rowsetgröße geändert wird, wird **SQLSetPos** aufgerufen und dann **SQLFetch** oder **SQLFetchScroll** aufgerufen. Beim Aufrufen von **SQLSetPos** wird die alte Rowsetgröße verwendet, aber **SQLFetch** oder **SQLFetchScroll** verwendet die neue Rowsetgröße.  
   
- Die erste Zeile im Rowset ist die Zeile 1. Das RowNumber-Argument in **SQLSetPos** muss eine Zeile im Rowset identifizieren, also muss sein Wert im Bereich zwischen 1 und die Anzahl der Zeilen, die zuletzt abgerufen wurden. Diese ist eventuell kleiner als die Rowsetgröße. Wenn RowNumber 0 ist, gilt der Vorgang für jede Zeile im Rowset.  
+ Die erste Zeile im Rowset ist die Zeile 1. Das RowNumber-Argument in **SQLSetPos** muss eine Zeile im Rowset identifizieren. Das heißt, der Wert muss im Bereich zwischen 1 und der Anzahl von Zeilen liegen, die zuletzt abgerufen wurden. Diese ist eventuell kleiner als die Rowsetgröße. Wenn RowNumber 0 ist, gilt der Vorgang für jede Zeile im Rowset.  
   
- Beim Löschvorgang von **SQLSetPos** macht die Datenquelle, die eine oder mehrere ausgewählte Zeilen einer Tabelle zu löschen. Zum Löschen von Zeilen mit **SQLSetPos**, die Anwendung ruft **SQLSetPos** mit Operation auf SQL_DELETE und RowNumber auf die Nummer der Zeile zu löschen. Wenn RowNumber 0 ist, werden alle Zeilen im Rowset gelöscht.  
+ Der DELETE-Vorgang von **SQLSetPos** bewirkt, dass die Datenquelle eine oder mehrere ausgewählte Zeilen einer Tabelle löscht. Zum Löschen von Zeilen mit **SQLSetPos**Ruft die Anwendung **SQLSetPos** auf, wobei Operation auf SQL_DELETE und RowNumber auf die Nummer der zu löschenden Zeile festgelegt ist. Wenn RowNumber 0 ist, werden alle Zeilen im Rowset gelöscht.  
   
- Nach dem **SQLSetPos** zurückgegeben wird, die gelöschte Zeile wird die aktuelle Zeile und des Status SQL_ROW_DELETED. Die Zeile kann nicht verwendet werden, in weiteren positionierten Vorgängen, z. B. Aufrufe von [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) oder **SQLSetPos**.  
+ Nach dem zurückkehren von **SQLSetPos** ist die gelöschte Zeile die aktuelle Zeile, und Ihr Status ist SQL_ROW_DELETED. Die Zeile kann nicht in weiteren positionierten Vorgängen verwendet werden, z. b. bei Aufrufen von [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) oder **SQLSetPos**.  
   
- Wenn Sie alle Zeilen des Rowsets löschen (' RowNumber ' ist gleich 0), die Anwendung kann verhindern, dass den Treiber bestimmte Zeilen löscht, unter Verwendung des Zeile Vorgang wie für den Updatevorgang des **SQLSetPos**.  
+ Wenn Sie alle Zeilen des Rowsets löschen (RowNumber ist gleich 0), kann die Anwendung verhindern, dass der Treiber bestimmte Zeilen löscht, indem er das Zeilen Vorgangs Array genau wie für den Aktualisierungs Vorgang von **SQLSetPos**verwendet.  
   
  Jede Zeile, die gelöscht wird, sollte eine Zeile sein, die im Resultset vorhanden ist. Wenn die Anwendungspuffer beim Abrufen gefüllt werden und ein Zeilenstatusarray beibehalten wurde, sollten die Werte an jeder Zeilenposition nicht SQL_ROW_DELETED, SQL_ROW_ERROR oder SQL_ROW_NOROW sein.  
   
- Positionierte Updates können auch mit der WHERE CURRENT OF-Klausel für UPDATE-, DELETE- und INSERT-Anweisungen durchgeführt werden. In denen CURRENT OF erfordert ein Cursor zu benennen, der von ODBC generiert wird, wenn die [SQLGetCursorName](../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) Funktion aufgerufen wird, oder geben Sie an, durch den Aufruf **SQLSetCursorName**. Im Folgenden finden Sie allgemeine Schritte zum Durchführen eines WHERE CURRENT OF-Updates in einer ODBC-Anwendung:  
+ Positionierte Updates können auch mit der WHERE CURRENT OF-Klausel für UPDATE-, DELETE- und INSERT-Anweisungen durchgeführt werden. WHERE CURRENT of erfordert einen Cursor Namen, den ODBC generiert, wenn die [SQLGetCursorName](../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) -Funktion aufgerufen wird, oder die Sie durch Aufrufen von **SQLSetCursorName**angeben können. Im Folgenden finden Sie allgemeine Schritte zum Durchführen eines WHERE CURRENT OF-Updates in einer ODBC-Anwendung:  
   
--   Rufen Sie **SQLSetCursorName** um einen Cursornamen für das Anweisungshandle einzurichten.  
+-   Aufrufen von **SQLSetCursorName** , um einen Cursor Namen für das Anweisungs Handle festzulegen.  
   
 -   Erstellen Sie eine SELECT-Anweisung mit einer FOR UPDATE OF-Klausel, und führen Sie sie aus.  
   
--   Rufen Sie **SQLFetchScroll** zum Abrufen eines Rowsets oder **SQLFetch** um eine Zeile abzurufen.  
+-   Rufen Sie **SQLFetchScroll** auf, um ein Rowset oder **SQLFetch** zum Abrufen einer Zeile abzurufen.  
   
--   Rufen Sie **SQLSetPos** (SQL_POSITION) auf, um den Cursor in der Zeile zu positionieren.  
+-   Aufrufen von **SQLSetPos** (SQL_POSITION), um den Cursor in der Zeile zu positionieren.  
   
--   Erstellen und Ausführen eine UPDATE-Anweisung mit einer WHERE CURRENT OF-Klausel mit dem cursornamensset mit **SQLSetCursorName**.  
+-   Erstellen Sie eine Update-Anweisung mit einer WHERE CURRENT OF-Klausel, und führen Sie Sie mit dem mit **SQLSetCursorName**festgelegten Cursor Namen aus.  
   
- Sie können alternativ Aufrufen **SQLGetCursorName** nach dem Ausführen der SELECT-Anweisung statt **SQLSetCursorName** vor der Ausführung der SELECT-Anweisung. **SQLGetCursorName** ein Standardname-Cursor von ODBC zugewiesen wird, wenn Sie keinen Cursor mit festlegen, gibt **SQLSetCursorName**.  
+ Alternativ könnten Sie **sqlgetcursor Name** auch aufrufen, nachdem Sie die SELECT-Anweisung ausgeführt haben, anstatt **sqlsetcursor Name** vor dem Ausführen der SELECT-Anweisung aufzurufen. **SQLGetCursorName** gibt einen von ODBC zugewiesenen standardmäßigen Cursor Namen zurück, wenn Sie keinen Cursor Namen mithilfe von **SQLSetCursorName**festlegen.  
   
- **SQLSetPos** über WHERE CURRENT OF bevorzugt wird, bei Verwendung von Servercursorn. Wenn Sie einen statischen, aktualisierbaren Cursor mit der ODBC-Cursorbibliothek verwenden, implementiert die Cursorbibliothek die WHERE CURRENT OF-Updates, indem eine WHERE-Klausel mit den Schlüsselwerten für die zugrunde liegende Tabelle hinzugefügt wird. Dies kann zu nicht beabsichtigten Updates führen, wenn die Schlüssel in der Tabelle nicht eindeutig sind.  
+ **SQLSetPos** wird von WHERE CURRENT of bevorzugt, wenn Sie Server Cursor verwenden. Wenn Sie einen statischen, aktualisierbaren Cursor mit der ODBC-Cursorbibliothek verwenden, implementiert die Cursorbibliothek die WHERE CURRENT OF-Updates, indem eine WHERE-Klausel mit den Schlüsselwerten für die zugrunde liegende Tabelle hinzugefügt wird. Dies kann zu nicht beabsichtigten Updates führen, wenn die Schlüssel in der Tabelle nicht eindeutig sind.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Cursorn &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Verwenden von &#40;Cursorn (od&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von E-Mail-Benachrichtigungen (Master Data Services) | Microsoft-Dokumentation
+title: Konfigurieren von E-Mail-Benachrichtigungen
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2826041b1385966f9ac4f76358588b4af6d414f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b49a2a9b52df3cf5364f0e4f86b4181439ff61b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941066"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729645"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>Konfigurieren von E-Mail-Benachrichtigungen (Master Data Services)
 

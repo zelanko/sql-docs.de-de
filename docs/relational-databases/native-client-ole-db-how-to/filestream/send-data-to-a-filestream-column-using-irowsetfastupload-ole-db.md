@@ -11,23 +11,22 @@ ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82692482e198f80476df9d1a5b01d513541c81f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bee5fbe809476ef0be1be28a06909cc470a073
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110160"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73767265"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Senden von Daten an eine FILESTREAM-Spalte mithilfe von IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Dieses Beispiel verwendet die IRowsetFastUpload-Schnittstelle, um zwischen 4 MB und 4 GB Daten an eine FILESTREAM-Spalte zu senden.  
   
- Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Weitere Informationen zur FILESTREAM-Funktion finden Sie [unter FILESTREAM- &#40;unter&#41;Stützung OLE DB](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Beispiel  
- Bevor Sie kompilieren und dieses Beispiels ausführen, aktivieren Sie FILESTREAM-Unterstützung ([aktivieren und Konfigurieren von FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Bevor Sie dieses Beispiel kompilieren und ausführen, aktivieren Sie die FILESTREAM-Unterstützung ([aktivieren und Konfigurieren von FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   

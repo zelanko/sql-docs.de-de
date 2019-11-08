@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy | Microsoft-Dokumentation
+title: Bereitstellen eines Modell Bereitstellungs Pakets (mdsmodeldeployment)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7d2041effbc1e5bebb94a730d90c19e28e0a02be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ae40a50eb9866b452efb8d387df62f8bed8fa24
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906225"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728309"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy
 
@@ -32,14 +32,14 @@ ms.locfileid: "67906225"
 > [!IMPORTANT]  
 >  Pakete können nur in der Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitgestellt werden, in der sie erstellt wurden. Dies bedeutet, dass in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] erstellte Pakete nicht in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] oder höher bereitgestellt werden können.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Zielumgebung zuzugreifen.  
   
 -   Ein Modellbereitstellungspaket muss vorhanden sein. Weitere Informationen finden Sie unter  [Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
--   Sie müssen Administrator in der Umgebung sein, in der Sie das Modell bereitstellen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen Administrator in der Umgebung sein, in der Sie das Modell bereitstellen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Wenn Sie ein Modell mit Daten aktualisieren, kann die von Ihnen bereitgestellte Version nicht den Status **Gesperrt** oder **Commit wurde ausgeführt** aufweisen.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67906225"
   
 1.  Legen Sie fest, ob Sie ein neues Modell erstellen, ein Modell klonen oder ein zuvor geklontes Modell aktualisieren. Weitere Informationen finden Sie unter [Optionen für Modellbereitstellung &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md).  
   
-2.  Öffnen Sie eine Administratoreingabeaufforderung, und navigieren Sie zu „MDSModelDeploy.exe“.  
+2.  Öffnen Sie eine Administrator-Eingabeaufforderung, und navigieren Sie zu "MDSModelDeploy.exe".  
   
     -   Wenn MDS am Standardspeicherort installiert wurde, ist das Tool unter „ *Laufwerk*:\Programme\Microsoft SQL Server\130\Master Data Services\Configuration“ verfügbar.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67906225"
   
     -   Geben Sie Folgendes ein, um Hilfe für eine Option anzuzeigen, wobei *OptionName* der Name der Option ist: `MDSModelDeploy help OptionName`.  
   
-4.  Dies ist optional. Wenn Sie über mehrere Webanwendungen verfügen, bestimmen Sie den Namen des Diensts, für den Sie die Bereitstellung durchführen, indem Sie diesen Befehl eingeben und die EINGABETASTE drücken:  
+4.  Optional. Wenn Sie über mehrere Webanwendungen verfügen, bestimmen Sie den Namen des Diensts, für den Sie die Bereitstellung durchführen, indem Sie diesen Befehl eingeben und die EINGABETASTE drücken:  
   
     ```  
     MDSModelDeploy listservices  
@@ -96,7 +96,7 @@ ms.locfileid: "67906225"
   
  **Hinweise:**  
   
--   Wenn eine Abonnementansicht im Paket denselben Namen wie eine Abonnementansicht in einem vorhandenen Modell aufweist, wird die folgende Warnung angezeigt: **Die Abonnementansicht des Bereitstellers wurde umbenannt.** – die Ansicht wird anschließend als *modelname.subscriptionviewname* erstellt. Wenn dieser Name bereits verwendet wird, wird die Abonnementsicht nicht erstellt.  
+-   Wenn eine Abonnementsicht im Paket denselben Namen wie eine Abonnementsicht in einem vorhandenen Modell ausweist, wird eine Warnung wie diese angezeigt: **Warnung: Die Abonnementsicht des Bereitstellers wurde umbenannt.** . Für die Anzeige wird zudem *modelname.subscriptionviewname*verwendet. Wenn dieser Name bereits verwendet wird, wird die Abonnementsicht nicht erstellt.  
   
 -   Der Bereitstellungsprozess umfasst vier Schritte:  
   

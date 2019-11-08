@@ -17,31 +17,30 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f41438f8ecd7a905201b8f912b3fee142716a2c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708080"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785186"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Konvertieren von DB-Library-Programmen zum Massenkopieren in ODBC-Programme
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Die Umstellung eines DB-Library-Massen Kopier Programms in ODBC ist einfach, da die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützten Massen Kopierfunktionen mit den DB-Library-Funktionen zum Massen kopieren vergleichbar sind, mit den folgenden Ausnahmen:  
+  Die Umstellung eines DB-Library-Massen Kopier Programms in ODBC ist einfach, da die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützten Massen Kopierfunktionen mit den DB-Library-Funktionen zum Massen kopieren vergleichbar sind, mit den folgenden Ausnahmen:  
   
 -   DB-Library-Anwendungen übergeben als ersten Parameter von Funktionen zum Massenkopieren einen Zeiger auf eine DBPROCESS-Struktur. In ODBC-Anwendungen wird der DBPROCESS-Zeiger durch ein ODBC-Verbindungshandle ersetzt.  
   
--   DB-Library-Anwendungen nennen **BCP_SETL** , bevor eine Verbindung hergestellt wird, um Massen Kopiervorgänge für einen DBPROCESS zu aktivieren. ODBC-Anwendungen aufrufen stattdessen [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) , bevor Sie eine Verbindung herstellen, um Massen Vorgänge für ein Verbindungs Handle zu aktivieren:  
+-   DB-Library-Anwendungen **BCP_SETL** vor dem Herstellen einer Verbindung, um Massen Kopiervorgänge für einen DBPROCESS zu aktivieren. ODBC-Anwendungen aufrufen stattdessen [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) , bevor Sie eine Verbindung herstellen, um Massen Vorgänge für ein Verbindungs Handle zu aktivieren:  
   
     ```  
     SQLSetConnectAttr(hdbc, SQL_COPT_SS_BCP,  
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt keine DB-Library-Nachrichten-und Fehlerhandler. Sie müssen **SQLGetDiagRec** aufrufen, um Fehler und Meldungen abzurufen, die von den ODBC-Funktionen zum Massen kopieren ausgelöst werden. Die ODBC-Versionen der Massenkopierfunktionen geben die Standardrückgabecodes SUCCEED bzw. FAILED für das Massenkopieren zurück statt der Rückgabecodes im ODBC-Stil, wie SQL_SUCCESS oder SQL_ERROR.  
+-   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt keine DB-Library-Nachrichten-und Fehlerhandler. Sie müssen **SQLGetDiagRec** aufrufen, um Fehler und Meldungen abzurufen, die von den ODBC-Funktionen zum Massen kopieren ausgelöst werden. Die ODBC-Versionen der Massenkopierfunktionen geben die Standardrückgabecodes SUCCEED bzw. FAILED für das Massenkopieren zurück statt der Rückgabecodes im ODBC-Stil, wie SQL_SUCCESS oder SQL_ERROR.  
   
--   Die für den Parameter DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* angegebenen Werte werden anders interpretiert als der ODBC-Parameter **bcp_bind**_cbData_ .  
+-   Die für den DB-Library- [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* -Parameter angegebenen Werte werden anders interpretiert als der ODBC- **bcp_bind**_cbData_ -Parameter.  
   
     |Angegebene Bedingung|DB-Library- *varlen* -Wert|ODBC *cbData* -Wert|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -51,13 +50,13 @@ ms.locfileid: "71708080"
   
      In DB-Library gibt der *varlen* -Wert-1 an, dass Daten variabler Länge angegeben werden, die in den ODBC- *cbData* so interpretiert werden, dass nur NULL-Werte angegeben werden. Ändern Sie alle DB-Library- *varlen* -Spezifikationen von-1 in SQL_VARLEN_DATA und alle *varlen* -Spezifikationen von 0 in SQL_NULL_DATA.  
   
--   DB-Library **bcp_colfmt**_file_collen_ und ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* haben dasselbe Problem wie die oben genannten Parameter **bcp_bind**_varlen_ und *cbData* . Ändern Sie alle DB-Library *file_collen* -Spezifikationen von-1 in SQL_VARLEN_DATA und alle *file_collen* -Spezifikationen von 0 in SQL_NULL_DATA.  
+-   Die DB-Library- **bcp_colfmt**_file_collen_ und der ODBC- [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* haben das gleiche Problem wie die oben aufgeführten **bcp_bind**Parameter "_varlen_ " und " *cbData* ". Ändern Sie alle DB-Library- *file_collen* Spezifikationen von-1 in SQL_VARLEN_DATA und alle *file_collen* Spezifikationen von 0 bis SQL_NULL_DATA.  
   
--   Der *iValue* -Parameter der ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) -Funktion ist ein void-Zeiger. In DB-Library war *iValue* eine ganze Zahl. Konvertieren Sie die Werte für den ODBC *iValue* in void *.  
+-   Der *iValue* -Parameter der ODBC- [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) Funktion ist ein void-Zeiger. In DB-Library war *iValue* eine ganze Zahl. Konvertieren Sie die Werte für den ODBC *iValue* in void *.  
   
--   Die **bcp_control** -Option BCPMAXERRS gibt an, wie viele einzelne Zeilen Fehler aufweisen können, bevor ein Massen Kopiervorgang fehlschlägt. Der Standardwert für BCPMAXERRS ist 0 (Fehler beim ersten Fehler) in der DB-Library-Version von **bcp_control** und 10 in der ODBC-Version. DB-Library-Anwendungen, die vom Standardwert 0 zum Beenden eines Massen Kopiervorgangs abhängen, müssen so geändert werden, dass der ODBC- **bcp_control** aufgerufen wird, um BCPMAXERRS auf 0 festzulegen.  
+-   Die **bcp_control** Option BCPMAXERRS gibt an, wie viele einzelne Zeilen Fehler aufweisen können, bevor ein Massen Kopiervorgang fehlschlägt. Der Standardwert für BCPMAXERRS ist 0 (Fehler beim ersten Fehler) in der DB-Library-Version von **bcp_control** und 10 in der ODBC-Version. DB-Library-Anwendungen, die vom Standardwert 0 zum Beenden eines Massen Kopiervorgangs abhängen, müssen so geändert werden, dass der ODBC- **bcp_control** aufgerufen wird, um BCPMAXERRS auf 0 (null) festzulegen.  
   
--   Die **bcp_control** -Funktion von ODBC unterstützt die folgenden Optionen, die von der DB-Library-Version von **bcp_control**nicht unterstützt werden:  
+-   Die ODBC- **bcp_control** Funktion unterstützt die folgenden Optionen, die von der DB-Library-Version von **bcp_control**nicht unterstützt werden:  
   
     -   BCPODBC  
   
@@ -91,7 +90,7 @@ ms.locfileid: "71708080"
   
          Gibt an, dass eine Datendatei für das Massenkopieren im Zeichenmodus eine Unicode-Datei ist.  
   
--   Die **bcp_colfmt** -Funktion von ODBC unterstützt den *file_type* -Indikator von SQLCHAR nicht, da Sie mit der ODBC SQLCHAR typedef in Konflikt steht. Verwenden Sie stattdessen SQLCHARACTER für **bcp_colfmt**.  
+-   Die ODBC- **bcp_colfmt** Funktion unterstützt den *file_type* -Indikator von SQLCHAR nicht, da Sie mit der ODBC SQLCHAR typedef in Konflikt steht. Verwenden Sie stattdessen SQLCHARACTER für **bcp_colfmt**.  
   
 -   In den ODBC-Versionen der Funktionen zum Massen kopieren ist das Format für das Arbeiten mit **DateTime** -und **smalldatetime** -Werten in Zeichen folgen das ODBC-Format yyyy-mm-dd hh: mm: SS. sss;. **smalldatetime** -Werte verwenden das ODBC-Format yyyy-mm-dd hh: mm: SS.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "71708080"
   
     -   **DateTime** -und **smalldatetime** -Zeichen folgen in einem beliebigen Format, das von der DB-Library-Funktion **DBConvert** unterstützt wird.  
   
-    -   Wenn das Feld **internationale Einstellungen verwenden** auf der Registerkarte DB-Library- **Optionen** des Client Netzwerk-Hilfsprogramms [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert ist, akzeptieren die DB-Library-Massen Kopierfunktionen auch Datumsangaben in dem regionalen Datumsformat, das für die Gebiets Schema Einstellung des Clients definiert ist. Computer Registrierung.  
+    -   Wenn das Feld **internationale Einstellungen verwenden** auf der Registerkarte DB-Library- **Optionen** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client-Netzwerk Hilfsprogramms aktiviert ist, akzeptieren die DB-Library-Massen Kopierfunktionen auch Datumsangaben in dem regionalen Datumsformat, das für die Gebiets Schema Einstellung des Client Computer Registrierung.  
   
      Die DB-Library-Funktionen zum Massen kopieren akzeptieren die ODBC **DateTime** -und **smalldatetime** -Formate nicht.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "71708080"
 -   Beim Ausgeben von **Money** -Werten im Zeichenformat stellen ODBC-Funktionen zum Massen kopieren vier Ziffern der Genauigkeit und keine Komma Trennzeichen bereit. DB-Library-Versionen bieten nur zwei Ziffern der Genauigkeit und enthalten die Komma Trennzeichen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausführen von Massen Kopier &#40;Vorgängen&#41;ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [Ausführen von Massen Kopier &#40;Vorgängen&#41; für ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) -   
  [Massenkopierfunktionen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

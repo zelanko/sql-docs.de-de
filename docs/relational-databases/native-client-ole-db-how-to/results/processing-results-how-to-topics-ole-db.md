@@ -1,5 +1,5 @@
 ---
-title: 'Verarbeiten von Ergebnissen: Themen zur Vorgehensweise (OLE DB) | Microsoft-Dokumentation'
+title: Themen zur Vorgehensweise bei der Verarbeitung von Ergebnissen (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b25dda01866157b66c5bdac62207e968ea6bb165
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bc0494bc85111f2220f95f83850a625e817e891
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908186"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789843"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Vorgehensweisen zum Verarbeiten von Ergebnissen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Der erste Schritt zur Verarbeitung der Ergebnisse in einer OLE DB-Anwendung besteht darin, die Merkmale des Resultsets zu bestimmen. Anschließend werden die Daten in Programmvariablen abgerufen. Wenn der Befehl eine gespeicherte Prozedur ausführt, müssen Sie außerdem wissen, wie die Rückgabecodes und Ausgabeparameter der gespeicherten Prozeduren verarbeitet werden.  
   

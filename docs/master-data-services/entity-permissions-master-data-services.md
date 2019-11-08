@@ -1,5 +1,5 @@
 ---
-title: Entitätsberechtigungen (Master Data Services) | Microsoft-Dokumentation
+title: Entitätsberechtigungen
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e50c4ff0b3c69d1f943c0cff266520a2fabc9bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051983"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728180"
 ---
 # <a name="entity-permissions-master-data-services"></a>Entitätsberechtigungen (Master Data Services)
 
@@ -37,12 +37,12 @@ ms.locfileid: "68051983"
 > [!NOTE]  
 >  Diese Berechtigungen gelten nur für den Funktionsbereich **Explorer** der Benutzeroberfläche.  
   
-|Berechtigung|Description|  
+|Berechtigung|Beschreibung|  
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten anzeigen.|  
 |**Erstellen**|Der Benutzer kann Elemente erstellen und während der Erstellung Attributwerte zuweisen.|  
 |**Update**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten aktualisieren.|  
-|**Löschen**|Der Benutzer kann Elemente löschen.|  
+|**Delete**|Der Benutzer kann Elemente löschen.|  
 |**Verweigern**|Der Zugriff auf die Entität wird vollständig verweigert.|  
   
  Die Berechtigungen zum Lesen, Erstellen, Aktualisieren und Löschen können miteinander kombiniert werden. Wenn Berechtigungen zum Erstellen, Aktualisieren und Löschen zugewiesen werden, wird die Leseberechtigung automatisch zugewiesen.  

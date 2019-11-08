@@ -1,5 +1,5 @@
 ---
-title: 'Isscommandwithparameters:: SetParameterProperties (OLE DB) | Microsoft-Dokumentation'
+title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e4ec4a160920d8490cb7578de76656a1253adac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82422e9d2816f08f3a4df3f42f1eeddb1c13c3f5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050961"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761765"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>'ISSCommandWithParameters::SetParameterProperties' (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Legt die Parametereigenschaften für einzelne Parameter nach Ordnungszahl fest oder legt Massenparametereigenschaften durch Angabe eines Arrays von SSPARAMPROPS-Strukturen fest.  
   
@@ -53,7 +52,7 @@ HRESULT SetParameterProperties(
   
  Die **SetParameterInfo**-Methode muss aufgerufen werden, bevor die **ISSCommandWithParameters::SetParameterProperties**-Methode aufgerufen wird. Durch Aufrufen von `SetParameterProperties(0, NULL)` werden alle angegebenen Parametereigenschaften gelöscht, während der Aufruf von `SetParameterInfo(0,NULL,NULL)` alle Parameterinformationen löscht, einschließlich Eigenschaften, die einem Parameter zugeordnet sind.  
   
- Aufrufen von **isscommandwithparameters:: SetParameterProperties** an Eigenschaften für einen Parameter angeben, d. h. nicht vom Typ zurückgibt DBTYPE_XML- oder DBTYPE_UDT DB_E_ERRORSOCCURRED oder DB_S_ERRORSOCCURRED und markiert die  *DwStatus* alle für diesen Parameter mit DBPROPSTATUS_NOTSET in SSPARAMPROPS enthaltenen DBPROPs Feld. Das DBPROP-Array jedes in SSPARAMPROPS enthaltenen DBPROPs sollte durchsucht werden, um zu ermitteln, auf welchen Parameter DB_E_ERRORSOCCURRED bzw. DB_S_ERRORSOCCURRED verweist.  
+ Der Aufruf von **ISSCommandWithParameters:: SetParameterProperties** zum Angeben von Eigenschaften für einen Parameter, der nicht vom Typ DBTYPE_XML oder DBTYPE_UDT gibt DB_E_ERRORSOCCURRED oder DB_S_ERRORSOCCURRED zurück und markiert das Feld *dwStatus* von all. DB-Eigenschaften, die in ssparam-Eigenschaften für diesen Parameter mit DBPROPSTATUS_NOTSET enthalten sind. Das DBPROP-Array jedes in SSPARAMPROPS enthaltenen DBPROPs sollte durchsucht werden, um zu ermitteln, auf welchen Parameter DB_E_ERRORSOCCURRED bzw. DB_S_ERRORSOCCURRED verweist.  
   
  Wenn **ISSCommandWithParameters::SetParameterProperties** aufgerufen wird, um die Eigenschaften von Parametern anzugeben, deren Parameterinformationen noch nicht mit **SetParameterInfo** festgelegt wurden, gibt der Anbieter E_UNEXPECTED mit der folgenden Fehlermeldung zurück:  
   
@@ -73,7 +72,7 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- Verbesserungen in der Datenbank-Engine ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] isscommandwithparameters:: SetParameterProperties, genauere Beschreibungen der erwarteten Ergebnisse abrufen können. Diese genaueren Ergebnisse unterscheiden sich möglicherweise aus den Werten von isscommandwithparameters:: SetParameterProperties zurückgegeben wird, in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Verbesserungen in der Datenbank-Engine beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] erlauben ISSCommandWithParameters:: SetParameterProperties, genauere Beschreibungen der erwarteten Ergebnisse zu erhalten. Diese präziseren Ergebnisse können sich von den Werten unterscheiden, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von ISSCommandWithParameters:: SetParameterProperties zurückgegeben wurden. Weitere Informationen finden Sie unter [metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
@@ -82,6 +81,6 @@ HRESULT SetParameterProperties(
 |*rgPropertySets*|Ein Zeiger auf den Speicher, in den ein Array aus DBPROPSET-Strukturen zurückgegeben werden soll|  
   
 ## <a name="see-also"></a>Siehe auch  
- [ISSCommandWithParameters &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;-OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

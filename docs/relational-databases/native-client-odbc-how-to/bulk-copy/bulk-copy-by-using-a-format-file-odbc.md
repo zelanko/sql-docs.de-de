@@ -1,5 +1,5 @@
 ---
-title: Massenkopieren mithilfe einer Formatdatei (ODBC) | Microsoft-Dokumentation
+title: Massen Kopieren mithilfe einer Format Datei (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 654a632024f5c004ea9c15d71b767b4cb6bf80b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0698d534a75d6fb1b66af733c3d1eb00f88c26cc
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099404"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782000"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Massenkopieren mithilfe einer Formatdatei (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Dieses Beispiel zeigt, wie die ODBC-Funktion bcp_init mit einer Formatdatei verwendet wird.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "68099404"
   
     -   Name der Datendatei, in die Fehlermeldungen zum Massenkopiervorgang ausgegeben werden sollen (geben Sie NULL an, wenn keine Meldungsdatei erstellt werden soll)  
   
-    -   Die Richtung der Kopie: DB_IN, wenn Daten aus der Datei auf die Tabelle oder Sicht.  
+    -   Kopierrichtung: DB_IN, wenn Daten aus der Datei in die Tabelle oder Sicht kopiert werden sollen  
   
 5.  Rufen Sie [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) auf, um eine Formatdatei zu lesen, welche die vom Massenkopiervorgang verwendete Datendatei beschreibt.  
   
@@ -52,11 +51,11 @@ ms.locfileid: "68099404"
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
- Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
+ Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Startseite [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treiber Name ist "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Führen Sie das erste ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die Tabelle zu erstellen, die im Beispiel verwendete code.  
+ Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die im Beispiel verwendete Tabelle zu erstellen.  
   
  Kopieren Sie das zweite Codelisting, und fügen Sie es in eine Datei mit dem Namen Bcpfmt.fmt ein. Jede Spalte in der Tabelle wird durch ein Tabstoppzeichen getrennt.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "68099404"
   
  Kompilieren Sie das vierte Codelisting (C++) mit odbc32.lib und odbcbcp.lib. Wenn Sie das Beispiel mit MSBuild.exe erstellt haben, kopieren Sie zuerst Bcpfmt.fmt und Bcpodbc.bcp aus dem Projektverzeichnis in das Verzeichnis mit der EXE-Datei, und rufen Sie dann die EXE-Datei auf.  
   
- Führen Sie das fünfte ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting, um die im Beispiel verwendete Tabelle zu löschen.  
+ Führen Sie das fünfte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die im Beispiel verwendete Tabelle zu löschen.  
   
 ```  
 use AdventureWorks  
@@ -189,7 +188,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Massenkopieren mit dem SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Massen Kopieren mithilfe der ODBC &#40;&#41; -Themen SQL Server ODBC-Treibers](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Verwenden von Datendateien und Formatdateien](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

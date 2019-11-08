@@ -11,27 +11,26 @@ ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68fb0972c68378765a76cfc39e58f2056f554ff6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d8621aac563f9211f7d4ee0c9ebd8f557e33bea
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937465"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780482"
 ---
 # <a name="support-for-large-udts"></a>Unterstützung für große UDTs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Diese Beispielprojektmappe umfasst zwei Projekte. Ein Projekt erstellt eine Assembly (DLL) aus C#-Quellcode. Diese Assembly enthält den CLR-Typ. Der Datenbank wird eine Tabelle hinzugefügt. Eine Spalte in der Tabelle ist von einem in der Assembly definierten Typ. Standardmäßig wird in diesem Beispiel die master-Datenbank verwendet. Das zweite Projekt ist eine systemeigene C-Anwendung, die Daten aus der Tabelle liest.  
   
  In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]kann das Beispiel nicht ausgeführt werden.  
   
- Weitere Informationen zur Unterstützung großer UDTs finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Weitere Informationen zur Unterstützung für große UDTs finden Sie unter [große CLR-benutzerdefinierte &#40;Typen ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ist der C#-Quellcode. Fügen Sie den Code in eine Datei mit dem Namen LargeStringUDT.cs ein, und kompilieren Sie ihn zu einer DLL. Kopieren Sie LargeStringUDT.dll in das Stammverzeichnis des Laufwerks C.  
   
- Die zweite ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt die Assembly in der master-Datenbank.  
+ Das zweite Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt die Assembly in der Master-Datenbank.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und user32.lib. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "67937465"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Der vierte ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die Assembly aus der master-Datenbank.  
+ Das vierte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die Assembly aus der Master-Datenbank.  
   
 ```  
 // LargeStringUDT.cs  

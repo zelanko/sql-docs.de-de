@@ -1,5 +1,5 @@
 ---
-title: Rekursive Hierarchien (Master Data Services) | Microsoft-Dokumentation
+title: Rekursive Hierarchien
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8c0f2770665a27db226b9da9f7253d602c90afd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac3df398e486f143b871c736e6f2fee643092b7f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910035"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728963"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Rekursive Hierarchien (Master Data Services)
 
@@ -53,7 +53,7 @@ ms.locfileid: "67910035"
   
 -   Rekursive Hierarchien können keine kreisförmigen Beziehungen einschließen. Katherine kann z. B. nicht Sandeeps Managerin sein, wenn Sandeep ihr Manager ist. Auch kann Katherine nicht ihre eigener Managerin sein.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

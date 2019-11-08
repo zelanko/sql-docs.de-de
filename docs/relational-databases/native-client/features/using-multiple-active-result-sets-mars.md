@@ -18,17 +18,16 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d98975e0c8d690224d9cd58c4154f0d6fbdb083
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 2b72f93aa979c504c0f6eeb6a3b867cc8360728f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926868"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761311"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Verwenden von Multiple Active Result Sets (MARS)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Seit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] werden Multiple Active Result Sets (MARS) in Anwendungen unterstützt, die auf [!INCLUDE[ssDE](../../../includes/ssde-md.md)] zugreifen. In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] konnten Datenbankanwendungen nicht mehrere aktive Anweisungen über eine Verbindung verwalten. Beim Verwenden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardresultsets musste die Anwendung alle Resultsets aus einem Batch verarbeiten oder abbrechen, bevor ein anderer Batch auf dieser Verbindung ausgeführt werden konnte. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neues Verbindungsattribut eingeführt, das es Anwendungen ermöglicht, mehr als eine ausstehende Anforderung pro Verbindung und mehr als ein aktives Standardresultset pro Verbindung anzugeben.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "68926868"
 -   In MARS wird ein Identitätswechsel im Bereich einer Sitzung verhindert, solange gleichzeitige Batches ausgeführt werden.  
 
 > [!NOTE]
-> Standardmäßig wird die Mars-Funktionalität nicht durch den Treiber aktiviert. Um Mars zu verwenden, wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit Native Client eine Verbindung mit herstellen, müssen Sie Mars speziell in einer Verbindungs Zeichenfolge aktivieren. Einige Anwendungen können Mars jedoch standardmäßig aktivieren, wenn die Anwendung erkennt, dass der Treiber Mars unterstützt. Für diese Anwendungen können Sie Mars in der Verbindungs Zeichenfolge nach Bedarf deaktivieren. Weitere Informationen finden Sie in den Abschnitten zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber weiter unten in diesem Thema.
+> Standardmäßig wird die Mars-Funktionalität nicht durch den Treiber aktiviert. Wenn Sie beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Mars verwenden möchten, müssen Sie Mars in einer Verbindungs Zeichenfolge explizit aktivieren. Einige Anwendungen können Mars jedoch standardmäßig aktivieren, wenn die Anwendung erkennt, dass der Treiber Mars unterstützt. Für diese Anwendungen können Sie Mars in der Verbindungs Zeichenfolge nach Bedarf deaktivieren. Weitere Informationen finden Sie in den Abschnitten zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber weiter unten in diesem Thema.
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client schränkt die Anzahl aktiver Anweisungen auf einer Verbindung nicht ein.  
   
@@ -78,10 +77,10 @@ ms.locfileid: "68926868"
   
  Ein Beispiel für die Verwendung von Mars aus ADO finden [Sie unter Verwenden von ADO mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
   
-## <a name="in-memory-oltp"></a>In-Memory-OLTP  
+## <a name="in-memory-oltp"></a>In-Memory-Onlinetransaktionsverarbeitung (In-Memory-OLTP)  
  In-Memory OLTP unterstützt Mars mithilfe von Abfragen und nativ kompilierten gespeicherten Prozeduren. Mars ermöglicht das Anfordern von Daten aus mehreren Abfragen, ohne dass jedes Resultset vollständig abgerufen werden muss, bevor eine Anforderung zum Abrufen von Zeilen aus einem neuen Resultset gesendet wird. Um erfolgreich aus mehreren geöffneten Resultsets zu lesen, müssen Sie eine Verbindung mit Mars-Aktivierung verwenden.  
   
- Mars ist standardmäßig deaktiviert, sodass Sie es explizit aktivieren müssen, `MultipleActiveResultSets=True` indem Sie zu einer Verbindungs Zeichenfolge hinzufügen. Im folgenden Beispiel wird veranschaulicht, wie Sie eine Verbindung mit einer Instanz von SQL Server herstellen und angeben, dass MARS aktiviert ist:  
+ Mars ist standardmäßig deaktiviert, sodass Sie es explizit aktivieren müssen, indem Sie `MultipleActiveResultSets=True` einer Verbindungs Zeichenfolge hinzufügen. Im folgenden Beispiel wird veranschaulicht, wie Sie eine Verbindung mit einer Instanz von SQL Server herstellen und angeben, dass MARS aktiviert ist:  
   
 ```  
 Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; MultipleActiveResultSets=True  
@@ -114,14 +113,14 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
  SQL Server (beginnend mit 2016) unterstützt Mars mit columnstore--Indizes. SQL Server 2014 verwendet MARS für schreibgeschützte Verbindungen mit Tabellen mit einem Columnstore-Index.    SQL Server 2014 unterstützt MARS jedoch nicht für gleichzeitige DML-Vorgänge (Data Manipulation Language, Datenbearbeitungssprache) für eine Tabelle mit einem Columnstore-Index. In diesem Fall beendet SQL Server die Verbindung und bricht die Transaktionen ab.   SQL Server 2012 hat schreibgeschützte columnstore--Indizes, und Mars gilt nicht für Sie.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB-Anbieter  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt Mars durch das Hinzufügen der SSPROP_INIT_MARSCONNECTION-Datenquellen-Initialisierungs Eigenschaft, die im DBPROPSET_SQLSERVERDBINIT-Eigenschaften Satz implementiert ist. Außerdem wurde ein neues Verbindungszeichenfolgen-Schlüsselwort, **MarsConn**, aufgenommen. Er akzeptiert **true** -oder **false** -Werte. der Standardwert ist **false** .  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt Mars durch das Hinzufügen der SSPROP_INIT_MARSCONNECTION Datenquellen-Initialisierungs Eigenschaft, die im DBPROPSET_SQLSERVERDBINIT-Eigenschaften Satz implementiert ist. Außerdem wurde ein neues Verbindungszeichenfolgen-Schlüsselwort, **MarsConn**, aufgenommen. Er akzeptiert **true** -oder **false** -Werte. der Standardwert ist **false** .  
   
- Die Datenquelleneigenschaft DBPROP_MULTIPLECONNECTIONS ist standardmäßig auf VARIANT_TRUE festgelegt. Das bedeutet, der Anbieter erzeugt mehrere Verbindungen, um mehrere gleichzeitige Befehls- und Rowsetobjekte zu unterstützen. Wenn MARS aktiviert ist, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann Native Client mehrere Befehls-und Rowsetobjekte in einer einzelnen Verbindung unterstützen, sodass MULTIPLE_CONNECTIONS standardmäßig auf VARIANT_FALSE festgelegt ist.  
+ Die Datenquelleneigenschaft DBPROP_MULTIPLECONNECTIONS ist standardmäßig auf VARIANT_TRUE festgelegt. Das bedeutet, der Anbieter erzeugt mehrere Verbindungen, um mehrere gleichzeitige Befehls- und Rowsetobjekte zu unterstützen. Wenn MARS aktiviert ist, kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client mehrere Befehls-und Rowsetobjekte in einer einzelnen Verbindung unterstützen, sodass MULTIPLE_CONNECTIONS standardmäßig auf VARIANT_FALSE festgelegt ist.  
   
- Weitere Informationen zu Verbesserungen am DBPROPSET_SQLSERVERDBINIT-Eigenschaften Satz finden Sie unter [Initialisierungs-und Autorisierungs Eigenschaften](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Weitere Informationen zu Erweiterungen, die an den DBPROPSET_SQLSERVERDBINIT-Eigenschaften Satz vorgenommen wurden, finden Sie unter [Initialisierungs-und Autorisierungs Eigenschaften](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>OLE DB-Anbieter von SQL Server Native Client: Beispiel  
- In diesem Beispiel wird ein Datenquellen Objekt mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] systemeigenen OLE DB Anbieters erstellt, und Mars wird mithilfe des DBPROPSET_SQLSERVERDBINIT-Eigenschaften Satzes aktiviert, bevor das Sitzungs Objekt erstellt wird.  
+ In diesem Beispiel wird ein Datenquellen Objekt mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] systemeigenen OLE DB Provider erstellt, und Mars wird mithilfe der DBPROPSET_SQLSERVERDBINIT-Eigenschaften festgelegt, bevor das Sitzungs Objekt erstellt wird.  
   
 ```cpp
 #include <sqlncli.h>  
@@ -207,7 +206,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>ODBC-Treiber für SQL Server Native Client  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt Mars durch Ergänzungen zu den Funktionen [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) und [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . SQL_COPT_SS_MARS_ENABLED wurde hinzugefügt, um entweder SQL_MARS_ENABLED_YES oder SQL_MARS_ENABLED_NO zu akzeptieren. Der Standardwert ist SQL_MARS_ENABLED_NO. Außerdem wurde das neue Verbindungs Zeichenfolgen-Schlüsselwort **Mars_Connection**hinzugefügt. Gültige Werte sind "Ja" oder "Nein", wobei "Nein" die Standardeinstellung ist.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt Mars durch Ergänzungen zu den Funktionen [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) und [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . SQL_COPT_SS_MARS_ENABLED wurde hinzugefügt, um entweder SQL_MARS_ENABLED_YES oder SQL_MARS_ENABLED_NO zu akzeptieren. Der Standardwert ist SQL_MARS_ENABLED_NO. Außerdem wurde ein neues Verbindungs Zeichenfolgen-Schlüsselwort, **Mars_Connection**, hinzugefügt. Gültige Werte sind "Ja" oder "Nein", wobei "Nein" die Standardeinstellung ist.  
   
 ### <a name="sql-server-native-client-odbc-driver-example"></a>SQL Server Native Client-ODBC-Treiber: Beispiel  
  In diesem Beispiel wird die **SQLSetConnectAttr** -Funktion verwendet, um Mars zu aktivieren, bevor die **SQLDriverConnect** -Funktion aufgerufen wird, um eine Verbindung mit der Datenbank herzustellen. Nachdem die Verbindung hergestellt wurde, werden zwei **SQLExecDirect** -Funktionen aufgerufen, um zwei separate Resultsets für die gleiche Verbindung zu erstellen.  

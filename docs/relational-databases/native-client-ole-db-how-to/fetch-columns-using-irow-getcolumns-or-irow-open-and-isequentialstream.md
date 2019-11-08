@@ -15,16 +15,15 @@ ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8aeb097f2cabac01b0d4108dbcf07ed46f15f971
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c1592de2a70018f000c845e4008d41a95f35a312
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110260"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790112"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Umfangreiche Daten können mit der **ISequentialStream**-Schnittstelle gebunden oder abgerufen werden. Bei gebundenen Spalten gibt das Statusflag DBSTATUS_S_TRUNCATED an, dass die Daten abgeschnitten werden.  
   
@@ -37,13 +36,13 @@ ms.locfileid: "68110260"
   
 2.  Führen Sie den Befehl aus (in diesem Beispiel wird **ICommandExecute::Execute()** mit IID_IRow aufgerufen).  
   
-3.  Abrufen der Spaltendaten mit **IRow::Open()** oder **IRow::GetColumns()** .  
+3.  Rufen Sie die Spaltendaten mit **IRow:: Open ()** oder **IRow:: GetColumns ()** ab.  
   
-    -   **IRow::Open()** dienen zum Öffnen einer **ISequentialStream** in der Zeile. Geben Sie DBGUID_STREAM an, um anzugeben, dass die Spalte einen Strom von Binärdaten enthält (mit **IStream** oder **ISequentialStream** können die Daten anschließend aus der Spalte gelesen werden).  
+    -   **IRow:: Open ()** kann verwendet werden, um einen **ISequentialStream** in der Zeile zu öffnen. Geben Sie DBGUID_STREAM an, um anzugeben, dass die Spalte einen Strom von Binärdaten enthält (mit **IStream** oder **ISequentialStream** können die Daten anschließend aus der Spalte gelesen werden).  
   
     -   Wenn **IRow::GetColumns()** verwendet wird, wird das **pData**-Element der DBCOLUMNACCESS-Struktur so festgelegt, dass es auf ein Datenstromobjekt zeigt.  
   
-4.  Verwendung **ISequentialStream::Read()** wiederholt, um die angegebene Anzahl von Bytes in den Puffer des Consumers zu lesen.  
+4.  Verwenden Sie **ISequentialStream:: Read ()** wiederholt, um die angegebene Anzahl von Bytes in den Consumerpuffer zu lesen.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie Sie mithilfe von IRow eine einzelne Zeile abrufen können. In diesem Beispiel wird jeweils eine Spalte aus der Zeile abgerufen. In diesem Beispiel wird die Verwendung von IRow::Open() sowie IRow::GetColumns() veranschaulicht. Im Beispiel werden die Spaltendaten mithilfe von ISequentialStream::Read gelesen.  

@@ -1,5 +1,5 @@
 ---
-title: Senden und Empfangen von Daten mit FILESTREAM (ODBC) inkrementell | Microsoft-Dokumentation
+title: Inkrementelles senden und empfangen von Daten mit FILESTREAM (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,29 +11,28 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cd8c0de5e2ba4df7f5a07800ce77fd691a1c784
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc86dcc180d7ee3009e906d08531174606341140
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937470"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780619"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Inkrementelles Senden und Empfangen von Daten mit FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Dieses Beispiel zeigt die Verwendung der FILESTREAM-Funktion zum inkrementellen Senden und Empfangen von Daten mit SQLPutData und SQLGetData.  
   
- Weitere Informationen zur FILESTREAM-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md).  
+ Weitere Informationen zur FILESTREAM-Funktion finden Sie [unter FILESTREAM- &#40;Unterstützung&#41;für ODBC](../../relational-databases/native-client/odbc/filestream-support-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
- Bevor Sie kompilieren und dieses Beispiels ausführen, aktivieren Sie FILESTREAM-Unterstützung ([aktivieren und Konfigurieren von FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Bevor Sie dieses Beispiel kompilieren und ausführen, aktivieren Sie die FILESTREAM-Unterstützung ([aktivieren und Konfigurieren von FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Die erste ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt eine Datenbank, die von diesem Beispiel verwendeten. Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss Schreibzugriff zum Ausführen dieses Skripts haben (melden Sie sich z. B. als lokales Systemkonto an).  
+ Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine Datenbank, die in diesem Beispiel verwendet wird. Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss Schreibzugriff zum Ausführen dieses Skripts haben (melden Sie sich z. B. als lokales Systemkonto an).  
   
  Das zweite Codelisting ist der C++-Code. Sie müssen einen Server angeben. Ändern Sie im C++-Codelisting "MyServer" in einen gültigen Servernamen. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält. Kompilieren Sie das C++-Codelisting mit odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib und /EHsc.  
   
- Das dritte ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die in diesem Beispiel verwendete Datenbank.  
+ Das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die in diesem Beispiel verwendete Datenbank.  
   
 ```  
 USE master  

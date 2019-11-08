@@ -1,5 +1,5 @@
 ---
-title: Hierarchien (Master Data Services) | Microsoft-Dokumentation
+title: Hierarchien
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec9d1ce1e665abf0ce8f61218051e41e795b6441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945233"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729226"
 ---
 # <a name="hierarchies-master-data-services"></a>Hierarchien (Master Data Services)
 
@@ -53,9 +53,9 @@ ms.locfileid: "67945233"
 ## <a name="hierarchy-example"></a>Hierarchiebeispiel  
  Im folgenden Beispiel werden Produktelemente nach Unterkategorieelementen gruppiert.  
   
- ![Beispiel für nach Unterkategorie gruppierte Hierarchie](../master-data-services/media/mds-conc-hierarchy.gif "Hierarchy Grouped by Subcategory Example")  
+ ![Beispiel für nach Unterkategorie gruppierte Hierarchie](../master-data-services/media/mds-conc-hierarchy.gif "Beispiel für nach Unterkategorie gruppierte Hierarchie")  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

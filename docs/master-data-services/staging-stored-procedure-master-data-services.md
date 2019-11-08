@@ -1,5 +1,5 @@
 ---
-title: Gespeicherte Stagingprozedur (Master Data Services) | Microsoft-Dokumentation
+title: Gespeicherte Stagingprozedur
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db04bda1a2147c226fb33db12ba829350aac77a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085621"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727884"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Gespeicherte Stagingprozedur (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68085621"
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
 |**VersionName**<br /><br /> Erforderlich|Der Name der Version. Dabei wird ggf. abhängig von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sortiereinstellung die Groß-/Kleinschreibung beachtet.|  
-|**LogFlag**<br /><br /> Erforderlich|Bestimmt, ob Transaktionen während des Stagingprozesses protokolliert werden. Dabei sind folgende Werte möglich:<br /><br /> **0**: Transaktionen nicht protokollieren.<br /><br /> **1**: Transaktionen protokollieren.<br /><br /> <br /><br /> Weitere Informationen über Transaktionen finden Sie unter [Transaktionen &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
+|**LogFlag**<br /><br /> Erforderlich|Bestimmt, ob Transaktionen während des Stagingprozesses protokolliert werden. Folgende Werte sind möglich:<br /><br /> **0**: Transaktionen nicht protokollieren.<br /><br /> **1**: Transaktionen protokollieren.<br /><br /> <br /><br /> Weitere Informationen über Transaktionen finden Sie unter [Transaktionen &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
 |**BatchTag**<br /><br /> Erforderlich, außer vom Webdienst|Der **BatchTag** -Wert wie in der Stagingtabelle angegeben.|  
 |**Batch_ID**<br /><br /> Wird nur vom Webdienst benötigt|Der Wert der **Batch_ID** wie in der Stagingtabelle angegeben.|  
 |**Benutzername**|Optionaler Parameter:|  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Verwenden einer Beziehung für die Entitätensynchronisierung (Master Data Services) | Microsoft-Dokumentation
+title: Erstellen und Verwenden einer Beziehung für die Entitätensynchronisierung
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ee63fa1a3521af7d8fb0679df3b0521486e7b8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906533"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729522"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Erstellen und Verwenden einer Beziehung für die Entitätensynchronisierung (Master Data Services)
 
@@ -23,12 +23,12 @@ ms.locfileid: "67906533"
 
   Entitäten-Synchronisierung ist eine unidirektionale und wiederholbare Synchronisierung zwischen Entitätsversionen. Sie bietet eine Möglichkeit, Entitätsdaten zwischen verschiedenen Modellen freizugeben.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Komponenten zum Erstellen einer Entitäten-Synchronisierungspartnerschaft:  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Sie müssen für die Quellentität und deren Entitätsattribute und -elemente mindestens über Lesezugriff verfügen.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "67906533"
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  Berücksichtigen Sie Folgendes, wenn Sie eine Entitäten-Synchronisierungspartnerschaft erstellen:  
   
--   Die Quell- und Zielentitäten müssen sich in unterschiedlichen Modellen befinden  
+-   Die Quell- und Zielentität müssen sich in unterschiedlichen Modellen befinden  
   
 -   Für einen Versionsstatus der Zielentität muss kein Commit ausgeführt werden.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67906533"
   
 -   Vorläufig gelöschte Elemente werden nicht kopiert.  
   
--   Synchronisierung generiert keine Zielentitätstransaktionen/-verläufe.  
+-   Durch die Synchronisierung werden keine Zielentitätstransaktionen/-verläufe generiert.  
   
  **Erstellen einer Entitäten-Synchronisierungspartnerschaft**  
   
@@ -95,9 +95,9 @@ ms.locfileid: "67906533"
 ## <a name="sync-relationship-information"></a>Informationen zur Synchronisierungsbeziehung  
  Für jede erstellte Synchronisierungsbeziehung wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.  
   
-|Spalte|Beschreibung|  
+|Column|Beschreibung|  
 |------------|-----------------|  
-|Status|Der Status der Synchronisierungsbeziehung.<br /><br /> Wenn Sie auf **Speichern** klicken oder eine Synchronisierungspartnerschaft ausführen, wird das Bild ![Symbol für Statusaktualisierung](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") angezeigt, und gibt an, dass die Synchronisierungspartnerschaft aktualisiert wird.<br /><br /> Wenn beim Erstellen, Bearbeiten oder Ausführen einer Synchronisierungspartnerschaft Fehler auftreten, wird das Bild ![Symbol für den Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Icon for error status") angezeigt.<br /><br /> Andernfalls ist der Status „OK“, und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") wird angezeigt.|  
+|Status|Der Status der Synchronisierungsbeziehung.<br /><br /> Wenn Sie auf **Speichern** klicken oder eine Synchronisierungs Beziehung ausführen, wird das ![Symbol zum Aktualisieren des Status](../master-data-services/media/mds-statusicon-updating.png "Icon zum Aktualisieren des Status ") angezeigt, das angibt, dass die Synchronisierungs Partnerschaft aktualisiert wird.<br /><br /> Wenn beim Erstellen, bearbeiten oder Ausführen einer Synchronisierungs Beziehung Fehler auftreten, wird das Bild ![Symbol für den Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Icon für Fehlerstatus ") angezeigt.<br /><br /> Andernfalls lautet der Status "OK", und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Icon für OK-Status ") wird angezeigt.|  
 |Quellmodell|Der Name des Quellmodells.|  
 |Quellversion|Der Name der Quellversion.|  
 |Quellentität|Der Name der Quellentität.|  

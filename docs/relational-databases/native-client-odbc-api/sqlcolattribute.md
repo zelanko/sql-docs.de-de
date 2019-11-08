@@ -14,18 +14,17 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efacf66287686266eb627b93f570227c2351e498
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d1d929f2d514b12050c79c8251cd58cfeadb6b6
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113567"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787423"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Sie können **SQLColAttribute** ein Attribut einer Resultsetspalte für vorbereitete oder ausgeführte ODBC-Anweisungen abzurufen. Aufrufen von **SQLColAttribute** für vorbereitete Anweisungen bewirkt, dass einen Roundtrip zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber erhält Resultset-Spaltendaten als Teil der anweisungsausführung, deshalb wird beim Aufrufen **SQLColAttribute** nach Abschluss des **SQLExecute** oder  **SQLExecDirect** umfasst jedoch nicht das Server-Roundtrip.  
+  Sie können **SQLColAttribute** verwenden, um ein Attribut einer Resultsetspalte für vorbereitete oder ausgeführte ODBC-Anweisungen abzurufen. Das Aufrufen von **SQLColAttribute** für vorbereitete Anweisungen bewirkt einen Roundtrip zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber empfängt im Rahmen der Anweisungs Ausführung Spaltendaten für das Resultset, sodass das Aufrufen von **SQLColAttribute** nach dem Abschluss von **SQLExecute** oder **SQLExecDirect** keinen Serverroundtrip umfasst.  
   
 > [!NOTE]  
 >  ODBC-Spaltenbezeichnerattribute sind nicht für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Resultsets verfügbar.  
@@ -42,9 +41,9 @@ ms.locfileid: "68113567"
 |SQL_DESC_TABLE_NAME|Verfügbar für Resultsets, die aus Anweisungen abgerufen wurden, die Servercursor erzeugen, oder für ausgeführte SELECT-Anweisungen, die eine FOR BROWSE-Klausel enthalten.|  
 |SQL_DESC_UNNAMED|SQL_NAMED für alle Spalten in einem Resultset, es sei denn, die Spalte ist das Ergebnis eines Ausdrucks, der keine zugeordnete Bezeichnung als Teil des Ausdrucks hat. Wenn SQL_DESC_UNNAMED SQL_UNNAMED zurückgibt, enthalten alle ODBC-Spaltenbezeichnerattribute leere Zeichenfolgen für die Spalte.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verwendet die SET FMTONLY-Anweisung, um den serveraufwand zu verringern Wenn **SQLColAttribute** heißt für vorbereitete aber nicht ausgeführte Anweisungen.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwendet die SET FMTONLY-Anweisung, um den Server Mehraufwand zu verringern, wenn **SQLColAttribute** für vorbereitete, aber nicht ausgeführte Anweisungen aufgerufen wird.  
   
- Für Typen mit umfangreichen Werten **SQLColAttribute** werden die folgenden Werte zurückgeben:  
+ Für große Werttypen gibt **SQLColAttribute** die folgenden Werte zurück:  
   
 |Feldbezeichner|Beschreibung der Änderung|  
 |----------------------|---------------------------|  
@@ -57,7 +56,7 @@ ms.locfileid: "68113567"
   
  Für alle Versionen werden Spaltenattribute nur für das erste Resultset gemeldet, wenn durch einen vorbereiteten Stapel von SQL-Anweisungen mehrere Resultsets erzeugt werden.  
   
- Die folgenden Spaltenattribute sind Erweiterungen, die verfügbar gemacht werden, indem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber gibt alle Werte in der *NumericAttrPtr* Parameter. Die Werte werden als SDWORD (lang mit Vorzeichen) zurückgegeben, außer SQL_CA_SS_COMPUTE_BYLIST, bei dem es sich um einen Zeiger auf ein WORD-Array handelt.  
+ Die folgenden Spalten Attribute sind Erweiterungen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber von Native Client verfügbar gemacht werden. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber gibt alle Werte im *numerigattrptr* -Parameter zurück. Die Werte werden als SDWORD (lang mit Vorzeichen) zurückgegeben, außer SQL_CA_SS_COMPUTE_BYLIST, bei dem es sich um einen Zeiger auf ein WORD-Array handelt.  
   
 |Feldbezeichner|Zurückgegebener Wert|  
 |----------------------|--------------------|  
@@ -71,13 +70,13 @@ ms.locfileid: "68113567"
 |SQL_CA_SS_COLUMN_UTYPE|Basisdatentyp des benutzerdefinierten Datentyps der SQL Server-Spalte. Die Typwerte sind in sqlncli.h definiert.|  
 |SQL_CA_SS_COLUMN_VARYLEN|TRUE, wenn sich die Länge der Spaltendaten ändern kann, andernfalls FALSE.|  
 |SQL_CA_SS_COMPUTE_BYLIST|Zeiger auf ein WORD-Array (kurz ohne Vorzeichen) zur Angabe der Spalten, die im BY-Ausdruck einer COMPUTE-Klausel verwendet werden. Wenn die COMPUTE-Klausel keinen BY-Ausdruck angibt, wird ein NULL-Zeiger zurückgegeben.<br /><br /> Das erste Element des Arrays enthält die Anzahl der BY-Listenspalten. Zusätzliche Elemente sind die Spaltenordinalzahlen.|  
-|SQL_CA_SS_COMPUTE_ID|*Computeid* einer Zeile, die das Ergebnis einer COMPUTE-Klausel in der aktuellen Transact-SQL SELECT-Anweisung ist.|  
+|SQL_CA_SS_COMPUTE_ID|die *computeid* einer Zeile, die das Ergebnis einer COMPUTE-Klausel in der aktuellen Transact-SQL-SELECT-Anweisung ist.|  
 |SQL_CA_SS_NUM_COMPUTES|Anzahl von COMPUTE-Klauseln, die in der aktuellen Transact-SQL SELECT-Anweisung angegeben ist.|  
 |SQL_CA_SS_NUM_ORDERS|Anzahl von Spalten, die in der ORDER BY-Klausel einer ODBC- oder Transact-SQL SELECT-Anweisung angegeben ist.|  
   
- \*   Verfügbar, wenn Anweisungsattribut SQL_SOPT_SS_HIDDEN_COLUMNS auf SQL_HC_ON festgelegt ist.  
+ \* verfügbares if-Anweisungs Attribut SQL_SOPT_SS_HIDDEN_COLUMNS auf SQL_HC_ON festgelegt ist.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] treiberspezifische deskriptorfelder, um zusätzliche Informationen, um den Namen der XML-schemaauflistung, des Schemanamens und der Name des Katalogs, Katalognamens bereitzustellen, eingeführt. Diese Eigenschaften erfordern keine Anführungszeichen oder ein Escapezeichen, wenn sie nicht-alphanumerische Zeichen enthalten. In der folgenden Tabelle sind diese neuen Deskriptorfelder aufgelistet:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden Treiber spezifische Deskriptorfelder eingeführt, um zusätzliche Informationen bereitzustellen, mit denen der Name der XML-Schema Auflistung, der Schema Name und der Katalog Name identifiziert werden. Diese Eigenschaften erfordern keine Anführungszeichen oder ein Escapezeichen, wenn sie nicht-alphanumerische Zeichen enthalten. In der folgenden Tabelle sind diese neuen Deskriptorfelder aufgelistet:  
   
 |Spaltenname|Typ|Beschreibung|  
 |-----------------|----------|-----------------|  
@@ -90,28 +89,28 @@ ms.locfileid: "68113567"
 |Spaltenname|Typ|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Der Name des Katalogs, der den UDT enthält.|  
-|SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Der Name des Schemas, die den UDT enthält.|  
+|SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Der Name des Schemas, das den UDT enthält.|  
 |SQL_CA_SS_UDT_TYPE_NAME|CharacterAttributePtr|Der Name des UDT.|  
-|SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|CharacterAttributePtr|Die Assembly qualifizierte Name des UDT.|  
+|SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|CharacterAttributePtr|Der qualifizierte AssemblyName des UDT.|  
   
  Der vorhandene Deskriptorfeldbezeichner SQL_DESC_TYPE_NAME wird verwendet, um den Namen des UDTs anzugeben. Das SQL_DESC_TYPE-Feld für eine UDT-Typspalte ist SQL_SS_UDT.  
   
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>SQLColAttribute-Unterstützung für erweiterte Funktionen zu Datum und Uhrzeit  
- Die zurückgegebenen Werte für Datum/Uhrzeit-Typen, finden Sie im Abschnitt "Informationen zurückgegeben, in IRD-Feldern" [Parameter- und Ergebnismetadaten](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Informationen zu den für Datums-/Uhrzeittypen zurückgegebenen Werten finden Sie im Abschnitt "zurückgegebene Informationen in IRD-Feldern" in den [Parametern und Ergebnis Metadaten](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Verbesserungen &#40;bei Datum und&#41;Uhrzeit (ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>SQLColAttribute-Unterstützung für große CLR-UDTs  
- **SQLColAttribute** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColAttribute** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;(ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>SQLColAttribute-Unterstützung für Spalten mit geringer Dichte  
- SQLColAttribute fragt die neue Implementierung Zeile (IRD) Deskriptorfeld, sql_ca_ss_is_column_set ab, um zu bestimmen, ob eine Spalte ist eine **Column_set** Spalte.  
+ SQLColAttribute fragt das neue Feld "Implementierungs Zeilen Deskriptor (IRD)" (SQL_CA_SS_IS_COLUMN_SET) ab, um zu bestimmen, ob eine Spalte eine **column_set** Spalte ist.  
   
- Weitere Informationen finden Sie unter [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Weitere Informationen finden Sie [unter Unterstützung &#40;für sparsespalten in ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQLColAttribute-Funktion](https://go.microsoft.com/fwlink/?LinkId=59334)   
- [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [Implementierungs Details für die ODBC-API](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   
   
