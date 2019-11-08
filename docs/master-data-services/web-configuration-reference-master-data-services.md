@@ -1,5 +1,5 @@
 ---
-title: Webkonfigurationsverweis (Master Data Services) | Microsoft-Dokumentation
+title: Webkonfigurationsreferenz
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9002f99435362e471467b6e8b24906dfd95e3ec8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9d3cd20fc219a7159de0b271dafcc0e9fb2c3ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017270"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728830"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Webkonfigurationsreferenz (Master Data Services)
 
@@ -58,7 +58,7 @@ ms.locfileid: "68017270"
 |Element|Beschreibung|  
 |----------|-----------------|  
 |**Instanz**|Untergeordnetes Element. Enthält Attribute, die Informationen für den Webdienst und Datenbankverbindungszeichenfolge angeben.|  
-|**virtualPath**|Attribute. Gibt den virtuellen Pfad der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung und des entsprechenden Diensts an. Dies entspricht dem Wert des **path**-Attributs des **\<application>** -Elements unter dem **\<site>** -Element der IIS-Datei „ApplicationHost.config“.|  
+|**virtualPath**|Attribute. Gibt den virtuellen Pfad der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Webanwendung und des entsprechenden Diensts an. Dies entspricht dem Wert des **path**-Attributs des **\<application>** -Elements unter dem **\<site>** -Element der IIS-Datei „ApplicationHost.config“.|  
 |**siteName**|Attribute. Gibt den Namen der Website an, die die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung und den entsprechenden Dienst hostet. Dies entspricht dem Wert des **name**-Attributs des **\<site>** -Elements unter dem **\<sites>** -Element der IIS-Datei „ApplicationHost.config“.|  
 |**connectionName**|Attribute. Gibt den Namen der zu verwendeten Verbindung an. Dies entspricht dem **name**-Attribut des **\<add>** -Elements unter dem **\<connectionStrings>** -Element in der Web.config-Datei.|  
 |**serviceName**|Attribute. Gibt den Namen des Web-Services an. Dies entspricht dem **name**-Attribut des **\<service>** -Elements unter dem **\<services>** -Element in der Web.config-Datei.|  

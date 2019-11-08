@@ -1,5 +1,5 @@
 ---
-title: Administratoren (Master Data Services) | Microsoft-Dokumentation
+title: Administratoren
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7b70c5182ec177b8867d2afab7d39dc5ac5955a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047813"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729792"
 ---
 # <a name="administrators-master-data-services"></a>Administratoren (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68047813"
   In diesem Artikel werden die verschiedenen Administratortypen in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]beschrieben: Modelladministrator, Entitätsadministrator und Administrator.  
   
 ## <a name="model-administrators"></a>Modelladministratoren  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]wird ein Benutzer als Modelladministrator bezeichnet, wenn er für das Modellobjekt der obersten Ebene über die in der Registerkarte **Model Objects** (Modellobjekte) zugewiesene **Administratorberechtigung** verfügt. Wenn ein Benutzer die Administratorberechtigung für ein bestimmtes Modell besitzt, werden alle anderen Berechtigungen für untergeordnete Objekte des Modells (sowohl Modellobjekt- als auch Elementberechtigungen) von der **Administratorberechtigung** des Modells übertrumpft und ignoriert.  
+ In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ist ein Modell Administrator ein Benutzer, dem die **Administrator** Berechtigung für das Modell Objekt der obersten Ebene auf der Registerkarte **Modell Objekte** zugewiesen ist. Wenn ein Benutzer die Administrator Berechtigung für ein bestimmtes Modell besitzt, werden alle anderen Berechtigungen für untergeordnete Objekte des Modells (sowohl Modell Objekt-als auch Element Berechtigungen) von der **Administrator** Berechtigung des Modells übertrumpft und werden effektiv ignoriert.  
   
 -   Wenn der Benutzer Zugriff auf den Funktionsbereich **Explorer** hat, kann er alle Masterdaten in diesem Bereich hinzufügen, löschen und aktualisieren.  
   
@@ -36,10 +36,10 @@ ms.locfileid: "68047813"
   
  Jedes Modell kann mehrere Administratoren aufweisen. Ein Benutzer kann als Modelladministrator für ein Modell, mehrere oder alle Modelle in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Bereitstellung definiert sein.  
   
- Er wird entweder in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] oder programmgesteuert als Modelladministrator festgelegt. Weitere Informationen finden Sie unter [Erstellen eines Modelladministrators &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
+ Er wird entweder in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] oder programmgesteuert als Modelladministrator festgelegt. Weitere Informationen finden Sie unter [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Entitätsadministratoren  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]wird ein Benutzer als Entitätsadministrator bezeichnet, wenn er für das Entitätsobjekt über die in der Registerkarte „Model Objects“(Modellobjekte) zugewiesene Administratorberechtigungen verfügt. Wenn ein Benutzer Administratorberechtigungen für eine Entität hat, werden alle anderen Berechtigungen für untergeordnete Objekte der Entität (sowohl Modellobjekt- als auch Elementberechtigungen) von den Administratorberechtigungen abgelöst und ignoriert.  
+ In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]handelt es sich bei einem Entitäts Administrator um einen Benutzer mit Administrator Berechtigungen, der dem Entitäts Objekt auf der Registerkarte Modell Objekte zugewiesen ist. Wenn ein Benutzer über Administrator Berechtigungen für eine Entität verfügt, werden alle anderen Berechtigungen für die untergeordneten Objekte der Entität (sowohl Modell Objekt-als auch Element Berechtigungen) von den Administrator Berechtigungen abgelöst und ignoriert.  
   
 -   Wenn der Benutzer Zugriff auf den Funktionsbereich **Explorer** hat, kann er alle Masterdaten in diesem Bereich hinzufügen, löschen und aktualisieren.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68047813"
 ## <a name="master-data-services-super-user"></a>Master Data Services-Administrator  
  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie einem Benutzer Berechtigungen für den Funktionsbereich „Administrator“ zuweisen. Ein Benutzer mit Berechtigungen für den Funktionsbereich „Administrator“ verfügt über Administratorberechtigungen für alle Modelle und über Berechtigungen für alle anderen Funktionsbereiche. Informationen zu den Berechtigungen für Funktionsbereiche finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
- Der Standardadministrator wird für das **Administratorkonto** angegeben, wenn mithilfe des [Datenbankerstellungs-Assistenten &#40;Master Data Services-Konfigurations-Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank erstellt wird.  
+ Der Standardadministrator wird für das **Administratorkonto** angegeben, wenn mithilfe des [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Datenbankerstellungs-Assistenten &#40;Master Data Services-Konfigurations-Manager&#41;[ die ](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)-Datenbank erstellt wird.  
   
  Der Administrator verfügt über die folgenden Berechtigungen:  
   

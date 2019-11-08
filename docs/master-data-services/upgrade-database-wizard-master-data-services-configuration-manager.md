@@ -1,5 +1,5 @@
 ---
-title: Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services) | Microsoft-Dokumentation
+title: Datenbankupgrade-Assistent
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 28330ba902b32f0b9622a3b8df0ca316848e1752
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102570"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728915"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services)
 

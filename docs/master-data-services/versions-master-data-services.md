@@ -1,5 +1,5 @@
 ---
-title: Versionen (Master Data Services) | Microsoft-Dokumentation
+title: Versionen
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fd9ed184d56cf85487d1f8833f7ec22acf60635c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017317"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727795"
 ---
 # <a name="versions-master-data-services"></a>Versionen (Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "68017317"
   
 1.  Eine Anfangsversion wird automatisch erstellt, wenn Sie ein Modell anlegen und die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank mit den Masterdaten des Unternehmens auffüllen. Auf der Grundlage von Berechtigungen können Benutzer dann bei Bedarf Änderungen an dieser Version vornehmen.  
   
-2.  Wenn Sie ein Commit für eine Modellversion ausführen möchten, sperren Sie die Version, sodass nur Modelladministratoren die Daten aktualisieren können. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen. Wenn Benachrichtigungen konfiguriert sind, wird jedes Mal eine E-Mail-Benachrichtigung an Modelladministratoren gesendet, wenn sich der Status der Version ändert. Weitere Informationen finden Sie unter [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Wenn Sie ein Commit für eine Modellversion ausführen möchten, sperren Sie die Version, sodass nur Modelladministratoren die Daten aktualisieren können. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Wenn Benachrichtigungen konfiguriert sind, wird jedes Mal eine E-Mail-Benachrichtigung an Modelladministratoren gesendet, wenn sich der Status der Version ändert. Weitere Informationen finden Sie unter [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Wenden Sie Geschäftsregeln auf die Daten der gesperrten Version an und analysieren Sie alle Überprüfungsprobleme. Falls erforderlich können Sie fehlende Informationen einfügen oder die Transaktion, die das Problem verursacht hat, rückgängig machen. Darüber hinaus können Sie die Version entsperren, damit Benutzer Änderungen vornehmen können.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68017317"
     > [!NOTE]  
     >  Eine Einstellung in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] bestimmt, ob alle oder nur die durch ein Commit bestätigten Versionen kopiert werden können. Um gleichzeitige Versionen zu erstellen, müssen Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] konfigurieren, um es Ihnen zu ermöglichen, alle Versionen zu kopieren. Diese Einstellung ist auch in der Tabelle Systemeinstellungen verfügbar. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

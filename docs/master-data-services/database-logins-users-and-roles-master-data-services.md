@@ -1,5 +1,5 @@
 ---
-title: Datenbankanmeldenamen, -benutzer und -rollen (Master Data Services) | Microsoft-Dokumentation
+title: Datenbankanmeldenamen, -benutzer und -rollen
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b12e077e337cedcdcdd3bb23b12e1fb8dc6f704e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094416"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729486"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Datenbankanmeldenamen, -benutzer und -rollen (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68094416"
 |Benutzer|Beschreibung|  
 |----------|-----------------|  
 |**mds_clr_user**|Wird nicht verwendet. Wird mds_dlp_login zugeordnet.|  
-|**mds_email_user**|Wird für Benachrichtigungen verwendet.<br /><br /> \- Wird mds_email_login zugeordnet.<br /><br /> –Ist ein Element folgender Rolle: DatabaseMailUserRole.|  
+|**mds_email_user**|Wird für Benachrichtigungen verwendet.<br /><br /> \- Wird mds_email_login zugeordnet.<br /><br /> \- Ist ein Element der Rolle „DatabaseMailUserRole“.|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services-Datenbankbenutzer  
   

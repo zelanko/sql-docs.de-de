@@ -1,7 +1,7 @@
 ---
-title: column_master_keys (Transact-SQL) | Microsoft-Dokumentation
+title: sys. column_master_keys (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,43 +22,46 @@ helpviewer_keywords:
 - sys.column_master_key_definitions catalog view
 - sys.column_master_keys catalog view
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ae8a4077c0fe4e3f6b7754b4fc53a401d03e355
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7c219b2eb56fc299857a5a189ddd9db041f2f47
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140058"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594521"
 ---
-# <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
+# <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Gibt eine Zeile für jede Datenbank-Hauptschlüssel, der hinzugefügt werden, mithilfe der [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) Anweisung. Jede Zeile stellt einen einzelnen spaltenhauptschlüssel (CMK).  
+  Gibt eine Zeile für jeden Datenbank-Hauptschlüssel zurück, der mit der [Create Master Key](../../t-sql/statements/create-column-master-key-transact-sql.md) -Anweisung hinzugefügt wurde. Jede Zeile stellt einen einzelnen Spalten Hauptschlüssel (Column Master Key, CMK) dar.  
     
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name des CMK.|  
-|**column_master_key_id**|**int**|ID des spaltenhauptschlüssels.|  
-|**create_date**|**datetime**|Datum, an den spaltenhauptschlüssel erstellt wurde.|  
-|**modify_date**|**datetime**|Datum, an den spaltenhauptschlüssel, den zuletzt geändert wurde.|  
-|**key_store_provider_name**|**sysname**|Der Name des Anbieters für den Speicher des spaltenhauptschlüssels, der den CMK enthält. Zulässige Werte sind:<br /><br /> "Mssql_certificate_store" - ist der Speicher des spaltenhauptschlüssels eine Zertifikat-Store.<br /><br /> Ein benutzerdefinierte Wert, wenn der Speicher des spaltenhauptschlüssels eines benutzerdefinierten Typs ist.|  
-|**key_path**|**nvarchar(4000)**|Eine unternehmensspezifische Pfad des spaltenhauptschlüssels des Schlüssels. Das Format des Pfads, hängt von den Spalte Hauptschlüssel Speichertyp ab. Beispiel:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Für einen benutzerdefinierten Speicher des spaltenhauptschlüssels, der Entwickler ist dafür verantwortlich zu definieren ein Schlüsselpfad für den Speicher des benutzerdefinierten spaltenhauptschlüssels ist.|  
-|**allow_enclave_computations**|**bit**|Gibt an, ob der spaltenhauptschlüssel Enclave-fähig ist, (wenn der spaltenverschlüsselungsschlüssel, die mit dieser Hauptschlüssel verschlüsselt, die für Berechnungen in serverseitigen sichere Enclaves verwendet werden können). Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
-|**signature**|**varbinary(max)**|Eine digitale Signatur der **Key_path** und **Allow_enclave_computations**, erstellt mit dem spaltenhauptschlüssel, auf die **Key_path**.|
+|**column_master_key_id**|**int**|ID des Spalten Hauptschlüssels.|  
+|**create_date**|**datetime**|Datum, an dem der Spalten Hauptschlüssel erstellt wurde.|  
+|**modify_date**|**datetime**|Datum, an dem der Spalten Hauptschlüssel zuletzt geändert wurde.|  
+|**key_store_provider_name**|**sysname**|Der Name des Anbieters für den Spalten Hauptschlüssel-Speicher, der den CMK enthält. Zulässige Werte sind:<br /><br /> MSSQL_CERTIFICATE_STORE: Wenn der Spalten Hauptschlüssel-Speicher ein Zertifikat Speicher ist.<br /><br /> Ein benutzerdefinierter Wert, wenn der Spalten Hauptschlüssel-Speicher einen benutzerdefinierten Typ hat.|  
+|**key_path**|**nvarchar(4000)**|Ein Speicher spezifischer Pfad des Spalten Hauptschlüssels für den Schlüssel. Das Format des Pfads hängt vom Speicher Typ des Spalten Hauptschlüssels ab. Beispiel:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Für einen benutzerdefinierten Spalten Hauptschlüssel-Speicher ist der Entwickler dafür verantwortlich, den Schlüssel Pfad für den benutzerdefinierten Spalten Hauptschlüssel-Speicher zu definieren.|  
+|**allow_enclave_computations**|**bit**|Gibt an, ob der Spalten Hauptschlüssel Enclave-fähig ist, (wenn Spalten Verschlüsselungsschlüssel, die mit diesem Hauptschlüssel verschlüsselt sind, für Berechnungen in serverseitigen sicheren Enklaven verwendet werden können). Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**signature**|**varbinary(max)**|Eine digitale Signatur von **key_path** und **allow_enclave_computations**, die mit dem Spalten Hauptschlüssel erstellt wurden, auf die von **key_path**verwiesen wird.|
 
 
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **VIEW ANY COLUMN MASTER KEY** Berechtigung.  
+ Erfordert die **View any Column Master Key** -Berechtigung.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Always Encrypted &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Verwalten von Schlüsseln für Always Encrypted mit sicheren Enklaven](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ 
   
   

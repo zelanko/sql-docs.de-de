@@ -1,5 +1,5 @@
 ---
-title: Kategorisierte Webdienstvorgänge (Master Data Services) | Microsoft-Dokumentation
+title: Kategorisierte Webdienstvorgänge
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3ad01ae5dd8407fda8d7802681695200bf25b167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098606"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728301"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Kategorisierte Webdienstvorgänge (Master Data Services)
 
@@ -130,7 +130,7 @@ ms.locfileid: "68098606"
 |<xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingLoad%2A>|  
 |<xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingProcess%2A>|  
   
- Die folgenden Vorgänge werden verwendet, um Daten mithilfe des in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] integrierten Stagingprozesses zu importieren. Diese Vorgänge sind nur zur Unterstützung von vorhandenen Datenbanken zu verwenden. Greifen Sie für neue Entwicklungen auf die zuvor aufgelisteten Vorgänge zurück.  
+ Die folgenden Vorgänge werden verwendet, um Daten mithilfe des in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]integrierten Stagingprozesses zu importieren. Diese Vorgänge sind nur zur Unterstützung von vorhandenen Datenbanken zu verwenden. Greifen Sie für neue Entwicklungen auf die zuvor aufgelisteten Vorgänge zurück.  
   
 ||  
 |-|  
@@ -140,7 +140,7 @@ ms.locfileid: "68098606"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>Datenexportvorgänge  
- Anhand dieser Vorgänge werden Daten durch die Verwendung von Abonnementsichten exportiert. Weitere Informationen finden Sie unter [Übersicht: Exportieren von Daten &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
+ Anhand dieser Vorgänge werden Daten durch die Verwendung von Abonnementsichten exportiert. Weitere Informationen finden Sie unter [Overview: Exporting Data &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
   
 ||  
 |-|  

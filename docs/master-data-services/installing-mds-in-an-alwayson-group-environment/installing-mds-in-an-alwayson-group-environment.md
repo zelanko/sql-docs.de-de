@@ -1,6 +1,6 @@
 ---
-title: Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services | Microsoft-Dokumentation
-ms.custom: ''
+title: Hochverfügbarkeit und Notfall Wiederherstellung
+ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 517438d6ffe1b2c69969a0f149cfa4a0a9481a8d
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874773"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728100"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
@@ -68,7 +68,7 @@ Abbildung 1 zeigt eine typische Konfiguration, die größtenteils in einer Verf�
 
 Im Rechenzentrum für die Notfallwiederherstellung gibt es ein sekundäres Replikat mit einer asynchronen Commit-Beziehung zum primären Replikat. Dieses Rechenzentrum befindet sich in der Regel in einem anderen geografischen Raum als das erste Rechenzentrum. Das sekundäre Replikat besitzt nicht die Berechtigung zum Abstimmen (VOTE).
 
-Diese Konfiguration wird verwendet, um die Wiederherstellung zu erzielen, für den Fall, dass sich das primäre Rechenzentrum in einem Notfall befindet, z.B. ein Brand, Erdbeben usw. Die Konfiguration kann mit relativ niedrigen Kosten hohe Verfügbarkeit und Notfallwiederherstellung erzielen.
+Diese Konfiguration wird verwendet, um eine Wiederherstellung zu erreichen, falls sich das primäre Rechenzentrum in einem Notfall befindet, z. b. Feuer, Erdbeben usw. Die Konfiguration erreicht sowohl Hochverfügbarkeit als auch Notfall Wiederherstellung mit relativ niedrigen Kosten.
 
 ![Typische Konfiguration für eine Always on Verfügbarkeits Gruppe](media/Fig1_TypicalConfig.png)
 
@@ -179,7 +179,7 @@ Sobald das WSFC-Feature auf allen Instanzen installiert ist, können Sie den WSF
 
    Wenn Sie später einen Knoten hinzufügen möchten, klicken Sie auf die Aktion **Knoten hinzufügen** im rechten Bereich im **Failovercluster-Manager**.
 
-Notizen:
+Hinweise:
 
 - Das WSFC-Feature ist womöglich nicht in allen Editionen von Windows Server verfügbar. Stellen Sie sicher, dass Ihre Edition über diese Funktion verfügt.
 
@@ -298,7 +298,7 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
 
    Konfigurieren Sie für jedes Replikat die folgenden Einstellungen für **Synchroner Commit**, **Automatisches Failover** und **Lesbares sekundäres Replikat**. Weitere Informationen in Abbildung 17.
 
-**Synchroner Commit:** Dadurch wird sichergestellt, dass beim Ausführen eines Commit für eine Transaktion auf dem primären Replikat einer Datenbank ebenfalls ein Commit für die Transaktion auf allen anderen synchronen Replikaten ausgeführt wird. Ein asynchroner Commit kann dies jedoch nicht garantieren und kann hinter dem primären Replikat liegen.
+**Synchroner Commit**: Dadurch wird sichergestellt, dass wenn für eine Transaktion auf dem primären Replikat der Datenbank ein Commit ausgeführt wird, ebenfalls ein Commit für die Transaktion auf allen anderen synchronen Replikaten ausgeführt wird. Ein asynchroner Commit kann dies jedoch nicht garantieren und kann hinter dem primären Replikat liegen.
 
 Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Knoten im selben Rechenzentrum befinden. Wenn sie sich in unterschiedlichen Rechenzentren befinden, kann ein synchroner Commit die Leistung der Datenbank verlangsamen. Wenn dieses Kontrollkästchen nicht aktiviert ist, wird ein asynchroner Commit verwendet.
 
@@ -323,7 +323,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
    Abbildung 18
 
-9. Klicken Sie auf der Seite **Datensynchronisierung auswählen** auf **Vollständig**, und geben Sie eine Netzwerkfreigabe an, auf die jeder Knoten zugreifen kann. Klicken Sie auf **Weiter**, um fortzufahren. Weitere Informationen in Abbildung 19.
+9. Klicken Sie auf der Seite **Datensynchronisierung auswählen** auf **Vollständig**, und geben Sie eine Netzwerkfreigabe an, auf die jeder Knoten zugreifen kann. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen. Weitere Informationen in Abbildung 19.
 
    Diese Netzwerkfreigabe dient zum Speichern der Datenbanksicherung zum Erstellen von sekundären Replikaten. Wenn diese nicht für Ihre Organisation verfügbar ist, wählen Sie eine andere Einstellung für die Datensynchronisierung aus. Informationen zur Verwendung anderer Optionen zum Erstellen sekundärer Replikate finden Sie unter [SQL Server 2016 Always on Availability Group](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) . In der Abbildung 17 sind auch andere Optionen aufgeführt.
 
@@ -331,7 +331,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
    Abbildung 19 
 
-10. Stellen Sie auf der Seite **Überprüfung** sicher, dass Überprüfungen erfolgreich übergeben werden, und beheben Sie aufgetretene Fehler. Klicken Sie auf **Weiter**, um fortzufahren.
+10. Stellen Sie auf der Seite **Überprüfung** sicher, dass Überprüfungen erfolgreich übergeben werden, und beheben Sie aufgetretene Fehler. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.
 
 11. Überprüfen Sie auf der Seite **Zusammenfassung** alle Konfigurationseinstellungen, und klicken Sie dann auf **Beenden**. Dadurch wird die Verfügbarkeitsgruppe erstellt und konfiguriert.
 
@@ -385,7 +385,7 @@ Die in diesem Artikel vorgestellte Lösung erfordert nur, dass die Datenbank des
 
    Weitere Informationen zu Master Data Services, finden Sie unter [Master Data Services](../master-data-services-overview-mds.md).
 
-## <a name="conclusion"></a>Schlussbemerkung
+## <a name="conclusion"></a>Fazit
 
 In diesem Whitepaper haben wir gesehen, wie Sie die Master Data Services-Back-End-Datenbank als Teil einer Verfügbarkeits Gruppe einrichten und konfigurieren. Diese Konfiguration bietet hohe Verfügbarkeit und Notfallwiederherstellung für die Master Data Services-Back-End-Datenbank. Zum Implementieren dieser Konfiguration müssen Sie Windows Server-Failovercluster, AG und Master Data Services installieren und konfigurieren.
 

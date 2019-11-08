@@ -1,6 +1,6 @@
 ---
-title: Version-Eigenschaft (ClientNetLibInfo-Klasse) | Microsoft-Dokumentation
-ms.custom: ''
+title: Version-Eigenschaft (ClientNetLibInfo)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a6b598c26e60a30e0d822a13a4d4d9cef878402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d795f4f76f58829c9c52a6ba3e28f3afa7103080
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040988"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659164"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version-Eigenschaft (ClientNetLibInfo-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "68040988"
 object.Version [= value]  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>Bestandteile  
  *object*  
- Ein Objekt der [ClientNetLibInfo-Klasse](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) , das Informationen über die Clientnetzwerkbibliothek darstellt.  
+ Ein [ClientNetLibInfo-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) , das Informationen über die Clientnetzwerk-Bibliothek darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der die Version der Clientnetzwerk-Bibliotheksdatei angibt.  

@@ -1,5 +1,5 @@
 ---
-title: SqlServiceAdvancedProperty-Klasse | Microsoft-Dokumentation
+title: SqlServiceAdvancedProperty-Klasse
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3287220cb14702d118a1e010923898190d4f424
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58fb650f9750e81b5e86b86cb5f630a843173930
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105063"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658993"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty-Klasse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

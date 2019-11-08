@@ -18,16 +18,15 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbaf0029e5c2f7595591fb635c5eb43cc4b2a157
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b3d09d1f577c9af59ea085eefbf51e9a70558a36
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707868"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782872"
 ---
 # <a name="bcp_control"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Ändert die Standardeinstellungen für verschiedene Steuerelementparameter für einen Massenkopiervorgang zwischen einer Datei und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -49,7 +48,7 @@ RETCODE bcp_control (
  Ist einer der folgenden Werte:  
   
  BCPABORT  
- Beendet einen Massenkopiervorgang, der bereits ausgeführt wird. Ruft **bcp_control** mit der *eOption* von BCPABORT aus einem anderen Thread auf, um einen ausgelaufenden Massen Kopiervorgang zu beenden. Der *iValue* -Parameter wird ignoriert.  
+ Beendet einen Massenkopiervorgang, der bereits ausgeführt wird. Ruft **bcp_control** mit der *eOption* "BCPABORT" von einem anderen Thread auf, um einen ausgelaufenden Massen Kopiervorgang zu beenden. Der *iValue* -Parameter wird ignoriert.  
   
  BCPBATCH  
  Die Anzahl von Zeilen pro Batch. Der Standardwert ist 0, womit beim Extrahieren von Daten alle Zeilen in einer Tabelle oder beim Kopieren von Daten nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Zeilen in der Benutzerdatendatei angegeben werden. Ein Wert kleiner als 1 setzt BCPBATCH auf den Standardwert zurück.  
@@ -57,7 +56,7 @@ RETCODE bcp_control (
  BCPDELAYREADFMT  
  Ein boolescher Wert, wenn er auf "true" festgelegt ist, bewirkt, dass [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) bei der Ausführung liest. Der Standardwert false gibt an, dass bcp_readfmt die Format Datei sofort liest. Ein Sequenz Fehler tritt auf, wenn bcpdelta ayread fmt den Wert true aufweist und Sie bcp_columns oder bcp_setcolfmt aufgerufen haben.  
   
- Ein Sequenz Fehler tritt auch auf, wenn Sie nach dem Aufrufen von `bcp_control(hdbc,` bcpdelta ayread fmt @ no__t-3 und bcp_writefmt `bcp_control(hdbc,` bcpdelta ayread fmt @ no__t-1 aufrufen.  
+ Ein Sequenz Fehler tritt auch auf, wenn Sie `bcp_control(hdbc,` bcpdelta aylefmt`, (void *)FALSE)` aufrufen, nachdem Sie `bcp_control(hdbc,` bcpdelta aylemt-`, (void *)TRUE)` und bcp_writefmt aufgerufen haben.  
   
  Weitere Informationen finden Sie unter [metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
   
@@ -71,7 +70,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: Daten in der Datei befinden sich auf der Codepage von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- Die Versionsnummer des Datendateiformats. Dies kann 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) oder 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) sein. Der Standardwert ist 120. Dies ist beim Exportieren und Importieren von Daten in Formate nützlich, die in früheren Versionen des Servers unterstützt wurden. Um beispielsweise Daten zu importieren, die aus einer Text Spalte eines [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Servers in eine **varchar (max)** -Spalte auf einem Server mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher abgerufen wurden, sollten Sie 80 angeben. Wenn Sie beim Exportieren von Daten aus einer Spalte vom Typ " **varchar (max)** " den Wert "80" angeben, wird dieser ähnlich wie Textspalten im [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Format gespeichert und kann in eine Text Spalte eines [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Servers importiert werden.  
+ Die Versionsnummer des Datendateiformats. Dies kann 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) oder 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) sein. Der Standardwert ist 120. Dies ist beim Exportieren und Importieren von Daten in Formate nützlich, die in früheren Versionen des Servers unterstützt wurden. Wenn Sie z. b. Daten aus einer Text Spalte in einem [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Server in eine **varchar (max)** -Spalte eines Servers mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher importieren möchten, sollten Sie 80 angeben. Wenn Sie beim Exportieren von Daten aus einer Spalte vom Typ " **varchar (max)** " den Wert "80" angeben, wird Sie genauso gespeichert, wie Textspalten im [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Format gespeichert werden, und Sie können in eine Text Spalte eines [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Servers importiert werden.  
   
  BCPFIRST  
  Dies ist die erste Datenzeile der zu kopierenden Datei oder Tabelle. Der Standard ist 1; ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück.  
@@ -95,10 +94,10 @@ RETCODE bcp_control (
  *iValue* enthält einen SQLTCHAR-Zeichen folgen Zeiger. Die adressierte Zeichenfolge gibt entweder Verarbeitungshinweise für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Massenkopieren oder eine Transact-SQL-Anweisung an, die ein Resultset zurückgibt. Wenn eine Transact-SQL-Anweisung angegeben ist, die mehr als ein Resultset zurückgibt, werden alle auf das erste Resultset folgenden Resultsets nicht berücksichtigt. Weitere Informationen zur Verarbeitung von Massen Kopier Vorgängen finden Sie unter [bcp (Hilfsprogramm](../../tools/bcp-utility.md)).  
   
  BCPKEEPIDENTITY  
- Wenn *iValue* auf true festgelegt ist, wird angegeben, dass die Massen Kopierfunktionen Datenwerte einfügen, die für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalten bereitgestellt werden, die mit einer Die Eingabedatei muss Werte für die IDENTITY-Spalten angeben. Wenn dies nicht festgelegt ist, werden neue Identitätswerte für die eingefügten Zeilen generiert. Alle in der Datei für die IDENTITY-Spalten vorhandenen Daten werden ignoriert.  
+ Wenn *iValue* auf true festgelegt ist, wird angegeben, dass die Massen Kopierfunktionen Datenwerte einfügen, die für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit einer Identitäts Einschränkung definierten Spalten bereitgestellt werden Die Eingabedatei muss Werte für die IDENTITY-Spalten angeben. Wenn dies nicht festgelegt ist, werden neue Identitätswerte für die eingefügten Zeilen generiert. Alle in der Datei für die IDENTITY-Spalten vorhandenen Daten werden ignoriert.  
   
  BCPKEEPNULLS  
- Bestimmt, ob leere Datenwerte in der Datei in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in NULL-Werte konvertiert werden. Wenn *iValue* true ist, werden leere Werte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in NULL konvertiert. In der Standardeinstellung werden leere Werte in einen Standardwert für die Spalte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle konvertiert, sofern ein Standardwert angegeben ist.  
+ Bestimmt, ob leere Datenwerte in der Datei in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in NULL-Werte konvertiert werden. Wenn *iValue* true ist, werden leere Werte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle in NULL konvertiert. In der Standardeinstellung werden leere Werte in einen Standardwert für die Spalte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle konvertiert, sofern ein Standardwert angegeben ist.  
   
  BCPLAST  
  Entspricht der letzten zu kopierenden Zeile. In der Standardeinstellung werden alle Zeilen kopiert. Ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück.  
@@ -114,9 +113,9 @@ RETCODE bcp_control (
  Gibt die Anzahl von Fehlern an, die zulässig sind, bevor der Massenkopiervorgang fehlschlägt. Der Standardwert ist 10. ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück. Beim Massenkopieren sind maximal 65.535 Fehler zulässig. Wenn für diese Option größere Werte als 65.535 festgelegt werden, wird diese Option auf 65.535 festgelegt.  
   
  BCPODBC  
- Wenn der Wert true ist, wird angegeben, dass **DateTime** -und **smalldatetime** -Werte, die im Zeichenformat gespeichert werden, das ODBC-Zeitstempel-Präfix und-Suffix Die BCPODBC-Option gilt nur für DB_OUT.  
+ Wenn der Wert true ist, wird angegeben, dass **DateTime** -und **smalldatetime** -Werte, die im Zeichenformat gespeichert werden, das ODBC-Zeitstempel-Präfix und-Suffix Die Option BCPODBC gilt nur für DB_OUT.  
   
- Bei false wird ein **DateTime** -Wert, der den 1. Januar 1997 darstellt, in die Zeichenfolge konvertiert: 1997-01-01 00:00:00.000. Wenn der Wert true ist, wird der gleiche **DateTime** -Wert wie folgt dargestellt: {TS "1997-01-01 00:00:00.000"}.  
+ Bei false wird ein **DateTime** -Wert, der den 1. Januar 1997 darstellt, in die Zeichenfolge: 1997-01-01 00:00:00.000 konvertiert. Wenn der Wert true ist, wird der gleiche **DateTime** -Wert wie folgt dargestellt: {TS "1997-01-01 00:00:00.000"}.  
   
  BCPROWCOUNT  
  Gibt die Anzahl von Zeilen zurück, auf die sich der aktuelle (oder letzte) BCP-Vorgang auswirkt.  
@@ -138,7 +137,7 @@ RETCODE bcp_control (
   
  Außerdem wird diese Funktion dazu verwendet, die SELECT-Anweisung beim Massenkopieren des Resultsets einer SELECT-Anweisung aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzugeben. Legen Sie *eOption* auf BCPHINTS fest, und legen Sie *iValue* auf einen Zeiger auf eine SQLTCHAR-Zeichenfolge fest, die die SELECT-Anweisung enthält.  
   
- Diese Steuerelementparameter sind nur beim Kopieren zwischen einer Benutzerdatei und einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle sinnvoll. Steuerelement Parametereinstellungen haben keine Auswirkung auf die Zeilen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)kopiert werden.  
+ Diese Steuerelementparameter sind nur beim Kopieren zwischen einer Benutzerdatei und einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle sinnvoll. Steuerelement Parametereinstellungen haben keine Auswirkung auf die Zeilen, die mit [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kopiert werden.  
   
 ## <a name="example"></a>Beispiel  
   

@@ -1,6 +1,6 @@
 ---
-title: Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services) | Microsoft-Dokumentation
-ms.custom: ''
+title: Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5d256603927a4c717b1f5d3203ea1ce3939771cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085653"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728951"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68085653"
   
  Beachten Sie im obigen Screenshot, dass die Entität **Employee** unter **Aktuelle Ebenen** in der Mitte als einzige Ebene angezeigt wird. Die abgeleitete Hierarchie **Preview** auf der rechten Seite zeigt einfach eine Liste aller Elemente der Entität **Employee** an. Der Abschnitt **Verfügbare Ebenen** auf der linken Seite zeigt an, welche Ebenen oberhalb der aktuell obersten Ebene hinzugefügt werden können (**Employee**). Bei den meisten handelt es sich um domänenbasierte Attribute (DBAs) für die Entität **Employee** . Hierzu zählt auch das domänenbasierte Attribut **Department** .  
   
- Ab [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] gibt es eine neue Art von Ebene, die m:n-Beziehungen modelliert, z. B. **Class (zugeordnet über „ClassRegistration.Student“)** . Der Ebenenname ist ausführlicher als die anderen, um die zusätzliche Information widerzuspiegeln, die zum eindeutigen Beschreiben der Zuordnungsbeziehung erforderlich ist. Fügen Sie diese Ebene per Drag &amp; Drop zur Ebene **Employee** im Abschnitt **Aktuelle Ebenen** hinzu:  
+ Ab [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]gibt es eine neue Art von Ebene, die m:n-Beziehungen modelliert, z.B. **Class (zugeordnet über „ClassRegistration.Student“)** . Der Ebenenname ist ausführlicher als die anderen, um die zusätzliche Information widerzuspiegeln, die zum eindeutigen Beschreiben der Zuordnungsbeziehung erforderlich ist. Fügen Sie diese Ebene per Drag &amp; Drop zur Ebene **Employee** im Abschnitt **Aktuelle Ebenen** hinzu:  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -82,7 +82,7 @@ Wie in der folgenden Abbildung gezeigt, lautet der Ebenenname, der diese Beziehu
 Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]enthaltene Beispielmodelle finden Sie unter [Bereitstellen von Beispielmodelle und Daten](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md).   
   
 ## <a name="one-many-relationship"></a>1:n-Beziehung  
- Ein Element einer abgeleiteten Hierarchie kann das übergeordnete Element vieler untergeordneter Elemente sein, aber es kann in der Regel nicht mehr als ein übergeordnetes Element aufweisen (Ausnahmen finden Sie unter [Elementsicherheit](#bkmk_member_security)). Nehmen wir beispielsweise an, dass zwei Entitäten vorhanden sind: „Employee“ und „Department“, wobei jeder „Employee“ zu einem einzelnen „Department“ gehört. Diese Beziehung wird durch Hinzufügen eines domänenbasierten Attributs zur Entität „Employee“ modelliert, das auf die Entität „Department“ verweist:  
+ Ein Element einer abgeleiteten Hierarchie kann das übergeordnete Element vieler untergeordneter Elemente sein, aber es kann in der Regel nicht mehr als ein übergeordnetes Element aufweisen (Ausnahmen finden Sie unter [Elementsicherheit](#bkmk_member_security)). Angenommen, es gibt zwei Entitäten: „Employee“ und „Department“, wobei jeder „Employee“ zu einem einzelnen „Department“ gehört. Diese Beziehung wird durch Hinzufügen eines domänenbasierten Attributs zur Entität „Employee“ modelliert, das auf die Entität „Department“ verweist:  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   
@@ -91,7 +91,7 @@ Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!I
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> Elementsicherheit  
- Eine Hierarchie, die das Kopieren von Elementen ermöglicht (dadurch kann ein Element mehrere übergeordnete Elemente aufweisen), kann nicht dazu verwendet werden, um Elementsicherheitsberechtigungen zuzuweisen. Zum Beispiel:  
+ Eine Hierarchie, die das Kopieren von Elementen ermöglicht (dadurch kann ein Element mehrere übergeordnete Elemente aufweisen), kann nicht dazu verwendet werden, um Elementsicherheitsberechtigungen zuzuweisen. Beispiel:  
   
 -   Eine rekursive abgeleitete Hierarchie, die keine Null-Rekursionen verankert (jedes Element der rekursiven Ebene wird sowohl unter ROOT als auch unter seinem rekursiven übergeordneten Element angezeigt).  
   

@@ -1,5 +1,5 @@
 ---
-title: Datamining-Projekte | Microsoft-Dokumentation
+title: Data Mining-Projekte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3aa9d5ef81c32f7bb1f4235e4362533f3fac656d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085055"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73705300"
 ---
 # <a name="data-mining-projects"></a>Data Mining-Projekte
   Ein Data Mining-Projekt ist Teil einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung. Während des Entwurfsprozesses sind die Objekte, die Sie in diesem Projekt erstellen, für Tests und Abfragen im Rahmen einer Arbeitsbereichsdatenbank verfügbar. Wenn Benutzer in der Lage sein sollen, die Objekte im Projekt abzufragen oder zu durchsuchen, müssen Sie das Projekt auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitstellen, die im mehrdimensionalen Modus ausgeführt wird.  
@@ -26,7 +26,7 @@ ms.locfileid: "66085055"
 ##  <a name="bkmk_Overview"></a> Erstellen von Data Mining-Projekten  
  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellen Sie Data Mining-Projekte mithilfe der Vorlage **OLAP- und Data Mining-Projekt**. Mithilfe von AMO können Sie Data Mining-Projekte auch programmgesteuert erstellen. Für einzelne Data Mining-Objekte kann mit der Analysis Services Scripting Language (ASSL) ein Skript erstellt werden. Weitere Informationen finden Sie unter [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- Wenn Sie innerhalb einer vorhandenen Lösung ein Data Mining-Projekt erstellen, werden die Data Mining-Objekte standardmäßig in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mit dem gleichen Namen wie die Projektmappendatei bereitgestellt. Sie können diesen Namen und den Zielserver über das Dialogfeld **Projekteigenschaften** ändern. Weitere Informationen finden Sie unter [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)erstellt.  
+ Wenn Sie innerhalb einer vorhandenen Lösung ein Data Mining-Projekt erstellen, werden die Data Mining-Objekte standardmäßig in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mit dem gleichen Namen wie die Projektmappendatei bereitgestellt. Sie können diesen Namen und den Zielserver über das Dialogfeld **Projekteigenschaften** ändern. Weitere Informationen finden Sie unter [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 > [!WARNING]  
 >  Um das Projekt erfolgreich zu erstellen und bereitzustellen, müssen Sie Zugriff auf eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] haben, die im OLAP-/Data Mining-Modus ausführt wird. Sie können Data Mining-Lösungen nicht in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitstellen oder entwickeln, die tabellarische Modelle unterstützt. Sie können außerdem Daten nicht direkt aus einer PowerPivot-Arbeitsmappe oder aus einem tabellarischen Modell heraus verwenden, das den speicherinternen Datenspeicher verwendet. Um zu ermitteln, ob Ihre Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining unterstützt, lesen Sie den Artikel [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "66085055"
   
  Ein einzelnes Data Mining-Projekt kann z. B. einen Verweis auf mehrere Datenquellen enthalten. Hierbei kann jede einzelne Datenquelle mehrere Datenquellensichten unterstützen. Andererseits kann auch jede Datenquellensicht mehrere Miningstrukturen unterstützen, die alle eine Vielzahl zugehöriger Miningmodelle aufweisen können.  
   
- Darüber hinaus kann das Projekt Plug-In-Algorithmen, benutzerdefinierte Assemblys oder benutzerdefinierte gespeicherte Prozeduren umfassen. Diese Objekte werden hier jedoch nicht beschrieben. Weitere Informationen finden Sie unter [Entwicklerhandbuch &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
+ Darüber hinaus kann das Projekt Plug-In-Algorithmen, benutzerdefinierte Assemblys oder benutzerdefinierte gespeicherte Prozeduren umfassen. Diese Objekte werden hier jedoch nicht beschrieben. Weitere Informationen finden Sie [im Entwicklerhandbuch &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -70,7 +70,7 @@ ms.locfileid: "66085055"
   
  Ein einzelnes Data Mining-Projekt kann auf mehrere Datenquellen verweisen. Obwohl ein Miningmodell nur eine Datenquelle zur Zeit verwenden kann, weist das Projekt unter Umständen mehrere Modelle auf, die Daten von verschiedenen Datenquellen beziehen.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt Daten von vielen externen Anbietern. Außerdem kann SQL Server Data Mining sowohl relationale als auch Cubedaten als Datenquelle verwenden. Aber wenn Sie beide Arten von Projekten-Modelle auf Grundlage relationaler Quellen und Modelle auf Grundlage der OLAP-Cubes entwickeln-Sie entwickeln und diese in separate Projekte verwalten möchten.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt Daten von vielen externen Anbietern. Außerdem kann SQL Server Data Mining sowohl relationale als auch Cubedaten als Datenquelle verwenden. Wenn Sie jedoch beide Arten von Projekten entwickeln-Modelle basierend auf relationalen Quellen und Modellen, die auf OLAP-Cubes basieren, können Sie diese in separaten Projekten entwickeln und verwalten.  
   
 -   In der Regel sollen Modelle, die auf einem OLAP-Cube basieren, innerhalb der OLAP-Entwurfslösung entwickelt werden. Ein Grund hierfür ist, das Modelle auf der Grundlage eines Cubes den Cube verarbeiten müssen, um Daten aktualisieren zu können. Im Allgemeinen sollten Sie Cubedaten nur dann verwenden, wenn diese das hauptsächliche Mittel für Datenspeicherung und -zugriff darstellen oder wenn Sie die Aggregationen, Dimensionen und Attribute benötigen, die über ein mehrdimensionales Projekt erstellt werden.  
   
@@ -160,9 +160,7 @@ ms.locfileid: "66085055"
   
  Diese Visualisierungen sind temporär und werden ohne Speicherung geschlossen, wenn Sie die Sitzung mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]beenden. Wenn Sie daher diese Visualisierungen in eine andere Anwendung zur Präsentation oder weiteren Analyse exportieren müssen, verwenden Sie die auf jeder Registerkarte oder in jedem Bereich der Viewerschnittstelle bereitgestellten Befehle zum **Kopieren** .  
   
- Die Data Mining Add-Ins für Excel stellen ebenfalls eine Visio-Vorlage bereit, die Sie verwenden können, um die Modelle in einem Visio-Diagramm darstellen und kommentieren sowie um das Diagramm mit Visio-Tools ändern zu können. Weitere Informationen finden Sie unter [Microsoft SQL Server 2008 SP2 Data Mining-Add-Ins für Microsoft Office 2007](https://go.microsoft.com/fwlink/?LinkID=123146).  
-  
-
+ Die Data Mining Add-Ins für Excel stellen ebenfalls eine Visio-Vorlage bereit, die Sie verwenden können, um die Modelle in einem Visio-Diagramm darstellen und kommentieren sowie um das Diagramm mit Visio-Tools ändern zu können. Weitere Informationen finden Sie unter [Microsoft SQL Server 2008 SP2 Data Mining-Add-Ins für Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=7294).
   
 ###  <a name="bkmk_Validate"></a> Test and Validate Models  
  Nachdem Sie die Modelle verarbeitet haben, können Sie die Ergebnisse analysieren und entscheiden, welche Modelle ihrer Aufgabe am besten gerecht wurden.  
@@ -173,7 +171,7 @@ ms.locfileid: "66085055"
   
  Beachten Sie, dass diese Berichte und die Diagramme nicht mit dem Projekt oder in der Datenbank ssASnoversion gespeichert werden. Wenn Sie deshalb die Ergebnisse beibehalten oder duplizieren müssen, sollten Sie entweder die Ergebnisse speichern oder mithilfe von DMX oder AMO ein Skript für die Objekte erstellen. Sie können gespeicherte Prozeduren auch für die Kreuzvalidierung verwenden.  
   
- Weitere Informationen finden Sie unter [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md).  
+ Weitere Informationen finden Sie unter [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md).  
   
 
   
@@ -191,10 +189,10 @@ ms.locfileid: "66085055"
   
   
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  In den folgenden Themen wird Verwendung des Data Mining-Assistenten beschrieben, um ein Data Mining-Projekt und zugeordnete Objekte zu erstellen.  
   
-|Richtlinienübersicht|Thema|  
+|Aufgaben|Themen|  
 |-----------|------------|  
 |Beschreibt, wie mit Miningstrukturspalten gearbeitet wird|[Erstellen einer relationalen Miningstruktur](create-a-relational-mining-structure.md)|  
 |Stellt weitere Informationen darüber bereit, wie neue Miningmodelle hinzugefügt und wie Strukturen und Modelle verarbeitet werden|[Hinzufügen von Miningmodellen zu einer Struktur &#40;Analysis Services - Data Mining&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
@@ -205,7 +203,7 @@ ms.locfileid: "66085055"
 |Bietet weitere Informationen über Analysis Services|[Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining Designer](data-mining-designer.md)   
+ [Data Mining-Designer](data-mining-designer.md)   
  [Erstellen mehrdimensionaler Modelle mit SQL Server-Datentools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   

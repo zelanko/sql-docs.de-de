@@ -1,5 +1,5 @@
 ---
-title: Microsoft Decision Trees Algorithm Technical Reference | Microsoft-Dokumentation
+title: Technische Referenz für den Microsoft Decision Trees-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,12 +20,12 @@ ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b52319eaa9af7305c2d3044f3e19762437fff62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084016"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637526"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Decision Trees-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Algorithmus, der verschiedene Methoden zum Erstellen einer Struktur integriert und mehrere analytische Tasks, wie Regression, Klassifikation und Zuordnung, unterstützt. Der Microsoft Decision Trees-Algorithmus unterstützt die Modellierung sowohl diskreter als auch fortlaufender Attribute.  
@@ -57,10 +57,10 @@ ms.locfileid: "66084016"
   
  Wenn es sich bei dem vorhersagbaren Attribut um einen kontinuierlichen numerischen Datentyp handelt, wird die Funktionsauswahl auch auf die Ausgaben angewendet, um die mögliche Zahl von Ausgaben zu reduzieren und das Modell schneller zu erstellen. Sie können den Schwellenwert für die Funktionsauswahl ändern und so die Zahl der möglichen Werte erhöhen oder reduzieren, indem Sie den MAXIMUM_OUTPUT_ATTRIBUTES-Parameter festlegen.  
   
- Eine ausführlichere Erläuterung zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus mit diskreten vorhersagbaren Spalten funktioniert, finden Sie unter [Learning Bayesian Networks: Die Kombination aus wissen und statistischen Daten](https://go.microsoft.com/fwlink/?LinkId=45963). Weitere Informationen zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus im Zusammenhang mit kontinuierlichen vorhersagbaren Spalten finden Sie im Anhang des Dokuments [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966)(Autoregressive Strukturmodelle zur Zeitreihenanalyse).  
+ Eine ausführlichere Erläuterung zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus im Zusammenhang mit diskreten vorhersagbaren Spalten finden Sie unter [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](https://go.microsoft.com/fwlink/?LinkId=45963). Weitere Informationen zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus im Zusammenhang mit kontinuierlichen vorhersagbaren Spalten finden Sie im Anhang des Dokuments [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966)(Autoregressive Strukturmodelle zur Zeitreihenanalyse).  
   
 ### <a name="scoring-methods-and-feature-selection"></a>Bewertungsmethoden und Funktionsauswahl  
- Der Microsoft Decision Trees-Algorithmus bietet drei Formeln zur Bewertung des informationsgewinns: Berechnung Shannons-Entropie, Bayessches Netz mit K2 vor und Bayessches Netz mit eine gleichmäßige Dirichlet-Verteilung von Zuständen. Alle drei Methoden sind im Data Mining-Bereich etabliert. Es wird empfohlen, mit verschiedenen Parametern und Bewertungsmethoden zu experimentieren, um festzustellen, welche die besten Ergebnisse erzielen. Weitere Informationen zu diesen Bewertungsmethoden finden Sie unter [Feature Selection](../../sql-server/install/feature-selection.md).  
+ Der Microsoft Decision Trees-Algorithmus bietet drei Formeln zur Bewertung des Informationsgewinns: Shannon-Entropie, Bayes-Methode mit K2-A-priori-Verteilung und Bayes-Netzwerk mit einheitlicher Dirichlet-Verteilung von A-priori-Zuständen. Alle drei Methoden sind im Data Mining-Bereich etabliert. Es wird empfohlen, mit verschiedenen Parametern und Bewertungsmethoden zu experimentieren, um festzustellen, welche die besten Ergebnisse erzielen. Weitere Informationen zu diesen Bewertungsmethoden finden Sie unter [Feature Selection](../../sql-server/install/feature-selection.md).  
   
  Die Funktionsauswahl wird automatisch von allen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining-Algorithmen zur Verbesserung der Analyse und zur Reduzierung der Verarbeitungslast verwendet. Die für die Funktionsauswahl verwendete Methode hängt vom Algorithmus ab, mit dem das Modell erstellt wird. Die Algorithmusparameter, die die Funktionsauswahl für ein Entscheidungsstrukturmodell steuern, sind MAXIMUM_INPUT_ATTRIBUTES und MAXIMUM_OUTPUT.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66084016"
 -   Beschränken Sie die Anzahl von diskreten Werten für ein Attribut auf 10 oder weniger. Sie könnten versuchen, Werte auf andere Weisen in anderen Modellen zu gruppieren.  
   
     > [!NOTE]  
-    >  Mit den in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] verfügbaren Tools zum Durchsuchen von Daten können Sie die Verteilung der Werte in Ihren Daten visuell darstellen und die Daten vor Beginn des Data Mining-Vorgangs entsprechend gruppieren. Weitere Informationen finden Sie unter [Datenprofilerstellungs-Task und -Viewer](../../integration-services/control-flow/data-profiling-task-and-viewer.md). Sie können auch die [Data Mining-Add-Ins für Excel 2007](https://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51)verwenden, um Daten in Microsoft Excel zu durchsuchen, zu gruppieren und mit neuen Bezeichnungen versehen.  
+    >  Mit den in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] verfügbaren Tools zum Durchsuchen von Daten können Sie die Verteilung der Werte in Ihren Daten visuell darstellen und die Daten vor Beginn des Data Mining-Vorgangs entsprechend gruppieren. Weitere Informationen finden Sie unter [Datenprofilerstellungs-Task und -Viewer](../../integration-services/control-flow/data-profiling-task-and-viewer.md). Sie können auch die [Data Mining-Add-Ins für Excel 2007](https://www.microsoft.com/download/details.aspx?id=8569)verwenden, um Daten in Microsoft Excel zu durchsuchen, zu gruppieren und mit neuen Bezeichnungen versehen.  
   
 ## <a name="customizing-the-decision-trees-algorithm"></a>Anpassen des Decision Trees-Algorithmus  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterstützt Parameter, die sich auf die Leistung und Genauigkeit des resultierenden Miningmodells auswirken. Sie können außerdem Modellierungsflags für die Miningmodellspalten oder Miningstrukturspalten festlegen, um die Verarbeitung der Daten zu steuern.  
@@ -142,7 +142,7 @@ ms.locfileid: "66084016"
  *MINIMUM_SUPPORT*  
  Bestimmt die Mindestanzahl von Blattfällen, die zum Generieren einer Teilung in der Entscheidungsstruktur erforderlich sind.  
   
- Der Standardwert ist 10.  
+ Der Standardwert lautet 10.  
   
  Sie müssen möglicherweise diesen Wert erhöhen, wenn das Dataset sehr groß ist, um übermäßiges Trainieren zu vermeiden.  
   
@@ -164,9 +164,9 @@ ms.locfileid: "66084016"
   
 |ID|Name|  
 |--------|----------|  
-|1|**Binary:** Gibt an, dass unabhängig von der tatsächlichen Anzahl der Werte für das Attribut, die Struktur in zwei Verzweigungen aufgeteilt werden soll.|  
-|2|**Führen Sie aus:** Gibt an, dass die Struktur so viele Teilungen zusammen, wie Attributwerte vorhanden sind erstellen kann.|  
-|3|**Beide:** Gibt an, dass Analysis Services bestimmen kann, ob eine binäre oder vollständige Teilung verwendet werden soll, um die besten Ergebnisse zu erzeugen.|  
+|1|**Binary:** Gibt an, dass die Struktur unabhängig von der tatsächlichen Anzahl der Werte für das Attribut in zwei Verzweigungen aufgeteilt werden soll.|  
+|2|**Complete:** Gibt an, dass die Struktur so viele Teilungen erstellen kann, wie Attributwerte vorhanden sind.|  
+|3|**Both:** Gibt an, dass Analysis Services bestimmen kann, ob eine binäre oder vollständige Teilung verwendet werden soll, um die besten Ergebnisse zu erzielen.|  
   
  Der Standardwert lautet 3.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66084016"
   
  Sie müssen nicht angeben, dass eine Spalte mit kontinuierlichen numerischen Daten einen Regressor darstellt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwendet die Spalte automatisch als potenziellen Regressor und unterteilt das Dataset selbst dann in Bereiche mit sinnvollen Mustern, wenn Sie das REGRESSOR-Flag nicht für die Spalte festlegen.  
   
- Sie können durch Einsatz des FORCE_REGRESSOR-Parameters jedoch gewährleisten, dass der Algorithmus einen bestimmten Regressor verwendet. Dieser Parameter kann nur mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus und dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus verwendet werden. Wenn Sie das Modellierungsflag festlegen, versucht der Algorithmus regressionsgleichungen der Form finden eine * C1 + b\*C2 +..., die Muster den Knoten der Struktur zuzuordnen. Dann wird die Summe der Restwerte berechnet, und wenn die Abweichung zu groß ist, wird die Struktur unterteilt.  
+ Sie können durch Einsatz des FORCE_REGRESSOR-Parameters jedoch gewährleisten, dass der Algorithmus einen bestimmten Regressor verwendet. Dieser Parameter kann nur mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus und dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus verwendet werden. Wenn Sie das Modellierungsflag festlegen, versucht der Algorithmus Regressionsgleichungen der Form a * C1 + b\*C2 +... , wenn die Muster in den Knoten der Struktur angepasst werden sollen. Dann wird die Summe der Restwerte berechnet, und wenn die Abweichung zu groß ist, wird die Struktur unterteilt.  
   
  Wenn Sie beispielsweise das Kaufverhalten von Kunden mithilfe des Attributs **Einkommen** vorhersagen und das Modellierungsflag REGRESSOR für die Spalte festlegen, versucht der Algorithmus zuerst, die Werte der Spalte **Einkommen** mithilfe einer Standardregressionsformel zuzuordnen. Ist die Abweichung zu groß, dann wird die Regressionsformel ignoriert und die Struktur nach einem anderen Attribut unterteilt. Der Decision Tree-Algorithmus versucht nach der Unterteilung, jedem der Zweige einen Regressor für Einkommen zuzuordnen.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "66084016"
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
   
-|Spalte|Inhaltstypen|  
+|Column|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Cyclical, Discrete, Discretized, Key, Ordered, Table|  
 |Vorhersagbares Attribut|Continuous, Cyclical, Discrete, Discretized, Ordered, Table|  

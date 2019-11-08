@@ -1,5 +1,5 @@
 ---
-title: Erlernen von SQL Server Master Data Services | Microsoft-Dokumentation
+title: Erlernen von SQL Server Master Data Services
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 20920eb0a7a748b886444b44abef38708df0db46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4580db494d31a528a807cf4349e3ddc65b91aee
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007189"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729078"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Erlernen von SQL Server Master Data Services
 
@@ -26,18 +26,18 @@ ms.locfileid: "68007189"
   
   
 ## <a name="training"></a>Training  
-* Untersuchen Sie die neuen Features und Funktionen in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], probieren Sie eine [Self-Paced-Lab](https://www.microsoft.com/handsonlabs/selfpacedlabs) (Melden Sie sich mit Ihrem Microsoft-Konto erforderlich ist).  
-* Entwickeln einer [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] -Lösung zum Speichern und Verwalten von masterlisten mit geografischen Daten, die mit dem Add-in für Excel und die [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], probieren Sie eine [Self-Paced-Lab](https://www.microsoft.com/handsonlabs/selfpacedlabs). Erstellen Sie Entitäten und Hierarchien, und verwenden Sie [!INCLUDE[ssIS_md](../includes/ssis-md.md)] zum Auffüllen einer Dimensionstabelle.  
+* Um die neuen Features und Funktionen zu untersuchen, die in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]eingeführt wurden, testen Sie ein Lab mit einem eigenen [Tempo](https://www.microsoft.com/handsonlabs/selfpacedlabs) (die Anmeldung mit Ihrem Microsoft-Konto ist erforderlich).  
+* Um eine [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]-Lösung zum Speichern und Verwalten von Master Listen mit geografischen Daten zu entwickeln, verwenden Sie das-Add-in für Excel und das [[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)].](https://www.microsoft.com/handsonlabs/selfpacedlabs) Erstellen Sie Entitäten und Hierarchien, und verwenden Sie [!INCLUDE[ssIS_md](../includes/ssis-md.md)] zum Auffüllen einer Dimensionstabelle.  
   
 ## <a name="videos"></a>Videos  
-* Um einen Einblick in die neuen Funktionen der [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]zu erhalten, [**ehen Sie sich dieses Video an**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
+* Um einen Einblick in die neuen Funktionen der [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] zu erhalten, [**ehen Sie sich dieses Video an**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
   
-## <a name="samples"></a>Proben  
+## <a name="samples"></a>Beispiele  
 * Sehen Sie sich die Beispielmodelle an, die mit [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] installiert werden, um mehr über Hierarchien und darüber zu erfahren, wie Sie Daten in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]mithilfe von Modellen strukturieren können. Eine Anleitung zum Bereitstellen der Beispiele finden Sie unter [Bereitstellen von Beispielmodellen und Daten](../master-data-services/master-data-services-installation-and-configuration.md#deploySample).   
   
     Informationen zu den [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]-Updates für die Beispielmodelle finden Sie unter [SQL Server-Beispiele: Modellbereitstellungspakete](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
-* Eine Vorführung dessen, wie Sie Ihre Interaktion mit [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]und die Ihrer Benutzer anpassen, finden Sie in den Beispielen zur MDS-C#-Konsole, die im Lieferumfang der SQL Server-Beispiele enthalten sind. Sie können die SQL Server-Beispiele als ZIP-Datei von diesem [GitHub-Repository](https://github.com/Microsoft/sql-server-samples)herunterladen.  
+* Eine Vorführung dessen, wie Sie Ihre Interaktion mit [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]und die Ihrer Benutzer anpassen, finden Sie in den Beispielen zur MDS-C#-Konsole, die im Lieferumfang der SQL Server-Beispiele enthalten sind. Sie können die SQL Server-Beispiele als ZIP-Datei von diesem [GitHub-Repository](https://github.com/Microsoft/sql-server-samples) herunterladen.  
   
     Nachfolgend finden Sie die MDS-Anwendungsbeispiele aufgeführt. Der Download der SQL Server-Beispiele enthält auch Infodateien, die Ihnen bei Ihren ersten Schritten mit den Anwendungsbeispielen helfen.  
     * Master Data Services Business Rule API Sample  

@@ -1,5 +1,5 @@
 ---
-title: Entitäten (Master Data Services) | Microsoft-Dokumentation
+title: Entitäten
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 23e4773e96fbee408290684c8e9c5092c1d7ea40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052040"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728156"
 ---
 # <a name="entities-master-data-services"></a>Entitäten (Master Data Services)
 
@@ -34,16 +34,16 @@ ms.locfileid: "68052040"
 ## <a name="how-entities-relate-to-other-model-objects"></a>Zusammenhang zwischen Entitäten und anderen Modellobjekten  
  Sie können sich eine Entität als Tabelle vorstellen, die Masterdaten enthält und in der die Zeilen Elemente und die Spalten Attribute darstellen.  
   
- ![Als Tabelle dargestellte Master Data Services-Entität](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
+ ![Master Data Services als Tabelle dargestellte Entität](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services als Tabelle dargestellte Entität")  
   
  Sie füllen die Entität mit einer Liste von Masterdaten auf, die Sie verwalten möchten.  
   
- Entitäten können zum Erstellen abgeleiteter Hierarchien, d. h. ebenenbasierter Hierarchien basierend auf mehreren Entitäten, verwendet werden. Weitere Informationen finden Sie unter [Abgeleitete Hierarchien &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
+ Entitäten können zum Erstellen abgeleiteter Hierarchien, d. h. ebenenbasierter Hierarchien basierend auf mehreren Entitäten, verwendet werden. Weitere Informationen finden Sie unter [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
   
  Entitäten kann es auch ermöglicht werden, explizite Hierarchien (unregelmäßige Strukturen basierend auf einer einzelnen Entität) und Auflistungen (einmalige Kombinationen der Teilmengen von Elementen) zu enthalten. Weitere Informationen finden Sie unter [Explizite Hierarchien &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md) und [Sammlungen &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="using-entities-as-constrained-lists"></a>Verwenden von Entitäten als eingeschränkte Listen  
- Wenn Benutzer den Elementen in einer Entität Attribute zuweisen, können Sie sie aus einer eingeschränkten Liste von Werten auswählen lassen. Verwenden Sie hierzu eine Entität, um die Liste der Werte für das Attribut aufzufüllen. In diesem Fall wird sie als domänenbasiertes Attribut bezeichnet. Weitere Informationen finden Sie unter [Domänenbasierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
+ Wenn Benutzer den Elementen in einer Entität Attribute zuweisen, können Sie sie aus einer eingeschränkten Liste von Werten auswählen lassen. Verwenden Sie hierzu eine Entität, um die Liste der Werte für das Attribut aufzufüllen. In diesem Fall wird sie als domänenbasiertes Attribut bezeichnet. Weitere Informationen finden Sie unter [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
   
 ## <a name="base-entities"></a>Basisentitäten  
  Beim Navigieren von Objekten im Modell ist eine Basisentität ein Ausgangspunkt für Benutzer. Eine Basisentität bestimmt das Layout des Bildschirms, wenn ein Benutzer den Funktionsbereich **Explorer** öffnet und in der Menüleiste auf **Explorer** klickt. Um eine Entität als Basisentität anzugeben, navigieren Sie zum Funktionsbereich **Systemverwaltung** . Ziehen Sie die Entität auf der Seite **Modellansicht** von der Strukturansicht rechts auf den Modellnamen in der Strukturansicht links.  
@@ -52,18 +52,18 @@ ms.locfileid: "68052040"
  Sie können Benutzern Berechtigungen für eine Entität geben, die verwandte Modellobjekte einschließt. Weitere Informationen finden Sie unter [Entitätsberechtigungen &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md).  
   
 ## <a name="entity-examples"></a>Beispiele für Entitäten  
- Im folgenden Beispiel wird eine Entität mit den folgenden Attributen gezeigt: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
+ Das folgende Beispiel zeigt eine Entität, die über folgende Attribute verfügt: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
   
- ![Entitätstabelle für Fahrradprodukte](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
+ ![Tabelle der Bike-Produkt Entität](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabelle der Bike-Produkt Entität")  
   
  Im folgenden Beispiel stellt die Entität "Product" die zentrale Entität dar. Die Entität Subcategory ist ein domänenbasiertes Attribut der Entität Product. Die Entität Category ist ein domänenbasiertes Attribut der Entität Subcategory. StandardCost und ListPrice sind Freiformattribute der Produkt-Entität, und FilePhoto ist ein Dateiattribut der Produkt-Entität.  
   
- ![Produktentitätsbaumstruktur](../master-data-services/media/mds-conc-entity-ui.gif "Product Entity Tree Structure")  
+ ![Product-Entitäts Baumstruktur](../master-data-services/media/mds-conc-entity-ui.gif "Product-Entitäts Baumstruktur")  
   
 > [!NOTE]  
 >  Dieses Beispiel basiert auf der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Benutzeroberfläche. Die hierarchische Baumstruktur zeigt Beziehungen zwischen Entitäten und domänenbasierten Attributen an. Ihr Zweck besteht darin, die Beziehungen und nicht den Wichtigkeitsgrad darzustellen.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

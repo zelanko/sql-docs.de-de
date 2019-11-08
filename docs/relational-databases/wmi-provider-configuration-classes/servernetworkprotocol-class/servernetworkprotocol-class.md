@@ -1,6 +1,6 @@
 ---
-title: ServerNetworkProtocol-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: ServerNetworkProtocol-Klasse
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb3e537ea3843d400bc886e1fa47dc4eddd68726
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0929d4a0b88a954a0beef9789b3aeb7d9ab092d
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933643"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660317"
 ---
 # <a name="servernetworkprotocol-class"></a>ServerNetworkProtocol-Klasse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +37,6 @@ ms.locfileid: "67933643"
 -   Aktivieren und Deaktivieren des Server-Netzwerkprotokolls.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Konfigurieren von Server Netzwerkprotokollen und Netzwerk Bibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Attribute (Master Data Services) | Microsoft-Dokumentation
+title: Attribute
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4634ae8941b9acd0667b69974b3192109b81fff2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047579"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728751"
 ---
 # <a name="attributes-master-data-services"></a>Attribute (Master Data Services)
 
@@ -33,9 +33,9 @@ ms.locfileid: "68047579"
 ## <a name="how-attributes-relate-to-other-model-objects"></a>Zusammenhang zwischen Attributen und anderen Modellobjekten  
  Sie können sich ein Attribut als Spalte in einer Entitätstabelle vorstellen. Ein Attributwert dient zur Beschreibung eines bestimmten Elements.  
   
- ![Als Tabelle dargestellte Master Data Services-Entität](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
+ ![Master Data Services als Tabelle dargestellte Entität](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services als Tabelle dargestellte Entität")  
   
- Wenn Sie eine Entität erstellen, die viele Attribute enthält, können Sie die Attribute in Attributgruppen organisieren. Weitere Informationen finden Sie unter [Attributgruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
+ Wenn Sie eine Entität erstellen, die viele Attribute enthält, können Sie die Attribute in Attributgruppen organisieren. Weitere Informationen finden Sie unter [Attribute Groups &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
 ## <a name="required-attributes"></a>Erforderliche Attribute.  
  Wenn Sie eine Entität erstellen, werden die Attribute Name und Code automatisch erstellt. Code erfordert einen Wert und muss innerhalb der Entität eindeutig sein. Sie können das Name-Attribut und das Code-Attribut nicht entfernen.  
@@ -45,7 +45,7 @@ ms.locfileid: "68047579"
   
 -   Freiformattribute, die Freiformeingabe für Text, Zahlen, Datumsangaben oder Links ermöglichen.  
   
--   Domänenbasierte Attribute, die von Entitäten aufgefüllt werden. Weitere Informationen finden Sie unter [Domänenbasierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
+-   Domänenbasierte Attribute, die von Entitäten aufgefüllt werden. Weitere Informationen finden Sie unter [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
   
 -   Dateiattribute, die zum Speichern von Dateien, Dokumenten oder Bildern verwendet werden. Dateiattribute tragen zur Konsistenz der Daten bei, indem bestimmte Erweiterungen für Dateien vorausgesetzt werden. Dateiattribute können jedoch nicht zuverlässig verhindern, dass ein böswilliger Benutzer eine Datei eines anderen Typs hochlädt.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "68047579"
 -   Bei einem mithilfe von Gleitkommazahlen berechneten Wert liefert eine *Gegenprobe* möglicherweise ein abweichendes Ergebnis. Der Begriff Roundtrip wird in Bezug auf einen Wert verwendet, wenn ein Vorgang eine ursprüngliche Gleitkommazahl in ein anderes Format konvertiert, ein umgekehrter Vorgang das konvertierte Format zurück zu einer Gleitkommazahl überträgt und die endgültige Gleitkommazahl mit der ursprünglichen Gleitkommazahl übereinstimmt. Der Roundtrip kann fehlschlagen, wenn eine oder mehrere Ziffern am Ende des Werts bei der Konvertierung verloren gehen oder geändert werden.  
   
 ## <a name="attribute-examples"></a>Attributbeispiele  
- Im folgenden Beispiel weist die Entität die folgenden Attribute auf: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
+ Im folgenden Beispiel verfügt die Entität über folgende Attribute: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
   
- ![Entitätstabelle für Fahrradprodukte](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
+ ![Tabelle der Bike-Produkt Entität](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabelle der Bike-Produkt Entität")  
   
  Im folgenden Beispiel stellt die Entität Product Folgendes:  
   
@@ -75,9 +75,9 @@ ms.locfileid: "68047579"
   
  Die Entität Subcategory wird als domänenbasiertes Attribut der Entität Product verwendet. Die Entität Category wird als domänenbasiertes Attribut der Entität Subcategory verwendet. Die Entitäten Category und Subcategory enthalten genauso wie die Entität Product jeweils die Standardattribute Name und Code.  
   
- ![Produktentitätsbaumstruktur](../master-data-services/media/mds-conc-entity-ui.gif "Product Entity Tree Structure")  
+ ![Product-Entitäts Baumstruktur](../master-data-services/media/mds-conc-entity-ui.gif "Product-Entitäts Baumstruktur")  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

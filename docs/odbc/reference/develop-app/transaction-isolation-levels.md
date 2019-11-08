@@ -1,6 +1,6 @@
 ---
-title: Transaktionsisolationsstufen | Microsoft-Dokumentation
-ms.custom: ''
+title: Transaktions Isolations Stufen (ODBC) | Microsoft-Dokumentation
+ms.custom: seo-dt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,41 +21,41 @@ helpviewer_keywords:
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83197b1b487db6c52a8fe9b7a57dd6af55c33571
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e11a0d76fc4a2daece7b6f4f50761d40933792be
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985107"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637210"
 ---
-# <a name="transaction-isolation-levels"></a>Transaktionsisolationsstufen
-*Transaktionsisolationsstufen von Cursorn* sind eine Maßeinheit für den Umfang für die Transaktion isoliert ist erfolgreich. Insbesondere werden die Isolationsstufen von Transaktionen durch das Vorhandensein oder fehlen, der die folgende Phänomene definiert:  
+# <a name="transaction-isolation-levels-odbc"></a>Transaktions Isolations Stufen (ODBC)
+*Transaktions Isolations Stufen* sind ein Maß für den Umfang, in dem die Transaktions Isolation erfolgreich ist. Die Transaktions Isolations Stufen werden insbesondere durch das vorhanden sein oder Fehlen der folgenden Phänomene definiert:  
   
--   **Dirty Reads** ein *dirty Read* tritt auf, wenn eine Transaktion Daten liest, die noch kein Commit ausgeführt wurde. Nehmen wir beispielsweise an Transaktion 1 Updates einer Zeile. Transaktion 2 liest die aktualisierte Zeile vor dem Commit der Transaktion 1-Update. Wenn die Transaktion 1 die Änderung ein Rollback ausgeführt, verfügen Transaktion 2 liest Daten, die als betrachtet ist nicht vorhanden sind.  
+-   **Dirty Reads** Eine *Dirty Read* tritt auf, wenn eine Transaktion Daten liest, für die noch kein Commit ausgeführt wurde. Angenommen, Transaktion 1 aktualisiert eine Zeile. Transaktion 2 liest die aktualisierte Zeile, bevor von Transaktion 1 ein Commit für das Update ausgeführt wird. Wenn Transaktion 1 ein Rollback der Änderung ausführt, verfügt Transaction 2 über gelesene Daten, die als nie vorhanden angesehen werden.  
   
--   **Nicht wiederholbaren Lesevorgängen** ein *nicht wiederholbarer Lesevorgang* tritt auf, wenn eine Transaktion zweimal die gleiche Zeile liest aber verschiedene Daten jedes Mal ruft. Nehmen wir beispielsweise an Transaktion 1 liest eine Zeile. Transaktion 2 aktualisiert oder löscht die Zeile, und führt einen Commit für die Update- oder Delete. Wenn Transaktion 1 Zeile filtereinstellungen, andere Zeilenwerte abgerufen oder erkennt, dass die Zeile gelöscht wurde.  
+-   **Nicht wiederholbare Lesevorgänge** Ein *nicht wiederholbarer Lese* Vorgang tritt auf, wenn eine Transaktion die gleiche Zeile zweimal liest, aber jedes Mal andere Daten abruft. Angenommen, Transaktion 1 liest eine Zeile. Transaktion 2 aktualisiert oder löscht diese Zeile und führt einen Commit für das Update oder den Löschvorgang aus. Wenn Transaktion 1 die Zeile erneut registriert, ruft Sie andere Zeilen Werte ab oder ermittelt, dass die Zeile gelöscht wurde.  
   
--   **Phantome** ein *phantom* ist eine Zeile, die den Suchkriterien entspricht, jedoch wird anfänglich nicht angezeigt. Nehmen wir beispielsweise an, dass die Transaktion 1 einen Satz von Zeilen liest, die einige Suchkriterien erfüllen. Transaktion 2 generiert eine neue Zeile (entweder durch ein Update oder Insert), die den Suchkriterien für die Transaktion 1 entspricht. Wenn die Transaktion 1 die Anweisung reexecutes, die die Zeilen liest, ruft er einen anderen Satz von Zeilen ab.  
+-   **Phantoms** Ein *Phantom* ist eine Zeile, die den Suchkriterien entspricht, jedoch nicht anfänglich angezeigt wird. Angenommen, Transaktion 1 liest einen Satz von Zeilen, die einige Suchkriterien erfüllen. Transaktion 2 generiert eine neue Zeile (entweder über ein Update oder eine Einfügung), die den Suchkriterien für Transaktion 1 entspricht. Wenn Transaktion 1 die Anweisung, die die Zeilen liest, erneut ausführt, erhält Sie einen anderen Satz von Zeilen.  
   
- Die vier Transaktionsisolationsstufen (wie SQL-92 definiert) werden in Bezug auf diese Phänomene definiert. In der folgenden Tabelle ist kennzeichnet ein "X" jedes Phänomen, die auftreten können.  
+ Die vier Transaktions Isolations Stufen (wie von SQL-92 definiert) werden im Hinblick auf diese Phänomene definiert. In der folgenden Tabelle markiert ein "X" die einzelnen vorkommen, die auftreten können.  
   
-|Transaktionsisolationsstufe|Unsauberes lesen|Nicht wiederholbaren Lesevorgängen|Phantome|  
+|Transaktions Isolationsstufe|Dirty Reads|Nicht wiederholbare Lesevorgänge|Phantome|  
 |---------------------------------|-----------------|-------------------------|--------------|  
 |Read Uncommitted|X|X|X|  
 |Read Committed|--|X|X|  
 |Repeatable Read|--|--|X|  
 |Serializable|--|--|--|  
   
- Die folgende Tabelle beschreibt auf einfache Weise, dass ein DBMS Isolationsstufen von Transaktionen implementieren kann.  
+ In der folgenden Tabelle werden einfache Möglichkeiten beschrieben, mit denen ein DBMS die Transaktions Isolations Stufen implementieren kann.  
   
 > [!IMPORTANT]  
->  Die meisten DBMS-Systeme können, dass komplexere Schemas als diese um Parallelität zu erhöhen. Diese Beispiele dienen lediglich zur Veranschaulichung. ODBC ist vor allem nicht beschreiten wie bestimmte DBMS Transaktionen voneinander isolieren.  
+>  Die meisten DBMSs verwenden komplexere Schemas als diese, um die Parallelität zu erhöhen. Diese Beispiele dienen nur zur Veranschaulichung. Insbesondere gibt ODBC nicht an, wie bestimmte DBMSs Transaktionen voneinander isolieren.  
   
-|Transaktionsisolation|Mögliche Implementierung|  
+|Transaktions Isolation|Mögliche Implementierung|  
 |---------------------------|-----------------------------|  
-|Read Uncommitted|Transaktionen sind nicht voneinander isoliert. Falls das DBMS anderen Isolationsstufen von Transaktionen unterstützt, wird es geeigneter Mechanismus, der ihn verwendet, um diese Ebenen implementieren ignoriert. Damit sie andere Transaktionen nicht negativ auswirken, sind Transaktionen, die auf der Read Uncommitted-Ebene in der Regel schreibgeschützt.|  
-|Read Committed|Die Transaktion wird gewartet, bis für den Schreibzugriff gesperrt durch andere Transaktionen Zeilen entsperrt werden; Dies verhindert, dass es keine "dirty" Daten lesen.<br /><br /> Die Transaktion enthält ein Lesesperre (Wenn sie nur die Zeile liest) oder der Schreibvorgang sperren (Wenn sie aktualisiert oder löscht die Zeile) für die aktuelle Zeile aus, um zu verhindern, dass andere Transaktionen aktualisieren oder löschen. Die Transaktion gibt Lesesperren frei, wenn sie aus der aktuellen Zeile bewegt wird. Sie enthält Schreibsperren, bis sie ein Commit oder Rollback ausgeführt.|  
-|Repeatable Read|Die Transaktion wird gewartet, bis für den Schreibzugriff gesperrt durch andere Transaktionen Zeilen entsperrt werden; Dies verhindert, dass es keine "dirty" Daten lesen.<br /><br /> Die Transaktion sperrt Lesen alle Zeilen, die er an die Anwendung "und" Write-Sperren für alle Zeilen zurückgibt, sie einfügungen, Updates oder löscht. Wenn die Transaktion, die SQL-Anweisung enthält z. B. **wählen \* FROM Orders**, Zeilen die Transaktionssperren-lesen, wie die Anwendung diese abruft. Wenn die Transaktion, die SQL-Anweisung umfasst **löschen aus, in dem Status der Bestellung = 'Geschlossen'** , Transaktion-Schreibsperren Zeilen, da sie gelöscht.<br /><br /> Da andere Transaktionen nicht aktualisieren oder löschen diese Zeilen, wird die aktuelle Transaktion nicht wiederholbaren Lesevorgängen vermieden. Die Transaktion gibt ihre Sperren frei, wenn sie ein Commit oder Rollback ausgeführt.|  
-|Serializable|Die Transaktion wird gewartet, bis für den Schreibzugriff gesperrt durch andere Transaktionen Zeilen entsperrt werden; Dies verhindert, dass es keine "dirty" Daten lesen.<br /><br /> Die Transaktion enthält eine Lesesperre (Wenn sie nur Zeilen liest) oder Schreibsperre (Wenn sie später aktualisieren oder Löschen von Zeilen) für den Bereich der Zeilen beeinflusst. Wenn die Transaktion, die SQL-Anweisung enthält z. B. **wählen \* FROM Orders**, der Bereich ist die gesamte Tabelle "Orders", die Read-Transaktionssperren der Tabelle und wird nicht zu, dass alle neuen Zeilen in diese eingefügt werden soll. Wenn die Transaktion, die SQL-Anweisung enthält **Löschen von Aufträgen, in dem Status "Geschlossen" =** , Bereich alle Zeilen mit dem Status "CLOSED" bildet die Transaktionssperren-Schreibvorgänge aller Zeilen in die Aufträge Tabelle mit dem Status "Geschlossen" und wird nicht ermöglichen, dass alle Zeilen eingefügt oder aktualisiert, dass die daraus resultierende Zeile den Status "Geschlossen" aufweist.<br /><br /> Da andere Transaktionen nicht aktualisieren oder Löschen von Zeilen in den Bereich, wird die aktuelle Transaktion nicht wiederholbaren Lesevorgängen vermieden. Da andere Transaktionen Zeilen im Bereich einfügen können, wird die aktuelle Transaktion Phantome vermieden. Die Transaktion gibt die Sperre frei, wenn sie ein Commit oder Rollback.|  
+|Read Uncommitted|Transaktionen sind nicht voneinander isoliert. Wenn das DBMS andere Transaktions Isolations Stufen unterstützt, ignoriert es den Mechanismus, mit dem diese Ebenen implementiert werden. Damit Sie keine negativen Auswirkungen auf andere Transaktionen haben, sind Transaktionen, die auf der Ebene Read nicht Commit ausgeführt werden, in der Regel schreibgeschützt.|  
+|Read Committed|Die Transaktion wartet, bis Zeilen, die von anderen Transaktionen geschrieben wurden, entsperrt werden. Dadurch wird verhindert, dass Daten geändert werden.<br /><br /> Die Transaktion enthält eine Lesesperre (wenn Sie nur die Zeile liest) oder eine Schreibsperre (wenn Sie die Zeile aktualisiert oder löscht) in der aktuellen Zeile, um zu verhindern, dass andere Transaktionen Sie aktualisieren oder löschen. Die Transaktion gibt Lese Sperren frei, wenn Sie von der aktuellen Zeile verschoben wird. Sie enthält Schreib sperren, bis ein Commit oder ein Rollback ausgeführt wird.|  
+|Repeatable Read|Die Transaktion wartet, bis Zeilen, die von anderen Transaktionen geschrieben wurden, entsperrt werden. Dadurch wird verhindert, dass Daten geändert werden.<br /><br /> Die Transaktion enthält Lese Sperren für alle Zeilen, die an die Anwendung zurückgegeben werden, und schreibt Sperren für alle Zeilen, die eingefügt, aktualisiert oder gelöscht werden. Wenn die Transaktion z. b. die SQL-Anweisung **Select \* from Orders**enthält, sperrt die Transaktion Zeilen, wenn Sie von der Anwendung abgerufen werden. Wenn die Transaktion die SQL-Anweisung **Delete aus Orders mit dem Status = ' Closed '** enthält, sperrt die Transaktion Zeilen, während Sie gelöscht wird.<br /><br /> Da andere Transaktionen diese Zeilen nicht aktualisieren oder löschen können, vermeidet die aktuelle Transaktion alle nicht wiederholbaren Lesevorgänge. Die Transaktion gibt die Sperren frei, wenn ein Commit oder ein Rollback ausgeführt wird.|  
+|Serializable|Die Transaktion wartet, bis Zeilen, die von anderen Transaktionen geschrieben wurden, entsperrt werden. Dadurch wird verhindert, dass Daten geändert werden.<br /><br /> Die Transaktion enthält eine Lesesperre (wenn Sie nur Zeilen liest) oder eine Schreibsperre (wenn Sie Zeilen aktualisieren oder löschen kann) für den Bereich der Zeilen, auf den Sie sich auswirkt. Wenn die Transaktion z. b. die SQL-Anweisung " **Select \* from Orders**" enthält, entspricht der Bereich der gesamten Tabelle "Orders". die Transaktion ledert die Tabelle und lässt keine neuen Zeilen in die Tabelle ein. Wenn die Transaktion die SQL-Anweisung **Delete aus Orders enthält, wobei Status = ' Closed '** ist, beträgt der Bereich alle Zeilen mit dem Status ' Closed '; beim Schreiben der Transaktion werden alle Zeilen in der Orders-Tabelle mit dem Status "Closed" gesperrt, und es ist nicht zulässig, dass Zeilen eingefügt oder aktualisiert werden, sodass die resultierende Zeile den Status "geschlossen" aufweist.<br /><br /> Da andere Transaktionen die Zeilen im Bereich nicht aktualisieren oder löschen können, vermeidet die aktuelle Transaktion alle nicht wiederholbaren Lesevorgänge. Da andere Transaktionen keine Zeilen im Bereich einfügen können, vermeidet die aktuelle Transaktion alle Phantome. Die Sperre wird von der Transaktion freigegeben, wenn ein Commit oder ein Rollback ausgeführt wird.|  
   
- Es ist wichtig zu beachten, dass die Isolationsstufe der Transaktion nicht auf einer Transaktion können eigene Änderungen sehen auswirkt; Transaktionen können immer alle Änderungen angezeigt, die sie vornehmen. Beispielsweise kann eine Transaktion von zwei bestehen **UPDATE** Anweisungen, die das erste Argument löst die Zahlung aller Mitarbeiter aus, um 10 Prozent und dem zweiten wird die Zahlung von Mitarbeitern über einige maximale Einzug für den angegebenen. Dies als einzelne Transaktion erfolgreich ist, da nur die zweite **UPDATE** Anweisung sehen die Ergebnisse der ersten.
+ Beachten Sie, dass sich die Transaktions Isolationsstufe nicht auf die Fähigkeit einer Transaktion auswirkt, eigene Änderungen anzuzeigen. Transaktionen können immer alle Änderungen sehen, die Sie vornehmen. Eine Transaktion kann z. b. aus zwei **Update** -Anweisungen bestehen, wobei der erste Wert alle Mitarbeiter um 10 Prozent erhöht und der zweite die Bezahlung aller Mitarbeiter für einen maximalen Betrag auf diesen Betrag festlegt. Dies ist nur eine einzige Transaktion, da die zweite **Update** -Anweisung die Ergebnisse der ersten-Anweisung sehen kann.

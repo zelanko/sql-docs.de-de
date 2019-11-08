@@ -1,5 +1,5 @@
 ---
-title: Berechtigungen für Funktionsbereiche (Master Data Services) | Microsoft-Dokumentation
+title: Berechtigungen für Funktionsbereiche
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b40f4053633c7ef50d14004f2f5f045c23cae4cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f2d15e2a98f04d7481200dfea17cfe5ca852a84
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945255"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729211"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Berechtigungen für Funktionsbereiche (Master Data Services)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67945255"
   
  Wenn Sie einem Funktionsbereich Berechtigungen zuweisen, wird ein bestimmter Bereich der Benutzeroberfläche für den Benutzer oder die Gruppe sichtbar.  
   
- Innerhalb des Funktionsbereichs **Explorer** legen zusätzliche Berechtigungen, die Modellobjekten und Hierarchieelemente zugewiesen sind, fest, auf welche Daten ein Benutzer zugreifen kann. Innerhalb aller anderen Funktionsbereiche muss ein Benutzer Modelladministrator sein, um ein Modell anzuzeigen und Aktionen auszuführen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+ Innerhalb des Funktionsbereichs **Explorer** legen zusätzliche Berechtigungen, die Modellobjekten und Hierarchieelemente zugewiesen sind, fest, auf welche Daten ein Benutzer zugreifen kann. Innerhalb aller anderen Funktionsbereiche muss ein Benutzer Modelladministrator sein, um ein Modell anzuzeigen und Aktionen auszuführen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!IMPORTANT]  
 >  Ein Benutzer mit Administratorberechtigungen verfügt über Administratorberechtigungen für alle Modelle und alle anderen Berechtigungen für Funktionsbereiche.  

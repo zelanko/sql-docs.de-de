@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Veröffentlichen einer Geschäftsregel (Master Data Services) | Microsoft-Dokumentation
+title: Erstellen und Veröffentlichen einer Geschäftsregel
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9822b9f4b26897b1162a336b1adaa6f38c5ff117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025058"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729443"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Erstellen und Veröffentlichen einer Geschäftsregel (Master Data Services)
 
@@ -26,12 +26,12 @@ ms.locfileid: "68025058"
 
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Geschäftsregel, um die Genauigkeit der Masterdaten sicherzustellen. Nachdem Sie eine Regel erstellt haben, müssen Sie diese veröffentlichen, damit Sie sie auf Daten anwenden können.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>So erstellen und veröffentlichen Sie eine Geschäftsregel  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68025058"
     > [!NOTE]  
     >  Benachrichtigungen werden nur für Regeln gesendet, die eine Überprüfungsaktion einschließen.  
   
-10. Klicken Sie im **IF** -Abschnitt auf **Hinzufügen**. Ein Bereich wird angezeigt.  
+10. Klicken Sie im **IF** -Abschnitt auf **Hinzufügen**. Ein Panel wird angezeigt.  
   
 11. Wählen Sie ein Attribut aus der Dropdownliste **Attribut** aus.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "68025058"
     > [!TIP]  
     >  Sie können Elemente aus Ihrer Geschäftsregel löschen, indem Sie mit der rechten Maustaste auf jedes Element klicken und **Löschen**auswählen.  
   
-15. Fügen Sie der Regel option mehrere Bedingungen hinzu. Weitere Informationen finden Sie unter [Hinzufügen mehrerer Bedingungen zu einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
+15. Fügen Sie der Regel option mehrere Bedingungen hinzu. Weitere Informationen finden Sie unter [Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
-16. Klicken Sie im **THEN** -Abschnitt auf **Hinzufügen** . Ein Bereich wird angezeigt.  
+16. Klicken Sie im **THEN** -Abschnitt auf **Hinzufügen** . Ein Panel wird angezeigt.  
   
 17. Wählen Sie ein Attribut aus der Dropdownliste **Attribut** aus.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68025058"
   
 21. Optional können Sie eine **ELSE** -Aktion hinzufügen, indem Sie folgende Schritte ausführen.  
   
-    1.  Klicken Sie unter dem **ELSE** -Abschnitt auf **Hinzufügen**. Ein Bereich wird angezeigt.  
+    1.  Klicken Sie unter dem **ELSE** -Abschnitt auf **Hinzufügen**. Ein Panel wird angezeigt.  
   
     2.  Wählen Sie ein Attribut aus der Dropdownliste **Attribut** aus.  
   
@@ -104,10 +104,10 @@ ms.locfileid: "68025058"
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|Status|Wenn Sie auf **Speichern** klicken, wird das folgende Bild angezeigt, das angibt, dass die Geschäftsregel aktualisiert wird.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Falls beim Erstellen oder Bearbeiten einer Geschäftsregel Fehler auftreten, wird das folgende Bild angezeigt.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Falls der Status „OK“ lautet, wird das folgende Bild angezeigt.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
+|Status|Wenn Sie auf **Speichern** klicken, wird das folgende Bild angezeigt, das angibt, dass die Geschäftsregel aktualisiert wird.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh ")<br /><br /> Falls beim Erstellen oder Bearbeiten einer Geschäftsregel Fehler auftreten, wird das folgende Bild angezeigt.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error ")<br /><br /> Falls der Status „OK“ lautet, wird das folgende Bild angezeigt.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success ")|  
 |Name|Der Geschäftsregelname|  
 |Beschreibung|Die Beschreibung der Geschäftsregel.|  
-|Geschäftsregelstatus|Einer der folgenden Geschäftsregelstatus: „Keine Regel definiert“, „Aktiv“, „Ausgeschlossen“, „Ausstehende Änderungen“, „Ausstehender Ausschluss“ und „Ausstehende Löschung“.|  
+|Geschäftsregelstatus|Einer der folgenden Geschäftsregelstatus: : „Keine Regel definiert“, „Aktiv“, „Ausgeschlossen“, „ausstehende Änderungen“, „ausstehender Ausschluss“ und „ausstehende Löschung“.|  
 |Ausgeschlossen|Gibt an, ob die Geschäftsregel ausgeschlossen ist.|  
 |Benachrichtigung|Gibt den Benutzer oder eine Gruppe an, an den bzw. die die E-Mail-Benachrichtigung gesendet werden soll.|  
   

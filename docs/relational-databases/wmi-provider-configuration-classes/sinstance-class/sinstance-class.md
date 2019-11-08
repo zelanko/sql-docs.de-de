@@ -1,5 +1,5 @@
 ---
-title: SInstance-Klasse | Microsoft-Dokumentation
+title: SInstance-Klasse
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 100cc7b4b230beecfc96482bf66c9237fc590ab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51d68eda2ef201bdd1b829ac932e295400ff0dac
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052482"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659036"
 ---
 # <a name="sinstance-class"></a>SInstance-Klasse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "68052482"
  Diese [Sinstance-Klasse](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) kann verwendet werden, um Protokolle und Netzwerkbibliotheken zu verwalten, die der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zugeordnet sind. Ein Sicherheitszertifikat kann auch für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]angegeben werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Konfigurieren von Server Netzwerkprotokollen und Netzwerk Bibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Modelle (Master Data Services) | Microsoft-Dokumentation
+title: Modelle
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0376509a71196a8b674d6101f65b4845c660ac28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079613"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727948"
 ---
 # <a name="models-master-data-services"></a>Modelle (Master Data Services)
 
@@ -47,7 +47,7 @@ ms.locfileid: "68079613"
   
  Dieses Bild zeigt die Beziehung zwischen den Objekten in einem Modell an.  
   
- ![Objekte in einem Master Data Services-Modell](../master-data-services/media/mds-conc-model-circles.gif "Objects in a Master Data Services Model")  
+ ![Objekte in einem Master Data Services Modell](../master-data-services/media/mds-conc-model-circles.gif "Objekte in einem Master Data Services Modell")  
   
 > [!NOTE]  
 >  Abgeleitete Hierarchien sind ebenfalls Modellobjekte, sie werden jedoch nicht im Bild angezeigt. Abgeleitete Hierarchien werden von den domänenbasierten Attributbeziehungen abgeleitet, die zwischen Entitäten vorhanden sind. Weitere Informationen finden Sie unter [Abgeleitete Hierarchien &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "68079613"
 ## <a name="model-example"></a>Modellbeispiel  
  Im folgenden Beispiel gruppieren die Objekte im Produktmodell logisch produktbezogene Daten.  
   
- ![Beispiel für Produktmodellmasterdaten](../master-data-services/media/mds-conc-model.gif "Product Model Master Data Example")  
+ ![Beispiel für Produktmodell Master Daten](../master-data-services/media/mds-conc-model.gif "Beispiel für Produktmodell Master Daten")  
   
  Weitere allgemeine Modelle:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68079613"
   
 -   Geografie: Mögliche Entitäten sind Postleitzahlen, Städte, Landkreise, Staaten, Provinzen, Regionen, Gebiete, Länder und Kontinente.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

@@ -1,5 +1,5 @@
 ---
-title: Funktionsbereich „Integrationsmanagement“ (Master Data Manager) | Microsoft-Dokumentation
+title: Funktionsbereich "Integrationsmanagement"
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2f12e6246ac08be29c673514ad7f35dbaa74a820
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3622c5bf25b049fbf7bcd2ad19d43bd31230459c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007212"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729102"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Funktionsbereich "Integrationsmanagement" (Master Data Manager)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68007212"
 
   Im Funktionsbereich "Integrationsmanagement" können Administratoren Daten aus Stagingtabellen importieren und Abonnementsichten erstellen, die zum Abonnieren von Systemen verwendet werden. Weitere Informationen zu Administratoren finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-## <a name="import-data"></a>Importieren von Daten  
+## <a name="import-data"></a>Daten importieren  
  [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
  [Anzeigen von Fehlern, die während des Stagings auftreten &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  

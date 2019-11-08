@@ -21,13 +21,14 @@ helpviewer_keywords:
 - classification [SQL]
 - labels [SQL]
 - information types
+- rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a9d14cd93b08c0094ad984a6469b433e0b266479
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: b95dec6d4d867e54c3ccf0d1108a7f6b1cfa8f3c
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929778"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73757472"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys. sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -38,12 +39,14 @@ Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 |-----------------|---------------|-----------------|  
 |**class**|**int**|Identifiziert die Klasse des Elements, für das die Klassifizierung vorhanden ist.|  
 |**class_desc**|**varchar (16)**|Eine Beschreibung der Klasse des Elements, für das die Klassifizierung vorhanden ist.|  
-|**major_id**|**int**|ID des Elements, für das die Klassifizierung vorhanden ist. < \>BR < \>BR, wenn die Klasse 0 ist, ist major_id immer 0.<br>Wenn die Klasse den Wert 1, 2 oder 7 hat major_id ist object_id.|  
-|**minor_id**|**int**|Sekundäre ID des Elements, für das die Klassifizierung vorhanden ist, interpretiert nach der Klasse.<br><br>Wenn class = 1, ist minor_id die column_id (if-Spalte), Else 0 (if-Objekt).<br>Wenn class = 2, ist minor_id der parameter_id.<br>Wenn class = 7, ist minor_id der index_id. |  
+|**major_id**|**int**|ID des Elements, für das die Klassifizierung vorhanden ist.<br><br>Wenn class den Wert 0 hat, ist major_id immer 0.<br>Wenn die Klasse den Wert 1, 2 oder 7 hat, major_id object_id ist.|  
+|**minor_id**|**int**|Sekundäre ID des Elements, für das die Klassifizierung vorhanden ist, interpretiert nach der Klasse.<br><br>Wenn class = 1, ist minor_id der column_id (if-Spalte), Else 0 (if-Objekt).<br>Wenn class = 2, ist minor_id die parameter_id.<br>Wenn class = 7, ist minor_id die index_id. |  
 |**label**|**sysname**|Die Bezeichnung (Menschen lesbar), die für die Vertraulichkeits Klassifizierung zugewiesen ist.|  
 |**label_id**|**sysname**|Eine ID, die der Bezeichnung zugeordnet ist und von einem Informationsschutz System wie z. b. Azure Information Protection (AIP) verwendet werden kann.|  
 |**information_type**|**sysname**|Der Informationstyp (Menschen lesbar), der der Sensitivität-Klassifizierung zugewiesen ist.|  
 |**information_type_id**|**sysname**|Eine ID, die dem Informationstyp zugeordnet ist und von einem Informationsschutz System wie z. b. Azure Information Protection (AIP) verwendet werden kann.|  
+|**gehören**|**int**|Ein numerischer Wert des Rangs: <br><br>0 für keine<br>10 für niedrig<br>20 für Mittel<br>30 für hoch<br>40 für kritisch| 
+|**rank_desc**|**sysname**|Textdarstellung des Rangs:  <br><br>keine, niedrig, Mittel, hoch, kritisch|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Hinweise  
@@ -52,8 +55,8 @@ Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 - Derzeit wird nur die Klassifizierung von Daten Bank Spalten unterstützt. Damit
     - **Class** : hat immer den Wert 1 (die eine Spalte darstellt)
     - **class_desc** : hat immer den Wert *OBJECT_OR_COLUMN*
-    - **major_id** -stellt die ID der Tabelle mit der klassifizierten Spalte dar, die sys. all _objects. object_id entspricht.
-    - **minor_id** -stellt die ID der Spalte dar, für die die Klassifizierung vorhanden ist, entspricht sys. all _columns. column_id
+    - **major_id** : die ID der Tabelle, die die klassifizierte Spalte enthält, entsprechend sys. all_objects. object_id
+    - **minor_id** die die ID der Spalte darstellt, für die die Klassifizierung vorhanden ist. Dies entspricht sys. ALL_COLUMNS. column_id
 
 ## <a name="examples"></a>Beispiele
 
@@ -68,7 +71,7 @@ Im folgenden Beispiel wird eine Tabelle mit dem Tabellennamen, dem Spaltennamen,
 SELECT
     SCHEMA_NAME(sys.all_objects.schema_id) as SchemaName,
     sys.all_objects.name AS [TableName], sys.all_columns.name As [ColumnName],
-    [Label], [Label_ID], [Information_Type], [Information_Type_ID]
+    [Label], [Label_ID], [Information_Type], [Information_Type_ID], [Rank], [Rank_Desc]
 FROM
           sys.sensitivity_classifications
 left join sys.all_objects on sys.sensitivity_classifications.major_id = sys.all_objects.object_id

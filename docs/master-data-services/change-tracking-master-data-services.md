@@ -1,5 +1,5 @@
 ---
-title: Änderungsnachverfolgung (Master Data Services) | Microsoft-Dokumentation
+title: Änderungsnachverfolgung
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8ba29c99c7744793b3c2829f45cf1303a1c0e90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6519ea515b6552805aa5b97e38579082ddcfe15c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052059"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729657"
 ---
 # <a name="change-tracking-master-data-services"></a>Änderungsnachverfolgung (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "68052059"
 > [!NOTE]  
 >  Änderungsnachverfolgungs-Geschäftsregeln stufen bereitgestellte (importierte) Daten als geändert ein.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

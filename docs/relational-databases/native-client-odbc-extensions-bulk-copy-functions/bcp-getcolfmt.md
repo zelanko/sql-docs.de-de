@@ -18,16 +18,15 @@ ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e7f63438bbe6ff68284aa573e1307b17087234
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8c32df055ea1330fb0d1bdd32b2a3860519d2575
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707547"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782724"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Zum Suchen des Spaltenformat-Eigenschaftswerts.  
   
@@ -60,7 +59,7 @@ RETCODE bcp_getcolfmt (
  *cbValue*  
  Die Länge des Puffers der Eigenschaft in Bytes.  
   
- *pcbLen*  
+ *pcblen*  
  Verweis auf Länge der Daten, die im Eigenschaftspuffer zurückgegeben werden.  
   
 ## <a name="returns"></a>Rückgabewert  
@@ -69,7 +68,7 @@ RETCODE bcp_getcolfmt (
 ## <a name="remarks"></a>Hinweise  
  Spalten Format-Eigenschaftswerte sind im Thema [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) aufgeführt. Die Spalten Format-Eigenschaftswerte werden durch Aufrufen der **bcp_setcolfmt** -Funktion festgelegt, und die **bcp_getcolfmt** -Funktion wird verwendet, um den Eigenschafts Wert des Spalten Formats zu suchen.  
   
- Beim Herstellen einer Verbindung mit einem Server Computer mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (oder höher) und früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen können Verhaltensänderungen beobachtet werden. Weitere Informationen finden Sie unter [metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Beim Herstellen einer Verbindung mit einem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (oder höher)-Server Computer im Vergleich zu früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versionen können Verhaltensänderungen beobachtet werden. Weitere Informationen finden Sie unter [metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die Typen, die mit der **BCP_FMT_TYPE** -Eigenschaft für Datums-/Uhrzeittypen verwendet werden, sind wie in [Massen Kopier &#40;Änderungen für verbesserte Datums&#41;-und Uhrzeit Typen OLE DB und ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)angegeben.  

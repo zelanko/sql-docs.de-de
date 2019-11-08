@@ -1,5 +1,5 @@
 ---
-title: Neues in Master Data Services (MDS) | Microsoft-Dokumentation
+title: Neuerungen
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,34 +10,34 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810499"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727788"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Neues in Master Data Services (MDS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In diesem Thema sind die Änderungen und Aktualisierungen in der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]zusammengefasst. 
+  In diesem Thema sind die Änderungen und Aktualisierungen in der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] zusammengefasst. 
   
- Einen Überblick darüber, wie Sie Daten in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]organisieren, finden Sie unter [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md). 
+ Einen Überblick darüber, wie Sie Daten in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] organisieren, finden Sie unter [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md). 
   
- **Informationen zur Installation der Master Data Services, zur Einrichtung der Datenbank und Website und zur Bereitstellung der Beispielmodelle finden Sie unter** [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)zusammengefasst.  
+ **Informationen zur Installation der Master Data Services, zur Einrichtung der Datenbank und Website und zur Bereitstellung der Beispielmodelle finden Sie unter** [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
   
  **Download**  
   
 -   Navigieren Sie zum Herunterladen von [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
   
--   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.  
+-   Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.  
   
 ##  <a name="improved-performance"></a>Verbesserte Leistung  
   
  Durch Leistungsverbesserungen können Sie größere Modelle erstellen, Daten effizienter laden und eine bessere Gesamtleistung erzielen. Dies umfasst die Verbesserung der Leistung für das Add-In für Microsoft, um die Ladezeiten von Daten zu verringern und es dem Add-In zu ermöglichen, größere Entitäten zu verarbeiten.  
   
- Weitere Informationen zum Add-In für Microsoft Excel finden Sie unter [Master Data Services-Add-In für Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Weitere Informationen zum Add-In für Microsoft Excel finden Sie unter [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Die folgenden Funktionsverbesserungen sind enthalten.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68810499"
 |Der Benutzer, der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ursprünglich installiert hat, verfügt über die Serveradministratorberechtigung.|Benutzer verfügt über die Administratorfunktionsberechtigung|  
 |Benutzer verfügt über die Berechtigung „Aktualisieren“ auf Modellebene und verfügt in der Modellunterstruktur über keine Berechtigungen und ist daher implizit ein Modelladministrator.|Benutzer verfügt über explizite Administratorberechtigungen auf der Modellebene|  
 |Benutzer verfügt über die Berechtigung „Lesen“|Der Benutzer verfügt über die Berechtigung für den Lesezugriff.|  
-|Benutzer verfügt über die Berechtigung „Aktualisieren“|Benutzer verfügt über alle vier Zugriffsberechtigungen: Erstellen, Aktualisieren, Löschen und Lesen.|  
+|Benutzer verfügt über die Berechtigung „Aktualisieren“|Der Benutzer verfügt über alle vier Zugriffsberechtigungen: Erstellen, Aktualisieren, Löschen und Lesen.|  
 |Benutzer verfügt über die Berechtigung „Verweigern“|Benutzer verfügt über die Berechtigung „Verweigern“|  
   
  Weitere Informationen zu Berechtigungen finden Sie unter [Sicherheit &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
@@ -225,7 +225,7 @@ ms.locfileid: "68810499"
    
  **Aktualisierung der Bereitstellungspakete für Beispielmodelle**  
   
- Die Beispielpakete wurden aktualisiert, um neue Szenarien zu unterstützen. Weitere Informationen finden Sie unter [SQL Server-Beispiele: Modellbereitstellungspakete (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Die Beispielpakete wurden aktualisiert, um neue Szenarien zu unterstützen. Weitere Informationen finden Sie unter [Beispiele: Modellbereitstellungspakete (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

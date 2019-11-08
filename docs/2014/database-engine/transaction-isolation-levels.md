@@ -1,6 +1,6 @@
 ---
-title: Transaktionsisolationsstufen | Microsoft-Dokumentation
-ms.custom: ''
+title: Transaktions Isolations Stufen Speicher optimierte Tabellen | Microsoft-Dokumentation
+ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,15 +10,16 @@ ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eaac46d0fd741e53493903d6fe0bb4656e9499a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774123"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637785"
 ---
-# <a name="transaction-isolation-levels"></a>Transaktionsisolationsstufen
-  Die folgenden Isolationsstufen werden für Transaktionen unterstützt, die auf Speicheroptimierte Tabellen zugreifen.  
+# <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Transaktions Isolations Stufen in Speicher optimierten Tabellen
+
+  Die folgenden Isolations Stufen werden für Transaktionen unterstützt, die auf Speicher optimierte Tabellen zugreifen.  
   
 -   SNAPSHOT  
   
@@ -30,15 +31,15 @@ ms.locfileid: "62774123"
   
  Die Transaktionsisolationsstufe kann als Teil des Atomic-Blocks einer systemintern kompilierten gespeicherten Prozedur angegeben werden. Weitere Informationen finden Sie unter [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql). Beim Zugriff auf speicheroptimierte Tabellen von interpretiertem [!INCLUDE[tsql](../includes/tsql-md.md)] aus kann die Isolationsstufe mithilfe von Hinweisen auf Tabellenebene angegeben werden.  
   
- Sie müssen die Transaktionsisolationsstufe angeben, wenn Sie eine systemintern kompilierte gespeicherte Prozedur definieren. Die Angabe der Isolationsstufe in Tabellenhinweisen ist beim Zugriff auf speicheroptimierte Tabellen über Benutzertransaktionen in interpretiertem [!INCLUDE[tsql](../includes/tsql-md.md)] erforderlich. Weitere Informationen finden Sie unter [Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Sie müssen die Transaktionsisolationsstufe angeben, wenn Sie eine systemintern kompilierte gespeicherte Prozedur definieren. Die Angabe der Isolationsstufe in Tabellenhinweisen ist beim Zugriff auf speicheroptimierte Tabellen über Benutzertransaktionen in interpretiertem [!INCLUDE[tsql](../includes/tsql-md.md)] erforderlich. Weitere Informationen finden Sie unter [Richtlinien für Transaktions Isolations Stufen mit Speicher optimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- Die Isolationsstufe READ COMMITTED wird für speicheroptimierte Tabellen mit Autocommittransaktionen unterstützt. READ COMMITTED ist in Benutzertransaktionen oder in einem atomaren Block nicht zulässig. READ COMMITTED wird mit expliziten oder impliziten Benutzertransaktionen nicht unterstützt. Die READ_COMMITTED_SNAPSHOT-Isolationsstufe wird für speicheroptimierte Tabellen mit Autocommittransaktionen und nur dann unterstützt, wenn die Abfrage nicht auf datenträgerbasierte Tabellen zugreift. Zudem können Transaktionen, die mit interpretiertem [!INCLUDE[tsql](../includes/tsql-md.md)] mit SNAPSHOT-Isolation gestartet werden, nicht auf speicheroptimierte Tabellen zugreifen. Transaktionen, die interpretiertes [!INCLUDE[tsql](../includes/tsql-md.md)] mit REPEATABLE READ- oder SERIALIZABLE-Isolation verwenden, müssen mit SNAPSHOT-Isolation auf speicheroptimierte Tabellen zugreifen. Weitere Informationen zu diesem Szenario finden Sie unter [containerübergreifende Transaktionen](cross-container-transactions.md).  
+ Die Isolationsstufe READ COMMITTED wird für speicheroptimierte Tabellen mit Autocommittransaktionen unterstützt. READ COMMITTED ist in Benutzertransaktionen oder in einem atomaren Block nicht zulässig. READ COMMITTED wird mit expliziten oder impliziten Benutzertransaktionen nicht unterstützt. Die READ_COMMITTED_SNAPSHOT-Isolationsstufe wird für speicheroptimierte Tabellen mit Autocommittransaktionen und nur dann unterstützt, wenn die Abfrage nicht auf datenträgerbasierte Tabellen zugreift. Zudem können Transaktionen, die mit interpretiertem [!INCLUDE[tsql](../includes/tsql-md.md)] mit SNAPSHOT-Isolation gestartet werden, nicht auf speicheroptimierte Tabellen zugreifen. Transaktionen, die interpretiertes [!INCLUDE[tsql](../includes/tsql-md.md)] mit REPEATABLE READ- oder SERIALIZABLE-Isolation verwenden, müssen mit SNAPSHOT-Isolation auf speicheroptimierte Tabellen zugreifen. Weitere Informationen zu diesem Szenario finden Sie unter [Container übergreifende Transaktionen](cross-container-transactions.md).  
   
  Die Standardisolationsstufe in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ist READ COMMITTED. Wenn die Isolationsstufe der Sitzung READ COMMITED (oder niedriger) ist, können Sie eine der folgenden Maßnahmen ergreifen:  
   
 -   Verwenden Sie zum Zugreifen auf die speicheroptimierte Tabelle explizit einen Hinweis für eine höhere Isolationsstufe (z. B. WITH (SNAPSHOT)).  
   
--   Geben Sie die SET-Option `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` an. Damit wird die Isolationsstufe für speicheroptimierte Tabellen auf SNAPSHOT festgelegt (wie bei der Einbindung von WITH(SNAPSHOT)-Hinweisen für alle speicheroptimierten Tabellen). Weitere Informationen zu `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, finden Sie unter [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Geben Sie die SET-Option `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` an. Damit wird die Isolationsstufe für speicheroptimierte Tabellen auf SNAPSHOT festgelegt (wie bei der Einbindung von WITH(SNAPSHOT)-Hinweisen für alle speicheroptimierten Tabellen). Weitere Informationen zu `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`finden Sie unter [ALTER DATABASE Set options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  Falls die Isolationsstufe der Sitzung READ COMMITTED ist, können Sie alternativ Autocommittransaktionen verwenden.  
   
@@ -57,31 +58,31 @@ ms.locfileid: "62774123"
   
  Wenn die aktuelle Transaktion versucht, eine Zeile mit dem gleichen Primärschlüsselwert wie eine Zeile einzufügen, die durch eine andere Transaktion eingefügt wurde, für die vor der aktuellen Transaktion ein Commit ausgeführt wurde, kommt es zu einem Commitfehler mit der folgenden Fehlermeldung.  
   
- Fehler 41325 fehl. Für die aktuelle Transaktion wurde aufgrund eines serialisierbaren Überprüfungsfehlers kein Commit ausgeführt.  
+ Fehler 41325. Für die aktuelle Transaktion wurde aufgrund eines serialisierbaren Überprüfungsfehlers kein Commit ausgeführt.  
   
  Wenn eine Transaktion in eine Tabelle schreibt, die gelöscht wird, bevor für die Transaktion ein Commit ausgeführt wird, wird die Transaktion mit folgender Fehlermeldung beendet:  
   
- Fehler 41305 fehl. Fehler beim Ausführen eines Commits für die aktuelle Transaktion aufgrund eines REPEATABLE READ-Überprüfungsfehlers.  
+ Fehler 41305. Fehler beim Ausführen eines Commits für die aktuelle Transaktion aufgrund eines REPEATABLE READ-Überprüfungsfehlers.  
   
  REPEATABLE READ  
  Diese Isolationsstufe enthält die Garantien, die von der SNAPSHOT-Isolationsstufe gegeben wurden. Darüber hinaus garantiert REPEATABLE READ, dass Zeilen, die von der Transaktion zum Zeitpunkt der Ausführung des Commits durch die Transaktion gelesen werden, nicht von einer anderen Transaktion geändert wurden. Jeder Lesevorgang der Transaktion kann bis zum Ende der Transaktion wiederholt werden.  
   
  Wenn die aktuelle Transaktion eine Zeile gelesen hat, die durch eine andere Transaktion aktualisiert wurde, für die vor der aktuellen Transaktion ein Commit ausgeführt wurde, schlägt der Commit mit der folgenden Fehlermeldung fehl.  
   
- Fehler 41305 fehl. Fehler beim Ausführen eines Commits für die aktuelle Transaktion aufgrund eines REPEATABLE READ-Überprüfungsfehlers.  
+ Fehler 41305. Fehler beim Ausführen eines Commits für die aktuelle Transaktion aufgrund eines REPEATABLE READ-Überprüfungsfehlers.  
   
  SERIALIZABLE  
  Diese Isolationsstufe umfasst die durch REPEATABLE READ gewährten Garantien. Zwischen der Momentaufnahme und dem Ende der Transaktion sind keine Phantomzeilen aufgetreten. Phantomzeilen entsprechen der Filterbedingung einer Auswahl, eines Updates oder einer Löschung.  
   
- Die Transaktion wurde ausgeführt, als seien keine gleichzeitigen Transaktionen vorhanden. Alle Aktionen erfolgen praktisch an einem einzelnen serialisierungspunkt (Commitzeit).  
+ Die Transaktion wurde ausgeführt, als seien keine gleichzeitigen Transaktionen vorhanden. Alle Aktionen erfolgen praktisch an einem einzelnen serialisierungspunkt (comtzeit).  
   
  Wenn eine dieser Garantien verletzt wird, kann für die Transaktion kein Commit ausgeführt werden, und es wird die folgende Fehlermeldung angezeigt:  
   
- Fehler 41325 fehl. Für die aktuelle Transaktion wurde aufgrund eines serialisierbaren Überprüfungsfehlers kein Commit ausgeführt.  
+ Fehler 41325. Für die aktuelle Transaktion wurde aufgrund eines serialisierbaren Überprüfungsfehlers kein Commit ausgeführt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu Transaktionen in speicheroptimierten Tabellen](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ Grundlegendes [zu Transaktionen in Speicher optimierten Tabellen](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Richtlinien für Transaktions Isolations Stufen mit Speicher optimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Richtlinien zur Wiederholungslogik für Transaktionen auf speicheroptimierten Tabellen](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

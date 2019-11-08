@@ -1,6 +1,6 @@
 ---
-title: Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit WQL | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von WQL zum Zugreifen auf den WMI-Anbieter
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2daaea77ecc69a6c3a011ce0ffdfd862f296b22a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 53ade765b0f6b6710a12da06ae0b7470b55d9400
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139430"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658941"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,14 +30,14 @@ ms.locfileid: "68139430"
   
 ### <a name="querying-services-using-wbemtest"></a>Abfragen von Diensten mit WBEMtest  
   
-1.  Von der **starten** Menü klicken Sie auf **ausführen**, und geben Sie dann **WBEMtest**.  
+1.  Klicken Sie im **Startmenü** auf **Ausführen**, und geben Sie dann **Wbemtest**ein.  
   
 2.  Das Dialogfeld WBEMtest.exe wird angezeigt. Klicken Sie auf **Verbinden**.  
   
 3.  Geben Sie im ersten Textfeld den Namespace für den WMI-Anbieter für die Computerverwaltung ein: root\Microsoft\SqlServer\ComputerManagement11. Klicken Sie auf **Verbinden**.  
   
-4.  Klicken Sie auf **Abfrage**. Geben Sie eine Abfrage, die die aktuelle, auf dem lokalen Computer ausgeführten Dienste zurückgibt: **Wählen Sie \* FROM SqlService.** Klicken Sie auf **Übernehmen**.  
+4.  Klicken Sie auf **Abfrage**. Geben Sie eine Abfrage ein, die die aktuellen Dienste zurückgibt, die auf dem lokalen Computer ausgeführt werden: **Wählen Sie \* aus SqlService.** Klicken Sie auf **Anwenden**.  
   
-5.  Verfeinern Sie die Abfrage durch Hinzufügen von **, in denen ServiceName = "MSSQLSERVER"** .  
+5.  Verfeinern Sie die Abfrage weiter, indem Sie **Where Service Name = "MSSQLSERVER"** hinzufügen.  
   
   

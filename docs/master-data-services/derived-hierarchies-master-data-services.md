@@ -1,5 +1,5 @@
 ---
-title: Abgeleitete Hierarchien (Master Data Services) | Microsoft-Dokumentation
+title: Abgeleitete Hierarchien
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e75b76eda87580063dfdaea081a1b4f0efaa518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084210"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728273"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Abgeleitete Hierarchien (Master Data Services)
 
@@ -58,20 +58,20 @@ ms.locfileid: "68084210"
   
  Die Hierarchiestruktur zeigt an, wie die Elemente gruppiert werden. Die Entität mit den meisten Elementen befindet sich am unteren Ende.  
   
- ![Von Modellstruktur abgeleitete Hierarchie](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Hierarchy Derived from Model Structure")  
+ ![Von Modellstruktur abgeleitete Hierarchie](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Von Modellstruktur abgeleitete Hierarchie")  
   
  In einer abgeleiteten Hierarchie können Sie die Beziehung zwischen Product und Subcategory und anschließend zwischen Subcategory und Category hervorheben. Wenn Sie die Elemente in dieser Hierarchie anzeigen, enthält jede Ebene in der Struktur Elemente derselben Entität.  
   
- ![Beispiel für eine von Mountainbike abgeleitete Hierarchie](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Mountain Bike Derived Hierarchy Example")  
+ ![Beispiel für abgeleitete Hierarchie Mountain Bike](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Beispiel für abgeleitete Hierarchie Mountain Bike")  
   
  Bei diesem Hierarchietyp werden Sie daran gehindert, ein Element auf eine ungültige Ebene zu verschieben. Sie können z. B. das Road-650-Fahrrad von der Unterkategorie "Road Bikes" in eine andere Unterkategorie mit dem Namen "Mountain Bikes" verschieben. Es ist nicht möglich, "Road-650" direkt in eine Kategorie zu verschieben, z. B. "1 {Bikes}". Sobald Sie ein Element in der Hierarchiestruktur verschieben, ändert sich der Wert des domänenbasierten Attributs des Elements, um die Änderung anzuzeigen.  
   
 ## <a name="notes"></a>Hinweise  
- Alle Elemente in einer abgeleiteten Hierarchiestruktur sind nach ID sortiert. Die Sortierreihenfolge kann nicht geändert werden.  
+ Alle Elemente in einer Struktur abgeleiteter Hierarchien werden nach ID sortiert. Die Sortierreihenfolge kann nicht geändert werden.  
   
  Wenn das domänenbasierte Attribut eines Elements leer ist und das Attribut für eine abgeleitete Hierarchie verwendet wird, dann wird das Element nicht in der Hierarchie angezeigt. Erstellen Sie Geschäftsregeln, um Attribute zu erhalten, die aufgefüllt werden müssen. Weitere Informationen finden Sie unter [Erfordern von Attributwerten &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

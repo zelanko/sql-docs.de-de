@@ -1,5 +1,5 @@
 ---
-title: Blattberechtigungen (Master Data Services) | Microsoft-Dokumentation
+title: Blattberechtigungen
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007199"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728075"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Blattberechtigungen (Master Data Services)
 
@@ -37,12 +37,12 @@ ms.locfileid: "68007199"
   
 -   Den Attributen **Name** und **Code** zugewiesene Berechtigungen werden nicht erzwungen.  
   
-|Berechtigung|Description|  
+|Berechtigung|Beschreibung|  
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Blattelemente und Attribute lesen.|  
 |**Erstellen**|Der Benutzer kann Blattelemente erstellen und während der Erstellung Attributwerte zuweisen.|  
 |**Update**|Der Benutzer kann Blattelemente und Attribute aktualisieren.|  
-|**Löschen**|Der Benutzer kann Blattelemente löschen.|  
+|**Delete**|Der Benutzer kann Blattelemente löschen.|  
 |**Verweigern**|Der Zugriff auf die Blattelemente wird vollständig verweigert.|  
   
  Die Berechtigungen Lesen, Erstellen, Aktualisieren und Löschen können kombiniert werden. Wenn Erstellen, Aktualisieren und Löschen zugewiesen werden, wird die Leseberechtigung automatisch zugewiesen.  
@@ -50,21 +50,21 @@ ms.locfileid: "68007199"
 ## <a name="attribute-permissions"></a>Attributberechtigungen  
  Attributberechtigungen gelten für die Attributwerte der jeweiligen Entität. Benutzer mit Attributberechtigungen wird lediglich verweigert, Elemente hinzuzufügen oder zu entfernen.  
   
-|Berechtigung|Description|  
+|Berechtigung|Beschreibung|  
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Attribute lesen.|  
 |**Erstellen**|Der Benutzer kann bei der Erstellung von Elementen Werte zuweisen.|  
 |**Update**|Der Benutzer kann Attribute aktualisieren.|  
-|**Löschen**|Keine Auswirkung.|  
-|**Verweigern**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Sie können den Zugriff auf Attribute Name und Code können nicht explizit verweigert.|  
+|**Delete**|Keine Auswirkung.|  
+|**Verweigern**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Der Zugriff auf die Attribute Name und Code kann nicht explizit verweigert werden.|  
   
 ### <a name="example"></a>Beispiel  
  Weisen Sie dem Attribut „Subcategory“ der Entität „Product“ die Berechtigung **Aktualisieren** zu. Verweigern Sie die Berechtigung für alle anderen Attribute.  
   
 |Name|Code|Subcategory (Aktualisiert)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountainbikes|  
-|Mountain-100|BK-M201|{5} Mountainbikes|  
+|Mountain-100|BK-M101|{5} Mountain Bikes|  
+|Mountain-100|BK-M201|{5} Mountain Bikes|  
   
  Sie können im **Explorer**jeden Attributwert in der Spalte „Subcategory“ aktualisieren. Wenn Sie keine Berechtigung für ein Attribut haben, wird das Attribut nicht angezeigt.  
   

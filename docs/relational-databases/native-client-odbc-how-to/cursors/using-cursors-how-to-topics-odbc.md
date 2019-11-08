@@ -1,5 +1,5 @@
 ---
-title: Gewusst-wie-Themen von Cursorn (ODBC) mit | Microsoft-Dokumentation
+title: Gewusst-wie-Themen zum Verwenden von Cursorn (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,26 +13,25 @@ ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ee1bc4f2789895ebb291449b337d2182223a116
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fa0411d322e3e16b8fe1bebf6f84fb626b0f82e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898544"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781499"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Verwenden von Cursorn (Vorgehensweisen) (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Um Cursor zu verwenden, müssen Sie zuerst die Verbindungs- und Anweisungsattribute festlegen, die das Verhalten der ODBC-Cursor steuern. Cursor ermöglichen einer Anwendung, bei jedem Abrufvorgang mehrere Zeilen abzurufen, und an der aktuellen Cursorposition UPDATE-, INSERT- oder DELETE-Anweisungen auszuführen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Verwenden von Cursorn &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+-   [Cursor &#40;-ODBC verwenden&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [Verwenden der Rowsetbindung &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [Verwenden der Rowsetbindung &#40;(ODBC)&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
--   [Abrufen und Aktualisieren von Rowsets &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
+-   [Abrufen und Aktualisieren von Rowsets &#40;(ODBC)&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweisen zu ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

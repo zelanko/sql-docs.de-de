@@ -1,5 +1,5 @@
 ---
-title: sys. PDW _materialized_view_mappings (Transact-SQL) | Microsoft-Dokumentation
+title: sys. pdw_materialized_view_mappings (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -12,18 +12,18 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 919b55fe869a77bf27acd8a14820c63dd82eb968
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: d548291653b589d973c9c21813690a61a0fdb7ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811503"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729826"
 ---
-# <a name="syspdw_materialized_view_mappings-transact-sql-preview"></a>sys. PDW _materialized_view_mappings (Transact-SQL) (Vorschau)
+# <a name="syspdw_materialized_view_mappings-transact-sql"></a>sys. pdw_materialized_view_mappings (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Verknüpft die materialisierte Ansicht mit internen Objektnamen durch object_id.
+Bindet die materialisierte Ansicht mit internen Objektnamen object_id.
 
 Die Spalten physical_name und OBJECT_ID bilden den Schlüssel für diese Katalog Sicht.
   
@@ -38,6 +38,7 @@ Erfordert die VIEW DATABASE STATE-Berechtigung.
   
 ## <a name="see-also"></a>Siehe auch
 
+[Leistungsoptimierung mit materialisierter Sicht](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

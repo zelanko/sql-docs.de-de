@@ -1,10 +1,10 @@
 ---
-title: "\"sp_describe_parameter_encryption\" (Transact-SQL) | Microsoft-Dokumentation"
+title: sp_describe_parameter_encryption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -15,20 +15,20 @@ f1_keywords:
 helpviewer_keywords:
 - sp_describe_parameter_encryption
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
-author: stevestein
-ms.author: sstein
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 377a1e342970e9593b37924c3739ee7a706d5264
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4a4cfe5c86d39766bcd322b879172b00b33eb68
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053034"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593701"
 ---
-# <a name="spdescribeparameterencryption-transact-sql"></a>"sp_describe_parameter_encryption" (Transact-SQL)
+# <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Analysiert das angegebene [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung und die entsprechenden Parameter, um zu bestimmen, welche Parameter Datenbankspalten entsprechen, die geschützt werden, mithilfe von Always Encrypted-Funktion. Gibt die verschlüsselungsmetadaten für die Parameter, die den verschlüsselten Spalten entsprechen.  
+  Analysiert die angegebene [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung und ihre Parameter, um zu bestimmen, welche Parameterdaten Bank Spalten entsprechen, die mit der Always Encrypted-Funktion geschützt werden. Gibt Verschlüsselungs Metadaten für die Parameter zurück, die verschlüsselten Spalten entsprechen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,58 +40,58 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ \@Tsql =] "Transact-SQL_batch"  
- Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Transact-SQL_batch kann nvarchar (n) oder nvarchar(max) sein.  
+ [\@-Pfad =] ' Transact-SQL_batch '  
+ Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Transact-SQL_batch kann vom Datentyp nvarchar (n) oder nvarchar (max) sein.  
   
- [ \@Params =] 'N'parameters  
- *\@Params* stellt eine deklarationszeichenfolge für Parameter für den Transact-SQL-Batch, handelt es sich analog zu Sp_executesql bereit. Parameter können nvarchar (n) oder nvarchar(max) sein.  
+ [\@Parametern =] N ' Parameter '  
+ *\@para* meters stellt eine Deklarations Zeichenfolge für Parameter für den Transact-SQL-Batch bereit, der sp_executesql ähnelt. Parameter können nvarchar (n) oder nvarchar (max) sein.  
   
- Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in eingebettet wurden die [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder in Parameter in der Anweisung muss definiert werden,  *\@Params*. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der Batch in der Anweisung keine Parameter,  *\@Params* ist nicht erforderlich. NULL, ist der Standardwert für diesen Parameter.  
+ Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in die [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in der Anweisung angegebene Parameter muss in *\@para*Metern definiert werden. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder der Batch in der Anweisung keine Parameter enthält, ist *\@* Parameter nicht erforderlich. NULL ist der Standardwert für diesen Parameter.  
   
 ## <a name="return-value"></a>Rückgabewert  
- 0 steht für Erfolg. Sonstige geben Fehler an.  
+ 0 gibt einen Erfolg an. Alles deutet auf einen Fehler hin.  
   
 ## <a name="result-sets"></a>Resultsets  
- **"sp_describe_parameter_encryption"** zwei Resultsets zurückgibt:  
+ **sp_describe_parameter_encryption** gibt zwei Resultsets zurück:  
   
--   Das Ergebnis festlegen kryptografische Schlüsseln konfiguriert für Datenbankspalten, die Parameter der angegebenen Beschreibung [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung entsprechen.  
+-   Das Resultset, das für Daten Bank Spalten konfigurierte kryptografische Schlüssel beschreibt, entspricht den Parametern der angegebenen [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.  
   
--   Das Resultset, wie bestimmte Parameter beschreibt sollten verschlüsselt werden. Dieses Resultset verweisen die Schlüssel in das erste Resultset beschrieben.  
+-   Das Resultset, das beschreibt, wie bestimmte Parameter verschlüsselt werden sollen. Dieses Resultset verweist auf die Schlüssel, die im ersten Resultset beschrieben werden.  
   
- Jede Zeile das erste Resultset beschreibt ein Schlüsselpaar; ein Verschlüsselungsschlüssel der verschlüsselten Spalte und der entsprechenden spaltenhauptschlüssel.  
+ Jede Zeile des ersten Resultsets beschreibt ein paar von Schlüsseln. ein verschlüsselter Spalten Verschlüsselungsschlüssel und der zugehörige Spalten Hauptschlüssel.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**column_encryption_key_ordinal**|**int**|Die ID der Zeile im Resultset.|  
-|**database_id**|**int**|Id der Datenbank.|  
-|**column_encryption_key_id**|**int**|Die Id des spaltenverschlüsselungsschlüssels. Hinweis: Diese Id gibt eine Zeile in der [Sys. column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) -Katalogsicht angezeigt.|  
+|**column_encryption_key_ordinal**|**int**|ID der Zeile im Resultset.|  
+|**database_id**|**int**|Datenbank-ID.|  
+|**column_encryption_key_id**|**int**|Die ID des Spalten Verschlüsselungsschlüssels. Hinweis: Diese ID bezeichnet eine Zeile in der [sys. column_encryption_keys &#40;&#41; Transact-SQL](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) -Katalog Sicht.|  
 |**column_encryption_key_version**|**int**|Zur künftigen Verwendung reserviert. Derzeit enthält immer 1.|  
-|**column_encryption_key_metadata_version**|**binary(8)**|Ein Zeitstempel, der Uhrzeit der Erstellung des spaltenverschlüsselungsschlüssels darstellt.|  
-|**column_encryption_key_encrypted_value**|**varbinary(4000)**|Der verschlüsselte Wert des spaltenverschlüsselungsschlüssels.|  
-|**column_master_key_store_provider_name**|**sysname**|Der Name des Anbieters für den Schlüsselspeicher mit dem spaltenhauptschlüssel, der verwendet wurde, um den verschlüsselten Wert des spaltenverschlüsselungsschlüssels zu erzeugen.|  
-|**column_master_key_path**|**nvarchar(4000)**|Den Schlüsselpfad, der den spaltenhauptschlüssel, der verwendet wurde, um den verschlüsselten Wert des spaltenverschlüsselungsschlüssels zu erstellen.|  
-|**column_encryption_key_encryption_algorithm_name**|**sysname**|Der Name des Verschlüsselungsalgorithmus verwendet, um den Verschlüsselungswert des spaltenverschlüsselungsschlüssels zu erzeugen.|  
+|**column_encryption_key_metadata_version**|**Binär (8)**|Ein Zeitstempel, der die Erstellungszeit des Spalten Verschlüsselungsschlüssels darstellt.|  
+|**column_encryption_key_encrypted_value**|**varbinary (4000)**|Der verschlüsselte Wert des Spalten Verschlüsselungsschlüssels.|  
+|**column_master_key_store_provider_name**|**sysname**|Der Name des Anbieters für den Schlüsselspeicher, der den Spalten Hauptschlüssel enthält, der verwendet wurde, um den verschlüsselten Wert des Spalten Verschlüsselungsschlüssels zu erhalten.|  
+|**column_master_key_path**|**nvarchar(4000)**|Der Schlüssel Pfad des Spalten Hauptschlüssels, der verwendet wurde, um den verschlüsselten Wert des Spalten Verschlüsselungsschlüssels zu erhalten.|  
+|**column_encryption_key_encryption_algorithm_name**|**sysname**|Der Name des Verschlüsselungsalgorithmus, mit dem der Verschlüsselungs Wert des Spalten Verschlüsselungsschlüssels erzeugt wird.|  
   
- Jede Zeile das zweite Resultset enthält die verschlüsselungsmetadaten für einen Parameter.  
+ Jede Zeile des zweiten Resultsets enthält Verschlüsselungs Metadaten für einen Parameter.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**parameter_ordinal**|**int**|Die ID der Zeile im Resultset.|  
-|**parameter_name**|**sysname**|Name eines der die angegebenen Parameter die  *\@Params* Argument.|  
-|**column_encryption_algorithm**|**tinyint**|Code, der angibt, der des Verschlüsselungsalgorithmus für die Spalte, die den Parameter konfiguriert entspricht. Die derzeit unterstützten Werte sind: 2 für **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Code, der angibt, des Verschlüsselungstyp für die Spalte, die den Parameter konfiguriert entspricht. Die unterstützten Werte sind:<br /><br /> 0 - nur-Text (die Spalte ist nicht verschlüsselt)<br /><br /> 1: nach dem Zufallsprinzip<br /><br /> 2 – die deterministische Verschlüsselung.|  
-|**column_encryption_key_ordinal**|**int**|Code, der Zeile in der das erste Ergebnis festgelegt. Die Zeile, auf die verwiesen werden, des spaltenverschlüsselungsschlüssels, die für die Spalte konfiguriert, die der Parameter entspricht.|  
-|**column_encryption_normalization_rule_version**|**tinyint**|Versionsnummer des-Algorithmus, den Typ Normalisierung.|  
+|**parameter_ordinal**|**int**|ID der Zeile im Resultset.|  
+|**parameter_name**|**sysname**|Der Name eines Parameters, der im *\@params* -Argument angegeben ist.|  
+|**column_encryption_algorithm**|**tinyint**|Code, der den für die Spalte konfigurierten Verschlüsselungsalgorithmus angibt, entspricht dem-Parameter. Die derzeit unterstützten Werte sind: 2 für **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
+|**column_encryption_type**|**tinyint**|Code, der den Verschlüsselungstyp angibt, der für die Spalte konfiguriert ist. der-Parameter entspricht. Folgende Werte werden unterstützt:<br /><br /> 0-Klartext (die Spalte ist nicht verschlüsselt)<br /><br /> 1: zufällige Verschlüsselung<br /><br /> 2-deterministische Verschlüsselung.|  
+|**column_encryption_key_ordinal**|**int**|Code der Zeile im ersten Resultset. In der Zeile, auf die verwiesen wird, wird der für die Spalte konfigurierte Spalten Verschlüsselungsschlüssel beschrieben. der Parameter entspricht.|  
+|**column_encryption_normalization_rule_version**|**tinyint**|Versionsnummer des typnormalisierungs Algorithmus.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruft der Client-Treiber, die Unterstützung von Always Encrypted, automatisch **"sp_describe_parameter_encryption"** zum Abrufen von verschlüsselungsmetadaten für parametrisierte Abfragen, die von der Anwendung ausgegeben. Anschließend kann der Treiber die verschlüsselungsmetadaten verwendet, um die Werte der Parameter zu verschlüsseln, die mit Always Encrypted geschützte Datenbankspalten entsprechen, und ersetzt die Parameterwerte nur-Text, von der Anwendung, mit dem übermittelten die Parameterwerte, vor dem Senden der Abfrage der Datenbank-Engine.  
+ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Treiber, der Always Encrypted unterstützt, ruft automatisch **sp_describe_parameter_encryption** auf, um Verschlüsselungs Metadaten für parametrisierte Abfragen abzurufen, die von der Anwendung ausgegeben werden. Anschließend verwendet der Treiber die Verschlüsselungs Metadaten, um die Werte von Parametern zu verschlüsseln, die Daten Bank Spalten entsprechen, die mit Always Encrypted geschützt sind, und ersetzt die von der Anwendung gesendeten Klartext-Parameterwerte durch die verschlüsselte Parameterwerte, bevor die Abfrage an die Datenbank-Engine gesendet wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** und **VIEW ANY COLUMN MASTER KEY DEFINITION** Berechtigungen in der Datenbank.  
+ Erfordert die Berechtigungen **View any Column Encryption Key Definition** und **View any Column Master Key Definition** in der Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY [CMK1]  
 WITH  
 (  
@@ -143,13 +143,13 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |column_encryption_key_ordinal|database_id|column_encryption_key_id|column_encryption_key_version|column_encryption_key_metadata_version|column_encryption_key_encrypted_value|  
 |--------------------------------------|------------------|---------------------------------|--------------------------------------|------------------------------------------------|-----------------------------------------------|  
-|1|5|1|1|0x99EDA60083A50000|0x016E000001630075007200720065006E00740075007300650072002F006D0079002F006100360036006200620030006600360064006400370030006200640066006600300032006200360032006400300066003800370065003300340030003200380038006500360066003900330030003500CA0D0CEC74ECADD1804CF99137B4BD06BBAB15D7EA 74E0C249A779C7768A5B659E0125D24FF827F5EA8CA517A8E197ECA1353BA814C2B0B2E6C8AB36E3AE6A1E972D69C3C573A963ADAB6686CF5D24F95FE43140C4F9AF48FBA7DF2D053F3B4A1F5693A1F905440F8015BDB43AF8A04BE4E045B89876A0097E5FBC4E6A3B9C3C0D278C540E46C53938B8C957B689C4DC095821C465C73117CBA95B758232 F9E5B2FCC7950B8CA00AFE374DE42847E3FBC2FDD277035A2DEF529F4B735C20D980073B4965B4542A34723276A1646998FC6E1C40A3FDB6ABCA98EE2B447F114D2AC7FF8C7D51657550EC5C2BABFFE8429B851272086DCED94332CF18FA854C1D545A28B1EF4BE64F8E035175C1650F6FC5C4702ACF99850A4542B3747EAEC0CC726E091B36CE2439 2D801ECAA684DE344FECE05812D12CD72254A014D42D0EABDA41C89FC4F545E88B4B8781E5FAF40D7199D4842D2BFE904D209728ED4F527CBC169E2904F6E711FF81A8F4C25382A2E778DD2A58552ED031AFFDA9D9D891D98AD82155F93C58202FC24A77F415D4F8EF22419D62E188AC609330CCBD97CEE1AEF8A18B01958833604707FDF03B2B3864 87CC679D7E352D0B69F9FB002E51BCD814D077E82A09C14E9892C1F8E0C559CFD5FA841CEF647DAB03C8191DC46B772E94D579D8C80FE93C3827C9F0AE04D5325BC73111E07EEEDBE67F1E2A73580085|  
+|1|5|1|1|0x99eda60083a50000|0x016e000001630075007200720065006e00740075007300650072002f006d0079002f006100360036006200620030006600360064006400370030006200640066006600300032006200360032006400300066003800370065003300340030003200380038006500360066003900330030003500ca0d0cec74ecadd1804cf99137b4bd06bbab15d7ea 74e0c249a779c7768a5b659e0125d24ff827f5ea8ca517a8e197eca1353ba814c2b0b2e6c8ab36e3ae6a1e972d69c3c573a963adab6686cf5d24f95fe43140c4f9af48fba7df2d053f & 3b4a1f 5693a1b905440f 8015bdb43af8a04be4e045b89876a0097e5f bc4e6a3b9c3c0d278c540e46c53938b8c957b689c4dc095821c465c73117cba95b758232 F9E5B2FCC7950B8CA00AFE374DE42847E3FBC2FDD277035A2DEF529F4B735C20D980073B4965B4542A34723276A1646998FC6E1C40A3FDB6ABCA98EE2B447F114D2AC7FF8C7D51657550EC5C2BABFFE8429B851272086DCED94332CF18FA854C1D545A28B1EF4BE64F8E035175C1650F6FC5C4702ACF99850A4542B3747EAEC0CC726E091B36CE2439 2d801ecaa684de344fece05812d12cd72254a014d42 d0eabda41c89fc4f545e88b4b8781e5faf40d7199d4842d2bfe904d209728ed4f527cbc169 e2904f6e711ff81a8f 4c25382a2e778dd2a58552ed031affda9d9d891d98ad82155b93 c58202fc24a77f 415d4b22419ef609330d62e188ac01958833604707ccbd97cee1aef8a18b3864 ldf03b2b 87cc679d7e352d0b69f9fb002e51bcd814d077e82a09c14e9892c1f8e0c559cfd5fa841cef647dab03c8191dc46b772e94d579d8c80fe93c3827c9f 0ae04d5325bc73111e07eeedbe67f 1e2a73580085|  
   
- (Ergebnisse weiterhin.)  
+ (Die Ergebnisse werden fortgesetzt.)  
   
 |column_master_key_store_provider_name|column_master_key_path|column_encryption_key_encryption_algorithm_name|  
 |------------------------------------------------|-------------------------------|----------------------------------------------------------|  
-|MSSQL_CERTIFICATE_STORE|CurrentUser/my/A66BB0F6DD70BDFF02B62D0F87E340288E6F9305|RSA_OAEP|  
+|MSSQL_CERTIFICATE_STORE|CurrentUser/My/A66BB0F6DD70BDFF02B62D0F87E340288E6F9305|RSA_OAEP|  
   
  Hier ist das zweite Resultset:  
   
@@ -157,14 +157,14 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |------------------------|---------------------|-----------------------------------|------------------------------|  
 |1|\@C1|1|1|  
   
- (Ergebnisse weiterhin.)  
+ (Die Ergebnisse werden fortgesetzt.)  
   
 |column_encryption_key_ordinal|column_encryption_normalization_rule_version|  
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Always Encrypted &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted &#40;Cliententwicklung&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Entwickeln von Anwendungen mit Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

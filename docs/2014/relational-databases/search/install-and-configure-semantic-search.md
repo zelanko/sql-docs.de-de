@@ -13,19 +13,19 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c7ac7238d643165bc093a8a1cabd5d1dac662dfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011144"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637919"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installieren und Konfigurieren der semantischen Suche
   Beschreibt die erforderlichen Komponenten für die statistische semantische Suche und wie diese Komponenten installiert oder überprüft werden.  
   
 ## <a name="installing-semantic-search"></a>Installieren der semantischen Suche  
   
-###  <a name="HowToCheckInstalled"></a> Vorgehensweise: Überprüfen Sie, ob die semantische Suche installiert ist  
+###  <a name="HowToCheckInstalled"></a>Gewusst wie: überprüfen, ob die semantische Suche installiert ist  
  Fragen Sie die Eigenschaft **IsFullTextInstalled** der Metadatenfunktion [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql) ab.  
   
  Der Rückgabewert 1 gibt an, dass die Volltextsuche und die semantische Suche installiert sind. Der Rückgabewert 0 gibt an, dass sie nicht installiert sind.  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a> Vorgehensweise: Installieren der semantischen Suche  
+###  <a name="BasicsSemanticSearch"></a>Gewusst wie: Installieren der semantischen Suche  
  Wählen Sie zum Installieren der semantischen Suche während des Setups auf der Seite **Zu installierende Funktionen** die Option **Volltext- und semantische Extraktion für Suche** aus.  
   
  Die statistische semantische Suche ist von der Volltextsuche abhängig. Diese zwei optionalen Funktionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden zusammen installiert.  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>Installieren oder Entfernen der Datenbank für semantische Sprachstatistik  
  Die semantische Suche hat eine zusätzliche externe Abhängigkeit, die als semantische Sprachstatistikdatenbank bezeichnet wird. Diese Datenbank enthält die für die semantische Suche erforderlichen statistischen Sprachmodelle. Eine einzelne semantische Sprachstatistikdatenbank enthält die Sprachenmodelle für alle Sprachen, die für die semantische Indizierung unterstützt werden.  
   
-###  <a name="HowToCheckDatabase"></a> Vorgehensweise: Überprüfen Sie, ob die semantische Sprachstatistikdatenbank installiert ist  
+###  <a name="HowToCheckDatabase"></a>Vorgehensweise: überprüfen, ob die Semantic Language Statistics-Datenbank installiert ist  
  Fragen Sie die Katalogsicht [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql) ab.  
   
  Wenn die semantische Sprachstatistikdatenbank installiert und für die Instanz registriert ist, dann enthalten die Abfrageergebnisse eine einzelne Zeile mit Informationen zur Datenbank.  
@@ -53,15 +53,15 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> Vorgehensweise: Installieren Sie, fügen Sie an und registrieren Sie die Semantic Language Statistics-Datenbank  
+###  <a name="HowToInstallModel"></a>Vorgehensweise: installieren, Anfügen und Registrieren der Semantic Language Statistics Datenbank  
  Die Datenbank für semantische Sprachstatistik wird nicht vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setupprogramm installiert. Führen Sie zum Einrichten der semantischen Sprachstatistikdatenbank als erforderliche Komponente für die semantische Indizierung folgende Aufgaben aus:  
   
  **1. Installieren Sie die Datenbank für semantische Sprachstatistik.**  
- 1.  Suchen Sie die semantische Sprachstatistikdatenbank auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationsmedium, oder laden Sie sie aus dem Internet herunter.  
+ 1.  Suchen Sie die semantische Sprachstatistikdatenbank auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationsmedium, oder laden Sie sie aus dem Internet herunter.  
   
     -   Suchen Sie das Windows Installer-Paket **SemanticLanguageDatabase.msi** auf den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationsmedien. Suchen Sie je nach Zielsystem die 32-Bit- oder 64-Bit-Version des Installationspakets. Der Name des entsprechenden Ordners identifiziert die 32-Bit- oder 64-Bit-Version der Datei; der Dateiname selbst ist für beide Versionen gleich.  
   
-    -   Laden Sie das Installationspaket von der [Microsoft?? SqlServer? 2014 Semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743) Seite die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Download Center.  
+    -   Laden Sie das Installer-Paket von [Microsoft herunter? SQL Server?? 2014 Semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743) Seite im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Download Center.  
   
 2.  Führen Sie das Windows Installer-Paket **SemanticLanguageDatabase.msi** aus, um die Datenbank und die Protokolldatei zu extrahieren.  
   
@@ -97,8 +97,8 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a> Vorgehensweise: Aufheben der Registrierung, trennen und entfernen Sie die Semantic Language Statistics-Datenbank  
- **Aufheben der Registrierung der semantic Language Statistics-Datenbank.**  
+###  <a name="HowToUnregister"></a>Vorgehensweise: Aufheben der Registrierung, trennen und Entfernen der Semantic Language Statistics Datenbank  
+ **Heben Sie die Registrierung der semantischen sprach Statistik Datenbank auf.**  
  Rufen Sie die gespeicherte Prozedur [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql) auf. Sie müssen den Namen der Datenbank nicht angeben, da eine Instanz nur eine semantische Sprachstatistikdatenbank aufweisen kann.  
   
 ```sql  
@@ -106,7 +106,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
- **Trennen Sie die semantic Language Statistics-Datenbank.**  
+ **Trennen Sie die Datenbank für die semantische sprach Statistik.**  
  Rufen Sie die gespeicherte Prozedur [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql) auf, und geben Sie den Namen der Datenbank an.  
   
 ```sql  
@@ -117,10 +117,10 @@ EXEC sp_detach_db @dbname = N'semanticsdb';
 GO  
 ```  
   
- **Entfernen Sie die semantic Language Statistics-Datenbank.**  
+ **Entfernen Sie die semantische sprach Statistik Datenbank.**  
  Nach dem Aufheben und Trennen der Datenbank können Sie die Datenbankdatei einfach löschen. Es gibt kein Deinstallationsprogramm und keinen Eintrag unter **Programme und Funktionen** in der Systemsteuerung.  
   
-###  <a name="reqinstall"></a> Anforderungen und Einschränkungen zum Installieren und entfernen die Semantic Language Statistics-Datenbank  
+###  <a name="reqinstall"></a>Anforderungen und Einschränkungen für das Installieren und Entfernen der Semantic Language Statistics Datenbank  
   
 -   Sie können nur eine Datenbank für semantische Sprachstatistik in einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]anfügen und registrieren.  
   
@@ -130,11 +130,11 @@ GO
   
 -   Die semantische Sprachstatistikdatenbank ist schreibgeschützt. Sie können diese Datenbank nicht anpassen. Wenn Sie den Inhalt der Datenbank ändern, sind die Ergebnisse für die zukünftige semantische Indizierung indeterministisch. Um den ursprünglichen Status dieser Daten wiederherzustellen, können Sie die geänderte Datenbank löschen und eine neue, unveränderte Kopie der Datenbank herunterladen.  
   
--   Es ist möglich, die semantische Sprachstatistikdatenbank zu trennen oder zu löschen. Wenn aktive Indizierungsvorgänge mit Lesesperren in der Datenbank vorhanden sind, tritt beim Trennen oder Löschen ein Fehler oder ein Timeout auf. Dies ist mit bereits bestehendem Verhalten konsistent. Nach dem Entfernen der Datenbank schlagen alle semantischen Indizierungsvorgänge fehl.  
+-   Es ist möglich, die semantische Sprachstatistikdatenbank zu trennen oder zu löschen. Wenn aktive Indizierungs Vorgänge mit Lese Sperren in der Datenbank vorhanden sind, tritt beim Trennen oder löschen ein Fehler auf, oder es tritt ein Timeout auf. Dies ist mit vorhandenem Verhalten konsistent. Nach dem Entfernen der Datenbank schlagen alle semantischen Indizierungsvorgänge fehl.  
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>Installieren von optionaler Unterstützung für neuere Dokumenttypen  
   
-###  <a name="office"></a> Vorgehensweise: Installieren der neuesten Filter für Microsoft Office und andere Microsoft-Dokumenttypen  
- Diese Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert die neuesten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Wörtertrennungen und -Wortstammerkennungen, aber nicht die neuesten Filter für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office-Dokumente und andere [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Dokumenttypen. Diese Filter sind zum Indizieren von Dokumenten erforderlich, die mit den neuen Versionen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office und anderen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Anwendungen erstellt wurden. Die neuesten Filter können unter [Microsoft Office 2010-Filterpakete](https://go.microsoft.com/fwlink/?LinkId=218293)heruntergeladen werden.  
+###  <a name="office"></a>Gewusst wie: Installieren der neuesten Filter für Microsoft Office und andere Microsoft-Dokumenttypen  
+ Diese Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert die neuesten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Wörtertrennungen und -Wortstammerkennungen, aber nicht die neuesten Filter für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office-Dokumente und andere [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Dokumenttypen. Diese Filter sind zum Indizieren von Dokumenten erforderlich, die mit den neuen Versionen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office und anderen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Anwendungen erstellt wurden. Die neuesten Filter können unter [Microsoft Office 2010-Filterpakete](https://www.microsoft.com/download/details.aspx?id=17062)heruntergeladen werden.  
   
   

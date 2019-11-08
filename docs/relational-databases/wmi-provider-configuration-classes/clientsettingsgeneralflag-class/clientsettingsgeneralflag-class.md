@@ -1,5 +1,5 @@
 ---
-title: ClientSettingsGeneralFlag-Klasse | Microsoft-Dokumentation
+title: ClientSettingsGeneralFlag-Klasse
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec778a93c1b82f45f5e75f993bd041ade38b4823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 545c13aaa062c0aa55a72d74c52cf4cc112dc9a5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072463"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660668"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag-Klasse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
