@@ -19,16 +19,15 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 969d4b7218ae7a6b1f04ee75ad95c8ee8ba54690
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c30e6ca03f1d1d4c794d01bd594efd88306410e3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907368"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759043"
 ---
 # <a name="stored-procedures---calling"></a>Aufrufen von gespeicherte Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Eine gespeicherte Prozedur kann 0 oder mehr Parameter haben. Sie kann auch einen Wert zurückgeben: Wenn Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwenden, können die Parameter für eine gespeicherte Prozedur wie folgt übermittelt werden:  
   
@@ -95,7 +94,7 @@ ms.locfileid: "72907368"
   
  Die allgemeine Syntax zum Aufrufen einer Prozedur mit der ODBC CALL-Escapesequenz lautet:  
   
- {[ **? =** ]**Aufrufen von**_procedure_name_[ **(** [*Parameter*] [ **,** [*Parameter*]]... **)** ]}  
+ {[ **? =** ]**aufrufen**_procedure_name_[ **(** [*Parameter*] [ **,** [*Parameter*]]... **)** ]}  
   
  Beispiel:  
   
@@ -123,13 +122,13 @@ ms.locfileid: "72907368"
 ### <a name="transact-sql-execute-statement"></a>'EXECUTE'-Anweisung (Transact-SQL)  
  Die ODBC CALL-Escapesequenz und die RPC-Escapesequenz stellen im Vergleich zur [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md)-Anweisung die bevorzugten Methoden zum Aufrufen einer gespeicherten Prozedur dar. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet den RPC-Mechanismus von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um die Befehls Verarbeitung zu optimieren. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  
   
- Das folgende Beispiel zeigt die **EXECUTE**-Anweisung ([!INCLUDE[tsql](../../../includes/tsql-md.md)]):  
+ Das folgende Beispiel zeigt die [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE **-Anweisung (** ):  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

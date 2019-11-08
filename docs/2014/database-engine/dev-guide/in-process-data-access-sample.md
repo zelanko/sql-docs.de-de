@@ -1,5 +1,5 @@
 ---
-title: In-Process Data Access-Beispiel | Microsoft-Dokumentation
+title: Beispiel für den in-Process-Datenzugriff | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9854218e66d3edfe10f4220a5ac662cccc6f481
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781138"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637741"
 ---
 # <a name="in-process-data-access-sample"></a>Beispiel für In-Process-Datenzugriff
   Das `InProcessDataAccess`-Beispiel enthält eine bestimmte Anzahl von einfachen Funktionen zur Demonstration verschiedener Funktionen des prozessinternen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-CLR-Datenzugriffsanbieters.  
@@ -23,7 +23,7 @@ ms.locfileid: "62781138"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
   
 -   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62781138"
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
--   Wenn Sie nicht-Administrator sind die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, die Sie verwenden, benötigen Sie einen Administrator, die Sie gewähren **CreateAssembly** Berechtigung, um die Installation abzuschließen.  
+-   Wenn Sie kein Administrator für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz sind, die Sie verwenden, müssen Sie über einen Administrator verfügen, der Ihnen **die Berechtigung zum** Abschluss der Installation erteilt.  
   
 ## <a name="building-the-sample"></a>Erstellen des Beispiels  
   
@@ -355,7 +355,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) das Beispiel getestet, hierfür werden die gespeicherten Prozeduren und die Funktion, die in diesem Beispiel definiert.  
+ Im folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) wird das Beispiel getestet, indem die in diesem Beispiel definierten gespeicherten Prozeduren und Funktionen durchgeführt werden.  
   
 ```  
 USE AdventureWorks;  

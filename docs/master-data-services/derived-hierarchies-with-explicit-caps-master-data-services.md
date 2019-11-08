@@ -1,5 +1,5 @@
 ---
-title: Abgeleitete Hierarchien mit expliziten Abschlüssen (Master Data Services) |Microsoft-Dokumentation
+title: Abgeleitete Hierarchien mit expliziten Abschlüssen
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9d62f40807c4e7be3c2e585540dfd79ae85a6228
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c2d28ad9490e4bb9d9a8e30f1ba8356d4a6c7f4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084201"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729333"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>Abgeleitete Hierarchien mit expliziten Abschlüssen (Master Data Services)
 
@@ -48,7 +48,7 @@ ms.locfileid: "68084201"
   
 -   Sie können keine Hierarchieelementberechtigungen an abgeleitete Hierarchien mit expliziten Abschlüssen zuweisen. Wenn Sie der expliziten Hierarchie oder der abgeleiteten Hierarchie einzeln Berechtigungen zuweisen, wirken sich die Berechtigungen auf beide Hierarchien aus.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

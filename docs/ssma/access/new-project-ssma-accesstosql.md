@@ -1,5 +1,5 @@
 ---
-title: Neues Projekt (SSMA) (AccessToSQL) | Microsoft-Dokumentation
+title: New Project (SSMA) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,28 +11,28 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 8828a439e9685529068ab160a44d5a38a5e8555e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e7e854b532040c9a0d9468ad98a7e08048569de
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002450"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632675"
 ---
-# <a name="new-project-ssma-accesstosql"></a>Neues Projekt (SSMA) (AccessToSQL)
-Verwenden der **neues Projekt** um ein neues SSMA-Projekt zu erstellen. Für den Zugriff auf die **neues Projekt** Dialogfeld auf die **Datei** Menü klicken Sie auf **neues Projekt**.  
+# <a name="new-project-ssma-accesstosql"></a>New Project (SSMA) (accesstosql)
+Verwenden Sie das Dialogfeld **Neues Projekt** , um ein neues SSMA-Projekt zu erstellen. Um auf das Dialogfeld **Neues Projekt** zuzugreifen, klicken Sie im Menü **Datei** auf **Neues Projekt**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
 **Name**  
   
-Geben Sie den Namen des Projekts ein. SSMA wird die Erweiterung angefügt.  
+Geben Sie den Namen des Projekts ein. SSMA fügt die Dateierweiterung an.  
   
 **Speicherort**  
   
-Geben Sie an, oder navigieren Sie zum Ordner oder Netzwerkpfad zum Speichern des Projekts.  
+Geben Sie den Ordner oder den Netzwerk Speicherort ein, um das Projekt zu speichern.  
   
 **MigrateTo**  
   
-Wählen Sie eine der Version der Zieldatenbank über den folgenden Liste  
+Wählen Sie eine der Ziel Datenbankversion aus der Liste unten aus.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -47,6 +47,6 @@ Wählen Sie eine der Version der Zieldatenbank über den folgenden Liste
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> Ein neues Projekt 'SQL Azure '-Typ erforderlich ist, SQL Server Native Client (SNAC) Version 10.5 oder den Tabellen oben zum Verknüpfen von Access zu SQL Azure-Datenbank.   
-> Sie erhalten die neueste Version von SNAC aus [Microsoft® SQL Server® 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940).  
+> Ein neues Projekt vom Typ "SQL Azure" erfordert, SQL Server Native Client (SNAC) Version 10,5 oder höher, um Zugriffs Tabellen mit SQL Azure Datenbank zu verknüpfen.   
+> Sie können die neueste Version von SNAC von [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)abrufen.  
   

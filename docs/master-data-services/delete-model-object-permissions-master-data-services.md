@@ -1,5 +1,5 @@
 ---
-title: Löschen von Berechtigungen für Modellobjekte (Master Data Services) | Microsoft-Dokumentation
+title: Löschen von Berechtigungen für Modellobjekte
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fcf00249c322b754fef545ce03a730f127ed79fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ff59241067ad08e0acf738a34d59c59f837abfe
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906279"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728315"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Löschen von Berechtigungen für Modellobjekte (Master Data Services)
 
@@ -27,12 +27,12 @@ ms.locfileid: "67906279"
 
   Löschen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Modellobjektberechtigungen, um erfolgte Zuweisungen zu entfernen.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Benutzer- und Gruppenberechtigungen** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-model-object-permissions"></a>So löschen Sie Modellobjektberechtigungen  
   

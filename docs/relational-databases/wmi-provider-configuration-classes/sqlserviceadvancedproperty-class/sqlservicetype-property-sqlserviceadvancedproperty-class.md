@@ -1,6 +1,6 @@
 ---
-title: SqlServiceType-Eigenschaft (SqlServiceAdvancedProperty-Klasse) | Microsoft-Dokumentation
-ms.custom: ''
+title: SqlServiceType-Eigenschaft (SqlServiceAdvancedProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30b69a61f184738f72fce32920d8aeedd62797eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 59c42bdb98d5ed19ea2d415a85e9d2ccb4aeb8b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139462"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658968"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>SqlServiceType-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68139462"
 object.SetBoolValue(NumValue)  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>Bestandteile  
  *object*  
  Ein Objekt der [SqlServiceAdvancedProperty-Klasse](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) , das eine erweiterte Eigenschaft darstellt.  
   
@@ -54,11 +54,11 @@ object.SetBoolValue(NumValue)
 |*5*|MSSQLServerOLAPService ist der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Dienst.|  
 |*6*|ReportServer ist der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienst.|  
 |*7*|SQLBrowser ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Browser-Dienst.|  
-|*8*|NsService ist die [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] Benachrichtigungsdienst.|  
-|*9*|MSSQLFDLauncher ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Volltext-Volltextfilterdaemon-Startprogrammdienst.|  
-|*10*|SQLPBENGINE ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase-Engine-Dienst.|  
-|*11*|SQLPBDMS ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase-datenverschiebung.|  
-|*12*|MSSQLLaunchpad ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Launchpad-Dienst.|  
+|*8*|NSService ist der [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] Benachrichtigungsdienst.|  
+|*9*|MSSQLFDLauncher ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Volltextfilterdaemon-Start Programm Dienst.|  
+|*10*|Sqlpbengine ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] polybase-Engine-Dienst.|  
+|*11*|Sqlpbdms ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] polybase-Daten Verschiebungs Dienst.|  
+|*12*|Mssqllaunchpad ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Launchpad-Dienst.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

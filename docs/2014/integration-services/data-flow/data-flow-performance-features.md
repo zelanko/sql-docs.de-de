@@ -23,14 +23,14 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828048"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637820"
 ---
-# <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
+# <a name="data-flow-performance-features"></a>Data Flow Performance Features
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
   
 ## <a name="configuring-the-data-flow"></a>Konfigurieren des Datenflusses  
@@ -125,7 +125,7 @@ ms.locfileid: "62828048"
  Verbessern Sie mithilfe der Vorschläge in diesem Abschnitt die Leistung der Transformation für das Aggregieren, für Fuzzysuche, Fuzzygruppierung, Suche, Zusammenführungsjoin und für langsam veränderliche Dimensionen.  
   
 #### <a name="aggregate-transformation"></a>Transformation für das Aggregieren  
- Die Transformation für das Aggregieren enthält die `Keys`-, die `KeysScale`-, die `CountDistinctKeys`- und die `CountDistinctScale`-Eigenschaften. Diese Eigenschaften dienen einer verbesserten Leistung, indem es der Transformation ermöglicht wird, den zum Zwischenspeichern von Daten benötigten Speicher zuzuordnen. Wenn Sie die genaue oder ungefähre Anzahl von Gruppen, von denen kennen Ergebnis erwartet eine **Group by-** Vorgang, der `Keys` und `KeysScale` Eigenschaften, bzw. Wenn Sie die genaue oder ungefähre Anzahl der unterschiedlichen Werte, von denen kennen Ergebnis erwartet eine **Distinct Count** Vorgang, der `CountDistinctKeys` und `CountDistinctScale` Eigenschaften, bzw.  
+ Die Transformation für das Aggregieren enthält die `Keys`-, die `KeysScale`-, die `CountDistinctKeys`- und die `CountDistinctScale`-Eigenschaften. Diese Eigenschaften dienen einer verbesserten Leistung, indem es der Transformation ermöglicht wird, den zum Zwischenspeichern von Daten benötigten Speicher zuzuordnen. Wenn Sie die genaue oder ungefähre Anzahl von Gruppen kennen, die als Ergebnis eines **Group by** -Vorgangs erwartet werden, legen Sie die Eigenschaften des `Keys` bzw. des `KeysScale` fest. Wenn Sie die genaue oder ungefähre Anzahl der unterschiedlichen Werte kennen, die als Ergebnis eines unter **schiedlichen Anzahl** Vorgangs erwartet werden, legen Sie die Eigenschaften des `CountDistinctKeys` und `CountDistinctScale` fest.  
   
  Wenn Sie in einem Datenfluss mehrere Aggregationen erstellen müssen, sollten Sie diese mit einer einzigen Transformation für das Aggregieren erstellen, anstatt mehrere Transformationen zu verwenden. Durch diesen Ansatz wird die Leistung verbessert, wenn eine Aggregation eine Untergruppe einer anderen Aggregation ist, da die Transformation den internen Speicher optimieren kann und die Eingangsdaten nur einmal durchsuchen muss. Wenn eine Aggregation z. B. eine GROUP BY-Klausel und eine AVG-Aggregation verwendet, kann die Leistung dadurch verbessert werden, dass sie in eine Transformation kombiniert werden. Das Ausführen mehrerer Aggregationen innerhalb einer Transformation für das Aggregieren serialisiert jedoch die Aggregationsvorgänge und verbessert daher möglicherweise nicht die Leistung, wenn mehrere Aggregationen unabhängig voneinander berechnet werden müssen.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62828048"
 #### <a name="lookup-transformation"></a>Transformation für Suche  
  Minimieren Sie die Größe der Verweisdaten im Speicher, indem Sie eine SELECT-Anweisung eingeben, die nur die von Ihnen benötigten Spalten durchsucht. Diese Option bietet eine bessere Leistung als die Auswahl einer gesamten Tabelle oder Sicht, wodurch eine große Menge an unnötigen Daten zurückgegeben wird.  
   
-#### <a name="merge-join-transformation"></a>Merge Join Transformation  
+#### <a name="merge-join-transformation"></a>Transformation für Zusammenführungsjoin  
  Der Wert der `MaxBuffersPerInput`-Eigenschaft muss nicht mehr konfiguriert werden, da Microsoft Änderungen vorgenommen hat, die das Risiko einer übermäßigen Arbeitsspeicherbelegung bei der Transformation für Zusammenführungsjoins reduzieren. Dieses Problem trat in einigen Fällen auf, wenn durch die Eingaben des Zusammenführungsjoins unregelmäßige Daten erzeugt wurden.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen  
@@ -143,7 +143,7 @@ ms.locfileid: "62828048"
   
  In der Regel sind die langsamsten Komponenten in der Transformation für langsam veränderliche Dimensionen die Transformationen für OLE DB-Befehl, die UPDATEs für jeweils eine Zeile ausführen. Daher ist die effizienteste Methode zur Verbesserung der Leistung der Transformation für langsam veränderliche Dimensionen das Ersetzen der Transformationen für OLE DB-Befehl. Sie können diese Transformationen durch Zielkomponenten ersetzen, die alle zu aktualisierenden Zeilen in eine Stagingtabelle speichern. Sie können dann einen Task "SQL ausführen" hinzufügen, der für alle Zeilen gleichzeitig ein einzelnes setbasiertes Transact-SQL-UPDATE ausführt.  
   
- Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt „Unique dimension scenario“ im Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt "Unique dimension scenario" im Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)(in Englisch).  
   
 ### <a name="destinations"></a>Ziele  
  Wenn Sie die Leistung von Zielen erhöhen möchten, sollten Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel verwenden und die Leistung des Ziels testen.  
@@ -159,16 +159,16 @@ ms.locfileid: "62828048"
   
  Zum Aktivieren bzw. Deaktivieren der Anzeige von Meldungen auf der Registerkarte **Status** schalten Sie die Option **Debug-Statusbericht** im Menü **SSIS** um. Beim Ausführen eines komplexen Pakets in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]kann eine Deaktivierung der Statusberichterstellung zur Verbesserung der Leistung beitragen.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  **Artikel und Blogbeiträge**  
   
--   Technischer Artikel, [SQL Server 2005 Integration Services: Eine Leistungsstrategie](https://go.microsoft.com/fwlink/?LinkId=98899), auf technet.microsoft.com  
+-   Technischer Artikel [SQL Server 2005 Integration Services: Eine Leistungsstrategie](https://go.microsoft.com/fwlink/?LinkId=98899)auf technet.microsoft.com  
   
--   Technischer Artikel, [Integration Services: Leistungsoptimierungstechniken](https://go.microsoft.com/fwlink/?LinkId=98900), auf technet.microsoft.com  
+-   Technischer Artikel [Integration Services: Leistungsoptimierungstechniken](https://go.microsoft.com/fwlink/?LinkId=98900)auf technet.microsoft.com  
   
 -   Technischer Artikel [Erhöhen des Durchsatzes von Pipelines durch Aufteilen synchroner Transformationen in mehrere Tasks](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)auf sqlcat.com  
   

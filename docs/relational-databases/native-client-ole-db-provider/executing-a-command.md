@@ -17,22 +17,21 @@ ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34d27b0de957725f59b70764bce2a3cd53f240c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4c641495f2232bd0710e810716459d29a7f357a
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050923"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761739"
 ---
 # <a name="executing-a-command"></a>Ausführen eines Befehls
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Nachdem die Verbindung mit einer Datenquelle hergestellt wurde, ruft der Consumer die **IDBCreateSession:: CreateSession** Methode, um eine Sitzung zu erstellen. Die Sitzung fungiert als Befehl, Rowset oder Transaktionsfactory.  
+  Nachdem die Verbindung mit einer Datenquelle hergestellt wurde, ruft der Consumer die **idbkreatesession:: | atesession** -Methode auf, um eine Sitzung zu erstellen. Die Sitzung fungiert als Befehl, Rowset oder Transaktionsfactory.  
   
  Der Consumer fordert zum direkten Arbeiten mit einzelnen Tabellen oder Indizes die Schnittstelle **IOpenRowset** an. Die Methode **IOpenRowset::OpenRowset** öffnet und gibt ein Rowset zurück, das alle Zeilen aus einer einzelnen Basistabelle oder einem einzelnen Index enthält.  
   
- Der Consumer fordert zum Ausführen eines Befehls (z.B. SELECT \* FROM Authors) die Schnittstelle **IDBCreateCommand** an. Der Consumer kann Ausführen der **IDBCreateCommand:: CreateCommand** Methode, um ein Befehlsobjekt zu erstellen, und fordern Sie für die **ICommandText** Schnittstelle. Die **ICommandText:: SetCommandText** Methode wird verwendet, um den Befehl anzugeben, die ausgeführt werden soll.  
+ Der Consumer fordert zum Ausführen eines Befehls (z.B. SELECT \* FROM Authors) die Schnittstelle **IDBCreateCommand** an. Der Consumer kann die **idbkreatecommand:: featecommand** -Methode ausführen, um ein Befehls Objekt zu erstellen und die **ICommandText** -Schnittstelle anzufordern. Die **ICommandText:: SetCommandText** -Methode wird verwendet, um den Befehl anzugeben, der ausgeführt werden soll.  
   
  Der **Execute**-Befehl wird zum Ausführen des Befehls verwendet. Bei dem Befehl kann es sich um jede SQL-Anweisung oder jeden Prozedurnamen handeln. Nicht alle Befehle erzeugen ein Resultsetobjekt (Rowset). Befehle, wie z. B. SELECT * FROM Authors, erzeugen ein Resultset.  
   

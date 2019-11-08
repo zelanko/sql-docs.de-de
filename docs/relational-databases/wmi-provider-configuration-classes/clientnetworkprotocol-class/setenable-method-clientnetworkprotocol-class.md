@@ -1,6 +1,6 @@
 ---
-title: SetEnable-Methode (ClientNetworkProtocol-Klasse) | Microsoft-Dokumentation
-ms.custom: ''
+title: Abrechenbare Methode (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2db233072eac18e0166eff524308a7ff0782eebe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3f92e3b417b3f669cc621e2d29c8ece24183af4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040850"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660116"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable-Methode (ClientNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68040850"
 object.SetEnableMethod()  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>Bestandteile  
  *object*  
  A [ClientNetworkProtocol-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) , das das vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Client verwendete Netzwerkprotokoll darstellt.  
   
@@ -45,6 +45,6 @@ object.SetEnableMethod()
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Konfigurieren von Client Netzwerkprotokollen und Netzwerk Bibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

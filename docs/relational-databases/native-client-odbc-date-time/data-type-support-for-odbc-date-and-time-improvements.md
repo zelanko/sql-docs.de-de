@@ -1,5 +1,5 @@
 ---
-title: Datentypunterstützung für ODBC-Datum und Uhrzeit-Verbesserungen | Microsoft-Dokumentation
+title: Datentyp Unterstützung für ODBC-Datums-und Uhrzeit Verbesserungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9979de414bb044e23aa01d5ce1be1be6daa83c62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed58bf3db95d9989bedf2826cdd722206bfb4d51
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030515"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784001"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Datentypunterstützung für ODBC-Verbesserungen bei Datum und Uhrzeit
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Dieses Thema liefert Informationen über ODBC-Typen, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen date und time unterstützen.  
   
@@ -38,10 +37,10 @@ ms.locfileid: "68030515"
   
 |SQL Server-Datentyp|SQL-Datentyp|Wert|  
 |--------------------------|-------------------|-----------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
-|Uhrzeit|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
+|Datum|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (SQL. h)<br /><br /> 9 (sqlext. h)|  
+|Zeit|SQL_SS_TIME2|-154 (sqlncli. h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (sqlncli.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
   
@@ -61,18 +60,18 @@ ms.locfileid: "68030515"
   
 |SQL Server-Datentyp|ODBC-Datentyp|Zeichenfolgenformat für Clientkonvertierungen|  
 |--------------------------|--------------------|------------------------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu drei Sekundenbruchteilziffern für Datetime.|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu drei Sekundenbruchteilziffern für Datetime.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> Dieser Datentyp verfügt über eine Genauigkeit von einer Minute. Die zweite Komponente ist 0 (null) auf Ausgabe und wird auf Eingabe vom Server gerundet.|  
-|date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
-|Uhrzeit|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'Yyyy-mm-Dd hh: mm: [.9999999]'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
+|Datum|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
+|Zeit|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|"yyyy-mm-dd hh: mm: SS [. 9999999]"<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
   
  Für date/time-Literale gibt es keine Änderungen der ODBC-Escapesequenzen.  
   
- Sekundenbruchteile in Ergebnissen immer verwenden Sie einen Punkt (.), und keinen Doppelpunkt (:).  
+ Sekundenbruchteile in Ergebnissen verwenden immer einen Punkt (.) anstelle eines Doppelpunkts (:).  
   
- Für Anwendungen zurückgegebene Zeichenfolgenwerte sind immer die gleiche Länge für eine bestimmte Spalte. Die Komponenten Jahr, Monat, Tag, Stunde, Minute und Sekunde werden mit führenden Nullen bis zur maximalen Breite aufgefüllt. Zudem befindet sich zwischen Datum und Uhrzeit in datetime-Werten ein Leerzeichen. Auch zwischen dem Uhrzeit- und Zeitzonenoffset in einem datetimeoffset-Wert steht ein Leerzeichen. Einem Zeitzonenoffset wird immer ein Zeichen vorangestellt. Wenn der Offset 0 (null) ist, ist das Zeichen ein Plus (+). Sekundenbruchteile werden bei Bedarf bis zur definierten Genauigkeit für die Spalte mit nachfolgenden Nullen aufgefüllt. Für datetime-Spalten gibt es drei Ziffern für Sekundenbruchteile. Für smalldatetime-Spalten gibt es keine Ziffern für Sekundenbruchteile, und die Sekunden sind immer 0 (null).  
+ Zeichen folgen Werte, die an Anwendungen zurückgegeben werden, sind für eine bestimmte Spalte immer dieselbe Länge. Die Komponenten Jahr, Monat, Tag, Stunde, Minute und Sekunde werden mit führenden Nullen bis zur maximalen Breite aufgefüllt. Zudem befindet sich zwischen Datum und Uhrzeit in datetime-Werten ein Leerzeichen. Auch zwischen dem Uhrzeit- und Zeitzonenoffset in einem datetimeoffset-Wert steht ein Leerzeichen. Einem Zeitzonenoffset wird immer ein Zeichen vorangestellt. Wenn der Offset 0 (null) ist, ist das Zeichen ein Plus (+). Sekundenbruchteile werden bei Bedarf bis zur definierten Genauigkeit für die Spalte mit nachfolgenden Nullen aufgefüllt. Für datetime-Spalten gibt es drei Ziffern für Sekundenbruchteile. Für smalldatetime-Spalten gibt es keine Ziffern für Sekundenbruchteile, und die Sekunden sind immer 0 (null).  
   
  Eine leere Zeichenfolge ist kein gültiges Datum-/Uhrzeitliteral und stellt keinen NULL-Wert dar. Der Versuch, eine leere Zeichenfolge in einen date/time-Wert zu konvertieren, führt zum Fehler SQLSTATE 22018 und der Meldung "Ungültiger Zeichenwert für Konvertierungsangabe".  
   
@@ -109,7 +108,7 @@ ms.locfileid: "68030515"
   
 -   SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
-### <a name="sqlsstime2struct"></a>SQL_SS_TIME2_STRUCT  
+### <a name="sql_ss_time2_struct"></a>SQL_SS_TIME2_STRUCT  
  Diese Struktur wird auf beiden Betriebssystemen (32 Bit und 64 Bit) bis 12 Byte aufgefüllt.  
   
 ```  
@@ -121,7 +120,7 @@ typedef struct tagSS_TIME2_STRUCT {
 } SQL_SS_TIME2_STRUCT;  
 ```  
   
-### <a name="sqlsstimestampoffsetstruct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
+### <a name="sql_ss_timestampoffset_struct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
 ```  
 typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {  
@@ -137,9 +136,9 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- Wenn die **Timezone_hour** negativ ist, die **Timezone_minute** darf negativ sein oder 0 (null). Wenn die **Timezone_hour** positiv ist, werden die **Timezone_minute** muss positiv sein oder 0 (null). Wenn die **Timezone_hour** ist 0 (null), die **Timezone_minute** möglicherweise einen beliebigen Wert im Bereich von-59 bis + 59 annehmen.  
+ Wenn die **timezone_hour** negativ ist, muss die **timezone_minute** negativ oder 0 (null) sein. Wenn die **timezone_hour** positiv ist, muss die **timezone_minute** positiv oder 0 (null) sein. Wenn die **timezone_hour** 0 (null) ist, kann die **timezone_minute** einen beliebigen Wert im Bereich von-59 bis + 59 aufweisen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Verbesserungen &#40;bei Datum und Uhrzeit in ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

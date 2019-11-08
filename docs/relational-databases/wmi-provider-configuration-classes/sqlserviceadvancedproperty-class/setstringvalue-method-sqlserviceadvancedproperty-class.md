@@ -1,5 +1,5 @@
 ---
-title: SetStringValue-Methode (SqlServiceAdvancedProperty-Klasse) | Microsoft-Dokumentation
+title: SetStringValue-Methode (SqlServiceAdvancedProperty-Klasse)
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68eaccce3d82ddb0085a73c6fbbce751b69e245a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da797051ba3ce9c8a0d818388c999e89c7300e9f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139542"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659504"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue-Methode (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68139542"
 object.SetStringValue(StrValue)  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>Bestandteile  
  *object*  
  Ein Objekt der [SqlServiceAdvancedProperty-Klasse](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) , das eine erweiterte Eigenschaft darstellt.  
   

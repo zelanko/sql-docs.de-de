@@ -1,5 +1,5 @@
 ---
-title: Parameter und Rowsetmetadaten | Microsoft-Dokumentation
+title: Parameter-und Rowsetmetadaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d661072ae999721c258b2fd85b53665e2104b2f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 641815e90080f7fce0499a3682e641892d6140bf
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106923"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73773381"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadaten – Parameter und Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Dieses Thema enthält Informationen über den folgenden Typ und die folgenden Typelemente in Verbindung mit den OLE DB-Datums- und Uhrzeitverbesserungen.  
   
@@ -41,12 +40,12 @@ ms.locfileid: "68106923"
   
 |Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Set|  
+|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
+|Uhrzeit|DBTYPE_DBTIME2|10|8, 10..16|0..7|Legen Sie|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.. 27|0..7|Legen Sie|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.. 34|0..7|Legen Sie|  
   
  Beachten Sie, dass in einigen Fällen Wertbereiche nicht kontinuierlich sind. Der Grund dafür ist das Hinzufügen eines Dezimaltrennzeichens, wenn die Genauigkeit von Bruchteilen größer als 0 (NULL) ist.  
   
@@ -58,24 +57,24 @@ ms.locfileid: "68106923"
 |*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|*pwszDataSourceType*<br /><br /> (OLE DB-generisch)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Wird ignoriert.|  
-|date|DBTYPE_DBDATE|6|Wird ignoriert.|  
+|Datum|DBTYPE_DBDATE|6|Wird ignoriert.|  
 ||DBTYPE_DBTIME|10|Wird ignoriert.|  
-|time|DBTYPE_DBTIME2|10|0..7|  
+|Uhrzeit|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Wird ignoriert.|  
-|DATETIME||16|Wird ignoriert.|  
+|datetime||16|Wird ignoriert.|  
 |datetime2 oder DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- Die *bPrecision* Parameter wird ignoriert.  
+ Der *bPrecision* -Parameter wird ignoriert.  
   
- Beim Senden von Daten an den Server wird DBPARAMFLAGS_SS_ISVARIABLESCALE ignoriert. Anwendungen können die Verwendung von älteren TDS-Typen (Tabular Data Stream) durch Verwenden der anbieterspezifischen Typnamen **datetime** und **smalldatetime** erzwingen. Bei einer Verbindung mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Servern (oder späteren Versionen) wird das Format **datetime2** verwendet, und eine implizite Serverkonvertierung wird durchgeführt, sofern erforderlich, wenn der Typname **datetime2** oder DBTYPE_DBTIMESTAMP lautet. *bScale* wird ignoriert, wenn der anbieterspezifische Typname " **" DateTime "** "oder"**Smalldatetime**" verwendet werden. Andernfalls müssen Anwendungen sicherstellen, die *bScale* korrekt festgelegt ist. Anwendungen, die ein Upgrade von MDAC und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] verwenden "DBTYPE_DBTIMESTAMP" fehl schlägt, wenn sie nicht festlegen *bScale* ordnungsgemäß. Bei Verbindung mit Serverinstanzen vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tritt für einen anderen *bscale*-Wert als 0 oder 3 mit DBTYPE_DBTIMESTAMP ein Fehler auf und E_FAIL wird zurückgegeben.  
+ Beim Senden von Daten an den Server wird DBPARAMFLAGS_SS_ISVARIABLESCALE ignoriert. Anwendungen können die Verwendung von älteren TDS-Typen (Tabular Data Stream) durch Verwenden der anbieterspezifischen Typnamen **datetime** und **smalldatetime** erzwingen. Bei einer Verbindung mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Servern (oder späteren Versionen) wird das Format **datetime2** verwendet, und eine implizite Serverkonvertierung wird durchgeführt, sofern erforderlich, wenn der Typname **datetime2** oder DBTYPE_DBTIMESTAMP lautet. *bScale* wird ignoriert, wenn die anbieterspezifischen Typnamen "**DateTime**" oder "**smalldatetime**" verwendet werden. Andernfalls müssen die Anwendungen sicherstellen, dass *bScale* ordnungsgemäß festgelegt ist. Anwendungen, die von MDAC aktualisiert wurden, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], die "DBTYPE_DBTIMESTAMP" verwenden, schlagen fehl, wenn *bScale* nicht ordnungsgemäß festgelegt wird. Bei Verbindung mit Serverinstanzen vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tritt für einen anderen *bscale*-Wert als 0 oder 3 mit DBTYPE_DBTIMESTAMP ein Fehler auf und E_FAIL wird zurückgegeben.  
   
- ICommandWithParameters:: SetParameterInfo nicht aufgerufen wird, geben Sie nach der Anbieter Imples den Server aus dem Bindungstyp gemäß IAccessor:: CreateAccessor wie folgt:  
+ Wenn ICommandWithParameters:: SetParameterInfo nicht aufgerufen wird, wird der Servertyp vom Anbieter wie folgt aus dem Bindungstyp in IAccessor::-Eigenschaftenaccessor festgelegt:  
   
 |Bindungstyp|*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|date|  
+|DBTYPE_DBDATE|Datum|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -86,12 +85,12 @@ ms.locfileid: "68106923"
   
 |Spaltentyp|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
+|Uhrzeit|DBTYPE_DBTIME2|10|8, 10..16|0..7|Legen Sie|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Legen Sie|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Legen Sie|  
   
  In DBCOLUMN_FLAGS hat DBCOLUMNFLAGS_ISFIXEDLENGTH für Datum-/Uhrzeit-Typen stets den Wert TRUE, und die folgenden Flags haben immer den Wert FALSE:  
   
@@ -120,12 +119,12 @@ ms.locfileid: "68106923"
   
 |Parametertyp|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
+|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Legen Sie|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Legen Sie|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Legen Sie|  
   
  In *dwFlags* hat DBCOLUMNFLAGS_ISFIXEDLENGTH für Datum-/Uhrzeit-Typen stets den Wert TRUE, und die folgenden Flags haben immer den Wert FALSE:  
   

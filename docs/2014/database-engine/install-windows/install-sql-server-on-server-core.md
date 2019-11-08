@@ -10,52 +10,52 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2d6d5bd9593c70ae09b042b8218bd8a2c7261a3
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: e3e244b2c4892d725e8e3ddf684b55a224138a50
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72797894"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637671"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Installieren von SQL Server 2014 unter Server Core
-  Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)]installieren. Dieses Thema enthält setupspezifische Details zum Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf Server Core.  
+  Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)] installieren. Dieses Thema enthält setupspezifische Details zum Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf Server Core.  
   
  Die Server Core-Installationsoption für das Betriebssystem [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)] stellt eine minimale Umgebung zum Ausführen von bestimmten Serverrollen bereit. Dies hilft, Wartung und Verwaltungsanforderungen und die Angriffsfläche für jene Serverrollen zu reduzieren. Weitere Informationen zu Server Core, die auf [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]implementiert sind, finden Sie unter [Server Core für Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) (https://go.microsoft.com/fwlink/?LinkId=202439). Weitere Informationen zur Implementierung von Server Core unter [!INCLUDE[win8srv](../../includes/win8srv-md.md)] finden Sie unter [Server Core für Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx)).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
   
 |Anforderung|So führen Sie die Installation durch|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|In der Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 und [!INCLUDE[win8srv](../../includes/win8srv-md.md)]enthalten. Wenn nicht aktiviert, aktiviert Setup es standardmäßig.<br /><br /> Es ist nicht möglich, die Versionen 2.0, 3.0 und 3.5 parallel auf einem Computer auszuführen. Wenn Sie .NET Framework 3.5 SP1 installieren, erhalten Sie die 2.0- und 3.0-Ebenen automatisch.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|In der Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 und [!INCLUDE[win8srv](../../includes/win8srv-md.md)] enthalten. Wenn nicht aktiviert, aktiviert Setup es standardmäßig.<br /><br /> Es ist nicht möglich, die Versionen 2.0, 3.0 und 3.5 parallel auf einem Computer auszuführen. Wenn Sie .NET Framework 3.5 SP1 installieren, erhalten Sie die 2.0- und 3.0-Ebenen automatisch.|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Vollständiges Profil|In der Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 enthalten. Wenn nicht aktiviert, aktiviert Setup es standardmäßig.<br /><br /> Auf einem Computer mit einem Windows-Serverbetriebssystem müssen Sie .NET Framework 3.5 SP1 herunterladen und installieren, bevor Sie Setup ausführen, um von .NET 3.5 SP1 abhängige Komponenten installieren zu können.<br /><br /> Weitere Informationen zu den Empfehlungen und Anleitungen zum Abrufen und Aktivieren von .NET Framework 3,5 in [!INCLUDE[win8srv](../../includes/win8srv-md.md)]finden Sie unter [Überlegungen zur Bereitstellung von Microsoft .NET Framework 3,5](https://msdn.microsoft.com/library/windows/hardware/hh975396) (https://msdn.microsoft.com/library/windows/hardware/hh975396).|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core-Profil|Für alle Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] außer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]installiert Setup das [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core-Profil als erforderliche Komponente.<br /><br /> Laden Sie für [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]das [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core-Profil von [Microsoft .NET Framework 4 (eigenständiges Installationsprogramm) für Server Core](https://go.microsoft.com/fwlink/?LinkId=220467) (https://go.microsoft.com/fwlink/?LinkId=220467), und installieren Sie es, bevor Sie mit dem Setup fortfahren.|  
-|Windows Installer 4.5|Im Lieferumfang der Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 und [!INCLUDE[win8srv](../../includes/win8srv-md.md)]enthalten.|  
-|Windows PowerShell 2.0|Im Lieferumfang der Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 und [!INCLUDE[win8srv](../../includes/win8srv-md.md)]enthalten.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core-Profil|Für alle Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] außer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] installiert Setup das [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core-Profil als erforderliche Komponente.<br /><br /> Laden Sie für [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]das [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core-Profil von [Microsoft .NET Framework 4 (eigenständiges Installationsprogramm) für Server Core](https://www.microsoft.com/download/details.aspx?id=17718) (https://www.microsoft.com/download/details.aspx?id=17718), und installieren Sie es, bevor Sie mit dem Setup fortfahren.|  
+|Windows Installer 4.5|Im Lieferumfang der Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 und [!INCLUDE[win8srv](../../includes/win8srv-md.md)] enthalten.|  
+|Windows PowerShell 2.0|Im Lieferumfang der Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 und [!INCLUDE[win8srv](../../includes/win8srv-md.md)] enthalten.|  
   
 ##  <a name="BK_SupportedFeatures"></a> Unterstützte Funktionen  
- In der folgenden Tabelle finden Sie die Funktionen, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bei einer Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 und [!INCLUDE[win8srv](../../includes/win8srv-md.md)]unterstützt werden.  
+ In der folgenden Tabelle finden Sie die Funktionen, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bei einer Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 und [!INCLUDE[win8srv](../../includes/win8srv-md.md)] unterstützt werden.  
   
 |Funktion|Supported|  
 |-------------|---------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|Benutzerkontensteuerung|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation|Benutzerkontensteuerung|  
-|Volltextsuche|Benutzerkontensteuerung|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Benutzerkontensteuerung|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|nein|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|nein|  
-|Konnektivität der Clienttools|Benutzerkontensteuerung|  
-|Integration Services Server<sup>[1]</sup>|Benutzerkontensteuerung|  
-|Clienttools-Abwärtskompatibilität|nein|  
-|Clienttools SDK|nein|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation|nein|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|ja|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation|ja|  
+|Volltextsuche|ja|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|ja|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Nein|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|Nein|  
+|Konnektivität der Clienttools|ja|  
+|Integration Services Server<sup>[1]</sup>|ja|  
+|Clienttools-Abwärtskompatibilität|Nein|  
+|Clienttools SDK|Nein|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation|Nein|  
 |Verwaltungstools - Einfach|Nur Remote<sup>[2]</sup>|  
 |Verwaltungstools – Vollständig|Nur Remote<sup>[2]</sup>|  
-|Distributed Replay Controller|nein|  
+|Distributed Replay Controller|Nein|  
 |Distributed Replay-Client|Nur Remote<sup>[2]</sup>|  
-|SQL Client Connectivity SDK|Benutzerkontensteuerung|  
+|SQL Client Connectivity SDK|ja|  
 |Microsoft Sync Framework|Ja<sup>[3]</sup>|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|nein|  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|nein|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Nein|  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|Nein|  
   
  <sup>[1]</sup> Weitere Informationen zum neuen Integration Services-Server und dessen Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]finden Sie unter [Integration Services &#40;SSIS&#41; -Server](../../integration-services/catalog/integration-services-ssis-server-and-catalog.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "72797894"
  <sup>[3]</sup> Microsoft Sync Framework ist nicht im [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installationspaket enthalten. Sie können die geeignete Sync Framework-Version von diesem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) Seite herunterladen und auf einem Computer installieren, auf dem die Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)]ausgeführt wird.  
   
 ## <a name="supported-scenario-matrix"></a>Matrix unterstützter Szenarien  
- In der folgenden Tabelle wird die Matrix unterstützter Szenarien zum Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf einer Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 und [!INCLUDE[win8srv](../../includes/win8srv-md.md)]angezeigt.  
+ In der folgenden Tabelle wird die Matrix unterstützter Szenarien zum Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf einer Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 und [!INCLUDE[win8srv](../../includes/win8srv-md.md)] angezeigt.  
   
 |||  
 |-|-|  
@@ -79,12 +79,12 @@ ms.locfileid: "72797894"
  In Server Core-Installationen werden Upgrades von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt.  
   
 ## <a name="installation"></a>Installation  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt kein Setup mit dem Installations-Assistenten unter dem Server Core-Betriebssystem. Beim Installieren unter Server Core unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup mithilfe des /Q-Parameters den vollständigen stillen Modus oder mithilfe des /QS-Parameters den einfachen stillen Modus. Weitere Informationen finden Sie unter [Installieren von SQL Server 2014 über die Eingabeaufforderung](install-sql-server-from-the-command-prompt.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt kein Setup mit dem Installations-Assistenten unter dem Server Core-Betriebssystem. Beim Installieren unter Server Core unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup mithilfe des /Q-Parameters den vollständigen stillen Modus oder mithilfe des /QS-Parameters den einfachen stillen Modus. Weitere Informationen finden Sie unter [Installieren von SQL Server 2014 über die Eingabeaufforderung](install-sql-server-from-the-command-prompt.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann nicht parallel mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer installiert werden, auf dem [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core ausgeführt wird.  
   
- Unabhängig von der Installationsmethode ist es erforderlich, dass Sie den Softwarelizenzbedingungen als Einzelperson oder im Auftrag einer juristischen Person zustimmen, sofern die Verwendung der Software in keiner separaten Vereinbarung geregelt ist, z. B. einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Volumenlizenzvertrag oder einem Vertrag eines Drittanbieters mit einem ISV oder OEM.  
+ Unabhängig von der Installationsmethode ist es erforderlich, dass Sie den Softwarelizenzbedingungen als Einzelperson oder im Auftrag einer juristischen Person zustimmen, sofern die Verwendung der Software in keiner separaten Vereinbarung geregelt ist, z. B. einem [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Volumenlizenzvertrag oder einem Vertrag eines Drittanbieters mit einem ISV oder OEM.  
   
  Die Lizenzbedingungen werden in der Setup-Benutzeroberfläche angezeigt, damit Sie diese lesen und akzeptieren können. Unbeaufsichtigte Installationen (mit dem /Q-Parameter oder /QS-Parameter) müssen den /IACCEPTSQLSERVERLICENSETERMS-Parameter enthalten. Sie können die Lizenzbedingungen unter [Microsoft-Software-Lizenzbedingungen](https://go.microsoft.com/fwlink/?LinkId=148209)in einer separaten Kopie lesen.  
   
@@ -95,10 +95,10 @@ ms.locfileid: "72797894"
   
 ### <a name="feature-parameters"></a>Funktionsparameter  
   
-|Funktionsparameter|Description|  
+|Funktionsparameter|Beschreibung|  
 |-----------------------|-----------------|  
 |SQLENGINE|Installiert nur [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
-|-Replikation|Installiert die Replikationskomponente und das [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|REPLICATION|Installiert die Replikationskomponente und das [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |FULLTEXT|Installiert die FullText-Komponente und das [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |AS|Installiert alle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Komponenten.|  
 |IS|Installiert alle [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten.|  
@@ -106,7 +106,7 @@ ms.locfileid: "72797894"
   
  Vergleichen Sie die folgenden Beispiele für die Verwendung von Funktionsparametern:  
   
-|Parameter und Werte|Description|  
+|Parameter und Werte|Beschreibung|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|Installiert nur [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |/FEATURES=SQLEngine,FullText|Installiert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] und Volltext.|  
@@ -130,7 +130,7 @@ ms.locfileid: "72797894"
   
     -   Installieren von [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-         Im folgenden Beispiel wird gezeigt, wie eine neue eigenständige Instanz, die das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]einschließt, installiert wird:  
+         Im folgenden Beispiel wird gezeigt, wie eine neue eigenständige Instanz, die das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] einschließt, installiert wird:  
   
         ```  
         ; ssNoVersion Configuration File  
@@ -263,9 +263,9 @@ ms.locfileid: "72797894"
          Wenn die Datei DefaultSetup.ini nicht vorhanden ist, können Sie sie erstellen und sie in die Ordner \x86 und \x64 auf der Stammebene der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellmedien kopieren.  
   
 ## <a name="configuring-remote-access-of-includessnoversionincludesssnoversion-mdmd-running-on-server-core"></a>Konfigurieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Remotezugriff bei einer Server Core-Installation  
- Führen Sie die unten beschriebenen Aktionen aus, um den Remotezugriff auf eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz zu konfigurieren, die auf einer Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)]ausgeführt wird.  
+ Führen Sie die unten beschriebenen Aktionen aus, um den Remotezugriff auf eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Instanz zu konfigurieren, die auf einer Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)] ausgeführt wird.  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Aktivieren Sie Remoteverbindungen auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Aktivieren von Remoteverbindungen auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Um Remoteverbindungen zu aktivieren, verwenden Sie SQLCMD.exe lokal, und führen Sie die folgenden Anweisungen für die Server Core-Instanz aus:  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -289,7 +289,7 @@ ms.locfileid: "72797894"
  Um Ausnahmen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zugriff in der Windows-Firewall zu erstellen, führen Sie die in [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)angegebenen Schritte aus.  
   
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Aktivieren von TCP/IP auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Das TCP/IP-Protokoll kann durch Windows PowerShell für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf Server Core aktiviert werden. Führen Sie die folgenden Schritte aus:  
+ Das TCP/IP-Protokoll kann durch Windows PowerShell für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz auf Server Core aktiviert werden. Führen Sie die folgenden Schritte aus:  
   
 1.  Starten Sie den Task-Manager auf dem Computer, auf dem [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core ausgeführt wird.  
   
@@ -311,7 +311,7 @@ $Tcp
 ```  
   
 ## <a name="uninstallation"></a>Deinstallation  
- Nachdem Sie sich an einem Computer angemeldet haben, auf dem [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core ausgeführt wird, haben Sie eine beschränkte Desktopumgebung mit einer Administratoreingabeaufforderung. Sie können die Deinstallation einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]mithilfe dieser Eingabeaufforderung initiieren. Um eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu deinstallieren, starten Sie die Deinstallation im vollständigen stillen Modus mit dem /Q-Parameter oder im stillen einfachen Modus mit dem /QS-Parameter von der Eingabeaufforderung aus. Der /QS-Parameter zeigt den Status durch die Benutzeroberfläche an, akzeptiert jedoch keine Eingabe. /Q gibt an, dass Setup ohne Benutzeroberfläche in einem stillen Modus ausgeführt wird.  
+ Nachdem Sie sich an einem Computer angemeldet haben, auf dem [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core ausgeführt wird, haben Sie eine beschränkte Desktopumgebung mit einer Administratoreingabeaufforderung. Sie können die Deinstallation einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe dieser Eingabeaufforderung initiieren. Um eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu deinstallieren, starten Sie die Deinstallation im vollständigen stillen Modus mit dem /Q-Parameter oder im stillen einfachen Modus mit dem /QS-Parameter von der Eingabeaufforderung aus. Der /QS-Parameter zeigt den Status durch die Benutzeroberfläche an, akzeptiert jedoch keine Eingabe. /Q gibt an, dass Setup ohne Benutzeroberfläche in einem stillen Modus ausgeführt wird.  
   
  So deinstallieren Sie eine vorhandene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -328,7 +328,7 @@ setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 > 2.  Klicken Sie auf der Registerkarte **Anwendungen** auf **Neuer Task**.  
 > 3.  Geben Sie im Dialogfeld **Neuen Task erstellen** im Feld **Öffnen** den Wert **cmd** ein, und [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Installieren Sie SQL Server 2014 mithilfe einer Konfigurationsdatei](install-sql-server-using-a-configuration-file.md)   
  [Installieren Sie SQL Server 2014 von der Eingabeaufforderung](install-sql-server-from-the-command-prompt.md)   
  [Von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

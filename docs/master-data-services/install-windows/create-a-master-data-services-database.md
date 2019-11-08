@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Master Data Services-Datenbank | Microsoft-Dokumentation
+title: Erstellen einer Master Data Services-Datenbank
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b94e7e34bb53d15bbb7466a5ff3e32df634e0f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945040"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728116"
 ---
 # <a name="create-a-master-data-services-database"></a>Erstellen einer Master Data Services-Datenbank
 
@@ -23,7 +23,7 @@ ms.locfileid: "67945040"
 
   Erstellen Sie eine [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank, wenn Sie zur Unterstützung der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung und des [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Webdiensts eine neuen Datenbank benötigen.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
   
 -   Weitere Informationen zu den Anforderungen für den Computer, auf dem die Datenbank gehostet wird, finden Sie unter [Datenbankanforderungen &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   

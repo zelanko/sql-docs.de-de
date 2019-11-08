@@ -14,52 +14,51 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67fb8dafdabb4a9a9df60c4592f206c9106224ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aec817b4ea5ada840ce7fe843a42f636b7494219
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115252"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787767"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLBindParameter** können beseitigen der Aufwand der Datenkonvertierung, wenn verwendet, um das Bereitstellen von Daten für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber, was zu deutlichen Leistungszuwachs für sowohl die Client- und Serverkomponenten von Anwendungen. Zu den weiteren Vorteilen gehören geringere Verluste der Genauigkeit, wenn ungefähre numerische Datentypen eingefügt oder aktualisiert werden.  
+  **SQLBindParameter** kann die Last der Datenkonvertierung eliminieren, wenn Sie zum Bereitstellen von Daten für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwendet wird. Dies führt zu erheblichen Leistungssteigerungen bei den Client-und Serverkomponenten von Anwendungen. Zu den weiteren Vorteilen gehören geringere Verluste der Genauigkeit, wenn ungefähre numerische Datentypen eingefügt oder aktualisiert werden.  
   
 > [!NOTE]  
->  Beim Einfügen von **Char** und **Wchar** Daten in ein Image-Spalte, die Größe des übergebenen Daten vom Typ verwendet werden, im Gegensatz zu der Größe der Daten nach der Konvertierung in ein binäres Format.  
+>  Wenn Sie **char** -und **WCHAR** -Typdaten in eine Image-Spalte einfügen, wird die Größe der Daten, die in der Spalte übermittelt werden, anstelle der Größe der Daten nach der Konvertierung in ein binäres Format verwendet.  
   
  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber einen Fehler in einem einzelnen Arrayelement eines Parameterarrays entdeckt, setzt der Treiber die Ausführung der Anweisung für die verbleibenden Arrayelemente fort. Wenn die Anwendung ein Array mit Parameterstatuselementen für die Anweisung gebunden hat, können die Zeilen der Parameter, die Fehler generieren, aus dem Array ermittelt werden.  
   
  Wenn Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client-ODBC-Treiber verwenden, geben Sie SQL_PARAM_INPUT an, wenn Eingabeparameter gebunden werden. Geben Sie nur SQL_PARAM_OUTPUT oder SQL_PARAM_INPUT_OUTPUT an, wenn mit dem OUTPUT-Schlüsselwort definierte gespeicherte Prozedurparameter gebunden werden.  
   
- [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) nicht zuverlässig mit ist der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber, wenn ein Arrayelement eines Arrays von gebundenen Parametern einen Fehler bei der anweisungsausführung verursacht hat. Das ODBC-Anweisungsattribut SQL_ATTR_PARAMS_PROCESSED_PTR meldet die Anzahl von Zeilen, die vor dem Auftreten des Fehler verarbeitet wurden. Die Anwendung kann dann das Parameterstatusarray durchlaufen, um ggf. die Anzahl erfolgreich verarbeiteter Anweisungen zu ermitteln.  
+ [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) ist mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unzuverlässig, wenn ein Array Element eines gebundenen Parameter Arrays einen Fehler bei der Ausführung der Anweisung verursacht. Das ODBC-Anweisungsattribut SQL_ATTR_PARAMS_PROCESSED_PTR meldet die Anzahl von Zeilen, die vor dem Auftreten des Fehler verarbeitet wurden. Die Anwendung kann dann das Parameterstatusarray durchlaufen, um ggf. die Anzahl erfolgreich verarbeiteter Anweisungen zu ermitteln.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>Binden von Parametern für SQL-Zeichentypen  
- Wenn der SQL-Datentyp, der übergeben wird, einen Zeichentyp handelt, ist *ColumnSize* ist die Größe in Zeichen (nicht Bytes). Wenn die Länge der Datenzeichenfolge in Byte 8.000, *ColumnSize* sollte festgelegt werden, um **SQL_SS_LENGTH_UNLIMITED**, gibt an, dass es keine Beschränkung der Anzahl der SQL-Typ gibt.  
+ Wenn es sich bei dem in der Übergabe des SQL-Datentyps um einen Zeichentyp handelt, ist *ColumnSize* die Größe in Zeichen (nicht Bytes). Wenn die Länge der Daten Zeichenfolge in Bytes größer als 8000 ist, sollte *ColumnSize* auf **SQL_SS_LENGTH_UNLIMITED**festgelegt werden, was bedeutet, dass die Größe des SQL-Typs nicht begrenzt ist.  
   
- Beispielsweise ist der SQL-Datentyp **SQL_WVARCHAR**, *ColumnSize* darf nicht größer als 4000 sein. Wenn die tatsächliche Datenlänge über 4.000 Zeichen hinausgeht, ist *ColumnSize* sollte so festgelegt werden **SQL_SS_LENGTH_UNLIMITED** , damit **nvarchar(max)** vom Treiber verwendet werden.  
+ Wenn der SQL-Datentyp beispielsweise **SQL_WVARCHAR**ist, sollte *ColumnSize* nicht größer als 4000 sein. Wenn die tatsächliche Daten Länge größer als 4000 ist, sollte *ColumnSize* auf **SQL_SS_LENGTH_UNLIMITED** festgelegt werden, damit **nvarchar (max)** vom Treiber verwendet wird.  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter und Tabellenwertparameter  
- Wie andere Parametertypen werden Tabellenwertparameter von SQLBindParameter gebunden.  
+ Wie andere Parametertypen werden Tabellenwert Parameter von SQLBindParameter gebunden.  
   
- Nachdem ein Tabellenwertparameter gebunden wurde, werden seine Spalten ebenfalls gebunden. Um die Spalten zu binden, rufen Sie [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) um SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl für den Tabellenwertparameter festzulegen. Anschließend rufen Sie SQLBindParameter für jede Spalte in der Table-tabellenwertparametertyps. Um zu den Parameterbindungen der obersten Ebene zurückzukehren, legen Sie SQL_SOPT_SS_PARAM_FOCUS auf 0 fest.  
+ Nachdem ein Tabellenwertparameter gebunden wurde, werden seine Spalten ebenfalls gebunden. Zum Binden der Spalten aufrufen Sie [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , um SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl des Tabellenwert Parameters festzulegen. Aufrufen Sie dann SQLBindParameter für jede Spalte im Tabellenwert Parameter. Um zu den Parameterbindungen der obersten Ebene zurückzukehren, legen Sie SQL_SOPT_SS_PARAM_FOCUS auf 0 fest.  
   
- Informationen zum Zuordnen von Parametern zu deskriptorfeldern für Tabellenwertparameter finden Sie unter [Bindung und Data Transfer of Table-Valued-Parameter und Spaltenwerte](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ Weitere Informationen zum Mapping von Parametern für Deskriptorfelder für Tabellenwert Parameter finden Sie unter [binden und Datenübertragung von Tabellenwert Parametern und Spaltenwerten](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;(ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)).  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>SQLBindParameter-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
- Parameterwerte von Datum-/Uhrzeit-Typen werden konvertiert, wie in beschrieben [Konvertierungen von C-zu SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Beachten Sie dass die Parameter des Typs **Zeit** und **Datetimeoffset** benötigen *ValueType* als angegeben **SQL_C_DEFAULT** oder **SQL_C_BINARY** Wenn die entsprechenden Strukturen (**SQL_SS_TIME2_STRUCT** und **sql_ss_timestampoffset_struct-Wert**) verwendet werden.  
+ Parameter Werte von Datums-/Uhrzeittypen werden entsprechend der Beschreibung in [Konvertierungen von C in SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)konvertiert. Beachten Sie, dass für Parameter vom Typ **time** und **DateTimeOffset** der Wert *ValueType* als **SQL_C_DEFAULT** oder **SQL_C_BINARY** angegeben werden muss, wenn die entsprechenden Strukturen (**SQL_SS_TIME2_STRUCT** und **SQL_SS_ TIMESTAMPOFFSET_STRUCT**) verwendet werden.  
   
- Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Verbesserungen &#40;bei Datum und&#41;Uhrzeit (ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)).  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>SQLBindParameter-Unterstützung für große CLR-UDTs  
- **SQLBindParameter** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLBindParameter** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;(ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)).  
   
 ## <a name="see-also"></a>Siehe auch  
- [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [Implementierungs Details für die ODBC-API](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLBindParameter-Funktion](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

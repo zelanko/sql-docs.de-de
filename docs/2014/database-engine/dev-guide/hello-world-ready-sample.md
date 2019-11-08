@@ -1,5 +1,5 @@
 ---
-title: Hello World-Ready-Beispiel | Microsoft-Dokumentation
+title: Hallo Welt Ready-Beispiel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781171"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637655"
 ---
 # <a name="hello-world-ready-sample"></a>Beispiel für "Hello World Ready"
   Das Hello World Ready-Beispiel veranschaulicht die grundlegenden Vorgänge, die beim Erstellen, Bereitstellen und Testen einer einfachen gespeicherten World-Ready-Prozedur auf der Basis einer CLR (Common Language Runtime)-Integration ausgeführt werden müssen. Eine World-Ready-Komponente lässt sich problemlos in verschiedene Sprachen für unterschiedliche Märkte in aller Welt lokalisieren, ohne den Quellcode der Komponente zu ändern. Dieses Beispiel zeigt außerdem, wie Sie Daten über einen Ausgabeparameter und einen Datensatz, der dynamisch von der gespeicherten Prozedur erstellt und an den Client zurückgegeben wird, zurückgeben können. Das Beispiel ist fast identisch mit dem Hello World-Beispiel, die Anwendung ist jedoch einfacher und sicherer zu lokalisieren. Das Ändern von lokalisiertem Text erfordert Folgendes:  
   
-1.  Ändern einer XML-Datei (die.`resx` Datei) für die bestimmte Kultur im Ressourcenverzeichnis  
+1.  Ändern einer XML-Datei (.`resx` Datei) für die jeweilige Kultur im Ressourcenverzeichnis  
   
 2.  Erstellen der Ressourcendatei der Kultur mithilfe von `resgen`  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62781171"
   
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
   
 -   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "62781171"
   
 3.  Erstellen Sie in c:\MySample die Datei `HelloWorld.vb` (für das Visual Basic-Beispiel) oder `HelloWorld.cs` (für das C#-Beispiel), und kopieren Sie den entsprechenden Visual Basic- oder C#-Beispielcode (unten) in die Datei.  
   
-4.  Erstellen Sie die Datei im c:\MySample, `messages.resx` und kopieren Sie den Beispielcode in die Datei.  
+4.  Erstellen Sie in c:\mysample die Datei `messages.resx`, und kopieren Sie den Beispielcode in die Datei.  
   
-5.  Erstellen Sie die Datei im c:\MySample, `messages.de.resx` durch Speichern der Datei `messages.resx` als `messages.de.resx` nach dem Ändern der Zeile  
+5.  Erstellen Sie in c:\mysample die Datei `messages.de.resx`, indem Sie die Datei `messages.resx` als `messages.de.resx` speichern, nachdem Sie die Zeile geändert haben.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62781171"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  Erstellen Sie die Datei im c:\MySample, `messages.es.resx` durch Speichern der Datei `messages.resx` als `messages.es.resx` nach dem Ändern der Zeile  
+6.  Erstellen Sie in c:\mysample die Datei `messages.es.resx`, indem Sie die Datei `messages.resx` als `messages.es.resx` speichern, nachdem Sie die Zeile geändert haben.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62781171"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  Erstellen Sie die Datei im c:\MySample, `messages.fr.resx` durch Speichern der Datei `messages.resx` als `messages.fr.resx` nach dem Ändern der Zeile  
+7.  Erstellen Sie in c:\mysample die Datei `messages.fr.resx`, indem Sie die Datei `messages.resx` als `messages.fr.resx` speichern, nachdem Sie die Zeile geändert haben.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62781171"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  Erstellen Sie die Datei im c:\MySample, `messages.fr-FR.resx` durch Speichern der Datei `messages.resx` als `messages.fr-FR.resx` nach dem Ändern der Zeile  
+8.  Erstellen Sie in c:\mysample die Datei `messages.fr-FR.resx`, indem Sie die Datei `messages.resx` als `messages.fr-FR.resx` speichern, nachdem Sie die Zeile geändert haben.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62781171"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. Erstellen Sie die Datei im c:\MySample, `messages.it.resx` durch Speichern der Datei `messages.resx` als `messages.it.resx` nach dem Ändern der Zeile  
+9. Erstellen Sie in c:\mysample die Datei `messages.it.resx`, indem Sie die Datei `messages.resx` als `messages.it.resx` speichern, nachdem Sie die Zeile geändert haben.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +118,7 @@ ms.locfileid: "62781171"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. Erstellen Sie die Datei im c:\MySample, `messages.ja.resx` durch Speichern der Datei `messages.resx` als `messages.ja.resx` nach dem Ändern der Zeile  
+10. Erstellen Sie in c:\mysample die Datei `messages.ja.resx`, indem Sie die Datei `messages.resx` als `messages.ja.resx` speichern, nachdem Sie die Zeile geändert haben.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62781171"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
+16. Kopieren Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 17. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

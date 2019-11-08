@@ -14,16 +14,15 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9a180c0ead9ece1345c011108249178fd36e837
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131453"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786471"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client-ODBC-Treiber legt die folgenden zusätzlichen Diagnosefelder für **SQLGetDiagField**fest. Diese Felder unterstützen eine umfangreiche Fehlerberichterstellung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anwendungen und sind in allen Diagnosedatensätzen verfügbar, die für verbundene ODBC-Verbindungshandles und ODBC-Anweisungshandles generiert werden. Die Felder werden in sqlncli.h definiert.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "68131453"
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber meldet die folgenden zusätzlichen dynamischen Funktionscodes, die die zuletzt versuchte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisung identifizieren. Der dynamische Funktionscode wird im Header (Datensatz 0) des Diagnosedatensatzes zurückgegeben und ist daher bei jeder Ausführung verfügbar (unabhängig davon, ob diese erfolgreich ist oder nicht).  
   
-|Dynamischer Funktionscode|Source|  
+|Dynamischer Funktionscode|Quelle|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE-Anweisung|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT-Anweisung|  
@@ -63,7 +62,7 @@ ms.locfileid: "68131453"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER-Anweisung|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP oder DUMP DATABASE-Anweisung|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE-Anweisung|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP oder DUMP TRANSACTION-Anweisung Auch für eine CHECKPOINT-Anweisung zurückgegeben, wenn die **Trunc. Log auf Chkpt.** aktiviert ist.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP oder DUMP TRANSACTION-Anweisung Wird auch für eine CHECKPOINT-Anweisung zurückgegeben, wenn die **Datei trunc. log auf chkpt.** aktiviert ist.|  
 |SQL_DIAG_DFC_SS_GOTO|GOTO-Anweisung zur Ablaufsteuerung|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK-Anweisung|  
 |SQL_DIAG_DFC_SS_KILL|KILL-Anweisung|  
@@ -98,9 +97,9 @@ ms.locfileid: "68131453"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT-Anweisung|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField und Tabellenwertparameter  
- SQLGetDiagField kann verwendet werden, um zwei Diagnosefelder abzurufen: SQL_DIAG_SS_TABLE_COLUMN_NUMBER und SQL_DIAG_SS_TABLE_ROW_NUMBER. Mithilfe dieser Felder können Sie bestimmen, welcher Wert den Fehler oder die Warnung im Zusammenhang mit dem Diagnosedatensatz verursacht hat.  
+ SQLGetDiagField kann verwendet werden, um zwei Diagnose Felder abzurufen: SQL_DIAG_SS_TABLE_COLUMN_NUMBER und SQL_DIAG_SS_TABLE_ROW_NUMBER. Mithilfe dieser Felder können Sie bestimmen, welcher Wert den Fehler oder die Warnung im Zusammenhang mit dem Diagnosedatensatz verursacht hat.  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;(ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)).  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQLGetDiagField-Funktion](https://go.microsoft.com/fwlink/?LinkId=59352)   

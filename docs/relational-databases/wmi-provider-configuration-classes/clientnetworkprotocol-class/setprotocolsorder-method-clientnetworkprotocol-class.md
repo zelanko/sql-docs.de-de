@@ -1,6 +1,6 @@
 ---
-title: SetProtocolsOrder-Methode (ClientNetworkProtocol-Klasse) | Microsoft-Dokumentation
-ms.custom: ''
+title: SetProtocolsOrder-Methode (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 714154456bcdf2a5202148c46cc9b52b376c7f8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88becd0d5a137d88b446e18fa0ef0798524bc0c1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040806"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659465"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>SetProtocolsOrder-Methode (ClientNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68040806"
 object.SetProtocolsOrder(ProtocolOrderList)  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>Bestandteile  
  *object*  
  A [ClientNetworkProtocol-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) , das das vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Client verwendete Netzwerkprotokoll darstellt.  
   
@@ -43,7 +43,7 @@ object.SetProtocolsOrder(ProtocolOrderList)
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|*ProtocolOrderList*|Eine Zeichenfolgenarray, das die Clientnetzwerkprotokolle in der neuen Reihenfolge auflistet.|  
+|*Protocolorderlist*|Eine Zeichenfolgenarray, das die Clientnetzwerkprotokolle in der neuen Reihenfolge auflistet.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
@@ -51,7 +51,7 @@ object.SetProtocolsOrder(ProtocolOrderList)
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)   
- [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Konfigurieren von Client Protokollen](https://technet.microsoft.com/library/ms181035.aspx)   
+ [Konfigurieren von Client Netzwerkprotokollen und Netzwerk Bibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

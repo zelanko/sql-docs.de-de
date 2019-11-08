@@ -1,5 +1,5 @@
 ---
-title: Geschäftsregelerweiterung (Master Data Services) | Microsoft-Dokumentation
+title: Geschäftsregelerweiterung
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5f490bd51ac31046e6daf3c1e90420b4efb84e03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047408"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728676"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Geschäftsregelerweiterung (Master Data Services)
 
@@ -70,7 +70,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen.  
@@ -95,7 +95,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 7.  Gehen Sie wie folgt vor, um ein benutzerdefiniertes Skript als Bedingung zu erstellen.  
   
-    1.  Klicken Sie unter dem **IF** -Abschnitt auf die Schaltfläche **Hinzufügen** . Ein Bereich wird angezeigt.  
+    1.  Klicken Sie unter dem **IF** -Abschnitt auf die Schaltfläche **Hinzufügen** . Ein Panel wird angezeigt.  
   
     2.  Wählen Sie in der Dropdownliste **Operator** unter **Benutzerdefiniertes Skript** die benutzerdefinierte Funktion aus.  
   

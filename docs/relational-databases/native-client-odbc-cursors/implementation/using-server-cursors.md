@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Servercursorn | Microsoft-Dokumentation
+title: Verwenden von Server Cursorn | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,17 @@ ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74107cf78427efca5042edbf10e3e0991ec47b8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ca1f7e2e5115920558e8550f5564a56aea5790b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134015"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784446"
 ---
 # <a name="using-server-cursors"></a>Verwenden von Servercursorn
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Wenn eine ODBC-Anwendung eines ODBC-Cursorattribut auf etwas anderes als die Standardeinstellungen, setzt der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber fordert der Server ein API-Servercursor desselben Typs zu implementieren. Durch die Verwendung von API-Servercursorn wird auf dem Client Arbeitsspeicher freigegeben, und zudem kann der Netzwerkdatenverkehr zwischen dem Client und dem Server erheblich reduziert werden.  
+  Wenn eine ODBC-Anwendung eines der ODBC-Cursor Attribute auf einen anderen Wert als die Standardwerte festlegt, fordert der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber den Server zur Implementierung eines API-Server Cursors desselben Typs auf. Durch die Verwendung von API-Servercursorn wird auf dem Client Arbeitsspeicher freigegeben, und zudem kann der Netzwerkdatenverkehr zwischen dem Client und dem Server erheblich reduziert werden.  
   
  Ein potenzieller Nachteil von API-Servercursorn liegt darin, dass sie zurzeit nicht alle SQL-Anweisungen unterstützen. API-Servercursor können nicht verwendet werden, um Folgendes auszuführen:  
   

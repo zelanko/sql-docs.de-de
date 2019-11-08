@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines benutzerdefinierten Workflows (Master Data Services) | Microsoft-Dokumentation
+title: Erstellen eines benutzerdefinierten Workflows
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 87090611cd294e1af72484c4b0c03fcec1fe4f04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033954"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729328"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Erstellen eines benutzerdefinierten Workflows (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68033954"
 5.  Der SQL Server-MDS Workflow Integration Service leitet die Daten an die Workflowhandlerassembly weiter.  
   
 > [!NOTE]  
->  Hinweis: SQL Server MDS Workflow Integration Service ist für das Auslösen von einfachen Prozessen vorgesehen. Wenn der benutzerdefinierte Code komplexe Verarbeitungsvorgänge erfordert, führen Sie die Verarbeitung entweder in einem separaten Thread oder außerhalb des Workflowprozesses aus.  
+>  Hinweis: Der SQL Server MDS Workflow Integration Service ist für das Auslösen von einfachen Prozessen konzipiert. Wenn der benutzerdefinierte Code komplexe Verarbeitungsvorgänge erfordert, führen Sie die Verarbeitung entweder in einem separaten Thread oder außerhalb des Workflowprozesses aus.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Konfigurieren von Master Data Services für benutzerdefinierte Workflows  
  Das Erstellen eines benutzerdefinierten Workflows erfordert das Schreiben von benutzerdefiniertem Code sowie das Konfigurieren von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] zur Übergabe von Workflowdaten an den Workflowhandler. Gehen Sie folgendermaßen vor, um die Verarbeitung von benutzerdefinierten Workflows zu aktivieren:  
@@ -63,7 +63,7 @@ ms.locfileid: "68033954"
   
 3.  Fügen Sie „using Microsoft.MasterDataServices.Core.Workflow;“ der C#-Codedatei hinzu.  
   
-4.  Erben Sie in der Klassendeklaration von <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Die Klassendeklaration sollte ähnlich sein: "public Class WorkflowTester: IWorkflowTypeExtender ".  
+4.  Erben Sie in der Klassendeklaration von <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Die Klassendeklaration sollte in etwa wie folgt aussehen: „public class WorkflowTester : IWorkflowTypeExtender“.  
   
 5.  Implementieren Sie die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>-Schnittstelle. Die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>-Methode wird vom SQL Server MDS Workflow Integration Service aufgerufen, um den Workflow zu starten.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68033954"
     </setting>  
     ```  
   
-3.  Fügen Sie unter der Einstellung „ConnectionString“ eine Einstellung „WorkflowTypeExtenders“ hinzu, um der Workflowhandlerassembly einen Tagnamen zuzuordnen. Zum Beispiel:  
+3.  Fügen Sie unter der Einstellung „ConnectionString“ eine Einstellung „WorkflowTypeExtenders“ hinzu, um der Workflowhandlerassembly einen Tagnamen zuzuordnen. Beispiel:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -144,7 +144,7 @@ ms.locfileid: "68033954"
   
 1.  Verwenden Sie das Dienst-Snap-In, um den Dienst zu beenden.  
   
-2.  Öffnen Sie eine Eingabeaufforderung, navigieren Sie zum Speicherort des Diensts, und führen Sie den Dienst im Konsolenmodus befindet, indem Sie eingeben: Microsoft.MasterDataServices.Workflow.exe -console.  
+2.  Öffnen Sie eine Eingabeaufforderung, navigieren Sie zum Speicherort des Diensts, und führen Sie den Dienst im Konsolenmodus aus. Geben Sie dazu Folgendes ein: Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  Aktualisieren Sie in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] das Element, und wenden Sie erneut Geschäftsregeln an. Ausführliche Protokolle werden im Konsolenfenster angezeigt.  
   

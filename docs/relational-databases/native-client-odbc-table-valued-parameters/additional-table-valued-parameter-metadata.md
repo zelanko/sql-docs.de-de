@@ -1,5 +1,5 @@
 ---
-title: Zusätzliche Tabellenwertparameter-Metadaten | Microsoft-Dokumentation
+title: Zusätzliche Tabellenwert Parameter-Metadaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +14,17 @@ ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb388b80f3f6edff93eafc2a9fa1b5156091fc79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a83df9dde4ada571b0fc39f6ac8e45c49d9ac17
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020314"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73777901"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Zusätzliche Tabellenwertparameter-Metadaten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Um Metadaten für einen Tabellenwertparameter abzurufen, ruft die Anwendung SQLProcedureColumns. Für einen Tabellenwertparameter gibt SQLProcedureColumns eine einzelne Zeile zurück. Zwei zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-bestimmte Spalten, SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME, wurden hinzugefügt, um Schema und Katalog für Tabellentypen mit Tabellenwertparametern bereitzustellen. In Übereinstimmung mit der ODBC-Spezifikation werden SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME allen treiberspezifischen Spalten vorangestellt, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hinzugefügt wurden, sowie allen Spalten nachgestellt, die von ODBC selbst benötigt werden.  
+  Zum Abrufen von Metadaten für einen Tabellenwert Parameter ruft eine Anwendung sqlprocedurecolrens auf. Für einen Tabellenwert Parameter gibt sqlprocedurecolrens eine einzelne Zeile zurück. Es wurden zwei zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]spezifische Spalten SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME hinzugefügt, um Schema-und Katalog Informationen für Tabellentypen, die Tabellenwert Parametern zugeordnet sind, bereitzustellen. In Übereinstimmung mit der ODBC-Spezifikation werden SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME allen treiberspezifischen Spalten vorangestellt, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hinzugefügt wurden, sowie allen Spalten nachgestellt, die von ODBC selbst benötigt werden.  
   
  In der folgenden Tabelle sind die Spalten aufgeführt, die für Tabellenwertparameter signifikant sind.  
   
@@ -50,11 +49,11 @@ ms.locfileid: "68020314"
   
  Die WVarchar-Spalten werden in der ODBC-Spezifikation als Varchar definiert, werden aber tatsächlich in allen neueren Versionen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ODBC-Treibers als WVarchar zurückgegeben. Diese Änderung wurde vorgenommen, als der ODBC 3.5-Spezifikation die Unicode-Unterstützung hinzugefügt wurde. Sie wurde jedoch nicht explizit ausgeschrieben.  
   
- Um zusätzliche Metadaten für Tabellenwertparameter abzurufen, verwendet eine Anwendung die Katalogfunktionen SQLColumns und SQLPrimaryKeys. Vor dem Aufruf dieser Funktionen für Tabellenwertparameter muss die Anwendung das Anweisungsattribut SQL_SOPT_SS_NAME_SCOPE auf SQL_SS_NAME_SCOPE_TABLE_TYPE festlegen. Dieser Wert gibt an, dass die Anwendung Metadaten für einen Tabellentyp anstatt einer tatsächlichen Tabelle erfordert. Die Anwendung übergibt dann den TYPE_NAME des Tabellenwertparameters als die *TableName* Parameter. SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME werden verwendet, mit der *CatalogName* und *SchemaName* Parameter, um den Katalog und Schema für den Tabellenwertparameter zu identifizieren. Wenn eine Anwendung das Abrufen von Metadaten für Tabellenwertparameter abgeschlossen hat, muss sie SQL_SOPT_SS_NAME_SCOPE wieder auf den Standardwert SQL_SS_NAME_SCOPE_TABLE festlegen.  
+ Zum Abrufen zusätzlicher Metadaten für Tabellenwert Parameter verwendet eine Anwendung die Katalog Funktionen SQLColumns und SQLPrimaryKeys. Vor dem Aufruf dieser Funktionen für Tabellenwertparameter muss die Anwendung das Anweisungsattribut SQL_SOPT_SS_NAME_SCOPE auf SQL_SS_NAME_SCOPE_TABLE_TYPE festlegen. Dieser Wert gibt an, dass die Anwendung Metadaten für einen Tabellentyp anstatt einer tatsächlichen Tabelle erfordert. Die Anwendung übergibt dann den TYPE_NAME des Tabellenwert Parameters als *TableName* -Parameter. SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME werden mit *den Parametern* *CatalogName* bzw. Schema Name verwendet, um den Katalog und das Schema für den Tabellenwert Parameter zu identifizieren. Wenn eine Anwendung das Abrufen von Metadaten für Tabellenwertparameter abgeschlossen hat, muss sie SQL_SOPT_SS_NAME_SCOPE wieder auf den Standardwert SQL_SS_NAME_SCOPE_TABLE festlegen.  
   
- Wenn SQL_SOPT_SS_NAME_SCOPE auf SQL_SS_NAME_SCOPE_TABLE festgelegt ist, schlagen Abfragen von Verbindungsservern fehl. Aufrufen von SQLColumns oder SQLPrimaryKeys mit einem Katalog, der eine Serverkomponente enthält, schlägt fehl.  
+ Wenn SQL_SOPT_SS_NAME_SCOPE auf SQL_SS_NAME_SCOPE_TABLE festgelegt ist, schlagen Abfragen von Verbindungsservern fehl. Aufrufe von SQLColumns oder SQLPrimaryKeys mit einem Katalog, der eine Serverkomponente enthält, schlagen fehl.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tabellenwertparameter &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Tabellenwert Parameter &#40;(ODBC)&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

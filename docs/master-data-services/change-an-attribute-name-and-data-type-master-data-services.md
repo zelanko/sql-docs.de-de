@@ -1,5 +1,5 @@
 ---
-title: Ändern eines Attributnamens und Datentyps (Master Data Services) | Microsoft-Dokumentation
+title: Ändern eines Attributnamens und Datentyps
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 22a52ee146610dcacafc10dcd604441932a4fd17
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c5885c2aebb718f212ac22bee8773ceab2df2f6e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263992"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729678"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>Ändern eines Attributnamens und Datentyps (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68263992"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie den Namen eines Attributs ändern.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  

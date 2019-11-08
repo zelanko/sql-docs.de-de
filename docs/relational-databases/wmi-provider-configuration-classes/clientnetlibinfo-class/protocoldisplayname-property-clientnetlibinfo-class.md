@@ -1,6 +1,6 @@
 ---
-title: ProtocolDisplayName-Eigenschaft (ClientNetLibInfo-Klasse) | Microsoft-Dokumentation
-ms.custom: ''
+title: ProtocolDisplayName-Eigenschaft (ClientNetLibInfo)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91d0697b6751fa44566a1af49c976c7a3d6adec2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f13ed373bb13b05040bcda3f68cb9890e2d301
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995445"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659411"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>ProtocolDisplayName-Eigenschaft (ClientNetLibInfo-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "67995445"
 object.ProtocolDisplayName [= value]  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>Bestandteile  
  *object*  
- Ein Objekt der [ClientNetLibInfo-Klasse](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) , das Informationen über die Clientnetzwerkbibliothek darstellt.  
+ Ein [ClientNetLibInfo-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) , das Informationen über die Clientnetzwerk-Bibliothek darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der den Anzeigenamen für das Protokoll angibt.  

@@ -1,6 +1,6 @@
 ---
-title: Properties-Eigenschaft (ServerNetworkProtocolIPAddress-Klasse) | Microsoft-Dokumentation
-ms.custom: ''
+title: Properties-Eigenschaft (ServerNetworkProtocolIPAddress)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cd63aec01b221077932d083f8800b57b39a21be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b94874dafa2528d3fbcf8debe7d50677fb2f0ce3
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911903"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660565"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Properties-Eigenschaft (ServerNetworkProtocolIPAddress-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67911903"
 object.Properties [= value]  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>Bestandteile  
  *object*  
  Ein [ServerNetworkProtocolIPAdress-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) , das eine IP-Adresse für das Netzwerkprotokoll in einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]darstellt.  
   
@@ -45,6 +45,6 @@ object.Properties [= value]
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Konfigurieren von Server Netzwerkprotokollen und Netzwerk Bibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

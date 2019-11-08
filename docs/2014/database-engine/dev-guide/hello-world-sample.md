@@ -1,5 +1,5 @@
 ---
-title: Hello World-Beispiel | Microsoft-Dokumentation
+title: Hallo Welt Beispiel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a44e246bbf6af319c21fca93e57177688c8fa4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac48f47b7455fd68245cec23c68132e4070835f9
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781253"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637769"
 ---
 # <a name="hello-world-sample"></a>Beispiel "Hello World"
   Das Hello World-Beispiel veranschaulicht die grundlegenden Vorgänge, die beim Erstellen, Bereitstellen und Testen einer einfachen gespeicherten Prozedur, die auf einer CLR (Common Language Runtime)-Integration basiert, ausgeführt werden müssen. Diese Beispiel zeigt außerdem, wie Sie Daten über einen Datensatz, der dynamisch von der gespeicherten Prozedur erstellt und an den Aufrufer zurückgegeben wird, zurückgeben können.  
   
- Die `HelloWorld` gespeicherte Prozedur gibt die Zeichenfolge "Hello World!" in einem Resultset aus einer Zeile besteht. Dieses Beispiel veranschaulicht einige Verwendungsmöglichkeiten für die Klassen [Microsoft.SqlServer.Server.SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft.SqlServer.Server.SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573) und [ Microsoft.SqlServer.Server.Pipe](https://go.microsoft.com/fwlink/?LinkID=193571).  
+ Die gespeicherte Prozedur `HelloWorld` gibt die Zeichenfolge "Hello World!" zurück. in einem Resultset, das aus einer Zeile besteht. In diesem Beispiel werden einige Verwendungsmöglichkeiten für die-Klassen [Microsoft. SqlServer. Server. SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft. SqlServer. Server. SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573) und [Microsoft. SqlServer. Server. Pipe](https://go.microsoft.com/fwlink/?LinkID=193571)veranschaulicht.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
   
 -   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62781253"
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
--   Wenn Sie nicht-Administrator sind die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, die Sie verwenden, benötigen Sie einen Administrator, die Sie gewähren **CreateAssembly** Berechtigung, um die Installation abzuschließen.  
+-   Wenn Sie kein Administrator für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz sind, die Sie verwenden, müssen Sie über einen Administrator verfügen, der Ihnen **die Berechtigung zum** Abschluss der Installation erteilt.  
   
 ## <a name="building-the-sample"></a>Erstellen des Beispiels  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62781253"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
+7.  Kopieren Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 8.  Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

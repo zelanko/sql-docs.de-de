@@ -1,5 +1,5 @@
 ---
-title: Persistente Datenquellenobjekte | Microsoft-Dokumentation
+title: Persistente Datenquellen Objekte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,21 +16,20 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59985a7ca5ed382682777c84e971c86c95570c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128559"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73771471"
 ---
 # <a name="persisted-data-source-objects"></a>Persistente Datenquellenobjekte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt persistente Datenquellenobjekte mit der **IPersistFile** Schnittstelle.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt persistente Datenquellen Objekte mit der **IPersistFile** -Schnittstelle.  
   
 ## <a name="examples"></a>Beispiele  
- **A. Beibehalten der Datenquelleninitialisierung:**  
+ **A. persistente Initialisierung der Datenquelle:**  
   
  Dieses Beispiel zeigt eine Funktion, die Eigenschaften zur Datenquelleninitialisierung, in denen ein Server, eine Datenbank und der Windows-Authentifizierungsmodus für die Verbindung definiert sind, persistent speichert. Der Server- und der Datenbankname werden in den Funktionsparametern *pLocation* und *pDatasource* empfangen.  
   
@@ -141,7 +140,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Verwenden der persistenten Datenquelleninitialisierung:**  
+ **B. verwenden Sie die persistente Datenquellen Initialisierung:**  
   
  Dieses Beispiel verwendet ein persistentes Datenquellenobjekt mit zusätzlichen Initialisierungseigenschaften für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen und ein Kennwort.  
   
@@ -232,6 +231,6 @@ HRESULT InitFromPersistedDS
  Die **IPersistFile::Save**-Methode kann vor oder nach dem Aufruf von **IDBInitialize::Initialize** aufgerufen werden. Durch Aufruf der Methode nach einer erfolgreichen Rückgabe von **IDBInitialize::Initialize** wird sichergestellt, dass eine gültige Datenquellenspezifikation persistent gespeichert wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenquellenobjekte &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [OLE DB für Daten &#40;Quellen Objekte&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

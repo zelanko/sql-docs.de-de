@@ -1,5 +1,5 @@
 ---
-title: ServerSettings-Klasse | Microsoft-Dokumentation
+title: ServerSettings-Klasse
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 74d2371336a19c04ea42e070f77eb68fa6653c65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29bcbfaf1da685fb664ffd4c6d2efa6708ca61a8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052848"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659897"
 ---
 # <a name="serversettings-class"></a>ServerSettings-Klasse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +37,6 @@ ms.locfileid: "68052848"
 -   Festlegen des Sicherheitszertifikats für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Konfigurieren von Server Netzwerkprotokollen und Netzwerk Bibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

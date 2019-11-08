@@ -10,12 +10,12 @@ ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780215"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637727"
 ---
 # <a name="udt-utilities"></a>UDT-Hilfsprogramme
   Das Beispiel "UDT-Hilfsprogramme" enthält eine Reihe von Hilfsprogrammfunktionen. Hierzu gehören u. a. Funktionen zum Verfügbarmachen von Assemblymetadaten für Transact-SQL, Beispiele für Streaming-Tabellenwertfunktionen, mit denen die Typen in einer Assembly als Tabelle zurückgegeben werden können, sowie Funktionen zum Zurückgeben von Feldern, Methoden und Eigenschaften in einem benutzerdefinierten Datentyp. Zu den veranschaulichten Technologien zählen Streaming-Tabellenwertfunktionen, .NET Framework-Reflektions-APIs und das Aufrufen von Tabellenwertfunktionen aus Transact-SQL.  
@@ -23,9 +23,9 @@ ms.locfileid: "62780215"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
   
--   Die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank, die auf der Codeplex [Website](https://go.microsoft.com/fwlink/?linkid=62796)  
+-   Die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank, die auf der CodePlex- [Website](https://go.microsoft.com/fwlink/?linkid=62796) verfügbar ist.  
   
 -   .NET Framework SDK 2.0 oder höher oder Microsoft Visual Studio 2005 oder höher. Das .NET Framework SDK ist kostenlos erhältlich.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62780215"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
+7.  Kopieren Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 8.  Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

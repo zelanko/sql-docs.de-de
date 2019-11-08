@@ -1,5 +1,5 @@
 ---
-title: Effekte von ISO-Optionen | Microsoft-Dokumentation
+title: Auswirkungen der ISO-Optionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,36 +17,35 @@ ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 442900f22aa408d91175e0a58b9f5b7ca7aceaef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43347e4fcf517dc52c8791dc81220a8990e1655d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937263"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779865"
 ---
 # <a name="effects-of-iso-options"></a>Effekte von ISO-Optionen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Der ODBC-Standard orientiert sich eng am ISO-Standard, und ODBC-Anwendungen erwarten von einem ODBC-Treiber Standardverhalten. Um ihr Verhalten besser entsprechen zu machen, die in der ODBC-Standard definiert die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verwendet immer die ISO-Optionen zur Verfügung, in der Version von SQL Server, mit denen sie eine Verbindung herstellt.  
+  Der ODBC-Standard orientiert sich eng am ISO-Standard, und ODBC-Anwendungen erwarten von einem ODBC-Treiber Standardverhalten. Um das Verhalten genauer zu gestalten, das im ODBC-Standard definiert ist, verwendet der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber immer alle ISO-Optionen, die in der-Version der SQL Server verfügbar sind, mit der er eine Verbindung herstellt.  
   
- Wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber eine Verbindung herstellt, mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vom Server erkannt, dass der Client die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber und aktiviert mehrere Optionen.  
+ Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellt, erkennt der Server, dass der Client den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verwendet, und legt mehrere Optionen für fest.  
   
  Der Treiber gibt diese Anweisungen selbst aus; die ODBC-Anwendung fordert sie nicht an. Durch das Einstellen dieser Optionen werden ODBC-Anwendungen, die den Treiber verwenden, besser portierbar, da das Serververhalten dem ISO-Standard entspricht.  
   
- DB-Library-basierte Anwendungen aktivieren diese Optionen im Allgemeinen nicht. Beobachten von verschiedenen Standorten verhaltensänderungen bei den verschiedenen ODBC oder DB-Library-Clients, wenn die gleiche SQL-Anweisung nicht gehen sollte verweist auf ein Problem mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber. Sie sollten zuerst erneut ausführen die Anweisung in der DB-Library-Umgebung mit denselben SET-Optionen von verwendet werden, würde die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber.  
+ DB-Library-basierte Anwendungen aktivieren diese Optionen im Allgemeinen nicht. Standorte, die unterschiedliche Verhaltensweisen zwischen ODBC-oder DB-Library-Clients beobachten, wenn Sie dieselbe SQL-Anweisung ausführen, sollten nicht davon ausgehen, dass dies auf ein Problem mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber Sie sollten die Anweisung zuerst in der DB-Library-Umgebung mit den gleichen SET-Optionen erneut ausführen, die vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwendet werden.  
   
  Da SET-Optionen jederzeit von Benutzern und Anwendungen aktiviert und deaktiviert werden können, sollten Entwickler von gespeicherten Prozeduren und Triggern diese mit den oben aufgeführten SET-Optionen sowohl im aktivierten als auch im deaktivierten Zustand testen. Dadurch wird sichergestellt, dass die Prozeduren und Trigger bei ihrem Aufruf korrekt ausgeführt werden, unabhängig davon, welche Optionen eine bestimmte Verbindung festgelegt hat. Wenn ein Trigger oder eine gespeicherte Prozedur eine bestimmte Einstellung für eine dieser Optionen erfordert, sollte am Anfang des Triggers bzw. der gespeicherten Prozedur eine SET-Anweisung ausgeführt werden. Die SET-Anweisung behält ihre Gültigkeit nur während der Ausführung des Triggers bzw. der gespeicherten Prozedur bei. Wenn der Trigger oder die Prozedur beendet ist, wird die ursprüngliche Einstellung wiederhergestellt.  
   
- Wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hergestellt wird, wird zudem eine vierte SET-Option, CONCAT_NULL_YIELDS_NULL, aktiviert. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber wird dieser Optionen auf, wenn nicht festgelegt AnsiNPW = NO angegeben ist, in der Datenquelle oder für [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) oder [SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md).  
+ Wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hergestellt wird, wird zudem eine vierte SET-Option, CONCAT_NULL_YIELDS_NULL, aktiviert. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber legt diese Optionen nicht fest, wenn AnsiNPW = NO in der Datenquelle oder entweder auf [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) oder [sqlbrowseconnetct](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)festgelegt ist.  
   
- Die ISO-Optionen, wie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber ist nicht aktiviert die QUOTED_IDENTIFIER-Option auf, wenn QuotedID = NO angegeben ist, in der Datenquelle oder für **SQLDriverConnect** oder  **SQLBrowseConnect**.  
+ Wie bei den zuvor notierten ISO-Optionen wird der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber die QUOTED_IDENTIFIER-Option nicht aktiviert, wenn QuotedID = No in der Datenquelle oder entweder in **SQLDriverConnect** oder **SQLBrowseConnect**angegeben ist.  
   
  Damit der Treiber den aktuellen Status der SET-Optionen ermitteln kann, sollten ODBC-Anwendungen die [!INCLUDE[tsql](../../../includes/tsql-md.md)] SET-Anweisung nicht verwenden, um diese Optionen festzulegen. Sie sollten diese Optionen nur mithilfe der Datenquelle oder über die Verbindungsoptionen festlegen. Wenn die Anwendung SET-Anweisungen ausgibt, generiert der Treiber möglicherweise falsche SQL-Anweisungen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausführen von Anweisungen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)   
- [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)   
+ [Ausführen von &#40;ODBC&#41; -Anweisungen](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)   
+ [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) -   
  [SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)  
   
   

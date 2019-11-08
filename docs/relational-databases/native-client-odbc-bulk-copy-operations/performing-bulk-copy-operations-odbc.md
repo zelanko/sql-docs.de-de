@@ -17,16 +17,15 @@ ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad2e6e418213afcbf00223798c857967581cef0c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: e58c355c437d325e2a0db228f8ed4af83956fecf
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708068"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785043"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Durchführen von Massenkopiervorgängen (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Der ODBC-Standard unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Massenkopiervorgänge nicht direkt. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 oder höher verbunden ist, unterstützt er die DB-Library-Funktionen, die die Massenkopiervorgänge in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durchführen. Diese treiberspezifische Erweiterung stellt eine einfache Möglichkeit dar, bestehende DB-Library-Anwendungen zu aktualisieren, die Funktionen zum Massenkopieren verwenden. Die spezialisierte Unterstützung für Massenkopiervorgänge befindet sich in den folgenden Dateien:  
   
@@ -40,10 +39,10 @@ ms.locfileid: "71708068"
   
 -   sqlncli11.dll  
   
-     Muss zur Ausführungszeit verfügbar sein. sqlncli11. dll wird mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ODBC-Treiber für Native Client verteilt.  
+     Muss zur Ausführungszeit verfügbar sein. sqlncli11. dll wird mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber von Native Client verteilt.  
   
 > [!NOTE]  
->  Die ODBC-Funktion **SQLBulkOperations** hat keine Beziehung zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Massen Kopierfunktionen. Anwendungen müssen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Massenkopierfunktionen verwenden, um Massenkopiervorgänge durchzuführen.  
+>  Die ODBC-Funktion **SQLBulkOperations** hat keine Beziehung zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Massen Kopierfunktionen. Anwendungen müssen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Massenkopierfunktionen verwenden, um Massenkopiervorgänge durchzuführen.  
   
 ## <a name="minimally-logging-bulk-copies"></a>Minimales Protokollieren von Massenkopiervorgängen  
  Beim vollständigen Wiederherstellungsmodell werden alle beim Massenladen ausgeführten Vorgänge für das Einfügen von Zeilen vollständig im Transaktionsprotokoll protokolliert. Bei umfangreichen Datenladevorgängen kann dies dazu führen, dass das Transaktionsprotokoll schnell aufgefüllt wird. Unter bestimmten Umständen ist die minimale Protokollierung möglich. Bei der minimalen Protokollierung wird das Risiko verkleinert, dass ein Massenladevorgang das Protokoll auffüllt. Außerdem ist sie effizienter als die vollständige Protokollierung.  
@@ -66,7 +65,7 @@ ms.locfileid: "71708068"
 -   [Konvertieren von DB-Library-Programmen zum Massenkopieren in ODBC-Programme](../../relational-databases/native-client-odbc-bulk-copy-operations/converting-from-db-library-to-odbc-bulk-copy.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)-   
+ [SQL Server Native Client &#40;ODBC&#41; ](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md) -   
  [Massenimport und -export von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

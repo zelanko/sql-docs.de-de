@@ -18,16 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707466"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782654"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Gibt den SQL-Typnamen für ein angegebenes BCP-Typtoken zurück.  
   
@@ -41,7 +40,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *token*  
+ *toben*  
  Ein Wert, der ein BCP-Typtoken angibt.  
   
  *field*  
@@ -57,55 +56,55 @@ RETCODE bcp_gettypename (
   
 |BCP-Typname|MaxType|Ausgabe|  
 |-------------------|-------------|------------|  
-|**SQLDECIMAL**|Sowohl als auch|**decimal**|  
+|**SqlDecimal**|Sowohl als auch|**decimal**|  
 |**SQLNUMERIC**|Sowohl als auch|**numeric**|  
 |**SQLINT1**|Sowohl als auch|**tinyint**|  
 |**SQLINT2**|Sowohl als auch|**smallint**|  
 |**SQLINT4**|Sowohl als auch|**int**|  
-|**SQLMONEY**|Sowohl als auch|**money**|  
+|**SqlMoney**|Sowohl als auch|**money**|  
 |**SQLFLT8**|Sowohl als auch|**float**|  
-|**SQLDATETIME**|Sowohl als auch|**datetime**|  
-|**SQLBITN**|Sowohl als auch|**bit-null**|  
+|**SqlDateTime**|Sowohl als auch|**datetime**|  
+|**Sqlbitn**|Sowohl als auch|**Bit-NULL**|  
 |**SQLBIT**|Sowohl als auch|**bit**|  
-|**SQLBIGCHAR**|Nein|**char**|  
+|**Sqlbigchar**|Nein|**char**|  
 |**SQLCHARACTER**|Nein|**char**|  
-|**SQLBIGVARCHAR**|Nein|**varchar**|  
+|**Sqlbigvarchar**|Nein|**varchar**|  
 |**SQLVARCHAR**|Nein|**varchar**|  
 |**SQLTEXT**|Sowohl als auch|**text**|  
-|**SQLBIGBINARY**|Nein|**binary**|  
-|**SQLBINARY**|Nein|**Binär (Binary)**|  
-|**SQLBIGVARBINARY**|Nein|**Varbinary**|  
+|**Sqlbigbinary**|Nein|**binary**|  
+|**SqlBinary**|Nein|**Binär (Binary)**|  
+|**Sqlbigvarbinary**|Nein|**Varbinary**|  
 |**SQLVARBINARY**|Nein|**Varbinary**|  
-|**SQLIMAGE**|Sowohl als auch|**Image**|  
-|**SQLINTN**|Sowohl als auch|**int-null**|  
-|**SQLDATETIMN**|Sowohl als auch|**datetime-null**|  
-|**SQLMONEYN**|Sowohl als auch|**Money-NULL**|  
-|**SQLFLTN**|Sowohl als auch|**float-null**|  
-|**SQLAOPSUM**|Sowohl als auch|**Sum**|  
-|**SQLAOPAVG**|Sowohl als auch|**Avg**|  
-|**SQLAOPCNT**|Sowohl als auch|**Count**|  
-|**SQLAOPMIN**|Sowohl als auch|**Min**|  
-|**SQLAOPMAX**|Sowohl als auch|**Max**|  
+|**SQLIMAGE**|Sowohl als auch|**Bild**|  
+|**Sqlintn**|Sowohl als auch|**int-NULL**|  
+|**Sqldatetimn**|Sowohl als auch|**DateTime-NULL**|  
+|**Sqlmoneyn**|Sowohl als auch|**Money-NULL**|  
+|**SQLFLTN**|Sowohl als auch|**float-NULL**|  
+|**Sqlaopsum**|Sowohl als auch|**Sum**|  
+|**Sqlaopavg**|Sowohl als auch|**Avg**|  
+|**Sqlaopcnt**|Sowohl als auch|**Count**|  
+|**Sqlaopmin**|Sowohl als auch|**Min**|  
+|**Sqlaopmax**|Sowohl als auch|**Max**|  
 |**SQLDATETIM4**|Sowohl als auch|**smalldatetime**|  
 |**SQLMONEY4**|Sowohl als auch|**Smallmoney**|  
 |**SQLFLT4**|Sowohl als auch|**Wirkliche**|  
 |**SQLUNIQUEID**|Sowohl als auch|**uniqueidentifier**|  
-|**SQLNCHAR**|Nein|**Nchar**|  
+|**SQLNCHAR**|Nein|**NCHAR**|  
 |**SQLNVARCHAR**|Nein|**Nvarchar**|  
 |**SQLNTEXT**|Sowohl als auch|**Ntext**|  
 |**SQLVARIANT**|Sowohl als auch|**sql_variant**|  
 |**SQLINT8**|Sowohl als auch|**Bigint**|  
-|**SQLCHARACTER**|Ja|**varchar(max)**|  
-|**SQLBIGCHAR**|Ja|**varchar(max)**|  
-|**SQLBIGVARCHAR**|Ja|**varchar(max)**|  
-|**SQLVARCHAR**|Ja|**varchar(max)**|  
-|**SQLBINARY**|Ja|**varbinary(max)**|  
-|**SQLBIGBINARY**|Ja|**varbinary(max)**|  
-|**SQLBIGVARBINARY**|Ja|**varbinary(max)**|  
-|**SQLVARBINARY**|Ja|**varbinary(max)**|  
-|**SQLNCHAR**|Ja|**nvarchar(max)**|  
-|**SQLNVARCHAR**|Ja|**nvarchar(max)**|  
-|**SQLXML**|Ja|**Xml**|  
+|**SQLCHARACTER**|ja|**varchar(max)**|  
+|**Sqlbigchar**|ja|**varchar(max)**|  
+|**Sqlbigvarchar**|ja|**varchar(max)**|  
+|**SQLVARCHAR**|ja|**varchar(max)**|  
+|**SqlBinary**|ja|**varbinary(max)**|  
+|**Sqlbigbinary**|ja|**varbinary(max)**|  
+|**Sqlbigvarbinary**|ja|**varbinary(max)**|  
+|**SQLVARBINARY**|ja|**varbinary(max)**|  
+|**SQLNCHAR**|ja|**nvarchar(max)**|  
+|**SQLNVARCHAR**|ja|**nvarchar(max)**|  
+|**SQLXML**|ja|**Xml**|  
 |**SQLUDT**|Sowohl als auch|**UDT**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  

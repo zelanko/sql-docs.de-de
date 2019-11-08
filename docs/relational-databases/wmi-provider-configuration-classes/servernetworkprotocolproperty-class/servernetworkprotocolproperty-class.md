@@ -1,5 +1,5 @@
 ---
-title: ServerNetworkProtocolProperty-Klasse | Microsoft-Dokumentation
+title: ServerNetworkProtocolProperty-Klasse
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8107cca40a4d307295bbbd35a1727048f919a217
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a4414c944edd6518d3971e12d06be7b59e65598
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927793"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659344"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty-Klasse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "67927793"
 -   Festlegen von Flags für die aktuelle Eigenschaft.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Konfigurieren von Server Netzwerkprotokollen und Netzwerk Bibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

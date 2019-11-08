@@ -15,39 +15,38 @@ ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e52ecc471255db772fddc46585f635fbc6cb182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a7dc196adfa3d43563f1d8755efac2bf363bb88c
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987552"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761520"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Verwenden von ADO mit SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Um die Vorteile der neuen Funktionen in nutzen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wie z. B. mehrere aktive Resultsets (MARS), abfragebenachrichtigungen, benutzerdefinierte Typen (UDTs) oder das neue **Xml** -Datentyp, vorhandene Anwendungen, verwenden von ActiveX, Data Objects (ADO) verwenden, sollten die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter als Datenzugriffsanbieter.  
+  Um die neuen Funktionen zu nutzen, die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wie Multiple Active Result Sets (Mars), Abfrage Benachrichtigungen, benutzerdefinierte Typen (User-Defined Types, UDTs) oder den neuen **XML** -Datentyp eingeführt wurden, sollten vorhandene Anwendungen, die ActiveX Data Objects (ADO) verwenden, der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter als Datenzugriffs Anbieter.  
   
  Wenn keine der neuen Funktionen von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] erforderlich ist, dann ist es auch nicht notwendig, den OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zu verwenden. Sie können weiterhin mit dem aktuellen Datenzugriffsanbieter (in der Regel SQLOLEDB) arbeiten. Wenn Sie eine bestehende Anwendung erweitern und die neuen Funktionen von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] verwenden müssen, dann sollten Sie den OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwenden.  
   
 > [!NOTE]  
 >  Wenn Sie eine neue Anwendung entwickeln, wird empfohlen, über ADO.NET und den .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] statt über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client auf die neuen Funktionen der letzten Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zuzugreifen. Weitere Informationen zum .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finden Sie in der .NET Framework-SDK-Dokumentation für ADO.NET.  
   
- Damit ADO die neuen Funktionen der letzten Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nutzen kann, wurde der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, der die Kernfunktionen von OLE DB erweitert, um einige Erweiterungen ergänzt. Diese Erweiterungen erlauben es ADO-Anwendungen, neuere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Features zu verwenden und zwei Datentypen zu verarbeiten, die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführt wurden: **XML** und **UDT**. Diese Erweiterungen machen sich auch Erweiterungen der Datentypen **varchar**, **nvarchar** und **varbinary** zunutze. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt die Initialisierungseigenschaft SSPROP_INIT_DATATYPECOMPATIBILITY dem DBPROPSET_SQLSERVERDBINIT Eigenschaftensatz für die Verwendung von ADO-Anwendungen, damit die neuen Datentypen in einer mit ADO kompatiblen Weise verfügbar gemacht werden. Darüber hinaus die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter definiert auch ein neues Schlüsselwort für Verbindungszeichenfolgen mit dem Namen **DataTypeCompatibility** , die in der Verbindungszeichenfolge festgelegt ist.  
+ Damit ADO die neuen Funktionen der letzten Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nutzen kann, wurde der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, der die Kernfunktionen von OLE DB erweitert, um einige Erweiterungen ergänzt. Diese Erweiterungen erlauben es ADO-Anwendungen, neuere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Features zu verwenden und zwei Datentypen zu verarbeiten, die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführt wurden: **XML** und **UDT**. Diese Erweiterungen machen sich auch Erweiterungen der Datentypen **varchar**, **nvarchar** und **varbinary** zunutze. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt die Eigenschaft SSPROP_INIT_DATATYPECOMPATIBILITY Initialisierung dem DBPROPSET_SQLSERVERDBINIT-Eigenschaften Satz zur Verwendung durch ADO-Anwendungen hinzu, damit die neuen Datentypen in einer mit ADO kompatiblen Methode verfügbar gemacht werden. Außerdem definiert der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter auch ein neues Verbindungs Zeichenfolgen-Schlüsselwort namens **datatypcompatibility** , das in der Verbindungs Zeichenfolge festgelegt wird.  
   
 > [!NOTE]  
->  Vorhandene ADO-Anwendungen können über den SQLOLEDB-Anbieter auf XML, UDT, umfangreiche Textwerte und Werte von Binärfeldern zugreifen und diese aktualisieren. Die neuen größeren Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** werden als die ADO-Typen **adLongVarChar**, **adLongVarWChar** bzw. **adLongVarBinary** zurückgegeben. XML-Spalten werden als **adLongVarChar** zurückgegeben, und UDT-Spalten werden als **adVarBinary** zurückgegeben. Allerdings bei Verwendung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter (SQLNCLI11) statt des SQLOLEDB, müssen Sie Sie sicher, dass die **DataTypeCompatibility** Schlüsselwort auf "80", damit die neuen Datentypen richtig zugeordnet werden, auf die ADO-Daten Typen.  
+>  Vorhandene ADO-Anwendungen können über den SQLOLEDB-Anbieter auf XML, UDT, umfangreiche Textwerte und Werte von Binärfeldern zugreifen und diese aktualisieren. Die neuen größeren Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** werden als die ADO-Typen **adLongVarChar**, **adLongVarWChar** bzw. **adLongVarBinary** zurückgegeben. XML-Spalten werden als **adLongVarChar** zurückgegeben, und UDT-Spalten werden als **adVarBinary** zurückgegeben. Wenn Sie jedoch den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider (SQLNCLI11) anstelle von SQLOLEDB verwenden, müssen Sie sicherstellen, dass das **DataTypeCompatibility** -Schlüsselwort auf "80" festgelegt wird, damit die neuen Datentypen den ADO-Datentypen ordnungsgemäß zugeordnet werden.  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>Aktivieren von SQL Server Native Client über ADO  
- So aktivieren Sie die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ADO-Anwendungen müssen die folgenden Schlüsselwörter in den Verbindungszeichenfolgen zu implementieren:  
+ Um die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zu aktivieren, müssen ADO-Anwendungen die folgenden Schlüsselwörter in den Verbindungs Zeichenfolgen implementieren:  
   
 -   `Provider=SQLNCLI11`  
   
 -   `DataTypeCompatibility=80`  
   
- Weitere Informationen zu den ADO-Verbindungszeichenfolgen unterstützt Schlüsselwörter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client finden Sie unter [Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Weitere Informationen zu den Schlüsselwörtern der ADO-Verbindungs Zeichenfolge, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt werden, finden [Sie unter Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
- Folgendes ist ein Beispiel für das Herstellen einer ADO-Verbindungszeichenfolge, die vollständig aktiviert ist, um die Arbeit mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ermöglicht die MARS-Funktion:  
+ Im folgenden finden Sie ein Beispiel für das Einrichten einer ADO-Verbindungs Zeichenfolge, die für die Arbeit mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client vollständig aktiviert ist, einschließlich der Aktivierung der Mars-Funktion:  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -62,7 +61,7 @@ con.Open
 ```  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Abschnitte enthalten Beispiele für die Verwendung von ADO mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
+ In den folgenden Abschnitten finden Sie Beispiele für die Verwendung von ADO mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
   
 ### <a name="retrieving-xml-column-data"></a>Abrufen von XML-Spaltendaten  
  In diesem Beispiel wird ein Recordset verwendet, um die Daten aus einer XML-Spalte der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Beispieldatenbank **AdventureWorks** abzurufen und anzuzeigen.  
@@ -144,7 +143,7 @@ Set con = Nothing
 ```  
   
 ### <a name="enabling-and-using-mars"></a>Aktivieren und Verwenden von MARS  
- In diesem Beispiel wird die Verbindungszeichenfolge erstellt, zum Aktivieren von MARS über den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, und klicken Sie dann zwei Recordset-Objekte werden zum Ausführen über die gleiche Verbindung erstellt.  
+ In diesem Beispiel wird die Verbindungs Zeichenfolge erstellt, um Mars über den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter zu aktivieren. Anschließend werden zwei Recordset-Objekte erstellt, die mit derselben Verbindung ausgeführt werden.  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -168,7 +167,7 @@ con.Close
 Set con = Nothing  
 ```  
   
- In früheren Versionen des OLE DB-Anbieters hätte dieser Code bewirkt, dass für den zweiten Execute-Aufruf eine Standardverbindung erstellt wird, weil in diesen Versionen nur ein aktives Resultset pro Verbindung geöffnet werden konnte. Weil die Standardverbindung nicht in den OLE DB-Verbindungspool aufgenommen wurde, bedeutete dies zusätzlichen Aufwand. Mit der MARS-Funktion verfügbar gemacht werden, indem die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, erhalten Sie mehrere aktive Resultsets in einer Verbindung.  
+ In früheren Versionen des OLE DB-Anbieters hätte dieser Code bewirkt, dass für den zweiten Execute-Aufruf eine Standardverbindung erstellt wird, weil in diesen Versionen nur ein aktives Resultset pro Verbindung geöffnet werden konnte. Weil die Standardverbindung nicht in den OLE DB-Verbindungspool aufgenommen wurde, bedeutete dies zusätzlichen Aufwand. Wenn die Mars-Funktion vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verfügbar gemacht wird, erhalten Sie mehrere aktive Ergebnisse für die Verbindung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Anwendungen mit SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

@@ -1,5 +1,5 @@
 ---
-title: Aufrufen von SQLColumns für eine Tabelle mit Spalten mit geringer Dichte | Microsoft-Dokumentation
+title: SQLColumns für eine Tabelle mit sparsespalten aufzurufen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -12,16 +12,15 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0690c5ed27f2dd7a0b4bfae55af06e8ac5f0c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987586"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781697"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Aufrufen von SQLColumns für eine Tabelle mit Spalten mit geringer Dichte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Dieses Beispiel veranschaulicht das Aufrufen von SQLColumns in einer Tabelle mit Sparsespalten, die unter Verwendung von ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definiert wurden.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "67987586"
   
  Kompilieren Sie mit /EHsc /D, "UNICODE" und odbc32.lib.  
   
- Die zweite ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht, die von diesem Beispiel erstellten Tabelle.  
+ Das zweite Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die in diesem Beispiel erstellte Tabelle.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

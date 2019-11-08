@@ -1,5 +1,5 @@
 ---
-title: Beispiel für einen führen | Microsoft-Dokumentation
+title: Resultsetbeispiel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62782143"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637639"
 ---
 # <a name="result-set-sample"></a>Beispiel für einen Ergebnissatz
   Manchmal kann es nützlich sein, Befehle beim Durchsehen der Ergebnisse einer Abfrage ausführen zu können, ohne eine neue Verbindung öffnen und ohne alle Ergebnisse in den Speicher laden zu müssen. Dies kann mit der Technologie der MARS-Funktion (Multiple Active Result Set) in ADO.NET 2.0 verwirklicht werden. Derzeit ist MARS nicht für den Anbieter im Prozess, der für die serverseitige Programmierung verwendet wird, implementiert. Diese Einschränkung können Sie mithilfe eines serverseitigen Cursors umgehen. Dieses Beispiel zeigt, wie Sie serverseitige Cursor verwenden, um die fehlende MARS-Unterstützung für die serverseitige Progammierung zu umgehen.  
@@ -28,7 +28,7 @@ ms.locfileid: "62782143"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
   
 -   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   

@@ -1,5 +1,5 @@
 ---
-title: Kalender entsprechende Datums- / UDT-Beispiel | Microsoft-Dokumentation
+title: Beispiel für das Kalender-/Uhrzeit-UDT | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bf2f4fd41ab67a0631fe5169a7904b571c842cc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753782"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637668"
 ---
-# <a name="calendar-aware-date-and-time-udt-sample"></a>Kalender entsprechende Datums- / UDT-Beispiel
+# <a name="calendar-aware-date-and-time-udt-sample"></a>Beispiel für das Kalender-/Uhrzeit-UDT
   Das Speichern von Datumsangaben kann zu Verwirrung führen, da die Datumsangaben ohne Kenntnis des zugrunde liegenden Kalendersystems keinen Sinn ergeben. Das `CADatetime`-Beispiel definiert zwei benutzerdefinierte Datentypen, `CADatetime` und `CADate`, für eine dem lokalen Kalender entsprechende Behandlung von Datums- und Uhrzeitangaben.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
   
 -   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62753782"
   
 3.  Erstellen Sie in c:\MySample die Datei `CalendarAware.cs`, und kopieren Sie den C#-Beispielcode (unten) in die Datei.  
   
-4.  Erstellen Sie die Datei im c:\MySample, `calendars.txt` und kopieren Sie den Beispielcode in die Datei.  
+4.  Erstellen Sie in c:\mysample die Datei `calendars.txt`, und kopieren Sie den Beispielcode in die Datei.  
   
 5.  Erstellen Sie in c:\MySample die Datei `calendars.ar-SA.txt`, und kopieren Sie folgenden Code in die Datei.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62753782"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-14. Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
+14. Kopieren Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 15. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

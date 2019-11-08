@@ -15,16 +15,15 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea5f54676f82940d48b941e078ab2b6f4ef13a2b
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 83174627f4178e73484741f7bf8ec6cc7c8cdee3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176332"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761554"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Erstellen von Anwendungen mit SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Bei der Entwicklung einer Anwendung, die die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Bibliothek verwendet, sind eine Reihe von Punkten zu berücksichtigen. Die Themen in diesem Abschnitt beschreiben viele dieser Punkte einschließlich Aktualisieren von MDAC auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, Verwenden der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Header- und Bibliotheksdateien sowie eines Überblicks über die verschiedenen Verbindungszeichenfolgen, die mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwendet werden können.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "70176332"
  Erläutert, wie mithilfe von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hergestellt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client Programmierung](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [SQL Server Native Client Programmier](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [ODBC-Themen zur Vorgehensweise](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Vorgehensweisen für OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

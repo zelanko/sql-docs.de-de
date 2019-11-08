@@ -1,6 +1,6 @@
 ---
-title: SetDefaults-Methode (SInstance-Klasse) | Microsoft-Dokumentation
-ms.custom: ''
+title: SetDefaults-Methode (SInstance)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27842a34ed521bf7fd89c32271a3e09115929f0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3edec1ccd74e59a8bb79353e02939030bf43ce8a
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052495"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659088"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults-Methode (SInstance-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68052495"
 object.SetDefaults(OverwriteAll)  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>Bestandteile  
  *object*  
  Ein [SInstance-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) , das eine Serverinstanz darstellt.  
   
@@ -43,7 +43,7 @@ object.SetDefaults(OverwriteAll)
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|*OverwriteAll*|Ein boleescher Wert, der angibt, ob vorhandene Werte in der Instanz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clients überschreiben werden sollen: **true** , wenn vorhandene Daten überschrieben werden, bzw. **false** , wenn vorhandene Daten nicht überschrieben werden.|  
+|*Overschreiteall*|Ein boleescher Wert, der angibt, ob vorhandene Werte in der Instanz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clients überschreiben werden sollen: **true** , wenn vorhandene Daten überschrieben werden, bzw. **false** , wenn vorhandene Daten nicht überschrieben werden.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
@@ -51,6 +51,6 @@ object.SetDefaults(OverwriteAll)
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Konfigurieren von Server Netzwerkprotokollen und Netzwerk Bibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

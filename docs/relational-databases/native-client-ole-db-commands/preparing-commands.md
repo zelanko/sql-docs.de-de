@@ -16,16 +16,15 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 921b5f4ce929c5a719bcabd09e2f2e7e567a831a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f0e582d0e6ca7e2087f35fa9b8e5005478d0a43
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128716"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790264"
 ---
 # <a name="preparing-commands"></a>Vorbereiten von Befehlen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Der OLE-DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterstützt die Befehlsvorbereitung für die optimierte mehrfache Ausführung eines einzelnen Befehls. Allerdings ist die Befehlsvorbereitung mit zusätzlichem Aufwand verbunden, und Consumer müssen Befehle nicht vorbereiten, um sie mehrfach auszuführen. Im Allgemeinen sollte ein Befehl vorbereitet werden, wenn er mehr als drei Mal ausgeführt wird.  
   

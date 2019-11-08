@@ -1,6 +1,6 @@
 ---
-title: StartMode-Eigenschaft (SqlService-Klasse) | Microsoft-Dokumentation
-ms.custom: ''
+title: StartMode-Eigenschaft (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e1e8102591eef3976d893ddf0c218b71aa763914
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006856"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660872"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode-Eigenschaft (SqlService-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68006856"
 object.StartMode [= value]  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>Bestandteile  
  *object*  
  Ein [SqlService-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , das den Dienst darstellt.  
   
@@ -48,13 +48,13 @@ object.StartMode [= value]
  Wert = 0. Dienst wurde durch das Betriebssystemladeprogramm gestartet. Diese Option ist nur für Treiberdienste gültig.  
   
  System  
- Wert = 1. Dienst gestartet, indem die **IoInitSystem** Methode. Diese Option ist nur für Treiberdienste gültig.  
+ Wert = 1. Der Dienst wurde von der **IoInitSystem** -Methode gestartet. Diese Option ist nur für Treiberdienste gültig.  
   
- Automatic  
+ Automatisch  
  Wert = 2. Der Dienst soll während des Systemstarts automatisch vom Dienstkontroll-Manager gestartet werden.  
   
  Manuell  
- Wert = 3. Dienst vom Computer-Manager gestartet werden soll, wenn ein Prozess Ruft die **StartService** Methode.  
+ Wert = 3. Der Dienst, der vom Computer-Manager gestartet werden soll, wenn ein Prozess die **StartService** -Methode aufruft.  
   
  Disabled  
  Wert = 4. Der Dienst kann nicht gestartet werden.  

@@ -1,5 +1,5 @@
 ---
-title: Schnelle Vorwärtscursor (ODBC) | Microsoft-Dokumentation
+title: Schnelle Vorwärts Cursor (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,38 +16,37 @@ ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc07980dfe78bb22c6281b19d8684d846f8a8db1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d61ef2d8b3f4efa29bdf5fffa653c210207f25c
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902439"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784497"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>Schnelle Vorwärtscursor (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Beim Verbinden mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt leistungsoptimierungen für Vorwärtscursor und schreibgeschützte Cursor. Schnelle Vorwärtscursor werden vom Treiber und Server intern auf ganz ähnliche Weise implementiert wie Standardresultsets. Neben einer hohen Leistungsfähigkeit besitzen schnelle Vorwärtscursor auch folgende Eigenschaften:  
+  Wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]besteht, unterstützt der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber Leistungsoptimierungen für schreibgeschützte Vorwärts Cursor. Schnelle Vorwärtscursor werden vom Treiber und Server intern auf ganz ähnliche Weise implementiert wie Standardresultsets. Neben einer hohen Leistungsfähigkeit besitzen schnelle Vorwärtscursor auch folgende Eigenschaften:  
   
 -   [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) wird nicht unterstützt. Die Resultsetspalten müssen an Programmvariablen gebunden sein.  
   
--   Wenn der Server auf das Ende des Cursors stößt, wird der Cursor automatisch geschlossen. Die Anwendung muss trotzdem aufrufen [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) oder [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE), aber der Treiber muss nicht die schließende-Anforderung an den Server gesendet. Damit wird ein Roundtrip durch das Netzwerk zum Server eingespart.  
+-   Wenn der Server auf das Ende des Cursors stößt, wird der Cursor automatisch geschlossen. Die Anwendung muss weiterhin [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) oder [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE) aufzurufen, aber der Treiber muss nicht die Anforderung zum Schließen an den Server senden. Damit wird ein Roundtrip durch das Netzwerk zum Server eingespart.  
   
- Anwendungen fordern mit dem treiberspezifischen Anweisungsattribut SQL_SOPT_SS_CURSOR_OPTIONS schnelle Vorwärtscursor an. Wenn dieses auf SQL_CO_FFO festgelegt wird, werden schnelle Vorwärtscursor ohne die automatische Abrufoption aktiviert. Wenn es auf SQL_CO_FFO_AF festgelegt wird, wird auch die automatische Abrufoption aktiviert. Weitere Informationen zur automatischen Abrufoption finden Sie unter [Using Autofetch mit ODBC-Cursorn](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md).  
+ Anwendungen fordern mit dem treiberspezifischen Anweisungsattribut SQL_SOPT_SS_CURSOR_OPTIONS schnelle Vorwärtscursor an. Wenn dieses auf SQL_CO_FFO festgelegt wird, werden schnelle Vorwärtscursor ohne die automatische Abrufoption aktiviert. Wenn es auf SQL_CO_FFO_AF festgelegt wird, wird auch die automatische Abrufoption aktiviert. Weitere Informationen zu Autofetch finden Sie unter [Verwenden von Autofetch mit ODBC-Cursorn](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md).  
   
- Schnelle Vorwärtscursor mit automatischer Abrufoption können eingesetzt werden, um kleine Resultsets mit nur einem Roundtrip zum Server abzurufen. In den folgenden Schritten *n* ist die Anzahl der zurückzugebenden Zeilen an:  
+ Schnelle Vorwärtscursor mit automatischer Abrufoption können eingesetzt werden, um kleine Resultsets mit nur einem Roundtrip zum Server abzurufen. In den folgenden Schritten ist *n* die Anzahl der zurück zugegenden Zeilen:  
   
 1.  Legen Sie SQL_SOPT_SS_CURSOR_OPTIONS auf SQL_CO_FFO_AF fest.  
   
-2.  Legen Sie SQL_ATTR_ROW_ARRAY_SIZE auf *n* + 1.  
+2.  Legen Sie SQL_ATTR_ROW_ARRAY_SIZE auf *n* + 1 fest.  
   
-3.  Binden Sie die Ergebnisspalten an Arrays von *n* + 1 Elementen (um sicherzugehen Wenn *n* + 1 Zeilen tatsächlich abgerufen werden).  
+3.  Binden Sie die Ergebnis Spalten an Arrays von *n* + 1 Elementen (um sicher zu sein, wenn *n* + 1 Zeilen tatsächlich abgerufen werden).  
   
 4.  Öffnen Sie den Cursor entweder mit **SQLExecDirect** oder **SQLExecute**.  
   
-5.  Wenn der Rückgabestatus SQL_SUCCESS lautet, rufen Sie **SQLFreeStmt** oder **SQLCloseCursor** Schließen des Cursors. Alle Daten für die Zeilen sind in den gebundenen Programmvariablen enthalten.  
+5.  Wenn der Rückgabestatus SQL_SUCCESS ist, dann wird **SQLFreeStmt** oder **SQLCloseCursor** aufgerufen, um den Cursor zu schließen. Alle Daten für die Zeilen sind in den gebundenen Programmvariablen enthalten.  
   
- Mit diesen Schritten die **SQLExecDirect** oder **SQLExecute** sendet eine Cursor-öffnen-Anforderung mit die automatische Abrufoption aktiviert. Auf diese einzelne Anforderung vom Client, führt der Server Folgendes aus:  
+ Mit diesen Schritten sendet **SQLExecDirect** oder **SQLExecute** eine Anforderung zum Öffnen eines Cursors mit aktivierter Autofetch-Option. Auf diese einzelne Anforderung vom Client, führt der Server Folgendes aus:  
   
 -   Er öffnet den Cursor.  
   
@@ -56,6 +55,6 @@ ms.locfileid: "67902439"
 -   Weil die Rowsetgröße auf einen Wert festgelegt wurde, der um 1 größer als die Anzahl der Resultsetzeilen ist, erkennt der Server das Ende des Cursors und schließt den Cursor.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Informationen zur Programmierung von Cursor &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+ [Details &#40;zur Cursor Programmierung ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   
