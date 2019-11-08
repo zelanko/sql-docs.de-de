@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/11/2019
-ms.openlocfilehash: c77d22b01b824906e4d5c32311bfe20258fa3c61
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.date: 11/04/2019
+ms.openlocfilehash: 16e2a7568bb88dbf36576cf5a6d64a1b268621fa
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313622"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532530"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](download.md)**
+
+## <a name="november-2019"></a>November 2019
+
+4\. November 2019 &nbsp; / &nbsp; Version: 1.13.0 
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Neue Features für SQL Server 2019 werden unterstützt. | &bull; &nbsp; Bereitstellen des Big Data-Clusters für SQL Server 2019 mit dem BDC-Bereitstellungsassistenten <br/>&bull; &nbsp; Verwalten der Clusterintegrität mit dem Controllerdashboard <br/>&bull; &nbsp; Verwalten von HDFS-Zugriffssteuerungslisten mit dem Dialogfeld „Sicherheits-ACLs“ <br/> &bull; &nbsp; Hinzufügen von Bereitstellungen mit dem Dialogfeld „HDFS-Tiering“ <br/> &bull; &nbsp; Problembehandlung mithilfe des integrierten Jupyter-Buchs „SQL Server 2019 Guide“ <br/> &bull; &nbsp; In die SQL vNext-Erweiterung „Datenvirtualisierungserweiterung“ umbenannt <br/> &bull; &nbsp; Unterstützung von Teradata und Mongo im Assistenten für externe Tabellen hinzugefügt|
+| Neue Notebookfeatures | &bull; &nbsp; Ankündigung von PowerShell-Notebooks &bull; &nbsp; Ankündigung von reduzierbaren Codezellen <br/>&bull; &nbsp; Leistungsverbesserungen in Notebooks <br/> &bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste der Verbesserungen](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22). |
+| Ankündigung von Jupyter-Büchern  | Jupyter-Bücher sind eine Sammlung von Notebooks und Markdowndateien, die in einem Inhaltsverzeichnis organisiert sind. |
+| Neuer SQL Server-Bereitstellungsassistent  | Bietet jetzt Unterstützung für die Bereitstellung von <br/> &bull; &nbsp; SQL Server 2019 unter Windows <br/> &bull; &nbsp; SQL Server 2017 unter Windows <br/> &bull; &nbsp; SQL Server 2019 unter Docker <br/> &bull; &nbsp; SQL Server 2017 unter Docker |
+| Ankündigung der allgemeinen Verfügbarkeit der Schemavergleichserweiterung| &bull; &nbsp; SQLCMD-Modus <br/> &bull; &nbsp; Lokalisierungsunterstützung <br/> &bull; &nbsp; Problembehebungen bei der Barrierefreiheit <br/> &bull; &nbsp; Sicherheitsfehler  |
+| Ankündigung der allgemeinen Verfügbarkeit der DACPAC-Erweiterung für SQL Server| <br/> &bull; &nbsp; Lokalisierungsunterstützung <br/> &bull; &nbsp; Problembehebungen bei der Barrierefreiheit <br/> &bull; &nbsp; Sicherheitsfehler |
+| Ankündigung der IntelliCode-Erweiterung für Visual Studio | Visual Studio IntelliCode unterstützt jetzt SQL, wodurch intelligentere Vorschläge für reservierte Schlüsselwörter bereitgestellt werden. |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019-hotfix-2"></a>Oktober 2019 (Hotfix 2)
 
@@ -228,7 +246,7 @@ ms.locfileid: "72313622"
 | Die Ereignisunterstützung in der Profilerweiterung wurde um eine Filterfunktion ergänzt. | &nbsp; |
 | Das Feature „Save as XML“ (Als XML speichern) wurde hinzugefügt. Damit können T-SQL-Ergebnisse im XML-Format gespeichert werden. | &nbsp; |
 | Verbesserungen am DAC-Assistenten wurden vorgenommen. | &bull; &nbsp; Die Schaltfläche „Skript generieren“ wurde hinzugefügt.<br/>&bull; &nbsp; Eine Ansicht wurde hinzugefügt, in der Warnungen vor möglichem Datenverlust während der Bereitstellung angezeigt werden. |
-| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [SQL Server 2019-Erweiterung (Vorschauversion)](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md?view=sql-server-ver15). |
 | Das Ergebnisstreaming wurde für zeitintensive Abfragen standardmäßig aktiviert. | &nbsp; |
 | Fehler und Issues wurden behoben. | Weitere Informationen finden Sie in der [Liste der Fehler und Issues auf GitHub](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1). |
 | &nbsp; | &nbsp; |
@@ -256,7 +274,7 @@ ms.locfileid: "72313622"
 | Die Azure Active Directory-Authentifizierung wird nun unterstützt. | &nbsp; |
 | Ankündigung von Idera SQL DM Performance Insights (Vorschauversion). | &nbsp; |
 | Der DAC-Assistent wird in der Erweiterung SQL Server-Import unterstützt. | &nbsp; |
-| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [SQL Server 2019-Erweiterung (Vorschauversion)](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md?view=sql-server-ver15). |
 | Verbesserungen am SQL Server Profiler wurden vorgenommen. | &nbsp; |
 | Das Ergebnisstreaming für große Abfragen (Vorschauversion) ist verfügbar. | &nbsp; |
 | Die Communityerweiterungen „sp_executesql to SQL“ und „New Database“ sind verfügbar. | &nbsp; |
@@ -271,7 +289,7 @@ ms.locfileid: "72313622"
 
 | Ändern | Details |
 | :----- | :------ |
-| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [SQL Server 2019-Erweiterung (Vorschauversion)](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md?view=sql-server-ver15). |
 | Die neue Erweiterung Paste the Plan ist verfügbar. | &nbsp; |
 | Die neue Erweiterung High Color Queries einschließlich des SSMS-Editor-Designs ist verfügbar. | &nbsp; |
 | Fehlerbehebungen in den Erweiterungen SQL Server-Agent, SQL Server Profiler und SQL Server-Import wurden vorgenommen. | &nbsp; |
@@ -301,7 +319,7 @@ ms.locfileid: "72313622"
 | Der Azure-Ressourcen-Explorer wurde zum Durchsuchen von Azure SQL-Datenbanken eingeführt. | &nbsp; |
 | Objekt-Explorer- und Abfrage-Editor-Verbindungen sind nun stabiler. | &nbsp; |
 | SQL Server Agent-Erweiterungen wurden verbessert. | &nbsp; |
-| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [SQL Server 2019-Erweiterung (Vorschauversion)](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md?view=sql-server-ver15). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>Fehlerbehebungen im Oktober 2018

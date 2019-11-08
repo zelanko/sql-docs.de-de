@@ -6,17 +6,17 @@ metadata:
   title: Microsoft SQL-Dokumentation | Microsoft-Dokumentation
   description: Erfahren Sie, wie Sie Microsoft SQL Server verwenden, um Ihre Datenbankanforderungen lokal und in der Cloud zu verwalten.
   ms.topic: hub-page
-  ms.openlocfilehash: dfacfdd1d8df0c90705a1d77a9a98937ea5ac692
-  ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+  ms.openlocfilehash: b1e77857e3b4a9b5159a20c10eec5fdb5a403f85
+  ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73595465"
+  ms.lasthandoff: 11/07/2019
+  ms.locfileid: "73757209"
 highlightedContent:
   items:
-  - title: SQL Server 2019 (Vorschauversion) testen
+  - title: Testen Sie SQL Server 2019
     itemType: download
-    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp
+    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019
   - title: Azure VM mit SQL Server erhalten
     itemType: overview
     url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
