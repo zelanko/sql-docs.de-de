@@ -14,33 +14,32 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a7ccecb3923dc46ebf8442e3c006ee88564749b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6a77d041ef66a046697bbf6999fd6b728e7dae0
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130984"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785179"
 ---
 # <a name="sqltables"></a>SQLTables
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  SQLTables kann in einem statischen Servercursor ausgeführt werden. SQLTables in einem aktualisierbaren (dynamischen oder Keyset-) Cursor ausgeführt wird, wird SQL_SUCCESS_WITH_INFO, der angibt, dass der Cursortyp geändert wurde.  
+  SQLTables kann auf einem statischen Server Cursor ausgeführt werden. Der Versuch, SQLTables für einen aktualisierbaren (dynamischen oder Keyset-) Cursor auszuführen, gibt SQL_SUCCESS_WITH_INFO zurück, der angibt, dass der Cursortyp geändert wurde.  
   
- SQLTables meldet Tabellen aus allen Datenbanken auf, wenn die *CatalogName* -Parameter sql_all_catalogs lautet und alle anderen Parameter enthalten Standardwerte (NULL-Zeiger).  
+ SQLTables meldet Tabellen aus allen Datenbanken, wenn der *CatalogName* -Parameter SQL_ALL_CATALOGS und alle anderen Parameter Standardwerte (null-Zeiger) enthalten.  
   
- Um verfügbare Kataloge, Schemas und Tabellentypen zu melden, nutzt SQLTables spezielle leere Zeichenfolgen (mit der Länge Null Byte-Zeiger). Leere Zeichenfolgen sind keine Standardwerte (NULL-Zeiger).  
+ SQLTables verwendet zum Melden von verfügbaren Katalogen, Schemas und Tabellentypen eine besondere Verwendung leerer Zeichen folgen (Byte Zeiger der Länge 0 (null)). Leere Zeichenfolgen sind keine Standardwerte (NULL-Zeiger).  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt Meldung von Informationen für Tabellen auf Verbindungsservern, indem er einen zweiteiligen Namen für die *CatalogName* Parameter: *Linked_server_name*.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt die Meldung von Informationen für Tabellen auf verknüpften Servern, indem er einen zweiteiligen Namen für den *CatalogName* -Parameter unterstützt: *Linked_Server_Name.Catalog_Name*.  
   
- SQLTables gibt Informationen über alle Tabellen, deren Namen übereinstimmen *TableName* und den aktuellen Benutzer gehören.  
+ SQLTables gibt Informationen zu allen Tabellen zurück, deren Namen *TableName* entsprechen und deren Besitzer der aktuelle Benutzer ist.  
   
 ## <a name="sqltables-and-table-valued-parameters"></a>'SQLTables'- und Tabellenwertparameter  
- Wenn das SQL_SOPT_SS_NAME_SCOPE-Anweisungsattribut den Wert SQL_SS_NAME_SCOPE_TABLE_TYPE statt auf den Standardwert SQL_SS_NAME_SCOPE_TABLE aufweist, werden Informationen über Tabellentypen von SQLTables zurück. Die TABLE_TYPE-Wert, der für einen Tabellentyp in Spalte 4 des SQLTables zurückgegebenes Resultset zurückgegeben wird TABELLENTYP. Weitere Informationen zu SQL_SOPT_SS_NAME_SCOPE finden Sie unter [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
+ Wenn das Anweisungs Attribut SQL_SOPT_SS_NAME_SCOPE den Wert SQL_SS_NAME_SCOPE_TABLE_TYPE anstelle des Standardwerts SQL_SS_NAME_SCOPE_TABLE enthält, gibt SQLTables Informationen zu Tabellentypen zurück. Der TABLE_TYPE Wert, der für einen Tabellentyp in Spalte 4 des von SQLTables zurückgegebenen Resultsets zurückgegeben wird, ist der Tabellentyp. Weitere Informationen zu SQL_SOPT_SS_NAME_SCOPE finden Sie unter [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
  Tabellen, Sichten und Synonyme nutzen einen gemeinsamen Namespace, der sich von dem Namespace unterscheidet, den Tabellentypen verwenden. Wenngleich ein und derselbe Namespace nicht eine Tabelle und eine Sicht enthalten kann, ist es hingegen möglich, dass ein Namespace im selben Katalog und Schema eine Tabelle und einen Tabellentypen enthält.  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;(ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)).  
   
 ## <a name="example"></a>Beispiel  
   

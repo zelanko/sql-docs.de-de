@@ -18,16 +18,15 @@ ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bc7b03405d6e43a6b19cc2903875685177942e1
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 4bb5375de9769046c12f56f91d5c26e41090564b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707534"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782498"
 ---
 # <a name="bcp_sendrow"></a>'bcp_sendrow'
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Sendet eine Datenzeile aus Programmvariablen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -51,11 +50,11 @@ RETCODE bcp_sendrow (
   
  Vor dem Aufruf von **bcp_sendrow**müssen Sie Aufrufe an [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) vornehmen, um die Programmvariablen mit den Zeilendaten anzugeben.  
   
- Wenn **bcp_bind** unter Angabe eines langen Datentyps variabler Länge aufgerufen wird, z. b. einem *eDataType* -Parameter von SQLTEXT und einem *pData* -Parameter, der nicht NULL ist, sendet **bcp_sendrow** den gesamten Datenwert, genau wie bei allen anderen Daten. Sorte. Hat dagegen **bcp_bind** einen *pData* -Parameter mit NULL-Wert, gibt **bcp_sendrow** die Steuerung an die Anwendung zurück, sobald alle angegebenen Datenspalten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gesendet wurden. Die Anwendung kann dann wiederholt [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) aufrufen, um die langen Daten variabler Länge Segment für Segment an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu senden. Weitere Informationen finden Sie unter [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
+ Wenn **bcp_bind** aufgerufen wird, um einen Long-Datentyp variabler Länge anzugeben, z. b. einen *eDataType* -Parameter von SQLTEXT und einen *pData* -Parameter, der nicht NULL ist, sendet **bcp_sendrow** den gesamten Datenwert, genau wie bei allen anderen Daten. Sorte. Hat dagegen **bcp_bind** einen *pData* -Parameter mit NULL-Wert, gibt **bcp_sendrow** die Steuerung an die Anwendung zurück, sobald alle angegebenen Datenspalten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gesendet wurden. Die Anwendung kann dann wiederholt [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) aufrufen, um die langen Daten variabler Länge Segment für Segment an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu senden. Weitere Informationen finden Sie unter [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
   
  Wenn mit **bcp_sendrow** Zeilen aus Programmvariablen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen massenkopiert werden, wird für die Zeilen erst dann ein Commit durchgeführt, wenn der Benutzer [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) oder [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)aufruft. Der Benutzer kann **bcp_batch** wahlweise einmal für alle *n* Zeilen aufrufen oder dann, wenn bei den eingehenden Daten eine Pause auftritt. Wird **bcp_batch** nie aufgerufen, wird ein Commit für die Zeilen ausgeführt, wenn **bcp_done** aufgerufen wird.  
   
- Informationen zu einem Breaking Change beim Massen kopieren ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] finden Sie unter [Durchführen von Massen Kopier Vorgängen &#40;(&#41;ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)).  
+ Informationen zu einem Breaking Change beim Massen kopieren ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]finden Sie unter [Durchführen von Massen Kopier Vorgängen &#40;(&#41;ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Massenkopierfunktionen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

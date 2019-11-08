@@ -1,5 +1,5 @@
 ---
-title: Verwenden von verbesserten Uhrzeitfunktionen zu Datum und (OLE DB) | Microsoft-Dokumentation
+title: Verwenden erweiterter Datums-und Uhrzeit Funktionen (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +11,17 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14790203925575ef08f2ab84e2b1f355d970448d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dbb7d307bfe1e57b0ad5a73580f12535bb7ffd92
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110008"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789756"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Verwenden von erweiterten Datums- und Uhrzeitfeatures (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In diesem Beispiel wird die Verwendung der in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingeführten Features für Datum und Uhrzeit veranschaulicht. Dieses Beispiel verwendet die vier neuen Datums- und Uhrzeittypen (**date**, **time**, **datetime2**und **datetimeoffset**) zum Ausführen von Befehlen mit Parametern und zum Abrufen von Rowset-Ergebnissen.  
+  In diesem Beispiel wird die Verwendung der in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]eingeführten Funktionen für Datum/Uhrzeit gezeigt. Dieses Beispiel verwendet die vier neuen Datums- und Uhrzeittypen (**date**, **time**, **datetime2**und **datetimeoffset**) zum Ausführen von Befehlen mit Parametern und zum Abrufen von Rowset-Ergebnissen.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
@@ -32,7 +31,7 @@ ms.locfileid: "68110008"
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine im Beispiel verwendete gespeicherte Prozedur.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die im Beispiel verwendete gespeicherte Prozedur.  
   

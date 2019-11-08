@@ -16,18 +16,17 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 620b285a0c21865ff5155377cb446b3267d328da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128506"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73770750"
 ---
 # <a name="data-types-ole-db"></a>Datentypen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Zum Ausführen [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen und verarbeiten die Ergebnisse mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, Sie müssen wissen, wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Zuordnungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen zu OLE DB-Datentypen beim Binden Parameter oder Spalten in einem Rowset, und wenn es verwendet die **ITableDefinition** Schnittstelle zum Erstellen einer Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen auszuführen und die Ergebnisse mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters zu verarbeiten, müssen Sie wissen, wie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen OLE DB Datentypen zuordnet, wenn Parameter oder Spalten in einer das Rowset, und wenn es die **ITableDefinition** -Schnittstelle verwendet, um eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

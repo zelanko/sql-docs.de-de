@@ -17,23 +17,22 @@ ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac7e0d5f2e0da418918141779e8bdce24f32f19d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913001"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759555"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Schemarowset-Unterstützung (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt auch zurückgegebene Schemainformationen von einem verknüpften Server, bei der Verarbeitung von [!INCLUDE[tsql](../../../includes/tsql-md.md)] verteilte Abfragen.  
+  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt auch das Zurückgeben von Schema Informationen von einem Verbindungs Server bei der Verarbeitung [!INCLUDE[tsql](../../../includes/tsql-md.md)] verteilter Abfragen.  
   
 > [!NOTE]  
 >  Obwohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Synonyme unterstützt, werden Metadaten für Synonyme nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zurückgegeben.  
   
- Die folgenden Tabellen sind die Schemarowsets und die Einschränkungsspalten, die von unterstützt die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
+ In der folgenden Tabelle sind die Schemarowsets und die Einschränkungs Spalten aufgelistet, die vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt werden  
   
 |Schemarowset|Einschränkungsspalten|  
 |-------------------|-------------------------|  
@@ -56,10 +55,10 @@ ms.locfileid: "67913001"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Verteilte Abfrageunterstützung für Schemarowsets](../../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [LINKEDSERVERS-Rowset &#40;OLE-DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS-Rowset &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;OLE-DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Verwenden von benutzerdefinierten Typen](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

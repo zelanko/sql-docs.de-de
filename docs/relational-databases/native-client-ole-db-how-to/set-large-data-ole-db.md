@@ -13,16 +13,15 @@ ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b75d112900e9ff955da587fa76bf2bb6a7210abe
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5fd06c01ddbb92679bc728350850f487b1ad5db8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904970"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73766047"
 ---
 # <a name="set-large-data-ole-db"></a>Festlegen von großen Daten (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Dieses Beispiel zeigt, wie BLOB-Daten festgelegt werden, eine Tabelle erstellt, ein Beispieldatensatz hinzugefügt, dieser Datensatz im Rowset abgerufen und anschließend der Wert des BLOB-Felds festgelegt wird. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "72904970"
 
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
 ### <a name="code"></a>Code  

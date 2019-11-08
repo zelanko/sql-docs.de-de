@@ -1,6 +1,6 @@
 ---
-title: ProtocolName-Eigenschaft (ClientNetworkProtocolProperty-Klasse) | Microsoft-Dokumentation
-ms.custom: ''
+title: ProtocolName-Eigenschaft (ClientNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77c53201-4fab-481e-9b3b-57d0b8b83113
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d55871443b94e84b49d13c432b568e7344f198f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af72a165ce506a4d3fdd13cb9b06535d5a0e8492
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072581"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660757"
 ---
 # <a name="protocolname-property-clientnetworkprotocolproperty-class"></a>ProtocolName-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68072581"
 object.ProtocolName [= value]  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>Bestandteile  
  *object*  
  A [ClientNetworkProtocolProperty-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) , das ein Attribut des vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Client verwendeten Netzwerkprotokolls darstellt.  
   

@@ -1,5 +1,5 @@
 ---
-title: Senden von BLOB-Daten mit SQLServer mit IROWSETFASTLOAD und ISEQUENTIALSTREAM | Microsoft-Dokumentation
+title: Senden von BLOB-Daten an SQL Server mit IRowsetFastLoad und ISequentialStream | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +11,15 @@ ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d38afebf2a1549a87d611f3c04e31f6669be839a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0044cb8f7c7568adc05e669ff288131fcc21b58d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110170"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789837"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Senden von BLOB-Daten an SQL SERVER mit IROWSETFASTLOAD und ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   In diesem Beispiel wird gezeigt, wie IRowsetFastLoad verwendet wird, um BLOB-Daten mit unterschiedlichen Längen pro Zeile zu streamen.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "68110170"
   
  Da DBTYPE_IUNKNOWN als Datentyp in der Bindung angegeben wird, muss es zum Typ der Spalte oder des Zielparameters passen. Beim Senden von Daten durch ISequentialStream von Rowsetschnittstellen sind Konvertierungen nicht möglich. Sie sollten die Verwendung von ICommandWithParameters::SetParameterInfo bei Parametern vermeiden und einen anderen Typ zum Erzwingen einer Konvertierung angeben. Dadurch wird der Anbieter gezwungen, alle BLOB-Daten lokal zwischenzuspeichern und sie vor dem Senden an SQL Server zu konvertieren. Durch das Zwischenspeichern und die lokale Konvertierung eines großen BLOBs wird die Leistung beeinträchtigt.  
   
- Weitere Informationen finden Sie unter [BLOBs und OLE-Objekte](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
+ Weitere Informationen finden Sie unter [BLOB-und OLE-Objekte](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  

@@ -1,5 +1,5 @@
 ---
-title: ODBC-Cursorbibliothek | Microsoft-Dokumentation
+title: ODBC-Cursor Bibliothek | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,35 +19,34 @@ ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a57302ea7438256ba4dc258fa200b11d8e035ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeaef25c0a7c1d09ca3ee52cee2783275aa6133e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134034"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784719"
 ---
 # <a name="odbc-cursor-library"></a>ODBC-Cursorbibliothek
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Einige ODBC-Treiber unterstützen nur die Standardeinstellungen für den Cursor. Diese Treiber unterstützen auch keine Vorgänge für positionierte Cursor, wie z. B. **SQLSetPos**. Die ODBC-Cursorbibliothek ist eine Komponente von Microsoft Data Access Components (MDAC), mit der Block- oder statische Cursor in einem Treiber implementiert werden, der sie normalerweise nicht unterstützt. Die Cursorbibliothek implementiert auch positionierte Update- und DELETE-Anweisungen und **SQLSetPos** für die Cursor erstellt.  
+  Einige ODBC-Treiber unterstützen nur die standardmäßigen Cursor Einstellungen. Diese Treiber unterstützen auch keine positionierten Cursor Vorgänge, wie z. b. **SQLSetPos**. Die ODBC-Cursorbibliothek ist eine Komponente von Microsoft Data Access Components (MDAC), mit der Block- oder statische Cursor in einem Treiber implementiert werden, der sie normalerweise nicht unterstützt. Die Cursor Bibliothek implementiert auch positionierte UPDATE-und DELETE-Anweisungen und **SQLSetPos** für die Cursor, die Sie erstellt.  
   
  Die ODBC-Cursorbibliothek wird als Ebene zwischen dem ODBC-Treiber-Manager und einem ODBC-Treiber implementiert. Wenn die ODBC-Cursorbibliothek geladen ist, leitet der ODBC-Treiber-Manager alle cursorspezifischen Befehle an die Cursorbibliothek statt an den Treiber weiter. Die Cursorbibliothek implementiert einen Cursor durch Abrufen des gesamten Resultsets aus dem zugrunde liegenden Treiber und durch Zwischenspeichern des Resultsets auf dem Client. Bei Verwendung der ODBC-Cursorbibliothek ist die Anwendung auf die Cursorfunktionen der Cursorbibliothek beschränkt. Zusätzliche Cursorfunktionen im zugrunde liegenden Treiber sind für die Anwendung nicht verfügbar.  
   
- Es besteht kaum Bedarf, die ODBC-Cursorbibliothek mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber zu verwenden, da der Treiber selbst mehr Cursorfunktionen unterstützt als die ODBC-Cursorbibliothek. Der einzige Grund für die ODBC-Cursorbibliothek mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber ist, da der Treiber seine cursorunterstützung durch Servercursor implementiert und Servercursor nicht alle SQL-Anweisungen unterstützt. Erwägen Sie die Verwendung der ODBC-Cursorbibliothek, wenn ein statischer Cursor mit gespeicherten Prozeduren, Batches oder SLQ-Anweisungen, die COMPUTE, COMPUTE BY, FOR BROWSE oder INTO enthalten, erforderlich ist. Gehen Sie mit der Cursorbibliothek jedoch sorgfältig um, da sie das gesamte Resultset auf dem Client zwischenspeichert und dadurch viel Speicherplatz belegt und die Leistung beeinträchtigt werden kann.  
+ Es besteht kaum Bedarf, die ODBC-Cursorbibliothek mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber zu verwenden, da der Treiber selbst mehr Cursorfunktionen unterstützt als die ODBC-Cursorbibliothek. Der einzige Grund für die Verwendung der ODBC-Cursor Bibliothek mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber besteht darin, dass der Treiber seine Cursor Unterstützung über Server Cursor implementiert und Server Cursor nicht alle SQL-Anweisungen unterstützen. Erwägen Sie die Verwendung der ODBC-Cursorbibliothek, wenn ein statischer Cursor mit gespeicherten Prozeduren, Batches oder SLQ-Anweisungen, die COMPUTE, COMPUTE BY, FOR BROWSE oder INTO enthalten, erforderlich ist. Gehen Sie mit der Cursorbibliothek jedoch sorgfältig um, da sie das gesamte Resultset auf dem Client zwischenspeichert und dadurch viel Speicherplatz belegt und die Leistung beeinträchtigt werden kann.  
   
- Eine Anwendung ruft die Cursorbibliothek Verbindung-von-Verbindung, indem [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) das SQL_ATTR_ODBC_CURSORS-Verbindungsattribut vor dem Herstellen einer Verbindung mit einer Datenquelle festlegen. SQL_ATTR_ODBC_CURSORS wird auf einen von drei Werten festgelegt:  
+ Eine Anwendung ruft die Cursor Bibliothek auf Verbindungs Basis mithilfe von [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) auf, um das SQL_ATTR_ODBC_CURSORS Verbindungs Attribut festzulegen, bevor eine Verbindung mit einer Datenquelle hergestellt wird. SQL_ATTR_ODBC_CURSORS wird auf einen von drei Werten festgelegt:  
   
  SQL_CUR_USE_ODBC  
- Wenn diese Option festgelegt ist, mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber die ODBC-Cursorbibliothek überschreibt die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] systemeigene cursorunterstützung des Native Client ODBC-Treibers. Für die Verbindung können nur von der Cursorbibliothek unterstützte Cursortypen verwendet werden. Servercursor können nicht verwendet werden.  
+ Wenn diese Option mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber festgelegt wird, überschreibt die ODBC-Cursor Bibliothek die native Cursor Unterstützung des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treibers. Für die Verbindung können nur von der Cursorbibliothek unterstützte Cursortypen verwendet werden. Servercursor können nicht verwendet werden.  
   
  SQL_CUR_USE_DRIVER  
- Wenn diese Option festgelegt ist, unterstützt alle den Cursor in die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber für die Verbindung verwendet werden kann. Die ODBC-Cursorbibliothek kann nicht verwendet werden. Alle Cursor werden als Servercursor implementiert.  
+ Wenn diese Option festgelegt ist, kann die gesamte Cursor Unterstützung für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber für die Verbindung verwendet werden. Die ODBC-Cursorbibliothek kann nicht verwendet werden. Alle Cursor werden als Servercursor implementiert.  
   
  SQL_CUR_USE_IF_NEEDED  
- Wenn diese Option festgelegt ist, wird der Effekt ist identisch mit SQL_CUR_USE_DRIVER bei Verwendung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber. Zum Zeitpunkt des Verbindungsaufbaus, den ODBC-Treiber-Manager überprüft, um festzustellen, ob die Verbindung mit der ODBC-Treiber SQL_FETCH_PRIOR-Option von unterstützt [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Wenn der Treiber die Option nicht unterstützt, lädt der ODBC-Treiber-Manager die ODBC-Cursorbibliothek. Unterstützt der Treiber die Option, so lädt der ODBC-Treiber-Manager die ODBC-Cursorbibliothek nicht und die Anwendung verwendet die systemeigene Unterstützung des Treibers. Da die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber SQL_FETCH_PRIOR unterstützt, die ODBC-Treiber-Manager lädt der ODBC-Cursorbibliothek nicht.  
+ Wenn diese Option festgelegt ist, ist der Effekt identisch mit SQL_CUR_USE_DRIVER, wenn er mit dem ODBC-Treiber [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwendet wird. Zur Verbindungszeit prüft der ODBC-Treiber-Manager, ob der ODBC-Treiber, mit dem eine Verbindung hergestellt wird, die SQL_FETCH_PRIOR-Option von [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)unterstützt. Wenn der Treiber die Option nicht unterstützt, lädt der ODBC-Treiber-Manager die ODBC-Cursorbibliothek. Unterstützt der Treiber die Option, so lädt der ODBC-Treiber-Manager die ODBC-Cursorbibliothek nicht und die Anwendung verwendet die systemeigene Unterstützung des Treibers. Da der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber SQL_FETCH_PRIOR unterstützt, lädt der ODBC-Treiber-Manager die ODBC-Cursor Bibliothek nicht.  
   
- Die Cursorbibliothek ermöglicht Anwendungen, mehrere aktive Anwendungen für eine Verbindung sowie bildlauffähige und aktualisierbare Cursor zu verwenden. Die Cursorbibliothek muss geladen sein, damit diese Funktion unterstützt wird. Verwendung [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) angeben, wie die Cursorbibliothek verwendet werden soll und [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) die Cursor-Datentyp, Parallelität und die Rowsetgröße Größe an.  
+ Die Cursorbibliothek ermöglicht Anwendungen, mehrere aktive Anwendungen für eine Verbindung sowie bildlauffähige und aktualisierbare Cursor zu verwenden. Die Cursorbibliothek muss geladen sein, damit diese Funktion unterstützt wird. Verwenden Sie [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) , um anzugeben, wie die Cursor Bibliothek verwendet werden soll, und [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , um den Cursortyp, die Parallelität und die Rowsetgröße anzugeben.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Implementieren von Cursorn](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  

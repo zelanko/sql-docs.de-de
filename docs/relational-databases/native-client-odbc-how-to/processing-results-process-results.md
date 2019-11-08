@@ -13,16 +13,15 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee80b68bafa419472c5c650a270a20d4d54526bd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ebd41c30d72b86fe5344a15767648371a14f7a2f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908189"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780916"
 ---
 # <a name="processing-results---process-results"></a>Verarbeiten von Ergebnissen: Prozessergebnisse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
 Bei der Verarbeitung von Ergebnissen in einer ODBC-Anwendung werden zunächst die Merkmale des Resultsets ermittelt und anschließend die Daten mithilfe von [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) oder [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)in Programmvariablen abgerufen.  
   
@@ -62,7 +61,7 @@ Bei der Verarbeitung von Ergebnissen in einer ODBC-Anwendung werden zunächst di
 > [!NOTE]  
 >  Um das Verarbeiten eines Resultsets abzubrechen, bevor [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) SQL_NO_DATA zurückgibt, rufen Sie [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) auf.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [Abrufen von Resultsetinformationen &#40;(ODBC)&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

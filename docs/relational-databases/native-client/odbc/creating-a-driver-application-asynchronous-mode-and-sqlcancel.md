@@ -19,16 +19,15 @@ ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d19e3e2bb36d702ad579895cee170f3692810ea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e49e9cd9fdf9b4aeeaad4480a222914aaeb607e3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044906"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787779"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>Erstellen einer Treiberanwendung – Asynchroner Modus und SQLCancel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Einige ODBC-Funktionen können synchron oder asynchron verwendet werden. Die Anwendung kann asynchrone Vorgänge für ein Anweisungshandle oder ein Verbindungshandle aktivieren. Wenn die Option für ein Verbindungshandle eingerichtet ist, wirkt sie sich auf alle Anweisungshandles auf dem Verbindungshandle aus. Die Anwendung verwendet die folgenden Anweisungen, um asynchrone Vorgänge zu aktivieren oder zu deaktivieren:  
   
@@ -49,7 +48,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Wenn die Anwendung überprüft, ob der Befehl ausgeführt wurde, führt sie den gleichen Funktionsaufruf mit den gleichen Parametern für den Treiber durch. Wenn der Treiber noch keine Antwort vom Server erhalten hat, gibt er erneut SQL_STILL_EXECUTING zurück. Die Anwendung muss den Befehl regelmäßig testen, bis der Rückgabecode einen anderen Wert als SQL_STILL_EXECUTING annimmt. Wenn die Anwendung einen anderen Rückgabecode erhält (auch SQL_ERROR), kann sie ermitteln, ob der Befehl abgeschlossen wurde.  
   
- Gelegentlich ist ein Befehl längere Zeit ausstehend. Wenn die Anwendung den Befehl abzubrechen, ohne eine Antwort warten muss, hierfür durch Aufrufen von **SQLCancel** mit derselben Anweisung zu verarbeiten, wie der ausstehende Befehl. Dies ist das einzige Mal **SQLCancel** verwendet werden soll. Einige Programmierer verwenden **SQLCancel** Wenn sie teilweise wie einen Resultset verarbeitet haben und die restliche Resultset abbrechen möchten. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) oder [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) sollte verwendet werden, um die restlichen ausstehenden Resultsets, nicht Abbrechen **SQLCancel**.  
+ Gelegentlich ist ein Befehl längere Zeit ausstehend. Wenn die Anwendung den Befehl abbrechen muss, ohne auf eine Antwort zu warten, kann dies dazu führen, dass **SQLCancel** mit dem gleichen Anweisungs Handle wie der ausstehende Befehl aufgerufen wird. Dies ist der einzige Zeitpunkt, an dem **SQLCancel** verwendet werden sollte. Einige Programmierer verwenden **SQLCancel** , wenn Sie einen Teil des Resultsets verarbeitet haben und den Rest des Resultsets abbrechen möchten. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) oder [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) sollte verwendet werden, um den Rest eines ausstehenden Resultsets, nicht **SQLCancel**, abzubrechen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer SQL Server Native Client-ODBC-Treiberanwendung](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  

@@ -10,18 +10,17 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49b7360fdb5cc5e36a9d21b4821a2bf1e176ad97
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 4aa573374b02b193e6b1dcf94f9ae86c1c232a00
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176314"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761567"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank mithilfe von SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Ein Beispiel, das zeigt, wie eine Verbindung mit [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von Native Client [hergestellt wird, finden Sie Unterentwicklung: Themen zur Vorgehensweise (Azure SQL-Datenbank](https://msdn.microsoft.com/library/ee621787.aspx)).  
+  Ein Beispiel für das Herstellen einer Verbindung mit einem [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] mithilfe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client finden Sie unter [Entwicklung: Themen zur Vorgehensweise (Azure SQL-Datenbank)](https://msdn.microsoft.com/library/ee621787.aspx).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>Bekannte Probleme beim Herstellen einer Verbindung mit einer SQL-Datenbank  
  Die folgenden bekannten Probleme können auftreten, wenn mithilfe von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hergestellt wird:  

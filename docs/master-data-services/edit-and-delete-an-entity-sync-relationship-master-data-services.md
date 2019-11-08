@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten und Löschen einer Entitäten-Synchronisierungspartnerschaft (Master Data Services) | Microsoft-Dokumentation
+title: Bearbeiten und Löschen einer Entitäten-Synchronisierungspartnerschaft
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 52ffe540d1afe9334533c2a5a8a631f342aed983
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086463"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728239"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Bearbeiten und Löschen einer Entitäten-Synchronisierungspartnerschaft (Master Data Services)
 
@@ -23,12 +23,12 @@ ms.locfileid: "68086463"
 
   Entitäten-Synchronisierung ist eine unidirektionale und wiederholbare Synchronisierung zwischen Entitätsversionen. Sie bietet eine Möglichkeit, Entitätsdaten zwischen verschiedenen Modellen freizugeben. Sie können eine Synchronisierungspartnerschaft, die Sie erstellt haben, bearbeiten und löschen.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Voraussetzungen zum Bearbeiten einer Entitäten-Synchronisierungspartnerschaft.  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Sie müssen für die Quellentität und deren Entitätsattribute und -elemente mindestens über Lesezugriff verfügen.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68086463"
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  Berücksichtigen Sie Folgendes, wenn Sie eine Entitäten-Synchronisierungspartnerschaft bearbeiten.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68086463"
   
 -   Vorläufig gelöschte Elemente werden nicht kopiert.  
   
--   Synchronisierung generiert keine Zielentitätstransaktionen/-verläufe.  
+-   Durch die Synchronisierung werden keine Zielentitätstransaktionen/-verläufe generiert.  
   
  **So bearbeiten Sie eine Entitäten-Synchronisierungspartnerschaft**  
   

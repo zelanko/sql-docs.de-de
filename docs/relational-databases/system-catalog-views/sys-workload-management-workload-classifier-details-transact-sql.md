@@ -1,7 +1,7 @@
 ---
-title: Sys.workload_management_workload_classifier_details (Transact-SQL) | Microsoft-Dokumentation
+title: sys. workload_management_workload_classifier_details (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: sql-data-warehouse
@@ -12,24 +12,24 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f9314b9297af7e8156ed86b2bfa2dadd18896bb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58b3f3315309a734a22e2732af5207b64e2f0a9d
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061295"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632928"
 ---
-# <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql"></a>Sys.workload_management_workload_classifier_details (Transact-SQL)
+# <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>sys. workload_management_workload_classifier_details (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  Gibt die Details für jeden Klassifizierer.  
+  Gibt Details zu jedem Klassifizierer zurück.  
   
 |Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|
-|classifier_id|**int**|Die ID der Klassifizierung. Beigetreten werden kann, um [sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md). Lässt keine NULL-Werte zu.|
-|classifier_type|**sysname**|Die Entität, auf die Klassifizierung ausgeführt werden. Lässt keine NULL-Werte zu.|MEMBERNAME|
-|classifier_value|**sysname**|Der Wert der Klassifizierung. Lässt keine NULL-Werte zu.||
+|classifier_id|**int**|ID des Klassifizierers.  Lässt keine NULL-Werte zu.|
+|classifier_type|**sysname**|Joinfähig mit [sys. workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md).|`membername`</br>`wlm_label`</br>`wlm_context`</br>`start_time`</br>`end_time`|
+|classifier_value|**sysname**|Der Wert des Klassifizierers. Lässt keine NULL-Werte zu.||
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -37,4 +37,4 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
 
 ## <a name="next-steps"></a>Nächste Schritte
   
- Eine Übersicht über die Katalogsichten für SQL Data Warehouse und Parallel Data Warehouse finden Sie unter [SQL Data Warehouse und Parallel Data Warehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Um einen Klassifizierer für die arbeitsauslastung zu erstellen, finden Sie unter [erstellen WORKLOAD KLASSIFIZIERER](../../t-sql/statements/create-workload-classifier-transact-sql.md). Weitere Informationen zu den Workload-Klassifizierung, finden Sie unter SQL Data Warehouse [Workload Klassifizierung](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) und [Workload Wichtigkeit](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+Eine Liste aller Katalog Sichten für SQL Data Warehouse und parallele Data Warehouse finden Sie unter [SQL Data Warehouse und parallele Data Warehouse Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Informationen zum Erstellen eines workloadklassifizierers finden Sie unter CREATE worklofier [Classifier](../../t-sql/statements/create-workload-classifier-transact-sql.md) Weitere Informationen zur Klassifizierung der Arbeitsauslastung finden Sie unter SQL Data Warehouse Arbeits Auslastungs [Klassifizierung](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) und [Arbeitsauslastung](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

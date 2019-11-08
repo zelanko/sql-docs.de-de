@@ -1,8 +1,8 @@
 ---
-title: Übersicht über die der Datenbank-experimentieren-Assistenten für SQL Server-Lösung wird aktualisiert
-description: Übersicht über die für Datenbankexperimente
+title: Übersicht über die Assistent für Datenbankexperimente Lösung für SQL Server Upgrades
+description: Übersicht über Assistent für Datenbankexperimente
 ms.custom: ''
-ms.date: 01/08/2019
+ms.date: 11/05/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,101 +10,99 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 1183c6a443406f6031453b876f9165257db82c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 656236be66ecb2b7127e45ab1ef361f1eb7703e6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058901"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637933"
 ---
-# <a name="overview-of-database-experimentation-assistant"></a>Übersicht über die für Datenbankexperimente
+# <a name="overview-of-database-experimentation-assistant"></a>Übersicht über Assistent für Datenbankexperimente
 
-Datenbank experimentieren-Assistenten (DEA) ist eine experimentieren-Lösung für die SQL Server-Upgrades. DEA können Sie die Zielversion von SQL Server für eine bestimmte Arbeitslast zu bewerten. Kunden, die von SQL Server-Vorgängerversionen (2005 ab) auf eine neuere Version von SQL Server aktualisieren, können die Metriken für die Analyse, die das Tool bietet. 
+Assistent für Datenbankexperimente (DEA) ist eine Experimentier Lösung für SQL Server Upgrades. Mithilfe von DEA können Sie eine Zielversion von SQL Server für eine bestimmte Arbeitsauslastung auswerten. Kunden, die ein Upgrade von früheren SQL Server Versionen (beginnend mit 2005) auf eine neuere Version von SQL Server durchführen können, können die analysemetriken verwenden, die das Tool bereitstellt.
 
-Beispiele für DEA Analysis Metriken:
-- Abfragen mit Kompatibilitätsfehler
-- Beeinträchtigten Abfragen und Abfragepläne
-- Andere Workloads Vergleichsdaten
+Die Analyse Metriken von DEA umfassen:
 
-Vergleichsdaten können höhere Zuverlässigkeit und einem erfolgreichen Upgradevorgang führen.
+- Abfragen mit Kompatibilitäts Fehlern
+- Heruntergestufte Abfragen und Abfrage Pläne
+- Weitere Vergleichsdaten für die Arbeitsauslastung
 
-Für einen 19-minütige Einführung in DEA sowie eine Demonstration im folgenden Video:
+Vergleichsdaten können zu einem höheren Vertrauen und einem erfolgreichen Upgradevorgang führen.
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+## <a name="get-dea"></a>Erhalten von DEA
 
-## <a name="get-dea"></a>DEA abrufen
+Zum Installieren von DEA [Laden Sie](https://www.microsoft.com/download/details.aspx?id=54090) die neueste Version des Tools herunter. Führen Sie dann die Datei **databaseexperimentationassistant. exe** aus.
 
-Zum Installieren von DEA [herunterladen](https://www.microsoft.com/download/details.aspx?id=54090) die neueste Version des Tools. Führen Sie dann die **DatabaseExperimentationAssistant.exe** Datei.
+## <a name="solution-architecture-for-comparing-workloads"></a>Lösungsarchitektur zum Vergleichen von Arbeits Auslastungen
 
-## <a name="solution-architecture-for-comparing-workloads"></a>Architektur der Lösung für den Vergleich von workloads
+Das folgende Diagramm zeigt die Lösungsarchitektur für einen workloadvergleich. Beim Vergleich der Arbeitsauslastung werden bei einem Upgrade von SQL Server 2008 auf SQL Server 2016 DEA und Distributed Replay verwendet.
 
-Das folgende Diagramm zeigt die Lösungsarchitektur für einen Vergleich der arbeitsauslastung. Der Vergleich der Workload verwendet DEA "und" Distributed Replay während eines Upgrades von SQL Server 2008 auf SQL Server 2016.
+![Lösungsarchitektur für workloadvergleich](./media/database-experimentation-assistant-overview/dea-overview-compare-solution-architecture.png)
 
-![Workload-Vergleich Lösungsarchitektur](./media/database-experimentation-assistant-overview/dea-overview-compare-solution-architecture.png)
+## <a name="dea-prerequisites"></a>Erforderliche Komponenten für DEA
 
-## <a name="dea-prerequisites"></a>DEA-Voraussetzungen
+Es folgen einige Voraussetzungen für die Ausführung von DEA:
 
-Es folgen einige erforderliche Komponenten für die Ausführung von DEA:
-- Minimale hardwareanforderungen: Ein Single-Core-Computer mit 3,5 GB RAM.
-- Ideale hardwareanforderungen: Eine 8-Kern-CPU (mit 3,5 GB RAM oder mehr). DEA Laufzeiten nicht Prozessoren, die mehr als acht Kerne verbessert werden.
-- Weitere 33 % der Leistung Ablaufverfolgung Größe ist für die Store A, B und Analysedatenbanken Berichts benötigt.
+- Mindesthardwareanforderung: ein Single-Core-Computer mit 3,5 GB RAM.
+- Ideale Hardware Anforderung: eine CPU mit 8 Kernen (mit mindestens 3,5 GB RAM). Prozessoren mit mehr als acht Kernen verbessern die DEA-Runtimes nicht.
+- Zum Speichern der Datenbanken A, B und Report Analysis ist ein zusätzlicher Wert von 33% der Leistungs Ablauf Verfolgung erforderlich.
 
-## <a name="configure-dea"></a>DEA konfigurieren
+## <a name="configure-dea"></a>Konfigurieren von DEA
 
-Architektur der erforderlichen Umgebung empfehlen wir die Installation von DEA *auf dem gleichen Computer wie den Distributed Replay Controller*. Diese Vorgehensweise verhindert computerübergreifende Aufrufe und vereinfacht die Konfiguration.
+In der Architektur der Voraussetzungs Umgebung wird empfohlen, dass Sie *die ddea auf demselben Computer wie den Distributed Replay Controller*installieren. Durch diese Vorgehensweise werden Computer übergreifende Aufrufe vermieden und die Konfiguration vereinfacht.
 
-### <a name="required-configuration-for-workload-comparison-by-using-dea"></a>Erforderliche Konfiguration für den Vergleich der Workload mit DEA
+### <a name="required-configuration-for-workload-comparison-by-using-dea"></a>Erforderliche Konfiguration für den workloadvergleich mithilfe von DEA
 
-DEA eine Verbindung mit Datenbank-Server mithilfe der Windows-Authentifizierung herstellt. Achten Sie darauf, dass ein Benutzer ausführt DEA mithilfe der Windows-Authentifizierung eine Verbindung zu Datenbank-Servern (Quelle, Ziel und Analyse) herstellen kann.
+Mit der Windows-Authentifizierung stellt die DEA eine Verbindung mit Datenbankservern her Stellen Sie sicher, dass ein Benutzer, der DEA verwendet, mithilfe der Windows-Authentifizierung eine Verbindung mit Datenbankservern (Quelle, Ziel und Analyse) herstellen kann.
 
-**Erfassen von Anforderungen an die**:
+**Konfigurations Anforderungen erfassen**:
 
-*   Benutzer, der ausführt DEA kann mithilfe der Windows-Authentifizierung auf dem Quellserver für die Datenbank verbinden.
-*   Benutzer, die mit DEA hat Sysadmin-Rechte auf dem Quellserver für die Datenbank an.
-*   Dienstkonto mit dem Quellserver für die Datenbank verfügt über Schreibzugriff auf den Ordnerpfad für die Ablaufverfolgung.
+- Der Benutzer, der DEA verwendet, kann mithilfe der Windows-Authentifizierung eine Verbindung zum Quelldaten Bankserver herstellen.
+- Der Benutzer, der "DEA" verwendet, hat Systemadministrator Rechte auf dem Quelldaten Bankserver.
+- Das Dienst Konto, auf dem der Quelldaten Bankserver ausgeführt wird, verfügt über Schreibzugriff auf den Pfad des Verzeichnis
 
-Weitere Informationen finden Sie unter den [erfassen – häufig gestellte Fragen](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)
+Weitere Informationen finden Sie in den häufig gestellten Fragen zur [Erfassung](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture) .
 
-**Anforderungen für die Konfiguration die Wiedergabe**: 
+**Konfigurations Anforderungen**für die Wiedergabe: 
 
-*   Benutzer, der ausführt DEA kann mithilfe der Windows-Authentifizierung auf dem Zielserver für die Datenbank verbinden.
-*   Benutzer, die mit DEA hat Sysadmin-Rechte auf dem Zielserver für die Datenbank an.
-*   Dienstkonto zur Ausführung der Zielserver für die Datenbank verfügt über Schreibzugriff auf den Ordnerpfad für die Ablaufverfolgung.
-*   Dienstkonto zur Ausführung von Distributed Replay-Clients kann mithilfe der Windows-Authentifizierung auf dem Zielserver für die Datenbank verbinden.
-*   DEA kommuniziert mit dem Distributed Replay-Controller über COM-Schnittstellen. Stellen Sie sicher, dass TCP-Ports für eingehende Anforderungen für den Distributed Replay Controller geöffnet werden.
+- Der Benutzer, der DEA verwendet, kann mithilfe der Windows-Authentifizierung eine Verbindung zum Ziel Datenbankserver herstellen.
+- Der Benutzer, der "DEA" verwendet, hat Systemadministrator Rechte auf dem Ziel Datenbankserver.
+- Das Dienst Konto, auf dem die Ziel Datenbankserver ausgeführt werden, verfügt über Schreibzugriff auf den Pfad des Verzeichnis
+- Das Dienst Konto, das Distributed Replay Clients ausgeführt wird, kann mithilfe der Windows-Authentifizierung eine Verbindung zum Ziel Datenbankserver herstellen
+- Die Verwendung von "DEA" erfolgt über COM-Schnittstellen mit dem Distributed Replay Controller Stellen Sie sicher, dass die TCP-Ports für eingehende Anforderungen auf dem Distributed Replay Controller geöffnet sind.
 
-Weitere Informationen finden Sie unter den [wiedergeben – häufig gestellte Fragen](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)
+Weitere Informationen finden Sie unter Häufig gestellte Fragen zur wieder [Gabe](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay) .
 
-**Anforderungen an die Analyse**: 
+**Anforderungen an die Analyse Konfiguration**:
 
-*   Benutzer, der ausführt DEA kann mithilfe der Windows-Authentifizierung an den Analysis-Server-Datenbank verbinden.
-*   Benutzer, die mit DEA hat Sysadmin-Rechte auf dem Quellserver für die Datenbank an.
+- Der Benutzer, der DEA verwendet, kann mithilfe der Windows-Authentifizierung eine Verbindung mit dem Analysis Database-Server herstellen
+- Der Benutzer, der "DEA" verwendet, hat Systemadministrator Rechte auf dem Quelldaten Bankserver.
 
-Weitere Informationen finden Sie unter den [Analyse – häufig gestellte Fragen](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
+Weitere Informationen finden Sie in den häufig gestellten Fragen zur [Analyse](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports) .
 
-## <a name="set-up-telemetry"></a>Einrichten der Telemetrie
+## <a name="set-up-telemetry"></a>Einrichten von Telemetrie
 
-DEA verfügt über eine Internet-fähigen-Funktion, die Telemetriedaten an Microsoft senden können. Microsoft erfasst Telemetriedaten, um das Produkt zu verbessern. Telemetrie ist optional. Die Informationen, die gesammelt werden, wird auch auf Ihrem Computer für die lokale Überwachung gespeichert. Sie können immer sehen, was gesammelt wird. Alle Protokolldateien aus DEA werden gespeichert, in der "% Temp%"\\DEA-Ordner.
+Die DEA verfügt über ein internetfähiges Feature, mit dem Telemetriedaten an Microsoft gesendet werden können. Microsoft sammelt Telemetriedaten, um die Produktleistung zu verbessern. Telemetrie ist optional. Die gesammelten Informationen werden auch auf Ihrem Computer für die lokale Überwachung gespeichert. Sie können immer erkennen, was erfasst wurde. Alle Protokolldateien aus der DEA werden im Ordner "% Temp%\\DEA" gespeichert.
 
-Sie können entscheiden, welche Ereignisse gesammelt werden. Auch entscheiden Sie, ob die gesammelten Ereignisse an Microsoft gesendet werden. Es gibt vier Arten von Ereignissen:
+Sie können entscheiden, welche Ereignisse gesammelt werden. Außerdem entscheiden Sie, ob gesammelte Ereignisse an Microsoft gesendet werden. Es gibt vier Arten von Ereignissen:
 
-*   **TraceEvent**: Verwendung-Ereignisse für die Anwendung (z. B. "Aufzeichnung ausgelösten beenden").
-*   **Ausnahme**: Bei Anwendungsverwendung ausgelöste Ausnahme.
-*   **DiagnosticEvent**: Ein Ereignisprotokoll zur Unterstützung bei der Diagnose, wenn Probleme auftreten (*nicht* an Microsoft gesendet).
-*   **FeedbackEvent**: Benutzerfeedback, die durch die Anwendung übermittelt werden.
+- **TraceEvent**: Verwendungs Ereignisse für die Anwendung (z. b. "Auslösen der Erfassungs Erfassung").
+- **Ausnahme**: Ausnahme bei der Anwendungs Verwendung.
+- **Diagnosticevent**: ein Ereignisprotokoll zur Unterstützung der Diagnose, wenn Probleme auftreten (*nicht* an Microsoft gesendet).
+- **Feedbackevent**: Benutzer Feedback, das über die Anwendung übermittelt wird.
 
-Diese Schritte zeigen, wie Sie auswählen, welche Ereignisse gesammelt werden und gibt an, ob die Ereignisse an Microsoft gesendet werden:
+In den folgenden Schritten wird gezeigt, wie Sie auswählen, welche Ereignisse gesammelt werden und ob die Ereignisse an Microsoft gesendet werden:
 
-1.  Wechseln Sie zu dem Speicherort, in denen DEA installiert ist (z. B. "c:"\\Programmdateien (x86)\\Microsoft Corporation\\Database experimentieren Assistant).
-2.  Öffnen Sie die beiden .config-Dateien: DEA.exe.config (für die Anwendung) und DEACmd.exe.config (für die Azure CLI).
-3.  Um einen Typ von Ereignis erfassen zu beenden, legen Sie den Wert der *Ereignis* (z. B. **TraceEvent**) zu **"false"** . Um erfassen das Ereignis erneut zu starten, legen Sie den Wert auf **"true"** .
-4.  Um lokale Kopien der Ereignisse zu beenden, legen Sie den Wert der **TraceLoggerEnabled** zu **"false"** . Um lokale Kopien Speichervorgang zu starten, legen Sie den Wert auf **"true"** .
-5.  Zum Senden von Ereignissen an Microsoft zu beenden, legen Sie den Wert der **AppInsightsLoggerEnabled** zu **"false"** . Um für das Senden von Ereignissen an Microsoft ist es noch Mal zu starten, legen Sie den Wert auf **"true"** .
+1. Wechseln Sie zu dem Speicherort, an dem die DEA installiert ist (z. b. C:\\-Programmdateien (x86)\\Microsoft Corporation\\Assistent für Datenbankexperimente).
+2. Öffnen Sie die beiden config-Dateien: "DEA. exe. config" (für die Anwendung) und "deacmd. exe. config" (für die CLI).
+3. Legen Sie den Wert des *Ereignisses* (z. b. **TraceEvent**) auf **false**fest, um die Erfassung eines Ereignis Typs zu verhindern. Legen Sie den Wert auf " **true**" fest, um die erneute Erfassung des Ereignisses zu beginnen.
+4. Legen Sie den Wert von **traceloggerfähig** auf **false**fest, um das Speichern von lokalen Kopien von Ereignissen zu verhindern. Legen Sie den Wert auf **true**fest, damit die lokalen Kopien erneut gespeichert werden.
+5. Um das Senden von Ereignissen an Microsoft zu verhindern, legen Sie den Wert von **appinsightloggeraktiviauf** **false**fest. Legen Sie den Wert auf " **true**" fest, um erneut Ereignisse an Microsoft zu senden.
 
-DEA unterliegt der [Microsoft Privacy Statement](https://aka.ms/dea-privacy).
+Die [Microsoft-Datenschutzbestimmungen unterliegen der Microsoft-Datenschutzerklärung](https://aka.ms/dea-privacy)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Erste Schritte](database-experimentation-assistant-get-started.md) führt Sie durch die erforderlichen Schritte zum Erfassen und wiedergeben eine Ablaufverfolgung analysieren.
+" [Get Started](database-experimentation-assistant-get-started.md) " führt Sie durch die Schritte, die zum erfassen, wiedergeben und Analysieren einer Ablauf Verfolgung erforderlich sind.

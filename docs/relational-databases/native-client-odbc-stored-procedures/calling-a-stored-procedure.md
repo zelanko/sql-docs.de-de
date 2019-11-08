@@ -19,37 +19,36 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b1441f06a5825467431a7c11ee9a8e3e46df6fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba7e6b23ac2091e6ae772e48b91a70613ae8f455
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910262"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73778962"
 ---
 # <a name="calling-a-stored-procedure"></a>Aufrufen von gespeicherten Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt sowohl die ODBC CALL-Escapesequenz und die [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) Anweisung zum Ausführen von gespeicherten Prozeduren, die ODBC CALL-Escapesequenz ist die bevorzugte Methode. Mithilfe der ODBC-Syntax kann eine Anwendung die Rückgabecodes von gespeicherten Prozeduren abrufen. Zudem wurde der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber für die Verwendung eines ursprünglich zum Senden von Remoteprozeduraufrufen (RPC) zwischen Computern, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, entwickelten Protokolls optimiert. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt sowohl die ODBC-Escapesequenz als auch die [!INCLUDE[tsql](../../includes/tsql-md.md)][Execute](../../t-sql/language-elements/execute-transact-sql.md) -Anweisung zum Ausführen gespeicherter Prozeduren. die ODBC-Rückruf-Escapesequenz ist die bevorzugte Methode. Mithilfe der ODBC-Syntax kann eine Anwendung die Rückgabecodes von gespeicherten Prozeduren abrufen. Zudem wurde der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber für die Verwendung eines ursprünglich zum Senden von Remoteprozeduraufrufen (RPC) zwischen Computern, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, entwickelten Protokolls optimiert. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  
   
 > [!NOTE]  
->  Beim Aufrufen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozeduren mit benannten Parametern mit dem ODBC-(Weitere Informationen finden Sie unter [Bindungsparameter von Namen (Parameter genannt)](https://go.microsoft.com/fwlink/?LinkID=209721)), müssen die Parameternamen beginnen, mit der "\@" Zeichen. Dies ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Einschränkung. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODCB-Treiber erzwingt diese Einschränkung strenger als die MDAC (Microsoft Data Access Components).  
+>  Beim Aufrufen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherter Prozeduren mit benannten Parametern mit ODBC (Weitere Informationen finden Sie unter [Binden von Parametern anhand des Namens (benannte Parameter)](https://go.microsoft.com/fwlink/?LinkID=209721)) müssen die Parameternamen mit dem Zeichen "\@" beginnen. Dies ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Einschränkung. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODCB-Treiber erzwingt diese Einschränkung strenger als die MDAC (Microsoft Data Access Components).  
   
  Die ODBC CALL-Escapesequenz für das Aufrufen einer Prozedur lautet wie folgt:  
   
- {[ **? =** ]**Aufrufen**_Procedure_name_[([*Parameter*] [ **,** [*Parameter*]] ...)]}  
+ {[ **? =** ]**aufrufen**_procedure_name_[([*Parameter*] [ **,** [*Parameter*]]...)]}  
   
- wo *Procedure_name* gibt den Namen einer Prozedur und *Parameter* gibt die Parameter einer Prozedur an. Benannte Parameter werden nur in Anweisungen mit ODBC CALL-Escapesequenz unterstützt.  
+ wobei *procedure_name* den Namen einer Prozedur angibt und *Parameter* einen Prozedur Parameter angibt. Benannte Parameter werden nur in Anweisungen mit ODBC CALL-Escapesequenz unterstützt.  
   
- Eine Prozedur kann 0 (null) oder mehr Parameter haben. Sie kann außerdem einen Wert zurückgeben (wie durch die optionale Parametermarkierung ?= am Anfang der Markierung angegeben). Wenn es sich bei einem Parameter um einen Eingabe- oder einen Eingabe-/Ausgabeparameter handelt, kann ein Literalwert oder eine Parametermarkierung verwendet werden. Wenn es sich bei dem Parameter um einen Ausgabeparameter handelt, muss eine Parametermarkierung verwendet werden, da die Ausgabe unbekannt ist. Parametermarkierungen müssen gebunden werden [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) vor dem Aufruf der Prozedur die Anweisung ausgeführt wird.  
+ Eine Prozedur kann 0 (null) oder mehr Parameter haben. Sie kann außerdem einen Wert zurückgeben (wie durch die optionale Parametermarkierung ?= am Anfang der Markierung angegeben). Wenn es sich bei einem Parameter um einen Eingabe- oder einen Eingabe-/Ausgabeparameter handelt, kann ein Literalwert oder eine Parametermarkierung verwendet werden. Wenn es sich bei dem Parameter um einen Ausgabeparameter handelt, muss eine Parametermarkierung verwendet werden, da die Ausgabe unbekannt ist. Parameter Markierungen müssen mit [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) gebunden werden, bevor die Prozedur aufrufen-Anweisung ausgeführt wird.  
   
- Eingabe- und Eingabe-/Ausgabeparameter müssen in Prozeduraufrufen nicht angegeben werden. Wenn eine Prozedur mit Klammern aber ohne Parameter aufgerufen wird, weist der Treiber die Datenquelle an, für den ersten Parameter den Standardwert zu verwenden. Zum Beispiel:  
+ Eingabe- und Eingabe-/Ausgabeparameter müssen in Prozeduraufrufen nicht angegeben werden. Wenn eine Prozedur mit Klammern aber ohne Parameter aufgerufen wird, weist der Treiber die Datenquelle an, für den ersten Parameter den Standardwert zu verwenden. Beispiel:  
   
- {**Aufrufen** _Procedure_name_ **()** }  
+ { _procedure_name_ **()** } abrufen  
   
- Wenn die Prozedur keine Parameter aufweist, kann bei der Prozedur ein Fehler auftreten. Wenn eine Prozedur ohne Klammern aufgerufen wird, sendet der Treiber keine Parameterwerte. Zum Beispiel:  
+ Wenn die Prozedur keine Parameter aufweist, kann bei der Prozedur ein Fehler auftreten. Wenn eine Prozedur ohne Klammern aufgerufen wird, sendet der Treiber keine Parameterwerte. Beispiel:  
   
- {**Aufrufen** _Procedure_name_}  
+ { _procedure_name_} abrufen  
   
  Literalwerte können in Prozeduraufrufen für Eingabe- und Eingabe-/Ausgabeparameter angegeben werden. Die Prozedur InsertOrder weist beispielsweise fünf Parameter auf. Beim folgenden Aufruf von InsertOrder ist der erste Parameter nicht angegeben, für den zweiten Parameter ist ein Literalwert angegeben und für den dritten, vierten und fünften Parameter wird eine Parametermarkierung verwendet. (Parameter werden sequenziell nummeriert und beginnen mit dem Wert 1.)  
   
@@ -74,7 +73,7 @@ ms.locfileid: "67910262"
 { CALL "master"."dbo"."sp_who" }  
 ```  
   
- Beim Ausführen der Standardeinstellungen unterstützt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber bei Bezeichnern mit Zeichen, die durch den ISO-Standard nicht als gültige Zeichen in Bezeichnern angegeben sind, jedoch keine Form von Bezeichnern mit Anführungszeichen. Z. B. der Treiber kann nicht den Zugriff auf eine gespeicherte Prozedur namens **"My.Proc"** mithilfe einer CALL-Anweisung mit Anführungszeichen eingeschlossenen Bezeichnern:  
+ Beim Ausführen der Standardeinstellungen unterstützt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber bei Bezeichnern mit Zeichen, die durch den ISO-Standard nicht als gültige Zeichen in Bezeichnern angegeben sind, jedoch keine Form von Bezeichnern mit Anführungszeichen. Beispielsweise kann der Treiber nicht auf eine gespeicherte Prozedur mit dem Namen **"My. proc"** zugreifen, indem eine-Anweisung mit Bezeichnern in Anführungszeichen verwendet wird:  
   
 ```  
 { CALL "MyDB"."MyOwner"."My.Proc" }  
@@ -86,7 +85,7 @@ ms.locfileid: "67910262"
 { CALL MyDB.MyOwner.My.Proc }  
 ```  
   
- Der Server löst einen Fehler, der ein Verbindungsserver mit dem Namen **MyDB** ist nicht vorhanden.  
+ Der Server löst einen Fehler aus, dass kein Verbindungs Server mit dem Namen **mydb** vorhanden ist.  
   
  Das Problem tritt nicht auf, wenn Bezeichner in Klammern verwendet werden. Dann wird diese Anweisung richtig interpretiert:  
   

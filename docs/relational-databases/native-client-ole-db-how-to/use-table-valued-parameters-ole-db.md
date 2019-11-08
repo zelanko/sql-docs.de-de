@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Tabellenwertparametern (OLE DB) | Microsoft-Dokumentation
+title: Verwenden von Tabellenwert Parametern (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +11,15 @@ ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f326704a949e4e0703f6dcb732471edd8187729b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0de2c67c1a2d60903054e5098a145f4057fe6e13
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109960"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789692"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Verwenden von Tabellenwertparametern (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt. In diesem Beispiel werden die folgenden Aufgaben ausgeführt:  
   
@@ -34,7 +33,7 @@ ms.locfileid: "68109960"
   
 -   Zeigt die Fehlerbehandlung für SQLNCLI11-Fehler.  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
+ Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt die im Beispiel verwendete Datenbank.  
