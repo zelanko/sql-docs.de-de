@@ -1,6 +1,7 @@
 ---
-title: Sp_pdw_add_network_credentials (SQL Data Warehouse) | Microsoft-Dokumentation
-ms.custom: ''
+title: sp_pdw_add_network_credentials
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
@@ -11,19 +12,19 @@ ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: da1ba0db4467526ef2b54650020a899f88788648
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008960"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844411"
 ---
-# <a name="sppdwaddnetworkcredentials-sql-data-warehouse"></a>Sp_pdw_add_network_credentials (SQL Data Warehouse)
+# <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Dies speichert die Anmeldeinformationen für das Netzwerk in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und ordnet diese mit einem Server. Verwenden Sie diese gespeicherte Prozedur z. B. gerne [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] geeignete Lese-/Schreibberechtigungen datenbanksicherung ausführen und Wiederherstellungsvorgänge auf einem Zielserver oder zum Erstellen einer Sicherung eines Zertifikats für TDE verwendet.  
+  Dies speichert Netzwerk Anmelde Informationen in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und ordnet diese einem Server zu. Verwenden Sie diese gespeicherte Prozedur z. b., um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] geeignete Lese-/Schreibberechtigungen zum Ausführen von Daten Bank Sicherungs-und Wiederherstellungs Vorgängen auf einem Zielserver und zum Erstellen einer Sicherung eines Zertifikats zu erstellen, das für TDE verwendet wird.  
   
- ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,49 +35,49 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ```  
   
 ## <a name="arguments"></a>Argumente  
- "*Target_server_name*"  
- Gibt an, die Ziel-Serverhostnamen oder die IP-Adresse. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] wird für diesen Server erlauben mithilfe der Benutzername und Kennwort-Anmeldeinformationen, die an diese gespeicherte Prozedur übergeben wird.  
+ "*target_server_name*"  
+ Gibt den Hostnamen oder die IP-Adresse des Zielservers an. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] auf diesen Server mithilfe der Anmelde Informationen für Benutzername und Kennwort zugreifen, die an diese gespeicherte Prozedur übermittelt werden.  
   
- Um über das InfiniBand-Netzwerk verbinden möchten, verwenden Sie die InfiniBand IP-Adresse des Zielservers ein.  
+ Verwenden Sie zum Herstellen einer Verbindung über das InfiniBand-Netzwerk die InfiniBand-IP-Adresse des Zielservers.  
   
- *Target_server_name* als nvarchar(337) definiert ist.  
+ *target_server_name* ist als nvarchar (337) definiert.  
   
  '*user_name*'  
- Gibt an, der Benutzername, der Administratorberechtigungen auf dem Zielserver verfügt. Wenn die Anmeldeinformationen für den Zielserver bereits vorhanden sind, werden sie auf die neuen Anmeldeinformationen aktualisiert werden.  
+ Gibt den user_name an, der über Berechtigungen für den Zugriff auf den Zielserver verfügt. Wenn für den Zielserver bereits Anmelde Informationen vorhanden sind, werden Sie auf die neuen Anmelde Informationen aktualisiert.  
   
- *USER_NAME* als Nvarchar (513) definiert ist.  
+ *user_name* ist als nvarchar (513) definiert.  
   
- "*Kennwort*Standardzeichen  
- Gibt das Kennwort für *User_name*.  
+ '*Password*ꞌ  
+ Gibt das Kennwort für *user_name*an.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert **ALTER SERVER STATE** Berechtigung.  
+ Erfordert die **Alter Server State** -Berechtigung.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
- Hinzufügen von Anmeldeinformationen auf dem steuerknoten und alle Computeknoten nicht erfolgreich ist, tritt ein Fehler auf.  
+ Ein Fehler tritt auf, wenn das Hinzufügen von Anmelde Informationen auf dem Steuer Knoten und allen Computeknoten nicht erfolgreich ist.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Diese gespeicherte Prozedur fügt Anmeldeinformationen für das Netzwerk mit dem NetworkService-Konto für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Das Konto NetworkService ausgeführt wird, jede Instanz von SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem steuerknoten und den Compute-Knoten. Z. B. wenn ein Sicherungsvorgang ausgeführt wird, verwendet den Steuerelementknoten aus, und jeder Compute-Knoten die Anmeldeinformationen des NetworkService-Konto erhalten Sie lesen und Schreibberechtigungen für den Zielserver.  
+ Diese gespeicherte Prozedur fügt dem Network Service-Konto für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Netzwerk Anmelde Informationen hinzu. Das Network Service-Konto führt jede Instanz von SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Steuer Knoten und den Computeknoten aus. Wenn beispielsweise ein Sicherungs Vorgang ausgeführt wird, verwenden der Steuer Knoten und alle Computeknoten die Anmelde Informationen des Network Service-Kontos, um Lese-und Schreibberechtigungen für den Zielserver zu erhalten.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. Hinzufügen von Anmeldeinformationen für das Ausführen einer datenbanksicherung  
- Im folgenden Beispiel wird die Anmeldeinformationen des Benutzers und das Kennwort für die Domäne Benutzer Seattle\david mit einem Zielserver, der über eine IP-Adresse des 10.172.63.255 verfügt. Der Benutzer Seattle\david verfügt über Lese-/Schreibberechtigungen auf dem Zielserver. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Diese Anmeldeinformationen speichert und diese verwenden, um das Lesen und Schreiben in und aus dem Zielserver bei Bedarf für die Sicherung und Wiederherstellungsvorgänge.  
+### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. Hinzufügen von Anmelde Informationen zum Ausführen einer Datenbanksicherung  
+ Im folgenden Beispiel werden die Anmelde Informationen für den Benutzernamen und das Kennwort für den Domänen Benutzer "tsattle\david" einem Zielserver mit der IP-Adresse 10.172.63.255 zugeordnet. Der Benutzer "einattle\david" verfügt über Lese-/Schreibberechtigungen für den Zielserver. in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] werden diese Anmelde Informationen gespeichert und zum Lesen und Schreiben auf dem Zielserver verwendet, sofern dies für Sicherungs-und Wiederherstellungs Vorgänge erforderlich ist.  
   
 ```  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
 ```  
   
- Backup-Befehl erfordert, dass es sich bei den Namen des Servers als eine IP-Adresse eingegeben werden.  
+ Der Backup-Befehl erfordert, dass der Servername als IP-Adresse eingegeben wird.  
   
 > [!NOTE]  
->  Zum Durchführen der Sicherung über InfiniBand unbedingt die InfiniBand IP-Adresse des backup-Server verwenden.  
+>  Um die Datenbanksicherung über InfiniBand auszuführen, achten Sie darauf, die InfiniBand-IP-Adresse des Sicherungs Servers zu verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
+ [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   
 

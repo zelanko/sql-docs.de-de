@@ -14,12 +14,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 557c3eb76dbaba037c289b93bc80bb1314e4d106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 905b1ceed2df8afc854ad38ee07d2b21596530f1
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721702"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882252"
 ---
 # <a name="configure-publishing-and-distribution"></a>Konfigurieren der Veröffentlichung und der Verteilung
   In diesem Thema wird beschrieben, wie die Veröffentlichung und die Verteilung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) konfiguriert werden.  
@@ -28,7 +28,7 @@ ms.locfileid: "62721702"
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
- Weitere Informationen finden Sie unter [Replikationsbereitstellung Secure](security/view-and-modify-replication-security-settings.md).  
+ Weitere Informationen finden Sie unter [sichere Replikations Bereitstellung](security/view-and-modify-replication-security-settings.md).  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Sie konfigurieren die Verteilung mit dem Assistenten für neue Veröffentlichung oder mit dem Verteilungskonfigurations-Assistenten. Rufen Sie nach der Konfiguration des Verteilers das Dialogfeld **Verteilereigenschaften - \<Distributor>** auf, und ändern Sie die Eigenschaften. Verwenden Sie den Verteilungskonfigurations-Assistenten, wenn Sie einen Verteiler so konfigurieren möchten, dass die Mitglieder der festen Datenbankrollen **db_owner** Veröffentlichungen erstellen können, oder wenn Sie einen Remoteverteiler konfigurieren möchten, bei dem es sich nicht um einen Verleger handelt.  
@@ -62,25 +62,25 @@ ms.locfileid: "62721702"
   
     -   Wenn der Wert von **installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) auf dem Verteiler für die master-Datenbank aus.  
   
-    -   Wenn der Wert von **distribution db installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie den Namen der Verteilungsdatenbank für **@database** . Optional können Sie die maximale Transaktionsbeibehaltungsdauer für **@max_distretention** und die Verlaufsbeibehaltungsdauer für **@history_retention** . Wenn eine neue Datenbank erstellt wird, geben Sie die gewünschten Eigenschaftenparameter für die Datenbank an.  
+    -   Wenn der Wert von **distribution db installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie den Namen der Verteilungs Datenbank für **\@-Datenbank**an. Optional können Sie die maximale Transaktions Beibehaltungs Dauer für **\@max_distretention** und die Beibehaltungs Dauer für den Verlauf **\@history_retention**angeben. Wenn eine neue Datenbank erstellt wird, geben Sie die gewünschten Eigenschaftenparameter für die Datenbank an.  
   
-2.  Führen Sie auf dem Verteiler, der zugleich der Verleger ist, [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) aus, und geben Sie dabei die UNC-Freigabe, die als Standardmomentaufnahmeordner verwendet werden soll, für **@working_directory** an.  
+2.  Führen Sie auf dem Verteiler, der auch der Verleger ist [, &#40;sp_adddistpublisher Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)aus, und geben Sie die UNC-Freigabe an, die als Standard Momentaufnahme-Ordner für **\@working_directory**verwendet wird.  
   
-3.  Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) auf dem Verleger aus. Geben Sie die zu veröffentlichende Datenbank für **@dbname** , den Typ der Replikation für **@optname** , und den Wert `true` für **@value** .  
+3.  Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) auf dem Verleger aus. Geben Sie die Datenbank an, die für **\@dbname**, den Replikationstyp für **\@optname**und den Wert `true` für **\@Wert**veröffentlicht wird.  
   
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>So konfigurieren Sie die Veröffentlichung mit einem Remoteverteiler  
   
 1.  Führen Sie [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) aus, um zu ermitteln, ob der Server bereits als Verteiler konfiguriert ist.  
   
-    -   Wenn der Wert von **installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie ein starkes Kennwort für **@password** . Dieses Kennwort für das **distributor_admin** -Konto wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.  
+    -   Wenn der Wert von **installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie ein sicheres Kennwort für **\@Kennwort**an. Dieses Kennwort für das **distributor_admin**-Konto wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.  
   
-    -   Wenn der Wert von **distribution db installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie den Namen der Verteilungsdatenbank für **@database** . Optional können Sie die maximale Transaktionsbeibehaltungsdauer für **@max_distretention** und die Verlaufsbeibehaltungsdauer für **@history_retention** . Wenn eine neue Datenbank erstellt wird, geben Sie die gewünschten Eigenschaftenparameter für die Datenbank an.  
+    -   Wenn der Wert von **distribution db installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie den Namen der Verteilungs Datenbank für **\@-Datenbank**an. Optional können Sie die maximale Transaktions Beibehaltungs Dauer für **\@max_distretention** und die Beibehaltungs Dauer für den Verlauf **\@history_retention**angeben. Wenn eine neue Datenbank erstellt wird, geben Sie die gewünschten Eigenschaftenparameter für die Datenbank an.  
   
-2.  Führen Sie auf dem Verteiler die Prozedur [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) aus, und geben Sie dabei die UNC-Freigabe, die als Standardmomentaufnahmeordner verwendet werden soll, für **@working_directory** an. Wenn der Verteiler zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@security_mode** und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@login** und **@password** .  
+2.  Führen Sie auf dem Verteiler [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)aus, und geben Sie die UNC-Freigabe an, die als Standard Momentaufnahme-Ordner für **\@working_directory**verwendet wird. Wenn der Verteiler beim Herstellen einer Verbindung mit dem Verleger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet, müssen Sie auch den Wert **0** für **\@security_mode** und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Informationen für **\@Login** und **\@Kennwort**angeben.  
   
-3.  Führen Sie auf dem Verleger für die master-Datenbank die Prozedur [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) aus. Geben Sie das starke Kennwort an, das in Schritt 1 für **@password** . Dieses Kennwort wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.  
+3.  Führen Sie auf dem Verleger für die master-Datenbank die Prozedur [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) aus. Geben Sie das in Schritt 1 verwendete starke Kennwort für **\@Kennwort**an. Dieses Kennwort wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.  
   
-4.  Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) auf dem Verleger aus. Geben Sie die zu veröffentlichende Datenbank für **@dbname** , den Replikationstyp für **@optname** und den Wert  für **@value** .  
+4.  Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) auf dem Verleger aus. Geben Sie die Datenbank an, die für **\@dbname**, den Replikationstyp für **\@optname**und den Wert true für **\@Wert**veröffentlicht werden soll.  
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  Im folgenden Beispiel wird veranschaulicht, wie die Veröffentlichung und die Verteilung programmgesteuert konfiguriert werden. In diesem Beispiel werden der Name des Servers, der als Verleger konfiguriert wird, und ein lokaler Verteiler mithilfe von Skriptvariablen bereitgestellt. Die Replikationsveröffentlichung und -verteilung kann mit gespeicherten Replikationsprozeduren programmgesteuert konfiguriert werden.  
@@ -115,7 +115,7 @@ ms.locfileid: "62721702"
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> : Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> wird empfohlen.  
   
-8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A>-Methode auf.  
+8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> -Methode auf.  
   
 #### <a name="to-configure-publishing-and-distribution-using-a-remote-distributor"></a>So konfigurieren Sie Veröffentlichung und Verteiler mit einem Remoteverteiler  
   
@@ -168,7 +168,7 @@ ms.locfileid: "62721702"
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [Verteilung konfigurieren](configure-distribution.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Konfigurieren der Replikation für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
+ [Konzepte für Replikationsverwaltungsobjekte (RMO)](concepts/replication-management-objects-concepts.md)   
+ [Konfigurieren der Replikation &#40;für AlwaysOn-Verfügbarkeitsgruppen SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   
   

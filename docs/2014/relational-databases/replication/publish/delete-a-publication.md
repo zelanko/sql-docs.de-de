@@ -15,14 +15,14 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865024"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882288"
 ---
-# <a name="delete-a-publication"></a>Löschen einer Veröffentlichung
+# <a name="delete-a-publication"></a>Delete a Publication
   In diesem Thema wird beschrieben, wie eine Veröffentlichung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) gelöscht wird.  
   
  **In diesem Thema**  
@@ -58,10 +58,10 @@ ms.locfileid: "62865024"
   
     -   Um eine einzelne Veröffentlichung zu löschen, führen Sie [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus.  
   
-    -   Führen Sie [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) auf dem Verleger aus, um alle Veröffentlichungen in und alle Replikationsobjekte aus einer veröffentlichten Datenbank zu entfernen. Geben Sie den Wert `tran` für **@type** . (Optional) Wenn nicht auf den Verteiler zugegriffen werden kann oder wenn der Status der Datenbank fehlerverdächtig oder offline ist, geben Sie für **@force** @type **@force** . (Optional) Geben Sie für **@dbname** den Namen der Datenbank an, wenn [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) an der Veröffentlichungsdatenbank nicht ausgeführt wird.  
+    -   Führen Sie [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) auf dem Verleger aus, um alle Veröffentlichungen in und alle Replikationsobjekte aus einer veröffentlichten Datenbank zu entfernen. Geben Sie den Wert `tran` für **\@Typ**an. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann oder wenn der Status der Datenbank fehlerverdächtig oder offline ist, geben Sie fürforce **den Wert \@1** an. (Optional) Geben Sie für **\@dbname** den Namen der Datenbank an, wenn [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) in der Veröffentlichungsdatenbank nicht ausgeführt wird.  
   
         > [!NOTE]  
-        >  Bei Angabe des Werts **@force** @type **@force** bleiben möglicherweise replikationsbezogene Veröffentlichungsobjekte in der Datenbank zurück.  
+        >  Bei Angabe des Werts **1** für **\@force** bleiben möglicherweise replikationsbezogene Veröffentlichungsobjekte in der Datenbank zurück.  
   
 2.  (Optional) Wenn diese Datenbank keine anderen Veröffentlichungen besitzt, führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) aus, um die Veröffentlichung der aktuellen Datenbank mit der Momentaufnahme- oder der Transaktionsreplikation zu deaktivieren.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "62865024"
   
     -   Um eine einzelne Veröffentlichung zu löschen, führen Sie [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus.  
   
-    -   Führen Sie [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) auf dem Verleger aus, um alle Veröffentlichungen in und alle Replikationsobjekte aus einer veröffentlichten Datenbank zu entfernen. Geben Sie den Wert `merge` für **@type** . (Optional) Wenn nicht auf den Verteiler zugegriffen werden kann oder wenn der Status der Datenbank fehlerverdächtig oder offline ist, geben Sie für **@force** @type **@force** . (Optional) Geben Sie für **@dbname** den Namen der Datenbank an, wenn [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) an der Veröffentlichungsdatenbank nicht ausgeführt wird.  
+    -   Führen Sie [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) auf dem Verleger aus, um alle Veröffentlichungen in und alle Replikationsobjekte aus einer veröffentlichten Datenbank zu entfernen. Geben Sie den Wert `merge` für **\@Typ**an. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann oder wenn der Status der Datenbank fehlerverdächtig oder offline ist, geben Sie fürforce **den Wert \@1** an. (Optional) Geben Sie für **\@dbname** den Namen der Datenbank an, wenn [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) in der Veröffentlichungsdatenbank nicht ausgeführt wird.  
   
         > [!NOTE]  
-        >  Bei Angabe des Werts **@force** @type **@force** bleiben möglicherweise replikationsbezogene Veröffentlichungsobjekte in der Datenbank zurück.  
+        >  Bei Angabe des Werts **1** für **\@force** bleiben möglicherweise replikationsbezogene Veröffentlichungsobjekte in der Datenbank zurück.  
   
 2.  (Optional) Wenn diese Datenbank keine anderen Veröffentlichungen besitzt, führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) aus, um die Veröffentlichung der aktuellen Datenbank mit der Mergereplikation zu deaktivieren.  
   
@@ -104,17 +104,17 @@ ms.locfileid: "62865024"
   
 4.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> -Eigenschaft, um festzustellen, ob die Veröffentlichung vorhanden ist. Wenn der Wert dieser Eigenschaft `false` lautet, wurden entweder die Veröffentlichungseigenschaften in Schritt 3 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>-Methode auf.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> -Methode auf.  
   
 6.  (Optional) Wenn für diese Datenbank keine anderen Transaktionsveröffentlichungen vorhanden sind, kann die Datenbank wie folgt für Transaktionsveröffentlichungen deaktiviert werden:  
   
     1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest.  
   
-    2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Wenn diese Methode zurückgibt `false`, bestätigen Sie, dass die Datenbank vorhanden ist.  
+    2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode `false`zurückgibt, vergewissern Sie sich, dass die Datenbank vorhanden ist.  
   
-    3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> -Eigenschaft auf `false`fest.  
+    3.  Setzen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A>-Eigenschaft auf `false`.  
   
-    4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf.  
+    4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf.  
   
 7.  Trennen Sie die Verbindung.  
   
@@ -128,17 +128,17 @@ ms.locfileid: "62865024"
   
 4.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> -Eigenschaft, um festzustellen, ob die Veröffentlichung vorhanden ist. Wenn der Wert dieser Eigenschaft `false` lautet, wurden entweder die Veröffentlichungseigenschaften in Schritt 3 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>-Methode auf.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> -Methode auf.  
   
 6.  (Optional) Wenn für diese Datenbank keine anderen Mergeveröffentlichungen vorhanden sind, kann die Datenbank wie folgt für Mergeveröffentlichungen deaktiviert werden:  
   
     1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest.  
   
-    2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Wenn diese Methode `false` zurückgibt, überzeugen Sie sich davon, dass die Datenbank vorhanden ist.  
+    2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode `false` zurückgibt, überzeugen Sie sich davon, dass die Datenbank vorhanden ist.  
   
-    3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> -Eigenschaft auf `false`fest.  
+    3.  Setzen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>-Eigenschaft auf `false`.  
   
-    4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf.  
+    4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf.  
   
 7.  Trennen Sie die Verbindung.  
   

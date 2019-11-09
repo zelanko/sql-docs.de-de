@@ -1,6 +1,6 @@
 ---
-title: Sys. database_connection_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
-ms.custom: ''
+title: sys.database_connection_stats
+titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.reviewer: ''
@@ -18,27 +18,28 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8b241d1f90a24ae69ab180404621a2feda393c01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940238"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844471"
 ---
-# <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL-Datenbank)
+# <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL-Datenbank)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Enthält Statistiken für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbank **Konnektivität** Ereignisse, und eine Übersicht über Datenbank erfolgreichen und fehlgeschlagenen Datenbankverbindungen. Weitere Informationen zu konnektivitätsereignissen finden Sie unter Ereignistypen in [Sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Enthält Statistiken für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]- **Datenbankverbindungs-Ereignisse und** bietet einen Überblick über erfolgreiche und fehlgeschlagene Datenbankverbindungen. Weitere Informationen zu konnektivitätsereignissen finden Sie unter Ereignis Typen in [sys &#40;. event_log Azure&#41;SQL-Datenbank](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 |Statistik|Typ|Beschreibung|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Der Name der Datenbank.|  
-|**start_time**|**datetime2**|UTC-Datum und -Zeit des Beginns des Aggregationsintervalls. Die Uhrzeit ist immer ein Vielfaches von 5 Minuten. Zum Beispiel:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|UTC-Datum und -Zeit des Endes des Aggregationsintervalls. **End_time** liegt immer genau 5 Minuten später als die entsprechende **Start_time** in derselben Zeile.|  
+|**start_time**|**datetime2**|UTC-Datum und -Zeit des Beginns des Aggregationsintervalls. Die Uhrzeit ist immer ein Vielfaches von 5 Minuten. Beispiel:<br /><br /> '2011-09-28 16:00:00'<br />"2011-09-28 16:05:00"<br />"2011-09-28 16:10:00"|  
+|**end_time**|**datetime2**|UTC-Datum und -Zeit des Endes des Aggregationsintervalls. **End_time** ist immer genau 5 Minuten später als die entsprechende **start_time** in derselben Zeile.|  
 |**success_count**|**int**|Anzahl erfolgreicher Verbindungen.|  
-|**total_failure_count**|**int**|Gesamtzahl fehlerhafter Verbindungen. Dies ist die Summe der **Connection_failure_count**, **Terminated_connection_count**, und **Throttled_connection_count**, und schließt keine Deadlockereignisse.|  
+|**total_failure_count**|**int**|Gesamtzahl fehlerhafter Verbindungen. Dies ist die Summe aus **connection_failure_count**, **terminated_connection_count**und **throttled_connection_count**und umfasst keine Deadlockereignisse.|  
 |**connection_failure_count**|**int**|Anzahl der Anmeldefehler.|  
 |**terminated_connection_count**|**int**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl beendeter Verbindungen.|  
 |**throttled_connection_count**|**int**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl gedrosselter Verbindungen.|  
@@ -55,9 +56,9 @@ ms.locfileid: "67940238"
 |------------------------|---------------------|-------------------|------------------------|-------------------------------|------------------------------------|---------------------------------------|--------------------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
-### <a name="interval-starttime-and-endtime"></a>start_time und end_time des Intervalls
+### <a name="interval-start_time-and-end_time"></a>{1}start_time{2} und {3}end_time{4} des Intervalls
 
- Ein Ereignis wird in ein aggregationsintervall eingefügt, wenn das Ereignis tritt auf, *auf* oder _nach_**Start_time** und _vor_  **End_time** für dieses Intervall. Beispielsweise würde ein Ereignis, das genau zum Zeitpunkt `2012-10-30 19:25:00.0000000` eintritt, nur im zweiten unten gezeigten Intervall aufgenommen werden:  
+ Ein Ereignis ist in einem Aggregations Intervall enthalten, wenn das Ereignis *am* oder _nach_**start_time** und _vor_**end_time** für dieses Intervall auftritt. Beispielsweise würde ein Ereignis, das genau zum Zeitpunkt `2012-10-30 19:25:00.0000000` eintritt, nur im zweiten unten gezeigten Intervall aufgenommen werden:  
   
 ```  
   
@@ -72,25 +73,25 @@ start_time                    end_time
   
 ### <a name="data-retention"></a>Datenbeibehaltung
 
- Die Daten in dieser Ansicht werden beibehalten, für bis zu 30 Tage oder kürzer abhängig von der Anzahl der Datenbanken und die Anzahl der eindeutigen Ereignisse, die jede Datenbank generiert. Um diese Informationen für einen längeren Zeitraum beizubehalten, kopieren Sie die Daten in eine separate Datenbank. Nachdem Sie eine erste Kopie der Sicht erstellt haben, werden die Zeilen in der Sicht möglicherweise aktualisiert, während die Daten gesammelt werden. Damit die Kopie der Daten aktuell bleibt, führen Sie regelmäßig einen Tabellenscan der Zeilen aus, um nach einer Erhöhung der Ereignisanzahl für vorhandene Zeilen zu suchen und um neue Zeilen zu ermitteln (eindeutige Zeilen bestimmen Sie anhand der Start- und Endzeiten). Aktualisieren Sie dann die Kopie der Daten mit diesen Änderungen.  
+ Die Daten in dieser Sicht werden maximal 30 Tage lang aufbewahrt, abhängig von der Anzahl der Datenbanken und der Anzahl der von jeder Datenbank generierten eindeutigen Ereignisse. Um diese Informationen für einen längeren Zeitraum beizubehalten, kopieren Sie die Daten in eine separate Datenbank. Nachdem Sie eine erste Kopie der Sicht erstellt haben, werden die Zeilen in der Sicht möglicherweise aktualisiert, während die Daten gesammelt werden. Damit die Kopie der Daten aktuell bleibt, führen Sie regelmäßig einen Tabellenscan der Zeilen aus, um nach einer Erhöhung der Ereignisanzahl für vorhandene Zeilen zu suchen und um neue Zeilen zu ermitteln (eindeutige Zeilen bestimmen Sie anhand der Start- und Endzeiten). Aktualisieren Sie dann die Kopie der Daten mit diesen Änderungen.  
   
 ### <a name="errors-not-included"></a>Fehler nicht enthalten
 
  Diese Sicht enthält möglicherweise nicht alle Verbindungs- und Fehlerinformationen:  
   
-- In dieser Ansicht enthält nicht alle [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbank Fehler auf, die auftreten können, sondern nur die unter den Ereignistypen in [Sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+- Diese Sicht enthält nicht alle [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbankfehler, die auftreten können, sondern nur die, die in Ereignis Typen in [sys. &#40;event_log&#41;Azure SQL-Datenbank](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)angegeben sind.  
   
-- Es ist ein Computerfehler innerhalb der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datacenter, ist eine kleine Menge Daten möglicherweise in der Ereignistabelle fehlt.  
+- Wenn ein Computerfehler innerhalb des [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datacenter auftritt, fehlt in der Ereignis Tabelle möglicherweise eine kleine Menge von Daten.  
   
 - Wenn eine IP-Adresse von DoSGuard blockiert wurde, können Verbindungsversuchsereignisse von dieser IP-Adresse nicht gesammelt werden. Diese werden in dieser Sicht nicht angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen
 
- Benutzer mit Berechtigung zum Zugriff auf die **master** Datenbank haben schreibgeschützten Zugriff auf diese Sicht.  
+ Benutzer, die über die Berechtigung zum Zugriff auf die **Master** -Datenbank verfügen, haben schreibgeschützten Zugriff auf diese Sicht.  
   
 ## <a name="example"></a>Beispiel
 
- Das folgende Beispiel zeigt eine Abfrage der **Sys. database_connection_stats** eine Zusammenfassung der Datenbankverbindungen zurückgegeben, die zwischen Mittag für 9/25/2011 und Mittag für 9/28/2011 (UTC) eingetreten sind. Standardmäßig werden die Ergebnisse der Abfrage nach sortiert **Start_time** (aufsteigende Reihenfolge).  
+ Das folgende Beispiel zeigt eine Abfrage von **sys. database_connection_stats** , um eine Zusammenfassung der Datenbankverbindungen zurückzugeben, die zwischen 12 Uhr 9/25/2011 mittags und 12 9/28/2011 Uhr UTC (UTC) aufgetreten sind. Standardmäßig werden die Abfrageergebnisse nach **start_time** (aufsteigender Reihenfolge) sortiert.  
   
 ```sql
 SELECT *  
@@ -100,6 +101,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## <a name="see-also"></a>Siehe auch
 
- [Beheben von Verbindungsproblemen mit Azure SQL-Datenbank](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
+ [Beheben von Verbindungsproblemen mit der Azure SQL-Datenbank](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

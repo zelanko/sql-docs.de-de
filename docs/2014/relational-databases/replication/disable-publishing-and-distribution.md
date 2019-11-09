@@ -18,12 +18,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721450"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882374"
 ---
 # <a name="disable-publishing-and-distribution"></a>Deaktivieren der Veröffentlichung und Verteilung
   In diesem Thema wird beschrieben, wie die Veröffentlichung und die Verteilung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) deaktiviert werden.  
@@ -40,7 +40,7 @@ ms.locfileid: "62721450"
   
 -   **Vorbereitungen:**  
   
-     [Erforderliche Komponenten](#Prerequisites)  
+     [Voraussetzungen](#Prerequisites)  
   
 -   **So deaktivieren Sie die Veröffentlichung und Verteilung mit:**  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62721450"
 7.  Führen Sie auf dem Verteiler [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) aus, um die Verteilerbezeichnung vom Server zu entfernen.  
   
     > [!NOTE]  
-    >  Wenn nicht alle Replikationsveröffentlichungs- und Verteilungsobjekte gelöscht wurden, bevor Sie [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) und [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)ausführen, geben diese Prozeduren einen Fehler zurück. Damit alle replikationsbezogenen Objekte gelöscht werden, wenn ein Verleger oder ein Verteiler gelöscht wird, muss der **@no_checks** -Parameter auf **1**. Wenn ein Verleger oder Verteiler offline oder nicht erreichbar ist, kann der **@ignore_distributor** -Parameter auf **1** festgelegt werden, damit der Verleger/Verteiler gelöscht werden kann: Jedoch müssen verbleibende Veröffentlichungs- und Verteilungsobjekte manuell entfernt werden.  
+    >  Wenn nicht alle Replikationsveröffentlichungs- und Verteilungsobjekte gelöscht wurden, bevor Sie [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) und [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)ausführen, geben diese Prozeduren einen Fehler zurück. Um alle Replikations bezogenen Objekte zu löschen, wenn ein Verleger oder ein Verteiler gelöscht wird, muss der **\@no_checks** -Parameter auf **1**festgelegt werden. Wenn ein Verleger oder Verteiler offline oder nicht erreichbar ist, kann der **\@ignore_distributor** -Parameter auf **1** festgelegt werden, damit Sie gelöscht werden können. alle zurückliegenden Veröffentlichungs-und Verteilungs Objekte müssen jedoch manuell entfernt werden.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Dieses Beispielskript entfernt Replikationsobjekte aus der Abonnementdatenbank.  
@@ -112,11 +112,11 @@ ms.locfileid: "62721450"
   
 5.  (Optional) Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen und zu verifizieren, dass der Verleger vorhanden ist. Wenn diese Methode `false` zurückgibt, war der in Schritt 4 festgelegte Verlegername falsch, oder der Verleger wird von diesem Verteiler nicht verwendet.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A>-Methode auf. Übergeben Sie den Wert `true` für *erzwingen* dem Verleger und Verteiler auf verschiedenen Servern sind und, wenn der Verleger auf dem Verteiler ohne vorherige Überprüfung deinstalliert werden soll, die Veröffentlichungen auf nicht mehr vorhanden sind die Herausgeber.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> -Methode auf. Übergeben Sie den Wert `true` für *Force* , wenn sich Verleger und Verteiler auf verschiedenen Servern befinden, und wenn der Verleger auf dem Verteiler deinstalliert werden soll, ohne zuvor zu überprüfen, ob die Veröffentlichungen auf dem Verleger nicht mehr vorhanden sind.  
   
 7.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse. Übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt aus Schritt 3.  
   
-8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A>-Methode auf. Übergeben Sie den Wert `true` für *erzwingen* entfernt alle Replikationsobjekte auf dem Verteiler ohne vorherige Überprüfung, die lokalen Veröffentlichungsdatenbanken deaktiviert und Verteilungsdatenbanken deinstalliert wurden.  
+8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> -Methode auf. Übergeben Sie den Wert `true` für *Force* , um alle Replikations Objekte auf dem Verteiler zu entfernen, ohne zuvor zu überprüfen, ob alle lokalen Veröffentlichungs Datenbanken deaktiviert wurden und Verteilungs Datenbanken deinstalliert wurden.  
   
 ###  <a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel werden die Verlegerregistrierung auf dem Verteiler entfernt, die Verteilungsdatenbank gelöscht und der Verteiler deinstalliert.  
@@ -132,7 +132,7 @@ ms.locfileid: "62721450"
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Konzepte für gespeicherte Systemprozeduren für die Replikation](concepts/replication-system-stored-procedures-concepts.md)  
+ [Konzepte für Replikationsverwaltungsobjekte (RMO)](concepts/replication-management-objects-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   
   

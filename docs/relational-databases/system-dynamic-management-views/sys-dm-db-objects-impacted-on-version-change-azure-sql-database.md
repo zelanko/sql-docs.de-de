@@ -1,6 +1,6 @@
 ---
-title: Sys. dm_db_objects_impacted_on_version_change (Azure SQL-Datenbank) | Microsoft-Dokumentation
-ms.custom: ''
+title: sys. dm_db_objects_impacted_on_version_change
+titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
 ms.reviewer: ''
@@ -19,31 +19,32 @@ ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9934771b6a887f6ae0984e79ce11729145e3d410
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051546"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843864"
 ---
-# <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL-Datenbank)
+# <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Diese datenbankbezogene Systemsicht wurde entworfen, um ein Frühwarnsystem bereitzustellen, mit dem Objekte ermittelt werden sollen, die von einem Upgrade der Hauptversion in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] betroffen sein werden. Sie können die Sicht entweder vor oder nach dem Upgrade verwenden, um eine vollständige Enumeration der betroffenen Objekte abzurufen. Sie müssen diese Sicht in jeder Datenbank abfragen, damit der gesamte Server berücksichtigt wird.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|class|**Int** nicht NULL|Die Klasse des Objekts, das betroffen sein wird:<br /><br /> **1** = Einschränkung<br /><br /> **7** = Indizes und Heaps|  
-|class_desc|**nvarchar(60)** nicht NULL|Beschreibung der Klasse:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
-|major_id|**Int** nicht NULL|Objekt-ID der Einschränkung oder Objekt-ID der Tabelle, die den Index oder Heap enthält.|  
-|minor_id|**Int** NULL|**NULL** für Einschränkungen<br /><br /> Index_id für Indizes und Heaps|  
-|Abhängigkeit|**nvarchar(60)** nicht NULL|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index betroffen sind. Derselbe Wert wird auch für Warnungen verwendet, die während des Upgrades generiert werden.<br /><br /> Beispiele:<br /><br /> **Speicherplatz** (für systeminterne)<br /><br /> **Geometry** (für System-UDT)<br /><br /> **Geography:: Parse** (für System-UDT-Methode)|  
+|class|**int** nicht NULL|Die Klasse des Objekts, das betroffen sein wird:<br /><br /> **1** = Einschränkung<br /><br /> **7** = Indizes und Heaps|  
+|class_desc|**nvarchar (60)** nicht NULL|Beschreibung der Klasse:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|major_id|**int** nicht NULL|Objekt-ID der Einschränkung oder Objekt-ID der Tabelle, die den Index oder Heap enthält.|  
+|minor_id|**int** Normal|**Null** für Einschränkungen<br /><br /> Index_id für Indizes und Heaps|  
+|Abhängigkeit|**nvarchar (60)** nicht NULL|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index betroffen sind. Derselbe Wert wird auch für Warnungen verwendet, die während des Upgrades generiert werden.<br /><br /> Beispiele:<br /><br /> **Leerraum** (für intrinsisch)<br /><br /> **Geometrie** (für System-UDT)<br /><br /> **Geography::P Arse** (für System-UDT-Methode)|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird eine Abfrage für **Sys. dm_db_objects_impacted_on_version_change** zur Suche nach den Objekten, die durch ein Upgrade auf die nächste wichtige Serverversion beeinflusst  
+ Das folgende Beispiel zeigt eine Abfrage für **sys. dm_db_objects_impacted_on_version_change** , um die Objekte zu finden, die von einem Upgrade auf die nächste Hauptserver Version betroffen sind.  
   
 ```  
 SELECT * FROM sys.dm_db_objects_disabled_on_version_change;  
@@ -66,7 +67,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |Order|Betroffenes Objekt|Korrekturmaßnahme|  
 |-----------|---------------------|-----------------------|  
-|1|**Indizes**|Alle identifizierten Index neu erstellen **Sys. dm_db_objects_impacted_on_version_change** z. B.:  `ALTER INDEX ALL ON <table> REBUILD`<br />oder<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Objekt**|Alle Einschränkungen, die durch **Sys. dm_db_objects_impacted_on_version_change** muss erneut überprüft werden, nachdem die Geometry- und Geography-Daten in der zugrunde liegenden Tabelle neu berechnet werden. Führen Sie die erneute Überprüfung für Einschränkungen mithilfe von ALTER TABLE durch. <br />Zum Beispiel: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />oder<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Indizes**|Erstellen Sie jeden durch **sys. dm_db_objects_impacted_on_version_change** identifizierten Index neu. Beispiel: `ALTER INDEX ALL ON <table> REBUILD`<br />\- oder<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Objekt**|Alle Einschränkungen, die von **sys. dm_db_objects_impacted_on_version_change** identifiziert werden, müssen erneut überprüft werden, nachdem die Geometry-und geography-Daten in der zugrunde liegenden Tabelle neu berechnet wurden. Führen Sie die erneute Überprüfung für Einschränkungen mithilfe von ALTER TABLE durch. <br />Beispiel: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />\- oder<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

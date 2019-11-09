@@ -15,12 +15,12 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f01cbdd1dd595e9dd2637a2e9d0ebbe871aabe66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6826d28ec923de221e94b985b740a172bdaa7d5
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212069"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882164"
 ---
 # <a name="specify-schema-options"></a>Angeben von Schemaoptionen
   In diesem Thema wird beschrieben, wie Schemaoptionen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]festgelegt werden. Beim Veröffentlichen einer Tabelle oder einer Sicht können Sie die Objekterstellungsoptionen steuern, die für das veröffentlichte Objekt repliziert werden. Sie können diesen Option festlegen, wenn der Artikel erstellt wird, und auch zu einem späteren Zeitpunkt ändern. Wenn Sie diese Optionen für einen Artikel nicht explizit festlegen, wird eine Standardgruppe von Optionen definiert.  
@@ -50,7 +50,7 @@ ms.locfileid: "68212069"
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Die vollständige Liste der Schemaoptionen finden Sie im Parameter **@schema_option** von [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) und [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql).  
+-   Eine umfassende Liste der Schema Optionen finden Sie im **\@schema_option** -Parameter von [sp_addarticle &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) und [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Auf der Registerkarte **Eigenschaften** im Dialogfeld **Artikeleigenschaften - \<Artikel>** können Sie Schemaoptionen angeben, beispielsweise, ob Einschränkungen und Trigger auf Abonnenten kopiert werden sollen. Diese Registerkarte ist im Assistenten für neue Veröffentlichung sowie über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Eine Veröffentlichung erstellen](create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "68212069"
   
 4.  Ändern Sie die Eigenschaften nach Bedarf, und klicken Sie dann auf **OK**.  
   
-5.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften.-.\<Veröffentlichung>** befinden, klicken Sie auf **OK**, um zu speichern und das Dialogfeld zu schließen.  
+5.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** befinden, klicken Sie auf **OK**, um eine Speicherung vorzunehmen und das Dialogfeld zu schließen.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Schemaoptionen werden als hexadezimaler Wert angegeben, der das [| (Bitweise OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) -Ergebnis einer oder mehrerer Optionen ist. Weitere Informationen finden Sie unter [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) und [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql).  
@@ -82,15 +82,15 @@ ms.locfileid: "68212069"
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>So geben Sie Schemaoptionen an, wenn Sie einen Artikel für eine Momentaufnahme- oder Transaktionsveröffentlichung definieren  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** , den Namen des Artikels für **@article** , das Datenbankobjekt, das veröffentlicht wird, für **@source_object** , den Typ des Datenbankobjekts für **@type** und das [| (Bitweise OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) -Ergebnis mindestens einer Schemaoption für **@schema_option** festgelegt werden. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **\@Veröffentlichung**, den Namen des Artikels für **\@Artikel**, das Datenbankobjekt, das für **\@source_object**veröffentlicht wird, den Typ des Datenbankobjekts für **\@Typ**und [| (Bitweises OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) Ergebnis von mindestens einer Schema Option für **\@schema_option**. Weitere Informationen finden Sie unter [Define an Article](define-an-article.md).  
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>So geben Sie Schemaoptionen an, wenn Sie einen Artikel für eine Mergeveröffentlichung definieren  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** , den Namen des Artikels für **@article** , das Datenbankobjekt, das veröffentlicht wird, für **@source_object** und das [| (Bitweise OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) -Ergebnis mindestens einer Schemaoption für **@schema_option** festgelegt werden. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **\@Veröffentlichung**, den Namen des Artikels für **\@Artikel**, das Datenbankobjekt, das für **\@source_object**veröffentlicht wird, und [| (Bitweises OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) Ergebnis von mindestens einer Schema Option für **\@schema_option**. Weitere Informationen finden Sie unter [Define an Article](define-an-article.md).  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>So ändern Sie Schemaoptionen für einen Artikel in einer Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** und den Namen des Artikels für **@article** festgelegt werden. Notieren Sie den Wert der **schema_option** -Spalte im Resultset.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **\@Veröffentlichung** und den Namen des Artikels für **\@Artikel**an. Notieren Sie den Wert der **schema_option** -Spalte im Resultset.  
   
 2.  Führen Sie einen [& (Bitweise AND)](/sql/t-sql/language-elements/bitwise-and-transact-sql)-Vorgang mit dem Wert aus Schritt 1 und dem gewünschten Wert für die Schemaoption aus, um festzustellen, ob die Option festgelegt ist.  
   
@@ -100,13 +100,13 @@ ms.locfileid: "68212069"
   
 3.  Wenn die Option nicht festgelegt ist, führen Sie einen [| (Bitweisen OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) -Vorgang mit dem Wert aus Schritt 1 und dem gewünschten Wert für die Schemaoption aus.  
   
-4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** , den Namen des Artikels für **@article** , den Wert **schema_option** für **@property** und das hexadezimale Ergebnis aus Schritt 3 für **@value** festgelegt werden.  
+4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **\@Veröffentlichung**, den Namen des Artikels für **\@Artikel**, den Wert **schema_option** für **\@Eigenschaft**und das hexadezimale Ergebnis aus Schritt 3 für **\@Value**an.  
   
 5.  Führen Sie den Momentaufnahme-Agent zum Generieren einer neuen Momentaufnahme aus. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>So ändern Sie Schemaoptionen für einen vorhandenen Artikel in einer Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** und den Namen des Artikels für **@article** festgelegt werden. Notieren Sie den Wert der **schema_option** -Spalte im Resultset.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **\@Veröffentlichung** und den Namen des Artikels für **\@Artikel**an. Notieren Sie den Wert der **schema_option** -Spalte im Resultset.  
   
 2.  Führen Sie einen [& (Bitweise AND)](/sql/t-sql/language-elements/bitwise-and-transact-sql)-Vorgang mit dem Wert aus Schritt 1 und dem gewünschten Wert für die Schemaoption aus, um festzustellen, ob die Option festgelegt ist.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "68212069"
   
 3.  Wenn die Option nicht festgelegt ist, führen Sie einen [| (Bitweisen OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) -Vorgang mit dem Wert aus Schritt 1 und dem gewünschten Wert für die Schemaoption aus.  
   
-4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** , den Namen des Artikels für **@article** , den Wert **schema_option** für **@property** und das hexadezimale Ergebnis aus Schritt 3 für **@value** festgelegt werden.  
+4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **\@Veröffentlichung**, den Namen des Artikels für **\@Artikel**, den Wert **schema_option** für **\@Eigenschaft**und das hexadezimale Ergebnis aus Schritt 3 für **\@Value**an.  
   
 5.  Führen Sie den Momentaufnahme-Agent zum Generieren einer neuen Momentaufnahme aus. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
