@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b67218c4b2d48b3a99ad896105a2069f5d8bcde
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4cda96435d1b6f3732446295d17b360033e4a17f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594488"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659363"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -438,6 +438,9 @@ Die folgenden Standardberechtigungen werden neu erstellten Azure AD-Anmeldenamen
 - Muss im gleichen Verzeichnis, das auch für die verwaltete Azure SQL-Datenbank-Instanz verwendet wird, ein Azure AD-Mitglied sein.
 
 ## <a name="after-creating-a-login"></a>Nach dem Erstellen eines Anmeldenamens
+
+> [!NOTE]
+> Die Azure AD-Administratorfunktion für verwaltete Instanzen nach der Erstellung wurde geändert. Weitere Informationen finden Sie unter [Neue Azure AD-Administratorfunktion für verwaltete Instanzen](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 Nach dem Erstellen eines Anmeldenamens kann dieser zum Herstellen einer Verbindung mit einer verwaltete SQL-Datenbank-Instanz verwendet werden. Dem Anmeldenamen werden jedoch nur die Berechtigungen der Rolle **public** gewährt. Ziehen Sie die Ausführung einiger der folgenden Aktivitäten in Betracht.
 
