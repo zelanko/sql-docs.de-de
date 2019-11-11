@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06421410c6cb0f6d80b9f8e67446a17d4e84864d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1b4177de655300e8297d450ab382c6f37a9f0fe
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024360"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843656"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Eine Systemfunktion, die den zuletzt eingefügten Identitätswert zurückgibt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68024360"
 ## <a name="return-types"></a>Rückgabetypen  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Nachdem eine INSERT- oder eine SELECT INTO-Anweisung bzw. eine Massenkopieranweisung abgeschlossen ist, enthält @@IDENTITY den letzten von der Anweisung generierten Identitätswert. Wenn sich die Anweisung nicht auf Tabellen mit Identitätsspalten ausgewirkt hat, gibt @@IDENTITY den Wert NULL zurück. Wenn mehrere Zeilen eingefügt und dabei mehrere Identitätswerte generiert werden, gibt @@IDENTITY den zuletzt generierten Identitätswert zurück. Wenn die Anweisung mindestens einen Trigger auslöst, der Einfügevorgänge zum Generieren von Identitätswerten durchführt, wird durch das Aufrufen von @@IDENTITY sofort nach der Anweisung der letzte von den Triggern generierte Identitätswert zurückgegeben. Wenn nach einer Einfügeaktion bei einer Tabelle mit einer Identitätsspalte ein Trigger ausgelöst wird und der Trigger das Einfügen in einer anderen Tabelle bewirkt, in der keine Identitätsspalte vorhanden ist, dann gibt @@IDENTITY den Identitätswert der Einfügung zurück. Der @@IDENTITY-Wert kehrt nicht zu einer vorherigen Einstellung zurück, wenn die INSERT- oder SELECT INTO-Anweisung oder der Massenkopiervorgang fehlschlägt bzw. für die Transaktion ein Rollback ausgeführt wird.  
   
  Fehlgeschlagene Anweisungen oder Transaktionen können die aktuelle Identität für eine Tabelle ändern und zu Lücken in den Identitätsspaltenwerten führen. Für den Identitätswert erfolgt kein Rollback, auch wenn für die Transaktion, die versuchte, den Wert in die Tabelle einzufügen, kein Commit ausgeführt wird. Wenn beispielsweise eine INSERT-Anweisung aufgrund einer IGNORE_DUP_KEY-Verletzung fehlschlägt, wird der aktuelle Identitätswert für die Tabelle trotzdem inkrementiert.  
@@ -80,7 +80,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
