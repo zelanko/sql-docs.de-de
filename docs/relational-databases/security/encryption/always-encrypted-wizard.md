@@ -1,7 +1,7 @@
 ---
-title: Always Encrypted-Assistent | Microsoft-Dokumentation
+title: Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/04/2016
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,67 +9,106 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.alwaysencryptedwizard.encryption.f1
 - sql13.swb.alwaysencryptedwizard.f1
-- sql.swb.alwaysencryptedwizard.masterkey.f1
+- sql13.swb.alwaysencryptedwizard.masterkey.f1
 helpviewer_keywords:
 - Wizard, Always Encrypted
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e45ddec1a380ea6ea867fb0306cca4176786fbf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043153"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594503"
 ---
-# <a name="always-encrypted-wizard"></a>Always Encrypted-Assistent
+# <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Verwenden Sie den **Always Encrypted-Assistent** zum Schutz sensibler Daten, die in einer SQL Server-Datenbank gespeichert sind. „Immer verschlüsselt“ ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an SQL Server weiterzugeben. Always Encrypted trennt daher zwischen denjenigen Benutzern, die die Daten besitzen (und sie ansehen können) und denjenigen, die die Daten verwalten, (aber keinen Zugriff haben sollten).  Eine vollständige Beschreibung des Features finden Sie unter [Always Encrypted &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
+Der Always Encrypted-Assistent ist ein leistungsstarkes Tool, mit dem Sie die gewünschte [Always Encrypted](always-encrypted-database-engine.md)-Konfiguration für ausgewählte Datenbankspalten festlegen können. Der Assistent kann Spalten je nach aktueller Konfiguration und gewünschter Zielkonfiguration verschlüsseln, entschlüsseln (die Verschlüsselung entfernen) oder erneut verschlüsseln (z. B. mithilfe eines neuen Spaltenverschlüsselungsschlüssels oder eines anderen Verschlüsselungstyps als dem aktuellen, der für die Spalte konfiguriert ist). Während einer einzigen Ausführung des Assistenten können mehrere Spalten konfiguriert werden.
+
+Mit dem Assistenten können Sie Spalten mit vorhandenen Spaltenverschlüsselungsschlüsseln verschlüsseln, einen neuen Spaltenverschlüsselungsschlüssel generieren oder zusätzlich zu diesem auch einen neuen Spaltenhauptschlüssel generieren. 
+
+Dabei verschiebt der Assistent Daten aus der Datenbank und führt kryptografische Vorgänge innerhalb des SSMS-Prozesses aus. Der Assistent erstellt eine neue Tabelle (oder Tabellen) mit der gewünschten Verschlüsselungskonfiguration in der Datenbank, lädt alle Daten aus den ursprünglichen Tabellen, führt die angeforderten kryptografischen Vorgänge aus, lädt die Daten in die neue(n) Tabelle(n) hoch und vertauscht dann die ursprüngliche(n) Tabelle(n) mit der/den neuen Tabelle(n).
+
+> [!NOTE]
+> Das Ausführen kryptografischer Vorgänge kann einige Zeit in Anspruch nehmen. Während dieser Zeit steht die Datenbank nicht zum Schreiben von Transaktionen zur Verfügung. PowerShell wird als Tool für kryptografische Vorgänge in größeren Tabellen empfohlen. Informationen hierzu finden Sie unter [Konfigurieren der Spaltenverschlüsselung mithilfe von Always Encrypted mit PowerShell](configure-column-encryption-using-powershell.md).
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Wenn Sie [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] verwenden und Ihre SQL Server-Instanz mit Secure Enclave konfiguriert ist, können Sie kryptografische Vorgänge direkt ausführen, ohne Daten aus der Datenbank zu verschieben. Informationen hierzu finden Sie unter [Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-configure-encryption.md). Beachten Sie, dass der Assistent keine direkte Verschlüsselung unterstützt.
+
+::: moniker-end
+
+Die Verwendung von PowerShell wird für die folgenden Szenarios empfohlen: 
+
+ - Eine End-to-End-Vorgehensweise, die das Konfigurieren von Always Encrypted mit dem Assistenten sowie die Verwendung von Always Encrypted in einer Clientanwendung veranschaulicht, finden Sie in den folgenden Tutorials zu Azure SQL-Datenbank:
+    - [Schützen von sensiblen Daten in Azure SQL-Datenbank mit Always Encrypted und Spaltenhauptschlüsseln im Windows-Zertifikatspeicher](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+    - [Schützen von sensiblen Daten in Azure SQL-Datenbank mit Always Encrypted und Spaltenhauptschlüsseln in Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
+
+ - Ein Video, das die Verwendung des Assistenten erläutert, finden Sie unter [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Sensible Daten mit Always Encrypted schützen). Weitere Informationen finden Sie auch im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security-Teamblog [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545).  
+ - Informationen zu Always Encrypted-Schlüsseln finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](overview-of-key-management-for-always-encrypted.md).
+ - Informationen zu Verschlüsselungstypen, die in Always Encrypted unterstützt werden, finden Sie unter [Auswählen der deterministischen oder zufälligen Verschlüsselung](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
  
- - Eine exemplarische End-to-End-Vorgehensweise, die das Konfigurieren von Always Encrypted mit dem Assistenten sowie die Verwendung von Always Encrypted in einer Clientanwendung veranschaulicht, finden Sie unter [Always Encrypted: Schützen von vertraulichen Daten und Speichern der Verschlüsselungsschlüssel im Windows-Zertifikatspeicher](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
+ ## <a name="permissions"></a>Berechtigungen
+Zum Ausführen von kryptografischen Vorgängen mithilfe des Assistenten müssen Sie über die Berechtigungen **VIEW ANY COLUMN MASTER KEY DEFINITION** und **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** verfügen. Zudem müssen Sie über Zugriffsberechtigungen auf die von Ihnen verwendeten Spaltenhauptschlüssel in den Schlüsselspeichern verfügen, die die Schlüssel enthalten:
+- **Zertifikatspeicher – Lokaler Computer**: Sie benötigen einen Lesezugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.
+- **Azure Key Vault**: Sie benötigen die Berechtigungen „get“, „unwrapKey“, und „verify“ für den Tresor, der den Spaltenhauptschlüssel enthält.
+- **Schlüsselspeicheranbieter (CNG)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
+- **Kryptografiedienstanbieter (Kryptografie-API)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des CSP abhängen.
+
+Zudem müssen Sie beim Erstellen von neuen Schlüsseln mit dem Assistenten über weitere Berechtigungen verfügen, die unter [Bereitstellen von Spaltenhauptschlüsseln mit dem Dialogfeld „Neuer Spaltenhauptschlüssel“](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) und [Bereitstellen von Spaltenverschlüsselungsschlüsseln mit dem Dialogfeld „Neuer Spaltenverschlüsselungsschlüssel“](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog) aufgelistet sind.
+
+## <a name="open-the-always-encrypted-wizard"></a>Öffnen des Always Encrypted-Assistenten
+Der Assistent kann auf drei verschiedenen Ebenen gestartet werden: 
+- Auf Datenbankebene zum Verschlüsseln mehrerer Spalten, die sich in verschiedenen Tabellen befinden.
+- Auf Tabellenebene zum Verschlüsseln mehrerer Spalten, die sich in derselben Tabelle befinden.
+- Auf Spaltenebene zum Verschlüsseln einer bestimmten Spalte.
  
- - Ein Video, das die Verwendung des Assistenten erläutert, finden Sie unter [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Sensible Daten mit Always Encrypted schützen). Weitere Informationen finden Sie auch im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security-Teamblog [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
- 
- - **Berechtigungen:** Damit Sie mit diesem Assistenten verschlüsselte Spalten abfragen und Schlüssel auswählen können, müssen Sie die Berechtigungen `VIEW ANY COLUMN MASTER KEY DEFINITION` und `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` haben. Damit Sie neue Schlüssel erstellen können, müssen Sie auch die Berechtigungen `ALTER ANY COLUMN MASTER KEY` und `ALTER ANY COLUMN ENCRYPTION KEY` haben.  
- 
- #### <a name="to-open-the-always-encrypted-wizard"></a>So öffnen Sie den Always Encrypted-Assistenten
- 
- 1.  Stellen Sie eine Verbindung mit Ihrem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Objekt-Explorer-Komponente von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]her.  
+ 1. Stellen Sie eine Verbindung mit Ihrem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Objekt-Explorer-Komponente von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]her.  
    
- 2.  Klicken Sie mit der rechten Maustaste auf Ihre Datenbank, bewegen Sie den Mauszeiger zu **Aufgaben**, und klicken Sie dann auf **Spalten verschlüsseln**.  
+ 2. Führen Sie je nach gewünschter Verschlüsselung einen den folgenden Schritte aus:
+     1. Wenn Sie mehrere Spalten in unterschiedlichen Tabellen einer Datenbank verschlüsseln möchten, klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Aufgaben**, und klicken Sie dann auf **Spalten verschlüsseln**.
+     1. Wenn Sie mehrere Spalten in derselben Tabelle verschlüsseln möchten, navigieren Sie zu der Tabelle, klicken Sie mit der rechten Maustaste darauf, und klicken Sie dann auf **Spalten verschlüsseln**.
+     1. Wenn Sie eine einzelne Spalte verschlüsseln möchten, navigieren Sie zu der Spalte, klicken Sie mit der rechten Maustaste darauf, und klicken Sie dann auf **Spalten verschlüsseln**.
+
+
    
  ## <a name="column-selection-page"></a>Die Seite „Spaltenauswahl“
- - Suchen Sie eine Tabelle und eine Spalte, und wählen Sie dann einen Verschlüsselungstyp (deterministisch oder zufällig) und einen Verschlüsselungsschlüssel für die ausgewählte Spalte aus. Um eine verschlüsselte Spalte zu entschlüsseln, wählen Sie **Klartext**. Um einen Spaltenverschlüsselungsschlüssel zu wechseln, wählen Sie die Option „andere Verschlüsselungsschlüssel“ und der Assistent wird die Spalte entschlüsseln und dann wieder mit dem neuen Schlüssel verschlüsseln. (Das Verschlüsseln von temporalen und speicherinternen Tabellen wird von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt, kann jedoch nicht mit diesem Assistenten konfiguriert werden.)  
- 
-## <a name="master-key-configuration-page"></a>Die Seite „Konfigurieren des Hauptschlüssels“  
- - Erstellen Sie einen neuen Spaltenhauptschlüssel im Windows-Zertifikatspeicher oder in Azure Key Vault. Weitere Informationen finden Sie unter den Links unten unter „Schlüsselspeicher“.  
- 
- - Wenn Sie einen automatisch generierter Spaltenverschlüsselungsschlüssel auf der Seite „Spaltenauswahl“ ausgewählt haben, müssen Sie ein Spaltenhauptschlüssel konfigurieren, mit dem der generierten Spaltenverschlüsselungsschlüssel verschlüsselt wird. Wenn Sie bereits einen Spaltenhauptschlüssel in Ihrer Datenbank definiert haben, können Sie diesen auswählen. (Um einen vorhandenen Spaltenhauptschlüssel zu verwenden, muss der Benutzer über die Zugriffsberechtigung auf den Schlüssel verfügen.) Sie können alternativ einen Spaltenhauptschlüssel in einem ausgewählten Schlüsselspeicher (Windows-Zertifikatspeicher oder Azure Key Vault) generieren und den Schlüssel in der Datenbank definieren.  
- 
- ### <a name="key-storage"></a>**Schlüsselspeicher**  
- 
- - Wählen Sie den Speicherort für den Spaltenhauptschlüssel.  
- 
-   - **Einen Hauptschlüssel im Windows-Zertifikatspeicher speichern** Weitere Informationen finden Sie unter [Using Certificate Stores](/windows/desktop/SecCrypto/using-certificate-stores)  
- 
-   - **Einen Hauptschlüssel in AKV speichern** Weitere Informationen finden Sie unter [Erste Schritte mit dem Azure-Schlüsseltresor](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
- 
- - Zum Generieren eines Spaltenhauptschlüssels im Azure Key Vault muss der Benutzer über die Berechtigungen **WrapKey**, **UnwrapKey**, **Verify**, und **Sign** für den Schlüsseltresor verfügen. Benutzer benötigen möglicherweise auch die Berechtigungen **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**, und **Restore** . Weitere Informationen finden Sie unter [Was ist der Azure-Schlüsseltresor?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) und [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy).  
- 
- - Der Assistent hat nur zwei Optionen unterstützt. Hardwaresicherheitsmodule und Kundenspeicher müssen mithilfe von [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] konfiguriert werden.  
- 
- ## <a name="always-encrypted-terms"></a>Begriffe zu Always Encrypted  
- 
- - Die**deterministische Verschlüsselung** verwendet eine Methode, die immer denselben verschlüsselten Wert für jeden angegebenen Klartextwert generiert. Die Verwendung der deterministischen Verschlüsselung ermöglicht das Gruppieren, das Filtern nach Gleichheit und das Verknüpfen von Tabellen, basierend auf verschlüsselten Werten. Jedoch erlaubt sie nicht autorisierten Benutzern möglicherweise, Informationen zu verschlüsselten Werten zu erraten, indem sie die Muster in den verschlüsselten Spalten untersuchen. Diese Schwäche verschlimmert sich, wenn es sich um einen kleinen Satz möglicher verschlüsselter Werte handelt, beispielsweise TRUE/FALSE, oder die Regionen „Nord“/ „Süd“/ „Ost“/ „West“. Die deterministische Verschlüsselung muss eine Spaltensortierung mit einer binary2-Sortierreihenfolge für Zeichenspalten verwenden.  
- 
- - Die**zufällige Verschlüsselung** verwendet eine Methode, die Daten in einer weniger vorhersagbaren Weise verschlüsselt. Die zufällige Verschlüsselung ist sicherer, verhindert aber die Gleichheitssuche, Gruppierung, Indizierung und Verknüpfung für verschlüsselte Spalten.  
+Auf dieser Seite können Sie Spalten auswählen, die Sie verschlüsseln, erneut verschlüsseln oder entschlüsseln möchten. Anschließend definieren Sie die Konfiguration der Zielverschlüsselung für die ausgewählten Spalten.
 
- - **Spaltenhauptschlüssel** sind Schutzschlüssel, die zur Verschlüsselung von Spaltenverschlüsselungsschlüsseln verwendet werden. Spaltenhauptschlüssel müssen in einem vertrauenswürdigen Schlüsselspeicher gespeichert werden. Informationen zu Spaltenhauptschlüsseln, einschließlich ihres Speicherorts, werden in der Datenbank in Systemkatalogsichten gespeichert.  
+Wählen Sie zum Verschlüsseln einer Klartextspalte (einer nicht verschlüsselten Spalte) einen Verschlüsselungstyp (**Deterministisch** oder **Zufällig**) und einen Verschlüsselungsschlüssel für die Spalte aus. 
 
- - **Spaltenverschlüsselungsschlüssel** werden verwendet, um sensible Daten zu verschlüsseln, die in Datenbankspalten gespeichert sind. Alle Werte in einer Spalte können mit einem einzelnen Spaltenverschlüsselungsschlüssel verschlüsselt werden. Verschlüsselte Werte der Spaltenverschlüsselungsschlüssel werden in der Datenbank in Systemkatalogsichten gespeichert. Sie sollten eine Sicherung der Spaltenverschlüsselungsschlüssel an einem sicheren/vertrauenswürdigen Ort speichern.  
+Wenn Sie einen Verschlüsselungstyp ändern oder einen Spaltenverschlüsselungsschlüssel für eine bereits verschlüsselte Spalte drehen (ändern) möchten, wählen Sie den gewünschten Verschlüsselungstyp und den Schlüssel aus. 
 
- ## <a name="see-also"></a>Weitere Informationen  
- - [Always Encrypted &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- - [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+Wählen Sie zum Verschlüsseln oder erneuten Verschlüsseln einer oder mehrerer Spalten mit einem neuen Spaltenverschlüsselungsschlüssel durch den Assistenten einen Schlüssel aus, dessen Name **(Neu)** enthält. Der Assistent generiert den Schlüssel.
+
+Wählen Sie zum Entschlüsseln einer derzeit verschlüsselten Spalte als Verschlüsselungstyp **Klartext** aus.
+
+
+> [!NOTE]
+> Der Assistent unterstützt keine kryptografischen Vorgänge in temporalen und In-Memory-Tabellen. Erstellen Sie hierfür leere temporale oder In-Memory-Tabellen mit Transact-SQL, und fügen Sie Daten mithilfe Ihrer Anwendung ein.
+
+## <a name="master-key-configuration-page"></a>Die Seite „Konfigurieren des Hauptschlüssels“
+Wenn Sie auf der vorherigen Seite einen automatisch generierten Spaltenverschlüsselungsschlüssel für eine beliebige Spalte ausgewählt haben, müssen Sie auf dieser Seite entweder einen vorhandenen Spaltenhauptschlüssel auswählen oder einen neuen Spaltenhauptschlüssel konfigurieren, mit dem der Spaltenverschlüsselungsschlüssel verschlüsselt wird. 
+
+Wenn Sie einen neuen Spaltenhauptschlüssel konfigurieren, können Sie entweder einen vorhandenen Schlüssel im Windows-Zertifikatspeicher oder in Azure Key Vault auswählen und mit dem Assistenten nur ein Metadatenobjekt für den Schlüssel in der Datenbank erstellen, oder Sie generieren sowohl den Schlüssel als auch das Metadatenobjekt, das den Schlüssel in der Datenbank beschreibt. 
+
+Weitere Informationen zum Erstellen und Speichern von Spaltenhauptschlüsseln im Windows-Zertifikatspeicher, in Azure Key Vault oder in anderen Schlüsselspeichern finden Sie unter [Erstellen und Speichern von Spaltenhauptschlüsseln für Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+
+> [!TIP]
+> Mit dem Assistenten können Sie Schlüssel nur im Windows-Zertifikatspeicher und in Azure Key Vault suchen und erstellen. Außerdem werden die Namen der neuen Schlüssel und der Metadatenobjekte, die die Schlüssel in der Datenbank beschreiben, automatisch generiert. Wenn Sie mehr Kontrolle über die Bereitstellungsweise der Schlüssel wünschen (und mehr Auswahlmöglichkeiten beim Schlüsselspeicher für Ihren Spaltenhauptschlüssel), können Sie mithilfe der Dialogfelder **Neuer Spaltenhauptschlüssel** und **Neuer Spaltenverschlüsselungsschlüssel** zunächst die Schlüssel erstellen und anschließend den Assistenten ausführen, um die erstellten Schlüssel auszuwählen. Weitere Informationen finden Sie unter [Bereitstellen von Spaltenhauptschlüsseln mit dem Dialogfeld „Neuer Spaltenhauptschlüssel“](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) und [Bereitstellen von Spaltenverschlüsselungsschlüsseln mit dem Dialogfeld „Neuer Spaltenverschlüsselungsschlüssel“](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog). 
+
+## <a name="next-steps"></a>Next Steps
+- [Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Entwickeln von Anwendungen mit Always Encrypted](always-encrypted-client-development.md)
+
+## <a name="see-also"></a>Weitere Informationen  
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Übersicht über die Schlüsselverwaltung für Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+ - [Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
+ - [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von PowerShell](configure-always-encrypted-keys-using-powershell.md)
+ - [Konfigurieren der Spaltenverschlüsselung mithilfe von Always Encrypted mit PowerShell](configure-column-encryption-using-powershell.md)
+ - [Konfigurieren der Spaltenverschlüsselung unter Verwendung von Always Encrypted mit einem DAC-Paket](configure-always-encrypted-using-dacpac.md)

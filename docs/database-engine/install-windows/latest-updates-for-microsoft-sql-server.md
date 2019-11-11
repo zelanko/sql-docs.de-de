@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 58ae65590f99d7fc330adca7f1db1898b8874571
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 5d0664b0d02eee638c3f8d9589ff3d883e6f0083
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586726"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594136"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Neueste Updates für Microsoft SQL Server
 
@@ -30,8 +30,9 @@ Jeder der folgenden Links liefert Informationen zu allen relevanten Produkten un
 
 |Produktversionen   | Neuestes Service Pack |  Letzte allgemeine Vertriebsversion (GDR) | Letztes kumulatives Update | Veröffentlichungsdatum des kumulativen Updates | Allgemeine Leitlinien  |
 |--|--|--|--|--|--|
-|SQL Server 2017|–|KB 4505224|CU 16 [(KB 4508218)](https://support.microsoft.com/en-us/help/4508218)|01.08.2019|[SQL Server 2017-Installation](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server) |
-|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/en-us/help/4052908)|[KB 4505220](https://support.microsoft.com/en-us/help/4505220)|CU 8 [(KB 4505830)](https://support.microsoft.com/en-us/kb/4505830)|31.07.2019|[SQL Server 2016-Installation](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
+|SQL Server 2019|–|[KB 4517790](https://support.microsoft.com/en-us/help/4517790)|–|–|[SQL Server 2019-Installation](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2017|–|[KB 4505224](https://support.microsoft.com/en-us/help/4505224)|CU 17 [(KB 4515579)](https://support.microsoft.com/en-us/help/4515579)|8\.10.2019|[SQL Server 2017-Installation](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/en-us/help/4052908)|[KB 4505220](https://support.microsoft.com/en-us/help/4505220)|CU 10 [(KB 4524334)](https://support.microsoft.com/en-us/kb/4524334)|8\.10.2019|[SQL Server 2016-Installation](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/en-us/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/en-us/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/en-us/help/4505221)|09.07.2019|[SQL Server 2016-Installation](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQL Server 2016|–|[KB4058560](https://support.microsoft.com/en-us/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/en-us/help/4058559)|22.11.2017|[SQL Server 2016-Installation](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQLServer 2014|SP3 [(KB 4022619)](https://support.microsoft.com/en-us/kb/4022619)|[KB 4505218](https://support.microsoft.com/en-us/help/4505218)|CU 4 [(KB 4500181)](https://support.microsoft.com/en-us/kb/4500181)|29.07.2019|[SQL Server 2014-Installation](https://technet.microsoft.com/en-us/library/cc281837(v=sql.120).aspx)|

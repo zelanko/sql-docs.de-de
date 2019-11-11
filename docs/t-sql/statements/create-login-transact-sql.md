@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 6b67218c4b2d48b3a99ad896105a2069f5d8bcde
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155658"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594488"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -124,7 +124,7 @@ CERTIFICATE *certname* Gibt den Namen eines Zertifikats an, das diesem Anmeldena
 
 ASYMMETRIC KEY *asym_key_name* Gibt den Namen eines asymmetrischen Schlüssels an, der diesem Anmeldenamen zugeordnet werden soll. Dieser Schlüssel muss bereits in der Masterdatenbank vorhanden sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 - Das vorherige Erstellen von Hashwerten für Kennwörter wird nur unterstützt, wenn Sie SQL Server-Anmeldenamen erstellen.
@@ -286,7 +286,7 @@ Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter
 
 SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)** ) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 - Ein Skript zum Übertragen von Anmeldenamen finden unter [Übertragen von Benutzernamen und Kennwörtern zwischen Instanzen von SQL Server](https://support.microsoft.com/kb/918992).
@@ -397,9 +397,6 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
     | DEFAULT_LANGUAGE = language
 ```
 
-> [!IMPORTANT]
-> Azure AD-Anmeldungen für verwaltete SQL-Datenbankinstanzen befinden sich in der **Public Preview**. Dies wurde mit der Syntax **FROM EXTERNAL PROVIDER** eingeführt.
-
 ## <a name="arguments"></a>Argumente
 
 *login_name* Bei Verwendung mit der Klausel **FROM EXTERNAL PROVIDER** legt der Anmeldename den Azure AD-Prinzipal fest, bei dem es sich um einen Azure AD-Benutzer, eine -Gruppe oder eine -Anwendung handelt. Andernfalls stellt der Anmeldename den Namen der erstellten SQL Server-Anmeldung dar.
@@ -413,7 +410,7 @@ Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter
 
 SID **=** *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für SQL Server-Authentifizierungsanmeldungen. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)** ) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 - Eine neue Syntax für die Erstellung von Serverebenenprinzipalen für Azure AD-Konten wurde eingeführt (**FROM EXTERNAL PROVIDER**).
@@ -423,12 +420,6 @@ SID **=** *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur fü
     - „UserPrincipalName“ des Azure AD-Objekts für Azure AD-Benutzer.
     - „DisplayName“ des Azure AD-Objekts für Azure AD-Gruppen und Azure AD-Anwendungen.
   - Die Option **PASSWORD** kann nicht verwendet werden.
-  - Derzeit muss der erste erstellte Azure AD-Anmeldename über das SQL Server-Standardkonto erstellt werden (nicht über Azure AD), das die `sysadmin`-Rolle besitzt und die obige Syntax verwendet.
-  - Beim Erstellen eines Azure AD-Anmeldenamens mithilfe eines Azure AD-Administratorkontos für die verwaltete SQL-Datenbank-Instanz tritt folgende Fehlermeldung auf:</br>
-      `Msg 15247, Level 16, State 1, Line 1
-      User does not have permission to perform this action.`
-  - Dies ist eine bekannte Einschränkung der **Public Preview** und wird zu einem späteren Zeitpunkt behoben.
-  - Sobald der erste Azure AD-Anmeldename erstellt wurde, kann er zum Erstellen weiterer Azure AD-Anmeldenamen verwendet werden, sobald die erforderlichen Berechtigungen gewährt wurden.
 - Wenn die Klausel **FROM EXTERNAL PROVIDER** ausgelassen wird, wird standardmäßig eine SQL Server-Anmeldung erstellt.
 - Azure AD-Anmeldenamen werden in „sys.server_principals“ aufgeführt. Für Anmeldenamen, die Azure AD-Benutzern zugeordnet sind, ist der Wert der Typspalte auf **E** und „type_desc“ ist auf **EXTERNAL_LOGIN** festgelegt. Für Anmeldenamen, die Azure AD-Gruppen zugeordnet sind, ist der Wert der Typspalte auf **X** und „type_desc“ ist auf **EXTERNAL_GROUP** festgelegt.
 - Ein Skript zum Übertragen von Anmeldenamen finden unter [Übertragen von Benutzernamen und Kennwörtern zwischen Instanzen von SQL Server](https://support.microsoft.com/kb/918992).
@@ -463,6 +454,7 @@ Nach dem Erstellen eines Anmeldenamens kann dieser zum Herstellen einer Verbindu
 - Nur SQL-Serverebenenprinzipale (Anmeldungen), die Teil der `sysadmin`-Rolle sind, können die folgenden Vorgänge für Azure AD-Prinzipale ausführen:
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
+- Aus einem anderen Azure AD-Verzeichnis importierte externe Benutzer (Gastbenutzer) können nicht direkt als Azure AD-Administratoren für eine verwaltete Instanz konfiguriert werden. Binden Sie die externen Benutzer stattdessen in eine Gruppe mit Azure AD-Sicherheit ein, und konfigurieren Sie die Gruppe als Instanzadministrator.
 
 ## <a name="examples"></a>Beispiele
 
@@ -587,7 +579,7 @@ Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter
 
  SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL Data Warehouse ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)** ) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 - Ein Skript zum Übertragen von Anmeldenamen finden unter [Übertragen von Benutzernamen und Kennwörtern zwischen Instanzen von SQL Server](https://support.microsoft.com/kb/918992).
@@ -717,7 +709,7 @@ Wenn die Windows-Richtlinie sichere Kennwörter erfordert, müssen Kennwörter m
 
 WINDOWS Gibt an, dass der Anmeldename einem Windows-Anmeldenamen zugeordnet wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 - Falls MUST_CHANGE angegeben wird, müssen CHECK_EXPIRATION und CHECK_POLICY auf ON festgelegt werden. Andernfalls erzeugt die Anweisung einen Fehler.

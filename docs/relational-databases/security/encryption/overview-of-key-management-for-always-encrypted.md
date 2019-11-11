@@ -1,28 +1,28 @@
 ---
 title: Übersicht über die Schlüsselverwaltung für Always Encrypted | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872c752355c12074ed90b525940fa3889726e662
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111639"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594106"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Übersicht über die Schlüsselverwaltung für Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) verwendet zwei Typen von kryptografischen Schlüsseln zum Schützen Ihrer Daten – einen Schlüssel zum Verschlüsseln Ihrer Daten und einen anderen Schlüssel zum Verschlüsseln des Schlüssels, der Ihre Daten verschlüsselt. Der Spaltenverschlüsselungsschlüssel verschlüsselt Ihre Daten, der Spaltenhauptschlüssel verschlüsselt den Spaltenverschlüsselungsschlüssel. Dieser Artikel enthält eine ausführliche Übersicht über die Verwaltung dieser Verschlüsselungsschlüssel.
+[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) verwendet zwei Typen von kryptografischen Schlüsseln zum Schützen Ihrer Daten – einen Schlüssel zum Verschlüsseln Ihrer Daten und einen anderen Schlüssel zum Verschlüsseln des Schlüssels, der Ihre Daten verschlüsselt. Der Spaltenverschlüsselungsschlüssel verschlüsselt Ihre Daten, der Spaltenhauptschlüssel verschlüsselt den Spaltenverschlüsselungsschlüssel. Dieser Artikel enthält eine ausführliche Übersicht über die Verwaltung dieser Verschlüsselungsschlüssel.  
 
 Wenn es um Always Encrypted-Schlüssel und Schlüsselmanagement geht, ist es wichtig, den Unterschied zwischen den tatsächlichen kryptografischen Schlüsseln und den Metadatenobjekten zu verstehen, die die Schlüssel *beschreiben* . Die Begriffe **Spaltenverschlüsselungsschlüssel** und **Spaltenhauptschlüssel** beziehen sich auf die tatsächlichen kryptografischen Schlüssel, während sich die Begriffe **Spaltenverschlüsselungsschlüssel-Metadaten** und **Spaltenhauptschlüssel-Metadaten** auf die *Beschreibungen* der Always Encrypted-Schlüssel in der Datenbank beziehen.
 
@@ -33,7 +33,7 @@ Wenn es um Always Encrypted-Schlüssel und Schlüsselmanagement geht, ist es wic
 
 Es ist wichtig zu beachten, dass die Schlüsselmetadaten im Datenbanksystem keine Nur-Text-Spaltenhauptschlüssel oder Nur-Text-Spaltenverschlüsselungsschlüssel enthalten. Die Datenbank enthält nur Informationen über den Typ und den Speicherort von Spaltenhauptschlüsseln sowie verschlüsselte Werte von Spaltenverschlüsselungsschlüsseln. Dies bedeutet, dass Nur-Text-Schlüssel dem Datenbanksystem niemals zur Verfügung gestellt werden, wodurch sichergestellt wird, dass das Schützen von Daten mithilfe von Always Encrypted sicher ist, selbst wenn das Datenbanksystem kompromittiert wird. Achten Sie darauf, Ihre Schlüsselverwaltungstools auf einem anderen Computer als dem Computer auszuführen, der Ihre Datenbank hostet, um sicherzustellen, dass das Datenbanksystem keinen Zugriff auf die Nur-Text-Schlüssel erhält. Weitere Informationen hierzu finden Sie im Abschnitt [Sicherheitsüberlegungen für die Schlüsselverwaltung](#security-considerations-for-key-management) weiter unten.
 
-Da die Datenbank nur verschlüsselte Daten (in Always Encrypted geschützte Spalten) enthält und nicht auf die Nur-Text-Schlüssel zugreifen kann, können die Daten nicht entschlüsselt werden. Dies bedeutet, dass beim Abfragen von Always Encrypted-Spalten einfach nur verschlüsselte Werte zurückgegeben werden. Clientanwendungen, die geschützte Daten ver- oder entschlüsseln müssen, benötigen Zugriff auf den Spaltenhauptschlüssel und die verknüpften Spaltenverschlüsselungsschlüssel. Weitere Informationen finden Sie unter [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)(Always Encrypted (Cliententwicklung))
+Da die Datenbank nur verschlüsselte Daten (in Always Encrypted geschützte Spalten) enthält und nicht auf die Nur-Text-Schlüssel zugreifen kann, können die Daten nicht entschlüsselt werden. Dies bedeutet, dass beim Abfragen von Always Encrypted-Spalten einfach nur verschlüsselte Werte zurückgegeben werden. Clientanwendungen, die geschützte Daten ver- oder entschlüsseln müssen, benötigen Zugriff auf den Spaltenhauptschlüssel und die verknüpften Spaltenverschlüsselungsschlüssel. Weitere Informationen finden Sie unter [Entwickeln von Anwendungen mithilfe von Always Encrypted](always-encrypted-client-development.md).
 
 
 
@@ -70,11 +70,8 @@ Wenn Always Encrypted-Schlüssel ohne Rollentrennung verwaltet werden, kann eine
 Always Encrypted-Schlüssel können mithilfe von [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) und [PowerShell](../../scripting/sql-server-powershell.md)verwaltet werden:
 
 - **SQL Server Management Studio (SSMS)** stellt die Dialogfelder und Assistenten bereit, die Aufgaben im Zusammenhang mit dem Zugriff auf den Schlüsselspeicher und die Datenbank kombinieren. SSMS unterstützt die Rollentrennung daher nicht, vereinfacht jedoch das Konfigurieren Ihrer Schlüssel. Weitere Informationen zum Verwalten von Schlüsseln mithilfe von SSMS finden Sie hier:
-    - [Bereitstellen von Spaltenhauptschlüsseln](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
-    - [Bereitstellen von Spaltenverschlüsselungsschlüsseln](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
-    - [Rotieren von Spaltenhauptschlüsseln](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
-    - [Rotieren von Spaltenverschlüsselungsschlüsseln](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
-
+    - [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+    - [Rotieren von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
 
 - **SQL Server PowerShell** enthält Cmdlets zum Verwalten von Always Encrypted-Schlüsseln mit und ohne Rollentrennung. Weitere Informationen finden Sie in den folgenden Themen:
     - [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
@@ -96,16 +93,13 @@ Ihr Schlüsselverwaltungsprozess muss sicherstellen, dass die Spaltenhauptschlü
 - Es ist wichtig, potenzielle Angreifer und Sicherheitsbedrohungen zu identifizieren, bevor ein Schlüsselverwaltungprozess definiert und implementiert wird, um sicherzustellen, dass ihr Schlüsselverwaltungsprozess nicht aus Versehen Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel offenlegt. Wenn Sie z.B. möchten, dass DBAs keinen Zugriff auf sensible Daten haben, darf ein DBA nicht für das Generieren von Schlüsseln verantwortlich sein. Ein DBA *kann* jedoch Schlüsselmetadaten in der Datenbank verwalten, da die Nur-Text-Schlüssel in den Metadaten nicht enthalten sind.
 
 ## <a name="next-steps"></a>Next Steps
+- [Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten](always-encrypted-wizard.md)
+- [Erstellen und Speichern von Spaltenhauptschlüsseln für Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
+- [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von PowerShell](configure-always-encrypted-keys-using-powershell.md)
 
-- [Create and Store Column Master Keys (Always Encrypted) (Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
-- [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Rotation von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
-
-- [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+## <a name="see-also"></a>Weitere Informationen
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Tutorial zum Always Encrypted-Assistenten (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Tutorial zum Always Encrypted-Assistenten (Windows-Zertifikatspeicher)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

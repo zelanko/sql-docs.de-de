@@ -1,35 +1,33 @@
 ---
 title: Bereitstellen von Big-Data-Clustern mit einem Python-Skript
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie ein Bereitstellungs Skript [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] zum Bereitstellen von (Vorschau) in Azure Kubernetes Service (AKS) verwenden.
+description: Erfahren Sie, wie Sie mit einem Bereitstellungsskript [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (Vorschau) in Azure Kubernetes Service (AKS) bereitstellen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1bd3af32448bfce7dc584ac630d503e4cf63b286
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653232"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531930"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Verwenden eines Python-Skripts zum Bereitstellen eines Big-Data-Clusters für SQL Server in Azure Kubernetes Service (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Tutorial verwenden Sie ein Beispielskript für die python-bereit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Stellung für die Bereitstellung in Azure Kubernetes Service (AKS).
+In diesem Tutorial verwenden Sie ein Python-Beispielskript, um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] in Azure Kubernetes Service (AKS) bereitzustellen.
 
 > [!TIP]
-> Sie können Big-Data-Cluster nicht nur mit AKS in Kubernetes hosten. Weitere Informationen zu anderen Bereitstellungs Optionen und zum Anpassen von Bereitstellungs Optionen finden [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-guidance.md)Sie unter Bereitstellen von auf Kubernetes.
+> Sie können Big-Data-Cluster nicht nur mit AKS in Kubernetes hosten. Informationen zu anderen Bereitstellungsoptionen und zum Anpassen dieser Optionen finden Sie unter [Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md).
 
 Die hier verwendete Standardbereitstellung für Big-Data-Cluster besteht aus einer SQL-Masterinstanz, einer Computepoolinstanz, zwei Datenpoolinstanzen und zwei Speicherpoolinstanzen. Daten werden dauerhaft mit persistenten Kubernetes-Volumes gespeichert, die die Standardspeicherklassen von AKS verwenden. Die Standardkonfiguration, die in diesem Tutorial verwendet wird, eignet sich für Entwicklungs- und Testumgebungen.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - ein Azure-Abonnement
 - [Big-Data-Tools:](deploy-big-data-tools.md)
@@ -72,7 +70,7 @@ Führen Sie die folgenden Schritte aus, um das Bereitstellungsskript auszuführe
 
 1. Geben Sie folgende Informationen ein, wenn Sie dazu aufgefordert werden:
 
-   | Wert | Beschreibung |
+   | value | und Beschreibung |
    |---|---|
    | **Azure-Abonnement-ID** | Die Azure-Abonnement-ID, die für AKS verwendet werden soll. Sie können Ihre Abonnements und deren IDs auflisten, indem Sie `az account list` über eine andere Befehlszeile ausführen. |
    | **Azure-Ressourcengruppe** | Der Name der Azure-Ressourcengruppe, die für den AKS-Cluster erstellt werden soll. |
@@ -81,7 +79,7 @@ Führen Sie die folgenden Schritte aus, um das Bereitstellungsskript auszuführe
    | **Workerknoten** | Die Anzahl der Workerknoten im AKS-Cluster (Standardwert: **1**). |
    | **Clustername** | Der Name des AKS-Clusters und des Big-Data-Clusters. Der Name Ihres Big-Data-Clusters darf nur alphanumerische Zeichen enthalten. Außerdem darf er nur aus Kleinbuchstaben bestehen und keine Leerzeichen enthalten (Standardwert: **sqlbigdata**). |
    | **Kennwort** | Das Kennwort für den Controller, das HDFS/Spark-Gateway und die Masterinstanz (Standardwert: **MySQLBigData2019**). |
-   | **Controllerbenutzer** | Der Benutzername für den Controllerbenutzer (Standardwert: **admin**). |
+   | **Benutzername** | Der Benutzername für den Controllerbenutzer (Standardwert: **admin**). |
 
 Teilnehmer des Early Adopter-Programms für Big-Data-Cluster in SQL Server 2019 mussten die folgenden Parameter verwenden: **Docker username** (Docker-Benutzername) und **Docker password** (Docker-Kennwort). Ab CTP 3.2 sind diese nicht mehr erforderlich.
 
@@ -89,7 +87,7 @@ Teilnehmer des Early Adopter-Programms für Big-Data-Cluster in SQL Server 2019 
    > Die Standardgröße **Standard_L8s** für Computer ist möglicherweise nicht in allen Azure-Regionen verfügbar. Wenn Sie eine andere Größe auswählen, müssen Sie sicherstellen, dass die Gesamtzahl der Datenträger, die den Knoten im Cluster angefügt werden können, größer oder gleich 24 ist. Auf dem Cluster ist für jeden PersistentVolumeClaim ein angefügter Datenträger erforderlich. Aktuell sind für Big-Data-Cluster 24 PersistentVolumeClaims erforderlich. Für die Computergröße [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) werden beispielsweise 32 angefügte Datenträger unterstützt, sodass Sie Big-Data-Cluster mit einem einzelnen Knoten dieser Größe auswerten können.
 
    > [!NOTE]
-   > Das `sa`-Konto ist ein Systemadministrator auf der SQL Server-Masterinstanz und wird bei der Einrichtung erstellt. Nach dem Erstellen der Bereitstellung können Sie die Umgebungsvariable `MSSQL_SA_PASSWORD` ermitteln, indem Sie `echo $MSSQL_SA_PASSWORD` im Container der Masterinstanz ausführen. Ändern Sie aus Sicherheitsgründen das `sa`-Kennwort für die Masterinstanz nach der Bereitstellung. Weitere Informationen finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
+   > Das SQL Server-Konto `sa` ist während der Bereitstellung eines Big Data-Clusters deaktiviert. In der SQL Server-Masterinstanz wird eine neue SysAdmin-Anmeldung bereitgestellt, die den gleichen Namen wie für die Eingabe **Benutzername** und das der Eingabe **Kennwort** entsprechende Kennwort verwendet. Die gleichen Werte für **Benutzername** und **Kennwort** werden zur Bereitstellung eines Controller-Administratorbenutzers verwendet. Der einzige für das Gateway (Knox) unterstützte Benutzer ist **root**, und das Kennwort ist das gleiche wie oben.
 
 1. Das Skript erstellt zunächst einen AKS-Cluster mithilfe der Parameter, die Sie angegeben haben. Dieser Schritt dauert einige Minuten.
 
@@ -113,7 +111,7 @@ Nach 10 bis 20 Minuten sollten Sie benachrichtigt werden, dass der Controllerpod
 ```
 
 > [!IMPORTANT]
-> Die vollständige Bereitstellung kann einige Zeit in Anspruch nehmen, da die Containerimages für die Komponenten des Big-Data-Clusters heruntergeladen werden müssen. Der Vorgang sollte jedoch nicht mehrere Stunden dauern. Wenn bei der Bereitstellung Probleme auftreten, finden Sie weitere Informationen unter [Überwachung [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]und ](cluster-troubleshooting-commands.md)Problembehandlung.
+> Die vollständige Bereitstellung kann einige Zeit in Anspruch nehmen, da die Containerimages für die Komponenten des Big-Data-Clusters heruntergeladen werden müssen. Der Vorgang sollte jedoch nicht mehrere Stunden dauern. Wenn Probleme bei der Bereitstellung auftreten, finden Sie weitere Informationen unter [Überwachung und Problembehandlung: [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## <a name="inspect-the-cluster"></a>Überprüfen des Clusters
 
@@ -151,7 +149,7 @@ Sie können während der Bereitstellung jederzeit mit **kubectl** oder **azdata*
    ```
 
 > [!TIP]
-> Weitere Informationen zum Überwachen und behandeln von Problemen bei einer Bereitstellung finden Sie unter [Überwachung und [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)Problembehandlung.
+> Weitere Informationen zum Überwachen und Behandeln von Problemen einer Bereitstellung finden Sie unter [Überwachung und Problembehandlung: [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## <a name="connect-to-the-cluster"></a>Herstellen einer Verbindung mit dem Cluster
 
@@ -166,7 +164,7 @@ Der Big-Data-Cluster für SQL Server wurde in AKS bereitgestellt. Nun können Si
 
 ## <a name="clean-up"></a>Bereinigung
 
-Wenn Sie in Azure [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] testen, sollten Sie den AKS-Cluster löschen, wenn Sie fertig sind, um unerwartete Gebühren zu vermeiden. Entfernen Sie den Cluster nicht, wenn Sie ihn weiterhin verwenden möchten.
+Wenn Sie [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure testen, sollten Sie abschließend den AKS-Cluster löschen, um unerwartete Gebühren zu vermeiden. Entfernen Sie den Cluster nicht, wenn Sie ihn weiterhin verwenden möchten.
 
 > [!WARNING]
 > Wenn Sie die folgenden Schritte ausführen, werden der AKS-Cluster und die Big-Data-Cluster für SQL Server gelöscht. Wenn Sie über Datenbanken oder HDFS-Daten verfügen, die Sie beibehalten möchten, müssen Sie diese Daten sichern, bevor Sie den Cluster löschen.
@@ -179,7 +177,7 @@ az group delete -n <resource group name>
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Durch das Bereitstellungsskript wurden Azure Kubernetes Service konfiguriert und ein Big-Data-Cluster für SQL Server 2019 bereitgestellt. Sie können zukünftige Bereitstellungen auch mithilfe manueller Installationen anpassen. Weitere Informationen zur Bereitstellung von Big Data Clustern und zum Anpassen von bereit Stellungen finden [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-guidance.md)Sie unter Bereitstellen von auf Kubernetes.
+Durch das Bereitstellungsskript wurden Azure Kubernetes Service konfiguriert und ein Big-Data-Cluster für SQL Server 2019 bereitgestellt. Sie können zukünftige Bereitstellungen auch mithilfe manueller Installationen anpassen. Weitere Informationen darüber, wie Sie Big Data-Cluster bereitstellen und Bereitstellungen anpassen, finden Sie unter [Bereitstellen von ](deployment-guidance.md) in Kubernetes[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 Da der Big-Data-Cluster für SQL Server bereitgestellt wurde, können Sie nun Beispieldaten auf diesen hochladen und sich die zugehörigen Tutorials ansehen:
 

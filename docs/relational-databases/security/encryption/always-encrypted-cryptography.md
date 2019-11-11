@@ -1,7 +1,7 @@
 ---
 title: Always Encrypted-Kryptografie | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70a18e569b43066bd64fe56593c47980a6894b09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043289"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594405"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted-Kryptografie
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68043289"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Schlüssel, Schlüsselspeicher und Algorithmen für die Schlüsselverschlüsselung
  Always Encrypted nutzt zwei Arten von Schlüsseln: Spaltenhauptschlüssel und Spaltenverschlüsselungsschlüssel.  
   
- Ein Spaltenhauptschlüssel (column master key; CMK) ist ein Schlüsselverschlüsselungsschlüssel (d.h. ein Schlüssel zum Verschlüsseln anderer Schlüssel), der immer vom Client gesteuert wird und in einem externen Schlüsselspeicher gespeichert ist. Ein Clienttreiber, der für Always Encrypted aktiviert ist, interagiert mit dem Schlüsselspeicher über einen CMK-Speicheranbieter, der entweder Teil der Treiberbibliothek (ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-/Systemanbieter) oder Teil der Clientanwendung (ein benutzerdefinierter Anbieter) ist. Clienttreiberbibliotheken umfassen derzeit [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Schlüsselspeicheranbieter für [Windows-Zertifikatspeicher](/windows/desktop/SecCrypto/using-certificate-stores) und Hardwaresicherheitsmodule (HSMs).  Eine aktuelle Liste der Anbieter finden Sie unter [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Ein Anwendungsentwickler kann einen benutzerdefinierten Anbieter für einen beliebigen Speicher angeben.  
+ Ein Spaltenhauptschlüssel (Column Master Key; CMK) ist ein Schlüsselverschlüsselungsschlüssel (d. h. ein Schlüssel zum Verschlüsseln anderer Schlüssel), der sich immer unter der Kontrolle eines Clients befindet und in einem externen Schlüsselspeicher gespeichert ist. Ein Clienttreiber, der für Always Encrypted aktiviert ist, interagiert mit dem Schlüsselspeicher über einen CMK-Speicheranbieter, der entweder Teil der Treiberbibliothek (ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-/Systemanbieter) oder Teil der Clientanwendung (ein benutzerdefinierter Anbieter) ist. Clienttreiberbibliotheken umfassen derzeit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Schlüsselspeicheranbieter für [Windows-Zertifikatspeicher](/windows/desktop/SecCrypto/using-certificate-stores) und Hardwaresicherheitsmodule (HSMs). Eine aktuelle Liste der Anbieter finden Sie unter [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Ein Anwendungsentwickler kann einen benutzerdefinierten Anbieter für einen beliebigen Speicher angeben.  
   
  Ein Spaltenverschlüsselungsschlüssel (column encryption key; CEK) ist ein Inhaltsverschlüsselungsschlüssel (d.h. ein Schlüssel zum Schützen von Daten), der durch einen CMK geschützt ist.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68043289"
 When using randomized encryption: IV = Generate cryptographicaly random 128bits  
 ```  
   
- Bei der deterministischen Verschlüsselung wird der IV nicht zufällig generiert, sondern mithilfe des folgenden Algorithmus vom Klartext abgeleitet:  
+ Bei der deterministischen Verschlüsselung wird der IV nicht zufällig generiert, sondern mithilfe des folgenden Algorithmus aus dem Klartextwert abgeleitet:  
   
 ```  
 When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) truncated to 128 bits.  
@@ -143,7 +143,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**binary**|Unterschiedlich. Verwenden Sie die oben stehende Formel.|  
 |**bit**|65|  
 |**char**|Unterschiedlich. Verwenden Sie die oben stehende Formel.|  
-|**date**|65|  
+|**Datum**|65|  
 |**datetime**|65|  
 |**datetime2**|65|  
 |**datetimeoffset**|65|  
@@ -175,10 +175,10 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/V (nicht unterstützt)|  
   
 ## <a name="net-reference"></a>.NET-Referenz  
- Weitere Informationen zu den in diesem Dokument beschriebenen Algorithmen finden Sie in den Dateien **SqlAeadAes256CbcHmac256Algorithm.cs** und **SqlColumnEncryptionCertificateStoreProvider.cs** in der [.NET-Referenz](https://referencesource.microsoft.com/).  
+ Weitere Informationen zu den in diesem Dokument beschriebenen Algorithmen finden Sie in der [.NET-Referenz](https://referencesource.microsoft.com/) in den Dateien **SqlAeadAes256CbcHmac256Algorithm.cs**, **SqlColumnEncryptionCertificateStoreProvider.cs** und **SqlColumnEncryptionCertificateStoreProvider.cs**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Always Encrypted &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted &#40;Cliententwicklung&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Entwickeln von Anwendungen mit Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

@@ -5,16 +5,16 @@ description: Verwenden Sie ein Notebook aus Azure Data Studio, um einen Big Data
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d68baa615f384dd5afb665f29decb6d72113c5a3
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MT
+ms.openlocfilehash: dfdf7dfd2ca5521bd80c4fdbf81e7b5c45d58b8d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028570"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594246"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebooks"></a>Bereitstellen eines Big Data-Clusters für SQL Server mit Azure Data Studio-Notebooks
 
@@ -26,35 +26,112 @@ ms.locfileid: "69028570"
 
 Sie können Notebooks verwenden, um Big Data-Cluster für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] bereitzustellen.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-Die folgenden Voraussetzungen müssen erfüllt sein, damit das Notebook gestartet werden kann:
+Die folgenden Voraussetzungen müssen erfüllt sein, damit auch das Notebook gestartet werden kann:
 
-* Neueste Version von [Azure Data Studio Insider-Build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master) installiert
-* [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Erweiterung ist in Azure Data Studio installiert.
+* Installation der neuesten Version von [Azure Data Studio Insiders-Build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
 
 Zusätzlich hierzu sind folgende Komponenten erforderlich, um einen Big Data-Cluster für SQL Server 2019 bereitstellen zu können:
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [Azure CLI](/cli/azure/install-azure-cli)
+* [Azure CLI (bei Bereitstellung in Azure)](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
 
 ## <a name="launch-the-notebook"></a>Starten des Notebooks
 
-1. Starten Sie die Azure Data Studio Insider.
+1. Starten Sie Azure Data Studio.
 
-1. Klicken Sie auf der Registerkarte **Verbindungen** auf **...** , und wählen Sie **SQL Server-Big Data-Cluster bereitstellen...** aus.
+2. Wählen Sie auf der Registerkarte **Verbindungen** die Auslassungspunkte ( **...** ) aus, und wählen Sie dann **Deploy SQL Server...** (SQL Server bereitstellen...) aus.
 
-   ![KI und Machine Learning](media/deploy-notebooks/deploy-notebooks-1.png)
+   ![Dialogfeld „Deploy SQL Server“ (SQL Server bereitstellen)](media/deploy-notebooks/deploy-notebooks.png)
 
-1. Wählen Sie in **Bereitstellungsziel** unter **Optionen** entweder **Neuer Azure Kubernetes-Cluster** oder **Vorhandener Azure Kubernetes Service-Cluster** aus.
+3. Wählen Sie unter den Bereitstellungsoptionen **SQL Server Big Data-Cluster** aus.
 
-1. Klicken Sie auf Schaltfläche **auswählen** .
+4. Wählen Sie in **Bereitstellungsziel** unter **Optionen** entweder **Neuer Azure Kubernetes-Cluster** oder **Vorhandener Azure Kubernetes Service-Cluster** aus.
 
-1. Mit dieser Aktion wird ein Dialogfeld geöffnet, in dem die Benutzereingaben erfasst, die erforderlichen Informationen bereitgestellt und die Standardwerte überprüft werden.
+5. Akzeptieren Sie die Datenschutz-und Lizenzbedingungen
 
-1. Klicken Sie auf **Notebook öffnen** .
-Mit dieser Aktion wird das entsprechende Notebook gestartet. Um die Bereitstellung abzuschließen, befolgen Sie die Anweisungen im Notebook, um einen Big Data Cluster für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] in einem vorhandenen oder neuen Azure Kubernetes Service-Cluster bereitzustellen.
+6. In diesem Dialogfeld wird außerdem überprüft, ob die erforderlichen Tools für den ausgewählten SQL-Bereitstellungstyp auf dem Host vorhanden sind. Die Schaltfläche **Auswählen** wird erst aktiviert, wenn die Überprüfung der Tools erfolgreich war.
+
+7. Wählen Sie die Schaltfläche **Auswählen** aus. Mit dieser Aktion wird die Bereitstellung gestartet.
+
+## <a name="set-deployment-configuration-template"></a>Festlegen einer Vorlage für die Bereitstellungskonfiguration
+
+Sie können die Einstellungen des Bereitstellungsprofils anpassen, indem Sie die folgenden Anweisungen befolgen.
+
+### <a name="target-configuration-template"></a>Vorlage für die Zielkonfiguration
+
+Wählen Sie die Vorlage für die Zielkonfiguration aus den verfügbaren Vorlagen aus. Die verfügbaren Profile werden abhängig vom Typ des Bereitstellungsziels gefiltert, das im vorherigen Dialogfeld ausgewählt wurde.
+
+   ![Schritt 1: Vorlage für die Bereitstellungskonfiguration](media/deploy-notebooks/deployment-configuration-template.png)
+
+### <a name="azure-settings"></a>Azure-Einstellungen
+
+Wenn das Bereitstellungsziel ein neuer AKS-Cluster ist, werden zusätzliche Informationen wie die Azure-Abonnement-ID, die Ressourcengruppe, der AKS-Clustername, die Anzahl und Größe virtueller Computer sowie weitere zusätzliche Informationen benötigt, um den AKS-Cluster zu erstellen.
+
+   ![Azure-Einstellungen](media/deploy-notebooks/azure-settings.png)
+
+Wenn das Bereitstellungsziel ein vorhandener Kubernetes-Cluster ist, fordert der Assistent den Pfad zur *Kube*-Konfigurationsdatei zum Importieren der Kubernetes-Clustereinstellungen auf. Stellen Sie sicher, dass der entsprechende Clusterkontext ausgewählt ist, in dem der Big Data-Cluster für SQL Server 2019 bereitgestellt werden kann.
+
+   ![Zielclusterkontext](media/deploy-notebooks/target-cluster-context.png)
+
+### <a name="cluster-docker-and-ad-settings"></a>Einstellungen für Cluster, Docker und AD
+
+1. Geben Sie den Clusternamen für den Big Data-Cluster für SQL Server 2019, den Administratorbenutzernamen und das Kennwort ein.
+Hinweis: Für den Controller und SQL Server wird das gleiche Konto verwendet.
+
+   ![Clustereinstellungen](media/deploy-notebooks/cluster-settings.png)
+
+2. Geben Sie die Docker-Einstellungen entsprechend ein.
+
+   ![Docker-Einstellungen](media/deploy-notebooks/docker-settings.png)
+
+3. Geben Sie die AD-Einstellungen ein, wenn die AD-Authentifizierung verfügbar ist.
+
+   ![Active Directory-Einstellungen](media/deploy-notebooks/active-directory-settings.png)
+
+### <a name="service-settings"></a>Diensteinstellungen
+
+Auf diesem Bildschirm können Sie verschiedene Einstellungen wie **Skalierung**, **Endpunkte**, **Speicher** und andere **erweiterte Speichereinstellungen** festlegen. Geben Sie die entsprechenden Werte ein, und wählen Sie **Weiter** aus.
+
+#### <a name="scale-settings"></a>Skalierungseinstellungen
+
+Geben Sie die Anzahl der Instanzen der einzelnen Komponenten im Big Data-Cluster ein.
+
+Eine Spark-Instanz kann zusammen mit HDFS eingeschlossen werden. Sie ist im Speicherpool oder eigenständig im Spark-Pool enthalten.
+
+   ![Diensteinstellungen](media/deploy-notebooks/service-settings.png)
+
+Weitere Informationen zu den einzelnen Komponenten finden Sie unter [Masterinstanz](concept-master-instance.md), [Datenpool](concept-data-pool.md), [Speicherpool](concept-storage-pool.md) oder [Computepool](concept-compute-pool.md).
+
+#### <a name="endpoint-settings"></a>Endpunkteinstellungen
+
+Die Standardendpunkte wurden vorab ausgefüllt. Sie können jedoch nach Bedarf geändert werden.
+
+   ![Endpunkteinstellungen](media/deploy-notebooks/endpoint-settings.png)
+
+#### <a name="storage-settings"></a>Speichereinstellungen
+
+Die Speichereinstellungen umfassen die Speicherklasse und die Anspruchsgröße für Daten und Protokolle. Die Einstellungen können auf den Speicherpool, Datenpool und SQL Server-Masterpool angewendet werden.
+
+   ![Speichereinstellungen](media/deploy-notebooks/storage-settings.png)
+
+#### <a name="advanced-storage-settings"></a>Erweiterte Speichereinstellungen
+
+Sie können unter **Erweiterte Speichereinstellungen** zusätzliche Speichereinstellungen hinzufügen.
+
+* Speicherpool (HDFS)
+* Datenpool
+* SQL Server Master
+
+   ![Erweiterte Speichereinstellungen](media/deploy-notebooks/advanced-storage-settings.png)
+
+### <a name="summary"></a>Zusammenfassung
+
+Auf diesem Bildschirm ist eine Zusammenfassung der gesamten Eingabe, die für die Bereitstellung des Big Data-Clusters von SQL Server 2019 bereitgestellt wurde, ersichtlich. Die Konfigurationsdateien können über die Schaltfläche **Save config files** (Konfigurationsdateien speichern) heruntergeladen werden. Wählen Sie **Script to Notebook** (Skript in Notebook schreiben) aus, um ein Skript für die gesamte Bereitstellungskonfiguration in einem Notebook zu schreiben. Wählen Sie **Run Cells** (Zellen ausführen) aus, sobald das Notebook geöffnet ist, um mit der Bereitstellung des Big Data-Clusters für SQL Server 2019 für das ausgewählte Ziel zu beginnen.
+
+   ![Zusammenfassung](media/deploy-notebooks/deploy-sql-server-big-data-cluster-on-a-new-AKS-cluster.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

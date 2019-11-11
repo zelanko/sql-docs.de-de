@@ -1,7 +1,7 @@
 ---
 title: 'Lernprogramm: Erstellen und Verwenden von Indizes für Enclave-fähige Spalten mit zufälliger Verschlüsselung | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9865be1d006e10271295ae4dda731eb33331dbda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126798"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592332"
 ---
-# <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Lernprogramm: Erstellen und Verwenden von Indizes für Enclave-fähige Spalten mit zufälliger Verschlüsselung
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Lernprogramm: Erstellen und Verwenden von Indizes für Enclave-fähige Spalten mit zufälliger Verschlüsselung
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 In diesem Tutorial erfahren Sie, wie Sie Indizes auf Enclave-fähigen Spalten erstellen und verwenden, indem Sie eine zufällige Verschlüsselung verwenden, die in [Always Encrypted mit Secure Enclaves](encryption/always-encrypted-enclaves.md) unterstützt wird. Es wird Folgendes gezeigt:
 
@@ -172,5 +172,7 @@ In diesem Schritt erstellen Sie einen Index auf einer verschlüsselten Spalte, d
    1. Achten Sie auf der Registerkarte **Live-Abfragestatistik einschließen** (im unteren Teil des Abfragefensters) darauf, dass die Abfrage den Index verwendet.
 
 ## <a name="next-steps"></a>Nächste Schritte
+- [Tutorial: Entwickeln einer .NET Framework-Anwendung mithilfe von Always Encrypted mit Secure Enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-- Informationen zu anderen Anwendungsfällen für Always Encrypted mit Secure Enclaves finden Sie in [Konfigurieren von Always Encrypted mit Secure Enclaves](encryption/configure-always-encrypted-enclaves.md).
+## <a name="see-also"></a>Siehe auch
+- [Erstellen und Verwenden von Indizes in Spalten mithilfe von Always Encrypted mit Secure Enclaves](encryption/always-encrypted-enclaves-create-use-indexes.md)

@@ -1,33 +1,40 @@
 ---
-title: Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell | Microsoft-Dokumentation
+title: Konfigurieren der Spaltenverschlüsselung mithilfe von Always Encrypted mit PowerShell | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63f2356c1bae9aa8ab4ac45ece5b3c09f6bfb90e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6f86a091f96f3d38bc4db7a5d5d2fde5462dce
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050018"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594387"
 ---
-# <a name="configure-column-encryption-using-powershell"></a>Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell
+# <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>Konfigurieren der Spaltenverschlüsselung mithilfe von Always Encrypted mit PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Dieser Artikel enthält die Schritte zum Festlegen der Always Encrypted-Zielkonfiguration für Datenbankspalten mithilfe des Cmdlet [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (im PowerShell-Modul *SqlServer* ). Das Cmdlet **Set-SqlColumnEncryption** ändert sowohl das Schema der Zieldatenbank sowie die in den ausgewählten Spalten gespeicherten Daten. Die in einer Spalte gespeicherten Daten können verschlüsselt, erneut verschlüsselt oder entschlüsselt werden, je nachdem, welche Zielverschlüsselungseinstellungen für die Spalten angegeben wurden und wie die aktuelle Verschlüsselungskonfiguration aussieht.
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Wenn Sie [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] verwenden und Ihre SQL Server-Instanz mit Secure Enclave konfiguriert ist, können Sie kryptografische Vorgänge direkt ausführen, ohne Daten aus der Datenbank zu verschieben. Informationen hierzu finden Sie unter [Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-configure-encryption.md). Beachten Sie, dass PowerShell keine direkte Verschlüsselung unterstützt.
+
+::: moniker-end
 Weitere Informationen zur Unterstützung von Always Encrytped im PowerShell-Modul „SqlServer“ finden Sie unter [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Stellen Sie Folgendes sicher, um die Zielverschlüsselungskonfiguration festzulegen:
-- Ein Spaltenverschlüsselungsschlüssel muss in der Datenbank konfiguriert sein (wenn Sie eine Spalte ver- oder entschlüsseln). Weitere Informationen finden Sie unter [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).
+- Ein Spaltenverschlüsselungsschlüssel muss in der Datenbank konfiguriert sein (wenn Sie eine Spalte ver- oder entschlüsseln). Weitere Informationen finden Sie unter [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).
 - Sie müssen von dem Computer aus, auf dem die PowerShell-Cmdlets ausgeführt werden, Zugriff auf den Spaltenhauptschlüssel jeder Spalte haben, die Sie verschlüsseln, erneut verschlüsseln oder entschlüsseln möchten. 
 
 ## <a name="performance-and-availability-considerations"></a>Überlegungen zu Leistung und Verfügbarkeit
@@ -38,21 +45,21 @@ Das Cmdlet **Set SqlColumnEncryption** unterstützt zwei Ansätze zum Einrichten
 
 Beim Offlineansatz sind die Zieltabellen (sowie alle Tabellen mit Beziehungen zu den Zieltabellen, z.B. Tabellen, mit denen eine Zieltabelle eine Fremdschlüsselbeziehung hat) während der Dauer des Vorgangs für Schreibtransaktionen nicht verfügbar. Die Semantik von Fremdschlüsseleinschränkungen (**CHECK** oder **NOCHECK**) wird beim Offlineansatz immer beibehalten.
 
-Beim Onlineansatz (erfordert das PowerShell-Modul „SqlServer“ mit Version 21.x oder höher) erfolgt der Vorgang des Kopierens und Verschlüsselns, Entschlüsselns oder erneuten Verschlüsselns der Daten inkrementell. Anwendungen können während des Datenverschiebevorgangs Daten in den Zieltabellen lesen und schreiben. Das gilt jedoch nicht für die allerletzte Iteration, deren Dauer vom Parameter **MaxDownTimeInSeconds** (den Sie definieren können) beschränkt wird. Zum Erkennen und Verarbeiten der Änderungen, die Anwendungen während des Kopierens der Daten vornehmen können, ermöglicht das Cmdlet das [Nachverfolgen von Änderungen](../../track-changes/enable-and-disable-change-tracking-sql-server.md) in der Zieldatenbank. Aus diesem Grund belegt der Onlineansatz wahrscheinlich mehr Ressourcen auf Serverseite als der Offlineansatz. Beim Onlineansatz kann der Vorgang ggf. auch wesentlich länger dauern, insbesondere wenn in der Datenbank eine schreibintensive Workload ausgeführt wird. Der Onlineansatz kann verwendet werden, um jeweils eine Tabelle zu verschlüsseln, die über einen Primärschlüssel verfügen muss. Fremdschlüsseleinschränkungen werden standardmäßig mit der **NOCHECK**-Option neu erstellt, um die Auswirkung auf die Anwendungen zu minimieren. Durch Angeben der Option **KeepCheckForeignKeyConstraints** können Sie das Beibehalten der Semantik von Fremdschlüsseleinschränkungen erzwingen.
+Beim Onlineansatz (erfordert das PowerShell-Modul „SqlServer“ mit Version 21.x oder höher) erfolgt der Vorgang des Kopierens und Verschlüsselns, Entschlüsselns oder erneuten Verschlüsselns der Daten inkrementell. Anwendungen können während des Datenverschiebevorgangs Daten in den Zieltabellen lesen und schreiben. Das gilt jedoch nicht für die letzte Iteration, deren Dauer durch den Parameter **MaxDownTimeInSeconds** (den Sie definieren können) begrenzt wird. Zum Erkennen und Verarbeiten der Änderungen, die Anwendungen während des Kopierens der Daten vornehmen können, ermöglicht das Cmdlet die [Änderungsnachverfolgung](../../track-changes/enable-and-disable-change-tracking-sql-server.md) in der Zieldatenbank. Aus diesem Grund belegt der Onlineansatz wahrscheinlich mehr Ressourcen auf Serverseite als der Offlineansatz. Beim Onlineansatz kann der Vorgang ggf. auch wesentlich länger dauern, insbesondere wenn in der Datenbank eine schreibintensive Workload ausgeführt wird. Der Onlineansatz kann verwendet werden, um jeweils eine Tabelle zu verschlüsseln, die über einen Primärschlüssel verfügen muss. Fremdschlüsseleinschränkungen werden standardmäßig mit der **NOCHECK**-Option neu erstellt, um die Auswirkung auf die Anwendungen zu minimieren. Durch Angeben der Option **KeepCheckForeignKeyConstraints** können Sie das Beibehalten der Semantik von Fremdschlüsseleinschränkungen erzwingen. 
 
 Es folgen die Leitlinien für die Wahl zwischen Offline- und Onlineansatz:
 
 Verwenden Sie den Offlineansatz:
 - Um die Dauer des Vorgangs zu minimieren. 
 - Um Spalten in mehreren Tabellen gleichzeitig zu verschlüsseln/entschlüsseln/neu zu verschlüsseln.
-- Wenn die Zieltabelle keinen Primärschlüssel hat.
+- Wenn die Zieltabelle keinen Primärschlüssel besitzt.
 
 Verwenden Sie den Onlineansatz:
 - Um die Ausfallzeit/Nichtverfügbarkeit der Datenbank für die Anwendungen zu minimieren.
 
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
-Das Cmdlet **Set-SqlColumnEncryption** , das zum Konfigurieren der Verschlüsselung von Datenbankspalten verwendet wird, verarbeitet sowohl Always Encrypted-Schlüssel als auch die in Datenbankspalten gespeicherten Daten. Es ist daher wichtig, dass Sie das Cmdlet auf einem sicheren Computer ausführen. Wenn sich Ihre Datenbank in SQL Server befindet, führen Sie das Cmdlet auf einem anderen Computer als dem Computer aus, der die SQL Server-Instanz hostet. Der primäre Zweck von Always Encrypted ist, sicherzustellen, dass verschlüsselte sensible Daten sicher sind, wenn das Datenbanksystem kompromittiert wird. Daher kann das Ausführen eines PowerShell-Skripts, das Schlüssel und/oder sensible Daten auf dem SQL Server-Computer verarbeitet, die Vorteile der Funktion einschränken oder zunichte machen.
+Das Cmdlet **Set-SqlColumnEncryption** , das zum Konfigurieren der Verschlüsselung von Datenbankspalten verwendet wird, verarbeitet sowohl Always Encrypted-Schlüssel als auch die in Datenbankspalten gespeicherten Daten. Es ist daher wichtig, das Cmdlet auf einem sicheren Computer auszuführen. Wenn sich Ihre Datenbank in SQL Server befindet, führen Sie das Cmdlet auf einem anderen Computer als dem Computer aus, der die SQL Server-Instanz hostet. Der primäre Zweck von Always Encrypted ist, sicherzustellen, dass verschlüsselte sensible Daten sicher sind, wenn das Datenbanksystem kompromittiert wird. Daher kann das Ausführen eines PowerShell-Skripts, das Schlüssel und/oder sensible Daten auf dem SQL Server-Computer verarbeitet, die Vorteile der Funktion einschränken oder zunichte machen.
 
 Task  |Artikel  |Greift auf Klartextschlüssel/-schlüsselspeicher zu  |Greift auf Datenbank zu   
 ---|---|---|---
@@ -64,22 +71,19 @@ Schritt 5. Legen Sie die gewünschte Verschlüsselungskonfiguration fest, die in
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Verschlüsseln von Spalten mithilfe des Offlineansatzes: Beispiel
 
-Das folgende Beispiel veranschaulicht das Festlegen der Zielverschlüsselungskonfiguration für einige Spalten.  Wenn eine Spalte nicht bereits verschlüsselt ist, wird sie verschlüsselt. Wenn eine Spalte bereits mit einem anderen Schlüssel und/oder einem anderen Verschlüsselungstyp verschlüsselt ist, wird Sie entschlüsselt und dann mit dem angegebenen Zielschlüssel/-typ erneut verschlüsselt.
+Das folgende Beispiel veranschaulicht das Festlegen der Zielverschlüsselungskonfiguration für einige Spalten. Wenn eine der Spalten noch nicht verschlüsselt ist, wird sie verschlüsselt. Wenn eine Spalte bereits mit einem anderen Schlüssel und/oder einem anderen Verschlüsselungstyp verschlüsselt ist, wird Sie entschlüsselt und dann mit dem angegebenen Zielschlüssel/-typ erneut verschlüsselt.
 
 
-```
+```PowerShell
 # Import the SqlServer module.
 Import-Module "SqlServer"
 
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Encrypt the selected columns (or re-encrypt, if they are already encrypted using keys/encrypt types, different than the specified keys/types.
 $ces = @()
@@ -90,21 +94,18 @@ Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -L
  
 ## <a name="encrypt-columns-using-online-approach---example"></a>Verschlüsseln von Spalten mithilfe des Onlineansatzes: Beispiel
 
-Das folgende Beispiel veranschaulicht das Festlegen der Zielverschlüsselungskonfiguration für einige Spalten mithilfe des Onlineansatzes. Wenn eine Spalte nicht bereits verschlüsselt ist, wird sie verschlüsselt. Wenn eine Spalte bereits mit einem anderen Schlüssel und/oder einem anderen Verschlüsselungstyp verschlüsselt ist, wird Sie entschlüsselt und dann mit dem angegebenen Zielschlüssel/-typ erneut verschlüsselt.
+Das folgende Beispiel veranschaulicht das Festlegen der Zielverschlüsselungskonfiguration für einige Spalten mithilfe des Onlineansatzes. Wenn eine der Spalten noch nicht verschlüsselt ist, wird sie verschlüsselt. Wenn eine Spalte bereits mit einem anderen Schlüssel und/oder einem anderen Verschlüsselungstyp verschlüsselt ist, wird Sie entschlüsselt und dann mit dem angegebenen Zielschlüssel/-typ erneut verschlüsselt.
 
-```
+```PowerShell
 # Import the SqlServer module.
 Import-Module "SqlServer"
 
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Encrypt the selected columns (or re-encrypt, if they are already encrypted using keys/encrypt types, different than the specified keys/types.
 $ces = @()
@@ -117,19 +118,16 @@ Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -U
 Das folgende Beispiel zeigt, wie alle Spalten, die derzeit in einer Datenbank verschlüsselt sind, entschlüsselt werden können.
 
 
-```
+```PowerShell
 # Import the SqlServer module.
 Import-Module "SqlServer"
 
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Find all encrypted columns, and create a SqlColumnEncryptionSetting object for each column.
 $ces = @()
@@ -148,10 +146,14 @@ for($i=0; $i -lt $tables.Count; $i++){
 Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory .
 ```
  
+## <a name="next-steps"></a>Next Steps
+- [Entwickeln von Anwendungen mit Always Encrypted](always-encrypted-client-development.md)
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
-- [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-- [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-
+## <a name="see-also"></a>Weitere Informationen  
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Übersicht über die Schlüsselverwaltung für Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+ - [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+ - [Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten](always-encrypted-wizard.md)
+ - [Konfigurieren der Spaltenverschlüsselung unter Verwendung von Always Encrypted mit einem DAC-Paket](configure-always-encrypted-using-dacpac.md)
 
 

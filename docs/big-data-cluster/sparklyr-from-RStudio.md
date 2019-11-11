@@ -1,40 +1,40 @@
 ---
-title: Verwenden von sparklyr aus rstudio
+title: Verwenden von sparklyr von RStudio
 titleSuffix: SQL Server big data clusters
-description: Stellen Sie eine Verbindung mit Big Data Cluster mithilfe von sparklyr von rstudio her.
+description: Stellen Sie über sparklyr von RStudio eine Verbindung mit einem Big Data-Cluster her.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d23ce447f097d092059f7298ca5478ed6c3f19fc
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653325"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531616"
 ---
-# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Verwenden von sparklyr in SQL Server Big Data-Cluster
+# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Verwenden von sparklyr in SQL Server-Big Data-Clustern
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr stellt eine R-Schnittstelle für Apache Spark bereit. Sparklyr ist eine beliebte Methode für R-Entwickler, Spark zu verwenden. In diesem Artikel wird beschrieben, wie Sie sparklyr [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] in einem mithilfe von rstudio verwenden.
+sparklyr stellt eine R-Schnittstelle für Apache Spark bereit. sparklyr ist eine beliebte Möglichkeit für R-Entwickler, Spark zu verwenden. Dieser Artikel beschreibt die Verwendung von sparklyr in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] mit RStudio.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-- Stellen Sie [eine SQL Server 2019 Big Data Cluster](quickstart-big-data-cluster-deploy.md)bereit.
+- [Bereitgestellter SQL Server 2019-Big Data-Cluster](quickstart-big-data-cluster-deploy.md)
 
-### <a name="install-rstudio-desktop"></a>Installieren von rstudio Desktop
+### <a name="install-rstudio-desktop"></a>Installieren von RStudio Desktop
 
-Installieren und konfigurieren Sie **rstudio Desktop** mit den folgenden Schritten:
+Installieren und konfigurieren Sie **RStudio Desktop** mithilfe der folgenden Schritte:
 
-1. Wenn Sie auf einem Windows-Client ausführen, müssen Sie [R 3.4.4 herunterladen und installieren](https://cran.rstudio.com/bin/windows/base/old/3.4.4).
+1. Wenn Sie auf einem Windows-Client arbeiten, [laden Sie R 3.4.4 herunter, und führen Sie die Anwendung aus](https://cran.rstudio.com/bin/windows/base/old/3.4.4).
 
-1. [Laden Sie rstudio Desktop herunter, und installieren Sie](https://www.rstudio.com/products/rstudio/download/)es.
+1. [Laden Sie RStudio Desktop herunter, und führen Sie die Anwendung aus](https://www.rstudio.com/products/rstudio/download/).
 
-1. Nachdem die Installation abgeschlossen ist, führen Sie die folgenden Befehle in rstudio Desktop aus, um die erforderlichen Pakete zu installieren:
+1. Wenn die Installation abgeschlossen ist, führen Sie die folgenden Befehle in RStudio Desktop aus, um die erforderlichen Pakete zu installieren:
 
    ```RStudioDesktop
    install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
@@ -42,14 +42,14 @@ Installieren und konfigurieren Sie **rstudio Desktop** mit den folgenden Schritt
    install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    ```
 
-## <a name="connect-to-spark-in-a-big-data-cluster"></a>Herstellen einer Verbindung mit Spark in einem Big Data Cluster
+## <a name="connect-to-spark-in-a-big-data-cluster"></a>Herstellen einer Verbindung mit Spark in einem Big Data-Cluster
 
-Mithilfe von Livy und dem HDFS-/Spark-Gateway können Sie mithilfe von sparklyr eine Verbindung zwischen einem Client und dem Big Data Cluster herstellen. 
+Sie können sparklyr verwenden, um über Livy und das HDFS/Spark-Gateway eine Verbindung von einem Client mit dem Big Data-Cluster herzustellen. 
 
-Erstellen Sie in rstudio ein R-Skript, und stellen Sie eine Verbindung mit Spark her, wie im folgenden Beispiel gezeigt:
+Erstellen Sie in RStudio ein R-Skript, und stellen Sie eine Verbindung mit Spark her, wie im folgenden Beispiel gezeigt:
 
 > [!TIP]
-> Verwenden Sie `<USERNAME>` für `<PASSWORD>` die Werte und den Benutzernamen (z. b. root) und das Kennwort, die Sie während der Bereitstellung des Big Data Clusters festlegen. Informationen zu `<IP>` den `<PORT>` Werten und finden Sie in der Dokumentation zum [Herstellen einer Verbindung mit einem Big Data Cluster](connect-to-big-data-cluster.md).
+> Verwenden Sie für die Werte `<AZDATA_USERNAME>` und `<AZDATA_PASSWORD>` den Benutzernamen (z. B. „root“) und das Kennwort, den bzw. das Sie bei der Bereitstellung des Big Data-Clusters festgelegt haben. Informationen zu den Werten für `<IP>` und `<PORT>` finden Sie in der Dokumentation zum [Herstellen einer Verbindung mit einem Big Data-Cluster](connect-to-big-data-cluster.md).
 
 ```r
 library(sparklyr)
@@ -57,7 +57,7 @@ library(dplyr)
 library(DBI)
 
 #Specify the Knox username and password
-config <- livy_config(user = "<username>", password = "<password>")
+config <- livy_config(user = "<AZDATA_USERNAME>", password = "<AZDATA_PASSWORD>")
 
 httr::set_config(httr::config(ssl_verifypeer = 0L, ssl_verifyhost = 0L))
 
@@ -68,7 +68,7 @@ sc <- spark_connect(master = "https://<IP>:<PORT>/gateway/default/livy/v1",
 
 ## <a name="run-sparklyr-queries"></a>Ausführen von sparklyr-Abfragen
 
-Nach dem Herstellen einer Verbindung mit Spark können Sie sparklyr ausführen. Im folgenden Beispiel wird eine Abfrage für das IRIS-DataSet mithilfe von sparklyr durchführt:
+Nach dem Herstellen der Verbindung mit Spark können Sie sparklyr ausführen. Das folgende Beispiel führt über sparklyr eine Abfrage des iris-Datasets aus:
 
 ```r
 iris_tbl <- copy_to(sc, iris)
@@ -80,9 +80,9 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>Verteilte R-Berechnungen
 
-Eine Funktion von sparklyr ist die Möglichkeit, [R-Berechnungen](https://spark.rstudio.com/guides/distributed-r/) mit [spark_apply](https://spark.rstudio.com/reference/spark_apply/)zu verteilen.
+Ein Feature von sparklyr ist die Möglichkeit, [spark_apply](https://spark.rstudio.com/reference/spark_apply/) zum [Verteilen von R-Berechnungen](https://spark.rstudio.com/guides/distributed-r/) zu verwenden.
 
-Da Big Data Cluster Livy-Verbindungen verwenden, müssen Sie `packages = FALSE` im **spark_apply**-Aufrufsatz festlegen. Weitere Informationen finden Sie im [Abschnitt "Livy](https://spark.rstudio.com/guides/distributed-r/#livy) " der sparklyr-Dokumentation zu verteilten R-Berechnungen. Mit dieser Einstellung können Sie nur die r-Pakete verwenden, die bereits in Ihrem Spark-Cluster in dem an **spark_apply**weiter gegebenen r-Code installiert sind. Diese Funktion wird im folgenden Beispiel veranschaulicht:
+Da Big Data-Cluster Livy-Verbindungen verwenden, müssen Sie `packages = FALSE` im Aufruf von **spark_apply** festlegen. Weitere Informationen finden Sie im [Abschnitt zu Livy](https://spark.rstudio.com/guides/distributed-r/#livy) in der sparklyr-Dokumentation zu verteilten R-Berechnungen. Mit dieser Einstellung können Sie in dem an **spark_apply** übergebenen R-Code nur die R-Pakete verwenden, die bereits in Ihrem Spark-Cluster installiert sind. Das folgende Beispiel veranschaulicht diese Funktion:
 
 ```r
 iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Species", packages = FALSE)
@@ -90,4 +90,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data Clustern finden Sie unter [Was ist [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md).
+Weitere Informationen zu Big Data-Clustern finden Sie unter [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
