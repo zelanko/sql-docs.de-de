@@ -1,7 +1,7 @@
 ---
 title: CREATE USER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/09/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c3afcf1c27d0b146e2f8762bd073853cc21ce2f
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: 112eb132c40b5b90137ebaf919f6a4ee2916bc95
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049930"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660440"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -139,8 +139,8 @@ CREATE USER user_name
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ] 
 ```
 
-> [!IMPORTANT]
-> Azure AD-Anmeldungen für verwaltete SQL-Datenbankinstanzen befinden sich in der **Public Preview**.
+> [!NOTE]
+> Die Azure AD-Administratorfunktion für verwaltete Instanzen nach der Erstellung wurde geändert. Weitere Informationen finden Sie unter [Neue Azure AD-Administratorfunktion für verwaltete Instanzen](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -468,7 +468,7 @@ WITH
 
  Verwenden Sie die folgende Syntax zum Erstellen eines Azure AD-Benutzers aus Azure AD-Anmeldeinformationen.
 
- Melden Sie sich mit der Azure AD-Anmeldung, der die `sysadmin`-Rolle zugewiesen ist, bei der verwalteten Instanz an. Im Folgenden wird der Azure AD-Benutzer bob@contoso.com mit den Anmeldeinformationen bob@contoso.com erstellt. Diese Anmeldeinformationen wurde im [CREATE LOGIN](create-login-transact-sql.md#examples-4)-Beispiel erstellt.
+ Melden Sie sich mit der Azure AD-Anmeldung, der die `sysadmin`-Rolle zugewiesen ist, bei der verwalteten Instanz an. Im Folgenden wird der Azure AD-Benutzer bob@contoso.com mit den Anmeldeinformationen bob@contoso.com erstellt. Diese Anmeldeinformationen wurde im [CREATE LOGIN](create-login-transact-sql.md#examples)-Beispiel erstellt.
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];

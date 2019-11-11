@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f2d3a496cbe2b8adda02b5d7425e49c09f44c77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513312"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593537"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS-Verschlüsselungsschlüssel: Löschen und Neuerstellen
   Das Löschen und erneute Erstellen von Verschlüsselungsschlüsseln gehört nicht zu den routinemäßigen Aktivitäten bei der Verwaltung von Schlüsseln. Sie führen diese Aufgaben als Reaktion auf eine bestimmte Gefahr für den Berichtsserver oder als letzte Möglichkeit vor dem Verlust des Zugriffs auf die Datenbank des Berichtsservers aus.  
@@ -106,7 +106,7 @@ ms.locfileid: "62513312"
   
 1.  Sie müssen für jede freigegebene Datenquelle die Verbindungszeichenfolge erneut eingeben.  
   
-2.  Für jeden Bericht und jede freigegebene Datenquelle, der bzw. die gespeicherte Anmeldeinformationen verwendet, müssen Sie den Benutzernamen und das Kennwort erneut eingeben und dann speichern. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+2.  Für jeden Bericht und jede freigegebene Datenquelle, der bzw. die gespeicherte Anmeldeinformationen verwendet, müssen Sie den Benutzernamen und das Kennwort erneut eingeben und dann speichern. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 3.  Für datengesteuerte Abonnements öffnen Sie jedes Abonnement, und geben Sie die Anmeldeinformationen für die Abonnementdatenbank erneut ein.  
   

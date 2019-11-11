@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 836678305a32d1acf9192387bae6f79d398cf847
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5da8dd93022240d0d12543b0ee6cf756d70cae40
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927230"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73791334"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Ändert die Eigenschaften einer Warteschlange.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -157,7 +157,7 @@ Im Gegensatz zu REORGANIZE bei Benutzertabellen wird REORGANIZE bei einer Wartes
   
  Eine Warteschlange, für die die Behandlung nicht verarbeitbarer Nachrichten auf OFF festgelegt ist, wird erst nach fünf aufeinander folgenden Transaktionsrollbacks deaktiviert. Daher ist es möglich, dass von der Anwendung ein System für die Behandlung nicht verarbeitbarer Nachrichten definiert wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Wenn eine Warteschlange mit einer angegebenen gespeicherten Aktivierungsprozedur Nachrichten enthält, wird die gespeicherte Aktivierungsprozedur unmittelbar aktiviert, wenn der Aktivierungsstatus von OFF in ON geändert wird. Durch das Ändern des Aktivierungsstatus von ON zu OFF beendet der Broker das Aktivieren von Instanzen der gespeicherten Prozedur. Instanzen der gespeicherten Prozedur, die aktuell ausgeführt werden, werden jedoch nicht beendet.  
   
  Wird eine Warteschlange geändert, um eine gespeicherte Aktivierungsprozedur hinzuzufügen, wird dadurch der Aktivierungsstatus der Warteschlange nicht geändert. Wird die gespeicherte Aktivierungsprozedur für die Warteschlange geändert, hat dies keine Auswirkungen auf Instanzen der gespeicherten Aktivierungsprozedur, die aktuell ausgeführt werden.  

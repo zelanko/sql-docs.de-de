@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 552d4b6094a4cc890124399039ee61ba775ec715
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71293131"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637955"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
 
@@ -151,7 +151,7 @@ ms.locfileid: "71293131"
   
  In der Regel sind die langsamsten Komponenten in der Transformation für langsam veränderliche Dimensionen die Transformationen für OLE DB-Befehl, die UPDATEs für jeweils eine Zeile ausführen. Daher ist die effizienteste Methode zur Verbesserung der Leistung der Transformation für langsam veränderliche Dimensionen das Ersetzen der Transformationen für OLE DB-Befehl. Sie können diese Transformationen durch Zielkomponenten ersetzen, die alle zu aktualisierenden Zeilen in eine Stagingtabelle speichern. Sie können dann einen Task "SQL ausführen" hinzufügen, der für alle Zeilen gleichzeitig ein einzelnes setbasiertes Transact-SQL-UPDATE ausführt.  
   
- Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt „Unique dimension scenario“ im Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt „Unique dimension scenario“ im Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ### <a name="destinations"></a>Ziele  
  Wenn Sie die Leistung von Zielen erhöhen möchten, sollten Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel verwenden und die Leistung des Ziels testen.  

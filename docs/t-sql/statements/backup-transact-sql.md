@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142861"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659093"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1021,8 +1021,6 @@ COPY_ONLY gibt an, dass die Sicherung eine *Kopiesicherung* ist, die keine Auswi
 
 Die Sicherungskomprimierung wird standardmäßig deaktiviert. Diese Standardeinstellung kann jedoch durch Festlegen der Serverkonfigurationsoption [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) geändert werden. Informationen zum Anzeigen des aktuellen Werts dieser Option finden Sie unter [Anzeigen oder Ändern von Servereigenschaften](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
-Informationen zur Verwendung der Sicherungskomprimierung mit [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)-fähigen Datenbanken finden Sie im Abschnitt [Hinweise](#general-remarks).
-
 COMPRESSION Aktiviert die Sicherungskomprimierung explizit.
 
 NO_COMPRESSION Deaktiviert die Sicherungskomprimierung explizit.
@@ -1050,7 +1048,6 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 > [!NOTE]
 > Für [Transparente Datenverschlüsselung (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)-fähige Datenbanken mit einer einzelnen Datendatei ist der standardmäßige `MAXTRANSFERSIZE`-Wert 65536 (64 KB). Für nicht mit TDE verschlüsselte Datenbanken ist der `MAXTRANSFERSIZE`-Standardwert 1048576 (1 MB) bei Verwendung der Sicherung auf DISK und 65536 (64 KB) bei Verwendung von VDI oder TAPE.
-> Weitere Informationen zur Verwendung der Sicherungskomprimierung mit TDE-verschlüsselten Datenbanken finden Sie im Abschnitt [Hinweise](#general-remarks).
 
 **Fehlerverwaltungsoptionen**
 

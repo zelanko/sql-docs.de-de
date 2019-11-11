@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652338"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593553"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus
 
@@ -67,7 +67,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
   
 6.  Starten Sie den Dienst neu.  
   
-7.  Öffnen Sie die Firewallsoftware, und öffnen Sie den Port, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauscht. Für die Standardinstanz ist dies normalerweise Port 1433 für TCP/IP-Verbindungen. Weitere Informationen zur Windows-Firewall finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+7.  Öffnen Sie die Firewallsoftware, und öffnen Sie den Port, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauscht. Für die Standardinstanz ist dies normalerweise Port 1433 für TCP/IP-Verbindungen. Weitere Informationen zur Windows-Firewall finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### <a name="to-create-a-local-report-server-database"></a>So erstellen Sie eine lokale Berichtsserver-Datenbank  
   
@@ -85,7 +85,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
   
     3.  Wählen Sie **Verbindung testen** aus, um die Verbindung zum Server zu überprüfen.  
   
-    4.  Wählen Sie **Weiter**aus.  
+    4.  Wählen Sie **Weiter** aus.  
   
 5.  Geben Sie Eigenschaften an, die zum Erstellen der Datenbank verwendet werden. Weitere Informationen zur Verwendung dieser Eigenschaften finden Sie in diesem Thema unter [Vorbereitungen](#rsdbrequirements) .  
   
@@ -95,7 +95,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
   
     3.  Der Berichtsservermodus wird immer auf **Einheitlich**festgelegt.  
   
-    4.  Wählen Sie **Weiter**aus.  
+    4.  Wählen Sie **Weiter** aus.  
   
 6.  Geben Sie die Anmeldeinformationen an, die vom Berichtsserver zum Herstellen der Verbindung zur Berichtsserver-Datenbank verwendet werden.  
   
@@ -111,7 +111,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
   
 7.  Überprüfen Sie die Informationen über die Zusammenfassungsseite, um zu überprüfen, ob die Einstellungen korrekt sind, und wählen Sie dann **Weiter**aus.  
   
-8.  Überprüfen Sie die Verbindung durch Auswählen einer URL auf der Seite „Berichtsserver-URL“. Die URLs müssen definiert werden, damit dieser Test funktioniert. Wenn die Verbindung zur Berichtsserverdatenbank gültig ist, wird die Berichtsserver-Ordnerhierarchie angezeigt. Weitere Informationen finden Sie unter [Überprüfen einer Installation von Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+8.  Überprüfen Sie die Verbindung durch Auswählen einer URL auf der Seite „Berichtsserver-URL“. Die URLs müssen definiert werden, damit dieser Test funktioniert. Wenn die Verbindung zur Berichtsserverdatenbank gültig ist, wird die Berichtsserver-Ordnerhierarchie angezeigt. Weitere Informationen finden Sie unter [Überprüfen einer Installation von Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
 
 ## <a name="change-database-credentials"></a>Ändern von Datenbank-Anmeldeinformationen
 
@@ -127,7 +127,7 @@ Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration
   
     2.  Wählen Sie **Verbindung testen** aus, um die Verbindung zum Server zu überprüfen.  
   
-    3.  Wählen Sie **Weiter**aus.  
+    3.  Wählen Sie **Weiter** aus.  
 
 4.  Geben Sie die Anmeldeinformationen an, die vom Berichtsserver zum Herstellen der Verbindung zur Berichtsserver-Datenbank verwendet werden.  
   
@@ -139,7 +139,7 @@ Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration
   
          Wählen Sie **Anmeldeinformationen des Diensts** , wenn der Berichtsserver die Verbindung mithilfe seines Dienstkontos herstellen soll. Mit dieser Option stellt der Server die Verbindung mit integrierter Sicherheit her; Anmeldeinformationen werden nicht verschlüsselt oder gespeichert.  
   
-    2.  Wählen Sie **Weiter**aus. 
+    2.  Wählen Sie **Weiter** aus. 
 
 5. Überprüfen Sie die Einstellungen, und wählen Sie **Weiter**aus.
 

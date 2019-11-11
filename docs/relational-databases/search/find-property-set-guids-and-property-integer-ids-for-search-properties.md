@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f3784eb3a95b3da02dce2cdecc8c5db2faeaac8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082809"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638054"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Suchen von Eigenschaftensatz-GUIDS und ganzzahligen Eigenschaft-IDs für Sucheigenschaften
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "68082809"
   
  **filtdump.exe** wird über die Eingabeaufforderung mit nur einem Argument ausgeführt. Dieses Argument ist der Name einer einzelnen Datei mit einem Dateityp, für den ein IFilter installiert ist. Das Hilfsprogramm zeigt eine Liste aller vom IFilter im Dokument erkannten Eigenschaften mit ihren Eigenschaftensatz-GUIDs, ganzzahligen IDs und weiteren Informationen an.  
   
- Informationen zum Installieren dieser Software finden Sie unter [Microsoft Windows SDK für Windows 7 und .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). Nachdem Sie das SDK heruntergeladen und installiert haben, suchen Sie in den folgenden Ordnern nach dem Hilfsprogramm "filtdump.exe".  
+ Informationen zum Installieren dieser Software finden Sie unter [Microsoft Windows SDK für Windows 7 und .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279). Nachdem Sie das SDK heruntergeladen und installiert haben, suchen Sie in den folgenden Ordnern nach dem Hilfsprogramm "filtdump.exe".  
   
 -   Informationen zur 64-Bit-Version finden Sie unter `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   

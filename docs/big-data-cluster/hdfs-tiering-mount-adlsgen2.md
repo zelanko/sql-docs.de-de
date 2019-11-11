@@ -5,16 +5,16 @@ description: In diesem Artikel wird erläutert, wie Sie HDFS-Tiering zum Einbind
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/01/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c2c2a6510688f8adf74e50ae76a626a00955019d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531895"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632783"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Einbinden von ADLS Gen2 für HDFS-Tiering in einen Big Data-Cluster
 
@@ -76,11 +76,8 @@ Warten Sie 5-10 Minuten, bevor Sie die Anmeldeinformationen für die Einbindung 
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
     fs.azure.account.oauth2.client.endpoint=[token endpoint],
     fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret],
-    fs.abfs.impl.disable.cache=true
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
-   
-Das Standardverhalten im ADLS-Treiber besteht darin, die Anmeldeinformationen zwischenzuspeichern. Das bedeutet jedoch, dass auch fehlerhafte Anmeldeinformationen zwischengespeichert werden, was zu Problemen führen kann, wenn Sie beim ersten Einbindungsversuch die falschen Anmeldeinformationen eingeben. Der letzte Abschnitt („fs.abfs.impl.disable.cache=true“) der obigen Anmeldeinformationen deaktiviert diese Zwischenspeicherung.
 
 ## <a name="use-access-keys-to-mount"></a>Verwenden von Zugriffsschlüsseln zum Einbinden
 
@@ -99,11 +96,8 @@ Sie können die Einbindung auch mithilfe von Zugriffsschlüsseln durchführen, d
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>,
-   fs.abfs.impl.disable.cache=true
+   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
-   
-Das Standardverhalten im ADLS-Treiber besteht darin, die Anmeldeinformationen zwischenzuspeichern. Das bedeutet jedoch, dass auch fehlerhafte Anmeldeinformationen zwischengespeichert werden, was zu Problemen führen kann, wenn Sie beim ersten Einbindungsversuch die falschen Anmeldeinformationen eingeben. Der letzte Abschnitt („fs.abfs.impl.disable.cache=true“) der obigen Anmeldeinformationen deaktiviert diese Zwischenspeicherung.
 
 ## <a id="mount"></a> Einbinden des HDFS-Remotespeichers
 

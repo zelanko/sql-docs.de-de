@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von PolyBase für den Zugriff auf externe Daten in Azure Blob Storage | Microsoft-Dokumentation
+title: Konfigurieren von PolyBase für den Zugriff auf externe Daten in Azure Blob Storage
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +8,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 81334dbfee970f7ce26ef723a463e10f7349d841
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 332187876562920ba1dfea4e57cc855f7d4a2876
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710657"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659574"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Azure Blob Storage
 
@@ -47,7 +48,7 @@ Konfigurieren Sie zunächst SQL Server PolyBase für die Verwendung von Azure Bl
    - SQL Server PolyBase-Datenverschiebungsdienst  
    - SQL Server PolyBase-Engine  
   
-   ![Beenden und starten Sie PolyBase-Dienste in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+   ![Beenden und Starten von PolyBase-Diensten in „Services.msc“](../../relational-databases/polybase/media/polybase-stop-start.png "Beenden und Starten von PolyBase-Diensten in „Services.msc“")  
   
 ## <a name="configure-an-external-table"></a>Konfigurieren einer externen Tabelle
 

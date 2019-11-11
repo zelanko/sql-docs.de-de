@@ -20,12 +20,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd604a4f25783e7621f348ea532677cda3da433
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940125"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843711"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Was sind SQL-Datenbankfunktionen?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ Verarbeiten einen einzelnen Wert und geben einen einzelnen Wert zurück. Skalare
 |[Metadatenfunktionen](metadata-functions-transact-sql.md)|Geben Informationen zur Datenbank und zu Datenbankobjekten zurück.|  
 |[Sicherheitsfunktionen](security-functions-transact-sql.md)|Diese Funktionen geben Informationen über Benutzer und Rollen zurück.|  
 |[Zeichenfolgenfunktionen](string-functions-transact-sql.md)|Führen Operationen für den Eingabewert einer Zeichenfolge (**char** oder **varchar**) aus und geben eine Zeichenfolge oder einen numerischen Wert zurück.|  
-|[Systemfunktionen](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Führen Operationen bezüglich Werten, Objekten und Einstellungen in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und geben Informationen zu diesen zurück.|  
+|[Systemfunktionen](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Führen Operationen bezüglich Werten, Objekten und Einstellungen in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und geben Informationen zu diesen zurück.|  
 |[Statistische Systemfunktionen](system-statistical-functions-transact-sql.md)|Geben statistische Informationen zum System zurück.|  
 |[Text- und Imagefunktionen](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Führen Operationen zu Text- bzw. Image-Eingabewerten oder -Spalten aus und geben Informationen zu diesen Werten zurück.|  
   

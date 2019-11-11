@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: v-mabarw
-ms.openlocfilehash: 08165bf0f60265e34f6b8022fd00e11dda47f672
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 60f4ee3839b91b60b950c1f3a6a351592a9581b2
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258639"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593625"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Verwenden von Always Encrypted mit den PHP-Treibern für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,7 +55,7 @@ Das Aktivieren von Always Encrypted für eine erfolgreiche Verschlüsselung oder
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Abrufen und Ändern von Daten in verschlüsselten Spalten
 
-Nachdem Sie Always Encrypted für eine Verbindung aktiviert haben, können Sie standardmäßige sqlsrv-APIs (siehe [Referenz zur sqlsrv-Treiber-API](../../connect/php/sqlsrv-driver-api-reference.md)) oder PDO_SQLSRV-APIs (siehe Referenz zur PDO_SQLSRV-Treiber- [API](../../connect/php/pdo-sqlsrv-driver-reference.md)) verwenden, um Daten in verschlüsselten Daten Bank Spalten abzurufen oder zu ändern. Wenn Ihre Anwendung über die erforderlichen Datenberechtigungen verfügt und auf den Spaltenhauptschlüssel zugreifen kann, verschlüsselt der Treiber alle Abfrageparameter für verschlüsselte Spalten und entschlüsselt Daten, die aus verschlüsselten Spalten abgefragt wurden. Dieser Vorgang erfolgt in der Anwendung transparent, als ob die Spalten nicht verschlüsselt wären.
+Nachdem Sie Always Encrypted für eine Verbindung aktiviert haben, können Sie standardmäßige sqlsrv-APIs (siehe [Referenz zur sqlsrv-Treiber-API](../../connect/php/sqlsrv-driver-api-reference.md)) oder PDO_SQLSRV-APIs (siehe [PDO_SQLSRV Driver-API-Referenz](../../connect/php/pdo-sqlsrv-driver-reference.md)) verwenden, um Daten in verschlüsselten Daten Bank Spalten abzurufen oder zu ändern. Wenn Ihre Anwendung über die erforderlichen Datenberechtigungen verfügt und auf den Spaltenhauptschlüssel zugreifen kann, verschlüsselt der Treiber alle Abfrageparameter für verschlüsselte Spalten und entschlüsselt Daten, die aus verschlüsselten Spalten abgefragt wurden. Dieser Vorgang erfolgt in der Anwendung transparent, als ob die Spalten nicht verschlüsselt wären.
 
 Wenn Always Encrypted nicht aktiviert ist, tritt bei Abfragen mit Parametern, die auf verschlüsselte Spalten ausgerichtet sind, ein Fehler auf. Daten können weiterhin aus verschlüsselten Spalten abgerufen werden, solange die Abfrage keine Parameter für verschlüsselte Spalten enthält. Der Treiber versucht jedoch nicht, die Daten zu entschlüsseln. Daher erhält die Anwendung die verschlüsselten Binärdaten (als Bytearrays).
 
@@ -91,16 +91,16 @@ In den folgenden Beispielen wird veranschaulicht, wie die sqlsrv-und PDO_SQLSRV-
  -   Die in die Datenbankspalten eingefügten Werte, einschließlich der verschlüsselten Spalten, werden als gebundene Parameter übergeben. Während die Verwendung von Parametern optional ist, wenn Werte an nicht verschlüsselte Spalten gesendet werden (obwohl es dringend empfohlen wird, da es dabei hilft, eine Einschleusung von SQL-Befehlen zu verhindern), ist sie für Werte erforderlich, die auf verschlüsselte Spalten ausgerichtet sind. Werden die in die Spalten „SSN“ oder „BirthDate“ eingefügten Werte als Literale übergeben, die in die Abfrageanweisung eingebettet sind, tritt ein Fehler auf, da der Treiber nicht versucht, Literale in Abfragen zu verschlüsseln oder anderweitig zu verarbeiten. Daher würde der Server sie zurückweisen, da sie mit den verschlüsselten Spalten inkompatibel sind.
  -   Beim Einfügen von Werten mithilfe von Bindungs Parametern muss ein SQL-Typ, der mit dem Datentyp der Ziel Spalte identisch ist oder dessen Konvertierung in den Datentyp der Ziel Spalte unterstützt wird, an die Datenbank übermittelt werden. Diese Anforderung liegt daran, dass Always Encrypted wenige Typkonvertierungen unterstützt (Weitere Informationen finden Sie unter [Always encrypted (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)). Die beiden PHP-Treiber sqlsrv und PDO_SQLSRV verfügen jeweils über einen Mechanismus, mit dessen Hilfe der Benutzer den SQL-Typ des Werts bestimmen kann. Daher muss der Benutzer den SQL-Typ nicht explizit angeben.
   -   Für den sqlsrv-Treiber verfügt der Benutzer über zwei Optionen:
-   -   Setzen Sie den PHP-Treiber ein, um den richtigen SQL-Typ zu ermitteln und festzulegen. In diesem Fall muss der Benutzer und `sqlsrv_prepare` `sqlsrv_execute` verwenden, um eine parametrisierte Abfrage auszuführen.
+   -   Setzen Sie den PHP-Treiber ein, um den richtigen SQL-Typ zu ermitteln und festzulegen. In diesem Fall muss der Benutzer `sqlsrv_prepare` und `sqlsrv_execute` verwenden, um eine parametrisierte Abfrage auszuführen.
    -   Legen Sie den SQL-Typ explizit fest.
-  -   Für den PDO_SQLSRV-Treiber verfügt der Benutzer nicht über die Option, den SQL-Typ eines Parameters explizit festzulegen. Der PDO_SQLSRV-Treiber unterstützt den Benutzer beim Binden eines Parameters automatisch beim Festlegen des SQL-Typs.
+  -   Für den PDO_SQLSRV-Treiber ist es nicht möglich, den SQL-Typ eines Parameters explizit festzulegen. Der PDO_SQLSRV Treiber unterstützt den Benutzer beim Binden eines Parameters automatisch beim Festlegen des SQL-Typs.
  -   Damit die Treiber den SQL-Typ bestimmen können, gelten einige Einschränkungen:
   -   SQLSRV-Treiber:
-   -   Wenn der Benutzer möchte, dass der Treiber die SQL-Typen für die verschlüsselten Spalten bestimmt, muss der `sqlsrv_prepare` Benutzer `sqlsrv_execute`und verwenden.
+   -   Wenn der Benutzer möchte, dass der Treiber die SQL-Typen für die verschlüsselten Spalten bestimmt, muss der Benutzer `sqlsrv_prepare` und `sqlsrv_execute`verwenden.
    -   Wenn `sqlsrv_query` bevorzugt wird, ist der Benutzer für die Angabe der SQL-Typen für alle Parameter verantwortlich. Der angegebene SQL-Typ muss die Zeichen folgen Länge für Zeichen folgen Typen sowie die Skalierung und Genauigkeit für Dezimal Typen enthalten.
   -   PDO_SQLSRV-Treiber:
-   -   Das Anweisungs `PDO::SQLSRV_ATTR_DIRECT_QUERY` Attribut wird in einer parametrisierten Abfrage nicht unterstützt.
-   -   Das Anweisungs `PDO::ATTR_EMULATE_PREPARES` Attribut wird in einer parametrisierten Abfrage nicht unterstützt.
+   -   Das Anweisungs Attribut `PDO::SQLSRV_ATTR_DIRECT_QUERY` wird in einer parametrisierten Abfrage nicht unterstützt.
+   -   Das Anweisungs Attribut `PDO::ATTR_EMULATE_PREPARES` wird in einer parametrisierten Abfrage nicht unterstützt.
    
 SQLSRV-Treiber und [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md):
 ```
@@ -133,7 +133,7 @@ $params = array(array(&$ssn, null, null, SQLSRV_SQLTYPE_CHAR(11)),
 sqlsrv_query($conn, $query, $params);
 ```
 
-PDO_SQLSRV Driver und [PDO::p repare](../../connect/php/pdo-prepare.md):
+PDO_SQLSRV Treiber und [PDO::p repare](../../connect/php/pdo-prepare.md):
 ```
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
@@ -152,7 +152,7 @@ $stmt->execute();
 
 ### <a name="plaintext-data-retrieval-example"></a>Beispiel für das Abrufen von Klartextdaten
 
-Die folgenden Beispiele veranschaulichen das Filtern von Daten auf der Grundlage verschlüsselter Werte und das Abrufen von Klartext-Daten aus verschlüsselten Spalten mithilfe der sqlsrv-und PDO_SQLSRV-Treiber. Beachten Sie die folgenden Punkte:
+In den folgenden Beispielen wird das Filtern von Daten auf der Grundlage verschlüsselter Werte und das Abrufen von Klartext-Daten aus verschlüsselten Spalten mithilfe der sqlsrv-und PDO_SQLSRV-Treiber veranschaulicht. Beachten Sie die folgenden Punkte:
  -   Der in der WHERE-Klausel zum Filtern der Spalte „SSN“ verwendete Wert muss mit dem bind-Parameter übergeben werden, damit ihn der Treiber vor dem Senden an die Datenbank transparent verschlüsseln kann.
  -   Beim Ausführen einer Abfrage mit gebundenen Parametern bestimmt der PHP-Treiber automatisch den SQL-Typ für den Benutzer, es sei denn, der Benutzer gibt den SQL-Typ explizit an, wenn der sqlsrv-Treiber verwendet wird.
  -   Alle Werte werden vom Programm als Klartext ausgegeben, da der Treiber die aus den Spalten „SSN“ und „BirthDate“ abgerufenen Daten transparent entschlüsselt.
@@ -218,18 +218,18 @@ In diesem Abschnitt werden die allgemeinen Fehlerkategorien bei der Abfrage vers
 #### <a name="unsupported-data-type-conversion-errors"></a>Konvertierungsfehler durch nicht unterstützte Datentypen
 
 Always Encrypted unterstützt einige Konvertierungen für verschlüsselte Datentypen. Eine ausführliche Liste der unterstützten Typkonvertierungen finden Sie unter [Always Encrypted (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Gehen Sie wie folgt vor, um Fehler bei Konvertierung des Datentyps zu vermeiden:
- -   Wenn der sqlsrv-Treiber mit `sqlsrv_prepare` und `sqlsrv_execute` dem SQL-Typ verwendet wird, wird zusammen mit der Spaltengröße und der Anzahl der Dezimalziffern des Parameters automatisch festgelegt.
+ -   Wenn Sie den sqlsrv-Treiber mit `sqlsrv_prepare` verwenden und den SQL-Typ `sqlsrv_execute`, wird zusammen mit der Spaltengröße und der Anzahl der Dezimalziffern des Parameters automatisch festgelegt.
  -   Wenn Sie den PDO_SQLSRV-Treiber verwenden, um eine Abfrage auszuführen, wird der SQL-Typ mit der Spaltengröße und der Anzahl der Dezimalziffern des Parameters ebenfalls automatisch festgelegt.
- -   Wenn Sie den sqlsrv-Treiber `sqlsrv_query` mit verwenden, um eine Abfrage auszuführen:
+ -   Wenn Sie den sqlsrv-Treiber mit `sqlsrv_query` verwenden, um eine Abfrage auszuführen:
   -   Entweder ist der SQL-Typ des Parameters identisch mit dem Typ der Zielspalte oder die Konvertierung vom SQL-Typ in den Typ der Spalte wird unterstützt.
   -   Die Genauigkeit und Dezimalstellenanzahl von Parametern, die auf Spalten der SQL Server-Datentypen `decimal` und `numeric` ausgerichtet sind, ist mit der für die Zielspalte konfigurierten Genauigkeit und Dezimalstellenanzahl identisch.
   -   Die Genauigkeit von Parametern, die auf Spalten der SQL Server-Datentypen `datetime2`, `datetimeoffset` oder `time` ausgerichtet sind, ist in Abfragen, in denen die Zielspalte geändert wird, nicht größer als die Genauigkeit für die Zielspalte.
- -   Verwenden Sie keine PDO_SQLSRV-Anweisungs `PDO::ATTR_EMULATE_PREPARES` Attribute `PDO::SQLSRV_ATTR_DIRECT_QUERY` oder in einer parametrisierten Abfrage.
+ -   Verwenden Sie keine PDO_SQLSRV Anweisungs Attribute `PDO::SQLSRV_ATTR_DIRECT_QUERY` oder `PDO::ATTR_EMULATE_PREPARES` in einer parametrisierten Abfrage.
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Fehler aufgrund der Übergabe von Klartext anstelle von verschlüsselten Werten
 
 Jeder Wert für verschlüsselte Spalten muss vor dem Senden an den Server verschlüsselt werden. Ein Versuch, einen Klartextwert einzufügen, zu ändern oder nach einem Klartextwert für eine verschlüsselte Spalte zu filtern, führt zu einem Fehler. Stellen Sie Folgendes sicher, um solche Fehler zu vermeiden:
- -   Always Encrypted aktiviert ist (legen Sie in der Verbindungs Zeichenfolge `ColumnEncryption` das `Enabled`-Schlüsselwort auf fest).
+ -   Always Encrypted aktiviert ist (legen Sie in der Verbindungs Zeichenfolge das `ColumnEncryption`-Schlüsselwort auf `Enabled`) fest.
  -   Sie verwenden Bind-Parameter zum Senden von Daten, die auf verschlüsselte Spalten ausgerichtet sind. Das folgende Beispiel zeigt eine Abfrage, die fälschlicherweise nach einem literalen/Konstanten in einer verschlüsselten Spalte (SSN) filtert:
 ```
 $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
@@ -245,7 +245,7 @@ Da Always Encrypted eine clientseitige Verschlüsselungstechnologie ist, werden 
 
 Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der ODBC-Treiber standardmäßig [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage auf, wobei die Abfrageanweisung (ohne Parameterwerte) an SQL Server übergeben wird. Die Abfrageanweisung wird von dieser gespeicherten Prozedur analysiert, um zu ermitteln, ob Parameter verschlüsselt werden müssen. In diesem Fall werden verschlüsselungsbezogene Informationen für jeden Parameter zurückgegeben, die der Treiber dann verschlüsseln kann.
 
-Da der Benutzer mit den PHP-Treibern einen Parameter in einer vorbereiteten Anweisung binden kann, ohne den SQL-Typ bereitzustellen, wird beim Binden eines Parameters in einer Always Encrypted aktivierten Verbindung die PHP-Treiber [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) für den Parameter aufrufen, um den SQL-Typ abzurufen. Spaltengröße und Dezimalziffern. Die Metadaten werden dann zum Aufrufen von [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md)verwendet. Diese zusätzlichen `SQLDescribeParam` Anrufe erfordern keine zusätzlichen Roundtrips zur Datenbank, da der ODBC-Treiber die Informationen bereits auf der Clientseite gespeichert hat, als `sys.sp_describe_parameter_encryption` aufgerufen wurde.
+Da der Benutzer mit den PHP-Treibern einen Parameter in einer vorbereiteten Anweisung ohne Angabe des SQL-Typs binden kann, werden beim Binden eines Parameters in einer Always Encrypted aktivierten Verbindung die PHP-Treiber [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) für den-Parameter aufrufen, um den SQL-Typ, die Spaltengröße und Dezimalziffern abzurufen. Die Metadaten werden dann zum Aufrufen von [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md)verwendet. Diese zusätzlichen `SQLDescribeParam` Aufrufe erfordern keine zusätzlichen Roundtrips zur Datenbank, da der ODBC-Treiber die Informationen bereits auf der Clientseite gespeichert hat, als `sys.sp_describe_parameter_encryption` aufgerufen wurde.
 
 Das oben beschriebene Verhalten stellt einen hohen Grad an Transparenz für die Clientanwendung sicher. Außerdem muss der Anwendungsentwickler nicht beachten, welche Abfragen auf verschlüsselte Spalten zugreifen, so lange die Werte für verschlüsselte Spalten in Parametern an den Treiber übergeben werden.
 
@@ -271,16 +271,16 @@ Unter Windows enthält ODBC Driver for SQL Server einen integrierten CMK-Speiche
 
 ### <a name="using-azure-key-vault"></a>Verwenden von Azure Key Vault
 
-Azure Key Vault bietet eine Möglichkeit zum Speichern von Verschlüsselungsschlüsseln, Kenn Wörtern und anderen Geheimnissen mit Azure und kann zum Speichern von Schlüsseln für Always Encrypted verwendet werden. Der ODBC-Treiber für SQL Server (Version 17 und höher) enthält einen integrierten Hauptschlüssel Speicher Anbieter für Azure Key Vault. Die folgenden Verbindungsoptionen behandeln die Azure Key Vault Konfiguration `KeyStoreAuthentication`: `KeyStorePrincipalId`, und `KeyStoreSecret`. 
- -   `KeyStoreAuthentication`kann einen von zwei möglichen Zeichen folgen Werten annehmen `KeyVaultPassword` : `KeyVaultClientSecret`und. Diese Werte steuern, welche Art von Authentifizierungs Anmelde Informationen mit den anderen beiden Schlüsselwörtern verwendet werden.
- -   `KeyStorePrincipalId`erfordert eine Zeichenfolge, die einen Bezeichner für das Konto darstellt, das auf den Azure Key Vault zugreifen möchte. 
-     -   Wenn `KeyStoreAuthentication` `KeyStorePrincipalId` auf `KeyVaultPassword`festgelegt ist, muss der Name eines Azure ActiveDirectory-Benutzers sein.
-     -   Wenn `KeyStoreAuthentication` `KeyStorePrincipalId` auf `KeyVaultClientSecret`festgelegt ist, muss eine Anwendungs Client-ID sein.
- -   `KeyStoreSecret`nimmt eine Zeichenfolge an, die einen geheimen Anmelde Informations Schlüssel darstellt. 
-     -   Wenn `KeyStoreAuthentication` `KeyStoreSecret` auf `KeyVaultPassword`festgelegt ist, muss das Kennwort des Benutzers sein. 
-     -   Wenn `KeyStoreAuthentication` `KeyStoreSecret` auf `KeyVaultClientSecret`festgelegt ist, muss dem Anwendungs Geheimnis entsprechen, das der Anwendungs Client-ID zugeordnet ist.
+Azure Key Vault bietet eine Möglichkeit zum Speichern von Verschlüsselungsschlüsseln, Kenn Wörtern und anderen Geheimnissen mit Azure und kann zum Speichern von Schlüsseln für Always Encrypted verwendet werden. Der ODBC-Treiber für SQL Server (Version 17 und höher) enthält einen integrierten Hauptschlüssel Speicher Anbieter für Azure Key Vault. Die folgenden Verbindungsoptionen behandeln Azure Key Vault Konfiguration: `KeyStoreAuthentication`, `KeyStorePrincipalId`und `KeyStoreSecret`. 
+ -   `KeyStoreAuthentication` kann einen von zwei möglichen Zeichen folgen Werten annehmen: `KeyVaultPassword` und `KeyVaultClientSecret`. Diese Werte steuern, welche Art von Authentifizierungs Anmelde Informationen mit den anderen beiden Schlüsselwörtern verwendet werden.
+ -   `KeyStorePrincipalId` nimmt eine Zeichenfolge an, die einen Bezeichner für das Konto darstellt, das auf den Azure Key Vault zugreifen möchte. 
+     -   Wenn `KeyStoreAuthentication` auf `KeyVaultPassword`festgelegt ist, muss `KeyStorePrincipalId` der Name eines Azure ActiveDirectory-Benutzers sein.
+     -   Wenn `KeyStoreAuthentication` auf `KeyVaultClientSecret`festgelegt ist, muss `KeyStorePrincipalId` eine Anwendungs Client-ID sein.
+ -   `KeyStoreSecret` eine Zeichenfolge mit einem geheimen Anmelde Informations Schlüssel annimmt. 
+     -   Wenn `KeyStoreAuthentication` auf `KeyVaultPassword`festgelegt ist, muss `KeyStoreSecret` das Kennwort des Benutzers sein. 
+     -   Wenn `KeyStoreAuthentication` auf `KeyVaultClientSecret`festgelegt ist, muss `KeyStoreSecret` der Anwendungs Schlüssel sein, der der Anwendungs Client-ID zugeordnet ist.
 
-Alle drei Optionen müssen in der Verbindungs Zeichenfolge vorhanden sein, um Azure Key Vault zu verwenden. Außerdem `ColumnEncryption` muss auf `Enabled`festgelegt werden. Wenn `ColumnEncryption` auf`Disabled` festgelegt ist, aber die Azure Key Vault Optionen vorhanden sind, wird das Skript ohne Fehler fortgesetzt, es wird jedoch keine Verschlüsselung ausgeführt.
+Alle drei Optionen müssen in der Verbindungs Zeichenfolge vorhanden sein, um Azure Key Vault zu verwenden. Außerdem muss `ColumnEncryption` auf `Enabled`festgelegt werden. Wenn `ColumnEncryption` auf `Disabled` festgelegt ist, aber die Azure Key Vault Optionen vorhanden sind, wird das Skript ohne Fehler fortgesetzt, es wird jedoch keine Verschlüsselung ausgeführt.
 
 In den folgenden Beispielen wird gezeigt, wie Sie mithilfe von Azure Key Vault eine Verbindung mit SQL Server herstellen.
 
@@ -314,18 +314,18 @@ SQLSRV und PDO_SQLSRV:
  -   Linux/macOS unterstützt den Windows-Zertifikat Speicher Anbieter nicht
  -   Erzwingen von Parameterverschlüsselung
  -   Aktivieren von Always Encrypted auf Anweisungs Ebene 
- -   Bei Verwendung der Always Encrypted-Funktion und nicht-UTF8-Gebiets Schemas unter Linux und macOS (z. b. "en_US"). ISO-8859-1 ") das Einfügen von NULL-Daten oder einer leeren Zeichenfolge in eine verschlüsselte char (n)-Spalte funktioniert möglicherweise nicht, wenn die Codepage 1252 nicht auf Ihrem System installiert ist.
+ -   Bei Verwendung der Always Encrypted-Funktion und nicht-UTF8-Gebiets Schemas unter Linux und macOS (z. b. "en_US. ISO-8859-1 ") das Einfügen von NULL-Daten oder einer leeren Zeichenfolge in eine verschlüsselte char (n)-Spalte funktioniert möglicherweise nicht, wenn die Codepage 1252 nicht auf Ihrem System installiert ist.
  
 Nur sqlsrv:
- -   Verwenden `sqlsrv_query` von für Bindungs Parameter ohne Angabe des SQL-Typs
- -   Verwenden `sqlsrv_prepare` von zum Binden von Parametern in einem Batch von SQL-Anweisungen  
+ -   Verwenden von `sqlsrv_query` für den Bindungs Parameter ohne Angabe des SQL-Typs
+ -   Verwenden von `sqlsrv_prepare` für das Binden von Parametern in einem Batch von SQL-Anweisungen  
  
 Nur PDO_SQLSRV:
- -   `PDO::SQLSRV_ATTR_DIRECT_QUERY`in einer parametrisierten Abfrage angegebenes Anweisungs Attribut
- -   `PDO::ATTR_EMULATE_PREPARE`in einer parametrisierten Abfrage angegebenes Anweisungs Attribut
+ -   `PDO::SQLSRV_ATTR_DIRECT_QUERY` Anweisungs Attribut, das in einer parametrisierten Abfrage angegeben ist.
+ -   `PDO::ATTR_EMULATE_PREPARE` Anweisungs Attribut, das in einer parametrisierten Abfrage angegeben ist.
  -   Binden von Parametern in einem Batch von SQL-Anweisungen
  
-Die PHP-Treiber erben außerdem die Einschränkungen, die vom ODBC-Treiber für SQL Server und die Datenbank auferlegt werden. Weitere Informationen finden [Sie unter Einschränkungen des ODBC-Treibers bei Verwendung Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) und [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details)Featuredetails.  
+Die PHP-Treiber erben außerdem die Einschränkungen, die vom ODBC-Treiber für SQL Server und die Datenbank auferlegt werden. Weitere Informationen finden [Sie unter Einschränkungen des ODBC-Treibers bei Verwendung Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) und [Always Encrypted Featuredetails](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Programmierhandbuch für den PHP-SQL-Treiber](../../connect/php/programming-guide-for-php-sql-driver.md)
