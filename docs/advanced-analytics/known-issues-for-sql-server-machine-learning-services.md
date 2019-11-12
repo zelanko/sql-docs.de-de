@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b0374e6e6fe620c4f43e26aa9bd4494746da36e4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532602"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706849"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Bekannte Probleme in SQL Server-Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Legen Sie die Umgebungsvariable `'MKL_CBWR'=AUTO` fest, um die bedingte numerisc
 3. Starten Sie R_SERVER neu. Auf SQL Server können Sie den SQL Server-Launchpad-Dienst neu starten.
 
 > [!NOTE]
-> Wenn Sie die SQL Server 2019-Vorschau unter Linux ausführen, bearbeiten oder erstellen Sie *.bash_profile* in Ihrem Benutzerstammverzeichnis, und fügen Sie die Zeile `export MKL_CBWR="AUTO"` hinzu. Führen Sie diese Datei aus, indem Sie `source .bash_profile` in der Bash-Eingabeaufforderung eingeben. Starten Sie R_SERVER neu, indem Sie an der R-Eingabeaufforderung `Sys.getenv()` eingeben.
+> Wenn Sie die SQL Server 2019 unter Linux ausführen, bearbeiten oder erstellen Sie *.bash_profile* in Ihrem Benutzerstammverzeichnis, und fügen Sie die Zeile `export MKL_CBWR="AUTO"` hinzu. Führen Sie diese Datei aus, indem Sie `source .bash_profile` in der Bash-Eingabeaufforderung eingeben. Starten Sie R_SERVER neu, indem Sie an der R-Eingabeaufforderung `Sys.getenv()` eingeben.
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2. Runtimefehler des R-Skripts (SQL Server 2017: Regression in CU5-CU7)
 
