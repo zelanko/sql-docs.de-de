@@ -1,5 +1,5 @@
 ---
-title: Sys. database_permissions (Transact-SQL) | Microsoft-Dokumentation
+title: sys. database_permissions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -20,38 +20,38 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c274d20590601ea2b089f53a9edf10b6a5ac0163
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022687"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982727"
 ---
-# <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
+# <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt eine Zeile für jede Berechtigung oder Spaltenausnahmeberechtigung in der Datenbank zurück. Für Spalten gibt es eine Zeile für jede Berechtigung, die von der entsprechenden Berechtigung auf Objektebene abweicht. Falls die Spaltenberechtigung mit der entsprechenden Objektberechtigung identisch ist, es gibt keine Zeile, und die Berechtigung angewendet wird, das Objekt.  
+  Gibt eine Zeile für jede Berechtigung oder Spaltenausnahmeberechtigung in der Datenbank zurück. Für Spalten gibt es eine Zeile für jede Berechtigung, die von der entsprechenden Berechtigung auf Objektebene abweicht. Wenn die Spalten Berechtigung mit der entsprechenden Objekt Berechtigung übereinstimmt, gibt es dafür keine Zeile, und die angewendete Berechtigung ist das des Objekts.  
   
 > [!IMPORTANT]  
 >  Berechtigungen auf Spaltenebene überschreiben Berechtigungen auf Objektebene in derselben Entität.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Identifiziert die Klasse, die die Berechtigung vorhanden ist.<br /><br /> 0 = Datenbank<br />1 = Objekt oder Spalte<br />3 = Schema<br />4 = Datenbankprinzipal<br />5 = Assembly - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Typ<br />10 = XML-Schemaauflistung: <br />                      **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = Nachrichtentyp - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = Dienstvertrag - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Service - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = Remotedienstbindung - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = Route - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 = Volltextkatalog - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = symmetrischer Schlüssel - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = Certificate - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = asymmetrischer Schlüssel - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**class**|**tinyint**|Identifiziert die Klasse, für die die Berechtigung vorhanden ist.<br /><br /> 0 = Datenbank<br />1 = Objekt oder Spalte<br />3 = Schema<br />4 = Daten Bank Prinzipal<br />5 = Assembly- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />6 = Typ<br />10 = XML-Schema Auflistung- <br />                      **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />15 = Nachrichtentyp: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />16 = Dienstvertrag- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />17 = Dienst- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />18 = Remote Dienst Bindung: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />19 = Route- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />23 = voll Text Katalog- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />24 = symmetrischer Schlüssel: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />25 = Zertifikat- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />26 = asymmetrischer Schlüssel: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.|  
 |**class_desc**|**nvarchar(60)**|Beschreibung der Klasse, in der die Berechtigung vorhanden ist.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. In der Regel die **Major_id** ist einfach die Art der ID, die gilt für die Klasse darstellt. <br /><br /> 0 = die Datenbank selbst <br /><br /> > 0 = Objekt-IDs für User-Objekte <br /><br /> \<0 = Objekt-IDs für Systemobjekte |  
-|**minor_id**|**int**|Sekundäre ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. Häufig die **Minor_id** ist 0 (null), da es keine Subcategory für die Klasse des Objekts verfügbar. Andernfalls ist es an die Spalten-ID einer Tabelle.|  
+|**major_id**|**int**|ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. In der Regel ist der **major_id** einfach die Art der ID, die für das darstellt, was die Klasse darstellt. <br /><br /> 0 = die Datenbank selbst <br /><br /> > 0 = Objekt-IDs für Benutzer Objekte <br /><br /> \<0 = Objekt-IDs für Systemobjekte |  
+|**minor_id**|**int**|Sekundäre ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. Häufig ist der **minor_id** NULL, da keine Unterkategorie für die Klasse des Objekts verfügbar ist. Andernfalls handelt es sich um die Spalten-ID einer Tabelle.|  
 |**grantee_principal_id**|**int**|Datenbankprinzipal-ID, der die Berechtigungen erteilt werden.|  
 |**grantor_principal_id**|**int**|Datenbankprinzipal-ID des Berechtigenden dieser Berechtigungen.|  
-|**type**|**char(4)**|Datenbank-Berechtigungstyp. Eine Liste der Berechtigungstypen finden Sie in der folgenden Tabelle.|  
+|**Typ**|**char (4)**|Datenbank-Berechtigungstyp. Eine Liste der Berechtigungstypen finden Sie in der folgenden Tabelle.|  
 |**permission_name**|**nvarchar(128)**|Berechtigungsname.|  
 |**state**|**char(1)**|Der Berechtigungsstatus:<br /><br /> D = Verweigern<br /><br /> R = Aufheben<br /><br /> G = Erteilen<br /><br /> W = Erteilen mit WITH GRANT OPTION|  
 |**state_desc**|**nvarchar(60)**|Beschreibung des Berechtigungsstatus:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>Datenbankberechtigungen   
-Die folgenden Typen von Berechtigungen sind möglich.
+Die folgenden Berechtigungs Typen sind möglich.
   
-|Berechtigungstyp|Berechtigungsname|Betroffenes sicherungsfähiges Element|  
+|Berechtigungstyp|Berechtigungs Name|Betroffenes sicherungsfähiges Element|  
 |---------------------|---------------------|--------------------------|  
 |AADS |ALTER ANY DATABASE EVENT SESSION |DATABASE |  
 |AAMK |ALTER ANY MASK |DATABASE |  
@@ -102,18 +102,18 @@ Die folgenden Typen von Berechtigungen sind möglich.
 |CRSK|CREATE SYMMETRIC KEY|DATABASE|  
 |CRSM|CREATE SCHEMA|DATABASE|  
 |CRSN|CREATE SYNONYM|DATABASE|  
-|CRSO|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> CREATE SEQUENCE|DATABASE|  
+|CRSO|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> CREATE SEQUENCE|DATABASE|  
 |CRSV|CREATE SERVICE|DATABASE|  
 |CRTB|CREATE TABLE|DATABASE|  
 |CRTY|CREATE TYPE|DATABASE|  
 |CRVW|CREATE VIEW|DATABASE|  
-|CRXS|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
+|CRXS|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
-|DL|DELETE|DATABASE, OBJECT, SCHEMA|  
+|DL|Delete|DATABASE, OBJECT, SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
-|EX|Führen Sie|ASSEMBLY, DATABASE, OBJECT, SCHEMA, TYPE, XML SCHEMA COLLECTION|  
-|IM|IMPERSONATE|Benutzer|  
-|IN|INSERT|DATABASE, OBJECT, SCHEMA|  
+|EX|EXECUTE|ASSEMBLY, DATABASE, OBJECT, SCHEMA, TYPE, XML SCHEMA COLLECTION|  
+|IM|IMPERSONATE|USER|  
+|IN|Insert|DATABASE, OBJECT, SCHEMA|  
 |RC|RECEIVE|OBJECT|  
 |RF|REFERENCES|ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, SCHEMA, SYMMETRIC KEY, TYPE, XML SCHEMA COLLECTION|  
 |SL|SELECT|DATABASE, OBJECT, SCHEMA|  
@@ -135,7 +135,7 @@ Die folgenden Typen von Berechtigungen sind möglich.
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: Auflisten aller Berechtigungen von datenbankprinzipalen  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: Auflisten aller Berechtigungen von Datenbankprinzipalen  
  Mit der folgenden Abfrage werden die Berechtigungen aufgelistet, die Datenbankprinzipalen ausdrücklich gewährt oder verweigert wurden.  
   
 > [!IMPORTANT]  
@@ -149,7 +149,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B: Auflisten der Berechtigungen für Schemaobjekte in einer Datenbank  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>G. Auflisten von Berechtigungen für Schemaobjekte in einer Datenbank  
  Die folgende Abfrage verknüpft sys.database_principals und sys.database_permissions mit sys.objects und sys.schemas, um Berechtigungen aufzulisten, die bestimmten Schemaobjekten gewährt oder verweigert wurden.  
   
 ```  
@@ -168,7 +168,7 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>Siehe auch  
  [Securables](../../relational-databases/security/securables.md)   
- [Berechtigungshierarchie &#40;Datenbank-Engine &#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Berechtigungshierarchie &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
