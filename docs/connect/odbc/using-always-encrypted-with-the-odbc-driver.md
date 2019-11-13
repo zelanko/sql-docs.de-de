@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702705"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594375"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -59,7 +59,7 @@ Beachten Sie, dass das Aktivieren von Always Encrypted für eine erfolgreiche Ve
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Aktivieren von Always Encrypted mit Secure Enclaves
 
-Ab Version 17,4 unterstützt der Treiber Always Encrypted mit sicheren Enklaven. Wenn Sie die Verwendung von Enclave beim Herstellen einer Verbindung mit SQL Server 2019 oder höher aktivieren `ColumnEncryption` möchten, legen Sie den DSN, die Verbindungs Zeichenfolge oder das Verbindungs Attribut auf den Namen des Enclave-und Nachweis Protokolls sowie die zugehörigen Nachweis Daten durch ein Komma getrennt fest. In Version 17,4 wird nur der [virtualisierungsbasierte Sicherheits](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) Enclave- Typ und das von `VBS-HGS`angegebene [Host-Überwachungsdienst-Nachweis](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) Protokoll unterstützt. Geben Sie die URL des Nachweis Servers an, um Sie zu verwenden. Beispiel:
+Ab Version 17.4 unterstützt der Treiber Always Encrypted mit Secure Enclaves. Wenn Sie die Verwendung von Enclave bei der Verbindung mit SQL Server 2019 oder höher aktivieren möchten, legen Sie die `ColumnEncryption`-DSN, die Verbindungs Zeichenfolge oder das Verbindungs Attribut auf den Namen des Enclave-Typs und des Nachweis Protokolls sowie die zugehörigen Nachweis Daten durch Kommas getrennt fest. In Version 17,4 wird nur der [virtualisierungsbasierte Sicherheits](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) Enclave-Typ und das Nachweis Protokoll des Host-Überwachungs [Diensts](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) , die durch `VBS-HGS`gekennzeichnet sind, unterstützt. um es zu verwenden, geben Sie die URL des Nachweis Servers an, z. b.:
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -592,7 +592,7 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 
 |Name|und Beschreibung|  
 |----------|-----------------|  
-|`ColumnEncryption`|Zulässige Werte sind `Enabled`/`Disabled`.<br>`Enabled`: aktiviert Always Encrypted-Funktionen für die Verbindung.<br>`Disabled`: deaktiviert Always Encrypted-Funktionen für die Verbindung.<br>*Type*,*Data* -(Version 17,4 und höher) ermöglicht Always Encrypted mit dem sicheren Enclave-und Nachweis *Protokolltyp* sowie den zugehörigen Nachweis *Daten*. <br><br>Der Standardwert ist `Disabled`.|
+|`ColumnEncryption`|Zulässige Werte sind `Enabled`/`Disabled`.<br>`Enabled`: aktiviert Always Encrypted-Funktionen für die Verbindung.<br>`Disabled`: deaktiviert Always Encrypted-Funktionen für die Verbindung.<br>*Type*,*Data* -(Version 17,4 und höher) ermöglicht Always Encrypted mit dem sicheren Enclave-und Nachweis *Protokolltyp*sowie den zugehörigen Nachweis *Daten.* <br><br>Der Standardwert ist `Disabled`.|
 |`KeyStoreAuthentication` | Gültige Werte: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Wenn `KeyStoreAuthentication` = `KeyVaultPassword`, legen Sie diesen Wert auf einen gültigen Benutzerprinzipalnamen in Azure Active Directory fest. <br>Wenn `KeyStoreAuthetication` = `KeyVaultClientSecret`, legen Sie diesen Wert auf eine gültige Anwendungsclient-ID in Azure Active Directory fest. |
 |`KeyStoreSecret` | Wenn `KeyStoreAuthentication` = `KeyVaultPassword`, legen Sie diesen Wert auf das Kennwort für den entsprechenden Benutzernamen fest. <br>Wenn `KeyStoreAuthentication` = `KeyVaultClientSecret`, legen Sie diesen Wert auf das Anwendungsgeheimnis fest, das einer gültigen Anwendungsclient-ID in Azure Active Directory zugeordnet wird. |
@@ -631,4 +631,3 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 - [„Immer verschlüsselt“ (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [Always Encrypted-Blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-

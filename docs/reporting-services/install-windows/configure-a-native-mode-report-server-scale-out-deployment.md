@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500582"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593867"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Konfigurieren der Bereitstellung für horizontales Skalieren für Berichtsserver im einheitlichen Modus
 
@@ -93,9 +93,9 @@ Dann tritt ein zeitweiliger Fehler auf, aufgrund dessen nur der Server, der den 
   
 2.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool.  
   
-3.  Konfigurieren Sie die URLs für den Berichtsserver-Webdienst und das Webportal sowie die Berichtsserver-Datenbank. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers &#40;einheitlicher Reporting Services-Modus&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+3.  Konfigurieren Sie die URLs für den Berichtsserver-Webdienst und das Webportal sowie die Berichtsserver-Datenbank. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers &#40;einheitlicher Reporting Services-Modus&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md).
   
-4.  Überprüfen Sie, ob der Berichtsserver betriebsbereit ist. Weitere Informationen finden Sie unter [Überprüfen einer Installation von Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+4.  Überprüfen Sie, ob der Berichtsserver betriebsbereit ist. Weitere Informationen finden Sie unter [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>So installieren und konfigurieren Sie die zweite Berichtsserverinstanz  
   
@@ -117,7 +117,7 @@ Dann tritt ein zeitweiliger Fehler auf, aufgrund dessen nur der Server, der den 
   
     6.  Wählen Sie unter **Berichtsserver-Datenbank**die Datenbank aus, die Sie für den ersten Berichtsserver erstellt haben, und wählen Sie dann **Weiter**aus. Der Standardname lautet "ReportServer". Wählen Sie nicht die Option ReportServerTempDB. Dieser Eintrag wird nur zum Speichern temporärer Daten während der Berichtsverarbeitung verwendet. Wiederholen Sie die letzten vier Schritte, um eine Verbindung zum Server herzustellen, wenn die Datenbank leer ist.  
   
-    7.  Wählen Sie auf der Seite Anmeldeinformationen den Typ des Kontos und der Anmeldeinformationen aus, die der Berichtsserver für die Verbindung zur Berichtsserver-Datenbank verwendet. Sie können dieselben Anmeldeinformationen verwenden, die von der ersten Berichtsserverinstanz verwendet werden, oder andere. Wählen Sie **Weiter**aus.  
+    7.  Wählen Sie auf der Seite Anmeldeinformationen den Typ des Kontos und der Anmeldeinformationen aus, die der Berichtsserver für die Verbindung zur Berichtsserver-Datenbank verwendet. Sie können dieselben Anmeldeinformationen verwenden, die von der ersten Berichtsserverinstanz verwendet werden, oder andere. Wählen Sie **Weiter** aus.  
   
     8.  Wählen Sie **Zusammenfassung** und dann **Fertig stellen**aus.  
   
@@ -131,7 +131,7 @@ Dann tritt ein zeitweiliger Fehler auf, aufgrund dessen nur der Server, der den 
   
 2.  Klicken Sie auf **Bereitstellung für horizontales Skalieren** , um die Seite „Bereitstellung für horizontales Skalieren“ zu öffnen. Hier sollten zwei Einträge angezeigt werden, einer für jede Berichtsserverinstanz, die mit der Berichtsserver-Datenbank verbunden ist. Für die erste Berichtsserverinstanz sollte bereits eine Verbindung bestehen. Der zweite Berichtsserver sollte auf den Join warten. Wenn Sie keine ähnlichen Einträge für die Skalieranwendung sehen, sollten Sie sich vergewissern, dass Sie mit dem ersten Berichtsserver verbunden sind, der bereits für die Verwendung der Berichtsserver-Datenbank konfiguriert und initialisiert wurde.  
   
-     ![Screenshot von einem Ausschnitt der Seite „Bereitstellung für die horizontale Skalierung“](../../reporting-services/install-windows/media/scaloutscreen.gif "Partial screenshot of Scale-out Deployment page")  
+     ![Bildschirmteilfoto der Seite „Bereitstellung für dezentrales Skalieren“](../../reporting-services/install-windows/media/scaloutscreen.gif "Bildschirmteilfoto der Seite „Bereitstellung für dezentrales Skalieren“")  
   
 3.  Wählen Sie auf der Seite „Bereitstellung für horizontales Skalieren“ die Berichtsserverinstanz aus, die auf den Join mit der Bereitstellung wartet, und wählen Sie **Server hinzufügen**aus.  
   
@@ -146,7 +146,7 @@ Dann tritt ein zeitweiliger Fehler auf, aufgrund dessen nur der Server, der den 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Konfigurieren eines Dienstkontos](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+[Konfigurieren eines Dienst Kontos](configure-the-report-server-service-account-ssrs-configuration-manager.md)
 [Konfigurieren einer URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Konfigurieren von Berichtsserver-URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
