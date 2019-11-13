@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502933"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593313"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird. Das Konto wird bei folgenden Vorgängen verwendet:  
   
--   Senden Sie Verbindungsanforderungen über das Netzwerk für Berichte, die Datenbankauthentifizierung verwenden, oder stellen Sie die Verbindung mit externen Berichtsdatenquellen her, für die keine Authentifizierung erforderlich ist oder verwendet wird. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) in der SQL Server-Onlinedokumentation.  
-  
+-   Senden Sie Verbindungsanforderungen über das Netzwerk für Berichte, die Datenbankauthentifizierung verwenden, oder stellen Sie die Verbindung mit externen Berichtsdatenquellen her, für die keine Authentifizierung erforderlich ist oder verwendet wird. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
+
 -   Abrufen externer Imagedateien, die im Bericht verwendet werden. Wenn Sie eine Bilddatei verwenden möchten, auf die kein anonymer Zugriff möglich ist, können Sie das Konto für die unbeaufsichtigte Berichtsverarbeitung konfigurieren und dem Konto die Zugriffsberechtigung für die Datei erteilen.  
   
  Mit unbeaufsichtigter Berichtsverarbeitung wird jede Berichtsausführung bezeichnet, die durch ein Ereignis (entweder ein geplantes Ereignis oder ein Datenaktualisierungsereignis) und nicht durch eine Benutzeranforderung ausgelöst wird. Der Berichtsserver verwendet das Konto für die unbeaufsichtigte Berichtsverarbeitung, um sich am Computer anzumelden, der die externe Datenquelle hostet. Dieses Konto ist erforderlich, da die Anmeldeinformationen des für den Berichtsserver verwendeten Dienstkontos nie für Verbindungen mit anderen Computern verwendet werden.  
@@ -56,8 +56,8 @@ ms.locfileid: "65502933"
   
      **rsConfig -e -u\<Domäne/Benutzername> -p\<Kennwort**  
   
- **rsconfig -e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie in der SQL Server-Onlinedokumentation unter [rsconfig-Hilfsprogramm &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).  
-  
+ **rsconfig -e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie unter [rsconfig-Hilfsprogramm &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
+ 
 ### <a name="how-account-information-is-stored"></a>Speichern von Kontoinformationen  
  Wenn Sie das Konto festlegen, werden die folgenden Einstellungen als verschlüsselte Werte in der Datei RSreportserver.config in einer lokalen oder einer Remote-Berichtsserverinstanz angegeben:  
   
@@ -104,6 +104,6 @@ ms.locfileid: "65502933"
  Die Kontoinformationen werden aus der Datei RSReportServer.config entfernt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Reporting Services-Konfigurations-Manager (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services-Konfigurations-Manager (einheitlicher SSRS-Modus)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
