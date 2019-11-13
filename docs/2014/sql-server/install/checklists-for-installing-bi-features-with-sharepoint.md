@@ -21,12 +21,12 @@ ms.locfileid: "71952613"
   Dieser Abschnitt stellt Prüflisten zum Installieren von SQL Server-BI-Funktionen in anderen Kombinationen oder Topologien für horizontales Skalieren bereit. Wenn Sie bereits wissen, wie ein Setupprogramm ausgeführt wird, um eine BI-Funktion zu installieren, ist eine Prüfliste der nächste Schritt dazu, die empfohlene Installationsreihenfolge zu verstehen, und ob zusätzliche Konfigurationsänderungen erforderlich sind, um Funktionsintegrationsszenarien zu aktivieren.  
   
 ## <a name="checklists-in-this-section"></a>Prüflisten in diesem Abschnitt  
- Prüfliste für die [deployment: Reporting Services, Power View und PowerPivot für SharePoint @ no__t-0  
+ [Bereitstellungs Prüfliste: Reporting Services, Power View und PowerPivot für SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)  
   
- Prüfliste für die [deployment: Horizontales Skalieren durch Hinzufügen von Power Pivot-Servern zu einer SharePoint 2010-Farm @ no__t-0  
+ [Deployment Prüfliste: horizontales Skalieren durch Hinzufügen von Power Pivot-Servern zu einer SharePoint 2010-Farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   
- Prüfliste für die [deployment: Multiserverinstallation von PowerPivot für SharePoint 2010 @ no__t-0  
+ [Bereitstellungs Prüfliste: Multiserverinstallation von PowerPivot für SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
- Prüfliste für die [deployment: Installieren von Reporting Services in einer vorhandenen SharePoint-Farm @ no__t-0  
+ [Bereitstellungsprüfliste: Installieren von Reporting Services in eine vorhandene SharePoint-Farm](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
   

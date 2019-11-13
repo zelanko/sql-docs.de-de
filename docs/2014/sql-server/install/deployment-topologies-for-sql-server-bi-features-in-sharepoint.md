@@ -53,7 +53,7 @@ ms.locfileid: "71952643"
 ##  <a name="bkmk_example_deployments_2013"></a>Beispiel für Bereitstellungstopologien in SharePoint 2013  
  Die SQL Server-Setupoption **PowerPivot für SharePoint** ist völlig unabhängig von SharePoint. Zur Unterstützung der Integration werden weder das SharePoint-Objektmodell noch SharePoint-Schnittstellen verwendet. Daher kann [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf einem beliebigen Computer unter Windows Server 2008 R2 oder höher installiert werden. Dazu kann ein Anwendungsserver in einer SharePoint-Farm verwendet werden, was jedoch nicht zwingend erforderlich ist. In einem der Konfigurationsschritte muss in der Excel Services-Konfiguration auf den Server verwiesen werden, auf dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgeführt wird. Zur Unterstützung des Lastenausgleichs und der Fehlertoleranz wird empfohlen, mehrere im SharePoint-Modus ausgeführte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server zu installieren und zu registrieren.  
   
- **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] der SharePoint-Modus** erfordert SharePoint Server 2013 und nutzt die Architektur der SharePoint-Dienst Anwendung.  
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus** erfordert SharePoint Server 2013 und nutzt die Architektur der SharePoint-Dienst Anwendung.  
   
  In den folgenden Abschnitten werden typische Bereitstellungstopologien veranschaulicht:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "71952643"
   
  mit [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] wird SharePoint Server 2013 erweitert, um serverseitige Daten Aktualisierungs Verarbeitung, Datenanbieter, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Katalog und Verwaltungs Unterstützung für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappen und Excel-Arbeitsmappen mit erweiterten Datenmodellen hinzuzufügen.  
   
- Das Installationspaket ist als Teil des [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Feature Packs verfügbar. Das Feature Pack kann aus dem [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Download Center bei [Microsoft® SQL Server® 2014 Power Pivot® für Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (Hyperlink "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>) heruntergeladen werden.  
+ Das Installationspaket ist als Teil des [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Feature Packs verfügbar. Das Feature Pack kann aus dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center unter [Microsoft® SQL Server® 2014 Power Pivot® for Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (Hyperlink "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>) heruntergeladen werden.  
   
  ![SSAS Power Pivot-Modus 2 Server Bereitstellung](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS Power Pivot-Modus 2 Server Bereitstellung")  
   
@@ -172,8 +172,8 @@ ms.locfileid: "71952643"
   
  ![5-Server-Topologie](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-Server-Topologie")  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Reporting Services SharePoint-Modus &#40;-Installation SharePoint 2010 und Share&#41;Point 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Reporting Services SharePoint-Modus &#40;-Installation SharePoint 2010 und Share&#41; Point 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
  [PowerPivot für SharePoint 2013-Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)   
  [PowerPivot für SharePoint 2010-Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
