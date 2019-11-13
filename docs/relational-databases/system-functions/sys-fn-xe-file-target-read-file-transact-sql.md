@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_xe_file_target_read_file (Transact-SQL) | Microsoft-Dokumentation
+title: sys. fn_xe_file_target_read_file (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e6ee58a9c04c64c71ab63c3bbd639ae0c3357a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059106"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982991"
 ---
-# <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
+# <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Liest Dateien, die vom asynchronen Dateiziel der erweiterten Ereignisse erstellt werden. Pro Zeile wird ein Ereignis im XML-Format zurückgegeben.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] akzeptieren im XEL-und XEM generierte Ablaufverfolgungsergebnisse. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Erweiterte Ereignisse-unterstützen nur Ablaufverfolgungsergebnisse im XEL-Format. Verwenden Sie SQL Server Management Studio, um Ablaufverfolgungsergebnisse im XEL-Format lesen zu können.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] akzeptieren Ablauf Verfolgungs Ergebnisse, die im xel-und xem-Format generiert werden. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] erweiterte Ereignisse unterstützen nur Ablauf Verfolgungs Ergebnisse im XEL-Format. Verwenden Sie SQL Server Management Studio, um Ablaufverfolgungsergebnisse im XEL-Format lesen zu können.    
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,26 +48,26 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Argumente  
  *path*  
- Der Pfad zu den zu lesenden Dateien. *Pfad* kann Platzhalter und enthalten den Namen einer Datei enthalten. *Pfad* ist **nvarchar(260)** . Es gibt keinen Standardwert. Im Kontext von Azure SQL-Datenbank ist dieser Wert eine HTTP-URL in eine Datei im Azure-Speicher.
+ Der Pfad zu den zu lesenden Dateien. der *Pfad* kann Platzhalter enthalten und den Namen einer Datei enthalten. *Pfad ist vom Datentyp* **nvarchar (260)** . Es gibt keinen Standardwert. Im Kontext von Azure SQL-Datenbank handelt es sich bei diesem Wert um eine HTTP-URL zu einer Datei in Azure Storage.
   
  *mdpath*  
- Der Pfad zur Metadatendatei, die der angegebenen Datei bzw. Dateigruppe von entspricht, dem *Pfad* Argument. *Mdpath* ist **nvarchar(260)** . Es gibt keinen Standardwert. Ab SQL Server 2016 wird kann dieser Parameter als null angegeben werden.
+ Der Pfad zur Metadatendatei, die der Datei oder den Dateien entspricht, die durch das *path* -Argument angegeben werden. *mdpath ist vom Datentyp* **nvarchar (260)** . Es gibt keinen Standardwert. Ab SQL Server 2016 kann dieser Parameter als NULL angegeben werden.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] erfordert keine der *Mdpath* Parameter. Er wird jedoch beibehalten, um die Abwärtskompatibilität für in früheren Versionen von SQL Server erstellte Protokolldateien aufrechtzuerhalten.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] erfordert keinen *mdpath* -Parameter. Er wird jedoch beibehalten, um die Abwärtskompatibilität für in früheren Versionen von SQL Server erstellte Protokolldateien aufrechtzuerhalten.  
   
  *initial_file_name*  
- Die erste Datei zum Lesen aus *Pfad*. *' initial_file_name '* ist **nvarchar(260)** . Es gibt keinen Standardwert. Wenn **null** angegeben ist, als das Argument, das alle Dateien finden Sie in *Pfad* gelesen werden.  
+ Die erste Datei, die aus dem *Pfad*gelesen werden soll. *initial_file_name* ist vom Datentyp **nvarchar (260)** . Es gibt keinen Standardwert. Wenn **null** als Argument angegeben wird, werden alle im *Pfad* gefundenen Dateien gelesen.  
   
 > [!NOTE]  
->  *' initial_file_name '* und *Initial_offset* sind paarargumente. Wenn Sie einen Wert für eines der beiden Argumente angeben, müssen Sie auch einen Wert für das andere Argument angeben.  
+>  *initial_file_name* und *initial_offset* sind paarweise Verknüpfungs Argumente. Wenn Sie einen Wert für eines der beiden Argumente angeben, müssen Sie auch einen Wert für das andere Argument angeben.  
   
  *initial_offset*  
- Wird verwendet, um den letzten zuvor gelesenen Offset anzugeben und überspringt alle Ereignisse bis (einschließlich) des Offsets. Die Ereignisenumeration startet nach dem angegebenen Offset. *Initial_offset* ist **Bigint**. Wenn **null** wird angegeben, wie das Argument die gesamte Datei gelesen werden.  
+ Wird verwendet, um den letzten zuvor gelesenen Offset anzugeben und überspringt alle Ereignisse bis (einschließlich) des Offsets. Die Ereignisenumeration startet nach dem angegebenen Offset. *initial_offset* ist **bigint**. Wenn **null** als Argument angegeben wird, wird die gesamte Datei gelesen.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |module_guid|**uniqueidentifier**|Die Ereignismodul-GUID. Lässt keine NULL-Werte zu.|  
 |package_guid|**uniqueidentifier**|Die Ereignispaket-GUID. Lässt keine NULL-Werte zu.|  
@@ -75,11 +75,11 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|Der Ereignisinhalt im XML-Format. Lässt keine NULL-Werte zu.|  
 |file_name|**nvarchar(260)**|Der Name der Datei, die das Ereignis enthält. Lässt keine NULL-Werte zu.|  
 |file_offset|**bigint**|Der Offset des Blocks in der Datei, der das Ereignis enthält. Lässt keine NULL-Werte zu.|  
-|timestamp_utc|**datetime2**|**Gilt für**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Das Datum und Uhrzeit (UTC-Zeitzone) des Ereignisses. Lässt keine NULL-Werte zu.|  
+|timestamp_utc|**datetime2**|**Gilt für**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Das Datum und die Uhrzeit (UTC-Zeitzone) des Ereignisses. Lässt keine NULL-Werte zu.|  
 
   
-## <a name="remarks"></a>Hinweise  
- Das Lesen großer Resultsets wird festgelegt, indem Sie Ausführung **fn_xe_file_target_read_file** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] kann zu einem Fehler führen. Verwenden der **Ergebnisse in Datei** Modus (**STRG + UMSCHALT + F**) große Resultsets in eine Datei exportieren, und Lesen Sie stattdessen die Datei mit einem anderen Tool.  
+## <a name="remarks"></a>Remarks  
+ Das Lesen umfangreicher Resultsets durch Ausführen von **sys. fn_xe_file_target_read_file** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] kann zu einem Fehler führen. Verwenden Sie das **Ergebnis im Datei** Modus (**STRG + UMSCHALT + F**), um große Resultsets in eine Datei zu exportieren und die Datei stattdessen mit einem anderen Tool zu lesen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

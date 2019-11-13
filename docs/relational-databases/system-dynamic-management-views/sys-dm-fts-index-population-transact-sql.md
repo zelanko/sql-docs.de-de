@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_fts_index_population (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_fts_index_population (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -20,19 +20,19 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c97061b08475549b2e8ebccdc75a56f74eb6614
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7af62bc20e96d3c9ab9508b89244d6401356d7ef
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265926"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983107"
 ---
-# <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
+# <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt Informationen zu den aktuell ausgeführten Auffüllungen des Volltextindexes und semantischen Schlüsselausdrucks zurück, die gerade in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden.  
  
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID der Datenbank, die den aufzufüllenden Volltextindex enthält.|  
 |**catalog_id**|**int**|ID des Volltextkatalogs, in dem dieser Volltextindex enthalten ist.|  
@@ -43,8 +43,8 @@ ms.locfileid: "68265926"
 |**is_clustered_index_scan**|**bit**|Gibt an, ob die Auffüllung einen Scanvorgang im gruppierten Index umfasst.|  
 |**range_count**|**int**|Anzahl der Teilbereiche, in die diese Auffüllung parallelisiert wurde.|  
 |**completed_range_count**|**int**|Anzahl der Bereiche, für die die Verarbeitung abgeschlossen ist.|  
-|**outstanding_batch_count**|**int**|Aktuelle Anzahl ausstehender Batches für diese Auffüllung. Weitere Informationen finden Sie unter [dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
-|**status**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Status dieser Auffüllung. Hinweis: Einige Status sind vorübergehend. Einer der folgenden Typen:<br /><br /> 3 = Wird gestartet<br /><br /> 5 = Normal verarbeiten<br /><br /> 7 = Verarbeitung wurde angehalten<br /><br /> Dieser Status tritt zum Beispiel auf, wenn eine automatische Zusammenführung ausgeführt wird.<br /><br /> 11 = Auffüllen abgebrochen<br /><br /> 12 = Verarbeiten einer semantischen Ähnlichkeitsextraktion|  
+|**outstanding_batch_count**|**int**|Aktuelle Anzahl ausstehender Batches für diese Auffüllung. Weitere Informationen finden Sie unter [sys. dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
+|**status**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Status dieser Auffüllung. Hinweis: Einige Status sind vorübergehend. Einer der folgenden Typen:<br /><br /> 3 = Wird gestartet<br /><br /> 5 = Normal verarbeiten<br /><br /> 7 = Verarbeitung wurde angehalten<br /><br /> Dieser Status tritt zum Beispiel auf, wenn eine automatische Zusammenführung ausgeführt wird.<br /><br /> 11 = Auffüllen abgebrochen<br /><br /> 12 = Verarbeiten einer semantischen Ähnlichkeitsextraktion|  
 |**status_description**|**nvarchar(120)**|Beschreibung des Status der Auffüllung.|  
 |**completion_type**|**int**|Status des Abschlusses dieser Auffüllung.|  
 |**completion_type_description**|**nvarchar(120)**|Beschreibung des Abschlusstyps.|  
@@ -54,20 +54,20 @@ ms.locfileid: "68265926"
 |**start_time**|**datetime**|Zeit des Starts der Auffüllung.|  
 |**incremental_timestamp**|**timestamp**|Stellt den Timestamp des Starts einer vollständigen Auffüllung dar. Für alle anderen Auffüllungstypen ist dieser Wert der letzte Prüfpunkt, für den ein Commit ausgeführt wurde, der den Fortschritt der Auffüllung darstellt.|  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die statistische semantische Indizierung zusätzlich zur Volltextindizierung aktiviert ist, erfolgen die semantischen Extraktion und Auffüllung von Schlüsselausdrücken sowie die Extraktion von Dokumentähnlichkeitsdaten gleichzeitig mit der Volltextindizierung. Die Auffüllung des Dokumentähnlichkeitsindexes erfolgt später in einer zweiten Phase. Weitere Informationen finden Sie unter [verwalten und Überwachen der semantischen Suche](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
+## <a name="remarks"></a>Remarks  
+ Wenn die statistische semantische Indizierung zusätzlich zur Volltextindizierung aktiviert ist, erfolgen die semantischen Extraktion und Auffüllung von Schlüsselausdrücken sowie die Extraktion von Dokumentähnlichkeitsdaten gleichzeitig mit der Volltextindizierung. Die Auffüllung des Dokumentähnlichkeitsindexes erfolgt später in einer zweiten Phase. Weitere Informationen finden Sie unter [Verwalten und Überwachen der semantischen Suche](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE`-Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard-und Basic-Tarifen ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
   
 ## <a name="physical-joins"></a>Physische Joins  
- ![Wesentliche Joins dieser dynamischen verwaltungssicht](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "wesentliche Joins dieser dynamischen verwaltungssicht")  
+ ![Wichtige Joins dieser dynamischen Verwaltungs Sicht](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "Wichtige Joins dieser dynamischen Verwaltungs Sicht")  
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|Beschreibung|Beziehung|  
+|From|Aktion|Beziehung|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|1:1|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|1:1|  
@@ -75,7 +75,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert d
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Volltextsuche und semantische Suche, dynamische Verwaltungssichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;für die voll Text Suche und die semantische Suche (Transact-SQL)&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

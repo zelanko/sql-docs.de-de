@@ -1,5 +1,5 @@
 ---
-title: dm_os_threads (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_os_threads (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ca20c4a8719ee6a80bd6a3c349dd50c8b0df81d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ef8eeeaaf59934d6c3307641b6c93f110ab5738f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258717"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982541"
 ---
-# <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
+# <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt eine Liste aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Betriebssystemthreads zurück, die unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess ausgeführt werden.  
   
 > [!NOTE]  
->  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_threads**.  
+>  Um dies aus [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_threads**.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |thread_address|**varbinary(8)**|Speicheradresse (Primärschlüssel) des Threads.|  
 |started_by_sqlservr|**bit**|Gibt den Threadinitiator an.<br /><br /> 1 = Der Thread wurde von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet.<br /><br /> 0 = Der Thread wurde von einer anderen Komponente gestartet, z. B. von einer erweiterten gespeicherten Prozedur innerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -49,8 +49,8 @@ ms.locfileid: "68258717"
 |stack_end_address|**varbinary(8)**|Speicheradresse der niedrigsten Stapeladresse für diesen Thread.|  
 |stack_bytes_committed|**int**|Anzahl von Bytes, für die im Stapel ein Commit ausgeführt wurde.|  
 |stack_bytes_used|**int**|Anzahl von Bytes, die aktiv im Thread verwendet werden.|  
-|affinity|**bigint**|CPU-Maske, in der dieser Thread ausgeführt wird. Dies hängt vom konfigurierten Wert der **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY** Anweisung. Kann sich bei weicher Affinität vom Zeitplanungsmodul unterscheiden.|  
-|Priorität|**int**|Prioritätswert dieses Threads.|  
+|affinity|**bigint**|CPU-Maske, in der dieser Thread ausgeführt wird. Dies hängt von dem Wert ab, der von der **Alter Server Configuration Set Process-Affinitäts** Anweisung konfiguriert wurde. Kann sich bei weicher Affinität vom Zeitplanungsmodul unterscheiden.|  
+|Priority|**int**|Prioritätswert dieses Threads.|  
 |Gebietsschema|**int**|Zwischengespeicherter Gebietsschemabezeichner (LCID) für den Thread.|  
 |Token|**varbinary(8)**|Zwischengespeichertes Identitätswechsel-Tokenhandle für den Thread.|  
 |is_impersonating|**int**|Gibt an, ob dieser Thread den Win32-Identitätswechsel verwendet.<br /><br /> 1 = Der Thread verwendet Sicherheitsanmeldeinformationen, die von der Standardeinstellung des Prozesses abweichen. Dieser Wert gibt an, dass der Thread die Identität einer Entität annimmt, die nicht mit der Entität übereinstimmt, die den Prozess erstellt hat.|  
@@ -58,29 +58,29 @@ ms.locfileid: "68258717"
 |fiber_data|**varbinary(8)**|Aktuelle Win32-Fiber, die im Thread ausgeführt wird. Dies gilt nur, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Lightweightpooling konfiguriert ist.|  
 |thread_handle|**varbinary(8)**|Nur interne Verwendung.|  
 |event_handle|**varbinary(8)**|Nur interne Verwendung.|  
-|scheduler_address|**varbinary(8)**|Speicheradresse des Zeitplanungsmoduls, das diesem Thread zugeordnet ist. Weitere Informationen finden Sie unter [DM_OS_SCHEDULERS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
-|worker_address|**varbinary(8)**|Speicheradresse des Arbeitsthreads, der an diesen Thread gebunden ist. Weitere Informationen finden Sie unter [dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|scheduler_address|**varbinary(8)**|Speicheradresse des Zeitplanungsmoduls, das diesem Thread zugeordnet ist. Weitere Informationen finden Sie unter [sys. dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|worker_address|**varbinary(8)**|Speicheradresse des Arbeitsthreads, der an diesen Thread gebunden ist. Weitere Informationen finden Sie unter [sys. dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |fiber_context_address|**varbinary(8)**|Interne Fiberkontextadresse. Dies gilt nur, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Lightweightpooling konfiguriert ist.|  
 |self_address|**varbinary(8)**|Interner Konsistenzzeiger.|  
-|processor_group|**smallint**|**Gilt für**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Prozessorgruppen-ID.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|processor_group|**smallint**|**Gilt für**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und höher.<br /><br /> Prozessorgruppen-ID.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE`-Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard-und Basic-Tarifen ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
-## <a name="notes-on-linux-version"></a>Hinweise zu Linux-version
+## <a name="notes-on-linux-version"></a>Hinweise zur Linux-Version
 
-Aufgrund die SQL-Engine unter Linux Funktionsweise einige dieser Informationen entspricht nicht Linux-Diagnose-Daten. Z. B. `os_thread_id` entspricht nicht das Ergebnis des Tools wie `ps`,`top` oder die procfs (/proc/`pid`).  Dies ist aufgrund der Plattform Abstraction Layer (SQLPAL), eine Ebene zwischen SQL Server-Komponenten und das Betriebssystem.
+Aufgrund der Funktionsweise der SQL-Engine unter Linux entsprechen einige dieser Informationen nicht den Linux-Diagnosedaten. Beispielsweise stimmt `os_thread_id` nicht mit dem Ergebnis von Tools wie `ps`,`top` oder procfs (/proc/`pid`).  Dies liegt an der Plattform-Abstraktionsschicht (sqlpal), einer Ebene zwischen SQL Server Komponenten und dem Betriebssystem.
 
 ## <a name="examples"></a>Beispiele  
- Beim Start werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Threads gestartet, denen anschließend Arbeitsthreads zugeordnet werden. Externe Komponenten, z. B. eine erweiterte gespeicherte Prozedur, können jedoch Threads unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess starten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat keine Kontrolle über diese Threads. dm_os_threads bieten Informationen zu extern gestarteten Threads, die Ressourcen in nutzen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prozess.  
+ Beim Start werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Threads gestartet, denen anschließend Arbeitsthreads zugeordnet werden. Externe Komponenten, z. B. eine erweiterte gespeicherte Prozedur, können jedoch Threads unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess starten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat keine Kontrolle über diese Threads. sys. dm_os_threads kann Informationen zu nicht autorisierten Threads bereitstellen, die Ressourcen im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prozess verbrauchen.  
   
  Mit der folgenden Abfrage werden Arbeitsthreads zusammen mit der jeweiligen Ausführungszeit ermittelt, die nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartete Threads ausführen.  
   
 > [!NOTE]
->  Aus Gründen der Kürze wird in der folgenden Abfrage ein Sternchen (`*`) in der `SELECT`-Anweisung verwendet. Vermeiden Sie die Verwendung des Sternchens (*) insbesondere für Katalogsichten, dynamische Verwaltungssichten und Systemfunktionen mit Tabellenrückgabe. Zukünftige Upgrades und Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Spalten hinzufügen und ändern Sie die Reihenfolge der Spalten in diesen Sichten und Funktionen. Diese Änderungen könnten zur Funktionsunfähigkeit von Anwendungen führen, die eine bestimmte Reihenfolge und Anzahl von Spalten erwarten.  
+>  Aus Gründen der Kürze wird in der folgenden Abfrage ein Sternchen (`*`) in der `SELECT`-Anweisung verwendet. Vermeiden Sie die Verwendung des Sternchens (*) insbesondere für Katalogsichten, dynamische Verwaltungssichten und Systemfunktionen mit Tabellenrückgabe. Zukünftige Upgrades und Releases von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Spalten hinzufügen und die Reihenfolge der Spalten in diese Sichten und Funktionen ändern. Diese Änderungen könnten zur Funktionsunfähigkeit von Anwendungen führen, die eine bestimmte Reihenfolge und Anzahl von Spalten erwarten.  
   
 ```  
 SELECT *  
@@ -90,7 +90,7 @@ SELECT *
   
 ## <a name="see-also"></a>Siehe auch  
   [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
- [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server mit dem Betriebs System verbundene dynamische &#40;Verwaltungs Sichten Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

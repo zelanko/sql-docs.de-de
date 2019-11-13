@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_memory_cache_counters (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_os_memory_cache_counters (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -18,42 +18,42 @@ helpviewer_keywords:
 ms.assetid: ca7bd036-d661-4c17-b00a-e1a975bd8932
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 08744f8583e2522f938767dc8348a3f2a2a721a2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 755e0cdbf5bff5bcd9c048a2f77918dc9a6eb2a3
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265813"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982525"
 ---
-# <a name="sysdmosmemorycachecounters-transact-sql"></a>sys.dm_os_memory_cache_counters (Transact-SQL)
+# <a name="sysdm_os_memory_cache_counters-transact-sql"></a>sys.dm_os_memory_cache_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine Momentaufnahme des Zustands eines Caches in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. **Sys. dm_os_memory_cache_counters** stellt Laufzeitinformationen zu den zugeordneten Cacheeinträgen, deren Verwendung und die Quelle des Arbeitsspeichers für die Cacheeinträge bereit.  
+  Gibt eine Momentaufnahme des Zustands eines Caches in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. **sys. dm_os_memory_cache_counters** stellt Laufzeitinformationen zu den zugeordneten Cache Einträgen, deren Verwendung und die Speicher Quelle für die Cache Einträge bereit.  
   
-> **HINWEIS:** Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_memory_cache_counters**.  
+> **Hinweis:** Um dies aus [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_memory_cache_counters**.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|Gibt die Adresse (Primärschlüssel) der Leistungsindikatoren an, die einem bestimmten Cache zugeordnet sind. Lässt keine NULL-Werte zu.|  
 |**name**|**nvarchar(256)**|Gibt den Namen des Caches an. Lässt keine NULL-Werte zu.|  
-|**type**|**nvarchar(60)**|Gibt den Typ des Caches an, der diesem Eintrag zugeordnet ist. Lässt keine NULL-Werte zu.|  
+|**Typ**|**nvarchar(60)**|Gibt den Typ des Caches an, der diesem Eintrag zugeordnet ist. Lässt keine NULL-Werte zu.|  
 |**single_pages_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Der Umfang (in KB) des zugeordneten Einzelseiten-Arbeitsspeichers. Hierbei handelt es sich um den Arbeitsspeicher, der mithilfe der Einzelseitenzuordnung zugeordnet wird. Dies bezieht sich auf die 8-KB-Seiten, die direkt aus dem Pufferpool für diesen Cache verwendet werden. Lässt keine NULL-Werte zu.|  
-|**pages_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt die dem Cache zugeordnete Arbeitsspeichermenge in Kilobyte an. Lässt keine NULL-Werte zu.|  
+|**pages_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Gibt die dem Cache zugeordnete Arbeitsspeichermenge in Kilobyte an. Lässt keine NULL-Werte zu.|  
 |**multi_pages_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Der Umfang (in KB) des zugeordneten mehrseitigen Arbeitsspeichers. Hierbei handelt es sich um den Arbeitsspeicher, der mithilfe der Zuordnung für mehrere Seiten des Arbeitsspeicherknotens zugeordnet wird. Dieser Arbeitsspeicher wird außerhalb des Pufferpools zugeordnet und nutzt die virtuelle Zuordnung der Arbeitsspeicherknoten. Lässt keine NULL-Werte zu.|  
-|**pages_in_use_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt die dem Cache zugeordnete und vom Cache verwendete Arbeitsspeichermenge in Kilobyte an. Lässt NULL-Werte zu.  Werte für Objekte vom Typ `USERSTORE_<*>` werden nicht nachverfolgt.  NULL wird gemeldet.|  
-|**single_pages_in_use_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Der Umfang (in KB) des verwendeten Einzelseiten-Arbeitsspeichers. Lässt NULL-Werte zu. Diese Informationen werden für Objekte vom Typ USERSTORE_ nicht nachverfolgt\<* > und diese Werte werden auf NULL.|  
-|**multi_pages_in_use_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Der Umfang (in Kilobytes) des verwendeten mehrseitigen Arbeitsspeichers. Lässt NULL-Werte zu. Diese Informationen werden für Objekte vom Typ USERSTORE_ nicht nachverfolgt\<* >, und diese Werte werden auf NULL.|  
+|**pages_in_use_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Gibt die dem Cache zugeordnete und vom Cache verwendete Arbeitsspeichermenge in Kilobyte an. Lässt NULL-Werte zu.  Werte für Objekte vom Typ `USERSTORE_<*>` werden nicht nachverfolgt.  NULL wird gemeldet.|  
+|**single_pages_in_use_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Der Umfang (in KB) des verwendeten Einzelseiten-Arbeitsspeichers. Lässt NULL-Werte zu. Diese Informationen werden für Objekte vom Typ USERSTORE_\<* > nicht nachverfolgt, und diese Werte sind NULL.|  
+|**multi_pages_in_use_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Der Umfang (in Kilobytes) des verwendeten mehrseitigen Arbeitsspeichers. Lässt NULL-Werte zu. Diese Informationen werden für Objekte vom Typ USERSTORE_\<* > nicht nachverfolgt, und diese Werte sind NULL.|  
 |**entries_count**|**bigint**|Gibt die Anzahl der Einträge im Cache an. Lässt keine NULL-Werte zu.|  
 |**entries_in_use_count**|**bigint**|Gibt die Anzahl der Einträge im Cache an, der verwendet wird. Lässt keine NULL-Werte zu.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen 
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE`-Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard-und Basic-Tarifen ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
 ## <a name="see-also"></a>Siehe auch  
-  [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [SQL Server mit dem Betriebs System verbundene dynamische &#40;Verwaltungs Sichten Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_memory_cache_entries (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_os_memory_cache_entries (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -18,26 +18,26 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a96d536143c7e636045eb926e9240e047c78070b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 737de971ca39cdf8c164787ff7703b87c38e92e2
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265801"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983119"
 ---
-# <a name="sysdmosmemorycacheentries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
+# <a name="sysdm_os_memory_cache_entries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zu allen Einträgen in Caches in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. Verwenden Sie diese Sicht, um Cacheeinträge für die zugehörigen Objekte nachzuverfolgen. Mit dieser Sicht können Sie auch Statistiken zu Cacheeinträgen abrufen.  
   
 > [!NOTE]  
->  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_memory_cache_entries**.  
+>  Um dies aus [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_memory_cache_entries**.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|Adresse des Caches. Lässt keine NULL-Werte zu.|  
 |**name**|**nvarchar(256)**|Name des Caches. Lässt keine NULL-Werte zu.|  
-|**type**|**varchar(60)**|Typ des Caches. Lässt keine NULL-Werte zu.|  
+|**Typ**|**varchar (60)**|Typ des Caches. Lässt keine NULL-Werte zu.|  
 |**entry_address**|**varbinary(8)**|Adresse des Deskriptors des Cacheeintrags. Lässt keine NULL-Werte zu.|  
 |**entry_data_address**|**varbinary(8)**|Adresse der Benutzerdaten im Cacheeintrag.<br /><br /> 0x00000000 = Eintragsdatenadresse ist nicht verfügbar.<br /><br /> Lässt keine NULL-Werte zu.|  
 |**in_use_count**|**int**|Anzahl gleichzeitiger Benutzer dieses Cacheeintrags. Lässt keine NULL-Werte zu.|  
@@ -48,19 +48,19 @@ ms.locfileid: "68265801"
 |**current_cost**|**int**|Aktuelle Kosten des Cacheeintrags. Dieser Wert wird beim Löschen von Einträgen aktualisiert. Die aktuellen Kosten werden auf den ursprünglichen Wert zurückgesetzt, wenn der Eintrag wiederverwendet wird. Lässt keine NULL-Werte zu.|  
 |**memory_object_address**|**varbinary(8)**|Adresse des zugeordneten Arbeitsspeicherobjekts. Lässt NULL-Werte zu.|  
 |**pages_allocated_count**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Anzahl von 8-KB-Seiten zum Speichern dieses Cacheeintrags. Lässt keine NULL-Werte zu.|  
-|**pages_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Der Arbeitsspeicher, der von diesem Cacheeintrag verwendet wird, in Kilobyte (KB).  Lässt keine NULL-Werte zu.|  
+|**pages_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Der Arbeitsspeicher, der von diesem Cacheeintrag verwendet wird, in Kilobyte (KB).  Lässt keine NULL-Werte zu.|  
 |**entry_data**|**nvarchar(2048)**|Serialisierte Darstellung des zwischengespeicherten Eintrags. Diese Informationen sind vom Cachespeicher abhängig. Lässt NULL-Werte zu.|  
-|**pool_id**|**int**|**Gilt für**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die ID des Ressourcen-Pools, der diesem Eintrag zugeordnet ist. Lässt NULL-Werte zu.<br /><br /> nicht Katmai|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**pool_id**|**int**|**Gilt für**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und höher.<br /><br /> Die ID des Ressourcen-Pools, der diesem Eintrag zugeordnet ist. Lässt NULL-Werte zu.<br /><br /> nicht Katmai|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen 
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE`-Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard-und Basic-Tarifen ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
 ## <a name="see-also"></a>Siehe auch  
  
-  [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [SQL Server mit dem Betriebs System verbundene dynamische &#40;Verwaltungs Sichten Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

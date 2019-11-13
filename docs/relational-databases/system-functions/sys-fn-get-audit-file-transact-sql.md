@@ -21,19 +21,19 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 358b08fe10f29d6a8aaec40f6a80e92c5950e7b7
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: 25d4aa1e82097dcc4027809c7292587a20862d75
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72989507"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981873"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Gibt Informationen von einer Überwachungsdatei zurück, die von einer Serverüberwachung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurde. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,21 +49,21 @@ fn_get_audit_file ( file_pattern,
  
  - **SQL Server**:
     
-    Dieses Argument muss sowohl einen Pfad (Laufwerksbuchstabe oder Netzwerkfreigabe) als auch einen Dateinamen umfassen. Diese können ein Platzhalterzeichen enthalten. Ein einzelnes Sternchen (*) kann verwendet werden, um mehrere Dateien aus einem Überwachungs Datei Satz zu erfassen. Beispiel:  
+    Dieses Argument muss sowohl einen Pfad (Laufwerksbuchstabe oder Netzwerkfreigabe) als auch einen Dateinamen umfassen. Diese können ein Platzhalterzeichen enthalten. Ein einzelnes Sternchen (*) kann verwendet werden, um mehrere Dateien aus einem Überwachungs Datei Satz zu erfassen. Zum Beispiel:  
   
-    -   **\<path > \\ \*** alle Überwachungs Dateien am angegebenen Speicherort sammeln.  
+    -   **\<Pfad >\\** alle Überwachungs Dateien am angegebenen Speicherort erfassen \*.  
   
-    -   **\<Pfad > \LoginsAudit_{GUID}** -alle Überwachungs Dateien mit dem angegebenen Namen und dem GUID-paar erfassen.  
+    -   **\<Pfad > \ LoginsAudit_ {GUID}** -alle Überwachungs Dateien erfassen, die über den angegebenen Namen und das GUID-paar verfügen.  
   
     -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
   
  - **Azure SQL-Datenbank oder Azure SQL Data Warehouse**:
  
-    Dieses Argument wird verwendet, um eine BLOB-URL (einschließlich Speicher Endpunkt und Container) anzugeben. Obwohl ein Platzhalter Zeichen nicht unterstützt wird, können Sie ein partielles Dateinamen Präfix (anstelle des vollständigen BLOB-namens) verwenden, um mehrere Dateien (BLOBs) zu sammeln, die mit diesem Präfix beginnen. Beispiel:
+    Dieses Argument wird verwendet, um eine BLOB-URL (einschließlich Speicher Endpunkt und Container) anzugeben. Obwohl ein Platzhalter Zeichen nicht unterstützt wird, können Sie ein partielles Dateinamen Präfix (anstelle des vollständigen BLOB-namens) verwenden, um mehrere Dateien (BLOBs) zu sammeln, die mit diesem Präfix beginnen. Zum Beispiel:
  
-      - **\<Storage_endpoint\>/\<Container\>/\<Servername\>/\<DatabaseName**\>/-sammelt alle Überwachungs Dateien (BLOB) für die jeweilige Datenbank.    
+      - **\<Storage_endpoint\>/\<Container\>/\<Servername\>/\<DatabaseName**\>/: sammelt alle Überwachungs Dateien (BLOB) für die jeweilige Datenbank.    
       
-      - **\<Storage_endpoint\>/\<Container\>/\<Servername\>/\<DatabaseName\>/\<AuditName\>/\<.\>/\<Dateiname\>. xel** : sammelt eine bestimmte Überwachungs Datei (BLOB).
+      - **\<Storage_endpoint\>/\<-Container\>/\<Servername\>/\<DatabaseName\>/\<AuditName\>** /\<\>/\<. xel-sammelt eine bestimmte Überwachungs Datei (BLOB).\>
   
 > [!NOTE]  
 >  Einen Pfad ohne ein Dateinamenmuster zu übergeben generiert einen Fehler.  
@@ -72,18 +72,18 @@ fn_get_audit_file ( file_pattern,
  Gibt den Pfad und den Namen einer bestimmten Datei im Überwachungsdateisatz an, von der an die Überwachungsdatensätze gelesen werden sollen. Type ist vom Datentyp **nvarchar (260)** .  
   
 > [!NOTE]  
->  Das Argument *initial_file_name* muss gültige Einträge enthalten oder entweder den Standardwert | NULL-Wert.  
+>  Das *initial_file_name* Argument muss gültige Einträge enthalten oder entweder den Standardwert | NULL-Wert.  
   
  *audit_record_offset*  
  Gibt einen bekannten Speicherort mit der für initial_file_name angegebenen Datei an. Wenn dieses Argument verwendet wird, beginnt die Funktion mit dem Lesen beim ersten Datensatz des Puffers, der direkt nach dem festgelegten Offset folgt.  
   
 > [!NOTE]  
->  Das Argument *audit_record_offset* muss gültige Einträge enthalten oder entweder den Standardwert | NULL-Wert. Der Typ ist " **bigint**".  
+>  Das *audit_record_offset* Argument muss gültige Einträge enthalten oder entweder den Standardwert | NULL-Wert. Der Typ ist " **bigint**".  
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
  In der folgenden Tabelle wird der Inhalt der Überwachungsdatei beschrieben, die von dieser Funktion zurückgegeben werden kann.  
   
-| Spaltenname | Geben Sie | Description |  
+| Spaltenname | Type | und Beschreibung |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | ID der Aktion. Lässt keine NULL-Werte zu. |  
 | additional_information | **nvarchar(4000)** | Eindeutige Informationen, die nur für ein einzelnes Ereignis gelten, werden als XML zurückgegeben. Eine kleine Anzahl überwachbarer Aktionen enthält diese Art von Informationen.<br /><br /> Eine Ebene des TSQL-Stapels wird im XML-Format für Aktionen angezeigt, denen ein TSQL-Stapel zugeordnet ist. Das XML-Format sieht folgendermaßen aus:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level gibt die aktuelle Schachtelungsebene des Frames an. Der Modulname (database_name, schema_name und object_name) wird in einem aus drei Teilen bestehenden Format dargestellt.  Der Modulname wird so analysiert, dass ungültige XML-Zeichen wie `'\<'`, `'>'``'/'`, `'_x'`mit Escapezeichen versehen werden. Sie werden als `_xHHHH\_`mit Escapezeichen versehen. HHHH steht für den vierstelligen hexadezimalen UCS 2-Code für das Zeichen<br /><br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn keine zusätzlichen vom Ereignis gemeldeten Informationen vorliegen. |
@@ -123,12 +123,12 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_name | **sysname** | Ziel Anmeldung der Aktion. Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben. |  
 | target_server_principal_sid | **varbinary** | SID der Ziel Anmeldung. Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben. |  
 | transaction_id | **bigint** | **Gilt für**: nur SQL Server (beginnend mit 2016)<br /><br /> Eindeutiger Bezeichner zur Identifizierung mehrerer Überwachungs Ereignisse in einer Transaktion |  
-| user_defined_event_id | **smallint** | **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Die benutzerdefinierte Ereignis-ID wurde als Argument an **sp_audit_write**übermittelt. **Null** für Systemereignisse (Standard) und ungleich 0 (null) für ein benutzerdefiniertes Ereignis. Weitere Informationen finden Sie unter [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
-| user_defined_information | **nvarchar(4000)** | **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Wird verwendet, um zusätzliche Informationen aufzuzeichnen, die der Benutzer mithilfe der gespeicherten Prozedur **sp_audit_write** im Überwachungs Protokoll aufzeichnen möchte. |  
+| user_defined_event_id | **smallint** | **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Eine benutzerdefinierte Ereignis-ID wurde als Argument an **sp_audit_write**übermittelt. **Null** für Systemereignisse (Standard) und ungleich 0 (null) für ein benutzerdefiniertes Ereignis. Weitere Informationen finden Sie unter [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
+| user_defined_information | **nvarchar(4000)** | **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Wird verwendet, um zusätzliche Informationen aufzuzeichnen, die der Benutzer mithilfe der gespeicherten Prozedur **sp_audit_write** im Überwachungs Protokoll aufzeichnen möchte. |  
 
   
-## <a name="remarks"></a>Bemerkungen  
- Wenn das an **fn_get_audit_file** über gegebene *file_pattern* -Argument auf einen Pfad oder eine Datei verweist, die nicht vorhanden ist, oder wenn die Datei keine Überwachungs Datei ist, wird die **MSG_INVALID_AUDIT_FILE** -Fehlermeldung zurückgegeben.  
+## <a name="remarks"></a>Remarks  
+ Wenn das *file_pattern* Argument, das an **fn_get_audit_file** übermittelt wird, auf einen Pfad oder eine Datei verweist, die nicht vorhanden ist, oder wenn die Datei keine Überwachungs Datei ist, wird die **MSG_INVALID_AUDIT_FILE** Fehlermeldung zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen
 
@@ -167,7 +167,7 @@ fn_get_audit_file ( file_pattern,
   GO
   ```  
 
-  In diesem Beispiel werden alle Überwachungs Protokolle von Servern, die mit `Sh` beginnen, gelesen: 
+  In diesem Beispiel werden alle Überwachungs Protokolle von Servern, die mit `Sh`beginnen, gelesen: 
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);
@@ -178,7 +178,7 @@ Ein vollständiges Beispiel für das Erstellen einer Überwachung finden Sie unt
 
 Informationen zum Einrichten der Azure SQL-Daten Bank Überwachung finden [Sie unter "Einstieg in die SQL-Daten Bank](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)Überwachung".
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

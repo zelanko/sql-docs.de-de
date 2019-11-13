@@ -1,5 +1,5 @@
 ---
-title: table_types (Transact-SQL) | Microsoft-Dokumentation
+title: sys. table_types (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,23 +23,23 @@ ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c31a2c72666229dbe214c07e31102e647b372d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc4e77bd978432bf6e1e11930c121e0e7fc6b6ea
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078592"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982102"
 ---
-# <a name="systabletypes-transact-sql"></a>sys.table_types (Transact-SQL)
+# <a name="systable_types-transact-sql"></a>sys.table_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Zeigt Eigenschaften von benutzerdefinierten Tabellentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Ein Tabellentyp ist ein Typ, von dem Tabellenvariablen oder Tabellenwertparameter deklariert werden können. Jeder Tabellentyp besitzt eine **Type_table_object_id** , einen Fremdschlüssel in der [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalogsicht angezeigt. Sie können diese ID-Spalte verschiedener Katalogsichten verwendet werden, auf eine Weise Abfragen, die ähnlich wie ein **Object_id** -Spalte einer regulären Tabelle, um die Struktur des Tabellentyps, wie z. B. die Spalten und Einschränkungen zu ermitteln.    
+  Zeigt Eigenschaften von benutzerdefinierten Tabellentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Ein Tabellentyp ist ein Typ, von dem Tabellenvariablen oder Tabellenwertparameter deklariert werden können. Jeder Tabellentyp verfügt über eine **type_table_object_id** , bei der es sich um einen Fremdschlüssel in die [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalog Sicht handelt. Sie können diese ID-Spalte verwenden, um verschiedene Katalog Sichten auf eine Weise abzufragen, die mit einer **object_id** -Spalte einer regulären Tabelle vergleichbar ist, um die Struktur des Tabellentyps, wie z. b. die Spalten und Einschränkungen, zu ermitteln.    
  
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
-|*\<geerbte Spalten >*||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
+|*\<geerbte Spalten >*||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys &#40;. types Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
 |**type_table_object_id**|**int**|Objekt-ID. Diese Nummer ist innerhalb einer Datenbank eindeutig.|  
-|**is_memory_optimized**|**bit**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Folgende Werte sind möglich:<br /><br /> 0 = ist nicht speicheroptimiert<br /><br /> 1 = ist speicheroptimiert<br /><br /> Der Wert 0 ist der Standardwert.<br /><br /> Tabellentypen werden immer mit DURABILITY = SCHEMA_ONLY erstellt. Nur das Schema wird auf dem Datenträger beibehalten.|  
+|**is_memory_optimized**|**bit**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Folgende Werte sind möglich:<br /><br /> 0 = ist nicht speicheroptimiert<br /><br /> 1 = ist speicheroptimiert<br /><br /> Der Standardwert ist 0 (null).<br /><br /> Tabellentypen werden immer mit DURABILITY = SCHEMA_ONLY erstellt. Nur das Schema wird auf dem Datenträger beibehalten.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

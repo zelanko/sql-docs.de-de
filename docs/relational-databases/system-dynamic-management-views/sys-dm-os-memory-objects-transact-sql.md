@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_memory_objects (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_os_memory_objects (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,50 +20,50 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3a6a8891e74bd795f15e9a374194650e70b197
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a3d0691a82607a207a64f4a6c7ed8c937f052abc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265755"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983076"
 ---
-# <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
+# <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt Speicherobjekte, die derzeit von zugeordnet sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können **Sys. dm_os_memory_objects** speicherauslastung zu analysieren und zur Identifizierung möglicher Speicherverluste.  
+  Gibt Speicher Objekte zurück, die derzeit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugeordnet sind. Sie können **sys. dm_os_memory_objects** verwenden, um die Speicherauslastung zu analysieren und mögliche Speicher Verluste zu identifizieren.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**memory_object_address**|**varbinary(8)**|Adresse des Speicherobjekts. Lässt keine NULL-Werte zu.|  
 |**parent_address**|**varbinary(8)**|Adresse des übergeordneten Speicherobjekts. Lässt NULL-Werte zu.|  
 |**pages_allocated_count**|**int**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Anzahl der von diesem Objekt zugeordneten Seiten. Lässt keine NULL-Werte zu.|  
-|**pages_in_bytes**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Arbeitsspeicher in Bytes, der von dieser Instanz des Arbeitsspeicherobjekts zugeordnet wird. Lässt keine NULL-Werte zu.|  
+|**pages_in_bytes**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Arbeitsspeicher in Bytes, der von dieser Instanz des Arbeitsspeicherobjekts zugeordnet wird. Lässt keine NULL-Werte zu.|  
 |**creation_options**|**int**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
 |**bytes_used**|**bigint**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
-|**type**|**nvarchar(60)**|Typ des Speicherobjekts:<br /><br /> Dies gibt an, eine Komponente, der dieses Speicherobjekt gehört, oder die Funktion des Speicherobjekts. Lässt NULL-Werte zu.|  
+|**Typ**|**nvarchar(60)**|Typ des Speicherobjekts:<br /><br /> Dies gibt eine Komponente an, zu der dieses Speicher Objekt gehört, oder die Funktion des Speicher Objekts. Lässt NULL-Werte zu.|  
 |**name**|**varchar(128)**|Nur interne Verwendung. NULL-Werte sind zulässig.|  
 |**memory_node_id**|**smallint**|ID eines Speicherknotens, der von diesem Speicherobjekt verwendet wird. Lässt keine NULL-Werte zu.|  
 |**creation_time**|**datetime**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
 |**max_pages_allocated_count**|**int**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Maximale Anzahl der von diesem Speicherobjekt zugeordneten Seiten. Lässt keine NULL-Werte zu.|  
-|**page_size_in_bytes**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Größe der von diesem Objekt zugeordneten Seiten in Bytes. Lässt keine NULL-Werte zu.|  
+|**page_size_in_bytes**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Größe der von diesem Objekt zugeordneten Seiten in Bytes. Lässt keine NULL-Werte zu.|  
 |**max_pages_in_bytes**|**bigint**|Höchstmenge an Arbeitsspeicher, die je von diesem Arbeitsspeicherobjekt verwendet wurde. Lässt keine NULL-Werte zu.|  
-|**page_allocator_address**|**varbinary(8)**|Speicheradresse der Seitenzuordnung. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [Sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
+|**page_allocator_address**|**varbinary(8)**|Speicheradresse der Seitenzuordnung. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**creation_stack_address**|**varbinary(8)**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
 |**sequence_num**|**int**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
-|**partition_type**|**int**|Der Typ der Partition:<br /><br /> 0 – nicht-partitionierbare Speicherobjekt<br /><br /> 1 – partitionierbare Speicherobjekt, derzeit nicht partitioniert.<br /><br /> 2 – partitionierbare Speicherobjekt, partitioniert nach NUMA-Knoten. In einer Umgebung mit einem einzelnen NUMA-Knoten entspricht dies auf 1.<br /><br /> 3 – partitionierbare Arbeitsspeicher-Objekt, durch die CPU partitioniert.|  
-|**contention_factor**|**real**|Ein Wert, der Konflikte für dieses Objekt Arbeitsspeicher angeben, mit 0, d. h. keine Konflikte auftreten. Der Wert wird aktualisiert, wenn eine angegebene Anzahl der speicherbelegungen reflektierenden Konflikte während dieses Zeitraums vorgenommen wurden. Gilt nur für threadsichere Speicherobjekte.|  
-|**waiting_tasks_count**|**bigint**|Die Anzahl der Wartevorgänge auf diesem Speicherobjekt. Dieser Indikator wird erhöht, wenn der Arbeitsspeicher von diesem Arbeitsspeicherobjekt zugewiesen ist. Das Inkrement ist die Anzahl der Aufgaben, die derzeit darauf warten, für den Zugriff auf dieses Speicherobjekt an. Gilt nur für threadsichere Speicherobjekte. Dies ist eine bewährte Aufwand Wert ohne Garantie auf Richtigkeit.|  
-|**exclusive_access_count**|**bigint**|Gibt an, wie oft dieses Speicherobjekt ausschließlich auf die zugegriffen wurde. Gilt nur für threadsichere Speicherobjekte.  Dies ist eine bewährte Aufwand Wert ohne Garantie auf Richtigkeit.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**partition_type**|**int**|Der Typ der Partition:<br /><br /> 0-nicht Partitionier bares Speicher Objekt<br /><br /> 1-partitionierbares Speicher Objekt, derzeit nicht partitioniert<br /><br /> 2-partitionierbares Speicher Objekt, partitioniert durch den NUMA-Knoten. In einer Umgebung mit einem einzelnen NUMA-Knoten entspricht dies 1.<br /><br /> 3-partitionierbares Speicher Objekt, partitioniert nach CPU.|  
+|**contention_factor**|**real**|Ein-Wert, der Konflikte für dieses Speicher Objekt angibt, wobei 0 kein Konflikt ist. Der-Wert wird immer dann aktualisiert, wenn eine angegebene Anzahl von Speicher Belegungen während dieses Zeitraums zu Konflikten geführt hat. Gilt nur für Thread sichere Speicher Objekte.|  
+|**waiting_tasks_count**|**bigint**|Anzahl der Warte Vorgänge für dieses Speicher Objekt. Dieser Wert wird jedes Mal inkrementiert, wenn Speicher von diesem Speicher Objekt belegt wird. Das Inkrement ist die Anzahl der Tasks, die zurzeit auf den Zugriff auf dieses Speicher Objekt warten. Gilt nur für Thread sichere Speicher Objekte. Dies ist ein bestmögliche Wert ohne Richtigkeit der Garantie.|  
+|**exclusive_access_count**|**bigint**|Gibt an, wie oft ausschließlich auf dieses Speicher Objekt zugegriffen wurde. Gilt nur für Thread sichere Speicher Objekte.  Dies ist ein bestmögliche Wert ohne Richtigkeit der Garantie.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
- **Partition_type**, **Contention_factor**, **Waiting_tasks_count**, und **Exclusive_access_count** sind noch nicht im implementiert [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **partition_type**, **contention_factor**, **waiting_tasks_count**und **exclusive_access_count** sind noch nicht in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]implementiert.  
   
 ## <a name="permissions"></a>Berechtigungen
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE`-Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard-und Basic-Tarifen ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Speicherobjekte sind Heaps. Sie stellen im Vergleich zu den Arbeitsspeicherclerks Zuordnungen mit feinerer Granularität bereit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten verwenden Arbeitsspeicherobjekte anstelle der Arbeitsspeicherclerks. Speicherobjekte verwenden die Seitenzuordnungsschnittstelle des Arbeitsspeicherclerks für die Zuordnung von Seiten. Speicherobjekte verwenden keine Schnittstellen, die auf virtuellem Speicher oder Shared Memory basieren. Abhängig von den Zuordnungsmustern können Komponenten verschiedene Typen von Speicherobjekten erstellen, um Bereiche zufälliger Größe zuzuordnen.  
   
  Die Standardseitengröße eines Speicherobjekts beträgt 8 kB. Inkrementelle Speicherobjekte können jedoch Seitengrößen zwischen 512 Bytes und 8 kB aufweisen.  
@@ -83,7 +83,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-  [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+  [SQL Server mit dem Betriebs System verbundene dynamische &#40;Verwaltungs Sichten Transact&#41; -SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   

@@ -18,19 +18,19 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 910e615cc5257eb5be65fe88b1694e0a3bc218c5
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000817"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982235"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt die AFTER-Trigger an, die zuerst oder zuletzt ausgelöst werden. Die AFTER-Trigger, die zwischen dem ersten und letzten Trigger ausgelöst werden, werden in einer nicht definierten Reihenfolge ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,41 +43,41 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @triggername = ] '[ _triggerschema.] _triggername'`Der Name des Auslösers und des Schemas, zu dem es gehört, falls zutreffend, dessen Reihenfolge festgelegt oder geändert werden soll. [_triggerschema_ **.** ] *Triggername* ist vom Datentyp **vom Datentyp sysname**. Wenn der Name keinem Trigger entspricht oder wenn der Name dem INSTEAD OF-Trigger entspricht, gibt die Prozedur einen Fehler zurück. *triggerschema* kann nicht für DDL-oder LOGON-Trigger angegeben werden.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` ist der Name des Auslösers und des Schemas, zu dem es gehört, falls zutreffend, dessen Reihenfolge festgelegt oder geändert werden soll. [_triggerschema_ **.** ] *Triggername* ist vom Datentyp **vom Datentyp sysname**. Wenn der Name keinem Trigger entspricht oder wenn der Name dem INSTEAD OF-Trigger entspricht, gibt die Prozedur einen Fehler zurück. *triggerschema* kann nicht für DDL-oder LOGON-Trigger angegeben werden.  
   
-`[ @order = ] 'value'`Die Einstellung für die neue Reihenfolge des Auslösers. der *Wert* ist " **varchar (10)** ", und es kann sich um einen der folgenden Werte handeln:  
+`[ @order = ] 'value'` ist die Einstellung für die neue Reihenfolge des Auslösers. der *Wert* ist " **varchar (10)** ", und es kann sich um einen der folgenden Werte handeln:  
   
 > [!IMPORTANT]  
 >  Der **erste** und der **Letzte** Trigger müssen zwei unterschiedliche Trigger sein.  
   
-|Wert|Beschreibung|  
+|ReplTest1|und Beschreibung|  
 |-----------|-----------------|  
-|**First**|Trigger wird zuerst ausgelöst|  
-|**Last**|Trigger wird zuletzt ausgelöst|  
+|**Erster**|Trigger wird zuerst ausgelöst|  
+|**Letzter**|Trigger wird zuletzt ausgelöst|  
 |**Keine**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
   
-`[ @stmttype = ] 'statement_type'`Gibt die SQL-Anweisung an, die den-Triggern auslöst. *statement_type* ist vom Datentyp **varchar (50)** und kann Einfüge-, Aktualisierungs-, [!INCLUDE[tsql](../../includes/tsql-md.md)] Lösch-, Anmelde-oder beliebige in [DDL-Ereignissen](../../relational-databases/triggers/ddl-events.md)aufgeführte Anweisungs Ereignisse sein Ereignisgruppen können nicht angegeben werden.  
+`[ @stmttype = ] 'statement_type'` die die SQL-Anweisung angibt, die den-Triggern auslöst. *statement_type* ist vom Datentyp **varchar (50)** und kann ein INSERT-, Update-, DELETE-, LOGON-oder beliebiges [!INCLUDE[tsql](../../includes/tsql-md.md)] Statement-Ereignis sein, das in [DDL-Ereignissen](../../relational-databases/triggers/ddl-events.md) Ereignisgruppen können nicht angegeben werden.  
   
- Ein-Auslösers kann als **erster** oder **Letzter** -für einen Anweisungstyp festgelegt werden, nachdem dieser als ein-auslösertyp definiert wurde. Beispielsweise kann der Auslösewert TR1 **zuerst** für INSERT in der Tabelle **T1** festgelegt werden, wenn **TR1** als INSERT-Vorgang definiert ist. Gibt einen Fehler zurück, wenn **TR1**, der nur als INSERT-Vorgang definiert wurde, als **First**-oder Last-Wert für eine Update-Anweisung festgelegt wird. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+ Ein-Auslösers kann als **erster** oder **Letzter** -für einen Anweisungstyp festgelegt werden, nachdem dieser als ein-auslösertyp definiert wurde. Beispielsweise kann der Auslösewert TR1 **zuerst** für INSERT in der Tabelle **T1** festgelegt werden, wenn **TR1** als INSERT-Vorgang definiert ist. Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] gibt einen Fehler zurück, wenn **TR1**, der nur als INSERT-Vorgang definiert wurde, als **First**-oder **Last**-Wert für eine Update-Anweisung festgelegt wird. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
- Namespace = { **' Database '**  |  **' Server '** |  **\@** Normal  
- Wenn *Triggername* ein DDL-Trigger ist, gibt der  **\@Namespace** an, ob *Triggername* mit dem Daten Bankbereich oder dem Serverbereich erstellt wurde. Wenn *Triggername* ein LOGON-Trigger ist, muss der Server angegeben werden. Weitere Informationen zum DDL-Triggerbereich finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md). Wenn nicht angegeben, oder wenn NULL angegeben wird, ist *Triggername* ein DML-Trigger.  
+ **\@Namespace =** { **' Database '**  |  **' Server '** | Normal  
+ Wenn *Triggername* ein DDL-Trigger ist, gibt **\@Namespace** an, ob *Triggername* mit dem Daten Bankbereich oder dem Serverbereich erstellt wurde. Wenn *Triggername* ein LOGON-Trigger ist, muss der Server angegeben werden. Weitere Informationen zum DDL-Triggerbereich finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md). Wenn nicht angegeben, oder wenn NULL angegeben wird, ist *Triggername* ein DML-Trigger.  
   
 ||  
 |-|  
-|SERVER gilt für: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|Server gilt für: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="dml-triggers"></a>DML-Trigger  
  Für jede Anweisung in einer einzelnen Tabelle können nur ein **erster** und ein **Letzter** Auslösung vorhanden sein.  
   
- Wenn für die Tabelle, die Datenbank oder den Server bereits ein neuer-Auslösers definiert ist, können Sie für dieselbe *statement_type*-Tabelle,-Datenbank oder denselben Server keinen neuen-Auslösers als **ersten** Wert festlegen. Diese Einschränkung wendet auch die **letzten** Trigger an.  
+ Wenn für die Tabelle, die Datenbank oder den Server bereits ein neuer-Auslösung definiert ist, können **Sie für dieselbe** *statement_type*keinen neuen- **Auslösers** für dieselbe Tabelle, Datenbank oder denselben Server festlegen. Diese Einschränkung wendet auch die **letzten** Trigger an.  
   
- Die Replikation generiert automatisch einen ersten Trigger für alle Tabellen, die in einem Abonnement mit sofortigem Update oder verzögertem Update über eine Warteschlange enthalten sind. Für die Replikation gilt, dass ihr Trigger der erste Trigger sein muss. Die Replikation meldet einen Fehler, wenn Sie versuchen, eine Tabelle, die einen ersten Trigger aufweist, in ein Abonnement mit sofortigem Update bzw. verzögertem Update über eine Warteschlange einzufügen. Wenn Sie versuchen, einen Trigger zum ersten Trigger zu erklären, nachdem eine Tabelle in ein Abonnement aufgenommen wurde, gibt **sp_settriggerorder** einen Fehler zurück. Wenn Sie Alter-Triggern für den Replikations-oder den Replikations Triggern verwenden oder **sp_settriggerorder** verwenden, um den Replikations-und einen " **Last** "-oder " **None** "-Trigger  
+ Die Replikation generiert automatisch einen ersten Trigger für alle Tabellen, die in einem Abonnement mit sofortigem Update oder verzögertem Update über eine Warteschlange enthalten sind. Für die Replikation gilt, dass ihr Trigger der erste Trigger sein muss. Die Replikation meldet einen Fehler, wenn Sie versuchen, eine Tabelle, die einen ersten Trigger aufweist, in ein Abonnement mit sofortigem Update bzw. verzögertem Update über eine Warteschlange einzufügen. Wenn Sie versuchen, einen Trigger zum ersten Trigger zu erklären, nachdem eine Tabelle in ein Abonnement aufgenommen wurde, gibt **sp_settriggerorder** einen Fehler zurück. Wenn Sie Alter-Triggern für den Replikations **-oder den** Replikations triggerbefehl verwenden, oder wenn Sie **sp_settriggerorder** verwenden, um den Replikations **-und den** Replikations Triggern in einen  
   
 ## <a name="ddl-triggers"></a>DDL-Trigger  
  Wenn ein DDL-Trigger mit Daten Bankbereich und ein DDL-Trigger mit Serverbereich für dasselbe Ereignis vorhanden sind, können Sie angeben, dass beide Trigger ein **erster** Trigger oder ein **Letzter** Trigger sind. Trigger mit einem Serverbereich werden jedoch immer zuerst ausgelöst. Im Allgemeinen ist die Reihenfolge der Auslösung von DDL-Triggern für das gleiche Ereignis Folgende:  
@@ -95,7 +95,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 6.  Der **zuletzt**markierte auf Datenbankebene.  
   
 ## <a name="general-trigger-considerations"></a>Allgemeine Überlegungen zu Triggern  
- Wenn eine Alter-auslöseranweisung den ersten oder letzten-Befehl ändert, wird das **erste** oder **Letzte** Attribut, das ursprünglich für den-Befehl festgelegt wurde, gelöscht, und der Wert wird durch **None**ersetzt. Der Bestellwert muss mithilfe von **sp_settriggerorder**zurückgesetzt werden.  
+ Wenn eine Alter-auslöseranweisung den ersten oder letzten-Befehl ändert, wird das **erste** oder **Letzte** Attribut, das ursprünglich für den-Befehl festgelegt wurde, gelöscht, und der Wert wird durch **None**ersetzt. Der Bestellwert muss mithilfe **sp_settriggerorder**zurückgesetzt werden.  
   
  Wenn derselbe-Befehl für mehr als einen Anweisungstyp als erste oder Letzte Reihenfolge festgelegt werden muss, muss **sp_settriggerorder** für jeden Anweisungs Typ ausgeführt werden. Außerdem muss der Trigger zuerst für einen Anweisungstyp definiert werden, bevor er als **erster** oder **Letzter** Trigger für diesen Anweisungstyp gekennzeichnet werden kann.  
   
@@ -128,7 +128,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Datenbank-Engine gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherte Prozeduren &#40;Transact&#41; -SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md) -   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

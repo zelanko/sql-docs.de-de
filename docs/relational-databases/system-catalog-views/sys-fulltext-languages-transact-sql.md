@@ -1,5 +1,5 @@
 ---
-title: Sys. fulltext_languages (Transact-SQL) | Microsoft-Dokumentation
+title: sys. fulltext_languages (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,22 +21,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa04b9a4b90b470ca3cc6df4a8f5cf62134027c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220505"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981778"
 ---
-# <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
+# <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Diese Katalogsicht enthält eine Zeile pro Sprache, deren Wörtertrennungen bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden. Jede Zeile zeigt die LCID und den Namen der Sprache an. Wenn wörtertrennungen für eine Sprache, die andere sprachlichen Ressourcen – wortstammerkennung, Füllwörter (Stoppwörter) und Thesaurus-Dateien werden registriert sind für die Volltext-volltextindizierungs-oder volltextabfragevorgänge verfügbar. Der Wert des **Namen** oder **Lcid** kann angegeben werden, in der Volltextabfragen und der Volltextindex [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen.  
+  Diese Katalogsicht enthält eine Zeile pro Sprache, deren Wörtertrennungen bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden. Jede Zeile zeigt die LCID und den Namen der Sprache an. Wenn Wörter Trennungen für eine Sprache registriert sind, werden die anderen linguistischen Ressourcen Wort Stamm Erkennungen, Füll Wörter (Stoppwörter) und Thesaurusdateien für Volltextindizierungs-und-Abfrage Vorgänge verfügbar. Der Wert von **Name** oder **LCID** kann in den voll Text Abfragen und den [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen für Volltextindizes angegeben werden.  
    
-|Spalte|Datentyp|Beschreibung|  
+|Spalte|Datentyp|und Beschreibung|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
-|**name**|**sysname**|Der Wert des Alias in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) entsprechend dem Wert des **Lcid** oder die Zeichenfolgendarstellung des numerischen LCID-WERTS.|  
+|**name**|**sysname**|Ist entweder der Wert des Alias in [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) , der dem Wert von **LCID** entspricht, oder die Zeichen folgen Darstellung der numerischen LCID.|  
   
 ## <a name="values-returned-for-default-languages"></a>Werte, die für Standardsprachen zurückgegeben wurden  
  In der folgenden Tabelle sind Werte für die Sprachen aufgeführt, deren Wörtertrennungen standardmäßig registriert werden.  
@@ -58,7 +58,7 @@ ms.locfileid: "68220505"
 |Englisch|1033|  
 |Französisch|1036|  
 |Deutsch|1031|  
-|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Griechisch|1032|  
+|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Griechisch|1032|  
 |Gujarati|1095|  
 |Hebräisch|1037|  
 |Hindi|1081|  
@@ -75,7 +75,7 @@ ms.locfileid: "68220505"
 |Marathi|1102|  
 |Neutral|0|  
 |Norwegisch (Bokmål)|1044|  
-|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Polnisch|1045|  
+|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Polnisch|1045|  
 |Portugiesisch (Brasilien)|1046|  
 |Portugiesisch (Portugal)|2070|  
 |Punjabi|1094|  
@@ -92,22 +92,22 @@ ms.locfileid: "68220505"
 |Telugu|1098|  
 |Thai|1054|  
 |Chinesisch (traditionell)|1028|  
-|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Türkisch|1055|  
+|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Türkisch|1055|  
 |Ukrainisch|1058|  
 |Urdu|1056|  
 |Vietnamesisch|1066|  
   
-## <a name="remarks"></a>Hinweise  
- Um die Liste der mit der Volltextsuche registrierte Sprachenliste zu aktualisieren, verwenden [Sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**Update_languages**".  
+## <a name="remarks"></a>Remarks  
+ Um die Liste der bei der Volltextsuche registrierten Sprachen zu aktualisieren, verwenden Sie [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**".  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) -   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [Konfigurieren und Verwalten von Thesaurusdateien für die voll Text Suche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md)  
   

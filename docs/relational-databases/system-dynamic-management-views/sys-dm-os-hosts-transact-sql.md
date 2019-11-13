@@ -1,5 +1,5 @@
 ---
-title: dm_os_hosts (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_os_hosts (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -18,45 +18,45 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 794c8834f429d84eea94ad331401e84253c28c93
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e4ff3e25accf5c499afb5e306a0eec206f6b3f82
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265829"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982551"
 ---
-# <a name="sysdmoshosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
+# <a name="sysdm_os_hosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt alle Hosts zurück, die zurzeit in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert sind. Diese Sicht gibt auch die von diesen Hosts verwendeten Ressourcen zurück.  
   
 > [!NOTE]  
->  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_hosts**.  
+>  Um dies aus [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_hosts**.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary(8)**|Die interne Speicheradresse des Hostobjekts.|  
-|**type**|**nvarchar(60)**|Der Typ der gehosteten Komponente. Ein auf ein Objekt angewendeter<br /><br /> SOSHOST_CLIENTID_SERVERSNI= SQL Server Native Interface<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB Provider<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft Data Access Run Time|  
+|**Typ**|**nvarchar(60)**|Der Typ der gehosteten Komponente. Beispiel:<br /><br /> SOSHOST_CLIENTID_SERVERSNI= SQL Server Native Interface<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB Provider<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft Data Access Run Time|  
 |**name**|**nvarchar(32)**|Der Name des Hosts.|  
 |**enqueued_tasks_count**|**int**|Gesamtanzahl der Tasks, die von diesem Host in Warteschlangen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] platziert wurden.|  
 |**active_tasks_count**|**int**|Gesamtanzahl der aktuell ausgeführten Tasks, die von diesem Host in Warteschlangen platziert wurden.|  
 |**completed_ios_count**|**int**|Gesamtanzahl der E/A-Vorgänge, die über diesen Host ausgegeben und abgeschlossen wurden.|  
 |**completed_ios_in_bytes**|**bigint**|Gesamtanzahl von Bytes der E/A-Vorgänge, die über diesen Host abgeschlossen wurden.|  
 |**active_ios_count**|**int**|Gesamtanzahl von E/A-Anforderungen in Verbindung mit diesem Host, die zurzeit auf Beendigung warten.|  
-|**default_memory_clerk_address**|**varbinary(8)**|Speicheradresse des diesem Host zugeordneten Arbeitsspeicherclerk-Objekts. Weitere Informationen finden Sie unter [Sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**default_memory_clerk_address**|**varbinary(8)**|Speicheradresse des diesem Host zugeordneten Arbeitsspeicherclerk-Objekts. Weitere Informationen finden Sie unter [sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE`-Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard-und Basic-Tarifen ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt Komponenten, z. B. einen OLE DB-Anbieter, die nicht Teil der ausführbaren Datei von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind, Arbeitsspeicher belegen und an nicht präemptiven Planungen teilnehmen. Diese Komponenten werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehostet, und alle von diesen Komponenten zugeordneten Ressourcen werden nachverfolgt. Als Host kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Ressourcen besser berücksichtigen, die von Komponenten außerhalb der ausführbaren Datei von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden.  
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|Beschreibung|Beziehung|  
+|From|Aktion|Beziehung|  
 |----------|--------|------------------|  
 |sys.dm_os_hosts. default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|1:1|  
 |sys.dm_os_hosts. host_address|sys.dm_os_memory_clerks. host_address|1:1|  
@@ -66,7 +66,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert d
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.|  
   
 ```  
 SELECT h.type, SUM(mc.pages_kb) AS commited_memory  
@@ -79,7 +79,7 @@ GROUP BY h.type;
 ## <a name="see-also"></a>Siehe auch  
 
  [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
- [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server mit dem Betriebs System verbundene dynamische &#40;Verwaltungs Sichten Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

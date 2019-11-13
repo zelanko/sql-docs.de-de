@@ -1,5 +1,5 @@
 ---
-title: Sp_refreshsqlmodule (Transact-SQL) | Microsoft-Dokumentation
+title: sp_refreshsqlmodule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/25/2018
 ms.prod: sql
@@ -26,19 +26,19 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ed393edf79c3502bf3e054e23eb459d490ce998
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075805"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982774"
 ---
-# <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
+# <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Aktualisiert die Metadaten für die angegebene nicht schemagebundene gespeicherte Prozedur, benutzerdefinierte Funktion oder Sicht, den DML-Trigger, DDL-Trigger auf Datenbankebene oder DDL-Trigger auf Serverebene in der aktuellen Datenbank. Persistente Metadaten für diese Objekte, z. B. Datentypen von Parametern, können aufgrund von Änderungen an den zugrunde liegenden Objekten veraltet sein.
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,27 +56,27 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'module\_name'` Ist der Name, der die gespeicherte Prozedur, eine benutzerdefinierte Funktion, Sicht, DML-Trigger, DDL-Trigger auf Datenbankebene oder DDL-Trigger auf Serverebene. *MODULE_NAME* darf nicht sein, eine common Language Runtime (CLR) gespeicherte Prozedur oder eine CLR-Funktion. *MODULE_NAME* darf nicht schemagebunden sein. *MODULE_NAME* ist **Nvarchar**, hat keinen Standardwert. *MODULE_NAME* kann ein mehrteiliger Bezeichner sein, aber nur auf Objekte in der aktuellen Datenbank verweisen kann.  
+`[ @name = ] 'module\_name'` ist der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *module_name* kann keine gespeicherte Prozedur Common Language Runtime (CLR) oder eine CLR-Funktion sein. *module_name* kann nicht Schema gebunden werden. *module_name* ist vom Datentyp **nvarchar**und hat keinen Standardwert. *module_name* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Objekte in der aktuellen Datenbank verweisen.  
   
-`[ , @namespace = ] ' \<class> '` Ist die Klasse des angegebenen Moduls. Wenn *Module_name* ein DDL-Triggers ist \<Klasse > ist erforderlich. *\<Klasse >* ist **Nvarchar**(20). Gültige Eingaben sind:  
+`[ , @namespace = ] ' \<class> '` ist die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-Wert ist, ist \<Klasse > erforderlich. *\<Klasse >* ist vom Datentyp **nvarchar**(20). Gültige Eingaben sind:  
   
 |||  
 |-|-|  
 |DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|SERVER_DDL_TRIGGER|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_refreshsqlmodule** sollte ausgeführt werden, wenn Änderungen an den Objekten, die dem Modul zugrunde liegen vorgenommen werden, die zugehörige Definition auswirkt. Andernfalls kann das Modul bei einer Abfrage oder einem Aufruf unerwartete Ergebnisse generieren. Um eine Ansicht zu aktualisieren, verwenden Sie entweder **Sp_refreshsqlmodule** oder **Sp_refreshview** mit gleichen Ergebnissen.  
+## <a name="remarks"></a>Remarks  
+ **sp_refreshsqlmodule** sollte ausgeführt werden, wenn Änderungen an den Objekten vorgenommen werden, die dem Modul zugrunde liegen, das sich auf seine Definition auswirkt. Andernfalls kann das Modul bei einer Abfrage oder einem Aufruf unerwartete Ergebnisse generieren. Zum Aktualisieren einer Ansicht können Sie entweder **sp_refreshsqlmodule** oder **sp_refreshview** mit den gleichen Ergebnissen verwenden.  
   
- **Sp_refreshsqlmodule** wirkt sich keine Berechtigungen, erweiterte Eigenschaften oder SET-Optionen, die dem Objekt zugeordnet sind.  
+ **sp_refreshsqlmodule** wirkt sich nicht auf Berechtigungen, erweiterte Eigenschaften oder SET-Optionen aus, die dem-Objekt zugeordnet sind.  
   
  Um einen DDL-Trigger auf Serverebene zu aktualisieren, führen Sie diese gespeicherte Prozedur aus dem Kontext einer beliebigen Datenbank aus.  
   
 > [!NOTE]  
->  Alle Signaturen, die dem Objekt zugeordnet sind werden gelöscht, beim Ausführen von **Sp_refreshsqlmodule**.  
+>  Alle Signaturen, die dem-Objekt zugeordnet sind, werden gelöscht, wenn Sie **sp_refreshsqlmodule**ausführen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER-Berechtigung für das Modul und die REFERENCES-Berechtigung für alle CLR-benutzerdefinierten Typen und XML-Schemaauflistungen, auf die durch das Objekt verwiesen wird. Erfordert eine ALTER ANY DATABASE DDL TRIGGER-Berechtigung in der aktuellen Datenbank, wenn es sich beim angegebenen Modul um einen DDL-Trigger auf Datenbankebene handelt. Erfordert eine CONTROL SERVER-Berechtigung, wenn es sich beim angegebenen Modul um einen DDL-Trigger auf Serverebene handelt.  
@@ -158,7 +158,7 @@ GO
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.|  
   
 ```  
 USE master;  
@@ -170,6 +170,6 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Datenbank-Engine gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

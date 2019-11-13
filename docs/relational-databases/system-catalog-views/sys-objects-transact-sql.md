@@ -1,5 +1,5 @@
 ---
-title: Sys.Objects (Transact-SQL) | Microsoft-Dokumentation
+title: sys. Objects (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: sql
@@ -23,42 +23,42 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47e332d8dfda76bbf2702335b72793c112c15d75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a31236d24a2490e693d35dd799b4f4abe1ce2d99
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102324"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982127"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Enthält eine Zeile für jedes benutzerdefinierte, mit Schemabereich-Objekt, das in einer Datenbank, einschließlich der systemintern kompilierten skalare benutzerdefinierte Funktion erstellt wird.  
+  Enthält eine Zeile für jedes benutzerdefinierte, Schema bezogene Objekt, das in einer Datenbank erstellt wird, einschließlich einer nativ kompilierten benutzerdefinierten Skalarfunktion.  
   
  Weitere Informationen dazu finden Sie unter [Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
 > [!NOTE]  
->  sys.objects zeigt keine DDL-Trigger an, da diese keine Schemabereiche besitzen. Alle Trigger, sowohl DML-als auch DDL-Trigger, befinden sich unter [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). Sys.Triggers unterstützt eine Mischung von namensbereichsregeln für die verschiedenen Arten von Triggern.  
+>  sys.objects zeigt keine DDL-Trigger an, da diese keine Schemabereiche besitzen. Alle Trigger, sowohl DML-als auch DDL-Trigger, werden in [sys.](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)Triggers gefunden. sys. Triggers unterstützt eine Mischung von namens Bereichs Regeln für die verschiedenen Arten von Triggern.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|Objektname.|  
+|name|**sysname**|Objektname.|  
 |object_id|**int**|Objekt-ID. Ist innerhalb einer Datenbank eindeutig.|  
-|principal_id|**int**|ID des einzelnen Besitzers, sofern es sich bei diesem nicht um den Schemabesitzer handelt. Standardmäßig gehören Objekte mit Schemabereich dem Schemabesitzer. Mit der ALTER AUTHORIZATION-Anweisung kann jedoch ein anderer Besitzer angegeben werden.<br /><br /> Ist NULL, wenn kein alternativer einzelner Besitzer vorhanden ist.<br /><br /> Ist NULL, wenn der Objekttyp einen der folgenden Werte aufweist:<br /><br /> C = CHECK-Einschränkung<br /><br /> D = DEFAULT (Einschränkung oder eigenständig)<br /><br /> F = FOREIGN KEY-Einschränkung<br /><br /> PK = PRIMARY KEY-Einschränkung<br /><br /> R = Regel (vom alten Typ, eigenständig)<br /><br /> TA = Assemblytrigger (CLR-Integration)<br /><br /> TR = SQL-Trigger<br /><br /> UQ = UNIQUE-Einschränkung<br /><br /> EC edgeeinschränkung = |  
+|principal_id|**int**|ID des einzelnen Besitzers, sofern es sich bei diesem nicht um den Schemabesitzer handelt. Standardmäßig gehören Objekte mit Schemabereich dem Schemabesitzer. Mit der ALTER AUTHORIZATION-Anweisung kann jedoch ein anderer Besitzer angegeben werden.<br /><br /> Ist NULL, wenn kein alternativer einzelner Besitzer vorhanden ist.<br /><br /> Ist NULL, wenn der Objekttyp einen der folgenden Werte aufweist:<br /><br /> C = CHECK-Einschränkung<br /><br /> D = DEFAULT (Einschränkung oder eigenständig)<br /><br /> F = FOREIGN KEY-Einschränkung<br /><br /> PK = PRIMARY KEY-Einschränkung<br /><br /> R = Regel (vom alten Typ, eigenständig)<br /><br /> TA = Assemblytrigger (CLR-Integration)<br /><br /> TR = SQL-Trigger<br /><br /> UQ = UNIQUE-Einschränkung<br /><br /> EC = Edge-Einschränkung |  
 |schema_id|**int**|Die ID des Schemas, in dem das Objekt enthalten ist.<br /><br /> Systemobjekte mit Schemabereich sind immer in den sys-Schemas oder INFORMATION_SCHEMA-Schemas enthalten.|  
 |parent_object_id|**int**|ID des Objekts, zu dem dieses Objekt gehört.<br /><br /> 0 = Kein untergeordnetes Objekt.|  
-|Typ|**char(2)**|Objekttyp:<br /><br /> AF = Aggregatfunktion (CLR)<br /><br /> C = CHECK-Einschränkung<br /><br /> D = DEFAULT (Einschränkung oder eigenständig)<br /><br /> F = FOREIGN KEY-Einschränkung<br /><br /> FN = SQL-Skalarfunktion<br /><br /> FS = Assemblyskalarfunktion (CLR)<br /><br /> FT = Assembly-Tabellenwertfunktion (CLR)<br /><br /> IF = SQL-Inlinefunktion mit Tabellenrückgabe<br /><br /> IT = Interne Tabelle<br /><br /> P = Gespeicherte SQL-Prozedur<br /><br /> PC = Gespeicherte Assemblyprozedur (CLR)<br /><br /> PG = Planhinweisliste<br /><br /> PK = PRIMARY KEY-Einschränkung<br /><br /> R = Regel (vom alten Typ, eigenständig)<br /><br /> RF = Replikationsfilterprozedur<br /><br /> S = Systembasistabelle<br /><br /> SN = Synonym<br /><br /> SO = Sequenzobjekt<br /><br /> U = Tabelle (benutzerdefiniert)<br /><br /> V = Sicht<br /><br /> EC edgeeinschränkung = <br /><br /> <br /><br /> **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> SQ = Dienstwarteschlange<br /><br /> TA = Assembly-DML-Trigger (CLR)<br /><br /> TF = Tabellenwertfunktion von SQL<br /><br /> TR = SQL-DML-Trigger<br /><br /> TT = Tabellentyp<br /><br /> UQ = UNIQUE-Einschränkung<br /><br /> X = Erweiterte gespeicherte Prozedur<br /><br /> <br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].<br /><br /> <br /><br /> ET = externer Tabelle|  
-|type_desc|**nvarchar(60)**|Beschreibung des Objekttyps:<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
+|type|**char(2)**|Objekttyp:<br /><br /> AF = Aggregatfunktion (CLR)<br /><br /> C = CHECK-Einschränkung<br /><br /> D = DEFAULT (Einschränkung oder eigenständig)<br /><br /> F = FOREIGN KEY-Einschränkung<br /><br /> FN = SQL-Skalarfunktion<br /><br /> FS = Assemblyskalarfunktion (CLR)<br /><br /> FT = Assembly-Tabellenwertfunktion (CLR)<br /><br /> IF = SQL-Inlinefunktion mit Tabellenrückgabe<br /><br /> IT = Interne Tabelle<br /><br /> P = Gespeicherte SQL-Prozedur<br /><br /> PC = Gespeicherte Assemblyprozedur (CLR)<br /><br /> PG = Planhinweisliste<br /><br /> PK = PRIMARY KEY-Einschränkung<br /><br /> R = Regel (vom alten Typ, eigenständig)<br /><br /> RF = Replikationsfilterprozedur<br /><br /> S = Systembasistabelle<br /><br /> SN = Synonym<br /><br /> SO = Sequenzobjekt<br /><br /> U = Tabelle (benutzerdefiniert)<br /><br /> V = Sicht<br /><br /> EC = Edge-Einschränkung <br /><br /> <br /><br /> **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> <br /><br /> SQ = Dienstwarteschlange<br /><br /> TA = Assembly-DML-Trigger (CLR)<br /><br /> TF = Tabellenwertfunktion von SQL<br /><br /> TR = SQL-DML-Trigger<br /><br /> TT = Tabellentyp<br /><br /> UQ = UNIQUE-Einschränkung<br /><br /> X = Erweiterte gespeicherte Prozedur<br /><br /> <br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].<br /><br /> <br /><br /> ET = externe Tabelle|  
+|type_desc|**nvarchar(60)**|Beschreibung des Objekttyps:<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
 |create_date|**datetime**|Datum, an dem das Objekt erstellt wurde.|  
 |modify_date|**datetime**|Das Datum, an dem das Objekt zuletzt mithilfe einer ALTER-Anweisung geändert wurde. Ist das Objekt eine Tabelle oder Sicht, wird modify_date auch geändert, wenn ein gruppierter Index für die Tabelle oder Sicht erstellt oder geändert wird.|  
 |is_ms_shipped|**bit**|Das Objekt wird von einer internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente erstellt.|  
 |is_published|**bit**|Objekt wurde veröffentlicht.|  
 |is_schema_published|**bit**|Nur das Schema des Objekts wird veröffentlicht.|  
   
-## <a name="remarks"></a>Hinweise  
- Sie können anwenden, der [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md), [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md), und [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)integrierte Funktionen, die in sys.objects angezeigten Objekte ().  
+## <a name="remarks"></a>Remarks  
+ Sie können die integrierten Funktionen [object_id](../../t-sql/functions/object-id-transact-sql.md), [object_name](../../t-sql/functions/object-name-transact-sql.md)und [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)() auf die in sys. Objects angezeigten Objekte anwenden.  
   
- Es gibt eine Version dieser Sicht mit dem gleichen Schema, namens [system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), Systemobjekte angezeigt. Es gibt eine andere Ansicht mit dem Namen [all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) , die sowohl System-als auch Objekte zeigt. Alle drei Katalogsichten weisen die gleiche Struktur auf.  
+ Es gibt eine Version dieser Sicht, die das gleiche Schema namens [sys. system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)enthält, das Systemobjekte anzeigt. Es gibt eine weitere Ansicht namens [sys. all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) , in der sowohl System-als auch Benutzer Objekte angezeigt werden. Alle drei Katalogsichten weisen die gleiche Struktur auf.  
   
  In dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ein erweiterter Index, beispielsweise ein XML-Index oder Räumlichkeitsindex, als interne Tabelle in sys.objects (type = IT and type_desc = INTERNAL_TABLE) betrachtet. Für einen erweiterten Index gilt:  
   
@@ -68,8 +68,8 @@ ms.locfileid: "68102324"
   
 -   Die Spalten is_ms_shipped, is_published und is_schema_published werden auf 0 festgelegt.  
 
-**Verwandte nützlich-Systemsichten**  
-Mithilfe von Systemsichten für einen bestimmten Typ des Objekts, z. B., können eine Teilmenge der Objekte angezeigt werden:  
+**Verwandte nützliche System Sichten**  
+Teilmengen der Objekte können mithilfe von System Sichten für einen bestimmten Objekttyp angezeigt werden, z. b.:  
 - [sys.tables](sys-tables-transact-sql.md)  
 - [sys.views](sys-views-transact-sql.md)  
 - [sys.procedures](sys-procedures-transact-sql.md)  
@@ -166,7 +166,7 @@ GO
  [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Abfragen des Systemkatalogs von SQL Server – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Abfragen der SQL Server-System Katalog-FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   
   
