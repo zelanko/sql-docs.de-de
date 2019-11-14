@@ -1,7 +1,7 @@
 ---
-title: Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente für SQL Server Upgrades
-description: Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente
-ms.custom: ''
+title: Aufzeichnen einer Ablauf Verfolgung für SQL Server Upgrades
+description: Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente für SQL Server Upgrades
+ms.custom: seo-lt-2019
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 3887daff7807d57244449d4f35d220bb47b8f10d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6c24632875d09125efcd043ae907e87a21847fe9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653818"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056605"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente
 
@@ -35,11 +35,11 @@ Das Zwischenspeichern von Abfragen in SQL Server kann sich auf Auswertungs Ergeb
 
 1. Geben Sie unter **neue Erfassung**die folgenden Informationen ein, oder wählen Sie Sie aus:
 
-    - **SQL Server Instanzname**: Geben Sie einen Namen für den Computer ein, auf dem SQL Server ausgeführt wird, auf dem Sie eine Server Ablauf Verfolgung erfassen möchten.
+    - **SQL Server Instanzname**: Geben Sie einen Namen für den Computer ein, auf dem SQL Server ausgeführt wird, auf dem Sie eine Server Ablauf Verfolgung aufzeichnen möchten.
     - **Datenbankname**: Geben Sie einen Namen für eine Datenbank ein, mit der eine Daten Bank Ablauf Verfolgung gestartet werden soll. Wenn Sie keine Datenbank angeben, wird die Ablauf Verfolgung für alle Datenbanken auf dem Server aufgezeichnet.
     - **Name der Ablauf Verfolgungs Datei**: Geben Sie einen Namen für die Ablauf Verfolgungs Datei für ihre Erfassung ein.
-    - **Maximale Dateigröße (MB)** : Wählen Sie die rollovergröße für Dateien aus. Bei Bedarf wird eine neue Datei mit der von Ihnen ausgewählten Dateigröße erstellt. Die empfohlene rollovergröße beträgt 200 MB.
-    - **Dauer (in Minuten)** : Wählen Sie die Zeitdauer (in Minuten) aus, für die die Ablauf Verfolgungs Erfassung ausgeführt werden soll.
+    - **Maximale Dateigröße (MB)** : Wählen Sie die Größe des Rollovers für Dateien aus. Bei Bedarf wird eine neue Datei mit der von Ihnen ausgewählten Dateigröße erstellt. Die empfohlene rollovergröße beträgt 200 MB.
+    - **Dauer (in Minuten)** : Wählen Sie aus, wie lange (in Minuten) die Ablauf Verfolgungs Erfassung ausgeführt werden soll.
     - **Pfad zum Speichern der Ausgabedatei**der Ablauf Verfolgung: Wählen Sie den Zielpfad für die Ablauf Verfolgungs Datei aus. 
 
     > [!NOTE]
@@ -125,7 +125,7 @@ Wenn beim Ausführen einer Ablauf Verfolgungs Erfassung ein Fehler angezeigt wir
 - Vergewissern Sie sich, dass der Name des Computers, der SQL Server ausgeführt wird, gültig ist. Versuchen Sie, eine Verbindung mit dem Computer herzustellen, auf dem SQL Server ausgeführt wird, indem Sie SQL Server Management Studio (SSMS) verwenden.
 - Vergewissern Sie sich, dass Ihre Firewallkonfiguration keine Verbindungen mit dem Computer blockiert, der SQL Server ausgeführt wird
 - Vergewissern Sie sich, dass der Benutzer über die Berechtigungen verfügt, die im Blogbeitrag [Replay Replay FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)aufgeführt sind.
-- Vergewissern Sie sich, dass der Ablauf Verfolgungs Name nicht der standardrolloverkonvention (Erfassung\_1) folgt. Versuchen Sie stattdessen, Namen von Ablauf\_Verfolgungen wie z. b. Capture 1A oder Capture1
+- Vergewissern Sie sich, dass der Ablauf Verfolgungs Name nicht der standardrolloverkonvention entspricht (Capture\_1). Versuchen Sie stattdessen, die Namen der Ablauf Verfolgung wie Capture\_1A oder Capture1 auszuführen.
 
 Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt werden, und Lösungen für deren Behebung:
 

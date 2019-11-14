@@ -1,7 +1,6 @@
 ---
-title: Migrieren einer lokalen SQLServer oder SQL Server auf virtuellen Azure-Computern in Azure SQL-Datenbank mit den Data Migration Assistant | Microsoft-Dokumentation
-description: Erfahren Sie, wie Sie mit Data Migration Assistant zum Migrieren von einer lokalen SQL Server zu Azure SQL-Datenbank
-ms.custom: ''
+title: Migrieren von SQL Server zu Azure SQL-Datenbank mithilfe des Datenmigrations-Assistent
+description: Erfahren Sie, wie Sie mit Datenmigrations-Assistent eine lokale SQL Server zu Azure SQL-Datenbank migrieren.
 ms.date: 07/15/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,112 +13,113 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: 37e0065ed711c3cf550fec4bafe9aa08be8398e6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.custom: seo-lt-2019
+ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262315"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056616"
 ---
-# <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrieren von lokalen SQLServer oder SQL Server auf virtuellen Azure-Computern in Azure SQL-Datenbank, die über den Data Migration Assistant
+# <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrieren von lokalen SQL Server oder SQL Server auf Azure-VMS zu Azure SQL-Datenbank mithilfe des Datenmigrations-Assistent
 
-Im Data Migration Assistant bietet nahtlose Bewertungen von einer lokalen SQL Server und -Upgrades auf höhere Versionen von SQL Server oder Migration zu SQL Server auf virtuellen Azure-Computern oder Azure SQL-Datenbank.
+Der Datenmigrations-Assistent ermöglicht eine nahtlose Bewertung SQL Server lokalen Updates und Upgrades auf spätere Versionen von SQL Server oder migraSQL Server tionen auf Azure-VMS oder Azure SQL-Datenbank.
 
-Dieser Artikel enthält schrittweise Anleitungen zum Migrieren von SQL Server auf einer lokalen Umgebung in Azure SQL-Datenbank mit den Data Migration Assistant.
+Dieser Artikel enthält Schritt-für-Schritt-Anleitungen zum Migrieren von SQL Server lokal zu Azure SQL-Datenbank mithilfe des Datenmigrations-Assistent.
 
 ## <a name="create-a-new-migration-project"></a>Erstellen eines neuen Migrationsprojekts
 
-1. Wählen Sie im linken Bereich **neu** (+), und wählen Sie dann die **Migration** Projekttyp.
+1. Klicken Sie im linken Bereich auf **neu** (+), und wählen Sie dann den Projekttyp **Migration** aus.
 
-2. Legen Sie den Quelltyp **SQL Server** und geben Sie zum Zielserver **Azure SQL-Datenbank**.
+2. Legen Sie den Quelltyp auf **SQL Server** und den Ziel Servertyp auf **Azure SQL-Datenbank**fest.
 
-3. Wählen Sie **Erstellen** aus.
+3. Wählen Sie **Erstellen**aus.
 
    ![Migrationsprojekt erstellen](../dma/media/NewCreate1.png)
 
-## <a name="specify-the-source-server-and-database"></a>Geben Sie den Quellserver und der Datenbank
+## <a name="specify-the-source-server-and-database"></a>Quell Server und-Datenbank angeben
 
-1. Für die Quelle unter **Herstellen einer Verbindung mit Quellserver**in die **Servernamen** Text Geben Sie den Namen der Quelle SQL Server-Instanz.
+1. Geben Sie für die Quelle unter **Verbindung mit Quell Server herstellen**im Textfeld **Servername** den Namen der Quell SQL Server-Instanz ein.
 
-2. Wählen Sie die **Authentifizierungstyp** von der SQL Server-Quellinstanz unterstützt werden.
+2. Wählen Sie den **Authentifizierungstyp** aus, der vom Quell SQL Server Instanz unterstützt
 
    > [!NOTE]
-   > Es wird empfohlen, dass Sie die Verbindung verschlüsseln, die sich durch Auswählen der **Verbindung verschlüsseln** Kontrollkästchen unter **Verbindung Poperties**.
+   > Es wird empfohlen, die Verbindung zu verschlüsseln, indem Sie unter **Verbindungs-poperties**das Kontrollkästchen **Verbindung verschlüsseln** aktivieren.
 
-    ![Quellserver auswählen](../dma/media/select-source-server.png)
+    ![Quell Server auswählen](../dma/media/select-source-server.png)
 
 3. Wählen Sie **Verbinden**.
 
-4. Wählen Sie eine einzelne Quelle-Datenbank zu Azure SQL-Datenbank migrieren.
+4. Wählen Sie eine einzelne Quelldatenbank aus, um zu Azure SQL-Datenbank zu migrieren.
 
    > [!NOTE]
-   > Wenn Sie möchten, zu bewerten, die Datenbank und zum Anwenden empfohlen Korrekturen vor der Migration, wählen die **bewerten Datenbank vor der Migration?** Kontrollkästchen.
+   > Wenn Sie die Datenbank bewerten und empfohlene Korrekturen vor der Migration anwenden möchten, aktivieren Sie das Kontrollkästchen **Datenbank vor der Migration bewerten?** .
 
-    ![Wählen Sie die Quelldatenbank](../dma/media/select-source-database.png)
+    ![Quelldatenbank auswählen](../dma/media/select-source-database.png)
 
 5. Wählen Sie **Weiter**aus.
 
-## <a name="specify-the-target-server-and-database"></a>Geben Sie den Zielserver und die Datenbank
+## <a name="specify-the-target-server-and-database"></a>Zielserver und-Datenbank angeben
 
-1. Für das Ziel unter **Herstellen einer Verbindung mit Zielserver**in die **Servernamen** Text Geben Sie den Namen der Azure SQL-Datenbank-Instanz. 
+1. Geben Sie für das Ziel unter **Verbindung mit Zielserver herstellen**im Textfeld **Servername** den Namen der Azure SQL-Daten Bank Instanz ein. 
 
-2. Wählen Sie die **Authentifizierungstyp** unterstützt, die von der Azure SQL-Datenbank-Zielinstanz.
+2. Wählen Sie den **Authentifizierungstyp** aus, der von der Azure SQL-Datenbank-Ziel Instanz
 
    > [!NOTE]
-   > Es wird empfohlen, dass Sie die Verbindung verschlüsseln, die sich durch Auswählen der **Verbindung verschlüsseln** Kontrollkästchen unter **Verbindung Poperties**.
+   > Es wird empfohlen, die Verbindung zu verschlüsseln, indem Sie unter **Verbindungs-poperties**das Kontrollkästchen **Verbindung verschlüsseln** aktivieren.
 
-     ![Wählen Sie Zielserver](../dma/media/select-target-server.png)
+     ![Zielserver auswählen](../dma/media/select-target-server.png)
 
 3. Wählen Sie **Verbinden**.
 
-4. Wählen Sie eine einzelne Zieldatenbank zu dem migriert werden sollen.
+4. Wählen Sie eine einzelne Zieldatenbank aus, zu der migriert werden soll.
 
    > [!NOTE]
-   > Wenn Sie beabsichtigen, Migrieren von Windows-Benutzer, in der **Ziel externe Domäne Benutzername** Text stellen Sie sicher, dass der externe Benutzername des Domäne Zieldatenbanken richtig angegeben ist.
+   > Wenn Sie beabsichtigen, Windows-Benutzer zu migrieren, stellen Sie im Textfeld **Ziel externer Benutzer Domänen Name** sicher, dass der Name der externen Ziel-Benutzer Domäne korrekt angegeben ist.
 
-    ![Wählen Sie die Zieldatenbank](../dma/media/select-target-database.png)
+    ![Zieldatenbank auswählen](../dma/media/select-target-database.png)
 
 5. Wählen Sie **Weiter**aus.
 
-## <a name="select-schema-objects"></a>Wählen Sie die Schemaobjekte
+## <a name="select-schema-objects"></a>Schema Objekte auswählen
 
-1. Wählen Sie die Schemaobjekte aus der Quelldatenbank, die Sie mit Azure SQL-Datenbank migrieren möchten.
+1. Wählen Sie die Schema Objekte aus der Quelldatenbank aus, die Sie zu Azure SQL-Datenbank migrieren möchten.
 
-    ![Wählen Sie die Schemaobjekte](../dma/media/select-schema-objects.png)
+    ![Schema Objekte auswählen](../dma/media/select-schema-objects.png)
 
        > [!NOTE]
        > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
 
-    ![Vorgeschlagene Korrektur](../dma/media/suggested-fix.png)
+    ![Vorgeschlagene Lösung](../dma/media/suggested-fix.png)
 
-2. Wählen Sie **allgemeine SQL-Skript**.
+2. Wählen Sie **Allgemeines SQL-Skript**aus.
 
-3. Überprüfen Sie das generierte Skript aus.
+3. Überprüfen Sie das generierte Skript.
 
     ![Generiertes Skript](../dma/media/generated-script.png)
 
 ## <a name="deploy-schema"></a>Schema bereitstellen
 
-1. Wählen Sie **Schema bereitstellen**.
+1. Wählen Sie **Schema**bereitstellen aus.
 
-2. Überprüfen Sie die Ergebnisse der schemabereitstellung aus.
+2. Überprüfen Sie die Ergebnisse der Schema Bereitstellung.
 
-    ![Die Ergebnisse der Schema-Bereitstellung](../dma/media/schema-deployment-results.png)
+    ![Ergebnisse der Schema Bereitstellung](../dma/media/schema-deployment-results.png)
 
-3. Wählen Sie **Datenmigration** um den Datenmigrationsprozess zu initiieren.
+3. Wählen Sie **Daten migrieren** aus, um den Daten Migrationsprozess zu initiieren.
 
-4. Wählen Sie die Tabellen mit den Daten, die Sie migrieren möchten.
+4. Wählen Sie die Tabellen mit den Daten aus, die Sie migrieren möchten.
 
-    ![Wählen Sie zu migrierende Tabellen aus](../dma/media/select-tables-to-migrate.png) 
+    ![Tabellen für die Migration auswählen](../dma/media/select-tables-to-migrate.png) 
 
-5. Wählen Sie **Datenmigration starten**.
+5. Wählen Sie **Datenmigration starten**aus.
 
-Die letzte Bildschirm zeigt den Gesamtstatus.
+Der letzte Bildschirm zeigt den Gesamtstatus.
 
    ![Migrationsstatus](../dma/media/migration-status.png) 
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-* [Data Migration Assistant: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)
-* [Data Migration Assistant: Bewährte Methoden](../dma/dma-bestpractices.md)
+* [Datenmigrations-Assistent (DMA)](../dma/dma-overview.md)
+* [Datenmigrations-Assistent: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)
+* [Datenmigrations-Assistent: bewährte Methoden](../dma/dma-bestpractices.md)

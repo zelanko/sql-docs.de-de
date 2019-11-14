@@ -1,7 +1,7 @@
 ---
-title: Bewährte Methoden für den Data Migration Assistant (SQL Server) | Microsoft-Dokumentation
-description: Erlernen Sie bewährte Methoden für die Migration von SQL Server-Datenbanken mit Data Migration Assistant
-ms.custom: ''
+title: Bewährte Methoden für den Datenmigrations-Assistenten
+description: Informieren Sie sich über bewährte Methoden zum Migrieren von SQL Server-Daten Datenmigrations-Assistent Banken
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: 5a717c47163e03e6430272ca44d2120c7328289e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef953aa369e831e47d38db403b982919bd4bd830
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061783"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056549"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Bewährte Methoden für die Ausführung von Data Migration Assistant
-Dieser Artikel enthält einige Informationen zu bewährten Methoden für die Installation, Bewertung und Migration.
+# <a name="best-practices-for-running-data-migration-assistant"></a>Bewährte Methoden für das Ausführen von Datenmigrations-Assistent
+Dieser Artikel enthält Informationen zu bewährten Methoden für die Installation, Bewertung und Migration.
 
 ## <a name="installation"></a>Installation
-Nicht installieren Sie, und führen Sie den Data Migration Assistant, direkt auf dem SQL Server-Hostcomputer.
+Installieren Sie die Datenmigrations-Assistent nicht direkt auf dem SQL Server Host Computer, und führen Sie Sie nicht aus.
 
-## <a name="assessment"></a>Bewertung
-- Führen Sie Bewertungen für Produktionsdatenbanken Zeiten außerhalb der Spitzenzeiten.
-- Führen Sie die **Kompatibilitätsprobleme** und **neuen featureempfehlungen** Bewertungen separat durchführen, um die Dauer für die Bewertung zu reduzieren.
+## <a name="assessment"></a>Bewerten
+- Führen Sie Bewertungen für Produktionsdatenbanken außerhalb der Spitzenzeiten aus.
+- Führen Sie die **Kompatibilitätsprobleme** und **neuen Bewertungs Empfehlungen** separat aus, um die Bewertungs Dauer zu verringern.
 
 ## <a name="migration"></a>Migration
-- Migrieren eines Servers Zeiten außerhalb der Spitzenzeiten.
+- Migrieren eines Servers außerhalb der Spitzenzeiten.
 
-- Beim Migrieren einer Datenbank geben Sie einen einzelnen Netzwerkfreigabe, die durch den Quellserver und Zielserver zugegriffen werden kann, und vermeiden Sie ein Kopiervorgangs nach Möglichkeit. Ein Kopiervorgang kann basierend auf der Größe der Sicherungsdatei Verzögerung führen. Der Kopiervorgang erhöht sich auch die Wahrscheinlichkeit, die eine Migration aufgrund ein zusätzlicher Schritt fehlschlägt. Bei einem zentralen Ort angegeben wird, umgeht Data Migration Assistant den Kopiervorgang.
+- Geben Sie beim Migrieren einer Datenbank einen einzelnen Freigabe Speicherort an, der für den Quell Server und den Zielserver zugänglich ist, und vermeiden Sie, wenn möglich, einen Kopiervorgang. Ein Kopiervorgang kann je nach Größe der Sicherungsdatei zu einer Verzögerung führen. Der Kopiervorgang erhöht außerdem die Wahrscheinlichkeit, dass eine Migration aufgrund eines zusätzlichen Schritts fehlschlägt. Wenn ein einzelner Speicherort bereitgestellt wird, wird Datenmigrations-Assistent den Kopiervorgang umgangen.
  
-    Darüber hinaus stellen Sie sicher, dass, geben Sie die erforderlichen Berechtigungen für den freigegebenen Ordner zum Migrationsfehler zu vermeiden. Die richtigen Berechtigungen werden im Tool angegeben. Wenn eine SQL Server-Instanz unter Network Service-Anmeldeinformationen ausgeführt wird, geben Sie die richtigen Berechtigungen für den freigegebenen Ordner, um das Computerkonto für den SQL Server-Instanz.
+    Stellen Sie außerdem sicher, dass Sie die richtigen Berechtigungen für den freigegebenen Ordner bereitstellen, um Migrations Fehler zu vermeiden. Die richtigen Berechtigungen werden im Tool angegeben. Wenn eine SQL Server Instanz unter den Anmelde Informationen des Netzwerk Dienstanbieter ausgeführt wird, müssen Sie dem Computer Konto für die SQL Server Instanz die richtigen Berechtigungen für den freigegebenen Ordner erteilt haben.
 
-- Verbindung verschlüsseln aktivieren, bei der Verbindung von Quell-und Ziel. Mithilfe von SSL-Verschlüsselung erhöht die Sicherheit der Daten, die netzwerkübergreifend zwischen Data Migration Assistant und SQL Server-Instanz, die von Vorteil ist insbesondere bei der Migration von SQL-Anmeldungen. Wenn SSL-Verschlüsselung wird nicht verwendet, und das Netzwerk von einem Angreifer gefährdet ist, wird die SQL-Anmeldungen, die zu migrierenden abgefangen abrufen konnte bzw. auf dynamisch durch den Angreifer geändert.
+- Aktivieren Sie Verbindung verschlüsseln, wenn eine Verbindung mit den Quell-und Ziel Servern hergestellt wird. Die Verwendung der SSL-Verschlüsselung erhöht die Sicherheit von Daten, die über die Netzwerke zwischen Datenmigrations-Assistent und der SQL Server Instanz übertragen werden. Dies ist insbesondere bei der Migration von SQL-Anmeldungen vorteilhaft. Wenn die SSL-Verschlüsselung nicht verwendet wird und das Netzwerk von einem Angreifer kompromittiert wird, können die migrierten SQL-Anmeldungen ggf. vom Angreifer abgefangen und/oder geändert werden.
 
-    Wenn sich aber der gesamte Zugriff innerhalb einer sicheren Intranetkonfiguration abspielt, ist eine Verschlüsselung möglicherweise nicht erforderlich. Aktivieren der Verschlüsselung beeinträchtigen die Leistung, da es sich bei den Mehraufwand, der zum Verschlüsseln und Entschlüsseln von Paketen erforderlich ist. Weitere Informationen finden Sie in [Verschlüsseln von Verbindungen zu SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Wenn sich aber der gesamte Zugriff innerhalb einer sicheren Intranetkonfiguration abspielt, ist eine Verschlüsselung möglicherweise nicht erforderlich. Das Aktivieren der Verschlüsselung verlangsamt die Leistung, da der zusätzliche Aufwand zum Verschlüsseln und Entschlüsseln von Paketen erforderlich ist. Weitere Informationen finden Sie unter Verschlüsseln von [Verbindungen mit SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).

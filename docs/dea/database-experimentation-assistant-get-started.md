@@ -1,7 +1,6 @@
 ---
-title: Beginnen Sie mit der Assistent für Datenbankexperimente für SQL Server Upgrades
-description: Beginnen Sie mit Assistent für Datenbankexperimente
-ms.custom: ''
+title: Beginnen Sie mit Assistent für Datenbankexperimente
+description: Assistent für Datenbankexperimente (DEA) ist eine A/B-Testlösung für Änderungen in SQL Server Umgebungen, z. B. Upgrades oder neue Indizes.
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,14 +11,15 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 9fe162b2a9bc0db4a2a49648eecb76c5802f57c0
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 43f8c6bff909716bdd85a798dfd4e5a7431e31af
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381774"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056713"
 ---
-# <a name="get-started-with-database-experimentation-assistant"></a>Beginnen Sie mit Assistent für Datenbankexperimente
+# <a name="get-started-with-database-experimentation-assistant-sql-server"></a>Beginnen Sie mit Assistent für Datenbankexperimente (SQL Server)
 
 Assistent für Datenbankexperimente (DEA) ist eine A/B-Testlösung für Änderungen in SQL Server Umgebungen, z. B. Upgrades oder neue Indizes. Mithilfe von DEA können Sie bewerten, wie die Arbeitsauslastung auf dem Quell Server (in Ihrer aktuellen Umgebung) in der neuen Umgebung durchgeführt wird. Mithilfe von DEA werden Sie durch die Ausführung eines A/B-Tests geführt, indem Sie drei Schritte ausführen: 
 
@@ -48,7 +48,7 @@ So erfassen Sie eine Ablauf Verfolgung auf dem Quell Server:
 
 1. Geben Sie folgende Informationen ein, oder wählen Sie Sie aus:
 
-   - Ablauf **Verfolgungs Name**: der Dateiname für die neue Ablauf Verfolgungs Datei, die Sie erstellen. Vermeiden Sie einen Ablauf Verfolgungs Namen, der die Benennungs Konvention für Rolloverdateien verwendet, z. b. capturename @ no__t-0nnn.
+   - Ablauf **Verfolgungs Name**: der Dateiname für die neue Ablauf Verfolgungs Datei, die Sie erstellen. Vermeiden Sie einen Ablauf Verfolgungs Namen, der die Benennungs Konvention für Rolloverdateien verwendet, z. b. capturename\_nnn.
    - **Dauer**: die Dauer für die Erfassung.
    - **SQL Server Instanzname**: die SQL Server Instanz, von der Sie eine Ablauf Verfolgung aufzeichnen möchten.
    - **Datenbankname**: der Name der Datenbank auf dem Computer, auf dem SQL Server ausgeführt wird und für den Sie eine Ablauf Verfolgung aufzeichnen möchten. Wenn das Feld leer gelassen wird, wird die Ablauf Verfolgung von allen Datenbanken auf dem Server aufgezeichnet.

@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bd906f9a359a73a15d89a4cb60b6646a2abe53a
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 0c2c39363ca1b0824b27645df8c8501931b674a2
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305063"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056757"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert die Konfiguration eines Cleanup- oder Aufzeichnungsauftrags für Change Data Capture in der aktuellen Datenbank. Fragen Sie die [dbo. CDC _Jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) -Tabelle ab, oder verwenden Sie [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md), um die aktuelle Konfiguration eines Auftrags anzuzeigen.  
+  Ändert die Konfiguration eines Cleanup- oder Aufzeichnungsauftrags für Change Data Capture in der aktuellen Datenbank. Um die aktuelle Konfiguration eines Auftrags anzuzeigen, Fragen Sie die Tabelle [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) ab, oder verwenden Sie [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,23 +49,23 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="arguments"></a>Argumente  
 `[ @job_type = ] 'job_type'`-Typ des Auftrags, der geändert werden soll. *job_type* ist vom Datentyp **nvarchar (20)** und hat den Standardwert ' Capture '. Gültige Eingaben sind 'capture' und 'cleanup'.  
   
-`[ @maxtrans ] = max_trans_` maximale Anzahl von Transaktionen, die in jedem Scanvorgang verarbeitet werden sollen. *max_trans* ist vom Datentyp **int** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung erfolgt. Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
+`[ @maxtrans ] = max_trans_` maximale Anzahl von Transaktionen, die in jedem Scanvorgang verarbeitet werden sollen. *max_trans* ist vom Datentyp **int** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wurde Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  *max_trans* ist nur für Aufzeichnungs Aufträge gültig.  
   
-`[ @maxscans ] = max_scans_` maximale Anzahl von Scan Zyklen, die ausgeführt werden sollen, um alle Zeilen aus dem Protokoll zu extrahieren. *max_scans* ist vom Datentyp **int** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung erfolgt.  
+`[ @maxscans ] = max_scans_` maximale Anzahl von Scan Zyklen, die ausgeführt werden sollen, um alle Zeilen aus dem Protokoll zu extrahieren. *max_scans* ist vom Datentyp **int** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wurde  
   
  *max_scan* ist nur für Aufzeichnungs Aufträge gültig.  
   
 `[ @continuous ] = continuous_` gibt an, ob der Aufzeichnungs Auftrag fortlaufend ausgeführt wird (1) oder nur einmal ausgeführt werden soll (0). *Continuous* ist vom Typ **Bit** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wird.  
   
- Wenn *Continuous* = 1, scannt der [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) -Auftrag das Protokoll und verarbeitet bis zu (*max_trans* \* *max_scans*) Transaktionen. Anschließend wird die in *polling_interval* angegebene Anzahl von Sekunden gewartet, bevor mit dem nächsten Protokoll Scan begonnen wird.  
+ Wenn *Continuous* = 1, scannt der [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) Auftrag das Protokoll und verarbeitet bis zu (*max_trans* \* *max_scans*) Transaktionen. Anschließend wird die Anzahl der Sekunden gewartet, die in *polling_interval* angegeben ist, bevor mit dem nächsten Protokoll Scan begonnen wird.  
   
- Wenn *Continuous* = 0, führt der **sp_cdc_scan** -Auftrag bis zu *max_scans* -Scans des Protokolls aus, verarbeitet bis zu *max_trans* Transaktionen während der einzelnen Scans und wird dann beendet.  
+ Wenn *Continuous* = 0, wird der **sp_cdc_scan** Auftrag bis zu *max_scans* Scans des Protokolls ausgeführt, während jeder Überprüfung bis zu *max_trans* Transaktionen verarbeitet und dann beendet.  
   
- Wenn **\@continuous** von 1 in 0 geändert wird, wird **\@pollinginterval** automatisch auf 0 festgelegt. Ein Wert, der für **\@pollinginterval** (nicht 0) angegeben ist, wird ignoriert.  
+ Wenn **\@fortlaufend** von 1 in 0 geändert wird, wird **\@PollingInterval** automatisch auf 0 festgelegt. Ein Wert, der für **\@PollingInterval** außer 0 angegeben wird, wird ignoriert.  
   
- Wenn **\@continuous** ausgelassen oder explizit auf NULL und **\@pollinginterval** explizit auf einen Wert größer als 0 festgelegt wird, wird **\@continuous** automatisch auf 1 festgelegt.  
+ Wenn **\@Continuous** weggelassen wird oder explizit auf NULL und **\@PollingInterval** explizit auf einen Wert größer als 0 festgelegt ist, wird **\@Continuous** automatisch auf 1 festgelegt.  
   
  *Continuous* ist nur für Aufzeichnungs Aufträge gültig.  
   
@@ -83,17 +83,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- Wenn ein Parameter weggelassen wird, wird der zugehörige Wert in der Tabelle [dbo. CDC _Jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) nicht aktualisiert. Ein explizit auf NULL festgelegter Parameter wird so behandelt, als ob der Parameter weggelassen wird.  
+## <a name="remarks"></a>Remarks  
+ Wenn ein Parameter weggelassen wird, wird der zugehörige Wert in der [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) -Tabelle nicht aktualisiert. Ein explizit auf NULL festgelegter Parameter wird so behandelt, als ob der Parameter weggelassen wird.  
   
  Die Angabe eines für den Auftragstyp ungültigen Parameters führt dazu, dass die Anweisung fehlschlägt.  
   
- Änderungen an einem Auftrag treten erst in Kraft, wenn der Auftrag mithilfe von [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) beendet und mithilfe von [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)neu gestartet wird.  
+ Änderungen an einem Auftrag treten erst in Kraft, wenn der Auftrag mithilfe von [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) beendet und mithilfe [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)neu gestartet wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der Daten Bank Rolle **db_owner** .  
+ Erfordert die Mitgliedschaft in der **db_owner** Fixed-Daten Bank Rolle.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -111,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. Ändern eines Cleanupauftrags  
- Im folgenden Beispiel wird ein Cleanupauftrag in der `AdventureWorks2012`-Datenbank aktualisiert. Alle gültigen Parameter für diesen Auftragstyp, außer **@threshold** , werden angegeben. Der Wert von **@threshold** wird nicht geändert.  
+ Im folgenden Beispiel wird ein Cleanupauftrag in der `AdventureWorks2012`-Datenbank aktualisiert. Alle gültigen Parameter für diesen Auftragstyp, außer **\@Schwellenwert**, werden angegeben. Der Wert **\@Schwellen** Werts wird nicht geändert.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,6 +125,6 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

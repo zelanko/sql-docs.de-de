@@ -1,7 +1,6 @@
 ---
-title: Erstellen von Analyseberichten im Datenbank-experimentieren-Assistenten für SQL Server-upgrades
-description: Erstellen von Analyseberichten in Datenbankexperimente
-ms.custom: ''
+title: Erstellen von Analyseberichten
+description: Erstellen von Analyseberichten in Assistent für Datenbankexperimente
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,105 +11,106 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: d53d8734e0c01fa2056b9d560f3bc65b7f64d9a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 39c82d145a27a46ccc59ec4805e27ffd299f0d96
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058974"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056596"
 ---
-# <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Erstellen von Analyseberichten im Datenbank-experimentieren-Assistenten
+# <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Erstellen von Analyseberichten in Assistent für Datenbankexperimente (SQL Server)
 
-Nachdem Sie die Quell-Ablaufverfolgung auf Zielservern wiedergeben, können Sie einen Analysebericht in Datenbank experimentieren-Assistenten (DEA) generieren. Analyseberichte können Sie die Erkenntnisse über die Auswirkungen auf die Leistung der vorgeschlagenen Änderungen zu erhalten.
+Nachdem Sie die Quell Ablauf Verfolgung auf beiden Ziel Servern wiedergegeben haben, können Sie in Assistent für Datenbankexperimente (DEA) einen Analysebericht generieren. Mithilfe von Analyseberichten erhalten Sie Einblicke in die Auswirkungen auf die Leistung von vorgeschlagenen Änderungen.
 
-## <a name="create-an-analysis-report"></a>Erstellen Sie einen Analysebericht
+## <a name="create-an-analysis-report"></a>Erstellen eines Analyse Berichts
 
-Wählen Sie in DEA das Symbol "Menü" ein. Wählen Sie im erweiterten Menü **Analyseberichte** neben dem Prüflistensymbol.
+Wählen Sie in der DEA das Menü Symbol aus. Wählen Sie im erweiterten Menü neben dem Prüfliste-Symbol die Option **Analyseberichte** aus.
 
 ![Menü "Analyse"](./media/database-experimentation-assistant-create-report/dea-create-reports-menu.png)
 
-Klicken Sie unter **Analyseberichte**Option **neue Analysebericht**.
+Wählen Sie unter **Analyseberichte**die Option **neuer Analysebericht**aus.
 
-![Neuen Bericht im Menü](./media/database-experimentation-assistant-create-report/dea-create-reports-new-report.png)
+![Menü "neuer Analysebericht"](./media/database-experimentation-assistant-create-report/dea-create-reports-new-report.png)
 
-Geben Sie ein, oder wählen Sie die folgende Informationen:
+Geben Sie folgende Informationen ein, oder wählen Sie Sie aus:
 
-- **Name des Berichts**: Geben Sie einen Namen für den Bericht aus. Den Namen des Berichts wird verwendet, sowohl für A und B-Datenbanken. Beispiel: *Ein (oder B)*  + *Berichtsnamen* + *Eindeutiger Bezeichner*. 
-- **Servername**: Geben Sie den Namen des Servercomputers, die in A, enthalten sein sollen B und Analysedatenbanken.
-- **SQL Server-Instanzname**: Geben Sie den Namen der SQL Server-Instanz, die für den Bericht verwendet werden soll.
-- **Ablaufverfolgung für den Quellserver**: Geben Sie die erste Ablaufverfolgungs-(.trc)-Optimierungs-arbeitsauslastungsdateien-Datei von SQL Server (2008 R2).
-- **Ablaufverfolgung für den Zielserver**: Geben Sie die SQL Server (2014) ersten trc Zieldatei aus.
+- **Berichts Name**: Geben Sie einen Namen für den Bericht ein. Der Berichts Name wird sowohl für A-als auch für B-Datenbanken verwendet. Beispiel: *A (oder B)*  + *Berichts Name* + *eindeutigen Bezeichner*. 
+- **Servername**: Geben Sie den Namen des Server Computers ein, den Sie in den Datenbanken a, B und Analysis einschließen möchten.
+- **SQL Server Instanzname**: Geben Sie den Namen der SQL Server Instanz ein, die für den Bericht verwendet werden soll.
+- Ablauf **Verfolgung für Quell Server**: Geben Sie die erste (2008 R2) erste Ablauf Verfolgungs Datei (. trc) für SQL Server ein.
+- Ablauf **Verfolgung für Zielserver**: Geben Sie den Ziel SQL Server (2014) First. TRC-Datei ein.
 
-![Neue Analysis-Berichtsseite](./media/database-experimentation-assistant-create-report/dea-create-reports-inputs.png)
+![Seite "neuer Analysebericht"](./media/database-experimentation-assistant-create-report/dea-create-reports-inputs.png)
 
-## <a name="generate-a-report"></a>Generieren eines Berichts
+## <a name="generate-a-report"></a>Bericht generieren
 
-Nach dem eingeben oder Auswählen der erforderlichen Informationen auf der **neue Analysebericht** Seite **starten** mit dem Erstellen des Berichts beginnen. Wenn die Informationen, die Sie eingegeben haben, gültig ist, wird der Bericht erstellt. Andernfalls werden die Textfelder, die ungültige Informationen mit roten hervorgehoben. Stellen Sie sicher, dass die richtigen Werte eingeben, und wählen Sie dann **starten**. 
+Nachdem Sie die erforderlichen Informationen auf der Seite **neuer Analysebericht** eingegeben oder ausgewählt haben, klicken Sie auf **starten** , um mit dem Erstellen des Berichts zu beginnen. Wenn die eingegebenen Informationen gültig sind, wird der Analysebericht erstellt. Andernfalls werden die Textfelder mit ungültigen Informationen rot hervorgehoben. Stellen Sie sicher, dass Sie die richtigen Werte eingeben, und klicken Sie dann auf **starten**. 
 
-Ein neuer Bericht wird generiert. Die Analysedatenbank folgt das Benennungsschema Analysis + *Name des benutzerdefinierten Berichts* + *Eindeutiger Bezeichner*.
+Es wird ein neuer Analysebericht generiert. Die Analysedatenbank folgt der Namensschema Analyse + *benutzerdefinierten Berichts Namen* + *eindeutigen Bezeichner*.
 
-## <a name="frequently-asked-questions-about-analysis-reports"></a>Häufig gestellte Fragen zu Berichten
+## <a name="frequently-asked-questions-about-analysis-reports"></a>Häufig gestellte Fragen zu Analyseberichten
 
-### <a name="what-does-my-analysis-report-tell-me"></a>Was teilt meinen Bericht mir?
+### <a name="what-does-my-analysis-report-tell-me"></a>Was wird in meinem Analysebericht angezeigt?
     
-DEA verwendet statistische Tests Ihrer arbeitsauslastung zu analysieren und zu bestimmen, wie jede Abfrage von Ziel 1 zum Ziel 2 ausgeführt wurde. Er bietet Details zu der Leistung für jede Abfrage. Erfahren Sie mehr über DEA in [Einstieg](database-experimentation-assistant-get-started.md).
+Von der DEA werden statistische Tests verwendet, um die Arbeitsauslastung zu analysieren und zu bestimmen, wie die einzelnen Abfragen von Ziel 1 auf Ziel 2 ausgeführt Es enthält Leistungsdetails für jede Abfrage. Weitere Informationen zu DEA [finden](database-experimentation-assistant-get-started.md)Sie in den ersten Schritten.
     
-### <a name="can-i-create-a-new-analysis-report-while-another-report-is-being-generated"></a>Kann ich einen neuen Bericht erstellen, während einem anderen Bericht generiert wird?
+### <a name="can-i-create-a-new-analysis-report-while-another-report-is-being-generated"></a>Kann ich einen neuen Analysebericht erstellen, während ein anderer Bericht generiert wird?
     
-Nein.  Derzeit kann jeweils nur einen Bericht zu einem Zeitpunkt, um Konflikte zu vermeiden generiert werden. Allerdings können mehr als eine Erfassung ausgeführt und gleichzeitig wiedergeben.
+Nein.  Derzeit kann jeweils nur ein Bericht generiert werden, um Konflikte zu verhindern. Sie können jedoch mehr als eine Erfassung und Wiedergabe gleichzeitig ausführen.
 
-### <a name="i-upgraded-dea-to-version-20-can-i-still-view-and-use-my-old-reports"></a>Ich aktualisiert DEA auf Version 2.0. Kann ich weiterhin anzeigen und Verwenden von meine alte Berichte?
+### <a name="i-upgraded-dea-to-version-20-can-i-still-view-and-use-my-old-reports"></a>Ich habe "DEA" auf Version 2,0 aktualisiert. Kann ich meine alten Berichte weiterhin anzeigen und verwenden?
     
-Ja. Um zuvor generierte Berichte anzuzeigen, müssen Sie das Schema des Berichts aktualisieren. Weitere Informationen finden Sie unter [DEA 2.0: Update-Datenbankschema für Analysebericht in DEA](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-updating-db-schema-for-analysis-report-in-the-database-experimentation-assistant/).
+Ja. Um zuvor generierte Berichte anzuzeigen, müssen Sie das Schema des Berichts aktualisieren. Weitere Informationen finden Sie unter " [DEA 2,0: Update Database Schema for Analysis Report in DEA](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-updating-db-schema-for-analysis-report-in-the-database-experimentation-assistant/)".
     
-### <a name="can-i-generate-an-analysis-report-by-using-the-command-prompt"></a>Kann ich einen Bericht generieren, über die Eingabeaufforderung?
+### <a name="can-i-generate-an-analysis-report-by-using-the-command-prompt"></a>Kann ich mithilfe der Eingabeaufforderung einen Analysebericht generieren?
     
-Ja. Sie können einen Analysebericht an der Eingabeaufforderung generieren. Sie können den Bericht dann in der Benutzeroberfläche anzeigen. Weitere Informationen finden Sie unter [führen Sie an der Eingabeaufforderung](database-experimentation-assistant-run-command-prompt.md).
+Ja. An der Eingabeaufforderung können Sie einen Analysebericht generieren. Anschließend können Sie den Bericht in der Benutzeroberfläche anzeigen. Weitere Informationen finden Sie [unter Ausführen an der Eingabeaufforderung](database-experimentation-assistant-run-command-prompt.md).
     
 ## <a name="troubleshoot-analysis-reports"></a>Problembehandlung bei Analyseberichten
 
-###  <a name="what-security-permissions-do-i-need-to-generate-and-view-an-analysis-report-on-my-server"></a>Was Sicherheitsberechtigungen benötige ich, zum Generieren und einen Analysebericht auf meinem Server anzeigen zu können?
+###  <a name="what-security-permissions-do-i-need-to-generate-and-view-an-analysis-report-on-my-server"></a>Welche Sicherheits Berechtigungen benötige ich, um einen Analysebericht auf meinem Server zu generieren und anzuzeigen?
     
-Der Benutzer, die DEA angemeldet ist, muss auf dem Analyseserver über Systemadministratorrechte verfügen. Wenn der Benutzer Mitglied einer Gruppe ist, stellen Sie sicher, dass die Gruppe über Systemadministratorrechte verfügt.
+Der Benutzer, der bei DEA angemeldet ist, muss über sysadmin-Rechte auf dem Analysis-Server verfügen. Wenn der Benutzer zu einer Gruppe gehört, stellen Sie sicher, dass die Gruppe über sysadmin-Rechte verfügt.
 
 |Mögliche Fehler|Lösung|  
 |---|---|  
-|Kann nicht mit der Datenbank hergestellt werden. Stellen Sie sicher, dass Sie über Systemadministratorrechte für die Analyse und Anzeigen der Berichte verfügen.|Sie verfügen nicht über Zugriff oder Sysadmin-Rechte an den Server oder Datenbank. Bestätigen Sie Ihre-Anmeldeberechtigungen verfügt, und versuchen Sie es erneut.|  
-|Kann nicht generiert werden **Berichtsnamen** auf dem Server **Servernamen**. Einzelheiten finden Sie in der **Berichtsnamen** Bericht.|Sie möglicherweise nicht die Sysadmin-Rechte erforderlich, um einen neuen Bericht erstellen. Um detaillierte Fehlerinformationen anzuzeigen, wählen Sie die fehlerhafte-Bericht aus, und überprüfen Sie die Protokolle im % temp %\\DEA.|  
-|Der aktuelle Benutzer nicht über die erforderlichen Berechtigungen zum Ausführen des Vorgangs verfügen. Stellen Sie sicher, dass Sie über Systemadministratorrechte für die Ablaufverfolgung ausführen und Analysieren der Berichte verfügen.|Sie verfügen nicht über die Sysadmin-Rechte erforderlich, um einen neuen Bericht erstellen.|  
+|Es kann keine Verbindung mit der Datenbank hergestellt werden. Stellen Sie sicher, dass Sie über Systemadministrator Rechte zum Analysieren und Anzeigen der Berichte verfügen.|Sie verfügen möglicherweise nicht über Zugriffs-oder sysadmin-Rechte für den Server oder die Datenbank. Bestätigen Sie Ihre Anmelde Rechte, und versuchen Sie es erneut.|  
+|Der **Berichts Name** kann nicht auf dem Server **Servernamen**generiert werden. Weitere Informationen finden Sie im Bericht Berichts **Name** .|Möglicherweise verfügen Sie nicht über die sysadmin-Rechte, die zum Generieren eines neuen Berichts erforderlich sind. Wenn Sie ausführliche Fehler anzeigen möchten, wählen Sie den Bericht mit dem Fehlerbericht aus, und überprüfen Sie die Protokolle in% Temp%\\Dea.|  
+|Der aktuelle Benutzer verfügt nicht über die erforderlichen Berechtigungen zum Ausführen des Vorgangs. Stellen Sie sicher, dass Sie über Systemadministrator Rechte zum Durchführen der Ablauf Verfolgung und zum Analysieren der Berichte verfügen.|Sie verfügen nicht über die sysadmin-Rechte, die erforderlich sind, um einen neuen Bericht zu generieren.|  
 
-### <a name="i-cant-connect-to-the-computer-running-sql-server"></a>Ich kann keine Verbindung zum Computer mit SQL Server herstellen
+### <a name="i-cant-connect-to-the-computer-running-sql-server"></a>Ich kann keine Verbindung mit dem Computer herstellen, auf dem SQL Server
     
-- Vergewissern Sie sich, dass der Name der SQL Server-Computers gültig ist. Versuchen Sie, mit dem Server hergestellt werden soll, mithilfe von SQL Server Management Studio (SSMS), um zu bestätigen.
-- Vergewissern Sie sich, dass es sich bei Ihrer Konfiguration der Firewall Verbindungen mit dem Computer mit SQL Server nicht blockiert.
-- Vergewissern Sie sich, dass der Benutzer die erforderlichen Benutzerrechte verfügt. 
+- Vergewissern Sie sich, dass der Name des Computers, der SQL Server ausgeführt wird, gültig ist. Versuchen Sie, eine Verbindung mit dem Server herzustellen, indem Sie SQL Server Management Studio (SSMS) verwenden.
+- Vergewissern Sie sich, dass Ihre Firewallkonfiguration keine Verbindungen mit dem Computer blockiert, der SQL Server ausgeführt wird
+- Vergewissern Sie sich, dass der Benutzer über die erforderlichen Benutzerrechte verfügt. 
 
-Sehen Sie weitere Informationen in den Protokollen im % temp %\\DEA. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
+Weitere Details finden Sie in den Protokollen unter% Temp%\\Dea. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
 
-### <a name="i-see-an-error-when-i-generate-an-analysis-report"></a>Ich eine Fehlermeldung angezeigt, wenn ich einen Analysebericht erstellt
+### <a name="i-see-an-error-when-i-generate-an-analysis-report"></a>Beim Generieren eines Analyse Berichts wird ein Fehler angezeigt
     
-Zugriff auf das Internet ist bei der ersten, die Sie einen Bericht generieren, nach der Installation von DEA erforderlich. Zugriff auf das Internet ist erforderlich, um Pakete herunterzuladen, die für die statistische Analyse erforderlich sind.
+Der Internet Zugriff ist erforderlich, wenn Sie zum ersten Mal nach der Installation von DEA einen Analysebericht generieren. Zum Herunterladen von Paketen, die für statistische Analysen erforderlich sind, ist ein Internet Zugriff erforderlich.
 
-Wenn ein Fehler auftritt, während der Bericht erstellt wird, zeigt die Seite "Status" den spezifischen Schritt, mit der Analyse Fehler bei der Generierung. Sehen Sie weitere Informationen in den Protokollen im % temp %\\DEA. Stellen Sie sicher, dass Sie eine gültige Verbindung an den Server mit den erforderlichen Benutzerrechten, und wiederholen Sie dann. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
+Wenn beim Erstellen des Berichts ein Fehler auftritt, wird auf der Seite Status der jeweilige Schritt angezeigt, bei dem die Analyse nicht erfolgreich war. Weitere Details finden Sie in den Protokollen unter% Temp%\\Dea. Stellen Sie sicher, dass Sie über eine gültige Verbindung mit dem Server mit den erforderlichen Benutzerrechten verfügen, und versuchen Sie es erneut. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
 
 |Mögliche Fehler|Lösung|  
 |---|---|  
-|RInterop erreicht einen Fehler beim Starten. RInterop in den Protokollen, und versuchen Sie es noch mal.|DEA erfordert eine Internetverbindung abhängige R-Pakete herunterzuladen. Überprüfen Sie im % temp %-RInterop Protokolle\\RInterop und DEA Protokolle im % temp %\\DEA. Wenn RInterop nicht ordnungsgemäß initialisiert wurde, oder wenn es, ohne die richtigen R-Pakete initialisiert, möglicherweise die Ausnahme "Fehler beim Generieren neuer Bericht" nach dem Schritt InitializeRInterop in den Protokollen DEA angezeigt.<br><br>RInterop zeigen die Protokolle können auch einen Fehler wie "ist kein Jsonlite Paket verfügbar." Wenn Ihr Computer nicht über Internetzugriff verfügt, können Sie manuell die erforderlichen Jsonlite R-Paket herunterladen:<br><br><li>Wechseln Sie zu dem % USERPROFILE%\\DEARPackages Ordner Dateisystem des Computers. In diesem Ordner umfasst die Pakete, die von R für DEA verwendet wird.</li><br><li>Ist der Ordner "Jsonlite" fehlt in der Liste der installierten Pakete, Sie benötigen Sie einen Computer mit Internetzugriff zum Herunterladen der endgültigen Produktversion von Jsonlite\_1.4.zip aus [ https://cran.r-project.org/web/packages/jsonlite/index.html ](https://cran.r-project.org/web/packages/jsonlite/index.html).</li><br><li>Kopieren Sie die ZIP-Datei mit dem Computer, auf dem Sie DEA ausgeführt werden.  Extrahieren Sie den Jsonlite-Ordner und kopieren Sie ihn in % USERPROFILE%\\DEARPackages. Dieser Schritt installiert automatisch das Paket Jsonlite in r Der Ordner heißen **Jsonlite** und der Inhalt sollte direkt in den Ordner nicht nächsttieferen Ebene aus.</li><br><li>Schließen Sie DEA, öffnen Sie es erneut und wiederholen Sie den Analyse erneut ein.</li><br>Sie können auch die RGUI verwenden. Wechseln Sie zu **Pakete** > **installieren aus Zip**. Rufen Sie das Paket, das Sie zuvor heruntergeladen haben, und installieren.<br><br>Wenn RInterop initialisiert und ordnungsgemäß eingerichtet wurde, sollte "Installieren von abhängigen R-Paket Jsonlite" in den Protokollen RInterop angezeigt werden.|  
-|Kann nicht auf eine Verbindung mit SQL Server-Instanz herstellen, stellen Sie sicher, dass der Servername richtig ist, und überprüfen Sie die erforderlichen Zugriffsrechte für den Benutzer, der angemeldet ist.|Möglicherweise keinen Zugriff oder Benutzerrechte für den Server oder den Namen des Servers ist möglicherweise falsch.| 
-|RInterop Prozess ist ein Timeout aufgetreten. In den Protokollen DEA und RInterop, beenden Sie den RInterop-Prozess im Task-Manager, und versuchen Sie es dann erneut.<br><br>oder<br><br>RInterop befindet sich im Zustand "faulted". Beenden Sie den RInterop-Prozess im Task-Manager, und versuchen Sie es dann erneut.|Überprüfen Sie in %TEMP% protokolliert\\RInterop, um den Fehler zu bestätigen. Entfernen Sie den Prozess RInterop Task-Manager, bevor Sie es erneut versuchen. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.| 
+|Fehler beim Starten von rinterop. Überprüfen Sie rinterop-Protokolle, und versuchen Sie es erneut|Die DEA benötigt Internet Zugriff, um abhängige R-Pakete herunterzuladen. Überprüfen Sie die rinterop-Protokolle in% Temp%\\rinterop-und DEA-Protokollen in% Temp%\\Dea. Wenn rinterop nicht ordnungsgemäß initialisiert wurde oder ohne die richtigen R-Pakete initialisiert wurde, wird möglicherweise nach dem initializerinterop-Schritt in den DEA-Protokollen die Ausnahme "Fehler beim Generieren eines neuen Analyse Berichts" angezeigt.<br><br>Die rinterop-Protokolle enthalten möglicherweise einen Fehler ähnlich dem "Es ist kein jsonlite-Paket verfügbar". Wenn Ihr Computer nicht über Internetzugang verfügt, können Sie das erforderliche jsonlite R-Paket manuell herunterladen:<br><br><li>Wechseln Sie im Dateisystem des Computers zum Ordner% User Profile%\\Ordner "dearpackages". Dieser Ordner besteht aus den Paketen, die von R für die DEA verwendet werden.</li><br><li>Wenn der Ordner "jsonlite" in der Liste der installierten Pakete fehlt, benötigen Sie einen Computer mit Internet Zugriff, um die Releaseversion von jsonlite\_1.4. zip aus [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html)herunterzuladen.</li><br><li>Kopieren Sie die ZIP-Datei auf den Computer, auf dem Sie die Datei "DEA" ausführen.  Extrahieren Sie den jsonlite-Ordner, und kopieren Sie ihn in% User Profile%\\dearpackages. In diesem Schritt wird das jsonlite-Paket automatisch in R installiert. Der Ordner sollte mit dem Namen " **jsonlite** " benannt werden, und der Inhalt sollte sich direkt innerhalb des Ordners befinden, nicht eine Ebene unten.</li><br><li>Schließen Sie die Analyse, öffnen Sie Sie erneut, und versuchen Sie erneut,</li><br>Sie können auch die rgui verwenden. Wechseln Sie zu **Pakete** > **aus ZIP installieren**. Wechseln Sie zu dem zuvor heruntergeladenen Paket, und installieren Sie.<br><br>Wenn rinterop initialisiert und ordnungsgemäß eingerichtet wurde, sollte in den rinterop-Protokollen "jsonlite der abhängigen R-Pakete installieren" angezeigt werden.|  
+|Es kann keine Verbindung mit der SQL Server Instanz hergestellt werden. Stellen Sie sicher, dass der Server Name richtig ist, und überprüfen Sie den erforderlichen Zugriff für den angemeldeten Benutzer.|Möglicherweise verfügen Sie nicht über Zugriffs-oder Benutzerrechte auf dem Server, oder der Servername ist falsch.| 
+|Timeout bei rinterop-Prozess. Überprüfen Sie die Protokolle "DEA" und "rinterop", und führen Sie den rinterop-Prozess im Task-Manager aus.<br><br>\- oder<br><br>Rinterop weist einen fehlerhaften Status auf. Unterbinden Sie den rinterop-Prozess im Task-Manager, und wiederholen Sie dann den Vorgang.|Überprüfen Sie die Protokolle in% Temp%\\rinterop, um den Fehler zu bestätigen. Entfernen Sie den rinterop-Prozess vom Task-Manager, bevor Sie es erneut versuchen. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.| 
 
-### <a name="the-report-is-generated-but-data-appears-to-be-missing"></a>Der Bericht wird generiert, aber Daten scheinbar fehlen
+### <a name="the-report-is-generated-but-data-appears-to-be-missing"></a>Der Bericht wird generiert, aber die Daten fehlen.
     
-Überprüfen Sie die Datenbank auf dem Analysecomputer mit SQL Server, um sicherzustellen, dass Daten vorhanden sind. Überprüfen Sie, dass die Analysis-Datenbank vorhanden ist, und überprüfen Sie die Tabellen. Sehen Sie z. B. die folgenden Tabellen: TblBatchesA TblBatchesB und TblSummaryStats.
+Überprüfen Sie die Datenbank auf dem Analysis-Computer, auf dem SQL Server ausgeführt wird, um zu bestätigen, dass Daten vorhanden sind Überprüfen Sie, ob die Analysis-Datenbank vorhanden ist, und überprüfen Sie Überprüfen Sie beispielsweise die folgenden Tabellen: tblbatchesa, tblbatchesb und tblsummarystats.
 
-Wenn Daten nicht vorhanden ist, die Daten möglicherweise nicht ordnungsgemäß kopiert haben, oder die Datenbank ist möglicherweise beschädigt. Wenn nur einige Daten fehlen, die Ablaufverfolgungsdateien Capture-Vorgangs erstellt oder Wiedergabe möglicherweise nicht erfasst haben Ihre arbeitsauslastung präzise. Wenn die Daten vorhanden sind, überprüfen Sie die Protokolldateien im % temp %\\DEA, um festzustellen, ob Fehler protokolliert wurden. Klicken Sie dann versuchen Sie erneut, um den Bericht zu generieren.
+Wenn keine Daten vorhanden sind, wurden die Daten möglicherweise nicht ordnungsgemäß kopiert, oder die Datenbank ist möglicherweise beschädigt. Wenn nur einige Daten fehlen, haben die in der Erfassung oder Wiedergabe erstellten Ablauf Verfolgungs Dateien möglicherweise die Arbeitsauslastung nicht exakt aufgezeichnet. Wenn die Daten vorhanden sind, überprüfen Sie die Protokolldateien in "% Temp%\\DEA", um festzustellen, ob Fehler protokolliert wurden. Versuchen Sie dann erneut, den Analysebericht zu generieren.
 
-Weitere Fragen oder Feedback? Übermitteln Sie Feedback über das Tool DEA, indem Sie auf das Smiley-Symbol der unteren linken Ecke.  
+Weitere Fragen oder Feedback? Übermitteln Sie Ihr Feedback über das Tool "DEA", indem Sie in der unteren linken Ecke das Smiley-Symbol auswählen.  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Gewusst wie: Anzeigen den Analysebericht finden Sie unter [Anzeigen von Berichten](database-experimentation-assistant-view-report.md).
+- Weitere Informationen zum Anzeigen des Analyse Berichts finden Sie unter [Anzeigen von Berichten](database-experimentation-assistant-view-report.md).
 
-- Für einen 19-minütige Einführung in DEA und Demonstrationen im folgenden Video:
+- Sehen Sie sich das folgende Video an, um die Einführung von DEA und Demo in 19 Minuten zu demonstrieren:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

@@ -745,8 +745,6 @@
                   href: database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md
                 - name: Failover und Failovermodi
                   href: database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md
-                - name: Flexible Failoverrichtlinie für automatisches Failover
-                  href: database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
                 - name: Nur Leseskalierung
                   href: database-engine/availability-groups/windows/read-scale-availability-groups.md
                 - name: Umleitung von Lese-/Schreibverbindungen
@@ -4157,14 +4155,16 @@
           href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Versionshinweise
       items:
-        - name: Abwärtskompatibilität
-          href: database-engine/sql-server-database-engine-backward-compatibility.md
+        - name: In SQL Server nicht mehr unterstützte Funktionen
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: In SQL Server 2019 als veraltet markiert
+          href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
         - name: In SQL Server 2017 als veraltet markiert
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: In SQL Server 2016 als veraltet markiert
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: In SQL Server nicht mehr unterstützte Funktionen
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: Grundlegende Änderungen in SQL Server 2019
+          href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
         - name: Grundlegende Änderungen in SQL Server 2017
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: Grundlegende Änderungen in SQL Server 2016
@@ -4779,9 +4779,9 @@
         - name: Übersicht
           href: relational-databases/replication/sql-server-replication.md
           items:
-            - name: Backward Compatibility
+            - name: Abwärtskompatibilität
               href: relational-databases/replication/replication-backward-compatibility.md
-            - name: Als veraltet markierte Funktionen
+            - name: Veraltete Features
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
             - name: Aktuelle Änderungen
               href: relational-databases/replication/breaking-changes-in-sql-server-replication.md

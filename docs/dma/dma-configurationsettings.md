@@ -1,7 +1,7 @@
 ---
-title: Konfigurieren von Einstellungen für Datenmigrations-Assistent (SQL Server) | Microsoft-Dokumentation
+title: Konfigurieren von Einstellungen für Datenmigrations-Assistent
 description: Erfahren Sie, wie Sie die Einstellungen für die Datenmigrations-Assistent konfigurieren, indem Sie Werte in der Konfigurationsdatei aktualisieren.
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345236"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056540"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Konfigurieren von Einstellungen für Datenmigrations-Assistent
 
@@ -82,7 +82,7 @@ Ab Datenmigrations-Assistent v 2.0 können Sie den paralleldatenbanken-Konfigura
 Während der Bewertung extrahiert Datenmigrations-Assistent eine Datenebenenanwendung (dacpac), um das Datenbankschema zu verstehen. Dieser Vorgang kann mit Timeouts für extrem große Datenbanken fehlschlagen, oder wenn der Server ausgelastet ist. Ab der Daten Migration v 1.0 können Sie die folgenden Konfigurationswerte ändern, um Fehler zu vermeiden. 
 
 > [!NOTE]
-> Der gesamte &lt;dacfx&gt; -Eintrag ist standardmäßig kommentiert. Entfernen Sie die Kommentare, und ändern Sie den Wert nach Bedarf.
+> Der gesamte &lt;dacfx-&gt; Eintrag ist standardmäßig kommentiert. Entfernen Sie die Kommentare, und ändern Sie den Wert nach Bedarf.
 
 - CommandTimeout
 
@@ -90,7 +90,7 @@ Während der Bewertung extrahiert Datenmigrations-Assistent eine Datenebenenanwe
 
 - databaseLockTimeout
 
-   Dieser Parameter entspricht dem [\_Timeout Zeitraum für\_Sperr Timeout](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*. (Standardwert = 5.000)
+   Dieser Parameter entspricht dem [Festlegen des Timeouts für Sperr\_\_Zeitraum](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*. (Standardwert = 5.000)
 
 - maxDataReaderDegreeOfParallelism
 

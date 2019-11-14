@@ -21,17 +21,17 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2a465e03c3b77b8d05437fa0cfaf3354434ce973
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843854"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055087"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Erstellt oder aktualisiert die Firewallregeln auf Datenbankebene für Ihre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Datenbank-Firewallregeln können für die **Master** Datenbank und für Benutzer Datenbanken auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]konfiguriert werden. Datenbank-Firewallregeln sind besonders nützlich, wenn eigenständige Datenbankbenutzer verwendet werden. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer – machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Erstellt oder aktualisiert die Firewallregeln auf Datenbankebene für Ihre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Datenbank-Firewallregeln können für die **Master** Datenbank und für Benutzer Datenbanken auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]konfiguriert werden. Datenbank-Firewallregeln sind besonders nützlich, wenn eigenständige Datenbankbenutzer verwendet werden. Weitere Informationen finden Sie unter [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,21 +44,18 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **[@name** =] [N] '*Name*'  
- Der verwendete Name, um die Firewalleinstellung auf Datenbankebene zu beschreiben und von anderen zu unterscheiden. *Name ist vom Datentyp* **nvarchar (128)** und hat keinen Standardwert. Der Unicode-Bezeichner `N` ist für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]optional. 
+`[ @name = ] [N]'name'` den Namen, mit dem die Firewalleinstellung auf Datenbankebene beschrieben und unterschieden wird. *Name ist vom Datentyp* **nvarchar (128)** und hat keinen Standardwert. Der Unicode-Bezeichner `N` ist für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]optional. 
   
- **[@start_ip_address** =] "*start_ip_address*"  
- Die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Instanz herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`. *start_ip_address* ist vom Datentyp **varchar (50)** und hat keinen Standardwert.  
+`[ @start_ip_address = ] 'start_ip_address'` die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Instanz herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`. *start_ip_address* ist vom Datentyp **varchar (50)** und hat keinen Standardwert.  
   
- [ **@end_ip_address** =] "*end_ip_address*"  
- Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen, die kleiner oder gleich dieser IP-Adresse sind, können versuchen, eine Verbindung mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Instanz herzustellen. Die höchste mögliche IP-Adresse ist `255.255.255.255`. *end_ip_address* ist vom Datentyp **varchar (50)** und hat keinen Standardwert.  
+`[ @end_ip_address = ] 'end_ip_address'` die höchste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen, die kleiner oder gleich dieser IP-Adresse sind, können versuchen, eine Verbindung mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Instanz herzustellen. Die höchste mögliche IP-Adresse ist `255.255.255.255`. *end_ip_address* ist vom Datentyp **varchar (50)** und hat keinen Standardwert.  
   
  In der folgenden Tabelle werden die unterstützten Argumente und Optionen in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]veranschaulicht.  
   
 > [!NOTE]  
 >  Azure-Verbindungsversuche sind zulässig, wenn sowohl dieses Feld als auch das *start_ip_address* Feld `0.0.0.0`entsprechen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die Namen der Firewalleinstellungen auf Datenbankebene für eine Datenbank müssen eindeutig sein. Wenn der Name der für die gespeicherte Prozedur bereitgestellten Firewalleinstellung auf Datenbankebene bereits in der Tabelle mit den Firewalleinstellungen auf Datenbankebene vorhanden ist, werden die Start- und End-IP-Adressen aktualisiert. Andernfalls wird eine neue Firewalleinstellung auf Datenbankebene erstellt.  
   
  Wenn Sie eine Firewalleinstellung auf Datenbankebene hinzufügen, bei der die Start-und die End-IP-Adresse `0.0.0.0`entsprechen, aktivieren Sie den Zugriff auf die Datenbank auf dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server aus jeder beliebigen Azure-Ressource. Geben Sie einen Wert für den *Name* -Parameter an, der Ihnen hilft, die Firewalleinstellung zu merken.  

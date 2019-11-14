@@ -1,7 +1,7 @@
 ---
-title: Wiedergeben einer Ablaufverfolgungs mit dem Datenbank-experimentieren-Assistenten für SQL Server-upgrades
-description: Wiedergeben einer Ablaufverfolgungs mit dem Datenbank-experimentieren-Assistenten
-ms.custom: ''
+title: Wiedergeben einer Ablauf Verfolgung für SQL Server Upgrades
+description: Wiedergeben einer Ablauf Verfolgung mit Assistent für Datenbankexperimente für SQL Server Upgrades
+ms.custom: seo-lt-2019
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,152 +12,152 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 53534d9d269803a4bce0902c1f22349dfe6c57e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1607aefdc8495f374b2586b0b896f20e87f62d1
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058892"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056699"
 ---
-# <a name="replay-a-trace-in-database-experimentation-assistant"></a>Wiedergeben einer Ablaufverfolgungs im Datenbank-experimentieren-Assistenten
+# <a name="replay-a-trace-in-database-experimentation-assistant"></a>Wiedergeben einer Ablauf Verfolgung in Assistent für Datenbankexperimente
 
-In Datenbank experimentieren-Assistenten (DEA), können Sie eine aufgezeichnete Ablaufverfolgung-Datei anhand einer aktualisierten testumgebung wiedergeben. Betrachten Sie beispielsweise eine produktionsworkload, die auf SQL Server 2008 R2 ausgeführt wird. Die Ablaufverfolgungsdatei für die arbeitsauslastung zweimal wiedergegeben werden muss: einmal in einer Umgebung mit der gleichen Version von SQL Server, der ausgeführt wird, auf die Produktion und erneut auf eine Umgebung mit Upgrade Ziel SQL Server-Version, z. B. SQL Server 2016.
-
-> [!NOTE]
-> Um diese Aktion auszuführen, müssen Sie manuell virtuelle oder physische Computer einrichten, führen Sie die Distributed Replay-ablaufverfolgungen. Weitere Informationen finden Sie unter [Distributed Replay Controller und Clients Setup](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/).
->
->
-
-## <a name="create-a-trace-replay"></a>Erstellen Sie einen ablaufverfolgungswiedergabe
-
-Wählen Sie in DEA das Symbol "Menü" ein. Wählen Sie im erweiterten Menü **Wiedergeben von Ablaufverfolgungen** neben dem Play-Symbol.
-
-![Wählen Sie im Menü wiedergeben von Ablaufverfolgungen](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-open.png)
+In Assistent für Datenbankexperimente (DEA) können Sie eine aufgezeichnete Ablauf Verfolgungs Datei für eine aktualisierte Testumgebung wiedergeben. Nehmen wir beispielsweise an, eine produktionsworkloads, die auf SQL Server 2008 R2 ausgeführt wird. Die Ablauf Verfolgungs Datei für die Arbeitsauslastung muss zweimal wiedergegeben werden: einmal in einer Umgebung mit derselben Version von SQL Server, die in der Produktionsumgebung und erneut in einer Umgebung ausgeführt wird, die das upgradeziel SQL Server Version aufweist, wie z. b. SQL Server 2016.
 
 > [!NOTE]
-> Der Distributed Replay Controller-Computer erfordert Berechtigungen für das Benutzerkonto, mit denen Sie auf den Remotecomputer.
+> Zum Ausführen dieser Aktion müssen Sie manuell virtuelle Computer oder physische Computer einrichten, um Distributed Replay Ablauf Verfolgungen auszuführen. Weitere Informationen finden Sie unter [Distributed Replay-Controller-und-Client-Setup](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/).
+>
 >
 
-### <a name="grant-access-to-the-distributed-replay-controller"></a>Gewähren des Zugriffs auf den Distributed Replay-controller
+## <a name="create-a-trace-replay"></a>Erstellen einer Ablauf Verfolgungs Wiedergabe
 
-1. Geben Sie an einer Eingabeaufforderung den Befehl **Dcomcnfg** zum Öffnen der **Komponentendienste** Schnittstelle.
-1. Erweitern Sie **Komponentendienste** > **Computer** > **Arbeitsplatz** > **DCOM-Konfiguration**  >  **DReplayController**.
-1. Mit der rechten Maustaste **DReplayController**, und wählen Sie dann **Eigenschaften**.
-1. Auf der **Sicherheit** Registerkarte **bearbeiten** auf das Benutzerkonto hinzuzufügen.
+Wählen Sie in der DEA das Menü Symbol aus. Wählen Sie im erweiterten Menü wieder **Gabe** -Ablauf Verfolgungen neben dem Wiedergabe Symbol aus.
+
+![Wiedergabe Ablauf Verfolgungen im Menü auswählen](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-open.png)
+
+> [!NOTE]
+> Der Distributed Replay Controller-Computer benötigt Berechtigungen für das Benutzerkonto, das Sie für die Remote Verwendung verwenden.
+>
+
+### <a name="grant-access-to-the-distributed-replay-controller"></a>Gewähren des Zugriffs auf den Distributed Replay Controller
+
+1. Geben Sie an einer Eingabeaufforderung **DCOMCNFG** ein, um die Schnittstelle für **Komponenten Dienste** zu öffnen.
+1. Erweitern Sie **Komponenten Dienste** > **Computer** > **Arbeitsplatz** > **DCOM-Konfiguration** > **dreplaycontroller**.
+1. Klicken Sie mit der rechten Maustaste auf **dreplaycontroller**, und wählen Sie dann **Eigenschaften**aus.
+1. Wählen Sie auf der Registerkarte **Sicherheit** die Option **Bearbeiten** aus, um das Benutzerkonto hinzuzufügen.
 1. Wählen Sie **OK**.
 
-### <a name="verify-setup"></a>Überprüfen der Installation
+### <a name="verify-setup"></a>Setup überprüfen
 
-1.  **SQL Server-Installationspfad**: Geben Sie den Pfad zum Speicherort von SQL Server. Z. B. "c:"\\Programmdateien (x86)\\Microsoft SQL Server\\120.
-1.  **Der Name des Controllercomputers**: Geben Sie einen Namen für den Computer, der als Controller eingerichtet wurde. Dieser Computer wird die Windows-Dienst, der mit dem Namen SQL Server Distributed Replay Controller ausgeführt. Der Distributed Replay Controller koordiniert die Aktionen der Distributed Replay Clients an. Es kann in jeder Distributed Replay-Umgebung jeweils nur eine Controllerinstanz geben.
-1.  **Client-Computernamen**: Geben Sie einen Namen für jeden Clientcomputer, die durch Kommas getrennt ein. Beispiel: client1 client2. Sie können bis zu fünf Client-Controller verfügen. Clients können einen oder mehrere Computer, entweder physisch oder virtuell, die der Windows-Dienst, der mit dem Namen SQL Server Distributed Replay Client ausgeführt werden. Die Distributed Replay Clients simulieren gemeinsam Arbeitsauslastungen auf einer Instanz von SQL Server. In jeder Distributed Replay-Umgebung kann sich mindestens ein Client befinden.
+1.  **SQL Server Installationspfad**: Geben Sie den Pfad für die Installation von SQL Server ein. Beispiel: C:\\-Programmdateien (x86)\\Microsoft SQL Server\\120.
+1.  **Controller Computername**: Geben Sie einen Namen für den Computer ein, der als Controller eingerichtet wurde. Auf diesem Computer wird der Windows-Dienst mit dem Namen SQL Server Distributed Replay Controller ausgeführt. Der Distributed Replay Controller orchestriert die Aktionen der Distributed Replay Clients. Es kann in jeder Distributed Replay-Umgebung jeweils nur eine Controllerinstanz geben.
+1.  **Client Computernamen**: Geben Sie einen Namen für jeden Client Computer ein, der durch Kommas getrennt ist. Beispiel: CLIENT1, client2. Sie können bis zu fünf Client Controller haben. Bei Clients handelt es sich um einen oder mehrere physische oder virtuelle Computer, auf denen der Windows-Dienst mit dem Namen SQL Server Distributed Replay-Clients ausgeführt wird. Die Distributed Replay Clients simulieren gemeinsam Arbeitsauslastungen auf einer Instanz von SQL Server. In jeder Distributed Replay-Umgebung kann sich mindestens ein Client befinden.
 1.  Wählen Sie **Weiter**aus.
 
-### <a name="select-a-trace"></a>Wählen Sie eine Ablaufverfolgung
+### <a name="select-a-trace"></a>Ablauf Verfolgung auswählen
 
-1.  **Pfad zur Ablaufverfolgungsdatei**: Geben Sie den Pfad der Eingabe-Ablaufverfolgungsdatei (TRC).
-1.  **Pfad zum Speichern von Replay vorverarbeiten Ausgabe**:  
-    \- Wenn Sie die Datei IRF noch nicht, geben Sie den Pfad zum Speicherort, in dem Sie die IRF-Datei speichern möchten, und andere vorverarbeitung gibt.  
-    \- Wenn Sie bereits die IRF-Datei verfügen, geben Sie den Pfad zu den IRF-Dateien.
+1.  **Pfad zur Ablauf Verfolgungs Datei**: Geben Sie den Pfad zur Eingabedatei (TRC-Datei) ein.
+1.  **Pfad zum Speichern der Wiedergabe Vorverarbeitungs Ausgabe**:  
+    Wenn Sie nicht bereits über die UNF-Datei verfügen, geben Sie den Pfad zu dem Speicherort ein, an dem Sie die UNF-Datei speichern möchten, und andere Vorverarbeitungs Ausgaben. \-  
+    Wenn Sie bereits über die UNF-Datei verfügen, geben Sie den Pfad zu den UNF-Dateien ein. \-
 1. Wählen Sie **Weiter**aus.
 
-### <a name="replay-a-trace"></a>Wiedergeben einer Ablaufverfolgungs
+### <a name="replay-a-trace"></a>Wiedergeben einer Ablauf Verfolgung
 
-1.  **Name der Ablaufverfolgungsdatei**: Geben Sie einen Dateinamen für die Ablaufverfolgung aus.
-1.  **Maximale Dateigröße (MB)** : Geben Sie einen Ablaufverfolgung Rollover Wert für die Dateigröße. Der Standardwert ist 200 MB. Sie können einen benutzerdefinierten Wert eingeben.
-1.  **Pfad zum Speichern der Ablaufverfolgungsausgabe Replay**: Geben Sie den Pfad für die Ausgabe TRC-Datei ein.
-1.  **SQL Server-Instanzname**:  Geben Sie den Namen der SQL Server-Instanz für die Wiedergabe von ablaufverfolgungen aus.
+1.  **Name der Ablauf Verfolgungs Datei**: Geben Sie den Namen der Ablauf Verfolgungs Datei ein
+1.  **Maximale Dateigröße (MB)** : Geben Sie einen Wert für die rollovergröße der Ablauf Verfolgungs Datei ein. Der Standardwert ist 200 MB. Sie können einen benutzerdefinierten Wert eingeben.
+1.  **Pfad zum Speichern der Wiedergabe-Ablauf Verfolgungs Ausgabe**: Geben Sie den Pfad für die TRC-Ausgabedatei ein.
+1.  **SQL Server Instanzname**: Geben Sie den Namen der SQL Server Instanz ein, auf der Ablauf Verfolgungen wiedergegeben werden sollen.
 1.  Wählen Sie **Starten** aus.
 
-Wenn die Informationen, die Sie eingegeben haben, gültig ist, wird der Distributed Replay-Prozess gestartet. Der Text Boses, die falsche Informationen enthalten sind, andernfalls mit roten hervorgehoben. Stellen Sie sicher, dass die eingegebenen Werte richtig sind, und Sie dann wählen **starten**.
+Wenn die eingegebenen Informationen gültig sind, wird der Distributed Replay Prozess gestartet. Andernfalls werden die Text-Boses, die falsche Informationen enthalten, rot hervorgehoben. Stellen Sie sicher, dass die eingegebenen Werte richtig sind, und klicken Sie dann auf **starten**.
 
-Warten Sie bis zum Abschluss der Wiedergabe ausgeführt wird, um den Speicherort anzuzeigen, die Sie angegeben haben. Wählen Sie das Glockensymbol am unteren Rand im linken Menü die Replay-Status überwachen.
+Warten Sie, bis die Wiedergabe abgeschlossen ist, um den von Ihnen angegebenen Speicherort anzuzeigen. Wählen Sie das Glocken Symbol unten im linken Menü aus, um den Wiedergabe Fortschritt zu überwachen.
 
-![Wiedergeben von Ablaufverfolgungen wird ausgeführt](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-progress.png)
+![Verlauf der Wiedergabe Ablauf Verfolgungen](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-progress.png)
 
-## <a name="frequently-asked-questions-about-trace-replay"></a>Häufig gestellte Fragen zur Wiedergabe von ablaufverfolgungen
+## <a name="frequently-asked-questions-about-trace-replay"></a>Häufig gestellte Fragen zur Wiedergabe der Ablauf Verfolgung
 
-### <a name="what-security-permissions-do-i-need-to-start-a-replay-capture-on-my-target-server"></a>Welche Sicherheitsberechtigungen muss ich eine Replay-Erfassung auf Meine Zielserver zu starten?
+### <a name="what-security-permissions-do-i-need-to-start-a-replay-capture-on-my-target-server"></a>Welche Sicherheits Berechtigungen benötige ich, um eine Wiedergabe Erfassung auf meinem Zielserver zu starten?
 
-- Der Windows-Benutzer, der der Trace-Vorgang, in der Anwendung DEA ausgeführt wird muss über Systemadministratorrechte auf dem Zielcomputer mit SQL Server verfügen. Diese Berechtigungen sind erforderlich, beim Starten einer Ablaufverfolgung.
-- Das Dienstkonto, unter dem der Zielcomputer mit SQL Server ausgeführt wird, benötigen Schreibzugriff auf den Dateipfad für die angegebene Ablaufverfolgung.
-- Das Dienstkonto, unter dem die Distributed Replay Client-Dienste ausgeführt werden, müssen die Benutzerrechte für die Verbindung mit dem Zielcomputer mit SQL Server sowie zum Ausführen von Abfragen.
+- Der Windows-Benutzer, der den Ablauf Verfolgungs Vorgang in der DEA-Anwendung durchführt, muss über Systemadministrator Rechte auf dem Zielcomputer verfügen, auf dem SQL Server ausgeführt wird. Diese Benutzerrechte sind erforderlich, um eine Ablauf Verfolgung zu starten.
+- Das Dienst Konto, unter dem der Zielcomputer mit SQL Server ausgeführt wird, muss über Schreibzugriff auf den angegebenen Pfad der Ablauf Verfolgungs Datei verfügen.
+- Das Dienst Konto, unter dem die Distributed Replay Client Dienste ausgeführt werden, muss über Benutzerrechte verfügen, um eine Verbindung mit dem Zielcomputer herzustellen, auf dem SQL Server ausgeführt wird, und um Abfragen auszuführen
 
-### <a name="can-i-start-more-than-one-replay-in-the-same-session"></a>Kann ich mehr als eine Wiedergabe in der gleichen Sitzung starten?
+### <a name="can-i-start-more-than-one-replay-in-the-same-session"></a>Kann ich mehr als eine Wiedergabe in derselben Sitzung starten?
 
-Ja, können Sie mehrere Replays gestartet und bis zum Abschluss in der gleichen Sitzung verfolgen.
+Ja, Sie können mehrere Wiederholungen starten und diese bis zum Abschluss in derselben Sitzung nachverfolgen.
 
 ### <a name="can-i-start-more-than-one-replay-in-parallel"></a>Kann ich mehr als eine Wiedergabe parallel starten?
 
-Ja, aber nicht mit dem gleichen festgelegt, der Computer im ausgewählten **Controller sowie Clients**. Der Controller und -Clients werden ausgelastet sein. Richten Sie eine separate Gruppe von Computern unter **Controller und Client** um eine parallele Wiedergabe zu starten.
+Ja, aber nicht mit derselben Gruppe von Computern, die in **Controller plus Clients**ausgewählt sind. Der Controller und die Clients werden ausgelastet sein. Richten Sie einen separaten Satz von Computern unter **Controller Plus Client** ein, um eine parallele Wiedergabe zu starten.
 
-### <a name="how-long-does-a-replay-typically-take-to-finish"></a>Wie lange dauert eine Wiedergabe in der Regel abgeschlossen?
+### <a name="how-long-does-a-replay-typically-take-to-finish"></a>Wie lange dauert es in der Regel, bis die Wiedergabe abgeschlossen ist?
 
-Eine Wiedergabe dauert in der Regel die gleiche Menge an Zeit wie die Quell-Ablaufverfolgung sowie die Menge der Zeitaufwand zum vorverarbeiten der Source-Ablaufverfolgungs. Wenn die Clientcomputer, die mit dem Controller registriert sind nicht ausreichen, um die Last, die erzeugt wird aus der Wiedergabe verwaltet, kann die Wiedergabe jedoch mehr Zeit in Anspruch dauern. Sie können bis zu 16 Clientcomputer mit dem Controller registrieren.
+Eine Wiedergabe dauert normalerweise denselben Zeitraum wie die Quell Ablauf Verfolgung zuzüglich der Zeitspanne, die für die Vorverarbeitung der Quell Ablauf Verfolgung benötigt wird. Wenn die Client Computer, die beim Controller registriert sind, jedoch nicht ausreichen, um die Last zu verwalten, die von der Wiedergabe erzeugt wird, kann die Wiedergabe länger dauern. Sie können bis zu 16 Client Computer mit dem Controller registrieren.
 
-### <a name="how-large-do-target-trace-files-get"></a>Wie groß erhalte Ablaufverfolgungsdateien Ziel?
+### <a name="how-large-do-target-trace-files-get"></a>Wie hoch sind Ablauf Verfolgungs Dateien für große Ziele?
 
-Die Ziel-Ablaufverfolgung, die Dateien möglicherweise zwischen 5 und 15 Mal die Größe der Quelle der Ablaufverfolgung. Die Größe basiert auf wie viele Abfragen ausgeführt werden. Abfrage-Plan Blobs können z. B. groß sein. Wenn die Statistiken für diese Abfragen häufig ändern, werden weitere Ereignisse erfasst.
+Die Ziel-Ablauf Verfolgungs Dateien können zwischen der 5-bis 15-fachen Größe der Quell Ablauf Verfolgung liegen. Die Dateigröße basiert darauf, wie viele Abfragen ausgeführt werden. Beispielsweise können Abfrageplan-blobspeicher groß sein. Wenn sich die Statistiken für diese Abfragen häufig ändern, werden weitere Ereignisse aufgezeichnet.
 
 ### <a name="why-do-i-need-to-restore-databases"></a>Warum muss ich Datenbanken wiederherstellen?
 
-SQL Server ist ein zustandsbehafteter relationalen Datenbankverwaltungssystem. Zur ordnungsgemäßen Ausführung der einen A / B-Tests, den Status der Datenbank jederzeit beibehalten werden muss. Andernfalls werden möglicherweise Fehler in Abfragen während der Wiedergabe angezeigt, die in der Produktion nicht angezeigt wird. Um diesen Fehler zu vermeiden, empfehlen wir, dass Sie eine Sicherung direkt vor dem Quelle ausführen. Ebenso ist das Wiederherstellen der Sicherung auf dem Zielcomputer mit SQL Server erforderlich, um Fehler zu vermeiden, während der Wiedergabe.
+SQL Server ist ein Zustands behaftetes relationales Datenbankverwaltungssystem. Um einen A/B-Test ordnungsgemäß auszuführen, muss der Status der Datenbank immer beibehalten werden. Andernfalls werden möglicherweise Fehler in Abfragen während der Wiedergabe angezeigt, die nicht in der Produktionsumgebung angezeigt werden. Um diese Fehler zu vermeiden, empfiehlt es sich, direkt vor der Quell Erfassung eine Sicherung durchführen. Ebenso ist die Wiederherstellung der Sicherung auf dem Zielcomputer mit SQL Server erforderlich, um Fehler während der Wiedergabe zu verhindern.
 
-### <a name="what-does-pass--on-the-replay-page-mean"></a>Was "% auf den Mittelwert der Wiedergabe pass"?
+### <a name="what-does-pass--on-the-replay-page-mean"></a>Was bedeutet "Pass%" auf der Wiedergabe Seite?
 
-**Übergeben Sie %** bedeutet, die nur ein prozentualer Anteil der Abfragen zu übergeben. Sie können erkennen, ob die Anzahl der Fehler erwartet wird. Die Fehler ggf. erwartet werden, oder der Fehler können auftreten, da die Datenbank, seine Integrität verloren hat. Wenn der Wert für **Pass %** ist nicht, was Sie erwarten, können Sie die Ablaufverfolgung beendet und sehen Sie sich die Datei in SQL Profiler, um festzustellen, welche Abfragen nicht erfolgreich war.
+" **Pass%** " bedeutet, dass nur ein Prozentsatz von Abfragen bestanden wurde. Sie können diagnostizieren, ob die Anzahl der Fehler erwartet wird. Die Fehler werden möglicherweise erwartet, oder die Fehler treten auf, weil die Datenbank die Integrität verloren hat. Wenn der Wert für " **Pass%** " nicht Ihren Erwartungen entspricht, können Sie die Ablauf Verfolgung abbrechen und die Ablauf Verfolgungs Datei in SQL Profiler sehen, um festzustellen, welche Abfragen nicht erfolgreich waren.
 
-### <a name="how-can-i-look-at-the-trace-events-that-were-collected-during-replay"></a>Wie kann ich die Ablaufverfolgungsereignisse betrachten, die während der Wiedergabe erfasst wurden?
+### <a name="how-can-i-look-at-the-trace-events-that-were-collected-during-replay"></a>Wie kann ich die Ablauf Verfolgungs Ereignisse untersuchen, die während der Wiedergabe erfasst wurden?
 
-Öffnen Sie eine Zieldatei für die Ablaufverfolgung, und in SQL Profiler anzeigen. Oder, wenn Sie Änderungen an der Wiedergabe Erfassung vornehmen möchten, die alle SQL Server-Skripts finden Sie unter "c:"\\Programmdateien (x86)\\Microsoft Corporation\\Database experimentieren Assistant\\Skripts\\ StartReplayCapture.sql.
+Öffnen Sie eine Ziel Ablauf Verfolgungs Datei, und zeigen Sie Sie in SQL Profiler an. Wenn Sie Änderungen an der Wiedergabe Erfassung vornehmen möchten, finden Sie alle SQL Server Skripts unter C:\\Programme (x86)\\Microsoft Corporation\\Assistent für Datenbankexperimente\\Scripts\\startreplaycapture. SQL.
 
-### <a name="what-trace-events-does-dea-collect-during-replay"></a>Welche Ablaufverfolgungsereignissen erfasst DEA während der Wiedergabe?
+### <a name="what-trace-events-does-dea-collect-during-replay"></a>Welche Ablauf Verfolgungs Ereignisse werden von DEA während der Wiedergabe gesammelt?
 
-DEA erfasst Ablaufverfolgungsereignisse, die leistungsbezogene Informationen enthalten. Die Capture-Konfiguration befindet sich im Skript StartReplayCaptureTrace.sql. Diese Ereignisse sind typische SQL Server-Ablaufverfolgungsereignisse, die in aufgeführt sind die [Sp_trace_setevent (Transact-SQL)-Referenzdokumentation](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql).
+Mit der DEA werden Ablauf Verfolgungs Ereignisse erfasst, die leistungsbezogene Informationen enthalten. Die Aufzeichnungs Konfiguration befindet sich im Skript startreplaycapturetrace. SQL. Diese Ereignisse sind typische SQL Server Ablauf Verfolgungs Ereignisse, die in der [sp_trace_setevent (Transact-SQL)-Referenz Dokumentation](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)aufgeführt sind.
 
-## <a name="troubleshoot-trace-replay"></a>Problembehandlung bei der Wiedergabe von ablaufverfolgungen
+## <a name="troubleshoot-trace-replay"></a>Problembehandlung bei der Ablauf Verfolgungs Wiedergabe
 
-### <a name="i-cant-connect-to-the-computer-thats-running-sql-server"></a>Ich kann nicht auf dem Computer eine Verbindung herstellen, auf denen SQL Server ausgeführt wird
+### <a name="i-cant-connect-to-the-computer-thats-running-sql-server"></a>Ich kann keine Verbindung mit dem Computer herstellen, auf dem ausgeführt wird SQL Server
 
-- Vergewissern Sie sich, dass der Name der SQL Server-Computers gültig ist. Versuchen Sie, mit dem Server hergestellt werden soll, mithilfe von SQL Server Management Studio (SSMS), um zu bestätigen.
-- Vergewissern Sie sich, dass die Konfiguration der Firewall Verbindungen mit dem Computer mit SQL Server nicht blockiert.
-- Vergewissern Sie sich, dass der Benutzer die erforderlichen Benutzerrechte verfügt.
-- Vergewissern Sie sich, dass der Distributed Replay Client Dienstkonto Zugriff auf den Computer, auf denen SQL Server ausgeführt wird.
+- Vergewissern Sie sich, dass der Name des Computers, der SQL Server ausgeführt wird, gültig ist. Versuchen Sie, eine Verbindung mit dem Server herzustellen, indem Sie SQL Server Management Studio (SSMS) verwenden.
+- Vergewissern Sie sich, dass die Firewall-Konfiguration keine Verbindungen mit dem Computer blockiert, der SQL Server ausgeführt wird
+- Vergewissern Sie sich, dass der Benutzer über die erforderlichen Benutzerrechte verfügt.
+- Vergewissern Sie sich, dass das Dienst Konto des Distributed Replay Clients Zugriff auf den Computer hat, auf dem SQL Server ausgeführt wird.
 
-Sie erhalten weitere Informationen in den Protokollen im % temp %\\DEA. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
+Weitere Details finden Sie in den Protokollen unter% Temp%\\Dea. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
 
-### <a name="i-cant-connect-to-the-distributed-replay-controller"></a>Ich kann nicht mit dem Distributed Replay-Controller verbinden.
+### <a name="i-cant-connect-to-the-distributed-replay-controller"></a>Ich kann keine Verbindung mit dem Distributed Replay Controller herstellen.
 
-- Stellen Sie sicher, dass der Distributed Replay Controller-Dienst auf dem Controllercomputer ausgeführt wird. Um sicherzustellen, verwenden Sie die Distributed Replay-Verwaltungstools (führen Sie den Befehl `dreplay.exe status -f 1`).
+- Überprüfen Sie, ob der Distributed Replay Controller-Dienst auf dem Controller Computer ausgeführt wird. Um dies zu überprüfen, verwenden Sie die Distributed Replay-Verwaltungs Tools (führen Sie den Befehl `dreplay.exe status -f 1`aus).
 - Wenn die Wiedergabe Remote gestartet wird:
-  - Vergewissern Sie sich, dass den Controller wurde erfolgreich von der Computer mit DEA Pingen kann. Bestätigen Sie, dass die Firewall-Einstellungen die Verbindungen gemäß den Anweisungen auf ermöglichen die **Replay-Umgebung konfigurieren** Seite. Weitere Informationen finden Sie im Artikel [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
-  - Stellen Sie sicher, dass DCOM Remotestart und Remoteaktivierung für den Benutzer des Distributed Replay-Controller zulässig sind.
-  - Stellen Sie sicher, dass DCOM Remote Access Benutzerrechte für den Benutzer des Distributed Replay-Controller zulässig sind.
+  - Vergewissern Sie sich, dass der Computer, auf dem die DEA ausgeführt wird, erfolgreich ein Ping Vergewissern Sie sich, dass die Firewalleinstellungen Verbindungen gemäß den Anweisungen auf der Seite " **Wiedergabe Umgebung konfigurieren** " zulassen. Weitere Informationen finden Sie im Artikel [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
+  - Stellen Sie sicher, dass DCOM-Remote Start und Remote Aktivierung für den Benutzer des Distributed Replay Controllers zulässig sind.
+  - Stellen Sie sicher, dass die DCOM-RAS-Benutzerrechte für den Benutzer Distributed Replay Controllers zulässig sind.
 
-### <a name="the-trace-file-path-exists-on-my-machine-why-cant-distributed-replay-controller-find-it"></a>Der Dateipfad für die Ablaufverfolgung, die auf meinem Computer vorhanden ist. Warum gefunden nicht Distributed Replay-Controller?
+### <a name="the-trace-file-path-exists-on-my-machine-why-cant-distributed-replay-controller-find-it"></a>Der Pfad der Ablauf Verfolgungs Datei ist auf dem Computer vorhanden. Warum kann Distributed Replay Controller Sie nicht finden?
 
-Distributed Replay kann nur lokalen Datenträger auf Ressourcen zugreifen. Sie müssen die Quelldateien für die Ablaufverfolgung mit dem Distributed Replay Controller-Computer kopieren, vor dem Starten der Wiedergabe. Darüber hinaus müssen Sie den Pfad angeben, auf die DEA **neue Replay** Seite. 
+Distributed Replay können nur auf lokale Datenträger Ressourcen zugreifen. Sie müssen Quelldateien der Ablauf Verfolgung auf den Distributed Replay Controller-Computer kopieren, bevor Sie die Wiedergabe starten. Außerdem müssen Sie den Pfad auf der **neuen Wiedergabe** Seite von DEA angeben. 
 
-UNC-Pfade nicht mit Distributed Replay kompatibel sind. Distributed Replay-Pfade muss sich auf lokalen, absoluten Pfade zu den ersten Ablaufverfolgungs-Quelldatei, einschließlich der Erweiterung.
+UNC-Pfade sind nicht mit Distributed Replay kompatibel. Distributed Replay Pfade müssen lokale, absolute Pfade zur ersten Quelldatei der Ablauf Verfolgung sein, einschließlich der Erweiterung.
 
-### <a name="why-cant-i-browse-for-files-on-the-new-replay-page"></a>Warum zugreifen ich kann nicht für Dateien auf der Seite "neue Replay"?
+### <a name="why-cant-i-browse-for-files-on-the-new-replay-page"></a>Warum kann ich auf der neuen Wiedergabe Seite nicht nach Dateien suchen?
 
-Da wir Ordner von einem Remotecomputer nicht durchsuchen können, ist das Durchsuchen von Dateien nicht nützlich. Kopieren und Einfügen die absolute Pfade ist effizienter.
+Da wir die Ordner eines Remote Computers nicht durchsuchen können, ist das Durchsuchen von Dateien nicht hilfreich. Das Kopieren und Einfügen der absoluten Pfade ist effizienter.
 
-### <a name="i-started-replay-with-a-trace-but-distributed-replay-didnt-replay-any-events"></a>Ich habe die Wiedergabe mit einer Ablaufverfolgung begonnen, aber Distributed Replay keine Ereignisse wiedergeben
+### <a name="i-started-replay-with-a-trace-but-distributed-replay-didnt-replay-any-events"></a>Die Wiedergabe wurde mit einer Ablauf Verfolgung gestartet, Distributed Replay aber keine Ereignisse wiedergegeben.
 
-Dieses Problem kann auftreten, da die Datei entweder keine wiedergebbaren Ereignisse oder es muss keine Informationen dazu, wie Ereignisse wiederzugeben. Überprüfen Sie, ob die angegebene Ablaufverfolgung-Dateipfad eine Ablaufverfolgungs-Quelldatei ist. Die Ablaufverfolgungs-Quelldatei wird erstellt, mit der Konfiguration, die im Skript StartCaptureTrace.sql bereitgestellt.
+Dieses Problem tritt möglicherweise auf, weil die Ablauf Verfolgungs Datei entweder keine wieder aufwiedergabe Ereignisse enthält oder keine Informationen zum Wiedergeben von Ereignissen enthält. Vergewissern Sie sich, dass es sich bei dem angegebenen Pfad der Ablauf Verfolgungs Datei um eine Quelldatei Die Quelldatei der Ablauf Verfolgung wird erstellt, indem die im Skript "startcapturetrace. SQL" bereitgestellte Konfiguration verwendet wird.
 
-### <a name="i-see-unexpected-error-occurred-when-i-try-to-preprocess-my-trace-files-by-using-the-sql-server-2017-distributed-replay-controller"></a>Ich finden Sie unter "Unerwarteter Fehler aufgetreten!" Beim versuch, meinen Ablaufverfolgungsdateien vorverarbeiten, mit der SQL Server 2017 Distributed Replay-controller
+### <a name="i-see-unexpected-error-occurred-when-i-try-to-preprocess-my-trace-files-by-using-the-sql-server-2017-distributed-replay-controller"></a>Ich sehe, dass ein unerwarteter Fehler aufgetreten ist. bei der Vorverarbeitung meiner Ablauf Verfolgungs Dateien mit dem SQL Server 2017 Distributed Replay Controller
 
-Dieses Problem wird in der RTM-Version von SQL Server 2017 bezeichnet. Weitere Informationen finden Sie unter [unerwarteter Fehler auf, wenn Sie die DReplay-Funktion verwenden, um eine aufgezeichnete Ablaufverfolgung in SQL Server 2017 wiedergeben](https://support.microsoft.com/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a).  
+Dieses Problem ist in der RTM-Version von SQL Server 2017 bekannt. Weitere Informationen finden Sie unter [unerwarteter Fehler bei Verwendung der dreplay-Funktion zum Wiedergeben einer aufgezeichneten Ablauf Verfolgung in SQL Server 2017](https://support.microsoft.com/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a).  
   
-Das Problem wurde in das neueste kumulative Update 1 für SQL Server 2017 behoben. Herunterladen der neuesten Version von [kumulative Update 1 für SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
+Das Problem wurde im aktuellen kumulativen Update 1 für SQL Server 2017 behoben. Laden Sie die neueste Version von [kumulativem Update 1 für SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)herunter.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Um einen Analysebericht zu erstellen, mit dem Sie Einblicke in die vorgeschlagenen Änderungen zu gewinnen können, finden Sie unter [Erstellen von Berichten](database-experimentation-assistant-create-report.md).
+- Informationen zum Erstellen eines Analyse Berichts, mit dem Sie Einblicke in vorgeschlagene Änderungen erhalten, finden Sie unter [Erstellen von Berichten](database-experimentation-assistant-create-report.md).
 
-- Für einen 19-minütige Einführung in DEA und Demonstrationen im folgenden Video:
+- Sehen Sie sich das folgende Video an, um die Einführung von DEA und Demo in 19 Minuten zu demonstrieren:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

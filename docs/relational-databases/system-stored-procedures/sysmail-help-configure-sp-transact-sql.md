@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e4b0d4fb1f3c233ad8e7eedf91802da35fbbb1d2
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304746"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056160"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Zeigt Konfigurationseinstellungen für Datenbank-E-Mail an.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,26 +39,25 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@parameter_name** =] **"***parameter_name***"**  
- Der Name der abzurufenden Konfigurationseinstellung. Wenn angegeben, wird der Wert der Konfigurationseinstellung im **\@parameter_value Output-** Parameter zurückgegeben. Wenn keine **\@parameter_name** angegeben wird, gibt diese gespeicherte Prozedur ein Resultset zurück, das alle Datenbank-E-Mail Konfigurationseinstellungen in der-Instanz enthält.  
+`[ @parameter_name = ] 'parameter_name'` den Namen der abzurufenden Konfigurationseinstellung ab. Wenn angegeben, wird der Wert der Konfigurationseinstellung im **\@parameter_value** Output-Parameter zurückgegeben. Wenn keine **\@parameter_name** angegeben ist, gibt diese gespeicherte Prozedur ein Resultset zurück, das alle Datenbank-E-Mail Konfigurationseinstellungen in der-Instanz enthält.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn keine **\@parameter_name** angegeben wird, gibt ein Resultset mit den folgenden Spalten zurück.  
+ Wenn keine **\@parameter_name** angegeben ist, gibt ein Resultset mit den folgenden Spalten zurück.  
   
 ||||  
 |-|-|-|  
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |**paramname**|**nvarchar(256)**|Der Name des Konfigurationsparameters.|  
 |**paramvalue**|**nvarchar(256)**|Der Wert des Konfigurationsparameters.|  
 |**description**|**nvarchar(256)**|Die Beschreibung des Konfigurationsparameters.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die gespeicherte Prozedur **sysmail_help_configure_sp** führt die aktuellen Konfigurationseinstellungen für Datenbank-E-Mail für die Instanz auf.  
   
- Wenn ein **\@parameter_name** angegeben wird, für **\@parameter_value**jedoch kein Output-Parameter bereitgestellt wird, erzeugt diese gespeicherte Prozedur keine Ausgabe.  
+ Wenn ein **\@parameter_name** angegeben wird, aber für **\@parameter_value**kein Ausgabeparameter bereitgestellt wird, wird von dieser gespeicherten Prozedur keine Ausgabe erzeugt.  
   
  Die gespeicherte Prozedur **sysmail_help_configure_sp** befindet sich in der **msdb** -Datenbank und im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen aufgerufen werden.  
   

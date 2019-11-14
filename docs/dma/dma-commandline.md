@@ -1,7 +1,7 @@
 ---
-title: Ausführen von Datenmigrations-Assistent von der Befehlszeile aus (SQL Server) | Microsoft-Dokumentation
+title: Ausführen von Datenmigrations-Assistent von der Befehlszeile aus
 description: Erfahren Sie, wie Sie Datenmigrations-Assistent über die Befehlszeile ausführen, um SQL Server Datenbanken für die Migration zu bewerten.
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 05/06/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: f98d96547a367dcf7853a5b0d7c14b2d79b7df63
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028716"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056619"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ausführen von Datenmigrations-Assistent von der Befehlszeile aus
 
-Mit Version 2,1 und höher wird bei der Installation von Datenmigrations-Assistent auch dmacmd. exe in *% Program Files\\% Microsoft-Datenmigrations-Assistent\\* installiert. Verwenden Sie dmacmd. exe, um die Datenbanken im unbeaufsichtigten Modus zu bewerten und das Ergebnis in der JSON-oder CSV-Datei auszugeben. Diese Methode ist besonders nützlich, wenn Sie mehrere Datenbanken oder große Datenbanken bewerten. 
+Mit Version 2,1 und höher wird bei der Installation von Datenmigrations-Assistent auch dmacmd. exe in *% Program Files%\\Microsoft-Datenmigrations-Assistent\\* installiert. Verwenden Sie dmacmd. exe, um die Datenbanken im unbeaufsichtigten Modus zu bewerten und das Ergebnis in der JSON-oder CSV-Datei auszugeben. Diese Methode ist besonders nützlich, wenn Sie mehrere Datenbanken oder große Datenbanken bewerten. 
 
 > [!NOTE]
 > Dmacmd. exe unterstützt nur das Ausführen von Bewertungen. Migrationen werden zurzeit nicht unterstützt.
@@ -40,13 +40,13 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Argument  |Beschreibung  | Erforderlich (j/N)
+|Argument  |und Beschreibung  | Erforderlich (j/N)
 |---------|---------|---------------|
 | `/help or /?`     | Verwenden von "dmacmd. exe"-Hilfe Text        | N
 |`/AssessmentName`     |   Name des Bewertungs Projekts   | J
 |`/AssessmentDatabases`     | Durch Leerzeichen getrennte Liste mit Verbindungs Zeichenfolgen. Beim Datenbanknamen (anfangs Katalog) wird Groß-/Kleinschreibung beachtet. | J
-|`/AssessmentSourcePlatform`     | Quell Plattform für die Bewertung: <br>Unterstützte Werte für die Bewertung: Sqlonprem, rdssqlserver (Standard) <br>Unterstützte Werte für die Ziel Bereitschafts Bewertung: Sqlonprem, rdssqlserver (Standard), Cassandra (Vorschau)   | N
-|`/AssessmentTargetPlatform`     | Zielplattform für die Bewertung:  <br> Unterstützte Werte für die Bewertung: Azuresqldatabase, managedsqlserver, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 und SqlServerWindows2017 (Standard)  <br> Unterstützte Werte für die Ziel Bereitschafts Bewertung: Managedsqlserver (Standard), cosmosdb (Vorschau)   | N
+|`/AssessmentSourcePlatform`     | Quell Plattform für die Bewertung: <br>Unterstützte Werte für die Bewertung: sqlonprem, rdssqlserver (Standard) <br>Unterstützte Werte für die Ziel Bereitschafts Bewertung: sqlonprem, rdssqlserver (Standard), Cassandra (Vorschau)   | N
+|`/AssessmentTargetPlatform`     | Zielplattform für die Bewertung:  <br> Unterstützte Werte für die Bewertung: azuresqldatabase, managedsqlserver, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 und SqlServerWindows2017 (Standard)  <br> Unterstützte Werte für die Ziel Bereitschafts Bewertung: managedsqlserver (Standard), cosmosdb (Vorschau)   | N
 |`/AssessmentEvaluateFeatureParity`  | Ausführen von featureparitäts Regeln. Wenn die Quell Plattform rdssqlserver ist, wird die featureparitäts Auswertung für die Zielplattform azuresqldatabase nicht unterstützt.  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Ausführen von Kompatibilitäts Regeln  | J <br> (Entweder "bewertentevaluatecompatibilityissues" oder "valumentevaluaterecommendations" ist erforderlich.)
 |`/AssessmentEvaluateRecommendations`     | Funktions Empfehlungen ausführen        | J <br> (Entweder "bewertentevaluatecompatibilityissues" oder "valumentevaluaterecommendations" ist erforderlich)
@@ -248,7 +248,7 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Argument  |Beschreibung  | Erforderlich (j/N)
+|Argument  |und Beschreibung  | Erforderlich (j/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | Ausführen der SKU-Bewertung mithilfe der DMA-Befehlszeile | J
 |`/SkuRecommendationInputDataFilePath` | Vollständiger Pfad zur Leistungsdaten Bank Datei, die von dem Computer erfasst wird, der Ihre Datenbanken | J
@@ -256,9 +256,9 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 |`/SkuRecommendationJsonOutputResultsFilePath` | Vollständiger Pfad zur JSON-Ergebnisdatei | J <br> (Erfordert entweder TSV-oder JSON-oder HTML-Dateipfad)
 |`/SkuRecommendationHtmlResultsFilePath` | Vollständiger Pfad zur HTML-Ergebnisdatei | J <br> (Erfordert entweder TSV-oder JSON-oder HTML-Dateipfad)
 |`/SkuRecommendationPreventPriceRefresh` | Verhindert, dass die Preis Aktualisierung stattfindet. Verwenden Sie, wenn Sie im Offline Modus ausgeführt werden (z. b. true). | J <br> (Wählen Sie entweder dieses Argument für statische Preise oder alle unten aufgeführten Argumente müssen ausgewählt werden, um die neuesten Preise zu erhalten.)
-|`/SkuRecommendationCurrencyCode` | Die Währung, in der die Preise angezeigt werden sollen (z. b. "USD") | J <br> (Für die neuesten Preise)
-|`/SkuRecommendationOfferName` | Der Angebots Name (z. b. "MS-AZR-0003P"). Weitere Informationen finden Sie auf der Seite [Microsoft Azure Angebots Details](https://azure.microsoft.com/support/legal/offer-details/) . | J <br> (Für die neuesten Preise)
-|`/SkuRecommendationRegionName` | Der Name der Region (z. b. "Westus") | J <br> (Für die neuesten Preise)
+|`/SkuRecommendationCurrencyCode` | Die Währung, in der die Preise angezeigt werden sollen (z. b. "USD"). | J <br> (Für die neuesten Preise)
+|`/SkuRecommendationOfferName` | Der Angebots Name (z. b. "MS-AZR-0003p"). Weitere Informationen finden Sie auf der Seite [Microsoft Azure Angebots Details](https://azure.microsoft.com/support/legal/offer-details/) . | J <br> (Für die neuesten Preise)
+|`/SkuRecommendationRegionName` | Der Name der Region (z. b. "westus") | J <br> (Für die neuesten Preise)
 |`/SkuRecommendationSubscriptionId` | Die Abonnement-ID. | J <br> (Für die neuesten Preise)
 |`/SkuRecommendationDatabasesToRecommend` | Durch Leerzeichen getrennte Liste mit Datenbanken, die empfohlen werden sollen (z. b. "Database1" "Database2" "Database3"). Bei Namen wird die Groß-/Kleinschreibung beachtet und muss in doppelte Anführungszeichen eingeschlossen werden. Wenn die Angabe ausgelassen wird, werden für alle Datenbanken Empfehlungen bereitgestellt. | N
 |`/AzureAuthenticationTenantId` | Der Authentifizierungs Mandant. | J <br> (Für die neuesten Preise)

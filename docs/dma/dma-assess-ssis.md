@@ -1,7 +1,6 @@
 ---
-title: Durchführen einer SQL Server Integration Service-Migrations Bewertung (Datenmigrations-Assistent) | Microsoft-Dokumentation
-description: Erfahren Sie, wie Sie Datenmigrations-Assistent zum Auswerten eines lokalen SQL Server Integration Service vor der Migration zu einer Azure SQL-Datenbank oder einer verwalteten Azure SQL-Datenbank-Instanz verwenden.
-ms.custom: ''
+title: Erstellen einer SSIS-Migrations Bewertung mit dem Datenmigrations-Assistent
+description: Erfahren Sie, wie Sie mit Datenmigrations-Assistent einen lokalen SQL Server Integration Service (SSIS) vor der Migration zu einer Azure SQL-Datenbank oder einer verwalteten Azure SQL-Datenbank-Instanz bewerten.
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84b498cbaf7a2f3d1118894157c17b8270259afa
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fa97cc647a194257441997032f2248a3ce9e5110
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632869"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056646"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Durchführen einer SQL Server Integration Service-Migrations Bewertung mit Datenmigrations-Assistent
 
