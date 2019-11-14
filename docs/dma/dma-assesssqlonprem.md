@@ -1,7 +1,8 @@
 ---
-title: Durchführen einer SQL Server Migrations Bewertung (Datenmigrations-Assistent) | Microsoft-Dokumentation
+title: Durchführen einer SQL Server Migrations Bewertung
+titleSuffix: Data Migration Assistant
 description: Erfahren Sie, wie Sie Datenmigrations-Assistent zur Bewertung eines lokalen SQL Server vor der Migration zu einem anderen SQL Server oder zu Azure SQL-Datenbank verwenden.
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e14fc009944f28adb793ef3f89bb93f716a9ac58
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892675"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056636"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Durchführen einer SQL Server Migrations Bewertung mit Datenmigrations-Assistent
 
@@ -110,13 +111,13 @@ Die folgenden schrittweisen Anweisungen unterstützen Sie bei der ersten Bewertu
 
     ![Quellen hinzufügen und Bewertung starten](../dma/media/dma-assesssqlonprem/select-database1.png)
 
-## <a name="view-results"></a>Ergebnisse anzeigen
+## <a name="view-results"></a>Anzeigen der Ergebnisse
 
 Die Dauer der Bewertung hängt von der Anzahl der hinzugefügten Datenbanken und der Schema Größe der einzelnen Datenbanken ab. Die Ergebnisse werden für jede Datenbank angezeigt, sobald Sie verfügbar sind.
 
 1. Wählen Sie die Datenbank aus, die die Bewertung abgeschlossen hat, und wechseln Sie dann mit dem Switcher zwischen **Kompatibilitätsproblemen** und **Funktions Empfehlungen** .
 
-2. Überprüfen Sie die Kompatibilitätsprobleme für alle Kompatibilitäts Grade, die von der Ziel SQL Server Version unterstützt werden.
+2. Überprüfen Sie die Kompatibilitätsprobleme für alle Kompatibilitäts Grade, die **von der Ziel** SQL Server Version unterstützt werden.
 
 Sie können Kompatibilitätsprobleme überprüfen, indem Sie das betroffene Objekt, die Details und ggf. eine Korrektur für jedes Problem, das unter wichtige **Änderungen**, **Verhaltensänderungen**und **Veraltete Features**identifiziert wird, analysieren.
 
@@ -130,7 +131,7 @@ Funktions Empfehlungen behandeln verschiedene Arten von Features, wie z. b. in-M
 
 Für Azure SQL-Datenbank bieten die Bewertungen Migrations Blockierungs Probleme und featureparitäts Probleme. Überprüfen Sie die Ergebnisse für beide Kategorien, indem Sie die spezifischen Optionen auswählen.
 
-- Die Kategorie **SQL Server** Featureparität bietet eine umfassende Reihe von Empfehlungen, alternative Ansätze in Azure und Maßnahmen zur Minderung. Sie hilft Ihnen bei der Planung dieses Aufwands in ihren Migrationsprojekten.
+- Die Kategorie **SQL Server Featureparität** bietet eine umfassende Reihe von Empfehlungen, alternative Ansätze in Azure und Maßnahmen zur Minderung. Sie hilft Ihnen bei der Planung dieses Aufwands in ihren Migrationsprojekten.
 
   ![Anzeigen von Informationen zur SQL Server Featureparität](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
@@ -140,7 +141,7 @@ Für Azure SQL-Datenbank bieten die Bewertungen Migrations Blockierungs Probleme
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>Bewerten eines Daten Estate für die Ziel Bereitschaft
 
-Wenn Sie diese Bewertungen weiter auf den gesamten Datenbestand ausweiten und die relative Bereitschaft SQL Server Instanzen und Datenbanken für die Migration zu Azure SQL-Datenbank finden möchten, laden Sie die Ergebnisse in den Azure-clusterhub hoch, indem Sie **Hochladen in Azure migrate** .
+Wenn Sie diese Bewertungen weiter auf den gesamten Datenbestand ausweiten und die relative Bereitschaft SQL Server Instanzen und Datenbanken für die Migration zu Azure SQL-Datenbank finden möchten, laden Sie die Ergebnisse in den Azure-clusterhub hoch, indem **Sie auf Azure migrate hochladen**klicken.
 
 Auf diese Weise können Sie die konsolidierten Ergebnisse für das Azure-Projekt zum Migrieren von Hubs anzeigen.
 
