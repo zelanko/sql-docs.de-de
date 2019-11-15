@@ -1,6 +1,6 @@
 ---
-title: Installieren neuer R-Pakete mit sqlmlutils
-description: Erfahren Sie, wie Sie sqlmlutils verwenden, um neue R-Pakete in einer Instanz von SQL Server Machine Learning Services oder SQL Server R Services zu installieren.
+title: Installieren neuer R-Pakete
+description: Hier erfahren Sie, wie Sie mit sqlmlutils neue R-Pakete in einer Instanz von SQL Server Machine Learning Services oder SQL Server R Services installieren können.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/15/2019
@@ -8,71 +8,72 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f8ce5c7bcf12a2431c2de779912d2e309c628cb1
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MT
+ms.openlocfilehash: 827e83a0d1b363d3b91477b9ae85fec156ee4fc9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542141"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727498"
 ---
-# <a name="install-new-r-packages-with-sqlmlutils"></a>Installieren neuer R-Pakete mit sqlmlutils
+# <a name="install-new-r-packages-with-sqlmlutils"></a>Installieren von neuen R-Paketen mit sqlmlutils
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Artikel wird beschrieben, wie Sie Funktionen im [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) -Paket verwenden, um neue R-Pakete in einer Instanz von SQL Server Machine Learning Services oder SQL Server R Services zu installieren. Die von Ihnen installierten Pakete können in R-Skripts verwendet werden, die in-Database mit der [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL-Anweisung ausgeführt werden.
+In diesem Artikel wird beschrieben, wie Sie Funktionen im [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils)-Paket verwenden, um neue R-Pakete in einer Instanz von SQL Server Machine Learning Services oder SQL Server R Services zu installieren. Die von Ihnen installierten Pakete können verwendet werden, um R-Skripts innerhalb einer Datenbank mithilfe der T-SQL-Anweisung [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) auszuführen.
 
 > [!NOTE]
-> Der Standard-r-`install.packages` Befehl wird nicht zum Hinzufügen von r-Paketen auf SQL Server empfohlen. Verwenden Sie stattdessen **sqlmlutils** , wie in diesem Artikel beschrieben.
+> Der R-Standardbefehl `install.packages` wird für das Hinzufügen von R-Paketen in SQL Server nicht empfohlen. Verwenden Sie stattdessen **sqlmlutils**, wie in diesem Artikel beschrieben.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Voraussetzungen
 
-- Installieren Sie [R](https://www.r-project.org) und [rstudio Desktop](https://www.rstudio.com/products/rstudio/download/) auf dem Client Computer, mit dem Sie eine Verbindung mit SQL Server herstellen. Sie können eine beliebige R-IDE zum Ausführen von Skripts verwenden, aber in diesem Artikel wird von rstudio ausgegangen.
+- Installieren Sie [R](https://www.r-project.org) und [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) auf dem Clientcomputer, den Sie mit SQL Server verbinden. Zum Ausführen von Skripts können Sie jede beliebige R-IDE verwenden. In diesem Artikel wird jedoch davon ausgegangen, dass Sie RStudio nutzen.
 
-- Installieren Sie [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) oder [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) auf dem Client Computer, den Sie verwenden, um eine Verbindung mit SQL Server herzustellen. Sie können andere Daten Bank Verwaltungs-oder Abfrage Tools verwenden, aber in diesem Artikel wird davon ausgegangen, Azure Data Studio oder SSMS zu verwenden.
+- Installieren Sie [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) oder [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) auf dem Clientcomputer, den Sie zum Herstellen der Verbindung mit SQL Server verwenden. Sie können auch andere Datenbankverwaltungs- oder Abfragetools verwenden. In diesem Artikel wird jedoch davon ausgegangen, dass Sie Azure Data Studio oder SSMS nutzen.
 
 ### <a name="other-considerations"></a>Weitere Überlegungen
 
-- R-Skript, das in SQL Server ausgeführt wird, kann nur Pakete verwenden, die in der standardinstanzbibliothek SQL Server können Pakete nicht aus externen Bibliotheken laden, auch wenn sich diese Bibliothek auf demselben Computer befindet. Dies umfasst auch R-Bibliotheken, die mit anderen Microsoft-Produkten installiert werden
+- Ein R-Skript, das in SQL Server ausgeführt wird, kann nur Pakete verwenden, die in der Standardinstanzbibliothek installiert sind. SQL Server kann auch dann keine Pakete aus externen Bibliotheken laden, wenn sich die entsprechenden Bibliotheken auf demselben Computer befinden. Das gilt auch für R-Bibliotheken, die in anderen Microsoft-Produkten installiert sind.
 
-- In einer SQL Server Umgebung mit verstärkter Sicherheit sollten Sie Folgendes vermeiden:
-  - Pakete, für die Netzwerk Zugriff erforderlich ist
-  - Pakete, für die ein erhöhter Dateisystem Zugriff erforderlich ist
-  - Pakete, die für die Webentwicklung oder andere Aufgaben verwendet werden, die nicht von der Ausführung innerhalb SQL Server profitieren
+- In einer gesicherten SQL Server-Umgebung sollten Sie Folgendes vermeiden:
+  - Pakete, für die Netzwerkzugriff erforderlich ist
+  - Pakete, für die erhöhte Zugriffsrechte für das Dateisystem erforderlich sind
+  - Pakete, die für die Webentwicklung oder andere Aufgaben verwendet werden und nicht von der Ausführung in SQL Server profitieren
 
-## <a name="install-sqlmlutils-on-the-client-computer"></a>Installieren von sqlmlutils auf dem Client Computer
+## <a name="install-sqlmlutils-on-the-client-computer"></a>Installieren von sqlmlutils auf dem Clientcomputer
 
-Um **sqlmlutils**verwenden zu können, müssen Sie es zuerst auf dem Client Computer installieren, mit dem Sie eine Verbindung mit SQL Server herstellen.
+Zur Verwendung von **sqlmlutils** müssen Sie dies zunächst auf dem Clientcomputer installieren, den Sie mit SQL Server verbinden.
 
-Das **sqlmlutils** -Paket ist von dem **rodbcext** -Paket abhängig, und **rodbcext** hängt von einer Reihe von anderen Paketen ab. In den folgenden Verfahren werden alle diese Pakete in der richtigen Reihenfolge installiert.
+Welches **sqlmlutils**-Paket verwendet wird, hängt vom **RODBCext**-Paket ab. Und welches **RODBCext**-Paket verwendet wird, hängt von einigen anderen Paketen ab. Mithilfe der folgenden Verfahren werden alle Pakete in der richtigen Reihenfolge installiert.
 
-### <a name="install-sqlmlutils-online"></a>Installieren von sqlmlutils Online
+### <a name="install-sqlmlutils-online"></a>Onlineinstallation von sqlmlutils
 
-Wenn der Client Computer über Internet Zugriff verfügt, können Sie **sqlmlutils** und die abhängigen Pakete Online herunterladen und installieren.
+Wenn der Clientcomputer Internetzugriff hat, können Sie **sqlmlutils** und die abhängigen Pakete online herunterladen und installieren.
 
-1. Laden Sie die neueste ZIP-Datei von **sqlmlutils** vom https://github.com/Microsoft/sqlmlutils/tree/master/R/dist auf den Client Computer herunter. Entzippen Sie die Datei nicht.
+1. Laden Sie die neueste **sqlmlutils**-ZIP-Datei von https://github.com/Microsoft/sqlmlutils/tree/master/R/dist auf den Clientcomputer herunter. Entpacken Sie die Datei jedoch nicht.
 
-1. Öffnen Sie eine **Eingabeaufforderung** , und führen Sie die folgenden Befehle aus, um die Pakete **sqlmlutils** und **rodbcext**zu installieren. Ersetzen Sie den vollständigen Pfad der heruntergeladenen ZIP-Datei von **sqlmlutils** (in diesem Beispiel wird davon ausgegangen, dass sich die Datei im Ordner "Dokumente" befindet). Das **rodbcext** -Paket wurde Online und installiert gefunden.
+1. Öffnen Sie eine **Eingabeaufforderung**, und führen Sie die folgenden Befehle aus, um die Pakete **sqlmlutils** und **RODBCext** zu installieren. Ersetzen Sie den vollständigen Pfad zur **sqlmlutils**-ZIP-Datei, die Sie heruntergeladen haben. (In diesem Beispiel wird davon ausgegangen, dass dies die Datei im Ordner „Dokumente“ ist.) Das Paket **RODBCext** können Sie online finden und installieren.
 
    ```console
    R -e "install.packages('RODBCext', repos='https://cran.microsoft.com')"
    R CMD INSTALL %UserProfile%\Documents\sqlmlutils_0.7.1.zip
    ```
 
-### <a name="install-sqlmlutils-offline"></a>Sqlmlutils Offline installieren
+### <a name="install-sqlmlutils-offline"></a>Offlineinstallation von sqlmlutils
 
-Wenn der Client Computer nicht über eine Internetverbindung verfügt, müssen Sie die Pakete **sqlmlutils** und **rodbcext** vorab mithilfe eines Computers herunterladen, der über Internet Zugriff verfügt. Anschließend können Sie die Dateien in einen Ordner auf dem Client Computer kopieren und die Pakete Offline installieren.
+Wenn der Clientcomputer keine Internetverbindung hat, müssen Sie die Pakete **sqlmlutils** und **RODBCext** vorab mithilfe eines Computers mit Internetzugang herunterladen. Anschließend können Sie die Dateien in einen Ordner auf dem Clientcomputer kopieren und die Pakete offline installieren.
 
-Das **rodbcext** -Paket verfügt über eine Reihe von abhängigen Paketen, und das Identifizieren aller Abhängigkeiten für ein Paket wird erschwert. Es wird empfohlen, [**minicran**](https://andrie.github.io/miniCRAN/) zu verwenden, um einen lokalen Repository-Ordner für das Paket zu erstellen, das alle abhängigen Pakete enthält.
-Weitere Informationen finden Sie unter [Erstellen eines lokalen R-paketrepositorys mit minicran](create-a-local-package-repository-using-minicran.md).
+Das **RODBCext**-Paket enthält zahlreiche abhängige Pakete, sodass sich die Identifizierung aller Abhängigkeiten für ein Paket schwierig gestaltet. Daher sollten Sie [**miniCRAN**](https://andrie.github.io/miniCRAN/) verwenden, um einen lokalen Repositoryordner für das Paket zu erstellen, das alle abhängigen Pakete enthält.
+Weitere Informationen finden Sie im Artikel zum Thema [Erstellen eines lokalen R-Paketrepositorys mit miniCRAN](create-a-local-package-repository-using-minicran.md).
 
-Das **sqlmlutils** -Paket besteht aus einer einzelnen ZIP-Datei, die Sie auf den Client Computer kopieren und installieren können.
+Das **sqlmlutils**-Paket besteht aus einer ZIP-Datei, die Sie auf den Clientcomputer kopieren und dort installieren können.
 
-Auf einem Computer mit Internet Zugriff:
+Auf einem Computer mit Internetzugriff:
 
-1. Installieren Sie **minicran**. Weitere Informationen finden Sie unter [install minicran](create-a-local-package-repository-using-minicran.md#install-minicran) .
+1. Installieren Sie **miniCRAN**. Weitere Informationen finden Sie unter [Installieren von miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
 
-1. Führen Sie in rstudio das folgende R-Skript aus, um ein lokales Repository des Pakets **rodbcext**zu erstellen. In diesem Beispiel wird das Repository im Ordner `c:\downloads\rodbcext` erstellt.
+1. Führen Sie in RStudio das folgende R-Skript aus, um ein lokales Repository für das Paket **RODBCext** zu erstellen. In diesem Beispiel wird das Repository im Ordner `c:\downloads\rodbcext` erstellt.
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -100,35 +101,35 @@ Auf einem Computer mit Internet Zugriff:
 
    ::: moniker-end
 
-   Verwenden Sie für den `Rversion` Wert die Version von R, die auf SQL Server installiert ist. Verwenden Sie den folgenden T-SQL-Befehl, um die installierte Version zu überprüfen.
+   Geben Sie für den `Rversion`-Wert die unter SQL Server installierte Version von R an. Um zu ermitteln, welche Version installiert ist, verwenden Sie den folgenden T-SQL-Befehl.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. Laden Sie die neueste ZIP-Datei von **sqlmlutils** aus https://github.com/Microsoft/sqlmlutils/tree/master/R/dist herunter (Entzippen Sie die Datei nicht). Laden Sie die Datei beispielsweise in `c:\downloads\sqlmlutils_0.7.1.zip` herunter.
+1. Laden Sie die neueste **sqlmlutils**-ZIP-Datei unter https://github.com/Microsoft/sqlmlutils/tree/master/R/dist herunter. (Entpacken Sie die Datei jedoch nicht.) Laden Sie die Datei beispielsweise in das Verzeichnis `c:\downloads\sqlmlutils_0.7.1.zip`.
 
-1. Kopieren Sie den gesamten Ordner **rodbcext** Repository (`c:\downloads\rodbcext`) und die ZIP-Datei **sqlmlutils** (`c:\downloads\sqlmlutils_0.7.1.zip`) auf den Client Computer. Kopieren Sie diese z. b. in den Ordner `c:\temp\packages` auf dem Client Computer.
+1. Kopieren Sie den gesamten **RODBCext**-Repositoryordner (`c:\downloads\rodbcext`) und die **sqlmlutils**-ZIP-Datei (`c:\downloads\sqlmlutils_0.7.1.zip`) auf den Clientcomputer. Kopieren Sie beispielsweise beides in den Ordner `c:\temp\packages` auf dem Clientcomputer.
 
-Öffnen Sie auf dem Client Computer, mit dem Sie eine Verbindung mit SQL Server herstellen, eine Eingabeaufforderung, und führen Sie die folgenden Befehle zum Installieren von **rodbcext** und dann **sqlmlutils**aus.
+Öffnen Sie auf dem Clientcomputer, den Sie zum Herstellen einer Verbindung mit SQL Server verwenden, eine Eingabeaufforderung, und führen Sie die folgenden Befehle aus, um zuerst **RODBCext** und dann **sqlmlutils** zu installieren.
 
 ```console
 R -e "install.packages('RODBCext', repos='c:\temp\packages\rodbcext')"
 R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 ```
 
-## <a name="add-an-r-package-on-sql-server"></a>Hinzufügen eines R-Pakets auf SQL Server
+## <a name="add-an-r-package-on-sql-server"></a>Hinzufügen eines R-Pakets in SQL Server
 
-Im folgenden Beispiel fügen Sie das- [**Installationspaket SQL Server**](https://cran.r-project.org/web/packages/glue/) hinzu.
+Im folgenden Beispiel fügen Sie in SQL Server das Paket [**glue**](https://cran.r-project.org/web/packages/glue/) hinzu.
 
-### <a name="add-the-package-online"></a>Paket online hinzufügen
+### <a name="add-the-package-online"></a>Hinzufügen des Pakets über eine Internetverbindung
 
-Wenn der Client Computer, mit dem Sie eine Verbindung mit SQL Server herstellen, über Internet Zugriff verfügt, können Sie mithilfe von **sqlmlutils** das **Klebe** Paket und alle Abhängigkeiten über das Internet suchen und das Paket dann Remote auf einer SQL Server Instanz installieren.
+Wenn der Clientcomputer, mit dem Sie sich mit SQL Server verbinden, über einen Internetzugang verfügt, können Sie mit **sqlmlutils** das Paket **glue** und alle Abhängigkeiten über das Internet suchen. Anschließend können Sie das Paket per Remotezugriff in einer SQL Server-Instanz installieren.
 
-1. Öffnen Sie auf dem Client Computer rstudio, und erstellen Sie eine neue **R-Skript** Datei.
+1. Öffnen Sie auf dem Clientcomputer RStudio, und erstellen Sie eine neue **R-Skriptdatei**.
 
-1. Verwenden Sie das folgende R-Skript, um **das Paket mit** **sqlmlutils**zu installieren. Ersetzen Sie Ihre eigenen SQL Server Daten bankverbindungs Informationen (wenn Sie keine Windows-Authentifizierung verwenden, fügen Sie `uid`-und `pwd`-Parameter hinzu).
+1. Verwenden Sie das folgende R-Skript zum Installieren des **glue**-Pakets mithilfe von **sqlmlutils**. Ersetzen Sie die eigenen Verbindungsdaten der SQL Server-Datenbank. (Wenn Sie keine Windows-Authentifizierung verwenden, fügen Sie die Parameter `uid` und `pwd` hinzu.)
 
    ```R
    library(sqlmlutils)
@@ -140,16 +141,16 @@ Wenn der Client Computer, mit dem Sie eine Verbindung mit SQL Server herstellen,
    ```
 
    > [!TIP]
-   > Der **Bereich** kann entweder **öffentlich** oder **Privat**sein. Der öffentliche Bereich ist hilfreich für den Datenbankadministrator, um Pakete zu installieren, die von allen Benutzern verwendet werden können. Der private Bereich macht das Paket nur für den Benutzer verfügbar, der es installiert. Wenn Sie den Bereich nicht angeben, ist der Standardbereich **Privat**.
+   > Für **scope** kann **PUBLIC** oder **PRIVATE** angegeben werden. Ein öffentlicher Bereich (PUBLIC) ist für den Datenbankadministrator zum Installieren von Paketen nützlich, die von allen Benutzern verwendet werden. Pakete in einem privaten Bereich (PRIVATE) sind nur für den Benutzer verfügbar, der sie installiert. Wenn Sie keinen Bereich definieren, wird die Standardeinstellung **PRIVATE** verwendet.
 
-### <a name="add-the-package-offline"></a>Paket Offline hinzufügen
+### <a name="add-the-package-offline"></a>Hinzufügen des Pakets ohne Internetverbindung
 
-Wenn der Client Computer nicht über eine Internetverbindung verfügt, können Sie mit **minicran** **das Bindungs** Paket mithilfe eines Computers herunterladen, der über Internet Zugriff verfügt. Anschließend kopieren Sie das Paket auf den Client Computer, auf dem Sie das Paket Offline installieren können.
-Weitere Informationen zum Installieren von **minicran**finden Sie unter [install minicran](create-a-local-package-repository-using-minicran.md#install-minicran) .
+Wenn der Clientcomputer keine Internetverbindung hat, können Sie das **glue**-Paket mit **miniCRAN** und einem Computer mit Internetzugang herunterladen. Anschließend kopieren Sie das Paket auf den Clientcomputer, auf dem Sie das Paket offline installieren können.
+Informationen zum Installieren von **miniCRAN** finden Sie unter [Installieren von miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
 
-Auf einem Computer mit Internet Zugriff:
+Auf einem Computer mit Internetzugriff:
 
-1. Führen Sie das folgende R-Skript aus, um ein lokales Repository für den **Kleber**zu erstellen. In diesem Beispiel wird der Repository-Ordner in `c:\downloads\glue` erstellt.
+1. Führen Sie das folgende R-Skript aus, um ein lokales Repository für **glue** zu erstellen. In diesem Beispiel wird der Repositoryordner im Verzeichnis `c:\downloads\glue` erstellt.
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -178,20 +179,20 @@ Auf einem Computer mit Internet Zugriff:
    ::: moniker-end
 
 
-   Verwenden Sie für den `Rversion` Wert die Version von R, die auf SQL Server installiert ist. Verwenden Sie den folgenden T-SQL-Befehl, um die installierte Version zu überprüfen.
+   Geben Sie für den `Rversion`-Wert die unter SQL Server installierte Version von R an. Um zu ermitteln, welche Version installiert ist, verwenden Sie den folgenden T-SQL-Befehl.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. Kopieren Sie den gesamten Ordner für den **kleberepository** (`c:\downloads\glue`) auf den Client Computer. Kopieren Sie diese z. b. in den Ordner `c:\temp\packages\glue`.
+1. Kopieren Sie den gesamten **glue**-Repositoryordner (`c:\downloads\glue`) auf den Clientcomputer. Kopieren Sie ihn beispielsweise in den Ordner `c:\temp\packages\glue`.
 
-Auf dem Client Computer:
+Auf dem Clientcomputer:
 
-1. Öffnen Sie rstudio, und erstellen Sie eine neue **R-Skript** Datei.
+1. Öffnen Sie RStudio, und erstellen Sie eine neue **R-Skriptdatei**.
 
-1. Verwenden Sie das folgende R-Skript, um **das Paket mit** **sqlmlutils**zu installieren. Ersetzen Sie Ihre eigenen SQL Server Daten bankverbindungs Informationen (wenn Sie keine Windows-Authentifizierung verwenden, fügen Sie `uid`-und `pwd`-Parameter hinzu).
+1. Verwenden Sie das folgende R-Skript zum Installieren des **glue**-Pakets mithilfe von **sqlmlutils**. Ersetzen Sie die eigenen Verbindungsdaten der SQL Server-Datenbank. (Wenn Sie keine Windows-Authentifizierung verwenden, fügen Sie die Parameter `uid` und `pwd` hinzu.)
 
    ```R
    library(sqlmlutils)
@@ -204,13 +205,13 @@ Auf dem Client Computer:
    ```
 
    > [!TIP]
-   > Der **Bereich** kann entweder **öffentlich** oder **Privat**sein. Der öffentliche Bereich ist hilfreich für den Datenbankadministrator, um Pakete zu installieren, die von allen Benutzern verwendet werden können. Der private Bereich macht das Paket nur für den Benutzer verfügbar, der es installiert. Wenn Sie den Bereich nicht angeben, ist der Standardbereich **Privat**.
+   > Für **scope** kann **PUBLIC** oder **PRIVATE** angegeben werden. Ein öffentlicher Bereich (PUBLIC) ist für den Datenbankadministrator zum Installieren von Paketen nützlich, die von allen Benutzern verwendet werden. Pakete in einem privaten Bereich (PRIVATE) sind nur für den Benutzer verfügbar, der sie installiert. Wenn Sie keinen Bereich definieren, wird die Standardeinstellung **PRIVATE** verwendet.
 
 ## <a name="use-the-package"></a>Verwenden des Pakets
 
-Sobald das **Installationspaket installiert** ist, können Sie es in einem R-Skript in SQL Server mit dem T-SQL-Befehl " **sp_execute_external_script** " verwenden.
+Nachdem Sie das **glue**-Paket installiert haben, können Sie es in einem R-Skript in SQL Server mit dem T-SQL-Befehl **sp_execute_external_script** verwenden.
 
-1. Öffnen Sie Azure Data Studio oder SSMS, und stellen Sie eine Verbindung mit Ihrer SQL Server Datenbank her.
+1. Öffnen Sie Azure Data Studio oder SSMS, und stellen Sie eine Verbindung mit Ihrer SQL Server-Datenbank her.
 
 1. Führen Sie den folgenden Befehl aus:
 
@@ -234,9 +235,9 @@ Sobald das **Installationspaket installiert** ist, können Sie es in einem R-Skr
     My name is Fred and my birthday is Sunday, June 14, 2020.
     ```
 
-## <a name="remove-the-package"></a>Entfernen des Pakets
+## <a name="remove-the-package"></a>Entfernen des Programms
 
-Wenn Sie das **Klebe** Paket entfernen möchten, führen Sie das folgende R-Skript aus. Verwenden Sie dieselbe **Verbindungs** Variable, die Sie zuvor definiert haben.
+Wenn Sie das **glue**-Paket entfernen möchten, führen Sie das folgende R-Skript aus. Verwenden Sie die zuvor definierte **Verbindungsvariable**.
 
 ```R
 sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLIC")
@@ -244,7 +245,7 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Informationen zu installierten r-Paketen finden [Sie unter Get R Package Information](r-package-information.md) .
-- Hilfe beim Arbeiten mit r-Paketen finden [Sie unter Tipps für die Verwendung von r-Paketen](tips-for-using-r-packages.md) .
-- Weitere Informationen zum Installieren von Python-Paketen finden Sie unter [Installieren von Python-Paketen mit PIP](install-additional-python-packages-on-sql-server.md) .
-- Weitere Informationen zum SQL Server Machine Learning Services finden Sie unter [Was ist SQL Server Machine Learning Services (python und R)?](../what-is-sql-server-machine-learning.md)
+- Informationen zu installierten R-Paketen finden Sie unter [Abrufen von Paketinformationen für R](r-package-information.md).
+- Unterstützung bei der Verwendung von R-Paketen finden Sie unter [Tipps für die Verwendung von R-Paketen](tips-for-using-r-packages.md).
+- Informationen zum Installieren von Python-Paketen finden Sie unter [Installieren von Python-Paketen mit pip](install-additional-python-packages-on-sql-server.md).
+- Weitere Informationen zu SQL Server Machine Learning Services finden Sie unter [Was ist SQL Server Machine Learning Services (Python und R)?](../what-is-sql-server-machine-learning.md)

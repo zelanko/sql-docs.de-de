@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23e08c74d0b41e24eb9677c59b52026e33c527f0
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067534"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049961"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Ändert die Eigenschaften eines Volltextindex in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -78,7 +78,7 @@ ALTER FULLTEXT INDEX ON table_name
  Gibt an, ob vom Volltextindex abgedeckte Änderungen (Updates, Löschungen oder Einfügungen) an Tabellenspalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an den Volltextindex weitergegeben werden. Datenänderungen durch WRITETEXT und UPDATETEXT werden im Volltextindex nicht wiedergegeben und bei der Änderungsnachverfolgung nicht ausgewählt.  
   
 > [!NOTE]  
->  Informationen zur Interaktion zwischen der Änderungsnachverfolgung und WITH NO POPULATION finden Sie unter "Hinweise" weiter unten in diesem Thema.  
+>  Weitere Informationen finden Sie unter [Interaktionen zwischen der Änderungsnachverfolgung und dem Parameter NO POPULATION](#change-tracking-no-population).
   
  MANUAL  
  Gibt an, dass die nachverfolgten Änderungen durch das Aufrufen folgender Anweisung manuell verbreitet werden: ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung (*manuelles Auffüllung*). Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
@@ -97,7 +97,7 @@ ALTER FULLTEXT INDEX ON table_name
  Verwenden Sie TYPE COLUMN und LANGUAGE mit der ADD-Klausel, um diese Eigenschaften in *column_name* festzulegen. Wenn eine Spalte hinzugefügt wird, muss der Volltextindex in der Tabelle erneut aufgefüllt werden, damit die Volltextabfragen in dieser Spalte funktionieren können.  
   
 > [!NOTE]  
->  Ob der Volltextindex aufgefüllt wird, nachdem eine Spalte hinzugefügt oder entfernt wurde, hängt davon ab, ob die Änderungsnachverfolgung aktiviert wurde und WITH NO POPULATION angegeben ist. Weitere Informationen finden Sie unter "Hinweise" weiter unten in diesem Thema.  
+>  Ob der Volltextindex aufgefüllt wird, nachdem eine Spalte hinzugefügt oder entfernt wurde, hängt davon ab, ob die Änderungsnachverfolgung aktiviert wurde und WITH NO POPULATION angegeben ist. Weitere Informationen finden Sie unter [Interaktionen zwischen der Änderungsnachverfolgung und dem Parameter NO POPULATION](#change-tracking-no-population).
   
  TYPE COLUMN *type_column_name*  
  Gibt den Namen der Tabellenspalte *table_column_name* an, die den Dokumenttyp für ein Dokument vom Typ **varbinary**, **varbinary(max)** oder **image** enthält. Diese Spalte, als Typspalte bezeichnet, enthält eine vom Benutzer angegebene Dateierweiterung (.doc, .pdf, .xls usw.) Die Typspalte muss vom Typ **char**, **nchar**, **varchar**oder **nvarchar**sein.  
@@ -138,7 +138,7 @@ ALTER FULLTEXT INDEX ON table_name
  Falls CHANGE_TRACKING aktiviert und WITH NO POPULATION angegeben ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück. Wenn CHANGE_TRACKING aktiviert und WITH NO POPULATION nicht angegeben ist, füllt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Index vollständig auf.  
   
 > [!NOTE]  
->  Weitere Informationen zur Interaktion zwischen der Änderungsnachverfolgung und WITH NO POPULATION finden Sie unter "Hinweise" weiter unten in diesem Thema.  
+>  Weitere Informationen finden Sie unter [Interaktionen zwischen der Änderungsnachverfolgung und dem Parameter NO POPULATION](#change-tracking-no-population).
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -194,7 +194,7 @@ ALTER FULLTEXT INDEX ON table_name
  Wenn Sie einem Volltextindex eine Sucheigenschaftenliste hinzufügen, muss der Index erneut aufgefüllt werden, damit die Sucheigenschaften indiziert werden können, die für die entsprechende Sucheigenschaftenliste registriert sind. Wenn Sie beim Hinzufügen der Sucheigenschaftenliste WITH NO POPULATION angeben, müssen Sie zu einem späteren Zeitpunkt eine Auffüllung des Index ausführen.  
   
 > [!IMPORTANT]  
->  Wenn der Volltextindex zuvor einer anderen Sucheigenschaftenliste zugeordnet war, muss er neu erstellt werden, damit er wieder in einem konsistenten Zustand vorliegt. Bis eine vollständige Auffüllung ausgeführt wird, wird der Index sofort abgeschnitten, und er ist leer. Weitere Informationen zu den Fällen, in denen Änderungen der Sucheigenschaftenliste eine Neuerstellung bewirken, finden Sie unter "Hinweise" in diesem Thema.  
+>  Wenn der Volltextindex zuvor einer anderen Sucheigenschaftenliste zugeordnet war, muss er neu erstellt werden, damit er wieder in einem konsistenten Zustand vorliegt. Bis eine vollständige Auffüllung ausgeführt wird, wird der Index sofort abgeschnitten, und er ist leer. Weitere Informationen finden Sie unter [Neuerstellung des Index durch Änderungen an der Sucheigenschaftenliste](#change-search-property-rebuild-index). 
   
 > [!NOTE]  
 >  Sie können eine Sucheigenschaftenliste mehr als einem Volltextindex in der gleichen Datenbank zuordnen.  
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Weitere Informationen zu Sucheigenschaftenlisten finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>Interaktionen zwischen der Änderungsnachverfolgung und dem Parameter NO POPULATION  
+## <a name="change-tracking-no-population"></a> Interaktionen zwischen der Änderungsnachverfolgung und dem Parameter NO POPULATION  
  Ob der Volltextindex aufgefüllt wird, hängt davon ab, ob die Änderungsnachverfolgung aktiviert wurde und WITH NO POPULATION in der ALTER FULLTEXT INDEX-Anweisung angegeben ist. In der folgenden Tabelle wird das Ergebnis ihrer Interaktion zusammengefasst.  
   
 |Änderungsnachverfolgung|WITH NO POPULATION|Ergebnis|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Weitere Informationen zum Auffüllen von Volltextindizes finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a>Neuerstellung des Index durch Änderungen an der Sucheigenschaftenliste  
+## <a name="change-search-property-rebuild-index"></a> Neuerstellung des Index durch Änderungen an der Sucheigenschaftenliste  
  Nachdem ein Volltextindex einer Sucheigenschaftenliste zum ersten Mal zugeordnet wurde, muss der Index neu aufgefüllt werden, damit eigenschaftenspezifische Suchbegriffe indiziert werden können. Die vorhandenen Indexdaten werden nicht abgeschnitten.  
   
  Wenn Sie den Volltextindex jedoch einer anderen Eigenschaftenliste zuordnen, wird der Index neu erstellt. Bei der Neuerstellung wird der Volltextindex unmittelbar abgeschnitten, alle vorhandenen Daten werden entfernt, und der Index muss erneut aufgefüllt werden. Während der erneuten Auffüllung werden von Volltextabfragen in der zugrunde liegenden Tabelle nur die Zeilen abgefragt, die bereits von der Auffüllung indiziert wurden. Die wieder aufgefüllten Indexdaten enthalten Metadaten aus den registrierten Eigenschaften der neu hinzugefügten Sucheigenschaftenliste.  

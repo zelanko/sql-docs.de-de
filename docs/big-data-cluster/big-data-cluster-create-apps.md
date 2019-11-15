@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532522"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706699"
 ---
 # <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Bereitstellen einer App in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -26,7 +26,7 @@ In diesem Artikel wird beschrieben, wie Sie R- und Python-Skripts als Anwendung 
 
 - Ein einzelnes Befehlszeilen-Hilfsprogramm zum Verwalten von Cluster und App.
 - Vereinfachte App-Bereitstellung bei gleichzeitiger Bereitstellung einer differenzierten Steuerung durch Spezifikationsdateien.
-- Unterstützung für das Hosting zusätzlicher Anwendungstypen: SSIS und MLeap (neu in CTP 2.3)
+- Unterstützung für das Hosting zusätzlicher Anwendungstypen: SSIS und MLeap
 - [Visual Studio Code-Erweiterung](app-deployment-extension.md) zum Verwalten der Anwendungsbereitstellung
 
 Anwendungen werden mit dem `azdata`-Befehlszeilen-Hilfsprogramm bereitgestellt und verwaltet. Dieser Artikel enthält Beispiele für die Bereitstellung von Apps über die Befehlszeile. Weitere Informationen zur Verwendung in Visual Studio Code finden Sie unter [Visual Studio Code-Erweiterung](app-deployment-extension.md).
@@ -43,7 +43,7 @@ Die folgenden Typen von Apps werden unterstützt:
 
 ## <a name="capabilities"></a>Funktionen
 
-In SQL Server 2019 (Vorschau) können Sie Ihre Anwendung erstellen, löschen, beschreiben, initialisieren, auflisten und aktualisieren. In der folgenden Tabelle werden die Befehle für die Anwendungsbereitstellung beschrieben, die Sie mit **azdata** verwenden können.
+In SQL Server 2019 können Sie Ihre Anwendung erstellen, löschen, beschreiben, initialisieren, auflisten und aktualisieren. In der folgenden Tabelle werden die Befehle für die Anwendungsbereitstellung beschrieben, die Sie mit **azdata** verwenden können.
 
 |Befehl |und Beschreibung |
 |:---|:---|

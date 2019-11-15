@@ -23,39 +23,44 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - data classification
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+- rank
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
+ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712362"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882409"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Diese Anweisung fügt einer oder mehreren Datenbankspalten Metadaten zur Vertraulichkeitsklassifizierung hinzu. Die Klassifizierung kann eine Vertraulichkeitsbezeichnung und einen Informationstyp umfassen.  
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+
+Diese Anweisung fügt einer oder mehreren Datenbankspalten Metadaten zur Vertraulichkeitsklassifizierung hinzu. Die Klassifizierung kann eine Vertraulichkeitsbezeichnung und einen Informationstyp umfassen.
+
+Für SQL Server wurde dies in SQL Server 2019 eingeführt.
 
 Die Klassifizierung sensibler Daten in Ihrer Datenbankumgebung ermöglicht größere Transparenz und besseren Schutz. Weitere Informationen finden Sie unter [Azure SQL-Datenbank – Datenermittlung und -klassifizierung](https://aka.ms/sqlip).
 
 ## <a name="syntax"></a>Syntax  
 
-```sql
+```
 ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
-    WITH ( <sensitivity_label_option> [, ...n ] )     
+    WITH ( <sensitivity_option> [, ...n ] )     
 
 <object_name> ::=
 {
     [schema_name.]table_name.column_name
 }
 
-<sensitivity_label_option> ::=  
+<sensitivity_option> ::=  
 {   
     LABEL = string |
     LABEL_ID = guidOrString |
     INFORMATION_TYPE = string |
-    INFORMATION_TYPE_ID = guidOrString  
+    INFORMATION_TYPE_ID = guidOrString | 
+    RANK = NONE | LOW | MEDIUM | HIGH | CRITICAL
 }
 ```  
 
@@ -84,8 +89,12 @@ Der lesbare Name des Informationstyps. Informationstypen werden verwendet, um de
 
 Ein Bezeichner, dem der Informationstyp zugeordnet ist. Dieser wird häufig von zentralen Plattformen zum Schutz von Informationen verwendet, um Informationstypen im System eindeutig zu identifizieren.
 
+*RANK*
 
-## <a name="remarks"></a>Bemerkungen  
+Ist ein Bezeichner, der auf vordefinierte Werte basiert, die die Vertraulichkeitsbewertung definieren. Wird von anderen Diensten wie Advanced Threat Protection verwendet, um Anomalien basierend auf ihrer Bewertung zu erkennen.
+
+
+## <a name="remarks"></a>Remarks  
 
 - Einem einzelnen Objekt kann nur eine Klassifizierung hinzugefügt werden. Wird einem bereits klassifizierten Objekt eine Klassifizierung hinzugefügt, überschreibt diese die vorhandene Klassifizierung.
 - Mehrere Objekte können mit einer einzigen `ADD SENSITIVITY CLASSIFICATION`-Anweisung klassifiziert werden.

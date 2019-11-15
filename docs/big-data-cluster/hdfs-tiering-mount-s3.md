@@ -1,7 +1,7 @@
 ---
 title: Einbinden von S3 für HDFS-Tiering
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering zum Einbinden eines externen S3-Dateisystems in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS auf einem konfigurieren.
+description: In diesem Artikel wird erläutert, wie Sie HDFS-Tiering zum Einbinden eines externen S3-Dateisystems in HDFS in einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] einbinden.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652309"
@@ -20,7 +20,7 @@ ms.locfileid: "69652309"
 
 Die folgenden Abschnitte zeigen ein Beispiel für die Konfiguration von HDFS-Tiering mit einer S3-Speicherdatenquelle.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [Bereitgestellte Big Data-Cluster](deployment-guidance.md)
 - [Big Data-Tools](deploy-big-data-tools.md)
@@ -61,7 +61,7 @@ Nachdem Sie nun eine Anmeldeinformationendatei mit Zugriffsschlüsseln vorbereit
    
 1. Legen Sie die Umgebungsvariable MOUNT_CREDENTIALS gemäß der obigen Anweisungen fest.
 
-1. Einbinden des HDFS-Remote Speichers in Azure mithilfe von **azdata BDC HDFS Mount Create**. Ersetzen Sie die Platzhalterwerte, bevor Sie den folgenden Befehl ausführen:
+1. Binden Sie den HDFS-Remotespeicher mit dem Befehl **azdata bdc hdfs mount create** in Azure ein. Ersetzen Sie die Platzhalterwerte, bevor Sie den folgenden Befehl ausführen:
 
    ```bash
    azdata bdc hdfs mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
@@ -96,7 +96,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> Löschen der Einbindung
 
-Verwenden Sie den Befehl **azdata BDC HDFS Mount DELETE** , um die Eingabe zu löschen, und geben Sie den einstellungspfad in HDFS an:
+Verwenden Sie zum Löschen den Einbindung den Befehl **azdata bdc hdfs mount delete**, und geben Sie den Einbindungspfad in HDFS an:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]finden Sie unter [was [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]ist?](big-data-cluster-overview.md).
+Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] finden Sie unter [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

@@ -1,27 +1,28 @@
 ---
-title: Installieren von SQL Server-Spracherweiterungen (Java) unter Linux
-description: Erfahren Sie, wie Sie SQL Server-Spracherweiterungen (Java) unter Red Hat, Ubuntu und SUSE installieren können.
+title: Installieren von SQL Server-Spracherweiterungen unter Linux
+titleSuffix: ''
+description: Erfahren Sie, wie Sie SQL Server-Spracherweiterungen unter Red Hat, Ubuntu und SUSE installieren können.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531231"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660779"
 ---
-# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Installieren von SQL Server 2019-Spracherweiterungen (Java) unter Linux
+# <a name="install-sql-server-language-extensions-on-linux"></a>Installieren von SQL Server-Spracherweiterungen unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Spracherweiterungen stellen ein Add-On für die Datenbank-Engine dar. Obwohl Sie die [Datenbank-Engine und Spracherweiterungen gleichzeitig installieren](#install-all) können, empfiehlt es sich, zuerst die SQL Server-Datenbank-Engine zu installieren und zu konfigurieren, damit Sie eventuelle Probleme beheben können, bevor Sie weitere Komponenten hinzufügen. 
+Bei Spracherweiterungen handelt es sich um ein Add-on für die Datenbank-Engine. Obwohl Sie die [Datenbank-Engine und Spracherweiterungen gleichzeitig installieren](#install-all) können, empfiehlt es sich, zuerst die SQL Server-Datenbank-Engine zu installieren und zu konfigurieren, damit Sie eventuelle Probleme beheben können, bevor Sie weitere Komponenten hinzufügen. 
 
 Führen Sie die in diesem Artikel beschriebenen Schritte aus, um die Java-Spracherweiterung zu installieren.
 

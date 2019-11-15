@@ -1,7 +1,7 @@
 ---
-title: Einfache R-Skripts erstellen und ausführen
+title: 'Schnellstart: Erstellen von R-Skripts'
 titleSuffix: SQL Server Machine Learning Services
-description: Erstellen und führen Sie einfache R-Skripts in einer SQL Server Instanz mit SQL Server Machine Learning Services aus.
+description: Hier erfahren Sie, wie Sie einfache R-Skripts in einer SQL Server-Instanz mit SQL Server Machine Learning Services erstellen und ausführen können.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/04/2019
@@ -9,33 +9,34 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e49b01d3c3a4ac743d6614d66cc7864aee946460
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: MT
+ms.openlocfilehash: 5a8e2779e930671faa9fa3ab94a7384ab1bdca83
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006038"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726984"
 ---
 # <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Schnellstart: Erstellen und Ausführen einfacher R-Skripts mit SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In dieser Schnellstartanleitung erstellen Sie mithilfe [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)eine Reihe einfacher R-Skripts und führen diese aus. Sie erfahren, wie Sie ein wohl geformtes R-Skript in die gespeicherte Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) einschließen und das Skript in einer SQL Server-Instanz ausführen.
+In diesem Schnellstart erstellen Sie einige einfache R-Skripts mithilfe von [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) und führen diese aus. Sie erfahren, wie Sie ein gut formatiertes R-Skript in die gespeicherte Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) einbinden und das Skript in einer SQL Server-Instanz ausführen können.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-- Diese Schnellstartanleitung erfordert Zugriff auf eine Instanz von SQL Server mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) , auf der die R-Sprache installiert ist.
+- Für diesen Schnellstart benötigen Sie Zugriff auf eine SQL Server-Instanz mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), in der die R-Sprache installiert ist.
 
-  Ihre SQL Server Instanz kann sich auf einem virtuellen Azure-Computer oder lokal befinden. Beachten Sie, dass das Feature für die externe Skripterstellung standardmäßig deaktiviert ist. Daher müssen Sie möglicherweise [externe Skripterstellung aktivieren](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) und überprüfen, ob **SQL Server-Launchpad-Dienst** ausgeführt wird, bevor Sie beginnen.
+  Ihre SQL Server-Instanz kann sich auf einem virtuellen Azure-Computer oder einem lokalen Computer befinden. Achten Sie darauf, dass das externe Skripterstellungsfeature standardmäßig deaktiviert ist. Sie müssen die [externe Skripterstellung](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) also möglicherweise aktivieren und überprüfen, ob das **SQL Server-Launchpad** ausgeführt wird, bevor Sie beginnen.
 
-- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Daten Bank Verwaltungs-oder Abfrage Tool ausführen, solange eine Verbindung mit einer SQL Server Instanz hergestellt und eine T-SQL-Abfrage oder eine gespeicherte Prozedur ausgeführt werden kann. In diesem Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)verwendet.
+- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Tool für die Datenbankverwaltung oder -abfrage verwalten, sofern dieses eine Verbindung mit SQL Server-Instanzen herstellen und T-SQL-Abfragen oder gespeicherte Prozeduren ausführen kann. Für diesen Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) verwendet.
 
 ## <a name="run-a-simple-script"></a>Ausführen eines einfachen Skripts
 
-Wenn Sie ein R-Skript ausführen möchten, übergeben Sie es als Argument an die gespeicherte System Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-Diese gespeicherte System Prozedur startet die r-Laufzeit im Kontext SQL Server, übergibt Daten an R, verwaltet r-Benutzersitzungen sicher und gibt alle Ergebnisse an den Client zurück.
+Sie können ein R-Skript ausführen, indem Sie es als Argument an die gespeicherte Systemprozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) übergeben.
+Diese gespeicherte Systemprozedur startet die R-Runtime im Kontext von SQL Server, übergibt Daten an R, verwaltet Sitzungen von R-Benutzern sicher und gibt alle Ergebnisse an den Client zurück.
 
-In den folgenden Schritten führen Sie dieses R-Beispielskript in Ihrer SQL Server Instanz aus:
+In den folgenden Schritten führen Sie dieses R-Beispielskript in Ihrer SQL Server-Instanz aus:
 
 ```r
 a <- 1
@@ -45,11 +46,11 @@ d <- a*b
 print(c(c, d))
 ```
 
-1. Öffnen Sie **SQL Server Management Studio** , und stellen Sie eine Verbindung mit Ihrer SQL Server Instanz her
+1. Öffnen Sie **SQL Server Management Studio**, und stellen Sie eine Verbindung mit Ihrer SQL Server-Instanz her.
 
 1. Übergeben Sie das gesamte R-Skript an die gespeicherte Prozedur `sp_execute_external_script`.
 
-   Das Skript wird durch das `@script`-Argument übermittelt. Alles innerhalb des `@script`-Arguments muss gültiger R-Code sein.
+   Das Skript wird durch das `@script`-Argument übergeben. Das `@script`-Argument darf nur aus zulässigem R-Code bestehen.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -62,9 +63,9 @@ print(c(c, d))
     '
     ```
 
-1. Das korrekte Ergebnis wird berechnet, und die R-`print`-Funktion gibt das Ergebnis an das Fenster **Meldungen** zurück.
+1. Das korrekte Ergebnis wird berechnet, und die R-Funktion `print` gibt das Ergebnis im **Meldungsfenster** zurück.
 
-   Dies sollte in etwa wie folgt aussehen.
+   Die Ausgabe könnte beispielsweise wie folgt aussehen:
 
     **Ergebnisse**
 
@@ -73,9 +74,9 @@ print(c(c, d))
     0.5 2
     ```
 
-## <a name="run-a-hello-world-script"></a>Ausführen eines Hallo Welt Skripts
+## <a name="run-a-hello-world-script"></a>Ausführen eines „Hallo Welt“-Skripts
 
-Ein typisches Beispielskript ist ein Beispiel, das nur die Zeichenfolge "Hallo Welt" ausgibt. Führen Sie den folgenden Befehl aus.
+In einem typischen Beispielskript wird nur die Zeichenfolge „Hallo Welt“ (oder „Hello World“) ausgegeben. Führen Sie den folgenden Befehl aus.
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'
@@ -85,18 +86,18 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-Eingaben für die gespeicherte Prozedur `sp_execute_external_script` umfassen Folgendes:
+Folgende Eingaben sind für die gespeicherte Prozedur `sp_execute_external_script` möglich:
 
 | | |
 |-|-|
-| @language | definiert die aufzurufende Spracherweiterung, in diesem Fall R |
-| @script | definiert die Befehle, die an die R-Laufzeit übermittelt werden. Ihr gesamtes R-Skript muss von diesem Argument als Unicode-Text umschlossen sein. Sie können den Text auch einer Variablen des Typs **nvarchar** hinzufügen und dann die Variable |
-| @input_data_1 | von der Abfrage zurückgegebene Daten, die an die R-Laufzeit zurückgegeben werden, die die Daten zurückgibt, die als Datenrahmen SQL Server werden. |
-|WITH RESULT SETS | Klausel definiert das Schema der zurückgegebenen Datentabelle für SQL Server, wobei "Hallo Welt" als Spaltenname " **int** " für den Datentyp hinzugefügt wird. |
+| @language | definiert die aufzurufende Spracherweiterung (hier R) |
+| @script | definiert die Befehle, die an die R-Runtime übergeben werden Ihr gesamtes R-Skript muss von diesem Argument als Unicode-Text umschlossen sein. Sie können den Text auch einer Variablen des Typs **nvarchar** hinzufügen und die Variable anschließend aufrufen. |
+| @input_data_1 | Die von der Abfrage zurückgegebenen Daten werden an die R-Runtime übergeben, die die Daten als Datenrahmen an SQL Server zurückgibt. |
+|WITH RESULT SETS | Mit dieser Klausel wird das Schema der zurückgegebenen Datentabelle für SQL Server definiert und „Hello World“ als Spaltenname und **int** als Datentyp festgelegt. |
 
-Der Befehl gibt den folgenden Text aus:
+Der Befehl gibt folgenden Text aus:
 
-| Hallo Welt |
+| Hello World |
 |-------------|
 | 1 |
 
@@ -104,7 +105,7 @@ Der Befehl gibt den folgenden Text aus:
 
 Standardmäßig akzeptiert `sp_execute_external_script` ein einzelnes Dataset als Eingabe, das in der Regel in Form einer gültigen SQL-Abfrage angegeben wird. Anschließend wird ein einzelner R-Datenrahmen als Ausgabe zurückgegeben.
 
-Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp_execute_external_script`: **Input DataSet** und **outputdataset**.
+Verwenden Sie vorerst die standardmäßig festgelegten Eingabe- und Ausgabevariablen von `sp_execute_external_script`: **InputDataSet** und **OutputDataSet**.
 
 1. Erstellen Sie eine kleine Tabelle mit Testdaten.
 
@@ -122,7 +123,7 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
     GO
     ```
 
-1. Verwenden Sie die `SELECT`-Anweisung, um die Tabelle abzufragen.
+1. Verwenden Sie die `SELECT`-Anweisung zum Abfragen der Tabelle.
   
     ```sql
     SELECT *
@@ -131,9 +132,9 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
 
     **Ergebnisse**
 
-    ![Inhalt der rtestdata-Tabelle](./media/select-rtestdata.png)
+    ![Inhalt der RTestData-Tabelle](./media/select-rtestdata.png)
 
-1. Führen Sie das folgende R-Skript aus. Sie ruft die Daten aus der Tabelle mithilfe der `SELECT`-Anweisung ab, übergibt sie durch die R-Laufzeit und gibt die Daten als Datenrahmen zurück. Die `WITH RESULT SETS`-Klausel definiert das Schema der zurückgegebenen Datentabelle für SQL, wobei der Spaltenname *newcolname*hinzugefügt wird.
+1. Führen Sie folgendes R-Skript aus: Es ruft die Daten mithilfe der `SELECT`-Anweisung aus der Tabelle ab, übergibt sie über die R-Runtime und gibt sie anschließend als Datenrahmen zurück. Die Klausel `WITH RESULT SETS` definiert das Schema der zurückgegeben Datentabelle für SQL und fügt den Spaltennamen *NewColName* hinzu.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -146,7 +147,7 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
 
     ![Ausgabe des R-Skripts, das Daten aus einer Tabelle zurückgibt](./media/r-output-rtestdata.png)
 
-1. Nun ändern wir die Namen der Eingabe-und Ausgabevariablen. Die Standardnamen für die Eingabe-und Ausgabevariablen sind input **DataSet** und **outputdataset**. mit diesem Skript werden die Namen in **SQL_in** und **SQL_out**geändert:
+1. Ändern Sie nun die Namen der Eingabe- und Ausgabevariablen. Standardmäßig werden die Eingabe- und Ausgabevariablen **InputDataSet** und **OutputDataSet** verwendet. In diesem Skript werden die Namen in **SQL_in** und **SQL_out** geändert:
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -157,14 +158,14 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    Beachten Sie, dass R groß-und Kleinschreibung beachtet. Die im R-Skript (**SQL_out**, **SQL_in**) verwendeten Eingabe-und Ausgabevariablen müssen mit den Namen, die mit `@input_data_1_name` und `@output_data_1_name` definiert sind, einschließlich Case, identisch sein.
+    Beachten Sie, dass R Groß- und Kleinschreibung beachtet. Die im R-Skript verwendeten Eingabe- und Ausgabevariablen (**SQL_out** und **SQL_in**) müssen mit den mit `@input_data_1_name` und `@output_data_1_name` definierten Namen (Groß-/Kleinschreibung beachten) identisch sein.
 
    > [!TIP]
    > Nur eine Eingabedataset kann als Parameter übergeben werden, und Sie können nur ein Dataset zurückgeben. Allerdings können Sie andere Datasets innerhalb Ihres R-Codes aufrufen und Ausgaben und andere Typen zusätzlich zum Dataset zurückgeben. Sie können auch das Schlüsselwort OUTPUT zu einem beliebigen Parameter hinzufügen, damit es mit den Ergebnissen zurückgegeben wird.
 
-1. Sie können Werte auch nur mit dem R-Skript ohne Eingabedaten generieren (`@input_data_1` ist auf Blank festgelegt).
+1. Sie können über das R-Skript auch Werte ohne Eingabedaten generieren, indem kein Wert für `@input_data_1` festgelegt wird.
 
-   Das folgende Skript gibt den Text "Hello" und "World" aus.
+   Das folgende Skript gibt den Text „hello“ und „world“ aus.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -180,9 +181,9 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
 
     ![Abfrageergebnisse mit @script als Eingabe](./media/r-data-generated-output.png)
 
-## <a name="check-r-version"></a>R-Version überprüfen
+## <a name="check-r-version"></a>Überprüfen der R-Version
 
-Wenn Sie sehen möchten, welche Version von R in Ihrer SQL Server Instanz installiert ist, führen Sie das folgende Skript aus.
+Wenn Sie herausfinden möchten, welche Version von R auf Ihrer SQL Server-Instanz installiert ist, führen Sie folgendes Skript aus:
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'
@@ -190,7 +191,7 @@ EXECUTE sp_execute_external_script @language = N'R'
 GO
 ```
 
-Die R `print`-Funktion gibt die Version an das Fenster **Meldungen** zurück. In der folgenden Beispielausgabe sehen Sie, dass R Version 3.4.4 in diesem Fall installiert ist.
+Die R-Funktion `print` gibt die Version im **Meldungsfenster** zurück. In der folgenden Beispielausgabe sehen Sie, dass in diesem Fall Version 3.4.4 von R installiert ist.
 
 **Ergebnisse**
 
@@ -215,9 +216,9 @@ nickname       Someone to Lean On
 
 ## <a name="list-r-packages"></a>Auflisten von R-Paketen
 
-Microsoft stellt eine Reihe von R-Paketen bereit, die mit SQL Server Machine Learning Services vorinstalliert sind.
+In Microsoft SQL Server Machine Learning Services sind bereits einige R-Pakete vorinstalliert.
 
-Führen Sie das folgende Skript aus, um eine Liste der installierten R-Pakete anzuzeigen, einschließlich Version, Abhängigkeiten, Lizenz und Bibliotheks Pfadinformationen.
+Führen Sie folgendes Skript aus, um eine Liste der installierten R-Pakete (einschließlich Version, Abhängigkeiten, Lizenz und Bibliothekspfad) anzuzeigen:
 
 ```SQL
 EXEC sp_execute_external_script @language = N'R'
@@ -232,7 +233,7 @@ WITH result sets((
             ));
 ```
 
-Die Ausgabe erfolgt in R `installed.packages()` und wird als Resultset zurückgegeben.
+Die Ausgabe stammt von `installed.packages()` in R und wird als Resultset zurückgegeben.
 
 **Ergebnisse**
 
@@ -240,13 +241,13 @@ Die Ausgabe erfolgt in R `installed.packages()` und wird als Resultset zurückge
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Um zu erfahren, wie Datenstrukturen verwendet werden, wenn R in SQL Server Machine Learning Services verwendet wird, befolgen Sie diese Schnellstartanleitung:
+Befolgen Sie diesen Schnellstart, um die Verwendung von Datenstrukturen mit R in SQL Server Machine Learning Services zu erlernen:
 
 > [!div class="nextstepaction"]
 > [Verarbeiten von Datentypen und Objekten mithilfe von R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
 
 Weitere Informationen zur Verwendung von R in SQL Server Machine Learning Services finden Sie in den folgenden Artikeln:
 
-- [Schreiben von erweiterten R-Funktionen mit SQL Server Machine Learning Services](quickstart-r-functions.md)
-- [Erstellen und bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
-- [Was ist SQL Server Machine Learning Services (python und R)?](../what-is-sql-server-machine-learning.md)
+- [Schreiben erweiterter R-Funktionen mit SQL Server Machine Learning Services (Vorschauversion)](quickstart-r-functions.md)
+- [Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
+- [Was ist SQL Server Machine Learning Services (Python und R)?](../what-is-sql-server-machine-learning.md)

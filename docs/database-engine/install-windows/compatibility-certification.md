@@ -18,12 +18,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a133f41fb429a2cfe910020e1fefb768436888c4
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142787"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632933"
 ---
 # <a name="compatibility-certification"></a>Kompatibilitätszertifizierung
 
@@ -47,18 +47,25 @@ Bei einem Upgrade bestehen die wesentlichen Risikofaktoren in einer eingeschrän
 
 -  Wenn sich das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Verhalten ändert, muss die Anwendung rezertifiziert werden, damit sie richtig funktioniert. Die Einstellung [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) bietet Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dies gilt allerdings ausschließlich für die angegebene Datenbank und nicht für den gesamten Server. Mit einem unveränderten Datenbank-Kompatibilitätsgrad wird sichergestellt, dass vorhandene Anwendungsabfragen vor und nach einem Upgrade der [!INCLUDE[ssde_md](../../includes/ssde_md.md)] weiterhin dasselbe Verhalten aufweisen. Weitere Informationen zum [!INCLUDE[tsql](../../includes/tsql-md.md)]-Verhalten und zu Kompatibilitätsgraden finden Sie unter [Verwenden von Kompatibilitätsgraden für Abwärtskompatibilität](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat).
 
--  Im Zusammenhang mit der Leistung können Abweichungen bei Abfrageplänen zwischen verschiedenen [!INCLUDE[ssde_md](../../includes/ssde_md.md)]-Versionen auftreten, da in jeder neuen Version der Abfrageoptimierer verbessert wird. Abfrageplanabweichungen, die bei einem Upgrade auftreten, führen in der Regel zu einem Risiko, wenn eine bestimmte Abfrage oder Arbeitsauslastung durch Änderungen beeinträchtigt werden können. Dieses Risiko ist wiederum ein Grund für eine Rezertifizierung. Dies kann zu einer Verzögerung von Upgrades und zu Lebenszyklus- und Supportproblemen führen kann. 
-   Verbesserungen des Abfrageoptimierers werden durch den Standardkompatibilitätsgrad eines neuen Release eingeschränkt, um die Upgraderisiken zu verringern. Die Kompatibilitätszertifizierung umfasst den **Schutz der Abfrageplanform**. Das bedeutet: Wenn der Datenbank-Kompatibilitätsgrad nach einem Upgrade der [!INCLUDE[ssde_md](../../includes/ssde_md.md)] beibehalten wird, entspricht das Modell zur Abfrageoptimierung, mit dem bisher Abfragepläne erstellt wurden, in der neuen Version dem Modell vor dem Upgrade. Die Abfrageplanform sollte sich nicht ändern. 
+-  Im Zusammenhang mit der Leistung können Abweichungen bei Abfrageplänen zwischen verschiedenen [!INCLUDE[ssde_md](../../includes/ssde_md.md)]-Versionen auftreten, da in jeder neuen Version der Abfrageoptimierer verbessert wird. Abfrageplanabweichungen, die bei einem Upgrade auftreten, führen in der Regel zu einem Risiko, wenn eine bestimmte Abfrage oder Workload durch Änderungen beeinträchtigt werden können. Dieses Risiko ist wiederum ein Grund für eine Rezertifizierung. Dies kann zu einer Verzögerung von Upgrades und zu Lebenszyklus- und Supportproblemen führen kann. 
+   Verbesserungen des Abfrageoptimierers werden durch den Standardkompatibilitätsgrad eines neuen Release (d. h. der höchsten verfügbaren Kompatibilitätsstufe für jede neue Version) eingeschränkt, um die Upgraderisiken zu verringern. Die Kompatibilitätszertifizierung umfasst den **Schutz der Abfrageplanform**. Das bedeutet: Wenn der Datenbank-Kompatibilitätsgrad nach einem Upgrade der [!INCLUDE[ssde_md](../../includes/ssde_md.md)] beibehalten wird, wird dasselbe Modell zur Abfrageoptimierung in der neuen Version verwendet wie vor dem Upgrade. Die Abfrageplanform sollte sich nicht ändern. 
+   Weitere Informationen finden Sie im Abschnitt [Gründe für die Form des Abfrageplans](#queryplan_shape) dieses Artikels.
    
-   > [!NOTE]
-   > **Die Abfrageplanform** bezieht sich auf die visuelle Darstellung der verschiedenen Operatoren, die einen Abfrageplan bilden. Dies schließt Operatoren wie Suchvorgänge, Scans, Joins und Sortierungen sowie die Verbindungen zwischen diesen ein, die den Datenfluss und die Reihenfolge der Vorgänge angeben. Die Abfrageplanform wird durch den Abfrageoptimierer bestimmt. Weitere Informationen finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements).
-   
-   Weitere Informationen finden Sie unter [Verwenden von Kompatibilitätsgraden für Abwärtskompatibilität](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat).
+Weitere Informationen zu Kompatibilitätsgraden finden Sie unter [Verwenden von Kompatibilitätsgraden für Abwärtskompatibilität](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat).
    
 Solange für eine Anwendung keine Verbesserungen genutzt werden müssen, die nur in einem höheren Datenbank-Kompatibilitätsgrad verfügbar sind, ist es sinnvoll, ein Upgrade der SQL Server-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] durchzuführen und den vorherigen Datenbank-Kompatibilitätsgrad beizubehalten. Die Anwendung muss dabei nicht rezertifiziert werden. Weitere Informationen finden Sie weiter unten in diesem Artikel unter [Kompatibilitätsgrade und Upgrades der Datenbank-Engine](#compatibility-levels-and-database-engine-upgrades).
 
 Für Neuentwicklungen oder für den Fall, dass eine bestehende Anwendung neue Features wie die [intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) sowie neuen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code nutzen muss, sollten Sie ein Upgrade auf den neuesten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren Datenbank-Kompatibilitätsgrad planen und Ihre Anwendung so zertifizieren, dass sie mit diesem Kompatibilitätsgrad verwendet werden kann. Ausführlichere Informationen zu einem Upgrade des Datenbank-Kompatibilitätsgrads finden Sie unter [Bewährte Methoden zum Aktualisieren des Datenbank-Kompatibilitätsgrads](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level).
+   
+### <a name="queryplan_shape"></a> Gründe für die Form des Abfrageplans      
+Die Abfrageplanform bezieht sich auf die visuelle Darstellung der verschiedenen Operatoren, die einen Abfrageplan bilden. Dies schließt Operatoren wie Suchvorgänge, Scans, Joins und Sortierungen sowie die Verbindungen zwischen diesen ein, die den Datenfluss und die Reihenfolge der Vorgänge angeben, die ausgeführt werden müssen, um das gewünschte Resultset zu erzeugen. Die Abfrageplanform wird durch den Abfrageoptimierer bestimmt.
 
+Um die Abfrageleistung während eines Upgrades vorhersagbar zu halten, besteht eines der grundlegenden Ziele darin sicherzustellen, dass dieselbe Abfrageplanform verwendet wird. Dies kann erreicht werden, indem der Datenbank-Kompatibilitätsgrad nicht unmittelbar nach einem Upgrade geändert wird, auch wenn die zugrundeliegende [!INCLUDE[ssde_md](../../includes/ssde_md.md)] über unterschiedliche Versionen verfügt. Wenn im Ökosystem der Abfrageausführung nichts anderes geändert wird, z. B. bedeutende Änderungen an verfügbaren Ressourcen oder die Datenverteilung in den zugrundeliegenden Daten, sollte die Leistung einer Abfrage unverändert bleiben. 
+
+Das Beibehalten der Form eines Abfrageplans ist jedoch nicht der einzige Faktor, der nach einem Upgrade zu Leistungseinbußen führen kann. Wenn Sie die Datenbank auf eine neuere [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verschieben und auch Umgebungsänderungen vornehmen, führen Sie möglicherweise Faktoren ein, die unmittelbare Auswirkungen auf die Leistung einer Abfrage haben, auch wenn der Abfrageplan die gleiche Form in verschiedenen Versionen beibehält. Diese Umgebungsänderungen können das neue [!INCLUDE[ssde_md](../../includes/ssde_md.md)] enthalten, das mehr oder weniger Arbeitsspeicher und CPU-Ressourcen verfügbar macht, Änderungen an Server-oder Datenbank-Konfigurationsoptionen oder Änderungen an der Datenverteilung, die sich auf die Erstellung eines Abfrageplans auswirken. Daher ist es wichtig zu verstehen, dass das Beibehalten des Datenbank-Kompatibilitätsgrads vor Änderungen in der **Form** des Abfrageplans schützt, jedoch keinen Schutz vor anderen die Abfrageleistung beeinflussenden Umgebungsaspekten bietet, von denen einige vom Benutzer initiiert werden.
+
+Weitere Informationen finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements).
+   
 ## <a name="compatibility-certification-benefits"></a>Nutzen der Kompatibilitätszertifizierung
 Die Datenbankzertifizierung auf Grundlage der Kompatibilität ist in mehrfacher Hinsicht sinnvoller als eine Zertifizierung, die auf Versionsbezeichnungen basiert:
 

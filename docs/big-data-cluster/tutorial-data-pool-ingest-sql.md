@@ -1,7 +1,7 @@
 ---
 title: Erfassen von Daten in einem SQL Server-Datenpool
 titleSuffix: SQL Server big data clusters
-description: In diesem Tutorial wird veranschaulicht, wie Sie Daten in den Daten Pool eines [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]erfassen.
+description: In diesem Tutorial wird erläutert, wie Daten im Datenpool eines [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] erfasst werden.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,16 +11,16 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653313"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Erfassen von Daten in einem SQL Server-Datenpool mit Transact-SQL
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Lernprogramm: Erfassen von Daten in einem SQL Server-Datenpool mit Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Tutorial wird veranschaulicht, wie Transact-SQL zum Laden von Daten in den [Daten Pool](concept-data-pool.md) eines [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]verwendet wird. Mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]können Daten aus einer Vielzahl von Quellen erfasst und über Daten Pool Instanzen verteilt werden.
+In diesem Tutorial wird erläutert, wie Daten über Transact-SQL in den [Datenpool](concept-data-pool.md) eines [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] geladen werden. Mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] können Daten aus einer Vielzahl von Quellen eingelesen und auf Datenpoolinstanzen verteilt werden.
 
 In diesem Tutorial lernen Sie Folgendes:
 

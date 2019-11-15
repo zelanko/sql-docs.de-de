@@ -1,7 +1,7 @@
 ---
 title: Bereitstellen mit einem Bash-Skript in einem Kubernetes-Einzelknotencluster
 titleSuffix: SQL Server big data clusters
-description: Verwenden Sie ein Bash-Bereitstellungs Skript zum Bereitstellen einer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] für einen kubeadm-Cluster mit einem einzelnen Knoten.
+description: Verwenden Sie ein Bash-Bereitstellungsskript, um einen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] in einem Kubernetes-Einzelknotencluster bereitzustellen.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
 ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71341837"
@@ -22,30 +22,30 @@ ms.locfileid: "71341837"
 
 In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um einen Kubernetes-Einzelknotencluster über kubeadm und in dem Cluster einen Big Data-Cluster für SQL Server bereitzustellen.  
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-- Einen virtuellen oder physischen Computer mit einem Vanille-Ubuntu 18,04-oder 16,04- **Server** . Alle Abhängigkeiten werden vom Skript eingerichtet, und Sie führen das Skript aus der VM aus.
+- Ein virtueller oder physischer Computer mit einem Vanilla-Ubuntu 18.04- oder 16.04-**Server**. Alle Abhängigkeiten werden vom Skript eingerichtet, und Sie führen das Skript aus der VM aus.
 
   > [!NOTE]
-  > Die Verwendung von Azure-Linux-VMs wird noch nicht unterstützt.
+  > Das Verwenden von Azure Linux-VMs wird noch nicht unterstützt.
 
-- Der virtuelle Computer muss über mindestens 8 CPUs, 64 GB RAM und 100 GB Speicherplatz verfügen. Nachdem Sie alle Docker-Images für den Big Data-Cluster abgerufen haben, verbleiben Ihnen 50 GB für Daten und Protokolle, die für alle Komponenten verwendet werden.
+- Die VM (virtueller Computer) muss mindestens 8 CPUs, 64 GB RAM und 100 GB Speicherplatz haben. Nachdem Sie alle Docker-Images für den Big Data-Cluster abgerufen haben, verbleiben Ihnen 50 GB für Daten und Protokolle, die für alle Komponenten verwendet werden.
 
-- Aktualisieren Sie vorhandene Pakete mithilfe der folgenden Befehle, um sicherzustellen, dass das Betriebssystem Image auf dem neuesten Stand ist.
+- Aktualisieren Sie vorhandene Pakete mithilfe der folgenden Befehle, um sicherzustellen, dass das Betriebssystemimage auf dem neuesten Stand ist.
 
    ``` bash
    sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 
-## <a name="recommended-virtual-machine-settings"></a>Empfohlene Einstellungen für virtuelle Computer
+## <a name="recommended-virtual-machine-settings"></a>Empfohlene Einstellungen für den virtuellen Computer
 
-1. Verwenden Sie die statische Arbeitsspeicher Konfiguration für den virtuellen Computer. Beispielsweise wird in Hyper-V-Installationen nicht die dynamische Speicher Belegung verwendet, sondern stattdessen die empfohlenen 64 GB oder höher zugeordnet.
+1. Verwenden Sie für den virtuellen Computer eine statische Arbeitsspeicherkonfiguration. Verwenden Sie beispielsweise in Hyper-V-Installationen keine dynamische Speicherbelegung, sondern belegen Sie mindestens die empfohlenen 64 GB.
 
-1. Verwenden Sie die Prüfpunkt-oder Momentaufnahme Funktion in Ihrem Hypervisor, damit Sie einen Rollback für den virtuellen Computer ausführen können.
+1. Verwenden Sie eine Prüfpunkt- oder Momentaufnahmefunktion in Ihrem Hypervisor, sodass Sie den virtuellen Computer in einen fehlerfreien Zustand zurücksetzen können.
 
 
-## <a name="instructions-to-deploy-sql-server-big-data-cluster"></a>Anweisungen zum Bereitstellen von SQL Server Big Data-Cluster
+## <a name="instructions-to-deploy-sql-server-big-data-cluster"></a>Anleitung zum Bereitstellen von Big Data-Clustern für SQL Server
 
 1. Laden Sie das Skript auf die VM herunter, die Sie für die Bereitstellung verwenden möchten.
 
@@ -59,13 +59,13 @@ In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um eine
    chmod +x setup-bdc.sh
    ```
 
-3. Ausführen des Skripts (stellen Sie sicher, dass Sie mit *sudo*ausführen)
+3. Führen Sie das Skript aus. (Verwenden Sie hierzu *sudo*.)
 
    ```bash
    sudo ./setup-bdc.sh
    ```
 
-   Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort an, das für die folgenden externen Endpunkte verwendet werden soll: Controller, SQL Server-Master und -Gateway. Das Kennwort sollte basierend auf den vorhandenen Regeln für SQL Server Kennwort ausreichend komplex sein. Der Benutzername für den Controller ist standardmäßig *admin*.
+   Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort an, das für die folgenden externen Endpunkte verwendet werden soll: Controller, SQL Server-Master und -Gateway. Das Kennwort muss gemäß der vorhandenen Regeln für SQL Server-Kennwörter ausreichend komplex sein. Der Benutzername für den Controller ist standardmäßig *admin*.
 
 4. Richten Sie einen Alias für das **azdata**-Tool ein.
 
@@ -73,7 +73,7 @@ In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um eine
    source ~/.bashrc
    ```
 
-5. Aktualisieren Sie Alias Setup für azdata.
+5. Aktualisieren Sie die Aliaseinrichtung für azdata.
 
    ```bash
    azdata --version
@@ -81,8 +81,8 @@ In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um eine
 
 ## <a name="cleanup"></a>Bereinigen
 
-Das [Cleanup-BDC.sh](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/cleanup-bdc.sh) -Skript wird als praktische Hilfe bereitgestellt, um die Umgebung bei Bedarf zurückzusetzen. Es empfiehlt sich jedoch, einen virtuellen Computer zu Testzwecken zu verwenden und die Momentaufnahme Funktion in Ihrem Hypervisor zu verwenden, um einen Rollback für den virtuellen Computer in einen sauberen Zustand auszuführen.
+Das Skript [cleanup-bdc.sh](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/cleanup-bdc.sh) wird als praktische Hilfe bereitgestellt, um die Umgebung ggf. zurücksetzen zu können. Es wird jedoch empfohlen, einen virtuellen Computer zu Testzwecken und die Momentaufnahmefunktion im Hypervisor zu verwenden, um den virtuellen Computer in einen fehlerfreien Zustand zurückzusetzen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Informationen zu den ersten Schritten mit der Verwendung von Big Data Clustern finden Sie im [tutorial: Laden von Beispiel Daten in eine SQL Server Big Data Cluster @ no__t-0.
+Informationen zu den ersten Schritten zur Verwendung von Big Data-Clustern finden Sie unter [Tutorial: Laden von Beispieldaten in einen Big Data-Cluster für SQL Server](tutorial-load-sample-data.md).

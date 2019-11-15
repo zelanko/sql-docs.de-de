@@ -1,7 +1,7 @@
 ---
 title: Abfragen externer Daten in Oracle
 titleSuffix: SQL Server big data clusters
-description: In diesem Tutorial wird veranschaulicht, wie Oracle-Daten aus einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] abgefragt werden. Sie erstellen eine externe Tabelle für Daten in Oracle und führen dann eine Abfrage aus.
+description: In diesem Tutorial erfahren Sie, wie Sie Oracle-Daten aus einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] abfragen. Sie erstellen eine externe Tabelle für Daten in Oracle und führen dann eine Abfrage aus.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
 ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71708365"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Abfragen von Oracle in einem Big-Data-Cluster für SQL Server
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Lernprogramm: Abfragen von Oracle in einem Big-Data-Cluster für SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

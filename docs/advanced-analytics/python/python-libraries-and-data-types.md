@@ -1,38 +1,39 @@
 ---
-title: Konvertierungen von Python- in SQL-Datentypen
-description: Überprüfen Sie die impliziten und expliziten Datentyp Konvertierungen zwischen Python und SQL Server in Data Science und in Machine Learning-Lösungen.
+title: Konvertieren von Python- und SQL-Datentypen
+description: Überprüfen Sie die implizite und explizite Konvertierung von Datentypen zwischen Python und SQL Server in Data Science- und Machine Learning-Lösungen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 690126098bbbd3ab26add51a0484f735120351de
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: f22f838bc78d4791e73a1d107cd253aae314d205
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715784"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727519"
 ---
-# <a name="data-type-mappings-between-python-and-sql-server"></a>Datentyp Zuordnungen zwischen Python und SQL Server
+# <a name="data-type-mappings-between-python-and-sql-server"></a>Zuordnungen von Datentypen zwischen Python und SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Für python-Lösungen, die auf der python-Integrationsfunktion in SQL Server Machine Learning Services ausgeführt werden, überprüfen Sie die Liste der nicht unterstützten Datentypen und Datentyp Konvertierungen, die möglicherweise implizit ausgeführt werden, wenn Daten zwischen Python und SQL Server übermittelt werden.
+Überprüfen Sie für Python-Lösungen, die in der Python-Integrationsfunktion in SQL Server-Machine Learning Services ausgeführt werden, die Liste der nicht unterstützten Datentypen und Datentypkonvertierungen, die bei der Übergabe von Daten zwischen Python und SQL Server möglicherweise implizit ausgeführt werden.
 
 ## <a name="python-version"></a>Python-Version
 
-Eine Teilmenge der revoscaler-Funktionalität (rxlinmod, rxlogit, rxvorhersage, rxdtrees, rxbtrees, eventuell einige andere) wird mithilfe von Python-APIs bereitgestellt. dabei wird ein neues Python-Paket **revoscalepy**verwendet. Sie können dieses Paket verwenden, um mit Daten zu arbeiten, die Pandas-Datenrahmen, Xdf-Dateien oder SQL-Daten Abfragen verwenden.
+Ein Teil der RevoScaleR-Funktionen (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees und eventuell weitere) wird mithilfe von Python-APIs bereitgestellt, die das neue Python-Paket **revoscalepy** verwenden. Sie können dieses Paket verwenden, um mithilfe von Pandas-Datenrahmen, XDF-Dateien oder SQL-Datenabfragen mit Daten zu arbeiten.
 
-Weitere Informationen finden Sie unter [revoscalepy-Modul in SQL Server](ref-py-revoscalepy.md) -und [revoscalepy-Funktionsreferenz](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
+Weitere Informationen finden Sie unter [revoscalepy (Python-Modul in SQL Server)](ref-py-revoscalepy.md) und [revoscalepy-Funktionsreferenz](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
 
-Python unterstützt eine begrenzte Anzahl von Datentypen im Vergleich zu SQL Server. Wenn Sie Daten aus SQL Server in python-Skripts verwenden, werden die Daten daher möglicherweise implizit in einen kompatiblen Datentyp konvertiert. Häufig kann jedoch eine exakte Konvertierung nicht automatisch durchgeführt werden, und es wird ein Fehler zurückgegeben.
+Verglichen mit SQL Server unterstützt Python nur eine begrenzte Anzahl von Datentypen. Daher ist es möglich, dass bei der Verwendung von Daten aus SQL Server in Python-Skripts diese implizit in einen kompatiblen Datentyp konvertiert werden. Da eine exakte automatische Konvertierung jedoch häufig nicht möglich ist, wird ein Fehler zurückgegeben.
 
-## <a name="python-and-sql-data-types"></a>Python-und SQL-Datentypen
+## <a name="python-and-sql-data-types"></a>Python- und SQL-Datentypen
 
-In dieser Tabelle sind die impliziten Konvertierungen aufgeführt, die bereitgestellt werden. Andere Datentypen werden nicht unterstützt.
+In der folgenden Tabelle werden die impliziten Konvertierungen aufgeführt, die bereitgestellt werden. Andere Datentypen werden nicht unterstützt.
 
-|SQLtype|Python-Typ|
+|SQLType|Python-Typ|
 |-------|-----------|
 |**bigint**|`numeric`|
 |**binary**|`raw`|

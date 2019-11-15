@@ -1,48 +1,49 @@
 ---
-title: 'Python-Tutorial: Vorbereiten von Daten (lineare Regression)'
-description: In diesem Tutorial verwenden Sie die python-und lineare Regression in SQL Server Machine Learning Services, um die Anzahl der Ski-Vermietungen vorherzusagen. Sie bereiten Daten mithilfe von python aus einer SQL Server-Datenbank vor.
+title: 'Python-Tutorial: Vorbereiten von Daten'
+description: In diesem Tutorial verwenden Sie Python und die lineare Regression in SQL Server-Machine Learning Services zur Vorhersage von Verleihzahlen für einen Skiverleih. Sie bereiten Daten aus einer SQL Server-Datenbank mithilfe von Python vor.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6c4d5fb4ffc5049f7e1325267b7623dc195e9d8
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: 6424a453bff2f0f6d62caa8c9870ccc2ec10d578
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242498"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727054"
 ---
-# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python-Tutorial: Vorbereiten von Daten zum Trainieren eines linearen Regressionsmodells in SQL Server Machine Learning Services
+# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python-Tutorial: Vorbereiten von Daten zum Trainieren eines linearen Regressionsmodells in SQL Server-Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Im Teil 2 dieser vierteiligen tutorialreihe bereiten Sie Daten aus einer SQL Server-Datenbank mithilfe von python vor. Später in dieser Reihe verwenden Sie diese Daten zum trainieren und Bereitstellen eines linearen Regressionsmodells in Python mit SQL Server Machine Learning Services.
+Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie Daten aus einer SQL Server-Datenbank mithilfe von Python vor. Diese Daten verwenden Sie in einem späteren Teil dieser Reihe zum Trainieren und Bereitstellen eines linearen Regressionsmodells in Python mit SQL Server-Machine Learning Services.
 
 In diesem Artikel lernen Sie Folgendes:
 
 > [!div class="checklist"]
-> * Laden der Daten aus der SQL Server-Datenbank in ein **Pandas** -Datenrahmen
-> * Bereiten Sie die Daten in python vor, indem Sie einige Spalten entfernen.
+> * Laden der Daten aus der SQL Server-Datenbank in einen **Pandas**-Datenrahmen
+> * Vorbereiten der Daten in Python durch Entfernen einiger Spalten
 
-In [Teil 1](python-ski-rental-linear-regression.md)haben Sie gelernt, wie Sie die Beispieldatenbank wiederherstellen.
+In [Teil 1](python-ski-rental-linear-regression.md) dieser Tutorialreihe haben Sie gelernt, wie Sie die Beispieldatenbank wiederherstellen.
 
-In [Teil 3](python-ski-rental-linear-regression-train-model.md)erfahren Sie, wie Sie ein lineares Regressionsmodell für Maschinelles Lernen in python trainieren.
+In [Teil 3](python-ski-rental-linear-regression-train-model.md) trainieren Sie ein lineares Regressionsmodell für Machine Learning in Python.
 
-In [Teil 4](python-ski-rental-linear-regression-deploy-model.md)erfahren Sie, wie Sie das Modell in SQL Server speichern und dann gespeicherte Prozeduren aus den python-Skripts erstellen, die Sie in den Teilen 2 und 3 entwickelt haben. Die gespeicherten Prozeduren werden in SQL Server ausgeführt, um Vorhersagen basierend auf neuen Daten zu treffen.
+In [Teil 4](python-ski-rental-linear-regression-deploy-model.md) wird beschrieben, wie Sie das Modell in SQL Server speichern und gespeicherte Prozeduren aus den Python-Skripts erstellen, die Sie in Teil 2 und 3 entwickelt haben. Die gespeicherten Prozeduren werden in SQL Server ausgeführt, um Vorhersagen basierend auf neuen Daten treffen zu können.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-* In Teil 2 dieses Tutorials wird davon ausgegangen, dass Sie [Teil eins](python-ski-rental-linear-regression.md) und seine Voraussetzungen erfüllt haben.
+* In diesem Teil der Tutorialreihe wird davon ausgegangen, dass Sie [Teil 1](python-ski-rental-linear-regression.md) und die erforderlichen Voraussetzungen abgeschlossen haben.
 
-## <a name="explore-and-prepare-the-data"></a>Untersuchen und Vorbereiten der Daten
+## <a name="explore-and-prepare-the-data"></a>Durchsuchen und Vorbereiten der Daten
 
-Um die Daten in Python zu verwenden, laden Sie die Daten aus der SQL Server-Datenbank in ein Pandas-Datenrahmen.
+Laden Sie die Daten aus der SQL Server-Datenbank in einen Pandas-Datenrahmen, um sie in Python verwenden zu können.
 
-Erstellen Sie ein neues python-Notebook in Azure Data Studio, und führen Sie das folgende Skript aus. Ersetzen `<SQL Server>` Sie durch ihren eigenen SQL Server Namen.
+Erstellen Sie in Azure Data Studio ein neues Python-Notebook, und führen Sie das folgende Skript aus. Ersetzen Sie `<SQL Server>` durch Ihren eigenen SQL Server-Namen.
 
-Mit dem folgenden Python-Skript wird das DataSet aus der **dbo. rental_data** -Tabelle in der-Datenbank in eine Pandas-Datenrahmen- **DF**importiert.
+Importieren Sie mit dem folgenden Python-Skript das Dataset aus der Tabelle **dbo.rental_data** in Ihrer Datenbank in den Pandas-Datenrahmen **df**:
 
 ```python
 import pandas as pd
@@ -96,7 +97,7 @@ columns = df.columns.tolist()
 columns = [c for c in columns if c not in ["Year"]]
 ```
 
-Es sollten ähnliche Ergebnisse wie die folgenden angezeigt werden.
+Das Ergebnis sollte etwa folgendermaßen aussehen:
 
 ```results
 Rows Processed: 453
@@ -114,12 +115,12 @@ Data frame:      Day  Holiday  Month  RentalCount  Snow  WeekDay  Year
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im Teil 2 dieser tutorialreihe haben Sie die folgenden Schritte ausgeführt:
+Im zweiten Teil dieser Tutorialreihe haben Sie die folgenden Schritte ausgeführt:
 
-* Laden der Daten aus der SQL Server-Datenbank in ein **Pandas** -Datenrahmen
-* Bereiten Sie die Daten in python vor, indem Sie einige Spalten entfernen.
+* Laden der Daten aus der SQL Server-Datenbank in einen **Pandas**-Datenrahmen
+* Vorbereiten der Daten in Python durch Entfernen einiger Spalten
 
-Zum Trainieren eines Machine Learning-Modells, das Daten aus der tutorialdb-Datenbank verwendet, führen Sie die folgenden drei Schritte aus:
+Fahren Sie mit Teil 3 dieser Tutorialreihe fort, um ein Machine Learning-Modell zu trainieren, das Daten aus der Datenbank „TutorialDB“ verwendet:
 
 > [!div class="nextstepaction"]
 > [Python-Tutorial: Trainieren eines linearen Regressionsmodells](python-ski-rental-linear-regression-train-model.md)

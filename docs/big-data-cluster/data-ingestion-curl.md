@@ -1,7 +1,7 @@
 ---
 title: Verwenden von curl, um Daten in HDFS zu laden | Microsoft-Dokumentation
 titleSuffix: SQL Server big data clusters
-description: Verwenden Sie curl, um Daten auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]in HDFS zu laden.
+description: Verwenden von curl, um Daten in HDFS in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] zu laden
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,22 +9,22 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c65ce7fb6752240f0dd23a6dab195539146e7933
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049880"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706628"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Verwenden von curl zum Laden von Daten in HDFS auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Verwenden von curl, um Daten in HDFS in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] zu laden
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird erläutert, wie Sie **curl** zum Laden von Daten in HDFS auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (Vorschau) verwenden.
+In diesem Artikel wird erläutert, wie Sie **curl** verwenden, um Daten in HDFS in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] zu laden.
 
-## <a id="prereqs"></a> Prerequisites
+## <a id="prereqs"></a> Erforderliche Komponenten
 
-- [Laden von Beispieldaten in Ihren Big Data-Cluster](tutorial-load-sample-data.md)
+- [Laden von Beispieldaten in einen Big Data-Cluster von SQL Server](tutorial-load-sample-data.md)
 
 ## <a name="obtain-the-service-external-ip"></a>Abrufen der externen IP des Diensts
 
@@ -49,7 +49,7 @@ Beispiel:
 
 ## <a name="list-a-file"></a>Auflisten einer Datei
 
-Verwenden Sie den folgenden curl-Befehl, um die Datei unter **HDFS:///product_review_data**aufzulisten:
+Um die Datei unter **hdfs:///product_review_data** aufzulisten, verwenden Sie den folgenden curl-Befehl:
 
 ```bash
 curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
@@ -57,7 +57,7 @@ curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP extern
 
 ## <a name="put-a-local-file-into-hdfs"></a>Ablegen einer lokalen Datei in HDFS
 
-Um eine neue Datei " **Test. CSV** " aus dem lokalen Verzeichnis in das Verzeichnis "product_review_data" einzufügen, verwenden Sie den folgenden curl-Befehl (der **Content-Type-** Parameter ist erforderlich):
+Um die neue Datei **test.csv** aus dem lokalen Verzeichnis im Verzeichnis „product_review_data“ abzulegen, verwenden Sie den folgenden curl-Befehl (der **Content-Type**-Parameter ist erforderlich):
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'

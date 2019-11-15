@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 19edd6bf2e28a0dd0ec2007493dc02ff55108554
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 7720db661d90c3ff2ebec593b22a5aa638038132
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531612"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844216"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Lesen und Schreiben von Daten in SQL Server aus Spark mithilfe des MSSQL-Spark-Connectors
 
@@ -76,7 +76,7 @@ Der Connector verwendet SQL Server-APIs für Massenschreibvorgänge. Alle Parame
 
 ## <a name="run-the-sample-notebook"></a>Ausführen des Beispielnotebooks
 
-Um sich die Verwendung des MSSQL-Spark-Connectors mit diesen Daten anzusehen, können Sie ein Beispielnotebook herunterladen, es in Azure Data Studio öffnen und jeden Codeblock ausführen. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwenden von Notebooks in SQL Server 2019 (Vorschauversion)](notebooks-guidance.md).
+Um sich die Verwendung des MSSQL-Spark-Connectors mit diesen Daten anzusehen, können Sie ein Beispielnotebook herunterladen, es in Azure Data Studio öffnen und jeden Codeblock ausführen. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwenden von Notebooks in SQL Server](notebooks-guidance.md).
 
 1. Führen Sie an einer PowerShell- oder Bash-Befehlszeile den folgenden Befehl aus, um das Beispielnotebook **mssql_spark_connector.ipynb** herunterzuladen:
 

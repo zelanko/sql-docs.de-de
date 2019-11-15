@@ -1,5 +1,5 @@
 ---
-title: Erweiterbarkeitsarchitektur für externe Skripts
+title: Erweiterbarkeitsarchitektur
 description: In diesem Artikel wird die Architektur des Erweiterbarkeitsframeworks zum Ausführen eines externen Skripts wie R oder Python auf SQL Server beschrieben.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +8,14 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f2f61208f9c43ce827cb65a4f7107ced62b9219
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532729"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727689"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Erweiterbarkeitsarchitektur in SQL Server-Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,15 +114,15 @@ Im folgenden Abschnitt werden die Kommunikationsprotokolle zwischen Komponenten 
 
 + **ODBC**
 
-  Für die Kommunikation zwischen externen Data-Science-Clients und SQL Server-Remoteinstanzen wird ODBC verwendet. Das Konto, das Skriptaufträge an SQL Server übermittelt, muss über beide Berechtigungen zum Herstellen einer Verbindung mit der Instanz und zum Ausführen externer Skripts verfügen.
+  Für die Kommunikation zwischen externen Data Science-Clients und einer SQL Server-Remoteinstanz wird ODBC verwendet. Das Konto, das Skriptaufträge an SQL Server übermittelt, muss über beide Berechtigungen zum Herstellen einer Verbindung mit der Instanz und zum Ausführen externer Skripts verfügen.
 
-  Außerdem benötigt das Konto abhängig von der Aufgabe möglicherweise die folgenden Berechtigungen zum
+  Außerdem benötigt das Konto abhängig von der Aufgabe möglicherweise die folgenden Berechtigungen zum:
 
   + Lesen der vom Auftrag verwendeten Daten
   + Schreiben von Daten in Tabellen, z. B. beim Speichern von Ergebnissen in einer Tabelle
   + Erstellen von Datenbankobjekten, z. B. beim Speichern eines externen Skripts als Teil einer neuen gespeicherten Prozedur
 
-  Wenn SQL Server als Computekontext für Skripte verwendet wird, die von einem Remoteclient ausgeführt werden, und die ausführbare Datei Daten aus einer externen Quelle abrufen muss, wird ODBC für den Rückschreibevorgang verwendet. SQL Server ordnet die Identität des Benutzers, der den Remotebefehl ausgibt, der Identität des Benutzers auf der aktuellen Instanz zu und führt den ODBC-Befehl mit den Anmeldeinformationen dieses Benutzers aus. Die Verbindungszeichenfolge, die zum Durchführen dieses ODBC-Aufruf erforderlich ist, wird vom Clientcode abgerufen.
+  Wenn SQL Server als Computekontext für Skripts verwendet wird, die von einem Remoteclient ausgeführt werden, und die ausführbare Datei Daten aus einer externen Quelle abrufen muss, wird ODBC für den Rückschreibevorgang verwendet. SQL Server ordnet die Identität des Benutzers, der den Remotebefehl ausgibt, der Identität des Benutzers auf der aktuellen Instanz zu und führt den ODBC-Befehl mit den Anmeldeinformationen dieses Benutzers aus. Die Verbindungszeichenfolge, die zum Durchführen dieses ODBC-Aufruf erforderlich ist, wird vom Clientcode abgerufen.
 
 + **RODBC (nur R)** 
 

@@ -1,7 +1,7 @@
 ---
 title: Was ist die Masterinstanz?
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel wird der SQL Server Master Instanz in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]einer beschrieben.
+description: In diesem Artikel wird die SQL Server-Masterinstanz in einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] beschrieben.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652277"
@@ -20,7 +20,7 @@ ms.locfileid: "69652277"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird die Rolle der *SQL Server Master Instanz* in einem Big Data Cluster für SQL Server 2019 beschrieben. Die Master Instanz ist eine SQL Server-Instanz, die in einem Big Data Cluster ausgeführt wird, um Konnektivität, horizontal hochskalierbare Abfragen, Metadaten und Benutzer Datenbanken sowie Machine Learning-Dienste zu verwalten.
+In diesem Artikel wird die Rolle der *SQL Server-Masterinstanz* in einem Big Data-Cluster für SQL Server 2019 beschrieben. Die Masterinstanz ist eine SQL Server-Instanz, die in einem Big Data-Cluster ausgeführt wird, um Konnektivität, Scale-Out-Abfragen, Metadaten- und Benutzerdatenbanken sowie Machine Learning-Dienste zu verwalten.
 
 Die SQL Server-Masterinstanz bietet folgende Funktionen:
 
@@ -53,7 +53,7 @@ Als Teil eines SQL Server-Big Data-Clusters sind die Dienste für maschinelles L
 
 In SQL Server 2019 lassen sich Big Data ganz einfach mit den Dimensionsdaten verknüpfen, die typischerweise in einer Unternehmensdatenbank gespeichert sind. Der Wert der Big Data vervielfacht sich, wenn diese nicht nur einem Teil der Organisation zur Verfügung stehen, sondern auch in Berichte, Dashboards und Anwendungen eingebunden werden können. Gleichzeitig können Data Scientists weiter die Tools des Spark/HDFS-Ökosystems nutzen und von einfachem Echtzeitzugriff auf die Daten in der SQL Server-Masterinstanz und in den externe Datenquellen profitieren, auf die _über_ die Masterinstanz zugegriffen werden kann.
 
-Mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]können Sie mit ihren unternehmensdatenlakes mehr tun. SQL Server-Entwickler und Analysten stehen folgende Möglichkeiten offen:
+Mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] können Sie mit den Data Lakes Ihres Unternehmens mehr erreichen. SQL Server-Entwickler und Analysten stehen folgende Möglichkeiten offen:
 
 * Sie können Anwendungen erstellen, die Daten aus den Data Lakes des Unternehmens verwenden.
 * Sie können mithilfe von Transact-SQL-Abfragen Schlussfolgerungen aus allen Daten ziehen.
@@ -67,7 +67,7 @@ Mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]k�
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]zu finden Sie in den folgenden Ressourcen:
+Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie in den folgenden Ressourcen:
 
 - [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] -Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]-Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

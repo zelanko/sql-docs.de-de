@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0482182c9720054a85dfd21c264e0acde939b5b
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974258"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142775"
 ---
 # <a name="best-practices-with-query-store"></a>Bewährte Methoden für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ Sie können den Abfragespeicher bedenkenlos in allen Datenbanken verwenden, selb
 ##  <a name="Configure"></a> Dauerhafte Abfragespeicheranpassung an Ihre Arbeitsauslastung  
  Konfigurieren Sie Abfragespeicher basierend auf den Anforderungen hinsichtlich der Arbeitsauslastung und der Behandlung von Leistungsproblemen. Die Standardparameter sind für den Einstieg ausreichend, Sie sollten jedoch das Verhalten des Abfragespeichers im Verlauf der Zeit überwachen und die Konfiguration entsprechend anpassen.  
   
- ![Abfragespeichereigenschaften](../../relational-databases/performance/media/query-store-properties.png "Abfragespeichereigenschaften")  
+ ![Eigenschaften des Abfragespeichers](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")  
   
  Hier sind einige Richtlinien zum Festlegen der Parameterwerte:
   
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **Datenleerungsintervall (Minuten)** : Definiert die Häufigkeit in Sekunden, mit der die erfassten Laufzeitstatistiken auf dem Datenträger gespeichert werden. Der Standardwert ist 900 Sekunden, d.h. 15 Minuten. Ziehen Sie in Betracht, einen höheren Wert zu verwenden, wenn Ihre Arbeitsauslastung keine große Anzahl verschiedener Abfragen und Pläne generiert oder Sie längere Zeit warten können, bevor Daten vor dem Herunterfahren der Datenbank persistent gespeichert werden.
+ **Datenleerungsintervall (Minuten)** : Diese Option definiert die Häufigkeit, mit der die erfassten Laufzeitstatistiken auf dem Datenträger gespeichert werden. In der grafischen Benutzeroberfläche wird sie in Minuten ausgedrückt, in [!INCLUDE[tsql](../../includes/tsql-md.md)] wird sie jedoch in Sekunden angegeben. Der Standardwert ist 900 Sekunden, d.h. 15 Minuten in der grafischen Benutzeroberfläche. Ziehen Sie in Betracht, einen höheren Wert zu verwenden, wenn Ihre Arbeitsauslastung keine große Anzahl verschiedener Abfragen und Pläne generiert oder Sie längere Zeit warten können, bevor Daten vor dem Herunterfahren der Datenbank persistent gespeichert werden.
  
 > [!NOTE]
 > Mit dem Ablaufverfolgungsflag 7745 wird verhindert, dass Abfragespeicherdaten bei einem Failover oder Befehl zum Herunterfahren auf den Datenträger geschrieben werden. Weitere Informationen finden Sie im Abschnitt [Verwenden von Ablaufverfolgungsflags für unternehmenskritische Server zur effizienteren Notfallwiederherstellung](#Recovery).
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **Statistiksammelungsintervall**: Definiert den Grad der Granularität für die erfasste Laufzeitstatistik. Der Standardwert ist 60 Sekunden. Es ist ratsam, einen niedrigeren Wert zu verwenden, wenn Sie eine höhere Granularität benötigen oder weniger Zeit zum Erkennen und Verringern von Problemen haben. Denken Sie daran, dass der Wert die Größe der Abfragespeicherdaten direkt beeinflusst. Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)], um einen anderen Wert für das **Statistiksammlungsintervall** festzulegen:  
+ **Statistiksammelungsintervall**: Definiert den Grad der Granularität für die erfasste Laufzeitstatistik, ausgedrückt in Minuten. Der Standardwert ist 60 Sekunden. Es ist ratsam, einen niedrigeren Wert zu verwenden, wenn Sie eine höhere Granularität benötigen oder weniger Zeit zum Erkennen und Verringern von Problemen haben. Denken Sie daran, dass der Wert die Größe der Abfragespeicherdaten direkt beeinflusst. Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)], um einen anderen Wert für das **Statistiksammlungsintervall** festzulegen:  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **Schwellenwert für veraltete Abfragen (Tage)** : Zeitbasierte Richtlinie zur Bereinigung, die den Aufbewahrungszeitraum für persistente Laufzeitstatistiken und inaktive Abfragen steuert. Standardmäßig ist der Abfragespeicher so konfiguriert, dass Daten 30 Tage lang gespeichert werden. Dies ist möglicherweise für Ihr Szenario unnötig lange.  
+ **Schwellenwert für veraltete Abfragen (Tage)** : Zeitbasierte Richtlinie zur Bereinigung, die den Aufbewahrungszeitraum für persistente Laufzeitstatistiken und inaktive Abfragen steuert, ausgedrückt in Tagen. Standardmäßig ist der Abfragespeicher so konfiguriert, dass Daten 30 Tage lang gespeichert werden. Dies ist möglicherweise für Ihr Szenario unnötig lange.  
   
  Vermeiden Sie es, Verlaufsdaten aufzubewahren, die Sie nicht mehr verwenden möchten. Dies reduziert die Wahrscheinlichkeit für Änderungen in den schreibgeschützten Status. Die Größe der Abfragespeicherdaten sowie die Zeit, um Probleme zu erkennen und zu mindern, lassen sich besser vorhersagen. Verwenden Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder das folgende Skript, um die zeitbasierte Cleanuprichtlinie zu konfigurieren:  
   
@@ -180,7 +180,7 @@ SET QUERY_STORE = ON
 ## <a name="start-with-query-performance-troubleshooting"></a>Erste Schritte bei der Behandlung von Leistungsproblemen  
  Der Workflow zur Behandlung von Problemen mit dem Abfragespeicher ist einfach, wie im folgenden Diagramm dargestellt:  
   
- ![Problembehandlung beim Abfragespeicher](../../relational-databases/performance/media/query-store-troubleshooting.png "Problembehandlung-beim-Abfragespeicher")  
+ ![Problembehandlung bei Abfragespeichern](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
   
  Aktivieren Sie den Abfragespeicher mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], wie im vorherigen Abschnitt beschrieben, oder führen Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung aus:  
   
@@ -199,7 +199,7 @@ Es dauert einige Zeit, bis der Abfragespeicher das Dataset erfasst, das Ihre Arb
   
  Die folgende Grafik veranschaulicht, wie Sie die Abfragespeicheransichten suchen:  
   
-   ![Abfragespeichersichten](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Abfragespeichersichten")  
+   ![Ansichten von Abfragespeichern](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Ansichten von Abfragespeichern")  
   
  In der folgenden Tabelle wird erläutert, wann Sie die einzelnen Abfragespeicheransichten verwenden sollten:  
   
@@ -220,7 +220,7 @@ Es dauert einige Zeit, bis der Abfragespeicher das Dataset erfasst, das Ihre Arb
   
 -   Wenn die Abfrage mit mehreren Plänen ausgeführt wurde und der letzte Plan signifikant schlechter als der vorherige ist, können Sie den Planerzwingungsmechanismus verwenden, um diesen zu erzwingen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, den Plan im Optimierer zu erzwingen. Wenn das Erzwingen des Plans fehlschlägt, wird ein XEvent ausgelöst, und der Optimierer wird angewiesen, die Optimierung auf die übliche Weise durchzuführen.
   
-       ![Erzwingungsplan für den Abfragespeicher](../../relational-databases/performance/media/query-store-force-plan.png "Abfragespeicher-Erzwingungsplan")  
+       ![Erzwingen des Plans für Abfragespeicher](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
        > [!NOTE]
        > Die vorherige Abbildung kann verschiedene Formen für bestimmte Abfragepläne aufweisen, wobei die möglichen Status folgende Bedeutungen haben:<br />  
@@ -235,7 +235,7 @@ Es dauert einige Zeit, bis der Abfragespeicher das Dataset erfasst, das Ihre Arb
 
 -   Sie können daraus schließen, dass der Abfrage ein Index für eine optimale Ausführung fehlt. Diese Informationen werden innerhalb des Abfrageausführungsplans eingeblendet. Erstellen Sie den fehlenden Index, und überprüfen Sie die Abfrageleistung mit dem Abfragespeicher.  
   
-       ![Anzeigen des Plans für Abfragespeicher](../../relational-databases/performance/media/query-store-show-plan.png "Anzeigen-des-Plans-für Abfragespeicher")
+       ![Anzeigen des Plans für Abfragespeicher](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
   
  Wenn Sie Ihre Arbeitsauslastung auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ausführen, registrieren Sie sich für den [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Indexratgeber, um automatisch Indexempfehlungen zu erhalten.
   

@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Dokumentation zu SQL Server Machine Learning Services (python und R)
-summary: Erfahren Sie, wie Sie SQL Server Machine Learning Services verwenden, um Python-und R-Skripts für relationale Daten auszuführen. Anhand von Tutorials, Codebeispielen, Installations Handbüchern und anderem Dokumentationsmaterial wird gezeigt, wie Sie dies tun.
+title: Dokumentation zu SQL Server Machine Learning Services (Python und R)
+summary: Erfahren Sie, wie Sie mit SQL Server Machine Learning Services Python- und R-Skripts mit relationalen Daten ausführen. Anhand von Tutorials, Codebeispielen, Installationsleitfäden und anderem Dokumentationsmaterial wird gezeigt, wie Sie hierbei vorgehen.
 metadata:
-  title: 'Dokumentation zu SQL Server Machine Learning Services (python, R): Tutorials, Schnellstarts und Installations Handbücher'
-  description: Erfahren Sie, wie Sie SQL Server Machine Learning Services verwenden, um Python-und R-Skripts für relationale Daten auszuführen. Anhand von Tutorials, Codebeispielen, Installations Handbüchern und anderem Dokumentationsmaterial wird gezeigt, wie Sie dies tun.
+  title: 'Dokumentation zu SQL Server Machine Learning Services (Python, R): Tutorials, Schnellstarts und Installationsleitfäden'
+  description: Erfahren Sie, wie Sie mit SQL Server Machine Learning Services Python- und R-Skripts mit relationalen Daten ausführen. Anhand von Tutorials, Codebeispielen, Installationsleitfäden und anderem Dokumentationsmaterial wird gezeigt, wie Sie hierbei vorgehen.
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
@@ -12,30 +12,30 @@ metadata:
   ms.date: 09/12/2019
   ms.openlocfilehash: d46abc3b6e02f81db733df584ea95fbdc73777c0
   ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: de-DE
   ms.lasthandoff: 09/23/2019
   ms.locfileid: "71199399"
 landingContent:
-- title: Informationen zu Machine Learning Services
+- title: Informationen zu SQL Machine Learning Services
   linkLists:
   - linkListType: overview
     links:
-    - text: Was ist SQL Server Machine Learning Services (python und R)?
+    - text: Was ist SQL Server Machine Learning Services (Python und R)?
       url: what-is-sql-server-machine-learning.md
   - linkListType: whats-new
     links:
-    - text: Neues in Machine Learning Services
+    - text: Was ist neu in Machine Learning Services?
       url: what-s-new-in-sql-server-machine-learning-services.md
   - linkListType: video
     links:
-    - text: Ausführen von R/python in SQL Server mit Machine Learning Services
+    - text: Ausführen von R/Python in SQL Server mit Machine Learning Services
       url: https://www.youtube.com/watch?v=ACejZ9optCQ
-- title: Einstieg in python
+- title: Erste Schritte mit Python
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Ausführen eines "Hello World"-python-Skripts auf SQL Server
+    - text: Ausführen eines „Hello World“-Python-Skripts in SQL Server
       url: tutorials/quickstart-python-create-script.md
     - text: Arbeiten mit Eingaben und Ausgaben
       url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
@@ -45,15 +45,15 @@ landingContent:
       url: tutorials/quickstart-python-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: Vorhersagen eines Skirental mit linearer Regression
+    - text: Vorhersagen für einen Skiverleih mit linearer Regression
       url: tutorials/python-ski-rental-linear-regression.md
-    - text: Kategorisierung von Kunden mithilfe von k-Means-Clustering
+    - text: Kategorisierung von Kunden mit K-Means-Clustering
       url: tutorials/python-clustering-model.md
-- title: Einstieg in R
+- title: Erste Schritte mit R
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Ausführen eines "Hello World"-R-Skripts auf SQL Server
+    - text: Ausführen eines „Hello World“-R-Skripts in SQL Server
       url: tutorials/quickstart-r-create-script.md
     - text: Arbeiten mit Eingaben und Ausgaben
       url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
@@ -93,9 +93,9 @@ landingContent:
       url: concepts/extension-r.md
   - linkListType: concept
     links:
-    - text: Sicherheit für das Erweiterbarkeit Framework
+    - text: Sicherheit für das Erweiterbarkeitsframework
       url: concepts/security.md
-- title: Verwalten von Python-und R-Paketen
+- title: Verwalten von Python- und R-Paketen
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -105,5 +105,5 @@ landingContent:
       url: package-management/install-additional-python-packages-on-sql-server.md
     - text: Abrufen von Paketinformationen für R
       url: package-management/r-package-information.md
-    - text: Installieren neuer R-Pakete mit sqlmlutils
+    - text: Installieren von neuen R-Paketen mit sqlmlutils
       url: package-management/install-additional-r-packages-on-sql-server.md

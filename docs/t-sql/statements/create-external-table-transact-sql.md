@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca20922eb99354aa5f2a6bc97f238daf93724ff
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 715541f066678807b5ef46b6697f32c5e1e233d2
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227150"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882382"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -105,7 +105,7 @@ Wenn LOCATION als Ordner angegeben wird, ruft eine PolyBase-Abfrage, die aus der
 
 In diesem Beispiel gibt eine PolyBase-Abfrage Zeilen aus „mydata.txt“ und „mydata2.txt“ zurück, wenn LOCATION='/webdata/'. „Mydata3.txt“ wird nicht zurückgegeben, da es sich um einen Unterordner eines ausgeblendeten Ordners handelt. Es werden auch keine „_hidden.txt“-Dateien zurückgegeben, da es sich um eine ausgeblendete Datei handelt.
 
-![Rekursive Daten für externe Tabellen](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
+![Rekursive Daten für externe Tabellen](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Rekursive Daten für externe Tabellen")
 
 Um den Standardordner zu ändern, und nur aus dem Stammordner zu lesen, legen Sie das Attribut \<polybase.recursive.traversal> in der Konfigurationsdatei „core-site.xml“ auf FALSE fest. Diese Datei befindet sich unter `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Beispiel: `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
@@ -580,9 +580,7 @@ WITH
 
 ## <a name="overview-azure-sql-database"></a>Übersicht: Azure SQL-Datenbank
 
-Erstellt in Azure SQL-Datenbank eine externe Tabelle für [elastische Abfragen](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) für die Verwendung mit Azure SQL-Datenbank.
-
-Verwenden Sie eine externe Tabelle, um eine externe Tabelle für die Verwendung mit einer elastischen Abfrage zu erstellen.
+Erstellt in Azure SQL-Datenbank eine externe Tabelle für [elastische Abfragen (in der Vorschau)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
 
 Siehe auch [ERSTELLEN EINER EXTERNEN DATENQUELLE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -661,7 +659,7 @@ Sie können zahlreiche externe Tabellen erstellen, die auf die gleichen oder and
 
 ## <a name="limitations-and-restrictions"></a>Einschränkungen
 
-Da sich die Daten für eine externe Tabelle in einer anderen SQL-Datenbank befinden, können Sie jederzeit geändert oder entfernt werden. Aus diesem Grund sind Abfrageergebnisse für eine externe Tabelle nicht garantiert deterministisch. Die gleiche Abfrage kann bei jeder Ausführung für eine externe Tabelle unterschiedliche Ergebnisse zurückgeben. Auf ähnliche Weise kann eine Abfrage fehlschlagen, wenn die externen Daten verschoben oder entfernt werden.
+Der Zugriff auf Daten über eine externe Tabelle entspricht nicht der Isolationssemantik in SQL Server. Das bedeutet, dass beim Abfragen einer externen Tabelle keine Sperren oder Momentaufnahmeisolation erzwungen werden und sich daher zurückgegebene Daten ändern können, wenn die Daten in der externen Datenquelle geändert werden.  Die gleiche Abfrage kann bei jeder Ausführung für eine externe Tabelle unterschiedliche Ergebnisse zurückgeben. Auf ähnliche Weise kann eine Abfrage fehlschlagen, wenn die externen Daten verschoben oder entfernt werden.
 
 Sie können zahlreiche externe Tabellen erstellen, die alle auf unterschiedliche externe Datenquellen verweisen.
 
@@ -674,6 +672,24 @@ Nicht unterstützte Konstruktionen und Operationen:
 
 - Die DEFAULT-Einschränkung auf externen Tabellenspalten
 - DML-Vorgänge (Data Manipulation Language): DELETE, INSERT und UPDATE
+
+Nur die in einer Abfrage definierten Literalprädikate können per Push an die externe Datenquelle übertragen werden. Darin unterscheiden sie sich von verknüpften Servern und dem Zugriff darauf. Dort können Prädikate verwendet werden, die während der Abfrageausführung bestimmt werden, d. h. bei einer Verwendung in Verbindung mit einer geschachtelten Schleife in einem Abfrageplan. Dadurch wird häufig die gesamte externe Tabelle lokal kopiert und anschließend verknüpft.    
+
+```sql
+  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ This query  will copy the whole of the external locally as the predicate needed
+  \\ to filter isn't known at compile time. Its only known during execution of the query
+  
+  SELECT Orders.OrderId, Orders.OrderTotal 
+    FROM External.Orders
+   WHERE CustomerId in (SELECT TOP 1 CustomerId 
+                          FROM Customer 
+                         WHERE CustomerName = 'MyCompany')
+```
+
+Mit externen Tabellen kann die Verwendung von Parallelität im Abfrageplan verhindert werden.
+
+Externe Tabellen werden als Remoteabfrage implementiert, wodurch die geschätzte Anzahl der zurückgegebenen Zeilen in der Regel 1.000 beträgt. Weitere Regeln basierend auf dem Prädikatstyp können zum Filtern der externen Tabelle verwendet werden. Dabei handelt es sich um Regeln basierend auf Schätzungen und nicht um Schätzwerte, die auf den tatsächlichen Daten der externen Tabelle beruhen. Der Optimierer greift nicht auf die Remotedatenquelle zu, um genauere Schätzungen zu erhalten.
 
 ## <a name="locking"></a>Sperren
 
@@ -761,7 +777,7 @@ Wenn LOCATION als Ordner angegeben wird, ruft eine PolyBase-Abfrage, die aus der
 
 In diesem Beispiel gibt eine PolyBase-Abfrage Zeilen aus „mydata.txt“ und „mydata2.txt“ zurück, wenn LOCATION='/webdata/'. „Mydata3.txt“ wird nicht zurückgegeben, da es sich um einen Unterordner eines ausgeblendeten Ordners handelt. Es werden auch keine „_hidden.txt“-Dateien zurückgegeben, da es sich um eine ausgeblendete Datei handelt.
 
-![Rekursive Daten für externe Tabellen](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
+![Rekursive Daten für externe Tabellen](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Rekursive Daten für externe Tabellen")
 
 Um den Standardordner zu ändern, und nur aus dem Stammordner zu lesen, legen Sie das Attribut \<polybase.recursive.traversal> in der Konfigurationsdatei „core-site.xml“ auf FALSE fest. Diese Datei befindet sich unter `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Beispiel: `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
@@ -986,7 +1002,7 @@ Wenn LOCATION als Ordner angegeben wird, ruft eine PolyBase-Abfrage, die aus der
 
 In diesem Beispiel gibt eine PolyBase-Abfrage Zeilen aus „mydata.txt“ und „mydata2.txt“ zurück, wenn LOCATION='/webdata/'. „Mydata3.txt“ wird nicht zurückgegeben, da es sich um einen Unterordner eines ausgeblendeten Ordners handelt. Es werden auch keine „_hidden.txt“-Dateien zurückgegeben, da es sich um eine ausgeblendete Datei handelt.
 
-![Rekursive Daten für externe Tabellen](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
+![Rekursive Daten für externe Tabellen](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Rekursive Daten für externe Tabellen")
 
 Um den Standardordner zu ändern, und nur aus dem Stammordner zu lesen, legen Sie das Attribut \<polybase.recursive.traversal> in der Konfigurationsdatei „core-site.xml“ auf FALSE fest. Diese Datei befindet sich unter `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Beispiel: `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 

@@ -10,15 +10,15 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 08/20/2019
+ms.date: 11/06/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903622"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727766"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Häufige Fehler bei Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln in Azure Key Vault
 
@@ -26,14 +26,13 @@ ms.locfileid: "69903622"
 In diesem Artikel wird beschrieben, wie Sie Probleme mit dem Azure Key Vault-Schlüsselzugriff identifizieren und beheben, die dazu geführt haben, dass eine für die Verwendung von [Transparent Data Encryption (TDE) mit kundenseitig verwalteten Schlüsseln in Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) konfigurierte Datenbank nicht mehr zugänglich ist.
 
 ## <a name="introduction"></a>Einführung
-Wenn TDE zur Verwendung eines kundenseitig verwalteten Schlüssels in Azure Key Vault konfiguriert ist, muss fortlaufender Zugriff auf diesen TDE-Schutz gewährleistet sein, damit die Datenbank online bleibt.  Wenn die logische SQL Server-Instanz den Zugriff auf den kundenseitig verwalteten TDE-Schutz in Azure Key Vault verliert, lehnt eine Datenbank alle Verbindungen ab und wird im Azure-Portal als nicht zugänglich angezeigt.
+Wenn TDE zur Verwendung eines kundenseitig verwalteten Schlüssels in Azure Key Vault konfiguriert ist, muss fortlaufender Zugriff auf diesen TDE-Schutz gewährleistet sein, damit die Datenbank online bleibt.  Wenn die logische SQL Server-Instanz den Zugriff auf den kundenseitig verwalteten TDE-Schutz in Azure Key Vault verliert, beginnt eine Datenbank alle Verbindungen mit der entsprechenden Fehlermeldung abzulehnen. Zudem wird im Azure-Portal der Status in *Nicht zugänglich* geändert.
 
-Wenn das zugrunde liegende Azure Key Vault-Schlüsselzugriffsproblem innerhalb der ersten 48 Stunden behoben wird, wird die Datenbank automatisch repariert und wieder online geschaltet.  Dies bedeutet, dass bei zeitweiligen und vorübergehenden Netzwerkausfällen keine Benutzeraktion erforderlich ist und die Datenbank automatisch wieder online geschaltet wird.  In den meisten Fällen ist jedoch ein Benutzereingriff erforderlich, um das zugrunde liegende Azure Key Vault-Schlüsselzugriffsproblem zu lösen. 
+Wenn das zugrunde liegende Azure Key Vault-Schlüsselzugriffsproblem innerhalb der ersten 8 Stunden behoben wird, wird die Datenbank automatisch repariert und wieder online geschaltet. Dies bedeutet, dass bei zeitweiligen und vorübergehenden Netzwerkausfällen keine Benutzeraktion erforderlich ist und die Datenbank automatisch wieder online geschaltet wird. In den meisten Fällen ist jedoch ein Benutzereingriff erforderlich, um das zugrunde liegende Azure Key Vault-Schlüsselzugriffsproblem zu lösen. 
 
-Wenn eine unzugängliche Datenbank nicht länger benötigt wird, kann sie sofort gelöscht werden, um Kosten zu vermeiden.  Alle weiteren Aktionen für die Datenbank sind erst dann erlaubt, wenn der Zugriff auf den Azure Key Vault-Schlüssel wiederhergestellt wurde und die Datenbank wieder online ist.   Das Ändern der TDE-Option von kundenseitig verwalteten Schlüsseln zu dienstseitig verwalteten Schlüsseln wird ebenfalls nicht unterstützt, wenn eine mit kundenseitig verwalteten Schlüsseln verschlüsselte Datenbank nicht zugänglich ist. Dies ist erforderlich, um die Daten vor einem nicht autorisierten Zugriff zu schützen, wenn die Berechtigungen für den TDE-Schutz widerrufen wurden. 
+Wenn eine unzugängliche Datenbank nicht länger benötigt wird, kann sie sofort gelöscht werden, um Kosten zu vermeiden. Alle weiteren Aktionen für die Datenbank sind erst dann erlaubt, wenn der Zugriff auf den Azure Key Vault-Schlüssel wiederhergestellt wurde und die Datenbank wieder online ist. Das Ändern der TDE-Option von kundenseitig verwalteten Schlüsseln zu dienstseitig verwalteten Schlüsseln ist ebenfalls nicht möglich, wenn eine mit kundenseitig verwalteten Schlüsseln verschlüsselte Datenbank nicht zugänglich ist. Dies ist erforderlich, um die Daten vor einem nicht autorisierten Zugriff zu schützen, wenn die Berechtigungen für den TDE-Schutz widerrufen wurden. 
 
-Wenn eine Datenbank länger als 48 Stunden nicht zugänglich ist, ist eine automatische Reparatur nicht mehr möglich.  Wenn der erforderliche Azure Key Vault-Schlüsselzugriff wiederhergestellt wurde, müssen Sie den Zugriff manuell erneut validieren, um die Datenbank wieder online zu schalten.  Die Wiederinbetriebnahme der Datenbank, nachdem diese länger als 48 Stunden nicht erreichbar war, kann je nach Größe der Datenbank sehr lange dauern und erfordert aktuell ein Supportticket. Sobald die Datenbank wieder online ist, gehen zuvor konfigurierte Einstellungen wie z. B. die geografische Verknüpfung (bei konfigurierter georedundanter Notfallwiederherstellung), der PITR-Verlauf sowie Tags verloren.  Daher wird empfohlen, ein Benachrichtigungssystem mit [Aktionsgruppen](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) zu implementieren, mit dem zugrunde liegende Schlüsselprobleme innerhalb von 48 Stunden gelöst werden können. 
-
+Wenn eine Datenbank länger als 8 Stunden nicht zugänglich ist, ist eine automatische Reparatur nicht mehr möglich. Wenn der erforderliche Azure Key Vault-Schlüsselzugriff danach wiederhergestellt wurde, müssen Sie den Zugriff manuell erneut validieren, um die Datenbank wieder online zu schalten. Die Wiederinbetriebnahme der Datenbank kann in diesem Fall je nach Größe der Datenbank sehr lange dauern und erfordert aktuell das Öffnen eines Supporttickets. Sobald die Datenbank wieder online ist, gehen zuvor konfigurierte Einstellungen wie z. B. die geografische Verknüpfung (bei konfigurierter georedundanter Notfallwiederherstellung), der PITR-Verlauf sowie Tags verloren. Daher wird empfohlen, ein Benachrichtigungssystem mit [Aktionsgruppen](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) zu implementieren, mit dem zugrunde liegende Probleme mit dem Azure Key Vault-Schlüsselzugriff erkannt und gelöst werden können. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Häufige Fehler, die zu unzugänglichen Datenbanken führen
 
@@ -176,13 +175,13 @@ Beschreibung: Die Datenbank hat den Zugriff auf den Azure Key Vault-Schlüssel v
 
  
 
-**Ereignis, wenn die Wartezeit von 48 Stunden für die automatische Reparatur beginnt** 
+**Ereignis, wenn die Wartezeit von 8 Stunden für die automatische Reparatur beginnt** 
 
 EventName: MakeDatabaseInaccessible 
 
 Status: InProgress 
 
-Beschreibung: Die Datenbank wartet darauf, dass der Azure Key Vault-Schlüsselzugriff vom Benutzer innerhalb von 48 Stunden wiederhergestellt wird.   
+Beschreibung: Die Datenbank wartet darauf, dass der Azure Key Vault-Schlüsselzugriff vom Benutzer innerhalb von 8 Stunden wiederhergestellt wird.   
 
  
 
@@ -196,7 +195,7 @@ Beschreibung: Der Datenbankzugriff auf Azure Key Vault Key wurde wiederhergestel
 
  
 
-**Ereignis, wenn das Problem nicht innerhalb von 48 Stunden behoben wurde und der Azure Key Vault-Schlüsselzugriff manuell validiert werden muss** 
+**Ereignis, wenn das Problem nicht innerhalb von 8 Stunden behoben wurde und der Azure Key Vault-Schlüsselzugriff manuell validiert werden muss** 
 
 EventName: MakeDatabaseInaccessible 
 

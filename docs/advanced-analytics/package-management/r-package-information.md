@@ -1,6 +1,6 @@
 ---
-title: R-Paketinformationen erhalten
-description: Erfahren Sie, wie Sie Informationen zu installierten R-Paketen auf SQL Server Machine Learning Services und SQL Server R Services erhalten.
+title: Abrufen von Paketinformationen für R
+description: Erfahren Sie, wie Sie Informationen zum Installieren von R-Paketen in SQL Server Machine Learning Services und SQL Server R Services abrufen.
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
@@ -11,23 +11,23 @@ ms.author: garye
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8c3cf3c1debc03c169c585521b8b46dd8b1365c5
 ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69641157"
 ---
-# <a name="get-r-package-information"></a>R-Paketinformationen erhalten
+# <a name="get-r-package-information"></a>Abrufen von Paketinformationen für R
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Artikel wird beschrieben, wie Sie Informationen zu installierten R-Paketen auf SQL Server Machine Learning Services und SQL Server R Services erhalten. Beispiel-R-Skripts veranschaulichen, wie Sie Paketinformationen wie den Installationspfad und die Version auflisten.
+In diesem Artikel erfahren Sie, wie Sie Informationen zum Installieren von R-Paketen in SQL Server Machine Learning Services und SQL Server R Services abrufen. Dabei wird anhand von R-Beispielskripts veranschaulicht, wie Sie Paketinformationen, z. B. Installationspfad und Version, auflisten können.
 
-## <a name="default-r-library-location"></a>Standard Speicherort der R-Bibliothek
+## <a name="default-r-library-location"></a>Standardspeicherort der R-Bibliothek
 
-Wenn Sie Machine Learning mit SQL Server installieren, wird eine einzelne paketbibliothek auf Instanzebene für jede von Ihnen installierte Sprache erstellt. Unter Windows ist die instanzbibliothek ein sicherer Ordner, der bei SQL Server registriert ist.
+Wenn Sie Machine Learning-Funktionen mit SQL Server installieren, wird eine einzelne Paketbibliothek auf Instanzebene für jede von Ihnen installierte Sprache erstellt. Unter Windows ist die Instanzbibliothek ein gesicherter Ordner, der bei SQL Server registriert ist.
 
-Alle Skripts, die in der-Datenbank auf SQL Server ausgeführt werden, müssen Funktionen aus der-instanzbibliothek laden. SQL Server kann nicht auf Pakete zugreifen, die in anderen Bibliotheken installiert sind. Dies gilt auch für Remote Clients: bei allen R-Skripts, die im Server-computekontext ausgeführt werden, können nur in der instanzbibliothek installierte Pakete verwendet werden.
-Die standardinstanzbibliothek kann nur von einem Computer Administrator geändert werden, um Server Objekte zu schützen.
+Alle Skripts oder Codes, die datenbankintern in SQL Server ausgeführt werden, müssen Funktionen aus der Instanzbibliothek laden. SQL Server kann nicht auf Pakete zugreifen, die in anderen Bibliotheken installiert sind. Dies gilt auch für Remoteclients: Jedes R-Skript, das im Servercomputekontext ausgeführt wird, kann nur Pakete verwenden, die in der Instanzbibliothek installiert sind.
+Zum Schutz der Serverressourcen kann die Standardinstanzbibliothek nur von einem Computeradministrator geändert werden.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Der Standardpfad der Binärdateien für R lautet:
@@ -47,14 +47,14 @@ Der Standardpfad der Binärdateien für R lautet:
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
 ::: moniker-end
 
-Dabei wird die standardmäßige SQL-Instanz, MSSQLSERVER, vorausgesetzt. Wenn SQL Server als benutzerdefinierte benannte Instanz installiert wird, wird stattdessen der angegebene Name verwendet.
+Dabei wird von der standardmäßigen SQL-Instanz, MSSQLSERVER, ausgegangen. Wenn SQL Server als benutzerdefinierte benannte Instanz installiert wird, wird stattdessen der angegebene Name verwendet.
 
 <!-- I don't think this note is necessary. If you have these other products installed, you'd already know about them.
 > [!NOTE]
 > If you find other folders having similar subfolder names and files, you probably have a standalone installation of  Microsoft R Server or Machine Learning Server. These server products have different installers and paths: C:\Program Files\Microsoft\R Server\R_SERVER or C:\Program Files\Microsoft\ML SERVER\R_SERVER. For more information, see [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) or [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 -->
 
-Führen Sie die folgende Anweisung aus, um die Standard-R-paketbibliothek für die aktuelle Instanz zu überprüfen:
+Sie können die folgende Anweisung ausführen, um die Standardbibliothek des R-Pakets für die aktuelle Instanz zu überprüfen:
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -64,7 +64,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-In der folgenden Anweisung werden [rxsqllibpath](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) verwendet, um den Pfad der instanzbibliothek und die von SQL Server verwendete Version von revoscaler zurückzugeben:
+In der folgenden Anweisung wird [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) verwendet, um den Pfad der Instanzbibliothek und die von SQL Server verwendete Version von RevoScaleR zurückzugeben:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -77,64 +77,64 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE]
-> Die [rxsqllibpath](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) -Funktion kann nur auf dem lokalen Computer ausgeführt werden. Die Funktion kann keine Bibliothekspfade für Remote Verbindungen zurückgeben.
+> Die [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)-Funktion kann nur auf dem lokalen Computer ausgeführt werden. Die Funktion kann keine Bibliothekspfade für Remoteverbindungen zurückgeben.
 
-## <a name="default-r-packages"></a>Standard-R-Pakete
+## <a name="default-r-packages"></a>R-Standardpakete
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 Die folgenden R-Pakete werden mit SQL Server R Services installiert.
 
-|Pakete | Version | Beschreibung |
+|Pakete | Versionsoptionen | und Beschreibung |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Wird für remotecomputekontexte, Streaming, parallele Ausführung von RX-Funktionen für Datenimport und-Transformation, Modellierung, Visualisierung und Analyse verwendet. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | Wird zum Einschließen von R-Skripts in gespeicherte Prozeduren verwendet |
+| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Wird für Remotecomputekontexte, Streaming, parallele Ausführung von RX-Funktionen für Datenimport und Transformation, Modellierung, Visualisierung und Analyse verwendet. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | Wird zum Einschließen von R-Skripts in gespeicherte Prozeduren verwendet. |
 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
-Die folgenden r-Pakete werden mit SQL Server Machine Learning Services installiert, wenn Sie die r-Funktion während des Setups auswählen.
+Wenn Sie bei der Installation die R-Funktion auswählen, werden die folgenden R-Pakete mit SQL Server Machine Learning Services installiert.
 
-|Pakete | Version | Beschreibung |
+|Pakete | Versionsoptionen | und Beschreibung |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9,2 | Wird für remotecomputekontexte, Streaming, parallele Ausführung von RX-Funktionen für Datenimport und-Transformation, Modellierung, Visualisierung und Analyse verwendet. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 9,2 | Wird zum Einschließen von R-Skripts in gespeicherte Prozeduren verwendet |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9,2 | Fügt Machine Learning-Algorithmen in R hinzu. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 9,2 | Wird zum Schreiben von MDX-Anweisungen in R verwendet. |
+| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Wird für Remotecomputekontexte, Streaming, parallele Ausführung von RX-Funktionen für Datenimport und Transformation, Modellierung, Visualisierung und Analyse verwendet. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 9.2 | Wird zum Einschließen von R-Skripts in gespeicherte Prozeduren verwendet. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.2 | Fügt Machine Learning-Algorithmen in R hinzu. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 9.2 | Wird zum Schreiben von MDX-Anweisungen in R verwendet. |
 
 ::: moniker-end
 
-### <a name="component-upgrades"></a>Komponenten Upgrades
+### <a name="component-upgrades"></a>Komponentenupgrades
 
-R-Pakete werden standardmäßig durch Service Packs und kumulative Updates aktualisiert. Zusätzliche Pakete und vollständige Versions Upgrades von Kern-R-Komponenten sind nur durch Produkt Upgrades oder durch die Bindung von R-Unterstützung an Microsoft Machine Learning Server möglich.
+R-Pakete werden standardmäßig durch Service Packs und kumulative Updates aktualisiert. Zusätzliche Pakete und vollständige Versionsupgrades von R-Kernkomponenten sind nur durch Produktupgrades oder durch Binden des R-Supports an Microsoft Machine Learning Server möglich.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Außerdem können Sie microsoftml-und olapr-Pakete über ein Komponenten Upgrade zu einer SQL Server-Instanz hinzufügen.
+Außerdem können Sie MicrosoftML- und olapR-Pakete über ein Komponentenupgrade zu einer SQL Server-Instanz hinzufügen.
 ::: moniker-end
 
-Weitere Informationen finden Sie unter [Aktualisieren von R-und python-Komponenten in SQL Server](../install/upgrade-r-and-python.md).
+Weitere Informationen finden Sie unter [Upgrade R and Python components in SQL Server (Upgrade von R- und Python-Komponenten in SQL Server)](../install/upgrade-r-and-python.md).
 
-## <a name="default-open-source-r-packages"></a>Standard-Open-Source-R-Pakete
+## <a name="default-open-source-r-packages"></a>Open-Source-Standardpakete für R
 
-Die R-Unterstützung umfasst Open Source-Funktionen, sodass Sie grundlegende R-Funktionen aufzurufen und zusätzliche Open Source-und Drittanbieter Pakete installieren können. Die Unterstützung von R-Sprachen umfasst Kernfunktionen wie **Base**, **Stats**, **utils**und andere. Eine Basisinstallation von r umfasst auch zahlreiche Beispiel Datasets und r-Standard Tools, wie z. **b. rgui** (ein interaktiver interaktiver Editor) und **RTERM** (eine R-Eingabeaufforderung).
+Die R-Unterstützung umfasst Open-Source-Funktionen, sodass Sie grundlegende R-Funktionen aufrufen und zusätzliche Open-Source- und Drittanbieterpakete installieren können. Die Unterstützung der Programmiersprache R schließt Kernfunktionen **base**, **stats**, **utils** und andere ein. Eine Basisinstallation von R umfasst auch zahlreiche Beispieldatasets und standardmäßige R-Tools wie **RGui** (ein einfacher interaktiver Editor) und **RTerm** (eine R-Eingabeaufforderung).
 
-Die Verteilung von Open Source-R in Ihrer Installation ist [Microsoft R Open (MRO)](https://mran.microsoft.com/open). MRO fügt der Basis-R einen Wert hinzu, indem weitere Open Source-Pakete wie die [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library)eingeschlossen werden.
+Als Open-Source-Distribution von R ist [Microsoft R Open (MRO)](https://mran.microsoft.com/open) in der Installation enthalten. MRO ergänzt die R-Basisinstallation, indem dadurch zusätzliche Open-Source-Pakete wie die [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library) eingebunden werden.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Die Version von R, die von MRO mithilfe SQL Server R Services Setup bereitgestellt wird, ist 3.2.2.
+Beim SQL Server R Services-Setup wird zusammen mit MRO die R-Version 3.2.2 bereitgestellt.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Die Version von R, die von MRO mithilfe von SQL Server Machine Learning Services-Setup bereitgestellt wird, ist 3.3.3.
+Beim SQL Server Machine Learning Services-Setup wird zusammen mit MRO die R-Version 3.3.3 bereitgestellt.
 ::: moniker-end
 
 > [!IMPORTANT]
-> Sie sollten die installierte Version von R nie manuell überschreiben, indem Sie SQL Server-Setup mit neueren Versionen im Web. Microsoft r-Pakete basieren auf bestimmten Versionen von R. durch eine Änderung Ihrer Installation kann die Anwendung destabilisiert werden.
+> Überschreiben Sie die vom SQL Server-Setup installierte Version von R niemals manuell mit neueren, online verfügbaren Versionen. R-Pakete von Microsoft basieren auf bestimmten Versionen von R. Die Änderung Ihrer Installation könnte diese instabil machen.
 
 ## <a name="list-all-installed-r-packages"></a>Auflisten aller installierten R-Pakete
 
-Im folgenden Beispiel wird die r- `installed.packages()` Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)] einer gespeicherten Prozedur verwendet, um eine Liste der r-Pakete anzuzeigen, die in der R_SERVICES-Bibliothek für die aktuelle SQL-Instanz installiert wurden. Dieses Skript gibt die Felder Paketname und Version in der Beschreibungsdatei zurück.
+Im folgenden Beispiel wird die R-Funktion `installed.packages()` in einer gespeicherten Prozedur [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet, um eine Liste von R-Paketen anzuzeigen, die in der Bibliothek „R_SERVICES“ für die aktuelle SQL-Instanz installiert wurden. Dieses Skript gibt die Felder mit dem Paketnamen und der Version in der Datei „DESCRIPTION“ zurück.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -149,14 +149,14 @@ OutputDataSet <- data.frame(Name, Version);',
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-Weitere Informationen zu den optionalen Feldern und den Standard Feldern für das Feld "R Package Description [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)" finden Sie unter.
+Weitere Informationen zu den optionalen und Standardfeldern für das R-Paket im Feld „DESCRIPTION“ finden Sie unter [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).
 
 ## <a name="find-a-single-r-package"></a>Suchen eines einzelnen R-Pakets
 
-Wenn Sie ein R-Paket installiert haben und sicherstellen möchten, dass es für eine bestimmte SQL Server Instanz verfügbar ist, können Sie eine gespeicherte Prozedur ausführen, um das Paket zu laden und Nachrichten zurückzugeben.
+Wenn Sie ein R-Paket installiert haben und sicherstellen möchten, dass es für eine bestimmte SQL Server-Instanz verfügbar ist, können Sie eine gespeicherte Prozedur ausführen, um das Paket zu laden und Meldungen zurückzugeben.
 
-Beispielsweise wird mit der folgenden Anweisung das [glue](https://cran.r-project.org/web/packages/glue/)-Paket gesucht und geladen, sofern es verfügbar ist.
-Wenn das Paket nicht gefunden oder geladen werden kann, erhalten Sie eine Fehlermeldung mit dem Text "Es ist kein Paket mit dem Namen" Klebstoff "vorhanden.
+Mit der folgenden Anweisung wird zum Beispiel das Paket [glue](https://cran.r-project.org/web/packages/glue/) gesucht und, falls verfügbar, geladen.
+Wenn das Paket nicht gefunden oder geladen werden kann, erhalten Sie eine Fehlermeldung mit dem Text „Es ist kein Paket mit dem Namen ‚gule‘ vorhanden.“
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -165,8 +165,8 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-Weitere Informationen zum Paket `packageDescription`finden Sie unter.
-Die folgende Anweisung gibt Informationen für das **glue**-Installationspaket zurück.
+Weitere Informationen über das Paket finden Sie in der `packageDescription`.
+Die folgende Anweisung gibt Informationen zum Paket **glue** zurück.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -179,6 +179,6 @@ print(packageDescription("glue"))
 ## <a name="next-steps"></a>Nächste Schritte
 
 + [Neue R-Pakete installieren](../r/install-additional-r-packages-on-sql-server.md)
-+ [Informationen zum Python-Paket erhalten](python-package-information.md)
++ [Abrufen von Paketinformationen für Python](python-package-information.md)
 + [Neue Python-Pakete installieren](../python/install-additional-python-packages-on-sql-server.md)
-+ [Tutorials zu R und python](../tutorials/machine-learning-services-tutorials.md)
++ [R- und Python-Tutorials](../tutorials/machine-learning-services-tutorials.md)

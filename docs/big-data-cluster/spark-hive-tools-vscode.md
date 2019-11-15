@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653727"
@@ -23,7 +23,7 @@ Hier erfahren Sie, wie Sie Spark & Hive Tools für VS Code verwenden, um PySpark
 Die Spark & Hive Tools-Erweiterung kann auf allen von Visual Studio Code unterstützten Plattformen installiert werden. Dazu gehören Windows, Linux und macOS. Im Folgenden werden die Voraussetzungen für verschiedene Plattformen aufgeführt.
 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Die folgenden Elemente sind zum Ausführen der Schritte in diesem Artikel erforderlich:
 
@@ -31,7 +31,7 @@ Die folgenden Elemente sind zum Ausführen der Schritte in diesem Artikel erford
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono ist nur für Linux und macOS erforderlich.
 - [Einrichten einer interaktiven PySpark-Umgebung für Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment)
-- Ein lokales Verzeichnis mit dem Namen **sqlbdcexample**.  In diesem Artikel wird **c:\sqlbdc\sqlbdcexample**verwendet.
+- Ein lokales Verzeichnis namens **SQLBDCexample**.  In diesem Artikel wird **C:\SQLBDC\SQLBDCexample** verwendet.
 
 ## <a name="install-spark--hive-tools"></a>Installieren von Spark & Hive Tools
 
@@ -53,9 +53,9 @@ Sobald die Voraussetzungen erfüllt sind, können Sie Spark & Hive Tools für Vi
 
 Führen Sie die folgenden Schritte aus, um einen Arbeitsordner zu öffnen und eine Datei in Visual Studio Code zu erstellen:
 
-1. Navigieren Sie in der Menüleiste zu **Datei** > **Ordner öffnen...**  >  **C:\sqlbdc\sqlbdcexample**, und wählen Sie dann die Schaltfläche **Ordner auswählen** aus. Daraufhin wird der Ordner links in der Ansicht **Explorer** angezeigt.
+1. Navigieren Sie in der Menüleiste zu **Datei** > **Ordner öffnen...**  > **C:\SQLBDC\SQLBDCexample**, und klicken Sie dann auf die Schaltfläche **Ordner auswählen**. Daraufhin wird der Ordner links in der Ansicht **Explorer** angezeigt.
 
-2. Wählen Sie in der Ansicht **Explorer** den Ordner **sqlbdcexample**aus, und klicken Sie dann auf das Symbol **neue Datei** neben dem Arbeitsordner.
+2. Wählen Sie in der Ansicht **Explorer** den Ordner **SQLBDCexample** aus, und klicken Sie dann auf das Symbol **Neue Datei** neben dem Arbeitsordner.
 
    ![Neue Datei](./media/spark-hive-tools-vscode/new-file.png)
 
@@ -116,7 +116,7 @@ Bevor Sie Skripts an Ihre Cluster über Visual Studio Code übermitteln können,
 
 ## <a name="set-default-cluster"></a>Festlegen eines Standardclusters
 
-1. Öffnen Sie den [zuvor](#open-work-folder) erstellten Ordner **sqlbdcexample** , wenn er geschlossen ist.  
+1. Falls Sie den [zuvor](#open-work-folder) erstellten Ordner **SQLBDCexample** geschlossen haben, öffnen Sie ihn erneut.  
 
 2. Wählen Sie die Datei **HelloWorld.py** aus, die Sie [zuvor](#open-work-folder) erstellt haben, um sie im Skript-Editor zu öffnen.
 
@@ -132,7 +132,7 @@ Bevor Sie Skripts an Ihre Cluster über Visual Studio Code übermitteln können,
 
 Sie können interaktive PySpark-Abfragen mithilfe der folgenden Schritte übermitteln:
 
-1. Öffnen Sie den [zuvor](#open-work-folder) erstellten Ordner **sqlbdcexample** , wenn er geschlossen ist.  
+1. Falls Sie den [zuvor](#open-work-folder) erstellten Ordner **SQLBDCexample** geschlossen haben, öffnen Sie ihn erneut.  
 
 2. Wählen Sie die Datei **HelloWorld.py** aus, die Sie [zuvor](#open-work-folder) erstellt haben, um sie im Skript-Editor zu öffnen.
 
@@ -159,7 +159,7 @@ Sie können interaktive PySpark-Abfragen mithilfe der folgenden Schritte übermi
 
 ## <a name="submit-pyspark-batch-job"></a>Übermitteln von PySpark-Batchaufträgen
 
-1. Öffnen Sie den [zuvor](#open-work-folder) erstellten Ordner **sqlbdcexample** , wenn er geschlossen ist.  
+1. Falls Sie den [zuvor](#open-work-folder) erstellten Ordner **SQLBDCexample** geschlossen haben, öffnen Sie ihn erneut.  
 
 2. Wählen Sie die Datei **HelloWorld.py** aus, die Sie [zuvor](#open-work-folder) erstellt haben, um sie im Skript-Editor zu öffnen.
 
@@ -203,20 +203,20 @@ Die [Apache Livy](https://livy.incubator.apache.org/)-Konfiguration wird unterst
 | NAME | description | Typ |
 | :- | :- | :- |
 | file | Die Datei, die die auszuführende Anwendung enthält | Pfad (erforderlich) |
-| proxyUser | Der Benutzer, dessen Identität beim Ausführen des Auftrags angenommen werden soll | String |
-| className | Die Java-/Spark-Hauptklasse der Anwendung | String |
+| proxyUser | Der Benutzer, dessen Identität beim Ausführen des Auftrags angenommen werden soll | Zeichenfolge |
+| className | Die Java-/Spark-Hauptklasse der Anwendung | Zeichenfolge |
 | args | Die Befehlszeilenargumente für die Anwendung | Eine Liste von Zeichenfolgen |
 | jars | Die JAR-Dateien, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
 | pyFiles | Die Python-Dateien, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
 | files | Die Dateien, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
-| driverMemory | Die Menge an Arbeitsspeicher, die für den Treiberprozess verwendet werden soll | String |
-| driverCores | Die Anzahl der Kerne, die für den Treiberprozess verwendet werden soll | ssNoversion |
-| executorMemory | Die Menge an Arbeitsspeicher, die pro Executorprozess verwendet werden soll | String |
-| executorCores | Die Anzahl von Kernen, die für jeden Executor verwendet werden sollen | ssNoversion |
-| numExecutors | Die Anzahl der Executors, die für diese Sitzung gestartet werden sollen | ssNoversion |
+| driverMemory | Die Menge an Arbeitsspeicher, die für den Treiberprozess verwendet werden soll | Zeichenfolge |
+| driverCores | Die Anzahl der Kerne, die für den Treiberprozess verwendet werden soll | INT |
+| executorMemory | Die Menge an Arbeitsspeicher, die pro Executorprozess verwendet werden soll | Zeichenfolge |
+| executorCores | Die Anzahl von Kernen, die für jeden Executor verwendet werden sollen | INT |
+| numExecutors | Die Anzahl der Executors, die für diese Sitzung gestartet werden sollen | INT |
 | archives | Die Archive, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
-| Warteschlange | Der Name der YARN-Warteschlange, an die übermittelt werden soll | String |
-| NAME | Der Name der Sitzung | String |
+| queue | Der Name der YARN-Warteschlange, an die übermittelt werden soll | Zeichenfolge |
+| NAME | Der Name der Sitzung | Zeichenfolge |
 | conf | Spark-Konfigurationseigenschaften | Zuordnung von Schlüsseln zu Werten |
 
 #### <a name="response-body"></a>Antworttext
@@ -225,11 +225,11 @@ Das erstellte Batchobjekt
 
 | NAME | description | Typ |
 | :- | :- | :- |
-| id | Die Sitzungs-ID | ssNoversion |
+| id | Die Sitzungs-ID | INT |
 | appId | Die Anwendungs-ID der Sitzung | Zeichenfolge |
 | appInfo | Die ausführliche Anwendungsinformationen | Zuordnung von Schlüsseln zu Werten |
 | log | Die Protokollzeilen | Eine Liste von Zeichenfolgen |
-| state | Der Batchzustand | String |
+| state | Der Batchzustand | Zeichenfolge |
 
 >[!NOTE]
 >Die zugewiesene Livy-Konfiguration wird im Ausgabebereich angezeigt, wenn das Skript übermittelt wird.
@@ -255,4 +255,4 @@ Spark & Hive für Visual Studio Code unterstützt die folgenden Features:
 3. Überprüfen Sie die **Ausgabe**.  
 
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen zu SQL Server Big Data-Cluster und verwandten Szenarien finden [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)Sie unter.
+Weitere Informationen zu Big Data-Clustern für SQL Server und zugehörige Szenarios finden Sie unter [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).

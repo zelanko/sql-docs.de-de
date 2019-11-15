@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren von Azure Kubernetes Service
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie Azure Kubernetes Service (AKS) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] für bereit Stellungen konfigurieren.
+description: Erfahren Sie, wie Sie Azure Kubernetes Service (AKS) für die Bereitstellung von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] konfigurieren können.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
 ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/16/2019
 ms.locfileid: "71016890"
@@ -20,7 +20,7 @@ ms.locfileid: "71016890"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird beschrieben, wie Sie Azure Kubernetes Service (AKS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ) für bereit Stellungen konfigurieren.
+In diesem Artikel erfahren Sie, wie Sie Azure Kubernetes Service (AKS) für die Bereitstellung von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] konfigurieren können.
 
 AKS vereinfacht das Erstellen, Konfigurieren und Verwalten von VM-Clustern, die mithilfe eines Kubernetes-Clusters für die Ausführung von Containeranwendungen vorkonfiguriert werden. Dadurch können Sie Ihre eigenen Kenntnisse oder die der stetig wachsenden Community einsetzen, um containerbasierte Anwendungen in Microsoft Azure bereitzustellen und zu verwalten.
 
@@ -29,7 +29,7 @@ In diesem Artikel wird ausführlich beschrieben, wie Sie mithilfe der Azure CLI
 > [!TIP]
 > Sie können auch ein Skript erstellen, mit dem die Bereitstellung von AKS und eines Big-Data-Clusters in einem Schritt ausgeführt wird. Weitere Informationen finden Sie im Artikel zur Verwendung eines [Python-Skripts](quickstart-big-data-cluster-deploy.md) oder im Artikel zur Nutzung eines [Notebooks](deploy-notebooks.md) in Azure Data Studio.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [Stellen Sie die Big-Data-Tools für SQL Server 2019 bereit:](deploy-big-data-tools.md)
    - **Kubectl**
@@ -37,11 +37,11 @@ In diesem Artikel wird ausführlich beschrieben, wie Sie mithilfe der Azure CLI
    - **Erweiterung für SQL Server 2019**
    - **Azure CLI**
 
-- Mindestens 1,13-Version für Kubernetes-Server. Für AKS müssen Sie den Parameter `--kubernetes-version` verwenden, um eine andere als die Standardversion anzugeben.
+- Mindestens Version 1.13 für Kubernetes-Server. Für AKS müssen Sie den Parameter `--kubernetes-version` verwenden, um eine andere als die Standardversion anzugeben.
 
-- Sie können einen einzelnen Knoten oder einen AKS-Cluster mit mehreren Knoten verwenden, um eine erfolgreiche Bereitstellung und eine optimale Leistung beim Validieren grundlegender Szenarien auf AKS zu gewährleisten:
+- Sie können einen einzelnen Knoten oder einen AKS-Cluster mit mehreren Knoten verwenden, um eine erfolgreiche Bereitstellung und eine optimale Leistung bei der Überprüfung grundlegender Szenarios auf AKS zu gewährleisten:
    - 8 vCPUs, die auf alle Knoten verteilt sind
-   - 64 GB Arbeitsspeicher pro VM
+   - 64 GB Arbeitsspeicher pro VM
    - mindestens 24 angefügte Datenträger, die auf alle Knoten verteilt sind
 
    > [!TIP]
@@ -165,4 +165,4 @@ Wenn Sie die oben genannten Befehle verwenden und Probleme beim Erstellen einer 
 
 In diesem Artikel wurde beschrieben, wie Sie einen Kubernetes-Cluster in AKS konfigurieren können. Der nächste Schritt ist die Bereitstellung eines Big-Data-Clusters für SQL Server 2019 im AKS-Cluster. Weitere Informationen zum Bereitstellen von Big-Data-Clustern finden Sie im folgenden Artikel:
 
-[Bereitstellen auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes](deployment-guidance.md)
+[Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md)

@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/02/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,29 +20,37 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: b5566230f1739fd1d19d7ffa9dd34ce07caf1fa4
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 5ee3b24f1c2b85d2c4966b632257ac941c9776ee
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951648"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632899"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Erstellt einen Arbeitsauslastungsverwaltungsklassifizierer.  Der Klassifizierer weist eingehende Anforderungen einer Arbeitsauslastungsgruppe zu und weist Prioritäten auf Grundlage der Parameter zu, die in der Definition der Klassifiziereranweisung angegeben sind.  Klassifizierer werden bei jeder eingereichten Anforderung ausgewertet.  Wenn eine Anforderung nicht einem Klassifizierer zugeordnet werden kann, wird sie der Standardarbeitsauslastungsgruppe zugeordnet.  Die Standardarbeitsauslastungsgruppe ist die Ressourcenklasse „smallrc“.  
-  
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+Erstellt ein Klassifiziererobjekt für die Verwendung in der Arbeitsauslastungsverwaltung.  Der Klassifizierer weist eingehende Anforderungen auf Grundlage der Parameter, die in der Definition der Klassifiziereranweisung angegeben sind, einer Arbeitsauslastungsgruppe zu.  Klassifizierer werden bei jeder eingereichten Anforderung ausgewertet.  Wenn eine Anforderung nicht einem Klassifizierer zugeordnet werden kann, wird sie der Standardarbeitsauslastungsgruppe zugeordnet.  Die Standardarbeitsauslastungsgruppe ist die Ressourcenklasse „smallrc“.
+
+> [!NOTE]
+> Der Arbeitsauslastungsklassifizierer ersetzt die „sp_addrolemember“-Ressourcenklassenzuweisung.  Führen Sie nach dem Erstellen von Arbeitsauslastungsklassifizierern „sp_droprolemember“ aus, um redundante Ressourcenklassenzuordnungen zu entfernen.
+
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax
 
 ```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    ( WORKLOAD_GROUP = 'name'  
-     ,MEMBERNAME = 'security_account'
- [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL (default) | ABOVE_NORMAL | HIGH }])
+    (   WORKLOAD_GROUP = ‘name’  
+    ,   MEMBERNAME = ‘security_account’ 
+[ [ , ] WLM_LABEL = ‘label’ ]  
+[ [ , ] WLM_CONTEXT = ‘context’ ]  
+[ [ , ] START_TIME = ‘HH:MM’ ]  
+[ [ , ] END_TIME = ‘HH:MM’ ]  
+  
+[ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
 ```
 
@@ -51,24 +59,67 @@ WITH
  *classifier_name*  
  Gibt den Namen an, mit dem der Arbeitsauslastungsklassifizierer identifiziert werden kann.  „classifier_name“ ist vom Datentyp „sysname“.  Dieses Argument kann bis zu 128 Zeichen lang sein und muss innerhalb der Instanz einen eindeutigen Namen haben.
 
-WORKLOAD_GROUP = *'name'* Wenn die Klassifiziererregeln die Bedingungen erfüllen, ordnet „name“ die Anforderung einer Arbeitsauslastungsgruppe zu.  „name“ ist vom Datentyp „sysname“.  Es kann bis zu 128 Zeichen lang sein und muss zum Zeitpunkt der Erstellung des Klassifizierers ein gültiger Arbeitsauslastungsgruppenname sein.
+ *WORKLOAD_GROUP* =  *'name'*    
+ Wenn die Klassifiziererregeln die Bedingungen erfüllen, ordnet „name“ die Anforderung einer Arbeitsauslastungsgruppe zu.  „name“ ist vom Datentyp „sysname“.  Es kann bis zu 128 Zeichen lang sein und muss zum Zeitpunkt der Erstellung des Klassifizierers ein gültiger Arbeitsauslastungsgruppenname sein.
 
-WORKLOAD_GROUP sollte einer vorhandenen Ressourcenklasse zugeordnet werden:
+ Verfügbare Arbeitsauslastungsgruppen finden Sie in der Katalogansicht [sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest).
 
-|Statische Ressourcenklassen|Dynamische Ressourcenklassen|
-|------------------------|-----------------------|
-|staticrc10|smallrc|
-|staticrc20|mediumrc|
-|staticrc30|largerc|
-|staticrc40|xlargerc|
-|staticrc50||
-|staticrc60||
-|staticrc70||
-|staticrc80||
+ *MEMBERNAME* ='security_account'*    
+ Hierbei handelt es sich um das Sicherheitskonto, das der Rolle hinzugefügt wird.  „Security_account“ ist vom Datentyp „sysname“und hat keinen Standardwert. „Security_account“ kann ein Datenbankbenutzer, eine Datenbankrolle, eine Azure Active Directory-Anmeldung oder eine Azure Active Directory-Gruppe sein.
+ 
+ *WLM_LABEL*   
+ Gibt den Bezeichnungswert an, mit dem eine Anforderung klassifiziert werden kann.  „Label“ ist ein optionaler Parameter vom Typ nvarchar(255).  Verwenden Sie [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) in der Anforderung, um der Klassifiziererkonfiguration zu entsprechen.
 
-MEMBERNAME = *'security_account'* Dies ist das Sicherheitskonto, das der Rolle hinzugefügt wird.  „Security_account“ ist vom Datentyp „sysname“und hat keinen Standardwert. „Security_account“ kann ein Datenbankbenutzer, eine Datenbankrolle, eine Azure Active Directory-Anmeldung oder eine Azure Active Directory-Gruppe sein.
+Beispiel:
 
-IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } Gibt die relative Priorität einer Anforderung an.  Die Wichtigkeit kann einen der folgenden Werte aufweisen:
+```sql
+CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
+( WORKLOAD_GROUP = 'wgDataLoad'
+ ,MEMBERNAME     = 'ELTRole'  
+ ,WLM_LABEL      = 'dimension_loads' )
+
+SELECT COUNT(*) 
+  FROM DimCustomer
+  OPTION (LABEL = 'dimension_loads')
+```
+
+*WLM_CONTEXT*  
+Gibt den Sitzungskontextwert an, mit dem eine Anforderung klassifiziert werden kann.  „Context“ ist ein optionaler Parameter vom Typ nvarchar(255).  Verwenden Sie [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest) mit dem Variablennamen `wlm_context`, bevor Sie eine Anforderung zum Festlegen des Sitzungskontexts übermitteln.
+
+Beispiel:
+
+```sql
+CREATE WORKLOAD CLASSIFIER wcDataLoad WITH  
+( WORKLOAD_GROUP = 'wgDataLoad'
+ ,MEMBERNAME     = 'ELTRole'
+ ,WLM_CONTEXT    = 'dim_load' )
+ 
+--set session context
+EXEC sys.sp_set_session_context @key = 'wlm_context', @value = 'dim_load'
+
+--run multiple statements using the wlm_context setting
+SELECT COUNT(*) FROM stg.daily_customer_load
+SELECT COUNT(*) FROM stg.daily_sales_load
+
+--turn off the wlm_context session setting
+EXEC sys.sp_set_session_context @key = 'wlm_context', @value = null
+```
+
+*START_TIME* und *END_TIME*  
+Gibt „start_time“ und „end_time“ an, mit denen eine Anforderung klassifiziert werden kann.  Sowohl „start_time“ als auch „end_time“ weisen das Format HH:MM in der UTC-Zeitzone auf.  „Start_time“ und „end_time“ müssen zusammen angegeben werden.
+
+Beispiel:
+
+```sql
+CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
+( WORKLOAD_GROUP = 'wgDataLoads'
+ ,MEMBERNAME     = 'ELTRole'  
+ ,START_TIME     = '22:00'
+ ,END_TIME       = '02:00' )
+```
+
+*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+Gibt die relative Wichtigkeit einer Anforderung an.  Die Wichtigkeit kann einen der folgenden Werte aufweisen:
 
 - LOW
 - BELOW_NORMAL
@@ -76,9 +127,37 @@ IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } Gibt die rela
 - ABOVE_NORMAL
 - HIGH  
 
-Die Priorität beeinflusst die Reihenfolge, in der Anforderungen geplant werden und somit zuerst Zugriff auf Ressourcen und Sperren erhalten.
+Wenn Sie die Wichtigkeit nicht angeben, wird die Wichtigkeitseinstellung der Arbeitsauslastungsgruppe verwendet.  Die Standardwichtigkeit der Arbeitsauslastungsgruppe ist „normal“.  Die Priorität beeinflusst die Reihenfolge, in der Anforderungen geplant werden und somit zuerst Zugriff auf Ressourcen und Sperren erhalten.
 
-Wenn ein Benutzer Mitglied mehrerer Rollen mit verschiedenen zugewiesenen Ressourcenklassen oder Übereinstimmungen in mehreren Klassifizierern ist, wird dem Benutzer die höchste Ressourcenklasse zugewiesen. Weitere Informationen finden Sie unter [workload classification (Workloadklassifizierung)](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence).
+## <a name="classification-parameter-precedence"></a>Rangfolge der Klassifizierungsparameter
+
+Eine Anforderung kann mit mehreren Klassifizierern übereinstimmen.  Es gibt eine Rangfolge der Klassifizierungsparameter.  Der in der Rangfolge höhere Klassifizierer wird zuerst verwendet, um eine Arbeitsauslastungsgruppe und Wichtigkeit zuzuweisen.  Die Rangfolge lautet wie folgt:
+1. Benutzer
+2. ROLE
+3. WLM_LABEL
+4. WLM_SESSION
+5. START_TIME/END_TIME
+
+Beachten Sie die folgenden Klassifiziererkonfigurationen.
+
+```sql
+CREATE WORKLOAD CLASSIFIER classiferA WITH  
+( WORKLOAD_GROUP = 'wgDashboards'  
+ ,MEMBERNAME     = 'userloginA'
+ ,IMPORTANCE     = HIGH
+ ,WLM_LABEL      = 'salereport' )
+
+CREATE WORKLOAD CLASSIFIER classiferB WITH  
+( WORKLOAD_GROUP = 'wgUserQueries'  
+ ,MEMBERNAME     = 'userloginA'
+ ,IMPORTANCE     = LOW
+ ,START_TIME     = '18:00')
+ ,END_TIME       = '07:00' )
+```
+
+Der Benutzer `userloginA` ist für beide Klassifizierer konfiguriert.  Wenn „userloginA“ zwischen 18:00 Uhr und 07:00 Uhr eine Abfrage mit der Bezeichnung `salesreport` ausführt, wird die Anforderung mit der Wichtigkeit „HIGH“ in die Arbeitsauslastungsgruppe „wgDashboards“ klassifiziert.  Es wird möglicherweise erwartet, dass die Anforderung außerhalb der Geschäftszeiten mit Wichtigkeit „LOW“ in „wgUserQueries“ klassifiziert wird. „WLM_LABEL“ ist in der Rangfolge höher als „START_TIME/END_TIME“.  In diesem Fall können Sie „START_TIME/END_TIME“ zu „classiferA“ hinzufügen.
+
+ Weitere Informationen finden Sie unter [Arbeitsauslastungsklassifizierung](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence).
 
 ## <a name="permissions"></a>Berechtigungen
 

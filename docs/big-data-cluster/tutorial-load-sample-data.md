@@ -11,21 +11,21 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653287"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Laden von Beispieldaten in einen Big Data-Cluster für SQL Server
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Lernprogramm: Laden von Beispieldaten in einen Big Data-Cluster für SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Tutorial wird erläutert, wie Sie ein Skript zum Laden von Beispiel [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Daten in einen verwenden. In vielen anderen Tutorials der Dokumentation werden diese Beispieldaten verwendet.
+In diesem Tutorial wird erläutert, wie Sie ein Skript zum Laden von Beispieldaten in einen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] verwenden. In vielen anderen Tutorials der Dokumentation werden diese Beispieldaten verwendet.
 
 > [!TIP]
-> Weitere Beispiele für finden Sie im [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] GitHub-Repository für [SQL Server-Beispiele](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) . Sie befinden sich im Pfad **sql-server-samples/samples/features/sql-big-data-cluster/** .
+> Weitere Beispiele für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] finden Sie im GitHub-Repository [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). Sie befinden sich im Pfad **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [Ein bereitgestellter Big Data-Cluster](deployment-guidance.md)
 - [Big Data-Tools](deploy-big-data-tools.md)
@@ -61,7 +61,7 @@ In den folgenden Schritten wird beschrieben, wie Sie einen Windows-Client verwen
 
 1. Das Bootstrapskript erfordert die folgenden Positionsparameter für Ihren Big Data-Cluster:
 
-   | Parameter | Beschreibung |
+   | Parameter | und Beschreibung |
    |---|---|
    | <CLUSTER_NAMESPACE> | Der Name, den Sie Ihrem Big Data-Cluster gegeben haben. |
    | <SQL_MASTER_IP> | Die IP-Adresse Ihrer Masterinstanz. |
@@ -97,7 +97,7 @@ In den folgenden Schritten wird beschrieben, wie Sie einen Linux-Client verwende
 
 1. Das Bootstrapskript erfordert die folgenden Positionsparameter für Ihren Big Data-Cluster:
 
-   | Parameter | Beschreibung |
+   | Parameter | und Beschreibung |
    |---|---|
    | <CLUSTER_NAMESPACE> | Der Name, den Sie Ihrem Big Data-Cluster gegeben haben. |
    | <SQL_MASTER_IP> | Die IP-Adresse Ihrer Masterinstanz. |

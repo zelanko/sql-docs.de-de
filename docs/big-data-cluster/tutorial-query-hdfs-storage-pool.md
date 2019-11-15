@@ -1,7 +1,7 @@
 ---
 title: Abfragen von HDFS-Daten im Speicherpool
 titleSuffix: SQL Server big data clusters
-description: In diesem Tutorial wird veranschaulicht, wie HDFS-Daten [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]in einer abgefragt werden. Sie erstellen eine externe Tabelle für Daten im Speicherpool und führen dann eine Abfrage aus.
+description: In diesem Tutorial erfahren Sie, wie Sie HDFS-Daten in einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] abfragen. Sie erstellen eine externe Tabelle für Daten im Speicherpool und führen dann eine Abfrage aus.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,16 +11,16 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652443"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Abfragen von HDFS in einem Big-Data-Cluster für SQL Server
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Lernprogramm: Abfragen von HDFS in einem Big-Data-Cluster für SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Tutorial wird veranschaulicht, wie HDFS-Daten [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]in einer abgefragt werden.
+In diesem Tutorial erfahren Sie, wie Sie HDFS-Daten in einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] abfragen.
 
 In diesem Tutorial lernen Sie Folgendes:
 

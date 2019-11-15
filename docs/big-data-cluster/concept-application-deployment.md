@@ -1,7 +1,7 @@
 ---
 title: Was ist Anwendungsbereitstellung?
 titleSuffix: Big Data Clusters for SQL Server 2019
-description: In diesem Artikel wird die Anwendungs Bereitstellung in einem Big Data-Cluster für SQL Server 2019 beschrieben.
+description: In diesem Artikel wird die Anwendungsbereitstellung auf einem Big Data-Cluster für SQL Server 2019 beschrieben.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653007"
@@ -61,12 +61,12 @@ Es ist auch möglich, dass eine Anwendung mit einem RESTful-Webdienst ausgeführ
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Erstellen und Ausführen von Anwendungen unter [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]finden Sie in den folgenden Bereichen:
+Weitere Informationen zum Erstellen und Ausführen von Anwendungen auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie unter:
 
 - [Bereitstellen von Anwendungen mit „azdata“](big-data-cluster-create-apps.md)
 - [Vorgehensweise: Verwenden von Visual Studio Code zum Bereitstellen von Anwendungen für SQL Server-Big Data-Cluster](app-deployment-extension.md)
 - [Verwenden von Anwendungen auf Big Data-Clustern](big-data-cluster-consume-apps.md)
 
-Weitere Informationen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]zum finden Sie in der folgenden Übersicht:
+Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie in der folgenden Übersicht:
 
 - [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

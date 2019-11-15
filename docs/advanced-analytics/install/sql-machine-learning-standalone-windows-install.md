@@ -1,19 +1,20 @@
 ---
-title: Installieren von R Server oder Machine Learning Server (eigenständig) mit SQL Server-Setup
-description: Richten Sie mithilfe von RevoScaleR, revoscalepy, MicrosoftML und anderen Paketen eigenständige Machine Learning-Server für die R- und Python-Entwicklung ein, die nicht instanzabhängig sind.
+title: Installieren von Machine Learning Server (eigenständig)
+description: Richten Sie mithilfe von RevoScaleR, revoscalepy, MicrosoftML und anderen Paketen eine eigenständige Machine Learning Server-Plattform für die R- und Python-Entwicklung ein, die nicht instanzabhängig ist.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 14b0fc05a570a14c5ed613b438e2672098b67d4b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532671"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727637"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installieren von Machine Learning Server (eigenständig) oder R Server (Standalone) mithilfe des SQL Server-Setups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

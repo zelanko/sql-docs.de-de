@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren von Kubernetes mit kubeadm
-titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie Kubernetes auf mehreren Ubuntu 16,04-oder 18,04-Computern (physisch oder [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] virtuell) für bereit Stellungen konfigurieren.
+titleSuffix: SQL Server Big Data Clusters
+description: Erfahren Sie, wie Sie Kubernetes auf mehreren Ubuntu 16.04- oder 18.04-Computern (physisch oder virtuell) für[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]-Bereitstellungen konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,24 +9,24 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 0bec68e81eab8557e86bfcbd5db78e19c0ce2175
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688299"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706368"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Kubernetes auf mehreren Computern für SQL Server-Big Data-Cluster-Bereitstellungen
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieser Artikel enthält ein Beispiel für die Verwendung von **kubeadm** zum Konfigurieren von Kubernetes auf mehreren Computern [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] für bereit Stellungen. In diesem Beispiel sind mehrere Ubuntu 16.04- oder 18.04 LTS-Computer (physisch oder virtuell) das Ziel. Für Bereitstellungen auf einer anderen Linux-Plattform müssen Sie einige der Befehle so ändern, dass Sie Ihrem System entsprechen.  
+Dieser Artikel enthält ein Beispiel für die Verwendung von **kubeadm** zum Konfigurieren von Kubernetes auf mehreren Computern für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]-Bereitstellungen. In diesem Beispiel sind mehrere Ubuntu 16.04- oder 18.04 LTS-Computer (physisch oder virtuell) das Ziel. Für Bereitstellungen auf einer anderen Linux-Plattform müssen Sie einige der Befehle so ändern, dass Sie Ihrem System entsprechen.  
 
 > [!TIP] 
 > Beispielskripts zum Konfigurieren von Kubernetes finden Sie unter [Create a Kubernetes cluster using Kubeadm on Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm) (Erstellen eines Kubernetes-Clusters mit Kubeadm auf Ubuntu 16.04 LTS oder 18.04 LTS).
 In [diesem ](deployment-script-single-node-kubeadm.md) Thema finden Sie auch ein Beispielskript, das eine kubeadm-Bereitstellung eines einzelnen Knotens auf einem virtuellen Computer automatisiert und dann eine Standardkonfiguration des Big Data-Clusters darauf bereitstellt.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - Mindestens 3 physische Linux-Computer oder virtuelle Computer
 - Empfohlene Konfiguration pro Computer:
@@ -35,7 +35,7 @@ In [diesem ](deployment-script-single-node-kubeadm.md) Thema finden Sie auch ein
    - 100GB Speicher
  
 > [!Important] 
-> Stellen Sie vor dem Starten der Big Data Cluster Bereitstellung sicher, dass die Uhren über alle Kubernetes Knoten hinweg synchronisiert werden, auf die die Bereitstellung abzielt. Der Big Data-Cluster verfügt über integrierte Integritäts Eigenschaften für verschiedene Dienste, bei denen es sich um Zeit empfindliche Dienste handelt, und Takt Abweichungen können zu einem falschen Status führen.
+> Stellen Sie vor der Bereitstellung eines Big Data Clusters sicher, dass die Uhren auf allen für die Bereitstellung verwendeten Kubernetes-Knoten synchronisiert werden. Der Big Data-Cluster verfügt über integrierte Integritätseigenschaften für verschiedene zeitempfindliche Dienste. Zudem können zeitliche Abweichungen zu einer falschen Statusangabe führen.
 
 ## <a name="prepare-the-machines"></a>Vorbereiten der Computer
 
