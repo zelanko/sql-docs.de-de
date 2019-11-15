@@ -19,12 +19,12 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fd136eddc1aba4dc5a927d6ca027c17dfb38485
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 49311ac52d9dba7c31e48f68b4363ead5a2c0b2a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304761"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095337"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "72304761"
   
  Weitere Informationen zu Sequenznummern finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,27 +51,27 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @sequence_name = ] N'sequence'` den Namen des Sequenz Objekts. Das Schema ist optional. *sequence_name* ist vom Datentyp **nvarchar (776)** .  
+`[ @sequence_name = ] N'sequence'` den Namen des Sequenz Objekts ab. Das Schema ist optional. *sequence_name* ist vom Datentyp **nvarchar (776)** .  
   
-`[ @range_size = ] range_size` die Anzahl der Werte, die aus der Sequenz abgerufen werden sollen. **\@range_size** ist **bigint**.  
+`[ @range_size = ] range_size` die Anzahl der Werte, die aus der Sequenz abgerufen werden sollen. **\@range_size** ist " **bigint**".  
   
-der Output-Parameter `[ @range_first_value = ] range_first_value` gibt den ersten (minimalen oder maximalen) Wert des Sequenz Objekts zurück, mit dem der angeforderte Bereich berechnet wird. **\@range_first_value** ist **sql_variant** mit dem gleichen Basistyp wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
+`[ @range_first_value = ] range_first_value` Output-Parameter gibt den ersten (minimalen oder maximalen) Wert des Sequenz Objekts zurück, das verwendet wird, um den angeforderten Bereich zu berechnen. **\@range_first_value** wird mit dem gleichen Basistyp **sql_variant** wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
   
-`[ @range_last_value = ] range_last_value` Optionale Ausgabeparameter gibt den letzten Wert des angeforderten Bereichs zurück. **\@range_last_value** ist **sql_variant** mit dem gleichen Basistyp wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
+`[ @range_last_value = ] range_last_value` Optionale Ausgabeparameter gibt den letzten Wert des angeforderten Bereichs zurück. **\@range_last_value** wird mit dem gleichen Basistyp **sql_variant** wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
   
-`[ @range_cycle_count = ] range_cycle_count` Optionale Ausgabeparameter gibt die Anzahl der Wiederholungen zurück, die das Sequenz Objekt durchlaufen hat, um den angeforderten Bereich zurückzugeben. **\@range_cycle_count** ist vom Datentyp **int**.  
+`[ @range_cycle_count = ] range_cycle_count` optionaler OUTPUT-Parameter gibt an, wie oft das Sequenz Objekt durchlaufen wurde, um den angeforderten Bereich zurückzugeben. **\@range_cycle_count** ist vom Datentyp **int**.  
   
-`[ @sequence_increment = ] sequence_increment` Optionale Ausgabeparameter gibt das Inkrement des Sequenz Objekts zurück, mit dem der angeforderte Bereich berechnet wird. **\@sequence_increment** ist **sql_variant** mit dem gleichen Basistyp wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
+`[ @sequence_increment = ] sequence_increment` optionaler OUTPUT-Parameter gibt das Inkrement des Sequenz Objekts zurück, mit dem der angeforderte Bereich berechnet wird. **\@sequence_increment** wird mit dem gleichen Basistyp **sql_variant** wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
   
-`[ @sequence_min_value = ] sequence_min_value` Optionale Ausgabeparameter gibt den minimalen Wert des Sequenz Objekts zurück. **\@sequence_min_value** ist **sql_variant** mit dem gleichen Basistyp wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
+`[ @sequence_min_value = ] sequence_min_value` Optionale Ausgabeparameter gibt den minimalen Wert des Sequenz Objekts zurück. **\@sequence_min_value** wird mit dem gleichen Basistyp **sql_variant** wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
   
-`[ @sequence_max_value = ] sequence_max_value` Optionale Ausgabeparameter gibt den maximalen Wert des Sequenz Objekts zurück. **\@sequence_max_value** ist **sql_variant** mit dem gleichen Basistyp wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
+`[ @sequence_max_value = ] sequence_max_value` Optionale Ausgabeparameter gibt den maximalen Wert des Sequenz Objekts zurück. **\@sequence_max_value** wird mit dem gleichen Basistyp **sql_variant** wie das Sequenz Objekt, das in der Anforderung verwendet wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- sp_sequence_get_rangeis in sys. auf das Schema und kann als sys. sp_sequence_get_range verwiesen werden.  
+## <a name="remarks"></a>Remarks  
+ sp_sequence_get_rangeis in sys. Schema und können als sys. sp_sequence_get_range referenziert werden.  
   
 ### <a name="cycling-sequences"></a>Zyklussequenzen  
  Falls erforderlich, durchläuft das Sequenzobjekt die entsprechende Anzahl von Zyklen, um den angeforderten Bereich zu versorgen. Die Anzahl der Zyklussequenzen wird mit dem `@range_cycle_count`-Parameter an den Aufrufer zurückgegeben.  
@@ -109,8 +109,7 @@ CREATE SEQUENCE Test.RangeSeq
  Mit der folgenden Anweisung werden vier Sequenznummern aus dem "Test. rangeseq"-Sequenz Objekt abgerufen, und die erste der Zahlen wird an den Benutzer zurückgegeben.  
   
 ```  
-DECLARE @range_first_value sql_variant ,   
-        @range_first_value_output sql_variant ;  
+DECLARE @range_first_value_output sql_variant ;  
   
 EXEC sp_sequence_get_range  
 @sequence_name = N'Test.RangeSeq'  
@@ -122,7 +121,7 @@ SELECT @range_first_value_output AS FirstNumber ;
 ```  
   
 ### <a name="b-returning-all-output-parameters"></a>B. Zurückgeben aller Ausgabeparameter  
- Im folgenden Beispiel werden alle Ausgabewerte der sp_sequence_get_range-Prozedur zurückgegeben.  
+ Im folgenden Beispiel werden alle Ausgabewerte aus der sp_sequence_get_range Prozedur zurückgegeben.  
   
 ```  
 DECLARE    

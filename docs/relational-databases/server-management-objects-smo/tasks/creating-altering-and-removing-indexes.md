@@ -1,6 +1,6 @@
 ---
-title: Erstellen, ändern und Entfernen von Indizes | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen, Ändern und Löschen von Indizes
+ms.custom: seo-dt-2019
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 566cec97b8c26f21602807b3dd36c307864f62ec
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 42acad11884fa9edc779d6aa52a94ccf38ee5444
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148478"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095519"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Erstellen, Ändern und Löschen von Indizes
 
@@ -32,7 +32,7 @@ ms.locfileid: "70148478"
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Erstellen eines nicht gruppierten, zusammengesetzten Indexes in Visual Basic  
- In diesem Codebeispiel wird veranschaulicht, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> die-Eigenschaft für einen nicht gruppierten Index auf **false** fest.  
+ In diesem Codebeispiel wird veranschaulicht, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>-Eigenschaft für einen nicht gruppierten Index auf **false** fest.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Erstellen eines nicht gruppierten, zusammengesetzten Index in Visual C#  
- In diesem Codebeispiel wird veranschaulicht, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> die-Eigenschaft für einen nicht gruppierten Index auf **false** fest.  
+ In diesem Codebeispiel wird veranschaulicht, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>-Eigenschaft für einen nicht gruppierten Index auf **false** fest.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Erstellen eines nicht gruppierten, zusammengesetzten Index in PowerShell  
- In diesem Codebeispiel wird veranschaulicht, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> die-Eigenschaft für einen nicht gruppierten Index auf **false** fest.  
+ In diesem Codebeispiel wird veranschaulicht, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>-Eigenschaft für einen nicht gruppierten Index auf **false** fest.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

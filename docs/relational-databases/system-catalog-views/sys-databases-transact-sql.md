@@ -1,7 +1,7 @@
 ---
 title: sys. Datenbanken (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 444be64a8e512011bb20ee103ad0ea459fc413ed
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981854"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095869"
 ---
 # <a name="sysdatabases-transact-sql"></a>group_database_id
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ Wenn eine Datenbank nicht `ONLINE`oder `AUTO_CLOSE` auf `ON` festgelegt ist und 
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT ist ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT ist OFF|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT ist lokal<br /> 0 = CURSOR_DEFAULT ist global|  
 |**is_fulltext_enabled**|**bit**|1 = Volltext ist für die Datenbank aktiviert<br /> 0 = Volltext ist für die Datenbank deaktiviert|  
-|**is_trustworthy_on**|**bit**|1 = Datenbank wurde als vertrauenswürdig gekennzeichnet<br /> 0 = Datenbank wurde nicht als vertrauenswürdig gekennzeichnet|  
+|**is_trustworthy_on**|**bit**|1 = Datenbank wurde als vertrauenswürdig gekennzeichnet<br /> 0 = Datenbank wurde nicht als vertrauenswürdig gekennzeichnet<br /> Bei wiederhergestellten oder angefügten Datenbanken ist der Broker standardmäßig deaktiviert. Die Ausnahme hiervon ist die Datenbankspiegelung, bei der der Broker nach einem Failover aktiviert wird.|  
 |**is_db_chaining_on**|**bit**|1 = Datenbankübergreifende Besitzverkettung ist ON<br /> 0 = Datenbankübergreifende Besitzverkettung ist OFF|  
 |**is_parameterization_forced**|**bit**|1 = Parametrisierung ist FORCED<br /> 0 = Parametrisierung ist SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = Datenbank verfügt über verschlüsselten Hauptschlüssel<br /> 0 = Datenbank verfügt nicht über verschlüsselten Hauptschlüssel|  
@@ -93,7 +93,7 @@ Wenn eine Datenbank nicht `ONLINE`oder `AUTO_CLOSE` auf `ON` festgelegt ist und 
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION ist ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION ist OFF|  
 |**is_cdc_enabled**|**bit**|1 = Datenbank ist für Change Data Capture aktiviert. Weitere Informationen finden Sie unter [sys. sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
 |**is_encrypted**|**bit**|Gibt an, ob die Datenbank verschlüsselt ist (gibt den zuletzt festgelegten Status mit der `ALTER DATABASE SET ENCRYPTION`-Klausel wieder). Kann einer der folgenden Werte sein:<br /> 1 = Verschlüsselt.<br /> 0 = Nicht verschlüsselt<br /> Weitere Informationen zur Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Wenn die Datenbank gerade entschlüsselt wird, zeigt `is_encrypted` den Wert 0 an. Sie können den Status des Verschlüsselungs Prozesses mithilfe der dynamischen Verwaltungs Sicht [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) anzeigen.|  
-|**is_honor_broker_priority_on**|**bit**|Gibt an, ob die Datenbank die Konversations Prioritäten berücksichtigt (gibt den zuletzt festgelegten Status mit der `ALTER DATABASE SET HONOR_BROKER_PRIORITY`-Klausel wieder). Kann einer der folgenden Werte sein:<br /> 1 = HONOR_BROKER_PRIORITY ist ON<br /> 0 = HONOR_BROKER_PRIORITY ist OFF|  
+|**is_honor_broker_priority_on**|**bit**|Gibt an, ob die Datenbank die Konversations Prioritäten berücksichtigt (gibt den zuletzt festgelegten Status mit der `ALTER DATABASE SET HONOR_BROKER_PRIORITY`-Klausel wieder). Kann einer der folgenden Werte sein:<br /> 1 = HONOR_BROKER_PRIORITY ist ON<br /> 0 = HONOR_BROKER_PRIORITY ist OFF<br /> Bei wiederhergestellten oder angefügten Datenbanken ist der Broker standardmäßig deaktiviert. Die Ausnahme hiervon ist die Datenbankspiegelung, bei der der Broker nach einem Failover aktiviert wird.|  
 |**replica_id**|**uniqueidentifier**|Eindeutiger Bezeichner des lokalen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Verfügbarkeitsreplikats der Verfügbarkeitsgruppe, an der die Datenbank ggf. teilnimmt.<br /> NULL = Datenbank ist kein Teil eines Verfügbarkeitsreplikats einer Verfügbarkeitsgruppe<br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Eindeutiger Bezeichner der Datenbank in einer Always on Verfügbarkeits Gruppe, in der die Datenbank beteiligt ist, falls vorhanden. **group_database_id** ist für diese Datenbank auf dem primären Replikat und jedem sekundären Replikat, auf dem die Datenbank der Verfügbarkeitsgruppe hinzugefügt wurde, identisch.<br /> NULL = Datenbank ist kein Teil eines Verfügbarkeitsreplikats einer beliebigen Verfügbarkeitsgruppe<br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|Die ID des Ressourcenpools, der dieser Datenbank zugeordnet ist. Dieser Ressourcenpool steuert den insgesamt für speicheroptimierte Tabellen in dieser Datenbank verfügbaren Arbeitsspeicher.<br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher|  

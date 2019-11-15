@@ -1,6 +1,5 @@
 ---
-title: Neue Datums-und Uhrzeit Funktionen mit früheren SQL Server Versionen (OLE DB) | Microsoft-Dokumentation
-ms.custom: ''
+title: Datums-und Uhrzeit OLE DB Funktionen mit früheren SQL Server Versionen
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -10,18 +9,19 @@ ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f12861b4bcd205263c54fae43e0a401b3219f33
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 100a0b6a96c9359e224e406928b03a2aa776511e
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73769369"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095457"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Neue Funktionen für Datum und Uhrzeit bei früheren SQL Server-Versionen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Thema wird das erwartete Verhalten beschrieben, wenn eine Client Anwendung, die verbesserte Datums-und Uhrzeit Funktionen verwendet, mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]kommuniziert und wenn ein Client mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client als @no__t_ kompiliert wurde. 3_ sendet Befehle an einen Server, der erweiterte Datums-und Uhrzeit Funktionen unterstützt.[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+  In diesem Thema wird das erwartete Verhalten beschrieben, wenn eine Client Anwendung, die verbesserte Datums-und Uhrzeit Funktionen verwendet, mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]kommuniziert und wenn ein Client, der mit einer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] kompiliert wurde, Befehle an einen Server sendet, der erweiterte Datums-und Uhrzeit Funktionen unterstützt.  
   
 ## <a name="down-level-client-behavior"></a>Downlevelclient-Verhalten  
  Client Anwendungen, die eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verwenden, sehen die neuen Datums-/Uhrzeittypen als **nvarchar** -Spalten. Die Spalten enthalten literale Darstellungen. Weitere Informationen finden Sie im Abschnitt "Datenformate: Zeichen folgen und Literale" unter [Datentyp Unterstützung für OLE DB Datums-und Uhrzeit Verbesserungen](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). Die Spaltengröße ist die maximale Literallänge für die Genauigkeit, die für die Spalte festgelegt wurde.  
@@ -32,7 +32,7 @@ ms.locfileid: "73769369"
   
 |OLE DB-Clienttyp|SQL Server 2005-Typ|SQL Server 2008 (oder höher)-Typ|Ergebniskonvertierung (Server zu Client)|Parameterkonvertierung (Client zu Server)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Datum|OK|OK|  
+|DBTYPE_DBDATE|Datetime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Zeitfelder werden auf 0 (Null) festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn das Zeitfeld ungleich 0 (null) ist.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Datumsfelder werden auf das aktuelle Datum festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn Sekundenbruchteile ungleich 0 (null) sind.<br /><br /> Das Datum wird ignoriert.|  
@@ -40,7 +40,7 @@ ms.locfileid: "73769369"
 |DBTYPE_DBTIMESTAMP|||Schlägt fehl-ungültiges Zeit Literale.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|OK|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (7)|OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|Datum|OK|OK|  
+|DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Zeitfelder werden auf 0 (Null) festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn das Zeitfeld ungleich 0 (null) ist.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Datumsfelder werden auf das aktuelle Datum festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn Sekundenbruchteile ungleich 0 (null) sind.<br /><br /> Das Datum wird ignoriert.|  
@@ -66,12 +66,12 @@ ms.locfileid: "73769369"
   
 |Parametertyp|wType|ulParamSize|bPrecision|bscale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|Datum|DBTYPE_WSTR|10|~0|~0|  
-|Uhrzeit|DBTYPE_WSTR|8, 10..16|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
+|time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19, 21.. 27|~0|~0|  
-|datetimeoffset|DBTYPE_WSTR|26, 28.. 34|~0|~0|  
+|DateTime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
+|datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
  Beachten Sie, dass einige dieser Wertbereiche nicht fortlaufend sind; z. B. fehlt 9 in 8,10..16. Der Grund dafür ist das Hinzufügen eines Dezimaltrennzeichens, wenn die Genauigkeit von Bruchteilen größer als 0 (NULL) ist.  
   
@@ -80,24 +80,24 @@ ms.locfileid: "73769369"
   
 |Spaltentyp|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|Datum|DBTYPE_WSTR|10|NULL|NULL|  
-|Uhrzeit|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
+|date|DBTYPE_WSTR|10|NULL|NULL|  
+|time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19, 21.. 27|NULL|NULL|  
-|datetimeoffset|DBTYPE_WSTR|26, 28.. 34|NULL|NULL|  
+|DateTime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
+|datetimeoffset|DBTYPE_WSTR|26,28..34|NULL|NULL|  
   
 #### <a name="columnsinfogetcolumninfo"></a>ColumnsInfo::GetColumnInfo  
  Die DBCOLUMNINFO-Struktur gibt die folgenden Informationen zurück:  
   
 |Parametertyp|wType|ulColumnSize|bPrecision|bscale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|Datum|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19, 21.. 27|~0|~0|  
-|datetimeoffset|DBTYPE_WSTR|26, 28.. 34|~0|~0|  
+|DateTime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
+|datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>Schema Rowsets  
  In diesem Abschnitt werden Metadaten für Parameter, Ergebnisspalten und Schemarowsets für neue Datentypen beschrieben. Diese Informationen sind hilfreich, wenn Sie über einen Client Anbieter verfügen, der mit Tools vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client entwickelt wurde.  
@@ -107,31 +107,31 @@ ms.locfileid: "73769369"
   
 |Spaltentyp|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|Datum|DBTYPE_WSTR|10|20|NULL|  
-|Uhrzeit|DBTYPE_WSTR|8, 10..16|16, 20.. 32|NULL|  
+|date|DBTYPE_WSTR|10|20|NULL|  
+|time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
-|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
-|datetime2|DBTYPE_WSTR|19, 21.. 27|38, 42.. 54|NULL|  
-|datetimeoffset|DBTYPE_WSTR|26, 28.. 34|52, 56.. 68|NULL|  
+|DateTime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
+|datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
   
 #### <a name="procedure_parameters-rowset"></a>PROCEDURE_PARAMETERS-Rowset  
  Die folgenden Spaltenwerte werden für date/time-Typen zurückgegeben:  
   
 |Spaltentyp|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|Datum|DBTYPE_WSTR|10|20|Datum|  
-|Uhrzeit|DBTYPE_WSTR|8, 10..16|16, 20.. 32|Uhrzeit|  
+|date|DBTYPE_WSTR|10|20|date|  
+|time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
-|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
-|datetime2|DBTYPE_WSTR|19, 21.. 27|38, 42.. 54|datetime2|  
-|datetimeoffset|DBTYPE_WSTR|26, 28.. 34|52, 56.. 68|datetimeoffset|  
+|DateTime|DBTYPE_DBTIMESTAMP|NULL|NULL|DateTime|  
+|datetime2|DBTYPE_WSTR|19,21..27|38,42..54|datetime2|  
+|datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|datetimeoffset|  
   
 #### <a name="provider_types-rowset"></a>PROVIDER_TYPES-Rowset  
  Die folgenden Zeilen werden für date/time-Typen zurückgegeben:  
   
-|Eingeben von „->“<br /><br /> Column|Datum|Uhrzeit|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Eingeben von „->“<br /><br /> Spalte|date|time|smalldatetime|DateTime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Datum|Uhrzeit|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DateTime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -143,7 +143,7 @@ ms.locfileid: "73769369"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|Datum|Uhrzeit|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DateTime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -161,7 +161,7 @@ ms.locfileid: "73769369"
  Alle Clientpuffertypen können verwendet werden, wenn eine Clientkonvertierung vom Puffertyp zum Servertyp für die Serverversion dieser Verbindung unterstützt wird. In diesem Kontext bezeichnet der *Servertyp* den von ICommandWithParameters:: SetParameterInfo angegebenen Typ oder impliziert durch den Puffertyp, wenn ICommandWithParameters:: SetParameterInfo nicht aufgerufen wurde. Das bedeutet, dass DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET mit Servern früherer Versionen verwendet werden können, wenn DataTypeCompatibility auf 80 festgelegt und die Clientkonvertierung zu einem unterstützten Servertyp erfolgreich ist. Wenn der Servertyp inkorrekt ist, gibt der Server einen Fehler zurück, wenn er eine implizite Konvertierung in den tatsächlichen Servertyp nicht durchführen kann.  
   
 ## <a name="ssprop_init_datatypecompatibility-behavior"></a>SSPROP_INIT_DATATYPECOMPATIBILITY-Verhalten  
- Wenn SSPROP_INIT_DATATYPECOMPATIBILITY auf SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000 festgelegt ist, werden die neuen Datums-/Uhrzeittypen und zugeordneten Metadaten den Clients so angezeigt, wie Sie für Downlevelclients angezeigt werden. Dies wird unter [Massen Kopieren von Änderungen für verbessertes Datum beschrieben. Zeit Typen &#40;OLE DB und ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Wenn SSPROP_INIT_DATATYPECOMPATIBILITY auf SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000 festgelegt ist, werden die neuen Datums-/Uhrzeittypen und zugeordneten Metadaten den Clients so angezeigt, wie Sie für Downlevelclients angezeigt werden, wie unter [Massen Kopier &#40;Änderungen für verbesserte Datums&#41;-und Uhrzeit Typen OLE DB und ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)beschrieben.  
   
 ## <a name="comparability-for-irowsetfind"></a>Vergleichbarkeit für 'IRowsetFind'  
  Alle Vergleichsoperatoren sind für die neuen Datums-/Uhrzeittypen zulässig, da Sie als Zeichenfolgetypen anstatt als Datums-/Uhrzeittypen angezeigt werden.  

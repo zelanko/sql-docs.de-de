@@ -1,6 +1,6 @@
 ---
-title: Verwalten von Diensten und Netzwerkeinstellungen mit dem WMI-Anbieter | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwalten von Diensten und Netzwerkeinstellungen durch die Nutzung von WMI-Anbieter
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb8cb65fdfac26226888682342eed31fd5e9c3c8
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 0807a034f05d723ae19c86e8b00d08309176551c
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148419"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095157"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Verwalten von Diensten und Netzwerkeinstellungen durch die Nutzung von WMI-Anbieter
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 592f39e997574313e9e61e626a90aa3ac5fa310f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982336"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095373"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Informationen zum SQL Server, Volltext- und SQL Server-Agent-Dienst in der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurück. Verwenden Sie diese dynamische Verwaltungssicht, um Statusinformationen zu diesen Diensten zu melden.  
+  Gibt Informationen über die SQL Server, den Volltext SQL Server-Launchpad Dienst (SQL Server 2017 und höher) und SQL Server-Agent Dienste in der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurück. Verwenden Sie diese dynamische Verwaltungssicht, um Statusinformationen zu diesen Diensten zu melden.  
   
  
 |Spaltenname|Datentyp|und Beschreibung|  

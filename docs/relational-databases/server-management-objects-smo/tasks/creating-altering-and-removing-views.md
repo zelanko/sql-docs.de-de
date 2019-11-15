@@ -1,6 +1,6 @@
 ---
-title: Erstellen, ändern und Entfernen von Sichten | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen, Ändern und Löschen von Sichten
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f441b1a732d9b75c7d2cda7d7b949b991ce4a689
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 2d9c19df941d6bd244acf9c61aeabc5bd52e4776
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148456"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095571"
 ---
 # <a name="creating-altering-and-removing-views"></a>Erstellen, Ändern und Löschen von Sichten
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "70148456"
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-basic"></a>Erstellen, Ändern und Löschen einer Sicht in Visual Basic  
- In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einem inneren Join erstellt wird. Die Sicht wird im Textmodus erstellt, daher muss die <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>-Eigenschaft festgelegt werden.  
+ In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einer inneren Join erstellt wird. Die Sicht wird im Textmodus erstellt, daher muss die <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>-Eigenschaft festgelegt werden.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -52,7 +52,7 @@ myview.Drop()
 ```
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-c"></a>Erstellen, Ändern und Löschen einer Sicht in Visual C#  
- In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einem inneren Join erstellt wird. Die Sicht wird im Textmodus erstellt, daher muss die <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>-Eigenschaft festgelegt werden.  
+ In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einer inneren Join erstellt wird. Die Sicht wird im Textmodus erstellt, daher muss die <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>-Eigenschaft festgelegt werden.  
   
 ```csharp  
 {  
@@ -76,7 +76,7 @@ myview.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-view-in-powershell"></a>Erstellen, Ändern und Löschen einer Sicht in PowerShell  
- In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einem inneren Join erstellt wird. Die Sicht wird im Textmodus erstellt, daher muss die <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>-Eigenschaft festgelegt werden.  
+ In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einer inneren Join erstellt wird. Die Sicht wird im Textmodus erstellt, daher muss die <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>-Eigenschaft festgelegt werden.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

@@ -1,6 +1,6 @@
 ---
-title: Erstellen, ändern und Entfernen von Triggern | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen, Ändern und Löschen von Trigger
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,16 +13,16 @@ ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd2aa0bce55273295cfde3b15d2863d7e35f3d26
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: f4e6b81723b986974003d376b84dc7b53a96fb29
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911254"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094510"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>Erstellen, Ändern und Löschen von Trigger
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  In SMO werden Trigger durch das <xref:Microsoft.SqlServer.Management.Smo.Trigger>-Objekt dargestellt. Der [!INCLUDE[tsql](../../../includes/tsql-md.md)] Code, der ausgeführt wird, wenn der ausgelöste ausgelöste Wert <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> durch die-Eigenschaft des triggerobjekts festgelegt wird. Der Typ des Triggers wird über andere Eigenschaften des <xref:Microsoft.SqlServer.Management.Smo.Trigger>-Objekts gesetzt, beispielsweise durch die <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>-Eigenschaft. Hierbei handelt es sich um eine boolesche Eigenschaft, die angibt, ob der Trigger durch ein **UPDATE** von Datensätzen auf der übergeordneten Tabelle ausgelöst wird.  
+  In SMO werden Trigger durch das <xref:Microsoft.SqlServer.Management.Smo.Trigger>-Objekt dargestellt. Der [!INCLUDE[tsql](../../../includes/tsql-md.md)] Code, der ausgeführt wird, wenn der ausgelöste Auslösen von der <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A>-Eigenschaft des triggerobjekts festgelegt wird. Der Typ des Triggers wird über andere Eigenschaften des <xref:Microsoft.SqlServer.Management.Smo.Trigger>-Objekts gesetzt, beispielsweise durch die <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>-Eigenschaft. Hierbei handelt es sich um eine boolesche Eigenschaft, die angibt, ob der Trigger durch ein **UPDATE** von Datensätzen auf der übergeordneten Tabelle ausgelöst wird.  
   
  Das <xref:Microsoft.SqlServer.Management.Smo.Trigger>-Objekt stellt herkömmlicherweise Datenbearbeitungssprachentrigger (DML) dar. In [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] und höheren Versionen werden auch DDL (Data Definition Language)-Trigger unterstützt. DDL-Trigger werden durch das <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger>-Objekt und das <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger>-Objekt dargestellt.  
   

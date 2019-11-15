@@ -1,6 +1,6 @@
 ---
-title: Programmieren spezifischer Aufgaben | Microsoft-Dokumentation
-ms.custom: ''
+title: Programming Specific Tasks
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,19 +19,19 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 0ba3ec14f7d94b493b5cc93e3b6b46f0565e38ab
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148399"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095208"
 ---
 # <a name="programming-specific-tasks"></a>Programming Specific Tasks
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Das Programmieren spezifischer Tasks mithilfe von SMO-Objekten umfasst komplexe Themen, die nur für Programme mit spezifischen Funktionen (wie Sichern, Überwachen von Statistiken, Replikation, Verwalten von Instanzobjekten und Festlegen von Konfigurationsoptionen) erforderlich sind.  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Verwenden von Verbindungsservern in SMO](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|Beschreibt, wie SMO das <xref:Microsoft.SqlServer.Management.Smo.LinkedServer>-Objekt verwendet, um OLE-DB-Server zu verknüpfen.|  
 |[Konfigurieren von SQL Server in SMO](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|Beschreibt, wie Konfigurationseinstellungen für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in SMO angezeigt und bearbeitet werden.|  
@@ -54,6 +54,6 @@ ms.locfileid: "70148399"
 |[Einbinden einer Volltextsuche](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|Beschreibt, wie Volltextsuchkataloge und Indizes in SMO implementiert werden.|  
 |[Implementieren von Endpunkten](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|Beschreibt, wie Endpunkte erstellt werden, um Nutzlasten für Datenbankspiegelungen, SOAP-Anforderungen und Service Broker zu handhaben.|  
 |[Erstellen und Aktualisieren von Statistiken](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|Beschreibt, wie Bildschirmstatistiken auf einer Datenbank in SMO eingerichtet werden.|  
-|[Verfolgen und Wiedergeben von Ereignissen](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Beschreibt, wie die Ablaufverfolgungs-und **Wiedergabe** Objekte in SMO verwendet werden, um Ereignisse zu verfolgen und wiederzugeben.|  
+|[Verfolgen und Wiedergeben von Ereignissen](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Beschreibt, wie die **Ablaufverfolgungs** -und **Wiedergabe** Objekte in SMO verwendet werden, um Ereignisse zu verfolgen und wiederzugeben.|  
   
   

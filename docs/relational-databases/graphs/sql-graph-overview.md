@@ -1,6 +1,6 @@
 ---
-title: Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank | Microsoft-Dokumentation
-ms.custom: ''
+title: Diagramm Verarbeitung
+titleSuffix: SQL Server and Azure SQL Database
 ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,51 +13,52 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb84f1cc40a05078910d10a48de67f1ac3467fe3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035900"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096088"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet graphdatenbank-Funktionen zum Modellieren von m: n Beziehungen. Die Graph-Beziehungen sind in integriert [!INCLUDE[tsql-md](../../includes/tsql-md.md)] und erhalten die Vorteile der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als grundlegende Database Managementsystem.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Graph-Datenbankfunktionen zum Modellieren von m:n-Beziehungen. Die Diagramm Beziehungen sind in [!INCLUDE[tsql-md](../../includes/tsql-md.md)] integriert und erhalten die Vorteile der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als grundlegendes Datenbankverwaltungssystem.
 
 
 ## <a name="what-is-a-graph-database"></a>Was ist eine Graphdatenbank?  
-Eine Diagrammdatenbank ist eine Sammlung von Knoten (oder Vertices) und Edges (oder Beziehungen). Ein Knoten stellt eine Entität (z.B. eine Person oder Organisation) dar, und ein Edge repräsentiert eine Beziehung zwischen den beiden Knoten, die durch den Edge verbunden werden (z.B. Likes oder Freunde). Sowohl Knoten und Edges können Eigenschaften zugeordnet haben. Hier sind einige Funktionen, die eine graphdatenbank eindeutig zu machen:  
--   Ränder oder Beziehungen sind erstklassige Entitäten in einer Diagrammdatenbank und können haben Attribute oder Eigenschaften zugeordnet. 
--   Eine einzelne Kante kann flexibel auf mehrere Knoten in einer Diagrammdatenbank verbinden.
--   Sie können Musterabgleich und Multi-Hop-Navigation-Abfragen problemlos Ausdrücken.
--   Sie können transitiver und polymorphe Abfragen problemlos Ausdrücken.
+Eine Diagrammdatenbank ist eine Sammlung von Knoten (oder Vertices) und Edges (oder Beziehungen). Ein Knoten stellt eine Entität (z.B. eine Person oder Organisation) dar, und ein Edge repräsentiert eine Beziehung zwischen den beiden Knoten, die durch den Edge verbunden werden (z.B. Likes oder Freunde). Sowohl Knoten als auch Kanten können Eigenschaften zugeordnet sein. Es folgen einige Features, mit denen eine Graph-Datenbank eindeutig gemacht wird:  
+-   Kanten oder Beziehungen sind erstklassige Entitäten in einer Graph-Datenbank und können über Attribute oder Eigenschaften verfügen, die Ihnen zugeordnet sind. 
+-   Mit einem einzelnen Edge können mehrere Knoten in einer Graph-Datenbank flexibel verbunden werden.
+-   Sie können problemlos Muster Vergleiche und Multihop-Navigations Abfragen Ausdrücken.
+-   Transitiv Closure und polymorphe Abfragen können problemlos ausgedrückt werden.
 
 ## <a name="when-to-use-a-graph-database"></a>Wann wird eine Graphdatenbank verwendet?
 
-Es gibt nichts, was eine Diagrammdatenbank erreichen kann, die Verwendung einer relationalen Datenbank erreicht werden kann. Allerdings kann eine Diagrammdatenbank express bestimmte Art von Abfragen erleichtern. Darüber hinaus können mit bestimmten Optimierungen, bestimmte Abfragen eine bessere Leistung. Basiert die Entscheidung, wann auswählen kann auf folgenden Faktoren:  
--   Ihre Anwendung verfügt über hierarchische Daten. Der HierarchyID-Datentyp kann verwendet werden, um Hierarchien zu implementieren, aber es gelten einige Einschränkungen. Beispielsweise können dabei nicht mehrere übergeordnete Elemente für einen Knoten zu speichern.
--   Ihre Anwendung verfügt über komplexe m: n Beziehungen; Anwendung weiterentwickelt, werden neue Beziehungen hinzugefügt.
--   Sie müssen miteinander verbundener Daten und Beziehungen zu analysieren.
+Es gibt nichts, was eine Graph-Datenbank erreichen kann, was nicht mithilfe einer relationalen Datenbank erreicht werden kann. Eine Graph-Datenbank kann es jedoch einfacher machen, bestimmte Arten von Abfragen auszudrücken. Mit bestimmten Optimierungen können auch bestimmte Abfragen besser funktionieren. Ihre Entscheidung, eine solche Entscheidung zu treffen, kann auf folgenden Faktoren basieren:  
+-   Ihre Anwendung verfügt über hierarchische Daten. Der hierarchyid-Datentyp kann verwendet werden, um Hierarchien zu implementieren. es gelten jedoch einige Einschränkungen. Beispielsweise ist es nicht möglich, mehrere übergeordnete Elemente für einen Knoten zu speichern.
+-   Ihre Anwendung verfügt über komplexe m:n-Beziehungen. Wenn die Anwendung weiterentwickelt wird, werden neue Beziehungen hinzugefügt.
+-   Sie müssen miteinander verbundene Daten und Beziehungen analysieren.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Graph-Funktionen in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
-Wir beginnen damit, Hinzufügen von Graph-Erweiterungen mit SQL Server, um das Speichern und Abfragen von Diagrammdaten zu erleichtern. Folgende Features werden in der ersten Version eingeführt. 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>In [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] eingeführte Graph-Features 
+Wir beginnen damit, SQL Server Graph-Erweiterungen hinzuzufügen, um das Speichern und Abfragen von Diagramm Daten zu vereinfachen. Die folgenden Funktionen werden in der ersten Version eingeführt. 
 
 
 ### <a name="create-graph-objects"></a>Erstellen von Graph-Objekten
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] Erweiterungen können Benutzer Knoten-oder edgetabellen zu erstellen. Sowohl Knoten und Edges können Eigenschaften, die ihnen zugewiesene verfügen. Da Knoten und Kanten werden als Tabellen gespeichert, alle Vorgänge, die auf relationalen Tabellen unterstützt werden, werden auf Knoten-oder edgetabelle unterstützt. Beispiel:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] Erweiterungen ermöglichen es Benutzern, Knoten-oder Edge-Tabellen zu erstellen. Sowohl Knoten als auch Kanten können Eigenschaften zugeordnet werden. Da Knoten und Kanten als Tabellen gespeichert werden, werden alle Vorgänge, die für relationale Tabellen unterstützt werden, für die Knoten-oder Kanten Tabelle unterstützt. Beispiel:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![Person-Freunde-Tables](../../relational-databases/graphs/media/person-friends-tables.png "Person-Knoten und Freunde edge-Tabellen")  
+![Person-friends-Tables](../../relational-databases/graphs/media/person-friends-tables.png "Knoten "Person" und "Friends Edge Tables"")  
 Knoten und Kanten werden als Tabellen gespeichert.  
 
-### <a name="query-language-extensions"></a>Abfrage-spracherweiterungen  
-Neue `MATCH` Klausel eingeführt, um die Unterstützung von Musterabgleich und Multi-Hop-Navigation durch das Diagramm. Die `MATCH` Funktion verwendet die Syntax im ASCII-Grafik Format für den Musterabgleich. Zum Beispiel:  
+### <a name="query-language-extensions"></a>Abfrage Spracherweiterungen  
+Neue `MATCH`-Klausel wird eingeführt, um Musterabgleich und Multihop-Navigation durch das Diagramm zu unterstützen. Die `MATCH`-Funktion verwendet die ASCII-Art-Format Syntax für den Musterabgleich. Zum Beispiel:  
 
 ```   
 -- Find friends of John
@@ -67,27 +68,27 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Vollständig integrierte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine 
-Graph-Erweiterungen sind vollständig integriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine. Verwenden Sie den gleichen Speicher-Engine, Metadaten, Abfrageprozessor usw., speichern und Abfragen von Diagrammdaten. Die Abfrage Graph und relationalen Daten in einer einzelnen Abfrage. Graph-Funktionen mit anderen kombiniert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Technologien wie Columnstore, hohe Verfügbarkeit, R Services usw. SQL-Graph-Datenbank unterstützt auch alle Sicherheits- und Complianceanforderungen Funktionen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Vollständig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Engine integriert 
+Graph-Erweiterungen sind vollständig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Engine integriert. Verwenden Sie die gleiche Speicher-Engine, Metadaten, den Abfrage Prozessor usw., um Diagramm Daten zu speichern und abzufragen. Abfragen über Diagramm-und relationale Daten in einer einzelnen Abfrage. Kombinieren von Diagramm Funktionen mit anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Technologien wie z. b. columnstore, ha, R Services usw. Die SQL Graph-Datenbank unterstützt auch alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbaren Sicherheits-und Kompatibilitäts Features.
  
-### <a name="tooling-and-ecosystem"></a>Tools und das Ökosystem
+### <a name="tooling-and-ecosystem"></a>Tools und Ökosystem
 
-Vorhandene Tools und das Ökosystem profitieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet. Tools wie Sichern und wiederherstellen, importieren und exportieren, BCP praktisch von selbst standardmäßig. Andere Tools und Dienste wie SSIS, SSRS oder Power BI funktioniert mit der Graph-Tabellen, nur die Möglichkeit, die sie mit relationalen Tabellen arbeiten.
+Profitieren Sie von vorhandenen Tools und Ökosystem, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten. Tools wie sichern und wiederherstellen, importieren und exportieren, bcp funktionieren einfach sofort. Andere Tools oder Dienste wie SSIS, SSRS oder Power BI funktionieren mit Diagramm Tabellen, genau so, wie Sie mit relationalen Tabellen funktionieren.
 
 ## <a name="edge-constraints"></a>Edgeeinschränkungen
-Eine Edge-Einschränkung für eine Graph-Edge-Tabelle definiert ist, und es besteht aus einem Paar von Knoten-Tabellen, die ein bestimmten Edge-Typ, eine Verbindung herstellen kann. So erhalten Benutzer eine bessere Kontrolle über die Graph-Schema. Mithilfe des edgeeinschränkungen können Benutzer den Typ der Knoten beschränken, die eine bestimmte Kante eine Verbindung herstellen darf. 
+Eine Edge-Einschränkung wird für eine Diagramm Rahmen Tabelle definiert und ist ein paar von Knoten Tabellen, für die ein bestimmter Edge-Typ eine Verbindung herstellen kann. Dies ermöglicht Benutzern eine bessere Kontrolle über das Diagramm Schema. Mithilfe von Edge-Einschränkungen können Benutzer den Knotentyp einschränken, mit dem eine bestimmte Kante eine Verbindung herstellen darf. 
 
-Erfahren mehr über das Erstellen und Verwenden von edgeeinschränkungen, finden Sie unter [Edgeeinschränkungen](../../relational-databases/tables/graph-edge-constraints.md)
+Weitere Informationen zum Erstellen und Verwenden von Edge-Einschränkungen finden Sie unter [Edge-Einschränkungen](../../relational-databases/tables/graph-edge-constraints.md) .
 
-## <a name="merge-dml"></a>Zusammenführen von DML 
-Die [MERGE](../../t-sql/statements/merge-transact-sql.md) Anweisung führt einfügen, aktualisieren oder delete-Vorgänge in eine Zieltabelle, die auf der Grundlage der Ergebnisse eines Joins mit einer Quelltabelle. Sie können z. B. zwei Tabellen synchronisieren, indem einfügen, aktualisieren oder Löschen von Zeilen in eine Zieltabelle basierend auf den Unterschieden zwischen der Zieltabelle und der Quelltabelle. Mithilfe von MATCH-Prädikate in einer MERGE-Anweisung wird jetzt auf Azure SQL-Datenbank und SQL Server vNext unterstützt. Also ist es jetzt möglich, Ihre aktuellen Diagrammdaten (Knoten- oder edgetabelle Tabellen) mit neuen Daten, die mithilfe der MATCH-Prädikate zur Angabe der Graph-Beziehungen in einer einzigen Anweisung anstelle von separaten INSERT/UPDATE/DELETE-Anweisungen zusammenführen.
+## <a name="merge-dml"></a>DML zusammenführen 
+Die [Merge](../../t-sql/statements/merge-transact-sql.md) -Anweisung führt INSERT-, Update-oder DELETE-Vorgänge für eine Ziel Tabelle basierend auf den Ergebnissen einer Verknüpfung mit einer Quell Tabelle aus. Beispielsweise können Sie zwei Tabellen synchronisieren, indem Sie Zeilen in einer Ziel Tabelle basierend auf den Unterschieden zwischen der Ziel Tabelle und der Quell Tabelle einfügen, aktualisieren oder löschen. Die Verwendung von Match-Prädikaten in einer MERGE-Anweisung wird jetzt in Azure SQL-Datenbank und SQL Server vNext unterstützt. Das heißt, es ist nun möglich, die aktuellen Diagramm Daten (Knoten-oder edgetabellen) mit neuen Daten zusammenzuführen, wobei die Übereinstimmungs Prädikate verwendet werden, um Diagramm Beziehungen in einer einzelnen Anweisung anstelle von separaten INSERT-, Update-und DELETE-Anweisungen anzugeben.
 
-Erfahren mehr über die wie Übereinstimmung in DML-Zusammenführung verwendet werden kann, finden Sie unter [MERGE-Anweisung](../../t-sql/statements/merge-transact-sql.md)
+Weitere Informationen zur Verwendung von Match in Merge DML finden Sie unter Merge- [Anweisung](../../t-sql/statements/merge-transact-sql.md) .
 
 ## <a name="shortest-path"></a>Kürzeste Pfad
-Die [SHORTEST_PATH](./sql-graph-shortest-path.md) Funktion findet den kürzesten Pfad zwischen 2 Knoten in einem Diagramm oder ab einem bestimmten Knoten zu den anderen Knoten im Diagramm. Kürzeste Pfad kann auch verwendet werden, finden Sie ein transitiver oder beliebiger Länge traversierungen im Diagramm. 
+Die [SHORTEST_PATH](./sql-graph-shortest-path.md) -Funktion findet den kürzesten Pfad zwischen zwei beliebigen Knoten in einem Diagramm oder beginnend mit einem bestimmten Knoten mit allen anderen Knoten im Diagramm. Der kürzeste Pfad kann auch verwendet werden, um einen transitiven Abschluss zu finden, oder für beliebige Längen Traversale im Diagramm. 
 
  ## <a name="next-steps"></a>Nächste Schritte  
-Lesen der [SQL-Graph-Datenbank – Architektur](./sql-graph-architecture.md)
+Lesen der [SQL Graph-Datenbankarchitektur](./sql-graph-architecture.md)
    
 
