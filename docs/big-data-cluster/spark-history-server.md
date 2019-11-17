@@ -1,7 +1,7 @@
 ---
 title: Debuggen und Diagnostizieren von Spark-Anwendungen
 titleSuffix: SQL Server big data clusters
-description: Verwenden Sie den Spark-Verlaufs Server zum Debuggen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]und Diagnostizieren von Spark-Anwendungen unter
+description: Verwenden Sie Spark History Server, um Spark-Anwendungen zu debuggen und zu diagnostizieren, die auf Big Data-Clustern unter [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ausgeführt werden.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,25 +9,25 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
-ms.translationtype: MT
+ms.openlocfilehash: dd35de4111c5e18d8c8237e2935df5de458f19b1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878700"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706111"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Debugging und Diagnose von Spark- [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Anwendungen auf dem Spark-Verlaufs Server
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Debuggen und Diagnostizieren von Spark-Anwendungen in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Spark History Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieser Artikel enthält Anleitungen zur Verwendung der erweiterten Version von Spark History Server zum Debuggen und Diagnostizieren von Spark-Anwendungen in Big-Data-Clustern für SQL Server 2019 (Vorschauversion). Diese Debug- und Diagnosefunktionen sind in den Spark History Server integriert und werden von Microsoft unterstützt. Die Erweiterung umfasst die Registerkarten „Data“ (Daten), „Graph“ (Diagramm) und „Diagnosis“ (Diagnose). Auf der Registerkarte „Data“ (Daten) können Benutzer die Eingabe- und Ausgabedaten des Spark-Auftrags überprüfen. Auf der Registerkarte „Graph“ (Diagramm) können Benutzer den Datenfluss überprüfen und das Auftragsdiagramm wiedergeben. Auf der Registerkarte „Diagnosis“ (Diagnose) findet der Benutzer Informationen zur Datenschiefe, Zeitabweichung und eine Analyse zur Executorauslastung.
+Dieser Artikel enthält Anleitungen zur Verwendung der erweiterten Version von Spark History Server zum Debuggen und Diagnostizieren von Spark-Anwendungen in Big-Data-Clustern für SQL Server. Diese Debug- und Diagnosefunktionen sind in den Spark History Server integriert und werden von Microsoft unterstützt. Die Erweiterung umfasst die Registerkarten „Data“ (Daten), „Graph“ (Diagramm) und „Diagnosis“ (Diagnose). Auf der Registerkarte „Data“ (Daten) können Benutzer die Eingabe- und Ausgabedaten des Spark-Auftrags überprüfen. Auf der Registerkarte „Graph“ (Diagramm) können Benutzer den Datenfluss überprüfen und das Auftragsdiagramm wiedergeben. Auf der Registerkarte „Diagnosis“ (Diagnose) findet der Benutzer Informationen zur Datenschiefe, Zeitabweichung und eine Analyse zur Executorauslastung.
 
 ## <a name="get-access-to-spark-history-server"></a>Zugreifen auf Spark History Server
 
 Die Benutzeroberfläche der Open-Source-Version von Spark History Server wird mit Informationen wie auftragsspezifischen Daten und einer interaktiven Visualisierung des Auftragsdiagramms und von Datenflüssen für Big-Data-Cluster erweitert. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Öffnen der Webbenutzeroberfläche von Spark History Server über eine URL
-Öffnen Sie Spark History Server, indem Sie die folgende URL aufrufen. Ersetzen Sie dabei `<Ipaddress>` und `<Port>` durch genaue Informationen zu den Big-Data-Clustern. Beachten Sie, dass Sie bei einer Standard Authentifizierung (Benutzername/Kennwort) Big Data Cluster-Setup einen Benutzer Stamm angeben müssen, wenn Sie aufgefordert werden, **sich bei den** Gateway-Endpunkten anzumelden. Weitere Informationen finden Sie im folgenden Artikel: [Bereitstellen von Big-Data-Clustern für SQL Server](quickstart-big-data-cluster-deploy.md)
+Öffnen Sie Spark History Server, indem Sie die folgende URL aufrufen. Ersetzen Sie dabei `<Ipaddress>` und `<Port>` durch genaue Informationen zu den Big-Data-Clustern. Beachten Sie, dass Sie bei der Einrichtung eines Big Data-Clusters in einer Standardauthentifizierung (Benutzername/Kennwort) bestätigen müssen, dass Sie **Root-Benutzer** sind, wenn Sie bei der Anmeldung bei Gatewayendpunkten (Knox) dazu aufgefordert werden. Weitere Informationen finden Sie im folgenden Artikel: [Bereitstellen von Big-Data-Clustern für SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -91,7 +91,7 @@ Wählen Sie die Auftrags-ID aus, und klicken Sie im Menü des Tools auf **Graph*
 
     ![„Graph“ (Diagramm): Job ID (Auftrags-ID)](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ **Progress** (Status) wird als Standardwert belassen. Benutzer können den Datenfluss überprüfen, indem Sie in der Dropdown Liste der **Anzeige**die Option **Lesen** oder **Schreiben** auswählen.
++ **Progress** (Status) wird als Standardwert belassen. Der Benutzer kann den Datenfluss überprüfen, indem er **Read** (Lesen) oder **Written** (Geschrieben) in der Dropdown-Liste von **Display** (Anzeigen) auswählt.
 
     ![„Graph“ (Diagramm): „Display“ (Anzeige)](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
@@ -203,5 +203,6 @@ Folgende Probleme sind für Spark History Server bekannt:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-* [Beginnen Sie mit[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
-* [Konfigurieren von Spark-Einstellungen](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)
+* [Erste Schritte mit Big-Data-Clustern von SQL Server](../big-data-cluster/deploy-get-started.md)
+* Konfigurieren von Spark-Einstellungen
+* [Konfigurieren von Spark-Einstellungen](/azure/hdinsight/spark/apache-spark-settings/)
