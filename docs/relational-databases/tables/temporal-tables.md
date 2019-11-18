@@ -1,5 +1,5 @@
 ---
-title: Temporäre Tabellen | Microsoft-Dokumentation
+title: Temporale Tabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/11/2016
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.locfileid: "67999307"
 # <a name="temporal-tables"></a>Temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  In SQL Server 2016 wurde die Unterstützung von temporäre Tabellen (auch als temporäre Tabellen mit Systemversionsverwaltung bezeichnet) als Datenbankfeature eingeführt, das integrierte Unterstützung für das Bereitstellen von Informationen zu den zu jedem Zeitpunkt in der Tabelle gespeicherten Daten zur Verfügung stellt, anstatt nur die aktuell in einer Tabelle gespeicherten Daten zu unterstützen. Temporal ist ein Datenbankfeature, das zusammen mit ANSI SQL 2011 eingeführt wurde.  
+  In SQL Server 2016 wurde die Unterstützung von temporalen Tabellen (auch als temporale Tabellen mit Systemversionsverwaltung bezeichnet) als Datenbankfeature eingeführt, das integrierte Unterstützung für das Bereitstellen von Informationen zu den zu jedem Zeitpunkt in der Tabelle gespeicherten Daten zur Verfügung stellt, anstatt nur die aktuell in einer Tabelle gespeicherten Daten zu unterstützen. Temporal ist ein Datenbankfeature, das zusammen mit ANSI SQL 2011 eingeführt wurde.  
   
  **Schnellstart**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67999307"
   
     -   [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **AdventureWorks-Beispieldatenbank herunterladen:** Laden Sie zum Einstieg in temporäre Tabellen die [AdventureWorks-Datenbank für SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) mit Skriptbeispielen herunter, und führen Sie die Anweisungen im Ordner „Temporal“ aus.  
+    -   **AdventureWorks-Beispieldatenbank herunterladen:** Laden Sie zum Einstieg in temporale Tabellen die [AdventureWorks-Datenbank für SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) mit Skriptbeispielen herunter, und führen Sie die Anweisungen im Ordner „Temporal“ aus.  
   
 -   **Syntax:**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67999307"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **Video:** Eine 20-minütige Erörterung des Features für temporäre Tabellen finden Sie im Video [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
+-   **Video:** Eine 20-minütige Erörterung des Features für temporale Tabellen finden Sie im Video [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>Was ist eine temporale Tabelle mit Versionsverwaltung durch das System?  
  Eine temporale Tabelle mit Systemversionsverwaltung ist ein Benutzertabellentyp, der darauf ausgelegt ist, den Verlauf aller Datenänderungen lückenlos zu speichern und einfache Zeitpunktanalysen zu ermöglichen. Bei diesem Typ von temporaler Tabelle spricht man von Versionsverwaltung durch das System, da die Gültigkeitsdauer für jede Zeile vom System (d.h. von der Datenbank-Engine) verwaltet wird.  
@@ -86,7 +86,7 @@ ms.locfileid: "67999307"
   
  Die aktuelle Tabelle enthält den aktuellen Wert für jede Zeile. Die Verlaufstabelle enthält jeden früheren Wert für jede Zeile, falls vorhanden, sowie die Anfangszeit und Endzeit für den Zeitraum, für den er gültig war.  
   
- ![Temporäre Tabelle-Funktionsweise](../../relational-databases/tables/media/temporal-howworks.PNG "Temporäre Tabelle-Funktionsweise")  
+ ![Temporale Tabelle-Funktionsweise](../../relational-databases/tables/media/temporal-howworks.PNG "Temporale Tabelle-Funktionsweise")  
   
  Das folgende einfache Beispiel veranschaulicht ein Szenario mit Mitarbeiterinformationen in einer hypothetischen Personaldatenbank:  
   
@@ -156,7 +156,7 @@ SELECT * FROM Employee
  [Verwendungsszenarien für temporale Tabellen](../../relational-databases/tables/temporal-table-usage-scenarios.md)   
  [Überlegungen und Einschränkungen zu temporalen Tabellen](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
  [Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
- [Partitionierung mit temporären Tabellen](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
+ [Partitionierung mit temporalen Tabellen](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
  [Systemkonsistenzprüfungen von temporalen Tabellen](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
  [Sicherheit bei temporale Tabellen](../../relational-databases/tables/temporal-table-security.md)   
  [Metadatenansichten und Funktionen für temporale Tabellen](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  

@@ -1,5 +1,5 @@
 ---
-title: Partitionierung mit temporären Tabellen | Microsoft-Dokumentation
+title: Partitionierung mit temporalen Tabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/26/2016
 ms.prod: sql
@@ -18,7 +18,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67999448"
 ---
-# <a name="partitioning-with-temporal-tables"></a>Partitionierung mit temporären Tabellen
+# <a name="partitioning-with-temporal-tables"></a>Partitionierung mit temporalen Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Sie können die Partitionierung unabhängig voneinander für die aktuelle und die Verlaufstabelle verwenden. Ohne Systemversionsverwaltung können mittels Partitionierung jedoch keine Dateninhalte geändert werden.  
