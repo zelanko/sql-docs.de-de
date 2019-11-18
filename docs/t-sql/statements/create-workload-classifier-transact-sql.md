@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5ee3b24f1c2b85d2c4966b632257ac941c9776ee
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632899"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056494"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -62,7 +62,7 @@ WITH
  *WORKLOAD_GROUP* =  *'name'*    
  Wenn die Klassifiziererregeln die Bedingungen erfüllen, ordnet „name“ die Anforderung einer Arbeitsauslastungsgruppe zu.  „name“ ist vom Datentyp „sysname“.  Es kann bis zu 128 Zeichen lang sein und muss zum Zeitpunkt der Erstellung des Klassifizierers ein gültiger Arbeitsauslastungsgruppenname sein.
 
- Verfügbare Arbeitsauslastungsgruppen finden Sie in der Katalogansicht [sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest).
+ Verfügbare Arbeitsauslastungsgruppen finden Sie in der Katalogansicht [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md).
 
  *MEMBERNAME* ='security_account'*    
  Hierbei handelt es sich um das Sicherheitskonto, das der Rolle hinzugefügt wird.  „Security_account“ ist vom Datentyp „sysname“und hat keinen Standardwert. „Security_account“ kann ein Datenbankbenutzer, eine Datenbankrolle, eine Azure Active Directory-Anmeldung oder eine Azure Active Directory-Gruppe sein.
