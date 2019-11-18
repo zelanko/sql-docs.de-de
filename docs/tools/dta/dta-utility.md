@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809708"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981805"
 ---
 # <a name="dta-utility"></a>dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
 [Empfehlungen für den Columnstore-Index im Datenbankoptimierungsratgeber (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
 
   
  **-fk** _keep_existing_option_  
@@ -219,7 +219,7 @@ dta -d AdventureWorks2012 ...
  Gibt an, dass die Abfragespeicher als Arbeitsauslastung verwendet werden soll. Die wichtigsten 1.000-Ereignisse aus der Abfragespeicher für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  Weitere Informationen finden Sie unter [Abfragespeicher](../../relational-databases/performance/how-query-store-collects-data.md) und [Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
      
   
  **-if** _workload_file_  
@@ -273,7 +273,7 @@ dta -iq -I 48
 In diesem Fall verwendet dta Abfragespeicher als Quelle der Arbeitsauslastung und berücksichtigt nur Abfragen, die in den letzten 48 Stunden ausgeführt wurden.  
   ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
 
 
   
@@ -361,7 +361,7 @@ In diesem Fall verwendet dta Abfragespeicher als Quelle der Arbeitsauslastung un
  **-x**  
  Startet eine Optimierungssitzung und beendet das Hilfsprogramm.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Drücken Sie einmal STRG+C, um die Optimierungssitzung zu beenden und Empfehlungen basierend auf der Analyse zu generieren, die **dta** bis zu diesem Zeitpunkt abgeschlossen hat. Daraufhin werden Sie aufgefordert zu entscheiden, ob Sie Empfehlungen generieren möchten. Drücken Sie erneut STRG+C, um die Optimierungssitzung zu beenden, ohne Empfehlungen zu generieren.  
   
 ## <a name="examples"></a>Beispiele  
