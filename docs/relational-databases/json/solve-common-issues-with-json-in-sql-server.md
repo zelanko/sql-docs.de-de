@@ -1,6 +1,5 @@
 ---
-title: Lösen häufiger Probleme mit JSON in SQL Server | Microsoft-Dokumentation
-ms.custom: ''
+title: Lösen häufiger Probleme mit JSON in SQL Server
 ms.date: 07/07/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,13 +10,14 @@ helpviewer_keywords:
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 268ec12e297d6c8a3e5dd869d0d143877a81e505
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbf9f4614bd8e9212742072ceb8da5ddeaf8716f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131458"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096103"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Lösen häufiger Probleme mit JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ FOR JSON PATH
   
  JSON_QUERY ohne den optionalen zweiten Parameter gibt nur das erste Argument als Ergebnis zurück. Da JSON_QUERY immer valides JSON zurückgibt, weiß FOR JSON, dass dieses Ergebnis nicht geschützt werden muss.
 
-### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>Ein mit der WITHOUT_ARRAY_WRAPPER-Klausel generiertes JSON wird in der FOR JSON-Ausgabe geschützt  
+### <a name="json-generated-with-the-without_array_wrapper-clause-is-escaped-in-for-json-output"></a>Ein mit der WITHOUT_ARRAY_WRAPPER-Klausel generiertes JSON wird in der FOR JSON-Ausgabe geschützt  
  **Frage:** Ich versuche, einen Spaltenausdruck mit FOR JSON und der Option WITHOUT_ARRAY_WRAPPER zu formatieren.  
   
 ```sql  
@@ -110,7 +110,7 @@ FROM OPENJSON(@json)
         arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### <a name="return-long-text-value-with-openjson-instead-of-jsonvalue"></a>Zurückgeben langer Textwerte mit OPENJSON anstelle von JSON_VALUE
+### <a name="return-long-text-value-with-openjson-instead-of-json_value"></a>Zurückgeben langer Textwerte mit OPENJSON anstelle von JSON_VALUE
  **Frage:** Ich habe einen Beschreibungsschlüssel im JSON-Text, der langen Text enthält. `JSON_VALUE(@json, '$.description')` gibt NULL zurück, statt eines Werts.  
   
  **Antwort:** JSON_VALUE ist dafür konzipiert, kleine skalare Werte zurückzugeben. Im Allgemeinen gibt die Funktion NULL zurück, statt eines Überlauffehlers. Wenn längere Werte zurückgegeben werden sollen, verwenden Sie OPENJSON, das NVARCHAR(MAX)-Werte unterstützt, wie im folgenden Beispiel gezeigt.  
@@ -119,7 +119,7 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>Behandeln doppelter Schlüssel mit OPENJSON anstelle von JSON_VALUE
+### <a name="handle-duplicate-keys-with-openjson-instead-of-json_value"></a>Behandeln doppelter Schlüssel mit OPENJSON anstelle von JSON_VALUE
  **Frage:** Ich habe doppelte Schlüssel im JSON-Text. JSON_VALUE gibt nur den ersten Schlüssel zurück, der im Pfad gefunden wird. Wie kann ich alle Schlüssel zurückgeben, die den gleichen Namen haben?  
   
  **Antwort:** Die integrierten Skalarfunktionen von JSON geben nur das erste Vorkommen des Objekts zurück, auf das verwiesen wird. Wenn Sie mehr als einen Schlüssel benötigen, verwenden Sie die OPENJSON-Tabellenwertfunktion, wie im folgenden Beispiel gezeigt.  

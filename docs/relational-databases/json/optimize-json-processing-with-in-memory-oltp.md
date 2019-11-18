@@ -1,6 +1,5 @@
 ---
-title: Optimieren der JSON-Verarbeitung mit In-Memory-OLTP | Microsoft-Dokumentation
-ms.custom: ''
+title: Optimieren der JSON-Verarbeitung mit In-Memory-OLTP
 ms.date: 07/18/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -9,13 +8,14 @@ ms.topic: conceptual
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 300366bc70a31951010ea742cde37b854a934991
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131512"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096077"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Optimieren der JSON-Verarbeitung mit In-Memory-OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

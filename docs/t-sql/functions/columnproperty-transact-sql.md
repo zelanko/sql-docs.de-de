@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6551eb61d22f69307f6fe671ba22cd4de06cdb67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff96377eac69c1596e0d2e2661714f82dd2cae9a
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064676"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983022"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt Informationen zu Spalten oder Parametern zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,13 +54,13 @@ Das *property*-Argument gibt für das *id*-Argument den Informationstyp an, den 
 |**AllowsNull**|Lässt NULL-Werte zu.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = Ungültige Eingabe|  
 |**ColumnId**|Der Wert der Spalten-ID, der **sys.columns.column_id** entspricht.|Column ID<br /><br /> **Hinweis:** Wenn mehrere Spalten abgefragt werden, können Lücken in der Abfolge von Werten für Spalten-IDs auftreten.|  
 |**FullTextTypeColumn**|Der TYPE COLUMN-Wert in der Tabelle, die die Dokumenttypinformationen der *Spalte* enthält.|Die ID der Volltexttypspalte TYPE COLUMN für den Ausdruck des Spaltennamens, der als zweiter Parameter dieser Funktion übergeben wurde.|  
-|**GeneratedAlwaysType**|Wird durch den Spaltenwert systemgeneriert. Entspricht **sys.columns.generated_always_type**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: Nicht immer generiert<br /><br /> 1: Immer am Zeilenanfang generiert<br /><br /> 2: Immer am Zeilenende generiert|  
+|**GeneratedAlwaysType**|Wird durch den Spaltenwert systemgeneriert. Entspricht **sys.columns.generated_always_type**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> 0: Nicht immer generiert<br /><br /> 1: Immer am Zeilenanfang generiert<br /><br /> 2: Immer am Zeilenende generiert|  
 |**IsColumnSet**|Spalte ist ein Spaltensatz. Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = Ungültige Eingabe|  
 |**IsComputed**|Die Spalte ist eine berechnete Spalte.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = Ungültige Eingabe|  
 |**IsCursorType**|Der Prozedurparameter ist vom Typ CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = Ungültige Eingabe|  
 |**IsDeterministic**|Die Spalte ist deterministisch. Diese Eigenschaft gilt nur für berechnete Spalten und Sichtspalten.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = Ungültige Eingabe Keine berechnete Spalte oder Sichtspalte.|  
 |**IsFulltextIndexed**|Die Spalte wird für die Volltextindizierung registriert.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = Ungültige Eingabe|  
-|**IsHidden**|Wird durch den Spaltenwert systemgeneriert. Entspricht **sys.columns.is_hidden**|**Gilt für**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: Nicht ausgeblendet<br /><br /> 1: Ausgeblendet|  
+|**IsHidden**|Wird durch den Spaltenwert systemgeneriert. Entspricht **sys.columns.is_hidden**|**Gilt für**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] und höher.<br /><br /> 0: Nicht ausgeblendet<br /><br /> 1: Ausgeblendet|  
 |**IsIdentity**|Die Spalte verwendet die IDENTITY-Eigenschaft.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = Ungültige Eingabe|  
 |**IsIdNotForRepl**|In der Spalte wird die IDENTITY_INSERT-Einstellung überprüft.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = Ungültige Eingabe|  
 |**IsIndexable**|Diese Spalte kann indiziert werden.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = Ungültige Eingabe|  
@@ -85,7 +85,7 @@ Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigu
   
 Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z.B. `COLUMNPROPERTY`, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt nicht die korrekte Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 Beim Überprüfen der deterministischen Eigenschaft einer Spalte prüfen Sie zuerst, ob die Spalte eine berechnete Spalte ist. Das Argument **IsDeterministic** gibt für nicht berechnete Spalten NULL zurück. Berechnete Spalten können als Indexspalten angegeben werden.
   
 ## <a name="examples"></a>Beispiele  

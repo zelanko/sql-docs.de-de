@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149974"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962375"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installieren von SQL Server über den Installations-Assistenten (Setup)
 
@@ -317,12 +317,6 @@ Dies gilt nicht für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
      Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Serverkonfiguration](../../sql-server/install/instance-configuration.md#datadir).
 
      Verwenden Sie die Seite **Konfiguration der Datenbank-Engine – TempDB**, um die Dateigröße, Anzahl der Dateien, nicht standardmäßige Installationsverzeichnisse und Dateiwachstumseinstellungen für **tempdb** zu konfigurieren. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – TempDB](../../sql-server/install/instance-configuration.md#tempdb).
-<<<<<<< HEAD
-  
-     Geben Sie auf der Seite **[!INCLUDE[ssDE](../../includes/ssde-md.md)]Konfiguration – MaxDOP** den maximalen Grad an Parallelität an. Diese Einstellung bestimmt, wie viele Prozessoren eine einzelne Anweisung während der Ausführung verwenden kann. Der empfohlene Wert wird während der Installation automatisch berechnet. Diese Seite ist nur ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] im Setup verfügbar. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
-
-     Verwenden Sie die Seite **Konfiguration der Datenbank-Engine – Seite „Arbeitsspeicher“** , um die Werte für **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher** anzugeben, die diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Start verwenden soll. Sie können die Standardwerte oder die berechneten empfohlenen Werte verwenden oder Ihre eigenen Werte manuell angeben, nachdem Sie die Option **Empfohlen** gewählt haben. Diese Seite ist nur ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] im Setup verfügbar. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „Arbeitsspeicher“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
-=======
 
      Geben Sie auf der Seite **[!INCLUDE[ssDE](../../includes/ssde-md.md)]Konfiguration – MaxDOP** den maximalen Grad an Parallelität an. Diese Einstellung bestimmt, wie viele Prozessoren eine einzelne Anweisung während der Ausführung verwenden kann. Der empfohlene Wert wird während der Installation automatisch berechnet. 
      
@@ -337,9 +331,8 @@ Dies gilt nicht für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
     > Diese Seite ist nur ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] im Setup verfügbar. 
     
     Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „Arbeitsspeicher“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
->>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
 
-     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
+     Aktivieren Sie auf der Seite **Konfiguration der Datenbank-Engine – FILESTREAM** den FILESTREAM für Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – FILESTREAM](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
 1. Verwenden Sie die Seite **Analysis Services-Konfiguration – Kontenbereitstellung**, um den Servermodus und die Benutzer oder Konten anzugeben, die über Administratorberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verfügen sollen. Durch den Servermodus wird bestimmt, welcher Arbeitsspeicher und welche Speichersubsysteme auf dem Server verwendet werden. Die unterschiedlichen Projektmappentypen werden in verschiedenen Servermodi ausgeführt. Wenn Sie beabsichtigen, mehrdimensionale Cubedatenbanken auf dem Server auszuführen, wählen Sie die Standardoption für den Servermodus **Mehrdimensionales und Data Mining** aus.
 

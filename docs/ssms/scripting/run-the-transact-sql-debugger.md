@@ -1,10 +1,7 @@
 ---
-title: Ausführen des Transact-SQL-Debuggers | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Ausführen des Transact-SQL-Debuggers
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
@@ -21,59 +18,68 @@ helpviewer_keywords:
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8b517e1de4a7b2908d10e2fc486ce7ab263dfd5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 01ac569b82d382850343af0a35b16c676720097c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264259"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097894"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ausführen des Transact-SQL-Debuggers
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Sie können den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger starten, nachdem Sie ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor-Fenster geöffnet haben. Anschließend können Sie den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code im Debugmodus ausführen, bis Sie den Debugger beenden. Sie können Optionen festlegen, um die Ausführung des Debuggers anzupassen.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Sie können den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger starten, nachdem Sie ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor-Fenster geöffnet haben. Anschließend können Sie den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code im Debugmodus ausführen, bis Sie den Debugger beenden. Sie können Optionen festlegen, um die Ausführung des Debuggers anzupassen.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="starting-and-stopping-the-debugger"></a>Starten und Beenden des Debuggers
+
+Um den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger zu starten, müssen folgende Anforderungen erfüllt sein:
+
+- Wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem anderen Computer verbunden ist, müssen Sie den Debugger für das Remotedebuggen konfiguriert haben. Weitere Informationen finden Sie unter [Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
   
-## <a name="starting-and-stopping-the-debugger"></a>Starten und Beenden des Debuggers  
- Um den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger zu starten, müssen folgende Anforderungen erfüllt sein:  
+- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muss unter einem Windows-Konto ausgeführt werden, das Mitglied der festen Serverrolle sysadmin ist.
+
+- Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor-Fenster muss entweder mithilfe einer Windows-Authentifizierung oder mithilfe eines Anmeldenamens für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, der Mitglied der festen Serverrolle sysadmin ist, verbunden werden.
   
--   Wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem anderen Computer verbunden ist, müssen Sie den Debugger für das Remotedebuggen konfiguriert haben. Weitere Informationen finden Sie unter [Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
+- Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster muss mit einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) oder höher verbunden sein. Sie können den Debugger nicht ausführen, wenn das Abfrage-Editor-Fenster mit einer Instanz verbunden ist, die sich im Einzelbenutzermodus befindet.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muss unter einem Windows-Konto ausgeführt werden, das Mitglied der festen Serverrolle sysadmin ist.  
+ Wir empfehlen, den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code aus den folgenden Gründen auf einem Testserver und nicht auf einem Produktionsserver zu debuggen:
   
--   Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor-Fenster muss entweder mithilfe einer Windows-Authentifizierung oder mithilfe eines Anmeldenamens für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, der Mitglied der festen Serverrolle sysadmin ist, verbunden werden.  
+- Debuggen ist ein Vorgang mit hohen Berechtigungen. Daher dürfen nur Mitglieder der festen Serverrolle sysadmin in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]debuggen.
   
--   Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster muss mit einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) oder höher verbunden sein. Sie können den Debugger nicht ausführen, wenn das Abfrage-Editor-Fenster mit einer Instanz verbunden ist, die sich im Einzelbenutzermodus befindet.  
-  
- Wir empfehlen, den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code aus den folgenden Gründen auf einem Testserver und nicht auf einem Produktionsserver zu debuggen:  
-  
--   Debuggen ist ein Vorgang mit hohen Berechtigungen. Daher dürfen nur Mitglieder der festen Serverrolle sysadmin in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]debuggen.  
-  
--   Debuggingsitzungen werden oft über längere Zeiträume ausgeführt, während Sie die Vorgänge verschiedener [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen untersuchen. Sperren, wie z.B. Updatesperren, die von der Sitzung eingerichtet werden, können längere Zeit beibehalten werden, bis die Sitzung beendet wird oder ein Commit oder ein Rollback für die Transaktion ausgeführt wurde.  
+- Debuggingsitzungen werden oft über längere Zeiträume ausgeführt, während Sie die Vorgänge verschiedener [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen untersuchen. Sperren, wie z.B. Updatesperren, die von der Sitzung eingerichtet werden, können längere Zeit beibehalten werden, bis die Sitzung beendet wird oder ein Commit oder ein Rollback für die Transaktion ausgeführt wurde.  
   
  Das Starten des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers versetzt das Abfrage-Editor-Fenster in den Debugmodus. Wenn das Abfrage-Editor-Fenster in den Debugmodus wechselt, hält der Debugger bei der ersten Codezeile an. Sie können den Code schrittweise durchlaufen, die Ausführung bei bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen unterbrechen und mithilfe der Debuggerfenster den aktuellen Ausführungsstatus anzeigen. Um den Debugger zu starten, klicken Sie entweder auf der Symbolleiste **Abfrage** auf die Schaltfläche **Debuggen** oder im Menü **Debuggen** auf **Debuggen starten** .  
   
  Das Abfrage-Editor-Fenster bleibt im Debugmodus, bis entweder die letzte Anweisung im Abfrage-Editor-Fenster abgeschlossen ist oder Sie den Debugmodus beenden. Sie können den Debugmodus und die Anweisungsausführung mithilfe einer der folgenden Methoden beenden:  
   
--   Klicken Sie im Menü **Debuggen** auf **Debuggen beenden**.  
+- Klicken Sie im Menü **Debuggen** auf **Debuggen beenden**.  
   
--   Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche **Debuggen beenden** .  
+- Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche **Debuggen beenden** .  
   
--   Klicken Sie im Menü **Abfrage** auf **Ausführung der Abfrage abbrechen**.  
+- Klicken Sie im Menü **Abfrage** auf **Ausführung der Abfrage abbrechen**.  
   
--   Klicken Sie auf der Symbolleiste **Abfrage** auf die Schaltfläche **Ausführung der Abfrage abbrechen** .  
+- Klicken Sie auf der Symbolleiste **Abfrage** auf die Schaltfläche **Ausführung der Abfrage abbrechen** .  
   
  Außerdem können Sie den Debugmodus beenden und die Ausführung der verbleibenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen zulassen, indem Sie im Menü **Debuggen** auf **Alle trennen** klicken.  
   
-## <a name="controlling-the-debugger"></a>Steuern des Debuggers  
+## <a name="controlling-the-debugger"></a>Steuern des Debuggers
+
  Sie können die Arbeitsweise des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers mit den folgenden Menübefehlen, Symbolleisten und Verknüpfungen steuern:  
   
--   Mit dem Menü **Debuggen** und der Symbolleiste **Debuggen** . Sowohl das Menü **Debuggen** als auch die Symbolleiste **Debuggen** sind inaktiv, bis der Fokus auf ein offenes Abfrage-Editor-Fenster verschoben wird. Sie bleiben aktiv, bis das aktuelle Projekt geschlossen wird.  
+- Mit dem Menü **Debuggen** und der Symbolleiste **Debuggen** . Sowohl das Menü **Debuggen** als auch die Symbolleiste **Debuggen** sind inaktiv, bis der Fokus auf ein offenes Abfrage-Editor-Fenster verschoben wird. Sie bleiben aktiv, bis das aktuelle Projekt geschlossen wird.  
   
--   Mit den Tastenkombinationen des Debuggers.  
+- Mit den Tastenkombinationen des Debuggers.  
   
--   Mit dem Kontextmenü des Abfrage-Editors. Das Kontextmenü wird angezeigt, wenn Sie in einem Abfrage-Editor-Fenster mit der rechten Maustaste auf eine Zeile klicken. Wenn sich das Abfrage-Editor-Fenster im Debugmodus befindet, zeigt das Kontextmenü Debuggerbefehle an, die für die ausgewählte Zeile oder Zeichenfolge gelten.  
+- Mit dem Kontextmenü des Abfrage-Editors. Das Kontextmenü wird angezeigt, wenn Sie in einem Abfrage-Editor-Fenster mit der rechten Maustaste auf eine Zeile klicken. Wenn sich das Abfrage-Editor-Fenster im Debugmodus befindet, zeigt das Kontextmenü Debuggerbefehle an, die für die ausgewählte Zeile oder Zeichenfolge gelten.  
   
--   Mit Menüelementen und Kontextbefehlen in den Fenstern, die vom Debugger geöffnet werden, wie z.B. das Fenster **Überwachung** oder **Breakpoints** .  
+- Mit Menüelementen und Kontextbefehlen in den Fenstern, die vom Debugger geöffnet werden, wie z.B. das Fenster **Überwachung** oder **Breakpoints** .  
   
  Die folgende Tabelle enthält die Menübefehle, Symbolleistenschaltflächen und Tastenkombinationen für den Debugger.  
   
@@ -105,11 +111,10 @@ ms.locfileid: "68264259"
 |**Alle Breakpoints deaktivieren**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Deaktiviert alle Breakpoints.|  
 |Nicht verfügbar|**Überwachung hinzufügen**|Nicht verfügbar|Nicht verfügbar|Fügt dem **Überwachungsfenster** den ausgewählten Ausdruck hinzu.|  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)   
- [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   
- [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen
+
+- [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)
+- [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)
+- [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)

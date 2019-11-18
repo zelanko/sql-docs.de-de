@@ -1,6 +1,7 @@
 ---
-title: Stretch Database, die erweiterte gespeicherte Prozeduren (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: Erweiterte gespeicherte Prozeduren (Transact-SQL)
+titleSuffix: SQL Server Stretch Database
+ms.custom: seo-dt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,39 +14,39 @@ helpviewer_keywords:
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 675695ed3eef8fd5ddd29fa48aa64e30f8fd822c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d82b6cb9049bf5a41cfb987a55bb6d5a7147c9bd
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106642"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119272"
 ---
-# <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database, die erweiterte gespeicherte Prozeduren (Transact-SQL)
+# <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database erweiterter gespeicherter Prozeduren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
- Dieser Abschnitt beschreibt die erweiterten gespeicherten Prozeduren, die im Zusammenhang mit Stretch Database.  
+ In diesem Abschnitt werden die erweiterten gespeicherten Prozeduren beschrieben, die mit Stretch Database verknüpft sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
-[Sys. sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) entfernt die authentifizierte Verbindung zwischen einer lokalen Stretch-aktivierte Datenbank und Azure-Remotedatenbank.
+[sys. sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) Entfernt die authentifizierte Verbindung zwischen einer lokalen Stretch-aktivierten Datenbank und der Azure-Remote Datenbank.
 
-[sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md) Ruft die Anzahl von Stunden für migrierte Daten, die von SQL Server beibehalten in eine Stagingtabelle, um sicherzustellen, eine vollständige Wiederherstellung von Azure-Remotedatenbank, wenn eine Wiederherstellung erforderlich ist.
+[sys. sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md) Ruft die Anzahl der Stunden der migrierten Daten ab, die SQL Server in einer Stagingtabelle beibehält, um eine vollständige Wiederherstellung der Azure-Remote Datenbank zu gewährleisten, wenn eine Wiederherstellung erforderlich ist.
   
- [Sys. sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) die authentifizierte Verbindung zwischen einer lokalen Datenbank für Stretch aktiviert und die remote-Datenbank wiederhergestellt.
+ [sys. sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) Stellt die authentifizierte Verbindung zwischen einer lokalen Datenbank, die für Stretch aktiviert ist, und der Remote Datenbank wieder her.
   
  [sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)  
- Gleicht die Batch-ID, die in der Stretch-aktivierten SQL Server-Tabelle für die am häufigsten vor kurzem migrierten Daten gespeichert werden, mit der Batch-ID im Azure-Remotetabelle gespeichert. 
+ Gibt die Batch-ID, die in der Stretch-aktivierten SQL Server Tabelle gespeichert ist, für die zuletzt migrierten Daten mit der in der Azure-Remote Tabelle gespeicherten Batch-ID aus. 
  
-[sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md) gleicht im Azure-Remotetabelle Spalten den Spalten in Stretch-aktivierten SQL Server-Tabelle.
+[sys. sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md) Gibt die Spalten in der Azure-Remote Tabelle mit den Spalten in der Stretch-aktivierten SQL Server Tabelle aus.
  
- [Sys.sp_rda_reconcile_indexes](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md) Warteschlangen eine Schemaaufgabe an, wenn Sie Indizes in der Remotetabelle abstimmen möchten.
+ [sys. sp_rda_reconcile_indexes](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md) Fügt eine Schema Aufgabe in die Warteschlange ein, um Indizes für die Remote Tabelle abzustimmen.
  
- [sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) gibt an, ob Abfragen an der aktuellen aktivierter Funktion Stretch-Datenbank und die Tabellen sowohl lokale als auch Daten (Standard) oder nur lokale Daten zurückgeben.
+ [sys. sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) Gibt an, ob Abfragen für die aktuelle Stretch-aktivierte Datenbank und Ihre Tabellen sowohl lokale als auch Remote Daten (Standard) oder lokale Daten zurückgeben.
  
- [Sys. sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md) wird die Anzahl von Stunden für migrierte Daten, die von SQL Server beibehalten in eine Stagingtabelle, um sicherzustellen, eine vollständige Wiederherstellung von Azure-Remotedatenbank, wenn eine Wiederherstellung erforderlich ist.
+ [sys. sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md) Legt die Anzahl von Stunden für migrierte Daten fest, die SQL Server in einer Stagingtabelle beibehalten werden, um eine vollständige Wiederherstellung der Azure-Remote Datenbank zu gewährleisten, wenn eine Wiederherstellung erforderlich ist.
  
- [Sys.sp_rda_test_connection](../../relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md) testet die Verbindung von SQL Server mit der Azure-Remoteserver und meldet Probleme, die die Migration von Daten verhindern können.
+ [sys. sp_rda_test_connection](../../relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md) Testet die Verbindung von SQL Server mit dem Azure-Remote Server und meldet Probleme, die eine Datenmigration verhindern können.
  
 ## <a name="see-also"></a>Siehe auch  
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [Stretch-Datenbank](../../sql-server/stretch-database/stretch-database.md)  
   
   
