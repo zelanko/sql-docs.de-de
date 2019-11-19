@@ -24,7 +24,7 @@ ms.locfileid: "72798131"
   
  **In diesem Thema:**  
   
--   [Erforderliche Komponenten](#prereq)  
+-   [Voraussetzungen](#prereq)  
   
 -   [Schritt 1: Prüfliste vor der Deinstallation](#bkmk_before)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72798131"
   
 -   [Schritt 6: Prüfliste nach der Deinstallation](#bkmk_post)  
   
-##  <a name="prereq"></a> Prerequisites  
+##  <a name="prereq"></a>Voraussetzungen  
   
 -   Sie müssen ein SharePoint-Farmadministrator oder ein Dienstanwendungsadministrator sein, um Funktionen und Lösungen in der Farm zu deinstallieren.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "72798131"
   
      Unter **PowerPivot Service-Anwendungen entfernen**haben Sie die Option, die der Dienstanwendung zugeordneten Anwendungsdaten zu löschen. Die Anwendungsdaten bilden eine SQL Server-Datenbank, die mit der Dienstanwendung zum Speichern von Datenaktualisierungszeitplänen, Datenbankinstanzinformationen, Verwendungsdaten und anderen von PowerPivot für SharePoint verwendeten Daten erstellt wurde. Benutzerdateien, z. B. PowerPivot-Arbeitsmappen, werden nicht gespeichert. Wenn Sie die Anwendungsdaten nicht aus einem bestimmten Grund speichern müssen (z. B. wenn auf Datenaktualisierung oder Datenzugriff bezogene Datenbeibehaltungsrichtlinien angewendet werden), können Sie die Anwendungsdatenbank löschen, ohne Dateien zu entfernen, die von SharePoint-Benutzern erstellt oder gespeichert wurden.  
   
-     Wählen Sie zum Löschen der Datenbank **PowerPivot Service-Anwendungen entfernen** aus, und wählen Sie dann die Option zum Löschen der dieser Dienstanwendung zugeordneten Anwendungsdaten.  
+     Wählen Sie zum Löschen der Datenbank **PowerPivot Service-Anwendungen entfernen** aus, und wählen Sie dann die Option zum Löschen der dieser **Dienstanwendung zugeordneten Anwendungsdaten**.  
   
 5.  Überprüfen Sie optional ausführliche Informationen auf der Registerkarte **Ausgabe** oder auf der Registerkarte **Skript** .  
   
@@ -181,12 +181,12 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
      Im Gegensatz dazu werden einzelne Zielanwendungen, die vom PowerPivot-Systemdienst automatisch generiert wurden, bei der Deinstallation von PowerPivot automatisch gelöscht.  
   
-4.  Klicken Sie in der Systemsteuerung auf **Programme**und dann auf **Programm deinstallieren** Deinstallieren Sie alle Analysis Services-Clientbibliotheken, die nicht mehr verwendet werden. Microsoft SQL Server 2008 Analysis Services-ADOMD.NET und Microsoft SQL Servers Analysis Management Objects werden bei der Deinstallation von PowerPivot für SharePoint nicht entfernt. Da die Bibliotheken möglicherweise von anderen Programmen verwendet werden, die Analysis Services-Daten verwenden, werden diese beim SQL Server-Setup nicht automatisch deinstalliert. Sie müssen die Clientbibliotheken einzeln deinstallieren, wenn Sie sie nicht mehr benötigen.  
+4.  Klicken Sie in der Systemsteuerung auf **Programme**und dann auf **Programm deinstallieren** . Deinstallieren Sie alle Analysis Services-Clientbibliotheken, die nicht mehr verwendet werden. Microsoft SQL Server 2008 Analysis Services-ADOMD.NET und Microsoft SQL Servers Analysis Management Objects werden bei der Deinstallation von PowerPivot für SharePoint nicht entfernt. Da die Bibliotheken möglicherweise von anderen Programmen verwendet werden, die Analysis Services-Daten verwenden, werden diese beim SQL Server-Setup nicht automatisch deinstalliert. Sie müssen die Clientbibliotheken einzeln deinstallieren, wenn Sie sie nicht mehr benötigen.  
   
      Deinstallieren Sie das SQL Server Reporting Services SharePoint 2010-Add-In, sofern Sie keine Problembehandlungs- oder Installationsanweisungen befolgen und darin zur Deinstallation aufgefordert werden. Das Reporting Services-Add-In wird von Access Services verwendet. Es wird mit dem SharePoint Products-Produktvorbereitungstool installiert und sollte im System verbleiben, um die für SharePoint erforderlichen Funktionen zu unterstützen.  
   
      Deinstallieren Sie nicht den Analysis Services OLE DB-Anbieter. Bei der SharePoint-Installation wird der OLE DB-Anbieter als Voraussetzung für Excel-Arbeitsmappen installiert, die eine Verbindung mit Analysis Services-Datenbanken herstellen. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] wird eine neuere Version installiert. Diese Version ist jedoch abwärts kompatibel und sollte daher im System bleiben, um spätere Datenverbindungsprobleme zu vermeiden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Installieren oder Deinstallieren des PowerPivot für SharePoint Add- &#40;in SharePoint&#41; 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
  [PowerPivot-Konfigurationstools](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  

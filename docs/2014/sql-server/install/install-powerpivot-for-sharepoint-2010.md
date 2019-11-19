@@ -28,7 +28,7 @@ ms.locfileid: "71952253"
   
  Anweisungen zum Installieren von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Server finden Sie unter [Deployment Checkliste: Reporting Services, Power View und PowerPivot für SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
   
 1.  Sie müssen lokaler Administrator sein, um SQL Server-Setup auszuführen.  
   

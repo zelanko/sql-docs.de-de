@@ -24,7 +24,7 @@ ms.locfileid: "72798118"
   
  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Der SharePoint-Server muss im SharePoint-Setup mit der Installationsoption Serverfarm installiert worden sein. Ein eigenständiger SharePoint-Server, der eine integrierte Datenbank verwendet, wird nicht unterstützt. Weitere Informationen finden Sie unter [Anleitung für die Verwendung von SQL Server BI-Funktionen in einer SharePoint 2010-Farm](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  
@@ -67,7 +67,7 @@ ms.locfileid: "72798118"
   
 2.  Klicken Sie in der SharePoint 2010-Zentraladministration in Systemeinstellungen auf **Farmlösungen verwalten**.  
   
-     Es sollten zwei separate Lösungspakete angezeigt werden: powerpivotfarm.wsp und powerpivotwebapp.wsp. Die erste Lösung (powerpivotfarm.wsp) muss bereits bereitgestellt worden sein. Nachdem die Lösung einmal bereitgestellt wurde, muss dieser Schritt nicht wiederholt werden. Die zweite Lösung (powerpivotwebapp.wsp) wird für die Zentraladministration bereitgestellt, muss jedoch manuell für jede SharePoint-Webanwendung bereitgestellt werden, die den PowerPivot-Datenzugriff unterstützt.  
+     Es sollten zwei separate Lösungspakete angezeigt werden: {1}powerpivotfarm.wsp{2} und {3}powerpivotwebapp.wsp{4}. Die erste Lösung (powerpivotfarm.wsp) muss bereits bereitgestellt worden sein. Nachdem die Lösung einmal bereitgestellt wurde, muss dieser Schritt nicht wiederholt werden. Die zweite Lösung (powerpivotwebapp.wsp) wird für die Zentraladministration bereitgestellt, muss jedoch manuell für jede SharePoint-Webanwendung bereitgestellt werden, die den PowerPivot-Datenzugriff unterstützt.  
   
 3.  Klicken Sie auf **powerpivotwebapp.wsp**.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "72798118"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Teil 3: Konfigurieren des PowerPivot-Kontos für die unbeaufsichtigte Datenaktualisierung  
  Häufig muss ein Konto für die unbeaufsichtigte Datenaktualisierung für den PowerPivot-Datenzugriff erstellt werden, damit während der Datenaktualisierung auf externe Daten zugegriffen werden kann. Wenn Kerberos z. B. nicht aktiviert ist, müssen Sie ein unbeaufsichtigtes Konto erstellen, über das der PowerPivot-Dienst eine Verbindung mit externen Datenquellen herstellen kann.  
   
- Anweisungen zum Erstellen des unbeaufsichtigten Power Pivot-Daten Aktualisierungs Kontos oder anderer gespeicherter Anmelde Informationen, die bei der Datenaktualisierung verwendet werden, finden Sie unter [Konfigurieren des &#40;Power&#41; Pivot-Kontos für die unbeaufsichtigte Datenaktualisierung PowerPivot für SharePoint](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) und [Konfigurieren gespeicherte Anmelde Informationen für die Power Pivot &#40;-&#41;Datenaktualisierung PowerPivot für SharePoint](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Anweisungen zum Erstellen des unbeaufsichtigten Power Pivot-Daten Aktualisierungs Kontos oder anderer gespeicherter Anmelde Informationen, die bei der Datenaktualisierung verwendet werden, finden Sie unter [Konfigurieren des &#40;unbeaufsichtigten Daten&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) Aktualisierungs Kontos für Power Pivot PowerPivot für SharePoint und [Konfigurieren gespeicherter Anmelde Informationen für die Power Pivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
 ##  <a name="Usage"></a>Schritt 6: Aktivieren der Sammlung von Verwendungs Daten  
  PowerPivot für SharePoint erfasst Informationen zur PowerPivot-Verwendung überall in der Farm mithilfe der Infrastruktur zur Sammlung von SharePoint-Verwendungsdaten. Obwohl Verwendungsdaten immer Teil einer SharePoint-Installation sind, müssen sie möglicherweise aktiviert werden, damit sie verwendet werden können. Anweisungen finden Sie unter [Konfigurieren der Sammlung von Verwendungs &#40;Daten für PowerPivot für SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint).  
@@ -240,7 +240,7 @@ ms.locfileid: "72798118"
   
 2.  Überprüfen Sie, ob der PowerPivot-Datenzugriff und die Verarbeitungsfunktionen in der Anwendung verfügbar sind. Überprüfen Sie hierzu das Vorhandensein von durch PowerPivot bereitgestellte Bibliotheksvorlagen:  
   
-    1.  Klicken Sie unter Website Aktionen auf **Weitere Optionen..**.  
+    1.  Klicken Sie unter Website Aktionen auf **Weitere Optionen..** .  
   
     2.  In Bibliotheken sollten die **datenfeedbibliothek** und der **Power Pivot**-Katalog angezeigt werden. Diese Bibliotheksvorlagen werden von der PowerPivot-Funktion bereitgestellt und sind in der Bibliothekenliste sichtbar, falls die Funktion ordnungsgemäß integriert wurde.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "72798118"
   
 4.  Starten Sie SQL Server Management Studio im Startmenü in der Programmgruppe Microsoft SQL Server 2008 R2. Wenn dieses Tool nicht auf dem Server installiert ist, können Sie mit dem letzten Schritt fortfahren, um das Vorhandensein zwischengespeicherter Dateien zu bestätigen.  
   
-5.  Wählen Sie unter Servertyp die Option **Analysis Services**aus.  
+5.  Wählen Sie unter Servertyp die Option **Analysis Services** aus.  
   
 6.  Geben Sie unter Servername **\<Servername > \powerpivot**ein, wobei **\<Server Name >** der Name des Computers ist, auf dem sich die PowerPivot für SharePoint-Installation befindet.  
   
@@ -277,7 +277,7 @@ ms.locfileid: "72798118"
  Der PowerPivot-Katalog ist eine Bibliothek, die Vorschau- und Präsentationsoptionen zum Anzeigen von PowerPivot-Arbeitsmappen auf einer SharePoint-Website enthält. Das Verwenden des PowerPivot-Katalogs zum Veröffentlichen und Anzeigen von PowerPivot-Arbeitsmappen wird für die Vorschaufunktion empfohlen. Wenn Sie überdies auch Reporting Services auf dem gleichen SharePoint-Server bereitgestellt haben, bietet ein PowerPivot-Katalog Benutzerfreundlichkeit beim Erstellen von Berichten. Sie können den Berichts-Generator innerhalb des PowerPivot-Katalogs starten, um als Grundlage für einen neuen Bericht eine veröffentlichte PowerPivot-Arbeitsmappe zu verwenden. Weitere Informationen zum Erstellen und Verwenden der Bibliothek finden Sie unter [Erstellen und Anpassen des Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery) -Katalogs und [Verwenden des Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/use-power-pivot-gallery)-Katalogs.  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>Erstellen von zusätzlichen vertrauenswürdigen Websites in Excel Services  
- Sie können vertrauenswürdige Websites in Excel Services hinzufügen, um die Berechtigungen und Konfigurationseinstellungen auf Websites zu variieren, die Excel-Arbeitsmappen und PowerPivot-Daten bereitstellen. Weitere Informationen finden Sie unter [Create a trusted location for PowerPivot sites in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration).  
+ Sie können vertrauenswürdige Websites in Excel Services hinzufügen, um die Berechtigungen und Konfigurationseinstellungen auf Websites zu variieren, die Excel-Arbeitsmappen und PowerPivot-Daten bereitstellen. Weitere Informationen finden Sie unter [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration).  
   
 ### <a name="tune-configuration-settings"></a>Optimieren von Konfigurationseinstellungen  
  Eine PowerPivot-Dienstanwendung wird mit Standardeigenschaften und -werten erstellt. Sie können Konfigurationseinstellungen für einzelne Dienstanwendungen ändern, um die Methodik zu ändern, anhand der die Anforderungen zugeordnet werden. Außerdem können Sie Servertimeouts festlegen, die Schwellenwerte für Abfrageantwortberichtsereignisse ändern oder festlegen, wie lange die Verwendungsdaten beibehalten werden sollen. Weitere Informationen zur Konfiguration in der zentral Administration oder zum Verwenden von Power Pivot-Funktionen in SharePoint-Webanwendungen finden Sie unter [Power Pivot-Server Verwaltung und-Konfiguration in der zentral Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
@@ -292,7 +292,7 @@ ms.locfileid: "72798118"
   
  Wenn Sie mit der Zeit feststellen, dass zusätzlicher Datenspeicher und zusätzliche Verarbeitungskapazität erforderlich sind, können Sie der Farm eine zweite Serverinstanz mit PowerPivot für SharePoint hinzufügen. Der Installationsvorgang ist fast identisch mit den Schritten, die Sie ausgeführt haben, um den ersten Server hinzuzufügen, mit Ausnahme der Anforderungen, wie Sie Instanznamen und Dienstkontoinformationen angeben. Anweisungen finden Sie unter [Bereitstellungs Prüfliste: horizontales Skalieren durch Hinzufügen von Power Pivot-Servern zu einer SharePoint 2010-Farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Von den Editionen von SQL Server 2014 unterstützte Funktionen](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Konfigurieren von Power Pivot-Dienst Konten](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [Erstellen und Konfigurieren einer Power Pivot-Dienst Anwendung in der zentral Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)   
