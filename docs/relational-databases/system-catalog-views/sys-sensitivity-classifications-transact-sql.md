@@ -23,24 +23,24 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b95dec6d4d867e54c3ccf0d1108a7f6b1cfa8f3c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 5a49d68b486a6bb812ea91d518145e1f639ef991
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73757472"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164931"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys. sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 
-|Spaltenname|Datentyp|Beschreibung|
+|Spaltenname|Datentyp|und Beschreibung|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|Identifiziert die Klasse des Elements, für das die Klassifizierung vorhanden ist.|  
-|**class_desc**|**varchar (16)**|Eine Beschreibung der Klasse des Elements, für das die Klassifizierung vorhanden ist.|  
-|**major_id**|**int**|ID des Elements, für das die Klassifizierung vorhanden ist.<br><br>Wenn class den Wert 0 hat, ist major_id immer 0.<br>Wenn die Klasse den Wert 1, 2 oder 7 hat, major_id object_id ist.|  
-|**minor_id**|**int**|Sekundäre ID des Elements, für das die Klassifizierung vorhanden ist, interpretiert nach der Klasse.<br><br>Wenn class = 1, ist minor_id der column_id (if-Spalte), Else 0 (if-Objekt).<br>Wenn class = 2, ist minor_id die parameter_id.<br>Wenn class = 7, ist minor_id die index_id. |  
+|**class**|**int**|Identifiziert die Klasse des Elements, für das die Klassifizierung vorhanden ist. Hat immer den Wert 1 (die eine Spalte darstellt)|  
+|**class_desc**|**varchar (16)**|Eine Beschreibung der Klasse des Elements, für das die Klassifizierung vorhanden ist. hat immer den Wert *OBJECT_OR_COLUMN*|  
+|**major_id**|**int**|Stellt die ID der Tabelle dar, die die klassifizierte Spalte enthält. Dies entspricht sys. all_objects. object_id|  
+|**minor_id**|**int**|Stellt die ID der Spalte dar, für die die Klassifizierung vorhanden ist. Dies entspricht sys. ALL_COLUMNS. column_id|   
 |**label**|**sysname**|Die Bezeichnung (Menschen lesbar), die für die Vertraulichkeits Klassifizierung zugewiesen ist.|  
 |**label_id**|**sysname**|Eine ID, die der Bezeichnung zugeordnet ist und von einem Informationsschutz System wie z. b. Azure Information Protection (AIP) verwendet werden kann.|  
 |**information_type**|**sysname**|Der Informationstyp (Menschen lesbar), der der Sensitivität-Klassifizierung zugewiesen ist.|  
@@ -49,15 +49,11 @@ Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 |**rank_desc**|**sysname**|Textdarstellung des Rangs:  <br><br>keine, niedrig, Mittel, hoch, kritisch|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 
 - Diese Ansicht bietet Einblick in den Klassifizierungs Status der Datenbank. Sie kann zum Verwalten der Daten Bank Klassifizierungen sowie zum Erstellen von Berichten verwendet werden.
-- Derzeit wird nur die Klassifizierung von Daten Bank Spalten unterstützt. Damit
-    - **Class** : hat immer den Wert 1 (die eine Spalte darstellt)
-    - **class_desc** : hat immer den Wert *OBJECT_OR_COLUMN*
-    - **major_id** : die ID der Tabelle, die die klassifizierte Spalte enthält, entsprechend sys. all_objects. object_id
-    - **minor_id** die die ID der Spalte darstellt, für die die Klassifizierung vorhanden ist. Dies entspricht sys. ALL_COLUMNS. column_id
-
+- Derzeit wird nur die Klassifizierung von Daten Bank Spalten unterstützt.
+ 
 ## <a name="examples"></a>Beispiele
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. Auflisten aller klassifizierten Spalten und der entsprechenden Klassifizierung

@@ -1,7 +1,7 @@
 ---
-title: dm_exec_query_profiles (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_query_profiles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 10/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,27 +20,27 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d13e7b3e2cac16bed40752f4452ba558c982c41
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255437"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165503"
 ---
-# <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
+# <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 Überwacht den Abfragestatus einer ausgeführten Abfrage in Echtzeit. Verwenden Sie beispielsweise diese DMV, um zu ermitteln, welcher Teil der Abfrage langsam ausgeführt wird. Verknüpfen Sie diese DMV mit anderen System-DMVs, indem Sie die im Beschreibungsfeld angegebenen Spalten verwenden. Sie können diese DMV aber auch mit anderen Leistungsindikatoren (z. B. Systemmonitor, xperf) verknüpfen, indem Sie die timestamp-Spalten verwenden.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
-Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Die Ergebnisse sind dynamisch und entsprechen nicht den Ergebnissen für vorhandene Optionen wie z. B. `SET STATISTICS XML ON` Ausgabe dem nur erstellen, wenn die Abfrage abgeschlossen ist.  
+Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Die Ergebnisse sind dynamisch und stimmen nicht mit den Ergebnissen vorhandener Optionen, wie z. b. `SET STATISTICS XML ON`, die nur dann eine Ausgabe erstellen, wenn die Abfrage abgeschlossen ist.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifiziert die Sitzung, in der die Abfrage ausgeführt wird. Verweist auf dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifiziert die Zielanforderung. Verweist auf dm_exec_sessions.request_id.|  
-|sql_handle|**varbinary(64)**|Ist ein Token, das den Batch eindeutig identifiziert oder die gespeicherte Prozedur, die die Abfrage angehört. Verweist auf dm_exec_query_stats.sql_handle.|  
-|plan_handle|**varbinary(64)**|Ist ein Token, die eindeutig einen Abfrageplan für die Ausführung für einen Batch, die ausgeführt wurde und der Plan im Plancache befindet, oder wird gerade ausgeführt. Verweist auf dm_exec_query_stats.plan_handle.|  
+|sql_handle|**varbinary(64)**|Ein Token, das den Batch oder die gespeicherte Prozedur eindeutig identifiziert, zu der die Abfrage gehört. Verweist auf dm_exec_query_stats.sql_handle.|  
+|plan_handle|**varbinary(64)**|Ein Token, das einen Abfrage Ausführungsplan für einen Batch eindeutig identifiziert, der ausgeführt wurde und dessen Plan sich im Plancache befindet oder gerade ausgeführt wird. Verweist auf dm_exec_query_stats. plan_handle.|  
 |physical_operator_name|**nvarchar(256)**|Der Name des physischen Operators.|  
 |node_id|**int**|Identifiziert einen Operatorknoten in der Abfragestruktur.|  
 |thread_id|**int**|Unterscheidet die Threads (für eine parallele Abfrage), die zu demselben Abfrageoperatorknoten gehören.|  
@@ -56,8 +56,8 @@ Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Di
 |first_row_time|**bigint**|Zeitstempel beim Öffnen der ersten Zeile (in Millisekunden).|  
 |last_row_time|**bigint**|Zeitstempel beim Öffnen der letzten Zeile (in Millisekunden).|  
 |close_time|**bigint**|Zeitstempel beim Schließen (in Millisekunden).|  
-|elapsed_time_ms|**bigint**|Gesamte verstrichene Zeit (in Millisekunden) ein, die Vorgänge des Zielknotens bisher.|  
-|cpu_time_ms|**bigint**|Gesamtanzahl der Verwendung von CPU-Zeit (in Millisekunden) bisher durch die Vorgänge des Zielknotens.|  
+|elapsed_time_ms|**bigint**|Die gesamte verstrichene Zeit (in Millisekunden), die bisher durch die Vorgänge des Ziel Knotens verwendet wurde.|  
+|cpu_time_ms|**bigint**|Die CPU-Gesamtzeit (in Millisekunden), die bisher durch die Vorgänge des Ziel Knotens verwendet wurde.|  
 |database_id|**smallint**|ID der Datenbank, die das Objekt enthält, für das die Lese- und Schreibvorgänge ausgeführt werden.|  
 |object_id|**int**|Der Bezeichner für das Objekt, für das die Lese- und Schreibvorgänge ausgeführt werden. Verweist auf "sys.objects.object_id".|  
 |index_id|**int**|Der Index (sofern vorhanden), für den das Rowset geöffnet wird.|  
@@ -71,30 +71,29 @@ Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Di
 |lob_read_ahead_count|**bigint**|Anzahl der bisherigen Read-Ahead-LOB-Lesevorgänge.|  
 |segment_read_count|**int**|Anzahl der bisherigen Segment-Read-Ahead-Lesevorgänge.|  
 |segment_skip_count|**int**|Anzahl der bisher übersprungenen Segmente.| 
-|actual_read_row_count|**bigint**|Anzahl der Zeilen, die durch den Operator zu lesen, bevor die residuale-Prädikat angewendet wurde.| 
-|estimated_read_row_count|**bigint**|**Gilt für:** Beginnend mit [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Geschätzte Anzahl von Zeilen durch den Operator gelesen werden, bevor die residuale-Prädikat angewendet wurde.|  
+|actual_read_row_count|**bigint**|Anzahl der von einem Operator gelesenen Zeilen, bevor das Rest-Prädikat angewendet wurde.| 
+|estimated_read_row_count|**bigint**|**Gilt für:** Ab [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Anzahl der Zeilen, die von einem Operator vor dem Anwenden des Rest-Prädikats gelesen werden sollen.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Wenn der abfrageplanknoten e/a nicht besitzt, werden alle e/A-bezogene Indikatoren auf NULL festgelegt.  
+ Wenn der Abfrageplan Knoten keine e/a-Vorgänge hat, werden alle e/a-bezogenen Leistungsindikatoren auf NULL festgelegt.  
   
- Von dieser DMV gemeldeten e/A-bezogene Leistungsindikatoren sind präziser als die von gemeldeten `SET STATISTICS IO` in die folgenden Möglichkeiten:  
+ Die e/a-bezogenen Leistungsindikatoren, die von dieser DMV gemeldet werden, sind in den folgenden zwei Punkten präziser als die von `SET STATISTICS IO` gemeldeten:  
   
--   `SET STATISTICS IO` Fasst die Leistungsindikatoren für alle e/a für eine bestimmte Tabelle zusammen. Mit dieser DMV erhalten separate Leistungsindikatoren für jeden Knoten im Abfrageplan Sie, die e/a für die Tabelle ausführt.  
+-   `SET STATISTICS IO` gruppiert die Zähler für alle e/a-Vorgänge für eine bestimmte Tabelle. Mit dieser DMV erhalten Sie separate Leistungsindikatoren für jeden Knoten im Abfrageplan, der e/a-Vorgänge für die Tabelle ausführt.  
   
 -   Bei einem parallelen Scan meldet diese DMV Leistungsindikatoren für jeden der parallelen Threads für den Scan.
  
-Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 die *standard Statistiken zur abfrageausführung profilerstellungsinfrastruktur* vorhanden-Seite-an-Seite mit einer *einfache profilerstellungsinfrastruktur abfrageausführungsstatistik* . `SET STATISTICS XML ON` und `SET STATISTICS PROFILE ON` verwenden Sie immer die *standard Statistiken zur abfrageausführung profilerstellungsinfrastruktur*. Für `sys.dm_exec_query_profiles` um gefüllt werden, eine von der Abfrage, die profilerstellung Infrastrukturen muss aktiviert werden. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).    
+Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ist die *Standard Infrastruktur für die Abfrage Ausführungs Statistik-Profilerstellung* parallel mit einer vereinfachten Profil Erstellungs Infrastruktur für die *Abfrage Ausführungs Statistik*vorhanden. `SET STATISTICS XML ON` und `SET STATISTICS PROFILE ON` verwenden immer die *standardmäßige Abfrage Ausführungs Statistik-Profil*Erstellungs Infrastruktur. Damit `sys.dm_exec_query_profiles` aufgefüllt werden, muss eine der Abfrage Profil Erstellungs Infrastrukturen aktiviert werden. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
-> Die Abfrage geprüft wurde, starten **nach** profilerstellungsinfrastruktur Abfrage aktiviert wurde, aktiviert wird, nachdem die Abfrage gestartet werden keine Ergebnisse im `sys.dm_exec_query_profiles`. Weitere Informationen zum Aktivieren der profilerstellung Infrastrukturen Abfrage finden Sie unter [Abfrage Profilerstellung Infrastruktur](../../relational-databases/performance/query-profiling-infrastructure.md).
+> Die Abfrage, die untersucht wird, muss gestartet werden, **nachdem** die Infrastruktur für die Abfrage Profilerstellung aktiviert wurde, sodass Sie nach dem Start der Abfrage keine Ergebnisse in `sys.dm_exec_query_profiles`erzeugt. Weitere Informationen zum Aktivieren der Abfrage Profil Erstellungs Infrastrukturen finden Sie unter [Infrastruktur für die Abfrage Profilerstellung](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Berechtigungen  
-
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verwalteten Instanz ist `VIEW DATABASE STATE` Berechtigung und Mitgliedschaft in der `db_owner` Daten Bank Rolle erforderlich.   
+Bei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE`-Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Standard-und Basic-Tarifen ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
    
 ## <a name="examples"></a>Beispiele  
- Schritt 1: Melden Sie sich eine Sitzung, in dem die Abfrage ausführen, werden Sie mit analysiert, werden sollen `sys.dm_exec_query_profiles`. So konfigurieren Sie die Abfrage für die profilerstellung verwenden `SET STATISTICS PROFILE ON`. Führen Sie Ihre Abfrage in derselben Sitzung aus.  
+ Schritt 1: Melden Sie sich bei einer Sitzung an, in der Sie die Abfrage ausführen möchten, die mit `sys.dm_exec_query_profiles`analysiert werden soll. Verwenden Sie `SET STATISTICS PROFILE ON`, um die Abfrage für die Profilerstellung zu konfigurieren. Führen Sie Ihre Abfrage in derselben Sitzung aus.  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -108,7 +107,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- Schritt 2: Melden Sie sich eine zweite Sitzung, die sich von der Sitzung ist in der die Abfrage ausgeführt wird.  
+ Schritt 2: Melden Sie sich bei einer zweiten Sitzung an, die sich von der Sitzung unterscheidet, in der die Abfrage ausgeführt wird.  
   
  Die folgende Anweisung fasst den Fortschritt der Abfrage zusammen, die derzeit in Sitzung 54 ausgeführt wird. Zu diesem Zweck wird die Gesamtzahl der Ausgabezeilen aller Threads für jeden Knoten berechnet und mit der geschätzten Anzahl an Ausgabezeilen für diesen Knoten verglichen.  
   
