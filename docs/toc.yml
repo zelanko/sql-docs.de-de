@@ -5818,7 +5818,7 @@
           href: dea/database-experimentation-assistant-replay-trace.md
         - name: Erstellen von Berichten
           href: dea/database-experimentation-assistant-create-report.md
-        - name: Berichte anzeigen
+        - name: Überprüfen von Berichten
           href: dea/database-experimentation-assistant-view-report.md
         - name: Ausführen an der Eingabeaufforderung
           href: dea/database-experimentation-assistant-run-command-prompt.md
