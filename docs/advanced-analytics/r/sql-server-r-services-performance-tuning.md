@@ -1,100 +1,102 @@
 ---
-title: Leistungsoptimierung für SQL Server R Services
+title: Leistungsoptimierung für R
+description: In diesem Artikel wird die Leistungsoptimierung für R Services beschrieben.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dd12e38e0d1f01cd142cc4c11efe43346dd1f8ce
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 4d7b6b91ac3aeaa45c5e6c3e05c12176f5f60b28
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715621"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727360"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Leistungsoptimierung für R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dieser Artikel ist der erste in einer Reihe von vier Artikeln, in denen die Leistungsoptimierung für R Services basierend auf zwei Fallstudien beschrieben wird:
 
-- Leistungstests, die vom Produkt Entwicklungsteam durchgeführt werden, um das Leistungsprofil von R-Lösungen zu validieren
+- Leistungstests, die vom Produktentwicklungsteam durchgeführt werden, um das Leistungsprofil von R-Lösungen zu überprüfen
 
-- Leistungsoptimierung durch das Microsoft Data Science-Team für ein bestimmtes Machine Learning-Szenario, das häufig von Kunden angefordert wird.
+- Leistungsoptimierung durch das Microsoft Data Science-Team für ein bestimmtes Machine Learning-Szenario, das häufig von Kunden angefordert wird
 
-Das Ziel dieser Reihe besteht darin, Anleitungen zu den Typen von Leistungs Optimierungstechniken bereitzustellen, die für die Ausführung von R-Aufträgen in SQL Server am nützlichsten sind.
+Das Ziel dieser Reihe ist es, Anleitungen für die Techniken zur Leistungsoptimierung bereitzustellen, die für das Ausführen von R-Aufträgen in SQL Server am nützlichsten sind.
 
-+ Dieses (erste) Thema bietet einen Überblick über die Architektur und einige häufige Probleme bei der Optimierung von Data Science Tasks.
-+ Im zweiten Artikel werden bestimmte Hardware-und SQL Server Optimierungen behandelt.
++ Dieses (erste) Thema bietet eine Übersicht über die Architektur und einige häufige Probleme bei der Optimierung für Data Science-Aufgaben.
++ Im zweiten Artikel werden bestimmte Hardware- und SQL Server-Optimierungen behandelt.
 + Der dritte Artikel behandelt Optimierungen in R-Code und Ressourcen für die Operationalisierung.
-+ Im vierten Artikel werden die Testmethoden ausführlich beschrieben und Ergebnisse und Schlussfolgerungen berichtet.
++ Im vierten Artikel werden die Testmethoden ausführlich beschrieben sowie Ergebnisse und Schlussfolgerungen genannt.
 
 **Gilt für:** SQL Server 2016 R Services, SQL Server Machine Learning Services
 
-## <a name="performance-goals-and-targeted-scenarios"></a>Leistungsziele und gezielte Szenarien
+## <a name="performance-goals-and-targeted-scenarios"></a>Leistungsziele und Zielszenarien
 
-Die r Services-Funktion wurde in SQL Server 2016 eingeführt, um die Ausführung von r-Skripts durch SQL Server zu unterstützen. Wenn Sie dieses Feature verwenden, wird die R-Laufzeit in einem separaten Prozess von der Datenbank-Engine betrieben, aber die Daten werden mithilfe von Server Ressourcen und-Diensten, die mit SQL Server interagieren, wie z. b. dem vertrauenswürdigen Launchpad, sicher mit der Datenbank-Engine ausgetauscht.
+Das R Services-Feature wurde in SQL Server 2016 eingeführt, um die Ausführung von R-Skripts durch SQL Server zu unterstützen. Bei Verwendung dieses Features wird die R-Laufzeit in einem separaten Prozess von der Datenbank-Engine betrieben. Die Daten werden jedoch mithilfe von Serverressourcen und -diensten, die mit SQL Server interagieren (z.B. Trusted Launchpad), auf sichere Weise mit der Datenbank-Engine ausgetauscht.
 
-In SQL Server 2017 wurde die Unterstützung für die Ausführung von python-Skripts mit der gleichen Architektur angekündigt, wobei in Zukunft zusätzliche Sprache befolgt werden muss.
+In SQL Server 2017 wurde Unterstützung für das Ausführen von Python-Skripts mithilfe der gleichen Architektur angekündigt, wobei in Zukunft noch weitere Sprachen folgen werden.
 
-Wenn die Anzahl unterstützter Versionen und Sprachen zunimmt, ist es wichtig, dass der Datenbankadministrator und der Daten Bank Architekt das Potenzial von Ressourcenkonflikten aufgrund von Machine Learning-Aufträgen erkennen und den Server für die Unterstützung von konfigurieren können. die neuen Arbeits Auslastungen. Obwohl Analysen in der Nähe der Daten bleiben, werden unsichere Daten Verschiebungen vermieden. Außerdem werden analytische Workloads von dem Laptop des Datenanalysten und zurück auf den Server verschoben, auf dem die Daten gehostet werden.
+Mit zunehmender Anzahl unterstützter Versionen und Sprachen ist es wichtig, dass sich der Datenbankadministrator und der Datenbankarchitekt des Potenzials von Ressourcenkonflikten durch Machine Learning-Aufträge bewusst sind und den Server zur Unterstützung der neuen Workloads konfigurieren können. Obwohl durch datennahe Analysen unsichere Datenverschiebungen vermieden werden, werden Analyseworkloads vom Laptop des Datenanalysten zurück auf den Server verschoben, auf dem die Daten gehostet werden.
 
-Die Leistungsoptimierung für Machine Learning ist offensichtlich kein eindimensionales Angebot. Die folgenden allgemeinen Aufgaben haben möglicherweise sehr unterschiedliche Leistungsprofile:
+Die Leistungsoptimierung für Machine Learning ist eindeutig keine Einheitslösung. Die folgenden allgemeinen Aufgaben können sehr unterschiedliche Leistungsprofile aufweisen:
 
-- Schulungs Aufgaben: Erstellen und Trainieren eines Regressionsmodells im Vergleich zum Trainieren eines neuronalen Netzwerks
-- Featureentwicklung mithilfe von R und featureextraktion mit T-SQL
-- Bewertung von einzelnen Zeilen oder kleinen Batches im Vergleich zur Massen Bewertung mithilfe von Tabellen Eingaben
-- Ausführen der Bewertung in R und Bereitstellen von Modellen in der Produktion auf SQL Server in gespeicherten Prozeduren
-- Ändern von R-Code zum Minimieren der Datenübertragung oder entfernen kostspieliger Daten Transformationen
-- Aktivieren von automatischem testen und erneuten trainieren von Modellen
+- Trainingsaufgaben: Erstellen und Trainieren eines Regressionsmodells gegenüber dem Trainieren eines neuronalen Netzwerks
+- Featureentwicklung mithilfe von R gegenüber Featureextraktion mit T-SQL
+- Bewertung von einzelnen Zeilen oder kleinen Batches gegenüber Massenbewertung mithilfe von Tabelleneingaben
+- Ausführen der Bewertung in R gegenüber Bereitstellen von Modellen in der Produktion auf SQL Server in gespeicherten Prozeduren
+- Ändern von R-Code zum Minimieren der Datenübertragung oder Entfernen kostenintensiver Datentransformationen
+- Aktivieren von automatischem Testen und erneutem Trainieren von Modellen
 
-Da die Auswahl der Optimierungstechniken davon abhängt, welche Aufgabe für Ihre Anwendung oder Ihren Anwendungsfall entscheidend ist, werden die Fallstudien sowohl allgemeine Tipps zur Leistung als auch eine Anleitung zur Optimierung der Batch Bewertung behandelt.
+Da die Auswahl der Optimierungstechniken davon abhängt, welche Aufgabe für Ihre Anwendung oder Ihren Anwendungsfall entscheidend ist, umfassen die Fallstudien sowohl allgemeine Tipps zur Leistung als auch Anleitungen zur Optimierung für ein bestimmtes Szenario, die Optimierung für die Batchbewertung.
 
-+ **Individuelle Optimierungs Optionen in SQL Server**
++ **Individuelle Optimierungsoptionen in SQL Server**
 
-    In der ersten Leistungs Fallstudie wurden mehrere Tests in einem einzelnen Dataset mit einem einzigen Modelltyp ausgeführt. Der rxlinmod-Algorithmus in revoscaler wurde verwendet, um ein Modell zu erstellen und Ergebnisse daraus zu erstellen, aber der Code und die zugrunde liegenden Datentabellen wurden systematisch geändert, um die Auswirkungen der einzelnen Änderungen zu testen.
+    In der ersten Fallstudie zur Leistung wurden mehrere Tests für ein einzelnes Dataset mit einem einzigen Modelltyp ausgeführt. Mithilfe des rxLinMod-Algorithmus in RevoscaleR wurde ein Modell zum Erstellen von Bewertungen erstellt, doch wurden der Code und die zugrunde liegenden Datentabellen systematisch geändert, um die Auswirkungen der einzelnen Änderungen zu testen.
 
-    Beispielsweise wurde in einem Testlauf der R-Code so geändert, dass ein Vergleich zwischen der Featureentwicklung mit einer Transformations Funktion und dem vorab Berechnen der Features und dem anschließenden Laden von Features aus einer Tabelle vorgenommen werden kann. Bei einem anderen Testlauf wurde die Modell Trainingsleistung zwischen der Verwendung einer indizierten Standardtabelle im Vergleich zu Daten in einer Tabelle mit verschiedenen Komprimierungs Typen oder neuen Index Typen verglichen.
+    Beispielsweise wurde in einem Testlauf der R-Code so geändert, dass ein Vergleich zwischen der Featureentwicklung mithilfe einer Transformationsfunktion gegenüber dem Vorausberechnen der Features und dem anschließenden Laden der Features aus einer Tabelle vorgenommen werden konnte. In einem weiteren Testlauf wurde die Leistung des Modelltrainings bei Verwendung einer indizierten Standardtabelle gegenüber Daten in einer Tabelle mit verschiedenen Komprimierungstypen oder neuen Indextypen verglichen.
 
-+ **Optimierung für ein bestimmtes Bewertungs Szenario mit hohem Volumen**
++ **Optimierung für ein bestimmtes Bewertungsszenario mit hohem Volumen**
 
-    Die Machine Learning-Aufgabe in der zweiten Fallstudie umfasst die Verarbeitung von vielen Fortsetzungen, die für mehrere Positionen übermittelt wurden, und die Suche nach dem besten Kandidaten für die einzelnen Auftragspositionen. Das Machine Learning-Modell selbst ist als binäres Klassifizierungs Problem formuliert: Es führt eine Fortsetzung und eine Auftrags Beschreibung als Eingabe aus und generiert die Wahrscheinlichkeit für jedes Resume-Job-Paar. Da das Ziel darin besteht, die beste Übereinstimmung zu finden, wird ein benutzerdefinierter Wahrscheinlichkeits Schwellenwert zum weiteren Filtern und Abrufen der passenden Übereinstimmungen verwendet.
+    Die Machine Learning-Aufgabe in der zweiten Fallstudie umfasst die Verarbeitung vieler Lebensläufe, die für mehrere Positionen eingesandt wurden, und die Ermittlung des besten Kandidaten für die jeweilige Position. Das Machine Learning-Modell selbst ist als ein binäres Klassifizierungsproblem formuliert: Es nimmt einen Lebenslauf und eine Stellenbeschreibung als Eingabe und generiert die Wahrscheinlichkeit für jedes Lebenslauf-Stelle-Paar. Da es das Ziel ist, die beste Übereinstimmung zu finden, wird ein benutzerdefinierter Wahrscheinlichkeitsschwellenwert verwendet, um weiter zu filtern und nur die passenden Übereinstimmungen zu erhalten.
 
-    Für diese Lösung war das Hauptziel, bei der Bewertung eine geringe Latenz zu erzielen. Diese Aufgabe ist aber auch während des Bewertungsprozesses Rechen intensiv, da jeder neue Auftrag innerhalb eines angemessenen Zeitraums mit Millionen von Fort Läufen abgeglichen werden muss. Außerdem erzeugt der featureentwicklungsprozess mehr als 2000 Features pro Fortsetzung oder Auftrag und stellt einen erheblichen Leistungsengpass dar.
+    Bei dieser Lösung war es das Hauptziel, eine geringe Latenz bei der Bewertung zu erreichen. Diese Aufgabe ist aber auch während des Bewertungsprozesses rechenintensiv, da jede neue Stelle innerhalb eines angemessenen Zeitraums mit Millionen von Lebensläufen abgeglichen werden muss. Außerdem werden im Featureentwicklungsschritt mehr als 2000 Features pro Lebenslauf oder Stelle erzeugt, was einen erheblichen Leistungsengpass darstellt.
 
-Es wird empfohlen, dass Sie alle Ergebnisse aus der ersten Fallstudie überprüfen, um zu ermitteln, welche Techniken auf Ihre Lösung anwendbar sind, und Ihre potenziellen Auswirkungen zu wiegen.
+Es wird empfohlen, alle Ergebnisse der ersten Fallstudie zu überprüfen, um festzustellen, welche Techniken für Ihre Lösung geeignet sind, und deren potenziellen Auswirkungen abzuwägen.
 
-Überprüfen Sie dann die Ergebnisse der Fallstudie zur Bewertungs Optimierung, um zu sehen, wie der Autor verschiedene Techniken angewendet und den Server für die Unterstützung einer bestimmten Arbeitsauslastung optimiert hat.
+Dann überprüfen Sie die Ergebnisse der Fallstudie zur Bewertungsoptimierung, um zu sehen, wie der Autor verschiedene Techniken angewendet und den Server zur Unterstützung einer bestimmten Workload optimiert hat.
 
-## <a name="performance-optimization-process"></a>Leistungs Optimierungsprozess
+## <a name="performance-optimization-process"></a>Leistungsoptimierungsprozess
 
-Für die Konfiguration und Optimierung der Leistung muss eine solide Basis erstellt werden, auf der Optimierungen für bestimmte Arbeits Auslastungen erstellt werden:
+Zum Konfigurieren und Optimieren für Leistung muss eine solide Basis erstellt werden, auf der Optimierungen für bestimmte Workloads aufbauen:
 
-- Wählen Sie einen geeigneten Server zum Hosten von Analytics aus. Normalerweise wird ein sekundäres Berichterstattungs-, Data Warehouse-oder anderer Server, der bereits für andere Berichte oder Analysen verwendet wird, bevorzugt. In einer Hybridlösung für die Transaktions analytische Verarbeitung (HTAP) können jedoch operative Daten als Eingabe für R für die schnelle Bewertung verwendet werden.
+- Wählen Sie einen geeigneten Server zum Hosten von Analysen aus. Normalerweise wird ein sekundärer Berichtsserver, Data Warehouse-Server oder ein anderer Server bevorzugt, der bereits für andere Berichte oder Analysen verwendet wird. In einer HTAP-Lösung (Hybrid Transactional-Analytical Processing) können jedoch operative Daten als Eingabe für R für eine schnelle Bewertung verwendet werden.
 
-- Konfigurieren Sie die SQL Server Instanz, um Datenbank-Engine-Vorgänge und die Ausführung von R-oder python-Skripts auf angemessenen Ebenen auszugleichen Dies kann das ändern SQL Server Standardwerte für die Arbeitsspeicher-und CPU-Auslastung, die NUMA-und Prozessor Affinitäts Einstellungen und die Erstellung von Ressourcengruppen einschließen.
+- Konfigurieren Sie die SQL Server-Instanz, um Datenbank-Engine-Vorgänge und die Ausführung von R- oder Python-Skripts in geeigneter Form auszugleichen. Dies kann das Ändern von SQL Server-Standardwerten für die Arbeitsspeicher- und CPU-Auslastung, die Einstellungen für NUMA und Prozessoraffinität sowie die Erstellung von Ressourcengruppen umfassen.
 
-- Optimieren Sie den Server Computer, um die effiziente Verwendung externer Skripts zu unterstützen. Dies kann das Erhöhen der Anzahl von Konten, die für die Ausführung externer Skripts verwendet werden, das Aktivieren der Paketverwaltung und das Zuweisen von Benutzern zu verwandten Sicherheitsrollen umfassen.
+- Optimieren Sie den Servercomputer, um eine effiziente Verwendung externer Skripts zu unterstützen. Dies kann das Erhöhen der Anzahl von Konten, die für die Ausführung externer Skripts verwendet werden, das Aktivieren der Paketverwaltung und das Zuweisen von Benutzern zu verwandten Sicherheitsrollen umfassen.
 
-- Anwenden spezieller Optimierungen für die Datenspeicherung und-Übertragung in SQL Server, einschließlich der Indizierungs-und Statistik Strategien, des Abfrage Entwurfs und der Abfrageoptimierung sowie des Entwurfs von Tabellen, die für Maschinelles Lernen verwendet werden. Sie können auch Datenquellen und Datentransport Methoden analysieren oder ETL-Prozesse ändern, um die featureextraktion zu optimieren.
+- Wenden Sie spezielle Optimierungen für die Datenspeicherung und -übertragung in SQL Server an, einschließlich Indizierungs- und Statistikstrategien, Abfrageentwurf und Abfrageoptimierung sowie den Entwurf von Tabellen, die für Machine Learning verwendet werden. Sie können auch Datenquellen und Datentransportmethoden analysieren oder ETL-Prozesse ändern, um die Featureextraktion zu optimieren.
 
-- Optimieren Sie das analytische Modell, um Ineffizienzen zu vermeiden. Der Umfang der Optimierungen, die möglich sind, hängt von der Komplexität des R-Codes und den von Ihnen verwendeten Paketen und Daten ab. Zu den Hauptaufgaben zählen das eliminieren kostspieliger Daten Transformationen oder das Auslagern von Datenvorbereitungs-oder featureentwicklungsaufgaben von R oder python zu ETL-Prozessen oder Sie können auch Skripts umgestalten, Inline-Paketinstallationen entfernen, R-Code in separate Verfahren zum trainieren, bewerten und auswerten aufteilen oder Code so vereinfachen, dass er effizienter als gespeicherte Prozedur funktioniert.
+- Optimieren Sie das Analysemodell, um Ineffizienzen zu vermeiden. Der Umfang der möglichen Optimierungen hängt von der Komplexität des R-Codes und den verwendeten Paketen und Daten ab. Zu den Hauptaufgaben gehören das Beseitigen kostenintensiver Datentransformationen oder das Auslagern von Aufgaben zur Datenvorbereitung oder Featureentwicklung von R oder Python zu ETL-Prozessen oder SQL. Sie können auch Skripts umgestalten, Inline-Paketinstallationen entfernen, R-Code in separate Verfahren zum Trainieren, Bewerten und Evaluieren unterteilen oder Code so vereinfachen, dass er effizienter als gespeicherte Prozedur funktioniert.
 
 ## <a name="articles-in-this-series"></a>Artikel in dieser Reihe
 
-+ [Leistungsoptimierung für R in SQL Server-Hardware](../r/sql-server-configuration-r-services.md)
++ [Leistungsoptimierung für R in SQL Server – Hardware](../r/sql-server-configuration-r-services.md)
 
-    Enthält Anleitungen zum Konfigurieren der Hardware [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , die auf installiert ist, sowie zum Konfigurieren der SQL Server Instanz zur besseren Unterstützung externer Skripts. Dies ist besonders nützlich für **Datenbankadministratoren**.
+    Enthält Anleitungen zum Konfigurieren der Hardware, auf der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] installiert ist, sowie zum Konfigurieren der SQL Server-Instanz für bessere Unterstützung externer Skripts. Dies ist besonders nützlich für **Datenbankadministratoren**.
 
-+ [Leistungsoptimierung für R in SQL Server-Code-und Daten Optimierung](../r/r-and-data-optimization-r-services.md)
++ [Leistungsoptimierung für R in SQL Server – Code- und Datenoptimierung](../r/r-and-data-optimization-r-services.md)
 
-    Bietet spezifische Tipps zur Optimierung des externen Skripts, um bekannte Probleme zu vermeiden. Es ist besonders nützlich für **Daten**Analysten.
+    Enthält spezifische Tipps zur Optimierung des externen Skripts, um bekannte Probleme zu vermeiden. Dies ist besonders nützlich für **Datenanalysten**.
 
     > [!NOTE]
-    > Obwohl viele der Informationen in diesem Abschnitt Allgemein auf R zutreffen, sind einige Informationen spezifisch für die revoscaler-Analysefunktionen. Ausführliche Leistungs Hinweise sind für **revoscalepy** und andere unterstützte python-Bibliotheken nicht verfügbar.
+    > Während ein Großteil der Informationen in diesem Abschnitt für R im Allgemeinen gilt, sind einige Informationen spezifisch für analytische RevoScaleR-Funktionen vorgesehen. Ein ausführlicher Leitfaden zur Leistung für **revoscalepy** und andere unterstützte Python-Bibliotheken ist nicht verfügbar.
     >
 
-+ [Leistungsoptimierung für R in SQL Server-Methoden und-Ergebnissen](../r/performance-case-study-r-services.md)
++ [Leistungsoptimierung für R in SQL Server – Methoden und Ergebnisse](../r/performance-case-study-r-services.md)
 
     Fasst zusammen, welche Daten für die beiden Fallstudien verwendet wurden, wie die Leistung getestet wurde und wie sich die Optimierungen auf die Ergebnisse ausgewirkt haben.
