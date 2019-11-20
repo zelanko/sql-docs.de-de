@@ -1,22 +1,22 @@
 ---
-title: Aufrufen von Java aus SQL Server
+title: Aufrufen der Java Runtime
 titleSuffix: SQL Server Language Extensions
-description: Erfahren Sie, wie Sie mithilfe der Java-Programmiersprachenerweiterung in SQL Server 2019 Java-Klassen aus in SQL Server gespeicherten Prozeduren aufrufen.
+description: Hier erfahren Sie, wie Sie mithilfe von SQL Server-Spracherweiterungen Java-Klassen aus gespeicherten SQL Server-Prozeduren abrufen können.
 author: dphansen
 ms.author: davidph
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34d8162961a9e6bbc850e8a80a96910e5aa41d7b
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "73588804"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658893"
 ---
-# <a name="how-to-call-java-from-sql-server"></a>Aufrufen von Java aus SQL Server
+# <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Aufrufen der Java-Runtime in SQL Server-Spracherweiterungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [SQL Server-Spracherweiterungen](../language-extensions-overview.md) verwenden die gespeicherte Systemprozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) als Schnittstelle zum Aufrufen der Java-Runtime. 

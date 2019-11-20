@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab49b1f0323e8582f573db1d611b7114cba6dcaf
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589753"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729930"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -106,7 +106,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
-    [ORDER (column [,...n] ) ] -- in preview
+    [ORDER (column [,...n] ) ]  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
 
@@ -296,7 +296,9 @@ Die Benennung default ist in diesem Kontext kein Schlüsselwort. Es handelt sich
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
 ##  <a name="GenRemarks"></a> Allgemeine Hinweise  
- Ein Columnstore-Index kann für eine temporäre Tabelle erstellt werden. Wenn die Tabelle gelöscht oder die Sitzung beendet wird, wird der Index ebenfalls gelöscht.  
+Ein Columnstore-Index kann für eine temporäre Tabelle erstellt werden. Wenn die Tabelle gelöscht oder die Sitzung beendet wird, wird der Index ebenfalls gelöscht.  
+
+Ein geordneter gruppierter Columnstore-Index kann für Spalten aller Datentypen (außer Zeichenfolgenspalten) erstellt werden, die in Azure SQL Data Warehouse unterstützt werden.  
  
 ## <a name="filtered-indexes"></a>Gefilterten Indizes  
 Ein gefilterter Index ist ein optimierter nicht gruppierter Index, der sich für Abfragen eignet, mit denen ein kleiner Prozentsatz von Zeilen in einer Tabelle ausgewählt wird. Es wird ein Filterprädikat verwendet, um einen Teil der Daten in der Tabelle zu indizieren. Ein gut entworfener gefilterter Index kann die Abfrageleistung verbessern, den Speicheraufwand verringern und Wartungskosten reduzieren.  

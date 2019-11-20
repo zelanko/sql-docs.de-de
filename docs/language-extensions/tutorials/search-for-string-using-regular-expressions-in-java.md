@@ -1,29 +1,28 @@
 ---
-title: 'Lernprogramm: Suchen nach einer Zeichenfolge mithilfe regulärer Ausdrücke (RegEx) in Java'
-titleSuffix: SQL Server Language Extensions
-description: In diesem Tutorial erfahren Sie, wie Sie SQL Server-Spracherweiterungen verwenden und Java-Code ausführen, der eine Zeichenfolge mit regulären Ausdrücken durchsucht.
+title: 'Lernprogramm: Suchen nach RegEx-Zeichenfolgen in Java'
+description: In diesem Tutorial erfahren Sie, wie Sie SQL Server-Spracherweiterungen verwenden und Java-Code ausführen, der eine Zeichenfolge mit regulären Ausdrücken (RegEx) durchsucht.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 746706c1ef1ee8f9ed393ac57497ffb570bef50c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589004"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658791"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Lernprogramm: Suchen nach einer Zeichenfolge mithilfe regulärer Ausdrücke (RegEx) in Java
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Tutorial wird gezeigt, wie Sie [SQL Server-Spracherweiterungen](../language-extensions-overview.md) verwenden und eine Java-Klasse erstellen, die zwei Spalten (ID und Text) aus SQL Server und einen regulären Ausdruck als Eingabeparameter empfängt. Die Klasse gibt an SQL Server zwei Spalten (ID und Text) zurück.
+In diesem Tutorial wird gezeigt, wie Sie [SQL Server-Spracherweiterungen](../language-extensions-overview.md) verwenden, um eine Java-Klasse zu erstellen, die zwei Spalten (ID und Text) aus SQL Server und einen RegEx als Eingabeparameter empfängt. Die Klasse gibt an SQL Server zwei Spalten (ID und Text) zurück.
 
 Für einen bestimmten Text in der Textspalte, der an die Java-Klasse gesendet wird, prüft der Code, ob der angegebene reguläre Ausdruck erfüllt ist, und gibt diesen Text zusammen mit der ursprünglichen ID zurück.
 
-In diesem speziellen Beispiel wird ein regulärer Ausdruck verwendet, der prüft, ob ein Text das Wort „Java“ oder „java“ enthält.
+In diesem Beispielcode wird ein RegEx verwendet, der prüft, ob ein Text das Wort „Java“ bzw. „java“ enthält.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -316,7 +315,7 @@ GO
 
 Nach der Ausführung des Aufrufs sollten Sie ein Resultset mit zwei der Zeilen erhalten.
 
-![Ergebnisse aus dem Java-Beispiel](../media/java/java-sample-results.png "Beispielergebnisse")
+![Ergebnisse aus dem Java-Beispiel](../media/java/java-sample-results.png "Bespielergebnisse")
 
 ### <a name="if-you-get-an-error"></a>Wenn Sie eine Fehlermeldung erhalten:
 

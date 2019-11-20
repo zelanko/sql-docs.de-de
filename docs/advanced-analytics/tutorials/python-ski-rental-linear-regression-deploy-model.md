@@ -1,46 +1,47 @@
 ---
-title: 'Python-Tutorial: Modell bereitstellen (lineare Regression)'
-description: In diesem Tutorial verwenden Sie die python-und lineare Regression in SQL Server Machine Learning Services, um die Anzahl der Ski-Vermietungen vorherzusagen. Mithilfe Machine Learning Services können Sie ein lineares Regressionsmodell, das in Python entwickelt wurde, in eine SQL Server Datenbank bereitstellen.
+title: 'Python-Tutorial: Bereitstellen des Modells'
+description: In diesem Tutorial verwenden Sie Python und die lineare Regression in SQL Server Machine Learning Services zur Vorhersage von Verleihzahlen für einen Skiverleih. Sie stellen ein in Python entwickeltes lineares Regressionsmodell mithilfe von Machine Learning Services in einer SQL Server-Datenbank-Instanz bereit.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f5d19af93ab180c660a264d5aaabc538d527a5
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: 3b1dd5eba014a48f661833b1f955135ebacc48cc
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242518"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727066"
 ---
-# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Python-Tutorial: Stellen Sie ein lineares Regressionsmodell für SQL Server bereit Machine Learning Services
+# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Python-Tutorial: Bereitstellen eines linearen Regressionsmodells in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Im vierten Teil dieser vierteiligen tutorialreihe stellen Sie ein lineares Regressionsmodell, das in Python entwickelt wurde, mithilfe Machine Learning Services in einer SQL Server-Datenbank bereit.
+In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie ein in Python entwickeltes lineares Regressionsmodell mithilfe von Machine Learning Services in einer SQL Server-Datenbank-Instanz bereit.
 
 In diesem Artikel lernen Sie Folgendes:
 
 > [!div class="checklist"]
-> * Erstellen einer gespeicherten Prozedur, die das Machine Learning-Modell generiert
+> * Erstellen einer gespeicherten Prozedur zum Generieren des Machine Learning-Modells
 > * Speichern des Modells in einer Datenbanktabelle
-> * Erstellen einer gespeicherten Prozedur, die Vorhersagen mithilfe des Modells erstellt
+> * Erstellen einer gespeicherten Prozedur für Vorhersagen mithilfe des Modells
 > * Ausführen des Modells mit neuen Daten
 
-In [Teil 1](python-ski-rental-linear-regression.md)haben Sie gelernt, wie Sie die Beispieldatenbank wiederherstellen.
+In [Teil 1](python-ski-rental-linear-regression.md) dieser Tutorialreihe haben Sie gelernt, wie Sie die Beispieldatenbank wiederherstellen.
 
-In [Teil 2](python-ski-rental-linear-regression-prepare-data.md)haben Sie gelernt, wie die Daten aus SQL Server in einen python-Datenrahmen geladen und die Daten in python vorbereitet werden.
+In [Teil 2](python-ski-rental-linear-regression-prepare-data.md) haben Sie erfahren, wie Sie die Daten aus SQL Server in einen Python-Datenrahmen laden und in Python vorbereiten.
 
-In [Teil 3](python-ski-rental-linear-regression-train-model.md)haben Sie gelernt, wie Sie ein lineares Regressions Machine Learning-Modell in python trainieren.
+In [Teil 3](python-ski-rental-linear-regression-train-model.md) haben Sie gelernt, wie Sie ein lineares Regressionsmodell für Machine Learning in Python trainieren.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-* In Teil 4 dieses Tutorials wird davon ausgegangen, dass Sie [Teil eins](python-ski-rental-linear-regression.md) und seine Voraussetzungen erfüllt haben.
+* In diesem Teil der Tutorialreihe wird davon ausgegangen, dass Sie [Teil 1](python-ski-rental-linear-regression.md) und die erforderlichen Voraussetzungen abgeschlossen haben.
 
-## <a name="create-a-stored-procedure-that-generates-the-model"></a>Erstellen einer gespeicherten Prozedur, die das Modell generiert
+## <a name="create-a-stored-procedure-that-generates-the-model"></a>Erstellen einer gespeicherten Prozedur zum Generieren des Modells
 
-Erstellen Sie nun mithilfe der von Ihnen entwickelten python-Skripts eine gespeicherte Prozedur **generate_rental_rx_model** , die das lineare Regressionsmodell mithilfe von LinearRegression aus scikit-Learn trainiert und generiert.
+Erstellen Sie nun mit den von Ihnen entwickelten Python-Skripts eine gespeicherte Prozedur **generate_rental_rx_model**, die das lineare Regressionsmodell mit LinearRegression aus scikit-learn trainiert und generiert.
 
 Führen Sie die folgende T-SQL-Anweisung in Azure Data Studio aus, um die gespeicherte Prozedur zum Trainieren des Modells zu erstellen.
 
@@ -84,9 +85,9 @@ GO
 
 ## <a name="store-the-model-in-a-database-table"></a>Speichern des Modells in einer Datenbanktabelle
 
-Erstellen Sie eine Tabelle in der tutorialdb-Datenbank, und speichern Sie das Modell dann in der Tabelle.
+Erstellen Sie eine Tabelle in der TutorialDB-Datenbank, und speichern Sie das Modell dann in der Tabelle.
 
-1. Führen Sie die folgende T-SQL-Anweisung in Azure Data Studio aus, um eine Tabelle mit dem Namen **dbo. rental_py_models** zu erstellen, die zum Speichern des Modells verwendet wird.
+1. Führen Sie die folgende T-SQL-Anweisung in Azure Data Studio aus, um eine Tabelle namens **dbo.rental_py_models** zu erstellen, in der das Modell gespeichert wird.
 
     ```sql
     USE TutorialDB;
@@ -99,7 +100,7 @@ Erstellen Sie eine Tabelle in der tutorialdb-Datenbank, und speichern Sie das Mo
     GO
     ```
 
-1. Speichern Sie das Modell in der Tabelle als binäres Objekt mit dem Modellnamen **linear_model**.
+1. Speichern Sie das Modell als Binärobjekt mit dem Modellnamen **linear_model** in der Tabelle.
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -108,9 +109,9 @@ Erstellen Sie eine Tabelle in der tutorialdb-Datenbank, und speichern Sie das Mo
     INSERT INTO rental_py_models (model_name, model) VALUES('linear_model', @model);
     ```
 
-## <a name="create-a-stored-procedure-that-makes-predictions"></a>Erstellen einer gespeicherten Prozedur, die Vorhersagen erstellt
+## <a name="create-a-stored-procedure-that-makes-predictions"></a>Erstellen einer gespeicherten Prozedur für Vorhersagen
 
-1. Erstellen Sie eine gespeicherte Prozedur **py_predict_rentalcount** , die Vorhersagen mithilfe des trainierten Modells und eines Satzes neuer Daten trifft. Führen Sie den folgenden T-SQL-Server in Azure Data Studio aus.
+1. Erstellen Sie eine gespeicherte Prozedur **py_predict_rentalcount**, die Vorhersagen mit dem trainierten Modell und einem Satz neuer Daten bereitstellt. Führen Sie die folgende T-SQL-Anweisung in Azure Data Studio aus.
 
     ```sql
     DROP PROCEDURE IF EXISTS py_predict_rentalcount;
@@ -161,7 +162,7 @@ Erstellen Sie eine Tabelle in der tutorialdb-Datenbank, und speichern Sie das Mo
     GO
     ```
 
-1. Erstellen Sie eine Tabelle zum Speichern der Vorhersagen.
+1. Erstellen Sie eine Tabelle zum Speichern der Vorhersagen.
 
     ```sql
     DROP TABLE IF EXISTS [dbo].[py_rental_predictions];
@@ -180,7 +181,7 @@ Erstellen Sie eine Tabelle in der tutorialdb-Datenbank, und speichern Sie das Mo
     GO
     ```
 
-1. Ausführen der gespeicherten Prozedur zum Vorhersagen der Anzahl von Vermietungen
+1. Ausführen der gespeicherten Prozedur zum Vorhersagen von Verleihzahlen für einen Skiverleih
 
     ```sql
     --Insert the results of the predictions for test set into a table
@@ -191,17 +192,17 @@ Erstellen Sie eine Tabelle in der tutorialdb-Datenbank, und speichern Sie das Mo
     SELECT * FROM py_rental_predictions;
     ```
 
-Sie haben erfolgreich ein Modell in einer SQL Server Machine Learning Services erstellt, trainiert und bereitgestellt. Anschließend haben Sie dieses Modell in einer gespeicherten Prozedur verwendet, um Werte basierend auf neuen Daten vorherzusagen.
+Sie haben erfolgreich ein Modell in SQL Server Machine Learning Services erstellt, trainiert und bereitgestellt. Anschließend haben Sie dieses Modell in einer gespeicherten Prozedur verwendet, um Werte basierend auf neuen Daten vorherzusagen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im vierten Teil dieser tutorialreihe haben Sie die folgenden Schritte ausgeführt:
+In Teil 4 dieser Tutorialreihe haben Sie die folgenden Schritte ausgeführt:
 
-* Erstellen einer gespeicherten Prozedur, die das Machine Learning-Modell generiert
+* Erstellen einer gespeicherten Prozedur zum Generieren des Machine Learning-Modells
 * Speichern des Modells in einer Datenbanktabelle
-* Erstellen einer gespeicherten Prozedur, die Vorhersagen mithilfe des Modells erstellt
+* Erstellen einer gespeicherten Prozedur für Vorhersagen mithilfe des Modells
 * Ausführen des Modells mit neuen Daten
 
-Weitere Informationen zur Verwendung von python in SQL Server Machine Learning Services finden Sie unter:
+Weitere Informationen zur Verwendung von Python in SQL Server Machine Learning Services finden Sie unter:
 
 + [Python-Tutorials für SQL Server Machine Learning Services](sql-server-python-tutorials.md)

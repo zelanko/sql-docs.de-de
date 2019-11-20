@@ -1,25 +1,25 @@
 ---
-title: Microsoft-Erweiterbarkeits-SDK für Java für SQL Server
-description: Erfahren Sie, wie Sie mit dem Microsoft-Erweiterbarkeits-SDK für Java ein Java-Programm für SQL Server implementieren.
+title: Microsoft-Erweiterbarkeits-SDK für Java
+description: Erfahren Sie, wie Sie mit dem Microsoft-Erweiterbarkeits-SDK für Java ein Java-Programm für SQL Server implementieren. Das SDK ist eine Schnittstelle für die Java-Spracherweiterung, die zum Austauschen von Daten mit SQL Server und zum Ausführen von Java-Code aus SQL Server verwendet wird.
 ms.prod: sql
 ms.technology: language-extensions
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f2c1e7eb5b5410ad0c12b8dec6f451b7572f0e36
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 66719e8a30b9e7f4e42eaba376c73af9eb9868b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "73588794"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658853"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>Microsoft-Erweiterbarkeits-SDK für Java für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dieser Artikel beschreibt, wie Sie mit dem Microsoft-Erweiterbarkeits-SDK für Java ein Java-Programm für SQL Server implementieren können. Das SDK ist eine Schnittstelle für die Java-Spracherweiterung, die zum Austauschen von Daten mit SQL Server und zum Ausführen von Java-Code aus SQL Server verwendet wird.
+Erfahren Sie, wie Sie mit dem Microsoft-Erweiterbarkeits-SDK für Java ein Java-Programm für SQL Server implementieren. Das SDK ist eine Schnittstelle für die Java-Spracherweiterung, die zum Austauschen von Daten mit SQL Server und zum Ausführen von Java-Code aus SQL Server verwendet wird.
 
 Das SDK wird als Teil von SQL Server 2019 Release Candidate 1 sowohl unter Windows als auch unter Linux installiert:
 

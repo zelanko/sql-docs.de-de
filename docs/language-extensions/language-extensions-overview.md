@@ -1,22 +1,22 @@
 ---
-title: Was sind Spracherweiterungen?
-titleSuffix: SQL Server Language Extensions
-description: Informieren Sie sich über Spracherweiterungen für SQL Server 2019 (Vorschau), die externe Skripts in SQL Server ausführen.
+title: Was sind SQL Server-Spracherweiterungen?
+titleSuffix: ''
+description: Spracherweiterungen sind ein Feature von SQL Server, das zum Ausführen von externem Code verwendet wird. In SQL Server 2019 wird Java unterstützt. Die relationalen Daten können über das Erweiterbarkeitsframework im externen Code verwendet werden.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15ff0339a487ecebdca23057bfce9053b5efca2e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589024"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658821"
 ---
-# <a name="what-is-sql-server-language-extensions-preview"></a>Was sind Spracherweiterungen für SQL Server 2019 (Vorschau)?
+# <a name="what-is-sql-server-language-extensions"></a>Was sind SQL Server-Spracherweiterungen?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Spracherweiterungen sind ein Feature von SQL Server, das zum Ausführen von externem Code verwendet wird. Die relationalen Daten können über das [Erweiterbarkeitsframework](concepts/extensibility-framework.md) im externen Code verwendet werden.

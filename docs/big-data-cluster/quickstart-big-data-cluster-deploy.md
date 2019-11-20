@@ -1,7 +1,7 @@
 ---
 title: Bereitstellen von Big-Data-Clustern mit einem Python-Skript
-titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie mit einem Bereitstellungsskript [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (Vorschau) in Azure Kubernetes Service (AKS) bereitstellen.
+titleSuffix: SQL Server Big Data Clusters
+description: Hier erfahren Sie, wie Sie mit einem Skript Big Data-Cluster für SQL Server in Azure Kubernetes Service (AKS) bereitstellen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531930"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706345"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Verwenden eines Python-Skripts zum Bereitstellen eines Big-Data-Clusters für SQL Server in Azure Kubernetes Service (AKS)
 
@@ -80,8 +80,6 @@ Führen Sie die folgenden Schritte aus, um das Bereitstellungsskript auszuführe
    | **Clustername** | Der Name des AKS-Clusters und des Big-Data-Clusters. Der Name Ihres Big-Data-Clusters darf nur alphanumerische Zeichen enthalten. Außerdem darf er nur aus Kleinbuchstaben bestehen und keine Leerzeichen enthalten (Standardwert: **sqlbigdata**). |
    | **Kennwort** | Das Kennwort für den Controller, das HDFS/Spark-Gateway und die Masterinstanz (Standardwert: **MySQLBigData2019**). |
    | **Benutzername** | Der Benutzername für den Controllerbenutzer (Standardwert: **admin**). |
-
-Teilnehmer des Early Adopter-Programms für Big-Data-Cluster in SQL Server 2019 mussten die folgenden Parameter verwenden: **Docker username** (Docker-Benutzername) und **Docker password** (Docker-Kennwort). Ab CTP 3.2 sind diese nicht mehr erforderlich.
 
    > [!IMPORTANT]
    > Die Standardgröße **Standard_L8s** für Computer ist möglicherweise nicht in allen Azure-Regionen verfügbar. Wenn Sie eine andere Größe auswählen, müssen Sie sicherstellen, dass die Gesamtzahl der Datenträger, die den Knoten im Cluster angefügt werden können, größer oder gleich 24 ist. Auf dem Cluster ist für jeden PersistentVolumeClaim ein angefügter Datenträger erforderlich. Aktuell sind für Big-Data-Cluster 24 PersistentVolumeClaims erforderlich. Für die Computergröße [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) werden beispielsweise 32 angefügte Datenträger unterstützt, sodass Sie Big-Data-Cluster mit einem einzelnen Knoten dieser Größe auswerten können.

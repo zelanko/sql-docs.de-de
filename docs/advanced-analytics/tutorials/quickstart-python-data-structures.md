@@ -1,7 +1,7 @@
 ---
-title: Arbeiten mit Python-und SQL-Datentypen und-Objekten
+title: 'Schnellstart: Python-Datentypen'
 titleSuffix: SQL Server Machine Learning Services
-description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Datentypen und Datenobjekten in Python arbeiten und SQL Server mit SQL Server Machine Learning Services.
+description: In diesem Schnellstart lernen Sie, wie Sie mit Datentypen und Datenobjekten in Python und SQL Server mit SQL Server Machine Learning Services arbeiten.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/04/2019
@@ -9,43 +9,44 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c09c9ad4625520054f2d3f103ec055c37764aed2
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
-ms.translationtype: MT
+ms.openlocfilehash: 1bac339105acdb7318b29426cd0bb4afdc2481e7
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008429"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727017"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Schnellstart: Verarbeiten von Datentypen und Objekten mithilfe von python in SQL Server Machine Learning Services
+# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Schnellstart: Verarbeiten von Datentypen und Objekten mithilfe von Python in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen verwenden, wenn Sie python in SQL Server Machine Learning Services verwenden.
+In diesem Schnellstart erfahren Sie, wie Sie Datenstrukturen mit Python in SQL Server Machine Learning Services verwenden:
 
-SQL Server basiert auf dem python **Pandas** -Paket, das hervorragend für die Arbeit mit tabellarischen Daten geeignet ist. Allerdings ist es nicht möglich, einen Skalar von python an SQL Server zu übergeben, und es wird davon ausgegangen, dass er "just work" In dieser Schnellstartanleitung überprüfen Sie einige grundlegende Datentyp Definitionen, um Sie auf zusätzliche Probleme vorzubereiten, die bei der Übergabe von Tabellendaten zwischen Python und SQL Server auftreten können.
+SQL Server ist vom Python-Paket **pandas** abhängig, das hervorragend für die Arbeit mit Tabellendaten geeignet ist. Sie können allerdings nicht davon ausgehen, dass Sie nur einen Skalar von Python an SQL Server übergeben müssen, damit alles einwandfrei funktioniert. Im Rahmen dieses Schnellstarts überprüfen Sie einige grundlegende Datentypdefinitionen. Dies soll Sie auf zusätzliche Probleme vorbereiten, die bei der Übergabe von Tabellendaten zwischen Python und SQL Server auftreten können.
 
-Folgende Konzepte sollten im Vordergrund aufgeführt werden:
+Sie sollten sich im Vorfeld über die folgenden Konzepte informieren:
 
 - Ein Datenrahmen ist eine Tabelle mit _mehreren_ Spalten.
-- Eine einzelne Spalte eines Daten Rahmens ist ein Listen ähnliches Objekt, das als Reihe bezeichnet wird.
-- Ein einzelner Wert eines Daten Rahmens wird als Zelle bezeichnet, und der Zugriff erfolgt über den Index.
+- Eine einzelne Spalte eines Datenrahmens ist ein listenähnliches Objekt, das als Reihe bezeichnet wird.
+- Ein einzelner Wert eines Datenrahmens wird als Zelle bezeichnet, und der Zugriff erfolgt über den Index.
 
-Wie würden Sie das einzelne Ergebnis einer Berechnung als Datenrahmen verfügbar machen, wenn ein Data. Frame eine tabellarische Struktur erfordert? Eine Antwort ist die Darstellung des einzelnen skalarwerts als Reihe, die leicht in einen Datenrahmen konvertiert werden kann. 
+Wie würden Sie das einzelne Ergebnis einer Berechnung als Datenrahmen verfügbar machen, wenn für data.frame ein Tabellenformat verlangt wird? Eine Möglichkeit ist die Darstellung des einzelnen Skalarwerts als Reihe, die ganz einfach in einen Datenrahmen konvertiert werden kann. 
 
 > [!NOTE]
-> Beim Zurückgeben von Datumsangaben verwendet python in SQL DateTime mit einem eingeschränkten Datumsbereich von 1753-01-01 (-53690) bis 9999-12-31 (2958463). 
+> Beim Zurückgeben von Datumsangaben verwendet Python in SQL DATETIME mit dem eingeschränkten Datumsbereich von 1753-01-01 (-53690) bis 9999-12-31 (2958463). 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-- Diese Schnellstartanleitung erfordert Zugriff auf eine Instanz von SQL Server mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) , auf der die Python-Sprache installiert ist.
+- Für diesen Schnellstart benötigen Sie Zugriff auf eine SQL Server-Instanz mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), für die die Python-Sprache installiert ist.
 
-- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die python-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Daten Bank Verwaltungs-oder Abfrage Tool ausführen, solange eine Verbindung mit einer SQL Server Instanz hergestellt und eine T-SQL-Abfrage oder eine gespeicherte Prozedur ausgeführt werden kann. In diesem Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)verwendet.
+- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die Python-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Tool für die Datenbankverwaltung oder -abfrage ausführen, sofern dieses eine Verbindung mit SQL Server-Instanzen herstellen und T-SQL-Abfragen oder gespeicherte Prozeduren ausführen kann. Für diesen Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) verwendet.
 
 ## <a name="scalar-value-as-a-series"></a>Skalarwert als Reihe
 
-In diesem Beispiel wird eine einfache Mathematik durchführt und ein Skalar in eine Reihe konvertiert.
+In diesem Beispiel wird einfache Mathematik verwendet und ein Skalar in eine Reihe konvertiert.
 
-1. Eine Reihe erfordert einen Index, den Sie manuell zuweisen können, wie hier gezeigt, oder Programm gesteuert.
+1. Für eine Reihe wird ein Index benötigt, den Sie manuell (wie hier gezeigt) oder programmgesteuert zuweisen können.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -59,7 +60,7 @@ In diesem Beispiel wird eine einfache Mathematik durchführt und ein Skalar in e
    '
    ```
 
-   Da die Reihe nicht in einen Data. Frame konvertiert wurde, werden die Werte im Fenster Meldungen zurückgegeben. Sie können jedoch sehen, dass die Ergebnisse in einem tabellarischen Format vorliegen.
+   Da die Reihe nicht in ein data.frame-Format konvertiert wurde, werden die Werte im Fenster „Meldungen“angezeigt – und zwar in tabellarischer Form.
 
    **Ergebnisse**
 
@@ -70,7 +71,7 @@ In diesem Beispiel wird eine einfache Mathematik durchführt und ein Skalar in e
    dtype: float64
    ```
 
-1. Um die Länge der Reihe zu erhöhen, können Sie mithilfe eines Arrays neue Werte hinzufügen. 
+1. Sie können Reihen verlängern, indem Sie mithilfe eines Arrays neue Werte hinzufügen. 
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -95,7 +96,7 @@ In diesem Beispiel wird eine einfache Mathematik durchführt und ein Skalar in e
    dtype: float64
    ```
 
-1. Wenn Sie die Anzahl der **Index** Werte erhöhen, aber keine neuen **Daten** Werte hinzufügen, werden die Datenwerte wiederholt, um die Reihen auszufüllen.
+1. Wenn Sie die Anzahl der **Indexwerte** erhöhen, aber keine neuen **Datenwerte** hinzufügen, werden die Datenwerte mehrfach verwendet, um die Reihen auszufüllen.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -118,11 +119,11 @@ In diesem Beispiel wird eine einfache Mathematik durchführt und ein Skalar in e
    dtype: float64
    ```
 
-## <a name="convert-series-to-data-frame"></a>Reihen in Datenrahmen konvertieren
+## <a name="convert-series-to-data-frame"></a>Konvertieren von Reihen in Datenrahmen
 
-Wenn Sie die mathematischen skalarergebnisse in eine tabellarische Struktur konvertiert haben, müssen Sie Sie dennoch in ein Format konvertieren, das SQL Server verarbeiten kann.
+Auch wenn Sie die mathematischen Skalarergebnisse in ein Tabellenformat konvertiert haben, müssen Sie sie in ein Format konvertieren, das SQL Server verarbeiten kann.
 
-1. Um eine Reihe in einen Data. Frame zu konvertieren, rufen Sie die Pandas- [dataframe](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) -Methode auf.
+1. Sie können Reihe in ein data.frame-Format konvertieren, indem Sie die Pandas-Methode [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) aufrufen.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -140,7 +141,7 @@ Wenn Sie die mathematischen skalarergebnisse in eine tabellarische Struktur konv
    WITH RESULT SETS((ResultValue FLOAT))
    ```
 
-   Das Ergebnis ist unten dargestellt. Auch wenn Sie den Index verwenden, um bestimmte Werte aus der Datei "Data. Frame" zu erhalten, sind die Indexwerte nicht Teil der Ausgabe.
+   Das Ergebnis wird unten angezeigt. Auch wenn Sie den Index verwenden, um bestimmte Werte aus data.frame zu erhalten, sind die Indexwerte nicht Teil der Ausgabe.
 
    **Ergebnisse**
 
@@ -149,11 +150,11 @@ Wenn Sie die mathematischen skalarergebnisse in eine tabellarische Struktur konv
    |0.5|
    |2|
 
-## <a name="output-values-into-dataframe"></a>Ausgabewerte in "Data. Frame"
+## <a name="output-values-into-dataframe"></a>Ausgeben von Werten in data.frame
 
-Nun geben Sie bestimmte Werte aus zwei Folge mathematischen Ergebnissen in einem Data. Frame aus. Der erste verfügt über einen Index von sequenziellen Werten, die von python generiert werden. Der zweite verwendet einen beliebigen Index von Zeichen folgen Werten.
+Im Folgenden sollten Sie spezifische Werte aus zwei Datenreihen der mathematischen Ergebnisse im data.frame-Format ausgeben. Die erste Datenreihe verfügt über einen Index von sequenziellen Werten, die von Python generiert werden. Die zweite Datenreihe verwendet einen beliebigen Index von Zeichenfolgenwerten.
 
-1. Im folgenden Beispiel wird ein Wert aus der Reihe mithilfe eines ganzzahligen Indexes abgerufen.
+1. Im folgenden Beispiel wird mithilfe eines ganzzahligen Index ein Wert aus der Reihe abgerufen.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -177,9 +178,9 @@ Nun geben Sie bestimmte Werte aus zwei Folge mathematischen Ergebnissen in einem
    |------|
    |2.0|
 
-   Beachten Sie, dass der automatisch generierte Index bei 0 beginnt. Verwenden Sie einen Index Wert außerhalb des gültigen Bereichs, und sehen Sie sich an, was passiert.
+   Wie bereits erwähnt, beginnt der automatisch generierte Index bei 0. Verwenden Sie einen Indexwert außerhalb des gültigen Bereichs, um zu prüfen, was dadurch passiert.
 
-1. Nun erhalten Sie einen einzelnen Wert aus dem anderen Datenrahmen, der einen Zeichen folgen Index verwendet.
+1. Rufen Sie nun mithilfe eines Zeichenfolgenindex einen einzelnen Wert aus dem anderen Datenrahmen ab.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -202,16 +203,16 @@ Nun geben Sie bestimmte Werte aus zwei Folge mathematischen Ergebnissen in einem
    |------|
    |0.5|
 
-   Wenn Sie versuchen, einen numerischen Index zu verwenden, um einen Wert aus dieser Reihe zu erhalten, erhalten Sie eine Fehlermeldung.
+   Wenn Sie versuchen, einen numerischen Index zu verwenden, um einen Wert aus dieser Reihe abzurufen, wird ein Fehler ausgelöst.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Schreiben erweiterter python-Funktionen in SQL Server finden Sie in diesem Schnellstart:
+Weitere Informationen zum Schreiben von erweiterten Python-Funktionen in SQL Server finden Sie in diesem Schnellstart:
 
 > [!div class="nextstepaction"]
-> [Schreiben erweiterter python-Funktionen mit SQL Server Machine Learning Services](quickstart-python-functions.md)
+> [Schreiben erweiterter Python-Funktionen mit SQL Server Machine Learning Services](quickstart-python-functions.md)
 
-Weitere Informationen zur Verwendung von python in SQL Server Machine Learning Services finden Sie in den folgenden Artikeln:
+Weitere Informationen zur Verwendung von Python in SQL Server Machine Learning Services finden Sie in den folgenden Artikeln:
 
-- [Erstellen und bewerten eines Vorhersagemodells in python](quickstart-python-train-score-model.md)
-- [Was ist SQL Server Machine Learning Services (python und R)?](../what-is-sql-server-machine-learning.md)
+- [Erstellen und Bewerten eines Vorhersagemodells in Python](quickstart-python-train-score-model.md)
+- [Was ist SQL Server Machine Learning Services (Python und R)?](../what-is-sql-server-machine-learning.md)

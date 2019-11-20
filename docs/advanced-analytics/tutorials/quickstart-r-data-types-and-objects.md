@@ -1,7 +1,7 @@
 ---
-title: Arbeiten mit R-und SQL-Datentypen und-Objekten
+title: 'Schnellstart: R-Datentypen'
 titleSuffix: SQL Server Machine Learning Services
-description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Datentypen und Datenobjekten in R arbeiten und mit SQL Server Machine Learning Services SQL Server.
+description: In diesem Schnellstart lernen Sie, wie Sie mit Datentypen und Datenobjekten in R und SQL Server mit SQL Server Machine Learning Services arbeiten.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/04/2019
@@ -9,41 +9,42 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e490821194e909643e5307e833f093363cb9558
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: MT
+ms.openlocfilehash: 4dab7cca8edcc01052ced81ec33a1f411da7ba9a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006012"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726979"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Schnellstart: Verarbeiten von Datentypen und Objekten mithilfe von R in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In dieser Schnellstartanleitung erfahren Sie mehr über häufige Probleme, die beim Verschieben von Daten zwischen R und SQL Server auftreten. Die Erfahrung, die Sie durch diese Übung gewinnen, bietet wesentliche Hintergrundinformationen, wenn Sie mit Daten in Ihrem eigenen Skript arbeiten.
+In diesem Schnellstart erfahren Sie etwas über häufige Probleme, die beim Verschieben von Daten zwischen R und SQL Server auftreten. In dieser Übung sammeln Sie praktische Erfahrungen, die Ihnen eine gute Grundlage für die Arbeit mit Daten in Ihrem eigenen Skript bieten.
 
-Häufige Probleme, die im Vordergrund aufgeführt werden, sind:
+Diese häufig auftretenden Probleme sollten Sie im Vorfeld kennen:
 
-- Datentypen stimmen manchmal nicht mit
-- Implizite Konvertierungen können stattfinden.
+- Datentypen stimmen manchmal nicht überein
+- Es können implizite Konvertierungen auftreten
 - Cast- und Convert-Vorgänge sind manchmal erforderlich
 - R und SQL verwenden verschiedene Datenobjekte
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-- Diese Schnellstartanleitung erfordert Zugriff auf eine Instanz von SQL Server mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) , auf der die R-Sprache installiert ist.
+- Für diesen Schnellstart benötigen Sie Zugriff auf eine SQL Server-Instanz mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), in der die R-Sprache installiert ist.
 
-  Ihre SQL Server Instanz kann sich auf einem virtuellen Azure-Computer oder lokal befinden. Beachten Sie, dass das Feature für die externe Skripterstellung standardmäßig deaktiviert ist. Daher müssen Sie möglicherweise [externe Skripterstellung aktivieren](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) und überprüfen, ob **SQL Server-Launchpad-Dienst** ausgeführt wird, bevor Sie beginnen.
+  Ihre SQL Server-Instanz kann sich auf einem virtuellen Azure-Computer oder einem lokalen Computer befinden. Achten Sie darauf, dass das externe Skripterstellungsfeature standardmäßig deaktiviert ist. Sie müssen die [externe Skripterstellung](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) also möglicherweise aktivieren und überprüfen, ob das **SQL Server-Launchpad** ausgeführt wird, bevor Sie beginnen.
 
-- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Daten Bank Verwaltungs-oder Abfrage Tool ausführen, solange eine Verbindung mit einer SQL Server Instanz hergestellt und eine T-SQL-Abfrage oder eine gespeicherte Prozedur ausgeführt werden kann. In diesem Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)verwendet.
+- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Tool für die Datenbankverwaltung oder -abfrage verwalten, sofern dieses eine Verbindung mit SQL Server-Instanzen herstellen und T-SQL-Abfragen oder gespeicherte Prozeduren ausführen kann. Für diesen Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) verwendet.
 
-## <a name="always-return-a-data-frame"></a>Immer einen Datenrahmen zurückgeben
+## <a name="always-return-a-data-frame"></a>Geben Sie immer einen Datenrahmen zurück
 
-Wenn Ihr Skript Ergebnisse von R zum SQL Server zurückgibt, muss es die Daten als **data.frame** zurückgeben. Jeder andere Objekttyp, den Sie im Skript generieren, und zwar unabhängig davon, ob es sich um eine Liste, einen Faktor, einen Vektor oder Binärdaten handelt, muss in einen Datenrahmen konvertiert werden, wenn Sie ihn als Teil der Ergebnisse der gespeicherten Prozedur ausgeben möchten. Es gibt mehrere R-Funktionen, um die Änderung anderer Objekte zu einem Datenrahmen zu unterstützen. Sie können sogar ein binäres Modell serialisieren und es in einem Datenrahmen zurückgeben, was Sie später in dieser Schnellstartanleitung tun werden.
+Wenn Ihr Skript Ergebnisse von R zum SQL Server zurückgibt, muss es die Daten als **data.frame** zurückgeben. Jede andere Objektart, die Sie in Ihrem Skript generieren –, d.h. eine Liste, ein Faktor, ein Vektor oder binäre Daten – müssen zu einem Datenrahmen konvertiert werden, wenn sie als Teil der gespeicherten Prozedurergebnisse ausgegeben werden sollen. Es gibt mehrere R-Funktionen, um die Änderung anderer Objekte zu einem Datenrahmen zu unterstützen. Sie können auch ein binäres Modell serialisieren und es in einen Datenrahmen zurückgeben. Mehr dazu erfahren Sie später in diesem Schnellstart.
 
-Zuerst experimentieren wir mit einigen r-Basis-r-Objekten-Vectors, Matrizen und Listen. Sie sehen, wie die Konvertierung in einen Datenrahmen die an SQL Server übergebene Ausgabe ändert.
+Zunächst experimentieren wir mit einigen R-basierten R-Objekten, Vektoren, Matrizen und Listen – und sehen, wie die Konvertierung in einen Datenrahmen die Ausgabe an die SQL Server-Instanz ändert.
 
-Vergleichen Sie diese beiden "Hallo Welt"-Skripts in R. Die Skripts sehen nahezu identisch aus, aber der erste gibt eine einzelne Spalte mit drei Werten zurück, während die zweite drei Spalten mit jeweils einem einzelnen Wert zurückgibt.
+Vergleichen Sie diese beiden „Hallo Welt“-Skripts in R. Die Skripts sehen fast identisch aus, aber das erste gibt eine einzelne Spalte mit drei Werten zurück, während das zweite drei Spalten mit jeweils einem einzigen Wert zurückgibt.
 
 **Beispiel 1**
 
@@ -64,7 +65,7 @@ EXECUTE sp_execute_external_script
       , @input_data_1 = N'  ';
 ```
 
-## <a name="identify-schema-and-data-types"></a>Identifizieren von Schema und Datentypen
+## <a name="identify-schema-and-data-types"></a>Identifizieren von Schema- und Datentypen
 
 Warum sind die Ergebnisse so unterschiedlich?
 
@@ -72,7 +73,7 @@ Die Antwort finden Sie in der Regel mithilfe des R-`str()`-Befehls. Fügen Sie d
 
 Um zu ermitteln, warum Beispiel 1 und Beispiel 2 solch unterschiedliche Ergebnisse haben, fügen Sie die Zeile `str(OutputDataSet)` am Ende der _@script_ -Variablendefinition in jeder Anweisung, wie folgt ein:
 
-**Beispiel 1 mit hinzugefügter Str-Funktion**
+**Beispiel 1 mit hinzugefügter str-Funktion**
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -84,7 +85,7 @@ EXECUTE sp_execute_external_script
 ;
 ```
 
-**Beispiel 2 mit hinzugefügter Str-Funktion**
+**Beispiel 2 mit hinzugefügter str-Funktion**
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -114,18 +115,18 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-Wie Sie sehen können, hatte eine geringfügige Änderung in der R-Syntax einen großen Einfluss auf das Schema der Ergebnisse. Wir gehen nicht *in den Grund* ein, aber die Unterschiede in R-Datentypen werden im Abschnitt ["Advanced R" von Hadley Wickham](http://adv-r.had.co.nz)ausführlich erläutert.
+Wie Sie sehen können, hatte eine geringfügige Änderung in der R-Syntax einen großen Einfluss auf das Schema der Ergebnisse. Wir gehen nicht näher auf den Grund dafür ein, da die Unterschiede der R-Datentypen detaillierter im Abschnitt *Data Structures (Datenstrukturen)* des Artikels [„Advanced R“ von Hadley Wickham](http://adv-r.had.co.nz) erläutert werden.
 
 Jetzt müssen Sie nur Bedenken, dass Sie die erwarteten Ergebnisse überprüfen müssen, wenn Sie R-Objekte in Datenrahmen umwandeln müssen.
 
 > [!TIP]
-> Sie können auch R-Identitäts Funktionen, wie z. b. `is.matrix` `is.vector`, verwenden, um Informationen über die interne Datenstruktur zurückzugeben.
+> Sie können auch R-Identitätsfunktionen wie `is.matrix`, `is.vector`, verwenden, um Informationen über die interne Datenstruktur zurückzugeben.
 
 ## <a name="implicit-conversion-of-data-objects"></a>Implizite Konvertierung von Datenobjekten
 
 Jedes R-Datenobjekt verfügt über seine eigenen Regeln darüber, wie Werte verarbeitet werden, wenn sie mit anderen Datenobjekten kombiniert werden, sofern die beiden Datenobjekte über die gleiche Anzahl an Dimensionen verfügen oder jedes Datenobjekt heterogene Datentypen enthält.
 
-Erstellen Sie zuerst eine kleine Tabelle mit Testdaten.
+Erstellen Sie zunächst eine kleine Tabelle mit Testdaten.
 
 ```sql
 CREATE TABLE RTestData (col1 INT NOT NULL)
@@ -141,7 +142,7 @@ VALUES (100);
 GO
 ```
 
-Angenommen, Sie führen die folgende Anweisung aus, um die Matrix Multiplikation mithilfe von R durchzuführen. Sie multiplizieren eine einspaltige Matrix mit den drei Werten nach einem Array mit vier Werten und erwarten daher eine 4 x 3-Matrix.
+Nehmen wir beispielsweise an, dass Sie die folgende Anweisung zur Matrixmultiplikation mit R ausführen. Sie vervielfältigen eine einspaltige Matrix mit den drei Werten durch ein Array mit vier Werten und erwarten daher, dass eine 4 x 3-Matrix entsteht.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -185,19 +186,19 @@ Jetzt gibt R einen einzelnen Wert als Ergebnis zurück.
 |---|
 |1542|
 
-Warum? Da die beiden Argumente in diesem Fall als Vektoren derselben Länge behandelt werden können, gibt R das innere Produkt als Matrix zurück.  Dies ist das erwartete Verhalten gemäß der Regeln der linearen Algebra. Es kann jedoch Probleme verursachen, wenn die Downstream-Anwendung erwartet, dass das Ausgabeschema sich nie ändert!
+Warum? In diesem Fall, gibt R das innere Produkt als Matrix zurück, da die beiden Argumente als Vektoren derselben Länge verarbeitet werden können.  Dies ist das erwartete Verhalten gemäß der Regeln der linearen Algebra. Es kann jedoch Probleme verursachen, wenn die Downstream-Anwendung erwartet, dass das Ausgabeschema sich nie ändert!
 
 > [!TIP]
 > 
-> Sie erhalten Fehler? Stellen Sie sicher, dass Sie die gespeicherte Prozedur im Kontext der Datenbank ausführen, die die Tabelle enthält, nicht in der **Master** Datenbank oder in einer anderen Datenbank.
+> Erhalten Sie Fehler? Stellen Sie sicher, dass Sie die gespeicherte Prozedur im Kontext der Datenbank ausführen, die die Tabelle enthält, und nicht in **Master** oder einer anderen Datenbank.
 >
 > Außerdem wird empfohlen, für diese Beispiele keine temporären Tabellen zu verwenden. Einige R-Clients beenden eine Verbindung zwischen Batches und löschen temporäre Tabellen.
 
 ## <a name="merge-or-multiply-columns-of-different-length"></a>Zusammenführen oder Multiplizieren von Spalten mit unterschiedlicher Länge
 
-R bietet hervorragend für die Arbeit mit Vektoren verschiedener Größen und für die Kombination dieser Spalten ähnlichen Strukturen in Datenrahmen. Vektorenlisten können aussehen wie eine Tabelle, aber sie befolgen nicht alle Regeln, die Datenbanktabellen steuern.
+R bietet ein hohes Maß an Flexibilität für die Arbeit mit Vektoren verschiedener Größen und für die Kombination dieser spaltenähnlichen Strukturen in Datenrahmen. Vektorenlisten können aussehen wie eine Tabelle, aber sie befolgen nicht alle Regeln, die Datenbanktabellen steuern.
 
-Zum Beispiel legt das folgende Skript ein numerisches Array der Länge 6 fest und speichert es in der R-Variable `df1`. Das numerische Array wird anschließend mit den ganzen Zahlen der rtestdata-Tabelle kombiniert, die drei (3) Werte enthält, um einen neuen Datenrahmen zu erstellen, `df2`.
+Zum Beispiel legt das folgende Skript ein numerisches Array der Länge 6 fest und speichert es in der R-Variable `df1`. Das numerische Array wird anschließend mit den ganzen Zahlen der RTestData-Tabelle kombiniert, die drei Werte enthält, um einen neuen Datenrahmen, `df2`, zu erstellen.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -229,12 +230,12 @@ Beachten Sie, dass der Datenrahmen nur wie eine Tabelle aussieht, aber eigentlic
 
 R und SQL Server verwenden nicht die gleichen Datentypen, sodass Sie eine Abfrage im SQL Server durchführen können, um Daten abzurufen und diese an die R-Laufzeit zu übergeben, erfolgt in der Regel eine Art implizite Konvertierung. Eine weitere Reihe von Konvertierungen findet statt, wenn Sie Daten von R an SQL Server zurückgeben.
 
-- SQL Server überträgt die Daten aus der Abfrage an den vom Launchpad-Dienst verwalteten R-Prozess und konvertiert ihn in eine interne Darstellung, um die Effizienz zu erhöhen.
+- SQL Server überträgt die Daten aus der Abfrage an den vom Launchpad-Dienst verwalteten R-Prozess und konvertiert sie in eine interne Darstellung zur Effizienzsteigerung.
 - Die R-Laufzeit lädt die Daten in eine data.frame-Variable und führt ihre eigenen Vorgänge für die Daten aus.
 - Die Datenbank-Engine gibt die Daten über eine sichere interne Verbindung an den SQL Server zurück und zeigt die Daten in Form von SQL Server-Datentypen.
 - Sie rufen Sie Daten über eine Verbindung mit dem SQL Server mithilfe einer Client- oder Netzwerk-Bibliothek auf, die SQL-Abfragen und tabellarische Datensätze verarbeiten kann. Diese Clientanwendung kann die Daten auf andere Weise beeinträchtigen.
 
-Um zu sehen, wie dies funktioniert, führen Sie eine Abfrage wie diese auf dem Data Warehouse " [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) " aus. In dieser Ansicht werden Verkaufsdaten zurückgegeben, die zum Erstellen von Prognosen verwendet werden.
+Um zu sehen, wie dies funktioniert, führen Sie eine Abfrage, wie diese im Datawarehouse [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) durch. In dieser Ansicht werden Verkaufsdaten zurückgegeben, die zum Erstellen von Prognosen verwendet werden.
 
 ```sql
 USE AdventureWorksDW
@@ -250,9 +251,9 @@ SELECT ReportingDate
 
 > [!NOTE]
 >
-> Sie können eine beliebige Version von AdventureWorks verwenden oder eine andere Abfrage mit einer eigenen Datenbank erstellen. Der Punkt ist der Versuch, einige Daten zu verarbeiten, die Text-, DateTime-und numerische Werte enthalten.
+> Sie können eine beliebige Version von AdventureWorks verwenden oder eine andere Abfrage mit einer eigenen Datenbank erstellen. Es geht darum zu versuchen, einige Daten mit Text, Datum/Uhrzeit und numerischen Werten zu verarbeiten.
 
-Versuchen Sie jetzt, diese Abfrage als Eingabe für die gespeicherte Prozedur einfügen.
+Versuchen Sie jetzt, diese Abfrage als Eingabe für die gespeicherte Prozedur einzufügen.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -283,29 +284,29 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 ```
 
 - Die datetime-Spalte wurde als R-Datentyp **POSIXct** verarbeitet.
-- Die Text Spalte "productseries" wurde als **Faktor**identifiziert, also eine kategorische Variable. Zeichenfolgenwerte werden standardmäßig als Faktoren verarbeitet. Wenn Sie R eine Zeichenfolge übergeben, wird diese in eine ganze Zahl für die interne Verwendung konvertiert und dann zurück in die Ausgabe der Zeichenfolge zugeordnet.
+- Die Text-Spalte „ProductSeries“ wurde als ein **Faktor** erkannt, d.h. eine kategorische Variable. Zeichenfolgenwerte werden standardmäßig als Faktoren verarbeitet. Wenn Sie R eine Zeichenfolge übergeben, wird diese in eine ganze Zahl für die interne Verwendung konvertiert und dann zurück in die Ausgabe der Zeichenfolge zugeordnet.
 
 ### <a name="summary"></a>Zusammenfassung
 
-In diesen kurzen Beispielen sehen Sie, wie die Auswirkungen der Datenkonvertierung bei der Übergabe von SQL-Abfragen als Eingabe überprüft werden müssen. Da einige SQL Server-Datentypen von R nicht unterstützt werden, sollten Sie die folgenden Methoden zur Vermeidung von Fehlern in Erwägung gezogen
+Aus diesen kurzen Beispielen können Sie ersehen, dass die Auswirkungen der Datenkonvertierung überprüft werden müssen, wenn SQL-Abfragen als Eingabe übergeben werden. Da einige SQL Server-Datentypen von R nicht unterstützt werden, ziehen Sie die folgenden Methoden in Betracht, um Fehler zu vermeiden:
 
-- Testen Sie Ihre Daten im voraus, und überprüfen Sie die Spalten oder Werte in Ihrem Schema, die bei der Übergabe an R-Code ein Problem darstellen könnten.
+- Testen Sie die Daten im Voraus, und überprüfen Sie Spalten oder Werte in Ihrem Schema, die ein Problem darstellen können, wenn sie dem R-Code übergeben werden.
 - Legen Sie Spalten in der Eingabedatenquelle einzeln fest, anstatt `SELECT *` zu verwenden, und verstehen Sie, wie jede Spalte verarbeitet wird.
 - Führen Sie explizite Umwandlungen nach Bedarf beim Vorbereiten der Eingabedaten durch, um Überraschungen zu vermeiden.
-- Vermeiden Sie das Übergeben von Datenspalten (z. b. GUIDs oder ROWGUIDS), die Fehler verursachen und nicht für die Modellierung nützlich sind.
+- Vermeiden Sie das Übergeben von Datenspalten (z. B. GUIDs oder RowGUIDS), die Fehler verursachen und nicht für die Modellierung nützlich sind.
 
-Weitere Informationen zu unterstützten und nicht unterstützten Datentypen finden Sie unter [R-Bibliotheken und-Datentypen](../r/r-libraries-and-data-types.md).
+Weitere Informationen zu unterstützten und nicht unterstützten Datentypen finden Sie unter [R-Bibliotheken und -Datentypen](../r/r-libraries-and-data-types.md).
 
-Informationen zu den Auswirkungen der Lauf Zeit Konvertierung von Zeichen folgen in numerische Faktoren auf die Leistung finden Sie unter [SQL Server R Services Leistungs](../r/sql-server-r-services-performance-tuning.md)Optimierung.
+Informationen über die Leistungseinbußen bei der Laufzeitkonvertierung von Zeichenfolgen zu numerischen Faktoren finden Sie unter [Leistungsoptimierung für SQL Server R Services](../r/sql-server-r-services-performance-tuning.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zum Schreiben von erweiterten R-Funktionen in SQL Server finden Sie in diesem Schnellstart:
 
 > [!div class="nextstepaction"]
-> [Schreiben von erweiterten R-Funktionen mit SQL Server Machine Learning Services](quickstart-r-functions.md)
+> [Schreiben erweiterter R-Funktionen mit SQL Server Machine Learning Services](quickstart-r-functions.md)
 
 Weitere Informationen zur Verwendung von R in SQL Server Machine Learning Services finden Sie in den folgenden Artikeln:
 
-- [Erstellen und bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
-- [Was ist SQL Server Machine Learning Services (python und R)?](../what-is-sql-server-machine-learning.md)
+- [Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
+- [Was ist SQL Server Machine Learning Services (Python und R)?](../what-is-sql-server-machine-learning.md)

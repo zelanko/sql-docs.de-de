@@ -1,26 +1,26 @@
 ---
 title: Erweiterbarkeitsarchitektur in SQL Server-Spracherweiterungen
-titleSuffix: SQL Server Language Extensions
-description: Unterstützung von externem Code für die SQL Server-Datenbank-Engine mit dualer Architektur für die Ausführung externer Sprache für relationale Daten.
+titleSuffix: ''
+description: Erfahren Sie mehr über die Erweiterbarkeitsarchitektur, die für SQL Server-Spracherweiterungen verwendet wird und Ihnen das Ausführen von externem Code in SQL Server ermöglicht. In SQL Server 2019 wird Java unterstützt. Der Code wird in einer Language Runtime-Umgebung als Erweiterung der Hauptdatenbank-Engine ausgeführt.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cefa617dc6068f07b2cc2b684ce0442d7a438e8
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589084"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658873"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Erweiterbarkeitsarchitektur in SQL Server-Spracherweiterungen
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server-Spracherweiterungen verfügen über ein Erweiterbarkeitsframework zum Ausführen von externem Code wie beispielsweise Java auf dem Server. Der Code wird in einer Language Runtime-Umgebung als Erweiterung der Haupt-Datenbank-Engine ausgeführt.
+Erfahren Sie mehr über die Erweiterbarkeitsarchitektur, die für SQL Server-Spracherweiterungen verwendet wird und Ihnen das Ausführen von externem Code in SQL Server ermöglicht. In SQL Server 2019 wird Java unterstützt. Der Code wird in einer Language Runtime-Umgebung als Erweiterung der Haupt-Datenbank-Engine ausgeführt.
 
 ## <a name="background"></a>Hintergrund
 

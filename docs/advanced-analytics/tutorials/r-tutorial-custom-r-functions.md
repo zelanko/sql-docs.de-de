@@ -1,44 +1,45 @@
 ---
-title: Ausführen benutzerdefinierter R-Funktionen auf SQL Server mithilfe von revoscaler rxexec
-description: 'Tutorial: Exemplarische Vorgehensweise zum Ausführen eines benutzerdefinierten R-Skripts auf SQL Server mithilfe von revoscaler-Funktionen.'
+title: Benutzerdefinierte R-Funktionen unter Verwendung von rxExec
+description: 'Tutorial: Exemplarische Vorgehensweise zum Ausführen eines benutzerdefinierten R-Skripts auf SQL Server mithilfe von RevoScaleR-Funktionen.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 439b21bce4e081025db1db53ab44498415ca44af
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: c8f37008f8b6f83e9250ac965287778b4aedd11a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715413"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726545"
 ---
-# <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>Ausführen benutzerdefinierter R-Funktionen auf SQL Server mithilfe von rxexec
+# <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>Ausführen benutzerdefinierter R-Funktionen auf SQL Server unter Verwendung von rxExec
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Sie können benutzerdefinierte R-Funktionen im Kontext von SQL Server ausführen, indem Sie Ihre Funktion über [rxexec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)übergeben. dabei wird davon ausgegangen, dass alle Bibliotheken, die Ihr Skript erfordert, auch auf dem Server installiert sind und diese Bibliotheken mit der basisverteilung von R kompatibel sind. 
+Sie können benutzerdefinierte R-Funktionen im Kontext von SQL Server ausführen, indem Sie die Funktion über [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) übergeben. Dabei wird davon ausgegangen, dass alle für das Skript erforderlichen Bibliotheken auf dem Server installiert sind und diese Bibliotheken mit der R-Basisverteilung kompatibel sind. 
 
-Die **rxexec** -Funktion in **revoscaler** bietet einen Mechanismus zum Ausführen beliebiger R-Skripts, die Sie benötigen. Darüber hinaus kann **rxexec** die Arbeit explizit auf mehrere Kerne auf einem einzelnen Server verteilen und so das Skalieren zu Skripts hinzufügen, die andernfalls auf die Ressourceneinschränkungen der systemeigenen R-Engine beschränkt sind.
+Die **rxExec**-Funktion in **RevoScaleR** bietet einen Mechanismus zum Ausführen beliebiger R-Skripts. Darüber hinaus kann **rxExec** Workloads explizit auf mehrere Kerne auf einem einzelnen Server verteilen und die Skalierung von Skripts erhöhen, die andernfalls auf die Ressourceneinschränkungen der nativen R-Engine beschränkt sind.
 
-In diesem Tutorial verwenden Sie simulierte Daten, um die Ausführung einer benutzerdefinierten R-Funktion, die auf einem Remote Server ausgeführt wird, zu veranschaulichen.
+In diesem Tutorial verwenden Sie simulierte Daten, um die Ausführung einer benutzerdefinierten R-Funktion auf einem Remoteserver zu veranschaulichen.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-+ [SQL Server Machine Learning Services (mit R)](../install/sql-machine-learning-services-windows-install.md) oder [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning Services (mit R)](../install/sql-machine-learning-services-windows-install.md) oder [SQL Server 2016 R Services (datenbankintern)](../install/sql-r-services-windows-install.md)
   
-+ [Daten Bank Berechtigungen](../security/user-permission.md) und eine SQL Server Datenbank-Benutzeranmeldung
++ [Datenbankberechtigungen](../security/user-permission.md) und eine SQL Server-Datenbank-Benutzeranmeldung
 
-+ [Eine entwicklungsarbeits Station mit den revoscaler-Bibliotheken](../r/set-up-a-data-science-client.md)
++ [Eine Entwicklungsarbeitsstation mit den RevoScaleR-Bibliotheken](../r/set-up-a-data-science-client.md)
 
-Die r-Verteilung auf der Client Arbeitsstation bietet ein integriertes **rgui** -Tool, das Sie zum Ausführen des r-Skripts in diesem Tutorial verwenden können. Sie können auch eine IDE wie rstudio oder R Tools für Visual Studio verwenden.
+Die R-Verteilung auf der Clientarbeitsstation bietet ein integriertes **Rgui**-Tool, das Sie zum Ausführen des R-Skripts in diesem Tutorial verwenden können. Sie können auch eine IDE wie RStudio oder R Tools für Visual Studio verwenden.
 
-## <a name="create-the-remote-compute-context"></a>Erstellen des remotecomputekontexts
+## <a name="create-the-remote-compute-context"></a>Erstellen des Remotecomputekontexts
 
-Führen Sie die folgenden R-Befehle auf einer Client Arbeitsstation aus. Wenn Sie z. b. **rgui**verwenden, starten Sie Sie von diesem Speicherort: C:\programme\microsoft\r Client\R_SERVER\bin\x64\.
+Führen Sie die folgenden R-Befehle auf einer Clientarbeitsstation aus. Wenn Sie z. B. den Befehl **Rgui** verwenden, starten Sie diesen von dem folgenden Speicherort aus: C:\Programme\Microsoft\R Client\R_SERVER\bin\x64\.
 
-1. Geben Sie die Verbindungs Zeichenfolge für die SQL Server Instanz an, in der Berechnungen ausgeführt werden. Der Server muss für die R-Integration konfiguriert sein. Der Datenbankname wird in dieser Übung nicht verwendet, die Verbindungs Zeichenfolge erfordert jedoch eine. Wenn Sie über eine Test-oder Beispieldatenbank verfügen, können Sie diese verwenden.
+1. Geben Sie die Verbindungszeichenfolge für die SQL Server-Instanz an, in der die Berechnungen durchgeführt werden sollen. Der Server muss für die R-Integration konfiguriert sein. Der Datenbankname wird in dieser Übung nicht verwendet, die Verbindungszeichenfolge erfordert jedoch eine Datenbank. Wenn Sie über eine Test- oder Beispieldatenbank verfügen, können Sie diese verwenden.
 
     **Verwenden einer SQL-Anmeldung**
 
@@ -52,13 +53,13 @@ Führen Sie die folgenden R-Befehle auf einer Client Arbeitsstation aus. Wenn Si
     sqlConnString <- "Driver=SQL Server;Server=<SQL-Server-instance-name>;Database=<database-name>;Trusted_Connection=True"
     ```
 
-2. Erstellen Sie einen remotecomputekontext für die SQL Server Instanz, auf die in der Verbindungs Zeichenfolge verwiesen wird
+2. Erstellen Sie einen Remotecomputekontext für die SQL Server-Instanz, auf die in der Verbindungszeichenfolge verwiesen wird.
 
     ```R
     sqlCompute <- RxInSqlServer(connectionString = sqlConnString)
     ```
 
-3. Aktivieren Sie den computekontext, und geben Sie dann die Objektdefinition als Bestätigungs Schritt zurück. Die Eigenschaften des computecontext-Objekts sollten angezeigt werden.
+3. Aktivieren Sie den Computekontext, und geben Sie dann die Objektdefinition als Bestätigungsschritt zurück. Die Eigenschaften des Computekontextobjekts sollten angezeigt werden.
 
     ```R
     rxSetComputeContext(sqlCompute)
@@ -67,11 +68,11 @@ Führen Sie die folgenden R-Befehle auf einer Client Arbeitsstation aus. Wenn Si
 
 ## <a name="create-the-custom-function"></a>Erstellen der benutzerdefinierten Funktion
 
-In dieser Übung erstellen Sie eine benutzerdefinierte R-Funktion, die ein gemeinsames Kasino simuliert, das aus einem Rollenpaar besteht. Die Regeln des Spiels bestimmen das Ergebnis von Gewinn oder Verlust:
+In dieser Übung erstellen Sie eine benutzerdefinierte R-Funktion, die ein klassisches Kasinospiel mit zwei Würfeln simuliert. Die folgenden Regeln legen fest, mit welchen Augenzahlen Sie gewinnen oder verlieren:
 
-+ Wenn Sie ein 7-oder 11-Rollback durchführen, gewinnen Sie einen Gewinn.
-+ Rollup 2, 3 oder 12, gehen verloren.
-+ Führen Sie einen Rollup für einen Wert von 4, 5, 6, 8, 9 oder 10 durch, und setzen Sie den Vorgang fort, bis Sie entweder einen erneuten Rollback für den Punkt (in diesem Fall "Win") oder ein Rollback für 7 ausführen. in diesem Fall verlieren Sie den Vorgang.
++ Wenn Sie beim ersten Wurf eine 7 oder 11 würfeln, haben Sie gewonnen.
++ Wenn Sie eine 2, 3 oder 12 würfeln, haben Sie verloren.
++ Wenn Sie eine 4, 5, 6, 8, 9 oder 10 würfeln, wird die gewürfelte Zahl zu Ihrem Point, und Sie würfeln weiter, bis Sie entweder noch einmal Ihren Point würfeln (dann gewinnen Sie) oder eine 7 würfeln, was bedeutet, dass Sie verlieren.
 
 Das Spiel wird in R einfach simuliert, indem Sie eine benutzerdefinierte Funktion erstellen und diese anschließend mehrmals ausführen.
 
@@ -103,7 +104,7 @@ Das Spiel wird in R einfach simuliert, indem Sie eine benutzerdefinierte Funktio
     }
     ```
   
-2.  Simulieren Sie ein einzelnes Würfelspiel, indem Sie die-Funktion ausführen.
+2.  Führen Sie die Funktion aus, um ein einzelnes Würfelspiel zu simulieren.
   
     ```R
     rollDice()
@@ -111,13 +112,13 @@ Das Spiel wird in R einfach simuliert, indem Sie eine benutzerdefinierte Funktio
   
     Haben Sie gewonnen oder verloren?
   
-Nun, da Sie ein Betriebs Skript haben, sehen wir uns an, wie Sie **rxexec** verwenden können, um die Funktion mehrmals auszuführen, um eine Simulation zu erstellen, mit der die Wahrscheinlichkeit eines Gewinns bestimmt wird.
+Sie verfügen nun über ein operationales Skript. Sehen wir uns an, wie Sie die Funktion **rxExec** mehrmals ausführen können, um eine Simulation zu erstellen, die dabei hilft, die Wahrscheinlichkeit eines Gewinns zu bestimmen.
 
-## <a name="pass-rolldice-in-rxexec"></a>Übergeben von rolldice () in rxexec
+## <a name="pass-rolldice-in-rxexec"></a>Übergeben von rollDice() in rxExec
 
-Um eine beliebige Funktion im Kontext einer Remote SQL Server auszuführen, müssen Sie die **rxexec** -Funktion aufzurufen.
+Um eine beliebige Funktion im Kontext einer SQL Server-Remoteinstanz auszuführen, rufen Sie die **rxExec**-Funktion auf.
 
-1. Nennen Sie die benutzerdefinierte Funktion als Argument für **rxexec**sowie andere Parameter, die die Simulation ändern.
+1. Rufen Sie die benutzerdefinierte Funktion als Argument für **rxExec** und einige andere Parameter auf, die die Simulation ändern.
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -128,7 +129,7 @@ Um eine beliebige Funktion im Kontext einer Remote SQL Server auszuführen, müs
   
     + Die Argumente *RNGseed* und *RNGkind* können dazu verwendet werden, die Generierung von Zufallszahlen zu steuern. Wenn *RNGseed* auf **automatisch**festgelegt ist, wird ein paralleler Stream von Zufallszahlen auf jedem Worker initialisiert.
   
-2. Die Funktion **rxExec** erstellt bei jeder Ausführung eine Liste mit einem Element, es passiert jedoch nicht viel, bis die Liste vollständig ist. Wenn alle Iterationen vollständig sind, gibt die Zeile, die mit **length** beginnt, einen Wert zurück.
+2. Die Funktion **rxExec** erstellt bei jeder Ausführung eine Liste mit einem Element, es passiert jedoch nicht viel, bis die Liste vollständig ist. Wenn alle Iterationen abgeschlossen sind, gibt die Zeile, die mit **length** beginnt, einen Wert zurück.
   
     Sie können anschließend den nächsten Schritt ausführen, um eine Zusammenfassung Ihrer Bilanz aus gewonnenen und verlorenen Spielen abzurufen.
   
@@ -140,18 +141,18 @@ Um eine beliebige Funktion im Kontext einer Remote SQL Server auszuführen, müs
   
     Ihre Ergebnisse sollten in etwa wie folgt aussehen:
   
-     *Verlust gewinnen* *12 8*
+     *Verloren  Gewonnen* *12  8*
 
-## <a name="conclusion"></a>Schlussbemerkung
+## <a name="conclusion"></a>Fazit
 
-Obwohl diese Übung einfach ist, veranschaulicht Sie einen wichtigen Mechanismus zur Integration beliebiger r-Funktionen in R-Skripts, die auf SQL Server ausgeführt werden. Zusammenfassen der wichtigen Punkte, die diese Technik ermöglichen:
+Obwohl diese Übung einfach ist, veranschaulicht sie einen wichtigen Mechanismus zur Integration beliebiger R-Funktionen in R-Skripts, die auf SQL Server ausgeführt werden. Im Folgenden finden Sie eine Zusammenfassung der wichtigsten Voraussetzungen für diese Technik:
 
-+ SQL Server müssen für die Machine Learning-und R-Integration konfiguriert werden: [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) mit der R-Funktion oder [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md).
++ SQL Server muss für Machine Learning und die R-Integration konfiguriert werden: [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) mit der R-Funktion oder [SQL Server 2016 R Services (datenbankintern)](../install/sql-r-services-windows-install.md).
 
-+ Open-Source-oder Drittanbieterbibliotheken, die in ihrer Funktion verwendet werden, einschließlich aller Abhängigkeiten, müssen auf SQL Server installiert werden. Weitere Informationen finden Sie unter [Installieren neuer R-Pakete](../r/install-additional-r-packages-on-sql-server.md).
++ Die in der Funktion verwendeten Open-Source- oder Drittanbieterbibliotheken, einschließlich aller Abhängigkeiten, müssen auf SQL Server installiert sein. Weitere Informationen finden Sie unter [Installieren neuer R-Pakete](../r/install-additional-r-packages-on-sql-server.md).
 
-+ Durch das Verschieben eines Skripts aus einer Entwicklungsumgebung in eine gehärtete Produktionsumgebung können Firewall-und Netzwerk Einschränkungen eingeführt werden. Testen Sie sorgfältig, um sicherzustellen, dass das Skript wie erwartet ausgeführt werden kann.
++ Durch das Verschieben eines Skripts aus einer Entwicklungsumgebung in eine festgeschriebene Produktionsumgebung können Firewall- und Netzwerkbeschränkungen auftreten. Führen Sie sorgfältige Tests durch, um sicherzustellen, dass das Skript wie erwartet ausgeführt werden kann.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Ein komplexeres Beispiel für die Verwendung von **rxexec**finden Sie in diesem Artikel: [Grobe Parallelitäts Parallelität mit foreach und rxexec](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+Ein komplexeres Beispiel für die Verwendung von **rxExec** finden Sie im folgenden Artikel: [Undifferenzierte Parallelität mit foreach und rxExec](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)

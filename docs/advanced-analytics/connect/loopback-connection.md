@@ -1,6 +1,6 @@
 ---
-title: Loopback Verbindung zum SQL Server aus einem Python-oder R-Skript
-description: Erfahren Sie, wie Sie eine Loopback Verbindung zum Herstellen einer Verbindung mit SQL Server über ODBC verwenden, um Daten aus einem aus sp_execute_external_script ausgeführten python-oder R-Skript zu lesen oder zu schreiben. Sie können diese Option verwenden, wenn Sie die Argumente Input DataSet und outputdataset von sp_execute_external_script nicht verwenden können.
+title: SQL-Loopbackverbindung
+description: Hier erfahren Sie, wie Sie mit einer Loopbackverbindung über ODBC eine Verbindung zurück zu SQL Server herstellen können, um Daten in einem über „sp_execute_external_script“ ausgeführten Python- oder R-Skript lesen oder schreiben können. Sie können diese Methode verwenden, wenn nicht die Möglichkeit besteht, die Argumente „InputDataSet“ und „OutputDataSet“ von „sp_execute_external_script“ zu verwenden.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/21/2019
@@ -8,56 +8,57 @@ ms.topic: conceptual
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b4ce483df2d38e5e2549d054c02b6c797837f3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69657487"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727601"
 ---
-# <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Loopback Verbindung zum SQL Server aus einem Python-oder R-Skript
+# <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Loopbackverbindung zu SQL Server über ein Python- oder R-Skript
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Erfahren Sie, wie Sie eine Loopback Verbindung zum Herstellen einer Verbindung mit SQL Server über [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) verwenden, um Daten aus einem von `sp_execute_external_script`ausgeführten python-oder R-Skript zu lesen oder zu schreiben. Diese Option kann verwendet werden, wenn das **Input DataSet** -Argument und das **outputdataset** -Argument von `sp_execute_external_script` nicht verwendet werden.
+Hier erfahren Sie, wie Sie mit einer Loopbackverbindung über [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) eine Verbindung zurück zu SQL Server herstellen können, um Daten in einem über `sp_execute_external_script` ausgeführten Python- oder R-Skript lesen oder schreiben können. Sie können diese Methode verwenden, wenn nicht die Möglichkeit besteht, die Argumente **InputDataSet** und **OutputDataSet** von `sp_execute_external_script` zu verwenden.
 
 ## <a name="connection-string"></a>Verbindungszeichenfolge
 
-Zum Herstellen einer Loopback Verbindung müssen Sie eine korrekte Verbindungs Zeichenfolge verwenden. Die häufigsten obligatorischen Argumente sind der Name des [ODBC-Treibers](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md), der Server Adresse und der Name der Datenbank.
+Wenn Sie eine Loopbackverbindung herstellen möchten, müssen Sie eine entsprechende Verbindungszeichenfolge verwenden. Der Name des [ODBC-Treibers](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md), die Serveradresse und der Name der Datenbank sind in der Regel obligatorische Argumente.
 
-### <a name="connection-string-on-windows"></a>Verbindungs Zeichenfolge unter Windows
+### <a name="connection-string-on-windows"></a>Verbindungszeichenfolge unter Windows
 
-Für die Authentifizierung auf SQL Server unter Windows kann das Python-oder R-Skript das **Trusted_Connection** -Verbindungs Zeichenfolgen-Attribut verwenden, um sich als derselbe Benutzer zu authentifizieren, der die sp_execute_external_script ausgeführt hat.
+Bei SQL Server unter Windows kann im Python- oder R-Skript das Verbindungszeichenfolgenattribut **Trusted_Connection** zur Authentifizierung als der Benutzer, der „sp_execute_external_script“ ausgeführt hat, verwendet werden.
 
-Im folgenden finden Sie ein Beispiel für die Loopback-Verbindungs Zeichenfolge unter Windows:
+Im Folgenden finden Sie ein Beispiel für die Zeichenfolge einer Loopbackverbindung unter Windows:
 
 ``` 
 "Driver=SQL Server;Server=.;Database=nameOfDatabase;Trusted_Connection=Yes;"
 ```
 
-### <a name="connection-string-on-linux"></a>Verbindungs Zeichenfolge unter Linux
+### <a name="connection-string-on-linux"></a>Verbindungszeichenfolge unter Linux
 
-Für die Authentifizierung auf SQL Server für Linux muss das Python-oder R-Skript die Attribute **ClientCertificate** und **clientkey** des ODBC-Treibers verwenden, um sich als derselbe Benutzer `sp_execute_external_script`zu authentifizieren, der ausgeführt hat. Hierfür ist die Verwendung der [neuesten Version des ODBC-Treibers](../../connect/odbc/download-odbc-driver-for-sql-server.md) 17.4.1.1 erforderlich.
+Bei SQL Server unter Linux müssen im Python- bzw. R-Skript die Attribute **ClientCertificate** und **ClientKey** des ODBC-Treibers zur Authentifizierung als der Benutzer, der `sp_execute_external_script` ausgeführt hat, verwendet werden. Hierfür ist die Verwendung der [aktuellen ODBC-Treiberversion](../../connect/odbc/download-odbc-driver-for-sql-server.md) 17.4.1.1 erforderlich.
 
-Im folgenden finden Sie ein Beispiel für die Loopback-Verbindungs Zeichenfolge unter Linux:
+Im Folgenden finden Sie ein Beispiel für die Zeichenfolge einer Loopbackverbindung unter Linux:
 
 ```
 "Driver=ODBC Driver 17 for SQL Server;Server=fe80::8012:3df5:0:5db1%eth0;Database=nameOfDatabase;ClientCertificate=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitecert.pem;ClientKey=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitekey.pem;TrustServerCertificate=Yes;Trusted_Connection=no;Encrypt=Yes"
 ```
 
-Die Server Adresse, der Speicherort der Client Zertifikat Datei und der Speicherort der Client Schlüssel `sp_execute_external_script` Datei sind für jeden eindeutig und können durch die Verwendung der API- **rx_get_sql_loopback_connection_string ()** für python oder  **rxgezqlloopbackconnectionstring ()** für R.
+Serveradresse, Speicherort der Clientzertifikatdatei und Speicherort der Clientschlüsseldatei sind für jedes `sp_execute_external_script` spezifisch und können mithilfe der API **rx_get_sql_loopback_connection_string()** für Python bzw. **rxGetSqlLoopbackConnectionString()** für R abgerufen werden.
 
-Weitere Informationen zu den Attributen der Verbindungs Zeichenfolge finden Sie in den [Schlüsselwörtern und Attributen der DSN und Verbindungs Zeichenfolge](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) für Microsoft ODBC Driver for SQL Server.
+Weitere Informationen zu den Verbindungszeichenfolgenattributen finden Sie unter [Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) für Microsoft ODBC Driver for SQL Server.
 
-## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Generieren der Verbindungs Zeichenfolge mit revoscalepy für python
+## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Generieren einer Verbindungszeichenfolge mit revoscalepy für Python
 
-Sie können die API- **rx_get_sql_loopback_connection_string ()** in [revoscalepy](../python/ref-py-revoscalepy.md) verwenden, um eine korrekte Verbindungs Zeichenfolge für eine Loopback Verbindung in einem Python-Skript zu generieren.
+Sie können die API **rx_get_sql_loopback_connection_string()** in [revoscalepy](../python/ref-py-revoscalepy.md) verwenden, um eine entsprechende Verbindungszeichenfolge für eine Loopbackverbindung in einem Python-Skript zu generieren.
 
-Die folgenden Argumente werden akzeptiert:
+Dabei werden die folgenden Argumente akzeptiert:
 
-| Argument | Beschreibung |
+| Argument | und Beschreibung |
 |-|-|
-| name_of_database | Der Name der Datenbank, mit der die Verbindung hergestellt werden soll. |
+| name_of_database | Name der Datenbank, mit der die Verbindung hergestellt wird |
 | odbc_driver | Name des ODBC-Treibers |
 
 ### <a name="examples"></a>Beispiele
@@ -79,7 +80,7 @@ WITH RESULT SETS ((col1 int, col2 int))
 GO
 ```
 
-Beispiel für SQL Server für Linux:
+Beispiel für SQL Server unter Linux:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -97,16 +98,16 @@ WITH RESULT SETS ((col1 int, col2 int))
 GO
 ```
 
-## <a name="generate-connection-string-with-revoscaler-for-r"></a>Generieren der Verbindungs Zeichenfolge mit revoscaler für R
+## <a name="generate-connection-string-with-revoscaler-for-r"></a>Generieren einer Verbindungszeichenfolge mit RevoScaleR für R
 
-Sie können die API **rxgetionqlloopbackconnectionstring ()** in [revoscaler](../r/ref-r-revoscaler.md) verwenden, um eine korrekte Verbindungs Zeichenfolge für eine Loopback Verbindung in einem R-Skript zu generieren.
+Sie können die API **rxGetSqlLoopbackConnectionString()** in [RevoScaleR](../r/ref-r-revoscaler.md) verwenden, um eine entsprechende Verbindungszeichenfolge für eine Loopbackverbindung in einem R-Skript zu generieren.
 
-Die folgenden Argumente werden akzeptiert:
+Dabei werden die folgenden Argumente akzeptiert:
 
-| Argument | Beschreibung |
+| Argument | und Beschreibung |
 |-|-|
-| nameof-Datenbank | Der Name der Datenbank, mit der die Verbindung hergestellt werden soll. |
-| odbcdriver | Name des ODBC-Treibers |
+| nameOfDatabase | Name der Datenbank, mit der die Verbindung hergestellt wird |
+| odbcDriver | Name des ODBC-Treibers |
 
 ### <a name="examples"></a>Beispiele
 
@@ -126,7 +127,7 @@ WITH RESULT SETS ((col1 int, col2 int))
 GO
 ```
 
-Beispiel für SQL Server für Linux:
+Beispiel für SQL Server unter Linux:
 
 ```sql
 EXECUTE sp_execute_external_script

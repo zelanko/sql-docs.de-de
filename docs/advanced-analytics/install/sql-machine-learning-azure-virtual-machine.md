@@ -1,38 +1,39 @@
 ---
-title: Installieren von R-Sprache und Python-Funktionen auf einem virtuellen Azure-Computer
-description: Führen Sie R-und python-Data Science und Machine Learning-Lösungen auf einem SQL Server virtuellen Computer in der Azure-Cloud aus.
+title: Installieren auf einem virtuellen Azure-Computer
+description: Ausführen von Data-Science- und Machine-Learning-Lösungen für R und Python auf einem virtuellen SQL Server-Computer in der Azure-Cloud
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/09/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b7aa37c3ec72390d76ecf9e939916f9641187956
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: aeec25b561822e8083b89e03f0f7e74f40660f7b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715886"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727617"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Installieren von SQL Server Machine Learning Services mit R und python auf einem virtuellen Azure-Computer
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Installieren von SQL Server Machine Learning Services mit R und Python auf einem virtuellen Azure-Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Sie können die R-und python-Integration mit Machine Learning Services auf einem SQL Server virtuellen Computer in Azure installieren, wodurch Installations-und Konfigurationsaufgaben vermieden werden. Nachdem der virtuelle Computer bereitgestellt wurde, können die Features verwendet werden.
+Sie können die R- und Python-Integration mit Machine Learning Services auf einem virtuellen SQL Server-Computer in Azure installieren, wodurch Installations- und Konfigurationstasks entfallen. Sobald der virtuelle Computer bereitgestellt ist, können die Funktionen verwendet werden.
  
-Schritt-für-Schritt-Anweisungen finden [Sie unter Bereitstellen eines virtuellen Windows SQL Server-Computers in der Azure-Portal](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
+Ausführliche Anweisungen finden Sie unter [Bereitstellen eines virtuellen Windows-Computers mit SQL Server im Azure-Portal](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
 
-Mit dem Schritt [SQL Server-Einstellungen konfigurieren](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) können Sie Machine Learning zu Ihrer Instanz hinzufügen.
+Beim Schritt [Konfigurieren der SQL Server-Einstellungen](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) fügen Sie Ihrer Instanz Machine Learning hinzu.
 
 <a name="firewall"></a>
 
-## <a name="unblock-the-firewall"></a>Sperre der Firewall entsperren
+## <a name="unblock-the-firewall"></a>Aufhebung der Firewallblockierung
 
-Standardmäßig enthält die Firewall auf dem virtuellen Azure-Computer eine Regel, die den Netzwerk Zugriff für lokale Benutzerkonten blockiert.
+Die Firewall enthält auf virtuellen Azure-Computern standardmäßig eine Regel, die den Netzwerkzugriff für lokale Benutzerkonten blockiert.
 
-Sie müssen diese Regel deaktivieren, um sicherzustellen, dass Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einem Remote Data Science-Client aus auf die-Instanz zugreifen können.  Andernfalls kann der Machine Learning-Code nicht in computekontexten ausgeführt werden, die den Arbeitsbereich des virtuellen Computers verwenden.
+Sie müssen diese Regel deaktivieren, um sicherzustellen, dass Sie auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz von einem Data-Science-Remoteclient aus zugreifen können.  Andernfalls kann Ihr Machine-Learning-Code nicht in Computekontexten ausgeführt werden, die den Arbeitsbereich des virtuellen Computers verwenden.
 
-So aktivieren Sie den Zugriff von Remote Data Science-Clients:
+So aktivieren Sie den Zugriff von Data Science-Remoteclients:
 
 1. Öffnen Sie auf dem virtuellen Computer die Windows-Firewall mit erweiterter Sicherheit.
 2. Wählen Sie **Ausgehende Regeln** aus.
@@ -42,13 +43,13 @@ So aktivieren Sie den Zugriff von Remote Data Science-Clients:
   
 ## <a name="enable-odbc-callbacks-for-remote-clients"></a>ODBC-Rückrufe für Remoteclients aktivieren
 
-Wenn Sie davon ausgehen, dass Clients, die den Server aufrufen, als Teil ihrer Machine Learning-Lösungen ODBC-Abfragen ausgeben müssen, müssen Sie sicherstellen, dass das Launchpad ODBC-Aufrufe für den Remote Client durchführen kann. 
+Wenn Sie erwarten, dass Clients, die den Server aufrufen, ODBC-Anfragen als Teil ihrer Machine-Learning-Lösungen ausstellen, müssen Sie sicherstellen, dass das Launchpad ODBC-Aufrufe für den Remoteclient ausführen kann. 
 
-Zu diesem Zweck müssen Sie die SQL-Workerkonten zulassen, die vom Launchpad für die Anmeldung bei der Instanz verwendet werden. Weitere Informationen finden Sie unter [Hinzufügen von sqlrusergroup als Datenbankbenutzer](../security/create-a-login-for-sqlrusergroup.md).
+Zu diesem Zweck müssen Sie die SQL-Workerkonten zulassen, die vom Launchpad für die Anmeldung bei der Instanz verwendet werden. Weitere Informationen finden Sie unter [Hinzufügen von SQLRUserGroup als Datenbankbenutzer](../security/create-a-login-for-sqlrusergroup.md).
 
 <a name="network"></a>
 
-## <a name="add-network-protocols"></a>Netzwerkprotokolle hinzufügen
+## <a name="add-network-protocols"></a>Hinzufügen von Netzwerkprotokollen
 
 + Aktivieren von Named Pipes
   
@@ -56,4 +57,4 @@ Zu diesem Zweck müssen Sie die SQL-Workerkonten zulassen, die vom Launchpad fü
   
 + Aktivieren von TCP/IP
 
-  TCP/IP ist für Loopback Verbindungen erforderlich. Wenn Sie den Fehler "dbnetlib;" erhalten, SQL Server ist nicht vorhanden oder Zugriff verweigert ", aktivieren Sie TCP/IP auf dem virtuellen Computer, der die Instanz unterstützt.
+  TCP/IP ist für Loopbackverbindungen erforderlich. Wenn der Fehler „DBNETLIB; SQL Server ist nicht vorhanden, oder der Zugriff wurde verweigert.“ ausgegeben wird, aktivieren Sie TCP/IP auf dem virtuellen Computer, der die Instanz unterstützt.

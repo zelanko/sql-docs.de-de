@@ -1,46 +1,47 @@
 ---
-title: 'Lektion 2: Erstellen von Datenfunktionen mithilfe von R-und T-SQL-Funktionen'
-description: Tutorial zum Hinzufügen von Berechnungen zu gespeicherten Prozeduren für die Verwendung in R Machine Learning-Modellen.
+title: 'Tutorial zu R und Transact-SQL: Datenfeatures'
+description: In diesem Tutorial erfahren Sie, wie man Berechnungen zu gespeicherten Prozeduren für die Verwendung in R-Machine Learning-Modellen hinzufügt.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8bc2e66c68fc208ae3a97a6a27874600874336c
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 6970fd92fc1b655e0df66cdb548a044e3bdc746e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714724"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725758"
 ---
-# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Lektion 2: Erstellen von Datenfunktionen mithilfe von R und T-SQL
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Lektion 2: Erstellen von Datenfeatures mit R und T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
 
 In diesem Schritt erfahren Sie, wie Sie Funktionen aus Rohdaten mithilfe einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktion erstellen. Sie rufen anschließend die Funktion aus einer gespeicherten Prozedur auf, um eine Tabelle zu erstellen, die die Funktionswerte enthält.
 
-## <a name="about-feature-engineering"></a>Informationen zu Featureentwicklung
+## <a name="about-feature-engineering"></a>Über die Featureentwicklung
 
-Nachdem Sie eine Zeit damit verbracht haben, Daten zu durchsuchen, haben Sie einige Einsichten in die Daten gesammelt und sind nun bereit, mit der *Featureentwicklung*fortzufahren. Dieser Prozess der Erstellung aussagekräftiger Features aus den Rohdaten ist ein wichtiger Schritt bei der Erstellung von analytischen Modellen.
+Nachdem Sie eine Zeit damit verbracht haben, Daten zu durchsuchen, haben Sie einige Einsichten in die Daten gesammelt und sind nun bereit, mit der *Featureentwicklung*fortzufahren. Das Erstellen nützlicher Features aus den Rohdaten ist ein wichtiger Schritt bei der Erstellung von Analysemodellen.
 
-In diesem DataSet basieren die Entfernungs Werte auf der gemeldeten Verbrauchseinheit und stellen nicht notwendigerweise die geografische Entfernung oder die tatsächliche Entfernung dar. Aus diesem Grund müssen Sie die direkte Entfernung zwischen den Abhol- und den Zielorten berechnen, indem Sie die verfügbaren Koordinaten in im Quell-Dataset NYC Taxi verwenden. Sie erreichen dies, indem Sie die [Haversine-Formel](https://en.wikipedia.org/wiki/Haversine_formula) in einer benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktion verwenden.
+In diesem Dataset basieren die Entfernungswerte auf der vom Taxameter angezeigten Entfernung und stellen nicht zwangsläufig die geografische Distanz oder tatsächlich zurückgelegte Entfernung dar. Aus diesem Grund müssen Sie die direkte Entfernung zwischen den Abhol- und den Zielorten berechnen, indem Sie die verfügbaren Koordinaten in im Quell-Dataset NYC Taxi verwenden. Sie erreichen dies, indem Sie die [Haversine-Formel](https://en.wikipedia.org/wiki/Haversine_formula) in einer benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktion verwenden.
 
 Verwenden Sie eine benutzerdefinierte T-SQL-Funktion, _fnCalculateDistance_, um die Entfernung mithilfe der Haversine-Formel zu berechnen, und verwenden Sie eine zweite benutzerdefinierte T-SQL-Funktion, _fnEngineerFeatures_, um eine Tabelle mit allen Funktionen zu erstellen.
 
-Der Gesamtprozess lautet wie folgt:
+Der Gesamtprozess sieht folgendermaßen aus:
 
-- Erstellen der T-SQL-Funktion, mit der die Berechnungen durchführt werden
+- Erstellen Sie die T-SQL-Funktion, die die Berechnungen durchführt.
 
-- Rufen Sie die Funktion auf, um die Funktionsdaten zu generieren
+- Rufen Sie die Funktion auf, um die Featuredaten zu generieren.
 
-- Speichern der Featuredaten in einer Tabelle
+- Speichern Sie die Featuredaten in einer Tabelle.
 
-## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Berechnen der Fahrt Distanz mithilfe von fncalculatedistance
+## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Berechnen der Fahrstrecke mithilfe von fnCalculateDistance
 
-Die Funktion _fncalculatedistance_ sollte im Rahmen der Vorbereitung für dieses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tutorial heruntergeladen und mit registriert worden sein. Nehmen Sie sich einen Moment Zeit, um den Code anzuzeigen.
+Die Funktion _fnCalculateDistance_ sollte heruntergeladen und bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Teil der Vorbereitung für dieses Tutorial registriert worden sein. Überprüfen Sie kurz den Code.
   
 1. Erweitern Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Programmierbarkeit**, erweitern Sie **Funktionen** und anschließend **Skalarwertfunktionen**.   
 
@@ -74,9 +75,9 @@ Die Funktion _fncalculatedistance_ sollte im Rahmen der Vorbereitung für dieses
   
     - Sie übernimmt die Werte der Längen- und Breitengrade als Eingaben, die sie von den Abhol- und Zielorten der Fahrten erhält. Die Haversine-Formel wandelt Orte ins Bogenmaß um und verwendet diese Werte, um die direkte Entfernung zwischen zwei Orten in Meilen zu berechnen.
 
-## <a name="generate-the-features-using-fnengineerfeatures"></a>Generieren der Features mithilfe von _fnengineerfeatures_
+## <a name="generate-the-features-using-_fnengineerfeatures_"></a>Generieren der Features mithilfe von _fnEngineerFeatures_
 
-Um die berechneten Werte einer Tabelle hinzuzufügen, die zum Trainieren des Modells verwendet werden kann, verwenden Sie eine andere Funktion, _fnengineerfeatures_. Die neue Funktion Ruft die zuvor erstellte T-SQL-Funktion _fncalculatedistance_auf, um die direkte Entfernung zwischen den Pick-up-und Dropdown-Speicherorten zu erhalten. 
+Verwenden Sie eine andere Funktion, _fnEngineerFeatures_, um die berechneten Werte einer Tabelle hinzuzufügen, die zum Trainieren des Modells verwendet werden kann. Die neue Funktion ruft die zuvor erstellte T-SQL-Funktion _fnCalculateDistance_ auf, um die direkte Entfernung zwischen den Abhol- und Zielorten abzurufen. 
 
 1. Nehmen Sie sich ein paar Minuten Zeit, um den Code für die benutzerdefinierte T-SQL-Funktion _fnEngineerFeatures_zu überprüfen, die für Sie als Teil der Vorbereitung für diese exemplarische Vorgehensweise erstellt wurde.
   
@@ -104,11 +105,11 @@ Um die berechneten Werte einer Tabelle hinzuzufügen, die zum Trainieren des Mod
     GO
     ```
 
-    + Diese Tabellenwert Funktion, die mehrere Spalten als Eingaben annimmt und eine Tabelle mit mehreren Merkmals Spalten ausgibt.
+    + Diese Tabellenwertfunktion akzeptiert mehrere Spalten als Eingaben und gibt eine Tabelle mit mehreren Featurespalten aus.
 
-    + Der Zweck dieser Funktion besteht darin, neue Features für die Erstellung eines Modells zu erstellen.
+    + Der Zweck dieser Funktion ist die Erstellung neuer Features, die beim Erstellen eines Modells verwendet werden können.
 
-2.  Um zu überprüfen, ob diese Funktion funktioniert, verwenden Sie diese, um die geografische Entfernung für die Fahrten zu berechnen, bei denen die gemessene Entfernung den Wert 0 hat, die Pick-und Dropdown-Standorte jedoch unterschiedlich sind.
+2.  Sie können sicherstellen, dass diese Funktion funktioniert, indem Sie sie zum Berechnen der geografischen Distanz für diese Fahrten verwenden, bei denen die gemessene Distanz 0 war, aber die Abhol- und Zielorte unterschiedlich waren.
   
     ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
@@ -119,12 +120,12 @@ Um die berechneten Werte einer Tabelle hinzuzufügen, die zum Trainieren des Mod
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Wie Sie sehen können, entspricht die vom Taxameter angezeigte Entfernung nicht immer der geografischen Distanz. Daher ist die Featureentwicklung so wichtig. Sie können diese verbesserten Daten Features verwenden, um ein Machine Learning-Modell mithilfe von R zu trainieren.
+    Wie Sie sehen können, entspricht die vom Taxameter angezeigte Entfernung nicht immer der geografischen Distanz. Daher ist die Featureentwicklung so wichtig. Sie können diese Datenfeatures verwenden, um ein Machine Learning-Modell mit R zu trainieren.
 
 ## <a name="next-lesson"></a>Nächste Lektion
 
 [Lektion 3: Trainieren und Speichern eines Modells mit T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
 
-## <a name="previous-lesson"></a>Vorherige Lektion
+## <a name="previous-lesson"></a>Vorherige Lerneinheit
 
-[Lektion 1: Durchsuchen und Visualisieren von Daten mithilfe von R und gespeicherten Prozeduren](sqldev-explore-and-visualize-the-data.md)
+[Lektion 1: Untersuchen und Visualisieren der Daten mithilfe von R und gespeicherten Prozeduren](sqldev-explore-and-visualize-the-data.md)

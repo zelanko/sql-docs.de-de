@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 51ee5e3eb1298c2f33aeecdb104be14245107e7c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874927"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632910"
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70874927"
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 enthält alle kumulativen Updates bis einschließlich CU8, die nach SQL Server 2016 SP1 veröffentlicht wurden.
 
-- [![Microsoft Download Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [Herunterladen von SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- [![Microsoft Download Center](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [Herunterladen von SQL Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)
 - Eine vollständige Liste der Updates finden Sie unter [SQL Server 2016 Service Pack 2 release information (Releaseinformationen zu SQL Server 2016 Service Pack 2)](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information).
 
 Sie müssen Ihren Computer möglicherweise nach der Installation von SQL Server 2016 SP2 neu starten. Als bewährte Methode wird empfohlen, nach der Installation von SQL Server 2016 SP2 einen Neustart zu planen und durchzuführen.
@@ -210,7 +210,7 @@ Führen Sie außerdem die folgenden gespeicherten Prozeduren des Abfragespeicher
 
  **Problemumgehung:** Sie können eine der folgenden Problemumgehungen verwenden:
 
- ![Verwalten der Hilfeeinstellungen für SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Verwalten der Hilfeeinstellungen für SQL Server")
+ ![Verwalten von Hilfeeinstellungen für SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Verwalten von Hilfeeinstellungen für SQL Server")
 
 -   Verwenden Sie die Option **Onlinehilfe oder lokale Hilfe auswählen** , und konfigurieren Sie die Hilfe für „Ich möchte Onlinehilfe verwenden“.
 

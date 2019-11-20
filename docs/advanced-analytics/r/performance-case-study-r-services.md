@@ -1,45 +1,47 @@
 ---
-title: Leistung für SQL Server R Services-Ergebnisse und-Ressourcen
+title: Leistungsoptimierung für Ergebnisse
+description: In diesem Artikel werden die Methoden, Ergebnisse und Schlussfolgerungen zweier Fallstudien zusammengefasst, in denen verschiedene Optimierungsmethoden getestet wurden.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aa56a9367271df2172236b133d85b5771089b1ac
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715045"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727405"
 ---
-# <a name="performance-for-r-services-results-and-resources"></a>Leistung für R Services: Ergebnisse und Ressourcen
+# <a name="performance-for-r-services-results-and-resources"></a>Leistungsoptimierung für R Services: Ergebnisse und Ressourcen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dieser Artikel ist der vierte und letzte in einer Reihe, in der die Leistungsoptimierung für R Services beschrieben wird. In diesem Artikel werden die Methoden, Ergebnisse und Schlussfolgerungen zweier Fallstudien zusammengefasst, die verschiedene Optimierungsmethoden getestet haben.
+Dieser Artikel ist der vierte und letzte in einer Reihe, in der die Leistungsoptimierung für R Services beschrieben wird. In diesem Artikel werden die Methoden, Ergebnisse und Schlussfolgerungen zweier Fallstudien zusammengefasst, in denen verschiedene Optimierungsmethoden getestet wurden.
 
-Die zwei Fallstudien hatten unterschiedliche Ziele:
+Die beiden Fallstudien besaßen unterschiedliche Ziele:
 
-+ Die erste Fallstudie vom R Services-Entwicklungsteam hat versucht, die Auswirkungen spezifischer Optimierungstechniken zu messen.
-+ Die zweite Fallstudie von einem Data Scientist-Team hat mit mehreren Methoden experimentieren, um die besten Optimierungen für ein bestimmtes Bewertungs Szenario mit hohem Volumen zu ermitteln.
++ Die erste Fallstudie wurde vom R Services-Entwicklungsteam durchgeführt mit dem Ziel, die Auswirkungen bestimmter Techniken zur Leistungsoptimierung zu messen.
++ In der zweiten Fallstudie experimentierte ein Team aus Datenanalysten mit verschiedenen Methoden, um die besten Optimierungen für ein bestimmtes Bewertungsszenario mit hohem Volumen zu ermitteln.
 
-In diesem Thema werden die detaillierten Ergebnisse der ersten Fallstudie aufgeführt. In der zweiten Fallstudie werden die Gesamtergebnisse in einer Zusammenfassung beschrieben. Am Ende dieses Themas finden Sie Links zu allen Skripts und Beispiel Daten sowie zu den Ressourcen, die von den ursprünglichen Autoren verwendet werden.
+In diesem Thema werden die Ergebnisse der ersten Fallstudie im Detail aufgeführt. Zudem werden die Gesamtergebnisse der zweiten Fallstudie zusammengefasst. Am Ende dieses Themas finden Sie Links zu allen Skripts und Beispieldaten sowie zu den Ressourcen, die von den ursprünglichen Autoren verwendet wurden.
 
-## <a name="performance-case-study-airline-dataset"></a>Leistungs Fallstudie: Fluglinien-DataSet
+## <a name="performance-case-study-airline-dataset"></a>Fallstudie zur Leistungsoptimierung: Airline-Dataset
 
-Diese Fallstudie vom SQL Server R Services Entwicklungsteam hat die Auswirkungen verschiedener Optimierungen getestet. Es wurde ein einzelnes rxlogit-Modell erstellt und eine Bewertung für das Fluglinien DataSet durchgeführt. Während der Trainings-und Bewertungsprozesse wurden Optimierungen angewendet, um einzelne Auswirkungen zu bewerten.
+In dieser Fallstudie testete das Entwicklungsteam von SQL Server R Services die Auswirkungen verschiedener Optimierungen. Es wurde ein einzelnes rxLogit-Modell erstellt und eine Bewertung für das Airline-Dataset durchgeführt. Während des Trainings- und Bewertungsprozesses wurden verschiedene Optimierungen angewendet und deren Auswirkungen bewertet.
 
-- GitHub [Beispiel Daten und Skripts](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) für SQL Server Optimierungen
+- GitHub: [Beispieldaten und Skripts](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) für die Studie zu SQL Server-Optimierungen
 
-### <a name="test-methods"></a>Test Methoden
+### <a name="test-methods"></a>Testmethoden
 
-1. Das Dataset für die Fluggesellschaft besteht aus einer einzelnen Tabelle mit 10 Mio. Zeilen. Sie wurde heruntergeladen und in SQL Server Massen geladen.
+1. Das Airline-Dataset besteht aus einer einzelnen Tabelle mit 10 Millionen Zeilen. Sie wurde heruntergeladen und in einem Massenvorgang in SQL Server geladen.
 2. Es wurden sechs Kopien der Tabelle erstellt.
-3. Es wurden verschiedene Änderungen auf die Kopien der Tabelle angewendet, um SQL Server Features wie Seiten Komprimierung, Zeilen Komprimierung, Indizierung, Spaltendaten Speicher usw. zu testen.
-4. Die Leistung wurde vor und nach dem Anwenden jeder Optimierung gemessen.
+3. Auf die Kopien der Tabelle wurden verschiedene Änderungen angewendet, um SQL Server-Funktionen wie Seitenkomprimierung, Zeilenkomprimierung, Indizierung, Spaltendatenspeicher usw. zu testen.
+4. Die Leistung wurde jeweils vor und nach jeder Optimierung gemessen.
 
-| Tabellenname| Beschreibung|
+| Tabellenname| und Beschreibung|
 |------|------|
 | *airline* | Aus der ursprünglichen XDF-Datei mithilfe von `rxDataStep` konvertierte Daten.|                          |
 | *airlineWithIntCol*   | *DayOfWeek* konvertiert in eine Ganzzahl anstatt in eine Zeichenfolge. Fügt auch eine *rowNum*-Spalte hinzu.|
@@ -48,19 +50,19 @@ Diese Fallstudie vom SQL Server R Services Entwicklungsteam hat die Auswirkungen
 | *airlineWithRowComp*  | Die gleichen Daten wie in der *airlineWithIndex*-Tabelle, jedoch mit aktivierter Zeilenkomprimierung. Fügt auch die beiden Spalten *CRSDepHour* und *Late* hinzu, die aus *CRSDepTime* und *ArrDelay* berechnet werden. |
 | *airlineColumnar*     | Ein spaltenbasierter Speicher mit einem einzigen gruppierten Index. Diese Tabelle wird mit Daten aus einer bereinigten CSV-Datei aufgefüllt.|
 
-Jeder Test besteht aus den folgenden Schritten:
+Jeder Test bestand aus den folgenden Schritten:
 
 1. Die automatische Speicherbereinigung für R wurde vor jedem Test eingeleitet.
 2. Basierend auf den Tabellendaten wurde ein logistisches Regressionsmodell erstellt. Der Wert von *rowsPerRead* wurde für jeden Test auf 500000 festgelegt.
-3. Ergebnisse wurden mithilfe des trainierten Modells generiert.
-4. Jeder Test wurde sechs Mal ausgeführt. Der Zeitpunkt der ersten Durchführung (der "kaltlauf") wurde gelöscht. Um gelegentlich Ausreißer zuzulassen, wurde die **Maximale** Zeit zwischen den verbleibenden fünf Ausführungen ebenfalls verworfen. Der Durchschnitt der vier verbleibenden Ausführungen wurde verwendet, um die durchschnittliche verstrichene Laufzeit jedes Tests zu berechnen.
-5. Die Tests wurden mit dem *ReportProgress* -Parameter mit dem Wert 3 (= Berichts zeitliche und Fortschritt) ausgeführt. Jede Ausgabedatei enthält Informationen über die Zeit, die für e/a-Vorgänge, Übergangszeit und Compute-Zeit aufgewendet wird. Diese Zeiten sind nützlich für die Problembehandlung und Diagnose.
-6. Die Konsolenausgabe wurde auch an eine Datei im Ausgabeverzeichnis weitergeleitet.
-7. Die Test Skripts haben die Uhrzeiten in diesen Dateien verarbeitet, um die durchschnittliche Zeit für die Ausführung zu berechnen.
+3. Bewertungen wurden mithilfe des trainierten Modells generiert.
+4. Jeder Test wurde sechs Mal ausgeführt. Die Zeit der ersten Ausführung (des „Kaltlaufs“) wurde gelöscht. Damit gelegentliche Ausreißer das Ergebnis nicht verfälschen, wurde die **längste** Zeit der verbleibenden fünf Ausführungen ebenfalls gelöscht. Der Durchschnitt der vier verbleibenden Ausführungen wurde verwendet, um die durchschnittliche verstrichene Laufzeit jedes Tests zu berechnen.
+5. Für die Ausführung der Tests wurde der Parameter *reportProgress* auf den Wert 3 festgelegt (= Zeiten und Fortschritt werden gemeldet). Jede Ausgabedatei enthielt Informationen über die E/A-Zeit, die Übergangszeit und die Computezeit. Diese Zeiten sind nützlich für die Problembehandlung und Diagnose.
+6. Auch die Konsolenausgabe wurde in eine Datei im Ausgabeverzeichnis geleitet.
+7. Mit den Testskripts wurden die Zeiten in den Dateien zur Berechnung der durchschnittlichen Zeit für die Ausführung verarbeitet.
 
-Die folgenden Ergebnisse sind z. b. die Zeiten eines einzelnen Tests. Die wichtigsten Zeiten sind **Gesamte Lesezeit** (E/A-Zeit) und **Übergangszeit** (Aufwand für das Einrichten von Prozessen für die Berechnung).
+Die folgenden Ergebnisse stellen beispielsweise die Zeiten eines einzelnen Tests dar. Die wichtigsten Zeiten sind **Gesamte Lesezeit** (E/A-Zeit) und **Übergangszeit** (Aufwand für das Einrichten von Prozessen für die Berechnung).
 
-**Beispiel Zeitangaben**
+**Beispielzeiten**
 
 ```text
 Running IntCol Test. Using airlineWithIntCol table.
@@ -80,53 +82,53 @@ metric time pct
 5 Total non IO time 0.3134 9.10
 ```
 
-Es wird empfohlen, die Test Skripts herunterzuladen und zu ändern, um Sie beim Beheben von Problemen mit R Services oder mit revoscaler-Funktionen zu unterstützen.
+Es wird empfohlen, die Testskripts herunterzuladen und zu ändern, um Probleme mit R Services oder RevoScaleR-Funktionen beheben zu können.
 
-### <a name="test-results-all"></a>Test Ergebnisse (alle)
+### <a name="test-results-all"></a>Testergebnisse (gesamt)
 
-In diesem Abschnitt werden die Ergebnisse vor und nach für jeden der Tests verglichen.
+In diesem Abschnitt werden die Ergebnisse vor und nach der Ausführung der einzelnen Tests miteinander verglichen.
 
-#### <a name="data-size-with-compression-and-a-columnar-table-store"></a>Datengröße mit Komprimierung und einem Spalten förmigen Tabellen Speicher
+#### <a name="data-size-with-compression-and-a-columnar-table-store"></a>Datengröße bei Komprimierung und einem spaltenbasierten Tabellenspeicher
 
-Der erste Test verglich die Verwendung der Komprimierung und eine Spalten Tabelle, um die Größe der Daten zu reduzieren.
+Im ersten Test wurden die Verwendung von Komprimierung und die Verwendung einer spaltenbasierten Tabelle zur Verringerung der Datengröße miteinander verglichen:
 
-| Tabellenname            | Zeilen     | Reserviert.   | Daten       | index_size | Nicht verwendet  | % Gespeichert (reserviert) |
+| Tabellenname            | Zeilen     | Reserviert.   | data       | index_size | Nicht verwendet  | % Gespeichert (reserviert) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2\.978.816 KB | 2\.972.160 KB | 6\.128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625.784 KB  | 623.744 KB  | 1\.352 KB    | 688 KB  | 79%                 |
 | *airlineWithRowComp*  | 10000000 | 1\.262.520 KB | 1\.258.880 KB | 2\.552 KB    | 1\.088 KB | 58%                 |
 | *airlineColumnar*     | 9999999  | 201.992 KB  | 201.624 KB  | –        | 368 KB  | 93%                 |
 
-**Ergebnisse**
+**Schlussfolgerungen**
 
-Die größte Verringerung der Datengröße wurde erreicht, indem ein columnstore--Index, gefolgt von der Seiten Komprimierung, angewendet wurde.
+Die Datengröße konnte am meisten durch Anwendung eines Columnstore-Index verringert werden, gefolgt von der Seitenkomprimierung.
 
-#### <a name="effects-of-compression"></a>Auswirkungen der Komprimierung
+#### <a name="effects-of-compression"></a>Auswirkungen von Komprimierung
 
-Mit diesem Test wurden die Vorteile der Zeilen Komprimierung, der Seiten Komprimierung und der Komprimierung nicht komprimiert. Ein Modell wurde mithilfe `rxLinMod` von Daten aus drei verschiedenen Datentabellen trainiert. Für alle Tabellen wurde dieselbe Formel und Abfrage verwendet.
+In diesem Test wurden die Auswirkungen von Zeilenkomprimierung, Seitenkomprimierung und keiner Komprimierung miteinander verglichen. Ein Modell wurde mit `rxLinMod` für Daten aus drei verschiedenen Datentabellen trainiert. Für alle Tabellen wurde dieselbe Formel und Abfrage verwendet.
 
 | Tabellenname            | Testname       | numTasks | Durchschnittliche Zeit |
 |-----------------------|-----------------|----------|--------------|
 | *airlineWithIndex*    | NoCompression   | 1        | 5.6775       |
-|                       | NoCompression-parallel| 4        | 5.1775       |
+|                       | NoCompression - parallel| 4        | 5.1775       |
 | *airlineWithPageComp* | PageCompression | 1        | 6.7875       |
-|                       | Pagecompression-parallel | 4        | 5.3225       |
+|                       | PageCompression - parallel | 4        | 5.3225       |
 | *airlineWithRowComp*  | RowCompression  | 1        | 6.1325       |
-|                       | Zeilen Komprimierung-parallel  | 4        | 5.2375       |
+|                       | RowCompression - parallel  | 4        | 5.2375       |
 
-**Ergebnisse**
+**Schlussfolgerungen**
 
-Die Komprimierung allein scheint nicht zu helfen. In diesem Beispiel kompensiert der Anstieg der CPU zur Behandlung der Komprimierung die Verringerung der e/a-Zeit.
+Die Komprimierung allein scheint keine Vorteile zu bringen. In diesem Beispiel gleicht die Erhöhung der CPU zur Verarbeitung der Komprimierung die Verringerung der E/A-Zeit aus.
 
 Wenn der Test jedoch parallel ausgeführt wird, indem *numTasks* auf 4 festgelegt wird, verringert sich die durchschnittliche Zeit.
 
 Bei größeren Datasets kann die Auswirkung der Komprimierung deutlicher bemerkbar sein. Die Komprimierung hängt ab von Dataset und Werten, sodass möglicherweise durch Ausprobieren festgestellt werden muss, welche Auswirkung die Komprimierung auf Ihr Dataset hat.
 
-### <a name="effect-of-windows-power-plan-options"></a>Auswirkung der Optionen des Windows-Energie Sparplans
+### <a name="effect-of-windows-power-plan-options"></a>Auswirkungen der Optionen des Windows-Energiesparplans
 
-In diesem Experiment wurde `rxLinMod` mit der *airlineWithIntCol*-Tabelle verwendet. Für den Windows-Energie Sparplan wurde entweder eine **ausgeglichene** oder eine **hohe Leistung**festgelegt. Für alle Tests wurde *numTasks* auf 1 festgelegt. Der Test wurde sechs Mal ausgeführt und wurde unter beiden Energieoptionen zweimal ausgeführt, um die Variabilität der Ergebnisse zu untersuchen.
+In diesem Experiment wurde `rxLinMod` mit der *airlineWithIntCol*-Tabelle verwendet. Der Energiesparplan von Windows wurde einmal auf **Ausbalanciert** und einmal **Höchstleistung** festgelegt. Für alle Tests wurde *numTasks* auf 1 festgelegt. Der Test wurde sechsmal ausgeführt, davon je zweimal für jede Energiesparoption, um die Variabilität der Ergebnisse zu untersuchen.
 
-**Hohe Leistungsoption** :
+Energiesparoption **Höchstleistung**:
 
 | Testname | Ausführen von \# | Verstrichene Zeit | Durchschnittliche Zeit |
 |-----------|--------|--------------|--------------|
@@ -164,87 +166,87 @@ Energiesparoption **Ausgeglichen**:
 |           | 6      | 3,75 Sekunden |              |
 |           |        |              | 3.88         |
 
-**Ergebnisse**
+**Schlussfolgerungen**
 
-Die Ausführungszeit ist bei Verwendung des **High Performance** -Energie Sparplans von Windows einheitlicher und schneller.
+Die Ausführungszeit ist konsistenter und kürzer, wenn die Windows-Energiesparoption **Höchstleistung** verwendet wird.
 
-#### <a name="using-integer-vs-strings-in-formulas"></a>Verwenden von ganzzahligen und Zeichen folgen in Formeln
+#### <a name="using-integer-vs-strings-in-formulas"></a>Verwenden von ganzen Zahlen im Vergleich zu Zeichenfolgen in Formeln
 
-Dieser Test hat die Auswirkung der Änderung des R-Codes bewertet, um ein häufiges Problem mit Zeichen folgen Faktoren zu vermeiden. Insbesondere wurde ein Modell mit `rxLinMod` zwei Tabellen trainiert: in der ersten Tabelle werden Faktoren als Zeichen folgen gespeichert. in der zweiten Tabelle werden Faktoren als ganze Zahlen gespeichert.
+In diesem Test wurden die Auswirkungen von Änderungen im R-Code zur Vermeidung eines gängigen Problems mit Zeichenfolgen als Faktoren bewertet. Ein Modell wurde mit `rxLinMod` für zwei Tabellen trainiert: In der ersten Tabelle wurden Faktoren als Zeichenfolgen gespeichert, in der zweiten als ganze Zahlen.
 
-+ In der Tabelle " *Airline* " enthält die Spalte [DayOfWeek] Zeichen folgen. Der _COLINFO_ -Parameter wurde verwendet, um die Faktor Ebenen anzugeben (Montag, Dienstag,...).
++ In der *Airline*-Tabelle enthielt die Spalte „[DayOfWeek]“ Zeichenfolgen. Der Parameter _colInfo_ wurde zur Angabe der Faktorebenen (Montag, Dienstag usw.) verwendet.
 
-+  In der *airlinewithindex* -Tabelle ist [DayOfWeek] eine ganze Zahl. Der _COLINFO_ -Parameter wurde nicht angegeben.
++  In der *AirlineWithIndex*-Tabelle enthielt die Spalte „[DayOfWeek]“ ganze Zahlen. Der Parameter _colInfo_ wurde nicht angegeben.
 
 + In beiden Fällen wurde dieselbe Formel `ArrDelay ~ CRSDepTime + DayOfWeek` verwendet.
 
 | Tabellenname          | Testname   | Durchschnittliche Zeit |
 |---------------------|-------------|--------------|
-| *Fluglinien*           | *FactorCol* | 10.72        |
+| *Airline*           | *FactorCol* | 10.72        |
 | *airlineWithIntCol* | *IntCol*    | 3.4475       |
 
-**Ergebnisse**
+**Schlussfolgerungen**
 
-Es gibt einen deutlichen Vorteil, wenn Ganzzahlen anstelle von Zeichen folgen für Faktoren verwendet werden.
+Die Verwendung von ganzen Zahlen als Faktoren besitzt einen deutlichen Vorteil gegenüber der Verwendung von Zeichenfolgen.
 
-### <a name="avoiding-transformation-functions"></a>Vermeiden von Transformations Funktionen
+### <a name="avoiding-transformation-functions"></a>Vermeiden von Transformationsfunktionen
 
-In diesem Test wurde ein Modell mit `rxLinMod`trainiert, aber der Code wurde zwischen den beiden Ausführungen geändert:
+In diesem Test wurde ein Modell mit `rxLinMod` trainiert, doch der Code wurde vor der zweiten Ausführung geändert:
 
-+ Bei der ersten Durchführung wurde im Rahmen der Modellbildung eine Transformations Funktion angewendet. 
-+ In der zweiten Testlauf waren die featurewerte voraus berechnet und verfügbar, sodass keine Transformations Funktion erforderlich war.
++ Bei der ersten Ausführung wurde eine Transformationsfunktion als Teil der Modellbildung angewendet. 
++ Für die zweite Ausführung wurden die Funktionswerte vorausberechnet und waren verfügbar, weshalb keine Transformationsfunktion erforderlich war.
 
 | Testname             | Durchschnittliche Zeit |
 |-----------------------|--------------|
 | WithTransformation    | 5.1675       |
 | WithoutTransformation | 4.7          |
 
-**Ergebnisse**
+**Schlussfolgerungen**
 
-Die Trainingszeit war kürzer, wenn **keine** Transformations Funktion verwendet wurde. Das heißt, dass das Modell schneller trainiert wurde, wenn Spalten verwendet werden, die Voraus berechnet und in der Tabelle persistent gespeichert werden.
+Wenn **keine** Transformationsfunktion verwendet wurde, war die Trainingszeit kürzer. Das heißt, dass das Modell mit vorausberechneten und in der Tabelle gespeicherten Spalten schneller trainiert werden konnte.
 
-Es wird vorausgesetzt, dass die Einsparungen größer sind, wenn es viele weitere Transformationen gab und das DataSet größer war (\> 100 Mio.).
+Die Zeitersparnis sollte bei einer höheren Anzahl von Transformationen und einem umfangreicheren Dataset (\> 100 Millionen) größer ausfallen.
 
-### <a name="using-columnar-store"></a>Verwenden eines Spalten-Speicher
+### <a name="using-columnar-store"></a>Verwenden von spaltenbasiertem Speicher
 
-In diesem Test wurden die Leistungsvorteile der Verwendung eines Spalten basierten Datenspeicher und eines Index bewertet. Das gleiche Modell wurde mit `rxLinMod` und ohne Daten Transformationen trainiert.
+In diesem Test wurden die Leistungsvorteile bei Verwendung eines spaltenbasierten Datenspeichers und eines Index bewertet. Das Modell wurde einmal mit `rxLinMod` und einmal ohne Datentransformationen trainiert.
 
-+ In der ersten Testlauf wurde in der Datentabelle ein Standard-Zeilen Speicher verwendet.
-+ In der zweiten Testlauf wurde ein Spalten Speicher verwendet.
++ Bei der ersten Ausführung verwendete die Datentabelle einen Rowstore-Standardspeicher.
++ Bei der zweiten Ausführung wurde ein Columnstore verwendet.
 
 | Tabellenname         | Testname | Durchschnittliche Zeit |
 |--------------------|-----------|--------------|
 | *airlineWithIndex* | RowStore  | 4.67         |
 | *airlineColumnar*  | ColStore  | 4.555        |
 
-**Ergebnisse**
+**Schlussfolgerungen**
 
-Die Leistung ist mit dem Spalten-Speicher besser als mit dem standardmäßigen Zeilen Speicher. Ein signifikanter Unterschied in der Leistung kann bei größeren Datasets\> (100 Mio.) erwartet werden.
+Mit dem spaltenbasierten Speicher konnte eine höhere Leistung erzielt werden als mit dem zeilenbasierten Standardspeicher. Bei größeren Datasets (\> 100 Millionen) ist ein deutlicher Leistungsunterschied zu erwarten.
 
-### <a name="effect-of-using-the-cube-parameter"></a>Auswirkung der Verwendung des Cube-Parameters
+### <a name="effect-of-using-the-cube-parameter"></a>Auswirkung des Cube-Parameters
 
-Der Zweck dieses Tests bestand darin, zu bestimmen, ob die Option in revoscaler zum Verwenden des voraus berechneten **Cube** -Parameters die Leistung verbessern kann. Ein Modell wurde mit dieser `rxLinMod`Formel mit trainiert:
+Mit diesem Test sollte herausgefunden werden, ob die RevoScaleR-Option zur Verwendung des vorausberechneten **Cube**-Parameters die Leistung verbessert. Ein Modell wurde mit `rxLinMod` unter Verwendung der folgenden Formel trainiert:
 
 ```R
 ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 ```
 
-In der Tabelle wird die Faktoren " *DayOfWeek* " als Zeichenfolge gespeichert.
+In der Tabelle wurden die Faktoren *DayOfWeek* als Zeichenfolgen gespeichert.
 
-| Testname     | Cube-Parameter | numTasks | Durchschnittliche Zeit | Vorhersagen mit einer Zeile (ArrDelay_Pred) |
+| Testname     | Cube-Parameter | numTasks | Durchschnittliche Zeit | Vorhersage einzelner Zeile (ArrDelay_Pred) |
 |---------------|----------------|----------|--------------|---------------------------------|
 | CubeArgEffect | `cube = F`     | 1        | 91.0725      | 9.959204                        |
 |               |                | 4        | 44.09        | 9.959204                        |
 |               | `cube = T`     | 1        | 21.1125      | 9.959204                        |
 |               |                | 4        | 8.08         | 9.959204                        |
 
-**Ergebnisse**
+**Schlussfolgerungen**
 
-Durch die Verwendung des Cube-Parameter Arguments wird die Leistung deutlich verbessert.
+Durch Verwendung des Cube-Parameterarguments konnte die Leistung deutlich verbessert werden.
 
-### <a name="effect-of-changing-maxdepth-for-rxdtree-models"></a>Auswirkung der Änderung von maxtiefe für rxdtree-Modelle
+### <a name="effect-of-changing-maxdepth-for-rxdtree-models"></a>Auswirkung der Änderung von „maxDepth“ für rxDTree-Modelle
 
-In diesem Experiment wurde der `rxDTree` Algorithmus verwendet, um ein Modell in der *airlinecolennar* -Tabelle zu erstellen. Für diesen Test wurde *numTasks* auf 4 festgelegt. Es wurden verschiedene Werte für *maxtiefe* verwendet, um zu veranschaulichen, wie sich die Änderung der Struktur Tiefe auf die Laufzeit auswirkt.
+In diesem Experiment wurde mit dem `rxDTree`-Algorithmus ein Modell für die Tabelle *airlineColumnar* erstellt. Für diesen Test wurde *numTasks* auf 4 festgelegt. Es wurden verschiedene Werte für *maxDepth* verwendet, um zu veranschaulichen, wie eine Veränderung der Strukturtiefe die Laufzeit beeinflusst.
 
 | Testname       | maxDepth | Durchschnittliche Zeit |
 |-----------------|----------|--------------|
@@ -254,120 +256,120 @@ In diesem Experiment wurde der `rxDTree` Algorithmus verwendet, um ein Modell in
 |                 | 8        | 45.5775      |
 |                 | 16       | 339.54       |
 
-**Ergebnisse**
+**Schlussfolgerungen**
 
-Wenn sich die Tiefe der Struktur erhöht, erhöht sich die Gesamtzahl der Knoten exponentiell. Die verstrichene Zeit zum Erstellen des Modells hat sich ebenfalls erheblich gesteigert.
+Mit zunehmender Strukturtiefe erhöhte sich die Gesamtzahl der Knoten exponentiell. Die für die Erstellung des Modells benötigte Zeit erhöhte sich ebenfalls erheblich.
 
-### <a name="prediction-on-a-stored-model"></a>Vorhersage für ein gespeichertes Modell
+### <a name="prediction-on-a-stored-model"></a>Vorhersage mithilfe eines gespeicherten Modells
 
-Der Zweck dieses Tests bestand darin, die Auswirkungen auf die Leistung bei der Bewertung zu ermitteln, wenn das trainierte Modell in einer SQL Server Tabelle gespeichert wird, anstatt als Teil des aktuell ausgeführten Codes generiert zu werden. Zur Bewertung wird das gespeicherte Modell aus der Datenbank geladen, und Vorhersagen werden mithilfe eines Daten Rahmens mit einer Zeile im Speicher (lokaler computekontext) erstellt.
+Mit diesem Test sollte herausgefunden werden, wie sich die Leistung auf die Bewertung auswirkt, wenn das trainierte Modell in einer SQL Server-Tabelle gespeichert und nicht als Teil des aktuell ausgeführten Codes generiert wird. Für die Bewertung wurde das gespeicherte Modell aus der Datenbank geladen, und Vorhersagen wurden mit einem einzeiligen Datenrahmen im Arbeitsspeicher (lokaler Computekontext) erstellt.
 
-Die Testergebnisse zeigen die Zeit zum Speichern des Modells und die Zeit, die zum Laden des Modells und der Vorhersage benötigt wird.
+Die Testergebnisse zeigen die Zeit, die für das Speichern und Laden des Modells sowie für die Vorhersage benötigt wird.
 
 | Tabellenname | Testname | Durchschnittliche Zeit (Trainieren des Modells) | Zeit zum Speichern/Laden des Modells|
 |------------|------------|------------|------------|
 | airline    | SaveModel| 21.59| 2.08|
 | airline    | LoadModelAndPredict | | 2,09 (einschließlich Zeit für Vorhersagen) |
 
-**Ergebnisse**
+**Schlussfolgerungen**
 
-Das Laden eines trainierten Modells aus einer Tabelle ist eine deutlich schnellere Möglichkeit zur Vorhersage. Es wird empfohlen, das Erstellen des Modells und das Ausführen der Bewertung im gleichen Skript zu vermeiden.
+Durch Laden eines trainierten Modells aus einer Tabelle konnte eine deutlich schnellere Vorhersage erzielt werden. Es wird empfohlen, dasselbe Skript nicht gleichzeitig zum Erstellen des Modells und zur Bewertung zu verwenden.
 
-## <a name="case-study-optimization-for-the-resume-matching-task"></a>Fallstudie: Optimierung der Aufgabe zum Fortsetzen der Übereinstimmung
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>Fallstudie: Optimierung der Aufgabe für den Abgleich von Lebensläufen
 
-Das Modell zum Fortsetzen des Ablaufs wurde von Microsoft Data Scientists KE Huang entwickelt, um die Leistung von R-Code in SQL Server zu testen. auf diese Weise können Datenanalysten skalierbare Lösungen auf Unternehmensebene erstellen.
+Das Modell für den Abgleich von Lebensläufen wurde vom Microsoft-Datenanalysten Ke Huang entwickelt, um die Leistung von R-Code in SQL Server zu testen. Dadurch sind Datenanalysten in der Lage, skalierbare Lösungen auf Unternehmensebene zu erstellen.
 
 ### <a name="methods"></a>Methoden
 
-Sowohl das revoscaler-als auch das microsoftml-Paket wurde verwendet, um ein Vorhersagemodell in einer komplexen R-Lösung mit großen Datasets zu trainieren. SQL-Abfragen und R-Code waren in allen Tests identisch. Tests wurden auf einem einzelnen virtuellen Azure-Computer durchgeführt, auf dem SQL Server installiert ist. Der Autor hat dann Bewertungs Zeiten mit und ohne die folgenden Optimierungen verglichen, die von SQL Server bereitgestellt werden:
+Ein Vorhersagemodell wurde mit den beiden Paketen RevoScaleR und MicrosoftML in einer komplexen R-Lösung mit großen Datasets trainiert. Dabei wurden in allen Tests dieselben SQL-Abfragen und derselbe R-Code verwendet. Die Tests wurden auf einem einzelnen virtuellen Azure-Computer ausgeführt, auf dem SQL Server installiert war. Anschließend verglich der Autor die Bewertungszeiten bei Verwendung der folgenden von SQL Server bereitgestellten Optimierungen mit denen ohne Optimierungen:
 
 - In-Memory-Tabellen
 - Soft-NUMA
 - Resource Governor
 
-Um die Auswirkung von Soft-NUMA auf die Ausführung von R-Skripts zu bewerten, testet das Data Science Team die Lösung auf einem virtuellen Azure-Computer mit 20 physischen Kernen. Auf diesen physischen Kernen wurden automatisch vier Soft-NUMA-Knoten erstellt, sodass jeder Knoten fünf Kerne enthielt.
+Zur Bewertung der Auswirkung von Soft-NUMA auf die Ausführung von R-Skripts testete das Data Science-Team die Lösung auf einem virtuellen Azure-Computer mit zwanzig physischen Kernen. Auf den physischen Kernen wurden automatisch vier Soft-NUMA-Knoten erstellt, sodass jeder Knoten fünf Kerne enthielt.
 
-Die CPU-affininitialisierung wurde im Szenario zum Fortsetzen des Ablaufs erzwungen, um die Auswirkungen auf R-Aufträge zu bewerten. Es wurden vier **SQL-Ressourcenpools** und vier **externe Ressourcenpools** erstellt, und es wurde eine CPU-Affinität angegeben, um sicherzustellen, dass die gleichen CPUs in jedem Knoten verwendet werden.
+Die CPU-Affinität wurde im Szenario für den Abgleich von Lebensläufen erzwungen, um die Auswirkungen auf R-Aufträge zu bewerten. Es wurden vier **SQL-Ressourcenpools** und vier **externe Ressourcenpools** erstellt. Dabei wurde die CPU-Affinität angegeben, um sicherzustellen, dass in jedem Knoten die gleichen CPUs verwendet werden.
 
-Jeder Ressourcenpool wurde einer anderen Arbeits Auslastungs Gruppe zugewiesen, um die Hardware Nutzung zu optimieren. Der Grund hierfür ist, dass Soft-NUMA und CPU-Affinität den physischen Speicher in den physischen NUMA-Knoten nicht aufteilen können. Daher müssen alle Soft-NUMA-Knoten, die auf demselben physischen NUMA-Knoten basieren, definitionsgemäß Arbeitsspeicher im gleichen Betriebssystem-Speicherblock verwenden. Anders ausgedrückt: Es gibt keine Speicher-zu-Prozessor-Affinität.
+Jeder Ressourcenpool wurde für eine optimale Hardwarenutzung einer anderen Arbeitsauslastungsgruppe zugewiesen. Der Grund hierfür liegt darin, dass die Soft-NUMA- und CPU-Affinitäten den physischen Speicher in den physischen NUMA-Knoten nicht aufteilen können. Daher müssen alle Soft-NUMA-Knoten, die auf demselben physischen NUMA-Knoten basieren, definitionsgemäß Arbeitsspeicher im selben Speicherblock des Betriebssystems verwenden. Anders ausgedrückt: Es gibt keine Affinität zwischen Speicher und Prozessor.
 
-Der folgende Prozess wurde verwendet, um diese Konfiguration zu erstellen:
+Erstellen Sie diese Konfiguration mit den folgenden Schritten:
 
-1. Reduzieren Sie die Menge an Arbeitsspeicher, der standardmäßig SQL Server zugeordnet wird.
+1. Reduzieren Sie die Menge an Arbeitsspeicher, die SQL Server standardmäßig zugeordnet wird.
 
-2. Erstellen Sie vier neue Pools zum parallelen Ausführen der R-Aufträge.
+2. Erstellen Sie vier neue Pools zur parallelen Ausführung der R-Aufträge.
 
-3. Erstellen Sie vier Arbeits Auslastungs Gruppen, sodass jede Arbeits Auslastungs Gruppe einem Ressourcenpool zugeordnet ist.
+3. Erstellen Sie vier Arbeitsauslastungsgruppen, sodass jede Gruppe einem Ressourcenpool zugeordnet wird.
 
-4. Starten Sie Resource Governor mit den neuen Arbeits Auslastungs Gruppen und Zuweisungen neu.
+4. Starten Sie Resource Governor mit den neuen Arbeitsauslastungsgruppen und Zuordnungen neu.
 
-5. Erstellen Sie eine benutzerdefinierte Klassifizierungs Funktion (UDF), um unterschiedlichen Arbeits Auslastungs Gruppen unterschiedliche Aufgaben zuzuweisen.
+5. Erstellen Sie eine benutzerdefinierte Klassifizierungsfunktion, um den einzelnen Arbeitsauslastungsgruppen unterschiedliche Aufgaben zuzuweisen.
 
-6. Aktualisieren Sie die Resource Governor Konfiguration, um die-Funktion für entsprechende Arbeits Auslastungs Gruppen zu verwenden
+6. Aktualisieren Sie die Konfiguration von Resource Governor, um die Funktion für die entsprechenden Arbeitsauslastungsgruppen zu verwenden.
 
 ### <a name="results"></a>Ergebnisse
 
-Die Konfiguration, die in der Studie zum Fortsetzen des Ablaufs die beste Leistung hatte, lautete wie folgt:
+Die beste Leistung in der Studie für den Abgleich von Lebensläufen erzielte die folgende Konfiguration:
 
 -   Vier interne Ressourcenpools (für SQL Server)
 
--   Vier externe Ressourcenpools (für externe Skript Aufträge)
+-   Vier externe Ressourcenpools (für externe Skriptaufträge)
 
--   Jeder Ressourcenpool ist einer bestimmten Arbeits Auslastungs Gruppe zugeordnet.
+-   Jeder Ressourcenpool wird einer bestimmten Arbeitsauslastungsgruppe zugeordnet.
 
--   Jeder Ressourcenpool ist verschiedenen CPUs zugewiesen.
+-   Jeder Ressourcenpool wird unterschiedlichen CPUs zugewiesen.
 
--   Maximale interne Speicherauslastung (für SQL Server) = 30%
+-   Maximale interne Speicherauslastung (für SQL Server) = 30 %
 
--   Maximaler Arbeitsspeicher für die Verwendung durch R-Sitzungen = 70%
+-   Maximaler Speicher für R-Sitzungen = 70 %
 
-Für das Modell mit fortlaufendem Abgleich war die Verwendung externer Skripts sehr hoch, und es wurden keine anderen Datenbank-Engine-Dienste ausgeführt. Aus diesem Grund wurden die externen Skripts zugeordneten Ressourcen auf 70% erweitert, was die beste Konfiguration für die Skript Leistung erwies.
+Das Modell für den Abgleich von Lebensläufen verwendete eine hohe Anzahl externer Skripts, und es wurden keine anderen Datenbank-Engine-Dienste ausgeführt. Daher wurden die den externen Skripts zugeordneten Ressourcen auf 70 % erhöht, was sich als die beste Konfiguration für die Skriptleistung erwies.
 
-Diese Konfiguration wurde bei durch Experimentieren mit unterschiedlichen Werten erreicht. Wenn Sie andere Hardware oder eine andere Lösung verwenden, kann sich die optimale Konfiguration unterscheiden. Experimentieren Sie immer, um die beste Konfiguration für Ihren Fall zu finden!
+Diese Konfiguration wurde durch Experimentieren mit unterschiedlichen Werten ermittelt. Wenn Sie eine andere Hardware oder Lösung verwenden, kann die optimale Konfiguration davon abweichen. Probieren Sie mehrere Werte aus, um die für Sie beste Konfiguration zu finden.
 
-In der optimierten Lösung wurden 1,1 Millionen Daten Zeilen (mit 100 Features) in weniger als 8,5 Sekunden auf einem 20-Kern-Computer bewertet. Optimierungen verbessern die Leistung im Hinblick auf die Bewertungszeit erheblich.
+In der optimierten Lösung wurden 1,1 Millionen Datenzeilen (mit 100 Funktionen) in weniger als 8,5 Sekunden auf einem Computer mit zwanzig Kernen bewertet. Durch die Optimierungen konnte die Leistung in Hinblick auf die Bewertungszeit erheblich gesteigert werden.
 
-Die Ergebnisse haben auch vorgeschlagen, dass sich die **Anzahl der Features** erheblich auf die Bewertungszeit ausgewirkt hat. Die Verbesserung war noch deutlicher, wenn im Vorhersagemodell weitere Features verwendet wurden.
+Die Ergebnisse legten auch nahe, dass die **Anzahl der Funktionen** erhebliche Auswirkungen auf die Bewertungszeit besaß. Die Leistungssteigerung fiel noch deutlicher aus, wenn im Vorhersagemodell eine höhere Anzahl von Funktionen verwendet wurde.
 
-Es wird empfohlen, dass Sie diesen Blog Artikel und das begleitende Tutorial lesen, um ausführliche Informationen zu erhalten.
+Ausführliche Informationen hierzu finden Sie im folgenden Blogartikel und dem zugehörigen Tutorial:
 
--   [Tipps und Tricks zur Optimierung für Machine Learning in SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+-   [Tipps und Tricks für die Optimierung von Machine Learning in SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-Viele Benutzer haben festgestellt, dass es eine kleine Pause gibt, da die R-Laufzeit (oder python) zum ersten Mal geladen wird. Aus diesem Grund wird die Zeit für die erste Testlauf, wie in diesen Tests beschrieben, häufig gemessen, aber später verworfen. Die nachfolgende Zwischenspeicherung kann zu bedeutenden Leistungsunterschieden zwischen der ersten und der zweiten Ausführung führen. Es gibt auch einen gewissen Aufwand, wenn Daten zwischen SQL Server und der externen Laufzeit verschoben werden, insbesondere dann, wenn Daten über das Netzwerk übergeben werden, anstatt direkt aus SQL Server geladen zu werden.
+Vielen Benutzern ist beim ersten Laden der R-Laufzeit (oder der Python-Laufzeit) eine kleine Pause aufgefallen. Aus diesem Grund wird die Zeit für die erste Ausführung wie in den Tests beschrieben zwar häufig gemessen, aber später verworfen. Durch die nachfolgende Zwischenspeicherung kann es zu erheblichen Leistungsunterschieden zwischen der ersten und der zweiten Ausführung kommen. Beim Verschieben von Daten zwischen SQL Server und der externen Laufzeit kommt es auch zu einem gewissen Mehraufwand, insbesondere dann, wenn Daten über das Netzwerk übergeben und nicht direkt aus SQL Server geladen werden.
 
-Aus diesen Gründen gibt es keine einzige Lösung, mit der Sie diese anfängliche Lade Zeit verringern können, da sich die Auswirkungen auf die Leistung abhängig von der Aufgabe erheblich unterscheiden. Beispielsweise wird das Zwischenspeichern für die einzeilige Bewertung in Batches ausgeführt. Folglich sind aufeinander folgende Bewertungs Vorgänge wesentlich schneller, und weder das Modell noch die R-Laufzeit wird erneut geladen. Sie können auch die [native Bewertung](../sql-native-scoring.md) verwenden, um das vollständige Laden der R-Laufzeit zu vermeiden.
+Aus diesen Gründen gibt es zur Verringerung der anfänglichen Ladezeit nicht die eine Lösung, da sich die Leistungseinbußen je nach Aufgabe erheblich unterscheiden. Die Zwischenspeicherung wird für die Bewertung einer einzelnen Zeile beispielsweise in Batches ausgeführt. Folglich sind nachfolgende Bewertungsvorgänge wesentlich schneller, da weder das Modell noch die R-Laufzeit erneut geladen werden. Auch mit der [nativen Bewertung](../sql-native-scoring.md) können Sie vermeiden, dass die R-Laufzeit vollständig geladen wird.
 
-Zum Trainieren von großen Modellen oder zum Bewerten von großen Batches kann der Aufwand minimal sein, wenn die Daten Verschiebung oder das Streaming und die parallele Verarbeitung vermieden werden. Weitere Hinweise zur Leistung finden Sie in diesem Blogbeitrag:
+Beim Trainieren von großen Modellen oder bei der Bewertung von großen Batches fällt der Mehraufwand verglichen mit den Vorteilen durch das Vermeiden von Datenverschiebung oder durch Streaming und eine parallele Verarbeitung möglicherweise geringer aus. Weitere Informationen zur Leistungssteigerung finden Sie in diesem Blogbeitrag:
 
-+ [Verwenden von R zum Erkennen von Betrug bei 1 Million Transaktionen pro Sekunde](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
++ [Verwenden von R zur Betrugserkennung bei 1 Million Transaktionen pro Sekunde](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Ressourcen
 
-Im folgenden finden Sie Links zu Informationen, Tools und Skripts, die bei der Entwicklung dieser Tests verwendet werden.
+Nachstehend finden Sie Links zu Informationen, Tools und Skripts, die bei der Entwicklung der hier beschriebenen Tests verwendet wurden:
 
-+ Leistungstest Skripts und Links zu den Daten: [Beispiel Daten und Skripts für SQL Server Optimierungen](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
++ Skripts zu den Leistungstests und Links zu den Daten: [Beispieldaten und Skripts für die Studie zu SQL Server-Optimierungen](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
-+ Artikel, der die Projekt Mappe zum Fortsetzen des Abgleich [Tipps und Tricks zur Optimierung für SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
++ Artikel über die Lösung für den Abgleich von Lebensläufen: [Tipps und Tricks für die Optimierung von SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ Skripts, die bei der SQL-Optimierung für die Projekt Mappe zum Wiederherstellen [GitHub-Repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ Bei der SQL-Optimierung verwendete Skripts für die Lösung für den Abgleich von Lebensläufen: [GitHub-Repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
 
-### <a name="learn-about-windows-server-management"></a>Weitere Informationen zur Windows Server-Verwaltung
+### <a name="learn-about-windows-server-management"></a>Informationen zu Windows Server Management
 
 + [Vorgehensweise: Bestimmen der geeigneten Auslagerungsdateigröße für 64-Bit-Versionen von Windows](https://support.microsoft.com/kb/2860880)
 
 + [Grundlegendes zu NUMA](https://technet.microsoft.com/library/ms178144.aspx)
 
-+ [Unterstützung von NUMA durch SQL Server](https://technet.microsoft.com/library/ms180954.aspx)
++ [Unterstützung der NUMA-Funktionalität in SQL Server](https://technet.microsoft.com/library/ms180954.aspx)
 
 + [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
-### <a name="learn-about-sql-server-optimizations"></a>Weitere Informationen zu SQL Server Optimierungen
+### <a name="learn-about-sql-server-optimizations"></a>Informationen zu SQL Server-Optimierungen
 
 + [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
-+ [Einführung in Speicher optimierte Tabellen](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
++ [Einführung in speicheroptimierte Tabellen](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
-+ [Demo: Leistungsverbesserung von in-Memory OLTP](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [Demo: Leistungsverbesserungen von In-Memory-OLTP](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
 + [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md)
 
@@ -375,7 +377,7 @@ Im folgenden finden Sie Links zu Informationen, Tools und Skripts, die bei der E
 
 + [Deaktivieren der Komprimierung für eine Tabelle oder einen Index](../../relational-databases/data-compression/disable-compression-on-a-table-or-index.md)
 
-### <a name="learn-about-managing-sql-server"></a>Weitere Informationen zum Verwalten von SQL Server
+### <a name="learn-about-managing-sql-server"></a>Informationen zur Verwaltung von SQL Server
 
 + [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 
@@ -385,9 +387,9 @@ Im folgenden finden Sie Links zu Informationen, Tools und Skripts, die bei der E
 
 + [Ressourcenkontrolle für R Services](resource-governance-for-r-services.md)
 
-+ [Erstellen eines Ressourcenpools für R](how-to-create-a-resource-pool-for-r.md)
++ [Vorgehensweise: Erstellen eines Ressourcenpools für R](how-to-create-a-resource-pool-for-r.md)
 
-+ [Ein Beispiel für das Konfigurieren von Resource Governor](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
++ [Beispiel für die Konfiguration von Resource Governor](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
 ### <a name="tools"></a>Tools
 
@@ -396,12 +398,12 @@ Im folgenden finden Sie Links zu Informationen, Tools und Skripts, die bei der E
 + [Referenz zum Hilfsprogramm FSUtil](https://technet.microsoft.com/library/cc753059.aspx)
 
 
-## <a name="other-articles-in-this-series"></a>Weitere Artikel in dieser Serie
+## <a name="other-articles-in-this-series"></a>Weitere Artikel in dieser Reihe
 
-[Leistungsoptimierung für R-Einführung](sql-server-r-services-performance-tuning.md)
+[Leistungsoptimierung für R – Einführung](sql-server-r-services-performance-tuning.md)
 
-[Leistungsoptimierung für R-SQL Server-Konfiguration](sql-server-configuration-r-services.md)
+[Leistungsoptimierung für R – SQL Server-Konfiguration](sql-server-configuration-r-services.md)
 
-[Leistungsoptimierung für r-r-Code und Daten Optimierung](r-and-data-optimization-r-services.md)
+[Leistungsoptimierung für R – R-Code und Datenoptimierung](r-and-data-optimization-r-services.md)
 
-[Leistungsoptimierung: Ergebnisse der Fallstudie](performance-case-study-r-services.md)
+[Leistungsoptimierung – Ergebnisse der Fallstudie](performance-case-study-r-services.md)

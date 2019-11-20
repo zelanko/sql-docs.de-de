@@ -1,38 +1,39 @@
 ---
-title: Konvertierungen von R- in SQL-Datentypen
-description: Überprüfen Sie die impliziten und expliziten Datentyp Konvertierungen zwischen R und SQL Server in Data Science und in Machine Learning-Lösungen.
+title: Konvertieren von R- und SQL-Datentypen
+description: Überprüfen Sie die implizite und explizite Konvertierung von Datentypen zwischen R und SQL Server in Data Science- und Machine Learning-Lösungen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/08/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef35a704023ab6c8eb0bd735b2feba3b6475b506
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MT
+ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893002"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727414"
 ---
-# <a name="data-type-mappings-between-r-and-sql-server"></a>Datentyp Zuordnungen zwischen R und SQL Server
+# <a name="data-type-mappings-between-r-and-sql-server"></a>Zuordnungen von Datentypen zwischen R und SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Für r-Lösungen, die auf der r-Integrationsfunktion in SQL Server Machine Learning Services ausgeführt werden, überprüfen Sie die Liste der nicht unterstützten Datentypen und Datentyp Konvertierungen, die bei der Übergabe von Daten zwischen R-Bibliotheken und SQL Server implizit durchgeführt werden können.
+Überprüfen Sie für R-Lösungen, die im R-Integrationsfeature in SQL Server Machine Learning Services ausgeführt werden, die Liste der nicht unterstützten Datentypen und Datentypkonvertierungen, die bei der Übergabe von Daten zwischen R und SQL Server möglicherweise implizit ausgeführt werden.
 
-## <a name="base-r-version"></a>Basis-R-Version
+## <a name="base-r-version"></a>R-Basisversion
 
-SQL Server 2016 r-Dienste und SQL Server Machine Learning Services mit R sind an bestimmten Releases von Microsoft R Open ausgerichtet. Die neueste Version, SQL Server Machine Learning Services, baut beispielsweise auf Microsoft R Open 3.3.3 auf.
+SQL Server 2016 R Services und SQL Server Machine Learning Services mit R sind auf bestimmte Versionen von Microsoft R Open ausgerichtet. Die neueste Version, SQL Server Machine Learning Services, baut beispielsweise auf Microsoft R Open 3.3.3 auf.
 
-Öffnen Sie **rgui**, um die einer bestimmten Instanz von SQL Server zugeordnete R-Version anzuzeigen. Für die Standard Instanz lautet der Pfad wie folgt:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+Öffnen Sie **RGui**, um die einer bestimmten Instanz von SQL Server zugeordnete R-Version anzuzeigen. Für die Standardinstanz lautet der Pfad wie folgt: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
-Das Tool lädt Basis-R und andere Bibliotheken. Paket Versionsinformationen werden für jedes Paket, das beim Start der Sitzung geladen wird, in einer Benachrichtigung bereitgestellt. 
+Das Tool lädt die R-Basisversion und andere Bibliotheken. Für jedes Paket, das beim Start der Sitzung geladen wird, werden in Form einer Benachrichtigung Informationen zur Version bereitgestellt. 
 
-## <a name="r-and-sql-data-types"></a>R-und SQL-Datentypen
+## <a name="r-and-sql-data-types"></a>R- und SQL-Datentypen
 
-Während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mehrere Dutzend Datentypen unterstützt, hat R eine begrenzte Anzahl von skalaren Datentypen (numerisch, ganzzahliger Wert, komplex, logisch, Zeichen, Datum/Uhrzeit und RAW). Wenn Sie Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in R-Skripts verwenden, werden die Daten daher möglicherweise implizit in einen kompatiblen Datentyp konvertiert. Häufig kann jedoch eine exakte Konvertierung nicht automatisch durchgeführt werden, und es wird ein Fehler zurückgegeben, z. b. "nicht behandelter SQL-Datentyp".
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt mehrere Dutzend verschiedene Datentypen, wohingegen R über eine beschränkte Zahl von skalaren Datentypen (numerisch, ganzzahlig, komplex, logisch, Zeichen, Datum/Zeit und Rohdaten) verfügt. Daher ist es möglich, dass bei der Verwendung von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in R-Skripts diese implizit in einen kompatiblen Datentyp konvertiert werden. Da eine exakte automatische Konvertierung jedoch häufig nicht möglich ist, wird ein Fehler zurückgegeben, z. B. "Unhandled SQL data type" (Unbehandelter SQL-Datentyp).
 
-In diesem Abschnitt werden die bereitgestellten impliziten Konvertierungen aufgelistet, und es werden nicht unterstützte Datentypen aufgelistet. Einige Anleitungen werden für die Zuordnung von Datentypen zwischen R und SQL Server bereitgestellt.
+In diesem Abschnitt werden die bereitgestellten impliziten Konvertierungen sowie nicht unterstützte Datentypen aufgelistet. Außerdem werden einige Anleitungen für die Zuordnung von Datentypen zwischen R und SQL Server bereitgestellt.
 
 ## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>Implizite Datentypenkonvertierung zwischen R und SQL Server
 
@@ -66,7 +67,7 @@ Die folgende Tabelle zeigt die Änderungen der Datentypen und Werte an, wenn Dat
 
 Folgende Typen von Datentypkategorien, die vom [Typsystem von SQL Server](../../t-sql/data-types/data-types-transact-sql.md) unterstützt werden, verursachen möglicherweise Probleme, wenn Sie an R-Code übergeben werden:
 
-+ Datentypen, die im folgenden Abschnitt des SQL-Typsystem Artikels aufgelistet sind: **Cursor**, **Zeitstempel**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **XML**, **Table**
++ Im Abschnitt **Andere** des Artikels zum SQL-Typsystem aufgelistete Datentypen: **cursor**, **timestamp**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml** und **table**
 + Alle räumlichen Typen
 + **image**
 
@@ -93,7 +94,7 @@ Weitere Informationen finden Sie unter [SQL Server 2016 improvements in handling
 
 Im Allgemeinen ist es empfehlenswert, die  `str()` -Funktion zu verwenden, um die interne Struktur und den Typ des R-Objekts zu erhalten, wenn Sie nicht wissen, wie ein spezieller Datentyp oder eine Datenstruktur in R verwendet wird. Das Ergebnis der Funktion wird in die R-Konsole gedruckt, und ist auch in den Abfrageergebnissen verfügbar, in der Registerkarte **Meldungen** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. 
 
-Beim Abrufen von Daten aus einer Datenbank für die Verwendung in r-Code sollten Sie immer Spalten eliminieren, die nicht in r verwendet werden können, sowie Spalten, die für die Analyse nicht nützlich sind, wie z. b. GUIDs (uniqueidentifier), Zeitstempel und andere Spalten, die für die Überwachung oder Herkunft verwendet werden. Informationen, die von ETL-Prozessen erstellt werden. 
+Wenn Sie Daten aus einer Datenbank abrufen, um diese in R-Code zu verwenden, sollte Sie in jedem Fall die Spalten entfernen, die nicht in R verwendet werden können. Ebenso sollten Sie die Spalten entfernen, die keinen Nutzen für Ihre Analyse haben, z. B. GUIDs (uniqueidentifier), Zeitstempel und andere Spalten zum Überwachen, oder von ETL-Prozessen erstellte Informationen bezüglich der Datenherkunft. 
 
 Beachten Sie, dass die Leistung von R-Code durch unnötige Spalten deutlich beeinträchtigt werden kann, besonders dann, wenn Spalten mit hoher Kardinalität als Faktoren verwendet werden. Aus diesem Grund wird empfohlen, im System gespeicherte Prozeduren von SQL Server und Informationsansichten zu verwenden, um die Datentypen für eine angegebene Tabelle im Voraus abzurufen und inkompatible Spalten entweder zu löschen oder zu konvertieren. Weitere Informationen finden Sie unter [Information Schema Views in Transact-SQL (Ansichten des Informationsschemas in Transact-SQL)](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 
@@ -109,7 +110,7 @@ Falls ein bestimmter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-D
 
 In folgendem Beispiel wird veranschaulicht, wie Daten auf dem Weg zwischen SQL Server und R umgewandelt werden.
 
-Die Abfrage ruft eine Reihe von Werten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle ab und verwendet die gespeicherte Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) , um die Werte mithilfe der R-Laufzeit auszugeben.
+Die Abfrage ruft eine Reihe von Werten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle ab und verwendet die gespeicherte Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), um die Werte mithilfe der R-Runtime auszugeben.
 
 ```sql
 CREATE TABLE MyTable (    

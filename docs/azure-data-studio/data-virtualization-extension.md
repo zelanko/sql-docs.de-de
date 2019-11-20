@@ -2,20 +2,20 @@
 title: Datenvirtualisierungserweiterung
 titleSuffix: Azure Data Studio
 description: Datenvirtualisierungserweiterung für Azure Data Studio
-ms.custom: seodec18
-ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
-ms.openlocfilehash: cb9fe5ddb9e6b84769c78b63cacffa50d270ecf6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.custom: seodec18
+ms.date: 11/04/2019
+ms.openlocfilehash: 98a93895b8f552bf7506880a612ab2ae68c48afb
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532545"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801130"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Datenvirtualisierungserweiterung für Azure Data Studio
 
@@ -70,13 +70,13 @@ Zur Installation der Datenvirtualisierungserweiterung öffnen Sie Azure Data Stu
 
 ## <a name="release-notes-v0102"></a>Hinweise zu Version 0.10.2
 ### <a name="sql-server-2019-support"></a>Unterstützung für SQL Server 2019
-Die Unterstützung für SQL Server 2019 wurde aktualisiert. Nach dem Herstellen einer Verbindung mit einer Big Data-Clusterinstanz für SQL Server wird ein neuer _Data Services_-Ordner in der Explorer-Strukturansicht angezeigt. Der Ordner enthält Startpunkte für Aktionen wie das Öffnen eines neuen Notebooks für die Verbindung, das Übermitteln von Spark-Aufträgen und das Arbeiten mit HDFS. Für einige Aktionen wie _Create External Data_ (Erstellen externer Daten) über eine HDFS-Datei bzw. einen HDFS-Ordner muss die Erweiterung für _SQL Server 2019 (Vorschauversion)_ installiert werden.
+Die Unterstützung für SQL Server 2019 wurde aktualisiert. Nach dem Herstellen einer Verbindung mit einer Big Data-Clusterinstanz für SQL Server wird ein neuer _Data Services_-Ordner in der Explorer-Strukturansicht angezeigt. Der Ordner enthält Startpunkte für Aktionen wie das Öffnen eines neuen Notebooks für die Verbindung, das Übermitteln von Spark-Aufträgen und das Arbeiten mit HDFS. Für einige Aktionen wie _Create External Data_ (Erstellen externer Daten) über eine HDFS-Datei bzw. einen HDFS-Ordner muss die Erweiterung für _SQL Server 2019_ installiert werden.
 
 ### <a name="notebook-support"></a>Notebook-Unterstützung
 Wir haben in dieser Version wichtige Updates an der Benutzeroberfläche für Notebooks vorgenommen. Der Fokus lag dabei darauf, dass freigegebene Notebooks einfach gelesen werden können. Deshalb werden die Konturen um Zellen jetzt nur noch angezeigt, wenn mit dem Mauszeiger darauf gezeigt oder auf diese geklickt wird. Außerdem wurde Hoversupport für einfache Aktionen auf Zellenebene hinzugefügt, sodass nun nicht mehr auf die Zellen geklickt werden muss, und der Ausführungsstatus ist nun genauer, da u. a. eine Ausführungsanzahl und eine animierte Schaltfläche _zum Beenden der Ausführung_ hinzugefügt wurde. Zudem wurden Tastenkombinationen für die Optionen _New Notebook_ (Neues Notebook, `Ctrl+Shift+N`), _Run Cell_ (Zelle ausführen, `F5`), _New Code Cell_ (Neue Codezelle, `Ctrl+Shift+C`) und _New Text Cell_ (Neue Textzelle, `Ctrl+Shift+T`) hinzugefügt. In Zukunft sollen alle wichtigen Aktionen über Tastenkombinationen gestartet werden. Sie können uns gern Feedback zu noch fehlenden Tastenkombinationen geben.
 
 Weitere Verbesserungen und Fehlerbehebungen:
-* Die Benutzer der Erweiterung für _SQL Server 2019 (Vorschauversion)_ werden jetzt dazu aufgefordert, ein Installationsverzeichnis für Python-Abhängigkeiten auszuwählen. Außerdem ist Python nicht mehr in der `.vsix file` enthalten, wodurch die Gesamtgröße der Erweiterung verringert wird. Die Python-Abhängigkeiten unterstützen Kernel für Spark und Python3.
+* Die Benutzer der Erweiterung für _SQL Server 2019_ werden jetzt dazu aufgefordert, ein Installationsverzeichnis für Python-Abhängigkeiten auszuwählen. Außerdem ist Python nicht mehr in der `.vsix file` enthalten, wodurch die Gesamtgröße der Erweiterung verringert wird. Die Python-Abhängigkeiten unterstützen Kernel für Spark und Python3.
 * Neue Notebooks können nun über die Befehlszeile gestartet werden. Über die Argumente `--command=notebook.command.new --server=myservername` sollten Sie ein neues Notebook öffnen und eine Verbindung mit diesem Server herstellen können.
 * Es wurden Leistungskorrekturen für Notebooks mit sehr langen Codezellen vorgenommen. Bei Codezellen mit mehr als 250 Zeilen wird eine Scrollleiste hinzugefügt.
 * IPYNB-Dateien werden nun besser unterstützt. Es werden jetzt alle Versionen ab Version 3 unterstützt. Hinweis: Dateien werden beim Speichern auf Version 4 oder höher aktualisiert.

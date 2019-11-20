@@ -1,24 +1,25 @@
 ---
-title: 'Python-Tutorial: Train Model (lineare Regression)'
-description: In diesem Tutorial verwenden Sie die python-und lineare Regression in SQL Server Machine Learning Services, um die Anzahl der Ski-Vermietungen vorherzusagen. Sie trainieren ein lineares Regressionsmodell in Python.
+title: 'Python-Tutorial: Trainieren des Modells'
+description: In diesem Tutorial verwenden Sie Python und die lineare Regression in SQL Server Machine Learning Services zur Vorhersage von Verleihzahlen für einen Skiverleih. Dazu trainieren Sie ein lineares Regressionsmodell in Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 30f390681dc63d6de9a95e805b6cc8f273b2b8d7
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: e5f83fe37890c997865c44198cbe30bc13cdea4e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242548"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727045"
 ---
 # <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python-Tutorial: Trainieren eines linearen Regressionsmodells in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Im dritten Teil dieser vierteiligen tutorialreihe trainieren Sie ein lineares Regressionsmodell in Python. Im nächsten Teil dieser Serie stellen Sie dieses Modell in einer SQL Server Datenbank mit Machine Learning Services bereit.
+In Teil 3 dieser vierteiligen Tutorialreihe trainieren Sie ein lineares Regressionsmodell in Python. Im nächsten Teil dieser Reihe stellen Sie dann dieses Modell in einer SQL Server-Datenbank-Instanz mit Machine Learning Services bereit.
 
 In diesem Artikel lernen Sie Folgendes:
 
@@ -26,21 +27,21 @@ In diesem Artikel lernen Sie Folgendes:
 > * Trainieren eines linearen Regressionsmodells
 > * Treffen von Vorhersagen mit dem linearen Regressionsmodell
 
-In [Teil 1](python-ski-rental-linear-regression.md)haben Sie gelernt, wie Sie die Beispieldatenbank wiederherstellen.
+In [Teil 1](python-ski-rental-linear-regression.md) dieser Tutorialreihe haben Sie gelernt, wie Sie die Beispieldatenbank wiederherstellen.
 
-In [Teil 2](python-ski-rental-linear-regression-prepare-data.md)haben Sie gelernt, wie die Daten aus SQL Server in einen python-Datenrahmen geladen und die Daten in python vorbereitet werden.
+In [Teil 2](python-ski-rental-linear-regression-prepare-data.md) haben Sie erfahren, wie Sie die Daten aus SQL Server in einen Python-Datenrahmen laden und in Python vorbereiten.
 
-In [Teil 4](python-ski-rental-linear-regression-deploy-model.md)erfahren Sie, wie Sie das Modell in SQL Server speichern und dann gespeicherte Prozeduren aus den python-Skripts erstellen, die Sie in den Teilen 2 und 3 entwickelt haben. Die gespeicherten Prozeduren werden in SQL Server ausgeführt, um Vorhersagen basierend auf neuen Daten zu treffen.
+In [Teil 4](python-ski-rental-linear-regression-deploy-model.md) haben Sie gelernt, wie Sie das Modell in SQL Server speichern und gespeicherte Prozeduren aus den Python-Skripts erstellen, die Sie in Teil 2 und 3 entwickelt haben. Die gespeicherten Prozeduren werden in SQL Server ausgeführt, um Vorhersagen basierend auf neuen Daten treffen zu können.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-* Im dritten Teil dieses Tutorials wird davon ausgegangen, dass Sie [Teil eins](python-ski-rental-linear-regression.md) und seine Voraussetzungen erfüllt haben.
+* In diesem Teil der Tutorialreihe wird davon ausgegangen, dass Sie [Teil 1](python-ski-rental-linear-regression.md) und die erforderlichen Voraussetzungen abgeschlossen haben.
 
 ## <a name="train-the-model"></a>Trainieren des Modells
 
-Um vorherzusagen, müssen Sie eine Funktion (Modell) finden, die die Abhängigkeit zwischen den Variablen in unserem Dataset am besten beschreibt. Dies wurde als trainieren des Modells bezeichnet. Das Trainings Dataset ist eine Teilmenge des gesamten Datasets aus der Pandas-Datenrahmen- **DF** , die Sie in Teil 2 dieser Reihe erstellt haben.
+Für die Vorhersage müssen Sie eine Funktion (ein Modell) finden, die die Abhängigkeit zwischen den Variablen in unserem Dataset am besten beschreibt. Dies wird als Training des Modells bezeichnet. Das Trainingsdataset ist eine Teilmenge des gesamten Datensets aus dem Pandas-Datenrahmen **df**, den Sie im zweiten Teil dieser Reihe erstellt haben.
 
-Sie trainieren Model **lin_model** mit einem LinearRegression-Algorithmus.
+Dann trainieren Sie das Modell **lin_model** mit einem linearen Regressionsalgorithmus.
 
 ```python
 # Store the variable we'll be predicting on.
@@ -63,16 +64,16 @@ lin_model = LinearRegression()
 lin_model.fit(train[columns], train[target])
 ```
 
-Es sollten ähnliche Ergebnisse wie die folgenden angezeigt werden.
+Das Ergebnis sollte etwa folgendermaßen aussehen:
 
 ```results
 Training set shape: (362, 7)
 Testing set shape: (91, 7)
 ```
 
-## <a name="make-predictions"></a>Treffen von Vorhersagen
+## <a name="make-predictions"></a>Erstellen von Vorhersagen
 
-Verwenden Sie eine Vorhersagefunktion, um die Anzahl der Miet Werte mithilfe des Model **lin_model**vorherzusagen.
+Verwenden Sie eine Vorhersagefunktion, um die Verleihzahlen mithilfe des Modells **lin_model** vorherzusagen.
 
 ```python
 # Generate our predictions for the test set.
@@ -97,12 +98,12 @@ Computed error: 3.59831533436e-26
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im dritten Teil dieser tutorialreihe haben Sie die folgenden Schritte ausgeführt:
+In Teil 3 dieser Tutorialreihe haben Sie die folgenden Schritte ausgeführt:
 
 * Trainieren eines linearen Regressionsmodells
 * Treffen von Vorhersagen mit dem linearen Regressionsmodell
 
-Um das Machine Learning-Modell bereitzustellen, das Sie erstellt haben, befolgen Sie den Teil vier dieser tutorialreihe:
+Um das von Ihnen erstellte Machine-Learning-Modell einzusetzen, fahren Sie mit Teil 4 dieser Tutorialreihe fort:
 
 > [!div class="nextstepaction"]
 > [Python-Tutorial: Bereitstellen eines Machine Learning-Modells](python-ski-rental-linear-regression-deploy-model.md)

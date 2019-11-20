@@ -1,7 +1,7 @@
 ---
 title: Was sind Big Data-Cluster?
 titleSuffix: SQL Server Big Data Clusters
-description: Erfahren Sie mehr über [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (Vorschau), die auf Kubernetes ausgeführt werden, und stellen Sie Optionen für die horizontale Skalierung von relationalen und HDFS-Daten bereit.
+description: Hier erfahren Sie mehr über Big Data-Cluster für SQL Server, die auf Kubernetes ausgeführt werden, und stellen Optionen für das horizontale Skalieren für relationale Daten und HDFS-Daten bereit.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532509"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706658"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -56,7 +56,7 @@ Ein Big-Data-Cluster für SQL Server enthält einen skalierbaren HDFS-*Speicherp
 
 Verwaltung und Überwachung werden durch eine Kombination von Befehlszeilentools, APIs, Portalen und dynamischen Verwaltungssichten bereitgestellt.
 
-Sie können Azure Data Studio dazu verwenden, eine Vielzahl von Aufgaben im Big-Data-Cluster auszuführen. Dies wird durch die neue **SQL Server 2019-Erweiterung (Vorschauversion)** ermöglicht. Diese Erweiterung bietet Folgendes:
+Sie können Azure Data Studio dazu verwenden, eine Vielzahl von Aufgaben im Big-Data-Cluster auszuführen. Dies wird durch die neue **SQL Server 2019-Erweiterung** ermöglicht. Diese Erweiterung bietet Folgendes:
 
 - Integrierte Codeausschnitte für allgemeine Verwaltungsaufgaben.
 - Möglichkeit zum Durchsuchen von HDFS, zum Hochladen von Dateien, zur Vorschau von Dateien und zum Erstellen von Verzeichnissen.
