@@ -5808,7 +5808,7 @@
     - name: Assistent für Datenbankexperimente (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
-        - name: Erste Schritte
+        - name: Übersicht über Workloadvergleich
           href: dea/database-experimentation-assistant-get-started.md
         - name: Aufzeichnen von Ablaufverfolgungsdaten
           href: dea/database-experimentation-assistant-capture-trace.md
