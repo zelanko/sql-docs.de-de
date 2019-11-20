@@ -1,49 +1,51 @@
 ---
-title: Problembehandlung bei der Datensammlung für Machine Learning
+title: Problembehandlung bei der Datensammlung
+description: Erfahren Sie mehr über die Datensammlungsmethoden, die Sie verwenden sollten, wenn Sie versuchen, Probleme selbst oder mithilfe des Microsoft-Kundensupports zu beheben.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7566d9b25b15a334e48380daca6cb81e92f6a2b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 15c570594f84bf8d1d61abac4bc4e4c372f18784
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715234"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727608"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Problembehandlung bei der Datensammlung für Machine Learning
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Artikel werden die Daten Sammlungs Methoden beschrieben, die Sie verwenden sollten, wenn Sie versuchen, Probleme selbst oder mithilfe des Microsoft-Kunden Supports zu beheben.
+In diesem Artikel werden Datensammlungsmethoden beschrieben, die Sie verwenden sollten, wenn Sie versuchen, Probleme selbst oder mithilfe des Microsoft-Kundensupports zu beheben.
 
-## <a name="sql-server-version-and-edition"></a>SQL Server Version und Edition
+## <a name="sql-server-version-and-edition"></a>SQL Server-Version und -Edition
 
-SQL Server 2016 r Services ist die erste Version von SQL Server, die integrierte R-Unterstützung umfasst. SQL Server 2016 Service Pack 1 (SP1) umfasst mehrere wichtige Verbesserungen, einschließlich der Möglichkeit zum Ausführen externer Skripts. Wenn Sie SQL Server 2016 verwenden, sollten Sie die Installation von SP1 oder höher in Erwägung gezogen.
+SQL Server 2016 R Services ist das erste Release von SQL Server mit integrierter R-Unterstützung. SQL Server 2016 Service Pack 1 (SP1) umfasst mehrere wichtige Verbesserungen, einschließlich der Möglichkeit zum Ausführen externer Skripts. Wenn Sie SQL Server 2016 verwenden, sollten Sie die Installation von SP1 oder höher erwägen.
 
-SQL Server 2017 und höher verfügt über die Integration von Python-Sprache. Die Integration von Python-Funktionen in früheren Versionen ist nicht möglich.
+SQL Server 2017 und höher bietet die Integration der Python-Sprache. Die Integration des Python-Funktionen ist in früheren Versionen nicht verfügbar.
 
-Unterstützung bei der Beschaffung von Editionen und Versionen finden Sie in diesem Artikel, in dem die Buildnummern für jede der [SQL Server Versionen](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)aufgeführt sind.
+Unterstützung zur Beschaffung von Editionen und Versionen finden Sie in diesem Artikel, in dem die Buildnummern für alle [SQL Server-Versionen](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions) aufgelistet sind.
 
-Abhängig von der von Ihnen verwendeten Edition von SQL Server sind einige Machine Learning-Funktionen möglicherweise nicht verfügbar oder beschränkt. Die folgenden Artikel enthalten eine Liste der Machine Learning-Features in den Editionen Enterprise, Developer, Standard und Express.
+Je nach der von Ihnen verwendeten Edition von SQL Server sind einige Machine Learning-Funktionen möglicherweise nicht verfügbar oder eingeschränkt. In den folgenden Artikeln ist aufgelistet, welche Machine Learning-Funktionen in den Enterprise-, Developer-, Standard- und Express-Editionen enthalten sind.
 
-* [Editionen und unterstützte Funktionen von SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
-* [R-und python-Features nach Editionen von SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
+* [Editionen und unterstützten Funktionen von SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
+* [Von den SQL Server-Editionen unterstützte R- und Python-Funktionen](r/differences-in-r-features-between-editions-of-sql-server.md)
 
-## <a name="r-language-and-tool-versions"></a>R-Sprache und Tool Versionen
+## <a name="r-language-and-tool-versions"></a>R-Sprache und -Toolversionen
 
-Im Allgemeinen wird die Version von Microsoft R, die installiert wird, wenn Sie die R Services-Funktion oder die Machine Learning Services-Funktion auswählen, durch die SQL Server Buildnummer bestimmt. Wenn Sie SQL Server aktualisieren oder patchen, müssen Sie auch die zugehörigen R-Komponenten aktualisieren oder patchen.
+Welche Version von Microsoft R installiert wird, wenn Sie das R Services- oder Machine Learning Services-Feature auswählen, wird im Allgemeinen durch die SQL Server-Buildnummer bestimmt. Wenn Sie SQL Server aktualisieren oder patchen, müssen Sie auch die zugehörigen R-Komponenten aktualisieren oder patchen.
 
-Eine Liste der Releases und Links zu Downloads für R-Komponenten finden Sie unter [Installieren von Machine Learning-Komponenten ohne Internet Zugriff](https://docs.microsoft.com/sql/advanced-analytics/r/installing-ml-components-without-internet-access). Auf Computern mit Internet Zugriff wird die erforderliche Version von R automatisch identifiziert und installiert.
+Eine Liste der Releases und Links zu R-Komponentendownloads finden Sie unter [Installieren von Machine Learning in R und Python auf SQL Server-Computern ohne Internetzugang](https://docs.microsoft.com/sql/advanced-analytics/r/installing-ml-components-without-internet-access). Auf Computern mit Internetzugriff wird die erforderliche Version von R automatisch identifiziert und installiert.
 
-Es ist möglich, die R Server Komponenten getrennt von der SQL Server Datenbank-Engine zu aktualisieren, und zwar in einem Prozess, der als Bindung bezeichnet wird. Daher kann die Version von r, die Sie beim Ausführen von r-Code in SQL Server verwenden, abhängig von der installierten Version von SQL Server und davon abhängen, ob Sie den Server auf die neueste Version von r migriert haben.
+Es ist möglich, die R Server-Komponenten in einem als Bindung bezeichneten Prozess getrennt von der SQL Server-Datenbank-Engine zu aktualisieren. Daher kann die Version von R, die Sie beim Ausführen von R-Code in SQL Server verwenden, abhängig von der installierten Version von SQL Server und davon, ob Sie den Server auf die neueste Version von R migriert haben, unterschiedlich sein.
 
 ### <a name="determine-the-r-version"></a>Bestimmen der R-Version
 
-Am einfachsten können Sie die R-Version ermitteln, indem Sie eine-Anweisung wie die folgende ausführen:
+Am einfachsten können Sie die R-Version ermitteln, indem Sie mit einer Anweisung wie der folgenden die Runtimeeigenschaften abrufen:
 
 ```sql
 exec sp_execute_external_script
@@ -66,9 +68,9 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 ```
 
 > [!TIP]
-> Wenn r Services nicht funktioniert, versuchen Sie, nur den R-Skript Teil von rgui auszuführen.
+> Wenn R Services nicht funktioniert, versuchen Sie, nur den R-Skriptteil von RGui auszuführen.
 
-Als letztes Mittel können Sie Dateien auf dem Server öffnen, um die installierte Version zu bestimmen. Suchen Sie hierzu die Datei "rlauncher. config", um den Speicherort der R-Laufzeit und des aktuellen Arbeitsverzeichnisses zu erhalten. Es wird empfohlen, eine Kopie der Datei zu erstellen und zu öffnen, damit Sie nicht versehentlich Eigenschaften ändern können.
+Als letztes Mittel können Sie Dateien auf dem Server öffnen, um die installierte Version zu bestimmen. Suchen Sie hierzu die Datei „rlauncher.config“, um den Speicherort der R-Runtime und das aktuelle Arbeitsverzeichnis abzurufen. Sie sollten eine Kopie der Datei erstellen und öffnen, damit Sie nicht versehentlich Eigenschaften ändern.
 
 * SQL Server 2016
   
@@ -78,7 +80,7 @@ Als letztes Mittel können Sie Dateien auf dem Server öffnen, um die installier
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Binn\rlauncher.config`
 
-Um die r-Version und die revoscaler-Version zu erhalten, öffnen Sie eine r-Eingabeaufforderung, oder öffnen Sie die rgui, die der-Instanz zugeordnet ist.
+Um die R-Version und die RevoScaleR-Versionen zu erhalten, öffnen Sie eine R-Eingabeaufforderung, oder öffnen Sie die RGui, die der Instanz zugeordnet ist.
 
 * SQL Server 2016
   
@@ -88,7 +90,7 @@ Um die r-Version und die revoscaler-Version zu erhalten, öffnen Sie eine r-Eing
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-In der R-Konsole werden die Versionsinformationen beim Start angezeigt. Die folgende Version stellt z. b. die Standardkonfiguration für SQL Server 2017 dar:
+In der R-Konsole werden die Versionsinformationen beim Start angezeigt. Die folgende Version stellt z. B. die Standardkonfiguration für SQL Server 2017 dar:
 
     *Microsoft R Open 3.3.3*
 
@@ -100,7 +102,7 @@ In der R-Konsole werden die Versionsinformationen beim Start angezeigt. Die folg
 
 ## <a name="python-versions"></a>Python-Versionen
 
-Es gibt mehrere Möglichkeiten, die Python-Version zu erhalten. Die einfachste Möglichkeit besteht darin, diese Anweisung aus Management Studio oder einem anderen SQL-Abfrage Tool auszuführen:
+Es gibt mehrere Möglichkeiten, die Python-Version zu erhalten. Die einfachste Möglichkeit besteht darin, diese Anweisung von Management Studio oder einem anderen SQL-Abfragetool aus auszuführen:
 
 ```sql
 -- Get Python runtime properties:
@@ -117,46 +119,46 @@ OutputDataSet = pandas.DataFrame(
 with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 ```
 
-Wenn Machine Learning Services nicht ausgeführt wird, können Sie die installierte Python-Version ermitteln, indem Sie sich die Datei "pythonlauncher. config" ansehen. Es wird empfohlen, eine Kopie der Datei zu erstellen und zu öffnen, damit Sie nicht versehentlich Eigenschaften ändern können.
+Wenn Machine Learning Services nicht ausgeführt wird, können Sie die installierte Python-Version ermitteln, indem Sie sich die Datei „pythonlauncher. config“ ansehen. Sie sollten eine Kopie der Datei erstellen und öffnen, damit Sie nicht versehentlich Eigenschaften ändern.
 
-1. Nur für SQL Server 2017:`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
-2. Den Wert für **pythonhome**erhalten.
-3. Den Wert des aktuellen Arbeitsverzeichnisses erhalten.
+1. Nur für SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
+2. Rufen Sie den Wert für **PYTHONHOME** ab.
+3. Rufen Sie den Wert des aktuellen Arbeitsverzeichnisses ab.
 
 > [!NOTE]
-> Wenn Sie sowohl python als auch R in SQL Server 2017 installiert haben, werden das Arbeitsverzeichnis und der Pool von workerkonten für die Programmiersprachen R und python freigegeben.
+> Wenn Sie sowohl Python als auch R auf SQL Server 2017 installiert haben, werden das Arbeitsverzeichnis und der Pool von Workerkonten für die Programmiersprachen R und Python freigegeben.
 
-## <a name="are-multiple-instances-of-r-or-python-installed"></a>Sind mehrere Instanzen von R oder python installiert?
+## <a name="are-multiple-instances-of-r-or-python-installed"></a>Sind mehrere Instanzen von R oder Python installiert?
 
-Überprüfen Sie, ob mehr als eine Kopie der R-Bibliotheken auf dem Computer installiert ist. Diese Duplizierung kann auftreten, wenn:
+Überprüfen Sie, ob mehrere Kopien der R-Bibliotheken auf dem Computer installiert sind. Diese Duplizierung kann unter folgenden Umständen auftreten:
 
-* Während des Setups wählen Sie sowohl R Services (in-Database) als auch R Server (eigenständig) aus.
-* Sie installieren Microsoft R Client zusätzlich zu SQL Server.
-* Ein anderer Satz von r-Bibliotheken wurde mit R Tools für Visual Studio, r Studio, Microsoft R Client oder einer anderen r-IDE installiert.
-* Der Computer hostet mehrere Instanzen von SQL Server, und mehr als eine Instanz verwendet Machine Learning.
+* Während des Setups wählen Sie gleichzeitig „R Services (datenbankintern)“ und „R Server (Standalone)“ aus.
+* Sie installieren Microsoft R Client zusätzlich zu SQL Server.
+* Ein anderer Satz von R-Bibliotheken wurde mit R Tools für Visual Studio, R Studio, Microsoft R Client oder einer anderen R-IDE installiert.
+* Der Computer hostet mehrere Instanzen von SQL Server, und mehrere Instanzen verwenden maschinelles Lernen.
 
-Die gleichen Bedingungen gelten für python.
+Die gleichen Bedingungen gelten für Python.
 
-Wenn Sie feststellen, dass mehrere Bibliotheken oder Laufzeiten installiert sind, stellen Sie sicher, dass Sie nur die Fehler erhalten, die mit den von der SQL Server Instanz verwendeten python-oder R-Laufzeiten verknüpft sind.
+Wenn Sie feststellen, dass mehrere Bibliotheken oder Runtimes installiert sind, stellen Sie sicher, dass Sie nur die Fehlermeldungen erhalten, die sich auf die von der SQL Server-Instanz verwendeten Python- oder R-Runtimes beziehen.
 
 ## <a name="origin-of-errors"></a>Ursprung von Fehlern
 
-Die Fehler, die bei dem Versuch angezeigt werden, R-Code auszuführen, können aus einer der folgenden Quellen stammen:
+Die Fehler, die angezeigt werden, wenn Sie versuchen, R-Code auszuführen, können aus einer der folgenden Quellen stammen:
 
-* SQL Server Datenbank-Engine, einschließlich der gespeicherten Prozedur sp_execute_external_script
-* Das SQL Server vertrauenswürdigen launchpad
-* Weitere Komponenten des Erweiterbarkeits-Frameworks, einschließlich R-und python-Launcher und Satelliten Prozesse
-* Anbieter, wie z. b. Microsoft Open Database Connectivity (ODBC)
-* Sprache R
+* SQL Server-Datenbank-Engine einschließlich der gespeicherten Prozedur „sp_execute_external_script“
+* Das SQL Server Trusted Launchpad
+* Weitere Komponenten des Erweiterbarkeitsframeworks, einschließlich R- und Python-Startprogrammen und Satellitenprozessen
+* Anbieter wie Microsoft Open Database Connectivity (ODBC)
+* R-Sprache
 
-Wenn Sie zum ersten Mal mit dem Dienst arbeiten, kann es schwierig sein, zu erkennen, welche Nachrichten von welchen Diensten stammen. Es wird empfohlen, nicht nur den genauen Nachrichtentext, sondern den Kontext zu erfassen, in dem Sie die Meldung gesehen haben. Beachten Sie die Client Software, die Sie zum Ausführen von Machine Learning-Code verwenden:
+Wenn Sie zum ersten Mal mit dem Dienst arbeiten, kann es schwierig sein, zu erkennen, welche Nachrichten von welchen Diensten stammen. Sie sollten nicht nur den genauen Nachrichtentext, sondern den Kontext erfassen, in dem Sie die Meldung gesehen haben. Beachten Sie die Clientsoftware, die Sie zum Ausführen von Code für maschinelles Lernen verwenden:
 
 * Verwenden Sie Management Studio? Eine externe Anwendung?
-* Führen Sie R-Code in einem Remote Client oder direkt in einer gespeicherten Prozedur aus?
+* Führen Sie R-Code in einem Remoteclient oder direkt in einer gespeicherten Prozedur aus?
 
-## <a name="sql-server-log-files"></a>Protokolldateien SQL Server
+## <a name="sql-server-log-files"></a>SQL Server-Protokolldateien
 
-Holen Sie sich den neuesten SQL Server ErrorLog. Der gesamte Satz von Fehlerprotokollen besteht aus den Dateien aus dem folgenden Standardprotokoll Verzeichnis:
+Rufen Sie das aktuelle SQL Server-ERRORLOG ab. Der gesamte Satz von Fehlerprotokollen besteht aus den Dateien aus dem folgenden Standardprotokollverzeichnis:
 
 * SQL Server 2016
   
@@ -167,13 +169,13 @@ Holen Sie sich den neuesten SQL Server ErrorLog. Der gesamte Satz von Fehlerprot
   `C:\Program Files\Microsoft SQL Server\MSSQL14.SQL2016\MSSQL\Log\ExtensibilityLog`
 
 > [!NOTE]
-> Der exakte Ordnername ist abhängig vom Instanznamen unterschiedlich.
+> Der exakte Ordnername variiert abhängig vom Instanznamen.
 
-## <a name="errors-returned-by-spexecuteexternalscript"></a>Von sp_execute_external_script zurückgegebene Fehler
+## <a name="errors-returned-by-sp_execute_external_script"></a>Von „sp_execute_external_script“ zurückgegebene Fehler
 
-Den vollständigen Fehlertext, der ggf. zurückgegeben wird, beim Ausführen des sp_execute_external_script-Befehls erhalten.
+Rufen Sie den vollständigen Text der ggf. zurückgegebenen Fehlermeldungen ab, wenn Sie sp_execute_external_script-Befehl ausführen.
 
-Um R-oder python-Probleme zu beheben, können Sie dieses Skript ausführen, das die R-oder python-Laufzeit startet und Daten hin-und herübergibt.
+Um R- oder Python-Probleme zu entfernen, können Sie dieses Skript ausführen, das die R- oder Python-Runtime startet und Daten in beide Richtungen übergibt.
 
 **Für R**
 
@@ -185,7 +187,7 @@ with result sets (([hello] int not null));
 go
 ```
 
-**Für python**
+**Für Python**
 
 ```sql
 exec sp_execute_external_script @language =N'Python',  
@@ -195,11 +197,11 @@ with result sets (([hello] int not null));
 go
 ```
 
-## <a name="errors-generated-by-the-extensibility-framework"></a>Vom Erweiterbarkeits Framework generierte Fehler
+## <a name="errors-generated-by-the-extensibility-framework"></a>Vom Erweiterbarkeitsframework generierte Fehlermeldungen
 
-SQL Server generiert separate Protokolle für die Runtimes der externen Skriptsprache. Diese Fehler werden nicht von der Python-oder R-Sprache generiert. Sie werden aus den Erweiterbarkeits Komponenten in SQL Server generiert, einschließlich sprachspezifischer Launcher und Ihren Satelliten Prozessen.
+SQL Server generiert separate Protokolle für die Runtimes der externen Skriptsprache. Diese Fehler werden nicht von der Python- oder R-Sprache generiert. Sie werden aus den Erweiterbarkeitskomponenten in SQL Server generiert, einschließlich sprachspezifischer Startprogramme und ihrer Satellitenprozesse.
 
-Sie können diese Protokolle von den folgenden Standard Speicherorten erhalten:
+Sie können diese Protokolle von den folgenden Standardspeicherorten abrufen:
 
 * SQL Server 2016
   
@@ -210,95 +212,95 @@ Sie können diese Protokolle von den folgenden Standard Speicherorten erhalten:
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
 > [!NOTE]
-> Der exakte Ordnername unterscheidet sich je nach Instanzname. Abhängig von Ihrer Konfiguration kann sich der Ordner auf einem anderen Laufwerk befinden.
+> Der exakte Ordnername variiert abhängig vom Instanznamen. Abhängig von Ihrer Konfiguration könnte sich der Ordner auf einem anderen Laufwerk befinden.
 
-Beispielsweise sind die folgenden Protokollmeldungen mit dem Erweiterbarkeits Framework verknüpft:
+Beispielsweise sind die folgenden Protokollmeldungen mit dem Erweiterbarkeitsframework verknüpft:
 
-* *Fehler bei "LogonUser" für Benutzer MSSQLSERVER01.*
+* *LogonUser Failed for user MSSQLSERVER01* (Fehler bei „LogonUser“ für Benutzer MSSQLSERVER01)
   
-  Dies kann darauf hindeuten, dass die workerkonten, die externe Skripts ausführen, nicht auf die Instanz zugreifen können
+  Dies könnte darauf hindeuten, dass die Workerkonten, die externe Skripts ausführen, nicht auf die Instanz zugreifen können.
 
-* *Initializephysicaluserspool ist fehlgeschlagen.*
+* *InitializePhysicalUsersPool Failed* (Fehler bei InitializePhysicalUsersPool)
   
-  Diese Meldung kann bedeuten, dass Ihre Sicherheitseinstellungen verhindern, dass Setup den Pool von workerkonten erstellt, die für die Durchführung externer Skripts erforderlich sind.
+  Diese Meldung könnte bedeuten, dass Ihre Sicherheitseinstellungen das Setup am Erstellen des Pools von Workerkonten hindern, die für die Ausführung externer Skripts erforderlich sind.
 
-* *Fehler bei der Initialisierung des Sicherheitskontext-Managers*
+* *Security Context Manager initialization failed* (Fehler bei der Initialisierung des Sicherheitskontext-Managers)
 
-* *Fehler beim Initialisieren des satellitensitzungsmanagers*
+* *Satellite Session Manager initialization failed* (Fehler bei der Initialisierung des Satellitensitzungs-Managers)
 
-## <a name="system-events"></a>System Ereignisse
+## <a name="system-events"></a>Systemereignisse
 
-1. Öffnen Sie Windows Ereignisanzeige, und suchen Sie im **System Ereignis** Protokoll Nachmeldungen, die das Zeichen folgen- *Launchpad*enthalten.
-2. Öffnen Sie die Datei "extlauncherrorlog", und suchen Sie nach der Zeichenfolge " *errorCode*". Überprüfen Sie die Meldung, die dem ErrorCode zugeordnet ist.
+1. Öffnen Sie die Windows-Ereignisanzeige, und suchen Sie im **Systemereignis**-Protokoll nach Meldungen, die die Zeichenfolge *Launchpad* enthalten.
+2. Öffnen Sie die ExtLaunchErrorlog-Datei, und suchen Sie nach der Zeichenfolge *ErrorCode*. Überprüfen Sie die Meldung, die dem ErrorCode zugeordnet ist.
 
-Die folgenden Meldungen sind z. b. häufige Systemfehler im Zusammenhang mit dem SQL Server Erweiterbarkeits Framework:
+Die folgenden Meldungen beziehen sich z. B. auf häufige Systemfehler im Zusammenhang mit dem SQL Server-Erweiterbarkeitsframework:
 
-* *Der SQL Server-Launchpad (MSSQLSERVER)-Dienst konnte aufgrund des folgenden Fehlers nicht gestartet werden:<text>*
+* *Der Dienst SQL Server-Launchpad (MSSQLSERVER) wurde aufgrund folgenden Fehlers nicht gestartet:  <text>*
 
-* *Der Dienst hat nicht rechtzeitig auf die Start-oder Steuerungs Anforderung geantwortet.*
+* *Der Dienst antwortete nicht rechtzeitig auf die Start- oder Steuerungsanforderung.*
 
-* *Beim Warten auf die Verbindung des SQL Server-Launchpad (MSSQLSERVER)-Dienstanbieter wurde ein Timeout (120000 Millisekunden) erreicht.*
+* *Das Zeitlimit (120.000 ms) wurde beim Verbindungsversuch mit dem Dienst SQL Server-Launchpad (MSSQLSERVER) erreicht.*
 
 ## <a name="dump-files"></a>Dumpdateien
 
 Wenn Sie mit dem Debuggen vertraut sind, können Sie die Dumpdateien verwenden, um einen Fehler in Launchpad zu analysieren.
 
-1. Suchen Sie den Ordner, der die Setup-Bootstrap-Protokolle für SQL Server enthält. In SQL Server 2016 lautet der Standardpfad z. b. c:\Programme\Microsoft SQL server\130\setup Bootstrap\LOG.
-2. Öffnen Sie den Unterordner Bootstrap-Protokoll, der spezifisch für die Erweiterbarkeit ist.
-3. Wenn Sie eine Supportanfrage einreichen müssen, fügen Sie den gesamten Inhalt dieses Ordners einer ZIP-Datei hinzu. Beispiel: c:\Programme\Microsoft SQL server\130\setup bootstrap\log\log\extensibilitylog.
+1. Suchen Sie den Ordner, der die Setup-Bootstrapprotokolle für SQL Server enthält. In SQL Server 2016 war der Standardpfad z. B. „C:\Programme\Microsoft SQL Server\130\Setup Bootstrap\Logs“.
+2. Öffnen Sie den für die Erweiterbarkeit spezifischen Bootstrapprotokoll-Unterordner.
+3. Wenn Sie eine Supportanfrage einreichen müssen, fügen Sie den gesamten Inhalt dieses Ordners einer ZIP-Datei hinzu. Beispiel: „C:\Programme\Microsoft SQL Server\130\Setup Bootstrap\Log\LOG\ExtensibilityLog“.
   
-Der genaue Speicherort kann sich auf Ihrem System unterscheiden, und er kann sich auf einem anderen Laufwerk als dem Laufwerk C befinden. Stellen Sie sicher, dass Sie die Protokolle für die Instanz erhalten, auf der Machine Learning installiert ist.
+Der genaue Speicherort könnte auf Ihrem System anders sein und sich auf einem anderen Laufwerk als C befinden. Stellen Sie sicher, dass Sie die Protokolle für die Instanz erhalten, auf der maschinelles Lernen installiert ist.
 
 ## <a name="configuration-settings"></a>Konfigurationseinstellungen
 
-In diesem Abschnitt werden zusätzliche Komponenten oder Anbieter aufgelistet, die beim Ausführen von R-oder python-Skripts als Fehlerquelle auftreten können.
+In diesem Abschnitt werden zusätzliche Komponenten oder Anbieter aufgelistet, die beim Ausführen von R- oder Python-Skripts als Fehlerquelle infrage kommen.
 
 ### <a name="what-network-protocols-are-available"></a>Welche Netzwerkprotokolle sind verfügbar?
 
-Machine Learning Services erfordert die folgenden Netzwerkprotokolle für die interne Kommunikation zwischen Erweiterbarkeits Komponenten und für die Kommunikation mit externen R-oder python-Clients.
+Machine Learning Services benötigt die folgenden Netzwerkprotokolle für die interne Kommunikation zwischen Erweiterbarkeitskomponenten und für die Kommunikation mit externen R- oder Python-Clients.
 
 * Named Pipes
 * TCP/IP
 
-Öffnen Sie SQL Server-Konfigurations-Manager, um zu bestimmen, ob ein Protokoll installiert ist, und wenn es installiert ist, um zu bestimmen, ob es aktiviert ist.
+Öffnen Sie den SQL Server-Konfigurations-Manager, um zu bestimmen, ob ein Protokoll installiert ist, und wenn es installiert ist, ob es aktiviert ist.
 
-### <a name="security-configuration-and-permissions"></a>Sicherheitskonfiguration und-Berechtigungen
+### <a name="security-configuration-and-permissions"></a>Sicherheitskonfiguration und Berechtigungen
 
-Für workerkonten:
+Für Workerkonten:
 
-1. Öffnen Sie in der Systemsteuerung die Option **Benutzer und Gruppen**, und suchen Sie die Gruppe, die zum Ausführen externer Skript Aufträge verwendet wird. Standardmäßig ist die Gruppe **sqlrusergroup**.
+1. Öffnen Sie in der Systemsteuerung **Benutzer und Gruppen**, und suchen Sie die Gruppe, die zum Ausführen externer Skriptaufträge verwendet wird. Standardmäßig ist dies die Gruppe **SQLRUserGroup**.
 2. Vergewissern Sie sich, dass die Gruppe vorhanden ist und mindestens ein Workerkonto enthält.
-3. Wählen Sie in SQL Server Management Studio die Instanz aus, auf der R-oder python-Aufträge ausgeführt werden sollen, wählen Sie **Sicherheit**aus, und bestimmen Sie dann, ob eine Anmeldung für sqlrusergroup vorliegt.
+3. Wählen Sie in SQL Server Management Studio die Instanz aus, auf der R- oder Python-Aufträge ausgeführt werden, wählen Sie **Sicherheit** aus, und bestimmen Sie dann, ob eine Anmeldung für SQLRUserGroup vorliegt.
 4. Überprüfen Sie die Berechtigungen für die Benutzergruppe.
 
 Für einzelne Benutzerkonten:
 
-1. Bestimmen Sie, ob die Instanz die Authentifizierung im gemischten Modus, nur SQL-Anmeldungen oder nur die Windows-Authentifizierung unterstützt. Diese Einstellung wirkt sich auf Ihre R-oder python-Code Anforderungen aus.
-2. Legen Sie für jeden Benutzer, der r-Code ausführen muss, die erforderliche Berechtigungsebene für jede Datenbank fest, in der Objekte aus R geschrieben werden, auf Daten zugegriffen wird, oder dass Objekte erstellt werden.
+1. Bestimmen Sie, ob die Instanz die Authentifizierung im gemischten Modus, nur SQL-Anmeldungen oder nur die Windows-Authentifizierung unterstützt. Diese Einstellung wirkt sich auf Ihre R- oder Python-Codeanforderungen aus.
+2. Legen Sie für jeden Benutzer, der R-Code ausführen muss, die erforderliche Berechtigungsebene für jede Datenbank fest, in die Objekte aus R geschrieben werden, in der auf Daten zugegriffen wird oder aus der Objekte erstellt werden.
 3. Um die Skriptausführung zu aktivieren, erstellen Sie nach Bedarf Rollen, oder fügen Sie den folgenden Rollen Benutzer hinzu:
 
-   - Alle, aber *db_owner*: Ausführen eines beliebigen externen Skripts erforderlich.
-   - *db_datawriter*: Zum Schreiben von Ergebnissen aus R oder python.
-   - *db_ddladmin*: Zum Erstellen neuer Objekte.
-   - *db_datareader*: Zum Lesen von Daten, die von R-oder python-Code verwendet werden.
-4. Beachten Sie, ob Sie bei der Installation von SQL Server 2016 Standard Start Konten geändert haben.
-5. Wenn ein Benutzer neue r-Pakete installieren oder R-Pakete verwenden muss, die von anderen Benutzern installiert wurden, müssen Sie möglicherweise die Paketverwaltung auf der-Instanz aktivieren und dann zusätzliche Berechtigungen zuweisen. Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren der R-Paketverwaltung](r/r-package-how-to-enable-or-disable.md).
+   - Alle außer *db_owner*: Erfordern „EXECUTE ANY EXTERNAL SCRIPT“.
+   - *db_datawriter:* Zum Schreiben von Ergebnissen aus R oder Python.
+   - *db_ddladmin:* Zum Erstellen neuer Objekte.
+   - *db_datareader:* Zum Lesen von Daten, die von R- oder Python-Code verwendet werden.
+4. Beachten Sie, ob Sie bei der Installation von SQL Server 2016 Standardstartkonten geändert haben.
+5. Wenn ein Benutzer neue R-Pakete installieren oder R-Pakete verwenden muss, die von anderen Benutzern installiert wurden, müssen Sie möglicherweise die Paketverwaltung auf der Instanz aktivieren und dann zusätzliche Berechtigungen zuweisen. Weitere Informationen finden Sie unter [Installieren von neuen R-Paketen mit sqlmlutils](r/r-package-how-to-enable-or-disable.md).
 
 ### <a name="what-folders-are-subject-to-locking-by-antivirus-software"></a>Welche Ordner können durch Antivirussoftware gesperrt werden?
 
-Durch Antivirussoftware können Ordner gesperrt werden, was die Einrichtung der Machine Learning-Features und die erfolgreiche Skriptausführung verhindert. Bestimmen Sie, ob für Ordner in der SQL Server Struktur Viren Scans unterliegen.
+Durch Antivirussoftware können Ordner gesperrt werden, was die Einrichtung der Features für maschinelles Lernen und die erfolgreiche Skriptausführung verhindert. Ermitteln Sie, ob für Ordner in der SQL Server-Struktur Virenscans durchgeführt werden.
 
-Wenn jedoch mehrere Dienste oder Features auf einer-Instanz installiert sind, kann es schwierig sein, alle möglichen Ordner aufzuzählen, die von der-Instanz verwendet werden. Wenn z. b. neue Funktionen hinzugefügt werden, müssen die neuen Ordner identifiziert und ausgeschlossen werden.
+Wenn jedoch mehrere Dienste oder Features auf einer Instanz installiert sind, kann es schwierig sein, alle möglichen Ordner aufzuzählen, die von der Instanz verwendet werden. Wenn z. B. neue Features hinzugefügt werden, müssen die neuen Ordner identifiziert und ausgeschlossen werden.
 
-Darüber hinaus erstellen einige Features neue Ordner dynamisch zur Laufzeit. Beispielsweise erstellen in-Memory-OLTP-Tabellen, gespeicherte Prozeduren und Funktionen zur Laufzeit neue Verzeichnisse. Diese Ordnernamen enthalten häufig GUIDs und können nicht vorhergesagt werden. Das SQL Server Trusted Launchpad erstellt neue Arbeitsverzeichnisse für R-und Python-Skript Aufträge.
+Darüber hinaus erstellen einige Features zur Runtime dynamisch neue Ordner. Beispielsweise erstellen In-Memory-OLTP-Tabellen, gespeicherte Prozeduren und Funktionen zur Runtime neue Verzeichnisse. Diese Ordnernamen enthalten häufig GUIDs und können nicht vorhergesagt werden. Das SQL Server Trusted Launchpad erstellt neue Arbeitsverzeichnisse für R- und Python-Skriptaufträge.
 
-Da es möglicherweise nicht möglich ist, alle vom SQL Server Prozess und ihren Features benötigten Ordner auszuschließen, wird empfohlen, dass Sie die gesamte SQL Server instanzverzeichnisstruktur ausschließen.
+Da es vielleicht nicht möglich ist, alle vom SQL Server-Prozess und seinen Features benötigten Ordner auszuschließen, sollten Sie die gesamte Instanzverzeichnisstruktur von SQL Server ausschließen.
 
-### <a name="is-the-firewall-open-for-sql-server-does-the-instance-support-remote-connections"></a>Ist die Firewall für SQL Server geöffnet? Unterstützt die Instanz Remote Verbindungen?
+### <a name="is-the-firewall-open-for-sql-server-does-the-instance-support-remote-connections"></a>Ist die Firewall für SQL Server geöffnet? Unterstützt die Instanz Remoteverbindungen?
 
-1. Informationen dazu, ob SQL Server Remote Verbindungen unterstützt, finden Sie unter [Konfigurieren von Remote Server Verbindungen](../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md).
+1. Um zu bestimmen, ob SQL Server Remoteverbindungen unterstützt, lesen Sie [Anzeigen oder Konfigurieren von Verbindungsoptionen für Remoteserver (SQL Server)](../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md).
 
-2. Stellen Sie fest, ob für SQL Server eine Firewallregel erstellt wurde. Aus Sicherheitsgründen ist es in einer Standardinstallation möglicherweise nicht möglich, dass der Remote-R-oder Python-Client eine Verbindung mit der-Instanz herstellt. Weitere Informationen finden Sie unter [Problembehandlung beim Herstellen einer Verbindung mit SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
+2. Stellen Sie fest, ob für SQL Server eine Firewallregel erstellt wurde. Aus Sicherheitsgründen ist in einer Standardinstallation möglicherweise nicht möglich, dass der Remote-R- oder Remote-Python-Client eine Verbindung mit der Instanz herstellt. Weitere Informationen finden Sie unter [Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
 
 ## <a name="see-also"></a>Siehe auch
 
