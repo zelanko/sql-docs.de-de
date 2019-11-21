@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843736"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097857"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 
@@ -40,7 +40,9 @@ Verwenden Sie SSMS zum Abfragen, Entwerfen und Verwalten Ihrer Datenbanken und D
 
 SSMS ist kostenlos!
 
-## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[Herunterladen von SSMS](https://aka.ms/ssmsfullsetup)
+## <a name="download-ssms"></a>Herunterladen von SSMS
+
+**[![Download](media/download-icon.png) Herunterladen von SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.4 ist die neueste, allgemein verfügbare Version von SSMS. Wenn Sie eine frühere allgemein verfügbare Version von SSMS 18 installiert haben, wird für diese durch die Installation von SSMS 18.4 ein Upgrade auf Version 18.4 durchgeführt. Wenn eine ältere *Vorschauversion* von SSMS 18.x installiert ist, müssen Sie diese vor der Installation von SSMS 18.4 deinstallieren.
 

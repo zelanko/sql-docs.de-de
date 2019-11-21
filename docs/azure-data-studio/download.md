@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.custom: seodec18
-ms.date: 11/04/2019
+ms.date: 11/15/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 297d28166b8c9fa7432bf6978e887280d1f18879
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 1f925375e1813fccd11f77cd8b67359db8fdf596
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706610"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119328"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
@@ -29,9 +29,9 @@ Neuestes Release herunterladen und installieren:
 
 |Platform|Herunterladen|Veröffentlichungsdatum| Versionsoptionen |
 |:---|:---|:---|:---|
-|Windows|[Benutzer-Installationsprogramm (empfohlen)](https://go.microsoft.com/fwlink/?linkid=2109256)<br>[System-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2109085)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2109255)|4. November 2019|1.13.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2109180)|4. November 2019|1.13.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2109254)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2109178)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2109179)|4. November 2019|1.13.0|
+|Windows|[Benutzer-Installationsprogramm (empfohlen)](https://go.microsoft.com/fwlink/?linkid=2109256)<br>[System-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2109085)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2109255)|15. November 2019|1.13.1|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2109180)|15. November 2019|1.13.1|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2109254)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2109178)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2109179)|15. November 2019|1.13.1|
 
 Weitere Informationen über die neueste Version finden Sie in den [Versionshinweisen](release-notes.md).
 

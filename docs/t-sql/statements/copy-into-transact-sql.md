@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fc26cc0862c7dfb02276738d9424b860d98644e7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882414"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055136"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY – Transact-SQL (Vorschau)
 
@@ -131,7 +131,7 @@ Es können nur mehrere Dateispeicherorte aus demselben Speicherkonto und Contain
 Bei der Authentifizierung mit AAD oder bei einem öffentlichen Speicherkonto muss CREDENTIAL nicht angegeben werden. 
 
 - Authentifizieren mit Shared Access Signature (SAS) *IDENTITY: Eine Konstante mit dem Wert von „Shared Access Signature“* 
-  *SECRET: Die * [*Signatur für den gemeinsamen Zugriff*](/azure/storage/common/storage-sas-overview#what-is-a-shared-access-signature) *ermöglicht den delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
+  *SECRET: Die * [*Signatur für den gemeinsamen Zugriff*](/azure/storage/common/storage-sas-overview) *ermöglicht den delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
   Erforderliche Mindestberechtigungen: READ und LIST
 
 - Authentifizieren mit [*Dienstprinzipalen*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -164,7 +164,7 @@ Wenn ERRORFILE den vollständigen Pfad des Speicherkontos definiert hat, wird ER
   
 - Authentifizieren mit Shared Access Signatures (SAS)
   - *IDENTITY: Eine Konstante mit dem Wert von „Shared Access Signature“*
-  - *SECRET: Die* [*Signatur für den gemeinsamen Zugriff*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *ermöglicht den delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
+  - *SECRET: Die* [*Signatur für den gemeinsamen Zugriff*](/azure/storage/common/storage-sas-overview) *ermöglicht den delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
   - Erforderliche Mindestberechtigungen: READ, LIST, WRITE, CREATE, DELETE
   
 - Authentifizieren mit [*Dienstprinzipalen*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -277,7 +277,7 @@ Die Standardwerte des COPY-Befehls lauten wie folgt:
 - ROWTERMINATOR = „\n“
 
 > [!IMPORTANT]
-> COPY behandelt „\n“ intern als „\r\n“. Weitere Informationen finden Sie im Abschnitt [ROWTERMINATOR]().
+> COPY behandelt „\n“ intern als „\r\n“. Weitere Informationen finden Sie im Abschnitt zu ROWTERMINATOR.
 
 - FIRSTROW = 1
 
@@ -360,4 +360,4 @@ WITH (
 
 ## <a name="see-also"></a>Siehe auch  
 
- [Datenladestrategien für Azure SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading>) 
+ [Datenladestrategien für Azure SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)
