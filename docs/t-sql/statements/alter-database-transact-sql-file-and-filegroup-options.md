@@ -42,12 +42,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2a4e5ed82200e0bc647981f730765ced973962ba
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809797"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982840"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE-Optionen für Dateien und Dateigruppen (Transact-SQL)
 
@@ -55,7 +55,7 @@ ms.locfileid: "68809797"
 
 Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Wählen Sie ein Produkt.
+## <a name="click-a-product"></a>Auswählen eines Produkts
 
 Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meisten interessiert. Mit nur einem Klick erhalten Sie auf dieser Webseite unterschiedliche Inhalte, die zu dem Produkt passen, das Sie ausgewählt haben.
 
@@ -67,8 +67,6 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 |||
 
 &nbsp;
-
-# <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>Syntax
 
@@ -139,7 +137,7 @@ REMOVE FILE *logical_file_name* Entfernt die logische Dateibeschreibung aus eine
 *logical_file_name* Der logische Dateiname, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Verweis auf die Datei verwendet wird.
 
 > [!WARNING]
-> Sie können zwar eine Datenbankdatei entfernen, der `FILE_SNAPSHOT`-Sicherungen zugeordnet ist, jedoch werden keine zugeordneten Momentaufnahmen gelöscht, um zu vermeiden, dass die Sicherungen, die auf die Datenbankdatei verweisen, ungültig gemacht wird. Die Datei wird zwar abgeschnitten, aber nicht physisch gelöscht, damit die FILE_SNAPSHOT-Sicherungen vollständig erhalten bleiben. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+> Sie können zwar eine Datenbankdatei entfernen, der `FILE_SNAPSHOT`-Sicherungen zugeordnet ist, jedoch werden keine zugeordneten Momentaufnahmen gelöscht, um zu vermeiden, dass die Sicherungen, die auf die Datenbankdatei verweisen, ungültig gemacht wird. Die Datei wird zwar abgeschnitten, aber nicht physisch gelöscht, damit die FILE_SNAPSHOT-Sicherungen vollständig erhalten bleiben. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher).
 
 MODIFY FILE Gibt die Datei an, die geändert werden soll. Es kann jeweils nur eine \<filespec>-Eigenschaft geändert werden. NAME muss zur Identifikation der Datei, die geändert werden soll, stets in \<filespec> angegeben sein. Wenn SIZE angegeben ist, muss die neue Größe die aktuelle Dateigröße übersteigen.
 
@@ -269,7 +267,7 @@ CONTAINS FILESTREAM Gibt an, dass die Dateigruppe FILESTREAM-BLOBs (Binary Large
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher)
 
 Gibt an, dass die Dateigruppe arbeitsspeicheroptimierte Daten im Dateisystem speichert. Weitere Informationen finden Sie unter [In-Memory OLTP – Arbeitsspeicheroptimierung](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Nur eine `MEMORY_OPTIMIZED_DATA`-Dateigruppe ist pro Datenbank zulässig. Zum Erstellen von speicheroptimierten Tabellen kann die Dateigruppe nicht leer sein. Mindestens eine Datei muss angegeben werden. *filegroup_name* verweist auf einen Pfad. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein.
 
@@ -286,13 +284,13 @@ DEFAULT Ändert die Standarddatenbank-Dateigruppe in *filegroup_name*. Es könne
 
 NAME = *new_filegroup_name* Ändert den Namen der Dateigruppe in *new_filegroup_name*.
 
-AUTOGROW_SINGLE_FILE **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+AUTOGROW_SINGLE_FILE **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
 
 Wenn sich eine Datei in der Dateigruppe dem Schwellenwert für die automatische Vergrößerung nähert, wird nur diese Datei vergrößert. Dies ist die Standardeinstellung.
 
 AUTOGROW_ALL_FILES
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
 
 Wenn sich eine Datei in der Dateigruppe dem Schwellenwert für die automatische Vergrößerung nähert, werden alle Dateien in der Dateigruppe vergrößert.
 
@@ -321,7 +319,7 @@ READ_WRITE | READWRITE Gibt an, dass die Gruppe den Status READ_WRITE hat. Updat
 > [!TIP]
 > Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases**-Katalogsicht oder der **Updateability**-Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
 
@@ -849,7 +847,7 @@ READ_WRITE | READWRITE Gibt an, dass die Gruppe den Status READ_WRITE hat. Updat
 
 Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases**-Katalogsicht oder der **Updateability**-Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
 

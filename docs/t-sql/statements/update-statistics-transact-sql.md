@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798408"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982557"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -131,11 +131,11 @@ Bei **ON** behalten die Statistiken den festgelegten Prozentsatz für die Stichp
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) und [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) machen den beibehaltenen Prozentwert für die Stichprobenentnahme der ausgewählten Statistik verfügbar.
  
- **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
+ **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) und höher (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] erzwingt, dass die Statistiken auf Blattebene, die die in der ON PARTITIONS-Klausel angegebenen Partitionen umfassen, erneut berechnet und dann zusammengeführt werden, um die globale Statistik zu bilden. WITH RESAMPLE ist erforderlich, da mit unterschiedlichen Stichprobenraten erstellte Partitionsstatistiken nicht zusammengeführt werden können.  
   
-**Gilt für** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher
   
  ALL | COLUMNS | INDEX  
  Aktualisieren Sie alle vorhandenen Statistiken, für eine oder mehrere Spalten erstellte Statistiken oder für Indizes erstellte Statistiken. Wenn keine der Optionen angegeben wird, aktualisiert die UPDATE STATISTICS-Anweisung alle Statistiken für die Tabelle oder indizierte Sicht.  
@@ -163,7 +163,7 @@ Bei **ON** behalten die Statistiken den festgelegten Prozentsatz für die Stichp
 -   Statistiken, die für interne Tabellen erstellt wurden.  
 -   Statistiken, die mit räumlichen Indizes oder XML-Indizes erstellt wurden.  
   
-**Gilt für** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher
 
 MAXDOP = *max_degree_of_parallelism*  
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  

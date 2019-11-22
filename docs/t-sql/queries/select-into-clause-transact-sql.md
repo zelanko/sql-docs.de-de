@@ -29,19 +29,19 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac9ba9a291b88b8fc1091ff72e3a7af782b1e618
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948412"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981727"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, und die Ergebniszeilen aus der Abfrage werden darin eingefügt. Die vollständige SELECT-Syntax finden Sie unter [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,7 +63,7 @@ Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, un
  *filegroup*    
  Gibt den Namen der Dateigruppe an, in der die neue Tabelle erstellt wird. Die angegebene Dateigruppe muss in der Datenbank vorhanden sein, andernfalls löst die SQL Server-Engine einen Fehler aus.   
  
- **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und höher.
   
 ## <a name="data-types"></a>Datentypen  
  Beim FILESTREAM-Attribut werden keine Daten in die neue Tabelle übertragen. FILESTREAM-BLOBs werden kopiert und in der neuen Tabelle als **varbinary(max)** -BLOBs gespeichert. Ohne das FILESTREAM-Attribut verfügt der **varbinary(max)** -Datentyp über eine Einschränkung von 2 GB. Wenn ein FILESTREAM-BLOB diesen Wert überschreitet, wird Fehler 7119 ausgelöst, und die Anweisung wird beendet.  
@@ -82,7 +82,7 @@ Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, un
   
 Falls eine dieser Bedingungen erfüllt ist, wird die Spalte mit NOT NULL erstellt, anstatt die IDENTITY-Eigenschaft zu erben. Wenn eine Identitätsspalte in der neuen Tabelle erforderlich, aber nicht verfügbar ist oder wenn Sie einen Ausgangs- oder Inkrementwert benötigen, der sich von der Quellidentitätsspalte unterscheidet, definieren Sie die Spalte in der Auswahlliste mithilfe der IDENTITY-Funktion. Weitere Informationen finden Sie unter "Erstellen einer Identitätsspalte mithilfe der IDENTITY-Funktion" im Abschnitt mit den Beispielen unten.  
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 Die `SELECT...INTO`-Anweisung wird in zwei Schritten ausgeführt: Zunächst wird die neue Tabelle erstellt, dann werden die Zeilen eingefügt.  Das bedeutet, dass ein Rollback ausgeführt wird, wenn die Einfügevorgänge fehlschlagen; die neue (leere) Tabelle bleibt jedoch bestehen.  Wenn der gesamte Vorgang als Ganzes erfolgreich sein oder fehlschlagen muss, verwenden Sie eine [explizite Transaktion](../language-elements/begin-transaction-transact-sql.md).
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
@@ -171,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. Erstellen einer Tabelle durch Angeben von Spalten aus einer Remotedatenquelle  
  Im folgenden Beispiel werden drei Methoden beschrieben, um eine neue Tabelle für den lokalen Server von einer Remotedatenquelle aus zu erstellen. Zunächst wird im Beispiel ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers `MyLinkServer,` wird dann in der FROM-Klausel der ersten SELECT...INTO-Anweisung und der OPENQUERY-Funktion der zweiten SELECT...INTO-Anweisung angegeben. Die dritte SELECT...INTO-Anweisung verwendet die OPENDATASOURCE-Funktion, die die Remotedatenquelle direkt angibt, anstatt den Namen des Verbindungsservers zu verwenden.  
   
- **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 ```sql
 USE master;  
@@ -231,7 +231,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Erstellen einer neuen Tabelle als Kopie einer anderen Tabelle und Laden der Tabelle in eine angegebene Dateigruppe
 Das folgende Beispiel zeigt, wie eine neue Tabelle als Kopie einer anderen Tabelle erstellt und in eine angegebene Dateigruppe geladen wird, bei der es sich nicht um die Standarddateigruppe des Benutzers handelt.
 
- **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und höher.
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

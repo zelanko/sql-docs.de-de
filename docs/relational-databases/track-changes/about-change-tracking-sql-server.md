@@ -1,5 +1,6 @@
 ---
-title: Informationen zur Änderungsnachverfolgung (SQL Server) | Microsoft-Dokumentation
+title: Informationen zur Änderungsnachverfolgung
+ms.custom: seo-dt-2019
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9d361d6746a9900c0db3e3f955774b1d79fad20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 954701f03910556c2fe2c4e151ce4a4e3aac2af4
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058080"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095307"
 ---
 # <a name="about-change-tracking-sql-server"></a>Informationen zur Änderungsnachverfolgung (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,12 +50,12 @@ ms.locfileid: "68058080"
 ### <a name="one-way-synchronization-applications"></a>Unidirektionale Synchronisierungsanwendungen  
  Es können unidirektionale Synchronisierungsanwendungen, z. B. ein Client oder eine Zwischenspeicherungsanwendung auf der mittleren Ebene, erstellt werden, die die Änderungsnachverfolgung verwenden. Wie in der folgenden Abbildung dargestellt, müssen für eine Zwischenspeicherungsanwendung Daten in [!INCLUDE[ssDE](../../includes/ssde-md.md)] gespeichert und in anderen Datenspeichern zwischengespeichert werden. Die Anwendung muss in der Lage sein, den Cache auf dem aktuellen Stand zu halten, indem dieser mit allen an den Datenbanktabellen vorgenommenen Änderungen aktualisiert wird. Es werden keine Änderungen zurück an [!INCLUDE[ssDE](../../includes/ssde-md.md)]übergeben.  
   
- ![Zeigt Anwendungen mit unidirektionaler Synchronisierung](../../relational-databases/track-changes/media/one-waysync.gif "Shows one-way synchronization applications")  
+ ![Zeigt Anwendungen mit unidirektionaler Synchronisierung](../../relational-databases/track-changes/media/one-waysync.gif "Zeigt Anwendungen mit unidirektionaler Synchronisierung")  
   
 ### <a name="two-way-synchronization-applications"></a>Bidirektionale Synchronisierungsanwendungen  
  Es können auch bidirektionale Synchronisierungsanwendungen erstellt werden, die die Änderungsnachverfolgung verwenden. In diesem Szenario werden die Daten in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] mit mindestens einem Datenspeicher synchronisiert. Die Daten in diesen Speichern können aktualisiert werden, und die Änderungen müssen wieder mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]synchronisiert werden.  
   
- ![Zeigt Anwendungen mit bidirektionaler Synchronisierung](../../relational-databases/track-changes/media/two-waysync.gif "Shows two-way synchronization applications")  
+ ![Zeigt Anwendungen mit bidirektionaler Synchronisierung](../../relational-databases/track-changes/media/two-waysync.gif "Zeigt Anwendungen mit bidirektionaler Synchronisierung")  
   
  Ein gutes Beispiel für eine bidirektionale Synchronisierungsanwendung ist eine gelegentlich verbundene Anwendung. In einer Anwendung dieses Typs fragt eine Clientanwendung einen lokalen Speicher ab und aktualisiert diesen. Wenn eine Verbindung zwischen einem Client und einem Server verfügbar ist, führt die Anwendung die Synchronisierung mit einem Server aus, und geänderte Daten fließen in beide Richtungen.  
   

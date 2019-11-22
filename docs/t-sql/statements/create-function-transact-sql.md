@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf64036b88b6f29da0404b6e611ae891db93da70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912667"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982786"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ Erstellt eine benutzerdefinierte Funktion in [!INCLUDE[ssNoVersion](../../includ
 > [!NOTE]  
 > Informationen zu [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] finden Sie unter [CREATE FUNCTION (SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md).
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -269,7 +269,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>Argumente
 *OR ALTER*  
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Ändert die Funktion bedingt, sofern diese bereits vorhanden ist. 
  
@@ -341,7 +341,7 @@ Ein Standardwert für den Parameter. Wenn ein *default*-Wert definiert ist, kann
  ORDER (\<order_clause>) gibt die Reihenfolge an, in der Ergebnisse von der Tabellenwertfunktion zurückgegeben werden. Weitere Informationen finden Sie im Abschnitt [Verwenden der Sortierreihenfolge in CLR-Tabellenwertfunktionen](#using-sort-order-in-clr-table-valued-functions) weiter unten in diesem Thema.  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 und höher).
   
  Gibt die Assembly und die Methode an, auf die der erstellte Funktionsname verweisen soll.  
   
@@ -369,7 +369,7 @@ In einem typischen Beispiel für MyFood.DLL, bei dem sich alle Typen im MyFood-N
  *\<* table_type_definition *>* ( { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) Definiert den Tabellendatentyp für einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion. Die Tabellendeklaration schließt Spaltendefinitionen und Spalten- oder Tabelleneinschränkungen ein. Die Tabelle wird immer in der primären Dateigruppe abgelegt.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Vorschauversion in einigen Regionen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Vorschauversion in einigen Regionen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Definiert die Tabellendatentypen für eine CLR-Funktion. Die Tabellendeklaration schließt nur Spaltennamen und Datentypen ein. Die Tabelle wird immer in der primären Dateigruppe abgelegt.  
   
@@ -393,7 +393,7 @@ In einem typischen Beispiel für MyFood.DLL, bei dem sich alle Typen im MyFood-N
  Gibt an, dass die Funktion mindestens über eine der folgenden Optionen verfügen wird.  
   
  ENCRYPTION  
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 und höher).  
   
  Gibt an, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] den ursprünglichen Text der CREATE FUNCTION-Anweisung in ein verborgenes Format konvertiert. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten sichtbar. Benutzer, die keinen Zugriff auf Systemtabellen oder Datenbankdateien haben, können den verborgenen Text nicht abrufen. Der Text ist jedoch für berechtigte Benutzer verfügbar, die entweder auf die Systemtabellen über den [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die Originalprozedur zur Laufzeit vom Arbeitsspeicher abrufen. Weitere Informationen zu Berechtigungen zum Zugreifen auf Systemmetadaten finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -786,7 +786,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. Erstellen einer CLR-Funktion  
  In diesem Beispiel wird die CLR-Funktion `len_s` erstellt. Bevor die Funktion erstellt wird, wird die Assembly `SurrogateStringFunction.dll` in der lokalen Datenbank registriert.  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 und höher).  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  

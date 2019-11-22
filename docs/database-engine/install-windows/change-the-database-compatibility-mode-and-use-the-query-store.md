@@ -14,18 +14,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e84d60b0d5390712639314d93ecfbe42852f5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817665672668a8dcdafc84beaa7a93d10617eeec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034513"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982134"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Ändern des Datenbank-Kompatibilitätsgrads und Verwenden des Abfragespeichers
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] werden einige Änderungen erst wirksam, nachdem der [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) geändert wurde. Dies hat verschiedene Gründe:  
+In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher werden einige Änderungen erst wirksam, nachdem der [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) geändert wurde. Dies hat verschiedene Gründe:  
   
 - Da das Upgraden einen unidirektionalen Vorgang darstellt (ein Downgrade des Dateiformats ist nicht möglich), ist es sinnvoll, das Aktivieren neuer Funktionen als separaten Datenbankvorgang durchzuführen. Es ist möglich, eine Einstellung auf einen früheren Datenbank-Kompatibilitätsgrad zurückzusetzen.  Das neue Modell reduziert die Anzahl von Vorgängen, die während einer Ausfallzeit durchgeführt werden müssen.  
   
@@ -45,7 +45,7 @@ Der Upgradevorgang zum Aktivieren neuer Abfrageprozessorfunktionen steht im Zusa
   
 Der empfohlene Workflow für eine Aktualisierung des Abfrageprozessors auf die neueste Version des Codes ist in den „Verwendungsszenarien für den Abfragespeicher“ unter [Aufrechterhalten einer stabilen Leistung während des Upgrades auf das neuere SQL Server](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) dokumentiert (siehe weiter unten).  
   
-![Abfrage-Store-Nutzung-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
 
 Ab [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 können Benutzer im Abfrageoptimierungs-Assistenten durch den empfohlenen Workflow geführt werden. Weitere Informationen finden Sie unter [Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

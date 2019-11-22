@@ -21,19 +21,19 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb3802578b7eb500d6b5fd64725a1a03f86fb9c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68232152"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982077"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt die Eigenschaften einer Spalte an, die mithilfe von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) einer Tabelle hinzugefügt wird.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -119,7 +119,7 @@ DOCUMENT
  Gibt an, dass jede Instanz des **xml**-Datentyps in *column_name* nur ein allgemeines Element enthalten kann. DOCUMENT gilt nur für den **xml**-Datentyp und kann nur angegeben werden, wenn *xml_schema_collection* ebenfalls angegeben ist.  
   
  *xml_schema_collection*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gilt nur für den **xml**-Datentyp zum Verknüpfen einer XML-Schemaauflistung mit diesem Typ. Vor der Typisierung einer **xml**-Spalte mit einem Schema muss das Schema zuerst mithilfe von [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) in der Datenbank erstellt werden.  
   
@@ -178,12 +178,12 @@ IDENTITY
  Der Inkrementwert, der zum Identitätswert der zuvor geladenen Zeile addiert wird.  
   
 NOT FOR REPLICATION  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Kann für die IDENTITY-Eigenschaft angegeben werden. Wenn diese Klausel für die IDENTITY-Eigenschaft angegeben wird, werden Werte in Identitätsspalten nicht inkrementiert, wenn Replikations-Agents Einfügevorgänge ausführen.  
   
 ROWGUIDCOL  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt an, dass die Spalte eine Spalte mit für alle Zeilen global eindeutigen Bezeichnern ist. ROWGUIDCOL kann nur einer **uniqueidentifier**-Spalte zugewiesen werden, und nur eine **uniqueidentifier**-Spalte pro Tabelle kann als ROWGUIDCOL-Spalte gekennzeichnet werden. ROWGUIDCOL kann keinen Spalten des benutzerdefinierten Datentyps zugewiesen werden.  
   
@@ -213,16 +213,16 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  Spalten müssen einen qualifizierenden Datentyp aufweisen.  
   
 ALGORITHM  
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 Muss **'AEAD_AES_256_CBC_HMAC_SHA_256'** sein.  
   
  Weitere Informationen, u.a. auch zu Featureeinschränkungen finden Sie unter [Always Encrypted &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
- Gibt eine dynamische Datenmaske an *mask_function* ist der Name der Maskierungsfunktion mit den entsprechenden Parametern. Die folgenden Funktionen stehen zur Verfügung:  
+ Gibt eine dynamische Datenmaske an. *mask_function* ist der Name der Maskierungsfunktion mit den entsprechenden Parametern. Die folgenden Funktionen stehen zur Verfügung:  
   
 -   default()  
   
@@ -234,7 +234,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
   
  Weitere Informationen zu Funktionsparametern finden Sie im Artikel zur [dynamischen Datenmaskierung](../../relational-databases/security/dynamic-data-masking.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Wenn eine Spalte hinzugefügt wird, die über einen **uniqueidentifier**-Datentyp verfügt, kann sie mit einem Standardwert definiert werden, der die NEWID()-Funktion verwendet, um die eindeutigen Bezeichnerwerte in der neuen Spalte für jede vorhandene Zeile in der Tabelle anzugeben.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] erzwingt keine Reihenfolge für die Angabe von DEFAULT, IDENTITY, ROWGUIDCOL oder Spalteneinschränkungen in einer Spaltendefinition.  

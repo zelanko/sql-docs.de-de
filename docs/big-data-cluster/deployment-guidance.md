@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0437a637ef199fbef5b1914c65c6506533d906e9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532050"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127383"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
 
@@ -68,6 +68,12 @@ kubectl config view
 > Stellen Sie sicher, dass bei der Bereitstellung in einem Kubernetes-Cluster mit mehreren Knoten, den Sie mithilfe von `kubeadm` gestartet haben, die Uhren auf allen für die Bereitstellung verwendeten Kubernetes-Knoten synchronisiert werden. Der Big Data-Cluster verfügt über integrierte Integritätseigenschaften für verschiedene zeitempfindliche Dienste. Zudem können zeitliche Abweichungen zu einer falschen Statusangabe führen.
 
 Nachdem Sie den Kubernetes-Cluster konfiguriert haben, können Sie mit der Bereitstellung eines neuen Big-Data-Clusters für SQL Server fortfahren. Wenn Sie ein Upgrade von einem früheren Release durchführen, finden Sie weitere Informationen unter [Durchführen eines Upgrades für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a name="ensure-you-have-storage-configured"></a>Sicherstellung von konfiguriertem Speicher
+
+Für die meisten Big Data-Cluster-Bereitstellungen ist persistenter Speicher erforderlich. Derzeit müssen Sie sicherstellen, dass Sie vor der Bereitstellung des Big Data-Clusters ein Plan für die Bereitstellung des persistenten Speichers im Kubernetes-Cluster haben.
+
+Bei einer Bereitstellung in AKS müssen Sie keinen Speicher einrichten. AKS bietet integrierte Speicherklassen mit dynamischer Bereitstellung. Sie können die Speicherklasse (`default` oder `managed-premium`) in der Bereitstellungskonfigurationsdatei anpassen. Für die integrierten Profile wird eine `default`-Speicherklasse verwendet. Wenn Sie eine Bereitstellung auf einem Kubernetes-Cluster durchführen, der mit `kubeadm` bereitgestellt wurde, müssen Sie sicherstellen, dass ausreichend Speicher für einen Cluster des gewünschten Umfangs verfügbar und konfiguriert ist. Wenn Sie die Nutzung Ihres Speichers konfigurieren möchten, sollten Sie das tun, bevor Sie fortfahren. Weitere Informationen finden Sie unter [Datenpersistenz mit SQL Server-Big Data-Clustern in Kubernetes](concept-data-persistence.md).
 
 ## <a id="deploy"></a> Übersicht über die Bereitstellung
 

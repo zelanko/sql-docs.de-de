@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80723d2288ce628d4c39d174eefc3bf868314886
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122316"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981953"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ Führt eine Befehlszeichenfolge oder eine Zeichenfolge in einem [!INCLUDE[tsql](
 > [!IMPORTANT]  
 >  Bevor Sie EXECUTE mit einer Zeichenfolge aufrufen, sollten Sie die Zeichenfolge überprüfen. Führen Sie auf keinen Fall einen aus Benutzereingaben erstellten Befehl aus, der nicht zuvor überprüft wurde.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -208,7 +208,7 @@ Execute a character string
  Ein Benutzer kann ein in einer anderen Datenbank erstelltes Modul ausführen, wenn er Besitzer des Moduls ist oder die entsprechende Berechtigung dafür hat, es in dieser Datenbank auszuführen. Ein Benutzer kann ein Modul auf einem anderen Server mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, wenn er die entsprechende Berechtigung besitzt, diesen Server zu verwenden (Remotezugriff) und das Modul in dieser Datenbank auszuführen. Wird ein Servername, aber kein Datenbankname angegeben, sucht [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] das Modul in der Standarddatenbank des Benutzers.  
   
  ;*number*  
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
  Eine optionale ganze Zahl zum Gruppieren von Prozeduren mit dem gleichen Namen. Dieser Parameter wird nicht bei erweiterten gespeicherten Prozeduren verwendet.  
   
@@ -267,7 +267,7 @@ Wenn Sie ein einzelnes Wort übergeben, das nicht mit `@` beginnt und nicht in A
  Gibt den Kontext an, in dem die Anweisung ausgeführt wird.  
   
  Anmeldung  
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
  Gibt an, dass der Kontext, der als Identität angenommen werden soll, ein Anmeldename ist. Der Identitätswechselbereich ist der Server.  
   
@@ -291,7 +291,7 @@ Wenn Sie ein einzelnes Wort übergeben, das nicht mit `@` beginnt und nicht in A
  Gibt Parameter an, deren Werte im \<arg-list>-Parameter von Pass-Through-Befehlen bereitgestellt werden, die in einer EXEC('…', \<arg-list>) AT \<linkedsrv>-Anweisung verwendet werden.  
   
  AT *linked_server_name*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
  Gibt an, dass *command_string* für *linked_server_name* ausgeführt wird und dass Ergebnisse ggf. an den Client zurückgegeben werden. *linked_server_name* muss auf die Definition eines vorhandenen Verbindungsservers auf dem lokalen Server verweisen. Verbindungsserver werden mithilfe von [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) definiert.  
   
@@ -301,11 +301,11 @@ Wenn Sie ein einzelnes Wort übergeben, das nicht mit `@` beginnt und nicht in A
 |Begriff|Definition|  
 |----------|----------------|  
 |RECOMPILE|Erzwingt, dass ein neuer Abfrageplan kompiliert, verwendet und nach der Ausführung des Moduls verworfen wird. Falls bereits ein Abfrageplan für das Modul vorhanden ist, verbleibt dieser Plan im Cache.<br /><br /> Verwenden Sie diese Option, wenn der von Ihnen angegebene Parameter atypisch ist oder sich die Daten erheblich geändert haben. Diese Option wird nicht bei erweiterten gespeicherten Prozeduren verwendet. Es wird empfohlen, diese Option nur selten zu verwenden, da sie aufwändig ist.<br /><br /> **Hinweis:** Sie können WITH RECOMPILE nicht verwenden, wenn Sie eine gespeicherte Prozedur aufrufen, die OPENDATASOURCE-Syntax verwendet. Die WITH RECOMPILE-Option wird ignoriert, wenn ein vierteiliger Objektname angegeben wird.<br /><br /> **Hinweis:** RECOMPILE wird für nativ kompilierte benutzerdefinierte Skalarfunktionen nicht unterstützt. Wenn Sie eine erneute Kompilierung durchführen müssen, verwenden Sie [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
-|**RESULT SETS UNDEFINED**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Bei dieser Option ist nicht sichergestellt, dass, und, wenn ja, welche Ergebnisse zurückgegeben werden, und es wird keine Definition bereitgestellt. Die Anweisung wird ohne Fehler ausgeführt, wenn Ergebnisse zurückgegeben werden oder wenn keine Ergebnisse zurückgegeben werden. RESULT SETS UNDEFINED ist das Standardverhalten, wenn keine result_sets_option angegeben wird.<br /><br /> Diese Option ist bei interpretierten benutzerdefinierten Skalarfunktionen und bei nativ kompilierten benutzerdefinierten Skalarfunktionen nicht funktionsfähig, da die Funktionen niemals ein Resultset zurückgeben.|  
-|RESULT SETS NONE|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Stellt sicher, dass von der EXECUTE-Anweisung keine Ergebnisse zurückgegeben werden. Wenn Ergebnisse zurückgegeben werden, wird der Batch abgebrochen.<br /><br /> Diese Option ist bei interpretierten benutzerdefinierten Skalarfunktionen und bei nativ kompilierten benutzerdefinierten Skalarfunktionen nicht funktionsfähig, da die Funktionen niemals ein Resultset zurückgeben.|  
-|*\<result_sets_definition>*|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Stellt sicher, dass das Ergebnis wie in der result_sets_definition angegeben zurückgegeben wird. Stellen Sie mehrere *result_sets_definition*-Abschnitte für Anweisungen bereit, die mehrere Resultsets zurückgeben. Schließen Sie jede *result_sets_definition* in Klammern ein, jeweils durch Kommas getrennt. Weitere Informationen finden Sie unter \<result_sets_definition> weiter unten in diesem Thema.<br /><br /> Diese Option führt bei nativ kompilierten benutzerdefinierten Skalarfunktionen immer zu einem Fehler, da die Funktionen niemals ein Resultset zurückgeben.|
+|**RESULT SETS UNDEFINED**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Bei dieser Option ist nicht sichergestellt, dass, und, wenn ja, welche Ergebnisse zurückgegeben werden, und es wird keine Definition bereitgestellt. Die Anweisung wird ohne Fehler ausgeführt, wenn Ergebnisse zurückgegeben werden oder wenn keine Ergebnisse zurückgegeben werden. RESULT SETS UNDEFINED ist das Standardverhalten, wenn keine result_sets_option angegeben wird.<br /><br /> Diese Option ist bei interpretierten benutzerdefinierten Skalarfunktionen und bei nativ kompilierten benutzerdefinierten Skalarfunktionen nicht funktionsfähig, da die Funktionen niemals ein Resultset zurückgeben.|  
+|RESULT SETS NONE|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Stellt sicher, dass von der EXECUTE-Anweisung keine Ergebnisse zurückgegeben werden. Wenn Ergebnisse zurückgegeben werden, wird der Batch abgebrochen.<br /><br /> Diese Option ist bei interpretierten benutzerdefinierten Skalarfunktionen und bei nativ kompilierten benutzerdefinierten Skalarfunktionen nicht funktionsfähig, da die Funktionen niemals ein Resultset zurückgeben.|  
+|*\<result_sets_definition>*|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Stellt sicher, dass das Ergebnis wie in der result_sets_definition angegeben zurückgegeben wird. Stellen Sie mehrere *result_sets_definition*-Abschnitte für Anweisungen bereit, die mehrere Resultsets zurückgeben. Schließen Sie jede *result_sets_definition* in Klammern ein, jeweils durch Kommas getrennt. Weitere Informationen finden Sie unter \<result_sets_definition> weiter unten in diesem Thema.<br /><br /> Diese Option führt bei nativ kompilierten benutzerdefinierten Skalarfunktionen immer zu einem Fehler, da die Funktionen niemals ein Resultset zurückgeben.|
   
-\<result_sets_definition> **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition> **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Beschreibt die von den ausgeführten Anweisungen zurückgegebenen Resultsets. Die Klauseln der result_sets_definition haben folgende Bedeutung:  
   
@@ -327,7 +327,7 @@ Wenn Sie ein einzelnes Wort übergeben, das nicht mit `@` beginnt und nicht in A
   
  Das tatsächliche Resultset, das während der Ausführung zurückgegeben wird, kann sich vom Ergebnis unterscheiden, das mit der WITH RESULT SETS-Klausel auf eine der folgenden Arten definiert wurde: Anzahl der Resultsets, Anzahl der Spalten, Spaltenname, NULL-Zulässigkeit und Datentyp. Wenn die Anzahl der Resultsets abweicht, tritt ein Fehler auf, und der Batch wird abgebrochen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Parameter können entweder mit *value* oder mit @*parameter_name*=*value* angegeben werden. angegeben werden. Ein Parameter ist nicht Teil einer Transaktion. Deshalb wird der Wert eines Parameters, der in einer Transaktion geändert wird, nicht wieder auf seinen ursprünglichen Wert zurückgesetzt, wenn für diese Transaktion später ein Rollback ausgeführt wird. Der Wert, der an den Aufrufer zurückgegeben wird, ist immer der Wert zu dem Zeitpunkt, zu dem das Modul beendet wird.  
   
  Die Schachtelung erfolgt, wenn ein Modul ein anderes Modul aufruft oder verwalteten Code durch Verweis auf ein CLR-Modul (Common Language Runtime), einen benutzerdefinierten Typ oder ein Aggregat ausführt. Die Schachtelungsebene wird um eins erhöht, wenn das aufgerufene Modul oder der Verweis auf den verwalteten Code mit der Ausführung beginnt, und wird wieder um eins erniedrigt, wenn das aufgerufene Modul oder der Verweis auf den verwalteten Code beendet ist. Ein Überschreiten der maximal möglichen 32 Schachtelungsebenen führt zu einem Fehler der gesamten Aufrufskette. Die aktuelle Schachtelungsebene wird in der @@NESTLEVEL-Systemfunktion gespeichert.  
@@ -455,7 +455,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. Verwenden von EXECUTE mit einer remote gespeicherten Prozedur  
  Im folgenden Beispiel wird die gespeicherte Prozedur `uspGetEmployeeManagers` auf dem Remoteserver `SQLSERVER1` ausgeführt und der Rückgabestatus, der anzeigt, ob die Ausführung erfolgreich war oder nicht, in `@retstat` gespeichert.  
   
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
 ```  
 DECLARE @retstat int;  
@@ -514,7 +514,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ### <a name="g-using-execute-with-at-linked_server_name"></a>G. Verwenden von EXECUTE mit AT linked_server_name  
  Das folgende Beispiel übergibt eine Befehlszeichenfolge an einen Remoteserver. Der Verbindungsserver `SeattleSales` wird erstellt, der auf eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweist und eine DDL-Anweisung (`CREATE TABLE`) auf diesem Verbindungsserver ausführt.  
   
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -546,7 +546,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. Verwenden von EXECUTE zum Abfragen einer Oracle-Datenbank auf einem Verbindungsserver  
  Das folgende Beispiel führt mehrere `SELECT`-Anweisungen auf dem Oracle-Remoteserver aus. Zunächst wird der Oracle-Server als Verbindungsserver hinzugefügt und der Anmeldename für den Verbindungsserver erstellt.  
   
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
 ```  
 -- Setup the linked server.  
@@ -589,7 +589,7 @@ GO
 ### <a name="l-using-a-parameter-with-execute-and-at-linked_server_name"></a>L. Verwenden eines Parameters mit EXECUTE und AT linked_server_name  
  Im folgenden Beispiel wird eine Befehlszeichenfolge an einen Remoteserver übergeben, indem ein Fragezeichen (`?`) als Platzhalter für einen Parameter verwendet wird. Im Beispiel wird zunächst ein Verbindungsserver `SeattleSales` erstellt, der auf eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweist. Anschließend wird eine `SELECT`-Anweisung auf diesem Verbindungsserver ausgeführt. In der `SELECT`-Anweisung wird das Fragezeichen als Platzhalter für den `ProductID`-Parameter (`952`) verwendet, der hinter der Anweisung angegeben wird.  
   
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
 ```  
 -- Setup the linked server.  
@@ -605,7 +605,7 @@ GO
 ### <a name="m-using-execute-to-redefine-a-single-result-set"></a>M. Neudefinieren eines einzelnen Resultsets mithilfe von EXECUTE  
  In einigen der vorangehenden Beispiele wurde `EXEC dbo.uspGetEmployeeManagers 6;` ausgeführt, und 7 Spalten wurden zurückgegeben. Im folgenden Beispiel wird veranschaulicht, wie mit der `WITH RESULT SET`-Syntax die Namen und Datentypen des zurückgebenden Resultsets geändert werden.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 EXEC uspGetEmployeeManagers 16  
@@ -625,7 +625,7 @@ WITH RESULT SETS
 ### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>N. Neudefinieren zweier Resultsets mithilfe von EXECUTE  
  Wenn Sie eine Anweisung ausführen, die mehr als ein Resultset zurückgibt, definieren Sie jedes erwartete Resultset. Im folgenden Beispiel in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] wird eine Prozedur erstellt, die zwei Resultsets zurückgibt. Anschließend wird die Prozedur mit der **WITH RESULT SETS**-Klausel ausgeführt, und es werden zwei Resultsetdefinitionen angegeben.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 --Create the procedure  

@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901962"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981765"
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "67901962"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -221,7 +221,7 @@ Bei Angabe von FORCESEEK mit Indexparametern gelten die folgenden Richtlinien un
 > [!CAUTION]  
 > Bei Angabe von FORCESEEK mit Parametern wird die Anzahl von Plänen, die vom Optimierer berücksichtigt werden können, stärker eingeschränkt als bei Angabe von FORCESEEK ohne Parameter. Dies kann dazu führen, dass der `Plan cannot be generated`-Fehler in mehreren Fällen auftritt. In zukünftigen Releases können durch interne Änderungen des Abfrageoptimierers möglicherweise mehr Pläne berücksichtigt werden.  
   
-FORCESCAN **gilt für:** [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+FORCESCAN **gilt für:** [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 und höher.
 Gibt an, dass der Abfrageoptimierer nur einen Indexscanvorgang als Zugriffspfad auf die referenzierte Tabelle oder Sicht verwenden darf. Der FORCESCAN-Hinweis kann bei Abfragen nützlich sein, in denen der Optimierer die Anzahl betroffener Zeilen unterschätzt und einen Such- statt eines Scanvorgangs auswählt. In diesem Fall ist der für den Vorgang bereitgestellte Arbeitsspeicher zu klein, was sich negativ auf die Abfrageleistung auswirkt.  
   
 FORCESCAN kann mit oder ohne INDEX-Hinweis angegeben werden. Bei Kombination mit einem Indexhinweis (`INDEX = index_name, FORCESCAN`) berücksichtigt der Abfrageoptimierer beim Zugriff auf die Tabelle, auf die verwiesen wird, nur Scanzugriffspfade über den angegebenen Index. FORCESCAN kann mit dem Indexhinweis INDEX(0) angegeben werden, um einen Tabellenscanvorgang für die Basistabelle zu erzwingen.  
@@ -317,7 +317,7 @@ SERIALIZABLE
 Entspricht der Option HOLDLOCK. Verstärkt die Einschränkung von freigegebenen Sperren, indem sie aufrechterhalten werden, bis eine Transaktion abgeschlossen ist (anstatt die freigegebene Sperre aufzuheben, sobald die benötigte Tabelle oder Datenseite nicht mehr gebraucht wird, ganz gleich, ob die Transaktion abgeschlossen ist oder nicht). Der Scan wird mit derselben Sperrsemantik wie eine Transaktion durchgeführt, die auf der Isolationsstufe SERIALIZABLE ausgeführt wird. Weitere Informationen zu Isolationsstufen in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 SNAPSHOT  
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher. 
   
 Auf die speicheroptimierte Tabelle wird unter der SNAPSHOT-Isolation zugegriffen. SNAPSHOT kann nur mit speicheroptimierten Tabellen verwendet werden (nicht mit datenträgerbasierten Tabellen). Weitere Informationen finden Sie unter [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -329,7 +329,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
 SPATIAL_WINDOW_MAX_CELLS = *integer*  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
 Gibt die maximale Anzahl der Zellen an, die für die Mosaikbearbeitung eines geometry- oder geography-Objekts verwendet werden sollen. *number* muss einen Wert zwischen 1 und 8192 aufweisen.  
   
 Mit dieser Option können Sie die Ausführungszeit von Abfragen optimieren, indem Sie den Zusammenhang zwischen der Ausführungszeit des primären und des sekundären Filters kontrollieren. Ein höherer Wert verringert die Ausführungszeit des sekundären Filters, erhöht jedoch die Ausführungszeit des primären Filters. Ein niedrigerer Wert verringert die Ausführungszeit des primären Filters, erhöht jedoch die Ausführungszeit des sekundären Filters. Bei räumlichen Daten mit größerer Dichte sollte ein höherer Wert durch bessere Angleichung an den primären Filter und Verringerung der Ausführungszeit des sekundären Filters in einer niedrigeren Ausführungszeit resultieren. Bei Daten mit geringer Dichte verringert ein niedrigerer Wert die Ausführungszeit des primären Filters.  
@@ -354,7 +354,7 @@ Bei Angabe von UPDLOCK werden die Isolationsstufenhinweise READCOMMITTED und REA
 XLOCK  
 Gibt an, dass exklusive Sperren zu verwenden und aufrechtzuerhalten sind, bis die Transaktion abgeschlossen ist. Wenn die exklusiven Sperren mit ROWLOCK, PAGLOCK oder TABLOCK angegeben werden, werden sie auf die entsprechende Ebene der Granularität angewendet.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 Tabellenhinweise werden ignoriert, wenn der Abfrageplan nicht auf die Tabelle zugreift. Dies ist möglicherweise darauf zurückzuführen, dass der Optimierer überhaupt nicht auf die Tabelle oder stattdessen auf eine indizierte Sicht zugreift. In letzterem Fall kann der Zugriff auf eine indizierte Sicht verhindert werden, indem der Abfragehinweis OPTION (EXPAND VIEWS) verwendet wird.  
   
 Alle Sperrhinweise werden an alle Tabellen und Sichten weitergeleitet, auf die der Abfrageplan zugreift, auch an Tabellen und Sichten, auf die in einer Sicht verwiesen wird. Zusätzlich nimmt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die entsprechenden Sperrkonsistenzprüfungen vor.  

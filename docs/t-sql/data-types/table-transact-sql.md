@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e431b51db33f889acd9bcce5e93222b451ad3237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4a36b287554332589f11a352233eaffe972ac06
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000461"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981731"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "68000461"
 Entspricht einem speziellen Datentyp, der zum Speichern eines Resultsets für die Verarbeitung zu einem späteren Zeitpunkt verwendet wird. **table** wird hauptsächlich für die temporäre Speicherung eines Zeilensatzes verwendet, der als Resultset einer Tabellenwertfunktion zurückgegeben wird. Für Funktionen und Variablen kann der Typ **table** angegeben werden. **table**-Variablen können in Funktionen, gespeicherten Prozeduren und Batches verwendet werden. Verwenden Sie zum Deklarieren von Variablen des **table**-Typs die Anweisung [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]und höher), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +65,7 @@ Weitere Informationen zur Syntax finden Sie unter [CREATE TABLE &#40;Transact-SQ
 *collation_definition*  
 Die Sortierung einer Spalte, die aus einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschema und einer Vergleichsart, einem Windows-Gebietsschema und der Binärschreibweise oder einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierung besteht. Wenn *collation_definition* nicht angegeben ist, erbt die Spalte die Sortierung der aktuellen Datenbank. Wenn die Spalte als CLR-benutzerdefinierter Typ (Common Language Runtime) definiert ist, erbt die Spalte die Sortierung des benutzerdefinierten Typs.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 **table** verweist anhand des Namens in der FROM-Klausel eines Batches auf Variablen, wie im folgenden Beispiel gezeigt:
   
 ```sql

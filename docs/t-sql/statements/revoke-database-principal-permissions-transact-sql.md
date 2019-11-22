@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ee69855ebc242218e0a254c538e3c7e00fee7747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fe8146758dd8d8571ee86c67c757bb61897f419d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082319"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982908"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (Berechtigungen für Datenbankprinzipal) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Hebt Berechtigungen auf, die für einen Datenbankbenutzer, eine Datenbankrolle oder Anwendungsrolle erteilt oder verweigert wurden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,7 +68,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Gibt die Klasse und den Namen der Rolle an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer ( **::** ) ist erforderlich.  
   
  APPLICATION ROLE ::*application_role*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Gibt die Klasse und den Namen der Anwendungsrolle an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer ( **::** ) ist erforderlich.  
   
@@ -93,34 +93,34 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Gibt eine Datenbankrolle an.  
   
  *Application_role*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Gibt eine Anwendungsrolle an.  
   
  *Database_user_mapped_to_Windows_User*  
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
  Gibt einen Datenbankbenutzer an, der einem Windows-Benutzer zugeordnet ist.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
  Gibt einen Datenbankbenutzer an, der einer Windows-Gruppe zugeordnet ist.  
   
  *Database_user_mapped_to_certificate*  
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
  Gibt einen Datenbankbenutzer an, der einem Zertifikat zugeordnet ist.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
  Gibt einen Datenbankbenutzer an, der einem asymmetrischen Schlüssel zugeordnet ist.  
   
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="database-user-permissions"></a>Berechtigungen für Datenbankbenutzer  
  Ein Datenbankbenutzer ist ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für einen Datenbankbenutzer aufgehoben werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
@@ -180,7 +180,7 @@ GO
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Aufheben der IMPERSONATE-Berechtigung für einen Benutzer für eine Anwendungsrolle  
  Im folgenden Beispiel wird die `IMPERSONATE`-Berechtigung für den Benutzer `HamithaL` für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Anwendungsrolle `AccountsPayable17` aufgehoben.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```  
 USE AdventureWorks2012;  

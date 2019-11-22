@@ -10,25 +10,25 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149986"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056754"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Wählen einer Upgrademethode für die Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUDE[ssDE](../../includes/ssde-md.md)] von einer früheren Version von SQL Server, um Ausfallzeiten und Risiken zu minimieren. Sie können ein direktes Upgrade ausführen, zu einer neuen Installation migrieren oder ein paralleles Upgrade vornehmen. Das folgende Diagramm hilft Ihnen, zwischen diesen Ansätzen auszuwählen. Jeder der Ansätze im Diagramm wird außerdem nachstehend erläutert. Informationen zu den Entscheidungskriterien im Diagramm finden Sie auch unter [Planen und Testen des Upgradeplans für doe Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
- ![Entscheidungsstruktur der Upgrademethode für das Datenbankmodul](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Database Engine Upgrade Method Decision Tree")  
+ ![Entscheidungsstruktur der Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Entscheidungsstruktur der Upgrademethode für die Datenbank-Engine")  
   
  **Download**  
   
 -   Navigieren Sie zum Herunterladen von [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
   
--   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition bereits installiert ist.  
+-   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=overview)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition bereits installiert ist.  
   
 > [!NOTE]  
 >  Sie können auch ein Upgrade auf Azure SQL-Datenbank erwägen oder Ihre SQL Server-Umgebung als Teil Ihres Upgradeplans virtualisieren. Diese Themen liegen außerhalb des Rahmens dieses Artikels, hier finden Sie jedoch einige Links:
@@ -57,7 +57,7 @@ Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUD
   
  Das folgende Diagramm bietet einen allgemeinen Überblick über die Schritte, die für ein direktes Upgrade des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s erforderlich sind.  
   
- ![Hoch verfügbares, direktes Update für das Datenbankmodulupgrade](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "Database Engine Upgrade Non-HA In-Place Upgrade")  
+ ![Nicht hoch verfügbares direktes Upgrade der Datenbank-Engine](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "Nicht hoch verfügbares direktes Upgrade der Datenbank-Engine")  
   
  Ausführliche Schritte finden Sie unter [Upgrade von SQL Server mithilfe des Installations-Assistenten (Setup)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
@@ -95,11 +95,11 @@ Die erforderlichen Schritte für ein Upgrade auf eine neue Installation hängen 
   
 -   **Umgebung mit zugeordnetem Speicher:** Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Umgebung mit zugeordnetem Speicher haben, finden Sie im folgenden Diagramm und unter den darin enthaltenen Links die Schritte, die für ein Upgrade auf eine neue Installation der [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlich sind.  
   
-     ![Neue Installationsupgrademethode mithilfe einer Sicherung und der Wiederherstellung für einen angeschlossenen Speicher](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "New installation upgrade method using backup and restore for attached storage")  
+     ![Neue Installationsupgrademethode mithilfe einer Sicherung und der Wiederherstellung für einen angeschlossenen Speicher](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Neue Installationsupgrademethode mithilfe einer Sicherung und der Wiederherstellung für einen angeschlossenen Speicher")  
   
 -   **SAN-Speicherumgebung:**  Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Umgebung mit SAN-Speicher haben, finden Sie im folgenden Diagramm und unter den darin enthaltenen Links die Schritte, die für ein Upgrade auf eine neue Installation der [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlich sind.  
   
-     ![Neue Installationsupgrademethode mithilfe von Trennen und Anfügen für den SAN-Speicher](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "New installation upgrade method using detach and attach for SAN storage")  
+     ![Neue Installationsupgrademethode mithilfe von Trennen und Anfügen für den SAN-Speicher](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Neue Installationsupgrademethode mithilfe von Trennen und Anfügen für den SAN-Speicher")  
   
 ## <a name="rolling-upgrade"></a>parallelen Upgrade  
  Ein paralleles Update ist in Umgebungen mit SQL Server-Lösungen mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen erforderlich, die in einer bestimmten Reihenfolge aktualisiert werden müssen, um die Betriebszeit zu maximieren, Risiken zu minimieren und Funktionalität beizubehalten. Ein paralleles Upgrade ist im Wesentlichen die Aktualisierung mehrerer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen in einer bestimmten Reihenfolge, wobei entweder ein direktes Upgrade jeder vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz oder ein Upgrade auf eine neue Installation erfolgt, um die Aktualisierung von Hardware und/oder des Betriebssystems im Rahmen des Upgradeprojekts zu erleichtern. Es gibt eine Reihe von Szenarien, in denen der parallele Upgradeansatz befolgt werden muss. Diese Szenarien sind in den folgenden Artikeln dokumentiert:  

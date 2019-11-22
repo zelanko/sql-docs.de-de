@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809823"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982718"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68809823"
 > [!NOTE]  
 >  Die Integration der .NET Framework-CLR in SQL Server wird in diesem Thema erläutert. Die CLR-Integration gilt nicht für Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -197,7 +197,7 @@ column_name <data_type>
  Gibt an, ob für den Typ NULL-Werte zulässig sind. Wird keine Angabe gemacht, ist NULL der Standardwert.  
   
  *assembly_name*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Assembly an, die auf die Implementierung des benutzerdefinierten Typs in der Common Language Runtime (CLR) verweist. *assembly_name* sollte einer vorhandenen Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der aktuellen Datenbank entsprechen.  
   
@@ -205,7 +205,7 @@ column_name <data_type>
 >  EXTERNAL_NAME ist in einer eigenständigen Datenbank nicht verfügbar.  
   
  **[.** *class_name*  **]**  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt die Klasse innerhalb der Assembly an, die den benutzerdefinierten Typ implementiert. *class_name* muss ein gültiger Bezeichner sein und als Klasse mit Assemblysichtbarkeit in der Assembly vorhanden sein. Bei *class_name* muss unabhängig von der Datenbanksortierung die Groß-/Kleinschreibung beachtet werden, und der Wert muss genau dem Klassennamen in der entsprechenden Assembly entsprechen. Der Klassenname kann ein mit einem Namespace qualifizierter Name sein, der in eckigen Klammern ( **[ ]** ) steht, wenn die Programmiersprache, die zum Schreiben der Klasse verwendet wird, das Konzept von Namespaces verwendet, wie z.B. C#. Wenn *class_name* nicht angegeben ist, geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon aus, dass der Wert mit *type_name* identisch ist.  
   
@@ -229,7 +229,7 @@ column_name <data_type>
  
   `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Gibt an, dass ein Index in der Tabelle erstellt werden soll. Dies kann ein gruppierter oder ein nicht gruppierter Index sein. Der Index enthält die aufgelisteten Spalten und sortiert die Daten in aufsteigender oder absteigender Reihenfolge.
   
@@ -237,21 +237,21 @@ Gibt an, dass ein Index in der Tabelle erstellt werden soll. Dies kann ein grupp
  Sie müssen Spalten- und Tabellenindizes als Teil der CREATE TABLE-Anweisung angeben. CREATE INDEX und DROP INDEX werden für speicheroptimierte Tabellen nicht unterstützt.  
   
  MEMORY_OPTIMIZED  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt an, ob der Tabellentyp speicheroptimiert ist. Diese Option ist standardmäßig deaktiviert; die Tabelle (der Tabellentyp) ist keine speicheroptimierte Tabelle (kein speicheroptimierter Tabellentyp). Speicheroptimierte Tabellentypen sind speicheroptimierte Benutzertabellen, deren Schema auf dem Datenträger ähnlich anderen Benutzertabellen beibehalten wird.  
   
  BUCKET_COUNT  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt die Anzahl der Buckets an, die im Hashindex erstellt werden sollen. Der maximale Wert für BUCKET_COUNT in Hashindizes beträgt 1.073.741.824. Weitere Informationen zu Indizes für speicheroptimierte Tabellen finden Sie unter [Indexes for Memory-Optimized Tables (Indizes für speicheroptimierte Tabellen)](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *bucket_count* ist ein erforderliches Argument.  
   
  HASH  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt an, dass ein HASH-Index erstellt wird. Hashindizes werden nur für speicheroptimierte Tabellen unterstützt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Die Klasse der Assembly, auf die in *assembly_name* verwiesen wird, und ihre Methoden sollten alle Anforderungen zum Implementieren eines benutzerdefinierten Typs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfüllen. Weitere Informationen zu diesen Anforderungen finden Sie unter [CLR User-Defined Types (Benutzerdefinierte CLR-Typen)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
  Noch einige zusätzliche Überlegungen:  
@@ -297,7 +297,7 @@ FROM varchar(11) NOT NULL ;
 ### <a name="b-creating-a-user-defined-type"></a>B. Erstellen eines benutzerdefinierten Typs  
  Im folgenden Beispiel wird der Typ `Utf8String` erstellt, der auf die Klasse `utf8string` in der Assembly `utf8string` verweist. Vor dem Erstellen des Typs wird die Assembly `utf8string` in der lokalen Datenbank registriert. Ersetzen Sie den binären Teil der CREATE ASSEMBLY-Anweisung durch eine gültige Beschreibung.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 ```  
 CREATE ASSEMBLY utf8string  

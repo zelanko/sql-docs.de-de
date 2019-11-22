@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/17/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,22 +14,19 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de42757543ebc09a63de250178cc1c2e00aa8a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019788"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962339"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
 
 Diese Funktion gibt die ungefähre Anzahl von eindeutigen Ungleich-Null-Werten in einer Gruppe zurück. 
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-
-> [!NOTE]
-> APPROX_COUNT_DISTINCT ist ein öffentliches Vorschaufeature.  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +43,7 @@ Eine [expression](../../t-sql/language-elements/expressions-transact-sql.md) bel
 ## <a name="return-types"></a>Rückgabetypen
  **bigint**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 `APPROX_COUNT_DISTINCT( expression )` wertet einen Ausdruck für jede Zeile in einer Gruppe aus und gibt die geschätzte Anzahl der eindeutigen Werte in einer Gruppe zurück, die nicht NULL sind. Diese Funktion wurde entwickelt, um Aggregationen über große Datasets hinweg bereitzustellen, bei denen die Reaktionsfähigkeit wichtiger ist als die absolute Präzision.  
 
 `APPROX_COUNT_DISTINCT` ist für den Einsatz in großen Datenszenarien konzipiert und für die folgenden Bedingungen optimiert:
@@ -58,7 +55,7 @@ Die Funktionsimplementierung garantiert eine Fehlerquote von bis zu 2 % mit eine
 `APPROX_COUNT_DISTINCT` erfordert weniger Speicherplatz als ein vollständiger COUNT DISTINCT-Vorgang.  Angesichts des geringeren Speicherbedarfs ist es weniger wahrscheinlich, dass durch `APPROX_COUNT_DISTINCT` weniger Speicher zum Datenträger überläuft, als bei einem präzisen COUNT DISTINCT-Vorgang. Weitere Informationen zu dem Algorithmus, mit dem dies erreicht wird, finden Sie unter [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog).
 
 > [!NOTE]
-> Bei sortierungsbezogenen Zeichenfolgen verwendet die öffentliche Vorschauversion von APPROX_COUNT_DISTINCT einen binären Abgleich und liefert Ergebnisse, die bei Vorhandensein von BIN-Sortierungen und nicht von BIN2 erzeugt worden wären. 
+> Bei sortierungsbezogenen Zeichenfolgen verwendet APPROX_COUNT_DISTINCT einen binären Abgleich und liefert Ergebnisse, die bei Vorhandensein von BIN-Sortierungen und nicht von BIN2 erzeugt worden wären. 
   
 ## <a name="examples"></a>Beispiele  
   

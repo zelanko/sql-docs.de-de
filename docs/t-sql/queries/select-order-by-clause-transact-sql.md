@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11aac623d6648fb08e65cff12cdfcf3beaaa2499
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419640"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981713"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY-Klausel (Transact-SQL)
 
@@ -56,7 +56,7 @@ ms.locfileid: "68419640"
   
 -   Bestimmen Sie die Reihenfolge, in der Werte der [Rangfolgenfunktion](../../t-sql/functions/ranking-functions-transact-sql.md) auf das Resultset angewendet werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  ORDER BY wird in SELECT/INTO- oder CREATE TABLE AS SELECT (CTAS)-Anweisungen in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nicht unterstützt.
@@ -116,7 +116,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Gibt die Anzahl der Zeilen an, die übersprungen werden soll, bevor Zeilen vom Abfrageausdruck zurückgegeben werden. Der Wert kann eine ganzzahlige Konstante oder ein Ausdruck größer oder gleich 0 sein.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *offset_row_count_expression* kann eine Variable, ein Parameter oder eine konstante skalare Unterabfrage sein. Bei einer Unterabfrage sind keine Verweise auf Spalten möglich, die im äußeren Abfragebereich definiert wurden. Dies bedeutet, das keine Korrelation mit der äußeren Abfrage möglich ist.  
   
@@ -127,7 +127,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  Gibt die Anzahl der Zeilen an, die zurückgegeben werden sollen, nachdem die OFFSET-Klausel verarbeitet wurde. Der Wert kann eine ganzzahlige Konstante oder ein Ausdruck größer oder gleich 1 sein.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *fetch_row_count_expression* kann eine Variable, ein Parameter oder eine konstante skalare Unterabfrage sein. Bei einer Unterabfrage sind keine Verweise auf Spalten möglich, die im äußeren Abfragebereich definiert wurden. Dies bedeutet, das keine Korrelation mit der äußeren Abfrage möglich ist.  
   
@@ -364,7 +364,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> Beschränken der Anzahl der zurückgegebenen Zeilen  
  In den folgenden Beispielen wird die Anzahl der Zeilen, die von einer Abfrage zurückgegeben werden, mit OFFSET und FETCH eingeschränkt.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Angeben von ganzzahligen Konstanten für OFFSET- und FETCH-Werte  
  Im folgenden Beispiel wird eine ganzzahlige Konstante als Wert für die OFFSET- und die FETCH-Klausel angegeben. Die erste Abfrage gibt alle Zeilen nach der `DepartmentID`-Spalte sortiert zurück. Vergleichen Sie die von dieser Abfrage zurückgegebenen Ergebnisse mit denen der beiden folgenden Abfragen. In der folgenden Abfrage werden mit der `OFFSET 5 ROWS`-Klausel die ersten 5 Zeilen übersprungen und alle verbleibenden Zeilen zurückgegeben. In der letzten Abfrage wird mit der `OFFSET 0 ROWS`-Klausel bei der ersten Zeile begonnen, und anschließend wird mit `FETCH NEXT 10 ROWS ONLY` die Anzahl der zurückgegebenen Zeilen vom sortierten Resultset auf 10 begrenzt.  

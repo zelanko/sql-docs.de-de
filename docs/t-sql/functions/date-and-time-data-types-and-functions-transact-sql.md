@@ -21,12 +21,12 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a823ffd693e770f97811124d77f39763680fb658
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a478288ef82764c5dc6d044132fb66dc7e3f9bf
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999267"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982959"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)
 
@@ -124,10 +124,10 @@ In den folgenden Tabellen werden die Datums- und Uhrzeitfunktionen von [!INCLUDE
 |Funktion|Syntax|Rückgabewert|Rückgabedatentyp|Determinismus|  
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Gibt den für die Sitzung aktuellen Wert von SET DATEFIRST zurück.|**tinyint**|Nicht deterministisch|  
-|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; * *@***number_var* }|Legt den ersten Wochentag auf eine Zahl von 1 bis 7 fest.|Nicht verfügbar|Nicht verfügbar|  
+|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **\@** _number_var_ }|Legt den ersten Wochentag auf eine Zahl von 1 bis 7 fest.|Nicht verfügbar|Nicht verfügbar|  
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@** _format_var_ }|Legt die Reihenfolge der Datumsbestandteile (Tag, Monat, Jahr) für die Eingabe von **datetime**- oder **smalldatetime**-Daten fest.|Nicht verfügbar|Nicht verfügbar|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Gibt den Namen der derzeit verwendeten Sprache zurück. @@LANGUAGE ist keine Datums- oder Uhrzeitfunktion. Die Spracheinstellung kann sich jedoch auf die Ausgabe von Datumsfunktionen auswirken.|Nicht verfügbar|Nicht verfügbar|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'** _Sprache_ **'** &#124; * *@***language_var* }|Legt die Sprachumgebung für die Sitzung und die Systemmeldungen fest. SET LANGUAGE ist keine Datums- oder Uhrzeitfunktion. Die Spracheinstellung wirkt sich jedoch auf die Ausgabe von Datumsfunktionen aus.|Nicht verfügbar|Nicht verfügbar|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'** _language_ **'** &#124; **\@** _language_var_ }|Legt die Sprachumgebung für die Sitzung und die Systemmeldungen fest. SET LANGUAGE ist keine Datums- oder Uhrzeitfunktion. Die Spracheinstellung wirkt sich jedoch auf die Ausgabe von Datumsfunktionen aus.|Nicht verfügbar|Nicht verfügbar|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'** _Sprache_ **'** ]|Gibt Informationen den Datumsformaten aller unterstützten Sprachen zurück. **sp_helplanguage** ist keine gespeicherte Prozedur für Datum oder Uhrzeit. Die Spracheinstellung wirkt sich jedoch auf die Ausgabe von Datumsfunktionen aus.|Nicht verfügbar|Nicht verfügbar|  
   
 ###  <a name="ValidateDateandTimeValues"></a> Funktionen, die Datums- und Uhrzeitwerte überprüfen

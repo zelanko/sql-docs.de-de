@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff0c616342af9f00be56fbed3ecfb3d09dedb9ef
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3627e62bafefaa33eee4b238e1e33cd1ea127137
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532836"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982158"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -127,7 +127,7 @@ ALTER DATABASE { database_name | CURRENT }
 > [!NOTE]
 > Diese Option ist in einer eigenständigen Datenbank nicht verfügbar.
 
-CURRENT **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+CURRENT **Gilt derzeit für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher
 
 Legt fest, dass die zurzeit verwendete Datenbank geändert werden soll.
 
@@ -143,7 +143,7 @@ Beim Erstellen von Datenbanken mit einer von der Standardsortierung abweichenden
 Weitere Informationen zu den Namen von Windows- und SQL-Sortierungen finden Sie unter [COLLATE](~/t-sql/statements/collations.md).
 
 **\<delayed_durability_option> ::=** 
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher
 
 Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen](../../t-sql/statements/alter-database-transact-sql-set-options.md) und [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md).
 
@@ -235,7 +235,7 @@ GO
 
 Im folgenden Beispiel wird die Datenbank `testdb` mit der `SQL_Latin1_General_CP1_CI_A`S-Sortierung erstellt. Danach wird die Sortierung der Datenbank `testdb` in `COLLATE French_CI_AI` geändert.
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 USE master;
@@ -425,77 +425,77 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB): Gibt die maximale
 
 \* P11 und P15 ermöglichen, dass die Größe von MAXSIZE bis zu 4 TB beträgt, wobei 1024 GB die Standardgröße darstellt. P11 und P15 können bis zu 4 TB des enthaltenen Speichers ohne Aufpreis verwenden. Im Premium-Tarif ist MAXSIZE mit einer Größe von mehr als 1 TB derzeit in den folgenden Regionen verfügbar: USA, Osten 2; USA, Westen; US Gov Virginia; Europa, Westen; Deutschland, Mitte; Asien, Südosten; Japan, Osten; Australien, Osten; Kanada, Mitte und Kanada, Osten. Zusätzliche Informationen bezüglich der Ressourcenbeschränkungen für das DTU-Modell finden Sie unter [DTU-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
-Der MAXSIZE-Wert für das DTU-Modell muss – wenn angegeben – ein gültiger Wert sein, der in der Tabelle oben für die angegebene Dienstebene angezeigt wird.
+Der MAXSIZE-Wert für das DTU-Modell muss – wenn angegeben – ein gültiger Wert sein, der in der Tabelle oben für die festgelegte Dienstebene angezeigt wird.
 
 **V-Kern-Modell**
 
-**Universell – bereitgestellte Computekapazität – Gen4 (Teil 1)**
+**Universell – bereitgestellte Computekapazität – Gen4 (Teil 1)**
 
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |Maximale Datengröße (GB)|1024|1024|1024|1536|1536|1536|
 
-**Universell – bereitgestellte Computekapazität – Gen4 (Teil 2)**
+**Universell – bereitgestellte Computekapazität – Gen4 (Teil 2)**
 
 |MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |Maximale Datengröße (GB)|1536|3072|3072|3072|4096|4096|
 
-**Universell – bereitgestellte Computekapazität – Gen5 (Teil 1)**
+**Universell – bereitgestellte Computekapazität – Gen5 (Teil 1)**
 
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Maximale Datengröße (GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**Universell – bereitgestellte Computekapazität – Gen5 (Teil 2)**
+**Universell – bereitgestellte Computekapazität – Gen5 (Teil 2)**
 
 |MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Maximale Datengröße (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**Universell – bereitgestellte Computekapazität – Fsv2-Serie (Vorschau)**
+**Universell – bereitgestellte Computekapazität – Fsv2-Serie (Preview)**
 
 |MAXSIZE|GP_Fsv2_72|
 |:----- | ------: |
 |Maximale Datengröße (GB)|4096|
 
-**Universell – serverlose Computekapazität – Gen5 (Teil 1)**
+**Universell – serverlose Computekapazität – Gen5 (Teil 1)**
 
 |MAXSIZE|GP_S_Gen5_1|GP_S_Gen5_2|GP_S_Gen5_4|GP_S_Gen5_6|GP_S_Gen5_8|
 |:----- | ------: |-------: |-------: |-------: |--------: |
 |Max. virtuelle Kerne|1|2|4|6|8|
 
-**Universell – serverlose Computekapazität – Gen5 (Teil 2)**
+**Universell – serverlose Computekapazität – Gen5 (Teil 2)**
 
 |MAXSIZE|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|
 |:----- | ------: |-------: |-------: |-------: |
 |Max. virtuelle Kerne|10|12|14|16|
 
-**Unternehmenskritisch – bereitgestellte Computekapazität – Gen4 (Teil 1)**
+**Unternehmenskritisch – bereitgestellte Computekapazität – Gen4 (Teil 1)**
 
 |Leistungsebene|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |Maximale Datengröße (GB)|1024|1024|1024|1024|1024|1024|
 
-**Unternehmenskritisch – bereitgestellte Computekapazität – Gen4 (Teil 2)**
+**Unternehmenskritisch – bereitgestellte Computekapazität – Gen4 (Teil 2)**
 
 |Leistungsebene|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |Maximale Datengröße (GB)|1024|1024|1024|1024|1024|1024|
 
-**Unternehmenskritisch – bereitgestellte Computekapazität – Gen5 (Teil 1)**
+**Unternehmenskritisch – bereitgestellte Computekapazität – Gen5 (Teil 1)**
 
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
 |Maximale Datengröße (GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**Unternehmenskritisch – bereitgestellte Computekapazität – Gen5 (Teil 2)**
+**Unternehmenskritisch – bereitgestellte Computekapazität – Gen5 (Teil 2)**
 
 |MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Maximale Datengröße (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**Unternehmenskritisch – bereitgestellte Computekapazität – M-Serie (Vorschau)**
+**Unternehmenskritisch – bereitgestellte Computekapazität – M-Serie (Preview)**
 
 |MAXSIZE|BC_M_128|
 |:----- | -------: |
@@ -520,12 +520,12 @@ SERVICE_OBJECTIVE
 
 - **Bei einzelnen und in einem Pool zusammengefassten Datenbanken**
 
-  - Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`.
+  - Gibt die Leistungsebene an. Als Dienstziele sind die folgenden Werte verfügbar: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`.
 
 
 - **Für serverlose Datenbanken**
 
-  - Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`.
+  - Gibt die Leistungsebene an. Als Dienstziele sind die folgenden Werte verfügbar: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`.
 
 
 - **Bei einzelnen Datenbanken im Diensttarif „Hyperscale“**

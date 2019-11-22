@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42d3d78b68f84b5ab44658114094bde77cc1f844
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113519"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962399"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Tools für die Leistungsüberwachung und -optimierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68113519"
   
 |Tool|und Beschreibung|  
 |----------|-----------------|  
-|[Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Integrierte Funktionen zeigen Momentaufnahmestatistiken über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität seit dem Starten des Servers an, die in vordefinierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsindikatoren gespeichert werden. So enthält beispielsweise **@@CPU_BUSY** die Zeitspanne, während der die CPU [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Code ausführte; **@@CONNECTIONS** enthält die Anzahl der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen oder versuchten Verbindungen, und **@@PACKET_ERRORS** enthält die Anzahl der Netzwerkpakete, die über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen übertragen wurden.|  
+|[Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Integrierte Funktionen zeigen Momentaufnahmestatistiken über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität seit dem Starten des Servers an, die in vordefinierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsindikatoren gespeichert werden. So enthält beispielsweise **\@\@CPU_BUSY** die Zeitspanne, während der die CPU[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Code ausführte; **\@\@CONNECTIONS** enthält die Anzahl der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen oder versuchten Verbindungen, und **\@\@PACKET_ERRORS** enthält die Anzahl der Netzwerkpakete, die über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen übertragen wurden.|  
 |[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC-Anweisungen (Database Consistency Checker, Datenbankkonsistenzprüfer) ermöglichen die Überprüfung der Leistungsstatistik und der logischen und physischen Konsistenz einer Datenbank.|  
 |[Datenbankoptimierungsratgeber (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md)|Der Datenbankoptimierungsratgeber analysiert die Leistungsauswirkungen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die auf die Datenbanken für die Optimierung ausgeführt werden. Der Datenbankoptimierungsratgeber bietet Empfehlungen zum Hinzufügen, Entfernen oder Ändern von Indizes, indizierten Sichten und Partitionierungen.|  
 |[Assistent für Datenbankexperimente (DEA)](https://www.microsoft.com/download/details.aspx?id=54090)|Der Assistent für Datenbankexperimente (DEA) ist eine neue A/B-Testlösung für SQL Server. Er unterstützt Sie bei der Auswertung einer Zielversion der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] für eine bestimmte Workload. Beim Upgrade aus einer vorherigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version (beginnend mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) auf eine neuere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann DEA Vergleichsanalysemetriken bereitstellen.|

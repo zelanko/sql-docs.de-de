@@ -1,6 +1,5 @@
 ---
-title: Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Beibehalten von NULL-Werten oder Standardwerten während des Massenimports
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,14 +20,15 @@ ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c32b4ce4d706986829fa63f1bff96a3e78356672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896668"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055959"
 ---
-# <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports (SQL Server)
+# <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Beibehalten von NULL-Werten oder Standardwerten während des Massenimports (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Wenn Daten in eine Tabelle importiert werden, werden standardmäßig alle für die Spalten in der Tabelle definierten Standardwerte durch den Befehl [bcp](../../tools/bcp-utility.md) und die Anweisung [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) überwacht.  Wenn beispielsweise ein NULL-Feld in einem Datenfeld vorkommt, wird stattdessen der Standardwert für die Spalte geladen.  Sowohl mit dem Befehl [bcp](../../tools/bcp-utility.md) als auch mit der Anweisung [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) können Sie angeben, dass NULL-Werte beibehalten werden sollen.

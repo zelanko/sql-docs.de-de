@@ -1,6 +1,5 @@
 ---
-title: Verbindungsserver (Datenbank-Engine) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verbindungsserver
 ms.date: 05/29/2019
 ms.prod: sql
 ms.technology: ''
@@ -19,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a7dc1d67e45bb8d67cebff9deb3a694b09038154
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073664"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094776"
 ---
 # <a name="linked-servers-database-engine"></a>Verbindungsserver (Datenbank-Engine)
 
@@ -64,7 +64,7 @@ Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 ## <a name="linked-server-details"></a>Einzelheiten zu Verbindungsservern  
  Die folgende Abbildung zeigt die Grundlagen einer Verbindungsserverkonfiguration.  
   
- ![Clientebene, Serverebene und Datenbankserverebene](../../relational-databases/linked-servers/media/lsvr.gif "Clientebene, Serverebene und Datenbankserverebene")  
+ ![Client-, Server- und Datenbankserverebene](../../relational-databases/linked-servers/media/lsvr.gif "Client-, Server- und Datenbankserverebene")  
   
 Verbindungsserver werden in der Regel für die Verarbeitung verteilter Abfragen verwendet. Führt eine Clientanwendung eine verteilte Abfrage über einen Verbindungsserver aus, analysiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Befehl und sendet Anforderungen an OLE DB. Für eine Rowsetanforderung kann eine Abfrage für den Anbieter ausgeführt oder eine Basistabelle vom Anbieter geöffnet werden.  
   

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809892"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982420"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ Das bedeutet, dass die Befehle DBCC CHECKALLOC, DBCC CHECKTABLE oder DBCC CHECKC
 >     
 > Da DBCC-Reparaturoptionen für speicheroptimierte Tabellen nicht verfügbar sind, müssen Sie Ihre Datenbanken regelmäßig sichern und die Sicherungen testen. Wenn bei einer speicheroptimierten Tabelle Datenintegritätsprobleme auftreten, müssen Sie die Tabelle aus der letzten bekannten fehlerfreien Sicherung wiederherstellen.    
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Syntax    
     
@@ -161,14 +161,14 @@ DATA_PURITY
  Mit dieser Option gemeldete Überprüfungsfehler können nicht mithilfe der DBCC-Reparaturoptionen behoben werden. Informationen zur manuellen Behebung dieser Fehler finden Sie im Knowledge Base-Artikel 923247: [Problembehandlung bei DBCC-Fehler 2570 in SQL Server 2005 und höher](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und höher).  
     
  Überschreibt die Konfigurationsoption **Max. Grad an Parallelität** von **sp_configure** für die Anweisung. Der MAXDOP kann den mit „sp_configure“ konfigurierten Wert überschreiten. Wenn MAXDOP den mit Resource Governor konfigurierten Wert überschreitet, verwendet [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] den in [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md) beschriebenen MAXDOP-Wert von Resource Governor. Alle semantischen Regeln, die mit der Konfigurationsoption Max. Grad an Parallelität verwendet werden können, stehen beim Verwenden des MAXDOP-Abfragehinweises zur Verfügung. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  
 > [!WARNING] 
 > Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt SQL Server den maximalen Grad an Parallelität aus, der verwendet werden soll.    
 
-## <a name="remarks"></a>Bemerkungen    
+## <a name="remarks"></a>Remarks    
 Deaktivierte Indizes werden von DBCC CHECKDB nicht untersucht. Weitere Informationen zu deaktivierten Indizes finden Sie unter [Deaktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/disable-indexes-and-constraints.md).    
 
 Wenn ein benutzerdefinierter Typ als Typ markiert ist, dessen Sortierreihenfolge eine Bytereihenfolge ist, darf es nur eine Serialisierung des benutzerdefinierten Typs geben. Wenn keine konsistente Serialisierung benutzerdefinierter Typen vorhanden ist, deren Sortierreihenfolge eine Bytereihenfolge ist, wird bei der Ausführung von DBCC CHECKDB der Fehler 2537 ausgegeben. Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Typen – Anforderungen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    

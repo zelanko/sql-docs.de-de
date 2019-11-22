@@ -26,19 +26,19 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0296995906f7f359a065d7ae4f61877a89a409b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948057"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983239"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Entfernt mindestens eine Zeile aus einer Tabelle oder Sicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -104,7 +104,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Der in der FROM-*table_source*-Klausel angegebene Alias, der die Tabelle oder Sicht darstellt, aus der die Zeilen gelöscht werden sollen.  
   
  *server_name*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Der Name des Servers (der einen Verbindungsservernamen oder die Funktion [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) als Servernamen verwendet), auf dem sich die Tabelle oder die Sicht befindet. Wenn *server_name* angegeben ist, sind *database_name* und *schema_name* erforderlich.  
   
@@ -122,7 +122,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Die Sicht, auf die *table_or_view_name* verweist, muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Sichtdefinition verweisen. Weitere Informationen zu aktualisierbaren Sichten finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Entweder die Funktion [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), abhängig von den Funktionen des Anbieters.  
   
@@ -248,7 +248,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- Im folgenden Beispiel wird eine komplexere WHERE-Klausel veranschaulicht. Die WHERE-Klausel definiert zwei Bedingungen, die erfüllt werden müssen, um die zu löschenden Zeilen zu bestimmen. Der Wert in der `StandardCost` -Spalte muss zwischen `12.00` und `14.00` liegen, und der Wert in der `SellEndDate` -Spalte muss NULL sein. Im Beispiel wird auch der Wert der **@@ROWCOUNT** -Funktion ausgegeben, um die Anzahl der gelöschten Zeilen zurückzugeben.  
+ Im folgenden Beispiel wird eine komplexere WHERE-Klausel veranschaulicht. Die WHERE-Klausel definiert zwei Bedingungen, die erfüllt werden müssen, um die zu löschenden Zeilen zu bestimmen. Der Wert in der `StandardCost` -Spalte muss zwischen `12.00` und `14.00` liegen, und der Wert in der `SellEndDate` -Spalte muss NULL sein. Im Beispiel wird auch der Wert der **\@\@ROWCOUNT**-Funktion ausgegeben, um die Anzahl der gelöschten Zeilen zurückzugeben.  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -337,7 +337,7 @@ GO
 ###  <a name="RemoteTables"></a> Löschen von Zeilen aus einer Remotetabelle  
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen mit einem [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder einer [Rowsetfunktion](../../t-sql/functions/rowset-functions-transact-sql.md) aus einer Remotezieltabelle gelöscht werden, um auf die Remotetabelle zu verweisen. Eine Remotetabelle ist auf einem anderen Server oder in einer anderen Instanz von SQL Server vorhanden.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Löschen von Daten aus einer Remotetabelle mithilfe eines Verbindungsservers  
  Im folgenden Beispiel werden Zeilen aus einer Remotetabelle gelöscht. In diesem Beispiel wird zunächst mithilfe von [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers (`MyLinkServer`) wird anschließend als Teil des vierteiligen Objektnamens in der Form *server.catalog.schema.object* angegeben.  
@@ -402,7 +402,7 @@ WHERE ShoppingCartID = 20621;
 GO  
 ```  
   
-#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Verwenden von OUTPUT mit <from_table_name> in einer DELETE-Anweisung  
+#### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. Verwenden von OUTPUT mit <from_table_name> in einer DELETE-Anweisung  
  Im folgenden Beispiel werden Zeilen in der Tabelle `ProductProductPhoto` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] basierend auf Suchkriterien gelöscht, die in der Klausel `FROM` der Anweisung `DELETE` definiert wurden. Die `OUTPUT` -Klausel gibt die Spalten aus der zu löschenden Tabelle, `DELETED.ProductID`und `DELETED.ProductPhotoID`, sowie Spalten aus der `Product` -Tabelle zurück. Diese werden in der `FROM` -Klausel verwendet, um die zu löschenden Zeilen anzugeben.  
   
 ```sql

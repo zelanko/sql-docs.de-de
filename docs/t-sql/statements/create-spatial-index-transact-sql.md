@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8204471504e254c33d70adcce52490e0f5609985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117108"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982594"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt für eine angegebene Tabelle und Spalte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen räumlichen Index. Ein Index kann erstellt werden, bevor Daten in der Tabelle enthalten sind. Indizes können für Tabellen oder Sichten einer anderen Datenbank durch Angabe eines gekennzeichneten Datenbanknamens erstellt werden. Bei räumlichen Indizes muss die Tabelle einen gruppierten Primärschlüssel aufweisen. Weitere Informationen zu räumlichen Indizes finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -172,12 +172,12 @@ CREATE SPATIAL INDEX index_name
  Informationen darüber, wie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Mosaik implementiert wird, finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
  ON *filegroup_name*      
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Erstellt den angegebenen Index für die angegebene Dateigruppe. Wenn kein Speicherort angegeben und die Tabelle nicht partitioniert ist, verwendet der Index die gleiche Dateigruppe wie die zugrunde liegende Tabelle. Die Dateigruppe muss bereits vorhanden sein.  
   
  ON "default"     
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Erstellt den angegebenen Index für die Standarddateigruppe.  
   
@@ -203,7 +203,7 @@ CREATE SPATIAL INDEX index_name
  Gibt das verwendete Mosaikschema für das **Geometrie**-Raster an. GEOMETRY_GRID kann nur für eine Spalte vom Datentyp **geometry** angegeben werden.  GEOMETRY_GRID ermöglicht manuelle Anpassungen des Mosaikschemas.  
   
  GEOMETRY_AUTO_GRID      
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Kann nur für eine Spalte des geometry-Datentyps angegeben werden. Dies ist der Standardwert für diesen Datentyp; eine Angabe ist nicht erforderlich.  
   
@@ -211,7 +211,7 @@ CREATE SPATIAL INDEX index_name
  Gibt das Mosaikschema für das Geografieraster an. GEOGRAPHY_GRID kann nur für eine Spalte mit dem Datentyp **geography** angegeben werden.  
   
  GEOGRAPHY_AUTO_GRID      
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Kann nur für eine Spalte mit dem Datentyp geography angegeben werden.  Dies ist der Standardwert für diesen Datentyp; eine Angabe ist nicht erforderlich.  
   
@@ -310,7 +310,7 @@ Auf höchster Ebene verwendet die Indizierung die Anzahl von Zellen, die zum Ber
 Der CELLS_PER_OBJECT-Wert wird von der Zellen-pro-Objekt-Mosaikregel verwendet. Informationen zu Mosaikregeln finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
 PAD_INDEX = { ON | **OFF** }     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 Gibt die Auffüllung von Indizes an. Der Standardwert ist OFF.  
   
@@ -323,7 +323,7 @@ Gibt an, dass die Zwischenebenenseiten nahezu vollständig aufgefüllt sind. All
 Die Option PAD_INDEX ist nur dann hilfreich, wenn FILLFACTOR angegeben ist, da PAD_INDEX den durch FILLFACTOR angegebenen Prozentsatz verwendet. Wenn der für FILLFACTOR angegebene Prozentsatz nicht groß genug ist, um eine Zeile aufzunehmen, überschreibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] diesen Prozentsatz intern, um das Minimum zuzulassen. Auf jeder Zwischenindexseite befinden sich unabhängig vom angegebenen *fillfactor*-Wert nie weniger als zwei Zeilen.  
   
 FILLFACTOR =*fillfactor*     
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Gibt einen Prozentsatz an, der angibt, wie weit das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -neuerstellung füllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Wenn *fillfactor* 100 oder 0 entspricht, werden von [!INCLUDE[ssDE](../../includes/ssde-md.md)] Indizes mit vollständig aufgefüllten Blattseiten erstellt.  
   
@@ -338,7 +338,7 @@ FILLFACTOR =*fillfactor*
  Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
 SORT_IN_TEMPDB = { ON | **OFF** }       
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Gibt an, ob temporäre Ergebnisse des Sortierens in tempdb gespeichert werden sollen. Der Standardwert ist OFF.  
   
@@ -368,7 +368,7 @@ Gibt an, ob Verteilungsstatistiken neu berechnet werden. Der Standardwert ist OF
 > Wenn Sie die automatische Neuberechnung von Verteilungsstatistiken deaktivieren, wählt der Abfrageoptimierer möglicherweise nicht die optimalen Ausführungspläne für Abfragen, an denen die Tabelle beteiligt ist.  
   
 DROP_EXISTING = { ON | **OFF** }     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Gibt an, dass der benannte, bereits vorhandene räumliche Index gelöscht und neu erstellt wird. Der Standardwert ist OFF.  
   
@@ -389,7 +389,7 @@ Gibt an, dass zugrunde liegende Tabellen oder zugehörige Indizes für Abfragen 
 > Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ALLOW_ROW_LOCKS = { **ON** | OFF }     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Gibt an, ob Zeilensperren zulässig sind. Der Standardwert ist ON.  
   
@@ -400,7 +400,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
  Zeilensperren werden nicht verwendet.  
   
 ALLOW_PAGE_LOCKS = { **ON** | OFF }     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Gibt an, ob Seitensperren zulässig sind. Der Standardwert ist ON.  
   
@@ -411,7 +411,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
  Seitensperren werden nicht verwendet.  
   
 MAXDOP =*max_degree_of_parallelism*      
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Überschreibt die Konfigurationsoption `max degree of parallelism` für die Dauer des Indexvorgangs. Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
@@ -435,7 +435,7 @@ MAXDOP =*max_degree_of_parallelism*
 > Parallele Indexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Bestimmt die Ebene der vom Index verwendeten Datenkomprimierung.  
   
@@ -448,7 +448,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE    
  Die Daten werden im Index seitenweise komprimiert.  
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 Jede Option kann pro CREATE SPATIAL INDEX-Anweisung nur einmal angegeben werden. Beim Angeben einer Option, die es schon einmal gibt, wird ein Fehler ausgelöst.  
   
 Sie können bis zu 249 räumliche Indizes für jede räumliche Spalte in einer Tabelle erstellen. Es kann sich als nützlich erweisen, mehrere räumliche Indizes für bestimmte räumliche Spalten zu erstellen, z. B. zum Indizieren verschiedener Mosaikparameter in einer Spalte.  

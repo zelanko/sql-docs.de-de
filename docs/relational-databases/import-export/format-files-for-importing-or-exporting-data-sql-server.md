@@ -1,6 +1,5 @@
 ---
-title: Formatdateien zum Importieren oder Exportieren von Daten (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Formatdateien zum Importieren und Exportieren von Daten
 ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -15,14 +14,15 @@ ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13d20bfe453843fa8809cfc02c5bd34876dbd497
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680698"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055977"
 ---
-# <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)
+# <a name="format-files-to-import-or-export-data-sql-server"></a>Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Beim Massenimportieren bzw. -exportieren von Daten in eine bzw. aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle können Sie eine *Formatdatei* verwenden, um alle für den Massenimport oder -export erforderlichen Informationen zu speichern. Dazu zählen Formatinformationen für jedes Feld einer Datendatei in Bezug auf die betreffende Tabelle.

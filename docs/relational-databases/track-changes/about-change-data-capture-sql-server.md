@@ -1,5 +1,6 @@
 ---
-title: Über Change Data Capture (SQL Server) | Microsoft-Dokumentation
+title: Über Change Data Capture
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd94fae8b2e66cec1d82e8548f00c27455e4e737
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058125"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095327"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Über Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68058125"
 ## <a name="change-data-capture-data-flow"></a>Change Data Capture &ndash; Datenfluss  
  Die folgende Abbildung zeigt den Hauptdatenfluss für Change Data Capture.  
   
- ![Change data capture data flow](../../relational-databases/track-changes/media/cdcdataflow.gif "Change data capture data flow")  
+ ![Change Data Capture – Datenfluss](../../relational-databases/track-changes/media/cdcdataflow.gif "Change Data Capture &ndash; Datenfluss")  
   
  Die Quelle der Änderungsdaten ist für Change Data Capture das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll. Bei Einfügungen, Aktualisierungen und Löschungen in den nachverfolgten Quelltabellen werden diesem Protokoll entsprechende Einträge hinzugefügt, die diese Änderungen beschreiben. Das Protokoll dient als Eingabe für den Erfassungsvorgang. Der Prozess liest das Protokoll und fügt der Änderungstabelle, die mit der nachverfolgten Tabelle verknüpft ist, Informationen über die Änderungen hinzu. Zur Aufzählung der Änderungen in den Änderungstabellen innerhalb eines angegebenen Bereichs werden Funktionen bereitgestellt, und die Informationen werden in Form eines gefilterten Resultsets zurückgegeben. Das gefilterte Resultset wird typischerweise von einem Anwendungsprozess verwendet, um die Darstellung der Quelle in einer externen Umgebung zu aktualisieren.  
   

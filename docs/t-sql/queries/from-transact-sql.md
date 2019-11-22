@@ -34,12 +34,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67aa3078746108b0a337d5bb4ef4eb28f40f8dc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902023"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981969"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM-Klausel mit JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -59,7 +59,7 @@ Dieser Artikel behandelt auch die folgenden Schlüsselwörter, die in der FROM-K
 - APPLY
 - PIVOT
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax  
   
@@ -199,7 +199,7 @@ FROM { <table_source> [ ,...n ] }
   
  *rowset_function*  
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Gibt eine der Rowsetfunktionen (z. B. OPENROWSET) an, die ein Objekt zurückgeben, das statt eines Tabellenverweises verwendet werden kann. Weitere Informationen zur Liste mit Rowsetfunktionen finden Sie unter [Rowsetfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
@@ -208,7 +208,7 @@ FROM { <table_source> [ ,...n ] }
   
  *bulk_column_alias*  
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Ein optionaler Alias, der einen Spaltennamen im Resultset ersetzt. Spaltenaliase sind nur in SELECT-Anweisungen zulässig, die die OPENROWSET-Funktion mit der BULK-Option verwenden. Wenn Sie *bulk_column_alias* verwenden, geben Sie einen Alias für jede Tabellenspalte in derselben Reihenfolge wie die Spalten in der Datei an.  
@@ -221,7 +221,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Stellt eine Rowsetsicht eines XML-Dokuments bereit. Weitere Informationen finden Sie unter [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
@@ -236,7 +236,7 @@ FROM { <table_source> [ ,...n ] }
   
  *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Gibt an, dass eine bestimmte Version von Daten aus der angegebenen temporalen Tabelle und die verknüpfte Verlaufstabelle mit Systemversionsverwaltung zurückgegeben werden.  
@@ -381,27 +381,27 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Gibt eine Tabelle mit einem einzelnen Datensatz für jede Zeile zurück, die die Werte enthält, die zum angegebenen Zeitpunkt in der Vergangenheit real (aktuell) waren. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte in der Zeile zurückgegeben werden, die zu dem durch den Parameter *\<date_time>* angegebenen Zeitpunkt gültig waren. Der Wert für eine Zeile ist gültig, wenn der Wert *system_start_time_column_name* kleiner als oder gleich dem Parameterwert *\<date_time>* und der Wert *system_end_time_column_name* größer als der Parameterwert *\<date_time>* ist.   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
  Gibt eine Tabelle mit den Werten für alle Zeilenversionen zurück, die innerhalb des angegebenen Zeitbereichs aktiv waren, unabhängig davon, ob ihre Aktivität vor dem *\<start_date_time>* -Parameterwert für das FROM-Argument begonnen hat oder ihre Aktivität nach dem *\<end_date_time>* -Parameterwert für das TO-Argument geendet hat. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte für alle Zeilenversionen zurückgegeben werden, die zu irgendeinem Zeitpunkt innerhalb des angegebenen Zeitbereichs aktiv waren. Zeilen, die genau an dem durch den FROM-Endpunkt definierten unteren Grenzwert aktiv wurden, sind enthalten, und Datensätze, die genau an dem durch den TO-Endpunkt definierten oberen Grenzwert aktiv wurden, sind nicht enthalten.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gleich wie oben in der Beschreibung zu **FROM \<start_date_time> TO \<end_date_time>** , mit dem Unterschied, dass sie Zeilen enthält, die an dem durch den \<end_date_time>-Endpunkt definierten oberen Grenzwert aktiv wurden.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Gibt eine Tabelle mit den Werten für alle Datensatzversionen zurück, die innerhalb des von den zwei Datums-/Uhrzeitwerten für das Argument CONTAINED IN definierten Zeitbereichs geöffnet und geschlossen wurden. Zeilen, die genau beim unteren Grenzwert aktiv wurden, oder deren Aktivität genau beim oberen Grenzwert endete, sind enthalten.  
@@ -409,7 +409,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  Gibt eine Tabelle mit den Werten aus allen Zeilen aus der aktuellen Tabelle und aus der Verlaufstabelle zurück.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Die FROM-Klausel unterstützt die SQL-Syntax von SQL-92 für verknüpfte und abgeleitete Tabellen. Die SQL-92-Syntax stellt die Joinoperatoren INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER und CROSS zur Verfügung.  
   
  UNION und JOIN in einer FROM-Klausel werden in Sichten, abgeleiteten Tabellen und Unterabfragen unterstützt.  
@@ -632,7 +632,7 @@ GO
   
 ### <a name="m-using-for-system_time"></a>M. Verwenden von FOR SYSTEM_TIME  
   
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Im folgenden Beispiel wird das Argument FOR SYSTEM_TIME AS OF date_time_literal_or_variable verwendet, um Tabellenzeilen zurückzugeben, die am 1. Januar 2014 aktuell waren.  
   

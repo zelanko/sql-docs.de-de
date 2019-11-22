@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche | Microsoft-Dokumentation
+title: Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -20,14 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388335"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056262"
 ---
-# <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche
+# <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wörtertrennung und Wortstammerkennung führen eine linguistische Analyse aller volltextindizierten Daten aus. Die linguistische Analyse führt die folgenden beiden Schritte aus:
 
@@ -92,7 +93,7 @@ Zusätzliche Optionen und weitere Informationen finden Sie unter [sys.fulltext_i
 ##  <a name="tshoot"></a> Behebung von Timeoutfehlern bei der Wörtertrennung  
  Timeoutfehler können bei der Wörtertrennung in verschiedenen Situationen auftreten. Weitere Informationen zu diesen Situationen sowie zur Behandlung dieser Fehler finden Sie unter [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).
 
-### <a name="info-about-the-mssqlserver30053-error"></a>Informationen zum Fehler MSSQLSERVER_30053
+### <a name="info-about-the-mssqlserver_30053-error"></a>Informationen zum Fehler MSSQLSERVER_30053
   
 |Eigenschaft|value|
 |-|-|

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5af6e4703e4e7a776eca47ea43bb41f96105b341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017609"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119207"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT-Beispiele (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,14 @@ ms.locfileid: "68017609"
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## <a name="e-using-correlated-subqueries"></a>E. Verwenden von abhängigen Unterabfragen  
+## <a name="e-using-correlated-subqueries"></a>E. Verwenden von abhängigen Unterabfragen
+Eine korrelierte Unterabfrage ist eine Abfrage, die von der äußeren Abfrage abhängig ist. Die Abfrage kann wiederholt ausgeführt werden, und zwar einmal für jede Zeile, die von der äußeren Abfrage ausgewählt wird.
+
  Im folgenden Beispiel werden Abfragen, die semantisch ähnlich sind, gezeigt und der Unterschied zwischen dem Verwenden des `EXISTS`-Schlüsselworts und des `IN`-Schlüsselworts veranschaulicht. In beiden Fällen handelt es sich um eine gültige Unterabfrage, die eine Instanz von jedem Produktnamen abruft, für den als Produktmodell ein langärmeliges Logo-T-Shirt angegeben ist und für den die `ProductModelID`-Nummern in den `Product`- und `ProductModel`-Tabellen übereinstimmen.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- Im folgenden Beispiel wird `IN` in einer abhängigen oder sich wiederholenden Unterabfrage verwendet. Die Werte dieser Abfrage sind von der äußeren Abfrage abhängig. Die Abfrage wird wiederholt ausgeführt, und zwar einmal für jede Zeile, die von der äußeren Abfrage ausgewählt wird. Diese Abfrage ruft eine Instanz des Vor- und Nachnamens der einzelnen Mitarbeiter ab, für die der Bonus in der `SalesPerson`-Tabelle `5000.00` beträgt und für die die Mitarbeiter-IDs in der `Employee`- und `SalesPerson`-Tabelle übereinstimmen.  
+ Im nächsten Beispiel wird `IN` verwendet und eine Instanz des Vor- und Nachnamens der einzelnen Mitarbeiter abgerufen, für die der Bonus in der Tabelle `SalesPerson` `5000.00` beträgt und für die die Mitarbeiter-IDs in den Tabellen `Employee` und `SalesPerson` übereinstimmen.  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   

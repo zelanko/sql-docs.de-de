@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/27/2019
+ms.date: 11/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,18 +24,18 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a0c105891577807920404267aa4a9b7c2613b18
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 0d65bcb7db0bc0628d1c7b40d21e9b2089ad285c
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240677"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127700"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Legt für [!INCLUDE[tsql](../../includes/tsql-md.md)] und Verhalten bei der Abfrageverarbeitung fest, dass sie mit der angegebenen Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] kompatibel sein müssen. Informationen zu anderen ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
+Legt für [!INCLUDE[tsql](../../includes/tsql-md.md)] und Verhalten bei der Abfrageverarbeitung fest, dass sie mit der angegebenen Version der SQL-Engine kompatibel sein müssen. Informationen zu anderen ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
 
 Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -48,11 +48,9 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>Argumente
 
-*database_name*      
-Der Name der Datenbank, die geändert werden soll.
+*database_name* Der Name der Datenbank, die geändert werden soll.
 
-COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
-Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version, mit der die Datenbank kompatibel sein soll. Die folgenden Kompatibilitätsgradwerte können konfiguriert werden (nicht alle Versionen unterstützen alle oben genannten Kompatibilitätsgrade):
+COMPATIBILITY_LEVEL {150 | 140 | 130 | 120 | 110 | 100 | 90 | 80} Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der die Datenbank kompatibel gemacht werden soll. Die folgenden Kompatibilitätsgradwerte können konfiguriert werden (nicht alle Versionen unterstützen alle oben genannten Kompatibilitätsgrade):
 
 <a name="supported-dbcompats"></a>
 
@@ -60,8 +58,8 @@ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version, mit der d
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singleton/Pool für elastische Datenbanken|12|140|150, 140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verwaltete Instanz|12|140|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singleton/Pool für elastische Datenbanken|12|150|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verwaltete Instanz|12|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|
@@ -70,7 +68,11 @@ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version, mit der d
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90, 80|
 |[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|8|80|80|
 
+> [!IMPORTANT]
+> Die Versionsnummern der Datenbank-Engine für SQL Server und Azure SQL-Datenbank sind nicht miteinander vergleichbar, sondern sind interne Buildnummern für diese separaten Produkte. Die Datenbank-Engine für Azure SQL-Datenbank basiert auf der gleichen Codebasis wie die SQL Server-Datenbank-Engine. Entscheidend ist dabei, dass die Datenbank-Engine in Azure SQL-Datenbank immer über die neuesten SQL-Datenbank-Engine-Bits verfügt. Die Version 12 von Azure SQL-Datenbank ist neuer als die Version 15 von SQL Server.
+
 ## <a name="remarks"></a>Remarks
+
 Bei allen Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Standardkompatibilitätsgrad von der Version von [!INCLUDE[ssDE](../../includes/ssde-md.md)] abgeleitet. Neue Datenbanken sind auf diesen Grad festgelegt, sofern der Kompatibilitätsgrad der **model**-Datenbank nicht niedriger ist. Wenn Datenbanken aus einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angefügt oder wiederhergestellt werden, behält die Datenbank ihren vorhandenen Kompatibilitätsgrad, wenn es sich dabei um den zulässigen Mindestwert für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz oder um einen höheren Wert handelt. Bei einem Upgrade einer Datenbank, deren Kompatibilitätsgrad unterhalb des von [!INCLUDE[ssde_md](../../includes/ssde_md.md)] festgelegten zulässigen Grads liegt, wird die Datenbank automatisch auf den niedrigsten zulässigen Kompatibilitätsgrad festgelegt. Dies gilt sowohl für die System- als auch für die Benutzerdatenbanken.
 
 Die folgenden Verhaltensweisen werden für [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] erwartet, wenn eine Datenbank angefügt oder wiederhergestellt wird, und werden nach einem direkten Upgrade erwartet:
@@ -81,18 +83,18 @@ Die folgenden Verhaltensweisen werden für [!INCLUDE[ssSQL17](../../includes/sss
 - Die „master“-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei.
 
 Verwenden Sie `ALTER DATABASE`, um den Kompatibilitätsgrad der Datenbank zu ändern. Die neue Kompatibilitätsgradeinstellung für eine Datenbank wird wirksam, wenn ein `USE <database>`-Befehl ausgegeben oder eine neue Anmeldung mit dieser Datenbank als Standarddatenbankkontext verarbeitet wird.
-Fragen Sie die Spalte **compatibility_level** in der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ab, um den aktuellen Kompatibilitätsgrad einer Datenbank anzuzeigen.
+Fragen Sie die Spalte `compatibility_level` in der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ab, um den aktuellen Kompatibilitätsgrad einer Datenbank anzuzeigen.
 
 > [!NOTE]
 > Eine [Verteilungsdatenbank](../../relational-databases/replication/distribution-database.md), die in einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurde und auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM oder Service Pack 1 aktualisiert wurde, verfügt über einen Kompatibilitätsgrad von „90“, was für andere Datenbanken nicht unterstützt wird. Dies wirkt sich nicht auf die Funktionstüchtigkeit der Replikation aus. Ein Upgrade auf ein späteres Service Pack oder eine spätere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt dazu, dass der Kompatibilitätsgrad der Verteilungsdatenbank auf denjenigen der **Master**datenbank erhöht wird.
 
 > [!NOTE]
-> Seit **Januar 2018** ist der Standardkompatibilitätsgrad für neu erstellte Datenbanken in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gleich „140“. [!INCLUDE[msCoName](../../includes/msconame-md.md)] passt bei vorhandenen Datenbanken den Datenbank-Kompatibilitätsgrad nicht an. Kunden können diesen nach Ihren eigenen Bedürfnissen anpassen.        
+> Seit **November 2019** ist der Standardkompatibilitätsgrad für neu erstellte Datenbanken in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gleich „150“. [!INCLUDE[msCoName](../../includes/msconame-md.md)] passt bei vorhandenen Datenbanken den Datenbank-Kompatibilitätsgrad nicht an. Kunden können diesen nach Ihren eigenen Bedürfnissen anpassen.        
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt Kunden dringend, ein Upgrade auf den aktuellen Kompatibilitätsgrad durchzuführen, um von den neuesten Verbesserungen bei der Abfrageoptimierung profitieren zu können.        
 
 Wenn Sie den Datenbank-Kompatibilitätsgrad 120 oder höher für Ihre gesamte Datenbank nutzen möchten, aber das [**Kardinalitätsschätzungsmodell**](../../relational-databases/performance/cardinality-estimation-sql-server.md) von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bevorzugen, sodass eine Zuordnung zum Datenbank-Kompatibilitätsgrad 110 erfolgt, sollten Sie die Dokumentation zur Anweisung [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) und insbesondere den Abschnitt zu deren Schlüsselwort `LEGACY_CARDINALITY_ESTIMATION = ON` lesen.
 
-Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] finden Sie unter [Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Beachten Sie, dass dieser Artikel sich auf den Kompatibilitätsgrad 130 und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht. Es gelten jedoch die gleichen Vorgehensweisen für Upgrades auf den Kompatibilitätsgrad 140 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] finden Sie unter [Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Beachten Sie, dass dieser Artikel sich auf den Kompatibilitätsgrad 130 und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht. Es gelten jedoch die gleichen Vorgehensweisen für Upgrades auf den Kompatibilitätsgrad 140 oder höher in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Führen Sie die folgende Abfrage aus, um die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Version zu bestimmen, mit der Sie verbunden sind.
 
@@ -201,8 +203,6 @@ Diese grundlegenden Änderungen, die sich auf den Plan auswirken, werden nur zum
 
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>Unterschiede zwischen Kompatibilitätsgrad 140 und Kompatibilitätsgrad 150
 In diesem Abschnitt werden neue mit Kompatibilitätsgrad 150 eingeführte Verhaltensweisen beschrieben.
-
-Der Datenbank-Kompatibilitätsgrad 150 befindet sich derzeit in der Public Preview für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Dieser Datenbank-Kompatibilitätsgrad wird mit der nächsten Generation von Verbesserungen für die Abfrageverarbeitung verbunden sein, die über die mit Datenbank-Kompatibilitätsgrad 140 eingeführten hinausgehen.
 
 |Kompatibilitätsgradeinstellung 140 oder niedriger|Kompatibilitätsgradeinstellung 150|
 |--------------------------------------------------|-----------------------------------------|

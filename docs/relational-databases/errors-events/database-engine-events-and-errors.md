@@ -1,24 +1,24 @@
 ---
-title: Datenbank-Engine (Fehler und Ereignisse) | Microsoft-Dokumentation
+title: Datenbank-Engine (Fehler und Ereignisse)
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 78fff1f1a5f1e68989338a9d5b0274899267fd42
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127360"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119432"
 ---
-# <a name="database-engine-errors"></a>Datenbank-Engine – Fehler
+# <a name="database-engine-errors"></a>Fehler der Datenbank-Engine
 
-Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den Fehlermeldungstext aus der sys.messages-Katalogansicht.
+Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den Fehlermeldungstext aus der sys.messages-Katalogansicht. Gegebenenfalls wird mit der Fehlernummer auf weitere Informationen verwiesen.
 
 ## <a name="errors--2-to-999"></a>Fehler –2 bis 999
 
@@ -4904,15 +4904,15 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   11108   |   16  |   Nein  |   Der Anbieter konnte eine erforderliche Eigenschaft nicht unterstützen. |
 |   11109   |   16  |   Nein  |   Der Anbieter unterstützt keinen Indexscan für diese Datenquelle.    |
 |   11201   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil der FROM-Dienstname fehlt. Nachrichtenabsender: "%ls". |
-|   11202   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der FROM-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'. |
+|   11202   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der FROM-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'. |
 |   11203   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz fehlt. Nachrichtenabsender: "%ls". |
-|   11204   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz die maximale Größe von %d Bytes überschreitet. Broker-Instanz: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.   |
+|   11204   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz die maximale Größe von %d Bytes überschreitet. Broker-Instanz: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.   |
 |   11205   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname fehlt. Nachrichtenabsender: '%ls'.  |
-|   11206   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.   |
+|   11206   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.   |
 |   11207   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname fehlt. Nachrichtenabsender: '%ls'.    |
-|   11208   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname die maximale Größe von %d Bytes überschreitet. Vertragsname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'. |
+|   11208   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname die maximale Größe von %d Bytes überschreitet. Vertragsname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'. |
 |   11209   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil die Konversations-ID keiner aktiven Konversation zugeordnet werden konnte. Nachrichtenabsender: "%ls".  |
-|   11210   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienst nicht gefunden wurde. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.  |
+|   11210   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienst nicht gefunden wurde. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.  |
 |   11211   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Benutzer nicht die Berechtigung für den Zugriff auf die Zieldatenbank besitzt. Datenbank-ID: %d. Nachrichtenabsender: &amp;quot;%ls&amp;quot;.    |
 |   11212   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil der Konversationsendpunkt bereits geschlossen wurde.  |
 |   11213   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil sie nicht die erste Nachricht in der Konversation ist.  |
