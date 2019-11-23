@@ -99,7 +99,7 @@ ms.locfileid: "69493874"
   
 4.  Überprüfen Sie auf der Seite **Quellinformationen angeben** , ob die [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012-Datenquellensicht ausgewählt ist.  
   
-5.  Wählen Sie in der Liste **Haupttabelle** die Option `SalesReason` aus.  
+5.  Wählen Sie in der Liste **Haupttabelle** die Option `SalesReason`aus.  
   
 6.  Überprüfen Sie in der Liste **Schlüsselspalten** , ob **SalesReasonKey** aufgelistet wird.  
   
@@ -169,10 +169,10 @@ ms.locfileid: "69493874"
   
      ![Filter und Datenbereiche des Cube-Designers](../../2014/tutorials/media/l5-many-to-many-5.gif "Filter und Datenbereiche des Cube-Designers")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
  [Definieren von Dimensionsgranularität innerhalb einer Measuregruppe](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [Dimensionsbeziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definieren einer m:n-Beziehung und deren Eigenschaften](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  

@@ -306,7 +306,7 @@ ms.locfileid: "72906098"
     </root>  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
  [nchar und nvarchar &#40;Transact-SQL&#41; ](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   

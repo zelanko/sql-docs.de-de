@@ -45,7 +45,7 @@ ms.locfileid: "72782831"
 Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthentication  
 ```  
   
- Der Rückgabewert sollte **FALSE**sein. Wenn dies der **Fall**ist, können Sie mit dieser Webanwendung nicht auf Power Pivot-Daten zugreifen.  
+ Der Rückgabewert sollte **FALSE** sein. Wenn dies der **Fall**ist, können Sie mit dieser Webanwendung nicht auf Power Pivot-Daten zugreifen.  
   
 ##  <a name="bkmk_farm"></a> Schritt 1: Bereitstellen der Farmlösung  
  In diesem Abschnitt erfahren Sie, wie Sie Lösungen mithilfe der PowerShell bereitstellen können. Sie können aber auch das PowerPivot-Konfigurationstool verwenden, um diese Aufgabe abzuschließen. Weitere Informationen finden Sie unter [konfigurieren oder reparieren PowerPivot für SharePoint 2010 &#40;Power Pivot-Konfigurations&#41;Tools](../configure-repair-powerpivot-sharepoint-2010.md).  
@@ -142,12 +142,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  Die Webanwendungslösung wird anfänglich in der Zentraladministration bereitgestellt. Es folgen weitere Bereitstellungen für alle zusätzlichen Webanwendungen, die Anfragen für PowerPivot-Daten unterstützen. Um die Webanwendungslösung in der zentral Administration bereitzustellen, müssen Sie das Power Pivot-Konfigurations Tool oder das PowerShell-Cmdlet verwenden. Für alle anderen Webanwendungen können Sie die Webanwendungslösung manuell bereitstellen, und zwar mithilfe der Zentraladministration oder der PowerShell.  
   
-|Lösung|Description|  
+|Lösung|und Beschreibung|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Der globalen Assembly wird Microsoft.AnalysisServices.SharePoint.Integration.dll hinzugefügt.<br /><br /> Der globalen Assembly wird Microsoft.AnalysisServices.ChannelTransport.dll hinzugefügt.<br /><br /> Installiert Funktionen sowie Ressourcendateien und registriert Inhaltstypen.<br /><br /> Fügt Bibliotheksvorlagen für den PowerPivot-Katalog und Datenfeedbibliotheken hinzu.<br /><br /> Anwendungsseiten für die Dienstanwendungskonfiguration, das PowerPivot-Management-Dashboard, die Datenaktualisierung und der PowerPivot-Katalog werden hinzugefügt.|  
 |powerpivotwebapp.wsp|Fügt dem Ordner für Webservererweiterungen auf dem Web-Front-End Microsoft.AnalysisServices.SharePoint.Integration.dll-Ressourcendateien hinzu.<br /><br /> Fügt dem Web-Front-End den PowerPivot-Webdienst hinzu.<br /><br /> Fügt die Miniaturbildgenerierung für den PowerPivot-Katalog hinzu.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Upgrade PowerPivot für SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)    
- [Power Pivot-Server Verwaltung und-Konfiguration in der zentral Administration](power-pivot-server-administration-and-configuration-in-central-administration.md)    
+## <a name="see-also"></a>Siehe auch  
+ [Upgrade PowerPivot für SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
+ [Power Pivot-Server Verwaltung und-Konfiguration in der zentral Administration](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [PowerPivot-Konfiguration mit Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  

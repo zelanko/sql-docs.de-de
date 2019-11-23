@@ -1,5 +1,5 @@
 ---
-title: sys. DM _server_audit_status (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_server_audit_status (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
@@ -30,14 +30,14 @@ ms.locfileid: "72313693"
 
   Gibt eine Zeile für jede Serverüberwachung zurück, die den aktuellen Status der Überwachung angibt. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Die ID der Überwachung. Wird dem **audit_id** -Feld in der **sys.** Überwachungen-Katalog Sicht zugeordnet.|  
 |**name**|**sysname**|Der Name der Überwachung. Identisch mit dem **namens** Feld in der **sys. server_audits** -Katalog Sicht.|  
 |**status**|**smallint**|Numerischer Status der Serverüberwachung:<br /><br /> 0 = nicht gestartet<br /><br /> 1 =<br />        Gestartet<br /><br /> 2 =<br />      Laufzeit schlägt fehl<br /><br /> 3 = Ziel Erstellung schlägt fehl<br /><br /> 4 = wird heruntergefahren|  
 |**status_desc**|**nvarchar(256)**|Zeichenfolge, die den Status der Serverüberwachung anzeigt:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Timestamp in UTC der letzten Statusänderung in der Überwachung.|  
-|**event_session_address**|**varbinary(8)**|Adresse der Sitzung für erweiterte Ereignisse, die der Überwachung zugeordnet ist. Bezieht sich auf die **sys. DM _xe_sessions. Address** -Katalog Sicht.|  
+|**event_session_address**|**varbinary(8)**|Adresse der Sitzung für erweiterte Ereignisse, die der Überwachung zugeordnet ist. Bezieht sich auf die **sys. dm_xe_sessions. Address** -Katalog Sicht.|  
 |**audit_file_path**|**nvarchar(256)**|Vollständiger Pfad- und Dateiname des Überwachungsdateiziels, das gerade verwendet wird. Nur bei Dateiüberwachungen angegeben.|  
 |**audit_file_size**|**bigint**|Ungefähre Größe der Überwachungsdatei in Bytes. Nur bei Dateiüberwachungen angegeben.|  
   

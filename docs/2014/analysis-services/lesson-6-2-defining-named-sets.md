@@ -36,7 +36,7 @@ ms.locfileid: "69493896"
   
      Achten Sie im Bereich **Skriptplaner** auf das spezielle Symbol, das eine benannte Menge von einem Skriptbefehl oder einem berechneten Element unterscheidet.  
   
-4.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** nacheinander **Product**, **Category**, `Members` und dann **Alle Produkte**.  
+4.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** nacheinander **Product**, **Category**, `Members`und dann **Alle Produkte**.  
   
     > [!NOTE]  
     >  Wenn Sie keine Metadaten im Bereich **Berechnungstools** anzeigen können, klicken Sie auf der Symbolleiste auf **Verbindung wiederherstellen** . Funktioniert dies nicht, müssen Sie möglicherweise den Cube verarbeiten oder die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]starten.  
@@ -51,7 +51,7 @@ ms.locfileid: "69493896"
   
 2.  Ändern Sie im Feld **Name** den Namen dieser benannten Menge in `[Large Resellers]`.  
   
-3.  Geben Sie im Feld **Ausdruck** `Exists()` ein.  
+3.  Geben Sie im Feld **Ausdruck** `Exists()`ein.  
   
      Mithilfe der Exists-Funktion geben Sie die Menge von Elementen aus der Attributhierarchie „Name des Wiederverkäufers“ zurück, die sich mit der Menge von Elementen in der Attributhierarchie „Anzahl von Mitarbeitern“ mit den meisten Mitarbeitern überschneidet.  
   
@@ -131,11 +131,11 @@ ms.locfileid: "69493896"
   
      ![Filter Bereich mit zwei benannten Mengen](../../2014/tutorials/media/l6-named-set-05.gif "Filter Bereich mit zwei benannten Mengen")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
  [Lektion 7: Definieren von KPIs &#40;Key Performance Indicator&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Berechnungen](multidimensional-models-olap-logical-cube-objects/calculations.md)    
+## <a name="see-also"></a>Siehe auch  
+ [Berechnungen](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Erstellen von benannten Mengen](multidimensional-models/create-named-sets.md)  
   
   

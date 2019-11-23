@@ -42,7 +42,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` ist die ID des Auftrags, der gelöscht werden soll. *job_id* ist vom Datentyp **uniqueidentifier**. der Standardwert ist NULL.  
+`[ @job_id = ] job_id` ist die Identifikationsnummer des zu löschenden Auftrags. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
 `[ @job_name = ] 'job_name'` ist der Name des Auftrags, der gelöscht werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
@@ -51,22 +51,22 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 `[ @originating_server = ] 'server'` für die interne Verwendung.  
   
-`[ @delete_history = ] delete_history` gibt an, ob der Verlauf für den Auftrag gelöscht werden soll. *delete_history* ist vom Typ **Bit**. der Standardwert ist **1**. Wenn *delete_history* **1**ist, wird der Auftrags Verlauf für den Auftrag gelöscht. Wenn *delete_history* den Wert **0**hat, wird der Auftrags Verlauf nicht gelöscht.  
+`[ @delete_history = ] delete_history` gibt an, ob der Verlauf für den Auftrag gelöscht werden soll. *delete_history* ist vom Typ **Bit**und hat den Standardwert **1**. Wenn *delete_history* **1**ist, wird der Auftrags Verlauf für den Auftrag gelöscht. Wenn *delete_history* **0**ist, wird der Auftrags Verlauf nicht gelöscht.  
   
- Beachten Sie Folgendes: Wenn ein Auftrag gelöscht und der Verlauf nicht gelöscht wird, werden die Verlaufs Informationen für den Auftrag nicht im Auftrags Verlauf der grafischen Benutzeroberfläche des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents angezeigt. die Informationen befinden sich jedoch weiterhin in der **sysjobhistory** -Tabelle in der msdb-Datenbank.Datenbank:  
+ Beachten Sie Folgendes: Wenn ein Auftrag gelöscht und der Verlauf nicht gelöscht wird, werden die Verlaufs Informationen für den Auftrag nicht im Auftrags Verlauf der grafischen Benutzeroberfläche des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents angezeigt. die Informationen befinden sich jedoch weiterhin in der **sysjobhistory** -Tabelle der **msdb** -Datenbank.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` gibt an, ob die an diesen Auftrag angefügten Zeitpläne gelöscht werden sollen, wenn Sie nicht an einen anderen Auftrag angefügt sind. *delete_unused_schedule* ist vom Typ **Bit**. der Standardwert ist **1**. Wenn *delete_unused_schedule* **1**ist, werden die an diesen Auftrag angefügten Zeitpläne gelöscht, wenn keine anderen Aufträge auf den Zeitplan verweisen. Wenn *delete_unused_schedule* den Wert **0**hat, werden die Zeitpläne nicht gelöscht.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` gibt an, ob die an diesen Auftrag angefügten Zeitpläne gelöscht werden sollen, wenn Sie nicht an einen anderen Auftrag angefügt sind. *delete_unused_schedule* ist vom Typ **Bit**und hat den Standardwert **1**. Wenn *delete_unused_schedule* **1**ist, werden die an diesen Auftrag angefügten Zeitpläne gelöscht, wenn keine anderen Aufträge auf den Zeitplan verweisen. Wenn *delete_unused_schedule* **0**ist, werden die Zeitpläne nicht gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- Das Argument " **\@originating_server** " ist für die interne Verwendung reserviert.  
+## <a name="remarks"></a>Remarks  
+ Das **\@originating_server** -Argument ist für die interne Verwendung reserviert.  
   
- Das Argument **\@delete_unused_schedule** bietet Abwärtskompatibilität mit früheren Versionen von SQL Server durch automatisches Entfernen von Zeitplänen, die nicht an einen Auftrag angefügt sind. Beachten Sie, dass dieser Parameter standardmäßig das Verhalten der Abwärtskompatibilität bietet. Wenn Sie Zeitpläne beibehalten möchten, die nicht an einen Auftrag angefügt sind, müssen Sie den Wert **0** als **\@delete_unused_schedule-** Argument angeben.  
+ Das **\@delete_unused_schedule** -Argument bietet Abwärtskompatibilität mit früheren Versionen von SQL Server durch automatisches Entfernen von Zeitplänen, die nicht an einen Auftrag angefügt sind. Beachten Sie, dass dieser Parameter standardmäßig das Verhalten der Abwärtskompatibilität bietet. Wenn Sie Zeitpläne beibehalten möchten, die nicht an einen Auftrag angefügt sind, müssen Sie den Wert **0** als **\@delete_unused_schedule** -Argument angeben.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   

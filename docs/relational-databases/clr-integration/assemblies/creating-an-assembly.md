@@ -129,7 +129,7 @@ WITH PERMISSION_SET = UNSAFE;
   
  Weitere Informationen zu den Berechtigungen für die verschiedenen Einstellungen finden Sie unter [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten von CLR-INTEGRA  tionsassemblys](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
  [Ändern einer Assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  Löschen [eines](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md) Assembly   

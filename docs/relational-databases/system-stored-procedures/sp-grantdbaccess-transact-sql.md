@@ -43,14 +43,14 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login_ '` ist der Name der Windows-Gruppe, Windows-Anmeldung oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, die dem neuen Datenbankbenutzer zugeordnet werden soll. Namen von Windows-Gruppen und Windows-Anmeldungen müssen mit einem Windows-Domänennamen im Format *Domain*\\*login*gekennzeichnet werden, wie z. B. **LONDON\Joeb**. Der Anmeldename darf noch keinem Benutzer in der Datenbank zugewiesen sein. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @loginame = ] 'login_ '` ist der Name der Windows-Gruppe, Windows-Anmeldung oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, die dem neuen Datenbankbenutzer zugeordnet werden soll. Namen von Windows-Gruppen und Windows-Anmeldungen müssen mit einem Windows-Domänennamen im Format *Domain*\\*login*gekennzeichnet werden, wie z. B. **LONDON\Joeb**. Der Anmeldename darf noch keinem Benutzer in der Datenbank zugewiesen sein. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` ist der Name des neuen Daten Bank Benutzers. *name_in_db* ist eine OUTPUT-Variable vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn dieses Argument nicht angegeben ist, wird *login* verwendet. Wenn die Angabe als Ausgabevariable mit dem Wert NULL angegeben ist, wird **\@name_in_db** auf *Login*festgelegt. *name_in_db* darf in der aktuellen Datenbank noch nicht vorhanden sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **sp_grantdbaccess** ruft CREATE USER auf, wodurch zusätzliche Optionen unterstützt werden. Weitere Informationen zum Erstellen von Datenbankbenutzern finden Sie unter [Create User &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md). Wenn Sie einen Datenbankbenutzer aus einer Datenbank entfernen möchten, verwenden Sie hierzu [DROP USER](../../t-sql/statements/drop-user-transact-sql.md).  
   
  **sp_grantdbaccess** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  

@@ -47,7 +47,7 @@ $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
- Dies ist ein Beispiel für die Verwendung des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieters für Windows PowerShell zur Navigation zu einer Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]und zur anschließenden Verwendung des Windows PowerShell-Cmdlets **Get-Item** , um das SMO-Serverobjekt für die Instanz abzurufen und es an **Invoke-Sqlcmd**zu übergeben:  
+ Dies ist ein Beispiel für die Verwendung des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Anbieters für Windows PowerShell zur Navigation zu einer Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] und zur anschließenden Verwendung des Windows PowerShell-Cmdlets **Get-Item**, um das SMO-Serverobjekt für die Instanz abzurufen und es an **Invoke-Sqlcmd** zu übergeben:  
   
 ```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
@@ -79,7 +79,7 @@ Set-Location SQLSERVER:\SQL
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
   
- Die folgenden Befehle würden [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]zurückgeben:  
+ Die folgenden Befehle würden [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] zurückgeben:  
   
 ```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Person.Person  
@@ -91,11 +91,11 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Vergleichen von Invoke-Sqlcmd und dem sqlcmd-Hilfsprogramm  
  Mit**Invoke-Sqlcmd** können zahlreiche der Skripts ausgeführt werden, die auch mit dem **sqlcmd** Hilfsprogramm ausgeführt werden können. **Invoke-Sqlcmd** wird jedoch in einer Windows PowerShell-Umgebung ausgeführt, die sich von der Eingabeaufforderungsumgebung unterscheidet, in der **sqlcmd** ausgeführt wird. Das Verhalten von **Invoke-Sqlcmd** wurde für die Ausführung in einer Windows PowerShell-Umgebung angepasst.  
   
- Nicht alle **sqlcmd** -Befehle sind in **Invoke-Sqlcmd**implementiert. Befehle, die nicht implementiert werden, sind die folgenden: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**, and **:serverlist**.  
+ Nicht alle **sqlcmd** -Befehle sind in **Invoke-Sqlcmd**implementiert. Befehle, die nicht implementiert werden, sind die folgenden: **:!!** , **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**, and **:serverlist**.  
   
  **Invoke-Sqlcmd** initialisiert die **sqlcmd** -Umgebung oder Skriptvariablen wie SQLCMDDBNAME oder SQLCMDWORKSTATION nicht.  
   
- **Invoke-Sqlcmd** zeigt keine Meldungen, wie die Ausgabe von PRINT-Anweisungen, an, außer Sie geben den gängigen Windows PowerShell-Parameter **-Verbose** an. Beispiel:  
+ **Invoke-Sqlcmd** zeigt keine Meldungen, wie die Ausgabe von PRINT-Anweisungen, an, außer Sie geben den gängigen Windows PowerShell-Parameter **-Verbose** an. Zum Beispiel:  
   
 ```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
@@ -103,23 +103,23 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
  Nicht alle **sqlcmd** -Parameter werden in einer PowerShell-Umgebung benötigt. Beispielsweise formatiert Windows PowerShell alle Ausgaben von Cmdlets, sodass die **sqlcmd** -Parameter, die Formatierungsoptionen festlegen, nicht in **Invoke-Sqlcmd**implementiert werden. In der folgenden Tabelle wird die Beziehung zwischen den **Invoke-Sqlcmd** -Parametern und den Optionen **sqlcmd** dargestellt:  
   
-|Description|sqlcmd-Option|Invoke-Sqlcmd-Parameter|  
+|und Beschreibung|sqlcmd-Option|Invoke-Sqlcmd-Parameter|  
 |-----------------|-------------------|------------------------------|  
 |Server- und Instanzname.|-S|-ServerInstance|  
 |Die zu verwendende ursprüngliche Datenbank.|-d|-Database|  
 |Die angegebene Abfrage ausführen und dann beenden.|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmelde-ID für die Authentifizierung.|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Kennwort für die Authentifizierung.|-p|-Password|  
-|Variablendefinition.|-V|-Variable|  
-|Abfragetimeoutintervall.|-T|-QueryTimeOut|  
+|Variablendefinition.|-v|-Variable|  
+|Abfragetimeoutintervall.|-T|-QueryTimeout|  
 |Ausführung bei Fehler beenden.|-b|-AbortOnError|  
 |Dedizierte Administratorverbindung.|-a|-DedicatedAdministratorConnection|  
-|Interaktive Befehle, Startskript und Umgebungsvariablen deaktivieren.|-X|-DisableCommands|  
-|Variablenersetzung deaktivieren.|-X|-DisableVariables|  
+|Interaktive Befehle, Startskript und Umgebungsvariablen deaktivieren.|-x|-DisableCommands|  
+|Variablenersetzung deaktivieren.|-x|-DisableVariables|  
 |Minimaler Schweregrad für Bericht.|-v|-SeverityLevel|  
-|Minimaler Fehlergrad für Bericht.|-M|-ErrorLevel|  
+|Minimaler Fehlergrad für Bericht.|-m|-ErrorLevel|  
 |Anmeldungstimeoutintervall.|-l|-ConnectionTimeout|  
-|Hostname.|-H|-HostName|  
+|Hostname.|-h|-HostName|  
 |Kennwort ändern und beenden.|-Z|-NewPassword|  
 |Eingabedatei, die eine Abfrage enthält|-i|-InputFile|  
 |Maximale Länge der Zeichenausgabe.|-w|-MaxCharLength|  
@@ -128,25 +128,25 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Anzeigen von Fehlern|Kein Parameter|-OutputSqlErrors|  
 |Meldungen an stderr ausgeben.|-r|Kein Parameter|  
 |Regionale Einstellungen des Clients verwenden|-r|Kein Parameter|  
-|Die angegebene Abfrage ausführen und mit der Ausführung fortfahren.|-Q|Kein Parameter|  
+|Die angegebene Abfrage ausführen und mit der Ausführung fortfahren.|-q|Kein Parameter|  
 |Codepage zur Verwendung für Ausgabedaten.|-f|Kein Parameter|  
 |Ein Kennwort ändern und mit der Ausführung fortfahren|-Z|Kein Parameter|  
-|Paketgröße|-A|Kein Parameter|  
-|Spaltentrennzeichen|-S|Kein Parameter|  
+|Paketgröße|-a|Kein Parameter|  
+|Spaltentrennzeichen|-s|Kein Parameter|  
 |Steuern von Ausgabeheadern|-H|Kein Parameter|  
 |Angeben von Steuerzeichen|-k|Kein Parameter|  
-|Feste Längenanzeigebreite|-y|Kein Parameter|  
+|Feste Längenanzeigebreite|-Y|Kein Parameter|  
 |Variable Längenanzeigebreite|-Y|Kein Parameter|  
 |Eingabe auf dem Bildschirm anzeigen.|-E|Kein Parameter|  
-|Bezeichner in Anführungszeichen aktivieren|-i|Kein Parameter|  
-|Nachfolgende Leerzeichen löschen.|-w|Kein Parameter|  
-|Instanzen auflisten|-l|Kein Parameter|  
-|Ausgabe als Unicode formatieren|-U|Kein Parameter|  
-|Statistiken drucken|-P|Kein Parameter|  
+|Bezeichner in Anführungszeichen aktivieren|-I|Kein Parameter|  
+|Nachfolgende Leerzeichen löschen.|-W|Kein Parameter|  
+|Instanzen auflisten|-L|Kein Parameter|  
+|Ausgabe als Unicode formatieren|-u|Kein Parameter|  
+|Statistiken drucken|-p|Kein Parameter|  
 |Befehlsende|-c|Kein Parameter|  
 |Verbindung mithilfe der Windows-Authentifizierung herstellen|-E|Kein Parameter|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden der Datenbank-Engine-Cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
- [sqlcmd Utility](../tools/sqlcmd-utility.md)   
- [Verwenden des Hilfsprogramms sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ [Hilfsprogramm sqlcmd](../tools/sqlcmd-utility.md)   
+ [Verwenden des Hilfsprogramms „sqlcmd“](../relational-databases/scripting/sqlcmd-use-the-utility.md)  

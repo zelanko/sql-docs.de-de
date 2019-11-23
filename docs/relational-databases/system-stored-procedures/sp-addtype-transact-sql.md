@@ -79,9 +79,9 @@ sp_addtype [ @typename = ] type,
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der Name eines Aliasdatentyps muss in der Datenbank eindeutig sein, aber Aliasdatentypen mit unterschiedlichen Namen können dieselbe Definition aufweisen.  
   
  Beim Ausführen von **sp_addtype** wird ein Alias Datentyp erstellt, der in der **sys. types** -Katalog Sicht für eine bestimmte Datenbank angezeigt wird. Wenn der Alias Datentyp in allen neuen benutzerdefinierten Datenbanken verfügbar sein muss, fügen Sie ihn dem **Modell**hinzu. Nach der Erstellung eines Aliasdatentyps können Sie diesen mit CREATE TABLE oder ALTER TABLE verwenden sowie Standards und Regeln an den Aliasdatentyp binden. Alle skalaren Alias Datentypen, die mit **sp_addtype** erstellt werden, sind im **dbo** -Schema enthalten.  
@@ -89,9 +89,9 @@ sp_addtype [ @typename = ] type,
  Aliasdatentypen erben die Standardsortierung der Datenbank. Die Sortierungen von Spalten und Variablen von Alias Typen werden in den Anweisungen [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE und DECLARE @*local_variable* definiert. Eine Änderung der Standardsortierung der Datenbank gilt nur für neue Spalten und Variablen des Typs; sie wirkt sich nicht auf die Sortierung bereits vorhandener Spalten und Variablen aus.  
   
 > [!IMPORTANT]  
->  Aus Gründen der Abwärtskompatibilität wird der **Public** -Daten Bank Rolle automatisch die REFERENCES-Berechtigung für Alias Datentypen erteilt, die mit **sp_addtype**erstellt werden. Hinweis Wenn Alias Datentypen mithilfe der CREATE TYPE-Anweisung anstelle von **sp_addtype**erstellt werden, erfolgt keine automatische Erteilung.  
+>  Aus Gründen der Abwärtskompatibilität wird der **Public** -Daten Bank Rolle automatisch die REFERENCES-Berechtigung für Alias Datentypen erteilt, die mit **sp_addtype**erstellt werden. Hinweis Wenn Alias Datentypen mithilfe der CREATE TYPE-Anweisung anstelle **sp_addtype**erstellt werden, erfolgt keine automatische Erteilung.  
   
- Alias Datentypen können nicht mit den Datentypen "@no__t **-0"** , " **Table**", " **XML**", " **varchar (max)** ", " **nvarchar (max)** " oder " **varbinary (max)** " definiert werden.  
+ Alias Datentypen können nicht mit den Datentypen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Zeitstempel**, **Table**, **XML**, **varchar (max)** , **nvarchar (max)** oder **varbinary (max)** definiert werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der Daten Bank Rolle " **db_owner** " oder " **db_ddladmin** ".  
@@ -99,7 +99,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. Erstellen eines Aliasdatentyps, der keine NULL-Werte zulässt  
- Im folgenden Beispiel wird ein Alias Datentyp mit dem Namen `ssn` (Sozialversicherungsnummer) erstellt, der auf dem von @no__t -1 angegebenen **varchar** -Datentyp basiert. Der `ssn`-Datentyp wird für Spalten mit 11-stelligen Sozialversicherungsnummern verwendet (999-99-9999). Diese Spalte darf nicht den Wert NULL aufweisen.  
+ Im folgenden Beispiel wird ein Alias Datentyp mit dem Namen `ssn` (Sozialversicherungsnummer) erstellt, der auf dem von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angegebenen **varchar** -Datentyp basiert. Der `ssn`-Datentyp wird für Spalten mit 11-stelligen Sozialversicherungsnummern verwendet (999-99-9999). Diese Spalte darf nicht den Wert NULL aufweisen.  
   
  Beachten Sie, dass `varchar(11)` in einfachen Anführungszeichen steht, da es Satzzeichen (Klammern) enthält.  
   
@@ -132,7 +132,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine gespeicherter &#40;Prozeduren Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherte Prozeduren &#40;Transact&#41; -SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md) -   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

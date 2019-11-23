@@ -79,7 +79,7 @@ ms.locfileid: "70874501"
   
 -   Netzwerkfehler, wie z. B. Timeouts für TCP-Verbindungen, gelöschte oder beschädigte Pakete oder Pakete in falscher Reihenfolge.  
   
--   Ein Betriebssystem, ein Server oder eine Datenbank, die nicht reagiert.  
+-   Ein Betriebssystem, ein Server oder eine Datenbank, die nicht reagieren.  
   
 -   Ein Windows-Servertimeout.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "70874501"
   
  Damit eine Verbindung offen bleibt, muss eine Serverinstanz innerhalb der definierten Timeoutzeitspanne einen Ping über diese Verbindung erhalten. Hinzu kommt die Dauer, die zum Senden eines weiteren Pings erforderlich ist. Durch den Empfang eines Pings innerhalb des Timeoutzeitraums wird angezeigt, dass die Verbindung weiterhin offen ist und dass die Serverinstanzen über diese Verbindung kommunizieren. Die Serverinstanz setzt nach dem Empfangen eines Pings die Timeoutzähler dieser Verbindung wieder zurück.  
   
- Empfängt die Verbindung innerhalb des Timeoutzeitraums keinen Pingbefehl, geht die Serverinstanz davon aus, dass bei einer Verbindung ein Timeout aufgetreten ist. Die Serverinstanz schließt die Verbindung, bei der ein Timeout aufgetreten ist, und behandelt das Timeoutereignis gemäß des Status und des Betriebsmodus der Sitzung.  
+ Wenn während des Timeout Zeitraums kein Ping für eine Verbindung empfangen wird, wird für eine Serverinstanz eine Zeitüberschreitung bei der Verbindung angenommen. Die Serverinstanz schließt die Timeout Verbindung und behandelt das Timeout Ereignis entsprechend dem Zustand und Betriebsmodus der Sitzung.  
   
  Ein Timeout wird auch dann als Fehler betrachtet, wenn der andere Server ordnungsgemäß ausgeführt wird. Falls der Timeoutwert einer Sitzung für die normale Reaktionsfähigkeit eines Partners zu niedrig ist, können Fehler auftreten, die in Wirklichkeit keine sind. Ein falscher Fehler tritt auf, wenn eine Serverinstanz erfolgreich Kontakt mit einer anderen Instanz aufnimmt, deren Antwortzeit so langsam ist, dass die Pings nicht vor Ablauf der Timoutspanne eintreffen.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "70874501"
   
 ## <a name="see-also"></a>Siehe auch  
  [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
+ [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   

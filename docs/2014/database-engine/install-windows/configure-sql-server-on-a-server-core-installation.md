@@ -45,7 +45,7 @@ ms.locfileid: "72797905"
 -   [Verwalten einer Server Core-Installation](https://go.microsoft.com/fwlink/?LinkId=245963) (https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="install-updates"></a>Installieren von Updates  
- Dieser Abschnitt enthält Informationen zum Installieren von Updates für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf einem Windows Server Core-Computer. Es empfiehlt sich, dass Kunden neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Updates zeitnah bewerten und installieren, um sicherzustellen, dass Systeme mit den letzten Sicherheitsupdates aktualisiert wurden. Weitere Informationen zum Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf einem Windows Server Core-Computer finden Sie unter [Install SQL Server 2014 on Server Core](install-sql-server-on-server-core.md).  
+ Dieser Abschnitt enthält Informationen zum Installieren von Updates für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf einem Windows Server Core-Computer. Es empfiehlt sich, dass Kunden neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Updates zeitnah bewerten und installieren, um sicherzustellen, dass Systeme mit den letzten Sicherheitsupdates aktualisiert wurden. Weitere Informationen zum Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf einem Windows Server Core-Computer finden Sie unter [Install SQL Server 2014 on Server Core](install-sql-server-on-server-core.md).  
   
  Es gibt zwei Szenarien für die Installation von Produktupdates:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72797905"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup integriert die neuesten Produktupdates in die Installation des Hauptprodukts, sodass das Hauptprodukt und geeignete Updates gleichzeitig installiert werden.  
   
- Nachdem Setup die neuesten Versionen der anwendbaren Updates gefunden hat, lädt es diese herunter und integriert sie in den aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsvorgang. Das Produktupdate kann ein kumulatives Update, Service Pack oder Service Pack plus kumulatives Update einziehen.  
+ Nachdem Setup die neuesten Versionen der anwendbaren Updates gefunden hat, lädt es diese herunter und integriert sie in den aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationsvorgang. Das Produktupdate kann ein kumulatives Update, Service Pack oder Service Pack plus kumulatives Update einziehen.  
   
  Geben Sie die Parameter UpdateEnabled und UpdateSource an, um die neuesten Produktupdates in die Installation des Hauptprodukts einzuschließen. Sehen Sie sich folgendes Beispiel an, um Produktupdates während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups zu aktivieren:  
   
@@ -67,7 +67,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
 ```  
   
 ### <a name="installing-updates-after-installation"></a>Installieren von Updates nach der Installation 
- Auf einer installierten Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]empfiehlt es sich, dass Sie die letzten Sicherheitsupdates und wichtige Updates einschließlich allgemeiner Verteilungsversionen (GDRs) und Service Packs (SPS) anwenden. Einzelne kumulative Updates und Sicherheitsupdates sollten nach Bedarf übernommen werden. Werten Sie das Update aus; und wenn es benötigt wird, übernehmen Sie es.  
+ Auf einer installierten Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] empfiehlt es sich, dass Sie die letzten Sicherheitsupdates und wichtige Updates einschließlich allgemeiner Verteilungsversionen (GDRs) und Service Packs (SPS) anwenden. Einzelne kumulative Updates und Sicherheitsupdates sollten nach Bedarf übernommen werden. Werten Sie das Update aus; und wenn es benötigt wird, übernehmen Sie es.  
   
  Anwenden eines Updates über eine Eingabeaufforderung. Dabei wird <Paketname> mit dem Namen des Updatepakets ersetzt:  
   
@@ -90,12 +90,12 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
     ```  
   
 ##  <a name="startstop-sql-server-service"></a>SQL Server Dienst starten/Abbrechen  
- Mithilfe der [sqlservr](../../tools/sqlservr-application.md) -Anwendung können Sie die Ausführung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz von der Eingabeaufforderung aus starten, beenden, anhalten und fortsetzen.  
+ Mithilfe der [sqlservr](../../tools/sqlservr-application.md)-Anwendung können Sie die Ausführung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz von der Eingabeaufforderung aus starten, beenden, anhalten und fortsetzen.  
   
- Sie können auch Net Services verwenden, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste zu starten und zu beenden.  
+ Sie können auch Net Services verwenden, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste zu starten und zu beenden.  
   
 ## <a name="enable-alwayson-availability-groups"></a>AlwaysOn-Verfügbarkeitsgruppen aktivieren  
- Die Aktivierung von AlwaysOn-Verfügbarkeitsgruppen ist eine Voraussetzung dafür, dass eine Serverinstanz Verfügbarkeitsgruppen als Lösung für hohe Verfügbarkeit und Notfallwiederherstellung verwenden kann. Weitere Informationen zum Verwalten der Always On-Verfügbarkeitsgruppen finden Sie unter [Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+ Die Aktivierung von AlwaysOn-Verfügbarkeitsgruppen ist eine Voraussetzung dafür, dass eine Serverinstanz Verfügbarkeitsgruppen als Lösung für Hochverfügbarkeit und Notfallwiederherstellung verwenden kann. Weitere Informationen zum Verwalten der Always On-Verfügbarkeitsgruppen finden Sie unter [Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ### <a name="using-sql-server-configuration-manager-remotely"></a>Remote Verwendung von SQL Server-Konfigurations-Manager  
  Diese Schritte müssen auf einem PC mit [!INCLUDE[win7](../../includes/win7-md.md)]-Clientversion oder höher oder einem anderen Server ausgeführt werden, auf dem die grafische Shell für Server installiert ist (d. h. eine vollständige Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] oder einer Windows Server 8-Installation mit aktivierter grafischer Shell für Server).  
@@ -122,7 +122,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  Doppelklicken Sie auf -Konfigurations-Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-6.  Klicken Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienste, klicken Sie mit der rechten Maustaste auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<Instanzname >), wobei \<Instanzname > der Name einer lokalen Serverinstanz ist, für die Sie AlwaysOn-Verfügbarkeitsgruppen aktivieren möchten, und klicken Sie auf Eigenschaften.  
+6.  Klicken Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Services, klicken Sie mit der rechten Maustaste auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<Instanzname >), wobei \<Instanzname > der Name einer lokalen Serverinstanz ist, für die Sie AlwaysOn-Verfügbarkeitsgruppen aktivieren möchten, und klicken Sie auf Eigenschaften.  
   
 7.  Wählen Sie die Registerkarte Hohe Verfügbarkeit (immer aktiviert) aus.  
   
@@ -186,10 +186,10 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
  `net start SQLBROWSER`  
   
 ### <a name="create-exceptions-in-windows-firewall"></a>Erstellen von Ausnahmen von Windows-Firewall  
- Um Ausnahmen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zugriff in der Windows-Firewall zu erstellen, führen Sie die in [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)angegebenen Schritte aus.  
+ Um Ausnahmen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zugriff in der Windows-Firewall zu erstellen, führen Sie die in [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) angegebenen Schritte aus.  
   
 ### <a name="enable-tcpip-on-an-instance-of-sql-server"></a>Aktivieren von TCP/IP für eine Instanz von SQL Server
- Das TCP/IP-Protokoll kann durch Windows PowerShell für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf Server Core aktiviert werden. Führen Sie die folgenden Schritte aus:  
+ Das TCP/IP-Protokoll kann durch Windows PowerShell für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz auf Server Core aktiviert werden. Führen Sie die folgenden Schritte aus:  
   
 1.  Starten Sie den Task-Manager auf dem Computer, der Windows Server 2008 R2 Server Core SP1 ausführt.  
   
@@ -215,7 +215,7 @@ $Tcp
   
  Weitere Informationen zu den Berechtigungen, die zum Ausführen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]erforderlich sind, finden Sie unter [Erforderliche Berechtigungen zum Ausführen von SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
- Weitere Informationen zu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]finden Sie unter [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md).  
+ Weitere Informationen zu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] finden Sie unter [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md).  
   
 ##  <a name="sql-server-auditing"></a>SQL Server-Überwachung  
  Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] remote verwenden, um eine Überwachung zu definieren. Nachdem die Überwachung erstellt und aktiviert wurde, empfängt das Ziel die Einträge. Weitere Informationen zum Erstellen und Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachungen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
@@ -226,8 +226,8 @@ $Tcp
 |**Hilfsprogramm**|**Description**|**Installiert in**|  
 |-----------------|---------------------|----------------------|  
 |[bcp (Hilfsprogramm)](../../tools/bcp-utility.md)|Wird verwendet, um Daten in einem benutzerdefinierten Format zwischen einer [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und einer Datendatei zu kopieren.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[dtexec-Hilfsprogramm](../../integration-services/packages/dtexec-utility.md)|Wird verwendet, um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket zu konfigurieren und auszuführen.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
-|[dtutil (Hilfsprogramm)](../../integration-services/dtutil-utility.md)|Wird für die Verwaltung von SSIS-Paketen verwendet.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
+|[dtexec (Hilfsprogramm)](../../integration-services/packages/dtexec-utility.md)|Wird verwendet, um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket zu konfigurieren und auszuführen.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
+|[dtutil Utility](../../integration-services/dtutil-utility.md)|Wird für die Verwaltung von SSIS-Paketen verwendet.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[osql (Hilfsprogramm)](../../tools/osql-utility.md)|Ermöglicht es Ihnen, [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien an der Eingabeaufforderung einzugeben.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqlagent90 (Anwendung)](../../tools/sqlagent90-application.md)|Wird verwendet, um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent von der Eingabeaufforderung zu starten.|\<Laufwerk>:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*instance_name*>\MSSQL\Binn|  
 |[sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)|Ermöglicht es Ihnen, [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien an der Eingabeaufforderung einzugeben.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
@@ -241,6 +241,6 @@ $Tcp
   
  Sie können das Hilfsprogramm in der Administrator-Eingabeaufforderung auf Server Core mit der Syntax starten, die im Thema [SQLdiag Utility](../../tools/sqldiag-utility.md)angegeben ist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Installieren von SQL Server 2014 auf Server Core](install-sql-server-on-server-core.md)   
  [Themen zu Vorgehensweisen für die Installation](../../sql-server/install/installation-how-to-topics.md)  

@@ -18,17 +18,17 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798337"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Installieren des SharePoint-Modus von Reporting Services für SharePoint 2013
-  In den Verfahren in diesem Thema werden Sie durch die Installation eines einzelnen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers im SharePoint-Modus geführt. In den Schritten führen Sie u. a. den Installations-Assistenten für SQL Server sowie Konfigurationsaufgaben unter Verwendung der SharePoint-Zentraladministration aus. Außerdem können Sie sich in diesem Thema auch über einzelne Verfahren zum Aktualisieren einer vorhandenen Installation informieren, beispielsweise um eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung zu erstellen.  
+  In den Verfahren in diesem Thema werden Sie durch die Installation eines einzelnen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers im SharePoint-Modus geführt. In den Schritten führen Sie u. a. den Installations-Assistenten für SQL Server sowie Konfigurationsaufgaben unter Verwendung der SharePoint-Zentraladministration aus. Außerdem können Sie sich in diesem Thema auch über einzelne Verfahren zum Aktualisieren einer vorhandenen Installation informieren, beispielsweise um eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung zu erstellen.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **Hinweis:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint-Modus unterstützt **nicht** die mehr Instanzen Fähigkeit von SharePoint Server.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **Hinweis:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus unterstützt **nicht** die mehr Instanzen Fähigkeit von SharePoint Server.|  
   
  Informationen darüber, wie Sie einer vorhandenen Farm weitere [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Server hinzufügen, finden Sie unter:  
   
 -   [Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm &#40;Horizontales Skalieren für SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
--   [Add an Additional Reporting Services Web Front-end to a Farm (Hinzufügen eines zusätzlichen Reporting Services-Web-Front-Ends zu einer Farm)](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
+-   [Hinzufügen eines zusätzlichen Reporting Services-Web-Front-Ends zu einer Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
  Die Installation auf einem einzelnen Server ist für Entwicklungs- und Testszenarien geeignet, wird aber für Produktionsumgebungen nicht empfohlen.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "72798337"
   
     -   **Reporting Services-Add-In für SharePoint-Produkte**.  
   
-         ![Hinweis](../../../2014/reporting-services/media/rs-fyinote.png "Nebenbei") Die Option Installations-Assistent für die Installation des Add-Ins ist neu in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Version.  
+         ![Hinweis](../../../2014/reporting-services/media/rs-fyinote.png "Hinweis") Die Option Installations-Assistent für die Installation des Add-Ins ist neu in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Version.  
   
     -   Wenn Sie noch keine Instanz von SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]haben, können Sie auch **Datenbank-Engine-Dienste** und **Verwaltungstools - Vollständig** für eine vollständige Umgebung auswählen.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "72798337"
   
 12. Wenn Sie Datenbank-Engine-Dienste ausgewählt haben, akzeptieren Sie die Standardinstanz von **MSSQLSERVER** auf der Seite **Instanzkonfiguration** , und klicken Sie auf **Weiter**.  
   
-     ![Hinweis](../../../2014/reporting-services/media/rs-fyinote.png "Nebenbei") Die Reporting Services SharePoint-Dienst Architektur basiert nicht auf einer SQL Server "Instanz", wie es bei der vorherigen Reporting Services Architektur der Fall war.  
+     ![Hinweis](../../../2014/reporting-services/media/rs-fyinote.png "Hinweis") Die Reporting Services SharePoint-Dienst Architektur basiert nicht auf einer SQL Server "Instanz", wie es bei der vorherigen Reporting Services Architektur der Fall war.  
   
 13. Prüfen Sie die Seite **Erforderlicher Speicherplatz** , und klicken Sie auf **Weiter**.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "72798337"
   
 6.  Klicken Sie auf **Aktivieren**. Der Funktionsstatus ändert sich in **Aktiv**.  
   
- Diese Prozedur wird pro Websitesammlung abgeschlossen. Weitere Informationen finden Sie unter [Aktivieren der Berichtsserver- und Power View-Integrationsfunktionen in SharePoint](../../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md).  
+ Diese Prozedur wird pro Websitesammlung abgeschlossen. Weitere Informationen finden Sie unter [Activate the Report Server and Power View Integration Features in SharePoint](../../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md).  
   
 ##  <a name="bkmk_full_script"></a>Windows PowerShell-Skript für die Schritte 1-4  
  Das PowerShell-Skript in diesem Abschnitt entspricht dem Abschluss der Schritte 1 bis 4 in den vorangegangenen Schritten. Das Skript führt folgende Schritte aus:  
@@ -409,9 +409,9 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
      Speichern Sie den Bericht in der Dokumentbibliothek, und führen Sie den Bericht dann aus der Bibliothek heraus aus. Weitere Informationen zum Erstellen von Berichten mit dem Berichts-Generator finden Sie unter [Starten des Berichts-Generators (Berichts-Generator)](https://technet.microsoft.com/library/ms159221.aspx).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Inhalts Roadmap: Einrichten und Konfigurieren von SharePoint Server und SQL Server BI](https://technet.microsoft.com/library/dn205112.aspx)   
- [Funktionen, die von den Editionen von SQL Server 2012   unterstützt werden](https://go.microsoft.com/fwlink/?linkid=232473)  
+ [Von den Editionen von SQL Server 2012 unterstützte Funktionen](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services-SharePoint-Dienst und -Dienstanwendungen](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)

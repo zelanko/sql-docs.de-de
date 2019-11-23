@@ -29,7 +29,7 @@ ms.locfileid: "72909687"
 
   Richtet die primären Informationen ein, fügt Links zur lokalen und Remoteüberwachung hinzu und erstellt auf dem sekundären Server Kopier- und Wiederherstellungsaufträge für die angegebene primäre Datenbank.  
   
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -91,9 +91,9 @@ sp_add_log_shipping_secondary_primary
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- InclusionThresholdSetting  
+ Keine  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_secondary_primary** muss von der **Master** -Datenbank auf dem sekundären Server ausgeführt werden. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
   
 1.  Generiert eine sekundäre ID für den angegebenen primären Server und die primäre Datenbank.  
@@ -104,17 +104,17 @@ sp_add_log_shipping_secondary_primary
   
     2.  Erstellt einen Kopierauftrag für die sekundäre ID, die deaktiviert ist.  
   
-    3.  Legt die Kopier Auftrags-ID im **log_shipping_secondary** -Eintrag auf die Auftrags-ID des Kopier Auftrags fest.  
+    3.  Legt die Kopier Auftrags-ID im **log_shipping_secondary** Eintrag auf die Auftrags-ID des Kopier Auftrags fest.  
   
     4.  Erstellt einen Wiederherstellungsauftrag für die sekundäre ID, die deaktiviert ist.  
   
-    5.  Legen Sie die Wiederherstellungs Auftrags-ID im **log_shipping_secondary** -Eintrag auf die Auftrags-ID des Wiederherstellungs Auftrags fest.  
+    5.  Legen Sie die Wiederherstellungs Auftrags-ID im **log_shipping_secondary** Eintrag auf die Auftrags-ID des Wiederherstellungs Auftrags fest.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Beispiel veranschaulicht die Verwendung der gespeicherten Prozedur **sp_add_log_shipping_secondary_primary** , um Informationen für die primäre Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] auf dem sekundären Server einzurichten.  
+ In diesem Beispiel wird die Verwendung der gespeicherten Prozedur **sp_add_log_shipping_secondary_primary** zum Einrichten von Informationen für die primäre Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] auf dem sekundären Server veranschaulicht.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -133,7 +133,7 @@ EXEC master.dbo.sp_add_log_shipping_secondary_primary
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -21,10 +21,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797878"
 ---
-# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
+# <a name="get-help-sql-server-powershell"></a>Aufrufen der SQL Server PowerShell-Hilfe
   Es stehen mehrere Informationsquellen zur Verwendung des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieters für Windows PowerShell und Cmdlets zur Verfügung. Dazu gehört auch die Hilfe, die in der Windows PowerShell-Umgebung verfügbar ist.  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Vorbereitungsmaßnahmen  
  Informationen zu Windows PowerShell finden Sie unter [Erste Schritte mit Windows PowerShell](https://technet.microsoft.com/library/hh857337.aspx).  
   
  Eine Übersicht über die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlets und -Anbieter finden Sie unter [SQL Server PowerShell](../powershell/sql-server-powershell.md).  
@@ -122,6 +122,6 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server PowerShell-Anbieter](../powershell/sql-server-powershell-provider.md)   
  [Verwenden der Datenbank-Engine-Cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

@@ -43,26 +43,26 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @alert_name = ] 'alert_name'` der Name der Warnung. *alert_name* ist vom Datentyp **nvarchar (128)** . Wenn *alert_name* nicht angegeben wird, werden Informationen zu allen Warnungen zurückgegeben.  
+`[ @alert_name = ] 'alert_name'` den Namen der Warnung. *alert_name* ist vom Datentyp **nvarchar (128)** . Wenn *alert_name* nicht angegeben wird, werden Informationen zu allen Warnungen zurückgegeben.  
   
 `[ @order_by = ] 'order_by'` die Sortierreihenfolge, die zum Erzeugen der Ergebnisse verwendet werden soll. *ORDER_BY*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert N '*Name*'.  
   
-`[ @alert_id = ] alert_id` die ID der Warnung, zu der Informationen gemeldet werden sollen. *alert_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @alert_id = ] alert_id` die Identifikationsnummer der Warnung an, über die Informationen über berichtet werden. *alert_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 `[ @category_name = ] 'category'` die Kategorie für die Warnung. *Category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @legacy_format = ] legacy_format` gibt an, ob ein Legacy Resultset erzeugt werden soll. *legacy_format* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn *legacy_format* den Wert **1**hat, gibt **sp_help_alert** das von **sp_help_alert** zurückgegebene Resultset in Microsoft SQL Server 2000 zurück.  
+`[ @legacy_format = ] legacy_format` gibt an, ob ein Legacy Resultset erzeugt werden soll. *legacy_format* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn *legacy_format* **1**ist, gibt **sp_help_alert** das Resultset zurück, das von **sp_help_alert** in Microsoft SQL Server 2000 zurückgegeben wurde.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn **\@legacy_format** den Wert **0**hat, erstellt **sp_help_alert** das folgende Resultset.  
+ Wenn **\@legacy_format** **0**ist, erzeugt **sp_help_alert** das folgende Resultset.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
-|**name**|**sysname**|Name der Warnung (z. b. Demo: Vollständiges **msdb** -Protokoll).|  
+|**name**|**sysname**|Der Name der Warnung (z. b. Demo: vollständiges **msdb** -Protokoll).|  
 |**event_source**|**nvarchar (100)**|Quelle des Ereignisses. Es ist immer **MSSQLSERVER** für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -79,7 +79,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**database_name**|**sysname**|Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst wird. Wenn der Datenbankname gleich NULL ist, wird die Warnung unabhängig von der Datenbank ausgelöst, in der der Fehler aufgetreten ist.|  
 |**event_description_keyword**|**nvarchar (100)**|Beschreibung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlers im Windows-Anwendungsprotokoll, die der angegebenen Zeichenfolge entsprechen muss.|  
 |**occurrence_count**|**int**|Gibt an, wie oft die Warnung aufgetreten ist.|  
-|**count_reset_date**|**int**|Datum, an dem das **occurrence_count** zuletzt zurückgesetzt wurde.|  
+|**count_reset_date**|**int**|Datum, an dem der **occurrence_count** zuletzt zurückgesetzt wurde.|  
 |**count_reset_time**|**int**|Uhrzeit, zu der die **occurrence_count** zuletzt zurückgesetzt wurde.|  
 |**job_id**|**uniqueidentifier**|ID des Auftrags, der als Antwort auf eine Warnung ausgeführt werden soll.|  
 |**job_name**|**sysname**|Name des Auftrags, der als Antwort auf eine Warnung ausgeführt werden soll.|  
@@ -89,14 +89,14 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 immer '[Uncategorized]'.|  
 |**wmi_namespace**|**sysname**|Wenn der Typ **3**ist, wird in dieser Spalte der Namespace für das WMI-Ereignis angezeigt.|  
 |**wmi_query**|**nvarchar(512)**|Wenn der Typ **3**ist, wird in dieser Spalte die Abfrage für das WMI-Ereignis angezeigt.|  
-|**type**|**int**|Typ des Ereignisses:<br /><br /> **1** =  @ no__t-2-Ereignis Warnung<br /><br /> **2** =  @ no__t-2-Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
+|**Typ**|**int**|Typ des Ereignisses:<br /><br /> **1** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignis Warnung<br /><br /> **2** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
   
- Wenn **\@legacy_format** auf **1**festgelegt ist, erstellt **sp_help_alert** das folgende Resultset.  
+ Wenn **\@legacy_format** **1**ist, erzeugt **sp_help_alert** das folgende Resultset.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
-|**name**|**sysname**|Name der Warnung (z. b. Demo: Vollständiges **msdb** -Protokoll).|  
+|**name**|**sysname**|Der Name der Warnung (z. b. Demo: vollständiges **msdb** -Protokoll).|  
 |**event_source**|**nvarchar (100)**|Quelle des Ereignisses. Es ist immer **MSSQLSERVER** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -113,18 +113,18 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**database_name**|**sysname**|Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst wird. Wenn der Datenbankname gleich NULL ist, wird die Warnung unabhängig von der Datenbank ausgelöst, in der der Fehler aufgetreten ist.|  
 |**event_description_keyword**|**nvarchar (100)**|Beschreibung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlers im Windows-Anwendungsprotokoll, die der angegebenen Zeichenfolge entsprechen muss.|  
 |**occurrence_count**|**int**|Gibt an, wie oft die Warnung aufgetreten ist.|  
-|**count_reset_date**|**int**|Datum, an dem das **occurrence_count** zuletzt zurückgesetzt wurde.|  
+|**count_reset_date**|**int**|Datum, an dem der **occurrence_count** zuletzt zurückgesetzt wurde.|  
 |**count_reset_time**|**int**|Uhrzeit, zu der die **occurrence_count** zuletzt zurückgesetzt wurde.|  
 |**job_id**|**uniqueidentifier**|Identifikationsnummer des Auftrags.|  
 |**job_name**|**sysname**|Ein bedarfsgesteuerter Auftrag, der als Antwort auf eine Warnung ausgeführt werden soll.|  
 |**has_notification**|**int**|Ungleich 0, wenn einer oder mehrere Operatoren für diese Warnung benachrichtigt werden. Einer oder mehrere der folgenden Werte sind möglich (mit OR verknüpft):<br /><br /> **1**= e-Mail-Benachrichtigung<br /><br /> **2**= Pager-Benachrichtigung<br /><br /> **4**= hat eine **net send** -Benachrichtigung.|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]. installiert haben.|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]neuen skalierbaren Pakete und R-Funktionen verwenden.|  
 |**performance_condition**|**nvarchar(512)**|Wenn der Typ **2**ist, wird in dieser Spalte die Definition der Leistungs Bedingung angezeigt. Wenn der Typ **3**ist, wird in dieser Spalte die Abfrage für das WMI-Ereignis angezeigt. Andernfalls weist die Spalte den Wert NULL auf.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0 immer " **[nicht kategorisiert]** ".|  
-|**type**|**int**|Warnungstyp:<br /><br /> **1** =  @ no__t-2-Ereignis Warnung<br /><br /> **2** =  @ no__t-2-Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0 immer " **[nicht kategorisiert]** " lauten.|  
+|**Typ**|**int**|Warnungstyp:<br /><br /> **1** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignis Warnung<br /><br /> **2** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
   
-## <a name="remarks"></a>Hinweise  
- **sp_help_alert** muss von der **msdb** -Datenbank aus ausgeführt werden.  
+## <a name="remarks"></a>Remarks  
+ **sp_help_alert** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen Datenbankrolle **SQLAgentOperatorRole** in der **msdb** -Datenbank sein.  

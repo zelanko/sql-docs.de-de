@@ -20,7 +20,7 @@ ms.locfileid: "72797797"
 # <a name="manage-authentication-in-database-engine-powershell"></a>Verwalten der Authentifizierung in PowerShell der Datenbank-Engine
   Standardmäßig wird von den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Komponenten beim Herstellen einer Verbindung mit einer [!INCLUDE[ssDE](../includes/ssde-md.md)]-Instanz die Windows-Authentifizierung verwendet. Sie können die SQL Server-Authentifizierung verwenden, indem Sie entweder ein virtuelles PowerShell-Laufwerk definieren oder für `-Username` die Parameter `-Password` und `Invoke-Sqlcmd` angeben.  
   
-1.  **Vorbereitungen:**  [Berechtigungen](#Permissions)  
+1.  **Before you begin:**  [Permissions](#Permissions)  
   
 2.  **Festlegen der Authentifizierung mit:**  [einem virtuellen Laufwerk](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
@@ -82,7 +82,7 @@ $pwd = Read-Host -AsSecureString -Prompt "Password"
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server PowerShell](sql-server-powershell.md)   
  [SQL Server PowerShell-Anbieter](sql-server-powershell-provider.md)   
  [Invoke-Sqlcmd-Cmdlet](../database-engine/invoke-sqlcmd-cmdlet.md)  

@@ -48,16 +48,16 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **sp_reinitpullsubscription** wird bei der Transaktions Replikation verwendet.  
   
  **sp_reinitpullsubscription** wird für die Peer-zu-Peer-Transaktions Replikation nicht unterstützt.  
   
- **sp_reinitpullsubscription** kann vom Abonnenten aufgerufen werden, um das Abonnement während der nächsten Durchführung der Verteilungs-Agent erneut zu initialisieren.  
+ **sp_reinitpullsubscription** können vom Abonnenten aufgerufen werden, um das Abonnement während der nächsten Durchführung der Verteilungs-Agent erneut zu initialisieren.  
   
- Abonnements für Veröffentlichungen, die mit dem Wert **false** für **\@immediate_sync** erstellt wurden, können vom Abonnenten nicht erneut initialisiert werden.  
+ Abonnements von Veröffentlichungen, die für **\@immediate_sync** mit dem Wert **false** erstellt wurden, können vom Abonnenten nicht erneut initialisiert werden.  
   
- Sie können ein Pullabonnement erneut initialisieren, indem Sie entweder **sp_reinitpullsubscription** auf dem Abonnenten oder **sp_reinitsubscription** auf dem Verleger ausführen.  
+ Sie können ein Pullabonnement erneut initialisieren, indem Sie **sp_reinitpullsubscription** auf dem Abonnenten oder **sp_reinitsubscription** auf dem Verleger ausführen.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  

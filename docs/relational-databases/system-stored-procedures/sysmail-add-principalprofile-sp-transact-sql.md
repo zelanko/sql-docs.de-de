@@ -43,7 +43,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="arguments"></a>Argumente  
 `[ @principal_id = ] principal_id` die ID des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *principal_id* oder *principal_name* angegeben werden. Wenn *principal_id* auf **0** festgelegt ist, wird dieses Profil öffentlich, wobei der Zugriff auf alle Prinzipale in der Datenbank erteilt wird.  
   
-`[ @principal_name = ] 'principal_name'` den Namen des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *principal_id* oder *principal_name* angegeben werden. Wenn *principal_name* auf **'public'** festgelegt ist, wird dieses Profil öffentlich, wobei der Zugriff auf alle Prinzipale in der Datenbank erteilt wird.  
+`[ @principal_name = ] 'principal_name'` den Namen des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung ein. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *principal_id* oder *principal_name* angegeben werden. Wenn *principal_name* auf **'public'** festgelegt ist, wird dieses Profil öffentlich, wobei der Zugriff auf alle Prinzipale in der Datenbank erteilt wird.  
   
 `[ @profile_id = ] profile_id` die ID des Profils für die Zuordnung. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
@@ -54,10 +54,10 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- Um ein Profil öffentlich zu machen, geben Sie einen **\@principal_id** **0** oder eine **\@principal_name** of **Public**an. Ein öffentliches Profil ist für alle Benutzer der **msdb** -Datenbank verfügbar. Allerdings müssen diese Benutzer auch Mitglieder von **DatabaseMailUserRole** sein, wenn sie **sp_send_dbmail**ausführen können sollen.  
+## <a name="remarks"></a>Remarks  
+ Um ein Profil öffentlich zu machen, geben Sie einen **\@principal_id** **0** oder eine **\@principal_name** von **Public**an. Ein öffentliches Profil ist für alle Benutzer der **msdb** -Datenbank verfügbar. Allerdings müssen diese Benutzer auch Mitglieder von **DatabaseMailUserRole** sein, wenn sie **sp_send_dbmail**ausführen können sollen.  
   
- Ein Datenbankbenutzer kann nur ein Standardprofil besitzen. Wenn **\@is_default** auf "**1**" festgelegt ist und der Benutzer bereits einem oder mehreren Profilen zugeordnet ist, wird das angegebene Profil zum Standardprofil für den Benutzer. Das zuvor als Standardprofil verwendete Profil ist dem Benutzer weiter zugeordnet, es ist jedoch nicht mehr als Standardprofil festgelegt.  
+ Ein Datenbankbenutzer kann nur ein Standardprofil besitzen. Wenn **\@is_default** den Wert**1**hat, und der Benutzer bereits einem oder mehreren Profilen zugeordnet ist, wird das angegebene Profil zum Standardprofil für den Benutzer. Das zuvor als Standardprofil verwendete Profil ist dem Benutzer weiter zugeordnet, es ist jedoch nicht mehr als Standardprofil festgelegt.  
   
  Wenn **\@is_default** "**0**" ist und keine andere Zuordnung vorhanden ist, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
@@ -67,7 +67,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  Über die Ausführungsberechtigungen für diese Prozedur verfügen standardmäßig die Mitglieder der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
- **A. Erstellen einer Zuordnung und Festlegen des Standard Profils @ no__t-0  
+ **A. Erstellen einer Zuordnung und Festlegen des Standard Profils**  
   
  Im folgenden Beispiel wird eine Zuordnung zwischen dem Profil `AdventureWorks Administrator Profile` und dem **msdb** -Datenbankbenutzer `ApplicationUser`erstellt. Als Profil wird das Standardprofil des Benutzers verwendet.  
   
@@ -78,7 +78,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
- **B. Erstellen eines Profils als öffentliches Standardprofil @ no__t-0  
+ **B. Erstellen eines Profils als öffentliches Standardprofil**  
   
  In diesem Beispiel wird das Profil `AdventureWorks Public Profile` als öffentliches Standardprofil für Benutzer in der **msdb** -Datenbank festgelegt.  
   
@@ -91,7 +91,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Datenbank-E-Mail Konfigurationsobjekte](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Datenbank-E-Mail von Konfigurationsobjekten](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Datenbank-E-Mail gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

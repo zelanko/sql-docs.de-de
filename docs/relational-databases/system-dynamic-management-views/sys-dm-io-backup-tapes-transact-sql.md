@@ -1,5 +1,5 @@
 ---
-title: sys. DM _io_backup_tapes (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_io_backup_tapes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.locfileid: "70874149"
 
   Gibt die Liste der Bandmedien und den Status von Einbindungsanforderungen für Sicherungen zurück.   
  
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar (520)**|Der Name des tatsächlichen physischen Mediums, auf dem eine Sicherung erstellt werden kann. Lässt keine NULL-Werte zu.|  
 |**logical_device_name**|**nvarchar(256)**|Der vom Benutzer angegebene Name für das Laufwerk (aus **sys. backup_devices**). NULL, wenn kein benutzerdefinierter Name verfügbar ist. Lässt NULL-Werte zu.|  
-|**status**|**int**|Bandstatus:<br /><br /> 1 = Geöffnet und kann verwendet werden<br /><br /> 2 = Einbindung erfolgt<br /><br /> 3 = In Verwendung<br /><br /> 4 = Wird geladen<br /><br /> **Hinweis**: Wenn ein Band geladen wird (**Status = 4**), wird die Medien Bezeichnung noch nicht gelesen. Spalten, die Medien Bezeichnungs Werte (z. b. **media_sequence_number**) kopieren, zeigen erwartete Werte an, die sich von den tatsächlichen Werten auf dem Band unterscheiden können. Nachdem die Bezeichnung gelesen wurde, ändert sich der **Status** in " **3** " (in Verwendung), und die Medien Bezeichnungs Spalten spiegeln das eigentliche Band wider, das geladen wurde.<br /><br /> Lässt keine NULL-Werte zu.|  
+|**status**|**int**|Bandstatus:<br /><br /> 1 = Geöffnet und kann verwendet werden<br /><br /> 2 = Einbindung erfolgt<br /><br /> 3 = In Verwendung<br /><br /> 4 = Wird geladen<br /><br /> **Hinweis:** Wenn ein Band geladen wird (**Status = 4**), wird die Medien Bezeichnung noch nicht gelesen. Spalten, die Medien Bezeichnungs Werte (z. b. **media_sequence_number**) kopieren, zeigen erwartete Werte an, die sich von den tatsächlichen Werten auf dem Band unterscheiden können. Nachdem die Bezeichnung gelesen wurde, ändert sich der **Status** in " **3** " (in Verwendung), und die Medien Bezeichnungs Spalten spiegeln das eigentliche Band wider, das geladen wurde.<br /><br /> Lässt keine NULL-Werte zu.|  
 |**status_desc**|**nvarchar (520)**|Bandstatusbeschreibung:<br /><br /> AVAILABLE<br /><br /> MOUNT PENDING<br /><br /> IN USE<br /><br /> LOADING MEDIA<br /><br /> Lässt keine NULL-Werte zu.|  
 |**mount_request_time**|**datetime**|Uhrzeit, zu der die Einbindung angefordert wurde. NULL, wenn keine Einfügevorgang aussteht (**Status! = 2**). Lässt NULL-Werte zu.|  
 |**mount_expiration_time**|**datetime**|Uhrzeit, zu der die Einbindungssanforderung abläuft (Timeout). NULL, wenn keine Einfügevorgang aussteht (**Status! = 2**). Lässt NULL-Werte zu.|  
@@ -48,7 +48,7 @@ ms.locfileid: "70874149"
 |**media_sequence_number**|**int**|Index des Volumes innerhalb einer Medien Familie (1... *n*). Lässt NULL-Werte zu.|  
 |**tape_operation**|**int**|Band Vorgang, der ausgeführt wird:<br /><br /> 1 = Lesen<br /><br /> 2 = Formatieren<br /><br /> 3 = Initialisieren<br /><br /> 4 = Anfügen<br /><br /> Lässt NULL-Werte zu.|  
 |**tape_operation_desc**|**nvarchar(120)**|Ausgeführter Bandvorgang:<br /><br /> READ<br /><br /> FORMAT<br /><br /> INIT<br /><br /> APPEND<br /><br /> Lässt NULL-Werte zu.|  
-|**mount_request_type**|**int**|Typ der Einbindungsanforderung:<br /><br /> 1 = Bestimmtes Band. Das durch die **media_\***  -Felder identifizierte Band ist erforderlich.<br /><br /> 2 = Nächste Medienfamilie. Die nächste nicht wiederhergestellte Medienfamilie wird angefordert. Wird verwendet, wenn bei der Wiederherstellung weniger Medien als Medienfamilien vorhanden sind.<br /><br /> 3 = Anschlussband. Die Medienfamilie wird erweitert, und ein Anschlussband wird angefordert.<br /><br /> Lässt NULL-Werte zu.|  
+|**mount_request_type**|**int**|Typ der Einbindungsanforderung:<br /><br /> 1 = Bestimmtes Band. Das von den **media_\*** Feldern identifizierte Band ist erforderlich.<br /><br /> 2 = Nächste Medienfamilie. Die nächste nicht wiederhergestellte Medienfamilie wird angefordert. Wird verwendet, wenn bei der Wiederherstellung weniger Medien als Medienfamilien vorhanden sind.<br /><br /> 3 = Anschlussband. Die Medienfamilie wird erweitert, und ein Anschlussband wird angefordert.<br /><br /> Lässt NULL-Werte zu.|  
 |**mount_request_type_desc**|**nvarchar(120)**|Typ der Einbindungsanforderung:<br /><br /> SPECIFIC TAPE<br /><br /> NEXT MEDIA FAMILY<br /><br /> CONTINUATION VOLUME<br /><br /> Lässt NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  

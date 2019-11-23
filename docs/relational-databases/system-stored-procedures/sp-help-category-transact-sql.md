@@ -42,48 +42,48 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @class = ] 'class'` die Klasse, für die Informationen angefordert werden. die *Klasse* ist vom Datentyp **varchar (8)** und hat den Standardwert **Job**. die *Klasse* kann einen der folgenden Werte aufweisen.  
+`[ @class = ] 'class'` die-Klasse, zu der Informationen angefordert werden. die *Klasse* ist vom Datentyp **varchar (8)** und hat den Standardwert **Job**. die *Klasse* kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|ReplTest1|und Beschreibung|  
 |-----------|-----------------|  
 |**JOB**|Stellt Informationen zu einer Auftragskategorie bereit.|  
-|**WARNUNG**|Stellt Informationen zu einer Warnungskategorie bereit.|  
+|**Warnung**|Stellt Informationen zu einer Warnungskategorie bereit.|  
 |**KOM**|Stellt Informationen zu einer Operatorkategorie bereit.|  
   
 `[ @type = ] 'type'` der Typ der Kategorie, für die Informationen angefordert werden. *Type ist vom Datentyp* **varchar (12)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|ReplTest1|und Beschreibung|  
 |-----------|-----------------|  
 |**LOCAL**|Lokale Auftrags Kategorie.|  
-|**MULTISERVER**|Multiserver-Auftragskategorie|  
+|**MultiServer**|Multiserver-Auftragskategorie|  
 |**NONE**|Kategorie für eine andere Klasse als **Job**.|  
   
-`[ @name = ] 'name'` der Name der Kategorie, für die Informationen angefordert werden. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @name = ] 'name'` den Namen der Kategorie, für die Informationen angefordert werden. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
-`[ @suffix = ] suffix` gibt an, ob die **category_type** -Spalte im Resultset eine ID oder ein Name ist. *Suffix* ist vom Typ **Bit**. der Standardwert ist **0**. **1** zeigt den **category_type** als Namen an, und **0** zeigt ihn als ID an.  
+`[ @suffix = ] suffix` gibt an, ob die **category_type** Spalte im Resultset eine ID oder ein Name ist. *Suffix* ist vom Typ **Bit**. der Standardwert ist **0**. **1** zeigt den **category_type** als Namen an, und **0** zeigt ihn als ID an.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn **\@suffix** **0**ist, gibt **sp_help_category** das folgende Resultset zurück:  
+ Wenn **\@Suffix** **0**ist, gibt **sp_help_category** das folgende Resultset zurück:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Kategorie-ID|  
 |**category_type**|**tinyint**|Typ der Kategorie:<br /><br /> **1** = lokal<br /><br /> **2** = MultiServer<br /><br /> **3** = keine|  
 |**name**|**sysname**|Kategoriename|  
   
- Wenn **\@suffix** **1**ist, gibt **sp_help_category** das folgende Resultset zurück:  
+ Wenn **\@Suffix** **1**ist, gibt **sp_help_category** das folgende Resultset zurück:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Kategorie-ID|  
 |**category_type**|**sysname**|Art der Kategorie: Eine von " **local**", " **MultiServer**" oder " **None** ".|  
 |**name**|**sysname**|Kategoriename|  
   
-## <a name="remarks"></a>Hinweise  
- **sp_help_category** muss von der **msdb** -Datenbank aus ausgeführt werden.  
+## <a name="remarks"></a>Remarks  
+ **sp_help_category** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
  Werden keine Parameter angegeben, stellt das Resultset Informationen zu allen Auftragskategorien bereit.  
   

@@ -29,7 +29,7 @@ ms.locfileid: "72909554"
 
   Ändert Einstellungen sekundärer Datenbanken.  
   
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -83,12 +83,12 @@ sp_change_log_shipping_secondary_database
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- InclusionThresholdSetting  
+ Keine  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  **sp_change_log_shipping_secondary_database** muss von der **Master** -Datenbank auf dem sekundären Server ausgeführt werden. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
   
-1.  Ändert die Einstellungen in den **log_shipping_secondary_database** -Datensätzen nach Bedarf.  
+1.  Ändert die Einstellungen in den **log_shipping_secondary_database** Datensätzen nach Bedarf.  
   
 2.  Ändert den lokalen Überwachungsdaten Satz in **log_shipping_monitor_secondary** auf dem sekundären Server mithilfe der angegebenen Argumente, falls erforderlich.  
 
@@ -96,7 +96,7 @@ sp_change_log_shipping_secondary_database
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel wird die Verwendung von **sp_change_log_shipping_secondary_database** zum Aktualisieren der Parameter der sekundären Datenbank für die **LogShipAdventureWorks**-Datenbank veranschaulicht.  
+ Dieses Beispiel veranschaulicht die Verwendung von **sp_change_log_shipping_secondary_database** , um die Parameter der sekundären Datenbank für die **LogShipAdventureWorks**-Datenbank zu aktualisieren.  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_secondary_database   
@@ -110,7 +110,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ,  @history_retention_period = 14420;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

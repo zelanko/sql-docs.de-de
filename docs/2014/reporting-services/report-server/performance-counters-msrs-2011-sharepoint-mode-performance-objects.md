@@ -30,7 +30,7 @@ ms.locfileid: "72782834"
 > [!NOTE]  
 >  Mit diesen Leistungsobjekten werden Ereignisse auf dem lokalen Berichtsserver überwacht. Wenn Sie einen Berichtsserver in einer Bereitstellung für horizontales Skalieren ausführen, beziehen sich die Zahlen auf den aktuellen Server, nicht auf die Bereitstellung für horizontales Skalieren insgesamt.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint-Modus  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] im SharePoint-Modus  
   
  Die Leistungsobjekte sind im Windows-Systemmonitor (**Perfmon.exe**) verfügbar. Weitere Informationen finden Sie in der Windows-Dokumentation. [Laufzeit-Profilerstellung](https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72782834"
   
  In der folgenden Tabelle werden die im `MSRS 2014 Web Service SharePoint Mode`-Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
   
-|Leistungsindikator|Description|  
+|Indikator|und Beschreibung|  
 |-------------|-----------------|  
 |`Active Sessions`|Die Anzahl der aktiven Sitzungen. Dieser Leistungsindikator stellt eine kumulierte Anzahl aller durch Berichtsausführungen generierten Browsersitzungen bereit, unabhängig davon, ob sie noch aktiv sind.<br /><br /> Der Leistungsindikator wird verringert, wenn Sitzungsdatensätze entfernt werden. Standardmäßig werden Sitzungen nach einer Inaktivität von zehn Minuten entfernt.|  
 |`Cache Hits/Sec`|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Es handelt sich um Anforderungen für erneut gerenderte Berichte, nicht um Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Weitere Informationen finden Sie unter `Total Cache Hits` weiter unten in diesem Thema.)|  
@@ -77,7 +77,7 @@ ms.locfileid: "72782834"
   
  In der folgenden Tabelle werden die im `MSRS 2014 Windows Service SharePoint mode`-Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
   
-|Leistungsindikator|Description|  
+|Indikator|und Beschreibung|  
 |-------------|-----------------|  
 |`Active Sessions`|Die Anzahl der aktiven Sitzungen, die in der Berichtsserver-Datenbank gespeichert sind. Dieser Leistungsindikator liefert die Gesamtanzahl aller verfügbaren Browsersitzungen, die aus Berichtsabonnements generiert wurden, unabhängig davon, ob sie noch aktiv sind oder nicht.|  
 |`Alerting: event queue length`||  
@@ -139,6 +139,6 @@ CounterSetName     : MSRS 2014 Web Service SharePoint Mode
 (Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Überwachen der Leistung des Berichtsservers](monitoring-report-server-performance.md)   
  [Leistungsindikatoren für den MSRS 2014-Webdienst und den MSRS 2014-Windows &#40;-Dienst-Leistungs Objekte im einheitlichen Modus&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  

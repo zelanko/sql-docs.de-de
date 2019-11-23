@@ -53,15 +53,15 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- Entweder " *collection_set_id* " oder " *Name* " muss einen Wert aufweisen, beide dürfen nicht NULL sein.  
+## <a name="remarks"></a>Remarks  
+ Entweder *collection_set_id* oder *Name* muss einen Wert aufweisen, beide dürfen nicht NULL sein.  
   
- Diese Prozedur startet die Sammlungs-und Uploadaufträge für den angegebenen Sammlungs Satz und startet sofort den Auftrag des Sammlungs-Agents, wenn für den Sammlungs Satz das **\@collection_mode** auf nicht zwischengespeichert (1) festgelegt ist. Weitere Informationen finden Sie unter [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Diese Prozedur startet die Sammlungs-und Uploadaufträge für den angegebenen Sammlungs Satz und startet sofort den Auftrag des Sammlungs-Agents, wenn der Sammlungs Satz seine **\@collection_mode** auf nicht zwischengespeichert (1) festgelegt ist. Weitere Informationen finden Sie unter [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  sp_sycollector_run_collection_set kann auch verwendet werden, um einen Sammlungssatz auszuführen, der über keinen Zeitplan verfügt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der Daten Bank Rolle **dc_operator** (mit EXECUTE-Berechtigung) zum Ausführen dieser Prozedur.  
+ Zum Ausführen dieses Vorgangs ist die Mitgliedschaft in der Daten Bank Rolle **dc_operator** (mit EXECUTE-Berechtigung) erforderlich.  
   
 ## <a name="example"></a>Beispiel  
  Starten Sie einen Sammlungssatz unter Verwendung des zugehörigen Bezeichners.  

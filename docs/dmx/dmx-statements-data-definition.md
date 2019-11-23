@@ -20,7 +20,7 @@ ms.locfileid: "72890529"
 
   In der folgenden Tabelle sind die Anweisungen aufgeführt, die zur Data Mining-Datendefinitionssprache in Data Mining-Erweiterungen (DMX) gehören.  
   
-|-Anweisung.|Description|  
+|Statement|und Beschreibung|  
 |---------------|-----------------|  
 |[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)|Erstellt eine neue Miningstruktur in der Datenbank.|  
 |[Alter Mining Structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)|Fügt einer vorhandenen Miningstruktur ein Miningmodell hinzu.|  
@@ -29,9 +29,9 @@ ms.locfileid: "72890529"
 |[Löschen der Mining &#40;Struktur DMX&#41;](../dmx/drop-mining-structure-dmx.md)|Löscht eine Miningstruktur aus der Datenbank.|  
 |[EXPORT &#40;DMX&#41;](../dmx/export-dmx.md)|Exportiert ein Miningmodell oder eine Miningstruktur und zugeordnete Objekte in eine ABF-Datei.|  
 |[IMPORT &#40;DMX&#41;](../dmx/import-dmx.md)|Importiert ein Miningmodell oder eine Miningstruktur und zugeordnete Objekte aus einer ABF-Datei.|  
-|[in &#40;DMX auswählen&#41;](../dmx/select-into-dmx.md)|Erstellt eine Kopie eines vorhandenen Miningmodells.|  
+|[SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|Erstellt eine Kopie eines vorhandenen Miningmodells.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   

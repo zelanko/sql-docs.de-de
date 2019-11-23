@@ -166,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>Erstellen einer Warnung in Visual Basic  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **ObjectName | CounterName | Instanz | Comparisionop | Compvalue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Der <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>-Typ erfordert eckige Klammern, da es sich beim `operator` um ein Visual Basic-Schlüsselwort handelt.  
   
@@ -175,7 +175,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Erstellen einer Warnung in Visual C#  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **ObjectName | CounterName | Instanz | Comparisionop | Compvalue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Für den <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>-Typ sind eckige Klammern erforderlich, da es sich bei `operator` um ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]-Schlüsselwort handelt.  
   
@@ -208,7 +208,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>Erstellen einer Warnung in PowerShell  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **ObjectName | CounterName | Instanz | Comparisionop | Compvalue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Für den <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>-Typ sind eckige Klammern erforderlich, da es sich bei `operator` um ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]-Schlüsselwort handelt.  
   
@@ -280,6 +280,6 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [SQL Server-Agent](../../../ssms/agent/sql-server-agent.md)    
+## <a name="see-also"></a>Siehe auch  
+ [SQL Server-Agent](../../../ssms/agent/sql-server-agent.md)   
  [Implementieren von Aufträgen](../../../ssms/agent/implement-jobs.md)  
