@@ -37,12 +37,12 @@ ms.locfileid: "73728180"
 > [!NOTE]  
 >  Diese Berechtigungen gelten nur für den Funktionsbereich **Explorer** der Benutzeroberfläche.  
   
-|Berechtigung|Beschreibung|  
+|Berechtigung|und Beschreibung|  
 |----------------|-----------------|  
-|**Lesen**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten anzeigen.|  
-|**Erstellen**|Der Benutzer kann Elemente erstellen und während der Erstellung Attributwerte zuweisen.|  
+|**Leseberechtigung**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten anzeigen.|  
+|**Create**|Der Benutzer kann Elemente erstellen und während der Erstellung Attributwerte zuweisen.|  
 |**Update**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten aktualisieren.|  
-|**Delete**|Der Benutzer kann Elemente löschen.|  
+|**Löschen**|Der Benutzer kann Elemente löschen.|  
 |**Verweigern**|Der Zugriff auf die Entität wird vollständig verweigert.|  
   
  Die Berechtigungen zum Lesen, Erstellen, Aktualisieren und Löschen können miteinander kombiniert werden. Wenn Berechtigungen zum Erstellen, Aktualisieren und Löschen zugewiesen werden, wird die Leseberechtigung automatisch zugewiesen.  

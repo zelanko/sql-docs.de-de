@@ -32,7 +32,7 @@ ms.locfileid: "73593729"
 
   Gibt Informationen zu Spalten Verschlüsselungsschlüsseln (ceks) zurück, die mit der [Create Column Encryption Key](../../t-sql/statements/create-column-encryption-key-transact-sql.md) -Anweisung erstellt wurden. Jede Zeile stellt einen Cek dar.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name des CMK.|  
 |**column_encryption_key_id**|**int**|ID des Cek.|  
@@ -52,9 +52,9 @@ ms.locfileid: "73593729"
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted mit sicheren Enklaven](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
  [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [Verwalten von Schlüsseln für Always Encrypted mit sicheren Enklaven](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
+ [Verwalten von Schlüsseln für Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
 
   
   

@@ -29,7 +29,7 @@ ms.locfileid: "72304984"
 
   Speichert einen Datensatz für die primäre Datenbank in einer Protokollversandkonfiguration. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|Die ID der primären Datenbank für die Protokollversandkonfiguration.|  
 |**primary_database**|**sysname**|Der Name der primären Datenbank in der Protokollversandkonfiguration|  
@@ -41,11 +41,11 @@ ms.locfileid: "72304984"
 |**monitor_server_security_mode**|**bit**|Der Sicherheitsmodus, der zum Herstellen einer Verbindung mit dem Überwachungsserver verwendet wird.<br /><br /> 1 = Windows-Authentifizierung<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
 |**last_backup_file**|**nvarchar(500)**|Der absolute Pfad der jüngsten Transaktionsprotokollsicherung.|  
 |**last_backup_date**|**datetime**|Uhrzeit und Datum des letzten Protokollsicherungsvorgangs.|  
-|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Diese Spalte wird von**sp_help_log_shipping_primary_database** und **sp_help_log_shipping_secondary_primary** verwendet, um die Anzeige der Überwachungseinstellungen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu steuern.<br /><br /> 0 = der Benutzer hat beim Aufrufen einer dieser beiden gespeicherten Prozeduren keinen expliziten Wert für den **\@monitor_server-** Parameter angegeben.<br /><br /> 1= Der Benutzer hat einen expliziten Wert angegeben.|  
+|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Diese Spalte wird von**sp_help_log_shipping_primary_database** und **sp_help_log_shipping_secondary_primary** verwendet, um die Anzeige der Überwachungseinstellungen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu steuern.<br /><br /> 0 = der Benutzer hat beim Aufrufen einer dieser beiden gespeicherten Prozeduren keinen expliziten Wert für den **\@monitor_server** -Parameter angegeben.<br /><br /> 1= Der Benutzer hat einen expliziten Wert angegeben.|  
 |**backup_compression**|**tinyint**|Gibt an, ob die Protokollversandkonfiguration das Verhalten der Sicherungskomprimierung auf Serverebene überschreibt.<br /><br /> 0 = Deaktiviert. Protokollsicherungen werden niemals komprimiert, unabhängig von den für den Server konfigurierten Sicherungskomprimierungseinstellungen.<br /><br /> 1 = Aktiviert. Protokollsicherungen werden immer komprimiert, unabhängig von den für den Server konfigurierten Sicherungskomprimierungseinstellungen.<br /><br /> 2 = Verwendet die Serverkonfiguration für die Serverkonfigurationsoption [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) . Dies ist der Standardwert.<br /><br /> Die Sicherungskomprimierung wird nur in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand &#40;SQLServer&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   

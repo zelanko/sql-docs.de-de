@@ -32,7 +32,7 @@ ms.locfileid: "73729377"
 > [!NOTE]  
 >  Sie können kein Element löschen, das als domänenbasierter Attributwert für ein anderes Element verwendet wird.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Prerequisites  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  

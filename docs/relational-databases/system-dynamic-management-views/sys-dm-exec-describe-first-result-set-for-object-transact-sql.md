@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.locfileid: "71199333"
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Diese dynamische Verwaltungsfunktion nimmt einen @object_id als Parameter an und beschreibt die ersten Ergebnis Metadaten für das Modul mit dieser ID. Der @object_id angegebene kann die ID einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auslösers sein. Wenn es sich um die ID eines beliebigen anderen Objekts (z. B. einer Sicht, Tabelle, Funktion oder CLR-Prozedur) handelt, wird in den Fehlerspalten des Ergebnisses ein Fehler angegeben.  
+  Diese dynamische Verwaltungsfunktion nimmt eine @object_id als Parameter und beschreibt die ersten Ergebnis Metadaten für das Modul mit dieser ID. Der angegebene @object_id kann die ID einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auslösers sein. Wenn es sich um die ID eines beliebigen anderen Objekts (z. B. einer Sicht, Tabelle, Funktion oder CLR-Prozedur) handelt, wird in den Fehlerspalten des Ergebnisses ein Fehler angegeben.  
   
  **sys.dm_exec_describe_first_result_set_for_object** has the same result set definition as [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) and is similar to [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
@@ -44,15 +44,15 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>Argumente  
  *\@object_id*  
- Der @object_id einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines-Auslösers. [!INCLUDE[tsql](../../includes/tsql-md.md)] @object_idist vom Typ **int**.  
+ Der @object_id einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auslösers. @object_id ist vom Typ **int**.  
   
  *\@include_browse_information*  
- @include_browse_informationist vom Typ **Bit**. Bei 1 werden alle Abfragen so analysiert, als ob die FOR BROWSE-Option in der Abfrage enthalten wäre. Gibt zusätzliche Schlüsselspalten und Quelltabelleninformationen zurück.  
+ @include_browse_information ist vom Typ **Bit**. Bei 1 werden alle Abfragen so analysiert, als ob die FOR BROWSE-Option in der Abfrage enthalten wäre. Gibt zusätzliche Schlüsselspalten und Quelltabelleninformationen zurück.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  Diese allgemeinen Metadaten werden in den Ergebnismetadaten als Resultset mit einer Zeile für jede Spalte zurückgegeben. Jede Zeile beschreibt den Typ und die NULL-Zulässigkeit der Spalte in dem Format, das im folgenden Abschnitt beschriebenen wird. Wenn die erste Anweisung nicht für alle Steuerelementpfade vorhanden ist, wird ein Resultset mit 0 Zeilen zurückgegeben.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Gibt an, ob es sich um eine zusätzliche Spalte für Zwecke der Informationssuche handelt, die nicht im Resultset angezeigt wird.|  
 |**column_ordinal**|**int**|Enthält die Ordnungsposition der Spalte im Resultset. Die Position der ersten Spalte wird als 1 angegeben.|  
@@ -60,7 +60,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_nullable**|**bit**|Enthält den Wert 1, wenn die Spalte NULL-Werte zulässt, 0, wenn die Spalte keine NULL-Werte zulässt, und -1, wenn nicht ermittelt werden kann, ob die Spalte NULL-Werte zulässt.|  
 |**system_type_id**|**int**|Enthält die system_type_id des Datentyps der Spalte, wie in sys. types angegeben. Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, obwohl von der system_type_name-Spalte NULL zurückgegeben wird.|  
 |**system_type_name**|**nvarchar(256)**|Enthält den Namen des Datentyps. Enthält Argumente, die für den Datentyp der Spalte angegeben wurden (z. B. Länge, Genauigkeit, Skala). Wenn der Datentyp ein benutzerdefinierter Aliastyp ist, wird der zugrunde liegende Systemtyp hier angegeben. Bei einem benutzerdefinierten CLR-Typ wird NULL in dieser Spalte zurückgegeben.|  
-|**max_length**|**smallint**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = der Spaltendatentyp ist **varchar (max)** , **nvarchar (max)** , **varbinary (max)** oder **XML**.<br /><br /> Bei **Text** Spalten ist der **max_length** -Wert 16 oder der Wert, der von **sp_tableoption ' Text in row '** festgelegt wird.|  
+|**max_length**|**smallint**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = der Spaltendatentyp ist **varchar (max)** , **nvarchar (max)** , **varbinary (max)** oder **XML**.<br /><br /> Bei **Text** Spalten ist der **max_length** Wert 16 oder der Wert, der durch **sp_tableoption ' Text in row '** festgelegt wird.|  
 |**precision**|**tinyint**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
 |**scale**|**tinyint**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
 |**collation_name**|**sysname**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist. Andernfalls wird NULL zurückgegeben.|  
@@ -88,7 +88,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_sparse_column_set**|**bit**|Gibt 1 zurück, wenn die Spalte eine Sparsespalte ist, andernfalls 0. Gibt NULL zurück, wenn nicht ermittelt werden kann, ob die Spalte Teil eines Sparsespaltensatzes ist.|  
 |**ordinal_in_order_by_list**|**smallint**|Position der Spalte in der ORDER BY-Liste. Gibt NULL zurück, wenn die Spalte nicht in der ORDER BY-Liste angezeigt wird oder die ORDER BY-Liste nicht eindeutig bestimmt werden kann.|  
 |**order_by_list_length**|**smallint**|Die Länge der ORDER BY-Liste. Gibt NULL zurück, wenn keine ORDER BY-Liste vorhanden ist oder die ORDER BY-Liste nicht eindeutig bestimmt werden kann. Beachten Sie, dass dieser Wert für alle von sp_describe_first_result_set zurückgegebenen Zeilen gleich ist.|  
-|**order_by_is_descending**|**smallint NULL**|Wenn ordinal_in_order_by_list nicht NULL ist, meldet die **order_by_is_descending** -Spalte die Richtung der ORDER BY-Klausel für diese Spalte. Andernfalls wird NULL gemeldet.|  
+|**order_by_is_descending**|**smallint NULL**|Wenn die ordinal_in_order_by_list nicht NULL ist, meldet die **order_by_is_descending** Spalte die Richtung der ORDER BY-Klausel für diese Spalte. Andernfalls wird NULL gemeldet.|  
 |**error_number**|**int**|Enthält die von der Funktion zurückgegebene Fehlernummer. Enthält NULL, wenn in der Spalte kein Fehler aufgetreten ist.|  
 |**error_severity**|**int**|Enthält den von der Funktion zurückgegebenen Schweregrad. Enthält NULL, wenn in der Spalte kein Fehler aufgetreten ist.|  
 |**error_state**|**int**|Enthält die von der Funktion zurückgegebene Zustands Meldung. Wenn kein Fehler ist aufgetreten ist, enthält die Spalte NULL.|  
@@ -96,12 +96,12 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type**|**int**|Enthält eine ganze Zahl, die den zurückgegebenen Fehler darstellt. Wird error_type_desc zugeordnet. Siehe Liste unter Hinweisen.|  
 |**error_type_desc**|**nvarchar(60)**|Enthält eine kurze Zeichenfolge in Großbuchstaben, die den zurückgegebenen Fehler darstellt. Wird error_type zugeordnet. Siehe Liste unter Hinweisen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Funktion verwendet den gleichen Algorithmus wie **sp_describe_first_result_set**. Weitere Informationen finden Sie unter [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  In der folgenden Tabelle werden die Fehlertypen und deren Beschreibungen aufgeführt.  
   
-|error_type|error_type|Beschreibung|  
+|error_type|error_type|und Beschreibung|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Alle Fehler, die nicht anderweitig beschrieben sind.|  
 |2|SYNTAX|Im Batch ist ein Syntaxfehler aufgetreten.|  
@@ -113,17 +113,17 @@ sys.dm_exec_describe_first_result_set_for_object
 |8|UNDECLARED_PARAMETER|Das Ergebnis konnte nicht bestimmt werden, da der Datentyp von mindestens einer der Spalten des Resultsets potenziell von einem nicht deklarierten Parameter abhängt.|  
 |9|RECURSION|Das Ergebnis konnte nicht ermittelt werden, da der Batch eine rekursive Anweisung enthält.|  
 |10|TEMPORARY_TABLE|Das Ergebnis konnte nicht bestimmt werden, da der Batch eine temporäre Tabelle enthält und von **sp_describe_first_result_set** nicht unterstützt wird.|  
-|11|UNSUPPORTED_STATEMENT|Das Ergebnis konnte nicht bestimmt werden, da der Batch eine Anweisung enthält, die von **sp_describe_first_result_set** nicht unterstützt wird (z. b. FETCH, REVERT usw.).|  
-|12|OBJECT_ID_NOT_SUPPORTED|Die @object_id an die Funktion über gegebene wird nicht unterstützt (d. h. keine gespeicherte Prozedur).|  
-|13|OBJECT_ID_DOES_NOT_EXIST|Die @object_id an die Funktion über gegebene wurde im System Katalog nicht gefunden.|  
+|11|UNSUPPORTED_STATEMENT|Das Ergebnis konnte nicht bestimmt werden, da der Batch eine Anweisung enthält, die nicht von **sp_describe_first_result_set** unterstützt wird (z. b. FETCH, REVERT usw.).|  
+|12|OBJECT_ID_NOT_SUPPORTED|Das an die Funktion über gegebene @object_id wird nicht unterstützt (d. h. keine gespeicherte Prozedur).|  
+|13|OBJECT_ID_DOES_NOT_EXIST|Das an die Funktion über gegebene @object_id wurde im System Katalog nicht gefunden.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Berechtigung zum Ausführen @tsql des Arguments.  
+ Erfordert die Berechtigung zum Ausführen des @tsql Arguments.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-returning-metadata-with-and-without-browse-information"></a>A. Zurückgeben von Metadaten mit und ohne Suchinformationen  
- Im folgenden Beispiel wird eine gespeicherte Prozedur mit dem Namen TestProc2 erstellt, die zwei Resultsets zurückgibt. Im Beispiel wird veranschaulicht, dass **sys. DM _exec_describe_first_result_set** Informationen zum ersten Resultset in der Prozedur zurückgibt, mit und ohne die Informationen zum Durchsuchen.  
+ Im folgenden Beispiel wird eine gespeicherte Prozedur mit dem Namen TestProc2 erstellt, die zwei Resultsets zurückgibt. Im Beispiel wird veranschaulicht, dass **sys. dm_exec_describe_first_result_set** Informationen zum ersten Resultset in der Prozedur zurückgibt, mit und ohne die Informationen zum Durchsuchen.  
   
 ```  
 CREATE PROC TestProc2  
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. Kombinieren der sys.dm_exec_describe_first_result_set_for_object-Funktion mit einer Tabelle oder Sicht  
- Im folgenden Beispiel werden die sys. Procedures-System Katalog Sicht und die **sys. DM _exec_describe_first_result_set_for_object** -Funktion verwendet, um Metadaten für die Resultsets aller gespeicherten Prozeduren in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank anzuzeigen.  
+ Im folgenden Beispiel werden die sys. Procedures-System Katalog Sicht und die **sys. dm_exec_describe_first_result_set_for_object** -Funktion verwendet, um Metadaten für die Resultsets aller gespeicherten Prozeduren in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank anzuzeigen.  
   
 ```  
 USE AdventureWorks2012;  

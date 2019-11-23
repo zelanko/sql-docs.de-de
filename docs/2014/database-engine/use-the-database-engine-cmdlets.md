@@ -30,7 +30,7 @@ ms.lasthandoff: 10/22/2019
 ms.locfileid: "72783112"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Verwenden der Datenbank-Engine-Cmdlets
-  Windows PowerShell-Cmdlets sind Einzelfunktionsbefehle, für die i. d. R. eine Verb-Substantiv-Namenskonvention gilt, z. B. **Get-Help** oder **Set-MachineName**. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter für Windows PowerShell bietet für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]spezifische Cmdlets.  
+  Windows PowerShell-Cmdlets sind Einzelfunktionsbefehle, für die i. d. R. eine Verb-Substantiv-Namenskonvention gilt, z. B. **Get-Help** oder **Set-MachineName**. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Anbieter für Windows PowerShell bietet für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spezifische Cmdlets.  
   
 ## <a name="database-engine-cmdlets"></a>Datenbank-Engine-Cmdlets  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementiert eine kleine Anzahl von Cmdlets für [!INCLUDE[ssDE](../includes/ssde-md.md)]. Diese Cmdlets werden hauptsächlich zum Ausführen vorhandener Transact-SQL-Skripts aus neuen PowerShell-Skripts, Auswerten richtlinienbasierter Verwaltungsrichtlinien und Unterstützen beim Angeben von SQL Server-Bezeichnern in SQL Server-Anbieterpfaden verwendet.  
@@ -53,12 +53,12 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt die Verwendung von **Invoke-Sqlcmd** zum Ausführen von **sqlcmd** -Skripts oder -Befehlen, die [!INCLUDE[tsql](../includes/tsql-md.md)] - oder XQuery-Anweisungen enthalten. Die **sqlcmd** -Eingabe wird entweder als Zeichenfolgen-Eingabeparameter oder als Name einer zu öffnenden Skriptdatei akzeptiert.|[Invoke-Sqlcmd-Cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
-|Beschreibt die Verwendung von **Invoke-PolicyEvaluation** zum Melden, ob ein Zielsatz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekten den in richtlinienbasierten Verwaltungsrichtlinien definierten Bedingungen entspricht. Optional können mit dem Cmdlet alle festlegbaren Optionen in den Zielobjekten neu konfiguriert werden, die den Richtlinienbedingungen nicht entsprechen.|[Invoke-PolicyEvaluation-Cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
+|Beschreibt die Verwendung von **Invoke-Sqlcmd** zum Ausführen von **sqlcmd**-Skripts oder -Befehlen, die [!INCLUDE[tsql](../includes/tsql-md.md)]- oder XQuery-Anweisungen enthalten. Die **sqlcmd**-Eingabe wird entweder als Zeichenfolgen-Eingabeparameter oder als Name einer zu öffnenden Skriptdatei akzeptiert.|[Invoke-Sqlcmd-Cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
+|Beschreibt die Verwendung von **Invoke-PolicyEvaluation** zum Melden, ob ein Zielsatz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Objekten den in richtlinienbasierten Verwaltungsrichtlinien definierten Bedingungen entspricht. Optional können mit dem Cmdlet alle festlegbaren Optionen in den Zielobjekten neu konfiguriert werden, die den Richtlinienbedingungen nicht entsprechen.|[Invoke-PolicyEvaluation-Cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
 |Beschreibt die Verwendung von `Encode-Sqlname` und `Decode-Sqlname` zum Verarbeiten von SQL Server-Bezeichnern, die in Windows PowerShell-Pfaden nicht unterstützte Zeichen enthalten.|[Codierung und Decodierung von SQL Server-Bezeichnern](../powershell/encode-and-decode-sql-server-identifiers.md)|  
 |Beschreibt die Verwendung von `Convert-UrnToPath` zum Konvertieren eines URN (Uniform Resource Name, einheitlicher Name für Ressourcen) für SQL Server-Verwaltbarkeitsobjekte in den entsprechenden Pfad des SQL Server-Anbieters.|[Konvertieren von URNs in SQL Server-Anbieterpfade](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server PowerShell-Anbieter](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [Übersicht über PowerShell-Cmdlets für &#40;AlwaysOn-Verfügbarkeitsgruppen SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  

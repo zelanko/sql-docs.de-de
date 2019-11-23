@@ -12,7 +12,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: ba58e81cb802f3debe1c481443751de1947c595e
 ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798118"
@@ -24,7 +24,7 @@ ms.locfileid: "72798118"
   
  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Prerequisites  
  Der SharePoint-Server muss im SharePoint-Setup mit der Installationsoption Serverfarm installiert worden sein. Ein eigenständiger SharePoint-Server, der eine integrierte Datenbank verwendet, wird nicht unterstützt. Weitere Informationen finden Sie unter [Anleitung für die Verwendung von SQL Server BI-Funktionen in einer SharePoint 2010-Farm](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  

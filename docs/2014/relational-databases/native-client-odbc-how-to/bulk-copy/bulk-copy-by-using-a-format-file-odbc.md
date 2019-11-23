@@ -183,8 +183,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Massen Kopieren mithilfe der ODBC &#40;&#41; -Themen SQL Server ODBC-Treibers](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)    
+## <a name="see-also"></a>Siehe auch  
+ [Massen Kopieren mithilfe der ODBC &#40;&#41; -Themen SQL Server ODBC-Treibers](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Verwenden von Datendateien und Formatdateien](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

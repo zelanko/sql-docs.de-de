@@ -23,13 +23,13 @@ ms.locfileid: "73728915"
 
   Mit dem **Datenbankupgrade-Assistenten** können Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanken aktualisieren.  
   
-## <a name="action"></a>Aktion  
+## <a name="action"></a>Action  
  Dies ist die Einführungsseite des Assistenten. Klicken Sie auf **Weiter** , um mit dem Aktualisieren der Datenbank zu beginnen.  
   
 ## <a name="upgrade-review"></a>Upgradeüberprüfung  
  Überprüfen Sie die auf dieser Seite angegebenen Informationen. Wenn diese richtig sind, klicken Sie auf **Weiter** , um die angegebene Datenbank zu aktualisieren.  
   
-|Steuerelementname|Beschreibung|  
+|Steuerelementname|und Beschreibung|  
 |------------------|-----------------|  
 |**SQL Server-Instanz**|Der Name der derzeit ausgewählten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] -Instanz.|  
 |**Master Data Services-Datenbank**|Der Name der derzeit ausgewählten [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank.|  

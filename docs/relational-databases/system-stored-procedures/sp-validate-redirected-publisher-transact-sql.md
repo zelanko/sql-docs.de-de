@@ -40,11 +40,11 @@ ms.locfileid: "72252050"
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @original_publisher = ] 'original_publisher'` der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], von dem die Datenbank ursprünglich veröffentlicht wurde. *original_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @original_publisher = ] 'original_publisher'` den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die die Datenbank ursprünglich veröffentlicht hat. *original_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` den Namen der Datenbank, die veröffentlicht wird. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` den Namen der Datenbank ab, die veröffentlicht wird. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` das Ziel der Umleitung, das angegeben wurde, als **sp_redirect_publisher** für das Verleger-/Datenbankpaar aufgerufen wurde. *redirected_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @redirected_publisher = ] 'redirected_publisher'` das Ziel der Umleitung angegeben, wenn **sp_redirect_publisher** für das Verleger-/Datenbankpaar aufgerufen wurde. *redirected_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -52,10 +52,10 @@ ms.locfileid: "72252050"
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn kein Eintrag für den Verleger und die Veröffentlichungs Datenbank vorhanden ist, gibt **sp_validate_redirected_publisher** NULL im Output *-Parameter \@redirected_publisher*zurück. Wenn ein Eintrag vorhanden ist, wird er im Ausgabeparameter in Erfolgs- und Fehlerfällen zurückgegeben.  
+## <a name="remarks"></a>Remarks  
+ Wenn kein Eintrag für den Verleger und die Veröffentlichungs Datenbank vorhanden ist, gibt **sp_validate_redirected_publisher** im Output-Parameter *\@redirected_publisher*NULL zurück. Wenn ein Eintrag vorhanden ist, wird er im Ausgabeparameter in Erfolgs- und Fehlerfällen zurückgegeben.  
   
- Wenn die Überprüfung erfolgreich ist, gibt **sp_validate_redirected_publisher** einen Erfolgsindikator zurück.  
+ Wenn die Überprüfung erfolgreich ist, gibt **sp_validate_redirected_publisher** eine Erfolgs Angabe zurück.  
   
  Wenn die Überprüfung fehlschlägt, werden Fehler mit einer Fehlerbeschreibung ausgelöst.  
   

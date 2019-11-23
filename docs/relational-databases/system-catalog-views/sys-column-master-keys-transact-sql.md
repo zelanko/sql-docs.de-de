@@ -37,7 +37,7 @@ ms.locfileid: "73594521"
 
   Gibt eine Zeile für jeden Datenbank-Hauptschlüssel zurück, der mit der [Create Master Key](../../t-sql/statements/create-column-master-key-transact-sql.md) -Anweisung hinzugefügt wurde. Jede Zeile stellt einen einzelnen Spalten Hauptschlüssel (Column Master Key, CMK) dar.  
     
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name des CMK.|  
 |**column_master_key_id**|**int**|ID des Spalten Hauptschlüssels.|  
@@ -61,7 +61,7 @@ ms.locfileid: "73594521"
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [Verwalten von Schlüsseln für Always Encrypted mit sicheren Enklaven](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [Verwalten von Schlüsseln für Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
  
   
   

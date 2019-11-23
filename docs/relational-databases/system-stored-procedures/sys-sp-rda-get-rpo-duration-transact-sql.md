@@ -45,14 +45,14 @@ sp_rda_get_rpo_duration @durationinhours output
   Die Anzahl der Stunden (ein ganzzahliger Wert ungleich null) der migrierten Daten, die SQL Server für die aktuelle Stretch-aktivierte Datenbank beibehalten.    
     
 ## <a name="permissions"></a>Berechtigungen    
- Erfordert db_owner-Berechtigungen.    
+ Erfordert db_owner Berechtigungen.    
     
-## <a name="remarks"></a>Hinweise    
+## <a name="remarks"></a>Remarks    
  Ändern Sie den Wert, indem Sie [sys &#40;. sp_rda_set_rpo_duration Transact&#41;-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)ausführen.    
     
 ## <a name="see-also"></a>Siehe auch    
  [sys.sp_rda_set_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
  [Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
+ [Stretch-Datenbank](../../sql-server/stretch-database/stretch-database.md)    
     
   

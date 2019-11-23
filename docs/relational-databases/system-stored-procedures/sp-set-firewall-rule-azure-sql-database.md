@@ -42,26 +42,26 @@ sp_set_firewall_rule [@name =] 'name',
 ```  
   
 ## <a name="arguments"></a>Argumente  
- In der folgenden Tabelle werden die unterstützten Argumente und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Optionen in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]veranschaulicht.  
+ In der folgenden Tabelle werden die unterstützten Argumente und Optionen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]veranschaulicht.  
   
-|Name|Datatype|Beschreibung|  
+|NAME|Datatype|und Beschreibung|  
 |----------|--------------|-----------------|  
-|[@name =] ' Name '|**NVARCHAR (128)**|Der verwendete Name, um die Firewalleinstellung auf Serverebene zu beschreiben und von anderen zu unterscheiden.|  
-|[@start_ip_address =] ' start_ip_address '|**VARCHAR (50)**|Die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Serverebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`.|  
-|[@end_ip_address =] ' end_ip_address '|**VARCHAR (50)**|Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Serverebene. IP-Adressen, die kleiner oder gleich dieser IP-Adresse sind, können versuchen, eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server herzustellen. Die höchste mögliche IP-Adresse ist `255.255.255.255`.<br /><br /> Hinweis: Azure-Verbindungsversuche sind zulässig, wenn sowohl dieses Feld als auch das `0.0.0.0`start_ip_address-Feld gleich sind.|  
+|[@name =] Benennen|**Nvarchar (128)**|Der verwendete Name, um die Firewalleinstellung auf Serverebene zu beschreiben und von anderen zu unterscheiden.|  
+|[@start_ip_address =] "start_ip_address"|**Varchar (50)**|Die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Serverebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`.|  
+|[@end_ip_address =] "end_ip_address"|**Varchar (50)**|Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Serverebene. IP-Adressen, die kleiner oder gleich dieser IP-Adresse sind, können versuchen, eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server herzustellen. Die höchste mögliche IP-Adresse ist `255.255.255.255`.<br /><br /> Hinweis: Azure-Verbindungsversuche sind zulässig, wenn sowohl dieses Feld als auch das *start_ip_address* Feld `0.0.0.0`entsprechen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die Namen der Firewalleinstellungen auf Serverebene müssen eindeutig sein. Wenn der Name der für die gespeicherte Prozedur bereitgestellten Einstellung bereits in der Tabelle mit den Firewalleinstellungen vorhanden ist, werden die Start- und End-IP-Adressen aktualisiert. Andernfalls wird eine neue Firewalleinstellung auf Serverebene erstellt.  
   
- Wenn Sie eine Firewalleinstellung auf Serverebene hinzufügen `0.0.0.0`, bei der die Start-und End-IP-Adressen gleich sind, aktivieren Sie den Zugriff auf Ihren [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server von Azure. Geben Sie einen Wert für den *Name* -Parameter an, der Ihnen hilft, die Firewalleinstellung auf Serverebene zu merken.  
+ Wenn Sie eine Firewalleinstellung auf Serverebene hinzufügen, bei der die Start-und die End-IP-Adresse `0.0.0.0`sind, aktivieren Sie den Zugriff auf Ihren [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server von Azure aus. Geben Sie einen Wert für den *Name* -Parameter an, der Ihnen hilft, die Firewalleinstellung auf Serverebene zu merken.  
   
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] werden Anmeldedaten, die für die Authentifizierung einer Verbindung und Firewallregeln auf Serverebene erforderlich sind, über einen gewissen Zeitraum in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um das Aktualisieren der Authentifizierungsdatenbank zu erzwingen und sicherzustellen, dass die Datenbank über die aktuelle Version der Anmeldungstabelle verfügt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Firewallregeln auf Serverebene können nur durch die Prinzipal Anmeldung auf Serverebene oder durch einen als Administrator zugewiesenen Azure Active Directory Prinzipal auf Serverebene erstellt oder geändert werden. Der Benutzer muss mit der Master-Datenbank verbunden sein, um sp_set_firewall_rule auszuführen.  
+ Firewallregeln auf Serverebene können nur durch die Prinzipal Anmeldung auf Serverebene oder durch einen als Administrator zugewiesenen Azure Active Directory Prinzipal auf Serverebene erstellt oder geändert werden. Der Benutzer muss mit der Master-Datenbank verbunden sein, um sp_set_firewall_rule ausführen zu können.  
   
 ## <a name="examples"></a>Beispiele  
- Mit dem folgenden Code wird eine Firewalleinstellung auf Server `Allow Azure` Ebene mit dem Namen erstellt, die den Zugriff von Azure ermöglicht. Führen Sie den folgenden Befehl in der virtuellen Master Datenbank aus.  
+ Mit dem folgenden Code wird eine Firewalleinstellung auf Serverebene mit dem Namen `Allow Azure` erstellt, die den Zugriff von Azure ermöglicht. Führen Sie den folgenden Befehl in der virtuellen Master Datenbank aus.  
   
 ```  
 -- Enable Azure connections.  
@@ -69,7 +69,7 @@ exec sp_set_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- Der folgende Code erstellt eine Firewalleinstellung auf Serverebene namens `Example setting 1` nur für die IP-Adresse `0.0.0.2`. Anschließend wird die `sp_set_firewall_rule` gespeicherte Prozedur erneut aufgerufen, um die End-IP-Adresse `0.0.0.4`in dieser Firewalleinstellung auf zu aktualisieren. Dadurch wird ein Bereich erstellt, der die `0.0.0.2`IP `0.0.0.3`-Adressen `0.0.0.4` , und ermöglicht, auf den Server zuzugreifen.  
+ Der folgende Code erstellt eine Firewalleinstellung auf Serverebene namens `Example setting 1` nur für die IP-Adresse `0.0.0.2`. Anschließend wird die gespeicherte Prozedur `sp_set_firewall_rule` erneut aufgerufen, um die End-IP-Adresse auf `0.0.0.4`in dieser Firewalleinstellung zu aktualisieren. Dadurch wird ein Bereich erstellt, der IP-Adressen `0.0.0.2`, `0.0.0.3`und `0.0.0.4` ermöglicht, auf den Server zuzugreifen.  
   
 ```  
 -- Create server-level firewall setting for only IP 0.0.0.2  
@@ -81,6 +81,6 @@ exec sp_set_firewall_rule N'Example setting 1', '0.0.0.2', '0.0.0.4';
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Azure SQL-Daten Bank Firewall](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Vorgehensweise: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ Firewall-  für [Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)  
+ Vorgehens [Weise: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sys. firewall_rules &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)

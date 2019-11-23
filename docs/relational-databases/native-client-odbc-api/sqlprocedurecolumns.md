@@ -32,7 +32,7 @@ ms.locfileid: "73785956"
   
  In der folgenden Tabelle sind die vom Resultset zurückgegebenen Spalten und deren Erweiterte Verwendung der **UDT** -und **XML** -Datentypen durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber aufgeführt:  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|und Beschreibung|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|Gibt den Namen des Katalogs zurück, der den benutzerdefinierten Typ (User-Defined Type, UDT) enthält.|  
 |SS_UDT_SCHEMA_NAME|Gibt den Namen des Schemas zurück, das den UDT enthält.|  

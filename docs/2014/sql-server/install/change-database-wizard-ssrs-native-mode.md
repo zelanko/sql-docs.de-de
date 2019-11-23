@@ -27,22 +27,22 @@ ms.locfileid: "71952661"
   
  Wenn Sie eine Berichtsserver-Datenbank einer früheren Version auswählen, wird diese auf die Version der verbundenen Berichtsserverinstanz aktualisiert. Wenn der Dienst startet, überprüft er die Datenbankversion und aktualisiert sie automatisch auf das aktuelle Schema.  
   
- Um den Assistenten zu starten, klicken Sie auf der Seite Datenbank im **-Konfigurations-Manager auf** Datenbank ändern [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Anweisungen zum Starten des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Configuration Manager finden Sie unter [Konfigurations-Manager für Reporting Services &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Um den Assistenten zu starten, klicken Sie auf der Seite Datenbank im **-Konfigurations-Manager auf** Datenbank ändern [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Anweisungen zum Starten des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager finden Sie unter [Konfigurations-Manager für Reporting Services &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Aktion**  
  Wählen Sie den Task aus, den Sie ausführen möchten. Sie können eine neue Datenbank im einheitlichen Modus oder im integrierten SharePoint-Modus erstellen. Oder Sie können eine vorhandene Berichtsserver-Datenbank auswählen, die mit der aktuellen Berichtsserverinstanz verwendet werden soll.  
   
  **Daten Bank Server**  
- Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz an, die die Berichtsserver-Datenbank hostet. Sie können eine Standardinstanz oder eine benannte Instanz auf einem lokalen oder einem Remotecomputer verwenden. Wenn Sie eine Verbindung mit einer benannten Instanz herstellen, geben Sie den Servernamen im folgenden Format ein: \<*Server*> @ no__t-3 @ no__t-4*instance*>.  
+ Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz an, die die Berichtsserver-Datenbank hostet. Sie können eine Standardinstanz oder eine benannte Instanz auf einem lokalen oder einem Remotecomputer verwenden. Wenn Sie eine Verbindung mit einer benannten Instanz herstellen, geben Sie den Servernamen im folgenden Format ein: \<*Server*>\\<*Instanz*>.  
   
  Um eine Verbindung mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz herzustellen, müssen Sie Anmeldeinformationen verwenden, die zum Anmelden auf dem Server und zum Aktualisieren der Datenbankdaten berechtigen. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager verwendet Ihre aktuellen Windows-Anmeldeinformationen, wenn Sie jedoch über keine Anmelde- oder Datenbankberechtigung verfügen, müssen Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankanmeldung angeben. Sie können keine anderen Windows-Anmeldeinformationen angeben. Wenn Sie eine Verbindung als anderer Windows-Benutzer herstellen möchten, melden Sie sich als dieser Benutzer an, und starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager.  
   
  Um eine Verbindung mit einer Remoteinstanz herzustellen, müssen Sie diese Instanz zunächst für Remoteverbindungen aktivieren. Einige Versionen und Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lassen Remoteverbindungen standardmäßig nicht zu. Überprüfen Sie mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, ob die Protokolle TCP/IP und Named Pipes aktiviert sind, um festzustellen, ob Remoteverbindungen zugelassen werden. Wenn die Remoteinstanz zudem eine benannte Instanz ist, müssen Sie sicherstellen, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst auf dem Zielserver aktiviert ist und ausgeführt wird. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser stellt die Portnummer bereit, die von der benannten Instanz für den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurations-Manager verwendet wird.  
   
- **Datenbank**  
+ **Database**  
  Gibt den Namen der Berichtsserver-Datenbank an, die die Serverdaten speichert. Sie können eine vorhandene Datenbank angeben oder eine neue Datenbank erstellen.  
   
  Die Eigenschaften, die zum Erstellen einer neuen Datenbank verwendet werden, werden im Assistenten angezeigt, wenn Sie auf der Seite Aktionen die Option **Neue Datenbank erstellen** wählen. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager erstellt zwei Datenbanken, die durch den Namen gebunden sind: eine Datenbank für die Aufnahme von statischen Daten sowie eine temporäre Datenbank zum Speichern von Sitzungs- und Arbeitsdaten. Weitere Informationen finden Sie unter [Berichts Server- &#40;Datenbank SSRS im&#41; einheitlichen Modus](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Online Dokumentation.  
@@ -62,7 +62,7 @@ ms.locfileid: "71952661"
  Bei Auswahl einer anderen Berichtsserver-Datenbank wird der Modus der aktuellen Datenbank angezeigt, sodass Sie wissen, wie die aktuelle Datenbank verwendet wird.  
   
  **Anmeldeinformationen**  
- Gibt das Benutzerkonto an, mit dem der Berichtsserver eine Verbindung mit der Berichtsserver-Datenbank herstellt. Gültige Werte sind u. a. das Dienstkonto des Report Server-Webdiensts, eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankanmeldung, die in der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz definiert ist, auf der Sie den Berichtsserver hosten, oder ein Windows-Konto. Wenn Sie ein Windows-Konto verwenden, können Sie ein lokales Konto angeben ( *\<computername > \\ < username @ no__t-3*), wenn sich der Berichts Server und die Datenbank auf demselben Computer befinden, oder ein Domänen Benutzerkonto ( *\<domäne > \\ < Benutzername @ no__t-7*), wenn Sie sich auf unterschiedlichen Computern in derselben Domäne befinden.  
+ Gibt das Benutzerkonto an, mit dem der Berichtsserver eine Verbindung mit der Berichtsserver-Datenbank herstellt. Gültige Werte sind u. a. das Dienstkonto des Report Server-Webdiensts, eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankanmeldung, die in der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz definiert ist, auf der Sie den Berichtsserver hosten, oder ein Windows-Konto. Wenn Sie ein Windows-Konto verwenden, können Sie ein lokales Konto angeben ( *\<Computername >\\< username\>* ), wenn sich der Berichts Server und die Datenbank auf demselben Computer befinden, oder ein Domänen Benutzerkonto ( *\<Domäne >\\< username\>* ), wenn Sie sich auf unterschiedlichen Computern in derselben Domäne befinden.  
   
  Der Berichtsserver erstellt eine Datenbankanmeldung und weist die Datenbankberechtigungen dem Konto zu, das Sie angeben.  
   
@@ -77,10 +77,10 @@ ms.locfileid: "71952661"
  Überwachen Sie den Status aller Tasks.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank &#40;SSRS im einheitlichen&#41;Modus](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
- [Assistent &#40;zum Ändern von Anmelde Informationen SSRS&#41;](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)im einheitlichen Modus    
+ [SSRS-Datenbank &#40;im&#41; einheitlichen Modus](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
+ [Assistent &#40;zum Ändern von Anmelde Informationen &#41; SSRS](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md) im einheitlichen Modus  
  [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Konfigurations-Manager für Reporting Services F1-Hilfe &#40;Themen SSRS im&#41;einheitlichen Modus](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Konfigurations-Manager für Reporting Services F1-Hilfe &#40;Themen SSRS im&#41; einheitlichen Modus](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

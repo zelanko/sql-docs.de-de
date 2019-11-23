@@ -22,7 +22,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882322"
 ---
-# <a name="create-a-publication"></a>Create a Publication
+# <a name="create-a-publication"></a>Erstellen einer Veröffentlichung
   In diesem Thema wird beschrieben, wie eine Veröffentlichung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt wird.  
   
  **In diesem Thema**  
@@ -35,7 +35,7 @@ ms.locfileid: "73882322"
   
 -   **So erstellen Sie eine Veröffentlichung und definieren Artikel mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73882322"
   
 -   Veröffentlichungs- und Artikelnamen dürfen folgende Zeichen nicht enthalten: % , \* , [ , ] , | , : , " , ? , ', \,/, \< >. Wenn Objekte in der Datenbank eines dieser Zeichen enthalten, und Sie die Objekte replizieren möchten, müssen Sie einen Artikelnamen angeben, der sich von dem Objektnamen im Dialogfeld **Artikeleigenschaften - \<Article>** unterscheidet. Dieses Dialogfeld ist im Assistenten auf der Seite **Artikel** verfügbar.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
@@ -115,7 +115,7 @@ ms.locfileid: "73882322"
     > [!NOTE]  
     >  Veröffentlichungsnamen dürfen die folgenden Zeichen nicht enthalten:  
     >   
-    >  % * [ ] | : " ? \< >  
+    >  % * [ ] | : " ? \ / \< >  
   
 4.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) aus. Geben Sie den in Schritt 3 für **\@publication** verwendeten Veröffentlichungsnamen und für **\@snapshot_job_name** und **\@password** die Windows-Anmeldeinformationen an, unter denen der Momentaufnahmen-Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem fürpublisher_security_mode **den Wert \@0** und für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ und** **publisher_password\@ die** -Anmeldeinformationen angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "73882322"
     > [!NOTE]  
     >  Veröffentlichungsnamen dürfen die folgenden Zeichen nicht enthalten:  
     >   
-    >  % * [ ] | : " ? \< >  
+    >  % * [ ] | : " ? \ / \< >  
   
 3.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) aus. Geben Sie für **\@publication** den in Schritt 2 verwendeten Veröffentlichungsnamen und für **\@snapshot_job_name** und **\@password** die Windows-Anmeldeinformationen an, unter denen der Momentaufnahme-Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem fürpublisher_security_mode **den Wert \@0** und für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ und** **publisher_password\@ die** -Anmeldeinformationen angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "73882322"
   
     -   (Optional) Legen Sie die Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> von <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung zum Herstellen einer Verbindung mit dem Verleger verwenden.  
   
-    -   Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A>-Methode auf, um den Protokolllese-Agentauftrag für die Datenbank zu erstellen.  
+    -   Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A> -Methode auf, um den Protokolllese-Agentauftrag für die Datenbank zu erstellen.  
   
 5.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse, und legen Sie die folgenden Eigenschaften für dieses Objekt fest:  
   

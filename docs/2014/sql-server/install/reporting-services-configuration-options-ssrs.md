@@ -30,7 +30,7 @@ ms.locfileid: "71952126"
   
  Aktuelle Informationen zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und zur Installation und Konfiguration dieser Version finden Sie unter [Zusätzliche Installationsinformationen](https://go.microsoft.com/fwlink/?LinkId=207425) (https://go.microsoft.com/fwlink/?LinkId=207425).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="reporting-services-native-mode"></a>Einheitlicher Modus von Reporting Services  
  Wenn Setup keine Standardkonfiguration des Berichtsservers ausführen kann, weil mindestens eine Anforderung nicht erfüllt wird, lässt der Installations-Assistent nur die Option für die minimale Installation zu. Dabei werden die erforderlichen Dateien kopiert, nach Abschluss der Installation muss jedoch ein Berichtsserver im einheitlichen Modus mithilfe des Konfigurations-Managers für Reporting Services konfiguriert werden.  
@@ -43,12 +43,12 @@ ms.locfileid: "71952126"
   
  Diese Option steht nur zur Verfügung, wenn die Standardwerte, die in einer Berichtsserverinstallation verwendet werden, für Ihr System gültig sind. Diese Option wird für Entwickler empfohlen, die alle Komponenten lokal installieren möchten, sowie für Benutzer, die die Software evaluieren.  
   
- Klicken Sie auf **Details**, um Informationen über die Standardeinstellungen anzuzeigen, die das Setup verwendet, oder um festzustellen, warum die Standardkonfiguration nicht installiert werden kann. Weitere Informationen zur Standardkonfiguration für einen Berichts Server im einheitlichen Modus finden Sie unter [Standardkonfiguration für eine Installation im einheitlichen Modus (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199091) (https://go.microsoft.com/fwlink/?LinkId=199091).  
+ Klicken Sie auf **Details**, um Informationen über die Standardeinstellungen anzuzeigen, die das Setup verwendet, oder um festzustellen, warum die Standardkonfiguration nicht installiert werden kann. Weitere Informationen zur Standardkonfiguration für einen Berichts Server im einheitlichen Modus finden Sie unter [Standardkonfiguration für die Installation im einheitlichen Modus (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199091) (https://go.microsoft.com/fwlink/?LinkId=199091).  
   
 #### <a name="install-only"></a>Nur installieren  
  Installiert die Berichtsserver-Programmdateien, erstellt das Berichtsserver-Dienstkonto und registriert den Windows-Verwaltungsinstrumentationsanbieter des Berichtsservers. Diese Installationsoption wird als "Nur Dateien"-Installation bezeichnet. Wählen Sie diese Option aus, wenn Sie die Standardkonfiguration nicht verwenden möchten. Wenn die Standardkonfiguration nicht installiert werden kann oder wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster installieren, das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthält, ist dies die einzige verfügbare Option. Weitere Informationen zu einer ausschließlichen Datei-Installation finden Sie unter [nur-Datei-Installation (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093).  
   
- Nach Abschluss des Setups müssen Sie die Berichtsserver-Datenbank erstellen und den Berichtsserver konfigurieren, bevor Sie ihn verwenden können. Verwenden Sie zum Konfigurieren eines Berichtsservers und Erstellen der Datenbank den Reporting Services-Konfigurations-Manager. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie eine Berichts Server-Datenbank (Reporting Services Konfiguration) ](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) , und [Konfigurieren Sie eine Verbindung mit der Berichts Server-Datenbank](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095) ).  
+ Nach Abschluss des Setups müssen Sie die Berichtsserver-Datenbank erstellen und den Berichtsserver konfigurieren, bevor Sie ihn verwenden können. Verwenden Sie zum Konfigurieren eines Berichtsservers und Erstellen der Datenbank den Reporting Services-Konfigurations-Manager. Weitere Informationen finden Sie unter Vorgehens [Weise: Erstellen einer Berichts Server-Datenbank (Reporting Services Konfiguration)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) und [Konfigurieren einer Verbindung mit der Berichts Server-Datenbank](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095)).  
   
 ### <a name="reporting-services-sharepoint-mode"></a>SharePoint-Modus von Reporting Services  
   
@@ -73,7 +73,7 @@ ms.locfileid: "71952126"
 -   Laden Sie das Add-In herunter, und installieren Sie es. Weitere Informationen finden Sie unter [Where to Find the Reporting Services Add-in for SharePoint Products](https://go.microsoft.com/fwlink/?LinkID=208634) (https://go.microsoft.com/fwlink/?LinkID=208634).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Start Konfigurations-Manager für Reporting Services](https://go.microsoft.com/fwlink/?LinkId=199096)   
+ [Konfigurations-Manager für Reporting Services starten](https://go.microsoft.com/fwlink/?LinkId=199096)   
  [Erstellen einer Berichts Server-Datenbank (Reporting Services Konfiguration)](https://go.microsoft.com/fwlink/?LinkId=199094)   
  [Aktualisieren und Migrieren von Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)   
  [Installieren des SharePoint-Modus und einheitlichen Modus von Reporting Services über die Eingabeaufforderung](https://go.microsoft.com/fwlink/?LinkId=217620)  

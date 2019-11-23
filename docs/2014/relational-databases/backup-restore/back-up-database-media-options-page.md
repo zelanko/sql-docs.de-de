@@ -33,17 +33,17 @@ ms.locfileid: "70154836"
 >  Sie können einen Datenbank-Wartungsplan definieren, um Datenbanksicherungen zu erstellen. Weitere Informationen finden Sie unter [Wartungspläne](../maintenance-plans/maintenance-plans.md) und [Verwenden des Wartungsplanungs-Assistenten](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
+>  Wenn Sie einen Sicherungstask mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="overwrite-media"></a>Medium überschreiben  
- Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld Datenbank sichern auf der Seite Allgemein die Option URL (Azure Storage) als Sicherungs Ziel ausgewählt haben, sind die Optionen im Abschnitt Medium überschreiben deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung `BACKUP TO URL.. WITH FORMAT` überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld „Datenbank sichern“ auf der Seite „Allgemein“ die Option „URL“ (Azure Storage) als Sicherungsziel auswählen, sind die Optionen im Abschnitt „Medium überschreiben“ deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung `BACKUP TO URL.. WITH FORMAT` überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Nur die Option **Auf neuen Mediensatz sichern und alle vorhandenen Sicherungssätze löschen** wird mit Verschlüsselungsoptionen unterstützt. Wenn Sie die Optionen im Abschnitt **Auf vorhandenen Mediensatz sichern** auswählen, werden die Verschlüsselungsoptionen auf der Seite **Sicherungsoptionen** deaktiviert.  
   
 > [!NOTE]  
->  Informationen über Mediensätze finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)ausgeführt wird.  
+>  Informationen über Mediensätze finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
  **Auf vorhandenen Mediensatz sichern**  
  Sichert eine Datenbank auf einen vorhandenen Mediensatz. Durch Auswahl dieser Option werden drei weitere Optionen aktiviert.  
@@ -97,7 +97,7 @@ ms.locfileid: "70154836"
  **Protokollfragment sichern und Datenbank im Wiederherstellungsstatus belassen**  
  Das Protokollfragment wird gesichert und die Datenbank im Wiederherstellungsstatus belassen. Diese Option erstellt eine *Sicherung des Protokollfragments*. Dabei werden Protokolle gesichert, die bisher (vom aktiven Protokoll) noch nicht gesichert wurden, i.d.R. als Vorbereitung für die Wiederherstellung einer Datenbank. Die Datenbank steht Benutzern erst wieder zur Verfügung, wenn sie vollständig wiederhergestellt ist.  
   
- Das Auswählen dieser Option entspricht der Angabe von WITH NO_TRUNCATE und NORECOVERY in einer [BACKUP](/sql/t-sql/statements/backup-transact-sql)-Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Weitere Informationen finden Sie unter [Protokollfragmentsicherungen &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  
+ Das Auswählen dieser Option entspricht der Angabe von WITH NO_TRUNCATE und NORECOVERY in einer [BACKUP](/sql/t-sql/statements/backup-transact-sql) -Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Weitere Informationen finden Sie unter [Protokollfragmentsicherungen &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  
   
 ### <a name="tape-drive"></a>Bandlaufwerk  
  Mit den Optionen des Bereichs **Bandlaufwerk** wird die Bandverwaltung während des Sicherungsvorgangs gesteuert. Diese Optionen sind nur aktiviert, wenn im Dialogfeld **Datenbank sichern** auf der Seite **Allgemein** im Feld [Ziel](../../integration-services/general-page-of-integration-services-designers-options.md) die Option **Band** ausgewählt ist.  

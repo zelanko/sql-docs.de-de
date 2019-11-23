@@ -27,14 +27,14 @@ ms.locfileid: "73728973"
   Modellberechtigungen gelten für alle Entitäten, Attribute, abgeleiteten Hierarchien, expliziten Hierarchien und Auflistungen innerhalb des Modells. Dem Modell zugewiesene Berechtigungen können für beliebige einzelne Objekte überschrieben werden.  
   
 > [!NOTE]  
->  Wenn ein Benutzer ein Modelladministrator ist, wird das Modell in allen Funktionsbereichen der Benutzeroberfläche angezeigt. Andernfalls wird das Modell nur im Funktionsbereich **Explorer** angezeigt. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+>  Wenn ein Benutzer ein Modelladministrator ist, wird das Modell in allen Funktionsbereichen der Benutzeroberfläche angezeigt. Andernfalls wird das Modell nur im Funktionsbereich **Explorer** angezeigt. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
   
-|Berechtigung|Beschreibung|  
+|Berechtigung|und Beschreibung|  
 |----------------|-----------------|  
-|**Lesen**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten anzeigen.|  
-|**Erstellen**|Der Benutzer kann Elemente erstellen und während der Erstellung Attributwerte zuweisen.|  
+|**Leseberechtigung**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten anzeigen.|  
+|**Create**|Der Benutzer kann Elemente erstellen und während der Erstellung Attributwerte zuweisen.|  
 |**Update**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten aktualisieren.|  
-|**Delete**|Der Benutzer kann Elemente löschen.|  
+|**Löschen**|Der Benutzer kann Elemente löschen.|  
 |**Verweigern**|Der Zugriff auf das Modell wird vollständig verweigert.|  
 |**Admin**|Administratorberechtigung für das Modell. Die Administratorberechtigung ist nur auf Modellebene verfügbar.|  
   

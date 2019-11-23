@@ -23,7 +23,7 @@ ms.locfileid: "73728857"
 
   Auf der Seite **Version überprüfen** im Bereich **Versionsverwaltung** sind die folgenden Status möglich.  
   
-|Status|Beschreibung|  
+|Status|und Beschreibung|  
 |------------|-----------------|  
 |Überprüfung wird erwartet|Alle neu erstellten Elemente, die überprüft werden sollen|  
 |Erneute Überprüfung wird erwartet|Vorhandene Elemente, die überprüft werden sollen|  

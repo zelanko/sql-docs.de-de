@@ -39,17 +39,17 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @account_id = ] account_id`Die ID-Nummer des zu löschenden Kontos. *account_id* ist vom Datentyp **int**und hat keinen Standardwert. Es muss entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_id = ] account_id` die ID-Nummer des zu löschenden Kontos. *account_id* ist vom Datentyp **int**und hat keinen Standardwert. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
-`[ @account_name = ] 'account_name'`Der Name des zu löschenden Kontos. *account_name* ist vom Datentyp **sysname**und hat keinen Standardwert. Es muss entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_name = ] 'account_name'` den Namen des zu löschenden Kontos ab. *account_name* ist vom Datentyp **sysname**und hat keinen Standardwert. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Prozedur löscht das angegebene Konto, unabhängig davon, ob das Konto von einem Profil verwendet wird. Ein Profil, das keine Konten enthält, kann E-Mail nicht erfolgreich senden.  
   
  Die gespeicherte Prozedur **sysmail_delete_account_sp** wird in der **msdb** -Datenbank gespeichert und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
@@ -67,8 +67,8 @@ EXECUTE msdb.dbo.sysmail_delete_account_sp
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Erstellen eines Datenbank-E-Mail Kontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Konfigurationsobjekte Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Erstellen Sie ein Datenbank-E-Mail Konto](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Datenbank-E-Mail von Konfigurationsobjekten](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
  [sysmail_delete_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
  [sysmail_delete_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   

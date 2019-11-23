@@ -35,8 +35,8 @@ ms.locfileid: "73789611"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Nach dem Aufruf der [BCPDone](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) -Methode kann kein weiterer Vorgang für die **IBCPSession** -Schnittstelle aufgerufen werden. Die einzige Möglichkeit besteht darin, die [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)-Methode aufzurufen, um einen neuen Massenkopiervorgang zu initiieren. Dies gleicht dem Aufruf der [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)-Methode.  
+## <a name="remarks"></a>Remarks  
+ Nach dem Aufruf der [BCPDone](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) -Methode kann kein weiterer Vorgang für die **IBCPSession** -Schnittstelle aufgerufen werden. Die einzige Möglichkeit besteht darin, die [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) -Methode aufzurufen, um einen neuen Massenkopiervorgang zu initiieren. Dies gleicht dem Aufruf der [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) -Methode.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  S_OK  

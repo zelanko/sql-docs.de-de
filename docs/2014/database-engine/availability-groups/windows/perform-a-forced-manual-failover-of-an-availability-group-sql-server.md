@@ -23,7 +23,7 @@ ms.lasthandoff: 10/22/2019
 ms.locfileid: "72782881"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)
-  In diesem Thema wird beschrieben, wie ein erzwungenes Failover (mit möglichem Datenverlust) in einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausgeführt wird. Ein erzwungenes Failover ist eine Art manuelles Failover, das strikt für die Notfallwiederherstellung bestimmt ist, wenn ein [geplantes manuelles Failover](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) nicht möglich ist. Wenn Sie ein Failover auf ein nicht synchronisiertes sekundäres Replikat erzwingen, ist Datenverlust möglich. Daher empfehlen wir dringend, dass Sie nur dann ein Failover erzwingen, wenn Sie den Dienst für die Verfügbarkeitsgruppe sofort wiederherstellen müssen und Datenverluste riskieren möchten.  
+  In diesem Thema wird beschrieben, wie ein erzwungenes Failover (mit möglichem Datenverlust) in einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ausgeführt wird. Ein erzwungenes Failover ist eine Art manuelles Failover, das strikt für die Notfallwiederherstellung bestimmt ist, wenn ein [geplantes manuelles Failover](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) nicht möglich ist. Wenn Sie ein Failover auf ein nicht synchronisiertes sekundäres Replikat erzwingen, ist Datenverlust möglich. Daher empfehlen wir dringend, dass Sie nur dann ein Failover erzwingen, wenn Sie den Dienst für die Verfügbarkeitsgruppe sofort wiederherstellen müssen und Datenverluste riskieren möchten.  
   
  Nach einem erzwungenen Failover wird das Failoverziel, auf das ein Failover der Verfügbarkeitsgruppe ausgeführt wurde, zum neuen primären Replikat. Die sekundären Datenbanken in den verbleibenden sekundären Replikaten werden angehalten, und deren Ausführung muss manuell fortgesetzt werden. Wenn das frühere primäre Replikat verfügbar wird, geht es in die sekundäre Rolle über, sodass die früheren primären Datenbanken zu sekundären Datenbanken werden und in den Status SUSPENDED übergehen. Bevor Sie die Ausführung einer angegebenen sekundären Datenbank fortsetzen, können Sie möglicherweise verlorene Daten wiederherstellen. Beachten Sie jedoch, dass die Transaktionsprotokollkürzung in einer angegebenen primären Datenbank verzögert wird, solange eine ihrer sekundären Datenbanken angehalten ist.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "72782881"
     > [!IMPORTANT]  
     >  Wenn das Quorum auf natürlichem Wege wiedererlangt und nicht erzwungen wird, durchlaufen die Verfügbarkeitsreplikate die normale Wiederherstellung. Wenn das primäre Replikat nach dem Wiedererlangen des Quorums immer noch nicht verfügbar ist, können Sie ein geplantes manuelles Failover auf ein synchronisiertes sekundäres Replikat ausführen.  
   
-     Informationen zur Erzwingung des Quorums finden Sie unter [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)ausgeführt wird. Informationen dazu, warum nach dem Erzwingen des Quorums das Erzwingen eines Failovers erforderlich ist, finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+     Informationen zur Erzwingung des Quorums finden Sie unter [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md). Informationen dazu, warum nach dem Erzwingen des Quorums das Erzwingen eines Failovers erforderlich ist, finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
 -   Wenn das primäre Replikat nicht mehr verfügbar ist, während der WSFC-Cluster ein fehlerfreies Quorum aufweist, können Sie ein Failover auf ein beliebiges Replikat erzwingen, dessen Rolle den Status SECONDARY oder RESOLVING aufweist (mit möglichem Datenverlust). Erzwingen Sie, wenn möglich, ein Failover auf ein sekundäres Replikat mit synchronem Commit, das synchronisiert wurde, als das primäre Replikat verloren ging.  
   
@@ -45,10 +45,10 @@ ms.locfileid: "72782881"
     >  Wenn der WSFC-Cluster ein fehlerfreies Quorum aufweist und Sie auf einem synchronisierten sekundären Replikat einen Befehl zum Erzwingen eines Failovers ausgeben, führt das Replikat tatsächlich ein geplantes manuelles Failover aus.  
   
 > [!NOTE]  
->  Weitere Informationen zu den Voraussetzungen und Empfehlungen zum Erzwingen des Failovers sowie ein Beispielszenario, in dem zur Wiederherstellung nach einem schwerwiegenden Fehler ein erzwungenes Failover verwendet wird, finden Sie unter [Beispielszenario: Wiederherstellen nach einem schwerwiegenden Fehler mithilfe eines erzwungenen Failovers](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy) weiter unten in diesem Thema.  
+>  Weitere Informationen zu den Voraussetzungen und Empfehlungen zum Erzwingen des Failovers sowie ein Beispielszenario, in dem zur Wiederherstellung nach einem schwerwiegenden Fehler ein erzwungenes Failover verwendet wird, finden Sie unter [Beispielszenario: Wiederherstellen nach einem schwerwiegenden Fehler mithilfe eines erzwungenen Failovers](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)weiter unten in diesem Thema.  
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -63,9 +63,9 @@ ms.locfileid: "72782881"
 -   Datenbankübergreifende Konsistenz zwischen Datenbanken innerhalb der Verfügbarkeitsgruppe wird beim Failover nicht beibehalten.  
   
     > [!NOTE]  
-    >  Datenbankübergreifende Transaktionen und verteilte Transaktionen werden von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nicht unterstützt. Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen nicht unterstützt für Datenbankspiegelungs- oder AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md).  
+    >  Datenbankübergreifende Transaktionen und verteilte Transaktionen werden von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]nicht unterstützt. Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen nicht unterstützt für Datenbankspiegelungs- oder AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md).  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a>Voraussetzungen  
   
 -   Der WSFC-Cluster verfügt über ein Quorum. Wenn der Cluster über kein Quorum verfügt, siehe [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)ausgeführt wird.  
   
@@ -102,9 +102,9 @@ ms.locfileid: "72782881"
     ```  
   
     > [!CAUTION]  
-    >  Wenn der wiederhergestellte Knoten zum Zeitpunkt des Quorumsverlusts nicht online war, gibt **is_failover_ready** möglicherweise nicht den Ist-Zustand des Clusters zu dem Zeitpunkt wieder, zu dem das primäre Replikat offline geschaltet wurde. Daher ist der **is_failover_ready** -Wert nur dann hilfreich, wenn der Hostknoten zum Zeitpunkt des Fehlers online war. Weitere Informationen finden Sie im Abschnitt „Warum nach Erzwingen des Quorums ein erzwungenes Failover erforderlich ist“ unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+    >  Wenn der wiederhergestellte Knoten zum Zeitpunkt des Quorumsverlusts nicht online war, gibt **is_failover_ready** möglicherweise nicht den Ist-Zustand des Clusters zu dem Zeitpunkt wieder, zu dem das primäre Replikat offline geschaltet wurde. Daher ist der **is_failover_ready**-Wert nur dann hilfreich, wenn der Hostknoten zum Zeitpunkt des Fehlers online war. Weitere Informationen finden Sie im Abschnitt „Warum nach Erzwingen des Quorums ein erzwungenes Failover erforderlich ist“ unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
-     Lautet **is_failover_ready** = 1, wird die Datenbank im Cluster als synchronisiert gekennzeichnet und ist zu einem Failover bereit. Ist **is_failover_ready** in jeder Datenbank auf einem bestimmten sekundären Replikat auf 1 festgelegt, können Sie auf diesem sekundären Replikat ein erzwungenes Failover (FORCE_FAILOVER_ALLOW_DATA_LOSS) ohne Datenverlust ausführen. Das synchronisierte sekundäre Replikat wird in der primären Rolle online geschaltet, das heißt, als neues primäres Replikat, wobei alle Daten intakt sind.  
+     Ist **is_failover_ready** = 1, wird die Datenbank im Cluster als synchronisiert gekennzeichnet und steht für ein Failover zur Verfügung. Ist **is_failover_ready** in jeder Datenbank auf einem bestimmten sekundären Replikat auf 1 festgelegt, können Sie auf diesem sekundären Replikat ein erzwungenes Failover (FORCE_FAILOVER_ALLOW_DATA_LOSS) ohne Datenverlust ausführen. Das synchronisierte sekundäre Replikat wird in der primären Rolle online geschaltet, das heißt, als neues primäres Replikat, wobei alle Daten intakt sind.  
   
      Ist **is_failover_ready** = 0, wird die Datenbank im Cluster nicht als synchronisiert gekennzeichnet und ist *nicht* zu einem geplanten manuellen Failover bereit. Wenn Sie ein Failover auf das sekundäre Hostreplikat erzwingen, gehen Daten in dieser Datenbank verloren.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "72782881"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  **So erzwingen Sie ein Failover (mit möglichem Datenverlust)**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung zu einer Serverinstanz her, die ein Replikat hostet, dessen Rolle in der Verfügbarkeitsgruppe, für die ein Failover ausgeführt werden muss, den Status SECONDARY oder RESOLVING aufweist, und erweitern Sie die Serverstruktur.  
@@ -125,7 +125,7 @@ ms.locfileid: "72782881"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe, für die ein Failover ausgeführt werden soll, und wählen Sie den Befehl **Failover** aus.  
   
-4.  Dadurch wird der Assistent für das Failover von Verfügbarkeitsgruppen gestartet. Weitere Informationen finden Sie unter [Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)ausgeführt wird.  
+4.  Dadurch wird der Assistent für das Failover von Verfügbarkeitsgruppen gestartet. Weitere Informationen finden Sie unter [Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
 5.  Führen Sie nach dem Erzwingen des Failovers für eine Verfügbarkeitsgruppe die notwendigen Nachverfolgungsschritte aus. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "72782881"
   
      ALTER AVAILABILITY GROUP *group_name* FORCE_FAILOVER_ALLOW_DATA_LOSS  
   
-     Dabei ist *group_name* der Name der Verfügbarkeitsgruppe.  
+     Dabei ist *Gruppenname* der Name der Verfügbarkeitsgruppe.  
   
      Im folgenden Beispiel wird ein Failover der `AccountsAG` -Verfügbarkeitsgruppe auf das lokale sekundäre Replikat erzwungen.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "72782881"
   
 1.  Nach einem erzwungenen Failover wird das sekundäre Replikat, auf das ein Failover ausgeführt wurde, das neue primäre Replikat. Damit Clients auf dieses Verfügbarkeitsreplikat zugreifen können, müssen Sie das WSFC-Quorum jedoch u. U. neu konfigurieren oder den konfigurierten Verfügbarkeitsmodus der Verfügbarkeitsgruppe wie folgt anpassen:  
   
-    -   **Wenn Sie ein Failover außerhalb des [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] ausgeführt haben:** Passen Sie die Quorumsstimmen der WSFC-Knoten an die neue Konfiguration der Verfügbarkeitsgruppe an. Wenn der WSFC-Knoten, der das sekundäre Zielreplikat hostet, nicht über eine WSFC-Quorumsstimme verfügt, müssen Sie u. U. ein WSFC-Quorum erzwingen.  
+    -   **Wenn Sie ein Failover außerhalb des [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] ausgeführt haben:** Passen Sie die Quorumsstimmen der WSFC-Knoten an die neue Konfiguration der Verfügbarkeitsgruppe an. Wenn der WSFC-Knoten, der das sekundäre Zielreplikat hostet, nicht über eine WSFC-Quorumsstimme verfügt, müssen Sie u. U. ein WSFC-Quorum erzwingen.  
   
         > [!NOTE]  
         >  Ein [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] ist nur vorhanden, wenn zwei Verfügbarkeitsreplikate (einschließlich des vorherigen primären Replikats) für den Modus für synchrone Commits mit automatischem Failover konfiguriert sind.  
@@ -217,7 +217,7 @@ ms.locfileid: "72782881"
      Beim Fortsetzen initiiert eine sekundäre Datenbank die Datensynchronisierung mit der entsprechenden primären Datenbank. Die sekundäre Datenbank führt ein Rollback für alle Protokolldatensätze aus, für die nie ein Commit in der neuen primären Datenbank ausgeführt wurde. Wenn Sie daher Bedenken bezüglich eines möglichen Datenverlusts in den primären Datenbanken nach dem Failover haben, sollten Sie versuchen, von einer der sekundären Datenbanken mit synchronem Commit eine Datenbank-Momentaufnahme für die angehaltenen Datenbanken zu erstellen.  
   
     > [!IMPORTANT]  
-    >  Die Transaktionsprotokollkürzung wird auf einer primären Datenbank verzögert, solange eine ihrer sekundären Datenbanken angehalten ist. Der Synchronisierungszustand eines sekundären Replikats mit synchronem Commit kann auch keinen Übergang zu HEALTHY durchführen, solange alle lokalen Datenbanküberreste angehalten sind.  
+    >  Die Transaktionsprotokollkürzung in einer primären Datenbank wird verzögert, solange eine ihrer sekundären Datenbanken angehalten ist. Der Synchronisierungszustand eines sekundären Replikats mit synchronem Commit kann auch keinen Übergang zu HEALTHY durchführen, solange alle lokalen Datenbanküberreste angehalten sind.  
   
      **So erstellen Sie eine Datenbankmomentaufnahme**  
   
@@ -245,7 +245,7 @@ ms.locfileid: "72782881"
 ##  <a name="ExampleRecoveryFromCatastrophy"></a> Beispielszenario: Wiederherstellen nach einem schwerwiegenden Fehler mithilfe eines erzwungenen Failovers  
  Wenn das primäre Replikat ausfällt und kein synchronisiertes sekundäres Replikat verfügbar ist, kann das Erzwingen eines Failovers für die Verfügbarkeitsgruppe u. U. angemessen sein. Ob das Erzwingen eines Failovers angebracht ist, ist von folgenden Faktoren abhängig: (1) Ob Sie davon ausgehen, dass das primäre Replikat für einen längeren Zeitraum offline ist als die Vereinbarung zum Servicelevel (SLA) vorsieht, und (2) ob Sie bereit sind, einen möglichen Datenverlust zu riskieren, um primäre Datenbanken schnell verfügbar zu machen. Wenn Sie entscheiden, dass ein Failover für eine Verfügbarkeitsgruppe erzwungen werden muss, ist das tatsächliche erzwungene Failover lediglich ein Schritt von vielen.  
   
- Um die Schritte zu erläutern, die für ein erzwungenes Failover zur Wiederherstellung nach einem schwerwiegenden Fehler erforderlich sind, enthält dieses Thema ein mögliches Szenario für die Wiederherstellung im Notfall. Das Beispielszenario umfasst eine Verfügbarkeitsgruppe, deren ursprüngliche Topologie aus einem Hauptrechenzentrum besteht, das drei Verfügbarkeitsreplikate mit synchronem Commit hostet, einschließlich des primären Replikats, und aus einem Remoterechenzentrum, das zwei sekundäre Replikate mit asynchronem Commit hostet. Die folgende Abbildung veranschaulicht die ursprüngliche Topologie dieser beispielhaften Verfügbarkeitsgruppe. Die Verfügbarkeitsgruppe wird von einem Multisubnetz-WSFC-Cluster mit drei Knoten im Hauptrechenzentrum (**Knoten 01**, **Knoten 02**und **Knoten 03**) und zwei Knoten in einem Remoterechenzentrum (**Knoten 04** und **Knoten 05**) gehostet.  
+ Um die Schritte zu erläutern, die für ein erzwungenes Failover zur Wiederherstellung nach einem schwerwiegenden Fehler erforderlich sind, enthält dieses Thema ein mögliches Szenario für die Wiederherstellung im Notfall. Das Beispielszenario umfasst eine Verfügbarkeitsgruppe, deren ursprüngliche Topologie aus einem Hauptrechenzentrum besteht, das drei Verfügbarkeitsreplikate mit synchronem Commit hostet, einschließlich des primären Replikats, und aus einem Remoterechenzentrum, das zwei sekundäre Replikate mit asynchronem Commit hostet. Die folgende Abbildung veranschaulicht die ursprüngliche Topologie dieser beispielhaften Verfügbarkeitsgruppe. Die Verfügbarkeitsgruppe wird von einem Multisubnetz-WSFC-Cluster mit drei Knoten im Hauptrechenzentrum (**Knoten 01**, **Knoten 02** und **Knoten 03**) und zwei Knoten in einem Remoterechenzentrum (**Knoten 04** und **Knoten 05**) gehostet.  
   
  ![Ursprüngliche Topologie der Verfügbarkeits Gruppe](../../media/aoag-failurerecovery-origtopology.gif "Ursprüngliche Topologie der Verfügbarkeits Gruppe")  
   
@@ -273,7 +273,7 @@ ms.locfileid: "72782881"
  Die folgende Abbildung veranschaulicht die Abfolge von Aktionen, durch die die Verfügbarkeitsgruppe in ihre ursprüngliche Topologie zurückgeführt wird, nachdem das Hauptrechenzentrum wieder online ist und die WSFC-Knoten die Kommunikation mit dem WSFC-Cluster wieder hergestellt haben.  
   
 > [!IMPORTANT]  
->  Wenn das WSFC-Clusterquorum erzwungen wurde, könnte beim Neustart der Offlineknoten ein neues Quorum gebildet werden, wenn die folgenden Bedingungen erfüllt sind: (a) Es bestehen keine Netzwerkverbindungen zwischen den Knoten im erzwungenen Quorumssatz, und (b) die neu gestarteten Knoten stellen die Mehrheit der Clusterknoten dar. Dies würde zu einer so genannten "Split-Brain"-Bedingung führen, in der die Verfügbarkeitsgruppe über zwei unabhängige primäre Replikate verfügen würde, und zwar über eines in jedem Rechenzentrum. Bevor Sie ein Quorum erzwingen, durch das ein Minderheitsquorum entsteht, sollten Sie sich unter [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)ausgeführt wird.  
+>  Wenn das WSFC-Clusterquorum erzwungen wurde, könnte beim Neustart der Offlineknoten ein neues Quorum gebildet werden, wenn die folgenden Bedingungen erfüllt sind: (a) Es bestehen keine Netzwerkverbindungen zwischen den Knoten im erzwungenen Quorumssatz, und (b) die neu gestarteten Knoten stellen die Mehrheit der Clusterknoten dar. Dies würde zu einer so genannten "Split-Brain"-Bedingung führen, in der die Verfügbarkeitsgruppe über zwei unabhängige primäre Replikate verfügen würde, und zwar über eines in jedem Rechenzentrum. Bevor Sie ein Quorum erzwingen, durch das ein Minderheitsquorum entsteht, sollten Sie sich unter [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md) informieren.  
   
  ![Schritte zum Zurücksetzen der Gruppe in ihre ursprüngliche Topologie](../../media/aoag-failurerecovery-actions-part2.gif "Schritte zum Zurücksetzen der Gruppe in ihre ursprüngliche Topologie")  
   
@@ -307,7 +307,7 @@ ms.locfileid: "72782881"
   
 -   [Problembehandlung bei einem fehlgeschlagenen Vorgang &#40;zum Hinzufügen einer Datei AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="RelatedContent"></a>Verwandte Inhalte  
   
 -   **Blogs:**  
   
@@ -323,10 +323,10 @@ ms.locfileid: "72782881"
   
      [Whitepapers des SQL Server-Kundenberatungsteams](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
- [Verfügbarkeits &#40;Modi&#41; AlwaysOn-Verfügbarkeitsgruppen](availability-modes-always-on-availability-groups.md)    
- [Failover-und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41; ](failover-and-failover-modes-always-on-availability-groups.md)    
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
+ [Verfügbarkeits &#40;Modi&#41; AlwaysOn-Verfügbarkeitsgruppen](availability-modes-always-on-availability-groups.md)   
+ [Failover-und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41; ](failover-and-failover-modes-always-on-availability-groups.md)   
  [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

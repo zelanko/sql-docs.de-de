@@ -37,12 +37,12 @@ ms.locfileid: "73728075"
   
 -   Den Attributen **Name** und **Code** zugewiesene Berechtigungen werden nicht erzwungen.  
   
-|Berechtigung|Beschreibung|  
+|Berechtigung|und Beschreibung|  
 |----------------|-----------------|  
-|**Lesen**|Der Benutzer kann Blattelemente und Attribute lesen.|  
-|**Erstellen**|Der Benutzer kann Blattelemente erstellen und während der Erstellung Attributwerte zuweisen.|  
+|**Leseberechtigung**|Der Benutzer kann Blattelemente und Attribute lesen.|  
+|**Create**|Der Benutzer kann Blattelemente erstellen und während der Erstellung Attributwerte zuweisen.|  
 |**Update**|Der Benutzer kann Blattelemente und Attribute aktualisieren.|  
-|**Delete**|Der Benutzer kann Blattelemente löschen.|  
+|**Löschen**|Der Benutzer kann Blattelemente löschen.|  
 |**Verweigern**|Der Zugriff auf die Blattelemente wird vollständig verweigert.|  
   
  Die Berechtigungen Lesen, Erstellen, Aktualisieren und Löschen können kombiniert werden. Wenn Erstellen, Aktualisieren und Löschen zugewiesen werden, wird die Leseberechtigung automatisch zugewiesen.  
@@ -50,18 +50,18 @@ ms.locfileid: "73728075"
 ## <a name="attribute-permissions"></a>Attributberechtigungen  
  Attributberechtigungen gelten für die Attributwerte der jeweiligen Entität. Benutzer mit Attributberechtigungen wird lediglich verweigert, Elemente hinzuzufügen oder zu entfernen.  
   
-|Berechtigung|Beschreibung|  
+|Berechtigung|und Beschreibung|  
 |----------------|-----------------|  
-|**Lesen**|Der Benutzer kann Attribute lesen.|  
-|**Erstellen**|Der Benutzer kann bei der Erstellung von Elementen Werte zuweisen.|  
+|**Leseberechtigung**|Der Benutzer kann Attribute lesen.|  
+|**Create**|Der Benutzer kann bei der Erstellung von Elementen Werte zuweisen.|  
 |**Update**|Der Benutzer kann Attribute aktualisieren.|  
-|**Delete**|Keine Auswirkung.|  
+|**Löschen**|Keine Auswirkung.|  
 |**Verweigern**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Der Zugriff auf die Attribute Name und Code kann nicht explizit verweigert werden.|  
   
 ### <a name="example"></a>Beispiel  
  Weisen Sie dem Attribut „Subcategory“ der Entität „Product“ die Berechtigung **Aktualisieren** zu. Verweigern Sie die Berechtigung für alle anderen Attribute.  
   
-|Name|Code|Subcategory (Aktualisiert)|  
+|NAME|Code|Subcategory (Aktualisiert)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Mountain Bikes|  
 |Mountain-100|BK-M201|{5} Mountain Bikes|  

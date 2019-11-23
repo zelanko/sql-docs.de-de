@@ -82,18 +82,18 @@ ms.locfileid: "70175917"
   
      Der Standardanbieter für eine neue Verbindung ist der Native OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client-Anbieter. Dieser Anbieter wird dazu verwendet, mit OLE DB eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank-Engine-Instanz herzustellen. Für Verbindungen zu einer relationalen SQL Server-Datenbank ist die Verwendung von Native OLE DB\SQL Server Native Client 11.0 oftmals schneller als die Verwendung von alternativen Anbietern.  
   
-     Sie können einen anderen Anbieter auswählen, um auf andere Datenquellen zuzugreifen. Eine Liste der von unterstützten Anbieter und relationalen Daten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Banken finden Sie unter von unterstützte [Datenquellen ( &#40;SSAS&#41;Multidimensional](supported-data-sources-ssas-multidimensional.md)).  
+     Sie können einen anderen Anbieter auswählen, um auf andere Datenquellen zuzugreifen. Eine Liste der Anbieter und relationalen Datenbanken, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]unterstützt werden, finden Sie unter von [Data Sources unterstützte &#40;SSAS Multidimensional&#41;](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Geben Sie die für den ausgewählten Anbieter angeforderten Informationen ein, um eine Verbindung mit der zugrunde liegenden Datenquelle herzustellen. Wenn Sie den Anbieter **Native OLE DB\SQL Server Native Client** ausgewählt haben, geben Sie die folgenden Informationen ein:  
   
-    1.  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Instanznamen (z \<. b. Computername >\\< instancename\>) einschließen.  
+    1.  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Instanznamen (z. b. \<Computername >\\< instancename\>) einschließen.  
   
     2.  **Am Server anmelden** gibt an, wie die Verbindung authentifiziert wird. **Windows-Authentifizierung verwenden** verwendet die Windows-Authentifizierung. **Verwendung SQL Server Authentifizierung** gibt eine Datenbankbenutzer Anmeldung für eine Azure SQL-Datenbank oder eine SQL Server Instanz an, die die Authentifizierung im gemischten Modus unterstützt.  
   
         > [!IMPORTANT]  
         >  Der Verbindungs-Manager umfasst das Kontrollkästchen **Kennwort speichern** für Verbindungen, die die SQL Server-Authentifizierung verwenden. Obwohl das Kontrollkästchen immer sichtbar ist, wird es nicht immer verwendet.  
         >   
-        >  Zu den Bedingungen, unter denen Analysis Services dieses Kontrollkästchen nicht verwendet, gehört das Aktualisieren oder Verarbeiten der relationalen SQL Server-Daten, die in der aktiven Analysis Services-Datenbank verwendet wird. Unabhängig davon, ob Sie das Kontrollkästchen **Kennwort speichern**deaktivieren oder aktivieren, verschlüsselt Analysis Services stets das Kennwort und speichert es. Das Kennwort wird verschlüsselt und sowohl in ABF-Dateien (.abf) als auch Datendateien gespeichert. Dieses Verhalten ist darauf zurückzuführen, dass Analysis Services keinen sitzungsbasierten Kennwortspeicher auf dem Server unterstützt.  
+        >  Zu den Bedingungen, unter denen Analysis Services dieses Kontrollkästchen nicht verwendet, gehört das Aktualisieren oder Verarbeiten der relationalen SQL Server-Daten, die in der aktiven Analysis Services-Datenbank verwendet wird. Unabhängig davon, ob Sie das Kontrollkästchen **Kennwort speichern**deaktivieren oder aktivieren, verschlüsselt Analysis Services stets das Kennwort und speichert es. Das Kennwort wird verschlüsselt und sowohl in ABF-Dateien (*.abf) als auch Datendateien gespeichert. Dieses Verhalten ist darauf zurückzuführen, dass Analysis Services keinen sitzungsbasierten Kennwortspeicher auf dem Server unterstützt.  
         >   
         >  Dieses Verhalten gilt nur für Datenbanken, die a) auf einer Analysis Services-Serverinstanz vorhanden sind und b) die SQL Server-Authentifizierung verwenden, um relationale Daten zu aktualisieren oder zu verarbeiten. Es gilt nicht für Datenquellenverbindungen, die Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] einrichten und die nur für die Dauer einer Sitzung verwendet werden. Obwohl ein bereits gespeichertes Kennwort nicht entfernt werden kann, können Sie jedoch andere Anmeldeinformationen oder die Windows-Authentifizierung verwenden, um die Benutzerinformationen zu überschreiben, die derzeit in der Datenbank gespeichert sind.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "70175917"
 5.  Suchen Sie die hinzugefügte Tabelle, und wählen Sie sie aus. Klicken Sie mit der rechten Maustaste auf die Tabelle, und wählen Sie **Neue Beziehung**aus. Wählen Sie die Quell- und Zielspalten aus, die übereinstimmende Daten enthalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Von der mehr &#40;dimensionalen SSAS unterstützte Datenquellen&#41;](supported-data-sources-ssas-multidimensional.md)   
+ [Datenquellen, &#40;die mehrdimensionale&#41; SSAS-  unterstützt](supported-data-sources-ssas-multidimensional.md)  
  [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
   
   

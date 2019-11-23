@@ -39,7 +39,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="arguments"></a>Argumente  
 `[ @agent_type = ] 'agent_type'` ist der Typ des Agents. *agent_type* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|ReplTest1|und Beschreibung|  
 |-----------|-----------------|  
 |**1**|Momentaufnahmen-Agent.|  
 |**2**|Protokolllese-Agent.|  
@@ -54,7 +54,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **sp_update_agent_profile** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -63,9 +63,9 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="see-also"></a>Siehe auch  
  [Replikations-Agent-Profile](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md) -   
- [sp_change_agent_profile &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md) -   
- [sp_drop_agent_profile &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md) -   
- [sp_help_agent_profile &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) -   
+ [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

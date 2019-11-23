@@ -31,7 +31,7 @@ ms.locfileid: "73843888"
 
   Enthält eine Zeile für jeden Replikations Link zwischen primären und sekundären Datenbanken in einer Partnerschaft für die georeplikation. Dies umfasst sowohl primäre als auch sekundäre Datenbanken. Wenn mehr als ein fortlaufender Replikations Link für eine bestimmte primäre Datenbank vorhanden ist, enthält diese Tabelle eine Zeile für jede der Beziehungen. Die Sicht wird in allen Datenbanken erstellt, einschließlich des logischen Masters. Wenn aber diese Sicht in der logischen master-Datenbank abgerufen wird, wird ein leeres Set zurückgegeben.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|Eindeutige ID des Replikations Links.|  
 |partner_server|**sysname**|Der Name des SQL-Datenbankservers, der die verknüpfte Datenbank enthält.|  

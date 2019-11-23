@@ -22,7 +22,7 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e274375177859d456592a6e1879d7f528d1cb724
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73983091"
@@ -944,7 +944,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |WAIT_XTP_CKPT_CLOSE |Tritt auf, wenn auf den Abschluss eines Prüf Punkts gewartet wird. <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |WAIT_XTP_CKPT_ENABLED |Tritt auf, wenn die Prüf Punkt Ausführung deaktiviert ist und darauf gewartet wird, dass die Prüf Punkt Aktivierung aktiviert ist. <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Tritt auf, wenn die Überprüfung des Prüf Punkt Zustands synchronisiert wird., <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
-|WAIT_XTP_COMPILE_WAIT |Nur interne Verwendung. <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und höher.| 
+|WAIT_XTP_COMPILE_WAIT |Nur interne Verwendung. <br /> **GILT FÜR:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und höher.| 
 |WAIT_XTP_GUEST |Tritt auf, wenn die Daten Bank Speicherzuweisung den Empfang von Benachrichtigungen mit geringem Arbeitsspeicher beenden muss. <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |WAIT_XTP_HOST_WAIT |Tritt auf, wenn warte Vorgänge durch die Datenbank-Engine ausgelöst und vom Host implementiert werden. <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |Nur interne Verwendung. <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 

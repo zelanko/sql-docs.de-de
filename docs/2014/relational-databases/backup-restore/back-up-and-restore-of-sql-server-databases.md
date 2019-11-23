@@ -34,7 +34,7 @@ ms.locfileid: "70176024"
   
  Durch die Sicherungs- und Wiederherstellungskomponente von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird eine wichtige Vorrichtung zum Schutz wichtiger Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken bereitgestellt. Um das Risiko schwerwiegenden Datenverlusts zu verringern, müssen Sie die Datenbanken regelmäßig sichern, um Änderungen an den Daten beizubehalten. Eine sorgfältig geplante Sicherungs- und Wiederherstellungsstrategie schützt Datenbanken vor Datenverlust, der durch die verschiedensten Fehler verursacht werden kann. Testen Sie Ihre Strategie, indem Sie einen Sicherungssatz wiederherstellen und dann die Datenbank wiederherstellen, um im Notfall effektiv reagieren zu können.  
   
- Neben dem lokalen Speicher für das Speichern der Sicherungen unterstützt SQL Server auch die Sicherung und Wiederherstellung über den Azure BLOB Storage-Dienst. Weitere Informationen finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Neben dem lokalen Speicher für das Speichern der Sicherung unterstützt SQL Server auch das Sichern und Wiederherstellen mit dem Azure Blob Storage-Dienst. Weitere Informationen finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "70176024"
   
     -   Hardwarefehler (z. B. ein beschädigter Datenträger oder der endgültige Verlust eines Servers)  
   
-    -   Naturkatastrophen. Durch die Verwendung SQL Server Sicherung im Azure-BLOB-Speicherdienst können Sie eine externe Sicherung in einer anderen Region als Ihrem lokalen Standort erstellen, um Sie im Falle einer Naturkatastrophe zu verwenden, die Ihren lokalen Standort beeinträchtigt.  
+    -   Naturkatastrophen. Mit der SQL Server-Sicherung im Azure Blob Storage-Dienst können Sie eine externe Sicherung in einer anderen Region als an Ihrem lokalen Standort erstellen. Diese wird dann verwendet, wenn der lokale Standort durch eine Naturkatastrophe in Mitleidenschaft gezogen wird.  
   
 -   Darüber hinaus sind Sicherungen einer Datenbank hilfreich für Routineverwaltungsaufgaben, wie z. B. Kopieren einer Datenbank zwischen Servern, Einrichten von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] oder Datenbankspiegelung und Archivierung.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70176024"
  Eine Datenkopie, die zum Wiederherstellen der Daten nach einem Fehler verwendet werden kann. Sicherungen einer Datenbank können auch verwendet werden, um eine Kopie der Datenbank an einem neuen Speicherort wiederherzustellen.  
   
  Sicherungsgerät  
- Ein Datenträger oder Bandgerät, auf den bzw. das SQL Server-Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server Sicherungen können auch in einen Azure BLOB Storage-Dienst geschrieben werden. das **URL** -Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Ein Datenträger oder Bandgerät, auf den bzw. das SQL Server-Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server-Sicherungen können auch in einen Azure Blob Storage-Dienst geschrieben werden. Das **URL**-Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Sicherungsmedien  
  Bänder oder Datenträgerdateien, auf die Sicherungen geschrieben wurden.  
@@ -109,7 +109,7 @@ ms.locfileid: "70176024"
   
  Eine Sicherungs- und Wiederherstellungsstrategie enthält einen Sicherungsteil und einen Wiederherstellungsteil. Der Sicherungsteil der Strategie definiert den Typ und die Häufigkeit der Sicherungen, die Art und die Geschwindigkeit der dafür benötigten Hardware, die vorgesehene Testmethode für die Sicherungen sowie Aufbewahrungsort und -methode von Sicherungsmedien (einschließlich Sicherheitsüberlegungen). Der Wiederherstellungsteil der Strategie definiert, wer für die Ausführung der Wiederherstellungen verantwortlich ist und wie Wiederherstellungen ausgeführt werden sollen, um die jeweiligen Ziele hinsichtlich der Verfügbarkeit der Datenbank und Minimierung von Datenverlusten zu erreichen. Es empfiehlt sich, Sicherungs- und Wiederherstellungsprozeduren zu dokumentieren und eine Kopie der Dokumentation im Ausführungsbuch aufzubewahren.  
   
- Das Entwerfen einer effektiven Sicherungs- und Wiederherstellungsstrategie erfordert sorgfältiges Planen, Implementieren und Testen. Die Testphase ist erforderlich. Sie verfügen erst dann über eine Sicherungsstrategie, wenn Sie die Sicherungen, die in Ihrer Wiederherstellungsstrategie enthalten sind, in allen Kombinationen erfolgreich wiederhergestellt haben. Sie müssen eine Vielzahl von Faktoren berücksichtigen: Hierzu gehört Folgendes:  
+ Das Entwerfen einer effektiven Sicherungs- und Wiederherstellungsstrategie erfordert sorgfältiges Planen, Implementieren und Testen. Die Testphase ist erforderlich. Sie verfügen erst dann über eine Sicherungsstrategie, wenn Sie die Sicherungen, die in Ihrer Wiederherstellungsstrategie enthalten sind, in allen Kombinationen erfolgreich wiederhergestellt haben. Sie müssen eine Vielzahl von Faktoren berücksichtigen: Dabei handelt es sich z. B. um:  
   
 -   Die Produktionsziele des Unternehmens im Verhältnis zur Datenbank, besonders die Anforderungen an Verfügbarkeit und Schutz vor Datenverlusten.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "70176024"
 -   Einschränkungen hinsichtlich der Ressourcen, wie z. B. Hardware, Mitarbeiter, Platz zum Aufbewahren von Sicherungsmedien und physische Sicherheit der aufbewahrten Medien.  
   
     > [!NOTE]  
-    >  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicherformat für Datenträger stimmt in 64-Bit- und in 32-Bit-Umgebungen überein. Daher können Sicherungs- und Wiederherstellungsvorgänge für 32-Bit- und 64-Bit-Umgebungen übergreifend ausgeführt werden. Eine Sicherung, die auf einer in der einen Umgebung ausgeführten Serverinstanz erstellt wurde, kann auf einer Serverinstanz wiederhergestellt werden, die in der anderen Umgebung ausgeführt wird.  
+    >  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Speicherformat für Datenträger stimmt in 64-Bit- und in 32-Bit-Umgebungen überein. Daher können Sicherungs- und Wiederherstellungsvorgänge für 32-Bit- und 64-Bit-Umgebungen übergreifend ausgeführt werden. Eine Sicherung, die auf einer in der einen Umgebung ausgeführten Serverinstanz erstellt wurde, kann auf einer Serverinstanz wiederhergestellt werden, die in der anderen Umgebung ausgeführt wird.  
   
 
   
@@ -255,18 +255,18 @@ ms.locfileid: "70176024"
   
 -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
--   [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Wiederherstellen einer SQL Server-Datenbank zu einem bestimmten Zeitpunkt &#40;Full Recovery Model&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
  **Verwenden von Transact-SQL**  
   
--   [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Wiederherstellen einer SQL Server-Datenbank zu einem bestimmten Zeitpunkt &#40;Full Recovery Model&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   
 ### <a name="additional-restore-tasks"></a>Zusätzliche Wiederherstellungsaufgaben  
  **Verwenden von Transact-SQL**  
   
--   [Neustarten eines unterbrochenen Wiederherstellungsvorgangs Operation &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [Erneutes Starten eines unterbrochenen Wiederherstellungsvorgangs &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
   
 -   [Wiederherstellen einer Datenbank ohne Wiederherstellung von Daten &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   

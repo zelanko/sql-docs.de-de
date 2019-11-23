@@ -26,7 +26,7 @@ ms.locfileid: "73705300"
 ##  <a name="bkmk_Overview"></a> Erstellen von Data Mining-Projekten  
  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellen Sie Data Mining-Projekte mithilfe der Vorlage **OLAP- und Data Mining-Projekt**. Mithilfe von AMO können Sie Data Mining-Projekte auch programmgesteuert erstellen. Für einzelne Data Mining-Objekte kann mit der Analysis Services Scripting Language (ASSL) ein Skript erstellt werden. Weitere Informationen finden Sie unter [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- Wenn Sie innerhalb einer vorhandenen Lösung ein Data Mining-Projekt erstellen, werden die Data Mining-Objekte standardmäßig in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mit dem gleichen Namen wie die Projektmappendatei bereitgestellt. Sie können diesen Namen und den Zielserver über das Dialogfeld **Projekteigenschaften** ändern. Weitere Informationen finden Sie unter [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+ Wenn Sie innerhalb einer vorhandenen Lösung ein Data Mining-Projekt erstellen, werden die Data Mining-Objekte standardmäßig in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mit dem gleichen Namen wie die Projektmappendatei bereitgestellt. Sie können diesen Namen und den Zielserver über das Dialogfeld **Projekteigenschaften** ändern. Weitere Informationen finden Sie unter [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)erstellt.  
   
 > [!WARNING]  
 >  Um das Projekt erfolgreich zu erstellen und bereitzustellen, müssen Sie Zugriff auf eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] haben, die im OLAP-/Data Mining-Modus ausführt wird. Sie können Data Mining-Lösungen nicht in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitstellen oder entwickeln, die tabellarische Modelle unterstützt. Sie können außerdem Daten nicht direkt aus einer PowerPivot-Arbeitsmappe oder aus einem tabellarischen Modell heraus verwenden, das den speicherinternen Datenspeicher verwendet. Um zu ermitteln, ob Ihre Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining unterstützt, lesen Sie den Artikel [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
@@ -108,7 +108,7 @@ ms.locfileid: "73705300"
   
 
   
-###  <a name="bkmk_Structures"></a> Mining Structures  
+###  <a name="bkmk_Structures"></a> Miningstrukturen  
  Sobald Sie die Datenquelle und die Datenquellensicht erstellt haben, müssen Sie die Spalten jener Daten auswählen, die für Ihr Geschäftsproblem am relevantesten sind, indem Sie die *Miningstrukturen* innerhalb des Projekts definieren. Eine Miningstruktur informiert das Projekt darüber, welche Spalten der Daten aus der Datenquellensicht bei Modellierung, Training und Tests tatsächlich verwendet werden sollen.  
   
  Um eine neue Miningstruktur hinzuzufügen, starten Sie den Data Mining-Assistenten. Dieser Assistent definiert automatisch eine Miningstruktur und führt Sie durch den Prozess der Auswahl der Daten. Außerdem können Sie mit ihm der Struktur optional ein initiales Data Mining-Modell hinzufügen. Innerhalb der Miningstruktur wählen Sie Tabellen und Spalten aus der Datenquellensicht oder von einem OLAP-Cube aus. Sie definieren die Beziehungen unter den Tabellen, wenn die Daten geschachtelte Tabellen umfassen.  
@@ -132,7 +132,7 @@ ms.locfileid: "73705300"
   
   
   
-###  <a name="bkmk_Models"></a> Mining Models  
+###  <a name="bkmk_Models"></a> Miningmodelle  
  Das Miningmodell definiert den Algorithmus oder die Analysemethode, die Sie auf die Daten anwenden werden. Jeder Miningstruktur fügen Sie ein oder mehrere Miningmodelle hinzu.  
   
  Je nach Anforderungen können Sie in einem einzelnen Projekt viele Modelle kombinieren oder separate Projekte für jeden Modelltyp oder jede analytische Aufgabe erstellen.  
@@ -189,7 +189,7 @@ ms.locfileid: "73705300"
   
   
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  In den folgenden Themen wird Verwendung des Data Mining-Assistenten beschrieben, um ein Data Mining-Projekt und zugeordnete Objekte zu erstellen.  
   
 |Aufgaben|Themen|  

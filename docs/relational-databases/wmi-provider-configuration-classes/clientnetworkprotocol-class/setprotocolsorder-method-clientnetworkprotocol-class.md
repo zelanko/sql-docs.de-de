@@ -35,20 +35,20 @@ ms.locfileid: "73659465"
 object.SetProtocolsOrder(ProtocolOrderList)  
 ```  
   
-## <a name="parts"></a>Bestandteile  
+## <a name="parts"></a>Teile  
  *object*  
  A [ClientNetworkProtocol-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) , das das vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Client verwendete Netzwerkprotokoll darstellt.  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>-Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|und Beschreibung|  
 |---------------|-----------------|  
 |*Protocolorderlist*|Eine Zeichenfolgenarray, das die Clientnetzwerkprotokolle in der neuen Reihenfolge auflistet.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Client Protokollen](https://technet.microsoft.com/library/ms181035.aspx)   

@@ -50,7 +50,7 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175737"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Bereitstellen einer SQL Server-Datenbank auf einem virtuellen Microsoft Azure-Computer
-  Verwenden Sie den Assistenten zum Bereitstellen **einer SQL Server Datenbank in einer Azure-VM** , um eine Datenbank von [!INCLUDE[ssDE](../../includes/ssde-md.md)] einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz von in auf einem virtuellen Azure-Computer (VM) bereitzustellen. Der Assistent führt eine vollständige Datenbanksicherung durch und kopiert somit immer das vollständige Datenbankschema und alle Daten einer SQL Server-Benutzerdatenbank. Der Assistent übernimmt außerdem die gesamte Azure-VM-Konfiguration, sodass keine Vorkonfiguration der VM erforderlich ist.  
+  Verwenden Sie den Assistenten zum Bereitstellen **einer SQL Server-Datenbank in einer Azure-VM** , um eine Datenbank von einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem virtuellen Azure-Computer (VM) bereitzustellen. Der Assistent führt eine vollständige Datenbanksicherung durch und kopiert somit immer das vollständige Datenbankschema und alle Daten einer SQL Server-Benutzerdatenbank. Der Assistent übernimmt außerdem die gesamte Azure-VM-Konfiguration, sodass keine Vorkonfiguration der VM erforderlich ist.  
   
  Sie können den Assistenten nicht für differenzielle Sicherungen verwenden, da der Assistent keine vorhandene Datenbank überschreibt, die denselben Datenbanknamen hat. Um eine vorhandene Datenbank auf der VM zu ersetzen, müssen Sie zuerst die vorhandene Datenbank löschen oder den Datenbanknamen ändern. Falls ein Namenskonflikt zwischen dem Datenbanknamen eines aktiven Bereitstellungsvorgangs und dem einer vorhandenen Datenbank auf der VM auftritt, schlägt der Assistent ein Namenssuffix für den Namen der bereitzustellenden Datenbank vor, sodass der Vorgang erfolgreich abgeschlossen werden kann.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "70175737"
   
  Auf Computern, auf denen ein Windows Server-Betriebssystem ausgeführt wird, müssen Sie zur Ausführung dieses Assistenten die folgenden Konfigurationseinstellungen vornehmen:  
   
--   Deaktivieren Sie die verstärkte Sicherheitskonfiguration:  Verwenden Sie Server-Manager > lokalen Server, um die verstärkte Sicherheitskonfiguration für Internet Explorer (ESC) auf **Off**festzulegen.  
+-   Deaktivieren Sie die verstärkte Sicherheitskonfiguration: Wählen Sie „Server-Manager > Lokaler Server“, und geben Sie für „Verstärkte Sicherheitskonfiguration für Internet Explorer“ den Wert **AUS** an.  
   
--   JavaScript aktivieren:  Internet Explorer > Internetoptionen > Sicherheit > Kundenebene > Skripterstellung > Active Scripting: **Aktivieren**Sie.  
+-   Aktivieren Sie JavaScript: Internet Explorer > Internetoptionen > Sicherheit > Stufe anpassen > Skripting > Active Scripting: **Aktivieren**.  
   
 ###  <a name="limitations"></a> Einschränkungen  
  Die Datenbankgröße für diesen Vorgang ist auf 1 TB beschränkt.  
@@ -107,13 +107,13 @@ ms.locfileid: "70175737"
   
 -   SQL Server 2008 R2  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  SQL Server Daten Bank Versionen, die in einer Azure-VM ausgeführt werden, können bereitgestellt werden für:  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -140,7 +140,7 @@ ms.locfileid: "70175737"
 ###  <a name="configuration_settings"></a> Konfigurationseinstellungen des Assistenten  
  Verwenden Sie die folgenden Konfigurationsdetails, um die Einstellungen für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankbereitstellung in einer Azure-VM zu ändern.  
   
--   **Standardpfad für die Konfigurationsdatei** – %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
+-   **Standardpfad für die Konfigurationsdatei** - %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
   
 -   **Struktur der Konfigurationsdatei**  
   
@@ -185,22 +185,22 @@ ms.locfileid: "70175737"
 ##  <a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite wird der Assistent zum Bereitstellen **einer SQL Server Datenbank in einer Azure-VM** beschrieben.  
   
- **Options**  
+ **enthalten**  
   
 -   **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Einführungsseite in Zukunft nicht mehr angezeigt wird.  
   
--   Durch**Weiter** gelangen Sie zur Seite **Quelleinstellungen** .  
+-   Durch **Weiter** gelangen Sie zur Seite **Quelleinstellungen**.  
   
 -   **Abbrechen**: Bricht den Vorgang ab und schließt den Assistenten.  
   
 -   **Hilfe** : Hiermit wird das MSDN-Hilfethema für den Assistenten gestartet.  
   
 ##  <a name="Source_settings"></a> Quelleinstellungen  
- Verwenden Sie diese Seite, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Instanz von herzustellen, die die Datenbank hostet, die Sie der Azure-VM bereitstellen möchten. Außerdem geben Sie einen temporären Speicherort für Dateien an, die auf dem lokalen Computer gespeichert werden sollen, bevor Sie an Azure übertragen werden. Dies kann ein freigegebener Netzwerkspeicherort sein.  
+ Verwenden Sie diese Seite, um eine Verbindung mit der Instanz von herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die die Datenbank hostet, die Sie auf dem virtuellen Azure-Computer bereitstellen möchten. Außerdem geben Sie einen temporären Speicherort für Dateien an, die auf dem lokalen Computer gespeichert werden sollen, bevor Sie an Azure übertragen werden. Dies kann ein freigegebener Netzwerkspeicherort sein.  
   
- **Options**  
+ **enthalten**  
   
--   Klicken Sie auf **verbinden...** , und geben Sie dann Verbindungsdetails [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Instanz von an, die die bereit zustellende Datenbank hostet.  
+-   Klicken Sie auf **verbinden...** , und geben Sie dann Verbindungsdetails für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die die bereit zustellende Datenbank hostet.  
   
 -   Wählen Sie in der Dropdownliste **Datenbank auswählen** diejenige Datenbank aus, die bereitgestellt werden soll.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "70175737"
 ##  <a name="Azure_sign-in"></a>Azure-Anmeldung  
  Verwenden Sie diese Seite, um eine Verbindung mit Azure herzustellen und Verwaltungs Zertifikate bereitzustellen oder Profildetails zu veröffentlichen.  
   
- **Options**  
+ **enthalten**  
   
 -   **Verwaltungs Zertifikat** : Verwenden Sie diese Option, um ein Zertifikat aus dem lokalen Zertifikat Speicher anzugeben, das mit dem Verwaltungs Zertifikat von Azure übereinstimmt.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "70175737"
 ##  <a name="Deployment_settings"></a> Bereitstellungseinstellungen (Seite)  
  Auf dieser Seite können Sie den Zielserver angeben sowie Details zur neuen Datenbank bereitstellen.  
   
- **Options**  
+ **enthalten**  
   
 -   **Virtueller Azure-Computer** : Geben Sie Details für die VM an, die die SQL Server-Datenbank hostet:  
   

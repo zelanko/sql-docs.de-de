@@ -111,9 +111,9 @@ ms.locfileid: "72783250"
     Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)    
- [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)    
+## <a name="see-also"></a>Siehe auch  
+ [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
+ [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
  [Dateifreigabeübermittlung in Reporting Services](file-share-delivery-in-reporting-services.md)   
  [E-Mail-Übermittlung in Reporting Services](e-mail-delivery-in-reporting-services.md)   
  [Konfigurieren eines Berichts Servers für die e &#40;-Mail-Übermittlung von SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

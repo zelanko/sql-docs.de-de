@@ -45,7 +45,7 @@ sp_help_fulltext_system_components
  'all'  
  Gibt Informationen für alle Volltextkomponenten zurück.  
   
-`[ @component_type = ] component_type` gibt den Komponententyp an. *component_type* kann eines der folgenden sein:  
+`[ @component_type = ] component_type` gibt den Komponententyp an. *component_type* kann eine der folgenden sein:  
   
 -   **Wörter Trennung**  
   
@@ -57,7 +57,7 @@ sp_help_fulltext_system_components
   
  Wenn ein vollständiger Pfad angegeben wird, muss auch *param* mit dem vollständigen Pfad zur Komponenten-DLL angegeben werden, oder es wird eine Fehlermeldung zurückgegeben.  
   
-`[ @param = ] param` ist abhängig vom Komponententyp einer der folgenden: ein Gebiets Schema Bezeichner (Locale Identifier, LCID), die Dateierweiterung mit "."-Präfix, der vollständige Komponenten Name des Protokoll Handlers oder der vollständige Pfad zur Komponenten-DLL.  
+`[ @param = ] param` abhängig vom Komponententyp ist einer der folgenden: ein Gebiets Schema Bezeichner (Locale Identifier, LCID), die Dateierweiterung mit "."-Präfix, der vollständige Komponenten Name des Protokoll Handlers oder der vollständige Pfad zur Komponenten-DLL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -65,7 +65,7 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>Resultsets  
  Folgendes Resultset wird für die Systemkomponenten zurückgegeben.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Typ der Komponente. Einer der folgenden Typen:<br /><br /> filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
 |**componentname**|**sysname**|Name der Komponente.|  
@@ -76,7 +76,7 @@ sp_help_fulltext_system_components
   
  Das folgende Resultset wird nur zurückgegeben, wenn mindestens ein voll Text Katalog vorhanden ist, der *component_type*verwendet.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|Die ID der Datenbank.|  
 |**ftcatid**|**int**|ID des Volltextkatalogs.|  
@@ -84,7 +84,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **Public** -Rolle. Benutzer können jedoch nur Informationen zu den Volltextkatalogen anzeigen, für die Sie über die View Definition-Berechtigung verfügen. Nur Mitglieder der Server Rolle **serveradmin** können Werte in der Spalte **FullPath** sehen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode ist besonders beim Vorbereiten eines Upgrades wichtig. Führen Sie die gespeicherte Prozedur innerhalb einer bestimmten Datenbank aus, und ermitteln Sie mithilfe der Ausgabe, ob das Upgrade Auswirkungen auf einen bestimmten Katalog haben wird.  
   
 ## <a name="examples"></a>Beispiele  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Bestimmen, ob eine bestimmte Wörtertrennung registriert ist  
- Im folgenden Beispiel wird die Wörtertrennung für die türkische Sprache (LCID = 1055) aufgeführt, wenn diese auf dem System installiert und auf der Dienstinstanz registriert wurde. In diesem Beispiel werden die Parameternamen **\@component_type** und **\@param**angegeben.  
+ Im folgenden Beispiel wird die Wörtertrennung für die türkische Sprache (LCID = 1055) aufgeführt, wenn diese auf dem System installiert und auf der Dienstinstanz registriert wurde. In diesem Beispiel werden die Parameternamen, **\@component_type** und **\@param**angegeben.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -136,7 +136,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anzeigen oder Ändern von registrierten Filtern und Wörter](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)Trennungen    
+ [Anzeigen oder Ändern von registrierten Filtern und Wörter](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md) Trennungen   
  [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Gespeicherte Prozeduren &#40;für die voll Text Suche und die semantische Suche Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  

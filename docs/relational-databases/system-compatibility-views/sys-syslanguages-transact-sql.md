@@ -33,13 +33,13 @@ ms.locfileid: "70874869"
 
   Enthält eine Zeile für jede Sprache in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|Eindeutige Sprachen-ID.|  
 |dateformat|**NCHAR (3)**|Reihenfolge in Datumsangaben, z. B. DMY.|  
-|datefirst|**tinyint**|Erster Tag der Woche: 1 für Montag, 2 für Dienstag usw. bis 7 für Sonntag.|  
+|datefirst|**tinyint**|Erster Tag der Woche: 1 für Montag, 2 für Dienstag usw., bis 7 für Sonntag.|  
 |upgrade|**int**|Ist für das System reserviert.|  
-|NAME|**sysname**|Offizieller Sprachen Name, z. b. "Français".|  
+|name|**sysname**|Offizieller Sprachen Name, z. b. "Français".|  
 |alias|**sysname**|Alternativer Sprachenname, z. B. Französisch.|  
 |months|**nvarchar(372)**|Liste mit durch Trennzeichen getrennten Monatsnamen in voller Länge, in der Reihenfolge Januar bis Dezember. Jeder Name kann bis zu 20 Zeichen lang sein.|  
 |shortmonths|**nvarchar(132)**|Liste mit durch Trennzeichen getrennten abgekürzten Monatsnamen, in der Reihenfolge Januar bis Dezember. Jeder Name kann bis zu 9 Zeichen lang sein.|  
@@ -86,7 +86,7 @@ ms.locfileid: "70874869"
 |Thai|1054|1054|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Kompatibilitäts &#40;Sichten (Transact-SQL)&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Kompatibilitäts &#40;Sichten (Transact&#41; -SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md) - )  
  [Mapping von Systemtabellen zu System &#40;Sichten Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

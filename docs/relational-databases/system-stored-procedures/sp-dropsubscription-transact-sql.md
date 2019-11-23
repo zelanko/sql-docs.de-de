@@ -42,13 +42,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der zugeordneten Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn **alle**, werden alle Abonnements für alle Veröffentlichungen für den angegebenen Abonnenten abgebrochen. die *Veröffentlichung* ist ein erforderlicher Parameter.  
+`[ @publication = ] 'publication'` ist der Name der zugeordneten Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn **alle**, werden alle Abonnements für alle Veröffentlichungen für den angegebenen Abonnenten abgebrochen. die *Veröffentlichung* ist ein erforderlicher Parameter.  
   
-`[ @article = ] 'article'`Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn **alle**, werden Abonnements für alle Artikel für jede angegebene Veröffentlichung und jeden Abonnenten gelöscht. Verwenden Sie **all** für Veröffentlichungen, die sofortiges Aktualisieren ermöglichen.  
+`[ @article = ] 'article'` ist der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn **alle**, werden Abonnements für alle Artikel für jede angegebene Veröffentlichung und jeden Abonnenten gelöscht. Verwenden Sie **all** für Veröffentlichungen, die sofortiges Aktualisieren ermöglichen.  
   
-`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten, dessen Abonnements gelöscht werden. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **alle**, werden alle Abonnements für alle Abonnenten gelöscht.  
+`[ @subscriber = ] 'subscriber'` ist der Name des Abonnenten, dessen Abonnements gelöscht werden. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **alle**, werden alle Abonnements für alle Abonnenten gelöscht.  
   
-`[ @destination_db = ] 'destination_db'`Der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei einem Wert von NULL werden alle Abonnements dieses Abonnenten gelöscht.  
+`[ @destination_db = ] 'destination_db'` ist der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei einem Wert von NULL werden alle Abonnements dieses Abonnenten gelöscht.  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -59,7 +59,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **sp_dropsubscription** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Wenn Sie das Abonnement für den Artikel einer immediate-sync-Veröffentlichung löschen, können Sie das Abonnement nur wieder hinzufügen, wenn Sie die Abonnements für alle Artikel der Veröffentlichung löschen und sie alle in einem Schritt wieder hinzufügen.  

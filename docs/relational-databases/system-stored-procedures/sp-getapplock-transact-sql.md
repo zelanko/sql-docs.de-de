@@ -31,7 +31,7 @@ ms.locfileid: "72717259"
 
   Sperrt eine Anwendungsressource.  
   
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,30 +46,30 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [@Resource =] "*Ressourcen Name*"  
- Zeichenfolge, die einen Namen zum Identifizieren der Sperrressource angibt. Die Anwendung muss sicherstellen, dass der Ressourcenname eindeutig ist. Der angegebene Name wird intern als Hashwert in einem Wert gespeichert, der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *Ressourcen Name* ist vom Datentyp **nvarchar (255)** und hat keinen Standardwert. Wenn eine Ressourcen Zeichenfolge länger als **nvarchar (255)** ist, wird Sie in **nvarchar (255)** gekürzt.  
+ [@Resource=] "*resource_name*"  
+ Zeichenfolge, die einen Namen zum Identifizieren der Sperrressource angibt. Die Anwendung muss sicherstellen, dass der Ressourcenname eindeutig ist. Der angegebene Name wird intern als Hashwert in einem Wert gespeichert, der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *resource_name* ist vom Datentyp **nvarchar (255)** und hat keinen Standardwert. Wenn eine Ressourcen Zeichenfolge länger als **nvarchar (255)** ist, wird Sie in **nvarchar (255)** gekürzt.  
   
- *Ressourcen Name* wird als Binär verglichen und daher unabhängig von den Sortierungs Einstellungen der aktuellen Datenbank die Groß-/Kleinschreibung beachtet.  
+ *resource_name* ist im Vergleich zu einem binären Vergleich. Daher muss die Groß-/Kleinschreibung unabhängig von den Sortierungs Einstellungen der aktuellen Datenbank beachtet werden.  
   
 > [!NOTE]  
 >  Nachdem eine Anwendungssperre eingerichtet wurde, können nur die ersten 32 Zeichen im Nur-Text-Format abgerufen werden. Die übrigen Zeichen werden hashcodiert.  
   
- [@LockMode =] "*lock_mode*"  
+ [@LockMode=] "*lock_mode*"  
  Der Sperrmodus, der für eine bestimmte Ressource abgerufen werden soll. *lock_mode* ist vom Datentyp **nvarchar(32)** und verfügt nicht über einen Standardwert. Folgende Werte sind möglich: **Shared**, **Update**, **IntentShared**, **IntentExclusive**oder **exklusiv**. Weitere Informationen finden Sie unter [Sperrmodi](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
- [@LockOwner =] "*lock_owner*"  
- Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)** . Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn der *lock_owner* -Wert " **Transaction**" ist, wird standardmäßig sp_getapplock innerhalb einer Transaktion ausgeführt.  
+ [@LockOwner=] "*lock_owner*"  
+ Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)** . Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn der *lock_owner* Wert **Transaction**ist, wird standardmäßig sp_getapplock der innerhalb einer Transaktion ausgeführt werden muss.  
   
- [@LockTimeout =] "*Wert*"  
- Der Wert für das Sperrtimeout in Millisekunden. Der Standardwert ist identisch mit dem Wert, der von @ @LOCK_TIMEOUT zurückgegeben wird. Um anzugeben, dass eine Sperranforderung den Rückgabe Code-1 zurückgeben soll, statt auf die Sperre zu warten, wenn die Anforderung nicht sofort erteilt werden kann, geben Sie 0 an.  
+ [@LockTimeout=] "*Wert*"  
+ Der Wert für das Sperrtimeout in Millisekunden. Der Standardwert ist identisch mit dem Wert, der von @@LOCK_TIMEOUTzurückgegeben wird. Um anzugeben, dass eine Sperranforderung den Rückgabe Code-1 zurückgeben soll, statt auf die Sperre zu warten, wenn die Anforderung nicht sofort erteilt werden kann, geben Sie 0 an.  
   
- [@DbPrincipal =] "*database_principal*"  
- Der Benutzer, die Rolle oder die Anwendungsrolle mit Berechtigungen für ein Objekt in einer Datenbank. Der Aufrufer der Funktion muss Mitglied der Daten Bank Rolle " *database_principal*", "dbo" oder "db_owner" sein, damit die Funktion erfolgreich aufgerufen werden kann. Der Standardwert ist public.  
+ [@DbPrincipal=] "*database_principal*"  
+ Der Benutzer, die Rolle oder die Anwendungsrolle mit Berechtigungen für ein Objekt in einer Datenbank. Der Aufrufer der Funktion muss ein Member von *database_principal*, dbo oder der db_owner Fixed-Daten Bank Rolle sein, damit die Funktion erfolgreich aufgerufen werden kann. Der Standardwert ist public.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- \> = 0 (Erfolg) oder < 0 (Fehler)  
+ \>= 0 (Erfolg) oder < 0 (Fehler)  
   
-|value|Ergebnis|  
+|ReplTest1|Ergebnis|  
 |-----------|------------|  
 |0|Die Sperre wurde erfolgreich synchron erteilt.|  
 |1|Die Sperre wurde erfolgreich erteilt, nachdem das Aufheben anderer, inkompatibler Sperren abgewartet wurde.|  
@@ -78,7 +78,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|Die Sperranforderung wurde als Deadlockopfer gewählt.|  
 |-999|Gibt einen Fehler bei Parameterüberprüfung oder einen anderen Aufruffehler an.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Für eine Ressource bestehende Sperren sind der aktuellen Transaktion oder der aktuellen Sitzung zugeordnet. Der aktuellen Transaktion zugeordnete Sperren werden aufgehoben, wenn für die Transaktion ein Commit oder ein Rollback ausgeführt wird. Sperren, die der Sitzung zugeordnet sind, werden freigegeben, wenn die Sitzung abgemeldet wird. Wenn der Server aus irgendeinem Grund heruntergefahren wird, werden alle Sperren freigegeben.  
   
  Die von sp_getapplock erstellte Sperrenressource wird in der aktuellen Datenbank der Sitzung erstellt. Jede Sperrenressource wird durch die kombinierten Werte folgender Elemente identifiziert:  
@@ -163,9 +163,9 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [APPLOCK_MODE &#40;Transact-SQL&#41; -](../../t-sql/functions/applock-mode-transact-sql.md)    
- [APPLOCK_TEST &#40;Transact-SQL&#41; -](../../t-sql/functions/applock-test-transact-sql.md)    
+## <a name="see-also"></a>Siehe auch  
+ [APPLOCK_MODE &#40;Transact-SQL&#41; ](../../t-sql/functions/applock-mode-transact-sql.md) -   
+ [APPLOCK_TEST &#40;Transact-SQL&#41; ](../../t-sql/functions/applock-test-transact-sql.md) -   
  [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

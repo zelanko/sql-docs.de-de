@@ -33,7 +33,7 @@ ms.locfileid: "71207722"
 
   Ermöglicht das Erzwingen eines bestimmten Plans für eine bestimmte Abfrage.  
   
- Wenn ein Plan für eine bestimmte Abfrage erzwungen wird, wird jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mal, wenn die Abfrage gefunden wird, versucht, den Plan im Abfrageoptimierer zu erzwingen. Wenn die Plan Erzwingung fehlschlägt, wird ein erweitertes Ereignis ausgelöst, und der Abfrageoptimierer wird angewiesen, auf die normale Weise zu optimieren.  
+ Wenn ein Plan für eine bestimmte Abfrage erzwungen wird, wird jedes Mal, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Abfrage findet, versucht, den Plan im Abfrageoptimierer zu erzwingen. Wenn die Plan Erzwingung fehlschlägt, wird ein erweitertes Ereignis ausgelöst, und der Abfrageoptimierer wird angewiesen, auf die normale Weise zu optimieren.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,14 +44,14 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @query_id = ] query_id`Die ID der Abfrage. *query_id* ist vom Datentyp **bigint**und hat keinen Standardwert.  
+`[ @query_id = ] query_id` ist die ID der Abfrage. *query_id* ist vom Datentyp **bigint**und hat keinen Standardwert.  
   
-`[ @plan_id = ] plan_id`Die ID des Abfrage Plans, der erzwungen werden soll. *plan_id* ist vom Datentyp **bigint**und hat keinen Standardwert.  
+`[ @plan_id = ] plan_id` ist die ID des Abfrage Plans, der erzwungen werden soll. *plan_id* ist vom Datentyp **bigint**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die **Alter** -Berechtigung für die Datenbank.
@@ -79,8 +79,8 @@ EXEC sp_query_store_force_plan 3, 3;
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Überwachen der Leistung mithilfe des Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [sp_query_store_reset_exec_stats &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
+ [Überwachen der Leistung mithilfe der Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md) -   
  [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       
  [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)    
   

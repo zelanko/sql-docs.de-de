@@ -42,7 +42,7 @@ xp_msver [ optname ]
  *optname*  
  Der Name einer Option. Die folgenden Werte sind möglich.  
   
-|Options-/Spaltenname|Beschreibung|  
+|Options-/Spaltenname|und Beschreibung|  
 |-------------------------|-----------------|  
 |**ProductName**|Produktname; beispielsweise [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ProductVersion**|Die Produktversion.|  
@@ -72,7 +72,7 @@ xp_msver [ optname ]
  **xp_msver**ohne Parameter gibt ein vier spaltige Resultset zurück, das alle Optionswerte auflistet. **xp_msver**gibt für jeden Parameter das vier spaltige Resultset mit Werten für diese Option zurück.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Rolle.  
+ Erfordert die Mitgliedschaft in der Rolle **public** .  
   
 ## <a name="see-also"></a>Siehe auch  
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   

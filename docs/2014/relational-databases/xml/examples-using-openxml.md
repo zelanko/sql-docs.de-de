@@ -93,7 +93,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Da die <`Customer`>-Elemente keinerlei Unterelemente besitzen, werden die Werte von **CustomerID** und **ContactName** für beide Kunden als NULL zurückgegeben, wenn dieselbe SELECT-Anweisung mit auf den Wert **2** gesetztem *flags*-Parameter ausgeführt wird, um die elementzentrierte Zuordnung anzuzeigen.  
+ Da die <`Customer`>-Elemente keinerlei Unterelemente besitzen, werden die Werte von *CustomerID* und **ContactName** für beide Kunden als NULL zurückgegeben, wenn dieselbe SELECT-Anweisung mit auf den Wert **2** gesetztem **flags**-Parameter ausgeführt wird, um die elementzentrierte Zuordnung anzuzeigen.  
   
  @xmlDocument kann auch vom Typ **xml** oder **(n)varchar(max)** sein.  
   
@@ -292,7 +292,7 @@ LILAS      Carlos Gonzlez
   
 -   *rowpattern* (/root/Customer/Order) identifiziert die zu verarbeitenden <`Order`>-Knoten.  
   
--   Der Wert des *flags*-Parameters wird auf **1** festgelegt, was die attributzentrierte Zuordnung anzeigt. Folglich werden die XML-Attribute den in *SchemaDeclaration*definierten Rowsetspalten zugeordnet.  
+-   Der Wert des *flags* -Parameters wird auf **1** festgelegt, was die attributzentrierte Zuordnung anzeigt. Folglich werden die XML-Attribute den in *SchemaDeclaration*definierten Rowsetspalten zugeordnet.  
   
 -   In *SchemaDeclaration* (in der WITH-Klausel) stimmen die Rowsetspaltennamen **oid** und **amount** mit den entsprechenden XML-Attributnamen überein. Deshalb wird der *ColPattern* -Parameter nicht angegeben. Für die **comment** -Spalte im Rowset wird die XPath-Funktion **text()** als *ColPattern*angegeben. Dadurch wird die im *flags*-Parameter angegebene attributzentrierte Zuordnung überschrieben, und die Spalte enthält die Blattwert-Zeichenfolge des Elementinhalts.  
   
@@ -474,11 +474,11 @@ EXEC sp_xml_removedocument @docHandle
   
  In *SchemaDeclaration* (in der WITH-Klausel) wird *ColPattern* auch mit den Parametern *ColName* und *ColType* angegeben. Der optionale *ColPattern* -Parameter entspricht dem angegebenen XPath-Muster und zeigt Folgendes an:  
   
--   Das als *ColPattern* für die **ProdID**-Spalte im Rowset angegebene XPath-Muster ( **.** ) identifiziert den Kontextknoten (aktueller Knoten). Laut Angabe in *rowpattern* ist das das **ProductID**-Attribut des <`OrderDetail`>-Elements.  
+-   Das als **ColPattern** für die *ProdID*-Spalte im Rowset angegebene XPath-Muster ( **.** ) identifiziert den Kontextknoten (aktueller Knoten). Laut Angabe in *rowpattern* ist das das **ProductID**-Attribut des <`OrderDetail`>-Elements.  
   
--   Das für die **Qty**-Spalte im Rowset angegebene *ColPattern* **(../\@Quantity**) identifiziert das **Quantity**-Attribut des übergeordneten Knotens (<`OrderDetail`>) des Kontextknotens (\<ProductID>).  
+-   Das für die *Qty*-Spalte im Rowset angegebene **ColPattern\@** (../**Quantity**) identifiziert das **Quantity**-Attribut des übergeordneten Knotens (<`OrderDetail`>) des Kontextknotens (\<ProductID>).  
   
--   In gleicher Weise identifiziert das für die **OID**-Spalte im Rowset angegebene *ColPattern* ( **../../\@OrderID**) das **OrderID**-Attribut des übergeordneten Knotens (<`Order`>) des Kontextknotens. Der übergeordnete Knoten ist <`OrderDetail`>, und der Kontextknoten <`ProductID`>.  
+-   In gleicher Weise identifiziert das für die *OID*-Spalte im Rowset angegebene **ColPattern\@ (** ../../**OrderID**) das **OrderID**-Attribut des übergeordneten Knotens (<`Order`>) des Kontextknotens. Der übergeordnete Knoten ist <`OrderDetail`>, und der Kontextknoten <`ProductID`>.  
   
  Schließlich ruft die SELECT-Anweisung alle Spalten in dem von OPENXML bereitgestellten Rowset ab.  
   
@@ -610,11 +610,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     Die Attribute **id** (Studenten-ID), **name**und **attends** . Das **attends** -Attribut ist ein mehrwertiges Attribut.  
+     Die Attribute **id** (Studenten-ID), **name** und **attends**. Das **attends** -Attribut ist ein mehrwertiges Attribut.  
   
 -   \<Class>  
   
-     Die Attribute **id** (Klassen-ID), **name**und **attendedBy** . Das **attendedBy** -Attribut ist ein mehrwertiges Attribut.  
+     Die Attribute **id** (Klassen-ID), **name** und **attendedBy**. Das **attendedBy** -Attribut ist ein mehrwertiges Attribut.  
   
  Das **attends**-Attribut in \<Student> und das **attendedBy**-Attribut in \<Class> stellen eine **m:n**-Beziehung zwischen den Tabellen „Student“ und „Class“ dar. Ein Student kann viele Kurse besuchen, und ein Kurs kann über viele Studenten verfügen.  
   

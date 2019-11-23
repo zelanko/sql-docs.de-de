@@ -101,22 +101,22 @@ sys.dm_sql_referencing_entities (
   
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
-|Tabelle|Ja*|ja|  
-|Ansicht|ja|ja|  
-|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|ja|ja|  
-|Gespeicherte CLR-Prozedur|Nein|ja|  
-|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|ja|  
-|CLR-benutzerdefinierte Funktion|Nein|ja|  
+|Tabelle|Ja*|Benutzerkontensteuerung|  
+|Ansicht|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|Gespeicherte CLR-Prozedur|Nein|Benutzerkontensteuerung|  
+|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|CLR-benutzerdefinierte Funktion|Nein|Benutzerkontensteuerung|  
 |CLR-Trigger (DML und DDL)|Nein|Nein|  
-|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|Erweiterte gespeicherte Prozeduren|Nein|ja|  
-|Warteschlange|Nein|ja|  
-|Synonym|Nein|ja|  
-|Typ (Alias und CLR-benutzerdefinierter Typ)|Nein|ja|  
-|XML-Schemaauflistung|Nein|ja|  
-|Partitionsfunktion|Nein|ja|  
+|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|Nein|  
+|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|Nein|  
+|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|Nein|  
+|Erweiterte gespeicherte Prozeduren|Nein|Benutzerkontensteuerung|  
+|Warteschlange|Nein|Benutzerkontensteuerung|  
+|Synonym|Nein|Benutzerkontensteuerung|  
+|Typ (Alias und CLR-benutzerdefinierter Typ)|Nein|Benutzerkontensteuerung|  
+|XML-Schemaauflistung|Nein|Benutzerkontensteuerung|  
+|Partitionsfunktion|Nein|Benutzerkontensteuerung|  
   
  \* eine Tabelle in der Definition einer berechneten Spalte, einer Check-Einschränkung oder einer DEFAULT-Einschränkung nur als verweisende Entität nachverfolgt wird, wenn Sie auf ein [!INCLUDE[tsql](../../includes/tsql-md.md)] Modul, einen benutzerdefinierten Typ oder eine XML-Schema Auflistung verweist.  
   

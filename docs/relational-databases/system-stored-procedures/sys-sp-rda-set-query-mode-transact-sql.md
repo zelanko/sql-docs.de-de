@@ -39,7 +39,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [@mode =] *\@-Modus*  
+ [@mode =] *\@Modus*  
  Ist einer der folgenden Werte.  
   
 -   **Deaktiviert** Alle Abfragen für Stretch-aktivierte Tabellen können nicht ausgeführt werden.  
@@ -48,21 +48,21 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_AND_REMOTE** Abfragen für Stretch-aktivierte Tabellen geben sowohl lokale Daten als auch Remote Daten zurück. Dies ist das Standardverhalten.  
   
- [@force =]  *\@force*  
+ [@force =]  *\@Force*  
  Ist ein optionaler Bitwert, der auf 1 festgelegt werden kann, wenn Sie den Abfrage Modus ohne Validierung ändern möchten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder > 0 (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert db_owner-Berechtigungen.  
+ Erfordert db_owner Berechtigungen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die folgenden erweiterten gespeicherten Prozeduren legen auch den Abfrage Modus für eine Stretch-aktivierte Datenbank fest.  
   
 -   **sp_rda_deauthorize_db**  
   
-     Nach dem Ausführen von **sp_rda_deauthorize_db** treten bei allen Abfragen für Datenbanken und Tabellen mit aktivierter Stretch-Datenbank Fehler auf. Das heißt, der Abfrage Modus ist auf "deaktiviert" festgelegt. Führen Sie eine der folgenden Aktionen aus, um diesen Modus zu beenden.  
+     Nachdem Sie **sp_rda_deauthorize_db** ausgeführt haben, schlagen alle Abfragen für Datenbanken und Tabellen mit aktivierter Stretch-Funktion fehl. Das heißt, der Abfrage Modus ist auf "deaktiviert" festgelegt. Führen Sie eine der folgenden Aktionen aus, um diesen Modus zu beenden.  
   
     -   Führen Sie [sys. &#40;sp_rda_reauthorize_db Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) aus, um erneut eine Verbindung mit der Azure-Remote Datenbank herzustellen. Durch diesen Vorgang wird der Abfrage Modus automatisch auf LOCAL_AND_REMOTE zurückgesetzt. Dies ist das Standardverhalten für Stretch Database. Das heißt, dass Abfragen Ergebnisse sowohl aus lokalen als auch aus Remote Daten zurückgeben.  
   
@@ -74,6 +74,6 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 ## <a name="see-also"></a>Siehe auch  
  [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [Stretch-Datenbank](../../sql-server/stretch-database/stretch-database.md)  
   
   

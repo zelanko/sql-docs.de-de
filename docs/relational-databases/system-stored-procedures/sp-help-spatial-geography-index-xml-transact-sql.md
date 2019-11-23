@@ -45,19 +45,19 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Siehe [Argumente und Eigenschaften gespeicherter Prozeduren für Räumlichkeitsindizes](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Siehe [Arguments and Properties of Spatial Index Stored Procedures](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="properties"></a>Eigenschaften  
- Siehe [Argumente und Eigenschaften gespeicherter Prozeduren für Räumlichkeitsindizes](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Siehe [Arguments and Properties of Spatial Index Stored Procedures](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Dem Benutzer muss eine PUBLIC-Rolle zugewiesen werden, um auf die Prozedur zuzugreifen. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen Menge enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird `sp_help_spatial_geography_index_xml` verwendet, um den räumlichen Index **SIndx_SpatialTable_geography_col2** , der in der Tabelle **geography_col** für das angegebene Abfrage Beispiel in **\@QS**definiert ist, zu untersuchen. Dieses Beispiel gibt die Kerneigenschaften des angegebenen Index in einem XML-Fragment zurück, das den Namen und den Wert der ausgewählten Eigenschaften anzeigt.  
+ Im folgenden Beispiel wird `sp_help_spatial_geography_index_xml` verwendet, um den räumlichen Index **SIndx_SpatialTable_geography_col2** zu untersuchen, der für die Tabelle **geography_col** für das angegebene Abfrage Beispiel in **\@QS**definiert wurde. Dieses Beispiel gibt die Kerneigenschaften des angegebenen Index in einem XML-Fragment zurück, das den Namen und den Wert der ausgewählten Eigenschaften anzeigt.  
   
  Anschließend wird eine [XQuery](../../xquery/xquery-basics.md) für das Resultset ausgeführt, die eine bestimmte Eigenschaft zurückgibt.  
   
@@ -73,7 +73,7 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
  Das umgebende Feld einer **geography** ist die gesamte Erde.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren für räumliche Indizes](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   

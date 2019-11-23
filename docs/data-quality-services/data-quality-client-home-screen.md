@@ -25,7 +25,7 @@ ms.locfileid: "70152577"
 
   Über diesen Bildschirm können Sie auf die Benutzeroberflächen für die drei wichtigsten [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] -Taskgruppen (DSQ) zugreifen: Wissensdatenbank-Verwaltung, Data Quality-Projekte und Verwaltung.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="knowledge-base-management"></a>Wissensdatenbank-Verwaltung  
  Eine DQS-Wissensdatenbank ist ein Repository mit Metadaten, die von DQS zur Verbesserung der Datenqualität verwendet werden. Diese Metadaten werden von der DQS-Plattform in einem computergestützten Wissensermittlungsprozess und vom Data Steward in einem interaktiven Domänenverwaltungsprozess erstellt.  
@@ -41,7 +41,7 @@ ms.locfileid: "70152577"
   
  Sie können eine gesperrte Wissensdatenbank nur dann öffnen und bearbeiten, wenn Sie sie selbst gesperrt haben. Wenn dies der Fall ist, wird die Wissensdatenbank mit dem Status geöffnet, den sie beim Schließen aufwies. Selbiges ist in Klammern angegeben. Wenn eine Wissensdatenbank gesperrt wird und Sie sie nicht gesperrt haben, können Sie sie nur schreibgeschützt öffnen.  
   
-### <a name="data-quality-projects"></a>Data Quality-Projekte  
+### <a name="data-quality-projects"></a>Data Quality Projects  
  Ein Data Quality-Projekt ist der Prozess, bei dem DQS die Datenbereinigung oder den Datenabgleich ausführt, wobei für beide eine computergestützte Datenkorrektur und eine interaktive Datenbereinigung verwendet werden.  
   
  **Neues Data Quality-Projekt**  
@@ -59,7 +59,7 @@ ms.locfileid: "70152577"
  **Aktivitätsüberwachung**  
  Zeigen Sie eine Sicht mit dem Status aller (aktuellen und vergangenen) Aktivitäten an, die sich auf den verbundenen [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]beziehen. Die überwachten Aktivitätstypen umfassen die Wissensverwaltung, ein Data Quality-Projekt und die SSIS-basierte Datenkorrektur.  
   
- **Configuration**  
+ **Konfiguration**  
  Zeigen Sie die Konfigurations Eigenschaften für Verweis Datendienst Konten (sowohl über Azure Marketplace als auch direkt auf Verweis Datendienste), allgemeine Einstellungen (interaktive Bereinigung, Abgleich und Profilerstellung) und Einstellungen für den Protokoll Schweregrad an.  
   
 ## <a name="see-also"></a>Siehe auch  

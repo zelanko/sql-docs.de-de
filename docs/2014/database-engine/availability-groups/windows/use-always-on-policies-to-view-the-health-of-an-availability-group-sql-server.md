@@ -27,7 +27,7 @@ ms.locfileid: "72782850"
   
 
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Security  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72782850"
   
 3.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** .  
   
-     Klicken Sie entweder mit der rechten Maustaste auf den Knoten **Verfügbarkeitsgruppen** , oder erweitern Sie diesen Knoten, und klicken Sie mit der rechten Maustaste auf eine bestimmte Verfügbarkeitsgruppe.  
+     Klicken Sie entweder mit der rechten Maustaste auf den Knoten **Verfügbarkeitsgruppen**, oder erweitern Sie diesen Knoten, und klicken Sie mit der rechten Maustaste auf eine bestimmte Verfügbarkeitsgruppe.  
   
 4.  Wählen Sie den Befehl **Dashboard anzeigen** aus.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72782850"
   
      Diese Cmdlets akzeptieren die folgenden Optionen:  
   
-    |Option|Description|  
+    |Option|und Beschreibung|  
     |------------|-----------------|  
     |`AllowUserPolicies`|Führt in den AlwaysOn-Richtlinienkategorien gefundene Benutzerrichtlinien aus.|  
     |`InputObject`|Eine Auflistung von Objekten, die abhängig vom verwendeten Cmdlet den Status von Verfügbarkeitsgruppen, Verfügbarkeitsreplikaten oder Verfügbarkeitsdatenbanken darstellen. Das Cmdlet berechnet die Integrität der angegebenen Objekte.|  
@@ -109,9 +109,9 @@ ms.locfileid: "72782850"
   
 -   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Aufrufen der SQL Server PowerShell-Hilfe](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="RelatedContent"></a>Verwandte Inhalte  
  **SQL Server AlwaysOn-Teamblogs: Überwachen des AlwaysOn-Zustands mit PowerShell:**  
   
 -   [Teil 1: Übersicht über grundlegende Cmdlets](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
@@ -122,8 +122,8 @@ ms.locfileid: "72782850"
   
 -   [Teil 4: Integration in SQL Server-Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)    
- [Verwaltung einer Verfügbarkeitsgruppe (SQL Server)](administration-of-an-availability-group-sql-server.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
+ [Verwaltung einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 

@@ -32,11 +32,11 @@ ms.locfileid: "70155537"
 
   **Hinweis: Dies gilt nur für Azure SQL-Datenbank v11.**  
   
- Listet die Anzahl, den Typ und die Dauer der Datenbanken [!INCLUDE[ssSDS](../../includes/sssds-md.md)] auf dem Server auf.  
+ Listet die Anzahl, den Typ und die Dauer der Datenbanken auf dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server auf.  
   
  Die **sys. database_usage** -Sicht enthält die folgenden Spalten.  
   
-|Spaltenname|Beschreibung|  
+|Column Name|und Beschreibung|  
 |-----------------|-----------------|  
 |time|Das Datum, an dem die Verwendungsereignisse eingetreten sind.|  
 |sku|Der Typ der Dienst Ebene für die Datenbank: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
@@ -45,11 +45,11 @@ ms.locfileid: "70155537"
 ## <a name="permissions"></a>Berechtigungen  
  Der schreibgeschützte Zugriff auf diese Ansicht ist für alle Benutzer verfügbar, die über Berechtigungen zum Herstellen einer Verbindung mit der **Master** -Datenbank verfügen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die **sys. database_usage** -Sicht gibt eine Zeile für jeden Tag Ihres Abonnements zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Preis Details zur SQL-Datenbank](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [SQL-Datenbank-Preis Details](https://go.microsoft.com/fwlink/?LinkID=394978)   
  [Konten und Abrechnung in Azure SQL-Datenbank](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

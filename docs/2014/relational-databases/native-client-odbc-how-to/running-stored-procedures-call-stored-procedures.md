@@ -39,11 +39,11 @@ ms.locfileid: "72688663"
 > [!NOTE]  
 >  Wenn eine Anwendung eine Prozedur mit der Transact-SQL EXECUTE-Syntax (statt mit der ODBC CALL-Escapesequenz) übermittelt, gibt der SQL Server ODBC-Treiber den Prozeduraufruf an SQL Server als SQL-Anweisung statt als RPC weiter. Darüber hinaus werden Ausgabeparameter nicht zurückgegeben, wenn die Transact SQL EXECUTE-Anweisung verwendet wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- Gewusst [-wie-Themen &#40;zur Ausführung gespeicherter&#41; Prozeduren ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)    
- [Batch Verarbeitung von Aufrufen gespeicherter Prozeduren](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)    
- [Ausführen gespeicherter Prozeduren](../native-client-odbc-stored-procedures/running-stored-procedures.md)    
- [Aufrufen einer gespeicherten Prozedur](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)    
+## <a name="see-also"></a>Siehe auch  
+ Gewusst [-wie-Themen &#40;zur Ausführung gespeicherter&#41; Prozeduren ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+ [Batch Verarbeitung von Aufrufen gespeicherter Prozeduren](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+ [Ausführen gespeicherter Prozeduren](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
+ [Aufrufen einer gespeicherten Prozedur](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [Vorgehensweisen](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

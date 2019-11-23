@@ -12,7 +12,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a8068ae9f1e52b235ebec52bf8499ba8d2d3777e
 ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952535"
@@ -51,7 +51,7 @@ ms.locfileid: "71952535"
   
  **Das häufigste Szenario** ist, wenn Sie ältere und neuere Versionen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappen haben, die in Dokument Bibliotheken in der Farm gespeichert werden. Wenn Analysten in Ihrer Organisation die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-Version von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel verwenden und die Arbeitsmappen in einer [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Installation speichern, funktionieren die älteren Arbeitsmappen nicht. Die Verbindungs Zeichenfolge verweist auf eine ältere Version des Anbieters, die sich nicht auf dem Server befindet, es sei denn, Sie installieren Sie. Werden beide Versionen installiert, wird der Datenzugriff auf PowerPivot-Arbeitsmappen aktiviert, die in älteren und neueren Versionen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel erstellt wurden. Da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Setup nicht die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-Version des Anbieters installiert, müssen Sie diese manuell installieren, wenn Sie Arbeitsmappen einer früheren Version verwenden.  
   
- **Das zweite Szenario** ist, wenn Sie über einen Server in einer SharePoint-Farm verfügen, auf dem Excel Services ausgeführt wird, aber nicht [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. In diesem Fall muss der Anwendungsserver, der Excel Services ausführt, manuell für die Verwendung einer neueren Version des Anbieters aktualisiert werden. Dies ist für das Herstellen einer Verbindung mit einer PowerPivot für SharePoint-Instanz erforderlich. Wenn Excel Services eine frühere Version des Anbieters verwenden, schlägt die Verbindungsanforderung fehl. Beachten Sie, dass der Anbieter mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup bzw. mithilfe des [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Installationspaket (spPowerPivot.msi) installiert werden muss, damit alle erforderlichen Komponenten, die zur Unterstützung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] erforderlich sind, installiert werden.  
+ **Das zweite Szenario** besteht darin, dass Sie über einen Server in einer SharePoint-Farm verfügen, auf dem Excel Services ausgeführt werden, aber nicht [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. In diesem Fall muss der Anwendungsserver, der Excel Services ausführt, manuell für die Verwendung einer neueren Version des Anbieters aktualisiert werden. Dies ist für das Herstellen einer Verbindung mit einer PowerPivot für SharePoint-Instanz erforderlich. Wenn Excel Services eine frühere Version des Anbieters verwenden, schlägt die Verbindungsanforderung fehl. Beachten Sie, dass der Anbieter mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup bzw. mithilfe des [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Installationspaket (spPowerPivot.msi) installiert werden muss, damit alle erforderlichen Komponenten, die zur Unterstützung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] erforderlich sind, installiert werden.  
   
   
 ##  <a name="bkmk_sql11"></a>Installieren des SQL Server 2012 OLE DB-Anbieters auf einem Excel Services-Server mithilfe von SQL Server Setup  
@@ -101,13 +101,13 @@ ms.locfileid: "71952535"
   
 3.  Klicken Sie auf **Details**.  
   
-4.  Zeigen Sie die Dateiversionsinformationen an. Die Version sollte 11,00. \<buildnumber > enthalten.  
+4.  Zeigen Sie die Dateiversionsinformationen an. Die Version sollte 11,00 enthalten.\<BuildNumber->.  
   
 5.  Im Ordner Windows\assembly muss Microsoft.AnalysisServices.Xmla.dll der Version 11.0.0.0 enthalten sein.  
   
   
 ##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>Verwenden Sie das PowerPivot für SharePoint Installationspaket (sppowerpivot. msi), um den SQL Server 2012 OLE DB-Anbieter zu installieren.  
- Installieren Sie den [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]-OLE DB Anbieter auf und einem Excel Services-Server, indem Sie das [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Installationspaket **(sppowerpivot. msi)** verwenden.  
+ Installieren Sie den [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] OLE DB Anbieter auf dem-und dem Excel Services-Server mithilfe des [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Installationspakets **(sppowerpivot. msi)** .  
   
 #### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>Laden Sie den MSOLAP.5-Anbieter aus dem [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Feature Pack herunter.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "71952535"
   
 4.  Wenn Sie über andere Server in der Farm verfügen, die nur Excel Services ausführt, und zwar ohne [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem gleichen Server, wiederholen Sie die vorherigen Schritte, um die 2008 R2-Version des Anbieters auf dem Computer mit Excel Services zu installieren.  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Schritt 2: Registrieren Sie die Datei Microsoft. AnalysisServices. channeltransport. dll.  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Schritt 2: Registrieren der Datei "Microsoft.AnalysisServices.ChannelTransport.dll"  
   
-1.  Verwenden Sie das Hilfsprogramm "regasm.exe", um die Datei zu registrieren. Wenn Sie "Regasm. exe" noch nicht ausgeführt haben, fügen Sie den übergeordneten Ordner C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319 @ no__t-0 der Systempfad-Variablen hinzu.  
+1.  Verwenden Sie das Hilfsprogramm "regasm.exe", um die Datei zu registrieren. Wenn Sie "Regasm. exe" noch nicht ausgeführt haben, fügen Sie den übergeordneten Ordner "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\\" zur Systempfad Variablen hinzu.  
   
 2.  Öffnen Sie eine Eingabeaufforderung mit Administratorberechtigungen.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "71952535"
   
      Gehe zu `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Klicken Sie mit der rechten Maustaste auf **msolap100. dll** , und wählen Sie **Eigenschaften** Klicken Sie auf **Details**.  
   
-     Zeigen Sie die Dateiversionsinformationen an. Die Version sollte 10,50. \<buildnumber > enthalten.  
+     Zeigen Sie die Dateiversionsinformationen an. Die Version sollte 10,50 enthalten.\<BuildNumber->.  
   
   
 ## <a name="see-also"></a>Siehe auch  

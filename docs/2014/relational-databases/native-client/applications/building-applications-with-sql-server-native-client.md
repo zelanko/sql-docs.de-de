@@ -54,7 +54,7 @@ ms.locfileid: "70175415"
  Erläutert, wie mithilfe von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hergestellt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client Programmierung](../sql-server-native-client-programming.md)   
+ [SQL Server Native Client Programmier](../sql-server-native-client-programming.md)   
  [ODBC-Themen zur Vorgehensweise](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Vorgehensweisen für OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

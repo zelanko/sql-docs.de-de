@@ -32,8 +32,8 @@ ms.locfileid: "73784069"
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Datum|SQLDATE|de|  
-|Zeit|SQLTIME|te|  
+|Date|SQLDATE|de|  
+|time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -71,10 +71,10 @@ ms.locfileid: "73784069"
   
 |Dateispeichertyp|Speichergröße (in Byte)|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DateTime|8|  
 |smalldatetime|4|  
-|Datum|3|  
-|Uhrzeit|6|  
+|date|3|  
+|time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
   
@@ -92,12 +92,12 @@ ms.locfileid: "73784069"
 ## <a name="bcp-types-in-sqlnclih"></a>BCP-Typen in sqlncli.h  
  Die folgenden Typen werden in sqlncli.h definiert, um mit den BCP API-Erweiterungen für ODBC verwendet zu werden. Diese Typen werden mit dem *eUserDataType* -Parameter von IBCPSession:: bcpcolf MT in OLE DB übergeben.  
   
-|Dateispeichertyp|Datentyp in der Hostdatei|Geben Sie sqlncli. h für die Verwendung mit IBCPSession:: bcpcolbmt ein.|Wert|  
+|Dateispeichertyp|Datentyp in der Hostdatei|Geben Sie sqlncli. h für die Verwendung mit IBCPSession:: bcpcolbmt ein.|ReplTest1|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|Datum|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Zeit|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -106,10 +106,10 @@ ms.locfileid: "73784069"
   
  **OLE DB-Hinweis** Die folgenden Konvertierungen werden von IBCPSession ausgeführt. IRowsetFastLoad verwendet OLE DB Konvertierungen gemäß der Definition in [Konvertierungen, die vom Client zum Server ausgeführt werden](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Beachten Sie, dass datetime-Werte auf 1/300stel einer Sekunde gerundet werden und dass für smalldatetime-Werte die Sekunden vom Server auf null festgelegt werden, nachdem die unten beschriebenen Clientkonvertierungen durchgeführt wurden. Datetime-Rundung wird durch Stunden und Minuten, aber nicht durch das Datum weitergegeben.  
   
-|Bis --><br /><br /> Von|Datum|Uhrzeit|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|Bis --><br /><br /> From|date|time|smalldatetime|DateTime|datetime2|datetimeoffset|CHAR|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Datum|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Zeit|–|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|time|–|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  

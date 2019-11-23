@@ -1,5 +1,5 @@
 ---
-title: sys. DM _operation_status (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys. dm_operation_status (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -32,7 +32,7 @@ ms.locfileid: "70911202"
 
   Gibt Informationen zu den Vorgängen zurück, die für Datenbanken auf einem [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Server ausgeführt werden.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Column Name|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|ID des Vorgangs. Nicht NULL.|  
 |resource_type|**int**|Bezeichnet den Typ der Ressource, für die der Vorgang ausgeführt wird. Nicht NULL. In der aktuellen Version verfolgt diese Sicht nur die Vorgänge nach, die für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausgeführt werden. Der entsprechende ganzzahlige Wert ist 0.|  
@@ -41,7 +41,7 @@ ms.locfileid: "70911202"
 |minor_resource_id|**sql_variant**|Nur zur internen Verwendung. Nicht NULL.|  
 |Betriebs|**nvarchar(60)**|Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausgeführter Vorgang, z. B. CREATE oder ALTER.|  
 |state|**tinyint**|Der Zustand des Vorgangs.<br /><br /> 0 = Ausstehend<br />1 = Vorgang wird ausgeführt<br />2 = Abgeschlossen<br />3 = fehlgeschlagen<br />4 = Abgebrochen|  
-|state_desc|**nvarchar(120)**|PENDING = Vorgang wartet auf verfügbare Ressource oder verfügbares Kontingent.<br /><br /> IN_PROGRESS = Vorgang wurde gestartet und wird ausgeführt.<br /><br /> COMPLETED = Vorgang wurde erfolgreich abgeschlossen.<br /><br /> FAILED = Vorgang ist fehlgeschlagen. Weitere Informationen finden Sie in der **error_desc** -Spalte.<br /><br /> CANCELLED = Vorgang wurde auf Anforderung des Benutzers beendet.|  
+|state_desc|**nvarchar(120)**|PENDING = Vorgang wartet auf verfügbare Ressource oder verfügbares Kontingent.<br /><br /> IN_PROGRESS = Vorgang wurde gestartet und wird ausgeführt.<br /><br /> COMPLETED = Vorgang wurde erfolgreich abgeschlossen.<br /><br /> FAILED = Vorgang ist fehlgeschlagen. Weitere Informationen finden Sie in der Spalte **error_desc** .<br /><br /> CANCELLED = Vorgang wurde auf Anforderung des Benutzers beendet.|  
 |percent_complete|**int**|Prozentsatz des Vorgangs, der abgeschlossen wurde. Werte sind nicht kontinuierlich, und die gültigen Werte sind unten aufgeführt. Nicht NULL.<br/><br/>0 = Vorgang wurde nicht gestartet.<br/>50 = Vorgang wird ausgeführt<br/>100 = Vorgang wurde beendet.|  
 |error_code|**int**|Code, der den Fehler angibt, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Wenn der Wert 0 ist, bedeutet dies, dass der Vorgang erfolgreich abgeschlossen wurde.|  
 |error_desc|**nvarchar(2048)**|Beschreibung des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist.|  
@@ -53,8 +53,8 @@ ms.locfileid: "70911202"
 ## <a name="permissions"></a>Berechtigungen  
  Diese Ansicht ist nur in der **Master** -Datenbank für den Prinzipal Anmelde Namen auf Serverebene verfügbar.  
   
-## <a name="remarks"></a>Hinweise  
- Um diese Ansicht verwenden zu können, müssen Sie mit der **Master** -Datenbank verbunden sein. Verwenden Sie `sys.dm_operation_status` die-Sicht in der **Master** - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbank des-Servers, um den Status der folgenden Vorgänge zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)]verfolgen, die auf einem ausgeführt werden:  
+## <a name="remarks"></a>Remarks  
+ Um diese Ansicht verwenden zu können, müssen Sie mit der **Master** -Datenbank verbunden sein. Verwenden Sie die `sys.dm_operation_status` Ansicht in der **Master** -Datenbank des [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Servers, um den Status der folgenden Vorgänge zu verfolgen, die auf einem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ausgeführt werden:  
   
 -   Erstellen einer Datenbank  
   
@@ -84,9 +84,9 @@ SELECT * FROM sys.dm_operation_status
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dynamische Verwaltungs Sichten und Funktionen &#40;für die georeplikation in Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [sys. DM _geo_replication_link_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys. _replication_links &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;für die georeplikation in&#41; Azure SQL-Datenbank](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+   der [sys &#40;. dm_geo_replication_link_status Azure&#41; SQL-Datenbank](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)  
+   der [sys &#40;. geo_replication_links Azure&#41; SQL-Datenbank](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)  
  [ALTER DATABASE &#40;Azure SQL-Datenbank&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

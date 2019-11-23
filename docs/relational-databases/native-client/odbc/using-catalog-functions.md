@@ -34,7 +34,7 @@ ms.locfileid: "73760332"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt verteilte Abfragen, in denen auf Daten aus mehreren heterogenen OLE DB-Datenquellen in einer einzigen Abfrage zugegriffen wird. Eine Methode des Zugriffs auf eine OLE DB-Datenquelle ist die Definition der Datenquelle als Verbindungsserver. Dies kann mit [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)erfolgen. Nachdem der Verbindungsserver definiert wurde, kann in Transact-SQL-Anweisungen auf Objekte dieses Servers verwiesen werden. Dazu wird ein vierteiliger Name verwendet:  
   
- *linked_server_name. catalog. Schema. object_name*.  
+ *linked_server_name.catalog.schema.object_name*.  
   
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt zwei treiberspezifische Funktionen, die dazu dienen, Kataloginformationen von Verbindungsservern abzurufen:  
   
@@ -78,11 +78,11 @@ ms.locfileid: "73760332"
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Native Client &#40;ODBC&#41; ](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md) -   
- [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md) -   
- [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md) -   
+ [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
+ [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
  [SQLPrimaryKeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
- [SQLTablePrivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md) -   
- [SQLTables](../../../relational-databases/native-client-odbc-api/sqltables.md) -   
+ [SQLTablePrivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)   
+ [SQLTables](../../../relational-databases/native-client-odbc-api/sqltables.md)   
  [SQLStatistics](../../../relational-databases/native-client-odbc-api/sqlstatistics.md)  
   
   

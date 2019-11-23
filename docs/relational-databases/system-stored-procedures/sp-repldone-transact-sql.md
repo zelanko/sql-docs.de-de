@@ -28,9 +28,9 @@ ms.locfileid: "72798389"
   Aktualisiert den Datensatz, mit dem die letzte verteilte Transaktion des Servers identifiziert wird. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
 > [!CAUTION]  
->  Wenn Sie **sp_repldone** manuell ausführen, können Sie die Reihenfolge und Konsistenz der übermittelten Transaktionen für ungültig erklären. **sp_repldone** sollte nur zur Problembehandlung bei der Replikation verwendet werden, wie von einem erfahrenen Supportmitarbeiter unterstützt.  
+>  Wenn Sie **sp_repldone** manuell ausführen, können Sie die Reihenfolge und Konsistenz der übermittelten Transaktionen für ungültig erklären. **sp_repldone** sollten nur für die Problembehandlung der Replikation verwendet werden, wie von einem erfahrenen Supportmitarbeiter unterstützt.  
   
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="arguments"></a>Argumente  
 `[ @xactid = ] xactid` ist die Protokoll Folge Nummer (Log Sequence Number, LSN) des ersten Datensatzes für die letzte verteilte Transaktion des Servers. *xactid* ist **Binär (10)** und hat keinen Standardwert.  
   
-`[ @xact_seqno = ] xact_seqno` ist die LSN des letzten Datensatzes für die letzte verteilte Transaktion des Servers. *xact_seqno* ist vom Typ **Binary (10)** und hat keinen Standardwert.  
+`[ @xact_seqno = ] xact_seqno` ist die LSN des letzten Datensatzes für die letzte verteilte Transaktion des Servers. *xact_seqno* ist **Binary (10)** und hat keinen Standardwert.  
   
 `[ @numtrans = ] numtrans` ist die Anzahl verteilter Transaktionen. *numtrans* ist vom Datentyp **int**und hat keinen Standardwert.  
   
@@ -56,20 +56,20 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  **sp_repldone** wird bei der Transaktions Replikation verwendet.  
   
  **sp_repldone** wird vom Protokoll Leseprozess verwendet, um zu verfolgen, welche Transaktionen verteilt wurden.  
   
  Mit **sp_repldone**können Sie dem Server manuell mitteilen, dass eine Transaktion repliziert (an den Verteiler gesendet) wurde. Außerdem haben Sie damit die Möglichkeit, anstelle der entsprechend markierten Transaktion eine andere Transaktion für die nächste Replikation festzulegen. Sie können sich in der Liste mit den replizierten Transaktionen vorwärts oder rückwärts bewegen (alle Transaktionen vor dieser Transaktion und diese selbst werden als verteilt gekennzeichnet).  
   
- Die erforderlichen Parameter " *xactid* " und " *xact_seqno* " können mithilfe von **sp_repltrans** oder **sp_replcmds**abgerufen werden.  
+ Die erforderlichen Parameter " *xactid* " und " *xact_seqno* " können mithilfe **sp_repltrans** oder **sp_replcmds**abgerufen werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_repldone**ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- Wenn *xactid* NULL ist, *xact_seqno* auf NULL und *Reset* auf **1**, werden alle replizierten Transaktionen im Protokoll als verteilt gekennzeichnet. Dies bietet sich an, wenn replizierte Transaktionen im Protokoll nicht mehr gültig sind und das Protokoll abgeschnitten werden soll, wie im folgenden Beispiel:  
+ Wenn *xactid* NULL ist, *xact_seqno* NULL ist und *Reset* den Wert **1**hat, werden alle replizierten Transaktionen im Protokoll als verteilt gekennzeichnet. Dies bietet sich an, wenn replizierte Transaktionen im Protokoll nicht mehr gültig sind und das Protokoll abgeschnitten werden soll, wie im folgenden Beispiel:  
   
 ```sql
 EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @reset = 1  
@@ -78,8 +78,8 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
 > [!CAUTION]  
 >  Diese Prozedur kann in Notsituationen verwendet werden, damit das Transaktionsprotokoll abgeschnitten werden kann, wenn Transaktionen mit ausstehender Replikation vorhanden sind.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replflush &#40;Transact-SQL&#41; -](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;Transact-SQL&#41; -](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md) -   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

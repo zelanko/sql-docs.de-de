@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_dms_services (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_dms_services (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,15 +29,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532926"
 ---
-# <a name="sysdm_exec_dms_services-transact-sql"></a>sys. DM _exec_dms_services (Transact-SQL)
+# <a name="sysdm_exec_dms_services-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen zu allen DMS-Diensten, die auf den polybase-Computeknoten ausgeführt werden. Sie listet eine Zeile pro Dienst Instanz auf.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Column Name|Datentyp|und Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|`int`|Eindeutige, dem DMS-Kern zugeordnete numerische ID. Der Schlüssel für diese Ansicht.|Eindeutige ID.|  
-|compute_node_id|`int`|ID des Knotens, auf dem dieser DMS-Dienst ausgeführt wird.|Weitere Informationen finden Sie unter *compute_node_id* in [sys. DM &#40;_exec_compute_nodes&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|compute_node_id|`int`|ID des Knotens, auf dem dieser DMS-Dienst ausgeführt wird.|Weitere Informationen finden Sie unter *compute_node_id* in [sys. &#40;dm_exec_compute_nodes&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |status|`nvarchar(32)`|Aktueller Status des DMS-Dienstanbieter||
 |compute_pool_id|`int`|Eindeutiger Bezeichner für den Pool.|
 

@@ -22,7 +22,7 @@ ms.locfileid: "63035064"
 # <a name="sqllogship-application"></a>Anwendung sqllogship
   Von der Anwendung **sqllogship** werden ein Sicherungs-, Kopier- oder Wiederherstellungsvorgang und zugeordnete Cleanuptasks für eine Protokollversandkonfiguration ausgeführt. Der Vorgang wird in einer bestimmten Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für eine bestimmte Datenbank ausgeführt.  
   
- ![Link Symbol "Thema](../../2014/database-engine/media/topic-link.gif "Link Symbol "Thema"") " Informationen zu den Syntax Konventionen finden Sie unter [Befehlszeilen &#40;-&#41;Hilfsprogramm-Referenz Datenbank-Engine](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Link Symbol "Thema](../../2014/database-engine/media/topic-link.gif "Themenlink (Symbol)") " Informationen zu den Syntax Konventionen finden Sie unter [Befehlszeilen &#40;-&#41;Hilfsprogramm-Referenz Datenbank-Engine](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,7 +55,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **-verboselevel** _level_  
  Gibt die Ebene der dem Protokollversandverlauf hinzugefügten Meldungen an. *level* entspricht einer der folgenden ganzen Zahlen:  
   
-|level|Description|  
+|Level|und Beschreibung|  
 |-----------|-----------------|  
 |0|Keine Ausgabe von Ablaufverfolgungs- oder Debugmeldungen|  
 |1|Ausgabe von Fehlerbehandlungsmeldungen|  
@@ -69,10 +69,10 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **-querytimeout** _timeout_value_  
  Gibt die für das Starten des angegebenen Vorgangs vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standardwert ist kein Timeout Zeitraum. *timeout_value* hat den Typ **int** _._  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Verwenden Sie zum Sichern, Kopieren und Wiederherstellen nach Möglichkeit die Sicherungs-, Kopier- und Wiederherstellungsaufträge. Rufen Sie die gespeicherte Prozedur [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) auf, um diese Aufträge aus einem Batchvorgang oder einer anderen Anwendung zu starten.  
   
- Der von **sqllogship** erstellte Protokollversandverlauf wird in den vom Protokollversand-Sicherungsauftrag, -Kopierauftrag und -Wiederherstellungsauftrag erstellten Verlauf eingefügt. Wenn Sie **sqllogship** wiederholt zum Ausführen von Sicherungs-, Kopier- und Wiederherstellungsvorgängen für eine Protokollversandkonfiguration verwenden möchten, sollten Sie den entsprechenden Protokollversandauftrag bzw. die entsprechenden Protokollversandaufträge deaktivieren. Weitere Informationen finden sie unter [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
+ Der von **sqllogship** erstellte Protokollversandverlauf wird in den vom Protokollversand-Sicherungsauftrag, -Kopierauftrag und -Wiederherstellungsauftrag erstellten Verlauf eingefügt. Wenn Sie **sqllogship** wiederholt zum Ausführen von Sicherungs-, Kopier- und Wiederherstellungsvorgängen für eine Protokollversandkonfiguration verwenden möchten, sollten Sie den entsprechenden Protokollversandauftrag bzw. die entsprechenden Protokollversandaufträge deaktivieren. Weitere Informationen finden Sie unter [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
  Die **sqllogship** -Anwendung, sqllogship. exe, ist im Verzeichnis x:\Programme\Microsoft SQL server\120\tools\binn installiert.  
   
@@ -83,12 +83,12 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |------------|----------------------|-----------------|  
 |**-backup**|Erfordert Lese-/Schreibzugriff auf das Sicherungsverzeichnis.|Erfordert dieselben Berechtigungen wie die BACKUP-Anweisung. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).|  
 |**-copy**|Erfordert Lesezugriff auf das Sicherungsverzeichnis und Schreibzugriff auf das Kopieverzeichnis.|Erfordert dieselben Berechtigungen wie die gespeicherte Prozedur [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .|  
-|**-restore**|Erfordert Lese-/Schreibzugriff auf das Kopieverzeichnis.|Erfordert dieselben Berechtigungen wie die RESTORE-Anweisung. Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)nicht wiederhergestellt werden.|  
+|**-restore**|Erfordert Lese-/Schreibzugriff auf das Kopieverzeichnis.|Erfordert dieselben Berechtigungen wie die RESTORE-Anweisung. Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
   
 > [!NOTE]  
->  Um die Pfade der Sicherungs- und Kopierverzeichnisse zu ermitteln, können Sie die gespeicherte Prozedur **sp_help_log_shipping_secondary_database** ausführen oder die **log_shipping_secondary-Tabelle** in **msdb**anzeigen. Der Pfad des Sicherungsverzeichnisses und des Zielverzeichnisses befindet sich in der **backup_source_directory** -Spalte bzw. in der **backup_destination_directory** -Spalte.  
+>  Um die Pfade der Sicherungs- und Kopierverzeichnisse zu ermitteln, können Sie die gespeicherte Prozedur **sp_help_log_shipping_secondary_database** ausführen oder die **log_shipping_secondary-Tabelle** in **msdb** anzeigen. Der Pfad des Sicherungsverzeichnisses und des Zielverzeichnisses befindet sich in der **backup_source_directory** -Spalte bzw. in der **backup_destination_directory** -Spalte.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql)   
  [log_shipping_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql)   

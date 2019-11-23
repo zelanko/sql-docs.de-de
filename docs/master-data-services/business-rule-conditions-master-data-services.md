@@ -28,7 +28,7 @@ ms.locfileid: "73728719"
   
 ## <a name="business-rule-conditions"></a>Geschäftsregelbedingungen  
   
-|Bedingungsname|Beschreibung|  
+|Bedingungsname|und Beschreibung|  
 |--------------------|-----------------|  
 |**Ist gleich**|Das ausgewählte Attribut **ist gleich** einem bestimmten Attribut oder Attributwert bzw. ist leer.<br /><br /> Diese Bedingung ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
 |**Ist nicht gleich**|Das ausgewählte Attribut **ist nicht gleich** einem bestimmten Attribut oder Attributwert bzw. ist leer.<br /><br /> Diese Bedingung ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  

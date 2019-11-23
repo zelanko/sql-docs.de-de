@@ -39,7 +39,7 @@ ms.locfileid: "72797941"
 Get-Help Convert-UrnToPath -Examples  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Abfrageausdrücke und eindeutige Ressourcennamen](../powershell/query-expressions-and-uniform-resource-names.md)   
  [SQL Server PowerShell-Anbieter](../powershell/sql-server-powershell-provider.md)   
  [SQL Server-PowerShell](../powershell/sql-server-powershell.md)  

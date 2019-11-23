@@ -43,7 +43,7 @@ ms.locfileid: "73882248"
   
 -   **So replizieren Sie Schemaänderungen mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

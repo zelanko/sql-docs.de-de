@@ -22,12 +22,12 @@ ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882252"
 ---
 # <a name="configure-publishing-and-distribution"></a>Konfigurieren der Veröffentlichung und der Verteilung
-  In diesem Thema wird beschrieben, wie die Veröffentlichung und die Verteilung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) konfiguriert werden.  
+  In diesem Thema wird beschrieben, wie die Veröffentlichung und die Verteilung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder Replikationsverwaltungsobjekten (RMO) konfiguriert werden.  
   
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a> Security  
  Weitere Informationen finden Sie unter [sichere Replikations Bereitstellung](security/view-and-modify-replication-security-settings.md).  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
@@ -72,7 +72,7 @@ ms.locfileid: "73882252"
   
 1.  Führen Sie [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) aus, um zu ermitteln, ob der Server bereits als Verteiler konfiguriert ist.  
   
-    -   Wenn der Wert von **installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie ein sicheres Kennwort für **\@Kennwort**an. Dieses Kennwort für das **distributor_admin**-Konto wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.  
+    -   Wenn der Wert von **installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie ein sicheres Kennwort für **\@Kennwort**an. Dieses Kennwort für das **distributor_admin** -Konto wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.  
   
     -   Wenn der Wert von **distribution db installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie den Namen der Verteilungs Datenbank für **\@-Datenbank**an. Optional können Sie die maximale Transaktions Beibehaltungs Dauer für **\@max_distretention** und die Beibehaltungs Dauer für den Verlauf **\@history_retention**angeben. Wenn eine neue Datenbank erstellt wird, geben Sie die gewünschten Eigenschaftenparameter für die Datenbank an.  
   

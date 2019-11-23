@@ -45,7 +45,7 @@ ms.locfileid: "73779865"
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführen von &#40;ODBC&#41; -Anweisungen](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)   
- [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) -   
+ [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)   
  [SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)  
   
   

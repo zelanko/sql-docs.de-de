@@ -40,29 +40,29 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @original_publisher = ] 'original_publisher'` der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], von dem die Datenbank ursprünglich veröffentlicht wurde. *original_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @original_publisher = ] 'original_publisher'` den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die die Datenbank ursprünglich veröffentlicht hat. *original_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` den Namen der Datenbank, die veröffentlicht wird. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` den Namen der Datenbank ab, die veröffentlicht wird. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` der verfügbarkeitsgruppenlistener-Name, der der Verfügbarkeits Gruppe zugeordnet ist, die der neue Verleger sein wird. *redirected_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn für den Verfügbarkeitsgruppenlistener ein nicht standardmäßiger Port konfiguriert ist, geben Sie die Portnummer zusammen mit dem Listenernamen an, z. B. `'Listenername,51433'`.  
+`[ @redirected_publisher = ] 'redirected_publisher'` den verfügbarkeitsgruppenlistener-Namen, der der Verfügbarkeits Gruppe zugeordnet ist, die der neue Verleger sein wird. *redirected_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn für den Verfügbarkeitsgruppenlistener ein nicht standardmäßiger Port konfiguriert ist, geben Sie die Portnummer zusammen mit dem Listenernamen an, z. B. `'Listenername,51433'`.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- **sp_redirect_publisher** wird verwendet, um zuzulassen, dass ein Replikations Verleger zum aktuellen primären Replikat einer Always on Verfügbarkeits Gruppe umgeleitet wird, indem das Verleger-/Datenbankpaar dem Listener einer Verfügbarkeits Gruppe zugeordnet wird. Führen Sie **sp_redirect_publisher** aus, nachdem der Verfügbarkeits Gruppen-Listener für die Verfügbarkeits Gruppe konfiguriert wurde, die die veröffentlichte Datenbank enthält.  
+## <a name="remarks"></a>Remarks  
+ mit **sp_redirect_publisher** wird die Umleitung eines Replikations Verlegers zum aktuellen primären Replikat einer Always on Verfügbarkeits Gruppe ermöglicht, indem das Verleger-/Datenbankpaar dem Listener einer Verfügbarkeits Gruppe zugeordnet wird. Führen Sie **sp_redirect_publisher** aus, nachdem der Verfügbarkeits Gruppen-Listener für die Verfügbarkeits Gruppe konfiguriert wurde, die die veröffentlichte Datenbank enthält.  
   
- Wenn die Veröffentlichungs Datenbank auf dem ursprünglichen Verleger aus einer Verfügbarkeits Gruppe auf dem primären Replikat entfernt wird, führen Sie **sp_redirect_publisher** ohne Angabe eines Werts für den *\@redirected_publisher-* Parameter aus, um das Umleitung für das Verleger-/Datenbankpaar. Weitere Informationen zum Umleiten des Verlegers bei finden Sie unter Verwalten [einer AlwaysOn- &#40;Veröffentlichungs&#41;Datenbank SQL Server](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Wenn die Veröffentlichungs Datenbank auf dem ursprünglichen Verleger aus einer Verfügbarkeits Gruppe auf dem primären Replikat entfernt wird, führen Sie **sp_redirect_publisher** aus, ohne einen Wert für den *\@redirected_publisher* -Parameter anzugeben, um die Umleitung für das Verleger-/Datenbankpaar zu entfernen. Weitere Informationen zum Umleiten des Verlegers bei finden Sie unter Verwalten [einer AlwaysOn- &#40;Veröffentlichungs&#41;Datenbank SQL Server](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Der Aufrufer muss entweder ein Mitglied der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** für die Verteilungs Datenbank oder ein Mitglied einer Veröffentlichungs Zugriffsliste für eine der Verleger Datenbank zugeordnete definierte Veröffentlichung sein.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) -   
  [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   

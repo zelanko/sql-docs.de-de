@@ -83,7 +83,7 @@ WHERE where_condition
   
  Nur der `=` Operand kann mit **DatabaseName** **, Schema** **Name und ObjectName**verwendet werden. Andere Ausdrücke können nicht mit diesen Ereigniseigenschaften verwendet werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die *where_condition* der Syntax des WMI-Anbieters für Server Ereignisse bestimmt Folgendes:  
   
 -   Der Bereich, in dem der Anbieter versucht, die angegebene *event_type*abzurufen: Serverebene, Datenbankebene oder Objektebene (das einzige derzeit unterstützte Objekt ist Queue). Letztlich bestimmt dieser Bereich den Typ der in der Zieldatenbank erstellten Ereignisbenachrichtigung. Dieser Prozess wird Ereignisbenachrichtigungsregistrierung genannt.  

@@ -22,18 +22,18 @@ ms.locfileid: "71952462"
 # <a name="report-server-status-ssrs-native-mode"></a>Berichtsserverstatus (einheitlicher SSRS-Modus)
   Verwenden Sie diese Seite, um Informationen zur Berichtsserverinstanz anzuzeigen, mit der Sie derzeit verbunden sind. Diese Seite ist die Startseite für die Berichtsserverkonfiguration. Zusätzliche Seiten stehen zum Konfigurieren von URLs, des Dienstkontos, der Berichtsserver-Datenbank, der Berichtsserver-E-Mail-Übermittlung, der Bereitstellung für horizontales Skalieren und von Verschlüsselungsschlüsseln zur Verfügung.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Zum Öffnen der Seite starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Konfigurations-Manager für Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md).  
   
 > [!TIP]  
->  Der @ no__t-0-Configuration Manager (rsconfigtool. exe) ist mit der Berechtigungsstufe "highestAvailable" installiert. Dieses Verhalten ist beabsichtigt. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager erfordert Kommunikation mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI-APIs. Ein Teil der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI-Kommunikation erfordert eine höhere Stufe oder Administratorprivilegien.  
+>  Die[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (rsconfigtool. exe) ist mit der Berechtigungsstufe "highestAvailable" installiert. Dieses Verhalten ist beabsichtigt. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager erfordert Kommunikation mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI-APIs. Ein Teil der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI-Kommunikation erfordert eine höhere Stufe oder Administratorprivilegien.  
   
- Wenn Sie eine Verbindung mit dem Berichtsserver herstellen und alle Seitenlinks ausgegraut sind, überprüfen Sie, ob der Berichtsserverdienst gestartet wurde. Der **Berichts Dienst Status:** Muss "Started" lauten. Sie können den Dienststatus auch mithilfe der Konsolenanwendung Dienste in den Administratortools überprüfen.  
+ Wenn Sie eine Verbindung mit dem Berichtsserver herstellen und alle Seitenlinks ausgegraut sind, überprüfen Sie, ob der Berichtsserverdienst gestartet wurde. Der **Berichts Dienst Status** sollte "gestartet" lauten. Sie können den Dienststatus auch mithilfe der Konsolenanwendung Dienste in den Administratortools überprüfen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **SQL Server Instanz**  
- Zeigt Informationen zu der Berichtsserverinstanz an, mit der Sie derzeit verbunden sind. Die Namen von Berichtsserverinstanzen basieren auf benannten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Der Name der Standardinstanz lautet MSSQLSERVER. Eine benannte Instanz ist ein Wert, den Sie während des Setups angegeben haben. Weitere Informationen zu Instanzen finden Sie unter [Arbeiten mit mehreren Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Online Dokumentation.  
+ Zeigt Informationen zu der Berichtsserverinstanz an, mit der Sie derzeit verbunden sind. Die Namen von Berichtsserverinstanzen basieren auf benannten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Der Name der Standardinstanz lautet MSSQLSERVER. Eine benannte Instanz ist ein Wert, den Sie während des Setups angegeben haben. Weitere Informationen zu-Instanzen finden Sie unter [Arbeiten mit mehreren Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Online Dokumentation.  
   
 > [!NOTE]  
 >  In SQL Server Express with Advanced Services ist die Standardinstanz SQLExpress.  
@@ -47,7 +47,7 @@ ms.locfileid: "71952462"
   
 -   MSRS12.MSSQLSERVER  
   
- Wenn Sie eine zweite Instanz einer bereits installierten Komponente installieren (z. b. den [!INCLUDE[ssDE](../../includes/ssde-md.md)]) und Sie der Instanz den Namen "kontoso" nennen, ist die **Instanz-ID** "MSSQL12". Contoso.  
+ Wenn Sie eine zweite Instanz einer bereits installierten Komponente installieren, z. b. die [!INCLUDE[ssDE](../../includes/ssde-md.md)], und Sie der Instanz den Namen "kontoso" nennen, ist die **Instanz-ID** "MSSQL12". Contoso.  
   
  **Edition**  
  Zeigt Editionsinformationen an. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server-Editionen unterstützte Funktionen](https://go.microsoft.com/fwlink/?linkid=232473).  
@@ -67,12 +67,12 @@ ms.locfileid: "71952462"
  **Start**  
  Startet den Berichtsserver-Dienst. Nach einigen Konfigurationsänderungen ist es erforderlich, den Dienst neu zu starten (z.&nbsp;B. wenn ein Berichtsserver nach der Änderung eines Computernamens neu konfiguriert wird). Wenn Sie die URL-Reservierungen neu konfigurieren, startet der Dienst automatisch neu. Der Neustart ist erforderlich, um die Änderungen zu übernehmen.  
   
- **Beenden**  
- Beendet den Berichtsserver-Dienst. Durch das Beenden des Diensts bricht der Berichtsserver seine Tätigkeit ab. Weitere Informationen finden Sie unter [starten und Abbrechen des Berichts Server-Dienstanbieter in der](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Online Dokumentation.  
+ **Stop** (Beenden)  
+ Beendet den Berichtsserver-Dienst. Durch das Beenden des Diensts bricht der Berichtsserver seine Tätigkeit ab. Weitere Informationen finden Sie unter [starten und Abbrechen des Berichts Server-Dienstanbieter](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Online Dokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurations-Manager für Reporting Services F1-Hilfe &#40;Themen SSRS im&#41;einheitlichen Modus](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Konfigurations-Manager für Reporting Services &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
+ [Konfigurations-Manager für Reporting Services F1-Hilfe &#40;Themen SSRS im&#41; einheitlichen Modus](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Konfigurations-Manager für Reporting Services &#40;del&#41; ](/sql/sql-server/install/reporting-services-configuration-manager-native-mode) -   
  [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

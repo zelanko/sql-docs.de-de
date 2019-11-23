@@ -24,11 +24,11 @@ ms.locfileid: "69493780"
   
 ## <a name="specifying-translations-for-the-date-dimension-metadata"></a>Angeben von Übersetzungen für die Date-Dimensionsmetadaten  
   
-1.  Öffnen Sie den Dimensions-Designer für die **Date** -Dimension, und klicken Sie anschließend auf die Registerkarte **Übersetzungen** .  
+1.  Öffnen Sie den Dimensions-Designer für die **Date**-Dimension, und klicken Sie anschließend auf die Registerkarte **Übersetzungen**.  
   
      Die Metadaten werden in der Standardsprache für jedes Dimensionsobjekt angezeigt. Die Standardsprache im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube ist Englisch.  
   
-2.  Klicken Sie auf der Symbolleiste der Registerkarte **Übersetzungen** auf **Neue Übersetzung** .  
+2.  Klicken Sie auf der Symbolleiste der Registerkarte **Übersetzungen** auf **Neue Übersetzung**.  
   
      Im Dialogfeld **Sprache auswählen** wird eine Liste mit Sprachen angezeigt.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "69493780"
   
      Es wird eine neue Spalte angezeigt, in der Sie die spanischen Übersetzungen der zu übersetzenden Metadatenobjekte definieren können. In diesem Lernprogramm wird nur eine begrenzte Anzahl von Objekten zur Veranschaulichung des Prozesses übersetzt.  
   
-4.  Klicken Sie auf der Symbolleiste der Registerkarte **Übersetzungen** auf **Neue Übersetzung** , klicken Sie im Dialogfeld **Sprache auswählen** auf **Französisch (Frankreich)** , und klicken Sie anschließend auf **OK**.  
+4.  Klicken Sie auf der Symbolleiste der Registerkarte **Übersetzungen** auf **Neue Übersetzung**, klicken Sie im Dialogfeld **Sprache auswählen** auf **Französisch (Frankreich)** , und klicken Sie anschließend auf **OK**.  
   
      Es wird eine weitere Sprachspalte angezeigt, in der Sie französische Übersetzungen definieren können.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "69493780"
   
      Das Dialogfeld **Attributdatenübersetzung** wird angezeigt.  
   
-8.  Wählen Sie in der Liste **Übersetzungsspalten** die Option **SpanishMonthName**wie in der folgenden Abbildung dargestellt aus.  
+8.  Wählen Sie in der Liste **Übersetzungsspalten** die Option **SpanishMonthName** wie in der folgenden Abbildung dargestellt aus.  
   
      ![Attributdaten Übersetzung (Dialogfeld)](../../2014/tutorials/media/l9-translations-4.gif "Attributdatenübersetzung (Dialogfeld)")  
   
 9. Klicken Sie auf **OK**, und klicken Sie dann auf die Auslassungs Punkte ( **...** ) für die **Französisch (Frankreich)** -Übersetzung für das **Month Name** -Attribut.  
   
-10. Wählen Sie in der Liste **Übersetzungsspalten** die Option **FrenchMonthName**aus, und klicken Sie anschließend auf **OK**.  
+10. Wählen Sie in der Liste **Übersetzungsspalten** die Option **FrenchMonthName** aus, und klicken Sie anschließend auf **OK**.  
   
      Die Schritte in dieser Prozedur veranschaulichen den Prozess der Definition von Metadatenübersetzungen für Dimensionsobjekte und -elemente.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "69493780"
   
      ![Standardsprache auf der Registerkarte Übersetzungen](../../2014/tutorials/media/l9-translations-5.gif "Standardsprache auf der Registerkarte Übersetzungen")  
   
-2.  Klicken Sie auf der Symbolleiste der Registerkarte **Übersetzungen** auf **Neue Übersetzung** .  
+2.  Klicken Sie auf der Symbolleiste der Registerkarte **Übersetzungen** auf **Neue Übersetzung**.  
   
      Im Dialogfeld **Sprache auswählen** wird eine Liste mit Sprachen angezeigt.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "69493780"
   
      Es wird eine neue Spalte angezeigt, in der Sie die spanischen Übersetzungen der zu übersetzenden Metadatenobjekte definieren können. In diesem Lernprogramm wird nur eine begrenzte Anzahl von Objekten zur Veranschaulichung des Prozesses übersetzt.  
   
-4.  Klicken Sie auf der Symbolleiste der Registerkarte **Übersetzungen** auf **Neue Übersetzung** , klicken Sie im Dialogfeld **Sprache auswählen** auf **Französisch (Frankreich)** , und klicken Sie anschließend auf **OK**.  
+4.  Klicken Sie auf der Symbolleiste der Registerkarte **Übersetzungen** auf **Neue Übersetzung**, klicken Sie im Dialogfeld **Sprache auswählen** auf **Französisch (Frankreich)** , und klicken Sie anschließend auf **OK**.  
   
      Es wird eine weitere Sprachspalte angezeigt, in der Sie französische Übersetzungen definieren können.  
   
@@ -92,17 +92,17 @@ ms.locfileid: "69493780"
   
 1.  Klicken Sie im Menü **Erstellen** auf **Analysis Services Tutorial bereitstellen**.  
   
-2.  Wechseln Sie nach erfolgreichem Abschluss der Bereitstellung zur Registerkarte **Browser** , und klicken Sie anschließend auf **Verbindung wiederherstellen**.  
+2.  Wechseln Sie nach erfolgreichem Abschluss der Bereitstellung zur Registerkarte **Browser**, und klicken Sie anschließend auf **Verbindung wiederherstellen**.  
   
 3.  Entfernen Sie alle Hierarchien und Measures aus dem Bereich **Daten** , und wählen Sie in der Liste [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Perspektiven **das** -Tutorial aus.  
   
 4.  Erweitern Sie im Metadatenbereich zuerst **Measures** und anschließend **Internet Sales**.  
   
-     Das **Internet Sales-Sales Amount** -Measure wird in dieser Measuregruppe auf Englisch angezeigt.  
+     Das **Internet Sales-Sales Amount**-Measure wird in dieser Measuregruppe auf Englisch angezeigt.  
   
 5.  Wählen Sie auf der Symbolleiste in der Liste **Sprache** die Option **Spanisch (Spanien)** aus.  
   
-     Die Elemente im Metadatenbereich werden erneut aufgefüllt. Nach dem erneuten Auffüllen der Elemente im Metadatenbereich wird das Internet Sales-Sales Amount-Measure nicht mehr im Internet Sales-Anzeigeordner angezeigt. Stattdessen wird Sie auf Spanisch in einem neuen Anzeige Ordner mit dem Namen `Ventas del lnternet` angezeigt, wie in der folgenden Abbildung dargestellt.  
+     Die Elemente im Metadatenbereich werden erneut aufgefüllt. Nach dem erneuten Auffüllen der Elemente im Metadatenbereich wird das Internet Sales-Sales Amount-Measure nicht mehr im Internet Sales-Anzeigeordner angezeigt. Stattdessen wird Sie auf Spanisch in einem neuen Anzeige Ordner mit dem Namen `Ventas del lnternet`angezeigt, wie in der folgenden Abbildung dargestellt.  
   
      ![Regefüllter Metadatenbereich](../../2014/tutorials/media/l9-translations-6.gif "Regefüllter Metadatenbereich")  
   
@@ -112,7 +112,7 @@ ms.locfileid: "69493780"
   
 8.  Wählen Sie im Bereich **Filter** den Eintrag **CY 2007** als Filterausdruck aus.  
   
-9. Klicken Sie im Metadatenbereich mit der rechten Maustaste auf **Mes del Ano** , und wählen Sie **Zu Abfrage hinzufügen**aus.  
+9. Klicken Sie im Metadatenbereich mit der rechten Maustaste auf **Mes del Ano**, und wählen Sie **Zu Abfrage hinzufügen** aus.  
   
      Die Monatsnamen werden, wie in der folgenden Abbildung zu sehen, in Spanisch angezeigt.  
   
@@ -125,9 +125,9 @@ ms.locfileid: "69493780"
 ## <a name="next-lesson"></a>Nächste Lektion  
  [Lektion 10: Definieren von Administratorrollen](lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Dimensions Übersetzungen](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)    
- [Cube-Übersetzungen](multidimensional-models-olap-logical-cube-objects/cube-translations.md)    
+## <a name="see-also"></a>Siehe auch  
+ [Dimensions Übersetzungen](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
+ [Cube-Übersetzungen](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Über &#40;setzungen Analysis Services&#41;](translations-analysis-services.md)  
   
   

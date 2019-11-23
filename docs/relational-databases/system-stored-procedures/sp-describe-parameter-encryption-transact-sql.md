@@ -60,13 +60,13 @@ sp_describe_parameter_encryption
   
  Jede Zeile des ersten Resultsets beschreibt ein paar von Schlüsseln. ein verschlüsselter Spalten Verschlüsselungsschlüssel und der zugehörige Spalten Hauptschlüssel.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|ID der Zeile im Resultset.|  
 |**database_id**|**int**|Datenbank-ID.|  
 |**column_encryption_key_id**|**int**|Die ID des Spalten Verschlüsselungsschlüssels. Hinweis: Diese ID bezeichnet eine Zeile in der [sys. column_encryption_keys &#40;&#41; Transact-SQL](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) -Katalog Sicht.|  
 |**column_encryption_key_version**|**int**|Zur künftigen Verwendung reserviert. Derzeit enthält immer 1.|  
-|**column_encryption_key_metadata_version**|**Binär (8)**|Ein Zeitstempel, der die Erstellungszeit des Spalten Verschlüsselungsschlüssels darstellt.|  
+|**column_encryption_key_metadata_version**|**binary(8)**|Ein Zeitstempel, der die Erstellungszeit des Spalten Verschlüsselungsschlüssels darstellt.|  
 |**column_encryption_key_encrypted_value**|**varbinary (4000)**|Der verschlüsselte Wert des Spalten Verschlüsselungsschlüssels.|  
 |**column_master_key_store_provider_name**|**sysname**|Der Name des Anbieters für den Schlüsselspeicher, der den Spalten Hauptschlüssel enthält, der verwendet wurde, um den verschlüsselten Wert des Spalten Verschlüsselungsschlüssels zu erhalten.|  
 |**column_master_key_path**|**nvarchar(4000)**|Der Schlüssel Pfad des Spalten Hauptschlüssels, der verwendet wurde, um den verschlüsselten Wert des Spalten Verschlüsselungsschlüssels zu erhalten.|  
@@ -74,7 +74,7 @@ sp_describe_parameter_encryption
   
  Jede Zeile des zweiten Resultsets enthält Verschlüsselungs Metadaten für einen Parameter.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|ID der Zeile im Resultset.|  
 |**parameter_name**|**sysname**|Der Name eines Parameters, der im *\@params* -Argument angegeben ist.|  
@@ -83,7 +83,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Code der Zeile im ersten Resultset. In der Zeile, auf die verwiesen wird, wird der für die Spalte konfigurierte Spalten Verschlüsselungsschlüssel beschrieben. der Parameter entspricht.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Versionsnummer des typnormalisierungs Algorithmus.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Treiber, der Always Encrypted unterstützt, ruft automatisch **sp_describe_parameter_encryption** auf, um Verschlüsselungs Metadaten für parametrisierte Abfragen abzurufen, die von der Anwendung ausgegeben werden. Anschließend verwendet der Treiber die Verschlüsselungs Metadaten, um die Werte von Parametern zu verschlüsseln, die Daten Bank Spalten entsprechen, die mit Always Encrypted geschützt sind, und ersetzt die von der Anwendung gesendeten Klartext-Parameterwerte durch die verschlüsselte Parameterwerte, bevor die Abfrage an die Datenbank-Engine gesendet wird.  
   
 ## <a name="permissions"></a>Berechtigungen  

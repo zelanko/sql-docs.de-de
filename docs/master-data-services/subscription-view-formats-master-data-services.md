@@ -25,7 +25,7 @@ ms.locfileid: "73728887"
   
 ## <a name="subscription-view-formats"></a>Abonnementsichtformate  
   
-|Name|Beschreibung|  
+|NAME|und Beschreibung|  
 |----------|-----------------|  
 |**Blattelemente**|Enthält Blattelemente und ihre zugeordneten Attributwerte.|  
 |**Verlauf von Blattelementen**|Enthält Verlaufsdaten zu Blattelementen und die zugeordneten Attributwerte. Das Anzeigeformat ist Slowly Changing Dimension Typ 4.|  

@@ -47,17 +47,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_type = ] 'job_type'`-Typ des Auftrags, der geändert werden soll. *job_type* ist vom Datentyp **nvarchar (20)** und hat den Standardwert ' Capture '. Gültige Eingaben sind 'capture' und 'cleanup'.  
+`[ @job_type = ] 'job_type'` Typ des Auftrags, der geändert werden soll. *job_type* ist vom Datentyp **nvarchar (20)** und hat den Standardwert ' Capture '. Gültige Eingaben sind 'capture' und 'cleanup'.  
   
 `[ @maxtrans ] = max_trans_` maximale Anzahl von Transaktionen, die in jedem Scanvorgang verarbeitet werden sollen. *max_trans* ist vom Datentyp **int** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wurde Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  *max_trans* ist nur für Aufzeichnungs Aufträge gültig.  
   
-`[ @maxscans ] = max_scans_` maximale Anzahl von Scan Zyklen, die ausgeführt werden sollen, um alle Zeilen aus dem Protokoll zu extrahieren. *max_scans* ist vom Datentyp **int** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wurde  
+`[ @maxscans ] = max_scans_` maximale Anzahl von Scan Zyklen, die ausgeführt werden müssen, um alle Zeilen aus dem Protokoll zu extrahieren. *max_scans* ist vom Datentyp **int** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wurde  
   
  *max_scan* ist nur für Aufzeichnungs Aufträge gültig.  
   
-`[ @continuous ] = continuous_` gibt an, ob der Aufzeichnungs Auftrag fortlaufend ausgeführt wird (1) oder nur einmal ausgeführt werden soll (0). *Continuous* ist vom Typ **Bit** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wird.  
+`[ @continuous ] = continuous_` gibt an, ob der Aufzeichnungs Auftrag fortlaufend (1) oder nur einmal ausgeführt werden soll (0). *Continuous* ist vom Typ **Bit** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wird.  
   
  Wenn *Continuous* = 1, scannt der [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) Auftrag das Protokoll und verarbeitet bis zu (*max_trans* \* *max_scans*) Transaktionen. Anschließend wird die Anzahl der Sekunden gewartet, die in *polling_interval* angegeben ist, bevor mit dem nächsten Protokoll Scan begonnen wird.  
   
@@ -73,7 +73,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *polling_interval* ist nur für Aufzeichnungs Aufträge gültig, wenn *Continuous* auf 1 festgelegt ist.  
   
-`[ @retention ] = retention_` (in Minuten), in denen Änderungs Zeilen in Änderungs Tabellen beibehalten werden sollen. die *Beibehaltung* ist vom Datentyp **bigint** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung erfolgt. Der Maximalwert beträgt 52494800 (100 Jahre). Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
+`[ @retention ] = retention_` Anzahl von Minuten, die Änderungs Zeilen in Änderungs Tabellen beibehalten werden sollen. die *Beibehaltung* ist vom Datentyp **bigint** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung erfolgt. Der Maximalwert beträgt 52494800 (100 Jahre). Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  die *Beibehaltung* ist nur für Cleanupaufträge gültig.  
   
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-changing-a-capture-job"></a>A. Ändern eines Aufzeichnungsauftrags  
- Im folgenden Beispiel werden die Parameter "`@job_type`", "`@maxscans`" und "`@maxtrans`" eines Aufzeichnungs Auftrags in der `AdventureWorks2012`-Datenbank aktualisiert. Die anderen gültigen Parameter für einen Aufzeichnungsauftrag, `@continuous` und `@pollinginterval`, werden weggelassen. Deren Werte werden nicht geändert.  
+ Im folgenden Beispiel werden die Parameter `@job_type`, `@maxscans`und `@maxtrans` eines Aufzeichnungs Auftrags in der `AdventureWorks2012`-Datenbank aktualisiert. Die anderen gültigen Parameter für einen Aufzeichnungsauftrag, `@continuous` und `@pollinginterval`, werden weggelassen. Deren Werte werden nicht geändert.  
   
 ```  
 USE AdventureWorks2012;  
