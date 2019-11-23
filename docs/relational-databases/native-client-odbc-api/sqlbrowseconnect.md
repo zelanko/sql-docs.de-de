@@ -28,33 +28,33 @@ ms.locfileid: "73787672"
   
 ## <a name="level-1"></a>Ebene 1  
   
-|Schlüsselwort|Liste zurückgegeben?|Optional?|Beschreibung|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|und Beschreibung|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|–|Nein|Der Name der von **SQLDataSources**zurückgegebenen Datenquelle. Das DSN-Schlüsselwort kann nicht verwendet werden, wenn das DRIVER-Schlüsselwort verwendet wird.|  
 |DRIVER|–|Nein|Der Name des ODBC-Treibers für Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client lautet {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Das DRIVER-Schlüsselwort kann nicht verwendet werden, wenn das DSN-Schlüsselwort verwendet wird.|  
   
 ## <a name="level-2"></a>Ebene 2  
   
-|Schlüsselwort|Liste zurückgegeben?|Optional?|Beschreibung|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|und Beschreibung|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|ja|Nein|Name des Servers in dem Netzwerk, auf dem die Datenquelle gespeichert ist. Für den Server kann der Begriff "(local)" eingegeben werden. In diesem Fall kann eine lokale Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, auch wenn dies keine vernetzte Version ist.|  
-|UID|Nein|ja|Benutzeranmelde-ID.|  
+|SERVER|Benutzerkontensteuerung|Nein|Name des Servers in dem Netzwerk, auf dem die Datenquelle gespeichert ist. Für den Server kann der Begriff "(local)" eingegeben werden. In diesem Fall kann eine lokale Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, auch wenn dies keine vernetzte Version ist.|  
+|UID|Nein|Benutzerkontensteuerung|Benutzeranmelde-ID.|  
 |PWD|Nein|Ja (vom Benutzer abhängig)|Vom Benutzer angegebenes Kennwort.|  
-|APP|Nein|ja|Der Name der Anwendung, die **sqlbrowseconnetct**aufrufen.|  
-|WSID|Nein|ja|Workstation-ID. Dies ist normalerweise der Netzwerkname des Computers, auf dem die Anwendung ausgeführt wird.|  
+|APP|Nein|Benutzerkontensteuerung|Der Name der Anwendung, die **sqlbrowseconnetct**aufrufen.|  
+|WSID|Nein|Benutzerkontensteuerung|Workstation-ID. Dies ist normalerweise der Netzwerkname des Computers, auf dem die Anwendung ausgeführt wird.|  
   
 ## <a name="level-3"></a>Ebene 3  
   
-|Schlüsselwort|Liste zurückgegeben?|Optional?|Beschreibung|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|und Beschreibung|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|ja|ja|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
-|LANGUAGE|ja|ja|Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Landessprache.|  
+|DATABASE|Benutzerkontensteuerung|Benutzerkontensteuerung|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
+|LANGUAGE|Benutzerkontensteuerung|Benutzerkontensteuerung|Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Landessprache.|  
   
  **Sqlbrowseconnetct** ignoriert die Werte der in den ODBC-Datenquellen Definitionen gespeicherten Datenbank-und sprach Schlüsselwörter. Wenn die in der Verbindungs Zeichenfolge, die an **sqlbrowseconnetct** weitergegeben wurde, angegebene Datenbank oder Sprache ungültig ist, gibt **sqlbrowseconnetct** SQL_NEED_DATA und die Verbindungs Attribute der Ebene 3 zurück.  
   
  Die folgenden Attribute, die durch den Aufruf von [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)festgelegt werden, bestimmen das von **sqlbrowseconnetct**zurückgegebene Resultset.  
   
-|Attribut|Beschreibung|  
+|Attribute|und Beschreibung|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Wenn Sie auf SQL_MORE_INFO_YES festgelegt ist, gibt **sqlbrowseconnetct** eine erweiterte Zeichenfolge mit Server Eigenschaften zurück.<br /><br /> Im folgenden finden Sie ein Beispiel für eine erweiterte Zeichenfolge, die von **sqlbrowseconnetct**zurückgegeben wird:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> In dieser Zeichenfolge werden verschiedene durch Semikolons getrennte Informationen zum Server aufgeführt. Informationen zu verschiedenen Serverinstanzen werden durch Kommas getrennt.|  
 |SQL_COPT_SS_BROWSE_SERVER|Wenn ein Servername angegeben wird, gibt **sqlbrowseconnetct** Informationen für den angegebenen Server zurück. Wenn SQL_COPT_SS_BROWSE_SERVER auf NULL festgelegt ist, gibt **sqlbrowseconnetct** Informationen für alle Server in der Domäne zurück.<br /><br /> <br /><br /> Beachten Sie, dass **sqlbrowseconnetct** aufgrund von Netzwerkproblemen möglicherweise keine rechtzeitige Antwort von allen Servern empfängt. Daher kann die Liste der zurückgegebenen Server bei jeder Anforderung unterschiedlich sein.|  

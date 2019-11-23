@@ -66,15 +66,15 @@ ms.locfileid: "72798138"
  **-Command-** gibt an, dass das `sqlps`-Hilfsprogramm die Eingabe aus der Standardeingabe gelesen hat.  
   
  *script_block* [ **-args**_argument_array_ ]  
- Gibt einen Block von PowerShell-Befehlen an, die ausgeführt werden sollen. Der Block muss in geschweifte Klammern ({}) eingeschlossen werden. *Script_block* kann nur angegeben werden, wenn das `sqlps`-Hilfsprogramm entweder von **PowerShell** oder einer anderen `sqlps` Utility-Sitzung aufgerufen wird. *Argument_array* ist ein Array von PowerShell-Variablen, das die Argumente für die PowerShell-Befehle in *script_block*enthält.  
+ Gibt einen Block von PowerShell-Befehlen an, die ausgeführt werden sollen. Der Block muss in geschweifte Klammern ({}) eingeschlossen werden. *Script_block* können nur angegeben werden, wenn das `sqlps` Hilfsprogramm entweder von **PowerShell** oder einer anderen `sqlps` Utility-Sitzung aufgerufen wird. *Argument_array* ist ein Array von PowerShell-Variablen, das die Argumente für die PowerShell-Befehle in *script_block*enthält.  
   
  *string* [ *command_parameters* ]  
- Gibt eine Zeichenfolge an, die die auszuführenden PowerShell-Befehle enthält. Verwenden Sie das Format **"& {*`command`*}"**. Die Anführungszeichen geben eine Zeichenfolge an, und der Aufruf Operator (&) bewirkt, dass das Hilfsprogramm `sqlps` den Befehl ausführen.  
+ Gibt eine Zeichenfolge an, die die auszuführenden PowerShell-Befehle enthält. Verwenden Sie das Format **"& { *`command`* }"** . Die Anführungszeichen geben eine Zeichenfolge an, und der Aufruf Operator (&) bewirkt, dass das Hilfsprogramm `sqlps` den Befehl ausführen.  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  Zeigt eine Syntaxzusammenfassung der Optionen des Hilfsprogramms `sqlps` an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Das `sqlps`-Hilfsprogramm startet die PowerShell-Umgebung (PowerShell. exe) und lädt das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Modul. Das Modul, das auch `sqlps`benannt ist, lädt und registriert diese [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Snap-Ins:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
@@ -119,6 +119,6 @@ sqlps -Command "&{.\MyFolder.MyScript.ps1}"
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server-PowerShell](../powershell/sql-server-powershell.md)  
