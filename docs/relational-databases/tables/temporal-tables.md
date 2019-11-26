@@ -45,7 +45,7 @@ ms.locfileid: "67999307"
   
     -   [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **AdventureWorks-Beispieldatenbank herunterladen:** Laden Sie zum Einstieg in temporäre Tabellen die [AdventureWorks-Datenbank für SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) mit Skriptbeispielen herunter, und führen Sie die Anweisungen im Ordner „Temporal“ aus.  
+    -   **AdventureWorks-Beispieldatenbank herunterladen:** Laden Sie zum Einstieg in temporale Tabellen die [AdventureWorks-Datenbank für SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) mit Skriptbeispielen herunter, und führen Sie die Anweisungen im Ordner „Temporal“ aus.  
   
 -   **Syntax:**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67999307"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **Video:** Eine 20-minütige Erörterung des Features für temporäre Tabellen finden Sie im Video [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
+-   **Video:** Eine 20-minütige Erörterung des Features für temporale Tabellen finden Sie im Video [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>Was ist eine temporale Tabelle mit Versionsverwaltung durch das System?  
  Eine temporale Tabelle mit Systemversionsverwaltung ist ein Benutzertabellentyp, der darauf ausgelegt ist, den Verlauf aller Datenänderungen lückenlos zu speichern und einfache Zeitpunktanalysen zu ermöglichen. Bei diesem Typ von temporaler Tabelle spricht man von Versionsverwaltung durch das System, da die Gültigkeitsdauer für jede Zeile vom System (d.h. von der Datenbank-Engine) verwaltet wird.  
@@ -86,7 +86,9 @@ ms.locfileid: "67999307"
   
  Die aktuelle Tabelle enthält den aktuellen Wert für jede Zeile. Die Verlaufstabelle enthält jeden früheren Wert für jede Zeile, falls vorhanden, sowie die Anfangszeit und Endzeit für den Zeitraum, für den er gültig war.  
   
- ![Temporale Tabelle: Funktionsweise](../../relational-databases/tables/media/temporal-howworks.PNG "Temporale Tabelle: Funktionsweise")  
+
+ ![Temporale Tabelle-Funktionsweise](../../relational-databases/tables/media/temporal-howworks.PNG "Temporale Tabelle-Funktionsweise")  
+
   
  Das folgende einfache Beispiel veranschaulicht ein Szenario mit Mitarbeiterinformationen in einer hypothetischen Personaldatenbank:  
   
