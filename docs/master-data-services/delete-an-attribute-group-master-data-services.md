@@ -28,12 +28,12 @@ ms.locfileid: "73729363"
   
 -   **Hinweis** Wenn Attributgruppen vorhanden sind, werden Attribute, die keiner Attributgruppe angehören, in **Explorer**nicht angezeigt. Wenn keine Attributgruppen vorhanden sind, werden alle Attribute angezeigt.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Prerequisites  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
   
 ### <a name="to-delete-an-attribute-group"></a>So löschen Sie eine Attributgruppe  
   

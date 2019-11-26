@@ -1,20 +1,20 @@
 ---
-title: Tutorial zum Erstellen, Trainieren und Bewerten von partitionsbasierten Modellen in R
+title: Erstellen von partitionsbasierten Modellen in R
 description: Erfahren Sie, wie Sie partitionierte Daten modellieren, trainieren und verwenden, die beim Verwenden der partitionsbasierten Modellierungsfunktionen von SQL Server-Machine Learning dynamisch erstellt werden.
-ms.custom: sqlseattle
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f73f45d2ac9830fed810746a5895554cded0691
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ee5d6cbf9b1d5430e431cf04fb3b86ae7fb5743b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532580"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726229"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Lernprogramm: Erstellen von partitionsbasierten Modellen in SQL Server mit R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Für dieses Tutorial benötigen Sie Folgendes:
 
 + Die Beispieldatei [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), die Sie auf Ihre lokale Datenbank-Engine-Instanz [herunterladen und dort wiederherstellen](demo-data-nyctaxi-in-sql.md) können. Die Dateigröße beträgt ungefähr 90 MB.
 
-+ Eine Datenbank-Engine-Instanz in SQL Server 2019 (Preview) mit Machine Learning Services und R integriert.
++ eine Datenbank-Engine-Instanz in SQL Server 2019 mit Machine Learning Services und R-Integration
 
 Überprüfen Sie Ihre Version, indem Sie **`SELECT @@Version`** in einem Abfragetool als T-SQL-Abfrage ausführen.
 

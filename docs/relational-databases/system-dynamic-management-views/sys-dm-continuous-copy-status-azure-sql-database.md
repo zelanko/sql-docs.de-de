@@ -35,7 +35,7 @@ ms.locfileid: "73844502"
 Bei Verwendung von SQL-Datenbank V12 sollten Sie [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) verwenden (da *sys. dm_continuous_copy_status* nur für v11 gilt).
 
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Column Name|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|Eindeutige ID der Replikatdatenbank.|  
 |**partner_server**|**sysname**|Der Name des SQL-Datenbankverbindungsservers.|  
@@ -51,7 +51,7 @@ Bei Verwendung von SQL-Datenbank V12 sollten Sie [sys. dm_geo_replication_link_s
 ## <a name="permissions"></a>Berechtigungen  
  Zum Abrufen von Daten ist die Mitgliedschaft in der Daten Bank Rolle **db_owner** erforderlich. Der dbo-Benutzer, Mitglieder der Daten Bank Rolle " **DBManager** " und der SA-Anmelde Name können diese Sicht ebenfalls Abfragen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die **sys. dm_continuous_copy_status** -Sicht wird in der **Ressourcen** Datenbank erstellt und ist in allen Datenbanken, einschließlich der logischen Master Sicht, sichtbar. Wenn aber diese Sicht in der logischen master-Datenbank abgerufen wird, wird ein leeres Set zurückgegeben.  
   
  Wenn die fortlaufende Kopier Beziehung für eine Datenbank beendet wird, wird die Zeile für diese Datenbank in der **sys. dm_continuous_copy_status** -Sicht nicht mehr angezeigt.  

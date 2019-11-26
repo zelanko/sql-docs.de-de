@@ -137,7 +137,7 @@ ms.locfileid: "73761283"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Die COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets  
  Den COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets wurden unter anderem die folgenden Spalten hinzugefügt.  
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|Type|und Beschreibung|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Name des Katalogs, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Der Name eines Schemas, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
@@ -149,7 +149,7 @@ ms.locfileid: "73761283"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>Das SS_XMLSCHEMA-Schemarowset  
  Ein neues Schemarowset SS_XMLSCHEMA wird eingeführt, mit dem Clients XML-Schema-Informationen abrufen können. Das SS_XMLSCHEMA-Rowset enthält folgende Spalten.  
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|Type|und Beschreibung|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Katalog, zu dem eine XML-Auflistung gehört.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Das Schema, zu dem eine XML-Auflistung gehört.|  
@@ -169,7 +169,7 @@ ms.locfileid: "73761283"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Die DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe  
  Um den **XML** -Datentyp durch OLE DB zu unterstützen, implementiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den neuen DBPROPSET_SQLSERVERPARAMETER-Eigenschaften Satz, der die folgenden Werte enthält.  
   
-|Name|Typ|Beschreibung|  
+|NAME|Type|und Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Name des Katalogs (Datenbank), in dem eine XML-Schemaauflistung definiert ist. Teil des dreiteiligen SQL-Namensbezeichners.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Der Name eines XML-Schemas in der Schemaauflistung. Teil des dreiteiligen SQL-Namensbezeichners.|  
@@ -178,7 +178,7 @@ ms.locfileid: "73761283"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Die DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe  
  Um die Erstellung von Tabellen in der **ITableDefinition** -Schnittstelle zu unterstützen, fügt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dem DBPROPSET_SQLSERVERCOLUMN-Eigenschaften Satz drei neue Spalten hinzu.  
   
-|Name|Typ|Beschreibung|  
+|NAME|Type|und Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Bei typisierten XML-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem das XML-Schema gespeichert ist. Für andere Spaltentypen gibt diese Eigenschaft eine leere Zeichenfolge zurück.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Bei typisierten XML-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des XML-Schemas angibt, das diese Spalte definiert.|  
@@ -198,7 +198,7 @@ ms.locfileid: "73761283"
 #### <a name="the-icolumnsrowset-interface"></a>Die IDBColumnsRowset-Schnittstelle  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt dem Rowset, das von der **IColumnRowset:: GetColumnsRowset** -Methode zurückgegeben wird, die folgenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]spezifischen Spalten hinzu. Diese Spalten enthalten den dreiteiligen Namen einer XML-Schemaauflistung. Für Nicht-XML-Spalten oder nicht typisierte XML-Spalten nehmen alle drei Spalten den Standardwert von NULL an.  
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|Type|und Beschreibung|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Katalog, zu dem eine XML-Schemaauflistung gehört.<br /><br /> Andernfalls NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Das Schema, zu dem eine XML-Schemaauflistung gehört. Andernfalls NULL.|  
@@ -218,7 +218,7 @@ ms.locfileid: "73761283"
   
  Im Falle von DBTYPE_BSTR, DBTYPE_WSTR oder DBTYPE_VARIANT speichert der Anbieter die XML-Instanz, die sich im Consumerpuffer befindet, in der entsprechenden Spalte.  
   
- Im Fall von DBTYPE_IUNKNOWN/ISequentialStream, wenn der Consumer kein Speicher Objekt angibt, muss der Consumer ein **ISequentialStream** -Objekt im Voraus erstellen, das XML-Dokument an das Objekt binden und dann das Objekt an den Anbieter übergeben. durch die **IRowsetChange:: SetData** -Methode. Der Consumer kann auch ein Speicherobjekt erstellen, das pObject-Argument auf IID_ISequentialStream festlegen, ein **ISequentialStream**-Objekt erstellen und anschließend das **ISequentialStream**-Objekt an die **IRowsetChange::SetData**-Methode übergeben. In beiden Fällen kann der Anbieter das XML-Objekt über das **ISequentialStream**-Objekt abrufen und es in die entsprechende Spalte einfügen.  
+ Im Fall von DBTYPE_IUNKNOWN/ISequentialStream, wenn der Consumer kein Speicher Objekt angibt, muss der Consumer ein **ISequentialStream** -Objekt im Voraus erstellen, das XML-Dokument an das Objekt binden und dann das Objekt über die **IRowsetChange:: SetData** -Methode an den Anbieter übergeben. Der Consumer kann auch ein Speicherobjekt erstellen, das pObject-Argument auf IID_ISequentialStream festlegen, ein **ISequentialStream**-Objekt erstellen und anschließend das **ISequentialStream**-Objekt an die **IRowsetChange::SetData**-Methode übergeben. In beiden Fällen kann der Anbieter das XML-Objekt über das **ISequentialStream**-Objekt abrufen und es in die entsprechende Spalte einfügen.  
   
 #### <a name="the-irowsetupdate-interface"></a>Die IRowsetUpdate-Schnittstelle  
  Die **IRowsetUpdate**-Schnittstelle stellt die Funktionen für verzögerte Updates bereit. Die Daten, die für die Rowsets verfügbar gemacht werden, werden erst dann anderen Transaktionen zur Verfügung gestellt, wenn der Consumer die **IRowsetUpdate: Update** -Methode aufruft.  

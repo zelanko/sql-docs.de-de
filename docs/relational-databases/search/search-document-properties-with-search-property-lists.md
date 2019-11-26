@@ -1,5 +1,5 @@
 ---
-title: Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten | Microsoft-Dokumentation
+title: Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -18,12 +18,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f105b175cf2a9673fff0626fba726d6b7f68b50e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912985"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056097"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "67912985"
   
  Die folgende Abbildung zeigt eine logische Sicht einer Sucheigenschaftenliste, in der zwei Eigenschaften (Title und Keywords) angegeben werden. Der Eigenschaftenlistenname für Keywords ist „Tags“. Diese Eigenschaften gehören zum selben Eigenschaftensatz, dessen GUID F29F85E0-4FF9-1068-AB91-08002B27B3D9 lautet. Die ganzzahligen Eigenschaftsbezeichner sind 2 für Title und 5 für Tags (Keywords). Die Volltext-Engine ordnet jede Eigenschaft nach dem Zufallsprinzip einer internen Eigenschaften-ID zu, die für die Sucheigenschaftenliste eindeutig ist. Die interne Eigenschaften-ID für die Title-Eigenschaft ist 1, und die interne Eigenschaften-ID für die Tags-Eigenschaft ist 2.  
   
- ![Zuordnung der Sucheigenschaftenliste zur internen Tabelle](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "Mapping of search property list to internal table")  
+ ![Zuordnung der Sucheigenschaftenliste zur internen Tabelle](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "Zuordnung der Sucheigenschaftenliste zur internen Tabelle")  
   
  Die interne Eigenschaften-ID unterscheidet sich wahrscheinlich vom ganzzahligen Eigenschaftsbezeichner der Eigenschaft. Wenn eine bestimmte Eigenschaft für mehrere Sucheigenschaftenlisten registriert wird, kann für jede Sucheigenschaftenliste eine andere interne Eigenschaften-ID zugewiesen werden. Die interne Eigenschaften-ID kann z. B. in einer Sucheigenschaftenliste 4 sein, in einer anderen 1, in der nächsten 3 usw. Im Gegensatz dazu ist der ganzzahlige Eigenschaftsbezeichner für die Eigenschaft intern, und er bleibt unverändert, egal, an welcher Stelle die Eigenschaft verwendet wird.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "67912985"
   
  Die folgende Abbildung veranschaulicht eine logische Sicht der Suchbegriffe in einem Volltextindex, der der in der vorherigen Abbildung enthaltenen Sucheigenschaftenliste zugeordnet ist. Das Beispieldokument „Document 1“ enthält drei Eigenschaften („Title“, „Author“ und „Keywords“) sowie den Dokumenttext. Für die Title-Eigenschaft und die Keywords-Eigenschaft, die in der Sucheigenschaftenliste angegeben werden, sind Suchbegriffe ihren entsprechenden internen Eigenschaften-IDs im Volltextindex zugeordnet. Im Gegensatz dazu wird der Inhalt der Author-Eigenschaft wie ein Teil des Dokumenttexts indiziert. Dies bedeutet, dass die Größe des Volltextindex beim Registrieren einer Eigenschaft etwas zunimmt, entsprechend der Menge des in der Eigenschaft gespeicherten Inhalts.  
   
- ![Volltextindex, der eine Sucheigenschaftenliste verwendet](../../relational-databases/search/media/ifts-spl-and-fti.gif "Full-text index that uses a search property list")  
+ ![Volltextindex, der eine Sucheigenschaftenliste verwendet](../../relational-databases/search/media/ifts-spl-and-fti.gif "Volltextindex, der eine Sucheigenschaftenliste verwendet")  
   
  Suchbegriffe in der Title-Eigenschaft („Favorite“, „Biking“ und „Trails“) werden der internen Eigenschaften-ID 1 zugeordnet, die Title für diesen Index zugewiesen ist. Suchbegriffe in der Keywords-Eigenschaft („biking“ und „mountain“) werden der internen Eigenschaften-ID 2 zugeordnet, die Tags für diesen Index zugewiesen ist. Für Suchbegriffe in der Author-Eigenschaft („Jane“ und „Doe“) und Suchbegriffe im Dokumenttext ist die interne Eigenschaften-ID gleich 0 (null). Der Begriff „biking“ kommt in der Title-Eigenschaft, in der Keywords-Eigenschaft (Tags) und im Dokumenttext vor. Bei einer Eigenschaftensuche nach "biking" in der Title-Eigenschaft oder der Keywords-Eigenschaft (Tags) würde dieses Dokument in den Ergebnissen zurückgegeben werden. Eine generische Volltextabfrage nach „biking“ würde dieses Dokument ebenfalls zurückgeben, so als ob der Index nicht für die Eigenschaftensuche konfiguriert wäre. Eine Eigenschaftensuche nach "biking" in der Author-Eigenschaft würde dieses Dokument nicht zurückgeben.  
   

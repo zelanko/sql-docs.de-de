@@ -65,7 +65,7 @@ ms.locfileid: "73729303"
   
  In der folgenden Tabelle werden einige der Tags beschrieben, die in dieser XML enthalten sind:  
   
-|Tag|Beschreibung|  
+|Tag|und Beschreibung|  
 |---------|-----------------|  
 |\<Type>|Der von Ihnen im Textfeld **Workflowtyp** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eingegebene Text, der zum Identifizieren der zu ladenden benutzerdefinierten Workflowassembly dient.|  
 |\<SendData>|Ein boolescher Wert, der mithilfe des Kontrollkästchens **Elementdaten in die Meldung einschließen** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] gesteuert wird. Der Wert 1 bedeutet, dass der Abschnitt \<MemberData> gesendet wird. Andernfalls wird der Abschnitt \<MemberData> nicht gesendet.|  

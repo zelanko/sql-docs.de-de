@@ -48,7 +48,7 @@ sp_validatemergesubscription [@publication=] 'publication'
   
 `[ @level = ] 'level'` ist der Typ der Überprüfung, die durchgeführt werden soll. die Ebene ist vom Datentyp **tinyint**und hat keinen Standard *Wert* . Level kann einen der folgenden Werte haben.  
   
-|Level-Wert|Beschreibung|  
+|Level-Wert|und Beschreibung|  
 |-----------------|-----------------|  
 |**1**|Nur Überprüfung der Zeilenanzahl.|  
 |**2**|Überprüfung der Zeilenanzahl und der Prüfsumme.|  
@@ -57,7 +57,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergesubscription** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

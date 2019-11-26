@@ -29,7 +29,7 @@ ms.locfileid: "72782653"
 -   Taskbezogene Cmdlets für Routinevorgänge wie Verarbeitung, Rollenverwaltung, Partitionsverwaltung, Sicherung und Wiederherstellung.  
   
 ## <a name="in-this-article"></a>Inhalt dieses Artikels  
- [Erforderliche Komponenten](#bkmk_prereq)  
+ [Voraussetzungen](#bkmk_prereq)  
   
  [Unterstützte Versionen und Modi von Analysis Services](#bkmk_vers)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "72782653"
 
 Weitere Informationen zu Syntax und Beispielen finden Sie unter [Analysis Services PowerShell-Referenz](/sql/analysis-services/powershell/analysis-services-powershell-reference).
 
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a>Voraussetzungen  
  Windows PowerShell 2.0 muss installiert sein. Es ist standardmäßig auf neueren Versionen der Windows-Betriebssysteme installiert. Weitere Informationen finden Sie unter [Installieren von Windows PowerShell 2,0](https://msdn.microsoft.com/library/ff637750.aspx) .
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
@@ -60,10 +60,10 @@ Weitere Informationen zu Syntax und Beispielen finden Sie unter [Analysis Servic
 |Mehrdimensionale Instanzen und Datenbanken|Unterstützt für lokale und Remoteverwaltung.<br /><br /> Merge-Partition erfordert eine lokale Verbindung.|  
 |Tabellarische Instanzen und Datenbanken|Unterstützt für lokale und Remoteverwaltung.<br /><br /> Weitere Informationen finden Sie im Blog von August 2011 über das [Verwalten von tabellarischen Modellen mit PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |PowerPivot für SharePoint-Instanzen und Datenbanken|Eingeschränkte Unterstützung. Sie können Instanz- und Datenbankinformationen mithilfe von HTTP-Verbindungen und dem SQLAS-Anbieter anzeigen.<br /><br /> Die Verwendung der Cmdlets wird jedoch nicht unterstützt. Verwenden Sie Analysis Services PowerShell nicht, um die PowerPivot-Datenbank im Arbeitsspeicher zu sichern und wiederherzustellen, Rollen hinzuzufügen oder zu entfernen, Daten zu verarbeiten oder beliebige XMLA-Skripts auszuführen.<br /><br /> Zu Konfigurationszwecken verfügt PowerPivot für SharePoint über integrierte PowerShell-Unterstützung, die getrennt bereitgestellt wird. Weitere Informationen finden Sie unter [PowerShell-Referenz für PowerPivot für SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
-|Systemeigene Verbindungen zu lokalen Cubes<br /><br /> "Data Source = c:\backup\test.Cub"|Wird nicht unterstützt.|  
-|HTTP-Verbindungen zu BI-Semantikmodell-Verbindungsdateien (.bism) in SharePoint<br /><br /> "Data Source = http://server/shared_docs/name.bism"|Wird nicht unterstützt.|  
-|Eingebettete Verbindungen zu PowerPivot-Datenbanken<br /><br /> "Data Source = $Embedded $"|Wird nicht unterstützt.|  
-|Lokaler Serverkontext in gespeicherten Prozeduren für Analysis Services<br /><br /> "Data Source = *"|Wird nicht unterstützt.|  
+|Systemeigene Verbindungen zu lokalen Cubes<br /><br /> "Data Source = c:\backup\test.Cub"|Nicht unterstützt.|  
+|HTTP-Verbindungen zu BI-Semantikmodell-Verbindungsdateien (.bism) in SharePoint<br /><br /> "Data Source =http://server/shared_docs/name.bism"|Nicht unterstützt.|  
+|Eingebettete Verbindungen zu PowerPivot-Datenbanken<br /><br /> "Data Source = $Embedded $"|Nicht unterstützt.|  
+|Lokaler Serverkontext in gespeicherten Prozeduren für Analysis Services<br /><br /> "Data Source = *"|Nicht unterstützt.|  
   
 ##  <a name="bkmk_auth"></a>Authentifizierungsanforderungen und Sicherheitsüberlegungen  
  Beim Herstellen einer Verbindung mit Analysis Services müssen Sie die Verbindung mithilfe einer Windows-Benutzeridentität herstellen. In den meisten Fällen wird eine Verbindung mithilfe der integrierten Sicherheit von Windows hergestellt. Dabei wird anhand der Identität des aktuellen Benutzers der Sicherheitskontext festgelegt, unter dem Servervorgänge ausgeführt werden. Es werden jedoch zusätzliche Authentifizierungsmethoden verfügbar, wenn Sie den HTTP-Zugriff auf Analysis Services konfigurieren. In diesem Abschnitt wird erklärt, wie anhand des Typs der Verbindung festgelegt wird, welche Authentifizierungsoptionen Sie verwenden können.  
@@ -76,7 +76,7 @@ Weitere Informationen zu Syntax und Beispielen finden Sie unter [Analysis Servic
   
  Der-Credential-Parameter nimmt ein PSCredential-Objekt an, das einen Benutzernamen und ein Kennwort angibt. In Analysis Services PowerShell steht der-Credential-Parameter für Cmdlets zur Verfügung, die eine Verbindungsanforderung an Analysis Services stellen, im Gegensatz zu Cmdlets, die im Kontext einer vorhandenen Verbindung ausgeführt werden. Cmdlets, die eine Verbindungsanforderung senden, sind z. B. Invoke-ASCmd, Backup-ASDatabase und Restore-ASDatabase. Für diese Cmdlets kann der-Credential-Parameter verwendet werden, vorausgesetzt, dass die folgenden Kriterien erfüllt sind:  
   
-1.  Der Server ist für HTTP-Zugriff konfiguriert. Dies bedeutet, dass IIS die Verbindung behandelt, den Benutzernamen und das Kennwort liest und beim Herstellen einer Verbindung mit Analysis Services einen Identitätswechsel mit dieser Benutzeridentität durchführt. Weitere Informationen finden Sie unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
+1.  Der Server ist für HTTP-Zugriff konfiguriert. Dies bedeutet, dass IIS die Verbindung behandelt, den Benutzernamen und das Kennwort liest und beim Herstellen einer Verbindung mit Analysis Services einen Identitätswechsel mit dieser Benutzeridentität durchführt. Weitere Informationen finden Sie unter [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 2.  Das virtuelle IIS-Verzeichnis, das für Analysis Services-HTTP-Zugriff erstellt wurde, ist für die Standardauthentifizierung konfiguriert.  
   
@@ -273,9 +273,9 @@ Restart-Service mssqlserverolapservice
     Get-PSDrive  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Installieren von SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
- [Verwalten von tabellarischen Modellen mit PowerShell (Blog)](https://go.microsoft.com/fwlink/?linkID=227685)    
+ [Verwalten von tabellarischen Modellen mit PowerShell (Blog)](https://go.microsoft.com/fwlink/?linkID=227685)   
  [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

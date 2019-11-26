@@ -50,7 +50,7 @@ ms.locfileid: "73981837"
   
 -   **Columnstoreindex**: gibt an, dass mindestens eine Tabelle über einen columnstore--Index verfügt. Um eine Datenbank in eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschieben zu können, die dieses Feature nicht unterstützt, verwenden Sie die [Drop Index](../../t-sql/statements/drop-index-transact-sql.md) -oder [Alter Index](../../t-sql/statements/alter-index-transact-sql.md) -Anweisung, um den columnstore--Index zu entfernen. Weitere Informationen finden Sie unter [columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
-    **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher).  
+    **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)  
   
 -   **Komprimierung**: gibt an, dass mindestens eine Tabelle oder ein Index die Datenkomprimierung oder das vardecimal--Speicherformat verwendet. Verwenden Sie die [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) -Anweisung oder die [Alter Index](../../t-sql/statements/alter-index-transact-sql.md) -Anweisung, um das Verschieben einer Datenbank in eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu aktivieren, die dieses Feature nicht unterstützt. Um das vardecimal-Speicherformat zu entfernen, verwenden Sie die sp_tableoption-Anweisung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73981837"
   
 -   **Inmemoryoltp**: gibt an, dass die Datenbank in-Memory-OLTP verwendet. Die Datenbank verfügt über eine MEMORY_OPTIMIZED_DATA-Dateigruppe. Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher). 
+  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher) 
   
 -   **Aufteilung.** Gibt an, dass die Datenbank partitionierte Tabellen, partitionierte Indizes, partitionierte Schemas oder Partitionsfunktionen enthält. Damit eine Datenbank in eine andere Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als die Enterprise oder Developer Edition verlagert werden kann, genügt es nicht, die Tabelle dahingehend abzuändern, dass sie sich in einer einzigen Partition befindet. Sie müssen die partitionierte Tabelle entfernen. Wenn die Tabelle Daten enthält, verwenden Sie SWITCH PARTITION, um jede Partition in eine nicht partitionierte Tabelle zu konvertieren. Löschen Sie dann die partitionierte Tabelle, das Partitionsschema und die Partitionsfunktion.  
   

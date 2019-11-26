@@ -44,10 +44,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Wenn der Pfadname für eine Spalte eines beliebigen anderen Datentyps oder für eine **varbinary (max)** -Spalte angefordert wird, die nicht über das FILESTREAM-Speicher Attribut verfügt, führt dies zu einem Kompilierzeitfehler der Abfrage.  
   
- *\@-Option*  
- Ein ganzzahliger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , der definiert, wie die Serverkomponente des Pfads formatiert werden soll. die *Option "\@"* kann einen der folgenden Werte aufweisen. Die Standardeinstellung ist 0.  
+ *\@Option*  
+ Ein ganzzahliger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , der definiert, wie die Serverkomponente des Pfads formatiert werden soll. *\@Option* kann einer der folgenden Werte sein. Die Standardeinstellung ist 0.  
   
-|Wert|Description|  
+|ReplTest1|und Beschreibung|  
 |-----------|-----------------|  
 |0|Gibt den Servernamen in ein BIOS-Format konvertiert zurück, z. B.: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Gibt den Servernamen ohne Konvertierung zurück, z. B.: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Wenn die Datenbank zu einer Always on-Verfügbarkeits Gruppe gehört, hat der Wert von *use_replica_computer_name* die folgenden Auswirkungen auf die Ausgabe der **pathname** -Funktion:  
   
-|Wert|Description|  
+|ReplTest1|und Beschreibung|  
 |-----------|-----------------|  
 |Nicht angegeben.|Die Funktion gibt den virtuellen Netzwerknamen in (VNN) im Pfad zurück.|  
 |0|Die Funktion gibt den virtuellen Netzwerknamen in (VNN) im Pfad zurück.|  
@@ -72,10 +72,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>Rückgabewert  
  Der zurückgegebene Wert ist der vollqualifizierte logische oder NETBIOS-Pfad des BLOB. Pfadname gibt keine IP-Adresse zurück. NULL wird zurückgegeben, wenn das FILESTREAM BLOB nicht erstellt wurde.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die Spalte ROWGUID muss in jeder Abfrage sichtbar sein, die PathName aufruft.  
   
- Ein FILESTREAM BLOB kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)] erstellt werden.  
+ Ein FILESTREAM BLOB kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt werden.  
   
 ## <a name="examples"></a>Beispiele  
   

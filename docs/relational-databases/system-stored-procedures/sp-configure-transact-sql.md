@@ -74,17 +74,17 @@ RECONFIGURE
 ## <a name="result-sets"></a>Resultsets  
  Bei der Ausführung ohne Parameter gibt **sp_configure** ein Resultset mit fünf Spalten zurück und sortiert die Optionen alphabetisch in aufsteigender Reihenfolge, wie in der folgenden Tabelle dargestellt.  
   
- Die Werte für **config_value** und **run_value** sind nicht automatisch Äquivalent. Nachdem Sie eine Konfigurationseinstellung mithilfe von **sp_configure**aktualisiert haben, muss der Systemadministrator den Wert für die laufende Konfiguration entweder mithilfe von RECONFIGURE oder RECONFIGURE WITH OVERRIDE aktualisieren. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
+ Die Werte für **config_value** und **run_value** entsprechen nicht automatisch. Nachdem Sie eine Konfigurationseinstellung mithilfe von **sp_configure**aktualisiert haben, muss der Systemadministrator den Wert für die laufende Konfiguration entweder mithilfe von RECONFIGURE oder RECONFIGURE WITH OVERRIDE aktualisieren. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
 |**minimum**|**int**|Der Mindestwert der Konfigurationsoption.|  
 |**maximum**|**int**|Der Höchstwert der Konfigurationsoption.|  
-|**config_value**|**int**|Der Wert, mit dem die Konfigurationsoption mithilfe von **sp_configure** (Wert in **sys. Konfigurationen. Value**) festgelegt wurde. Weitere Informationen zu diesen Optionen finden Sie unter [Server Konfigurationsoptionen &#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) und [sys. Konfigurationen &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**config_value**|**int**|Der Wert, mit dem die Konfigurationsoption mithilfe von **sp_configure** festgelegt wurde (Wert in **sys. Konfigurationen. Value**). Weitere Informationen zu diesen Optionen finden Sie unter [Server Konfigurationsoptionen &#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) und [sys. Konfigurationen &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Aktuell laufender Wert der Konfigurationsoption (Wert in **sys. Konfigurationen. value_in_use**).<br /><br /> Weitere Informationen finden Sie unter [sys. Konfigurationen &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Verwenden Sie **sp_configure** , um Einstellungen auf Serverebene anzuzeigen oder zu ändern. Zum Ändern von Einstellungen auf Datenbankebene können Sie ALTER DATABASE verwenden. Wenn Einstellungen geändert werden sollen, die nur die aktuelle Benutzersitzung betreffen, verwenden Sie die SET-Anweisung.  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -92,7 +92,7 @@ RECONFIGURE
 [!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="updating-the-running-configuration-value"></a>Aktualisieren des ausgeführten Konfigurationswerts  
- Wenn Sie einen neuen *Wert* für eine *Option*angeben, wird dieser Wert im Resultset in der **config_value** -Spalte angezeigt. Dieser Wert unterscheidet sich anfänglich von dem Wert in der **run_value** -Spalte, in der der aktuell laufende Konfigurations Wert angezeigt wird. Zum Aktualisieren des laufenden Konfigurations Werts in der **run_value** -Spalte muss der Systemadministrator entweder RECONFIGURE oder RECONFIGURE WITH OVERRIDE ausführen.  
+ Wenn Sie einen neuen *Wert* für eine *Option*angeben, wird dieser Wert im Resultset in der **config_value** Spalte angezeigt. Dieser Wert unterscheidet sich anfänglich von dem Wert in der Spalte **run_value** , in der der aktuell laufende Konfigurations Wert angezeigt wird. Der Systemadministrator muss entweder RECONFIGURE oder RECONFIGURE WITH OVERRIDE ausführen, um den Wert für die laufende Konfiguration in der **run_value** Spalte zu aktualisieren.  
   
  RECONFIGURE und RECONFIGURE WITH OVERRIDE können für jede Konfigurationsoption verwendet werden. Die einfache RECONFIGURE-Anweisung weist jedoch Optionswerte zurück, die außerhalb eines angemessenen Bereichs liegen oder die zu Konflikten bei den Optionen führen. Beispielsweise generiert RECONFIGURE einen Fehler, wenn der Wert des **Wiederherstellungs Intervalls** größer als 60 Minuten ist oder wenn sich der **Affinitäts Masken** Wert mit dem Wert der **Affinitäts-e/a-Maske** überlappt. Von RECONFIGURE WITH OVERRIDE hingegen werden alle Optionswerte vom richtigen Datentyp akzeptiert. Eine Neukonfiguration mit dem angegebenen Wert wird dann erzwungen.  
   
@@ -101,12 +101,12 @@ RECONFIGURE
   
  Mit der RECONFIGURE-Anweisung werden einige Optionen dynamisch aktualisiert. Für andere Optionen ist jedoch das Beenden und Neustarten des Servers erforderlich. Beispielsweise werden die Speicheroptionen **Min. Server Arbeitsspeicher** und **Max. Server Arbeitsspeicher** im [!INCLUDE[ssDE](../../includes/ssde-md.md)]dynamisch aktualisiert. Daher können Sie Sie ändern, ohne den Server neu zu starten. Im Gegensatz dazu erfordert das erneute Konfigurieren des laufenden Werts der Option **Füllfaktor** das Neustarten des [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Nachdem Sie RECONFIGURE für eine Konfigurationsoption ausgeführt haben, können Sie erkennen, ob die Option durch Ausführen von **sp_configure '***option_name***'** dynamisch aktualisiert wurde. Die Werte in den Spalten **run_value** und **config_value** sollten mit einer dynamisch aktualisierten Option verglichen werden. Sie können auch überprüfen, welche Optionen dynamisch sind, indem Sie die **is_dynamic** -Spalte der Katalog Sicht **sys. Konfigurationen** betrachten.  
+ Nachdem Sie RECONFIGURE für eine Konfigurationsoption ausgeführt haben, können Sie erkennen, ob die Option dynamisch aktualisiert wurde, indem Sie **sp_configure '***option_name***'** ausführen. Die Werte in den Spalten **run_value** und **config_value** sollten mit einer dynamisch aktualisierten Option verglichen werden. Sie können auch überprüfen, welche Optionen dynamisch sind, indem Sie sich die **is_dynamic** Spalte der Katalog Sicht **sys. Konfigurationen** ansehen.  
  
  Die Änderung wird auch in das SQL Server-Fehlerprotokoll geschrieben.
   
 > [!NOTE]  
->  Wenn ein angegebener *Wert* für eine Option zu hoch ist, wird in der **run_value** -Spalte angegeben, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] standardmäßig auf den dynamischen Arbeitsspeicher festgelegt ist, anstatt eine Einstellung zu verwenden, die ungültig ist.  
+>  Wenn ein angegebener *Wert* für eine Option zu hoch ist, gibt die **run_value** Spalte die Tatsache wieder, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] standardmäßig auf den dynamischen Arbeitsspeicher festgelegt ist, anstatt eine Einstellung zu verwenden, die ungültig ist.  
   
  Weitere Informationen finden Sie unter [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
@@ -157,7 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- Das Ergebnis gibt den Optionsnamen zurück, gefolgt von den minimalen und maximalen Werten für die Option. **Config_value** ist der Wert, den [!INCLUDE[ssDW](../../includes/ssdw-md.md)] verwenden, wenn die Neukonfiguration beendet wird. **run_value** ist der Wert, der gerade verwendet wird. **config_value** und **run_value** sind in der Regel gleich, sofern der Wert nicht gerade geändert wird.  
+ Das Ergebnis gibt den Optionsnamen zurück, gefolgt von den minimalen und maximalen Werten für die Option. Der **config_value** ist der Wert, der von [!INCLUDE[ssDW](../../includes/ssdw-md.md)] verwendet wird, wenn die Neukonfiguration beendet ist. **run_value** ist der Wert, der gerade verwendet wird. **config_value** und **run_value** sind in der Regel gleich, sofern der Wert nicht gerade geändert wird.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. Auflisten der Konfigurationseinstellungen für einen Konfigurationsnamen  
   
@@ -166,11 +166,11 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>E. Festlegen der Hadoop-Konnektivität  
- Das Festlegen der Hadoop-Konnektivität erfordert zusätzlich zum Ausführen von sp_configure weitere Schritte. Das vollständige Verfahren finden Sie unter [Erstellen einer externen &#40;Datenquelle Transact&#41;-SQL](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ Das Festlegen der Hadoop-Konnektivität erfordert neben dem Ausführen von sp_configure noch einige weitere Schritte. Das vollständige Verfahren finden Sie unter [Erstellen einer externen &#40;Datenquelle Transact&#41;-SQL](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
+ [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

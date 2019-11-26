@@ -41,19 +41,19 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_name = ] 'profile\_name'`Der Name des neuen Profils. *profile_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @profile_name = ] 'profile\_name'` den Namen für das neue Profil an. *profile_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
  
    > [!NOTE]
-   > Der Name des Profils, der Azure SQL verwaltete Instanz SQL Agent verwendet, muss als **AzureManagedInstance_dbmail_profile** bezeichnet werden.
+   > Der Name des Profils, der den SQL-Agent von Azure SQL verwaltete Instanz verwendet, muss aufgerufen werden **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`Die optionale Beschreibung für das neue Profil. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat keinen Standardwert.  
+`[ @description = ] 'description'` Sie die optionale Beschreibung für das neue Profil. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat keinen Standardwert.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`Gibt die ID für das neue Profil zurück. *new_profile_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` gibt die ID für das neue Profil zurück. *new_profile_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein Datenbank-E-Mail-Profil kann eine beliebige Anzahl von Datenbank-E-Mail-Konten enthalten. Gespeicherte Prozeduren von Datenbank-E-Mail können nach dem Profilnamen oder der von dieser Prozedur generierten Profil-ID auf ein Profil verweisen. Weitere Informationen zum Hinzufügen eines Kontos zu einem Profil finden Sie [unter &#40;sysmail_add_profileaccount_sp Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
   
  Der Profilname und die Beschreibung können mit der gespeicherten Prozedur **sysmail_update_profile_sp**geändert werden, während die Profil-ID für die Lebensdauer des Profils konstant bleibt.  
@@ -93,8 +93,8 @@ SELECT @profileId ;
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Erstellen eines Datenbank-E-Mail Kontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Konfigurationsobjekte Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Erstellen Sie ein Datenbank-E-Mail Konto](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Datenbank-E-Mail von Konfigurationsobjekten](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Datenbank-E-Mail gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

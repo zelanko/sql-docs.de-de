@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_compute_node_errors (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_compute_node_errors (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,18 +29,18 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532791"
 ---
-# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. DM _exec_compute_node_errors (Transact-SQL)
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Gibt Fehler zurück, die auf polybase-Computeknoten auftreten.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Column Name|Datentyp|und Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|Eindeutige numerische ID, die dem Fehler zugeordnet ist.|Eindeutig in allen Abfrage Fehlern im System|  
 |Quelle|`nvarchar(255)`|Quellthread oder PROZESSBESCHREIBUNG||  
 |type|`nvarchar(255)`|Fehlertyp.||  
 |create_time|`datetime`|Der Zeitpunkt des Auftretens des Fehlers.||  
-|compute_node_id|`int`|Bezeichner des spezifischen computeknotens|Siehe compute_node_id of [sys. DM _exec_compute_nodes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|compute_node_id|`int`|Bezeichner des spezifischen computeknotens|Weitere Informationen finden Sie unter compute_node_id von [sys. &#40;dm_exec_compute_nodes&#41; Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Der Bezeichner der polybase-Abfrage, falls vorhanden.||  
 |spid|`int`|Bezeichner der SQL Server Sitzung||  
 |thread_id|`int`|Numerischer Bezeichner des Threads, in dem der Fehler aufgetreten ist.||  

@@ -48,7 +48,7 @@ ms.locfileid: "73758322"
   
 2.  Legen Sie die Eigenschaften in der DBPROPSET_ROWSET-Eigenschaftengruppe so fest, dass das Rowset aktualisiert werden kann.  
   
-3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie das *wType*-Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und legen Sie das *pObject*-Element so fest, dass es auf die von Ihnen erstellte DBOBJECT-Struktur zeigt.  
+3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie das *wType* -Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und legen Sie das *pObject* -Element so fest, dass es auf die von Ihnen erstellte DBOBJECT-Struktur zeigt.  
   
 4.  Erstellen Sie einen Accessor mithilfe der Bindungsinformationen im DBBINDINGS-Strukturarray.  
   

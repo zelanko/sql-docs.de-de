@@ -39,7 +39,7 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **\@ Cookie**  
+ **\@Cookie**  
  Gibt das Cookie an, das beim Aktivieren der Anwendungsrolle erstellt wurde. Das Cookie wird von [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)erstellt. **varbinary(8000)** .  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Eine durch **sp_setapprole**aktivierte Anwendungsrolle bleibt aktiv, bis der Benutzer die Serververbindung trennt oder bis er **sp_unsetapprole**ausführt.  
   
  Eine Übersicht über Anwendungsrollen finden Sie unter [Application Roles](../../relational-databases/security/authentication-access/application-roles.md).  

@@ -37,9 +37,9 @@ ms.locfileid: "72797838"
   
  Ein Verfügbarkeitsgruppenlistener besteht aus einem DNS (Domain Name System)-Listenernamen, einer Listenerportbezeichnung und mindestens einer IP-Adresse. Nur das TCP-Protokoll wird von Verfügbarkeitsgruppenlistenern unterstützt.  Der DNS-Name des Listeners muss auch in der Domäne und NetBIOS eindeutig sein.  Wenn Sie einen neuen Verfügbarkeitsgruppenlistener erstellen, wird er zu einer Ressource in einem Cluster mit einem zugeordneten virtuellen Netzwerknamen (VNN), einer virtuellen IP (VIP) und Verfügbarkeitsgruppenabhängigkeit. Ein Client verwendet DNS, um den VNN in mehrere IP-Adressen aufzulösen, und versucht dann, eine Verbindung mit jeder einzelnen Adresse herzustellen, bis eine Verbindungsanforderung erfolgreich ist oder ein Timeout eintritt.  
   
- Wenn für mindestens ein [lesbares sekundäres Replikat](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) das schreibgeschützte Routing konfiguriert ist, werden Clientverbindungen mit Leseabsicht vom primären Replikat an ein lesbares sekundäres Replikat umgeleitet. Auch wenn das primäre Replikat auf einer Instanz von SQL Server offline geschaltet wird und auf einer anderen Instanz von SQL Server ein neues primäres Replikat online geschaltet wird, ermöglicht der Verfügbarkeitsgruppenlistener Clients Verbindungen mit dem neuen primären Replikat.  
+ Wenn für mindestens ein[lesbares sekundäres Replikat](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)das schreibgeschützte Routing konfiguriert ist, werden Clientverbindungen mit Leseabsicht vom primären Replikat an ein lesbares sekundäres Replikat umgeleitet. Auch wenn das primäre Replikat auf einer Instanz von SQL Server offline geschaltet wird und auf einer anderen Instanz von SQL Server ein neues primäres Replikat online geschaltet wird, ermöglicht der Verfügbarkeitsgruppenlistener Clients Verbindungen mit dem neuen primären Replikat.  
   
- Wichtige Informationen zu Verfügbarkeitsgruppenlistenern finden Sie unter [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+ Wichtige Informationen zu Verfügbarkeitsgruppenlistenern finden Sie unter [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72797838"
   
      In Produktionsumgebungen wird empfohlen, dass Verfügbarkeitsgruppenlistener statische IP-Adressen verwenden. Wenn sich die Verfügbarkeitsgruppen jedoch in Subnetzen einer Domäne mit mehreren Subnetzen befinden, muss ein Verfügbarkeitsgruppenlistener statische IP-Adressen verwenden.  
   
- Hybride Netzwerkkonfigurationen und DHCP in mehreren Subnetzen werden nicht für Verfügbarkeitsgruppenlistener unterstützt. Das liegt daran, dass im Fall eines Failovers eine dynamische IP abgelaufen sein könnte oder freigegeben wird, wodurch die hohe Verfügbarkeit insgesamt gefährdet wird.  
+ Hybride Netzwerkkonfigurationen und DHCP in mehreren Subnetzen werden nicht für Verfügbarkeitsgruppenlistener unterstützt. Das liegt daran, dass im Fall eines Failovers eine dynamische IP abgelaufen sein könnte oder freigegeben wird, wodurch die Hochverfügbarkeit insgesamt gefährdet wird.  
   
 ###  <a name="SelectListenerPort"></a> Auswählen eines Ports für Verfügbarkeitsgruppenlistener  
  Wenn Sie einen Verfügbarkeitsgruppenlistener konfigurieren, müssen Sie einen Port festlegen.  Sie können den Standardport auf 1433 konfigurieren, um Clientverbindungszeichenfolgen einfach zu gestalten. Wenn Sie 1433 verwenden, müssen Sie keine Portnummer in einer Verbindungszeichenfolge festlegen.   Da jeder Verfügbarkeitsgruppenlistener einen separaten virtuellen Netzwerknamen besitzt, kann außerdem jeder für einen WSFC-Cluster konfigurierte Verfügbarkeitsgruppenlistener für den Verweis auf Port 1433 konfiguriert werden.  
@@ -84,7 +84,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Sie können dennoch direkt auf die Instanz des SQL Server-Namens der primären oder sekundären Replikate verweisen, anstatt den Servernamen des Verfügbarkeitsgruppenlisteners zu verwenden. In diesem Fall werden neue Verbindungen jedoch nicht automatisch zum aktuellen primären Replikat weitergeleitet.  Schreibgeschütztes Routing geht ebenfalls verloren.  
   
 ##  <a name="ConnectToSecondary"></a> Verwenden eines Listeners zum Herstellen einer Verbindung mit einem schreibgeschützten sekundären Replikat (schreibgeschütztes Routing)  
- *Schreibgeschütztes Routing* bezieht sich auf die Möglichkeit von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], eingehende Verbindungen für einen Verfügbarkeitsgruppenlistener an ein sekundäres Replikat weiterzuleiten, das für schreibgeschützte Arbeitslasten konfiguriert ist. Eine eingehende Verbindung, die auf den Namen eines Verfügbarkeitsgruppenlisteners verweist, kann automatisch an ein schreibgeschütztes Replikat weitergeleitet werden, wenn Folgendes zutrifft:  
+ *Schreibgeschütztes Routing* bezieht sich auf die Möglichkeit von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , eingehende Verbindungen für einen Verfügbarkeitsgruppenlistener an ein sekundäres Replikat weiterzuleiten, das für schreibgeschützte Arbeitslasten konfiguriert ist. Eine eingehende Verbindung, die auf den Namen eines Verfügbarkeitsgruppenlisteners verweist, kann automatisch an ein schreibgeschütztes Replikat weitergeleitet werden, wenn Folgendes zutrifft:  
   
 -   Mindestens ein sekundäres Replikat wird auf schreibgeschützten Zugriff festgelegt, und jedes schreibgeschützte sekundäre Replikat sowie das primäre Replikat werden konfiguriert, um schreibgeschütztes Routing zu unterstützen. Weitere Informationen finden Sie weiter unten in diesem Abschnitt unter [So konfigurieren Sie Verfügbarkeitsreplikate für das schreibgeschützte Routing](#ConfigureARsForROR).  
   
@@ -144,7 +144,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  Wenn Sie die Verbindungszeichenfolgen der Datenbankspiegelung verwenden, kann der Client entweder [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verwenden. Die von einem Client bereitgestellte Verbindungszeichenfolge muss mindestens den Namen einer Serverinstanz, den *ursprünglichen Partnernamen*, angeben, um die Serverinstanz zu identifizieren, auf der das Verfügbarkeitsreplikat, zu dem Sie eine Verbindung herstellen möchten, ursprünglich gehostet wird. Optional kann die Verbindungszeichenfolge auch den Namen einer anderen Serverinstanz, den *Failoverpartnernamen*, enthalten, um die Serverinstanz zu identifizieren, auf der das sekundäre Replikat ursprünglich gehostet wird.  
   
- Weitere Informationen zu Verbindungszeichenfolgen für die Datenbankspiegelung finden Sie unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Weitere Informationen zu Verbindungszeichenfolgen für die Datenbankspiegelung finden Sie unter [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ##  <a name="CCBehaviorOnFailover"></a> Verhalten von Clientverbindungen beim Failover  
  Wenn ein Verfügbarkeitsgruppenfailover auftritt, werden vorhandene persistente Verbindungen zur Verfügbarkeitsgruppe beendet. Der Client muss eine neue Verbindung herstellen, um weiterhin dieselbe primäre Datenbank oder schreibgeschützte sekundäre Datenbank zu verwenden.  Während eines Failovers auf der Serverseite tritt bei der Verbindung zur Verfügbarkeitsgruppe möglicherweise ein Fehler auf, und die Clientanwendung wird gezwungen, erneut eine Verbindung herzustellen, bis die primäre Datenbank wieder vollständig online geschaltet ist.  
@@ -172,7 +172,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; Mult
   
  Ein X.509-Zertifikat muss für alle beteiligten Serverknoten im Failovercluster mit einer Liste aller im alternativen Antragstellernamen des Zertifikats festgelegten Verfügbarkeitsgruppenlistenern konfiguriert werden.  
   
- Wenn der WSFC z. B. drei Verfügbarkeitsgruppenlistener mit den Namen `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com` und `AG3_listener.Adventure-Works.com` besitzt, sollte der alternative Antragstellername für das Zertifikat folgendermaßen festgelegt werden:  
+ Wenn der WSFC z. B. drei Verfügbarkeitsgruppenlistener mit den Namen `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`und `AG3_listener.Adventure-Works.com`besitzt, sollte der alternative Antragstellername für das Zertifikat folgendermaßen festgelegt werden:  
   
 ```  
 CN = ServerFQDN  
@@ -188,7 +188,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- Weitere Informationen zur manuellen Registrierung eines SPN für SQL Server finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ Weitere Informationen zur manuellen Registrierung eines SPN für SQL Server finden Sie unter [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -204,7 +204,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [Konfigurieren des schreibgeschützten Routing für eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="RelatedContent"></a>Verwandte Inhalte  
   
 -   [Microsoft SQL Server AlwaysOn-Lösungs Handbuch zu hoher Verfügbarkeit und Notfall Wiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
@@ -212,9 +212,9 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [SQL Server AlwaysOn-Teamblog: der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)    
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn-Client &#40;Konnektivität SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Aktive sekundäre Replikate: lesbare sekundäre Replikate &#40;AlwaysOn-Verfügbarkeitsgruppen&#41; ](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
+ [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)

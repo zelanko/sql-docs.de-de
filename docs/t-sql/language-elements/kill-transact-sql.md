@@ -34,12 +34,12 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e1a4d6a9d55caa910a0a7de5349dd06dd60269
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122276"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981924"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ Beendet einen Benutzerprozess basierend auf der Sitzungs-ID oder Arbeitseinheit 
   
 KILL beendet eine normale Verbindung, wodurch die der angegebenen Sitzungs-ID zugeordneten Transaktionen intern angehalten werden. Es kann [!INCLUDE[msCoName](../../includes/msconame-md.md)] MS DTC (Microsoft Distributed Transaction Coordinator) verwendet werden. Wenn MS DTC im Einsatz ist, können Sie die Anweisung auch verwenden, um verwaiste und unsichere verteilte Transaktionen zu beenden.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
 Identifiziert die Arbeitseinheits-ID (UOW) verteilter Transaktionen. _UOW_ ist eine GUID, die aus der Spalte „request_owner_guid“ der dynamischen Verwaltungssicht „sys.dm_tran_locks“ abgerufen werden kann. _UOW_ kann auch aus dem Fehlerprotokoll oder über den MS DTC-Monitor ermittelt werden. Weitere Informationen zum Überwachen von verteilten Transaktionen finden Sie in der MS DTC-Dokumentation.  
   
@@ -87,7 +87,7 @@ Verwenden Sie KILL _UOW_ zum Beenden verwaister verteilter Transaktionen. Diese 
 WITH STATUSONLY  
 Generiert einen Fortschrittsbericht für eine angegebene _Sitzungs-ID_ oder _UOW_, für den aufgrund einer früheren KILL-Anweisung ein Rollback ausgeführt wird. „KILL WITH STATUSONLY“ beendet die _Sitzungs-ID_ oder _UOW_ nicht und führt kein Rollback aus. Der Befehl zeigt nur den aktuellen Fortschritt des Rollbacks an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 KILL wird häufig verwendet, um einen Prozess zu beenden, der andere wichtige Prozesse mit Sperren blockiert. KILL kann auch verwendet werden, um einen Prozess zu beenden, der eine Abfrage ausführt, die die notwendigen Systemressourcen benötigt. Systemprozesse und Prozesse, die eine erweiterte gespeicherte Prozedur ausführen, können nicht beendet werden.  
   
 Verwenden Sie KILL sorgfältig, besonders wenn kritische Prozesse ausgeführt werden. Ihren eigenen Prozess können Sie nicht beenden. Sie sollten auch nicht die folgenden Prozesse beenden:  

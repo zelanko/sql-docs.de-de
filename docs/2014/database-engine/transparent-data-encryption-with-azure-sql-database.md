@@ -24,7 +24,7 @@ ms.locfileid: "72798068"
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Transparente Datenverschlüsselung in Azure SQL-Datenbank
   Die transparente Datenverschlüsselung in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] (Vorschau) unterstützt Maßnahmen zum Schutz vor bösartigen Aktivitäten, indem sie die Verschlüsselung und Entschlüsselung der Datenbank in Echtzeit sowie der ihr zugeordneten Sicherheitskopien und der Transaktionsprotokolle in Ruhephasen vornimmt, ohne Änderungen an der Anwendung zu erfordern.  
   
- TDE verschlüsselt den Speicher einer ganze Datenbank mithilfe dieses symmetrischen Schlüssels, der als Verschlüsselungsschlüssel für die Datenbank bezeichnet wird. In [!INCLUDE[ssSDS](../includes/sssds-md.md)] ist der Datenbank-Verschlüsselungsschlüssel durch ein integriertes Serverzertifikat geschützt. Das integrierte Serverzertifikat ist für jeden [!INCLUDE[ssSDS](../includes/sssds-md.md)] -Server eindeutig. Wenn sich eine Datenbank in einer GeoDR-Beziehung befindet, ist sie auf jedem Server durch einen anderen Schlüssel geschützt. Wenn zwei Datenbanken mit dem gleichen Server verbunden sind, verwenden sie das gleiche integrierte Zertifikat. [!INCLUDE[msCoName](../includes/msconame-md.md)] tauscht diese Zertifikate mindestens alle 90 Tage automatisch untereinander. Eine allgemeine Beschreibung von TDE finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md).  
+ TDE verschlüsselt den Speicher einer gesamten Datenbank mithilfe eines symmetrischen Schlüssels, der als Verschlüsselungsschlüssel für die Datenbank bezeichnet wird. In [!INCLUDE[ssSDS](../includes/sssds-md.md)] ist der Datenbank-Verschlüsselungsschlüssel durch ein integriertes Serverzertifikat geschützt. Das integrierte Serverzertifikat ist für jeden [!INCLUDE[ssSDS](../includes/sssds-md.md)] -Server eindeutig. Wenn sich eine Datenbank in einer GeoDR-Beziehung befindet, ist sie auf jedem Server durch einen anderen Schlüssel geschützt. Wenn zwei Datenbanken mit dem gleichen Server verbunden sind, verwenden sie das gleiche integrierte Zertifikat. [!INCLUDE[msCoName](../includes/msconame-md.md)] tauscht diese Zertifikate mindestens alle 90 Tage automatisch untereinander. Eine allgemeine Beschreibung von TDE finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md).  
   
  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] unterstützt die Integration des Azure-Schlüsseltresors mit TDE nicht. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann bei der Ausführung auf einem virtuellen Azure-Computer einen asymmetrischen Schlüssel aus dem Schlüsseltresor verwenden. Weitere Informationen finden Sie unter [Example A: Transparent Data Encryption by Using an Asymmetric Key from the Key Vault](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "72798068"
   
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")  
   
-     Sie können den Verlauf der Verschlüsselung aber auch überwachen, indem Sie die Verbindung mit [!INCLUDE[ssSDS](../includes/sssds-md.md)] mithilfe eines Abfragetools wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] als Datenbankbenutzer mit der Berechtigung **DATENBANKSTATUS ANZEIGEN** herstellen. Fragen Sie die `encryption_state` Spalte der [sys. DM _database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht ab.  
+     Sie können den Verlauf der Verschlüsselung aber auch überwachen, indem Sie die Verbindung mit [!INCLUDE[ssSDS](../includes/sssds-md.md)] mithilfe eines Abfragetools wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] als Datenbankbenutzer mit der Berechtigung **DATENBANKSTATUS ANZEIGEN** herstellen. Fragen Sie die `encryption_state` Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht ab.  
   
 ##  <a name="Encrypt"></a> Aktivieren von TDE für [!INCLUDE[ssSDS](../includes/sssds-md.md)] mithilfe von Transact-SQL  
  In den folgenden Schritten wird angenommen, dass Sie sich bereits für die Vorschau registriert haben.  
@@ -90,7 +90,7 @@ ms.locfileid: "72798068"
     GO  
     ```  
   
-3.  Um den Fortschritt der Verschlüsselung auf [!INCLUDE[ssSDS](../includes/sssds-md.md)]zu überwachen, können Datenbankbenutzer mit der **View Database State** -Berechtigung die `encryption_state` Spalte der [sys. DM _database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht Abfragen.  
+3.  Um den Fortschritt der Verschlüsselung auf [!INCLUDE[ssSDS](../includes/sssds-md.md)]zu überwachen, können Datenbankbenutzer mit der **View Database State** -Berechtigung die `encryption_state` Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht Abfragen.  
   
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>Aktivieren von TDE für SQL-Datenbank mithilfe von PowerShell  
  Mithilfe von Azure PowerShell können Sie den folgenden Befehl ausführen, um TDE ein- oder auszuschalten. Sie müssen eine Verbindung Ihres Kontos mit dem PS-Fenster herstellen, bevor Sie den Befehl ausführen. In den folgenden Schritten wird angenommen, dass Sie sich bereits für die Vorschau registriert haben. Weitere Informationen zu PowerShell finden Sie unter [Installieren und Konfigurieren von Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -128,7 +128,7 @@ ms.locfileid: "72798068"
   
 6.  Schieben Sie auf dem Blatt **Transparente Datenverschlüsselung VORSCHAU** den Schalter **Datenverschlüsselung** auf **Aus**, und klicken Sie dann auf **Speichern** (oben auf der Seite), um die Einstellung zu übernehmen. Der **Verschlüsselungsstatus** zeigt annähernd den Status der transparenten Datenentschlüsselung an.  
   
-     Sie können den Verlauf der Entschlüsselung aber auch überwachen, indem Sie die Verbindung mit [!INCLUDE[ssSDS](../includes/sssds-md.md)] mithilfe eines Abfragetools wie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] als Datenbankbenutzer mit der Berechtigung **DATENBANKSTATUS ANZEIGEN** herstellen. Fragen Sie die `encryption_state` Spalte der [sys. DM _database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)-Sicht ab.  
+     Sie können den Verlauf der Entschlüsselung aber auch überwachen, indem Sie die Verbindung mit [!INCLUDE[ssSDS](../includes/sssds-md.md)] mithilfe eines Abfragetools wie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] als Datenbankbenutzer mit der Berechtigung **DATENBANKSTATUS ANZEIGEN** herstellen. Fragen Sie die `encryption_state` Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)-Sicht ab.  
   
 #### <a name="to-disable-tde-by-using-transact-sql"></a>So deaktivieren Sie TDE mithilfe von Transact-SQL  
   
@@ -142,7 +142,7 @@ ms.locfileid: "72798068"
     GO  
     ```  
   
-3.  Um den Fortschritt der Verschlüsselung auf [!INCLUDE[ssSDS](../includes/sssds-md.md)]zu überwachen, können Datenbankbenutzer mit der **View Database State** -Berechtigung die `encryption_state` Spalte der [sys. DM _database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht Abfragen.  
+3.  Um den Fortschritt der Verschlüsselung auf [!INCLUDE[ssSDS](../includes/sssds-md.md)]zu überwachen, können Datenbankbenutzer mit der **View Database State** -Berechtigung die `encryption_state` Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht Abfragen.  
   
 ##  <a name="Working"></a>Arbeiten mit durch TDE geschützten Datenbanken auf [!INCLUDE[ssSDS](../includes/sssds-md.md)]  
  Für Vorgänge in Azure brauchen Datenbanken nicht entschlüsselt zu werden. Die TDE-Einstellungen für die Quelldatenbank oder die primäre Datenbank werden transparent an das Ziel vererbt. Dazu gehören auch Vorgänge, die dieses beinhalten:  
@@ -163,7 +163,7 @@ ms.locfileid: "72798068"
 ## <a name="related-sql-server-topic"></a>Verwandte SQL Server-Themen  
  [Aktivieren von TDE mit EKM](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Transparente Datenverschlüsselung &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   

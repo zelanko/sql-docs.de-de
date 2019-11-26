@@ -44,20 +44,20 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @login_name = ] 'login_name'` den Anmelde Namen, dem der Zugriff gewährt werden soll. *login_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine **\@login_name**, **\@fixed_server_role**oder **\@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @login_name = ] 'login_name'` den Anmelde Namen, dem der Zugriff gewährt werden soll. *login_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine **\@login_name**, **\@fixed_server_role**oder **\@** msdb_role muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` die Server Rolle Fixed, der der Zugriff gewährt werden soll. *fixed_server_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine **\@login_name**, **\@fixed_server_role**oder **\@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @fixed_server_role = ] 'fixed_server_role'` die Server Rolle Fixed, der der Zugriff gewährt werden soll. *fixed_server_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine **\@login_name**, **\@fixed_server_role**oder **\@** msdb_role muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @msdb_role = ] 'msdb_role'` die Daten Bank Rolle in der **msdb** -Datenbank, für die der Zugriff gewährt werden soll. *msdb_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine **\@login_name**, **\@fixed_server_role**oder **\@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @msdb_role = ] 'msdb_role'` die Daten Bank Rolle in der **msdb** -Datenbank, um den Zugriff auf zu gewähren. *msdb_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine **\@login_name**, **\@fixed_server_role**oder **\@** msdb_role muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @proxy_id = ] id` der Bezeichner des Proxys, für den der Zugriff gewährt werden soll. *id* ist vom Datentyp **int**und hat den Standardwert NULL. Eine **\@proxy_id** oder **\@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @proxy_id = ] id` den Bezeichner für den Proxy, für den der Zugriff gewährt werden soll. *id* ist vom Datentyp **int**und hat den Standardwert NULL. Eine **\@proxy_id** oder **\@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
 `[ @proxy_name = ] 'proxy_name'` den Namen des Proxys, für den der Zugriff gewährt werden soll. *proxy_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine **\@proxy_id** oder **\@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **sp_grant_login_to_proxy** muss von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

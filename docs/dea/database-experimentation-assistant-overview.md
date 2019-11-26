@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: bb942a7754235fe5e1bc3c72f60ffa1f2f0f61d1
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 79caf961208287e1482efe780d2d0e335bbdd16d
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127371"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165550"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Übersicht über Assistent für Datenbankexperimente
 
@@ -61,7 +61,7 @@ Mit der Windows-Authentifizierung stellt die DEA eine Verbindung mit Datenbankse
 
 Zum Aufzeichnen einer Ablauf Verfolgung ist Folgendes erforderlich:
 
-- Der Benutzer, der DEA verwendet, kann mithilfe der Windows-Authentifizierung eine Verbindung zum Quelldaten Bankserver herstellen.
+- Der Benutzer, der DEA verwendet, kann mithilfe der Windows-Authentifizierung eine Verbindung mit dem Datenbankserver
 - Der Benutzer, der "DEA" verwendet, hat Systemadministrator Rechte auf dem Quelldaten Bankserver.
 - Das Dienst Konto, auf dem der Quelldaten Bankserver ausgeführt wird, verfügt über Schreibzugriff auf den Pfad des Verzeichnis
 
@@ -71,10 +71,10 @@ Weitere Informationen finden Sie unter [häufig gestellte Fragen zur Erfassung v
 
 Die Wiedergabe einer Ablauf Verfolgung erfordert Folgendes:
 
-- Der Benutzer, der DEA verwendet, kann mithilfe der Windows-Authentifizierung eine Verbindung zum Ziel Datenbankserver herstellen.
+- Der Benutzer, der DEA verwendet, kann mithilfe der Windows-Authentifizierung eine Verbindung zum Ziel Datenbankserver
 - Der Benutzer, der "DEA" verwendet, hat Systemadministrator Rechte auf dem Ziel Datenbankserver.
 - Das Dienst Konto, auf dem die Ziel Datenbankserver ausgeführt werden, verfügt über Schreibzugriff auf den Pfad des Verzeichnis
-- Das Dienst Konto, das Distributed Replay Clients ausgeführt wird, kann mithilfe der Windows-Authentifizierung eine Verbindung zum Ziel Datenbankserver herstellen
+- Das Dienst Konto, das Distributed Replay Clients ausgeführt wird, kann mithilfe der Windows-Authentifizierung eine Verbindung zum Ziel Datenbankserver
 - TCP-Ports werden für eingehende Anforderungen auf dem Distributed Replay Controller geöffnet. Die Verwendung von "DEA" erfolgt über COM-Schnittstellen mit dem Distributed Replay Controller
 
 Weitere Informationen finden Sie unter [häufig gestellte Fragen zur Wiedergabe](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay) der Ablauf Verfolgung.
@@ -83,7 +83,7 @@ Weitere Informationen finden Sie unter [häufig gestellte Fragen zur Wiedergabe]
 
 Zum Durchführen der Analyse ist Folgendes erforderlich:
 
-- Der Benutzer, der DEA verwendet, kann mithilfe der Windows-Authentifizierung eine Verbindung mit dem Analysis Database-Server herstellen
+- Der Benutzer, der "DEA" verwendet, kann mithilfe der Windows-Authentifizierung eine Verbindung mit dem Analysis
 - Der Benutzer, der "DEA" verwendet, hat Systemadministrator Rechte auf dem Quelldaten Bankserver.
 
 Weitere Informationen finden Sie unter [häufig gestellte Fragen zu Analyseberichten](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports) .
@@ -102,13 +102,13 @@ Telemetriedaten können für vier Arten von Ereignissen erfasst werden:
 Das erfassen und Senden von Telemetriedaten ist optional. Führen Sie die folgenden Schritte aus, um anzugeben, welche Ereignisse gesammelt werden und ob gesammelte Ereignisse an Microsoft gesendet werden:
 
 1. Wechseln Sie zu dem Speicherort, an dem die DEA installiert ist (z. b. C:\\-Programmdateien (x86)\\Microsoft Corporation\\Assistent für Datenbankexperimente).
-2. Öffnen und ändern Sie die beiden config-Dateien " **Dea. exe. config** " (für die Anwendung) und " **deacmd. exe. config** " (für die CLI) wie folgt:
+2. Öffnen und ändern Sie die config-Dateien " **Dea. exe. config** " (für die Anwendung) und " **deacmd. exe. config** " (für die CLI), um Ihr Szenario entsprechend zu beheben:
     - Legen Sie den Wert des *Ereignisses* (z. b. **TraceEvent**) auf **false**fest, um die Erfassung eines Ereignis Typs zu verhindern. Legen Sie den Wert auf " **true**" fest, um die erneute Erfassung des Ereignisses zu beginnen.
     - Legen Sie den Wert von **traceloggerfähig** auf **false**fest, um das Speichern von lokalen Kopien von Ereignissen zu verhindern. Legen Sie den Wert auf **true**fest, damit die lokalen Kopien erneut gespeichert werden.
     - Um das Senden von Ereignissen an Microsoft zu verhindern, legen Sie den Wert von **appinsightloggeraktiviauf** **false**fest. Legen Sie den Wert auf " **true**" fest, um erneut Ereignisse an Microsoft zu senden.
 
 Die [Microsoft-Datenschutzbestimmungen unterliegen der Microsoft-Datenschutzerklärung](https://aka.ms/dea-privacy)
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="see-also"></a>Siehe auch
 
-" [Get Started](database-experimentation-assistant-get-started.md) " führt Sie durch die Schritte, die zum erfassen, wiedergeben und Analysieren einer Ablauf Verfolgung erforderlich sind.
+[Übersicht über den Arbeits](database-experimentation-assistant-get-started.md)Auslastungs Vergleichsprozess, der den Prozess zum Vergleichen von Arbeits Auslastungen in zwei Umgebungen erläutert.

@@ -54,7 +54,7 @@ ms.locfileid: "73637704"
 ## <a name="see-also"></a>Siehe auch  
  [Aktualisieren der Datenbank-Engine](upgrade-database-engine.md)   
  [Aktualisieren von Analysis Services](upgrade-analysis-services.md)   
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Upgrade von Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Aktualisieren von replizierten Datenbanken](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Aktualisieren von Master Data Services](upgrade-master-data-services.md)   

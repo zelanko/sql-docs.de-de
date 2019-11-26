@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bf26f336c2cbc90e3465fc20c21ebc548e947cf
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123193"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843434"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ CAST ( expression AS data_type [ ( length ) ] )
 CONVERT ( data_type [ ( length ) ] , expression [ , style ] )  
 ```  
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="arguments"></a>Argumente  
 *expression*  
@@ -173,7 +173,7 @@ Bei impliziten Konvertierungen ist keine Spezifikation der CAST- oder CONVERT-Fu
 > [!TIP]  
 > Dieses Diagramm ist als herunterladbare PDF-Datei im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35834) verfügbar.  
   
-![Konvertierungstabelle für Datentypen](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
+![Konvertierungstabelle für Datentypen](../../t-sql/data-types/media/lrdatahd.png "Konvertierungstabelle für Datentypen")
   
 Das Diagramm oben veranschaulicht zwar alle expliziten und impliziten Konvertierungen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zulässig sind. Der sich ergebende Datentyp der Konvertierung ist jedoch von dem ausgeführten Vorgang abhängig:
 
@@ -854,7 +854,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)      
 [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)     
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)      
-[Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)      
+[Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)      
 [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)      
 [Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md)       
   

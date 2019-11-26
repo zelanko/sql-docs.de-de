@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_compute_nodes (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_compute_nodes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -29,18 +29,18 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71326149"
 ---
-# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. DM _exec_compute_nodes (Transact-SQL)
+# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen zu Knoten, die mit der polybase-Datenverwaltung verwendet werden. Sie listet eine Zeile pro Knoten auf.  
   
  Verwenden Sie diese DMV, um die Liste aller Knoten im Cluster mit horizontaler Skalierung mit ihrer Rolle, dem Namen und der IP-Adresse anzuzeigen.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Column Name|Datentyp|und Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Eindeutige numerische ID, die dem Knoten zugeordnet ist. Der Schlüssel für diese Ansicht.|Eindeutig in einem Cluster mit horizontaler Skalierung (unabhängig vom Typ).|  
-|Typ|**nvarchar(32)**|Der Typ des Knotens.|"COMPUTE", "HEAD"|  
-|NAME|**nvarchar(32)**|Logischer Name des Knotens.|Eine beliebige Zeichenfolge mit entsprechender Länge.|  
+|type|**nvarchar(32)**|Der Typ des Knotens.|"Compute", "Head"|  
+|name|**nvarchar(32)**|Logischer Name des Knotens.|Eine beliebige Zeichenfolge mit entsprechender Länge.|  
 |address|**nvarchar(32)**|Die IP-Adresse dieses Knotens.|IP-Adressbereich|  
   
 ## <a name="see-also"></a>Siehe auch  

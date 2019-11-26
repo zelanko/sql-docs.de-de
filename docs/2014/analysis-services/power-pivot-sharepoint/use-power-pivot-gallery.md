@@ -41,22 +41,22 @@ ms.locfileid: "70874485"
   
 -   [Bekannte Probleme](#bkmk_known_issues)  
   
- [Erforderliche Komponenten](#prereq)  
+ [Voraussetzungen](#prereq)  
   
-##  <a name="prereq"></a> Erforderliche Komponenten  
+##  <a name="prereq"></a>Voraussetzungen  
   
 > [!NOTE]  
 >  Für den Power Pivot-Katalog ist Microsoft Silverlight erforderlich.  Silverlight wird vom Microsoft Edge-Browser nicht unterstützt.   
 > Um den Inhalt der Bibliothek in Microsoft Edge anzuzeigen, klicken Sie in Power Pivot Katalog auf die Registerkarte **Bibliothek** , und ändern Sie dann die Dokument Bibliotheks Ansicht in **alle Dokumente**.    
 > Um die Standardansicht zu ändern, klicken Sie auf die Registerkarte **Bibliothek** und dann auf „Ansicht ändern“. Klicken Sie auf „Zur Standardansicht machen“, und klicken Sie dann auf „OK“, um die Standardansicht zu speichern.  
->  Weitere Informationen dazu, was Microsoft Edge unterstützt, finden Sie im Windows [-Blog, A Break From the Past, Part 2: Ich stimme zu, dass ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Weitere Informationen dazu, was Microsoft Edge unterstützt, finden Sie im Windows-Blog, [A Break From the Past, Part 2: Sprichwort Goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Eine umfassende Liste der Voraussetzungen finden Sie unter [Erstellen und Anpassen des Power Pivot-](create-and-customize-power-pivot-gallery.md)Katalogs.  
   
 ##  <a name="icons"></a>Symbole im Power Pivot-Katalog  
  Symbole stellen einen visuellen Indikator zur Inhaltsverfügbarkeit und zum Status bereit.  
   
-|Symbol|Beschreibung|  
+|Symbol|und Beschreibung|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|Das Sanduhrsymbol wird angezeigt, wenn ein Miniaturbild jeder Seite im Dokument generiert wird. Aktualisieren Sie die Seite, um das aktualisierte Bild anzuzeigen.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|Das Seitensymbol wird angezeigt, wenn eine Arbeitsmappe oder ein Bericht mehr Seiten aufweist, als im PowerPivot-Katalog angezeigt werden können. Sie können alle Seiten mithilfe einer Clientanwendung anzeigen.|  
@@ -69,7 +69,7 @@ ms.locfileid: "70874485"
   
 1.  Speichern Sie die Datei.  
   
-2.  1.  **Excel 2010:** Klicken Sie im Menü Datei auf **Speichern & senden**.  
+2.  1.  **Excel 2010:** Klicken Sie im Menü „Datei“ auf **Speichern und senden**.  
   
     2.  Klicken Sie auf **Auf SharePoint speichern**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "70874485"
   
     1.  **Excel 2013:**  Klicken Sie im Menü Datei auf **Speichern**.  
   
-    2.  Klicken Sie auf **Optionen für die Browseransicht**, wenn Sie Optionen für Excel Services verwenden möchten, um einzelne Blätter oder Parameter auszuwählen, die veröffentlicht werden sollen. Auf der Registerkarte Parameter in den Optionen für Excel Services können Sie z. B. auswählen, welche Slicer in der veröffentlichten Arbeitsmappe angezeigt werden.  
+    2.  Klicken Sie auf Optionen für die Browseransicht, wenn Sie Optionen für Excel Services verwenden möchten, um einzelne Blätter oder Parameter auszuwählen, die veröffentlicht werden sollen. Auf der Registerkarte Parameter in den Optionen für Excel Services können Sie z. B. auswählen, welche Slicer in der veröffentlichten Arbeitsmappe angezeigt werden.  
   
 3.  Geben Sie im Dialogfeld Speichern unter im Feld Dateiname eine vollständige oder partielle URL zum [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog ein. Wenn Sie einen Teil der URL-Adresse eingeben, z. B. den Servernamen, können Sie die Website nach dem [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog durchsuchen. Klicken Sie dazu auf **Speichern** , um eine Verbindung mit dem angegebenen Server zu öffnen.  
   
@@ -162,8 +162,8 @@ ms.locfileid: "70874485"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eines vertrauenswürdigen Speicher Orts für Power Pivot-Websites in der zentral Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Löschen des Power Pivot-Katalogs](delete-power-pivot-gallery.md)   
- [Erstellen und Anpassen des Power Pivot-Katalogs](create-and-customize-power-pivot-gallery.md)   
+ [Power Pivot](delete-power-pivot-gallery.md) -Katalog  löschen  
+ [Erstellen und Anpassen des Power Pivot-](create-and-customize-power-pivot-gallery.md) Katalogs   
  [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

@@ -26,7 +26,7 @@ ms.locfileid: "70874603"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>und Beschreibung  
  Das Upgrade kann anscheinend nicht mehr reagieren, wenn eine der folgenden Sicherungs-oder Wiederherstellungs Verlaufs Tabellen eine große Anzahl von Zeilen enthält:  
   
 -   **backupfile**  

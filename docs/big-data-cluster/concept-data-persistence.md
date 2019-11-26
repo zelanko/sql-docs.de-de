@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 87f0e82d0e12656bb7a06be1951874b656dbf4b0
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 4671bc07dd21a769746257339ea7903e3dda4701
+ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532390"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74063977"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Datenpersistenz mit SQL Server-Big-Data-Clustern in Kubernetes
 
@@ -87,8 +87,10 @@ Azure Kubernetes Service (AKS) verfügt über [zwei integrierte Speicherklassen]
 
 Kubernetes-Cluster, die mit `kubeadm` bereitgestellt werden, verfügen über keine integrierte Speicherklasse. Sie müssen mithilfe des lokalen Speichers und Ihres bevorzugten Anbieters wie [Rook](https://github.com/rook/rook) Ihre eigenen Speicherklassen und persistente Volumes erstellen. In diesem Fall legen Sie den Wert für `className` auf die konfigurierte Speicherklasse fest. 
 
-> [!NOTE]
->  In den integrierten Bereitstellungskonfigurationsdateien für kubeadm (`kubeadm-dev-test` oder `kubeadm-prod`) ist für die Daten und den Protokollspeicher kein Speicherklassenname angegeben. Vor der Bereitstellung müssen Sie die Konfigurationsdatei anpassen und den Wert für „className“ festlegen, da andernfalls die Validierungen vor der Bereitstellung fehlschlagen. Die Bereitstellung umfasst außerdem einen Validierungsschritt, mit dem überprüft wird, ob die Speicherklasse vorhanden ist. Dabei wird die Existenz der erforderlichen persistenten Volumes nicht überprüft. Sie müssen sicherstellen, dass Sie abhängig von der Skalierung Ihres Clusters ausreichend Volumes erstellen. Für die standardmäßig festgelegte minimale Clustergröße (Standardskalierung, keine Hochverfügbarkeit) müssen Sie mindestens 24 persistente Volumes erstellen. [Hier](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) finden Sie ein Beispiel für das Erstellen persistenter Volumes mithilfe eines lokalen Anbieters.
+> [!IMPORTANT]
+>  In den integrierten Bereitstellungskonfigurationsdateien für kubeadm (`kubeadm-dev-test` oder `kubeadm-prod`) ist für die Daten und den Protokollspeicher kein Speicherklassenname angegeben. Vor der Bereitstellung müssen Sie die Konfigurationsdatei anpassen und den Wert für `className` festlegen, da andernfalls die Validierungen vor der Bereitstellung fehlschlagen. Die Bereitstellung umfasst außerdem einen Validierungsschritt, mit dem überprüft wird, ob die Speicherklasse vorhanden ist. Dabei wird die Existenz der erforderlichen persistenten Volumes nicht überprüft. Sie müssen sicherstellen, dass Sie abhängig von der Skalierung Ihres Clusters ausreichend Volumes erstellen. Für die standardmäßig festgelegte minimale Clustergröße (Standardskalierung, keine Hochverfügbarkeit) müssen Sie mindestens 24 persistente Volumes erstellen.
+>
+>[Erstellen eines Kubernetes-Clusters](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) stellt ein Beispiel für das Erstellen persistenter Volumes mithilfe eines lokalen Anbieters dar. In diesem Beispiel wird der Kubernetes-Speicher eingeführt.
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>Anpassen der Speicherkonfigurationen für jeden Pool

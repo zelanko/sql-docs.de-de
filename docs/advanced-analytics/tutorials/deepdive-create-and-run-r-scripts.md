@@ -1,65 +1,66 @@
 ---
-title: Compute-Zusammenfassungs Statistik revoscaler-Tutorial
-description: 'Tutorial: Exemplarische Vorgehensweise zur Berechnung statistischer Zusammenfassungs Statistiken mithilfe der Sprache R auf SQL Server.'
+title: Zusammenfassungsstatistiken in RevoScaleR
+description: 'Tutorial: Exemplarische Vorgehensweise zur Berechnung statistischer Zusammenfassungsstatistiken mithilfe der R-Sprache auf SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 90a674057845427fe60fd3c62268bf0fb3d18688
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 4ece8cdac4f39cfd5d4b93484f18b0d415cc2291
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715570"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727295"
 ---
-# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Compute-Zusammenfassungs Statistiken in R (SQL Server-und revoscaler-Tutorial)
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Berechnen von Zusammenfassungstatistiken in R (SQL Server- und RevoScaleR-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Diese Lektion ist Teil des [revoscaler-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [revoscaler-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lerneinheit ist Teil des [RevoScaleR-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zum Verwenden von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-Es verwendet die in vorherigen Lektionen erstellten erstellten Datenquellen und computekontexte, um in diesem eine hoch gestützte R-Skripts auszuführen. In dieser Lektion verwenden Sie lokale Server und Remote Server-computekontexte für die folgenden Aufgaben:
+Es werden die in vorherigen Lektionen erstellten Datenquellen und Computekontexte verwendet, um in SQL Server leistungsstarke R-Skripts auszuführen. In dieser Lektion verwenden Sie Computekontexte von lokalen und Remoteservern für die folgenden Aufgaben:
 
 > [!div class="checklist"]
-> * Wechseln Sie in den computekontext SQL Server
-> * Abrufen von Zusammenfassungs Statistiken zu Remote Datenobjekten
-> * Lokale Zusammenfassung berechnen
+> * Wechseln des Computekontexts auf SQL Server
+> * Abrufen von Zusammenfassungsstatistiken für Remotedatenobjekte
+> * Berechnen einer lokalen Zusammenfassung
 
-Wenn Sie die vorherigen Lektionen abgeschlossen haben, sollten Sie über diese remotecomputekontexte verfügen: sqlcompute und sqlcomputetrace. Wenn Sie fortfahren, verwenden Sie sqlcompute und den lokalen computekontext in nachfolgenden Lektionen.
+Wenn Sie die vorherigen Lektionen abgeschlossen haben, sollten Sie über die folgenden Remotecomputekontexte verfügen: sqlCompute und sqlComputeTrace. Wenn Sie fortfahren, verwenden Sie sqlCompute und den lokalen Computekontext in den nachfolgenden Lektionen.
 
-Verwenden Sie eine r-IDE oder **rgui** , um das R-Skript in dieser Lektion auszuführen.
+Verwenden Sie in der folgenden Lektion eine R-IDE oder **Rgui** zum Ausführen des R-Skripts.
 
-## <a name="compute-summary-statistics-on-remote-data"></a>Compute-Zusammenfassungs Statistiken für Remote Daten
+## <a name="compute-summary-statistics-on-remote-data"></a>Berechnen von Zusammenfassungsstatistiken für Remotedaten
 
-Bevor Sie R-Code Remote ausführen können, müssen Sie den remotecomputekontext angeben. Alle nachfolgenden Berechnungen erfolgen auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer, der im *sqlcompute* -Parameter angegeben ist.
+Bevor Sie einen R-Code ausführen können, müssen Sie den Remotecomputekontext angeben. Alle nachfolgenden Berechnungen erfolgen auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computer, der im *sqlCompute*-Parameter angegeben ist.
 
-Ein computekontext bleibt aktiv, bis Sie ihn ändern. Alle R-Skripts, die nicht in einem Remote Server Kontext ausgeführt werden *können* , werden jedoch automatisch lokal ausgeführt.
+Ein Computekontext bleibt so lange aktiv, bis Sie ihn ändern. Alle R-Skripts, die *nicht* in einem Remoteserverkontext ausgeführt werden können, werden automatisch lokal ausgeführt.
 
-Um die Funktionsweise eines computekontexts anzuzeigen, generieren Sie eine Zusammenfassungs Statistik für die sqlbetrüds-Datenquelle auf dem Remote SQL Server. Dieses Datenquellen Objekt wurde in [Lektion 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) erstellt und stellt die ccbetrüger Small-Tabelle in der revodeepdive-Datenbank dar. 
+Um die Funktionsweise eines Computekontexts besser zu verstehen, generieren Sie eine Zusammenfassungsstatistik für die sqlFraudDS-Datenquelle auf der SQL Server-Remoteinstanz. Dieses Datenquellenobjekt wurde in [Lektion 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) erstellt und stellt die ccFraudSmall-Tabelle in der RevoDeepDive-Datenbank dar. 
 
-1. Wechseln Sie in den computekontext in sqlcompute, der in der vorherigen Lektion erstellt wurde:
+1. Ändern Sie den Computekontext in sqlCompute, der in der vorherigen Lektion erstellt wurde:
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-2. Ruft die [rxsummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) -Funktion auf und übergibt erforderliche Argumente, wie z. b. die Formel und die Datenquelle, und weist `sumOut`die Ergebnisse der Variablen zu.
+2. Rufen Sie die Funktion [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) auf, und übergeben Sie alle erforderlichen Argumente, wie z. B. die Formel und die Datenquelle, und weisen Sie die Ergebnisse der Variablen `sumOut` zu.
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    Die R-Sprache bietet viele Zusammenfassungs Funktionen, aber **rxsummary** in **revoscaler** unterstützt die Ausführung auf verschiedenen remotecomputekontexten, einschließlich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen zu ähnlichen Funktionen finden [Sie unter Daten Zusammenfassungen mithilfe von revoscaler](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+    Die R-Sprache stellt zahlreiche Zusammenfassungsfunktionen bereit, **rxSummary** in **RevoScaleR** unterstützt jedoch die Ausführung auf verschiedenen Remotecomputekontexten, einschließlich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen zu ähnlichen Funktionen finden Sie unter [Datenzusammenfassungen unter Verwendung von RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
-3. Druckt den Inhalt von sumout in der Konsole.
+3. Druckt den Inhalt von sumOut in der Konsole.
   
     ```R
     sumOut
     ```
     > [!NOTE]
-    > Wenn Sie eine Fehlermeldung erhalten, warten Sie einige Minuten, bis die Ausführung abgeschlossen ist, und wiederholen Sie dann den Befehl.
+    > Wenn Sie eine Fehlermeldung erhalten, warten Sie einige Minuten, bis die Ausführung abgeschlossen ist, und führen Sie dann den Befehl erneut aus.
 
 **Ergebnisse**
 
@@ -92,7 +93,7 @@ Number of valid observations: 10000
     rxSetComputeContext ("local")
     ```
   
-2. Wenn Sie Daten aus SQL Server extrahieren, können Sie häufig eine bessere Leistung erzielen, indem Sie die Anzahl der für jeden Lesevorgang extrahierten Zeilen erhöhen, vorausgesetzt, die größere Blockgröße kann im Arbeitsspeicher belegt werden. Führen Sie den folgenden Befehl aus, um den Wert für den Parameter *rowsperread* für die Datenquelle zu erhöhen. Zuvor war der Wert von *rowsPerRead* auf 5000 festgelegt.
+2. Wenn Sie Daten aus SQL Server extrahieren, können Sie häufig eine bessere Leistung erzielen, indem Sie die Anzahl der für jeden Lesevorgang extrahierten Zeilen erhöhen, vorausgesetzt, es ist ausreichend Arbeitsspeicher für die größere Blockgröße vorhanden. Führen Sie den folgenden Befehl aus, um den Wert für den Parameter *rowsPerRead* in der Datenquelle zu erhöhen. Zuvor war der Wert von *rowsPerRead* auf 5000 festgelegt.
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -102,7 +103,7 @@ Number of valid observations: 10000
        rowsPerRead = 10000)
     ```
 
-3. Ruft **rxsummary** für die neue Datenquelle auf.
+3. Rufen Sie **rxSummary** für die neue Datenquelle auf.
   
     ```R
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
@@ -110,7 +111,7 @@ Number of valid observations: 10000
   
    Die tatsächlichen Ergebnisse sollten denen entsprechen, die beim Ausführen von **rxSummary** im Kontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computers ausgegeben werden. Der Vorgang kann jedoch schneller oder langsamer sein. Dies hängt hauptsächlich von der Verbindung zu Ihrer Datenbank ab, da die Daten für die Analyse auf Ihren lokalen Computer übertragen werden.
 
-4. Wechseln Sie für die nächsten Lektionen wieder zum remotecomputekontext.
+4. Wechseln Sie für die nächsten Lektionen wieder zum Remotecomputekontext.
 
     ```R
     rxSetComputeContext(sqlCompute)

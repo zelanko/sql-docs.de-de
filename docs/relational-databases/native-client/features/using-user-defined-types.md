@@ -84,7 +84,7 @@ ms.locfileid: "73761348"
 #### <a name="the-procedure_parameters-schema-rowset"></a>Das PROCEDURE_PARAMETERS-Schemarowset  
  Die folgenden Hinzufügungen wurden am PROCEDURE_PARAMETERS-Schemarowset vorgenommen.  
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|Type|und Beschreibung|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Der dreiteilige Namensbezeichner.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Der dreiteilige Namensbezeichner.|  
@@ -94,7 +94,7 @@ ms.locfileid: "73761348"
 #### <a name="the-sql_assemblies-schema-rowset"></a>Das SQL_ASSEMBLIES-Schemarowset  
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht ein neues Anbieter spezifisches Schemarowset verfügbar, das die registrierten UDTs beschreibt. Der ASSEMBLY-Server wird möglicherweise als DBTYPE_WSTR angegeben, ist aber nicht im Rowset vorhanden. Ohne Angabe wird das Rowset standardmäßig für den aktuellen Server festgelegt. Das SQL_ASSEMBLIES-Schemarowset wird in der folgenden Tabelle definiert.  
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|Type|und Beschreibung|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Der Katalogname der Assembly, die den Typ enthält.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Der Name des Schemas oder der Eigentümername der Assembly, die den Typ enthält. Obwohl der Bereich einer Assembly durch die Datenbank und nicht durch ein Schema definiert wird, hat sie einen Eigentümer, der hier angegeben wird.|  
@@ -106,7 +106,7 @@ ms.locfileid: "73761348"
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>Das SQL_ASSEMBLIES_ DEPENDENCIES-Schemarowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht ein neues Anbieter spezifisches Schemarowset verfügbar, das die Assemblyabhängigkeiten für einen angegebenen Server beschreibt. ASSEMBLY_SERVER wird möglicherweise vom Aufrufer als DBTYPE_WSTR angegeben, ist aber nicht im Rowset vorhanden. Ohne Angabe wird das Rowset standardmäßig für den aktuellen Server festgelegt. Das SQL_ASSEMBLY_DEPENDENCIES-Schemarowset wird in der folgenden Tabelle definiert.  
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|Type|und Beschreibung|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Der Katalogname der Assembly, die den Typ enthält.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Der Name des Schemas oder der Eigentümername der Assembly, die den Typ enthält. Obwohl der Bereich einer Assembly durch die Datenbank und nicht durch ein Schema definiert wird, hat sie einen Eigentümer, der hier angegeben wird.|  
@@ -116,7 +116,7 @@ ms.locfileid: "73761348"
 #### <a name="the-sql_user_types-schema-rowset"></a>Das SQL_USER_TYPES-Schemarowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt ein neues Schemarowset SQL_USER_TYPES bereit, das beschreibt, wann die registrierten UDTs für einen bestimmten Server hinzugefügt werden. UDT_SERVER muss vom Aufrufer als DBTYPE_WSTR angegeben werden, ist aber nicht im Rowset vorhanden. Das SQL_USER_TYPES-Schemarowset wird in der folgenden Tabelle definiert.  
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|Type|und Beschreibung|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|Bei UDT-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem der UDT definiert ist.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|Bei UDT-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Schemas angibt, in dem der UDT definiert ist.|  
@@ -126,7 +126,7 @@ ms.locfileid: "73761348"
 #### <a name="the-columns-schema-rowset"></a>Das COLUMNS-Schemarowset  
  Dem COLUMNS-Schemarowset wurden unter anderem die folgenden Spalten hinzugefügt.  
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|Type|und Beschreibung|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Bei UDT-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem der UDT definiert ist.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Bei UDT-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Schemas angibt, in dem der UDT definiert ist.|  
@@ -139,7 +139,7 @@ ms.locfileid: "73761348"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Die DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe  
  Um UDTs durch OLE DB zu unterstützen, implementiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den neuen DBPROPSET_SQLSERVERPARAMETER-Eigenschaften Satz, der die folgenden Werte enthält.  
   
-|Name|Typ|Beschreibung|  
+|NAME|Type|und Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|Der dreiteilige Namensbezeichner.<br /><br /> Bei UDT-Parametern ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem der UDT definiert ist.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|Der dreiteilige Namensbezeichner.<br /><br /> Bei UDT-Parametern ist diese Eigenschaft eine Zeichenfolge, die den Namen des Schemas angibt, in dem der UDT definiert ist.|  
@@ -150,7 +150,7 @@ ms.locfileid: "73761348"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Die DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe  
  Um die Erstellung von Tabellen in der **ITableDefinition** -Schnittstelle zu unterstützen, fügt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client die folgenden drei neuen Spalten in den DBPROPSET_SQLSERVERCOLUMN-Eigenschaften Satz ein.  
   
-|Name|Beschreibung|Typ|Beschreibung|  
+|NAME|und Beschreibung|Type|und Beschreibung|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Bei Spalten vom Typ DBTYPE_UDT ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem der UDT definiert ist.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Bei Spalten vom Typ DBTYPE_UDT ist diese Eigenschaft eine Zeichenfolge, die den Namen des Schemas angibt, in dem der UDT definiert ist.|  
@@ -181,7 +181,7 @@ ms.locfileid: "73761348"
 #### <a name="the-icolumnsrowset-interface"></a>Die IDBColumnsRowset-Schnittstelle  
  Zusätzlich zur **ISSCommandWithParameters** -Schnittstelle fügt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client auch dem Rowset, das durch Aufrufen der **IColumnsRowset:: GetColumnRowset** -Methode zurückgegeben wird, neue Werte hinzu, einschließlich der folgenden.  
   
-|Spaltenname|Typ|Beschreibung|  
+|Column Name|Type|und Beschreibung|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|Ein UDT-Katalognamensbezeichner.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|Ein UDT-Schemanamensbezeichner.|  

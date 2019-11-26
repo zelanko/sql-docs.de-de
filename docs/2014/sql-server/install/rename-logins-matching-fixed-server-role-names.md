@@ -28,7 +28,7 @@ ms.locfileid: "72278217"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>und Beschreibung  
  Die folgenden Namen von festen Serverrollen sind reserviert und können nicht als benutzerdefinierte Anmeldenamen verwendet werden.  
   
 -   **sysadmin**  
@@ -60,7 +60,7 @@ ms.locfileid: "72278217"
   
 2.  Löschen Sie die Anmeldungen.  
   
-3.  Verwenden Sie die System Prozedur **sp_addlogin** , um neue Anmeldungen zu erstellen. Geben Sie die SID an, die in Schritt 1 im **\@sid-** Parameter für jeden entsprechenden Anmelde Namen zurückgegeben wurde.  
+3.  Verwenden Sie das Verfahren **sp_addlogin** System, um neue Anmeldungen zu erstellen. Geben Sie die SID an, die in Schritt 1 im **\@sid** -Parameter für jeden entsprechenden Anmelde Namen zurückgegeben wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

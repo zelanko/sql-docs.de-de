@@ -1,34 +1,35 @@
 ---
-title: Verschieben von Daten zwischen SQL Server und der Xdf-Datei mithilfe von revoscaler
-description: 'Tutorial: Exemplarische Vorgehensweise zum Verschieben von Daten mithilfe von Xdf und der Programmiersprache R auf SQL Server.'
+title: Verschieben von Daten mit einer XDF-Datei
+description: Tutorial zum Verschieben von Daten mit einer XDF-Datei und der R-Programmiersprache in SQL Server
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7eb32a6ba915328a7f6a6baccdc948f534da1a09
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 6935276a47061652647666184637af8ba1535edd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715553"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727207"
 ---
-# <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>Verschieben von Daten zwischen SQL Server und der Xdf-Datei (SQL Server-und revoscaler-Tutorial)
+# <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>Verschieben von Daten zwischen SQL Server und einer XDF-Datei (SQL Server und RevoScaleR-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Diese Lektion ist Teil des [revoscaler-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [revoscaler-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lerneinheit ist Teil des [RevoScaleR-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zum Verwenden von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In diesem Schritt erfahren Sie, wie Sie eine Xdf-Datei zum Übertragen von Daten zwischen Remote-und lokalen computekontexten verwenden. Durch das Speichern der Daten in einer Xdf-Datei können Sie Transformationen für die Daten durchführen.
+In diesem Schritt erfahren Sie, wie Sie eine XDF-Datei zum Übertragen von Daten zwischen lokalen und Remotecomputetexten verwenden. Durch das Speichern der Daten in einer XDF-Datei können Sie Transformationen für die Daten durchführen.
 
-Wenn Sie fertig sind, verwenden Sie die Daten in der Datei, um eine neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle zu erstellen. Die Funktion [rxdatastep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) kann Transformationen auf die Daten anwenden und die Konvertierung zwischen Daten Frames und Xdf-Dateien durchführen.
+Verwenden Sie die Daten in der Datei, um eine neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle zu erstellen, wenn Sie fertig sind. Die [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)-Funktion kann Transformationen auf die Daten anwenden und die Konvertierung zwischen Datenrahmen und XDF-Dateien durchführen.
   
-## <a name="create-a-sql-server-table-from-an-xdf-file"></a>Erstellen einer SQL Server Tabelle aus einer Xdf-Datei
+## <a name="create-a-sql-server-table-from-an-xdf-file"></a>Erstellen einer SQL Server-Tabelle aus einer XDF-Datei
 
-In dieser Übung verwenden Sie die Kreditkarten-Betrugsdaten erneut. In diesem Szenario wurden Sie gebeten, zusätzliche Analysen für Benutzer in den US-Bundesstaaten Kalifornien, Oregon und Washington durchzuführen. Um effizienter zu sein, haben Sie entschieden, nur Daten für diese Zustände auf dem lokalen Computer zu speichern und nur mit den Variablen Geschlecht, Karteninhaber, Bundesland und Saldo zu arbeiten.
+Verwenden Sie für diese Übung wieder die Kreditkartenbetrugsdaten. In diesem Szenario wurden Sie gebeten, zusätzliche Analysen für Benutzer in den US-Bundesstaaten Kalifornien, Oregon und Washington durchzuführen. Aus Effizienzgründen haben Sie sich dazu entschieden, nur Daten für diese Bundesländer auf Ihrem lokalen Computer zu speichern und nur mit den Variablen „gender“ (Geschlecht), „cardholder“ (Karteninhaber/in), „state“ (Bundesland) und „balance“ (Kontostand) zu arbeiten.
 
-1. Verwenden Sie die `stateAbb` zuvor erstellte Variable erneut, um die einzuschließende Ebenen zu identifizieren, und schreiben Sie Sie in eine `statesToKeep`neue Variable.
+1. Verwenden Sie erneut die zuvor erstellte Variable `stateAbb` zum Identifizieren der einzuschließenden Ebenen, und schreiben Sie diese in die neue Variable `statesToKeep`.
   
     ```R
     statesToKeep <- sapply(c("CA", "OR", "WA"), grep, stateAbb)
@@ -40,7 +41,7 @@ In dieser Übung verwenden Sie die Kreditkarten-Betrugsdaten erneut. In diesem S
     ----|----|----
     5|38|48
     
-2. Definieren Sie mithilfe einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage die Daten, die Sie aus SQL Server übertragen möchten.  Später verwenden Sie diese Variable als das *InData* -Argument für **rximport**.
+2. Definieren Sie die Daten, die mithilfe einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage von SQL Server übermittelt werden sollen.  Später verwenden Sie diese Variable als *inData*-Argument für **rxImport**.
   
     ```R
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")
@@ -48,7 +49,7 @@ In dieser Übung verwenden Sie die Kreditkarten-Betrugsdaten erneut. In diesem S
   
     Stellen Sie sicher, dass keine ausgeblendeten Zeichen, wie z. B. Zeilenvorschübe oder Registerkarten, in der Abfrage vorhanden sind.
   
-3. Definieren Sie als nächstes die Spalten, die beim Arbeiten mit den Daten in R verwendet werden sollen. Beispielsweise benötigen Sie im kleineren DataSet nur drei Faktor Ebenen, da die Abfrage nur Daten für drei Zustände zurückgibt.  Wenden Sie `statesToKeep` die Variable an, um die einzuschließenden Ebenen zu identifizieren.
+3. Als nächstes definieren Sie die Spalten, die beim Arbeiten mit den Daten in R verwendet werden sollen. Im kleineren Dataset benötigen Sie beispielsweise nur drei Faktorenebenen, da die Abfrage nur Daten für drei Bundesländer zurückgibt.  Wenden Sie die `statesToKeep`-Variable an, um die richtigen Ebenen zu identifizieren, die eingeschlossen werden sollen.
   
     ```R
     importColInfo <- list(
@@ -58,15 +59,15 @@ In dieser Übung verwenden Sie die Kreditkarten-Betrugsdaten erneut. In diesem S
             )
     ```
   
-4. Legen Sie den computekontext auf **local**fest, da Sie möchten, dass alle Daten auf dem lokalen Computer verfügbar sind.
+4. Legen Sie den Computekontext auf **local** fest, da Sie möchten, dass alle Daten auf Ihrem lokalen Computer verfügbar sind.
   
     ```R
     rxSetComputeContext("local")
     ```
     
-    Die [rximport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) -Funktion kann Daten aus einer beliebigen unterstützten Datenquelle in eine lokale Xdf-Datei importieren. Die Verwendung einer lokalen Kopie der Daten ist praktisch, wenn Sie viele verschiedene Analysen der Daten durchführen möchten, aber vermeiden möchten, dass dieselbe Abfrage immer wieder ausgeführt wird.
+    Mit der Funktion [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)-Funktion können Sie Daten aus einer beliebigen unterstützten Datenquelle in eine lokale XDF-Datei importieren. Die Verwendung einer lokalen Kopie der Daten eignet sich dann, wenn Sie viele verschiedene Analysen der Daten durchführen, aber die wiederholte Ausführung der gleichen Abfrage vermeiden möchten.
 
-5. Erstellen Sie das Datenquellen Objekt, indem Sie die zuvor als Argumente definierten Variablen an **rxsqlserverdata**übergeben.
+5. Erstellen Sie das Datenquellenobjekt, indem Sie die zuvor als Argumente definierten Variablen an **RxSqlServerData** übergeben.
   
     ```R
     sqlServerImportDS <- RxSqlServerData(
@@ -75,7 +76,7 @@ In dieser Übung verwenden Sie die Kreditkarten-Betrugsdaten erneut. In diesem S
         colInfo = importColInfo)
     ```
   
-6. Ruft **rximport** auf, um die Daten in eine Datei `ccFraudSub.xdf`mit dem Namen im aktuellen Arbeitsverzeichnis zu schreiben.
+6. Rufen Sie **rxImport** auf, um die Daten im aktuellen Arbeitsverzeichnis in einer Datei namens `ccFraudSub.xdf` zu speichern.
   
     ```R
     localDS <- rxImport(inData = sqlServerImportDS,
@@ -83,7 +84,7 @@ In dieser Übung verwenden Sie die Kreditkarten-Betrugsdaten erneut. In diesem S
         overwrite = TRUE)
     ```
   
-    Das `localDs` von der **rximport** -Funktion zurückgegebene Objekt ist ein leichtes **rxxdfdata** -Datenquellen Objekt, das `ccFraud.xdf` die lokal auf dem Datenträger gespeicherte Datendatei darstellt.
+    Das von der **rxImport**-Funktion zurückgegebene Objekt `localDs` ist ein kompaktes **RxXdfData**-Datenquellenobjekt, das die lokal auf dem Datenträger gespeicherte `ccFraud.xdf`-Datendatei darstellt.
   
 7. Rufen Sie [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) für die XDF-Datei auf, um zu überprüfen, ob das Schema identisch ist.
   
@@ -101,7 +102,7 @@ In dieser Übung verwenden Sie die Kreditkarten-Betrugsdaten erneut. In diesem S
     Var 4: state, Type: factor, no factor levels available
     ```
 
-8. Sie können nun verschiedene R-Funktionen aufzurufen, um das **localds** -Objekt zu analysieren, genauso wie bei den Quelldaten in SQL Server. Beispielsweise können Sie nach Geschlecht zusammenfassen:
+8. Sie können nun verschiedene R-Funktionen aufrufen, um das **localDs**-Objekt so wie die Quelldaten in SQL Server zu analysieren. Sie können beispielsweise nach Geschlecht zusammenfassen:
   
     ```R
     rxSummary(~gender + cardholder + balance + state, data = localDS)
@@ -109,9 +110,9 @@ In dieser Übung verwenden Sie die Kreditkarten-Betrugsdaten erneut. In diesem S
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Diese Lektion schließt die mehrteilige tutorialreihe zu **revoscaler** und SQL Server ab. Es wurden zahlreiche Daten-und Berechnungs Konzepte vorgestellt, mit denen Sie Ihre eigenen Daten-und Projektanforderungen in den Weg bringen können.
+Diese Lerneinheit schließt die mehrteilige Tutorialreihe zu **RevoScaleR** und SQL Server ab. Es wurden zahlreiche datenbezogene Konzepte und Berechnungskonzepte vorgestellt, mit denen Sie Ihre eigenen Daten- und Projektanforderungen erfüllen können.
 
-Um Ihre Kenntnisse von **revoscaler**zu vertiefen, können Sie zur Liste R-Tutorials zurückkehren, um alle Übungen schrittweise auszuführen, die Sie möglicherweise übersehen haben. Weitere Informationen zu allgemeinen Aufgaben finden Sie in den Anleitungen im Inhaltsverzeichnis.
+Sie können zur R-Tutorialsliste zurückkehren und nicht absolvierte Übungen schrittweise durcharbeiten, um so Ihr Wissen über **RevoScaleR** zu vertiefen. Alternativ finden Sie weitere Informationen zu allgemeinen Aufgaben in den Artikeln zur Vorgehensweise im Inhaltsverzeichnis.
 
 > [!div class="nextstepaction"]
 > [R-Tutorials für SQL Server](sql-server-r-tutorials.md)

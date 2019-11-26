@@ -40,15 +40,15 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ \@sent_before = ] 'sent_before'`Löscht e-Mails bis zu dem Datum und der Uhrzeit, die als *sent_before* -Argument angegeben sind. Das Argument *sent_before* ist vom Datentyp **datetime**und hat den Standardwert NULL. NULL steht für alle Daten.  
+`[ \@sent_before = ] 'sent_before'` löscht e-Mails bis zu dem Datum und der Uhrzeit, die als *sent_before* -Argument angegeben werden. Das Argument *sent_before* ist vom Datentyp **datetime**und hat den Standardwert NULL. NULL steht für alle Daten.  
   
-`[ \@sent_status = ] 'sent_status'`Löscht e-Mails des Typs, der durch *sent_status*angegeben wird. Das Argument *sent_status* ist vom Datentyp **varchar(8)** ohne Standardwert. Gültige Einträge sind **sent**, **unsent**, **retrying**, und **failed**. NULL steht für alle Status.  
+`[ \@sent_status = ] 'sent_status'` löscht e-Mails des Typs, der durch *sent_status*angegeben wird. Das Argument *sent_status* ist vom Datentyp **varchar(8)** ohne Standardwert. Gültige Einträge sind **sent**, **unsent**, **retrying**, und **failed**. NULL steht für alle Status.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- Datenbank-E-Mail-Nachrichten und deren Anlagen werden in der **msdb** Datenbank gespeichert. Nachrichten sollten in regelmäßigen Abständen gelöscht werden, um zu verhindern, dass **msdb** sehr groß wird. Zur Einhaltung eventueller Aufbewahrungspflichten verwenden Sie ein für Sie in Frage kommendes Dokumentenmanagement. Mithilfe der gespeicherten Prozedur **sysmail_delete_mailitems_sp** können Sie E-Mail-Nachrichten dauerhaft aus den Datenbank-E-Mail-Tabellen löschen. Über ein optionales Argument können Sie nur ältere E-Mails löschen, indem Sie ein Datum und eine Uhrzeit angeben. E-Mails, die älter sind als dieses Argument, werden gelöscht. Sie müssen zwingend mindestens ein Argument angeben, also entweder **sent_before** oder **sent_status**. Sie müssen für  **\@sent_before** oder  **\@sent_status**ein Argument angeben. Um alle Nachrichten zu löschen, verwenden  **\@Sie sent_before = getdate ()** .  
+## <a name="remarks"></a>Remarks  
+ Datenbank-E-Mail-Nachrichten und deren Anlagen werden in der **msdb** Datenbank gespeichert. Nachrichten sollten in regelmäßigen Abständen gelöscht werden, um zu verhindern, dass **msdb** sehr groß wird. Zur Einhaltung eventueller Aufbewahrungspflichten verwenden Sie ein für Sie in Frage kommendes Dokumentenmanagement. Mithilfe der gespeicherten Prozedur **sysmail_delete_mailitems_sp** können Sie E-Mail-Nachrichten dauerhaft aus den Datenbank-E-Mail-Tabellen löschen. Mithilfe eines optionalen Arguments können Sie nur ältere E-Mails löschen, indem Sie ein Datum und eine Uhrzeit angeben. E-Mails, die älter sind als dieses Argument, werden gelöscht. Sie müssen zwingend mindestens ein Argument angeben, also entweder **@sent_before** oder **@sent_status**. Sie müssen für **\@sent_before** oder **\@sent_status**ein Argument angeben. Um alle Nachrichten zu löschen, verwenden Sie **\@sent_before = getdate ()** .  
   
  Mit den E-Mails werden auch die Anlagen gelöscht, die zu diesen Nachrichten gehören. Das Löschen der E-Mails löscht allerdings keine entsprechenden Einträge in **sysmail_event_log**. Um Elemente aus dem Protokoll zu löschen, verwenden Sie die gespeicherte Prozedur [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md).  
   

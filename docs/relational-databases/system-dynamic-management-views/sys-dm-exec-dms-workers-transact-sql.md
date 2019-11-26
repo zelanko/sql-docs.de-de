@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_dms_workers (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_dms_workers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,27 +29,27 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532943"
 ---
-# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. DM _exec_dms_workers (Transact-SQL)
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen zu allen Workern, die DMS-Schritte abschließen.  
   
  In dieser Ansicht werden die Daten für die letzten 1000 Anforderungen und aktiven Anforderungen angezeigt. für aktive Anforderungen sind die Daten in dieser Sicht immer vorhanden.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Column Name|Datentyp|und Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|Abfrage, zu der dieser DMS-Worker gehört. request_id, step_index und dms_step_index bilden den Schlüssel für diese Sicht.||  
-|step_index|`int`|Abfrage Schritt, zu dem dieser DMS-Worker gehört.|Weitere Informationen finden Sie unter Step Index in [sys. DM &#40;_exec_distributed_request_steps&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|`int`|Schritt in den DMS-Plan, den dieser Worker ausgeführt wird.|Siehe [sys. DM _exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|`int`|Knoten, auf dem der Worker ausgeführt wird.|Weitere Informationen finden Sie unter [sys. DM &#40;_exec_compute_nodes&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|step_index|`int`|Abfrage Schritt, zu dem dieser DMS-Worker gehört.|Weitere Informationen finden Sie unter Step Index in [sys. &#40;dm_exec_distributed_request_steps&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|dms_step_index|`int`|Schritt in den DMS-Plan, den dieser Worker ausgeführt wird.|Siehe [sys. dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|`int`|Knoten, auf dem der Worker ausgeführt wird.|Weitere Informationen finden Sie unter [sys. &#40;dm_exec_compute_nodes&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
 |type|`nvarcha(32)`|||  
-|status|`nvarchar(32)`|Status dieses Schritts|"Pending", "Running", "Complete", "failed", "undofailed", "stodingcancel", "abgebrochen", "Undone", "abgebrochen", "abgebrochen"|  
+|status|`nvarchar(32)`|Status dieses Schritts|'Pending', 'Running', 'Complete', 'Failed', 'UndoFailed', 'PendingCancel', 'Cancelled', 'Undone', 'Aborted'|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
 |rows_processed|`bigint`|||  
 |start_time|`datetime`|Zeitpunkt, zu dem die Ausführung des Schritts gestartet wurde|Kleiner oder gleich der aktuellen Zeit und größer oder gleich end_compile_time der Abfrage, zu der dieser Schritt gehört.|  
-|end_time|`datetime`|Der Zeitpunkt, zu dem dieser Schritt die Ausführung abgeschlossen hat, abgebrochen wurde oder fehlgeschlagen ist.|Kleiner oder gleich der aktuellen Zeit und größer oder gleich start_time, auf NULL für Schritte, die derzeit ausgeführt werden oder sich in der Warteschlange befinden.|  
+|end_time|`datetime`|Der Zeitpunkt, zu dem dieser Schritt die Ausführung abgeschlossen hat, abgebrochen wurde oder fehlgeschlagen ist.|Kleiner oder gleich der aktuellen Zeit und größer oder gleich start_time, auf NULL für Schritte festgelegt, die gerade ausgeführt werden oder in die Warteschlange eingereiht werden.|  
 |total_elapsed_time|`int`|Gesamtzeit Spanne, für die der Abfrage Schritt ausgeführt wurde (in Millisekunden)|Zwischen 0 und dem Unterschied zwischen end_time und start_time. 0 für Schritte in der Warteschlange.|  
 |cpu_time|`bigint`|||  
 |query_time|`int`|||  

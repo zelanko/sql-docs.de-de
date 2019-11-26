@@ -1,5 +1,5 @@
 ---
-title: 'ADO-Ereignisinstanziierung: ADO und wfc | Microsoft-Dokumentation'
+title: 'ADO-Ereignis Instanziierung: ADO und wfc | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -61,7 +61,7 @@ ADO für Windows Foundation Classes (ADO/WFC) baut auf dem ADO-Ereignis Modell a
 7.  Wenn die Verarbeitung abgeschlossen ist, entfernen Sie den Handler aus der Liste der ADO/WFC-Ereignishandler. Verwenden Sie die-Methode mit einem Namen wie **RemoveOn**_EventName_(*Handler*).  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [Zusammenfassungs  für ADO-Ereignis Handler](../../../ado/guide/data/ado-event-handler-summary.md)  
  [ADO-WFC-Syntax Index](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Ereignis Parameter](../../../ado/guide/data/event-parameters.md)   
  [Zusammenarbeiten von Ereignis Handlern](../../../ado/guide/data/how-event-handlers-work-together.md)   

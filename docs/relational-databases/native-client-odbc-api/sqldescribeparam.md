@@ -28,7 +28,7 @@ ms.locfileid: "73787104"
   
  Verbesserungen an der Datenbank-Engine, die mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] beginnen, ermöglichen SQLDescribeParam, genauere Beschreibungen der erwarteten Ergebnisse zu erhalten. Diese präziseren Ergebnisse können sich von den Werten unterscheiden, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von SQLDescribeParam zurückgegeben wurden. Weitere Informationen finden Sie unter [metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
   
- Außerdem gibt *ParameterSizePtr* in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]einen Wert zurück, der mit der Definition für die Größe (in Zeichen) der Spalte oder des Ausdrucks der entsprechenden Parameter Markierung entsprechend der Definition in der [ODBC-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=207044)übereinstimmt. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client konnte *ParameterSizePtr* der entsprechende Wert **SQL_DESC_OCTET_LENGTH** für den-Typ oder ein irrelevante Spaltengrößen Wert sein, der für SQLBindParameter für einen Typ angegeben wurde, dessen Wert sollte ignoriert werden (z. b.**SQL_INTEGER**).  
+ Außerdem gibt *ParameterSizePtr* in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]einen Wert zurück, der mit der Definition für die Größe (in Zeichen) der Spalte oder des Ausdrucks der entsprechenden Parameter Markierung entsprechend der Definition in der [ODBC-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=207044)übereinstimmt. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client konnte *ParameterSizePtr* der entsprechende Wert **SQL_DESC_OCTET_LENGTH** für den-Typ oder ein irrelevante Spaltengrößen Wert sein, der für SQLBindParameter für einen Typ bereitgestellt wurde. der Wert von, der ignoriert werden soll (z. b.**SQL_INTEGER**).  
   
  Der Treiber unterstützt das Aufrufen von SQLDescribeParam in folgenden Situationen nicht:  
   
@@ -75,12 +75,12 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 ## <a name="sqldescribeparam-support-for-enhanced-date-and-time-features"></a>SQLDescribeParam-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die für Datums-/Uhrzeittypen zurückgegebenen Werte lauten wie folgt:  
   
-||*DataTypePtr*|*ParameterSizePtr*|*Decimaldigitsptr*|  
+||*DataTypePtr*|*ParameterSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|------------------------|------------------------|  
-|datetime|SQL_TYPE_TIMESTAMP|23|3|  
+|DateTime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|Datum|SQL_TYPE_DATE|10|0|  
-|Uhrzeit|SQL_SS_TIME2|8, 10..16|0..7|  
+|date|SQL_TYPE_DATE|10|0|  
+|time|SQL_SS_TIME2|8, 10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
   

@@ -75,7 +75,7 @@ ms.locfileid: "72798219"
   
 -   Den Prozessexitcode, der zurückgegeben wird, wenn der Befehl erfolgreich ausgeführt wurde.  
   
--   Den auszuführenden Befehl. Beim Ausführen eines Betriebssystembefehls handelt es sich hierbei einfach um den Befehl selbst. Bei einem externen Programm ist dies der Name des Programms und die Argumente für das Programm, z. B.: **C:\Programme\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**.  
+-   Den auszuführenden Befehl. Beim Ausführen eines Betriebssystembefehls handelt es sich hierbei einfach um den Befehl selbst. Bei einem externen Programm ist dies der Name des Programms und die Argumente für das Programm, z. B.: **C:\Programme\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"** .  
   
     > [!NOTE]  
     >  Sie müssen den vollständigen Pfad zur ausführbaren Datei angeben, wenn diese sich nicht in dem Verzeichnis befindet, das im Systempfad oder dem Pfad für den Benutzer angegeben ist, als der der Auftragsschritt ausgeführt wird.  
@@ -106,7 +106,7 @@ ms.locfileid: "72798219"
 ## <a name="activex-scripting-job-steps"></a>ActiveX-Skript-Auftragsschritte  
   
 > [!IMPORTANT]  
->  Der ActiveX-Skript-Auftragsschritt wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus dem [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.  
+>  Der ActiveX-Skript-Auftragsschritt wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus dem [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.  
   
  Wenn Sie einen ActiveX-Skriptauftragsschritt erstellen, ist Folgendes notwendig:  
   
@@ -205,11 +205,11 @@ Set oServer = nothing
 |Beschreibt, wie Optionen für Transact-SQL-Auftragsschritte für den Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent erstellt werden.|[Definieren von Optionen für Transact-SQL-Auftragsschritte](define-transact-sql-job-step-options.md)|  
 |Beschreibt, wie ein ActiveX-Skript-Auftragsschritt erstellt wird.|[Erstellen eines ActiveX-Skript-Auftragsschritts](create-an-activex-script-job-step.md)|  
 |Beschreibt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritte erstellt und definiert werden, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services-Befehle und -Abfragen ausführen.|[Erstellen eines Analysis Services-Auftragsschritts](create-an-analysis-services-job-step.md)|  
-|Beschreibt, welche Aktion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen sollte, wenn während der Auftragsausführung ein Fehler auftritt.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
+|Beschreibt, welche Aktion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen sollte, wenn während der Auftragsausführung ein Fehler auftritt.|[Festlegen der Vorgehensweise nach Erfolg oder Fehlschlagen eines Auftragsschritts](set-job-step-success-or-failure-flow.md)|  
 |Beschreibt, wie Auftragsschrittdetails im Dialogfeld Auftragsschritt-Eigenschaften angezeigt werden.|[Anzeigen von Auftragsschrittinformationen](view-job-step-information.md)|  
 |Beschreibt, wie ein Auftragsschrittprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents gelöscht wird.|[Löschen eines Auftragsschrittprotokolls](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [dbo. sysjobstepslogs &#40;Transact-SQL&#41; ](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql) -   
  [Erstellen von Aufträgen](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

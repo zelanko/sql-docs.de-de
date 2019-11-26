@@ -43,23 +43,23 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_name = ] 'job_name'` den Namen des Auftrags, für den die Verlaufs Datensätze gelöscht werden sollen. *job_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *job_id* oder *job_name* angegeben werden, aber beide können nicht angegeben werden.  
+`[ @job_name = ] 'job_name'` den Namen des Auftrags, für den die Verlaufs Datensätze gelöscht werden sollen. *job_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
 > [!NOTE]  
->  Mitglieder der festen Server Rolle **sysadmin** oder Mitglieder der festen Daten Bank Rolle **SQLAgentOperatorRole** können **sp_purge_jobhistory** ohne Angabe eines *job_name* oder *job_id*ausführen. Wenn **sysadmin** -Benutzer diese Argumente nicht angeben, wird der Auftrags Verlauf für alle lokalen und Multiserveraufträge innerhalb der durch *oldest_date*angegebenen Zeit gelöscht. Wenn **SQLAgentOperatorRole** -Benutzer diese Argumente nicht angeben, wird der Auftrags Verlauf für alle lokalen Aufträge innerhalb der durch *oldest_date*angegebenen Zeit gelöscht.  
+>  Mitglieder der festen Server Rolle **sysadmin** oder Mitglieder der festen Daten Bank Rolle **SQLAgentOperatorRole** können **sp_purge_jobhistory** ausführen, ohne eine *job_name* oder *job_id*anzugeben. Wenn **sysadmin** -Benutzer diese Argumente nicht angeben, wird der Auftrags Verlauf für alle lokalen und Multiserveraufträge innerhalb der durch *oldest_date*angegebenen Zeit gelöscht. Wenn **SQLAgentOperatorRole** -Benutzer diese Argumente nicht angeben, wird der Auftrags Verlauf für alle lokalen Aufträge innerhalb der durch *oldest_date*angegebenen Zeit gelöscht.  
   
-`[ @job_id = ] job_id` die Auftrags-ID des Auftrags für die zu löschenden Datensätze. *job_id* ist vom Datentyp **uniqueidentifier**. der Standardwert ist NULL. Es muss entweder *job_id* oder *job_name* angegeben werden, aber beide können nicht angegeben werden. Informationen dazu, wie **sysadmin** -oder **SQLAgentOperatorRole** -Benutzer dieses Argument verwenden können, finden Sie in der Beschreibung **\@job_name** .  
+`[ @job_id = ] job_id` die Auftrags-ID des Auftrags für die zu löschenden Datensätze. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. Informationen dazu, wie **sysadmin** -oder **SQLAgentOperatorRole** -Benutzer dieses Argument verwenden können, finden Sie in der Beschreibung **\@job_name** .  
   
-`[ @oldest_date = ] oldest_date` der älteste Datensatz, der im Verlauf beibehalten werden soll. *oldest_date* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Wenn *oldest_date* angegeben wird, entfernt **sp_purge_jobhistory** nur Datensätze, die älter sind als der angegebene Wert.  
+`[ @oldest_date = ] oldest_date` den ältesten Datensatz, der im Verlauf beibehalten werden soll. *oldest_date* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Wenn *oldest_date* angegeben wird, entfernt **sp_purge_jobhistory** nur Datensätze, die älter sind als der angegebene Wert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- Wenn **sp_purge_jobhistory** erfolgreich abgeschlossen wird, wird eine Meldung zurückgegeben.  
+## <a name="remarks"></a>Remarks  
+ Wenn **sp_purge_jobhistory** erfolgreich abgeschlossen ist, wird eine Meldung zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können diese gespeicherte Prozedur nur von Mitgliedern der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **SQLAgentOperatorRole** ausgeführt werden. Mitglieder von **sysadmin** können den Auftrags Verlauf für alle lokalen und Multiserveraufträge bereinigen. Mitglieder von **SQLAgentOperatorRole** können den Auftrags Verlauf nur für alle lokalen Aufträge löschen.  

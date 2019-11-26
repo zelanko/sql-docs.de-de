@@ -31,7 +31,7 @@ ms.locfileid: "72909085"
   Meldet Informationen zu einem Datenbankobjekt (alle in der **sys. sysobjects** -Kompatibilitäts Sicht aufgeführten Objekte), einen benutzerdefinierten Datentyp oder einen-Datentyp.  
   
  
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,7 +52,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 1.  Wenn **sp_help** ohne Argumente ausgeführt wird, werden zusammenfassende Informationen zu Objekten aller Typen zurückgegeben, die in der aktuellen Datenbank vorhanden sind.  
   
-    |Spaltenname|Datentyp|Description|  
+    |Spaltenname|Datentyp|und Beschreibung|  
     |-----------------|---------------|-----------------|  
     |**Name**|**nvarchar (** 128 **)**|Objektname|  
     |**Besitzer**|**nvarchar (** 128 **)**|Objektbesitzer (Dies ist der Datenbankprinzipal, der das Objekt besitzt. Wird standardmäßig auf den Besitzer des Schemas festgelegt, das das Objekt enthält.)|  
@@ -60,7 +60,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 2.  Wenn *Name* ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp oder ein benutzerdefinierter Datentyp ist, gibt **sp_help** dieses Resultset zurück.  
   
-    |Spaltenname|Datentyp|Description|  
+    |Spaltenname|Datentyp|und Beschreibung|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar (** 128 **)**|Name des Datentyps.|  
     |**Storage_type**|**nvarchar (** 128 **)**|Name des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typs|  
@@ -74,7 +74,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 3.  Wenn *Name* ein anderes Datenbankobjekt als ein-Datentyp ist, gibt **sp_help** dieses Resultset und auch zusätzliche Resultsets zurück, basierend auf dem angegebenen Objekttyp.  
 
-    |Spaltenname|Datentyp|Description|  
+    |Spaltenname|Datentyp|und Beschreibung|  
     |-----------------|---------------|-----------------|  
     |**Name**|**nvarchar (** 128 **)**|Tabellenname|  
     |**Besitzer**|**nvarchar (** 128 **)**|Tabellenbesitzer|  
@@ -87,7 +87,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für Spaltenobjekte zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|und Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar (** 128 **)**|Der Spaltenname.|  
         |**Typ**|**nvarchar (** 128 **)**|Der Spaltendatentyp.|  
@@ -96,13 +96,13 @@ sp_help [ [ @objname = ] 'name' ]
         |**Prec**|**char (** 5 **)**|Spaltengenauigkeit|  
         |**Dezimalstellen**|**char (** 5 **)**|Dezimalstellen einer Spalte|  
         |**NULL zulassen**|**varchar (** 35 **)**|Zeigt an, ob in der Spalte NULL-Werte zulässig sind: Yes oder No.|  
-        |**Trimtrailingblank**|**varchar (** 35 **)**|Nachfolgende Leerzeichen entfernen. Gibt Yes oder No zurück.|  
-        |**Fixedlennullinsource**|**varchar (** 35 **)**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
+        |**TrimTrailingBlanks**|**varchar (** 35 **)**|Nachfolgende Leerzeichen entfernen. Gibt Yes oder No zurück.|  
+        |**FixedLenNullInSource**|**varchar (** 35 **)**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
         |**Sortierung**|**sysname**|Sortierung der Spalte. NULL für Nicht-Zeichen-Datentypen.|  
   
     -   Zusätzliches Resultset, das für Identitätsspalten zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|und Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Identität**|**nvarchar (** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
         |**Säen**|**numeric**|Startwert für die Identitätsspalte|  
@@ -111,19 +111,19 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für Spalten zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|und Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**RowGuidCol**|**sysname**|Name der GUID-Spalte|  
   
     -   Zusätzliches Resultset, das für Dateigruppen zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|und Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Data_located_on_filegroup**|**nvarchar (** 128 **)**|Die Dateigruppe, in der sich die Daten befinden: primäre oder sekundäre Dateigruppe oder Transaktionsprotokoll|  
   
     -   Zusätzliches Resultset, das für Indizes zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|und Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Der Indexname.|  
         |**Index_description**|**varchar (** 210 **)**|Beschreibung des Index.|  
@@ -131,7 +131,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für Einschränkungen zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|und Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar (** 146 **)**|Einschränkungstyp|  
         |**constraint_name**|**nvarchar (** 128 **)**|Der Name der Einschränkung.|  
@@ -143,13 +143,13 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für verweisende Objekte zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|und Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Auf die Tabelle wird von verwiesen.**|**nvarchar (** 516 **)**|Identifiziert andere Datenbankobjekte, die auf die Tabelle verweisen.|  
   
     -   Zusätzliches Resultset, das für gespeicherte Prozeduren, Funktionen oder erweiterte gespeicherte Prozeduren zurückgegeben wird.  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|und Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|Name des Parameters der gespeicherten Prozedur|  
         |**Typ**|**nvarchar (** 128 **)**|Datentyp des Parameters der gespeicherten Prozedur|  
@@ -158,15 +158,15 @@ sp_help [ [ @objname = ] 'name' ]
         |**Dezimalstellen**|**int**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
         |**Param_order**|**smallint**|Reihenfolge der Parameter|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Die Prozedur **sp_help** sucht nur in der aktuellen Datenbank nach einem Objekt.  
   
- Wenn *Name* nicht angegeben wird, listet **sp_help** Objektnamen, Besitzer und Objekttypen für alle Objekte in der aktuellen Datenbank auf. **sp_helptrigger** stellt Informationen zu Triggern bereit.  
+ Wenn *Name* nicht angegeben wird, werden in **sp_help** Objektnamen, Besitzer und Objekttypen für alle Objekte in der aktuellen Datenbank aufgelistet. **sp_helptrigger** enthält Informationen zu Triggern.  
   
  **sp_help** macht nur sortierbare Index Spalten verfügbar. Daher werden keine Informationen über XML-Indizes oder räumliche Indizes bereitgestellt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Rolle. Der Benutzer muss mindestens eine Berechtigung für *objname*besitzen. Um Spalteneinschränkungsschlüssel, Standards oder Regeln anzuzeigen, müssen Sie über die VIEW DEFINITION-Berechtigung für die Tabelle verfügen.  
+ Erfordert die Mitgliedschaft in der Rolle **public** . Der Benutzer muss mindestens eine Berechtigung für *objname*besitzen. Um Spalteneinschränkungsschlüssel, Standards oder Regeln anzuzeigen, müssen Sie über die VIEW DEFINITION-Berechtigung für die Tabelle verfügen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -190,14 +190,14 @@ EXEC sp_help 'Person.Person';
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Datenbank-Engine gespeicherte Prozeduren &#40;Transact&#41; -SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md) -   
- [sp_helpindex &#40;Transact-SQL&#41; -](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
- [sp_helpuser &#40;Transact-SQL&#41; -](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [sys.sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

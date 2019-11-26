@@ -26,19 +26,19 @@ ms.locfileid: "72251317"
 >  Die Transact-SQL-Anweisungen für die im nachstehenden Verfahren aufgelisteten gespeicherten Prozeduren – mit Ausnahme von catalog.deploy_project – können problemlos generiert werden, indem Sie folgende Schritte ausführen:  
 > 
 >  1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]den Knoten **Integration Services-Kataloge** im Objekt-Explorer und navigieren Sie zu dem Paket, das Sie ausführen möchten.  
-> 2.  Klicken Sie mit der rechten Maustaste auf das Paket, und klicken Sie dann auf **Ausführen**.  
+> 2.  Klicken Sie mit der rechten Maustaste auf das Paket, und klicken Sie anschließend auf **Ausführen**.  
 > 3.  Legen Sie nach Bedarf Parameterwerte, Verbindungs-Manager-Eigenschaften und Optionen auf der Registerkarte **Erweitert** fest, zum Beispiel den Protokolliergrad.  
 > 
 >      Weitere Informationen zu Protokolliergraden finden Sie unter [Enable Logging for Package Execution on the SSIS Server](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md).  
-> 4.  Bevor Sie auf **OK** klicken, um das Paket auszuführen, klicken Sie auf **Skript**. Die Transact-SQL-Anweisung wird in einem Fenster des Abfrage-Editors in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] angezeigt.  
+> 4.  Bevor Sie auf **OK** klicken, um das Paket auszuführen, klicken Sie auf **Skript**. Die Transact-SQL-Anweisung wird in einem Fenster des Abfrage-Editors in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]angezeigt.  
   
 ## <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>So stellen Sie ein Paket mit gespeicherten Prozeduren bereit und führen es aus  
   
 1.  Rufen Sie [catalog.deploy_project &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) auf, um das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt bereitzustellen, das das Paket für den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server enthält.  
   
-     Um den binären Inhalt der Projekt Bereitstellungs Datei [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] abzurufen, verwenden Sie für den Parameter *\@project_stream* eine SELECT-Anweisung mit der OPENROWSET-Funktion und dem BULK-Rowsetanbieter. Der BULK-Rowsetanbieter ermöglicht es Ihnen, Daten aus einer Datei zu lesen. Das SINGLE_BLOB-Argument für den BULK-Rowsetanbieter gibt den Inhalt der Datendatei als einzeiliges, einspaltiges Rowset vom Typ "varbinary(max)" zurück. Weitere Informationen finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Um den binären Inhalt der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekt Bereitstellungs Datei abzurufen, verwenden Sie für den Parameter *\@project_stream* eine SELECT-Anweisung mit der OPENROWSET-Funktion und dem BULK-Rowsetanbieter. Der BULK-Rowsetanbieter ermöglicht es Ihnen, Daten aus einer Datei zu lesen. Das SINGLE_BLOB-Argument für den BULK-Rowsetanbieter gibt den Inhalt der Datendatei als einzeiliges, einspaltiges Rowset vom Typ "varbinary(max)" zurück. Weitere Informationen finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     Im folgenden Beispiel wird das SSISPackages_ProjectDeployment-Projekt im Ordner „SSIS-Pakete“ auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitgestellt. Die Binärdaten werden aus der Projektdatei (SSISPackage_ProjectDeployment. ispac) gelesen und im *\@projectbinary-* Parameter vom Typ varbinary (max) gespeichert. Der *\@projectbinary* -Parameterwert wird dem *\@project_stream-* Parameter zugewiesen.  
+     Im folgenden Beispiel wird das SSISPackages_ProjectDeployment-Projekt im Ordner „SSIS-Pakete“ auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server bereitgestellt. Die Binärdaten werden aus der Projektdatei (SSISPackage_ProjectDeployment. ispac) gelesen und im *\@projectbinary* -Parameter vom Typ "varbinary (max)" gespeichert. Der Parameterwert *\@ProjectBinary* wird dem Parameter *\@project_stream* zugewiesen.  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

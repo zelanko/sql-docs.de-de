@@ -36,7 +36,7 @@ ms.locfileid: "73775508"
   
 -   ICommand::Execute  
   
- Wenn die DBPROP_ACCESSORDER-Eigenschaft (in der Rowset-Eigenschaften Gruppe) auf einen der Werte DBPROPVAL_AO_SEQUENTIAL oder DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS festgelegt ist, sollte der Consumer nur eine einzelne Daten Zeile in einem Aufrufen der **GetNextRows** -Methode abrufen. Da BLOB-Daten nicht gepuffert werden. Ist der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM festgelegt, kann der Consumer mehrere Datenzeilen mit **GetNextRows** abrufen.  
+ Wenn die DBPROP_ACCESSORDER-Eigenschaft (in der Rowset-Eigenschaften Gruppe) auf einen der Werte DBPROPVAL_AO_SEQUENTIAL oder DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS festgelegt ist, sollte der Consumer nur eine einzelne Daten Zeile in einem Aufrufen der **GetNextRows** -Methode abrufen, da die BLOB-Daten nicht gepuffert werden. Ist der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM festgelegt, kann der Consumer mehrere Datenzeilen mit **GetNextRows** abrufen.  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ruft keine großen Daten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab, bis dies vom Consumer angefordert wird. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
   

@@ -29,7 +29,7 @@ ms.locfileid: "73882288"
   
 -   **So löschen Sie eine Veröffentlichung mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

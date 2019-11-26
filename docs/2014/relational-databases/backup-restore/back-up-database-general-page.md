@@ -25,7 +25,7 @@ ms.locfileid: "70155075"
  Weitere Informationen zu grundlegenden Sicherungskonzepten finden Sie unter [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
+>  Wenn Sie einen Sicherungstask mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
  **So verwenden Sie SQL Server Management Studio zum Erstellen einer Sicherung**  
   
@@ -40,12 +40,12 @@ ms.locfileid: "70155075"
   
 -   Für eine Teilsicherung müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) -Anweisung mit der Option PARTIAL verwenden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="source"></a>Source  
  Mithilfe der Optionen des Bereichs **Quelle** werden die Datenbank identifiziert und der Sicherungstyp und die Sicherungskomponente für den Sicherungsvorgang angegeben.  
   
- **Datenbank**  
+ **Database**  
  Wählen Sie die zu sichernde Datenbank aus.  
   
  **Wiederherstellungsmodell**  
@@ -56,12 +56,12 @@ ms.locfileid: "70155075"
   
 |Sicherungstyp|Verfügbar für|Restrictions|  
 |-----------------|-------------------|------------------|  
-|Vollständig|Datenbanken, Dateien und Dateigruppen|Bei der **master** -Datenbank sind nur vollständige Sicherungen möglich.<br /><br /> Beim einfachen Wiederherstellungsmodell sind Datei- und Dateigruppensicherungen nur für schreibgeschützte Dateigruppen verfügbar.|  
+|Full|Datenbanken, Dateien und Dateigruppen|Bei der **master** -Datenbank sind nur vollständige Sicherungen möglich.<br /><br /> Beim einfachen Wiederherstellungsmodell sind Datei- und Dateigruppensicherungen nur für schreibgeschützte Dateigruppen verfügbar.|  
 |Differenziell|Datenbanken, Dateien und Dateigruppen|Beim einfachen Wiederherstellungsmodell sind Datei- und Dateigruppensicherungen nur für schreibgeschützte Dateigruppen verfügbar.|  
 |Transaktionsprotokoll|Transaktionsprotokolle|Transaktionsprotokollsicherungen sind beim einfachen Wiederherstellungsmodell nicht verfügbar.|  
   
  **Kopiesicherung**  
- Wählen Sie diese Option aus, um eine Kopiesicherung zu erstellen. Eine *Kopiesicherung* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung, die unabhängig von der Sequenz von herkömmlichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungen erstellt wird. Weitere Informationen finden Sie unter [Kopiesicherungen &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+ Wählen Sie diese Option aus, um eine Kopiesicherung zu erstellen. Eine *Kopiesicherung* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung, die unabhängig von der Sequenz von herkömmlichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen erstellt wird. Weitere Informationen finden Sie unter [Kopiesicherungen &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
 > [!NOTE]  
 >  Wenn die Option **Differenziell** aktiviert ist, können Sie keine Kopiesicherung erstellen.  
@@ -73,7 +73,7 @@ ms.locfileid: "70155075"
   
 |||  
 |-|-|  
-|**Datenbank**|Gibt an, dass die gesamte Datenbank gesichert werden soll.|  
+|**Database**|Gibt an, dass die gesamte Datenbank gesichert werden soll.|  
 |**Dateien und Dateigruppen**|Gibt an, dass die angegebenen Dateien und/oder Dateigruppen gesichert werden sollen.<br /><br /> Durch das Auswählen dieser Option wird das Dialogfeld **Dateien und Dateigruppen auswählen** geöffnet. Nach dem Auswählen der zu sichernden Dateigruppen oder Dateien und dem Klicken auf **OK**wird die Auswahl im Feld **Dateien und Dateigruppen** angezeigt.|  
   
 ### <a name="destination"></a>Ziel  
@@ -88,15 +88,15 @@ ms.locfileid: "70155075"
 |||  
 |-|-|  
 |**Datenträger**|Sicherung auf einem Datenträger. Hierbei kann es sich um eine Systemdatei oder ein datenträgerbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Datenträger werden in der Liste **Sichern auf** angezeigt. Sie können bis zu 64 Datenträger für den Sicherungsvorgang auswählen.|  
-|**Band**|Sicherung auf einem Band. Hierbei kann es sich um ein lokales Bandlaufwerk oder ein bandbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Bänder werden in der Liste **Sichern auf** angezeigt. Es können maximal 64 Werte angegeben werden. Wenn keine Bandmedien mit dem Server verbunden sind, ist diese Option deaktiviert. Die ausgewählten Bänder werden in der Liste **Sichern auf** aufgeführt.<br /><br /> Hinweis: Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|**Band**|Sicherung auf einem Band. Hierbei kann es sich um ein lokales Bandlaufwerk oder ein bandbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Bänder werden in der Liste **Sichern auf** angezeigt. Es können maximal 64 Werte angegeben werden. Wenn keine Bandmedien mit dem Server verbunden sind, ist diese Option deaktiviert. Die ausgewählten Bänder werden in der Liste **Sichern auf** aufgeführt.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.|  
 |**URL**|Sichert in Azure BLOB Storage.|  
   
  Welche Optionen als Nächstes angezeigt werden, ist abhängig vom Typ des ausgewählten Ziels. Wenn Sie einen Datenträger oder ein Band auswählen, werden die folgenden Optionen angezeigt:  
   
  **Hinzufügen**  
- Fügt der Liste **Sichern auf** eine Datei oder ein Medium hinzu. Sie können auf 64 Medien gleichzeitig auf einem lokalen Datenträger oder Remotedatenträger sichern. Verwenden Sie den vollqualifizierten UNC-Namen (Universal Naming Convention), um eine Datei auf einem Remotedatenträger anzugeben. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.  
+ Fügt der Liste **Sichern auf** eine Datei oder ein Medium hinzu. Sie können auf 64 Medien gleichzeitig auf einem lokalen Datenträger oder Remotedatenträger sichern. Verwenden Sie den vollqualifizierten UNC-Namen (Universal Naming Convention), um eine Datei auf einem Remotedatenträger anzugeben. Weitere Informationen finden Sie unter [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
- **Entfernen**  
+ **Remove**  
  Entfernt mindestens ein aktuell ausgewähltes Medium aus der Liste **Sichern auf** .  
   
  **Inhalt**  
@@ -114,7 +114,7 @@ ms.locfileid: "70155075"
 >  Das Dialogfeld, das beim Klicken auf **Erstellen** geöffnet wird, erfordert ein Verwaltungszertifikat oder das Veröffentlichungsprofil für das Abonnement. Wenn Sie keinen Zugriff auf das Verwaltungszertifikat oder Veröffentlichungsprofil haben, können Sie SQL-Anmeldeinformationen erstellen, indem Sie den Namen des Speicherkontos und die Informationen zum Zugriffsschlüssel mithilfe von Transact-SQL oder SQL Server Management Studio angeben. Informationen zum Erstellen von Anmelde Informationen mithilfe von Transact-SQL finden Sie im Beispielcode im Thema [zum Erstellen](../security/authentication-access/create-a-credential.md#Credential) von Anmelde Informationen. Alternativ können Sie auf der Datenbank-Engine-Instanz in SQL Server Management Studio mit der rechten Maustaste auf **Sicherheit**klicken und **Neu**sowie **Anmeldeinformationen**auswählen. Geben Sie im Feld **Identität** den Namen des Speicherkontos und im Feld **Kennwort** den Zugriffsschlüssel an.  
   
  **Azure-Speichercontainer**  
- Geben Sie den Namen des Azure-Speicher Containers an.  
+ Geben Sie den Namen des Azure-Speichercontainers an.  
   
  **URL-Präfix:**  
  Wird automatisch entsprechend den Speicherkontoinformationen, die in den SQL-Anmeldeinformationen gespeichert sind, und dem Namen des Azure-Speichercontainers generiert. Es wird empfohlen, die Informationen in diesem Feld nur zu bearbeiten, wenn Sie eine Domäne mit einem anderen Format als **\<Speicherkonto.blob.core.windows.net** verwenden.  

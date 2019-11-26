@@ -27,7 +27,7 @@ ms.locfileid: "72783020"
   
 
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72783020"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  **So ändern Sie den Failovermodus eines Verfügbarkeitsreplikats**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Verfügbarkeitsreplikat hostet, und erweitern Sie die Serverstruktur.  
@@ -72,7 +72,7 @@ ms.locfileid: "72783020"
   
      Dabei gilt:  
   
-    -   *Gruppenname* ist der Name der Verfügbarkeitsgruppe.  
+    -   *group_name* ist der Name der Verfügbarkeitsgruppe.  
   
     -   { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
@@ -116,7 +116,7 @@ ms.locfileid: "72783020"
   
 Informationen zum Einrichten und Verwenden des SQL Server PowerShell Anbieters finden Sie unter [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md).
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
- [Verfügbarkeits &#40;Modi&#41; AlwaysOn-Verfügbarkeitsgruppen](availability-modes-always-on-availability-groups.md)    
+ [Verfügbarkeits &#40;Modi&#41; AlwaysOn-Verfügbarkeitsgruppen](availability-modes-always-on-availability-groups.md)   
  [Failover-und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md) 

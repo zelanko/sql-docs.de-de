@@ -40,23 +40,23 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` die ID des Auftrags. *job_id* ist vom Datentyp **uniqueidentifier**. der Standardwert ist NULL.  
+`[ @job_id = ] job_id` die Identifikationsnummer des Auftrags. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
 `[ @job_name = ] 'job_name'` den Namen des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Es muss entweder *job_id* oder *job_name* angegeben werden, aber beide können nicht angegeben werden.  
+>  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @server_name = ] 'server'` den Namen des Servers an, an dem der Auftrag ausgerichtet werden soll. der *Server* ist vom Datentyp **nvarchar (30)** , der Standardwert ist N ' (local) '. der *Server* kann entweder **(local)** für einen lokalen Server oder der Name eines vorhandenen Zielservers sein.  
+`[ @server_name = ] 'server'` den Namen des Servers ab, an dem der Auftrag ausgerichtet werden soll. der *Server* ist vom Datentyp **nvarchar (30)** , der Standardwert ist N ' (local) '. der *Server* kann entweder **(local)** für einen lokalen Server oder der Name eines vorhandenen Zielservers sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- **@no__t 1automatic_post** ist in **sp_add_jobserver**vorhanden, wird aber nicht unter Argumente aufgeführt. **\@automatic_post** ist für die interne Verwendung reserviert.  
+## <a name="remarks"></a>Remarks  
+ **\@automatic_post** ist in **sp_add_jobserver**vorhanden, wird aber nicht unter Argumente aufgeführt. **\@automatic_post** ist für die interne Verwendung reserviert.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
@@ -79,7 +79,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Im folgenden Beispiel wird die Ausführung des Auftrags `NightlyBackups` dem lokalen Server zugewiesen.  
   
 > [!NOTE]  
->  In diesem Beispiel wird davon ausgegangen, dass der `NightlyBackups`-Auftrag bereits vorhanden ist.  
+>  In diesem Beispiel wird davon ausgegangen, dass der `NightlyBackups` Auftrag bereits vorhanden ist.  
   
 ```  
 USE msdb ;  

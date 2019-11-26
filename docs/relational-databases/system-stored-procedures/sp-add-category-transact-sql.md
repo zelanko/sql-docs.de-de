@@ -45,32 +45,32 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @class = ] 'class'`Die Klasse der Kategorie, die hinzugefügt werden soll. die *Klasse* ist vom Datentyp **varchar (8)** und hat den Standardwert Job. die folgenden Werte sind möglich:  
+`[ @class = ] 'class'` die Klasse der Kategorie, die hinzugefügt werden soll. die *Klasse* ist vom Datentyp **varchar (8)** und hat den Standardwert Job. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|ReplTest1|und Beschreibung|  
 |-----------|-----------------|  
 |JOB|Fügt eine Auftragskategorie hinzu|  
 |ALERT|Fügt eine Warnungskategorie hinzu|  
 |OPERATOR|Fügt eine Operatorkategorie hinzu|  
   
-`[ @type = ] 'type'`Der Typ der Kategorie, die hinzugefügt werden soll. *Type ist vom Datentyp* **varchar (12)** und hat den Standardwert **local**. die folgenden Werte sind möglich:  
+`[ @type = ] 'type'` den Typ der Kategorie, die hinzugefügt werden soll. *Type ist vom Datentyp* **varchar (12)** und hat den Standardwert **local**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|ReplTest1|und Beschreibung|  
 |-----------|-----------------|  
 |LOCAL|Lokale Auftragskategorie|  
-|MULTISERVER|Eine Multiserver-Auftrags Kategorie.|  
-|Keine|Eine Kategorie für eine andere Klasse als Job **.**|  
+|MultiServer|Eine Multiserver-Auftrags Kategorie.|  
+|NONE|Eine Kategorie für eine andere Klasse als Job **.**|  
   
-`[ @name = ] 'name'`Der Name der Kategorie, die hinzugefügt werden soll. Der Name muss innerhalb der angegebenen Klasse eindeutig sein. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'name'` den Namen der hinzu zufügenden Kategorie. Der Name muss innerhalb der angegebenen Klasse eindeutig sein. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- **sp_add_category** muss von der **msdb** -Datenbank aus ausgeführt werden.  
+## <a name="remarks"></a>Remarks  
+ **sp_add_category** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_add_category**ausführen.  

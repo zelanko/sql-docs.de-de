@@ -49,6 +49,6 @@ ms.locfileid: "70154556"
  [Azure Developer Center](http://www.windowsazure.com/develop/overview/)   
  [Azure Manage Center](http://www.windowsazure.com/manage/overview/)   
  [Azure-Teamblog](http://www.windowsazure.com/community/blog/)   
- [Azure-Support Optionen](http://www.windowsazure.com/support/contact/)  
+ [Azure-Supportoptionen](http://www.windowsazure.com/support/contact/)  
   
   

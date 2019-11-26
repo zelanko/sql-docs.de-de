@@ -13,12 +13,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129366"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095590"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68129366"
   
 -   **REVOKE** entfernt vorhandene **GRANT**- oder **DENY**-Berechtigungen.  
   
- ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -241,9 +241,9 @@ REVOKE
 ### <a name="chart-of-permissions"></a>Diagramm der Berechtigungen  
  Alle Berechtigungen werden auf diesem Poster grafisch dargestellt. Dies ist die einfachste Methode, um die geschachtelte Hierarchie von Berechtigungen zu sehen. Zum Beispiel kann die Berechtigung **ALTER ON LOGIN** von sich selbst erteilt werden, wird jedoch auch enthalten, wenn ein Anmeldename die Berechtigung **CONTROL** für diesen Anmeldenamen erhält, oder wenn einem Anmeldenamen die Berechtigung **ALTER ANY LOGIN** erteilt wird.  
   
- ![APS-Poster über Sicherheitsberechtigungen](../../t-sql/statements/media/aps-security-perms-poster.png "APS security permissions poster")  
+ ![Poster der APS-Sicherheitsberechtigungen](../../t-sql/statements/media/aps-security-perms-poster.png "Poster der APS-Sicherheitsberechtigungen")  
   
- Dieses Poster können Sie in voller Größe unter [SQL Server PDW Permissions (SQL Server PDW-Berechtigungen)](https://go.microsoft.com/fwlink/?LinkId=244249) im Abschnitt „Dateien“ der APS-Yammer-Website herunterladen (oder per E-Mail von **apsdoc@microsoft.com** anfragen).  
+ Dieses Poster können Sie in voller Größe unter [SQL Server PDW-Berechtigungen](https://go.microsoft.com/fwlink/?LinkId=244249) im Abschnitt „Dateien“ der APS-Yammer-Website herunterladen (oder per E-Mail von **apsdoc\@microsoft.com** anfragen).  
   
 ## <a name="default-permissions"></a>Standardberechtigungen  
  In der folgenden Liste werden die Standardberechtigungen beschrieben:  

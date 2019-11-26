@@ -27,14 +27,14 @@ ms.locfileid: "73728066"
 > Sie können [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem Windows 10-Computer installieren, wenn Sie die Developer-Edition verwenden, die jetzt [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] unterstützt. 
 >>Weitere Informationen zur Betriebssystemunterstützung für unterschiedliche [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]-Editionen finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
 
-Einen Überblick darüber, wie Sie Daten in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] organisieren, finden Sie unter [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).     
+Einen Überblick darüber, wie Sie Daten in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]organisieren, finden Sie unter [Übersicht über Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).     
   
- Informationen zu den neuen Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] finden Sie unter [Neues in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
+ Informationen zu den neuen Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]organisieren, finden Sie unter [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
  
 Links zu Videos und Ressourcen zum Erlernen von [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]finden Sie unter [Erlernen von SQL Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Download**  
-> -   Navigieren Sie zum Herunterladen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
+> -   Um [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]herunterzuladen, navigieren Sie zum  **[Evaluierungscenter](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** , um einen virtuellen Computer zu starten, auf dem SQL Server bereits installiert ist.  
 > 
 > **Sie können keine MDS-Website erstellen?**
@@ -89,7 +89,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
    
 9. Bestätigen Sie auf der Seite **Funktionen**, dass die folgenden Funktionen ausgewählt sind, und klicken Sie dann auf **Weiter**. Diese Funktionen werden für [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] unter [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] benötigt.
   
-    |Funktionen|Funktionen|  
+    |Features|Features|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -129,7 +129,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
 3.  Geben Sie auf der Seite **Daten Bank Server** die SQL Server Instanz an. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] fügt Unterstützung für SQL Server verwaltete Instanz hinzu. Legen Sie den Wert **SQL Server Instanz** auf den Host einer verwalteten Azure SQL-Datenbank-Instanz fest. Beispiel: `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] fügt Unterstützung für SQL Server verwaltete Instanz hinzu. Legen Sie den Wert **SQL Server Instanz** auf den Host einer verwalteten Azure SQL-Datenbank-Instanz fest. Beispielsweise `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Wählen Sie den **Authentifizierungstyp** aus, und klicken Sie dann auf **Verbindung testen** , um zu bestätigen, dass Sie mithilfe der Anmelde Informationen für den von Ihnen ausgewählten Authentifizierungstyp eine Verbindung Klicken Sie auf **Weiter**.
 
@@ -210,10 +210,10 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
      For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
- Alternativ können Sie [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] verwenden, um andere Einstellungen für die der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank zugeordneten Webanwendungen und -dienste festzulegen. Beispielsweise können Sie festlegen, wie häufig Daten geladen werden oder wie oft Überprüfungs-E-Mails gesendet werden. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+ Alternativ können Sie [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] verwenden, um andere Einstellungen für die der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank zugeordneten Webanwendungen und -dienste festzulegen. Beispielsweise können Sie festlegen, wie häufig Daten geladen werden oder wie oft Überprüfungs-E-Mails gesendet werden. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ##  <a name="deploySample"></a> Bereitstellen von Beispielmodellen und -daten  
- Die folgenden drei Beispielmodellpakete sind in  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]enthalten.   Diese Beispielmodelle enthalten Daten. **Der Standardspeicherort für die Beispielmodellpakete ist: %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages**.
+ Die folgenden drei Beispielmodellpakete sind in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] enthalten.   Diese Beispielmodelle enthalten Daten. **Der Standardspeicherort für die Beispielmodellpakete ist: %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages**.
   
 -   chartofaccounts_en.pkg  
   

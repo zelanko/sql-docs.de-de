@@ -39,12 +39,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c10388d5becdbcfbe32f3247855e3e421ea7eaa7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909500"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095702"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,13 +195,13 @@ ms.locfileid: "72909500"
  In diesem Bereich können Sie die Beschreibung des Kontos anzeigen oder bearbeiten. Die Beschreibung ist optional.  
   
  **E-Mail-Adresse**  
- Hier können Sie den Namen der E-Mail-Adresse für das Konto anzeigen oder aktualisieren. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Ein Konto für Microsoft SQL Server Agent könnte E-Mails beispielsweise von der Adresse **SqlAgent@Adventure-Works.com** .  
+ Hier können Sie den Namen der E-Mail-Adresse für das Konto anzeigen oder aktualisieren. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Ein Konto für Microsoft SQL Server-Agent könnte E-Mails beispielsweise von der Adresse **SqlAgent\@Adventure-Works.com** aus versenden.  
   
  **Anzeigename**  
  Hier können Sie den Namen anzeigen oder bearbeiten, der in den von diesem Konto aus versendeten E-Mail-Nachrichten angezeigt wird. Der angezeigte Name ist optional. Es handelt sich dabei um den Namen, der in den von diesem Konto versendeten Nachrichten angezeigt wird. Ein Konto für SQL Server Agent könnte beispielsweise den Namen **SQL Server Agent Automated Mailer** in den E-Mails anzeigen.  
   
  **Antwort-E-Mail**  
- Hier können Sie die E-Mail-Adresse anzeigen und bearbeiten, die für Antworten auf E-Mail-Nachrichten für dieses Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto von SQL Server Agent könnten beispielsweise an den Datenbankadministrator gehen, **danw@Adventure-Works.com** .  
+ Hier können Sie die E-Mail-Adresse anzeigen und bearbeiten, die für Antworten auf E-Mail-Nachrichten für dieses Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto von SQL Server-Agent könnten beispielsweise an den Datenbankadministrator gehen, **danw\@Adventure-Works.com**.  
   
  **Servername**  
  Hier können Sie den Namen des SMTP-Servernamens anzeigen und bearbeiten, der zum Senden von E-Mail von diesem Konto verwendet wird. Normalerweise hat der Eintrag ein ähnliches Format wie **smtp.<Ihr_Unternehmen>.com**. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  

@@ -74,10 +74,10 @@ ms.locfileid: "73758336"
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |XML|XML|XML|Ntext|  
 |CLR-UDT (> 8KB)|udt|varbinary|Bild|  
-|Datum|Datum|varchar|Varchar|  
+|date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
-|Uhrzeit|Uhrzeit|varchar|Varchar|  
+|time|time|varchar|Varchar|  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Native Client Programmier](../../relational-databases/native-client/sql-server-native-client-programming.md)   

@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 14cbea00419743408b8ae15c34cefbb0dcaddb9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e33ca6d8afdb7aa9245bbdc6b0ad225dcd00dade
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914638"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982469"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt Informationen zu den aktuellen SET-Optionen zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,14 +42,14 @@ ms.locfileid: "67914638"
 ## <a name="return-types"></a>Rückgabetypen  
  **integer**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Die Optionen werden zurückgegeben, wenn Sie den **SET**-Befehl oder die **sp_configure-Benutzeroptionen** verwenden. Mithilfe des **SET**-Befehls konfigurierte Sitzungswerte überschreiben die **sp_configure**-Optionen. Viele Tools (beispielsweise [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) konfigurieren SET-Optionen automatisch. Jeder Benutzer verfügt über eine @@OPTIONS-Funktion, die die Konfiguration darstellt.  
   
- Sie können die Sprache und die Abfrageverarbeitungsoptionen für eine bestimmte Benutzersitzung mithilfe der SET-Anweisung ändern. **@@OPTIONS** kann nur die Optionen erkennen, die auf ON oder OFF festgelegt sind.  
+ Sie können die Sprache und die Abfrageverarbeitungsoptionen für eine bestimmte Benutzersitzung mithilfe der SET-Anweisung ändern. **\@\@OPTIONS** kann nur die Optionen erkennen, die auf ON oder OFF festgelegt sind.  
   
- Die **@@OPTIONS** -Funktion gibt eine Bitmap der Optionen zurück, konvertiert in einen Integer zur Basis 10 (dezimal). Die Biteinstellungen werden an den in einer Tabelle im Artikel [Konfigurieren der Benutzeroptionen für die Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) beschriebenen Orten gespeichert.  
+ Die **\@\@OPTIONS**-Funktion gibt eine Bitmap der Optionen zurück, die in einen Integer zur Basis 10 (dezimal) konvertiert wurde. Die Biteinstellungen werden an den in einer Tabelle im Artikel [Konfigurieren der Benutzeroptionen für die Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) beschriebenen Orten gespeichert.  
   
- Konvertieren Sie den von **@@OPTIONS** zurückgegebenen Integer in das Binärformat, und suchen Sie in der unter [Konfigurieren der Benutzeroptionen für die Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) aufgeführten Tabelle nach den Werten, um den **@@OPTIONS** -Wert zu decodieren. Wenn beispielsweise `SELECT @@OPTIONS;` den Wert `5496` zurückgibt, verwenden Sie den Windows-Rechner (**calc.exe**), um die Dezimalzahl `5496` ins Binärformat zu konvertieren. Das Ergebnis ist `1010101111000`. Die am weitesten rechts stehenden Zeichen (Binärwerte 1, 2 und 4) haben den Wert 0 (null), was darauf hindeutet, dass die ersten drei Elemente in der Tabelle deaktiviert sind. In der Tabelle sehen Sie, dass die Elemente **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS** und **CURSOR_CLOSE_ON_COMMIT** lauten. Das nächste Element (**ANSI_WARNINGS** an der Position `1000`) ist aktiviert. Fahren Sie auf der linken Seite mit der Bitmap und der Liste der Optionen fort. Wenn die ganz links stehenden Optionen einen Wert von 0 (null) aufweisen, wurden sie durch die Typkonvertierung abgeschnitten. Bei der Bitmap `1010101111000` handelt es sich tatsächlich um `001010101111000`, um alle 15 Optionen darzustellen.  
+ Konvertieren Sie den von **\@\@OPTIONS** zurückgegebenen Integer in das Binärformat, und suchen Sie in der unter [Konfigurieren der Benutzeroptionen für die Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) aufgeführten Tabelle nach den Werten, um den **\@\@OPTIONS**-Wert zu decodieren. Wenn beispielsweise `SELECT @@OPTIONS;` den Wert `5496` zurückgibt, verwenden Sie den Windows-Rechner (**calc.exe**), um die Dezimalzahl `5496` ins Binärformat zu konvertieren. Das Ergebnis ist `1010101111000`. Die am weitesten rechts stehenden Zeichen (Binärwerte 1, 2 und 4) haben den Wert 0 (null), was darauf hindeutet, dass die ersten drei Elemente in der Tabelle deaktiviert sind. In der Tabelle sehen Sie, dass die Elemente **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS** und **CURSOR_CLOSE_ON_COMMIT** lauten. Das nächste Element (**ANSI_WARNINGS** an der Position `1000`) ist aktiviert. Fahren Sie auf der linken Seite mit der Bitmap und der Liste der Optionen fort. Wenn die ganz links stehenden Optionen einen Wert von 0 (null) aufweisen, wurden sie durch die Typkonvertierung abgeschnitten. Bei der Bitmap `1010101111000` handelt es sich tatsächlich um `001010101111000`, um alle 15 Optionen darzustellen.  
   
 ## <a name="examples"></a>Beispiele  
   

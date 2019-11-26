@@ -26,7 +26,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882275"
 ---
-# <a name="delete-an-article"></a>Löschen eines Artikels
+# <a name="delete-an-article"></a>Delete an Article
   In diesem Thema wird beschrieben, wie ein Artikel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder Replikationsverwaltungsobjekten (RMO) gelöscht wird. Informationen über die Bedingungen, unter denen Artikel gelöscht werden können, und darüber, ob das Löschen eines Artikels eine neue Momentaufnahme oder die erneute Initialisierung der Abonnements erforderlich macht, finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
   
@@ -92,6 +92,6 @@ ms.locfileid: "73882275"
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
+ [Konzepte für gespeicherte Systemprozeduren für die Replikation](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

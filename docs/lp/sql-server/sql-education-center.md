@@ -1,21 +1,23 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure-Dokumentation
-description: Informationen zum Erstellen und Verwalten leistungsstarker Anwendungen mit Microsoft Azure-Clouddiensten. Hier erhalten Sie Dokumentation, Beispielcode, Tutorials und vieles mehr.
+experimental: true
+experiment_id: 81ba5f65-59fb-4d
+title: SQL Server Education Center
+description: Zusammenfassung von Ressourcen mit Informationen zu SQL Server und Azure SQL-Datenbank. Von Schnellstarts und Tutorials bis hin zu Microsoft Learn und LinkedIn Learning.
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 12/15/2018
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4430d76ac8e848127e9936bb6ecf8aa8b08e9982
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: b05ebcd71bed887d711705b3dffa99bf6ecf05fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176275"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637923"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -49,7 +51,7 @@ ms.locfileid: "70176275"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Virtuellen Computer mit SQL Server erhalten</span>
+                                    <span class="likeAnH3">Virtuellen Computer mit SQL Server anfordern</span>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +69,7 @@ ms.locfileid: "70176275"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server Management Studio herunterladen</span>
+                                    <span class="likeAnH3">Hier können Sie SQL Server Management Studio herunterladen.</span>
                                 </div>
                             </div>
                         </div>

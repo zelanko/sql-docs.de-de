@@ -1,39 +1,40 @@
 ---
-title: 'Lektion 1: untersuchen und Visualisieren von Daten mithilfe von Python und T-SQL'
-description: Tutorial zum Einbetten von python in SQL Server gespeicherte Prozeduren und T-SQL-Funktionen
+title: 'Python + T-SQL: Untersuchen von Daten'
+description: Tutorial zum Einbetten von Python in gespeicherte Prozeduren von SQL Server und T-SQL-Funktionen
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6ee82de1431a6bc21596505dc4b008b817b35830
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: ba5f48b7788b6ebec63149175568777e6659017f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714704"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725071"
 ---
 # <a name="explore-and-visualize-the-data"></a>Untersuchen und Visualisieren der Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dieser Artikel ist Teil eines Tutorials, [in-Database-python-Analyse für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md). 
+Dieser Artikel ist Teil des Tutorials [Datenbankinterne Python-Analysen für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md). 
 
-In diesem Schritt untersuchen Sie die Beispiel Daten und generieren einige Plots. Später erfahren Sie, wie Sie Grafik Objekte in python serialisieren und anschließend diese Objekte deserialisieren und Plots erstellen.
+In diesem Schritt untersuchen Sie die Beispieldaten und generieren einige Plots. Im späteren Verlauf erfahren Sie, wie Sie Grafikobjekte in Python serialisieren, anschließend deserialisieren und Plots erstellen.
 
 ## <a name="review-the-data"></a>Überprüfen der Daten
 
-Nehmen Sie sich zunächst eine Minute Zeit, um das Datenschema zu durchsuchen, da wir einige Änderungen vorgenommen haben, um die Verwendung der NYC Taxi-Daten zu vereinfachen.
+Nehmen Sie sich zunächst eine Minute, um das Datenschema zu durchsuchen, da einige Änderungen daran vorgenommen wurden, um die Verwendung der NYC Taxi-Daten zu vereinfachen.
 
-+ Das ursprüngliche DataSet verwendete separate Dateien für die Taxi-IDs und die Fahrt Datensätze. Wir haben die beiden ursprünglichen Datasets in den Spalten " _Medallion_", " _hack_license_" und " _pickup_datetime_" verknüpft.  
-+ Das ursprüngliche DataSet umfasste viele Dateien und war sehr umfangreich. Wir haben ein Downsampling durchgeführt, um nur 1% der ursprünglichen Anzahl von Datensätzen zu erhalten. Die aktuelle Datentabelle enthält 1.703.957 Zeilen und 23 Spalten.
++ Im ursprünglichen Dataset wurden separate Dateien für die Taxi-IDs und die Fahrtendatensätze verwendet. Die zwei ursprünglichen Datasets in den Spalten _medallion_, _hack_license_ und _pickup_datetime_ wurden zusammengeführt.  
++ Das ursprüngliche Dataset umfasste viele Dateien und war ziemlich groß. Das Dataset wurde reduziert, sodass nun nur noch 1 % der ursprünglichen Anzahl von Datensätzen vorliegt. Die aktuelle Datentabelle enthält 1.703.957 Zeilen und 23 Spalten.
 
 **Taxi-IDs**
 
-Die Spalte " _Medallion_ " stellt die eindeutige ID-Nummer des Taxis dar.
+Die Spalte _medallion_ stellt die eindeutige ID-Nummer des Taxis dar.
 
-Die _hack_license_ -Spalte enthält die Lizenznummer des Taxi Treibers (anonymisiert).
+Die Spalte _hack_license_ enthält das (anonymisierte) Kennzeichen des Taxifahrers.
 
 **Datensätze von Fahrten und Fahrpreisen**
 
@@ -43,39 +44,39 @@ Jeder Fahrpreisdatensatz enthält die Zahlungsinformationen wie die Zahlungsart,
 
 Die letzten drei Spalten können für verschiedene Machine Learning-Tasks verwendet werden.  Die Spalte _tip_amount_ enthält fortlaufende numerische Werte und kann als die **label** -Spalte für die Regressionsanalyse verwendet werden. Die Spalte _tipped_ verfügt nur über Ja/Nein-Werte und wird für die binäre Klassifikation verwendet. Die _tip_class_ -Spalte weist mehrere **Klassenbezeichnungen** auf und kann deshalb als Bezeichnung für mehrklassige Klassifizierungsaufgaben verwendet werden.
 
-Die Werte, die für die Bezeichnungs Spalten verwendet werden, `tip_amount` basieren alle auf der Spalte, die diese Geschäftsregeln verwendet:
+Die Werte für die Bezeichnungsspalten basieren alle auf der `tip_amount`-Spalte und verwenden folgende Geschäftsregeln:
 
-+ Die Bezeichnungs Spalte `tipped` hat die möglichen Werte 0 und 1.
++ Die Bezeichnungsspalte `tipped` kann die Werte „0“ (null) und „1“ enthalten.
 
-    , `tip_amount` Wenn > 0 `tipped` , = 1, `tipped` andernfalls = 0
+    Wenn `tip_amount` > 0, `tipped` = 1; andernfalls `tipped` = 0
 
-+ Die Bezeichnungs Spalte `tip_class` hat mögliche Klassen Werte 0-4
++ Die Bezeichnungsspalte `tip_class` kann Class-Werte von „0“ (null) bis „4“ enthalten.
 
-    Class 0: `tip_amount` = $0
+    Class 0: `tip_amount` = 0 $
 
-    Klasse 1: `tip_amount` > $0 und `tip_amount` < = $5
+    Class 1: `tip_amount` > 0 $ und `tip_amount` <= 5 $
     
-    Klasse 2: `tip_amount` > $5 und `tip_amount` < = $10
+    Class 2: `tip_amount` > 5 $ und `tip_amount` <= 10 $
     
-    Klasse 3: `tip_amount` > $10 und `tip_amount` < = $20
+    Class 3: `tip_amount` > 10 $ und `tip_amount` <= 20 $
     
-    Klasse 4: `tip_amount` > $20
+    Class 4: `tip_amount` > 20 $
 
-## <a name="create-plots-using-python-in-t-sql"></a>Erstellen von Plots mithilfe von python in T-SQL
+## <a name="create-plots-using-python-in-t-sql"></a>Erstellen von Plots mit Python in T-SQL
 
-Das Entwickeln einer Data Science-Lösung bringt normalerweise die intensive Untersuchung und Visualisierung von Daten mit sich. Da die Visualisierung ein leistungsfähiges Tool zum Verständnis der Verteilung der Daten und Ausreißer darstellt, bietet python viele Pakete zum Visualisieren von Daten. Das **matplotlib** -Modul ist eine der beliebtesten Bibliotheken für die Visualisierung und umfasst viele Funktionen zum Erstellen von Histogrammen, Punkt Diagrammen, Boxplots und anderen Diagrammen zum Durchsuchen von Daten.
+Das Entwickeln einer Data Science-Lösung bringt normalerweise die intensive Untersuchung und Visualisierung von Daten mit sich. Da die Visualisierung ein leistungsfähiges Tool für das Verständnis der Verteilung von Daten und Ausreißern ist, stellt Python viele Pakete für die Visualisierung von Daten bereit. Das **matplotlib**-Modul ist eine der beliebteren Bibliotheken für die Visualisierung und umfasst viele Funktionen zum Erstellen von Histogrammen, Punktdiagrammen, Boxplots und anderen Graphen für die Datenuntersuchung.
 
-In diesem Abschnitt erfahren Sie, wie Sie mit Diagrammen mithilfe gespeicherter Prozeduren arbeiten. Anstatt das Image auf dem Server zu öffnen, speichern Sie das Python- `plot` Objekt als **varbinary** -Daten, und schreiben Sie dieses in eine Datei, die an anderer Stelle freigegeben oder angezeigt werden kann.
+In diesem Abschnitt erfahren Sie, wie Sie mithilfe von gespeicherten Prozeduren mit Plots arbeiten. Anstatt das Bild auf dem Server zu öffnen, speichern Sie das Python-Objekt `plot` als Daten vom Typ **varbinary** und schreiben diese dann in eine Datei, die anderswo freigegeben oder angezeigt werden kann.
 
-### <a name="create-a-plot-as-varbinary-data"></a>Erstellen eines plotdiagramms als varbinary-Daten
+### <a name="create-a-plot-as-varbinary-data"></a>Erstellen eines Plots als varbinary-Daten
 
-Die gespeicherte Prozedur gibt ein serialisiertes python `figure` -Objekt als Datenstrom von **varbinary** -Daten zurück. Die Binärdaten können nicht direkt angezeigt werden. Sie können jedoch den Python-Code auf dem Client verwenden, um die Abbildungen zu deserialisieren und anzuzeigen, und dann die Bilddatei auf einem Client Computer speichern.
+Die gespeicherte Prozedur gibt ein serialisiertes `figure`-Pythonobjekt als **varbinary**-Datenstrom zurück. Sie können binäre Daten nicht direkt anzeigen, aber Sie können Python-Code auf dem Client verwenden, um die Abbildungen zu deserialisieren und anzuzeigen und um die Bilddatei anschließend auf einem Clientcomputer zu speichern.
 
-1. Erstellen Sie die gespeicherte Prozedur **pyplotmatplotlib**, wenn das PowerShell-Skript dies nicht bereits getan hat.
+1. Erstellen Sie die gespeicherte Prozedur **PyPlotMatplotlib**, wenn das PowerShell-Skript dies noch nicht getan hat.
 
-    - Die- `@query` Variable definiert den Abfrage `SELECT tipped FROM nyctaxi_sample`Text, der an den python-Codeblock als Argument für die Skript Eingabe Variable,, `@input_data_1`übermittelt wird.
-    - Das Python-Skript ist recht einfach: **matplotlib** `figure` -Objekte werden verwendet, um das Histogramm und das Punkt Diagramm zu erstellen, und diese Objekte werden `pickle` dann mithilfe der-Bibliothek serialisiert.
-    - Das python-Grafik Objekt wird zur Ausgabe in einen **Pandas** -dataframe serialisiert.
+    - Die Variable `@query` definiert den Abfragetext `SELECT tipped FROM nyctaxi_sample`, der als Argument für die Skripteingabevariable `@input_data_1` an den Python-Codeblock übergeben wird.
+    - Das Python-Skript ist relativ einfach: `figure`-Objekte von **matplotlib** werden verwendet, um das Histogramm und das Punktdiagramm zu erstellen. Anschließend werden diese Objekte mithilfe der `pickle`-Bibliothek serialisiert.
+    - Das Python-Grafikobjekt wird für die Ausgabe in einen **pandas**-Datenrahmen serialisiert.
   
     ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
@@ -133,13 +134,13 @@ Die gespeicherte Prozedur gibt ein serialisiertes python `figure` -Objekt als Da
     GO
     ```
 
-2. Führen Sie die gespeicherte Prozedur nun ohne Argumente aus, um einen Plot aus den Daten zu generieren, die als Eingabe Abfrage hart codiert sind.
+2. Führen Sie die gespeicherte Prozedur jetzt ohne Argumente aus, um ein Plot aus den Daten zu generieren, die als Eingabeabfrage hartcodiert sind.
 
     ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
-3. Die Ergebnisse sollten in etwa wie folgt aussehen:
+3. Die Ergebnisse sollten etwa wie folgt aussehen:
   
     ```sql
     plot
@@ -150,9 +151,9 @@ Die gespeicherte Prozedur gibt ein serialisiertes python `figure` -Objekt als Da
     ```
 
   
-4. Von einem [Python-Client](../python/setup-python-client-tools-sql.md)aus können Sie jetzt eine Verbindung mit der SQL Server-Instanz herstellen, die die binären plotobjekte generiert hat, und die Plots anzeigen. 
+4. Sie können nun über einen [Python-Client](../python/setup-python-client-tools-sql.md) einer Verbindung mit der SQL Server-Instanz herstellen, die die binären Plotobjekte generiert hat, und die Plots anzeigen. 
 
-    Führen Sie hierzu den folgenden Python-Code aus, wobei Sie den Servernamen, den Datenbanknamen und die Anmelde Informationen nach Bedarf ersetzen. Stellen Sie sicher, dass die Python-Version auf dem Client und dem Server identisch ist. Stellen Sie außerdem sicher, dass die python-Bibliotheken auf Ihrem Client (z. b. matplotlib) mit der gleichen oder einer höheren Version identisch sind, die auf dem Server installiert ist.
+    Führen Sie hierzu den folgenden Python-Code aus. Fügen Sie dabei die entsprechenden Servernamen, Datenbanknamen und Anmeldeinformationen ein. Stellen Sie sicher, dass die Python-Versionen auf dem Client und dem Server identisch sind. Stellen Sie außerdem sicher, dass die Python-Bibliotheken auf Ihrem Client (z. B. matplotlib) eine identische oder höhere Version als die auf dem Server installierten Bibliotheken aufweisen.
   
     **Verwenden der SQL Server-Authentifizierung:**
     
@@ -188,13 +189,13 @@ Die gespeicherte Prozedur gibt ein serialisiertes python `figure` -Objekt als Da
     print("The plots are saved in directory: ",os.getcwd())
     ```
 
-5.  Wenn die Verbindung erfolgreich hergestellt wurde, sollte eine Meldung wie die folgende angezeigt werden:
+5.  Wenn die Verbindung erfolgreich hergestellt wird, sollte eine Nachricht ähnlich der folgenden angezeigt werden:
   
     *Die Plots werden im folgenden Verzeichnis gespeichert: xxxx*
   
-6.  Die Ausgabedatei wird im python-Arbeitsverzeichnis erstellt. Um das Diagramm anzuzeigen, suchen Sie das python-Arbeitsverzeichnis, und öffnen Sie die Datei. Die folgende Abbildung zeigt eine auf dem Client Computer gespeicherte Grafik.
+6.  Die Ausgabedatei wird im Python-Arbeitsverzeichnis erstellt. Suchen Sie das Python-Arbeitsverzeichnis, und öffnen Sie die Datei, um den Plot anzuzeigen. In der folgenden Abbildung sehen Sie einen Plot, der auf dem Clientcomputer gespeichert wurde.
   
-    ![Trinkgeldbetrag im Vergleich zum Fahr Preis](media/sqldev-python-sample-plot.png "Trinkgeldbetrag im Vergleich zum Fahr Preis") 
+    ![Vergleich zwischen Trinkgeldern und Fahrpreisen](media/sqldev-python-sample-plot.png "Vergleich zwischen Trinkgeldern und Fahrpreisen") 
 
 ## <a name="next-step"></a>Nächster Schritt
 

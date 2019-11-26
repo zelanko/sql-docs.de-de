@@ -37,7 +37,7 @@ ms.locfileid: "73787412"
   
  In der folgenden Tabelle werden die vom Resultset zurückgegebenen Spalten aufgeführt:  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|und Beschreibung|  
 |-----------------|-----------------|  
 |DATA_TYPE|Gibt SQL_VARCHAR, SQL_VARBINARY oder SQL_WVARCHAR für die **varchar (max)** -Datentypen zurück.|  
 |TYPE_NAME|Gibt "varchar", "varbinary" oder "nvarchar" für die Datentypen **varchar (max)** , **varbinary (max)** und **nvarchar (max)** zurück.|  
@@ -79,7 +79,7 @@ ms.locfileid: "73787412"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns-Unterstützung für Spalten mit geringer Dichte  
  Zwei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmte Spalten wurden dem Resultset für SQLColumns hinzugefügt:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|SQL_TRUE, wenn die Spalte eine Sparsespalte ist, andernfalls SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Wenn es sich bei der Spalte um die **column_set** Spalte handelt, ist dies SQL_TRUE. andernfalls SQL_FALSE.|  

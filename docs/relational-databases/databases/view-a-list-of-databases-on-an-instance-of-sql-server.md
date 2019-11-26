@@ -1,6 +1,6 @@
 ---
-title: Anzeigen einer Liste der Datenbanken in einer Instanz von SQL Server | Microsoft-Dokumentation
-ms.custom: ''
+title: Anzeigen einer Liste der Datenbanken auf SQL Server
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,14 +20,14 @@ ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f445e54cf20edb107a50bef27857588b98e0895f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f6333815c8d741c69bd4d0ea651f6b31489881f
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127284"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056445"
 ---
-# <a name="view-a-list-of-databases-on-an-instance-of-sql-server"></a>Anzeigen einer Liste der Datenbanken in einer Instanz von SQL Server
+# <a name="view-list-of-databases-on-sql-server"></a>Anzeigen einer Liste der Datenbanken auf SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie eine Liste mit Datenbanken für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]angezeigt werden kann.  
   

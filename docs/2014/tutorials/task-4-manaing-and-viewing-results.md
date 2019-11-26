@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 4: Management-und Anzeigeergebnisse | Microsoft-Dokumentation'
+title: 'Aufgabe 4: Management-und Anzeigeergebnisse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72313648"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>Aufgabe 4: Management-und Anzeigeergebnisse
+# <a name="task-4-manaing-and-viewing-results"></a>Aufgabe 4: Verwalten und Anzeigen der Ergebnisse
   In dieser Aufgabe überprüfen Sie die Ergebnisse der computerunterstützten Bereinigung und führen auch die interaktive Bereinigung für Lieferantendaten aus. Weitere Informationen finden Sie in der interaktiven Bereinigungs [Phase](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) .  
   
 1.  Wählen Sie in der Liste der Domänen **Contact Email** Domain aus.  
   
-2.  Wechseln Sie im rechten Bereich zur Registerkarte **ungültig** . Beachten Sie, dass zwei e-Mail-Adressen, für die das Zeichen ' ' am Ende fehlt. Diese beiden e-Mails sind von der Domänen Regel ungültig, die erfordert, dass alle e-Mail-Adressen mit **\@adventure-Works.com** (mit ' ') enden. DQS verwendet die Domänenregel bei der Bereinigung, um zu bestimmen, ob eine E-Mail gültig ist. Diese Registerkarte zeigt die Domänenwerte an, die in der Wissensdatenbank als ungültig markiert wurden oder die eine Domänenregel verletzt haben. In diesem Fall haben diese Werte die Domänenregel (E-Mail-Überprüfung) verletzt.  
+2.  Wechseln Sie im rechten Bereich zur Registerkarte **ungültig** . Beachten Sie, dass zwei e-Mail-Adressen, für die das Zeichen ' ' am Ende fehlt. Diese beiden e-Mails sind von der Domänen Regel ungültig, die erfordert, dass alle e-Mail-Adressen mit **\@Adventure-Works.com** (mit ' ') enden. DQS verwendet die Domänenregel bei der Bereinigung, um zu bestimmen, ob eine E-Mail gültig ist. Diese Registerkarte zeigt die Domänenwerte an, die in der Wissensdatenbank als ungültig markiert wurden oder die eine Domänenregel verletzt haben. In diesem Fall haben diese Werte die Domänenregel (E-Mail-Überprüfung) verletzt.  
   
-3.  Geben Sie in der Spalte **korrigieren in** die richtige e-Mail-Adresse ein, die mit **\@adventure-Works.com** (mit ' ') endet.  
+3.  Geben Sie in der Spalte **korrigieren in** die richtige e-Mail-Adresse ein, die mit **\@Adventure-Works.com** (mit ' ') endet.  
   
      ![Korrekturen an]der e-Mail-Validierungs Regel(../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Korrekturen")  
   
@@ -32,7 +32,7 @@ ms.locfileid: "72313648"
   
 5.  Wechseln Sie zur Registerkarte **neu** im rechten Bereich. Die Werte in dieser Registerkarte sind die Werte, für die DQS noch nicht genug Informationen in der Wissensdatenbank hat, um zu bestimmen, ob die Werte richtig sind. Daher können keine Änderungen an Domänenwerten vorgenommen oder vorgeschlagen werden.  
   
-6.  Überprüfen Sie die Werte, um zu bestätigen, dass alle e-Mails mit **\@adventure-Works.com** enden, und klicken Sie auf der Symbolleiste auf **alle Bedingungen genehmigen** . Die genehmigten Werte aus dieser Registerkarte werden auf die Registerkarte **richtig** verschoben.  
+6.  Überprüfen Sie die Werte, um zu bestätigen, dass alle e-Mails mit **\@Adventure-Works.com** enden, und klicken Sie auf der Symbolleiste auf **alle Bedingungen genehmigen** . Die genehmigten Werte aus dieser Registerkarte werden auf die Registerkarte **richtig** verschoben.  
   
 7.  Wählen Sie die Domäne **Country** aus der Liste der Domänen aus.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72313648"
   
      ![Korrigierte](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "Lieferanten Namen") korrigierte Lieferanten Namen  
   
-    1.  Beachten Sie, dass **a. Datum Corp.** in **a. Datum Corporation** korrigiert wurde und der **Grund** auf **term-basierte Beziehung festgelegt ist. A. Datum Corporation @ no__t-0 ist ein bekannter Domänen Wert für DQS, weil er während des Wissens Ermittlungs Prozesses erkannt wurde. Daher ist DQS für diese Korrektur **100% sicher** .  
+    1.  Beachten Sie, dass **a. Datum Corp.** in **a. Datum Corporation** korrigiert wird und der **Grund** auf **Begriffs basierte Beziehung festgelegt ist. A. Datum Corporation** ist ein bekannter Domänen Wert für DQS, weil er während des Wissens Ermittlungs Prozesses erkannt wurde. Daher ist DQS für diese Korrektur **100% sicher** .  
   
     2.  Beachten Sie, dass **Lazy Country Storex** in **Lazy Country Store**korrigiert wird, der **Vertrauensgrad** auf **100%** festgelegt ist und der **Grund** auf den **Domänen Wert**festgelegt ist. Während des Wissens Ermittlungs Prozesses legen Sie **Lazy Country Storex** als Fehler bei **Lazy Country Store** als **Korrektur**fest, sodass die Korrektur durch DQS **100% sicher** ist.  
   
@@ -87,6 +87,6 @@ ms.locfileid: "72313648"
 25. Klicken Sie auf **weiter** , um zur Seite **exportieren** zu wechseln.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 5: Exportieren der Bereinigungs Ergebnisse in eine Excel-Datei @ no__t-0  
+ [Aufgabe 5: Exportieren der Bereinigungsergebnisse in eine Excel-Datei](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

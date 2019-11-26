@@ -23,7 +23,7 @@ ms.locfileid: "70212365"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Beschränkungen des Programmiermodells für die CLR-Integration
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Wenn Sie eine verwaltete gespeicherte Prozedur oder ein anderes verwaltetes Datenbankobjekt entwickeln, werden bestimmte Code Überprüfungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durchgeführt, die berücksichtigt werden müssen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]führt Überprüfungen der verwalteten Codeassembly aus, wenn Sie zum ersten Mal in der Datenbank registriert wird, mithilfe der **Create Assembly** -Anweisung und auch zur Laufzeit. Der verwaltete Code wird außerdem zur Laufzeit überprüft, da in einer Assembly Codepfade vorhanden sein können, die zur Laufzeit eigentlich nicht erreicht werden.  Dadurch wird Flexibilität für die Registrierung von Assemblys von Drittanbietern geschaffen, sodass eine Assembly nicht blockiert wird, wenn ein "Unsafe"-Code vorliegt, der in einer Clientumgebung ausgeführt werden soll, jedoch nie in der gehosteten CLR ausgeführt wird. Die Anforderungen, die der verwaltete Code erfüllen muss, hängen davon ab, ob die Assembly als **sicher**, **EXTERNAL_ACCESS**oder **unsicher**, **sicher, sicher** und im folgenden aufgeführt ist.  
+  Wenn Sie eine verwaltete gespeicherte Prozedur oder ein anderes verwaltetes Datenbankobjekt entwickeln, werden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bestimmte Code Prüfungen durchgeführt, die berücksichtigt werden müssen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt Überprüfungen der verwalteten Codeassembly aus, wenn Sie zum ersten Mal in der Datenbank registriert wird, mithilfe der **Create Assembly** -Anweisung und auch zur Laufzeit. Der verwaltete Code wird außerdem zur Laufzeit überprüft, da in einer Assembly Codepfade vorhanden sein können, die zur Laufzeit eigentlich nicht erreicht werden.  Dadurch wird Flexibilität für die Registrierung von Assemblys von Drittanbietern geschaffen, sodass eine Assembly nicht blockiert wird, wenn ein "Unsafe"-Code vorliegt, der in einer Clientumgebung ausgeführt werden soll, jedoch nie in der gehosteten CLR ausgeführt wird. Die Anforderungen, die der verwaltete Code erfüllen muss, hängen davon ab, ob die Assembly als **sicher**, **EXTERNAL_ACCESS**oder **unsicher**, **sicher, sicher** und im folgenden aufgeführt ist.  
   
  Neben den Einschränkungen, die für verwaltete Codeassemblys gelten, werden außerdem Sicherheitsberechtigungen für Code erteilt. Die CLR (Common Language Runtime) unterstützt ein Sicherheitsmodell, das als Codezugriffssicherheit für verwalteten Code bezeichnet wird. In diesem Modell werden Assemblys Berechtigungen auf Grundlage der Identität des Codes gewährt. **Sichere**, **EXTERNAL_ACCESS**und **unsichere** Assemblys verfügen über unterschiedliche CAS-Berechtigungen. Weitere Informationen finden Sie unter [CLR-Integration Code Zugriffssicherheit](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70212365"
   
 -   Die Assembly ist eine der unterstützten Assemblys. Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   Sie verwenden **Create Assembly from** _\<Location >,_ und alle referenzierten Assemblys und ihre Abhängigkeiten sind an  *\<Location >* verfügbar.  
+-   Sie verwenden **Create Assembly from** _\<Location >,_ und alle referenzierten Assemblys und ihre Abhängigkeiten sind an *\<Speicherort >* verfügbar.  
   
 -   Sie verwenden **Create Assembly from** _\<bytes... >,_ und alle Verweise werden mithilfe von durch Leerzeichen getrennten Bytes angegeben.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "70212365"
   
 -   Finalizer-Methoden werden nicht verwendet.  
   
- Die folgenden benutzerdefinierten Attribute sind in **EXTERNAL_ACCESS** -Assemblys nicht zulässig:  
+ Die folgenden benutzerdefinierten Attribute sind in **EXTERNAL_ACCESS** Assemblys nicht zulässig:  
   
 -   System.ContextStaticAttribute  
   
@@ -80,7 +80,7 @@ ms.locfileid: "70212365"
   
 ### <a name="safe"></a>SAFE  
   
--   Alle **EXTERNAL_ACCESS** -Assemblybedingungen werden geprüft.  
+-   Alle **EXTERNAL_ACCESS** Assemblybedingungen werden geprüft.  
   
 ## <a name="runtime-checks"></a>Laufzeitüberprüfungen  
  Zur Laufzeit wird die Codeassembly auf die folgenden Bedingungen überprüft. Wird eine dieser Bedingungen erkannt, darf der verwaltete Code nicht ausgeführt werden und es wird eine Ausnahme ausgelöst.  
@@ -117,8 +117,8 @@ ms.locfileid: "70212365"
  Alle **EXTERNAL_ACCESS** Bedingungen werden geprüft.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Unterstützte .NET Framework-Bibliotheken](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
- [Code Zugriffssicherheit für die CLR-Integration](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+ [Unterstützte .NET Framework Bibliotheken](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
+   der [CLR-Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
  [Host Schutz Attribute und Programmierung der CLR-Integration](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [Erstellen von Assemblys](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   

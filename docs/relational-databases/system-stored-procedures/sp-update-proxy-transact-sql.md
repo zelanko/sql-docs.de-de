@@ -49,25 +49,25 @@ sp_update_proxy
 ## <a name="arguments"></a>Argumente  
 `[ @proxy_id = ] id` die Proxy-ID des zu ändernden Proxys. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` den Namen des zu ändernden Proxys. *Proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @proxy_name = ] 'proxy_name'` den Namen des zu ändernden Proxys an. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @credential_name = ] 'credential_name'` der Name der neuen Anmelde Informationen für den Proxy. *Credential_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder *credential_name* oder *credential_id* angegeben werden.  
+`[ @credential_name = ] 'credential_name'` den Namen der neuen Anmelde Informationen für den Proxy. Der *credential_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es können entweder *credential_name* oder *credential_id* angegeben werden.  
   
-`[ @credential_id = ] credential_id` die Identifikationsnummer der neuen Anmelde Informationen für den Proxy. Der *credential_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder *credential_name* oder *credential_id* angegeben werden.  
+`[ @credential_id = ] credential_id` die Identifikationsnummer der neuen Anmelde Informationen für den Proxy. Der *credential_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es können entweder *credential_name* oder *credential_id* angegeben werden.  
   
-`[ @new_name = ] 'new_name'` den neuen Namen des Proxys. *New_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn angegeben, wird der Name des Proxys von der Prozedur in *new_name*geändert. Wenn für das Argument NULL festgelegt wird, bleibt der Name des Proxys unverändert.  
+`[ @new_name = ] 'new_name'` den neuen Namen des Proxys an. Der *new_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn bereitgestellt, ändert die Prozedur den Namen des Proxys in *new_name*. Wenn für das Argument NULL festgelegt wird, bleibt der Name des Proxys unverändert.  
   
-`[ @enabled = ] is_enabled` gibt an, ob der Proxy aktiviert ist. Das *is_enabled* -Flag ist vom Datentyp **tinyint**. der Standardwert ist NULL. Wenn *is_enabled* den Wert **0**hat, ist der Proxy nicht aktiviert und kann nicht von einem Auftrags Schritt verwendet werden. Wird für das Argument NULL festgelegt, bleibt der Status des Proxys unverändert.  
+`[ @enabled = ] is_enabled` gibt an, ob der Proxy aktiviert ist. Das *is_enabled* -Flag ist vom Datentyp **tinyint**. der Standardwert ist NULL. Wenn *is_enabled* **0**ist, ist der Proxy nicht aktiviert und kann nicht von einem Auftrags Schritt verwendet werden. Wird für das Argument NULL festgelegt, bleibt der Status des Proxys unverändert.  
   
 `[ @description = ] 'description'` die neue Beschreibung des Proxys. Die *Beschreibung* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. Wenn für das Argument NULL festgelegt wird, bleibt die Beschreibung des Proxys unverändert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Es muss entweder **\@proxy_name** oder **\@proxy_id** angegeben werden. Wenn beide Argumente angegeben werden, müssen sie sich beide auf denselben Proxy beziehen. Andernfalls erzeugt die gespeicherte Prozedur einen Fehler.  
   
- Zum Ändern der Anmelde Informationen für den Proxy muss entweder **\@credential_name** oder **\@credential_id** angegeben werden. Wenn beide Argumente angegeben werden, müssen sich beide auf dieselben Anmeldeinformationen beziehen, andernfalls erzeugt die gespeicherte Prozedur einen Fehler.  
+ Es muss entweder **\@credential_name** oder **\@credential_id** angegeben werden, um die Anmelde Informationen für den Proxy zu ändern. Wenn beide Argumente angegeben werden, müssen sich beide auf dieselben Anmeldeinformationen beziehen, andernfalls erzeugt die gespeicherte Prozedur einen Fehler.  
   
  Mit dieser Prozedur wird der Proxy geändert, jedoch nicht der Zugriff auf den Proxy. Verwenden Sie **sp_grant_login_to_proxy** und **sp_revoke_login_from_proxy**, um den Zugriff auf einen Proxy zu ändern.  
   
@@ -88,8 +88,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent gespeicherter &#40;Prozeduren Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Implementieren Sie SQL Server-Agent Sicherheits](../../ssms/agent/implement-sql-server-agent-security.md) .  
+ [SQL Server-Agent gespeicherte Prozeduren &#40;Transact&#41; -SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md) -   
+ [Implementieren SQL Server-Agent Sicherheits](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   

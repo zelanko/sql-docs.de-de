@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5245df31c2e3b31d95095fbb6770a786d4be6c03
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907077"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982805"
 ---
 # <a name="statistics"></a>Statistik
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +114,7 @@ ORDER BY s.name;
 * Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und bei einem [Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) von unter 130 verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen abnehmenden dynamischen Schwellenwert für das Statistikupdate, der gemäß der Anzahl von Zeilen in der Tabelle angepasst wird. Dieser berechnet sich als Quadratwurzel des Produkts von 1000 und der aktuellen Tabellenkardinalität. Wenn Ihre Tabelle beispielsweise 2 Millionen Zeilen enthält, entspricht die Berechnung SQRT (1000 × 2000000) = 44721,359. Durch diese Änderung werden Statistiken für große Tabellen häufiger aktualisiert. Weist eine Datenbank jedoch einen Kompatibilitätsgrad unter 130 auf, dann gilt der Schwellenwert [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
 
 > [!IMPORTANT]
-> Ab [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwenden Sie bei einem [Kompatibilitätsgrad der Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) unter 130 das [Ablaufverfolgungsflag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet dann einen abnehmenden dynamischen Schwellenwert für das Statistikupdate, der gemäß der Anzahl von Zeilen in der Tabelle angepasst wird.
+> Ab [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher unter [Kompatibilitätsgrad der Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) niedriger als 130 verwenden Sie [Ablaufverfolgungsflag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet einen abnehmenden, dynamischen Schwellenwert für das Statistikupdate, der sich entsprechend der Anzahl der Zeilen in der Tabelle anpasst.
   
 Bevor der Abfrageoptimierer eine Abfrage kompiliert und einen zwischengespeicherten Abfrageplan ausführt, sucht er nach veralteten Statistiken. Vor dem Kompilieren einer Abfrage ermittelt der Abfrageoptimierer anhand der Spalten, Tabellen und indizierten Sichten im Abfrageprädikat, welche Statistiken veraltet sein könnten. Vor dem Ausführen eines zwischengespeicherten Abfrageplans überprüft das [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ob der Abfrageplan auf aktuelle Statistiken verweist.  
   
@@ -153,7 +153,7 @@ Weitere Informationen zur Steuerung von AUTO_UPDATE_STATISTICS finden Sie unter 
 * Statistiken, die für interne Tabellen erstellt wurden.  
 * Statistiken, die mit räumlichen Indizes oder XML-Indizes erstellt wurden.  
   
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher. 
   
 ## <a name="CreateStatistics"></a> Zeitpunkt der Erstellung von Statistiken  
  Der Abfrageoptimierer erstellt bereits Statistiken in der folgenden Weise:  

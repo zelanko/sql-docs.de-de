@@ -14,7 +14,7 @@ ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 508d34ec59252407b79bb9863d82a46c6ce8627f
 ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/07/2019
 ms.locfileid: "73729856"
@@ -25,7 +25,7 @@ ms.locfileid: "73729856"
 
 Zeigt Verteilungs Informationen für Spalten in einer materialisierten Sicht an.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Column Name|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID des Objekts, zu dem die Spalte gehört. |  
 |column_id|**int**|Die ID der Spalte.|  
@@ -37,7 +37,7 @@ Erfordert die VIEW DATABASE STATE-Berechtigung.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Leistungsoptimierung mit materialisierter Sicht](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
+[Leistungsoptimierung durch materialisierte Sicht](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

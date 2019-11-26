@@ -12,19 +12,19 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34859c0c516c61a73e31dbf752ab274188c6343a
 ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797870"
 ---
 # <a name="import-the-sqlps-module"></a>Importieren des SQLPS-Moduls
-  Es wird empfohlen, zur Verwaltung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] über PowerShell das `sqlps`-Modul in eine Windows PowerShell 2.0-Umgebung zu importieren. Das Modul lädt und registriert die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Snap-Ins und -Verwaltbarkeitsassemblys.  
+  Es wird empfohlen, zur Verwaltung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] über PowerShell das `sqlps`-Modul in eine Windows PowerShell 2.0-Umgebung zu importieren. Das Modul lädt und registriert die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Snap-Ins und -Verwaltbarkeitsassemblys.  
   
-1.  **Vorbereitungen:**  [Sicherheit](#Security)  
+1.  **Vorbereitungen:** [Sicherheit](#Security)  
   
 2.  **So laden Sie das Modul:**  [Laden des sqlps-Moduls](#LoadSqlps)  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Vorbereitungsmaßnahmen  
  Nach dem Importieren des `sqlps`-Moduls in Windows PowerShell stehen Ihnen folgende Möglichkeiten zur Verfügung:  
   
 -   Interaktives Ausführen von Windows PowerShell-Befehlen  
@@ -60,7 +60,7 @@ ms.locfileid: "72797870"
 Import-Module "sqlps" -DisableNameChecking  
 ```  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [SQL Server PowerShell-Anbieter](../powershell/sql-server-powershell-provider.md)   
  [Verwenden der Datenbank-Engine-Cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

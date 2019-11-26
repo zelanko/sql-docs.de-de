@@ -23,7 +23,7 @@ ms.locfileid: "72797997"
 ## <a name="requirements-components-and-concepts"></a>Anforderungen, Komponenten und Konzepte  
  **In diesem Abschnitt:**  
   
--   [Security](#security)  
+-   [Sicherheit](#security)  
   
 -   [Einführung in die wichtigsten Komponenten und Konzepte](#intorkeyconcepts)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72797997"
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfordert, dass der Azure-Konto Name und die Zugriffsschlüssel Authentifizierung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Informationen gespeichert werden. Diese Informationen werden verwendet, um beim Ausführen von Sicherungs-oder Wiederherstellungs Vorgängen bei dem Azure-Konto zu authentifizieren.  
   
--   Das zum Ausgeben von BACKUP- oder RESTORE-Befehlen verwendete Benutzerkonto sollte Mitglied der Datenbankrolle **db_backup operator** sein und über Berechtigungen zum **Ändern beliebiger Anmeldeinformationen** verfügen.  
+-   Das zum Ausgeben von BACKUP- oder RESTORE-Befehlen verwendete Benutzerkonto sollte Mitglied der **db_backup operator** -Datenbankrolle sein und über **Alter any credential** -Berechtigungen verfügen.  
   
 ###  <a name="intorkeyconcepts"></a> Einführung in die wichtigsten Komponenten und Konzepte  
  In den folgenden beiden Abschnitten werden der Azure BLOB Storage-Dienst und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten vorgestellt, die beim Sichern oder Wiederherstellen des Azure-BLOB-Speicher Dienstanbieter verwendet werden. Es ist wichtig, die Komponenten und die Interaktion zwischen den Komponenten zu verstehen, um eine Sicherung oder Wiederherstellung aus dem Azure-BLOB-Speicherdienst durchzuführen.  
@@ -63,16 +63,16 @@ ms.locfileid: "72797997"
   
  **Container:** In einem Container können mehrere BLOBs gruppiert und eine unbegrenzte Anzahl von BLOBs gespeichert werden. Um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherung in den Azure-BLOB-Dienst zu schreiben, muss mindestens der Stamm Container erstellt werden.  
   
- **BLOB:** Eine Datei eines beliebigen Typs und beliebiger Größe. Es gibt zwei Typen von BLOBs, die im Azure-BLOB-Speicherdienst gespeichert werden können: Block-und seitenblobs. Bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung werden Seitenblobs als Blobtyp verwendet. BLOBs sind im folgenden URL-Format adressierbar: https://\<storage Account >. BLOB. Core. Windows. net/\<container >/\<blob >  
+ **BLOB:** Eine Datei eines beliebigen Typs und beliebiger Größe. Es gibt zwei Typen von BLOBs, die im Azure-BLOB-Speicherdienst gespeichert werden können: Block-und seitenblobs. Bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung werden Seitenblobs als Blobtyp verwendet. BLOBs sind im folgenden URL-Format adressierbar: https://\<Storage Account >. BLOB. Core. Windows. net/\<Container >/\<BLOB >  
   
- ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure BLOB-Speicher")  
+ ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
  Weitere Informationen zum Azure-BLOB-Speicherdienst finden [Sie unter Verwenden des Azure BLOB Storage Dienstanbieter](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/) .  
   
  Weitere Informationen zu Seitenblobs finden Sie unter [Grundlegendes zu Block- und Seitenblobs](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL:** Eine URL gibt einen URI (Uniform Resource Identifier) für eine eindeutige Sicherungsdatei an. Mit der URL werden Speicherort und Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungsdatei angegeben. In dieser Implementierung ist die einzige gültige URL eine, die auf ein seitenblob in einem Azure-Speicherkonto verweist. Die URL muss auf ein tatsächliches BLOB, nicht nur auf einen Container verweisen. Wenn das BLOB nicht vorhanden ist, wird es erstellt. Wenn ein vorhandenes BLOB angegeben wird, tritt bei der Sicherung ein Fehler auf, es sei denn, die with Format-Option ist angegeben.  
+ **URL:** Eine URL gibt einen URI (Uniform Resource Identifier) für eine eindeutige Sicherungsdatei an. Mit der URL werden Speicherort und Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungsdatei angegeben. In dieser Implementierung ist die einzige gültige URL eine, die auf ein seitenblob in einem Azure-Speicherkonto verweist. Die URL muss auf ein tatsächliches BLOB, nicht nur auf einen Container verweisen. Wenn das BLOB nicht vorhanden ist, wird es erstellt. Wenn ein vorhandenes BLOB angegeben wird, tritt bei der Sicherung ein Fehler auf, es sei denn, die with Format-Option ist angegeben.  
   
 > [!WARNING]  
 >  Wenn Sie eine Sicherungsdatei kopieren und in den Azure-BLOB-Speicherdienst hochladen möchten, verwenden Sie seitenblob als Speicher Option. Wiederherstellungen von Blockblobs werden nicht unterstützt. Die Ausführung von RESTORE für ein Blockblob verursacht einen Fehler.  
@@ -139,7 +139,7 @@ ms.locfileid: "72797997"
   
 |||||  
 |-|-|-|-|  
-|Argument|Supported|Exception|Kommentare|  
+|Argument|Supported|Ausnahme|Kommentare|  
 |DATABASE|&#x2713;|||  
 |LOG|&#x2713;|||  
 ||  
@@ -150,7 +150,7 @@ ms.locfileid: "72797997"
 |DIFFERENTIAL|&#x2713;|||  
 |COPY_ONLY|&#x2713;|||  
 |COMPRESSION&#124;NO_COMPRESSION|&#x2713;|||  
-|DESCRIPTION|&#x2713;|||  
+|Beschreibung|&#x2713;|||  
 |NAME|&#x2713;|||  
 |EXPIREDATE &#124; RETAINDAYS|&#x2713;|||  
 |NOINIT &#124; INIT|&#x2713;||Wenn diese Option verwendet wird, wird sie ignoriert.<br /><br /> Das Anfügen an BLOBs ist nicht möglich. Verwenden Sie zum Überschreiben einer Sicherung das FORMAT-Argument.|  
@@ -241,7 +241,7 @@ ms.locfileid: "72797997"
  [Erstellen von Anmeldeinformationen – Authentifizieren beim Azure-Speicher](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> SQL Server-Sicherung über URLs mithilfe des Wartungsplanungs-Assistenten  
- Ähnlich wie beim zuvor beschriebenen Sicherungs Task wurde der Wartungsplanungs-Assistent in SQL Server Management Studio erweitert, um die **URL** als eine der Ziel Optionen und andere unterstützende Objekte einzuschließen, die für die Sicherung im Azure-Speicher wie SQL benötigt werden. Anmelde Informationen. Weitere Informationen finden Sie unter der **Definieren von Sicherungstasks** im Abschnitt [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+ Ähnlich wie beim zuvor beschriebenen Sicherungs Task wurde der Wartungsplanungs-Assistent in SQL Server Management Studio erweitert, um die **URL** als eine der Ziel Optionen und andere unterstützende Objekte einzuschließen, die für die Sicherung im Azure-Speicher wie die SQL-Anmelde Informationen erforderlich sind. Weitere Informationen finden Sie unter der **Definieren von Sicherungstasks** im Abschnitt [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
   
 ##  <a name="RestoreSSMS"></a>Wiederherstellen aus Azure Storage mithilfe von SQL Server Management Studio  
  Wenn Sie eine Datenbank wiederherstellen, wird **URL** als Gerät für die Wiederherstellung eingeschlossen. Die folgenden Schritte beschreiben die Änderungen am Wiederherstellungs Task, um die Wiederherstellung aus Azure Storage zuzulassen:  
@@ -256,7 +256,7 @@ ms.locfileid: "72797997"
   
      [Datenbank wiederherstellen &#40;Seite Dateien&#41;](restore-database-files-page.md)  
   
-     [Datenbank wiederherstellen &#40;Seite Optionen&#41;](restore-database-options-page.md)  
+     [Datenbank wiederherstellen &#40;Seite „Optionen“&#41;](restore-database-options-page.md)  
   
 ##  <a name="Examples"></a> Codebeispiele  
  Dieser Abschnitt enthält die folgenden Beispiele.  
@@ -799,7 +799,7 @@ ms.locfileid: "72797997"
    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backuplogFile  -ToPointInTime (Get-Date).ToString()
    ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [Tutorial: SQL Server sichern und Wiederherstellen Azure BLOB Storage Dienstanbieter](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  

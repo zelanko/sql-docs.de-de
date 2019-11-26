@@ -36,7 +36,7 @@ ms.locfileid: "73787287"
 |---------------|-----------------------------|----------------------------------------------------------|  
 |*Name*|Der formale Parametername für einen Aufruf einer gespeicherten Prozedur; andernfalls eine Zeichenfolge mit der Länge 0.|Der Tabellenwertparameter-Spaltenname.|  
 |*Typeptr*|SQL_DESC_TYPE. Bei Tabellenwertparametern ist dies SQL_SS_TABLE.|SQL_DESC_TYPE|  
-|*Subtypeptr*|Nicht definiert|SQL_DESC_DATETIME_INTERVAL_CODE (für Datensätze vom Typ SQL_DATETIME oder SQL_INTERVAL)|  
+|*SubTypePtr*|Nicht definiert|SQL_DESC_DATETIME_INTERVAL_CODE (für Datensätze vom Typ SQL_DATETIME oder SQL_INTERVAL)|  
 |*Verlängert*|0|SQL_DESC_OCTET_LENGTH|  
 |*"Precisionptr"*|0|SQL_DESC_PRECISION|  
 |*Scaleptr*|0|SQL_DESC_SCALE|  
@@ -47,12 +47,12 @@ ms.locfileid: "73787287"
 ## <a name="sqlgetdescrec-support-for-enhanced-date-and-time-features"></a>SQLGetDescRec-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die für Datums-/Uhrzeittypen zurückgegebenen Werte lauten wie folgt:  
   
-||*Typeptr*|*Subtypeptr*|*Verlängert*|*"Precisionptr"*|*Scaleptr*|  
+||*Typeptr*|*SubTypePtr*|*Verlängert*|*"Precisionptr"*|*Scaleptr*|  
 |-|---------------|------------------|-----------------|--------------------|----------------|  
-|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|DateTime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|Datum|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
-|Uhrzeit|SQL_SS_TIME2|0|10|0..7|0..7|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "73787287"
  **Sqlgetdebug** unterstützt große benutzerdefinierte CLR-Typen (User-Defined Types, UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;(ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sqlgetdebug](https://go.microsoft.com/fwlink/?LinkId=80707) -   
+ [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Inlining benutzerdefinierter Skalarfunktionen in Datenbanken von Microsoft SQL Server | Microsoft-Dokumentation
-description: In diesem Artikel wird das Inlining benutzerdefinierter Skalarfunktionen erläutert, um die Leistung von Abfragen zu verbessern, die benutzerdefinierte Skalarfunktionen in SQL Server (2018 und höher) und Azure SQL-Datenbank aufrufen.
+description: In diesem Artikel wird das Inlining benutzerdefinierter Skalarfunktionen erläutert, um die Leistung von Abfragen zu verbessern, die benutzerdefinierte Skalarfunktionen in SQL Server (2019 und höher) und Azure SQL-Datenbank aufrufen.
 ms.custom: ''
 ms.date: 09/13/2019
 ms.prod: sql
@@ -15,40 +15,39 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909319"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926052"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dieser Artikel stellt eine Einführung in das Inlining benutzerdefinierter Skalarfunktionen dar. Dabei handelt es sich um ein Feature für die intelligente Abfrageverarbeitung. Durch dieses Feature wird die Leistung von Abfragen verbessert, die benutzerdefinierte Skalarfunktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aufrufen.
+Dieser Artikel stellt eine Einführung in das Inlining benutzerdefinierter Skalarfunktionen dar. Dabei handelt es sich um ein Feature für die [intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md). Durch dieses Feature wird die Leistung von Abfragen verbessert, die benutzerdefinierte Skalarfunktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] aufrufen.
 
-## <a name="t-sql-scalar-user-defined-functions"></a>Benutzerdefinierte Transact-SQL-Skalarfunktionen
-
-Benutzerdefinierte Funktionen (User-defined functions, UDF), die in Transact-SQL implementiert werden und einen einzelnen Datenwert zurückgeben, werden als benutzerdefinierte Transact-SQL-Skalarfunktionen bezeichnet. Benutzerdefinierte Transact-SQL-Funktionen sind gut geeignet, um Code in SQL-Abfragen wiederzuverwenden und Modularität zu erreichen. Einige Berechnungen (z.B. komplexe Geschäftsregeln) können einfacher in imperativer UDF-Form ausgedrückt werden. Mit benutzerdefinierten Funktionen können Sie eine komplexe Logik erstellen, ohne komplexe SQL-Abfragen schreiben zu können.
+## <a name="t-sql-scalar-user-defined-functions"></a>Benutzerdefinierte T-SQL-Skalarfunktionen
+Benutzerdefinierte Funktionen (User-defined functions, UDF), die in [!INCLUDE[tsql](../../includes/tsql-md.md)] implementiert werden und einen einzelnen Datenwert zurückgeben, werden als benutzerdefinierte T-SQL-Skalarfunktionen bezeichnet. Benutzerdefinierte T-SQL-Funktionen sind gut geeignet, um Code in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen wiederzuverwenden und Modularität zu erreichen. Einige Berechnungen (z.B. komplexe Geschäftsregeln) können einfacher in imperativer UDF-Form ausgedrückt werden. Mit benutzerdefinierten Funktionen können Sie eine komplexe Logik erstellen, ohne komplexe SQL-Abfragen schreiben zu können.
 
 ## <a name="performance-of-scalar-udfs"></a>Leistung von benutzerdefinierten Skalarfunktionen
-
 Die Leistung von benutzerdefinierten Skalarfunktionen ist aus folgenden Gründen häufig niedrig:
 
-- **Iterativer Aufruf:** Benutzerdefinierte Funktionen werden einmal pro qualifiziertem Tupel iterativ aufgerufen. Durch diese Funktionsaufrufe entstehen zusätzliche Kosten für den Kontextwechsel. Dies betrifft besonders benutzerdefinierte Funktionen, die SQL-Abfragen in ihrer Definition ausführen.
+- **Iterativer Aufruf:** Benutzerdefinierte Funktionen werden einmal pro qualifiziertem Tupel iterativ aufgerufen. Durch diese Funktionsaufrufe entstehen zusätzliche Kosten für den Kontextwechsel. Dies betrifft besonders benutzerdefinierte Funktionen, die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen in ihrer Definition ausführen.
+
 - **Keine Kostenberechnung:** Während der Optimierung fallen nur Kosten für relationale Operatoren an, nicht für Skalaroperatoren. Vor der Einführung benutzerdefinierter Skalarfunktionen waren andere Skalaroperatoren in der Regel günstig, sodass keine Kostenberechnung nötig war. Es war ausreichend, geringe CPU-Kosten für einen Skalarvorgang hinzuzufügen. In einigen Szenarios sind die tatsächlichen Kosten jedoch wichtig und werden dennoch nicht ausreichend repräsentiert.
+
 - **Interpretierte Ausführung:** Benutzerdefinierte Funktionen werden als Anweisungsbatch ausgewertet und Anweisung für Anweisung ausgeführt. Jede Anweisung wird kompiliert, und der kompilierte Plan wird zwischengespeichert. Die Zwischenspeicherung spart zwar Zeit, da Neukompilierungen vermieden werden, aber jede Anweisung wird isoliert ausgeführt. Es können keine anweisungsübergreifenden Optimierungen durchgeführt werden.
-- **Serielle Ausführung:** SQL Server lässt in Abfragen, die benutzerdefinierte Funktionen aufrufen, keinen abfrageinternen Parallelismus zu. 
+
+- **Serielle Ausführung:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt in Abfragen, die benutzerdefinierte Funktionen aufrufen, keinen abfrageinternen Parallelismus zu. 
 
 ## <a name="automatic-inlining-of-scalar-udfs"></a>Automatisches Inlining von benutzerdefinierrten Skalarfunktionen
-
-Mit dem Feature für das Inlining benutzerdefinierter Skalarfunktionen soll die Leistung von Abfragen verbessert werden, die benutzerdefinierte Transact-SQL-Skalarfunktionen ausführen, bei denen die Ausführung der benutzerdefinierten Funktion den entscheidenden Engpass darstellt.
+Mit dem Feature für das Inlining benutzerdefinierter Skalarfunktionen soll die Leistung von Abfragen verbessert werden, die benutzerdefinierte T-SQL-Skalarfunktionen ausführen, bei denen die Ausführung der benutzerdefinierten Funktion den entscheidenden Engpass darstellt.
 
 Mit diesem neuen Feature werden benutzerdefinierte Skalarfunktionen automatisch in Skalarausdrücke oder skalare Unterabfragen transformiert, die in der aufrufenden Abfrage den UDF-Operator ersetzen. Diese Ausdrücke und Unterabfragen werden anschließend optimiert. Dadurch enthält der Abfrageplan keinen UDF-Operator mehr. Seine Auswirkungen werden im Plan überwacht, z.B. Ansichten oder Inline-Tabellenwertfunktionen.
 
 ### <a name="example-1---single-statement-scalar-udf"></a>1\. Beispiel: Benutzerdefinierte Skalarfunktion mit einer einzelnen Anweisung
-
 Sehen Sie sich die folgende Abfrage an:
 
 ```sql
@@ -67,7 +66,6 @@ RETURNS DECIMAL (12,2) AS
 BEGIN
   RETURN @price * (1 - @discount);
 END
-
 ```
 
 Die Abfrage kann nun geändert werden, um diese benutzerdefinierte Funktion aufzurufen.
@@ -89,8 +87,7 @@ Wie zuvor beschrieben ist die Leistung der Abfrage mit der benutzerdefinierten F
 Diese Zahlen basieren auf einer CCI-Datenbank mit 10 GB (mit dem TPC-H-Schema), die auf einem Computer mit Dualprozessor (12 Kerne), 96 GB RAM und SSD-Sicherung ausgeführt wird. Dabei wurden die Kompilier- und die Ausführungszeit mit einem kalten Prozedurcache und Pufferpool eingeschlossen. Die Standardkonfiguration wurde verwendet, und es wurden keine weiteren Indizes erstellt.
 
 ### <a name="example-2---multi-statement-scalar-udf"></a>2\. Beispiel: Benutzerdefinierte Skalarfunktion mit einer mehreren Anweisungen
-
-Für benutzerdefinierte Skalarfunktionen, die über mehrere T-SQL-Anweisungen implementiert werden, z.B. Variablenzuweisungen und bedingte Verzweigungen, kann ebenfalls ein Inlining durchgeführt werden. Sehen Sie sich folgende benutzerdefinierte Skalarfunktion an, die die Servicekategorie für einen bestimmten Kunden bestimmt, wenn ein benutzerdefinierter Schlüssel vorhanden ist. Die Kategorie wird erreicht, indem zuerst der Gesamtpreis aller Bestellungen des Kunden mithilfe einer SQL-Abfrage berechnet wird. Anschließend wird eine `IF-ELSE`-Logik verwendet, um die Kategorie auf Grundlage des Gesamtpreises zu bestimmen.
+Für benutzerdefinierte Skalarfunktionen, die über mehrere T-SQL-Anweisungen implementiert werden, z.B. Variablenzuweisungen und bedingte Verzweigungen, kann ebenfalls ein Inlining durchgeführt werden. Sehen Sie sich folgende benutzerdefinierte Skalarfunktion an, die die Servicekategorie für einen bestimmten Kunden bestimmt, wenn ein benutzerdefinierter Schlüssel vorhanden ist. Die Kategorie wird erreicht, indem zuerst der Gesamtpreis aller Bestellungen des Kunden mithilfe einer SQL-Abfrage berechnet wird. Anschließend wird eine `IF (...) ELSE`-Logik verwendet, um die Kategorie auf Grundlage des Gesamtpreises zu bestimmen.
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.customer_category(@ckey INT) 
@@ -110,7 +107,6 @@ BEGIN
 
   RETURN @category;
 END
-
 ```
 
 Sehen Sie sich nun eine Abfrage an, die diese benutzerdefinierte Funktion aufruft.
@@ -119,11 +115,11 @@ Sehen Sie sich nun eine Abfrage an, die diese benutzerdefinierte Funktion aufruf
 SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 ```
 
-Der Ausführungsplan für diese Abfrage in SQL Server 2017 (Kompatibilitätsgrad 140 und früher) sieht folgendermaßen aus:
+Der Ausführungsplan für diese Abfrage in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (Kompatibilitätsgrad 140 und früher) sieht folgendermaßen aus:
 
 ![Abfrageplan ohne Inlining](./media/query-plan-without-udf-inlining.png)
 
-Der Plan zeigt, dass SQL Server in diesem Fall eine einfache Strategie übernimmt: Für jedes Tupel in der `CUSTOMER`-Tabelle werden die benutzerdefinierte Funktion aufgerufen und die Ergebnisse ausgegeben. Diese Strategie ist jedoch zu einfach und nicht effizient. Durch Inlining werden solche benutzerdefinierten Funktionen in gleichwertige skalare Unterabfragen transformiert, die die benutzerdefinierte Funktion in der aufrufenden Abfrage ersetzen.
+Der Plan zeigt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in diesem Fall eine einfache Strategie übernimmt: Für jedes Tupel in der `CUSTOMER`-Tabelle werden die benutzerdefinierte Funktion aufgerufen und die Ergebnisse ausgegeben. Diese Strategie ist jedoch zu einfach und nicht effizient. Durch Inlining werden solche benutzerdefinierten Funktionen in gleichwertige skalare Unterabfragen transformiert, die die benutzerdefinierte Funktion in der aufrufenden Abfrage ersetzen.
 
 Der Plan mit Inlining der benutzerdefinierten Funktion sieht für die gleiche Abfrage folgendermaßen aus.
 
@@ -131,15 +127,14 @@ Der Plan mit Inlining der benutzerdefinierten Funktion sieht für die gleiche Ab
 
 Wie zuvor erwähnt enthält der Abfrageplan keinen UDF-Operator mehr. Seine Auswirkungen sind nun im Plan ersichtlich, z.B. Ansichten oder Inline-Tabellenwertfunktionen. Hier sind die wichtigsten Beobachtungen, die aus dem obigen Plan resultieren:
 
-1. SQL Server hat den impliziten Join zwischen `CUSTOMER` und `ORDERS` abgeleitet und diesen über einen Joinoperator in einen expliziten transformiert.
-2. SQL Server hat außerdem die implizite `GROUP BY O_CUSTKEY on ORDERS`-Anweisung abgeleitet und „IndexSpool + StreamAggregate“ verwendet, um diese zu implementieren.
-3. SQL Server verwendet nun einen Parallelismus für alle Operatoren.
+-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat den impliziten Join zwischen `CUSTOMER` und `ORDERS` abgeleitet und diesen über einen Joinoperator in einen expliziten transformiert.
+-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat außerdem die implizite `GROUP BY O_CUSTKEY on ORDERS`-Anweisung abgeleitet und „IndexSpool + StreamAggregate“ verwendet, um diese zu implementieren.
+-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet nun einen Parallelismus für alle Operatoren.
 
 Je nach Komplexität der Logik in der benutzerdefinierten Funktion kann der resultierende Abfrageplan größer und komplexer werden. Wie Sie sehen können, handelt es sich bei den Vorgängen innerhalb der benutzerdefinierten Funktion nicht mehr um eine Blackbox. Deshalb kann der Abfrageoptimierer diese Vorgänge optimieren und deren Kosten berücksichtigen. Da die benutzerdefinierte Funktion sich nicht mehr im Plan befindet, wird der iterative Aufruf derselben durch einen Plan ersetzt, der den Aufwand, der durch Funktionsaufrufe entsteht, vollständig vermeidet.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Anforderungen für inlinefähige benutzerdefinierte Skalarfunktionen
-
-Für eine benutzerdefinierte T-SQL-Skalarfunktion kann ein Inlining durchgeführt werden, wenn alle der folgenden Bedingungen erfüllt sind:
+<a name="requirements"></a> Für eine benutzerdefinierte T-SQL-Skalarfunktion kann ein Inlining durchgeführt werden, wenn alle der folgenden Bedingungen erfüllt sind:
 
 - Die benutzerdefinierte Funktion wurde mit folgenden Konstrukten geschrieben:
     - `DECLARE`, `SET`: Variablendeklaration und -zuweisungen
@@ -167,22 +162,33 @@ Für eine benutzerdefinierte T-SQL-Skalarfunktion kann ein Inlining durchgeführ
 <sup>3</sup> Intrinsische Funktionen, deren Ergebnisse von der aktuellen Systemzeit abhängen, sind zeitabhängig. Ein Beispiel für eine Funktion mit Nebeneffekten ist eine intrinsische Funktion, die einen internen globalen Status aktualisieren kann. Solche Funktionen geben bei jedem Aufruf unterschiedliche Ergebnisse auf Grundlage des internen Status zurück.
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>So überprüfen Sie, ob ein Inlining einer benutzerdefinierten Funktion möglich ist
+Für jede benutzerdefinierte T-SQL-Skalarfunktion enthält die Katalogansicht [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) eine Eigenschaft namens `is_inlineable`, die angibt, ob für eine benutzerdefinierte Funktion ein Inlining möglich ist. 
 
-Für jede benutzerdefinierte T-SQL-Skalarfunktion enthält die Katalogansicht [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) eine Eigenschaft namens `is_inlineable`, die angibt, ob für eine benutzerdefinierte Funktion ein Inlining möglich ist. Der Wert 1 gibt an, dass ein Inlining möglich ist, während der Wert 0 angibt, dass kein Inlining möglich ist. Diese Eigenschaft enthält für alle Inline-Tabellenwertfunktionen den Wert 1. Für alle anderen Module ist der Wert 0.
+> [!NOTE]
+> Die `is_inlineable`-Eigenschaft wird von den Konstrukten abgeleitet, die in der Definition der benutzerdefinierten Skalarfunktion gefunden werden. Es wird nicht überprüft, ob für die benutzerdefinierte Funktion zum Zeitpunkt der Kompilierung tatsächlich ein Inlining möglich ist. Weitere Informationen finden Sie im Abschnitt zu den [Bedingungen für Inlining](#requirements).
 
->[!NOTE]
->Wenn ein Inlining für eine benutzerdefinierte Skalarfunktion möglich ist, bedeutet das nicht, dass immer ein Inlining durchgeführt wird. SQL Server entscheidet (pro Abfrage und pro benutzerdefinierter Funktion), ob für eine benutzerdefinierte Funktion ein Inlining durchgeführt wird. Wenn die Definition der benutzerdefinierten Funktion beispielsweise zu Tausenden Codezeilen führt, führt SQL Server für diese möglicherweise kein Inlining durch. Für eine benutzerdefinierte Funktion in einer `GROUP BY`-Klausel wird ebenfalls kein Inlining durchgeführt. Diese Entscheidung erfolgt, wenn die Abfrage, die auf eine benutzerdefinierte Skalarfunktion verweist, kompiliert wird.
+Der Wert 1 gibt an, dass ein Inlining möglich ist, während der Wert 0 angibt, dass kein Inlining möglich ist. Diese Eigenschaft enthält für alle Inline-Tabellenwertfunktionen den Wert 1. Für alle anderen Module ist der Wert 0.
+
+Wenn ein Inlining für eine benutzerdefinierte Skalarfunktion möglich ist, bedeutet das nicht, dass immer ein Inlining durchgeführt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entscheidet (pro Abfrage und pro benutzerdefinierter Funktion), ob für eine benutzerdefinierte Funktion ein Inlining durchgeführt wird. Einige Beispiele, in denen für eine benutzerdefinierte Funktion möglicherweise kein Inlining durchgeführt werden kann, finden Sie im Folgenden:
+
+-  Wenn die Definition der benutzerdefinierten Funktion beispielsweise zu Tausenden Codezeilen führt, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für diese möglicherweise kein Inlining durch. 
+-  Wenn eine benutzerdefinierte Funktion in einer `GROUP BY`-Klausel aufgerufen wird, wird kein Inlining durchgeführt. Diese Entscheidung erfolgt, wenn die Abfrage, die auf eine benutzerdefinierte Skalarfunktion verweist, kompiliert wird.
+-  Die benutzerdefinierte Funktion ist mit einem Zertifikat signiert. Signaturen können nach dem Erstellen einer benutzerdefinierte Funktion hinzugefügt und gelöscht werden können. Deshalb wird bei der Kompilierung der Abfrage, die auf eine benutzerdefinierte Skalarfunktion verweist, entschieden, ob für diese ein Inlining durchgeführt werden soll oder nicht. Systemfunktionen sind z. B. in der Regel mit einem Zertifikat signiert. Sie können [sys.crypt_properties](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md) verwenden, um zu ermitteln, welche Objekte signiert sind. 
+
+   ```sql
+   SELECT * 
+   FROM sys.crypt_properties AS cp
+   INNER JOIN sys.objects AS o ON cp.major_id = o.object_id;
+   ```
 
 ### <a name="checking-whether-inlining-has-happened-or-not"></a>So überprüfen Sie, ob ein Inlining durchgeführt wurde
-
-Wenn alle Bedingungen erfüllt sind und SQL Server ein Inlining durchführt, wird die benutzerdefinierte Funktion in einen relationalen Ausdruck transformiert. Über den Abfrageplan können Sie einfach feststellen, ob ein Inlining durchgeführt wurde:
+Wenn alle Bedingungen erfüllt sind und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Inlining durchführt, wird die benutzerdefinierte Funktion in einen relationalen Ausdruck transformiert. Über den Abfrageplan können Sie einfach feststellen, ob ein Inlining durchgeführt wurde:
 
 - Die XML des Plans enthält keinen `<UserDefinedFunction>`-XML-Knoten für eine benutzerdefinierte Funktion, für die erfolgreich ein Inlining durchführt wurde. 
 - Bestimmte erweiterte Events (XEvents) werden ausgegeben.
 
 ## <a name="enabling-scalar-udf-inlining"></a>Aktivieren des Inlinings benutzerdefinierter Skalarfunktionen
-
-Sie können Workloads automatisch für das Inlining benutzerdefinierter Skalarfunktionen zulassen, indem Sie den Kompatibilitätsgrad 150 für die Datenbank aktivieren. Diesen können Sie mit Transact-SQL festlegen. Beispiel:  
+Sie können Workloads automatisch für das Inlining benutzerdefinierter Skalarfunktionen zulassen, indem Sie den Kompatibilitätsgrad 150 für die Datenbank aktivieren. Diesen können Sie mit [!INCLUDE[tsql](../../includes/tsql-md.md)] festlegen. Beispiel:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -191,7 +197,6 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 Es müssen keine weiteren Änderungen vorgenommen, damit dieses Feature für benutzerdefinierte Funktionen oder Abfragen verwendet werden kann.
 
 ## <a name="disabling-scalar-udf-inlining-without-changing-the-compatibility-level"></a>Deaktivieren des Inlinings von benutzerdefinierten Skalarfunktionen ohne Änderung des Kompatibilitätsgrads
-
 Das Inlining von benutzerdefinierten Skalarfunktionen kann im Datenbank- oder Anweisungs-, oder UDF-Bereich deaktiviert werden, während der Datenbankkompatibilitätsgrad weiterhin bei 150 und höher bleibt. Führen Sie folgende Anweisung im Kontext einer Datenbank aus, um das Inlining für benutzerdefinierte Skalarfunktionen im Datenbankbereich zu deaktivieren: 
 
 ```sql
@@ -227,7 +232,7 @@ WITH INLINE = OFF
 AS
 BEGIN
     RETURN @price * (1 - @discount);
-END
+END;
 ```
 
 Sobald die oben genannte Anweisung ausgeführt wurde, wird für diese benutzerdefinierte Funktion kein Inlining durchgeführt, wenn sie von einer Abfrage aufgerufen wird. Führen Sie folgende Anweisung aus, um das Inlining für diese benutzerdefinierte Funktion wieder zu aktivieren:
@@ -242,11 +247,10 @@ BEGIN
 END
 ```
 
->[!NOTE]
->Die `INLINE`-Klausel ist nicht verbindlich. Wenn die `INLINE`-Klausel nicht festgelegt ist, wird sie automatisch auf `ON`/`OFF` festgelegt, je nachdem, ob ein Inlining für die benutzerdefinierte Funktion durchgeführt werden kann. Wenn `INLINE=ON` festgelegt ist, aber für die benutzerdefinierte Funktion kein Inlining durchgeführt werden kann, wird ein Fehler ausgegeben.
+> [!NOTE]
+> Die `INLINE`-Klausel ist nicht verbindlich. Wenn die `INLINE`-Klausel nicht festgelegt ist, wird sie automatisch auf `ON`/`OFF` festgelegt, je nachdem, ob ein Inlining für die benutzerdefinierte Funktion durchgeführt werden kann. Wenn `INLINE = ON` festgelegt ist, aber für die benutzerdefinierte Funktion kein Inlining durchgeführt werden kann, wird ein Fehler ausgegeben.
 
 ## <a name="important-notes"></a>Wichtige Hinweise
-
 Wie in diesem Artikel beschrieben wurde, wird beim Inlining einer benutzerdefinierten Skalarfunktion eine Abfrage mit benutzerdefinierten Skalarfunktionen in eine Abfrage mit einer gleichwertigen skalaren Unterabfrage transformiert. Durch diese Transformation kann es in folgenden Szenarios zu Unterschieden bei der Verhaltensweise kommen:
 
 1. Das Inlining führt zu einem anderen Abfragehash für den gleichen Abfragetext.
@@ -254,16 +258,11 @@ Wie in diesem Artikel beschrieben wurde, wird beim Inlining einer benutzerdefini
 1. Joinhinweise auf Abfrageebene sind möglicherweise nicht mehr gültig, da durch das Inlining neue Joins hinzugefügt werden. Sie müssen stattdessen lokale Joinhinweise verwenden.
 1. Ansichten, die auf benutzerdefinierte Inlineskalarfunktionen verweisen, können nicht indiziert werden. Wenn Sie einen Index in einer entsprechenden Ansicht erstellen müssen, sollten Sie das Inlining für die benutzerdefinierten Funktionen deaktivieren, auf die verwiesen wird.
 1. Durch das Inlining benutzerdefinierter Funktionen kann das Verhalten der [dynamischen Datenmaskierung](../security/dynamic-data-masking.md) sich ändern. In bestimmten Situationen (je nach Logik in der benutzerdefinierten Funktion) in Bezug auf das Maskieren von Ausgabespalten einen konservativeren Ansatz dar. In Szenarios, bei denen es sich bei den Spalten, auf die in einer benutzerdefinierten Funktion verwiesen wird, nicht um Ausgabespalten handelt, werden diese nicht maskiert. 
-1. Wenn eine benutzerdefinierte Funktion auf integrierte Funktionen wie `SCOPE_IDENTITY()` verweist, ändert sich der Wert, der von der integrierten Funktion zurückgegeben wird, durch das Inlining. Diese Änderung im Verhalten geht darauf zurück, dass das Inlining den Bereich der Anweisungen in der benutzerdefinierten Funktion ändert.
+1. Wenn eine benutzerdefinierte Funktion auf integrierte Funktionen wie `SCOPE_IDENTITY()`, `@@ROWCOUNT` oder `@@ERROR` verweist, ändert sich der Wert, der von der integrierten Funktion zurückgegeben wird, durch das Inlining. Diese Änderung im Verhalten geht darauf zurück, dass das Inlining den Bereich der Anweisungen in der benutzerdefinierten Funktion ändert.
 
 ## <a name="see-also"></a>Weitere Informationen
-
-[Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
-
-[Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)
-
-[Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)
-
-[Joins](../../relational-databases/performance/joins.md)
-
-[Veranschaulichung der adaptiven Abfrageverarbeitung](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)
+[Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
+[Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)     
+[Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
+[Joins](../../relational-databases/performance/joins.md)     
+[Demo zur intelligenten Abfrageverarbeitung](https://aka.ms/IQPDemos)      

@@ -56,7 +56,7 @@ ms.locfileid: "71952493"
  [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
  Erläutert das Verwenden und Verwalten von Verschlüsselungsschlüsseln beim Speichern von sensiblen Daten.  
   
- [Manage a Reporting Services Native Mode Report Server (Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus)](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+ [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
  Bietet Schritt-für-Schritt-Anweisungen für häufige Aufgaben.  
   
  [Konfigurations-Manager für Reporting Services F1-Hilfe &#40;Themen SSRS im einheitlichen Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  

@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 900a5b469fec529c351e290c76fd380dbb917710
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680780"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982820"
 ---
 # <a name="collation-and-unicode-support"></a>Unterstützung von Sortierungen und Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +458,7 @@ Wenn Sie nur Zeichenspalten und Codepages verwenden, müssen Sie sicherstellen, 
 Es wäre schwierig, eine Codepage für Zeichendatentypen auszuwählen, die alle Zeichen unterstützt, die weltweit verwendet werden. Die einfachste Möglichkeit, Zeichendaten in internationalen Datenbanken zu verwalten, besteht darin, immer einen Datentyp zu verwenden, der Unicode unterstützt. 
 
 ### <a name="unicode-data-types"></a>Unicode-Datentypen
-Wenn Sie Zeichendaten speichern, die mehrere Sprachen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]widerspiegeln ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), verwenden Sie Unicode-Datentypen (**nchar**, **nvarchar** und **ntext**) anstelle von Nicht-Unicode-Datentypen (**char**, **varchar** und **text**). 
+Wenn Sie Zeichendaten speichern, die mehrere Sprachen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] widerspiegeln ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher), verwenden Sie Unicode-Datentypen (**nchar**, **nvarchar** und **ntext**) anstelle von Nicht-Unicode-Datentypen (**char**, **varchar** und **text**). 
 
 > [!NOTE]
 > Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] kann bei Unicode-Datentypen bis zu 65.535 Zeichen mit UCS-2 oder den gesamten Unicode-Bereich (1.114.111 Zeichen) darstellen, wenn ergänzende Zeichen verwendet werden. Weitere Informationen zum Aktivieren von ergänzenden Zeichen finden Sie unter [Ergänzende Zeichen](#Supplementary_Characters).
@@ -473,7 +473,7 @@ Wenn Sie Daten von einem Server auf einen Client verschieben, wird die Serversor
 > [!TIP]
 > Sie können auch versuchen, eine andere Sortierung für die Daten auf dem Server zu verwenden. Wählen Sie eine Sortierung aus, die einer Codepage auf dem Client zugeordnet werden kann.    
 >
-> Sie können eine der Sortierungen mit ergänzenden Zeichen (\_SC) oder eine der Version 140-Sortierungen auswählen, um die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren UTF-16-Sortierungen ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) zu verwenden, um die Suche und die Sortierung einiger Unicode-Zeichen (nur Windows-Sortierungen) zu verbessern.    
+> Sie können eine der Sortierungen mit ergänzenden Zeichen (\_SC) oder eine der Version 140-Sortierungen auswählen, um die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren UTF-16-Sortierungen ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) zu verwenden, um die Suche und die Sortierung einiger Unicode-Zeichen (nur Windows-Sortierungen) zu verbessern.    
  
 Sie müssen Sortierungen mit UTF-8-Codierung (\_UTF8) auswählen, um die in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] verfügbaren UTF-8-Sortierungen verwenden zu können und die Suche und Sortierung einiger Unicode-Zeichen (nur Windows-Sortierungen) zu verbessern.
  

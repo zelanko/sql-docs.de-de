@@ -24,12 +24,12 @@ ms.lasthandoff: 10/28/2019
 ms.locfileid: "72988220"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Laden der Ausgabe eines lokalen Pakets
-  Clientanwendungen können die Ausgabe von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen lesen, wenn diese mithilfe von [!INCLUDE[vstecado](../../includes/vstecado-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielen oder mithilfe der Klassen im **System.IO**-Namespace in Flatfilezielen gespeichert wird. Eine Clientanwendung kann jedoch die Ausgabe eines Pakets auch direkt aus dem Arbeitsspeicher lesen, ohne dass hierfür ein Zwischenschritt zur persistenten Speicherung der Daten erforderlich ist. Der Schlüssel zu dieser Lösung ist der `Microsoft.SqlServer.Dts.DtsClient`-Namespace, der spezialisierte Implementierungen der Schnittstellen "`IDbConnection`", "`IDbCommand`" und " **IDbDataParameter** " aus dem **System. Data** -Namespace enthält. Die Assembly „Microsoft.SqlServer.Dts.DtsClient.dll“ wird standardmäßig im Verzeichnis **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** installiert.  
+  Clientanwendungen können die Ausgabe von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen lesen, wenn diese mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Zielen oder mithilfe der Klassen im **System.IO**-Namespace in Flatfilezielen gespeichert wird. Eine Clientanwendung kann jedoch die Ausgabe eines Pakets auch direkt aus dem Arbeitsspeicher lesen, ohne dass hierfür ein Zwischenschritt zur persistenten Speicherung der Daten erforderlich ist. Der Schlüssel zu dieser Lösung ist der `Microsoft.SqlServer.Dts.DtsClient`-Namespace, der spezialisierte Implementierungen der Schnittstellen "`IDbConnection`", "`IDbCommand`" und " **IDbDataParameter** " aus dem **System. Data** -Namespace enthält. Die Assembly „Microsoft.SqlServer.Dts.DtsClient.dll“ wird standardmäßig im Verzeichnis **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** installiert.  
   
 > [!NOTE]  
 >  Für die in diesem Artikel beschriebene Vorgehensweise müssen die DelayValidation-Eigenschaft des Datenflusstasks und alle übergeordneten Objekte auf den Standardwert **FALSE** festgelegt werden.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>und Beschreibung  
  In dieser Prozedur wird veranschaulicht, wie eine Clientanwendung in verwaltetem Code entwickelt wird, die die Ausgabe eines Pakets mit einem DataReader-Ziel direkt aus dem Arbeitsspeicher lädt. Die hier zusammengefassten Schritte werden in dem folgenden Codebeispiel veranschaulicht.  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>So laden Sie Datenpaketausgabe in eine Clientanwendung  
@@ -45,7 +45,7 @@ ms.locfileid: "72988220"
   
 4.  Erstellen Sie ein Objekt vom Typ `DtsClient.DtsCommand`, das die zuvor erstellte `DtsConnection` verwendet und die `CommandText`-Eigenschaft auf den Namen des DataReader-Ziels in dem Paket festlegt. Rufen Sie dann die `ExecuteReader`-Methode des Befehlsobjekts auf, um die Paketergebnisse in ein neues DataReader-Ziel zu laden.  
   
-5.  Optional können Sie die Ausgabe des Pakets indirekt parametrisieren, indem Sie die Auflistung von `DtsDataParameter`-Objekten im `DtsCommand`-Objekt verwenden, um Werte an die in dem Paket definierten Variablen zu übergeben. Innerhalb des Pakets können Sie diese Variablen als Abfrageparameter oder in Ausdrücken verwenden, um die an das DataReader-Ziel zurückgegebenen Ergebnisse zu beeinflussen. Sie müssen diese Variablen im Paket im **DtsClient** -Namespace definieren, bevor Sie Sie mit dem `DtsDataParameter`-Objekt aus einer Client Anwendung verwenden können. (Möglicherweise müssen Sie im Fenster **Variablen** auf die Symbolleisten Schaltfläche **Variablen Spalten auswählen** klicken, um die Spalte **Namespace** anzuzeigen.) Wenn Sie in Ihrem Client Code der `Parameters` Auflistung der `DtsCommand`eine `DtsDataParameter` hinzufügen, lassen Sie den DtsClient-Namespace Verweis aus dem Variablennamen Weg. Beispiel:  
+5.  Optional können Sie die Ausgabe des Pakets indirekt parametrisieren, indem Sie die Auflistung von `DtsDataParameter`-Objekten im `DtsCommand`-Objekt verwenden, um Werte an die in dem Paket definierten Variablen zu übergeben. Innerhalb des Pakets können Sie diese Variablen als Abfrageparameter oder in Ausdrücken verwenden, um die an das DataReader-Ziel zurückgegebenen Ergebnisse zu beeinflussen. Sie müssen diese Variablen im Paket im **DtsClient** -Namespace definieren, bevor Sie Sie mit dem `DtsDataParameter`-Objekt aus einer Client Anwendung verwenden können. (Möglicherweise müssen Sie im Fenster **Variablen** auf die Symbolleisten Schaltfläche **Variablen Spalten auswählen** klicken, um die Spalte **Namespace** anzuzeigen.) Wenn Sie in Ihrem Client Code der `Parameters` Auflistung der `DtsCommand`eine `DtsDataParameter` hinzufügen, lassen Sie den DtsClient-Namespace Verweis aus dem Variablennamen Weg. Zum Beispiel:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -295,7 +295,7 @@ namespace DtsClientWParamCS
   
 ![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services Symbol (klein)")immer auf**dem neuesten Stand bleiben mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Programmgesteuertes Laden und Ausführen eines lokalen Pakets](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Programmgesteuertes Laden und Ausführen eines Remotepakets](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  

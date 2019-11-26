@@ -28,7 +28,7 @@ ms.locfileid: "71952172"
   
 -   Konfigurieren einer neuen Berichtsserverinstanz, um eine bereits vorhandene Berichtsserver-Datenbank gemeinsam zu nutzen oder zu verwenden.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Aus Sicherheitsgründen empfiehlt es sich, den Reporting Services-Verschlüsselungsschlüssel in regelmäßigen Abständen zu ändern. Ein guter Zeitpunkt, um den Schlüssel zu ändern, liegt direkt im Anschluss an ein größeres Versionsupgrade von Reporting Services. Indem der Schlüssel nach einem Upgrade geändert wird, lassen sich zusätzliche Dienstunterbrechungen, die durch eine Änderung des Reporting Services-Verschlüsselungsschlüssels außerhalb des Upgradezyklus verursacht würden, minimieren.  
@@ -42,13 +42,13 @@ ms.locfileid: "71952172"
 > [!IMPORTANT]  
 >  Das Löschen und Neuerstellen des symmetrischen Schlüssels kann nicht umgekehrt oder rückgängig gemacht werden. Das Löschen oder Neuerstellen des Schlüssels kann sich erheblich auf die aktuelle Installation auswirken. Wenn Sie den Schlüssel löschen, werden alle vorhandenen, durch den symmetrischen Schlüssel verschlüsselten Daten ebenfalls gelöscht. Zu den gelöschten Daten zählen Verbindungszeichenfolgen zu externen Berichtsdatenquellen, gespeicherte Verbindungszeichenfolgen und einige Abonnementinformationen.  
   
- Um diese Seite zu öffnen, starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und klicken Sie auf den Link im Navigationsbereich. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Um diese Seite zu öffnen, starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und klicken Sie auf den Link im Navigationsbereich. Weitere Informationen finden Sie unter [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Mindestsicherung**  
  Kopiert den symmetrischen Schlüssel in eine von Ihnen angegebene Datei. Der symmetrische Schlüssel wird nie als Nur-Text-Datei gespeichert. Sie müssen ein Kennwort eingeben, um die Datei zu schützen.  
   
- **Restore**  
+ **Wiederherstellen**  
  Wendet eine zuvor gespeicherte Kopie des symmetrischen Schlüssels auf die Berichtsserver-Datenbank an. Sie müssen ein Kennwort angeben, um die Dateisperre aufzuheben.  
   
  Die vorherige Kopie des symmetrischen Schlüssels für die Berichtsserverinstanz, mit der Sie gerade verbunden sind, wird von der wiederhergestellten Version überschrieben. Nachdem Sie den symmetrischen Schlüssel wiederhergestellt haben, müssen Sie alle Berichtsserver initialisieren, die die Berichtsserver-Datenbank verwenden. Weitere Informationen zum Initialisieren von Berichts Servern finden Sie unter [Initialisieren eines Berichts &#40;Servers SSRS&#41;Configuration Manager](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
@@ -68,10 +68,10 @@ ms.locfileid: "71952172"
  Es gibt keinen automatischen Vorgang zum Aktualisieren dieser Informationen. Jeder Bericht, jedes Abonnement und jede freigegebene Datenquelle, die gespeicherte Anmeldeinformationen und Verbindungszeichenfolgen verwendet, muss aktualisiert werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurations-Manager für Reporting Services F1-Hilfe &#40;Themen SSRS im&#41;einheitlichen Modus](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Konfigurations-Manager für Reporting Services F1-Hilfe &#40;Themen SSRS im&#41; einheitlichen Modus](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

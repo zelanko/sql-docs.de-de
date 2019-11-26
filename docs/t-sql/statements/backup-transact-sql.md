@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659093"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982849"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -244,9 +244,9 @@ Gibt eine Datenträgerdatei oder ein Bandmedium oder einen Microsoft Azure-BLOB-
 > [!NOTE]
 > Das Datenträgermedium NUL verwirft alle Informationen, die es empfängt, und sollte nur zu Testzwecken verwendet werden. Es ist nicht zur Verwendung in der Produktion bestimmt.
 > [!IMPORTANT]
-> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] können Sie nur auf ein einzelnes Gerät sichern, wenn Sie über die URL sichern. Um auf mehreren Geräten eine Sicherung durchzuführen, wenn Sie über die URL sichern, verwenden Sie [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Außerdem müssen Sie Shared Access Signature-Token (SAS) verwenden. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).
+> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] können Sie nur auf ein einzelnes Gerät sichern, wenn Sie über die URL sichern. Wenn Sie eine Sicherung auf mehreren Geräten durchführen möchten, müssen Sie [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher verwenden, und Sie müssen SAS-Token (Shared Access Signature) verwenden. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).
 
-**URL betrifft:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**URL betrifft:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 und höher).
 
 Das Datenträgermedium muss erst dann vorhanden sein, wenn es in einer BACKUP-Anweisung angegeben wird. Wenn das physische Medium vorhanden ist und die Option INIT in der BACKUP-Anweisung nicht angegeben ist, wird die Sicherung an das Medium angefügt.
 
@@ -279,10 +279,10 @@ Weitere Informationen finden Sie unter "Medienfamilien in gespiegelten Mediensä
 
 Gibt die Optionen an, die bei einem Sicherungsvorgang verwendet werden sollen.
 
-CREDENTIAL **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+CREDENTIAL **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 und höher).
 Wird nur verwendet, wenn eine Sicherung in Microsoft Azure Blob Storage erstellt wird.
 
-FILE_SNAPSHOT **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+FILE_SNAPSHOT **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
 
 Wird zum Erstellen einer Azure-Momentaufnahme der Datenbankdateien verwendet, wenn alle SQL Server-Datenbankdateien unter Verwendung des Azure-Blob-Speicherdiensts gespeichert werden. Weitere Informationen finden Sie unter [SQL Server-Datendateien in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Die Momentaufnahmesicherung erstellt Azure-Momentaufnahmen der Datenbankdateien (Daten- und Protokolldateien) in einem konsistenten Zustand. Ein konsistenter Satz von Azure-Momentaufnahmen bildet zusammen eine Sicherung und wird in der Sicherungsdatei aufgezeichnet. Der einzige Unterschied zwischen `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` und `BACKUP LOG TO URL WITH FILE_SNAPSHOT` ist, dass der zweite Wert auch das Transaktionsprotokoll abschneidet, während dies beim ersten Wert nicht der Fall ist. Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Momentaufnahmesicherung ist nur eine Transaktionsprotokollsicherung erforderlich, um eine Datenbank auf den Zeitpunkt der Transaktionsprotokollsicherung wiederherzustellen, nachdem die erste vollständige, von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Einrichtung der Sicherungskette vorausgesetzte Sicherung durchgeführt wurde. Darüber hinaus sind nur zwei Sicherungen des Transaktionsprotokolls erforderlich, um eine Datenbank auf einen Zeitpunkt zwischen den beiden Transaktionsprotokollsicherungen wiederherstellen.
 

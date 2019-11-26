@@ -34,7 +34,7 @@ ms.locfileid: "73727884"
 ## <a name="staging-process-stored-procedure-parameters"></a>Parameter der gespeicherten Prozeduren für den Stagingprozess  
  In der folgenden Tabelle sind die Parameter dieser gespeicherten Prozeduren aufgeführt.  
   
-|Parameter|Beschreibung|  
+|Parameter|und Beschreibung|  
 |---------------|-----------------|  
 |**VersionName**<br /><br /> Erforderlich|Der Name der Version. Dabei wird ggf. abhängig von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sortiereinstellung die Groß-/Kleinschreibung beachtet.|  
 |**LogFlag**<br /><br /> Erforderlich|Bestimmt, ob Transaktionen während des Stagingprozesses protokolliert werden. Folgende Werte sind möglich:<br /><br /> **0**: Transaktionen nicht protokollieren.<br /><br /> **1**: Transaktionen protokollieren.<br /><br /> <br /><br /> Weitere Informationen über Transaktionen finden Sie unter [Transaktionen &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  

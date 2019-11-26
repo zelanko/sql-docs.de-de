@@ -27,7 +27,7 @@ Bindet die materialisierte Ansicht mit internen Objektnamen object_id.
 
 Die Spalten physical_name und OBJECT_ID bilden den Schlüssel für diese Katalog Sicht.
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Column Name|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |physical_name |**nvarchar (36)**|Der physische Name für die materialisierte Sicht.|  
 |object_id  |**int**|Die Objekt-ID für die materialisierte Sicht. Weitere Informationen finden Sie unter [sys. Objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
@@ -38,7 +38,7 @@ Erfordert die VIEW DATABASE STATE-Berechtigung.
   
 ## <a name="see-also"></a>Siehe auch
 
-[Leistungsoptimierung mit materialisierter Sicht](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
+[Leistungsoptimierung durch materialisierte Sicht](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

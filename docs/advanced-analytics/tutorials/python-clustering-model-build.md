@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial: Erstellen eines Modells in python zum Kategorisieren von Kunden'
-description: Im dritten Teil dieser vierteiligen tutorialreihe erstellen Sie ein K-Means-Modell, um mit SQL Server Machine Learning Services Clustering in python auszuführen.
+title: 'Python-Tutorial: Erstellen eines Clustermodells'
+description: Im dritten Teil dieser vierteiligen Tutorialreihe erstellen Sie ein K-Means-Modell, um das Clustering in Python mit SQL Server Machine Learning Services durchzuführen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,48 +9,49 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8707d14b1e332ae6ecebf83213ed53701343bcd3
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
-ms.translationtype: MT
+ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294405"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727104"
 ---
-# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutorial: Erstellen eines Modells in python zum Kategorisieren von Kunden mit SQL Server Machine Learning Services
+# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Lernprogramm: Erstellen eines Modells in Python zum Kategorisieren von Kunden mithilfe von SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Im dritten Teil dieser vierteiligen tutorialreihe erstellen Sie ein K-Means-Modell in Python, um Clustering auszuführen. Im nächsten Teil dieser Serie stellen Sie dieses Modell in einer SQL-Datenbank mit SQL Server Machine Learning Services bereit.
+Im dritten Teil dieser vierteiligen Tutorialreihe erstellen Sie ein K-Means-Modell in Python, um das Clustering durchzuführen. Im nächsten Teil dieser Reihe stellen Sie dann dieses Modell in einer SQL-Datenbank mit SQL Server Machine Learning Services bereit.
 
 In diesem Artikel lernen Sie Folgendes:
 
 > [!div class="checklist"]
-> * Definieren der Anzahl von Clustern für einen K-Means-Algorithmus
-> * Clustering ausführen
+> * Definieren der Anzahl der Cluster für einen K-Means-Algorithmus
+> * Durchführen des Clustering
 > * Analysieren der Ergebnisse
 
-In [Teil 1](python-clustering-model.md)haben Sie die erforderlichen Komponenten installiert und die Beispieldatenbank wieder hergestellt.
+In [Teil 1](python-clustering-model.md) haben Sie die Voraussetzungen installiert und die Beispieldatenbank wiederhergestellt.
 
-In [Teil 2](python-clustering-model-prepare-data.md)haben Sie gelernt, wie Sie die Daten aus einer SQL-Datenbank für die Durchführung von Clustering vorbereiten.
+In [Teil 2](python-clustering-model-prepare-data.md) haben Sie gelernt, wie Sie die Daten aus einer SQL-Datenbank für das Clustering vorbereiten.
 
-In [Teil 4](python-clustering-model-deploy.md)erfahren Sie, wie Sie eine gespeicherte Prozedur in einer SQL-Datenbank erstellen, die basierend auf neuen Daten Clustering in python durchführen kann.
+In [Teil 4](python-clustering-model-deploy.md) erfahren Sie, wie Sie eine gespeicherte Prozedur in einer SQL-Datenbank erstellen, die Clustering auf der Grundlage neuer Daten in Python durchführen kann.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-* Im dritten Teil dieses Tutorials wird davon ausgegangen, dass Sie die Voraussetzungen von [**Teil 1**](python-clustering-model.md)erfüllt und die Schritte in [**Teil 2**](python-clustering-model-prepare-data.md)ausgeführt haben.
+* In Teil 3 dieses Tutorials wird vorausgesetzt, dass Sie die Voraussetzungen für [**Teil 1**](python-clustering-model.md) erfüllt und die Schritte in [**Teil 2**](python-clustering-model-prepare-data.md) durchgeführt haben.
 
-## <a name="define-the-number-of-clusters"></a>Definieren der Anzahl von Clustern
+## <a name="define-the-number-of-clusters"></a>Definieren der Anzahl der Cluster
 
-Zum Clustern der Kundendaten verwenden Sie den **K-Means** -Clustering-Algorithmus, eine der einfachsten und bekanntesten Methoden zum Gruppieren von Daten.
-Weitere Informationen zu k-means finden Sie in [einer umfassenden Anleitung zum k-Means-Clustering-Algorithmus](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html).
+Für das Clustering Ihrer Kundendaten verwenden Sie den **K-Means**-Clusteringalgorithmus. Dies ist eine der einfachsten und bekanntesten Methoden zum Gruppieren von Daten.
+Weitere Informationen zum K-Means-Algorithmus finden Sie im [Umfassenden Leitfaden zu K-Means-Clusteringalgorithmus](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html).
 
-Der Algorithmus akzeptiert zwei Eingaben: Die Daten selbst und eine vordefinierte Zahl "*k*", die die Anzahl der zu generierenden Cluster darstellt.
-Bei der Ausgabe handelt es sich um *k* Cluster mit den Eingabedaten, die zwischen den Clustern partitioniert sind.
+Der Algorithmus akzeptiert zwei Eingaben: Die Daten selbst und eine vordefinierte Zahl „*k*“, die die Anzahl der zu generierenden Cluster darstellt.
+Die Ausgabe entspricht *k* Clustern mit den partitionierten Eingabedaten.
 
-Das Ziel von k-means besteht darin, die Elemente in k-Clustern zu gruppieren, sodass alle Elemente im gleichen Cluster einander ähnlich sind als Elemente in anderen Clustern.
+Das Ziel des K-Means-Algorithmus ist es, die Elemente in k Cluster zu gruppieren, sodass sich alle Elemente im selben Cluster ähneln und sich möglichst von den Elementen in anderen Clustern unterscheiden.
 
-Um die Anzahl der Cluster zu ermitteln, die für den Algorithmus verwendet werden sollen, verwenden Sie einen Plot der in Gruppen Summe von Quadraten, und zwar nach Anzahl der extrahierten Cluster. Die geeignete Anzahl von zu verwendenden Clustern ist die Kurve oder der "Bogen" des plotdiagramms.
+Verwenden Sie einen Plot aus der Abweichungsquadratsumme der enthaltenen Gruppen nach der Anzahl der extrahierten Cluster, um die Anzahl der zu verwendenden Cluster für den Algorithmus zu bestimmen. Die angemessene Anzahl der zu verwendenden Cluster befindet sich an der Knickstelle bzw. am „Ellenbogen“ des Plots.
 
 ```python
 ################################################################################################
@@ -73,13 +74,13 @@ plt.title('Elbow for KMeans clustering')
 plt.show()
 ```
 
-![Bogen Diagramm](./media/python-tutorial-elbow-graph.png)
+![Ellenbogengraph](./media/python-tutorial-elbow-graph.png)
 
-Auf Grundlage des Diagramms sollte *k = 4* ein guter Wert sein. Mit diesem *k* -Wert werden die Kunden vier Cluster gruppieren.
+Aus diesem Graph geht *k = 4* als geeigneter Wert hervor. Mit diesem *k*-Wert werden die Kunden in vier Cluster gruppiert.
 
-## <a name="perform-clustering"></a>Clustering ausführen
+## <a name="perform-clustering"></a>Durchführen des Clustering
 
-Im folgenden Python-Skript verwenden Sie die kmeans-Funktion aus dem sklearn-Paket.
+Im folgenden Python-Skript verwenden Sie die KMeans-Funktion aus dem Paket „sklearn“.
 
 ```python
 ################################################################################################
@@ -107,9 +108,9 @@ print(customer_data.groupby(['cluster']).mean())
 
 ## <a name="analyze-the-results"></a>Analysieren der Ergebnisse
 
-Nachdem Sie das Clustering mithilfe von K-Means durchgeführt haben, besteht der nächste Schritt darin, das Ergebnis zu analysieren und festzustellen, ob Sie Handlungs relevante Informationen finden können.
+Nachdem Sie nun das Clustering mithilfe des K-Means-Algorithmus durchgeführt haben, besteht der nächste Schritt darin, das Ergebnis zu analysieren und nach handlungsrelevanten Informationen zu suchen.
 
-Sehen Sie sich die vom vorherigen Skript gedruckten Mittelwerte und Cluster Größen für Clustering an.
+Sehen Sie sich die Durchschnittswerte und ausgegebenen Clustergrößen des Clusterings aus dem vorherigen Skript an.
 
 ```results
 Cluster0(n=31675):
@@ -129,34 +130,34 @@ cluster
 3        48516.023845    0.136277    0.078346       0.044497   4.271237
 ```
 
-Die vier Cluster Mittel werden mithilfe der in [Teil 1](python-clustering-model-prepare-data.md#separate-customers)definierten Variablen angegeben:
+Die vier Clusterdurchschnittswerte werden mittels der Variablen angegeben, die Sie in [Teil 1](python-clustering-model-prepare-data.md#separate-customers) des Tutorials definiert haben:
 
-* *orderratio* = Verhältnis der Rückgabe Reihenfolge (Gesamtzahl der Bestellungen, die teilweise oder vollständig zurückgegeben wurden, und die Gesamtzahl der
-* *itemsratio* = Verhältnis von Rückgabe Elementen (Gesamtzahl der zurückgegebenen Elemente im Vergleich zur Anzahl erworbener Elemente)
-* *monetaryratio* = Verhältnis der Rückgabe Menge (Gesamtbetrag der zurückgegebenen Elemente im Vergleich zum erworbenen Betrag)
-* *Frequency* = Rückgabe Häufigkeit
+* *orderRatio* = Retourenquote für Bestellungen (Gesamtzahl der teilweise oder vollständig zurückgegebenen Bestellungen im Vergleich zur Gesamtzahl der Bestellungen)
+* *itemsRatio* = Retourenquote für Artikel (Gesamtzahl der zurückgegebenen Artikel im Vergleich zur Anzahl der gekauften Artikel)
+* *monetaryRatio* = Rückzahlungsquote (Monetärer Gesamtbetrag der zurückgegebenen Artikel im Vergleich zum erworbenen Betrag)
+* *frequency* = Häufigkeit der Retouren
 
-Data Mining mit K-Means erfordert häufig eine weitere Analyse der Ergebnisse sowie weitere Schritte, um die einzelnen Cluster besser zu verstehen, aber es kann einige gute Leads bereitstellen.
-Im folgenden finden Sie eine Reihe von Möglichkeiten, wie Sie diese Ergebnisse interpretieren können:
+Data Mining mit K-Means erfordert häufig weitere Analysen der Ergebnisse sowie weitere Schritte, um die einzelnen Cluster besser zu verstehen, kann jedoch gute Leads erzielen.
+Im Folgenden finden Sie Beispiele für die Interpretation dieser Ergebnisse:
 
-* Cluster 0 scheint eine Gruppe von Kunden zu sein, die nicht aktiv sind (alle Werte sind null).
-* Cluster 3 scheint eine Gruppe zu sein, die in Bezug auf das Rückgabe Verhalten auftritt.
+* Cluster 0 scheint, eine Gruppe inaktiver Kunden zu sein (alle Werte sind 0 (null)).
+* Cluster 3 scheint eine Gruppe mit erhöhtem Retournierverhalten zu sein.
 
-Cluster 0 ist eine Gruppe von Kunden, die offensichtlich nicht aktiv sind. Vielleicht können Sie auf Marketingmaßnahmen für diese Gruppe abzielen, um ein Interesse für Käufe zu initiieren. Im nächsten Schritt Fragen Sie die-Datenbank nach den e-Mail-Adressen von Kunden in Cluster 0 ab, sodass Sie eine Marketing-e-Mail an Sie senden können.
+Cluster 0 besteht aus Kunden, die eindeutig inaktiv sind. Vielleicht können Sie Marketingmaßnahmen für diese Gruppe ergreifen, um ihr Interesse an Einkäufen zu wecken. Im nächsten Schritt fragen Sie die E-Mail-Adressen von Kunden in Cluster 0 aus der Datenbank ab, um ihnen Marketing-E-Mails zu senden.
 
 ## <a name="clean-up-resources"></a>Bereinigen von Ressourcen
 
-Wenn Sie dieses Tutorial nicht fortsetzen möchten, löschen Sie die tpcxbb_1gb-Datenbank aus SQL Server.
+Wenn Sie nicht mit diesem Tutorial fortfahren möchten, löschen Sie die Datenbank „tpcxbb_1gb“ aus SQL Server.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im dritten Teil dieser tutorialreihe haben Sie die folgenden Schritte ausgeführt:
+In Teil 3 dieser Tutorialreihe haben Sie die folgenden Schritte ausgeführt:
 
-* Definieren der Anzahl von Clustern für einen K-Means-Algorithmus
-* Clustering ausführen
+* Definieren der Anzahl der Cluster für einen K-Means-Algorithmus
+* Durchführen des Clustering
 * Analysieren der Ergebnisse
 
-Um das Machine Learning-Modell bereitzustellen, das Sie erstellt haben, befolgen Sie den Teil vier dieser tutorialreihe:
+Fahren Sie mit Teil 4 dieser Tutorialreihe fort, um das von Ihnen erstellte Machine Learning-Modell einzusetzen:
 
 > [!div class="nextstepaction"]
 > [Tutorial: Bereitstellen eines Clusteringmodells in Python mit SQL Server Machine Learning Services](python-clustering-model-deploy.md)

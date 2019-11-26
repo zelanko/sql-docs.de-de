@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f5a03089b51d0c3f37dc28411ff9e0ab376efc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912774"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981891"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt einen Volltextindex für eine Tabelle oder eine indizierte Sicht in einer Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pro Tabelle oder indizierter Sicht ist nur ein Volltextindex zulässig, und jeder Volltextindex gilt für eine einzelne Tabelle oder indizierte Sicht. Ein Volltextindex kann bis zu 1024 Spalten enthalten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -103,7 +103,7 @@ Verwenden Sie die neutrale (0x0) Sprachenressource für Nicht-BLOB- und Nicht-XM
 Für Dokumente, die in XML- oder BLOB-Spalten gespeichert werden, wird die Sprachcodierung im Dokument bei der Indizierung verwendet. In XML-Spalten wird die Sprache z.B. mit dem **xml:lang**-Attribut in XML-Dokumenten identifiziert. Zur Abfragezeit wird der Wert, der vorher in *language_term* angegeben wurde, die Standardsprache, die für Volltextabfragen verwendet wird, es sei denn *language_term* wird als Teil einer Volltextabfrage angegeben.  
   
 STATISTICAL_SEMANTICS       
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) 
   
 Erstellt den zusätzlichen Schlüsselausdruck und die Dokumentähnlichkeitsindizes, die Teil der statistischen semantischen Indizierung sind. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -143,7 +143,7 @@ Gibt an, dass die Standardvolltext-Systemstoppliste STOPLIST für diesen Volltex
 Gibt den Namen der Stoppliste an, die dem Volltextindex zugeordnet werden soll.  
   
 SEARCH PROPERTY LIST [ = ] *property_list_name*       
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)  
   
 Ordnet dem Index eine Sucheigenschaftenliste zu.  
  
@@ -153,7 +153,7 @@ Gibt an, dass dem Volltextindex keine Eigenschaftenliste zugeordnet werden soll.
 *property_list_name*       
 Gibt den Namen der Sucheigenschaftenliste an, die dem Volltextindex zugeordnet werden soll.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 Weitere Informationen zu Volltextindizes finden Sie unter [Erstellen und Verwalten von Volltextindizes](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
 Für **xml**-Spalten können Sie einen Volltextindex erstellen, mit dem der Inhalt der XML-Elemente indiziert, das XML-Markup jedoch ignoriert wird. Attributwerte werden volltextindiziert, sofern es sich nicht um numerische Werte handelt. Elementtags werden als Tokenbegrenzungen verwendet. Wohlgeformte XML- oder HTML-Dokumente und -Fragmente in mehreren Sprachen werden unterstützt. Weitere Informationen finden Sie unter [Verwenden der Volltextsuche mit XML-Spalten](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  

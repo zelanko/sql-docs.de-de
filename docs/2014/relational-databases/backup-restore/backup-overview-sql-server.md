@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175985"
 ---
-# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
+# <a name="backup-overview-sql-server"></a>Übersicht über Sicherungen [SQL Server]
   Dieses Thema bietet eine Einführung in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungskomponente. Die Sicherung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank ist wichtig für den Schutz Ihrer Daten. In dieser Diskussion werden Sicherungstypen und Sicherungseinschränkungen behandelt. Darüber hinaus bietet das Thema eine Einführung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungsmedien und -Sicherungsgeräte.  
   
  **In diesem Thema:**  
@@ -86,7 +86,7 @@ ms.locfileid: "70175985"
  **Begriffe und Definitionen für Sicherungsmedien**  
   
  [Sicherungsmedium](backup-devices-sql-server.md)  
- Ein Datenträger oder Bandmedium, auf den bzw. das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server Sicherungen können auch in einen Azure BLOB Storage-Dienst geschrieben werden. das **URL** -Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Ein Datenträger oder Bandmedium, auf den bzw. das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server-Sicherungen können auch in einen Azure Blob Storage-Dienst geschrieben werden. Das **URL**-Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [Sicherungsmedien](media-sets-media-families-and-backup-sets-sql-server.md)  
  Bänder oder Datenträgerdateien, auf die Sicherungen geschrieben wurden.  
@@ -133,7 +133,7 @@ ms.locfileid: "70175985"
   
 -   Wenn Sie versuchen, eine Datenbankdatei während des Sicherungsvorgangs zu erstellen oder zu löschen, tritt beim Erstellungs- oder Löschvorgang ein Fehler auf.  
   
- Wenn sich ein Sicherungsvorgang mit einem Dateiverwaltungsvorgang oder einem Verkleinerungsvorgang überschneidet, tritt ein Konflikt auf. Unabhängig davon, welcher am Konflikt beteiligte Vorgang zuerst begonnen hat, wartet der zweite Vorgang auf das Timeout der Sperre, die vom ersten Vorgang festgelegt wurde. (Der Timeoutzeitraum wird durch eine Timeouteinstellung für die Sitzung gesteuert.) Wenn die Sperre während des Timeoutzeitraums aufgehoben wird, wird der zweite Vorgang fortgesetzt. Wenn das Timeout für die Sperre eintritt, erzeugt der zweite Vorgang einen Fehler.  
+ Wenn sich ein Sicherungsvorgang mit einem Dateiverwaltungsvorgang oder einem Verkleinerungsvorgang überschneidet, tritt ein Konflikt auf. Unabhängig davon, welcher der Konflikt verursachende Operation zuerst begonnen hat, wartet der zweite Vorgang auf das Timeout der Sperre, die vom ersten Vorgang festgelegt wurde. (Der Timeout Zeitraum wird durch eine Timeout Einstellung für die Sitzung gesteuert.) Wenn die Sperre während des Timeout Zeitraums aufgehoben wird, wird der zweite Vorgang fortgesetzt. Wenn das Timeout für die Sperre eintritt, erzeugt der zweite Vorgang einen Fehler.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So arbeiten Sie mit Sicherungs Geräten und Sicherungsmedien**  
@@ -156,7 +156,7 @@ ms.locfileid: "70175985"
   
 -   [Wiederherstellung einer Sicherung von einem Medium &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: SQL Server sichern und Wiederherstellen in Azure BLOB Storage Dienst](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server sichern und Wiederherstellen Azure BLOB Storage Dienstanbieter](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **So erstellen Sie eine Sicherung**  
   
@@ -179,7 +179,7 @@ ms.locfileid: "70175985"
   
 -   [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: SQL Server sichern und Wiederherstellen in Azure BLOB Storage Dienst](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server sichern und Wiederherstellen Azure BLOB Storage Dienstanbieter](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](back-up-and-restore-of-sql-server-databases.md)   

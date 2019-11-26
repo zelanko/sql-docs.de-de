@@ -132,13 +132,13 @@ ms.locfileid: "73637820"
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformationen für Fuzzysuche und Fuzzygruppierung  
  Informationen zur Leistungsoptimierung der Transformationen für die Fuzzysuche und Fuzzygruppierung finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(in Englisch).  
   
-#### <a name="lookup-transformation"></a>Transformation für Suche  
+#### <a name="lookup-transformation"></a>Lookup Transformation  
  Minimieren Sie die Größe der Verweisdaten im Speicher, indem Sie eine SELECT-Anweisung eingeben, die nur die von Ihnen benötigten Spalten durchsucht. Diese Option bietet eine bessere Leistung als die Auswahl einer gesamten Tabelle oder Sicht, wodurch eine große Menge an unnötigen Daten zurückgegeben wird.  
   
 #### <a name="merge-join-transformation"></a>Transformation für Zusammenführungsjoin  
  Der Wert der `MaxBuffersPerInput`-Eigenschaft muss nicht mehr konfiguriert werden, da Microsoft Änderungen vorgenommen hat, die das Risiko einer übermäßigen Arbeitsspeicherbelegung bei der Transformation für Zusammenführungsjoins reduzieren. Dieses Problem trat in einigen Fällen auf, wenn durch die Eingaben des Zusammenführungsjoins unregelmäßige Daten erzeugt wurden.  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen  
+#### <a name="slowly-changing-dimension-transformation"></a>Slowly Changing Dimension Transformation  
  Der Assistent für langsam veränderliche Dimensionen und die Transformation für langsam veränderliche Dimensionen sind universell einsetzbare Tools, die die Anforderungen der meisten Benutzer erfüllen. Der vom Assistenten generierte Datenfluss ist jedoch nicht leistungsoptimiert.  
   
  In der Regel sind die langsamsten Komponenten in der Transformation für langsam veränderliche Dimensionen die Transformationen für OLE DB-Befehl, die UPDATEs für jeweils eine Zeile ausführen. Daher ist die effizienteste Methode zur Verbesserung der Leistung der Transformation für langsam veränderliche Dimensionen das Ersetzen der Transformationen für OLE DB-Befehl. Sie können diese Transformationen durch Zielkomponenten ersetzen, die alle zu aktualisierenden Zeilen in eine Stagingtabelle speichern. Sie können dann einen Task "SQL ausführen" hinzufügen, der für alle Zeilen gleichzeitig ein einzelnes setbasiertes Transact-SQL-UPDATE ausführt.  
@@ -159,7 +159,7 @@ ms.locfileid: "73637820"
   
  Zum Aktivieren bzw. Deaktivieren der Anzeige von Meldungen auf der Registerkarte **Status** schalten Sie die Option **Debug-Statusbericht** im Menü **SSIS** um. Beim Ausführen eines komplexen Pakets in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]kann eine Deaktivierung der Statusberichterstellung zur Verbesserung der Leistung beitragen.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   

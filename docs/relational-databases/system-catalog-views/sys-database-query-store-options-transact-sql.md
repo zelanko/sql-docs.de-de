@@ -33,7 +33,7 @@ ms.locfileid: "73983172"
 
   Gibt die Abfragespeicher Optionen für diese Datenbank zurück.  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]und höher), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  

@@ -26,7 +26,7 @@ ms.locfileid: "73728757"
 
   Weisen Sie Funktionsbereichberechtigungen zu, um Benutzern oder Gruppen Zugriff auf die Funktionsbereiche von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]zu gewähren.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Prerequisites  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Benutzer- und Gruppenberechtigungen** zuzugreifen.  
@@ -47,7 +47,7 @@ ms.locfileid: "73728757"
   
 7.  Klicken Sie abschließend auf **Speichern**.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

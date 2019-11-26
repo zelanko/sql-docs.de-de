@@ -67,7 +67,7 @@ ms.locfileid: "70212393"
  Beschreibt Verwendungsszenarien und Codebeispiele mit CLR-Objekten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Assemblys &#40;Datenbank-Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ Assemblys [ &#40;Datenbank-Engine&#41; ](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Installieren des .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

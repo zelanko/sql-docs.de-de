@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_compute_node_status (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_compute_node_status (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -28,12 +28,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532745"
 ---
-# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. DM _exec_compute_node_status (Transact-SQL)
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält zusätzliche Informationen zur Leistung und zum Status aller polybase-Knoten. Listet eine Zeile pro Knoten auf.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Column Name|Datentyp|und Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|`int`|Eindeutige numerische ID, die dem Knoten zugeordnet ist.|Eindeutig in einem Cluster mit horizontaler Skalierung (unabhängig vom Typ).|  
 |process_id|`int`|||  

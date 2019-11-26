@@ -30,9 +30,9 @@ ms.locfileid: "72909327"
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Entfernt Zeilen aus der Änderungs Tabelle in der aktuellen Datenbank basierend auf dem angegebenen *low_water_mark* -Wert. Diese gespeicherte Prozedur wird für Benutzer bereitgestellt, die den Cleanupprozess für Änderungstabellen direkt verwalten möchten. Da diese Prozedur alle Consumer der Änderungstabellendaten betrifft, sollte sie mit Vorsicht eingesetzt werden.  
+  Entfernt Zeilen aus der Änderungs Tabelle in der aktuellen Datenbank auf Grundlage des angegebenen *low_water_mark* Werts. Diese gespeicherte Prozedur wird für Benutzer bereitgestellt, die den Cleanupprozess für Änderungstabellen direkt verwalten möchten. Da diese Prozedur alle Consumer der Änderungstabellendaten betrifft, sollte sie mit Vorsicht eingesetzt werden.  
   
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,12 +48,12 @@ sys.sp_cdc_cleanup_change_table
  [@capture_instance =] "*capture_instance*"  
  Der Name der Aufzeichnungsinstanz, die der Änderungstabelle zugeordnet ist. *capture_instance* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
   
- *capture_instance* muss eine Aufzeichnungs Instanz benennen, die in der aktuellen Datenbank vorhanden ist.  
+ *capture_instance* müssen eine Aufzeichnungs Instanz benennen, die in der aktuellen Datenbank vorhanden ist.  
   
  [@low_water_mark =] *low_water_mark*  
- Eine Protokoll Folge Nummer (Log Sequence Number, LSN), die als neue Untergrenzenmarkierung für die *Aufzeichnungs Instanz*verwendet werden soll. *low_water_mark* ist vom Typ **Binary (10)** und hat keinen Standardwert.  
+ Eine Protokoll Folge Nummer (Log Sequence Number, LSN), die als neue Untergrenzenmarkierung für die *Aufzeichnungs Instanz*verwendet werden soll. *low_water_mark* ist **Binary (10)** und hat keinen Standardwert.  
   
- Wenn der Wert nicht NULL ist, muss er als start_lsn-Wert eines aktuellen Eintrags in der [CDC. LSN _time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) -Tabelle angezeigt werden. Wenn andere Einträge in CDC. LSN _time_mapping dieselbe commitzeitzeit wie der durch die neue Untergrenzenmarkierung identifizierte Eintrag gemeinsam nutzen, wird die kleinste LSN, die dieser Gruppe von Einträgen zugeordnet ist, als Untergrenzenmarkierung ausgewählt.  
+ Wenn der Wert nicht NULL ist, muss er als start_lsn Wert eines aktuellen Eintrags in der [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) -Tabelle angezeigt werden. Wenn andere Einträge in CDC. lsn_time_mapping dieselbe commitzeitzeit wie der durch die neue Untergrenzenmarkierung identifizierte Eintrag gemeinsam verwenden, wird die kleinste LSN, die dieser Gruppe von Einträgen zugeordnet ist, als Untergrenzenmarkierung ausgewählt.  
   
  Wenn der Wert explizit auf NULL festgelegt ist, wird die aktuelle *Untergrenzenmarkierung* für die *Aufzeichnungs Instanz* verwendet, um die obere Grenze für den Cleanupvorgang zu definieren.  
   
@@ -64,23 +64,23 @@ sys.sp_cdc_cleanup_change_table
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- InclusionThresholdSetting  
+ Keine  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  sys.sp_cdc_cleanup_change_table führt die folgenden Vorgänge aus:  
   
 1.  Wenn der @low_water_mark-Parameter nicht NULL ist, wird der Wert von start_lsn für die *Aufzeichnungs Instanz* auf die neue *Untergrenzenmarkierung*festgelegt.  
   
     > [!NOTE]  
-    >  Bei der neuen Untergrenzenmarkierung muss es sich nicht zwingend um die im Aufruf der gespeicherten Prozedur angegebene Untergrenzenmarkierung handeln. Wenn andere Einträge in der CDC. LSN _time_mapping-Tabelle dieselbe commitzeitzeit verwenden, wird der kleinste start_lsn, der in der Gruppe von Einträgen dargestellt wird, als angepasste Untergrenzenmarkierung ausgewählt. Wenn der @low_water_mark-Parameter NULL ist oder die aktuelle Untergrenzenmarkierung größer als die neue lowwatermark ist, bleibt der start_lsn-Wert für die Aufzeichnungs Instanz unverändert.  
+    >  Bei der neuen Untergrenzenmarkierung muss es sich nicht zwingend um die im Aufruf der gespeicherten Prozedur angegebene Untergrenzenmarkierung handeln. Wenn andere Einträge in der Tabelle cdc. lsn_time_mapping dieselbe comdtzeit gemeinsam verwenden, wird der kleinste start_lsn, der in der Gruppe von Einträgen dargestellt wird, als angepasste Untergrenzenmarkierung ausgewählt. Wenn der @low_water_mark-Parameter NULL ist oder die aktuelle Untergrenzenmarkierung größer als die neue lowwatermark ist, bleibt der start_lsn Wert für die Aufzeichnungs Instanz unverändert.  
   
-2.  Änderungs Tabelleneinträge mit __ $ start_lsn-Werten, die niedriger als die Untergrenzenmarkierung sind, werden dann gelöscht. Der Schwellenwert zum Löschen wird verwendet, um die Anzahl gelöschter Zeilen in einer einzigen Transaktion zu begrenzen. Ein Fehler bezüglich des erfolgreichen Löschens von Einträgen wird gemeldet. Etwaige Änderungen an der Untergrenzenmarkierung der Aufzeichnungsinstanz, die aufgrund des Aufrufs vorgenommen wurden, werden davon jedoch nicht beeinflusst.  
+2.  Änderungs Tabelleneinträge mit __ $ start_lsn Werte, die niedriger als die Untergrenzenmarkierung sind, werden dann gelöscht. Der Schwellenwert zum Löschen wird verwendet, um die Anzahl gelöschter Zeilen in einer einzigen Transaktion zu begrenzen. Ein Fehler bezüglich des erfolgreichen Löschens von Einträgen wird gemeldet. Etwaige Änderungen an der Untergrenzenmarkierung der Aufzeichnungsinstanz, die aufgrund des Aufrufs vorgenommen wurden, werden davon jedoch nicht beeinflusst.  
 
- Verwenden Sie sys. sp_cdc_cleanup_change_table in den folgenden Situationen:  
+ Verwenden Sie sys. sp_cdc_cleanup_change_table unter folgenden Umständen:  
   
 -   Der Auftrag des Cleanup-Agents meldet Löschfehler.  
   
-     Ein Administrator kann diese gespeicherte Prozedur explizit ausführen, um einen fehlgeschlagenen Vorgang zu wiederholen. Führen Sie sys. sp_cdc_cleanup_change_table aus, und geben Sie für den @low_water_mark Parameter NULL an, um die Bereinigung für eine bestimmte Aufzeichnungs Instanz zu wiederholen.  
+     Ein Administrator kann diese gespeicherte Prozedur explizit ausführen, um einen fehlgeschlagenen Vorgang zu wiederholen. Führen Sie sys. sp_cdc_cleanup_change_table aus, und geben Sie für den Parameter @low_water_mark NULL an, um die Bereinigung für eine bestimmte Aufzeichnungs Instanz zu wiederholen.  
   
 -   Die vom Cleanup-Agentauftrag verwendete einfache beibehaltungsbasierte Richtlinie ist nicht ausreichend.  
   
@@ -89,7 +89,7 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Datenbankrolle "db_owner".  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [sys.fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  

@@ -25,7 +25,7 @@ ms.locfileid: "72783145"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] im einheitlichen Modus|  
   
  In Meine Abonnements können Sie Abonnements nach Ordner, Bericht, Beschreibung, Trigger, letzter Ausführung oder Status sortieren. Alle Werte sind alphabetisch sortiert, außer bei Zuletzt ausgeführt, wo die Werte chronologisch sortiert sind.  
   
@@ -52,7 +52,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 #$subscriptions
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Datengesteuerte Abonnements](data-driven-subscriptions.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers (Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus)](../create-manage-subscriptions-native-mode-report-servers.md)  

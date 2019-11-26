@@ -86,7 +86,9 @@ ms.locfileid: "67999307"
   
  Die aktuelle Tabelle enthält den aktuellen Wert für jede Zeile. Die Verlaufstabelle enthält jeden früheren Wert für jede Zeile, falls vorhanden, sowie die Anfangszeit und Endzeit für den Zeitraum, für den er gültig war.  
   
+
  ![Temporale Tabelle-Funktionsweise](../../relational-databases/tables/media/temporal-howworks.PNG "Temporale Tabelle-Funktionsweise")  
+
   
  Das folgende einfache Beispiel veranschaulicht ein Szenario mit Mitarbeiterinformationen in einer hypothetischen Personaldatenbank:  
   

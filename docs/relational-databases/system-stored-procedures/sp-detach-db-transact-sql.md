@@ -54,15 +54,15 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` gibt an, dass die Volltextindex Datei, die der zu trennende Datenbank zugeordnet ist, während des Trenn Vorgangs der Datenbank nicht gelöscht wird. *Keepfulltextindexfile* ist ein **nvarchar (10)** -Wert mit dem Standardwert **true**. Wenn *keepfulltextindexfile* den Wert **false**aufweist, werden alle der Datenbank zugeordneten Volltextindex Dateien und die Metadaten des voll Text Indexes gelöscht, es sei denn, die Datenbank ist schreibgeschützt. Wenn NULL oder **true**, werden voll Text bezogene Metadaten beibehalten.  
   
 > [!IMPORTANT]
->  Der **\@keepfulltextindexfile** -Parameter wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Verwenden Sie diesen Parameter beim Entwickeln neuer Anwendungen nicht, und planen Sie so bald wie möglich das Ändern von Anwendungen, in denen er zurzeit verwendet wird.  
+>  Der **\@keepfulltextindexfile** -Parameter wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diesen Parameter beim Entwickeln neuer Anwendungen nicht, und planen Sie so bald wie möglich das Ändern von Anwendungen, in denen er zurzeit verwendet wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn eine Datenbank getrennt wird, werden alle Metadaten darin gelöscht. Wenn die Datenbank die Standarddatenbank aller Anmeldekonten war, wird **Master** zur Standarddatenbank.  
   
 > [!NOTE]  
@@ -82,14 +82,14 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   Eine Datenbankmomentaufnahme ist in der Datenbank vorhanden.  
   
-     Bevor Sie die Datenbank trennen können, müssen Sie alle Momentaufnahmen löschen. Weitere Informationen finden Sie unter [Löschen einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)angefügt werden.  
+     Bevor Sie die Datenbank trennen können, müssen Sie alle Momentaufnahmen löschen. Weitere Informationen finden Sie unter [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
     > [!NOTE]  
     >  Eine Datenbankmomentaufnahme kann nicht getrennt oder angefügt werden.  
   
 -   Die Datenbank ist gespiegelt.  
   
-     Die Datenbank kann nur getrennt werden, wenn die Datenbank-Spiegelungssitzung beendet wird. Weitere Informationen finden Sie unter [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
+     Die Datenbank kann nur getrennt werden, wenn die Datenbank-Spiegelungssitzung beendet wird. Weitere Informationen finden Sie unter [Removing Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
 -   Die Datenbank ist fehlerverdächtig.  
   
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Bevor Sie die Datenbank auf SINGLE_USER festlegen, müssen Sie überprüfen, ob die AUTO_UPDATE_STATISTICS_ASYNC-Option auf OFF festgelegt ist. Wenn diese Option auf ON festgelegt ist, stellt der Hintergrundthread, der zum Aktualisieren von Statistiken verwendet wird, eine Verbindung mit der Datenbank her, und Sie können im Einzelbenutzermodus nicht auf die Datenbank zugreifen. Weitere Informationen finden Sie unter [Festlegen des Einzelbenutzermodus für eine Datenbank](../databases/set-a-database-to-single-user-mode.md).
 
- Beispielsweise erhält die folgende `ALTER DATABASE`-Anweisung exklusiven Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank, nachdem alle aktuellen Benutzer die Verbindung mit der Datenbank getrennt haben.  
+ Beispielsweise erhält die folgende `ALTER DATABASE`-Anweisung exklusiven Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank, nachdem alle aktuellen Benutzer die Verbindung mit der-Datenbank getrennt haben.  
   
 ```  
 USE master;  
@@ -112,16 +112,16 @@ GO
 ```  
   
 > [!NOTE]  
->  Verwenden Sie die Rollback-Option, um zu erzwingen, dass aktuelle Benutzer sofort oder innerhalb einer angegebenen Anzahl von Sekunden aus der Datenbank stammen: ALTER DATABASE *database_name* SET SINGLE_USER with Rollback *rollback_option*. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Verwenden Sie die Option Rollback, um die aktuellen Benutzer sofort oder innerhalb einer angegebenen Anzahl von Sekunden aus der Datenbank zu erzwingen. verwenden Sie die Option Rollback: ALTER DATABASE *database_name* SET SINGLE_USER with Rollback *rollback_option*. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Erneutes Anfügen einer Datenbank  
- Die getrennten Dateien bleiben erhalten und können mithilfe von Create Database (mit der for attach-Option oder der FOR ATTACH_REBUILD_LOG-Option) erneut angefügt werden. Die Dateien können auf einen anderen Server verschoben und dort angefügt werden.  
+ Die getrennten Dateien bleiben erhalten und können mithilfe von Create Database (mit der Option for Attach oder for ATTACH_REBUILD_LOG) erneut angefügt werden. Die Dateien können auf einen anderen Server verschoben und dort angefügt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die Mitgliedschaft in der **db_owner** -Rolle der Datenbank.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die Mitgliedschaft in der **db_owner** Rolle der Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank getrennt, wobei *wobei skipchecks "* auf true festgelegt ist.  
+ Im folgenden Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank getrennt, wobei *wobei skipchecks "* auf true festgelegt ist.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  

@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edff69f8dfae4047cf935a290c56d1192a03a41e
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 6e2d7b8bf1df531183abef8078048f5828a1edee
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659555"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983294"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -86,7 +86,7 @@ ALTER USER userName
  Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten für diesen Benutzer durchsucht wird. Wenn das Standardschema auf NULL festgelegt wird, wird ein Standardschema aus einer Windows-Gruppe entfernt. Die NULL-Option kann nicht in Verbindung mit einem Windows-Benutzer verwendet werden.  
   
  PASSWORD **=** '*password*'  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gibt das Kennwort für den Benutzer an, der geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.  
   
@@ -94,7 +94,7 @@ ALTER USER userName
 > Diese Option ist nur für enthaltene Benutzer verfügbar. Weitere Informationen finden Sie unter [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md) und [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
  OLD_PASSWORD **=** _'oldpassword'_  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Das aktuelle Benutzerkennwort, das durch '*password*' ersetzt wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. *OLD_PASSWORD* ist für die Änderung eines Kennworts erforderlich, wenn Sie nicht über die **ALTER ANY USER**-Berechtigung verfügen. Mit *OLD_PASSWORD* wird verhindert, dass Benutzer mit der **IMPERSONATION**-Berechtigung das Kennwort ändern.  
   
@@ -102,7 +102,7 @@ ALTER USER userName
 > Diese Option ist nur für enthaltene Benutzer verfügbar.
   
  DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Gibt eine Standardsprache an, die dem Benutzer zugewiesen werden soll. Wenn diese Option auf NONE festgelegt wird, wird die aktuelle Standardsprache der Datenbank als Standardsprache festgelegt. Wenn die Standardsprache der Datenbank später geändert wird, bleibt die Standardsprache des Benutzers unverändert. *DEFAULT_LANGUAGE* kann die lokale ID (lcid), der Name der Sprache oder der Sprachalias sein.  
   
@@ -110,7 +110,7 @@ ALTER USER userName
 > Diese Option kann nur in einer eigenständigen Datenbank und nur für eigenständige Benutzer angegeben werden.
   
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON | **OFF**]  
- **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Dadurch kann der Benutzer durch Massenkopiervorgänge Daten zwischen Tabellen oder Datenbanken austauschen, ohne dabei die Daten zu verschlüsseln. Der Standardwert ist OFF.  
   
@@ -192,7 +192,7 @@ GO
 
  Im folgenden Beispiel werden mehrere Optionen für einen Benutzer einer eigenständigen Datenbank in einer Anweisung geändert.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
 ```sql
 ALTER USER Philip
@@ -275,7 +275,7 @@ ALTER USER userName
  Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten für diesen Benutzer durchsucht wird. Wenn das Standardschema auf NULL festgelegt wird, wird ein Standardschema aus einer Windows-Gruppe entfernt. Die NULL-Option kann nicht in Verbindung mit einem Windows-Benutzer verwendet werden.  
   
  PASSWORD **=** '*password*'  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gibt das Kennwort für den Benutzer an, der geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.  
   
@@ -283,7 +283,7 @@ ALTER USER userName
 > Diese Option ist nur für enthaltene Benutzer verfügbar. Weitere Informationen finden Sie unter [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md) und [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
   
  OLD_PASSWORD **=** _'oldpassword'_  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Das aktuelle Benutzerkennwort, das durch '*password*' ersetzt wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. *OLD_PASSWORD* ist für die Änderung eines Kennworts erforderlich, wenn Sie nicht über die **ALTER ANY USER**-Berechtigung verfügen. Mit *OLD_PASSWORD* wird verhindert, dass Benutzer mit der **IMPERSONATION**-Berechtigung das Kennwort ändern.  
   
@@ -291,7 +291,7 @@ ALTER USER userName
 > Diese Option ist nur für enthaltene Benutzer verfügbar.
   
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON | **OFF**]  
- **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Dadurch kann der Benutzer durch Massenkopiervorgänge Daten zwischen Tabellen oder Datenbanken austauschen, ohne dabei die Daten zu verschlüsseln. Der Standardwert ist OFF.  
   

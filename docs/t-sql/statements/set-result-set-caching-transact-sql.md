@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d2368cfe612831685da141f99069676ebf33cbb3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: aea7470bd5b4d046dd5346e633fb5302ea8e7b9c
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729836"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962366"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
@@ -27,7 +27,7 @@ ms.locfileid: "73729836"
 
 Steuert das Verhalten für das Zwischenspeichern von Resultsets für die aktuelle Clientsitzung.  
 
-Gilt für Azure SQL Data Warehouse (Vorschauversion)
+Gilt für: Azure SQL Data Warehouse  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

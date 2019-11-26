@@ -34,7 +34,7 @@ ms.locfileid: "70176184"
 # <a name="reporting-services-report-server"></a>Reporting Services-Berichtsserver
   Dieses Thema bietet eine Übersicht über den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver, die zentrale Komponente einer [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installation. Er besteht aus einem Paar Verarbeitungs-Engines plus einer Auflistung von besonderen Erweiterungen, mit denen die Authentifizierung, Datenverarbeitung, das Rendering und die Übermittlungsvorgänge bearbeitet werden. Ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver wird in einem von zwei Bereitstellungsmodi ausgeführt: dem einheitlichen Modus oder dem SharePoint-Modus. Einen Vergleich der Features finden Sie im Abschnitt [Funktionsvergleich zwischen SharePoint und einheitlichem Modus](#bkmk_featuresupport) .  
   
- **Installation:** Weitere Informationen zur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Installation finden Sie in den folgenden Bereichen:  
+ **Installation:** Informationen zur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installation finden Sie unter:  
   
 -   [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](install-windows/install-reporting-services-native-mode-report-server.md)  
   
@@ -83,23 +83,23 @@ ms.locfileid: "70176184"
   
 ##  <a name="bkmk_featuresupport"></a>Funktions Vergleich zwischen SharePoint und einheitlichem Modus  
   
-|Funktion oder Komponente|im einheitlichen Modus|-SharePoint-Modus|  
+|Funktion oder Komponente|Einheitlicher Modus|SharePoint-Modus|  
 |--------------------------|-----------------|---------------------|  
-|**URL-Adressierung**|Ja|Im integrierten SharePoint-Modus wird eine andere URL-Adressierung verwendet. SharePoint-URLs werden verwendet, um auf Berichte, Berichtsmodelle, freigegebene Datenquellen und Ressourcen zu verweisen. Die Ordnerhierarchie des Berichtsservers wird nicht verwendet. Falls Sie über benutzerdefinierte Anwendungen verfügen, die vom URL-Zugriff abhängig sind, wie auf einem Berichtsserver im einheitlichen Modus unterstützt, funktionieren diese Funktionen nicht mehr, wenn der Berichtsserver für die SharePoint-Integration konfiguriert ist.<br /><br /> Weitere Informationen zum URL-Zugriff finden Sie unter [URL-Zugriffsparameterverweis](url-access-parameter-reference.md).|  
-|**Benutzerdefinierte Sicherheitserweiterungen**|Ja|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] können auf dem Berichtsserver nicht bereitgestellt oder verwendet werden. Der Berichtsserver schließt eine spezielle Sicherheitserweiterung ein, die verwendet wird, sobald Sie einen Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfigurieren. Diese Sicherheitserweiterung ist eine interne Komponente, die für integrierte Vorgänge erforderlich ist.|  
-|**Konfigurations-Manager**|Ja|**\*\* Wichtig \*\*** Mit dem Konfigurations-Manager lässt sich ein Berichtsserver im SharePoint-Modus nicht verwalten. Verwenden Sie stattdessen die SharePoint-Zentraladministration.|  
-|**Berichts-Manager**|Ja|Der Berichts-Manager kann nicht zum Verwalten des SharePoint-Modus verwendet werden. Verwenden Sie die SharePoint-Anwendungsseiten. Weitere Informationen finden Sie unter [Reporting Services-SharePoint-Dienst und -Dienstanwendungen](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
-|**Verknüpfte Berichte**|Ja|Nein.|  
-|**Meine Berichte**|Ja|Nein|  
-|**Meine Abonnements** und Batchverarbeitungsmethoden.|Ja|Nein|  
-|**Datenwarnungen**|Nein|Ja|  
-|**Power View**|Nein|Ja<br /><br /> Erfordert Silverlight im Clientbrowser. Weitere Informationen zu den Browser Anforderungen finden Sie [unter Planning for Reporting Services und Power View Browser &#40;Support Reporting Services&#41; 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
-|**.RDL-Berichte**|Ja|Ja<br /><br /> .RDL-Berichte können für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver im einheitlichen Modus oder SharePoint-Modus ausgeführt werden.|  
-|**.RDLX-Berichte**|Nein|Ja<br /><br /> Power View-.RDLX-Berichte können nur für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver im SharePoint-Modus ausgeführt werden.|  
-|**Anmeldeinformationen für das SharePoint-Benutzertoken für die SharePoint-Listenerweiterung**|Nein|Ja|  
-|**AAM-Zonen für Bereitstellungen mit Internetzugriff**|Nein|Ja|  
-|**SharePoint-Sicherung und -Wiederherstellung**|Nein|Ja|  
-|**ULS-Protokollunterstützung**|Nein|Ja|  
+|**URL-Adressierung**|Benutzerkontensteuerung|Im integrierten SharePoint-Modus wird eine andere URL-Adressierung verwendet. SharePoint-URLs werden verwendet, um auf Berichte, Berichtsmodelle, freigegebene Datenquellen und Ressourcen zu verweisen. Die Ordnerhierarchie des Berichtsservers wird nicht verwendet. Falls Sie über benutzerdefinierte Anwendungen verfügen, die vom URL-Zugriff abhängig sind, wie auf einem Berichtsserver im einheitlichen Modus unterstützt, funktionieren diese Funktionen nicht mehr, wenn der Berichtsserver für die SharePoint-Integration konfiguriert ist.<br /><br /> Weitere Informationen zum URL-Zugriff finden Sie unter [URL-Zugriffsparameterverweis](url-access-parameter-reference.md).|  
+|**Benutzerdefinierte Sicherheitserweiterungen**|Benutzerkontensteuerung|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] können auf dem Berichtsserver nicht bereitgestellt oder verwendet werden. Der Berichtsserver schließt eine spezielle Sicherheitserweiterung ein, die verwendet wird, sobald Sie einen Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfigurieren. Diese Sicherheitserweiterung ist eine interne Komponente, die für integrierte Vorgänge erforderlich ist.|  
+|**Konfigurations-Manager**|Benutzerkontensteuerung|**\*\* Wichtig \*\*** Mit dem Konfigurations-Manager lässt sich ein Berichtsserver im SharePoint-Modus nicht verwalten. Verwenden Sie stattdessen die SharePoint-Zentraladministration.|  
+|**Berichts-Manager**|Benutzerkontensteuerung|Der Berichts-Manager kann nicht zum Verwalten des SharePoint-Modus verwendet werden. Verwenden Sie die SharePoint-Anwendungsseiten. Weitere Informationen finden Sie unter [Reporting Services-SharePoint-Dienst und -Dienstanwendungen](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
+|**Verknüpfte Berichte**|Benutzerkontensteuerung|Nein.|  
+|**Meine Berichte**|Benutzerkontensteuerung|Nein|  
+|**Meine Abonnements** und Batchverarbeitungsmethoden.|Benutzerkontensteuerung|Nein|  
+|**Datenwarnungen**|Nein|Benutzerkontensteuerung|  
+|**Power View**|Nein|Benutzerkontensteuerung<br /><br /> Erfordert Silverlight im Clientbrowser. Weitere Informationen zu den Browser Anforderungen finden Sie [unter Planning for Reporting Services und Power View Browser &#40;Support Reporting Services&#41; 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**.RDL-Berichte**|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br /> .RDL-Berichte können für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver im einheitlichen Modus oder SharePoint-Modus ausgeführt werden.|  
+|**.RDLX-Berichte**|Nein|Benutzerkontensteuerung<br /><br /> Power View-.RDLX-Berichte können nur für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver im SharePoint-Modus ausgeführt werden.|  
+|**Anmeldeinformationen für das SharePoint-Benutzertoken für die SharePoint-Listenerweiterung**|Nein|Benutzerkontensteuerung|  
+|**AAM-Zonen für Bereitstellungen mit Internetzugriff**|Nein|Benutzerkontensteuerung|  
+|**SharePoint-Sicherung und -Wiederherstellung**|Nein|Benutzerkontensteuerung|  
+|**ULS-Protokollunterstützung**|Nein|Benutzerkontensteuerung|  
   
 ##  <a name="bkmk_nativemode"></a>Einheitlicher Modus  
  Im einheitlichen Modus ist ein Berichtsserver ein eigenständiger Anwendungsserver, der das Anzeigen, Verwalten, Verarbeiten und Übermitteln von Berichten und Berichtsmodellen ermöglicht. Dies ist der Standardmodus für Berichtsserverinstanzen. Sie können einen Berichtsserver im einheitlichen Modus installieren, der während des Setups konfiguriert wird, oder Sie können ihn für Vorgänge im einheitlichen Modus konfigurieren, nachdem das Setup abgeschlossen ist.  
@@ -113,7 +113,7 @@ ms.locfileid: "70176184"
  Entwickler von Drittanbietern können zusätzliche Erweiterungen erstellen, um die Verarbeitungsfunktionen des Berichtsservers zu ersetzen oder zu erweitern. Weitere Informationen zu befehlsorientierten Benutzerschnittstellen, die Anwendungsentwicklern zur Verfügung stehen, finden Sie in der [Technischen Referenz](../../2014/reporting-services/technical-reference-ssrs.md).  
   
 ###  <a name="bkmk_nativewithwebparts"></a>Einheitlicher Modus mit SharePoint-Webparts  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]bietet zwei Webparts, die Sie auf einer Instanz von [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2,0 oder höher oder SharePoint Portal Server 2003 oder höher installieren und registrieren können. Sie können die Webparts von einer SharePoint-Website aus verwenden, um Berichte zu suchen und anzuzeigen, die auf einem Berichtsserver im einheitlichen Modus gespeichert und verarbeitet werden. Diese Webparts wurden in früheren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]eingeführt.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet zwei Webparts, die Sie auf einer Instanz von [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2,0 oder höher oder SharePoint Portal Server 2003 oder höher installieren und registrieren können. Sie können die Webparts von einer SharePoint-Website aus verwenden, um Berichte zu suchen und anzuzeigen, die auf einem Berichtsserver im einheitlichen Modus gespeichert und verarbeitet werden. Diese Webparts wurden in früheren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]eingeführt.  
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint-Modus  
  Im SharePoint-Modus muss ein Berichtsserver als Teil einer SharePoint-Serverfarm ausgeführt werden. Die Verarbeitungs-, Rendering- und Verwaltungsfunktionen des Berichtsservers werden durch einen SharePoint-Anwendungsserver dargestellt, der den gemeinsamen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Dienst und eine oder mehrere [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendungen ausführt. Eine SharePoint-Website stellt den Front-End-Zugriff auf Berichtsserverinhalt und -vorgänge bereit.  
@@ -130,7 +130,7 @@ ms.locfileid: "70176184"
   
  ![Funktionale SSRS Sharepoint-Architektur](media/rs-sharepoint-architecture.gif "SSRS SharePoint Functional Architecture")  
   
-||Beschreibung|  
+||und Beschreibung|  
 |-|-----------------|  
 |**(1)**|Webserver oder Web-Front-Ends (WFE). Das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In muss auf jedem Webserver installiert sein, von dem aus Sie die Webanwendungsfunktionen nutzen möchten, beispielsweise Berichte oder [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Verwaltungsseiten für Tasks (z. B. das Verwalten von Datenquellen oder Abonnements) anzeigen.|  
 |**(2)**|Das Add-In installiert URL- und SOAP-Endpunkte für das Kommunizieren der Clients mit den Anwendungsservern über den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstproxy.|  
@@ -143,14 +143,14 @@ ms.locfileid: "70176184"
  Der Berichtsserver enthält zwei Verarbeitungs-Engines, die die vorbereitende Berichtsverarbeitung und die Zwischenberichtsverarbeitung sowie Zeitplanungs- und Übermittlungsvorgänge ausführen. Der Berichtsprozessor ruft die Berichtsdefinition oder das Berichtsmodell ab, kombiniert die Layoutinformation mit Daten der Datenverarbeitungserweiterung und rendert sie im gewünschten Format. Der Zeitplanungs- und Übermittlungsprozess verarbeitet Berichte, die durch einen Zeitplan ausgelöst werden, und übermittelt Berichte an Ziele.  
   
 ##  <a name="bkmk_reportdatabase"></a>Berichts Server-Datenbank  
- Der Berichtsserver ist ein statusloser Server, der alle Eigenschaften, Objekte und Metadaten in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank speichert. Zu den gespeicherten Daten gehören veröffentlichte Berichte, kompilierte Berichte, Berichtsmodelle und die Ordnerhierarchie, die die Adressierung für alle vom Berichtsserver verwalteten Elemente bereitstellt. Eine Berichtsserver-Datenbank kann internen Speicher für eine einzelne [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installation oder für mehrere Berichtsserver bereitstellen, die Teil einer Bereitstellung für horizontales Skalieren sind. Wenn Sie einen Berichtsserver für die Ausführung in einer großen Bereitstellung eines SharePoint-Produkts oder einer SharePoint-Technologie konfigurieren, verwendet der Berichtsserver die SharePoint-Datenbanken zusätzlich zur Berichtsserver-Datenbank. Weitere Informationen zu Datenspeichern in einer Reporting Services-Installation finden Sie unter [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](report-server/report-server-database-ssrs-native-mode.md).  
+ Der Berichtsserver ist ein statusloser Server, der alle Eigenschaften, Objekte und Metadaten in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank speichert. Zu den gespeicherten Daten gehören veröffentlichte Berichte, kompilierte Berichte, Berichtsmodelle und die Ordnerhierarchie, die die Adressierung für alle vom Berichtsserver verwalteten Elemente bereitstellt. Eine Berichtsserver-Datenbank kann internen Speicher für eine einzelne [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installation oder für mehrere Berichtsserver bereitstellen, die Teil einer Bereitstellung für horizontales Skalieren sind. Wenn Sie einen Berichtsserver für die Ausführung in einer großen Bereitstellung eines SharePoint-Produkts oder einer SharePoint-Technologie konfigurieren, verwendet der Berichtsserver die SharePoint-Datenbanken zusätzlich zur Berichtsserver-Datenbank. Weitere Informationen zu Datenspeichern in einer Reporting Services-Installation finden Sie unter [Report Server Database &#40;SSRS Native Mode&#41;](report-server/report-server-database-ssrs-native-mode.md).  
   
 ##  <a name="bkmk_authentication"></a>Authentifizierungs-, Rendering-, Daten-und Übermittlungs Erweiterungen  
  Der Berichtsserver unterstützt die folgenden Erweiterungsarten: Authentifizierungserweiterungen, Datenverarbeitungserweiterungen, Berichtsverarbeitungserweiterungen, Renderingerweiterungen und Übermittlungserweiterungen. Ein Berichtsserver erfordert mindestens eine Authentifizierungserweiterung, Datenverarbeitungserweiterung und Renderingerweiterung. Übermittlungserweiterungen und benutzerdefinierte Berichtsverarbeitungserweiterungen sind zwar optional, jedoch erforderlich, wenn Sie die Berichtsverteilung oder benutzerdefinierte Steuerelemente unterstützen möchten.  
   
  Reporting Services bietet Standarderweiterungen, damit Sie alle Serverfunktionen verwenden können, ohne benutzerdefinierte Komponenten entwickeln zu müssen. In der folgenden Tabelle werden die Standarderweiterungen beschrieben, die zu einer vollständigen Berichtsserverinstanz beitragen, die einsatzbereite Funktionen bietet:  
   
-|Typ|Default|  
+|Type|Standardwert|  
 |----------|-------------|  
 |Authentifizierung|Eine Standard-Berichtsserverinstanz unterstützt die Windows-Authentifizierung, einschließlich Identitätswechsel- und Delegationsfunktionen, falls diese in Ihrer Domäne aktiviert sind.|  
 |Datenverarbeitung|Eine Standard-Berichtsserverinstanz bietet Datenverarbeitungserweiterungen für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-, Oracle-, Hyperion Essbase-, SAPBW-, OLE DB-, Parallel Data Warehouse- und ODBC-Datenquellen.|  
@@ -172,7 +172,7 @@ ms.locfileid: "70176184"
 |Erläutert, wie die Speichereinstellungen für den Report Server-Webdienst und den Windows-Dienst angepasst werden können.|[Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](report-server/configure-available-memory-for-report-server-applications.md)|  
 |Erläutert empfohlene Schritte zur Konfiguration des Berichtsservers für die Remoteverwaltung.|[Konfigurieren eines Berichtsservers für die Remoteverwaltung](report-server/configure-a-report-server-for-remote-administration.md)|  
 |Stellt Anweisungen zum Konfigurieren der Verfügbarkeit von **Meine Berichte** auf einer einheitlichen Berichtsserverinstanz bereit.|[Aktivieren und Deaktivieren von "Meine Berichte"](report-server/enable-and-disable-my-reports.md)|  
-|Stellt Anweisungen zum Einrichten des RSClientPrint-Steuerelements bereit, das Druckfunktionen innerhalb unterstützter Browser bereitstellt. Weitere Informationen zu den Browser Anforderungen finden Sie [unter Planning for Reporting Services und Power View Browser &#40;Support Reporting Services&#41;2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Enable and Disable Client-Side Printing for Reporting Services (Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services)](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
+|Stellt Anweisungen zum Einrichten des RSClientPrint-Steuerelements bereit, das Druckfunktionen innerhalb unterstützter Browser bereitstellt. Weitere Informationen zu den Browser Anforderungen finden Sie [unter Planning for Reporting Services und Power View Browser &#40;Support Reporting Services&#41;2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterungen für Reporting Services](extensions/reporting-services-extensions.md)   

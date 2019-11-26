@@ -30,7 +30,7 @@ ms.locfileid: "72908329"
 
   Gibt ein Resultset zurück, das Metadaten zu nicht deklarierten Parametern in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch enthält. Berücksichtigt jeden Parameter, der in der **\@-partql** -Batch verwendet wird, aber nicht in **\@** Parametern deklariert ist. Ein Resultset wird zurückgegeben, das für jeden dieser Parameter eine Zeile mit den abgeleiteten Typinformationen für diesen Parameter enthält. Die Prozedur gibt ein leeres Resultset zurück, wenn der **\@tenql** -Eingabe Batch keine Parameter aufweist, außer denen, die in **\@para**Metern deklariert werden.  
   
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Link Symbol "Thema"") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,26 +44,26 @@ sp_describe_undeclared_parameters
 ## <a name="arguments"></a>Argumente  
 `[ \@tsql = ] 'Transact-SQL\_batch'` eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (** _n_ **)** oder **nvarchar (max)** sein.  
   
-`[ \@params = ] N'parameters'` \@-Parameters stellt eine Deklarations Zeichenfolge für Parameter für den [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch bereit, ähnlich wie sp_executesql funktioniert. *Parameter* können **nvarchar (** _n_ **)** oder **nvarchar (max)** sein.  
+`[ \@params = ] N'parameters'` \@Parameters stellt eine Deklarations Zeichenfolge für Parameter für den [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch bereit, ähnlich wie sp_executesql funktioniert. *Parameter* können **nvarchar (** _n_ **)** oder **nvarchar (max)** sein.  
   
- Ist eine Zeichenfolge, die die Definitionen aller in *Transact-SQL_batch*eingebetteten Parameter enthält. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. Dabei ist n ein Platzhalter für zusätzlicher Parameterdefinitionen. Wenn die Transact-SQL-Anweisung oder der Batch in der Anweisung keine Parameter enthält, ist \@Parameter nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
+ Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in *Transact-SQL_batch*eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. Dabei ist n ein Platzhalter für zusätzlicher Parameterdefinitionen. Wenn die Transact-SQL-Anweisung oder der Batch in der Anweisung keine Parameter enthält, ist \@Parameter nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
  Datatype  
  Der Datentyp des Parameters.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- **sp_describe_undeclared_parameters** gibt bei Erfolg immer den Rückgabestatus 0 zurück. Wenn die Prozedur einen Fehler auslöst und die Prozedur als RPC aufgerufen wird, wird der Rückgabestatus mit dem Fehlertyp aufgefüllt, der in der error_type-Spalte von sys. DM _exec_describe_first_result_set beschrieben wird. Wenn die Prozedur von [!INCLUDE[tsql](../../includes/tsql-md.md)] aufgerufen wird, ist der Rückgabewert immer 0, auch bei Fehlern.  
+ **sp_describe_undeclared_parameters** gibt bei Erfolg immer den Rückgabestatus 0 zurück. Wenn die Prozedur einen Fehler auslöst und die Prozedur als RPC aufgerufen wird, wird der Rückgabestatus vom Fehlertyp aufgefüllt, der in der error_type-Spalte von sys. dm_exec_describe_first_result_set beschrieben wird. Wenn die Prozedur von [!INCLUDE[tsql](../../includes/tsql-md.md)] aufgerufen wird, ist der Rückgabewert immer 0, auch bei Fehlern.  
   
 ## <a name="result-sets"></a>Resultsets  
  **sp_describe_undeclared_parameters** gibt das folgende Resultset zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int not NULL**|Enthält die Ordnungsposition des Parameters im Resultset. Die Position des ersten Parameters wird mit 1 angegeben.|  
 |**name**|**vom Datentyp sysname ist nicht NULL.**|Enthält den Namen des Parameters.|  
-|**suggested_system_type_id**|**int not NULL**|Enthält die **system_type_id** des Datentyps des Parameters, wie in sys. types angegeben.<br /><br /> Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, auch wenn die **system_type_name** -Spalte NULL zurückgibt.|  
+|**suggested_system_type_id**|**int not NULL**|Enthält die **system_type_id** des Datentyps des Parameters, wie in sys. types angegeben.<br /><br /> Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, obwohl die **system_type_name** Spalte NULL zurückgibt.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Enthält den Namen des Datentyps. Enthält für den Datentyp des Parameters angegebene Argumente (z. B. Länge, Genauigkeit, Skala). Wenn der Datentyp ein benutzerdefinierter Aliastyp ist, wird der zugrunde liegende Systemtyp hier angegeben. Wenn es sich um einen benutzerdefinierten CLR-Datentyp handelt, wird in dieser Spalte NULL zurückgegeben. Wenn der Typ des Parameters nicht abgeleitet werden kann, wird NULL zurückgegeben.|  
-|**suggested_max_length**|**smallint not NULL**|Siehe sys. Columns. für **max_length** Column Description.|  
+|**suggested_max_length**|**smallint not NULL**|Siehe sys. Columns. für **max_length** Spalten Beschreibung.|  
 |**suggested_precision**|**tinyint not NULL**|Siehe sys. Columns. enthält eine Beschreibung der Genauigkeitsspalte.|  
 |**suggested_scale**|**tinyint not NULL**|Siehe sys. Columns. enthält eine Beschreibung der Skalierungsspalte.|  
 |**suggested_user_type_id**|**int NULL**|Enthält bei CLR- und Aliastypen die user_type_id des Datentyps der Spalte, wie in sys.types angegeben. Andernfalls NULL.|  
@@ -84,7 +84,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int not NULL**|Für die interne Verwendung.|  
 |**suggested_tds_length**|**int not NULL**|Für die interne Verwendung.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  **sp_describe_undeclared_parameters** gibt immer den Rückgabestatus 0 (null) zurück.  
   
  Die häufigste Verwendung besteht darin, dass für eine Anwendung eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ausgeführt wird, die möglicherweise Parameter enthält und von dieser verarbeitet werden muss. Ein Beispiel hierfür ist eine Benutzeroberfläche (z. b. odbctest oder rowsetviewer), bei der der Benutzer eine Abfrage mit der ODBC-Parameter Syntax bereitstellt. Die Anwendung muss die Anzahl der Parameter dynamisch ermitteln und bei jedem den Benutzer auffordern.  
@@ -158,7 +158,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  Betrachten Sie beispielsweise die folgende Abfrage: `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)`. Dann ist e (\@P1) = \@P1, E (\@P2) = \@P2 + C1, TT (\@P1) der deklarierte Rückgabe Datentyp von dbo. tbl, und TT (\@P2) ist der deklarierte Parameter Datentyp für dbo. tbl.  
   
- Wenn \@p in keinem Ausdruck enthalten ist, der am Anfang des Schritts 2 aufgelistet ist, bestimmt der typableitungs Algorithmus, dass E (\@p) der größte skalare Ausdruck ist, der \@p enthält, und der typableitungs Algorithmus berechnet keine Zieldaten. Geben Sie TT (\@p) für E (\@p) ein. Wenn die Abfrage beispielsweise ausgewählt ist `@p + 2` dann E (\@p) = \@p + 2, und es ist kein TT (\@p) vorhanden.  
+ Wenn \@p in keinem Ausdruck enthalten ist, der am Anfang des Schritts 2 aufgelistet ist, bestimmt der typableitungs Algorithmus, dass E (\@p) der größte skalare Ausdruck ist, der \@p enthält, und der typableitungs Algorithmus berechnet keinen Ziel Datentyp TT (\@p) für E (\@p). Wenn die Abfrage beispielsweise ausgewählt ist `@p + 2` dann E (\@p) = \@p + 2, und es ist kein TT (\@p) vorhanden.  
   
  **Schritt 3**  
   
@@ -166,7 +166,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Einfache Ableitung  
   
-     Wenn E (\@p) = \@p und TT (\@p) vorhanden ist, d. h., wenn \@p direkt ein Argument für einen der am Anfang von Schritt 2 aufgeführten Ausdrücke ist, leitet der typableitungs Algorithmus den Datentyp von \@p in TT um (\@p). Beispiel:  
+     Wenn E (\@p) = \@p und TT (\@p) vorhanden ist, d. h., wenn \@p direkt ein Argument für einen der am Anfang von Schritt 2 aufgeführten Ausdrücke ist, leitet der typableitungs Algorithmus den Datentyp von \@p in TT (\@p) ab. Zum Beispiel:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -214,7 +214,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  Der Datentyp, der die kleinste Anzahl impliziter Konvertierungen in E (\@p) erzeugt, wird ausgewählt. Wenn ein bestimmter Datentyp einen Datentyp für E (\@p) erzeugt, der sich von TT (\@p) unterscheidet, betrachtet der typableitungs Algorithmus dies als zusätzliche implizite Konvertierung vom Datentyp e (\@p) in TT (\@p).  
   
-     Beispiel:  
+     Zum Beispiel:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -273,7 +273,7 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [sp_describe_first_result_set &#40;Transact-SQL&#41; -](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys. DM _exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) -   
- [sys. DM _exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+## <a name="see-also"></a>Siehe auch  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

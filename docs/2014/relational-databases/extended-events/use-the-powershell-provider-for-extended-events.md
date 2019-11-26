@@ -33,16 +33,16 @@ ms.locfileid: "72782905"
     > [!NOTE]  
     >  PowerShell können Sie unter **Erweiterte Ereignisse**von jedem Knoten aus starten. Sie können z.B. mit der rechten Maustaste auf **Sitzungen**klicken und anschließend auf **PowerShell starten**klicken. Damit starten Sie PowerShell eine Ebene tiefer, mit dem Ordner Sitzungen.  
   
- Sie können die Struktur des Ordners "XEvent" nach vorhandenen Sitzungen für erweiterte Ereignisse und deren zugeordneten Ereignissen, Zielen und Prädikaten durchsuchen. Wenn Sie z. b. von der Datei PS SQLServer: \ XEvent \\*Servername* \\*instanceName*> Pfad eingeben `cd sessions`, drücken Sie die EINGABETASTE, geben Sie `dir` ein, und drücken Sie dann die EINGABETASTE, um die Liste der Sitzungen anzuzeigen, die auf dieser Instanz gespeichert sind. Sie können auch anzeigen, ob die Sitzung ausgeführt wird (und wenn dies der Fall ist, die bisherige Sitzungsdauer), sowie ob die Sitzung für den Start bei Instanzstart konfiguriert ist.  
+ Sie können die Struktur des Ordners "XEvent" nach vorhandenen Sitzungen für erweiterte Ereignisse und deren zugeordneten Ereignissen, Zielen und Prädikaten durchsuchen. Wenn Sie z. b. von der Datei PS SQLServer: \ XEvent\\*Servername*\\*instanceName*> Pfad eingeben `cd sessions`, drücken Sie die EINGABETASTE, geben Sie `dir`ein, und drücken Sie dann die EINGABETASTE, um die Liste der Sitzungen anzuzeigen, die auf dieser Instanz gespeichert sind. Sie können auch anzeigen, ob die Sitzung ausgeführt wird (und wenn dies der Fall ist, die bisherige Sitzungsdauer), sowie ob die Sitzung für den Start bei Instanzstart konfiguriert ist.  
   
- Wenn Sie die Ereignisse, deren Prädikate und die einer Sitzung zugeordneten Ziele anzeigen möchten, können Sie Verzeichnisse in den Sitzungsnamen ändern und dann den Ereignis- oder den Zielordner anzeigen. Um z. b. die Ereignisse und deren Prädikate anzuzeigen, die der standardmäßigen System Integritäts Sitzung zugeordnet sind, geben Sie in das Verzeichnis PS SQLServer: \ XEvent \\*Servername* \\*instanceName*\sessions > Pfad `cd system_health\events,` drücken Sie EINGABETASTE, geben Sie @No __t_5, und drücken Sie dann die EINGABETASTE.  
+ Wenn Sie die Ereignisse, deren Prädikate und die einer Sitzung zugeordneten Ziele anzeigen möchten, können Sie Verzeichnisse in den Sitzungsnamen ändern und dann den Ereignis- oder den Zielordner anzeigen. Um z. b. die Ereignisse und deren Prädikate anzuzeigen, die der standardmäßigen System Integritäts Sitzung zugeordnet sind, geben Sie im Verzeichnis PS SQLServer: \ XEvent\\*Servername*\\*instanceName*\sessions > Pfad `cd system_health\events,` drücken Sie die EINGABETASTE, geben Sie `dir`ein, und drücken Sie dann die EINGABETASTE.  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -PowerShell-Anbieter ist ein leistungsstarkes Tool, mit dem Sie Sitzungen für erweiterte Ereignisse erstellen, ändern und verwalten können. Der folgende Abschnitt enthält einige einfache Beispiele für die Verwendung von PowerShell-Skripts mit erweiterten Ereignissen.  
   
 ## <a name="examples"></a>Beispiele  
  Achten Sie in den folgenden Beispielen auf Folgendes:  
   
--   Die Skripts müssen über die Eingabeaufforderung von PS SQLServer: \\ > ausgeführt werden (verfügbar, wenn Sie an einer Eingabeaufforderung `sqlps` eingeben).  
+-   Die Skripts müssen über die Eingabeaufforderung von PS SQLServer:\\> ausgeführt werden (verfügbar, wenn Sie an einer Eingabeaufforderung `sqlps` eingeben).  
   
 -   Die Skripts verwenden die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -106,10 +106,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
  Zum Erstellen, Ändern oder Löschen einer Sitzung für erweiterte Ereignisse müssen Sie über die ALTER ANY EVENT SESSION-Berechtigung verfügen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
  [Verwenden der system_health-Sitzung](use-the-ssms-xe-profiler.md)   
  [Tools für erweiterte Ereignisse](extended-events-tools.md)  

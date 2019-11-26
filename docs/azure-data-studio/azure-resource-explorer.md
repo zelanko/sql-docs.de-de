@@ -5,28 +5,27 @@ description: Erfahren Sie, wie Sie Azure SQL Server, Azure SQL-Datenbank und ver
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.date: 09/24/2018
+ms.openlocfilehash: 2a1f62ed9266b0575f037dfe9541a026a4c1ed29
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959717"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801138"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Untersuchen und Verwalten von Azure SQL-Ressourcen mit dem Azure-Ressourcen-Explorer
 
 In diesem Dokument erfahren Sie, wie Sie Azure SQL Server, Azure SQL-Datenbank und verwaltete Azure SQL-Instanzen mit dem Azure-Ressourcen-Explorer in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] untersuchen und verwalten können.
 
 >[!NOTE]
->Der Azure-Ressourcen-Explorer wird in der SQL Server 2019-Vorschauversion im Oktober unterstützt. Danach können Sie die Vorschauerweiterung über den [Erweiterungs-Manager](extensions.md) oder **Datei** > **Paket aus dem VSIX-Paket installieren** installieren.
-
+>Der Azure-Ressourcen-Explorer wird in SQL Server 2019 unterstützt. Danach können Sie die Erweiterung über den [Erweiterungs-Manager](extensions.md) oder **Datei** > **Install Package from VSIX PackageP** (Paket aus dem VSIX-Paket installieren) installieren.
 
 ## <a name="connect-to-azure"></a>Herstellen einer Verbindung mit Azure
 
-Nach der Installation des SQL-Vorschau-Plug-Ins wird ein Azure-Symbol in der linken Menüleiste angezeigt. Klicken Sie auf das Symbol, um den Azure-Ressourcen-Explorer zu öffnen. Wenn das Azure-Symbol nicht angezeigt wird, klicken Sie mit der rechten Maustaste auf die linke Menüleiste, und wählen Sie **Azure-Ressourcen-Explorer** aus.
+Nach der Installation des SQL-Plug-Ins wird ein Azure-Symbol in der Menüleiste auf der linken Seite angezeigt. Klicken Sie auf das Symbol, um den Azure-Ressourcen-Explorer zu öffnen. Wenn das Azure-Symbol nicht angezeigt wird, klicken Sie mit der rechten Maustaste auf die linke Menüleiste, und wählen Sie **Azure-Ressourcen-Explorer** aus.
 
 ### <a name="add-an-azure-account"></a>Hinzufügen eines Azure-Kontos
 
@@ -87,7 +86,7 @@ Der Azure-Ressourcen-Explorer unterstützt derzeit Azure SQL Server, Azure SQL-D
 
 ## <a name="connect-to-azure-sql-resources"></a>Herstellen einer Verbindung mit Azure SQL-Ressourcen
 
-Der Azure-Ressourcen-Explorer ermöglicht einen schnellen Zugriff, der Ihnen das Herstellen von Verbindungen mit SQL Server-Instanzen und Datenbanken für die Abfrage und Verwaltung erleichtert. 
+Der Azure-Ressourcen-Explorer ermöglicht einen schnellen Zugriff, der Ihnen das Herstellen von Verbindungen mit SQL Server-Instanzen und Datenbanken für die Abfrage und Verwaltung erleichtert.
 
 1. Untersuchen Sie in der Strukturansicht die SQL-Ressource, mit der Sie eine Verbindung herstellen möchten.
 2. Klicken Sie mit der rechten Maustaste auf die Ressource, und wählen Sie **Verbinden** aus. Sie können auch die Schaltfläche „Verbinden“ auf der rechten Seite der Ressource verwenden.

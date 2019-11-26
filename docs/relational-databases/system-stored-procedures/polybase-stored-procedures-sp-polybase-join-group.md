@@ -44,7 +44,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  Der Name des Computers, der den SQL Server Head-Knoten der polybase-Erweiterungsgruppe hostet. *\@head_node_address* ist vom Datentyp nvarchar (255).  
   
  *\@dms_control_channel_port* = dms_control_channel_port  
- Der Port, an dem der Steuerungs Kanal für den Haupt Knoten PolyBase-Datenverschiebungsdienst Dienstanbieter ausgeführt wird. *\@dms_control_channel_port* ist ein __int16 ohne Vorzeichen. Der Standardwert ist **16450**.  
+ Der Port, an dem der Steuerungs Kanal für den Haupt Knoten PolyBase-Datenverschiebungsdienst Dienstanbieter ausgeführt wird. *\@dms_control_channel_port* ist eine unsignierte __int16. Der Standardwert ist **16450**.  
   
  *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
  Der Name des Hauptknotens SQL Server Instanz in der polybase-Erweiterungsgruppe. *\@head_node_sql_server_instance_name* ist vom Datentyp nvarchar (16).  
@@ -55,8 +55,8 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL SERVER-Berechtigung.  
   
-## <a name="remarks"></a>Hinweise  
- Nachdem Sie die gespeicherte Prozedur ausgeführt haben, fahren Sie die polybase-Engine herunter, und starten Sie den PolyBase-Datenverschiebungsdienst-Dienst auf dem Computer neu. Um zu überprüfen, ob die folgende DMV auf dem Haupt Knoten ausgeführt wird: **sys. DM _exec_compute_nodes**.  
+## <a name="remarks"></a>Remarks  
+ Nachdem Sie die gespeicherte Prozedur ausgeführt haben, fahren Sie die polybase-Engine herunter, und starten Sie den PolyBase-Datenverschiebungsdienst-Dienst auf dem Computer neu. Um zu überprüfen, ob die folgende DMV auf dem Haupt Knoten ausgeführt wird: **sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Beispiel  
  Das Beispiel verbindet den aktuellen Computer als Computeknoten mit einer polybase-Gruppe.  Der Name des Hauptknotens ist " **HST01** ", und der Name der SQL Server Instanz auf dem Haupt Knoten ist " **MSSQLSERVER**".  
@@ -66,7 +66,7 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erste Schritte mit PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

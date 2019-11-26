@@ -45,14 +45,14 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="arguments"></a>Argumente  
 `[ @filename = ] 'file_name'` ist die Zeichenfolge, die den kompletten Pfad, einschließlich des Datei namens, angibt, in dem eine Kopie der Datendatei (. mdf) gespeichert wird. der *Dateiname ist vom Datentyp* **nvarchar (260)** und hat keinen Standardwert.  
   
-`[ @temp_dir = ] 'temp_dir'` ist der Name des Verzeichnisses, das die temporären Dateien enthält. *temp_dir* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. Wenn der Wert NULL ist, wird das Standarddaten Verzeichnis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet. Das Verzeichnis sollte über ausreichenden Speicherplatz verfügen, um eine Datei aufzunehmen, die der Größe aller Datenbankdateien auf dem Abonnenten zusammen entspricht.  
+`[ @temp_dir = ] 'temp_dir'` ist der Name des Verzeichnisses, das die temporären Dateien enthält. *temp_dir* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. Wenn der Wert NULL ist, wird der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standarddaten Verzeichnis verwendet. Das Verzeichnis sollte über ausreichenden Speicherplatz verfügen, um eine Datei aufzunehmen, die der Größe aller Datenbankdateien auf dem Abonnenten zusammen entspricht.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` ist ein optionales boolesches Flag, das angibt, ob eine vorhandene Datei mit demselben Namen überschrieben werden soll, die in **\@filename**angegeben ist. *overwrite_existing_file*ist vom Typ **Bit**. der Standardwert ist **0**. Wenn der Wert **1**ist, wird die durch **\@filename**angegebene Datei überschrieben, sofern vorhanden. Wenn der Wert **0**ist, schlägt die gespeicherte Prozedur fehl, wenn die Datei vorhanden ist, und die Datei wird nicht überschrieben.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` ist ein optionales boolesches Flag, das angibt, ob eine vorhandene Datei mit demselben Namen überschrieben werden soll, die in **\@Dateiname**angegeben ist. *overwrite_existing_file*ist vom Typ **Bit**. der Standardwert ist **0**. Wenn der Wert **1**ist, wird die durch **\@filename**angegebene Datei überschrieben, sofern vorhanden. Wenn der Wert **0**ist, schlägt die gespeicherte Prozedur fehl, wenn die Datei vorhanden ist, und die Datei wird nicht überschrieben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **sp_copysubscription** wird bei allen Replikations Typen verwendet, um eine Abonnement Datenbank als Alternative zum Anwenden einer Momentaufnahme auf dem Abonnenten in eine Datei zu kopieren. Die Datenbank muss so konfiguriert sein, dass ausschließlich Pullabonnements unterstützt werden. Benutzer mit entsprechenden Berechtigungen können Kopien der Abonnementdatenbank erstellen und die Abonnementdatei (MSF) dann per E-Mail, durch Kopieren oder Übertragen an einen anderen Abonnenten senden. Dort kann die Datei dann als Abonnement angefügt werden.  
   
  Die Größe der kopierten Abonnementdatenbank muss weniger als 2 Gigabyte (GB) betragen.  

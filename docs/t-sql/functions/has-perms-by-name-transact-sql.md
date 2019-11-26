@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b7657c1840bf204bb2f22de59a33548a6abc400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019733"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982954"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Wertet die gültige Berechtigung des aktuellen Benutzers für ein sicherungsfähiges Element aus. Eine verwandte Funktion ist [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Ein optionaler Skalarausdruck vom Typ **sysname**, der den Namen der sicherungsfähigen untergeordneten Entität darstellt, mit der die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  
   
 > [!NOTE]  
->  In den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dürfen in untergeordneten sicherungsfähigen Elementen keine eckigen Klammern in der Form **'[** _Name des untergeordneten sicherungsfähigen Elements_ **]'** verwendet werden. Verwenden Sie stattdessen **'** _Name des untergeordneten sicherungsfähigen Elements_ **'** .  
+>  In den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und höher dürfen in untergeordneten sicherungsfähigen Elementen keine eckigen Klammern in der Form **'[** _sub name_ **]'** verwendet werden. Verwenden Sie stattdessen **'** _Name des untergeordneten sicherungsfähigen Elements_ **'** .  
   
  *sub-securable_class*  
  Ein optionaler Skalarausdruck vom Datentyp **nvarchar(60)** , der die Klasse der sicherungsfähigen untergeordneten Entität darstellt, für die die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  
@@ -72,7 +72,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  Gibt NULL zurück, wenn die Abfrage einen Fehler erzeugt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Diese integrierte Funktion testet, ob der aktuelle Prinzipal eine bestimmte gültige Berechtigung für ein bestimmtes sicherungsfähiges Element aufweist. HAS_PERMS_BY_NAME gibt 1 zurück, wenn der Benutzer über eine gültige Berechtigung für das sicherungsfähige Element verfügt, 0, wenn der Benutzer über keine gültige Berechtigung für das sicherungsfähige Element verfügt, und NULL, wenn die sicherungsfähige Klasse oder die Berechtigung nicht gültig ist. Bei einer gültigen Berechtigung kann es sich um Folgendes handeln:  
   
 -   Eine Berechtigung, die dem Prinzipal direkt gewährt und nicht verweigert wurde.  
@@ -105,7 +105,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. Habe ich die VIEW SERVER STATE-Berechtigung auf Serverebene?  
   
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -113,7 +113,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. Kann ich die IMPERSONATE-Anweisung für den Ps-Serverprinzipal ausführen?  
   
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

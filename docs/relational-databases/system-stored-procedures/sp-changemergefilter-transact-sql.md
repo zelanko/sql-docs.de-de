@@ -51,11 +51,11 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` ist der Name der Eigenschaft, die geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @value = ] 'value'` ist der neue Wert für die angegebene Eigenschaft. der Wert ist vom Datentyp **nvarchar (1000)** und hat keinen Standard *Wert*.  
+`[ @value = ] 'value'` der neue Wert für die angegebene Eigenschaft ist. der Wert ist vom Datentyp **nvarchar (1000)** und hat keinen Standard *Wert*.  
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
   
-|Eigenschaft|Wert|Beschreibung|  
+|property|ReplTest1|und Beschreibung|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Joinfilter.<br /><br /> Diese Option ist erforderlich, um [!INCLUDE[ssEW](../../includes/ssew-md.md)]-Abonnenten zu unterstützen.|  
 ||**2**|Logische Datensatzbeziehung.|  
@@ -81,7 +81,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **sp_changemergefilter** wird bei der Mergereplikation verwendet.  
   
  Das Ändern des Filters für einen Mergeartikel erfordert, dass eine vorhandene Momentaufnahme erneut erstellt wird. Dies erfolgt durch Festlegen des **\@force_invalidate_snapshot** auf **1**. Wenn es Abonnements für diesen Artikel gibt, müssen die Abonnements erneut initialisiert werden. Dies erfolgt durch Festlegen des **\@force_reinit_subscription** auf **1**.  

@@ -26,7 +26,7 @@ ms.locfileid: "73787656"
   Im [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) -Thema erfahren Sie, dass in ODBC 2.x bei einem Aufruf von **SQLCancel** durch eine Anwendung ohne anschließende Bearbeitung der Anweisung **SQLCancel** dieselben Auswirkungen wie **SQLFreeStmt** bei Verwendung der **SQL_CLOSE** -Option hat; dieses Verhalten wird nur der Vollständigkeit halber definiert, und Anwendungen sollten **SQLFreeStmt** oder **SQLCloseCursoder** to close cursoders. Aber auch wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anwendung die ODBC API-Version auf 3.5.x oder höher festlegt, verwendet die **SQLCancel** -Funktion das ODBC 2.x-Verhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) -   
+ [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

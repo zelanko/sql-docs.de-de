@@ -22,7 +22,7 @@ ms.locfileid: "70874399"
   
 ##  <a name="bkmk_top"></a> In diesem Thema  
   
--   [Erforderliche Komponenten](#prereq)  
+-   [Voraussetzungen](#prereq)  
   
 -   [Übersicht](#overview)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "70874399"
   
 -   [Wechseln zur Theatersicht oder Katalogsicht](#switch)  
   
-##  <a name="prereq"></a> Prerequisites  
+##  <a name="prereq"></a>Voraussetzungen  
   
 -   Sie müssen über Silverlight verfügen. Silverlight kann heruntergeladen und über Microsoft Update installiert werden. Wenn Sie eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogbibliothek mithilfe eines Browsers anzeigen, der nicht über Silverlight verfügt, klicken Sie auf den Link auf der Seite, um die Anwendung zu installieren. Nach der Installation müssen Sie den Browser schließen und erneut öffnen.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "70874399"
   
  Die Vorschaubilder beruhen auf dem Rendering der Arbeitsmappe in Excel Services. Die Darstellung im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog sollte mit der Anzeige einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe in einem Browser übereinstimmen. Die Vorschauoberfläche ist jedoch begrenzt. Teile einer Arbeitsmappe oder eines Berichts werden u. U. in Anpassung an den verfügbaren Platz gekürzt. Sie müssen unter Umständen eine Arbeitsmappe oder einen Bericht öffnen, um das gesamte Dokument anzuzeigen.  
   
- Das Aktualisieren von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappendaten aus externen Datenquellen wird im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog vollständig unterstützt, erfordert jedoch zusätzliche Konfigurationseinstellungen. Ein Farm- oder Dienstadministrator muss den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog als vertrauenswürdigen Excel Services-Speicherort hinzufügen. Weitere Informationen finden Sie unter [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ Das Aktualisieren von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappendaten aus externen Datenquellen wird im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog vollständig unterstützt, erfordert jedoch zusätzliche Konfigurationseinstellungen. Ein Farm- oder Dienstadministrator muss den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog als vertrauenswürdigen Excel Services-Speicherort hinzufügen. Weitere Informationen finden Sie unter [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a>Erstellen des Power Pivot-Katalogs  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog wird erstellt, wenn Sie [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] mithilfe der Installationsoption Neuer Server installieren. Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] einer vorhandenen Farm hinzugefügt haben oder eine zusätzliche Bibliothek benötigen, können Sie für Ihre Anwendung oder Website eine neue erstellen.  
@@ -132,7 +132,7 @@ ms.locfileid: "70874399"
   
  In der folgenden Tabelle werden die verschiedenen Layouts zum Darstellen von Miniaturansichtsskizzen jeder in der Vorschau angezeigten Seite beschrieben:  
   
-|Anzeigen|Description|  
+|Ansicht|und Beschreibung|  
 |----------|-----------------|  
 |Katalogsicht (Standard)|Die Katalogsicht ist die Standardsicht für einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog. Die Vorschau wird links angezeigt. Daneben werden kleinere Miniaturansichten der einzelnen Arbeitsblätter in sequenzieller Reihenfolge von links nach rechts angezeigt.|  
 |Alle Dokumente|Dies ist das Standardlayout für Dokumentbibliotheken. Sie können diese Sicht auswählen, um einzelne Dokumente zu verwalten oder Bibliotheksinhalte in einem Listenformat anzuzeigen.<br /><br /> Verwenden Sie diese Sicht, um Eigenschaften zu bearbeiten und einzelne Dokumente zu löschen oder zu verschieben.<br /><br /> Wenn Sie die Versionsverwaltung aktiviert haben, müssen Sie Dokumente unter Verwendung dieser Sicht in der Bibliothek einchecken oder auschecken.|  
@@ -146,10 +146,10 @@ ms.locfileid: "70874399"
   
 3.  Wählen Sie unter Ansichten verwalten in Aktuelle Ansicht die zu verwendende Ansicht aus der Liste aus. Zu den vordefinierten Sichten gehören die Katalogsicht, Theatersicht und Karussellsicht. Alternativ können Sie Alle Dokumente auswählen, wenn Sie Dokumente in der Bibliothek verschieben, löschen oder verwalten möchten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- Problembehandlung bei [einer PowerPivot für SharePoint-Installation](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)    
- [Verwenden des Power Pivot](use-power-pivot-gallery.md) -Katalogs    
- [Erstellen eines vertrauenswürdigen Speicher Orts für Power Pivot-Websites in der zentral Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)    
+## <a name="see-also"></a>Siehe auch  
+ Problembehandlung bei [einer PowerPivot für SharePoint-Installation](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
+ [Verwenden des Power Pivot](use-power-pivot-gallery.md) -Katalogs   
+ [Erstellen eines vertrauenswürdigen Speicher Orts für Power Pivot-Websites in der zentral Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Löschen des PowerPivot-Katalogs](delete-power-pivot-gallery.md)  
   
   

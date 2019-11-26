@@ -35,7 +35,7 @@ ms.locfileid: "73787790"
  Wenn für Datentypen mit umfangreichen Werten der vom Benutzer bereitgestellte Puffer nicht groß genug ist, um den gesamten Wert der Spalte zu speichern, wird **SQL_SUCCESS_WITH_INFO** zurückgegeben, und die Zeichen folgen Daten; Right trunation "wird ausgegeben. Das **StrLen_or_IndPtr** -Argument enthält die Anzahl der im Puffer gespeicherten Zeichen/bytes.  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>SQLBindCol-Unterstützung für verbesserte Funktionen für Datum/Uhrzeit  
- Ergebnis Spaltenwerte von Datums-/Uhrzeittypen werden wie in [Konvertierungen von SQL in C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)beschrieben konvertiert. Beachten Sie, dass zum Abrufen von Time-und DateTimeOffset-Spalten als zugehörige Strukturen (**SQL_SS_TIME2_STRUCT** und **SQL_SS_TIMESTAMPOFFSET_STRUCT**) *TargetType* als **SQL_C_DEFAULT** oder SQL_C_BINARY angegeben werden muss..  
+ Ergebnis Spaltenwerte von Datums-/Uhrzeittypen werden wie in [Konvertierungen von SQL in C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)beschrieben konvertiert. Beachten Sie, dass zum Abrufen von Time-und DateTimeOffset-Spalten als zugehörige Strukturen (**SQL_SS_TIME2_STRUCT** und **SQL_SS_TIMESTAMPOFFSET_STRUCT**) *TargetType* als **SQL_C_DEFAULT** oder **SQL_C_BINARY**angegeben werden muss.  
   
  Weitere Informationen finden Sie unter [Verbesserungen &#40;bei Datum und&#41;Uhrzeit (ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)).  
   

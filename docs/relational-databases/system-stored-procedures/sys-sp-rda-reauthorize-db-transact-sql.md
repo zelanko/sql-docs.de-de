@@ -38,7 +38,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Argumente  
- @credential = *\@credential*  
+ @credential = *\@* Anmelde Informationen  
  Die Daten Bank weit gültigen Anmelde Informationen, die der lokalen Stretch-aktivierten Datenbank zugeordnet sind.  
   
  @with_copy = *\@with_copy*  
@@ -54,9 +54,9 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  0 (Erfolg) oder > 0 (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert db_owner-Berechtigungen.  
+ Erfordert db_owner Berechtigungen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn Sie [sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) ausführen, um erneut eine Verbindung mit der Azure-Remote Datenbank herzustellen, setzt dieser Vorgang den Abfrage Modus automatisch auf LOCAL_AND_REMOTE zurück. Dies ist das Standardverhalten für Stretch Database. Das heißt, dass Abfragen Ergebnisse sowohl aus lokalen als auch aus Remote Daten zurückgeben.  
   
 ## <a name="example"></a>Beispiel  
@@ -71,6 +71,6 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
   
 ## <a name="see-also"></a>Siehe auch  
  [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [Stretch-Datenbank](../../sql-server/stretch-database/stretch-database.md)  
   
   

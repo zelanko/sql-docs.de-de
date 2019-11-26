@@ -1,5 +1,5 @@
 ---
-title: Stretch Database | Microsoft-Dokumentation
+title: Stretch Database
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -9,12 +9,13 @@ helpviewer_keywords:
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f5830ab8196c699e5d7b851c7ac82c1056ca919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: bd061c463afc55ab103646dcd1e0cc5994f43ed1
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091830"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844602"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "68091830"
 
 **Sie können die Datenmigration anhalten** , um Probleme auf dem lokalen Server zu beheben oder die verfügbare Netzwerkbandbreite zu maximieren.  
   
- ![Überblick über Stretch-Datenbank](../../sql-server/stretch-database/media/stretch-overview.png "Überblick über Stretch-Datenbank")  
+ ![Übersicht über Stretchdatenbanken](../../sql-server/stretch-database/media/stretch-overview.png "Übersicht über Stretchdatenbanken")  
   
 ## <a name="is-stretch-database-for-you"></a>Ist Stretch Database die richtige Wahl für Sie?  
  Wenn die folgenden Aussagen auf Sie zutreffen, kann Stretch Database Ihnen vielleicht beim Erfüllen Ihrer Anforderungen und beim Lösen Ihrer Probleme helfen.  

@@ -49,21 +49,21 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode = ] 'failover_mode'` ist der Failovermodus für das Abonnement. *failover_mode* ist vom Datentyp **nvarchar (10)** . die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|ReplTest1|und Beschreibung|  
 |-----------|-----------------|  
 |**direkt** oder **synchronisiert**|Datenänderungen, die auf dem Abonnenten durchgeführt werden, werden bei ihrem Auftreten mithilfe eines Massenkopiervorgangs auf den Verleger übertragen.|  
-|**Warteschlange**|Datenänderungen werden in einer [!INCLUDE[msCoName](../../includes/msconame-md.md)]-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Warteschlange gespeichert.|  
+|**Warteschlange**|Datenänderungen werden in einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Warteschlange gespeichert.|  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.  
   
-nur `[ @override = ] override`-interne Verwendung.  
+nur `[ @override = ] override` interne Verwendung.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **sp_setreplfailovermode** wird bei der Momentaufnahme-oder Transaktions Replikation verwendet, für die Abonnements aktiviert werden, entweder für das verzögertes Update über eine Warteschlange mit Failover auf sofortiges Update oder für sofortige Updates mit Failover zum verzögertem Update über eine Warteschlange.  
+## <a name="remarks"></a>Remarks  
+ **sp_setreplfailovermode** wird bei der Momentaufnahme-oder Transaktions Replikation verwendet, bei der Abonnements entweder für das verzögerte Update über eine Warteschlange mit einem Failover auf eine sofortige Aktualisierung oder für sofortige Updates mit Failover zum verzögertem Update über eine Warteschlange aktiviert sind.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_setreplfailovermode**ausführen.  

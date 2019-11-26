@@ -1,26 +1,26 @@
 ---
 title: Installieren von SQL Server-Spracherweiterungen unter Windows
-titleSuffix: SQL Server Language Extensions
-description: Schritte für das Installieren von Spracherweiterungen für SQL Server 2019 unter Windows.
+titleSuffix: ''
+description: Erfahren Sie, wie Sie SQL Server-Spracherweiterungen unter Windows installieren.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc9baf6f5360c82ec27a3c243b840b2d38ed1d56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589064"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658846"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Installieren von SQL Server-Spracherweiterungen unter Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Ab SQL Server 2019 werden Spracherweiterungen und Java-Unterstützung bereitgestellt. In diesem Artikel wird erläutert, wie Sie die Komponente „Spracherweiterungen“ durch Ausführen des Setup-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren.
+Erfahren Sie, wie Sie die Komponente „Spracherweiterungen“ durch Ausführen des Setup-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in SQL Server installieren.
 
 > [!NOTE]
 > Dieser Artikel behandelt die Installation von SQL Server-Spracherweiterungen unter Windows. Informationen für Linux finden Sie unter [Installieren von SQL Server 2019-Spracherweiterungen (Java) unter Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions).
@@ -61,11 +61,8 @@ In SQL Server 2019 Release Candidate 1 gibt es zwei Möglichkeiten, Java mit SQ
     
 ## <a name="get-the-installation-media"></a>Abrufen der Installationsmedien
 
-Die Vorschauversion von SQL Server 2019 steht auf der [Installationssite für SQL Server 2019 ](https://www.microsoft.com/sql-server/sql-server-2019#Install) zur Verfügung.
-
-<!-- We can use this include statement, once SQL Server 2019 is in GA
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
--->
+
 ## <a name="run-setup"></a>Ausführen von 'Setup'
 
 Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.

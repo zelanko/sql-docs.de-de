@@ -32,15 +32,15 @@ ms.locfileid: "72313720"
 
   Enthält eine Zeile pro Datei einer Datenbank, die in der Master-Datenbank gespeichert ist. Dies ist eine einzelne, systemweite Sicht.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|ID der Datenbank, auf die sich diese Datei bezieht Masterdatabase_id ist immer 1.|  
+|database_id|**int**|ID der Datenbank, auf die sich diese Datei bezieht Der masterdatabase_id ist immer 1.|  
 |file_id|**int**|ID der Datei in der Datenbank Die ID der primären Datei ist immer 1.|  
 |file_guid|**uniqueidentifier**|Der eindeutige Bezeichner der Datei.<br /><br /> NULL = die Datenbank wurde von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert (gültig für SQL Server 2005 und früher).|  
-|Typ|**tinyint**|Dateityp:<br /><br /> 0 = Zeilen<br /><br /> 1 = Protokoll<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Volltext (Volltextkataloge vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; Volltextkataloge, die auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher aktualisiert oder darin erstellt wurden, geben den Dateityp 0 zurück.)|  
+|type|**tinyint**|Dateityp:<br /><br /> 0 = Zeilen<br /><br /> 1 = Protokoll<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Volltext (Volltextkataloge vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; Volltextkataloge, die auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher aktualisiert oder darin erstellt wurden, geben den Dateityp 0 zurück.)|  
 |type_desc|**nvarchar(60)**|Beschreibung des Dateityps:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (Volltextkataloge vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].)|  
 |data_space_id|**int**|Die ID des Datenspeicherplatzes, zu dem diese Datei gehört. Der Datenspeicherplatz ist eine Dateigruppe.<br /><br /> 0 = Protokolldateien|  
-|NAME|**sysname**|Logischer Name der Datei in der Datenbank|  
+|name|**sysname**|Logischer Name der Datei in der Datenbank|  
 |physical_name|**nvarchar(260)**|Betriebssystem-Dateiname|  
 |state|**tinyint**|Dateistatus:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|Beschreibung des Dateistatus:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Weitere Informationen finden Sie im Abschnitt [Dateistatus](../../relational-databases/databases/file-states.md).|  
@@ -60,11 +60,11 @@ ms.locfileid: "72313720"
 |differential_base_guid|**uniqueidentifier**|Der eindeutige Bezeichner der Basissicherung, auf der eine differenzielle Sicherung basiert.|  
 |differential_base_time|**datetime**|Zeit, die differential_base_lsn entspricht.|  
 |redo_start_lsn|**numeric(25,0)**|LSN, bei der das nächste Rollforward beginnen muss.<br /><br /> Ist NULL, es sei denn, State = Wiederherstellung oder state = RECOVERY_PENDING.|  
-|redo_start_fork_guid|**uniqueidentifier**|Eindeutiger Bezeichner des Verzweigungspunkts. Der first_fork_guid-Wert der nächsten wiederhergestellten Protokoll Sicherung muss mit diesem Wert identisch sein. Dies stellt den aktuellen Status des Containers dar.|  
+|redo_start_fork_guid|**uniqueidentifier**|Eindeutiger Bezeichner des Verzweigungspunkts. Der first_fork_guid der nächsten wiederhergestellten Protokoll Sicherung muss mit diesem Wert identisch sein. Dies stellt den aktuellen Status des Containers dar.|  
 |redo_target_lsn|**numeric(25,0)**|Die LSN, bei der das Onlinerollforward für diese Datei beendet werden kann.<br /><br /> Ist NULL, es sei denn, State = Wiederherstellung oder state = RECOVERY_PENDING.|  
 |redo_target_fork_guid|**uniqueidentifier**|Die Wiederherstellungsverzweigung, bei der der Container wiederhergestellt werden kann. Gekoppelt mit redo_target_lsn.|  
 |backup_lsn|**numeric(25,0)**|Die LSN der letzten Datensicherung oder differenziellen Sicherung der Datei.|  
-|credential_id|**int**|Der `credential_id` von `sys.credentials`, der zum Speichern der Datei verwendet wird. Wenn beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem virtuellen Azure-Computer ausgeführt wird und die Datenbankdateien in Azure BLOB Storage gespeichert werden, werden Anmelde Informationen mit den Anmelde Informationen für den Zugriff auf den Speicherort konfiguriert.|  
+|credential_id|**int**|Der `credential_id` aus `sys.credentials` der zum Speichern der Datei verwendet wird. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] z. b. auf einem virtuellen Azure-Computer ausgeführt wird und die Datenbankdateien in Azure BLOB Storage gespeichert werden, werden Anmelde Informationen mit den Anmelde Informationen für den Zugriff auf den Speicherort konfiguriert.|  
   
 > [!NOTE]  
 >  Wenn Sie große Indizes löschen oder neu erstellen bzw. wenn Sie große Tabellen löschen oder abschneiden, verzögert [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Aufhebung der aktuellen Seitenzuordnungen sowie die zugehörigen Sperren, bis für die Transaktion ein Commit ausgeführt wird. Bei verzögerten Löschvorgängen wird der zugeordnete Speicherplatz nicht sofort freigegeben. Daher spiegeln die von sys. master_files unmittelbar nach dem Löschen oder Abschneiden eines großen Objekts zurückgegebenen Werte nicht den tatsächlich verfügbaren Speicherplatz wider.  
@@ -74,7 +74,7 @@ ms.locfileid: "72313720"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbanken und Dateikatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Datei](../../relational-databases/databases/file-states.md)Status    
+ [Datei](../../relational-databases/databases/file-states.md) Status   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md)  

@@ -37,7 +37,7 @@ ms.locfileid: "70874447"
 -   Bei einem manuellen Failover wird nur die für das Failover der Datenbank erforderliche Zeit nach dem Failoverbefehl ausgegeben.  
   
 ## <a name="error-detection"></a>Fehlererkennung  
- Die Zeit, die das System zum bemerken eines Fehlers benötigt, hängt vom Typ des Fehlers ab. Beispielsweise wird ein Netzwerkfehler nahezu sofort bemerkt, während ein nicht reagierendem Server 10 Sekunden (mit dem Standard Timeout) benötigt.  
+ Die Zeit, die das System zum Erkennen eines Fehlers benötigt, hängt von der Art des Fehlers ab. Beispielsweise wird ein Netzwerkfehler nahezu sofort bemerkt, während es 10 Sekunden dauert, um festzustellen, dass ein Server nicht reagiert (bei Standardtimeout).  
   
  Informationen zu Fehlern, die während einer Datenbank-Spiegelungssitzung zu Problemen führen können, und zur Timeouterkennung im Modus für hohe Sicherheit mit automatischem Failover finden Sie unter [Mögliche Fehler während der Datenbankspiegelung](possible-failures-during-database-mirroring.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70874447"
  Die Failoverzeit setzt sich hauptsächlich aus der Zeit zusammen, die der frühere Spiegelserver benötigt, um ein Rollforward für Protokolle in der Wiederholungswarteschlange auszuführen, sowie einem kurzen zusätzlichen Zeitraum (weitere Informationen zur Verarbeitung von Protokolldatensätzen durch den Spiegelserver finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)). Informationen zum Schätzen der Failoverzeit finden Sie unter "Schätzen der Rollforwardrate für das Failover" weiter unten in diesem Thema.  
   
 > [!IMPORTANT]  
->  Wenn ein Failover während einer Transaktion auftritt, in der ein Index oder eine Tabelle erstellt und anschließend geändert wird, kann das Failover mehr Zeit als gewöhnlich in Anspruch nehmen.  So kann ein Failover während des folgenden Ablaufs von Vorgängen die Failoverzeit verlängern:  BEGIN TRANSACTION, CREATE INDEX in einer Tabelle und SELECT INTO für die Tabelle. Die Möglichkeit einer erhöhten Failoverzeit während einer solchen Transaktion bleibt bis zu ihrem Abschluss durch eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung bestehen.  
+>  Wenn ein Failover während einer Transaktion auftritt, in der ein Index oder eine Tabelle erstellt und anschließend geändert wird, kann das Failover mehr Zeit als gewöhnlich in Anspruch nehmen.  So kann ein Failover während der folgenden Folge von Operationen die Failoverzeit verlängern: BEGIN TRANSACTION, CREATE INDEX in einer Tabelle und SELECT INTO für die Tabelle. Die Möglichkeit einer erhöhten Failoverzeit während einer solchen Transaktion bleibt bis zu ihrem Abschluss durch eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung bestehen.  
   
 ### <a name="the-redo-queue"></a>Wiederholungswarteschlange  
  Um ein Rollforward für die Datenbank auszuführen, müssen die Protokolldatensätze angewandt werden, die sich derzeit in der Wiederholungswarteschlange auf dem Spiegelserver befinden. Die *Wiederholungswarteschlange* besteht aus den Protokolldatensätzen, die auf den Datenträger des Spiegelservers geschrieben wurden, für die aber noch kein Rollforward in der Spiegeldatenbank ausgeführt wurde.  

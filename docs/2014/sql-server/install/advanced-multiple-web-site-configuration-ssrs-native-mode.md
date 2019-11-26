@@ -22,7 +22,7 @@ ms.locfileid: "71952669"
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Erweiterte Konfiguration mehrerer Websites (einheitlicher SSRS-Modus)
   In diesem Dialogfeld können Sie die URLs erstellen und verwalten, mit denen Sie einen Berichtsserver oder den Berichts-Manager aufrufen. Im Dialogfeld **Erweiterte Konfiguration mehrerer Websites** können Sie weitere URLs erstellen, benutzerdefinierte URLs, die einen Hostheadernamen enthalten oder in denen eine IP-Adresse im Format IPv4 oder IPv6 angegeben ist.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Die Erstellung mehrerer URLs ist nützlich, wenn Sie verschiedene Möglichkeiten konfigurieren möchten, um auf einen Berichtsserver zugreifen zu können. Beispielsweise erfordert der Zugriff auf einen Berichtsserver über eine Intranet- und Extranet-Verbindung normalerweise für jede Art der Verbindung andere URLs.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "71952669"
   
  Klicken Sie auf **OK** , um die Änderungen zu speichern. Wenn Sie URLs hinzufügen oder entfernen, jedoch dann das Dialogfeld ohne Klicken auf **OK**schließen, werden die Änderungen nicht gespeichert.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **IP-Adresse**  
  Gibt den Berichtsserver-Computer im TCP/IP-Netzwerk an. Gültige Werte sind:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71952669"
   
 -   Mit**127.0.0.1** wird auf localhost zugegriffen. Dieser Wert unterstützt die lokale Verwaltung auf dem Berichtsservercomputer. Wenn Sie nur diesen Wert auswählen, können nur Benutzer, die lokal auf dem Berichtsservercomputer angemeldet sind, auf die Anwendung zugreifen.  
   
--   *Nnn.nnn.nnn.nnn* ist die IPv4-Adresse einer Netzwerkkarte auf Ihrem Computer. Wenn Ihr Netzwerk IPv6-Adressierung verwendet, ist die IP-Adresse ein 128-Bit-Wert von 8 4-Byte-Feldern ähnlich dem folgenden Format: \<header >:*nnnn: nnnn: nnnn: nnnn*.  
+-   *Nnn.nnn.nnn.nnn* ist die IPv4-Adresse einer Netzwerkkarte auf Ihrem Computer. Wenn Ihr Netzwerk IPv6-Adressierung verwendet, ist die IP-Adresse ein 128-Bit-Wert von 8 4-Byte-Feldern ähnlich dem folgenden Format: \<Header >:*nnnn: nnnn: nnnn: nnnn*.  
   
      Wenn Sie mehrere Karten haben, wird für jede Karte eine IP-Adresse angezeigt. Wenn Sie nur diesen Wert auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostname, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können mit localhost nicht auf einen Berichtsserver zugreifen, und Sie können nicht die IP-Adressen der anderen Netzwerkkarten verwenden, die auf dem Berichtsservercomputer installiert sind.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71952669"
  **Bearbeiten**  
  Ändern Sie beliebige Teile der URL-Syntax.  
   
- **Entfernen**  
+ **Remove**  
  Entfernen Sie eine URL aus der Liste.  
   
 ## <a name="see-also"></a>Siehe auch  

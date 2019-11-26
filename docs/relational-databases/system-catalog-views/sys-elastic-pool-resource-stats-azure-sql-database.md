@@ -34,7 +34,7 @@ ms.locfileid: "73843871"
 |-|  
 |**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|Die UTC-Zeit, die den Beginn des 15-Sekunden-Berichts Intervalls angibt.|  
 |**end_time**|**datetime2**|Die UTC-Zeit, die das Ende des 15-Sekunden-Berichts Intervalls angibt.|  
@@ -49,7 +49,7 @@ ms.locfileid: "73843871"
 |**elastic_pool_storage_limit_mb**|**bigint**|Aktuelle maximale Speicherbeschränkung für Pools für elastische Datenbanken für diesen Pool für elastische Datenbanken während dieses Intervalls in Megabyte.|
 |**avg_allocated_storage_percent**|**Dezimalzahl (5, 2)**|Der Prozentsatz des Daten Speicherplatzes, der von allen Datenbanken im elastischen Pool zugewiesen wird.  Dies ist das Verhältnis des Daten Speicherplatzes, der der maximalen Datengröße für den Pool für elastische Datenbanken zugeordnet ist.  Weitere Informationen finden Sie [unter: Dateispeicher Platz Verwaltung in SQL-DB](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|  
   
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Remarks
 
  Diese Sicht ist in der Master-Datenbank des SQL-Datenbankservers vorhanden. Sie müssen mit der Master-Datenbank verbunden sein, um **sys. elastic_pool_resource_stats**Abfragen zu können.  
   

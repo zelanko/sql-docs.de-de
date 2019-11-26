@@ -38,12 +38,12 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **\@publication =** ] **"***Veröffentlichung***"**  
+ [ **\@Publication =** ] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 `[ @level = ] level` ist der Typ der Überprüfung, die durchgeführt werden soll. die Ebene ist vom Datentyp **tinyint**und hat keinen Standard *Wert* . Level kann einen der folgenden Werte haben.  
   
-|Level-Wert|Beschreibung|  
+|Level-Wert|und Beschreibung|  
 |-----------------|-----------------|  
 |**1**|Nur Überprüfung der Zeilenanzahl.|  
 |**2**|Überprüfung der Zeilenanzahl und der Prüfsumme. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten wird dies automatisch auf **3**festgelegt.|  
@@ -52,7 +52,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergepublication** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

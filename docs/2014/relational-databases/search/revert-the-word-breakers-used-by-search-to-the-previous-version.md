@@ -24,7 +24,7 @@ ms.locfileid: "70874720"
   
 -   **Englisch**. Informationen zum Wiederherstellen der englischen Komponenten finden Sie unter [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
--   **Dänisch, Polnisch und Türkisch**. Die Wörtertrennungen von Drittanbietern für Dänisch, Polnisch und Türkisch, die in vorherigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten waren, wurden durch [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Komponenten ersetzt.  
+-   **Dänisch, Polnisch und Türkisch**. Die Wörtertrennungen von Drittanbietern für Dänisch, Polnisch und Türkisch, die in vorherigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten waren, wurden durch [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Komponenten ersetzt.  
   
 -   **Tschechisch und Griechisch**. Es gibt neue Wörtertrennungen für Tschechisch und Griechisch. Vorherige Versionen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Volltextsuche unterstützten diese zwei Sprachen nicht.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "70874720"
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-4.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
+4.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
   
 ###  <a name="nl6nl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
   
@@ -117,7 +117,7 @@ ms.locfileid: "70874720"
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-3.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
+3.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
   
 ##  <a name="newnl6"></a> Sprachen, für die nur der Dateiname der vorherigen Wörtertrennung NaturalLanguage6.dll ist  
  Für die Sprachen in der folgenden Tabelle unterscheidet sich der Dateiname für die vorherige Wörtertrennung vom Dateinamen der neuen Version. Der vorherige Dateiname ist NaturalLanguage6.dll. Um zur früheren Version wiederherzustellen, müssen Sie die aktuelle Version von NaturalLanguage6.dll mit einer früheren Version der gleichen Datei überschreiben. Sie müssen auch einen Satz von Registrierungseinträgen ändern, um die vorherige oder aktuelle Version der Komponenten anzugeben.  
@@ -152,7 +152,7 @@ ms.locfileid: "70874720"
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\CLSID**.  
   
 6.  Fügen Sie mithilfe der folgenden Schritte für die COM ClassIDs für die Schnittstellen der früheren Wörtertrennung und die Wortstammerkennung für die ausgewählte Sprache neue Schlüssel hinzu:  
   
@@ -164,13 +164,13 @@ ms.locfileid: "70874720"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der vorherigen Wortstammerkennung aus der Tabelle.  
   
-7.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< instanceroot\>\MSSearch\Language\\< Sprachschlüssel >** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+7.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\Sprache\\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 8.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wörtertrennung.  
   
 9. Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann den **StemmerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wortstammerkennung.  
   
-10. Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
+10. Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
   
 ###  <a name="newnl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
   
@@ -181,7 +181,7 @@ ms.locfileid: "70874720"
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-3.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+3.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\CLSID**.  
   
 4.  Wenn die folgenden Schlüssel nicht vorhanden sind, gehen Sie folgendermaßen vor, um neue Schlüssel für die COM ClassIDs für die Schnittstellen der aktuellen Wörtertrennung und der Wortstammerkennung für die ausgewählte Sprache hinzuzufügen:  
   
@@ -193,13 +193,13 @@ ms.locfileid: "70874720"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der aktuellen Wortstammerkennung aus der Tabelle.  
   
-5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< instanceroot\>\MSSearch\Language\\< Sprachschlüssel >** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\Sprache\\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 6.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wörtertrennung.  
   
 7.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann den **StemmerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wortstammerkennung.  
   
-8.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
+8.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
   
 ###  <a name="newnl6values"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
  Verwenden Sie die folgende Liste von Dateinamen und Registrierungseinträgen zusammen mit den Anweisungen im vorangehenden Abschnitt. Verwenden Sie die vorherigen Werte, um die frühere Version wiederherzustellen, oder verwenden Sie die aktuellen Werte, um die aktuelle Version der Komponenten wiederherzustellen.  
@@ -212,8 +212,8 @@ ms.locfileid: "70874720"
 |---------------|------------------|-------------|  
 |Vorherige CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|Aktuelle CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
-|Aktueller Dateiname|MSWB7.dll|None|  
+|Aktuelle CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Keine|  
+|Aktueller Dateiname|MSWB7.dll|Keine|  
   
  **Deutsch (deu), LCID 1031**  
   
@@ -222,7 +222,7 @@ ms.locfileid: "70874720"
 |Vorherige CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Aktuelle CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Aktueller Dateiname|MSWB7.dll|MSWB7.dll|  
+|Aktueller Dateiname|MsWb7.dll|MsWb7.dll|  
   
  **Japanisch (jpn), LCID 1041**  
   
@@ -230,8 +230,8 @@ ms.locfileid: "70874720"
 |---------------|------------------|-------------|  
 |Vorherige CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|Aktuelle CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
-|Aktueller Dateiname|MsWb70011.dll|None|  
+|Aktuelle CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|Keine|  
+|Aktueller Dateiname|MsWb70011.dll|Keine|  
   
  **Niederländisch (nld), LCID 1043**  
   
@@ -240,7 +240,7 @@ ms.locfileid: "70874720"
 |Vorherige CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Aktuelle CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Aktueller Dateiname|MSWB7.dll|MSWB7.dll|  
+|Aktueller Dateiname|MsWb7.dll|MsWb7.dll|  
   
  **Russisch (rus), LCID 1049**  
   
@@ -249,7 +249,7 @@ ms.locfileid: "70874720"
 |Vorherige CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Aktuelle CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Aktueller Dateiname|MSWB7.dll|MSWB7.dll|  
+|Aktueller Dateiname|MsWb7.dll|MsWb7.dll|  
   
 ##  <a name="newnew"></a> Sprachen, für die weder der vorherige noch der aktuelle Dateiname NaturalLanguage6.dll ist  
  Für die Sprachen in der folgenden Tabelle unterscheiden sich die Dateinamen der vorherigen Wörtertrennungen und Wortstammerkennungen von den Dateinamen der neuen Versionen. Weder der vorherige noch der aktuelle Dateiname ist NaturalLanguage6.dll. Sie müssen keine Dateien ersetzen, da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup sowohl die aktuellen als auch die früheren Versionen der Komponenten in den Ordner "Binn" kopiert. Sie müssen jedoch einen Satz von Registrierungseinträgen ändern, um die vorherige oder aktuelle Version der Komponenten anzugeben.  
@@ -273,7 +273,7 @@ ms.locfileid: "70874720"
   
 1.  Entfernen Sie die Dateien für die aktuelle Version der Komponenten nicht aus dem Ordner "Binn".  
   
-2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\CLSID**.  
   
 3.  Fügen Sie mithilfe der folgenden Schritte für die COM ClassIDs für die Schnittstellen der früheren Wörtertrennung und die Wortstammerkennung für die ausgewählte Sprache neue Schlüssel hinzu:  
   
@@ -285,19 +285,19 @@ ms.locfileid: "70874720"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der vorherigen Wortstammerkennung aus der Tabelle.  
   
-4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< instanceroot\>\MSSearch\Language\\< Sprachschlüssel >** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\Sprache\\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 5.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wörtertrennung.  
   
 6.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann den **StemmerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wortstammerkennung.  
   
-7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
+7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
   
 ###  <a name="newnewrestore"></a> So stellen Sie die vorherigen Komponenten wieder her  
   
 1.  Entfernen Sie die Dateien für die vorherige Version der Komponenten nicht aus dem Ordner "Binn".  
   
-2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\CLSID**.  
   
 3.  Wenn die folgenden Schlüssel nicht vorhanden sind, gehen Sie folgendermaßen vor, um neue Schlüssel für die COM ClassIDs für die Schnittstellen der aktuellen Wörtertrennung und der Wortstammerkennung für die ausgewählte Sprache hinzuzufügen:  
   
@@ -309,13 +309,13 @@ ms.locfileid: "70874720"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der aktuellen Wortstammerkennung aus der Tabelle.  
   
-4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< instanceroot\>\MSSearch\Language\\< Sprachschlüssel >** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\Sprache\\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 5.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wörtertrennung.  
   
 6.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann den **StemmerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wortstammerkennung.  
   
-7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
+7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
   
 ###  <a name="newnewvalues"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
  Verwenden Sie die folgende Liste von Dateinamen und Registrierungseinträgen zusammen mit den Anweisungen im vorangehenden Abschnitt. Verwenden Sie die vorherigen Werte, um die frühere Version wiederherzustellen, oder verwenden Sie die aktuellen Werte, um die aktuelle Version der Komponenten wiederherzustellen.  
@@ -346,8 +346,8 @@ ms.locfileid: "70874720"
 |---------------|------------------|-------------|  
 |Vorherige CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Vorheriger Dateiname|Thawbrkr.dll|Thawbrkr.dll|  
-|Aktuelle CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
-|Aktueller Dateiname|MsWb7001e.dll|None|  
+|Aktuelle CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|Keine|  
+|Aktueller Dateiname|MsWb7001e.dll|Keine|  
   
  **Chinesisch traditionell (zh-hk), LCID 3076**  
   
@@ -377,7 +377,7 @@ ms.locfileid: "70874720"
 |Aktueller Dateiname|MsWb70804.dll|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Verhaltensänderungen der Volltextsuche](../../database-engine/behavior-changes-to-full-text-search.md)  
   
   

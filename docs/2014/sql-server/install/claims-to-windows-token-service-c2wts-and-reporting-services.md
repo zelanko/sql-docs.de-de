@@ -23,7 +23,7 @@ ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952274"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) und Reporting Services
-  Der SharePoint-claims to Windows Token Service (c2WTS) ist mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-SharePoint-Modus erforderlich, wenn Sie die Windows-Authentifizierung für Datenquellen verwenden möchten, die sich außerhalb der SharePoint-Farm befinden. Dies gilt auch, wenn der Benutzer über die Windows-Authentifizierung auf die Datenquellen zugreift, weil die Kommunikation zwischen dem Web-Front-End (WFE) und dem gemeinsamen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst immer der forderungsbasierten Authentifizierung unterliegt.  
+  Der SharePoint claims to Windows Token Service (c2WTS) ist für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus erforderlich, wenn Sie die Windows-Authentifizierung für Datenquellen verwenden möchten, die sich außerhalb der SharePoint-Farm befinden. Dies gilt auch, wenn der Benutzer über die Windows-Authentifizierung auf die Datenquellen zugreift, weil die Kommunikation zwischen dem Web-Front-End (WFE) und dem gemeinsamen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst immer der forderungsbasierten Authentifizierung unterliegt.  
   
  c2WTS wird auch dann benötigt, auch sich die Datenquelle(n) auf demselben Computer wie der gemeinsame Dienst befinden. In diesem Szenario ist jedoch keine eingeschränkte Delegierung erforderlich.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "71952274"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Prerequisites  
   
 > [!NOTE]  
->  Hinweis: Einige der Konfigurationsschritte können sich ändern oder in bestimmten Farmtopologien möglicherweise nicht funktionieren. Bei der Installation eines einzelnen Servers werden beispielsweise keine Windows Identity Foundations-c2WTS-Dienste unterstützt, sodass Claims to Windows Token-Delegierungsszenarien innerhalb dieser Farmkonfiguration nicht zulässig sind.  
+>  Hinweis: Einige der Konfigurationsschritte ändern sich möglicherweise oder funktionieren nicht in bestimmten Farmtopologien. Bei der Installation eines einzelnen Servers werden beispielsweise keine Windows Identity Foundations-c2WTS-Dienste unterstützt, sodass Claims to Windows Token-Delegierungsszenarien innerhalb dieser Farmkonfiguration nicht zulässig sind.  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>Grundlegende Schritte für die c2WTS-Konfiguration  
   
@@ -96,7 +96,7 @@ ms.locfileid: "71952274"
   
     2.  Ändern Sie den Starttyp in "**automatisch**", und starten Sie den Dienst.  
   
-4.  Starten Sie den SharePoint-claims to Windows Token Service: Starten Sie den Claims to Windows Token Service über die SharePoint-Zentraladministration auf der Seite **Dienste auf dem Server verwalten**. Der Dienst sollte auf dem Server gestartet werden, auf dem die Aktion ausgeführt wird. Wenn Sie z.B. über einen WFE-Server und einen Anwendungsserver verfügen, auf dem der gemeinsame Dienst von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ausgeführt wird, müssen Sie C2WTS nur auf dem Anwendungsserver starten. c2WTS wird auf dem WFE-Server nicht benötigt.  
+4.  Starten Sie den SharePoint-claims to Windows Token Service (claims to Windows Token Service): Starten Sie den Claims to Windows Token Service über die SharePoint-zentral Administration auf der Seite **Dienste auf dem Server verwalten** . Der Dienst sollte auf dem Server gestartet werden, auf dem die Aktion ausgeführt wird. Wenn Sie z.B. über einen WFE-Server und einen Anwendungsserver verfügen, auf dem der gemeinsame Dienst von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ausgeführt wird, müssen Sie C2WTS nur auf dem Anwendungsserver starten. c2WTS wird auf dem WFE-Server nicht benötigt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über claims to Windows Token Service (c2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   

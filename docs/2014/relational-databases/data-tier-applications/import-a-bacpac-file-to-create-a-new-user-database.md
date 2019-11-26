@@ -36,7 +36,7 @@ ms.locfileid: "70175939"
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
   Importieren Sie eine Datei einer Datenebenenanwendung (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Vorbereitungsmaßnahmen  
  Beim Importvorgang wird in zwei Phasen eine neue DAC erstellt.  
   
 1.  Beim Import wird mithilfe der in der Exportdatei gespeicherten DAC-Definition eine neue DAC und eine zugeordnete Datenbank erstellt. Dieser Vorgang entspricht dem Erstellen einer neuen DAC aus der Definition in einer DAC-Paketdatei bei einer DAC-Bereitstellung.  
@@ -45,7 +45,7 @@ ms.locfileid: "70175939"
   
  
 ## <a name="sql-server-utility"></a>SQL Server-Hilfsprogramm  
- Beim Importieren einer DAC in eine verwaltete Instanz der Datenbank-Engine wird die importierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenebenenanwendungen** details page.  
+ Beim Importieren einer DAC in eine verwaltete Instanz der Datenbank-Engine wird die importierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenschichtanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **von** vorhanden und wird auf der Detailseite **Bereitgestellte Datenschichtanwendungen** angezeigt.  
   
 ## <a name="database-options-and-settings"></a>Datenbankoptionen und -einstellungen  
  Standardmäßig verfügt die während des Imports erstellte Datenbank über alle Standardeinstellungen aus der CREATE DATABASE-Anweisung, mit der Ausnahme, dass die Datenbanksortierung und der Kompatibilitätsgrad auf die in der DAC-Exportdatei festgelegten Werte gesetzt sind. Eine DAC-Exportdatei verwendet die Werte aus der ursprünglichen Datenbank.  
@@ -55,10 +55,10 @@ ms.locfileid: "70175939"
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Eine DAC kann in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] , die unter [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) oder höher ausgeführt wird, importiert werden. Wenn Sie eine DAC aus einer höheren Version exportieren, kann die DAC Objekte enthalten, die von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]nicht unterstützt werden. Sie können diese DACs nicht auf Instanzen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]bereitstellen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Prerequisites  
  Das Importieren einer DAC-Exportdatei aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Dateien können schädlichen Code enthalten, der möglicherweise unbeabsichtigten Transact-SQL-Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine Exportdatei aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, entpacken Sie die DAC, und untersuchen Sie den Code, z. B. gespeicherte Prozeduren und anderen benutzerdefinierten Code. Weitere Informationen zum Ausführen dieser Tests finden Sie unter [Validate a DAC Package](validate-a-dac-package.md).  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
  Zur Erhöhung der Sicherheit werden die Anmeldenamen für die SQL Server-Authentifizierung ohne Kennwort in eine DAC-Exportdatei gespeichert. Sobald die Datei importiert wird, wird der Anmeldename als deaktivierter Anmeldename mit einem generierten Kennwort erstellt. Um die Anmeldenamen zu aktivieren, melden Sie sich unter einem Anmeldenamen an, der über die ALTER ANY LOGIN-Berechtigung verfügt, und verwenden ALTER LOGIN, um den Anmeldenamen zu aktivieren und ein neues Kennwort zuzuweisen, das dem Benutzer mitgeteilt werden kann. Dies ist für Anmeldenamen der Windows-Authentifizierung nicht erforderlich, da die zugehörigen Kennwörter nicht von SQL Server verwaltet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -88,7 +88,7 @@ ms.locfileid: "70175939"
 ###  <a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite werden die Schritte für den Assistenten zum Importieren von Datenebenenanwendungen beschrieben.  
   
- **Optionen**  
+ **enthalten**  
   
 -   **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Einführungsseite in Zukunft nicht mehr angezeigt wird.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "70175939"
   
 -   **Neuer Datenbankname**: Geben Sie einen Namen für die importierte Datenbank an.  
   
--   **Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  : geben [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Sie Business [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder Web an. Weitere Informationen zu den Editionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie auf der Website zu [SQL-Datenbanken](http://www.windowsazure.com/home/tour/database/) .  
+-   **Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** -geben Sie [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web an. Weitere Informationen zu den Editionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie auf der Website zu [SQL-Datenbanken](http://www.windowsazure.com/home/tour/database/) .  
   
 -   **Maximale Datenbankgröße (GB)** : Verwenden Sie das Dropdown Menü, um die maximale Größe für die Datenbank anzugeben.  
   

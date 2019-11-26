@@ -33,7 +33,7 @@ ms.locfileid: "73882178"
   
 -   **So legen Sie das Ablaufdatum für Abonnements fest mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

@@ -35,14 +35,14 @@ ms.locfileid: "73660209"
 object.ProtocolOrder [= value]  
 ```  
   
-## <a name="parts"></a>Bestandteile  
+## <a name="parts"></a>Teile  
  *object*  
  A [ClientNetworkProtocol-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) , das das vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Client verwendete Netzwerkprotokoll darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der die fortlaufende Nummer des derzeitig referenzierten Clientnetzwerkprotokolls angibt, das durch die **OrderValue** -Methode festgelegt ist. Wenn das Clientnetzwerkprotokoll deaktiviert ist, ist dieser Wert Null.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Client Protokollen](https://technet.microsoft.com/library/ms181035.aspx)   

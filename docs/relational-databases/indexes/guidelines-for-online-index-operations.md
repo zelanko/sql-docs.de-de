@@ -1,7 +1,7 @@
 ---
 title: Richtlinien für Onlineindexvorgänge | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909789"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981795"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Richtlinien für Onlineindexvorgänge
 
@@ -93,7 +93,7 @@ Umfangreiche Indexvorgänge, die offline oder online ausgeführt werden, können
 ## <a name="resumable-index-considerations"></a>Überlegungen zu fortsetzbaren Indizes
 
 > [!NOTE]
-> Die Option für fortsetzbare Indizes gilt für SQL Server (ab SQL Server 2017) (nur die Indexneuerstellung) und SQL-Datenbank (Erstellung von Indizes und Indexneuerstellung). Weitere Informationen finden Sie unter [Indexerstellung](../../t-sql/statements/create-index-transact-sql.md) (derzeit nur in der öffentlichen Vorschauversion für [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) und [Alter Index](../../t-sql/statements/alter-index-transact-sql.md).
+> Die fortsetzbare Indexoption für CREATE INDEX und INDEX REBUILD gilt für SQL Server (INDEX REBUILD ab SQL Server 2017, CREATE INDEX wird auch in SQL Server 2019 unterstützt) und SQL-Datenbank. Weitere Informationen finden Sie unter [Indexerstellung](../../t-sql/statements/create-index-transact-sql.md) und [Alter Index](../../t-sql/statements/alter-index-transact-sql.md).
 
 Für die Erstellung oder Neuerstellung von fortsetzbaren Onlineindizes gelten die folgenden Richtlinien:
 

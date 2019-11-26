@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961788"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729864"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -29,7 +29,7 @@ Informationen zu Tabellen und deren Verwendung finden Sie unter [Einführung in 
 > [!NOTE]
 >  Sofern nicht anders angegeben, beziehen sich die Beschreibungen von SQL Data Warehouse in diesem Artikel sowohl auf SQL Data Warehouse als auch auf Parallel Data Warehouse.
 
- ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Artikellinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>
 
@@ -162,11 +162,15 @@ Erstellt eine oder mehrere Tabellenpartitionen. Diese Partitionen sind horizonta
 
  Informationen hierzu finden Sie unter [Erstellen einer partitionierten Tabelle](#PartitionedTable) im Abschnitt mit den Beispielen.
 
-### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Option für sortierten gruppierten Columnstore-Index (Vorschau für Azure SQL Data Warehouse)
+### <a name="ordered-clustered-columnstore-index-option"></a>Option für sortierten gruppierten Columnstore-Index 
 
-„Gruppierter Columnstore-Index“ (Clustered Columnstore Index, CCI) ist der Standard für das Erstellen von Tabellen in Azure SQL Data Warehouse.  Daten im CCI werden nicht sortiert, bevor sie in Spaltensegmente komprimiert werden.  Beim Erstellen eines CCI mit ORDER werden die Daten vor dem Hinzufügen zu Indexsegmenten sortiert, und die Abfrageleistung kann verbessert werden. Weitere Informationen finden Sie unter [Leistungsoptimierung mit einem gruppierten Columnstore-Index](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci).  
+„Gruppierter Columnstore-Index“ (Clustered Columnstore Index, CCI) ist der Standard für das Erstellen von Tabellen in Azure SQL Data Warehouse.  Daten im CCI werden nicht sortiert, bevor sie in Spaltensegmente komprimiert werden.  Beim Erstellen eines CCI mit ORDER werden die Daten vor dem Hinzufügen zu Indexsegmenten sortiert, und die Abfrageleistung kann verbessert werden. Weitere Informationen finden Sie unter [Leistungsoptimierung mit einem gruppierten Columnstore-Index](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest).  
 
-Benutzer können die Spalte „column_store_order_ordinal“ in „sys.index_columns“ für die Spalte(n) nach der die Tabelle sortiert ist und nach der Sequenz der Sortierung abfragen.  
+Ein geordneter gruppierter Columnstore-Index kann für Spalten aller Datentypen (außer Zeichenfolgenspalten) erstellt werden, die in Azure SQL Data Warehouse unterstützt werden.  
+
+Benutzer können die Spalte **column_store_order_ordinal** in **sys.index_columns** für die Spalte(n) nach der die Tabelle sortiert ist und nach der Sequenz der Sortierung abfragen.  
+
+Weitere Informationen finden Sie unter [Leistungsoptimierung mit einem gruppierten Columnstore-Index](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci).   
 
 ### <a name="DataTypes"></a> Datentyp
 

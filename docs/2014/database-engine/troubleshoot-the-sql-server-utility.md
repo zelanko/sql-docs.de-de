@@ -116,7 +116,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  Klicken Sie mit der rechten Maustaste auf **UtilityAgentProxyCredential_\<GUID >** und wählen Sie **Eigenschaften**aus.  
   
-    3.  Aktualisieren Sie im Dialogfeld Eigenschaften für Anmelde Informationen die Anmelde Informationen für die **UtilityAgentProxyCredential_-\<GUID >** Anmelde Informationen nach Bedarf.  
+    3.  Aktualisieren Sie im Dialogfeld Eigenschaften für Anmelde Informationen die Anmelde Informationen nach Bedarf für die **UtilityAgentProxyCredential_\<GUID >** Credential.  
   
     4.  Klicken Sie auf **OK** , um die Änderung zu bestätigen.  
   
@@ -164,6 +164,6 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     5.  Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits beim UCP registriert war, bevor der Benutzer dieser Gruppe hinzugefügt wurde, starten Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Dienst neu.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Fehlerbehebung für die SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

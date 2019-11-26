@@ -21,7 +21,7 @@ ms.locfileid: "72688705"
   Ein `CircularString` ist eine Auflistung von 0 (null) oder mehr stetigen Kreisbogensegmenten. Ein Kreisbogensegment ist ein von drei Punkten in einer zweidimensionalen Ebene definierter gekrümmter Abschnitt; der erste Punkt darf nicht mit dem dritten Punkt identisch sein. Wenn alle drei Punkte eines Kreisbogensegments kollinear sind, wird das Bogensegment als Liniensegment behandelt.  
   
 > [!IMPORTANT]  
->  Laden Sie für eine ausführliche Beschreibung und Beispiele der neuen räumlichen Features, die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt wurden, einschließlich des `CircularString` Untertyps, das Whitepaper [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)herunter.  
+>  Laden Sie für eine ausführliche Beschreibung und Beispiele der neuen räumlichen Features, die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführt wurden, einschließlich des `CircularString` Untertyps, das Whitepaper [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)herunter.  
   
 ## <a name="circularstring-instances"></a>CircularString-Instanzen  
  In der unten stehenden Zeichnung sind gültige `CircularString`-Instanzen dargestellt:  
@@ -157,7 +157,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über räumliche Datentypen](spatial-data-types-overview.md)   
  [CompoundCurve](compoundcurve.md)   
  [MakeValid &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   

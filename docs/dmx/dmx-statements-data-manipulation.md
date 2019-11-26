@@ -20,15 +20,15 @@ ms.locfileid: "72890499"
 
   In der folgenden Tabelle sind die Anweisungen aufgeführt, die zur Data Mining-Datenbearbeitungssprache in Data Mining-Erweiterungen (DMX) gehören.  
   
-|Thema|Description|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
-|[Löschen &#40;von DMX&#41;](../dmx/delete-dmx.md)|Löscht den trainierten Inhalt aus einem Miningmodell.|  
-|[Einfügen in &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Trainiert ein Miningmodell.|  
-|[DMX auswählen &#40;&#41;](../dmx/select-dmx.md)|Durchsucht ein Miningmodell.|  
+|[LÖSCHEN SIE &#40;DMX&#41;](../dmx/delete-dmx.md)|Löscht den trainierten Inhalt aus einem Miningmodell.|  
+|[FÜGEN SIE IN &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Trainiert ein Miningmodell.|  
+|[WÄHLEN SIE &#40;DMX&#41;](../dmx/select-dmx.md)|Durchsucht ein Miningmodell.|  
 |[&#60;Quelldaten Abfrage&#62;](../dmx/source-data-query.md)|Fragt Datenquellen sowohl für **INSERT INTO** -als auch für **Select** -Anweisungen ab.|  
-|[DMX aktualisieren &#40;&#41;](../dmx/update-dmx.md)|Ändert den Inhalt des Miningmodells.|  
+|[UPDATE &#40;DMX&#41;](../dmx/update-dmx.md)|Ändert den Inhalt des Miningmodells.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   

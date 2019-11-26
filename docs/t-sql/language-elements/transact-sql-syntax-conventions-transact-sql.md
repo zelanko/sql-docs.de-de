@@ -28,12 +28,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdc1e80e6363be923d65c07b5550772c8d16f2af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121604"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981904"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL-Syntaxkonventionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,9 +110,9 @@ Die meisten Codebeispiele in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ref
 Vielen Codebeispielen gehen Unicode-Zeichenfolgenkonstanten mit dem Buchstaben **N** voran. Ohne das **N**-Präfix wird die Zeichenfolge in die Standardcodepage der Datenbank konvertiert. Diese Standardcodepage erkennt möglicherweise bestimmte Zeichen nicht.  
   
 ## <a name="applies-to-references"></a>„Applies to“-Verweise  
-Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Verweis enthält Artikel im Zusammenhang mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Verweis enthält Artikel im Zusammenhang mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
 
-Am oberen Rand jedes Artikels befindet sich ein Abschnitt, der angibt, welche Produkte den Betreff des Artikels unterstützen. Wenn ein Produkt fehlt, ist das im Artikel beschriebene Feature in diesem Produkt nicht verfügbar. Beispielsweise wurden Verfügbarkeitsgruppen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt. Der **CREATE AVAILABILITY GROUP**-Artikel gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), weil er für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] nicht gilt.  
+Am oberen Rand jedes Artikels befindet sich ein Abschnitt, der angibt, welche Produkte den Betreff des Artikels unterstützen. Wenn ein Produkt fehlt, ist das im Artikel beschriebene Feature in diesem Produkt nicht verfügbar. Beispielsweise wurden Verfügbarkeitsgruppen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt. Im Artikel **Erstellen einer Verfügbarkeitsgruppe** wird angegeben, dass die Funktion für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) gilt, weil sie nicht für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gilt.  
   
 Der allgemeine Betreff des Artikels könnte auf ein Produkt zutreffen, aber in einigen Fällen werden nicht alle Argumente unterstützt. Beispielsweise wurden Benutzer für eigenständige Datenbank in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführt. Verwenden Sie die Anweisung **CREATE USER** in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Produkt, die Syntax **WITH PASSWORD** kann jedoch nicht mit älteren Versionen verwendet werden. Zusätzliche **Applies to**-Abschnitte werden in den entsprechenden Argumentbeschreibungen in den Text des Artikels eingefügt.  
   

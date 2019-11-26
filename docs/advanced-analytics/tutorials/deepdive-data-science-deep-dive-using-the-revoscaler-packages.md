@@ -1,73 +1,74 @@
 ---
-title: Revoscaler-Funktion Deep-Dive-Tutorial-SQL Server Machine Learning
-description: In diesem Tutorial erfahren Sie, wie Sie mit SQL Server Machine Learning R-Integration revoscaler-Funktionen aufzurufen.
+title: Detailliertes RevoScaleR-Tutorial
+description: In diesem Tutorial erfahren Sie, wie Sie RevoScaleR-Funktionen mithilfe der R-Integration von SQL Server-Machine Learning aufrufen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4db5debf4ba71f29a8870c8674a5422e9ffd334a
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 853f2e33ff4f801c3668a9f79bcec247dc13963e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714883"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727215"
 ---
-# <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: Verwenden von revoscaler R-Funktionen mit SQL Server Daten
+# <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[Revoscaler](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) ist ein Microsoft R-Paket, das verteilte und parallele Verarbeitung für Data Science-und Machine Learning-Workloads bereitstellt. Bei der R-Entwicklung in SQL Server ist **revoscaler** eines der integrierten Kernpakete mit Funktionen zum Erstellen von Datenquellen Objekten, zum Einrichten eines computekontexts, zum Verwalten von Paketen und zu den wichtigsten Aufgaben: End-to-End-arbeiten mit Daten, vom Import bis zum Visualisierung und Analyse. Machine Learning Algorithmen in SQL Server eine Abhängigkeit von **revoscaler** -Datenquellen haben. Angesichts der Wichtigkeit von **revoscaler**ist es wichtig, zu wissen, wann und wie seine Funktionen aufgerufen werden. 
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) ist ein R-Paket von Microsoft, das die verteilte und parallele Verarbeitung für Data Science- und Machine Learning-Workloads bereitstellt. Für die R-Entwicklung in SQL Server stellt **RevoScaleR** eines der wichtigsten integrierten Pakete dar. Es enthält Funktionen zum Erstellen von Datenquellenobjekten, zum Einrichten eines Computekontexts, zum Verwalten von Paketen und vor allem zur End-to-End-Verarbeitung von Daten, vom Import über die Visualisierung bis hin zur Analyse. Machine Learning-Algorithmen in SQL Server weisen eine Abhängigkeit von **RevoScaleR**-Datenquellen auf. Angesichts dieses Stellenwerts ist es also wichtig zu wissen, wann und wie **RevoScaleR**-Funktionen aufgerufen werden. 
 
-In diesem mehrteiligen Tutorial haben Sie eine Reihe von **revoscaler** -Funktionen für Aufgaben eingeführt, die Data Science zugeordnet sind. Im Verfahren erfahren Sie, wie Sie einen remotecomputekontext erstellen, Daten zwischen lokalen und remotecomputekontexten verschieben und R-Code auf einem Remote SQL Server ausführen. Außerdem erfahren Sie, wie Sie Daten sowohl lokal als auch auf dem Remote Server analysieren und darstellen und wie Sie Modelle erstellen und bereitstellen.
+In diesem mehrteiligen Tutorial lernen Sie eine Reihe von **RevoScaleR**-Funktionen für Data Science-Aufgaben kennen. Dabei erfahren Sie, wie Sie einen Remotecomputekontext erstellen, Daten zwischen einem lokalen und einem Remotecomputekontext verschieben und R-Code auf einer Remoteinstanz von SQL Server ausführen. Außerdem lernen Sie, wie Sie Daten lokal und auf einem Remoteserver analysieren und zeichnen und wie Sie Modelle erstellen und bereitstellen.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-+ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) mit der R-Funktion oder [SQL Server R Services (in-Database)](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) mit der R-Funktion oder [SQL Server R Services (datenbankintern)](../install/sql-r-services-windows-install.md)
   
-+ [Daten Bank Berechtigungen](../security/user-permission.md) und eine SQL Server Datenbank-Benutzeranmeldung
++ [Datenbankberechtigungen](../security/user-permission.md) und eine Benutzeranmeldung für die SQL Server-Datenbank
 
 + [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
-+ Eine IDE wie rstudio oder das integrierte rgui-Tool, das in R enthalten ist
++ Eine IDE wie z. B. RStudio oder das in R enthaltene integrierte RGUI-Tool
 
-Um zwischen lokalen und remotecomputekontexten hin-und herwechseln zu können, benötigen Sie zwei Systeme. Local ist in der Regel eine Entwicklungs Arbeitsstation mit einer suffitze Stromversorgung für Data Science Arbeits Auslastungen. Remote ist in diesem Fall SQL Server, wenn die R-Funktion aktiviert ist. 
+Sie benötigen zwei Systeme, damit Sie zwischen dem lokalen und dem Remotecomputekontext hin- und herwechseln können. Das lokale System ist in der Regel eine Entwicklungsarbeitsstation mit ausreichender Leistung für Data Science-Workloads. Den Remotekontext stellt in diesem Fall SQL Server mit aktivierter R-Funktion dar. 
 
-Das Umschalten von computekontexten ist darauf ausgerichtet, dass die gleiche-Version- **revoscaler** auf lokalen Systemen und Remote Systemen vorhanden ist. Auf einer lokalen Arbeitsstation können Sie die **revoscaler** -Pakete und die zugehörigen Anbieter abrufen, indem Sie Microsoft R Client installieren.
+Das Wechseln zwischen den Computekontexten ist nur möglich, wenn auf dem lokalen und dem Remotesystem dieselbe Version von **RevoScaleR** ausgeführt wird. Auf einer lokalen Arbeitsstation erhalten Sie die **RevoScaleR**-Pakete und zugehörigen Anbieter, indem Sie Microsoft R Client installieren.
 
-Wenn Sie Client und Server auf demselben Computer platzieren müssen, achten Sie darauf, dass Sie einen zweiten Satz von Microsoft r-Bibliotheken zum Senden eines R-Skripts von einem Remote Client installieren. Verwenden Sie die R-Bibliotheken nicht, die in den Programmdateien der SQL Server Instanz installiert sind. Insbesondere, wenn Sie einen Computer verwenden, benötigen Sie die **revoscaler** -Bibliothek an beiden Speicherorten, um Client-und Server Vorgänge zu unterstützen.
+Befinden sich Client und Server notwendigerweise auf demselben Computer, müssen Sie einen zweiten Satz von Microsoft R-Bibliotheken installieren, um R-Skripts von einem „Remoteclient“ senden zu können. Verwenden Sie nicht die R-Bibliotheken, die in der SQL Server-Instanz unter „Programme“ installiert sind. Insbesondere, wenn Sie nur einen Computer verwenden, benötigen Sie die **RevoScaleR**-Bibliothek an beiden der folgenden Speicherorten, um Client- und Servervorgänge zu unterstützen:
 
-+ C:\programme\microsoft\r Client\R_SERVER\library\RevoScaleR 
-+ C:\Programme\Microsoft SQL server\mssql14. MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Programme\Microsoft\R Client\R_SERVER\library\RevoScaleR 
++ C:\Programme\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
-Anweisungen zur Client Konfiguration finden Sie unter [Einrichten eines Data Science Clients für die R-Entwicklung](../r/set-up-a-data-science-client.md).
+Anweisungen zur Clientkonfiguration finden Sie unter [Einrichten eines Data Science-Clients für die Entwicklung in R](../r/set-up-a-data-science-client.md).
 
 
-## <a name="r-development-tools"></a>R-Entwicklungs Tools
+## <a name="r-development-tools"></a>R-Entwicklungstools
 
-R-Entwickler verwenden normalerweise IDES zum Schreiben und Debuggen von R-Code. Hier einige Vorschläge:
+R-Entwickler verwenden zum Schreiben und Debuggen von R-Code in der Regel IDEs. Hier einige Vorschläge:
 
-- **R Tools für Visual Studio** (Rtvs) ist ein kostenloses Plug-in, das IntelliSense, Debuggen und Unterstützung für Microsoft R bereitstellt. Sie können Sie mit R Server und SQL Server Machine Learning Services verwenden. Gehen Sie unter [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)(R-Tools für Visual Studio), um es herunterzuladen.
+- **R-Tools für Visual Studio (RTVS)** ist ein kostenloses Plug-In, das IntelliSense, Debugging sowie Unterstützung für Microsoft R bietet. Sie können es sowohl mit R Server als auch mit SQL Server Machine Learning Services verwenden. Gehen Sie unter [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)(R-Tools für Visual Studio), um es herunterzuladen.
 
-- **RStudio** ist eine der beliebtesten Umgebungen für die Entwicklung von R. Weitere Informationen finden [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)Sie unter.
+- **RStudio** ist eine der beliebtesten Umgebungen für die Entwicklung von R. Weitere Informationen finden Sie unter [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
 
-- Grundlegende r-Tools (r. exe, RTERM. exe, rscripts. exe) werden standardmäßig auch installiert, wenn Sie r in SQL Server oder r-Client installieren. Wenn Sie keine IDE installieren möchten, können Sie die integrierten R-Tools verwenden, um den Code in diesem Tutorial auszuführen.
+- Grundlegende R-Tools (R.exe, RTerm.exe, RScripts.exe) werden auch standardmäßig bei der Installation von R in SQL Server oder R Client installiert. Wenn Sie keine IDE installieren möchten, können Sie mit integrierten R-Tools den Code in diesem Tutorial ausführen.
 
-Beachten Sie, dass **revoscaler** auf lokalen Computern und Remote Computern erforderlich ist. Sie können dieses Tutorial nicht mit einer generischen Installation von rstudio oder einer anderen Umgebung durchführen, in der die Microsoft R-Bibliotheken fehlen. Weitere Informationen finden Sie unter [Einrichten eines Data Science-Clients](../r/set-up-a-data-science-client.md).
+Denken Sie daran, dass Sie **RevoScaleR** auf dem lokalen und dem Remotecomputer ausführen müssen. Sie können dieses Tutorial nicht mit einer generischen Installation von RStudio oder einer anderen Umgebung ohne Microsoft R-Bibliotheken durchführen. Weitere Informationen finden Sie unter [Einrichten eines Data Science-Clients](../r/set-up-a-data-science-client.md).
 
-## <a name="summary-of-tasks"></a>Zusammenfassung der Tasks
+## <a name="summary-of-tasks"></a>Zusammenfassung der Aufgaben
 
-+ Zuerst werden die Daten aus CSV-Dateien oder XDF-Dateien abgerufen. Sie importieren die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der Funktionen im **revoscaler** -Paket.
-+ Modell Training und-Bewertung werden mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computekontexts ausgeführt. 
-+ Verwenden Sie die **revoscaler** -Funktionen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um neue Tabellen zum Speichern der Bewertungsergebnisse zu erstellen.
-+ Erstellen Sie Plots sowohl auf dem Server als auch im lokalen computekontext.
-+ Trainieren eines Modells für Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Datenbank, wobei R in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Instanz ausgeführt wird.
-+ Extrahieren Sie eine Teilmenge der Daten, und speichern Sie Sie als Xdf-Datei für die erneute Verwendung in der Analyse auf der lokalen Arbeitsstation.
-+ Sie erhalten neue Daten für die Bewertung, indem Sie eine ODBC- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung mit der-Datenbank öffnen. Die Bewertung erfolgt auf der lokalen Arbeitsstation.
-+ Erstellen Sie eine benutzerdefinierte R-Funktion, und führen Sie Sie im Server-computekontext aus, um eine Simulation auszuführen.
++ Zuerst werden die Daten aus CSV-Dateien oder XDF-Dateien abgerufen. Die Daten werden mithilfe der Funktionen im **RevoScaleR**-Paket in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importiert.
++ Das Trainieren und Bewerten des Modells erfolgt mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computekontexts. 
++ Sie erstellen neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen mithilfe der **RevoScaleR**-Funktionen, um die Bewertungsergebnisse zu speichern.
++ Sie erstellen Zeichnungen auf dem Server und im lokalen Computekontext.
++ Sie trainieren ein Modell mit Daten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, und führen R in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aus.
++ Sie extrahieren eine Teilmenge der Daten und speichern sie als XDF-Datei für die erneute Verwendung bei der Analyse auf Ihrer lokalen Arbeitsstation.
++ Sie erhalten neue Daten für die Bewertung, indem Sie eine ODBC-Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank herstellen. Die Bewertung wird auf der lokalen Arbeitsstation ausgeführt.
++ Sie erstellen eine benutzerdefinierte R-Funktion und führen sie im Computekontext des Servers aus, um eine Simulation durchzuführen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
-> [Lektion 1: Create Database und Berechtigungen](deepdive-work-with-sql-server-data-using-r.md)
+> [Lektion 1: Erstellen einer Datenbank und von Berechtigungen](deepdive-work-with-sql-server-data-using-r.md)

@@ -44,7 +44,7 @@ ms.locfileid: "73882374"
   
 -   **So deaktivieren Sie die Veröffentlichung und Verteilung mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73882374"
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a>Voraussetzungen  
   
 -   Zum Deaktivieren der Veröffentlichung und Verteilung müssen sämtliche Verteilungs- und Veröffentlichungsdatenbanken online sein. Wenn für Verteilungs- oder Veröffentlichungsdatenbanken *Datenbankmomentaufnahmen* vorhanden sind, müssen diese gelöscht werden, bevor die Veröffentlichung und Verteilung deaktiviert werden kann. Eine Datenbankenmomentaufnahme ist eine schreibgeschützte Offlinekopie einer Datenbank, die in keinem Bezug zu einer Replikationsmomentaufnahme steht. Weitere Informationen finden Sie unter [Datenbankmomentaufnahmen &#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md).  
   
@@ -133,6 +133,6 @@ ms.locfileid: "73882374"
   
 ## <a name="see-also"></a>Siehe auch  
  [Konzepte für Replikationsverwaltungsobjekte (RMO)](concepts/replication-management-objects-concepts.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
+ [Konzepte für gespeicherte Systemprozeduren für die Replikation](concepts/replication-system-stored-procedures-concepts.md)  
   
   

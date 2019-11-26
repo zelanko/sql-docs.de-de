@@ -27,7 +27,7 @@ ms.locfileid: "73787466"
   **SQLCloseCursor** ersetzt [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) durch den *options* Wert SQL_CLOSE. Beim Empfang von **SQLCloseCursor**verwirft der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber ausstehende Resultsetzeilen. Beachten Sie, dass die Spalten- und Parameterbindungen der Anweisung (sofern vorhanden) von **SQLCloseCursor**nicht geändert werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331) -   
+ [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

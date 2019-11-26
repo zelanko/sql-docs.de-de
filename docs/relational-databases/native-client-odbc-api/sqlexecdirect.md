@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/07/2019
 ms.locfileid: "73786918"
 ---
-# <a name="sqlexecdirect"></a>'SQLExecDirect'
+# <a name="sqlexecdirect"></a>SQLExecDirect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Wenn das Anweisungs Attribut SQL_SOPT_SS_PARAM_FOCUS nicht 0 ist, gibt SQLExecDirect SQL_ERROR zurück und generiert einen Diagnosedaten Satz mit SQLSTATE = HY024 und der Meldung "Ungültiger Attribut Wert, SQL_SOPT_SS_PARAM_FOCUS (muss zur Ausführungszeit NULL sein)". Weitere Informationen zu SQL_SOPT_SS_PARAM_FOCUS finden Sie unter [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "73786918"
  Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;(ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=80709) -   
+ [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=80709)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

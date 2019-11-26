@@ -28,7 +28,7 @@ ms.locfileid: "73786200"
  Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;(ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=80706) -   
+ [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=80706)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

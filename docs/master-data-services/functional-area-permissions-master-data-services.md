@@ -41,7 +41,7 @@ ms.locfileid: "73729211"
   
  Wenn Sie einem Funktionsbereich Berechtigungen zuweisen, wird ein bestimmter Bereich der Benutzeroberfläche für den Benutzer oder die Gruppe sichtbar.  
   
- Innerhalb des Funktionsbereichs **Explorer** legen zusätzliche Berechtigungen, die Modellobjekten und Hierarchieelemente zugewiesen sind, fest, auf welche Daten ein Benutzer zugreifen kann. Innerhalb aller anderen Funktionsbereiche muss ein Benutzer Modelladministrator sein, um ein Modell anzuzeigen und Aktionen auszuführen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+ Innerhalb des Funktionsbereichs **Explorer** legen zusätzliche Berechtigungen, die Modellobjekten und Hierarchieelemente zugewiesen sind, fest, auf welche Daten ein Benutzer zugreifen kann. Innerhalb aller anderen Funktionsbereiche muss ein Benutzer Modelladministrator sein, um ein Modell anzuzeigen und Aktionen auszuführen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
   
 > [!IMPORTANT]  
 >  Ein Benutzer mit Administratorberechtigungen verfügt über Administratorberechtigungen für alle Modelle und alle anderen Berechtigungen für Funktionsbereiche.  

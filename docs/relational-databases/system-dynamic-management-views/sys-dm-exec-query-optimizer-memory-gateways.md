@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Microsoft-Dokumentation
-description: Gibt den aktuellen Status der Ressource Semaphore verwendet, um gleichzeitige abfrageoptimierung einschränken
-ms.custom: ''
+title: sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+description: Gibt den aktuellen Status von Ressourcen Semaphoren zurück, die zum Einschränken der gleichzeitigen Abfrageoptimierung verwendet werden.
+ms.custom: seo-dt-2019
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,45 +20,45 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf134f630e4112f0cef87b7138b92fc83959e230
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5720617f6652a8acb1ab8b6daf0e5e8919a86f8b
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097674"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164998"
 ---
-# <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Gibt den aktuellen Status der Ressource Semaphore verwendet, um gleichzeitige abfrageoptimierung zu drosseln.
+Gibt den aktuellen Status von Ressourcen Semaphoren zurück, die zur Drosselung der gleichzeitigen Abfrageoptimierung verwendet werden.
 
-|Spalte|Typ|Beschreibung|  
+|Spalte|Type|und Beschreibung|  
 |----------|---------------|-----------------|  
-|**pool_id**|**int**|Ressourcenpool-ID unter der Ressourcenkontrolle|  
-|**name**|**sysname**|Kompilieren Sie Gate-Namen (kleines Gateway, Gateway Mittel, Groß Gateway)|
-|**max_count**|**int**|Der konfigurierten Maximalanzahl von gleichzeitigen Kompilierungen|
-|**active_count**|**int**|Die derzeit aktiven Anzahl von Kompilierungen in dieses gate|
-|**waiter_count**|**int**|Die Anzahl von Wartevorgängen in dieses gate|
-|**threshold_factor**|**bigint**|Schwellenwert für wichtige den maximalen Arbeitsspeicher-Teil definiert, die von der abfrageoptimierung verwendet.  Für das Gateway kleine gibt Threshold_factor die maximale Optimierer Auslastung des Speichers in Byte für eine Abfrage an, bevor sie einen Zugriff im kleinen Gateway erforderlich ist.  Für das Gateway mittelgroßen und großen zeigt Threshold_factor den Teil des Gesamtspeichers auf dem Server verfügbaren Speichers für dieses Gate. Es wird als Divisor verwendet, bei der Berechnung der Schwellenwert für prozessspeicherbelegung für das Gate.|
-|**threshold**|**bigint**|Nächste Schwellenwert-Speicher in Bytes.  Die Abfrage ist erforderlich, um einen Zugriff auf dieses Gateway zu erhalten, wenn ihren Arbeitsspeicherverbrauch diesen Schwellenwert erreicht wird.  "1", wenn die Abfrage nicht erforderlich ist, um einen Zugriff auf dieses Gateway zu erhalten.|
-|**is_active**|**bit**|Gibt an, ob die Abfrage erforderlich ist, um das aktuelle Gate oder nicht übergeben werden.|
+|**pool_id**|**int**|Ressourcenpool-ID unter Resource Governor|  
+|**name**|**sysname**|Name der Kompilierungs Gate (kleines Gateway, mittleres Gateway, großes Gateway)|
+|**max_count**|**int**|Die maximal konfigurierte Anzahl gleichzeitiger Kompilierungen|
+|**active_count**|**int**|Die derzeit aktive Anzahl der Kompilierungen in diesem Gate|
+|**waiter_count**|**int**|Die Anzahl der Kellner in diesem Gate|
+|**threshold_factor**|**bigint**|Schwellenwert, der den maximalen Arbeitsspeicher Bereich definiert, der von der Abfrageoptimierung verwendet wird.  Beim kleinen Gateway gibt threshold_factor die maximale Arbeitsspeicher Auslastung des Optimierers in Bytes für eine Abfrage an, bevor ein Zugriff auf das kleine Gateway benötigt wird.  Für das mittlere und das große Gateway zeigt threshold_factor den Teil des gesamten Server Arbeitsspeichers an, der für dieses Gate verfügbar ist. Sie wird als Divisor verwendet, wenn der Schwellenwert für die Speicherauslastung für das Gate berechnet wird.|
+|**threshold**|**bigint**|Nächster Schwellenwert für den Arbeitsspeicher in Bytes.  Die Abfrage ist erforderlich, um einen Zugriff auf dieses Gateway zu erhalten, wenn der Speicherverbrauch diesen Schwellenwert erreicht.  "-1", wenn die Abfrage nicht erforderlich ist, um Zugriff auf dieses Gateway zu erhalten.|
+|**is_active**|**bit**|Gibt an, ob die Abfrage erforderlich ist, um das aktuelle Gate zu übergeben.|
 
 
 ## <a name="permissions"></a>Berechtigungen  
-SQL Server erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.
+SQL Server erfordert die View Server State-Berechtigung auf dem Server.
 
 Azure SQL-Datenbank erfordert die VIEW DATABASE STATE-Berechtigung in der Datenbank.
 
 
-## <a name="remarks"></a>Hinweise  
-SQL Server verwendet einen mehrstufigen Gateway-Ansatz zum Einschränken der Anzahl der zulässigen gleichzeitigen Kompilierungen.  Drei Gateways werden verwendet, einschließlich klein, Mittel und groß. Gateways helfen zu verhindern, dass die Überbeanspruchung der gesamten Speicherressourcen von größeren Kompilierung Arbeitsspeicher erfordern Consumern.
+## <a name="remarks"></a>Remarks  
+SQL Server verwendet einen mehrstufigen gatewayansatz, um die Anzahl zulässiger gleichzeitiger Kompilierungen zu drosseln.  Es werden drei Gateways verwendet, einschließlich klein, Mittel und groß. Gateways helfen, die Erschöpfung der Gesamtspeicher Ressourcen durch größere Kompilierungs Arbeitsspeicher-Consumer zu vermeiden.
 
-Wartet auf ein Gateway Ergebnis bei der verzögerten Kompilierung. Gedrosselte Anforderungen müssen zusätzlich zu Verzögerungen bei der Kompilierung einer zugeordneten RESOURCE_SEMAPHORE_QUERY_COMPILE Typ Accumulation / warten. Der Wartetyp RESOURCE_SEMAPHORE_QUERY_COMPILE hinweisen, dass Abfragen eine große Menge an Arbeitsspeicher für die Kompilierung verwenden und, dass der Arbeitsspeicher ist erschöpft, oder Sie können auch ausreichend Arbeitsspeicher verfügbar ist insgesamt jedoch verfügbaren Einheiten in einer bestimmten Gateway wurde erreicht. Die Ausgabe des **sys.dm_exec_query_optimizer_memory_gateways** können verwendet werden, um die Problembehandlung hilfreich, nicht genügend Arbeitsspeicher, um einen Abfrageausführungsplan zu kompilieren.  
+Wartet auf ein gatewayergebnis bei verzögerter Kompilierung. Zusätzlich zu den Verzögerungen bei der Kompilierung verfügen drosselte Anforderungen über eine zugeordnete RESOURCE_SEMAPHORE_QUERY_COMPILE Wartetyp Akkumulation. Der RESOURCE_SEMAPHORE_QUERY_COMPILE Wartetyp weist möglicherweise darauf hin, dass Abfragen eine große Menge an Arbeitsspeicher für die Kompilierung verwenden und dass der Arbeitsspeicher erschöpft ist, oder es ist ausreichend Arbeitsspeicher verfügbar, aber verfügbare Einheiten in einem bestimmten Das Gateway ist erschöpft. Die Ausgabe von **sys. dm_exec_query_optimizer_memory_gateways** kann zur Problembehandlung bei Szenarios verwendet werden, in denen nicht genügend Arbeitsspeicher zum Kompilieren eines Abfrage Ausführungs Plans vorhanden war.  
 
 ## <a name="examples"></a>Beispiele  
 
-### <a name="a-viewing-statistics-on-resource-semaphores"></a>A. Anzeigen von Statistiken zur Ressource Semaphoren  
-Was sind die aktuellen Optimierer Arbeitsspeicher Gateway Statistiken für diese Instanz von SQL Server?
+### <a name="a-viewing-statistics-on-resource-semaphores"></a>A. Anzeigen von Statistiken für Ressourcen Semaphoren  
+Wie lauten die aktuellen Speicher Gateway-Statistiken des Optimierers für diese Instanz von SQL Server?
 
 ```  
 SELECT [pool_id], [name], [max_count], [active_count],
@@ -71,5 +71,5 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[Wie Sie mithilfe des Befehls DBCC MEMORYSTATUS speicherauslastung für SQL Server 2005 überwachen](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
-[große Abfragekompilierung wartet auf RESOURCE_SEMAPHORE_QUERY_COMPILE in SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+[Verwenden des Befehls DBCC MEMORYSTATUS zum Überwachen der Arbeitsspeicher Auslastung auf SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
+[große Abfrage Kompilierung wartet auf RESOURCE_SEMAPHORE_QUERY_COMPILE in SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

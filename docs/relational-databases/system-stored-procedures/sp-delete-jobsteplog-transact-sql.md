@@ -43,30 +43,30 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] 'job_id'` die Auftrags-ID für den Auftrag, der das zu entfernende Auftrags Schritt Protokoll enthält. *job_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @job_id = ] 'job_id'` die Auftrags-ID des Auftrags, der das zu entfernende Auftrags Schritt Protokoll enthält. *job_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 `[ @job_name = ] 'job_name'` den Namen des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-> **HINWEIS:** Es muss entweder *job_id* oder *job_name* angegeben werden, aber beide können nicht angegeben werden.  
+> **Hinweis:** Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @step_id = ] step_id` die ID des Schritts im Auftrag, für den das Auftrags Schritt Protokoll gelöscht werden soll. Wenn Sie nicht eingeschlossen werden, werden alle Auftrags Schritt Protokolle im Auftrag gelöscht, es sei denn, **\@older_than** oder **\@larger_than** werden angegeben. *step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @step_id = ] step_id` die ID des Schritts im Auftrag, für den das Auftrags Schritt Protokoll gelöscht werden soll. Wenn Sie nicht eingeschlossen werden, werden alle Auftrags Schritt Protokolle im Auftrag gelöscht, es sei denn, **\@older_than** oder **\@larger_than** angegeben werden. *step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 `[ @step_name = ] 'step_name'` den Namen des Schritts im Auftrag, für den das Auftrags Schritt Protokoll gelöscht werden soll. *step_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-> **HINWEIS:** Es kann entweder *step_id* oder *step_name* angegeben werden, aber beide können nicht angegeben werden.  
+> **Hinweis:** Es können entweder *step_id* oder *step_name* angegeben werden, beide können jedoch nicht angegeben werden.  
   
-`[ @older_than = ] 'date'` das Datum und die Uhrzeit des ältesten Auftrags Schritt Protokolls, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Date* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Sowohl **\@older_than** als auch **\@larger_than** können angegeben werden.  
+`[ @older_than = ] 'date'` das Datum und die Uhrzeit des ältesten Auftrags Schritt Protokolls, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Date* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Es können sowohl **\@older_than** als auch **\@larger_than** angegeben werden.  
   
-`[ @larger_than = ] 'size_in_bytes'` die Größe des größten Auftrags Schritt Protokolls in Bytes, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle, die diese Größe überschreiten, werden entfernt. Sowohl **\@larger_than** als auch **\@older_than** können angegeben werden.  
+`[ @larger_than = ] 'size_in_bytes'` die Größe des größten Auftrags Schritt Protokolls in Bytes, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle, die diese Größe überschreiten, werden entfernt. Es können sowohl **\@larger_than** als auch **\@older_than** angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- **sp_delete_jobsteplog** befindet sich in der **msdb** -Datenbank.  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_jobsteplog** in der **msdb** -Datenbank.  
   
  Wenn keine Argumente außer **\@job_id** oder **\@job_name** angegeben werden, werden alle Auftrags Schritt Protokolle für den angegebenen Auftrag gelöscht.  
   

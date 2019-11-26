@@ -36,7 +36,7 @@ ms.locfileid: "73882293"
 -   Weitere Informationen zu einer automatisch inkrementierten Zahl, die in mehreren Tabellen verwendet oder aus Anwendungen aufgerufen werden kann, ohne dass auf eine Tabelle verwiesen wird, finden Sie unter [Sequenznummern](../../sequence-numbers/sequence-numbers.md).  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
- Geben Sie im Assistenten für neue Veröffentlichung im Dialogfeld **Artikeleigenschaften –** Artikel> **auf der Registerkarte \<Properties** eine Verwaltungsoption für Identitätsspalten an. Weitere Informationen zum Zugreifen auf diesen Assistenten finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md). Führen Sie im Assistenten für neue Veröffentlichung folgende Aktionen aus:  
+ Geben Sie im Assistenten für neue Veröffentlichung im Dialogfeld **Artikeleigenschaften –** Artikel> **auf der Registerkarte \<Properties** eine Verwaltungsoption für Identitätsspalten an. Weitere Informationen über das Verwenden dieses Assistenten finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md). Führen Sie im Assistenten für neue Veröffentlichung folgende Aktionen aus:  
   
 -   Wenn Sie auf der Seite **Veröffentlichungstyp** die Option **Mergeveröffentlichung** oder **Transaktionsveröffentlichung mit aktualisierbaren Abonnements** auswählen, wählen Sie die automatische oder manuelle Identitätsbereichsverwaltung aus (automatisch, die Standardeinstellung, wird empfohlen). Nach dem Veröffentlichen der Tabelle kann die Eigenschaft nicht geändert werden. Es können jedoch andere, verbundene Eigenschaften geändert werden.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73882293"
   
 5.  Wenn Sie in Schritt 4 **Automatisch** oder **Wahr** ausgewählt haben, geben Sie Werte für die Optionen der folgenden Tabelle ein. Weitere Informationen zum Verwenden dieser Einstellungen finden Sie im Abschnitt „Zuweisen von Identitätsbereichen“ unter [Replizieren von Identitätsspalten](replicate-identity-columns.md).  
   
-    |Option|Wert|Beschreibung|  
+    |Option|ReplTest1|und Beschreibung|  
     |------------|-----------|-----------------|  
     |**Bereichsgröße auf dem Verleger**|Ganze Zahl für die Bereichsgröße (z. B. 20000).|Weitere Informationen finden Sie im Abschnitt „Zuweisen von Identitätsbereichen“ von [Replizieren von Identitätsspalten](replicate-identity-columns.md).|  
     |**Bereichsgröße auf dem Abonnenten**|Ganze Zahl für die Bereichsgröße (z. B. 10000).|Weitere Informationen finden Sie im Abschnitt „Zuweisen von Identitätsbereichen“ von [Replizieren von Identitätsspalten](replicate-identity-columns.md).|  

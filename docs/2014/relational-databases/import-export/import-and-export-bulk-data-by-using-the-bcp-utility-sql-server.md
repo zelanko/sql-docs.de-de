@@ -23,21 +23,21 @@ ms.locfileid: "71708212"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms bcp (SQL Server)
 
-In diesem Thema erhalten Sie einen Überblick zum Verwenden des Hilfsprogramms [bcp](../../tools/bcp-utility.md) zum Exportieren von Daten von jeder Stelle innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, an der eine SELECT-Anweisung verwendet werden kann, einschließlich partitionierter Sichten.  
+In diesem Thema erhalten Sie einen Überblick zum Verwenden des Hilfsprogramms [bcp](../../tools/bcp-utility.md) zum Exportieren von Daten von jeder Stelle innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, an der eine SELECT-Anweisung verwendet werden kann, einschließlich partitionierter Sichten.  
   
  Das Hilfsprogramm bcp (Bcp.exe) ist ein Befehlszeilentool, das die BCP-API (Bulk Copy Program) verwendet. Mit dem Hilfsprogramm bcp werden die folgenden Tasks ausgeführt:  
   
--   Massenexport von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle in eine Datendatei.  
+-   Massenexport von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in eine Datendatei.  
   
 -   Massenexport von Daten aus einer Abfrage.  
   
--   Massenimport von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle.  
+-   Massenimport von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle.  
   
 -   Generieren von Formatdateien.  
   
  Auf das Hilfsprogramm „bcp“ wird über den Befehl **bcp** zugegriffen. Für den Massenimport von Daten mithilfe des Befehls **bcp** ist es erforderlich, das Schema der Tabelle und die Datentypen der Spalten zu verstehen, es sei denn, Sie verwenden eine bereits vorhandene Formatdatei.  
   
- Mit dem Hilfsprogramm "bcp" können Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle in eine Datendatei exportiert und dann in anderen Programmen verwendet werden. Das Hilfsprogramm kann auch dazu verwendet werden, Daten aus einem anderen Programm, meist einem anderen Datenbank-Managementsystem (DBMS, Database Management System), in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle zu importieren. Die Daten werden zuerst aus dem Quellprogramm in eine Datendatei exportiert und dann, in einem getrennten Vorgang, aus der Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle kopiert.  
+ Mit dem Hilfsprogramm "bcp" können Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in eine Datendatei exportiert und dann in anderen Programmen verwendet werden. Das Hilfsprogramm kann auch dazu verwendet werden, Daten aus einem anderen Programm, meist einem anderen Datenbank-Managementsystem (DBMS, Database Management System), in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle zu importieren. Die Daten werden zuerst aus dem Quellprogramm in eine Datendatei exportiert und dann, in einem getrennten Vorgang, aus der Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle kopiert.  
   
  Der Befehl **bcp** stellt Schalter bereit, mit denen Sie den Datentyp der Datendatei und andere Informationen angeben. Wenn diese Schalter nicht angegeben werden, werden vom Befehl Formatierungsinformationen (z. B. der Typ der Datenfelder in einer Datendatei) abgefragt. Anschließend müssen Sie festlegen, ob Sie eine Formatdatei mit Ihren interaktiven Antworten erstellen möchten. Eine Formatdatei ist oft hilfreich, wenn Sie für zukünftige Massenimport- oder Massenexportvorgänge flexibel sein müssen. Sie können die Formatdatei bei späteren **bcp**-Befehlen für äquivalente Datendateien angeben. Weitere Informationen finden Sie unter [Angeben von Datenformaten für die Kompatibilität bei Verwendung von „bcp“ &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
@@ -74,8 +74,11 @@ In diesem Thema erhalten Sie einen Überblick zum Verwenden des Hilfsprogramms [
 
 ## <a name="see-also"></a>Siehe auch
 
-[INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)
-[Select- &#40;Klausel Transact-&#41;SQL](/sql/t-sql/queries/select-clause-transact-sql)
+[INSERT &#40;Transact-SQL&#41; ](/sql/t-sql/statements/insert-transact-sql)
+[Select- &#40;Klausel Transact-&#41; SQL](/sql/t-sql/queries/select-clause-transact-sql)
 [bcp-Hilfsprogramm](../../tools/bcp-utility.md)   
-[Vorbereiten des Massen Imports von &#40;Daten&#41;SQL Server](prepare-to-bulk-import-data-sql-server.md)@no__t-[3 &#40;BULK INSERT Transact-&#41;SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
-[Massen Import und-Export &#40;von&#41;Daten SQL Server](bulk-import-and-export-of-data-sql-server.md)1[OPENROWSET &#40; Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)-5[Erstellen Sie eine &#40;Format&#41; Datei SQL Server](create-a-format-file-sql-server.md)
+[Bereiten Sie den Massen Import &#40;von&#41; Daten SQL Server](prepare-to-bulk-import-data-sql-server.md)
+[Bulk Insert &#40;Transact&#41; -SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
+[Massen Import und- &#40;Export&#41; von Daten SQL Server](bulk-import-and-export-of-data-sql-server.md)
+
+[ &#40;OPENROWSET&#41; Transact-SQL](/sql/t-sql/functions/openrowset-transact-sql) SQL Server [Erstellen Sie eine Format Datei &#40;&#41; ](create-a-format-file-sql-server.md)
