@@ -18,7 +18,7 @@ ms.lasthandoff: 11/06/2019
 ms.locfileid: "73637727"
 ---
 # <a name="udt-utilities"></a>UDT-Hilfsprogramme
-  Das Beispiel "UDT-Hilfsprogramme" enthält eine Reihe von Hilfsprogrammfunktionen. Hierzu gehören u. a. Funktionen zum Verfügbarmachen von Assemblymetadaten für Transact-SQL, Beispiele für Streaming-Tabellenwertfunktionen, mit denen die Typen in einer Assembly als Tabelle zurückgegeben werden können, sowie Funktionen zum Zurückgeben von Feldern, Methoden und Eigenschaften in einem benutzerdefinierten Datentyp. Zu den veranschaulichten Technologien zählen Streaming-Tabellenwertfunktionen, .NET Framework-Reflektions-APIs und das Aufrufen von Tabellenwertfunktionen aus Transact-SQL.  
+  Das Beispiel "UDT-Hilfsprogramme" enthält eine Reihe von Hilfsprogrammfunktionen. Hierzu gehören u. a. Funktionen zum Verfügbarmachen von Assemblymetadaten für Transact-SQL, Beispiele für Streaming-Tabellenwertfunktionen, mit denen die Typen in einer Assembly als Tabelle zurückgegeben werden können, sowie Funktionen zum Zurückgeben von Feldern, Methoden und Eigenschaften in einem benutzerdefinierten Datentyp. Zu den veranschaulichten Technologien zählen Streaming-Tabellenwertfunktionen, .NET Framework-Reflexions-APIs und das Aufrufen von Tabellenwertfunktionen aus Transact-SQL.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
