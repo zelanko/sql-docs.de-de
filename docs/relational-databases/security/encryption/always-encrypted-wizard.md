@@ -30,7 +30,7 @@ Der Always Encrypted-Assistent ist ein leistungsstarkes Tool, mit dem Sie die ge
 
 Mit dem Assistenten können Sie Spalten mit vorhandenen Spaltenverschlüsselungsschlüsseln verschlüsseln, einen neuen Spaltenverschlüsselungsschlüssel generieren oder zusätzlich zu diesem auch einen neuen Spaltenhauptschlüssel generieren. 
 
-Dabei verschiebt der Assistent Daten aus der Datenbank und führt kryptografische Vorgänge innerhalb des SSMS-Prozesses aus. Der Assistent erstellt eine neue Tabelle (oder Tabellen) mit der gewünschten Verschlüsselungskonfiguration in der Datenbank, lädt alle Daten aus den ursprünglichen Tabellen, führt die angeforderten kryptografischen Vorgänge aus, lädt die Daten in die neue(n) Tabelle(n) hoch und vertauscht dann die ursprüngliche(n) Tabelle(n) mit der/den neuen Tabelle(n).
+Dabei verschiebt der Assistent Daten aus der Datenbank und führt kryptografische Vorgänge innerhalb des SSMS-Prozesses aus. Der Assistent erstellt eine oder mehrere neue Tabellen mit der gewünschten Verschlüsselungskonfiguration in der Datenbank, lädt alle Daten aus den ursprünglichen Tabellen, führt die angeforderten kryptografischen Vorgänge aus, lädt die Daten in die neuen Tabellen hoch und vertauscht dann die ursprünglichen mit den neuen Tabellen.
 
 > [!NOTE]
 > Das Ausführen kryptografischer Vorgänge kann einige Zeit in Anspruch nehmen. Während dieser Zeit steht die Datenbank nicht zum Schreiben von Transaktionen zur Verfügung. PowerShell wird als Tool für kryptografische Vorgänge in größeren Tabellen empfohlen. Informationen hierzu finden Sie unter [Konfigurieren der Spaltenverschlüsselung mithilfe von Always Encrypted mit PowerShell](configure-column-encryption-using-powershell.md).
@@ -53,7 +53,7 @@ Die Verwendung von PowerShell wird für die folgenden Szenarios empfohlen:
  - Informationen zu Verschlüsselungstypen, die in Always Encrypted unterstützt werden, finden Sie unter [Auswählen der deterministischen oder zufälligen Verschlüsselung](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
  
  ## <a name="permissions"></a>Berechtigungen
-Zum Ausführen von kryptografischen Vorgängen mithilfe des Assistenten müssen Sie über die Berechtigungen **VIEW ANY COLUMN MASTER KEY DEFINITION** und **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** verfügen. Zudem müssen Sie über Zugriffsberechtigungen auf die von Ihnen verwendeten Spaltenhauptschlüssel in den Schlüsselspeichern verfügen, die die Schlüssel enthalten:
+Zum Ausführen von kryptografischen Vorgängen mithilfe des Assistenten müssen Sie über die Berechtigungen **VIEW ANY COLUMN MASTER KEY DEFINITION** und **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** verfügen. Zudem müssen Sie über Zugriffsberechtigungen für die von Ihnen verwendeten Spaltenhauptschlüssel in den Schlüsselspeichern verfügen, die die Schlüssel enthalten:
 - **Zertifikatspeicher – Lokaler Computer**: Sie benötigen einen Lesezugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.
 - **Azure Key Vault**: Sie benötigen die Berechtigungen „get“, „unwrapKey“, und „verify“ für den Tresor, der den Spaltenhauptschlüssel enthält.
 - **Schlüsselspeicheranbieter (CNG)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
@@ -81,7 +81,7 @@ Auf dieser Seite können Sie Spalten auswählen, die Sie verschlüsseln, erneut 
 
 Wählen Sie zum Verschlüsseln einer Klartextspalte (einer nicht verschlüsselten Spalte) einen Verschlüsselungstyp (**Deterministisch** oder **Zufällig**) und einen Verschlüsselungsschlüssel für die Spalte aus. 
 
-Wenn Sie einen Verschlüsselungstyp ändern oder einen Spaltenverschlüsselungsschlüssel für eine bereits verschlüsselte Spalte drehen (ändern) möchten, wählen Sie den gewünschten Verschlüsselungstyp und den Schlüssel aus. 
+Wenn Sie einen Verschlüsselungstyp ändern oder einen Spaltenverschlüsselungsschlüssel für eine bereits verschlüsselte Spalte rotieren lassen (ändern), wählen Sie den gewünschten Verschlüsselungstyp und den Schlüssel aus. 
 
 Wählen Sie zum Verschlüsseln oder erneuten Verschlüsseln einer oder mehrerer Spalten mit einem neuen Spaltenverschlüsselungsschlüssel durch den Assistenten einen Schlüssel aus, dessen Name **(Neu)** enthält. Der Assistent generiert den Schlüssel.
 
