@@ -2,7 +2,7 @@
 title: Aufzeichnen einer Ablauf Verfolgung für SQL Server Upgrades
 description: Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente für SQL Server Upgrades
 ms.custom: seo-lt-2019
-ms.date: 10/22/2018
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,74 +10,83 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 6c24632875d09125efcd043ae907e87a21847fe9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056605"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258531"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente
 
-Sie können eine Ablauf Verfolgungs Datei in Assistent für Datenbankexperimente (DEA) verwenden, um eine Ablauf Verfolgungs Datei zu erstellen, die ein Protokoll der aufgezeichneten Server Ereignisse enthält. Ein erfasstes Server Ereignis ist ein Ereignis, das während eines bestimmten Zeitraums auf einem bestimmten Server auftritt. Eine Ablauf Verfolgungs Erfassung muss einmal pro Server ausgeführt werden.
+Sie können Assistent für Datenbankexperimente (DEA) verwenden, um eine Ablauf Verfolgungs Datei mit einem Protokoll erfasster Server Ereignisse zu erstellen. Ein erfasstes Server Ereignis ist ein Ereignis, das während eines bestimmten Zeitraums auf einem bestimmten Server auftritt. Eine Ablauf Verfolgungs Erfassung muss einmal pro Server ausgeführt werden.
 
 Bevor Sie eine Ablauf Verfolgungs Erfassung starten, müssen Sie sicherstellen, dass Sie alle Ziel Datenbanken sichern.
 
 Das Zwischenspeichern von Abfragen in SQL Server kann sich auf Auswertungs Ergebnisse auswirken Es wird empfohlen, den SQL Server-Dienst (MSSQLSERVER) in der Dienste-Anwendung neu zu starten, um die Konsistenz der Auswertungs Ergebnisse zu verbessern.
 
-## <a name="create-a-trace-capture"></a>Erstellen einer Ablauf Verfolgungs Erfassung
+## <a name="configure-a-trace-capture"></a>Konfigurieren einer Ablauf Verfolgungs Erfassung
 
-1. Wählen Sie in der DEA im linken Menü das Menü Symbol aus. Wählen Sie im erweiterten Menü Ablauf Verfolgungen **erfassen** neben dem Kamerasymbol aus.
+1. Wählen Sie in der linken Navigationsleiste auf der linken Seite das Kamerasymbol aus, und wählen Sie dann auf der Seite **alle** Erfassungen die Option **neue Erfassung**aus.
 
-    ![Auswählen von Ablauf Verfolgungen im Menü](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
+    ![Erstellen einer Erfassung in der DEA](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
-1. Geben Sie unter **neue Erfassung**die folgenden Informationen ein, oder wählen Sie Sie aus:
+2. Geben Sie auf der Seite **neue Erfassung** unter **Aufzeichnungsdetails**die folgenden Informationen ein, oder wählen Sie Sie aus:
 
-    - **SQL Server Instanzname**: Geben Sie einen Namen für den Computer ein, auf dem SQL Server ausgeführt wird, auf dem Sie eine Server Ablauf Verfolgung aufzeichnen möchten.
+    - **Erfassungs Name**: Geben Sie einen Namen für die Ablauf Verfolgungs Datei für ihre Erfassung ein.
+    - **Format**: Geben Sie das Format (Trace oder xevents) für die Erfassung an.
+    - **Dauer**: Wählen Sie die Zeitdauer (in Minuten) aus, für die die Ablauf Verfolgungs Erfassung ausgeführt werden soll.
+    - **Erfassungs Speicherort**: Wählen Sie den Zielpfad für die Ablauf Verfolgungs Datei aus.
+
+        > [!NOTE]
+        > Der Dateipfad zur Ablauf Verfolgungs Datei muss sich auf dem Computer befinden, auf dem SQL Server ausgeführt wird. Wenn der SQL Server-Dienst nicht für ein bestimmtes Konto festgelegt ist, benötigt der Dienst möglicherweise Schreibberechtigungen für den angegebenen Ordner, damit die Ablauf Verfolgungs Datei geschrieben werden kann.
+
+3. Stellen Sie sicher, dass Sie eine Sicherung durchgeführt haben, indem Sie die Option **Ja, ich habe die Sicherung manuell erstellt...** .
+
+4. Geben Sie unter **Aufzeichnungsdetails**die folgenden Informationen ein, oder wählen Sie Sie aus:
+
+    - **Servertyp**: Geben Sie den SQL Server-Typ an (**SQLServer**, **azuresqldb**, **azuresqlmanagedinstance**).
+    - **Servername**: Geben Sie den Servernamen oder die IP-Adresse Ihres SQL Server an.
+    - **Authentifizierungstyp**: Wählen Sie als Authentifizierungstyp **Windows**aus.
     - **Datenbankname**: Geben Sie einen Namen für eine Datenbank ein, mit der eine Daten Bank Ablauf Verfolgung gestartet werden soll. Wenn Sie keine Datenbank angeben, wird die Ablauf Verfolgung für alle Datenbanken auf dem Server aufgezeichnet.
-    - **Name der Ablauf Verfolgungs Datei**: Geben Sie einen Namen für die Ablauf Verfolgungs Datei für ihre Erfassung ein.
-    - **Maximale Dateigröße (MB)** : Wählen Sie die Größe des Rollovers für Dateien aus. Bei Bedarf wird eine neue Datei mit der von Ihnen ausgewählten Dateigröße erstellt. Die empfohlene rollovergröße beträgt 200 MB.
-    - **Dauer (in Minuten)** : Wählen Sie aus, wie lange (in Minuten) die Ablauf Verfolgungs Erfassung ausgeführt werden soll.
-    - **Pfad zum Speichern der Ausgabedatei**der Ablauf Verfolgung: Wählen Sie den Zielpfad für die Ablauf Verfolgungs Datei aus. 
 
-    > [!NOTE]
-    > Der Dateipfad zur Ablauf Verfolgungs Datei muss sich auf dem Computer befinden, auf dem SQL Server ausgeführt wird. Wenn der SQL Server-Dienst nicht für ein bestimmtes Konto festgelegt ist, benötigt der Dienst möglicherweise Schreibberechtigungen für den angegebenen Ordner, damit die Ablauf Verfolgungs Datei geschrieben werden kann.
-    >
-    >
+5. Aktivieren bzw. deaktivieren Sie die Kontrollkästchen **Verbindung verschlüsseln** und **Serverzertifikat vertrauen** entsprechend Ihrem Szenario.
 
-    ![Neue Erfassungs Seite](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-inputs.png)
+    ![Neue Erfassungs Seite](./media/database-experimentation-assistant-capture-trace/dea-new-capture.png)
 
 ## <a name="start-the-trace-capture"></a>Starten der Ablauf Verfolgungs Erfassung
 
-Nachdem Sie die erforderlichen Informationen eingegeben oder ausgewählt haben, wählen Sie **starten** , um die Erfassung von Ablauf Verfolgungen zu starten. Wenn die eingegebenen Informationen gültig sind, beginnt der Ablauf Verfolgungs Erfassungs Vorgang. Andernfalls werden die Textfelder mit ungültigen Einträgen rot hervorgehoben. 
+1. Nachdem Sie die erforderlichen Informationen eingegeben oder ausgewählt haben, klicken Sie auf **starten** , um die Ablauf Verfolgungs Erfassung zu initiieren.
 
-Stellen Sie sicher, dass die Werte, die Sie ausgewählt oder eingegeben haben, richtig sind, und klicken Sie dann auf **starten**.
+    Wenn die eingegebenen Informationen gültig sind, beginnt der Ablauf Verfolgungs Erfassungs Vorgang. Andernfalls werden Textfelder mit ungültigen Einträgen rot hervorgehoben. Wenn Fehler auftreten, korrigieren Sie alle erforderlichen Einträge, und wählen Sie dann erneut **starten** aus.
 
-Wenn die Ausführung der Ablauf Verfolgungs Erfassung abgeschlossen ist, suchen Sie die neue Ablauf Verfolgungs Datei in dem Datei Speicherort, den Sie unter **Pfad zum Speichern der Ausgabedatei**der Ablauf Verfolgung angegeben haben. Wählen Sie das Glocken Symbol unten im linken Menü aus, um den Status der Erfassung zu überwachen.
+    Während die Ablauf Verfolgungs Erfassung ausgeführt wird, werden unter **Aufzeichnungsdetails**der Status und der Fortschritt des Ablauf Verfolgungs Erfassungs Prozesses angezeigt.
 
-![Verlauf der Aufzeichnungs Ablauf Verfolgung](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-progress.png)
+    ![Überwachen des Aufzeichnungsstatus](./media/database-experimentation-assistant-capture-trace/dea-capture-running.png)
 
-### <a name="trace-file"></a>Ablaufverfolgungsdatei
+2. Wenn die Ausführung der Ablauf Verfolgungs Erfassung abgeschlossen ist, wird die neue Ablauf Verfolgungs Datei (. trc) an dem **Erfassungs Speicherort** gespeichert, den Sie bei der Erstkonfiguration festgestellt haben.
 
-Bei der Ablauf Verfolgungs Erfassung wird eine TRC-Datei am angegebenen Speicherort geschrieben. Die Ablauf Verfolgungs Datei enthält Ablauf Verfolgungs Ergebnisse der Aktivität einer SQL Server Datenbank. TRC-Dateien sind so konzipiert, dass Sie weitere Informationen zu Fehlern bereitstellen, die von SQL Server erkannt und gemeldet werden.
+    ![Abgeschlossene Ablauf Verfolgungs Erfassung](./media/database-experimentation-assistant-capture-trace/dea-capture-complete.png)
+
+    Die Ablauf Verfolgungs Datei enthält Ablauf Verfolgungs Ergebnisse der Aktivität einer SQL Server Datenbank. TRC-Dateien sind so konzipiert, dass Sie weitere Informationen zu Fehlern bereitstellen, die von SQL Server erkannt und gemeldet werden.
 
 ## <a name="frequently-asked-questions-about-trace-capture"></a>Häufig gestellte Fragen zur Ablauf Verfolgungs Erfassung
 
 Im folgenden finden Sie einige häufig gestellte Fragen zur Erfassung von Ablauf Verfolgungen in Dea.
 
-### <a name="what-events-are-captured-when-i-run-a-trace-capture-on-a-production-database"></a>Welche Ereignisse werden aufgezeichnet, wenn ich eine Ablauf Verfolgungs Erfassung für eine Produktionsdatenbank führe?
+**F: welche Ereignisse werden aufgezeichnet, wenn ich eine Ablauf Verfolgungs Erfassung für eine Produktionsdatenbank führe?**
 
-Die folgende Tabelle enthält die Liste der Ereignisse und die entsprechenden Spaltendaten, die wir für Ablauf Verfolgungen sammeln:
+In der folgenden Tabelle werden die Ereignisse und die entsprechenden Spaltendaten aufgelistet, die von DEA für Ablauf Verfolgungen erfasst werden:
   
-|Ereignisname|Textdaten (1)|Binärdaten (2)|Datenbank-ID (3)|Hostname (8)|Anwendungs Name (10)|Anmelde Name (11)|SPID (12)|Startzeit (14)|Endzeit (15)|Datenbankname (35)|Ereignis Sequenz (51)|IsSystem (60)|  
+|Veranstaltungsname|Textdaten (1)|Binärdaten (2)|Datenbank-ID (3)|Hostname (8)|Anwendungs Name (10)|Anmelde Name (11)|SPID (12)|Startzeit (14)|Endzeit (15)|Datenbankname (35)|Ereignis Sequenz (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
 |**RPC: abgeschlossen (10)**||*|*|*|*|*|*|*|*|*|*|*|  
 |**RPC: wird gestartet (11)**||*|*|*|*|*|*|*||*|*|*|  
 |**RPC-Ausgabe Parameter (100)**|*||*|*|*|*|*|*||*|*|*|  
 |**SQL: batchabgeschlossene (12)**|*||*|*|*|*|*|*|*|*|*|*|  
-|**SQL:BatchStarting (13)**|*||*|*|*|*|*|*||*|*|*|  
+|**SQL: BatchStarting (13)**|*||*|*|*|*|*|*||*|*|*|  
 |**Audit Login (14)**|*|*|*|*|*|*|*|*||*|*|*|  
 |**Abmelde protokolerung (15)**|*||*|*|*|*|*|*|*|*|*|*|  
 |**ExistingConnection (17)**|*|*|*|*|*|*|*|*||*|*|*|  
@@ -89,43 +98,43 @@ Die folgende Tabelle enthält die Liste der Ereignisse und die entsprechenden Sp
 |**Currsorunprepare (77)**|*||*|*|*|*|*|*||*|*|*|  
 |**Cursor schließen (78)**|*||*|*|*|*|*|*||*|*|*|  
 
-### <a name="is-there-a-performance-effect-on-my-production-server-when-trace-capture-is-running"></a>Gibt es einen Leistungs Effekt auf dem Produktionsserver, wenn die Ablauf Verfolgungs Erfassung ausgeführt wird?
-    
+**F: gibt es einen Leistungs Effekt auf dem Produktionsserver, wenn die Ablauf Verfolgungs Erfassung ausgeführt wird?**
+
 Ja, es gibt eine minimale Leistungs Auswirkung während der Ablauf Verfolgungs Sammlung. In unseren Tests haben wir ungefähr eine Speicherauslastung von 3% festgestellt.
-    
-### <a name="what-kind-of-permissions-are-required-for-capturing-traces-on-a-production-workload"></a>Welche Art von Berechtigungen ist für die Erfassung von Ablauf Verfolgungen für eine produktionsworkloads erforderlich?
-    
+
+**F: welche Art von Berechtigungen sind zum Erfassen von Ablauf Verfolgungen für eine produktionsworkloads erforderlich?**
+
 - Der Windows-Benutzer, der den Ablauf Verfolgungs Vorgang in der DEA-Anwendung ausführt, muss auf dem Computer, auf dem SQL Server ausgeführt wird, über Systemadministrator Rechte verfügen.
 - Das Dienst Konto, das auf dem Computer verwendet wird, auf dem SQL Server ausgeführt wird, muss Schreibzugriff auf den angegebenen Pfad der Ablauf Verfolgungs Datei
 
-### <a name="can-i-capture-traces-for-the-entire-server-or-only-on-a-single-database"></a>Kann ich Ablauf Verfolgungen für den gesamten Server oder nur für eine einzelne Datenbank erfassen?
-    
+**F: kann ich Ablauf Verfolgungen für den gesamten Server oder nur für eine einzelne Datenbank erfassen?**
+
 Mithilfe von DEA können Sie Ablauf Verfolgungen für alle Datenbanken auf dem Server oder für eine einzelne Datenbank erfassen.
-    
-### <a name="i-have-a-linked-server-configured-in-my-production-environment-do-those-queries-show-up-in-the-traces"></a>In meiner Produktionsumgebung ist ein Verbindungs Server konfiguriert. Werden diese Abfragen in den Ablauf Verfolgungen angezeigt?
-    
+
+**F: Ich habe einen Verbindungs Server in der Produktionsumgebung konfiguriert. Werden diese Abfragen in den Ablauf Verfolgungen angezeigt?**
+
 Wenn Sie eine Ablauf Verfolgungs Erfassung für den gesamten Server ausführen, erfasst die Ablauf Verfolgung alle Abfragen, einschließlich der verknüpften Server Abfragen. Wenn Sie eine Ablauf Verfolgungs Erfassung für den gesamten Server ausführen möchten, lassen Sie das Feld **Datenbankname** unter **neue Erfassung** leer.
-    
-### <a name="whats-the-minimum-recommended-time-for-production-workload-traces"></a>Was ist die empfohlene mindestanzeit für Ablauf Verfolgungen für die Arbeitsauslastung?
-    
+
+**F: wie hoch ist die empfohlene Zeit für die Ablauf Verfolgung für die Arbeitsauslastung?**
+
 Es wird empfohlen, dass Sie eine Zeit auswählen, die die gesamte Arbeitsauslastung am besten repräsentiert. Auf diese Weise wird die Analyse für alle Abfragen in Ihrer Arbeitsauslastung ausgeführt.
-    
-### <a name="how-important-is-to-take-a-database-backup-right-before-i-start-a-trace-capture"></a>Wie wichtig ist es, eine Datenbanksicherung zu erstellen, bevor Sie eine Ablauf Verfolgungs Erfassung starten?
-    
+
+**F: wie wichtig ist es, eine Datenbanksicherung zu erstellen, bevor Sie eine Ablauf Verfolgungs Erfassung startet?**
+
 Bevor Sie eine Ablauf Verfolgungs Erfassung starten, müssen Sie sicherstellen, dass Sie alle Ihre Ziel Datenbanken sichern. Die erfasste Ablauf Verfolgung in Ziel 1 und Ziel 2 wird wiedergegeben. Wenn der Daten Bank Status nicht identisch ist, werden die Ergebnisse der Experimente verzerrt.
 
-### <a name="can-i-collect-xevents-instead-of-traces-and-can-i-replay-xevents"></a>Kann ich xevents anstelle von Ablauf Verfolgungen erfassen, und kann ich xevents wiedergeben?
-    
+**F: kann ich xevents anstelle von Ablauf Verfolgungen erfassen, und kann ich xevents wiedergeben?**
+
 Ja. "DEA" unterstützt xevents. Laden Sie die neueste Version von DEA herunter, und probieren Sie Sie aus.
 
 ## <a name="troubleshoot-trace-captures"></a>Problembehandlung bei Ablauf Verfolgungs Aufzeichnungen
 
-Wenn beim Ausführen einer Ablauf Verfolgungs Erfassung ein Fehler angezeigt wird, überprüfen Sie die folgenden Voraussetzungen:
+Wenn beim Ausführen einer Ablauf Verfolgungs Erfassung ein Fehler angezeigt wird, bestätigen Sie Folgendes:
 
-- Vergewissern Sie sich, dass der Name des Computers, der SQL Server ausgeführt wird, gültig ist. Versuchen Sie, eine Verbindung mit dem Computer herzustellen, auf dem SQL Server ausgeführt wird, indem Sie SQL Server Management Studio (SSMS) verwenden.
-- Vergewissern Sie sich, dass Ihre Firewallkonfiguration keine Verbindungen mit dem Computer blockiert, der SQL Server ausgeführt wird
-- Vergewissern Sie sich, dass der Benutzer über die Berechtigungen verfügt, die im Blogbeitrag [Replay Replay FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)aufgeführt sind.
-- Vergewissern Sie sich, dass der Ablauf Verfolgungs Name nicht der standardrolloverkonvention entspricht (Capture\_1). Versuchen Sie stattdessen, die Namen der Ablauf Verfolgung wie Capture\_1A oder Capture1 auszuführen.
+- Der Name des Computers, auf dem SQL Server ausgeführt wird, ist gültig. Versuchen Sie, eine Verbindung mit dem Computer herzustellen, auf dem SQL Server ausgeführt wird, indem Sie SQL Server Management Studio (SSMS) verwenden.
+- Die Firewallkonfiguration blockiert keine Verbindungen mit dem Computer, auf dem SQL Server ausgeführt wird.
+- Der Benutzer verfügt über die Berechtigungen, die im Blogbeitrag [Replay Replay FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)aufgeführt sind.
+- Der Ablauf Verfolgungs Name folgt nicht der standardrolloverkonvention (Erfassung\_1). Versuchen Sie stattdessen, Namen von Ablauf\_Verfolgungen wie z. b. Capture 1A oder Capture1
 
 Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt werden, und Lösungen für deren Behebung:
 
@@ -138,10 +147,6 @@ Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt w
 
 Wenn Sie andere Fehler mit der Bezeichnung *SQL-Fehler Code*sehen, finden Sie unter [Datenbank-Engine Fehler](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) ausführliche Beschreibungen.
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="see-also"></a>Siehe auch
 
-- Informationen zum Konfigurieren der Distributed Replay Tools in SQL Server vor der Wiedergabe einer aufgezeichneten Ablauf Verfolgung finden Sie unter Konfigurieren der wieder [Gabe](database-experimentation-assistant-configure-replay.md).
-
-- Sehen Sie sich das folgende Video an, um die Einführung von DEA und Demo in 19 Minuten zu demonstrieren:
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+- Informationen zum Konfigurieren der Distributed Replay Tools in SQL Server vor der Wiedergabe einer aufgezeichneten Ablauf Verfolgung finden Sie unter [configure Distributed Replay for Assistent für Datenbankexperimente](database-experimentation-assistant-configure-replay.md).

@@ -1,6 +1,7 @@
 ---
-title: sp_removedbreplication (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: sp_removedbreplication (T-SQL)
+description: Beschreibt die sp_removedbreplication gespeicherte Prozedur, die zum Entfernen aller Replikations Objekte in der Veröffentlichungs Datenbank für SQL Server Replikation verwendet wird.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fdae843c3918013ec850c5d807853c10a8f3f190
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: c7da3db641d6e0b9aa53d570a7d0cf9bdc731477
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771042"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322248"
 ---
-# <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
+# <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Diese gespeicherte Prozedur entfernt alle Replikationsobjekte aus der Veröffentlichungsdatenbank auf der Verlegerinstanz von SQL Server oder aus der Abonnementdatenbank auf der Abonnenteninstanz von SQL Server. Führen Sie sie in der entsprechenden Datenbank aus, oder geben Sie bei Ausführung im Kontext einer anderen Datenbank auf derselben Instanz die Datenbank an, aus der die Replikationsobjekte entfernt werden sollen. Diese Prozedur entfernt keine Objekte von anderen Datenbanken, wie z. B. der Verteilungsdatenbank.  
@@ -30,7 +31,7 @@ ms.locfileid: "68771042"
 > [!NOTE]  
 >  Die Prozedur sollte nur verwendet werden, wenn bei anderen Methoden zum Entfernen von Replikationsobjekten Fehler aufgetreten sind.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,26 +41,26 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
     [ , [ @type = ] type ]   
 ```  
   
-## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbname'`Der Name der Datenbank. *dbname* ist vom Datentyp **sysname**. Der Standardwert ist NULL. Bei NULL wird die aktuelle Datenbank verwendet.  
+## <a name="arguments"></a>Arguments  
+`[ @dbname = ] 'dbname'`Der Name der Datenbank. *dbname* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei NULL wird die aktuelle Datenbank verwendet.  
   
-`[ @type = ] type`Der Typ der Replikation, für den Datenbankobjekte entfernt werden. *type* ist vom Datentyp **nvarchar(5)** . Die folgenden Werte sind möglich:  
+`[ @type = ] type`Der Typ der Replikation, für den Datenbankobjekte entfernt werden. *Type ist vom Datentyp* **nvarchar (5)** . die folgenden Werte sind möglich:  
   
 |||  
 |-|-|  
-|**tran**|Entfernt Transaktionsreplikations-Veröffentlichungsobjekte.|  
+|**Bahnhöfen**|Entfernt Transaktionsreplikations-Veröffentlichungsobjekte.|  
 |**Merge**|Entfernt Mergereplikations-Veröffentlichungsobjekte.|  
-|**both** (Standard)|Entfernt alle Replikationsveröffentlichungsobjekte.|  
+|**beides** (Standard)|Entfernt alle Replikationsveröffentlichungsobjekte.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **sp_removedbreplication** wird für alle Replikationstypen verwendet.  
+ **sp_removedbreplication** wird bei allen Replikations Typen verwendet.  
   
- **sp_removedbreplication** ist hilfreich beim Wiederherstellen einer replizierten Datenbank, für die keine Replikationsobjekte wiederhergestellt werden müssen.  
+ **sp_removedbreplication** ist nützlich, wenn eine replizierte Datenbank wieder hergestellt wird, für die keine Replikations Objekte wieder hergestellt werden müssen.  
   
- **sp_removedbreplication** kann nicht bei schreibgeschützten Datenbanken verwendet werden.  
+ **sp_removedbreplication** kann nicht für eine Datenbank verwendet werden, die als schreibgeschützt gekennzeichnet ist.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
@@ -81,8 +82,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Veröffentlichung und Verteilung deaktivieren](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

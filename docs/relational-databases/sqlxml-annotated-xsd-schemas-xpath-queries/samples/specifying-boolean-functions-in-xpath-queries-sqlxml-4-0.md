@@ -1,6 +1,5 @@
 ---
-title: Angeben von booleschen Funktionen in XPath-Abfragen (SQLXML 4,0) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von booleschen Funktionen in XPath-Abfragen (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,22 +15,23 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d00bf01660c212b19c529f6012ec29eda60295c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907756"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252586"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Angeben von booleschen Funktionen in XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In den folgenden Beispielen wird gezeigt, wie boolesche Funktionen in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispiel Schema finden Sie unter [Beispiel-XSD-Schema mit Anmerkungen für XPath-Beispiele &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  In den folgenden Beispielen wird gezeigt, wie boolesche Funktionen in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispiel Schema finden Sie unter [Beispiel: XSD-Schema mit Anmerkungen für XPath-Beispiele &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Angeben der booleschen Funktion "not()"  
- Diese Abfrage gibt alle **\<Kunden >** untergeordneten Elementen des Kontext Knotens zurück, die keine **\<Reihenfolge >** untergeordneten Elementen aufweisen:  
+ Diese Abfrage gibt alle ** \<Kunden>** untergeordneten Elementen des Kontext Knotens zurück, die keine ** \<Order>** untergeordneten Elemente aufweisen:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -78,8 +78,8 @@ ms.locfileid: "72907756"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Angeben der booleschen Funktionen "true()" und "false()"  
- Diese Abfrage gibt alle **\<Kunden >** untergeordneten Elementen des Kontext Knotens zurück, die keine **\<Ordnung >** untergeordneten Elemente aufweisen. In relationalem Sinn gibt diese Abfrage alle Kunden zurück, die keine Bestellungen aufgegeben haben.  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>B: Angeben der booleschen Funktionen "true()" und "false()"  
+ Diese Abfrage gibt alle ** \<** untergeordneten Elemente des Kunden>-Elements des Kontext Knotens zurück, die keine ** \<Order>** untergeordneten Elemente aufweisen. In relationalem Sinn gibt diese Abfrage alle Kunden zurück, die keine Bestellungen aufgegeben haben.  
   
 ```  
 /child::Customer[child::Order=false()]  

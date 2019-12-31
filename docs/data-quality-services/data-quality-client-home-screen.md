@@ -1,6 +1,5 @@
 ---
-title: Startbildschirm des Data Quality-Clients | Microsoft-Dokumentation
-ms.custom: ''
+title: Startbildschirm des Data Quality-Clients
 ms.date: 02/29/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 660c48540bb7d7763eb149c0882f5b37f2cc0d1e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152577"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251730"
 ---
 # <a name="data-quality-client-home-screen"></a>Startbildschirm des Data Quality-Clients
 
@@ -25,7 +24,7 @@ ms.locfileid: "70152577"
 
   Über diesen Bildschirm können Sie auf die Benutzeroberflächen für die drei wichtigsten [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] -Taskgruppen (DSQ) zugreifen: Wissensdatenbank-Verwaltung, Data Quality-Projekte und Verwaltung.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="knowledge-base-management"></a>Wissensdatenbank-Verwaltung  
  Eine DQS-Wissensdatenbank ist ein Repository mit Metadaten, die von DQS zur Verbesserung der Datenqualität verwendet werden. Diese Metadaten werden von der DQS-Plattform in einem computergestützten Wissensermittlungsprozess und vom Data Steward in einem interaktiven Domänenverwaltungsprozess erstellt.  
@@ -33,7 +32,7 @@ ms.locfileid: "70152577"
  **Neue Wissensdatenbank**  
  Erstellen Sie eine Wissensdatenbank entweder von Grund auf neu oder basierend auf den Metadaten einer vorhandenen Wissensdatenbank. Mit diesem Befehl wird eine Seite geöffnet, in der Sie die Wissensdatenbank identifizieren können, basierend auf einer vorhandenen Datenbank die gewünschte Wissensdatenbankaktivität ausführen können und anschließend die Wissensdatenbank erstellen können.  
   
- **Öffnen der Wissensdatenbank**  
+ **Wissensdatenbank öffnen**  
  Öffnen Sie eine Wissensdatenbank, um die Domänen zu verwalten, die Wissensermittlung auszuführen oder eine Abgleichsrichtlinie erstellen zu können. Wenn Sie auf die Schaltfläche **Wissensdatenbank öffnen** klicken, wird die Seite **Öffnen der Wissensdatenbank** angezeigt, auf der eine Liste vorhandener Wissensdatenbanken mitsamt deren Eigenschaften, aktuellen Status, Wissensdatenbanken und Details zu den Domänen angezeigt wird. Wählen Sie eine Wissensdatenbank aus, und öffnen Sie sie mittels **Wissensdatenbank öffnen**.  
   
  **Zuletzt verwendete Wissensdatenbank**  
@@ -41,7 +40,7 @@ ms.locfileid: "70152577"
   
  Sie können eine gesperrte Wissensdatenbank nur dann öffnen und bearbeiten, wenn Sie sie selbst gesperrt haben. Wenn dies der Fall ist, wird die Wissensdatenbank mit dem Status geöffnet, den sie beim Schließen aufwies. Selbiges ist in Klammern angegeben. Wenn eine Wissensdatenbank gesperrt wird und Sie sie nicht gesperrt haben, können Sie sie nur schreibgeschützt öffnen.  
   
-### <a name="data-quality-projects"></a>Data Quality Projects  
+### <a name="data-quality-projects"></a>Data Quality-Projekte  
  Ein Data Quality-Projekt ist der Prozess, bei dem DQS die Datenbereinigung oder den Datenabgleich ausführt, wobei für beide eine computergestützte Datenkorrektur und eine interaktive Datenbereinigung verwendet werden.  
   
  **Neues Data Quality-Projekt**  
@@ -50,21 +49,21 @@ ms.locfileid: "70152577"
  **Data Quality-Projekt öffnen**  
  Öffnen Sie ein Projekt, um die Datenbereinigung oder den Datenabgleich auszuführen. Wenn Sie auf die Schaltfläche **Data Quality-Projekt öffnen** klicken, wird die Seite **Data Quality-Projekt öffnen** angezeigt, auf der eine Liste vorhandener Projekte mitsamt deren Eigenschaften, aktuellen Status, Wissensdatenbanken und Details zu den Domänen und Abgleichsrichtlinienregeln angezeigt wird. Wählen Sie ein Projekt aus, und öffnen Sie es mittels **Data Quality-Projekt öffnen**.  
   
- **Zuletzt verwendetes Data Quality-Projekt**  
+ **Aktuelles Data Quality-Projekt**  
  Wählen Sie ein bereits erstelltes Projekt aus der Liste auf dem Bildschirm aus. Sie können ein gesperrtes Projekt nur öffnen, wenn Sie es selbst gesperrt haben. Wenn dies der Fall ist, wird das Projekt mit dem Status geöffnet, den es beim Schließen aufwies. Selbiges ist in Klammern angegeben. Wenn das Projekt abgeschlossen wurde, wird es im Exportschritt der Aktivität geöffnet.  
   
-### <a name="administration"></a>Verwaltung  
+### <a name="administration"></a>Administration  
  Die DQS-Verwaltung ermöglicht die Überwachung, Konfiguration und Wartung von DQS.  
   
- **Aktivitätsüberwachung**  
+ **Aktivitäts Überwachung**  
  Zeigen Sie eine Sicht mit dem Status aller (aktuellen und vergangenen) Aktivitäten an, die sich auf den verbundenen [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]beziehen. Die überwachten Aktivitätstypen umfassen die Wissensverwaltung, ein Data Quality-Projekt und die SSIS-basierte Datenkorrektur.  
   
  **Konfiguration**  
  Zeigen Sie die Konfigurations Eigenschaften für Verweis Datendienst Konten (sowohl über Azure Marketplace als auch direkt auf Verweis Datendienste), allgemeine Einstellungen (interaktive Bereinigung, Abgleich und Profilerstellung) und Einstellungen für den Protokoll Schweregrad an.  
   
-## <a name="see-also"></a>Siehe auch  
- [DQS-Wissensdatenbanken und -Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [Data Quality-Projekte &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [DQS-Wissensdatenbanken und-Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
+ [Data Quality-Projekte &#40;DQS-&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [DQS-Verwaltung](../data-quality-services/dqs-administration.md)  
   
   

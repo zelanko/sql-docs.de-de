@@ -1,6 +1,5 @@
 ---
-title: Erstellen einer Domäne | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen einer Domäne
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 83de355138f694c6c0414362f41676012817d497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d39f86d2efa18c385f2aafd8b3e4cb7de9975b06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992312"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252261"
 ---
 # <a name="create-a-domain"></a>Erstellen einer Domäne
 
@@ -25,21 +24,21 @@ ms.locfileid: "67992312"
 
   In diesem Thema wird beschrieben, wie Sie eine Domäne in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellen. Die Werte in der Domäne sind eine semantische Darstellung der Daten in einem Feld. Weitere Informationen zu Domänen finden Sie unter [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md).  
   
- Es gibt zwei Möglichkeiten, eine neue Domäne zu erstellen. Erstens während des Zuordnungsschritts der Wissensermittlungsaktivität, wenn Sie gerade ein Datenbeispiel analysieren, um einer neuen oder vorhandenen Wissensdatenbank Wissen hinzuzufügen. Zweitens während der Domänenverwaltungsaktivität, wenn Sie eine neue Domäne erstellen, anstatt eine vorhandene zu ändern.  
+ Es gibt zwei Möglichkeiten, eine neue Domäne zu erstellen. Erstens während des Strukturschritts der Wissensermittlungsaktivität, wenn Sie gerade ein Datenbeispiel analysieren, um einer neuen oder vorhandenen Wissensdatenbank Wissen hinzuzufügen. Zweitens während der Domänenverwaltungsaktivität, wenn Sie eine neue Domäne erstellen, anstatt eine vorhandene zu ändern.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a>Voraussetzung  
  Um eine Domäne zu erstellen, müssen Sie eine Wissensdatenbank erstellt und geöffnet haben.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
  Sie müssen über die dqs_kb_editor- oder dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um eine Domäne zu erstellen.  
   
-##  <a name="Discovery"></a> Erstellen einer Domäne in der Wissensermittlungsaktivität  
+##  <a name="Discovery"></a>Erstellen einer Domäne in der Wissens Ermittlungs Aktivität  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Wissensdatenbank öffnen** , und wählen Sie dann eine Wissensdatenbank aus, oder klicken Sie auf **Neue Wissensdatenbank** , und geben Sie Eigenschaften für die neue Wissensdatenbank ein.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "67992312"
   
 5.  Wählen Sie in der Tabelle **Zuordnungen** eine Quellspalte aus der Dropdownliste für die Spalte **Quellspalte** einer leeren Zeile aus. Wenn keine entsprechenden Domänen vorhanden ist, klicken Sie auf das Symbol **Domäne erstellen** .  
   
-##  <a name="DomainManagement"></a> Erstellen einer Domäne in der Domänenverwaltungsaktivität  
+##  <a name="DomainManagement"></a>Erstellen einer Domäne in der Domänen Verwaltungs Aktivität  
   
 1.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Wissensdatenbank öffnen** , und wählen Sie dann eine Wissensdatenbank aus, oder klicken Sie auf **Neue Wissensdatenbank** , und geben Sie Eigenschaften für die neue Wissensdatenbank ein.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "67992312"
   
 3.  Klicken Sie auf der Seite **Domänenverwaltung** über der Domänenliste auf das Symbol **Domäne erstellen** .  
   
-##  <a name="Properties"></a> Festlegen von Domäneneigenschaften  
+##  <a name="Properties"></a>Festlegen von Domänen Eigenschaften  
   
 1.  Geben Sie im Dialogfeld **Domäne erstellen** einen eindeutigen Namen für die Wissensdatenbank und eine Beschreibung mit maximal 256 Zeichen ein.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "67992312"
   
 10. Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen einer Domäne  
+##  <a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen einer Domäne  
  Nachdem Sie eine Domäne erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
   

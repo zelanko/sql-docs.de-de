@@ -1,6 +1,5 @@
 ---
-title: Konzepte von Data Quality Services | Microsoft-Dokumentation
-ms.custom: ''
+title: Konzepte der Data Quality Services
 ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: d5996eea620d61eb9ca6ccd0f499398492bad591
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152542"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251713"
 ---
 # <a name="data-quality-services-concepts"></a>Konzepte der Data Quality Services
 
@@ -23,20 +22,20 @@ ms.locfileid: "70152542"
 
   Dieses Thema enthält eine kurze Zusammenfassung der [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Konzepte in Wissensverwaltung, Data Quality-Projekten und Datenqualitätsverwaltung.  
   
-##  <a name="Knowledge"></a> Konzepte der Wissensverwaltung  
+##  <a name="Knowledge"></a>Konzepte der Wissensverwaltung  
  Die DQS-Wissensdatenbank ist ein Repository von Metadaten, die vom Data Steward oder IT-Profi zur Verwendung bei der Verbesserung der Datenqualität durch Datenbereinigung und Datenabgleich erstellt werden. Die DQS-Wissensverwaltung schließt die Prozesse ein, die verwendet wurden, um die Wissensdatenbank zu erstellen und zu verwalten, sowohl in einer computergestützten Weise als auch interaktiv.  
   
- **Wissensermittlung**  
+ **Wissens Ermittlung**  
   
  Die Wissensermittlung ist ein computergestützter Prozess, der Beispiele für die Daten der Organisation analysiert, um Wissen zu den Daten zu erstellen. Sobald die Ergebnisse der Analyse vorliegen, können Sie das Wissen überprüfen und verbessern und es dann auf die Durchführung von Datenbereinigungen, den Datenabgleich und die Profilerstellung anwenden. Weitere Informationen finden Sie unter [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Domänenverwaltung**  
+ **Domänen Verwaltung**  
   
  Der Domänenverwaltungsprozess ermöglicht es Ihnen, das Wissen zu ändern, das vom Wissensermittlungsprozess generiert wurde, oder es zu erweitern. Sie können das Wissen in einer Wissensdatenbank interaktiv bearbeiten, aktualisieren und überprüfen. Eine Wissensdatenbank besteht aus Datendomänen, die Domänenwerte und ihren Status, Domänenregeln, begriffsbasierte Beziehungen und Verweisdaten enthalten. In der Domänenverwaltung können Sie Domäneneigenschaften ändern, Verweisdaten an eine Domäne anfügen, Domänenregeln verwalten, Domänenwerte verwalten und Datenbeziehungen eingeben sowie Domänen erstellen, löschen, importieren oder exportieren. Sie können auch Verbunddomänen verwenden, die mehr als eine einzelne Domäne aggregieren. Weitere Informationen finden Sie unter [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Übereinstimmende Richtlinie**  
+ **Abgleichsrichtlinie**  
   
- Eine Abgleichsrichtlinie enthält die Abgleichsregeln, die verwendet werden, um Datendeduplizierung auszuführen. Der Abgleichsrichtlinienprozess ermöglicht es Ihnen, Abgleichsregeln zu erstellen, sie basierend auf Abgleichsergebnissen und Profilerstellungsdaten anzupassen und der Wissensdatenbank die Richtlinie hinzuzufügen. Weitere Informationen finden Sie unter [Datenabgleich](../data-quality-services/data-matching.md).  
+ Eine Abgleichsrichtlinie enthält die Abgleichsregeln, die verwendet werden, um Datendeduplizierung auszuführen. Der Abgleichsrichtlinienprozess ermöglicht es Ihnen, Abgleichsregeln zu erstellen, sie basierend auf Abgleichsergebnissen und Profilerstellungsdaten anzupassen und der Wissensdatenbank die Richtlinie hinzuzufügen. Weitere Informationen finden Sie unter [Data Matching](../data-quality-services/data-matching.md).  
   
  **Reference Data Services**  
   
@@ -44,16 +43,16 @@ ms.locfileid: "70152542"
   
  Weitere Informationen zur Wissensverwaltung in DQS finden Sie unter [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-##  <a name="Projects"></a> Konzepte des Data Quality-Projekts  
+##  <a name="Projects"></a>Konzepte des Data Quality-Projekts  
  Der Data Steward führt Data Quality-Vorgänge (Bereinigung und Abgleich) mithilfe eines Data Quality-Projekts in der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aus.  
   
  **Datenbereinigung**  
   
  Die Datenbereinigung in DQS wird auf Grundlage des Wissens in einer DQS-Wissensdatenbank ausgeführt. Die Datenbereinigung in DQS umfasst zwei Schritte:  
   
--   **Computerunterstützte Bereinigung:** DQS verwendet das Wissen in der ausgewählten Wissensdatenbank für das Bereinigungsprojekt, um Korrekturen/Vorschläge für die Werte in einer Datenquelle anzubieten.  
+-   **Computer gestützte Bereinigung**: DQS verwendet das Wissen in der ausgewählten Wissensdatenbank für das Bereinigungs Projekt, um Korrekturen/Vorschläge für die Werte in einer Datenquelle vorzuschlagen.  
   
--   **Interaktive Bereinigung:** Der Data Steward kann den interaktiven Bereinigungsprozess ausführen, um Datenkorrekturen zu ändern oder zu erweitern, die vom computergestützten Datenbereinigungsprozess vorgeschlagen wurden. Der Data Steward verwendet dabei Vertrauensgrade und Statistiken, die vom Datenbereinigungsprozess identifiziert werden, oder eigene Änderungen, die manuell in das Projekt eingegeben werden.  
+-   **Interaktive Bereinigung**: der Data Steward kann den interaktiven Bereinigungs Prozess ausführen, um Daten Korrekturen, die vom computergestützten Daten Bereinigungs Prozess vorgeschlagen wurden, zu ändern oder zu erweitern. Der Data Steward verwendet dabei Vertrauensgrade und Statistiken, die vom Datenbereinigungsprozess identifiziert werden, oder eigene Änderungen, die manuell in das Projekt eingegeben werden.  
   
  Der Data Steward kann die verarbeiteten Daten nach der Bereinigung in eine SQL Server-Datenbank, CSV- oder Excel-Datei exportieren. Weitere Informationen finden Sie unter [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
@@ -67,14 +66,14 @@ ms.locfileid: "70152542"
   
  Weitere Informationen zu Data Quality-Projekten in DQS finden Sie unter [Data Quality-Projekte &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md).  
   
-##  <a name="Admin"></a> Konzepte der Data Quality-Verwaltung  
+##  <a name="Admin"></a>Konzepte der Data Quality-Verwaltung  
  Ein DQS-Administrator kann eine Vielzahl von administrativen Aufgaben mithilfe der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ausführen.  
   
- **Aktivitätsüberwachung**  
+ **Aktivitäts Überwachung**  
   
  Die Aktivitätsüberwachung zeigt den Status und den Zustand jeder Aktivität an, die innerhalb eines Datenbereichs durchgeführt wird, stellt Daten für jede Aktivität bereit und ermöglicht es DQS-Administratoren, eine Aktivität zu steuern. Weitere Informationen finden Sie unter [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
- **Configuration**  
+ **Konfiguration**  
   
  Die Option "Konfiguration" bietet folgende Möglichkeiten:  
   
@@ -92,7 +91,7 @@ ms.locfileid: "70152542"
   
  Weitere Informationen zur DQS-Verwaltung finden Sie unter [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

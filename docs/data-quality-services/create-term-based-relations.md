@@ -1,6 +1,5 @@
 ---
-title: Erstellen von begriffsbasierten Beziehungen | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen von begriffsbasierten Beziehungen
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: e0bec04d00222ca0dd11854b41c5ec6b4bf705a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992249"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251777"
 ---
 # <a name="create-term-based-relations"></a>Erstellen von begriffsbasierten Beziehungen
 
@@ -29,11 +28,11 @@ ms.locfileid: "67992249"
   
  Transformationen aufgrund einer begriffsbasierten Beziehung und Symboltransformationen (Sonderzeichen werden durch ein Leerzeichen oder einen NULL-Wert ersetzt) werden in einer Vorverarbeitungsphase vor der Analyse durchgeführt. Wenn eine Verbunddomänenanalyse angefordert wird, erfolgt diese vor den beiden Transformationen, da für die Trennzeichenanalyse Symbole erforderlich sind. Andere Vorgänge, z. B. Änderung an Domänenregeln und Domänenwerten, werden nach den Transformationen ausgeführt. Beim Abgleich werden begriffsbasierte Beziehungen vor der Abgleichsaktivität auf die Quelldaten angewendet, unabhängig davon, ob die Bereinigung ausgeführt wird.  
   
- **Begriffsbasierte Beziehungen und Domänenverwaltung**  
+ **Begriffs basierte Beziehungen und Domänen Verwaltung**  
   
  Wenn Sie in der Domänenverwaltung eine begriffsbasierte Beziehung anwenden, wendet DQS die Änderungen in den Prozessen zur Wissensermittlung, Bereinigung oder zum Abgleich an. DQS ändert jedoch nicht den Domänenwert selbst, um der begriffsbasierten Beziehung zu entsprechen. Anders ausgedrückt, wenn Sie auf der Registerkarte **Begriffsbasierte Beziehungen** der Seite **Domänenverwaltung** eine begriffsbasierte Beziehung eingeben und annehmen, wird die Änderung nicht auf der Registerkarte **Domänenwerte** der gleichen Seite vorgenommen. Dies ermöglicht es Ihnen, die begriffsbasierte Beziehung anschließend zu ändern.  
   
- **Begriffsbasierte Beziehungen und Datenbereinigung**  
+ **Begriffs basierte Beziehungen und Datenbereinigung**  
   
  Wenn Sie eine begriffsbasierte Beziehung in einer Domäne anwenden und dann den Datenbereinigungsprozess ausführen, wendet DQS die Änderungen während der Bereinigung an, übernimmt jedoch die Änderungen nicht für Begriffe in der Wissensdatenbank.  
   
@@ -45,27 +44,27 @@ ms.locfileid: "67992249"
   
 -   Wenn sich ein Wert, wie von einer begriffsbasierten Beziehung geändert, in der Domäne befindet, der Wert ohne Korrektur jedoch Fehler/Ungültig lautet, wird der Wert auf der Registerkarte Ungültig mit dem Grund Domänenwert angezeigt.  
   
- **Begriffsbasierte Beziehungen und Wissensermittlung**  
+ **Begriffs basierte Beziehungen und Wissens Ermittlung**  
   
  Wenn Sie eine begriffsbasierte Beziehung anwenden und dann den Wissensermittlungsprozess ausführen, werden alle Werte, die dem TBR entsprechen, nicht geändert und als richtiger Wert identifiziert. Alle Werte, die durch einen TBR geändert werden, werden als richtiger Wert importiert und als Synonym zu einem Wert identifiziert, der dem TBR entspricht.  
   
- **Begriffsbasierte Beziehungen und Importieren von Bereinigungswerten in eine Domäne**  
+ **Begriffs basierte Beziehungen und Importieren von Bereinigungs Werten in eine Domäne**  
   
  Wenn Sie während des Bereinigungsprozesses gesammeltes Datenqualitätswissen in eine Domäne importieren, wird ein durch einen TBR geänderter Wert als richtiger Wert importiert.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a>Voraussetzung  
  Um begriffsbasierte Beziehungen zu erstellen, ist es erforderlich, dass eine Domäne in der Domänenverwaltungsaktivität geöffnet ist.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
  Sie müssen über die dqs_kb_editor- oder dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um begriffsbasierte Beziehungen zu erstellen.  
   
-##  <a name="Create"></a> Erstellen von begriffsbasierten Beziehungen  
+##  <a name="Create"></a>Erstellen von Begriffs basierten Beziehungen  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Öffnen oder erstellen Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm eine Wissensdatenbank. Wählen Sie **Domänenverwaltung** als Aktivität aus, und klicken Sie dann auf **Öffnen** oder **Erstellen**. Weitere Informationen finden Sie unter [Erstellen einer Wissensdatenbank](../data-quality-services/create-a-knowledge-base.md) oder [Öffnen einer Wissensdatenbank](../data-quality-services/open-a-knowledge-base.md).  
   
@@ -93,7 +92,7 @@ ms.locfileid: "67992249"
   
     6.  Suchen Sie einen Wert in der Tabelle Beziehungen, indem Sie eine oder mehrere Ziffern im Textfeld **Suchen** eingeben. Die gefundenen Werte für die Zeichenfolge werden hervorgehoben. Wechseln Sie mithilfe der NACH-OBEN- und NACH-UNTEN-TASTE zu verschiedenen Instanzen der Zeichenfolge in der Tabelle.  
   
-    7.  **Rechtschreibprüfung:** Wenn ein Wert in der Spalte **Wert** oder **Korrigieren in** eine wellige rote Unterstreichung aufweist, schlägt die Rechtschreibprüfung eine Korrektur für den Wert vor. Klicken Sie mit der rechten Maustaste auf den unterstrichenen Wert, und wählen Sie einen der von der Rechtschreibprüfung vorgeschlagenen Werte aus. Alternativ können Sie im Kontextmenü auf **Hinzufügen** klicken, um mit dem ursprünglichen Wert fortzufahren. Weitere Informationen finden Sie unter [Verwenden der DQS-Rechtschreibprüfung](../data-quality-services/use-the-dqs-speller.md) und [Domain-Eigenschaften festlegen](../data-quality-services/set-domain-properties.md).  
+    7.  Rechtschreib **Prüfung: Wenn**ein Wert in der Spalte " **Wert** " oder " **korrigieren in** " einen wellenförmigen roten unterstrich aufweist, schlägt die Rechtschreibprüfung eine Korrektur für den Wert vor. Klicken Sie mit der rechten Maustaste auf den unterstrichenen Wert, und wählen Sie einen der von der Rechtschreibprüfung vorgeschlagenen Werte aus. Alternativ können Sie im Kontextmenü auf **Hinzufügen** klicken, um mit dem ursprünglichen Wert fortzufahren. Weitere Informationen finden Sie unter [Verwenden der DQS-Rechtschreibprüfung](../data-quality-services/use-the-dqs-speller.md) und [Domain-Eigenschaften festlegen](../data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Um die Rechtschreibprüfung zu verwenden, können Sie diese auf der Seite **Domäneneigenschaften** aktivieren. Wenn sie auf der Seite **Domäneneigenschaften** deaktiviert ist, können Sie auf das Symbol **Rechtschreibprüfung aktivieren/deaktivieren** auf der Seite **Begriffsbasierte Beziehungen** klicken, um sie auf dieser Seite zu aktivieren.  
@@ -102,7 +101,7 @@ ms.locfileid: "67992249"
   
 7.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen von begriffsbasierten Beziehungen  
+##  <a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen von Begriffs basierten Beziehungen  
  Nachdem Sie die begriffsbasierten Beziehungen erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
   

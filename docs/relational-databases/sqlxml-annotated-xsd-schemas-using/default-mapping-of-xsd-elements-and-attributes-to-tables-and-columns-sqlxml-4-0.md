@@ -1,6 +1,5 @@
 ---
-title: Standard-Mapping-XSD-Elemente-Attribute für Tabellen-Spalten (SQLXML 4.0) | Microsoft-Dokumentation
-ms.custom: ''
+title: XSD-Standard Zuordnung zu Tabellen/Spalten (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,23 +25,24 @@ ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74823924864d15324b6e4f2183609fa6e761d6f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a1c2ec82a539eb509950580ddea0b8164167bb1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067183"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257453"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Standardzuordnung von XSD-Elementen und -Attributen zu Tabellen und Spalten (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Standardmäßig wird ein Element des komplexen Typs in einem mit Anmerkungen versehenen XSD-Schema der Tabelle (Sicht) mit dem gleichen Namen in der angegebenen Datenbank zugeordnet, und ein Element oder Attribut des einfachen Typs wird der Spalte mit demselben Namen in der Tabelle zugeordnet.  
   
 ## <a name="examples"></a>Beispiele  
- Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>A. Angeben der Standardzuordnung  
- In diesem Beispiel werden keine Anmerkungen im XSD-Schema angegeben. Die  **\<Person.Contact >** -Element komplexen Typs ist, und wird daher standardmäßig der Person.Contact-Tabelle in der Datenbank AdventureWorks zugeordnet. Alle Attribute (ContactID, FirstName und LastName) des der  **\<Person.Contact >** -Elements sind von einem einfachen Typ und werden standardmäßig Spalten mit den gleichen Namen in der Person.Contact-Tabelle.  
+ In diesem Beispiel werden keine Anmerkungen im XSD-Schema angegeben. Das ** \<Person. Contact->** Element weist einen komplexen Typ auf und wird daher standardmäßig der Person. Contact-Tabelle in der AdventureWorks-Datenbank zugeordnet. Alle Attribute (ContactID, FirstName, LastName) der ** \<Person. Contact->** Element sind von einfachem Typ und werden standardmäßig Spalten mit denselben Namen in der Person. Contact-Tabelle zugeordnet.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -57,7 +57,7 @@ ms.locfileid: "68067183"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
 1.  Kopieren Sie den oben stehenden Schemacode, und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen MySchema.xml.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68067183"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teil des Resultsets aufgeführt:  
   
@@ -92,8 +92,8 @@ ms.locfileid: "68067183"
 </ROOT>  
 ```  
   
-### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Zuordnen eines XML-Elements zu einer Datenbankspalte  
- In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Die  **\<Person.Contact >** -Element komplexen Typs ist und wird in der Tabelle mit dem gleichen Namen in der Datenbank. Die Elemente  **\<FirstName >** und  **\<"LastName" >** und **EmployeeID** Attribut sind vom einfachen Typ und werden daher die Spalten mit den gleichen Namen. Der einzige Unterschied zwischen diesem und dem vorherigen Beispiel besteht darin, dass für die Zuordnung der Felder FirstName und LastName Elemente verwendet werden.  
+### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B: Zuordnen eines XML-Elements zu einer Datenbankspalte  
+ In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Das ** \<Person. Contact->** Element weist einen komplexen Typ auf und wird der Tabelle mit demselben Namen in der Datenbank zugeordnet. Die Elemente ** \<FirstName>** und ** \<LastName>** und das Mitarbeiter-ID **-Attribut sind** vom einfachen Typ und werden daher den gleichnamigen Spalten zugeordnet. Der einzige Unterschied zwischen diesem und dem vorherigen Beispiel besteht darin, dass für die Zuordnung der Felder FirstName und LastName Elemente verwendet werden.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -110,7 +110,7 @@ ms.locfileid: "68067183"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
 1.  Kopieren Sie den oben stehenden Schemacode, und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen MySchemaElements.xml.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "68067183"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teil des Resultsets aufgeführt:  
   
@@ -146,8 +146,8 @@ ms.locfileid: "68067183"
 </ROOT>  
 ```  
   
-### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Zuordnen eines XML-Elements zu einer XML-Datentypspalte  
- In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Die  **\<Production.ProductModel >** -Element komplexen Typs ist und wird in der Tabelle mit dem gleichen Namen in der Datenbank. Die **ProductModelID** -Attribut von einem einfachen Typ ist, und daher auf die Spalten mit demselben Namen zugeordnet. Der einzige Unterschied zwischen diesem und den vorherigen Beispielen ist, die die  **\<Anweisungen >** -Element zugeordnet ist, auf eine Spalte, die verwendet die **Xml** Datentyp mithilfe der **Xsd: AnyType** Typ.  
+### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>c. Zuordnen eines XML-Elements zu einer XML-Datentypspalte  
+ In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Das ** \<Production. ProductModel->** Element weist einen komplexen Typ auf und wird der Tabelle mit demselben Namen in der Datenbank zugeordnet. Das **ProductModelID** -Attribut ist vom einfachen Typ und wird daher den gleichnamigen Spalten zugeordnet. Der einzige Unterschied zwischen diesem und den vorherigen Beispielen besteht darin, dass die ** \<Anweisungen>** -Element einer Spalte entspricht, die den **XML** -Datentyp mit dem **xsd: anyType** -Typ verwendet.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -163,9 +163,9 @@ ms.locfileid: "68067183"
 </xsd:schema>  
 ```  
   
- Die **Xml** -Datentyp wurde in eingeführt [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ Der **XML** -Datentyp wurde in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]eingeführt.  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
 1.  Kopieren Sie den oben stehenden Schemacode, und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen MySchemaXmlAnyElements.xml.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "68067183"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teil des Resultsets aufgeführt:  
   
@@ -205,9 +205,9 @@ ctions">
 </ROOT>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Überlegungen zur Sicherheit von Schemas versehen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Überlegungen zur Schema Sicherheit mit Anmerkungen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [SQL Server der XML-Daten &#40;&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [XML-Datentypunterstützung für SQLXML 4.0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: Data Quality-Projekte (DQS) | Microsoft-Dokumentation
-ms.custom: ''
+title: Data Quality-Projekte (DQS)
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: ba706c62aff34dca72db032fdb09a0d8f5dea4f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992222"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251710"
 ---
 # <a name="data-quality-projects-dqs"></a>Data Quality-Projekte (DQS)
 
@@ -31,7 +30,7 @@ ms.locfileid: "67992222"
   
 -   Stellt einen Assistenten bereit, um Sie durch die Bereinigungs- und Abgleichsaktivitäten zu führen und exportiert die Daten gemäß Ihrer Auswahl in eine SQL Server-Datenbank oder eine CSV-Datei. Der Data Steward kann das Data Quality-Projekt verwenden, um die computergestützten/interaktiven Schritte zum Bereinigen und Abgleichen von Daten auszuführen.  
   
-##  <a name="Cleansing"></a> Data Quality-Projekt: Bereinigung  
+##  <a name="Cleansing"></a>Data Quality-Projekt: Bereinigungs Aktivität  
  Data Quality-Projekte ermöglichen es Ihnen, die Quelldaten basierend auf einer Wissensdatenbank zu bereinigen. Die Datenbereinigungsaktivität in DQS ist ein zwei Schritte umfassender Prozess:  
   
 1.  In einem *computergestützten* Datenbereinigungsprozess werden Quelldaten im Hinblick auf das Wissen in der Wissensdatenbank analysiert und Änderungen vorgeschlagen. Die verarbeiteten Daten werden von DQS kategorisiert (vorgeschlagen, neu, ungültig und richtig) und werden dem Benutzer zur weiteren Verarbeitung angezeigt.  
@@ -40,8 +39,8 @@ ms.locfileid: "67992222"
   
  Ausführliche Informationen zur Bereinigungsaktivität in einem Data Quality-Projekt finden Sie unter [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
-##  <a name="Matching"></a> Data Quality-Projekt: Abgleich  
- Ein Data Quality-Abgleichsprojekt ermöglicht es Ihnen, Abgleichsaktivitäten auf Grundlage der Abgleichsrichtlinie in einer Wissensdatenbank auszuführen, um Datenduplizierung durch das Identifizieren exakter und ungefährer Treffer zu verhindern und dadurch das Entfernen doppelter Daten zu ermöglichen. Es wird empfohlen, dass Sie die Daten bereinigen, bevor Sie entsprechende Abgleiche ausführen. Gehen Sie hierzu wie folgt vor:  
+##  <a name="Matching"></a>Data Quality-Projekt: abgleichsaktivität  
+ Ein Data Quality-Abgleichsprojekt ermöglicht es Ihnen, Abgleichsaktivitäten auf Grundlage der Abgleichsrichtlinie in einer Wissensdatenbank auszuführen, um Datenduplizierung durch das Identifizieren exakter und ungefährer Treffer zu verhindern und dadurch das Entfernen doppelter Daten zu ermöglichen. Es wird empfohlen, dass Sie die Daten bereinigen, bevor Sie entsprechende Abgleiche ausführen. Gehen Sie dazu wie folgt vor:  
   
 1.  Erstellen Sie ein Data Quality-Projekt, wählen Sie die **Bereinigungsaktivität** aus, schließen Sie die Datenbereinigungsaktivität für die Quelldaten ab, und exportieren Sie sie dann in eine Tabelle in einer SQL Server-Datenbank.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "67992222"
   
  Ausführliche Informationen zur Abgleichsaktivität in einem Data Quality-Projekt finden Sie unter [Data Matching](../data-quality-services/data-matching.md).  
   
-##  <a name="ProfilingNotification"></a> Datenprofilerstellung und Benachrichtigungen  
+##  <a name="ProfilingNotification"></a>Datenprofil Erstellung und Benachrichtigungen  
  Beim Ausführen der Bereinigungs- und Abgleichsaktivitäten in einem Data Quality-Projekt werden Ihnen Statistiken und Informationen über die von DQS verarbeiteten Daten in Echtzeit angezeigt. Mithilfe der Datenprofilerstellung können Sie die Effektivität der Bereinigungs- und Abgleichsprozesse bewerten und potenziell bestimmen, inwiefern die Datenbereinigung oder der -abgleich dabei behilflich waren, die Datenqualität zu verbessern. DQS-Profilerstellung stellt zwei Data Quality-Dimensionen bereit: *Vollständigkeit* (das Ausmaß des Vorhandenseins von Daten) und *Genauigkeit* (das Ausmaß, in dem Daten für den beabsichtigten Zweck verwendet werden können). Außerdem werden auf Grundlage der Datenprofilinformationen dem Benutzer Benachrichtigungen zu den Aktionen angezeigt, die ausgeführt werden können, um die Datenbereinigungs- und Datenabgleichsvorgänge zu verbessern. Weitere Informationen zur Datenprofilerstellung und zu Benachrichtigungen finden Sie unter [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
@@ -59,10 +58,10 @@ ms.locfileid: "67992222"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt, wie ein Data Quality-Projekt erstellt wird.|[Erstellen eines Data Quality-Projekts](../data-quality-services/create-a-data-quality-project.md)|  
-|Beschreibt, wie ein Data Quality-Projekt geöffnet, entsperrt, umbenannt oder gelöscht wird.|[Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts](open-unlock-rename-and-delete-a-data-quality-project.md)|  
-|Beschreibt, wie ein Integration Services-Projekt in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]geöffnet wird.|[Öffnen von Integration Services-Projekten im Data Quality-Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
+|Beschreibt, wie ein Data Quality-Projekt geöffnet, entsperrt, umbenannt oder gelöscht wird.|[Öffnen, entsperren, umbenennen und Löschen eines Data Quality-Projekts](open-unlock-rename-and-delete-a-data-quality-project.md)|  
+|Beschreibt, wie ein Integration Services-Projekt in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]geöffnet wird.|[Öffnen Sie Integration Services Projekte in Data Quality-Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [DQS-Wissensdatenbanken und -Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [DQS-Wissensdatenbanken und-Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

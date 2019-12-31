@@ -1,6 +1,5 @@
 ---
-title: Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS | Microsoft-Dokumentation
-ms.custom: ''
+title: Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,14 +11,14 @@ helpviewer_keywords:
 - notifications,enable
 - notifications,disable
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 55a276a6ade36169df25e46f826420f77d57b13f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d5d58777c4fe358f8536cc07b4eb1067487ab588
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935306"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251631"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS
 
@@ -27,16 +26,16 @@ ms.locfileid: "67935306"
 
   In diesem Thema wird beschrieben, wie Profilerstellungsbenachrichtigungen in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) aktiviert und deaktiviert werden. Standardmäßig sind Profilerstellungsbenachrichtigungen in DQS aktiviert. Profilerstellungsbenachrichtigungen liefern Ihnen wichtige Fakten zur Datenquelle und der Effektivität der aktuellen Aktivität, die für die Daten ausgeführt wird. Weitere Informationen finden Sie unter [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
  Sie müssen die Rolle „dqs_administrator“ der DQS_MAIN-Datenbank haben, um Benachrichtigungen zu aktivieren.  
   
-##  <a name="Enable"></a> Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen  
+##  <a name="Enable"></a>Aktivieren oder Deaktivieren von Profil Erstellungs Benachrichtigungen  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Konfiguration**.  
   

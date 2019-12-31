@@ -1,6 +1,5 @@
 ---
-title: 'Domänenverwaltung: Domänenliste | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Domänenverwaltung: Domänenliste'
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: bc5c1c283055655b84a70ec040861fce7fcca182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935331"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251653"
 ---
 # <a name="domain-management-domain-list"></a>Domänenverwaltung: Domänenliste
 
@@ -28,10 +27,10 @@ ms.locfileid: "67935331"
 ## <a name="options"></a>Optionen  
   
 ### <a name="domains-list"></a>Domänenliste  
- **Domäne**  
+ **Domain**  
  Diese Liste enthält alle Domänen in der Wissensdatenbank. Vorgänge, die Sie auf den Seiten im Registerkartenformat im rechten Bereich ausführen, werden auf die in der Liste ausgewählte Domäne angewendet. Weitere Informationen finden Sie unter  
   
- **Erstellen einer Verbunddomäne**  
+ **Erstellen einer Verbund Domäne**  
  Erstellen Sie eine neue Verbunddomäne in der Wissensdatenbank. Durch diesen Befehl wird das Dialogfeld **Verbunddomäne erstellen** angezeigt. Sie rufen den Befehl auf, indem Sie mit der rechten Maustaste auf eine Domäne klicken oder indem Sie auf das Symbol oberhalb der Domänenliste klicken. Weitere Informationen finden Sie unter [Erstellen einer Verbunddomäne](../data-quality-services/create-a-composite-domain.md).  
   
  **Erstellen einer Domäne**  

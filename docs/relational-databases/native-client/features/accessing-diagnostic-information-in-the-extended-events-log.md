@@ -1,5 +1,5 @@
 ---
-title: Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse | Microsoft-Dokumentation
+title: Diagnoseinformationen im Protokoll für erweiterte Ereignisse
 ms.date: 03/14/2017
 ms.reviewer: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15891abf565a6b0c30c7e5b0cf2b3355ff831bc4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 3f8840d746dec7dbcc4fc87d827a85cbe9c3af65
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788383"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258727"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,8 @@ ms.locfileid: "73788383"
   
  Wenn Sie ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwenden und eine Verbindung erfolgreich ist, können Sie die Clientverbindungs-ID mithilfe des **SQL_COPT_SS_CLIENT_CONNECTION_ID** -Attributs mit [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client sendet auch eine Thread-spezifische Aktivitäts-ID. Die Aktivitäts-ID wird in den Sitzungen für erweiterte Ereignisse aufgezeichnet, wenn die Sitzungen bei aktivierter TRACK_CAUSAILITY-Option gestartet werden. Bei Leistungsproblemen mit einer aktiven Verbindung können Sie die Aktivitäts-ID aus der Datenzugriffs-Ablaufverfolgung des Clients abrufen (**ActivityID** -Feld) und dann die Aktivitäts-ID in der Ausgabe für die erweiterten Ereignisse suchen. Die Aktivitäts-ID in den erweiterten Ereignissen ist eine 16-Byte-GUID (nicht dieselbe wie die GUID für die Clientverbindungs-ID), der eine Vier-Byte-Sequenznummer angefügt wurde. Die Sequenznummer steht für die Reihenfolge einer Anforderung innerhalb eines Threads und gibt die relative Reihenfolge des Batches und der RPC-Anweisungen für den Thread an. Der **ActivityID** wird optional für SQL-Batchanweisungen und RPC-Anforderungen gesendet, wenn die Datenzugriffsablaufverfolgung aktiviert und das 18. Bit im Datenzugriffs-Ablaufverfolgungs-Konfigurationswort auf ON gestellt wird.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client sendet auch eine Thread-spezifische Aktivitäts-ID. Die Aktivitäts-ID wird in den Sitzungen für erweiterte Ereignisse aufgezeichnet, wenn die Sitzungen bei aktivierter TRACK_CAUSAILITY-Option gestartet werden. Bei Leistungsproblemen mit einer aktiven Verbindung können Sie die Aktivitäts-ID aus der Datenzugriffs-Ablaufverfolgung des Clients abrufen (**ActivityID** -Feld) und dann die Aktivitäts-ID in der Ausgabe für die erweiterten Ereignisse suchen. Die Aktivitäts-ID in den erweiterten Ereignissen ist eine 16-Byte-GUID (nicht dieselbe wie die GUID für die Clientverbindungs-ID), der eine Vier-Byte-Sequenznummer angefügt wurde. Die Sequenznummer steht für die Reihenfolge einer Anforderung innerhalb eines Threads und gibt die relative Reihenfolge des Batches und der RPC-Anweisungen für den Thread an. Der **ActivityID** wird optional für SQL-Batchanweisungen und RPC-Anforderungen gesendet, wenn die Datenzugriffsablaufverfolgung aktiviert und das 18. Bit im Datenzugriffs-Ablaufverfolgungs-Konfigurationswort auf ON gestellt wird.  
   
  Im folgenden Beispiel wird [!INCLUDE[tsql](../../../includes/tsql-md.md)] zum Starten einer Sitzung für erweiterte Ereignisse verwendet, die in einem Ringpuffer gespeichert werden und die von einem Client in RPC- und Batch-Vorgängen gesendete Aktivitäts-ID aufzeichnen.  
   
@@ -212,7 +213,7 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
 };  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Behandlung von Fehlern und Meldungen](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Behandeln von Fehlern und Meldungen](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

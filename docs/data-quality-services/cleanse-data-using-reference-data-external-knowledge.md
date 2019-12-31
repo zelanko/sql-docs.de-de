@@ -1,6 +1,5 @@
 ---
-title: Bereinigen von Daten mit Wissen über (externe )Verweisdaten | Microsoft-Dokumentation
-ms.custom: ''
+title: Bereinigen von Daten mit (externem) Verweisdaten-Wissen
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 76bb6ec47b0cfce0fb8e5f5e98f9e208f3b678b3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 30ef5c06ff9b528eaa46127f1c98b0f430a71f7d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152733"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255673"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Bereinigen von Daten mit (externem) Verweisdaten-Wissen
 
@@ -30,7 +29,7 @@ ms.locfileid: "70152733"
   
 -   Vorgeschlagene Korrektur  
   
--   Vertrauen  
+-   Confidence  
   
 -   Zusätzliche Informationen über die zugeordnete Domäne. Verweisdaten können auch standardisieren, analysieren oder die Quelle mit weiteren Daten bereichern. Diese Informationen werden in weiteren Feldern in der Antwort bereitgestellt.  
   
@@ -41,26 +40,26 @@ ms.locfileid: "70152733"
     > [!NOTE]  
     >  Die Schwellenwerte, die Sie während der Zuordnung einer Domäne zu einem Verweisdatendienst festlegen, werden während des Bereinigens von Daten mithilfe des Wissens im Verweisdatendienst und nicht mithilfe der Werte, die auf der Registerkarte **Allgemeine Einstellungen** im Abschnitt **Konfiguration** festgelegt wurden, angewendet. Informationen zum Angeben von Schwellenwerten für die Verweisdatenbereinigung finden Sie in Schritt 9 in [Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
--   Domänenwerte werden in folgende Kategorien unterteilt: **Vorgeschlagen**, **Neu**, **Ungültig**, **Korrigiert** und **Richtig**.  
+-   Domänenwerte werden folgendermaßen kategorisiert: **Vorgeschlagen**, **Neu**, **Ungültig**, **Korrigiert** und **Richtig**.  
   
 -   Weitere Daten werden an die Quelle angefügt, und die Informationen stehen zusammen mit den bereinigten Daten zum Exportieren zur Verfügung.  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Voraussetzungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a>Voraussetzung  
  Sie müssen dem entsprechenden Verweisdatendienst erforderliche Domänen in einer DQS-Wissensdatenbank zugeordnet haben. Darüber hinaus muss die Wissensdatenbank Wissen zum Typ von Daten enthalten, die Sie bereinigen möchten. Wenn Sie z.B. die Quelldaten bereinigen, die US-Adressen enthalten, müssen Sie die Domänen einem Verweisdaten-Dienstanbieter zuordnen, der hochwertige Daten für US-Adressen bereitstellt. Weitere Informationen finden Sie unter [Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
  Sie müssen über die Rolle "dqs_kb_editor" oder "dqs_kb_operator" für die Datenbank DQS_MAIN verfügen, um eine Datenbereinigung auszuführen.  
   
-##  <a name="Cleanse"></a> Bereinigen der Daten mit Verweisdaten-Wissen  
+##  <a name="Cleanse"></a>Bereinigen von Daten mit Referenzdaten Kenntnissen  
  Wir werden das gleiche Beispiel für die Verwendung der Domänen verwenden, die wir im vorherigen Thema, [Anfügen einer Domäne oder Verbund Domäne an Verweis Daten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md), mit dem Melissa-Datendienst in Azure Marketplace. Jetzt verwenden wir die gleichen Domänen, um einige Beispiel-US-Adressen zu bereinigen. Die Schritte zum Bereinigen von Daten sind dieselben wie in [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) beschrieben. Wir lenken Ihre Aufmerksamkeit jedoch während des Prozesses an die nötigen Stellen.  
   
 1.  Erstellen Sie ein Datenqualitätsprojekt, und wählen Sie die Aktivität **Bereinigung** aus. Siehe [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
   
-2.  Ordnen Sie die folgenden vier Domänen den entsprechenden Spalten auf der Seite **Karte** in den Quelldaten zu: **Adresszeile**, **Ort**, **Bundesland** und **PLZ**. Klicken Sie auf **Weiter**.  
+2.  Ordnen Sie die folgenden 4 Domänen mit entsprechenden Spalten auf der Seite **Karte** in den Quelldaten zu: **Adresszeile**, **Ort**, **Bundesland**und **PLZ**. Klicken Sie auf **Weiter**.  
   
     > [!NOTE]  
     >  Nachdem Sie alle 4 Domänen innerhalb der Verbunddomäne **Adressüberprüfung** zugeordnet haben, wird die Datenbereinigung jetzt auf Verbunddomänenebene ausgeführt, und nicht auf einzelner Domänenebene.  
@@ -70,25 +69,25 @@ ms.locfileid: "70152733"
     > [!NOTE]  
     >  DQS zeigt auf der Seite **Bereinigen** die Informationen zu den Domänen an, die auf die folgenden zwei Weisen mit dem Verweisdatendienst verbunden sind:  
     >   
-    >  -   Unter der Schaltfläche **Start** wird eine Meldung angezeigt: „Domänen \<Domäne1>, \<Domäne2>,... \<DomäneN> werden mithilfe von Reference Data Service-Anbietern bereinigt.“ In diesem Beispiel wird die folgende Meldung angezeigt: „Domain Address Verification is cleansed using reference data service provider.“ (Domänenadressüberprüfung wird mithilfe des Reference Data Service-Anbieters bereinigt.)  
-    > -   Ein Symbol, ![Domäne ist an RDS angefügt](../data-quality-services/media/dqs-rdsindicator.JPG "Domain is attached to RDS"), wird im Bereich **Profiler** für die Domänen angezeigt, die mit dem Reference Data Service-Dienstanbieter verbunden sind. In diesem Beispiel wird das Symbol für die Verbunddomäne **Adressüberprüfung** angezeigt.  
+    >  -   Eine Meldung wird unter der Schaltfläche **Start** angezeigt: " \<Domains domain1> \<, Domäne2>,... \<Domainn-> werden mithilfe des Reference Data Service-Anbieters bereinigt. " In diesem Beispiel wird die folgende Meldung angezeigt: „Domain Address Verification is cleansed using reference data service provider“ (Domänenadressüberprüfung wird mithilfe von Verweisdaten-Dienstanbietern bereinigt).  
+    > -   Ein Symbol, die ![Domäne ist an RDS angefügt](../data-quality-services/media/dqs-rdsindicator.JPG "Domäne ist an RDS angefügt"), wird im Bereich **Profiler** für die Domänen angezeigt, die dem Reference Data Service-Anbieter zugeordnet sind. In diesem Beispiel wird das Symbol für die Verbunddomäne **Adressüberprüfung** angezeigt.  
   
 4.  Prüfen Sie auf der Seite **Ergebnisse verwalten und anzeigen** Ihre Domänenwerte. Der Verweisdatendienst kann ggf. mehr als einen Vorschlag für einen Wert anzeigen, je nach der maximalen Anzahl von Vorschlägen, die im Feld **Vorgeschlagene Kandidaten** während der Zuordnung der Domäne zum Verweisdatendienst angegeben sind. Zwei Vorschläge werden z. B. für die folgende US-Adresse angezeigt:  
   
      **Ursprünglicher Wert:**  
   
-    |Adresszeile|Ort|Bundesland|PLZ|  
+    |Adresszeile|City (Ort)|State|Zip|  
     |------------------|----------|-----------|---------|  
     |1 msft way|Redmond||98052|  
   
      **Vorgeschlagene Werte:**  
   
-    |Adresszeile|Ort|Bundesland|PLZ|  
+    |Adresszeile|City (Ort)|State|Zip|  
     |------------------|----------|-----------|---------|  
     |1 Microsoft Way|Redmond|WA|98052|  
     |Postfach 1|Redmond|WA|98073|  
   
-     ![Bereinigen mit Reference Data Service](../data-quality-services/media/dqs-rdscleansing.JPG "Cleansing using reference data service")  
+     ![Bereinigen mit Verweisdatendienst](../data-quality-services/media/dqs-rdscleansing.JPG "Bereinigen mit Verweisdatendienst")  
   
     > [!NOTE]  
     >  Für Verbunddomänen hebt DQS auch die einzelnen Domänen in einer anderen Farbe hervor, die während des computergestützten Bereinigungsprozesses korrigiert wurden. In diesem Fall wurden die Domänen **Adresszeile** und **Status** z. B. korrigiert und deshalb in Cyanblau hervorgehoben.  

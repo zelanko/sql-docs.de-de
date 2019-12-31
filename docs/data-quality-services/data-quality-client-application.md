@@ -1,6 +1,5 @@
 ---
-title: Data Quality-Clientanwendung | Microsoft-Dokumentation
-ms.custom: ''
+title: Data Quality-Clientanwendung
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: b63c81595cc25820a537a931dafe1e489a49b59f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992229"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251735"
 ---
 # <a name="data-quality-client-application"></a>Data Quality-Clientanwendung
 
@@ -32,18 +31,18 @@ ms.locfileid: "67992229"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt die Verwendung der [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Anwendung.|[Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md)|  
+|Beschreibt die Verwendung der [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Anwendung.|[Ausführen der Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
 |Inhaltsbeschreibung|Thema|  
 |-------------------------|-----------|  
-|Beschreibt die Verwendung von Wissensdatenbanken und Domänen in DQS.|[DQS-Wissensdatenbanken und -Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
+|Beschreibt die Verwendung von Wissensdatenbanken und Domänen in DQS.|[DQS-Wissensdatenbanken und-Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
 |Beschreibt die Bereinigung Ihrer Daten in DQS.|[Datenbereinigung](../data-quality-services/data-cleansing.md)|  
 |Beschreibt das Ausführen des Abgleichs in DQS.|[Datenabgleich](../data-quality-services/data-matching.md)|  
 |Beschreibt die Verwaltung von DQS.|[DQS-Verwaltung](../data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Startbildschirm des Data Quality-Clients](../data-quality-services/data-quality-client-home-screen.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Quality-Client-Startbildschirm](../data-quality-services/data-quality-client-home-screen.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: XSL-Zwischenspeichern (SQLXML 4.0) | Microsoft-Dokumentation
-ms.custom: ''
+title: XSL-Caching (SQLXML)
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46c11054b4f3681a6bd0184ff77c2353b2201f57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 265ce1db6f57f378dfaa7c0818914edd121b7d30
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093234"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257333"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>XSL-Zwischenspeichern (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\XSLCacheSize
   
  Jedes Mal, wenn das zwischengespeicherte XSL-Stylesheet verwendet wird, wird die Änderungszeit der XSL-Datei überprüft, um festzustellen, ob sie aktualisiert werden muss. Das liegt daran, dass die Datenträgerkopie neuer als die Cachekopie ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Zwischenspeichern von Vorlagen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
- [Das Zwischenspeichern von Schemas &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Zwischenspeichern von Vorlagen &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
+ [Schema Caching &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)  
   
   

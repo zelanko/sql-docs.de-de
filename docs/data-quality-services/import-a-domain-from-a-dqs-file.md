@@ -1,6 +1,5 @@
 ---
-title: Importieren einer Domäne aus einer DQS-Datei | Microsoft-Dokumentation
-ms.custom: ''
+title: Importieren einer Domäne aus einer DQS-Datei
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 73d733cd120e7ce991e092328d1a84a219472c6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992061"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251587"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importieren einer Domäne aus einer DQS-Datei
 
@@ -27,19 +26,19 @@ ms.locfileid: "67992061"
   
  Wenn Sie eine Domäne importieren, bleibt der Name der Domäne mit dem Namen der ursprünglich exportierten Domäne identisch, es sei denn, der Domänenname ist bereits vorhanden. In diesem Fall fügt DQS „_1“ an den Namen an. Dies gilt auch, wenn Sie eine Verbunddomäne importieren, die eine Einzeldomäne mit dem gleichen Namen wie eine vorhandene Domäne enthält.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a>Voraussetzung  
  Um eine Domäne aus einer DQS-Datei zu importieren, müssen Sie bereits eine Einzeldomäne oder eine Verbunddomäne (mit mehreren Einzeldomänen) in die DQS-Datei exportiert haben. Die DQS-Datei darf nur eine Domäne enthalten. Sie müssen auch eine Wissensdatenbank erstellt und geöffnet haben, in die die Domäne importiert werden soll.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um eine Domäne aus einer DQS-Datei zu importieren.  
   
-##  <a name="Import"></a> Import a domain from a .dqs file  
+##  <a name="Import"></a>Importieren einer Domäne aus einer DQS-Datei  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Öffnen Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm in der Domänenverwaltungsaktivität eine Wissensdatenbank.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "67992061"
   
 6.  Überprüfen Sie, ob die Domäne, die Sie importiert haben, in der Liste **Domäne** angezeigt wird. Wenn Sie eine Verbunddomäne importiert haben, überprüfen Sie, ob die Verbunddomäne und die Einzeldomänen, die darin enthalten sind, alle in der Liste **Domäne** aufgeführt werden.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Importieren einer Domäne aus einer DQS-Datei  
+##  <a name="FollowUp"></a>Nachverfolgung: nach dem Importieren einer Domäne aus einer DQS-Datei  
  Nachdem Sie eine Domäne aus einer DQS-Datei importiert haben, können Sie der Domäne Wissen hinzufügen oder die Domäne in einem Bereinigungs- oder Abgleichsprojekt verwenden - je nach den Inhalten der Domäne. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md), [Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md), [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md), [Datenbereinigung](../data-quality-services/data-cleansing.md) oder [Datenabgleich](../data-quality-services/data-matching.md).  
   
   

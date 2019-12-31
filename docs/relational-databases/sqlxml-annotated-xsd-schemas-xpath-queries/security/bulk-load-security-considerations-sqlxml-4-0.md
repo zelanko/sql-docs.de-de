@@ -1,6 +1,5 @@
 ---
-title: Massenimport von Sicherheitsüberlegungen (SQLXML 4.0) | Microsoft-Dokumentation
-ms.custom: ''
+title: Sicherheitsüberlegungen zum Massen laden (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0087a8846935905574a8666186de5e025a16494e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817c8c4d0ff2a140033e99879c0720a63f81e5f4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027000"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252528"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Sicherheitsüberlegungen zum Massenladen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Im Folgenden finden Sie Sicherheitsrichtlinien zur Verwendung zum XML-Massenladen:  
   
--   Wenn Sie angeben, dass der Massenladevorgang als Transaktion ausgeführt werden, Sie verwenden die **TempFilePath** -Eigenschaft an einen Ordner, in dem die temporären Dateien erstellt.  
+-   Wenn Sie angeben, dass der Massen Ladevorgang als Transaktion ausgeführt werden soll, geben Sie mit der **TempFilePath** -Eigenschaft einen Ordner an, in dem die temporären Dateien erstellt werden sollen.  
   
      Während des Massenladevorgangs werden diese temporären Dateien mit den folgenden Berechtigungen erstellt:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68027000"
   
 -   Wenn der Benutzer eine Fehlerprotokolldatei festlegt, in die SQLXML Fehler ausgeben soll, dann wird diese Datei bei jeder Ausführung des Massenladevorgangs mit den Daten aus dem letzten Massenladeprozess überschrieben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Massenladen von XML-Daten &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: DQS-Wissensdatenbanken und -Domänen | Microsoft-Dokumentation
-ms.custom: ''
+title: DQS-Wissensdatenbanken und -Domänen
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: d0eb69992a6a22a86eae3038a405eb2dd77bcfc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935316"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251648"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS-Wissensdatenbanken und -Domänen
 
@@ -39,24 +38,24 @@ ms.locfileid: "67935316"
   
  Die folgende Abbildung zeigt verschiedene Komponenten in einer Wissensdatenbank und einer Domäne in DQS an:  
   
- ![Wissensdatenbank und Domänen in DQS](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "Knowledge Base and Domains in DQS")  
+ ![Wissensdatenbank und Domänen in DQS](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "Wissensdatenbank und Domänen in DQS")  
   
-##  <a name="How"></a> Vorgehensweise: Erstellen und Aufbauen einer DQS-Wissensdatenbank  
+##  <a name="How"></a>Erstellen und Erstellen einer DQS-Wissensdatenbank  
  Das Aufbauen einer DQS-Wissensdatenbank schließt die folgenden Prozesse und Komponenten ein:  
   
- **Wissensermittlung**  
+ **Wissens Ermittlung**  
  Ein computerunterstützter Prozess, durch den Informationen durch das Verarbeiten von Beispieldaten in der Wissensdatenbank erstellt werden  
   
- **Domänenverwaltung**  
+ **Domänen Verwaltung**  
  Ein interaktiver Prozess, womit der Data Steward die Informationen überprüfen und ändern kann, die sich in den Wissensdatenbank-Domänen befinden, wovon jede mit einem Datenfeld verknüpft ist. Dies kann das Festlegen von feldweiten Eigenschaften, das Erstellen von Regeln, das Ändern bestimmter Werte, das Verwenden von Verweisdatendiensten oder das Einrichten von ausdrucksbasierten Beziehungen oder Beziehungen über mehrere Felder hinweg einschließen.  
   
  **Reference Data Services**  
  Ein Prozess zur Domänenverwaltung, mit dem Sie Ihre Daten mit den vom Verweisdatenanbieter gewarteten und garantierten Daten überprüfen können.  
   
- **Übereinstimmende Richtlinie**  
+ **Abgleichsrichtlinie**  
  Eine Richtlinie, die für einen computerunterstützten und interaktiven Prozess in die Wissensdatenbank integriert wurde, mit der definiert wird, wie DQS Datensätze verarbeitet, um potenzielle Duplikate und Nicht-Übereinstimmungen zu identifizieren.  
   
-##  <a name="Discovery"></a> Wissensermittlung  
+##  <a name="Discovery"></a>Wissens Ermittlung  
  Die Erstellung der Wissensdatenbank ist initial ein computergestützter Prozess. Die Wissensermittlungsaktivität baut die Wissensdatenbank durch das Analysieren eines Datenbeispiels gemäß den Kriterien auf, die für die Qualität der Daten gelten, indem eine Suche nach inkonsistenten Daten und Syntaxfehlern ausgeführt wird und Änderungen an den Daten vorgeschlagen werden. Diese Analyse basiert auf in DQS integrierten Algorithmen.  
   
  Der Data Steward bereitet den Prozess vor, indem er eine Wissensdatenbank mit einer SQL Server-Datenbanktabelle oder -sicht verknüpft, die Beispieldaten enthält, die den Daten ähneln, die mithilfe der Wissensdatenbank analysiert werden. Anschließend ordnet der Data Steward jeder Spalte mit zu analysierenden Beispieldaten eine Wissensdatenbank-Domäne zu. Eine Domäne kann entweder eine einzelne Domäne sein, die einem einzelnen Feld zugeordnet ist, oder sie kann eine Verbunddomäne sein, die aus mehreren einzelnen Domänen besteht, wovon jede einem Teil der Daten in einem einzelnen Feld zugeordnet ist (siehe unten „Verbunddomänen“). Bei der Durchführung der Wissensermittlung extrahiert DQS Informationen bezüglich der Datenqualität aus den Beispieldaten in die Domänen in der Wissensdatenbank. Wenn Sie die Wissensermittlungsanalyse ausgeführt haben, verfügen Sie über eine Wissensdatenbank, mit der Sie Datenkorrektur ausführen können.  
@@ -70,7 +69,7 @@ ms.locfileid: "67935316"
   
  Sie können jedoch die Groß-/Kleinschreibung der Werte steuern, die Sie in Bereinigungsergebnissen exportieren. Dies ist möglich, indem Sie die Domäneneigenschaft **Formatausgabe** (siehe [Festlegen von Domäneneigenschaften](../data-quality-services/set-domain-properties.md)) festlegen und das Kontrollkästchen **Ausgabe standardisieren** aktivieren, wenn Sie Bereinigungsergebnisse exportieren (siehe [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="Domains"></a> Domänenverwaltung  
+##  <a name="Domains"></a>Domänen Verwaltung  
  Die Domänenverwaltung ermöglicht es dem Data Steward, die Metadaten interaktiv zu ändern und zu verbessern, die von der computergestützten Wissensermittlungsaktivität generiert wurden. Jede von Ihnen vorgenommene Änderung ist für eine Wissensdatenbankdomäne. In der Domänenverwaltungsaktivität ist Folgendes möglich:  
   
 -   Erstellen Sie eine neue Domäne. Die neue Domäne kann mit einer vorhandenen Domäne verknüpft werden oder aus dieser kopiert werden.  
@@ -139,7 +138,7 @@ ms.locfileid: "67935316"
   
  Der Abgleich kann auf den einzelnen Domänen ausgeführt werden, aus der sich die Verbunddomäne zusammensetzt, jedoch nicht auf der Verbunddomäne selbst.  
   
-##  <a name="Matching"></a> Datenabgleich  
+##  <a name="Matching"></a>Datenabgleich  
  Zusätzlich zu den manuellen Änderungen an einer Wissensdatenbank, die mit der Domänenverwaltung vorgenommen werden können, können Sie der Wissensdatenbank Abgleichswissen hinzufügen. Um DQS auf den Datendeduplizierungsprozess vorzubereiten, müssen Sie eine Abgleichsrichtlinie erstellen, mit der DQS die Wahrscheinlichkeit einer Übereinstimmung berechnet. Die Richtlinie schließt eine oder mehrere Abgleichsregeln ein, die der Data Steward erstellt, um zu identifizieren, wie DQS Zeilen der Daten vergleichen sollte. Der Data Steward bestimmt, welche Datenfelder in der Zeile verglichen werden sollten und über welche Gewichtung jedes Feld beim Abgleich verfügen sollte. Der Data Steward bestimmt auch, wie hoch die Wahrscheinlichkeit sein sollte, um einen Treffer als Übereinstimmung anzusehen. DQS fügt der Wissensdatenbank Abgleichsregeln für die Verwendung beim Ausführen einer Abgleichsaktivität in einem Data Quality-Projekt hinzu.  
   
  Weitere Informationen zur Wissensdatenbank finden Sie unter [Datenabgleich](../data-quality-services/data-matching.md)verwalten.  
@@ -149,10 +148,10 @@ ms.locfileid: "67935316"
   
 |||  
 |-|-|  
-|Eine Wissensdatenbank erstellen, öffnen, ihr Informationen hinzufügen und auf ihr die Wissensermittlung ausführen|[Aufbau einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md)|  
+|Eine Wissensdatenbank erstellen, öffnen, ihr Informationen hinzufügen und auf ihr die Wissensermittlung ausführen|[Aufbauen einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md)|  
 |Import- und Exportvorgänge auf Domänen und Wissensdatenbanken ausführen|[Importieren und Exportieren von Wissen](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Einzelne Domänen, eine Domänenregel, ausdrucksbasierte Beziehungen erstellen und Domänenwerte ändern|[Verwalten einer Domäne](../data-quality-services/managing-a-domain.md)|  
-|Eine Verbunddomäne, eine domänenübergreifende Regel erstellen und Wertbeziehungen verwenden|[Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md)|  
+|Eine Verbunddomäne, eine domänenübergreifende Regel erstellen und Wertbeziehungen verwenden|[Verwalten einer Verbund Domäne](../data-quality-services/managing-a-composite-domain.md)|  
 |Die in DQS integrierte DQS-Wissensdatenbank verwenden|[Verwenden der DQS-Standard-Wissensdatenbank](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   

@@ -1,6 +1,7 @@
 ---
-title: MSmerge_generation_partition_mappings (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: MSmerge_generation_partition_mappings (T-SQL)
+description: Beschreibt die MSmerge_generation_partition_mappings gespeicherte Prozedur, die zum Nachverfolgen von Änderungen an Partitionen in einer Mergeveröffentlichung verwendet wird.
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,27 +18,27 @@ helpviewer_keywords:
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c5998348b599ceaad73790f581cde56763ab0ab7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43f4b3fac5f237904d0160ccfbde4b88f9a3616
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101371"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322109"
 ---
-# <a name="msmergegenerationpartitionmappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
+# <a name="msmerge_generation_partition_mappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_generation_partition_mappings** -Tabelle dient zum Nachverfolgen von Änderungen an Partitionen in einer Mergeveröffentlichung definiert. Diese Tabelle wird in der Veröffentlichungs- und der Abonnementdatenbank gespeichert.  
+  Die **MSmerge_generation_partition_mappings** Tabelle dient zum Nachverfolgen von Änderungen an Partitionen in einer Mergeveröffentlichung. Diese Tabelle wird in der Veröffentlichungs- und der Abonnementdatenbank gespeichert.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|Identifiziert die Mergeveröffentlichung|  
-|**generation**|**bigint**|Der Generierungswert.|  
-|**partition_id**|**int**|Identifiziert die Partition.|  
-|**"changecount"**|**int**|Die Anzahl der Änderungen der Partition.|  
+|**Stro**|**bigint**|Der Generierungswert.|  
+|**partition_id**|**wartenden**|Identifiziert die Partition.|  
+|**changecount**|**wartenden**|Die Anzahl der Änderungen der Partition.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: Explizite Zuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten | Microsoft-Dokumentation
-ms.custom: ''
+title: Benutzerdefinierte XSD-Zuordnungen zu Tabellen/Spalten (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -28,43 +27,44 @@ ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4edb639a56e195bf57d4b34f8c1d399e1218b72f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067122"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257431"
 ---
-# <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>Explizite Zuordnung von XSD-Elementen und -Attributen zu Tabellen und Spalten
+# <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Benutzerdefinierte XSD-Zuordnungen zu Tabellen/Spalten (SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Wenn ein XSD-Schema zur Bereitstellung einer XML-Sicht der relationalen Datenbank verwendet wird, müssen die Elemente und Attribute des Schemas den Tabellen und Spalten der Datenbank zugeordnet werden. Die Zeilen in der Datenbanktabelle/-sicht werden den Elementen im XML-Dokument zugeordnet. Die Spaltenwerte in der Datenbank werden Attributen oder Elementen zugeordnet.  
   
- Wenn Xpath-Abfragen für das mit Anmerkungen versehene XSD-Schema angegeben werden, werden die Daten für die Elemente und Attribute im Schema aus den Tabellen und Spalten abgerufen, denen sie zugeordnet sind. Um einen einzelnen Wert aus der Datenbank abrufen zu können, muss die im XSD-Schema angegebene Zuordnung sowohl über eine Beziehungs- als auch eine Feldangabe verfügen. Ist der Name eines Elements/Attributs nicht den gleichen Namen wie die Tabelle/Sicht oder Spalte, der sie zugeordnet, die **SQL: Relation** und **SQL: field** Anwendungen verwendet, um die Zuordnung zwischen einem Element angeben oder Das Attribut in einem XML-Dokument und die Tabelle (Sicht) oder die Spalte in einer Datenbank.  
+ Wenn Xpath-Abfragen für das mit Anmerkungen versehene XSD-Schema angegeben werden, werden die Daten für die Elemente und Attribute im Schema aus den Tabellen und Spalten abgerufen, denen sie zugeordnet sind. Um einen einzelnen Wert aus der Datenbank abrufen zu können, muss die im XSD-Schema angegebene Zuordnung sowohl über eine Beziehungs- als auch eine Feldangabe verfügen. Wenn der Name eines Elements/Attributs nicht mit dem Namen der Tabelle/Sicht oder des Spaltennamens übereinstimmt, dem er zugeordnet ist, werden die **SQL: Relation** -und **SQL: Field** -Anmerkungen verwendet, um die Zuordnung zwischen einem Element oder Attribut in einem XML-Dokument und der Tabelle (Sicht) oder Spalte in einer Datenbank anzugeben.  
   
 ## <a name="sql-relation"></a>sql-Beziehung  
- Die **SQL: Relation** -Anmerkung wird hinzugefügt, um eine XML-Knoten im XSD-Schema einer Datenbanktabelle zuzuordnen. Der Name einer Tabelle (Sicht) wird angegeben, als Wert für die **SQL: Relation** Anmerkung.  
+ Die **SQL: Relation** -Anmerkung wird hinzugefügt, um einen XML-Knoten im XSD-Schema einer Datenbanktabelle zuzuordnen. Der Name einer Tabelle (Sicht) wird als Wert der " **SQL: Relation** "-Anmerkung angegeben.  
   
- Wenn **SQL: Relation** ist für ein Element angegeben, gilt der Bereich dieser Anmerkung für alle Attribute und untergeordneten Elementen, die in der Definition des komplexen Typs dieses Elements, dadurch wird eine Verknüpfung in das Schreiben von beschrieben werden Anmerkungen.  
+ Wenn **SQL: Relation** für ein Element angegeben wird, gilt der Gültigkeitsbereich dieser Anmerkung für alle Attribute und untergeordneten Elemente, die in der komplexen Typdefinition dieses Elements beschrieben werden. Dadurch wird eine Verknüpfung zum Schreiben von Anmerkungen bereitgestellt.  
   
- Die **SQL: Relation** Anmerkung ist auch nützlich, wenn der Bezeichner, die in gültig sind [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind in XML nicht gültig. Zum Beispiel ist "Order Details" ein gültiger Tabellenname in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], jedoch nicht in XML. In solchen Fällen die **SQL: Relation** Anmerkung kann z. B. an der Zuordnung verwendet werden:  
+ Die **SQL: Relation** -Anmerkung ist auch nützlich, wenn Bezeichner, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gültig sind, in XML ungültig sind. Zum Beispiel ist "Order Details" ein gültiger Tabellenname in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], jedoch nicht in XML. In solchen Fällen kann die **SQL: Relation** -Anmerkung verwendet werden, um die Zuordnung anzugeben, z. b.:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
 ```  
   
 ## <a name="sql-field"></a>sql-Feld  
- Die **Sql-Feld** -Anmerkung ordnet ein Element oder Attribut einer Datenbankspalte. Die **SQL: field** -Anmerkung wird hinzugefügt, um einen XML-Knoten im Schema einer Datenbankspalte zuzuordnen. Sie können keine angeben **SQL: field** auf ein Element ohne Inhalt.  
+ Die **SQL-Field-** Anmerkung ordnet ein Element oder Attribut einer Daten Bank Spalte zu. Die **SQL: Field** -Anmerkung wird hinzugefügt, um einen XML-Knoten im Schema einer Daten Bank Spalte zuzuordnen. Sie können **SQL: Field** nicht für ein leeres Inhalts Element angeben.  
   
 ## <a name="examples"></a>Beispiele  
- Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Angeben der Anmerkungen sql:relation und sql:field  
- In diesem Beispiel ist das XSD-Schema besteht aus einem  **\<wenden Sie sich an >** -Element komplexen Typs mit  **\<FName >** und  **\<LName >** untergeordnete Elemente und die **ContactID** Attribut.  
+ In diesem Beispiel besteht das XSD-Schema aus einem ** \<Contact>** -Element des komplexen Typs ** \<** mit den untergeordneten Elementen ">" und ** \<"lname>** " und dem **ContactID** -Attribut.  
   
- Die **SQL: Relation** -Anmerkung ordnet das  **\<wenden Sie sich an >** -Element der Person.Contact-Tabelle in der AdventureWorks-Datenbank. Die **SQL: field** -Anmerkung ordnet das  **\<FName >** -Element der FirstName-Spalte und die  **\<LName >** Element, das "LastName" die Spalte.  
+ Die **SQL: Relation** -Anmerkung ordnet das ** \<Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zu. Die **SQL: Field** -Anmerkung ordnet das ** \<fname->** Element der FirstName-Spalte und das ** \<lname>** -Element der LastName-Spalte zu.  
   
- Wird keine Anmerkung angegeben, für die **ContactID** Attribut. Dies führt zu einer Standardzuordnung des Attributs zur Spalte mit dem gleichen Namen.  
+ Für das **ContactID** -Attribut wird keine Anmerkung angegeben. Dies führt zu einer Standardzuordnung des Attributs zur Spalte mit dem gleichen Namen.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -86,7 +86,7 @@ ms.locfileid: "68067122"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
 1.  Kopieren Sie den oben stehenden Schemacode, und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen MySchema-annotated.xml.  
   

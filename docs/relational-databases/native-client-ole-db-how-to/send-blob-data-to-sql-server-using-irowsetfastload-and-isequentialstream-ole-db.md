@@ -1,5 +1,5 @@
 ---
-title: Senden von BLOB-Daten an SQL Server mit IRowsetFastLoad und ISequentialStream | Microsoft-Dokumentation
+title: BLOB-Daten zu SQL, IRowsetFastLoad, ISequentialStream
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0044cb8f7c7568adc05e669ff288131fcc21b58d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 4142f121736abd897401529b02eaaa261832bfa2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73789837"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253390"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Senden von BLOB-Daten an SQL SERVER mit IROWSETFASTLOAD und ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73789837"
  Weitere Informationen finden Sie unter [BLOB-und OLE-Objekte](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ## <a name="example"></a>Beispiel  
  Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete Tabelle zu erstellen.  
@@ -45,12 +45,12 @@ ms.locfileid: "73789837"
   
  Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete Tabelle zu löschen.  
   
-```  
+```sql
 use master  
 create table fltest(col1 int, col2 int, col3 image)  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #include <windows.h>  
   
@@ -478,7 +478,7 @@ void wmain() {
 }  
 ```  
   
-```  
+```sql
 use master  
 drop table fltest  
 ```  

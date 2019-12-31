@@ -1,6 +1,6 @@
 ---
-title: Herstellen einer Verbindung zu einem registrierten Server (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Herstellen einer Verbindung zu einem registrierten Server
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], connections
 - connections [SQL Server], registered servers
 ms.assetid: e13f242e-33f4-4d8d-9b10-0652ef4d0156
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 789dc265513c4d0068c721e8cdefb07d7a3d5331
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: e1cd65cc97877ef7e59d44be40f53fc49f4a49ac
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297907"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257011"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>Herstellen einer Verbindung zu einem registrierten Server (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie eine Verbindung mit einem registrierten Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]herstellen. Wenn der Server nicht ausgeführt wird oder nicht im Netzwerk gefunden wird, zeigt Registrierte Server einen Fehler an.  

@@ -1,6 +1,5 @@
 ---
-title: "Filtern von Werten mit ' SQL: limit-field ' und ' SQL: limit-value ' (SQLXML 4,0) | Microsoft-Dokumentation"
-ms.custom: ''
+title: 'Filter mit "SQL: limit-field" und "SQL: limit-value" (SQLXML)'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906098"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257407"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtern von Werten mit 'sql:limit-field' und 'sql:limit-value' (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "72906098"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Beschränken von Ergebnissen anhand eines Rabattwerts vom Datentyp "real"  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B: Beschränken von Ergebnissen anhand eines Rabattwerts vom Datentyp "real"  
  In diesem Beispiel enthält eine Datenbank zwei Tabellen:  
   
 -   Orders (OrderID)  
@@ -306,10 +306,10 @@ ms.locfileid: "72906098"
     </root>  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar und nvarchar &#40;Transact-SQL&#41; ](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [float und Real &#40;Transact-SQL-&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar und nvarchar &#40;Transact-SQL-&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Verwenden von XSD-Schemas mit Anmerkungen in &#40;Abfragen SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Verwenden von XSD-Schemas mit Anmerkungen in Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

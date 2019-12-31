@@ -1,6 +1,5 @@
 ---
-title: Ausführen von Vorlagen, die XPath-Abfragen (SQLXMLOLEDB-Anbieter) enthalten. | Microsoft-Dokumentation
-ms.custom: ''
+title: Ausführen von Vorlagen, die XPath-Abfragen enthalten (SQLXMLOLEDB)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035d9c4cb94a52d964d26c2b6b94180eb7eefaff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2da1b575b2df79321c87cbd88542c1210c9310b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109603"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257291"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Ausführen von Vorlagen, die XPath-Abfragen enthalten (SQLXMLOLEDB-Anbieter)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "68109603"
   
 -   Zuordnungsschema  
   
- In dieser ADO-beispielanwendung wird eine XML-Vorlage, die aus einer XPath-Abfrage (Stamm) besteht angegeben ist, für die XSD-Zuordnungsschema (MySchema.xml), die in der beschriebenen [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
+ In dieser ADO-Beispielanwendung wird eine XML-Vorlage, die aus einer XPath-Abfrage (root) besteht, für das XSD-Zuordnungsschema (MySchema. Xml) angegeben, das unter [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)beschrieben wird.  
   
- Die Mapping-Schema-Eigenschaft stellt das XSD-Zuordnungsschema für das die XPath-Abfrage ausgeführt wird. Die Basis-Path-Eigenschaft stellt den Dateipfad zum Zuordnungsschema bereit.  
+ Die Mapping-Schema Eigenschaft stellt das XSD-Zuordnungsschema bereit, für das die XPath-Abfrage ausgeführt wird. Die Eigenschaft Basispfad stellt den Dateipfad zum Zuordnungsschema bereit.  
   
- ClientSideXML-Eigenschaft wird auf "true" festgelegt. Deshalb wird das XML-Dokument auf dem Client generiert.  
+ Die ClientSideXML-Eigenschaft ist auf true festgelegt. Deshalb wird das XML-Dokument auf dem Client generiert.  
   
  In der Anwendung wird eine XPath-Abfrage direkt angegeben. Daher muss der Dialekt {5d531cb2-e6ed-11d2-b252-00c04f681b71} eingeschlossen sein.  
   
 > [!NOTE]  
->  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter beschrieben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [Systemanforderungen für SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter beschrieben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [System Anforderungen für SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

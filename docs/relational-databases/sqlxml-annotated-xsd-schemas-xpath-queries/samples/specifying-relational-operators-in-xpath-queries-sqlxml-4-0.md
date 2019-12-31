@@ -1,6 +1,5 @@
 ---
-title: Angeben von relationalen Operatoren in XPath-Abfragen (SQLXML 4,0) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von relationalen Operatoren in XPath-Abfragen (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 180962ac5afae577625415d94cb9beda65f9537a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909438"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252551"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Angeben von relationalen Operatoren in XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In den folgenden Beispielen wird gezeigt, wie relationale Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispiel Schema finden Sie unter [Beispiel-XSD-Schema mit Anmerkungen für XPath-Beispiele &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  In den folgenden Beispielen wird gezeigt, wie relationale Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispiel Schema finden Sie unter [Beispiel: XSD-Schema mit Anmerkungen für XPath-Beispiele &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-specify-relational-operator"></a>A. Angeben relationaler Operatoren  
- Diese XPath-Abfrage gibt die untergeordneten Elemente des **\<Customer->** -Elements zurück, wobei der **CustomerID-** Attribut Wert "1" ist und alle untergeordneten **\<Reihen folgen >** Elemente eine **\<OrderDetail >** Child enthalten. mit einem **OrderQty** -Attribut mit einem Wert größer als 3:  
+ Diese XPath-Abfrage gibt die untergeordneten Elemente des ** \<Customer>** -Elements zurück, wobei der **CustomerID-** Attribut Wert "1" ist und wobei jede untergeordnete ** \<Reihenfolge>** Elemente ein ** \<OrderDetail->** Kind mit einem **OrderQty** -Attribut mit einem Wert größer als 3 enthalten:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Das in den Klammern angegebene Prädikat filtert die **\<Kunden >** Elemente. Nur die **\<Kunden >** Elemente, die mindestens eine **\<OrderDetail >** zweiten untergeordneten Element mit einem OrderQty-Attribut Wert größer als 3 aufweisen, werden zurückgegeben.  
+ Das in den Klammern angegebene Prädikat filtert die ** \<Kunden>** Elemente. Nur die ** \<Customer->** Elemente, die mindestens ein ** \<OrderDetail->** ein untergeordnetes Element mit einem OrderQty-Attribut Wert größer als 3 aufweisen, werden zurückgegeben.  
   
  Die **untergeordnete Achse ist** die Standard Achse. Daher kann die Abfrage wie folgt angegeben werden:  
   
@@ -80,8 +80,8 @@ ms.locfileid: "72909438"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Angeben eines relationalen Operators in der XPath-Abfrage und Ergebnisvergleich mit boolescher Funktion  
- Diese Abfrage gibt alle **\<Order >** untergeordneten Elementen des Kontext Knotens zurück, deren **SalesPersonID** -Attribut Wert kleiner als 270 ist:  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B: Angeben eines relationalen Operators in der XPath-Abfrage und Ergebnisvergleich mit boolescher Funktion  
+ Diese Abfrage gibt alle unter ** \<geordneten Elemente der Reihenfolge>** untergeordneten Elementen des Kontext Knotens zurück, deren **SalesPersonID** -Attribut Wert kleiner als 270 ist:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -94,7 +94,7 @@ ms.locfileid: "72909438"
 ```  
   
 > [!NOTE]  
->  Wenn diese Abfrage in einer Vorlage angegeben ist, muss das < Zeichen Entität codiert sein, da das < Zeichen in einem XML-Dokument eine besondere Bedeutung hat. Verwenden Sie `<` in einer Vorlage, um das < Zeichen anzugeben.  
+>  Wenn diese Abfrage in einer Vorlage angegeben ist, muss das #a0 Zeichen Entität codiert sein, da das #a1 Zeichen in einem XML-Dokument eine besondere Bedeutung hat. Verwenden `<` Sie in einer Vorlage, um das #a0 Zeichen anzugeben.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   

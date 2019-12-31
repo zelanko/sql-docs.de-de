@@ -1,6 +1,5 @@
 ---
-title: 'Angeben von Tiefe in rekursiven Beziehungen mithilfe von SQL: Max-Tiefe | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Festlegen von rekursiven tiefen Beziehungen mit SQL: Max-Tiefe'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +20,14 @@ ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a77c5a9e36a644c35edf9a31c63b6b3ef18bef1c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: aaeeae8c0adfc34c80b986898c5209b744d7efc4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907144"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257356"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Angeben der Tiefe von rekursiven Beziehungen mit 'sql:max-depth'
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  In diesem Fragment berichtet Mitarbeiter 5 an Mitarbeiter 4, Mitarbeiter 4 berichtet an Mitarbeiter 3, und die Mitarbeiter 3 und 2 berichten an Mitarbeiter 1.  
   
- Sie können das folgende XSD-Schema verwenden und eine XPath-Abfrage damit ausführen, um dieses Ergebnis zu erhalten. Das Schema beschreibt ein **\<EMP->** Element vom Typ Mitarbeiter Type, das aus einem **\<EMP >** untergeordneten Element desselben Typs, Mitarbeiter Type, besteht. Dies ist eine rekursive Beziehung (das Element und sein Vorgänger sind vom gleichen Typ). Außerdem verwendet das Schema eine **\<SQL: Relationship->** , um die über-/Unterordnungsbeziehung zwischen dem Supervisor und dem Supervisor zu beschreiben. Beachten Sie, dass in dieser **\<SQL: Relationship >** EMP sowohl die übergeordnete als auch die untergeordnete Tabelle ist.  
+ Sie können das folgende XSD-Schema verwenden und eine XPath-Abfrage damit ausführen, um dieses Ergebnis zu erhalten. Das Schema beschreibt ein ** \<EMP->** Element vom Typ Mitarbeiter Type, das aus einem ** \<EMP->** untergeordneten Element desselben Typs, Mitarbeiter Type, besteht. Dies ist eine rekursive Beziehung (das Element und sein Vorgänger sind vom gleichen Typ). Außerdem verwendet das Schema eine ** \<SQL: Relationship->** , um die über-/Unterordnungsbeziehung zwischen dem Supervisor und der Aufsicht zu beschreiben. Beachten Sie, dass in dieser ** \<SQL: Relationship->** EMP sowohl die übergeordnete als auch die untergeordnete Tabelle ist.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -171,7 +171,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  Um verschiedene Tiefen der Hierarchien im Ergebnis zu erstellen, ändern Sie den Wert der Anmerkung " **SQL: Max-Tiefe** " im Schema, und führen Sie die Vorlage nach jeder Änderung erneut aus.  
   
- Im vorherigen Schema hatten alle **\<EMP->** Elemente genau denselben Satz von**Attributen (Mitarbeiter**-ID, **FirstName**und **LastName**). Das folgende Schema wurde leicht geändert, um ein zusätzliches **ReportsTo** -Attribut für alle **\<EMP->** Elemente zurückzugeben, die einem Vorgesetzten Berichten.  
+ Im vorherigen Schema besaßen alle ** \<EMP->** Elemente genau denselben Satz von**Attributen (Mitarbeiter**-ID, **FirstName**und **LastName**). Das folgende Schema wurde leicht geändert, um ein zusätzliches **ReportsTo** -Attribut für alle ** \<EMP->** Elemente zurückzugeben, die einem Vorgesetzten Berichten.  
   
  Zum Beispiel zeigt dieses XML-Fragment die Untergebenen von Mitarbeiter 1 an:  
   
@@ -243,7 +243,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Die **SQL: Max-Tiefe-** Anmerkung kann für jedes beliebige komplexe Inhalts Element angegeben werden.  
   
 ### <a name="recursive-elements"></a>Rekursive Elemente  
- Wenn **SQL: Max-Tiefe** sowohl für das übergeordnete Element als auch für das untergeordnete Element in einer rekursiven Beziehung angegeben ist, hat die für das übergeordnete Element angegebene **SQL: Max-tiefen** Anmerkung Vorrang. Im folgenden Schema wird z. b. die **SQL: Max-Tiefe-** Anmerkung sowohl für das übergeordnete als auch das untergeordnete Employee-Element angegeben. In diesem Fall hat **SQL: Max-Tiefe = 4**, das für das **\<EMP->** übergeordnete Element angegeben wird (Rolle des Vorgesetzten), Vorrang. Die **SQL: Max-Tiefe** , die auf dem untergeordneten **\<EMP->** Element angegeben ist (Rolle von "supervisee") wird ignoriert.  
+ Wenn **SQL: Max-Tiefe** sowohl für das übergeordnete Element als auch für das untergeordnete Element in einer rekursiven Beziehung angegeben ist, hat die für das übergeordnete Element angegebene **SQL: Max-tiefen** Anmerkung Vorrang. Im folgenden Schema wird z. b. die **SQL: Max-Tiefe-** Anmerkung sowohl für das übergeordnete als auch das untergeordnete Employee-Element angegeben. In diesem Fall hat **SQL: Max-Tiefe = 4**, das für das ** \<EMP->** übergeordnete Element angegeben wird (Rolle des Vorgesetzten), Vorrang. Die für das untergeordnete ** \<EMP->** Element angegebene **SQL: Max-Tiefe** (Rolle von "supervisee") wird ignoriert.  
   
 #### <a name="example-b"></a>Beispiel B  
   
@@ -283,9 +283,9 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Um dieses Schema zu testen, führen Sie die Schritte für Beispiel A weiter oben in diesem Thema aus.  
   
 ### <a name="nonrecursive-elements"></a>Nicht rekursive Elemente  
- Wenn die **SQL: Max-Tiefe-** Anmerkung für ein Element im Schema angegeben ist, das keine Rekursion auslöst, wird Sie ignoriert. Im folgenden Schema besteht ein **\<EMP->** Element aus einer **\<Konstanten >** untergeordneten Element, das wiederum über ein **\<EMP->** untergeordnetes Element verfügt.  
+ Wenn die **SQL: Max-Tiefe-** Anmerkung für ein Element im Schema angegeben ist, das keine Rekursion auslöst, wird Sie ignoriert. Im folgenden Schema besteht ein ** \<EMP->** Element aus einem ** \<Konstanten>** untergeordneten Element, das wiederum über ein ** \<EMP->** untergeordnetes Element verfügt.  
   
- In diesem Schema wird die für das **\<Konstante >** Element angegebene **SQL: Max-tiefen** Anmerkung ignoriert, da keine Rekursion zwischen dem **\<EMP >** übergeordneten Element und dem\<untergeordneten Element **> Konstante** vorhanden ist. Es gibt jedoch eine Rekursion zwischen dem **\<EMP >** Vorgänger und dem **\<EMP >** Child. Das Schema gibt die " **SQL: Max-Tiefe"-** Anmerkung für beide an. Daher hat die auf dem Vorgänger ( **\<EMP >** in der Rolle "Supervisor" angegebene **SQL: Max-Tiefe-** Anmerkung Vorrang.  
+ In diesem Schema wird die für das ** \<Konstante>** Element angegebene **SQL: Max-tiefen** Anmerkung ignoriert, da keine Rekursion zwischen dem ** \<EMP>** Parent und dem ** \<Konstanten>** untergeordneten Element vorhanden ist. Es gibt jedoch eine Rekursion zwischen dem ** \<EMP->** Vorgänger und dem ** \<EMP>** untergeordneten Element. Das Schema gibt die " **SQL: Max-Tiefe"-** Anmerkung für beide an. Daher hat die auf dem Vorgänger (**\<EMP>** in der Rolle "Supervisor" angegebene **SQL: Max-tiefen** Anmerkung Vorrang.  
   
 #### <a name="example-c"></a>Beispiel C  
   
@@ -329,11 +329,11 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  Um dieses Schema zu testen, führen Sie die für Beispiel A weiter oben in diesem Thema beschriebenen Schritte aus.  
   
 ## <a name="complex-types-derived-by-restriction"></a>Durch Einschränkungen abgeleitete komplexe Typen  
- Wenn Sie eine komplexe Typableitung durch **\<Einschränkung >** haben, können Elemente des entsprechenden komplexen Basistyps die **SQL: Max-Tiefe-** Anmerkung nicht angeben. In diesen Fällen kann die **SQL: Max-tiefen** Anmerkung dem-Element des abgeleiteten Typs hinzugefügt werden.  
+ Wenn Sie eine komplexe Typableitung durch ** \<Einschränkung>** haben, können Elemente des entsprechenden komplexen Basistyps die **SQL: Max-Tiefe-** Anmerkung nicht angeben. In diesen Fällen kann die **SQL: Max-tiefen** Anmerkung dem-Element des abgeleiteten Typs hinzugefügt werden.  
   
- Wenn Sie dagegen eine komplexe Typableitung durch **\<Erweiterung >** haben, können die Elemente des entsprechenden komplexen Basistyps die **SQL: Max-Tiefe-** Anmerkung angeben.  
+ Wenn Sie dagegen eine komplexe Typableitung durch ** \<Erweiterung>** haben, können die Elemente des entsprechenden komplexen Basistyps die **SQL: Max-Tiefe-** Anmerkung angeben.  
   
- Das folgende XSD-Schema generiert beispielsweise einen Fehler, weil die **SQL: Max-tiefen-** Anmerkung für den Basistyp angegeben wird. Diese Anmerkung wird nicht für einen Typ unterstützt, der von **\<Einschränkung >** von einem anderen Typ abgeleitet wird. Um dieses Problem zu beheben, müssen Sie das Schema ändern und die " **SQL: Max-tiefen"-** Anmerkung für ein Element im abgeleiteten Typ angeben.  
+ Das folgende XSD-Schema generiert beispielsweise einen Fehler, weil die **SQL: Max-tiefen-** Anmerkung für den Basistyp angegeben wird. Diese Anmerkung wird nicht für einen Typ unterstützt, der von ** \<Einschränkungs>** von einem anderen Typ abgeleitet wird. Um dieses Problem zu beheben, müssen Sie das Schema ändern und die " **SQL: Max-tiefen"-** Anmerkung für ein Element im abgeleiteten Typ angeben.  
   
 #### <a name="example-d"></a>Beispiel D  
   
@@ -377,7 +377,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- Im Schema ist **SQL: Max-Tiefe** für einen komplexen **CustomerBaseType** -Typ angegeben. Das Schema gibt auch ein **\<Customer->** Element vom Typ **CustomerType**an, das von **CustomerBaseType**abgeleitet ist. Eine für ein solches Schema angegebene XPath-Abfrage generiert einen Fehler, da **SQL: Max-Tiefe** für ein Element, das in einem Einschränkungs Basistyp definiert ist, nicht unterstützt wird.  
+ Im Schema ist **SQL: Max-Tiefe** für einen komplexen **CustomerBaseType** -Typ angegeben. Das Schema gibt auch ein ** \<Customer->** Element vom Typ **CustomerType**an, das von **CustomerBaseType**abgeleitet ist. Eine für ein solches Schema angegebene XPath-Abfrage generiert einen Fehler, da **SQL: Max-Tiefe** für ein Element, das in einem Einschränkungs Basistyp definiert ist, nicht unterstützt wird.  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>Schemas mit einer tiefen Hierarchie  
  Möglicherweise liegt ein Schema vor, das eine tiefe Hierarchie umfasst, in der ein Element ein untergeordnetes Element enthält, das wiederum ein untergeordnetes Element enthalt usw. Wenn die in einem solchen Schema angegebene **SQL: Max-tiefen** Anmerkung ein XML-Dokument generiert, das eine Hierarchie mit mehr als 500 Ebenen enthält (mit dem Element der obersten Ebene auf Ebene 1, dem untergeordneten Element auf der Ebene 2 usw.), wird ein Fehler zurückgegeben.  

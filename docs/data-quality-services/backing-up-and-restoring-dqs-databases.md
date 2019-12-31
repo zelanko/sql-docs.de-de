@@ -1,6 +1,5 @@
 ---
-title: Sichern und Wiederherstellen von DQS-Datenbanken | Microsoft-Dokumentation
-ms.custom: ''
+title: Sichern und Wiederherstellen von DQS-Datenbanken
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: afee6a476407744d237ebf2c0069d37f7e9c3137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992427"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258847"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Sichern und Wiederherstellen von DQS-Datenbanken
 
@@ -23,9 +22,9 @@ ms.locfileid: "67992427"
 
   In diesem Thema wird beschrieben, wie die DQS-Datenbanken gesichert und wiederhergestellt werden.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a>Voraussetzung  
   
 -   Sie müssen das Kennwort für den Datenbank-Hauptschlüssel kennen, das Sie während der DQS-Serverinstallation angegeben haben.  
   
@@ -33,15 +32,15 @@ ms.locfileid: "67992427"
   
 -   Stellen Sie sicher, dass keine Benutzer am DQS-Server angemeldet sind.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
   
 -   Das Windows-Benutzerkonto muss ein Mitglied der festen sysadmin-Serverrolle in der SQL Server-Instanz sein, um die Sicherungs- und Wiederherstellungsvorgänge auszuführen.  
   
 -   Sie müssen über die Rolle „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um ausgeführte Aktivitäten abzubrechen oder ausgeführte Prozesse in DQS anzuhalten.  
   
-##  <a name="BackupRestore"></a> Sichern und Wiederherstellen von DQS-Datenbanken  
+##  <a name="BackupRestore"></a>Sichern und Wiederherstellen von DQS-Datenbanken  
   
 1.  Starten Sie Microsoft SQL Server Management Studio, und stellen Sie eine Verbindung mit der entsprechenden SQL Server-Instanz her.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "67992427"
   
 10. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Server, und klicken Sie dann auf **Neue Abfrage**.  
   
-11. Kopieren Sie im Fenster des Abfrage-Editors die folgenden SQL-Anweisungen, und ersetzen Sie *\<KENNWORT>* durch das Kennwort, das Sie während der DQS-Installation für den Datenbank-Hauptschlüssel angegeben haben:  
+11. Kopieren Sie im Abfrage-Editor-Fenster die folgenden SQL-Anweisungen, * \<* und ersetzen Sie die Kenn Wort>durch das Kennwort, das Sie während der DQS-Installation für den Datenbank-Hauptschlüssel angegeben haben:  
   
     ```  
     USE [DQS_MAIN]  
@@ -73,9 +72,9 @@ ms.locfileid: "67992427"
   
     ```  
   
-12. Drücken Sie F5, um die Anweisungen auszuführen. Überprüfen Sie im Bereich **Ergebnisse** , ob die Anweisungen erfolgreich ausgeführt wurden.  
+12. Drücken Sie F5, um die Anweisungen auszuführen. Überprüfen Sie im **Ergebnis** Bereich, ob die Anweisungen erfolgreich ausgeführt wurden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von DQS-Datenbanken](../data-quality-services/manage-dqs-databases.md)  
   
   

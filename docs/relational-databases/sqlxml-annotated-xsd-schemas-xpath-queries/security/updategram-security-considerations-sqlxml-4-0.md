@@ -1,6 +1,5 @@
 ---
-title: Updategram-Sicherheitsüberlegungen (SQLXML 4.0) | Microsoft-Dokumentation
-ms.custom: ''
+title: Sicherheitsüberlegungen zu Update grams (SQLXML)
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b337597568f9656fd5c0432e9856a1f74ab65c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a92c9bd13972929cfe15e6da92220fbf73356fc4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986537"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252439"
 ---
 # <a name="updategram-security-considerations-sqlxml-40"></a>Sicherheitsüberlegungen zu Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67986537"
   
 -   Lassen Sie nicht zu, dass Benutzer eigene Updategrams erstellen und ausführen. Updategrams sollten sich in Form von Vorlagen auf dem Server befinden und nicht mithilfe von Anwendungen im ASP-Stil dynamisch erstellt werden, da sonst die Daten der Datenbank gefährdet werden könnten. Dieses Risiko lässt sich ausschließen, indem Benutzer lediglich erlaubt wird, über die als Vorlagen bereitgestellten Updategrams auf die Daten zuzugreifen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Updategramms zum Ändern von Daten in SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden von Updategrams zum Ändern von Daten in SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
   
   

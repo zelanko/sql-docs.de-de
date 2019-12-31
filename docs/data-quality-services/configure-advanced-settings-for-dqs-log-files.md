@@ -1,6 +1,5 @@
 ---
-title: Konfigurieren der erweiterten Einstellungen für DQS-Protokolldateien | Microsoft-Dokumentation
-ms.custom: ''
+title: Konfigurieren der erweiterten Einstellungen für DQS-Protokolldateien
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 4e01be5f013beeaed58b5f851063524950c338c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935598"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255614"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Konfigurieren der erweiterten Einstellungen für DQS-Protokolldateien
 
@@ -29,17 +28,17 @@ ms.locfileid: "67935598"
 > [!NOTE]  
 >  Diese Aktivitäten können nicht mit [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]ausgeführt werden und sind nur für erfahrene Benutzer vorgesehen.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
   
 -   Das Windows-Benutzerkonto muss ein Mitglied der festen Serverrolle "sysadmin" in der SQL Server-Instanz sein, damit Konfigurationseinstellungen in der A_CONFIGURATION-Tabelle in der DQS_MAIN-Datenbank geändert werden können.  
   
 -   Sie müssen als Mitglied der Gruppe "Administratoren" auf dem Computer angemeldet sein, auf dem Sie die Datei "DQLog.Client.xml" ändern, um die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Protokollierungseinstellungen konfigurieren zu können.  
   
-##  <a name="DQSServer"></a> Konfigurieren von Data Quality Server-Protokolleinstellungen  
+##  <a name="DQSServer"></a>Konfigurieren von Data Quality Server-Protokoll Einstellungen  
  Die [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] -Protokolleinstellungen sind in einem XML-Format in der Spalte **VALUE** der Zeile **ServerLogging** in der A_CONFIGURATION-Tabelle in der DQS_MAIN-Datenbank vorhanden. Sie können die folgende SQL-Abfrage ausführen, um die Konfigurationsinformationen anzuzeigen:  
   
 ```  
@@ -96,7 +95,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-4.  Drücken Sie F5, um die Anweisungen auszuführen. Überprüfen Sie im Bereich **Ergebnisse** , ob die Anweisungen erfolgreich ausgeführt wurden.  
+4.  Drücken Sie F5, um die Anweisungen auszuführen. Überprüfen Sie im **Ergebnis** Bereich, ob die Anweisungen erfolgreich ausgeführt wurden.  
   
 5.  Um Änderungen an der Konfiguration der [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] -Protokollierung zu übernehmen, müssen Sie die folgenden Transact-SQL-Anweisungen ausführen. Öffnen Sie ein neues Abfrage-Editor-Fenster, und fügen Sie die folgenden Transact-SQL-Anweisungen ein:  
   
@@ -110,13 +109,13 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-6.  Drücken Sie F5, um die Anweisungen auszuführen. Überprüfen Sie im Bereich **Ergebnisse** , ob die Anweisungen erfolgreich ausgeführt wurden.  
+6.  Drücken Sie F5, um die Anweisungen auszuführen. Überprüfen Sie im **Ergebnis** Bereich, ob die Anweisungen erfolgreich ausgeführt wurden.  
   
 > [!NOTE]  
 >  Die Konfiguration der [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] -Protokolleinstellungen wird dynamisch generiert und in der Datei „DQS_MAIN.Log“ gespeichert, die sich in der Regel unter „C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log“ befindet, wenn Sie die Standardinstanz von SQL Server installiert haben. In dieser Datei direkt ausgeführte Änderungen sind jedoch nicht dauerhaft und werden von den Konfigurationseinstellungen in der A_CONFIGURATION-Tabelle in der DQS_MAIN-Datenbank überschrieben.  
   
-##  <a name="DQSClient"></a> Konfigurieren von Data Quality Client-Protokolleinstellungen  
- Die Konfigurationsdatei für die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Protokolleinstellungen, DQLog.Client.xml, befindet sich in der Regel unter „C:\Programme\Microsoft SQL Server\130\Tools\Binn\DQ\config“. Der Inhalt der XML-Datei ähnelt der XML-Datei, die Sie zuvor für die Konfigurationseinstellungen des [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] -Protokolls geändert haben. So konfigurieren Sie die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Protokolleinstellungen:  
+##  <a name="DQSClient"></a>Konfigurieren Data Quality-Client Protokoll Einstellungen  
+ Die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] Konfigurationsdatei für die Protokoll Einstellungen, dqlog. Client. XML, ist in der Regel unter c:\Programme\Microsoft SQL server\130\tools\binn\dq\configverfügbar. Der Inhalt der XML-Datei ähnelt der XML-Datei, die Sie zuvor für die [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Protokoll Konfigurationseinstellungen geändert haben. So konfigurieren Sie die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Protokolleinstellungen:  
   
 1.  Führen Sie ein beliebiges XML-Bearbeitungstool oder den Editor als Administrator aus.  
   
@@ -124,7 +123,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  Nehmen Sie die erforderlichen Änderungen vor, und speichern Sie die Datei, um die geänderten Protokollierungseinstellungen zu übernehmen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Schweregraden für DQS-Protokolldateien](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

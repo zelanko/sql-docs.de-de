@@ -1,5 +1,5 @@
 ---
-title: Verwenden von SQLXML-Massenladen in der .NET-Umgebung | Microsoft-Dokumentation
+title: Verwenden von SQLXML-Massenladen in der .NET-Umgebung
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed725ac58b7224ad157dd7b5d06b3b522395023b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5800c6323408f7b018021c041fbba17d2e8f6b89
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220390"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252449"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework-Unterstützung – Verwendung von Massenladen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In diesem Thema wird erklärt, wie die XML-Massenladefunktionalität in der .NET-Umgebung verwendet werden kann. Ausführliche Informationen zu XML-Massenladen, finden Sie unter [Ausführen von Massenladen von XML von Daten &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
+  In diesem Thema wird erklärt, wie die XML-Massenladefunktionalität in der .NET-Umgebung verwendet werden kann. Ausführliche Informationen zum XML-Massen Laden finden Sie unter [Durchführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
   
  Um das SQLXML-Massenladen-COM-Objekt in einer verwalteten Umgebung zu verwenden, müssen Sie diesem Objekt eine Projektreferenz hinzufügen. Dies generiert eine verwaltete Wrapperschnittstelle um das Massenladen-COM-Objekt.  
   
 > [!NOTE]  
->  Verwaltetes XML-Massenladen funktioniert nicht mit verwalteten Datenströmen und erfordert einen Wrapper um systemeigene Datenströme. Die SQLXML-Massenladenkomponente wird nicht in einer Multithreadumgebung ('[MTAThread]'-Attribut) ausgeführt. Wenn Sie versuchen, die massenladenkomponente in einer Umgebung mit mehreren Threads ausführen, erhalten Sie eine InvalidCastException-Ausnahme mit den folgenden zusätzlichen Informationen an: "Fehler bei QueryInterface für Schnittstelle SQLXMLBULKLOADLib.ISQLXMLBulkLoad." Die problemumgehung besteht darin, das Objekt zu erstellen, die das Massenladen singlethreads zugänglich enthält (z. B. durch Verwendung der **[STAThread]** -Attribut wie im Beispiel gezeigt).  
+>  Verwaltetes XML-Massenladen funktioniert nicht mit verwalteten Datenströmen und erfordert einen Wrapper um systemeigene Datenströme. Die SQLXML-Massenladenkomponente wird nicht in einer Multithreadumgebung ('[MTAThread]'-Attribut) ausgeführt. Wenn Sie versuchen, die Massen Lade Komponente in einer Umgebung mit mehreren Threads auszuführen, erhalten Sie eine InvalidCastException-Ausnahme mit den folgenden zusätzlichen Informationen: "QueryInterface für die Schnittstelle SQLXMLBULKLOADLib. ISQLXMLBulkLoad ist fehlgeschlagen". Die Problem Umgehung besteht darin, dass das Objekt, das das Massen Lade Objekt enthält, auf einen einzelnen Thread zugreifen kann (z. b. mithilfe des **[STAThread]** -Attributs, wie im Beispiel gezeigt).  
   
  Dieses Thema stellt eine funktionierende C#-Beispielanwendung für das Massenladen von XML-Daten in der Datenbank bereit. Gehen Sie folgendermaßen vor, um ein funktionierendes Beispiel zu erstellen:  
   
@@ -109,15 +109,15 @@ ms.locfileid: "68220390"
     </ROOT>  
     ```  
   
-4.  Starten Sie Visual Studio.  
+4.  Starten Sie Visual Studio.  
   
 5.  Erstellen Sie eine C#-Konsolenanwendung.  
   
-6.  Von der **Projekt** , wählen Sie im Menü **Verweis hinzufügen**.  
+6.  Wählen Sie im Menü **Projekt** den Befehl **Verweis hinzufügen**aus.  
   
-7.  In der **COM** Registerkarte **Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll), und klicken Sie auf **OK**. Sie sehen die **Interop.SQLXMLBULKLOADLib** Assembly im Projekt erstellt.  
+7.  Wählen Sie auf der Registerkarte **com** **Microsoft SQLXML Bulkload 4,0 Type Library** (Xblkld4. dll) aus, und klicken Sie auf **OK**. Die im Projekt erstellte Assembly **Interop. SQLXMLBULKLOADLib** wird angezeigt.  
   
-8.  Ersetzen Sie die Main()-Methode durch den folgenden Code. Update der **"ConnectionString"** -Eigenschaft und den Dateipfad, der Schema- und Datendateien.  
+8.  Ersetzen Sie die Main()-Methode durch den folgenden Code. Aktualisieren Sie die **ConnectionString** -Eigenschaft und den Dateipfad zu den Schema-und Datendateien.  
   
     ```  
     [STAThread]  
@@ -141,7 +141,7 @@ ms.locfileid: "68220390"
 9. Um das XML in die erstellte Tabelle zu laden, erstellen Sie das Projekt, und führen Sie es aus.  
   
     > [!NOTE]  
-    >  Die Referenz zur Massenladenkomponente (xblkld4.dll) kann auch mithilfe des Tools tlbimp.exe hinzugefügt werden, das als Teil von .NET Framework zur Verfügung steht. Dieses Tool erstellt einen verwalteten Wrapper für die systemeigene DLL (xblkld4.dll), der in allen .NET-Projekten verwendet werden kann. Zum Beispiel:  
+    >  Die Referenz zur Massenladenkomponente (xblkld4.dll) kann auch mithilfe des Tools tlbimp.exe hinzugefügt werden, das als Teil von .NET Framework zur Verfügung steht. Dieses Tool erstellt einen verwalteten Wrapper für die systemeigene DLL (xblkld4.dll), der in allen .NET-Projekten verwendet werden kann. Beispiel:  
   
     ```  
     c:\>tlbimp xblkld4.dll  
@@ -149,7 +149,7 @@ ms.locfileid: "68220390"
   
      Dies erstellt die verwaltete Wrapper-DLL (SQLXMLBULKLOADLib.dll), die Sie im .NET Framework-Projekt verwenden können. In .NET Framework fügen Sie der neu erstellten DLL Projektverweise hinzu.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Massenladen von XML-Daten &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

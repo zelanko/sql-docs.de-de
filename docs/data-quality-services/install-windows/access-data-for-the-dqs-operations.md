@@ -1,6 +1,5 @@
 ---
-title: Zugriff auf Daten für DQS-Vorgänge | Microsoft-Dokumentation
-ms.custom: ''
+title: Zugriff auf Daten für DQS-Vorgänge
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 846eec4cb8ac678b5636bc436acce62dc7e2ecf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 2eae5415e6f6bb93501dfc7989fe180e581ae387
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935237"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254794"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Zugriff auf Daten für DQS-Vorgänge
 
@@ -27,13 +26,13 @@ ms.locfileid: "67935237"
   
 -   Verwenden Sie die eigene Datenbank als Datenquelle für die DQS-Vorgänge und als Ziel zum Exportieren der verarbeiteten Daten. Stellen Sie deswegen sicher, dass sich die Datenbank in der gleichen SQL Server-Instanz wie die Data Quality Server-Datenbanken befindet. Andernfalls steht die Datenbank nicht für DQS-Vorgänge im Data Quality-Client zur Verfügung. Außerdem muss dem Windows-Benutzerkonto Zugriff auf die Datenbank DQS_STAGING_DATA zum Exportieren der Abgleichsergebnisse gewährt werden, da der Export der Abgleichsergebnisse ein zweiphasiger Prozess ist: zuerst werden die Abgleichsergebnisse in die temporären Tabellen in der Datenbank DQS_STAGING_DATA exportiert und dann in die Tabelle in der Zieldatenbank verschoben.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Voraussetzungen  
   
 -   Sie müssen die Installation des [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] durch Ausführen der Datei DQSInstaller.exe abgeschlossen haben. Weitere Informationen finden Sie unter [Ausführen von DQSInstaller.exe zum Abschließen der Installation von Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
 -   Das Windows-Benutzerkonto muss ein Element der entsprechenden festen Serverrolle (z. B. securityadmin, serveradmin oder sysadmin) in der Datenbank-Engine-Instanz sein, um Zugriff auf die SQL-Anmeldung in Datenbanken zu gewähren/zu ändern.  
   
-### <a name="to-grant-readwrite-access-to-a-user-on-the-dqsstagingdata-database"></a>So gewähren Sie einem Benutzer Lese-/Schreibzugriff auf die DQS_STAGING_DATA-Datenbank  
+### <a name="to-grant-readwrite-access-to-a-user-on-the-dqs_staging_data-database"></a>So gewähren Sie einem Benutzer Lese-/Schreibzugriff auf die DQS_STAGING_DATA-Datenbank  
   
 1.  Starten Sie Microsoft SQL Server Management Studio.  
   
@@ -43,20 +42,20 @@ ms.locfileid: "67935237"
   
 4.  Klicken Sie im Dialogfeld **Anmeldungseigenschaften** auf die Seite **Benutzerzuordnung** im linken Bereich.  
   
-5.  Aktivieren Sie im rechten Bereich in der Spalte **Map** (Zuordnung) das Kontrollkästchen für die **DQS_STAGING_DATA**-Datenbank, und wählen Sie anschließend im Bereich **Mitgliedschaft in Datenbankrolle für: DQS_STAGING_DATA** die folgenden Rollen aus:  
+5.  Aktivieren Sie im rechten Bereich in der Spalte **Zuordnen** das Kontrollkästchen für die **DQS_STAGING_DATA** -Datenbank, und wählen Sie anschließend im Bereich **Mitgliedschaft in Datenbankrolle für: DQS_STAGING_DATA** die folgenden Rollen aus:  
   
-    -   **db_datareader**: Daten aus Tabellen/Ansichten lesen.  
+    -   **db_datareader**: liest Daten aus Tabellen/Sichten.  
   
-    -   **db_datawriter**: Daten in Tabellen hinzufügen, löschen oder ändern.  
+    -   **db_datawriter**: Hinzufügen, löschen oder Ändern von Daten in Tabellen.  
   
-    -   **db_ddladmin**: Tabellen/Ansichten, erstellen, anpassen oder löschen.  
+    -   **db_ddladmin**: erstellen, ändern oder Löschen von Tabellen/Sichten.  
   
 6.  Klicken Sie im Dialogfeld **Anmeldungseigenschaften** auf **OK** , um die Änderungen zu übernehmen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Versuchen Sie, DQS-Vorgänge auszuführen, die auf die Datenbank als Datenquelle für den DQS-Vorgang zugreifen, und exportieren Sie dann die verarbeiteten Daten in die Datenbank.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

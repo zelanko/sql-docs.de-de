@@ -1,6 +1,5 @@
 ---
-title: Importieren von Werten aus einer Excel-Datei in eine Domäne | Microsoft-Dokumentation
-ms.custom: ''
+title: Importieren von Werten aus einer Excel-Datei in eine Domäne
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,20 +11,20 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 59cf81243c76da1747c558c7ab6e0c15323eff62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992048"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254819"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importieren von Werten aus einer Excel-Datei in eine Domäne
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In diesem Thema wird beschrieben, wie Werte in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) aus einer Excel-Datei in eine Domäne importiert werden. Eine Excel-Datei zu verwenden, um Domänenwerte in die Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] zu importieren, vereinfacht den Wissensgenerierungsprozess und spart Zeit und Aufwand. Es ermöglicht Personen, die eine Liste mit gültigen Datenwerten in einer Excel-Datei oder einer Textdatei haben, jene Werte in eine Domäne zu importieren. In einer Excel-Datei können Sie Domänenwerte in eine Domäne oder Domänen in eine Wissensdatenbank importieren. (Weitere Informationen zum Importieren von Domänen in eine Wissensdatenbank finden Sie unter [Importieren von Domänen aus einer Excel-Datei in eine Wissensermittlung](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md).) Das Exportieren in eine Excel-Datei wird nicht unterstützt.  
+  In diesem Thema wird beschrieben, wie Werte in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) aus einer Excel-Datei in eine Domäne importiert werden. Eine Excel-Datei zu verwenden, um Domänenwerte in die Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] zu importieren, vereinfacht den Wissensgenerierungsprozess und spart Zeit und Aufwand. Es ermöglicht Personen, die eine Liste mit gültigen Datenwerten in einer Excel-Datei oder einer Textdatei haben, jene Werte in eine Domäne zu importieren. In einer Excel-Datei können Sie Domänenwerte in eine Domäne oder Domänen in eine Wissensdatenbank importieren. (Weitere Informationen zum Importieren von Domänen in eine Wissensdatenbank finden Sie [unter Importieren von Domänen aus einer Excel-Datei in der Wissens](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) Ermittlung.) Das Exportieren in eine Excel-Datei wird nicht unterstützt.  
   
  Sie können Datenwerte auf zwei Weisen importieren:  
   
@@ -33,19 +32,19 @@ ms.locfileid: "67992048"
   
 -   Importieren Sie Werte in eine vorhandene, aufgefüllte Domäne. In diesem Fall werden nur neue Werte importiert. Alle Werte, die bereits existieren, werden nicht importiert.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a>Voraussetzung  
  Um Domänen aus einer Excel-Datei zu importieren, muss Excel auf dem Computer installiert sein, auf dem die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Anwendung installiert ist, um Domänenwerte oder eine vollständige Domäne zu importieren; Sie müssen eine Excel-Datei mit Domänenwerten erstellt haben (siehe [How the import works](#How)) und Sie müssen eine Wissensdatenbank erstellt und geöffnet haben, um die Domäne zu importieren.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
  Sie müssen über die dqs_kb_editor- oder die dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um Domänenwerte aus einer Excel-Datei zu importieren.  
   
-##  <a name="Import"></a> Importieren von Werten aus einer Excel-Datei in eine Domäne  
+##  <a name="Import"></a>Importieren von Werten aus einer Excel-Datei in eine Domäne  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Öffnen Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm in der Domänenverwaltungsaktivität eine Wissensdatenbank.  
   
@@ -73,10 +72,10 @@ ms.locfileid: "67992048"
   
 14. Klicken Sie auf **Fertig stellen** , um der Wissensdatenbank die Werte hinzuzufügen.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Importieren von Werten aus einer Excel-Datei in eine Domäne  
+##  <a name="FollowUp"></a>Nachverfolgung: nach dem Importieren von Werten aus einer Excel-Datei in eine Domäne  
  Nachdem Sie Werte in eine Domäne importiert haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Synonyms"></a> Importieren von Synonymen  
+##  <a name="Synonyms"></a>Importieren von Synonymen  
  Synonyme werden wie folgt importiert:  
   
 -   Zuerst werden alle Werte importiert, dann wird die Synonymverbindung hergestellt.  
@@ -91,7 +90,7 @@ ms.locfileid: "67992048"
   
 -   Wenn die Werte in der Anwendung aus irgendeinem Grund nicht manuell verbunden werden können, ist dies auch im Importvorgang nicht anwendbar.  
   
-##  <a name="How"></a> How the import works  
+##  <a name="How"></a>Funktionsweise des Imports  
  Die folgenden Werte werden von diesem Vorgang importiert:  
   
  Beim Importvorgang importiert DQS aus einer Excel-Datei wie folgt:  

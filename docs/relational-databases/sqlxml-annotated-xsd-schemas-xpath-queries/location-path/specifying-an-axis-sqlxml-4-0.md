@@ -1,6 +1,5 @@
 ---
-title: Angeben einer Achse (SQLXML 4.0) | Microsoft-Dokumentation
-ms.custom: ''
+title: Angeben einer Achse (SQLXML)
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,56 +19,59 @@ helpviewer_keywords:
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29d97b92f6979a7e5bbc67185f6e5a47ff82af68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073286"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253064"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Angeben einer Achse (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
--   Die Achse gibt die Strukturbeziehung zwischen den vom Positionsschritt ausgewählten Knoten und dem Kontextknoten an. Die folgenden Achsen werden unterstützt: **untergeordneten**  
+-   Die Achse gibt die Strukturbeziehung zwischen den vom Positionsschritt ausgewählten Knoten und dem Kontextknoten an. Die folgenden Achsen werden unterstützt: **Child**  
   
      Enthält das untergeordnete Element des Kontextknotens.  
   
-     Der folgende XPath-Ausdruck (Speicherortpfad) Wählt aus dem aktuellen Kontextknoten darstellen, die alle die  **\<Kunden >** untergeordnete Elemente:  
+     Der folgende XPath-Ausdruck (Speicherort Pfad) wählt alle ** \<Kunden>** untergeordneten Knoten aus dem aktuellen Kontext Knoten aus:  
   
     ```  
     child::Customer  
     ```  
   
-     In der folgenden XPath-Abfrage ist `child` die Achse. `Customer` ist der Knotentest.  
+     In der folgenden XPath-Abfrage ist `child` die Achse. 
+  `Customer` ist der Knotentest.  
   
 -   **parent**  
   
      Enthält das übergeordnete Element des Kontextknotens.  
   
-     Der folgende XPath-Ausdruck wählt alle dem  **\<Kunden >** übergeordneten Elementen von der  **\<Reihenfolge >** untergeordnete Elemente:  
+     Der folgende XPath-Ausdruck wählt alle ** \<Kunden>** übergeordnete Elemente der ** \<Bestellung>** untergeordneten Elementen aus:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     Dies entspricht exakt der Angabe `child::Customer`. In dieser XPath-Abfrage sind `child` und `parent` die Achsen. `Customer` und `Order` sind die Knotentests.  
+     Dies entspricht exakt der Angabe `child::Customer`. In dieser XPath-Abfrage sind `child` und `parent` die Achsen. 
+  `Customer` und `Order` sind die Knotentests.  
   
--   **attribute**  
+-   **versehen**  
   
      Enthält das Attribut des Kontextknotens.  
   
-     Der folgende XPath-Ausdruck wählt den **"CustomerID"** Attribut des Kontextknotens aus:  
+     Der folgende XPath-Ausdruck wählt das **CustomerID-** Attribut des Kontext Knotens aus:  
   
     ```  
     attribute::CustomerID  
     ```  
   
--   **self**  
+-   **Selbstbedienungs**  
   
      Enthält den Kontextknoten selbst.  
   
-     Der folgende XPath-Ausdruck wählt den aktuellen Knoten aus, ist dies die  **\<Reihenfolge >** Knoten:  
+     Der folgende XPath-Ausdruck wählt den aktuellen Knoten aus, wenn es sich ** \<um den Order>** -Knoten handelt:  
   
     ```  
     self::Order  

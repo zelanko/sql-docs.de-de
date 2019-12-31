@@ -1,7 +1,7 @@
 ---
-title: Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen | Microsoft-Dokumentation
+title: Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 642e98a743585226d984c378607b83a7ad432d92
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 436ec564e4cf5de21647eb5cd667741ce246e99d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909130"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254138"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,9 +121,9 @@ ms.locfileid: "72909130"
     3.  Überprüfen Sie in der Liste der derzeit installierten Programme, ob **Microsoft SQL Server Native Client** in der Liste angezeigt wird.  
   
         > [!NOTE]  
-        >  Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client installieren müssen, finden Sie weitere Informationen unter [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+        >  Wenn Sie Native Client installieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen, finden Sie weitere Informationen unter [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Überprüfen Sie, ob die für den Clientcomputer installierte MDAC-Version 2.6 oder höher ist. Zum Überprüfen der Versionsinformationen von MDAC können Sie das MDAC Component Checker-Tool verwenden, das Sie kostenlos von der Microsoft-Website (www.microsoft.com) herunterladen können. Weitere Informationen finden Sie auf der Microsoft-Website unter dem Suchbegriff "MDAC Component Checker".  
+2.  Überprüfen Sie, ob die für den Clientcomputer installierte MDAC-Version 2.6 oder höher ist. Wenn Sie MDAC-Versionsinformationen überprüfen müssen, können Sie das MDAC Component Checker-Tool verwenden, das als kostenloser Download von der Microsoft-Website [http://www.microsoft.com](https://www.microsoft.com)() bereitgestellt wird. Weitere Informationen finden Sie auf der Microsoft-Website unter dem Suchbegriff "MDAC Component Checker".  
   
 3.  Führen Sie das Skript aus.  
   

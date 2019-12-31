@@ -1,6 +1,5 @@
 ---
-title: Hinzufügen von Wissen zur Wissensdatenbank | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen von Wissen zur Wissensdatenbank
 ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 13a4345ba72f323aa49e250c8bc946d2d62f7799
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: b10dcb5c3f959612323e960c471a710e0b94b8dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992446"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258858"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Hinzufügen von Wissen zur Wissensdatenbank
 
@@ -27,7 +26,7 @@ ms.locfileid: "67992446"
   
  Sie können einer Wissensdatenbank Wissen auf die folgenden computerunterstützten oder interaktiven Weisen hinzufügen.  
   
--   [Durchführen der Wissensermittlung](#Discovery)  
+-   [Durchführen der Wissens Ermittlung](#Discovery)  
   
 -   [Verwalten von Datenwerten in einer Domäne](#ManageDomain)  
   
@@ -39,36 +38,36 @@ ms.locfileid: "67992446"
   
 -   [Verwenden der Standard-DQS-Wissensdatenbank](#Default)  
   
-##  <a name="Discovery"></a> Durchführen der Wissensermittlung  
+##  <a name="Discovery"></a>Durchführen der Wissens Ermittlung  
  Die Wissensermittlung analysiert Beispieldaten im Hinblick auf Data Quality-Kriterien und fügt dann der Wissensdatenbank das erlangte Wissen hinzu. Dies ist ein computerunterstützter Prozess, der Dateninkonsistenzen und Syntaxfehler identifiziert und Änderungen an den Daten vorschlägt. Die Wissensermittlungsaktivität ist ein Assistent, der eine Seite einschließt, auf der Sie Domänenwerte interaktiv verwalten können.  
   
 -   Weitere Informationen finden Sie in der Dokumentation unter [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md).  
   
 -   Klicken Sie [hier](https://msdn.microsoft.com/sqlserver/hh323825.aspx), um ein Video anzuzeigen, in dem das Durchführen der Wissensermittlung demonstriert wird.  
   
-##  <a name="ManageDomain"></a> Verwalten von Datenwerten in einer Domäne  
+##  <a name="ManageDomain"></a>Verwalten von Datenwerten in einer Domäne  
  DQS ermöglicht es Ihnen, die Metadaten, die von der computerunterstützten Wissensermittlungsaktivität generiert werden, interaktiv zu ändern und zu erweitern. Dazu verwenden Sie die Domänenverwaltungsaktivität, in der Sie eine Änderung auf einen bestimmten Datenwert anwenden können.  
   
 -   Weitere Informationen finden Sie in der Dokumentation unter [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
 -   Klicken Sie [hier](https://msdn.microsoft.com/sqlserver/hh323825.aspx), um ein Video anzuzeigen, in dem das Durchführen der Domänenverwaltung demonstriert wird. Beachten Sie, dass Sie in diesem Video Domänenwerte auf der Seite zum Verwalten von Domänenwerten des Wissensermittlungs-Assistenten ändern. Sie können diese Schritte auch auf der Domänenwerteseite der Domänenverwaltungsaktivität ausführen.  
   
-##  <a name="DQSFile"></a> Importieren von Wissen aus einer DQS-Datei  
+##  <a name="DQSFile"></a>Importieren von Wissen aus einer DQS-Datei  
  Sie können eine Domäne aus einer DQS-Datendatei in eine vorhandene Wissensdatenbank importieren, oder Sie können eine ganze Wissensdatenbank aus einem einer DQS-Datei in eine neue Wissensdatenbank importieren. Hierzu müssen Sie zuerst eine vorhandene Domäne oder Wissensdatenbank in eine DQS-Datei exportieren. Eine DQS-Datei, die eine Domäne enthält, enthält alle Domänendaten; eine DQS-Datei, die eine Wissensdatenbank enthält, enthält alle Wissensdatenbankinformationen, einschließlich Domänen und der Abgleichsrichtlinie.  
   
 -   Weitere Informationen finden Sie in der Dokumentation unter [Importieren einer Domäne aus einer DQS-Datei](../data-quality-services/import-a-domain-from-a-dqs-file.md) oder [Importieren einer Wissensdatenbank aus einer DQS-Datei](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md).  
   
-##  <a name="Excel"></a> Importieren von Wissen aus einer Excel-Datei  
+##  <a name="Excel"></a>Importieren von Wissen aus einer Excel-Datei  
  Sie können Domänenwerte aus einer Excel-Arbeitsblattdatei in eine vorhandene Domäne oder Wissensdatenbank importieren. Hierzu müssen Sie zuerst ein Excel-Arbeitsblatt mit den Domänenwerten erstellen, die Sie importieren möchten, und sicherstellen, dass Excel auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Computer installiert ist, damit Sie in der Lage sind, Werte mithilfe von [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]zu importieren. Sie können keine Domänenwerte aus einer Domäne oder Wissensdatenbank in eine Excel-Datei importieren.  
   
 -   Weitere Informationen finden Sie in der Dokumentation unter [Importieren von Werten aus einer Excel-Datei in eine Domäne](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) oder [Importieren von Domänen aus einer Excel-Datei in eine Wissensermittlung](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md).  
   
-##  <a name="Project"></a> Importieren von Wissen aus einem Projekt zurück in die Wissensdatenbank  
+##  <a name="Project"></a>Importieren von Wissen aus einem Projekt zurück in die Wissensdatenbank  
  Nachdem Sie ein Data Quality-Bereinigungs- oder Abgleichsprojekt mithilfe einer Wissensdatenbank ausgeführt haben, können Sie während der Bereinigung oder des Abgleichs erstelltes Wissen zurück in diese Wissensdatenbank importieren. Dies ermöglicht es Ihnen, während des Projekts generiertes Wissen beizubehalten und das Wissen in der Wissensdatenbank kontinuierlich zu vergrößern.  
   
 -   Weitere Informationen finden Sie unter [Importieren von Bereinigungsprojektwerten in eine Domäne](../data-quality-services/import-cleansing-project-values-into-a-domain.md).  
   
-##  <a name="Default"></a> Verwenden der Standard-DQS-Wissensdatenbank  
+##  <a name="Default"></a>Verwenden der Standard-DQS-Wissensdatenbank  
  Im Lieferumfang von DQS ist eine bereits erstellte Wissensdatenbank namens „DQS-Daten“ enthalten, die Domänen für US-amerikanische Firmen- und Adressdaten enthält. Diese Wissensdatenbank kann verwendet werden, um schnell ein Projekt zu starten, ohne eine neue Wissensdatenbank erstellen zu müssen. Die DQS-Daten-Wissensdatenbank ist schreibgeschützt, aber der Data Steward kann darauf basierend eine neue Wissensdatenbank erstellen.  
   
 -   Weitere Informationen finden Sie in der Dokumentation unter [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md).  

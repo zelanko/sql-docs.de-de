@@ -1,7 +1,7 @@
 ---
-title: Datentyp Unterstützung für ODBC-Datums-und Uhrzeit Verbesserungen | Microsoft-Dokumentation
+title: Typunterstützung, ODBC-Datum und-Uhrzeit
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed58bf3db95d9989bedf2826cdd722206bfb4d51
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 2b8af68f94a9da2e771074a8a4366417b91f5c7b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73784001"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254839"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Datentypunterstützung für ODBC-Verbesserungen bei Datum und Uhrzeit
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,8 @@ ms.locfileid: "73784001"
 |Zeit|SQL_SS_TIME2|-154 (sqlncli. h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (sqlncli.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-  
+||||
+
  In der folgenden Tabelle sind die entsprechenden Strukturen und ODBC C-Typen aufgeführt. Da ODBC keine treiberdefinierten C-Typen zulässt, wird SQL_C_BINARY als Binärstrukturen für time und datetimeoffset verwendet.  
   
 |SQL-Datentyp|Speicherlayout|Standardmäßiger C-Datentyp|Wert (sqlext.h)|  
@@ -52,7 +53,8 @@ ms.locfileid: "73784001"
 |SQL_TYPE_DATE<br /><br /> SQL_DATE|SQL_DATE_STRUCT<br /><br /> DATE_STRUCT|SQL_C_TYPE_DATE<br /><br /> SQL_C_DATE|SQL_TYPE_DATE<br /><br /> SQL_DATE|  
 |SQL_SS_TIME2|SQL_SS_TIME2_STRUCT|SQL_C_SS_TIME2<br /><br /> SQL_C_BINARY (ODBC 3.5 und früher)|0x4000 (sqlncli.h)<br /><br /> SQL_BINARY (-2)|  
 |SQL_SS_TIMESTAMPOFFSET|SQL_SS_TIMESTAMPOFFSET_STRUCT|SQL_C_SS_TIMESTAMPOFFSET<br /><br /> SQL_C_BINARY (ODBC 3.5 und früher)|0x4001 (sqlncli.h)<br /><br /> SQL_BINARY (-2)|  
-  
+|||||
+
  Wenn die SQL_C_BINARY-Bindung angegeben wird, wird die Ausrichtungsüberprüfung ausgeführt und ein eventueller Fehler berichtet. Der SQLSTATE für diesen Fehler ist IM016, mit der Meldung "Falsche Strukturausrichtung".  
   
 ## <a name="data-formats-strings-and-literals"></a>Datenformate: Zeichenfolgen und Literale  
@@ -60,13 +62,15 @@ ms.locfileid: "73784001"
   
 |SQL Server-Datentyp|ODBC-Datentyp|Zeichenfolgenformat für Clientkonvertierungen|  
 |--------------------------|--------------------|------------------------------------------|  
-|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu drei Sekundenbruchteilziffern für Datetime.|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu drei Sekundenbruchteilziffern für Datetime.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> Dieser Datentyp verfügt über eine Genauigkeit von einer Minute. Die zweite Komponente ist 0 (null) auf Ausgabe und wird auf Eingabe vom Server gerundet.|  
 |Datum|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Zeit|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|"yyyy-mm-dd hh: mm: SS [. 9999999]"<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
-  
+||||
+
  Für date/time-Literale gibt es keine Änderungen der ODBC-Escapesequenzen.  
   
  Sekundenbruchteile in Ergebnissen verwenden immer einen Punkt (.) anstelle eines Doppelpunkts (:).  
@@ -111,7 +115,7 @@ ms.locfileid: "73784001"
 ### <a name="sql_ss_time2_struct"></a>SQL_SS_TIME2_STRUCT  
  Diese Struktur wird auf beiden Betriebssystemen (32 Bit und 64 Bit) bis 12 Byte aufgefüllt.  
   
-```  
+```cpp
 typedef struct tagSS_TIME2_STRUCT {  
    SQLUSMALLINT hour;  
    SQLUSMALLINT minute;  
@@ -122,7 +126,7 @@ typedef struct tagSS_TIME2_STRUCT {
   
 ### <a name="sql_ss_timestampoffset_struct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
-```  
+```cpp
 typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {  
    SQLSMALLINT year;  
    SQLUSMALLINT month;  
@@ -138,7 +142,5 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
   
  Wenn die **timezone_hour** negativ ist, muss die **timezone_minute** negativ oder 0 (null) sein. Wenn die **timezone_hour** positiv ist, muss die **timezone_minute** positiv oder 0 (null) sein. Wenn die **timezone_hour** 0 (null) ist, kann die **timezone_minute** einen beliebigen Wert im Bereich von-59 bis + 59 aufweisen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verbesserungen &#40;bei Datum und Uhrzeit in ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datums-und Uhrzeit Verbesserungen &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

@@ -1,7 +1,7 @@
 ---
 title: Erstellen einer Master Data Manager-Webanwendung
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 384cf7989f41dce541afcfdd44b2831c79fde31e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0c0bf0cacc1fa1a1d042633531840ba46d1fae2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729459"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253067"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>Erstellen einer Master Data Manager-Webanwendung (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "73729459"
   
  Nachdem Sie die Webanwendung erstellt haben, ordnen Sie die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank der Webanwendung zu.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
   
 -   Weitere Informationen zu den Anforderungen für den Computer, auf dem die Webanwendung gehostet wird, finden Sie unter [Anforderungen für die Webanwendung &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73729459"
   
 -   Wenn Sie den Inhalt mit Secure Sockets Layer (SSL) verschlüsseln möchten, können Sie die Website, die die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung hostet, optional so konfigurieren, dass diese eine HTTPS-Bindung verwendet. Konfigurieren Sie das Serverzertifikat für den Webserver, eine HTTPS-Bindung und die SSL-Einstellungen für die Website mithilfe eines IIS (Internet Information Services)-Tools, z. B. IIS-Manager. Weitere Informationen finden Sie unter [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: Erstellen einer verknüpften Domäne | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen einer verknüpften Domäne
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: e193aa9cec02e47a98973b6ae1c8381634fdbe4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 3ebd6ca2702c902d25f7a73539017bd0540cc3d4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992261"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252247"
 ---
 # <a name="create-a-linked-domain"></a>Erstellen einer verknüpften Domäne
 
@@ -34,21 +33,21 @@ ms.locfileid: "67992261"
 ### <a name="controlling-data-flow-to-composite-domains"></a>Steuern des Datenflusses zu Verbunddomänen  
  Verknüpfte Domänen ermöglichen es Ihnen, den Datenfluss zwischen Felder und Verbunddomänen zu steuern. Sie können unterscheiden, wenn Daten von einem Feld in eine Verbunddomäne fließen und wenn Daten von einem anderen, sehr ähnlichen Feld nicht in die Verbunddomäne fließen. Dies erreichen Sie, indem Sie angeben, dass von zwei verknüpften Domänen eine Teil einer Verbunddomäne ist, die andere aber nicht. Aus Domänenperspektive sind verknüpfte Domänen identisch. Sie enthalten das gleiche Wissen. Aus Verbunddomänenperspektive unterscheiden sich verknüpfte Domänen allerdings voneinander. Die eine ist Teil der Verbunddomäne, die andere aber nicht.  
   
- Dies kann z.B. ein Datensatz sein, der die folgenden Felder enthält: Vorname des Kunden, Nachname des Kunden und Vorname des Vaters. Angenommen, Sie ordnen den Kundenvornamen und den Vornamen des Vaters einer Vornamendomäne zu und machen die Vornamendomäne und die Nachnamendomäne zu Teilen einer Verbunddomäne für vollständige Namen. Das Problem ist, dass der Vorname des Vaters zur Verbunddomäne ohne Nachname hinzugefügt wird. Wenn Sie allerdings die beiden Vornamenfelder mit einer Domäne verknüpfen und die beiden Domänen miteinander verknüpfen, können Sie die Kundenvornamendomäne zur Verbunddomäne für vollständige Namen hinzufügen und das Feld für den Vornamen des Vaters nicht zur Verbunddomäne hinzufügen. Dadurch verhindern Sie, dass der Vorname des Vaters zur Verbunddomäne hinzugefügt wird.  
+ Ein Beispiel ist ein Datensatz, der die folgenden Felder enthält: Kundenvorname, Kundennachname und Vorname des Vaters. Angenommen, Sie ordnen den Kundenvornamen und den Vornamen des Vaters einer Vornamendomäne zu und machen die Vornamendomäne und die Nachnamendomäne zu Teilen einer Verbunddomäne für vollständige Namen. Das Problem ist, dass der Vorname des Vaters zur Verbunddomäne ohne Nachname hinzugefügt wird. Wenn Sie allerdings die beiden Vornamenfelder mit einer Domäne verknüpfen und die beiden Domänen miteinander verknüpfen, können Sie die Kundenvornamendomäne zur Verbunddomäne für vollständige Namen hinzufügen und das Feld für den Vornamen des Vaters nicht zur Verbunddomäne hinzufügen. Dadurch verhindern Sie, dass der Vorname des Vaters zur Verbunddomäne hinzugefügt wird.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a>Voraussetzung  
  Um eine verknüpfte Domäne zu erstellen, müssen Sie eine Wissensdatenbank und eine vorhandene Domäne haben, zu der Sie eine Verknüpfung herstellen möchten.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um eine verknüpfte Domäne zu erstellen.  
   
-##  <a name="Create"></a> Erstellen einer verknüpften Domäne  
+##  <a name="Create"></a>Erstellen einer verknüpften Domäne  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Öffnen oder erstellen Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm eine Wissensdatenbank. Wählen Sie **Domänenverwaltung** als Aktivität aus, und klicken Sie dann auf **Öffnen** oder **Erstellen**. Weitere Informationen finden Sie unter [Erstellen einer Wissensdatenbank](../data-quality-services/create-a-knowledge-base.md) oder [Öffnen einer Wissensdatenbank](../data-quality-services/open-a-knowledge-base.md).  
   
@@ -65,7 +64,7 @@ ms.locfileid: "67992261"
   
 7.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
-##  <a name="Map"></a> Map two fields to linked domains  
+##  <a name="Map"></a>Zuordnen von zwei Feldern zu verknüpften Domänen  
   
 1.  Öffnen Sie eine Wissensdatenbank mit der Wissensermittlungsaktivität, und ordnen Sie der Datenbank und der Tabelle oder Sicht die Wissensdatenbank zu.  
   
@@ -75,10 +74,10 @@ ms.locfileid: "67992261"
   
 4.  Geben Sie im Dialogfeld „Domäne erstellen“ einen Domänennamen und eine Beschreibung ein, und klicken Sie dann auf „OK“.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen einer verknüpften Domäne  
+##  <a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen einer verknüpften Domäne  
  Nachdem Sie eine verknüpfte Domäne erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Behavior"></a> Verhalten einer verknüpften Domäne  
+##  <a name="Behavior"></a>Verhalten einer verknüpften Domäne  
  Sie können die Einstellungen für eine verknüpfte Domäne wie folgt ändern:  
   
 -   Sie können den Namen und die Beschreibung einer verknüpften Domäne ändern.  

@@ -1,5 +1,5 @@
 ---
-title: Gewusst-wie-Themen zur Profilerstellung für ODBC-Treiber (ODBC) | Microsoft-Dokumentation
+title: Leistungsprofilerstellung des ODBC-Treibers
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 782558d3c8325f1886310fea4d0291982544d16c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: aad2036f5b72f268d09092a2761f7c1d2ab73456
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73791035"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254714"
 ---
 # <a name="profiling-odbc-driver-performance-odbc"></a>Profilerstellung der ODBC-Treiberleistung (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "73791035"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [ODBC-Leistungs &#40;Daten für Profil Treiber&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data.md)  
+-   [Leistungsdaten des Profil Treibers &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data.md)  
   
--   [Protokollieren von Abfragen &#40;mit langer Ausführungszeit (ODBC)&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
+-   [Protokollieren von Abfragen mit langer Ausführungszeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweisen zu ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [ODBC-Themen zur Vorgehensweise](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

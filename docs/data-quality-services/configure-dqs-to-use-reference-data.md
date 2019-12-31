@@ -1,6 +1,5 @@
 ---
-title: Konfigurieren von DQS zum Verwenden von Verweisdaten | Microsoft-Dokumentation
-ms.custom: ''
+title: Konfigurieren von DQS zum Verwenden von Verweisdaten
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,14 +11,14 @@ f1_keywords:
 - sql13.dqs.administration.configuration.createDirectRDS.f1
 - sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: c7ac06c040e7ea852d9925a70ff2c38016ca383a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 8dfc5a65659efe71fd3389a770af06f360f980bd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152618"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255653"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Konfigurieren von DQS zum Verwenden von Verweisdaten
 
@@ -30,19 +29,19 @@ ms.locfileid: "70152618"
 > [!IMPORTANT]
 > In diesem Artikel werden Referenzdatendienste von Drittanbietern erwähnt, die zuvor in Azure DataMarket verfügbar waren. DataMarket und Data Services – einschließlich z.B. Melissa-Adressdaten – wurden am 31.12.2016 eingestellt. Daher können Sie die Beispiele in diesem Artikel nicht mehr mit den angegebenen Diensten von DataMarket ausführen. Sie können weiterhin Referenzdatendienste nutzen, die von externen Referenzdatenanbietern direkt online angeboten werden.
 
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Voraussetzungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
- Um Verweisdaten vom Marketplace zu verwenden, müssen Sie über einen gültigen Marketplace-Kontoschlüssel verfügen. Weitere Informationen zum Erstellen eines Marketplace-Kontoschlüssels finden Sie unter [Erstellen eines Marketplace-Kontos](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936). Sie können auch innerhalb von [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] einen Marketplace-Kontoschlüssel erstellen, indem Sie auf **Konfiguration** unter **Verwaltung** im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm und dann auf **ID für DataMarket-Konto erstellen** auf der Registerkarte **Verweisdaten** klicken.  
+###  <a name="Prerequisites"></a>Voraussetzung  
+ Um Verweisdaten vom Marketplace zu verwenden, müssen Sie über einen gültigen Marketplace-Kontoschlüssel verfügen. Ausführliche Informationen zum Erstellen eines Marketplace-Konto Schlüssels finden [Sie unter Erstellen Ihres Kontos](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936)). Sie können auch innerhalb von [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] einen Marketplace-Kontoschlüssel erstellen, indem Sie auf **Konfiguration** unter **Verwaltung** im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm und dann auf **ID für DataMarket-Konto erstellen** auf der Registerkarte **Verweisdaten** klicken.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
  Sie müssen über die Rolle „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um Verweisdaten-Diensteinstellungen in DQS zu konfigurieren.  
   
-##  <a name="Marketplace"></a> Konfigurieren von DQS zum Verwenden von Verweisdaten vom Marketplace  
+##  <a name="Marketplace"></a>Konfigurieren von DQS zum Verwenden von Verweis Daten vom Marketplace  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm unter **Verwaltung**auf **Konfiguration**.  
   
@@ -52,9 +51,9 @@ ms.locfileid: "70152618"
   
  Jetzt können Sie die Verweisdatendienste, die für den angegebenen Marketplace-Kontoschlüssel abonniert wurden, vom Marketplace in DQS verwenden.  
   
-##  <a name="ThirdParty"></a> Konfigurieren von DQS zum Verwenden von Verweisdaten von direkten Onlineverweisdatendrittanbietern  
+##  <a name="ThirdParty"></a>Konfigurieren von DQS zum Verwenden von Verweis Daten von direkten Online Verweis Datenanbietern von Drittanbietern  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm unter **Verwaltung**auf **Konfiguration**.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "70152618"
   
     3.  Geben Sie im Feld **Kategorie** die Kategorie der Daten ein, die vom neuen direkten Reference Data Service-Anbieter bereitgestellt werden.  
   
-    4.  Geben Sie im Feld Schema das Schema an, das die Zeichenfolge von Feldern (Spaltennamen) definiert, die vom direkten Reference Data Service-Anbieter verwendet werden soll. Ein Feldname sollte kein Leerzeichen enthalten, und die Felder sollten durch Trennzeichen getrennt sein. Beispiel: `FirstName, LastName, City, State`  
+    4.  Geben Sie im Feld Schema das Schema an, das die Zeichenfolge von Feldern (Spaltennamen) definiert, die vom direkten Reference Data Service-Anbieter verwendet werden soll. Ein Feldname sollte kein Leerzeichen enthalten, und die Felder sollten durch Trennzeichen getrennt sein. Beispiel: `FirstName, LastName, City, State`.  
   
     5.  Geben Sie im Feld **URI** die URI für den direkten Reference Data Service-Anbieter ein. Nur sichere URIs (Adresse, die mit „https://“ beginnt) sind in DQS zulässig.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "70152618"
   
  Jetzt können Sie die Reference Data Services des neu konfigurierten direkten Reference Data Service-Onlinedrittanbieters in DQS verwenden.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren von DQS zum Verwenden von Verweisdaten  
+##  <a name="FollowUp"></a>Nachverfolgung: nach dem Konfigurieren von DQS zum Verwenden von Verweis Daten  
  Sie müssen die erforderlichen Wissensdatenbankdomänen jetzt den Verweisdaten zuordnen, die bei den gerade konfigurierten Datenanbietern verfügbar sind. Weitere Informationen dazu finden Sie unter [Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
   

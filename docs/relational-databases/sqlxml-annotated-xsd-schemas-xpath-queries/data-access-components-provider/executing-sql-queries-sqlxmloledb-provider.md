@@ -1,6 +1,5 @@
 ---
-title: Ausführen von SQL-Abfragen (SQLXMLOLEDB-Anbieter) | Microsoft-Dokumentation
-ms.custom: ''
+title: Ausführen von SQL-Abfragen (SQLXMLOLEDB-Anbieter)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,27 +15,27 @@ ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27dc6c184ba727d55e6bcfe80b33c2ef4762e9df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f716d9e682c3b98fe35ea80dd4b630486d7e836
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995636"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257321"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>Ausführen von SQL-Abfragen (SQLXMLOLEDB-Anbieter)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Dieses Beispiel veranschaulicht die Verwendung der folgenden SQLXMLOLEDB-Anbieter spezifischen Eigenschaften:  
+  Dieses Beispiel veranschaulicht die Verwendung der folgenden SQLXMLOLEDB-anbieterspezifischen Eigenschaften:  
   
 -   ClientSideXML  
   
 -   XML-Stamm  
   
- In dieser clientseitigen ADO-Beispielanwendung wird eine einfache SQL-Abfrage auf dem Client ausgeführt. Da die ClientSideXML-Eigenschaft auf "true" festgelegt ist, wird die SELECT-Anweisung ohne die FOR XML-Klausel an den Server gesendet. Der Server führt die Abfrage aus und gibt ein Rowset an den Client zurück. Der Client wendet dann die FOR XML-Transformation auf das Rowset an und generiert ein XML-Dokument.  
+ In dieser clientseitigen ADO-Beispielanwendung wird eine einfache SQL-Abfrage auf dem Client ausgeführt. Da die ClientSideXML-Eigenschaft auf true festgelegt ist, wird die SELECT-Anweisung ohne die for XML-Klausel an den Server gesendet. Der Server führt die Abfrage aus und gibt ein Rowset an den Client zurück. Der Client wendet dann die FOR XML-Transformation auf das Rowset an und generiert ein XML-Dokument.  
   
- Die XML-Stamm-Eigenschaft stellt das einzelne Stammelement der obersten Ebene für das XML-Dokument, das generiert wird.  
+ Die XML-Stamm Eigenschaft stellt das einzige Stamm Element der obersten Ebene für das generierte XML-Dokument bereit.  
   
 > [!NOTE]  
->  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter angegeben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [Systemanforderungen für SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter angegeben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [System Anforderungen für SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

@@ -1,6 +1,5 @@
 ---
-title: "Abrufen von nicht verbrauchten Daten mithilfe von ' SQL: overflow-field ' (SQLXML 4,0) | Microsoft-Dokumentation"
-ms.custom: ''
+title: "Nicht verbrauchte Daten mit ' SQL: overflow-field ' (SQLXML)"
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,18 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 35abd64e0c7e492f114164447ec3e258242d3765
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907167"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257403"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Abrufen von nicht verbrauchten Daten mithilfe von 'sql:overflow-field' (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Wenn Datensätze mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML-Funktion aus einem XML-Dokument in eine Datenbank eingefügt werden, können alle nicht verbrauchten Daten aus dem XML-Quelldokument in einer Spalte gespeichert werden. Beim Abrufen von Daten aus einer Datenbank mithilfe von Schemas mit Anmerkungen können Sie das **SQL: overflow-field-** Attribut angeben, um die Spalte in der Tabelle zu identifizieren, in der die Überlauf Daten gespeichert werden. Das **SQL: overflow-field-** Attribut kann für **\<Element >** angegeben werden.  
+  Wenn Datensätze mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML-Funktion aus einem XML-Dokument in eine Datenbank eingefügt werden, können alle nicht verbrauchten Daten aus dem XML-Quelldokument in einer Spalte gespeichert werden. Beim Abrufen von Daten aus einer Datenbank mithilfe von Schemas mit Anmerkungen können Sie das **SQL: overflow-field-** Attribut angeben, um die Spalte in der Tabelle zu identifizieren, in der die Überlauf Daten gespeichert werden. Das **SQL: overflow-field-** Attribut kann für ** \<Element>** angegeben werden.  
   
  Anschließend gibt es folgende Möglichkeiten, diese Daten abzurufen:  
   
