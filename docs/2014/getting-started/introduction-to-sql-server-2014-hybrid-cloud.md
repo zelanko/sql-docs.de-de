@@ -10,12 +10,12 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b253c99b0fbdc0ff4e4651a981da80b9935a7184
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176040"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228070"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Einführung in SQL Server 2014 Hybrid Cloud
  Für die meisten Anwendungen gelten eine Reihe zentraler Herausforderungen. Dazu gehören hohe Effizienz, maximaler Geschäftswert, komplexe Hardwarekonfigurationen, Deckung von Bedarfsspitzen und die Einhaltung branchen- und unternehmensspezifischer Auflagen. Angesichts all dieser Faktoren kann sich die Entwicklung einer unternehmensfähigen Technologie sehr schwierig gestalten. Die Microsoft Hybrid Cloud-Strategie wird diesen Anforderungen gerecht, indem sie Unterstützung für herkömmliche, private Clouds, öffentliche Clouds und Hybrid Cloud-Umgebungen bietet. 
@@ -27,7 +27,7 @@ ms.locfileid: "70176040"
 ## <a name="sql-server-azure-and-hybrid-cloud"></a>SQL Server, Azure und Hybrid Cloud 
  Microsoft-Technologien ermöglichen folgende Arten der Codeausführung: lokal und in der Cloud, cloudbasiert auf der Grundlage lokaler Daten oder vollständig in der Cloud, wobei Ihnen die Kapazitäten mehrerer Rechenzentren zur Verfügung stehen. Sie können Ihre Anwendungen also nach Ihrem eigenen Zeitplan in die Cloud verlagern und den Wert bereits getätigter IT-Investitionen dabei voll ausschöpfen. 
  
- In diesem Artikel konzentrieren wir uns auf die Hybrid Cloud Szenarien, die von der lokalen SQL Server bis hin zu Azure-Public Cloud angeboten reichen: [SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/azure/jj823132.aspx) und [Azure Storage](http://www.azure.com/documentation/services/storage/). Insbesondere werden die folgenden Szenarios erläutert: 
+ In diesem Artikel konzentrieren wir uns auf die Hybrid Cloud Szenarien, die vom lokalen SQL Server bis hin zu Azure-Public Cloud angeboten sind: [SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/azure/jj823132.aspx) und [Azure Storage](https://www.azure.com/documentation/services/storage/). Insbesondere werden die folgenden Szenarios erläutert: 
  
 -  [Sichern und Wiederherstellen von Datenbanken in/aus Azure Storage](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#backup) 
  
@@ -48,7 +48,7 @@ ms.locfileid: "70176040"
  
 -  Hochverfügbarer Speicher (keine Datenverluste dank geografischer Replikation) 
  
--  Externer Speicher zur Erfüllung der Notfallwiederherstellungs- und Kompatibilitätsanforderungen 
+-  Externer Speicher zur Erfüllung der Notfallwiederherstellungs- und Konformitätsanforderungen 
  
 -  Vereinfachte Remotesicherung und -wiederherstellung 
  
@@ -60,7 +60,7 @@ ms.locfileid: "70176040"
  
 -  Mithilfe der [Sicherungs Komprimierung (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) können Sie eine Sicherung erstellen, die kleiner als eine nicht komprimierte Sicherung derselben Daten ist. Die Komprimierung einer Sicherung erfordert weniger Geräte-E/A-Vorgänge und steigert deshalb deutlich die Sicherungsleistung. Dies kann beim Speichern von Sicherungsdateien in Azure Storage sehr nützlich sein. 
  
--  Mit der SQL Server Funktion " [verwaltete Sicherung in Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) " können Sie SQL Server-Datenbanken automatisch auf [Azure Storage](http://www.azure.com/documentation/services/storage/)sichern. Mit dieser Funktion können Sie SQL Server konfigurieren, um die Sicherungsstrategie zu verwalten und Sicherungen für eine einzelne oder mehrere Datenbanken zu planen oder um Standardwerte auf Instanzebene festzulegen. 
+-  Mit der SQL Server Funktion " [verwaltete Sicherung in Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) " können Sie SQL Server-Datenbanken automatisch auf [Azure Storage](https://www.azure.com/documentation/services/storage/)sichern. Mit dieser Funktion können Sie SQL Server konfigurieren, um die Sicherungsstrategie zu verwalten und Sicherungen für eine einzelne oder mehrere Datenbanken zu planen oder um Standardwerte auf Instanzebene festzulegen. 
  
 -  Das [SQL Server Backup to Azure Tool](https://www.microsoft.com/download/details.aspx?id=40740) ermöglicht die Sicherung Azure BLOB Storage und verschlüsselt und komprimiert SQL Server Sicherungen, die lokal oder in der Cloud gespeichert sind. Dieses Tool unterstützt eine einzelne Cloudsicherungsstrategie für mehrere Versionen von SQL Server wie SQL Server 2005, 2008, 2008 R2 und 2014. 
  
@@ -77,7 +77,7 @@ ms.locfileid: "70176040"
  
  Sie können sekundäre Replikate in Azure mit einer der folgenden Methoden verwalten: 
  
--  Mit dem [Assistenten zum Hinzufügen von Azure](https://msdn.microsoft.com/library/dn463980\(v=sql.120\).aspx) -Replikaten können Sie ein oder mehrere Replikate Ihrer Datenbanken auf einem virtuellen Computer in Azure zur Notfall Wiederherstellung bereitstellen 
+-  Mit dem [Assistenten zum Hinzufügen von Azure-Replikaten](https://msdn.microsoft.com/library/dn463980\(v=sql.120\).aspx) können Sie ein oder mehrere Replikate Ihrer Datenbanken auf einem virtuellen Computer in Azure zur Notfall Wiederherstellung bereitstellen 
  
 -  AlwaysOn-Verfügbarkeitsgruppen, Daten Bank Spiegelung und Protokoll Versand sind die gängigsten Technologien, die Sie verwenden können, um die Hochverfügbarkeit und die Notfall Wiederherstellungs Anforderungen Ihrer Anwendung zu erfüllen. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfall Wiederherstellung für SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/azure/jj870962.aspx). 
  
@@ -105,12 +105,11 @@ ms.locfileid: "70176040"
  
 -  **Verschieben des gesamten virtuellen Computers:** Sie können Ihre eigenen SQL Server virtuellen Computer in Azure verwenden oder mithilfe des Platt Form Images erstellen. Anschließend können Sie einen Datenträger, auf dem bereits Daten gespeichert sind, hochladen und an den virtuellen Computer anfügen, oder Sie fügen einen leeren Datenträger an den virtuellen Computer an. Das vorhanden sein einer SQL Server-Daten Instanz in Azure Virtual Machines mit angefügten Datenträgern bietet einen weiteren permanenten Speicher für Ihre Datendateien und Anwendungsdaten. Umfassende Informationen und Anleitungen finden Sie unter [SQL Server Bereitstellung in Azure Virtual Machines](https://msdn.microsoft.com/library/dn133141.aspx). 
  
- Wenn Sie beabsichtigen, die Anwendungsebenen (z. b. die Präsentations-, Geschäfts-und Datenbankebene) in Azure Virtual Machines zu verschieben, empfiehlt es sich, die Empfehlungen in den [Anwendungs Mustern und Entwicklungsstrategien für SQL zu überprüfen. Virtual Machines Artikel zu Server in Azure](https://msdn.microsoft.com/library/dn574746.aspx) . Das Ziel dieses Artikels besteht darin, Lösungs Architekten und-Entwicklern eine Grundlage für eine gute Anwendungsarchitektur und einen Entwurf zu bieten, die Sie bei der Migration vorhandener Anwendungen zu Azure und beim Entwickeln neuer Anwendungen in Azure befolgen können. In diesem Artikel wird jedes Anwendungsmuster unter den folgenden Gesichtspunkten beleuchtet: lokales Szenario, entsprechende cloudfähige Lösung und zweckdienliche technische Empfehlungen. Außerdem erläutert der Artikel Azure-spezifische Entwicklungsstrategien, sodass Sie Ihre Anwendungen ordnungsgemäß entwerfen können. 
+ Wenn Sie beabsichtigen, die Anwendungsebenen (z. b. die Präsentationsebene, die Geschäfts Schicht und die Datenbankebene) in Azure Virtual Machines zu verschieben, sollten Sie die Empfehlungen im Artikel [Anwendungs Muster und Entwicklungsstrategien für SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/dn574746.aspx) überprüfen. Das Ziel dieses Artikels ist, Lösungsarchitekten und Entwicklern eine Grundlage für gute Anwendungsarchitektur und deren Entwurf zu bieten, die sie bei der Migration der vorhandenen Anwendungen nach Azure sowie bei der Entwicklung neuer Anwendungen in Azure verfolgen können. In diesem Artikel wird jedes Anwendungsmuster unter den folgenden Gesichtspunkten beleuchtet: lokales Szenario, entsprechende cloudfähige Lösung und zweckdienliche technische Empfehlungen. Darüber hinaus behandelt der Artikel Azure-spezifische Entwicklungsstrategien für einen ordnungsgemäßen Entwurf Ihrer Anwendungen. 
  
 ## <a name="see-also"></a>Siehe auch 
  [SQL Server 2014 CTP2-Produkthandbuch](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Microsoft SQL Server hybridcloud-Blog Reihe](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [Blogreihe über die Microsoft SQL Server Hybrid Cloud](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
  [Migrieren Daten orientierter Anwendungen zu Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
- 
  

@@ -15,12 +15,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829358"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232726"
 ---
 # <a name="xml-task"></a>XML-Task
   Der XML-Task wird für XML-Daten verwendet. Mit diesem Task kann ein Paket XML-Dokumente abrufen, mithilfe von XSLT-Stylesheets (Extensible Stylesheet Language Transformations) und XPath-Ausdrücken Vorgänge auf die Dokumente anwenden, mehrere Dokumente zusammenführen oder die aktualisierten Dokumente mit Dateien und Variablen überprüfen, vergleichen und speichern.  
@@ -46,7 +46,7 @@ ms.locfileid: "62829358"
   
  Falls es sich bei der Quelle um eine Variable handelt, enthält die angegebene Variable den Pfad des XML-Dokuments.  
   
- Falls es sich bei der Quelle um einen Dateiverbindungs-Manager handelt, stellt der angegebene Dateiverbindungs-Manager die Quellinformationen bereit. Der Dateiverbindungs-Manager wird separat vom XML-Task konfiguriert, und im XML-Task wird dann darauf verwiesen. Die Verbindungszeichenfolge aller Dateiverbindungs-Manager gibt den Pfad der XML-Datei an. Weitere Informationen finden Sie unter [File Connection Manager](../connection-manager/file-connection-manager.md).  
+ Falls es sich bei der Quelle um einen Dateiverbindungs-Manager handelt, stellt der angegebene Dateiverbindungs-Manager die Quellinformationen bereit. Der Dateiverbindungs-Manager wird separat vom XML-Task konfiguriert, und im XML-Task wird dann darauf verwiesen. Die Verbindungszeichenfolge aller Dateiverbindungs-Manager gibt den Pfad der XML-Datei an. Weitere Informationen finden Sie unter [Dateiverbindungs-Manager](../connection-manager/file-connection-manager.md).  
   
  Der XML-Task kann so konfiguriert werden, dass das Ergebnis des Vorgangs in einer Variablen oder in einer Datei gespeichert wird. Falls Sie das Ergebnis in einer Datei speichern, verwendet der XML-Task einen Dateiverbindungs-Manager für den Zugriff auf die Datei. Sie können die Ergebnisse des Diffgram-Objekts, das vom Diff-Vorgang generiert wird, in Dateien und Variablen speichern.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62829358"
 |Vorgang|Beschreibung|  
 |---------------|-----------------|  
 |Diff|Vergleicht zwei XML-Dokumente miteinander. Diff verwendet das XML-Quelldokument als Basisdokument und vergleicht es mit einem zweiten XML-Dokument, stellt die Unterschiede fest und schreibt diese in ein XML-Diffgram-Dokument. Dieser Vorgang schließt Eigenschaften zum Anpassen des Vergleichs ein.|  
-|Merge|Führt zwei XML-Dokumente zusammen. Der Merge-Vorgang verwendet das XML-Quelldokument als Basisdokument und fügt diesem den Inhalt eines zweiten Dokuments hinzu. Bei diesem Vorgang kann ein Mergespeicherort innerhalb des Basisdokuments angegeben werden.|  
+|Zusammenführen|Führt zwei XML-Dokumente zusammen. Der Merge-Vorgang verwendet das XML-Quelldokument als Basisdokument und fügt diesem den Inhalt eines zweiten Dokuments hinzu. Bei diesem Vorgang kann ein Mergespeicherort innerhalb des Basisdokuments angegeben werden.|  
 |Patch|Wendet die Ausgabe des Diff-Vorgangs, ein so genanntes Diffgram-Dokument, auf ein XML-Dokument an, um ein neues übergeordnetes Dokument zu erstellen, das Inhalt aus dem Diffgram-Dokument einschließt.|  
 |Überprüfen|Überprüft das XML-Dokument mithilfe eines DTD-(Document Type Definition-) bzw. XSD-(XML Schema Definition-)Schemas.|  
 |XPath|Führt XPath-Abfragen und -Auswertungen aus.|  
@@ -71,12 +71,12 @@ ms.locfileid: "62829358"
 |------------|-----------------|  
 |**IgnoreComments**|Dieser Wert gibt an, ob Kommentarknoten verglichen werden.|  
 |**IgnoreNamespaces**|Dieser Wert gibt an, ob der Namespace-URI (Uniform Resource Identifier) eines Elements und dessen Attributnamen verglichen werden. Falls diese Option auf `true` festgelegt ist, werden zwei Elemente mit dem gleichen lokalen Namen, aber einem unterschiedlichen Namespace, als identisch betrachtet.|  
-|**IgnorePrefixes**|Dieser Wert gibt an, ob Präfixe von Element- und Attributnamen verglichen werden. Falls diese Option auf `true,` festgelegt ist, werden zwei Elemente mit dem gleichen lokalen Namen, aber einem unterschiedlichen Namespace-URI und Präfix, als identisch betrachtet.|  
-|**IgnoreXMLDeclaration**|Dieser Wert gibt an, ob die XML-Deklarationen verglichen werden.|  
+|**Ignoreprefixes**|Dieser Wert gibt an, ob Präfixe von Element- und Attributnamen verglichen werden. Falls diese Option auf `true,` festgelegt ist, werden zwei Elemente mit dem gleichen lokalen Namen, aber einem unterschiedlichen Namespace-URI und Präfix, als identisch betrachtet.|  
+|**Ignorexmldeclaration**|Dieser Wert gibt an, ob die XML-Deklarationen verglichen werden.|  
 |**IgnoreOrderOfChildElements**|Dieser Wert gibt an, ob die Reihenfolge von untergeordneten Elementen verglichen wird. Falls diese Option auf `true` festgelegt ist, werden untergeordnete Elemente, die sich nur bezüglich der Position in einer Liste gleichgeordneter Elemente unterscheiden, als identisch betrachtet.|  
 |**IgnoreWhiteSpaces**|Dieser Wert gibt an, dass Leerzeichen verglichen werden.|  
 |**IgnoreProcessingInstructions**|Dieser Wert gibt an, ob Verarbeitungsanweisungen verglichen werden.|  
-|**IgnoreDTD**|Dieser Wert gibt an, ob die DTD ignoriert wird.|  
+|**Ignoredtd**|Dieser Wert gibt an, ob die DTD ignoriert wird.|  
   
 ### <a name="merge-operation"></a>Merge-Vorgang  
  Wenn Sie eine XPath-Anweisung zur Identifizierung des Mergespeicherorts im Quelldokument verwenden, wird erwartet, dass diese Anweisung einen einzelnen Knoten zurückgibt. Wenn die Anweisung mehrere Knoten zurückgibt, wird nur der erste Knoten verwendet. Der Inhalt des zweiten Dokuments wird unter dem ersten Knoten zusammengeführt, den die XPath-Abfrage zurückgibt.  
@@ -110,7 +110,7 @@ ms.locfileid: "62829358"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den XML-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den XML-Task beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`XMLOperation`|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|  
   
@@ -119,11 +119,11 @@ ms.locfileid: "62829358"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den XML-Task &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den XML-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Validate XML with the XML Task](xml-task.md)  
+-   [Validieren von XML mit dem XML-Task](xml-task.md)  
   
--   [Seite Ausdrücke](../expressions/expressions-page.md)  
+-   [Ausdrucks Seite](../expressions/expressions-page.md)  
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen von Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
@@ -141,6 +141,5 @@ ms.locfileid: "62829358"
   
 -   Blogeintrag, [XML Destination Script Component](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)(XML-Zielskriptkomponente), auf agilebi.com  
   
--   CodePlex-Beispiel, [Process XML Data Package Sample](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), auf www.codeplex.com  
-  
+-   CodePlex-Beispiel, [Process XML Data Package Sample](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), auf www.codeplex.com  
   

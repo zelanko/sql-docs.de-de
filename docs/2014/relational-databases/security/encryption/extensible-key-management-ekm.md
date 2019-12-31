@@ -11,18 +11,18 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 42ec76542ffdf382c10c48cd107765d312ed1781
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d4fb415f9fbb556240d626aa48453d6d69d8072
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011663"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957184"
 ---
 # <a name="extensible-key-management-ekm"></a>Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Funktionen zur Datenverschlüsselung zusammen mit der *erweiterbaren Schlüsselverwaltung* (Extensible Key Management, EKM) bereit. Dabei wird der Anbieter *Microsoft Cryptographic API* (MSCAPI) zur Verschlüsselung und Schlüsselgenerierung verwendet. Verschlüsselungsschlüssel für die Daten- und Schlüsselverschlüsselung werden in temporären Schlüsselcontainern erstellt und müssen vom Anbieter exportiert werden, bevor sie in der Datenbank gespeichert werden. Dieser Ansatz ermöglicht eine Schlüsselverwaltung mit einer Verschlüsselungsschlüsselhierarchie und Schlüsselsicherung durch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bietet Daten Verschlüsselungsfunktionen zusammen mit *erweiterbarer Schlüsselverwaltung (Extensible Key Management* , EKM) und verwendet dabei den *Microsoft Cryptographic API* (mscapi)-Anbieter für die Verschlüsselung und Schlüsselgenerierung. Verschlüsselungsschlüssel für die Daten- und Schlüsselverschlüsselung werden in temporären Schlüsselcontainern erstellt und müssen vom Anbieter exportiert werden, bevor sie in der Datenbank gespeichert werden. Dieser Ansatz ermöglicht eine Schlüsselverwaltung mit einer Verschlüsselungsschlüsselhierarchie und Schlüsselsicherung durch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Da die Einhaltung behördlicher Bestimmungen und der Datenschutz immer wichtiger werden, nutzen Organisationen die Verschlüsselung als Lösung für eine "tiefgreifende Verteidigung". Dieser Lösungsansatz ist jedoch häufig mit den Verwaltungstools für die Datenbankverschlüsselung alleine nicht durchführbar. Hardwarehersteller bieten Produkte an, die die Schlüsselverwaltung in Unternehmen mittels *Hardwaresicherheitsmodulen* (HSM) umsetzen. HSM-Geräte speichern die Verschlüsselungsschlüssel auf Hardware- oder Softwaremodulen. Dies ist eine sicherere Lösung, da die Verschlüsselungsschlüssel von den Verschlüsselungsdaten getrennt werden.  
   
@@ -56,7 +56,8 @@ GO
  Wenn Sie die Funktion deaktivieren möchten, legen Sie den Wert auf **0**fest. Weitere Informationen zum Festlegen von Serveroptionen finden Sie unter [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
   
 ## <a name="how-to-use-ekm"></a>So verwenden Sie die erweiterbare Schlüsselverwaltung  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extensible Key Management ermöglicht es, dass die Verschlüsselungsschlüssel, die die Datenbankdateien schützen, auf einem separaten Medium wie einer Smartcard, einem USB-Gerät oder einem EKM-/HSM-Modul gespeichert werden können. Auf diese Weise werden die Daten auch vor Datenbankadministratoren (mit Ausnahme der Mitglieder der sysadmin-Gruppe) geschützt. Die Daten können mit Verschlüsselungsschlüsseln verschlüsselt werden, auf die nur der Datenbankbenutzer auf dem externen EKM-/HSM-Modul zugreifen kann.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extensible Key Management ermöglicht es, dass die Verschlüsselungsschlüssel, die die Datenbankdateien schützen, auf einem separaten Medium wie einer Smartcard, einem USB-Gerät oder einem EKM-/HSM-Modul gespeichert werden können. Hiermit wird auch der Schutz von Daten durch Datenbankadministratoren ermöglicht (mit Ausnahme von Mitgliedern der sysadmin-Gruppe). Daten können mit Verschlüsselungsschlüsseln verschlüsselt werden, auf die nur der Datenbankbenutzer auf dem externen EKM/HSM-Modul Zugriff hat.  
   
  EKM hat außerdem folgende Vorzüge:  
   
@@ -101,17 +102,18 @@ GO
 ### <a name="encryption-and-decryption-by-an-ekm-device"></a>Verschlüsselung und Entschlüsselung durch ein EKM-Gerät  
  Sie können die folgenden Funktionen verwenden, um Daten mithilfe von symmetrischen und asymmetrischen Schlüsseln zu verschlüsseln und zu entschlüsseln:  
   
-|Funktion|Referenz|  
+|Funktion|Verweis|  
 |-------------------------|---------------|  
-|Verschlüsselung mit symmetrischen Schlüsseln|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
-|Verschlüsselung mit asymmetrischen Schlüsseln|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
-|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
-|EncryptByAsmKey(key_guid, 'Klartext')|[ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
-|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
+|Verschlüsselung mit symmetrischen Schlüsseln|[Erstellen eines symmetrischen Schlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|Verschlüsselung mit asymmetrischen Schlüsseln|[Erstellen eines asymmetrischen Schlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|EncryptByKey(key_guid, 'cleartext', ...)|[Verschlüsseltbykey &#40;Transact-SQL-&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
+|DecryptByKey(ciphertext, ...)|[DecryptByKey &#40;Transact-SQL-&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
+|EncryptByAsmKey(key_guid, 'Klartext')|["Verschlüsseltbyasymmetrikey" &#40;Transact-SQL-&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
+|DecryptByAsmKey(ciphertext)|[Decryptbyasymmetrikey &#40;Transact-SQL-&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
   
 #### <a name="database-keys-encryption-by-ekm-keys"></a>Datenbankschlüsselverschlüsselung mit EKM-Schlüsseln  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann mithilfe von EKM-Schlüsseln andere Schlüssel in einer Datenbank verschlüsseln. Sie können sowohl symmetrische als auch asymmetrische Schlüssel auf einem EKM-Gerät erstellen und verwenden. Sie können systemeigene (nicht-EKM) symmetrische Schlüssel mit asymmetrischen EKM-Schlüsseln verschlüsseln.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann mithilfe von EKM-Schlüsseln andere Schlüssel in einer Datenbank verschlüsseln. Sie können sowohl symmetrische als auch asymmetrische Schlüssel auf einem EKM-Gerät erstellen und verwenden. Sie können systemeigene (nicht-EKM) symmetrische Schlüssel mit asymmetrischen EKM-Schlüsseln verschlüsseln.  
   
  Im folgenden Beispiel wird ein symmetrischer Datenbankschlüssel erstellt und mit einem Schlüssel auf einem EKM-Modul verschlüsselt.  
   
@@ -130,42 +132,43 @@ DECRYPTION BY EKM_AKey1
 > [!NOTE]  
 >  EKM-Schlüssel können nicht mit anderen EKM-Schlüsseln verschlüsselt werden.  
 >   
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt keine Signierungsmodule mit den asymmetrischen Schlüsseln, die vom EKM-Anbieter generiert werden.  
+>  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt keine Signierungsmodule mit den asymmetrischen Schlüsseln, die vom EKM-Anbieter generiert werden.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [EKM provider enabled (Serverkonfigurationsoption)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [EKM-Anbieter aktiviert (Server Konfigurations Option)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
- [Aktivieren von TDE mit EKM](enable-tde-on-sql-server-using-ekm.md)  
+ [Aktivieren von TDE mithilfe von EKM](enable-tde-on-sql-server-using-ekm.md)  
   
  [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
- [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
- [sys.cryptographic_providers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
- [sys.dm_cryptographic_provider_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
- [sys.dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
- [sys.dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
- [sys.dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
- [sys.credentials &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
- [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
- [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-symmetric-key-transact-sql)   
- [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
- [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
- [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
- [Sichern des Diensthauptschlüssels](service-master-key.md)   
- [Wiederherstellen des Diensthauptschlüssels](restore-the-service-master-key.md)   
- [Erstellen eines Datenbank-Hauptschlüssels](create-a-database-master-key.md)   
- [Sichern eines Datenbank-Hauptschlüssels](back-up-a-database-master-key.md)   
- [Wiederherstellen eines Datenbank-Hauptschlüssels](restore-a-database-master-key.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen eines Kryptografieanbieters &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [Löschen des Kryptografieanbieters &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
+ [Alter Cryptographic Provider &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
+ [sys. cryptographic_providers &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
+ [sys. dm_cryptographic_provider_sessions &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
+ [sys. dm_cryptographic_provider_properties &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
+ [sys. dm_cryptographic_provider_algorithms &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
+ [sys. dm_cryptographic_provider_keys &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
+ [sys. Anmelde Informationen &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
+ [Create Credential &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [Alter Login &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
+ [Erstellen eines asymmetrischen Schlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [Ändern des asymmetrischen Schlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
+ [Löschen des asymmetrischen Schlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
+ [Erstellen eines symmetrischen Schlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [Alter Symmetric Key &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-symmetric-key-transact-sql)   
+ [Drop Symmetric Key &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
+ [Öffnen Sie den symmetrischen Schlüssel &#40;Transact-SQL-&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
+ [Sichern und Wiederherstellen von Reporting Services Verschlüsselungsschlüsseln](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln &#40;SSRS-Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren &#40;SSRS-Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [Sichern des Dienst Hauptschlüssels](service-master-key.md)   
+ [Wiederherstellen des Dienst Hauptschlüssels](restore-the-service-master-key.md)   
+ [Erstellen eines Datenbank-Haupt Schlüssels](create-a-database-master-key.md)   
+ [Sichern eines Datenbank-Haupt Schlüssels](back-up-a-database-master-key.md)   
+ [Wiederherstellen eines Datenbank-Haupt Schlüssels](restore-a-database-master-key.md)   
  [Erstellen identischer symmetrischer Schlüssel auf zwei Servern](create-identical-symmetric-keys-on-two-servers.md)  
   
   

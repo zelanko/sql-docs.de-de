@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von CLR-Parameterdaten | Microsoft-Dokumentation
+title: Mapping von CLR-Parameter Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,57 +26,59 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b297d329f11e05ed1b1995004150644e4b76ec9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874839"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232282"
 ---
 # <a name="mapping-clr-parameter-data"></a>Zuordnen von CLR-Parameterdaten
-  In der folgenden Tabelle sind die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen, ihre Entsprechungen in CLR (Common Language Runtime) für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im `System.Data.SqlTypes`-Namespace und ihre systemeigenen CLR-Entsprechungen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework aufgeführt.  
+  In der folgenden Tabelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind die-Datentypen, ihre Entsprechungen in der Common Language Runtime ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR `System.Data.SqlTypes` ) für im-Namespace und ihre systemeigenen CLR-Entsprechungen in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework aufgelistet.  
   
 ||||  
 |-|-|-|  
-|**SQL Server-Datentyp**|Typ (in System.Data.SqlTypes oder Microsoft.SqlServer.Types)|**CLR-Datentyp ((.NET Framework)**|  
+|**SQL Server-Datentyp**|Typ (in System.Data.SqlTypes oder Microsoft.SqlServer.Types)|**CLR-Datentyp (.NET Framework)**|  
 |`bigint`|`SqlInt64`|**Int64, Nullable\<Int64>**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`bit`|`SqlBoolean`|**Boolean, Nullable\<Boolean>**|  
-|`char`|None|None|  
-|`cursor`|None|None|  
-|`date`|`SqlDateTime`|**DateTime, Nullable\<DateTime>**|  
-|`datetime`|`SqlDateTime`|**DateTime, Nullable\<DateTime>**|  
-|`datetime2`|None|**DateTime, Nullable\<DateTime>**|  
-|`DATETIMEOFFSET`|`None`|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
-|`decimal`|`SqlDecimal`|**Decimal, Nullable\<Decimal>**|  
-|`float`|`SqlDouble`|**Double, Nullable\<Double>**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=53164).|None|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=53164).|None|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=53164).|None|  
-|`image`|None|None|  
+|`bit`|`SqlBoolean`|**Boolescher Wert, auf\<NULL festleg barer boolescher>**|  
+|`char`|Keine|Keine|  
+|`cursor`|Keine|Keine|  
+|`date`|`SqlDateTime`|**DateTime, auf NULL\<festleg Bare DateTime->**|  
+|`datetime`|`SqlDateTime`|**DateTime, auf NULL\<festleg Bare DateTime->**|  
+|`datetime2`|Keine|**DateTime, auf NULL\<festleg Bare DateTime->**|  
+|`DATETIMEOFFSET`|`None`|**DateTimeOffset, auf NULL\<festleg Bare DateTimeOffset->**|  
+|`decimal`|`SqlDecimal`|**Decimal, NULL-\<Werte zulassen Dezimal>**|  
+|`float`|`SqlDouble`|**Double, auf NULL\<festleg Bare doppelte>**|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography`wird in der Datei Microsoft. SqlServer. types. dll definiert, die mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164)heruntergeladen werden kann.|Keine|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`wird in der Datei Microsoft. SqlServer. types. dll definiert, die mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164)heruntergeladen werden kann.|Keine|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`wird in der Datei Microsoft. SqlServer. types. dll definiert, die mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164)heruntergeladen werden kann.|Keine|  
+|`image`|Keine|Keine|  
 |`int`|`SqlInt32`|**Int32, Nullable\<Int32>**|  
-|`money`|`SqlMoney`|**Decimal, Nullable\<Decimal>**|  
+|`money`|`SqlMoney`|**Decimal, NULL-\<Werte zulassen Dezimal>**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
-|`ntext`|None|None|  
-|`numeric`|`SqlDecimal`|**Decimal, Nullable\<Decimal>**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` bietet eine bessere Übereinstimmung für Datenübertragungen und Datenzugriff, und `SQLString` bietet eine bessere Übereinstimmung für die Durchführung von Zeichenfolgenvorgängen.|`String, Char[]`|  
-|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char[], Nullable\<char>**|  
-|`real`|`SqlSingle` (der Bereich von `SqlSingle` ist jedoch größer als `real`)|**Single, Nullable\<Single>**|  
-|`rowversion`|None|`Byte[]`|  
-|`smallint`|`SqlInt16`|**Int16-Wert, auf NULL festlegbare\<Int16 >**|  
-|`smallmoney`|`SqlMoney`|**Decimal, Nullable\<Decimal>**|  
-|`sql_variant`|None|`Object`|  
-|`table`|None|None|  
-|`text`|None|None|  
-|`time`|None|**TimeSpan, Nullable\<TimeSpan>**|  
-|`timestamp`|None|None|  
-|`tinyint`|`SqlByte`|**Byte, Nullable\<Byte>**|  
-|`uniqueidentifier`|`SqlGuid`|**Guid, Nullable\<Guid>**|  
-|`User-defined type(UDT)`|None|Dieselbe Klasse, die in derselben Assembly oder einer abhängigen Assembly an den benutzerdefinierten Typ gebunden ist.|  
+|`ntext`|Keine|Keine|  
+|`numeric`|`SqlDecimal`|**Decimal, NULL-\<Werte zulassen Dezimal>**|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
+  `SQLChars` bietet eine bessere Übereinstimmung für Datenübertragungen und Datenzugriff, und `SQLString` bietet eine bessere Übereinstimmung für die Durchführung von Zeichenfolgenvorgängen.|`String, Char[]`|  
+|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], NULL-\<Werte zulassen char>**|  
+|`real`|
+  `SqlSingle` (der Bereich von `SqlSingle` ist jedoch größer als `real`)|**Single>, die\<NULL-Werte zulassen**|  
+|`rowversion`|Keine|`Byte[]`|  
+|`smallint`|`SqlInt16`|**Int16, Nullable\<Int16>**|  
+|`smallmoney`|`SqlMoney`|**Decimal, NULL-\<Werte zulassen Dezimal>**|  
+|`sql_variant`|Keine|`Object`|  
+|`table`|Keine|Keine|  
+|`text`|Keine|Keine|  
+|`time`|Keine|**TimeSpan, Nullable\<TimeSpan>**|  
+|`timestamp`|Keine|Keine|  
+|`tinyint`|`SqlByte`|**Byte, NULL-\<Werte zulassen>**|  
+|`uniqueidentifier`|`SqlGuid`|**GUID, auf NULL\<festleg Bare GUID>**|  
+|`User-defined type(UDT)`|Keine|Dieselbe Klasse, die in derselben Assembly oder einer abhängigen Assembly an den benutzerdefinierten Typ gebunden ist.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte, Byte[], Nullable\<byte>**|  
-|`varchar`|None|None|  
-|`xml`|`SqlXml`|None|  
+|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**Byte, Byte [], auf NULL\<festleg Bare Byte>**|  
+|`varchar`|Keine|Keine|  
+|`xml`|`SqlXml`|Keine|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Automatische Datentypkonvertierung mit Out-Parametern  
  Eine CLR-Methode kann Informationen an den aufrufenden Code oder das aufrufende Programm zurückgeben, indem sie einen Eingabeparameter mit dem `out`-Modifizierer (Microsoft Visual C#) oder `<Out()> ByRef` (Microsoft Visual Basic) markiert. Wenn der Eingabeparameter ein CLR-Datentyp im `System.Data.SqlTypes`-Namespace ist und ein aufrufendes Programm seinen entsprechenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp als Eingabeparameter angibt, wird automatisch eine Typkonvertierung durchgeführt, wenn die CLR-Methode den Datentyp zurückgibt.  
@@ -109,9 +111,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |||  
 |-|-|  
-|**CLR-Datentyp (SQL Server)**|**SQL Server-Datentyp**|  
-|`Decimal`|SMALLMONEY|  
-|`SqlMoney`|SMALLMONEY|  
+|**CLR-Datentyp (SQL Server)**|**SQL Server-Datentyp**|  
+|`Decimal`|smallmoney|  
+|`SqlMoney`|smallmoney|  
 |`Decimal`|money|  
 |`DateTime`|smalldatetime|  
 |`SQLDateTime`|smalldatetime|  
@@ -122,7 +124,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |---------------------|  
 |Die `SqlGeography`-, `SqlGeometry`- und `SqlHierarchyId`-Typen wurden der Zuordnungstabelle hinzugefügt.|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server-Datentypen in .NET Framework](sql-server-data-types-in-the-net-framework.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Datentypen im .NET Framework](sql-server-data-types-in-the-net-framework.md)  
   
   

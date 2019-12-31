@@ -1,5 +1,5 @@
 ---
-title: Implementieren des OR-Operator in systemintern kompilierten gespeicherten Prozeduren | Microsoft-Dokumentation
+title: Implementieren des OR-Operators in System intern kompilierten gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62778911"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228212"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implementieren des OR-Operators in systemintern kompilierten gespeicherten Prozeduren
   OR-Operatoren werden in Abfrageprädikaten systemintern kompilierter gespeicherter Prozeduren nicht unterstützt. Da NOT-Operatoren in Abfrageprädikaten systemintern kompilierter gespeicherter Prozeduren ebenfalls nicht unterstützt werden, können die Auswirkungen der OR-Operatoren nicht allein durch Verwendung der entsprechenden logischen Operatoren simuliert werden. Die Auswirkungen eines OR-Operators können jedoch anhand von speicheroptimierten Tabellenvariablen simuliert werden.  
@@ -46,7 +46,7 @@ ms.locfileid: "62778911"
   
 5.  Verwenden Sie den Inhalt der speicheroptimierten Tabellenvariablen als Ergebnis der Abfrage.  
   
- Im folgenden Beispiel werden Tabellen aus der AdventureWorks2012-Datenbank verwendet, die für [!INCLUDE[hek_2](../includes/hek-2-md.md)]aktualisiert wurden. Zum Herunterladen der Dateien in diesem Beispiel "GoTo" [AdventureWorks-Datenbanken – 2012, 2008R2 und 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Um das [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Codebeispiel auf AdventureWorks2012 anzuwenden, rufen Sie [Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491)auf.  
+ Im folgenden Beispiel werden Tabellen aus der AdventureWorks2012-Datenbank verwendet, die für [!INCLUDE[hek_2](../includes/hek-2-md.md)]aktualisiert wurden. Um die Dateien für dieses Beispiel herunterzuladen, navigieren Sie zu [AdventureWorks-Datenbanken-2012, 2008R2 und 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587). Um das [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Codebeispiel auf AdventureWorks2012 anzuwenden, rufen Sie [Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491)auf.  
   
  Fügen Sie der Datenbank die folgende gespeicherte Prozedur hinzu. Diese gespeicherte Prozedur wird konvertiert, sodass sie die systeminterne Kompilierung verwendet.  
   
@@ -161,7 +161,7 @@ GO
   
 5.  Verwenden Sie den Inhalt der speicheroptimierten Tabellenvariablen als Ergebnis der Abfrage.  
   
- Im folgenden Beispiel werden Tabellen aus der AdventureWorks2012-Datenbank verwendet, die für [!INCLUDE[hek_2](../includes/hek-2-md.md)]aktualisiert wurden. Zum Herunterladen der Dateien in diesem Beispiel "GoTo" [AdventureWorks-Datenbanken – 2012, 2008R2 und 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Um das [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Codebeispiel auf AdventureWorks2012 anzuwenden, rufen Sie [Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491)auf.  
+ Im folgenden Beispiel werden Tabellen aus der AdventureWorks2012-Datenbank verwendet, die für [!INCLUDE[hek_2](../includes/hek-2-md.md)]aktualisiert wurden. Um die Dateien für dieses Beispiel herunterzuladen, navigieren Sie zu [AdventureWorks-Datenbanken-2012, 2008R2 und 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587). Um das [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Codebeispiel auf AdventureWorks2012 anzuwenden, rufen Sie [Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491)auf.  
   
  Fügen Sie der Datenbank die folgende gespeicherte Prozedur hinzu. Diese gespeicherte Prozedur wird konvertiert, sodass sie die systeminterne Kompilierung verwendet. In diesem Beispiel werden INNER JOIN-Bedingungen verwendet.  
   
@@ -245,7 +245,6 @@ GO
 ## <a name="side-effects"></a>Nebeneffekte  
  Wenn Sie über mehr als einen OR-Operator in der WHERE-Klausel oder JOIN-Bedingung verfügen, kann die Anzahl der Abfragen, die zur Simulation des Verhaltens ausgeführt werden müssen, exponentiell ansteigen. Das kann die Abfrageleistung verlangsamen und zu einer höheren Arbeitsspeicherauslastung führen, weil speicheroptimierte Tabellenvariablen verwendet werden müssen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-  
   

@@ -15,32 +15,34 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f84968b9926240320f6d206aacffa1f18b4db03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42b25dfe8f0a39c577e38c6d1ef21c7f3315a89d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63225642"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75231775"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
   Ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] wurde die Unterstützung für Dienstprinzipalnamen (Service Principal Names, SPNs) erweitert und die gegenseitige Authentifizierung über alle Protokolle hinweg aktiviert. In vorherigen Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurden SPNs nur für Kerberos statt TCP unterstützt, wenn der Standard-SPN der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz in Active Directory registriert wurde.  
   
- SPNs werden vom Authentifizierungsprotokoll verwendet, um das Konto zu bestimmen, in dem eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ausgeführt wird. Ist das Konto der Instanz bekannt, kann mithilfe der Kerberos-Authentifizierung die gegenseitige Authentifizierung von Client und Server durchgeführt werden. Ist das Konto der Instanz nicht bekannt, wird die NTML-Authentifizierung verwendet, die nur die Authentifizierung des Clients durch den Server durchführt. Die Authentifizierungssuche wird derzeit vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ausgeführt. Der SPN wird vom Instanznamen und den Netzwerkverbindungseigenschaften abgeleitet. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen versuchen, SPNs beim Start zu registrieren, oder sie können manuell registriert werden. Die Registrierung schlägt jedoch fehl, wenn das Konto, dass die Registrierung der SPNs vornimmt, nicht über ausreichende Zugriffsrechte verfügt.  
+ SPNs werden vom Authentifizierungsprotokoll verwendet, um das Konto zu bestimmen, in dem eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ausgeführt wird. Ist das Konto der Instanz bekannt, kann mithilfe der Kerberos-Authentifizierung die gegenseitige Authentifizierung von Client und Server durchgeführt werden. Ist das Konto der Instanz nicht bekannt, wird die NTML-Authentifizierung verwendet, die nur die Authentifizierung des Clients durch den Server durchführt. Die Authentifizierungssuche wird derzeit vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ausgeführt. Der SPN wird vom Instanznamen und den Netzwerkverbindungseigenschaften abgeleitet. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen versuchen, SPNs beim Start zu registrieren, oder sie können manuell registriert werden. Die Registrierung schlägt jedoch fehl, wenn das Konto, dass die Registrierung der SPNs vornimmt, nicht über ausreichende Zugriffsrechte verfügt.  
   
- Domänen- und Computerkonten werden automatisch in Active Directory registriert. Diese können als SPNs verwendet werden, oder Administratoren können ihre eigenen SPNs definieren. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist einfacher zu verwalten und auch zuverlässiger, da Clients direkt den zu verwendenden SPN festlegen können.  
+ Domänen- und Computerkonten werden automatisch in Active Directory registriert. Diese können als SPNs verwendet werden, oder Administratoren können ihre eigenen SPNs definieren. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist einfacher zu verwalten und auch zuverlässiger, da Clients direkt den zu verwendenden SPN festlegen können.  
   
 > [!NOTE]  
 >  Ein von einer Clientanwendung festgelegter SPN wird nur verwendet, wenn eine Verbindung mit integrierten Sicherheitsfunktionen von Windows hergestellt wird.  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos-Konfigurations-Manager für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** ist ein Diagnosetool zur Behebung Kerberos-bezogener Verbindungsprobleme bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Microsoft Kerberos-Konfigurations-Manager für SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **Die Kerberos- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager für ist ein Diagnosetool, mit dem Probleme bei der Kerberos-Verbindung mit behoben werden können. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Weitere Informationen finden Sie unter [Microsoft Kerberos-Konfigurations-Manager für SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos-Konfigurations-Manager für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** ist ein Diagnosetool zur Behebung Kerberos-bezogener Verbindungsprobleme bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Microsoft Kerberos-Konfigurations-Manager für SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **Die Kerberos- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager für ist ein Diagnosetool, mit dem Probleme bei der Kerberos-Verbindung mit behoben werden können. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Weitere Informationen finden Sie unter [Microsoft Kerberos-Konfigurations-Manager für SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  Weitere Informationen zu Kerberos finden Sie in den folgenden Artikeln:  
   
--   [Kerberos – Technische Ergänzung für Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Technische Ergänzung zu Kerberos für Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
@@ -50,7 +52,7 @@ ms.locfileid: "63225642"
 |Szenario|Beschreibung|  
 |--------------|-----------------|  
 |Eine ältere Anwendung gibt keinen SPN an.|Dieses Kompatibilitätsszenario stellt sicher, dass sich das Verhalten von Anwendungen, die für frühere Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]entwickelt wurden, nicht verändert. Wenn kein SPN angegeben wurde, verwendet die Anwendung generierte SPNs und erkennt nicht, welche Methode zur Authentifizierung verwendet wurde.|  
-|Eine Clientanwendung, die die aktuelle Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwendet, gibt in der Verbindungszeichenfolge einen SPN als Domänenbenutzerkonto oder Computerkonto, als instanzabhängigen SPN oder als benutzerdefinierte Zeichenfolge an.|Das `ServerSPN`-Schlüsselwort kann von einem Anbieter, einer Initialisierung oder einer Verbindungszeichenfolge zu folgenden Zwecken verwendet werden:<br /><br /> -Geben Sie das Konto ein, die die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz für eine Verbindung. Dies vereinfacht den Zugriff auf die Kerberos-Authentifizierung. Wenn ein Kerberos-Schlüsselverteilungscenter (Key Distribution Center, KDC) vorhanden ist und das richtige Konto angegeben wurde, wird wahrscheinlich die Kerberos- anstatt der NTLM-Authentifizierung durchgeführt. Das KDC befindet sich normalerweise auf dem gleichen Computer wie der Domänencontroller.<br />-Geben Sie einen SPN gesucht, das Dienstkonto für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Für jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz werden zwei Standard-SPNs generiert, die für diesen Zweck verwendet werden können. Diese Schlüssel sind jedoch nicht unbedingt in Active Directory vorhanden. Daher ist in dieser Situation die Kerberos-Authentifizierung nicht gewährleistet.<br />-Geben Sie einen SPN, der verwendet wird, Suchen nach dem Dienstkonto für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Dies kann eine beliebige benutzerdefinierte Zeichenfolge sein, die dem Dienstkonto zugeordnet wird. In diesem Fall muss der Schlüssel im KDC manuell registriert werden und den Richtlinien für einen benutzerdefinierten SPN entsprechen.<br /><br /> Das `FailoverPartnerSPN`-Schlüsselwort kann verwendet werden, um den SPN für den Failoverpartnerserver anzugeben. Der Wertebereich des Kontos und des Active Directory-Schlüssels entspricht den Werten, die Sie für den Prinzipalserver angeben können.|  
+|Eine Clientanwendung, die die aktuelle Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwendet, gibt in der Verbindungszeichenfolge einen SPN als Domänenbenutzerkonto oder Computerkonto, als instanzabhängigen SPN oder als benutzerdefinierte Zeichenfolge an.|Das `ServerSPN`-Schlüsselwort kann von einem Anbieter, einer Initialisierung oder einer Verbindungszeichenfolge zu folgenden Zwecken verwendet werden:<br /><br /> -Geben Sie das Konto an, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] das von der-Instanz für eine Verbindung verwendet wird. Dies vereinfacht den Zugriff auf die Kerberos-Authentifizierung. Wenn ein Kerberos-Schlüsselverteilungscenter (Key Distribution Center, KDC) vorhanden ist und das richtige Konto angegeben wurde, wird wahrscheinlich die Kerberos- anstatt der NTLM-Authentifizierung durchgeführt. Das KDC befindet sich normalerweise auf dem gleichen Computer wie der Domänencontroller.<br />-Geben Sie einen SPN an, um das Dienst Konto für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Instanz zu suchen. Für jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz werden zwei Standard-SPNs generiert, die für diesen Zweck verwendet werden können. Diese Schlüssel sind jedoch nicht unbedingt in Active Directory vorhanden. Daher ist in dieser Situation die Kerberos-Authentifizierung nicht gewährleistet.<br />-Geben Sie einen SPN an, der verwendet wird, um das Dienst Konto für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Instanz zu suchen. Dies kann eine beliebige benutzerdefinierte Zeichenfolge sein, die dem Dienstkonto zugeordnet wird. In diesem Fall muss der Schlüssel im KDC manuell registriert werden und den Richtlinien für einen benutzerdefinierten SPN entsprechen.<br /><br /> Das `FailoverPartnerSPN`-Schlüsselwort kann verwendet werden, um den SPN für den Failoverpartnerserver anzugeben. Der Wertebereich des Kontos und des Active Directory-Schlüssels entspricht den Werten, die Sie für den Prinzipalserver angeben können.|  
 |Eine ODBC-Anwendung legt einen SPN als Verbindungsattribut für den Prinzipalserver oder Failoverpartnerserver fest.|Das Verbindungsattribut `SQL_COPT_SS_SERVER_SPN` kann zur Festlegung des SPN für eine Verbindung zum Prinzipalserver verwendet werden.<br /><br /> Das Verbindungsattribut `SQL_COPT_SS_FAILOVER_PARTNER_SPN` kann zur Festlegung des SPN für eine Verbindung zum Failoverpartnerserver verwendet werden.|  
 |Eine OLE DB-Anwendung legt einen SPN als Initialisierungseigenschaft der Datenquelle für den Prinzipalserver oder einen Failoverpartnerserver fest.|Die Verbindungseigenschaft `SSPROP_INIT_SERVER_SPN` im `DBPROPSET_SQLSERVERDBINIT`-Eigenschaftensatz kann zur Festlegung des SPN für eine Verbindung verwendet werden.<br /><br /> Die Verbindungseigenschaft `SSPROP_INIT_FAILOVER_PARTNER_SPN` in `DBPROPSET_SQLSERVERDBINIT` kann zur Festlegung des SPN für eine Verbindung zum Failoverpartnerserver verwendet werden.|  
 |Ein Benutzer legt einen SPN für einen Server oder Failoverpartnerserver in einem ODBC-Datenquellenamen (Data Source Name, DSN) fest.|Der SPN kann in einem ODBC DSN durch die DSN-Setupdialogfelder angegeben werden.|  
@@ -72,18 +74,18 @@ ms.locfileid: "63225642"
  Das neue Verbindungsverhalten ist clientseitig implementiert und daher kein spezifisches Verhalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Verbindungsserver und Delegierung  
- Wenn Verbindungsserver erstellt werden, die `@provstr` Parameter [Sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) kann verwendet werden, um den Server und Failoverpartner SPNs anzugeben. Die Vorteile dieser Vorgehensweise sind die gleichen wie die bei der Angabe von SPNs in Client-Verbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen herzustellen, die Kerberos-Authentifizierung verwenden.  
+ Beim Einrichten von Verbindungsservern wird der Parameter `@provstr` von [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) verwendet, um den SPN für den Server und Failoverpartner festzulegen. Diese Vorgehensweise hat den gleichen Vorteil wie das Festlegen von SPNs in Clientverbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen mit Kerberos-Authentifizierung herzustellen.  
   
  Delegierung über Verbindungsserver erfordert die Kerberos-Authentifizierung.  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>Verwaltungsaspekte von SPNs, die von Anwendungen angegeben werden  
  Berücksichtigen Sie die folgenden Faktoren bei der Entscheidung, ob SPNs in einer Anwendung (über Verbindungszeichenfolgen) oder programmgesteuert über Verbindungseigenschaften (anstatt sich auf den standardmäßig vom Anbieter erstellten SPN zu verlassen) angegeben werden.  
   
--   Sicherheit: Ist der angegebene SPN geschützte Informationen offen?  
+-   Sicherheit: Legt der angegebene SPN geschützte Informationen offen?  
   
--   Zuverlässigkeit: So aktivieren Sie die Verwendung von Standard-SPNs muss das Dienstkonto in der die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz ausgeführt wird, müssen zum update von Active Directory im KDC von Systemdiensten besitzen.  
+-   Zuverlässigkeit: Zur Aktivierung von Standard-SPNs muss das Dienstkonto der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über ausreichende Privilegien zum Update von Active Directory auf dem Schlüsselverteilungscenter verfügen.  
   
--   Benutzerfreundlichkeit und Speicherorttransparenz: Wie die SPNs einer Anwendung wirkt, wenn die Datenbank auf einen anderen verschiebt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz? Dies gilt für sowohl den Prinzipalserver als auch seinen Failoverpartner, wenn Sie die Datenbankspiegelung verwenden. Wie wirkt es sich auf Anwendungen aus, wenn eine Serveränderung bedeutet, dass SPNs geändert werden müssen? Werden die Änderungen verwaltet?  
+-   Benutzerfreundlichkeit und Speicherorttransparenz: Wie wirkt es sich auf die SPNs einer Anwendung aus, wenn die Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verschoben wird? Dies gilt für sowohl den Prinzipalserver als auch seinen Failoverpartner, wenn Sie die Datenbankspiegelung verwenden. Wie wirkt es sich auf Anwendungen aus, wenn eine Serveränderung bedeutet, dass SPNs geändert werden müssen? Werden die Änderungen verwaltet?  
   
 ## <a name="specifying-the-spn"></a>Angeben des SPN  
  Sie können einen SPN in Dialogfeldern und Code angeben. In diesem Abschnitt wird erläutert, wie Sie einen SPN angeben können.  
@@ -92,26 +94,25 @@ ms.locfileid: "63225642"
   
  Die Syntax, die SPNs in Attributen für Verbindungszeichenfolgen und Verbindungen verwenden, lautet wie folgt:  
   
-|Syntax|Description|  
+|Syntax|Beschreibung|  
 |------------|-----------------|  
-|MSSQLSvc/*fqdn*|Der vom Anbieter erstellte Standard-SPN für eine Standardinstanz, wenn ein anderes Protokoll als TCP verwendet wird.<br /><br /> *fqdn* ist ein vollqualifizierter Domänenname.|  
-|MSSQLSvc/*fqdn*:*port*|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird.<br /><br /> *port* ist eine TCP-Portnummer.|  
-|MSSQLSvc/*fqdn*:*InstanceName*|Der vom Anbieter erstellte Standard-SPN für eine benannte Instanz, wenn ein anderes Protokoll als TCP verwendet wird.<br /><br /> *InstanceName* ist ein Instanzname von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
+|MSSQLSvc/*fqdn*|Der vom Anbieter erstellte Standard-SPN für eine Standardinstanz, wenn ein anderes Protokoll als TCP verwendet wird.<br /><br /> *FQDN* ist ein voll qualifizierter Domänen Name.|  
+|MSSQLSvc/voll*qualifizierter*Name:*Port*|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird.<br /><br /> *Port* ist eine TCP-Portnummer.|  
+|MSSQLSvc/*FQDN*:*instanceName*|Der vom Anbieter erstellte Standard-SPN für eine benannte Instanz, wenn ein anderes Protokoll als TCP verwendet wird.<br /><br /> *InstanceName* ist ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanzname.|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Der SPN, der integrierten Computerkonten zugeordnet wird, die automatisch von Windows registriert werden.|  
-|*Username*@*Domain*|Direkte Spezifikation eines Domänenkontos.<br /><br /> *Username* ist der Name des Windows-Benutzerkontos.<br /><br /> *Domain* ist ein Windows-Domänenname oder ein vollqualifizierter Domänenname.|  
-|*MachineName*$@*Domain*|Ein Computerkonto wird direkt angegeben.<br /><br /> (Wenn der Server, die Sie eine Verbindung mit unter den Konten LOCAL SYSTEM oder NETWORK SERVICE, zum Kerberos-Authentifizierung ausgeführt wird `ServerSPN` kann die *"MachineName"* $@*Domäne* -Format.)|  
+|*Benutzernamen*@*Domäne*|Direkte Spezifikation eines Domänenkontos.<br /><br /> *Username* ist ein Windows-Benutzerkonto Name.<br /><br /> Die *Domäne* ist ein Windows-Domänen Name oder ein voll qualifizierter Domänen Name.|  
+|*MachineName*$@-*Domäne*|Ein Computerkonto wird direkt angegeben.<br /><br /> (Wenn `ServerSPN` der Server, mit dem Sie eine Verbindung herstellen, unter "Lokales System" oder Netzwerkdienst Konto ausgeführt wird, kann zum erhalten der Kerberos-Authentifizierung das*Domänen* Format " *MachineName*$@" aufweisen.)|  
 |*KDCKey*/*MachineName*|Ein vom Benutzer angegebener SPN.<br /><br /> *KDCKey* ist eine alphanumerische Zeichenfolge, die den Regeln für einen KDC-Schlüssel entspricht.|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>SPNs, die ODBC und OLE DB-Syntax unterstützen  
  Informationen zur Syntax finden Sie in den folgenden Themen:  
   
--   [Dienstprinzipalnamen &#40;SPNs&#41; in Clientverbindungen &#40;ODBC&#41;](../odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Dienst Prinzipal Namen &#40;SPNs&#41; in Client Verbindungen &#40;ODBC-&#41;](../odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Dienstprinzipalnamen (SPN) &#40;SPNs&#41; in Clientverbindungen &#40;(OLE DB&#41;)](../ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Dienst Prinzipal Namen &#40;SPNs&#41; in Client Verbindungen &#40;OLE DB&#41;](../ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
- Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Beispiele zur Programmierbarkeit von SQL Server-Daten](http://msftdpprodsamples.codeplex.com/).  
+ Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Beispiele zur Programmierbarkeit von SQL Server-Daten](https://msftdpprodsamples.codeplex.com/).  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client-Features](sql-server-native-client-features.md)  
-  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client Features](sql-server-native-client-features.md)  
   

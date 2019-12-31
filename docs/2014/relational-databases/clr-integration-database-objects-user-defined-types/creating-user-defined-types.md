@@ -15,12 +15,12 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06418c7fd1a9b465a78d01a8739912565b1459f5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919611"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232218"
 ---
 # <a name="creating-a-user-defined-type"></a>Erstellen eines benutzerdefinierten Typs
   Um einen benutzerdefinierten Typ (User-Defined Type, UDT) zu erstellen, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert werden kann, müssen Sie zuerst in einer der unterstützten .NET Framework-Programmiersprachen, z. B. Visual C# oder Visual Basic, eine Klasse definieren, die den Spezifikationen für die Erstellung von UDTs entspricht. Die Klasse kann dann in eine DLL (Dynamic Link Library) kompiliert werden, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden kann. Sie können UDTs auch mit Visual Studio erstellen und bereitstellen.  
@@ -40,9 +40,9 @@ Reconfigure
  Veranschaulicht Programmiertechniken, die bei der Erstellung benutzerdefinierter Typen relevant sind.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codelisting definiert den UDT Point, das ausführlich beschrieben wird [Codieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  
+ Das folgende Codelisting definiert den Point-UDT, der im Abschnitt " [Codieren von benutzerdefinierten Typen](creating-user-defined-types-coding.md)" ausführlich beschrieben wird.  
   
- Sie erhalten den vollständigen Code für die anderen in diesem Abschnitt beschriebenen Beispiele, wenn Sie die CLR-Beispiele installieren. Anweisungen zum Installieren dieser Beispiele finden Sie [Beispiele für SQL Server-Datenbank-Engine](http://msftengprodsamples.codeplex.com/).  
+ Sie erhalten den vollständigen Code für die anderen in diesem Abschnitt beschriebenen Beispiele, wenn Sie die CLR-Beispiele installieren. Anweisungen zum Installieren dieser Beispiele finden Sie unter [SQL Server Datenbank-Engine Beispiele](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -330,7 +330,6 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte CLR-Typen](clr-user-defined-types.md)  
-  
   

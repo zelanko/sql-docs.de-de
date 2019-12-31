@@ -1,7 +1,7 @@
 ---
 title: Berechnungen in mehrdimensionalen Modellen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 12/10/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -21,12 +21,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ecc0e4c4b2f5fdc1d6cad7ad068d9a1da440393
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 838e3a8d2df72d1589fdf76198671fee571e2e62
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046622"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75229424"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Berechnungen in mehrdimensionalen Modellen
   Mithilfe der Registerkarte **Berechnungen** des Cube-Designers können Sie berechnete Elemente, benannte Mengen sowie andere MDX-Berechnungen (Multidimensional Expressions) erstellen.  
@@ -40,13 +40,13 @@ ms.locfileid: "67046622"
 -   Der Berechnungsausdrücke-Bereich unterstützt eine Formularansicht und eine Skriptansicht.  
   
 > [!NOTE]  
->  Weitere Informationen zur MDX-Skripterstellung finden Sie unter [Introduction to MDX Scripting in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892), und finden Sie im Abschnitt Weitere Ressourcen für die [SQL Server 2005 – Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) Seite der Website der Microsoft TechNet-Website. Weitere Informationen zu Leistungsproblemen im Zusammenhang mit dem Cubedesign finden Sie unter [SQL Server 2005 Analysis Services Performance Guide](http://download.microsoft.com/download/8/5/e/85eea4fa-b3bb-4426-97d0-7f7151b2011c/ssas2005perfguide.doc).  
+>  Weitere Informationen zu MDX-Skripts finden [Sie unter Introduction to MDX Scripting in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892). Weitere Informationen finden Sie auf der Microsoft TechNet-Website auf der Seite [SQL Server 2005-Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) . Weitere Informationen zu Leistungsproblemen im Zusammenhang mit dem Cubedesign finden Sie unter [SQL Server 2005 Analysis Services Performance Guide](https://download.microsoft.com/download/8/5/e/85eea4fa-b3bb-4426-97d0-7f7151b2011c/ssas2005perfguide.doc).  
   
 ## <a name="creating-a-new-calculation"></a>Erstellen einer neuen Berechnung  
  Zum Erstellen einer neuen Berechnung klicken Sie im Menü **Cube** auf der Registerkarte **Berechnungen** des Cube-Designers auf eine der Optionen **Neues berechnetes Element**, **Neue benannte Menge**oder **Neuer Skriptbefehl**, abhängig von der Art der Berechnung, die Sie erstellen möchten. Sie können auch auf eine der entsprechenden Schaltflächen auf der Symbolleiste oder mit der rechten Maustaste auf eine beliebige Stelle innerhalb des Bereichs **Skriptplaner** und dann auf einen der Befehle im Kontextmenü klicken. Durch diese Aktion wird dem **Skriptplaner** -Bereich eine neue Berechnung hinzugefügt, und im Berechnungsformular des Berechnungsausdrücke-Bereichs werden entsprechende Felder angezeigt. Wenn Sie ein neues Skript erstellen, wird durch diese Aktion die Skriptansicht im Berechnungsausdrücke-Bereich geöffnet. Weitere Informationen zu den drei Arten von Berechnungen finden Sie unter [Erstellen von berechneten Elementen](create-calculated-members.md), [Erstellen von benannten Mengen](create-named-sets.md)und [Definieren von Zuweisungen und anderen Skriptbefehlen](define-assignments-and-other-script-commands.md).  
   
 ## <a name="editing-scripts"></a>Bearbeiten von Skripts  
- Skripts werden im Berechnungsausdrücke-Bereich auf der Registerkarte **Berechnungen** bearbeitet. Der Berechnungsausdrücke-Bereich verfügt über zwei Ansichten, die Skriptansicht und die Formularansicht. In der Formularansicht werden die Ausdrücke und Eigenschaften eines einzelnen Befehls angezeigt. Beim Bearbeiten eines MDX-Skripts nimmt ein Ausdrucksfeld die gesamte Formularansicht ein.  
+ Bearbeiten Sie die Skripts im Bereich Berechnungs Ausdrücke der Registerkarte **Berechnungen** . Der Bereich Berechnungs Ausdrücke verfügt über zwei Ansichten, die Skript Ansicht und die Formularansicht. In der Formularansicht werden die Ausdrücke und Eigenschaften eines einzelnen Befehls angezeigt. Beim Bearbeiten eines MDX-Skripts nimmt ein Ausdrucksfeld die gesamte Formularansicht ein.  
   
  Die Skriptansicht stellt einen Code-Editor für die Bearbeitung der Skripts bereit. Wird der Berechnungsausdrücke-Bereich in der Skriptansicht angezeigt, ist der **Skriptplaner** -Bereich ausgeblendet. In der Skriptansicht stehen Farbcodierung, Vervollständigen von Klammern, automatische Vervollständigung und MDX-Codebereiche zur Verfügung. Die MDX-Codebereiche können zum Vereinfachen der Bearbeitung reduziert oder erweitert werden.  
   

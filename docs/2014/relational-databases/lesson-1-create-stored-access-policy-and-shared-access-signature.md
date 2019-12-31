@@ -10,12 +10,12 @@ ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c9efb23d15b4f72375077f4bbf1450d8c47fddf4
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 80bd9c253adfcf1d1a677953fef183d9109534ef
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153837"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75231824"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Lektion 2: Erstellen einer Richtlinie für einen Container und Generieren eines Shared Access Signature (SAS)-Schlüssels
   In dieser Lektion erfahren Sie, wie Sie eine Richtlinie für den BLOB-Container erstellen und auch einen SAS-Schlüssel generieren.  
@@ -24,7 +24,7 @@ ms.locfileid: "70153837"
   
  Sie können eine Richtlinie und eine Shared Access Signature erstellen, indem Sie eine der folgenden Methoden verwenden:  
   
--   Azure-Rest-API-Vorgänge: [Erstellen Sie Container](https://msdn.microsoft.com/library/azure/dd179468.aspx), legen Sie die [Container-ACL fest](https://msdn.microsoft.com/library/azure/dd179391.aspx), und rufen [Sie Container-ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)  
+-   Azure-Rest-API-Vorgänge: [Container erstellen](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Container-ACL festlegen](https://msdn.microsoft.com/library/azure/dd179391.aspx)und [Container-ACL erhalten](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
 -   [Cloudblobcontainer. getsharedaccesssignature-Methode](https://docs.microsoft.com/dotnet/api/microsoft.azure.storage.blob.cloudblobcontainer.getsharedaccesssignature) im Azure-SDK.  
   
@@ -40,10 +40,9 @@ ms.locfileid: "70153837"
   
     ```  
   
--   Ein Azure-Explorer-Tool von Drittanbietern, z. b. [Azure Storage-Explorer](http://azurestorageexplorer.codeplex.com/).  
+-   Ein Azure-Explorer-Tool von Drittanbietern, z. b. [Azure Storage-Explorer](https://azurestorageexplorer.codeplex.com/).  
   
  **Nächste Lektion:**  
   
- [Lektion 3: Erstellen eines SQL Server Anmelde Informationen](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
-  
+ [Lektion 3: Erstellen von SQL Server-Anmeldeinformationen](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   

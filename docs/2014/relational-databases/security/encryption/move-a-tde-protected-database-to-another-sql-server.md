@@ -10,72 +10,72 @@ helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63012053"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957168"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
-  In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand von Transparent Data Encryption (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] beschrieben. Die TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der `master`-Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.  
+  In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand von Transparent Data Encryption (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] beschrieben. TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten- und Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Datenbank-Verschlüsselungsschlüssel (DEK), der im Startdatensatz der Datenbank gespeichert wird und während der Wiederherstellung zur Verfügung steht. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der `master`-Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.  
   
  **In diesem Thema**  
   
--   **Vorbereitungen:**  
+-   **Bevor Sie beginnen:**  
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Sicherung](#Security)  
   
--   **So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank mit**  
+-   **So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank mit:**  
   
      [SQL Server Management Studio](#SSMSCreate)  
   
      [Transact-SQL](#TsqlCreate)  
   
--   **So verschieben Sie eine Datenbank mit**  
+-   **So verschieben Sie eine Datenbank mit:**  
   
      [SQL Server Management Studio](#SSMSMove)  
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="Restrictions"></a>Einschränkungen  
   
--   Beim Verschieben einer TDE-geschützten Datenbank muss auch das Zertifikat oder der asymmetrische Schlüssel verschoben werden, mit dem der DEK geöffnet wird. Das Zertifikat oder asymmetrischen Schlüssels muss in installiert sein der `master` Datenbank des Zielservers, sodass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können auf die Datenbankdateien zugegriffen. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](transparent-data-encryption.md).  
+-   Beim Verschieben einer TDE-geschützten Datenbank muss auch das Zertifikat oder der asymmetrische Schlüssel verschoben werden, mit dem der DEK geöffnet wird. Das Zertifikat oder der asymmetrische Schlüssel muss in der `master` -Datenbank des Zielservers installiert sein, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] damit auf die Datenbankdateien zugreifen kann. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](transparent-data-encryption.md).  
   
 -   Bewahren Sie Kopien der Zertifikatdatei und der Datei mit dem privaten Schlüssel auf, um das Zertifikat wiederherzustellen. Das Kennwort für den privaten Schlüssel muss nicht mit dem Kennwort für den Datenbank-Hauptschlüssel übereinstimmen.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Speichert die Dateien, die hier erstellten **c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\DATA** standardmäßig. Die Dateinamen und -orte können individuell abweichen.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]speichert die hier erstellten Dateien unter **c:\Programme\Microsoft SQL server\mssql12. MSSQLSERVER\MSSQL\Data** standardmäßig. Die Dateinamen und -orte können individuell abweichen.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
   
--   Erfordert `CONTROL DATABASE` -Berechtigung für die `master` Datenbank, um den Datenbankhauptschlüssel zu erstellen.  
+-   Erfordert `CONTROL DATABASE` die-Berechtigung `master` für die Datenbank, um den Datenbank-Hauptschlüssel zu erstellen.  
   
--   Erfordert `CREATE CERTIFICATE` -Berechtigung für die `master` Datenbank, um das Zertifikat zu erstellen, die von der DEK geschützt.  
+-   Erfordert `CREATE CERTIFICATE` die-Berechtigung `master` für die Datenbank zum Erstellen des Zertifikats, mit dem der DEK geschützt wird.  
   
 -   Erfordert die `CONTROL DATABASE`-Berechtigung für die verschlüsselte Datenbank und die `VIEW DEFINITION`-Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel, die zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet werden.  
   
-##  <a name="SSMSProcedure"></a> So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank  
+##  <a name="SSMSProcedure"></a>So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank  
   
-###  <a name="SSMSCreate"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSCreate"></a>Verwenden von SQL Server Management Studio  
   
-1.  Erstellen Sie einen Datenbank-Hauptschlüssel und ein Zertifikat in der `master` Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
+1.  Erstellen Sie einen Datenbank-Hauptschlüssel und ein `master` Zertifikat in der Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
-2.  Erstellen Sie eine Sicherung des Serverzertifikats in den `master` Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
+2.  Erstellen Sie eine Sicherung des Serverzertifikats in der `master` Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
 3.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Ordner **Datenbanken** , und klicken Sie dann auf **Neue Datenbank**.  
   
 4.  Geben Sie im Dialogfeld **Neue Datenbank** in das Feld **Datenbankname** den Namen der neuen Datenbank ein.  
   
-5.  Geben Sie im Feld **Besitzer** den Namen des Besitzers der neuen Datenbank ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Datenbankbesitzer auswählen** zu öffnen. Weitere Informationen zum Erstellen einer neuen Datenbank finden Sie unter [Create a Database](../../databases/create-a-database.md).  
+5.  Geben Sie im Feld **Besitzer** den Namen des Besitzers der neuen Datenbank ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Datenbankbesitzer auswählen** zu öffnen. Weitere Informationen zum Erstellen einer neuen Datenbank finden Sie unter [Create a Database](../../databases/create-a-database.md).  
   
 6.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um den Ordner **Datenbank** zu erweitern.  
   
@@ -89,17 +89,17 @@ ms.locfileid: "63012053"
      **Serverzertifikat verwenden**  
      Legt fest, dass die Verschlüsselung durch ein Zertifikat gesichert wird. Wählen Sie einen Eintrag aus der Liste aus. Wenn Sie nicht über die Berechtigung `VIEW DEFINITION` verfügen, ist diese Liste leer. Wenn als Verschlüsselungsmethode das Zertifikat ausgewählt wird, darf dieser Wert nicht leer sein. Weitere Informationen zu Zertifikaten finden Sie unter [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
   
-     **Asymmetrischen Serverschlüssel verwenden**  
+     **Asymmetrischen Server Schlüssel verwenden**  
      Legt fest, dass die Verschlüsselung durch einen asymmetrischen Schlüssel gesichert wird. Nur verfügbare asymmetrische Schlüssel werden angezeigt. Nur ein asymmetrischer von einem EKM-Modul geschützter Schlüssel kann mit TDE eine Datenbank verschlüsseln.  
   
-     **Datenbankverschlüsselung aktivieren**  
+     **Datenbankverschlüsselung festlegen auf**  
      Ändert die Datenbank, um TDE zu aktivieren bzw. zu deaktivieren.  
   
 8.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-###  <a name="TsqlCreate"></a> Verwenden von Transact-SQL  
+###  <a name="TsqlCreate"></a>Verwenden von Transact-SQL  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -143,23 +143,23 @@ ms.locfileid: "63012053"
     GO  
     ```  
   
- Weitere Informationen finden Sie in den folgenden Themen:  
+ Weitere Informationen finden Sie unter:  
   
--   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [Create Master Key &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [Erstellen eines Zertifikats &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)  
+-   [Sicherungs Zertifikat &#40;Transact-SQL-&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [Create Database &#40;SQL Server Transact-SQL-&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
--   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [Erstellen eines Daten Bank Verschlüsselungsschlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
--   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+-   [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
-##  <a name="TsqlProcedure"></a> So verschieben Sie eine Datenbank  
+##  <a name="TsqlProcedure"></a>So verschieben Sie eine Datenbank  
   
-###  <a name="SSMSMove"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSMove"></a>Verwenden von SQL Server Management Studio  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, die Sie oben verschlüsselt haben, zeigen Sie auf **Tasks**, und wählen Sie **Trennen...** aus.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "63012053"
      **Zu trennende Datenbanken**  
      Führt die zu trennenden Datenbanken auf.  
   
-     **Database Name**  
+     **Datenbankname**  
      Zeigt den Namen der zu trennenden Datenbank an.  
   
      **Verbindungen löschen**  
@@ -177,21 +177,21 @@ ms.locfileid: "63012053"
     > [!NOTE]  
     >  Sie können eine Datenbank mit aktiven Verbindungen nicht trennen.  
   
-     **Statistikaktualisierung**  
+     **Statistik aktualisieren**  
      Standardmäßig werden durch den Trennvorgang beim Trennen der Datenbank die veralteten Optimierungsstatistiken beibehalten. Um die vorhandenen Optimierungsstatistiken zu aktualisieren, aktivieren Sie dieses Kontrollkästchen.  
   
-     **Volltextkataloge beibehalten**  
+     **Beibehalten von voll Text Katalogen**  
      Standardmäßig werden während des Trennvorgangs alle der Datenbank zugeordneten Volltextkataloge beibehalten. Um sie zu entfernen, deaktivieren Sie das Kontrollkästchen **Volltextkataloge beibehalten** . Diese Option wird nur beim Aktualisieren einer Datenbank von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]angezeigt.  
   
-     **Status**  
-     Zeigt einen der folgenden Zustände: **Ready** (Bereit) der **Not ready** (Nicht bereit).  
+     **Stands**  
+     Zeigt für den Status einen der folgenden Werte an: **Bereit** oder **Nicht bereit**.  
   
-     **MessageBox**  
+     **Message**  
      Unter **Meldung** können folgende Informationen zur Datenbank angezeigt werden:  
   
     -   Wenn eine Datenbank an einer Replikation beteiligt ist, hat der **Status** den Wert **Nicht bereit** , und unter **Meldung** wird **Die Datenbank wurde repliziert**angezeigt.  
   
-    -   Wenn eine Datenbank mindestens eine aktive Verbindung aufweist. die **Status** ist **nicht bereit** und **Nachricht** angezeigt, _< Number_of_active_connections >_ **Aktive Verbindung(en)** - zum Beispiel: **1 Aktive Verbindung(en)** . Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
+    -   Wenn eine Datenbank über eine oder mehrere Verbindungen verfügt, weist der **Status** den Wert **Nicht bereit** auf, und in der Spalte **Meldung** wird _<Anzahl_aktiver_Verbindungen>_**Aktive Verbindung(en)** angezeigt, z.B.: **1 Aktive Verbindung(en)**. Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
   
      Weitere Informationen zu einer Meldung erhalten Sie, indem Sie auf den Linktext klicken, um den Aktivitätsmonitor zu öffnen.  
   
@@ -205,60 +205,61 @@ ms.locfileid: "63012053"
   
 6.  Erstellen Sie anhand der entsprechenden Sicherungsdatei das Serverzertifikat neu. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
-7.  Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Ordner **Datenbanken**, und klicken Sie anschließend auf **Anfügen...** .  
+7.  Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Ordner **Datenbanken**, und klicken Sie anschließend auf **Anfügen...**.  
   
 8.  Klicken Sie im Dialogfeld **Datenbanken anfügen** unter **Anzufügende Datenbanken**auf **Hinzufügen**.  
   
-9. In der **Datenbankdateien suchen –** _Server_name_ wählen Sie im Dialogfeld die Datenbankdatei mit dem neuen Server angefügt, und klicken Sie auf **OK**.  
+9. Wählen Sie im Dialogfeld **Datenbankdateien suchen-**_server_name_ die Datenbankdatei aus, die dem neuen Server angefügt werden soll, und klicken Sie auf **OK**.  
   
      Die folgenden Optionen sind im Dialogfeld **Datenbanken anfügen** verfügbar.  
   
      **Anzufügende Datenbanken**  
      Zeigt Informationen zu den ausgewählten Datenbanken an.  
   
+     
      \<Keine Spaltenüberschrift>  
-     Zeigt ein Symbol an, das den Status des Anfügevorgangs angibt. Die möglichen Symbole werden in der unten stehenden Beschreibung von **Status** beschrieben.  
+  Zeigt ein Symbol an, das den Status des Anfügevorgangs angibt. Die möglichen Symbole werden in der unten stehenden Beschreibung von **Status** beschrieben.  
   
-     **Speicherort für MDF-Datei**  
+     **MDF-Datei Speicherort**  
      Zeigt den Pfad und den Dateinamen der ausgewählten MDF-Datei an.  
   
-     **Database Name**  
+     **Datenbankname**  
      Zeigt den Namen der Datenbank an.  
   
      **Anfügen als**  
      Gibt wahlweise einen anderen Namen für die anzufügende Datenbank an.  
   
-     **Besitzer**  
+     **Eigentor**  
      Zeigt eine Dropdownliste mit möglichen Datenbankbesitzern an, aus der Sie wahlweise einen anderen Besitzer auswählen können.  
   
-     **Status**  
+     **Stands**  
      Zeigt den Status der Datenbank an (siehe folgende Tabelle).  
   
     |Symbol|Statustext|Beschreibung|  
     |----------|-----------------|-----------------|  
     |(Kein Symbol)|(Kein Text)|Das Anfügen hat noch nicht begonnen oder steht für dieses Objekt noch aus. Dies ist der Standardwert bei Öffnen des Dialogfelds.|  
-    |Grünes, nach rechts zeigendes Dreieck|Vorgang wird ausgeführt|Das Anfügen hat begonnen, ist aber noch nicht abgeschlossen.|  
-    |Grünes Häkchen|Erfolgreich|Das Objekt wurde erfolgreich angefügt.|  
+    |Grünes, nach rechts zeigendes Dreieck|In Bearbeitung|Das Anfügen hat begonnen, ist aber noch nicht abgeschlossen.|  
+    |Grünes Häkchen|Erfolg|Das Objekt wurde erfolgreich angefügt.|  
     |Roter Kreis mit einem weißen Kreuz darin|Fehler|Beim Anfügen ist ein Fehler aufgetreten. Der Vorgang konnte deshalb nicht erfolgreich abgeschlossen werden.|  
     |Kreis mit zwei schwarzen Quadranten (links und rechts) und zwei weißen Quadranten (oben und unten) darin|Beendet|Das Anfügen wurde nicht erfolgreich abgeschlossen, weil der Benutzer den Vorgang angehalten hat.|  
     |Kreis mit einem gekrümmten Pfeil darin, der entgegengesetzt der Uhrzeigerrichtung zeigt|Rollback wurde ausgeführt|Anfügen war erfolgreich, es wurde jedoch ein Rollback durchgeführt, weil beim Anfügen eines anderen Objekts ein Fehler aufgetreten ist.|  
   
-     **MessageBox**  
+     **Message**  
      Zeigt entweder eine leere Meldung oder einen "Datei nicht gefunden"-Link an.  
   
-     **Hinzufügen**  
+     **Eren**  
      Suchen Sie die erforderlichen Hauptdatenbankdateien. Wenn der Benutzer eine MDF-Datei auswählt, werden entsprechende Informationen automatisch in die jeweiligen Felder des Rasters **Anzufügende Datenbank** eingetragen.  
   
-     **Entfernen**  
+     **Aufgeh**  
      Entfernt die ausgewählte Datei aus dem Raster **Anzufügende Datenbank** .  
   
-     **"** _<database_name>_ **" Datenbankdetails für**  
-     Zeigt die Namen der anzufügenden Dateien an. Klicken Sie zum Überprüfen oder Ändern des Pfadnamens einer Datei auf die Schaltfläche **Durchsuchen** ( **…** ).  
+     **Daten Bank Details** **"** _<database_name>_ "  
+     Zeigt die Namen der anzufügenden Dateien an. Klicken Sie zum Überprüfen oder Ändern des Pfadnamens einer Datei auf die Schaltfläche **Durchsuchen** (**…**).  
   
     > [!NOTE]  
     >  Wenn eine Datei nicht vorhanden ist, wird in der Spalte **Meldung** "Nicht gefunden" angezeigt. Wenn keine Protokolldatei gefunden wird, liegt sie in einem anderen Verzeichnis oder wurde gelöscht. Dann müssen Sie entweder den Dateipfad im Raster **Datenbankdetails** ändern, um auf den richtigen Pfad zu verweisen, oder die Protokolldatei aus dem Raster entfernen. Wenn keine .ndf-Datei gefunden wurde, müssen Sie ihren Pfad im Raster aktualisieren, um auf den richtigen Pfad zu verweisen.  
   
-     **Originaldateiname**  
+     **Ursprünglicher Dateiname**  
      Zeigt den Namen der angefügten Datei an, die zur Datenbank gehört.  
   
      **Dateityp**  
@@ -267,12 +268,12 @@ ms.locfileid: "63012053"
      **Aktueller Dateipfad**  
      Zeigt den Pfad zur ausgewählten Datenbankdatei an Die Pfadangabe kann manuell bearbeitet werden.  
   
-     **MessageBox**  
+     **Message**  
      Zeigt entweder eine leere Meldung oder einen „**Datei nicht gefunden**“-Hyperlink an.  
   
-###  <a name="TsqlMove"></a> Verwenden von Transact-SQL  
+###  <a name="TsqlMove"></a>Verwenden von Transact-SQL  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -311,17 +312,17 @@ ms.locfileid: "63012053"
     GO  
     ```  
   
- Weitere Informationen finden Sie in den folgenden Themen:  
+ Weitere Informationen finden Sie unter:  
   
--   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
+-   [sp_detach_db &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   
--   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [Create Master Key &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [Erstellen eines Zertifikats &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [Create Database &#40;SQL Server Transact-SQL-&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
-## <a name="see-also"></a>Siehe auch  
- [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Trennen und Anfügen von Datenbanken &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
   
   
