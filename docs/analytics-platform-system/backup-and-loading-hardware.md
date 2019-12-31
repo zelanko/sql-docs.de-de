@@ -1,6 +1,6 @@
 ---
-title: Sicherung und Laden von Hardware – Parallel Data Warehouse
-description: Um Ihre End-to-End Data warehousing-Lösung für Analytics Platform System (APS) mit Parallel Data Warehouse (PDW) bereitzustellen, müssen Sie einen Plan aus, um das Datawarehouse zu sichern, und Laden von Daten erstellen. Verwenden Sie diese Anleitung zum Abrufen und Konfigurieren von Sicherung und Laden von Servern, die Ihren geschäftlichen Anforderungen erfüllt.
+title: 'Sichern #a0 Laden von Hardware'
+description: Zum Bereitstellen Ihrer End-to-End-Data Warehousing-Lösung in Analytics Platform System (APS) mit Parallel Data Warehouse (PDW) müssen Sie einen Plan zum Sichern der Data Warehouse und zum Laden von Daten erstellen. Verwenden Sie diesen Leitfaden, um Sicherungs-und lade Server zu erwerben und zu konfigurieren, die Ihren Geschäftsanforderungen gerecht werden.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 90f142a8bb86f99ed5cf5d9ff926bdf849060324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4dd4fba91b1507f711a66a88f40b2fa2ea35e1ae
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961418"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401363"
 ---
-# <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Sicherung und Laden von Hardwareübersicht: Parallel Data Warehouse
-Um Ihre End-to-End Data warehousing-Lösung für Analytics Platform System (APS) mit Parallel Data Warehouse (PDW) bereitzustellen, müssen Sie einen Plan aus, um das Datawarehouse zu sichern, und Laden von Daten erstellen. Verwenden Sie diese Anleitung zum Abrufen und Konfigurieren von Sicherung und Laden von Servern, die Ihren geschäftlichen Anforderungen erfüllt.  
+# <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Übersicht über das Sichern und Laden von Hardware-parallel Data Warehouse
+Zum Bereitstellen Ihrer End-to-End-Data Warehousing-Lösung in Analytics Platform System (APS) mit Parallel Data Warehouse (PDW) müssen Sie einen Plan zum Sichern der Data Warehouse und zum Laden von Daten erstellen. Verwenden Sie diesen Leitfaden, um Sicherungs-und lade Server zu erwerben und zu konfigurieren, die Ihren Geschäftsanforderungen gerecht werden.  
   
-## <a name="acquire-and-configure-backup-servers"></a>Erwerben Sie und konfigurieren Sie die backup-Server  
-![Sichern von Prozess](media/backup-process.png "Prozess sichern")  
+## <a name="acquire-and-configure-backup-servers"></a>Abrufen und Konfigurieren von Sicherungs Servern  
+![Sicherungsprozess](media/backup-process.png "Sicherungsprozess")  
   
-Um einen PDW-Datenbank zu sichern, benötigen Sie mindestens eine backup-Server. Sie können Ihre eigenen vorhandenen Hardware oder Erwerb neuer Hardware. Weitere Informationen finden Sie unter [abrufen und Konfigurieren eines Servers für die Sicherung](acquire-and-configure-backup-server.md). Diese Anweisungen beinhalten eine [Backup Server Worksheet zur kapazitätsplanung eines](backup-capacity-planning-worksheet.md) können Sie die richtige Lösung für die Sicherung planen.  
+Zum Sichern einer PDW-Datenbank benötigen Sie mindestens einen Sicherungs Server. Sie können Ihre eigene vorhandene Hardware verwenden oder neue Hardware erwerben. Weitere Informationen finden Sie unter [erwerben und Konfigurieren eines Sicherungs Servers](acquire-and-configure-backup-server.md). Diese Anweisungen enthalten ein [Arbeitsblatt zur Kapazitätsplanung für Sicherungs Server](backup-capacity-planning-worksheet.md) , mit dem Sie die richtige Lösung für die Sicherung planen können.  
   
-## <a name="acquire-and-configure-loading-servers"></a>Erwerben Sie und konfigurieren Sie beim Laden von Servern  
-![Prozess des Ladens](media/loading-process.png "Prozess des Ladens")  
+## <a name="acquire-and-configure-loading-servers"></a>Erwerben und Konfigurieren von Server Ladevorgängen  
+![Ladevorgang](media/loading-process.png "Ladevorgang")  
   
-Um Daten zu laden, benötigen Sie eine oder mehrere beim Laden von Servern. Können Sie Ihre eigenen vorhandenen ETL- oder anderen Servern, oder Sie können neue Server erwerben. Weitere Informationen finden Sie unter [abrufen und Konfigurieren eines ladenden Servers](acquire-and-configure-loading-server.md). Diese Anweisungen beinhalten eine [laden Server Worksheet zur kapazitätsplanung eines](loading-server-capacity-planning-worksheet.md) helfen Ihnen beim Planen der richtigen Lösung für das Laden.  
+Zum Laden von Daten benötigen Sie mindestens einen Lade Server. Sie können Ihre eigene vorhandene ETL-oder andere Server verwenden, oder Sie können neue Server erwerben. Weitere Informationen finden Sie unter [erwerben und Konfigurieren eines Lade Servers](acquire-and-configure-loading-server.md). Diese Anweisungen enthalten ein [Arbeitsblatt zum Planen der Server Kapazitätsplanung](loading-server-capacity-planning-worksheet.md) , mit dem Sie die richtige Lösung für das Laden planen können.  
   
-## <a name="see-also"></a>Siehe auch  
-[Sichern und Wiederherstellen – Übersicht](backup-and-restore-overview.md)  
-[– Übersicht](load-overview.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Übersicht über die Sicherung und Wiederherstellung](backup-and-restore-overview.md)  
+[Übersicht laden](load-overview.md)  
   

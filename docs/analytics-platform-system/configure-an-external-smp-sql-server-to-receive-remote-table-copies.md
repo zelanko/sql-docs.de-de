@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren von SQL Server zum Empfangen von remotetabellenkopien - Parallel Data Warehouse | Microsoft-Dokumentation
-description: Beschreibt, wie eine externe SMP-SQL Server-Instanz zum Empfangen von remotetabellenkopien von Parallel Data Warehouse zu konfigurieren.
+title: Konfigurieren von SQL Server für den Empfang von Remote Tabellen Kopien
+description: Beschreibt, wie eine externe SMP-SQL Server-Instanz konfiguriert wird, um Remote Tabellen Kopien von parallelen Data Warehouse zu empfangen.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,54 +8,55 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3ad1ee005f5d28e7477fab7c1abe7ed4074e233d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961295"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401326"
 ---
-# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Konfigurieren einer externen SMP-SQL-Server zum Empfangen von remotetabellenkopien - Parallel Data Warehouse
-Beschreibt, wie eine externe Instanz von SQL Server zum Empfangen von remotetabellenkopien von Parallel Data Warehouse zu konfigurieren.  
+# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Konfigurieren eines externen SMP-SQL Server zum Empfangen von Remote Tabellen Kopien-parallel Data Warehouse
+Beschreibt, wie eine externe SQL Server Instanz so konfiguriert wird, dass Remote Tabellen Kopien von parallelen Data Warehouse empfangen werden.  
 
-Dieses Thema beschreibt eine Konfigurationsschritte für die Konfiguration von remote-Tabelle kopieren. Eine Liste der alle Konfigurationsschritte, finden Sie unter [Remotetabellenkopie](remote-table-copy.md).  
+In diesem Thema wird einer der Konfigurationsschritte zum Konfigurieren der Remote Tabellen Kopie beschrieben. Eine Liste aller Konfigurationsschritte finden Sie unter Kopieren von [Remote Tabellen](remote-table-copy.md).  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
-Bevor Sie den externen SQL Server konfigurieren können, müssen Sie folgende Schritte ausführen:  
+## <a name="before-you-begin"></a>Voraussetzungen  
+Bevor Sie die externe SQL Server konfigurieren können, müssen Sie folgende Schritte ausführen:  
   
--   Haben Sie ein Windows-System mit SQL Server 2008 Enterprise Edition oder eine höhere Version installiert oder noch installiert werden kann. Das Windows-System muss bereits konfiguriert sein, gemäß der Anleitung in [konfigurieren Sie eine externe Windows System zu empfangen Remote Tabelle kopiert mithilfe von InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md).  
+-   Sie müssen über ein Windows-System mit SQL Server 2008 Enterprise Edition oder einer neueren Version verfügen, die installiert oder bereits installiert ist. Das Windows-System muss bereits gemäß den Anweisungen in [Konfigurieren eines externen Windows-Systems zum Empfangen von Remote Tabellen Kopien mithilfe von InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)konfiguriert werden.  
   
--   Ein Windows-Admin-Konto mit der Möglichkeit zum Konfigurieren von SQL Server-Instanz und das Windows-System.  
+-   Ein Windows-Administrator Konto mit der Möglichkeit, die SQL Server Instanz und das Windows-System zu konfigurieren.  
   
--   Ein SQL Server Anmeldekonto (falls es sich um eine SQL Server bereits installiert ist) mit der Möglichkeit zum Erstellen von Anmeldungen, und Erteilen von Berechtigungen für die Ziel-Datenbanken.  
+-   Ein SQL Server-Anmelde Konto (wenn SQL Server bereits installiert ist) mit der Möglichkeit, Anmeldungen zu erstellen und Berechtigungen für die Zieldatenbank (en) zu erteilen.  
   
-## <a name="HowToSQLServer"></a>Konfigurieren eines externen SMP-SQL-Servers zum Empfangen von Remotetabellenkopien  
-Die remotetabellenkopie-Features kopiert Tabellen aus der SQL Server-PDW-Appliance mit einer externen SMP-SQL Server-Datenbank, die auf einem Windows-System ausgeführt wird. Nach dem Konfigurieren der externen Windows-Systems zum Empfangen von remotetabellenkopien, ist im nächste Schritt zum Installieren und Konfigurieren von SQL Server auf dem Windows-System.  
+## <a name="HowToSQLServer"></a>Konfigurieren eines externen SMP-SQL Server zum Empfangen von Remote Tabellen Kopien  
+Das Feature "Remote Tabellen Kopie" kopiert Tabellen aus der SQL Server PDW Appliance in eine externe SMP-SQL Server Datenbank, die auf einem Windows-System ausgeführt wird. Nachdem Sie das externe Windows-System für das Empfangen von Remote Tabellen Kopien konfiguriert haben, besteht der nächste Schritt darin, SQL Server auf dem Windows-System zu installieren und zu konfigurieren.  
   
-Verwenden Sie die folgenden Schritte aus, um SQL Server zu konfigurieren:  
+Führen Sie die folgenden Schritte aus, um SQL Server zu konfigurieren:  
   
-1.  Installieren Sie SQL Server 2008 Enterprise Edition oder höher auf dem Windows-System an. Dies wird als der SMP-SQL-Server bezeichnet.  
+1.  Installieren Sie SQL Server 2008 Enterprise Edition oder eine höhere Version auf dem Windows-System. Dies wird als SMP-SQL Server bezeichnet.  
   
-2.  Konfigurieren Sie SQL Server für die TCP/IP-Verbindungen über einen festen TCP-Port zu akzeptieren. Diese Konfiguration ist standardmäßig deaktiviert und muss aktiviert sein, um SQL Server PDW für die Verbindung mit dem SMP-SQL-Server zu ermöglichen.  
+2.  Konfigurieren Sie SQL Server, um TCP/IP-Verbindungen an einem TCP-Port zu akzeptieren. Diese Konfiguration ist standardmäßig deaktiviert und muss aktiviert werden, damit SQL Server PDW eine Verbindung mit der SMP-SQL Server herstellen kann.  
   
-3.  Konfigurieren Sie Windows-Firewall bzw. deaktivieren Sie den SMP-SQL Server TCP-Port, damit es bei aktivierter Windows-Firewall funktioniert.  
+3.  Deaktivieren Sie die Windows-Firewall, oder konfigurieren Sie den SMP-SQL Server TCP-Port so, dass er mit aktivierter Windows-Firewall funktioniert.  
   
-4.  Konfigurieren Sie SQL Server für SQL Server-Authentifizierungsmodus zu. Die parallele Datenexport immer verwendet SQL Server-Konten für die Authentifizierung.  
+4.  Konfigurieren Sie SQL Server, um SQL Server Authentifizierungsmodus zuzulassen. Der parallele Datenexport verwendet immer SQL Server Konten für die Authentifizierung.  
   
-5.  Bestimmen Sie eine SQL Server-Dienstkonto auf dem SMP-SQL-Server, die für die Authentifizierung verwendet werden. Erteilen Sie diesem Konto die Berechtigung zum Erstellen, löschen und Einfügen von Daten in Tabellen in der Zieldatenbank für den Exportvorgang parallel Daten.  
+5.  Bestimmen Sie ein SQL Server Konto auf dem SMP-SQL Server, das für die Authentifizierung verwendet wird. Erteilen Sie diesem Konto die Berechtigung zum Erstellen, löschen und Einfügen von Daten in Tabellen in der Zieldatenbank für den parallelen Datenexport Vorgang.  
   
-## <a name="BPSQLConfig"></a>Bewährte Methoden für die SMP-SQL Server-Konfiguration für Remotetabellenkopie  
-Wenn Sie den SMP-SQL-Server zum Empfangen von remotetabellenkopien konfigurieren zu können, verwenden Sie die folgenden bewährten Methoden zur Verbesserung der Leistung.  
+## <a name="BPSQLConfig"></a>Bewährte Methoden für die Konfiguration von SMP-SQL Server für die Remote Tabellen Kopie  
+Verwenden Sie beim Konfigurieren der SMP-SQL Server für den Empfang von Remote Tabellen Kopien die folgenden bewährten Methoden, um die Leistung zu verbessern.  
   
-1.  Befolgen Sie die bewährten Methoden, wie in SQL Server-Produktdokumentation beschrieben. Aktivieren Sie z. B. Data Encryption. Weitere Informationen zum Sichern von SQL Server finden Sie unter [Sichern von SQL Server](../relational-databases/security/securing-sql-server.md) auf MSDN.  
+1.  Befolgen Sie die bewährten Methoden, wie in SQL Server Produktdokumentation dokumentiert. Aktivieren Sie z. b. die Datenverschlüsselung. Weitere Informationen zum Sichern von SQL Server finden Sie unter [Sichern von SQL Server](../relational-databases/security/securing-sql-server.md) auf MSDN.  
   
-2.  Verwenden Sie das massenprotokollierte oder einfache Wiederherstellungsmodell.  
+2.  Verwenden Sie das Massen protokollierte oder einfache Wiederherstellungs Modell.  
   
-    Exportieren bei der parallelen Vorgänge, die beim Massenkopieren in die neu erstellte Zieltabelle eingefügt. Legen Sie für maximale Leistung während der masseneinfügung die Zieldatenbank mit dem massenprotokollierten oder einfachen Wiederherstellungsmodell.  
+    Während der parallelen Datenexport Vorgänge werden Daten in die neu erstellte Ziel Tabelle Massen eingefügt. Legen Sie für die maximale Leistung während der Massen Einfügung fest, dass die Zieldatenbank das Massen protokollierte oder das einfache Wiederherstellungs Modell verwendet.  
   
-3.  Verwenden Sie die Batch_size-Option, um wieder Protokollspeicherplatz freizugeben.  
+3.  Verwenden Sie die Option batch_size, um Protokoll Speicher freizugeben.  
   
-    Obwohl die massenprotokollierte oder einfache Wiederherstellung verwenden, die minimale Protokollierung für die Masseneinfügen Daten modelliert, tritt auf, noch einige Protokollierung. Um zu verhindern, dass die Protokolldateien zu groß, verwenden Sie die SQL Server-Batch_size-Option, um in regelmäßigen Abständen wieder Protokollspeicherplatz freizugeben.  
+    Obwohl bei den Massen protokollierten oder einfachen Wiederherstellungs Modellen die minimale Protokollierung für die Massen eingefügten Daten verwendet wird, erfolgt immer noch eine Protokollierung. Um zu verhindern, dass die Protokolldateien zu groß werden, verwenden Sie die Option SQL Server batch_size, um in regelmäßigen Abständen Protokoll Speicher freizugeben.  
   
 <!-- MISSING LINKS 
 ## See Also  

@@ -2,7 +2,7 @@
 title: Anzeigen von Analyseberichten für SQL Server Upgrades
 description: Anzeigen von Analyseberichten in Assistent für Datenbankexperimente
 ms.custom: seo-lt-2019
-ms.date: 10/22/2018
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,28 +10,28 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: fddc71bf7cdf7686154b4f9b5612cf671ca64fce
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056665"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317743"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Anzeigen von Analyseberichten in Assistent für Datenbankexperimente
 
-Nachdem Sie den [Analysebericht](database-experimentation-assistant-create-report.md) in Assistent für Datenbankexperimente (DEA) erstellt haben, führen Sie die in diesem Artikel beschriebenen Schritte aus, um den Bericht anzuzeigen und Leistungsinformationen zu erhalten, die von Ihrem A/B-Test bereitgestellt werden.
+Nachdem Sie mit Assistent für Datenbankexperimente (DEA) [einen Analysebericht erstellt](database-experimentation-assistant-create-report.md)haben, führen Sie die folgenden Schritte aus, um den Bericht auf Grundlage Ihres A/B-Tests auf Leistungs Einblicke zu überprüfen.
 
-## <a name="select-a-server"></a>Auswählen eines Servers
+## <a name="select-a-server"></a>Wählen Sie einen Server aus.
 
 Wählen Sie in der DEA das Menü Symbol aus. Wählen Sie im erweiterten Menü neben dem Prüfliste-Symbol die Option **Analyseberichte** aus, um das Fenster Analyseberichte zu öffnen.
 
-Geben Sie unter **Analyseberichte**den Namen eines Computers ein, auf dem SQL Server mit einer Analysedatenbank ausgeführt wird. Wählen Sie **Verbinden**. 
+Geben Sie unter **Analyseberichte**den Namen eines Computers ein, auf dem SQL Server mit einer Analysedatenbank ausgeführt wird, und wählen Sie dann **verbinden**aus.
 
 ![Herstellen einer Verbindung mit einem vorhandenen Bericht](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-Wenn keine Abhängigkeiten vorhanden sind, werden Sie auf der Seite **Voraussetzungen** zur Installation von Links zur Installation aufgefordert. Installieren Sie die erforderlichen Komponenten, und wählen Sie dann **erneut versuchen**.
+Wenn keine Abhängigkeiten vorhanden sind, werden Sie auf der Seite **Voraussetzungen** zur Installation von Links zur Installation aufgefordert. Installieren Sie ggf. die erforderlichen Komponenten, und klicken Sie dann auf **erneut versuchen**.
 
 ![Seite für erforderliche Komponenten](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
@@ -78,16 +78,13 @@ Sie sehen die A-und B-Instanzen, für die die Abfrage ausgeführt wurde. Sie kö
 Der Zusammenfassungs Bericht enthält erweiterbare **Fehlerinformationen** und Abschnitte zu **Abfrage Plan Informationen** . In den Abschnitten werden die Fehler und Plan Informationen für beide Instanzen angezeigt.
 
 Wählen Sie den Kreis "Fehler" (rot) aus, um diese Arten von Fehlern anzuzeigen:
+
 - **Vorhandene Fehler**: Fehler, die sich in einem befanden.
 - **Neue Fehler**: Fehler in B.
 - Behobene **Fehler**: Fehler in einer, aber nicht in B.
 
 ![Fehler Diagramme](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="see-also"></a>Siehe auch
 
 - Informationen zum Generieren eines Analyse Berichts an einer Eingabeaufforderung finden Sie unter [Ausführen an der Eingabeaufforderung](database-experimentation-assistant-run-command-prompt.md).
-
-- Sehen Sie sich das folgende Video an, um die Einführung von DEA und Demo in 19 Minuten zu demonstrieren:
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

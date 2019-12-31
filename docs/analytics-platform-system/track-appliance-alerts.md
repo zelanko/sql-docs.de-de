@@ -1,6 +1,6 @@
 ---
-title: Nachverfolgen von appliancewarnungen - Analytics Platform System | Microsoft-Dokumentation
-description: Nachverfolgen von appliancewarnungen in Analytics Platform System.
+title: Nachverfolgen von Appliancewarnungen
+description: Geräte Warnungen in Analytics Platform System nachverfolgen.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,38 +8,39 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 62f116b8e45512d5a6fc5ce50c0fbc76344103be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 03568666367bf6273f197994f572bbbbd62bb42e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960026"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399944"
 ---
-# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Nachverfolgen von appliancewarnungen in Analytics Platform System
-In diesem Thema wird erläutert, wie Sie mit der Verwaltungskonsole und Systemsichten zum Nachverfolgen von Warnungen in einer SQL Server-PDW-Appliance.  
+# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Geräte Warnungen in Analytics Platform System nachverfolgen
+In diesem Thema wird erläutert, wie Sie die-Verwaltungskonsole und-System Sichten verwenden, um Warnungen in einem SQL Server PDW Appliance zu verfolgen.  
   
-## <a name="to-track-appliance-alerts"></a>Zum Nachverfolgen von Appliancewarnungen  
-SQL Server PDW erstellt Warnungen für Hardware und Software-Probleme, die Ihre Aufmerksamkeit erfordern. Jede Warnung enthält einen Titel und eine Beschreibung des Problems.  
+## <a name="to-track-appliance-alerts"></a>So verfolgen Sie Geräte Warnungen  
+SQL Server PDW erstellt Warnungen für Hardware-und Software Probleme, für die eine Aufmerksamkeit erforderlich ist. Jede Warnung enthält einen Titel und eine Beschreibung des Problems.  
   
-SQL Server PDW protokolliert Warnungen in der [sys.dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV. Das System behält maximal 10.000 Benachrichtigungen und löscht zuerst die älteste Warnung, wenn das Limit überschritten wird.  
+SQL Server PDW protokolliert Warnungen in der [sys. dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) -DMV. Das System behält eine Beschränkung von 10.000 Warnungen bei und löscht die älteste Warnung zuerst, wenn der Grenzwert überschritten wird.  
   
 ### <a name="view-alerts-by-using-the-admin-console"></a>Anzeigen von Warnungen mithilfe der Verwaltungskonsole  
-Es gibt eine **Warnungen** Registerkarte für die PDW-Region und für den Fabric-Bereich des Geräts. Nach dem Failover auftritt, ist das failoverereignis in die Anzahl der Warnungen auf der Seite enthalten. Eine Seite, die für die PDW-Region und für den Fabric-Bereich des Geräts ist vorhanden. Jede Seite "Integrität" verfügt über eine Registerkarte. Weitere Informationen zu einer Warnung, klicken Sie auf die **Integrität** Seite die **Warnungen** Registerkarte, und klicken Sie dann auf eine Warnung.  
+Es gibt eine Registerkarte **Warnungen** für den PDW-Bereich und für die Fabric-Region des Geräts. Nach dem Failover ist das failoverereignis in der Anzahl der Warnungen auf der Seite enthalten. Es gibt eine Seite für den PDW-Bereich und für die Fabric-Region des Geräts. Jede Integritäts Seite verfügt über eine Registerkarte. Wenn Sie weitere Informationen zu einer Warnung erhalten möchten, klicken Sie auf **die Seite Integrität, die Register** Karte **Warnungen** , und klicken Sie dann auf eine Warnung.  
   
 ![PDW-Verwaltungskonsole, Warnungen](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
-Auf der **Warnungen** Seite:  
+Auf der Seite **Warnungen** :  
   
--   Um der Warnung dem Verlauf anzuzeigen, klicken Sie auf die **Warnung Überprüfungsverlauf** Link.  
+-   Um den Warnungs Verlauf anzuzeigen, klicken Sie auf den Link Warnungs **Verlauf überprüfen** .  
   
--   Um die Warnung Komponente und die aktuellen Eigenschaftswerte anzuzeigen, klicken Sie auf die Warnung Zeile.  
+-   Um die Warnungs Komponente und die aktuellen Eigenschaftswerte anzuzeigen, klicken Sie auf die Zeile Warnung.  
   
--   Zum Anzeigen von Details über den Knoten, der die Warnung ausgelöst hat, klicken Sie auf den Knotennamen.  
+-   Zum Anzeigen von Details zu dem Knoten, der die Warnung ausgelöst hat, klicken Sie auf den Knoten Namen.  
   
-### <a name="view-alerts-by-using-the-system-views"></a>Anzeigen von Warnungen mithilfe von Systemsichten  
-Zum Anzeigen von Warnungen mithilfe von Systemsichten Abfragen [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md). Diese dynamische Verwaltungssicht zeigt die Warnungen, die nicht behoben wurden. Verwenden Sie für Hilfe beim Selektieren von Warnungen und Fehler, die [sys.dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) DMV.  
+### <a name="view-alerts-by-using-the-system-views"></a>Anzeigen von Warnungen mithilfe der System Sichten  
+Fragen Sie zum Anzeigen von Warnungen mithilfe von System Sichten [sys. dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)ab. Diese DMV zeigt Warnungen an, die nicht korrigiert wurden. Wenn Sie Hilfe bei der Selektierung von Warnungen und Fehlern benötigen, verwenden Sie die [sys. dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) -DMV.  
   
-Im folgende Beispiel wird eine allgemeine Abfrage für die aktuellen Warnungen anzeigen.  
+Das folgende Beispiel ist eine gängige Abfrage zum Anzeigen der aktuellen Warnungen.  
   
 ```sql  
 SELECT   
@@ -69,7 +70,7 @@ ORDER BY
     aa.[pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Applianceüberwachung &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[Geräteüberwachung &#40;Analytics-Platt Form System&#41;](appliance-monitoring.md)  
   

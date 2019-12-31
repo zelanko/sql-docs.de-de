@@ -1,7 +1,7 @@
 ---
 title: Benutzerunterstützung in SQL Server Management Studio | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
@@ -13,15 +13,15 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016184"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74684458"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Benutzerunterstützung in SQL Server Management Studio
-  Die Benutzerunterstützung ist in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] über das Menü ? und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation verfügbar. Über das Menü ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können Sie auf verschiedene Arten Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]abrufen. Außerdem erhalten Sie über dieses Menü Zugriff auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Community und MSDN Onlineressourcen, die bislang noch nicht über die Hilfeumgebung verfügbar waren. Darüber hinaus lässt sich die Hilfeumgebung jetzt so konfigurieren, dass sie in der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Umgebung oder in einem eigenen externen Fenster gestartet wird.  
+  Die Benutzerunterstützung ist in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] über das Menü ? und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation verfügbar. Über das Menü ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können Sie auf verschiedene Arten Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]abrufen. Außerdem erhalten Sie über dieses Menü Zugriff auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Community und MSDN Onlineressourcen, die bislang noch nicht über die Hilfeumgebung verfügbar waren. Darüber hinaus lässt sich die Hilfeumgebung jetzt so konfigurieren, dass sie in der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Umgebung oder in einem eigenen externen Fenster gestartet wird.  
   
 ## <a name="the-help-interface"></a>Die Hilfeoberfläche  
  Die Optionen **Inhalt** und **Index** verfügen über eine Benutzeroberfläche und eine Funktionalität, mit denen Benutzer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits vertraut sind. Folgende andere Optionen sind verfügbar:  
@@ -30,7 +30,7 @@ ms.locfileid: "63016184"
   
      Enthält eine hierarchisch strukturierte Liste verknüpfter Seiten mit hilfreichen Themen zu allgemeinen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Aufgaben. Der Inhalt ist nach Komponente und Aufgabe (Beispiel: Themen zur Replikation) usw. geordnet.  
   
--   **Search**  
+-   **Suchen,**  
   
      Sucht nach Themen, mit oder ohne vordefinierte Filter. Die Suche in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist eine eigene Seite im Registerformat. Der Benutzer kann die Suche anhand von vordefinierten Thementyp-, Sprach- oder Technologiefiltern verfeinern. Standardmäßig wird bei der Suche kein vordefinierter Filter verwendet, und nur Themen in den installierten Auflistungen werden durchsucht.  
   
@@ -40,14 +40,14 @@ ms.locfileid: "63016184"
   
      Zeigt automatisch Links zu relevanten Informationen an, wenn Benutzer in der [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] -Umgebung arbeiten.  
   
--   **Hilfefavoriten**  
+-   **Hilfe Favoriten**  
   
      Speichert für einen einfachen späteren Zugriff Lesezeichen zu Benutzerthemen.  
   
- Mit der Hilfe zur Hilfe (Hilfe zu[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) gelangen Benutzer zur Hilfeviewer-Dokumentation. Die Themen sind allerdings getrennt von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation aufgelistet. Wenn Sie Informationen zum Hilfeviewer benötigen, wählen Sie in der **-Onlinedokumentation im Menü ? die Option** Hilfe zur Hilfe [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aus. Informationen zum Hinzufügen von der Hilfe zur Hilfe von Themen zur Onlinedokumentation finden Sie unter [hinzufügen oder Entfernen der Produktdokumentation für SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ Mit der Hilfe zur Hilfe (Hilfe zu[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) gelangen Benutzer zur Hilfeviewer-Dokumentation. Die Themen sind allerdings getrennt von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation aufgelistet. Wenn Sie Informationen zum Hilfeviewer benötigen, wählen Sie in der **-Onlinedokumentation im Menü ? die Option** Hilfe zur Hilfe [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aus. Weitere Informationen zum Hinzufügen der Hilfe zur Hilfe Auflistung von Themen zur-Online [Dokumentation finden Sie unter Hinzufügen oder Entfernen der Produktdokumentation für SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online- und SQL Server-Communities  
- Über die Hilfe in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können sich Benutzer auch auf verschiedene Arten an MSDN Online- und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Communities im Web wenden, um Informationen zu erhalten. Folgende Aktionen sind möglich:  
+ Über die Hilfe in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können sich Benutzer auch auf verschiedene Arten an MSDN Online- und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Communities im Web wenden, um Informationen zu erhalten. Sie haben folgende Möglichkeiten:  
   
 -   Zugreifen auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Communities von der Seite Gewusst wie.  
   

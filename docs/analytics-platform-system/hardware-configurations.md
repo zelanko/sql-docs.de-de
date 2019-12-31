@@ -1,6 +1,6 @@
 ---
-title: – Hardwarekonfigurationen – Analytics Platform System | Microsoft-Dokumentation
-description: Die Einheiten-Hardware des Analytics Platform System (APS) basiert, damit Sie die richtige Menge an Prozessor- und Speicherressourcen gemäß Ihren geschäftlichen Anforderungen erwerben mit skalierbaren Einheiten. Die Appliance Skalierung Speicher für Parallel Data Warehouse über einige Terabytes auf mehr als 6 Petabytes von Daten.
+title: Hardwarekonfigurationen
+description: Die Hardware des Analytics-plattformsystems (APS) ist mit skalierbaren Einheiten aufgebaut, sodass Sie die richtige Menge an Verarbeitung und Speicherung gemäß Ihren Geschäftsanforderungen erwerben. Die Appliance skaliert Speicher für parallele Data Warehouse von einem Paar von Terabyte bis zu mehr als 6 Daten.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,48 +8,49 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f3e1759dcde0dd792ce5179de08e9add1ef355e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ee16045931da345f06c141597ccd25d19a36dea7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960892"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401133"
 ---
-# <a name="hardware-configurations---analytics-platform-system"></a>– Hardwarekonfigurationen – Analytics Platform System
-Die Hardware des Analytics Platform System (APS) basiert, damit Sie die richtige Menge an Prozessor- und Speicherressourcen gemäß Ihren geschäftlichen Anforderungen erwerben mit skalierbaren Einheiten. Die Appliance skaliert Storage für SQL Server Parallel Data Wareouse (PDW) von ein paar Terabytes auf mehr als 6 Petabytes von Daten.  
+# <a name="hardware-configurations---analytics-platform-system"></a>Hardware Konfigurationen-Analytics Platform System
+Die Hardware des Analytics Platform System (APS) wurde mit skalierbaren Einheiten entworfen, sodass Sie die richtige Menge an Verarbeitung und Speicherung gemäß Ihren Geschäftsanforderungen erwerben. Die Appliance skaliert Speicher für SQL Server parallele Data-wareouse (PDW) von einem Paar von Terabyte bis zu über 6 Peer tabytes von Daten.  
   
-## <a name="contents"></a>Inhalt  
+## <a name="contents"></a>Contents  
   
--   [Ein-Rack-Konfigurationen](#section1)  
+-   [One-Rack-Konfigurationen](#section1)  
   
--   [Multi-Rack-Konfigurationen](#section2)  
+-   [Konfigurationen mit mehreren Racks](#section2)  
 
   
-## <a name="section1"></a>Ein-Rack-Konfigurationen  
-Das erste Rack, in der Appliance enthält die erforderlichen Komponenten zum Ausführen von PDW. Die minimale Einheitenkonfiguration ist ein Rack und Netzwerk und eine Basis-Skalierungseinheit. Diese Diagramme zeigen die Möglichkeiten, das erste Rack des Geräts konfiguriert werden kann. Sie können zwischen 2 und 9 Compute-Knoten in das erste Rack, je nach Hardwarehersteller verwenden.  
+## <a name="section1"></a>One-Rack-Konfigurationen  
+Das erste Gestell in der Appliance enthält die zum Ausführen von PDW erforderlichen Komponenten. Die minimale Gerätekonfiguration ist ein Gestell und Netzwerk sowie eine Basis Skalierungs Einheit. Diese Diagramme zeigen, wie das erste Gestell des Geräts konfiguriert werden kann. Abhängig vom Hardware Anbieter können Sie zwischen 2 und 9 Computeknoten im ersten Rack haben.  
   
-### <a name="first-rack-configurations---dell"></a>Zuerst Rack-Konfigurationen - DELL  
-Die Mindestanforderungen für die Konfiguration für ein Gerät DELL hat 3-Compute-Knoten. Sie können bis zu 2 Skalierungseinheiten für die Daten für das erste Rack für einen Zeitraum von 9 Compute-Knoten hinzufügen.  
+### <a name="first-rack-configurations---dell"></a>Erste Rack-Konfigurationen (Dell)  
+Die minimale Konfiguration für eine Dell-Appliance umfasst drei Computeknoten. Sie können dem ersten Gestell bis zu 2 datenskalierungs Einheiten für insgesamt 9 Computeknoten hinzufügen.  
   
-![Dell erste Rack Konfigurationen](media/first-rack-configurations-dell.png "Dell erste Rack-Konfigurationen")  
+![Dell First Rack-Konfigurationen](media/first-rack-configurations-dell.png "Dell First Rack-Konfigurationen")  
   
-### <a name="first-rack-configurations---hpe"></a>Zuerst Rack-Konfigurationen - HPE  
-Die Mindestanforderungen für die Konfiguration für eine Einheit HPE hat 2 Computeknoten. Sie können bis zu 3 Skalierungseinheiten für die Daten für das erste Rack für einen Zeitraum von 8 Serverknoten hinzufügen.  
+### <a name="first-rack-configurations---hpe"></a>Erste Rack-Konfigurationen-HPE  
+Die Mindestkonfiguration für eine HPE-Appliance umfasst zwei Computeknoten. Sie können dem ersten Gestell bis zu 3 Daten Skalierungs Einheiten hinzufügen, um insgesamt acht Computeknoten zu erhalten.  
   
-![HPE rack zuerst die Konfigurationen für HPE](media/first-rack-configurations-hpe.png "HPE zuerst rack-Konfigurationen")  
+![HPE First Rack-Konfigurationen für HPE](media/first-rack-configurations-hpe.png "HPE-erste Rack-Konfigurationen")  
   
-## <a name="section2"></a>Multi-Rack-Konfigurationen  
-Sie können zum Hinzufügen von Kapazität in PDW Hinzufügen von Skalierungseinheiten für Daten, zusammen mit zusätzlichen Rack & Netzwerk-Komponenten wie erforderlich, um die richtige Stromversorgung, Netzwerk und rack-Infrastruktur. Jede zusätzliche Rack & Netzwerk ist ein passiven Host erforderlich.  
+## <a name="section2"></a>Konfigurationen mit mehreren Racks  
+Um PDW Kapazität hinzuzufügen, können Sie Daten Skalierungs Einheiten zusammen mit zusätzlichen Rack #a0 Netzwerkkomponenten hinzufügen, um die richtige Stromversorgung, Netzwerk-und Rack-Infrastruktur bereitzustellen. Für jedes zusätzliche Rack #a0 Netzwerk ist ein passiver Host erforderlich.  
   
-Jeder Hersteller gibt die Anzahl der Daten Skalierungseinheiten, die Sie hinzufügen können, erhalten die Kapazität Ihres Geräts an. Es wird empfohlen, genügend Daten Skalierungseinheiten dahingehend, dass mindestens eine 20-Prozent-Cloudangebote Leistung hinzufügen. Beispielsweise kann eine Daten-Skala hinzufügen Einheit in einer Anwendung, die bereits von 20 Skalierungseinheiten für die Daten in einem vernachlässigbaren Leistungsgewinn führen. Der Reingewinn wäre nicht zu den Kosten und Aufwand.  
+Jeder Hardwarehersteller gibt die Anzahl der Daten Skalierungs Einheiten an, die Sie mit der Kapazität Ihres Geräts hinzufügen können. Es wird empfohlen, genügend Daten Skalierungs Einheiten hinzuzufügen, um mindestens eine Erhöhung der Leistung von 20 Prozent zu sehen. Beispielsweise kann das Hinzufügen einer Daten Skalierungs Einheit zu einem Gerät, das bereits 20 datenskalierungseinheiten aufweist, zu einem vernachlässigbaren Leistungsgewinn führen. Der Nettogewinn wäre nicht die Kosten und der Aufwand.  
   
-### <a name="scale-out-example---hpe"></a>Beispiel: HPE skalieren  
-Dieses Diagramm zeigt eine 3 Rack HP-Anwendung, die 20 Compute-Knoten enthält.  
+### <a name="scale-out-example---hpe"></a>Beispiel für horizontales hochskalieren: HPE  
+Dieses Diagramm zeigt ein 3-Rack-HP-Gerät, das 20 Computeknoten enthält.  
   
-![HPE Appliance mit 20 Serverknoten](media/scale-out-hpe.png "HPE Appliance mit 20 Serverknoten")  
+![HPE-Appliance mit 20 Computeknoten](media/scale-out-hpe.png "HPE-Appliance mit 20 Computeknoten")  
   
-### <a name="scale-out-example---dell-quanta"></a>Scale Out-Beispiel: DELL-Quanten  
-Dieses Diagramm zeigt eine 3 Rack DELL oder Quanta Appliance, die 21 Compute-Knoten enthält.  
+### <a name="scale-out-example---dell-quanta"></a>Scale Out Beispiel-Dell, QUANTA  
+Dieses Diagramm zeigt ein 3-Rack-Dell oder ein QUANTA-Gerät, das 21 Computeknoten enthält.  
   
-![Dell-Appliance mit 21 Computeknoten](media/scale-out-dell.png "Dell-Appliance mit 21 Compute-Knoten")  
+![Dell Appliance mit 21 Computeknoten](media/scale-out-dell.png "Dell Appliance mit 21 Computeknoten")  
  

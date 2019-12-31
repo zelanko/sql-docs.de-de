@@ -1,6 +1,6 @@
 ---
-title: Reservierte Datenbanknamen - Parallel Data Warehouse | Microsoft-Dokumentation
-description: Reservierte Datenbanknamen in Analytics Platform System Parallel Data Warehouse.
+title: Reservierte Datenbanknamen
+description: Reservierte Datenbanknamen in Analytics Platform System parallel Data Warehouse.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: aa4628a5f4685eb805948de0b67f9387a189054a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 77625b2a8b1169af90ab0573fa57a4246f81ceab
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960196"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400477"
 ---
-# <a name="reserved-database-names-in-parallel-data-warehouse"></a>Reservierte Datenbanknamen in Parallel Data Warehouse
-Reservierte Datenbankname ist ein Name, der eine Benutzerdatenbank auf SQL Server PDW zugewiesen werden kann.  
+# <a name="reserved-database-names-in-parallel-data-warehouse"></a>Reservierte Datenbanknamen parallel Data Warehouse
+Ein reservierter Datenbankname ist ein Name, der nicht in SQL Server PDW einer Benutzerdatenbank zugewiesen werden kann.  
   
-Liste von reservierten Datenbanknamen verwendet:  
+Liste der reservierten Datenbanknamen:  
   
 -   master  
   
@@ -40,9 +41,9 @@ Liste von reservierten Datenbanknamen verwendet:
   
 -   DWQueue  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 <!-- MISSING LINKS 
 [Database Administration &#40;SQL Server PDW&#41;](../sqlpdw/database-administration-sql-server-pdw.md)  
 -->
-[Systemdatenbanken](system-databases.md)  
+[System Datenbanken](system-databases.md)  
   

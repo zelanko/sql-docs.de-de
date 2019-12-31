@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren von Parallel Data Warehouse für remotetabellenkopien | Microsoft-Dokumentation
-description: Beschreibt das Konfigurieren von Parallel Data Warehouse, um die remotetabellenkopie-Features, die zum Kopieren von Tabellen in SMP-SQL Server-Datenbanken auf nicht zur Appliance gehört Servern verwenden.
+title: Remote Tabellen Kopien
+description: In diesem Thema wird beschrieben, wie Sie parallele Data Warehouse für die Verwendung der Funktion zum Kopieren von Remote Tabellen zum Kopieren von Tabellen in SMP SQL Server Datenbanken auf nicht-Appliance-Servern
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,41 +8,42 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4f3abd60cb4f87abc5e6cbdc420fc6c551b0ab15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6c9a0a29b543eb287c7e233d6b1ea77bb2a0d45c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961224"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401264"
 ---
-# <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Konfigurieren von Parallel Data Warehouse für remotetabellenkopien
-Beschreibt das Konfigurieren von SQL Server PDW, um die remotetabellenkopie-Features, die zum Kopieren von Tabellen in SMP-SQL Server-Datenbanken auf nicht zur Appliance gehört Servern verwenden.  
+# <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Parallele Data Warehouse für Remote Tabellen Kopien konfigurieren
+Hier wird beschrieben, wie Sie SQL Server PDW für die Verwendung der Funktion zum Kopieren von Remote Tabellen zum Kopieren von Tabellen in SMP-SQL Server Datenbanken auf nicht-Appliance-Servern konfigurieren  
   
-Dieses Thema beschreibt eine Konfigurationsschritte für die Konfiguration von remote-Tabelle kopieren. Eine Liste der alle Konfigurationsschritte, finden Sie unter [Remotetabellenkopie](remote-table-copy.md).  
+In diesem Thema wird einer der Konfigurationsschritte zum Konfigurieren der Remote Tabellen Kopie beschrieben. Eine Liste aller Konfigurationsschritte finden Sie unter Kopieren von [Remote Tabellen](remote-table-copy.md).  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
-Um SQL Server PDW remotetabellenkopie Verwendung zu konfigurieren, müssen Sie folgende Aktionen ausführen:  
+## <a name="before-you-begin"></a>Voraussetzungen  
+Um SQL Server PDW für die Verwendung der Remote Tabellen Kopie zu konfigurieren, müssen Sie folgende Schritte ausführen:  
   
--   Haben Sie ein Administratorkonto für Analytics Platform System mit der Möglichkeit, direkt in melden Sie sich die  <strong>*Appliance_domain*-AD01</strong> und  <strong>*Appliance_domain*-AD02</strong> Knoten.  
+-   Sie müssen über ein Analytics Platform System-Administrator Konto verfügen, das sich direkt bei den Knoten " <strong> *appliance_domain*-ad01</strong> " und " <strong> *appliance_domain*-ad02</strong> " anmelden kann.  
   
--   Kennen Sie den Hostnamen oder die IP-Name des Zielservers an.  
+-   Beachten Sie den Hostnamen oder den IP-Namen des Zielservers.  
   
-## <a name="HowToPDW"></a>Konfigurieren Sie SQLServer PDW für Remotetabellenkopie an: Aktualisieren von Hostnamen in DNS  
-Die **CREATE REMOTE TABLE** remotetabellenkopien, zum-Anweisung gibt den Zielserver mithilfe der IP-Adresse oder der IP-Name des SMP-Windows-Systems. Um die IP-Namen zu verwenden, müssen Sie Einträge für die erfolgreiche namensauflösung der DNS-Server hinzufügen.  
+## <a name="HowToPDW"></a>Konfigurieren von SQL Server PDW für die Remote Tabellen Kopie: Aktualisieren von Hostnamen in DNS  
+Die **Create Remote Table** -Anweisung, die für Remote Tabellen Kopien verwendet wird, gibt den Zielserver entweder mit der IP-Adresse oder dem IP-Namen des SMP-Windows-Systems an. Wenn Sie den IP-Namen verwenden möchten, müssen Sie dem DNS-Server Einträge für die erfolgreiche Namensauflösung hinzufügen.  
   
-Die folgenden Schritte beschreiben, wie Sie den DNS-Server zu aktualisieren.  
+In den folgenden Schritten wird das Aktualisieren des DNS-Servers erläutert.  
   
-1.  Melden Sie sich bei dem aktiven Knoten der AD (normalerweise  <strong>*Appliance_domain*-AD01</strong>).  
+1.  Melden Sie sich beim aktiven AD-Knoten an (normalerweise <strong> *appliance_domain*-ad01</strong>).  
   
-2.  Öffnen Sie den DNS-Manager. Dies befindet sich unter **Verwaltung** in die **starten** Menü.  
+2.  Öffnen Sie den DNS-Manager. Diese befindet sich im **Startmenü** unter " **Verwaltung** ".  
   
-3.  Verwenden Sie den DNS-Manager, um den Namen der IP-hinzuzufügen.  
+3.  Verwenden Sie den DNS-Manager, um den IP-Namen hinzuzufügen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-[Verwenden Sie eine DNS-Weiterleitung nicht zur Appliance gehört DNS-Namen auflösen](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+[Verwenden einer DNS-Weiterleitung zum Auflösen von DNS-Namen, die keine Appliance sind](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
 <!-- MISSING LINKS 
 [Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../sqlpdw/security-configure-domain-trusts-sql-server-pdw.md)  
 -->

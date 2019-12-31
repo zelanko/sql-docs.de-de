@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren Sie sofortige Dateiinitialisierung - Analytics Platform System | Microsoft-Dokumentation
-description: Sofortige Dateiinitialisierung in Analytics Platform System zu konfigurieren. Sofortige dateiinitialisierung ist eine SQL Server-Funktion, mit dem Daten-Dateivorgänge, schneller ausgeführt werden kann.
+title: Sofortige Datei Initialisierung konfigurieren
+description: Konfigurieren Sie die sofortige Datei Initialisierung auf dem Analytics Platform System. Die sofortige Datei Initialisierung ist ein SQL Server Feature, mit dem Datendatei Vorgänge schneller ausgeführt werden können.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,25 +8,26 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 27f716b5fc3668b78fd7e5728dc4a2cd640c7940
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 83ed373fd4fdd38ae5ddd391678b74e3d2e168c9
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960734"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401117"
 ---
-# <a name="instant-file-initialization-configuration"></a>Instant File Initialization-Konfiguration
-Sofortige dateiinitialisierung ist eine SQL Server-Funktion, mit dem Daten-Dateivorgänge, schneller ausgeführt werden kann. Überprüfen das Kontrollkästchen, um die sofortige Dateiinitialisierung einschalten steigert die Leistung von SQL Server PDW. Aber wenn dies ein Sicherheitsrisiko Business für Sie darstellt, dann lassen Sie das Kontrollkästchen deaktiviert.  
+# <a name="instant-file-initialization-configuration"></a>Konfiguration der sofortigen Datei Initialisierung
+Die sofortige Datei Initialisierung ist ein SQL Server Feature, mit dem Datendatei Vorgänge schneller ausgeführt werden können. Wenn Sie das Kontrollkästchen aktivieren, um die sofortige Datei Initialisierung zu aktivieren, wird die Leistung von SQL Server PDW verbessert. Wenn dies jedoch ein Sicherheitsrisiko für Ihr Unternehmen darstellt, lassen Sie das Kontrollkästchen deaktiviert.  
   
 > [!IMPORTANT]  
-> Wenn die sofortige dateiinitialisierung aktiviert ist, werden SQL Server keine gelöschten Bits mit Nullen überschrieben.  Dieses Verhalten kann ein Sicherheitsrisiko erstellen, wenn nicht autorisierte Benutzer Zugriff auf gelöschte Daten erhalten. Allerdings verringert SQL Server PDW dieses Risiko, dass sichergestellt wird, dass die SQL Server-Datenbank und die Sicherungsdateien immer mit einer Instanz von SQL Server angefügt werden; nur das SQL Server-Dienstkonto und den lokalen Administrator können die gelöschten Daten in SQL Server PDW zugreifen.  
+> Wenn die sofortige Datei Initialisierung aktiviert ist, überschreibt SQL Server gelöschte Bits mit Nullen nicht.  Dieses Verhalten kann zu einem Sicherheitsrisiko führen, wenn nicht autorisierte Benutzer Zugriff auf gelöschte Daten erhalten. SQL Server PDW jedoch das Risiko verringert, indem sichergestellt wird, dass die SQL Server Datenbank und die Sicherungsdateien immer an eine Instanz von SQL Server angefügt werden. nur das SQL Server-Dienst Konto und der lokale Administrator können auf die gelöschten Daten auf SQL Server PDW zugreifen.  
   
 Die sofortige Dateiinitialisierung ist nicht verfügbar, wenn TDE aktiviert ist.  
   
-## <a name="add-permission-for-the-backup-account"></a>Fügen Sie die Berechtigung für das Backup-Konto  
-Der Sicherungsvorgang ist erforderlich, einen Netzwerkanmeldeinformationen (Windows-Benutzerkonto), auf den Speicherort der Sicherung zugreifen kann. Autorisieren Sie PDW Konto mithilfe der [Sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) Verfahren. Finden Sie unter [SICHERUNGSDATENBANK](../t-sql/statements/backup-database-parallel-data-warehouse.md) für den gesamten Sicherungsvorgang. Um die sofortige dateiinitialisierung zu verwenden, muss das sicherungskonto gewährt werden die `Perform volume maintenance tasks` Berechtigung.  
+## <a name="add-permission-for-the-backup-account"></a>Berechtigung für das Sicherungs Konto hinzufügen  
+Der Sicherungs Vorgang erfordert Netzwerk Anmelde Informationen (Windows-Benutzerkonto), die auf den Speicherort der Sicherung zugreifen können. Sie autorisieren PDW, das Konto mithilfe des [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) Verfahrens zu verwenden. Weitere Informationen finden Sie unter [Backup Database](../t-sql/statements/backup-database-parallel-data-warehouse.md) für den gesamten Sicherungs Vorgang. Damit die sofortige Datei Initialisierung verwendet werden kann, muss dem Sicherungs Konto `Perform volume maintenance tasks` die Berechtigung erteilt werden.  
   
-1.  Öffnen Sie auf den backup-Server, die **Local Security Policy** Anwendung (`secpol.msc`).  
+1.  Öffnen Sie auf dem Sicherungs Server die Anwendung **lokale Sicherheitsrichtlinie** (`secpol.msc`).  
   
 2.  Erweitern Sie im linken Bereich **Lokale Richtlinien**, und klicken Sie dann auf **Zuweisen von Benutzerrechten**.  
   
@@ -36,22 +37,22 @@ Der Sicherungsvorgang ist erforderlich, einen Netzwerkanmeldeinformationen (Wind
   
 5.  Klicken Sie auf **Übernehmen**, und schließen Sie dann alle Dialogfelder von **Lokale Sicherheitsrichtlinie** .  
   
-## <a name="to-turn-instant-file-initialization-on-or-off"></a>Zum Aktivieren oder deaktivieren Sie die sofortige Dateiinitialisierung  
+## <a name="to-turn-instant-file-initialization-on-or-off"></a>So aktivieren oder deaktivieren Sie die sofortige Datei Initialisierung  
   
-1.  Starten Sie den Konfigurations-Manager. Weitere Informationen finden Sie unter [Starten des Konfigurations-Managers &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Starten Sie die Configuration Manager. Weitere Informationen finden Sie unter [Start the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
-2.  Klicken Sie im linken Bereich des Konfigurations-Managers auf **sofortige Dateiinitialisierung**.  
+2.  Klicken Sie im linken Bereich des Configuration Manager auf **sofortige Datei Initialisierung**.  
   
-3.  Um die sofortige dateiinitialisierung zu aktivieren, aktivieren das Kontrollkästchen neben **sofortige Dateiinitialisierung aktiviert, auf allen Knoten**. Um die sofortige dateiinitialisierung zu deaktivieren, deaktivieren Sie das Kontrollkästchen neben **sofortige Dateiinitialisierung aktiviert, auf allen Knoten**.  
+3.  Aktivieren Sie das Kontrollkästchen neben **sofortige Datei Initialisierung auf allen Knoten aktivieren**, um die sofortige Datei Initialisierung zu aktivieren. Deaktivieren Sie das Kontrollkästchen neben **sofortige Datei Initialisierung auf allen Knoten aktivieren**, um die sofortige Datei Initialisierung zu deaktivieren.  
   
     > [!WARNING]  
-    > Wenn Sie sofortige dateiinitialisierung deaktivieren, gelten die Sicherheitsaspekte machen, die weiter oben erläuterten, für die Funktion möglicherweise immer noch für Dateien gelöscht werden, während die sofortige dateiinitialisierung aktiviert wurde.  
+    > Wenn Sie die sofortige Datei Initialisierung deaktivieren, kann die oben beschriebene Sicherheits Überlegung für das Feature weiterhin auf Dateien angewendet werden, die während der Aktivierung der sofortigen Datei Initialisierung gelöscht wurden.  
   
-4.  Klicken Sie auf **Übernehmen**. Die Änderung wird das nächste Mal über die SQL Server-Instanzen für SQL Server PDW weitergegeben, das die Anwendung Dienste neu gestartet werden. Um die Anwendung Dienste neu zu starten, finden Sie unter [PDW-Dienststatus &#40;Analytics Platform System&#41;](pdw-services-status.md).  
+4.  Klicken Sie auf **Übernehmen**. Die Änderung wird durch die SQL Server Instanzen auf SQL Server PDW weitergegeben, wenn die Geräte Dienste das nächste Mal neu gestartet werden. Informationen zum Neustarten der Geräte Dienste finden Sie unter [PDW-Dienst Status &#40;Analytics Platform System&#41;](pdw-services-status.md).  
   
-5.  Möglicherweise möchten Sie die oben erläuterten Schritte wiederholen **Berechtigung hinzufügen, für das Konto für die Sicherung** So entfernen Sie die **Durchführen von Volumewartungsaufgaben** Berechtigung.  
+5.  Möglicherweise möchten Sie die oben beschriebenen Schritte als **Berechtigung hinzufügen für das Sicherungs Konto** wiederholen, um die Berechtigung zum **Ausführen von volumewartungstasks** zu entfernen.  
   
-![DWConfig PDW-Appliance Instant File Initialization](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
+![DWConfig-Anwendung, PDW – Sofortige Dateiinitialisierung](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
-Weitere Informationen zur sofortigen dateiinitialisierung finden Sie unter [sofortige Dateiinitialisierung](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
+Weitere Informationen zur sofortigen Datei Initialisierung finden Sie unter [sofortige Datei Initialisierung](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
   

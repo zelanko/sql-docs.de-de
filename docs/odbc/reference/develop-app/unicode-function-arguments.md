@@ -13,61 +13,62 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1fee0aa76bc5b903d65461261a8eb5dbc2349581
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88ce592ebbf5a1b44d55b1b3119ef96e713112bc
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087764"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74833020"
 ---
 # <a name="unicode-function-arguments"></a>Unicode-Funktionsargumente
-Der ODBC 3.5 (oder höher)-Treiber-Manager unterstützt die ANSI- und Unicode-Versionen aller Funktionen, die Zeiger auf Zeichenfolgen oder SQLPOINTER in ihren Argumenten zu akzeptieren. Die Unicode-Funktionen werden als Funktionen implementiert (mit dem Suffix *W*) und nicht als Makros. ANSI-Funktionen (die aufgerufen werden kann, mit oder ohne Suffix *ein*) sind identisch mit der aktuellen ODBC API-Funktionen.  
+Der Treiber-Manager von ODBC 3,5 (oder höher) unterstützt sowohl ANSI-als auch Unicode-Versionen aller Funktionen, die Zeiger auf Zeichen folgen oder SQLPOINTER in ihren Argumenten akzeptieren. Die Unicode-Funktionen werden als Funktionen implementiert (mit einem Suffix von *W*), nicht als Makros. Die ANSI-Funktionen (die mit oder ohne *Suffix von aufgerufen*werden können) sind identisch mit den aktuellen ODBC-API-Funktionen.  
   
 ## <a name="remarks"></a>Hinweise  
- Unicode-Funktionen, die immer zurückgeben, oder nutzen von Zeichenfolgen oder Argumente Länge werden als Anzahl von Zeichen übergeben. Für Funktionen, die von Längeninformationen für Server-Daten zurückgeben, werden die Anzeigegröße und Genauigkeit als Anzahl der Zeichen beschrieben. Wenn eine Länge (Übertragungsgröße der Daten) auf Zeichenfolgen-oder keine Zeichenfolge darstellen verweisen kann, wird die Länge in Oktett Längen beschrieben. Z. B. **SQLGetInfoW** dauert immer noch die Länge als Anzahl von Bytes, aber **SQLExecDirectW** Count-von-Zeichen verwenden.  
+ Unicode-Funktionen, die immer Zeichen folgen oder Längen Argumente zurückgeben oder annehmen, werden als Anzahl von Zeichen übergebenen. Für Funktionen, die Längen Informationen für Serverdaten zurückgeben, werden die Anzeige Größe und die Genauigkeit als Anzahl von Zeichen beschrieben. Wenn eine Länge (Übertragungs Größe der Daten) auf Zeichen folgen-oder nicht-Zeichen folgen Daten verweisen kann, wird die Länge in oktetelängen beschrieben. **Sqlgetinfow** nimmt z. b. immer noch die Länge als Anzahl von Bytes an, **sqlexecdirectw** verwendet jedoch die Anzahl von Zeichen.  
   
- Anzahl von Zeichen bezieht sich auf die Anzahl der Bytes (Oktette) für die ANSI-Funktionen und die Anzahl von WCHAR (16-Bit-Wörter) für UNICODE-Funktionen. Insbesondere kann eine Sequenz Doppelbyte-Zeichensatz (DBCS) oder eine Sequenz multibyte-Zeichensätze (MBCS) der mehrere Bytes bestehen. Eine Folge von UTF-16-Unicode-Zeichen kann aus mehreren WCHARs so lang wie bestehen.  
+ Anzahl von Zeichen bezieht sich auf die Anzahl von Bytes (Oktette) für ANSI-Funktionen und die Anzahl von WCHAR (16-Bit-Wörtern) für Unicode-Funktionen. Insbesondere eine Doppelbyte-Zeichenfolge (Double-Byte Character Sequence, DBCS) oder eine multibytezeichensequenz (MBCS) kann aus mehreren Bytes bestehen. Eine UTF-16-Unicode-Zeichenfolge kann aus mehreren WCHARs bestehen.  
   
- Im folgenden finden eine Liste der ODBC-API-Funktionen, die sowohl Unicode (W) und ANSI (A)-Versionen unterstützt:  
+ Im folgenden finden Sie eine Liste der ODBC-API-Funktionen, die sowohl Unicode (W)-als auch ANSI (a)-Versionen unterstützen:  
   
 |||  
 |-|-|  
-|**SQLBrowseConnect**|**SQLGetDiagField**|  
-|**SQLColAttribute**|**SQLGetDiagRec**|  
-|**SQLColAttributes**|**SQLGetInfo**|  
-|**SQLColumnPrivileges**|**SQLGetStmtAttr**|  
+|**SQLBrowseConnect**|**SQLGetDiagRec**|  
+|**SQLColAttribute**|**SQLGetInfo**|  
+|**SQLColAttributes**|**'SQLGetStmtAttr'**|  
+|**SQLColumnPrivileges**|**SQLGetTypeInfo**|  
 |**SQLColumns**|**SQLNativeSQL**|  
 |**SQLConnect**|**SQLPrepare**|  
 |**SQLDataSources**|**SQLPrimaryKeys**|  
 |**SQLDescribeCol**|**SQLProcedureColumns**|  
-|**SQLDriverConnect**|**SQLProcedures**|  
+|**SQLDriverConnect**|**'SQLProcedures'**|  
 |**SQLDrivers**|**SQLSetConnectAttr**|  
 |**SQLError**|**SQLSetConnectOption**|  
 |**SQLExecDirect**|**SQLSetCursorName**|  
 |**SQLForeignKeys**|**SQLSetDescField**|  
 |**SQLGetConnectAttr**|**SQLSetStmtAttr**|  
-|**SQLGetConnectOption**|**SQLSpecialColumns**|  
-|**SQLGetCursorName**|**SQLStatistics**|  
+|**SQLGetConnectOption**|**'SQLSpecialColumns'**|  
+|**SQLGetCursorName**|**'SQLStatistics'**|  
 |**SQLGetDescField**|**SQLTablePrivileges**|  
 |**SQLGetDescRec**|**SQLTables**|  
+|**SQLGetDiagField**||  
   
- Im folgenden finden eine Liste der ODBC-Installationsprogramms und ODBC-Übersetzer-Funktionen, die sowohl Unicode (W) und ANSI (A)-Versionen unterstützen:  
+ Im folgenden finden Sie eine Liste der ODBC-Installer-und ODBC-Konvertierungs Funktionen, die sowohl Unicode (W)-als auch ANSI (a)-Versionen unterstützen:  
   
 |||  
 |-|-|  
-|**SQLConfigDataSource**|**SQLInstallDriverManager**|  
-|**SQLCreateDataSource**|**SQLInstallerError**|  
-|**SQLDataSourceToDriver**|**SQLInstallODBC**|  
-|**SQLDriverToDataSource**|**SQLReadFileDSN**|  
-|**SQLGetAvailableDrivers**|**SQLRemoveDSNFromINI**|  
-|**SQLGetInstalledDrivers**|**SQLValidDSN**|  
-|**SQLGetTranslator**|**SQLWriteDSNToINI**|  
+|**SQLConfigDataSource**|**Sqlinstalldrivermanager**|  
+|**Sqlkreatedatasource**|**Sqlinstallererror**|  
+|**Sqldatasourceto Driver**|**SQLInstallODBC**|  
+|**Sqldriverflidatasource**|**Sqllesfiledsn**|  
+|**Sqlgetavailabledrivers**|**Sqlremovedsnfromini**|  
+|**Sqlgetinstalleddrivers**|**Sqlvaliddsn**|  
+|**Sqlgettranslator**|**Sqlschreitedsnder ini**|  
 |**SQLInstallDriver**||  
   
 > [!NOTE]
->  Als veraltet markierte Funktionen verfügen über Unterstützung für Unicode-in-ANSI--Zuordnung aus, da die ODBC *3.x* -Treiber-Manager unterstützt die erneute Kompilierung ODBC *2.x* Anwendungen mit der Unicode- **#define**.  
+>  Als veraltet markierte Funktionen werden Unicode-zu-ANSI-Mapping unterstützt, da der Treiber-Manager von ODBC *3.* x das erneute Kompilieren von ODBC *2. x* -Anwendungen mit dem Unicode- **#define**unterstützt.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Unicode-Anwendungen](../../../odbc/reference/develop-app/unicode-applications.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Ermitteln von fehlgeschlagenen Clusterknoten - Analytics Platform System | Microsoft-Dokumentation
-description: Dieser Artikel beschreibt, wie Sie den Namen des Knotens Analytics Platform System (APS) zu ermitteln, die Fehler, nachdem ein Clusterfailover aufgetreten ist und eine Cluster-Failover-Warnung ausgelöst wurde. Im Rahmen der Problembehandlung eines clusterfailovers durchgeführt werden müssen Sie den Namen des Knotens bestimmen, die nicht vor der Kontaktaufnahme mit Microsoft, um das Problem zu beheben.
+title: Ermitteln des fehlerhaften Cluster Knotens
+description: In diesem Artikel wird beschrieben, wie Sie den Namen des Knotens "Analytics Platform System (APS)" ermitteln, bei dem nach einem Cluster Failover ein Fehler aufgetreten ist und eine Cluster Failover-Warnung ausgelöst wurde. Im Rahmen der Problembehandlung eines Cluster Failovers müssen Sie den Namen des Knotens ermitteln, bei dem ein Fehler aufgetreten ist, bevor Sie sich an Microsoft wenden, um das Problem zu beheben.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,29 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2c17fde577b71382cd3ee63b8c6f50818184eab0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 68ebdb7f17ddee311644e11c48eaa4b586beac74
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961054"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401198"
 ---
-# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Bestimmt, welcher Cluster Knoten konnte nicht für Analytics Platform System
-Dieses Thema beschreibt, wie Sie den Namen des Knotens Analytics Platform System (APS) zu ermitteln, die Fehler, nachdem ein Clusterfailover aufgetreten ist und eine Cluster-Failover-Warnung ausgelöst wurde. Im Rahmen der Problembehandlung eines clusterfailovers durchgeführt werden müssen Sie den Namen des Knotens bestimmen, die nicht vor der Kontaktaufnahme mit Microsoft, um das Problem zu beheben.  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Ermitteln des fehlerhaften Cluster Knotens für das Analytics-Platt Form System
+In diesem Thema wird beschrieben, wie Sie den Namen des Knotens "Analytics Platform System (APS)" ermitteln, bei dem nach einem Cluster Failover ein Fehler aufgetreten ist und eine Cluster Failover-Warnung ausgelöst wurde. Im Rahmen der Problembehandlung eines Cluster Failovers müssen Sie den Namen des Knotens ermitteln, bei dem ein Fehler aufgetreten ist, bevor Sie sich an Microsoft wenden, um das Problem zu beheben.  
   
-## <a name="Background"></a>Hintergrund  
-Für hochverfügbarkeit in SQL Server PDW werden der steuerknoten und den Compute-Knoten als aktiv oder Passiv Komponenten der Windows-Failovercluster konfiguriert. Wenn ein aktiver Server nicht auf kritische Systeme-Anforderungen antwortet, wird der passive Server ein Failover und führt die Funktionen des Servers, der Fehler.  
+## <a name="Background"></a>Kulisse  
+Für hohe Verfügbarkeit in SQL Server PDW sind der Steuerungs Knoten und die Computeknoten als aktive oder passive Komponenten von Windows-Failoverclustern konfiguriert. Wenn ein aktiver Server nicht auf kritische Systemanforderungen reagiert, führt der passive Server ein Failover durch und führt die Funktionen des Servers aus, bei dem ein Fehler aufgetreten ist.  
   
-Nach einem Clusterfailover beim Berichten von SQL Server PDW zum Knotenstatus, muss der passive Server ein über den Status. Allerdings ist es nicht offensichtlich Fehler bei der Server oder den Knoten, insbesondere dann, wenn der Server, die Fehler bei noch immer online ist. Um den Fehler zu beheben, müssen Sie den Namen des Knotens bestimmen, die ein Failover ausgeführt.  
+Wenn nach einem Cluster Failover SQL Server PDW Berichte zum Knoten Status ausgeführt wird, hat der passive Server einen Failover-Status. Es ist jedoch nicht offensichtlich, bei welchem Server oder Knoten ein Fehler aufgetreten ist, insbesondere, wenn der fehlerhafte Server weiterhin online ist. Zum Beheben des Cluster Fehlers müssen Sie den Namen des Knotens ermitteln, für den ein Failover ausgeführt wurde.  
   
-## <a name="AdminConsoleSolution"></a>-Verwaltungskonsole-Lösung  
+## <a name="AdminConsoleSolution"></a>Verwaltungs Konsolen Lösung  
   
-#### <a name="to-find-the-name-of-the-node-that-failed"></a>Um den Namen des Knotens zu finden, die fehlgeschlagen  
+#### <a name="to-find-the-name-of-the-node-that-failed"></a>So ermitteln Sie den Namen des fehlgeschlagenen Knotens  
   
-1.  Öffnen Sie die Verwaltungskonsole. Weitere Informationen über die Verwaltungskonsole finden Sie unter [Überwachen der Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). Nach dem Failover, das Failover im serverereignissatz enthalten ist die Anzahl der Warnungen auf der **INTEGRITÄT** Seite. Gibt es eine **INTEGRITÄT** Seite für die PDW-Region und für den Fabric-Bereich des Geräts. Jede Seite "Integrität" verfügt über eine **WARNUNGEN** Registerkarte. Weitere Informationen zu einer Warnung, klicken Sie auf der Seite "Integrität", Registerkarte "Warnungen", und klicken Sie dann auf eine Warnung aus.  
+1.  Öffnen Sie die Verwaltungskonsole. Weitere Informationen zur Verwaltungskonsole finden [Sie unter Überwachen der Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). Nach dem Failover ist das failoverereignis in der Anzahl der Warnungen auf **der Seite "** Integrität" enthalten. Es gibt eine **Integritäts Seite für** die PDW-Region und die Fabric-Region des Geräts. Jede Integritäts Seite verfügt über eine Registerkarte **Warnungen** . Wenn Sie weitere Informationen zu einer Warnung erhalten möchten, klicken Sie auf die Seite Integrität, die Registerkarte Warnungen, und klicken Sie dann auf eine Warnung.  
   
-## <a name="SystemView"></a>Lösung der System-anzeigen  
-Die folgende SQL-Anweisung zeigt, wie die [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md) Systemsicht, um den Namen des Servers zu finden, die nicht.  
+## <a name="SystemView"></a>System Ansichts Lösung  
+Die folgende SQL-Anweisung zeigt, wie Sie die Systemsicht [sys. dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md) verwenden, um den Namen des Servers zu ermitteln, bei dem ein Fehler aufgetreten ist.  
   
 ```sql  
 SELECT  

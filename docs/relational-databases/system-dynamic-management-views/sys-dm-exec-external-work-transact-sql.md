@@ -22,41 +22,41 @@ ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5afdfd4f9a5f66845ae6d3798910fc2c4bf5ab8a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b0ba7eecc8e117e429f6992622d0c7bb2073f86a
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532953"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74834332"
 ---
-# <a name="sysdm_exec_external_work-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
+# <a name="sysdm_exec_external_work-transact-sql"></a>sys. dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Gibt Informationen über die Arbeitsauslastung pro Worker auf jedem Computeknoten zurück.  
   
  Fragen Sie sys. dm_exec_external_work ab, um die für die Kommunikation mit der externen Datenquelle (z. b. Hadoop oder externe SQL Server) aufgedrehte Arbeit zu identifizieren.  
   
-|Column Name|Datentyp|und Beschreibung|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Eindeutiger Bezeichner für zugeordnete polybase-Abfrage.|Weitere Informationen finden Sie unter *request_ID* in [sys. &#40;dm_exec_requests&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|`int`|Die Anforderung, die dieser Worker ausführt.|Weitere Informationen finden Sie unter *step_index* in [sys. &#40;dm_exec_requests&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|`int`|Schritt in den DMS-Plan, der von diesem Worker ausgeführt wird.|Weitere Informationen finden Sie unter [sys. &#40;dm_exec_dms_workers&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|`int`|Der Knoten, auf dem der Worker ausgeführt wird.|Weitere Informationen finden Sie unter [sys. &#40;dm_exec_compute_nodes&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|type|`nvarchar(60)`|Der Typ der externen Arbeit.|' Datei Teilung '|  
+|execution_id|`nvarchar(32)`|Eindeutiger Bezeichner für zugeordnete polybase-Abfrage.|Weitere Informationen finden Sie unter *request_ID* in [sys. dm_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|`int`|Die Anforderung, die dieser Worker ausführt.|Weitere Informationen finden Sie unter *step_index* in [sys. dm_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|`int`|Schritt in den DMS-Plan, der von diesem Worker ausgeführt wird.|Weitere Informationen finden Sie unter [sys. dm_exec_dms_workers &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|`int`|Der Knoten, auf dem der Worker ausgeführt wird.|Weitere Informationen finden Sie unter [sys. dm_exec_compute_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|Typ|`nvarchar(60)`|Der Typ der externen Arbeit.|' Datei Teilung '|  
 |work_id|`int`|ID der tatsächlichen Teilung.|Größer oder gleich 0 (null).|  
 |input_name|`nvarchar(4000)`|Name der zu lesenden Eingabe|Dateiname bei Verwendung von Hadoop.|  
 |read_location|`bigint`|Offset oder Lese Speicherort.|Der Offset der zu lesenden Datei.|  
-|bytes_processed|`bigint`|Gesamtanzahl der Bytes, die von diesem Worker verarbeitet wurden.|Größer oder gleich 0 (null).|  
-|length|`bigint`|Länge des Split-oder HDFS-Blocks im Fall von Hadoop|Benutzerdefinierbar. Der Standardwert ist 64M.|  
+|bytes_processed|`bigint`|Gesamtanzahl der für die Verarbeitung von Daten durch diesen Worker zugeordneten Bytes. Dies kann nicht notwendigerweise die Gesamtmenge der Daten darstellen, die von der Abfrage zurückgegeben werden. |Größer oder gleich 0 (null).|  
+|Länge|`bigint`|Länge des Split-oder HDFS-Blocks im Fall von Hadoop|Benutzerdefinierbar. Der Standardwert ist 64M.|  
 |status|`nvarchar(32)`|Status des Workers|Ausstehend, verarbeitet, abgeschlossen, fehlgeschlagen, abgebrochen|  
 |start_time|`datetime`|Beginn der Arbeit||  
 |end_time|`datetime`|Ende der Arbeit||  
 |total_elapsed_time|`int`|Gesamtzeit in Millisekunden||
 |compute_pool_id|`int`|Eindeutiger Bezeichner für den Pool.|
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Problembehandlung bei polybase mit dynamischen Verwaltungs Sichten](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Dynamische Verwaltungs Sichten &#40;in Verbindung mit der Datenbank Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten im Zusammenhang mit der Datenbank &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_pdw_resource_waits (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 11/26/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -12,34 +12,54 @@ ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 35868774efc7083b835bb6f44b6c71cbffc7ae2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46b1155878aae6cc7f667965cfae065ed1a9cacc
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899214"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564741"
 ---
-# <a name="sysdmpdwresourcewaits-transact-sql"></a>Sys.dm_pdw_resource_waits (Transact-SQL)
+# <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys. dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Warten Sie, zeigt Informationen für alle Ressourcentypen im [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+  Zeigt die Warte Informationen für alle Ressourcentypen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]in an.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|wait_id|**bigint**|Die Position der Anforderung in der Liste der wartenden.|0-basierte Ordnungszahl. Dies ist in allen Einträgen der Wartevorgang nicht eindeutig.|  
-|session_id|**nvarchar(32)**|ID der Sitzung, in der der Wartezustand aufgetreten ist.|Finden Sie unter Sitzungs-ID in [dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|Typ|**nvarchar(255)**|Der Typ des Wartevorgangs, den dieser Eintrag darstellt.|Mögliche Werte:<br /><br /> Verbindung<br /><br /> Parallelität für lokale Abfragen<br /><br /> Parallelität von verteilten Abfragen<br /><br /> DMS-Parallelität<br /><br /> Sicherung der Parallelität|  
-|object_type|**nvarchar(255)**|Der Typ des Objekts, das den Wartevorgang betroffen ist.|Mögliche Werte:<br /><br /> **OBJEKT**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **ANWENDUNG**|  
-|object_name|**nvarchar(386)**|Name oder die GUID des angegebenen Objekts, das von den Wartevorgang betroffen war.|Tabellen und Ansichten werden mit den dreiteiligen Namen angezeigt.<br /><br /> Indizes und Statistiken werden mit vierteiligen Namen angezeigt.<br /><br /> Namen, Prinzipale und Datenbanken sind die Zeichenfolgennamen.|  
-|request_id|**nvarchar(32)**|Die ID der Anforderung auf der der Wartezustand aufgetreten ist.|QID Bezeichner der Anforderung.<br /><br /> GUID-Bezeichner für die Anforderungen zum Laden.|  
-|request_time|**datetime**|Der Zeitpunkt, an dem die Sperre oder eine Ressource angefordert wurde.||  
-|acquire_time|**datetime**|Der Zeitpunkt, an dem die Sperre oder die Ressource abgerufen wurde.||  
-|state|**nvarchar(50)**|Status des den Wartezustand.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|priority|**int**|Die Priorität des Elements warten.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**int**|Anzahl von parallelitätsslots (maximal 32) für diese Anforderung reserviert.|1 – für "smallrc"<br /><br /> 3 – für "mediumrc"<br /><br /> 7 für "largerc"<br /><br /> 22 – für "xlargerc"|  
-|resource_class|**nvarchar(20)**|Die Ressourcenklasse für diese Anforderung.|"Smallrc"<br /><br /> "Mediumrc"<br /><br /> "Largerc"<br /><br /> "Xlargerc"|  
+|wait_id|**bigint**|Die Position der Anforderung in der Warteliste.|0-basierte Ordnungszahl. Dies ist nicht über alle warte Einträge hinweg eindeutig.|  
+|session_id|**nvarchar (32)**|Die ID der Sitzung, in der der Wartezustand aufgetreten ist.|Weitere Informationen finden Sie unter session_id in [sys. dm_pdw_exec_sessions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|Typ|**nvarchar(255)**|Der Typ des warte Vorgangs, den dieser Eintrag darstellt.|Mögliche Werte:<br /><br /> Verbindung<br /><br /> Parallelität für lokale Abfragen<br /><br /> Parallelität verteilter Abfragen<br /><br /> DMS-Parallelität<br /><br /> Parallelität der Sicherung|  
+|object_type|**nvarchar(255)**|Der Typ des Objekts, das vom warte Vorgang betroffen ist.|Mögliche Werte:<br /><br /> **Objekt**<br /><br /> **Verbindung**<br /><br /> **Anlage**<br /><br /> **Chaos**<br /><br /> **Asyl**|  
+|object_name|**nvarchar (386)**|Der Name oder die GUID des angegebenen Objekts, das von der Wartezeit betroffen war.|Tabellen und Sichten werden mit dreiteiligen Namen angezeigt.<br /><br /> Indizes und Statistiken werden mit vierteiligen Namen angezeigt.<br /><br /> Namen, Prinzipale und Datenbanken sind Zeichen folgen Namen.|  
+|request_id|**nvarchar (32)**|ID der Anforderung, für die der Wartezustand aufgetreten ist.|Der QID-Bezeichner der Anforderung.<br /><br /> GUID-Bezeichner für Ladeanforderungen.|  
+|request_time|**DateTime**|Der Zeitpunkt, zu dem die Sperre oder Ressource angefordert wurde.||  
+|acquire_time|**DateTime**|Der Zeitpunkt, zu dem die Sperre oder Ressource abgerufen wurde.||  
+|state|**nvarchar(50)**|Status des warte Zustands.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|priority|**wartenden**|Priorität des wartenden Elements.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|concurrency_slots_used|**wartenden**|Intern|Weitere Informationen finden Sie unter [Monitor Ressourcen-warte](#monitor-resource-waits) Vorgänge|  
+|resource_class|**nvarchar (20)**|Intern |Weitere Informationen finden Sie unter [Monitor Ressourcen-warte](#monitor-resource-waits) Vorgänge|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Datawarehouse und Parallel Data Warehouse-dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="monitor-resource-waits"></a>Überwachen von Ressourcen Verzögerungen 
+Mit der Einführung von [Arbeits](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)Auslastungs Gruppen sind Parallelitäts Slots nicht mehr anwendbar.  Verwenden Sie die folgende Abfrage und `resources_requested` die-Spalte, um die Ressourcen zu verstehen, die zum Ausführen der Anforderung erforderlich sind.
+
+```sql
+select rw.wait_id
+      ,rw.session_id
+      ,rw.type
+      ,rw.object_type
+      ,rw.object_name
+      ,rw.request_id
+      ,rw.request_time
+      ,rw.acquire_time
+      ,rw.state
+      ,resources_requested = s.effective_request_min_resource_grant_percent
+      ,r.group_name
+  from sys.dm_workload_management_workload_groups_stats s
+  join sys.dm_pdw_exec_requests r on r.group_name = s.name collate SQL_Latin1_General_CP1_CI_AS
+  join sys.dm_pdw_resource_waits rw on rw.request_id = r.request_id
+```
+
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren von PolyBase für den Zugriff auf externe Daten in Azure Blob Storage | Microsoft-Dokumentation
-description: Erläutert das Konfigurieren von PolyBase in Parallel Data Warehouse für die Verbindung mit externen Hadoop.
+title: Verwenden von polybase zum Zugreifen auf externe Daten in Azure BLOB Storage
+description: Erläutert, wie polybase parallel Data Warehouse zum Herstellen einer Verbindung mit dem externen Hadoop konfiguriert wird.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,31 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960286"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400723"
 ---
-# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Azure Blob storage
+# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Konfigurieren von polybase für den Zugriff auf externe Daten in Azure BLOB Storage
 
-Der Artikel erläutert die Verwendung von PolyBase in SQL Server-Instanz zum Abfragen von externen Daten im Azure-Blob-Speicher.
+In diesem Artikel wird erläutert, wie Sie polybase auf einer SQL Server Instanz verwenden, um externe Daten in Azure BLOB Storage abzufragen.
 
 > [!NOTE]
-> APS unterstützt derzeit nur standard Allgemein v1 lokal redundanten (LRS) Azure-Blob-Speicher.
+> APS unterstützt derzeit nur den lokal redundanten Standard-Azure-BLOB-Speicher (LRS).
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
- - Azure Blob Storage in Ihrem Abonnement her.
- - Ein Container in Azure Blob Storage erstellt wird.
+ - Azure BLOB Storage in Ihrem Abonnement.
+ - Ein Container, der im Azure-BLOB-Speicher erstellt wird.
 
-### <a name="configure-azure-blob-storage-connectivity"></a>Konfigurieren von Azure Blob Storage-Konnektivität
+### <a name="configure-azure-blob-storage-connectivity"></a>Konfigurieren der Azure BLOB Storage-Konnektivität
 
-Konfigurieren Sie zuerst installiert wird, um Azure Blob Storage verwenden.
+Konfigurieren Sie zunächst APS für die Verwendung von Azure BLOB Storage.
 
-1. Führen Sie [Sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) mit "Hadoop Connectivity" auf ein Azure-Blob-Speicheranbieter festgelegt. Informationen zum Ermitteln des Werts für Anbieter finden Sie unter [Konfiguration der PolyBase-Konnektivität](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Führen Sie [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) mit "Hadoop Connectivity" aus, die auf einen Azure BLOB Storage-Anbieter festgelegt ist. Informationen zum Ermitteln des Werts für Anbieter finden Sie unter [Konfiguration der PolyBase-Konnektivität](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
@@ -44,19 +45,19 @@ Konfigurieren Sie zuerst installiert wird, um Azure Blob Storage verwenden.
    GO
    ```  
 
-2. APS-Region, die mithilfe von dienststatusseite auf Neustart [Appliance-Konfigurations-Manager](launch-the-configuration-manager.md).
+2. Neustart der APS-Region mithilfe der Dienst Status Seite auf [Appliance-Configuration Manager](launch-the-configuration-manager.md).
   
 ## <a name="configure-an-external-table"></a>Konfigurieren einer externen Tabelle
 
-Um die Daten in Ihrem Azure-Blob-Speicher abzufragen, müssen Sie eine externe Tabelle in Transact-SQL-Abfragen mit definieren. Die folgenden Schritte beschreiben, wie Sie die externe Tabelle konfigurieren.
+Zum Abfragen der Daten in Azure BLOB Storage müssen Sie eine externe Tabelle definieren, die in Transact-SQL-Abfragen verwendet werden soll. Die folgenden Schritte beschreiben, wie Sie die externe Tabelle konfigurieren.
 
-1. Erstellen Sie einen Hauptschlüssel in der Datenbank. Es ist erforderlich, um die Anmeldeinformationen zu verschlüsseln.
+1. Erstellen Sie einen Hauptschlüssel in der Datenbank. Es ist erforderlich, um den geheimen Schlüssel für die Anmelde Informationen zu verschlüsseln.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-1. Erstellen Sie datenbankweit gültige Anmeldeinformationen für Azure Blob Storage.
+1. Erstellen Sie Daten Bank weit gültige Anmelde Informationen für Azure BLOB Storage.
 
    ```sql
    -- IDENTITY: any string (this is not used for authentication to Azure storage).  
@@ -65,7 +66,7 @@ Um die Daten in Ihrem Azure-Blob-Speicher abzufragen, müssen Sie eine externe T
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle.
+1. Erstellen Sie eine externe Datenquelle mit der [externen Datenquelle erstellen](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -123,7 +124,7 @@ Die folgenden Abfragen stellen fiktive Kfz-Sensordaten für das Beispiel bereit.
 
 ### <a name="ad-hoc-queries"></a>Ad-hoc-Abfragen  
 
-Die folgende ad-hoc-Abfrage joins relationalen Daten im Azure-Blob-Speicher. Er wählt die Kunden, die schneller als 35 mph, verknüpfen strukturierte Kundendaten, die in SQL Server gespeichert sind, Auto-Sensordaten in Azure Blob Storage gespeichert.  
+Die folgende Ad-hoc-Abfrage verbindet relationale mit Daten in Azure BLOB Storage. Es wählt Kunden aus, die schneller als 35 mph sind, und verbindet strukturierte Kundendaten, die in SQL Server mit Fahrzeug Sensordaten in Azure BLOB Storage gespeichert sind.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -135,7 +136,7 @@ ORDER BY CarSensor_Data.Speed DESC
 
 ### <a name="importing-data"></a>Importieren von Daten  
 
-Die folgende Abfrage importiert externe Daten in APS. In diesem Beispiel importiert die Daten für schnelle Treiber in APS eine tiefergehende Analyse zu tun. Zur Verbesserung der Leistung nutzt es APS-columnstore-Technologie.  
+Mit der folgenden Abfrage werden externe Daten in APS importiert. In diesem Beispiel werden Daten für schnelle Treiber in APS importiert, um ausführlichere Analysen durchzuführen. Um die Leistung zu verbessern, nutzt sie columnstore-Technologie in APS.  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -154,7 +155,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>Exportieren von Daten  
 
-Die folgende Abfrage exportiert Daten aus APS in Azure Blob Storage. Es kann zum Archivieren von relationalen Daten in Azure Blob Storage, während Sie sich noch Lage sein, es abzufragen.
+Mit der folgenden Abfrage werden Daten aus APS in Azure BLOB Storage exportiert. Sie kann verwendet werden, um relationale Daten in Azure BLOB Storage zu archivieren und Sie trotzdem abzufragen.
 
 ```sql
 -- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
@@ -170,11 +171,11 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>Anzeigen von PolyBase-Objekten in SSDT  
+## <a name="view-polybase-objects-in-ssdt"></a>Anzeigen von polybase-Objekten in SSDT  
 
-In SQL Server Data Tools, externe Tabellen in einem separaten Ordner angezeigt werden **externe Tabellen**. Externe Datenquellen und externe Dateiformate befinden sich in Unterordnern unter **Externe Ressourcen**.  
+In SQL Server Data Tools werden externe Tabellen in einem separaten Ordner **externe Tabellen**angezeigt. Externe Datenquellen und externe Dateiformate befinden sich in Unterordnern unter **Externe Ressourcen**.  
   
-![PolyBase-Objekten in SSDT](media/polybase/external-tables-datasource.png)  
+![Polybase-Objekte in SSDT](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>Nächste Schritte
 

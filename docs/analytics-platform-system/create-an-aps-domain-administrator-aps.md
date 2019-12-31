@@ -1,6 +1,6 @@
 ---
-title: Erstellen Sie ein Domänenadministrator - Analytics Platform System | Microsoft-Dokumentation
-description: Einige Vorgänge erfordern, Analytics Platform System Domänenadministratorrechten an. Dies erklärt, wie weitere Appliance Domänenadministratoren zu erstellen.
+title: Erstellen eines Domänen Administrators
+description: Einige Vorgänge erfordern Analytics-Platt Form System-Domänen Administrator Berechtigungen. Hier wird erläutert, wie zusätzliche Anwendungs Domänen Administratoren erstellt werden.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,44 +8,45 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 51ed729cda33b5d68a4d115c71f712e2b81d1a65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 1a0d50e485f0e8f48de11b2e5a3c27c9f9be047e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961094"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401234"
 ---
-# <a name="create-an-aps-domain-administrator"></a>Erstellen eines APS-Domain-Administrators
-Einige Vorgänge erfordern, Analytics Platform System Domänenadministratorrechten an. Dies erklärt, wie weitere Appliance Domänenadministratoren zu erstellen.  
+# <a name="create-an-aps-domain-administrator"></a>Erstellen eines APS-Domänen Administrators
+Einige Vorgänge erfordern Analytics-Platt Form System-Domänen Administrator Berechtigungen. Hier wird erläutert, wie zusätzliche Anwendungs Domänen Administratoren erstellt werden.  
   
-## <a name="create-a-domain-administrator"></a>Erstellen Sie ein Domänenadministrator  
-Damit ausreichende Berechtigungen zum Konfigurieren von allen APS-Knoten, des Benutzers ausführt der **APS-Konfigurations-Manager** (`dwconfig.exe`) muss ein Mitglied der **Domänen-Admins** Gruppe. Starten und Beenden der APS-Dienste, muss der Benutzer ein Mitglied der **PdwControlNodeAccess** Gruppe.  
+## <a name="create-a-domain-administrator"></a>Erstellen eines Domänen Administrators  
+Damit alle APS-Knoten über ausreichende Berechtigungen verfügen, muss der Benutzer, der die APS`dwconfig.exe`- **Configuration Manager** () ausführen muss, Mitglied der Gruppe " **Domänen-Admins** " sein. Um die APS-Dienste zu starten und anzuhalten, muss der Benutzer Mitglied der Gruppe " **pdwcontrolnodebug Access** " sein.  
   
-#### <a name="to-add-a-user-to-the-domain-admins-group"></a>Gruppe der Domänenadministratoren einen Benutzer hinzu  
+#### <a name="to-add-a-user-to-the-domain-admins-group"></a>So fügen Sie der Gruppe "Domänen-Admins" einen Benutzer hinzu  
   
-1.  Melden Sie sich bei dem aktiven Knoten der AD **(_Appliance\_Domäne_-AD01** oder  **_Appliance\_Domäne_-AD02**) verwenden ein vorhandenes Gerät Domänenadministratorkonto.  
+1.  Melden Sie sich mit einem vorhandenen Anwendungs Domänen Administrator Konto beim aktiven AD-Knoten **(_Appliance\_Domain_-ad01** oder ** _Appliance\_Domain_-ad02**) an.  
   
-2.  Klicken Sie im Startmenü auf **Ausführen**. In der **öffnen** geben **dsa.msc**. Klicken Sie auf **OK**.  
+2.  Klicken Sie im Startmenü auf **Ausführen**. Geben Sie **DSA. msc**in das Feld **Öffnen** ein. Klicken Sie auf **OK**.  
   
-3.  In der **Active Directory-Benutzer und-Computer** Programm, mit der rechten Maustaste **Benutzer**, zeigen Sie auf **neu**, und klicken Sie dann auf **Benutzer**.  
+3.  Klicken Sie im Programm **Active Directory Benutzer und Computer** mit der rechten Maustaste auf **Benutzer**, zeigen Sie auf **neu**, und klicken Sie dann auf **Benutzer**.  
   
-4.  In der **neues Objekt – Benutzer** (Dialogfeld), führen Sie die Beschreibung des neuen Benutzers, und klicken Sie dann auf **Weiter**.  
+4.  Vervollständigen Sie im Dialogfeld **Neues Objekt-Benutzer** die Beschreibung des neuen Benutzers, und klicken Sie dann auf **weiter**.  
   
-    Führen Sie das Kennwort (Dialogfeld), und klicken Sie dann auf **Weiter**.  
+    Vervollständigen Sie das Dialogfeld Kennwort, und klicken Sie dann auf **weiter**.  
   
     > [!WARNING]  
-    > SQL Server PDW unterstützt nicht das Dollarzeichen ($) in der Administrator der Domäne oder lokaler Administratorkennwörter. Ein Kennwort mit einem Dollarzeichen ungültig wird, und verwendet werden, jedoch können Upgrade- und wartungsplanlizenzen Aktivitäten blockieren  
+    > Der SQL Server PDW unterstützt das Dollarzeichen ($) in den Domänen Administrator-oder lokalen Administrator Kennwörtern nicht. Ein Kennwort mit einem Dollarzeichen ist gültig und kann verwendet werden, kann aber Upgrade-und Wartungsaktivitäten blockieren.  
   
-    Bestätigen Sie die neue benutzerbeschreibung aus, und klicken Sie dann auf **Fertig stellen**.  
+    Bestätigen Sie die neue Benutzer Beschreibung, und klicken Sie dann auf **Fertig**stellen.  
   
-5.  Doppelklicken Sie in der Liste der Benutzer auf den neuen Benutzer aus, um das Dialogfeld Eigenschaften für Benutzer zu öffnen.  
+5.  Doppelklicken Sie in der Benutzerliste auf den neuen Benutzer, um das Dialogfeld Benutzereigenschaften zu öffnen.  
   
-6.  Auf der **Mitglied von** auf **hinzufügen**.  
+6.  Klicken Sie auf der Registerkarte **Mitglied von** auf **Hinzufügen**.  
   
-    Typ **Domänen-Admins; PdwControlNodeAccess** , und klicken Sie dann auf **Namen überprüfen**. Klicken Sie auf **OK**.  
+    Geben Sie **Domain Admins ein. Pdwcontrolnodebug Access** und klicken Sie dann auf **Namen überprüfen**. Klicken Sie auf **OK**.  
   
-    Dadurch wird den neuen Benutzer hinzugefügt. die **Domänen-Admins** Gruppe und die **PdwControlNodeAccess** Gruppe. Klicken Sie auf **OK**.  
+    Dadurch wird der neue Benutzer der Gruppe " **Domänen-Admins** " und der Gruppe " **pdwcontrolnodeaccess** " hinzugefügt. Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
-[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Starten Sie die Configuration Manager &#40;Analytics-Platt Form System&#41;](launch-the-configuration-manager.md)  
   

@@ -2,30 +2,42 @@
 title: Neues in SSMA für DB2 (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/06/2019
+ms.date: 12/04/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 118cb0430a7db1afc2a7537fb19c24b22dc6dd1f
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 75fbcbef02dc19dac47d96431118b75df262b685
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745377"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74834301"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Neues in SSMA für DB2 (DB2ToSQL)
 
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für DB2-Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v85"></a>SSMA v 8.5
+
+Die Version v 8.5 von SSMA für DB2 wurde mit Unterstützung für Azure Active Directory Authentifizierung und grundlegender Unterstützung für JSON-Funktionen in SQL Server erweitert, sowie eine Reihe gezielter Korrekturen zur Verbesserung der Benutzerfreundlichkeit und Leistung.
+
+Außerdem wurde SSMA für DB2 wie folgt erweitert:
+
+* Unterstützung für das Hinzufügen einer Konvertierung für die Get Diagnostics-Anweisung mit ROW_NUMBER
+* Eine Korrektur für einen Fehler im Zusammenhang mit Leerzeichen am Anfang des Objekt namens wird nicht beachtet.
+
+> [!IMPORTANT]
+> Mit SSMA v 8.5 ist .NET 4.7.2 eine Installation, die Voraussetzung ist. Wenn Sie diese Version installieren müssen, können Sie die Lauf Zeit Datei [hier](https://dotnet.microsoft.com/download/dotnet-framework/net472)herunterladen.
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
 Die Version Version 8.4 von SSMA für DB2 wurde durch gezielte Korrekturen ergänzt, die zur Behebung von Problemen bei der Barrierefreiheit entwickelt wurden, und zum Beheben eines Fehlers im Zusammenhang mit den maximalen Index Spalten (um 32 anstelle von 16) für SQL Server 2016 und höhere Versionen zuzulassen.
 
 > [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
+> Mit SSMA, Version 7,4, jedoch 8,4, ist .NET 4.5.2 eine Installation, die Voraussetzung ist.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -39,13 +51,13 @@ Das v 8.3-Release von SSMA für DB2 wurde durch gezielte Korrekturen verbessert,
 * Verbessern von Konvertierungen für globale temporäre Tabellen
 * Beheben eines Problems mit der Eindeutigkeit von Objekt Eindeutigkeit zum Priorisieren von Tabellen gegenüber Einschränkungen, wenn Namen Konflikte haben
 * Beheben eines Problems beim Laden von Standard Spaltenwerten für "Date" und "timestamp" für z/OS
-* Unicode-Zeilenvorschub Zeichen (auch als nel bezeichnet) unterstützen
+* Unterstützung von Unicode-Zeilenvorschub Zeichen (auch als nel bezeichnet)
 * Beheben eines Problems mit der Cursor Konvertierung mit fehlender Return to-Klausel
 * Hinzufügen von Unterstützung für Bezeichnungen und GOTO
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
-Die Version 8.2 von SSMA für DB2 wurde mit erweitert, um Probleme mit Verbindungen mit Azure SQL-Datenbank über das SSMA-Konsolen Tool und fehlende COUNT_BIG-Spalten in der views-Deklaration während der Konvertierung zu beheben. Darüber hinaus enthält diese Version einen Satz von Korrekturen, die für die Verbesserung von Qualitäts-und konvertierungsmetriken entworfen wurden, sowie Fehlerbehebungen für:
+Die Version 8.2 von SSMA für DB2 wurde mit erweitert, um Probleme mit Verbindungen mit Azure SQL-Datenbank über das SSMA-Konsolen Tool und fehlende COUNT_BIG Spalte in der views-Deklaration während der Konvertierung zu beheben. Darüber hinaus enthält diese Version einen Satz von Korrekturen, die für die Verbesserung von Qualitäts-und konvertierungsmetriken entworfen wurden, sowie Fehlerbehebungen für:
 
 * Ein Problem mit deaktivierten, nicht gruppierten Indizes nach der Datenmigration.
 * Erkennung von .NET Framework während der automatischen Installation.
@@ -174,11 +186,11 @@ Die Version vom Mai 2016 von SSMA für DB2 enthält die folgenden Änderungen:
 * Das zählen von Objekten für das anfängliche laden wurde korrigiert.
 * Fehler in globalen Einstellungen behoben.
   
-## <a name="march-2016"></a>2016. März
+## <a name="march-2016"></a>März 2016
 
 Die Vorschauversion von SSMA für DB2 vom März 2016 bietet Unterstützung für die Migration zu SQL Server 2016.
 
-## <a name="january-2016"></a>2016. Januar
+## <a name="january-2016"></a>Januar 2016
 
 Die Wartungsversion von SSMA für DB2 vom Januar 2016 enthält die folgenden Änderungen:  
   
@@ -189,6 +201,6 @@ Die Wartungsversion von SSMA für DB2 vom Januar 2016 enthält die folgenden Än
 * Menü Element "View Log" zu SSMA hinzugefügt (RFC 5706203).  
 * Telemetrie hinzugefügt.
   
-## <a name="november-2014"></a>November 2014
+## <a name="november-2014"></a>November 2014
 
 Die Version vom November 2014 von SSMA für DB2 war die erste Version.

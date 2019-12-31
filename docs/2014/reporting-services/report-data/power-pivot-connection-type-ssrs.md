@@ -1,5 +1,5 @@
 ---
-title: PowerPivot-Verbindungstyp (SSRS) | Microsoft-Dokumentation
+title: Power Pivot-Verbindungstyp (SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,31 +10,31 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6afaa65d5d0a9c368b35cc410a1753838c8a5480
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107192"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200416"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot-Verbindungstyp (SSRS)
   Sie können Daten mithilfe der SQL Server Analysis Services-Datenverarbeitungserweiterung aus einer PowerPivot-Arbeitsmappe abrufen, die in einem SharePoint-PowerPivot-Katalog veröffentlicht wird.  
   
- Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schrittweise Anweisungen finden Sie unter [hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schritt-für-Schritt-Anweisungen finden [Sie unter Hinzufügen und Überprüfen einer Datenverbindung oder einer Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Die PowerPivot-Datenquelle muss in einem PowerPivot-Katalog auf einer SharePoint-Website veröffentlicht sein.  
   
- Zur Unterstützung von Verbindungen von Berichts-Generator mit einer PowerPivot-Arbeitsmappe muss SQL Server 2008 R2 ADOMD.NET auf der Arbeitsstation installiert sein. Diese Clientbibliothek wird mit PowerPivot for Excel installiert. Wenn Sie jedoch einen Computer verwenden, der nicht über diese Anwendung verfügt, müssen Sie ADOMD.NET von der Seite [SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565)herunterladen und installieren.  
+ Zur Unterstützung von Verbindungen von Berichts-Generator mit einer PowerPivot-Arbeitsmappe muss SQL Server 2008 R2 ADOMD.NET auf der Arbeitsstation installiert sein. Diese Clientbibliothek wird mit PowerPivot for Excel installiert. Wenn Sie jedoch einen Computer verwenden, der nicht über diese Anwendung verfügt, müssen Sie ADOMD.NET von der Seite [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)herunterladen und installieren.  
   
 ## <a name="data-source-type"></a>Datenquellentyp  
  Verwenden Sie den Berichtsdatenquellentyp **Microsoft SQL Server Analysis Services**.  
   
 ## <a name="connection-string"></a>Verbindungszeichenfolge  
- Die Verbindungszeichenfolge ist die URL zum PowerPivot-Arbeitsmappe auf SharePoint im PowerPivot-Katalog oder einer anderen Bibliothek, z. B. veröffentlicht http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx.  
+ Die Verbindungs Zeichenfolge ist die URL zur Power Pivot-Arbeitsmappe, die auf SharePoint im Power Pivot-Katalog oder einer anderen http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsxBibliothek veröffentlicht wurde, z. b..  
   
 ## <a name="credentials"></a>Anmeldeinformationen  
- Geben Sie die Anmeldeinformationen an, die Sie benötigen, um auf die PowerPivot-Arbeitsmappe und die SharePoint-Website zuzugreifen, z. B. die Windows-Authentifizierung (Integrierte Sicherheit). Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [angeben von Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
+ Geben Sie die Anmeldeinformationen an, die Sie benötigen, um auf die PowerPivot-Arbeitsmappe und die SharePoint-Website zuzugreifen, z. B. die Windows-Authentifizierung (Integrierte Sicherheit). Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) Zeichenfolgen in Reporting Services oder [Angeben von Anmelde Informationen in Berichts-Generator](../specify-credentials-in-report-builder.md).  
   
 ## <a name="queries"></a>Abfragen  
  Nachdem Sie eine Verbindung mit der PowerPivot-Datenquelle hergestellt haben, verwenden Sie die grafische MDX-Abfrage, um durch Durchsuchen und Auswählen aus den zugrunde liegenden Datenstrukturen eine Abfrage zu erstellen. Nach dem Erstellen einer Abfrage können Sie die Abfrage so ausführen, dass die Beispieldaten im Ergebnisbereich angezeigt werden.  
@@ -62,8 +62,8 @@ ms.locfileid: "66107192"
   
 -   Der Bericht enthält nur PowerPivot-Daten aus einer PowerPivot-Datenquelle.  
   
-## <a name="see-also"></a>Siehe auch  
- [Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services &#40;Berichts-Generator&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services die Benutzeroberfläche des MDX-Abfrage-Designers &#40;Berichts-Generator&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

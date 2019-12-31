@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren der Zeitzone - Analytics Platform System | Microsoft-Dokumentation
-description: Die Seite "Zeitzone" können Sie die Zeitzone für alle Knoten auf Ihrem Gerät Analytics Platform System (APS) festgelegt.
+title: Zeitzone konfigurieren
+description: Auf der Seite Zeitzone können Sie die Zeitzone für alle Knoten auf Ihrer APS-Appliance (Analytics Platform System) festlegen.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f9997ed26cea5c63d69a7be84b25c247add9b692
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1da16790d011a628bc2536de051eb1181f06b8cf
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961441"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401395"
 ---
-# <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Konfiguration der Zeitzone der Appliance - Analytics Platform System
-Die **Zeitzone** auf der Seite können Sie die Zeitzone für alle Knoten auf Ihrem Gerät Analytics Platform System (APS) festlegen.  
+# <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Appliance-Zeitzonenkonfiguration-Analytics Platform System
+Auf **der Seite Zeitzone können** Sie die Zeitzone für alle Knoten auf Ihrer APS-Appliance (Analytics Platform System) festlegen.  
   
-## <a name="to-set-the-time-zone"></a>Die Zeitzone festlegen  
+## <a name="to-set-the-time-zone"></a>So legen Sie die Zeitzone fest  
   
-1.  Starten Sie den Konfigurations-Manager. Weitere Informationen finden Sie unter [Starten des Konfigurations-Managers &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Starten Sie die Configuration Manager. Weitere Informationen finden Sie unter [Start the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
-2.  Beenden Sie die Anwendung Dienste mithilfe der **Dienststatus** Seite im Konfigurations-Manager. Finden Sie unter [PDW-Dienststatus &#40;Analytics Platform System&#41; ](pdw-services-status.md) Anweisungen.  
+2.  Setzen Sie die Geräte Dienste auf der Seite **Dienst Status** des Configuration Manager. Anweisungen hierzu finden Sie unter [PDW-Dienst Status &#40;Analytics Platform System&#41;](pdw-services-status.md) .  
   
-3.  Klicken Sie im linken Bereich des Konfigurations-Managers auf **Zeitzone**. Wählen Sie die gewünschte Zeitzone aus dem **Zeitzone** Dropdown-Menü. Je nach Position, außerdem können Sie das Kontrollkästchen neben **automatisch Uhr für die Sommerzeit angepasst**.  
+3.  Klicken Sie im linken Bereich des Configuration Manager auf **Zeitzone**. Wählen Sie im Dropdown Menü **Zeitzone** die gewünschte Zeitzone aus. Abhängig von Ihrem Standort können Sie auch das Kontrollkästchen neben **Uhr automatisch für Sommerzeit anpassen**auswählen.  
   
-4.  Klicken Sie auf **übernehmen** zum Speichern der Änderungen.  
+4.  Klicken **Sie auf über** nehmen, um die Änderungen zu speichern.  
   
-5.  Die Appliance-Dienste neu starten, mit der **Dienststatus** Seite im Konfigurations-Manager. Wenn Sie auch die Berechtigungen ändern möchten, können Sie dies tun, bevor die Anwendung neu starten.  
+5.  Starten Sie die Geräte Dienste mithilfe der Seite **Dienst Status** im Configuration Manager neu. Wenn Sie auch die Berechtigungen ändern möchten, können Sie dies tun, bevor Sie das Gerät neu starten.  
   
 ![DWConfig, Anwendungszeit](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
   
-## <a name="see-also"></a>Siehe auch  
-[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Starten Sie die Configuration Manager &#40;Analytics-Platt Form System&#41;](launch-the-configuration-manager.md)  
   

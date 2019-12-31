@@ -1,6 +1,6 @@
 ---
-title: Verarbeitung und Speicherkapazität - Analytics Platform System | Microsoft-Dokumentation
-description: Ihre geschäftlichen Anforderungen bestimmen die Anzahl der Skalierungseinheiten für die Daten und die Größe der Compute-Knoten Datenträger, die in Ihrer Appliance Analytics Platform System (APS) erforderlich.
+title: Verarbeitung und Speicherkapazität
+description: Ihre geschäftlichen Anforderungen bestimmen die Anzahl der Daten Skalierungs Einheiten und die Größe der Datenträger für den Computeknoten, die Sie in Ihrem Analytics Platform System (APS)-Gerät benötigen.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,100 +8,101 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: db2b68230e0e2a1fa9a5645ff40c25cc5146392c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960237"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400542"
 ---
-# <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Verarbeitung und Speicherkapazität in Analytics Platform System
-Ihre geschäftlichen Anforderungen bestimmen die Anzahl der Skalierungseinheiten für die Daten und die Größe der Compute-Knoten Datenträger, die in Ihrer Appliance Analytics Platform System (APS) erforderlich. Verwenden Sie diese Berechnungen Prozessor- und Speicherressourcen, um Ihre Kapazität erwerben und planungsentscheidungen geführt.  
+# <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Verarbeitungs-und Speicherkapazität in Analytics Platform System
+Ihre geschäftlichen Anforderungen bestimmen die Anzahl der Daten Skalierungs Einheiten und die Größe der Datenträger für den Computeknoten, die Sie in Ihrem Analytics Platform System (APS)-Gerät benötigen. Verwenden Sie diese Verarbeitungs-und Speicher Berechnungen, um Ihre Kapazitäts Kauf-und Planungsentscheidungen zu steuern.  
   
   
-## <a name="section1"></a>Planung für die Verarbeitung von Kapazität  
-Abfrageleistung für SQL Server Parallel Data Warehouse (PDW) hängt stark auf die Anzahl der CPU-Kerne, die Ihre Daten parallel ausgeführt werden. Mit Einschränkungen verbessert Erhöhen der Parallelität die abfrageleistung parallel Processing (MPP) aus. Selbst wenn Ihre Datengröße relativ klein ist, wird die Leistung der Abfrage MPP-Engine, dass mehr Parallelität verbessert.  
+## <a name="section1"></a>Planen der Verarbeitungskapazität  
+Die Abfrageleistung für SQL Server parallele Data Warehouse (PDW) hängt stark von der Anzahl der CPU-Kerne ab, die für Ihre Daten parallel funktionieren. Innerhalb von Grenzwerten verbessert die Parallelität die Leistung der MPP-Abfrage (massive Parallel Processing). Auch wenn die Datengröße relativ klein ist, wird die Leistungsfähigkeit der MPP-Abfrage-Engine durch eine größere Parallelität verbessert.  
   
-Beispielsweise hat eine Einheit mit 12 Serverknoten 192 CPU-Kerne, die Ihre Daten parallel verarbeiten. Das ist die 192-Wege-Parallelität. Ein Gerät mit 56 Compute-Knoten hat 896 Kerne arbeiten parallel. Dieses Ausmaß an Parallelität ist ohne MPP computing nicht erreichbar.  
+Beispielsweise verfügt eine Appliance mit 12 Computeknoten über 192 CPU-Kerne, die Ihre Daten parallel verarbeiten. Das ist die 192-Wege-Parallelität! Eine Appliance mit 56 Computeknoten verfügt über 896 Kerne, die alle parallel funktionieren. Dieses Ausmaß an Parallelität kann ohne MPP-Computing nicht erreicht werden.  
   
-Mit zunehmender Anzahl von Compute-Knoten, erfordert horizontales hochskalieren der Appliances und Hinzufügen von mehr als eine Compute-Knoten zu einem Zeitpunkt, um einen spürbaren Vorteil zu erhalten. Hardwarehersteller unterstützt nur bestimmte Konfigurationen für Skalierungseinheiten Daten, um sicherzustellen, dass der Vorteil der Skalierung der Appliances die Kosten der neuverteilung der Daten über mehrere Compute-Knoten von überwiegt.  
+Wenn die Anzahl der Computeknoten zunimmt, erfordert das horizontale hochskalieren der Appliance, dass mehrere Computeknoten gleichzeitig hinzugefügt werden, um einen spürbaren Vorteil zu erzielen. Hardware Anbieter unterstützen nur bestimmte Konfigurationen von datenskalierungseinheiten, um sicherzustellen, dass der Vorteil der Skalierung der Appliance die Kosten für die Neuverteilung der Daten auf mehr Computeknoten auswiegt.  
   
-### <a name="data-scale-unit-configuration-examples---hpe"></a>Beispiele für Daten Skalierungseinheit-Konfiguration – HPE  
-Dies sind Beispiele für die unterstützten HPE-Konfigurationen für die Skalierung Uunits Daten. Sie können von der aktuellen unterstützten Konfigurationen variieren, sondern dienen als Beispiel für das Erhöhen der Kapazität um ca. 20 Prozent.  
+### <a name="data-scale-unit-configuration-examples---hpe"></a>Beispiele für die Konfiguration der Daten Skalierung (HPE)  
+Dies sind Beispiele für die unterstützten HPE-Konfigurationen für datenskalierungsdateneinheiten. Sie können von den aktuellsten unterstützten Konfigurationen abweichen, werden jedoch als Beispiel dafür bereitgestellt, wie die Kapazität um etwa 20 Prozent erhöht werden kann.  
   
-Cloudangebote ist der Gewinn Prozent Kapazität durch das Erhöhen der Uunits Skalierung Daten aus einer Zeile zur nächsten. Erhöhen die Daten Skalierungseinheiten von 6 bis 8 gibt beispielsweise eine Cloudangebote 33 % CPU-Kerne und Arbeitsspeicher.  Außerdem steigt auch den Speicherplatz, der in dieser Tabelle nicht angezeigt.  
+Uplift ist der prozentuale Kapazitäts Gewinn, indem die datenskalierungsdateneinheiten von einer Zeile zur nächsten erhöht werden. Beispielsweise ergibt eine Erhöhung der datenskalierungseinheiten von 6 auf 8 einen 33%-weltweite cloudangebote in CPU-Kernen und Arbeitsspeicher.  Außerdem vergrößert Sie den Speicherplatz, der in dieser Tabelle nicht angezeigt wird.  
   
-|Daten-Skalierungseinheiten|Compute-Knoten|CPU-Kerne|Arbeitsspeicher (GB)|Cloudangebote|  
+|Datenskalierungs Einheiten|Serverknoten|CPU-Kerne|Arbeitsspeicher (GB)|Weltweite cloudangebote|  
 |--------------------|-----------------|-------------|-----------------|----------|  
 |1|2|32|512|-|  
-|2|4|64|1024|100%|  
+|2|4|64|1.024|100 %|  
 |3|6|96|1536|50%|  
-|4|8|128|2048|33%|  
-|5|10|160|2560|25%|  
-|6|12|192|3072|20%|  
-|8|16|256|4096|33%|  
+|4|8|128|2048|33 %|  
+|5|10|160|2.560|25%|  
+|6|12|192|3072|20 %|  
+|8|16|256|4096|33 %|  
 |10|20|320|5120|25%|  
-|12|24|384|6144|20%|  
-|16|32|512|8192|33%|  
-|20|40|640|10240|25%|  
-|24|48|768|12288|20%|  
-|28|56|896|14336|17%|  
+|12|24|384|6.144|20 %|  
+|16|32|512|8192|33 %|  
+|20|40|640|10.240|25%|  
+|24|48|768|12288|20 %|  
+|28|56|896|14336|17 %|  
   
-Erklärung:  
+Erläuterung:  
   
--   **Daten-Skalierungseinheiten** pro Anwendung. Informationen über Skalierungseinheiten Daten finden Sie [Hardwarekomponenten für Analytics Platform System](hardware-components.md).  
+-   **Datenskalierungs Einheiten** pro Gerät. Weitere Informationen zu datenskalierungseinheiten finden Sie unter [Analytics Platform System Hardware Components](hardware-components.md).  
   
--   **Compute-Knoten** pro Anwendung.  
+-   **Compute-Knoten** pro Gerät.  
   
--   **CPU-Kerne** pro Anwendung. Es gibt 16 Kerne pro Compute-Knoten, ein Kern pro jedes gespiegelte Datenträger-Paar. Für dem Datenträgerstruktur für Compute-Knoten, finden Sie unter [Hardwarekomponenten für Analytics Platform System](hardware-components.md).  
+-   **CPU-Kerne** pro Gerät. Es gibt 16 Kerne pro Computeknoten, einen Kern pro gespiegeltes Datenträger Paar. Informationen zur Datenträger Struktur des computeknotens finden Sie unter [Analytics Platform System Hardware Components](hardware-components.md).  
   
--   **Arbeitsspeicher** pro Anwendung. Jeder Kern über 256 GB Arbeitsspeicher verfügt.  
+-   Arbeits **Speicher** pro Gerät. Jeder Kern verfügt über 256 GB Arbeitsspeicher.  
   
-### <a name="data-scale-unit-configuration-examples---dell-quanta"></a>Scale Unit Konfiguration Datenbeispiele - Dell, Quanten  
-Dies sind Beispiele für die unterstützten Dell und Quanten-Konfigurationen für die Skalierung Uunits Daten. Sie können von der aktuellen unterstützten Konfigurationen variieren, sondern dienen als Beispiel für das Erhöhen der Kapazität um ca. 20 Prozent.  
+### <a name="data-scale-unit-configuration-examples---dell-quanta"></a>Beispiele für die Konfiguration der Daten Skalierungs Einheit-Dell, QUANTA  
+Dies sind Beispiele für die unterstützten Dell-und QUANTA-Konfigurationen für datenskalierungsdatenskalierungseinheiten. Sie können von den aktuellsten unterstützten Konfigurationen abweichen, werden jedoch als Beispiel dafür bereitgestellt, wie die Kapazität um etwa 20 Prozent erhöht werden kann.  
   
-Cloudangebote ist der Gewinn Prozent Kapazität durch das Erhöhen der Uunits Skalierung Daten aus einer Zeile zur nächsten. Erhöhen die Daten Skalierungseinheiten von 6 bis 8 gibt beispielsweise eine Cloudangebote 33 % CPU-Kerne und Arbeitsspeicher. Außerdem steigt auch den Speicherplatz, der in dieser Tabelle nicht angezeigt.  
+Uplift ist der prozentuale Kapazitäts Gewinn, indem die datenskalierungsdateneinheiten von einer Zeile zur nächsten erhöht werden. Beispielsweise ergibt eine Erhöhung der datenskalierungseinheiten von 6 auf 8 einen 33%-weltweite cloudangebote in CPU-Kernen und Arbeitsspeicher. Außerdem vergrößert Sie den Speicherplatz, der in dieser Tabelle nicht angezeigt wird.  
   
-|Daten-Skalierungseinheiten|Compute-Knoten|CPU-Kerne|Arbeitsspeicher (GB)|Cloudangebote|  
+|Datenskalierungs Einheiten|Serverknoten|CPU-Kerne|Arbeitsspeicher (GB)|Weltweite cloudangebote|  
 |--------------------|-----------------|-------------|-----------------|----------|  
 |1|3|48|768|-|  
-|2|6|96|1536|100%|  
-|3|9|144|2,304|50%|  
-|4|12|192|3,072|33%|  
-|5|15|240|3,840|25%|  
-|6|18|288|4,608|20%|  
-|7|21|336|5,376|17%|  
-|8|24|384|6,144|14%|  
-|9|27|432|6,912|13%|  
-|12|36|576|9,216|33%|  
-|15|45|720|11,520|25%|  
-|18|54|864|13,824|20%|  
+|2|6|96|1536|100 %|  
+|3|9|144|2.304|50%|  
+|4|12|192|3.072|33 %|  
+|5|15|240|3.840|25%|  
+|6|18|288|4.608|20 %|  
+|7|21|336|5.376|17 %|  
+|8|24|384|6.144|14|  
+|9|27|432|6.912|13 %|  
+|12|36|576|9.216|33 %|  
+|15|45|720|11.520|25%|  
+|18|54|864|13.824|20 %|  
   
 ## <a name="section2"></a>Planen der Speicherkapazität  
-In dieser Tabelle schätzt, dass Sie laden und nicht komprimierten Daten auf eine vollständig integrierte Analytics Platform System Appliance bis zu 6 im petabytebereich speichern können. 
+In dieser Tabelle wird geschätzt, dass Sie auf einem vollständig erstellten Analytics-Platt Form System Gerät bis zu 6 Daten in Form von nicht komprimierten Daten in einem beliebigen Bereich laden und speichern können. 
   
-|Hersteller|Laufwerkgröße|Physischer Daten-Speicher pro Compute-Knoten|Maximale Compute-Knoten pro rack|Physische, maximale Datenspeicherkapazität pro rack|Geschätzte maximale Benutzerdatenspeicher pro rack|Maximale racks|Geschätzte maximale Benutzerdatenspeicher pro Einheit|  
+|Hersteller|Laufwerkgröße|Physischer Datenspeicher pro Computeknoten|Maximale Anzahl von Computeknoten pro Rack|Physischer maximaler Datenspeicher pro Rack|Geschätzter maximaler Benutzerdaten Speicher pro Rack|Maximale Racks|Geschätzter maximaler Benutzerdaten Speicher pro Appliance|  
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
-|HPE|1 TB|16 TB|8|128-TB|320 TB|7|2,240 TB|  
-|HPE|2 TB|32 TB|8|256 TB|640 TB|7|4,480 TB|  
-|HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8,960 TB|  
-|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2,160 TB|  
-|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4\.320 TB|  
-|DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8,640 TB|   
+|HPE|1 TB|16 TB|8|128 TB|320 TB|7|2.240 TB|  
+|HPE|2 TB|32 TB|8|256 TB|640 TB|7|4.480 TB|  
+|HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8.960 TB|  
+|Foto|1 TB|16 TB|9|144 TB|360 TB|6|2.160 TB|  
+|Foto|2 TB|32 TB|9|288 TB|720 TB|6|4.320 TB|  
+|Foto|4 TB|64 TB|9|576 TB|1440 TB|6|8.640 TB|   
   
-Erklärung:  
+Erläuterung:  
   
--   **Laufwerkgröße** ist 1, 2 oder 4 TB für jeden Lieferanten für Hardware.  
+-   Die **Laufwerk Größe** beträgt 1, 2 oder 4 TB für jeden Hardware Anbieter.  
   
--   **Physische Datenspeicher pro Compute-Knoten** = (Laufwerkgröße) * (16 Datenträger pro Compute-Knoten). Die gespiegelte Datenträger sind nicht enthalten, da sie für die Redundanz sind.  
+-   **Physischer Datenspeicher pro Computeknoten** = (Laufwerks Größe) * (16 Datenträger pro Computeknoten). Die gespiegelten Datenträger sind nicht enthalten, da Sie für Redundanz vorgesehen sind.  
   
--   **Max. Anzahl von Compute-Knoten pro Rack** bezieht sich auf die Hardwarehersteller.  
+-   Die **maximalen Computeknoten pro Rack** sind spezifisch für den Hardwarehersteller.  
   
--   **Physische, maximale Datenspeicherkapazität pro Rack** = (physischen Datenspeicher pro Compute-Knoten) * (maximale Compute-Knoten pro Rack).  
+-   **Physischer maximaler Datenspeicher pro Rack** = (physischer Datenspeicher pro Computeknoten) * (maximale Anzahl von Computeknoten pro Rack).  
   
--   **Geschätzte maximale Benutzerdatenspeicher pro Rack** = (physische maximale Datenspeicherkapazität pro Rack) * (für ein Komprimierungsverhältnis von 5:1-5) \* (50 % für Protokolle und TempDB). Dies ist eine konservative Schätzung für die unkomprimierten Benutzerdaten, die geladen und auf dem Gerät gespeichert werden können. Dies ist eine Schätzung und wird von der Software nicht erzwungen. Die tatsächliche Speicherung hängt davon ab, Ihre Daten und Ihrer Konfiguration.  
+-   **Geschätzter maximaler Benutzerdaten Speicher pro Rack** = (physischer maximaler Datenspeicher pro Rack) * (5 für ein 5:1-Komprimierungs Verhältnis) \* (50% für Protokolle und tempdb). Dies ist eine konservative Schätzung für die unkomprimierten Benutzerdaten, die geladen und auf dem Gerät gespeichert werden können. Dies ist eine Schätzung und wird von Software nicht erzwungen. Die tatsächliche Speicherung von Benutzerdaten hängt von Ihren Daten und der Konfiguration ab.  
   
--   **Maximale Racks** ist spezifisch für jeden Lieferanten für Hardware.  
+-   **Maximale Racks** ist für jeden Hardware Anbieter spezifisch.  
   
--   **Geschätzte maximale Datenspeicherkapazität pro Appliance** = (geschätzte maximale Datenspeicherkapazität pro Rack) * (maximale racks). Dies ist eine konservative Schätzung der Gesamtsumme Gesamtgröße von Benutzerdaten, die Sie laden und speichern in einem vollständig integrierten Gerät konnte.  
+-   **Geschätzter maximaler Datenspeicher pro Appliance** = (Geschätzter maximaler Datenspeicher pro Rack) * (maximale Anzahl von Racks). Dies ist eine konservative Schätzung der Gesamtgröße von Benutzerdaten, die Sie laden und auf einem vollständig erstellten Gerät speichern können.  
   

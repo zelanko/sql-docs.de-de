@@ -1,6 +1,6 @@
 ---
-title: Feature-Switch (Analytics Platform System)
-description: Zeigt Informationen zu den zwei Features, die in Analytics Platform System AU7 eingeführt werden.
+title: Funktions Wechsel
+description: Zeigt Informationen zu den zwei Funktions Switches an, die in Analytics Platform System AU7 eingeführt wurden.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,38 +9,38 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e9929d4729cc1027c82b61c9fab6ebfcddbd54d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8642f27a329da8819acf0ab99a648c4979ed40d0
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961519"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401455"
 ---
-# <a name="appliance-feature-switches"></a>Funktionsschalter Appliance
+# <a name="appliance-feature-switches"></a>Geräte Funktions Schalter
 
-Die **Featureschalter** Seite zeigt Informationen zu den Features, die in Analytics Platform System AU7 und höher eingeführt wurden. Verwenden Sie diese Seite zu aktualisieren oder zu aktivieren/deaktivieren Features und Einstellungen in Analytics Platform System.
+Auf der Seite " **Funktions Wechsel** " werden Informationen zu den Funktions Schaltern angezeigt, die in Analytics Platform System AU7 und höher eingeführt werden. Verwenden Sie diese Konfigurationsseite, um Features und Einstellungen in Analytics Platform System zu aktualisieren oder zu aktivieren bzw. zu deaktivieren.
 
 > [!NOTE]
-> Änderungen an Werten für Feature-Switch erfordert einen Neustart des Diensts.
+> Änderungen an Funktions switchwerten erfordern einen Neustart des Dienstanbieter.
 
-![DWConfig-Anwendung-Feature-Switch](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "DWConfig-Anwendung-Feature-Switch")
+![Funktions Schalter der dwconfig-Appliance](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "Funktions Schalter der dwconfig-Appliance")
 
-## <a name="autostatsenabled"></a>AutoStatsEnabled
+## <a name="autostatsenabled"></a>Autostatus Abled
 
-Steuert das statistikfeature automatisch. Dieses Feature-Switch nastaven NA hodnotu True, wird standardmäßig nach dem Upgrade auf AU7. Alle nach dem Upgrade erstellte Datenbank übernimmt die automatische Erstellung und asynchronen Aktualisieren von Statistiken. Datenbankadministratoren können für vorhandene Datenbanken automatisch Statistiken mit [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). Weitere Informationen zu Statistiken finden Sie unter [Statistiken](../relational-databases/statistics/statistics.md).
+Steuert die Funktion zur automatischen Statistik. Dieser Funktions Wechsel wird standardmäßig nach dem Upgrade auf AU7 auf true festgelegt. Jede Datenbank, die nach dem Upgrade erstellt wird, erbt die automatische Erstellung und das asynchrone Update der Statistiken. Bei vorhandenen Datenbanken können Datenbankadministratoren automatische Statistiken mit [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)aktivieren. Weitere Informationen zu Statistiken finden Sie unter [Statistics](../relational-databases/statistics/statistics.md).
 
-## <a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
+## <a name="maxdopforinsertqueries"></a>Maxdopforinsertqueries
 
-Wählen Sie die Maxdop-Einstellungen, die größer als 1 für Insert/Select-Vorgänge ermöglicht. Optionen für diese Einstellung sind 0, 1, 2 und 4, Standardwert 1.
+Ermöglicht das Auswählen von MAXDOP-Einstellungen größer als 1 für INSERT/SELECT-Vorgänge. Optionen für diese Einstellung sind 0, 1, 2 und 4. der Standardwert ist 1.
 
-## <a name="optimizecommonsubexpressions"></a>OptimizeCommonSubExpressions
+## <a name="optimizecommonsubexpressions"></a>Optimizecommonsubexausdrucks
 
-Verbessert die abfrageleistung durch Eliminierung der datenverschiebung für allgemeine Teilausdruck in SQL-Abfrageoptimierer. Ausführliche Erläuterung dieser Funktion finden Sie [hier](common-sub-expression-elimination.md).
+Verbessert die Abfrageleistung, da die Daten Verschiebung für einen allgemeinen Teil Ausdruck im SQL-Abfrageoptimierer eliminiert wird. Ausführliche Erläuterungen zu diesem Feature finden Sie [hier](common-sub-expression-elimination.md).
 
-## <a name="usecatalogqueries"></a>UseCatalogQueries
+## <a name="usecatalogqueries"></a>Usecatalogqueries
 
-Mithilfe von Katalogobjekten für einige Metadaten-Aufrufe anstelle von SMO wurde die Verbesserung der Leistung erläutert. Auf "true" in CU7.1, diese Option standardmäßig festgelegt ist, steuert dieses Verhalten.
+Die Verwendung von Katalog Objekten für einige Metadatenaufrufe anstelle der Verwendung von SMO hat eine Leistungsverbesserung gezeigt. Standardmäßig auf true festgelegt ist, steuert dieser Switch dieses Verhalten.
 
-## <a name="dmsprocessstopmessagetimeoutinseconds"></a>DmsProcessStopMessageTimeoutInSeconds
+## <a name="dmsprocessstopmessagetimeoutinseconds"></a>Dmsprocessstopmessagetimeoutinseconds
 
-Steuert die Zeit, die Data Movement Service (DMS) wartet auf einem ausgelasteten System synchronisiert werden soll, wenn eine Abfrage, die im Zusammenhang mit der datenverschiebung abgebrochen wird. Aktualisieren auf AU7 wird standardmäßig dieser Wert auf 900 Sekunden (15 Minuten). Der gültige Bereich ist 0 – 3600 Sekunden.
+Steuert, wie lange der Daten Verschiebungs Dienst (DMS) auf ein ausgelasteter System synchronisiert, wenn eine Abfrage mit Daten Verschiebungen abgebrochen wird. Wenn Sie auf AU7 aktualisieren, wird dieser Wert standardmäßig auf 900 Sekunden (15 Minuten) festgelegt. Der gültige Bereich ist 0-3600 Sekunden.

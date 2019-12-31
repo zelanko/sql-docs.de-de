@@ -1,5 +1,5 @@
 ---
-title: 'Neues in Analytics Platform System: ein horizontales hochskalieren Data Warehouse'
+title: Neuigkeiten
 description: Sehen Sie sich die Neuerungen in Microsoft Analytics Platform System an, eine lokale Appliance für horizontales Skalieren, die MPP SQL Server parallel Data Warehouse hostet.
 author: mzaman1
 manager: craigg
@@ -9,19 +9,20 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9d0ff3861912270091b6a63cbd3fd7b2e8e0e481
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227109"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399421"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neues in Analytics Platform System, ein Data Warehouse für horizontales Skalieren
 Weitere Informationen finden Sie unter What es New in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS ist eine lokale Appliance für horizontales Skalieren, die MPP SQL Server parallele Data Warehouse hostet. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.5"></a>
-## <a name="aps-cu75"></a>APS CU 7.5
+## <a name="aps-cu75"></a>APS CU7.5
 Veröffentlichungsdatum-September 2019
 
 ### <a name="alter-external-data-source"></a>Externe Datenquelle ändern
@@ -30,7 +31,7 @@ Kunden können die Definition externer Datenquellen mit dem Cu 7.5-Update änder
 ### <a name="cdh-515-and-516-support-with-polybase"></a>CDH 5,15-und 5,16-Unterstützung mit polybase
 Polybase on APS mit Cu 7.5 Update unterstützt jetzt CDH 5,15-und 5,16-Versionen der Hadoop-Distribution von cloudera. Verwenden Sie Option 6 für CDH 5. x-Versionen. 
 
-### <a name="try_convert-and-try_cast-support"></a>Try_Convert-und Try_Cast-Unterstützung
+### <a name="try_convert-and-try_cast-support"></a>Unterstützung für Try_Convert und Try_Cast
 Cu 7.5 APS unterstützt jetzt die Funktionen [TRY_CAST](https://docs.microsoft.com/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-2017) und [TRY_CONVERT](https://docs.microsoft.com/sql/t-sql/functions/try-convert-transact-sql?view=sql-server-2017) . Beide Funktionen geben einen Wert zurück, der in den angegebenen Datentyp konvertiert wird, wenn die Konvertierung erfolgreich ist. Andernfalls wird NULL zurückgegeben.
 
 <a name="h2-aps-cu7.4"></a>
@@ -58,7 +59,7 @@ Wir haben eine neue Version von Informatica-Connectors für APS veröffentlicht,
 
 #### <a name="supported-versions"></a>Unterstützte Versionen
 
-| APS-Version | Informatica-PowerCenter | Treiber |
+| APS-Version | Informatica PowerCenter | Treiber |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11. x |
 | APS 2016 und höher | 10.2.0, 10.2.0 Hotfix 1 | SQL Server Native Client 11. x |
@@ -76,13 +77,13 @@ Weitere Informationen finden Sie unter [Konfigurieren von TLS 1.2 auf APS](confi
 Polybase kann jetzt mit Hadoop-Verschlüsselungs Zonen kommunizieren. Siehe APS-Konfigurationsänderungen, die zum [Konfigurieren der Hadoop-Sicherheit](polybase-configure-hadoop-security.md#encryptionzone)erforderlich sind.
 
 ### <a name="insert-select-maxdop-options"></a>INSERT-SELECT (MAXDOP-Optionen)
-Wir haben einen [Funktions Schalter](appliance-feature-switch.md) hinzugefügt, mit dem Sie MAXDOP-Einstellungen für INSERT-SELECT-Vorgänge über 1 auswählen können. Sie können jetzt die MAXDOP-Einstellung auf 0, 1, 2 oder 4 festlegen. Der Standardwert lautet 1.
+Wir haben einen [Funktions Schalter](appliance-feature-switch.md) hinzugefügt, mit dem Sie MAXDOP-Einstellungen für INSERT-SELECT-Vorgänge über 1 auswählen können. Sie können jetzt die MAXDOP-Einstellung auf 0, 1, 2 oder 4 festlegen. Der Standardwert ist 1.
 
 > [!IMPORTANT]  
 > Das erhöhen von MAXDOP kann manchmal zu langsameren Vorgängen oder Deadlockfehlern führen. Wenn dies der Fall ist, ändern Sie die Einstellung wieder in MAXDOP 1, und wiederholen Sie den Vorgang.
 
 ### <a name="columnstore-index-health-dmv"></a>Integritäts-DMV für columnstore-Index
-Integritäts Informationen zum columnstore--Index können Sie mithilfe von **dm_pdw_nodes_db_column_store_row_group_physical_stats** -DMV anzeigen. Verwenden Sie die folgende Ansicht, um die Fragmentierung zu bestimmen und zu entscheiden, wann ein columnstore--Index neu erstellt oder neu organisiert wird.
+Integritäts Informationen zum columnstore--Index können Sie mithilfe **dm_pdw_nodes_db_column_store_row_group_physical_stats** DMV anzeigen. Verwenden Sie die folgende Ansicht, um die Fragmentierung zu bestimmen und zu entscheiden, wann ein columnstore--Index neu erstellt oder neu organisiert wird.
 
 ```sql
 create view dbo.vCS_rg_physical_stats
@@ -120,12 +121,12 @@ Der neue APS SSIS-Ziel Adapter, der SQL Server 2017 als Bereitstellungs Ziel unt
 Veröffentlichungsdatum-2018
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC-Befehle verbrauchen keine Parallelitäts Slots (Behavior Change)
-APS unterstützt eine Teilmenge der T-SQL- [DBCC-Befehle](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) wie z. b. [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Zuvor würden diese Befehle einen Parallelitäts [Slot](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) beanspruchen, der die Anzahl der Auslastungen/Abfragen des Benutzers verringert, die ausgeführt werden könnten. Die `DBCC` Befehle werden nun in einer lokalen Warteschlange ausgeführt, die keinen benutzerparallelitäts Slot verbraucht, um die Gesamtleistung der Abfrage Ausführung zu verbessern.
+APS unterstützt eine Teilmenge der T-SQL- [DBCC-Befehle](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) wie z. b. [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Bis jetzt haben diese Befehle einen [Parallelitätsslot](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) belegt, wodurch sich die Zahl der ausführbaren Benutzerauslastungen/Abfragen verringert hat. Die `DBCC` Befehle werden nun in einer lokalen Warteschlange ausgeführt, die keinen benutzerparallelitäts Slot verbraucht, um die Gesamtleistung der Abfrage Ausführung zu verbessern.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Ersetzt einige Metadatenaufrufe durch Katalog Objekte.
 Durch die Verwendung von Katalog Objekten für Metadatenaufrufe anstelle von SMO wurde in APS eine Leistungsverbesserung angezeigt. Ab Cu 7.1 verwenden einige dieser Metadatenaufrufe jetzt standardmäßig Katalog Objekte. Dieses Verhalten kann durch [Funktions Wechsel](appliance-feature-switch.md) deaktiviert werden, wenn Kunden, die Metadatenabfragen verwenden, Probleme haben.
 
-### <a name="bug-fixes"></a>Behebung von Programmfehlern
+### <a name="bug-fixes"></a>Fehlerkorrekturen
 Wir haben ein Upgrade auf SQL Server 2016 SP2 Cu2 mit APS Cu 7.1 durchgeführt. Das Upgrade korrigiert einige Probleme, die unten beschrieben werden.
 
 | Titel | Beschreibung |
@@ -174,18 +175,18 @@ APS AU6 unterstützt diese Verbesserungen der T-SQL-Kompatibilität.  Diese zus�
 
 - [SQL-Sortierungen auf Spaltenebene][] werden nun zusätzlich zu Windows-Sortierungen unterstützt.
 - [Nicht gruppierte Indizes für gruppierte columnstore--Indizes][] verbessern die Leistung von Abfragen, die im gruppierten columnstore--Index nach bestimmten Werten suchen. 
-- [WÄHLEN SIE... IN][] 
+- [Wählen Sie... In][] 
 - [sp_spaceused ()][] zeigt den Speicherplatz an, der in einer Tabelle oder Datenbank verwendet oder reserviert wurde.
-- Die Unterstützung von [Breite Tabellen][] ist identisch mit SQL Server 2016. Das vorherige Limit von 32 K für die Zeilengröße ist nicht mehr vorhanden. 
+- Die Unterstützung von [breiten Tabellen][] ist identisch mit SQL Server 2016. Das vorherige Limit von 32 K für die Zeilengröße ist nicht mehr vorhanden. 
 
 **Datentypen**
 
-- [VARCHAR(MAX)][], [nvarchar (max)][] und [VARBINARY(MAX)][]. Diese LOB-Datentypen haben eine maximale Größe von 2 GB. Um diese Objekte zu laden, verwenden Sie das [bcp (Hilfsprogramm)][]. Polybase und "dwloader unterstützen diese Datentypen zurzeit nicht. 
-- [SYSNAME][]
+- [Varchar (max)][], [nvarchar (max)][] und [varbinary (max)][]. Diese LOB-Datentypen haben eine maximale Größe von 2 GB. Um diese Objekte zu laden, verwenden Sie das [Hilfsprogramm bcp][]. Polybase und "dwloader unterstützen diese Datentypen zurzeit nicht. 
+- [Vom Datentyp sysname][]
 - [UNIQUEIDENTIFIER][]
-- [NUMERIC][] und Dezimal Datentypen.
+- [Numerische][] und Dezimal Datentypen.
 
-**Fenster Funktionen**
+**Fensterfunktionen**
 
 - [Zeilen oder Bereich][] in der OVER-Klausel der SELECT-Anweisung.
 - [FIRST_VALUE][]
@@ -195,13 +196,13 @@ APS AU6 unterstützt diese Verbesserungen der T-SQL-Kompatibilität.  Diese zus�
 
 **Sicherheitsfunktionen**
 
-- [PRÜFSUMME ()][] und [BINARY_CHECKSUM()][]
-- [HAS_PERMS_BY_NAME()][]
+- [CHECKSUM ()][] und [BINARY_CHECKSUM ()][]
+- [HAS_PERMS_BY_NAME ()][]
 
 **Zusätzliche Funktionen**
 
-- [NEWID()][]
-- [RAND ()][]
+- ["Nwid ()"][]
+- [Rand ()][]
 
 ### <a name="polybasehadoop-enhancements"></a>Polybase-/Hadoop-Erweiterungen
 
@@ -242,27 +243,27 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [SQL-Sortierungen auf Spaltenebene]: ~/relational-databases/collations/collation-and-unicode-support.md
 
 [Nicht gruppierte Indizes für gruppierte columnstore--Indizes]:/sql/t-sql/statements/create-index-transact-sql
-[VARCHAR(MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
-[NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
-[VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
-[SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[WÄHLEN SIE... IN]:/sql/t-sql/queries/select-into-clause-transact-sql
+[varchar (max)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
+[nvarchar (max)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
+[varbinary (max)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
+[Vom Datentyp sysname]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
+[Wählen Sie... In]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused ()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Breite Tabellen]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
-[bcp (Hilfsprogramm)]:/sql/tools/bcp-utility
+[bcp-Hilfsprogramm]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[Isch]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [Zeilen oder Bereich]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
 [CUME_DIST]:/sql/t-sql/functions/cume-dist-transact-sql
 [PERCENT_RANK]:/sql/t-sql/functions/percent-rank-transact-sql
-[PRÜFSUMME ()]:/sql/t-sql/functions/checksum-transact-sql
-[BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
-[HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
-[NEWID()]:/sql/t-sql/functions/newid-transact-sql
-[RAND ()]:/sql/t-sql/functions/rand-transact-sql
+[Prüfsumme ()]:/sql/t-sql/functions/checksum-transact-sql
+[BINARY_CHECKSUM ()]:/sql/t-sql/functions/binary-checksum-transact-sql
+[HAS_PERMS_BY_NAME ()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
+["Nwid ()"]:/sql/t-sql/functions/newid-transact-sql
+[Rand ()]:/sql/t-sql/functions/rand-transact-sql
 
 
   

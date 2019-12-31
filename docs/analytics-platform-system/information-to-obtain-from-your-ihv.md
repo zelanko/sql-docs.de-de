@@ -1,6 +1,6 @@
 ---
-title: Abrufen von Informationen aus IHV - Analytics Platform System | Microsoft-Dokumentation
-description: Informationen, die von Ihrem unabhängigen Hardwarehersteller zu den Analytics Platform System Appliance zu erhalten.
+title: Abrufen von Informationen von IHV
+description: Informationen, die Sie von Ihrem IHV über die Analytics Platform System-Appliance erhalten.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,22 +8,23 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 016a20567968e45456be79c8c67e77d7c3fbb2bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 730cf09ab7e45ea74070db591592fdb871243a77
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960836"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401064"
 ---
-# <a name="information-to-obtain-from-your-ihv"></a>Informationen zum Abrufen von Ihrem unabhängigen Hardwarehersteller
-Wenn unabhängige Hardwarehersteller (IHVS) Ihrer neuen SQL Server-PDW-Appliance an Sie übermittelt, werden sie auch liefern Informationen von der Appliance-Hardware und die Konfiguration, dass sie auf Ihrem Gerät ausgeführt haben. Sie benötigen diese Informationen, um Ihr Gerät zu verwalten.  
+# <a name="information-to-obtain-from-your-ihv"></a>Informationen, die Sie von Ihrem IHV abrufen können
+Wenn Ihr unabhängiger Hardwarehersteller (IHV) Ihre neue SQL Server PDW Appliance für Sie bereitstellt, werden auch Informationen über die Gerätehardware und die Konfiguration bereitstellt, die Sie auf Ihrem Gerät ausgeführt haben. Sie benötigen diese Informationen, um Ihr Gerät zu verwalten.  
   
-Die folgende Liste enthält Informationen, die in der Regel erforderlich ist, von Ihrem unabhängigen Hardwarehersteller. In einigen Fällen ist eine zusätzliche oder andere Informationen erforderlich. Wenden Sie sich an Ihrem unabhängigen Hardwarehersteller, um sicherzustellen, dass alle relevanten Informationen Ihnen bei der Bereitstellung des Geräts übertragen wurden.  
+In der folgenden Liste werden die Informationen angezeigt, die normalerweise von Ihrem IHV benötigt werden. In einigen Fällen sind zusätzliche oder weitere Informationen erforderlich. Wenden Sie sich an Ihren IHV, um sicherzustellen, dass alle relevanten Informationen mit der Geräte Bereitstellung an Sie übertragen wurden.  
   
 |||  
 |-|-|  
 |**Informationen oder Dokument**|**Beschreibung**|  
-|Stückliste (BOM)|Ihre Stückliste listet die Komponenten, die in Ihrer Anwendung enthalten sind. Diese Informationen sind erforderlich, um sicherzustellen, dass alle Komponenten bereitgestellt wurden.<br /><br />**Wichtig:** Ihre Stückliste sollte über die Gewichtungen für jeden der applianceknoten und für jeden vollständigen Rack enthalten. Diese Informationen sind wichtig, bei der Planung der behandeln, und verschieben Komponenten der Appliance und Ihrem Rechenzentrum kann dafür die Appliance aufnehmen. Wenn Ihre BOM keine Knoten-Gewichtungen enthalten, stellen Sie sicher, dass diese Informationen von Ihrem unabhängigen Hardwarehersteller für alle Knoten zu erhalten.|  
-|Verkabelung von Diagrammen|Verkabelung Diagramme zeigen, wie im Netzwerk, Strom und anderen Kabel für jedes Gerät zu verbinden Rack. Diese Diagramme sind erforderlich, wenn das Gerät in Ihrem Rechenzentrum installieren, und jedes Mal, die Sie entfernen oder Ersetzen einer Komponentenfehlers müssen.|  
-|Appliance-gehen-Anforderungen|Bevor Sie Ihr Gerät in Ihrem Rechenzentrum installiert werden kann, müssen Sie wissen, ob es sich bei Ihrem Rechenzentrum die luftströmung und die Länge Kabel-Anforderungen für das Gerät als auch die Größe und die Power-Anforderungen für die Komponenten erfüllt. Informationen finden Sie auch Rechnung von Materialien (BOM) oben Gewichte Appliance, die ist ebenfalls erforderlich.|  
+|Bill of Materials (BOM)|In ihrer Materialrechnung sind die Komponenten aufgeführt, die in Ihrer Appliance enthalten sind. Diese Informationen sind erforderlich, um zu bestätigen, dass alle Komponenten übermittelt wurden.<br /><br />**Wichtig:** Ihre Materialrechnung sollte Gewichtungen für jeden der Geräteknoten und für jedes komplette Gestell enthalten. Diese Informationen sind wichtig, wenn Sie planen, wie Gerätekomponenten verarbeitet und verschoben werden sollen, und um sicherzustellen, dass Ihr Rechenzentrum die Appliance aufnehmen kann. Wenn die BOM keine Knoten Gewichtungen enthält, stellen Sie sicher, dass Sie diese Informationen von Ihrem IHV für alle Knoten erhalten.|  
+|Verkabelung von Diagrammen|In Verkabelung-Diagrammen wird gezeigt, wie Sie das Netzwerk, die Stromversorgung und andere Kabel für die einzelnen Geräte Racks verbinden können. Diese Diagramme sind erforderlich, wenn Sie die Appliance in Ihrem Rechenzentrum installieren, und jederzeit müssen Sie eine Komponente entfernen oder ersetzen.|  
+|Anforderungen für Appliance-RER|Bevor Sie Ihr Gerät in Ihrem Rechenzentrum installieren können, müssen Sie wissen, ob Ihr Rechenzentrum die Anforderungen an Luftströmung und Kabellänge für das Gerät erfüllt, sowie die Größen-und Energieanforderungen der Komponenten. Weitere Informationen zu den Gewichtungen von Gerätekomponenten finden Sie auch in der obigen Bill of Materials (BOM).|  
   

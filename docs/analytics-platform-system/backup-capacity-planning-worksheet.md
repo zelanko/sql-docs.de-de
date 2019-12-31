@@ -1,6 +1,6 @@
 ---
-title: Kapazitätsplanung für Sicherungsserver - Parallel Data Warehouse | Microsoft-Dokumentation
-description: Dieses Arbeitsblatt für die Planung der Kapazität können Sie bestimmen die Anforderungen für einen backup-Server für das Parallel Data Warehouse-Datenbank-Backup und restore-Vorgängen. Hiermit können Sie um Ihren Plan für den Erwerb neuer oder Bereitstellung vorhandenen backup-Server zu erstellen.
+title: Kapazitätsplanung für Sicherungs Server
+description: Mithilfe dieses Arbeitsblatts zur Kapazitätsplanung können Sie die Anforderungen für einen Sicherungs Server für die Ausführung paralleler Data Warehouse Daten Bank Sicherungs-und Wiederherstellungs Vorgänge ermitteln. Verwenden Sie diese Informationen, um einen Plan für den Erwerb neuer oder vorhandener Sicherungs Server zu erstellen.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,40 +8,41 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8e7b1f43f586ae2db81fd3bc87563511a17c46ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 46dbdded5adf41a847f017cf4ee203597df13962
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961325"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401347"
 ---
-# <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Der Sicherungsserver Worksheet zur kapazitätsplanung – Parallel Data Warehouse
-Dieses Arbeitsblatt für die Planung der Kapazität können Sie bestimmen die Anforderungen für Sicherungsserver für das Ausführen von SQL Server-PDW-datenbanksicherung und Wiederherstellungsvorgänge. Hiermit können Sie um Ihren Plan für den Erwerb neuer oder Bereitstellung vorhandenen backup-Server zu erstellen.  
+# <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Arbeitsblatt zur Kapazitätsplanung für Sicherungs Server-parallele Data Warehouse
+Mithilfe dieses Arbeitsblatts zur Kapazitätsplanung können Sie die Anforderungen für einen Sicherungs Server für die Durchführung von SQL Server PDW Daten Bank Sicherungs-und Wiederherstellungs Vorgängen ermitteln. Verwenden Sie diese Informationen, um einen Plan für den Erwerb neuer oder vorhandener Sicherungs Server zu erstellen.  
   
-Dieses Arbeitsblatt ist eine Ergänzung zu den Anweisungen in [abrufen und Konfigurieren eines Servers für die Sicherung](acquire-and-configure-backup-server.md).  
+Dieses Arbeitsblatt ist eine Ergänzung zu den Anweisungen unter [erwerben und Konfigurieren eines Sicherungs Servers](acquire-and-configure-backup-server.md).  
   
-## <a name="capacity-planning-worksheet-for-backup-servers"></a>Arbeitsblatt für Kapazität Planung für Sicherungsserver  
+## <a name="capacity-planning-worksheet-for-backup-servers"></a>Arbeitsblatt zur Kapazitätsplanung für Sicherungs Server  
 
 ### <a name="notes"></a>Hinweise  
   
-1.  Dieses Arbeitsblatt für die gilt für Server, die Vorgänge zur Sicherung und Wiederherstellung für PDW-Datenbanken ausführen.  
+1.  Dieses Arbeitsblatt gilt für Server, von denen Sicherungs-und Wiederherstellungs Vorgänge für PDW-Datenbanken durchgeführt werden.  
   
-2.  Die einzige Möglichkeit zum Sichern und Wiederherstellen von PDW-Datenbanken werden die Datenbank sichern und Wiederherstellen der Datenbank-SQL-Befehle verwenden. Sobald die Sicherungsdaten werden auf dem backup Server ist, existiert jedoch als einen Satz von Windows-Dateien. Sie können die Sicherungsdateien vom Server an einem anderen Speicherort mit herkömmlichen Windows-basierten Datei Sicherungsmethoden archivieren.  
+2.  Die einzige Möglichkeit zum Sichern und Wiederherstellen von PDW-Datenbanken ist die Verwendung der SQL-Befehle Backup Database und RESTORE DATABASE. Wenn sich die Sicherungsdaten jedoch auf dem Sicherungs Server befinden, sind Sie als ein Satz von Windows-Dateien vorhanden. Sie können die Sicherungsdateien von Ihrem Server mithilfe herkömmlicher Windows-Datei basierter Sicherungsmethoden an einem anderen Speicherort archivieren.  
   
-### <a name="clipboard-iconmediaclipboard-iconpng-clipboard-icon-capacity-planning-worksheet"></a>![Zwischenablagesymbol](media/clipboard-icon.png "zwischenablagesymbol") Kapazität Planungsarbeitsblatt 
+### <a name="clipboard-iconmediaclipboard-iconpng-clipboard-icon-capacity-planning-worksheet"></a>![Zwischenablage Symbol](media/clipboard-icon.png "Zwischenablage Symbol") Arbeitsblatt zur Kapazitätsplanung 
   
-Drucken Sie dieses Arbeitsblatt, und Fülle ihn mit Ihren eigenen Anforderungen entsprechend.  
+Drucken Sie dieses Arbeitsblatt, und füllen Sie es mit ihren eigenen Anforderungen aus.  
   
-|Komponente|Anforderung|Geben Sie in diesem Artikel mit Ihren eigenen Anforderungen|Empfehlungen|  
+|Komponente|Anforderung|Füllen Sie diese Spalte mit ihren eigenen Anforderungen aus.|Empfehlungen|  
 |-------------|---------------|--------------------------------------------------|-------------------|  
-|Speicherung|Maximale Anzahl Bytes, die Sie auf dem backup Server auf einen bestimmten Zeitraum speichern möchten.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Um die speicheranforderungen zu ermitteln, ermitteln Sie, wie viele Daten, die Sie auf dem backup Server auf einen bestimmten Zeitraum speichern möchten.<br /><br />Die Sicherungsdaten werden auf dem Sicherungsserver in einem komprimierten Format gespeichert. Datenkomprimierungsraten, abhängig von den Eigenschaften der Daten ab.<br /><br />Zum Beispiel: Es wird empfohlen, als eine grobe Schätzung schätzen relativ zur Größe der unkomprimierten Daten ein Komprimierungsverhältnis von 7:1. Dies setzt voraus, dass mindestens 80 % der Daten in gruppierten columnstore-Indizes gespeichert ist. Beispielsweise könnte Wenn 700 GB nicht komprimierter Daten in einer Datenbank haben, und es sich in gruppierten columnstore-Indizes befindet, klicken Sie dann Sie schätzen, dass die datenbanksicherung ungefähr 100 GB benötigen.<br /><br />Wenn Sie mehrere Kopien von datenbanksicherungen auf dem backup Server verfügen möchten, müssen Sie diese zu berücksichtigen.<br /><br />Zum Beispiel: Wenn Sie beabsichtigen, 10 Datenbanken sichern, die jeweils 5 TB unkomprimierte Daten enthalten, verfügen über die Datenbanken auf eine Gesamtgröße von 50 TB aus. Wenn Sie planen, 5 Tage lang in einer Zeile diesen 10 Datenbanken täglich zu sichern, ist die gesamte unkomprimierte Größe 250 TB. Umgestaltung in ein Komprimierungsverhältnis von 7:1, benötigen Sie 250 / 7 = 35,7 TB Speicher auf dem backup Server. Empfohlen wird konservativ und fängt über 30 % die zusätzliche Kapazität abweichungen berücksichtigt, und erweitern.  In diesem Beispiel wäre eine bessere 46,6 TB.|  
-|Netzwerk|Typ der Netzwerkverbindung.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Bestimmen der besten Netzwerkverbindungstyp, der Ihre lastanforderungen-Rate erfüllen können.<br /><br />Zum Beispiel: InfiniBand oder 10 Gbit-Ethernet-die optimale bieten Preise werden geladen. 1Gbit Ethernet wird Load Gebühren bis 360 GB pro Stunde oder weniger beschränken.|  
-|E/A|Bytes pro Stunde für Schreibvorgänge.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Zum Schreiben von Sicherungen auf dem Datenträger, die 4 TB pro Stunde schreibgeschwindigkeit optimal sind.<br /><br />Zum Beispiel: Für die Laufwerke, die 50 MB pro Sekunde geschrieben werden können, sollten Sie mindestens 24 Laufwerke sowie für die Spiegelung oder Parität.<br /><br />E/a-Kapazität indexvereinigungen berücksichtigt alle e/a erkennt, die in den Server laden. Verfügt der Server Laden anderer e/a-Datenverkehr zusätzlich zu Daten lädt, wie z. B. das Empfangen von Datendateien von einem ETL-Server erhöht die e/a-Anforderungen.|  
-|CPU|Anzahl von Sockets.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Empfangen und Speichern von Sicherungsdateien ist keine CPU-Intensive Anwendung.  Es wird empfohlen, als Mindestanforderungen genannt mit einem 2-Socket-Server vor kurzem hergestellt.|  
-|RAM|GB Speicher, der ermöglicht Windows zum Zwischenspeichern von Dateien während der lädt.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Empfangen und Speichern von Sicherungsdateien erfordert nur wenig Arbeitsspeicher auf dem Server geladen.<br /><br />Um die RAM-Anforderungen zu ermitteln, finden Sie in Ihrer Windows Server-Installation "und" 3rd Party anwendungsanforderungen. Mindestens 32 GB wird empfohlen, wenn Sie nicht den Anforderungen aus anderen Quellen verfügen.|  
+|Storage|Maximale Anzahl von Bytes, die Sie zu einem beliebigen Zeitpunkt auf dem Sicherungs Server speichern möchten.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Um die Speicheranforderungen zu ermitteln, ermitteln Sie, wie viele Daten Sie in einem beliebigen Zeitraum auf dem Sicherungs Server speichern möchten.<br /><br />Die Sicherungsdaten werden auf dem Sicherungs Server in komprimiertem Format gespeichert. Die Daten Komprimierungs Raten hängen von den Eigenschaften der Daten ab.<br /><br />Beispiel: als grobe Schätzung empfiehlt es sich, ein 7:1-Komprimierungs Verhältnis in Relation zur Größe ihrer nicht komprimierten Daten einzuschätzen. Dabei wird davon ausgegangen, dass mindestens 80% der Daten in gruppierten columnstore--Indizes gespeichert werden. Wenn Sie z. b. über 700 GB unkomprimierte Daten in einer Datenbank verfügen und in gruppierten columnstore--Indizes gespeichert sind, können Sie einschätzen, dass die Datenbanksicherung ungefähr 100 GB benötigt.<br /><br />Wenn Sie beabsichtigen, mehrere Kopien von Datenbanksicherungen auf dem Sicherungs Server zu haben, müssen Sie diese berücksichtigen.<br /><br />Beispiel: Wenn Sie planen, 10 Datenbanken zu sichern, die jeweils 5 TB unkomprimierter Daten enthalten, haben die Datenbanken eine kombinierte Größe von 50 TB. Wenn Sie beabsichtigen, diese 10 Datenbanken täglich für fünf Tage in einer Zeile zu sichern, beträgt die Gesamtgröße für die nicht komprimierte Größe 250 TB. Factoring bei einem 7:1-Komprimierungs Verhältnis benötigen Sie 250/7 = 35,7 TB Speicher auf dem Sicherungs Server. Es wird empfohlen, konservativ zu sein und ca. 30% zusätzliche Kapazität zu erhalten, um Abweichungen zu berücksichtigen und zu wachsen.  In diesem Beispiel wäre 46,6 TB besser.|  
+|Netzwerk|Der Netzwerk Verbindungstyp.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Bestimmen Sie den optimalen Netzwerk Verbindungstyp, der Ihren Anforderungen an die Lasten Raten gerecht werden kann.<br /><br />Beispiel: InfiniBand oder 10Gbit Ethernet bietet die optimalen Lade Raten. 1Gbit Ethernet schränkt die Last Raten auf 360 GB pro Stunde oder weniger ein.|  
+|E/A|Bytes pro Stunde für Schreibvorgänge.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Zum Schreiben von Sicherungen auf den Datenträger sind die Schreibgeschwindigkeiten von 4 TB pro Stunde optimal.<br /><br />Beispiel: bei Laufwerken, die 50 MB/Sek. schreiben können, benötigen Sie mindestens 24 Laufwerke und mehr für Spiegelung oder Parität.<br /><br />Berücksichtigen Sie für die e/a-Kapazität alle e/a-Vorgänge auf dem Lade Server. Wenn der Lade Server zusätzlich zu den Daten Auslastungen (z. b. beim Empfangen von Datendateien von einem ETL-Server) anderen e/a-Datenverkehr aufweist, werden die e/a-Anforderungen erhöht.|  
+|CPU|Anzahl der Sockets.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Das empfangen und Speichern von Sicherungsdateien ist keine CPU-intensive Anwendung.  Als Mindestanforderung empfiehlt sich die Verwendung eines vor kurzem hergestellten 2-Socket-Servers.|  
+|RAM|GB Arbeitsspeicher, der Windows das Zwischenspeichern von Dateien während des Ladevorgängen ermöglicht.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Zum empfangen und Speichern von Sicherungsdateien ist auf dem Lade Server sehr wenig RAM erforderlich.<br /><br />Informationen zum Ermitteln der RAM-Anforderungen finden Sie in der Windows Server-Installation und in den Anwendungsanforderungen von Drittanbietern. Es wird mindestens 32 GB empfohlen, wenn Sie keine Anforderungen aus anderen Quellen haben.|  
   
-Wenn Sie Ihre kapazitätsanforderungen bestimmt haben, zurück zu den [abrufen und Konfigurieren eines Servers geladen](acquire-and-configure-loading-server.md) Thema, um Ihren Einkauf zu planen.  
+Wenn Sie die Kapazitätsanforderungen festgelegt haben, kehren Sie zum Thema [erwerben und Konfigurieren eines Lade Servers](acquire-and-configure-loading-server.md) zurück, um Ihren Kauf zu planen.  
   
-## <a name="see-also"></a>Siehe auch  
-[Sicherung und Laden von hardware](backup-and-loading-hardware.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Sicherung und Laden von Hardware](backup-and-loading-hardware.md)  
   

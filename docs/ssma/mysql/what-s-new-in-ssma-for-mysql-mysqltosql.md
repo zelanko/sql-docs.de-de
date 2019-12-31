@@ -2,30 +2,37 @@
 title: Neues in SSMA für MySQL (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/06/2019
+ms.date: 12/04/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 900ea1a83e8f06916bf48a003d99584113a8304b
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: ccb8c325a2e0b2966c0355be0f9cd84bd8882d24
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745510"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74834312"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Neuerungen in SSMA für MySQL (MySqlToSql)
 
 In diesem Artikel werden SQL Server Migration Assistant (SSMA) für MySQL-Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v85"></a>SSMA v 8.5
+
+Die Version v 8.5 von SSMA für MySQL wurde mit Unterstützung für Azure Active Directory Authentifizierung und grundlegender Unterstützung für JSON-Funktionen in SQL Server erweitert, sowie eine Reihe gezielter Korrekturen, die zur Verbesserung der Benutzerfreundlichkeit und Leistung entwickelt wurden.
+
+> [!IMPORTANT]
+> Mit SSMA v 8.5 ist .NET 4.7.2 eine Installation, die Voraussetzung ist. Wenn Sie diese Version installieren müssen, können Sie die Lauf Zeit Datei [hier](https://dotnet.microsoft.com/download/dotnet-framework/net472)herunterladen.
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
 Die Version Version 8.4 von SSMA für MySQL wurde durch gezielte Korrekturen ergänzt, die zur Behebung von Problemen bei der Barrierefreiheit entwickelt wurden, und zum Beheben eines Fehlers im Zusammenhang mit den maximalen Index Spalten (um 32 anstelle von 16) für SQL Server 2016 und höhere Versionen zuzulassen.
 
 > [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
+> Mit SSMA, Version 7,4, jedoch 8,4, ist .NET 4.5.2 eine Installation, die Voraussetzung ist.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -164,11 +171,11 @@ Die Version vom Mai 2016 von SSMA für MySQL enthält die folgenden Änderungen:
 * Fehler beim Laden von MSSQL-Objekten.
 * Fehler in globalen Einstellungen behoben.
 
-## <a name="march-2016"></a>2016. März
+## <a name="march-2016"></a>März 2016
 
 Die Vorschauversion von SSMA für MySQL vom März 2016 bietet Unterstützung für die Migration zu SQL Server 2016. 
   
-## <a name="january-2016"></a>2016. Januar
+## <a name="january-2016"></a>Januar 2016
 
 Die Wartungsversion von SSMA für MySQL vom Januar 2016 enthält die folgenden Änderungen:  
 
@@ -189,7 +196,7 @@ Die Version vom Juli 2014 von SSMA für MySQL enthält die folgenden Änderungen
 * Verringerung der Berichts Größe um mehr als 25%.  
 * Verbesserte Fehlermeldungen für nicht analysierte Konstrukte.  
   
-## <a name="april-2014"></a>2014. April
+## <a name="april-2014"></a>April 2014
 
 Die Version vom April 2014 von SSMA für MySQL enthält die folgenden Änderungen:  
   
@@ -197,7 +204,7 @@ Die Version vom April 2014 von SSMA für MySQL enthält die folgenden Änderunge
 * Fehler bei der Konvertierung in Azure korrigiert  
 * Fehler in Bezug auf unsichtbare Berichts Seiten in IE 10 behoben.  
   
-## <a name="july-2011"></a>2011. Juli
+## <a name="july-2011"></a>Juli 2011
 
 Die Version vom Juli 2011 von SSMA für MySQL enthält die folgenden Änderungen:  
   
@@ -215,7 +222,7 @@ Die Version vom April 2011 von SSMA für MySQL enthält die folgenden Änderunge
 * Die Version der SSMA für MySQL-Konsole unterstützt die Abwärtskompatibilität. Sie können die Projekte öffnen, die von früheren Versionen von SSMA v 5.0 erstellt wurden.  
 * Das SSMA für MySQL v 5.0-Produkt kann nebeneinander (SxS) mit älteren Versionen des SSMA-Produkts installiert werden.  
   
-## <a name="july-2010"></a>2010. Juli
+## <a name="july-2010"></a>Juli 2010
 
 Die Version vom Juli 2010 von SSMA für MySQL enthält die folgenden Features:  
   

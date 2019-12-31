@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2014 Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/07/2019
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -18,12 +18,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93a8f9ddab1fe1f78c5af94cae30c8ce7cbf2c37
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bceabba9b490be6bc2c51b4fdcce9b6b131eb0ce
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025455"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683478"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
 
@@ -34,7 +34,7 @@ ms.locfileid: "69025455"
 Die Dokumentation ist durch eine Version getrennt. Sie befinden sich zurzeit in SQL Server 2014 Analysis Services-Dokumentation.
 
 - Weitere Informationen zu SQL Server 2012 und früher finden Sie in [SQL Server Dokumentation zu früheren Versionen](https://docs.microsoft.com/previous-versions/sql/).
-- Weitere Informationen zu SQL Server 2014 finden Sie in der [Online Dokumentation für SQL Server 2014](../2014-toc/books-online-for-sql-server-2014.md) .
+- Weitere Informationen zu SQL Server 2014 finden Sie in der [Online Dokumentation für SQL Server 2014](../2014-toc/index.yml) .
 - Weitere Informationen zu SQL Server 2016 und höher finden Sie in der [Microsoft SQL-Dokumentation](https://docs.microsoft.com/sql/).
 - Weitere Informationen zu Azure Analysis Services finden Sie unter [Azure Analysis Services Dokumentation](https://docs.microsoft.com/azure/analysis-services/).
 
@@ -60,24 +60,24 @@ Ein typischer Workflow umfasst das Entwickeln eines OLAP-oder tabellarischen Dat
   
  Die Grunddokumentation für Analysis Services ist in Abschnitten organisiert, die dem Typ des Projekts entsprechen, die Sie erstellen. Wählen Sie in den folgenden Links, um mehr über jeden Modus oder die einzelnen Funktionsbereiche zu erfahren.  
   
- **Durchsuchen von Inhalt nach Bereich**  
- ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Vergleichen von tabellarischen und &#40;mehrdimensionalen&#41; Lösungen (SSAS](comparing-tabular-and-multidimensional-solutions-ssas.md) )  
+ **Inhalt nach Bereich Durchsuchen**  
+ ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [Vergleichen von tabellarischen und mehrdimensionalen Lösungen &#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Analysis Services Instanzverwaltung](instances/analysis-services-instance-management.md)  
+ ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [Analysis Services Instanzverwaltung](instances/analysis-services-instance-management.md)  
   
- ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") Tabellarische Tabellen [ &#40;Modellierung (&#41; SSAS](tabular-models/tabular-models-ssas.md) )  
+ ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [tabellarische Modellierung &#40;tabellarischen SSAS-&#41;](tabular-models/tabular-models-ssas.md)  
   
- ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") Mehr [dimensionale &#40;Modellierung von&#41; SSAS](multidimensional-models/multidimensional-models-ssas.md)  
+ ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") mehr [dimensionale Modellierung &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   
- ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [Data Mining &#40;-SSAS&#41; ](data-mining/data-mining-ssas.md)  
+ ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [Data Mining &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
- ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Datei Ordnersymbol") [PowerPivot für SharePoint &#40;SSAS&#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [PowerPivot für SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Funktionen variieren je nach Edition. Mehrdimensionale und Data Mining-Modelle sind in der Standard Edition verfügbar, bieten aber weniger Funktionen als in den höheren Editionen. Tabellarische Modelle und PowerPivot für SharePoint sind Premium-Funktionen, die in der Standard Edition-Lizenz nicht verfügbar sind. Weitere Informationen finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Funktionen variieren je nach Edition. Mehrdimensionale und Data Mining-Modelle sind in der Standard Edition verfügbar, bieten aber weniger Funktionen als in den höheren Editionen. Tabellarische Modelle und PowerPivot für SharePoint sind Premium-Funktionen, die in der Standard Edition-Lizenz nicht verfügbar sind. Weitere Informationen finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Lernprogramme &#40;für SSAS Analysis Services&#41;](analysis-services-tutorials-ssas.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Tutorials &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Installation für SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Entwicklerhandbuch &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
  [SQL Server-Ressourcen Center](https://go.microsoft.com/fwlink/?linkID=219676)   

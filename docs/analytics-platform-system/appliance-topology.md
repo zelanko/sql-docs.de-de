@@ -1,6 +1,6 @@
 ---
-title: Appliancetopologie – Analytics Platform System | Microsoft-Dokumentation
-description: Zeigt zusammenfassende Informationen für die gesamte Analytics Platform System.
+title: Appliancetopologie
+description: Zeigt zusammenfassende Informationen zum gesamten Analytics-Platt Form System an.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 54754aa1f90bd4b69e49b2d080c96f0b2e6effb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e16e1cd972b6374a5b3d17eef5a406b57b1d3c41
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961435"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401381"
 ---
-# <a name="appliance-topology---analytics-platform-system"></a>Appliancetopologie – Analytics Platform System
-Zeigt zusammenfassende Informationen für die gesamte Analytics Platform System.  
+# <a name="appliance-topology---analytics-platform-system"></a>Geräte Topologie-Analytics Platform System
+Zeigt zusammenfassende Informationen zum gesamten Analytics-Platt Form System an.  
   
-Die Seite zeigt eine schreibgeschützte Version aller Hosts und Fabric-Knoten in der aktuellen Einheit, einschließlich ihrer Ethernet und Infiniband-IP-Adressen.  
+Auf der Seite wird eine schreibgeschützte Version aller Hosts und Fabric-Knoten in der aktuellen Appliance einschließlich Ihrer Ethernet-und InfiniBand-IP-Adressen aufgelistet.  
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>Siehe auch  
-[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Starten Sie die Configuration Manager &#40;Analytics-Platt Form System&#41;](launch-the-configuration-manager.md)  
   

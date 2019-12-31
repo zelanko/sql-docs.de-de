@@ -1,6 +1,6 @@
 ---
-title: Laden mit Integration Services - Parallel Datawarehouse | Microsoft-Dokumentation
-description: Stellt Referenzen und Informationen Bereitstellung zum Laden von Daten in Parallel Data Warehouse (PDW) mithilfe von SQL Server Integration Services (SSIS)-Pakete bereit.
+title: Laden mit Integration Services
+description: Bietet Referenz-und Bereitstellungs Informationen zum Laden von Daten in parallele Data Warehouse (PDW) mithilfe von SQL Server Integration Services-Paketen (SSIS).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,15 +8,16 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960672"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401014"
 ---
-# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Laden von Daten mit Integration Services in Parallel Data Warehouse
-Stellt Referenz- und Bereitstellung von Informationen zum Laden von Daten in SQL Server Parallel Data Warehouse mithilfe von SQL Server Integration Services (SSIS)-Pakete bereit.  
+# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Laden von Daten mit Integration Services in parallele Data Warehouse
+Bietet Referenz-und Bereitstellungs Informationen zum Laden von Daten in SQL Server parallele Data Warehouse mithilfe von SQL Server Integration Services-Paketen (SSIS).  
   
 <!-- MISSING LINKS
 
@@ -33,57 +34,57 @@ For general information about developing Integration Services packages, see [Des
 -->
   
 ## <a name="Basics"></a>Grundlagen  
-Integrationsservices ist die Komponente von SQL Server für leistungsstarke Extraktion, Transformation und laden (ETL) von Daten und wird häufig zum Auffüllen und aktualisieren ein Datawarehouse verwendet.  
+Integration Services ist die Komponente von SQL Server für das Extrahieren, Transformieren und Laden von Daten (ETL) mit hoher Leistung und wird häufig verwendet, um ein Data Warehouse aufzufüllen und zu aktualisieren.  
   
-Die Zieladapter ist eine Integration Services-Komponente, die Sie die Daten mithilfe von Integration Services-Dtsx-Paketen in PDW zu laden kann. In einem Paketworkflow für SQL-ServerPDW können Sie laden und Zusammenführen von Daten aus mehreren Quellen und Daten an mehrere Ziele laden. Die Ladevorgänge erfolgen parallel innerhalb eines Pakets und unter mehreren gleichzeitig ausgeführten Paketen, bis zu einem Maximum von 10 in der gleichen Anwendung parallel ausgeführten Ladevorgängen.  
+Der PDW-Ziel Adapter ist eine Integration Services Komponente, mit der Sie Daten mithilfe Integration Services dzx-Paketen in PDW laden können. In einem Paket Workflow für SQL serverpdw können Sie Daten aus mehreren Quellen laden und Zusammenführen sowie Daten in mehrere Ziele laden. Die Ladevorgänge erfolgen parallel innerhalb eines Pakets und unter mehreren gleichzeitig ausgeführten Paketen, bis zu einem Maximum von 10 in der gleichen Anwendung parallel ausgeführten Ladevorgängen.  
   
-Sie können zusätzlich zu den Aufgaben, die in diesem Thema beschrieben wird verwenden andere Funktionen von Integration Services, um zu filtern, transformieren, analysieren und Bereinigen der Daten vor dem Laden in das Datawarehouse. Sie können auch den Workflow des Pakets verbessern, indem Sie SQL-Anweisungen ausführen, untergeordnete Pakete ausführen oder E-Mails versenden.  
+Zusätzlich zu den in diesem Thema beschriebenen Aufgaben können Sie andere Funktionen von Integration Services verwenden, um Ihre Daten zu filtern, zu transformieren, zu analysieren und zu bereinigen, bevor Sie Sie in die Data Warehouse laden. Sie können auch den Workflow des Pakets verbessern, indem Sie SQL-Anweisungen ausführen, untergeordnete Pakete ausführen oder E-Mails versenden.  
   
-Vollständige Dokumentation der Integrationsdienste finden Sie unter [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).  
+Eine umfassende Dokumentation zu Integration Services finden Sie unter [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).  
   
-## <a name="HowToDeployPackage"></a>Methoden zum Ausführen eines Integration Services-Pakets  
-Verwenden Sie eine der folgenden Methoden an, um ein Integration Services-Paket auszuführen.  
+## <a name="HowToDeployPackage"></a>Methoden zum Ausführen eines Integration Services Pakets  
+Verwenden Sie eine dieser Methoden, um ein Integration Services Paket auszuführen.  
   
-### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>Ausführen von SQL Server 2008 R2 Business Intelligence Development Studio (BIDS)  
-Führen Sie das Paket in BIDS mit der rechten Maustaste auf das Paket, und wählen Sie **Paketausführungs**.  
+### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>Ausführen von SQL Server 2008 R2 Business Intelligence Development Studio (Angebote)  
+Um das Paket innerhalb von angeboten auszuführen, klicken Sie mit der rechten Maustaste auf das Paket, und wählen Sie **Paket ausführen**aus.  
   
-Standardmäßig wird die BIDS-Paketen mithilfe der 64-Bit-Binärdateien ausgeführt. Dies richtet sich nach der **Run64BitRuntime** Paket-Eigenschaft. Um diese Eigenschaft festzulegen, wechseln Sie zu **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften**. Auf der **Integration Services-Eigenschaftenseiten**, wechseln Sie zu **Konfigurationseigenschaften** , und wählen Sie **Debuggen**. Sehen Sie die **Run64BitRuntime** Eigenschaft unter den **Debuggen Optionen**. Um 32-Bit-Laufzeiten zu verwenden, legen Sie diese auf **"false"** . Um 64-Bit-Laufzeiten zu verwenden, legen Sie diese auf **"true"** .  
+Standardmäßig führt Angebote Pakete mit 64-Bit-Binärdateien aus. Dies wird durch die **Run64BitRuntime** -Paket Eigenschaft bestimmt. Um diese Eigenschaft festzulegen, wechseln Sie zu **Projektmappen-Explorer**, klicken Sie mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften**aus. Wechseln Sie auf der Eigenschaften **Seite Integration Services**zu **Konfigurations Eigenschaften** , und wählen Sie **Debuggen**aus. Die Eigenschaft **Run64BitRuntime** wird unter den **Optionen Debuggen**angezeigt. Wenn Sie 32-Bit-Runtimes verwenden möchten, legen Sie diese Einstellung auf **false**fest. Wenn Sie 64-Bit-Runtimes verwenden möchten, legen Sie diese Eigenschaft auf **true**fest.  
   
-### <a name="run-from-sql-server-2012-sql-server-data-tools"></a>Ausführen von SQL Server 2012, SQL Server Data Tools  
-Führen Sie das Paket in SQL Server Data Tools, mit der rechten Maustaste auf das Paket, und wählen Sie **Paketausführungs**.  
+### <a name="run-from-sql-server-2012-sql-server-data-tools"></a>Ausführen von SQL Server 2012 SQL Server Data Tools  
+Klicken Sie mit der rechten Maustaste auf das Paket, und wählen Sie **Paket ausführen**aus, um das Paket in SQL Server Data Tools auszuführen.  
   
-### <a name="run-from-powershell"></a>Führen Sie in PowerShell  
-Zum Ausführen des Pakets in Windows PowerShell mit der **Dtexec** Hilfsprogramm: `dtexec /FILE <packagePath>`  
+### <a name="run-from-powershell"></a>Ausführen von PowerShell  
+So führen Sie das Paket mithilfe des Hilfsprogramms **dtexec** aus Windows PowerShell aus:`dtexec /FILE <packagePath>`  
   
-beispielsweise `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Zum Beispiel, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
-### <a name="run-from-a-windows-command-prompt"></a>Führen Sie aus einer Windows-Eingabeaufforderung 
-Zum Ausführen des Pakets aus einer Windows-Eingabeaufforderung mit dem **Dtexec** Hilfsprogramm: `dtexec /FILE <packagePath>`  
+### <a name="run-from-a-windows-command-prompt"></a>Ausführen über eine Windows-Eingabeaufforderung 
+So führen Sie das Paket mithilfe des Hilfsprogramms **dtexec** von einer Windows-Eingabeaufforderung aus:`dtexec /FILE <packagePath>`  
   
 Beispiel: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>Datentypen  
-Wenn Integration Services zum Laden von Daten aus einer Datenquelle in einer SQL Server-PDW-Datenbank, werden zuerst die Daten aus den Quelldaten in Integration Services-Datentypen zugeordnet. Dies ermöglicht die Zuordnung von Daten aus mehreren Datenquellen zu einem allgemeinen Satz von Datentypen.  
+Wenn Integration Services zum Laden von Daten aus einer Datenquelle in eine SQL Server PDW-Datenbank verwendet wird, werden die Daten zunächst aus den Quelldaten Integration Services-Datentypen zugeordnet. Dies ermöglicht die Zuordnung von Daten aus mehreren Datenquellen zu einem allgemeinen Satz von Datentypen.  
   
-Anschließend werden die Daten von Integration Services in SQL Server-PDW-Datentypen zugeordnet. Der folgenden Tabelle aufgeführt für jeden SQL Server-PDW-Datentyp der Integration Services-Datentypen, die in der SQL Server-PDW-Datentyp konvertiert werden können.  
+Anschließend werden die Daten aus Integration Services SQL Server PDW-Datentypen zugeordnet. In der folgenden Tabelle werden für jeden SQL Server PDW Datentyp die Integration Services-Datentypen aufgelistet, die in den SQL Server PDW-Datentyp konvertiert werden können.  
   
-|PDW-Datentyp|Integration Services-Datentypen (s), die PDW-Datentyp zugeordnet|  
+|PDW-Datentyp|Integration Services Datentypen, die dem PDW-Datentyp zugeordnet sind.|  
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|  
 |BIT|DT_BOOL|  
-|bigint|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
+|BIGINT|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
 |CHAR|DT_STR|  
 |DATE|DT_DBDATE|  
 |DATETIME|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
 |DATETIME2|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
 |DATETIMEOFFSET|DT_WSTR|  
-|DEZIMAL|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
-|GLEITKOMMAZAHL|DT_R4, DT_R8|  
+|DECIMAL|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
+|FLOAT|DT_R4, DT_R8|  
 |INT|DT_I1, DTI2, DT_I4, DT_UI1, DT_UI2|  
 |MONEY|DT_CY|  
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -92,13 +93,13 @@ Anschließend werden die Daten von Integration Services in SQL Server-PDW-Datent
 |VARBINARY|DT_BYTES|  
 |VARCHAR|DT_STR|  
   
-**Eingeschränkte Unterstützung für datentypgenauigkeit**  
+**Eingeschränkte Unterstützung für Datentyp Genauigkeit**  
   
-PDW wird eine Fehlermeldung generiert, wenn Sie eine Eingabespalte DT_NUMERIC oder "DT_DECIMAL" zuordnen, die einen Wert mit einer höheren Genauigkeit als 28 enthält.  
+PDW generiert einen Validierungs Fehler, wenn Sie eine DT_NUMERIC oder DT_DECIMAL Eingabe Spalte zuordnen, die einen Wert mit einer Genauigkeit von mehr als 28 enthält.  
   
 **Nicht unterstützte Datentypen**  
   
-SQL Server PDW unterstützt nicht die folgenden Datentypen von Integration Services:  
+SQL Server PDW unterstützt die folgenden Integration Services-Datentypen nicht:  
   
 -   DT_DBTIMESTAMPOFFSET  
   
@@ -112,48 +113,48 @@ SQL Server PDW unterstützt nicht die folgenden Datentypen von Integration Servi
   
 -   DT_TEXT  
   
-Um Spalten zu laden, die Daten dieser Typen in SQL Server PDW enthalten, müssen Sie eine Transformation für Datenkonvertierung upstream im Datenfluss die Daten in einen kompatiblen Datentyp konvertiert hinzufügen.  
+Wenn Sie Spalten, die Daten dieser Typen enthalten, in SQL Server PDW laden möchten, müssen Sie im Datenfluss eine streamingtransformation für Datenkonvertierung hinzufügen, um die Daten in einen kompatiblen Datentyp zu konvertieren.  
   
 ## <a name="permissions"></a>Berechtigungen  
-Zum Ausführen eines Integration Services-Pakets laden, müssen wie folgt vor:  
+Zum Ausführen eines Integration Services Lade Pakets benötigen Sie Folgendes:  
   
--   Laden Sie die Berechtigung für die Datenbank.  
+-   Load-Berechtigung für die Datenbank.  
   
--   Zutreffend INSERT-, Update-und DELETE-Berechtigung für die Zieltabelle.  
+-   Anwendbare INSERT-, Update-und DELETE-Berechtigungen für die Ziel Tabelle.  
   
--   Wenn eine Stagingdatenbank verwendet wird, über die Berechtigung "erstellen" in der staging-Datenbank. Dies ist für das Erstellen einer temporären Tabelle.  
+-   Wenn eine Staging-Datenbank verwendet wird, erstellen Sie die-Berechtigung für die Stagingdatenbank. Dies dient zum Erstellen einer temporären Tabelle.  
   
--   Wenn keine Stagingdatenbank verwendet wird, über die Berechtigung "erstellen" in der Zieldatenbank. Dies ist für das Erstellen einer temporären Tabelle.  
+-   Wenn keine Staging-Datenbank verwendet wird, erstellen Sie die-Berechtigung für die Zieldatenbank. Dies dient zum Erstellen einer temporären Tabelle.  
   
 ## <a name="GenRemarks"></a>Allgemeine Hinweise  
-Wenn ein Integration Services-Paket verfügt über mehrere SQL Server-PDW-Ziele, die ausgeführt wird, und eine der Verbindungen beendet wird, beendet Integration Services Daten für alle SQL Server-PDW-Ziele zu senden.  
+Wenn für ein Integration Services Paket mehrere SQL Server PDW Ziele ausgeführt werden und eine Verbindung beendet wird, beendet Integration Services das Übertragen von Daten an alle SQL Server PDW Ziele.  
   
 ## <a name="Limits"></a>Begrenzungen und Einschränkungen  
-Bei einem Integration Services-Paket ist die Anzahl der SQL Server-PDW-Ziel für die gleiche Datenquelle durch die maximale Anzahl aktiver Ladevorgänge beschränkt. Das Maximum ist vorkonfiguriert und kann nicht durch den Benutzer konfiguriert werden. 
+Bei einem Integration Services Paket wird die Anzahl der SQL Server PDW Ziele für die gleiche Datenquelle durch die maximale Anzahl aktiver Ladevorgänge beschränkt. Das Maximum ist vorkonfiguriert und kann nicht durch den Benutzer konfiguriert werden. 
 
 <!-- MISSING LINKS
 For the maximum number of loads and queued loads per appliance, see [Minimum and maximum values](minimum-and-maximum-values.md).  
 -->
   
-Jedes Ziel des Integration Services-Paket für die gleiche Datenquelle zählt als ein Ladevorgang, wenn das Paket ausgeführt wird. Angenommen die maximale Anzahl aktiver Ladevorgänge ist z. B. 10. Das Paket wird nicht ausgeführt, wenn es versucht, 11 oder mehr Ziele für die gleiche Datenquelle zu öffnen.  
+Jedes Integration Services Paket Ziel für die gleiche Datenquelle zählt bei Ausführung des Pakets als ein Ladevorgang. Angenommen die maximale Anzahl aktiver Ladevorgänge ist z. B. 10. Das Paket wird nicht ausgeführt, wenn es versucht, 11 oder mehr Ziele für die gleiche Datenquelle zu öffnen.  
   
 Es können mehrere Pakete gleichzeitig ausgeführt werden, solange jedes Paket nicht mehr als die maximale Anzahl aktiver Ladevorgänge verwendet. Wenn die maximale Anzahl aktiver Ladevorgänge beispielsweise 10 beträgt, können Sie zwei Pakete mit je 10 Zielen gleichzeitig ausführen. Ein Paket wird ausgeführt während das andere in der Warteschlange steht.  
   
-Das Paket wird nicht ausgeführt, wenn die Anzahl der Ladevorgänge in der Warteschlange die maximal zulässige Anzahl der in Warteschlange gestellten Ladevorgänge überschreitet. Z. B. wenn die maximale Anzahl von Ladevorgängen 10 pro Anwendung beträgt und die maximale Anzahl der in Warteschlange stehenden Ladevorgänge 40 pro Anwendung beträgt, Sie können gleichzeitig ausgeführt werden fünf Integration Services-Pakete, die je 10 Ziele öffnen. Ein sechstes Paket kann nicht ausgeführt werden.  
+Das Paket wird nicht ausgeführt, wenn die Anzahl der Ladevorgänge in der Warteschlange die maximal zulässige Anzahl der in Warteschlange gestellten Ladevorgänge überschreitet. Wenn z. b. die maximale Anzahl von Ladevorgängen 10 pro Gerät beträgt und die maximale Anzahl von Ladevorgängen in der Warteschlange 40 pro Gerät beträgt, können Sie gleichzeitig fünf Integration Services Pakete ausführen, von denen jeweils 10 Ziele geöffnet werden. Ein sechstes Paket kann nicht ausgeführt werden.  
 
 > [!IMPORTANT]
-> Mit den Zieladapter ein OLE DB-Datenquelle in SSIS verwenden, können Daten beschädigt, wenn die Quelltabelle Char und Varchar-Spalten mit SQL-Sortierungen enthält. Es wird empfohlen, eine ADO NET-Quelle verwenden, wenn die Quelltabelle char- oder Varchar-Spalten mit SQL-Sortierungen enthält. 
+> Die Verwendung einer OLE DB Datenquelle in SSIS mit dem PDW-Ziel Adapter kann zu Daten Beschädigungen führen, wenn die Quell Tabelle char-und varchar-Spalten mit SQL-Sortierungen enthält. Es wird empfohlen, eine ADO.NET-Quelle zu verwenden, wenn die Quell Tabelle char-oder varchar-Spalten mit SQL-Sortierungen enthält. 
 
   
 ## <a name="Locks"></a>Sperrverhalten  
-Beim Laden von Daten mit Integration Services verwendet SQL ServerPDW Sperren auf Zeilenebene, um Daten in die Zieltabelle zu aktualisieren. Dies bedeutet, dass jede Zeile während des Updates für den Lese- und Schreibzugriff gesperrt wird. Die Zeilen in der Zieltabelle werden nicht gesperrt, während die Daten in die Stagingtabelle geladen werden.  
+Beim Laden von Daten mit Integration Services verwendet SQL Server PDW Sperren auf Zeilenebene, um Daten in der Ziel Tabelle zu aktualisieren. Dies bedeutet, dass jede Zeile während des Updates für den Lese- und Schreibzugriff gesperrt wird. Die Zeilen in der Zieltabelle werden nicht gesperrt, während die Daten in die Stagingtabelle geladen werden.  
   
-## <a name="Examples"></a>Beispiele für  
+## <a name="Examples"></a>Beispiele  
   
-### <a name="Walkthrough"></a>A. Einfaches Laden von Flatfile-Dateien  
-Die folgende exemplarische Vorgehensweise veranschaulicht die einfache Daten Laden von Daten mithilfe von Integration Services zum Laden von Flatfile-Daten in einer SQL Server-PDW-Anwendung.  In diesem Beispiel wird davon ausgegangen, dass Integration Services wurde bereits auf dem Clientcomputer installiert, und das SQL Server-PDW-Ziel installiert wurde, wie oben beschrieben.  
+### <a name="Walkthrough"></a>Ein. Einfaches Laden aus Flatfile  
+In der folgenden exemplarischen Vorgehensweise wird eine einfache Daten Auslastung mithilfe Integration Services veranschaulicht, um Flatfiledaten in eine SQL Server PDW Appliance zu laden.  In diesem Beispiel wird davon ausgegangen, dass Integration Services bereits auf dem Client Computer installiert wurde und das SQL Server PDW Ziel wie oben beschrieben installiert wurde.  
   
-In diesem Beispiel laden wir in den `Orders` Tabelle kann die folgende DDL-Anweisungen umfassen. Die `Orders` Tabelle ist Teil der `LoadExampleDB` Datenbank.  
+In diesem Beispiel werden wir in die `Orders` -Tabelle laden, die die folgende DDL enthält. Die `Orders` Tabelle ist Teil der `LoadExampleDB` Datenbank.  
   
 ```sql  
 CREATE TABLE LoadExampleDB.dbo.Orders (  
@@ -164,7 +165,7 @@ CREATE TABLE LoadExampleDB.dbo.Orders (
 ;  
 ```  
   
-Hier ist die Laden von Daten aus:  
+Dies sind die Daten, die geladen werden:  
   
 ```  
 id        city           lastUpdateDate     orderdate  
@@ -173,7 +174,7 @@ id        city           lastUpdateDate     orderdate
 2         Denver         2002-06-25         1999-01-02  
 ```  
   
-Erstellen Sie als Vorbereitung für die Last, Flatfiles `exampleLoad.txt`, mit dem Laden von Daten:  
+Erstellen Sie zur Vorbereitung der Auslastung die Flatfile `exampleLoad.txt`, die die Auslastungs Daten enthält:  
   
 ```  
 id,city,lastUpdateDate,orderDate  
@@ -181,82 +182,82 @@ id,city,lastUpdateDate,orderDate
 2,Denver,2002-06-25,1999-01-02  
 ```  
   
-Erstellen Sie zunächst ein Integration Services-Paket, indem Sie diese Schritte ausführen:  
+Erstellen Sie zunächst ein Integration Services Paket, indem Sie die folgenden Schritte ausführen:  
   
-1.  In SQL Server Data Tools \(SSDT\)Option **Datei**, **neu**, und klicken Sie dann **Projekt**. Wählen Sie **Integration Services-Projekt** aufgeführten Optionen aus. Nennen Sie dieses Projekt `ExampleLoad`, und klicken Sie auf **OK**.  
+1.  Wählen Sie \(in SQL Server Data Tools\)SSDT **Datei**, **neu**und dann **Projekt**aus. Wählen Sie **Integration Services Projekt** aus den aufgeführten Optionen aus. Nennen Sie dieses `ExampleLoad`Projekt, und klicken Sie auf **OK**.  
   
-2.  Klicken Sie auf der **Ablaufsteuerung** Registerkarte, und ziehen Sie dann die **Data Flow Task** aus der **Toolbox** auf die **Ablaufsteuerung** Bereich.  
+2.  Klicken Sie auf die Registerkarte **Ablauf Steuerung** , und ziehen Sie dann den **Datenfluss Task** aus der **Toolbox** in den Bereich **Ablauf Steuerung** .  
   
-3.  Klicken Sie auf die **Datenfluss** Registerkarte, und ziehen Sie dann **Flat File Source** aus der **Toolbox** auf die **Datenfluss** Bereich. Doppelklicken Sie auf das Sie gerade erstellt, zum Öffnen haben der **Quellen-Editor für Flatfiles**.  
+3.  Klicken Sie auf die Registerkarte **Datenfluss** , und ziehen Sie **Flatfilequelle** aus der **Toolbox** in den Bereich **Datenfluss** . Doppelklicken Sie auf das Feld, das Sie gerade erstellt haben, um den **Quelleditor für Flatfiles**zu öffnen.  
   
-4.  Klicken Sie auf **Verbindungs-Manager** , und klicken Sie dann auf **neu**.  
+4.  Klicken Sie auf **Verbindungs-Manager** und dann auf **neu**.  
   
-5.  In der **Namen Verbindungs-Managers** Geben Sie einen Anzeigenamen für die Verbindung. In diesem Beispiel `Example Load Flat File CM`.  
+5.  Geben Sie im Feld **Name des Verbindungs-Managers** einen anzeigen Amen für die Verbindung ein. In diesem Beispiel `Example Load Flat File CM`.  
   
-6.  Klicken Sie auf **Durchsuchen** , und wählen Sie die `ExampleLoad.txt` -Datei aus dem lokalen Computer.  
+6.  Klicken Sie auf **Durchsuchen** , und wählen Sie die `ExampleLoad.txt` Datei auf dem lokalen Computer.  
   
-7.  Da die Flatfile-Datei eine Zeile mit den Spaltennamen enthält, klicken Sie auf die **Spaltennamen müssen in der ersten Datenzeile** Feld.  
+7.  Da die Flatfile eine Zeile mit Spaltennamen enthält, klicken Sie auf die **Spaltennamen im Feld erste Daten Zeile** .  
   
-8.  Klicken Sie auf **Spalten** in der linken Spalte und eine Vorschau der Daten, die geladen werden, um sicherzustellen, dass die Spaltennamen und die Daten wurden richtig interpretiert.  
+8.  Klicken Sie in der linken Spalte auf **Spalten** , und führen Sie eine Vorschau der Daten aus, die geladen werden, um sicherzustellen, dass die Spaltennamen und Daten korrekt interpretiert wurden.  
   
-9. Klicken Sie auf **erweitert** in der linken Spalte. Klicken Sie auf jede Spalte den Datentyp zu überprüfen, der mit den Daten zugeordnet wurde. Geben Sie Änderungen in das Feld, damit die Datentypen der geladenen Daten mit der Ziel-Spaltentypen kompatibel sind.  
+9. Klicken Sie in der linken Spalte auf **erweitert** . Klicken Sie auf die einzelnen Spaltennamen, um den Datentyp zu überprüfen, der den Daten zugeordnet ist. Geben Sie im Feldänderungen ein, sodass die Datentypen der geladenen Daten mit den Ziel Spaltentypen kompatibel sind.  
   
-10. Klicken Sie auf **OK** um den Verbindungs-Manager zu speichern.  
+10. Klicken Sie zum Speichern Ihres Verbindungs-Managers auf **OK** .  
   
-11. Klicken Sie auf **OK** zum Beenden der **Quellen-Editor für Flatfiles**.  
+11. Klicken Sie auf **OK** , um den **Quelleditor für Flatfiles**zu schließen.  
   
-Geben Sie das Ziel für den Datenfluss.  
+Geben Sie das Ziel für den Datenfluss an.  
   
-1.  Ziehen Sie die **SQL Server-PDW-Ziel** aus der **Toolbox** auf die **Datenfluss** Bereich.  
+1.  Ziehen Sie das **SQL Server PDW Ziel** aus der **Toolbox** in den Bereich **Datenfluss** .  
   
-2.  Doppelklicken Sie auf das Sie gerade erstellt, zum Laden haben der **SQL Server PDW-Ziel-Editor**.  
+2.  Doppelklicken Sie auf das Feld, das Sie gerade erstellt haben, um den **SQL Server PDW Ziel-Editor**zu laden.  
   
-3.  Klicken Sie auf den Pfeil nach unten neben **Verbindungs-Manager**.  
+3.  Klicken Sie neben dem Verbindungs- **Manager**auf den Pfeil nach unten.  
   
-4.  Wählen Sie **erstellen Sie eine neue Verbindung**.  
+4.  Wählen Sie **neue Verbindung erstellen**aus.  
   
-5.  Füllen Sie die Informationen für die Server, Benutzer, Kennwort und Ziel-Datenbank mit Informationen, die spezifisch für Ihr Gerät aus. (Beispiele werden unten angezeigt). Klicken Sie dann auf **OK**.  
+5.  Geben Sie die Informationen für den Server, den Benutzer, das Kennwort und die Zieldatenbank mit Informationen an, die für Ihr Gerät spezifisch sind. (Beispiele sind unten dargestellt). Klicken Sie dann auf **OK**.  
   
-    InfiniBand-Verbindungen **Servernamen**: Geben Sie < Appliance-Name >-SQLCTL01, 17001.  
+    Für Infiniband-Verbindungen: **Server Name**: Geben Sie <Appliance-Name>-SQLCTL01, 17001 ein.  
   
-    Für Ethernet-Verbindungen **Servernamen**: Geben Sie die IP-Adresse des Steuerelement-Knoten-Cluster, Komma, Port 17001 aus. Z. B. 10.192.63.134,17001.  
+    Für Ethernet-Verbindungen: **Server Name**: Geben Sie die IP-Adresse des Steuerelement Knoten Clusters (Komma, Port 17001) ein. Beispiel: 10.192.63.134, 17001.  
   
-    **Benutzer:** `user1`  
+    **Bedienungs**`user1`  
   
-    **Kennwort:** `password1`  
+    **Anmelden**`password1`  
   
-    **Zieldatenbank:** `LoadExampleDB`  
+    **Zieldatenbank:**`LoadExampleDB`  
   
-6.  Wählen Sie die Zieltabelle: `Orders`.  
+6.  Wählen Sie die Ziel Tabelle `Orders`aus:.  
   
-7.  Wählen Sie **Append** als Laden Modus, und klicken Sie auf **OK**.  
+7.  Wählen Sie als Lade Modus **Anfügen** aus, und klicken Sie auf **OK**.  
   
-Geben Sie den Datenfluss von der Quelle zum Ziel.  
+Geben Sie den Datenfluss von der Quelle zum Ziel an.  
   
-1.  Auf der **Datenfluss** Bereich ziehe den grünen Pfeil aus der **Flat File Source** Feld der **SQL Server-PDW-Ziel** Feld.  
+1.  Ziehen Sie im Bereich **Datenfluss** den grünen Pfeil aus dem Feld **Flatfilequelle** in das Feld **SQL Server PDW Ziel** .  
   
-2.  Doppelklicken Sie auf die **SQL Server-PDW-Ziel** Feld, damit Sie sehen die **SQL Server PDW-Ziel-Editor** erneut aus. Daraufhin sollte die Spaltennamen aus der Flatfile-Datei auf der linken Seite unter **nicht zugeordnete Eingabespalten**. Daraufhin sollte die Spaltennamen aus der Zieltabelle auf der rechten Seite unter **nicht zugeordnete Zielspalten**. Ordnen Sie die Spalten durch Ziehen oder doppelklicken Sie auf die zugehörigen Spaltennamen in der **nicht zugeordnete Eingabespalten** und **nicht zugeordnete Zielspalten** aufgeführt die **zugeordnete Spalten**Feld. Klicken Sie auf **OK** zum Speichern der Einstellungen.  
+2.  Doppelklicken Sie auf das Feld **SQL Server PDW Ziel** , damit der **SQL Server PDW Ziel-Editor** wieder angezeigt wird. Die Spaltennamen sollten auf der linken Seite unter nicht zugeordnete **Eingabe Spalten**aus der Flatfile angezeigt werden. Die Spaltennamen sollten auf der rechten Seite unter nicht zugeordnete **Ziel Spalten**aus der Ziel Tabelle angezeigt werden. Ordnen Sie die Spalten durchziehen oder Doppelklicken auf die entsprechenden Spaltennamen in den Listen nicht zugeordnete **Eingabe Spalten** und nicht zugeordnete **Ziel Spalten** dem Feld zugeordnete **Spalten** zu. Klicken Sie auf **OK**, um die Einstellungen zu speichern.  
   
-3.  Speichern Sie das Paket, indem Sie auf **speichern** in die **Datei** Menü.  
+3.  Speichern Sie das Paket, indem Sie im Menü **Datei** auf **Speichern** klicken.  
   
-Führen Sie das Paket auf dem Integration Services-Computer.  
+Führen Sie das Paket auf dem Computer Integration Services aus.  
   
-1.  In den Integrationsdiensten**Projektmappen-Explorer** (rechte Spalte), mit der rechten Maustaste `Package.dtsx` , und wählen Sie **Execute**.  
+1.  Klicken Sie in der Integration Services**Projektmappen-Explorer** (Rechte Spalte) mit der `Package.dtsx` rechten Maustaste, und wählen Sie **Ausführen**aus.  
   
-2.  Das Paket ausgeführt wird und den Status sowie Fehler angezeigt, auf die **Fortschritt** Bereich. Verwenden Sie einen SQL-Client, um die Last zu bestätigen, oder überwachen Sie die Last über die SQL Server PDW-Verwaltungskonsole.  
+2.  Das Paket wird ausgeführt, und **der Fortschritt** sowie alle Fehler werden im Statusbereich angezeigt. Verwenden Sie einen SQL-Client, um die Last zu bestätigen, oder überwachen Sie die Last über die SQL Server PDW Admin Console.  
   
-## <a name="see-also"></a>Siehe auch  
-[Erstellen Sie einen Skripttask, der den Zieladapter SSIS PDW verwendet.](create-ssis-script-task-using-pdw-destination-adapter.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Erstellen eines Skript Tasks, der den SSIS-PDW-Ziel Adapter verwendet](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
-[Entwerfen und Implementieren von Paketen (Integrationsservices)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[Tutorial: Erstellen eines einfachen Pakets mithilfe eines Assistenten](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
-[Erste Schritte (Integrationsservices)](https://go.microsoft.com/fwlink/?LinkId=202412)  
-[Dynamische Generierung (Paketbeispiel)](https://go.microsoft.com/fwlink/?LinkId=202413)  
-[Entwerfen Ihre SSIS-Pakete für Parallelität (SQL Server-Video)](https://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server-Community-Beispiele: Integrationsservices](https://go.microsoft.com/fwlink/?LinkId=202415)  
+[Entwerfen und Implementieren von Paketen (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Lernprogramm: Erstellen eines einfachen Pakets mithilfe eines Assistenten](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[Erste Schritte (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
+[Beispiel für die dynamische Paket Generierung](https://go.microsoft.com/fwlink/?LinkId=202413)  
+[Entwerfen der SSIS-Pakete für Parallelität (SQL Server-Video)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Beispiele für die Microsoft SQL Server Community: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Verbessern des inkrementellen Ladens mit Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [Transformation für langsam veränderliche Dimensionen](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
-[Masseneinfügungstask](../integration-services/control-flow/bulk-insert-task.md)  
+[Massen Einfügungs Task](../integration-services/control-flow/bulk-insert-task.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

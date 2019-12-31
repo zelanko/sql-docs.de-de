@@ -23,33 +23,33 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5a49d68b486a6bb812ea91d518145e1f639ef991
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74164931"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542054"
 ---
-# <a name="syssensitivity_classifications-transact-sql"></a>sys. sensitivity_classifications (Transact-SQL)
+# <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 
-|Spaltenname|Datentyp|und Beschreibung|
+|Spaltenname|Datentyp|Beschreibung|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|Identifiziert die Klasse des Elements, für das die Klassifizierung vorhanden ist. Hat immer den Wert 1 (die eine Spalte darstellt)|  
+|**Klasse**|**wartenden**|Identifiziert die Klasse des Elements, für das die Klassifizierung vorhanden ist. Hat immer den Wert 1 (die eine Spalte darstellt)|  
 |**class_desc**|**varchar (16)**|Eine Beschreibung der Klasse des Elements, für das die Klassifizierung vorhanden ist. hat immer den Wert *OBJECT_OR_COLUMN*|  
-|**major_id**|**int**|Stellt die ID der Tabelle dar, die die klassifizierte Spalte enthält. Dies entspricht sys. all_objects. object_id|  
-|**minor_id**|**int**|Stellt die ID der Spalte dar, für die die Klassifizierung vorhanden ist. Dies entspricht sys. ALL_COLUMNS. column_id|   
-|**label**|**sysname**|Die Bezeichnung (Menschen lesbar), die für die Vertraulichkeits Klassifizierung zugewiesen ist.|  
+|**major_id**|**wartenden**|Stellt die ID der Tabelle dar, die die klassifizierte Spalte enthält. Dies entspricht sys. all_objects. object_id|  
+|**minor_id**|**wartenden**|Stellt die ID der Spalte dar, für die die Klassifizierung vorhanden ist. Dies entspricht sys. ALL_COLUMNS. column_id|   
+|**ETI**|**sysname**|Die Bezeichnung (Menschen lesbar), die für die Vertraulichkeits Klassifizierung zugewiesen ist.|  
 |**label_id**|**sysname**|Eine ID, die der Bezeichnung zugeordnet ist und von einem Informationsschutz System wie z. b. Azure Information Protection (AIP) verwendet werden kann.|  
 |**information_type**|**sysname**|Der Informationstyp (Menschen lesbar), der der Sensitivität-Klassifizierung zugewiesen ist.|  
 |**information_type_id**|**sysname**|Eine ID, die dem Informationstyp zugeordnet ist und von einem Informationsschutz System wie z. b. Azure Information Protection (AIP) verwendet werden kann.|  
-|**gehören**|**int**|Ein numerischer Wert des Rangs: <br><br>0 für keine<br>10 für niedrig<br>20 für Mittel<br>30 für hoch<br>40 für kritisch| 
+|**rank**|**wartenden**|Ein numerischer Wert des Rangs: <br><br>0 für keine<br>10 für niedrig<br>20 für Mittel<br>30 für hoch<br>40 für kritisch| 
 |**rank_desc**|**sysname**|Textdarstellung des Rangs:  <br><br>keine, niedrig, Mittel, hoch, kritisch|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 
 - Diese Ansicht bietet Einblick in den Klassifizierungs Status der Datenbank. Sie kann zum Verwalten der Daten Bank Klassifizierungen sowie zum Erstellen von Berichten verwendet werden.
 - Derzeit wird nur die Klassifizierung von Daten Bank Spalten unterstützt.
@@ -76,12 +76,14 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ```
 
 ## <a name="permissions"></a>Berechtigungen  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Erfordert die **View any Sensitivität-Klassifizierungs** Berechtigung. 
+ 
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Weitere Informationen finden Sie unter [Konfiguration der Metadatensichtbarkeit](../../relational-databases/security/metadata-visibility-configuration.md).  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 
 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[Klassifizierung der Ablage Sensitivität (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[Azure SQL-Datenbank – Datenermittlung und -klassifizierung](https://aka.ms/sqlip)
+[Ersten Einstieg in SQL Information Protection](https://aka.ms/sqlip)

@@ -1,6 +1,6 @@
 ---
-title: Remotetabellenkopie - Parallel Data Warehouse | Microsoft-Dokumentation
-description: Verwenden von remotetabellenkopie in Analytics Platform System Parallel Data Warehouse.
+title: Remotetabellenkopie
+description: Verwenden der Remote Tabellen Kopie in Analytics Platform System parallel Data Warehouse.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,41 +8,42 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 28bd5deda25650d36467281ccbffa7b666f4c695
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ecbbdced731e940de46dbde4a65adc486f602c2f
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960203"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400479"
 ---
-# <a name="remote-table-copy"></a>Remotetabellenkopie
-Beschreibt, wie die remotetabellenkopie-Features, die zum Kopieren von Tabellen aus SQL Server-PDW-Datenbanken auf SMP-SQL Server-Remotedatenbanken (nicht zur Appliance gehört) verwenden. Verwenden Sie für SQL Server PDW remotetabellenkopie Hub- und Spoke-Szenarien ermöglicht.  
+# <a name="remote-table-copy"></a>Remote Tabellen Kopie
+Beschreibt, wie Sie mit dem Feature "Remote-Tabellen Kopie" Tabellen aus SQL Server PDW-Datenbanken in Remote-(nicht-Appliance) SMP SQL Server-Datenbanken kopieren. Verwenden Sie die Remote Tabellen Kopie, um Hub-und sprach Szenarios für SQL Server PDW zu aktivieren.  
   
-## <a name="BasicsPDE"></a>Grundlegendes zu Remotetabellenkopie für SQLServer PDW  
-Remotetabellenkopie ist ein Feature von SQL Server PDW, die Hub- and -Spoke-Szenarien unterstützt, durch die Ergebnisse einer SQL-SELECT-Anweisung in eine Tabelle in einer SMP-Datenbank kopieren. Die remotetabellenkopie wird initiiert, mit der [CREATE REMOTE TABLE AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) Anweisung.  
+## <a name="BasicsPDE"></a>Grundlegendes zum Kopieren von Remote Tabellen für SQL Server PDW  
+Die Remote Tabellen Kopie ist eine Funktion von SQL Server PDW, die Hub-und sprach Szenarios ermöglicht, indem die Ergebnisse einer SQL-SELECT-Anweisung in eine Tabelle in einer SMP-Datenbank kopiert werden. Die Remote Tabellen Kopie wird mit der [Create Remote Table As Select](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) -Anweisung initiiert.  
   
-## <a name="BasicsPrerequisites"></a>Anforderungen für die Verwendung von Remotetabellenkopie  
-Sie können die Remotetabelle kopieren, Kopieren von Tabellen aus SQL Server PDW mit einer SQL Server-Datenbank verwenden, wenn diese Bedingungen erfüllt sind:  
+## <a name="BasicsPrerequisites"></a>Anforderungen für die Verwendung der Remote Tabellen Kopie  
+Wenn diese Bedingungen erfüllt sind, können Sie die Remote Tabellen Kopie zum Kopieren von Tabellen aus SQL Server PDW in eine SQL Server Datenbank verwenden:  
   
--   Die Zieldatenbank muss es sich um eine Instanz von Microsoft® SQL Server® sein, die auf einem System Microsoft Windows® ausgeführt wird, die mit der SQL Server-PDW-Appliance verbinden können, aber befindet sich nicht auf einem Server in der Appliance. Der Remotecomputer mit SQL Server kann in der SQL Server PDW mit InfiniBand-Netzwerk oder über das Ethernet-Netzwerk verbunden werden.  
+-   Die Zieldatenbank muss eine Instanz von Microsoft® SQL Server® sein, die auf einem Microsoft Windows®-System ausgeführt wird, das eine Verbindung mit der SQL Server PDW Appliance herstellen kann, sich aber nicht auf einem Server innerhalb des Geräts befindet. Der Remote SQL Server kann mit dem SQL Server PDW über das InfiniBand-Netzwerk oder über das Ethernet-Netzwerk verbunden werden.  
   
--   Die zu kopierenden Daten muss ausgewählt werden, mithilfe einer einzelnen gültigen SQL Server PDW [wählen](../t-sql/queries/select-transact-sql.md) Anweisung.  
+-   Die zu kopierenden Daten müssen mithilfe einer einzelnen gültigen SQL Server PDW [Select](../t-sql/queries/select-transact-sql.md) -Anweisung ausgewählt werden.  
   
--   Der Zielserver muss ein Server sein, der nicht zur Appliance gehört. Daten können nicht direkt von einer Appliance kopiert werden, in eine andere mithilfe der Anweisungen in diesem Thema.  
+-   Der Zielserver muss ein Server sein, der nicht zur Appliance gehört. Mithilfe der Anweisungen in diesem Thema können keine Daten direkt von einem Gerät in ein anderes kopiert werden.  
   
--   Der Zielserver muss auf allen Knoten auf der Appliance Infiniband-Netzwerk zugreifen kann.  
+-   Der Zielserver muss für alle Knoten im InfiniBand-Netzwerk der Anwendung zugänglich sein.  
   
-## <a name="ConfigureRemote"></a>Konfigurieren Sie die Remotetabellenkopie  
-Um remotetabellenkopie verwenden zu können, müssen Sie zu erwerben und konfigurieren Sie einen Windows-Server, konfigurieren Sie SQL Server auf dem Windows Server und Konfigurieren von SQL Server PDW. Verwenden Sie die folgenden Links, um diese drei Schritte ausführen.  
+## <a name="ConfigureRemote"></a>Remote Tabellen Kopie konfigurieren  
+Zum Verwenden der Remote Tabellen Kopie müssen Sie einen Windows-Server erwerben und konfigurieren, SQL Server auf dem Windows-Server konfigurieren und SQL Server PDW konfigurieren. Verwenden Sie die folgenden Links, um diese drei Konfigurationsschritte auszuführen.  
   
-1.  [Konfigurieren eines externen Windows-Systems zum Empfangen von Remotetabellenkopien mit InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)  
+1.  [Konfigurieren eines externen Windows-Systems zum Empfangen von Remote Tabellen Kopien mithilfe von InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)  
   
-2.  [Konfigurieren eines externen SMP-SQL-Servers zum Empfangen von Remotetabellenkopien](configure-an-external-smp-sql-server-to-receive-remote-table-copies.md)  
+2.  [Konfigurieren eines externen SMP-SQL Server zum Empfangen von Remote Tabellen Kopien](configure-an-external-smp-sql-server-to-receive-remote-table-copies.md)  
   
-3.  [Konfigurieren von SQLServer PDW für Remotetabellenkopien](configure-sql-server-pdw-for-remote-table-copies.md)  
+3.  [Konfigurieren von SQL Server PDW für Remote Tabellen Kopien](configure-sql-server-pdw-for-remote-table-copies.md)  
   
-## <a name="PerformRemote"></a>Führen Sie eine Remotetabellenkopie  
-Um eine remotetabellenkopie auszuführen, verwenden die [CREATE REMOTE TABLE AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) SQL-Anweisung. Beispiele sind in das Thema CREATE REMOTE TABLE enthalten.  
+## <a name="PerformRemote"></a>Ausführen einer Remote Tabellen Kopie  
+Verwenden Sie die [Create Remote Table As Select](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) SQL-Anweisung, um eine Remote Tabellen Kopie auszuführen. Beispiele sind im Thema Create Remote Table enthalten.  
   
 <!-- MISSING LINKS 
 ## See Also  

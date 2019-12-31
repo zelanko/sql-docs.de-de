@@ -1,6 +1,6 @@
 ---
-title: Applianceüberwachung - Analytics Platform System | Microsoft-Dokumentation
-description: Dieses monitoring Appliance-Handbuch beschreibt die Tools und Aufgaben für die Überwachung der Analytics Platform System Appliance.
+title: Applianceüberwachung
+description: In diesem Handbuch zur Geräteüberwachung werden die Tools und Aufgaben zum Überwachen der Analytics Platform System Appliance beschrieben.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,78 +8,79 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cb25a5eccd1e77f08cedc74ad8042e0dc573605c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961506"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401425"
 ---
-# <a name="appliance-monitoring-for-analytics-platform-system"></a>Applianceüberwachung für Analytics Platform System
-Dieses monitoring Appliance-Handbuch beschreibt die Tools und Aufgaben für die Überwachung der Analytics Platform System Appliance.  
+# <a name="appliance-monitoring-for-analytics-platform-system"></a>Geräteüberwachung für Analytics Platform System
+In diesem Handbuch zur Geräteüberwachung werden die Tools und Aufgaben zum Überwachen der Analytics Platform System Appliance beschrieben.  
   
-## <a name="Basics"></a>Grundlagen der Überwachung und Tools  
-Die Werte und die Informationen, die überwacht werden, kann auf der SQL Server-PDW-Appliance sind umfangreiche. Beispielsweise sind die folgenden Überwachungsaufgaben typische.  
+## <a name="Basics"></a>Überwachen von Grundlagen und Tools  
+Die Werte und Informationen, die auf der SQL Server PDW Appliance überwacht werden können, sind umfangreich. Im folgenden finden Sie beispielsweise typische Überwachungs Tasks.  
   
--   Überprüfen Sie für jede Warnung, die von SQL Server PDW ausgestellt.  
+-   Überprüfen Sie, ob eine Warnung von SQL Server PDW ausgegeben wurde.  
   
--   Monitor für fehlerhafte Hardware.  
+-   Überwachen Sie Hardwarefehler.  
   
--   Monitor für Probleme bei der Netzwerkkonnektivität.  
+-   Überwachen Sie Probleme mit der Netzwerk Konnektivität.  
   
--   Suchen Sie nach Fehlern, die an Benutzer zurückgegeben wird, während der abfrageverarbeitung.  
+-   Überprüfen Sie, ob während der Abfrage Verarbeitung Fehler an Benutzer zurückgegeben wurden  
   
--   Zeigen Sie die Anzahl der aktuell aktiven Sitzungen und Abfragen.  
+-   Zeigt die Anzahl der derzeit aktiven Sitzungen und Abfragen an.  
   
--   Überprüfen Sie den Status der lädt, Sicherungen und Wiederherstellungen.  
+-   Überprüfen Sie den Status von Ladungen, Sicherungen und Wiederherstellungen.  
   
-### <a name="appliance-monitoring-tools"></a>Appliance-Überwachungstools  
-Es gibt mehrere Tools, die zum Überwachen der Appliance zur Verfügung.  
+### <a name="appliance-monitoring-tools"></a>Tools zur Geräteüberwachung  
+Zum Überwachen der Appliance sind mehrere Tools verfügbar.  
   
 Verwaltungskonsole  
-SQL Server PDW ist eine Verwaltungskonsole. Dies ist ein webbasiertes Tool, das Informationen zu Abfragen, lädt, Sicherung und Wiederherstellung, sperren, Sitzungen, Warnungen und Anwendungszustand in angezeigt. Die Verwaltungskonsole wird auf dem Gerät. Herstellen einer Verbindung auf die Verwaltungskonsole über Internet Explorer. Weitere Informationen finden Sie in den folgenden Themen:  
+SQL Server PDW verfügt über eine Verwaltungskonsole. Hierbei handelt es sich um ein webbasiertes Tool, das Informationen zu Abfragen, Ladungen, Sicherungen und Wiederherstellungen, sperren, Sitzungen, Warnungen und Gerätestatus anzeigt. Die Verwaltungskonsole wird auf dem Gerät ausgeführt. Benutzer stellen über Internet Explorer eine Verbindung mit der Verwaltungskonsole her. Weitere Informationen finden Sie unter:  
   
--   [Überwachen der Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+-   [Überwachen Sie die Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
 ![PDW-Verwaltungskonsole, Warnungen](./media/appliance-monitoring/SQL_Server_PDW_AdminConsol_Queries.png "SQL_Server_PDW_AdminConsol_Queries")  
   
 Systemsichten  
-SQL Server PDW enthält umfassende Systemsichten, die Ihnen ermöglichen, die ausführliche Informationen über die Integrität der Appliance, Status und Leistung zu erhalten. Eine Liste von Systemsichten für Überwachungsaufgaben finden Sie unter:  
+SQL Server PDW umfasst umfassende System Sichten, mit denen Sie detaillierte Informationen zur Integrität, zum Zustand und zur Leistung des Geräts abrufen können. Eine Liste der System Sichten für die Überwachung von Tasks finden Sie unter:  
   
--   [Überwachen der Appliance mithilfe von Systemansichten &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
+-   [Überwachen der Appliance mithilfe von System Sichten &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
   
-System Center Operationsmanager (SCOM)  
-SQL Server PDW verfügt über umfassende Integration in Systems Center Operations Manager. Die Management Packs für SQL Server PDW sind als kostenloser Download verfügbar. Weitere Informationen zur Verwendung von System Center zum Überwachen von SQL Server PDW finden Sie hier:  
+System Center Operations Manager (SCOM)  
+SQL Server PDW verfügt über eine umfassende Integration in System Center Operations Manager. Die Management Packs für SQL Server PDW stehen als kostenloser Download zur Verfügung. Weitere Informationen zur Verwendung von System Center zum Überwachen von SQL Server PDW finden Sie in den folgenden Bereichen:  
   
--   [Überwachen der Appliance mithilfe von System Center Operationsmanager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+-   [Überwachen Sie die Appliance mithilfe System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
 Benutzerdefinierte Lösungen  
-Für Situationen können Sie bei der System Center mit Ihrem Datencenter, die Tools für die Überwachung nicht verfügbar ist das Gerät überwachen, von einer Drittanbieter-überwachungslösung. Installation von Agents für externe Software wird in PDW derzeit nicht unterstützt, aber die meisten überwachungslösungen unterstützt Transact\-SQL-Integration, damit der Systemadministrator, direkte Transact implementieren kann\-SQL-Abfragen für Ihr PDW Appliance.  
+In Situationen, in denen System Center in ihren Rechenzentrums Überwachungstools nicht verfügbar ist, können Sie die Appliance mithilfe einer Überwachungslösung eines Drittanbieters überwachen. Die Installation externer Software-Agents wird derzeit in PDW nicht unterstützt, aber die meisten Überwachungslösungen\-unterstützen die Transact-SQL-Integration, sodass der\-Systemadministrator direkte Transact-SQL-Abfragen für Ihre PDW-Appliance implementieren kann.  
   
-Wenn Ihre Lösung für die keine direkte Transact unterstützt\-SQL-Abfragen, oder Sie verfügen nicht über die Überwachungstool, und dann können Sie Skripts zum Ausführen von Überwachungsaufgaben wie e-Mail senden, wenn eine Warnung auftritt.  TechNet-Wiki enthält ein Beispiel für skriptgesteuerte Überwachung Lösung.  
+Wenn Ihre Überwachungslösung keine direkten Transact\--SQL-Abfragen unterstützt, oder Sie über kein Überwachungs Tool verfügen, können Sie mithilfe von Skripts Überwachungsaufgaben ausführen, z. b. das Senden von e-Mails, wenn eine Warnung auftritt.  Das TechNet-wiki enthält ein Beispiel für eine Lösung zur Überwachung der Skripterstellung.  
   
--   [Beispiel für SQLServer PDW Überwachung PowerShell](https://go.microsoft.com/fwlink/?LinkId=248020)  
+-   [Beispiel für die PowerShell-Überwachung für SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
-## <a name="Tasks"></a>Beziehen die Überwachungsaufgaben  
+## <a name="Tasks"></a>Verwandte Überwachungsaufgaben  
   
-|Überwachungstask|Beschreibung|  
+|Überwachungs Task|Beschreibung|  
 |-------------------|---------------|  
-|Überwachen der Appliance mithilfe der Verwaltungskonsole.|[Überwachen der Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
-|Überwachen der Appliance mithilfe von Systemsichten.|[Überwachen der Appliance mithilfe von Systemansichten &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)|  
-|Überwachen der Appliance mithilfe von System Center|[Überwachen der Appliance mithilfe von System Center Operationsmanager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)|  
-|Überwachen Sie den Status des Geräts.|[Integritätsstatus des Monitors Appliance &#40;Analytics Platform System&#41;](monitor-appliance-health-state.md)|  
-|Taktüberwachung.|[Senden von Telemetriefeedback an Microsoft &#40;SQLServer PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md)|  
-|Nachverfolgen von appliancewarnungen.|[Nachverfolgen von Appliancewarnungen &#40;Analytics Platform System&#41;](track-appliance-alerts.md)|  
+|Überwachen Sie die Appliance mithilfe der Verwaltungskonsole.|[Überwachen Sie die Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
+|Überwachen Sie die Appliance mithilfe von System Sichten.|[Überwachen der Appliance mithilfe von System Sichten &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)|  
+|Überwachen der Appliance mithilfe von System Center|[Überwachen Sie die Appliance mithilfe System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)|  
+|Überwachen Sie den Status des Geräts.|[Monitor für den Geräte Integritäts Status &#40;Analytics-Platt Form System&#41;](monitor-appliance-health-state.md)|  
+|Takt Überwachung.|[Senden Sie telemetriefeedback an Microsoft &#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md)|  
+|Geräte Warnungen nachverfolgen.|[Geräte Warnungen &#40;Analytics-Platt Form System&#41;nachverfolgen](track-appliance-alerts.md)|  
 |Bestimmen Sie, wie viel Kapazität verwendet wird.|[Anzeigen der Kapazitätsauslastung &#40;Analytics Platform System&#41;](view-capacity-utilization.md)|  
-|Bestimmt, wie oft das Gerät abrufen.|[Bestimmen der Abrufhäufigkeit &#40;Analytics Platform System&#41;](determine-polling-frequency.md)|  
-|Bestimmt, welcher Cluster tritt ein Fehler auf, der Knoten konnte.|[Bestimmen, welche Clusterknoten fehlerhaft &#40;Analytics Platform System&#41;](determine-which-cluster-node-failed.md)|  
+|Bestimmen Sie, wie oft das Gerät abgefragt werden soll.|[Ermitteln der Abruf Häufigkeit &#40;Analytics Platform System&#41;](determine-polling-frequency.md)|  
+|Wenn ein Cluster Fehler auftritt, ermitteln Sie, welcher Cluster Knoten ausgefallen ist.|[Ermitteln, welcher Cluster Knoten Fehler &#40;Analytics-Platt Form System&#41;](determine-which-cluster-node-failed.md)|  
 
 
 <!-- MISSING LINKS |Monitor loads.|[Monitor Loads &#40;SQL Server PDW&#41;](../sqlpdw/monitor-loads-sql-server-pdw.md)|  -->  
 <!-- MISSING LINKS |Monitor backups and restores.|[Monitor Backups and Restores &#40;SQL Server PDW&#41;](../sqlpdw/monitor-backups-and-restores-sql-server-pdw.md)|  -->  
 <!-- MISSING LINKS |Monitor the active queries.|[Monitoring Active Queries &#40;SQL Server PDW&#41;](../sqlpdw/monitoring-active-queries-sql-server-pdw.md)|  -->  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Tasks zur applianceverwaltung &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
+[Geräte Verwaltungsaufgaben &#40;Analytics-Platt Form System&#41;](appliance-management-tasks.md)  
   

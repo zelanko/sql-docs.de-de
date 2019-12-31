@@ -1,6 +1,6 @@
 ---
-title: Konfiguration von SCOM zum Überwachen von Analytics Platform System | Microsoft-Dokumentation
-description: Um die System Center Operations Manager (SCOM) Management Packs für Analytics Platform System zu konfigurieren, gehen Sie wie folgt vor. Die Management Packs sind erforderlich, Analytics Platform System von SCOM zu überwachen.
+title: Überwachen mit SCOM
+description: Führen Sie die folgenden Schritte aus, um die System Center Operations Manager Management Packs (SCOM) für Analytics Platform System zu konfigurieren. Die Management Packs sind erforderlich, um das Analytics-Platt Form System von SCOM zu überwachen.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,110 +8,111 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ec495b3dd321f712aed54fb3b337efe85719be5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961237"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401303"
 ---
-# <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Konfigurieren Sie System Center Operationsmanager (SCOM), Analytics Platform System überwachen
-Um die System Center Operations Manager (SCOM) Management Packs für Analytics Platform System zu konfigurieren, gehen Sie wie folgt vor. Die Management Packs sind erforderlich, Analytics Platform System von SCOM zu überwachen.  
+# <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Konfigurieren von System Center Operations Manager (SCOM) zum Überwachen des Analytics-plattformsystems
+Führen Sie die folgenden Schritte aus, um die System Center Operations Manager Management Packs (SCOM) für Analytics Platform System zu konfigurieren. Die Management Packs sind erforderlich, um das Analytics-Platt Form System von SCOM zu überwachen.  
   
-## <a name="BeforeBegin"></a>Vorbereitungen  
-**Erforderliche Komponenten**  
+## <a name="BeforeBegin"></a>Bevor Sie beginnen  
+**Voraussetzungen**  
   
-System Center Operationsmanager 2007 R2 muss installiert und ausgeführt werden.  
+System Center Operations Manager 2007 R2 muss installiert sein und ausgeführt werden.  
   
-Die Management Packs müssen installiert und konfiguriert werden. Finden Sie unter [die SCOM-Management Packs &#40;Analytics-Plattformsystem&#41; ](install-the-scom-management-packs.md) und [Importieren des SCOM Management Packs für PDW &#40;Analytics-Plattformsystem&#41;](import-the-scom-management-pack-for-pdw.md).  
+Die Management Packs müssen installiert und konfiguriert sein. Weitere Informationen finden Sie unter [Installieren der SCOM-Management Packs &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md) und [Importieren des SCOM-Management Packs für PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
-## <a name="ConfigureRunAsProfile"></a>Konfigurieren Sie Ausführende Profile in System Center  
-Um System Center zu konfigurieren, müssen Sie führen Sie die folgenden Schritte aus:  
+## <a name="ConfigureRunAsProfile"></a>Konfigurieren des "Ausführen als"-Profils in System Center  
+Zum Konfigurieren von System Center müssen Sie die folgenden Schritte ausführen:  
   
--   Erstellen des ausführenden Kontos für die **APS-Watcher** Domänenbenutzer und ordnen Sie es der **Microsoft APS-Watcher-Konto.**  
+-   Erstellen Sie das Konto "Ausführen als" für den Benutzer " **APS Watcher** ", und ordnen Sie es dem **Microsoft APS Watcher-Konto zu.**  
   
--   Erstellen des ausführenden Kontos für die **Monitoring_user** APS-Benutzer und ordnen ihn der **Microsoft APS-Aktionskonto**.  
+-   Erstellen Sie das runas-Konto für den **monitoring_user** APS-Benutzer, und ordnen Sie es dem **Microsoft APS-Aktions Konto**zu.  
   
-Nachfolgend finden Sie ausführliche Anweisungen dazu, wie Sie die Aufgaben durchführen:  
+Im folgenden finden Sie ausführliche Anweisungen zum Ausführen der Aufgaben:  
   
-1.  Erstellen der **APS-Watcher** ausführendes Konto mit **Windows** Kontotyp für die **APS-Watcher** Domänenbenutzer.  
+1.  Erstellen Sie das runas-Konto " **APS Watcher** " mit dem **Windows** -Kontotyp für den Benutzer " **APS Watcher** ".  
   
-    1.  Navigieren Sie zu der **Verwaltung** Bereich mit der rechten Maustaste auf **Ausführen als-Konfiguration** -> **Konten** , und wählen Sie **ausführendes Konto erstellen...**  
+    1.  Navigieren Sie zum Bereich **Verwaltung** , klicken Sie mit der rechten Maustaste auf **als Konfigurations** -> **Konten** ausführen, und wählen Sie dann **Ausführen als Konto erstellen aus.**  
   
-        ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
+        ![Konfigurieren von "konfigurierbar"](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "Konfigurieren von "konfigurierbar"")  
   
-    2.  Die **erstellen Assistenten** Dialogfeld wird geöffnet. Auf der **Einführung** auf **Weiter**.  
+    2.  Das Dialogfeld **Assistent zum Erstellen der Laufzeit als Konto** wird geöffnet. Klicken Sie auf der Seite **Einführung** auf **Weiter**.  
   
-    3.  Auf der **allgemeine Eigenschaften** Seite **Windows** aus **Typ des ausführenden Kontos** , und geben Sie "APS-Watcher" als die **Anzeigenamen**.  
+    3.  Wählen Sie auf der Seite **Allgemeine Eigenschaften** die Option **Windows** from **Run As Account Type** aus, und geben Sie "APS Watcher" als **anzeigen Amen**an.  
   
-        ![CreateRunAsAccountWizardGeneralProperties](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties.png "CreateRunAsAccountWizardGeneralProperties")  
+        !["Kreaterunasaccountwizardgeneralproperties"](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties.png ""Kreaterunasaccountwizardgeneralproperties"")  
   
-    4.  Auf der **Anmeldeinformationen** Seite ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
+    4.  Auf der Seite **Anmelde** Informationen die Datei " ![kreaterunasaccountwizard-Anmelde](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png ""Kreaterunasaccountwizard-Anmelde Informationen"") Informationen"  
   
-    5.  Auf der **Verteilungssicherheit** Seite **unsicherer** , und klicken Sie auf die **erstellen** Schaltfläche, um den Vorgang abzuschließen.  
+    5.  Wählen Sie auf der Seite **Verteilungs Sicherheit** die Option **weniger sicher** aus, und klicken Sie auf die Schaltfläche **Erstellen** , um den  
   
-        ![CreateRunAsAccountWizardDistributionSecurity](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardDistributionSecurity.png "CreateRunAsAccountWizardDistributionSecurity")  
+        !["Kreaterunasaccountwizarddistributionsecurity"](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardDistributionSecurity.png ""Kreaterunasaccountwizarddistributionsecurity"")  
   
-        1.  Wenn Sie verwenden möchten. die **sicherer** auswählen, müssen Sie manuell Computer angeben, der die Anmeldeinformationen verteilt werden werden. Klicken Sie dazu nach dem Erstellen des ausführenden Kontos, mit der rechten Maustaste darauf, und wählen Sie **Eigenschaften**.  
+        1.  Wenn Sie sich entscheiden, die sicherere Option zu verwenden, müssen Sie Computer manuell angeben, an die die Anmelde **Informationen** verteilt werden. Klicken Sie dazu mit der rechten Maustaste auf das Konto, und wählen Sie **Eigenschaften**aus, um das Konto zu erstellen.  
   
-        2.  Navigieren Sie zu der **Verteilung** Registerkarte und **hinzufügen** gewünschten Computer.  
+        2.  Navigieren Sie zur Registerkarte **Verteilung** , und **fügen Sie** die gewünschten Computer hinzu.  
   
-            ![RunAsAccountProperties](./media/configure-scom-to-monitor-analytics-platform-system/RunAsAccountProperties.png "RunAsAccountProperties")  
+            ![Runasaccountproperties](./media/configure-scom-to-monitor-analytics-platform-system/RunAsAccountProperties.png "Runasaccountproperties")  
   
-2.  Legen Sie die **Microsoft-APS-Watcher** zu verwendende Profil **APS-Watcher** ausführendes Konto.  
+2.  Legen Sie für das **Microsoft APS Watcher-Konto** Profil die Verwendung des Kontos " **APS Watcher** -Konto" fest.  
   
-    1.  Navigieren Sie zu **Verwaltung** -> **Ausführen als Konfiguration** -> **Profile**.  
+    1.  Navigieren Sie zu **Verwaltung** -> **Ausführen als Konfigurations** -> **profile**.  
   
-        ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
+        ![Administrationrunasconfigurationprofiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "Administrationrunasconfigurationprofiles")  
   
-    2.  Klicken Sie mit der rechten Maustaste auf **Microsoft-APS-Watcher** aus der Liste und wählen Sie **Eigenschaften**.  
+    2.  Klicken Sie in der Liste mit der rechten Maustaste auf das **Microsoft APS Watcher-Konto** , und wählen Sie **Eigenschaften**  
   
-        ![MicrosoftApsWatcherAccountProperties](./media/configure-scom-to-monitor-analytics-platform-system/MicrosoftApsWatcherAccountProperties.png "MicrosoftApsWatcherAccountProperties")  
+        !["Mikrosoftapswatcheraccountproperties"](./media/configure-scom-to-monitor-analytics-platform-system/MicrosoftApsWatcherAccountProperties.png ""Mikrosoftapswatcheraccountproperties"")  
   
-    3.  Die **Assistenten für ausführende Profile** Dialogfeld wird geöffnet. Überspringen der **Einführung** Seite, indem Sie auf **Weiter**.  
+    3.  Das Dialogfeld " **Assistent für das Ausführen als Profil** " wird geöffnet. Springen Sie die **Einführungs** Seite, indem Sie auf **weiter**klicken.  
   
-    4.  Auf der **allgemeine Eigenschaften** auf **Weiter**.  
+    4.  Klicken Sie auf der Seite **Allgemeine Eigenschaften** auf **weiter**.  
   
-    5.  Auf der **ausführende Konten** klicken Sie auf die **hinzufügen...**  Schaltfläche, und wählen Sie das zuvor erstellte **APS-Watcher** ausführendes Konto.  
+    5.  Klicken Sie auf der Seite **als Konten ausführen** auf die Schaltfläche **hinzufügen...** , und wählen Sie das zuvor erstellte Konto " **APS Watcher** ausführen als" aus.  
   
-        ![RunAsProfileWizardAdd](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd.png "RunAsProfileWizardAdd")  
+        ![Runasprofilewizardadd](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd.png "Runasprofilewizardadd")  
   
-    6.  Klicken Sie auf **speichern** profilzuweisung abgeschlossen.  
+    6.  Klicken Sie auf **Speichern** , um die Profil Zuweisung abzuschließen.  
   
-3.  Warten Sie, bis der APS-Einheiten, die Ermittlung abgeschlossen ist.  
+3.  Warten Sie, bis die APS-Geräte Ermittlung abgeschlossen ist.  
   
-    1.  Navigieren Sie zu der **Überwachung** Bereich, und öffnen Sie die **SQL Server-Appliance** -> **Microsoft Analytics Platform System**  ->   **Appliances** Statusansicht.  
+    1.  Navigieren Sie zum Bereich **Überwachung** , und öffnen Sie die Statusansicht **SQL Server Appliance** -> **Microsoft Analytics Platform System** -> **Appliances** .  
   
-        ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
+        ![Sqlserverappliancemikrosoftapsappliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "Sqlserverappliancemikrosoftapsappliances")  
   
-    2.  Warten Sie, bis das Gerät in der Liste angezeigt wird. Der Name des Geräts sollte gleich eins der in der Registrierung angegeben sein. Nach Abschluss der Ermittlung sollten alle Geräte aufgeführt, aber nicht überwacht angezeigt werden. Um Überwachung zu aktivieren, führen Sie in den nächsten Schritten.  
+    2.  Warten Sie, bis das Gerät in der Liste angezeigt wird. Der Name der Appliance muss mit einer in der Registrierung angegebenen übereinstimmen. Nachdem die Ermittlung abgeschlossen ist, werden alle aufgeführten Geräte angezeigt, die aber nicht überwacht werden. Führen Sie die folgenden Schritte aus, um die Überwachung zu aktivieren.  
   
     > [!NOTE]  
-    > Die nächsten Schritte können parallel erfolgen, während Sie das erste Gerät Ermittlung warten.  
+    > Die nächsten Schritte können parallel ausgeführt werden, während Sie auf den Abschluss der anfänglichen Geräte Ermittlung warten.  
   
-4.  Erstellen Sie einen anderen neuen ausführenden Kontos zum Abfragen APS Integrität Abrufen von Daten.  
+4.  Erstellen Sie ein weiteres neues Konto, um APS zum Abrufen von Integritäts Daten abzufragen  
   
-    1.  Beginnen Sie, erstellen ein neues ausführendes Konto aus, wie in Schritt 1 beschrieben.  
+    1.  Beginnen Sie mit dem Erstellen eines neuen, wie in Schritt 1 beschrieben.  
   
-    2.  Auf der **allgemeine Eigenschaften** Seite **Standardauthentifizierung** Kontotyp.  
+    2.  Wählen Sie auf der Seite **Allgemeine Eigenschaften** die Option Standard **Authentifizierungs** Kontotyp aus.  
   
         ![CreateRunAsAccountWizardGeneralProperties2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties2.png "CreateRunAsAccountWizardGeneralProperties2")  
   
-    3.  Auf der **Anmeldeinformationen** Seite, geben Sie gültige Anmeldeinformationen für den Zugriff auf APS-Integritätsstatus DMVs.  
+    3.  Geben Sie auf der Seite **Anmelde** Informationen gültige Anmelde Informationen für den Zugriff auf die Integritäts Zustands-DMVs an.  
   
         ![CreateRunAsAccountWizardCredentials2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials2.png "CreateRunAsAccountWizardCredentials2")  
   
-5.  Konfigurieren der **Microsoft APS-Aktionskonto** Profils, das das neu erstellte ausführende Konto für die APS-Instanz verwendet.  
+5.  Konfigurieren Sie das **Microsoft APS-Aktions Konto** Profil, um das neu erstellte runas-Konto für die APS-Instanz zu verwenden.  
   
-    1.  Navigieren Sie zu der **Microsoft APS-Aktionskonto** Eigenschaften wie in Schritt 2 beschrieben.  
+    1.  Navigieren Sie zu den Eigenschaften des **Microsoft APS-Aktions Kontos** , wie in Schritt 2 beschrieben.  
   
-    2.  Auf der **ausführende Konten** auf **hinzufügen...**  und 
-    3.  Wählen Sie das neu erstellte ausführende Konto an.  
+    2.  Klicken Sie auf der Seite " **Ausführen als Konten** " auf **hinzufügen...** und 
+    3.  Wählen Sie das neu erstellte Konto "Ausführen als" aus.  
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Nun, dass Sie die Management Packs konfiguriert haben, können Sie sich beim Starten der Überwachung der Appliances. Weitere Informationen finden Sie unter [Überwachen der Appliance, indem Sie mithilfe von System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
+Nachdem Sie die Management Packs konfiguriert haben, können Sie mit der Überwachung des Geräts beginnen. Weitere Informationen finden Sie unter [Überwachen der Appliance mithilfe System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

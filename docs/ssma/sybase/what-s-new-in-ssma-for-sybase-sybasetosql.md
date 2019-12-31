@@ -1,7 +1,7 @@
 ---
 title: Neues in SSMA für SAP ASE (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/06/2019
+ms.date: 12/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -9,23 +9,32 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 44e59d80b21b71fbbc94b9c902edfb1019256d06
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 094db4e2d374f79e8102d111d0a9f9bfda22e6b7
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745282"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74834259"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Neues in SSMA für SAP ASE (sybasedesql)
 
 In diesem Artikel werden die Änderungen an SQL Server Migration Assistant (SSMA) für SAP ASE (ehemals SSMA für Sybase) in jeder Version aufgeführt.
+
+## <a name="ssma-v85"></a>SSMA v 8.5
+
+Die Version Version 8.5 von SSMA für SAP ASE wurde mit Unterstützung für Azure Active Directory Authentifizierung und grundlegender Unterstützung für JSON-Funktionen in SQL Server erweitert, sowie eine Reihe gezielter Korrekturen zur Verbesserung der Benutzerfreundlichkeit und Leistung.
+
+Darüber hinaus können Sie mit SSMA für SAP ASE nun Systemtabellen und-Sichten ausblenden (von der Konvertierung ausschließen).
+
+> [!IMPORTANT]
+> Mit SSMA v 8.5 ist .NET 4.7.2 eine Installation, die Voraussetzung ist. Wenn Sie diese Version installieren müssen, können Sie die Lauf Zeit Datei [hier](https://dotnet.microsoft.com/download/dotnet-framework/net472)herunterladen.
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
 Die Version Version 8.4 von SSMA für SAP ASE wurde durch gezielte Korrekturen ergänzt, die zur Behebung von Problemen bei der Barrierefreiheit entwickelt wurden, und zum Beheben eines Fehlers im Zusammenhang mit den maximalen Index Spalten (um 32 anstelle von 16) für SQL Server 2016 und höhere Versionen zuzulassen.
 
 > [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
+> Bei den SSMA-Versionen 7,4 bis 8,4 ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -163,11 +172,11 @@ Die Version vom Mai 2016 von SSMA für Sybase enthält die folgenden Änderungen
 * Das zählen von Objekten für das anfängliche laden wurde korrigiert.
 * Fehler in globalen Einstellungen behoben.
 
-## <a name="march-2016"></a>2016. März
+## <a name="march-2016"></a>März 2016
 
 Die Vorschauversion von SSMA vom März 2016 für Sybase bietet Unterstützung für die Migration zu SQL Server 2016.  
   
-## <a name="january-2016"></a>2016. Januar
+## <a name="january-2016"></a>Januar 2016
 
 Die Wartungsversion von SSMA für Sybase vom Januar 2016 enthält die folgenden Änderungen:  
   
@@ -188,7 +197,7 @@ Die SSMA-Version vom Juli 2014 für Sybase enthält die folgenden Änderungen:
 * Reduzierte Berichts Größe um mehr als 25%.  
 * Verbesserte Fehlermeldungen für nicht analysierte Konstrukte.  
   
-## <a name="april-2014"></a>2014. April
+## <a name="april-2014"></a>April 2014
 
 Die SSMA-Version vom April 2014 für Sybase enthält die folgenden Änderungen:  
   
@@ -196,14 +205,14 @@ Die SSMA-Version vom April 2014 für Sybase enthält die folgenden Änderungen:
 * Fehler bei der Konvertierung in Azure korrigiert.  
 * Fehler in Bezug auf unsichtbare Berichts Seiten in IE 10 behoben.  
   
-## <a name="january-2012"></a>2012. Januar
+## <a name="january-2012"></a>Januar 2012
 
 Die Version vom Januar 2012 von SSMA für Sybase enthält die folgenden Änderungen:  
   
 * Unterstützung für Rollback-auslöserkonvertierung hinzugefügt
 * Es wurde eine Korrektur zum@ROWCOUNT ändern von@ERROR @ und @ in derselben Set-Anweisung bereitgestellt.  
   
-## <a name="july-2011"></a>2011. Juli
+## <a name="july-2011"></a>Juli 2011
 
 Die Version vom Juli 2011 von SSMA für Sybase bietet eine verbesserte Fehlerberichterstattung während der Datenmigration.  
   
@@ -224,7 +233,7 @@ Die SSMA-Version vom April 2011 für Sybase enthält die folgenden Änderungen:
 * Es wurde eine Abwärtskompatibilität von Projekten hinzugefügt, die in früheren Versionen von SSMA (v 4.0 und v 4.2) erstellt wurden.  
 * Die Möglichkeit zur parallelen Installation von SSMA für Sybase v 5.0-Produkt mit älteren Versionen von SSMA (v 4.0 und v 4.2) wurde hinzugefügt.  
   
-## <a name="july-2010"></a>2010. Juli
+## <a name="july-2010"></a>Juli 2010
 
 Die Version vom Juli 2010 von SSMA für Sybase wurde hinzugefügt:
 
@@ -284,4 +293,4 @@ Die Version von Juli 2006 von SSMA für Sybase war die erste Version.
   
 ## <a name="see-also"></a>Siehe auch
 
-[Informationen zu den ersten Schritten mit SSMA &#40;für Sybase sybasedesql&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
+[Informationen zu den ersten Schritten mit SSMA für Sybase &#40;sybasedesql&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

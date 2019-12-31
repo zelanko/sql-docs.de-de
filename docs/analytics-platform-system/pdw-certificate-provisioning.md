@@ -1,6 +1,6 @@
 ---
-title: PDW-zertifikatbereitstellung - Analytics Platform System | Microsoft-Dokumentation
-description: Die Seite PDW-Zertifikatbereitstellung von Analytics Platform System Configuration Manager importiert oder entfernt das Zertifikat, das von der PDW-Region verwendet.
+title: PDW-Zertifikatbereitstellung
+description: Die Seite PDW-Zertifikat Bereitstellung des Analytics Platform System Configuration Manager importiert oder entfernt das von der PDW-Region verwendete Zertifikat.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,72 +8,73 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 48ad2aed20f497c8400727d9d217dc8f467ac492
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 676335fb8ee4aac5906c61084c28cd94cf8ea815
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960438"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400894"
 ---
-# <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW-zertifikatbereitstellung - Analytics Platform System
-Die **PDW-Zertifikatbereitstellung** auf der Seite das Analytics Platform System **Configuration Manager** importiert oder entfernt das Zertifikat, das von der PDW-Region verwendet. Verwenden, ein Zertifikat zum Verschlüsseln von Verbindungen kann Unterstützung der sicheren Kommunikation mit dem Steuerungsknoten über SQL Server-Clients, Tools, mit denen die SQL Server-PDW-Treiber, die [Verwaltungskonsole](monitor-the-appliance-by-using-the-admin-console.md), und lädt Sie Integration Services.  
+# <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW-Zertifikat Bereitstellung: Analytics Platform System
+Die Seite **PDW-Zertifikat Bereitstellung** des Analytics Platform System **Configuration Manager** importiert oder entfernt das von der PDW-Region verwendete Zertifikat. Mithilfe von kann ein Zertifikat zum Verschlüsseln von Verbindungen die Kommunikation mit dem Steuerungs Knoten über SQL Server Clients, Tools, die die SQL Server PDW-Treiber, die- [Verwaltungskonsole](monitor-the-appliance-by-using-the-admin-console.md)und die Integration Services lädt, sichern.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
-Führen Sie bevor Sie das Zertifikat installiert wird folgende Schritte aus:  
+## <a name="prerequisites"></a>Voraussetzungen  
+Vor der Installation des Zertifikats führen Sie die folgenden Schritte aus:  
   
-1.  Ein gesichertes Zertifikat zu erhalten. Wenn Sie weitere Informationen zum Abrufen eines sicheren Zertifikats benötigen, wenden Sie sich an Microsoft Support.  
+1.  Abrufen eines sicheren Zertifikats Wenn Sie weitere Informationen dazu benötigen, wie Sie ein sicheres Zertifikat erhalten, wenden Sie sich an Microsoft-Support.  
   
-2.  Speichern Sie das Zertifikat mit dem Steuerungsknoten in eine kennwortgeschützte PFX-Datei.  
+2.  Speichern Sie das Zertifikat auf dem Steuerungs Knoten in einer Kenn Wort geschützten PFX-Datei.  
   
-## <a name="for-security-reasons-obtain-a-trusted-certificate"></a>Aus Sicherheitsgründen erhalten Sie ein vertrauenswürdiges Zertifikat  
-SQL Server PDW unterstützt die Verwendung eines Zertifikats zur Verschlüsselung von Verbindungen mit dem Steuerungsknoten; Verbindungen, einschließlich der **Verwaltungskonsole**.  
+## <a name="for-security-reasons-obtain-a-trusted-certificate"></a>Aus Sicherheitsgründen sollten Sie ein vertrauenswürdiges Zertifikat abrufen.  
+SQL Server PDW unterstützt die Verwendung eines Zertifikats zum Verschlüsseln von Verbindungen mit dem Steuer Knoten. einschließen von Verbindungen mit der **Verwaltungskonsole**.  
   
-In der Standardeinstellung die **Verwaltungskonsole** enthält ein selbst signiertes Zertifikat, das Datenschutz, aber keine Serverauthentifizierung bereitstellt. Diese lassen Kommunikation anfällig für Man-in-the-Middle-Angriffe. Internet Explorer gibt den Fehler zurück, wenn ein Benutzer auf die Verwaltungskonsole verbunden ist mit dem selbstsignierten Zertifikat: "Es ist ein Problem mit dem Sicherheitszertifikat der Website".  
+Standardmäßig enthält die- **Verwaltungskonsole** ein selbst signiertes Zertifikat, das Datenschutz, aber keine Server Authentifizierung bereitstellt. Dies kann die Kommunikation für einen man-in-the-Middle-Angriff anfällig machen. Wenn ein Benutzer mithilfe des selbst signierten Zertifikats eine Verbindung mit der Verwaltungskonsole herstellt, gibt Internet Explorer den folgenden Fehler zurück: "Es liegt ein Problem mit dem Sicherheitszertifikat dieser Website vor".  
   
-Auch wenn die Verbindung über das selbstsignierte Zertifikat gesendeten Daten zwischen dem Client und Server verschlüsselt, ist die Verbindung immer noch durch Angreifer gefährdet.  
+Obwohl bei der Verbindung über das selbst signierte Zertifikat in-Flight-Daten zwischen dem Client und dem Server verschlüsselt werden, ist die Verbindung von Angreifern immer noch gefährdet.  
   
 > [!WARNING]  
-> Appliance-Administratoren sollten sofort ein Zertifikat zu erhalten, ist mit einer vertrauenswürdigen Zertifizierungsstelle, die von Clients, um eine sichere Verbindung hergestellt, und entfernen den Fehler, den Internet Explorer meldet erkannt, verkettet.  
+> Geräte Administratoren sollten sofort ein Zertifikat abrufen, das mit einer vertrauenswürdigen Zertifizierungsstelle verkettet ist, die von Clients erkannt wird, um eine sichere Verbindung herzustellen und den Fehler zu entfernen, den Internet Explorer meldet.  
   
-Zertifizierungspfad muss den vollständig qualifizierten Domänennamen, der mit dem Steuerungsknoten IP-Adresse des Clusters (empfohlen) zugeordnet ist oder der Name, der in ihren Browser Adresse Balken den Zugriff auf die Benutzer eingeben enthalten die **Verwaltungskonsole**.  
+Der Zertifizierungspfad muss den voll qualifizierten Domänen Namen enthalten, der der IP-Adresse des Kontroll Knoten Clusters (empfohlen) zugeordnet ist, oder den Namen, den die Benutzer in die Adressleiste Ihres Browsers eingeben, um auf die **Verwaltungskonsole**zuzugreifen.  
   
-Verwenden Sie das Analytics Platform System**Configuration Manager** hinzufügen oder entfernen das vertrauenswürdige Zertifikat. Direkt mithilfe des Konfigurationstools für Microsoft Windows HTTP-Dienste-Zertifikat (**winHttpCertCfg.exe**) zum Verwalten des Zertifikats werden nicht unterstützt.  
+Verwenden Sie das**Configuration Manager** Analytics Platform System, um das vertrauenswürdige Zertifikat hinzuzufügen oder zu entfernen. Die direkte Verwendung des Microsoft Windows HTTP Services Certificate Configuration Tool (**Winhttpcertcfg. exe**) zum Verwalten des Zertifikats wird nicht unterstützt.  
   
-## <a name="import-or-remove-the-certificate"></a>Importieren Sie oder entfernen Sie das Zertifikat  
-Die folgenden Anweisungen zeigen, wie zum Importieren oder entfernen Sie das Zertifikat für die Appliance.
+## <a name="import-or-remove-the-certificate"></a>Importieren oder Entfernen des Zertifikats  
+Die folgenden Anweisungen zeigen, wie das Gerätezertifikat importiert oder entfernt wird.
 
 > [!WARNING]
-> Um ein abgelaufenes Zertifikat erneuern müssen Sie das vorhandene Zertifikat entfernen, vor dem Importieren des neuen Projekt.
+> Zum Erneuern eines abgelaufenen Zertifikats müssen Sie das vorhandene Zertifikat entfernen, bevor Sie das neue Zertifikat importieren.
   
-### <a name="to-import-the-certificate"></a>Zum Importieren des Zertifikats  
+### <a name="to-import-the-certificate"></a>So importieren Sie das Zertifikat  
   
-1.  Starten Sie den **Konfigurations-Manager**. Weitere Informationen finden Sie unter [Starten des Konfigurations-Managers &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Starten Sie die **Configuration Manager**. Weitere Informationen finden Sie unter [Start the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
-2.  Im linken Bereich die **Configuration Manager**, erweitern Sie **Parallel Data Warehouse-Topologie**, und klicken Sie dann auf **Zertifikate**.  
+2.  Erweitern Sie im linken Bereich des **Configuration Manager**die Option **parallele Data Warehouse Topologie**, und klicken Sie dann auf **Zertifikate**.  
   
-3.  Wählen Sie **Importieren eines Zertifikats, und konfigurieren Sie die Appliance für dessen Verwendung**, und klicken Sie dann auf **Durchsuchen** , navigieren Sie zu, und wählen Sie die Zertifikatdatei.  
+3.  Wählen Sie Zertifikat importieren aus, und **Konfigurieren Sie die Appliance für deren Verwendung**, und klicken Sie dann auf **Durchsuchen** , um die Zertifikat Datei zu suchen und auszuwählen.  
   
-4.  Geben Sie das Kennwort für das Zertifikat in der **Kennwort** Feld.  
+4.  Geben Sie im Feld **Kennwort** das Kennwort für das Zertifikat ein.  
   
-5.  Klicken Sie auf **übernehmen** zum Konfigurieren des verwaltungszertifikats für die Appliance.  
+5.  Klicken **Sie auf über** nehmen, um das Zertifikat für das Gerät zu konfigurieren.  
   
-SQL Server PDW aktuellen Verbindung nicht anhand des importierten Zertifikats verschlüsselt, aber das Zertifikat für neue Verbindungen verwenden soll.  
+SQL Server PDW verschlüsselt die aktuelle Verbindung nicht mithilfe des importierten Zertifikats, sondern verwendet das Zertifikat für neue Verbindungen.  
   
-### <a name="to-remove-the-previously-imported-certificate"></a>So entfernen Sie die zuvor importierte Zertifikat  
+### <a name="to-remove-the-previously-imported-certificate"></a>So entfernen Sie das zuvor importierte Zertifikat  
   
-1.  Starten Sie den **Konfigurations-Manager**. Weitere Informationen finden Sie unter [Starten des Konfigurations-Managers &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Starten Sie die **Configuration Manager**. Weitere Informationen finden Sie unter [Start the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
-2.  Im linken Bereich die **Configuration Manager**, erweitern Sie **Parallel Data Warehouse-Topologie**, und klicken Sie dann auf **Zertifikate**.  
+2.  Erweitern Sie im linken Bereich des **Configuration Manager**die Option **parallele Data Warehouse Topologie**, und klicken Sie dann auf **Zertifikate**.  
   
-3.  Wählen Sie **entfernen Sie alle Zertifikate in der Appliance bereitgestellt**.  
+3.  Wählen Sie **alle in der Appliance bereitgestellten Zertifikate entfernen aus**.  
   
-4.  Klicken Sie auf **übernehmen** So entfernen Sie das zuvor importierte Zertifikat aus der Appliance.  
+4.  Klicken **Sie auf über** nehmen, um das zuvor importierte Zertifikat aus dem Gerät zu entfernen.  
   
-SQL Server PDW zum Verschlüsseln von aktuellen Verbindungen weiterhin, aber es wird nicht für neue Verbindungen verwenden Sie das Zertifikat entfernte.  
+Die aktuellen Verbindungen werden von SQL Server PDW weiterhin verschlüsselt, aber das entfernte Zertifikat wird für neue Verbindungen nicht verwendet.  
   
-![DWConfig-Anwendung-PDW-Zertifikat](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
+![DWConfig-Anwendung, PDW-Zertifikat](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
-## <a name="see-also"></a>Siehe auch  
-[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Starten Sie die Configuration Manager &#40;Analytics-Platt Form System&#41;](launch-the-configuration-manager.md)  
 <!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   

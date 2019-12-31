@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie einen Skripttask mit SSIS PDW-Zieladapter | Microsoft-Dokumentation
+title: Skript Task mit SSIS-PDW-Ziel Adapter erstellen
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 ms.prod: sql
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c8781a84bd3a96364930618db83f6900009540be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961066"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401219"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Erstellen Sie einen Skripttask, der SSIS-Parallel Data Warehouse-Ziel-Adapter verwendet
-Dieser SSIS-Pakets-Skript-Code ist ein Codebeispiel für die Verwendung des SSIS PDW-Zieladapter.  Integration Services-Skripttask können Sie praktisch alle Vorgänge, die ausgeführt werden kann in einer .NET-Anwendung innerhalb des Kontexts, der eine ablaufsteuerung des SSIS-ausführen. 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Erstellen eines Skript Tasks, der einen parallelen Data Warehouse Ziel Adapter für SSIS verwendet
+Dieser SSIS-Paket Skriptcode ist ein Codebeispiel für die Verwendung des SSIS-PDW-Ziel Adapters.  Mit dem Integration Services Skript Task können Sie praktisch jeden Vorgang ausführen, der in einer .NET-Anwendung innerhalb des Kontexts einer SSIS-Ablauf Steuerung ausgeführt werden kann. 
   
 ## <a name="sample-code"></a>Beispielcode  
   
-1.  Erstellen Sie einen leeren Skripttask in SSIS.  
+1.  Erstellen Sie einen leeren Skript Task in SSIS.  
   
-2.  Öffnen Sie die Aufgabe in der **Skripttask-Editor**, und klicken Sie auf **Bearbeitungsskript**.  
+2.  Öffnen Sie die Aufgabe im **Skript Task-Editor**, und klicken Sie auf **Skript bearbeiten**.  
   
-3.  Bearbeiten Sie das Skript, um den unten angegebenen Code verwenden. Das Skript für Ihre Umgebung wird durch folgende Änderungen angepasst:  
+3.  Bearbeiten Sie das Skript, um den unten angegebenen Code zu verwenden. Ändern Sie das Skript an Ihre Umgebung, indem Sie die folgenden Änderungen vornehmen:  
   
-    -   Sie müssen den Namespace des vom Skript erstellt, die vom Skripttask aufgerufen wurden beibehalten. Notieren Sie den Namen des Namespace `namespace ST_<GUID>` und bearbeiten Sie das folgende Skript, Ändern von *ST_<GUID>*  auf den ursprünglichen *GUID* des Skripttasks.  
+    -   Sie müssen den Namespace des Skripts beibehalten, das vom Skript Task erstellt wurde. Notieren Sie sich den Namen des Namespace `namespace ST_<GUID>` , und bearbeiten Sie das unten stehende Skript, indem Sie *ST_<GUID> * in die ursprüngliche *GUID* des Skript Tasks ändern.  
   
-    -   Ersetzen Sie den Platzhalterwert vier Vorkommen *XXXXXXXX* mit der entsprechenden Werte für Ihre Umgebung und die beabsichtigte Aktion.  
+    -   Ersetzen Sie vier Vorkommen des Platzhalter Werts *xxxxxxxx* durch die Werte, die für Ihre Umgebung und die gewünschte Aktion geeignet sind.  
   
     ```c#  
     #region Help:  Introduction to the script task  
@@ -263,8 +264,8 @@ Dieser SSIS-Pakets-Skript-Code ist ein Codebeispiel für die Verwendung des SSIS
     }  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
-[Laden von Daten mit Integrationsservices](load-with-ssis.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Laden von Daten mit Integration Services](load-with-ssis.md)  
 
 <!-- MISSING LINK
 [Install Integration Services Destination Adapters](install-integration-services-destination-adapters-sql-server-pdw.md)

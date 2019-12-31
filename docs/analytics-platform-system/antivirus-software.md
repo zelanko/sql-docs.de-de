@@ -1,5 +1,5 @@
 ---
-title: Antivirus Software-Analytics Platform System (APS) | Microsoft-Dokumentation
+title: Antivirussoftware
 description: Wenn Ihr Rechenzentrum Antivirensoftware erfordert, verwenden Sie diese Richtlinien zur Installation von Antivirensoftware auf dem Analytics Platform System (APS). Es wird empfohlen, die Antivirussoftware nur dann zu installieren, wenn Sie eine feste Anforderung Ihres Rechenzentrums ist
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c3687b839e52e64350591402c3aa19e9c2c54ac7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176055"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401473"
 ---
 # <a name="antivirus-software-for-analytics-platform-system-aps"></a>Antivirussoftware für Analytics Platform System (APS)
 Wenn Ihr Rechenzentrum Antivirensoftware erfordert, verwenden Sie diese Richtlinien, um Antivirensoftware auf dem Analytics Platform System zu installieren. Es wird empfohlen, die Antivirussoftware nur dann zu installieren, wenn Sie eine feste Anforderung Ihres Rechenzentrums ist  
@@ -51,7 +52,7 @@ Um die Antivirussoftware auf den virtuellen Computern zu installieren, schließe
   
 -   G:\  
   
-**_appliance_domain_-ad01** und  **_appliance_domain_-ad02**  
+**_appliance_domain_-ad01** und ** _appliance_domain_-ad02**  
   
 -   Keine Einschränkungen  
   
@@ -61,7 +62,7 @@ Um die Antivirussoftware auf den virtuellen Computern zu installieren, schließe
   
 -   G:\  
   
-**_appliance_domain_-VMM**  
+**_appliance_domain_VMM**  
   
 -   Keine Einschränkungen  
   
@@ -73,6 +74,6 @@ Um die Antivirussoftware auf den virtuellen Computern zu installieren, schließe
   
 -   C:\iscsitarget  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Geräte Verwaltungsaufgaben &#40;Analytics-Platt Form System&#41;](appliance-management-tasks.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,38 +12,38 @@ ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7819be3ffe1f3d3efc5d39c3973d089e3ab7757c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089139"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401641"
 ---
-# <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
+# <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Gibt Informationen über den Verschlüsselungsstatus einer Datenbank und die ihr zugeordneten Verschlüsselungsschlüssel für die Datenbank zurück. **sys.dm_pdw_nodes_database_encryption_keys** provides this information for each node. Weitere Informationen zur datenbankverschlüsselung finden Sie unter [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
+  Gibt Informationen über den Verschlüsselungsstatus einer Datenbank und die ihr zugeordneten Verschlüsselungsschlüssel für die Datenbank zurück. **sys. dm_pdw_nodes_database_encryption_keys** stellt diese Informationen für jeden Knoten bereit. Weitere Informationen zur Datenbankverschlüsselung finden Sie unter [transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|Die ID der physischen Datenbank auf jedem Knoten.|  
-|encryption_state|**int**|Gibt an, ob die Datenbank auf diesem Knoten verschlüsselt oder nicht verschlüsselt ist.<br /><br /> 0 = Kein Verschlüsselungsschlüssel für die Datenbank vorhanden, keine Verschlüsselung<br /><br /> 1 = Unverschlüsselt<br /><br /> 2 = Verschlüsselung wird ausgeführt<br /><br /> 3 = Verschlüsselt.<br /><br /> 4 = Schlüsseländerung wird ausgeführt<br /><br /> 5 = Entschlüsselung wird ausgeführt<br /><br /> 6 = schutzänderung wird ausgeführt (das Zertifikat, das Verschlüsseln des Datenbankverschlüsselungsschlüssels geändert wird.)|  
-|create_date|**datetime**|Zeigt das Datum der Erstellung des Verschlüsselungsschlüssels an.|  
-|regenerate_date|**datetime**|Zeigt das Datum der Neugenerierung des Verschlüsselungsschlüssels an.|  
-|modify_date|**datetime**|Zeigt das Datum der Änderung des Verschlüsselungsschlüssels an.|  
-|set_date|**datetime**|Zeigt das Datum der Anwendung des Verschlüsselungsschlüssels auf die Datenbank an.|  
-|opened_date|**datetime**|Zeigt das Datum an, an dem der Datenbankschlüssel zuletzt geöffnet wurde.|  
-|key_algorithm|**varchar(?)**|Zeigt den Algorithmus an, der für den Schlüssel verwendet wird.|  
-|key_length|**int**|Zeigt die Länge des Schlüssels an.|  
+|database_id|**wartenden**|ID der physischen Datenbank auf jedem Knoten.|  
+|encryption_state|**wartenden**|Gibt an, ob die Datenbank auf diesem Knoten verschlüsselt oder nicht verschlüsselt ist.<br /><br /> 0 = Kein Verschlüsselungsschlüssel für die Datenbank vorhanden, keine Verschlüsselung<br /><br /> 1 = Unverschlüsselt<br /><br /> 2 = Verschlüsselung wird ausgeführt<br /><br /> 3 = Verschlüsselt.<br /><br /> 4 = Schlüsseländerung wird ausgeführt<br /><br /> 5 = Entschlüsselung wird ausgeführt<br /><br /> 6 = Schutz Änderung wird ausgeführt (das Zertifikat, das den Verschlüsselungsschlüssel für die Datenbank verschlüsselt, wird geändert.)|  
+|create_date|**DateTime**|Zeigt das Datum der Erstellung des Verschlüsselungsschlüssels an.|  
+|regenerate_date|**DateTime**|Zeigt das Datum der Neugenerierung des Verschlüsselungsschlüssels an.|  
+|modify_date|**DateTime**|Zeigt das Datum der Änderung des Verschlüsselungsschlüssels an.|  
+|set_date|**DateTime**|Zeigt das Datum der Anwendung des Verschlüsselungsschlüssels auf die Datenbank an.|  
+|opened_date|**DateTime**|Zeigt das Datum an, an dem der Datenbankschlüssel zuletzt geöffnet wurde.|  
+|key_algorithm|**varchar (?)**|Zeigt den Algorithmus an, der für den Schlüssel verwendet wird.|  
+|key_length|**wartenden**|Zeigt die Länge des Schlüssels an.|  
 |encryptor_thumbprint|**varbin**|Zeigt den Fingerabdruck der Verschlüsselung an.|  
-|percent_complete|**real**|Prozentualer Anteil der bereits abgeschlossenen Änderung des Verschlüsselungsstatus einer Datenbank. Dieser Wert ist 0, wenn es keine Statusänderung gibt.|  
-|node_id|**int**|Eindeutige numerische Id, die dem Knoten zugeordnet.|  
+|percent_complete|**wirkliche**|Prozentualer Anteil der bereits abgeschlossenen Änderung des Verschlüsselungsstatus einer Datenbank. Dieser Wert ist 0, wenn es keine Statusänderung gibt.|  
+|node_id|**wartenden**|Eindeutige numerische ID, die dem Knoten zugeordnet ist.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
- Das folgende Beispiel verknüpft `sys.dm_pdw_nodes_database_encryption_keys` mit anderen Systemtabellen, um den Verschlüsselungsstatus anzugeben, für jeden Knoten der TDE-Datenbanken geschützt.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Im folgenden Beispiel wird `sys.dm_pdw_nodes_database_encryption_keys` eine Joins mit anderen Systemtabellen durchführt, um den Verschlüsselungs Status für die einzelnen Knoten der durch TDE geschützten Datenbanken anzugeben.  
   
 ```  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
@@ -59,11 +59,11 @@ JOIN sys.databases AS D
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Datawarehouse und Parallel Data Warehouse-dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [Erstellen eines Daten Bank Verschlüsselungsschlüssels &#40;Transact-SQL-&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [Alter Database-Verschlüsselungsschlüssel &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [Drop Database Encryption Key &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   
 

@@ -1,6 +1,6 @@
 ---
-title: Legen Sie Active Directory-Kennwort - Analytics Platform System | Microsoft-Dokumentation
-description: Legen Sie Active Directory-Knoten-Administrator-Anmeldekennwort, in den Wiederherstellungsmodus für Verzeichnisdienste in Analytics Platform System (APS).
+title: Active Directory Kennwort festlegen
+description: Legen Sie Active Directory Knoten Administrator Anmelde Kennwort im Verzeichnisdienst-Wiederherstellungs Modus in Analytics Platform System (APS) fest.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,36 +8,37 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e0b197a044f2f008b886d5f2ff39b603821fd29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960066"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400333"
 ---
-# <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Festlegen des Administratorkennworts für die Anmeldung bei AD-Knoten im Verzeichnisdienste-Wiederherstellungsmodus (DSRM) - Analytics Platform System
-Directory Verzeichnisdienst-Wiederherstellungsmodus (DSRM) ist eine Startmodus zum Reparieren oder Wiederherstellen von Active Directory Domain Services (AD DS). Es wird verwendet, mit der AD-applianceknoten anmelden können, nach einem Fehler bei AD DS oder AD DS muss wiederhergestellt werden. Das Kennwort für den Verzeichnisdienst-Wiederherstellungsmodus wurde während des Setups Appliance am Standort Hardware-Hersteller initialisiert und sollte durch den Administrator der Anwendung geändert werden. Analytics Platform System verfügt über zwei AD DS (Domänencontroller);  **_Appliance_domain_-AD01** und  **_Appliance_domain_-AD02**. Ändern Sie das DSRM-Kennwort mithilfe der folgenden Schritte für jeden Knoten Appliance AD.  
+# <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Festlegen des Administrator Kennworts für die Anmeldung bei AD-Knoten im Verzeichnisdienst-Wiederherstellungs Modus (DSRM)-Analytics Platform System
+Der Verzeichnisdienst-Wiederherstellungs Modus (Directory Services Restore Mode, DSRM) ist ein Start Modus zum Reparieren oder Wiederherstellen Active Directory Domain Services (AD DS) Sie wird verwendet, um sich bei den AD-Knoten der Appliance anzumelden, nachdem AD DS fehlgeschlagen ist oder AD DS wieder hergestellt werden muss. Das Kennwort für DSRM wurde während der Einrichtung der Appliance am Hardwarehersteller Standort initialisiert und sollte vom Geräte Administrator geändert werden. Analytics Platform System verfügt über zwei AD DS (Domänen Controller); ** _appliance_domain_-ad01** und ** _appliance_domain_-ad02**. Ändern Sie das DSRM-Kennwort für jeden AD-Geräteknoten mithilfe der folgenden Schritte.  
   
-## <a name="HowToDSRM"></a>Das Administratorkennwort zurücksetzen  
+## <a name="HowToDSRM"></a>So setzen Sie das Administrator Kennwort zurück  
   
-1.  Öffnen Sie ein Eingabeaufforderungsfenster auf einem Knoten der Appliance AD  <strong>_Appliance_domain_-AD_xx_</strong>virtuellen Computer.  
+1.  Öffnen Sie ein Eingabe Aufforderungs Fenster auf einem AD-Knoten des Geräts <strong> _appliance_domain_AD_xx_</strong>virtuellen Computers.  
   
-2.  Geben Sie an der Eingabeaufforderung `ntdsutil` ein:  
+2.  Geben Sie an der Eingabeaufforderung Folgendes ein: `ntdsutil`.  
   
-3.  Auf der **Ntdsutil** dazu aufgefordert werden, geben Sie `set dsrm password`.  
+3.  Geben `set dsrm password`Sie an der Eingabeaufforderung von **Ntdsutil** ein.  
   
-4.  Auf der **Administratorkennwort zurücksetzen:** dazu aufgefordert werden, geben Sie `reset password on server null`.  
+4.  Geben `reset password on server null`Sie an der Eingabeaufforderung **Administrator Kennwort zurücksetzen: ein** .  
   
 5.  Geben Sie an der Eingabeaufforderung das neue Kennwort ein.  
   
-6.  Wiederholen Sie die Schritte 1 bis 5 oben für jeden virtuellen Computer von AD-Anwendung.  
+6.  Wiederholen Sie die oben beschriebenen 1-5 Schritte für jeden virtuellen Geräte-AD-Computer.  
   
     > [!WARNING]  
-    > Analytics Platform System unterstützt das Dollarzeichen ($) in der Administrator der Domäne oder lokaler Administratorkennwörter nicht. Ein Kennwort mit einem Dollarzeichen werden überprüft und werden verwendet, jedoch kann Upgrade- und wartungsplanlizenzen Aktivitäten blockieren.  
+    > Das Analytics Platform System unterstützt das Dollarzeichen ($) in den Domänen Administrator-oder lokalen Administrator Kennwörtern nicht. Ein Kennwort, das ein Dollarzeichen enthält, wird überprüft und ist verwendbar, kann aber upgradeaktivitäten und Wartungsaktivitäten blockieren.  
   
 > [!NOTE]  
-> Wenn auf dem virtuellen Computer oder die Active Directory Domain Services für eine bestimmte AD virtuelle Maschine beschädigt ist, ausgeführt **ReplaceVM** für die betroffenen AD virtuelle Computer die empfohlenen korrekturmaßnahmen ist. Wenden Sie sich an CSS, um Unterstützung zu erhalten.  
+> Wenn die Active Directory Domain Services oder der virtuelle Computer für eine bestimmte virtuelle AD-Maschine beschädigt wird, wird das Ausführen von **replacevm** für die betroffene virtuelle AD-Maschine als Korrekturmaßnahme empfohlen. Wenden Sie sich an das CSS.  
   
-## <a name="see-also"></a>Siehe auch  
-[Zurücksetzen des Kennworts &#40;Analytics Platform System&#41;](password-reset.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Kenn Wort Zurücksetzung &#40;Analytics-Platt Form System&#41;](password-reset.md)  
   

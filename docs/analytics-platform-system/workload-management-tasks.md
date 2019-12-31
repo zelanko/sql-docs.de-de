@@ -1,6 +1,6 @@
 ---
-title: Workload-Verwaltungsaufgaben – Analytics Platform System | Microsoft-Dokumentation
-description: Workload-Verwaltungsaufgaben in Analytics Platform System.
+title: Workloadverwaltungsaufgaben
+description: Verwaltungsaufgaben für die Arbeitsauslastung in Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,22 +8,23 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ea6b3785914781e73a8570c1282741f7c4b56298
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 88d95eb0a2e0805930cb5f01f5af05b8fc6b3f2e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959759"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399416"
 ---
-# <a name="workload-management-tasks-in-analytics-platform-system"></a>Workload von Verwaltungsaufgaben in Analytics Platform System
-Workload-Verwaltungsaufgaben in Analytics Platform System.
+# <a name="workload-management-tasks-in-analytics-platform-system"></a>Verwaltungsaufgaben für die Arbeitsauslastung in Analytics Platform System
+Verwaltungsaufgaben für die Arbeitsauslastung in Analytics Platform System.
 
-## <a name="view-login-members-of-each-resource-class"></a>Anzeigen der Anmeldung Mitglieder jeder Ressourcenklasse
-Beschreibt, wie die Anmeldung Mitglied jeder Resource-Klasse-Serverrolle in SQL Server PDW angezeigt. Verwenden Sie diese Abfrage, um zu ermitteln, die Klasse der Ressourcen für Anforderungen, die von jeder Anmeldung übermittelt wurden.  
+## <a name="view-login-members-of-each-resource-class"></a>Anmelde Mitglieder jeder Ressourcen Klasse anzeigen
+Beschreibt, wie die Anmeldungs Mitglieder jeder Ressourcen Klassen-Server Rolle in SQL Server PDW angezeigt werden. Verwenden Sie diese Abfrage, um die Klasse von Ressourcen zu ermitteln, die von den einzelnen Anmelde Informationen übermittelt werden.  
   
-Beschreibungen der Resource-Klasse, finden Sie unter [Workloadverwaltung](workload-management.md).  
+Ressourcen Klassen Beschreibungen finden Sie unter [workloadverwaltung](workload-management.md).  
   
-Diese Abfrage zeigt die Liste der Mitglieder für jede Ressourcenklasse. Es gibt drei Ressourcenklassen, "mediumrc", "largerc" und "xlargerc".  
+Diese Abfrage zeigt die Mitgliedschafts Liste für jede Ressourcen Klasse an. Es gibt drei Ressourcen Klassen, Medium RC, largerc und xlargerc.  
   
 ```sql  
 SELECT l.name AS [member], r.name AS [server role]  
@@ -39,18 +40,18 @@ WHERE
   AND r.[name] in ('mediumrc', 'largerc', 'xlargerc');  
 ```  
   
-Wenn eine Anmeldung nicht in dieser Liste enthalten ist, erhalten ihre Anforderungen die Standardressourcen. Wenn eine Anmeldung ein Mitglied von mehr als einer Ressourcenklasse ist, hat die größte Klasse Vorrang.  
+Wenn eine Anmeldung nicht in dieser Liste enthalten ist, werden die Standard Ressourcen von Ihren Anforderungen empfangen. Wenn eine Anmeldung Mitglied von mehr als einer Ressourcen Klasse ist, hat die größte Klasse Vorrang.  
   
-In der Ressourcenzuordnung aufgelisteten [Workloadverwaltung](workload-management.md).  
+Die Ressourcenzuweisungen werden in der [workloadverwaltung](workload-management.md)aufgeführt.  
   
-## <a name="change-the-system-resources-allocated-to-a-request"></a>Ändern Sie die Systemressourcen auf eine Anforderung
-Beschreibt, wie Sie herausfinden, welche Ressource Klasse, die eine SQL Server-PDW-Anforderung unter ausgeführt wird, und dann auf die Systemressourcen für diese Anforderung zu ändern. Ändern die Ressourcen aus, für eine Anforderung erfordert eine Änderung der Ressource Mitgliedschaft des Anmeldenamens übermitteln der Anforderung, mit der [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) Anweisung.  
+## <a name="change-the-system-resources-allocated-to-a-request"></a>Ändern der einer Anforderung zugeordneten System Ressourcen
+Beschreibt, wie ermittelt wird, unter welcher Ressourcen Klasse eine SQL Server PDW Anforderung ausgeführt wird, und wie die Systemressourcen für diese Anforderung geändert werden. Wenn Sie die Ressourcen für eine Anforderung ändern, müssen Sie die Ressourcen Klassenmitgliedschaft der Anmeldung, die die Anforderung sendet, mithilfe der [Alter Server Role](../t-sql/statements/alter-server-role-transact-sql.md) -Anweisung ändern.  
   
-### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>Schritt 1: Bestimmen Sie die Ressourcenklasse für die Anmeldung, die Anforderung wird ausgeführt.  
-Diese Abfrage zeigt die Anmeldungen, die Elemente der serverrollenmitgliedschaften Resource-Klasse. Es gibt drei Ressourcenklassen, **"mediumrc"** , **"largerc"** , und **"xlargerc"** .  
+### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>Schritt 1: Ermitteln der Ressourcen Klasse für den Anmelde Namen, der die Anforderung durchführt.  
+Diese Abfrage zeigt Anmeldungen an, die Mitglieder der Server Rollen Mitgliedschaften der Ressourcen Klasse sind. Es gibt drei Ressourcen Klassen, **Medium RC**, **largerc**und **xlargerc**.  
   
 > [!IMPORTANT]  
-> Diese Abfrage muss ausgeführt werden, indem Sie eine Anmeldung **CONTROL SERVER** Berechtigung. Wenn durch eine Anmeldung ohne ausgeführt **CONTROL SERVER** -Berechtigung, diese Abfrage nur die Rollenmitgliedschaften für den aktuellen Anmeldenamen zurückgegeben.  
+> Diese Abfrage muss von einem Anmelde Namen ausgeführt werden, der über die **Control Server** -Berechtigung verfügt. Bei Ausführung durch eine Anmeldung ohne **Control Server** -Berechtigung gibt diese Abfrage nur die Rollen Mitgliedschaften für den aktuellen Anmelde Namen zurück.  
   
 ```sql  
 SELECT l.name AS [member], r.name AS [server role]  
@@ -67,26 +68,26 @@ WHERE
 GO  
 ```  
   
-Wenn es keine Anmeldungen, die Mitglieder einer Datenbankrolle Resource-Klasse sind sind, wird die daraus resultierende Tabelle leer sein. In diesem Fall, wenn die Abfrage eine Anmeldung mit dem Namen Ching zurückgibt, erhalten klicken Sie dann Wenn Ching eine Anforderung übermittelt die Anforderung standardmäßig Systemressourcen, die kleiner als die Systemressourcen des Ressource-Klasse sind. Wenn eine Anmeldung ein Mitglied von mehr als einer Ressourcenklasse ist, hat die größte Klasse Vorrang.  
+Wenn keine Anmeldungen vorhanden sind, die Mitglieder einer Ressourcen Klassen-Server Rolle sind, ist die resultierende Tabelle leer. Wenn in diesem Fall die Abfrage einen Anmelde Namen mit dem Namen "Ching" zurückgibt, empfängt die Anforderung beim Senden einer Anforderung die Standardsystem Ressourcen, die kleiner sind als die Ressourcen Klassensystem Ressourcen. Wenn eine Anmeldung Mitglied von mehr als einer Ressourcen Klasse ist, hat die größte Klasse Vorrang.  
   
-Eine Liste der Ressourcenzuordnung für jede Ressourcenklasse, finden Sie unter [Workloadverwaltung](workload-management.md).  
+Eine Liste der Ressourcen Zuordnungen für jede Ressourcen Klasse finden Sie [](workload-management.md)unter workloadverwaltung.  
   
-### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>Schritt 2: Führen Sie die Anforderung unter eine Anmeldung mit anderen Ressource Mitgliedschaft  
-Es gibt zwei Möglichkeiten, eine Anforderung mit entweder größer oder kleiner Systemressourcen auszuführen:  
+### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>Schritt 2: Ausführen der Anforderung unter einem Anmelde Namen mit einer anderen Ressourcen Klassenmitgliedschaft  
+Es gibt zwei Möglichkeiten, eine Anforderung mit größeren oder kleineren Systemressourcen auszuführen:  
   
--   Führen Sie die Anforderung unter einem anderen Anmeldenamen, der einen größeren oder kleineren Ressourcenklasse angehört.  
+-   Führen Sie die Anforderung unter einem anderen Anmelde Namen aus, der Mitglied einer größeren oder geringeren Ressourcen Klasse ist.  
   
--   Fügen Sie die erforderlichen Anmelde, eines der Klasse-Ressourcenrollen. Wählen Sie diese Option mit Vorsicht, durch das Ändern der Ressourcenklasse für die Anmeldung wird der Systemebene für die Ressource für alle Anforderungen, die von der Anmeldung gesendet.  
+-   Fügen Sie einer der Ressourcen Klassen Rollen die erforderliche Anmeldung hinzu. Wählen Sie diese Option mit Vorsicht aus. Wenn Sie die Ressourcen Klasse für die Anmeldung ändern, ändert sich die Systemressourcen Ebene für alle Anforderungen, die von der Anmeldung gesendet werden.  
   
-Nehmen wir an, dass Ching ein Mitglied der Serverrolle "largerc" ist. Das folgende Beispiel zeigt, wie die Serverrolle "xlargerc" Anmeldung Ching hinzugefügt wird.  
+Angenommen, das Ching ist ein Mitglied der largerc-Server Rolle. Im folgenden Beispiel wird gezeigt, wie Sie der xlargerc-Server Rolle Anmelde Informationen hinzufügen.  
   
 ```sql  
 ALTER SERVER ROLE xlargerc ADD MEMBER Ching;  
 ```  
   
-Ching ist jetzt ein Mitglied der "largerc" und die Serverrollen "xlargerc". Ching Anforderungen sendet, werden die Anforderungen die Systemressourcen "xlargerc" empfangen.  
+Das Ching ist nun ein Mitglied der Server Rolle largerc und xlargerc. Wenn Anforderungen gesendet werden, erhalten die Anforderungen die xlargerc-Systemressourcen.  
   
-Im folgenden Beispiel wird Ching zurück, der Server-Rolle "mediumrc".  Um der neuen Rolle zu ändern, muss die Anmeldung entfernt von "xlargerc" und "largerc" Server-Rollen, und der Server-Rolle "mediumrc" hinzugefügt.  
+Im folgenden Beispiel wird der Vorgang zurück zur mediumrc-Server Rolle verschoben.  Um zur neuen Rolle zu wechseln, muss die Anmeldung aus xlargerc-und largerc-Server Rollen entfernt und der mediumrc-Server Rolle hinzugefügt werden.  
   
 ```sql  
 -- Move login Ching back to using medium system resources for requests.  
@@ -95,23 +96,23 @@ ALTER SERVER ROLE largerc DROP MEMBER Ching;
 ALTER SERVER ROLE mediumrc ADD MEMBER Ching;  
 ```  
   
-Ching ist jetzt ein Mitglied der Serverrolle "mediumrc".  Im folgende Beispiel ändert die Ching, um die System-Standardressourcen für Anforderungen zu erhalten.  
+Das Ching ist nun ein Mitglied der medienrc-Server Rolle.  Im folgenden Beispiel wird die Verarbeitung so geändert, dass Sie die Standardsystem Ressourcen für Anforderungen hat.  
   
 ```sql  
 -- Move login Ching to use the default system resources for requests.  
 ALTER SERVER ROLE mediumrc DROP MEMBER Ching;  
 ```  
   
-Weitere Informationen zu Resource-Klasse-Rollenmitgliedschaft zu ändern, finden Sie unter [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md).  
+Weitere Informationen zum Ändern der Rollen Mitgliedschaft in einer Ressourcen Klasse finden Sie unter [Alter Server Role](../t-sql/statements/alter-server-role-transact-sql.md).  
 
-## <a name="change-a-login-to-the-default-system-resources-for-its-requests"></a>Ändern Sie eine Anmeldung auf die Standard-System-Ressourcen für ihre Anforderungen
-Beschreibt, wie so ändern Sie die System-ressourcenzuweisungen, die eine SQL Server-PDW-Anmeldung bei der standardmäßigen Dienstkontingente zugewiesen. 
+## <a name="change-a-login-to-the-default-system-resources-for-its-requests"></a>Ändern eines Anmelde namens in die Standardsystem Ressourcen für seine Anforderungen
+Beschreibt, wie die Systemressourcen Zuordnungen geändert werden, die einer SQL Server PDW-Anmeldung zugewiesen sind, auf die Standard Beträge. 
   
-Beschreibungen der Resource-Klasse, finden Sie unter [Workloadverwaltung](workload-management.md)  
+Ressourcen Klassen Beschreibungen finden Sie unter [workloadverwaltung](workload-management.md) .  
   
-Wenn eine Anmeldung nicht Mitglied einer Serverrolle des Ressource-Klasse ist, erhalten Anforderungen bei der Anmeldung übermittelt die Standarddauer von Systemressourcen.  
+Wenn ein Anmelde Name kein Mitglied einer Ressourcen Klassen-Server Rolle ist, erhalten die von der Anmeldung übermittelten Anforderungen die Standardmenge an Systemressourcen.  
   
-Nehmen wir an der Anmeldung, die Matt derzeit Mitglied aller Serverfunktionen von Resource-Klasse und zurück an die Anforderungen, die nur die Standardressourcen erhalten, dass wiederherstellen möchte.  Das folgende Beispiel weist die Standardressourcen, Matt Anforderungen durch seine Mitgliedschaft aus allen drei Ressourcen-Klasse-Server-Rollen löschen.  
+Angenommen, der Anmelde Name Matt ist zurzeit ein Mitglied aller Ressourcen Klassen-Server Rollen und möchte zurückkehren, dass Anforderungen nur die Standard Ressourcen erhalten.  Im folgenden Beispiel werden die Standard Ressourcen zu den Anforderungen von Matt zugewiesen, indem die Mitgliedschaft von allen drei Ressourcen Klassen-Server Rollen gelöscht wird.  
   
 ```sql  
 --Give the requests submitted by Matt the default system resources   
@@ -121,12 +122,12 @@ ALTER SERVER ROLE LargeRC DROP MEMBER Matt;
 ALTER SERVER ROLE MediumRC DROP MEMBER Matt;  
 ```  
   
-## <a name="display-the-number-of-concurrency-slots-needed-for-a-waiting-request"></a>Anzeigen, die die Anzahl von Parallelitätsslots für eine wartende anfordern erforderlich
-Beschreibt, wie die Anzahl der Parallelität herausfinden, die Slots von einer Anforderung, die darauf warten benötigt werden, auf SQL Server PDW ausgeführt werden.  
+## <a name="display-the-number-of-concurrency-slots-needed-for-a-waiting-request"></a>Anzeigen der Anzahl von Parallelitäts Slots, die für eine wartende Anforderung benötigt werden
+Beschreibt, wie Sie ermitteln können, wie viele Parallelitäts Slots von einer Anforderung benötigt werden, die auf SQL Server PDW ausgeführt wird.  
   
-Weitere Informationen finden Sie unter [Workloadverwaltung](workload-management.md).  
+Weitere Informationen finden Sie unter [workloadverwaltung](workload-management.md).  
   
-Eine Anforderung konnte zu lange ohne die erste Ausführung wartet. Eine der Möglichkeiten, um anforderungsprobleme zu behandeln ist, Suchen nach der Anzahl von parallelitätsslots, die die Anforderung benötigt.  Das folgende Beispiel zeigt die Anzahl von parallelitätsslots, die von jeder wartender Anforderungen benötigt werden.  
+Eine Anforderung kann zu lange warten, ohne ausgeführt zu werden. Eine der Möglichkeiten zur Problembehandlung bei der Anforderung besteht darin, die Anzahl der Parallelitäts Slots zu prüfen, die für die Anforderung erforderlich sind.  Das folgende Beispiel zeigt die Anzahl der Parallelitäts Slots, die für jede wartende Anforderung benötigt werden.  
   
 ```sql  
 --Display the number of concurrency slots required   
@@ -136,6 +137,6 @@ FROM sys.dm_pdw_resource_waits;
 ```  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Workloadverwaltung](workload-management.md)  
   

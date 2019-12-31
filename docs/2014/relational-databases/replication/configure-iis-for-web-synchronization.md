@@ -14,26 +14,26 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5c3b456fa650cff94d0b5809c37f7ceca8b1b71
+ms.sourcegitcommit: 961c56bb78ff46ae6eb1a2cc5d2b1262ddf7a4fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62722367"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706664"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Konfigurieren von IIS für die Websynchronisierung
   Die Verfahren in diesem Thema sind der zweite Schritt zur Konfiguration der Websynchronisierung für die Mergereplikation. Sie führen diesen Schritt aus, nachdem Sie die Websynchronisierung für eine Veröffentlichung aktiviert haben. Eine Übersicht über den Konfigurationsprozess bietet [Websynchronisierung konfigurieren](configure-web-synchronization.md). Nachdem Sie die Verfahren in diesem Thema ausgeführt haben, fahren Sie mit dem dritten Schritt fort, in dem Sie die Websynchronisierung für ein Abonnement konfigurieren. Dieser dritte Schritt wird in den folgenden Themen beschrieben:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Vorgehensweise: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Vorgehens [Weise: Konfigurieren eines Abonnements für die Verwendung der \(Websynchronisierung SQL Server Management Studio\) ](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Replikationsprogrammierung mit [!INCLUDE[tsql](../../includes/tsql-md.md)]: [Vorgehensweise: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung (Replikationsprogrammierung mit Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
+-   Replikationsprogrammierung [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Vorgehensweise: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung (Replikationsprogrammierung mit Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Vorgehensweise: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung (RMO-Programmierung)](https://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung (RMO-Programmierung)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Die Websynchronisierung verwendet einen Computer mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS (Internet Information Services), um Pullabonnements mit Mergeveröffentlichungen zu synchronisieren. Die IIS-Versionen 5.0, 6.0 und 7.0 werden unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung wird auf IIS Version 7.0 nicht unterstützt.  
   
 > [!IMPORTANT]  
->  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können zu Fehlern führen. Dabei handelt es sich z. B. um: "Das Format einer Nachricht während der websynchronisierung war ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  
+>  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können zu Fehlern führen. Dazu zählen folgende Fehler: "Das Format einer Nachricht war während der Websynchronisierung ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  
   
 > [!CAUTION]  
 >  Verwenden Sie WebSync und alternative Ordnerspeicherorte für Momentaufnahmen nicht gleichzeitig.  
@@ -42,7 +42,7 @@ ms.locfileid: "62722367"
   
 1.  Konfigurieren Sie SSL (Secure Sockets Layer). SSL wird für die Kommunikation zwischen IIS und allen Abonnenten benötigt.  
   
-2.  Installieren Sie mithilfe des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konnektivitätskomponenten auf dem Computer mit IIS. Wenn Sie den in Schritt 3 erwähnten Assistenten zum Konfigurieren der Websynchronisierung verwenden möchten, müssen Sie auch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf dem Computer mit IIS installieren.  
+2.  Installieren [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie Konnektivitätskomponenten auf dem Computer, auf dem IIS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, mithilfe des-Installations-Assistenten. Wenn Sie den in Schritt 3 erwähnten Assistenten zum Konfigurieren der Websynchronisierung verwenden möchten, müssen Sie auch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf dem Computer mit IIS installieren.  
   
 3.  Konfigurieren Sie den Computer mit IIS für die Websynchronisierung. Sie können den Computer manuell oder mithilfe des Assistenten zum Konfigurieren der Websynchronisierung konfigurieren. Es empfiehlt sich, den Assistenten zu verwenden.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "62722367"
   
 2.  Starten Sie **Internetinformationsdienste-Manager**:  
   
-    1.  Klicken Sie im **Startmenü**auf **Ausführen**.  
+    1.  Klicken Sie auf **Start** und dann auf **Ausführen**.  
   
-    2.  In der **öffnen** geben `inetmgr`, und klicken Sie dann auf **OK**.  
+    2.  Geben `inetmgr`Sie im Feld **Öffnen** ein, und klicken Sie dann auf **OK**.  
   
 3.  Führen Sie den IIS-Zertifikat-Assistenten aus:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62722367"
   
 4.  Klicken Sie auf **OK**.  
   
- Wenn Sie kein Serverzertifikat von einer Zertifizierungsstelle erhalten können, können Sie ein Zertifikat zum Testen angeben. Installieren Sie ein Zertifikat mithilfe des Hilfsprogramms SelfSSL, um IIS 6.0 zum Testen zu konfigurieren. Dieses Hilfsprogramm ist im IIS 6.0 Resource Kit verfügbar. Sie können die Tools auch vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=30958)herunterladen. Für IIS&#160;5.0 wechseln Sie zum [Microsoft Hilfe- und Supportcenter](https://go.microsoft.com/fwlink/?LinkId=46229).  
+ Wenn Sie kein Serverzertifikat von einer Zertifizierungsstelle erhalten können, können Sie ein Zertifikat zum Testen angeben. Installieren Sie ein Zertifikat mithilfe des Hilfsprogramms SelfSSL, um IIS 6.0 zum Testen zu konfigurieren. Dieses Hilfsprogramm ist im IIS 6.0 Resource Kit verfügbar. Sie können die Tools auch vom [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5135)herunterladen. Für IIS&#160;5.0 wechseln Sie zum [Microsoft Hilfe- und Supportcenter](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Ein Zertifikat muss einer Website zugeordnet werden, damit die betreffende Website SSL verwenden kann. SelfSSL ordnet das Zertifikat automatisch der Standardwebsite zu. Wenn Sie bereits über ein Zertifikat verfügen oder später ein Zertifikat von einer Zertifizierungsstelle installieren, müssen Sie dieses Zertifikat explizit der Website zuordnen, die von der Websynchronisierung verwendet wird. Stellen Sie sicher, dass der Website, die zum Synchronisieren von Abonnements verwendet wird, nur ein Zertifikat zugeordnet ist. Wenn mehrere Zertifikate vorhanden sind, verwendet der Abonnent die erste verfügbare Website.  
@@ -100,7 +100,7 @@ ms.locfileid: "62722367"
         > [!NOTE]  
         >  Das von SelfSSL installierte Zertifikat ist standardmäßig sieben Tage gültig.  
   
-    -   Klicken Sie zum Angeben von Werten für einen oder mehrere Parameter im Menü **Start**auf **Ausführen**. In der **öffnen** geben `cmd`, und klicken Sie dann auf **OK**. Suchen Sie das SelfSSL-Installationsverzeichnis, geben Sie `SelfSSL`ein, und geben Sie dann Werte für einen oder mehrere Parameter an. Eine Liste der Parameter erhalten Sie durch Eingabe von `SelfSSL -?`.  
+    -   Klicken Sie zum Angeben von Werten für einen oder mehrere Parameter im Menü **Start**auf **Ausführen**. Geben Sie **** `cmd`im Feld Öffnen ein, und klicken Sie dann auf **OK**. Suchen Sie das SelfSSL-Installationsverzeichnis, geben Sie `SelfSSL`ein, und geben Sie dann Werte für einen oder mehrere Parameter an. Eine Liste der Parameter erhalten Sie durch Eingabe von `SelfSSL -?`.  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>Installieren der Konnektivitätskomponenten und von SQL Server Management Studio  
   
@@ -108,9 +108,9 @@ ms.locfileid: "62722367"
   
 1.  Melden Sie sich an dem Computer mit IIS als Administrator an.  
   
-2.  Starten Sie den Installations-Assistenten für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsdatenträger. Weitere Informationen zum Verwenden dieses Assistenten finden Sie unter [Installieren von SQL Server 2014 vom Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
+2.  Starten Sie den Installations-Assistenten für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsdatenträger. Weitere Informationen zur Verwendung dieses Assistenten finden Sie unter [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
-3.  Wählen Sie auf der Seite **Funktionsauswahl** **Konnektivität der Clienttools**aus.  
+3.  Wählen Sie auf der Seite **Funktionsauswahl****Konnektivität der Clienttools**aus.  
   
 4.  Wenn Sie den Assistenten zum Konfigurieren der Websynchronisierung verwenden möchten, wählen Sie **Verwaltungstools - Einfach**aus.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62722367"
   
 -   Erstellt ein virtuelles Verzeichnis und den zugeordneten Alias. Der Alias wird für den Zugriff auf die Websynchronisierungskomponenten verwendet. Wenn die IIS-Adresse z. B. https://*server.domain.com* heißt und Sie als Alias 'websync1' angeben, lautet die Adresse, über die auf die Komponente replisapi.dll zugegriffen wird, https://*server.domain.com*/websync1/replisapi.dll.  
   
--   Sie verwendet die Standardauthentifizierung. Es empfiehlt sich die Verwendung der Standardauthentifizierung, weil sie es ermöglicht, IIS und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger/Verteiler auf separaten Computern (empfohlene Konfiguration) auszuführen, ohne dass eine Kerberos-Delegierung erforderlich ist. Die Verwendung von SSL in Verbindung mit der Standardauthentifizierung stellt sicher, dass Anmeldenamen, Kennwörter und alle Daten bei der Übertragung verschlüsselt werden. (SSL ist in jedem Fall und unabhängig vom verwendeten Authentifizierungstyp erforderlich.) Weitere Informationen zu den bewährten Methoden im Zusammenhang mit der Websynchronisierung finden Sie im entsprechenden Abschnitt im Thema [Websynchronisierung konfigurieren](configure-web-synchronization.md).  
+-   Sie verwendet die Standardauthentifizierung. Es empfiehlt sich die Verwendung der Standardauthentifizierung, weil sie es ermöglicht, IIS und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger/Verteiler auf separaten Computern (empfohlene Konfiguration) auszuführen, ohne dass eine Kerberos-Delegierung erforderlich ist. Die Verwendung von SSL in Verbindung mit der Standardauthentifizierung stellt sicher, dass Anmeldenamen, Kennwörter und alle Daten bei der Übertragung verschlüsselt werden. (SSL ist unabhängig vom verwendeten Authentifizierungstyp erforderlich.) Weitere Informationen zu bewährten Methoden für die Websynchronisierung finden Sie im Abschnitt "bewährte Methoden für die Sicherheit bei der Websynchronisierung" unter [Konfigurieren der Websynchronisierung](configure-web-synchronization.md).  
   
 #### <a name="to-configure-the-computer-that-is-running-iis-by-using-the-configure-web-synchronization-wizard"></a>So konfigurieren Sie den Computer mit IIS mithilfe des Assistenten zum Konfigurieren der Websynchronisierung  
   
@@ -155,7 +155,7 @@ ms.locfileid: "62722367"
   
     1.  Geben Sie im Feld **Alias** einen Alias für das virtuelle Verzeichnis ein.  
   
-    2.  Geben Sie im Feld **Pfad** einen Pfad für das virtuelle Verzeichnis ein. Angenommen, Sie eingegeben haben `websync1` in die **Alias** geben `C:\Inetpub\wwwroot\websync1` in die **Pfad** Feld. Klicken Sie auf **Weiter**.  
+    2.  Geben Sie im Feld **Pfad** einen Pfad für das virtuelle Verzeichnis ein. Wenn Sie z. b. `websync1` in das Feld **Alias** eingegeben haben `C:\Inetpub\wwwroot\websync1` , geben Sie in das Feld **Pfad** ein. Klicken Sie auf **Weiter**.  
   
     3.  Klicken Sie in beiden Dialogfeldern auf **Ja**. Damit geben Sie an, dass Sie einen neuen Ordner erstellen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ISAPI-DLL-Datei kopieren möchten. .  
   
@@ -169,7 +169,7 @@ ms.locfileid: "62722367"
   
 8.  Gehen Sie auf der Seite **Verzeichniszugriff** wie folgt vor:  
   
-    1.  Klicken Sie auf **Hinzufügen**, und fügen Sie dann im Dialogfeld **Benutzer oder Gruppen auswählen** die Konten hinzu, über die die Abonnenten die Verbindungen zu IIS herstellen werden. Es handelt sich dabei um die Konten, die Sie auf der Seite **Webserverinformationen** des Assistenten für neue Abonnements oder als Wert für den [-Parameter von](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* eingeben.  
+    1.  Klicken Sie auf **Hinzufügen**, und fügen Sie dann im Dialogfeld **Benutzer oder Gruppen auswählen** die Konten hinzu, über die die Abonnenten die Verbindungen zu IIS herstellen werden. Es handelt sich dabei um die Konten, die Sie auf der Seite **Webserverinformationen** des Assistenten für neue Abonnements oder als Wert für den [-Parameter von](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* eingeben.  
   
 9. Geben Sie auf der Seite **Zugriff auf Momentaufnahmefreigabe** die Momentaufnahmefreigabe ein. Die entsprechenden Berechtigungen für diese Freigabe werden so erteilt, dass die Abonnenten auf die Momentaufnahmedateien zugreifen können. Weitere Informationen zu den Berechtigungen für die Freigabe finden Sie unter [Sichern des Momentaufnahmeordners](security/secure-the-snapshot-folder.md).  
   
@@ -179,11 +179,11 @@ ms.locfileid: "62722367"
   
 11. Wenn auf dem Computer mit IIS eine 64-Bit-Version von Windows ausgeführt wird, muss replisapi.dll in das entsprechende Verzeichnis kopiert werden:  
   
-    1.  Klicken Sie im **Startmenü**auf **Ausführen**. In der **öffnen** geben `iisreset`, und klicken Sie dann auf **OK**.  
+    1.  Klicken Sie auf **Start** und dann auf **Ausführen**. Geben Sie **** `iisreset`im Feld Öffnen ein, und klicken Sie dann auf **OK**.  
   
     2.  IIS wird beendet und neu gestartet. Kopieren Sie anschließend replisapi.dll aus [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]\COM\replisapi in das in Schritt 6b angegebene Verzeichnis.  
   
-    3.  Klicken Sie im **Startmenü**auf **Ausführen**. In der **öffnen** geben `cmd`, und klicken Sie dann auf **OK**.  
+    3.  Klicken Sie auf **Start** und dann auf **Ausführen**. Geben Sie **** `cmd`im Feld Öffnen ein, und klicken Sie dann auf **OK**.  
   
     4.  Führen Sie in dem Verzeichnis, das Sie in Schritt 6b angegeben haben, den folgenden Befehl aus:  
   
@@ -203,7 +203,7 @@ ms.locfileid: "62722367"
   
 3.  Registrieren Sie replisapi.dll:  
   
-    1.  Klicken Sie im **Startmenü**auf **Ausführen**. In der **öffnen** geben `cmd`, und klicken Sie dann auf **OK**.  
+    1.  Klicken Sie auf **Start** und dann auf **Ausführen**. Geben Sie **** `cmd`im Feld Öffnen ein, und klicken Sie dann auf **OK**.  
   
     2.  Führen Sie in dem Verzeichnis, das Sie in Schritt 1 erstellt haben, den folgenden Befehl aus:  
   
@@ -217,16 +217,16 @@ ms.locfileid: "62722367"
   
 #### <a name="to-configure-iis-authentication"></a>So konfigurieren Sie die IIS-Authentifizierung  
   
--   Wenn Abonnenten eine Verbindung mit IIS herstellen, muss IIS die Abonnenten authentifizieren, damit sie auf Ressourcen und Prozesse zugreifen können. IIS bietet drei Arten der Authentifizierung: Anonym, Standard und integriert. Die Authentifizierung kann sowohl auf die gesamte Website als auch nur auf das von Ihnen erstellte virtuelle Verzeichnis angewendet werden.  
+-   Wenn Abonnenten eine Verbindung mit IIS herstellen, muss IIS die Abonnenten authentifizieren, damit sie auf Ressourcen und Prozesse zugreifen können. IIS bietet drei Authentifizierungsarten: Anonym, Standard und Integriert. Die Authentifizierung kann sowohl auf die gesamte Website als auch nur auf das von Ihnen erstellte virtuelle Verzeichnis angewendet werden.  
   
      Sie sollten die Standardauthentifizierung mit SSL verwenden. SSL ist in jedem Fall und unabhängig vom verwendeten Authentifizierungstyp erforderlich. Weitere Informationen zum Konfigurieren der Authentifizierung finden Sie in der IIS-Dokumentation.  
   
 ## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>Festlegen von Berechtigungen für die SQL Server-Replikationsüberwachung  
  Wenn ein Abonnent eine Verbindung zum Computer mit IIS herstellt, wird er mithilfe der Authentifizierungsart authentifiziert, die bei der Konfiguration von IIS angegeben wurde. Nach dem Authentifizieren des Abonnenten durch IIS prüft IIS, ob der Abonnent berechtigt ist, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation aufzurufen. Wer die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation aufrufen darf, legen Sie mit den Berechtigungen für replisapi.dll fest. Die ordnungsgemäße Konfiguration der Berechtigungen ist notwendig, damit kein unberechtigter Zugriff auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation erfolgt.  
   
- Führen Sie die folgenden Schritte aus, um die minimalen Berechtigungen für das Konto, unter dem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung ausgeführt wird, zu konfigurieren. Die Schritte in diesem Verfahren beziehen sich auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] mit IIS 6.0.  
+ Führen Sie die folgenden Schritte aus, um die minimalen Berechtigungen für das Konto, unter dem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung ausgeführt wird, zu konfigurieren. Die Schritte in diesem Verfahren gelten für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] die Ausführung von IIS 6,0.  
   
- Führen Sie die unten genannten Schritte aus, und stellen Sie zusätzlich sicher, dass die Veröffentlichungszugriffsliste die erforderlichen Anmeldenamen enthält. Weitere Informationen zur PAL finden Sie unter [Sichern des Verlegers](security/secure-the-publisher.md).  
+ Führen Sie die unten genannten Schritte aus, und stellen Sie zusätzlich sicher, dass die Veröffentlichungszugriffsliste die erforderlichen Anmeldenamen enthält. Weitere Informationen zu PAL finden Sie unter [Sichern des Verlegers](security/secure-the-publisher.md).  
   
 #### <a name="to-configure-the-account-and-permissions"></a>So konfigurieren Sie das Konto und die Berechtigungen  
   
@@ -240,7 +240,7 @@ ms.locfileid: "62722367"
   
     4.  Geben Sie einen Benutzernamen und ein sicheres Kennwort ein.  
   
-    5.  Klicken Sie auf **Erstellen**und dann auf **Schließen**.  
+    5.  Klicken Sie auf **Erstellen**, und klicken Sie dann auf **Schließen**.  
   
 2.  Fügen Sie das Konto der IIS_WPG-Gruppe hinzu:  
   
@@ -274,9 +274,9 @@ ms.locfileid: "62722367"
   
 4.  Erstellen Sie im **Internetinformationsdienste-Manager**einen Anwendungspool:  
   
-    1.  Klicken Sie im **Startmenü**auf **Ausführen**.  
+    1.  Klicken Sie auf **Start** und dann auf **Ausführen**.  
   
-    2.  In der **öffnen** geben `inetmgr`, und klicken Sie dann auf **OK**.  
+    2.  Geben `inetmgr`Sie im Feld **Öffnen** ein, und klicken Sie dann auf **OK**.  
   
     3.  Erweitern Sie im **Internetinformationsdienste-Manager**den Knoten **Lokaler Computer** .  
   
@@ -290,7 +290,7 @@ ms.locfileid: "62722367"
   
     2.  Klicken Sie mit der rechten Maustaste auf den von Ihnen erstellten Anwendungspool, und klicken Sie dann auf **Eigenschaften**.  
   
-    3.  Klicken Sie auf der Registerkarte **Identität** des Dialogfelds **\<ApplicationPoolName>-Eigenschaften** auf **Konfigurierbar**.  
+    3.  Klicken Sie im Dialogfeld ** \<ApplicationPoolName> Eigenschaften** auf der Registerkarte **Identität** auf **konfigurierbar**.  
   
     4.  Geben Sie in den Feldern **Benutzername** und **Kennwort** das Konto und das Kennwort aus Schritt 1 ein.  
   
@@ -313,7 +313,7 @@ ms.locfileid: "62722367"
   
 1.  Stellen Sie sicher, dass die Netzwerkeinstellungen auf dem Abonnenten ordnungsgemäß eingerichtet wurden:  
   
-    1.  Klicken Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer im Menü **Extras** auf **Internetoptionen**.  
+    1.  Klicken [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sie in Internet Explorer im **Menü Extras** auf **Internet Optionen**.  
   
     2.  Klicken Sie auf der Registerkarte **Verbindungen** auf **Einstellungen**.  
   
@@ -357,7 +357,7 @@ ms.locfileid: "62722367"
   
     2.  Stellen Sie eine Verbindung mit dem Server im Diagnosemodus her. Wenn das Zertifikat ordnungsgemäß installiert ist, wird das Dialogfeld **Sicherheitshinweis** nicht angezeigt. Wenn das Dialogfeld angezeigt wird, ist der Merge-Agent nicht in der Lage, eine Verbindung mit dem Computer mit IIS herzustellen. Sie müssen daher sicherstellen, dass das Zertifikat für den Server, auf den Sie zugreifen, dem Zertifikatsspeicher auf dem Abonnenten als vertrauenswürdiges Zertifikat hinzugefügt wurde. Weitere Informationen zum Exportieren von Zertifikaten finden Sie in der IIS-Dokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Websynchronisierung konfigurieren](configure-web-synchronization.md)  
   
   

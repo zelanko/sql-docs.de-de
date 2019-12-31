@@ -1,6 +1,6 @@
 ---
-title: Fehlermeldungen – Parallel Data Warehouse | Microsoft-Dokumentation
-description: Parallel Data Warehouse (PDW)-Fehlermeldungen melden Fehler und Probleme auftreten, durch die PDW-Komponenten und können auch SQL Server-Fehler, die PDW zeigt enthalten. Diese Fehlermeldungen verwenden eine konsistente Syntax zur Darstellung von Informationen. Grundlegendes zu dieser Syntax können Sie zu identifizieren und Beheben von Problemen.
+title: Fehlermeldungen
+description: Parallele Data Warehouse (PDW)-Fehlermeldungen melden Fehler und Probleme, die in den PDW-Komponenten aufgetreten sind, und können auch SQL Server Fehler enthalten, die über PDW ausgegeben werden. In diesen Fehlermeldungen wird eine konsistente Syntax zum Darstellen von Informationen verwendet. Wenn Sie diese Syntax verstanden haben, können Sie Probleme identifizieren und beheben.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,39 +8,40 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 78c5cd8dab37ac9cb32de794861c68e6c8085747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960961"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401166"
 ---
-# <a name="error-messages-in-parallel-data-warehouse"></a>Fehlermeldungen in Parallel Data Warehouse
+# <a name="error-messages-in-parallel-data-warehouse"></a>Fehlermeldungen parallel Data Warehouse
 
-Parallel Data Warehouse (PDW)-Fehlermeldungen melden Fehler und Probleme auftreten, durch die PDW-Komponenten und können auch SQL Server-Fehler, die PDW zeigt enthalten. Diese Fehlermeldungen verwenden eine konsistente Syntax zur Darstellung von Informationen. Grundlegendes zu dieser Syntax können Sie zu identifizieren und Beheben von Problemen auf SQL Server PDW.  
+Parallele Data Warehouse (PDW)-Fehlermeldungen melden Fehler und Probleme, die in den PDW-Komponenten aufgetreten sind, und können auch SQL Server Fehler enthalten, die über PDW ausgegeben werden. In diesen Fehlermeldungen wird eine konsistente Syntax zum Darstellen von Informationen verwendet. Wenn Sie diese Syntax verstanden haben, können Sie Probleme auf SQL Server PDW identifizieren und beheben.  
   
-## <a name="Basics"></a>Grundlagen von Nachrichten Fehler  
-Fehlermeldungen, die zurückgegeben werden, führen Sie die gleiche Syntax.  
+## <a name="Basics"></a>Grundlagen zu Fehlermeldungen  
+Fehlermeldungen, die zurückgegeben werden, folgen derselben Syntax.  
   
 `Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String`  
   
 Dies sind die möglichen Werte für jedes Feld:  
   
-|Feld|Beschreibung|Beispiel|  
+|Field|Beschreibung|Beispiel|  
 |---------|---------------|-----------|  
-|*Error_Indicator*|Das Wort "Fehler" oder anderer Text warnen der Benutzer auf ein Problem.|Fehler|  
-|*SQL_State_Code*|Die SQL-Statuscode, gemäß ODBC-Spezifikation. Der Treiber generiert den entsprechenden Status des SQL-Code jedes Mal, wenn eine Meldung zu einer Anwendung zurückgegeben. Der Text "Microsoft" gibt die Quelle des Fehlers an.|42000|  
-|*Driver_Details*|Treiberabhängig Details wie den Typ des verwendeten Treiber.|ODBC-SQL Server 2008 R2 Parallel Data Warehouse-Treiber|  
-|*QueryID*|Der eindeutige Bezeichner für die Abfrage. Verwenden Sie diesen Wert zum Suchen zusätzlicher Informationen, die im Zusammenhang mit der Verarbeitung der Abfrage. Z. B. die Details der Ausführung der Abfrage in der Administratorkonsole finden Sie mithilfe der Abfrage-ID. Weitere Informationen finden Sie unter [Überwachen der Appliance mithilfe der Verwaltungskonsole](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Ist eine "QueryId" nicht zutreffend, wird der Text "Intern" für den Benutzer zurückgegeben.|QID2377|  
-|*Message_String*|Eine lesbare Beschreibung des Fehlers oder Problems. Beim SQL Server-Fehler zurückgeben, ist dies der Text der SQL Server-Nachricht.|Equal-Zuweisung kann in der festgelegten Liste einer UPDATE-Anweisung angezeigt werden.|  
+|*Error_Indicator*|Das Wort "Error" oder ein anderer Text, der den Benutzer auf ein Problem hinweist.|ERROR|  
+|*SQL_State_Code*|Der SQL-Statuscode gemäß der ODBC-Spezifikation. Der Treiber generiert den entsprechenden SQL-Statuscode jedes Mal, wenn er eine Nachricht an eine Anwendung zurückgibt. Der Text "Microsoft" gibt die Quelle des Fehlers an.|42000|  
+|*Driver_Details*|Treiber abhängige Details, z. b. der Typ des verwendeten Treibers.|ODBC-SQL Server 2008 R2 parallel Data Warehouse-Treiber|  
+|*QueryID*|Der eindeutige Bezeichner für die Abfrage. Verwenden Sie diesen Wert, um zusätzliche Informationen im Zusammenhang mit der Verarbeitung der Abfrage zu suchen. Beispielsweise können Sie die Details der Abfrage Ausführung in der-Verwaltungskonsole mithilfe der Abfrage-ID finden. Weitere Informationen finden Sie unter [Überwachen der Appliance mithilfe der Verwaltungskonsole](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Wenn eine QueryId nicht anwendbar ist, wird der Text "Internal" an den Benutzer zurückgegeben.|QID2377|  
+|*Message_String*|Eine lesbare Beschreibung des Fehlers oder Problems. Wenn SQL Server Fehler zurückgegeben werden, handelt es sich hierbei um den SQL Server Meldungs Text.|In der Set-Liste einer Update-Anweisung kann nur eine gleichmäßige Zuweisung enthalten sein.|  
   
-Diese Beispielwerte würde dem Benutzer wie folgt angezeigt:  
+Diese Beispiel Werte würden dem Benutzer wie folgt angezeigt werden:  
   
 `ERROR [42000] [Microsoft][ODBC SQL Server 2008 R2 Parallel Data Warehouse driver][QID2380]Only equal assignment can appear in the set list of an UPDATE statement.`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-[Administratorkonsolenwarnungen](understanding-admin-console-alerts.md)  
+[Grundlegendes zu Warnungen der Administrator Konsole](understanding-admin-console-alerts.md)  
   

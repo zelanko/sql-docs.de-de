@@ -1,7 +1,7 @@
 ---
 title: Bearbeiten von UDT-Daten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -28,21 +28,22 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53471adf085fbe9a046d28fa09ce10a46953eae6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5ab38e745c619d119e8e4ca477e9e78f4ac7783
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028167"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901938"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>Arbeiten mit benutzerdefinierten Typen: Bearbeiten von UDT-Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] stellt keine spezialisierte Syntax für INSERT-, UPDATE- oder DELETE-Anweisungen zum Ändern von Daten in Spalten vom benutzerdefinierten Typ (User-defined Type, UDT) bereit. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen CAST oder CONVERT werden verwendet, um systemeigene Datentypen in den benutzerdefinierten Typ (UDT) umzuwandeln.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Einfügen von Daten in eine UDT-Spalte  
- Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen fügen drei Zeilen Beispieldaten in die **Punkte** Tabelle. Die **Punkt** -Datentyp besteht aus X- und Y-Ganzzahlwerten, die als Eigenschaften des UDT verfügbar gemacht werden. Sie müssen der CAST- oder CONVERT-Funktion verwenden, um die durch Kommas getrennten X- und Y-Werte die **Punkt** Typ. Die ersten beiden Anweisungen verwenden die CONVERT-Funktion konvertiert einen Zeichenfolgenwert, der **Punkt** Typ und die dritte Anweisung verwendet die CAST-Funktion:  
+ Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen fügen drei Zeilen mit Beispiel Daten in die **Points** -Tabelle ein. Der **Point** -Datentyp besteht aus X-und Y-ganzzahligen Werten, die als Eigenschaften des UDT verfügbar gemacht werden. Sie müssen entweder die CAST-oder die Convert-Funktion verwenden, um die durch Kommas getrennten X-und Y-Werte in den **Punkttyp** umzuwandeln. Die ersten beiden Anweisungen verwenden die Convert-Funktion, um einen Zeichen folgen Wert in den **Punkttyp** zu konvertieren, und die dritte Anweisung verwendet die CAST-Funktion:  
   
-```  
+```sql  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
@@ -51,13 +52,13 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 ## <a name="selecting-data"></a>Auswählen von Daten  
  Die folgende SELECT-Anweisung wählt den Binärwert des UDTs aus.  
   
-```  
+```sql  
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- Um die Ausgabe in einem lesbaren Format anzuzeigen, rufen die **ToString** Methode der **Punkt** UDT, der den Wert in seine Zeichenfolgendarstellung konvertiert.  
+ Um die Ausgabe in einem lesbaren Format anzuzeigen, müssen Sie die **ToString** -Methode des **Point** -UDT aufzurufen, der den Wert in seine Zeichen folgen Darstellung konvertiert.  
   
-```  
+```sql  
 SELECT ID, PointValue.ToString() AS PointValue   
 FROM dbo.Points;  
 ```  
@@ -74,7 +75,7 @@ ID PointValue
   
  Sie können auch die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen CAST und CONVERT verwenden, um dieselben Ergebnisse zu erreichen.  
   
-```  
+```sql  
 SELECT ID, CAST(PointValue AS varchar)   
 FROM dbo.Points;  
   
@@ -82,9 +83,9 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- Die **Punkt** UDT macht seine X- und Y-Koordinaten als Eigenschaften, die Sie dann einzeln auswählen können. Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung wählt die X- und die Y-Koordinate getrennt aus:  
+ Der **Point** -UDT macht seine X-und Y-Koordinaten als Eigenschaften verfügbar, die Sie dann einzeln auswählen können. Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung wählt die X- und die Y-Koordinate getrennt aus:  
   
-```  
+```sql  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
 FROM dbo.Points;  
 ```  
@@ -100,9 +101,9 @@ ID xVal yVal
 ```  
   
 ## <a name="working-with-variables"></a>Arbeiten mit Variablen  
- Sie können mit Variablen arbeiten, indem Sie die DECLARE-Anweisung verwenden, um einem UDT eine Variable zuzuweisen. Die folgenden Anweisungen weisen Sie einen Wert mit dem [!INCLUDE[tsql](../../includes/tsql-md.md)] SET-Anweisung aus, und zeigen Sie die Ergebnisse durch Aufrufen des UDTS **ToString** Methode für die Variable:  
+ Sie können mit Variablen arbeiten, indem Sie die DECLARE-Anweisung verwenden, um einem UDT eine Variable zuzuweisen. Die folgenden Anweisungen weisen mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] Set-Anweisung einen Wert zu und zeigen die Ergebnisse an, indem Sie die **ToString** -Methode des UDT in der Variablen aufrufen:  
   
-```  
+```sql  
 DECLARE @PointValue Point;  
 SET @PointValue = (SELECT PointValue FROM dbo.Points  
     WHERE ID = 2);  
@@ -119,7 +120,7 @@ PointValue
   
  Mit den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen wird dasselbe Ergebnis erzielt. Dabei wird für die Variablenzuweisung SELECT statt SET verwendet:  
   
-```  
+```sql  
 DECLARE @PointValue Point;  
 SELECT @PointValue = PointValue FROM dbo.Points  
     WHERE ID = 2;  
@@ -129,17 +130,17 @@ SELECT @PointValue.ToString() AS PointValue;
  Der Unterschied zwischen der Verwendung von SELECT statt SET für die Variablenzuweisung besteht darin, dass SELECT ermöglicht, mehrere Variable in einer SELECT-Anweisung zuzuweisen, während die SET-Syntax erfordert, dass jede Variable durch eine eigene SET-Anweisung zugewiesen wird.  
   
 ## <a name="comparing-data"></a>Vergleichen von Daten  
- Sie können Vergleichsoperatoren verwenden, um Werte in Ihrem UDT vergleichen, wenn Sie festgelegt haben die **IsByteOrdered** Eigenschaft **"true"** beim Definieren der Klasse. Weitere Informationen finden Sie unter [erstellen einen benutzerdefinierten Typ](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md).  
+ Sie können Vergleichs Operatoren zum Vergleichen von Werten im UDT verwenden, wenn Sie die **isbyteorder** -Eigenschaft beim Definieren der Klasse auf **true** festgelegt haben. Weitere Informationen finden Sie unter [Erstellen eines benutzerdefinierten Typs](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md).  
   
-```  
+```sql  
 SELECT ID, PointValue.ToString() AS Points   
 FROM dbo.Points  
 WHERE PointValue > CONVERT(Point, '2,2');  
 ```  
   
- Sie können vergleichen, interne Werte des UDTS unabhängig von der **IsByteOrdered** Einstellung aus, wenn die Werte selbst vergleichbar sind. Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung wählt die Zeilen aus, in denen X größer ist als Y:  
+ Sie können interne Werte des UDT unabhängig von der **isbyteorder** -Einstellung vergleichen, wenn die Werte selbst vergleichbar sind. Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung wählt die Zeilen aus, in denen X größer ist als Y:  
   
-```  
+```sql  
 SELECT ID, PointValue.ToString() AS PointValue   
 FROM dbo.Points  
 WHERE PointValue.X < PointValue.Y;  
@@ -147,7 +148,7 @@ WHERE PointValue.X < PointValue.Y;
   
  Vergleichsoperatoren können auch mit Variablen verwendet werden, wie in dieser Abfrage gezeigt, in der nach einem übereinstimmenden PointValue gesucht wird.  
   
-```  
+```sql  
 DECLARE @ComparePoint Point;  
 SET @ComparePoint = CONVERT(Point, '3,4');  
 SELECT ID, PointValue.ToString() AS MatchingPoint   
@@ -156,18 +157,18 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Aufrufen von UDT-Methoden  
- Sie können auch Methoden aufrufen, die im UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] definiert sind. Die **Punkt** -Klasse enthält drei Methoden, **Abstand**, **DistanceFrom**, und **DistanceFromXY**. In den codeauflistungen, die diese drei Methoden definieren, finden Sie unter [Codieren benutzerdefinierter Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Sie können auch Methoden aufrufen, die im UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] definiert sind. Die **Point** -Klasse enthält drei Methoden, **Distance**, **DistanceFrom**und **DistanceFromXY**. Die Code Auflistungen, die diese drei Methoden definieren, finden Sie unter [Programmieren benutzerdefinierter Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung ruft die **PointValue.Distance** Methode:  
+ Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung ruft die **PointValue. Distance** -Methode auf:  
   
-```  
+```sql  
 SELECT ID, PointValue.X AS [Point.X],   
     PointValue.Y AS [Point.Y],  
     PointValue.Distance() AS DistanceFromZero   
 FROM dbo.Points;  
 ```  
   
- Die Ergebnisse werden angezeigt, der **Abstand** Spalte:  
+ Die Ergebnisse werden in der Spalte **Entfernung** angezeigt:  
   
 ```  
 ID X  Y  Distance  
@@ -177,15 +178,15 @@ ID X  Y  Distance
  3  1 99 99.0050503762308  
 ```  
   
- Die **DistanceFrom** Methode akzeptiert ein Argument des **zeigen** -Datentyp, und zeigt die Entfernung vom angegebenen Punkt zum PointValue:  
+ Die **DistanceFrom** -Methode nimmt ein Argument des **Point** -Datentyps an und zeigt den Abstand zwischen dem angegebenen Punkt und dem PointValue-Wert an:  
   
-```  
+```sql  
 SELECT ID, PointValue.ToString() AS Pnt,  
    PointValue.DistanceFrom(CONVERT(Point, '1,99')) AS DistanceFromPoint  
 FROM dbo.Points;  
 ```  
   
- Die Ergebnisse zeigen die Ergebnisse von der **DistanceFrom** Methode für jede Zeile in der Tabelle:  
+ Die Ergebnisse zeigen die Ergebnisse der **DistanceFrom** -Methode für jede Zeile in der Tabelle an:  
   
 ```  
 ID Pnt DistanceFromPoint  
@@ -195,20 +196,20 @@ ID Pnt DistanceFromPoint
  3 1,9                90  
 ```  
   
- Die **DistanceFromXY** Methode übernimmt die Punkte einzeln als Argumente:  
+ Die **DistanceFromXY** -Methode nimmt die Punkte einzeln als Argumente an:  
   
-```  
+```sql  
 SELECT ID, PointValue.X as X, PointValue.Y as Y,   
 PointValue.DistanceFromXY(1, 99) AS DistanceFromXY   
 FROM dbo.Points  
 ```  
   
- Das Ergebnis ist identisch mit der **DistanceFrom** Methode.  
+ Das Resultset ist identisch mit der **DistanceFrom** -Methode.  
   
 ## <a name="updating-data-in-a-udt-column"></a>Aktualisieren von Daten in einer UDT-Spalte  
  Verwenden Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-UPDATE-Anweisung, um Daten in einer UDT-Spalte zu aktualisieren. Sie können auch eine Methode des UDTs verwenden, um den Status des Objekts zu aktualisieren. Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung aktualisiert eine einzelne Zeile in der Tabelle:  
   
-```  
+```sql  
 UPDATE dbo.Points  
 SET PointValue = CAST('1,88' AS Point)  
 WHERE ID = 3  
@@ -216,15 +217,15 @@ WHERE ID = 3
   
  Sie können auch UDT-Elemente getrennt aktualisieren. Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung aktualisiert nur die Y-Koordinate:  
   
-```  
+```sql  
 UPDATE dbo.Points  
 SET PointValue.Y = 99  
 WHERE ID = 3  
 ```  
   
- Wenn der UDT mit Bytereihenfolge auf definiert wurde **"true"** , [!INCLUDE[tsql](../../includes/tsql-md.md)] können die UDT-Spalte in einer WHERE-Klausel auswerten.  
+ Wenn der UDT mit Byte Reihenfolge auf **true**festgelegt wurde, [!INCLUDE[tsql](../../includes/tsql-md.md)] kann die UDT-Spalte in einer WHERE-Klausel auswerten.  
   
-```  
+```sql  
 UPDATE dbo.Points  
 SET PointValue = '4,5'  
 WHERE PointValue = '3,4';  
@@ -233,7 +234,7 @@ WHERE PointValue = '3,4';
 ### <a name="updating-limitations"></a>Einschränkungen für Updates  
  Mehrere Eigenschaften können mit [!INCLUDE[tsql](../../includes/tsql-md.md)] nicht gleichzeitig aktualisiert werden. Beispielsweise schlägt die folgende UPDATE-Anweisung fehl, und es wird ein Fehler ausgegeben, da Sie denselben Spaltennamen nicht zwei Mal in derselben UPDATE-Anweisung verwenden können.  
   
-```  
+```sql  
 UPDATE dbo.Points  
 SET PointValue.X = 5, PointValue.Y = 99  
 WHERE ID = 3  
@@ -241,7 +242,7 @@ WHERE ID = 3
   
  Um jeden Punkt einzeln zu aktualisieren, müssen Sie in der Point-UDT-Assembly eine Mutatormethode erstellen. Anschließend können Sie die Mutatormethode aufrufen, um das Objekt in einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-UPDATE-Anweisung zu aktualisieren, wie im Folgenden dargestellt:  
   
-```  
+```sql  
 UPDATE dbo.Points  
 SET PointValue.SetXY(5, 99)  
 WHERE ID = 3  
@@ -250,20 +251,20 @@ WHERE ID = 3
 ## <a name="deleting-data-in-a-udt-column"></a>Löschen von Daten in einer UDT-Spalte  
  Um Daten in einem UDT zu löschen, verwenden Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-DELETE-Anweisung. Die folgende Anweisung löscht alle Zeilen in der Tabelle, die den in der WHERE-Klausel angegebenen Kriterien entsprechen. Wenn Sie die WHERE-Klausel einer DELETE-Anweisung weglassen, werden alle Zeilen in der Tabelle gelöscht.  
   
-```  
+```sql  
 DELETE FROM dbo.Points  
 WHERE PointValue = CAST('1,99' AS Point)  
 ```  
   
  Sollen die Werte aus einer UDT-Spalte gelöscht werden, andere Zeilenwerte jedoch intakt bleiben, verwenden Sie die UPDATE-Anweisung. In diesem Beispiel wird für PointValue NULL festgelegt.  
   
-```  
+```sql  
 UPDATE dbo.Points  
 SET PointValue = null  
 WHERE ID = 2  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit benutzerdefinierten Typen in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
   
   

@@ -14,14 +14,25 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fa97cc647a194257441997032f2248a3ce9e5110
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056646"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687157"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Durchführen einer SQL Server Integration Service-Migrations Bewertung mit Datenmigrations-Assistent
+
+## <a name="prerequisites"></a>Voraussetzungen
+
+Zum Bewerten der SSIS-Pakete (SQL Server Integration Service) müssen die folgenden Komponenten mit Datenmigrations-Assistent installiert werden:
+
+- SQL Server Integrations Dienst mit der gleichen Version wie die SSIS-Pakete zur Bewertung.
+- Azure Feature Pack oder andere Komponenten von Drittanbietern, wenn diese Komponenten von SSIS-Paketen bewertet werden.  
+
+DMA muss mit **Administrator** Zugriff ausgeführt werden, um SSIS-Pakete im Paket Speicher zu bewerten.
+
+## <a name="performance-assessments"></a>Leistungsbewertungen
 
 Die folgenden schrittweisen Anweisungen unterstützen Sie bei der ersten Bewertung der Migration von SSIS-Paketen (SQL Server Integration Service) zu Azure SQL-Datenbank oder einer verwalteten Azure SQL-Datenbank-Instanz mithilfe von Datenmigrations-Assistent.
 
@@ -29,7 +40,7 @@ Die folgenden schrittweisen Anweisungen unterstützen Sie bei der ersten Bewertu
 
 1. Wählen Sie das Symbol **neu** (+) aus, und wählen Sie dann den Projekttyp **Bewertung** als **Integrations Dienst**aus.
 
-1. Legen Sie den Quell-und Ziel Servertyp fest.
+1. Legen Sie den Typ von Quell- und Zielserver fest.
 
     Wählen Sie die Quelle als **SQL Server**aus, und legen Sie den Ziel Servertyp als **Azure SQL-Datenbank** oder **verwaltete Azure SQL-Datenbank-Instanz**fest.
 
@@ -37,7 +48,7 @@ Die folgenden schrittweisen Anweisungen unterstützen Sie bei der ersten Bewertu
 
     ![Bewertung erstellen](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
-## <a name="connect-to-a-server"></a>Herstellen einer Verbindung mit einem Server
+## <a name="connect-to-a-server"></a>Verbinden mit einem Server
 
 1. Befolgen Sie die Standardoption, und klicken Sie auf **weiter** , um **Quellen auszuwählen**.
 1. Geben Sie den SQL Server-Instanznamen ein, wählen Sie den Authentifizierungstyp und die richtigen Verbindungs Eigenschaften
@@ -51,8 +62,8 @@ Die folgenden schrittweisen Anweisungen unterstützen Sie bei der ersten Bewertu
 1. Wählen Sie die zu Bewertungs baren SSIS-Paket Speichertypen aus, und klicken Sie dann auf **Hinzufügen**.
 ![Quelle hinzufügen](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. Wählen Sie **Quellen hinzufügen** aus, um das Menü verbindungsflyout zu öffnen, wenn Sie mehrere Ordner bewerten müssen.
-1. Klicken Sie auf **Bewertung starten**.
-  ![Start Bewertung](media/dma-assess-ssis/dma-assess-ssis-assess.png)
+1. Klicken Sie auf **Start Assessment**.
+  ![Bewertung starten](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
 ## <a name="view-results"></a>Anzeigen der Ergebnisse
 
@@ -64,4 +75,4 @@ Die Kategorie Kompatibilitätsprobleme bietet teilweise unterstützte oder nicht
 
 - [Migrieren von lokalen SSIS-Workloads zu SSIS in der ADF-Übersicht](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
 - [Migrieren von SQL Server Integration Services Paketen zu einer verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
-- [Erneutes Bereitstellen von SQL Server Integration Services Paketen in Azure SQL-Datenbank](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)
+- [Erneutes Bereitstellen von SQL Server Integration Services-Paketen für Azure SQL-Datenbank](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

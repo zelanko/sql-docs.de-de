@@ -1,6 +1,6 @@
 ---
-title: Netzwerkkonfiguration für die Appliance - Analytics Platform System | Microsoft-Dokumentation
-description: Das Analytics Platform System (APS)-Gerät ist erstellt und mit einem Satz Korrektur der IP-Adressen in der gesamten alle Server und die entsprechenden Geräte aus der IHV Herstellerstandort konfiguriert. Bei der Übermittlung des Geräts muss die externen (Ethernet) IP-Adressen neu konfiguriert werden, um den entsprechenden Kunden Data Center-Anforderungen zu erfüllen.
+title: Konfigurieren des Netzwerks für die Appliance
+description: Das Analytics Platform System (APS)-Gerät wird mit einem festen Satz von IP-Adressen auf allen Servern und anwendbaren Geräten aus dem Werk der IHV-Factory erstellt und konfiguriert. Bei der Übermittlung der Appliance muss die externe (Ethernet) IP-Adresse neu konfiguriert werden, damit Sie den Rechenzentrums Anforderungen des jeweiligen Kunden entspricht.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,55 +8,56 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9bc836e3e05525b18ea994e768f65012e5c3d945
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: af892cbb43b42953732bda59d371e3e22855413b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961470"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401408"
 ---
-# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Appliance-Netzwerkkonfiguration für Analytics Platform System
-Das Analytics Platform System (APS)-Gerät ist erstellt und mit einem Satz Korrektur der IP-Adressen in der gesamten alle Server und die entsprechenden Geräte aus der IHV Herstellerstandort konfiguriert. Bei der Übermittlung des Geräts muss die externen (Ethernet) IP-Adressen neu konfiguriert werden, um den entsprechenden Kunden Data Center-Anforderungen zu erfüllen.  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Geräte Netzwerkkonfiguration für Analytics Platform System
+Das Analytics Platform System (APS)-Gerät wird mit einem festen Satz von IP-Adressen auf allen Servern und anwendbaren Geräten aus dem Werk der IHV-Factory erstellt und konfiguriert. Bei der Übermittlung der Appliance muss die externe (Ethernet) IP-Adresse neu konfiguriert werden, damit Sie den Rechenzentrums Anforderungen des jeweiligen Kunden entspricht.  
   
 > [!NOTE]  
-> PDW-V1 erforderlich 8 IP-externe (*Kunden zugängliche*) Adressen, geben Sie die externe Konnektivität auf die einzelnen des Steuerelements rack-Knoten. PDW-2012 (V2) verbessert die Netzwerkkommunikation durch jede Komponente der Anwendung extern über IP-Adressen verfügbar zu machen. Dieser Ansatz bietet einen robusteren Entwurf, die reduziert die Kosten, erhöht die Flexibilität, und verbessert die datenverschiebung, das Laden von Daten und die Hadoop-Integration. Die Anzahl der erforderlichen IP-Adressen richtet sich nach der Anzahl von Knoten in der Appliance. Um diesem größeren Block von IP-Adressen zu unterstützen, sollte der Kunde ein getrenntes Subnetz für PDW einrichten. In diesem Subnetz werden genügend IP-Adressraum (bis zu 250 Adressen), um die Komponenten von bis zu 5 PDW-Racks zu berücksichtigen.  
+> PDW V1 benötigte eine externe (*kundenorientierte*) IP-Adresse, um externe Konnektivität für die einzelnen Steuerungs Regal Knoten bereitzustellen. PDW 2012 (v2) erweiterte Netzwerkkommunikation, indem jede Komponente der Appliance extern über IP-Adressen verfügbar gemacht wird. Dieser Ansatz bietet einen robusteren Entwurf, der die Kosten reduziert und die Flexibilität erhöht und die Daten Verschiebung, das Laden von Daten und die Hadoop-Integration verbessert. Die Anzahl der erforderlichen IP-Adressen hängt von der Anzahl der Knoten in der Appliance ab. Um diesen größeren Block von IP-Adressen zu berücksichtigen, sollte der Kunde ein separates Subnetz für PDW einrichten. Innerhalb dieses Subnetzes gibt es ausreichend IP-Adressraum (bis zu 250 Adressen), um die Komponenten von bis zu 5 PDW-Racks zu berücksichtigen.  
   
-Die **Netzwerkkonfiguration** auf der Seite können Sie die externe Netzwerkeinstellungen für den Knoten für Ihre Analytics Platform System Appliance anzeigen. Diese Seite ist schreibgeschützt.  
+Auf der Seite **Netzwerkkonfiguration** können Sie die extern ausgerichteten Netzwerkeinstellungen für die Knoten auf Ihrem Analytics Platform System-Gerät anzeigen. Diese Seite ist schreibgeschützt.  
   
 ![DWConfig, Anwendungsnetzwerk](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
-## <a name="to-update-the-network-configuration-on-your-appliance"></a>Um die Netzwerkkonfiguration auf Ihrem Gerät zu aktualisieren.  
-Ändern Sie die IP-Adressen der Fabric-Domäne und die Workload-Domäne durch Bearbeiten der **AplianceInfo.xml** -Datei, und klicken Sie dann Setup ausführen. Dies ist ein Offlinevorgang. Die PDW-Regionen werden automatisch während der Umstellung der IP-Adresse beendet.  
+## <a name="to-update-the-network-configuration-on-your-appliance"></a>So aktualisieren Sie die Netzwerkkonfiguration auf Ihrem Gerät  
+Ändern Sie die IP-Adressen der Fabric-Domäne und Arbeits Auslastungs Domäne, indem Sie die Datei " **aplianceinfo. XML** " Bearbeiten und dann Setup ausführen. Dies ist ein Offlinevorgang. Die PDW-Regionen werden während der Änderung der IP-Adresse automatisch beendet.  
   
 > [!NOTE]  
-> Domänennamen werden während des Setups bereitgestellt und werden bis zu 6 alphanumerische Zeichen, beginnend mit einem Buchstaben angegeben. Einem Benennungssystem nach häufigen erstellt eine Fabric-Domäne, die beginnend mit F#, eine PDW-arbeitsauslastung-Domäne dabei ist P. Dieses Format wird davon ausgegangen, dass in den Hilfethemen für die Datei ist jedoch nicht erforderlich. <!-- MISSING LINKS For more information about the domain structure, see [PDW Domain Security &#40;SQL Server PDW&#41;](../sqlpdw/pdw-domain-security-sql-server-pdw.md) and [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../hdinsight/understanding-the-security-model-of-the-hdinsight-region.md)  -->  
+> Domänen Namen werden während des Setups angegeben und als bis zu 6 alphanumerische Zeichen angegeben, beginnend mit einem Buchstaben. Ein häufiges Benennungs System erstellt eine Fabric-Domäne ab F, eine PDW-Arbeits Auslastungs Domäne, beginnend mit P. Dieses Format wird in den Themen der Hilfedateien angenommen, ist aber nicht erforderlich. <!-- MISSING LINKS For more information about the domain structure, see [PDW Domain Security &#40;SQL Server PDW&#41;](../sqlpdw/pdw-domain-security-sql-server-pdw.md) and [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../hdinsight/understanding-the-security-model-of-the-hdinsight-region.md)  -->  
   
-#### <a name="to-change-the-ip-addresses-of-the-analytics-platform-system"></a>So ändern Sie die IP-Adressen das Analytics Platform System  
+#### <a name="to-change-the-ip-addresses-of-the-analytics-platform-system"></a>So ändern Sie die IP-Adressen des Analytics-plattformsystems  
   
-1.  Mithilfe der **Remotedesktop** -Anwendung Herstellen einer Verbindung mit **HST01** mit dem Domänenadministratorkonto für die arbeitsauslastung.  
+1.  Stellen Sie mithilfe der **Remotedesktop** Anwendung eine Verbindung mit **HST01** her, indem Sie das Administrator Konto der Arbeitsauslastung verwenden.  
   
-2.  Öffnen Sie auf der Appliance-Infodatei auf dem Knoten HST01 **c:\pdwinst\media\AplianceInfo.xml**.  
+2.  Öffnen Sie auf dem Knoten HST01 die Geräte Informationsdatei unter **c:\pdwinst\media\aplianceinfo.XML**.  
   
     > [!NOTE]  
-    > Wenn die Datei nicht vorhanden ist, müssen möglicherweise eine neue Datei erstellt werden.  
+    > Wenn die Datei nicht vorhanden ist, muss möglicherweise eine neue Datei erstellt werden.  
   
-3.  Aktualisieren Sie die Ethernet-IP-Werte, je nach Bedarf, und speichern Sie die Datei.  
+3.  Aktualisieren Sie die Ethernet-IP-Werte nach Bedarf, und speichern Sie die Datei.  
   
-4.  Führen Sie in einem Eingabeaufforderungsfenster den folgenden Setupbefehl zum Aktualisieren der IP-Adressen für die PDW-Region, die mithilfe der P/F/H-Domänennamen und die Administratorkennwörter.  
+4.  Führen Sie in einem Eingabe Aufforderungs Fenster den folgenden Setup Befehl aus, um die IP-Adressen für die PDW-Region mit den P/F/H-Domänen Namen und den Administrator Kennwörtern zu aktualisieren.  
   
     ```  
     c:\pdwinst\media\setup.exe /action="ConfigureEthernet" /DomainAdminPassword="<password>" /ApplianceInfoFile="C:\PDWINST\media\ApplianceInfo.xml"  
     ```  
   
-## <a name="manufacturer-references"></a>Hersteller-Verweise  
-Weitere Informationen zu Dell-Geräte finden Sie unter:  
+## <a name="manufacturer-references"></a>Hersteller Verweise  
+Weitere Informationen zu Dell-Geräten finden Sie unter:  
   
--   PowerConnect Switch-Anweisungen [Dell PowerConnect 6200 Reihe System CLI Reference Guide](https://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
+-   PowerConnect-Switch-Anweisungen [Dell PowerConnect 6200 Series System CLI-Referenzhandbuch](https://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
   
--   iDRAC/BMC [integrierte Dell Remote Access Controller 7 (iDRAC7) Version 1.30.30-Benutzerhandbuch](https://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
+-   Idrac/BMC [Integrated Dell Remote Access Controller 7 (iDRAC7) Version 1.30.30 Benutzerhandbuch](https://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
   
--   Die Stromverteilereinheit **Dell gemessen Rack-PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
+-   PDU ist das Dell-gemessene **Rack-PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
-## <a name="see-also"></a>Siehe auch  
-[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Starten Sie die Configuration Manager &#40;Analytics-Platt Form System&#41;](launch-the-configuration-manager.md)  
   

@@ -2,23 +2,41 @@
 title: Neues in SSMA für Oracle (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/06/2019
+ms.date: 12/04/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 95b2ebd450fe54a2e02e5eed77a5259a8437e7ef
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: f196932ee9a37c9a814ad619b604520093b6098d
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745484"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74834278"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Neues in SSMA für Oracle (oracleto SQL)
 
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für Oracle-Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v85"></a>SSMA v 8.5
+
+Die Version v 8.5 von SSMA für Oracle wurde mit Unterstützung für Azure Active Directory Authentifizierung und grundlegender Unterstützung für JSON-Funktionen in SQL Server erweitert, sowie eine Reihe gezielter Korrekturen zur Verbesserung der Benutzerfreundlichkeit und Leistung.
+
+Außerdem wurde SSMA für Oracle durch folgende Unterstützung erweitert:
+
+* Begrenzen der Anzahl ausgewählter Objekte für die Ermittlung auf 990 [Oracle ' WHERE.. Das Limit der Klausel in (..) ist 1000 Elemente].
+* Datenmigration von RAW zu uniqueidentifier.
+* Die PARALLEL_ENABLE-Klausel wird verarbeitet.
+
+Schließlich bietet das Release v 8.5 von SSMA für Oracle nun Folgendes:
+
+* Verbesserte Leistung von konvertierten Paket Konstanten
+* Ein Update für Oracle Datenanbieter für .net auf Version 19.5.0
+
+> [!IMPORTANT]
+> Mit SSMA v 8.5 ist .NET 4.7.2 eine Installation, die Voraussetzung ist. Wenn Sie diese Version installieren müssen, können Sie die Lauf Zeit Datei [hier](https://dotnet.microsoft.com/download/dotnet-framework/net472)herunterladen.
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
@@ -27,7 +45,7 @@ Die Version Version 8.4 von SSMA für Oracle wurde durch gezielte Korrekturen er
 Außerdem wird in dieser Version von SSMA für Oracle eine Konvertierung für **SYS_REFCURSOR** als Parameter für die gespeicherte Prozedur out hinzugefügt.
 
 > [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
+> Bei den SSMA-Versionen 7,4 bis 8,4 ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -42,8 +60,8 @@ Das v 8.3-Release von SSMA für Oracle wurde durch gezielte Korrekturen verbesse
 
 Die Version 8.2 von SSMA für Oracle wurde wie folgt erweitert:
 
-* Unterstützung für dbms_output hinzufügen. aktivieren/deaktivieren.
-* Entfernen Sie CAST als float für BINARY_FLOAT-und BINARY_DOUBLE-Spalten in der standardmäßigen Daten Migrations Abfrage.
+* Fügen Sie Unterstützung für dbms_output hinzu. aktivieren/deaktivieren.
+* Entfernen Sie CAST als float für BINARY_FLOAT und BINARY_DOUBLE Spalten in der standardmäßigen Daten Migrations Abfrage.
 * Korrektur der Sequenz Aktualisierung, wenn sich der aktuelle Wert geändert hat.
 * Beheben Sie den Fehler im Zusammenhang mit der Fehlinterpretation von Pseudo Spalten (rowNum usw.), wenn eine Spalte mit demselben Namen vorhanden ist.
 * Korrektur eines Absturzes, der beim Umrechnen von Schleifen mit mehrdeutigem nicht aufgelösten Bezeichner auftritt
@@ -77,7 +95,7 @@ Das v 8.0-Release von SSMA für Oracle wurde durch gezielte Korrekturen verbesse
   >
   > ![SSMA für Oracle-Erweiterungspaket](../media/ssma-oracle-ext-pack.png)
 
-  Einige Features, einschließlich Tester und Server seitiger Datenmigration, werden nicht unterstützt, wenn Sie auf verwaltete Azure SQL-Datenbank-Instanz abzielen. Weitere Informationen finden Sie [hier](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
+  Einige Features, einschließlich Tester und Server seitiger Datenmigration, werden nicht unterstützt, wenn Sie auf verwaltete Azure SQL-Datenbank-Instanz abzielen. Weitere Informationen hierzu finden Sie [hier](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
 
 * **Korrektur Ratgeber**nach der Konvertierung. Weitere Informationen hierzu [finden Sie hier](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -145,7 +163,7 @@ Die Version Version 7.4 von SSMA für Oracle enthält die folgenden Änderungen:
 
 * SSMA für Oracle unterstützt jetzt Azure SQL Data Warehouse als Zielplattform für die Migration.
 
-  ![Fenster "Neues Projekt"](../media/new-project.png)
+  ![Fenster „Neues Projekt“](../media/new-project.png)
   * Unterstützt die Data Warehouse Speicheroptionen, wie in der folgenden Abbildung dargestellt:
 
   ![Speicheroptionen für Data Warehouse](../media/storage-options_red.png)
@@ -205,7 +223,7 @@ Die Version vom Mai 2016 von SSMA für Oracle enthält die folgenden Änderungen
   > SQL Server 2016 bietet keine Unterstützung für mehrere Oracle-Flash Features, einschließlich:
   >
   > * Abfrage der Oracle-flashbacktransaktion
-  > * DBMS_FLASHBACK-Paket
+  > * Paket DBMS_FLASHBACK
   > * Rückblenden der Transaktion
   > * Rückblenden von Daten Archive
   > * Tabelle "Flashback"
@@ -222,7 +240,7 @@ Die Version vom Mai 2016 von SSMA für Oracle enthält die folgenden Änderungen
 * Korrigieren von Zeichen Datentypen für Oracle korrigiert.
 * Fehler in globalen Einstellungen behoben.
   
-## <a name="march-2016"></a>2016. März
+## <a name="march-2016"></a>März 2016
 
 In der Vorschauversion von März 2016 von SSMA für Oracle wurde die Unterstützung für hinzugefügt:  
   
@@ -230,7 +248,7 @@ In der Vorschauversion von März 2016 von SSMA für Oracle wurde die Unterstütz
 * Migrieren von Oracle-Sicherheit auf Zeilenebene (mit einigen Einschränkungen).  
 * Migrieren von Oracle in Memory-Tabellen zu SQL Server columnstore.  
   
-## <a name="january-2016"></a>2016. Januar
+## <a name="january-2016"></a>Januar 2016
 
 Die Wartungsversion von SSMA für Oracle vom Januar 2014 enthält die folgenden Änderungen:  
   
@@ -256,7 +274,7 @@ Die Version vom Juli 2014 von SSMA für Oracle enthält die folgenden Änderunge
 * Reduzierte Berichts Größe um mehr als 25%.
 * Verbesserte Fehlermeldungen für nicht analysierte Konstrukte.  
   
-## <a name="april-2014"></a>2014. April
+## <a name="april-2014"></a>April 2014
 
 Die Version vom April 2014 von SSMA für Oracle enthält die folgenden Änderungen:  
   
@@ -265,11 +283,11 @@ Die Version vom April 2014 von SSMA für Oracle enthält die folgenden Änderung
 * Fehler bei der Konvertierung in Azure korrigiert.  
 * Fehler in Bezug auf unsichtbare Berichts Seiten in IE 10 behoben.  
   
-## <a name="january-2012"></a>2012. Januar
+## <a name="january-2012"></a>Januar 2012
 
 Die Version vom Januar 2012 von SSMA für Oracle fügt Unterstützung für RowType-und RecordType-Eingabeparameter hinzu, die standardmäßig NULL sind.  
   
-## <a name="july-2011"></a>2011. Juli
+## <a name="july-2011"></a>Juli 2011
 
 Die Version vom Juli 2011 von SSMA für Oracle enthält die folgenden Änderungen:  
   
@@ -290,7 +308,7 @@ Die Version vom April 2011 von SSMA für Oracle enthält die folgenden Änderung
 * Die Möglichkeit zur parallelen Installation von SSMA für Oracle v 5.0 (SxS) mit älteren Versionen von SSMA (v 4.0 und v 4.2) wurde hinzugefügt.
 * Unterstützung für die Berichterstellung von benutzerdefinierten Typen (einschließlich Untertyp, VARRAY, Tabelle, Tabelle, Objekttabelle und Objekt Sicht) und ihrer Verwendungen in PL/SQL-Blöcken mit speziellen Fehlermeldungen.  
 
-## <a name="july-2010"></a>2010. Juli
+## <a name="july-2010"></a>Juli 2010
 
 Die Version vom Juli 2010 von SSMA für Oracle hat Folgendes hinzugefügt:
 
@@ -306,7 +324,7 @@ Die Version vom Juni 2008 von SSMA für Oracle enthält die folgenden Änderunge
   
 * Es wurden Verbesserungen am Bewertungsbericht hinzugefügt, einschließlich zusätzlicher Informationen zu Synonymen, Rohdaten Quelle für die Analyse von Objekten, Panels und SQL Server logoentfernung und layoutpersistenz.  
 * Verbesserungen bei der Objekt Konvertierung:  
-  * Pakete DBMS_LOB, DBMS_SQL-Konvertierung hinzugefügt.  
+  * Pakete DBMS_LOB, DBMS_SQL Konvertierung hinzugefügt.  
   * Die Joins wurden überarbeitet.  
   * Änderung der Auflistung von Auflistungen und Einträgen, die Konvertierung von Datensätzen in einfachen Fällen, die für jedes Feld über separate Variablen freigegeben werden.  
   * Verbesserungen der Implementierung von Datensätzen und Sammlungen.  
@@ -327,6 +345,6 @@ Die Version vom August 2007 von SSMA für Oracle hat Folgendes hinzugefügt:
 * Mit einer neuen Synchronisierungs Funktion können Sie bestimmte Objekte mit SQL Server Datenbank synchronisieren.  
 * Neue Konvertierungsoptionen.  
   
-## <a name="april-2007"></a>April 2007
+## <a name="april-2007"></a>2007. April
 
 Die Version vom April 2007 von SSMA für Oracle war die erste Version.

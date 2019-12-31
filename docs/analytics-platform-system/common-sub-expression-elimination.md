@@ -1,6 +1,6 @@
 ---
-title: Allgemeine Teilausdruck erläutert in Analytics Platform System | Microsoft-Dokumentation
-description: Zeigt Beispiel Abfrage Verbesserung, die in Analytics Platform System CU7.3 eingeführt wurde
+title: Gemeinsamer Teil Ausdruck
+description: Zeigt eine Beispiel Abfrage Verbesserung an, die in Analytics Platform System Cu 7.3 eingeführt wurde.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 604f95e42cee59fb17f73b8f9e242c6466e60e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d05314f4d100e469c621d42a10ed89671b2bdd9c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961315"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401336"
 ---
-# <a name="common-subexpression-elimination-explained"></a>Allgemeine teilausdruckbeseitigung erläutert
+# <a name="common-subexpression-elimination-explained"></a>Erläuterung der allgemeinen Teil Ausdrucks Löschung
 
-APS-CU7.3 verbessert die abfrageleistung mit gängiger Unterausdrücke in SQL-Abfrageoptimierer. Die Verbesserung der verbessert die Abfragen auf zwei Arten. Der erste Vorteil ist die Möglichkeit, erkennen und zu eliminieren, z. B. Ausdrücken können SQL-Kompilierungszeit zu reduzieren. Der zweite, wichtigere-Vorteil ist, dass Verschiebevorgänge für Abfragedaten für diesen redundanten Teilausdrücken daher Ausführungszeit behoben wurden, für Abfragen wird schneller.
+APS Cu 7.3 verbessert die Abfrageleistung mit allgemeiner Teil Ausdrucks Löschung im SQL-Abfrageoptimierer. Die Verbesserung verbessert Abfragen auf zwei Arten. Der erste Vorteil ist die Möglichkeit, solche Ausdrücke zu identifizieren und zu entfernen, um die SQL-Kompilierungszeit zu verringern. Der zweite und wichtigere Vorteil besteht darin, dass Daten Verschiebungs Vorgänge für diese redundanten Teil Ausdrücke eliminiert werden, sodass die Ausführungszeit für Abfragen schneller wird.
 
 ```sql
 select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_name worst_performing
@@ -54,14 +55,14 @@ select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_nam
   order by asceding.rnk
   ;
 ```
-Erwägen Sie die obige Abfrage TPC-DS-Benchmark-Tools.  Klicken Sie in der obigen Abfrage wird die Unterabfrage ist identisch, aber die Order by-Klausel mit rank() über Funktion auf zwei unterschiedliche Arten sortiert wird. Vor CU7.3 diese Unterabfrage bewertet und zweimal ausgeführt, nachdem für aufsteigender Reihenfolge und einmal für eine absteigende Reihenfolge an, dass zwei datenverschiebungsvorgänge. Nach der Installation der APS-CU7.3, wird das Teil der Unterabfrage ausgewertet einmal daher reduzieren die datenverschiebung und die Abfrage schneller abgeschlossen.
+Sehen Sie sich die obige Abfrage von TPC-DS-Benchmark-Tools an.  In der obigen Abfrage ist die Unterabfrage identisch, aber die Order By-Klausel mit der Rang () over-Funktion ist auf zwei verschiedene Arten sortiert. Vor Cu 7.3 wird diese Unterabfrage zweimal ausgewertet und ausgeführt, einmal in aufsteigender Reihenfolge und einmal für absteigende Reihenfolge, sodass zwei Daten Verschiebungs Vorgänge durchgeführt werden. Nach der Installation von APS Cu 7.3 wird der Teil Abfrage Teil ausgewertet, um die Daten Verschiebung zu verringern und die Abfrage schneller abzuschließen.
 
-Wir eingeführt haben eine [featureschalter](appliance-feature-switch.md) "OptimizeCommonSubExpressions" aufgerufen wird, können Sie die Funktion testen, selbst nach einem upgrade auf APS CU7.3. Das Feature ist standardmäßig aktiviert und kann deaktiviert werden. 
+Wir haben einen [Funktions Schalter](appliance-feature-switch.md) mit dem Namen "optimizecommonsubexausdrucks" eingeführt, mit dem Sie das Feature auch nach dem Upgrade auf APS Cu 7.3 testen können. Die Funktion ist standardmäßig aktiviert, kann aber deaktiviert werden. 
 
 > [!NOTE] 
-> Änderungen an Werten für Feature-Switch erfordert einen Neustart des Diensts.
+> Änderungen an Funktions switchwerten erfordern einen Neustart des Dienstanbieter.
 
-Sie können die Beispielabfrage versuchen, durch den folgenden Tabellen in Ihrer testumgebung erstellen und Auswerten der Explain Plans für die oben genannten Abfrage. 
+Sie können die Beispiel Abfrage ausprobieren, indem Sie die folgenden Tabellen in der Testumgebung erstellen und den Erläuterungs Plan für die oben genannte Abfrage auswerten. 
 
 ```sql
 CREATE TABLE [dbo].[store_sales] (
@@ -117,6 +118,6 @@ CREATE TABLE [dbo].[item] (
 )
 WITH (CLUSTERED INDEX ( [i_item_sk] ASC ), DISTRIBUTION = REPLICATE);
 ```
-Wenn Sie sehen Sie sich die Explain Plans der Abfrage, Sie, dass vor dem CU7.3 sehen (oder wenn der featureschalter deaktiviert ist) wird die Abfrage enthält 17 Gesamtanzahl von Vorgängen und nach CU7.3 (oder mit der featureschalter aktiviert) die gleiche Abfrage zeigt 9 Gesamtanzahl von Vorgängen. Wenn Sie nur die datenverschiebungsvorgänge zählen, sehen Sie sich, dass es sich bei der vorherige Plan vier Move-Vorgänge im Vergleich zu zwei Move-Vorgänge in den neuen Plan verfügt. Die neue Abfrageoptimierer konnte zwei datenverschiebungsvorgänge reduzieren, indem Sie die temporäre Tabelle, die sie bereits erstellt haben, mit der neue Plan, wodurch die abfragelaufzeit wiederverwenden. 
+Wenn Sie sich den Erläuterungs Plan der Abfrage ansehen, werden Sie feststellen, dass die Abfrage vor Cu 7.3 (oder wenn der Funktions Schalter deaktiviert ist) 17 Gesamtanzahl von Vorgängen und nach Cu 7.3 (oder mit aktiviertem Funktions Wechsel) eine Gesamtanzahl von Vorgängen anzeigt. Wenn Sie nur die Daten Verschiebungs Vorgänge zählen, sehen Sie, dass der vorherige Plan vier Verschiebe Vorgänge im Vergleich zu zwei Verschiebungs Vorgängen im neuen Plan umfasst. Der neue Abfrageoptimierer konnte zwei Daten Verschiebungs Vorgänge verringern, indem er die temporäre Tabelle wieder verwendet, die bereits mit dem neuen Plan erstellt wurde, wodurch die Abfrage Laufzeit verringert wird. 
 
 

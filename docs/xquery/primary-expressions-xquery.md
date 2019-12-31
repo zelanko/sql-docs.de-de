@@ -1,5 +1,5 @@
 ---
-title: Primärausdrücke (XQuery) | Microsoft-Dokumentation
+title: Primäre Ausdrücke (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946382"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200516"
 ---
 # <a name="primary-expressions-xquery"></a>Primärausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +36,17 @@ ms.locfileid: "67946382"
   
 |Entitätsverweis|repräsentiert|  
 |----------------------|----------------|  
-|&lt;|\<|  
-|&gt;|>|  
-|&amp;|&|  
-|&quot;|"|  
-|&apos;|'|  
+|`&lt;`|\<|  
+|`&gt;`|>|  
+|`&amp;`|&|  
+|`&quot;`|"|  
+|`&apos;`|'|  
   
- Ein Zeichenfolgenliteral kann auch einen Zeichenverweis enthalten, einen Verweis im XML-Stil auf ein Unicode-Zeichen, das durch seinen dezimalen oder hexadezimalen Codepunkt identifiziert wird. Beispielsweise kann das Euro-Symbol dargestellt werden, durch den Zeichenverweis "&\#8364;".  
+ Ein Zeichenfolgenliteral kann auch einen Zeichenverweis enthalten, einen Verweis im XML-Stil auf ein Unicode-Zeichen, das durch seinen dezimalen oder hexadezimalen Codepunkt identifiziert wird. Beispielsweise kann das Euro-Symbol durch den Zeichen Verweis "&\#8364;" dargestellt werden.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet XML, Version 1.0, als Basis für die Analyse.  
+>  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet XML, Version 1.0, als Basis für die Analyse.  
   
 ### <a name="examples"></a>Beispiele  
  Die folgenden Beispiele veranschaulichen die Verwendung von Literalen sowie Entitäts- und Zeichenverweisen.  
@@ -64,7 +65,7 @@ GO
 ```  
 DECLARE @var XML  
 SET @var = ''  
-SELECT @var.query(' <SalaryRange>Salary > 50000 and < 100000</SalaryRange>')  
+SELECT @var.query(' <SalaryRange>Salary &gt; 50000 and &lt; 100000</SalaryRange>')  
 GO  
 ```  
   
@@ -93,7 +94,7 @@ Go
   
  `<a>I don't know</a>`  
   
- Die integrierten booleschen Funktionen **True()"** und **" false()""** , zur Darstellung boolescher Werte verwendet werden können, wie im folgenden Beispiel gezeigt.  
+ Die integrierten booleschen Funktionen " **true ()** " und " **false ()**" können zur Darstellung von booleschen Werten verwendet werden, wie im folgenden Beispiel gezeigt.  
   
 ```  
 DECLARE @var XML  
@@ -130,7 +131,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- Sie können der SQL:Variable()-Funktion-Erweiterung verwenden, zum Verweisen auf SQL-Variablen, wie in der folgenden Abfrage gezeigt.  
+ Sie können die SQL: Variable ()-Erweiterungs Funktion verwenden, um auf SQL-Variablen zu verweisen, wie in der folgenden Abfrage gezeigt.  
   
 ```  
 DECLARE @price money  
@@ -151,12 +152,12 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   Modulimport wird nicht unterstützt.  
   
--   Externe Variablendeklarationen werden nicht unterstützt. Dies ist die Verwendung der [SQL:Variable()-Funktion](../xquery/xquery-extension-functions-sql-variable.md).  
+-   Externe Variablendeklarationen werden nicht unterstützt. Eine Lösung hierfür besteht darin, die [SQL: Variable ()-Funktion](../xquery/xquery-extension-functions-sql-variable.md)zu verwenden.  
   
 ## <a name="context-item-expressions"></a>Kontextelementausdrücke  
- Das Kontextelement ist das Element, das aktuell im Kontext eines path-Ausdrucks verarbeitet wird. Es wird in einer XML-Datentypinstanz ungleich NULL mit dem Dokumentknoten initialisiert. Sie können auch von der Nodes()-Methode, im Kontext von XPath-Ausdrücken oder []-Prädikaten geändert werden.  
+ Das Kontextelement ist das Element, das aktuell im Kontext eines path-Ausdrucks verarbeitet wird. Es wird in einer XML-Datentypinstanz ungleich NULL mit dem Dokumentknoten initialisiert. Sie kann auch von der Nodes ()-Methode im Kontext von XPath-Ausdrücken oder den []-Prädikaten geändert werden.  
   
- Das Kontextelement wird von einem Ausdruck zurückgegeben, der einen Punkt (.) enthält. Die folgende Abfrage wird beispielsweise aus jedem Element <`a`> auf das Vorhandensein des Attributs `attr`. Wenn das Attribut vorhanden ist, wird das Element zurückgegeben. Beachten Sie, dass die Bedingung im Prädikat angibt, dass der Kontextknoten durch einen einzelnen Punkt angegeben wird.  
+ Das Kontextelement wird von einem Ausdruck zurückgegeben, der einen Punkt (.) enthält. Die folgende Abfrage wertet z. b. jedes Element `a` aus, das für das vorhanden `attr`sein des Attributs <>. Wenn das Attribut vorhanden ist, wird das Element zurückgegeben. Beachten Sie, dass die Bedingung im Prädikat angibt, dass der Kontextknoten durch einen einzelnen Punkt angegeben wird.  
   
 ```  
 DECLARE @var XML  
@@ -172,7 +173,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>Funktionsaufrufe  
- Sie können integrierte XQuery-Funktionen aufrufen und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL:Variable() und SQL:Column() Funktionen. Eine Liste der implementierten Funktionen, finden Sie unter [XQuery-Funktionen für den Xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md).  
+ Sie können integrierte XQuery-Funktionen und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Funktionen "SQL: Variable ()" und "SQL: column ()" aufzurufen. Eine Liste der implementierten Funktionen finden Sie unter [XQuery-Funktionen für den XML-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md).  
   
 #### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Implementierungseinschränkungen sind zu beachten:  
@@ -181,7 +182,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
 -   Funktionsimport wird nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Konstruktion &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen  
+ [XML-Konstruktion &#40;XQuery-&#41;](../xquery/xml-construction-xquery.md)
+ 

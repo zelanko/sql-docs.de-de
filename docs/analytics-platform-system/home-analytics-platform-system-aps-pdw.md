@@ -1,5 +1,5 @@
 ---
-title: Dokumentation zu Analytics Platform System | Microsoft-Dokumentation
+title: Dokumentation
 description: Microsoft Analytics Platform System (APS) ist eine Datenplattform, die für Data Warehousing und Big Data-Analysen entwickelt wurde. Sie bietet nahtlose Datenintegration, schnelle Abfrageverarbeitung, hochgradig skalierbaren Speicher sowie eine unkomplizierte Wartung für End-to-End-Lösungen für Business Intelligence.
 author: mzaman1
 ms.prod: sql
@@ -8,18 +8,19 @@ ms.topic: conceptual
 ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 08f70ff74c5743f202867ae2a57adc1c6b9d677d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153357"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401095"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
 Microsoft Analytics Platform System (APS) ist eine Datenplattform, die für Data Warehousing und Big Data-Analysen entwickelt wurde. Sie bietet nahtlose Datenintegration, schnelle Abfrageverarbeitung, hochgradig skalierbaren Speicher sowie eine unkomplizierte Wartung für End-to-End-Lösungen für Business Intelligence.
 
-![Appliancearchitektur](media/architecture-high-level.png "appliance architecture")
+![Geräte Architektur](media/architecture-high-level.png "Geräte Architektur")
 
 APS hostet SQL Server Parallel Data Warehouse (PDW). Dabei handelt es sich um eine Software, die ein MPP-Data Warehouse (Massively Parallel Processing) ausführt.
 

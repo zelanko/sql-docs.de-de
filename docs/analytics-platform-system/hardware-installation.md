@@ -1,5 +1,5 @@
 ---
-title: Hardware Installation-Analytics Platform System (APS) | Microsoft-Dokumentation
+title: Hardwareinstallation
 description: In diesem Artikel wird beschrieben, wie Sie die Hardware für Ihre SQL Server PDW Appliance verschieben, entpacken und installieren. Dieser Artikel dient nur zu Informationszwecken und soll Ihnen helfen, den Prozess zu verstehen. Ihre Appliance sollte entpackt, installiert und überprüft werden, bevor Sie auf Sie über geschaltet wird. Kundenbeteiligung ist für Elemente wie den Zugriff auf Rechenzentren, Stromversorgung und Ethernet-Verbindungen erforderlich.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dc57311ae38977643be697eea5fc095ce514b0d2
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176145"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401124"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Hardware Installation für das Analytics Platform System (APS)-Gerät
 In diesem Artikel wird beschrieben, wie Sie die Hardware für Ihre SQL Server PDW Appliance verschieben, entpacken und installieren. Dieser Artikel dient nur zu Informationszwecken und soll Ihnen helfen, den Prozess zu verstehen. Ihre Appliance sollte entpackt, installiert und überprüft werden, bevor Sie auf Sie über geschaltet wird. Kundenbeteiligung ist für Elemente wie den Zugriff auf Rechenzentren, Stromversorgung und Ethernet-Verbindungen erforderlich.  

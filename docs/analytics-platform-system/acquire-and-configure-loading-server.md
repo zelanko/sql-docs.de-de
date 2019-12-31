@@ -1,6 +1,6 @@
 ---
-title: Abrufen und Konfigurieren eines ladenden Servers – Parallel Data Warehouse | Microsoft-Dokumentation
-description: Dieser Artikel beschreibt die zum Abrufen und Konfigurieren eines ladenden Servers als Windows-System nicht zur Appliance gehört zum Senden von Daten lädt, Parallel Data Warehouse (PDW).
+title: 'Abrufen #a0 Konfigurieren des Lade Servers'
+description: In diesem Artikel wird beschrieben, wie Sie einen Lade Server als nicht-Appliance-Windows-System zum Übermitteln von Daten Ladevorgängen an parallele Data Warehouse (PDW) erwerben und konfigurieren.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,108 +8,109 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d753237841695786de3d368bebf9a606875ea634
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961612"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401484"
 ---
-# <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Abrufen und Konfigurieren eines ladenden Servers für Parallel Data Warehouse
-Dieser Artikel beschreibt die zum Abrufen und Konfigurieren eines ladenden Servers als Windows-System nicht zur Appliance gehört zum Senden von Daten lädt, Parallel Data Warehouse (PDW).  
+# <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Einen Lade Server für parallele Data Warehouse erwerben und konfigurieren
+In diesem Artikel wird beschrieben, wie Sie einen Lade Server als nicht-Appliance-Windows-System zum Übermitteln von Daten Ladevorgängen an parallele Data Warehouse (PDW) erwerben und konfigurieren.  
   
 ## <a name="Basics"></a>Grundlagen  
-Der Server laden:  
+Der Lade Server:  
   
--   Muss keine werden von einem einzelnen Server. Sie können gleichzeitig mehrere beim Laden von Servern mit laden.  
+-   Es muss sich nicht um einen einzelnen Server handeln. Sie können gleichzeitig mit mehreren Lade Servern laden.  
   
--   Bereitgestellt und von Ihren eigenen IT-Team verwaltet wird. Möglicherweise verfügen Sie bereits einen Server oder Server, die zum Laden von Daten in PDW verwendet werden können.  
+-   Wird von Ihrem eigenen IT-Team bereitgestellt und verwaltet. Möglicherweise verfügen Sie bereits über einen Server oder Server, der zum Laden von Daten in PDW verwendet werden kann.  
   
--   Befindet sich in Ihren eigenen Rack nicht zur Appliance gehört, und kann nicht in der Analytics Platform System Appliance platziert werden.  
+-   Befindet sich in einem eigenen nicht-Appliance-Rack und kann nicht innerhalb der Analytics Platform System Appliance platziert werden.  
   
--   An das Gerät über das Gerät InfiniBand-Netzwerk oder über Ethernet ist verbunden werden. Es wird empfohlen, für die Leistung zu erzielen InfiniBand verwenden.  
+-   Ist über das InfiniBand-Netzwerk der Anwendung oder über Ethernet mit dem Gerät verbunden. Aus Leistungsgründen wird die Verwendung von InfiniBand empfohlen.  
   
--   Befindet sich in der Domäne Ihren eigenen Kunden, nicht der Domäne der Anwendung. Es ist keine Vertrauensstellung zwischen Ihrem Kunden und der Appliance-Domäne.  
+-   Befindet sich in ihrer eigenen Kunden Domäne und nicht in der Appliance-Domäne. Zwischen Ihrer Kunden Domäne und der Appliance-Domäne besteht keine Vertrauensstellung.  
   
-## <a name="Step1"></a>Schritt 1: Bestimmen der kapazitätsanforderungen  
-Das System laden kann als eine oder mehrere beim Laden von Servern entworfen werden, die paralleler Ladevorgänge ausführen. Jeder Server laden muss nicht nur für das Laden von verwendet werden, solange sie die Leistung und Speicher die Anforderungen Ihrer Workload behandeln soll.  
+## <a name="Step1"></a>Schritt 1: Ermitteln der Kapazitätsanforderungen  
+Das Ladesystem kann als ein oder mehrere Lade Server entworfen werden, von denen gleichzeitige Lasten durchgeführt werden. Jeder Lade Server muss ausschließlich zum Laden dediziert werden, solange er die Leistungs-und Speicheranforderungen Ihrer Arbeitsauslastung übernimmt.  
   
-Die Systemanforderungen für einen Server laden hängt der eigenen arbeitsauslastung, fast vollständig. Verwenden der [Laden von Server-Kapazität Planungsarbeitsblatt](loading-server-capacity-planning-worksheet.md) um zu ermitteln, welche kapazitätsanforderungen.  
+Die Systemanforderungen für einen Lade Server hängen fast vollständig von ihrer eigenen Arbeitsauslastung ab. Verwenden Sie das [Arbeitsblatt Laden der Server Kapazitätsplanung](loading-server-capacity-planning-worksheet.md) , um Ihre Kapazitätsanforderungen zu ermitteln.  
   
-## <a name="Step2"></a>Schritt 2: Der Server abrufen  
-Nun, da Sie Ihre kapazitätsanforderungen besser verstehen, können Sie planen, die Server und Netzwerkkomponenten, die Sie erwerben oder bereitstellen müssen. Integrieren Sie die folgende Liste von Anforderungen in den purchasing-Plan, und klicken Sie dann den Server zu erwerben oder Bereitstellen eines vorhandenen Servers.  
+## <a name="Step2"></a>Schritt 2: Abrufen des sservers  
+Nachdem Sie nun ihre Kapazitätsanforderungen besser verstanden haben, können Sie die Server und Netzwerkkomponenten planen, die Sie erwerben oder bereitstellen müssen. Fügen Sie die folgende Liste von Anforderungen in Ihren Kauf Plan ein, und erwerben Sie dann Ihren Server, oder stellen Sie einen vorhandenen Server bereit.  
   
-### <a name="R"></a>Softwareanforderungen  
+### <a name="R"></a>Software Anforderungen  
 Unterstützte Betriebssysteme:  
   
--   WindowsServer 2012 oder Windows Server 2012 R2. Diese Betriebssysteme müssen den FDR-Netzwerkadapter.  
+-   Windows Server 2012 oder Windows Server 2012 R2. Diese Betriebssysteme erfordern den-Netzwerkadapter für die Netzwerkkarte.  
   
--   Windows Server 2008 R2. Dieses Betriebssystem wird der DDR-Netzwerkadapter benötigt.  
+-   Windows Server 2008 R2. Dieses Betriebssystem erfordert den DDR-Netzwerkadapter.  
   
-Der Server muss das Gebietsschema EN-US verwenden, um das Laden der Command-Line Dwloader-Tool zu verwenden. Dwloader unterstützt keine anderen Gebietsschemas.  
+Der Server muss das Gebiets Schema "en-US" verwenden, um das Befehlszeilen-Lade Tool "" dwloader "zu verwenden. "" dwloader "unterstützt keine anderen Gebiets Schemas.  
   
-### <a name="networking-requirements-for-windows-server-2012-and-windows-server-2012-r2"></a>Netzwerkanforderungen für WindowsServer 2012 und Windows Server 2012 R2  
-Auch für das Laden nicht erforderlich ist, ist InfiniBand empfohlene Verbindungstyp, zum Laden von Servern. Verwenden Sie für eine optimale Leistung Windows Server 2012 oder Windows Server 2012 R2 und der ein FDR InfiniBand-Netzwerkadapter, um den Server Laden mit dem Gerät InfiniBand-Netzwerk zu verbinden.  
+### <a name="networking-requirements-for-windows-server-2012-and-windows-server-2012-r2"></a>Netzwerk Anforderungen für Windows Server 2012 und Windows Server 2012 R2  
+Obwohl das Laden nicht erforderlich ist, ist InfiniBand der empfohlene Verbindungstyp zum Laden von Servern. Verwenden Sie zum erzielen der optimalen Leistung Windows Server 2012 oder Windows Server 2012 R2 und den FDR InfiniBand-Netzwerkadapter, um den Lade Server mit dem Gerät InfiniBand-Netzwerk zu verbinden.  
   
-So bereiten Sie für eine Windows Server 2012 oder Windows Server 2012 R2 InfiniBand-Verbindung Folgendes vor:  
+So bereiten Sie eine Windows Server 2012-oder Windows Server 2012 R2 InfiniBand-Verbindung vor:  
   
-1.  Planen den Server im rack nah an das Gerät, damit Sie es an das Gerät eine Verbindung herstellen können InfiniBand wechselt. Weitere Informationen von Mellanox-Technologien zu InfiniBand, finden Sie im Whitepaper, [Einführung in die InfiniBand](https://www.mellanox.com/pdf/whitepapers/IB_Intro_WP_190.pdf).  
+1.  Planen Sie, den Server so nah wie möglich zu verbinden, damit Sie ihn mit den InfiniBand-Switches der Anwendung verbinden können. Weitere Informationen von Mellanox-Technologien zu InfiniBand finden Sie im Whitepaper [Introduction to InfiniBand (Einführung in InfiniBand](https://www.mellanox.com/pdf/whitepapers/IB_Intro_WP_190.pdf)).  
   
-2.  Erwerben Sie einen Netzwerkadapter von Mellanox ConnectX-3 ein FDR InfiniBand Single- oder dual-Port. Es wird empfohlen, erwerben die Netzwerkkarte mit zwei Ports für die Fehlertoleranz während der Datenübertragung. Ein zwei Port-Netzwerkadapter ist für hohe Verfügbarkeit erforderlich.  
+2.  Erwerben Sie den Netzwerkadapter "Mellanox ConnectX-3 FDR InfiniBand Single" oder "Dual Port". Es wird empfohlen, den Netzwerkadapter mit zwei Ports für die Fehlertoleranz während der Datenübertragung zu erwerben. Für hohe Verfügbarkeit ist ein Netzwerkadapter mit zwei Ports erforderlich.  
   
-3.  Erwerben Sie 2 ein FDR InfiniBand-Kabel für eine Karte mit zwei Ports bzw. 1 ein FDR InfiniBand-Kabel für einen einzelnen Port-Karte. Die Kabel ein FDR InfiniBand werden den Laden von Server mit Appliance InfiniBand-Netzwerk verbunden. Die Länge der Kabel hängt von den Abstand zwischen dem Server geladen und die Einheiten InfiniBand-Switches, gemäß Ihrer Umgebung ab.  
+3.  Erwerben Sie 2 FDR InfiniBand-Kabel für eine Dual-Port-Karte oder 1 FDR InfiniBand-Kabel für eine einzelne Port Karte. Die FDR InfiniBand-Kabel verbinden den Lade Server mit dem Gerät InfiniBand-Netzwerk. Die Länge des Kabels hängt von der Entfernung zwischen dem Lade Server und den InfiniBand-Switches der Anwendung gemäß ihrer Umgebung ab.  
   
-## <a name="Step3"></a>Schritt 3: Verbinden Sie den Server mit InfiniBand-Netzwerke  
-Verwenden Sie diese Schritte, um den Server Laden mit dem InfiniBand-Netzwerk zu verbinden. Wenn der Server nicht das InfiniBand-Netzwerk verwendet wird, überspringen Sie diesen Schritt.  
+## <a name="Step3"></a>Schritt 3: Verbinden des Servers mit den InfiniBand-Netzwerken  
+Verwenden Sie diese Schritte, um den Lade Server mit dem InfiniBand-Netzwerk zu verbinden. Wenn der Server das InfiniBand-Netzwerk nicht verwendet, überspringen Sie diesen Schritt.  
   
-1.  Rack Server nah an das Gerät, damit Sie das Gerät InfiniBand-Netzwerk hergestellt werden können.  
+1.  Verbinden Sie den Server in der Nähe des Geräts, sodass Sie es mit dem InfiniBand-Netzwerkgerät verbinden können.  
   
-2.  Installieren Sie den InfiniBand Mellanox ConnectX-3 ein FDR InfiniBand-Netzwerkadapter in den Server laden.  
+2.  Installieren Sie den InfiniBand-Netzwerkadapter "Mellanox ConnectX-3" in den Lade Server.  
   
-3.  Verwenden Sie die FDR-Kabel, um dem InfiniBand-Netzwerkadapter mit einer der beiden InfiniBand Schalter in das erste Gerät Rack herstellen.  
+3.  Verwenden Sie die FDR-Kabel, um den InfiniBand-Netzwerkadapter mit einem der beiden InfiniBand-Switches im ersten Geräte Gestell zu verbinden.  
   
-4.  Installieren Sie und konfigurieren Sie den entsprechenden Windows-Treiber für das InfiniBand-Netzwerkadapter.  
+4.  Installieren und konfigurieren Sie den entsprechenden Windows-Treiber für den InfiniBand-Netzwerkadapter.  
   
-    -   InfiniBand-Treibern für Windows werden durch die OpenFabrics Alliance, ein Branchenkonsortium von InfiniBand-Anbietern entwickelt.  Der richtige Treiber möglicherweise mit dem InfiniBand-Netzwerkadapter verteilt wurden. Wenn dies nicht der Fall ist, kann der Treiber www.openfabrics.org heruntergeladen werden.  
+    -   InfiniBand-Treiber für Windows werden von der openfabrics Alliance entwickelt, einem Branchen Konsortium von InfiniBand-Anbietern.  Der richtige Treiber wurde möglicherweise mit dem InfiniBand-Netzwerkadapter verteilt. Andernfalls kann der Treiber von www.openfabrics.org heruntergeladen werden.  
   
-5.  Konfigurieren Sie InfiniBand und DNS-Einstellungen für die Netzwerkadapter. Konfigurationsanweisungen, finden Sie unter [konfigurieren InfiniBand-Netzwerkadapter](configure-infiniband-network-adapters.md).  
+5.  Konfigurieren Sie die InfiniBand-und DNS-Einstellungen für die Netzwerkadapter. Konfigurations Anweisungen finden Sie unter [Konfigurieren von InfiniBand-Netzwerkadaptern](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Schritt 4: Installieren der Tools laden  
-Die Clienttools stehen zum Download aus dem Microsoft Download Center zur Verfügung. 
+## <a name="Step4"></a>Schritt 4: Installieren der Lade Tools  
+Die Client Tools stehen im Microsoft Download Center zum Download zur Verfügung. 
 
-Um Dwloader zu installieren, führen Sie die Installation Dwloader aus den Clienttools aus.
+Führen Sie zum Installieren von "dwloader die" dwloader-Installation über die Client Tools aus.
   
-Wenn Sie die Verwendung von Integration Services für das laden möchten, müssen Sie zum Installieren von Integration Services und die Integration Services-Zieladapter. Die Adapter sind in den Clienttools verfügbar.
+Wenn Sie beabsichtigen, Integration Services zum Laden zu verwenden, müssen Sie Integration Services und die Integration Services Ziel Adapter installieren. Die Adapter sind in den Client Tools verfügbar.
 
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>Schritt 5: Starten laden  
-Sie können nun damit beginnen, Laden von Daten. Weitere Informationen finden Sie in den folgenden Themen:  
+## <a name="Step5"></a>Schritt 5: Starten des Ladens  
+Sie sind nun bereit, mit dem Laden von Daten zu beginnen. Weitere Informationen finden Sie unter:  
   
-1.  [Dwloader laden-Befehlszeilentool](dwloader.md)  
+1.  ["dwloader-Befehlszeilen Lade Tool](dwloader.md)  
   
-2.  [– Übersicht](load-overview.md)  
+2.  [Übersicht laden](load-overview.md)  
   
 ## <a name="performance"></a>Leistung  
-Aktivieren Sie für optimale Leistung auf Windows Server 2012 und höher laden Instant File Initialization, damit bei Daten überschrieben werden, das Betriebssystem keine vorhandene Daten mit Nullen überschrieben werden. Ist dies ein Sicherheitsrisiko dar, da frühere Daten auf den Datenträgern noch vorhanden ist, werden Sie sicher, dass die sofortige Dateiinitialisierung zu deaktivieren.  
+Aktivieren Sie die sofortige Datei Initialisierung, damit Daten überschrieben werden, wenn Daten überschrieben werden, damit die Leistung am besten in Windows Server 2012 und höher ist. Wenn dies ein Sicherheitsrisiko ist, weil vorherige Daten auf den Datenträgern weiterhin vorhanden sind, sollten Sie die sofortige Datei Initialisierung deaktivieren.  
   
-## <a name="Security"></a>Security-Hinweise  
-Da die zu ladenden Daten nicht auf dem Gerät gespeichert sind, ist Ihr IT-Team zuständig für die Verwaltung aller Aspekte der Sicherheit für Ihre Daten zu laden. Beispielsweise schließt dies die Verwaltung der Sicherheit der Daten zu laden, die Sicherheit des Servers verwendet, um Lasten zu speichern und die Sicherheit der Netzwerkinfrastruktur, die den Server Laden mit der SQL Server-PDW-Appliance verbindet.  
+## <a name="Security"></a>Sicherheitshinweise  
+Da die zu ladenden Daten nicht auf dem Gerät gespeichert sind, ist das IT-Team für die Verwaltung aller Aspekte der Sicherheit Ihrer Daten verantwortlich. Dies umfasst z. b. die Verwaltung der Sicherheit der zu ladenden Daten, die Sicherheit des Servers, der zum Speichern von Lasten verwendet wird, und die Sicherheit der Netzwerkinfrastruktur, die den Lade Server mit der SQL Server PDW Appliance verbindet.  
   
 > [!IMPORTANT]  
-> Es ist besonders wichtig, um jedem Laden von Server zu sichern, die Command-Line laden Dwloader-Tool verwendet. Wenn Dwloader Daten geladen wird, authentifiziert es zuerst mit den Steuerelementknoten aus, und klicken Sie dann nach der erfolgreichen Authentifizierung es verschiebt Daten vom Server laden direkt auf den Computeknoten über Datenkanäle. Überprüfung des Zertifikats erfolgt nicht während der Hand-Schütteln zwischen jedem Laden von Server und jeder Compute-Knoten. Dadurch wird die Compute-Knoten verfügbar gemacht, potenziellen Man-in-the-Middle-Angriffe auf jeden Datenkanal beim Laden. Diese Angriffe können manipulierte Daten und/oder Offenlegung von Informationen führen.  
+> Es ist besonders wichtig, jeden Lade Server zu sichern, der das Befehlszeilen-Lade Tool von "dwloader verwendet. Wenn "dwloader Daten lädt, wird es zuerst mit dem Steuer Knoten authentifiziert, und nach erfolgreicher Authentifizierung werden Daten vom Lade Server direkt auf die Computeknoten über Datenkanäle verschoben. Die Zertifikat Überprüfung erfolgt nicht während des Handshakes zwischen jedem Lade Server und jedem Computeknoten. Dadurch bleiben die Computeknoten für potenzielle man-in-the-Middle-Angriffe auf den einzelnen Datenkanälen beim Laden verfügbar. Diese Angriffe können dazu führen, dass Daten und/oder Informationen offengelegt werden.  
   
-Um Sicherheitsrisiken mit Ihren Daten zu reduzieren, empfehlen wir Folgendes:  
+Um die Sicherheitsrisiken für Ihre Daten zu verringern, wird Folgendes empfohlen:  
   
--   Bestimmen Sie ein Windows-Konto, das ausschließlich zum Laden von Daten in PDW verwendet wird. Weisen Sie diesem Konto Berechtigungen für den Load-Speicherort und an keiner anderen Stelle verfügen.  
+-   Legen Sie ein Windows-Konto fest, das ausschließlich zum Laden von Daten in PDW verwendet wird. Erlauben Sie diesem Konto, Berechtigungen für den Lade Speicherort und nirgendwo sonst zu haben.  
   
--   Legen Sie einen PDW-Benutzer, die über Berechtigungen zum Laden von Daten verfügt. Abhängig von Ihren sicherheitsanforderungen können Sie einem bestimmten Benutzer pro Datenbank verfügen.  
+-   Legen Sie einen PDW-Benutzer fest, der über Berechtigungen zum Laden von Daten verfügt. Abhängig von Ihren Sicherheitsanforderungen können Sie über einen bestimmten Benutzer pro Datenbank verfügen.  
   
--   Vorgänge auf dem Server laden können kein UNC-Pfad aus dem Daten von außerhalb des internen vertrauenswürdigen Netzwerks akzeptieren. Und ein Angreifer im Netzwerk oder mit der Möglichkeit zum beeinflussen der namensauflösung abfangen oder in der SQL Server PDW gesendete Daten geändert werden kann. Dies stellt ein Risiko der Offenlegung von Manipulationen und Informationen. Manipulationen soll verringert werden, indem Sie ohne Signaturen für die Verbindung. Um dieses Risiko zu verringern, legen Sie die folgende Gruppenrichtlinie-Option in **Sicherheitseinstellungen\Lokale Richtlinien\sicherheitsoptionen** auf dem Server geladen:  **Microsoft-Netzwerkclient: Signieren Sie Kommunikation digital (immer): aktiviert**  
+-   Vorgänge auf dem Lade Server können einen UNC-Pfad akzeptieren, von dem Daten aus außerhalb des vertrauenswürdigen internen Netzwerks abgerufen werden. Und ein Angreifer im Netzwerk oder die Möglichkeit, die Namensauflösung zu beeinflussen, kann die an die SQL Server PDW gesendeten Daten abfangen oder ändern. Dies stellt ein Risiko zur Offenlegung von Manipulationen und Informationen dar. Manipulationen sollten durch das Signieren der Verbindung verhindert werden. Um dieses Risiko zu mindern, legen Sie die folgende Gruppenrichtlinien Option unter **Sicherheitseinstellungen\Lokale Richtlinien\Sicherheitsoptionen** auf dem Lade Server fest: **Microsoft-Netzwerkclient: Kommunikation digital signieren (immer): aktiviert**  
   
--   Deaktivieren Sie sofortige Dateiinitialisierung auf Windows Server 2012 und höher. Dies ist ein Kompromiss zwischen Leistung und Sicherheit, wie im Abschnitt Leistung. Sie müssen entscheiden, was am besten gemäß Ihren sicherheitsanforderungen ist.  
+-   Deaktivieren Sie die sofortige Datei Initialisierung auf Windows Server 2012 und höher. Dies ist ein Kompromiss zwischen Leistung und Sicherheit, wie im Abschnitt zur Leistung erläutert. Sie müssen entscheiden, was für Ihre Sicherheitsanforderungen am besten geeignet ist.  
   
-## <a name="see-also"></a>Siehe auch  
-[Sichern und Wiederherstellen – Übersicht](backup-and-restore-overview.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Übersicht über die Sicherung und Wiederherstellung](backup-and-restore-overview.md)  
   

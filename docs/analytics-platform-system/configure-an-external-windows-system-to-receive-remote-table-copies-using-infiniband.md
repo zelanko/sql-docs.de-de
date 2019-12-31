@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren von Windows zum Empfangen von remotetabellenkopien - Parallel Data Warehouse | Microsoft-Dokumentation
-description: Beschreibt das erwerben und konfigurieren Sie eine nicht zur Appliance gehört Windows-System über das InfiniBand-Netzwerk für die Verwendung mit der remotetabellenkopie-Features in Parallel Data Warehouse verbunden sind. Das Windows-System hostet SQL Server-Datenbank, die die remotetabellenkopie aus einer SQL Server-PDW-Datenbank empfängt. Dabei handelt es sich aus der Appliance inbegriffene mit dem Gerät InfiniBand-Netzwerk verbunden.
+title: Konfigurieren von Windows zum Empfangen von Remote Tabellen Kopien
+description: Hier wird beschrieben, wie ein nicht-Appliance-Windows-System, das über das InfiniBand-Netzwerk verbunden ist, für die Verwendung mit dem Feature zum Kopieren von Remote Tabellen parallel Data Warehouse verwendet wird. Das Windows-System hostet die SQL Server Datenbank, die die Remote Tabellen Kopie aus einer SQL Server PDW-Datenbank empfängt. Sie wird separat von der Appliance gekauft und mit dem InfiniBand-Netzwerk der Anwendung verbunden.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,58 +8,59 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 428dc5b4edda91f60a09a52c0326f881f257b32c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961307"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401312"
 ---
-# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Konfigurieren eines externen Windows-Systems zum Empfangen von remotetabellenkopien mit InfiniBand - Parallel Data Warehouse
-Beschreibt das erwerben und konfigurieren ein nicht zur Appliance gehört Windows-System über das InfiniBand-Netzwerk für die Verwendung mit der remotetabellenkopie-Features in SQL Server PDW verbunden sind. Das Windows-System hostet SQL Server-Datenbank, die die remotetabellenkopie aus einer SQL Server-PDW-Datenbank empfängt. Dabei handelt es sich aus der Appliance inbegriffene mit dem Gerät InfiniBand-Netzwerk verbunden.  
+# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Konfigurieren eines externen Windows-Systems zum Empfangen von Remote Tabellen Kopien mithilfe von InfiniBand-parallel Data Warehouse
+In diesem Thema wird beschrieben, wie Sie ein nicht Appliance-Windows-System, das über das InfiniBand-Netzwerk verbunden ist, für die Verwendung mit dem Feature zum Kopieren von Remote Tabellen in SQL Server PDW Das Windows-System hostet die SQL Server Datenbank, die die Remote Tabellen Kopie aus einer SQL Server PDW-Datenbank empfängt. Sie wird separat von der Appliance gekauft und mit dem InfiniBand-Netzwerk der Anwendung verbunden.  
   
 > [!NOTE]  
-> Herstellen einer Verbindung über das InfiniBand-Netzwerk ist nicht für die Verwendung von remotetabellenkopie erforderlich. Herstellen einer Verbindung über das Ethernet-Netzwerk kann durchgeführt werden, wenn die Ethernet-Bandbreite Ihre Anforderungen erfüllt.  
+> Das Herstellen einer Verbindung über das InfiniBand-Netzwerk ist für die Verwendung der Remote Tabellen Kopie nicht erforderlich. Das Herstellen einer Verbindung über das Ethernet-Netzwerk kann erfolgen, wenn die Ethernet-Bandbreite Ihren Anforderungen entspricht.  
   
-Dieses Thema beschreibt eine Konfigurationsschritte für die Konfiguration von remote-Tabelle kopieren. Eine Liste der alle Konfigurationsschritte, finden Sie unter [Remotetabellenkopie](remote-table-copy.md)  
+In diesem Thema wird einer der Konfigurationsschritte zum Konfigurieren der Remote Tabellen Kopie beschrieben. Eine Liste aller Konfigurationsschritte finden Sie unter Kopieren von [Remote Tabellen](remote-table-copy.md) .  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Voraussetzungen  
 Bevor Sie das externe Windows-System konfigurieren, müssen Sie folgende Schritte ausführen:  
   
-1.  Geben Sie ein Windows-System, das die remote-Kopien erhält, oder erwerben.  
+1.  Erwerben Sie ein Windows-System, das die Remote Kopien erhält, oder stellen Sie es bereit.  
   
-2.  Einbauen Sie das Windows-System in das Steuerelement Rack, (sofern genügend Speicherplatz vorhanden ist), oder schließen Sie genug, um das Gerät, damit Sie das Gerät InfiniBand-Netzwerk hergestellt werden können.  
+2.  Gestell des Windows-Systems im Steuerungs Gestell (wenn ausreichend Speicherplatz vorhanden ist) oder so nah wie möglich für das Gerät, sodass Sie es mit dem InfiniBand-Netzwerkgerät verbinden können.  
   
-3.  InfiniBand-Kabel und einem InfiniBand-Netzwerkadapter vom Geräteanbieter Hardware zu erwerben. Es wird empfohlen, einen Netzwerkadapter mit zwei Ports für die Fehlertoleranz erwerben, wenn Sie die exportierten Daten zu empfangen. Ein Netzwerkadapter für die beiden wird empfohlen, aber es ist nicht erforderlich.  
+3.  Erwerben Sie InfiniBand-Kabel und einen InfiniBand-Netzwerkadapter vom Hersteller der Gerätehardware. Es wird empfohlen, beim Empfang der exportierten Daten einen Netzwerkadapter mit zwei Ports für die Fehlertoleranz zu erwerben. Ein Netzwerkadapter mit zwei Ports wird empfohlen, ist jedoch nicht zwingend erforderlich.  
   
-## <a name="HowToWindows"></a>Konfigurieren eines externen Windows-Systems zum Empfangen von Remotetabellenkopien  
-Um das externe Windows-System zu konfigurieren, verwenden Sie die folgenden Schritte aus:  
+## <a name="HowToWindows"></a>Konfigurieren eines externen Windows-Systems zum Empfangen von Remote Tabellen Kopien  
+Führen Sie die folgenden Schritte aus, um das externe Windows-System zu konfigurieren:  
   
-1.  Installieren Sie den InfiniBand-Netzwerkadapter in Ihr Windows-System.  
+1.  Installieren Sie den InfiniBand-Netzwerkadapter in Ihrem Windows-System.  
   
-2.  Verbinden Sie den InfiniBand-Netzwerkadapter mit dem wichtigsten InfiniBand-Switch in das Steuerelement Rack mit InfiniBand-Kabel.  
+2.  Verbinden Sie den InfiniBand-Netzwerkadapter mit dem InfiniBand-Hauptswitch im Steuerungs Gestell mithilfe von InfiniBand-Kabeln.  
   
-3.  Installieren Sie und konfigurieren Sie den entsprechenden Windows-Treiber für das InfiniBand-Netzwerkadapter.  
+3.  Installieren und konfigurieren Sie den entsprechenden Windows-Treiber für den InfiniBand-Netzwerkadapter.  
   
-    InfiniBand-Treibern für Windows werden durch die OpenFabrics Alliance, ein Branchenkonsortium von InfiniBand-Anbietern entwickelt.  Der richtige Treiber möglicherweise mit Ihrem Adapter InfiniBand verteilt wurden. Wenn dies nicht der Fall ist, kann der Treiber www.openfabrics.org heruntergeladen werden.  
+    InfiniBand-Treiber für Windows werden von der openfabrics Alliance entwickelt, einem Branchen Konsortium von InfiniBand-Anbietern.  Der richtige Treiber wurde möglicherweise mit dem InfiniBand-Adapter verteilt. Andernfalls kann der Treiber von www.openfabrics.org heruntergeladen werden.  
   
-4.  Konfigurieren Sie die IP-Adresse für jeden Port auf dem Adapter. SMP-Systemen sind erforderlich, um die statische IP-Adressen aus einem Bereich von reservierten Adressen zu diesem Zweck verwenden. Konfigurieren Sie den ersten Port entsprechend den folgenden Parametern:  
+4.  Konfigurieren Sie die IP-Adresse für jeden Port auf dem Adapter. SMP-Systeme sind erforderlich, um statische IP-Adressen aus einem Adressbereich zu verwenden, der für diesen Zweck reserviert ist. Konfigurieren Sie den ersten Port gemäß den folgenden Parametern:  
   
-    -   IP-Netzwerkadresse: 172.16.132.x  
-  
-    -   IP-Subnetzmaske: 255.255.128.0  
-  
-    -   IP-Host-Bereich: 1-254  
-  
-    Konfigurieren Sie für InfiniBand-Netzwerkadapter mit zwei Ports des zweiten Ports entsprechend den folgenden Parametern aus:  
-  
-    -   IP-Netzwerkadresse: 172.16.132.x  
+    -   IP-Netzwerkadresse: 172.16.132. x  
   
     -   IP-Subnetzmaske: 255.255.128.0  
   
-    -   IP-Host-Bereich: 1-254  
+    -   IP-Host Bereich: 1-254  
   
-5.  Wenn ein Portadapter zwei wird verwendet, oder mehreren externe Windows-Systemen in einer Anwendung verbunden sind, weisen Sie jedes System einen anderen Host Anzahl in jedem IP-Subnetz.  
+    Bei InfiniBand-Netzwerkadaptern mit zwei Ports konfigurieren Sie den zweiten Port gemäß den folgenden Parametern:  
+  
+    -   IP-Netzwerkadresse: 172.16.132. x  
+  
+    -   IP-Subnetzmaske: 255.255.128.0  
+  
+    -   IP-Host Bereich: 1-254  
+  
+5.  Wenn ein zwei Port Adapter verwendet wird oder mehrere externe Windows-Systeme mit einem Gerät verbunden sind, weisen Sie jedem System in jedem IP-Subnetz eine andere Host Nummer zu.  
   
 <!-- MISSING LINKS 
 ## See Also  
