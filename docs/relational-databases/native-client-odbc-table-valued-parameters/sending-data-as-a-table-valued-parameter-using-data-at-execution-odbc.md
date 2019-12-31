@@ -1,5 +1,5 @@
 ---
-title: Senden von Daten als Tabellenwert Parameter mit Data-at-Execution (ODBC) | Microsoft-Dokumentation
+title: Tabellenwert Parameter, Data-at-Execution (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fa7998cf156adc94f13f22887a595408144fad8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: cea7295b67cd53844b29e876e8a0635de9cad46a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73775902"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246373"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Senden von Daten als Tabellenwertparameter mit Data-at-Execution (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Dies ähnelt der Vorgehensweise " [alles im Arbeitsspeicher](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) ", verwendet jedoch Data-at-Execution für den Tabellenwert Parameter.  
   
- Ein weiteres Beispiel zur Veranschaulichung von Tabellenwert Parametern finden Sie unter [Verwenden von &#40;Tabellenwert&#41;Parametern (ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)).  
+ Ein weiteres Beispiel zur Veranschaulichung von Tabellenwert Parametern finden Sie unter [Verwenden von Tabellenwert Parametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
  In diesem Beispiel gibt der Treiber, wenn SQLExecute oder SQLExecDirect aufgerufen wird, SQL_NEED_DATA zurück. Die Anwendung ruft dann SQLParamData wiederholt auf, bis der Treiber einen anderen Wert als SQL_NEED_DATA zurückgibt. Der Treiber gibt *ParameterValuePtr* zurück, um die Anwendung darüber zu informieren, für welchen Parameterdaten angefordert werden. Die Anwendung ruft SQLPutData auf, um Parameterdaten vor dem nächsten Aufruf von SQLParamData bereitzustellen. Bei einem Tabellenwert Parameter gibt der SQLPutData-Befehl an, wie viele Zeilen er für den Treiber vorbereitet hat (in diesem Beispiel immer 1). Wenn alle Zeilen des Tabellen Werts an den Treiber weitergegeben wurden, wird SQLPutData aufgerufen, um anzugeben, dass 0 Zeilen verfügbar sind.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73775902"
 ## <a name="prerequisite"></a>Voraussetzung  
  In dieser Prozedur wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl auf dem Server ausgeführt wurde:  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -53,7 +53,7 @@ from @Items
   
 1.  Deklarieren Sie die Variablen für die SQL-Parameter. Die Puffer für Tabellenwertparameter müssen in diesem Beispiel keine Arrays sein. In diesem Beispiel wird jeweils eine Zeile übergeben.  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
   
     // Variables for SQL parameters:  
@@ -72,7 +72,7 @@ from @Items
   
 2.  Binden Sie die Parameter. *ColumnSize* ist 1. Dies bedeutet, dass höchstens eine Zeile gleichzeitig übermittelt wird.  
   
-    ```  
+    ```sql
     // Bind parameters for call to TVPOrderEntryByRow.  
     r = SQLBindParameter(hstmt, 1, SQL_C_CHAR, SQL_PARAM_INPUT,SQL_VARCHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
   
@@ -99,7 +99,7 @@ from @Items
   
 3.  Binden Sie die Spalten für den Tabellenwertparameter.  
   
-    ```  
+    ```cpp
     // Bind the table-valued parameter columns.  
     // First set focus on param 2  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -117,7 +117,7 @@ from @Items
   
 4.  Initialisieren Sie die Parameter. In diesem Beispiel wird die Größe des Tabellenwertparameters auf SQL_DATA_AT_EXEC statt auf eine Zeilenanzahl festgelegt.  
   
-    ```  
+    ```cpp
     // Initialze the TVP for row streaming.  
     cbTVP = SQL_DATA_AT_EXEC;  
   
@@ -127,14 +127,14 @@ from @Items
   
 5.  Rufen Sie die Prozedur auf. SQLExecDirect gibt SQL_NEED_DATA zurück, weil der Tabellenwert Parameter ein Data-at-Execution-Parameter ist.  
   
-    ```  
+    ```cpp
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
 6.  Geben Sie Data-at-Execution-Parameterdaten an. Wenn SQLParamData den *ParameterValuePtr* für einen Tabellenwert Parameter zurückgibt, muss die Anwendung die Spalten für die nächste Zeile oder Zeilen des Tabellen Werts vorbereiten. Anschließend ruft die Anwendung SQLPutData auf, wobei *DataPtr* auf die Anzahl der verfügbaren Zeilen (in diesem Beispiel 1) und *StrLen_or_IndPtr* auf 0 festgelegt ist.  
   
-    ```  
+    ```cpp
     // Check if parameter data is required, and get the first parameter ID token  
     if (r == SQL_NEED_DATA) {  
         r = SQLParamData(hstmt, &ParamId);  
@@ -193,7 +193,7 @@ from @Items
   
  In diesem Beispiel wird die Standarddatenbank verwendet. Führen Sie vor dem Ausführen des Beispiels die folgenden Befehle in der ausgewählten Datenbank aus:  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -216,7 +216,7 @@ go
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -381,7 +381,7 @@ EXIT:
   
  In diesem Beispiel wird die Standarddatenbank verwendet. Führen Sie vor dem Ausführen des Beispiels die folgenden Befehle in der ausgewählten Datenbank aus:  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -404,7 +404,7 @@ go
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -580,7 +580,7 @@ EXIT:
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Programmierbeispiele für ODBC-Tabellenwertparameter](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 'SQL: zugeordnet (SQLXML 4,0) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'SQL: zugeordnet (SQLXML)'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,19 +16,20 @@ helpviewer_keywords:
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7711386722d618b35a8d957b680244243b4de5d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 055b4d25b6c501e9cf3afdf99460cd54ca7e720c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907137"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246779"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interpretation von Anmerkungen – sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML-Massen laden verarbeitet die **SQL:** zugeordnete Anmerkung im XSD-Schema erwartungsgemäß, d. h., wenn das Zuordnungsschema für ein beliebiges Element oder Attribut **SQL: zugeordnet = "false"** angibt, versucht XML-Massen laden nicht, die zugeordneten Daten im entsprechende Spalte.  
+  Beim XML-Massen laden wird die **SQL:** zugeordnete Anmerkung im XSD-Schema erwartungsgemäß verarbeitet, d. h., wenn das Zuordnungsschema für ein beliebiges Element oder Attribut **SQL: zugeordnet = "false"** angibt, versucht XML-Massen laden nicht, die zugeordneten Daten in der entsprechenden Spalte zu speichern.  
   
- XML-Massen laden ignoriert Elemente und Attribute, die nicht zugeordnet sind (entweder weil Sie im Schema nicht beschrieben werden, oder weil Sie im XSD-Schema mit **SQL: zugeordnet = "false"** ) kommentiert werden. Alle nicht zugeordneten Daten werden in die Überlauf Spalte umgewandelt, wenn eine solche Spalte mithilfe von **SQL: overflow-field**angegeben wird.  
+ XML-Massen laden ignoriert Elemente und Attribute, die nicht zugeordnet sind (entweder weil Sie im Schema nicht beschrieben werden, oder weil Sie im XSD-Schema mit **SQL: zugeordnet = "false"**) kommentiert werden. Alle nicht zugeordneten Daten werden in die Überlauf Spalte umgewandelt, wenn eine solche Spalte mithilfe von **SQL: overflow-field**angegeben wird.  
   
  Das folgende XSD-Schema ist ein Beispiel dafür:  
   

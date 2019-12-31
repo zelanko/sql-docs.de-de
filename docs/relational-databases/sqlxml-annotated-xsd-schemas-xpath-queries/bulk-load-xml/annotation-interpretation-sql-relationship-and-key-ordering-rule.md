@@ -1,6 +1,5 @@
 ---
-title: 'SQL: Relationship und die Schlüssel Bestellungs Regel (SQLXML 4,0) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'SQL: Relationship und die Schlüssel Bestellungs Regel (SQLXML)'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,19 +13,20 @@ helpviewer_keywords:
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb8807e5a5fe63ee18e6932d6e102175e3d6cc63
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6c04b14f474e2afc0e6feb18eaa0bd321fdbb5e0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908737"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246769"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interpretation von Anmerkungen – sql:relationship und Schlüsselsortierregel
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Da das XML-Massenladen Datensätze generiert, wenn ihre Knoten in den Bereich gelangen, und diese Datensätze an Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sendet, wenn ihre Knoten den Bereich verlassen, müssen die Daten für den Datensatz im Bereich des Knotens vorhanden sein.  
   
- Beachten Sie das folgende XSD-Schema, in dem die 1: n-Beziehung zwischen **\<Kunden >** und **\<Order >** Elemente (ein Kunde kann viele Aufträge platzieren) mithilfe der **\<SQL: Relationship angegeben wird >** -Element:  
+ Beachten Sie das folgende XSD-Schema, in dem die 1: n-Beziehung ** \<** zwischen den Elementen "Customer>" und ** \<"Order>** " (ein Kunde kann viele Aufträge platzieren) mithilfe des ** \<SQL: Relationship>** -Elements angegeben wird:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -60,7 +60,7 @@ ms.locfileid: "72908737"
 </xsd:schema>  
 ```  
   
- Wenn der **\<Customer->** Elementknoten in den Bereich wechselt, generiert XML-Massen laden einen Kundendaten Satz. Dieser Datensatz bleibt, bis das XML-Massen laden **\</Customer->** liest. Beim Verarbeiten des **\<Order >** Element-Knotens verwendet das XML-Massen laden **\<SQL: Relationship->** , um den Wert der CustomerID-Fremdschlüssel Spalte der CustOrder-Tabelle vom\<übergeordneten Element > **Customer** zu erhalten. Da das **\<Order >** -Element das **CustomerID-** Attribut nicht angibt. Dies bedeutet, dass Sie beim Definieren des **\<Customer >** -Elements das **CustomerID-** Attribut im Schema angeben müssen, bevor Sie **\<SQL: Relationship->** angeben. Andernfalls generiert das XML-Massen laden einen Datensatz für die CustOrder-Tabelle, wenn ein **\<Order >** Element in den Gültigkeitsbereich wechselt, und wenn das XML-Massen laden das **\</Order >** Endtag erreicht, sendet es den Datensatz an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ohne das Wert der CustomerID-Fremdschlüssel Spalte.  
+ Wenn der ** \<Customer->** Elementknoten in den Bereich gelangt, generiert XML-Massen laden einen Kundendaten Satz. Dieser Datensatz bleibt, bis das XML-Massen laden ** \</Customer>** liest. Beim Verarbeiten des ** \<Order>** Element-Knotens verwendet ** \<** ** \<** ** \<XML-Massen laden SQL: Relationship>** , um den Wert der CustomerID-Fremdschlüssel Spalte der CustOrder-Tabelle vom Customer->Parent-Element abzurufen, da das Order>-Element das **CustomerID-** Attribut nicht angibt. Dies bedeutet, dass Sie beim Definieren des ** \<Customer>** -Elements das **CustomerID-** Attribut im Schema angeben müssen, bevor Sie ** \<SQL: Relationship>** angeben. Andernfalls generiert das XML-Massen laden einen Datensatz für die CustOrder-Tabelle, wenn das XML-Massen laden das ** \</Order->** Endtag [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erreicht, wenn ein ** \<Order>** -Element in den Gültigkeitsbereich gelangt.  
   
  Speichern Sie das in diesem Beispiel bereitgestellte Schema unter dem Dateinamen SampleSchema.xml.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "72908737"
     set objBL=Nothing  
     ```  
   
-     Als Ergebnis fügt das XML-Massenladen einen NULL-Wert in die CustomerID-Fremdschlüsselspalte der CustOrder-Tabelle ein. Wenn Sie die XML-Beispiel Daten so überarbeiten, dass das **\<CustomerID->** untergeordnete Element vor dem **\<Order >** untergeordneten Element angezeigt wird, erhalten Sie das erwartete Ergebnis: das XML-Massen laden fügt den angegebenen Fremdschlüssel Wert in die Spalte ein.  
+     Als Ergebnis fügt das XML-Massenladen einen NULL-Wert in die CustomerID-Fremdschlüsselspalte der CustOrder-Tabelle ein. Wenn Sie die XML-Beispiel Daten so überarbeiten, dass das unter ** \<** ** \<geordnete Element "CustomerID">** vor dem Order>untergeordneten Element angezeigt wird, erhalten Sie das erwartete Ergebnis: das XML-Massen laden fügt den angegebenen Fremdschlüssel Wert in die Spalte ein.  
   
  Dies ist das entsprechende XDR-Schema:  
   

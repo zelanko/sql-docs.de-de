@@ -1,6 +1,5 @@
 ---
-title: SQL Server XML Bulk Load-Objektmodell (SQLXML 4.0) | Microsoft-Dokumentation
-ms.custom: ''
+title: SQL Server XML-Massen laden-Objektmodell (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -31,25 +30,26 @@ helpviewer_keywords:
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6201ddd9a04fd95ae27b987710f94701161577cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005284"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246711"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML Bulk Load-Objektmodell (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML-Massenladen-Objektmodell besteht aus den SQLXMLBulkLoad-Objekt. Dieses Objekt unterstützt die folgenden Methoden und Eigenschaften.  
+  Das Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML Bulk Load-Objektmodell besteht aus dem SQLXMLBulkLoad-Objekt. Dieses Objekt unterstützt die folgenden Methoden und Eigenschaften.  
   
 ## <a name="methods"></a>Methoden  
- Execute  
+ Ausführen  
  Lädt die Daten mithilfe der als Parameter bereitgestellten Schema- und Datendatei (oder Datenstrom) in einem Massenvorgang.  
   
 ## <a name="properties"></a>Eigenschaften  
- BulkLoad  
- Gibt an, ob ein Massenladen durchgeführt werden soll. Diese Eigenschaft ist nützlich, wenn Sie möchten nur die Schemas (siehe die "schemagen" SGDropTables und SGUseID-Eigenschaften, die folgen) zu generieren und ein Massenladen nicht ausgeführt werden. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn die Eigenschaft auf TRUE festgelegt ist, wird das XML-Massenladen ausgeführt. Wenn sie auf FALSE festgelegt ist, wird das XML-Massenladen nicht ausgeführt.  
+ Bulkload  
+ Gibt an, ob ein Massenladen durchgeführt werden soll. Diese Eigenschaft ist nützlich, wenn Sie nur die Schemas generieren möchten (Weitere Informationen finden Sie unter den folgenden Eigenschaften: SchemaGen, SGDropTables und SGUseID) und kein Massen laden ausführen. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn die Eigenschaft auf TRUE festgelegt ist, wird das XML-Massenladen ausgeführt. Wenn sie auf FALSE festgelegt ist, wird das XML-Massenladen nicht ausgeführt.  
   
  Der Standardwert ist TRUE.  
   
@@ -59,21 +59,21 @@ ms.locfileid: "68005284"
  Wenn die Eigenschaft auf TRUE gesetzt ist, werden mit XML-Massenladen die Einschränkungen für jeden eingefügten Wert überprüft (was bedeutet, dass jede verletzte Einschränkung zu einem Fehler führt).  
   
 > [!NOTE]  
->  Um diese Eigenschaft auf FALSE zu belassen, benötigen Sie **ALTER TABLE** -Berechtigungen für Zieltabellen. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Um diese Eigenschaft als false zu belassen, müssen Sie über **ALTER TABLE** -Berechtigungen für Ziel Tabellen verfügen. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL-&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  Der Standardwert ist FALSE. Wenn sie auf FALSE gesetzt ist, werden die Einschränkungen während des Einfügens ignoriert. In der aktuellen Implementierung müssen Sie die Tabellen in der Reihenfolge der Primär-/Fremdschlüsselbeziehungen im Zuordnungsschema definieren. Eine Tabelle mit einem Primärschlüssel muss also vor der entsprechenden Tabelle mit dem Fremdschlüssel definiert werden; anderenfalls schlägt das XML-Massenladen fehl.  
   
  Hinweis: Wenn ID-Propagierung erfolgt, kommt diese Option nicht zur Anwendung, und Einschränkungen werden weiter überprüft. Dies ist der Fall, wenn `KeepIdentity=False` gilt und eine Beziehung definiert ist, in der es sich beim übergeordneten Element um ein Identitätsfeld handelt und der Wert bei der Generierung an das untergeordnete Element übertragen wird.  
   
- "Connectioncommand"  
- Gibt ein vorhandenes Verbindungsobjekt (zum Beispiel das ADO- oder ICommand Command-Objekt), das XML-Massenladen verwendet werden soll. Sie können der "connectioncommand"-Eigenschaft verwenden, anstatt eine Verbindungszeichenfolge mit der ConnectionString-Eigenschaft. Der Transaction-Eigenschaft muss auf "true" festgelegt werden, bei der Verwendung von "connectioncommand".  
+ ConnectionCommand  
+ Identifiziert ein vorhandenes Verbindungs Objekt (z. b. das ADO-oder ICommand-Befehls Objekt), das von XML-Massen Laden verwendet werden soll. Sie können die ConnectionCommand-Eigenschaft verwenden, anstatt eine Verbindungs Zeichenfolge mit der ConnectionString-Eigenschaft anzugeben. Die Transaction-Eigenschaft muss auf true festgelegt werden, wenn Sie ConnectionCommand verwenden.  
   
- Wenn Sie die "ConnectionString" und "connectioncommand"-Eigenschaft verwenden, verwendet XML-Massenladen die zuletzt angegebene Eigenschaft.  
+ Wenn Sie die Eigenschaften ConnectionString und ConnectionCommand verwenden, verwendet XML-Massen laden die zuletzt angegebene Eigenschaft.  
   
  Der Standardwert ist NULL.  
   
  ConnectionString  
- Kennzeichnet die OLE DB-Verbindungszeichenfolge mit den Informationen, die notwendig sind, um eine Verbindung zu einer Instanz der Datenbank herzustellen. Wenn Sie die "ConnectionString" und "connectioncommand"-Eigenschaft verwenden, verwendet XML-Massenladen die zuletzt angegebene Eigenschaft.  
+ Kennzeichnet die OLE DB-Verbindungszeichenfolge mit den Informationen, die notwendig sind, um eine Verbindung zu einer Instanz der Datenbank herzustellen. Wenn Sie die Eigenschaften ConnectionString und ConnectionCommand verwenden, verwendet XML-Massen laden die zuletzt angegebene Eigenschaft.  
   
  Der Standardwert ist NULL.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "68005284"
  Wenn dieser Wert auf TRUE gesetzt ist, werden Trigger während der Einfügevorgänge normal ausgelöst.  
   
 > [!NOTE]  
->  Um diese Eigenschaft auf FALSE zu belassen, benötigen Sie **ALTER TABLE** -Berechtigungen für Zieltabellen. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Um diese Eigenschaft als false zu belassen, müssen Sie über **ALTER TABLE** -Berechtigungen für Ziel Tabellen verfügen. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL-&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  Hinweis: Wenn ID-Propagierung erfolgt, kommt diese Option nicht zur Anwendung, und Trigger werden weiter ausgelöst. Dies ist der Fall, wenn `KeepIdentity=False` gilt und eine Beziehung definiert ist, in der es sich beim übergeordneten Element um ein Identitätsfeld handelt und der Wert bei der Generierung an das untergeordnete Element übertragen wird.  
   
@@ -95,10 +95,10 @@ ms.locfileid: "68005284"
   
  Der Standardwert ist FALSE.  
   
- IgnoreDuplicateKeys  
+ Ignoreduplicatekeys  
  Gibt an, was geschieht, wenn versucht wird, doppelte Werte in einer Schlüsselspalte einzufügen. Wenn diese Eigenschaft auf TRUE gesetzt ist und versucht wird, einen Datensatz mit doppelten Werten in einer Schlüsselspalte einzufügen, fügt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diesen Datensatz nicht ein. Stattdessen wird der nachfolgende Datensatz eingefügt; dadurch schlägt der Massenladevorgang nicht fehl. Wenn diese Eigenschaft auf FALSE gesetzt ist und versucht wird, doppelte Werte in einer Schlüsselspalte einzufügen, schlägt der Massenladevorgang fehl.  
   
- Wenn die IgnoreDuplicateKeys-Eigenschaft auf "true" festgelegt ist, wird eine COMMIT-Anweisung für jeden Datensatz in die Tabelle eingefügt ausgegeben. Dies verlangsamt die Leistung. Die Eigenschaft kann festgelegt werden, auf "true" nur, wenn die Transaktionseigenschaft auf "FALSE" festgelegt ist, da das Transaktionsverhalten mithilfe von Dateien implementiert wird.  
+ Wenn die IgnoreDuplicateKeys-Eigenschaft auf true festgelegt ist, wird für jeden Datensatz, der in die Tabelle eingefügt wird, eine COMMIT-Anweisung ausgegeben. Dies verlangsamt die Leistung. Die-Eigenschaft kann nur auf "true" festgelegt werden, wenn die Transaction-Eigenschaft auf "false" festgelegt ist, da das Transaktionsverhalten mithilfe von Dateien implementiert wird.  
   
  Der Standardwert ist FALSE.  
   
@@ -110,42 +110,42 @@ ms.locfileid: "68005284"
  Der Wert dieser Eigenschaft gilt für alle vom Massenladen betroffene Spalten. Der Standardwert ist TRUE.  
   
 > [!NOTE]  
->  Um diese Eigenschaft auf TRUE zu belassen, benötigen Sie **ALTER TABLE** -Berechtigungen für Zieltabellen. Andernfalls muss sie auf FALSE gesetzt werden. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Um diese Eigenschaft als true zu belassen, müssen Sie über **ALTER TABLE** -Berechtigungen für Ziel Tabellen verfügen. Andernfalls muss sie auf FALSE gesetzt werden. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL-&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  KeepNulls  
  Gibt an, welcher Wert für eine Spalte verwendet wird, in deren XML-Dokument das entsprechende Attribut oder untergeordnete Element fehlt. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn die Eigenschaft auf TRUE gesetzt ist, wird der Spalte der Wert Null zugewiesen. Es wird nicht der gegebenenfalls auf dem Server gesetzte Standardwert der Spalte zugewiesen. Der Wert dieser Eigenschaft gilt für alle vom Massenladen betroffene Spalten.  
   
  Der Standardwert ist FALSE.  
   
- "Schemagen"  
- Gibt an, ob die erforderlichen Tabellen vor dem Ausführen eines Massenladevorgangs erstellt werden sollen. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn diese Eigenschaft auf TRUE gesetzt ist, werden die im Zuordnungsschema angegebenen Tabellen erstellt (die Datenbank muss vorhanden sein). Wenn mindestens eine der Tabellen in der Datenbank bereits vorhanden sind, bestimmt die SGDropTables-Eigenschaft an, ob diese bereits vorhandenen Tabellen gelöscht und neu erstellt werden.  
+ "SchemaGen"  
+ Gibt an, ob die erforderlichen Tabellen vor dem Ausführen eines Massenladevorgangs erstellt werden sollen. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn diese Eigenschaft auf TRUE gesetzt ist, werden die im Zuordnungsschema angegebenen Tabellen erstellt (die Datenbank muss vorhanden sein). Wenn eine oder mehrere Tabellen bereits in der Datenbank vorhanden sind, bestimmt die SGDropTables-Eigenschaft, ob diese bereits vorhandenen Tabellen gelöscht und neu erstellt werden sollen.  
   
- Der Standardwert für die Eigenschaft "schemagen" ist "false". "Schemagen" erstellt keine PRIMARY KEY-Einschränkungen für die neu erstellten Tabellen. "Schemagen" der Fall ist, FOREIGN KEY-Einschränkungen jedoch in der Datenbank erstellen werden, wenn die Übereinstimmung gefunden werden kann **SQL: Relationship** und **SQL: Key-Felder** Anmerkungen im Zuordnungsschema und das Schlüsselfeld aus besteht. eine einzelne Spalte.  
+ Der Standardwert für die SchemaGen-Eigenschaft ist false. SchemaGen erstellt keine PRIMARY KEY-Einschränkungen für die neu erstellten Tabellen. SchemaGen erstellt jedoch Foreign Key-Einschränkungen in der Datenbank, wenn entsprechende **SQL: Relationship** **-und SQL: key-fields-** Anmerkungen im Zuordnungs Schema gefunden werden können und das Schlüsselfeld aus einer einzelnen Spalte besteht.  
   
- Beachten Sie, dass wenn Sie die Eigenschaft "schemagen" auf "true" festlegen, XML-Massenladen Folgendes durchführt:  
+ Beachten Sie Folgendes: Wenn Sie die SchemaGen-Eigenschaft auf true festlegen, führt XML-Massen laden Folgendes aus:  
   
 -   Erstellt die notwendigen Tabellen aus dem Element und den Attributnamen. Aus diesem Grund ist es wichtig, dass Sie im Schema für die Element- und Attributnamen keine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-reservierten Wörter verwenden.  
   
--   Gibt overflow Daten für jede Spalte mithilfe der [SQL: Overflow-Feld](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md) in [Xml-Datentyp](../../../t-sql/xml/xml-transact-sql.md) Format.  
+-   Gibt Überlauf Daten für jede Spalte zurück, die mit dem [SQL: overflow-field](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md) im [XML-Datentyp](../../../t-sql/xml/xml-transact-sql.md) Format angegeben wird.  
   
  SGDropTables  
- Gibt an, ob vorhandene Tabellen gelöscht und neu erstellt werden sollen. Sie können diese Eigenschaft verwenden, wenn die Eigenschaft "schemagen" auf "true" festgelegt ist. Wenn SGDropTables FALSE ist, werden die vorhandenen Tabellen beibehalten. Wenn diese Eigenschaft auf TRUE gesetzt ist, werden die vorhandenen Tabellen gelöscht und neu erstellt.  
+ Gibt an, ob vorhandene Tabellen gelöscht und neu erstellt werden sollen. Sie verwenden diese Eigenschaft, wenn die SchemaGen-Eigenschaft auf true festgelegt ist. Wenn SGDropTables den Wert false hat, werden die vorhandenen Tabellen beibehalten. Wenn diese Eigenschaft auf TRUE gesetzt ist, werden die vorhandenen Tabellen gelöscht und neu erstellt.  
   
  Der Standardwert ist FALSE.  
   
  SGUseID  
- Gibt an, ob das Attribut im Zuordnungsschema, das als **Id** Typ verwendet werden kann, eine PRIMARY KEY-Einschränkung erstellen, wenn die Tabelle erstellt wird. Verwenden Sie diese Eigenschaft aus, wenn die SchemaGen-Eigenschaft auf "true" festgelegt ist. Wenn SGUseID "true" ist, verwendet das Hilfsprogramm "schemagen" ein Attribut, für die **dt: Type = "Id"** als Primärschlüsselspalte angegeben ist, und fügt Sie die entsprechende PRIMARY KEY-Einschränkung beim Erstellen der Tabelle.  
+ Gibt an, ob das Attribut im Zuordnungsschema, das als **ID** -Typ identifiziert wird, beim Erstellen einer PRIMARY KEY-Einschränkung beim Erstellen der Tabelle verwendet werden kann. Verwenden Sie diese Eigenschaft, wenn die SchemaGen-Eigenschaft auf true festgelegt ist. Wenn SGUseID den Wert true aufweist, verwendet das SchemaGen-Hilfsprogramm ein Attribut, für das **dt: Type = "ID"** als Primärschlüssel Spalte angegeben ist, und fügt beim Erstellen der Tabelle die entsprechende PRIMARY KEY-Einschränkung hinzu.  
   
  Der Standardwert ist FALSE.  
   
  TempFilePath  
- Gibt den Dateipfad an, wo beim XML-Massenladen die temporären Dateien für ein transaktives Massenladen erstellt werden. (Diese Eigenschaft ist nützlich, nur, wenn die Transaktionseigenschaft auf "true" festgelegt ist.) Sie müssen sicherstellen, dass die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für XML-Massenladen verwendete Konto verfügt auf diesen Pfad zugreifen. Wenn diese Eigenschaft nicht gesetzt ist, werden die Temporärdateien in dem in der Umgebungsvariable TEMP angegebenen Verzeichnis gespeichert.  
+ Gibt den Dateipfad an, wo beim XML-Massenladen die temporären Dateien für ein transaktives Massenladen erstellt werden. (Diese Eigenschaft ist nur nützlich, wenn die Transaction-Eigenschaft auf true festgelegt ist.) Sie müssen sicherstellen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dass das für XML-Massen laden verwendete Konto Zugriff auf diesen Pfad hat. Wenn diese Eigenschaft nicht gesetzt ist, werden die Temporärdateien in dem in der Umgebungsvariable TEMP angegebenen Verzeichnis gespeichert.  
   
- Transaction  
- Gibt an, ob das Massenladen als Transaktion erfolgen soll. Bei einem Fehlschlagen des Massenspeicherns ist ein Rollback gewährleistet. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn die Eigenschaft auf TRUE gesetzt ist, erfolgt das Massenladen in einem Transaktionskontext. Die TempFilePath-Eigenschaft ist nützlich, nur, wenn Transaktion auf "true" festgelegt ist.  
+ Transaktion  
+ Gibt an, ob das Massenladen als Transaktion erfolgen soll. Bei einem Fehlschlagen des Massenspeicherns ist ein Rollback gewährleistet. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn die Eigenschaft auf TRUE gesetzt ist, erfolgt das Massenladen in einem Transaktionskontext. Die TempFilePath-Eigenschaft ist nur nützlich, wenn Transaction auf true festgelegt ist.  
   
 > [!NOTE]  
->  Wenn Sie Binärdaten laden (z. B. die bin.hex, bin. Base64 XML-Datentypen in die binären Bild [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentypen), die Transaction-Eigenschaft muss auf "false" festgelegt werden.  
+>  Wenn Sie Binärdaten (z. b. die "bin. Hex"-, "bin. base64"-XML- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen in die binären Datentypen "Image") laden, muss die Transaktions Eigenschaft auf "false" festgelegt werden.  
   
  Der Standardwert ist FALSE.  
   

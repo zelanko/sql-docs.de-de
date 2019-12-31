@@ -1,6 +1,5 @@
 ---
-title: Verwenden eines Updategramms in einer Beispiel-ASP-Anwendung (SQLXML 4.0) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von Update Gram in einer Beispiel-ASP-Anwendung (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57d28079992cceefb913b1418c1092a5d96f3c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b6c69fe48cf64010d530af8a2cda621814cf4ba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046538"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246085"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Verwenden eines Updategrams in einer Beispiel-ASP-Anwendung (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68046538"
   
  Der Benutzer kann die Kontaktinformationen außer der Kontakt-ID (weil die Spalte ContactID den Primärschlüssel darstellt) dann aktualisieren. Nachdem der Benutzer die Informationen übermittelt hat, wird ein Updategram ausgeführt, und alle Formularparameter werden dem Updategram übergeben.  
   
- Die folgende Vorlage ist die erste Vorlage (GetContact.xml). Speichern Sie diese Vorlage in das Verzeichnis, das den virtuellen Namen des zugeordnet ist **Vorlage** Typ.  
+ Die folgende Vorlage ist die erste Vorlage (GetContact.xml). Speichern Sie diese Vorlage in dem Verzeichnis, das dem virtuellen Namen des **Vorlagen** Typs zugeordnet ist.  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -50,7 +50,7 @@ ms.locfileid: "68046538"
 </root>  
 ```  
   
- Die folgende Vorlage ist die zweite Vorlage (UpdateContact.xml). Speichern Sie diese Vorlage in das Verzeichnis, das den virtuellen Namen des zugeordnet ist **Vorlage** Typ.  
+ Die folgende Vorlage ist die zweite Vorlage (UpdateContact.xml). Speichern Sie diese Vorlage in dem Verzeichnis, das dem virtuellen Namen des **Vorlagen** Typs zugeordnet ist.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -160,7 +160,7 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Sicherheitsüberlegungen zu Update grams &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 'Angeben des SQL: Inverse-Attributs für SQL: Relationship (SQLXML 4.0) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Festlegen des SQL: inverse-Attributs für SQL: Relationship (SQLXML)'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,25 +19,26 @@ ms.assetid: 08904cbd-9c86-493d-90c3-f5e1d13ce59d
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0141818b93db939f90f89faee7c396dfadb05853
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9da456ddb234ed4ec8e0d2a0f2ad8e8ad7250682
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066925"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246851"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>Angeben des sql:inverse-Attributs für sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Die **SQL: inverse** Attribut ist nützlich, nur wenn das XSD-Schema zum Massenladen oder von einem Updategram verwendet wird. Die **SQL: inverse** -Attribut angegeben werden, auf die  **\<SQL: Relationship >** Element. In Updategrams interpretiert die Updategramlogik das Schema beim Bestimmen der Tabellen und Spalten, die durch den Updategramvorgang aktualisiert werden. Die im Schema angegebenen Über-/Unterordnungsbeziehungen legen die Reihenfolge fest, in der die Datensätze modifiziert (eingefügt oder gelöscht) werden.  
+  Das **SQL: inverse** -Attribut ist nur nützlich, wenn das XSD-Schema entweder für das Massen laden oder durch ein Update Gram verwendet wird. Das **SQL: inverse** -Attribut kann für das ** \<SQL: Relationship>** -Element angegeben werden. In Updategrams interpretiert die Updategramlogik das Schema beim Bestimmen der Tabellen und Spalten, die durch den Updategramvorgang aktualisiert werden. Die im Schema angegebenen Über-/Unterordnungsbeziehungen legen die Reihenfolge fest, in der die Datensätze modifiziert (eingefügt oder gelöscht) werden.  
   
- Wenn ein XSD-Schema gegeben ist, in dem die Über-/Unterordnungsbeziehung invers zur Primär-/Fremdschlüssel-Beziehung zwischen den zugehörigen Datenbankspalten angegeben ist, dann schlägt der Updategramvorgang zum Einfügen oder Löschen wegen der Primär-/Fremdschlüsselverletzung fehl. In solchen Fällen die **SQL: inverse** -Attribut angegeben ist (**SQL: Inverse = "true"** ) in der  **\<SQL: Relationship >** Element, und die updategramlogik Gegenstücke der Interpretation der über-/ unterordnungsbeziehung im Schema angegeben.  
+ Wenn ein XSD-Schema gegeben ist, in dem die Über-/Unterordnungsbeziehung invers zur Primär-/Fremdschlüssel-Beziehung zwischen den zugehörigen Datenbankspalten angegeben ist, dann schlägt der Updategramvorgang zum Einfügen oder Löschen wegen der Primär-/Fremdschlüsselverletzung fehl. In solchen Fällen wird das **SQL: inverse** -Attribut (**SQL: inverse = "true"**) im ** \<SQL: Relationship>** -Element angegeben, und die Update Gram Logik kehrt die Interpretation der über-/Unterordnungsbeziehung um, die im Schema angegeben ist.  
   
- Die **SQL: inverse** Attribut akzeptiert einen booleschen Wert (0 = False, 1 = True). Zulässig sind die Werte 0, 1, true und false.  
+ Das **SQL: inverse** -Attribut übernimmt einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false.  
   
- Für eine funktionierende Beispiel mit der **SQL: inverse** Anmerkung, finden Sie unter [angeben eines Zuordnungsschemas in einem Updategram](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Ein funktionierendes Beispiel mit der **SQL: inverse** -Anmerkung finden Sie unter [Angeben eines Mapping-Schemas mit Anmerkungen in einem Update Gram](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Angeben von Beziehungen mithilfe von SQL: Relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Angeben von Beziehungen mithilfe von ' SQL: Relationship ' &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Bindung und Datenübertragung von Tabellenwert Parametern und Spaltenwerten | Microsoft-Dokumentation
+title: Datenübertragung von Tabellenwert Parametern
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a03beb8375384660b0e4a9ec18ce38f19db42d5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 1e966d63a2d357ad9b867e5e8bf66fbf731fc987
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73778070"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246519"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Bindung und Datenübertragung von Tabellenwertparametern und Spaltenwerten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "73778070"
   
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher werden nur Eingabe-Tabellenwertparameter unterstützt. Daher resultiert jeder Versuch, SQL_DESC_PARAMETER_TYPE auf einen anderen Wert als SQL_PARAM_INPUT festzulegen, in der Rückgabe von SQL_ERROR mit SQLSTATE = HY105 und der Meldung "Der Parametertyp ist ungültig".  
   
- Gesamten Tabellenwertparameter-Spalten können mit dem Attribut SQL_CA_SS_COL_HAS_DEFAULT_VALUE Standardwerte zugewiesen werden. Einzelnen Tabellenwert Parameter-Spaltenwerten können allerdings keine Standardwerte zugewiesen werden, indem SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* mit SQLBindParameter verwendet wird. Tabellenwert Parameter als Ganzes können nicht mithilfe von SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* mit SQLBindParameter auf einen Standardwert festgelegt werden. Wenn diese Regeln nicht befolgt werden, wird von SQLExecute oder SQLExecDirect SQL_ERROR zurückgegeben. Es wird ein Diagnosedaten Satz mit SQLSTATE = 07s01 und der Meldung "Ungültige Verwendung des Standard Parameters für den Parameter \<p >" generiert, wobei \<p-> die Ordinalzahl des TVP in der Abfrage Anweisung ist.  
+ Gesamten Tabellenwertparameter-Spalten können mit dem Attribut SQL_CA_SS_COL_HAS_DEFAULT_VALUE Standardwerte zugewiesen werden. Einzelnen Tabellenwert Parameter-Spaltenwerten können allerdings keine Standardwerte zugewiesen werden, indem SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* mit SQLBindParameter verwendet wird. Tabellenwert Parameter als Ganzes können nicht mithilfe von SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* mit SQLBindParameter auf einen Standardwert festgelegt werden. Wenn diese Regeln nicht befolgt werden, wird von SQLExecute oder SQLExecDirect SQL_ERROR zurückgegeben. Es wird ein Diagnosedaten Satz mit SQLSTATE = 07s01 und der Meldung "Ungültige Verwendung des Standard Parameters für \<den Parameter p>" \<generiert, wobei p> die Ordinalzahl des TVP in der Abfrage Anweisung ist.  
   
  Nachdem die Anwendung den Tabellenwertparameter gebunden hat, muss sie jede einzelne Tabellenwertparameter-Spalte binden. Hierzu ruft die Anwendung zuerst SQLSetStmtAttr auf, um SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl eines Tabellenwert Parameters festzulegen. Anschließend bindet die Anwendung die Spalten des Tabellenwert Parameters durch Aufrufe der folgenden Routinen: SQLBindParameter, SQLSetDescRec und SQLSetDescField. Wenn Sie SQL_SOPT_SS_PARAM_FOCUS auf 0 festlegen, werden die üblichen Auswirkungen von SQLBindParameter, SQLSetDescRec und SQLSetDescField beim Betrieb auf reguläre Parameter der obersten Ebene wieder hergestellt.
  
- Hinweis: für Linux-und Mac-ODBC-Treiber mit unixODBC 2.3.1 to 2.3.4, wenn Sie den TVP-Namen über SQLSetDescField mit dem Feld SQL_CA_SS_TYPE_NAME Deskriptor festlegen, konvertiert unixodbc nicht automatisch zwischen ANSI-und Unicode-Zeichen folgen, abhängig von der exakten Funktion aufgerufen (sqlsetdescfielda/sqlsetdescfieldw). Zum Festlegen des TVP-namens muss entweder immer SQLBindParameter oder sqlsetdescfieldw mit einer Unicode-Zeichenfolge (UTF-16) verwendet werden.
+ Hinweis: für die Linux-und Mac-ODBC-Treiber mit unixODBC 2.3.1 to 2.3.4, wenn Sie den TVP-Namen über SQLSetDescField mit dem Feld SQL_CA_SS_TYPE_NAME Deskriptor festlegen, konvertiert unixodbc in Abhängigkeit von der exakten Funktion (sqlsetdescfielda/sqlsetdescfieldw) nicht automatisch zwischen ANSI und Unicode-Zeichen folgen. Zum Festlegen des TVP-namens muss entweder immer SQLBindParameter oder sqlsetdescfieldw mit einer Unicode-Zeichenfolge (UTF-16) verwendet werden.
   
  Für den Tabellenwertparameter an sich werden keine Daten gesendet oder empfangen, die Daten werden für die einzelnen Spalten, aus denen er sich zusammensetzt, gesendet und empfangen. Da der Tabellenwert Parameter eine Pseudo Spalte ist, werden die Parameter für SQLBindParameter verwendet, um auf andere Attribute als andere Datentypen zu verweisen, wie im folgenden dargestellt:  
   
@@ -43,9 +43,10 @@ ms.locfileid: "73778070"
 |*ColumnSize*|SQL_DESC_LENGTH oder SQL_DESC_PRECISION in IPD<br /><br /> Dies hängt vom Wert von *ParameterType*ab.|SQL_DESC_ARRAY_SIZE<br /><br /> Kann auch mit SQL_ATTR_PARAM_SET_SIZE festgelegt werden, wenn der Parameterfokus auf den Tabellenwertparameter festgelegt wurde.<br /><br /> Bei einem Tabellenwertparameter ist dies die Anzahl von Zeilen in den Tabellenwertparameter-Spaltenpuffern.|  
 |*Dezimalstellen*|SQL_DESC_PRECISION oder SQL_DESC_SCALE in IPD|Nicht verwendet. Diese Angabe muss 0 sein.<br /><br /> Wenn dieser Parameter nicht 0 ist, gibt SQLBindParameter SQL_ERROR zurück, und es wird ein Diagnosedaten Satz mit SQLSTATE = HY104 und der Meldung "ungültige Genauigkeit oder Dezimalstellen" generiert.|  
 |*ParameterValuePtr*|SQL_DESC_DATA_PTR in APD|SQL_CA_SS_TYPE_NAME<br /><br /> Dies ist ein optionales Attribut für gespeicherte Prozeduren, und NULL kann angegeben werden, wenn es nicht erforderlich ist. Es muss für SQL-Anweisungen angegeben werden, die keine Prozeduraufrufe sind.<br /><br /> Dieser Parameter dient als eindeutiger Wert, anhand dessen die Anwendung den betreffenden Tabellenwertparameter bei Verwendung einer variablen Zeilenbindung identifizieren kann. Weitere Informationen finden Sie im Abschnitt "Variable Tabellenwertparameter-Zeilenbindung" weiter unten in diesem Thema.<br /><br /> Wenn ein Tabellenwert Parameter-Typname für einen SQLBindParameter-Befehl angegeben wird, muss er auch in Anwendungen, die als ANSI-Anwendungen erstellt wurden, als Unicode-Wert angegeben werden. Der für den Parameter *StrLen_or_IndPtr* verwendete Wert muss entweder SQL_NTS oder die Zeichen folgen Länge des Namens multipliziert mit sizeof (WChar) sein.|  
-|*BufferLength*|SQL_DESC_OCTET_LENGTH in APD|Die Länge des Typnamens des Tabellenwertparameters in Byte<br /><br /> Kann SQL_NTS sein, wenn der Typname NULL-termininiert ist, oder 0, wenn der Typname des Tabellenwertparameters nicht erforderlich ist.|  
+|*Pufferlänge*|SQL_DESC_OCTET_LENGTH in APD|Die Länge des Typnamens des Tabellenwertparameters in Byte<br /><br /> Kann SQL_NTS sein, wenn der Typname NULL-termininiert ist, oder 0, wenn der Typname des Tabellenwertparameters nicht erforderlich ist.|  
 |*StrLen_or_IndPtr*|SQL_DESC_OCTET_LENGTH_PTR in APD|SQL_DESC_OCTET_LENGTH_PTR in APD<br /><br /> Für Tabellenwertparameter wird hier die Zeilenanzahl statt die Datenlänge angegeben.|  
-  
+||||
+
  Zwei Datenübertragungsmodi werden für Tabellenwertparameter unterstützt: feste Zeilenbindung und variable Zeilenbindung.  
   
 ## <a name="fixed-table-valued-parameter-row-binding"></a>Feste Tabellenwertparameter-Zeilenbindung  
@@ -63,7 +64,7 @@ ms.locfileid: "73778070"
   
 3.  Ruft SQLSetStmtAttr auf, um SQL_SOPT_SS_PARAM_FOCUS auf 0 festzulegen. Dies muss erfolgen, bevor SQLExecute oder SQLExecDirect aufgerufen wird. Andernfalls wird SQL_ERROR zurückgegeben, und es wird ein Diagnosedatensatz mit SQLSTATE=HY024 und der Meldung "Ungültiger Attributwert, SQL_SOPT_SS_PARAM_FOCUS (muss zur Laufzeit Null sein)" generiert.  
   
-4.  Legt *StrLen_or_IndPtr* oder SQL_DESC_OCTET_LENGTH_PTR auf SQL_DEFAULT_PARAM für einen Tabellenwert Parameter ohne Zeilen oder die Anzahl der Zeilen fest, die beim nächsten Aufrufen von SQLExecute oder SQLExecDirect übertragen werden sollen, wenn der Tabellenwert Parameter über Zeilen verfügt. *StrLen_or_IndPtr* oder SQL_DESC_OCTET_LENGTH_PTR kann nicht auf "SQL_NULL_DATA" für einen Tabellenwert Parameter festgelegt werden, da Tabellenwert Parameter nicht auf NULL festgelegt werden können (obwohl Tabellenwert Parameter-Spalten möglicherweise NULL-Werte zulassen). Wenn dieser Wert auf einen ungültigen Wert festgelegt ist, gibt SQLExecute oder SQLExecDirect SQL_ERROR zurück, und es wird ein Diagnosedaten Satz mit SQLSTATE = HY090 und der Meldung "ungültige Zeichen folgen-oder Pufferlänge für Parameter \<p >" generiert, wobei p für die Parameter Nummer steht.  
+4.  Legt *StrLen_or_IndPtr* oder SQL_DESC_OCTET_LENGTH_PTR auf SQL_DEFAULT_PARAM für einen Tabellenwert Parameter ohne Zeilen oder die Anzahl der Zeilen fest, die beim nächsten Aufrufen von SQLExecute oder SQLExecDirect übertragen werden sollen, wenn der Tabellenwert Parameter über Zeilen verfügt. *StrLen_or_IndPtr* oder SQL_DESC_OCTET_LENGTH_PTR kann nicht auf "SQL_NULL_DATA" für einen Tabellenwert Parameter festgelegt werden, da Tabellenwert Parameter nicht auf NULL festgelegt werden können (obwohl Tabellenwert Parameter-Spalten möglicherweise NULL-Werte zulassen). Wenn dieser Wert auf einen ungültigen Wert festgelegt ist, gibt SQLExecute oder SQLExecDirect SQL_ERROR zurück, und es wird ein Diagnosedaten Satz mit SQLSTATE = HY090 und der Meldung "ungültige \<Zeichen folgen-oder Pufferlänge für Parameter p>" generiert, wobei p für die Parameter Nummer steht.  
   
 5.  Ruft SQLExecute oder SQLExecDirect auf.  
   
@@ -92,7 +93,7 @@ ms.locfileid: "73778070"
   
 6.  Ruft SQLParamData erneut auf. Wenn unter den Tabellenwert Parameter-Spalten Data-at-Execution-Parameter vorhanden sind, werden diese durch den Wert *ValuePtrPtr* identifiziert, der von SQLParamData zurückgegeben wurde. Wenn alle Spaltenwerte verfügbar sind, gibt SQLParamData den *ParameterValuePtr* -Wert für den Tabellenwert Parameter zurück, und die Anwendung wird erneut gestartet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabellenwert Parameter &#40;(ODBC)&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellenwert Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Verwenden der Anmerkungen: Identity ' und Sql:guid | Microsoft-Dokumentation"
+title: Verwenden der Anmerkungen 'sql:identity' und 'sql:guid'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,27 +24,27 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a6c19e23fc886e15b8e116ca293c4560fded74e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50483d7f6f84371b42bf0c79fbc74a1f85a65eab
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066881"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246823"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Verwenden der Anmerkungen 'sql:identity' und 'sql:guid'
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Sie können angeben, die **: Identity '** und **Sql:guid** Anmerkungen in ein XSD-Schema auf einem beliebigen Knoten, der einer Datenbankspalte in zugeordnet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Während das Updategram-Format unterstützt die **Updg: auf Identität** und **updg: GUID** Attribute, das DiffGram-Format nicht. Die **Updg: auf Identität** -Attribut definiert das Verhalten beim Aktualisieren einer Spalte vom Typ IDENTITY. Die **updg: GUID** Attribut können Sie zum Abrufen eines GUID-Wert von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und in das Updategram verwenden. Weitere Informationen und Verwendungsbeispiele finden Sie unter [Einfügen von Daten mithilfe von XML-Updategrams &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+  Sie können die Anmerkungen " **SQL: Identity** " und " **SQL: GUID** " in einem XSD-Schema auf allen Knoten angeben, die einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Daten Bank Spalte in zugeordnet sind. Das Update Gram-Format unterstützt zwar die Attribute **updg: at-Identity** und **updg: GUID** , aber das DiffGram-Format nicht. Das **updg: at-Identity** -Attribut definiert das Verhalten beim Aktualisieren einer Spalte vom Typ Identity. Mithilfe des **updg: GUID** -Attributs können Sie einen GUID- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wert von abrufen und im Update Gram verwenden. Weitere Informationen und funktionierende Beispiele finden Sie unter [Einfügen von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
- Die **: Identity '** und **Sql:guid** -Anmerkung erweitern diese Funktionalität auf DiffGrams.  
+ Die Anmerkungen " **SQL: Identity** " und " **SQL: GUID** " erweitern diese Funktionalität auf DiffGrams.  
   
- Wenn Sie ein DiffGram ausführen, wird es zunächst in ein Updategram konvertiert, dann wird das Updategram ausgeführt. Durch Angabe der **: Identity '** und **Sql:guid** Anmerkungen im XSD-Schema, das Sie definieren das Verhalten eines Updategrams sind. Daher werden alle Anmerkungen im Kontext eines Updategrams beschrieben. Die Anmerkungen können sowohl für DiffGrams als auch für Updategrams verwendet werden. Updategrams stellen jedoch ein leistungsfähigeres Verfahren zur Verarbeitung von Identitäts- und GUID-Werten dar.  
+ Wenn Sie ein DiffGram ausführen, wird es zunächst in ein Updategram konvertiert, dann wird das Updategram ausgeführt. Wenn Sie die Anmerkungen " **SQL: Identity** " und " **SQL: GUID** " im XSD-Schema angeben, definieren Sie tatsächlich das Verhalten eines Update grams. Daher werden alle Anmerkungen im Kontext eines Updategrams beschrieben. Die Anmerkungen können sowohl für DiffGrams als auch für Updategrams verwendet werden. Updategrams stellen jedoch ein leistungsfähigeres Verfahren zur Verarbeitung von Identitäts- und GUID-Werten dar.  
   
- Die **: Identity '** und **Sql:guid** Anmerkungen können für ein komplexes Inhaltselement definiert werden.  
+ Die Anmerkungen " **SQL: Identity** " und " **SQL: GUID** " können für ein komplexes Inhalts Element definiert werden.  
   
 ## <a name="sqlidentity-annotation"></a>'sql:identity'-Anmerkung  
- Sie können angeben, die **: Identity '** -Anmerkung im XSD-Schema auf einem beliebigen Knoten, der einer Datenbankspalte vom Typ IDENTITY zugeordnet ist. Für diese Anmerkung angegebene Wert definiert, wie die Spalte vom Typ IDENTITY aktualisiert wird (entweder mithilfe des im Updategram angegebenen Werts zum Ändern der Spalte oder durch ignorieren des Werts, in diesem Fall eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-generierter Wert für diese Spalte verwendet wird).  
+ Sie können die **SQL: Identity** -Anmerkung im XSD-Schema auf jedem Knoten angeben, der einer Daten Bank Spalte vom Typ IDENTITY zugeordnet ist. Der für diese Anmerkung angegebene Wert definiert, wie die Identity-Type-Spalte aktualisiert wird (entweder mit dem im Update Gram angegebenen Wert, um die Spalte zu ändern, oder indem der Wert ignoriert wird. in diesem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fall wird ein von generierter Wert für diese Spalte verwendet).  
   
- Die **: Identity '** -Anmerkung kann zwei Werte zugewiesen werden:  
+ Der **SQL: Identity** -Anmerkung können zwei Werte zugewiesen werden:  
   
  ignore  
  Weist das Updategram an, einen für diese Spalte im Updategram vorhandenen Wert zu ignorieren und es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu überlassen, den Identitätswert zu generieren.  
@@ -52,12 +52,12 @@ ms.locfileid: "68066881"
  useValue  
  Weist das Updategram an, den im Updategram angegebenen Wert zur Aktualisierung der Spalte vom Typ IDENTITY zu verwenden. Ein Updategram prüft nicht, ob es sich bei der Spalte um eine Identitätsspalte handelt.  
   
- Wenn das Updategram einen Wert für die Spalte vom Typ IDENTITY angibt. die **: Identity ' = "UseValue"** im Schema angegeben werden.  
+ Wenn das Update Gram einen Wert für die Spalte Identity-Type angibt, muss **SQL: Identity = "useValue"** im Schema angegeben werden.  
   
 ## <a name="sqlguid-annotation"></a>'sql:guid'-Anmerkung  
- Ein Updategram kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] veranlassen, einen GUID-Wert zu generieren, der dann im Updategram verwendet wird. Im Kontext von DiffGrams können Sie die **Sql:guid** Anmerkung, die angeben, ob einen GUID-Wert verwendet, die von SQL Server generiert wird, oder verwenden Sie den Wert, der im Updategram für diese Spalte bereitgestellt wird.  
+ Ein Updategram kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] veranlassen, einen GUID-Wert zu generieren, der dann im Updategram verwendet wird. Im Kontext von DiffGrams können Sie mithilfe der **SQL: GUID** -Anmerkung angeben, ob ein von SQL Server generierter GUID-Wert verwendet oder der im Update Gram für diese Spalte angegebene Wert verwendet werden soll.  
   
- Die **Sql:guid** -Anmerkung kann zwei Werte zugewiesen werden:  
+ Der **SQL: GUID** -Anmerkung können zwei Werte zugewiesen werden:  
   
  generate  
  Gibt an, dass der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierte GUID-Wert im Updatevorgang für diese Spalte verwendet werden soll.  

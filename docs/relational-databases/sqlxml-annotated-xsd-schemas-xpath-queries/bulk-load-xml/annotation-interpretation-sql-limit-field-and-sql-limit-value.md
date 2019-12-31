@@ -1,6 +1,5 @@
 ---
-title: "' SQL: Limit-Field und ' SQL: Limit-Wert (SQLXML 4.0) | Microsoft-Dokumentation"
-ms.custom: ''
+title: 'SQL: limit-field und SQL: limit-value (SQLXML)'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a64ac0799aa218f0399539a00f943c99c5d6649d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c33d097df97bb4cace9500b7aae79b5fd375ea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055425"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246785"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>Interpretation von Anmerkungen – sql:limit-field und sql:limit-value
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML-Massenladen verarbeitet die **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen nach der jeweiligen Definition. Weitere Informationen finden Sie unter [Filtern von Werten mithilfe von ' SQL: Limit-Field und ' SQL: Limit-Wert &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
+  Beim XML-Massen laden werden die **SQL: limit-field-** und **SQL: limit-value-** Anmerkungen gemäß ihrer Definition verarbeitet. Weitere Informationen finden Sie unter [Filtern von Werten mithilfe von SQL: limit-field und SQL: limit-value &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
   
  Nehmen Sie z. B. an, dass eine Datenbank die folgenden Tabellen enthält:  
   
