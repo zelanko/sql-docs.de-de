@@ -1,6 +1,6 @@
 ---
-title: Inkrementelles Durchsuchen eines aktiven Dokuments | Microsoft-Dokumentation
-ms.custom: ''
+title: Inkrementelles Durchsuchen eines aktiven Dokuments
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ce3f1265f33da943b7db2b3f951fd9aa6504f81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063831"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243649"
 ---
 # <a name="search-an-active-document-incrementally"></a>Inkrementelles Durchsuchen eines aktiven Dokuments
   Sie können ein einzelnes Dokument oder Fenster inkrementell durch Eingabe von Text durchsuchen. Beim Suchvorgang wird die erste Zeichenfolge hervorgehoben, die mit der eingegebenen Zeichenfolge für die inkrementelle Suche im Dokument bzw. Fenster übereinstimmt. Bei der inkrementellen Suche wird automatisch der gesamte Text in einem Dokument bzw. Fenster durchsucht, ausgenommen ausgeblendeter Text.  
@@ -47,8 +47,8 @@ ms.locfileid: "66063831"
 > [!NOTE]  
 >  Eine vollständige Liste der Tastenkombinationen finden Sie unter [Tastenkombinationen für SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Suchen und Ersetzen](search-and-replace.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Suchen und ersetzen](search-and-replace.md)   
  [Interaktives Durchsuchen von Dokumenten](search-documents-interactively.md)   
  [Durchsuchen von Dokumenten mithilfe von Ergebnislisten](search-documents-using-results-lists.md)   
  [Suchen von Text mit Platzhaltern](search-text-with-wildcards.md)   

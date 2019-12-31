@@ -1,6 +1,6 @@
 ---
-title: Verwenden von „sqlcmd“ mit Skriptvariablen | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von sqlcmd mit Skriptvariablen
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090061"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243165"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Verwenden von sqlcmd mit Skriptvariablen
   Variablen, die in Skripts verwendet werden, werden als Skriptvariablen bezeichnet. Durch Skriptvariablen wird ein Skript aktiviert, das in verschiedenen Szenarien verwendet wird. Wenn Sie beispielsweise ein einzelnes Skript auf mehreren Servern ausführen möchten, anstatt das Skript für jeden Server zu ändern, können Sie eine Skriptvariable für den Servernamen verwenden. Durch das Ändern des Servernamens für die Skriptvariable kann das gleiche Skript auf verschiedenen Servern ausgeführt werden.  
@@ -44,9 +44,9 @@ ms.locfileid: "66090061"
   
 3.  Die vor dem Starten von**SET X=Y**an der Eingabeaufforderung festgelegte Befehlsshell ( **SET X=Y**)  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd-v** X = Y  
   
-5.  **:Setvar** X Y  
+5.  **: Setvar** X Y  
   
 > [!NOTE]  
 >  Öffnen Sie die **Systemsteuerung**, klicken Sie auf **System**und anschließend auf die Registerkarte **Erweitert** , um die Umgebungsvariablen anzuzeigen.  
@@ -64,7 +64,8 @@ ms.locfileid: "66090061"
   
  `FROM Person.Person x`  
   
- `WHERE c.`BusinessEntityID `< 5;`  
+ 
+  `WHERE c.`BusinessEntityID `< 5;`  
   
  Sie können daraufhin den Namen der Spalte angeben, die mithilfe der Option `-v` zurückgegeben werden soll:  
   
@@ -79,7 +80,7 @@ ms.locfileid: "66090061"
   
 -   Variablennamen dürfen keine Leerzeichen oder Anführungszeichen enthalten.  
   
--   Variablennamen dürfen nicht die gleiche Form wie Variablenausdrücke (beispielsweise *$(var)* ) aufweisen.  
+-   Variablennamen dürfen nicht die gleiche Form wie Variablenausdrücke (beispielsweise *$(var)*) aufweisen.  
   
 -   Bei Skriptvariablen wird nicht zwischen Groß- und Kleinschreibung unterschieden.  
   
@@ -102,26 +103,26 @@ ms.locfileid: "66090061"
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd-Skriptvariablen  
  Mithilfe von **sqlcmd** definierte Variablen werden als Skriptvariablen bezeichnet. In der folgenden Tabelle sind die **sqlcmd** -Skriptvariablen aufgelistet.  
   
-|Variable|Zugehörige Option|R/W|Default|  
+|Variable|Zugehörige Option|R/W|Standardwert|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
 |SQLCMDSERVER*|-S|R|"DefaultLocalInstance"|  
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
-|SQLCMDDBNAME|-d|R|""|  
+|SQLCMDDBNAME|-d angeben,|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8" (Sekunden)|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = unbegrenzt warten|  
-|SQLCMDHEADERS|-H|R/W|"0"|  
-|SQLCMDCOLSEP|-S|R/W|" "|  
+|SQLCMDHEADERS|-h|R/W|"0"|  
+|SQLCMDCOLSEP|-s|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
-|SQLCMDERRORLEVEL|-M|R/W|"0"|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
+|SQLCMDERRORLEVEL|-m|R/W|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = unbegrenzt|  
 |SQLCMDEDITOR||R/W|"edit.com"|  
 |SQLCMDINI||R|""|  
   
- \* SQLCMDUSER, SQLCMDPASSWORD und SQLCMDSERVER werden festgelegt, wenn **:Connect** verwendet wird.  
+ \*SQLCMDUSER, SQLCMDPASSWORD und SQLCMDSERVER werden festgelegt, wenn **: Connect** verwendet wird.  
   
  Durch R wird angezeigt, dass der Wert nur einmal während der Programminitialisierung festgelegt werden kann.  
   
@@ -148,7 +149,7 @@ ms.locfileid: "66090061"
   
  `sqlcmd -i c:\test.sql`  
   
-### <a name="b-using-the-setvar-command-interactively"></a>B. Interaktives Verwenden des setvar-Befehls  
+### <a name="b-using-the-setvar-command-interactively"></a>B: Interaktives Verwenden des setvar-Befehls  
  Im folgenden Beispiel wird veranschaulicht, wie eine Skriptvariable mithilfe des `setvar` -Befehls interaktiv festgelegt wird.  
   
  `sqlcmd`  
@@ -165,8 +166,9 @@ ms.locfileid: "66090061"
   
  `1>`  
   
-### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>C. Verwenden von Eingabeaufforderung-Umgebungsvariablen innerhalb von "sqlcmd"  
- `are` Im folgenden Beispiel werden vier Umgebungsvariablen festgelegt und dann von `sqlcmd`aufgerufen.  
+### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>c. Verwenden von Eingabeaufforderung-Umgebungsvariablen innerhalb von "sqlcmd"  
+ 
+  `are` Im folgenden Beispiel werden vier Umgebungsvariablen festgelegt und dann von `sqlcmd`aufgerufen.  
   
  `C:\>SET tablename=Person.Person`  
   
@@ -340,9 +342,9 @@ ms.locfileid: "66090061"
   
  `>2 GO`  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden des Hilfsprogramms sqlcmd](sqlcmd-use-the-utility.md)   
- [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md)   
- [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden des Hilfsprogramms "sqlcmd"](sqlcmd-use-the-utility.md)   
+ [sqlcmd-Hilfsprogramm](../../tools/sqlcmd-utility.md)   
+ [&#40;Datenbank-Engine des Befehlszeilen-Hilfsprogramms&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Anzeigen räumlicher Daten im Objekt-Explorer | Microsoft-Dokumentation
-ms.custom: ''
+title: Anzeigen räumlicher Daten im Objekt-Explorer
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c791c0c00681fcc28cfb025c8108443bbb9e12a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5ac09bdbc05f406d8d7925af1c9a45346913151
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063207"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242945"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>Anzeigen räumlicher Daten im Objekt-Explorer
-  Im Fenster **Räumliche Ergebnisse** des Abfrage-Editors werden visuelle Zuordnungstools bereitgestellt, mit denen Sie zusätzlich zu den im Fenster **Ergebnisse** im Rasterformat angezeigten Daten Ergebnisse für räumliche Daten anzeigen können. Zum Anzeigen räumlicher Daten im Fenster **Räumliche Ergebnisse** müssen die Abfrageergebnisse mindestens eine Spalte für räumliche Daten mit Geometrie- oder Geografiedaten enthalten.  
+  Das Fenster **Räumliche Ergebnisse** im Abfrage-Editor bietet visuelle Zustellungs Tools zum Anzeigen von räumlichen Daten Ergebnissen zusätzlich zu den Daten, die im Fenster **Ergebnisse** im Raster Format angezeigt werden. Zum Anzeigen räumlicher Daten im Fenster **Räumliche Ergebnisse** müssen die Abfrageergebnisse mindestens eine Spalte für räumliche Daten mit Geometrie- oder Geografiedaten enthalten.  
   
 ### <a name="to-view-spatial-data-in-the-spatial-results-window"></a>So zeigen Sie räumliche Daten im Fenster "Räumliche Ergebnisse" an  
   
@@ -34,13 +34,13 @@ ms.locfileid: "66063207"
 4.  Wählen Sie in der Liste **Projektion auswählen** die Projektion aus, die Sie für Geografiedaten verwenden möchten. Die Standardprojektion ist Equirectangular. Andere verfügbare Projektionen sind Mercator, Robinson und Bonne.  
   
     > [!NOTE]  
-    >  **Projektion auswählen** ist nicht verfügbar, wenn die räumliche Spalte Geometriedaten enthält.  
+    >  **Wählen Sie Projektion** ist nicht verfügbar, wenn die räumliche Spalte Geometriedaten enthält.  
   
 5.  Stellen Sie den Schieberegler **Zoom** ein, um zugeordnete Elemente visuell zu vergrößern. Bei polygonalen Formen ist die Bezeichnung nur sichtbar, wenn die Form groß genug ist, um den Bezeichnungstext aufzunehmen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fenster "Räumliche Ergebnisse"](spatial-results-window.md)   
- [Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
- [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [Datenbank-Engine Abfrage-Editor &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Abfrage-und Text-Editoren &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

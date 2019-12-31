@@ -1,5 +1,5 @@
 ---
-title: Verlinkung auf Programmierungsbeispiele | Microsoft-Dokumentation
+title: Link zu Programmier Beispielen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 933274c4e5084d50d530b1d90377648b793a6f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63131791"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244518"
 ---
 # <a name="link-to-programming-samples"></a>Verlinkung auf Programmierungsbeispiele
-  In der folgenden Tabelle sind die Programmierungsbeispiele für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) aufgelistet, die im Verzeichnis "[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO" verfügbar sind. Diese Beispiele sind in beiden verfügbar [!INCLUDE[csprcs](../../includes/csprcs-md.md)] und [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
+  In der folgenden Tabelle sind die Programmierungsbeispiele für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) aufgelistet, die im Verzeichnis "[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO" verfügbar sind. Diese Beispiele sind sowohl [!INCLUDE[csprcs](../../includes/csprcs-md.md)] in als auch [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] in .net verfügbar.  
   
- Weitere Informationen zum Installieren von Beispielen, finden Sie unter [AdventureWorks für SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330).  
+ Weitere Informationen zum Installieren von Beispielen finden Sie unter [AdventureWorks für SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330).  
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
@@ -34,7 +34,7 @@ ms.locfileid: "63131791"
 |DatabaseSearch|Zeigt alle Objekte in einer Datenbank an.|  
 |DependencyExplorer|Implementiert die Abhängigkeitsstruktur und das Anzeigefenster für Eigenschaften.|  
 |IndexSizes|Zeigt den Indexnamen und die Größe für die ausgewählte Datenbank an.|  
-|LoadRegAssembly|Veranschaulicht das Laden und Registrieren einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Assembly in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwendet die UtilityConversion-Assembly.|  
+|LoadRegAssembly|Veranschaulicht, wie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET-Assembly in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geladen und registriert wird. Verwendet die UtilityConversion-Assembly.|  
 |ManageDatabases|Zeigt, wie Sie eine Datenbank erstellen, ändern oder löschen. Dazu gehört auch das Hinzufügen einer neuen Dateigruppe und Protokolldatei.|  
 |ManageDatabaseUsers|Zeigt, wie Sie Benutzer hinzufügen, ändern und entfernen.|  
 |ManageTables|Zeigt, wie Sie Tabellen erstellen, ändern oder löschen.|  
@@ -42,12 +42,11 @@ ms.locfileid: "63131791"
 |ScriptTable|Zeigt, wie Sie ein Skript für das Löschen oder Erstellen einer Tabelle schreiben können.|  
 |ServerConnect|Zeigt, wie Sie eine Verbindung zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-System herstellen.|  
 |ServerInfo|Zeigt eine Liste der Server- und Verbindungseigenschaften für die ausgewählte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.|  
-|SMOPing|Eine Konsolenanwendung, die eine Verbindung zur ausgewählten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt und ausgewählte Eigenschaften sichert. Dienen zum Überprüfen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung.|  
+|SMOPing|Eine Konsolenanwendung, die eine Verbindung zur ausgewählten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt und ausgewählte Eigenschaften sichert. Kann verwendet werden, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung zu überprüfen.|  
 |SQLServerList|Zählt eine Liste der verfügbaren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf.|  
 |SQLService|Zeigt die verfügbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste, die gestartet, beendet, angehalten oder fortgesetzt werden können.|  
 |Tracer|Liest Ablaufverfolgungsinformationen aus einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und zeigt sie an.|  
 |Trigger|Zeigt Datenbanktrigger an.|  
 |UtilityConversion|Wird mit `LoadRegAssembly` verwendet. Enthält Beispiele zu CLR-Funktionen (Common Language Runtime), die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden können.|  
 |VerifyBackup|Überprüft eine Sicherung auf einem Sicherungsgerät, um sicherzustellen, dass die Daten zum Wiederherstellen der Datenbank verwendet werden können.|  
-  
   

@@ -1,6 +1,6 @@
 ---
-title: Suchen von Text mit Platzhaltern| Microsoft-Dokumentation
-ms.custom: ''
+title: Suchen von Text mit Platzhaltern
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,15 +16,15 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5c3efcef4eade7c6ad2b5a5d52a1fa26a4c4ffd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090242"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243276"
 ---
 # <a name="search-text-with-wildcards"></a>Suchen von Text mit Platzhaltern
-  Mit den folgenden Ausdrücken lassen sich Zeichen oder Ziffern im Feld **Suchen nach** im Dialogfeld [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **in** ersetzen.  
+  Die folgenden Ausdrücke können Zeichen oder Ziffern im Feld **Suchen** nach des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Dialog Felds **Suchen und ersetzen** ersetzen.  
   
 #### <a name="to-search-using-wildcards"></a>So suchen Sie mit Platzhaltern  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66090242"
   
  Die folgende Tabelle enthält eine Beschreibung der Platzhalter, die unter **Verweisliste**verfügbar sind.  
   
-|expression|Syntax|Description|  
+|Expression|Syntax|Beschreibung|  
 |----------------|------------|-----------------|  
 |Ein einzelnes Zeichen|?|Entspricht einem beliebigen einzelnen Zeichen.|  
 |Eine einzelne Ziffer|#|Entspricht einer beliebigen einzelnen Ziffer. Beispiel: 7# entspricht Zahlen, die aus einer 7 bestehen, gefolgt von einer anderen Zahl, wie 71, nicht aber 17.|  
@@ -42,6 +42,6 @@ ms.locfileid: "66090242"
 |Ein oder mehrere Zeichen|*|Entspricht einem oder mehreren Zeichen. Beispiel: new* entspricht einem beliebigen Text mit der Buchstabenfolge "new", z. B. newfile.txt.|  
 |Zeichensatz|[ ]|Entspricht einem einzelnen Zeichen, das im Zeichensatz angegeben ist.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Suchen und Ersetzen](search-and-replace.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Suchen und ersetzen](search-and-replace.md)   
  [Suchen von Text mit regulären Ausdrücken](search-text-with-regular-expressions.md)  

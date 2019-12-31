@@ -1,6 +1,6 @@
 ---
-title: Ausführen von Transact-SQL-Skriptdateien mithilfe von „sqlcmd“
-ms.custom: ''
+title: Ausführen von Transact-SQL-Skriptdateien mithilfe von sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0a55800ff1d707ce191d373a7348bf744ce5886
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063665"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243198"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Ausführen von Transact-SQL-Skriptdateien mithilfe von sqlcmd
   Sie können `sqlcmd` verwenden, um eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skriptdatei auszuführen. Eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skriptdatei ist eine Textdatei, die eine Kombination aus [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, `sqlcmd`-Befehlen und Skriptvariablen enthalten kann.  
@@ -65,8 +65,8 @@ ms.locfileid: "66063665"
   
  In diesem Fall erfolgt keine Ausgabe im Eingabeaufforderungsfenster. Stattdessen erfolgt die Ausgabe in die Datei EmpAdds.txt. Sie können diese Ausgabe prüfen, indem Sie die Datei EmpAdds.txt öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Starten des Hilfsprogramms "sqlcmd"](sqlcmd-start-the-utility.md)   
- [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Starten Sie das Hilfsprogramm "sqlcmd".](sqlcmd-start-the-utility.md)   
+ [SQLCMD-Hilfsprogramm](../../tools/sqlcmd-utility.md)  
   
   

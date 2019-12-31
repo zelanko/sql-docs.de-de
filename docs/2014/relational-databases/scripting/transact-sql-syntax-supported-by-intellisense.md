@@ -1,6 +1,6 @@
 ---
-title: Von IntelliSense unterstützte Transact-SQL-Syntax | Microsoft-Dokumentation
-ms.custom: ''
+title: Von IntelliSense unterstützte Transact-SQL-Syntax
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,21 +15,21 @@ ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6db4de99458ced7471414540bc46704cfab928fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063330"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243001"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Von IntelliSense unterstützte Transact-SQL-Syntax
   Dieses Thema beschreibt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und Syntaxelemente, die von IntelliSense in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt werden.  
   
 ## <a name="statements-supported-by-intellisense"></a>Von IntelliSense unterstützte Anweisungen  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt IntelliSense nur die am häufigsten verwendeten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. Einige allgemeine [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor-Bedingungen könnten verhindern, dass IntelliSense funktioniert. Weitere Informationen finden Sie unter [Problembehandlung von IntelliSense &#40;SQL Server Management Studio&#41;](troubleshooting-intellisense.md).  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt IntelliSense nur die am häufigsten verwendeten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. Einige allgemeine [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Bedingungen könnten verhindern, dass IntelliSense funktioniert. Weitere Informationen finden Sie unter [Problembehandlung von IntelliSense &#40;SQL Server Management Studio&#41;](troubleshooting-intellisense.md).  
   
 > [!NOTE]  
->  IntelliSense ist nicht für verschlüsselte Datenbankobjekte verfügbar, z. B. verschlüsselte gespeicherte Prozeduren oder benutzerdefinierte Funktionen. Für Parameter von erweiterten gespeicherten Prozeduren und benutzerdefinierten Typen für die CLR-Integration stehen weder Parameterhilfe noch QuickInfo zur Verfügung.  
+>  IntelliSense ist nicht für verschlüsselte Datenbankobjekte verfügbar, z. B. verschlüsselte gespeicherte Prozeduren oder benutzerdefinierte Funktionen. Für Parameter von erweiterten gespeicherten Prozeduren und benutzerdefinierten Typen für die CLR-Integration stehen weder Parameterhilfe noch QuickInfo zur Verfügung.  
   
 ### <a name="select-statement"></a>SELECT-Anweisung  
  Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor stellt IntelliSense-Unterstützung für die folgenden Syntaxelemente in der SELECT-Anweisung bereit:  
@@ -47,17 +47,17 @@ ms.locfileid: "66063330"
   
 |Transact-SQL-Anweisung|Unterstützte Syntax|  
 |-----------------------------|----------------------|  
-|[INSERT](/sql/t-sql/statements/insert-transact-sql)|Die gesamte Syntax, mit Ausnahme der *execute_statement* -Klausel.|  
-|[UPDATE](/sql/t-sql/queries/update-transact-sql)|Gesamte Syntax.|  
-|[DELETE](/sql/t-sql/statements/delete-transact-sql)|Gesamte Syntax.|  
-|[DECLARE@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Gesamte Syntax.|  
-|[SET@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Gesamte Syntax.|  
-|[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Ausführung von benutzerdefinierten gespeicherten Prozeduren, gespeicherten Systemprozeduren, benutzerdefinierten Funktionen und Systemfunktionen.|  
+|[Setze](/sql/t-sql/statements/insert-transact-sql)|Die gesamte Syntax, mit Ausnahme der *execute_statement* -Klausel.|  
+|[Alisierungs](/sql/t-sql/queries/update-transact-sql)|Gesamte Syntax.|  
+|[Lösch](/sql/t-sql/statements/delete-transact-sql)|Gesamte Syntax.|  
+|[Deklariert@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Gesamte Syntax.|  
+|[Set@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Gesamte Syntax.|  
+|[Auszuführen](/sql/t-sql/language-elements/execute-transact-sql)|Ausführung von benutzerdefinierten gespeicherten Prozeduren, gespeicherten Systemprozeduren, benutzerdefinierten Funktionen und Systemfunktionen.|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|Gesamte Syntax.|  
-|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|Gesamte Syntax.|  
-|[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|Gesamte Syntax mit den folgenden Ausnahmen:<br /><br /> Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
+|[Ansicht erstellen](/sql/t-sql/statements/create-view-transact-sql)|Gesamte Syntax.|  
+|[Prozedur erstellen](/sql/t-sql/statements/create-procedure-transact-sql)|Gesamte Syntax mit den folgenden Ausnahmen:<br /><br /> Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|Gesamte Syntax mit den folgenden Ausnahmen:<br /><br /> Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
-|[USE](/sql/t-sql/language-elements/use-transact-sql)|Gesamte Syntax.|  
+|[Konsum](/sql/t-sql/language-elements/use-transact-sql)|Gesamte Syntax.|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense in unterstützten Anweisungen  
  IntelliSense im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt die folgenden Syntaxelemente, wenn sie in einer der unterstützten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden:  
@@ -72,7 +72,7 @@ ms.locfileid: "66063330"
   
     -   Tabellen, Sichten, Tabellenwertfunktionen und Tabellenausdrücke  
   
-    -   Spalte  
+    -   Spalten  
   
     -   Prozeduren und Prozedurparameter  
   

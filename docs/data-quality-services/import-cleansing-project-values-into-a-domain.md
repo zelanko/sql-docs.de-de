@@ -1,6 +1,5 @@
 ---
-title: Importieren von Bereinigungsprojektwerten in eine Domäne | Microsoft-Dokumentation
-ms.custom: ''
+title: Importieren von Bereinigungsprojektwerten in eine Domäne
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 83b8916072aa36b2b823306dabbcebfc0bc9c1d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992018"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241802"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importieren von Bereinigungsprojektwerten in eine Domäne
 
@@ -25,22 +24,22 @@ ms.locfileid: "67992018"
 
   In [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) können Sie während des Bereinigungsprozesses in einem Datenqualitätsbereinigungsprojekt oder einem Integration Services-Paket mit der DQS-Bereinigungskomponente erfasstes Datenqualitätswissen in eine Domäne importieren. Dadurch wird sichergestellt, dass vertrauenswürdiges Wissen nicht verloren geht und dass die Wissensdatenbank ständig verbessert wird.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a>Voraussetzung  
   
 -   Zum Importieren von Bereinigungsprojektwerten in eine Domäne muss die Domäne im Bereinigungsprojekt in Data Quality Client oder dem Integration Services-Paket, das eine DQS-Bereinigungs-Komponente enthält, verwendet worden sein.  
   
 -   Das Bereinigungsprojekt in Data Quality Client oder dem Integration Services-Paket mit der DQS-Bereinigungskomponente muss erfolgreich abgeschlossen worden sein.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="Security"></a>Sicherung  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="Permissions"></a>Griff  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um während des Bereinigungsprozesses gesammeltes Data Quality-Wissen in eine Domäne zu importieren.  
   
-##  <a name="Import"></a> Importieren von Bereinigungsprojektwerten  
+##  <a name="Import"></a>Importieren von Bereinigungs Projekt Werten  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Öffnen Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm in der Domänenverwaltungsaktivität eine Wissensdatenbank.  
   
@@ -74,10 +73,10 @@ ms.locfileid: "67992018"
     > [!NOTE]  
     >  Weitere Informationen zum Arbeiten mit Werten auf der Registerkarte **Domänenwerte** finden Sie unter [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Importieren von Projektwerten in eine Domäne  
+##  <a name="FollowUp"></a>Nachverfolgung: nach dem Importieren von Projekt Werten in eine Domäne  
  Nachdem Sie während des Bereinigungsprozesses gesammeltes Data Quality-Wissen in eine Domäne importiert haben, können Sie andere Domänenverwaltungsaufgaben für die Domäne und die Werte ausführen. Weitere Informationen finden Sie unter [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md).  
   
-##  <a name="Values"></a> Importierte Werte  
+##  <a name="Values"></a>Werte, die importiert werden  
  Die folgenden Werte werden aus einem Projekt in eine Domäne importiert:  
   
 -   Nur Zeichenfolgenwerte werden in die Domäne importiert.  
@@ -96,7 +95,7 @@ ms.locfileid: "67992018"
   
 -   Eine Korrektur, die als Ergebnis einer begriffsbasierten Beziehung in einer Domäne vorgenommen wurde, wird als richtiger Wert (nicht als Fehler) importiert.  
   
-##  <a name="ValuesNot"></a> Nicht importierte Werte  
+##  <a name="ValuesNot"></a>Werte, die nicht importiert werden  
  Die folgenden Werte werden nicht aus einem Projekt in eine Domäne importiert:  
   
 -   Werte aus den Registerkarten **Vorgeschlagen** und **Ungültig** auf der Seite **Ergebnisse verwalten und anzeigen** der **Bereinigungsaktivität** werden nicht importiert.  
@@ -113,8 +112,8 @@ ms.locfileid: "67992018"
   
 -   Sie können nur dann Werte aus einem Projekt importieren, wenn die Wissensdatenbank beschäftigt ist und vom importierenden Benutzer gesperrt wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbereinigung](../data-quality-services/data-cleansing.md)   
- [DQS-Bereinigungstransformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+ [Transformation für DQS-Bereinigung](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

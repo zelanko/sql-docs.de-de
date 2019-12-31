@@ -1,6 +1,6 @@
 ---
-title: Registrieren eines verbundenen Servers (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Registrieren von verbundenen Servern
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], register connected servers
 - connected server registrations [SQL Server]
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80dbd927f0a1b008e48fda7fcbd4a7e75b7fbaf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191938"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241338"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrieren eines verbundenen Servers (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Server registrieren. Indem Sie den Server registrieren, können Sie die Verbindungsinformationen für Server, auf die Sie häufig zugreifen, speichern. Ein Server kann vor dem Verbinden oder bei der Verbindung im Objekt-Explorer registriert werden.  
   
  **In diesem Thema**  
   
--   **So registrieren Sie einen Server mit**  
+-   **So registrieren Sie einen Server mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>So registrieren Sie einen Server  
   
@@ -43,13 +43,13 @@ ms.locfileid: "63191938"
      **Serverbeschreibung**  
      Geben Sie eine optionale Beschreibung des Servers ein. Es können maximal 250 Zeichen eingegeben werden.  
   
-     **Wählen Sie eine Servergruppe**  
+     **Wählen Sie eine Servergruppe aus**  
      Wählen Sie die Servergruppe aus, in der die Serverregistrierung gespeichert werden soll.  
   
      **Neue Gruppe**  
      Klicken Sie auf diese Option, um das Dialogfeld **Neue Gruppe** zu öffnen, mit dem Sie eine neue Servergruppe für den registrierten Server erstellen können.  
   
-     **Speichern**  
+     **Sicher**  
      Speichert die von Ihnen eingegebenen Informationen und erstellt einen registrierten Server.  
   
   

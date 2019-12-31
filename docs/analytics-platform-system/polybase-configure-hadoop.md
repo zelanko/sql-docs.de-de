@@ -1,25 +1,26 @@
 ---
-title: Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop | Microsoft-Dokumentation
+title: 'Zugreifen auf externe Daten: Hadoop-polybase'
 description: Erläutert, wie polybase parallel Data Warehouse zum Herstellen einer Verbindung mit dem externen Hadoop konfiguriert wird.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019, seo-lt-2019
+ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227128"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245393"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
 
 Der Artikel erläutert die Verwendung von polybase auf einem APS-Gerät zum Abfragen externer Daten in Hadoop.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 PolyBase unterstützt zwei Hadoop-Anbieter: Hortonworks Data Platform (HDP) und Cloudera Distributed Hadoop (CDH). Hadoop folgt dem Muster „Hauptversion.Nebenversion“ für neue Releases, und alle Versionen, die zu einer unterstützten Haupt- und Nebenversion gehören, werden unterstützt. Folgende Hadoop-Anbieter werden unterstützt:
  - Hortonworks HDP 1.3 auf Linux/Windows Server  
@@ -27,7 +28,7 @@ PolyBase unterstützt zwei Hadoop-Anbieter: Hortonworks Data Platform (HDP) und 
  - Hortonworks HDP 3,0-3,1 unter Linux
  - Hortonworks HDP 2.1 – 2.3 unter Windows Server  
  - Cloudera CDH 4.3 unter Linux  
- - Cloudera CDH 5,1-5,5, 5,9-5,13, 5,15 & 5,16 unter Linux
+ - Cloudera CDH 5,1-5,5, 5,9-5,13, 5,15 #a0 5,16 unter Linux
 
 ### <a name="configure-hadoop-connectivity"></a>Konfigurieren der Hadoop-Konnektivität
 
@@ -48,7 +49,7 @@ Konfigurieren Sie zunächst APS für die Verwendung Ihres bestimmten Hadoop-Anbi
 
 2. Neustart der APS-Region mithilfe der Dienst Status Seite auf [Appliance-Configuration Manager](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a> Aktivieren der Weitergabeberechnung  
+## <a id="pushdown"></a>Weitergabeberechnung aktivieren  
 
 Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung für Ihren Hadoop-Cluster:  
   

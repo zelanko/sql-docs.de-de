@@ -1,5 +1,5 @@
 ---
-title: Tabellenwert Parameter-Metadaten für vorbereitete Anweisungen | Microsoft-Dokumentation
+title: TVP-Metadaten für vorbereitete Anweisungen
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17b96f9a18e2b076bda76550b8796301f815c9f5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 27ae8ffe9fc719e751511b9930889e1fc265d876
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790731"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241851"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>Tabellenwertparameter-Metadaten für vorbereitete Anweisungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "73790731"
   
  Sie können keine Tabellenwertparameter-Metadaten für vorbereitete Anweisungen abrufen, bei denen es sich nicht um gespeicherte Prozeduraufrufe handelt. Wenn Sie dies dennoch versuchen, gibt die Anwendung den Fehler SQL_ERROR mit SQLSTATE 42000 sowie die Meldung "Syntaxfehler oder Zugriffsverletzung" zurück.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabellenwert Parameter &#40;(ODBC)&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellenwert Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Interaktives Durchsuchen von Dokumenten | Microsoft-Dokumentation
-ms.custom: ''
+title: Interaktives Durchsuchen von Dokumenten
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 858724b4447c6602db14980a27225b3b8fe69eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac2a15bae8fde50315ab6c7c41f2e3e57973061f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063785"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243293"
 ---
 # <a name="search-documents-interactively"></a>Interaktives Durchsuchen von Dokumenten
-  Mithilfe des Dialogfelds **Suchen und Ersetzen** können Sie einzelne oder mehrere geöffnete Dateien oder Fenster durchsuchen und sich einzeln durch die Suchübereinstimmungen bewegen. Bei dieser Technik können Sie einzelne Suchübereinstimmungen im Kontext der jeweiligen Textpassage überprüfen. Außerdem können Sie Massensuchvorgänge ausführen und Suchübereinstimmungen über das Dialogfeld **Suchen und Ersetzen** im Berichtsformat überprüfen.  
+  Mithilfe des Dialog Felds Suchen **und ersetzen** können Sie eine oder mehrere geöffnete Dateien oder Fenster durchsuchen und die Such Übereinstimmungen nacheinander durchsuchen. Bei dieser Technik können Sie einzelne Suchübereinstimmungen im Kontext der jeweiligen Textpassage überprüfen. Außerdem können Sie Massensuchvorgänge ausführen und Suchübereinstimmungen über das Dialogfeld **Suchen und Ersetzen** im Berichtsformat überprüfen.  
   
 ### <a name="to-search-all-open-documents"></a>So durchsuchen Sie alle geöffneten Dokumente  
   
@@ -55,15 +55,15 @@ ms.locfileid: "66063785"
   
 5.  Klicken Sie auf **Ersetzen**, und klicken Sie wiederholt auf **Ersetzen** , bis die letzte Übereinstimmung in der letzten Datei ersetzt wurde. Wenn Sie eine Übereinstimmung auslassen möchten, die nicht ersetzt werden soll, klicken Sie auf **Weitersuchen** .  
   
-     -oder-  
+     – oder –  
   
      Wählen Sie die Option **Alle ersetzen** aus, um alle Übereinstimmungen zu ersetzen. In einem Meldungsfeld wird die Gesamtanzahl der Ersetzungen angezeigt.  
   
  Mit dem Befehl **Alle ersetzen** werden alle Suchübereinstimmungen ersetzt. Dazu gehören auch die Übereinstimmungen, die Sie zuvor mit der Schaltfläche **Weitersuchen** ausgelassen haben. Um den Befehl **Alle ersetzen**abzubrechen, klicken Sie im Menü **Bearbeiten** auf **Rückgängig** , bevor Sie eine der Dateien schließen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Inkrementelles Durchsuchen eines aktiven Dokuments](search-an-active-document-incrementally.md)   
- [Suchen und Ersetzen](search-and-replace.md)   
+ [Suchen und ersetzen](search-and-replace.md)   
  [Durchsuchen von Dokumenten mithilfe von Ergebnislisten](search-documents-using-results-lists.md)   
  [Suchen von Text mit Platzhaltern](search-text-with-wildcards.md)   
  [Suchen von Text mit regulären Ausdrücken](search-text-with-regular-expressions.md)  

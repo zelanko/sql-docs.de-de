@@ -1,6 +1,6 @@
 ---
-title: Verwalten der Codeformatierung | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwalten der Codeformatierung
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12d93e72a3b7dabc05a6b34e4c671a8ce1da028e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e25a5438eb147cfe5e3c7e4df3d3fe504cfcda48
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090400"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242018"
 ---
 # <a name="manage-code-formatting"></a>Verwalten der Codeformatierung
   Mit dem Editor können Sie Code formatieren, z. B. mit Einzug, ausgeblendetem Text, URLs usw. Außerdem können Sie mit dem intelligenten Einzug den Code automatisch bei der Eingabe formatieren.  
@@ -51,9 +51,9 @@ ms.locfileid: "66090400"
   
 5.  Klicken Sie auf eine der folgenden Optionen:  
   
-    -   **Keiner**. Der Cursor wechselt zum Anfang der nächsten Zeile.  
+    -   **Keine**. Der Cursor wechselt zum Anfang der nächsten Zeile.  
   
-    -   **Block**. Der Cursor richtet die nächste Zeile an der vorherigen Zeile aus.  
+    -   **Blockieren**. Der Cursor richtet die nächste Zeile an der vorherigen Zeile aus.  
   
     -   **Intelligent** (Standard). Der Sprachdienst bestimmt den passenden Einzugsstil.  
   

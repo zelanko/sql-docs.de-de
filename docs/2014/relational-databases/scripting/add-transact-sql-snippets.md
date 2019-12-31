@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen von Transact-SQL-Ausschnitten | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen von Transact-SQL-Ausschnitten
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d79989e37483342e5cc1624a0529f9df98ae980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064293"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244821"
 ---
 # <a name="add-transact-sql-snippets"></a>Hinzufügen von Transact-SQL-Ausschnitten
   Sie können dem Satz von vordefinierten Ausschnitten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten sind, eigene Transact-SQL-Codeausschnitte hinzufügen.  
@@ -28,7 +28,7 @@ ms.locfileid: "66064293"
 ## <a name="registering-the-code-snippet"></a>Registrieren des Codeausschnitts  
  Verwenden Sie nach dem Erstellen der Ausschnittdatei den Codeausschnitt-Manager, um den Ausschnitt bei [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu registrieren. Sie können entweder einen Ordner hinzufügen, der mehrere Ausschnitte enthält, oder einzelne Ausschnitte in den Ordner **Eigene Codeausschnitte** importieren.  
   
-## <a name="procedures"></a>Vorgehensweisen  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="adding-a-snippet-folder"></a>Hinzufügen eines Ausschnittordners  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66064293"
   
 2.  Wählen Sie das Menü **Extras** aus, und klicken Sie auf **Codeausschnitt-Manager**.  
   
-3.  Klicken Sie auf die Schaltfläche **Hinzufügen** .  
+3.  Klicken Sie auf die Schaltfläche **Hinzufügen**.  
   
 4.  Navigieren Sie zum Ordner, der die Codeausschnitte enthält, und klicken Sie auf die Schaltfläche **Ordner auswählen** .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66064293"
   
 2.  Wählen Sie das Menü **Extras** aus, und klicken Sie auf **Codeausschnitt-Manager**.  
   
-3.  Klicken Sie auf die Schaltfläche **Importieren** .  
+3.  Klicken Sie auf die Schaltfläche **Importieren**.  
   
 4.  Navigieren Sie zum Ordner, der den Ausschnitt enthält, klicken Sie auf die SNIPPET-Datei, und klicken Sie auf die Schaltfläche **Öffnen** .  
   
@@ -106,11 +106,11 @@ ms.locfileid: "66064293"
   
 3.  Wählen Sie das Menü **Extras** aus, und klicken Sie auf **Codeausschnitt-Manager**.  
   
-4.  Klicken Sie auf die Schaltfläche **Importieren** .  
+4.  Klicken Sie auf die Schaltfläche **Importieren**.  
   
 5.  Navigieren Sie zum Ordner, der die Datei "TryCatch.snippet" enthält, klicken Sie auf die Datei "TryCatch.snippet", und klicken Sie auf die Schaltfläche **Öffnen** . Im Ordner **Eigene Codeausschnitte** sollte kein TryCatch-Ausschnitt vorhanden sein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einfügen von Transact-SQL-Umschließungsausschnitten](insert-surround-with-transact-sql-snippets.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Einfügen von Transact-SQL-Umschließungs Ausschnitten](insert-surround-with-transact-sql-snippets.md)  
   
   

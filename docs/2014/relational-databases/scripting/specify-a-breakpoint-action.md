@@ -1,6 +1,6 @@
 ---
-title: Angeben einer Breakpointaktion | Microsoft-Dokumentation
-ms.custom: ''
+title: Angeben einer Breakpointaktion
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,18 +13,18 @@ ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97454a06f4b03b3148984697e0056aa87dff1200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08df1a4c00bf3b019cf45f168aeeaaf27fdb751c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090152"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243236"
 ---
 # <a name="specify-a-breakpoint-action"></a>Angeben einer Breakpointaktion
   Die Breakpointaktion **Bei Treffer** gibt einen benutzerdefinierten Task an, den der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger für einen Breakpoint ausführt. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Überlegungen zur Aktion  
- Die Standardaktion für einen Breakpoint besteht darin, die Ausführung zu unterbrechen, wenn die Trefferanzahl- und die Breakpointbedingung erfüllt sind. Der primäre Zweck einer **Bei Treffer** -Aktion im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ist es hingegen, durch Angeben einer Ausgabemeldung Informationen in das Debuggerausgabefenster **auszugeben**.  
+##  <a name="BKMK_ActionConsiderations"></a>Überlegungen zur Aktion  
+ Die Standardaktion für einen Breakpoint besteht darin, die Ausführung zu unterbrechen, wenn die Trefferanzahl- und die Breakpointbedingung erfüllt sind. Der primäre Zweck einer **Bei Treffer** -Aktion im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ist es hingegen, durch Angeben einer Ausgabemeldung Informationen in das Debuggerausgabefenster **** auszugeben.  
   
  Ausgabemeldungen werden mit der Option **Meldung drucken** festgelegt und als Textzeichenfolge angegeben, die Ausdrücke mit Informationen aus dem zu debuggenden [!INCLUDE[tsql](../../includes/tsql-md.md)] enthalten. Mögliche Ausdrücke:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66090152"
   
 1.  Klicken Sie im Editor-Fenster mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Bei Treffer** .  
   
-     -oder-  
+     – oder –  
   
      Klicken Sie im **Breakpointfenster** mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Bei Treffer** .  
   
@@ -64,6 +64,6 @@ ms.locfileid: "66090152"
   
 3.  Klicken Sie auf **OK** , um die Änderungen zu implementieren, oder auf **Abbrechen** , um den Vorgang zu beenden, ohne die Änderungen zu übernehmen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Angeben einer Breakpointbedingung](specify-a-breakpoint-condition.md)   
- [Angeben einer Trefferanzahl](specify-a-hit-count.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Festlegen einer Haltepunkt Bedingung](specify-a-breakpoint-condition.md)   
+ [Angeben einer Treffer Anzahl](specify-a-hit-count.md)  

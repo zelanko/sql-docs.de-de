@@ -1,6 +1,6 @@
 ---
-title: Einfügen von Transact-SQL-Umschließungsausschnitten | Microsoft-Dokumentation
-ms.custom: ''
+title: Einfügen von Transact-SQL-Umschließungsausschnitten
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2afb9294fa75926b6f6a78ec8b889a2e38a851a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fde81304117befec38844c28b6d0c434ab3606e8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090340"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242089"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Einfügen von Transact-SQL-Umschließungsausschnitten
   Als Umschließungsausschnitt wird eine Vorlage bezeichnet, die Sie als Ausgangspunkt beim Einschließen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem BEGIN-, IF- oder WHILE-Block verwenden können.  
@@ -43,7 +43,7 @@ ms.locfileid: "66090340"
   
 3.  Wählen Sie in der Liste den Namen des Ausschnitts (BEGIN, IF oder WHILE) aus, indem Sie die Maus verwenden oder den Namen des Ausschnitts eingeben und TAB oder die EINGABETASTE drücken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Einfügen von Transact-SQL-Ausschnitten](insert-transact-sql-snippets.md)  
   
   

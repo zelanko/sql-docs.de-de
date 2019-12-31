@@ -1,6 +1,6 @@
 ---
-title: Erstellen eines neu registrierten Servers (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen von neuen registrierten Servern
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Registered Servers [SQL Server], creating new registered servers
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8561eb723337530818f45c5a845f7b352b328653
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: cce885929deff7484a4e068bf06ac3b39dbb3062
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188137"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244671"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Erstellen eines neu registrierten Servers (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie die Verbindungsinformationen für Server speichern, auf die Sie häufig zugreifen, indem Sie den Server in der Komponente Registrierte Server von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]registrieren. Ein Server kann vor dem Herstellen einer Verbindung oder bei der Verbindungsherstellung über den Objekt-Explorer registriert werden. Es gibt eine spezielle Menüoption zum Registrieren der Serverinstanzen auf dem lokalen Computer.  
@@ -38,7 +38,7 @@ ms.locfileid: "68188137"
   
      Zentrale Verwaltungsserver speichern Serverregistrierungen im zentralen Verwaltungsserver anstatt im Dateisystem. Zentrale Verwaltungsserver und untergeordnete registrierte Server können nur mithilfe der Windows-Authentifizierung registriert werden. Wenn ein zentraler Verwaltungsserver registriert wurde, werden seine zugeordneten registrierten Server automatisch angezeigt. Weitere Informationen zu zentralen Verwaltungsservern finden Sie unter [Verwalten mehrerer Server mithilfe von zentralen Verwaltungsservern](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die älter sind als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , können nicht als zentraler Verwaltungsserver festgelegt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>So registrieren Sie die lokalen Serverinstanzen  
   
@@ -52,27 +52,27 @@ ms.locfileid: "68188137"
      Wenn Sie einen Server über Registrierte Server registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich Registrierte Server angezeigten Servertyp übereinstimmt. Wenn Sie einen anderen Servertyp registrieren möchten, klicken Sie, bevor Sie mit dem Registrieren eines neuen Servers beginnen, auf der Symbolleiste **Registrierte Server**auf **Datenbank-Engine**, **Analysis-Server**, **Reporting Services** oder **Integration Services** .  
   
      **Servername**  
-     Wählen Sie die zu registrierende Serverinstanz in folgendem Format aus: *\<servername>* [\\ *\<instanzname>* ].  
+     Wählen Sie die Serverinstanz für die Registrierung im folgenden Format aus:\\ * \<Servername>*[*\<instanceName>*].  
   
-     **Authentifizierung**  
+     **Genehmigung**  
      Beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sind zwei Authentifizierungsmodi verfügbar:  
   
      **Windows-Authentifizierung**  
      Mit dem Windows-Authentifizierungsmodus können Benutzer die Verbindung über ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto herstellen.  
   
-     **SQL Server-Authentifizierung**  
+     **SQL Server Authentifizierung**  
      Wenn ein Benutzer eine Verbindung mit einem angegebenen Benutzernamen und einem Kennwort von einer nicht vertrauenswürdigen Verbindung herstellt, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Authentifizierung durch, indem überprüft wird, ob ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldekonto eingerichtet wurde und ob das angegebene Kennwort mit dem zuvor aufgezeichneten übereinstimmt. Wenn kein Anmeldekonto in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingerichtet wurde, schlägt die Authentifizierung fehl, und der Benutzer erhält eine Fehlermeldung.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md).  
+    >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md).  
   
      **Benutzername**  
      Zeigt den aktuellen Benutzernamen an, zu dem die Verbindung hergestellt wird. Diese schreibgeschützte Option ist nur verfügbar, wenn Sie zum Herstellen der Verbindung die Windows-Authentifizierung ausgewählt haben. Um **Benutzername**zu ändern, melden Sie sich bei dem Computer als ein anderer Benutzer an.  
   
-     **Anmeldename**  
+     **Anmel**  
      Geben Sie den Anmeldenamen für die Verbindung ein. Diese Option ist nur verfügbar, wenn Sie zum Verbinden die Authentifizierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgewählt haben.  
   
-     **Kennwort**  
+     **Password**  
      Geben Sie das Kennwort für die Anmeldung ein. Diese Option kann nur bearbeitet werden, wenn Sie zum Verbinden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung ausgewählt haben.  
   
      **Kennwort speichern**  
@@ -90,7 +90,7 @@ ms.locfileid: "68188137"
      **Test**  
      Klicken Sie hier, um die Verbindung mit dem unter **Servername**ausgewählten Server zu testen.  
   
-     **Speichern**  
+     **Sicher**  
      Klicken Sie hier, um die Einstellungen des registrierten Servers zu speichern.  
   
 ## <a name="multiserver-queries"></a>Multiserverabfragen  
@@ -100,9 +100,9 @@ ms.locfileid: "68188137"
   
  Um Abfragen für alle Server auszuführen, die bei einem zentralen Verwaltungsserver registriert sind, erweitern Sie den zentralen Verwaltungsserver, klicken Sie mit der rechten Maustaste auf die Servergruppe, zeigen Sie auf **Verbinden**, und klicken Sie dann auf **Neue Abfrage**. Wenn Abfragen im neuen Abfrage-Editorfenster ausgeführt werden, werden sie anhand der gespeicherten Verbindungsinformationen und des Kontexts für die Windows-Authentifizierung, für alle Server in der Servergruppe ausgeführt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausblenden von Systemobjekten im Objekt-Explorer](../object/hide-system-objects-in-object-explorer.md)   
- [Exportieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [System Objekte in Objekt-Explorer ausblenden](../object/hide-system-objects-in-object-explorer.md)   
+ [Informationen zum registrierten Server &#40;SQL Server Management Studio exportieren&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [Importieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)  
   
   

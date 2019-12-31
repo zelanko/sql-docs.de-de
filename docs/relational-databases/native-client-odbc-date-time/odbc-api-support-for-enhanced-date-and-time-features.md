@@ -1,7 +1,7 @@
 ---
-title: ODBC-API-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit | Microsoft-Dokumentation
+title: ODBC-API für Datum/Uhrzeit
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 105c9463993c33cd63c419818e42bace0959ff18
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 6646b899f990ea4be09b09b0780d24bb80778e53
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73783770"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243798"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>ODBC-API-Unterstützung für verbesserte Funktionen für Datum und Uhrzeit
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "73783770"
   
 -   [SQLSetDescRec](../../relational-databases/native-client-odbc-api/sqlsetdescrec.md)  
   
--   [SQLSpecialColumns](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md)  
+-   ['SQLSpecialColumns'](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md)  
   
  Die folgenden APIs für das Massenkopieren unterstützen die verbesserten Funktionen für Datum/Uhrzeit:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73783770"
   
 -   [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Verbesserungen &#40;bei Datum und Uhrzeit in ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datums-und Uhrzeit Verbesserungen &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

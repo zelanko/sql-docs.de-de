@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren Sie den Transact-SQL-Debugger | Microsoft-Dokumentation
-ms.custom: ''
+title: Konfigurieren des Transact-SQL-Debuggers
+ms.custom: seo-lt-2019
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ec17b61d0ea5d3f44967b517ea3e60c6b6785c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064191"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245191"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Konfigurieren des Transact-SQL-Debuggers
   Sie müssen Windows-Firewall-Regeln so konfigurieren, dass das Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] aktiviert ist, wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hergestellt wird, die auf einem anderen Computer als der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor ausgeführt wird.  
@@ -42,7 +42,7 @@ ms.locfileid: "66064191"
   
  Es gibt keine Konfigurationsvoraussetzungen für die Ausführung des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers, wenn [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] auf demselben Computer wie die Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ausgeführt wird. Um jedoch den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger auszuführen, wenn eine Verbindung mit einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]besteht, müssen auf beiden Computern in der Windows-Firewall Programm- und Portausnahmen aktiviert sein. Diese Regeln werden möglicherweise durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup erstellt. Wenn Ihnen beim Versuch, eine Remotedebugsitzung zu öffnen, Fehler angezeigt werden, stellen Sie sicher, dass die folgenden Firewallregeln auf dem Computer definiert sind.  
   
- Verwenden Sie die Anwendung **Windows-Firewall mit erweiterter Sicherheit** , um die Firewallregeln zu verwalten. Öffnen Sie in sowohl [!INCLUDE[win7](../../includes/win7-md.md)] als auch [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] **Systemsteuerung**, öffnen Sie **Windows-Firewall**und wählen Sie **Erweiterte Einstellungen**aus. In [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] können Sie auch **Dienst-Manager**öffnen, im linken Bereich **Konfiguration** sowie **Windows-Firewall mit erweiterter Sicherheit**erweitern.  
+ Verwenden Sie die Anwendung **Windows-Firewall mit erweiterter Sicherheit** , um die Firewallregeln zu verwalten. Öffnen Sie in sowohl [!INCLUDE[win7](../../includes/win7-md.md)] als auch [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]**Systemsteuerung**, öffnen Sie **Windows-Firewall**und wählen Sie **Erweiterte Einstellungen**aus. In [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] können Sie auch **Dienst-Manager**öffnen, im linken Bereich **Konfiguration** sowie **Windows-Firewall mit erweiterter Sicherheit**erweitern.  
   
 > [!CAUTION]  
 >  Wenn Sie Regeln in der Windows-Firewall aktivieren, kann dies dazu führen, dass Ihr Computer Sicherheitsrisiken ausgesetzt ist, die von der Firewall normalerweise geblockt werden. Durch das Aktivieren von Regeln für Remotedebugging wird die Blockierung der in diesem Thema aufgeführten Ports und Programme aufgehoben.  
@@ -56,7 +56,7 @@ ms.locfileid: "66064191"
   
     2.  Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm**aus, und klicken Sie anschließend auf **Weiter**.  
   
-    3.  Wählen Sie im Dialogfeld **Programm** die Option **Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu sqlservr.exe für diese Instanz ein. Standardmäßig wird sqlservr.exe im c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12 installiert. *InstanceName*\MSSQL\Binn, in denen *InstanceName* ist MSSQLSERVER für die Standardinstanz und der Instanzname für eine beliebige benannte Instanz.  
+    3.  Wählen Sie im Dialogfeld **Programm** die Option **Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu sqlservr.exe für diese Instanz ein. Standardmäßig wird "sqlservr. exe" unter "c:\Programme\Microsoft SQL server\mssql12." installiert. *InstanceName*\MSSQL\Binn, wobei *instanceName* für die Standard Instanz MSSQLSERVER und der Instanzname für eine beliebige benannte Instanz ist.  
   
     4.  Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie auf **Weiter**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66064191"
   
     2.  Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm**aus, und klicken Sie anschließend auf **Weiter**.  
   
-    3.  Wählen Sie im Dialogfeld **Programm** **Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu svchost.exe ein. Standardmäßig ist svchost.exe in %systemroot%\System32\svchost.exe. installiert.  
+    3.  Wählen Sie im Dialogfeld **Programm****Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu svchost.exe ein. Standardmäßig ist svchost.exe in %systemroot%\System32\svchost.exe. installiert.  
   
     4.  Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie auf **Weiter**.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66064191"
   
     2.  Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm**aus, und klicken Sie anschließend auf **Weiter**.  
   
-    3.  Wählen Sie im Dialogfeld **Programm** **Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu svchost.exe ein. Standardmäßig ist svchost.exe in %systemroot%\System32\svchost.exe. installiert.  
+    3.  Wählen Sie im Dialogfeld **Programm****Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu svchost.exe ein. Standardmäßig ist svchost.exe in %systemroot%\System32\svchost.exe. installiert.  
   
     4.  Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie auf **Weiter**.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66064191"
   
     2.  Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm**aus, und klicken Sie anschließend auf **Weiter**.  
   
-    3.  Wählen Sie im Dialogfeld **Programm** **Dieser Programmpfad:** aus, und geben Sie einen dieser drei Werte ein.  
+    3.  Wählen Sie im Dialogfeld **Programm****Dieser Programmpfad:** aus, und geben Sie einen dieser drei Werte ein.  
   
         -   Geben Sie für [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den vollständigen Pfad zu ssms.exe ein. Standardmäßig wird ssms.exe unter C:\Programme (x86)\Microsoft SQL Server\120\Tools\Binn\Management Studio installiert.  
   
@@ -150,19 +150,20 @@ ms.locfileid: "66064191"
 ## <a name="requirements-for-starting-the-debugger"></a>Anforderungen zum Starten des Debuggers  
  Beim Starten des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers müssen außerdem immer die folgenden Anforderungen erfüllt sein:  
   
-* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] muss unter einem Windows-Konto ausgeführt werden, das Mitglied der festen Serverrolle sysadmin ist.  
+* 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] muss unter einem Windows-Konto ausgeführt werden, das Mitglied der festen Serverrolle sysadmin ist.  
   
 * Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor-Fenster muss entweder mithilfe einer Windows-Authentifizierung oder mithilfe eines Anmeldenamens für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, der Mitglied der festen Serverrolle sysadmin ist, verbunden werden.  
   
 * Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster muss mit einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) oder höher verbunden sein. Sie können den Debugger nicht ausführen, wenn das Abfrage-Editor-Fenster mit einer Instanz verbunden ist, die sich im Einzelbenutzermodus befindet.
 
-* Der Server muss über RPC mit dem Client kommunizieren. Das Konto, unter dem SQL Server-Dienst läuft haben sollte, über Authentifizierungsberechtigungen an den Client.  
+* Der Server muss über RPC mit dem Client kommunizieren. Das Konto, unter dem SQL Server-Dienst ausgeführt wird, muss über die Berechtigung authentifizieren für den Client verfügen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Transact-SQL-Debugger](transact-sql-debugger.md)   
  [Ausführen des Transact-SQL-Debuggers](run-the-transact-sql-debugger.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](step-through-transact-sql-code.md)   
- [Transact-SQL-Debuggerinformationen](transact-sql-debugger-information.md)   
- [Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Informationen zum Transact-SQL-Debugger](transact-sql-debugger-information.md)   
+ [Datenbank-Engine Abfrage-Editor &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

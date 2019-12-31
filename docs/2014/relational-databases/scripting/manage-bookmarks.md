@@ -1,6 +1,6 @@
 ---
-title: Verwalten von Lesezeichen | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwalten von Lesezeichen
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,22 +12,22 @@ ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6741660b7b7985356c59ffe47b53c376a55338e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4403e542125918bb5fd738077ebdcc6182201a12
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063910"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242052"
 ---
 # <a name="manage-bookmarks"></a>Verwalten von Lesezeichen
-  Während der Arbeit mit einem Code-Editor können Sie mithilfe des Fensters **Lesezeichen** Links zu bestimmten Codezeilen innerhalb des Dokuments erstellen. Sie können dieses Fenster über das Menü **Ansicht** anzeigen.  
+  Wenn Sie in einem Code-Editor arbeiten, können Sie im Fenster **Lesezeichen** Links zu bestimmten Codezeilen innerhalb Ihres Dokuments erstellen. Sie können dieses Fenster über das Menü **Ansicht** anzeigen.  
   
  Zum Erstellen von Lesezeichen und für die Navigation innerhalb der Lesezeichen klicken Sie auf die auf der Symbolleiste **Text-Editor** und die oben im Fenster **Lesezeichen** vorhandenen Schaltflächen. Sie können Lesezeichen hinzufügen und entfernen, aktivieren oder deaktivieren und in Ordnern organisieren. Bestimmte Befehle stehen auch über das Kontextmenü im Fenster **Lesezeichen** zur Verfügung. Zum Hinzufügen oder Entfernen eines Lesezeichens platzieren Sie die Einfügemarke im Editor auf der gewünschten Zeile, und klicken Sie dann auf **Lesezeichen ein/aus**. Zum Aktivieren eines Lesezeichens aktivieren Sie im Fenster **Lesezeichen** das zugehörige Kontrollkästchen; Zum Deaktivieren (aber nicht zum Entfernen) eines Lesezeichens deaktivieren Sie das Kontrollkästchen.  
   
 ## <a name="text-editor-toolbar"></a>Text-Editor (Symbolleiste)  
  Die folgenden Schaltflächen sind auf der Symbolleiste **Text-Editor** aktiviert, wenn im Editor ein Textdokument geöffnet ist. Um die Symbolleiste **Text-Editor** anzuzeigen, während Sie im Abfrage-Editor arbeiten, zeigen Sie im Menü **Ansicht** auf **Symbolleisten**, und klicken Sie dann auf **Text-Editor**.  
   
- **Lesezeichen für die aktuelle Zeile umschalten**  
+ **Lesezeichen in der aktuellen Zeile umschalten**  
  Fügt auf der ausgewählten Zeile des Dokuments im aktiven Editor ein Lesezeichen hinzu oder entfernt dieses. Die mit einem Lesezeichen versehene Codezeile wird nicht verändert.  
   
  **Einfügemarke zum vorherigen Lesezeichen verschieben**  
@@ -45,7 +45,7 @@ ms.locfileid: "66063910"
 ## <a name="bookmarks-window"></a>Lesezeichen (Fenster)  
  Zum Organisieren von Lesezeichen erstellen Sie im Fenster **Lesezeichen** Lesezeichenordner. Ziehen Sie die Lesezeichen per Drag und Drop in die gewünschten Ordner. Die folgenden Schaltflächen stehen oben im Fenster **Lesezeichen** zur Verfügung.  
   
- **Lesezeichen für die aktuelle Zeile umschalten.**  
+ **Ein Lesezeichen für die aktuelle Zeile umschalten.**  
  Fügt auf der ausgewählten Zeile des Dokuments im aktiven Editor ein Lesezeichen hinzu oder entfernt dieses. Die mit einem Lesezeichen versehene Codezeile wird nicht verändert.  
   
  **Neuer Ordner**  
@@ -69,7 +69,7 @@ ms.locfileid: "66063910"
  **Alle Lesezeichen deaktivieren/aktivieren**  
  Deaktiviert oder aktiviert die Kontrollkästchen für alle Lesezeichen im Fenster **Lesezeichen** . Die Lesezeichen werden nicht entfernt und die mit ihnen gekennzeichneten Codezeilen nicht geändert.  
   
- **Löschen**  
+ **„Löschen“**  
  Entfernt das aktuell ausgewählte Lesezeichen aus dem Fenster **Lesezeichen** sowie aus dem Dokument, in dem es aufgetreten ist. Die Codezeile, die mit dem Lesezeichen versehen war, wird dabei nicht entfernt.  
   
  Kontrollkästchen für Lesezeichen  
@@ -78,10 +78,10 @@ ms.locfileid: "66063910"
 ## <a name="bookmarks-window-shortcut-menu"></a>Lesezeichen-Fenster (Kontextmenü)  
  Wenn Sie auf einen Eintrag im Fenster **Lesezeichen** mit der rechten Maustaste klicken, stehen über das Kontextmenü die folgenden Befehle zur Verfügung.  
   
- **Löschen**  
+ **„Löschen“**  
  Entfernt das aktuell ausgewählte Lesezeichen aus dem Fenster **Lesezeichen** sowie aus dem Dokument, in dem es aufgetreten ist. Die Codezeile, die mit dem Lesezeichen versehen war, wird dabei nicht entfernt.  
   
- **Umbenennen**  
+ **Benen**  
  Ermöglicht Ihnen, einem Lesezeichen oder Ordner einen neuen Anzeigenamen zuzuweisen.  
   
  **Lesezeichen deaktivieren/aktivieren**  
@@ -90,5 +90,5 @@ ms.locfileid: "66063910"
  **Alle Lesezeichen deaktivieren/aktivieren**  
  Deaktiviert oder aktiviert die Kontrollkästchen für alle Lesezeichen im Fenster **Lesezeichen** . Die Lesezeichen werden nicht entfernt und die mit ihnen gekennzeichneten Codezeilen nicht geändert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tastenkombinationen für SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Management Studio Tastenkombinationen](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

@@ -1,6 +1,5 @@
 ---
-title: Angeben eines Zuordnungsschemas in einem Updategram (SQLXML 4.0) | Microsoft-Dokumentation
-ms.custom: ''
+title: Mapping-Schemas mit Anmerkungen für ein Update Gram (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,35 +19,36 @@ helpviewer_keywords:
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f75d127b6b8bd723a4d39a5e0610884010e4106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4feb8e282390b4808b69493a299cbad990f1e91b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018501"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243567"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Angeben eines Zuordnungsschemas mit Anmerkungen in einem Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In diesem Thema wird erläutert, wie das in einem Updategram angegebene Zuordnungsschema (XSD oder XDR) zur Verarbeitung von Updates verwendet wird. In einem Updategram, können Sie den Namen des eines Zuordnungsschemas verwenden Sie in der mapping-Tabellen und Spalten in die Elemente und Attribute im Updategram angeben [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Wenn in einem Updategram ein Zuordnungsschema angegeben ist, müssen die im Updategram festgelegten Element- und Attributnamen den Elementen und Attributen im Zuordnungsschema zugeordnet werden.  
+  In diesem Thema wird erläutert, wie das in einem Updategram angegebene Zuordnungsschema (XSD oder XDR) zur Verarbeitung von Updates verwendet wird. In einem Update Gram können Sie den Namen eines Zuordnungsschemas bereitstellen, das bei der Zuordnung der Elemente und Attribute im Update Gram zu Tabellen und Spalten in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet werden soll. Wenn in einem Updategram ein Zuordnungsschema angegeben ist, müssen die im Updategram festgelegten Element- und Attributnamen den Elementen und Attributen im Zuordnungsschema zugeordnet werden.  
   
- Um ein Zuordnungsschema anzugeben, verwenden Sie die **Zuordnungsschema** Attribut der  **\<Sync >** Element. Die folgenden Beispiele zeigen zwei Updategrams: ein Updategram, das ein einfaches Zuordnungsschema verwendet, und ein Updategram, das ein komplexeres Schema verwendet.  
+ Wenn Sie ein Zuordnungsschema angeben möchten, verwenden Sie das **Mapping-Schema-** Attribut des ** \<Sync>** -Elements. Die folgenden Beispiele zeigen zwei Updategrams: ein Updategram, das ein einfaches Zuordnungsschema verwendet, und ein Updategram, das ein komplexeres Schema verwendet.  
   
 > [!NOTE]  
->  Diese Dokumentation setzt voraus, dass Sie mit Vorlagen und der Unterstützung von Zuordnungsschemas in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vertraut sind. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Für ältere Anwendungen, die XDR verwenden, finden Sie unter [XDR-Schemas mit Anmerkungen versehen &#40;in SQLXML 4.0 veraltet&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Diese Dokumentation setzt voraus, dass Sie mit Vorlagen und der Unterstützung von Zuordnungsschemas in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vertraut sind. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Informationen zu Legacy Anwendungen, die XDR verwenden, finden Sie unter mit Anmerkungen versehene [XDR-Schemas &#40;in SQLXML 4,0&#41;veraltet ](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Umgehen mit Datentypen  
- Wenn das Schema gibt die **Image**, **binäre**, oder **Varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp (mit **SQL: DataType**) und nicht Geben Sie einen XML-Datentyp, das Updategram wird davon ausgegangen, dass der XML-Datentyp ist **binary Base64**. Wenn Ihre Daten sind **bin.base** geben, müssen Sie den Typ explizit angeben (**dt:type=bin.base** oder **Type = "xsd: hexBinary"** ).  
+ Wenn das Schema den **Image**-, **Binary**-oder **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp (mithilfe von **SQL: datatype**) angibt und keinen XML-Datentyp angibt, geht das Update Gram davon aus, dass der XML-Datentyp die **binäre Basis 64**ist. Wenn es sich bei den Daten um den Typ **bin. Base** handelt, müssen Sie explizit den Typ angeben (**dt: Type = bin. Base** oder **Type = "xsd: hexBinary"**).  
   
- Wenn das Schema gibt die **"DateTime"** , **Datum**, oder **Zeit** XSD-Datentyp, müssen Sie auch angeben der entsprechenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentyp mithilfe  **SQL: datatype = "DateTime"** .  
+ Wenn das Schema den **DateTime**-, **Date**-oder **time** -XSD-Datentyp angibt, müssen Sie auch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den entsprechenden Datentyp mithilfe von **SQL: datatype = "DateTime"** angeben.  
   
- Beim Verarbeiten von Parametern des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Geld** geben, müssen Sie explizit angeben **SQL: datatype = "Money"** auf dem entsprechenden Knoten im Zuordnungsschema.  
+ Bei der Behandlung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parametern des **Money** -Typs müssen Sie für den entsprechenden Knoten im Zuordnungsschema explizit **SQL: datatype = "Money"** angeben.  
   
 ## <a name="examples"></a>Beispiele  
- Um funktionierende Beispiele, die mit den folgenden Beispielen erstellen, müssen Sie die Anforderungen, die im angegebenen erfüllen [Anforderungen für die Ausführung von SQLXML-Beispielen](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Wenn Sie in den folgenden Beispielen funktionierende Beispiele erstellen möchten, müssen Sie die unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)angegebenen Anforderungen erfüllen.  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Erstellen eines Updategrams mit einem einfachen Zuordnungsschema  
- Das folgende XSD-Schema (SampleSchema.xml) ist ein Zuordnungsschema, das zuordnet der  **\<Kunden >** -Element der Sales.Customer-Tabelle:  
+ Das folgende XSD-Schema (SampleSchema. Xml) ist ein Zuordnungs Schema, das das ** \<Customer>** -Element der Sales. Customer-Tabelle zuordnet:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -66,7 +66,7 @@ ms.locfileid: "68018501"
 </xsd:schema>  
 ```  
   
- Das folgende Updategram fügt einen Datensatz in die Sales.Customer-Tabelle ein und ordnet diese Daten anhand des vorherigen Zuordnungsschemas der Tabelle ordnungsgemäß zu. Beachten Sie, dass das Updategram den gleichen Elementnamen verwendet  **\<Kunden >** , wie im Schema definiert. Dies ist obligatorisch, da das Updategram ein bestimmtes Schema angibt.  
+ Das folgende Updategram fügt einen Datensatz in die Sales.Customer-Tabelle ein und ordnet diese Daten anhand des vorherigen Zuordnungsschemas der Tabelle ordnungsgemäß zu. Beachten Sie, dass das Update Gram denselben Elementnamen ( ** \<Customer>**) verwendet, wie im Schema definiert. Dies ist obligatorisch, da das Updategram ein bestimmtes Schema angibt.  
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68018501"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dies ist das entsprechende XDR-Schema:  
   
@@ -114,10 +114,10 @@ ms.locfileid: "68018501"
    </Schema>   
 ```  
   
-### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Einfügen eines Datensatzes durch Verwenden der im Zuordnungsschema angegebenen Über-/Unterordnungsbeziehung  
- Schemaelemente können in Beziehung gesetzt werden. Die  **\<SQL: Relationship >** Element gibt die über-/ unterordnungsbeziehung zwischen den Schemaelementen an. Mit diesen Informationen werden die entsprechenden Tabellen aktualisiert, die Primärschlüssel-Fremdschlüssel-Beziehungen aufweisen.  
+### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B: Einfügen eines Datensatzes durch Verwenden der im Zuordnungsschema angegebenen Über-/Unterordnungsbeziehung  
+ Schemaelemente können in Beziehung gesetzt werden. Das ** \<SQL: Relationship>** -Element gibt die über-/Unterordnungsbeziehung zwischen den Schema Elementen an. Mit diesen Informationen werden die entsprechenden Tabellen aktualisiert, die Primärschlüssel-Fremdschlüssel-Beziehungen aufweisen.  
   
- Das folgende Zuordnungsschema (SampleSchema.xml) besteht aus zwei Elementen,  **\<Reihenfolge >** und  **\<OD >** :  
+ Das folgende ** \<Zuordnungs** Schema (SampleSchema. Xml) besteht aus zwei Elementen: Order>und ** \<od>**:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -156,7 +156,7 @@ ms.locfileid: "68018501"
 </xsd:schema>  
 ```  
   
- Das folgende Updategram verwendet dieses XSD-Schema, um einen neuen bestelldetaildatensatz hinzuzufügen (ein  **\<OD >** Element in der  **\<nach >** Block) für die Bestellung 43860. Die **Zuordnungsschema** Attribut wird verwendet, um das Zuordnungsschema im Updategram angegeben.  
+ Das folgende Update Gram verwendet dieses XSD-Schema, um einen neuen Bestell Detaildaten Satz (ein ** \<od>** -Element im ** \<after>** -Block) für die Bestellung 43860 hinzuzufügen. Das **Mapping-Schema-** Attribut wird verwendet, um das Zuordnungsschema im Update Gram anzugeben.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -188,7 +188,7 @@ ms.locfileid: "68018501"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dies ist das entsprechende XDR-Schema:  
   
@@ -231,14 +231,16 @@ ms.locfileid: "68018501"
 </Schema>  
 ```  
   
-### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. Einfügen eines Datensatzes durch Verwenden der im XSD-Schema angegebenen Über-/Unterordnungsbeziehung und der inverse-Anmerkung  
- In diesem Beispiel wird veranschaulicht, wie die updategramlogik die in der XSD-Schema angegebene über-/ unterordnungsbeziehung zur Verarbeitung von Updates verwendet und wie die **Inverse** Anmerkung verwendet wird. Weitere Informationen zu den **Inverse** Anmerkung, finden Sie unter [angeben des SQL: Inverse-Attributs für SQL: Relationship &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>c. Einfügen eines Datensatzes durch Verwenden der im XSD-Schema angegebenen Über-/Unterordnungsbeziehung und der inverse-Anmerkung  
+ Dieses Beispiel veranschaulicht, wie die Update Gram Logik die über-/Unterordnungsbeziehung verwendet, die in der XSD für die Verarbeitung von Updates und die Verwendung der **umgekehrten** Anmerkung angegeben wird. Weitere Informationen zur **umgekehrten** Anmerkung finden Sie unter [angeben des SQL: inverse-Attributs für SQL: Relationship &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- In diesem Beispiel wird davon ausgegangen, dass in den folgenden Tabellen sind die **Tempdb** Datenbank:  
+ In diesem Beispiel wird davon ausgegangen, dass sich die folgenden Tabellen in der **tempdb** -Datenbank befinden:  
   
--   `Cust (CustomerID, CompanyName)`, wobei `CustomerID` der Primärschlüssel ist  
+-   
+  `Cust (CustomerID, CompanyName)`, wobei `CustomerID` der Primärschlüssel ist  
   
--   `Ord (OrderID, CustomerID)`, wobei `CustomerID` ein Fremdschlüssel ist, der auf den `CustomerID` Primärschlüssel in der `Cust`-Tabelle verweist.  
+-   
+  `Ord (OrderID, CustomerID)`, wobei `CustomerID` ein Fremdschlüssel ist, der auf den `CustomerID` Primärschlüssel in der `Cust`-Tabelle verweist.  
   
  Das Updategram verwendet das folgende XSD-Schema, um Datensätze in die Cust und Ord-Tabellen einzufügen:  
   
@@ -275,11 +277,11 @@ ms.locfileid: "68018501"
 </xsd:schema>  
 ```  
   
- Das XSD-Schema in diesem Beispiel hat  **\<Kunden >** und  **\<Reihenfolge >** Elemente und gibt eine über-/ unterordnungsbeziehung zwischen den beiden Elementen. Es identifiziert  **\<Reihenfolge >** als übergeordnetes Element und  **\<Kunden >** als untergeordnetes Element.  
+ Das XSD-Schema in diesem Beispiel ** \<** enthält die Elemente Customer>und ** \<Order>** und gibt eine über-/Unterordnungsbeziehung zwischen den beiden Elementen an. Sie identifiziert ** \<die Reihenfolge>** als übergeordnetes Element und ** \<Customer>** als untergeordnetes Element.  
   
- Die Verarbeitungslogik des Updategrams bestimmt mit den Informationen über die Über-/Unterordnungsbeziehung die Reihenfolge, in der die Datensätze in die Tabellen eingefügt werden. In diesem Beispiel versucht die updategramlogik zuerst, einen Datensatz in die Ord-Tabelle einzufügen (da  **\<Reihenfolge >** ist das übergeordnete Element) und dann versucht, einen Datensatz in die Cust-Tabelle einzufügen (da  **\<Kunden >** das untergeordnete Element). Aufgrund der Primärschlüssel-Fremdschlüssel-Informationen, die im Datenbanktabellenschema enthalten sind, verursacht dieser Einfügevorgang jedoch eine Fremdschlüsselverletzung in der Datenbank und der Vorgang schlägt fehl.  
+ Die Verarbeitungslogik des Updategrams bestimmt mit den Informationen über die Über-/Unterordnungsbeziehung die Reihenfolge, in der die Datensätze in die Tabellen eingefügt werden. In diesem Beispiel versucht die Update Gram Logik zuerst, einen Datensatz in die Ord-Tabelle einzufügen (da ** \<Order>** das übergeordnete Element ist), und versucht dann, einen Datensatz in die Cust-Tabelle einzufügen (da ** \<Customer>** das untergeordnete Element ist). Aufgrund der Primärschlüssel-Fremdschlüssel-Informationen, die im Datenbanktabellenschema enthalten sind, verursacht dieser Einfügevorgang jedoch eine Fremdschlüsselverletzung in der Datenbank und der Vorgang schlägt fehl.  
   
- Um die updategramlogik an, die über-/ unterordnungsbeziehung während des Updatevorgangs umzukehren anzuweisen, die **Inverse** -Anmerkung für das  **\<Beziehung >** Element. Als Folge werden die Datensätze zuerst in die Cust-Tabelle und anschließend in die Ord-Tabelle eingefügt, und der Vorgang wird erfolgreich ausgeführt.  
+ Um die Update Gram Logik anzuweisen, die über-/Unterordnungsbeziehung während des Aktualisierungs Vorgangs umzukehren, wird die **umgekehrte** Anmerkung für die ** \<Beziehung>** Element angegeben. Als Folge werden die Datensätze zuerst in die Cust-Tabelle und anschließend in die Ord-Tabelle eingefügt, und der Vorgang wird erfolgreich ausgeführt.  
   
  Das folgende Updategram fügt mit dem angegebenen XSD-Schema einen Auftrag (OrderID=2) in die Ord-Tabelle ein und einen Kunden (CustomerID='AAAAA') in die Cust-Tabelle.  
   
@@ -298,7 +300,7 @@ ms.locfileid: "68018501"
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
-1.  Erstellen Sie diese Tabellen in der **Tempdb** Datenbank:  
+1.  Erstellen Sie diese Tabellen in der **tempdb** -Datenbank:  
   
     ```  
     USE tempdb  
@@ -322,9 +324,9 @@ ms.locfileid: "68018501"
   
 4.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Sicherheitsüberlegungen zu Update grams &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

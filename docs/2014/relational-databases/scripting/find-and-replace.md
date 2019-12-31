@@ -1,6 +1,6 @@
 ---
-title: Suchen und Ersetzen | Microsoft-Dokumentation
-ms.custom: ''
+title: Suchen und Ersetzen
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,15 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4fa77ecd50631224b366eb3f5aca98593d56cbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3d96670edc599a1f16456b862922dc6378b1362
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090461"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245145"
 ---
 # <a name="find-and-replace"></a>Suchen und Ersetzen
-  Mithilfe des Dialogfelds **Suchen und Ersetzen** können Sie Texte innerhalb von Dateien finden und ggf. ersetzen. Es können verschiedene Versionen des Dialogfelds **Suchen und Ersetzen** mit leicht unterschiedlichen Optionen angezeigt werden, abhängig davon, auf welche Weise das Dialogfeld geöffnet wurde. Zeigen Sie im Menü **Bearbeiten** auf **Suchen und Ersetzen**, und klicken Sie auf **Schnellsuche** , um das Dialogfeld mit Such- aber ohne Ersetzungsoptionen zu öffnen. Zeigen Sie im Menü **Bearbeiten** auf **Suchen und Ersetzen**, und klicken Sie auf **Schnellersetzung** , um das Dialogfeld mit Such- und Ersetzungsoptionen zu öffnen.  
+  Mit dem Dialogfeld **Suchen und ersetzen** können Sie Text in einer Datei suchen und optional ersetzen. Es können verschiedene Versionen des Dialogfelds **Suchen und Ersetzen** mit leicht unterschiedlichen Optionen angezeigt werden, abhängig davon, auf welche Weise das Dialogfeld geöffnet wurde. Zeigen Sie im Menü **Bearbeiten** auf **Suchen und Ersetzen**, und klicken Sie auf **Schnellsuche** , um das Dialogfeld mit Such- aber ohne Ersetzungsoptionen zu öffnen. Zeigen Sie im Menü **Bearbeiten** auf **Suchen und Ersetzen**, und klicken Sie auf **Schnellersetzung** , um das Dialogfeld mit Such- und Ersetzungsoptionen zu öffnen.  
   
  Das Dialogfeld **Suchen und Ersetzen** kann auch über Symbolleistenschaltflächen und Tastenkombinationen geöffnet werden.  
   
@@ -42,16 +42,16 @@ ms.locfileid: "66090461"
 ## <a name="replace-with"></a>Ersetzen durch  
  Mithilfe dieser Steuerelemente können Sie angeben, was anstelle der übereinstimmenden Zeichenfolge bzw. des übereinstimmenden Ausdrucks eingefügt werden soll.  
   
- **Replace with**  
+ **Ersetzen durch**  
  Um Instanzen der in **Suchen nach** angegebenen Zeichenfolge mit einer anderen zu ersetzen, geben Sie in diesem Feld die Zeichenfolge ein, die sie ersetzen soll. Um Instanzen des in **Suche nach**angegebenen Texts zu löschen, lassen Sie dieses Feld leer. Wählen Sie die Dropdownliste aus, um die letzten 20 Eingaben anzuzeigen. Um reguläre Ausdrücke in die im Feld **Ersetzen durch** angegebene Zeichenfolge einzubeziehen, aktivieren Sie das Kontrollkästchen **Mit** , und klicken Sie auf die Option **Reguläre Ausdrücke**. Dieses Feld wird nur angezeigt, wenn das Dialogfeld durch Klicken auf **Schnellersetzung**geöffnet wurde.  
   
- **Replace with**  
+ **Ersetzen durch**  
  Um Instanzen der in **Suchen nach** angegebenen Zeichenfolge mit einer anderen zu ersetzen, geben Sie in diesem Feld die Zeichenfolge ein, die sie ersetzen soll. Um Instanzen der im Feld **Suche nach** angegebenen Zeichenfolge zu löschen, lassen Sie dieses Feld leer. Wählen Sie die Dropdownliste aus, um die letzten 20 Eingaben anzuzeigen. Um reguläre Ausdrücke in die im Feld **Ersetzen durch** angegebene Zeichenfolge einzubeziehen, aktivieren Sie das Kontrollkästchen **Mit** , und klicken Sie auf die Option **Reguläre Ausdrücke**.  
   
  **Ausdrucks-Generator**  
  Die dreieckige Schaltfläche neben dem Feld **Ersetzen durch** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen**aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Ersetzen durch** angegeben wurde.  
   
- **Ersetzen**  
+ **Stelle**  
  Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der im Feld **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der im Feld **Suchen in**angegeben ist.  
   
  **Alle ersetzen**  
@@ -60,7 +60,7 @@ ms.locfileid: "66090461"
 > [!CAUTION]  
 >  Stellen Sie sicher, dass der unter **Suchen in** festgelegte Bereich nur die Dateien umfasst, die Sie ändern möchten.  
   
- Es wird eine Erinnerung mit der Option **Geänderte Dateien geöffnet lassen** angezeigt. Um die Option **Rückgängig** beizubehalten, müssen Sie diese Option auswählen. Die Option**Rückgängig** ist nur in Dateien verfügbar, die nach einer Änderung geöffnet bleiben.  
+ Es wird eine Erinnerung mit der Option **Geänderte Dateien geöffnet lassen** angezeigt. Um die Option **Rückgängig** beizubehalten, müssen Sie diese Option auswählen. **Rückgängigmachen** ist nur in Dateien verfügbar, die nach ihrer Änderung zum Bearbeiten geöffnet bleiben.  
   
  **Datei überspringen**  
  Wird verfügbar, wenn der unter **Suchen in** angegebene Wert mehrere Dateien einschließt. Klicken Sie auf diese Schaltfläche, wenn Sie die aktuelle Datei nicht durchsuchen oder ändern möchten. Die Suche wird dann in der nächsten Datei auf der Liste unter **Suchen in**fortgesetzt.  
@@ -72,34 +72,34 @@ ms.locfileid: "66090461"
 ## <a name="find-options"></a>Mit  
  Sie können den Abschnitt **Suchoptionen** reduzieren oder erweitern. Die folgenden Optionen können aktiviert oder deaktiviert werden.  
   
- **Groß-/Kleinschreibung beachten**  
- Wenn dieses Kontrollkästchen aktiviert ist, werden im Suchergebnisfenster nur Instanzen der unter **Suchen nach** angegebenen Zeichenfolge angezeigt, bei denen neben der inhaltlichen Übereinstimmung auch die Groß-/Kleinschreibung identisch ist. Eine Suche nach "**MyObject**" bei aktiviertem Kontrollkästchen **Groß-/Kleinschreibung beachten** gibt "MyObject" nicht aber "myobject" oder "MYOBJECT" zurück.  
+ **Großbuchstaben vergleichen**  
+ Wenn dieses Kontrollkästchen aktiviert ist, werden im Suchergebnisfenster nur Instanzen der unter **Suchen nach** angegebenen Zeichenfolge angezeigt, bei denen neben der inhaltlichen Übereinstimmung auch die Groß-/Kleinschreibung identisch ist. Beispielsweise gibt eine Suche nach "**MyObject**" bei aktivierter Option groß- **/Kleinschreibung** aktivieren "MyObject", aber nicht "MyObject" oder "MyObject" zurück.  
   
- **Nur ganzes Wort suchen**  
+ **Ganzes Wort suchen**  
  Wenn dieses Kontrollkästchen aktiviert ist, werden im Suchergebnisfenster nur Instanzen der unter **Suchen nach** angegebenen Zeichenfolge angezeigt, bei denen jeweils das ganze Wort übereinstimmt. Eine Suche nach **MyObject** gibt beispielsweise "MyObject", nicht aber "CMyObject" oder "MyObjectC" zurück.  
   
- **Suchrichtung nach oben**  
+ **Nach oben suchen**  
  Sucht von der Cursorposition bis zum Anfang des Dokuments.  
   
- **Ausgeblendeten Text durchsuchen**  
+ **Verborgenen Text durchsuchen**  
  Sucht Instanzen des Texts in Textbereichen, die ausgeblendet oder reduziert sind.  
   
- **Suchoptionen**  
+ **Konsum**  
  Gibt an, wie in den Textfeldern **Suchen nach** oder **Ersetzen durch** eingegebene Sonderzeichen interpretiert werden sollen. Zur Auswahl stehen **Platzhalter** und **Reguläre Ausdrücke**.  
   
- **Regular Expressions**  
+ **Reguläre Ausdrücke**  
  Mithilfe spezieller Notationen werden zu suchende Textmuster definiert. Eine Liste finden Sie unter [Suchen von Text mit regulären Ausdrücken](search-text-with-regular-expressions.md).  
   
  **Platzhalter**  
  Sonderzeichen, wie Sternchen (`*`) und Fragezeichen (`?`), stellen ein oder mehrere Zeichen dar. Eine Liste finden Sie unter [Suchen von Text mit Platzhaltern](search-text-with-wildcards.md).  
   
- **Weitersuchen**  
+ **Weiter suchen**  
  Beginnt die Suche nach dem im Feld **Suchen nach** angegebenen Text.  
   
- **Ersetzen**  
+ **Stelle**  
  Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der in **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch**angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der im Feld **Suchen in**angegeben ist.  
   
- **Replace All**  
+ **Alle ersetzen**  
  Klicken Sie auf diese Schaltfläche, um alle Instanzen der in **Suchen nach** angegebenen Zeichenfolge in allen Dateien innerhalb des unter **Suchen in**angegebenen Bereichs mit jener zu ersetzen, die im Feld **Ersetzen durch**angegeben ist.  
   
 > [!CAUTION]  
@@ -114,11 +114,11 @@ ms.locfileid: "66090461"
  **In Dateien suchen**  
  Über diese Symbolleisten-Registerkarte wechseln Sie zum Dialogfeld **In Dateien suchen** .  
   
- **Schnellersetzung**  
+ **Schneller Setzung**  
  Über diese Symbolleisten-Registerkarte wechseln Sie zum Dialogfeld **Schnellersetzung** .  
   
  **In Dateien ersetzen**  
  Über diese Symbolleisten-Registerkarte wechseln Sie zum Dialogfeld **In Dateien ersetzen** .  
   
-## <a name="see-also"></a>Siehe auch  
- [Tastenkombinationen für SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Management Studio Tastenkombinationen](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

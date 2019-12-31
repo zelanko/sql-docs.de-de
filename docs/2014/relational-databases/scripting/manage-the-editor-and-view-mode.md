@@ -1,6 +1,6 @@
 ---
-title: Verwalten des Editors und Ansichtsmodus | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwalten des Editors und des Ansichtsmodus
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -20,24 +20,24 @@ ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3333b41a4ff1c341f0ae0290f838cd2c76c6254e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67ca649678fcc099a2abf1b50866263d6494bec7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063953"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242043"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Verwalten des Editors und des Ansichtsmodus
   Der Editor bietet mehrere Möglichkeiten, die Ansicht des Codes zu steuern.  
   
 ## <a name="changing-the-view-mode"></a>Ändern des Ansichtsmodus  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über einen Ansichtsmodus namens **Dokumente im Registerformat**. In diesem Modus können Sie mehrere Editoren und Dokumente gleichzeitig öffnen und über Registerkarten am oberen Rand des Editors auf diese zugreifen. Alternativ können Sie die [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Umgebung im Modus für eine mehrfache Dokumentschnittstelle (MDI, Multiple Document Interface) öffnen, bei dem Fenster ohne Registerkarten verknüpft werden und nebeneinander angezeigt, minimiert oder ähnlich behandelt werden können.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügt über einen Ansichtsmodus namens **Dokumente**im Register Format, mit dem Sie mehrere Editoren und Dokumente gleichzeitig öffnen und über Registerkarten am oberen Rand des Editors auf diese zugreifen können. Alternativ können Sie die [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Umgebung im Modus für eine mehrfache Dokumentschnittstelle (MDI, Multiple Document Interface) öffnen, bei dem Fenster ohne Registerkarten verknüpft werden und nebeneinander angezeigt, minimiert oder ähnlich behandelt werden können.  
   
 #### <a name="to-switch-between-view-modes"></a>So wechseln Sie den Ansichtsmodus  
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen** .  
   
-2.  Klicken Sie auf **Umgebung**. Klicken Sie auf **Allgemein**.  
+2.  Klicken Sie auf **Umgebung**. Klicken Sie auf **General**.  
   
 3.  Klicken Sie auf **Dokumente im Registerformat** oder **MDI-Umgebung**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66063953"
   
 3.  Klicken Sie auf **Alle Sprachen**.  
   
-4.  Klicken Sie auf **Allgemein**.  
+4.  Klicken Sie auf **General**.  
   
 5.  Wählen Sie **Zeilennummern**aus.  
   

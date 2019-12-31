@@ -1,6 +1,6 @@
 ---
-title: Einfügen von Transact-SQL-Ausschnitten | Microsoft-Dokumentation
-ms.custom: ''
+title: Einfügen von Transact-SQL-Ausschnitten
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c47bc6dc82843159f116b62ff6bc68acf981f4f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40e1fea04c0f864d871c01e9087ca9d346475c18
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063958"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242081"
 ---
 # <a name="insert-transact-sql-snippets"></a>Einfügen von Transact-SQL-Ausschnitten
   Ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Codeausschnitt ist eine Vorlage, die Sie als Ausgangspunkt beim Schreiben von neuen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor verwenden können.  
@@ -27,7 +27,8 @@ ms.locfileid: "66063958"
 ## <a name="inserting-snippets"></a>Einfügen von Ausschnitten  
  Sie können das Menü **Ausschnitt einfügen** verwenden, um eine kategorisierte Liste von Ausschnitten zu öffnen, die Sie auswählen können.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausschnitte enthalten Ersetzungspunkte. Dabei handelt es sich um Text, der die für diesen Punkt relevante Syntax vorschlägt. Beispielsweise enthält der CREATE TABLE-Ausschnitt Ersetzungspunkte für Elemente wie den Tabellennamen, die Spaltennamen und die Spaltendatentypen. Wenn Sie den Ausschnitt eingefügt haben, müssen Sie den Ersetzungstext so ändern, dass eine gültige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung entsteht. Weitere Informationen finden Sie unter [Abschließen von Transact-SQL-Ausschnitten](complete-transact-sql-snippets.md).  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausschnitte enthalten Ersetzungspunkte. Dabei handelt es sich um Text, der die für diesen Punkt relevante Syntax vorschlägt. Beispielsweise enthält der CREATE TABLE-Ausschnitt Ersetzungspunkte für Elemente wie den Tabellennamen, die Spaltennamen und die Spaltendatentypen. Wenn Sie den Ausschnitt eingefügt haben, müssen Sie den Ersetzungstext so ändern, dass eine gültige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung entsteht. Weitere Informationen finden Sie unter [Abschließen von Transact-SQL-Ausschnitten](complete-transact-sql-snippets.md).  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>Einfügen eines Ausschnitts mit dem Menü "Ausschnitt einfügen"  
   
@@ -43,7 +44,7 @@ ms.locfileid: "66063958"
   
 3.  Doppelklicken Sie auf den Ausschnitt, oder wählen Sie in der Ausschnittauswahl den Ausschnitt aus, und drücken Sie dann TAB oder die EINGABETASTE.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einfügen von Transact-SQL-Umschließungsausschnitten](insert-surround-with-transact-sql-snippets.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Einfügen von Transact-SQL-Umschließungs Ausschnitten](insert-surround-with-transact-sql-snippets.md)  
   
   

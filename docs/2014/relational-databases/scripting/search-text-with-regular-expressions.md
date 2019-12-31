@@ -1,6 +1,6 @@
 ---
-title: Suchen von Text mit regulären Ausdrücken | Microsoft-Dokumentation
-ms.custom: ''
+title: Suchen von Text mit regulären Ausdrücken
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81df6d31819594611933d3187f1a6f6bcbda46cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063771"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243321"
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
   Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ersetzen von Textmustern. Im Feld **Suchen nach** des Dialogfelds [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
@@ -33,13 +33,13 @@ ms.locfileid: "66063771"
 2.  Die dreieckige Schaltfläche für die **Verweisliste** neben dem Feld **Suchen nach** ist jetzt aktiviert. Klicken Sie auf diese Schaltfläche, um eine Liste der am häufigsten verwendeten regulären Ausdrücke anzuzeigen. Wenn Sie ein Element aus dem Ausdrucks-Generator auswählen, wird es in die **Suchen nach** -Zeichenfolge eingefügt.  
   
 > [!NOTE]  
->  Zwischen der Syntax der regulären Ausdrücke, die in **Suchen nach** -Zeichenfolgen verwendet werden können, und der Syntax bei der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Programmierung gibt es bestimmte Unterschiede. So werden z.B. geschweifte Klammern „{}“ bei **Suchen und Ersetzen**für markierte Ausdrücke verwendet. Der Ausdruck "zo{1}" entspricht allen Vorkommen von "zo", gefolgt von der Markierung 1, wie in "Alonzo1" und "Gonzo1". In .NET Framework hingegen wird die Notation {} für Quantifizierer verwendet. Der Ausdruck "zo{1}" entspricht hier allen Vorkommen von "z", gefolgt von genau einem "o", wie in "zone", nicht aber in "zoo".  
+>  Zwischen der Syntax der regulären Ausdrücke, die in **Suchen nach** -Zeichenfolgen verwendet werden können, und der Syntax bei der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Programmierung gibt es bestimmte Unterschiede. So werden z.B. geschweifte Klammern „**“ bei **Suchen und Ersetzen{}für markierte Ausdrücke verwendet. Der Ausdruck "zo{1}" entspricht allen Vorkommen von "zo", gefolgt von der Markierung 1, wie in "Alonzo1" und "Gonzo1". In .NET Framework hingegen wird die Notation {} für Quantifizierer verwendet. Der Ausdruck "zo{1}" entspricht hier allen Vorkommen von "z", gefolgt von genau einem "o", wie in "zone", nicht aber in "zoo".  
   
  Die folgende Tabelle enthält eine Beschreibung der regulären Ausdrücke, die in der **Verweisliste**verfügbar sind.  
   
-|expression|Syntax|Description|  
+|Expression|Syntax|Beschreibung|  
 |----------------|------------|-----------------|  
-|Beliebiges Zeichen|aus.|Entspricht jedem beliebigen einzelnen Zeichen außer einem Zeilenumbruch.|  
+|Beliebiges Zeichen|.|Entspricht jedem beliebigen einzelnen Zeichen außer einem Zeilenumbruch.|  
 |0 oder mehr|*|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt alle möglichen Übereinstimmungen vor.|  
 |Ein oder mehr|+|Entspricht mindestens einem Vorkommen des vorherigen Ausdrucks.|  
 |Zeilenanfang|^|Verankert die übereinstimmende Zeichenfolgen am Anfang einer Zeile|  
@@ -50,24 +50,26 @@ ms.locfileid: "66063771"
 |Beliebiges Zeichen im Zeichensatz|[]|Entspricht einem der Zeichen innerhalb von []. Um einen Bereich von Zeichen anzugeben, listen Sie den Anfangs- und Endbuchstaben getrennt durch einen Bindestrich (-) auf, z. B. [a-z].|  
 |Beliebiges Zeichen außerhalb des Zeichensatzes|[^...]|Entspricht einem der Zeichen außerhalb des Zeichensatzes, die nach dem ^ angegeben sind.|  
 |oder|&#124;|Entspricht entweder dem Ausdruck vor dem oder nach dem OR-Symbol (&#124;). Wird hauptsächlich innerhalb einer Gruppe verwendet. So entspricht z.B. „(sponge&#124;mud) bath“ sowohl „sponge bath“ als auch „mud bath“.|  
-|Escape|\|Entspricht dem Zeichen nach dem umgekehrten Schrägstrich (\\) als Literal. Auf diese Weise können Sie die Zeichen suchen, die in der Notation regulärer Ausdrücke verwendet werden, z. B. { und ^. Mit „ \\^“ wird z.B. nach dem Zeichen „^“ gesucht.|  
+|Escape|
+  \|Entspricht dem Zeichen nach dem umgekehrten Schrägstrich (\\) als Literal. Auf diese Weise können Sie die Zeichen suchen, die in der Notation regulärer Ausdrücke verwendet werden, z. B. { und ^. Mit „ \\^“ wird z.B. nach dem Zeichen „^“ gesucht.|  
 |Markierter Ausdruck|{}|Entspricht Text, der mit dem eingeschlossenen Ausdruck markiert ist.|  
 |C/C++-Bezeichner|:i|Entspricht dem Ausdruck ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Zeichenfolge in Anführungszeichen|:q|Entspricht dem Ausdruck (("[^"]*")&#124;('[^']\*')).|  
 |Leerzeichen oder Tabstopp|:b|Entspricht entweder Tabstopp- oder Leerzeichen.|  
-|Integer|:z|Entspricht dem Ausdruck ([0-9]+).|  
+|Ganze Zahl |:z|Entspricht dem Ausdruck ([0-9]+).|  
   
  Die Liste aller regulären Ausdrücke, die in **Suchen und Ersetzen** -Vorgängen zulässig sind, ist zu lang, um in der **Verweisliste**angezeigt werden zu können. Sie können auch einen der folgenden regulären Ausdrücke in eine **Suchen nach** -Zeichenfolge einfügen:  
   
-|expression|Syntax|Beschreibung|  
+|Expression|Syntax|Beschreibung|  
 |----------------|------------|-----------------|  
 |Minimal - zero or more|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
 |Minimal - one or more|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
 |n-mal wiederholen|^n|Entspricht n Vorkommen des vorherigen Ausdrucks. [0-9]^4 entspricht z. B. einer beliebigen Zeichenfolge aus vier Zahlen.|  
-|Gruppieren|()|Gruppiert einen untergeordneten Ausdruck.|  
+|Gruppierung|()|Gruppiert einen untergeordneten Ausdruck.|  
 |n-markierter Text|\n|Gibt in einem **Suchen und Ersetzen** -Ausdruck den Text an, der dem n-ten markierten Ausdruck entspricht, wobei n eine Zahl von 1 bis 9 ist.<br /><br /> In einem **Ersetzen** -Ausdruck wird mit „\0“ der gesamte übereinstimmende Text eingefügt.|  
-|Rechtsbündig ausgerichtetes Feld|\\(w,n)|Richtet in einem **Ersetzen** -Ausdruck den n-ten markierten Ausdruck in einem Feld um mindestens *w* Zeichen nach rechts aus.|  
-|Linksbündig ausgerichtetes Feld|\\(-w,n)|Richtet in einem **Ersetzen** -Ausdruck den n-ten markierten Ausdruck in einem Feld um mindestens *w* Zeichen nach links aus.|  
+|Rechtsbündig ausgerichtetes Feld|\\(w, n)|Richtet in einem **Ersetzen** -Ausdruck den n-ten markierten Ausdruck in einem Feld um mindestens *w* Zeichen nach rechts aus.|  
+|Linksbündig ausgerichtetes Feld|
+  \\(-w,n)|Richtet in einem **Ersetzen** -Ausdruck den n-ten markierten Ausdruck in einem Feld um mindestens *w* Zeichen nach links aus.|  
 |Übereinstimmung verhindern|~(X)|Verhindert eine Übereinstimmung, wenn X an dieser Stelle im Ausdruck vorkommt. Beispiel: Für real~(ity) gibt es eine Übereinstimmung für "real" in "realty" und "really," aber nicht für die Zeichenfolge "real" in "reality".|  
 |Alphanumerisches Zeichen|:a|Entspricht dem Ausdruck ([a-zA-Z0-9]).|  
 |Alphabetisches Zeichen|:c|Entspricht dem Ausdruck ([a-zA-Z]).|  
@@ -78,12 +80,12 @@ ms.locfileid: "66063771"
 |Escape|\e|Unicode U+001B.|  
 |Glocke|\g|Unicode U+0007.|  
 |Rücktaste|\h|Unicode U+0008.|  
-|Registerkarte|\t|Entspricht einem Tabstoppzeichen, Unicode U+0009.|  
+|TAB|\t|Entspricht einem Tabstoppzeichen, Unicode U+0009.|  
 |Unicode-Zeichen|\x#### oder \u####|Entspricht einem Zeichen das durch einen Unicode-Wert angegeben ist, wobei #### Hexadezimalzahlen sind. Sie können ein Zeichen außerhalb der grundlegenden mehrsprachigen Ebene (d. h. einen Ersatz) mit dem ISO 10646-Codepunkt oder mit zwei Unicode-Codepunkten angeben, die die Werte des Ersatzpaars angeben.|  
   
  In der folgenden Tabelle ist die Syntax für Übereinstimmungen in Bezug auf Standardeigenschaften von Unicode-Zeichen aufgelistet. Die aus zwei Buchstaben bestehende Abkürzung ist mit der in der Datenbank für Eigenschaften von Unicode-Zeichen identisch. Die Abkürzungen lassen sich als Teil eines Zeichensatzes angeben. So entspricht z. B. der Ausdruck [:Nd:Nl:No] einer beliebigen Ziffer.  
   
-|expression|Syntax|Description|  
+|Expression|Syntax|Beschreibung|  
 |----------------|------------|-----------------|  
 |Großbuchstabe|:Lu|Entspricht einem beliebigen Großbuchstaben. So entspricht :Luhe z. B. "The", aber nicht "the".|  
 |Kleinbuchstabe|:Ll|Entspricht einem beliebigen Kleinbuchstaben. So entspricht :Llhe z. B. "the", aber nicht "The".|  
@@ -118,11 +120,11 @@ ms.locfileid: "66063771"
   
  Neben den Standardeigenschaften von Unicode-Zeichen können auch die folgenden zusätzlichen Eigenschaften als Teil eines Zeichensatzes angegeben werden:  
   
-|expression|Syntax|Description|  
+|Expression|Syntax|Beschreibung|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Entspricht einem beliebigen einzelnen Zeichen. So entspricht :Alhe Wörtern wie "The", "then" und "reached".|  
-|Numerisch|:Nu|Entspricht einer beliebigen Zahl oder Ziffer.|  
-|Satzzeichen|:Pu|Entspricht einem beliebigen Satzzeichen, z. B. ?, @, ' usw.|  
+|Numeric|:Nu|Entspricht einer beliebigen Zahl oder Ziffer.|  
+|Interpunktion|:Pu|Entspricht einem beliebigen Satzzeichen, z. B. ?, @, ' usw.|  
 |Leerzeichen|:Wh|Entspricht allen Arten von Leerzeichen, einschließlich Veröffentlichungsleerzeichen und ideografischen Leerzeichen.|  
 |Bidirektional|:Bi|Entspricht Zeichen aus Skripts mit Schreibrichtung von rechts nach links, z. B. Arabisch und Hebräisch.|  
 |Hangul|:Ha|Entspricht dem koreanischen Hangul-Alphabet und kombinierten Jamo-Lautzeichen.|  
@@ -130,6 +132,6 @@ ms.locfileid: "66063771"
 |Katakana|:Ka|Entspricht Katakana-Zeichen.|  
 |Ideografisch/Han/Kanji|:Id|Entspricht ideografischen Zeichen, z. B. Han und Kanji.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Suchen und Ersetzen](search-and-replace.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Suchen und ersetzen](search-and-replace.md)   
  [Suchen von Text mit Platzhaltern](search-text-with-wildcards.md)  

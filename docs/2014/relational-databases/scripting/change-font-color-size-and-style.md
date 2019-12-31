@@ -1,6 +1,6 @@
 ---
-title: Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4f7f2e80afd3f5f879813eeb5e19ce6eaa6e979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa6753b0e49e898476f4138c5e445ea75918aa17
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064182"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244986"
 ---
 # <a name="change-font-color-size-and-style"></a>Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt
   Sie können die Textdarstellung im Editor und an anderen Stellen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anpassen.  
@@ -42,8 +42,8 @@ ms.locfileid: "66064182"
   
  Die Einstellungen für Textfarbe und Schriftart gelten global für alle Textelementtypen, also Kommentare, Zeichenfolgen usw.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Drucken von Code und Ergebnissen](print-code-and-results.md)   
- [Farbcodierung im Abfrage-Editor](color-coding-in-query-editors.md)  
+ [Farbcodierung in Abfrage-Editoren](color-coding-in-query-editors.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Automatischer Vergleich von Syntaxpaaren | Microsoft-Dokumentation
-ms.custom: ''
+title: Automatischer Vergleich von Syntaxpaaren
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530747edf03e9790c2f728ec5485d305da046d08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064151"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244797"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Automatischer Vergleich von Syntaxpaaren
   Durch den automatischen Vergleich von Syntaxpaaren erhalten Sie unmittelbar Aufschluss darüber, ob Syntaxelemente, die paarweise codiert werden müssen, ordnungsgemäß miteinander kombiniert sind. Im Abfrage-Editor von [!INCLUDE[ssDE](../../includes/ssde-md.md)] wird dieser Vorgang als Trennzeichenvergleich, im XMLA-Abfrage-Editor von Analysis Services als Klammernvergleich und im MDX- sowie im DMX-Editor als Klammernvergleich bezeichnet.  
@@ -36,9 +36,9 @@ ms.locfileid: "66064151"
 |Vorangestelltes Trennzeichen|Schließendes Trennzeichen|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**BEGIN**|**END**|  
-|**BEGIN TRY**|**END TRY**|  
-|**BEGIN CATCH**|**END CATCH**|  
+|**Beginnen**|**Schließlich**|  
+|**BEGIN try**|**Versuch beenden**|  
+|**Catch starten**|**Catch beenden**|  
   
  Beim automatischen Trennzeichenvergleich werden die Trennzeichen für Bezeichner in Klammern ([ObjectName]) oder Bezeichner in Anführungszeichen ("ObjectName") nicht erkannt. Beim Paarvergleich werden die einzelnen Anführungszeichen als Trennzeichen für Zeichenfolgenliterale ('string') nicht verglichen, weil die Farbcodierung bereits erkennen lässt, ob die Zeichenfolge ein Trennzeichen aufweist.  
   

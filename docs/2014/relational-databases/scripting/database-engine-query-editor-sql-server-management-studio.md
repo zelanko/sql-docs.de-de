@@ -1,6 +1,6 @@
 ---
-title: Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Abfrage-Editor der Datenbank-Engine
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48a2fc741a13a0565ab49d1974b9c2798ad7b9ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064097"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244941"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio)
   Mithilfe des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors können Sie Skripts mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen erstellen und ausführen. Der Editor unterstützt auch das Ausführen von Skripts, die **sqlcmd** -Befehle enthalten.  
@@ -48,15 +48,15 @@ ms.locfileid: "66064097"
     -   Der Name einer im System gespeicherten Prozedurtabelle oder einer Sicht, z. B. "sys.data_spaces" oder "sp_tableoption".  
   
 ## <a name="working-with-the-database-engine-query-editor"></a>Arbeiten mit dem Datenbank-Engine-Abfrage-Editor  
- Der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor ist einer von vier in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] implementierten Editoren. Eine Beschreibung der im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor implementierten Funktionalität und der Hauptaufgaben, die Sie mit dem Editor ausführen können, finden Sie unter [Abfrage-Editor des Datenbankmoduls &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md).  
+ Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor ist einer von vier in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]implementierten Editoren. Eine Beschreibung der im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor implementierten Funktionalität und der Hauptaufgaben, die Sie mit dem Editor ausführen können, finden Sie unter [Abfrage-Editor des Datenbankmoduls &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md).  
   
 ## <a name="sql-editor-toolbar"></a>SQL-Editor-Symbolleiste  
  Wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet ist, wird die SQL-Editor-Symbolleiste mit den folgenden Schaltflächen angezeigt:  
   
- **Verbinden**  
+ **Herzustellen**  
  Öffnet das Dialogfeld **Verbindung mit Server herstellen** . Mithilfe dieses Dialogfelds können Sie eine Verbindung mit einem Server herstellen.  
   
- **Trennen**  
+ **Verschluss**  
  Trennt den aktuellen Abfrage-Editor vom Server.  
   
  **Verbindung ändern**  
@@ -68,10 +68,10 @@ ms.locfileid: "66064097"
  **Verfügbare Datenbanken**  
  Wechselt die Verbindung zu einer anderen Datenbank auf demselben Server.  
   
- **Execute**  
+ **Auszuführen**  
  Führt den ausgewählten bzw. (wenn kein Code ausgewählt ist) den gesamten Code im Abfrage-Editor aus.  
   
- **Debuggen**  
+ **Gen**  
  Aktiviert den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger. Dieser Debugger unterstützt Debugoperationen, wie das Festlegen von Breakpoints, das Beobachten von Variablen und die schrittweise Ausführung von Code.  
   
  **Ausführung der Abfrage abbrechen**  
@@ -80,19 +80,19 @@ ms.locfileid: "66064097"
  **Analysieren**  
  Überprüft die Syntax des ausgewählten Codes. Wenn kein Code ausgewählt ist, wird die Syntax des gesamten Codes im Abfrage-Editor-Fenster geprüft.  
   
- **Geschätzten Ausführungsplan anzeigen**  
+ **Geschätzten Ausführungs Plan anzeigen**  
  Fordert einen Abfrageausführungsplan vom Abfrageprozessor an, ohne die Abfrage tatsächlich auszuführen. Der Plan wird im Fenster **Ausführungsplan** angezeigt. Dieser Plan verwendet Indexstatistiken als Schätzung für die Anzahl der zu erwartenden Zeilen, die während der einzelnen Schritte der Abfrageausführung zurückgegeben werden. Der tatsächlich verwendete Abfrageplan kann sich vom geschätzten Ausführungsplan unterscheiden. Dieser Fall kann eintreten, wenn die Anzahl der zurückgegebenen Zeilen erheblich von der Schätzung abweicht und der Abfrageprozessor den Plan aus Effizienzgründen ändert.  
   
- **Abfrageoptionen**  
+ **Abfrage Optionen**  
  Öffnet das Dialogfeld **Abfrageoptionen** . Mithilfe dieses Dialogfelds konfigurieren Sie die Standardoptionen für die Abfrageausführung und die Abfrageergebnisse.  
   
  **IntelliSense aktiviert**  
  Gibt an, ob die IntelliSense-Funktionalität im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor verfügbar ist.  
   
- **Tatsächlichen Ausführungsplan einschließen**  
+ **Tatsächlichen Ausführungs Plan einschließen**  
  Führt die Abfrage aus und gibt die Abfrageergebnisse sowie den Ausführungsplan, der für die Abfrage verwendet wurde, zurück. Letzterer wird im Fenster **Ausführungsplan** als grafischer Abfrageplan angezeigt.  
   
- **Clientstatistiken einschließen**  
+ **Client Statistiken einschließen**  
  Schließt das Fenster **Clientstatistiken** ein, das Statistiken zu der Abfrage, den Netzwerkpaketen und der verstrichenen Zeit für die Abfrage enthält.  
   
  **Ergebnisse in Text**  
@@ -107,16 +107,16 @@ ms.locfileid: "66064097"
  **Auswahl kommentieren**  
  Markiert die aktuelle Zeile als Kommentar, indem am Zeilenanfang ein Kommentaroperator (--) hinzugefügt wird.  
   
- **Auskommentierung der Auswahl aufheben**  
+ **Auskommentieren der Auswahl aufheben**  
  Markiert die aktuelle Zeile als aktive Quellanweisung, indem alle Kommentaroperatoren (--) am Zeilenanfang entfernt werden.  
   
- **Zeileneinzug verkleinern**  
+ **Zeilen Einzug verkleinern**  
  Verschiebt durch das Entfernen von Leerzeichen am Zeilenanfang den Text der Zeile nach links.  
   
- **Zeileneinzug vergrößern**  
+ **Zeilen Einzug vergrößern**  
  Verschiebt durch das Hinzufügen von Leerzeichen am Zeilenanfang den Text der Zeile nach rechts.  
   
- **Werte für Vorlagenparameter angeben**  
+ **Werte für Vorlagen Parameter angeben**  
  Öffnet ein Dialogfeld, in dem Sie Werte für Parameter in gespeicherten Prozeduren und Funktionen festlegen können.  
   
  Sie können die SQL-Editor-Symbolleiste auch hinzufügen, indem Sie im Menü **Ansicht** nacheinander **Symbolleisten**und **SQL-Editor**auswählen. Wenn Sie die SQL-Editor-Symbolleiste hinzufügen, ohne dass ein Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors geöffnet ist, steht keine der Schaltflächen zur Verfügung.  
@@ -124,13 +124,13 @@ ms.locfileid: "66064097"
 ## <a name="sql-editor-toolbar"></a>SQL-Editor-Symbolleiste  
  Wenn ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster geöffnet ist, können Sie die Symbolleiste Debuggen hinzufügen, indem Sie im Menü **Ansicht** zuerst **Symbolleisten**und dann **Debuggen**auswählen. Wenn Sie die Symbolleiste Debuggen hinzufügen, ohne dass ein Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors geöffnet ist, steht keine der Schaltflächen zur Verfügung.  
   
- **Continue**  
+ **Auch**  
  Führt den Code im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster bis zu einem Breakpoint aus.  
   
  **Alle unterbrechen**  
  Stellt den Debugger so ein, dass im Falle einer Unterbrechung alle Prozesse angehalten werden, an die der Debugger angefügt ist.  
   
- **Debuggen beenden**  
+ **Debuggen Abbrechen**  
  Deaktiviert den Debugmodus für das ausgewählte [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster und stellt den Standardausführungsmodus wieder her.  
   
  **Nächste Anweisung anzeigen**  
@@ -139,7 +139,7 @@ ms.locfileid: "66064097"
  **Einzelschritt**  
  Die nächste Anweisung wird ausgeführt. Wenn die nächste Anweisung eine gespeicherte Transact-SQL-Prozedur, eine Funktion oder einen Trigger aufruft, zeigt der Debugger ein neues **Abfrage-Editor** -Fenster an, das den Code des Moduls enthält. Das Fenster befindet sich im Debuggingmodus, und die Ausführung hält bei der ersten Anweisung im Modul an. Sie können sich dann durch das Modul bewegen, indem Sie z. B. Breakpoints festlegen oder den Code schrittweise durchlaufen.  
   
- **Prozedurschritt**  
+ **Prozedur Schritt**  
  Die nächste Anweisung wird ausgeführt. Wenn die Anweisung eine gespeicherte Transact-SQL-Prozedur, eine Funktion oder einen Trigger aufruft, wird das Modul bis zum Ende ausgeführt, und die Ergebnisse werden an den aufrufenden Code zurückgegeben. Wenn Sie sicher sind, dass im Modul keine Fehler vorliegen, können Sie es überspringen. Die Ausführung hält bei der Anweisung an, die dem Aufruf des Moduls folgt.  
   
  **Rücksprung**  
@@ -148,7 +148,7 @@ ms.locfileid: "66064097"
  **Windows**  
  Öffnet entweder das Fenster **Breakpoint** oder das **Direktfenster** .  
   
-## <a name="see-also"></a>Siehe auch  
- [Tastenkombinationen für SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Management Studio Tastenkombinationen](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

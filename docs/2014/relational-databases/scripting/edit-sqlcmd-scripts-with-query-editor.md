@@ -1,6 +1,6 @@
 ---
-title: Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor | Microsoft-Dokumentation
-ms.custom: ''
+title: Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0d7d34da4f26211075de05e19e223bafd0e9429
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064110"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245182"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
   Mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Abfragen als SQLCMD-Skripts schreiben und bearbeiten. Sie verwenden SQLCMD-Skripts, wenn Sie Windows-Systembefehle und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem Skript verarbeiten müssen.  
@@ -76,7 +76,8 @@ ms.locfileid: "66064110"
   
     -   (6 Zeile(n) betroffen)  
   
-    -   \<Verzeichnisinformationen>  
+    -   
+  \<Verzeichnisinformationen>  
   
     -   (4 Zeile(n) betroffen)  
   
@@ -110,7 +111,8 @@ ms.locfileid: "66064110"
 -   Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt Umgebungsvariablen und Variablen, die als Teil eines SQLCMD-Skripts definiert sind. Integrierte SQLCMD- oder **osql** -Variablen werden jedoch nicht unterstützt. Bei der SQLCMD-Verarbeitung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wird für Variablen die Groß- und Kleinschreibung beachtet. PRINT '$(COMPUTERNAME)' erzeugt beispielsweise das korrekte Ergebnis, bei PRINT '$(ComputerName)' wird jedoch ein Fehler zurückgegeben.  
   
 > [!CAUTION]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient zur Ausführung im regulären und im SQLCMD-Modus. Beim Ausführen an der Befehlszeile verwendet SQLCMD den OLE DB-Anbieter. Da unterschiedliche Standardoptionen gelten können, wird beim Ausführen derselben Abfrage im SQLCMD-Modus in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und im Hilfsprogramm SQLCMD möglicherweise ein anderes Verhalten erzielt.  
+>  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient zur Ausführung im regulären und im SQLCMD-Modus. Beim Ausführen an der Befehlszeile verwendet SQLCMD den OLE DB-Anbieter. Da unterschiedliche Standardoptionen gelten können, wird beim Ausführen derselben Abfrage im SQLCMD-Modus in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und im Hilfsprogramm SQLCMD möglicherweise ein anderes Verhalten erzielt.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Unterstützte SQLCMD-Syntax  
  Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt die folgenden Schlüsselwörter für SQLCMD-Skripts:  
@@ -136,9 +138,10 @@ ms.locfileid: "66064110"
  `:out <filename>|stderr|stdout`  
   
 > [!NOTE]  
->  `:error` und `:out`senden sowohl für `stderr` als auch für `stdout` die Ausgabe an die Registerkarte Meldungen.  
+>  
+  `:error` und `:out`senden sowohl für `stderr` als auch für `stdout` die Ausgabe an die Registerkarte Meldungen.  
   
- SQLCMD-Befehle, die oben nicht aufgeführt sind, werden im Abfrage-Editor nicht unterstützt. Wenn ein Skript ausgeführt wird, das nicht unterstützte SQLCMD-Schlüsselwörter enthält, sendet der Abfrage-Editor für jedes nicht unterstützte Schlüsselwort die Meldung „Ignoring command *\<ignorierter Befehl*>“ an das Ziel. Das Skript wird erfolgreich ausgeführt. Die nicht unterstützten Befehle werden allerdings ignoriert.  
+ SQLCMD-Befehle, die oben nicht aufgeführt sind, werden im Abfrage-Editor nicht unterstützt. Wenn ein Skript ausgeführt wird, das nicht unterstützte sqlcmd-Schlüsselwörter enthält, sendet der Abfrage-Editor für jedes nicht unterstützte Schlüsselwort die Meldung "Befehls * \<ignorierter* Befehl>" an das Ziel. Das Skript wird erfolgreich ausgeführt. Die nicht unterstützten Befehle werden allerdings ignoriert.  
   
 > [!CAUTION]  
 >  Da Sie SQLCMD nicht über die Befehlszeile starten, bestehen beim Ausführen des Abfrage-Editors im SQLCMD-Modus einige Einschränkungen. So können Sie keine Befehlszeilenparameter wie Variablen übergeben. Außerdem müssen Sie darauf achten, keine interaktiven Anweisungen auszuführen, da der Abfrage-Editor nicht auf Eingabeaufforderungen des Betriebssystems antworten kann.  
@@ -158,7 +161,7 @@ SELECT @@SERVERNAME AS 'Server Name'
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQLCMD-Hilfsprogramm](../../tools/sqlcmd-utility.md)  
   
   

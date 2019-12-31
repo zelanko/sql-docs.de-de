@@ -1,6 +1,6 @@
 ---
-title: Fenster „Suchergebnisse“ | Microsoft-Dokumentation
-ms.custom: ''
+title: Fenster Suchergebnisse
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2b5561ce30a638ed526d2a807820222a156c6e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090497"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245125"
 ---
 # <a name="find-results-windows"></a>Fenster Suchergebnisse
-  In den beiden Fenstern mit der Bezeichnung Suchergebnisse werden Übereinstimmungen angezeigt, die mithilfe der Registerkarten **In Dateien suchen** oder **In Dateien ersetzen** des Dialogfelds **Suchen und Ersetzen** gefunden wurden. Mit dem Befehl **Ergebnisoptionen** für **In Dateien suchen** und **In Dateien ersetzen** können Sie das Fenster Suchergebnisse auswählen, in dem gefundene Übereinstimmungen aufgeführt werden.  
+  In den beiden Fenstern Suchergebnisse werden Übereinstimmungen angezeigt, die mithilfe der Registerkarten **in Dateien suchen** oder **in Dateien ersetzen** des Dialog Felds **Suchen und ersetzen** gefunden wurden. Mit dem Befehl **Ergebnisoptionen** für **In Dateien suchen** und **In Dateien ersetzen** können Sie das Fenster Suchergebnisse auswählen, in dem gefundene Übereinstimmungen aufgeführt werden.  
   
  Wenn Übereinstimmungen gefunden werden, wird das ausgewählte Fenster Suchergebnisse immer automatisch geöffnet. Wenn Sie ein Fenster mit der Bezeichnung Suchergebnisse manuell öffnen möchten, klicken Sie im Menü **Ansicht** auf **Weitere Fenster** , und klicken Sie anschließend auf **Suchergebnisse 1** oder **Suchergebnisse 2**.  
   
@@ -34,13 +34,13 @@ ms.locfileid: "66090497"
  **Seitenflag + Pfeil nach oben**  
  Wechselt zur Zeile, in der die ausgewählte Übereinstimmung gefunden wurde.  
   
- **Seite + Pfeil nach links**  
+ **Seite und nach-links-Taste**  
  Wechselt zur Zeile mit der vorherigen Übereinstimmung.  
   
- **Seite + Pfeil nach rechts**  
+ **Seite + nach-rechts-Taste**  
  Wechselt zur Zeile mit der nächsten Übereinstimmung.  
   
- **Auswahl aufheben**  
+ **Alle löschen**  
  Entfernt alle Übereinstimmungen aus der Liste der **Ergebnisse** .  
   
 ## <a name="shortcut-keys"></a>Tastenkombinationen  

@@ -1,6 +1,6 @@
 ---
-title: QuickInfo (IntelliSense) | Microsoft-Dokumentation
-ms.custom: ''
+title: QuickInfo (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,22 +15,22 @@ ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 614f0f347327171c8ac4fbcb20f9a3d670255488
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f3c1e58fb99e23682df63903553b9167c74a82e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090248"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243728"
 ---
 # <a name="quick-info-intellisense"></a>QuickInfo (IntelliSense)
-  Die Option [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **Quick Info** zeigt die vollständige Deklaration für jeden Bezeichner im Code an. Wenn Sie den Mauszeiger über einen Bezeichner bewegen, wird dessen Deklaration in einem gelben Popupfenster angezeigt. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] steht in der Datenbank-Engine und in den XML-Abfrage-Editoren **QuickInfo** zur Verfügung.  
+  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Option IntelliSense **Quick Info** zeigt die gesamte Deklaration für jeden Bezeichner im Code an. Wenn Sie den Mauszeiger über einen Bezeichner bewegen, wird dessen Deklaration in einem gelben Popupfenster angezeigt. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] steht in der Datenbank-Engine und in den XML-Abfrage-Editoren **QuickInfo** zur Verfügung.  
   
 ## <a name="transact-sql-quick-info"></a>Transact-SQL-QuickInfo  
- Mit**QuickInfo** werden zwei Arten von Informationen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor angezeigt. Wenn der Debugmodus nicht aktiv ist, wird mit **QuickInfo** die Ausdrucksdeklaration angezeigt. Wenn der Debugmodus aktiv ist, werden mit **QuickInfo** stattdessen der Name des Ausdrucks sowie der zugehörige aktuelle Wert angezeigt.  
+ **Quick Info** zeigt zwei Arten von Informationen im- [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor an. Wenn der Debugmodus nicht aktiv ist, wird mit **QuickInfo** die Ausdrucksdeklaration angezeigt. Wenn der Debugmodus aktiv ist, werden mit **QuickInfo** stattdessen der Name des Ausdrucks sowie der zugehörige aktuelle Wert angezeigt.  
   
  Im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor steht **Quick Info** nur für die Teile der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax zu Verfügung, die IntelliSense unterstützen. Wenn Sie beispielsweise den Mauszeiger über einen Bezeichner für ein Objekt bewegen, das über einen Datentyp verfügt, der nicht von IntelliSense unterstützt wird, enthält das Popupfenster **Quick Info** eine Meldung, die angibt, dass der Datentyp nicht unterstützt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Von IntelliSense unterstützte Transact-SQL-Syntax](transact-sql-syntax-supported-by-intellisense.md)  
   
   

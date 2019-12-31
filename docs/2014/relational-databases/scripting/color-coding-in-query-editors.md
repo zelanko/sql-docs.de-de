@@ -1,6 +1,6 @@
 ---
-title: Farbcodierung in Abfrage-Editoren | Microsoft-Dokumentation
-ms.custom: ''
+title: Farbcodierung im Abfrage-Editor
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,28 +13,28 @@ ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e939270edd53189f9d8ba77411b8916e94a5ba8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064171"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244946"
 ---
 # <a name="color-coding-in-query-editors"></a>Farbcodierung im Abfrage-Editor
   Der in die Code-Editoren eingegebene Text wird einer Kategorie zugeordnet, die jeweils durch durch Farben identifiziert werden. Mithilfe der Farben können Sie Text im Code schnell finden. Kommentare sind z. B. dunkelgrün. In der folgenden Tabelle werden die gängigsten Farben aufgelistet. Rufen Sie im Menü **Extras**die Option **Optionen** auf, in dem Sie die vollständige Liste der Farben und ihrer Kategorien anzeigen und ein benutzerdefiniertes Farbschema konfigurieren können. Weitere Informationen zum Ändern der Standardfarben finden Sie unter [Change Font Color, Size, and Style](change-font-color-size-and-style.md).  
   
 ## <a name="default-code-colors"></a>Standardfarben für Code  
   
-|Farbe|Kategorie|  
+|Color|Category|  
 |-----------|--------------|  
-|Red|SQL-Zeichenfolge|  
-|Dunkelgrün|Anmerkung|  
+|Rot|SQL-Zeichenfolge|  
+|Dunkelgrün|Anmerkungen|  
 |Schwarz auf silberfarbenem Hintergrund|SQLCMD-Befehl|  
-|Magenta|Systemfunktionen|  
-|Green|Systemtabelle, Sicht oder Tabellenwertfunktion. Außerdem die Systemschemas sys und INFORMATION_SCHEMA.|  
-|Blue|Schlüsselwort|  
+|Magenta|Systemfunktion|  
+|Grün|Systemtabelle, Sicht oder Tabellenwertfunktion. Außerdem die Systemschemas sys und INFORMATION_SCHEMA.|  
+|Blau|Schlüsselwort|  
 |Blaugrün|Zeilennummern oder Vorlagenparameter|  
-|Kastanienbraun|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )|  
+|Kastanienbraun|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeicherte Prozedur|  
 |Dunkelgrau|Operatoren|  
   
 ## <a name="status-bar"></a>Statusleiste  

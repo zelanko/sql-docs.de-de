@@ -1,6 +1,6 @@
 ---
-title: Problembehandlung von IntelliSense (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Problembehandlung bei IntelliSense
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a642fbe7dbd866baa01fe9db7163292bfda6db30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7088bee1d78efdc6051bf58d174b7ea503362831
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063261"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242982"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>Problembehandlung von IntelliSense (SQL Server Management Studio)
   Es gibt bestimmte Fälle, in denen die IntelliSense-Optionen unter Umständen nicht erwartungsgemäß funktionieren.  
@@ -53,7 +53,7 @@ ms.locfileid: "66063261"
   
 -   Die IntelliSense-Funktionalität des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors unterstützt nicht alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntaxelemente. Die Parameterhilfe unterstützt nicht die Parameter in manchen Objekten, z. B. in erweiterten gespeicherten Prozeduren. Weitere Informationen finden Sie unter [Von IntelliSense unterstützte Transact-SQL-Syntax](transact-sql-syntax-supported-by-intellisense.md).  
   
--   IntelliSense ist nur verfügbar, wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher verbunden ist. IntelliSense ist nicht verfügbar, wenn der Abfrage-Editor mit früheren Versionen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbunden ist.  
+-   IntelliSense ist nur verfügbar, wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher verbunden ist. IntelliSense ist nicht verfügbar, wenn der Abfrage-Editor mit früheren Versionen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbunden ist.  
   
 -   IntelliSense wird im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor deaktiviert, wenn der SQLCMD-Modus aktiviert wird.  
   

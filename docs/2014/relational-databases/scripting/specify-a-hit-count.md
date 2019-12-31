@@ -1,6 +1,6 @@
 ---
-title: Angeben einer Trefferanzahl | Microsoft-Dokumentation
-ms.custom: ''
+title: Angeben einer Trefferanzahl
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e053de9abdb9806a3294a2904827cf9f29753686
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a049491513b826b2b050081b40cb5319ca74160f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063712"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243214"
 ---
 # <a name="specify-a-hit-count"></a>Angeben einer Trefferanzahl
   Die Breakpoint-Trefferanzahl bildet einen Leistungsindikator, der bei jedem Erreichen des Breakpoints vom [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger inkrementiert wird. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.  
@@ -45,7 +45,7 @@ ms.locfileid: "66063712"
   
 1.  Klicken Sie im Editor-Fenster mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   
-     -oder-  
+     – oder –  
   
      Klicken Sie im Fenster **Breakpoints** mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66063712"
   
 1.  Klicken Sie im Editor-Fenster mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   
-     -oder-  
+     – oder –  
   
      Klicken Sie im Fenster **Breakpoints** mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66063712"
   
 4.  Klicken Sie auf **OK** oder **Abbrechen** , um das Dialogfeld zu schließen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Angeben einer Breakpointbedingung](specify-a-breakpoint-condition.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Festlegen einer Haltepunkt Bedingung](specify-a-breakpoint-condition.md)  
   
   
