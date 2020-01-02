@@ -1,5 +1,7 @@
 ---
-title: Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts
+title: Öffnen, entsperren, umbenennen und Löschen eines Data Quality-Projekts
+description: Erfahren Sie, wie Sie mit SQL Server Data Quality Services ein Data Quality-Projekt öffnen, entsperren, umbenennen und löschen.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -16,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d849ca48b5e4a1cc8d01eebc1649075251da3fd0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 666e7fdbc080af3ed259dae978bd782e437eae2e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75245972"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557803"
 ---
-# <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts
+# <a name="open-unlock-rename-and-delete-a-data-quality-project---data-quality-services-dqs"></a>Öffnen, entsperren, umbenennen und Löschen eines Data Quality-Projekts-Data Quality Services (DQS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

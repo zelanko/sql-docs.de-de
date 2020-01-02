@@ -1,5 +1,7 @@
 ---
-title: Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen
+title: Unterstützte SQL Server und SSIS-Datentypen für DQS-Domänen
+description: Beschreibt die vier Datentypen für Data Quality Services (DQS)-Domänen (Data, Decimal, Integer und String) in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 57950290bdf2b7f83463fa6b950db90a4bdbb9f0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257774"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558168"
 ---
-# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen
+# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Unterstützte SQL Server und SSIS-Datentypen für DQS-Domänen
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -25,7 +27,7 @@ ms.locfileid: "75257774"
 > [!NOTE]  
 >  Der Datentyp der Quellspalte wird in XLSX- und XLS-Dateien vom häufigsten Datentyp in den ersten acht Zeilen bestimmt. Wenn eine Zelle diesem Datentyp nicht entspricht, erhält sie einen NULL-Wert. Entsprechend wird auch in CSV-Dateien der Datentyp der Quellspalte vom häufigsten Datentyp in den ersten acht Zeilen bestimmt.  
   
-##  <a name="SQLServer"></a>Unterstützte SQL Server-Datentypen  
+##  <a name="SQLServer"></a>Unterstützte SQL Server-Datentypen 
  Die folgende Tabelle enthält Informationen zu den für jeden DQS-Domänendatentyp unterstützten SQL Server-Datentypen:  
   
 |DQS-Domänendatentyp|Unterstützte SQL Server-Datentypen|  
