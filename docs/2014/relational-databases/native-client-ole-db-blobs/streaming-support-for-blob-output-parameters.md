@@ -507,7 +507,7 @@ _Exit:
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [BLOBs und OLE-Objekte](blobs-and-ole-objects.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [BLOB-und OLE-Objekte](blobs-and-ole-objects.md)  
   
   
