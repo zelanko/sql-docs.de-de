@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9e6ef9592f980cab3e379fc27083ed34b8e94798
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531302"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243597"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Konfigurieren von persistentem Speicher (PMEM) für SQL Server für Linux
 
@@ -79,7 +79,7 @@ ndctl list
 
   Sobald das Gerät mit „ndctl“ konfiguriert, formatiert und eingebunden wurde, können Sie Datenbankdateien in ihm ablegen. Sie können auch eine neue Datenbank erstellen. 
 
-1. Da PMEM-Geräte O_DIRECT-sicher sind, aktivieren Sie das Ablaufverfolgungsflag 3979, um den Mechanismus für erzwungenes Leeren zu deaktivieren. Dieses Ablaufverfolgungsflag ist ein Startablaufverfolgungsflag und muss daher mit dem Hilfsprogramm „mssql-conf“ aktiviert werden. Beachten Sie, dass es sich hierbei um eine serverweite Konfigurationsänderung handelt. Außerdem sollten Sie dieses Ablaufverfolgungsflag nicht verwenden, wenn Sie O_DIRECT-inkompatible Geräte haben, für die der Mechanismus für erzwungenes Leeren (forced flush) erforderlich ist, um Datenintegrität sicherzustellen. Weitere Informationen finden Sie unter https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
+1. Da PMEM-Geräte O_DIRECT-sicher sind, aktivieren Sie das Ablaufverfolgungsflag 3979, um den Mechanismus für erzwungenes Leeren zu deaktivieren. Dieses Ablaufverfolgungsflag ist ein Startablaufverfolgungsflag und muss daher mit dem Hilfsprogramm „mssql-conf“ aktiviert werden. Beachten Sie, dass es sich hierbei um eine serverweite Konfigurationsänderung handelt. Außerdem sollten Sie dieses Ablaufverfolgungsflag nicht verwenden, wenn Sie O_DIRECT-inkompatible Geräte haben, für die der Mechanismus für erzwungenes Leeren (forced flush) erforderlich ist, um Datenintegrität sicherzustellen. Weitere Informationen finden Sie unter https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
 
 1. Starten Sie SQL Server neu.
 

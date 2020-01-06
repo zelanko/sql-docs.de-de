@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f41567d5c27bfb1d77010d7e0d3fe187adf9a36c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892430"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257510"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Beim Starten des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Diensts versucht dieser, den Dienstprinzipalnamen (Service Principal Name, SPN) zu registrieren. Wenn das Konto, das SQL Server startet, nicht über die Berechtigung zum Registrieren eines SPN in den Active Directory-Domänendiensten verfügt, schlägt dieser Aufruf fehl, und im Anwendungsereignisprotokoll sowie im SQL Server-Fehlerprotokoll wird eine Warnmeldung protokolliert. Um den SPN zu registrieren, muss [!INCLUDE[ssDE](../../includes/ssde-md.md)] unter einem integrierten Konto, z. B. einem lokalen System (nicht empfohlen) oder NETWORK SERVICE, oder unter einem Konto mit Berechtigung zum Registrieren eines SPN, z. B. einem Domänenadministratorkonto, ausgeführt werden. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter dem Betriebssystem  [!INCLUDE[win7](../../includes/win7-md.md)] oder  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] ausgeführt wird, können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit einem virtuellen Konto oder einem verwalteten Dienstkonto (MSA) ausführen. Sowohl virtuelle Konten als auch MSAs können einen SPN registrieren. Wird unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kein solches Konto ausgeführt, wird der SPN beim Starten nicht registriert, sodass der Domänenadministrator den SPN manuell registrieren muss.  
   
 > [!NOTE]  
->  Wenn die Windows-Domäne zum Ausführen auf einer geringeren Ebene als der [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2-Funktionsebene konfiguriert ist, verfügt das verwaltete Dienstkonto nicht über die notwendigen Berechtigungen zum Registrieren der SPNs für den [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Dienst. Ist die Kerberos-Authentifizierung erforderlich, muss der Domänenadministrator die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -SPNs über das verwaltete Dienstkonto manuell registrieren.  
-  
- Der KB-Artikel [Verwenden der Kerberos-Authentifizierung in SQL Server](https://support.microsoft.com/kb/319723)enthält Informationen zum Gewähren von Lese- und Schreibberechtigungen für einen SPN für ein Nicht-Domänenadministratorkonto.  
+>  Wenn die Windows-Domäne zum Ausführen auf einer geringeren Ebene als der [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2-Funktionsebene konfiguriert ist, verfügt das verwaltete Dienstkonto nicht über die notwendigen Berechtigungen zum Registrieren der SPNs für den [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Dienst. Ist die Kerberos-Authentifizierung erforderlich, muss der Domänenadministrator die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -SPNs über das verwaltete Dienstkonto manuell registrieren.
   
  Weitere Informationen sind unter [Implementieren von eingeschränkter Kerberos-Delegierung mit SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)verfügbar  
   

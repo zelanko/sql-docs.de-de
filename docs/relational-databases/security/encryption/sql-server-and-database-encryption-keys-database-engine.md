@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: fa61ee1fc916b4ff00a149ea41068e4b0231acd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: b035af17631253ea01e6ca79ba7702a378df1df9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111574"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957344"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Verschlüsselungsschlüssel für SQL Server und Datenbank (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Der Diensthauptschlüssel kann nur durch das Windows-Dienstkonto geöffnet werde
 >  Wenn Sie den gesamten Zugriff auf die oben beschriebenen Schlüssel verlieren, verlieren Sie den Zugriff auf die Objekte, Verbindungen und Daten, die mit diesen Schlüsseln gesichert wurden. Sie können den Diensthauptschlüssel wie unter den hier angegebenen Links beschrieben wiederherstellen, oder Sie können den Zugriff mit dem ursprünglichen Verschlüsselungssystem wiederherstellen. Es gibt keine "Hintertür" zum Wiederherstellen des Zugriffs.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
+ [Diensthauptschlüssel](../../../relational-databases/security/encryption/service-master-key.md)  
  Bietet eine kurze Erklärung zum Diensthauptschlüssel und den Best Practices.  
   
  [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

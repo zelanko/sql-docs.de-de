@@ -13,22 +13,22 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a68ecbdd5d48447b17bbfd256aec982614cb3c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 08899661d3638b03aaf848bd207625e168812e87
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902983"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957416"
 ---
 # <a name="encrypt-a-column-of-data"></a>Verschlüsseln einer Datenspalte
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In diesem Artikel wird beschrieben, wie Sie eine Datenspalte mithilfe der symmetrischen Verschlüsselung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]verschlüsseln können. Dies wird manchmal als Verschlüsselung auf Spaltenebene oder Verschlüsselung auf Zellenebene bezeichnet.  
 
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Die folgenden Berechtigungen sind notwendig, um die Schritte unten auszuführen:  
@@ -54,7 +54,7 @@ Erstellen Sie immer eine Sicherung Ihres Datenbankhauptschlüssels. Weitere Info
 
 ### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>So verschlüsseln Sie Datenspalten mithilfe der symmetrischen Verschlüsselung unter Einbeziehung eines Authentifikators  
   
-1. Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -112,7 +112,7 @@ Erstellen Sie immer eine Sicherung Ihres Datenbankhauptschlüssels. Weitere Info
   
 ### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>So verschlüsseln Sie eine Datenspalte mithilfe einer einfachen symmetrischen Verschlüsselung  
   
-1. Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -166,7 +166,7 @@ Erstellen Sie immer eine Sicherung Ihres Datenbankhauptschlüssels. Weitere Info
     GO  
     ```  
   
- Weitere Informationen finden Sie unter den folgenden Links:  
+ Weitere Informationen finden Sie unter  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  
   
