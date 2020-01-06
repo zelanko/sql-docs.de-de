@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b74463acd2c202dd0b14167b40a715308f16e787
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095764"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190355"
 ---
 # <a name="json-data-in-sql-server"></a>JSON-Daten in SQL Server
 
@@ -60,7 +60,7 @@ Durch Verwenden von integrierten SQL Server-Funktionen und -Operatoren können S
 In den nächsten Abschnitten werden die wichtigsten Funktionen erläutert, die SQL Server durch die integrierte Unterstützung für JSON bereitstellt. Im folgenden Video sehen Sie, wie JSON-Funktionen und Operatoren verwenden werden:
 
 *SQL Server 2016 and JSON Support*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player?WT.mc_id=dataexposed-c9-niner]
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>Extrahieren von Werten aus JSON-Text und Verwenden dieser Werte in Abfragen
 
@@ -135,7 +135,7 @@ FROM OPENJSON(@json)
 
 **Ergebnisse**
 
-|im Elementknoten &lt;Customer ID="1"|firstName|lastName|age|dateOfBirth|  
+|id|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
@@ -181,7 +181,7 @@ Das Ergebnis dieser Abfrage wird in der folgenden Tabelle dargestellt:
 
 **Ergebnisse**
 
-|im Elementknoten &lt;Customer ID="1"|firstName|lastName|age|dateOfBirth|skill|  
+|id|firstName|lastName|age|dateOfBirth|skill|  
 |--------|---------------|--------------|---------|-----------------|----------|  
 |2|John|Smith|25|||  
 |5|Jane|Smith||2005-11-04T12:00:00|SQL|
@@ -403,7 +403,7 @@ Mit den Skripts, die in der Datei enthalten sind, haben Sie die folgenden Mögli
 Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:
 
 *Using JSON in SQL Server 2016 and Azure SQL Database*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 
 *Building REST API with SQL Server using JSON functions (Erstellen einer REST-API mithilfe von JSON-Funktionen mit SQL Server)*
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]

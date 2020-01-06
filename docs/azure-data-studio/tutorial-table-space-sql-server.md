@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Aktivieren des Erkenntniswidgets zur Nutzung des Tabellenspeicherplatzes'
+title: Aktivieren des Erkenntniswidgets zur Nutzung des Tabellenspeicherplatzes
 titleSuffix: Azure Data Studio
 description: Dieses Tutorial veranschaulicht, wie Sie das Beispielwidget für Erkenntnisse zur Nutzung des Tabellenspeicherplatzes auf dem Dashboard für Azure Data Studio-Datenbanken aktivieren.
 ms.prod: sql
@@ -8,16 +8,16 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: 4b44fc9dbee773e7bc88daecf9142c1f826d65a0
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878662"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957014"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Lernprogramm: Aktivieren des Erkenntniswidgets zur Nutzung des Tabellenspeicherplatzes mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutorial: Aktivieren des Erkenntniswidgets zur Nutzung des Tabellenspeicherplatzes mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Dieses Tutorial veranschaulicht, wie Sie ein Erkenntniswidget auf dem Datenbankdashboard aktivieren, um die Speicherplatznutzung für alle Tabellen in einer Datenbank auf einen Blick anzuzeigen. In diesem Tutorial lernen Sie Folgendes:
 

@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586757"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243585"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Grundlagen zur SQL Server-Verfügbarkeit für Linux-Bereitstellungen
 
@@ -57,7 +57,7 @@ In diesem Abschnitt werden Aufgaben beschrieben, die für alle Linux-basierten [
 Jeder [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Benutzer unter Linux sollte in der Lage sein, Dateien eines Servers auf einen anderen Server zu kopieren. Diese Aufgabe ist für die Konfiguration von Verfügbarkeitsgruppen sehr wichtig.
 
 Sowohl unter Linux als auch bei Windows-basierten Installationen können beispielsweise Probleme mit Berechtigungen auftreten. Wenn Windows-Benutzer Dateien von einem Server auf den anderen kopieren können, bedeutet das jedoch nicht, dass sie diese Aufgabe auch unter Linux durchführen können. Oft wird das Befehlszeilen-Hilfsprogramm `scp` (Secure Copy, sicheres Kopieren) verwendet. Im Hintergrund verwendet `scp` OpenSSH (Secure Shell). Abhängig von der Linux-Distribution ist OpenSSH möglicherweise nicht installiert. In diesem Fall muss das Tool zuerst installiert werden. Weitere Informationen zum Konfigurieren von OpenSSH finden Sie unter den folgenden Links für verschiedene Distributionen:
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -83,7 +83,7 @@ Eine weitere Option ist eine NFS-Freigabe (Network File System). Diese kann alle
 ### <a name="configure-the-firewall"></a>Konfigurieren der Firewall
 Linux-Distributionen verfügen ähnlich wie Windows über eine integrierte Firewall. Wenn Ihr Unternehmen eine externe Firewall für Server verwendet, ist es möglicherweise akzeptabel, die Linux-Firewall zu deaktivieren. Unabhängig davon, welche Firewall wo aktiviert wird, müssen bestimmte Ports geöffnet werden. In der folgenden Tabelle werden die Ports aufgeführt, die üblicherweise für hochverfügbare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Bereitstellungen unter Linux erforderlich sind.
 
-| Portnummer | Typ     | und Beschreibung                                                                                                                 |
+| Portnummer | type     | BESCHREIBUNG                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS: `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (falls verwendet): Endpunktzuordnung                                                                                          |
@@ -116,7 +116,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Firewalldokumentation:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installieren von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Verfügbarkeitspaketen
@@ -163,7 +163,7 @@ In diesem Abschnitt werden allgemeine Konzepte und die Terminologie einer Pacema
 #### <a name="node"></a>Node
 Ein Knoten ist ein Server in einem Cluster. Ein Pacemaker-Cluster unterstützt nativ bis zu 16 Knoten. Diese Zahl kann überschritten werden, wenn Corosync nicht auf zusätzlichen Knoten ausgeführt wird. Da Corosync aber für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] erforderlich ist, ist die maximale Anzahl von Knoten, über die ein Cluster für eine [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-basierte Konfiguration verfügen kann, auf 16 beschränkt. Dieses Limit wird von Pacemaker vorgegeben und hat nichts mit den maximalen Werten für Verfügbarkeitsgruppen oder Failoverclusterinstanzen zu tun, die von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] erzwungen werden. 
 
-#### <a name="resource"></a>Ressource
+#### <a name="resource"></a>Resource
 Sowohl bei WSFCs als auch bei Pacemaker-Clustern gibt es das Konzept einer Ressource. Eine Ressource ist eine bestimmte Funktion, die im Kontext des Clusters ausgeführt wird. Dies kann beispielsweise ein Datenträger oder eine IP-Adresse sein. In Pacemaker können z. B. sowohl Ressourcen für Failoverclusterinstanzen als auch für Verfügbarkeitsgruppen erstellt werden. Diese Vorgehensweise ähnelt der für einen WSFC, da hier beim Konfigurieren einer Verfügbarkeitsgruppe eine [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Ressource für eine Failoverclusterinstanz oder Verfügbarkeitsgruppe verwendet wird. Der Unterschied besteht jedoch darin, dass die Pacemaker-Integration von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] anders funktioniert.
 
 In Pacemaker gibt es Standard- und Klonressourcen. Klonressourcen werden auf allen Knoten gleichzeitig ausgeführt. Ein Beispiel ist eine IP-Adresse, die für den Lastenausgleich auf mehreren Knoten verwendet wird. Für Failoverclusterinstanzen wird eine Standardressource erstellt, da jeweils nur ein Knoten eine Failoverclusterinstanz hosten kann.

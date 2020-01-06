@@ -1,6 +1,5 @@
 ---
-title: Ändern einer Sitzung für erweiterte Ereignisse | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern einer Sitzung für erweiterte Ereignisse
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3c0b3584edd804768bbbe94bdc570448ab6e653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32a57c46cebb17df257f2002c25ab5f1d7107379
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021919"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255773"
 ---
 # <a name="alter-an-extended-events-session"></a>Ändern einer Sitzung für erweiterte Ereignisse
 
@@ -24,7 +23,7 @@ ms.locfileid: "68021919"
 
   Nachdem Sie eine Sitzung für erweiterte Ereignisse erstellt haben, können Sie diese je nach Bedarf mithilfe des **SQL Server-Assistenten für erweiterte Ereignisse**ändern.  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Voraussetzungen  
  Sie können kein Ziel für aktive und inaktive Sitzungen ändern, und Sie können zudem für eine aktive Sitzung die Konfigurationen für erweiterte Eigenschaften nicht ändern.  
   
  Folgende Änderungen sind sowohl für aktive als auch inaktive Ereignissitzungen möglich:  

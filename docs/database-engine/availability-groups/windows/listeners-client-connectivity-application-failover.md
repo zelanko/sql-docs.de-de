@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9ec10cd88bdaa5536674df78c9b73700575516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2116c0a587b82f289f5dba17968f3eb42e47c05
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020809"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228253"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Herstellen einer Verbindung mit einem Always On-Verfügbarkeitsgruppenlistener 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "68020809"
   
      In Produktionsumgebungen wird empfohlen, dass Verfügbarkeitsgruppenlistener statische IP-Adressen verwenden. Wenn sich die Verfügbarkeitsgruppen jedoch in Subnetzen einer Domäne mit mehreren Subnetzen befinden, muss ein Verfügbarkeitsgruppenlistener statische IP-Adressen verwenden.  
   
- Hybride Netzwerkkonfigurationen und DHCP in mehreren Subnetzen werden nicht für Verfügbarkeitsgruppenlistener unterstützt. Das liegt daran, dass im Fall eines Failovers eine dynamische IP abgelaufen sein könnte oder freigegeben wird, wodurch die hohe Verfügbarkeit insgesamt gefährdet wird.  
+ Hybride Netzwerkkonfigurationen und DHCP in mehreren Subnetzen werden nicht für Verfügbarkeitsgruppenlistener unterstützt. Das liegt daran, dass im Fall eines Failovers eine dynamische IP abgelaufen sein könnte oder freigegeben wird, wodurch die Hochverfügbarkeit insgesamt gefährdet wird.  
   
 ##  <a name="SelectListenerPort"></a> Auswählen eines Ports für Verfügbarkeitsgruppenlistener  
  Wenn Sie einen Verfügbarkeitsgruppenlistener konfigurieren, müssen Sie einen Port festlegen.  Sie können den Standardport auf 1433 konfigurieren, um Clientverbindungszeichenfolgen einfach zu gestalten. Wenn Sie 1433 verwenden, müssen Sie keine Portnummer in einer Verbindungszeichenfolge festlegen.   Da jeder Verfügbarkeitsgruppenlistener einen separaten virtuellen Netzwerknamen besitzt, kann außerdem jeder für einen WSFC-Cluster konfigurierte Verfügbarkeitsgruppenlistener für den Verweis auf Port 1433 konfiguriert werden.  
@@ -77,7 +77,7 @@ ms.locfileid: "68020809"
  Um mithilfe eines Verfügbarkeitsgruppenlisteners eine Verbindung mit dem primären Replikat für Lese-/Schreibzugriff herzustellen, gibt die Verbindungszeichenfolge den DNS-Namen des Verfügbarkeitsgruppenlisteners an.  Wenn ein Verfügbarkeitsgruppenreplikat zu einem neuen Replikat wird, werden vorhandene Verbindungen, für die der Netzwerkname eines Verfügbarkeitslisteners verwendet wird, unterbrochen.  Neue Verbindungen zum Verfügbarkeitsgruppenlistener werden dann an das neue primäre Replikat weitergeleitet. Beispiel für eine einfache Verbindungszeichenfolge für den ADO.NET-Anbieter (System.Data.SqlClient):  
   
 ```  
-Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
+Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI  
 ```  
   
  Sie können dennoch direkt auf die Instanz des SQL Server-Namens der primären oder sekundären Replikate verweisen, anstatt den Servernamen des Verfügbarkeitsgruppenlisteners zu verwenden. In diesem Fall werden neue Verbindungen jedoch nicht automatisch zum aktuellen primären Replikat weitergeleitet.  Schreibgeschütztes Routing geht ebenfalls verloren.  
@@ -116,7 +116,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Beispiel für eine Verbindungszeichenfolge für den ADO.NET-Anbieter (System.Data.SqlClient) mit Festlegung einer schreibgeschützten Anwendungsabsicht:  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
  In diesem Beispiel für eine Verbindungszeichenfolge versucht der Client, über den Verfügbarkeitsgruppenlistener `AGListener` an Port 1433 eine Verbindung mit der AdventureWorks-Datenbank herzustellen (Sie können den Port auch weglassen, wenn der Verfügbarkeitsgruppenlistener an Port 1433 lauscht).  In der Verbindungszeichenfolge wurde die Eigenschaft **ApplicationIntent** auf **ReadOnly**festgelegt, was diese zu einer *Verbindungszeichenfolge für beabsichtige Lesevorgänge*macht.  Ohne diese Einstellung hätte der Server kein schreibgeschütztes Routing der Verbindung versucht.  
@@ -131,7 +131,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
 -   [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
--   [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+-   [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
 ##  <a name="BypassAGl"></a> Umgehen von Verfügbarkeitsgruppenlistenern  
  Während Verfügbarkeitsgruppenlistener Unterstützung für Failoverumleitung und schreibgeschütztes Routing ermöglichen, müssen Clientverbindungen diese nicht verwenden. Eine Clientverbindung kann auch direkt auf die Instanz von SQL Server verweisen, statt eine Verbindung mit dem Verfügbarkeitsgruppenlistener herzustellen.  
@@ -163,7 +163,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  Beispiel für eine Verbindungszeichenfolge des ADO.NET-Anbieters (System.Data.SqlClient) mit aktiviertem Multisubnetzfailover:  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; MultiSubnetFailover=True  
 ```  
   
  Die **MultiSubnetFailover** -Verbindungsoption sollte auf **True** festgelegt werden, auch wenn die Verfügbarkeitsgruppe nur ein einzelnes Subnetz umfasst.  Dies ermöglicht es Ihnen, neue Clients vorzukonfigurieren, um künftig weitere Subnetze zu unterstützen, ohne dass die Clientverbindungszeichenfolgen geändert werden müssen. Darüber hinaus wird die Failoverleistung für Failover in einem Subnetz optimiert.  Die **MultiSubnetFailover** -Verbindungsoption ist zwar nicht erforderlich, bietet jedoch den Vorteil eines schnelleren Subnetzfailovers.  Das liegt daran, dass der Clienttreiber versucht, parallel ein TCP-Socket für alle der Verfügbarkeitsgruppe zugeordneten IP-Adressen zu öffnen.  Der Clienttreiber wartet, bis die erste IP erfolgreich antwortet, und verwendet diese dann für die Verbindung.  
@@ -207,7 +207,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Einführung in den Verfügbarkeitsgruppenlistener](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (SQL Server AlwaysOn-Teamblog)  
   

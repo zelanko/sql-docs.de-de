@@ -1,6 +1,7 @@
 ---
-title: Separates Speichern von Showplan XML-Ereignissen (SQL Server Profiler) | Microsoft-Dokumentation
-ms.custom: ''
+title: Separates Speichern von Showplan XML-Ereignissen
+titleSuffix: SQL Server Profiler
+ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4a3530d3796cf65dd66dd509e3f168183d4b274a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 73a95255bcce173fa0ce2141b4f968d7efab7e57
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908074"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165577"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Separates Speichern von Showplan XML-Ereignissen (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "72908074"
   
 11. Um die **Showplan XML**-Ereignisdatei in SQL Server Management Studio anzeigen zu lassen, zeigen Sie im Menü **Datei** auf **Öffnen**, und wählen Sie **Datei** aus. Navigieren Sie zu dem Verzeichnis, in dem Sie die **Showplan XML**-Ereignisdatei(en) gespeichert hatten, wählen Sie eine Datei aus, und öffnen Sie diese. **Showplan XML** -Ereignisdateien besitzen die Dateierweiterung .SQLPlan.  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Analysieren von Abfragen mit Showplan-Ergebnissen in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

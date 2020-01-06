@@ -2,31 +2,32 @@
 title: SQL Server-Erweiterung „Zentrale Verwaltungsserver“
 titleSuffix: Azure Data Studio
 description: Installieren und Verwenden der SQL Server-Erweiterung „Zentrale Verwaltungsserver“ (Vorschauversion) für Azure Data Studio
-ms.custom: seodec18
-ms.date: 06/06/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 06/06/2019
+ms.openlocfilehash: 6c323c2580e86e560aa1b0df5d131b260d0c1bb5
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959206"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957024"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Erweiterung: zentrale Verwaltungsserver von SQL Server (Vorschauversion)
+
 Die Erweiterung „Zentrale Verwaltungsserver“ ermöglicht es Benutzern, eine Liste von SQL Server-Instanzen zu speichern, die in mindestens einer Gruppe zusammengestellt sind. Aktionen, die mit einer Gruppe zentraler Verwaltungsserver ausgeführt werden, wirken sich auf alle Server in der Servergruppe aus.
 
-Diese Umgebung befindet sich derzeit in der ersten Vorschauphase. Probleme und Featureanforderungen können Sie [hier](https://github.com/microsoft/azuredatastudio/issues) mitteilen.
+Diese Funktion befindet sich derzeit in der ersten Vorschauversion. Probleme und Featureanforderungen können Sie [hier](https://github.com/microsoft/azuredatastudio/issues) mitteilen.
 
 ![Erweiterung „Zentrale Verwaltungsserver“](media/sql-server-cms-extension/cms-list.png)
 
 ## <a name="install-the-sql-server-central-management-servers-extension"></a>Installieren der SQL Server-Erweiterung „Zentrale Verwaltungsserver“
 
-1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, wählen Sie das Symbol für Erweiterungen aus, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
+1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, klicken Sie auf das Symbol für Erweiterungen, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
 2. Wählen Sie eine verfügbare Erweiterung aus, um deren Details anzuzeigen.
 1. Wählen Sie die gewünschte Erweiterung (SQL Server „Zentrale Verwaltungsserver“) aus, und **Installieren** Sie diese.
 

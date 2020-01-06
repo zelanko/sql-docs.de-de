@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809779"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252243"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren eines freigegebenen Datenträgerclusters mit Red Hat Enterprise Linux für SQL Server
 
@@ -29,7 +29,7 @@ Wie in der folgenden Abbildung zu sehen, wird der Speicher zwei Servern präsent
 
 ![Freigegebener SQL-Datenträgercluster mit Red Hat Enterprise Linux 7](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Weitere Informationen zu Clusterkonfiguration, Optionen für Ressourcen-Agents und Verwaltung finden Sie in der [Referenzdokumentation von RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zur Clusterkonfiguration, den Optionen für Ressourcen-Agents und der Verwaltung finden Sie in der [Referenzdokumentation von RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
@@ -120,7 +120,7 @@ Es gibt eine Reihe von Lösungen für die Bereitstellung von freigegebenem Speic
 
 Gehen Sie auf dem NFS-Server wie folgt vor:
 
-1. Installieren Sie `nfs-utils`.
+1. Installieren von `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -175,7 +175,7 @@ Gehen Sie auf dem NFS-Server wie folgt vor:
 
 Führen Sie die folgenden Schritte auf allen Clusterknoten durch.
 
-1.  Installieren Sie `nfs-utils`.
+1.  Installieren von `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -202,7 +202,7 @@ Weitere Informationen zur Verwendung von NFS finden Sie unter folgenden Quellen:
 
 * [NFS servers and firewalld | Stack Exchange (NFS-Server und firewalld | Stack Exchange)](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Mounting an NFS Volume | Linux Network Administrators Guide (Einbinden eines NFS-Volumes | Leitfaden für Linux-Netzwerkadministratoren)](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS server configuration | Red Hat Customer Portal (NFS-Serverkonfiguration | Red Hat-Kundenportal)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [NFS server configuration | Red Hat Customer Portal (NFS-Serverkonfiguration | Red Hat-Kundenportal)](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Einbinden des Datenbankdateiverzeichnisses zum Zeigen auf den freigegebenen Speicher
 
@@ -256,7 +256,7 @@ An diesem Punkt sind beide Instanzen von SQL Server so konfiguriert, dass sie mi
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren und Konfigurieren von Pacemaker auf jedem Clusterknoten
 
 
-2. Erstellen Sie auf beiden Clusterknoten eine Datei zum Speichern von Benutzername und Kennwort für SQL Server für die Pacemaker-Anmeldung. Der folgende Befehl erstellt und füllt diese Datei:
+2. Erstellen Sie auf beiden Clusterknoten eine Datei zum Speichern von Benutzername und Kennwort für SQL Server für die Pacemaker-Anmeldung. Der folgende Code erstellt und füllt diese Tabelle:
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -381,7 +381,7 @@ Ein STONITH-Gerät stellt einen Fencing-Agent bereit. Ein Beispiel für das Erst
     pcsd: active/enabled
    ```
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 * [Detaillierte Anleitung für das Erstellen von Clustern](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) von Pacemaker
 

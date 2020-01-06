@@ -1,5 +1,5 @@
 ---
-title: 'Eigenschaften von Verfügbarkeitsgruppen: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen)'
+title: 'Eigenschaften von Verfügbarkeitsgruppen: Seite „Sicherungseinstellungen“'
 description: Eine Beschreibung der verschiedenen Eigenschaften finden Sie auf der Seite „Sicherheitseinstellung“ im Assistenten „Neue Verfügbarkeitsgruppe“ in SQL Server Management Studio.
 ms.custom: seodec18
 ms.date: 05/17/2016
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5dd782fc153829fcaa1105d37421963a8884bb0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cebacaf07ca7e678095a661267b02fe04d8513d9
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991472"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822471"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Eigenschaften von Verfügbarkeitsgruppen: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "67991472"
   
 ## <a name="where-should-backups-occur"></a>Wo sollten Sicherungen erfolgen?  
  **Sekundär bevorzugen**  
- Gibt an, dass Sicherungen auf einem sekundären Replikat erfolgen müssen, außer wenn es sich beim primären Replikat um das einzige Onlinereplikat handelt. In diesem Fall muss die Sicherung auf dem primären Replikat erfolgen. Diese Option ist die Standardeinstellung.  
+ Gibt an, dass Sicherungen auf einem sekundären Replikat erfolgen müssen, außer wenn es sich beim primären Replikat um das einzige Onlinereplikat handelt. In diesem Fall muss die Sicherung auf dem primären Replikat erfolgen. Dies ist die Standardoption.  
   
  **Nur sekundär**  
  Gibt an, dass Sicherungen nie auf dem primären Replikat ausgeführt werden dürfen. Wenn es sich beim primären Replikat um das einzige Onlinereplikat handelt, darf keine Sicherung erfolgen.  
   
- **Primär**  
+ **Primärer Server/verwaltete Instanz**  
  Gibt an, dass die Sicherungen immer auf dem primären Replikat erfolgen müssen. Diese Option ist hilfreich, wenn Sie Sicherungsfunktionen benötigen, z. B. das Erstellen differenzieller Sicherungen, die nicht unterstützt werden, wenn die Sicherung auf einem sekundären Replikat ausgeführt wird.  
   
  **Beliebiges Replikat**  
@@ -60,7 +60,7 @@ ms.locfileid: "67991472"
  Wählen Sie diese Option, wenn dieses Verfügbarkeitsreplikat nie zum Ausführen von Sicherungen ausgewählt werden soll. Dies ist zum Beispiel für ein Remoteverfügbarkeitsreplikat hilfreich, für das keine Failover bei Sicherungen auftreten sollen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) .  
+ [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

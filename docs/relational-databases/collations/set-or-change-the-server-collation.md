@@ -1,7 +1,7 @@
 ---
 title: Festlegen oder Ändern der Serversortierung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81a776a0bece59f98042fec6cbf7b191ec82be1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 019c62424398b05dfaa6efe2f91ab4c08b333cd2
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140835"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901917"
 ---
 # <a name="set-or-change-the-server-collation"></a>Festlegen oder Ändern der Serversortierung
 
@@ -43,7 +43,7 @@ ms.locfileid: "68140835"
   
 - Neuerstellen der Masterdatenbank unter Angabe der neuen Sortierung in der SQLCOLLATION-Eigenschaft des **setup** -Befehls. Beispiel:  
   
-    ```sql  
+    ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
     /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]
     /SQLCOLLATION=CollationName  
@@ -59,13 +59,12 @@ ms.locfileid: "68140835"
 > Anstatt die Standardsortierung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu ändern, können Sie eine Standardsortierung für alle neu zu erstellenden Datenbanken angeben.  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Festlegen der Serversortierung in der verwalteten Instanz
-
 Die Sortierung auf Serverebene in der verwalteten Azure SQL-Instanz kann beim Erstellen der Instanz festgelegt werden. Sie kann später nicht mehr geändert werden. Sie können die Sortierung auf Serverebene über das [Azure-Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) oder über [PowerShell und eine Resource Manager-Vorlage](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) beim Erstellen der Instanz festlegen. Die Standardsortierung auf Serverebene ist **SQL_Latin1_General_CP1_CI_AS**. Nur-Unicode- und die neuen UTF-8-Sortierungen können nicht als Serversortierungen festgelegt werden.
 Wenn Sie Datenbanken von SQL Server zur verwalteten Instanz migrieren, überprüfen Sie die Serversortierung in der SQL Server-Quelle mit der `SERVERPROPERTY(N'Collation')`-Funktion, und erstellen Sie eine verwaltete Instanz, die der Sortierung der SQL Server-Instanz entspricht. Die Migration einer Datenbank aus SQL Server in eine verwaltete Instanz mit Sortierungen auf Serverebene, die nicht übereinstimmen, kann zu einigen unerwarteten Abfragefehlern führen. Die Sortierung auf Serverebene kann bei vorhandenen verwalteten Instanzen nicht geändert werden.
 
 ## <a name="see-also"></a>Weitere Informationen
 
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
+ [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)   
  [Festlegen oder Ändern der Datenbanksortierung](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Festlegen oder Ändern der Spaltensortierung](../../relational-databases/collations/set-or-change-the-column-collation.md)   
  [Neuerstellen von Systemdatenbanken](../../relational-databases/databases/rebuild-system-databases.md)  

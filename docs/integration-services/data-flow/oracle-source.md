@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545069"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542203"
 ---
 # <a name="oracle-source"></a>Oracle-Quelle
 
@@ -49,14 +49,14 @@ Sie können die ODBC-Aufrufe protokollieren, die die Oracle-Quelle an Oracle-Dat
 
 Die benutzerdefinierten Eigenschaften der Oracle-Quelle wie unten beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.
 
-|Eigenschaftsname|Datentyp|und Beschreibung|
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|
 |:-|:-|:-|
 |AccessMode|Ganze Zahl (Enumeration)|Der zum Zugreifen auf die Datenbank verwendete Modus. Die möglichen Werte sind **Tabellenname** und **SQL-Befehl**. Die Standardeinstellung ist der **Tabellenname**.|
 |BatchSize|Integer|Die Größe des Batches für den Massenladevorgang. Dies ist die Anzahl der als Array extrahierten Datensätze. <br>Diese Eigenschaft wird nur vom **Erweiterten Editor** festgelegt.|
 |DefaultCodePage|Integer|Die zu verwendende Codepage, wenn die Datenquelle keine Codepageinformationen enthält. <br>Diese Eigenschaft wird nur vom **Erweiterten Editor** festgelegt.|
 |PreFetchCount|Integer|Die Anzahl der vorab abgerufenen Zeilen <br>Diese Eigenschaft wird nur vom **Erweiterten Editor** festgelegt.|
-|SqlCommand|Zeichenfolge|Der SQL-Befehl, der ausgeführt werden soll, wenn AccessMode auf SQL-Befehl festgelegt wird.|
-|TableName|Zeichenfolge|Der Name der Tabelle mit den Daten, die verwendet werden, wenn AccessMode auf „Tabellenname“ festgelegt wird.|
+|SqlCommand|String|Der SQL-Befehl, der ausgeführt werden soll, wenn AccessMode auf SQL-Befehl festgelegt wird.|
+|TableName|String|Der Name der Tabelle mit den Daten, die verwendet werden, wenn AccessMode auf „Tabellenname“ festgelegt wird.|
 
 ## <a name="configuring-the-oracle-source"></a>Konfigurieren der Oracle-Quelle
 
@@ -89,7 +89,7 @@ Auf der **Verbindungs-Manager-Seite** kann Oracle Database im Dialogfeld **Edito
 - Öffnen Sie in SQL Server Data Tools das SQL Server Integration Services-Paket (SSIS), das über die Oracle-Quelle verfügt.
 
 - Doppelklicken Sie auf der Registerkarte „Datenfluss“ auf die Oracle-Quelle.
-### <a name="options"></a>enthalten
+### <a name="options"></a>Tastatur
 
 **Connection manager**
 
@@ -103,7 +103,7 @@ Klicken Sie auf **Neu**. Das Dialogfeld **Oracle-Verbindungs-Manager-Editor**, i
 
 Wählen Sie die Methode für die Auswahl von Daten aus der Quelle aus. Die Optionen sind in der folgenden Tabelle aufgeführt:
 
-|Option|und Beschreibung|
+|Option|BESCHREIBUNG|
 |:-|:-|
 |Tabelle oder Sicht|Ruft Daten aus einer Tabelle oder Sicht in der Oracle-Datenquelle ab. Wenn diese Option ausgewählt ist, wählen Sie in der Liste eine verfügbare Tabelle oder Sicht für **Name der Tabelle oder Sicht** aus.|
 |SQL-Befehl|Ruft mit einer SQL-Abfrage Daten aus der Oracle-Datenquelle ab. Bei Auswahl dieser Option geben Sie anhand einer der folgenden Methoden eine Abfrage ein: <br>Geben Sie den Text der SQL-Abfrage im Feld **SQL-Befehlstext** ein. <br>Klicken Sie auf **Durchsuchen** , um die SQL-Abfrage aus einer Textdatei zu laden. <br>Klicken Sie auf **Abfrage analysieren** , um die Syntax des Abfragetextes zu überprüfen.|
@@ -124,7 +124,7 @@ Auf der Seite **Spalten** des Dialogfelds **Editor für Oracle-Quelle** können 
 
 - Klicken Sie im „Editor für Oracle-Quelle“ auf „Spalten“.
 
-### <a name="options"></a>enthalten
+### <a name="options"></a>Tastatur
 
 **Verfügbare externe Spalten**
 
@@ -156,12 +156,12 @@ Auf der Seite **Fehlerausgabe** des Dialogfelds **Editor für Oracle-Quelle** k�
 
 - Klicken Sie im Editor für die Oracle-Quelle auf „Fehlerausgabe“.
 
-### <a name="options"></a>enthalten
+### <a name="options"></a>Tastatur
 
 **Fehlerverhalten**
 
 Wählen Sie aus, wie die Oracle-Quelle Fehler in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.
-**Verwandter Abschnitt**: [Fehlerbehandlung in Daten](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Verwandter Abschnitt**: [Fehlerbehandlung in Daten](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **Abschneiden**
 

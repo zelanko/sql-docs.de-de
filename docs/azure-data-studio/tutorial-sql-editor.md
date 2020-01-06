@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten'
+title: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten
 titleSuffix: Azure Data Studio
 description: Dieses Tutorial veranschaulicht die wichtigsten Features in Azure Data Studio, die die Arbeit mit T-SQL vereinfachen.
 ms.prod: sql
@@ -8,16 +8,16 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278244"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957034"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Lernprogramm: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten – [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten – [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Das Erstellen und Ausführen von Abfragen, gespeicherten Prozeduren, Skripts usw. sind die Hauptaufgaben von Datenbankexperten. Dieses Tutorial veranschaulicht die wichtigsten Funktionen im T-SQL-Editor zum Erstellen von Datenbankobjekten.
 

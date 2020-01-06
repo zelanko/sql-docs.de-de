@@ -12,12 +12,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbf9f4614bd8e9212742072ceb8da5ddeaf8716f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 8dd50c08035690fd932dc717ae08d179b89b4ed2
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74096103"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325414"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Lösen häufiger Probleme mit JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SELECT col1, col2, col3,
      (SELECT col11, col12, col13 FROM t11 WHERE t11.FK = t1.PK FOR JSON PATH) as t11,  
      (SELECT col21, col22, col23 FROM t21 WHERE t21.FK = t1.PK FOR JSON PATH) as t21,  
      (SELECT col31, col32, col33 FROM t31 WHERE t31.FK = t1.PK FOR JSON PATH) as t31,  
-     JSON_QUERY('{"'+col4'":"'+col5+'"}' as t41  
+     JSON_QUERY('{"'+col4'":"'+col5+'"}') as t41  
 FROM t1  
 FOR JSON PATH  
 ```  
@@ -64,7 +64,7 @@ FOR JSON PATH
   
  Wie kann ich verhindern, dass dieses Verhalten auftritt? Ich möchte, dass `{"day":23}` als JSON-Objekt und nicht als geschützter Text zurückgegeben wird.  
   
- **Antwort:** Ein JSON-Objekt, das in einer Textspalte oder als Literal gespeichert wird, wird wie jeder beliebige Text behandelt. Das bedeutet, dass es in doppelte Anführungszeichen eingeschlossen und geschützt ist. Wenn ein ungeschütztes JSON-Objekt zurückgegeben werden soll, übergeben Sie diese JSON-Spalte als Argument an die Funktion JSON_QUERY, wie im folgenden Beispiel gezeigt.  
+ **Antwort:** Ein JSON-Objekt, das in einer Textspalte oder als Literal gespeichert wird, wird wie jeder beliebige Text behandelt. Das bedeutet, dass es in doppelte Anführungszeichen eingeschlossen und mit Escapezeichen versehen ist. Wenn ein ungeschütztes JSON-Objekt zurückgegeben werden soll, übergeben Sie diese JSON-Spalte als Argument an die Funktion JSON_QUERY, wie im folgenden Beispiel gezeigt.  
   
 ```sql  
 SELECT col1, col2, col3, JSON_QUERY(jsoncol1) AS jsoncol1  
@@ -85,7 +85,7 @@ FOR JSON PATH
   
  Es scheint, dass der von der FOR JSON-Abfrage zurückgegebene Text als Klartext geschützt wird. Dies geschieht nur, wenn WITHOUT_ARRAY_WRAPPER angegeben wird. Warum wird es nicht als ein JSON-Objekt behandelt und im Ergebnis ungeschützt eingefügt?  
   
- **Antwort:** Wenn Sie die Option `WITHOUT_ARRAY_WRAPPER` in der inneren `FOR JSON` angeben, ist der resultierende JSON-Text nicht notwendigerweise im gültigen JSON-Format. Daher geht die äußere `FOR JSON` davon aus, dass es sich hierbei um Klartext handelt, und schützt die Zeichenfolge. Wenn Sie sicher sind, dass die JSON-Ausgabe gültig ist, binden Sie diese mithilfe der `JSON_QUERY`-Funktion ein, um sie auf ordnungsgemäß formatierte JSON heraufzustufen, wie im folgenden Beispiel gezeigt.  
+ **Antwort:** Wenn Sie die Option `WITHOUT_ARRAY_WRAPPER` in der inneren `FOR JSON` angeben, ist der resultierende JSON-Text nicht notwendigerweise im gültigen JSON-Format. Daher geht die äußere `FOR JSON` davon aus, dass es sich hierbei um Klartext handelt, und schützt die Zeichenfolge. Wenn Sie sicher sind, dass die JSON-Ausgabe gültig ist, binden Sie diese mithilfe der `JSON_QUERY`-Funktion ein, um darauf wie im folgenden Beispiel gezeigt ordnungsgemäß formatiertes JSON zu generieren.  
   
 ```sql  
 SELECT 'Text' as myText,  

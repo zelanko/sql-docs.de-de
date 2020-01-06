@@ -1,6 +1,5 @@
 ---
-title: Verwenden des PowerShell-Anbieters für erweiterte Ereignisse | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden des PowerShell-Anbieters für erweiterte Ereignisse
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ce9869db83cd620ebade613f2582ff2adb9b19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7fba3c0ad9ab6f004d001b1a8e04d86e27d1818
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009325"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242885"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Verwenden des PowerShell-Anbieters für erweiterte Ereignisse
 
@@ -41,7 +40,7 @@ ms.locfileid: "68009325"
   
  Wenn Sie die Ereignisse, deren Prädikate und die einer Sitzung zugeordneten Ziele anzeigen möchten, können Sie Verzeichnisse in den Sitzungsnamen ändern und dann den Ereignis- oder den Zielordner anzeigen. Um zum Beispiel die Ereignisse und deren Prädikate anzuzeigen, die der Standard-Systemintegritätssitzung zugeordnet sind, geben Sie unter dem Pfad PS SQLSERVER:\XEvent\\*Servername*\\*Instanzname*\Sessions> den Befehl **cd system_health\events,** ein, drücken Sie die EINGABETASTE, geben Sie **dir** ein, und drücken Sie anschließend erneut die EINGABETASTE.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-PowerShell-Anbieter ist ein leistungsstarkes Tool, mit dem Sie Sitzungen für erweiterte Ereignisse erstellen, ändern und verwalten können. Der folgende Abschnitt enthält einige einfache Beispiele für die Verwendung von PowerShell-Skripts mit erweiterten Ereignissen.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -PowerShell-Anbieter ist ein leistungsstarkes Tool, mit dem Sie Sitzungen für erweiterte Ereignisse erstellen, ändern und verwalten können. Der folgende Abschnitt enthält einige einfache Beispiele für die Verwendung von PowerShell-Skripts mit erweiterten Ereignissen.  
   
 ## <a name="examples"></a>Beispiele  
  Achten Sie in den folgenden Beispielen auf Folgendes:  
@@ -110,7 +109,7 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Zum Erstellen, Ändern oder Löschen einer Sitzung für erweiterte Ereignisse müssen Sie über die ALTER ANY EVENT SESSION-Berechtigung verfügen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

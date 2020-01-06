@@ -1,21 +1,21 @@
 ---
-title: 'Schnellstart: Herstellen einer Verbindung mit einer Azure SQL-Datenbank-Instanz und deren Abfrage'
+title: Herstellen einer Verbindung mit einer Azure SQL-Datenbank-Instanz und deren Abfrage
 titleSuffix: Azure Data Studio
 description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit einer SQL-Datenbank-Instanz herstellen und eine Abfrage ausführen.
-ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
+ms.date: 05/14/2019
+ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959437"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957074"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Schnellstart: Verwenden von [!INCLUDE[name-sos](../includes/name-sos-short.md)], um eine Verbindung mit einer Azure SQL-Datenbank-Instanz herzustellen und sie abzufragen
 
@@ -44,15 +44,15 @@ Stellen Sie mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbind
 
 2. In diesem Artikel wird die SQL-Anmeldung verwendet, aber auch die Windows-Authentifizierung unterstützt. Füllen Sie die folgenden Felder mit dem Servernamen, Benutzernamen und Kennwort für Ihre Azure SQL-Serverinstanz aus:
 
-   | Einstellung       | Vorgeschlagener Wert | und Beschreibung |
+   | Einstellung       | Vorgeschlagener Wert | BESCHREIBUNG |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servername** | Der vollqualifizierte Servername | Etwa: **servername.database.windows.net**. |
    | **Authentifizierung** | SQL-Anmeldung| In diesem Tutorial wird die SQL-Authentifizierung verwendet. |
-   | **User name** | Der Benutzername des Serveradministratorkontos | Der Benutzername des Kontos, das zum Erstellen des Servers verwendet wird. |
+   | **Benutzername** | Der Benutzername des Serveradministratorkontos | Der Benutzername des Kontos, das zum Erstellen des Servers verwendet wird. |
    | **Kennwort (SQL-Anmeldung)** | Das Kennwort des Serveradministratorkontos | Das Kennwort des Kontos, das zum Erstellen des Servers verwendet wird. |
    | **Kennwort speichern** | Ja oder Nein | Wählen Sie **Ja** aus, wenn Sie nicht bei jedem Neustart Ihr Kennwort eingeben möchten. |
    | **Datenbankname** | *Leer lassen* | Sie stellen hier nur eine Verbindung mit dem Server her. |
-   | **Servergruppe** | Wählen Sie <Default> aus. | Sie können für dieses Feld eine bestimmte Servergruppe festlegen, die Sie erstellt haben. | 
+   | **Servergruppe** | <Default> auswählen | Sie können für dieses Feld eine bestimmte Servergruppe festlegen, die Sie erstellt haben. | 
 
    ![Symbol „Neue Verbindung“](media/quickstart-sql-database/new-connection-screen.png)  
 
@@ -93,7 +93,7 @@ Der Abfrage-Editor ist mit der Datenbank **master** verbunden, aber wir möchten
 
 1. Stellen Sie eine Verbindung mit der **TutorialDB**-Datenbank her.
 
-   ![Ändern des Kontexts](media/quickstart-sql-database/change-context2.png)
+   ![Kontext ändern](media/quickstart-sql-database/change-context2.png)
 
 
 
@@ -146,7 +146,7 @@ Ersetzen Sie die vorherige Abfrage durch diese, und wählen Sie **Ausführen** a
 
 Die Abfrageergebnisse werden angezeigt:
 
-   ![Auswählen von Ergebnissen](media/quickstart-sql-database/select-results2.png)
+   ![Select-Ergebnis](media/quickstart-sql-database/select-results2.png)
 
 
 ## <a name="clean-up-resources"></a>Bereinigen von Ressourcen

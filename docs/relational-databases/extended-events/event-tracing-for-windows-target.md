@@ -1,6 +1,5 @@
 ---
-title: Ereignisablaufverfolgung für Windows-Ziel | Microsoft-Dokumentation
-ms.custom: ''
+title: Ereignisablaufverfolgung für Windows-Ziel
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1191d870d7fe745cdbed0e17892c5c2cf34435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021859"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234662"
 ---
 # <a name="event-tracing-for-windows-target"></a>Ereignisablaufverfolgung für Windows-Ziel
 
@@ -52,7 +51,7 @@ ms.locfileid: "68021859"
   
  In der folgenden Tabelle werden die verfügbaren Optionen für das Konfigurieren des ETW-Ziels beschrieben.  
   
-|Option|Zulässige Werte|und Beschreibung|  
+|Option|Zulässige Werte|BESCHREIBUNG|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Eine Zeichenfolge mit bis zu 256 Zeichen. Dieser Wert ist optional.|Der Name der Sitzung für erweiterte Ereignisse. Standardmäßig ist dies XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Eine Zeichenfolge mit bis zu 256 Zeichen. Dieser Wert ist optional.|Der Pfad der Protokolldatei für die Sitzung für erweiterte Ereignisse. Standardmäßig ist dies %TEMP%\XEEtw.etl.|  

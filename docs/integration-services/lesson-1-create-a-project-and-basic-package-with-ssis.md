@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7dbb0c4b512741f97dbce2794c83d3667142324
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296067"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257070"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lektion 1: Erstellen eines Projekts und Basispakets mit SSIS
 
@@ -35,7 +35,7 @@ Dieses Tutorial basiert auf Microsoft SQL Server Data Tools, mehreren Beispielpa
   
 * So laden Sie alle Lektionspakete für dieses Tutorial herunter:
 
-    1.  Navigieren Sie zu den [Integration Services tutorial files (Integration Services-Tutorialdateien)](https://www.microsoft.com/en-us/download/details.aspx?id=56827).
+    1.  Navigieren Sie zu den [Integration Services tutorial files (Integration Services-Tutorialdateien)](https://www.microsoft.com/download/details.aspx?id=56827).
 
     2.  Klicken Sie auf die Schaltfläche **Download** (Herunterladen).
 
@@ -68,10 +68,10 @@ Das Ziel für die Quelldaten ist eine Kopie der **FactCurrencyRate**-Faktentabel
   
 |Spaltenname|Datentyp|Nachschlagetabelle|Suchspalte|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|None|None|  
+|AverageRate|float|Keine|Keine|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|None|None|  
+|EndOfDayRate|float|Keine|Keine|  
   
 ## <a name="map-the-source-data-to-the-destination"></a>Zuordnen der Quelldaten zum Ziel  
 Die Analyse der Quell- und Zieldatenformate ergibt, dass Suchvorgänge für die Werte **CurrencyKey** und **DateKey** notwendig sind. Die Transformationen, von denen diese Suchvorgänge ausgeführt werden, rufen diese Werte mithilfe der alternativen Schlüssel aus den Dimensionstabellen **DimCurrency** und **DimDate** ab.  
@@ -81,7 +81,7 @@ Die Analyse der Quell- und Zieldatenformate ergibt, dass Suchvorgänge für die 
 |0|FactCurrencyRate|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|date|  
-|3|FactCurrencyRate|EndOfDayRate|FLOAT|  
+|3|FactCurrencyRate|EndOfDayRate|float|  
   
 ## <a name="lesson-tasks"></a>Aufgaben der Lektion  
 Diese Lektion enthält die folgenden Aufgaben:  
@@ -96,7 +96,7 @@ Diese Lektion enthält die folgenden Aufgaben:
   
 -   [Schritt 5: Hinzufügen und Konfigurieren der Flatfilequelle](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 -   [Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   

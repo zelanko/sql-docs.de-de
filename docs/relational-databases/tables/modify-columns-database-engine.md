@@ -15,12 +15,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7ca99bef5d0f5bf4f94eb02d76adff3109de059
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 822b98221139c9d67dde57cb78f3d969072f96bb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139609"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251214"
 ---
 # <a name="modify-columns-database-engine"></a>Ändern von Spalten (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68139609"
   
 3.  Klicken Sie auf der Registerkarte **Spalteneigenschaften** auf die Datenblattzelle der Eigenschaft **Datentyp** , und wählen Sie aus der Dropdownliste einen neuen Datentyp aus.  
   
-4.  Klicken Sie im Menü **Datei** auf **Speichern**_table name_.  
+4.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
   
 > [!NOTE]  
 >  Wenn Sie den Datentyp einer Spalte ändern, wendet der Tabellen-Designer die Standardlänge des neuen Datentyps an, auch wenn Sie zuvor eine andere Länge angegeben haben. Legen Sie deshalb die Datentyplänge erst nach dem Ändern des Datentyps fest.  
@@ -77,7 +77,7 @@ ms.locfileid: "68139609"
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```  
+    ```sql  
     CREATE TABLE dbo.doc_exy (column_a INT ) ;  
     GO  
     INSERT INTO dbo.doc_exy (column_a) VALUES (10) ;  

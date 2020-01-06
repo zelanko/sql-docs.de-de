@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Aktivieren des Beispielwidgets für die fünf langsamsten Abfragen'
+title: Aktivieren des Beispielwidgets für die fünf langsamsten Abfragen
 titleSuffix: Azure Data Studio
 description: In diesem Tutorial wird veranschaulicht, wie das Beispielwidget für die fünf langsamsten Abfragen auf dem Datenbankdashboard aktiviert wird.
 ms.prod: sql
@@ -8,16 +8,16 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
-ms.openlocfilehash: 576e175e8135808a4221e96085e39e9c0850190b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810879"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957044"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Lernprogramm: Hinzufügen des Beispielwidgets für die *fünf langsamsten Abfragen* zum Datenbankdashboard
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Hinzufügen des Beispielwidgets für die *fünf langsamsten Abfragen* zum Datenbankdashboard
 
 Dieses Tutorial veranschaulicht, wie Sie eins der integrierten Beispielwidgets von [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum *Datenbankdashboard* hinzufügen, um die fünf langsamsten Abfragen einer Datenbank auf einen Blick erkennen zu können. Sie erfahren auch, wie Sie mithilfe der Features von [!INCLUDE[name-sos](../includes/name-sos-short.md)] Details zu langsamen Abfragen und Abfrageplänen anzeigen. In diesem Tutorial lernen Sie Folgendes:
 
@@ -127,7 +127,7 @@ Um das *Widget für langsame Abfragen* zu Ihrem Dashboard hinzuzufügen, bearbei
 
 2. Wenn Sie über das *langsame Abfragewidget* weitere Informationen zu einem Erkenntniswidget anzeigen möchten, klicken Sie in der oberen rechten Ecke auf die drei Auslassungspunkte ( **...** ), und wählen Sie **Details anzeigen** aus.
 
-    ![Abfrage ausführen](media/tutorial-qds-sql-server/run-query.png)
+    ![Ausführen der Abfrage](media/tutorial-qds-sql-server/run-query.png)
 
 3. Nun sollte ein neues Abfragefenster mit den Ergebnissen angezeigt werden.
 

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ccd283aaf10837baa76ad9bbc579e5e3c9860c22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 328a6e21d32bf5c0eaa029fcb0cf6586533cac19
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130402"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249786"
 ---
 # <a name="mathematical-functions-transact-sql"></a>Mathematische Funktionen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Die folgenden Skalarfunktionen führen Berechnungen aus, die in der Regel auf als Argumente angegebenen Eingabewerten basieren, und geben einen numerischen Wert zurück.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68130402"
 > [!NOTE]  
 >  Arithmetische Funktionen, wie ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS und SIGN, geben Werte des gleichen Datentyps wie der Eingabewert zurück. Trigonometrische und alle übrigen Funktionen (einschließlich EXP, LOG, LOG10, SQUARE und SQRT) wandeln den Datentyp des Eingabewertes in **float** um und geben einen **float**-Wert zurück.  
   
- Alle mathematischen Funktionen, ausgenommen RAND, sind deterministisch. Sie geben somit bei jedem Aufrufen mit bestimmten Eingabewerten immer die gleichen Ergebnisse zurück. RAND ist nur deterministisch, wenn ein Startwert (seed) angegeben wird. Weitere Informationen zu Funktionsdeterminismus finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Alle mathematischen Funktionen, mit Ausnahme von RAND, sind deterministische Funktionen. Dies bedeutet, dass sie bei jedem Aufruf mit einer bestimmten Gruppe von Eingabewerten dieselben Ergebnisse zurückgeben. RAND ist nur deterministisch, wenn ein Startwert (seed) angegeben wird. Weitere Informationen zu Funktionsdeterminismus finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
   [Arithmetic Operators &#40;Transact-SQL&#41; (Arithmetische Operatoren (Transact-SQL))](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  

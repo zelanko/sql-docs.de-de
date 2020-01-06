@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98be5f404118ab217ae7700dbf6ec8f02012610f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907102"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190792"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistent zum Importieren von Flatfiles in SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ PROSE analysiert Datenmuster in Ihrer Eingabedatei, um daraus Spaltennamen, Type
 
 Um noch mehr über die Verbesserung der Benutzerfreundlichkeit des Assistenten zum Importieren von Flatfiles zu erfahren, schauen Sie sich dieses Video an:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Voraussetzungen
 Dieses Feature ist nur in SQL Server Management Studio (SSMS) v17.3 oder höher verfügbar. Stellen Sie sicher, dass Sie die neueste Version verwenden. Die neueste Version ist [hier](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) zu finden.
@@ -67,7 +67,7 @@ Der neue Tabellenname muss eindeutig sein, andernfalls lässt der Assistent Sie 
 
 ![Assistent: Angabe](media/import-flat-file-wizard/importffspecify.png)
 
-### <a name="step-3-preview-data"></a>Schritt 3: Datenvorschau
+### <a name="step-3-preview-data"></a>Schritt 3: Datenvorschau
 Der Assistent generiert eine Vorschau, die für die ersten 50 Zeilen angezeigt werden kann. Wenn Probleme auftreten, klicken Sie auf „Abbrechen“. Fahren Sie andernfalls mit der nächsten Seite fort.
 
 ![Assistent: Vorschau](media/import-flat-file-wizard/importffpreview.png)

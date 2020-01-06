@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559472"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257671"
 ---
 # <a name="query-profiling-infrastructure"></a>Profilerstellungsinfrastruktur für Abfragen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -175,19 +175,19 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 ## <a name="query-profiling-infrastruture-usage-guidance"></a>Leitfaden für die Verwendung der Infrastruktur zur Abfrageprofilerstellung
 In der folgenden Tabelle werden die Aktionen zum Aktivieren der Standard- oder Lightweight-Profilerstellung zusammengefasst, sowohl global (auf Serverebene) als auch in einer einzelnen Sitzung. Schließt auch die niedrigste Version ein, für die die Aktion verfügbar ist. 
 
-|Bereich|Standardprofilerstellung|Lightweight-Profilerstellung|
+|`Scope`|Standardprofilerstellung|Lightweight-Profilerstellung|
 |---------------|---------------|---------------|
 |Global|xEvent-Sitzung mit `query_post_execution_showplan` XE, ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Ablaufverfolgungsflag 7412, ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1|
 |Global|SQL-Ablaufverfolgung und SQL Server Profiler mit Ablaufverfolgungsereignis `Showplan XML`, ab SQL Server 2000|xEvent-Sitzung mit `query_thread_profile` XE, ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|
 |Global|-|xEvent-Sitzung mit `query_post_execution_plan_profile` XE, ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
-|Session|Verwendung von `SET STATISTICS XML ON`, ab SQL Server 2000|Verwendung des `QUERY_PLAN_PROFILE`-Abfragehinweises zusammen mit einer xEvent-Sitzung mit `query_plan_profile` XE, ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
-|Session|Verwendung von `SET STATISTICS PROFILE ON`, ab SQL Server 2000|-|
-|Session|Klick auf die Schaltfläche [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md) in SSMS, ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|-|
+|Sitzung|Verwendung von `SET STATISTICS XML ON`, ab SQL Server 2000|Verwendung des `QUERY_PLAN_PROFILE`-Abfragehinweises zusammen mit einer xEvent-Sitzung mit `query_plan_profile` XE, ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
+|Sitzung|Verwendung von `SET STATISTICS PROFILE ON`, ab SQL Server 2000|-|
+|Sitzung|Klick auf die Schaltfläche [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md) in SSMS, ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|-|
 
 ## <a name="remarks"></a>Bemerkungen
 
 > [!IMPORTANT]
-> Aufgrund einer möglichen zufälligen AV bei der Ausführung einer gespeicherten Überwachungsprozedur, die auf [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) verweist, müssen Sie sicherstellen, dass [KB 4078596](http://support.microsoft.com/help/4078596) in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] installiert ist.
+> Aufgrund einer möglichen zufälligen AV bei der Ausführung einer gespeicherten Überwachungsprozedur, die auf [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) verweist, müssen Sie sicherstellen, dass [KB 4078596](https://support.microsoft.com/help/4078596) in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] installiert ist.
 
 Beginnend mit der einfachen Profilerstellung v2 und ihrem geringen Mehraufwand kann jeder Server, der nicht bereits CPU-gebunden ist, einfache Profilerstellung **kontinuierlich** ausführen und es Datenbankexperten ermöglichen, jederzeit auf jede aktuell ausgeführte Ausführung zuzugreifen (z.B. mit dem Aktivitätsmonitor oder durch direktes Abfragen von `sys.dm_exec_query_profiles`) und den Abfrageplan mit Laufzeitstatistiken abzurufen.
 
@@ -209,4 +209,3 @@ Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung f
  [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Tatsächlicher Ausführungsplan](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004)

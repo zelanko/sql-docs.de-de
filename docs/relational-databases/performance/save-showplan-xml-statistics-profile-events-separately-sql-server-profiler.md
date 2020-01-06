@@ -1,5 +1,6 @@
 ---
-title: Separates Speichern eines Showplan XML Statistics Profile-Ereignisses (SQL Server Profiler) | Microsoft-Dokumentation
+title: Separates Speichern der „Showplan XML Statistics“-Ereignisse
+titleSuffix: SQL Server Profiler
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 72d07cc36de00fd0f6fc2b9377a5ed3870413c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d15ca528efb0246d1d05c87420045fcc74918886
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113395"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165568"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Separates Speichern eines Showplan XML Statistics Profile-Ereignisses (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "68113395"
   
 11. Zum Anzeigen der **Showplan XML Statistics Profile**-Ereignisdatei in SQL Server Management Studio zeigen Sie im Menü **Datei** auf **Öffnen** und wählen **Datei** aus. Navigieren Sie zu dem Verzeichnis, wo Sie die **Showplan XML Statistics Profile**-Ereignisdatei(en) gespeichert haben, um eine Ereignisdatei auszuwählen und zu öffnen. **Showplan XML Statistics Profile** -Ereignisdateien haben eine SQLPlan-Dateinamenerweiterung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Analysieren von Abfragen mit Showplan-Ergebnissen in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: Überlegungen zur Installation von SQL Server mit SysPrep | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 09/05/2017
+title: Installieren von SQL Server mit SysPrep
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +10,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d2b063af4e9cc0c78a5bfe10c9aa6b2c1367743
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448906ca9a9dcb1a29b4cfab323e610909546171
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054199"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251580"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Überlegungen zur Installation von SQL Server mit SysPrep
 

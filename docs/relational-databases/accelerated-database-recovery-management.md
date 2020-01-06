@@ -1,10 +1,8 @@
 ---
 title: Schnellere Datenbankwiederherstellung | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: kfarlee
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +10,14 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 author: mashamsft
 ms.author: mathoma
+ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d825c7db4789ec1421cf43acd5897e932c7fa29a
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71130539"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245264"
 ---
 # <a name="manage-accelerated-database-recovery"></a>Verwalten der schnelleren Datenbankwiederherstellung
 
@@ -84,10 +83,10 @@ Der Speicherort des PVS wird in drei Schritten geändert.
    Um ADR mit einem neuen Speicherort für den persistenten Versionsspeicher aktivieren zu können, müssen Sie zunächst sicherstellen, dass alle Versionsinformationen aus dem vorherigen PVS-Speicherort gelöscht wurden. Um dieses Cleanup zu erzwingen, führen Sie den folgenden Befehl aus:
 
    ```sql
-   EXEC sys.sp_persistent_version_store_cleanup [database name]
+   EXEC sys.sp_persistent_version_cleanup [database name]
    ```
 
-   Die gespeicherte Prozedur `sys.sp_persistent_version_store_cleanup` erfolgt synchron. Dies bedeutet, dass sie erst vollständig ausgeführt wird, bis alle Versionsinformationen im aktuellen PVS gelöscht wurden.  Nach Durchführen des Cleanups können Sie überprüfen, ob die Versionsinformationen tatsächlich entfernt wurden. Führen Sie dazu eine `sys.dm_persistent_version_store_stats`-Abfrage für DMV durch, und untersuchen Sie den `persistent_version_store_size_kb`-Wert.
+   Die gespeicherte Prozedur `sys.sp_persistent_version_cleanup` erfolgt synchron. Dies bedeutet, dass sie erst vollständig ausgeführt wird, bis alle Versionsinformationen im aktuellen PVS gelöscht wurden.  Nach Durchführen des Cleanups können Sie überprüfen, ob die Versionsinformationen tatsächlich entfernt wurden. Führen Sie dazu eine `sys.dm_persistent_version_store_stats`-Abfrage für DMV durch, und untersuchen Sie den `persistent_version_store_size_kb`-Wert.
 
    ```sql
    SELECT DB_Name(database_id), persistent_version_store_size_kb 

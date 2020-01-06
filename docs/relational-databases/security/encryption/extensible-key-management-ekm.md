@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 9115535ecc2569e035f4831589e53191e2634f61
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148796"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957396"
 ---
 # <a name="extensible-key-management-ekm"></a>Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ GO
  Wenn Sie die Funktion deaktivieren möchten, legen Sie den Wert auf **0**fest. Weitere Informationen zum Festlegen von Serveroptionen finden Sie unter [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 ## <a name="how-to-use-ekm"></a>So verwenden Sie die erweiterbare Schlüsselverwaltung  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extensible Key Management ermöglicht es, dass die Verschlüsselungsschlüssel, die die Datenbankdateien schützen, auf einem separaten Medium wie einer Smartcard, einem USB-Gerät oder einem EKM-/HSM-Modul gespeichert werden können. Auf diese Weise werden die Daten auch vor Datenbankadministratoren (mit Ausnahme der Mitglieder der sysadmin-Gruppe) geschützt. Die Daten können mit Verschlüsselungsschlüsseln verschlüsselt werden, auf die nur der Datenbankbenutzer auf dem externen EKM-/HSM-Modul zugreifen kann.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extensible Key Management ermöglicht es, dass die Verschlüsselungsschlüssel, die die Datenbankdateien schützen, auf einem separaten Medium wie einer Smartcard, einem USB-Gerät oder einem EKM-/HSM-Modul gespeichert werden können. Hiermit wird auch der Schutz von Daten durch Datenbankadministratoren ermöglicht (mit Ausnahme von Mitgliedern der sysadmin-Gruppe). Daten können mit Verschlüsselungsschlüsseln verschlüsselt werden, auf die nur der Datenbankbenutzer auf dem externen EKM/HSM-Modul Zugriff hat.  
   
  EKM hat außerdem folgende Vorzüge:  
   

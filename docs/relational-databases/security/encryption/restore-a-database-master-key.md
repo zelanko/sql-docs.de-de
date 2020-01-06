@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: fc215f3ea8746c8bb3e4150b41079656df6f1f9d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: cf48b449fc10f0f6837c86768878a77f0727594f
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908421"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957365"
 ---
 # <a name="restore-a-database-master-key"></a>Wiederherstellen eines Datenbank-Hauptschlüssels
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72908421"
   
 - Falls in der aktuellen Datenbank kein Hauptschlüssel vorhanden ist, wird von RESTORE MASTER KEY ein Hauptschlüssel erstellt. Der neue Hauptschlüssel wird nicht automatisch mit dem Diensthauptschlüssel verschlüsselt.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen
 Erfordert die CONTROL-Berechtigung für die Datenbank.  
@@ -45,7 +45,7 @@ Erfordert die CONTROL-Berechtigung für die Datenbank.
   
 1. Rufen Sie entweder von einem physischen Sicherungsmedium oder einem Verzeichnis im lokalen Dateisystem eine Kopie des gesicherten Datenbank-Hauptschlüssels ab.  
   
-2. Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+2. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 3. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
