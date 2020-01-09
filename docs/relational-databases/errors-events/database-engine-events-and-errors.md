@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 78fff1f1a5f1e68989338a9d5b0274899267fd42
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 29f9245fcb3f827c51060834a37fbc3c01aa5e9b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119432"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247320"
 ---
 # <a name="database-engine-errors"></a>Fehler der Datenbank-Engine
 
@@ -22,9 +22,9 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors--2-to-999"></a>Fehler –2 bis 999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
-|   [–2](mssqlserver-neg2-database-engine-error.md) |       |       |   Timeout. Das Timeout ist vor dem Beenden des Vorgangs eingetreten, oder der Server reagiert nicht. (Microsoft SQL Server, Fehler: –2)    |
+|   [–2](mssqlserver-neg2-database-engine-error.md) |       |       |   Timeout ist abgelaufen. Das Timeout ist vor dem Beenden des Vorgangs eingetreten, oder der Server reagiert nicht. (Microsoft SQL Server, Fehler: –2)    |
 |   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   Fehler beim Herstellen einer Verbindung mit dem Server. Beim Herstellen einer Verbindung mit SQL Server 2005 kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (Anbieter: SQL-Netzwerkschnittstellen, Fehler: 28 - Server unterstützt das angeforderte Protokoll nicht) (Microsoft SQL Server, Fehler: -1).  |
 |   [2](mssqlserver-2-database-engine-error.md) |       |       |   Fehler beim Herstellen einer Verbindung mit dem Server. Beim Herstellen einer Verbindung mit SQL Server kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (Anbieter: Named Pipes-Anbieter, Fehler: 40 - Es konnte keine Verbindung zu SQL Server hergestellt werden) (.Net SqlClient-Datenanbieter) |
 |   21  |   20  |   Nein  |   Warnung: Schwerwiegender Fehler %d um %S_DATE. Notieren Sie den Fehler und den Zeitpunkt, und wenden Sie sich an den Systemadministrator.    |
@@ -159,7 +159,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   231 |   11  |   Nein  |   Standard nicht vorhanden. ID = %ld, Datenbank-ID = %d.    |
 |   232 |   16  |   Nein  |   Arithmetischer Überlauffehler für %ls-Datentyp, Wert = %f. |
 |   233 |   16  |   Nein  |   Die Spalte "%.*ls" in Tabelle "%.* ls" darf nicht NULL sein. |
-|   [233](mssqlserver-233-database-engine-error.md) |       |       |   Es wurde erfolgreich eine Verbindung mit dem Server hergestellt, doch dann ist während des Anmeldevorgangs ein Fehler aufgetreten. (Anbieter: Shared Memory-Anbieter, Fehler: 0 - No process is on the other end of the pipe.) (0 – Kein Prozess ist am anderen Ende der Pipe.) (Microsoft SQL Server, Fehler: 233)   |
+|   [233](mssqlserver-233-database-engine-error.md) |       |       |   Eine Verbindung mit dem Server wurde erfolgreich hergestellt, aber dann trat während des Anmeldevorgangs ein Fehler auf. (Anbieter: Shared Memory-Anbieter, Fehler: 0 - No process is on the other end of the pipe.) (0 – Kein Prozess ist am anderen Ende der Pipe.) (Microsoft SQL Server, Fehler: 233)   |
 |   234 |   16  |   Nein  |   Der Ergebnisbereich reicht nicht aus, um einen money-Wert in %ls zu konvertieren. |
 |   235 |   16  |   Nein  |   Ein char-Wert kann nicht in einen money-Wert konvertiert werden. Die Syntax des char-Werts ist falsch.  |
 |   236 |   16  |   Nein  |   money-Überlauffehler bei der Konvertierung des char-Datentyps in den money-Datentyp. |
@@ -457,7 +457,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   610 |   16  |   Ja |   Ungültiger Headerwert von einer Seite. Führen Sie DBCC CHECKDB aus, um nach einer Datenbeschädigung zu suchen.  |
 |   [611](mssqlserver-611-database-engine-error.md) |   16  |   Nein  |   Es kann keine Zeile eingefügt oder aktualisiert werden, da die Gesamtgröße der Variablenspalte, einschließlich Verwaltungsbytes, die maximal zulässige Größe um %d Bytes überschreitet.  |
 |   613 |   21  |   Nein  |   Für das Arbeitstabellen-Rowset mit der Partitions-ID %I64d wurde in der %d-Datenbank kein Eintrag gefunden.    |
-|   615 |   21  |   Ja |   Die Datenbank mit der ID %d und dem Namen '%.*ls' wurde nicht gefunden. Möglicherweise ist die Datenbank offline. Warten Sie einige Minuten, und wiederholen Sie den Vorgang. |
+|   615 |   21  |   Ja |   Die Datenbank mit der ID %d und dem Namen '%.*ls' wurde nicht gefunden. Möglicherweise ist die Datenbank offline. Warten Sie einige Minuten, und versuchen Sie erneut. |
 |   [617](mssqlserver-617-database-engine-error.md) |   20  |   Ja |   Der Deskriptor für die Objekt-ID %ld in der Datenbank mit der ID %d wurde in der Hashtabelle beim Versuch, ihn aus dieser zu entfernen, nicht gefunden. In einer Arbeitstabelle fehlt ein Eintrag. Führen Sie die Abfrage erneut aus. Falls ein Cursor beteiligt ist, schließen Sie den Cursor, und öffnen Sie ihn erneut.    |
 |   622 |   16  |   Nein  |   Der Dateigruppe "%.*ls" sind keine Dateien zugewiesen. Tabellen, Indizes und text-, ntext- sowie image-Spalten können in dieser Dateigruppe erst aufgefüllt werden, nachdem eine Datei hinzugefügt wurde. |
 |   627 |   16  |   Nein  |   SAVE TRANSACTION kann in einer verteilten Transaktion nicht verwendet werden.   |
@@ -578,7 +578,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-1000-to-1999"></a>Fehler 1.000 bis 1.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   Nein  |   Zeile %d: Längen- oder Präzisionsangabe %d ist ungültig.   |
 |   1002    |   16  |   Nein  |   Zeile %d: Angegebene Skala %d ist nicht gültig. |
@@ -631,7 +631,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   1052    |   15  |   Nein  |   Widersprüchliche %ls-Optionen '%ls' und '%ls'.    |
 |   1053    |   15  |   Nein  |   Für DROP STATISTICS müssen Sie den Objektnamen (Tabelle oder Sicht) und den Statistiknamen im folgenden Format angeben: 'objectname.statisticsname'.    |
 |   1054    |   15  |   Nein  |   Die '%ls'-Syntax ist in schemagebundenen Objekten nicht zulässig.    |
-|   1055    |   15  |   Nein  |   '%.*ls' ist ein ungültiger Name, da er ein NULL-Zeichen oder ein ungültiges Unicode-Zeichen enthält.    |
+|   1\.055    |   15  |   Nein  |   '%.*ls' ist ein ungültiger Name, da er ein NULL-Zeichen oder ein ungültiges Unicode-Zeichen enthält.    |
 |   1056    |   15  |   Nein  |   Die Anzahl von Elementen in der Auswahlliste überschreitet die maximal zulässige Anzahl von %d Elementen.    |
 |   1057    |   15  |   Nein  |   Die IDENTITY-Funktion kann mit einer SELECT INTO-Anweisung, die einen UNION-, INTERSECT- oder EXCEPT-Operator enthält, nicht verwendet werden. |
 |   1058    |   15  |   Nein  |   READ_ONLY und FOR READ ONLY können nicht gleichzeitig in einer Cursordeklaration angegeben werden.    |
@@ -674,7 +674,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   1095    |   15  |   Nein  |   "%.*ls" wurde bereits als Ereignistyp angegeben.  |
 |   1096    |   15  |   Nein  |   Für CLR-Typen, "nvarchar(max)", "varbinary(max)" und "xml" werden keine Standardparameterwerte unterstützt.   |
 |   1097    |   15  |   Nein  |   IF UPDATE kann in dieser CREATE TRIGGER-Anweisung nicht verwendet werden.  |
-|   1098    |   15  |   Nein  |   Die angegebenen Ereignistypen sind im angegebenen Zielobjekt ungültig.    |
+|   1\.098    |   15  |   Nein  |   Die angegebenen Ereignistypen sind im angegebenen Zielobjekt ungültig.    |
 |   1099    |   15  |   Nein  |   Die ON-Klausel ist für diese Anweisung ungültig.  |
 |   [1101](mssqlserver-1101-database-engine-error.md)   |   17  |   Ja |   Der Datenbank "%.*ls" konnte keine neue Seite zugeordnet werden, weil in der Dateigruppe "%.* ls" nicht genügend Speicherplatz verfügbar ist. Speicherplatz kann durch Löschen von Objekten in der Dateigruppe, Hinzufügen von Dateien zur Dateigruppe oder Festlegen der automatischen Vergrößerung für vorhandene Dateien in der Dateigruppe gewonnen werden.    |
 |   [1105](mssqlserver-1105-database-engine-error.md)   |   17  |   Ja |   Objekt "'%.*ls'%.* ls" in Datenbank "%.*ls" konnte kein Speicherplatz zugeordnet werden, weil die Dateigruppe "%.* ls" voll ist. Speicherplatz kann durch Löschen nicht benötigter Dateien, Löschen von Objekten in der Dateigruppe, Hinzufügen von Dateien zur Dateigruppe oder Festlegen der automatischen Vergrößerung für vorhandene Dateien in der Dateigruppe gewonnen werden.    |
@@ -1010,7 +1010,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-2000-to-2999"></a>Fehler 2.000 bis 2.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   Nein  |   Für die Replikation kann keine Prozedur mit einer Gruppennummer erstellt werden, die höher als 1 ist.   |
 |   2003    |   16  |   Nein  |   Für Prozeduren mit einer Gruppennummer sind keine Parameter mit XML- oder CLR-Datentypen zulässig. Der "%.*ls"-Parameter der "%.* ls"-Prozedur weist den "%ls"-Typ auf.   |
@@ -1383,7 +1383,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-3000---3999"></a>Fehler 3.000 bis 3.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   Nein  |   BACKUP oder RESTORE kann für eine Datenbankmomentaufnahme nicht ausgeführt werden.   |
 |   3003    |   10  |   Nein  |   Dieser BACKUP WITH DIFFERENTIAL-Vorgang basiert auf mehr als einer Dateisicherung. Alle betreffenden Dateisicherungen müssen vor der Wiederherstellung dieser differenziellen Sicherung wiederhergestellt werden.    |
@@ -1405,7 +1405,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   3019    |   16  |   Nein  |   Die Neustart-Prüfpunktdatei '%ls' stammt aus einem vorherigen unterbrochenen RESTORE-Vorgang und entspricht nicht dem aktuellen RESTORE-Befehl. Für den Neustartbefehl muss die gleiche Syntax wie für den unterbrochenen Befehl verwendet werden, wobei die RESTART-Klausel hinzugefügt werden muss. Alternativ können Sie auch die aktuelle Anweisung ohne die RESTART-Klausel erneut ausführen. |
 |   3021    |   16  |   Nein  |   Ein Sicherungs- oder Wiederherstellungsvorgang kann innerhalb einer Transaktion nicht ausgeführt werden.  |
 |   3022    |   10  |   Nein  |   Diese Sicherung ist eine Dateisicherung von Lese/Schreib-Daten aus einer Datenbank mit dem einfachen Wiederherstellungsmodell. Dies ist nur geeignet, wenn Sie die Dateigruppe als schreibgeschützt festlegen und dann eine differenzielle Dateisicherung erstellen möchten. Weitere Informationen zum Verwalten schreibgeschützter Daten für das einfache Wiederherstellungsmodell finden Sie in der Onlinedokumentation. Informieren Sie sich insbesondere über die Verwendung von Teilsicherungen.   |
-|   3023    |   16  |   Nein  |   Sicherungs- und Dateibearbeitungsvorgänge (wie ALTER DATABASE ADD FILE) und Verschlüsselungsänderungen in einer Datenbank müssen serialisiert werden. Wiederholen Sie die Anweisung nach Abschluss des aktuellen Sicherungs- oder Dateibearbeitungsvorgangs. |
+|   3023    |   16  |   Nein  |   Sicherungen, Dateibearbeitungsvorgänge (z. B. ALTER DATABASE ADD FILE) und Verschlüsselungsänderungen in einer Datenbank müssen serialisiert werden. Wiederholen Sie die Anweisung nach Abschluss des aktuellen Sicherungs- oder Dateibearbeitungsvorgangs. |
 |   3024    |   16  |   Nein  |   Sie können für die master-Datenbank nur eine vollständige Sicherung ausführen. Verwenden Sie BACKUP DATABASE, um die gesamte master-Datenbank zu sichern.   |
 |   3025    |   16  |   Nein  |   Der Datenbankname fehlt. Wiederholen Sie die Anweisung mit einem gültigen Datenbanknamen.  |
 |   3027    |   16  |   Nein  |   Die Dateigruppe "%.*ls" gehört nicht zur "%.* ls"-Datenbank.  |
@@ -1781,7 +1781,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   3958    |   16  |   Nein  |   Die Transaktion wurde beim Zugriff auf die Zeilenversion in der "%.*ls"-Tabelle in der "%.* ls"-Datenbank abgebrochen. Die angeforderte Zeilenversion wurde nicht gefunden. In der tempdb-Datenbank ist wahrscheinlich kein Speicherplatz mehr frei. In der Onlinedokumentation finden Sie Informationen zum Konfigurieren von 'tempdb' für die Versionsverwaltung.  |
 |   3959    |   10  |   Ja |   Der Versionsspeicher ist voll. Neue Versionen konnten nicht hinzugefügt werden. Für eine Transaktion, die Zugriff auf den Versionsspeicher benötigt, wird möglicherweise ein Rollback ausgeführt. In der Onlinedokumentation finden Sie Informationen zum Konfigurieren von 'tempdb' für die Versionsverwaltung.   |
 |   3960    |   16  |   Nein  |   Die Momentaufnahmeisolationstransaktion wurde aufgrund eines Updatekonflikts abgebrochen. Die Momentaufnahmeisolation kann nicht für den direkten oder indirekten Zugriff auf die "%.*ls"-Tabelle in der "%.* ls"-Datenbank verwendet werden, um eine von einer anderen Transaktion geänderte oder gelöschte Zeile zu aktualisieren, zu löschen oder einzufügen. Führen Sie die Transaktion erneut aus, oder ändern Sie die Isolationsstufe für die UPDATE/DELETE-Anweisung. |
-|   [3961](mssqlserver-3961-database-engine-error.md)   |   16  |   Nein  |   Fehler bei der Momentaufnahmeisolationstransaktion in der '%.*ls'-Datenbank, weil das von der Anweisung zugegriffene Objekt durch eine DDL-Anweisung in einer anderen gleichzeitigen Transaktion seit dem Beginn dieser Transaktion geändert wurde. Dies ist unzulässig, weil die Metadaten nicht versionsspezifisch sind. Ein gleichzeitiges Update von Metadaten kann in Kombination mit der Momentaufnahmeisolation zu Inkonsistenzen führen.  |
+|   [3961](mssqlserver-3961-database-engine-error.md)   |   16  |   Nein  |   Fehler bei der Momentaufnahmeisolationstransaktion in der '%.*ls'-Datenbank, weil das von der Anweisung zugegriffene Objekt durch eine DDL-Anweisung in einer anderen gleichzeitigen Transaktion seit dem Beginn dieser Transaktion geändert wurde. Der Vorgang ist nicht zulässig, weil für die Metadaten keine Versionsverwaltung durchgeführt wird. Ein gleichzeitiges Update von Metadaten kann zu Inkonsistenz führen, wenn es zu einer Vermischung mit der Momentaufnahmeisolation kommt.  |
 |   3962    |   16  |   Nein  |   Das Binden an eine andere Transaktion wird beim Ausführen einer internen SQL Server-Abfrage nicht unterstützt. Überprüfen Sie die Definition des LOGON-Triggers, und entfernen Sie ggf. vorhandene Vorkommen von sp_bindsession. Wenn dieser Fehler außerhalb der Ausführung des LOGON-Triggers auftritt, wenden Sie sich an das Production Support-Team. |
 |   3963    |   16  |   Nein  |   Fehler bei der Transaktion in der '%.*ls'-Datenbank, weil verteilte Transaktionen für die Momentaufnahmeisolation nicht unterstützt werden. |
 |   3964    |   16  |   Nein  |   Fehler bei der Transaktion, weil diese DDL-Anweisung in einer Momentaufnahmeisolationstransaktion nicht zulässig ist. Metadaten sind nicht versionsspezifisch, weshalb die Änderung der Metadaten in Kombination mit der Momentaufnahmeisolation zu Inkonsistenzen führen kann.  |
@@ -1824,7 +1824,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-4000-to-4999"></a>Fehler 4.000 bis 4.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   Nein  |   Der Client sendet eine sp_reset_connection, obwohl noch Anforderungen ausstehen. Die Verbindung mit dem Server wird getrennt.  |
 |   4002    |   16  |   Nein  |   Der eingehende Datenstrom des TDS-Protokolls (Tabular Data Stream) ist nicht richtig. Der Datenstrom endete unerwartet. |
@@ -1996,7 +1996,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   4347    |   16  |   Nein  |   Die aktuelle Wiederherstellungssequenz wurde zuvor während des Übergangs zum Onlinestatus unterbrochen. Mithilfe von RESTORE DATABASE WITH RECOVERY kann der Übergang zum Onlinestatus abgeschlossen werden. |
 |   4348    |   16  |   Nein  |   Fehler bei der Onlinewiederherstellung der '%ls'-Datenbank. Führen Sie stattdessen bei Bedarf eine Offlinewiederherstellung aus. Eine Offlinewiederherstellung wird mit BACKUP LOG WITH NORECOVERY initiiert.  |
 |   4349    |   16  |   Nein  |   Das Protokoll in diesem Sicherungssatz beginnt bei LSN %.*ls. Diese liegt für die Anwendung auf die Datenbank nicht weit genug zurück. Für diese Wiederherstellungssequenz muss das Protokoll so initialisiert werden, dass es bei LSN %.* ls beginnt. Geben Sie die RESTORE LOG-Anweisung mit einer früheren Protokollsicherung erneut aus.   |
-|   4350    |   16  |   Nein  |   Die Liste der Seiten für die RESTORE PAGE-Anweisung weist ein falsches Format auf. Vor dem Problem %d wurden die Seiten richtig identifiziert. Das Problem trat bei Zeichenoffset %d auf. Überprüfen Sie, ob alle Seiten durch numerische <file>:<page>-Paare identifiziert sind, wobei die Paare durch Trennzeichen voneinander getrennt werden müssen. Beispiel: PAGE="1:57,2:31".   |
+|   4350    |   16  |   Nein  |   Die Liste der Seiten für die RESTORE PAGE-Anweisung weist ein falsches Format auf. Vor dem Problem %d wurden die Seiten richtig identifiziert. Das Problem trat bei Zeichenoffset %d auf. Überprüfen Sie, ob alle Seiten durch numerische <file>:<page>-Paare identifiziert sind, wobei die Paare durch Trennzeichen voneinander getrennt werden müssen. Beispiel:  PAGE="1:57,2:31".   |
 |   4351    |   16  |   Nein  |   Sicherungen, die in früheren Versionen von SQL Server erstellt wurden, werden von fn_dump_dblog nicht unterstützt. |
 |   4352    |   16  |   Nein  |   RESTORE LOG wird von dieser Datensicherung nicht unterstützt, da die Datei '%ls' veraltet ist. Verwenden Sie eine reguläre Protokollsicherung, um die Wiederherstellungssequenz fortzusetzen.    |
 |   4353    |   16  |   Nein  |   Für die Datei '%.*ls' wurden widersprüchliche Umsetzungen angegeben. Für einen beliebigen logischen Dateinamen sollte nur eine einzige WITH MOVE-Klausel angegeben werden.    |
@@ -2287,7 +2287,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-5000-to-5999"></a>Fehler 5.000 bis 5.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   5001    |   16  |   Nein  |   Benutzer muss in der master-Datenbank vorhanden sein.    |
 |   5002    |   16  |   Nein  |   Die '%.*ls'-Datenbank ist nicht vorhanden. Überprüfen Sie den Namen in 'sys.databases', und führen Sie den Vorgang erneut aus.  |
@@ -2663,7 +2663,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-6000-to-6999"></a>Fehler 6.000 bis 6.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   6001    |   10  |   Nein  |   SHUTDOWN wartet auf den Abschluss von %d Prozess(en). |
 |   6004    |   10  |   Nein  |   Der Benutzer besitzt nicht die Berechtigung zum Ausführen dieser Aktion.   |
@@ -3159,7 +3159,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-7000-to-7999"></a>Fehler 7.000 bis 7.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   Nein  |   Der OPENXML-Dokumenthandleparameter muss vom Datentyp 'int' sein. |
 |   7001    |   16  |   Nein  |   Der OPENXML-Flagsparameter muss vom Datentyp 'int' sein.   |
@@ -3603,7 +3603,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-8000-to-8999"></a>Fehler 8.000 bis 8.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   Nein  |   Der eingehende Tabular Data Stream (TDS) für das RPC-Protokoll (Remote Procedure Call) ist nicht richtig. Metainformationen sind für den SQL_Variant-Parameter ungültig. |
 |   8002    |   16  |   Nein  |   Der eingehende Tabular Data Stream (TDS) für das RPC-Protokoll (Remote Procedure Call) ist nicht richtig. Parameter %d ("%.*ls"): Für den Datentyp 0x%02X (XML) ist eine ungültige Datenbank oder ein ungültiges Schema angegeben.    |
@@ -3715,7 +3715,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   8149    |   16  |   Nein  |   OLE-Automatisierungsobjekte werden im Fibermodus nicht unterstützt. |
 |   8150    |   16  |   Nein  |   Mehrere NULL-Einschränkungen wurden für die "%.*ls"-Spalte, "%.* ls"-Tabelle, angegeben. |
 |   8151    |   16  |   Nein  |   Eine PRIMARY KEY- und eine UNIQUE-Einschränkung wurden für die "%.*ls"-Spalte, Tabelle "%.* ls", definiert. Nur eine der beiden Einschränkungen ist zulässig.  |
-|   8152    |   16  |   Nein  |   Zeichenfolgen- oder Binärdaten würden abgeschnitten.   |
+|   8152    |   16  |   Nein  |   String- oder binäre Daten würden abgeschnitten.   |
 |   8153    |   10  |   Nein  |   Warnung: Ein NULL-Wert wird durch einen Aggregat- oder sonstigen SET-Vorgang gelöscht.   |
 |   8154    |   15  |   Nein  |   Die '%.*ls'-Tabelle ist mehrdeutig. |
 |   8155    |   15  |   Nein  |   Kein Spaltenname wurde für die Spalte %d von '%.*ls' angegeben.  |
@@ -4110,7 +4110,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-9000-to-9999"></a>Fehler 9.000 bis 9.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   [9001](mssqlserver-9001-database-engine-error.md)   |   10  |   Ja |   Das Protokoll für die '%.*ls'-Datenbank ist nicht verfügbar. Überprüfen Sie das Ereignisprotokoll auf verwandte Fehlermeldungen. Beheben Sie ggf. alle Fehler, und starten Sie die Datenbank neu. |
 |   [9002](mssqlserver-9002-database-engine-error.md)   |   17  |   Ja |   Das Transaktionsprotokoll für die '%.*ls'-Datenbank ist voll. Die log_reuse_wait_desc-Spalte in sys.databases enthält Informationen dazu, warum Protokollspeicherplatz nicht erneut verwendet werden kann.    |
@@ -4278,8 +4278,8 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   9463    |   16  |   Nein  |   XML-Analyse: Zeile %d, Zeichen %d, 'xml:space' weist einen ungültigen Wert auf. |
 |   9464    |   16  |   Nein  |   XML-Analyse: Zeile %d, Zeichen %d, XML-Namespacepräfix "xml", kann nur URI http://www.w3.org/XML/1998/namespace zugeordnet werden. Dieser URI kann nicht mit anderen Präfixen verwendet werden.   |
 |   9465    |   16  |   Nein  |   XML-Analyse: Zeile %d, Zeichen %d, das XML-Namespacepräfix 'xmlns' ist für die Verwendung durch XML reserviert.    |
-|   9466    |   16  |   Nein  |   XML-Analyse: Zeile %d, Zeichen %d, XML-Namespace-URI (http://www.w3.org/XML/1998/namespace) darf nur Präfix "xml" zugeordnet werden).   |
-|   9467    |   16  |   Nein  |   XML-Analyse: Zeile %d, Zeichen %d, Namespace-URI (http://www.w3.org/2000/xmlns/) ist reserviert und darf nicht verwendet werden).   |
+|   9466    |   16  |   Nein  |   XML-Analyse: Zeile %d, Zeichen %d, XML-Namespace-URI (https://www.w3.org/XML/1998/namespace) darf nur Präfix "xml" zugeordnet werden).  |
+|   9467    |   16  |   Nein  |   XML-Analyse: Zeile %d, Zeichen %d, Namespace-URI (https://www.w3.org/2000/xmlns/) ist reserviert und darf nicht verwendet werden).  |
 |   9480    |   16  |   Nein  |   XML-Analyse: Zeile %d, Zeichen %d, nicht unterstützter XML-Code. |
 |   9500    |   16  |   Nein  |   Der in der VALUE-Methode verwendete '%.*ls'-Datentyp ist ungültig.  |
 |   9501    |   16  |   Nein  |   XQuery: "sql:variable("%.*ls")" kann nicht aufgelöst werden. Die Variable muss als TSQL-Skalarvariable deklariert werden.   |
@@ -4520,16 +4520,16 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   9904    |   10  |   Nein  |   Der '%ls'-Volltextkatalog (%d) in der '%ls'-Datenbank (%d) wird zur Wiederherstellung nach einem Fehler neu bereitgestellt. Ursachencode: %d. Fehler: %ls. Falls diese Meldung häufig auftritt, lesen Sie die Informationen zur Problembehandlung in der SQL Server-Onlinedokumentation. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich. |
 |   9905    |   10  |   Nein  |   Information: Vom Volltextindexer wurde eine Statusänderung für den "%ls"-Katalog ("%d") in der "%ls"-Datenbank ("%d") angefordert. Neuer Status: %ls, Grund: %ls (%ls). |
 |   9906    |   10  |   Nein  |   Die Überwachung für Volltextkataloge hat gemeldet, dass der '%ls'-Katalog (%d) in der '%ls'-Datenbank (%d) den Status %ls aufweist. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.   |
-|   9907    |   10  |   Nein  |   Fehler: Die Gesamtanzahl von Elementen im Volltextkatalog mit der ID "%d" in der Datenbank mit der ID "%d" überschreitet das unterstützte Limit. Lesen Sie die Informationen zur Problembehandlung in der Onlinedokumentation. |
+|   9907    |   10  |   Nein  |   Error: Die Gesamtanzahl von Elementen im Volltextkatalog mit der ID "%d" in der Datenbank mit der ID "%d" überschreitet das unterstützte Limit. Lesen Sie die Informationen zur Problembehandlung in der Onlinedokumentation. |
 |   9908    |   10  |   Nein  |   Der Status wird für den '%ls'-Volltextkatalog (%d) in der '%ls'-Datenbank (%d) auf %ls geändert. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.  |
 |   9909    |   10  |   Nein  |   Warnung: Fehler beim Ändern des Status auf %ls für den "%ls"-Volltextkatalog (%d) in der "%ls"-Datenbank (%d). Fehler: %ls.    |
 |   9910    |   10  |   Nein  |   Warnung: Fehler bei der %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls", "%ls"-Datenbank (ID "%d" der Tabelle oder indizierten Sicht, Datenbank-ID "%d"). Fehler: %ls.  |
 |   9911    |   10  |   Nein  |   Information: Die %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls" wurde initialisiert (ID der Tabelle oder indizierten Sicht "%d", Datenbank-ID "%d"). Teiltasks der Auffüllung: %d.    |
-|   9912    |   10  |   Nein  |   Fehler: Fehler beim Initialisieren der %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls", "%ls"-Datenbank (ID "%d" der Tabelle oder indizierten Sicht, Datenbank-ID "%d"). Fehler: %d.  |
+|   9912    |   10  |   Nein  |   Error: Fehler beim Initialisieren der %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls", "%ls"-Datenbank (ID "%d" der Tabelle oder indizierten Sicht, Datenbank-ID "%d"). Fehler: %d.  |
 |   9913    |   10  |   Nein  |   Information: Die Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls" in der "%ls"-Datenbank wird fortgesetzt (ID der Tabelle oder indizierten Sicht: "%d", Datenbank-ID: "%d"). Anzahl der zuvor verarbeiteten Dokumente: %d, Fehler: %d.   |
-|   9914    |   16  |   Nein  |   Fehler: Fehler beim Fortsetzen der %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls" in der "%ls"-Datenbank (ID der Tabelle oder indizierten Sicht: "%d", Datenbank-ID "%d"). Fehler: 0x%x. Wiederholen Sie den Vorgang zum Auslösen der Fortsetzung, oder löschen Sie den Index, und erstellen Sie ihn anschließend neu. |
+|   9914    |   16  |   Nein  |   Error: Fehler beim Fortsetzen der %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls" in der "%ls"-Datenbank (ID der Tabelle oder indizierten Sicht: "%d", Datenbank-ID "%d"). Error: 0x%x. Wiederholen Sie den Vorgang zum Auslösen der Fortsetzung, oder löschen Sie den Index, und erstellen Sie ihn anschließend neu. |
 |   9915    |   10  |   Nein  |   Die %ls-Volltextauffüllung für die '%ls'-Tabelle wurde nach einem vorübergehenden Fehler neu initialisiert (Tabellen-ID '%d', Datenbank-ID '%d'). Anzahl der vor dem Fehler verarbeiteten Dokumente: %d, Fehler: %d. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.  |
-|   9916    |   10  |   Nein  |   Fehler: Fehler beim erneuten Initialisieren der %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls", "%ls"-Datenbank (ID "%d" der Tabelle oder indizierten Sicht, Datenbank-ID "%d") nach einem vorübergehenden Fehler. Fehler: %d.  |
+|   9916    |   10  |   Nein  |   Error: Fehler beim erneuten Initialisieren der %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls", "%ls"-Datenbank (ID "%d" der Tabelle oder indizierten Sicht, Datenbank-ID "%d") nach einem vorübergehenden Fehler. Fehler: %d.  |
 |   9917    |   17  |   Nein  |   Interner Fehler bei der docid-Volltextzuordnung.   |
 |   9918    |   10  |   Nein  |   Warnung: Für den "%ls"-Volltextkatalog wird ein FAT-Volume verwendet. Die Sicherheit und differenzielle Sicherungen werden für den Katalog nicht unterstützt.   |
 |   9919    |   16  |   Nein  |   Fehler beim DDL-Volltextbefehl, weil SQL Server im Einzelbenutzermodus gestartet wurde. |
@@ -4553,12 +4553,12 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   9937    |   16  |   Nein  |   Zu viele Volltextspalten, oder die Volltextabfrage ist für die Ausführung zu komplex.    |
 |   9938    |   16  |   Nein  |   Der angegebene Benutzer oder die angegebene Rolle '%.*ls' wurde nicht gefunden. |
 |   9939    |   16  |   Nein  |   Der aktuelle Benutzer oder die aktuelle Rolle '%.*ls' hat nicht die erforderliche Berechtigung zum Festlegen des Besitzers.    |
-|   9940    |   10  |   Nein  |   Fehler: Die %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls" wurde aufgrund des vorhergehenden Fehlers beendet (ID der Tabelle oder indizierten Sicht "%d", Datenbank-ID "%d"). |
+|   9940    |   10  |   Nein  |   Error: Die %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls" wurde aufgrund des vorhergehenden Fehlers beendet (ID der Tabelle oder indizierten Sicht "%d", Datenbank-ID "%d"). |
 |   9941    |   10  |   Nein  |   Information: Die %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls" wird vom System angehalten, da die Datenbank nicht verfügbar ist (ID der Tabelle oder indizierten Sicht "%d", Datenbank-ID "%d"). Die Auffüllung wird fortgesetzt, sobald die Datenbank verfügbar ist. |
 |   9942    |   10  |   Nein  |   Information: Die %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls" wurde vom Benutzer abgebrochen (ID der Tabelle oder indizierten Sicht "%d", Datenbank-ID "%d").    |
 |   9943    |   10  |   Nein  |   Information: Die %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls" wurde abgeschlossen (ID der Tabelle oder indizierten Sicht "%d", Datenbank-ID "%d"). Anzahl von verarbeiteten Dokumenten: %d. Anzahl von Dokumenten mit Fehlern: %d. Anzahl von Dokumenten, die wiederholt werden: %d.   |
 |   9944    |   10  |   Nein  |   Information: Der Wiederholungsdurchlauf der %ls-Volltextauffüllung für die Tabelle oder indizierte Sicht "%ls" wurde abgeschlossen (ID der Tabelle oder indizierten Sicht "%d", Datenbank-ID "%d"). Anzahl von in dieser Wiederholung verarbeiteten Dokumenten: %d. Anzahl von Dokumenten mit Fehlern: %d. |
-|   9945    |   10  |   Nein  |   Fehler: Alle aktuell ausgeführten Volltextauffüllungen für den "%ls"-Katalog ("%d") in der "%ls"-Datenbank ("%d") wurden fehlerbedingt abgebrochen. Fehler: 0x%x.  |
+|   9945    |   10  |   Nein  |   Error: Alle aktuell ausgeführten Volltextauffüllungen für den "%ls"-Katalog ("%d") in der "%ls"-Datenbank ("%d") wurden fehlerbedingt abgebrochen. Error: 0x%x.  |
 |   9947    |   10  |   Nein  |   Warnung: Die Identität des Volltextkatalogs im Verzeichnis "%ls" entspricht nicht der "%.*ls"-Datenbank. Der Volltextkatalog kann nicht angefügt werden.    |
 |   9948    |   10  |   Nein  |   Warnung: Der Pfad "%ls" für den Volltextkatalog ist ungültig. Seine Länge überschreitet das Limit, oder er ist ein relativer Pfad oder ein verborgenes Verzeichnis. Der Volltextkatalog kann nicht angefügt werden. |
 |   9949    |   10  |   Nein  |   Warnung: Alle aktuell ausgeführten Volltextauffüllungen für den "%ls"-Volltextkatalog ("%d") in der "%ls"-Datenbank ("%d") sind angehalten. Ursachencode: %d. Fehler: %ls. Falls diese Meldung häufig auftritt, lesen Sie die Informationen zum Optimieren der Indizierungsleistung in der Onlinedokumentation. |
@@ -4598,7 +4598,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-10000-to-10999"></a>Fehler 10.000 bis 10.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   10000   |   16  |   Nein  |   Unbekannter Anbieterfehler. |
 |   [10001](mssqlserver-10001-database-engine-error.md) |   16  |   Nein  |   Der Anbieter hat einen unerwarteten schwerwiegenden Fehler gemeldet.   |
@@ -4611,7 +4611,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   10008   |   16  |   Nein  |   Der Anbieter hat den Vorgang beendet.  |
 |   10009   |   16  |   Nein  |   Der Anbieter hat keine Informationen zu dem Fehler bereitgestellt.  |
 |   10010   |   16  |   Nein  |   Die zum Abschließen dieses Vorgangs erforderlichen Daten standen dem Anbieter noch nicht zur Verfügung.    |
-|   10011   |   16  |   Nein  |   Zugriff verweigert.  |
+|   10011   |   16  |   Nein  |   Der Zugriff wurde verweigert.  |
 |   10021   |   16  |   Nein  |   Die Ausführung wurde vom Anbieter beendet, da ein Ressourcenlimit erreicht wurde.  |
 |   10022   |   16  |   Nein  |   Der Anbieter hat eine Methode von IRowsetNotify im Consumer aufgerufen und noch keine Rückmeldung von der Methode erhalten.   |
 |   10023   |   16  |   Nein  |   Der Anbieter unterstützt die erforderliche Methode nicht. |
@@ -4693,7 +4693,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   10145   |   16  |   Nein  |   %S_MSG kann aufgrund der CHANGETABLE-Funktion nicht für die Sicht '%.*ls' erstellt werden.  |
 |   10211   |   16  |   Nein  |   Der %S_MSG kann nicht für die '%.*ls'-Sicht erstellt werden, da er auf einen Sparsespaltensatz verweist. Sichten, die einen Sparsespaltensatz enthalten, können nicht indiziert werden. Entfernen Sie den Sparsespaltensatz aus der Sicht, oder verzichten Sie darauf, die Sicht zu indizieren.   |
 |   10227   |   16  |   Nein  |   Der Mutator kann nicht für einen NULL-Wert von einem CLR-Typ aufgerufen werden. |
-|   10240   |   16  |   Nein  |   Das Feld "%.*ls" vom "%.* ls.%.*ls"-Typ kann nicht aktualisiert werden, weil das Feld "%.* ls" ist. |
+|   10.240   |   16  |   Nein  |   Das Feld "%.*ls" vom "%.* ls.%.*ls"-Typ kann nicht aktualisiert werden, weil das Feld "%.* ls" ist. |
 |   10300   |   16  |   Nein  |   UdtExtensions.dll wurde nicht gefunden. Überprüfen Sie Ihre Installation.   |
 |   10301   |   16  |   Nein  |   Die "%.*ls"-Assembly verweist auf die "%.* ls"-Assembly, die in der aktuellen Datenbank nicht vorhanden ist. SQL Server hat versucht, die Assembly, auf die verwiesen wird, am gleichen Pfad wie die verweisende Assembly zu suchen und automatisch zu laden. Dieser Vorgang ist jedoch fehlgeschlagen (Ursache: %S_MSG). Laden Sie die Assembly, auf die verwiesen wird, in die aktuelle Datenbank, und wiederholen Sie die Anforderung.  |
 |   10302   |   16  |   Nein  |   Die "%.*ls"-Assembly verweist auf die "%.* ls"-Assembly, die in der aktuellen Datenbank nicht vorhanden ist. SQL Server hat versucht, die Assembly, auf die verwiesen wird, am gleichen Pfad wie die verweisende Assembly zu suchen und automatisch zu laden. Dieser Vorgang ist jedoch fehlgeschlagen (Ursache: %s). Laden Sie die Assembly, auf die verwiesen wird, in die aktuelle Datenbank, und wiederholen Sie die Anforderung.  |
@@ -4857,7 +4857,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-11000-to-12999"></a>Fehler 11.000 bis 12.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   11000   |   16  |   Nein  |   Unbekannter Statuscode für diese Spalte.    |
 |   11001   |   16  |   Nein  |   Ein Wert ungleich NULL wurde erfolgreich zurückgegeben.   |
@@ -4904,15 +4904,15 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   11108   |   16  |   Nein  |   Der Anbieter konnte eine erforderliche Eigenschaft nicht unterstützen. |
 |   11109   |   16  |   Nein  |   Der Anbieter unterstützt keinen Indexscan für diese Datenquelle.    |
 |   11201   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil der FROM-Dienstname fehlt. Nachrichtenabsender: "%ls". |
-|   11202   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der FROM-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'. |
+|   11202   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der FROM-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'. |
 |   11203   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz fehlt. Nachrichtenabsender: "%ls". |
-|   11204   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz die maximale Größe von %d Bytes überschreitet. Broker-Instanz: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.   |
+|   11204   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz die maximale Größe von %d Bytes überschreitet. Broker-Instanz: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.   |
 |   11205   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname fehlt. Nachrichtenabsender: '%ls'.  |
-|   11206   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.   |
+|   11206   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.   |
 |   11207   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname fehlt. Nachrichtenabsender: '%ls'.    |
-|   11208   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname die maximale Größe von %d Bytes überschreitet. Vertragsname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'. |
+|   11208   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname die maximale Größe von %d Bytes überschreitet. Vertragsname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'. |
 |   11209   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil die Konversations-ID keiner aktiven Konversation zugeordnet werden konnte. Nachrichtenabsender: "%ls".  |
-|   11210   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienst nicht gefunden wurde. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.  |
+|   11210   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienst nicht gefunden wurde. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.  |
 |   11211   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Benutzer nicht die Berechtigung für den Zugriff auf die Zieldatenbank besitzt. Datenbank-ID: %d. Nachrichtenabsender: &amp;quot;%ls&amp;quot;.    |
 |   11212   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil der Konversationsendpunkt bereits geschlossen wurde.  |
 |   11213   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil sie nicht die erste Nachricht in der Konversation ist.  |
@@ -5004,7 +5004,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   11302   |   10  |   Ja |   Fehler beim Rollback. Die Datenbank wird heruntergefahren (Speicherort: %d).   |
 |   11303   |   10  |   Ja |   Fehler beim Freigeben von reserviertem Protokollspeicherplatz: %ls-Speicherplatz %I64d, Code %d, Status %d. |
 |   11304   |   10  |   Ja |   Fehler beim Aufzeichnen des Ergebnisses einer lokalen Transaktion mit Zweiphasencommit. Die Datenbank wird offline geschaltet.  |
-|   11400   |   16  |   Nein  |   Fehler bei der ALTER TABLE SWITCH-Anweisung. Der Index "%.*ls" für die indizierte Sicht "%.* ls" verwendet die "%.*ls"-Partitionsfunktion, allerdings verwendet die Tabelle "%.* ls" die nicht gleichwertige "%.*ls"-Partitionsfunktion. Der Index für die indizierte Sicht "%.* ls" und die Tabelle "%.*ls" müssen eine gleichwertige Partitionsfunktion verwenden.    |
+|   11.400   |   16  |   Nein  |   Fehler bei der ALTER TABLE SWITCH-Anweisung. Der Index "%.*ls" für die indizierte Sicht "%.* ls" verwendet die "%.*ls"-Partitionsfunktion, allerdings verwendet die Tabelle "%.* ls" die nicht gleichwertige "%.*ls"-Partitionsfunktion. Der Index für die indizierte Sicht "%.* ls" und die Tabelle "%.*ls" müssen eine gleichwertige Partitionsfunktion verwenden.    |
 |   11401   |   16  |   Nein  |   Fehler bei der ALTER TABLE SWITCH-Anweisung. Die Tabelle "%.*ls" ist %S_MSG, allerdings ist der Index "%.* ls" für die indizierte Sicht "%.*ls" %S_MSG.  |
 |   11402   |   16  |   Nein  |   Fehler bei der ALTER TABLE SWITCH-Anweisung. %d indizierte Sichte(n) verweist/verweisen auf die Zieltabelle "%.*ls". Allerdings verweist/verweisen nur %d indizierte Sichte(n) auf die Quelltabelle "%.* ls". Für jede indizierte Sicht für die Zieltabelle muss mindestens eine übereinstimmende indizierte Sicht für die Quelltabelle vorhanden sein.  |
 |   11403   |   16  |   Nein  |   Fehler bei der ALTER TABLE SWITCH-Anweisung. Die indizierte Sicht "%.*ls" ist nicht mit der Tabelle "%.* ls" ausgerichtet. Die Partitionierungsspalte "%.*ls" aus der indizierten Sicht wählt nicht direkt aus der Tabellenpartitionierungsspalte "%.* ls" aus. Sie berechnet ihren Wert aus mindestens einer Spalte oder einem Ausdruck. Ändern Sie die Definition der indizierten Sicht, sodass die Partitionierungsspalte direkt in der Tabellenpartitionierungsspalte '%.*ls' ausgewählt wird.  |
@@ -5064,7 +5064,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-13000-to-13999"></a>Fehler 13.000 bis 13.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   13001   |   16  |   Nein  |   Dateiname   |
 |   13002   |   16  |   Nein  |   Überwachung   |
@@ -5087,21 +5087,21 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   13026   |   0   |   Nein  |   parameter   |
 |   13027   |   0   |   Nein  |   Konvertierungsspezifikation   |
 |   13028   |   0   |   Nein  |   Index   |
-|   13029   |   0   |   Nein  |   -Tabelle   |
-|   13030   |   0   |   Nein  |   Datenbank    |
+|   13029   |   0   |   Nein  |   table   |
+|   13030   |   0   |   Nein  |   database    |
 |   13031   |   0   |   Nein  |   Prozedur   |
 |   13032   |   0   |   Nein  |   Trigger (trigger) |
 |   13033   |   0   |   Nein  |   Ansicht    |
 |   13034   |   0   |   Nein  |   default |
-|   13035   |   0   |   Nein  |   Regel    |
+|   13035   |   0   |   Nein  |   rule    |
 |   13036   |   0   |   Nein  |   Systemtabelle    |
 |   13037   |   0   |   Nein  |   unbekannter Typ    |
 |   13038   |   0   |   Nein  |   SET-Option  |
 |   13039   |   0   |   Nein  |   column  |
-|   13040   |   0   |   Nein  |   Typ    |
+|   13040   |   0   |   Nein  |   type    |
 |   13041   |   0   |   Nein  |   Zeichenfolge    |
 |   13042   |   0   |   Nein  |   integer |
-|   13043   |   0   |   Nein  |   Bezeichner (identifier)  |
+|   13043   |   0   |   Nein  |   Bezeichner  |
 |   13044   |   0   |   Nein  |   number  |
 |   13045   |   0   |   Nein  |   Indizes |
 |   13047   |   0   |   Nein  |   Objekt (object)  |
@@ -5112,7 +5112,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   13053   |   0   |   Nein  |   XML-Schemaauflistung   |
 |   13054   |   0   |   Nein  |   ERWEITERTER INDEX  |
 |   13055   |   0   |   Nein  |   SPATIAL INDEX   |
-|   13056   |   0   |   Nein  |   räumlich |
+|   13056   |   0   |   Nein  |   spatial |
 |   13057   |   0   |   Nein  |   ein Planhinweislisten-Batch   |
 |   13058   |   0   |   Nein  |   Geometrie    |
 |   13059   |   0   |   Nein  |   Konversationspriorität   |
@@ -5120,7 +5120,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   13077   |   0   |   Nein  |   Cursordeklaration    |
 |   13078   |   0   |   Nein  |   Replikationsfilter  |
 |   13079   |   0   |   Nein  |   Variablenzuweisung |
-|   13080   |   0   |   Nein  |   Statistik  |
+|   13080   |   0   |   Nein  |   statistics  |
 |   13081   |   0   |   Nein  |   file    |
 |   13082   |   0   |   Nein  |   Dateigruppe (filegroup)   |
 |   13083   |   0   |   Nein  |   server  |
@@ -5130,7 +5130,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   13087   |   0   |   Nein  |   drop    |
 |   13088   |   0   |   Nein  |   Ändern   |
 |   13089   |   0   |   Nein  |   Nachrichtentyp    |
-|   13090   |   0   |   Nein  |   Vertrag    |
+|   13090   |   0   |   Nein  |   contract    |
 |   13092   |   0   |   Nein  |   Dienst |
 |   13093   |   0   |   Nein  |   queue   |
 |   13094   |   0   |   Nein  |   Tabellenwertfunktion   |
@@ -5144,7 +5144,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   13102   |   10  |   Nein  |   DETACH  |
 |   13103   |   0   |   Nein  |   HASH    |
 |   13104   |   0   |   Nein  |   RANGE   |
-|   13105   |   0   |   Nein  |   Erstellen  |
+|   13105   |   0   |   Nein  |   create  |
 |   13106   |   0   |   Nein  |   Route   |
 |   13107   |   0   |   Nein  |   Remotedienstbindung  |
 |   13108   |   0   |   Nein  |   Initiator   |
@@ -5152,13 +5152,13 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   13110   |   0   |   Nein  |   Hostsynchronisierungsobjekt |
 |   13111   |   0   |   Nein  |   generisches Objekt mit Wartemöglichkeit |
 |   13112   |   0   |   Nein  |   Anwendungsrolle    |
-|   13113   |   0   |   Nein  |   Schema  |
+|   13113   |   0   |   Nein  |   schema  |
 |   13114   |   0   |   Nein  |   user    |
 |   13115   |   0   |   Nein  |   login   |
 |   13116   |   0   |   Nein  |   Zertifikat |
 |   13117   |   0   |   Nein  |   Rolle (role)    |
 |   13118   |   0   |   Nein  |   Suchen    |
-|   13119   |   0   |   Nein  |   Endpunkt    |
+|   13119   |   0   |   Nein  |   endpoint    |
 |   13120   |   0   |   Nein  |   sql:variable    |
 |   13121   |   0   |   Nein  |   sql:column  |
 |   13122   |   0   |   Nein  |   XML-Namespace   |
@@ -5186,8 +5186,8 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   13144   |   16  |   Nein  |   Partitionsschema    |
 |   13145   |   16  |   Nein  |   Verschlüsselung  |
 |   13146   |   16  |   Nein  |   signature   |
-|   13147   |   16  |   Nein  |   Kennwort    |
-|   13148   |   16  |   Nein  |   Umbenennen  |
+|   13147   |   16  |   Nein  |   password    |
+|   13148   |   16  |   Nein  |   rename  |
 |   13149   |   16  |   Nein  |   Beenden des Dialogs  |
 |   13150   |   16  |   Nein  |   END CONVERSATION WITH ERROR |
 |   13151   |   16  |   Nein  |   MOVE CONVERSATION   |
@@ -5264,8 +5264,8 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   13224   |   10  |   Nein  |   Rollensynchronisierung    |
 |   13225   |   10  |   Nein  |   Force_Service_Allow_Data_Loss   |
 |   13226   |   10  |   Nein  |   add |
-|   13227   |   10  |   Nein  |   in  |
-|   13228   |   10  |   Nein  |   Von    |
+|   13227   |   10  |   Nein  |   zu  |
+|   13228   |   10  |   Nein  |   from    |
 |   13229   |   10  |   Nein  |   enable  |
 |   13230   |   10  |   Nein  |   disable |
 |   13231   |   10  |   Nein  |   erneut zuordnen   |
@@ -5328,7 +5328,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   13295   |   10  |   Nein  |   Fingerabdrucklänge des Schlüssels des Kryptografieanbieters    |
 |   13296   |   10  |   Nein  |   BLOB-Länge des Schlüssels des Kryptografieanbieters  |
 |   13297   |   16  |   Nein  |   Verschlüsselungsalgorithmus-Tag    |
-|   13298   |   16  |   Nein  |   NAME    |
+|   13298   |   16  |   Nein  |   name    |
 |   13299   |   16  |   Nein  |   thumbprint  |
 |   13301   |   16  |   Nein  |   Länge des Initialisierungsvektors (IV)    |
 |   13302   |   16  |   Nein  |   Bitlänge  |
@@ -5365,7 +5365,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-14000-to-14999"></a>Fehler 14,000 bis 14.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   14002   |   16  |   Nein  |   Das Sync-Subsystem mit der Task-ID %ld wurde nicht gefunden.   |
 |   14003   |   16  |   Nein  |   Sie müssen einen Veröffentlichungsnamen angeben. |
@@ -5387,7 +5387,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   14020   |   16  |   Nein  |   Die Spalten-ID für die angegebene Spalte konnte nicht abgerufen werden. Fehler bei der Schemareplikation. |
 |   14021   |   16  |   Nein  |   Die Spalte wurde nicht richtig zum Artikel hinzugefügt.  |
 |   14022   |   16  |   Nein  |   Mögliche Werte des \@property-Parameters: 'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option' oder 'destination_owner'.   |
-|   14023   |   16  |   Nein  |   Der Typ muss lauten: "[indexed view ]logbased[ (manualview|manualfilter|manualboth)]", "[serializable ]proc exec" oder "(view|Indizierte Sicht|proc|func|Aggregat (aggregate)|synonym) schema only"    |
+|   14023   |   16  |   Nein  |   Der Typ muss lauten: "[indexed view ]logbased[ (manualview|manualfilter|manualboth)]", "[serializable ]proc exec" oder "(view|Indizierte Sicht|proc|func|aggregate|synonym) schema only"    |
 |   14024   |   16  |   Nein  |   Der Wert der 'subscriber_provider'-Eigenschaft darf nicht NULL sein. |
 |   14025   |   10  |   Nein  |   Der Artikel wurde erfolgreich aktualisiert.  |
 |   14026   |   16  |   Nein  |   Der Wert der 'subscriber_type'-Eigenschaft ist kein unterstützter heterogener Abonnententyp. Dieser Wert muss '1' (ODBC-Abonnent) oder '3' (OLE DB-Abonnent) sein.    |
@@ -5897,7 +5897,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-15000-to-15999"></a>Fehler 15.000 bis 15.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   15001   |   16  |   Nein  |   Das '%ls'-Objekt ist nicht vorhanden oder kein gültiges Objekt für diesen Vorgang.    |
 |   15002   |   16  |   Nein  |   Die '%'-Prozedur kann in einer Transaktion nicht ausgeführt werden. |
@@ -6078,8 +6078,8 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   15218   |   16  |   Nein  |   Das '%s'-Objekt ist keine Tabelle. |
 |   15219   |   16  |   Nein  |   Der Besitzer einer indizierten Sicht kann nicht geändert werden. |
 |   15222   |   16  |   Nein  |   Die Option '%s' für die Remoteanmeldung ist nicht eindeutig. |
-|   15223   |   11  |   Nein  |   Fehler: Der "%s"-Eingabeparameter darf nicht NULL sein.  |
-|   15224   |   11  |   Nein  |   Fehler: Der Wert für den \@newname-Parameter enthält ungültige Zeichen oder verletzt eine grundlegende Beschränkung (%s).  |
+|   15223   |   11  |   Nein  |   Error: Der "%s"-Eingabeparameter darf nicht NULL sein.  |
+|   15224   |   11  |   Nein  |   Error: Der Wert für den \@newname-Parameter enthält ungültige Zeichen oder verletzt eine grundlegende Beschränkung (%s).  |
 |   15225   |   11  |   Nein  |   Es wurde kein Element mit dem Namen '%s' in der aktuellen '%s'-Datenbank gefunden, wobei '\@itemtype' als '%s' eingegeben wurde.   |
 |   15226   |   16  |   Nein  |   Aus einem XML-Datentyp können keine CLR-Typen erstellt werden.   |
 |   15227   |   16  |   Nein  |   Die '%s'-Datenbank kann nicht umbenannt werden.    |
@@ -6100,7 +6100,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   15246   |   16  |   Nein  |   Der private Schlüssel des Zertifikats '%s' konnte nicht gesichert werden, weil der private Schlüssel nicht gefunden wurde.    |
 |   15247   |   16  |   Nein  |   Der Benutzer besitzt nicht die Berechtigung zum Ausführen dieser Aktion.   |
 |   15248   |   11  |   Nein  |   Der \@objname-Parameter ist mehrdeutig, oder der beanspruchte Wert von '\@objtype' (%s) ist falsch. |
-|   15249   |   11  |   Nein  |   Fehler: Der explizite Wert "%s" von "\@objtype" ist unbekannt. |
+|   15249   |   11  |   Nein  |   Error: Der explizite Wert "%s" von "\@objtype" ist unbekannt. |
 |   15250   |   16  |   Nein  |   Die Komponente des Datenbanknamens des Objektqualifizierers muss der Name der aktuellen Datenbank sein.   |
 |   15251   |   16  |   Nein  |   Es wurde ein ungültiges '%s' angegeben. Muss %s sein.  |
 |   15252   |   16  |   Nein  |   Der Name der primären oder Fremdschlüsseltabelle muss angegeben werden.    |
@@ -6165,7 +6165,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   15316   |   10  |   Nein  |   Globale temporäre Schlüssel sind nicht zulässig. Sie können nur lokale temporäre Schlüssel verwenden.   |
 |   15317   |   10  |   Nein  |   Die Hauptschlüsseldatei ist nicht vorhanden oder besitzt ein ungültiges Format.   |
 |   15318   |   10  |   Nein  |   Alle Fragmente für die '%s'-Datenbank auf dem Gerät '%s' werden jetzt ausschließlich zur Verwendung für Protokolle dediziert.    |
-|   15319   |   17  |   Nein  |   Fehler: Fehler bei DBCC DBREPAIR REMAP für die %s-Datenbank (Gerät "%s").  |
+|   15319   |   17  |   Nein  |   Error: Fehler bei DBCC DBREPAIR REMAP für die %s-Datenbank (Gerät "%s").  |
 |   15320   |   16  |   Nein  |   Fehler beim Entschlüsseln des %S_MSG-Objekts '%.*ls', das mit dem alten Hauptschlüssel verschlüsselt wurde. Mithilfe der Option FORCE kann dieser Fehler ignoriert und der Vorgang fortgesetzt werden. Daten, die jedoch mit dem alten Hauptschlüssel nicht entschlüsselt werden können, sind dann nicht mehr verfügbar.  |
 |   15321   |   16  |   Nein  |   Problem beim Entfernen von '%s' aus 'sys.master_files'. |
 |   15322   |   10  |   Nein  |   Die Datei '%s' wurde aus 'tempdb' entfernt. Dies wird beim Neustart des Servers wirksam.    |
@@ -6179,9 +6179,9 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   15330   |   11  |   Nein  |   Es sind keine übereinstimmenden Zeilen vorhanden, für die ein Bericht erstellt werden muss.  |
 |   15331   |   11  |   Nein  |   Der Benutzer '%s' kann die auto_fix-Aktion aufgrund einer doppelten SID nicht ausführen. |
 |   15332   |   10  |   Nein  |   Der private Schlüssel ist für diese Datei bereits festgelegt. Um ihn zu ändern, sollten Sie das Zertifikat löschen und erneut erstellen.   |
-|   15333   |   11  |   Nein  |   Fehler: Der qualifizierte Wert von "\@oldname" verweist nicht auf die aktuelle Datenbank, sondern auf eine andere Datenbank (%s).  |
+|   15333   |   11  |   Nein  |   Error: Der qualifizierte Wert von "\@oldname" verweist nicht auf die aktuelle Datenbank, sondern auf eine andere Datenbank (%s).  |
 |   15334   |   10  |   Nein  |   Das %S_MSG-Objekt weist einen privaten Schlüssel auf, der mit einem benutzerdefinierten Kennwort geschützt ist. Dieses Kennwort muss bereitgestellt werden, um die Verwendung des privaten Schlüssels zu ermöglichen. |
-|   15335   |   11  |   Nein  |   Fehler: Der neue Name "%s" wird bereits als %s-Name verwendet und würde ein unzulässiges Duplikat erzeugen.  |
+|   15335   |   11  |   Nein  |   Error: Der neue Name "%s" wird bereits als %s-Name verwendet und würde ein unzulässiges Duplikat erzeugen.  |
 |   15336   |   16  |   Nein  |   Das '%s'-Objekt kann nicht umbenannt werden, da es an erzwungenen Abhängigkeiten teilnimmt. |
 |   15337   |   10  |   Nein  |   Vorsicht: 'sys.sql_dependencies' zeigt, dass andere Objekte (Sichten, Prozeduren usw.) mit dem alten Namen auf dieses Objekt verweisen. Diese Objekte werden ungültig; sie sollten sofort gelöscht und neu erstellt werden. |
 |   15339   |   10  |   Nein  |   Erstellen von '%s'.  |
@@ -6410,7 +6410,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-16000-to-17999"></a>Fehler 16.000 bis 17.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   16901   |   16  |   Nein  |   %hs: Diese Funktion ist noch nicht implementiert. |
 |   16902   |   16  |   Nein  |   %ls: Der Wert des %ls-Parameters ist ungültig. |
@@ -6553,13 +6553,13 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   17165   |   10  |   Ja |   Die RANU-Instanz wird als Reaktion auf ihr internes Timeout beendet. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.   |
 |   17166   |   10  |   Ja |   Es wird versucht, Microsoft Distributed Transaction Coordinator (MS DTC) zu initialisieren. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich. |
 |   17167   |   10  |   Ja |   Die Unterstützung verteilter Transaktionen wurde für diese Instanz der Datenbank-Engine nicht aktiviert, weil sie mit der Minimalkonfigurationsoption gestartet wurde. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich. |
-|   17169   |   10  |   Ja |   Der Kernel-HTTP-Treiber 'Httpapi.dll' wurde im Pfad nicht gefunden. Die systemeigene HTTP-Unterstützung von SQL Server ist nicht verfügbar. Fehler: 0x%lx Ihr Betriebssystem unterstützt möglicherweise den Kernel-HTTP-Treiber nicht.    |
+|   17169   |   10  |   Ja |   Der Kernel-HTTP-Treiber 'Httpapi.dll' wurde im Pfad nicht gefunden. Die systemeigene HTTP-Unterstützung von SQL Server ist nicht verfügbar. Error: 0x%lx Ihr Betriebssystem unterstützt möglicherweise den Kernel-HTTP-Treiber nicht.    |
 |   17170   |   10  |   Ja |   Die systemeigene HTTP-Unterstützung von SQL Server ist nicht verfügbar. Der Funktionseinstiegspunkt '%hs' wurde in %hs nicht gefunden. Fehler 0x%lx. Der systemeigene HTTP-Zugriff auf SQL Server erfordert eine höhere Version des Betriebssystems.  |
 |   17171   |   10  |   Ja |   Fehler bei der systemeigenen HTTP-Unterstützung von SQL Server, die deshalb nicht verfügbar sein wird. Fehler bei '%hs()'. Fehler 0x%lx.   |
 |   17172   |   16  |   Ja |   Fehler bei 'SNIInitialize()': Fehler 0x%lx.    |
 |   17173   |   10  |   Ja |   Das beim Start angegebene Ablaufverfolgungsflag %d wird ignoriert. Das Flag ist entweder ein ungültiges Ablaufverfolgungsflag oder ein Ablaufverfolgungsflag, das beim Serverstart nicht angegeben werden darf. |
 |   17174   |   10  |   Ja |   Die systemeigene HTTP-Unterstützung von SQL Server konnte aufgrund unzureichender Ressourcen nicht initialisiert werden. Der HTTP-Zugriff auf SQL Server ist nicht verfügbar. Fehler 0x%lx. Dieser Fehler ist gewöhnlich ein Hinweis auf ungenügend Arbeitsspeicher. Reduzieren Sie die vermeidbare Arbeitsspeicherlast, oder vergrößern Sie den Systemarbeitsspeicher.    |
-|   17175   |   10  |   Ja |   Die Registrierungseinstellungen für die SNI-Potokollkonfiguration sind falsch. Der Server kann keine Verbindungsanforderungen annehmen. Fehler: 0x%lx. Status: 0x%lx.  |
+|   17175   |   10  |   Ja |   Die Registrierungseinstellungen für die SNI-Potokollkonfiguration sind falsch. Der Server kann keine Verbindungsanforderungen annehmen. Error: 0x%lx. Status: 0x%lx.  |
 |   17176   |   10  |   Ja |   Diese SQL Server-Instanz hat zuletzt die Verwendung der Prozess-ID %s um %s (Ortszeit), %s (UTC), berichtet. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.   |
 |   17177   |   10  |   Ja |   Diese SQL Server-Instanz hat die Prozess-ID %s seit %s (Ortszeit), %s (UTC), verwendet. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich. |
 |   17178   |   10  |   Ja |   AWE (Address Windowing Extensions) ist aktiviert. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich. |
@@ -6602,7 +6602,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   17310   |   20  |   Ja |   Eine Benutzeranforderung von der Sitzung mit SPID %d hat eine schwerwiegende Ausnahme generiert. SQL Server beendet diese Sitzung. Wenden Sie sich an Microsoft Support Services, und legen Sie dabei das Speicherabbild aus dem Protokollverzeichnis vor. |
 |   17311   |   16  |   Ja |   SQL Server wird aufgrund der schwerwiegenden Ausnahme %lx beendet. Fehlerursache kann eine nicht verarbeitete Ausnahme von Win32, C++ oder eine Zugriffsverletzung bei der Ausnahmeverarbeitung sein. Überprüfen Sie das SQL-Fehlerprotokoll auf verwandte Stapelabbilder oder Meldungen. Diese Ausnahme erzwingt das Herunterfahren des Servers mit SQL Server. Zur Wiederherstellung nach diesem Fehler starten Sie den Server neu (außer wenn SQLAgent für den automatischen Neustart konfiguriert ist).  |
 |   17312   |   16  |   Ja |   SQL Server beendet den System- oder Hintergrundtask %s aufgrund von Fehlern beim Starten des Tasks (Setupstatus %d).    |
-|   17313   |   10  |   Ja |   Der Treiber 'ntdll.dll' wurde im Pfad nicht gefunden. Die systemeigene HTTP-Unterstützung von SQL Server ist nicht verfügbar. Fehler: 0x%lx Dieser Treiber wird von Ihrem Betriebssystem möglicherweise nicht unterstützt. |
+|   17313   |   10  |   Ja |   Der Treiber 'ntdll.dll' wurde im Pfad nicht gefunden. Die systemeigene HTTP-Unterstützung von SQL Server ist nicht verfügbar. Error: 0x%lx Dieser Treiber wird von Ihrem Betriebssystem möglicherweise nicht unterstützt. |
 |   17401   |   10  |   Ja |   Die Ausführung des Servers wurde nach einem Leerlauf von %d Sekunden fortgesetzt: Benutzeraktivität hat den Server reaktiviert. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich. |
 |   17403   |   10  |   Ja |   Die Ausführung des Servers wurde nach einem Leerlauf von %d Sekunden fortgesetzt. Ursache: Zeitgeberereignis.  |
 |   17404   |   10  |   Ja |   Die Ausführung des Servers wurde nach einem Leerlauf von %d Sekunden fortgesetzt.   |
@@ -6665,7 +6665,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-18000-to-18999"></a>Fehler 18.000 bis 18.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   18002   |   20  |   Ja |   Ausnahme beim Ausführen der erweiterten gespeicherten Prozedur "%.*ls" in der "%.* ls"-Bibliothek. SQL Server beendet den Prozess %d. Ausnahmetyp: %ls; Ausnahmecode: 0x%lx. |
 |   18052   |   16  |   Nein  |   Fehler: %d, Schweregrad: %d, Status: %d. |
@@ -6673,7 +6673,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   18054   |   16  |   Ja |   Fehler: %d, Schweregrad: %d, Status: %d wurde ausgelöst, aber in 'sys.messages' wurde keine Meldung mit dieser Fehlernummer gefunden. Stellen Sie sicher, dass die benutzerdefinierte Meldung mit sp_addmessage hinzugefügt wird, wenn die Fehlernummer größer als 50000 ist.    |
 |   18055   |   20  |   Ja |   Ausnahme %d, %d beim Zurücksetzen der Verbindung %d durch den Server. Da der Server keine Wiederherstellung nach diesem Fehler ausführen kann, um die Verbindung zurückzusetzen, wurde die Verbindung gelöscht. Wenden Sie sich an den technischen Support von Microsoft.    |
 |   18056   |   20  |   Ja |   Der Client konnte die Sitzung mit SPID %d nicht erneut verwenden, die für das Verbindungspooling zurückgesetzt wurde. Die Fehler-ID ist '%.*ls'. Fehlerursache kann ein früherer Vorgangsfehler sein. Überprüfen Sie die Fehlerprotokolle auf fehlgeschlagene Vorgänge unmittelbar vor dieser Fehlermeldung.    |
-|   18057   |   20  |   Ja |   Fehler: Fehler beim Einrichten des Ausführungskontexts.  |
+|   18057   |   20  |   Ja |   Error: Fehler beim Einrichten des Ausführungskontexts.  |
 |   18058   |   17  |   Ja |   Fehler beim Laden der Formatzeichenfolge für Fehler '%.*ls', Sprachen-ID '%.*ls'. Betriebssystemfehler: %s. Überprüfen Sie, ob die Ressourcendatei mit der ausführbaren Datei von SQL Server übereinstimmt und ob die Ressourcendatei im lokalisierten Verzeichnis mit der Datei im englischen Verzeichnis übereinstimmt. Überprüfen Sie auch die Speicherauslastung.  |
 |   18059   |   16  |   Ja |   Die Verbindung wurde gelöscht, weil der Prinzipal, von dem sie geöffnet wurde, die Identität für einen neuen Sicherheitskontext angenommen und versucht hat, die Verbindung mit diesem Sicherheitskontext zurückzusetzen. Dieses Szenario wird nicht unterstützt. Weitere Informationen finden Sie in der On unter "Identitätswechsel (Übersicht)". |
 |   18060   |   16  |   Ja |   Fehler beim Formatieren der Zeichenfolge für den Fehler %d, Sprachen-ID %d. Ursache hierfür kann nicht genügend Arbeitsspeicher auf dem Server oder aber ein Fehler beim Formatieren der Meldung sein.  |
@@ -6886,7 +6886,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-19000-to-20999"></a>Fehler 19.000 bis 20.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   19030   |   10  |   Ja |   Die SQL-Ablaufverfolgung mit der ID %d wurde vom Anmeldenamen "%s" gestartet.  |
 |   19031   |   10  |   Ja |   Die SQL-Ablaufverfolgung wurde beendet. Ablaufverfolgungs-ID = '%d'. Anmeldename = '%s'.  |
@@ -7314,7 +7314,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-21000-to-21999"></a>Fehler 21.000 bis 21.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   21000   |   16  |   Nein  |   Eine inaktive Veröffentlichung kann nicht abonniert werden.    |
 |   21001   |   16  |   Nein  |   Ein Verteilungs-Agent für ein Pushabonnement kann auf dem Abonnenten nicht hinzugefügt werden.  |
@@ -8077,7 +8077,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-22000-to-22999"></a>Fehler 22.000 bis 22.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   22101   |   16  |   Nein  |   Der für das change_columns-Argument der CHANGE_TRACKING_IS_COLUMN_IN_MASK-Funktion angegebene Wert ist nicht gültig. Bei dem Wert muss es sich um eine von der CHANGETABLE(CHANGES ...)-Funktion zurückgegebene Bitmaske handeln.   |
 |   22102   |   16  |   Nein  |   Die angegebenen Argumente sind nicht gültig für die CHANGES-Option der CHANGETABLE-Funktion.    |
@@ -8332,11 +8332,11 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-23000-to-25999"></a>Fehler 23.000 bis 25.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   23003   |   17  |   Nein  |   Die WinFS-Freigabeberechtigungen sind beschädigt {Fehler: %d}. Versuchen Sie, die Freigabeberechtigungen erneut festzulegen. |
 |   23100   |   16  |   Nein  |   Ungültige(r) Eingabeparameter. |
-|   23101   |   16  |   Nein  |   Der Zugriff wird verweigert.   |
+|   23101   |   16  |   Nein  |   Zugriff verweigert.“   |
 |   23102   |   16  |   Nein  |   Das Element ist nicht vorhanden {Element-ID: %ls}.  |
 |   23103   |   16  |   Nein  |   Der Ordner ist bereits vorhanden {Element-ID: %ls}.    |
 |   23104   |   16  |   Nein  |   Der Ordner ist nicht vorhanden {Element-ID: ls}.    |
@@ -8521,7 +8521,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-26000-to-27999"></a>Fehler 26.000 bis 27.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   26010   |   10  |   Ja |   Der Server konnte das zum Initiieren einer SSL-Verbindung benötigte Zertifikat nicht laden. Folgender Fehler wurde zurückgegeben: %#x. Überprüfen Sie, ob die Zertifikate gültig sind. |
 |   26011   |   16  |   Ja |   Der Server konnte die Verschlüsselung wegen eines Problems bei einer Sicherheitsbibliothek nicht initialisieren. Möglicherweise fehlt die Sicherheitsbibliothek. Überprüfen Sie, ob 'security.dll' auf dem System vorhanden ist.    |
@@ -8588,7 +8588,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   27014   |   16  |   Nein  |   Fehler beim Löschen, da das Token nicht im Index auftritt. Der fehlertolerante Index ist beschädigt. |
 |   27015   |   16  |   Nein  |   Unerwartete Länge der RID-Liste. Der fehlertolerante Index ist beschädigt. |
 |   27016   |   16  |   Nein  |   Zum fehlertoleranten Index kann keine Verbindung hergestellt werden. Fehlerhaftes oder fehlendes SqlCommand-Objekt.   |
-|   27017   |   16  |   Nein  |   Fehler beim Löschen des Indexes für die Verweistabellenkopie.   |
+|   27.017   |   16  |   Nein  |   Fehler beim Löschen des Indexes für die Verweistabellenkopie.   |
 |   27018   |   16  |   Nein  |   Metadaten konnten nicht aus dem fehlertoleranten Index abgerufen werden. Der Index ist möglicherweise beschädigt.   |
 |   27019   |   16  |   Nein  |   Es konnte keine Initialisierung basierend auf Metadaten im fehlertoleranten Index ausgeführt werden. Der Index ist möglicherweise beschädigt.    |
 |   27022   |   16  |   Nein  |   Fehler bei der Tabellenwartung für die Fuzzysuche.   |
@@ -8636,7 +8636,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-28000-to-30999"></a>Fehler 28.000 bis 30.999
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   28000   |   16  |   Nein  |   Der entschlüsselte Sitzungsschlüssel weist eine unerwartete Größe auf.   |
 |   28001   |   16  |   Nein  |   Eine beschädigte Nachricht wurde empfangen. Sie enthält ungültige Flags. Folgende Nachricht ist betroffen: Konversations-ID '%.*ls', Initiator: %d und Nachrichtensequenznummer: %I64d. |
@@ -8749,7 +8749,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   30023   |   16  |   Nein  |   Die '%.*ls'-Volltextstoppliste ist nicht vorhanden, oder der aktuelle Benutzer hat keine Berechtigung für diese Aktion. Stellen Sie sicher, dass der Stopplistenname richtig ist und der Benutzer die für die Transact-SQL-Anweisung erforderliche Berechtigung hat.   |
 |   30024   |   16  |   Nein  |   Die '%.*ls'-Volltextstoppliste ist in der aktuellen Datenbank bereits vorhanden. Doppelte Stopplistennamen sind nicht zulässig. Führen Sie die Anweisung erneut aus, und geben Sie einen eindeutigen Stopplistennamen an. |
 |   30028   |   17  |   Nein  |   Fehler beim Abrufen der Pipelineoberfläche für "%ls" (Fehler: 0x%X. Problem bei der Kommunikation mit dem Hostcontroller oder Filterdaemonhost.  |
-|   30029   |   17  |   Nein  |   Fehler beim Starten des Volltext-Hostcontrollers. Fehler: 0x%X. |
+|   30029   |   17  |   Nein  |   Fehler beim Starten des Volltext-Hostcontrollers. Error: 0x%X. |
 |   30031   |   17  |   Nein  |   Fehler bei Volltext-Masterzusammenführung für '%ls'-Volltextkatalog in '%.*ls'-Datenbank mit Fehler 0x%08X.   |
 |   30032   |   16  |   Nein  |   Die "%.*ls"-Stoppliste enthält kein Volltextstoppwort "%.* ls" mit der Gebietsschema-ID %d. Geben Sie ein gültiges Stoppwort und eine Gebietsschema-ID in die Transact-SQL-Anweisung ein. |
 |   30033   |   16  |   Nein  |   Die "%.*ls"-Stoppliste enthält bereits ein Volltextstoppwort "%.* ls" mit der Gebietsschema-ID %d. Geben Sie ein eindeutiges Stoppwort und eine Gebietsschema-ID in die Transact-SQL-Anweisung ein.   |
@@ -8814,7 +8814,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-31000-to-41400"></a>Fehler 31.000 bis 41.400
 
-| Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   31001   |   16  |   Nein  |   Die Sitzung '%s' ist bereits vorhanden. Verwenden Sie einen anderen Sitzungsnamen.  |
 |   31002   |   16  |   Nein  |   Dieser Vorgang kann nur vom Sitzungsbesitzer ausgeführt werden.   |
