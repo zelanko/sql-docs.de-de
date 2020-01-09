@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215627"
----
 3. Öffnen Sie auf allen Clusterknoten die Pacemaker-Firewallports. Führen Sie zum Öffnen dieser Ports mit `firewalld` folgenden Befehl aus:
 
    ```bash

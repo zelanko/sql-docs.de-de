@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f3f8ee0d5766214ed7dc111728c37d0d41f071
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632903"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257017"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lektion 1: Erstellen und Abfragen von Datenbankobjekten
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,24 +84,24 @@ Geben Sie in einem Abfrage-Editorfenster den folgenden Code ein, und führen Sie
   ```  
   
 ### <a name="create-the-table"></a>Erstellen der Tabelle
-Geben Sie in einem Abfrage-Editorfenster den folgenden Code ein, und führen Sie ihn aus, um eine einfache Tabelle namens `Products`zu erstellen. Die Spalten in der Tabelle heißen `ProductID`, `ProductName`, `Price`und `ProductDescription`. Die `ProductID` -Spalte ist der Primärschlüssel der Tabelle. `int`, `varchar(25)`, `money`und `text` sind Datentypen. Nur die Spalten `Price` und `ProductionDescription` dürfen keine Daten enthalten, wenn eine Zeile eingefügt oder geändert wird. Diese Anweisung enthält ein optionales Element (`dbo.`), das als Schema bezeichnet wird. Das Schema ist das Datenbankobjekt, das die Tabelle besitzt. Wenn Sie Administrator sind, ist `dbo` das Standardschema. `dbo` steht für Datenbankbesitzer (database owner, dbo).  
+Geben Sie in einem Abfrage-Editorfenster den folgenden Code ein, und führen Sie ihn aus, um eine einfache Tabelle namens `Products`zu erstellen. Die Spalten in der Tabelle heißen `ProductID`, `ProductName`, `Price`und `ProductDescription`. Die `ProductID` -Spalte ist der Primärschlüssel der Tabelle. `int`, `varchar(25)`, `money`und `varchar(max)` sind Datentypen. Nur die Spalten `Price` und `ProductionDescription` dürfen keine Daten enthalten, wenn eine Zeile eingefügt oder geändert wird. Diese Anweisung enthält ein optionales Element (`dbo.`), das als Schema bezeichnet wird. Das Schema ist das Datenbankobjekt, das die Tabelle besitzt. Wenn Sie Administrator sind, ist `dbo` das Standardschema. `dbo` steht für Datenbankbesitzer (database owner, dbo).  
   
   ```sql  
   CREATE TABLE dbo.Products  
      (ProductID int PRIMARY KEY NOT NULL,  
      ProductName varchar(25) NOT NULL,  
      Price money NULL,  
-     ProductDescription text NULL)  
+     ProductDescription varchar(max) NULL)  
   GO  
  ```  
 
 ## <a name="insert-and-update-data-in-a-table"></a>Einfügen und Aktualisieren von Daten in einer Tabelle
 Nachdem Sie nun die **Products** -Tabelle erstellt haben, können Sie Daten mithilfe der INSERT-Anweisung in die Tabelle einfügen. Nach dem Einfügen der Daten ändern Sie den Inhalt einer Zeile mithilfe einer UPDATE-Anweisung. Mithilfe der WHERE-Klausel der UPDATE-Anweisung schränken Sie das Update auf eine einzelne Zeile ein. Durch die vier Anweisungen werden die folgenden Daten eingegeben.  
   
-|ProductID|ProductName|Price|ProductDescription|  
+|ProductID|ProductName|Preis|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
 |1|Clamp|12.48|Workbench clamp|  
-|50|Screwdriver|3.17|Flat head|  
+|50|Screwdriver|3,17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  
   
@@ -212,7 +212,7 @@ Weitere Informationen zu bestimmten Funktionen, die zum Bearbeiten von Daten in 
   
 |||  
 |-|-|  
-|[Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)|[Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
+|[String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen &#40;Transact-SQL&#41;)](../t-sql/functions/string-functions-transact-sql.md)|[Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL))](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
 |[Mathematische Funktionen &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Text- und Bildfunktionen &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
 
 ## <a name="create-views-and-stored-procedures"></a>Erstellen von Ansichten und gespeicherten Prozeduren

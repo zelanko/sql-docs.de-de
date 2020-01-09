@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67834423"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329962"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Active Directory-Authentifizierung für SQL Server für Linux
 
@@ -44,8 +44,8 @@ Ausführliche Informationen dazu, wie AD-Authentifizierung konfiguriert wird, fi
 1. [Verknüpfen eines Hosts für SQL Server für Linux mit einer Active Directory-Domäne](sql-server-linux-active-directory-join-domain.md)
 1. [Erstellen eines AD-Benutzers für SQL Server und Festlegen des Dienstprinzipalnamens](sql-server-linux-active-directory-authentication.md#createuser).
 1. [Konfigurieren der KEYTAB-Datei für den SQL Server-Dienst](sql-server-linux-active-directory-authentication.md#configurekeytab)
-1. [Schützen der KEYTAB-Datei](sql-server-linux-active-directory-authentication.md#securekeytab).
-1. [Konfigurieren von SQL Server für die Verwendung der KEYTAB-Datei für die Kerberos-Authentifizierung](sql-server-linux-active-directory-authentication.md#keytabkerberos)
+1. [Schützen der KEYTAB-Datei](sql-server-linux-active-directory-authentication.md#configurekeytab).
+1. [Konfigurieren von SQL Server für die Verwendung der KEYTAB-Datei für die Kerberos-Authentifizierung](sql-server-linux-active-directory-authentication.md#configurekeytab)
 1. [Erstellen von AD-basierten SQL Server-Anmeldeinformationen in Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins)
 1. [Herstellen einer Verbindung mit SQL Server über die AD-Authentifizierung](sql-server-linux-active-directory-authentication.md#connect)
 
@@ -53,6 +53,6 @@ Ausführliche Informationen dazu, wie AD-Authentifizierung konfiguriert wird, fi
 
 - Derzeit ist CERTIFICATE die einzige unterstützte Authentifizierungsmethode für einen Datenbankspiegelungs-Endpunkt. Die WINDOWS-Authentifizierungsmethode wird in einer zukünftigen Version aktiviert.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zum Implementieren der Active Directory-Authentifizierung für SQL Server für Linux finden Sie im [Tutorial: Verwenden der Active Directory-Authentifizierung für SQL Server für Linux](sql-server-linux-active-directory-authentication.md).

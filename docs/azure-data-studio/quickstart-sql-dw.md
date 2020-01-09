@@ -1,21 +1,21 @@
 ---
-title: 'Schnellstart: Herstellen einer Verbindung mit und Abfragen einer Azure SQL Data Warehouse-Datenbank'
+title: Herstellen einer Verbindung mit und Abfragen einer Azure SQL Data Warehouse-Datenbank
 titleSuffix: Azure Data Studio
 description: In diesem Schnellstart erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit einer Azure SQL Data Warehouse-Datenbank herstellen und eine Abfrage ausführen.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/24/2018
+ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959406"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957107"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Schnellstart: Verwenden von [!INCLUDE[name-sos](../includes/name-sos-short.md)], um eine Verbindung mit Daten in Azure SQL Data Warehouse herzustellen und sie abzufragen
 
@@ -41,12 +41,12 @@ Verwenden Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], um eine Verbi
 
 2. In diesem Artikel wird die *SQL-Anmeldung* verwendet, aber auch die *Windows-Authentifizierung* wird unterstützt. Füllen Sie die Felder wie folgt aus, wozu Sie den Servernamen, den Benutzernamen und das Kennwort für *Ihre* Azure SQL Server-Instanz verwenden:
 
-   | Einstellung       | Vorgeschlagener Wert | und Beschreibung |
+   | Einstellung       | Vorgeschlagener Wert | BESCHREIBUNG |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servername** | Der vollqualifizierte Servername | Der Name sollte in etwa wie folgt lauten: **sqldwsample.database.windows.net** |
    | **Authentifizierung** | SQL-Anmeldung| In diesem Tutorial wird SQL-Authentifizierung verwendet. |
-   | **User name** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
-   | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Konto des Serveradministrators | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
+   | **Benutzername** | Das Serveradministratorkonto | Hierbei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
+   | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Serveradministratorkonto | Hierbei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort speichern** | Ja oder Nein | Wählen Sie „Ja“ aus, wenn Sie Ihr Kennwort nicht jedes Mal eingeben möchten. |
    | **Datenbankname** | *Leer lassen* | Dies ist der Name der Datenbank, mit der eine Verbindung hergestellt werden soll. |
    | **Servergruppe** | <Default> auswählen | Wenn Sie eine Servergruppe erstellt haben, können Sie dieses Feld auf eine bestimmte Servergruppe festlegen. | 
