@@ -1,6 +1,6 @@
 ---
 title: Editionen und unterstützte Funktionen von SQL Server 2019 – Linux
-ms.date: 10/23/2019
+ms.date: 01/08/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72954992"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776556"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2019 unter Linux
 
@@ -68,7 +68,7 @@ Sie können auch nur die Clientkomponenten von [!INCLUDE[ssNoVersion](../include
 
 SQL Server 2019 für Linux unterstützt die SQL Server-Datenbank-Engine. In der folgenden Tabelle sind die Features beschrieben, die es in der Datenbank-Engine gibt.   
   
-|Serverkomponenten|und Beschreibung|  
+|Serverkomponenten|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] enthält die [!INCLUDE[ssDE](../includes/ssde-md.md)]. Diese ist der Basisdienst für Speichern, Verarbeiten und Schützen von Daten, Replikation, Volltextsuche, Tools zum Verwalten von relationalen und XML-Daten und Integration von datenbankinternen Analysen.|  
 
@@ -94,23 +94,23 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Protokollversand|Ja|Ja|Ja|Nein|  
-|Sicherungskomprimierung|Ja|Ja|Nein|Nein| 
-|Datenbankmomentaufnahme|Ja|Nein|Nein|Nein|
-|Always On-Failoverclusterinstanzen<sup>1</sup>|Ja|Ja|Nein|Nein| 
-|AlwaysOn-Verfügbarkeitsgruppen<sup>2</sup>|Ja|Nein|Nein|Nein|
-|Basis-Verfügbarkeitsgruppen<sup>3</sup>|Nein|Ja|Nein|Nein|
-|Mindestreplikate für Commitverfügbarkeitsgruppen|Ja|Ja|Nein|Nein|
-|Verfügbarkeitsgruppe ohne Cluster|Ja|Ja|Nein|Nein|
-|Onlineseiten- und Onlinedateiwiederherstellung|Ja|Nein|Nein|Nein|
-|Online-Indizierung|Ja|Nein|Nein|Nein|
-|Fortsetzbare Neuerstellung von online geschalteten Indizes|Ja|Nein|Nein|Nein|
-|Onlineschemaänderung|Ja|Nein|Nein|Nein|
-|Schnelle Wiederherstellung|Ja|Nein|Nein|Nein|
-|Gespiegelte Sicherungen|Ja|Nein|Nein|Nein|
-|Hinzufügen von Speicher im laufenden Systembetrieb und CPU|Ja|Nein|Nein|Nein|
-|Verschlüsselte Sicherung|Ja|Ja|Nein|Nein|
-|Hybridsicherung in Azure (Sicherung über URL)|Ja|Ja|Nein|Nein|
+|Protokollversand|Ja|Ja|Ja|Nein |  
+|Sicherungskomprimierung|Ja|Ja|Nein |Nein | 
+|Datenbankmomentaufnahme|Ja|Nein |Nein |Nein |
+|Always On-Failoverclusterinstanzen<sup>1</sup>|Ja|Ja|Nein |Nein | 
+|AlwaysOn-Verfügbarkeitsgruppen<sup>2</sup>|Ja|Nein |Nein |Nein |
+|Basis-Verfügbarkeitsgruppen<sup>3</sup>|Nein |Ja|Nein |Nein |
+|Mindestreplikate für Commitverfügbarkeitsgruppen|Ja|Ja|Nein |Nein |
+|Verfügbarkeitsgruppe ohne Cluster|Ja|Ja|Nein |Nein |
+|Onlineseiten- und Onlinedateiwiederherstellung|Ja|Nein |Nein |Nein |
+|Online-Indizierung|Ja|Nein |Nein |Nein |
+|Fortsetzbare Neuerstellung von online geschalteten Indizes|Ja|Nein |Nein |Nein |
+|Onlineschemaänderung|Ja|Nein |Nein |Nein |
+|Schnelle Wiederherstellung|Ja|Nein |Nein |Nein |
+|Gespiegelte Sicherungen|Ja|Nein |Nein |Nein |
+|Hinzufügen von Speicher im laufenden Systembetrieb und CPU|Ja|Nein |Nein |Nein |
+|Verschlüsselte Sicherung|Ja|Ja|Nein |Nein |
+|Hybridsicherung in Azure (Sicherung über URL)|Ja|Ja|Nein |Nein |
   
 <sup>1</sup> Bei der Enterprise Edition entspricht die Anzahl der Knoten dem Maximum des Betriebssystems. Bei der Standard Edition werden nur zwei Knoten unterstützt. 
 
@@ -124,19 +124,19 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Ja|Ja|Ja|Ja|  
 |Große Objektbinärdateien in gruppierten Columnstore-Indizes|Ja|Ja|Ja|Ja|  
-|Onlineneuerstellung für nicht gruppierten Columnstore-Index|Ja|Nein|Nein|Nein|
+|Onlineneuerstellung für nicht gruppierten Columnstore-Index|Ja|Nein |Nein |Nein |
 |In-Memory-OLTP <sup>1</sup>|Ja|Ja|Ja|Ja|
 |Persistenter Hauptspeicher|Ja|Ja|Ja|Ja|
 |Tabellen- und Indexpartitionierung|Ja|Ja|Ja|Ja|  
 |Datenkomprimierung|Ja|Ja|Ja|Ja|
-|Resource Governor|Ja|Nein|Nein|Nein|  
-|Parallelverarbeitung für partitionierte Tabellen|Ja|Nein|Nein|Nein|
-|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein|Nein|Nein|
-|Ressourcenkontrolle für E/A-Vorgänge|Ja|Nein|Nein|Nein|  
+|Resource Governor|Ja|Nein |Nein |Nein |  
+|Parallelverarbeitung für partitionierte Tabellen|Ja|Nein |Nein |Nein |
+|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein |Nein |Nein |
+|Ressourcenkontrolle für E/A-Vorgänge|Ja|Nein |Nein |Nein |  
 |Verzögerte Dauerhaftigkeit|Ja|Ja|Ja|Ja|
-|Automatische Optimierung|Ja|Nein|Nein|Nein|
-|Adaptive Joins im Batchmodus|Ja|Nein|Nein|Nein|
-|Feedback zur Speicherzuweisung im Batchmodus|Ja|Nein|Nein|Nein|
+|Automatische Optimierung|Ja|Nein |Nein |Nein |
+|Adaptive Joins im Batchmodus|Ja|Nein |Nein |Nein |
+|Feedback zur Speicherzuweisung im Batchmodus|Ja|Nein |Nein |Nein |
 |Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen|Ja|Ja|Ja|Ja|
 |Verbesserungen beim massenhaften Einfügen|Ja|Ja|Ja|Ja|
 
@@ -152,10 +152,10 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Dynamische Datenmaskierung|Ja|Ja|Ja|Ja|   
 |Allgemeine Überwachung|Ja|Ja|Ja|Ja| 
 |Feine Überwachung|Ja|Ja|Ja|Ja| 
-|Transparente Datenbankverschlüsselung|Ja|Nein|Nein|Nein|   
+|Transparente Datenbankverschlüsselung|Ja|Nein |Nein |Nein |   
 |Benutzerdefinierte Rollen|Ja|Ja|Ja|Ja| 
 |Eigenständige Datenbanken|Ja|Ja|Ja|Ja| 
-|Verschlüsselung von Sicherungen|Ja|Ja|Nein|Nein|  
+|Verschlüsselung von Sicherungen|Ja|Ja|Nein |Nein |  
 
 ##  <a name="RDBMSM"></a> RDBMS: Verwaltbarkeit  
   
@@ -164,17 +164,17 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Dedizierte Administratorverbindung|Ja|Ja|Ja|Ja, mit Ablaufverfolgungsflag|   
 |PowerShell-Skriptunterstützung|Ja|Ja|Ja|Ja| 
 |Unterstützung für Komponentenvorgänge der Datenschichtanwendung: Extrahieren, Bereitstellen, Aktualisieren, Löschen|Ja|Ja|Ja|Ja| 
-|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|Ja|Ja|Ja|Nein|  
-|Sammler von Leistungsdaten|Ja|Ja|Ja|Nein|
-|Standardleistungsberichte|Ja|Ja|Ja|Nein|
-|Planhinweislisten und Planeinfrierung für Planhinweislisten|Ja|Ja|Ja|Nein| 
+|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|Ja|Ja|Ja|Nein |  
+|Sammler von Leistungsdaten|Ja|Ja|Ja|Nein |
+|Standardleistungsberichte|Ja|Ja|Ja|Nein |
+|Planhinweislisten und Planeinfrierung für Planhinweislisten|Ja|Ja|Ja|Nein | 
 |Direkte Abfrage von indizierten Sichten (mittels NOEXPAND-Hinweis)|Ja|Ja|Ja|Ja| 
-|Automatische Wartung für indizierte Sichten|Ja|Ja|Ja|Nein|
-|Verteilte partitionierte Sichten|Ja|Nein|Nein|Nein| 
-|Parallele Indexvorgänge|Ja|Nein|Nein|Nein|  
-|Automatische Verwendung indizierter Sichten mittels Abfrageoptimierer|Ja|Nein|Nein|Nein| 
-|Parallele Konsistenzprüfung|Ja|Nein|Nein|Nein| 
-|SQL Server-Steuerungspunkt für das Hilfsprogramm|Ja|Nein|Nein|Nein|    
+|Automatische Wartung für indizierte Sichten|Ja|Ja|Ja|Nein |
+|Verteilte partitionierte Sichten|Ja|Nein |Nein |Nein | 
+|Parallele Indexvorgänge|Ja|Nein |Nein |Nein |  
+|Automatische Verwendung indizierter Sichten mittels Abfrageoptimierer|Ja|Nein |Nein |Nein | 
+|Parallele Konsistenzprüfung|Ja|Nein |Nein |Nein | 
+|SQL Server-Steuerungspunkt für das Hilfsprogramm|Ja|Nein |Nein |Nein |    
 
 ##  <a name="Programmability"></a> Programmability  
   
@@ -191,8 +191,8 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Volltextsuche und semantische Suche|Ja|Ja|Ja|Ja|
 |Angabe der Sprache in einer Abfrage|Ja|Ja|Ja|Ja|
 |Service Broker (Messaging)|Ja|Ja|Nein (nur Client)|Nein (nur Client)|
-|Transact-SQL-Endpunkte|Ja|Ja|Ja|Nein|
-|Diagramm|Ja|Ja|Ja|Ja|  
+|Transact-SQL-Endpunkte|Ja|Ja|Ja|Nein |
+|Graph|Ja|Ja|Ja|Ja|  
 
 
 <sup>1</sup> Horizontale Skalierung mit mehreren Computeknoten erfordert einen Hauptknoten.
@@ -212,7 +212,7 @@ Informationen über die Features von Integration Services (SSIS), die von den ei
 
 ## <a name="Unsupported"></a> Nicht unterstützte Features und Dienste
 
-Die folgenden Features und Dienste stehen in SQL Server 2019 für Linux nicht zur Verfügung. Die Unterstützung dieser Features wird im Laufe der Zeit ausgeweitet.
+Die folgenden Features und Dienste stehen für SQL Server 2019 für Linux nicht zur Verfügung. Die Unterstützung dieser Features wird im Laufe der Zeit ausgeweitet.
 
 | Bereich | Nicht unterstütztes Feature oder Dienst |
 |-----|-----|
@@ -225,9 +225,9 @@ Die folgenden Features und Dienste stehen in SQL Server 2019 für Linux nicht zu
 | &nbsp; | CLR-Assemblys mit festgelegter EXTERNAL_ACCESS- oder UNSAFE-Berechtigung |
 | &nbsp; | Pufferpoolerweiterung |
 | **SQL Server-Agent** |  Subsysteme: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
-| &nbsp; | Warnungen |
-| &nbsp; | Verwaltete Sicherung |
-| **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
+| &nbsp; | Alerts |
+| &nbsp; | Managed Backup |
+| **Hochverfügbarkeit** | Datenbankspiegelung  |
 | **Security** | Erweiterbare Schlüsselverwaltung |
 | &nbsp; | Azure AD-Authentifizierung für Verbindungsserver | 
 | &nbsp; | Azure AD-Authentifizierung für Verfügbarkeitsgruppen | 

@@ -10,12 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fcb16d2ec3c267dc2927f22a029709a434416c9
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959118"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776511"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler-Erweiterung (Vorschau)
 
@@ -32,13 +32,13 @@ Die SQL Server Profiler-Erweiterung (Vorschauversion) bietet eine einfache SQL S
 
 ## <a name="install-the-sql-server-profiler-extension"></a>Installieren der SQL Server Profiler-Erweiterung
 
-1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, wählen Sie das Symbol für Erweiterungen aus, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
+1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, klicken Sie auf das Symbol für Erweiterungen, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
 2. Wählen Sie eine verfügbare Erweiterung aus, um deren Details anzuzeigen.
 
    ![Profiler-Erweiterungs-Manager](media/extensions/sql-server-profiler-extension/profiler-extension.png)
 
-1. Wählen Sie die gewünschte Erweiterung aus, und **Installieren** Sie diese.
-2. Wählen Sie **Neu laden** aus, um die Erweiterung zu aktivieren (nur bei der ersten Installation einer Erweiterung erforderlich).
+1. Wählen Sie die gewünschte Erweiterung aus, und **installieren** Sie diese.
+2. Klicken Sie auf **Erneut laden**, um die Erweiterung zu aktivieren (nur bei der Erstinstallation einer Erweiterung erforderlich).
 
 ## <a name="start-profiler"></a>Starten des Profilers
 

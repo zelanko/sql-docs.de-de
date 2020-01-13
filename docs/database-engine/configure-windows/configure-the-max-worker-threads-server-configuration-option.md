@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ea6d737dcb45a1b300b53c0b232b2b6565e6e750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012534"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776423"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "68012534"
     |Anzahl von CPUs|32-Bit-Computer|64-Bit-Computer|  
     |------------|------------|------------| 
     |\<= 4 Prozessoren|256|512|
-    |\> 4 Prozessoren und \< 64 Prozessoren|256 + ((logische CPUs - 4) * 8)|512 + ((logische CPUs – 4) * 16)|
+    |\> 4 Prozessoren und \< = 64 Prozessoren|256 + ((logische CPUs - 4) * 8)|512 + ((logische CPUs – 4) * 16)|
     |\> 64 Prozessoren|256 + ((logische CPUs – 4) * 32)|512 + ((logische CPUs – 4) * 32)|
   
     > [!NOTE]  

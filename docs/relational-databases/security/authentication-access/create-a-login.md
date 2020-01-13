@@ -23,17 +23,17 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f0f45200e32fe61f9a8a19fd2cd3a6ff17fa9cd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903031"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776388"
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Thema wird beschrieben, wie eine Anmeldung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] oder [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] erstellt wird. Ein Anmeldename ist die Identität von Personen oder Prozessen, die eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen.  
+  In diesem Thema wird beschrieben, wie eine Anmeldung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] oder [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird. Ein Anmeldename ist die Identität von Personen oder Prozessen, die eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen.  
   
 ##  <a name="Background"></a> Hintergrund  
  Eine Anmeldung ist ein Sicherheitsprinzipal oder eine Entität, die von einem sicheren System authentifiziert werden kann. Benutzer benötigen einen Anmeldenamen, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen zu können. Sie können auf Grundlage eines Windows-Prinzipals (z. B. ein Domänenbenutzer oder eine Windows-Domänengruppe) eine Anmeldung erstellen, oder Sie können eine Anmeldung erstellen, die nicht auf einem Windows-Prinzipal (z. B. eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung) basiert.  
@@ -44,7 +44,7 @@ ms.locfileid: "72903031"
   
 > **HINWEIS:** Wenn eine Anmeldung eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellt, wird die Identität in der Masterdatenbank überprüft. Verwenden Sie eigenständige Datenbankbenutzer, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] -Verbindungen auf Datenbankebene zu authentifizieren. Eine Anmeldung ist nicht erforderlich, wenn Sie eigenständige Datenbankbenutzer verwenden. Eine eigenständige Datenbank ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (und der Masterdatenbank), der die Datenbank hostet, isoliert ist. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt eigenständige Datenbankbenutzer sowohl für die Windows- als auch für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung. Kombinieren Sie bei Verwendung von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]eigenständige Datenbankbenutzer mit den Firewallregeln auf Datenbankebene. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-##  <a name="Security"></a> Security  
+##  <a name="Security"></a> Sicherheit  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erfordert die **ALTER ANY LOGIN** -Berechtigung oder die **ALTER LOGIN** -Berechtigung für den Server.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "72903031"
   
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit**, zeigen Sie auf **Neu**, und wählen Sie dann **Anmeldung...** aus.  
   
-3.  Geben Sie in das Dialogfeld **Anmeldung - Neu** auf der Seite **Allgemein** einen Benutzernamen in das Feld **Anmeldename** ein. Klicken Sie alternativ auf **Suchen...** , um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
+3.  Geben Sie in das Dialogfeld **Anmeldung - Neu** auf der Seite **Allgemein** einen Benutzernamen in das Feld **Anmeldename** ein. Klicken Sie alternativ auf **Suchen...**, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
   
      Wenn Sie auf **Suchen...** klicken:  
   
-    1.  Klicken Sie unter **Wählen Sie den Objekttyp aus** auf **Objekttypen...** , um das Dialogfeld **Objekttypen** zu öffnen, und wählen Sie beliebige oder alle der folgenden Optionen aus: **Integrierte Sicherheitsprinzipale**, **Gruppen** und **Benutzer**. Die Optionen**Integrierte Sicherheitsprinzipale** und **Benutzer** sind standardmäßig ausgewählt. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+    1.  Klicken Sie unter **Wählen Sie den Objekttyp aus** auf **Objekttypen...**, um das Dialogfeld **Objekttypen** zu öffnen, und wählen Sie beliebige oder alle der folgenden Optionen aus: **Integrierte Sicherheitsprinzipale**, **Gruppen** und **Benutzer**. Die Optionen**Integrierte Sicherheitsprinzipale** und **Benutzer** sind standardmäßig ausgewählt. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-    2.  Klicken Sie unter **Suchpfad** auf **Speicherorte...** , um das Dialogfeld **Speicherorte** zu öffnen, und wählen Sie einen der verfügbaren Serverspeicherorte aus. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+    2.  Klicken Sie unter **Suchpfad** auf **Speicherorte...**, um das Dialogfeld **Speicherorte** zu öffnen, und wählen Sie einen der verfügbaren Serverspeicherorte aus. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
     3.  Geben Sie unter **Geben Sie die zu verwendenden Objektnamen ein (Beispiele)** den Benutzer- oder Gruppennamen ein, den Sie suchen möchten. Weitere Informationen finden Sie unter [Benutzer, Computer oder Gruppen auswählen (Dialogfeld)](https://technet.microsoft.com/library/cc771712.aspx).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "72903031"
   
 5.  Um eine Anmeldung zu erstellen, die auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank gespeichert wird, wählen Sie **SQL Server-Authentifizierung**aus.  
   
-    1.  Geben Sie im Feld **Kennwort** ein Kennwort für den neuen Benutzer ein. Geben Sie im Feld **Kennwort bestätigen** das Kennwort erneut ein.  
+    1.  Geben Sie im Feld **Kennwort** ein Kennwort für den neuen Benutzer ein. Geben Sie dieses Kennwort erneut im Feld **Kennwort bestätigen** ein.  
   
     2.  Wenn Sie ein vorhandenes Kennwort ändern, wählen Sie **Altes Kennwort angeben**aus, und geben Sie dann das alte Kennwort im Feld **Altes Kennwort** ein.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72903031"
  Im Dialogfeld **Anmeldung – Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Serverrollen**, **Benutzerzuordnung**, **Sicherungsfähige Elemente** und **Status**.  
   
 ### <a name="server-roles"></a>Serverrollen  
- Die Seite **Serverrollen** listet alle möglichen Rollen auf, die der neuen Anmeldung zugewiesen werden können. Die folgenden Optionen stehen zur Verfügung:  
+ Die Seite **Serverrollen** listet alle möglichen Rollen auf, die der neuen Anmeldung zugewiesen werden können. Die folgenden Optionen sind verfügbar:  
   
  Kontrollkästchen**bulkadmin**  
  Mitglieder der festen Serverrolle **bulkadmin** können die BULK INSERT-Anweisung ausführen.  
@@ -136,7 +136,7 @@ ms.locfileid: "72903031"
  **Benutzer, die dieser Anmeldung zugeordnet sind**  
  Wählt die Datenbanken aus, auf die von dieser Anmeldung zugegriffen werden kann. Wenn Sie eine Datenbank auswählen, werden die gültigen Datenbankrollen im Bereich **Mitgliedschaft in Datenbankrolle für:** _Datenbankname_ angezeigt.  
   
- **Karte**  
+ **Map**  
  Ermöglicht der Anmeldung den Zugriff auf die nachfolgend aufgeführten Datenbanken.  
   
  **Datenbank**  
@@ -148,10 +148,10 @@ ms.locfileid: "72903031"
  **Standardschema**  
  Gibt das Standardschema des Benutzers an. Wenn ein Benutzer zum ersten Mal erstellt wird, wird als Standardschema **dbo**verwendet. Es kann auch ein Standardschema angegeben werden, das noch nicht vorhanden ist. Für Benutzer, die einer Windows-Gruppe, einem Zertifikat oder einem asymmetrischen Schlüssel zugeordnet sind, kann kein Standardschema angegeben werden.  
   
- **Guest account enabled for:**  _database_name_  
+ **Gastkonto aktiviert für:** _Datenbankname_  
  Ein Nur-Lese-Attribut, das angibt, ob das Gastkonto für die ausgewählte Datenbank aktiviert ist. Verwenden Sie die Seite **Status** des Dialogfelds **Anmeldungseigenschaften** des Gastkontos, um das Gastkonto zu aktivieren oder zu deaktivieren.  
   
- **Database role membership for:**  _database_name_  
+ **Mitgliedschaft in Datenbankrolle für:** _Datenbankname_  
  Wählen Sie die Rollen für den Benutzer in der angegebenen Datenbank aus. Alle Benutzer sind Mitglieder der **public** -Rolle in allen Datenbanken und können nicht entfernt werden. Weitere Informationen zu Datenbankrollen finden Sie unter [Rollen auf Datenbankebene](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Sicherungsfähige Elemente  
@@ -164,17 +164,17 @@ ms.locfileid: "72903031"
   
 1.  Klicken Sie auf **Suchen**.  
   
-2.  Wählen Sie im Dialogfeld **Objekte hinzufügen** eine der folgenden Optionen aus: **Bestimmte Objekte...** , **All objects of the types...** (Alle Objekte der Typen...) oder **The Server** _server\_name_ (Server „server_name“). [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Wählen Sie im Dialogfeld **Objekte hinzufügen** eine der folgenden Optionen aus: **Bestimmte Objekte...**, **All objects of the types...** (Alle Objekte der Typen...) oder **The Server**_server\_name_ (Server „server_name“). [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **HINWEIS:** Wenn Sie die Option **The Server** _server\_name_ (Server „server_name“) auswählen, wird das obere Raster automatisch mit allen sicherungsfähigen Objekten des Servers gefüllt.  
+    > **HINWEIS:** Wenn Sie die Option **The Server**_server\_name_ (Server „server_name“) auswählen, wird das obere Raster automatisch mit allen sicherungsfähigen Objekten des Servers gefüllt.  
   
-3.  Bei Auswahl der Option **Bestimmte Objekte...** :  
+3.  Bei Auswahl der Option **Bestimmte Objekte...**:  
   
-    1.  Klicken Sie im Dialogfeld **Objekte auswählen** unter **Wählen Sie Objekttypen aus** auf **Objekttypen...** .  
+    1.  Klicken Sie im Dialogfeld **Objekte auswählen** unter **Wählen Sie Objekttypen aus** auf **Objekttypen...**.  
   
     2.  Wählen Sie im Dialogfeld **Objekttypen auswählen** beliebige oder alle der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen** und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Klicken Sie unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** auf **Durchsuchen...** .  
+    3.  Klicken Sie unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** auf **Durchsuchen...**.  
   
     4.  Wählen Sie im Dialogfeld **Nach Objekten suchen** eines der verfügbaren Objekte vom Typ aus, den Sie im Dialogfeld **Objekttypen auswählen** ausgewählt haben, und klicken Sie anschließend auf **OK**.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "72903031"
  **Mit Erteilung**  
  Zeigt den Status der WITH GRANT-Option für die angezeigte Berechtigung an. Dieses Feld ist schreibgeschützt. Verwenden Sie die [GRANT](../../../t-sql/statements/grant-transact-sql.md) -Anweisung, um diese Berechtigung anzuwenden.  
   
- **Verweigern**  
+ **Deny**  
  Aktivieren Sie diese Option, um der Anmeldung diese Berechtigung zu verweigern. Deaktivieren Sie diese Option, um diese Berechtigung aufzuheben.  
   
 ### <a name="status"></a>Status  
@@ -216,14 +216,14 @@ ms.locfileid: "72903031"
   
  Wählen Sie **Erteilen** aus, um der Anmeldung die CONNECT SQL-Berechtigung zu erteilen. Wählen Sie **Verweigern** aus, um der Anmeldung die CONNECT SQL-Berechtigung zu verweigern.  
   
- **Anmeldename**  
+ **Anmeldung**  
  Wenn Sie diese Einstellung verwenden, muss der ausgewählte Anmeldename als Datensatz in einer Tabelle betrachtet werden. Änderungen an den hier aufgeführten Werten werden auf den Datensatz angewendet.  
   
  Ein deaktivierter Anmeldename bleibt weiterhin als Datensatz bestehen. Beim Herstellen der Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]wird der Anmeldename jedoch nicht authentifiziert.  
   
  Wählen Sie diese Option aus, um diesen Anmeldenamen zu aktivieren oder zu deaktivieren. Für diese Option wird die ALTER LOGIN-Anweisung mit der Option ENABLE oder DISABLE verwendet.  
   
- **SQL Server Authentication**  
+ **SQL Server-Authentifizierung**  
  Das Kontrollkästchen **Anmeldung ist gesperrt** ist nur verfügbar, wenn der ausgewählte Anmeldename die Verbindung mithilfe der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung herstellt, und wenn der Anmeldename gesperrt ist. Diese Einstellung ist schreibgeschützt. Führen Sie ALTER LOGIN mit der Option UNLOCK aus, wenn Sie die Sperre für eine Anmeldung aufheben möchten.  
   
 ##  <a name="TsqlProcedure"></a> Erstellen einer Anmeldung mit Windows-Authentifizierung über T-SQL  
@@ -243,7 +243,7 @@ ms.locfileid: "72903031"
   
     ```  
   
-## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Erstellen einer Anmeldung mit SQL Server-Authentifizierung mit SSMS  
+## <a name="create-a-login-using-sql-server-authentication-using-t-sql"></a>Erstellen einer Anmeldung mit SQL Server-Authentifizierung mit T-SQL
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
