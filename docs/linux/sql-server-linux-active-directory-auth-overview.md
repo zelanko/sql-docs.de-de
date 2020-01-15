@@ -11,18 +11,18 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
-ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
+ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "75329962"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831829"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Active Directory-Authentifizierung für SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieser Artikel enthält eine Übersicht über Active Directory-Authentifizierung (AD-Authentifizierung) für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux. AD-Authentifizierung wird in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auch als integrierte Authentifizierung bezeichnet. 
+Dieser Artikel enthält eine Übersicht über Active Directory-Authentifizierung (AD-Authentifizierung) für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux. AD-Authentifizierung wird in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auch als integrierte Authentifizierung bezeichnet.
 
 ## <a name="ad-authentication-overview"></a>AD-Authentifizierung: Übersicht
 
@@ -30,10 +30,10 @@ AD-Authentifizierung ermöglicht es domäneneingebundenen Clients unter Windows 
 
 AD-Authentifizierung hat die folgenden Vorteile gegenüber [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Authentifizierung:
 
-- Benutzer werden über einmaliges Anmelden authentifiziert, ohne dass sie zur Eingabe eines Kennworts aufgefordert werden.   
+- Benutzer werden über einmaliges Anmelden authentifiziert, ohne dass sie zur Eingabe eines Kennworts aufgefordert werden.
 - Durch Erstellen von Anmeldungen für AD-Gruppen können Sie Zugriff und Berechtigungen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] über AD-Gruppenmitgliedschaften verwalten.  
 - Jeder Benutzer hat eine einzige Identität in Ihrer Organisation, sodass Sie nicht nachverfolgen müssen, welche [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Anmeldungen welchen Personen entsprechen.   
-- AD ermöglicht es Ihnen, eine zentralisierte Kennwortrichtlinie in Ihrer gesamten Organisation zu erzwingen.   
+- AD ermöglicht es Ihnen, eine zentralisierte Kennwortrichtlinie in Ihrer gesamten Organisation zu erzwingen.
 
 ## <a name="configuration-steps"></a>Konfigurationsschritte
 

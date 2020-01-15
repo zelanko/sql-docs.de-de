@@ -10,18 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 43e8e235a00465b2f2bd6f30769ac173f620dcf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295883"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924986"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Laden von Daten in SQL Server oder Azure SQL-Datenbank mit SQL Server Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 Erstellen Sie ein SQL Server Integration Services-Paket (SSIS), um Daten in SQL Server oder [Azure SQL-Datenbank](/azure/sql-database/) zu verlagern. Sie können die Daten optional umstrukturieren, transformieren und bereinigen, während diese den SSIS-Datenfluss durchlaufen.
 
@@ -30,7 +28,6 @@ Dieser Artikel enthält Anleitungen für folgende Aktionen:
 * Erstellen Sie ein neues Integration Services-Projekt in Visual Studio.
 * Entwerfen Sie ein SSIS-Paket, das Daten aus der Quelle in das Ziel lädt.
 * Führen Sie das SSIS-Paket aus, um die Daten zu laden.
-
 
 ## <a name="basic-concepts"></a>Grundlegende Konzepte
 
@@ -140,8 +137,8 @@ Visual Studio wird geöffnet und erstellt ein neues Integration Services-Projekt
    2. Geben Sie unter **Servername** den Namen des Servers mit SQL Server oder Azure SQL-Datenbank ein.
    3. Wählen Sie im Abschnitt **Beim Server anmelden** die Option **SQL Server-Authentifizierung verwenden** aus, und geben Sie die Authentifizierungsinformationen ein.
    4. Wählen Sie im Abschnitt **Mit Datenbank verbinden** eine vorhandene Datenbank aus.
-    A. Klicken Sie auf **Verbindung testen**.
-    B. Klicken Sie im Dialogfeld, in dem die Ergebnisse des Verbindungstests gemeldet werden, auf **OK**, um zum Dialogfeld **Verbindungs-Manager** zurückzukehren.
+    a. Klicken Sie auf **Verbindung testen**.
+    b. Klicken Sie im Dialogfeld, in dem die Ergebnisse des Verbindungstests gemeldet werden, auf **OK**, um zum Dialogfeld **Verbindungs-Manager** zurückzukehren.
     c. Klicken Sie im Dialogfeld **Verbindungs-Manager** auf **OK**, um zum Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** zurückzukehren.
 5. Klicken Sie im Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** auf **OK**, um zum **ADO.NET-Ziel-Editor** zurückzukehren.
 6. Klicken Sie im **ADO.NET-Ziel-Editor** neben der Liste **Tabelle oder Sicht verwenden** auf **Neu**, um das Dialogfeld **Tabelle erstellen** zu öffnen, um eine neue Zieltabelle mit einer Spaltenliste zu erstellen, die der Quelltabelle entspricht.
@@ -172,7 +169,7 @@ Wenn die Ausführung des Pakets abgeschlossen ist, sehen Sie grüne Häkchen, di
 
 ![][15]
 
-Gratulation! Sie haben mit SQL Server Integration Services erfolgreich Daten in SQL Server oder Azure SQL-Datenbank geladen.
+Glückwunsch! Sie haben mit SQL Server Integration Services erfolgreich Daten in SQL Server oder Azure SQL-Datenbank geladen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

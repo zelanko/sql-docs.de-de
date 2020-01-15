@@ -1,6 +1,5 @@
 ---
-title: 'Schnellstart: Erweiterte Ereignisse in SQL Server | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Schnellstart: Erweiterte Ereignisse in SQL Server'
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798430"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242922"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Schnellstart: Erweiterte Ereignisse in SQL Server
 
@@ -59,7 +58,7 @@ Die folgenden Vorbereitungen wären erforderlich, damit Sie die nachfolgende Dem
 1. [Herunterladen von SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
   - Sie sollten jeden Monat das neueste monatliche Update von SSMS installieren.
 2. Melden Sie sich bei Microsoft SQL Server 2014 oder höher oder in einer Datenbank von Azure SQL-Datenbank an, wobei `SELECT @@version` einen Wert zurückgibt, dessen erster Knoten 12 oder höher ist.
-3. Stellen Sie sicher, dass Ihr Konto über die [Serverberechtigung](../../t-sql/statements/grant-server-permissions-transact-sql.md) **ALTER ANY EVENT SESSION**verfügt.
+3. Stellen Sie sicher, dass Ihr Konto über die [Serverberechtigung](../../t-sql/statements/grant-server-permissions-transact-sql.md)**ALTER ANY EVENT SESSION**verfügt.
   - Bei Interesse sind am Ende dieses Artikels im [Anhang](#appendix1)weitere Details zur Sicherheit und zu Berechtigungen verfügbar, die sich auf erweiterte Ereignisse beziehen.
 
 
@@ -79,9 +78,9 @@ In diesem Abschnitt werden die auf der Benutzeroberfläche zum Erstellen eines e
 Sie können die Schritte verstehen, selbst wenn Sie sich entscheiden, diese nicht auszuführen. Die Demo beginnt mit dem Dialogfeld **Neue Sitzung** . Wir bearbeiten die vier zugehörigen Seiten, die folgende Bezeichnung aufweisen:
 
 - Allgemein
-- Ereignisse
-- Datenspeicher
-- Erweitert:
+- Events
+- Datenspeicherung
+- Erweitert
 
 
 Der Text und die unterstützenden Screenshots können im Laufe der Monate oder Jahre etwas ungenau werden, wenn die SSMS-Benutzeroberfläche optimiert wird. Die Screenshots dienen jedoch weiterhin zur Erläuterung, wenn sie nur geringe Abweichungen aufweisen.
@@ -424,7 +423,7 @@ Bestimmte Szenarien für Ereignissitzungen, die auf den Zugriff von Sperren ausg
 In der folgenden Tabelle sind die für erweiterte Ereignisse verwendeten Begriffe aufgeführt. Zudem werden ihre Bedeutungen beschrieben.
 
 
-| Begriff | und Beschreibung |
+| Begriff | BESCHREIBUNG |
 | :--- | :---------- |
 | Ereignissitzung | Ein Konstrukt, das um mindestens ein Ereignis angeordnet ist, sowie unterstützende Elemente (wie Aktionen) stellen Ziele dar. Die CREATE EVENT SESSION-Anweisung erstellt jede Ereignissitzung. Sie können eine Ereignissitzung mithilfe der ALTER-Anweisung bei Bedarf starten und beenden. <br/> <br/> Eine Ereignissitzung wird gelegentlich nur als *Sitzung*bezeichnet, wenn der Kontext verdeutlicht, dass es sich um eine *Ereignissitzung*handelt. <br/> <br/> Weitere Informationen zu Ereignissitzungen finden Sie unter: [SQL Server Extended Events Sessions (Erweiterte Ereignissitzungen in SQL Server)](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | Ereignis | Ein bestimmtes Vorkommen im System, das von einer aktiven Ereignissitzung überwacht wird. <br/> <br/> Das Ereignis *sql_statement_completed* stellt z. B. den Zeitpunkt dar, zu dem jede angegebene T-SQL-Anweisung abgeschlossen wird. Das Ereignis kann seine Dauer und andere Daten melden. |
@@ -495,7 +494,7 @@ Informationen zur Verwendung erweiterter Ereignisse mit Ereignisklassen und -spa
 Beschreibungen zur Verwendung von erweiterter Ereignissen mit der Ereignisablaufverfolgung für Windows (ETW) finden Sie unter:
 
 - [Ereignisablaufverfolgung für Windows-Ziel](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
-- [Überwachen der Systemaktivität mit erweiterten Ereignisses](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
+- [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
 

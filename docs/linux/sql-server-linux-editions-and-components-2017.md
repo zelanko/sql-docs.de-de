@@ -1,6 +1,6 @@
 ---
 title: Editionen und unterstützte Funktionen von SQL Server 2017 – Linux
-ms.date: 10/23/2019
+ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 661d74060d9bb6f7097a5fe50291bdde23e0a591
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928908"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952532"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2017 unter Linux
 
@@ -68,7 +68,7 @@ Sie können auch nur die Clientkomponenten von [!INCLUDE[ssNoVersion](../include
 
 SQL Server 2017 für Linux unterstützt die SQL Server-Datenbank-Engine. In der folgenden Tabelle sind die Features beschrieben, die es in der Datenbank-Engine gibt.   
   
-|Serverkomponenten|und Beschreibung|  
+|Serverkomponenten|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] enthält die [!INCLUDE[ssDE](../includes/ssde-md.md)]. Diese ist der Basisdienst für Speichern, Verarbeiten und Schützen von Daten, Replikation, Volltextsuche, Tools zum Verwalten von relationalen und XML-Daten und Integration von datenbankinternen Analysen.|  
 
@@ -192,7 +192,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Angabe der Sprache in einer Abfrage|Ja|Ja|Ja|Ja|
 |Service Broker (Messaging)|Ja|Ja|Nein (nur Client)|Nein (nur Client)|
 |Transact-SQL-Endpunkte|Ja|Ja|Ja|Nein|
-|Diagramm|Ja|Ja|Ja|Ja|  
+|Graph|Ja|Ja|Ja|Ja|  
 
 
 <sup>1</sup> Horizontale Skalierung mit mehreren Computeknoten erfordert einen Hauptknoten.
@@ -215,9 +215,7 @@ Die folgenden Features und Dienste stehen in SQL Server 2017 für Linux nicht zu
 
 | Bereich | Nicht unterstütztes Feature oder Dienst |
 |-----|-----|
-| **Datenbank-Engine** | Transaktionsreplikation |
-| &nbsp; | Mergereplikation |
-| &nbsp; | Change Data Capture (siehe SQL Server-Agent) |
+| **Datenbank-Engine** | Mergereplikation |
 | &nbsp; | Stretch Database |
 | &nbsp; | PolyBase |
 | &nbsp; | Verteilte Abfrage mit Drittanbieterverbindungen |
@@ -227,11 +225,10 @@ Die folgenden Features und Dienste stehen in SQL Server 2017 für Linux nicht zu
 | &nbsp; | CLR-Assemblys mit festgelegter EXTERNAL_ACCESS- oder UNSAFE-Berechtigung |
 | &nbsp; | Pufferpoolerweiterung |
 | **SQL Server-Agent** |  Subsysteme: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
-| &nbsp; | Warnungen |
+| &nbsp; | Alerts |
 | &nbsp; | Protokolllese-Agent |
-| &nbsp; | Change Data Capture (CDC) |
-| &nbsp; | Verwaltete Sicherung |
-| **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
+| &nbsp; | Managed Backup |
+| **Hochverfügbarkeit** | Datenbankspiegelung  |
 | **Security** | Erweiterbare Schlüsselverwaltung |
 | &nbsp; | Azure AD-Authentifizierung für Verbindungsserver | 
 | &nbsp; | Azure AD-Authentifizierung für Verfügbarkeitsgruppen | 

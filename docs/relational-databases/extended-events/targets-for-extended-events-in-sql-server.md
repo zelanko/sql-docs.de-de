@@ -1,6 +1,5 @@
 ---
-title: Ziele für erweiterte Ereignisse in SQL Server | Microsoft-Dokumentation
-ms.custom: ''
+title: Ziele für erweiterte Ereignisse in SQL Server
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
+ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907999"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75501984"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
 
@@ -76,7 +75,7 @@ Sie können die im Kontext einer realen CREATE EVENT SESSION-Anweisung verwendet
 ## <a name="etw_classic_sync_target-target"></a>etw_classic_sync_target-Ziel
 
 
-Erweiterte Ereignisse von SQL Server können mit der Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) zusammenwirken, um die Systemaktivität zu überwachen. Weitere Informationen finden Sie in den folgenden Themen:
+Erweiterte Ereignisse von SQL Server können mit der Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) zusammenwirken, um die Systemaktivität zu überwachen. Weitere Informationen finden Sie unter
 
 - [Ereignisablaufverfolgung für Windows-Ziel](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
 - [Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
@@ -676,7 +675,7 @@ Um den vorstehenden XML-Code anzuzeigen, können Sie die folgende SELECT-Anweisu
 
 ```sql
 SELECT
-        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
+        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml
     INTO
         #XmlAsTable
     FROM
