@@ -1,6 +1,7 @@
 ---
-title: SQL Server-Connector – Wartung &amp; Problembehandlung | Microsoft-Dokumentation
-ms.custom: ''
+title: SQL Server Connector – Wartung und Problembehandlung
+description: Erfahren Sie mehr über die Wartungsanweisungen und die allgemeinen Schritte zur Problembehandlung für den SQL Server Connector.
+ms.custom: seo-lt-2019
 ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -9,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148787"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557935"
 ---
-# <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server-Connector – Wartung &amp; Problembehandlung
+# <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server-Connector – Verwaltung und Problembehandlung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Dieses Thema enthält ergänzende Informationen zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector finden Sie unter [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) und [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
@@ -169,7 +170,10 @@ Schlüsselsicherungen können in Azure-Regionen wiederhergestellt werden, solang
 **Auf welche Endpunkte benötigt der SQL Server-Connector Zugriff?** Der Connector kommuniziert mit zwei Endpunkten, die der Positivliste hinzugefügt werden müssen. Der einzige Port, der für die ausgehende Kommunikation mit diesen anderen Diensten erforderlich ist, lautet 443 für Https:
 -  Login.microsoftonline.com/*:443
 -  *.Vault.Azure.NET/* :443
-  
+
+**Gewusst wie: Herstellen einer Verbindung mit Azure Key Vault über einen HTTP(S)-Proxy Server**
+Der Connector verwendet die Proxykonfigurationseinstellungen von Internet Explorer. Diese Einstellungen können über [Gruppenrichtlinie](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) oder mithilfe der Registrierung gesteuert werden, es ist aber zu beachten, dass dies keine systemweiten Einstellungen sind, sondern zielgenau für das Dienstkonto angepasst werden müssen, das die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ausführt. Wenn ein Datenbankadministrator die Einstellungen in Internet Explorer anzeigt oder bearbeitet, wirkt sich dies nur auf das Konto des Datenbankadministrators und nicht auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engine aus. Das interaktive Anmelden beim Server mithilfe des Dienstkontos ist nicht empfehlenswert und wird in vielen sicheren Umgebungen blockiert. Um wirksam zu werden, ist bei Änderungen an den konfigurierten Proxyeinstellungen möglicherweise ein Neustart der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz erforderlich, da die Einstellungen beim ersten Versuch des Connectors, eine Verbindung mit einem Schlüsseltresor herzustellen, zwischengespeichert werden.
+
 **Was sind die minimal erforderlichen Berechtigungsstufen, die für die einzelnen Konfigurationsschritte in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erforderlich sind?**  
  Zwar können Sie alle Konfigurationsschritte als Mitglied der festen Serverrolle „sysadmin“ ausführen, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] legt Ihnen jedoch dringlich nahe, die verwendeten Berechtigungen zu minimieren. Die folgende Liste definiert die minimale Berechtigungsstufe für jede Aktion.  
   
@@ -202,7 +206,7 @@ Weitere Informationen zu Active Directory finden Sie unter [Beziehung zwischen A
 ##  <a name="AppendixC"></a> C. Erläuterungen zu Fehlercodes für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector  
  **Anbieterfehlercodes:**  
   
-Fehlercode  |Symbol  |und Beschreibung    
+Fehlercode  |Symbol  |BESCHREIBUNG    
 ---------|---------|---------  
 0 | scp_err_Success | Der Vorgang war erfolgreich.    
 1 | scp_err_Failure | Beim Vorgang ist ein Fehler aufgetreten.    
@@ -211,7 +215,9 @@ Fehlercode  |Symbol  |und Beschreibung
 4 | scp_err_NotFound | Der angegebene Schlüssel oder Algorithmus wurde vom EKM-Anbieter nicht gefunden.    
 5 | scp_err_AuthFailure | Authentifizierungsfehler beim EKM-Anbieter.    
 6 | scp_err_InvalidArgument | Das angegebene Argument ist ungültig.    
-7 | scp_err_ProviderError | Im EKM-Anbieter ist ein nicht angegebener Fehler aufgetreten, der von der SQL-Engine abgefangen wurde.    
+7 | scp_err_ProviderError | Im EKM-Anbieter ist ein nicht angegebener Fehler aufgetreten, der von der SQL-Engine abgefangen wurde.   
+401 | acquireToken | Der Server hat auf die Anforderung 401 zurückgegeben. Achten Sie darauf, dass die Client-ID und das Geheimnis korrekt sind und die Anmeldeinformations-Zeichenfolge eine Verkettung von AAD-Client-ID und-Geheimnis ohne Bindestriche ist.
+404 | getKeyByName | Der Server hat mit 404 geantwortet, da der Schlüsselname nicht gefunden wurde. Überprüfen Sie, ob der Schlüsselname in Ihrem Tresor vorhanden ist.
 2049 | scp_err_KeyNameDoesNotFitThumbprint | Der Schlüsselname ist zu lang, um in den Fingerabdruck der SQL-Engine zu passen. Der Schlüsselname darf 26 Zeichen nicht überschreiten.    
 2050 | scp_err_PasswordTooShort | Die geheime Zeichenfolge, bei der es sich um die Verkettung von AAD-Client-ID und geheimem Schlüssel handelt, ist kürzer als 32 Zeichen.    
 2051 | scp_err_OutOfMemory | Die SQL-Engine verfügt nicht über ausreichend Arbeitsspeicher, deshalb ist beim Zuweisen von Arbeitsspeicher für den EKM-Anbieter ein Fehler aufgetreten.    
@@ -249,8 +255,10 @@ Wenn Sie Ihren Fehlercode in dieser Tabelle nicht finden, beachten Sie, dass ein
 -   Möglicherweise haben Sie den asymmetrischen Schlüssel im Azure Key Vault oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gelöscht. Stellen Sie den Schlüssel wieder her.  
   
 -   Wenn Sie den Fehler „Die Bibliothek kann nicht geladen werden“ erhalten, überprüfen Sie, ob die für die ausgeführte SQL Server-Version geeignete Version der weitervertreibbaren Visual Studio C++-Komponente installiert ist. In der folgenden Tabelle wird angegeben, welche Version aus dem Microsoft Download Center installiert werden muss.   
+
+Das Windows-Ereignisprotokoll protokolliert auch Fehler im Zusammenhang mit dem SQL Server Connector. Dadurch kann zusätzlicher Kontext zu den eigentlichen Fehlerursachen bereitstehen. Die Quelle im Windows-Anwendungsereignisprotokoll ist „SQL Server-Connector für Microsoft Azure Key Vault“.
   
-SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente    
+SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente    
 ---------|--------- 
 2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable-Pakete für Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)    
 2016 | [Visual C++ Redistributable für Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
@@ -287,7 +295,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
  Azure Key Vault-Dokumentation  
   
--   [Was ist Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
+-   [Was ist der Azure-Schlüsseltresor?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
   
 -   [Erste Schritte mit Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   

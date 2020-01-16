@@ -1,6 +1,7 @@
 ---
-title: Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von SQL Server Connector-Verschlüsselung mit Azure Key Vault
+description: Erfahren Sie, wie Sie den SQL Server Connector mit allgemeinen Verschlüsselungsfeatures wie z. B. TDE, dem Verschlüsseln von Sicherungen und Verschlüsselung auf Spaltenebene mithilfe von Azure Key Vault verwenden.
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929746"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558509"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
         - Wenn Sie eine **globale Azure-Cloud** verwenden, ersetzen Sie das `IDENTITY`-Argument durch den Namen Ihres Azure-Schlüsseltresors aus Teil II.
         - Wenn Sie eine **private Azure-Cloud** verwenden (z. B. Azure Government, Azure China 21ViaNet oder Azure Deutschland. Ersetzen Sie das `IDENTITY`-Argument durch den Key Vault-URI, der in Teil II, Schritt 3 zurückgegeben wird. Schließen Sie „https://“ nicht in den Tresor-URI ein.   
   
-    -   Ersetzen Sie den ersten Teil des `SECRET` -Arguments durch die Azure Active Directory- **Client-ID** aus Teil I. In diesem Beispiel ist die **Client-ID** `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Ersetzen Sie den ersten Teil des `SECRET` -Arguments durch die Azure Active Directory- **Client-ID** aus Teil I. In diesem Beispiel ist die **Client-ID**`EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
         >  Bindestriche müssen aus der **Client-ID**entfernt werden.  
@@ -115,7 +116,7 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
   
      Überprüfen Sie mithilfe von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], dass TDE aktiviert wurde, indem Sie eine Verbindung mit Ihrer Datenbank mithilfe des Objekt-Explorers herstellen. Klicken Sie mit der rechten Maustaste auf Ihre Datenbank, zeigen Sie auf **Aufgaben**, und klicken Sie anschließend auf **Datenbankverschlüsselung verwalten**.  
   
-     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
+     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "|::ref2::|")  
   
      Prüfen Sie im Dialogfeld **Datenbankverschlüsselung verwalten** , nach, ob TDE aktiviert ist und welcher Schlüssel für die Verschlüsselung des DEKs verwendet wird.  
   
@@ -149,7 +150,7 @@ Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformat
         - Wenn Sie eine **globale Azure-Cloud** verwenden, ersetzen Sie das `IDENTITY`-Argument durch den Namen Ihres Azure-Schlüsseltresors aus Teil II.
         - Wenn Sie eine **private Azure-Cloud** verwenden (z. B. Azure Government, Azure China 21ViaNet oder Azure Deutschland. Ersetzen Sie das `IDENTITY`-Argument durch den Key Vault-URI, der in Teil II, Schritt 3 zurückgegeben wird. Schließen Sie „https://“ nicht in den Tresor-URI ein.    
   
-    -   Ersetzen Sie den ersten Teil des `SECRET` -Arguments durch die Azure Active Directory- **Client-ID** aus Teil I. In diesem Beispiel ist die **Client-ID** `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Ersetzen Sie den ersten Teil des `SECRET` -Arguments durch die Azure Active Directory- **Client-ID** aus Teil I. In diesem Beispiel ist die **Client-ID**`EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
         >  Bindestriche müssen aus der **Client-ID**entfernt werden.  
@@ -195,7 +196,7 @@ Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformat
   
 3.  **Sichern der Datenbank**  
   
-     Sichern Sie die Datenbank, und geben Sie die Verschlüsselung mit dem im Key Vault gespeicherten symmetrischen Schlüssel an.
+     Sichern Sie die Datenbank, indem Sie die Verschlüsselung mit dem asymmetrischen Schlüssel angeben, der im Schlüsseltresor gespeichert ist.
      
      Im folgenden Beispiel sollten Sie beachten, dass wenn die Datenbank bereits mit TDE verschlüsselt wurde und sich der asymmetrische Schlüssel `CONTOSO_KEY_BACKUP` vom asymmetrischen Schlüssel von TDE unterscheidet, die Sicherung mit dem asymmetrischen Schlüssel von TDE und `CONTOSO_KEY_BACKUP` verschlüsselt wird. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Zielinstanz benötigt beide Schlüssel, um die Sicherung zu entschlüsseln.
   
@@ -282,6 +283,6 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [EKM provider enabled (Serverkonfigurationsoption)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [SQL Server-Connector Wartung & Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
+ [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   

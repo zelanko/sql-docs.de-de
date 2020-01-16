@@ -1,6 +1,7 @@
 ---
-title: Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server | Microsoft-Dokumentation
-ms.custom: ''
+title: Verschieben einer durch TDE geschützten Datenbank in eine andere SQL Server-Instanz
+description: Beschreibt die Vorgehensweise zum Schutz einer Datenbank mithilfe von Transparent Data Encryption (TDE) und das anschließende Verschieben der Datenbank in eine andere Instanz von SQL Server mithilfe von SQL Server Management Studio (SSMS) oder Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 991af6f353fb4862bd66426e7fdeed2664f3d101
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594316"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558510"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand von Transparent Data Encryption (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] beschrieben. Die TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der **master** -Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.   
+  In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand von Transparent Data Encryption (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] beschrieben. TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten- und Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Datenbank-Verschlüsselungsschlüssel (DEK), der im Startdatensatz der Datenbank gespeichert wird und während der Wiederherstellung zur Verfügung steht. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der **master** -Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.   
    
 ##  <a name="Restrictions"></a> Einschränkungen  
   
@@ -77,7 +78,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
 
 ###  <a name="TsqlCreate"></a> Verwenden von Transact-SQL  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -121,7 +122,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
     GO  
     ```  
   
- Weitere Informationen finden Sie in den folgenden Themen:  
+ Weitere Informationen finden Sie unter  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
@@ -166,7 +167,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
      **Status**  
      Zeigt einen der folgenden Statuswerte an: **Ready** (Bereit) der **Not ready** (Nicht bereit).  
   
-     **MessageBox**  
+     **Meldung**  
      Unter **Meldung** können folgende Informationen zur Datenbank angezeigt werden:  
   
     -   Wenn eine Datenbank an einer Replikation beteiligt ist, hat der **Status** den Wert **Nicht bereit** , und unter **Meldung** wird **Die Datenbank wurde repliziert**angezeigt.  
@@ -214,25 +215,25 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
      **Status**  
      Zeigt den Status der Datenbank an (siehe folgende Tabelle).  
   
-    |Symbol|Statustext|und Beschreibung|  
+    |Symbol|Statustext|BESCHREIBUNG|  
     |----------|-----------------|-----------------|  
     |(Kein Symbol)|(Kein Text)|Das Anfügen hat noch nicht begonnen oder steht für dieses Objekt noch aus. Dies ist der Standardwert bei Öffnen des Dialogfelds.|  
-    |Grünes, nach rechts zeigendes Dreieck|Vorgang wird ausgeführt|Das Anfügen hat begonnen, ist aber noch nicht abgeschlossen.|  
-    |Grünes Häkchen|Success|Das Objekt wurde erfolgreich angefügt.|  
+    |Grünes, nach rechts zeigendes Dreieck|In Bearbeitung|Das Anfügen hat begonnen, ist aber noch nicht abgeschlossen.|  
+    |Grünes Häkchen|Erfolg|Das Objekt wurde erfolgreich angefügt.|  
     |Roter Kreis mit einem weißen Kreuz darin|Fehler|Beim Anfügen ist ein Fehler aufgetreten. Der Vorgang konnte deshalb nicht erfolgreich abgeschlossen werden.|  
     |Kreis mit zwei schwarzen Quadranten (links und rechts) und zwei weißen Quadranten (oben und unten) darin|Beendet|Das Anfügen wurde nicht erfolgreich abgeschlossen, weil der Benutzer den Vorgang angehalten hat.|  
     |Kreis mit einem gekrümmten Pfeil darin, der entgegengesetzt der Uhrzeigerrichtung zeigt|Rollback wurde ausgeführt|Anfügen war erfolgreich, es wurde jedoch ein Rollback durchgeführt, weil beim Anfügen eines anderen Objekts ein Fehler aufgetreten ist.|  
   
-     **MessageBox**  
+     **Meldung**  
      Zeigt entweder eine leere Meldung oder einen "Datei nicht gefunden"-Link an.  
   
-     **Hinzufügen**  
+     **Add (Hinzufügen)**  
      Suchen Sie die erforderlichen Hauptdatenbankdateien. Wenn der Benutzer eine MDF-Datei auswählt, werden entsprechende Informationen automatisch in die jeweiligen Felder des Rasters **Anzufügende Datenbank** eingetragen.  
   
-     **Entfernen**  
+     **Remove**  
      Entfernt die ausgewählte Datei aus dem Raster **Anzufügende Datenbank** .  
   
-     **"** _<database_name>_ **" Datenbankdetails für**  
+     **"** _<datenbankname>_ **" Datenbankdetails**  
      Zeigt die Namen der anzufügenden Dateien an. Klicken Sie zum Überprüfen oder Ändern des Pfadnamens einer Datei auf die Schaltfläche **Durchsuchen** ( **…** ).  
   
     > [!NOTE]  
@@ -247,12 +248,12 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
      **Aktueller Dateipfad**  
      Zeigt den Pfad zur ausgewählten Datenbankdatei an Die Pfadangabe kann manuell bearbeitet werden.  
   
-     **MessageBox**  
+     **Meldung**  
      Zeigt entweder eine leere Meldung oder einen „**Datei nicht gefunden**“-Hyperlink an.  
   
 ###  <a name="TsqlMove"></a> Verwenden von Transact-SQL  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -291,7 +292,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
     GO  
     ```  
   
- Weitere Informationen finden Sie in den folgenden Themen:  
+ Weitere Informationen finden Sie unter  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
@@ -303,6 +304,6 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Transparente Datenverschlüsselung in Azure SQL-Datenbank](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
+ [Transparent Data Encryption mit Azure SQL-Datenbank](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   
