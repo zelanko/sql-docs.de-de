@@ -1,5 +1,7 @@
 ---
-title: Bereitstellungsmuster für SQL Server-Always On-Verfügbarkeitsgruppen
+title: 'Bereitstellungsmuster für Verfügbarkeitsgruppen: SQL Server für Linux'
+description: In diesem Artikel werden unterstützte Bereitstellungskonfigurationen für SQL Server-Always On-Verfügbarkeitsgruppen auf Linux-Servern vorgestellt.
+ms.custom: seo-lt-2019
 ms.date: 04/17/2019
 ms.prod: sql
 ms.technology: linux
@@ -8,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 637d67767e17344d63498f8cb6a141fa78b11ecb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 2fea849a46dea302dccba3ae8648db3654c35798
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996433"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558475"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen
 
@@ -43,7 +45,7 @@ Durch die Auswahl eines bestimmten Entwurfs für Verfügbarkeitsgruppen können 
 
 In den unten aufgeführten Konfigurationen werden die Entwurfsmuster für Verfügbarkeitsgruppen und die Funktionen der einzelnen Muster beschrieben. Die folgenden Entwurfsmuster können für Verfügbarkeitsgruppen mit der Einstellung `CLUSTER_TYPE = EXTERNAL` in Lösungen verwendet werden, in denen Hochverfügbarkeit erforderlich ist: 
 
-- **drei synchrone Replikate**
+- **Drei synchrone Replikate**
 - **zwei synchrone Replikate**
 - **zwei synchrone Replikate und ein Konfigurationsreplikat**
 
@@ -57,7 +59,7 @@ Diese Konfiguration umfasst drei synchrone Replikate. Die Hochverfügbarkeit und
 
 Eine Verfügbarkeitsgruppe mit drei synchronen Replikaten ermöglicht die Leseskalierung, Hochverfügbarkeit und den Schutz von Daten. In der folgenden Tabelle wird das Verfügbarkeitsverhalten beschrieben. 
 
-| |Leseskalierung|Hochverfügbarkeit und </br> Schutz von Daten | Schutz von Daten|
+| |Leseskalierung|Hochverfügbarkeit und </br> Datenschutz | Schutz von Daten|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |Ausfall des primären Replikats |Automatisches Failover. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen. |Automatisches Failover. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen. |Automatisches Failover. Das neue primäre Replikat steht erst dann für Benutzertransaktionen zur Verfügung, wenn das vorherige Replikat wiederhergestellt wurde und der Verfügbarkeitsgruppe als sekundäres Replikat beigetreten ist. |
@@ -114,14 +116,14 @@ Der Standardwert für `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` ist 0. In de
 > [!NOTE]
 > Die SQL Server-Instanz, die das Konfigurationsreplikat hostet, kann auch andere Datenbanken hosten. Sie kann auch als Konfigurationsdatenbank für mehrere Verfügbarkeitsgruppen verwendet werden. 
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 - Alle Replikate in einer Verfügbarkeitsgruppe mit einem Konfigurationsreplikat müssen SQL Server 2017 CU 1 oder höher entsprechen.
 - Jede Edition von SQL Server kann ein Konfigurationsreplikat hosten. Dies gilt auch für SQL Server Express. 
 - Für die Verfügbarkeitsgruppe ist mindestens ein sekundäres Replikat zusätzlich zum primären Replikat erforderlich.
 - Die maximale Anzahl der Replikate pro SQL Server-Instanz ist unabhängig von der Anzahl der Konfigurationsreplikate. Für die Standard Edition von SQL Server werden maximal drei Replikate unterstützt, für die Enterprise Edition von SQL Server maximal neun.
 
-## <a name="considerations"></a>Weitere Überlegungen
+## <a name="considerations"></a>Überlegungen
 
 - Eine Verfügbarkeitsgruppe kann höchstens ein Konfigurationsreplikat enthalten. 
 - Ein Konfigurationsreplikat kann kein primäres Replikat sein.
@@ -168,7 +170,7 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 > [!NOTE]
 > Wenn Sie die vorangehenden Befehle ausführen, wird das primäre Replikat temporär zu einem sekundären Replikat herabgestuft und dann erneut heraufgestuft. Durch das Ressourcenupdate werden alle Replikate angehalten und anschließend neu gestartet. Der neue Wert für `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` wird nicht sofort, sondern erst nach dem Neustart der Replikate festgelegt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Verfügbarkeitsgruppen unter Linux](sql-server-linux-availability-group-overview.md)
 

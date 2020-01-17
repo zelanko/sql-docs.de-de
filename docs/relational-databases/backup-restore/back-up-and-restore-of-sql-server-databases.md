@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c948c6e26655b8a450aee22f1ca6a6a178e0db76
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176323"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320527"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70176323"
 
 > In diesem Artikel werden SQL Server-Sicherungen vorgestellt. Die spezifischen Schritte zum Sichern von SQL Server-Datenbanken finden Sie unter [Erstellen von Sicherungen](#creating-backups).
   
- Durch die Sicherungs- und Wiederherstellungskomponente von SQL Server wird eine wichtige Vorrichtung zum Schutz wichtiger Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken bereitgestellt. Um das Risiko schwerwiegenden Datenverlusts zu verringern, müssen Sie die Datenbanken regelmäßig sichern, um Änderungen an den Daten beizubehalten. Eine sorgfältig geplante Sicherungs- und Wiederherstellungsstrategie schützt Datenbanken vor Datenverlust, der durch die verschiedensten Fehler verursacht werden kann. Testen Sie Ihre Strategie, indem Sie einen Sicherungssatz wiederherstellen und dann die Datenbank wiederherstellen, um im Notfall effektiv reagieren zu können.
+ Durch die Sicherungs- und Wiederherstellungskomponente von SQL Server wird eine wichtige Vorrichtung zum Schutz wichtiger Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken bereitgestellt. Um die Gefahr eines schwerwiegenden Datenverlusts zu minimieren, müssen Sie Ihre Datenbanken regelmäßig sichern, um die Änderungen an Ihren Daten aufzubewahren. Eine gut geplante Sicherungs- und Wiederherstellungsstrategie hilft, Datenbanken vor Datenverlusten zu schützen, die durch eine Vielzahl von Fehlern verursacht werden können. Testen Sie Ihre Strategie, indem Sie einen Sicherungssatz und anschließend Ihre Datenbank wiederherstellen, um sich auf die effektive Reaktion auf einen Notfall vorzubereiten.
   
  Neben dem lokalen Speicher für das Speichern der Sicherung unterstützt SQL Server auch das Sichern und Wiederherstellen mit dem Azure Blob Storage-Dienst. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Für Datenbankdateien, die mit dem Microsoft Azure Blob-Speicherdienst gespeichert wurden, bietet [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] die Option, Azure-Momentaufnahmen für nahezu sofortige Sicherungen und schnellere Wiederherstellungen zu nutzen. Weitere Informationen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "70176323"
 **Protokollsicherung**  
  Eine Sicherung von Transaktionsprotokollen, die alle Protokolldatensätze enthält, die nicht in einer vorherigen Protokollsicherung gesichert wurden. (Vollständiges Wiederherstellungsmodell)  
   
-**Wiederherstellen**  
+**recover**  
  Wiederherstellen eines stabilen und konsistenten Datenbankzustands.  
   
 **recovery**  
@@ -88,29 +88,32 @@ ms.locfileid: "70176323"
 **Wiederherstellungsmodell**  
  Eine Datenbankeigenschaft, die die Pflege der Transaktionsprotokolle auf einer Datenbank steuert. Es stehen drei Wiederherstellungsmodelle zur Verfügung: einfach, vollständig und massenprotokolliert. Das Wiederherstellungsmodell der Datenbank bestimmt die Sicherungs- und Wiederherstellungsanforderungen.  
   
-**Wiederherstellungsprozess**  
+**restore**  
  Ein aus mehreren Phasen bestehender Prozess, in dem alle Daten und Protokollseiten aus einer angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung in eine angegebene Datenbank kopiert werden und ein Rollforward für alle Transaktionen ausgeführt wird, die in der Sicherung protokolliert sind. Dies wird erreicht, indem die Daten durch die Übernahme protokollierter Änderungen aktualisiert werden.  
   
  ##  <a name="backup-and-restore-strategies"></a>Sicherungs- und Wiederherstellungsstrategien  
- Das Sichern und Wiederherstellen von Daten muss jedoch auf die entsprechende Umgebung und auf die verfügbaren Ressourcen abgestimmt werden. Die zuverlässige Verwendung von Sicherungen und Wiederherstellungen erfordert daher eine Sicherungs- und Wiederherstellungsstrategie. Eine sorgfältig geplante Sicherungs- und Wiederherstellungsstrategie maximiert Datenverfügbarkeit und minimiert Datenverluste, wobei die besonderen Anforderungen des entsprechenden Unternehmens berücksichtigt werden.  
+ Das Sichern und Wiederherstellen von Daten muss jedoch auf die entsprechende Umgebung und auf die verfügbaren Ressourcen abgestimmt werden. Die zuverlässige Verwendung von Sicherungen und Wiederherstellungen erfordert daher eine Sicherungs- und Wiederherstellungsstrategie. Eine gut entworfene Sicherungs- und Wiederherstellungsstrategie findet einen Mittelweg zwischen maximaler Datenverfügbarkeit und minimalem Datenverlust und berücksichtigt gleichzeitig die Kosten für das Verwalten und Speichern von Sicherungen.  
+
+ Eine Sicherungs- und Wiederherstellungsstrategie enthält einen Sicherungsteil und einen Wiederherstellungsteil. Der Sicherungsteil der Strategie definiert den Typ und die Häufigkeit der Sicherungen, die Art und die Geschwindigkeit der dafür benötigten Hardware, die vorgesehene Testmethode für die Sicherungen sowie Speicherort und -methode von Sicherungsmedien (einschließlich Sicherheitsüberlegungen). Im Wiederherstellungsteil der Strategie wird definiert, wer für die Ausführung von Wiederherstellungen verantwortlich ist, wie Wiederherstellungen ausgeführt werden sollen, um die jeweiligen Ziele hinsichtlich der Verfügbarkeit der Datenbank und der Minimierung von Datenverlusten zu erreichen, sowie die Art und Weise, wie Wiederherstellungen getestet werden. 
   
-  > [!IMPORTANT] 
-  > Platzieren Sie die Datenbank und die Sicherungen auf separaten Medien. Andernfalls stehen Ihre Sicherungen nicht mehr zur Verfügung, wenn auf dem Medium mit den Datenbankdateien Fehler auftreten. Wenn Sie die Daten und die Sicherungen auf separaten Medien speichern, wird auch die E/A-Leistung für das Schreiben von Sicherungen sowie für die Nutzung der Datenbank in der Produktion optimiert.**  
+ Das Entwerfen einer effektiven Sicherungs- und Wiederherstellungsstrategie erfordert sorgfältiges Planen, Implementieren und Testen. Tests sind absolut notwendig: Sie verfügen erst dann über eine Sicherungsstrategie, wenn Sie die Sicherungen Ihrer Wiederherstellungsstrategie in allen Kombinationen erfolgreich wiederhergestellt und die physische Konsistenz der wiederhergestellten Datenbank getestet haben. Sie müssen eine Vielzahl von Faktoren berücksichtigen: Dazu gehören:  
   
- Eine Sicherungs- und Wiederherstellungsstrategie enthält einen Sicherungsteil und einen Wiederherstellungsteil. Der Sicherungsteil der Strategie definiert den Typ und die Häufigkeit der Sicherungen, die Art und die Geschwindigkeit der dafür benötigten Hardware, die vorgesehene Testmethode für die Sicherungen sowie Speicherort und -methode von Sicherungsmedien (einschließlich Sicherheitsüberlegungen). Der Wiederherstellungsteil der Strategie definiert, wer für die Ausführung der Wiederherstellungen verantwortlich ist und wie Wiederherstellungen ausgeführt werden sollen, um die jeweiligen Ziele hinsichtlich der Verfügbarkeit der Datenbank und Minimierung von Datenverlusten zu erreichen. Es empfiehlt sich, Sicherungs- und Wiederherstellungsprozeduren zu dokumentieren und eine Kopie der Dokumentation im Ausführungsbuch aufzubewahren.  
+- Die Ziele des Unternehmens hinsichtlich der Produktionsdatenbanken, besonders die Anforderungen an Verfügbarkeit und Schutz vor Datenverlust oder -beschädigung.  
   
- Das Entwerfen einer effektiven Sicherungs- und Wiederherstellungsstrategie erfordert sorgfältiges Planen, Implementieren und Testen. Die Testphase ist erforderlich. Sie verfügen erst dann über eine Sicherungsstrategie, wenn Sie die Sicherungen, die in Ihrer Wiederherstellungsstrategie enthalten sind, in allen Kombinationen erfolgreich wiederhergestellt haben. Sie müssen eine Vielzahl von Faktoren berücksichtigen: Dabei handelt es sich z. B. um:  
-  
--   Die Produktionsziele des Unternehmens im Verhältnis zur Datenbank, besonders die Anforderungen an Verfügbarkeit und Schutz vor Datenverlusten.  
-  
--   Die Art Ihrer einzelnen Datenbanken, beispielsweise Größe, Verwendungsmuster, Art des Inhalts und Anforderungen im Hinblick auf Daten.  
+-  Die Merkmale der einzelnen Datenbanken, wie etwa Größe, Verwendungsmuster, Art des Inhalts und Anforderungen hinsichtlich der Daten.  
   
 -   Einschränkungen hinsichtlich der Ressourcen, wie z. B. Hardware, Mitarbeiter, Platz zum Aufbewahren von Sicherungsmedien und physische Sicherheit der aufbewahrten Medien.  
 
-### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>Auswirkung des Wiederherstellungsmodells auf das Sichern und Wiederherstellen  
- Sicherungs- und Wiederherstellungsvorgänge werden im Kontext eines Wiederherstellungsmodells durchgeführt. Bei einem Wiederherstellungsmodell handelt es sich um eine Datenbankeigenschaft, mit der die Verwaltung des Transaktionsprotokolls gesteuert wird. Das Wiederherstellungsmodell einer Datenbank bestimmt, welche Sicherungsarten und Wiederherstellungsszenarien für die Datenbank unterstützt werden. Meistens wird für Datenbanken entweder das einfache Wiederherstellungsmodell oder das vollständige Wiederherstellungsmodell verwendet. Mit dem vollständigen Wiederherstellungsmodell können Sie vor dem Ausführen von Massenvorgängen ergänzend das massenprotokollierte Wiederherstellungsmodell verwenden. Eine Einführung zu diesen Wiederherstellungsmodellen und deren Auswirkung auf die Verwaltung des Transaktionsprotokolls finden Sie unter [Das Transaktionsprotokoll [SQL Server]](../logs/the-transaction-log-sql-server.md).  
+## <a name="best-practice-recommendations"></a>Empfehlungen zu bewährten Methoden
+
+### <a name="use-separate-storage"></a>Verwenden von getrennten Speichern 
+> [!IMPORTANT] 
+> Speichern Sie Ihre Datenbanksicherungen immer an einem anderen physischen Speicherort oder auf einem anderen Gerät als die Datenbankdateien. Funktioniert das physische Laufwerk, auf dem die Datenbanken gespeichert sind, nicht richtig oder stürzt ab, kann eine Wiederherstellung nur ausgeführt werden, wenn auf das separate Laufwerk oder Remotegerät, auf dem die Sicherungen gespeichert wurden, auch zugegriffen werden kann. Denken Sie daran, dass Sie auf einem physischen Datenträger mehrere logische Volumes oder Partitionen erstellen können. Überprüfen Sie das Layout der Datenträgerpartition und der logischen Volumes sorgfältig, bevor Sie einen Speicherort für die Sicherungen auswählen.
+
+### <a name="choose-appropriate-recovery-model"></a>Auswählen eines geeigneten Wiederherstellungsmodells
+ Sicherungs- und Wiederherstellungsvorgänge werden im Kontext eines [Wiederherstellungsmodells](../backup-restore/recovery-models-sql-server.md) durchgeführt. Bei einem Wiederherstellungsmodell handelt es sich um eine Datenbankeigenschaft, mit der die Verwaltung des Transaktionsprotokolls gesteuert wird. Das Wiederherstellungsmodell für eine Datenbank bestimmt also, welche Arten von Sicherungs- und Wiederherstellungsszenarios für die Datenbank unterstützt werden und wie groß die Sicherungen der Transaktionsprotokolle sein sollen. Meistens wird für Datenbanken entweder das einfache Wiederherstellungsmodell oder das vollständige Wiederherstellungsmodell verwendet. Das vollständige Wiederherstellungsmodell kann vor dem Ausführen von Massenvorgängen durch das massenprotokollierte Wiederherstellungsmodell erweitert werden. Eine Einführung zu diesen Wiederherstellungsmodellen und deren Auswirkung auf die Verwaltung des Transaktionsprotokolls finden Sie unter [Das Transaktionsprotokoll [SQL Server]](../logs/the-transaction-log-sql-server.md).  
   
- Die Wahl des für Ihre Datenbank am besten geeigneten Wiederherstellungsmodells hängt von Ihren Geschäftsanforderungen ab. Verwenden Sie das einfache Wiederherstellungsmodell, wenn Sie die Verwaltung des Transaktionsprotokolls vermeiden und den Sicherungs- und Wiederherstellungsprozess so einfach wie möglich gestalten möchten. Wenn das Risiko eines Arbeitsdatenverlusts so klein wie möglich sein soll und Sie bereit sind, dafür einen höheren Verwaltungsaufwand in Kauf zu nehmen, verwenden Sie das vollständige Wiederherstellungsmodell. Informationen zur Auswirkung von Wiederherstellungsmodellen auf Sicherungs- und Wiederherstellungsvorgänge finden Sie unter [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
+ Die Wahl des für Ihre Datenbank am besten geeigneten Wiederherstellungsmodells hängt von Ihren Geschäftsanforderungen ab. Verwenden Sie das einfache Wiederherstellungsmodell, wenn Sie die Verwaltung des Transaktionsprotokolls vermeiden und den Sicherungs- und Wiederherstellungsprozess so einfach wie möglich gestalten möchten. Wenn das Risiko eines Arbeitsdatenverlusts so klein wie möglich sein soll und Sie bereit sind, dafür einen höheren Verwaltungsaufwand in Kauf zu nehmen, verwenden Sie das vollständige Wiederherstellungsmodell. Verwenden Sie das massenprotokollierte Wiederherstellungsmodell, um die Auswirkungen auf die Protokollgröße bei massenprotokollierten Vorgängen zu minimieren und gleichzeitig die Wiederherstellbarkeit dieser Vorgänge zu ermöglichen. Informationen zur Auswirkung von Wiederherstellungsmodellen auf Sicherungs- und Wiederherstellungsvorgänge finden Sie unter [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ### <a name="design-your-backup-strategy"></a>Entwerfen Ihrer Sicherungsstrategie  
  Nachdem Sie ein Wiederherstellungsmodell ausgewählt haben, das Ihre Geschäftsanforderungen für eine bestimmte Datenbank erfüllt, müssen Sie eine entsprechende Sicherungsstrategie planen und implementieren. Die optimale Sicherungsstrategie hängt von verschiedenen Faktoren ab, wobei den folgenden eine besondere Bedeutung zukommt:  
@@ -132,6 +135,10 @@ ms.locfileid: "70176323"
      Bei einer großen Datenbank, in der sich die Änderungen auf einen Teil der Dateien oder Dateigruppen konzentrieren, können Teilsicherungen und/oder Dateisicherungen sinnvoll sein. Weitere Informationen finden Sie unter [Teilsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md) und [Vollständige Dateisicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md).  
   
 -   Wie viel Speicherplatz nimmt eine vollständige Datenbanksicherung auf dem Datenträger in Anspruch?  
+-   Wie weit in die Vergangenheit sollen Sicherungen zurückreichen? 
+
+    Vergewissern Sie sich, dass Ihr Sicherungszeitplan den Anwendungs- und Geschäftsanforderungen entspricht. Je älter die Sicherungen sind, desto größer ist das Risiko für einen Datenverlust – außer Sie besitzen die Möglichkeit, alle Daten bis zum Zeitpunkt des Fehlers neu zu generieren. Entscheiden Sie vor dem Löschen von alten Sicherungen aus Speicherkapazitätsgründen, ob eine weit in die Vergangenheit reichende Wiederherstellbarkeit erforderlich ist.
+
   
  ### <a name="estimate-the-size-of-a-full-database-backup"></a>Schätzen der Größe einer vollständigen Datenbanksicherung  
  Vor dem Implementieren einer Sicherungs- und Wiederherstellungsstrategie sollten Sie schätzen, wie viel Speicherplatz eine vollständige Datenbanksicherung auf dem Datenträger belegen wird. Beim Sicherungsvorgang werden die in der Datenbank enthaltenen Daten in die Sicherungsdatei kopiert. Die Sicherung enthält nur die in der Datenbank vorhandenen Daten, nicht etwa ungenutzten Speicherplatz. Daher ist die Sicherung normalerweise kleiner als die Datenbank selbst. Ein Schätzwert der Größe einer vollständigen Datenbanksicherung kann mithilfe der gespeicherten Systemprozedur **sp_spaceused** ermittelt werden. Weitere Informationen finden Sie unter [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).  
@@ -144,9 +151,16 @@ ms.locfileid: "70176323"
  Nachdem Sie entschieden haben, welche Arten von Sicherungen Sie benötigen und wie oft Sie diese jeweils durchführen müssen, empfiehlt es sich, im Rahmen eines Datenbankwartungsplans für die Datenbank die regelmäßige Durchführung dieser Sicherungen zu planen. Informationen zu Wartungsplänen für Datenbank- und Protokollsicherungen und zu deren Erstellung finden Sie unter [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).
   
 ### <a name="test-your-backups"></a>Testen von Sicherungen  
- Sie verfügen erst dann über eine Wiederherstellungsstrategie, wenn Sie die Sicherungen getestet haben. Es ist entscheidend, dass Sie Ihre Sicherungsstrategie für jede Ihrer Datenbanken gründlich testen, indem Sie eine Kopie der Datenbank auf einem Testsystem wiederherstellen. Sie müssen die Wiederherstellung jedes Sicherungstyps testen, den Sie zu verwenden beabsichtigen.
-  
- Es empfiehlt sich, für jede Datenbank ein Betriebshandbuch zu führen. In diesem Betriebshandbuch sollten der Aufbewahrungsort der Sicherungen, ggf. die Namen der Sicherungsmedien sowie Angaben zum Zeitaufwand für die Wiederherstellung der Testsicherungen vermerkt sein.
+ Sie verfügen erst dann über eine Wiederherstellungsstrategie, wenn Sie die Sicherungen getestet haben. Es ist entscheidend, dass Sie Ihre Sicherungsstrategie für jede Ihrer Datenbanken gründlich testen, indem Sie eine Kopie der Datenbank auf einem Testsystem wiederherstellen. Sie müssen die Wiederherstellung jedes Sicherungstyps testen, den Sie zu verwenden beabsichtigen. Zudem wird empfohlen, dass Sie nach dem Wiederherstellen der Sicherung zur Überprüfung der Datenbankkonsistenz DBCC CHECKDB für die Datenbank ausführen, um zu überprüfen, ob die Sicherungsmedien beschädigt wurden. 
+
+### <a name="verify-media-stability-and-consistency"></a>Überprüfen der Medienstabilität und -konsistenz
+Verwenden Sie hierfür die Überprüfungsoptionen, die von den Sicherungsdienstprogrammen (dem Befehl BACKUP T-SQL, SQL Server-Wartungsplänen, Ihrer Sicherungssoftware oder -lösung usw.) bereitgestellt werden. Ein Beispiel finden Sie unter [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md). Verwenden Sie erweiterte Features wie BACKUP CHECKSUM, um Probleme mit dem Sicherungsmedium selbst zu ermitteln. Weitere Informationen finden Sie unter [](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).
+
+### <a name="document-backuprestore-strategy"></a>Dokumentieren der Sicherungs- und Wiederherstellungsstrategie 
+Es empfiehlt sich, Sicherungs- und Wiederherstellungsprozeduren zu dokumentieren und eine Kopie der Dokumentation im Ausführungsbuch aufzubewahren.
+Es wird auch empfohlen, für jede Datenbank ein Betriebshandbuch zu führen. In diesem Betriebshandbuch sollten der Aufbewahrungsort der Sicherungen, ggf. die Namen der Sicherungsmedien sowie Angaben zum Zeitaufwand für die Wiederherstellung der Testsicherungen vermerkt sein.
+
+
 
 ## <a name="monitor-progress-with-xevent"></a>Überwachen des Fortschritts mit xEvent
 Sicherungs- und Wiederherstellungsvorgänge können aufgrund der Größe der Datenbank und der Komplexität der notwendigen Vorgänge viel Zeit in Anspruch nehmen. Wenn bei einer der beiden Vorgänge ein Problem auftritt, können Sie das erweiterte Ereignis **backup_restore_progress_trace** verwenden, um den Fortschritt in Echtzeit zu überwachen. Weitere Informationen zu erweiterten Ereignissen finden Sie unter [Erweiterte Ereignisse](../extended-events/extended-events.md).
@@ -209,7 +223,7 @@ GO
 -   [Wiederherstellung einer Sicherung von einem Medium &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
 ## <a name="creating-backups"></a>Erstellen von Sicherungen  
-**HINWEIS!** Verwenden Sie für Teilsicherungen oder Kopiesicherungen die [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) -Anweisung mit der Option PARTIAL bzw. COPY_ONLY.  
+**Hinweis!** Verwenden Sie für Teilsicherungen oder Kopiesicherungen die [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) -Anweisung mit der Option PARTIAL bzw. COPY_ONLY.  
   
  ### <a name="using-ssms"></a>Verwenden von SSMS   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -261,7 +275,7 @@ GO
  ### <a name="using-t-sql"></a>Verwenden von T-SQL 
 -   [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
  
--   [Erneutes Starten eines unterbrochenen Wiederherstellungsvorgangs &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [Neustarten eines unterbrochenen Wiederherstellungsvorgangs Operation &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
 -   [Wiederherstellen einer Datenbank ohne Wiederherstellung von Daten &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
  
