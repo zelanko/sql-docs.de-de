@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: ALTER DATABASE SCOPED CONFIGURATION
+description: Diese Anweisung aktiviert mehrere Einstellungen für die Datenbankkonfiguration auf der Ebene einzelner Datenbanken.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240692"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258133"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -120,7 +122,7 @@ Gibt die Standardeinstellung **Max. Grad an Parallelität (MAXDOP)** an, die fü
 Sie können mithilfe der MAXDOP-Option die Anzahl der Prozessoren beschränken, die für die Ausführung paralleler Pläne verwendet werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Ausführung paralleler Pläne für Abfragen, DDL-Indizierungsoperationen (Datendefinitionssprache, Data Definition Language, DDL), parallele Einfügevorgänge, Onlineausführung von ALTER COLUMN, parallele Sammlung von Statistiken sowie die statische und keysetgesteuerte Cursorauffüllung.
 
 > [!NOTE]
-> Die Grenze **Max. Grad an Parallelität** wird pro [Task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) festgelegt. Es handelt sich nicht um eine Grenze pro [Anforderung](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) oder pro Abfrage. Das bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Abfrage mehrere Tasks erzeugen kann, die einem [Planer](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md). 
+> Der Grenzwert für **Max. Grad an Parallelität** wird [taskbezogen](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) festgelegt. Es handelt sich nicht um einen [anforderungs](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)- oder abfragebezogenen Grenzwert. Das bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Abfrage mehrere Tasks erzeugen kann, die einem [Planer](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md). 
 
 Informationen zum Festlegen dieser Option auf Instanzebene finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
@@ -129,8 +131,8 @@ Informationen zum Festlegen dieser Option auf Instanzebene finden Sie unter [Kon
 
 > [!TIP]
 > Verwenden Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**, um dies auf Abfrageebene zu erreichen.    
-> Verwenden Sie die [Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **Max. Grad an Parallelität (MAXDOP)** , um dies auf Serverebene zu erreichen.     
-> Verwenden Sie die [Konfigurationsoption für die Resource Governor-Arbeitsauslastunggruppe](../../t-sql/statements/create-workload-group-transact-sql.md), **MAX_DOP**, um dies auf Arbeitsauslastungebene zu erreichen.    
+> Verwenden Sie den **MAXDOP**-Wert (maximaler Parallelitätsgrad) der [Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), um dies auf Serverebene zu erreichen.     
+> Verwenden Sie die [Resource Governor-Konfigurationsoption **MAX_DOP** für die Arbeitsauslastungsgruppe](../../t-sql/statements/create-workload-group-transact-sql.md), um dies auf Arbeitsauslastungsebene zu erreichen.    
 
 PRIMARY
 
@@ -430,7 +432,7 @@ Die Systemansicht [sys.database_scoped_configurations &#40;Transact-SQL&#41;](..
 
 Folgende Beispiele veranschaulichen die Verwendung von ALTER DATABASE SCOPED CONFIGURATION
 
-### <a name="a-grant-permission"></a>A. Erteilen einer Berechtigung
+### <a name="a-grant-permission"></a>A. Berechtigung erteilen
 
 In diesem Beispiel wird dem Benutzer Joe die Berechtigung erteilt, die zum Ausführen von ALTER DATABASE SCOPED CONFIGURATION erforderlich ist.
 
@@ -467,7 +469,7 @@ In diesem Beispiel wird der Wert für LEGACY_CARDINALITY_ESTIMATION in einem Geo
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY ;
 ```
 
-### <a name="d-set-parameter_sniffing"></a>D. Festlegen von PARAMETER_SNIFFING
+### <a name="d-set-parameter_sniffing"></a>D: Festlegen von PARAMETER_SNIFFING
 
 In diesem Beispiel wird PARAMETER_SNIFFING in einem Georeplikationsszenario bei einer primären Datenbank auf OFF festgelegt.
 
@@ -564,7 +566,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 ```
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 
 ### <a name="maxdop-resources"></a>Ressourcen von MAXDOP
 
@@ -574,7 +576,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 ### <a name="legacy_cardinality_estimation-resources"></a>Ressourcen von LEGACY_CARDINALITY_ESTIMATION
 
 - [Kardinalitätsschätzung (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der SQL Server 2014-Kardinalitätsschätzung)](https://msdn.microsoft.com/library/dn673537.aspx)
+- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parameter_sniffing-resources"></a>Ressourcen von PARAMETER_SNIFFING
 
@@ -596,7 +598,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 ## <a name="more-information"></a>Weitere Informationen   
  [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
- [Empfehlung und Richtlinien für die Konfigurationsoption „Max. Grad an Parallelität“ im SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
+ [Empfehlung und Richtlinien für die Konfigurationsoption „Max. Grad an Parallelität“ in SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
  [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
  [Datenbank- und Dateikatalogsichten](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
  [Serverkonfigurationsoptionen](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    

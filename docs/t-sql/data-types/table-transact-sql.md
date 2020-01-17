@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/11/2018
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d4a36b287554332589f11a352233eaffe972ac06
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981731"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564797"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Entspricht einem speziellen Datentyp, der zum Speichern eines Resultsets für di
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]und höher), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +65,7 @@ Weitere Informationen zur Syntax finden Sie unter [CREATE TABLE &#40;Transact-SQ
 *collation_definition*  
 Die Sortierung einer Spalte, die aus einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschema und einer Vergleichsart, einem Windows-Gebietsschema und der Binärschreibweise oder einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierung besteht. Wenn *collation_definition* nicht angegeben ist, erbt die Spalte die Sortierung der aktuellen Datenbank. Wenn die Spalte als CLR-benutzerdefinierter Typ (Common Language Runtime) definiert ist, erbt die Spalte die Sortierung des benutzerdefinierten Typs.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 **table** verweist anhand des Namens in der FROM-Klausel eines Batches auf Variablen, wie im folgenden Beispiel gezeigt:
   
 ```sql
@@ -100,6 +100,10 @@ Für **table**-Variablen wird automatisch am Ende der Funktion, der gespeicherte
 **table**-Variablen werden im kostenbasierten Ansatzmodell des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Optimierers nicht unterstützt. Daher sollten sie nicht verwendet werden, wenn kostenbasierte Optionen erforderlich sind, um einen effizienten Abfrageplan zu erzielen. Temporäre Tabellen werden bevorzugt, wenn kostenbasierte Optionen erforderlich sind. Dieser Plan schließt in der Regel Abfragen mit Joins, Parallelverarbeitungsentscheidungen und Indexauswahloptionen ein.
   
 Abfragen, die **table**-Variablen ändern, generieren keine Pläne für die parallele Abfrageausführung. Die Leistung kann beeinträchtigt sein, wenn große **table**-Variablen oder **table**-Variablen in komplexen Abfragen geändert werden. Erwägen Sie daher in Situationen, in denen **table**-Variablen geändert werden, die Verwendung von temporären Tabellen. Weitere Informationen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Abfragen, die **table**-Variablen lesen, ohne sie zu ändern, können weiterhin parallelisiert werden.
+
+> [!IMPORTANT]
+> Der Datenbank-Kompatibilitätsgrad 150 verbessert die Leistung der Tabellenvariablen mit der Einführung der **verzögerten Kompilierung von Tabellenvariablen**.  Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvariablen](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).
+>
   
 Die explizite Erstellung von Indizes für **table**-Variablen ist nicht möglich, zudem werden für **table**-Variablen keine Statistiken geführt. Mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] wurde eine neue Syntax eingeführt, die es erlaubt, bestimmte Indextypen inline mit der Tabellendefinition zu erstellen.  Mit dieser neuen Syntax können Sie Indizes für **table**-Variablen als Teil der Tabellendefinition erstellen. In einigen Fällen kann die Leistung verbessert werden, indem stattdessen temporäre Tabellen verwendet werden, die eine vollständige Unterstützung für Indizes und Statistiken bieten. Weitere Informationen zu temporären Tabellen und der Inlineerstellung von Indizes finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
@@ -110,61 +114,6 @@ Zuweisungsvorgänge zwischen **table**-Variablen werden nicht unterstützt.
 Transaktionsrollbacks wirken sich nicht auf **table**-Variablen aus, da diese Variablen einen eingeschränkten Bereich haben und kein Teil der permanenten Datenbank sind.
   
 „table“-Variablen können nach ihrer Erstellung nicht mehr geändert werden.
-
-## <a name="table-variable-deferred-compilation"></a>Verzögerte Kompilierung von Tabellenvariablen
-Die **verzögerte Kompilierung von Tabellenvariablen** verbessert die Qualität des Abfrageplans und die Gesamtleistung für Abfragen mit Verweisen auf Tabellenvariablen. Während der Optimierung und der ersten Kompilierung des Plans verteilt diese Funktion Kardinalitätsschätzungen, die auf tatsächlichen Tabellenvariablen-Zeilenzahlen basieren. Diese Informationen zur genauen Zeilenzahl werden dann zur Optimierung der nachgelagerten Planvorgänge verwendet.
-
-> [!NOTE]
-> Die verzögerte Kompilierung von Tabellenvariablen ist in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ein Feature in der öffentlichen Preview.
-
-Bei der verzögerten Kompilierung von Tabellenvariablen wird die Kompilierung einer Anweisung, die auf eine Tabellenvariable verweist, bis zur ersten tatsächlichen Ausführung der Anweisung verzögert. Dieses Verhalten der verzögerten Kompilierung ist identisch mit dem von temporären Tabellen. Diese Änderung führt dazu, dass anstelle des ursprünglichen einreihigen Schätzwertes die tatsächliche Kardinalität verwendet wird. 
-
-Um die öffentliche Vorschau der verzögerten Kompilierung von Tabellenvariablen zu aktivieren, aktivieren Sie Datenbank-Kompatibilitätsgrad 150 für die Datenbank, mit der Sie beim Ausführen der Abfrage verbunden sind.
-
-Die verzögerte Kompilierung von Tabellenvariablen führt **nicht** zu Änderungen an anderen Merkmalen von Tabellenvariablen. Beispielsweise wird durch dieses Feature keine Spaltenstatistik zu Tabellenvariablen hinzugefügt.
-
-Die verzögerte Kompilierung von Tabellenvariablen **führt nicht zu einer häufigeren Neukompilierung**. Stattdessen wird der Zeitpunkt der ersten Kompilierung verschoben. Der resultierende zwischengespeicherte Plan wird basierend auf der anfänglichen Zeilenanzahl für die verzögerte Kompilierung von Tabellenvariablen generiert. Der zwischengespeicherte Plan wird von nachfolgenden Abfragen wiederverwendet. Es wird solange wiederverwendet, bis der Plan entfernt oder erneut kompiliert wird. 
-
-Die Zeilenanzahl für Tabellenvariablen, die für die anfängliche Plankompilierung verwendet wird, stellt einen typischen Wert dar, der von einem geschätzten Festwert für die Zeilenanzahl abweichen kann. Bei Abweichungen profitieren Downstreamvorgänge. Weicht die Zeilenanzahl für Tabellenvariablen für alle durchgeführten Ausführungen erheblich ab, wird die Leistung durch dieses Feature möglicherweise nicht verbessert.
-
-### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Deaktivieren der verzögerten Kompilierung von Tabellenvariablen ohne Änderung des Kompatibilitätsgrads
-Deaktivieren Sie die verzögerte Kompilierung von Tabellenvariablen im Datenbank- oder Anweisungsbereich, während Sie den Datenbankkompatibilitätsgrad bei 150 und höher beibehalten. Um die verzögerte Kompilierung von Tabellenvariablen für alle Abfrageausführungen zu deaktivieren, die aus der Datenbank stammen, führen Sie das folgende Beispiel im Kontext der betroffenen Datenbank aus:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
-```
-
-Um die verzögerte Kompilierung von Tabellenvariablen für alle Abfrageausführungen, die aus der Datenbank stammen, erneut zu aktivieren, führen Sie das folgende Beispiel im Kontext der betroffenen Datenbank aus:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
-```
-
-Sie können die verzögerte Kompilierung von Tabellenvariablen auch für eine bestimmte Abfrage deaktivieren, indem Sie DISABLE_DEFERRED_COMPILATION_TV als USE HINT-Abfragehinweis zuweisen.  Beispiel:
-
-```sql
-DECLARE @LINEITEMS TABLE 
-    (L_OrderKey INT NOT NULL,
-     L_Quantity INT NOT NULL
-    );
-
-INSERT @LINEITEMS
-SELECT L_OrderKey, L_Quantity
-FROM dbo.lineitem
-WHERE L_Quantity = 5;
-
-SELECT  O_OrderKey,
-    O_CustKey,
-    O_OrderStatus,
-    L_QUANTITY
-FROM    
-    ORDERS,
-    @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
-    AND O_OrderStatus = 'O'
-OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
-```
-
   
 ## <a name="examples"></a>Beispiele  
   
@@ -229,7 +178,7 @@ Rufen Sie die Funktion mit dieser Abfrage auf.
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
 [Benutzerdefinierte Funktionen](../../relational-databases/user-defined-functions/user-defined-functions.md)  

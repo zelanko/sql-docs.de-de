@@ -1,8 +1,8 @@
 ---
-title: Konfigurieren von SQL Server-Always On-Verfügbarkeitsgruppen für Hochverfügbarkeit unter Linux
-titleSuffix: SQL Server
+title: Konfigurieren von Verfügbarkeitsgruppen für SQL Server für Linux
 description: Erfahren Sie mehr über das Erstellen einer SQL Server-Always On-Verfügbarkeitsgruppe (AG) für Hochverfügbarkeit unter Linux.
 author: MikeRayMSFT
+ms.custom: seo-lt-2019
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 08/26/2019
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030308"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558394"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Konfigurieren von SQL Server-Always On-Verfügbarkeitsgruppen für Hochverfügbarkeit unter Linux
 
@@ -40,7 +40,7 @@ Die Schritte zum Erstellen einer Verfügbarkeitsgruppe auf Linux-Servern für Ho
 
 2. Erstellen Sie die Verfügbarkeitsgruppe. Dieser Schritt wird im aktuellen Artikel behandelt. 
 
-3. Konfigurieren Sie einen Clusterressourcen-Manager wie Pacemaker.
+3. Konfigurieren Sie einen Cluster Resource Manager wie Pacemaker.
    
    Die Art und Weise des Konfigurierens eines Clusterressourcen-Managers hängt von der jeweiligen Linux-Distribution ab. Unter den folgenden Links finden Sie distributionsspezifische Anweisungen: 
 
@@ -51,7 +51,7 @@ Die Schritte zum Erstellen einer Verfügbarkeitsgruppe auf Linux-Servern für Ho
    >[!IMPORTANT]
    >In Produktionsumgebungen wird zur Gewährleistung vonHochverfügbarkeit ein Fencing-Agent wie STONITH benötigt. In den Demos dieser Dokumentation werden keine Fencing-Agents verwendet. Die Demos dienen lediglich zu Testzwecken und Überprüfungen. 
    
-   >Ein Linux-Cluster verwendet Fencing, um den Cluster in einen bekannten Zustand zurückzusetzen. Die Art und Weise des Konfigurierens von Fencing hängt von der Distribution und der Umgebung ab. Derzeit ist Fencing in einigen Cloudumgebungen nicht verfügbar. Weitere Informationen finden Sie unter [Supportrichtlinien für RHEL-Hochverfügbarkeitscluster – Virtualisierungsplattformen](https://access.redhat.com/articles/29440).
+   >Ein Linux-Cluster verwendet Fencing, um den Cluster in einen bekannten Zustand zurückzusetzen. Wie das Fencing konfiguriert wird, hängt von der Verteilung und der Umgebung ab. Derzeit ist Fencing in einigen Cloudumgebungen nicht verfügbar. Weitere Informationen finden Sie unter [Supportrichtlinien für RHEL-Hochverfügbarkeitscluster – Virtualisierungsplattformen](https://access.redhat.com/articles/29440).
    
    >Informationen zu SLES finden Sie unter [SUSE Linux Enterprise-Hochverfügbarkeitserweiterung](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
@@ -215,7 +215,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 Wenn Sie die Schritte in diesem Dokument befolgt haben, verfügen Sie über eine Verfügbarkeitsgruppe, die noch nicht gruppiert ist. Der nächste Schritt besteht darin, den Cluster hinzuzufügen. Diese Konfiguration gilt für Leseskalierungs-/Lastenausgleichsszenarios und ist für die Hochverfügbarkeit nicht abgeschlossen. Für Hochverfügbarkeit müssen Sie die Verfügbarkeitsgruppe als Clusterressource hinzufügen. Anweisungen finden Sie unter [Nächste Schritte](#next-steps). 
 
-## <a name="notes"></a>Hinweise
+## <a name="notes"></a>Notizen
 
 >[!IMPORTANT]
 >Nachdem Sie den Cluster konfiguriert und die Verfügbarkeitsgruppe als Clusterressource hinzugefügt haben, können Sie ein Failover der Verfügbarkeitsgruppen nicht mehr mit Transact-SQL durchführen. SQL Server-Clusterressourcen unter Linux sind nicht so eng mit dem Betriebssystem gekoppelt wie in einem Windows Server-Failovercluster (WSFC). Der SQL Server-Dienst kann das Vorhandensein des Clusters nicht erkennen. Die gesamte Orchestrierung erfolgt über die Clusterverwaltungstools. Verwenden Sie in RHEL oder Ubuntu `pcs`. Verwenden Sie in SLES `crm`. 

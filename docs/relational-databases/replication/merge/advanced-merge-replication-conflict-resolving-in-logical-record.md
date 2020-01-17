@@ -1,6 +1,7 @@
 ---
-title: Ermitteln und Lösen von Konflikten in logischen Datensätzen | Microsoft-Dokumentation
-ms.custom: ''
+title: Erkennen und Auflösen von Konflikten in logischen Datensätzen (Merge)
+description: In diesem Thema werden die verschiedenen Kombinationsmöglichkeiten aus Konflikterkennung und Konfliktlösung bei der Verwendung logischer Datensätze mit Mergereplikation behandelt.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 62c862fdd67d7b4432595572175d87ae0bd44304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d222370b5e5ced1b2157a5f02f8eb4c7f44bb5e
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033322"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321577"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Erweiterte Konflikte in Mergereplikationen – Lösen von Konflikten in logischen Datensätzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68033322"
   
  Für die **logical_record_level_conflict_detection** -Artikeleigenschaft kann TRUE oder FALSE festgelegt werden. Der Wert sollte nur für den übergeordneten Artikel auf der obersten Ebene festgelegt werden. Von den untergeordneten Artikeln wird er ignoriert. Wenn FALSE festgelegt wurde, erfolgt die Konflikterkennung durch die Mergereplikation wie in den früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], d. h. ausschließlich auf der Basis des Werts der **column_tracking** -Eigenschaft für den Artikel. Wurde TRUE festgelegt, ignoriert die Mergereplikation die **column_tracking** -Eigenschaft für den Artikel und ermittelt einen Konflikt, wenn Änderungen im logischen Datensatz vorgenommen werden. Stellen Sie sich z. B. das folgende Szenario vor:  
   
- ![Logischer Datensatz mit Werten für drei Tabellen](../../../relational-databases/replication/merge/media/logical-records-05.gif "Three table logical record with values")  
+ ![Logischer Datensatz für drei Tabellen mit Werten](../../../relational-databases/replication/merge/media/logical-records-05.gif "Logischer Datensatz für drei Tabellen mit Werten")  
   
  Ein Konflikt wird erkannt, wenn zwei Benutzer Werte für den logischen Customer2-Datensatz in den **Customers**-, **Orders**- bzw. **OrderItems** -Tabellen ändern. Bei diesem Beispiel kommt es zu Änderungen durch eine UPDATE-Anweisung, der Konflikt würde aber auch erkannt werden, wenn die Änderungen durch eine INSERT- oder DELETE-Anweisung zustande gekommen wären.  
   
@@ -75,7 +76,7 @@ ms.locfileid: "68033322"
   
  Da die Konflikte auf der Ebene des logischen Datensatzes gelöst werden, ersetzen während der Replikationsverarbeitung die Gewinneränderungen, die auf dem Verleger vorgenommen wurden, die Änderungen, die an den Tabellen auf dem Abonnenten erfolgt sind.  
   
- ![Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-06.gif "Series of tables showing changes to related rows")  
+ ![Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-06.gif "Reihe von Tabellen mit Änderungen an verknüpften Zeilen")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>Erkennung auf Zeilenebene, Lösung auf der Ebene des logischen Datensatzes  
  In diesem Beispiel ist die Veröffentlichung wie folgt konfiguriert:  
@@ -90,7 +91,7 @@ ms.locfileid: "68033322"
   
  Da die Konflikte auf der Ebene des logischen Datensatzes gelöst werden, ersetzen während der Synchronisierung die Gewinneränderungen, die auf dem Verleger vorgenommen wurden, die Änderungen, die an den Tabellen auf dem Abonnenten erfolgt sind.  
   
- ![Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-07.gif "Series of tables showing changes to related rows")  
+ ![Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-07.gif "Reihe von Tabellen mit Änderungen an verknüpften Zeilen")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>Erkennung auf der Ebene des logischen Datensatzes, Lösung auf der Ebene des logischen Datensatzes  
  In diesem Beispiel ist die Veröffentlichung wie folgt konfiguriert:  
@@ -103,7 +104,7 @@ ms.locfileid: "68033322"
   
  Da die Konflikte auch auf der Ebene des logischen Datensatzes gelöst werden, ersetzt während der Synchronisierung die Gewinneränderung, die auf dem Verleger vorgenommen wurde, die Änderung, die an den Tabellen auf dem Abonnenten erfolgt ist.  
   
- ![Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-08.gif "Series of tables showing changes to related rows")  
+ ![Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-08.gif "Reihe von Tabellen mit Änderungen an verknüpften Zeilen")  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

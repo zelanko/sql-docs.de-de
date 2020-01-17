@@ -1,6 +1,7 @@
 ---
-title: Einschätzen der Dienstunterbrechung für den Rollenwechsel (Datenbankspiegelung) | Microsoft-Dokumentation
-ms.custom: ''
+title: Schätzung der Dienstunterbrechung während eines Spiegelungsfailovers
+description: Schätzen Sie die Dienstunterbrechung ein, wenn ein Failover für eine Datenbankspiegelung von der primären zur sekundären Rolle durchgeführt wird.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: a0301a6cdfd1381e3fdc6baa8189cc8fbf4739a1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874179"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253572"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Einschätzen der Unterbrechung des Diensts während des Rollenwechsels (Datenbankspiegelung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ ms.locfileid: "70874179"
 ## <a name="estimating-interruption-of-service-during-automatic-failover"></a>Schätzen der Dienstunterbrechung beim automatischen Failover  
  In der folgende Abbildung wird veranschaulicht, wie die Fehlererkennung und die Failoverzeit zur Gesamtzeit beitragen, die zum Abschließen eines automatischen Failovers auf **Partner_B**erforderlich ist. Das Failover benötigt Zeit zum Ausführen des Rollforwards für die Datenbank (die Rollforwardphase) sowie zusätzlich ein wenig Zeit, um die Datenbank online zu schalten. In der Rollbackphase wird ein Rollback für Transaktionen ohne Commit ausgeführt wird. Diese Phase erfolgt, nachdem die Prinzipaldatenbank online geschaltet wurde, und wird nach dem Failover fortgesetzt. Die Datenbank ist während der Rollbackphase verfügbar.  
   
- ![Error detection and failover time (Fehlererkennung und Failoverzeit)](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "Error detection and failover time (Fehlererkennung und Failoverzeit)")  
+ ![Fehlererkennung und Failoverzeit](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "Fehlererkennung und Failoverzeit")  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Betriebsmodi der Datenbankspiegelung](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   

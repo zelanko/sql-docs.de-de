@@ -1,6 +1,7 @@
 ---
-title: Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Reporting Services mit Verfügbarkeitsgruppen
+description: Erfahren Sie, wie Sie SQL Server Reporting Services (SSRS) mit Always On-Verfügbarkeitsgruppen konfigurieren können.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252119"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243622"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68252119"
  Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Always On FAQ for SQL Server 2012 (Häufig gestellte Fragen zu Always On für SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768))).  
 
 ##  <a name="bkmk_requirements"></a> Anforderungen für die Verwendung von Reporting Services und Always On-Verfügbarkeitsgruppen  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und Power BI-Berichtsserver verwenden .Net Framework 4.0 und unterstützen die Verbindungszeichenfolgen-Eigenschaften von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] zur Verwendung mit Datenquellen.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und Power BI-Berichtsserver verwenden .NET Framework 4.0 und unterstützen die Verwendung der Verbindungszeichenfolgen-Eigenschaften von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit Datenquellen.  
   
  Um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 und früher zu verwenden, müssen Sie einen Hotfix für .NET 3.5 SP1 herunterladen und installieren. Der Hotfix fügt Unterstützung für Funktionen des SQL Client für Verfügbarkeitsgruppen und Unterstützung der Verbindungszeichenfolgeneigenschaften **ApplicationIntent** und **MultiSubnetFailover**hinzu. Wenn der Hotfix nicht auf jedem Computer installiert ist, der einen Berichtsserver hostet, dann sehen Benutzer, die versuchen, Berichte in der Vorschau anzuzeigen, eine Fehlermeldung wie die Folgende, und die Fehlermeldung wird in das Ablaufverfolgungsprotokoll des Berichtsservers geschrieben:  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68252119"
   
 -   **SharePoint-Modus:** Verwenden Sie die SharePoint-Konfigurationsseiten innerhalb der Dokumentbibliotheken für Berichte, die bereits auf einem SharePoint-Server veröffentlicht wurden.  
   
--   **Berichtsentwurf:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] oder [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] , wenn Sie neue Berichte erstellen. Weitere Informationen finden Sie in diesem Thema im Abschnitt „Berichtsentwurf“.  
+-   **Berichtsentwurf:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] oder [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], wenn Sie neue Berichte erstellen. Weitere Informationen finden Sie in diesem Thema im Abschnitt „Berichtsentwurf“.  
   
  **Zusätzliche Ressourcen:**  
   
@@ -80,7 +81,7 @@ ms.locfileid: "68252119"
   
 -   Weitere Informationen zu Verfügbarkeitsgruppenlistenern finden Sie unter [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- **Weitere Überlegungen:** Sekundäre Replikate empfangen Datenänderungen vom primären Replikat in der Regel mit Verzögerung. Die folgenden Faktoren können sich auf die Updatewartezeit zwischen den primären und sekundären Replikaten auswirken:  
+ **Überlegungen:** Sekundäre Replikate empfangen Datenänderungen vom primären Replikat in der Regel mit Verzögerung. Die folgenden Faktoren können sich auf die Updatewartezeit zwischen den primären und sekundären Replikaten auswirken:  
   
 -   Die Anzahl der sekundären Replikate. Die Verzögerung nimmt mit jedem sekundären Replikat zu, das der Konfiguration hinzugefügt wird.  
   

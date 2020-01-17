@@ -1,6 +1,7 @@
 ---
-title: Konfigurieren von PolyBase für den Zugriff auf externe Daten mit generischen ODBC-Typen | Microsoft-Dokumentation
-ms.date: 04/23/2019
+title: 'Zugreifen auf externe Daten: Generische ODBC-Typen: PolyBase'
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 735d43f224fcfb8438f8fed9bdc6c3b254071195
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5017dc54a1e7858786413b2fcc164e4949f77646
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907597"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255424"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in SQL Server
 

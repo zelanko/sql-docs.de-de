@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909548"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190154"
 ---
 # <a name="tempdb-database"></a>TempDB-Datenbank
 
@@ -52,7 +52,7 @@ Vorgänge innerhalb von **tempdb** werden minimal protokolliert, sodass ein Roll
 
 In der folgenden Tabelle werden die anfänglichen Konfigurationswerte der **tempdb**-Daten- und Protokolldateien in SQL Server aufgeführt, die auf den Standardeinstellungen der Modelldatenbank basieren. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geringfügig unterscheiden.  
   
-|File|Logischer Name (logical name)|Physischer Name (physical name)|Anfangsgröße|Dateivergrößerung (file growth)|  
+|Datei|Logischer Name (logical name)|Physischer Name (physical name)|Ursprüngliche Größe|Dateivergrößerung (file growth)|  
 |----------|------------------|-------------------|------------------|-----------------|  
 |Primäre Daten|tempdev|tempdb.mdf|8 Megabytes|Automatische Vergrößerung um 64 MB, bis der Speicherplatz auf dem Datenträger erschöpft ist|  
 |Sekundäre Datendateien*|temp#|tempdb_mssql_#.ndf|8 Megabytes|Automatische Vergrößerung um 64 MB, bis der Speicherplatz auf dem Datenträger erschöpft ist|  
@@ -80,9 +80,9 @@ Die folgende Tabelle nennt die Standardwerte für die einzelnen Datenbankoptione
 |ANSI_WARNINGS|OFF|Ja|  
 |ARITHABORT|OFF|Ja|  
 |AUTO_CLOSE|OFF|Nein|  
-|AUTO_CREATE_STATISTICS|ON|Ja|  
+|AUTO_CREATE_STATISTICS|EIN|Ja|  
 |AUTO_SHRINK|OFF|Nein|  
-|AUTO_UPDATE_STATISTICS|ON|Ja|  
+|AUTO_UPDATE_STATISTICS|EIN|Ja|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Ja|  
 |CHANGE_TRACKING|OFF|Nein|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
@@ -90,7 +90,7 @@ Die folgende Tabelle nennt die Standardwerte für die einzelnen Datenbankoptione
 |CURSOR_DEFAULT|GLOBAL|Ja|  
 |Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Nein<br /><br /> Nein|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
-|DB_CHAINING|ON|Nein|  
+|DB_CHAINING|EIN|Nein|  
 |ENCRYPTION|OFF|Nein|  
 |MIXED_PAGE_ALLOCATION|OFF|Nein|  
 |NUMERIC_ROUNDABORT|OFF|Ja|  
@@ -111,7 +111,7 @@ Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE SET-
 
 |SLO|Maximale Dateigröße für tempdb-Daten (GB)|Anzahl von tempdb-Datendateien|Maximale Datengröße für tempdb (GB)|
 |---|---:|---:|---:|
-|Standard|13|1|13|
+|Basic|13|1|13|
 |S0|13|1|13|
 |S1|13|1|13|
 |S2|13|1|13|
@@ -214,7 +214,14 @@ Weitere Informationen zu Verbesserungen der Leistung in tempdb finden Sie im fol
 [TEMPDB – Files and Trace Flags and Updates, Oh My! (TEMPDB: Dateien, Ablaufverfolgungsflags und Updates)](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Speicheroptimierte TempDB-Metadaten
-Bislang stellten tempdb-Metadatenkonflikte einen Engpass für die Skalierbarkeit vieler Workloads auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar. Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte tempdb-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden. Zur Verwendung dieser neuen Funktion führen Sie das folgende Skript aus:
+Bislang stellten tempdb-Metadatenkonflikte einen Engpass für die Skalierbarkeit vieler Workloads auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar. Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte tempdb-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden.
+
+Sehen Sie sich dieses siebenminütige Video an, um einen Überblick zu erhalten, wie und wann die speicheroptimierten TempDB-Metadaten verwendet werden sollen:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+
+
+Zur Verwendung dieser neuen Funktion führen Sie das folgende Skript aus:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
