@@ -1,6 +1,7 @@
 ---
-title: Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: Upgraden des Protokollversands auf SQL Server 2016 und höher
+description: Informieren Sie sich über die korrekte Reihenfolge, um Ihre Protokollversandlösung für die Notfallwiederherstellung bei einem Upgrade von einer früheren Version auf SQL Server 2016 und höher beizubehalten.
+ms.custom: seo-lt-2019
 ms.date: 02/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: c3ebe7da68b057e9f84d2b83572a337ede278401
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227133"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258570"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "71227133"
   
  **In diesem Thema:**  
   
--   [Erforderliche Komponenten](#Prerequisites)  
+-   [Voraussetzungen](#Prerequisites)  
   
 -   [Datensicherung vor dem Upgrade](#ProtectData)  
   
@@ -37,7 +38,7 @@ ms.locfileid: "71227133"
   
 -   [Aktualisieren der primären Instanz](#UpgradePrimary)  
   
-##  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Voraussetzungen  
  Lesen Sie die folgenden wichtigen Informationen, bevor Sie beginnen:  
   
 -   [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Überprüfen Sie, ob ein Upgrade von Ihrer Version des Windows-Betriebssystems und Ihrer SQL Server-Version auf SQL Server 2016 möglich ist. Sie können beispielsweise nicht direkt von einer SQL Server 2005-Instanz auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]upgraden.  

@@ -1,6 +1,5 @@
 ---
 title: Verwenden des RAW-Modus mit FOR XML | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ac5e5ccf60594d41ff89d9ef5bd2c4342944a6da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016150"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245238"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Verwenden des RAW-Modus mit FOR XML
 
@@ -36,7 +36,7 @@ Der RAW-Modus wandelt jede Zeile im Resultset der Abfrage in ein XML-Element um,
  Die Option BINARY BASE64 muss in der FOR XML-Klausel angegeben werden, um die Binärdaten im Base64-codierten Format zurückzugeben. Im RAW-Modus führt das Abrufen von Binärdaten ohne Angabe der Option BINARY BASE64 zu einem Fehler.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- Dieser Abschnitt enthält die folgenden Beispiele:  
+ Dieser Abschnitt enthält folgende Beispiele:  
   
 -   [Beispiel: Abrufen von Produktmodellinformationen als XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   

@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c74dff8b6e2f64c49f4092eb2c2f892f6c02c55
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d50c8c83ebba970a847c5a2db70ca0268637d3e8
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711071"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542287"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -40,7 +40,7 @@ Enthält alle für einen Zugriff auf Remotedaten von einer OLE DB-Datenquelle no
 
 `OPENROWSET` unterstützt auch Massenvorgänge über einen integrierten BULK-Anbieter, mit dem Daten aus einer Datei gelesen und als Rowset zurückgegeben werden können.
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -96,7 +96,7 @@ OPENROWSET
 „BULK“ verwendet den BULK-Rowsetanbieter für OPENROWSET, um Daten aus einer Datei zu lesen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann OPENROWSET aus einer Datendatei lesen, ohne die Daten in eine Zieltabelle zu laden. Auf diese Weise können Sie OPENROWSET mit einer einfachen SELECT-Anweisung verwenden.
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 Die Argumente der Option BULK ermöglichen eine erhebliche Kontrolle darüber, wo das Lesen von Daten begonnen und beendet werden soll, wie mit Fehlern umgegangen wird und wie Daten interpretiert werden sollen. Beispielsweise können Sie angeben, dass die Datendatei als einzeiliges, einspaltiges Rowset vom Datentyp **varbinary**, **varchar** oder **nvarchar** gelesen wird. Das Standardverhalten ist in den folgenden Argumentbeschreibungen erläutert.
 
@@ -108,11 +108,11 @@ Die Argumente der Option BULK ermöglichen eine erhebliche Kontrolle darüber, w
 Informationen zum Vorbereiten von Daten für Massenimport finden Sie unter [Vorbereiten von Daten für den Massenexport oder -import &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
 „*data_file*“ ist der vollständige Pfad der Datendatei, deren Daten in die Zieltabelle kopiert werden sollen.
-**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Anwendungsbereich:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich „data_file“ in Azure-Blobspeicher befinden. Beispiele finden Sie unter [Beispiele für Massenzugriff auf Daten in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 \<bulk_options> gibt mindestens ein Argument für die Option BULK an.
 
@@ -124,7 +124,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich „d
 > [!NOTE]
 > Es wird empfohlen, dass Sie für jede Spalte in einer Formatdatei einen Sortierungsnamen angeben, außer wenn die 65001-Option Priorität vor der Angabe von Sortierung/Codepage haben soll.
 
-|CODEPAGE-Wert|und Beschreibung|
+|CODEPAGE-Wert|BESCHREIBUNG|
 |--------------------|-----------------|
 |ACP|Konvertiert Spalten vom Datentyp **char**, **varchar** oder **text** von der ANSI-/[!INCLUDE[msCoName](../../includes/msconame-md.md)]-Windows-Codepage (ISO 1252) in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage.|
 |OEM (Standard)|Konvertiert Spalten vom Datentyp **char**, **varchar** oder **text** von der OEM-Codepage des Systems in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage.|
@@ -134,13 +134,13 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich „d
 „ERRORFILE ='*file_name*'“ gibt die Datei an, die zum Sammeln der Zeilen verwendet wird, die Formatierungsfehler enthalten und nicht in ein OLE DB-Rowset konvertiert werden können. Diese Zeilen werden aus der Datendatei unverändert in diese Fehlerdatei kopiert.
 
 Die Fehlerdatei wird zu Beginn der Ausführung des Befehls erstellt. Falls die Datei bereits vorhanden ist, wird ein Fehler ausgelöst. Darüber hinaus wird eine Kontrolldatei mit der Erweiterung .ERROR.txt erstellt. Diese Datei enthält einen Verweis auf jede Zeile in der Fehlerdatei und stellt eine Fehlerdiagnose bereit. Sobald die Fehler korrigiert wurden, können die Daten geladen werden.
-**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Anwendungsbereich:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] kann sich `error_file_path` im Azure Blob Storage befinden.
 
-„errorfile_data_source_name“ **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+'errorfile_data_source_name' **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Es handelt sich um eine benannte externe Datenquelle, die auf den Azure Blob-Speicherort der Fehlerdatei verweist, welche Fehler enthält, die während des Importierens gefunden wurden. Die externe Datenquelle muss mithilfe der in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 hinzugefügten `TYPE = BLOB_STORAGE`-Option erstellt werden. Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE (CREATE EXTERNAL DATA SOURCE)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-„FIRSTROW =*first_row*“ gibt die Nummer der ersten zu ladenden Zeile an. Der Standardwert lautet 1. Damit wird die erste Zeile in der festgelegten Datendatei angegeben. Die Zeilennummern werden durch Zählen der Zeilenabschlusszeichen bestimmt. FIRSTROW ist einsbasiert.
+„FIRSTROW =*first_row*“ gibt die Nummer der ersten zu ladenden Zeile an. Der Standardwert ist 1. Damit wird die erste Zeile in der festgelegten Datendatei angegeben. Die Zeilennummern werden durch Zählen der Zeilenabschlusszeichen bestimmt. FIRSTROW ist einsbasiert.
 
 „LASTROW =*last_row*“ gibt die Nummer der letzten zu ladenden Zeile an. Die Standardeinstellung ist 0. Damit wird die letzte Zeile in der festgelegten Datendatei angegeben.
 
@@ -183,7 +183,7 @@ Wenn *data_file* als ASCII gelesen wird, wird der Inhalt als einzeiliges, einspa
 
 ### <a name="input-file-format-options"></a>Formatoptionen der Eingabedatei
 
-„FORMAT **=** 'CSV'“ **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+FORMAT **=** 'CSV' **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Gibt eine CSV-Datei an, die dem Standard [RFC 4180](https://tools.ietf.org/html/rfc4180) entspricht.
 
 „FORMATFILE ='*format_file_path*'“ gibt den vollständigen Pfad einer Formatdatei an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Typen von Formatdateien: XML- und Nicht-XML-Formatdateien.
@@ -192,13 +192,13 @@ Eine Formatdatei ist erforderlich, um Spaltentypen im Resultset zu definieren. D
 
 Weitere Informationen finden Sie unter [Massenimport von Daten mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
-**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Anwendungsbereich:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich format_file_path in Azure Blob Storage befinden. Beispiele finden Sie unter [Beispiele für Massenzugriff auf Daten in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
-„FIELDQUOTE **=** 'field_quote'“ **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+FIELDQUOTE **=** 'field_quote' **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Gibt ein Zeichen an, das als Anführungszeichen in der CSV-Datei verwendet wird. Wenn dies nicht angegeben ist, wird das Anführungszeichen (") so verwendet, wie es im Standard [RFC 4180](https://tools.ietf.org/html/rfc4180) definiert ist.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Mit `OPENROWSET` kann nur auf Remotedaten von OLE DB-Datenquellen zugegriffen werden, wenn für den angegebenen Anbieter die Registrierungsoption **DisallowAdhocAccess** explizit auf 0 festgelegt wird und wenn die erweiterte Konfigurationsoption „Ad Hoc Distributed Queries“ aktiviert ist. Wenn diese Optionen nicht festgelegt sind, ermöglicht das Standardverhalten keinen Ad-hoc-Zugriff.
 
@@ -283,7 +283,7 @@ SELECT CustomerID, CompanyName
 ```
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. Verwenden von OPENROWSET und einer weiteren Tabelle in einem INNER JOIN
 
@@ -304,9 +304,9 @@ FROM Northwind.dbo.Customers AS c
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt das Lesen aus Windows-Dateien nicht.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt nur das Lesen aus Azure Blob Storage.
 
-### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. Verwenden von OPENROWSET zum Masseneinfügen von Dateidaten in eine Spalte vom Typ varbinary(max)
+### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D: Verwenden von OPENROWSET zum Masseneinfügen von Dateidaten in eine Spalte vom Typ varbinary(max)
 
  Das folgende Beispiel erstellt eine kleine Tabelle für Demonstrationszwecke und fügt Dateidaten aus der Datei `Text1.txt`, die im Stammverzeichnis `C:` gespeichert ist, in eine Spalte vom Datentyp `varbinary(max)` ein.
 
@@ -325,7 +325,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. Verwenden des OPENROWSET BULK-Anbieters mit einer Formatdatei zum Abrufen von Zeilen aus einer Textdatei
 
@@ -354,7 +354,7 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ```
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. Angeben einer Formatdatei und Codepage
 
@@ -368,7 +368,7 @@ OPENROWSET (BULK N'D:\data.csv', FORMATFILE =
 
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. Zugriff auf Daten aus einer CSV-Datei mit einer Formatdatei
 
-**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Anwendungsbereich:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 
 ```sql
 SELECT *
@@ -379,7 +379,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt das Lesen aus Windows-Dateien nicht.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. Zugriff auf Daten aus einer CSV-Datei ohne eine Formatdatei
 
@@ -401,11 +401,11 @@ from openrowset
 > [!IMPORTANT]
 >
 > - Der ODBC-Treiber sollte eine 64-Bit-Treiber sein. Öffnen Sie die Registerkarte **Treiber** der Anwendung [ODBC-Datenquellen](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) in Windows, um dies zu bestätigen. Es gibt einen 32-Bit-`Microsoft Text Driver (*.txt, *.csv)`, der nicht mit einer 64-Bit-Version von „sqlservr.exe“ funktioniert.
-> - Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> - Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. Zugriff auf Daten aus einer in Azure Blob Storage gespeicherten Datei
 
-**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Anwendungsbereich:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Im folgenden Beispiel wird eine externe Datenquelle verwendet, die auf einen Container im Azure-Speicherkonto und auf für SAS erstellte datenbankweit gültige Anmeldeinformationen verweist.
 
 ```sql
@@ -419,7 +419,7 @@ Vollständige `OPENROWSET`-Beispiele einschließlich der Konfiguration der Anmel
 
 ### <a name="j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage"></a>J. Importieren aus einer in Azure Blob Storage gespeicherten Datei in eine Tabelle
 
-Das folgende Beispiel zeigt, wie Daten mithilfe des OPENROWSET-Befehls aus einer CSV-Datei in einen Speicherort von Azure Blob Storage geladen werden, für den Sie einen SAS-Schlüssel erstellt haben. Der Speicherort von Azure Blob Storage wird als externe Datenquelle konfiguriert. Hierfür sind datenbankweit gültige Anmeldeinformationen mit Shared Access Signature (SAS) erforderlich, die mit einem Hauptschlüssel in der Benutzerdatenbank verschlüsselt ist.
+Das folgende Beispiel zeigt, wie Daten mithilfe des OPENROWSET-Befehls aus einer CSV-Datei in einen Speicherort von Azure Blob Storage geladen werden, für den Sie einen SAS-Schlüssel erstellt haben. Der Speicherort von Azure Blob Storage wird als externe Datenquelle konfiguriert. Hierfür sind datenbankweit gültige Anmeldeinformationen mit einer Shared Access Signature (SAS) erforderlich, die mit einem Hauptschlüssel in der Benutzerdatenbank verschlüsselt ist.
 
 ```sql
 --> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -451,7 +451,7 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="additional-examples"></a>Zusätzliche Beispiele
 
@@ -474,7 +474,6 @@ Zusätzliche Beispiele für die Verwendung von `INSERT...SELECT * FROM OPENROWSE
 - [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
 - [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)
 - [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)
-- [Rowset-Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)
 - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
 - [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
 - [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)

@@ -1,6 +1,7 @@
 ---
-title: Verwenden von Always On-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe | Microsoft-Dokumentation
-ms.custom: ''
+title: Richtlinien zum Anzeigen der Verfügbarkeitsgruppenintegrität
+description: Verwenden Sie die Always On-Richtlinien oder PowerShell, um die Betriebsintegrität einer Always On-Verfügbarkeitsgruppe zu bestimmen.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a25f06a464fe8ba44347b4f1f117cbde64ceab76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013646"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244737"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68013646"
   
 2.  Klicken Sie auf den Servernamen, um die Serverstruktur zu erweitern.  
   
-3.  Erweitern Sie den Knoten **Hohe Verfügbarkeit mit AlwaysOn** .  
+3.  Erweitern Sie den Knoten **Always On High Availability** (Always On Hochverfügbarkeit).  
   
      Klicken Sie entweder mit der rechten Maustaste auf den Knoten **Verfügbarkeitsgruppen** , oder erweitern Sie diesen Knoten, und klicken Sie mit der rechten Maustaste auf eine bestimmte Verfügbarkeitsgruppe.  
   
@@ -85,12 +86,12 @@ ms.locfileid: "68013646"
   
      Diese Cmdlets akzeptieren die folgenden Optionen:  
   
-    |Option|und Beschreibung|  
+    |Option|BESCHREIBUNG|  
     |------------|-----------------|  
     |**AllowUserPolicies**|Führt in den AlwaysOn-Richtlinienkategorien gefundene Benutzerrichtlinien aus.|  
     |**InputObject**|Eine Auflistung von Objekten, die abhängig vom verwendeten Cmdlet den Status von Verfügbarkeitsgruppen, Verfügbarkeitsreplikaten oder Verfügbarkeitsdatenbanken darstellen. Das Cmdlet berechnet die Integrität der angegebenen Objekte.|  
     |**NoRefresh**|Wenn dieser Parameter festgelegt wird, werden die vom **-Path** - oder **-InputObject** -Parameter angegebenen Objekte nicht manuell vom Cmdlet aktualisiert.|  
-    |**Pfad**|Abhängig vom verwendeten Cmdlet der Pfad zur Verfügbarkeitsgruppe, zu den Verfügbarkeitsreplikaten oder zum Status des Datenbankreplikatclusters. Dies ist ein optionaler Parameter. Wird dieser Parameter nicht angegeben, wird der Wert standardmäßig auf den aktuellen Arbeitsstandort festgelegt.|  
+    |**Path**|Abhängig vom verwendeten Cmdlet der Pfad zur Verfügbarkeitsgruppe, zu den Verfügbarkeitsreplikaten oder zum Status des Datenbankreplikatclusters. Dies ist ein optionaler Parameter. Wird dieser Parameter nicht angegeben, wird der Wert standardmäßig auf den aktuellen Arbeitsstandort festgelegt.|  
     |**ShowPolicyDetails**|Zeigt das Ergebnis aller von diesem Cmdlet ausgeführten Richtlinienauswertungen an. Das Cmdlet gibt ein Objekt pro Richtlinienauswertung aus. Dieses Objekt verfügt über Felder, in denen die Ergebnisse der Auswertung beschrieben werden, z. B. ob die Richtlinie eingehalten wurde sowie den Richtliniennamen und die Kategorie.|  
   
      Beispielsweise gibt der folgende **Test-SqlAvailabilityGroup** -Befehl den **-ShowPolicyDetails** -Parameter an, um das Ergebnis aller von diesem Cmdlet ausgeführten Richtlinienauswertungen anzuzeigen, und zwar für jede einzelne Richtlinie der richtlinienbasierten Verwaltung (policy-based management (PBM)) die auf einer Verfügbarkeitsgruppe namens `MyAg`ausgeführt wurde.  
@@ -124,9 +125,9 @@ ms.locfileid: "68013646"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Verwaltung einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
+ [Verwaltung einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
- [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
+ [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
   
 

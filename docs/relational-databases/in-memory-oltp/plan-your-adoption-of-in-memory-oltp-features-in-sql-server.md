@@ -1,6 +1,6 @@
 ---
-title: Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server | Microsoft-Dokumentation
-ms.custom: ''
+title: 'Übernahme von In-Memory-OLTP '
+ms.custom: seo-dt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2aaee2db975d9632c1f13a664a6ad2939afe20b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021810"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412548"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ In den folgenden Unterabschnitten werden die Faktoren erläutert, die Sie berüc
 
 Eine erforderliche Komponente für die Verwendung der In-Memory-Funktionen kann die Edition oder Dienstebene des SQL-Produkts umfassen. Diese und andere erforderliche Komponenten finden Sie unter:
 
-- [Anforderungen für die Verwendung von speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
+- [Anforderungen für die Verwendung speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
     - [Editionen und Komponenten von SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-    - [SQL-Datenbank-Tarifempfehlungen](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
+    - [Tarifempfehlungen für SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
 
 
 ### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2 Prognose der Menge an aktivem Arbeitsspeicher
@@ -54,7 +54,7 @@ Eine speicheroptimierte Tabelle mit 200 GB Daten erfordert mehr als 200 GB aktiv
 
 - [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
-#### <a name="azure-sql-database"></a>Azure SQL-Datenbank
+#### <a name="azure-sql-database"></a>Azure SQL-Datenbank
 
 Bei einer Datenbank, die im Clouddienst von Azure SQL-Datenbank gehostet wird, wirkt sich die ausgewählte Dienstebene auf die Menge an aktivem Arbeitsspeicher aus, die Ihre Datenbank verwenden darf. Sie sollten planen, die Speicherverwendung Ihrer Datenbank mithilfe einer Warnung zu überwachen. Einzelheiten dazu finden Sie unter:
 
@@ -95,8 +95,8 @@ Eine Möglichkeit, Ihre datenträgerbasierte Tabelle in eine speicheroptimierte 
 
 Das Tool „Ratgeber für die Speicheroptimierung“ kann ein Skript generieren, um bei der Implementierung der Umkehrung einer datenträgerbasierten Tabelle in eine speicheroptimierte Tabelle zu helfen. Das Tool ist als Teil der SQL Server Data Tools (SSDT) installiert.
 
-- [Ratgeber für die Speicheroptimierung](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
-- [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Advisor für die Speicheroptimierung](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
+- [Download der neuesten SQL Server-Datatools](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
 
 #### <a name="dacpac-file"></a>DACPAC-Datei
@@ -113,7 +113,7 @@ Sie arbeiten mit DACPAC-Dateien im Kontext eines Visual Studio-Projekts vom Typ 
 
 Einen Leitfaden, um herauszufinden, ob In-Memory-OLTP-Funktionen die Leistung Ihrer bestimmten Anwendung verbessern können, finden Sie unter:
 
-- [In-Memory OLTP (Arbeitsspeicheroptimierung)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 
 
@@ -193,7 +193,7 @@ Der Befehl [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-tra
 
 
 
-## <a name="d-performance"></a>D. Leistung
+## <a name="d-performance"></a>D: Leistung
 
 Dieser Abschnitt beschreibt Situationen, in denen die ausgezeichnete Leistung von speicheroptimierten Tabellen unterhalb des Gesamtpotenzials bleiben kann.
 
@@ -302,6 +302,6 @@ Sie können die Transact-SQL-Skripts stabiler gegenüber einem möglichen Transa
 
 ## <a name="related-links"></a>Verwandte Links
 
-- [In-Memory OLTP (Arbeitsspeicheroptimierung)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 

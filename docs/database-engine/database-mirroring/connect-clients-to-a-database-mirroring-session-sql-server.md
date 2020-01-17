@@ -1,6 +1,7 @@
 ---
-title: Verbinden von Clients mit einer Datenbankspiegelungssitzung (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verbinden von Clients mit einer Datenbankspiegelung
+description: Hier erfahren Sie, wie Sie Clients so konfigurieren, dass die Verbindung mit einer Datenbankspiegelung über den nativen Client oder den .NET Framework-Anbieter für SQL Server hergestellt wird.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f9916aba4640deab8dcb8764934ddd3d917256e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951999"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258879"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
+  Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)aus. Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
   
   
 ##  <a name="InitialConnection"></a> Herstellen der Anfangsverbindung mit einer Datenbank-Spiegelungssitzung  
@@ -47,7 +48,7 @@ ms.locfileid: "67951999"
   
  In der folgenden Abbildung wird eine Clientverbindung mit dem ersten Partner, **Partner_A**, für eine gespiegelte Datenbank namens **Db_1**dargestellt. Die Abbildung stellt einen Fall dar, in dem der vom Client bereitgestellte Name des ersten Partners den aktuellen Prinzipalserver, **Partner_A**, korrekt identifiziert. Der Anfangsverbindungsversuch ist erfolgreich, und der Datenzugriffsanbieter speichert den Namen des Spiegelservers (derzeit **Partner_B**) als Failoverpartnername im lokalen Cache. Schließlicht stellt der Client die Verbindung mit der Prinzipalkopie der **Db_1** -Datenbank her.  
   
- ![Clientverbindung wenn Anfangspartner Prinzipal ist](../../database-engine/database-mirroring/media/dbm-initial-connection.gif "Client connection if initial partner is principal")  
+ ![Clientverbindung, wenn der Anfangspartner der Prinzipal ist](../../database-engine/database-mirroring/media/dbm-initial-connection.gif "Clientverbindung, wenn der Anfangspartner der Prinzipal ist")  
   
  Der Anfangsverbindungsversuch kann beispielsweise aufgrund eines Netzwerkfehlers oder einer inaktiven Serverinstanz fehlschlagen. Da der erste Partner nicht verfügbar ist, muss für den Client ein Failoverpartnername in der Verbindungszeichenfolge angegeben sein, damit der Datenzugriffsanbieter versucht, die Verbindung mit dem Failoverpartner herzustellen.  
   
@@ -168,11 +169,11 @@ Server=123.34.45.56,4724;
   
  Die Wiederholungszeit wird mit der folgenden Formel berechnet:  
   
- _Wiederholungszeit_ **=** _Vorhergehende Wiederholungszeit_ **+(** 0,08 **&#42;** _Anmeldungstimeout_ **)**  
+ _RetryTime_ **=**  _PreviousRetryTime_  **+ (** 0,08  **&#42;** _LoginTimeout_ **)**  
   
  Hierbei gilt für *Vorhergehende Wiederholungszeit* ein Anfangswert von 0.  
   
- Bei Verwendung des Standardwerts für den Anmeldungstimeout von 15 Sekunden gilt *Anmeldungstimeout* *= 15*. In diesem Fall berechnen sich die Wiederholungszeiten in den ersten drei Runden wie folgt:  
+ Bei Verwendung des Standardwerts für den Anmeldungstimeout von 15 Sekunden gilt *LoginTimeout*  *= 15*. In diesem Fall berechnen sich die Wiederholungszeiten in den ersten drei Runden wie folgt:  
   
 |Round|Berechnung der*Wiederholungszeit*|Wiederholungszeit pro Versuch|  
 |-----------|-----------------------------|----------------------------|  
@@ -183,7 +184,7 @@ Server=123.34.45.56,4724;
   
  In der folgenden Abbildung werden diese Wiederholungszeiten für aufeinander folgende Wiederholungsversuche, für die jeweils ein Timeout erfolgt, veranschaulicht.  
   
- ![Maximale Wiederholungsverzögerungen für ein 15-sekündiges Anmeldetimeout](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "Maximum retry delays for 15 second login timeout")  
+ ![Maximale Wiederholungsverzögerungen für ein 15-sekündiges Anmeldungstimeout](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "Maximale Wiederholungsverzögerungen für ein 15-sekündiges Anmeldungstimeout")  
   
  Bei Verwendung des Standardtimeoutwerts für den Anmeldungszeitraum werden für die ersten drei Runden von Verbindungsversuchen maximal 14,4 Sekunden zugeteilt. Würde bei jedem Versuch die gesamte dafür zugeteilte Zeit aufgebraucht, wären nur noch 0,6 Sekunden übrig, bevor der Anmeldungszeitraum abläuft. In diesem Fall würde die vierte Runde zeitlich beschnitten, sodass für die Verbindungsherstellung unter Verwendung des ersten Partnernamens nur noch ein letzter, kurzer Versuch möglich wäre. Ein Verbindungsversuch kann aber, besonders in nachfolgenden Runden, auch schon vor Ablauf der jeweils zugeteilten Wiederholungszeit fehlschlagen. So würde z. B. bei einem Netzwerkfehler ein Versuch schon vorzeitig, also vor Ablauf der Wiederholungszeit, beendet werden. Wenn frühere Versuche aufgrund eines Netzwerkfehlers fehlschlagen, dann wäre für die vierte Runde und möglicherweise auch noch für weitere Runden zusätzlich Zeit vorhanden.  
   
@@ -201,7 +202,7 @@ Server=123.34.45.56,4724;
   
  Die folgende Abbildung veranschaulicht, wie sich die Verbindungsverzögerung während eines manuellen Failovers, in dem die Partner ihre Rollen tauschen, auf Verbindungsversuche auswirkt. Der Timeoutwert für den Anmeldungszeitraum beträgt 15 Sekunden.  
   
- ![Wiederholungsverzögerungsalgorithmus](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "Retry-delay algorithm")  
+ ![Wiederholungsverzögerungsalgorithmus](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "Wiederholungsverzögerungsalgorithmus")  
   
 ##  <a name="Reconnecting"></a> Erneutes Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung  
  Wenn eine bereits bestehende Verbindung mit einer Datenbank-Spiegelungssitzung aus irgendeinem Grund ausfällt, z. B. wegen eines Datenbank-Spiegelungsfailovers, und die Anwendung versucht, erneut eine Verbindung mit dem ersten Server herzustellen, kann der Datenzugriffsanbieter versuchen, die Verbindung mit dem im Clientcache enthaltenen Namen des Failoverpartners herzustellen. Die Verbindung wird jedoch nicht automatisch wiederhergestellt. Die Anwendung muss über den Fehler informiert werden. Anschließend muss die Anwendung die fehlgeschlagene Verbindung schließen und eine neue Verbindung mit den gleichen Attributen für die Verbindungszeichenfolge öffnen. An diesem Punkt leitet der Datenzugriffsanbieter die Verbindung an den Failoverpartner um. Wenn die durch diesen Namen identifizierte Serverinstanz aktuell als Prinzipalserver fungiert, ist der Verbindungsversuch im Allgemeinen erfolgreich. Wenn unklar ist, ob für eine Transaktion ein Commit oder ein Rollback ausgeführt wurde, muss die Anwendung wie bei einer erneuten Verbindung zu einer eigenständigen Serverinstanz den Status der Transaktion überprüfen.  

@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8fd8b9b94d809a304e2f9347edba67d5ff7d9b85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294462"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687196"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage-Verbindungs-Manager
 
@@ -65,5 +65,8 @@ Konfigurieren Sie dann die Authentifizierung der verwalteten Identität für den
 > [!NOTE]
 >  Um die Authentifizierung von verwalteten Identitäten für vorhandene Pakete zu konfigurieren, besteht die bevorzugte Methode darin, das SSIS-Projekt mindestens einmal mit dem [neuesten SSIS-Designer](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) neu zu erstellen. Stellen Sie dieses SSIS-Projekt erneut in ihrer Azure-SSIS Integration Runtime bereit, sodass die neue Eigenschaft `ConnectUsingManagedIdentity` des Verbindungs-Managers automatisch allen Azure Storage Verbindungs-Managern in Ihrem SSIS-Projekt hinzugefügt wird. Die alternative Methode besteht darin, eine Eigenschaftsüberschreibung direkt mit dem Eigenschaftenpfad **\Package.Connections[{Name Ihres Verbindungs-Managers}].Properties[ConnectUsingManagedIdentity]** zur Runtime zu verwenden.
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="secure-network-traffic-to-your-storage-account"></a>Sichern von Netzwerkdatenverkehr an Ihr Speicherkonto
+Azure Data Factory ist für Azure Storage jetzt ein [vertrauenswürdiger Microsoft-Dienst](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services). Wenn Sie die verwaltete Identitätsauthentifizierung verwenden, können Sie Ihr Speicherkonto schützen, indem Sie den [Zugriff auf ausgewählte Netzwerke beschränken](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule) und gleichzeitig Ihrer Data Factory den Zugriff auf Ihr Speicherkonto gestatten. Anweisungen finden Sie unter [Verwalten von Ausnahmen](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions).
+
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)

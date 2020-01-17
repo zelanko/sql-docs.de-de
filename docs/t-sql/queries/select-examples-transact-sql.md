@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119207"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191087"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT-Beispiele (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "74119207"
   
  [!code-sql[Select#SelectExamples6](../../t-sql/queries/codesnippet/tsql/select-examples-transact_6.sql)]  
   
-## <a name="d-creating-tables-with-select-into"></a>D. Erstellen von Tabellen mit SELECT INTO  
+## <a name="d-creating-tables-with-select-into"></a>D: Erstellen von Tabellen mit SELECT INTO  
  Im ersten Beispiel wird eine temporäre Tabelle namens `#Bicycles` in `tempdb` erstellt.  
   
  [!code-sql[Select#SelectExamples7](../../t-sql/queries/codesnippet/tsql/select-examples-transact_7.sql)]  
@@ -81,11 +81,11 @@ ms.locfileid: "74119207"
 ## <a name="e-using-correlated-subqueries"></a>E. Verwenden von abhängigen Unterabfragen
 Eine korrelierte Unterabfrage ist eine Abfrage, die von der äußeren Abfrage abhängig ist. Die Abfrage kann wiederholt ausgeführt werden, und zwar einmal für jede Zeile, die von der äußeren Abfrage ausgewählt wird.
 
- Im folgenden Beispiel werden Abfragen, die semantisch ähnlich sind, gezeigt und der Unterschied zwischen dem Verwenden des `EXISTS`-Schlüsselworts und des `IN`-Schlüsselworts veranschaulicht. In beiden Fällen handelt es sich um eine gültige Unterabfrage, die eine Instanz von jedem Produktnamen abruft, für den als Produktmodell ein langärmeliges Logo-T-Shirt angegeben ist und für den die `ProductModelID`-Nummern in den `Product`- und `ProductModel`-Tabellen übereinstimmen.  
+Im ersten Beispiel werden Abfragen gezeigt, die semantisch ähnlich sind, um den Unterschied zwischen der Verwendung des `EXISTS`-Schlüsselworts und des `IN`-Schlüsselworts zu veranschaulichen. In beiden Fällen handelt es sich um eine gültige Unterabfrage, die eine Instanz von jedem Produktnamen abruft, für den als Produktmodell ein langärmeliges Logo-T-Shirt angegeben ist und für den die `ProductModelID`-Nummern in den `Product`- und `ProductModel`-Tabellen übereinstimmen.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- Im nächsten Beispiel wird `IN` verwendet und eine Instanz des Vor- und Nachnamens der einzelnen Mitarbeiter abgerufen, für die der Bonus in der Tabelle `SalesPerson` `5000.00` beträgt und für die die Mitarbeiter-IDs in den Tabellen `Employee` und `SalesPerson` übereinstimmen.  
+ Im nächsten Beispiel wird `IN` verwendet und eine Instanz des Vor- und Nachnamens der einzelnen Mitarbeiter abgerufen, für die der Bonus in der Tabelle `SalesPerson``5000.00` beträgt und für die die Mitarbeiter-IDs in den Tabellen `Employee` und `SalesPerson` übereinstimmen.  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   
@@ -158,7 +158,7 @@ GO
   
  [!code-sql[Select#SelectExamples23](../../t-sql/queries/codesnippet/tsql/select-examples-transact_21.sql)]  
   
- Wenn Sie sicherstellen möchten, dass in die Berechnungen zu jedem Produkt mindestens 1.500 Artikel einfließen, entfernen Sie mit `HAVING COUNT(*) > 1500` die Produkte, die Summen mit weniger als `1500` verkauften Artikeln zurückgeben. Die Abfrage lautet folgendermaßen:  
+ Wenn Sie sicherstellen möchten, dass in die Berechnungen zu jedem Produkt mindestens 1.500 Artikel einfließen, entfernen Sie mit `HAVING COUNT(*) > 1500` die Produkte, die Summen mit weniger als `1500` verkauften Artikeln zurückgeben. Die Abfrage sieht folgendermaßen aus:  
   
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   

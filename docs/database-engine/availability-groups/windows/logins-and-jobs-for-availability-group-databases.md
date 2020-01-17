@@ -1,7 +1,7 @@
 ---
-title: Verwalten von Anmeldungen für Aufträge mithilfe von Datenbanken in einer Verfügbarkeitsgruppe
+title: Verwalten von Anmeldungen für Datenbankaufträge in einer Verfügbarkeitsgruppe
 description: Eine Beschreibung für das Verwalten von Anmeldedaten für Aufträge, die Datenbanken verwenden, welche Teilnehmer einer Always On-Verfügbarkeitsgruppe sind.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05645d3ce6bcccd006db72fefa9343153e3a0390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022579"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822235"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Verwalten von Anmeldungen für Aufträge mithilfe von Datenbanken in einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

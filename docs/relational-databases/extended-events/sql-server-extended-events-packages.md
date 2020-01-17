@@ -1,6 +1,5 @@
 ---
-title: Pakete für erweiterte Ereignisse von SQL Server | Microsoft-Dokumentation
-ms.custom: ''
+title: Pakete für erweiterte Ereignisse von SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +13,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19797e4f886a28662c9dce5df34fc9c2978b3098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37c4b2c9972dbd8e236f8a8e64f312a15a3353ac
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009393"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242930"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pakete für erweiterte Ereignisse von SQL Server
 
@@ -40,7 +39,7 @@ ms.locfileid: "68009393"
   
  Ein Paket kann eines oder alle der folgenden Objekte enthalten. Eine detailliertere Beschreibung der Objekte finden Sie weiter unten in diesem Thema:  
   
--   Ereignisse  
+-   Events  
   
 -   Ziele  
   
@@ -59,7 +58,7 @@ ms.locfileid: "68009393"
   
  ![Die Beziehung zwischen einem Modul, Paketen und einem Objekt](../../relational-databases/extended-events/media/xepackagesobjects.gif "Die Beziehung zwischen einem Modul, Paketen und einem Objekt")  
   
-### <a name="events"></a>Ereignisse  
+### <a name="events"></a>Events  
  Mithilfe von Ereignissen werden relevante Punkte im Ausführungspfad eines Programms überwacht, z. B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Das Auslösen eines Ereignisses bedeutet immer auch, dass der relevante Punkt erreicht wurde, und liefert Informationen über den Status zu dem Zeitpunkt, an dem das Ereignis ausgelöst wurde.  
   
  Ereignisse können ausschließlich für Ablaufverfolgungszwecke oder auslösende Aktionen verwendet werden. Diese Aktionen können synchron oder asynchron sein.  
@@ -81,7 +80,7 @@ ms.locfileid: "68009393"
 |Begriff|Definition|  
 |----------|----------------|  
 |Admin|Admin-Ereignisse sind hauptsächlich für Endbenutzer, Administratoren und Supportmitarbeiter vorgesehen. Die Ereignisse, die in den Admin-Kanälen gefunden werden, weisen auf ein Problem mit einer wohldefinierten Lösung hin, zu dessen Behebung ein Administrator Maßnahmen ergreifen kann. Ein Beispiel für ein Admin-Ereignis ist, wenn beim Herstellen einer Verbindung mit einem Drucker ein Fehler auftritt. Diese Ereignisse sind entweder umfassend beschrieben oder weisen eine Meldung mit Hinweisen zur Behebung des Fehlers auf.|  
-|Operational|Operational-Ereignisse werden zum Analysieren und Diagnostizieren eines Problems oder eines Vorkommens verwendet. Mit ihnen können basierend auf dem Problem oder dem Vorkommen Tools oder Tasks ausgelöst werden. Ein Beispiel für ein solches Ereignis ist, wenn ein Drucker einem System hinzugefügt oder daraus entfernt wird.|  
+|Bei Betrieb|Operational-Ereignisse werden zum Analysieren und Diagnostizieren eines Problems oder eines Vorkommens verwendet. Mit ihnen können basierend auf dem Problem oder dem Vorkommen Tools oder Tasks ausgelöst werden. Ein Beispiel für ein solches Ereignis ist, wenn ein Drucker einem System hinzugefügt oder daraus entfernt wird.|  
 |Analytic|Analytic-Ereignisse werden in großem Umfang veröffentlicht. Sie beschreiben Programmvorgänge und werden in der Regel in Leistungsuntersuchungen verwendet.|  
 |Debuggen|Debug-Ereignisse werden ausschließlich von Entwicklern zum Diagnostizieren eines Problems verwendet, das Debuggen erforderlich macht.<br /><br /> Bei Ereignissen im Debug-Kanal werden interne implementierungsbezogene Statusdaten zurückgegeben. Die Schemas und Daten, die die von den Ereignissen zurückgegeben werden, werden in künftigen Versionen von SQL Server möglicherweise geändert oder werden ungültig. Daher werden Ereignisse im Debug-Kanal in künftigen Versionen von SQL Server unter Umständen ohne vorherigen Hinweis geändert oder entfernt.|  
   
@@ -151,7 +150,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   Typ  
+-   type  
   
  Weitere Informationen finden Sie unter [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
@@ -219,7 +218,7 @@ where name = 'lock_mode'
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
-  [Engine für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [Engine für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
+ [Ziele für erweiterte Ereignisse von SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

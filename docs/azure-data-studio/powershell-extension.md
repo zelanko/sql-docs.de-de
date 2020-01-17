@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 72c4d64cc93ab564b9b8b04a838f8226982890f0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "65105948"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257577"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>PowerShell-Editor-Unterstützung für Azure Data Studio
 
@@ -26,7 +26,7 @@ Jetzt können Sie PowerShell-Skripts mit der ausgezeichneten IDE-ähnlichen Schn
 ![PowerShell-Erweiterung](media/powershell-extension/powershell-extension.png)
 
 
-## <a name="features"></a>Funktionen
+## <a name="features"></a>Features
 
 - Syntaxhervorhebung
 - Codeausschnitte
@@ -255,7 +255,7 @@ Informationen dazu, wie Sie an dieser Erweiterung mitwirken können, finden Sie 
 - [Tyler Leonhardt](https://github.com/tylerl0706) - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
 - [Rob Holt](https://github.com/rjmholt)
 
-## <a name="license"></a>License (Lizenz)
+## <a name="license"></a>Lizenz
 
 Diese Erweiterung ist [unter der MIT-Lizenz lizenziert](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Informationen zu den Binärdateien von Drittanbietern, die in Releases dieses Projekts enthalten sind, finden Sie in der Datei mit [Hinweisen zu Drittanbietern](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
 
@@ -264,7 +264,6 @@ Diese Erweiterung ist [unter der MIT-Lizenz lizenziert](https://github.com/Power
 Für dieses Projekt gelten die Microsoft-Verhaltensregeln für Open Source ([Microsoft Open Source Code of Conduct][conduct-code]).
 Um weitere Informationen zu erhalten, lesen Sie die häufig gestellten Fragen zu den Verhaltensregeln ([Code of Conduct FAQ][conduct-FAQ]), oder wenden Sie sich mit weiteren Fragen und Kommentaren an [opencode@microsoft.com][conduct-email].
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

@@ -1,6 +1,7 @@
 ---
-title: Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen | Microsoft-Dokumentation
-ms.custom: ''
+title: Messen der Latenzzeit und Überprüfen von Verbindungen (Transaktionsveröffentlichung)
+description: In diesem Artikel erfahren Sie, wie Sie in SQL Server für eine Transaktionsveröffentlichung die Latenzzeit messen und Verbindungen überprüfen. Dazu verwenden Sie den Replikationsmonitor in SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) oder Replication Management Objects (RMOs).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711022"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321851"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,15 +58,15 @@ ms.locfileid: "71711022"
 ###  <a name="Restrictions"></a> Einschränkungen  
  Überwachungstoken können sich auch als nützlich erweisen, wenn ein System in den Ruhezustand versetzt wird, da hierfür alle Aktivitäten beendet werden und überprüft wird, ob alle Knoten sämtliche ausstehenden Änderungen empfangen haben. Weitere Informationen finden Sie unter [Versetzen einer Replikationstopologie in einen inaktiven Status &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Für die Verwendung von Überwachungstoken müssen Sie bestimmte Versionen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwenden:  
+ Für die Verwendung von Überwachungstoken müssen Sie bestimmte Versionen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwenden:  
   
 -   Der Verteiler muss [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher sein.  
   
 -   Der Verleger muss [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher aufweisen, oder es muss sich um einen Oracle-Verleger handeln.  
   
--   Im Fall von Pushabonnements werden Überwachungstokenstatistiken vom Verleger, Verteiler und von den Abonnenten gesammelt, sofern der Abonnent [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 oder höher aufweist.  
+-   Im Fall von Pushabonnements werden Überwachungstokenstatistiken vom Verleger, vom Verteiler und von den Abonnenten gesammelt, sofern der Abonnent [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 oder höher aufweist.  
   
--   Im Fall von Pullabonnements werden Überwachungstokenstatistiken von Abonnenten gesammelt, sofern der Abonnent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher aufweist. Falls der Abonnent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]aufweist, werden Statistiken nur vom Verleger und vom Verteiler gesammelt.  
+-   Im Fall von Pullabonnements werden Überwachungstokenstatistiken von Abonnenten gesammelt, sofern der Abonnent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher aufweist. Falls der Abonnent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] aufweist, werden Statistiken nur vom Verleger und vom Verteiler gesammelt.  
   
  Es gibt eine Vielzahl anderer Probleme und Einschränkungen, auf die geachtet werden muss:  
   
@@ -140,7 +141,7 @@ ms.locfileid: "71711022"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication>-Klasse.  
   
 3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
@@ -152,7 +153,7 @@ ms.locfileid: "71711022"
   
 1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor> -Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor>-Klasse.  
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
@@ -166,7 +167,7 @@ ms.locfileid: "71711022"
   
 1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor> -Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.PublicationMonitor>-Klasse.  
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>und <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   

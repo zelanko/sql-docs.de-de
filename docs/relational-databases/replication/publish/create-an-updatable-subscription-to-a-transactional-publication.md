@@ -1,6 +1,7 @@
 ---
-title: Erstellen von aktualisierbaren Abonnements für eine Transaktionsveröffentlichung | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen eines aktualisierbaren Abonnements (transaktional)
+description: Hier erfahren Sie, wie Sie ein aktualisierbares Abonnement für eine Transaktionsveröffentlichung für SQL Server erstellen.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99e605f1ed2a924f504f118dd6d0865fda3229e0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908588"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321245"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Erstellen von aktualisierbaren Abonnements für eine Transaktionsveröffentlichung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

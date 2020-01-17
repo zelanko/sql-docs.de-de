@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c48c045b65b554533a8824ec0ea967ed8fae884
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252013"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249849"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "72252013"
 
 Importiert eine Datendatei in eine Datenbanktabelle oder Sicht und verwendet dabei ein vom Benutzer angegebenes Format in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -87,7 +87,7 @@ BULK INSERT
 
 *table_name:* der Name der Tabelle oder Ansicht, in die der Massenimport von Daten erfolgen soll. Es können nur Sichten verwendet werden, deren Spalten alle auf dieselbe Basistabelle verweisen. Weitere Informationen über die Einschränkungen beim Laden von Daten in Sichten finden Sie unter [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).
 
-**'** _data_file_ **':** der vollständige Pfad der Datendatei mit den Daten, die in die angegebene Tabelle oder Ansicht importiert werden sollen. Mithilfe von BULK INSERT können Daten von einem Datenträger oder aus Azure Blob Storage importiert werden, einschließlich eines Netzwerks, einer Diskette, einer Festplatte usw.
+**'** _data_file_ **'** : Dies ist der vollständige Pfad der Datendatei mit den Daten, die in die angegebene Tabelle oder Ansicht importiert werden sollen. Mithilfe von BULK INSERT können Daten von einem Datenträger oder aus Azure Blob Storage importiert werden, einschließlich eines Netzwerks, einer Diskette, einer Festplatte usw.
 
 Für *data_file* muss ein gültiger Pfad auf dem Server, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, angegeben werden. Wenn *data_file* eine Remotedatei ist, geben Sie den UNC-Namen (Universal Naming Convention) an. Ein UNC-Name weist das Format \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*. Beispiel:
 
@@ -96,11 +96,11 @@ BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
-**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 und Azure SQL-Datenbank.
+**Anwendungsbereich:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 und Azure SQL-Datenbank.
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich data_file in Azure Blob Storage befinden. In diesem Fall müssen Sie die Option **data_source_name** angeben. Ein Beispiel dafür finden Sie unter [Importieren von Daten aus einer Datei in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 **'** _data_source_name_ **'** 
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 und Azure SQL-Datenbank.
@@ -128,7 +128,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 > [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, für jede Spalte einen Sortierungsnamen in einer [Formatdatei](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md) anzugeben.
 
-|CODEPAGE-Wert|und Beschreibung|
+|CODEPAGE-Wert|BESCHREIBUNG|
 |--------------------|-----------------|
 |ACP|Spalten vom Datentyp **char**, **varchar** oder **text** werden von der [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Codepage (ISO 1252) in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage konvertiert.|
 |OEM (Standard)|Spalten vom Datentyp **char**, **varchar** oder **text** werden von der OEM-Codepage des Systems in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage konvertiert.|
@@ -151,13 +151,13 @@ DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widen
 ERRORFILE **='** _file_name_ **':** gibt die Datei an, die zum Erfassen der Zeilen verwendet wird, die Formatierungsfehler enthalten und nicht in ein OLE DB-Rowset konvertiert werden können. Diese Zeilen werden aus der Datendatei unverändert in diese Fehlerdatei kopiert.
 
 Die Fehlerdatei wird bei Ausführung des Befehls erstellt. Falls die Datei bereits vorhanden ist, tritt ein Fehler auf. Darüber hinaus wird eine Kontrolldatei mit der Erweiterung .ERROR.txt erstellt. Diese Datei enthält einen Verweis auf jede Zeile in der Fehlerdatei und stellt eine Fehlerdiagnose bereit. Sobald die Fehler korrigiert wurden, können die Daten geladen werden.
-**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Anwendungsbereich:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] kann sich `error_file_path` im Azure Blob Storage befinden.
 
 'errorfile_data_source_name' **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Es handelt sich um eine benannte externe Datenquelle, die auf den Azure Blob-Speicherort der Fehlerdatei verweist, welche Fehler enthält, die während des Importierens gefunden wurden. Die externe Datenquelle muss mithilfe der in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 hinzugefügten `TYPE = BLOB_STORAGE`-Option erstellt werden. Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE (CREATE EXTERNAL DATA SOURCE)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-FIRSTROW **=** _first_row:_ gibt die Nummer der ersten zu ladenden Zeile an. In der Standardeinstellung ist dies die erste Zeile in der angegebenen Datendatei. FIRSTROW ist einsbasiert.
+FIRSTROW **=** _first_row_: Hiermit wird die Nummer der ersten zu ladenden Zeile angegeben. In der Standardeinstellung ist dies die erste Zeile in der angegebenen Datendatei. FIRSTROW ist einsbasiert.
 
 > [!NOTE]
 > Es ist nicht vorgesehen, dass das FIRSTROW-Attribut Spaltenheader überspringt. Header zu überspringen wird von der BULK INSERT-Anweisung nicht unterstützt. Wenn Zeilen ausgelassen werden, werden von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nur die Feldabschlusszeichen berücksichtigt und die Daten in den Feldern von ausgelassenen Zeilen nicht überprüft.
@@ -175,11 +175,11 @@ Weitere Informationen über das Beibehalten von Identitätswerten finden Sie unt
 
 KEEPNULLS: gibt an, dass in leere Spalten während des Massenimportvorgangs keine Standardwerte eingefügt werden sollen, sondern ein NULL-Wert für diese Spalten beibehalten werden soll. Weitere Informationen finden Sie unter [Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).
 
-KILOBYTES_PER_BATCH **=** _kilobytes_per_batch:_ gibt die ungefähre Datenmenge pro Batch in KB als *kilobytes_per_batch* an. In der Standardeinstellung ist KILOBYTES_PER_BATCH unbekannt. Informationen zu Leistungsaspekten finden Sie unter "Hinweise" weiter unten in diesem Thema.
+KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_: Hiermit wird die ungefähre Datenmenge pro Batch in KB als *kilobytes_per_batch* angegeben. In der Standardeinstellung ist KILOBYTES_PER_BATCH unbekannt. Informationen zu Leistungsaspekten finden Sie unter "Hinweise" weiter unten in diesem Thema.
 
-LASTROW **=** _last_row_ Gibt die Nummer der letzten zu ladenden Zeile an. Der Standardwert ist 0, wodurch die Daten bis zur letzten Zeile in der angegebenen Datendatei geladen werden.
+LASTROW **=** _last_row_: Hiermit wird die Nummer der letzten zu ladenden Zeile angegeben. Der Standardwert ist 0, wodurch die Daten bis zur letzten Zeile in der angegebenen Datendatei geladen werden.
 
-MAXERRORS **=** _max_errors:_ gibt die maximale Anzahl von Syntaxfehlern an, die in den Daten zulässig sind, bevor der Massenimportvorgang abgebrochen wird. Jede Zeile, die beim Massenimportvorgang nicht importiert werden kann, wird ignoriert und zählt dabei als ein Fehler. Wenn *max_errors* nicht angegeben ist, wird der Standardwert 10 verwendet.
+MAXERRORS **=** _max_errors_: Hiermit wird die maximale Anzahl von Syntaxfehlern angegeben, die in den Daten zulässig sind, bevor der Massenimportvorgang abgebrochen wird. Jede Zeile, die beim Massenimportvorgang nicht importiert werden kann, wird ignoriert und zählt dabei als ein Fehler. Wenn *max_errors* nicht angegeben ist, wird der Standardwert 10 verwendet.
 
 > [!NOTE]
 > Die Option MAX_ERRORS kann nicht zur Einschränkungsüberprüfung oder zum Konvertieren der Datentypen **money** und **bigint** verwendet werden.
@@ -188,7 +188,7 @@ ORDER ( { *column* [ ASC | DESC ] } [ **,** ... *n* ] ): gibt an, wie die Daten 
 
 *n*: ist ein Platzhalter, der anzeigt, dass mehrere Spalten angegeben werden können.
 
-ROWS_PER_BATCH **=** _rows_per_batch:_ gibt die ungefähre Anzahl von Datenzeilen in der Datendatei an.
+ROWS_PER_BATCH **=** _rows_per_batch_ Hiermit wird die ungefähre Anzahl von Datenzeilen in der Datendatei angegeben.
 
 Standardmäßig werden alle Daten in der Datendatei als einzelne Transaktion an den Server gesendet, und die Anzahl von Zeilen im Batch ist dem Abfrageoptimierer nicht bekannt. Wenn Sie ROWS_PER_BATCH (mit einem Wert > 0) angeben, verwendet der Server diesen Wert, um den Massenimportvorgang zu optimieren. Der für ROWS_PER_BATCH angegebene Wert sollte etwa der tatsächlichen Zeilenanzahl entsprechen. Informationen zu Leistungsaspekten finden Sie unter "Hinweise" weiter unten in diesem Thema.
 
@@ -217,7 +217,7 @@ FORMATFILE **=** '_format_file_path_': gibt den vollständigen Pfad einer Format
 - Die Spaltentrennzeichen variieren.
 - Es liegen andere Änderungen im Datenformat vor. Formatdateien werden in der Regel mit dem Hilfsprogramm **bcp** erstellt und nach Bedarf mit einem Text-Editor geändert. Weitere Informationen finden Sie unter [Das Hilfsprogramm bcp](../../tools/bcp-utility.md) und [Erstellen einer Formatdatei](../../relational-databases/import-export/create-a-format-file-sql-server.md).
 
-**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 und Azure SQL-Datenbank.
+**Anwendungsbereich:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 und Azure SQL-Datenbank.
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich format_file_path in Azure Blob Storage befinden.
 
 FIELDTERMINATOR **='** _field_terminator_ **':** gibt das Feldabschlusszeichen an, das für Datendateien vom Typ **char** und **widechar** verwendet werden soll. Standardmäßig wird \t (Tabstoppzeichen) als Feldabschlusszeichen verwendet. Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
@@ -235,7 +235,7 @@ BULK INSERT erzwingt strenge Datenüberprüfungen für die aus einer Datei geles
 
 ### <a name="string-to-decimal-data-type-conversions"></a>Konvertierungen von Zeichenfolgen- in Dezimaldatentypen
 
-Die in BULK INSERT-Vorgängen verwendeten Konvertierungen von Zeichenfolgen in Dezimaldatentypen folgen denselben Regeln wie die [!INCLUDE[tsql](../../includes/tsql-md.md)] [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)-Funktion insofern, als Zeichenfolgen mit numerischen Werten in wissenschaftlicher Schreibweise nicht akzeptiert werden. Daher behandelt BULK INSERT diese Zeichenfolgen als ungültige Werte und meldet Konvertierungsfehler.
+Die in BULK INSERT-Vorgängen verwendeten Konvertierungen von Zeichenfolgen in Dezimaldatentypen folgen insofern denselben Regeln wie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-[CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)-Funktion, dass sie Zeichenfolgen mit numerischen Werten in wissenschaftlicher Schreibweise nicht akzeptiert werden. Daher behandelt BULK INSERT diese Zeichenfolgen als ungültige Werte und meldet Konvertierungsfehler.
 
 Um dieses Verhalten zu umgehen, verwenden Sie eine Formatdatei zum Massenimport von **float**-Daten in wissenschaftlicher Schreibweise in Spalten im Dezimalformat. Beschreiben Sie in der Formatdatei diese Spalte explizit als vom Datentyp **real** oder **float**. Weitere Informationen zu diesen Datentypen finden Sie unter [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).
 
@@ -278,7 +278,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt. Das Lesen aus Azure Blob Storage ist allerdings möglich.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>Datentypen für den Massenexport bzw. -import von SQLXML-Dokumenten
 
@@ -322,7 +322,7 @@ Da Computer unterschiedlich sind, wird empfohlen, verschiedene Batchgrößen mit
 
 Wenn Sie Azure SQL-Datenbank verwenden, sollten Sie in Betracht ziehen, die Leistungsstufe der Datenbank oder der Instanz vor dem Importieren vorübergehend zu erhöhen, wenn Sie eine große Datenmenge importieren.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 ### <a name="security-account-delegation-impersonation"></a>Delegierung von Sicherheitskonten (Identitätswechsel)
 
@@ -369,7 +369,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="b-using-the-fire_triggers-argument"></a>B. Verwenden des FIRE_TRIGGERS-Arguments
 
@@ -387,7 +387,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. Verwenden des Zeilenvorschubs als Zeilenabschlusszeichen
 
@@ -405,9 +405,9 @@ EXEC(@bulk_cmd);
 > Abhängig davon, wie Textdateien von Microsoft Windows behandelt werden, wird **(\n** automatisch durch **\r\n)** ersetzt.
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
-### <a name="d-specifying-a-code-page"></a>D. Angeben einer Codepage
+### <a name="d-specifying-a-code-page"></a>D: Angeben einer Codepage
 
 In den folgenden Beispielen wird veranschaulicht, wie eine Codepage angegeben wird.
 
@@ -422,7 +422,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. Importieren von Daten aus einer CSV-Datei
 
@@ -439,7 +439,7 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importieren von Daten aus einer Datei in Azure Blob Storage
 
@@ -470,7 +470,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 > [!IMPORTANT]
-> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importieren von Daten aus einer Datei im Azure Blob Storage und Festlegen einer Fehlerdatei
 

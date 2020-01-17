@@ -1,7 +1,7 @@
 ---
-title: Sicherungsverlauf und Headerinformationen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/17/2017
+title: Sicherungsverlauf und Header | Microsoft-Dokumentation
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9d88540aa6c4d3ada8af6808713405829a3e352e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081463"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242590"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Sicherungsverlauf und Headerinformationen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68081463"
 ##  <a name="BnRHistoryTables"></a> Tabellen mit Sicherungs- und Wiederherstellungsverlauf  
  In diesem Abschnitt werden die Verlaufstabellen der **msdb** -Datenbank vorgestellt, in denen die Metadaten für die Sicherung und Wiederherstellung gespeichert werden.  
   
-|Verlaufstabelle|und Beschreibung|  
+|Verlaufstabelle|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Enthält eine Zeile für jede Daten- oder Protokolldatei, die gesichert wird.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|Enthält eine Reihe für jede Dateigruppe in einem Sicherungssatz.|  
@@ -88,7 +88,7 @@ ms.locfileid: "68081463"
 > [!IMPORTANT]  
 >  Die Transact-SQL-Anweisungen RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY und RESTORE VERIFYONLY erfordern die CREATE DATABASE-Berechtigung. Dadurch werden Ihre Sicherungsdateien und Sicherungsinformationen umfassender geschützt als in vorherigen Versionen. Informationen über diese Berechtigung finden Sie unter [GRANT (Datenbankberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-|Informationsanweisung|Tabelle mit Sicherungsverläufen|und Beschreibung|  
+|Informationsanweisung|Tabelle mit Sicherungsverläufen|BESCHREIBUNG|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Gibt ein Resultset mit einer Liste mit Datenbank- und Protokolldateien zurück, die im angegebenen Sicherungssatz enthalten sind.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Auflisten der Datenbank- und Transaktionsprotokolldateien" weiter unten in diesem Thema.|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Ruft alle Sicherungsheaderinformationen für alle Sicherungssätze auf einem bestimmten Sicherungsmedium ab. Das Ergebnis der Ausführung von RESTORE HEADERONLY ist ein Resultset.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Anzeigen der Sicherungsheaderinformationen" weiter unten in diesem Thema.|  
@@ -124,14 +124,14 @@ ms.locfileid: "68081463"
 ### <a name="which-backup-set-to-restore"></a>Wiederherzustellender Sicherungssatz  
  Anhand der Informationen im Sicherungsheader können Sie den wiederherzustellenden Sicherungssatz identifizieren. Die Datenbank-Engine nummeriert jeden Sicherungssatz auf den Sicherungsmedien. Dadurch können Sie den wiederherzustellenden Sicherungssatz mithilfe seiner Position auf dem Medium identifizieren. Beispielsweise enthalten die folgenden Medien drei Sicherungssätze.  
   
- ![Sichern von Medien mit SQL Server-Sicherungssätzen](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Backup media containing SQL Server backup sets")  
+ ![Sicherungsmedien mit SQL Server-Sicherungssätzen](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Sicherungsmedien mit SQL Server-Sicherungssätzen")  
   
  Um einen bestimmten Sicherungssatz wiederherzustellen, müssen Sie die Positionsnummer des wiederherzustellenden Sicherungssatzes angeben. Geben Sie beispielsweise 2 als wiederherzustellenden Sicherungssatz an, um den zweiten Sicherungssatz wiederherzustellen.  
   
 ##  <a name="CompareMediaHeaderBackupHeader"></a> Vergleich von Medienheader- und Sicherungsheaderinformationen  
  Die folgende Abbildung stellt ein Beispiel für die Unterschiede beim Anzeigen von Sicherungsheader- und Medienheaderinformationen dar. Für das Abrufen des Medienheaders ist lediglich das Auslesen von Informationen vom Anfang des Bands erforderlich. Dagegen ist für das Abrufen des Sicherungsheaders das Scannen des gesamten Bands erforderlich, damit der Header jedes Sicherungssatzes ausgelesen werden kann.  
   
- ![Satz von Medien mit drei SQL Server-Sicherungssätzen](../../relational-databases/backup-restore/media/bnr-media-label.gif "Media set containing three SQL Server backup sets")  
+ ![Mediensatz mit drei SQL Server-Sicherungssätzen](../../relational-databases/backup-restore/media/bnr-media-label.gif "Mediensatz mit drei SQL Server-Sicherungssätzen")  
   
 > [!NOTE]  
 >  Beim Verwenden von Mediensätzen mit mehreren Medienfamilien werden die Medienheader- und Sicherungssätze in alle Medienfamilien geschrieben. Darum ist es nur notwendig, eine einzelne Medienfamilie für diese Berichterstellungsvorgänge zur Verfügung zu stellen.  

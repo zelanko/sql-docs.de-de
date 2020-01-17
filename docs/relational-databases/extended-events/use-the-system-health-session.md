@@ -1,6 +1,5 @@
 ---
-title: Verwenden der system_health-Sitzung | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden der system_health-Sitzung
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,21 +15,21 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 262860781ba99abf8c4f6de783cd477db0e15d81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab31461888588ee54f1715f5e98ddb0f3b9aa23b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009350"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246144"
 ---
-# <a name="use-the-systemhealth-session"></a>Verwenden der system_health-Sitzung
+# <a name="use-the-system_health-session"></a>Verwenden der system_health-Sitzung
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Bei der system_health-Sitzung handelt es sich um eine standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthaltene Sitzung für erweiterte Ereignisse. Diese Sitzung wird automatisch beim Start von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gestartet und ohne merkliche Auswirkungen auf die Leistung ausgeführt. In der Sitzung werden Systemdaten erfasst, mit deren Hilfe Sie Leistungsprobleme in [!INCLUDE[ssDE](../../includes/ssde-md.md)]beheben können. 
 
 > [!IMPORTANT]
-> Es wird empfohlen, die Systemintegritätssitzung nicht zu beenden, zu ändern oder zu löschen.  
+> Es wird empfohlen, die Systemintegritätssitzung (system_health) nicht zu beenden, zu ändern oder zu löschen. Alle Änderungen, die an der system_health-Sitzung vorgenommen werden, können durch ein zukünftiges Produktupdate überschrieben werden.
   
 In der Sitzung werden u. a. folgende Informationen erfasst:  
   
@@ -82,7 +81,7 @@ WHERE xe.name = 'system_health'
   
 Um die Sitzungsdaten aus der Ereignisdatei anzuzeigen, verwenden Sie die in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbare Benutzeroberfläche für erweiterte Ereignisse. Weitere Informationen finden Sie unter [Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
   
-## <a name="restoring-the-systemhealth-session"></a>Wiederherstellen der system_health-Sitzung  
+## <a name="restoring-the-system_health-session"></a>Wiederherstellen der system_health-Sitzung  
 Wenn Sie die system_health-Sitzung gelöscht haben, können Sie diese wiederherstellen, indem Sie die Datei **u_tables.sql** im Abfrage-Editor ausführen. Diese Datei befindet sich im folgenden Ordner, wobei **C:** dem Laufwerk entspricht, auf dem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Programmdateien installiert haben, und **MSSQL1x** ist die Hauptversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  

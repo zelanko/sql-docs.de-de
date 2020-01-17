@@ -1,5 +1,6 @@
 ---
-title: Seite „Ergebnisse“ (Always On-Verfügbarkeitsgruppen-Assistenten) | Microsoft-Dokumentation
+title: Seite „Ergebnisse“ (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
+description: In diesem Artikel werden die Optionen der Seite „Ergebnisse“ des Always On-Verfügbarkeitsgruppen-Assistenten auf der grafischen Benutzeroberfläche von SQL Server Management Studio erläutert.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1d3a91ba05d58c2741d49c96bf108263caf899cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014239"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235448"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Seite „Ergebnisse“ (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "68014239"
  **Ergebnis**  
  Ziegt für jeden ausgeführten Schritt einen der folgenden Linktexte an.  
   
-|Ergebnis|und Beschreibung|  
+|Ergebnis|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Fehler**|Gibt an, dass der Überprüfungsschritt fehlgeschlagen ist. Klicken Sie auf den Link, um die Fehlermeldung anzuzeigen.|  
-|**Success**|Gibt an, dass der Überprüfungsschritt erfolgreich abgeschlossen wurde.|  
+|**Erfolgreich**|Gibt an, dass der Überprüfungsschritt erfolgreich abgeschlossen wurde.|  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -51,6 +52,6 @@ ms.locfileid: "68014239"
 -   [Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

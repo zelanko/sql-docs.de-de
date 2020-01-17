@@ -1,6 +1,7 @@
 ---
-title: Anzeigen des Status einer gespiegelten Datenbank (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Anzeigen des Status der gespiegelten Datenbank
+description: Erfahren Sie, wie Sie den Status der für die Datenbankspiegelung konfigurierten Datenbank innerhalb der SSMS-GUI (SQL Server Management Studio) anzeigen können.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9ef1c67955944277c7a8b6dd7ec1289fb8a2d280
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a52cf852edc4a03a72ba9cb71a4ccd50a3963ada
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050593"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245448"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>Anzeigen des Status einer gespiegelten Datenbank (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68050593"
   
 4.  Nach Beginn der Spiegelung wird im Fensterbereich **Status** der Status der Datenbank-Spiegelungssitzung angezeigt, und zwar ab dem Zeitpunkt, an dem Sie die Seite **Wird gespiegelt** ausgewählt oder auf die Schaltfläche **Aktualisieren** geklickt haben. Folgende Werte sind für den Status möglich:  
   
-    |Status|Erklärung|  
+    |Zustände|Erklärung|  
     |------------|-----------------|  
     |\<leer>|Es ist keine Datenbank-Spiegelungssitzung vorhanden und keine Aktivität auf der Seite **Spiegelung** anzuzeigen.|  
     |Angehalten|Die Prinzipaldatenbank wird ausgeführt, sendet jedoch keine Protokolle an den Spiegelserver. Die Spiegelkopie der Datenbank ist nicht verfügbar.|  

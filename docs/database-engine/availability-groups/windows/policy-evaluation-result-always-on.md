@@ -1,6 +1,6 @@
 ---
-title: Seite „Ergebnis der Richtlinienauswertung“ (Always On-Dashboard) | Microsoft-Dokumentation
-description: Hier finden Sie eine Beschreibung der Seite „Ergebnis der Richtlinienauswertung“, die sich auf dem Always On-Dashboard in SQL Server Management Studio befindet.
+title: Seite „Ergebnis der Richtlinienauswertung“ (Always On-Dashboard)
+description: Hier finden Sie eine Beschreibung der Seite „Ergebnis der Richtlinienauswertung“, die sich auf dem Always On-Dashboard in SQL Server Management Studio (SSMS) befindet.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6f13781e0d0820aaccf3a7fdc9e72145c08c6b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014538"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235441"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Seite „Ergebnis der Richtlinienauswertung“ (Always On-Dashboard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "68014538"
  **Erkanntes Problem**  
  Zeigt eine Zeile für jedes erkannte Problem an. Das einem Problem zugeordnete Symbol ist ein visueller Indikator, womit der Schweregrad des Problems wie folgt angegeben wird:  
   
-|Symbol|Schweregrad|  
+|Symbol|severity|  
 |----------|--------------|  
-|![UI-Symbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|Kritisch|  
-|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|Warnung|  
+|![Benutzeroberflächensymbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Benutzeroberflächensymbol: Fehler")|Kritisch|  
+|![Benutzeroberflächensymbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|Warnung|  
   
  **Beschreibung**  
  In diesem Raster wird eine kurze Beschreibung des ausgewählten Problems angezeigt.  

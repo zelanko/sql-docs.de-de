@@ -1,7 +1,7 @@
 ---
-title: SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/25/2019
+title: Sichern und Wiederherstellen mit Azure Blob Storage
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 169e437c141d379401b7a3294f0ae852d756374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041367"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251133"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ![Sicherung in Azure Blob Grafik](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Backup to Azure blob graphic")  
+  ![Grafik: Sicherung in Azure Blob Storage](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Grafik: Sicherung in Azure Blob Storage")  
   
  Dieses Thema bietet eine Einführung in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung und -Wiederherstellung unter Verwendung von [Microsoft Azure Blob Storage Service](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Darüber hinaus werden die Vorteile zusammengefasst, die die Verwendung von Microsoft Azure Blob-Dienst bei der Speicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen bietet.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "68041367"
   
  Der [Microsoft Azure-Preisrechner](https://go.microsoft.com/fwlink/?LinkId=277060) unterstützt Sie bei der Kostenschätzung.  
   
- **Speicherung:** Gebühren richten sich nach dem genutzten Speicherplatz sowie dem Grad der Redundanz und werden gestaffelt abgerechnet. Weitere Details und aktuelle Informationen finden Sie im Abschnitt **Datenverwaltung** des Artikels [Preisdetails](https://go.microsoft.com/fwlink/?LinkId=277059) .  
+ **Speicher:** Gebühren richten sich nach dem genutzten Speicherplatz sowie dem Grad der Redundanz und werden gestaffelt abgerechnet. Weitere Details und aktuelle Informationen finden Sie im Abschnitt **Datenverwaltung** des Artikels [Preisdetails](https://go.microsoft.com/fwlink/?LinkId=277059) .  
   
  **Datenübertragungen:** In Microsoft Azure eingehende Datenübertragungen sind kostenlos. Ausgehende Übertragungen werden nach Bandbreitennutzung und einer regionsspezifischen Staffelung berechnet. Weitere Informationen finden Sie im Abschnitt [Datenübertragungen](https://go.microsoft.com/fwlink/?LinkId=277061) des Artikels zu Preisdetails.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 
-[SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+[SQL Server-Sicherung über URLs – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 

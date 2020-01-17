@@ -1,6 +1,5 @@
 ---
-title: Erste Schritte mit SQL Server unter SUSE Linux Enterprise Server
-titleSuffix: SQL Server
+title: 'SUSE: Installieren von SQL Server für Linux'
 description: In dieser Schnellstartanleitung erfahren Sie, wie Sie SQL Server 2017 oder SQL Server 2019 unter SUSE Linux Enterprise Server installieren und anschließend mit sqlcmd eine Datenbank erstellen und abfragen.
 author: VanMSFT
 ms.author: vanto
@@ -9,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 143ec74ea2941c25c23a41396dc9cdc40d445715
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594533"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558631"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Schnellstart: Installieren von SQL Server und Erstellen einer Datenbank unter SUSE Linux Enterprise Server
 
@@ -51,7 +50,7 @@ Sie müssen über einen SLES v12 SP2-Computer mit **mindestens 2 GB** Arbeitsspe
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Sie müssen über einen Computer mit SLES v12 SP2, SP3 oder SP4 und **mindestens 2 GB** Arbeitsspeicher verfügen. Das Dateisystem muss **XFS** oder **EXT4** sein. Andere Dateisysteme wie z.B. **BTRFS** werden nicht unterstützt.
+Sie müssen über einen Computer mit SLES v12 SP2, SP3 oder SP4 und **mindestens 2 GB** Arbeitsspeicher verfügen. Das Dateisystem muss **XFS** oder **EXT4** sein. Andere Dateisysteme wie **BTRFS** werden nicht unterstützt.
 
 ::: moniker-end
 

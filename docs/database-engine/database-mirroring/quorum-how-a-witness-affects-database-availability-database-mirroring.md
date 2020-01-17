@@ -1,6 +1,7 @@
 ---
-title: 'Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit (Datenbankspiegelung) | Microsoft-Dokumentation'
-ms.custom: ''
+title: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit
+description: Hier wird beschrieben, wie sich eine Datenbankspiegelung auf das Quorum und die Datenbankverfügbarkeit auswirkt.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 554108909607d7d1cdabb10bb075a9d77b5e7b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bbf98cbd0fc863c8e6ceaf7eeb5a0e9192055c4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025407"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822685"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit (Datenbankspiegelung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "68025407"
   
  In der folgenden Abbildung sind diese drei Quorumtypen veranschaulicht.  
   
- ![Quorumtypen: vollständig; Zeuge und Partner; beide Partner](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "Quorums: full; witness and partner; both partners")  
+ ![Quorumtypen: vollständig; Zeuge und Partner; beide Partner](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "Quorumtypen: vollständig; Zeuge und Partner; beide Partner")  
   
  Solange der aktuelle Prinzipalserver über das Quorum verfügt, besitzt dieser Server die Rolle des Prinzipals und bedient die Datenbank weiterhin, es sei denn, der Datenbankbesitzer führt ein manuelles Failover aus. Verliert der Prinzipalserver das Quorum, beendet er das Anbieten der Datenbank. Ein automatisches Failover kann nur auftreten, wenn die Prinzipaldatenbank das Quorum verloren hat; dadurch wird sichergestellt, dass es die Datenbank nicht mehr anbietet.  
   
@@ -96,7 +97,7 @@ ms.locfileid: "68025407"
 ### <a name="how-quorum-affects-database-availability"></a>Auswirkungen des Quorums auf die Datenbankverfügbarkeit  
  In der folgenden Abbildung wird veranschaulicht, wie Zeuge und Partner gemeinsam sicherstellen, dass jeweils nur ein Partner die Rolle des Prinzipalservers besitzt und nur der aktuelle Prinzipalserver seine Datenbank online schalten kann. Beide Szenarien beginnen mit dem vollständigen Quorum, wobei sich **Partner_A** in der Rolle des Prinzipalservers und **Partner_B** in der Rolle des Spiegelservers befindet.  
   
- ![Kooperation zwischen Zeuge und Partnern](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "How the witness and partners cooperate")  
+ ![Kooperation zwischen Zeuge und Partnern](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "Kooperation zwischen Zeuge und Partnern")  
   
  In Szenario 1 wird veranschaulicht, wie Zeuge und Spiegel nach einem Fehler am ursprünglichen Prinzipalserver (**Partner_A**) übereinstimmend erkennen, dass **Partner_A**nicht mehr verfügbar ist und ein Quorum bilden. Der Spiegelserver, **Partner_B** , übernimmt daraufhin die Rolle des Prinzipalservers. Ein automatisches Failover erfolgt, und **Partner_B**schaltet seine Kopie der Datenbank online. Anschließend wird **Partner_B** heruntergefahren, und die Datenbank wird offline geschaltet. Später stellt der vorherige Prinzipalserver, **Partner_A**, die Verbindung mit dem Zeugen wieder her und erhält wieder das Quorum. Im Rahmen der Kommunikation mit dem Zeugen erkennt **Partner_A** jedoch, dass die eigene Datenbankkopie nicht online geschaltet werden kann, da jetzt **Partner_B** die Rolle des Prinzipalservers besitzt. Sobald **Partner_B** wieder an der Sitzung teilnimmt, wird auch die Datenbank wieder online geschaltet.  
   
@@ -105,7 +106,7 @@ ms.locfileid: "68025407"
 ## <a name="see-also"></a>Weitere Informationen  
  [Betriebsmodi der Datenbankspiegelung](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)   
+ [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Mögliche Fehler während der Datenbankspiegelung](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Spiegelungsstatus &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   

@@ -1,6 +1,7 @@
 ---
-title: Einige synchrone Replikate wurden nicht synchronisiert | Microsoft-Dokumentation
-ms.custom: ''
+title: Einige synchrone Replikate wurden nicht synchronisiert
+description: Hier werden einige mögliche Ursachen und Lösungen für den Fall beschrieben, dass ein synchrones Replikat nicht für eine Always On-Verfügbarkeitsgruppe synchronisiert wird.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d091cb3151daf161818124d6b4473637355a3674
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 494d772f7eff9ccf8ba9783885d5c62e49fddbbe
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014031"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822593"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Einige synchrone Replikate wurden nicht synchronisiert
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +30,10 @@ ms.locfileid: "68014031"
 |-|-|  
 |**Richtlinienname**|Datensynchronisierungsstatus synchroner Replikate|  
 |**Problem**|Einige synchrone Replikate wurden nicht synchronisiert.|  
-|**Kategorie**|**Warnung**|  
+|**Kategorie**|**Warning**|  
 |**Facet**|Verfügbarkeitsgruppe|  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Diese Richtlinie führt ein Rollup des Datensynchronisierungsstatus aller Verfügbarkeitsreplikate sowie eine Überprüfung auf Verfügbarkeitsreplikate durch, die sich nicht im erwarteten Synchronisierungsstatus befinden. Die Richtlinie befindet sich in einem fehlerhaften Zustand, wenn eines der asynchronen Replikate nicht den Status SYNCHRONIZING aufweist und eines der synchronen Replikate nicht den Status SYNCHRONIZED aufweist. Andernfalls befindet sich die Richtlinie in einem ordnungsgemäßen Zustand.  
   
 > [!NOTE]  

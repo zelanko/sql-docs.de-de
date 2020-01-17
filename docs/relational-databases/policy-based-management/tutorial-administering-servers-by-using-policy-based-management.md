@@ -1,6 +1,7 @@
 ---
-title: 'Lernprogramm: Verwalten von Servern mit der richtlinienbasierten Verwaltung | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung'
+description: In diesem Tutorial erfahren Sie, wie Sie eine standardmäßig deaktivierte Richtlinie erstellen und anwenden sowie eine Richtlinie für Benennungsstandards.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d98e1f1332d75514887858a11087e94bca4caf32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed0fc25f704624e740b1c3d1c1a8d2671c692f03
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021491"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558230"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Lernprogramm: Verwalten von Servern mit der richtlinienbasierten Verwaltung
+# <a name="tutorial-managing-servers-using-policy-based-management"></a>Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Willkommen beim Lernprogramm zum Verwalten von Servern mit richtlinienbasierten Verwaltungsrichtlinien. Dieses Lernprogramm richtet sich an Benutzer, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vertraut sind, die richtlinienbasierte Verwaltung jedoch noch nicht kennen.  
   
@@ -35,7 +36,7 @@ In dieser Lektion wird eine Richtlinie erstellt, die festlegt, dass Datenbank-E-
 [Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
 In dieser Lektion wird eine Richtlinie erstellt, die einen Benennungsstandard für Tabellen definiert und erzwingt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Für diese Lektion benötigen Sie grundlegende Datenbankkenntnisse und grundlegende Kenntnisse von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 Um das Lernprogramm verwenden zu können, muss auf Ihrem System [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installiert sein.  

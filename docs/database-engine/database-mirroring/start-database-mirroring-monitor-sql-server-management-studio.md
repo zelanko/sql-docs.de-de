@@ -1,6 +1,7 @@
 ---
-title: Starten des Datenbankspiegelungs-Monitors (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Starten des Datenbankspiegelungs-Monitors (SSMS)
+description: Hier wird beschrieben, wie der Datenbankspiegelungs-Monitor in der grafischen Benutzeroberfläche von SQL Server Management Studio (SSMS) gestartet wird.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 91430aacbfa65eb244592b342ccbf8503120d24b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c096cf3bba17eb92d9141383c604e3558c834cd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048035"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252769"
 ---
 # <a name="start-database-mirroring-monitor-sql-server-management-studio"></a>Starten des Datenbankspiegelungs-Monitors (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

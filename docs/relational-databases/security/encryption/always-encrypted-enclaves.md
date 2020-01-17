@@ -1,6 +1,7 @@
 ---
-title: Always Encrypted mit Secure Enclaves | Microsoft-Dokumentation
-ms.custom: ''
+title: Always Encrypted mit Secure Enclaves
+description: Erfahren Sie mehr zu Always Encrypted mit dem Feature „Secure Enclaves“ für SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d04dcc5aeeafcdc78dcc6dd401afc476fbf6555
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594043"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558027"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -89,10 +90,10 @@ Die folgende Tabelle fasst die für verschlüsselte Spalten verfügbaren Funktio
 | **Vorgang**| **Spalte ist NICHT Enclave-fähig** |**Spalte ist NICHT Enclave-fähig**| **Spalte ist Enclave-fähig**  |**Spalte ist Enclave-fähig** |
 |:---|:---|:---|:---|:---|
 | | **Verschlüsselung nach dem Zufallsprinzip**  | **Deterministische Verschlüsselung**     | **Verschlüsselung nach dem Zufallsprinzip**      | **Deterministische Verschlüsselung**     |
-| **Direkte Verschlüsselung** | Nicht unterstützt  | Nicht unterstützt   | Supported         | Supported    |
+| **Direkte Verschlüsselung** | Nicht unterstützt  | Nicht unterstützt   | Unterstützt         | Unterstützt    |
 | **Gleichheitsvergleich**   | Nicht unterstützt | Außerhalb der Enclave unterstützt | Unterstützt (innerhalb der Enclave) | Außerhalb der Enclave unterstützt |
-| **Vergleichsoperatoren zusätzlich zum Gleichheitsvergleich** | Nicht unterstützt  | Nicht unterstützt   | Supported      | Nicht unterstützt     |
-| **LIKE**    | Nicht unterstützt      | Nicht unterstützt    | Supported     | Nicht unterstützt    |
+| **Vergleichsoperatoren zusätzlich zum Gleichheitsvergleich** | Nicht unterstützt  | Nicht unterstützt   | Unterstützt      | Nicht unterstützt     |
+| **LIKE**    | Nicht unterstützt      | Nicht unterstützt    | Unterstützt     | Nicht unterstützt    |
 
 Die direkte Verschlüsselung umfasst Unterstützung für die folgenden Vorgänge innerhalb der Enclave:
 
@@ -180,10 +181,10 @@ Die folgenden Einschränkungen sind für Always Encrypted mit Secure Enclaves zu
 - [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Konfigurieren und Verwenden von Always Encrypted mit Secure Enclaves](configure-always-encrypted-enclaves.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Verwalten von Schlüsseln für Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-manage-keys.md)
 - [Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-configure-encryption.md)
-- [Abfragen von Spalten mit Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-query-columns.md)
+- [Abfragen von Spalten mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-query-columns.md)
 - [Aktivieren von Always Encrypted mit Secure Enclaves für vorhandene verschlüsselte Spalten](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Erstellen und Verwenden von Indizes in Spalten mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-create-use-indexes.md)
 

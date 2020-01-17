@@ -1,6 +1,7 @@
 ---
-title: Öffnen des Aktivitätsmonitors (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Öffnen des Aktivitätsmonitors (SSMS)
+description: Informationen zum Öffnen des Aktivitätsmonitors in SQL Server Management Studio (SSMS)
+ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9d7bccf89e8f2043413838e9f55fd8bd4e74dc5f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907229"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165527"
 ---
-# <a name="open-activity-monitor-sql-server-management-studio"></a>Öffnen des Aktivitätsmonitors (SQL Server Management Studio)
+# <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>Öffnen des Aktivitätsmonitors in SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
    
  Der Aktivitätsmonitor führt Abfragen auf der überwachten Instanz aus, um Informationen für die Anzeigebereiche des Aktivitätsmonitors abzurufen. Wenn für das Intervall für die automatische Aktualisierung weniger als 10 Sekunden festgelegt sind, kann die für die Ausführung der Abfragen benötigte Zeit die Serverleistung beeinträchtigen.  
@@ -36,7 +37,7 @@ ms.locfileid: "72907229"
   
 ## <a name="open-activity-monitor"></a>Öffnen des Aktivitätsmonitors  
 
-### <a name="keyboard-shortcut"></a>Tastenkombination  
+### <a name="keyboard-shortcut"></a>Tastenkombinationen  
  - Geben Sie **STRG+ALT+A** ein, um den Aktivitätsmonitor jederzeit zu öffnen.
 
  >**Tipp:** Bewegen Sie den Mauszeiger über ein Symbol in SSMS, um zu erfahren, wozu es dient und über welche Tastenkombination es aktiviert wird.

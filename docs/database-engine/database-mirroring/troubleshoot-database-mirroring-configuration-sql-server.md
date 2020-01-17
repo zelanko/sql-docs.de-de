@@ -1,6 +1,7 @@
 ---
-title: Problembehandlung für die Datenbankspiegelungskonfiguration (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Häufige Probleme beim Konfigurieren der Datenbankspiegelung
+description: Dieser Artikel enthält Informationen, die Ihnen die Problembehandlung beim Einrichten einer Datenbankspiegelungssitzung erleichtern.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f469d5afc1dc2f900deaddced2a9931a7bcdf7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049763"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822517"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Problembehandlung für die Datenbankspiegelungskonfiguration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "68049763"
   
 2.  Wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Dienst unter dem lokalen Systemkonto ausgeführt, müssen Sie Zertifikate für die Authentifizierung verwenden. Weitere Informationen finden Sie unter [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Endpunkte  
+##  <a name="Endpoints"></a>Endpoints  
  Endpunkte müssen ordnungsgemäß konfiguriert sein.  
   
 1.  Stellen Sie sicher, dass jede Serverinstanz (Prinzipalserver, Spiegelserver und ggf. Zeuge) über einen Endpunkt der Datenbankspiegelung verfügt. Weitere Informationen finden Sie unter [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) und, je nach Form der Authentifizierung, entweder unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) oder [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
@@ -110,7 +111,7 @@ ms.locfileid: "68049763"
     ```  
   
 ##  <a name="SystemAddress"></a> Systemadresse  
- Für den Systemnamen einer Serverinstanz in einer Datenbank-Spiegelungskonfiguration können Sie jeden beliebigen Namen verwenden, der das System eindeutig bezeichnet. Die Serveradresse kann ein Systemname sein (wenn sich die Systeme in derselben Domäne befinden), ein vollqualifizierter Domänenname oder eine IP-Adresse (vorzugsweise eine statische IP-Adresse). Bei Verwendung des vollqualifizierten Domänennamens ist eine problemfreie Funktionsweise sichergestellt. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)verwendet.  
+ Für den Systemnamen einer Serverinstanz in einer Datenbank-Spiegelungskonfiguration können Sie jeden beliebigen Namen verwenden, der das System eindeutig bezeichnet. Die Serveradresse kann ein Systemname sein (wenn sich die Systeme in derselben Domäne befinden), ein vollqualifizierter Domänenname oder eine IP-Adresse (vorzugsweise eine statische IP-Adresse). Bei Verwendung des vollqualifizierten Domänennamens ist eine problemfreie Funktionsweise sichergestellt. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
 ##  <a name="NetworkAccess"></a> Network Access  
  Jede Serverinstanz muss über TCP auf die Ports der anderen Serverinstanz bzw. der anderen Serverinstanzen zugreifen können. Dies ist insbesondere von Bedeutung, wenn sich die Serverinstanzen in unterschiedlichen Domänen befinden, die sich nicht vertrauen (nicht vertrauenswürdige Domänen). Damit wird ein Großteil der Kommunikation zwischen den Serverinstanzen eingeschränkt.  
@@ -163,11 +164,11 @@ ms.locfileid: "68049763"
   
 -   Transaktionen, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC (Microsoft Distributed Transaction Coordinator) verwenden.  
   
- Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für AlwaysOn-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
+ Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
+ [Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   
   
 

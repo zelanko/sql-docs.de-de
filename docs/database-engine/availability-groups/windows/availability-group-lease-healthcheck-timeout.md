@@ -1,7 +1,7 @@
 ---
-title: Mechanismen der Timeouts für Leaseintegritätsprüfungen für Verfügbarkeitsgruppen
+title: Timeouts für Leaseintegritätsprüfungen für Verfügbarkeitsgruppen
 description: Hier finden Sie die Mechanismen und Richtlinien der Timeouts für Leases, Cluster und Integritätsprüfung für Always On-Verfügbarkeitsgruppen.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 78db83e29b7fe8671d1cf048275f379592bd0d95
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874360"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254059"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mechanismen und Richtlinien der Timeouts für Leases, Cluster und Integritätsprüfung für Always On-Verfügbarkeitsgruppen 
 
@@ -63,13 +63,13 @@ Aus Sichtweise des restlichen Clusters steht derzeit kein primäres Replikat ber
 
 Durch das Timeout für die Lease werden Split-Brain-Szenarien bei Kommunikationsfehlern verhindert. Selbst wenn die gesamte Kommunikation fehlschlägt, wird der Prozess der Ressourcen-DLL beendet und die Lease kann nicht aktualisiert werden. Nach Ablauf der Lease wird die Verfügbarkeitsgruppe eigenständig offline geschaltet. Die SQL Server-Instanz muss erkennen, dass sie nicht mehr das primäre Replikat hostet, bevor der Cluster ein neues Replikat erstellt. Da der restliche Cluster, der für das Auswählen eines neuen primären Replikats zuständig ist, keine Möglichkeit zur Koordination mit dem aktuellen primären Replikat hat, wird durch die Timeoutwerte sichergestellt, dass ein neues primäres Replikat erst dann erstellt wird, wenn sich das aktuelle primäre Replikat offline geschaltet hat. 
 
-Bei einem Failover des Clusters muss die SQL Server-Instanz, auf der das vorherige primäre Replikat gehostet ist, in einen Auflösungsstatus übergehen, bevor das neue primäre Replikat online geschaltet wird. Der SQL Server-Leasethread weist zu jedem Zeitpunkt eine verbleibende Gültigkeitsdauer von ½ \* LeaseTimeout auf, da bei jeder Verlängerung der Lease die neue Gültigkeitsdauer auf `LeaseInterval` oder ½ \* LeaseTimeout aktualisiert wird. Wenn der Clusterdienst oder der Ressourcenhost stoppt oder beendet wird, ohne das Leasebeendigungsereignis zu signalisieren, deklariert der Cluster den primären Knoten nach `SameSubnetThreshold`\ `SameSubnetDelay` Millisekunden als inaktiv. Innerhalb dieses Zeitraums muss die Lease ablaufen, damit sichergestellt ist, dass das primäre Replikat offline geschaltet ist. Da die maximale Gültigkeitsdauer für das Timeout der Lease ½ \* `LeaseTimeout` ist, muss ½ \* `LeaseTimeout` weniger als `SameSubnetThreshold` \* `SameSubnetDelay` betragen. 
+Bei einem Failover des Clusters muss die SQL Server-Instanz, auf der das vorherige primäre Replikat gehostet ist, in einen Auflösungsstatus übergehen, bevor das neue primäre Replikat online geschaltet wird. Der SQL Server-Leasethread weist zu jedem Zeitpunkt eine verbleibende Gültigkeitsdauer von ½ \* LeaseTimeout auf, da bei jeder Verlängerung der Lease die neue Gültigkeitsdauer auf `LeaseInterval` oder ½ \* LeaseTimeout aktualisiert wird. Wenn der Clusterdienst oder der Ressourcenhost stoppt oder beendet wird, ohne das Leasebeendigungsereignis zu signalisieren, deklariert der Cluster den primären Knoten nach `SameSubnetThreshold`\ `SameSubnetDelay` Millisekunden als inaktiv. Innerhalb dieses Zeitraums muss die Lease ablaufen, damit sichergestellt ist, dass das primäre Replikat offline geschaltet ist. Da die maximale Gültigkeitsdauer für das Timeout der Lease ½ \* `LeaseTimeout` ist, muss ½ \* `LeaseTimeout` weniger als `SameSubnetThreshold` \* `SameSubnetDelay` betragen. 
 
 `SameSubnetThreshold \<= CrossSubnetThreshold` und `SameSubnetDelay \<= CrossSubnetDelay` sollte für alle SQL Server-Cluster zutreffen. 
 
 ### <a name="health-check-timeout-operation"></a>Funktionsweise des Timeouts für die Integritätsprüfung 
 
-Das Timeout für die Integritätsprüfung ist flexibler, da kein anderer Failovermechanismus direkt davon abhängt. Beim Standardwert von 30 Sekunden ist das `sp_server_diagnostics`-Intervall auf 10 Sekunden festgelegt, mit einem Mindestwert von 15 Sekunden für das Timeout und einem Intervall von 5 Sekunden. Allgemeiner ausgedrückt: Das `sp_server_diagnositcs`-Aktualisierungsintervall beträgt immer 1/3 \* `HealthCheckTimeout`. Wenn die Ressourcen-DLL in einem Intervall keinen neuen Satz von Integritätsdaten erhält, verwendet sie weiterhin die Integritätsdaten aus dem vorherigen Intervall, um die aktuelle Verfügbarkeitsgruppe und den Zustand der Instanz zu ermitteln. Durch einen höheren Timeoutwert für die Integritätsprüfung, weist das primäre Replikat eine größere Toleranz gegenüber der CPU-Auslastung auf, wodurch `sp_server_diagnostics` daran gehindert werden kann, in jedem Intervall neue Daten bereitzustellen, jedoch werden für einen längeren Zeitraum Integritätsprüfungen auf Grundlage veralteter Daten durchgeführt. Unabhängig vom Timeoutwert geschieht Folgendes: Sobald Daten empfangen werden, die darauf hinweisen, dass das Replikat nicht fehlerfrei ist, wird im nächsten `IsAlive`-Aufruf zurückgegeben, dass die Instanz fehlerhaft ist, und der Clusterdienst initiiert ein Failover. 
+Das Timeout für die Integritätsprüfung ist flexibler, da kein anderer Failovermechanismus direkt davon abhängt. Beim Standardwert von 30 Sekunden ist das `sp_server_diagnostics`-Intervall auf 10 Sekunden festgelegt, mit einem Mindestwert von 15 Sekunden für das Timeout und einem Intervall von 5 Sekunden. Allgemeiner ausgedrückt: Das `sp_server_diagnositcs`-Aktualisierungsintervall beträgt immer 1/3 \* `HealthCheckTimeout`. Wenn die Ressourcen-DLL in einem Intervall keinen neuen Satz von Integritätsdaten erhält, verwendet sie weiterhin die Integritätsdaten aus dem vorherigen Intervall, um die aktuelle Verfügbarkeitsgruppe und den Zustand der Instanz zu ermitteln. Durch einen höheren Timeoutwert für die Integritätsprüfung, weist das primäre Replikat eine größere Toleranz gegenüber der CPU-Auslastung auf, wodurch `sp_server_diagnostics` daran gehindert werden kann, in jedem Intervall neue Daten bereitzustellen, jedoch werden für einen längeren Zeitraum Integritätsprüfungen auf Grundlage veralteter Daten durchgeführt. Unabhängig vom Timeoutwert geschieht Folgendes: Sobald Daten empfangen werden, die darauf hinweisen, dass das Replikat nicht fehlerfrei ist, wird im nächsten `IsAlive`-Aufruf zurückgegeben, dass die Instanz fehlerhaft ist, und der Clusterdienst initiiert ein Failover. 
 
 Die Fehlerbedingungsebene der Verfügbarkeitsgruppe ändert die Fehlerbedingungen für die Integritätsprüfung. Für jede Fehlerebene gilt: Wenn das Verfügbarkeitsgruppenelement von `sp_server_diagnostics` als fehlerhaft gemeldet wird, schlägt die Integritätsprüfung fehl. Jede Ebene übernimmt alle Fehlerbedingungen der darunter liegenden Ebenen. 
 
@@ -130,13 +130,13 @@ Der Leasemechanismus wird durch einen einzelnen Wert gesteuert, der für jede Ve
 
 Zwei Werte steuern die Always On-Integritätsprüfung: FailureConditionLevel und HealthCheckTimeout. FailureConditionLevel gibt die Toleranzstufe für bestimmte Fehlerbedingungen an, die von `sp_server_diagnostics` gemeldet werden. HealthCheckTimeout legt den Zeitraum fest, über den die Ressourcen-DLL keine Aktualisierung von `sp_server_diagnostics` empfangen muss. Das Aktualisierungsintervall für `sp_server_diagnostics` ist immer HealthCheckTimeout / 3. 
 
-Verwenden Sie zum Konfigurieren der Failover-Bedingungsebene die Option `FAILURE_CONDITION_LEVEL = <n>` der Anweisung `CREATE` oder `ALTER` `AVAILABILITY GROUP`, wobei `<n>` eine ganze Zahl zwischen 1 und 5 ist. Mit dem folgenden Befehl wird die Fehlerbedingungsebene für die Verfügbarkeitsgruppe „AG1“ auf 1 festgelegt: 
+Verwenden Sie zum Konfigurieren der Failoverbedingungsebene die Option `FAILURE_CONDITION_LEVEL = <n>` der Anweisung `CREATE` oder `ALTER` `AVAILABILITY GROUP`, wobei `<n>` eine ganze Zahl zwischen 1 und 5 ist. Mit dem folgenden Befehl wird die Fehlerbedingungsebene für die Verfügbarkeitsgruppe „AG1“ auf 1 festgelegt: 
 
 ```sql
 ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1); 
 ```
 
-Verwenden Sie zum Konfigurieren des Timeouts für die Integritätsprüfung die Option `HEALTH_CHECK_TIMEOUT` der Anweisung `CREATE` oder `ALTER` `AVAILABILITY GROUP`. Mit dem folgenden Befehl wird das Timeout für die Integritätsprüfung für die Verfügbarkeitsgruppe „AG1“ auf 60.000 Millisekunden festgelegt: 
+Verwenden Sie zum Konfigurieren des Timeouts für die Integritätsprüfung die Option `HEALTH_CHECK_TIMEOUT` der Anweisung `CREATE` oder `ALTER` `AVAILABILITY GROUP`. Mit dem folgenden Befehl wird das Timeout für die Integritätsprüfung für die Verfügbarkeitsgruppe „AG1“ auf 60.000 Millisekunden festgelegt: 
 
 
 ```sql
@@ -153,7 +153,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
   
- | Timeouteinstellung | Zweck | Zwischen | Verwendungszweck | IsAlive & LooksAlive | Ursachen | Ergebnis 
+ | Timeouteinstellung | Zweck | Zwischen | Verwendung | IsAlive & LooksAlive | Ursachen | Ergebnis 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | Timeout für Lease </br> **Standardwert: 20000** | Split Brain verhindern | Vom primären Replikat auf den Cluster </br> (HADR) | [Windows event objects (Windows-Ereignisobjekte)](/windows/desktop/Sync/event-objects)| Wird in beiden verwendet | Nicht reagierendes Betriebssystems, unzureichender virtueller Arbeitsspeicher, Arbeitssatzpaging, Generieren von Speicherabbildern, voll ausgelastete CPU, WSFC ist offline (Verlust des Quorums) | Verfügbarkeitsgruppenressource von offline zu online geschalten, dann wird ein Failover ausgeführt |  
  | Sitzungstimeout </br> **Standardwert: 10000** | Melden von Kommunikationsproblemen zwischen dem primären und sekundären Replikat | Sekundäres Replikat auf primäres Replikat </br> (HADR) | [TCP Sockets (messages sent via DBM endpoint) (TCP-Sockets (über einen DBM-Endpunkt gesendete Meldungen))](/windows/desktop/WinSock/windows-sockets-start-page-2) | In keinem von beiden verwendet | Netzwerkkommunikation, </br> Probleme auf dem sekundären Replikat (offline), nicht reagierendes Betriebssystem, Ressourcenkonflikte | Verbindung des sekundären Replikats wird getrennt | 

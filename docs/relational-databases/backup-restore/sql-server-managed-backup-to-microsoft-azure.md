@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8fb8654f89b11b848028e3b35dd971d80cfd4138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041363"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245427"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup für Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwaltet und automatisiert SQL Server-Sicherungen in Microsoft Azure Blob Storage. Sie können es SQL Server ermöglichen, den Sicherungszeitplan basierend auf der Transaktionsarbeitsauslastung Ihrer Datenbank zu bestimmen. Alternativ können Sie die erweiterten Optionen zum Bestimmen eines Zeitplans verwenden. Die Aufbewahrungseinstellungen bestimmen, wie lange die Sicherungen in Azure Blob Storage gespeichert werden. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] unterstützt die Wiederherstellung zu einem bestimmten Zeitpunkt für den angegebenen Beibehaltungszeitraum.  
   
- Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]wurden die Verfahren und das zugrunde liegende Verhalten von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] geändert. Weitere Informationen finden Sie unter [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
+ Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]wurden die Verfahren und das zugrunde liegende Verhalten von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] geändert. Weitere Informationen finden Sie unter [Migrieren der verwalteten Sicherungseinstellungen von SQL Server 2014 zu SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] wird für SQL Server-Instanzen empfohlen, die auf virtuellen Microsoft Azure-Computern ausgeführt werden.  
@@ -35,24 +35,24 @@ ms.locfileid: "68041363"
  Sie können die Sicherungen auch verschlüsseln, um die Sicherheitsvorkehrungen zu erhöhen. Außerdem können Sie einen benutzerdefinierten Zeitplan einrichten, um zu steuern, wann die Sicherungen erstellt werden. Weitere Informationen zum Verwenden des Microsoft Azure-Blobspeicherdiensts für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure-Blobspeicherdienst](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="Prereqs"></a> Voraussetzungen  
- Microsoft Azure Storage wird von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] zum Speichern der Sicherungsdateien verwendet. Die folgenden Voraussetzungen gelten:  
+ Microsoft Azure Storage wird von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] zum Speichern der Sicherungsdateien verwendet. Die folgenden Voraussetzungen müssen erfüllt sein:  
   
-|Voraussetzung|und Beschreibung|  
+|Voraussetzung|BESCHREIBUNG|  
 |------------------|-----------------|  
 |**Microsoft Azure-Konto**|Für erste Schritte mit Azure können Sie die [kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/) verwenden, bevor Sie sich mit den [Kaufoptionen](https://azure.microsoft.com/pricing/purchase-options/)beschäftigen.|  
-|**Azure-Speicherkonto**|Die Sicherungen werden in einem Azure Blob Storage zugeordneten Azure-Speicherkonto gespeichert. Eine Schritt-für-Schritt-Anleitung zum Erstellen eines Speicherkontos finden Sie unter [Informationen zu Azure-Speicherkonten](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
+|**Azure Storage-Konto**|Die Sicherungen werden in einem Azure Blob Storage zugeordneten Azure-Speicherkonto gespeichert. Eine Schritt-für-Schritt-Anleitung zum Erstellen eines Speicherkontos finden Sie unter [Informationen zu Azure-Speicherkonten](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
 |**Blobcontainer**|Blobs sind in Containern organisiert. Sie geben den Zielcontainer für die Sicherungsdateien an. Sie können im [Azure-Verwaltungsportal](https://manage.windowsazure.com/) oder mithilfe des [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)-Befehls **New-AzureStorageContainer** einen Container erstellen.|  
-|**Shared Access Signature (SAS)**|Der Zugriff auf den Zielcontainer wird durch eine Shared Access Signature (SAS) gesteuert. Einen Überblick über die SAS finden Sie unter [Shared Access Signatures, Teil 1: Grundlagen zum SAS-Modell](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Sie können ein SAS-Token im Code oder mithilfe des PowerShell-Befehls **New-AzureStorageContainerSASToken** erstellen. Ein PowerShell-Skript, das diesen Prozess vereinfacht, finden Sie unter [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell). Das SAS-Token kann in **SQL-Anmeldeinformationen** für die Verwendung mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]gespeichert werden.|  
+|**Shared Access Signature (SAS)**|Der Zugriff auf den Zielcontainer wird durch eine Shared Access Signature (SAS) gesteuert. Einen Überblick über die SAS finden Sie unter [Shared Access Signatures, Teil 1: Grundlegendes zum SAS-Modell](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Sie können ein SAS-Token im Code oder mithilfe des PowerShell-Befehls **New-AzureStorageContainerSASToken** erstellen. Ein PowerShell-Skript, das diesen Prozess vereinfacht, finden Sie unter [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell). Das SAS-Token kann in **SQL-Anmeldeinformationen** für die Verwendung mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]gespeichert werden.|  
 |**SQL Server-Agent**|Der SQL Server-Agent muss ausgeführt werden, damit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] funktioniert. Ziehen Sie in Betracht, die Startoption auf „automatisch“ festzulegen.|  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Komponenten  
  Transact-SQL ist die Hauptschnittstelle für die Interaktion mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Gespeicherte Systemprozeduren werden für die Aktivierung, Konfiguration und Überwachung von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]verwendet. Systemfunktionen werden zum Abrufen vorhandener Konfigurationseinstellungen, Parameterwerte und Sicherungsdateiinformationen verwendet. Erweiterte Ereignisse dienen der Überwachung von Fehlern und Warnungen. Warnmechanismen werden über SQL Agent-Aufträge und die richtlinienbasierte Verwaltung in SQL Server aktiviert. Es folgt eine Liste der Objekte und eine Beschreibung ihrer Funktionen im Hinblick auf [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  PowerShell-Cmdlets sind ebenfalls verfügbar zur Konfiguration von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. SQL Server Management Studio unterstützt das Wiederherstellen von Sicherungen, die mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] erstellt wurden, über die Aufgabe **Datenbank wiederherstellen** .  
   
 |||  
 |-|-|  
-|Systemobjekt|und Beschreibung|  
+|Systemobjekt|BESCHREIBUNG|  
 |**MSDB**|Speichert die Metadaten und den Sicherungsverlauf für alle von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]erstellten Sicherungen.|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Aktiviert [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Konfiguriert die erweiterten Einstellungen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], wie z.B. die Verschlüsselung.|  
@@ -128,7 +128,7 @@ ms.locfileid: "68041363"
 -   Für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gelten ggf. bestimmte Einschränkungen, wenn eine Konfiguration in Kombination mit anderen Technologien erfolgt, die Sicherungen, Hochverfügbarkeit und eine Wiederherstellung im Notfall unterstützen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-- [Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
+- [Aktivieren von SQL Server Managed Backup in Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Deaktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
 - [Sichern und Wiederherstellen von Systemdatenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)

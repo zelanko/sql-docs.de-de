@@ -1,6 +1,7 @@
 ---
-title: Seite „Datenbanken auswählen“ (Assistent für neue Verfügbarkeitsgruppen/Assistent zum Hinzufügen von Datenbanken) | Microsoft-Dokumentation
-ms.custom: ''
+title: Seite „Datenbanken auswählen“ (Assistenten für neue Verfügbarkeitsgruppen und zum Hinzufügen von Datenbanken)
+description: In diesem Artikel wird die Seite „Datenbanken auswählen“ der Assistenten für neue Verfügbarkeitsgruppen und zum Hinzufügen von Datenbanken erläutert, auf die über die grafische Benutzeroberfläche von SQL Server Management Studio zugegriffen werden kann.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 04836a29531c1eaab61277891e22e31b669d9ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0560e17a7ab582b52b4f0a5db822dbd2ab5fa5f5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014190"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235378"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-and-add-database-wizard"></a>Select Databases Page (New Availability Group Wizard and Add Database Wizard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
-title: 'Sichern und Wiederherstellen: Interoperabilität und Koexistenz (SQL Server) | Microsoft-Dokumentation'
-ms.custom: ''
-ms.date: 08/05/2016
+title: 'Sichern und Wiederherstellen: Interoperabilität von Features'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940873"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247450"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sichern und Wiederherstellen: Interoperabilität und Koexistenz (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "67940873"
  Dieser Abschnitt betrifft nur Datenbanken mit mehreren Dateigruppen, für die das vollständige Wiederherstellungsmodell verwendet wird.  
   
 > [!NOTE]  
->  Die Datenbankspiegelungsfunktion wird in zukünftigen Versionen von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr bereitgestellt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
+>  Die Datenbankspiegelungsfunktion wird in zukünftigen Versionen von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr bereitgestellt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
  Die Datenbankspiegelung ist eine Lösung zum Verbessern der Datenbankverfügbarkeit. Die Datenbankspiegelung wird auf Datenbankbasis implementiert und ist nur für Datenbanken mit dem vollständigen Wiederherstellungsmodell geeignet. Weitere Informationen finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67940873"
 >  Verwenden Sie zum Verteilen von Kopien einer Teilmenge der Dateigruppen in einer Datenbank die Replikation: Replizieren Sie nur die Objekte in den Dateigruppen, die auf andere Server kopiert werden sollen. Weitere Informationen über Replikation finden Sie unter [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md).  
   
 ### <a name="creating-the-mirror-database"></a>Erstellen der Spiegeldatenbank  
- Die Spiegeldatenbank wird durch Dateiwiederherstellung (ohne Datenbankwiederherstellung) von Sicherungen der Prinzipaldatenbank auf dem Spiegelserver erstellt. Bei der Wiederherstellung muss der Datenbankname beibehalten werden. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)beschrieben.  
+ Die Spiegeldatenbank wird durch Dateiwiederherstellung (ohne Datenbankwiederherstellung) von Sicherungen der Prinzipaldatenbank auf dem Spiegelserver erstellt. Bei der Wiederherstellung muss der Datenbankname beibehalten werden. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
   
  Sie können die Spiegeldatenbank mithilfe einer schrittweisen Wiederherstellungssequenz erstellen, insofern dies unterstützt wird. Sie können die Spiegelung jedoch erst starten, wenn Sie alle Dateigruppen und ggf. Protokollsicherungen wiederhergestellt haben, sodass die gespiegelte Datenbank zeitlich nicht zu weit von der Prinzipaldatenbank entfernt ist. Weitere Informationen finden Sie unter [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   

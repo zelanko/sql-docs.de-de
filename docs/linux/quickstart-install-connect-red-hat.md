@@ -1,20 +1,21 @@
 ---
-title: Erste Schritte mit SQL Server für Red Hat Enterprise Linux
+title: 'RHEL: Installieren von SQL Server für Linux'
 titleSuffix: SQL Server
-description: In diesem Schnellstart erfahren Sie, wie Sie SQL Server 2017 oder SQL Server 2019 unter Red Hat Enterprise Linux installieren und dann eine Datenbank mit „sqlcmd“ erstellen und abfragen.
+description: In diesem Schnellstart erfahren Sie, wie Sie SQL Server 2017 oder SQL Server 2019 unter Red Hat Enterprise Linux (RHEL) installieren und dann eine Datenbank mit „sqlcmd“ erstellen und abfragen.
 author: VanMSFT
+ms.custom: seo-lt-2019
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: b94ea0ef8956e7807f075da548ae817dc6a205df
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b93ea834e890981d3fd45fd999a05ae5b2b68042
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531372"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558436"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Schnellstart: Installieren von SQL Server und Erstellen einer Datenbank unter Red Hat
 
@@ -60,7 +61,7 @@ Um SQL Server unter RHEL zu konfigurieren, führen Sie in einem Terminal die fol
    ```
 
    > [!TIP]
-   > Wenn Sie SQL Server 2019 installieren möchten, müssen Sie stattdessen das Repository SQL Server 2019 registrieren. Verwenden Sie für Installationen von SQL Server 2019 den folgenden Befehl:
+   > Wenn Sie SQL Server 2019 installieren möchten, müssen Sie stattdessen das Repository SQL Server 2019 registrieren. Verwenden Sie für Installationen von SQL Server 2019 den folgenden Befehl:
    >
    > ```bash
    > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo

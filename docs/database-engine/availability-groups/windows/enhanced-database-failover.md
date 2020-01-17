@@ -1,5 +1,5 @@
 ---
-title: Aktivieren eines verbesserten Datenbankfailovers für eine Verfügbarkeitsgruppe
+title: Verbessertes Failover für Verfügbarkeitsgruppen
 description: Mit diesen Schritten aktivieren Sie ein verbessertes Datenbankfailover, bei dem ein Failover ausgelöst wird, wenn eine Datenbank in einer Always On-Verfügbarkeitsgruppe keine Transaktionen mehr schreiben kann.
 ms.custom: seodec18
 ms.date: 09/25/2017
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 91246775b917cf7c56218482b5c7b0c86264d612
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947966"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822245"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Aktivieren eines verbesserten Datenbankfailovers für eine Datenbank in einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Dieses verfügt über die gleiche Verfügbarkeitsgruppenkonfiguration wie in Sze
 
 Eine Verfügbarkeitsgruppe wird zwischen Instanz A und Instanz B konfiguriert und enthält zwei Datenbanken: DB1 und DB2. Der Verfügbarkeitsmodus ist auf synchronen Commit mit automatischem Failover-Modus festgelegt und das verbesserte Datenbank-Failover ist aktiviert. Der Zugriff auf die Festplatte, die die Daten und Transaktionsprotokolldateien von DB2 enthält, ist unterbrochen. Wenn das Problem erkannt wird, führt die Verfügbarkeitsgruppe automatisch ein Failover zu Instanz B aus.
 
-## <a name="configure-and-view-the-enhanced-database-failover-option"></a>Konfigurieren und Anzeigen der Optionen für erweitertes Datenbankfailover
+## <a name="configure-enhanced-failover"></a>Konfigurieren von verbessertem Failover
 
 Das verbesserte Datenbank-Failover kann mithilfe von SQL Server Management Studio oder Transact-SQL konfiguriert werden. Die PowerShell-Cmdlets sind dazu derzeit nicht in der Lage. Standardmäßig ist das verbesserte Datenbank-Failover deaktiviert.
 
@@ -79,7 +79,7 @@ Fragen Sie die dynamische Verwaltungssicht `sys.availability_groups` ab, um anzu
 
 - [Konfigurieren von Datenbank-Integritätserkennung](sql-server-always-on-database-health-detection-failover-option.md)
 
-- [Verwenden des Assistenten für Verfügbarkeitsgruppen (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+- [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen (SQL Server)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
 - [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  

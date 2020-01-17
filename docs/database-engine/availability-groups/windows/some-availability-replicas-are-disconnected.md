@@ -1,6 +1,7 @@
 ---
-title: Einige Verfügbarkeitsreplikate sind getrennt | Microsoft-Dokumentation
-ms.custom: ''
+title: Einige Verfügbarkeitsreplikate sind getrennt
+description: Mögliche Gründe und Lösungen, wenn Ihr Verfügbarkeitsgruppenreplikat für eine Always On-Verfügbarkeitsgruppe von SQL Server getrennt wurde.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9bac7bdcc3961b3f6996be91062bea5382e11ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b90caaa83f17eb532db0747c62f473ba77f7ebdb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014116"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242601"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>Einige Verfügbarkeitsreplikate sind getrennt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +30,10 @@ ms.locfileid: "68014116"
 |-|-|  
 |**Richtlinienname**|Verbindungsstatus von Verfügbarkeitsreplikaten|  
 |**Problem**|Einige Verfügbarkeitsreplikate sind getrennt.|  
-|**Kategorie**|**Warnung**|  
+|**Kategorie**|**Warning**|  
 |**Facet**|Verfügbarkeitsgruppe|  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Diese Richtlinie führt ein Rollup des Verbindungsstatus aller Verfügbarkeitsreplikate durch und überprüft, ob Verfügbarkeitsreplikate den Status DISCONNECTED aufweisen. Die Richtlinie befindet sich in einem fehlerhaften Zustand, wenn der Verbindungsstatus von einem der Verfügbarkeitsreplikate DISCONNECTED lautet. Die Richtlinie befindet sich andernfalls in einem ordnungsgemäßen Zustand.  
   
 > [!NOTE]  

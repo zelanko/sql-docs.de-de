@@ -1,6 +1,7 @@
 ---
-title: 'Angeben der Endpunkt-URL: Hinzufügen oder Ändern von Verfügbarkeitsreplikaten | Microsoft-Dokumentation'
-ms.custom: ''
+title: Angeben der Endpunkt-URL für Verfügbarkeitsreplikate
+description: In diesem Artikel erfahren Sie, wie Sie die Endpunkt-URL angeben, wenn Sie ein Replikat in einer Always On-Verfügbarkeitsgruppe in SQL Server hinzufügen oder ändern.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 724309ed2b66ee75eb8f223ebd300a2ae941cd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014014"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251284"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Angeben der Endpunkt-URL: Hinzufügen oder Ändern von Verfügbarkeitsreplikaten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68014014"
   
  TCP<strong>://</strong> *\<Systemadresse>* <strong>:</strong> *\<Port>*  
   
- Dabei gilt:  
+ Hierbei gilt:  
   
 -   *\<system-address>* ist eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert. In der Regel handelt es sich bei der Serveradresse um einen Systemnamen (wenn sich die Systeme in derselben Domäne befinden), einen vollqualifizierten Domänennamen oder eine IP-Adresse:  
   
@@ -58,7 +59,7 @@ ms.locfileid: "68014014"
   
      In der Endpunkt-URL identifiziert nur die Nummer des Ports die Serverinstanz, die dem Spiegelungsendpunkt auf dem Zielcomputer zugeordnet ist. Die folgende Abbildung veranschaulicht die Endpunkt-URLS von zwei Serverinstanzen auf einem Computer. In der Standardinstanz wird Port `7022` verwendet, und in der benannten Instanz wird Port `7033`verwendet. Die Endpunkt-URL für diese beiden Serverinstanzen lauten `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` bzw. `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Beachten Sie, dass die Adresse nicht den Namen der Serverinstanz enthält.  
   
-     ![Server network addresses of a default instance (Servernetzwerkadressen einer Standardinstanz)](../../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Server network addresses of a default instance (Servernetzwerkadressen einer Standardinstanz)")  
+     ![Servernetzwerkadressen einer Standardinstanz](../../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Servernetzwerkadressen einer Standardinstanz")  
   
      Verwenden Sie die folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung, um den Port zu identifizieren, der derzeit dem Endpunkt der Datenbankspiegelung einer Serverinstanz zugeordnet ist:  
   
@@ -85,7 +86,7 @@ ms.locfileid: "68014014"
   
  `TCP://10.193.9.134:7023`  
   
-#### <a name="d-using-ipv6"></a>D. Verwenden von IPv6  
+#### <a name="d-using-ipv6"></a>D: Verwenden von IPv6  
  Die folgende Endpunkt-URL gibt die IPv6-Adresse `2001:4898:23:1002:20f:1fff:feff:b3a3`und Port `7022`an.  
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
@@ -97,7 +98,7 @@ ms.locfileid: "68014014"
   
  Wenn Sie den vollqualifizierten Domänennamen bilden möchten, verketten Sie die Werte von *<host_name>* bzw. *<Primary_Dns_Suffix>* wie folgt:  
   
- _&lt;host_name&gt;_ **.** _<Primary_Dns_Suffix>_  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  Beispielsweise entspricht die IP-Konfiguration  
   
@@ -129,7 +130,7 @@ ms.locfileid: "68014014"
   
 -   Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats (SQL Server)  
   
--   [Problembehandlung für die Always On-Verfügbarkeitsgruppenkonfiguration &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Problembehandlung für die AlwaysOn-Verfügbarkeitsgruppenkonfiguration &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **So zeigen Sie Informationen zum Datenbankspiegelungs-Endpunkt an**  
   

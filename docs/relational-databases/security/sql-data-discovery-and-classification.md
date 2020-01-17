@@ -11,26 +11,27 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
-ms.openlocfilehash: ef05b068c016cdea00e813f5dbff174494440a19
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929789"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548328"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Die Datenermittlung und -klassifizierung führt ein neues Tool in SSMS (SQL Server Management Studio) für das **Ermitteln**, **Klassifizieren**, **Bezeichnen** & **Melden** von sensiblen Daten in Ihren Datenbanken ein.
+Die Datenermittlung und -klassifizierung führt ein neues Tool in [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) für das **Ermitteln**, **Klassifizieren**, **Bezeichnen**  &  **Melden** von vertraulichen Daten in Ihren Datenbanken ein.
 Die Ermittlung und Klassifizierung Ihrer sensibelsten Daten (geschäftliche, finanzielle, gesundheitliche usw.) kann im Informationsschutzformat Ihres Unternehmens eine entscheidende Rolle spielen. Sie kann für Folgendes als Infrastruktur gelten:
 * Maßnahmen zum Einhalten von Datenschutzstandards.
 * Steuern des Zugriffs auf und Verstärken der Sicherheit von Datenbanken oder Spalten, die hochsensible Daten enthalten.
 
 > [!NOTE]
-> Die Datenermittlung und -klassifizierung werden **in SQL Server 2008 und höher unterstützt und können mit SSMS 17.5 oder höher verwendet werden**. Weitere Informationen zur Datenermittlung und -klassifizierung in Azure SQL-Datenbanken finden Sie unter [Azure SQL-Datenbank – Datenermittlung und -klassifizierung](https://go.microsoft.com/fwlink/?linkid=866265).
+> Die Datenermittlung und -klassifizierung wird **in SQL Server 2012 und höher unterstützt und kann mit [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) oder höher verwendet werden**. Weitere Informationen zur Datenermittlung und -klassifizierung in Azure SQL-Datenbanken finden Sie unter [Azure SQL-Datenbank – Datenermittlung und -klassifizierung](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
 ## <a id="subheading-1"></a>Übersicht
 Die Datenermittlung und -klassifizierung führen eine Reihe von erweiterten Diensten ein, und sie bilden ein neues SQL Information Protection-Paradigma für den Schutz von Daten, nicht nur von der Datenbank:
+
 * **Ermittlung und Empfehlungen:** Die Klassifizierungsengine überprüft Ihre Datenbank und identifiziert Spalten, die möglicherweise sensible Daten enthalten. Dann besteht die einfache Möglichkeit zum Überprüfen und Anwenden der geeigneten Empfehlungen zur Klassifizierung und zum manuellen Klassifizieren von Spalten.
 * **Bezeichnung:** Sensible Daten können dauerhaft mit Klassifizierungsbezeichnungen gekennzeichnet werden.
 * **Sichtbarkeit**: Der Klassifizierungsstatus der Datenbank kann in einem detaillierten Bericht im Portal angezeigt werden, der zwecks Konformität und Überwachung sowie anderer Gründe ausgedruckt oder exportiert werden kann.
@@ -46,9 +47,9 @@ Die Klassifizierung umfasst zwei Metadatenattribute:
 
 1. Stellen Sie in SSMS (SQL Server Management Studio) eine Verbindung zu SQL Server her.
 
-2. Führen Sie im Objekt-Explorer von SSMS einen Rechtsklick auf die Datenbank aus, die Sie klassifizieren möchten, und wählen Sie dann **Tasks** > **Classify Data...** (Aufgaben > Daten klassifizieren...) aus.
+2. Klicken Sie im Objekt-Explorer von SSMS mit der rechten Maustaste auf die Datenbank, die Sie klassifizieren möchten, und wählen Sie dann **Aufgaben** > **Datenermittlung und -klassifizierung** > **Daten klassifizieren…** aus.
 
-    ![Navigationsbereich][1]
+   ![Navigationsbereich][0]
 
 3. Die Klassifizierungsengine prüft Ihre Datenbank auf Spalten, die potenziell sensible Daten enthalten, und erstellt eine Liste der **empfohlenen Spaltenklassifizierungen**:
 
@@ -84,22 +85,63 @@ Die Klassifizierung umfasst zwei Metadatenattribute:
     ![Navigationsbereich][8]
 
 
-6. Klicken Sie im oberen Menü des Fensters auf **Bericht anzeigen**, um einen Bericht mit einer vollständigen Zusammenfassung des Klassifizierungsstatus der Datenbank zu generieren.
+6. Klicken Sie im oberen Menü des Fensters auf **Bericht anzeigen**, um einen Bericht mit einer vollständigen Zusammenfassung des Klassifizierungsstatus der Datenbank zu generieren. Sie können auch über SSMS einen Bericht erstellen. Klicken Sie mit der rechten Maustaste auf die Datenbank, in der der Bericht erstellt werden soll, und wählen Sie **Aufgaben** > **Datenermittlung und -klassifizierung** > **Bericht generieren…** aus.
 
     ![Navigationsbereich][9]
 
     ![Navigationsbereich][10]
 
+## <a id="subheading-3"></a>Verwalten der Information Protection-Richtlinie mit SSMS
 
-## <a id="subheading-3"></a>Zugriff auf Klassifizierungsmetadaten
+Sie können die Information Protection-Richtlinie mit [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) oder höher verwalten:
 
-Die Klassifizierungsmetadaten für *Informationstypen* und *Vertraulichkeitsstufen* werden in den folgenden erweiterten Eigenschaften gespeichert: 
-* sys_information_type_name
-* sys_sensitivity_label_name
+1. Stellen Sie in SSMS (SQL Server Management Studio) eine Verbindung zu SQL Server her.
 
-Sie können mit der Ansicht des Katalogs der erweiterten Eigenschaften [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) auf die Metadaten zugreifen.
+2. Klicken Sie im Objekt-Explorer in SSMS mit der rechten Maustaste auf eine Ihrer Datenbanken, und wählen Sie **Aufgaben** > **Datenermittlung- und -klassifizierung** aus.
 
-Bei SQL Server 2017 gibt das folgende Codebeispiel alle klassifizierten Spalten mit der jeweiligen Klassifizierung zurück:
+   Mithilfe der folgenden Menüoptionen können Sie die Information Protection-Richtlinie verwalten:
+
+* **Information Protection-Richtliniendatei festlegen:** Hier wird die Information Protection-Richtlinie wie in der ausgewählten JSON-Datei definiert verwendet.
+
+* **Information Protection-Richtlinie exportieren:** Hier wird die Information Protection-Richtlinie in eine JSON-Datei exportiert.
+
+* **Information Protection-Richtlinie zurücksetzen:** Hier wird die Information Protection-Richtlinie auf die Information Protection-Standardrichtlinie zurückgesetzt.
+
+> [!IMPORTANT]
+> Die Information Protection-Richtliniendatei wird nicht in SQL Server gespeichert.
+> Für SSMS wird eine Information Protection-Standardrichtlinie verwendet. Wenn eine benutzerdefinierte Information Protection-Richtlinie nicht angewendet werden kann, kann in SSMS nicht die Standardrichtlinie verwendet werden. Die Datenklassifizierung schlägt fehl. Klicken Sie auf **Information Protection-Richtlinie zurücksetzen**, damit die Standardrichtlinie verwendet, das Problem behoben und die Datenklassifizierung ausgeführt wird.
+
+## <a id="subheading-4"></a>Zugriff auf Klassifizierungsmetadaten
+
+In SQL Server 2019 wird die Systemkatalogsicht [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) eingeführt. Diese Sicht gibt Informationstypen und Vertraulichkeitsbezeichnungen zurück. 
+
+> [!NOTE]
+> Für diese Sicht ist die Berechtigung **BELIEBIGE VERTRAULICHKEITSKLASSIFIZIERUNG ANZEIGEN** erforderlich. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15).
+
+Fragen Sie für SQL Server 2019-Instanzen `sys.sensitivity_classifications` ab, um alle klassifizierten Spalten mit dazugehörigen Klassifizierungen zu überprüfen. Beispiel: 
+
+```sql
+SELECT 
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    label
+FROM sys.sensitivity_classifications sc
+    JOIN sys.objects O
+    ON  sc.major_id = O.object_id
+    JOIN sys.columns C 
+    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
+```
+
+In Versionen vor SQL Server 2019 werden die Klassifizierungsmetadaten für Informationstypen und Vertraulichkeitsbezeichnungen in den folgenden erweiterten Eigenschaften gespeichert: 
+
+* `sys_information_type_name`
+* `sys_sensitivity_label_name`
+
+Mithilfe der Katalogsicht für erweiterte Eigenschaften ([`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)) können Sie auf die Metadaten zugreifen.
+
+Bei Instanzen von SQL Server 2017 und älteren Versionen gibt das folgende Codebeispiel alle klassifizierten Spalten mit der jeweiligen Klassifizierung zurück:
 
 ```sql
 SELECT
@@ -141,22 +183,25 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-Bei SQL Server 2019:
-```sql
-SELECT 
-    schema_name(O.schema_id) AS schema_name,
-    O.NAME AS table_name,
-    C.NAME AS column_name,
-    information_type,
-    label
-FROM sys.sensitivity_classifications sc
-    JOIN sys.objects O
-    ON  sc.major_id = O.object_id
-    JOIN sys.columns C 
-    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
-```
+## <a id="subheading-5"></a>Verwalten von Klassifizierungen
 
-## <a id="subheading-4"></a>Nächste Schritte
+# <a name="t-sqltabt-sql"></a>[T-SQL](#tab/t-sql)
+Mit T-SQL können Sie Spaltenklassifizierungen hinzufügen/entfernen sowie alle Klassifizierungen für die gesamte Datenbank abrufen.
+
+- Hinzufügen/Aktualisieren der Klassifizierung einer oder mehrerer Spalten: [VERTRAULICHKEITSKLASSIFIZIERUNG HINZUFÜGEN](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
+- Entfernen der Klassifizierung aus einer oder mehreren Spalten: [VERTRAULICHKEITSKLASSIFIZIERUNG LÖSCHEN](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+
+# <a name="powershell-cmdlettabsql-powelshell"></a>[PowerShell-Cmdlet](#tab/sql-powelshell)
+Sie können das Power Shell-Cmdlet verwenden, um Spaltenklassifizierungen hinzuzufügen/zu entfernen sowie alle Klassifizierungen abzurufen und Empfehlungen für die gesamte Datenbank zu erhalten.
+
+- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
+- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
+- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+
+---
+
+## <a id="subheading-6"></a>Nächste Schritte
 
 Weitere Informationen zur Datenermittlung und -klassifizierung in Azure SQL-Datenbanken finden Sie unter [Azure SQL-Datenbank – Datenermittlung und -klassifizierung](https://go.microsoft.com/fwlink/?linkid=866265).
 
@@ -168,17 +213,20 @@ Ziehen Sie in Betracht, Ihre sensiblen Spalten durch Anwenden von Sicherheitsmec
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Accessing the classification metadata]: #subheading-3
-[Next Steps]: #subheading-4
+[Manage information protection policy with SSMS]: #subheading-3
+[Accessing the classification metadata]: #subheading-4
+[Manage classifications]: #subheading-5
+[Next Steps]: #subheading-6
 
 <!--Image references-->
-[1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png
-[2]: ./media/sql-data-discovery-and-classification/2_recommendations_notification_box.png
-[3]: ./media/sql-data-discovery-and-classification/3_recommendations_panel.png
-[4]: ./media/sql-data-discovery-and-classification/4_recommendations.png
-[5]: ./media/sql-data-discovery-and-classification/5_accept_recommendations_button.png
-[6]: ./media/sql-data-discovery-and-classification/6_add_classification_button.png
-[7]: ./media/sql-data-discovery-and-classification/7_manual_classification.png
-[8]: ./media/sql-data-discovery-and-classification/8_save.png
-[9]: ./media/sql-data-discovery-and-classification/9_view_report.png
-[10]: ./media/sql-data-discovery-and-classification/10_report.png
+
+[0]: ./media/sql-data-discovery-and-classification/0-data-classification-explorer.png
+[2]: ./media/sql-data-discovery-and-classification/2-recommendations-notification-box.png
+[3]: ./media/sql-data-discovery-and-classification/3-recommendations-panel.png
+[4]: ./media/sql-data-discovery-and-classification/4-recommendations.png
+[5]: ./media/sql-data-discovery-and-classification/5-accept-recommendations-button.png
+[6]: ./media/sql-data-discovery-and-classification/6-add-classification-button.png
+[7]: ./media/sql-data-discovery-and-classification/7-manual-classification.png
+[8]: ./media/sql-data-discovery-and-classification/8-save.png
+[9]: ./media/sql-data-discovery-and-classification/9-view-report.png
+[10]: ./media/sql-data-discovery-and-classification/10-report.png

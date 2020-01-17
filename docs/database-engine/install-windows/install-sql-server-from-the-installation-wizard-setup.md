@@ -1,7 +1,7 @@
 ---
-title: Installieren von SQL Server 2016 vom Installations-Assistenten aus (Setup) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 07/26/2019
+title: Installieren mithilfe der grafischen Benutzeroberfläche
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962375"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259028"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installieren von SQL Server über den Installations-Assistenten (Setup)
 
@@ -27,7 +27,7 @@ ms.locfileid: "73962375"
 
 In diesem Artikel wird erläutert, wie SQL Server mit dem Installations-Assistenten installiert wird. Dies gilt für [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] und [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
-Dieser Artikel stellt Ihnen schrittweise die Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup-Installations-Assistenten vor. Der Installations-Assistent für enthält eine einzelne Funktionsstruktur für die Installation sämtlicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten, sodass Sie diese nicht einzeln installieren müssen. Informationen zur Installation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten finden Sie unter [Installieren von SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+Dieser Artikel stellt Ihnen schrittweise die Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup-Installations-Assistenten vor. Der Installations-Assistent für enthält eine einzelne Funktionsstruktur für die Installation sämtlicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten, sodass Sie diese nicht einzeln installieren müssen. Informationen zur Installation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten finden Sie unter [Installieren von SQL Server](../../database-engine/install-windows/install-sql-server.md#individual-component-installation).  
 
 Weitere Möglichkeiten zum Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter:  
 
@@ -83,7 +83,7 @@ Dies gilt nicht für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
 1. Ist dies die erste [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation auf dem Computer, überspringt Setup die Seite **Installationstyp**, und die Installation wechselt direkt zur Seite **Funktionsauswahl**. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereits auf dem System installiert ist, legen Sie auf der Seite **Installationstyp** entweder fest, dass eine Neuinstallation durchgeführt werden soll oder dass Funktionen zu einer vorhandenen Installation hinzugefügt werden sollen. Wählen Sie zum Fortsetzen des Vorgangs **Weiter** aus.
   
-1. Wählen Sie auf der Seite **Funktionsauswahl** die Komponenten für die Installation aus. Um eine neue Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu installieren, wählen Sie die **Datenbank-Engine-Dienste** aus.
+1. Wählen Sie auf der Seite **Funktionsauswahl** die Komponenten für die Installation aus. Wählen Sie **Datenbank-Engine-Dienste** aus, um eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu installieren.
 
     Nach Auswahl des Funktionsnamens wird im Abschnitt **Funktionsbeschreibung** eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können jede beliebige Kombination von Kontrollkästchen aktivieren. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) oder unter [Editionen und Komponenten für SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
   
@@ -249,7 +249,7 @@ Dies gilt nicht für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
 1. Ist dies die erste [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation auf dem Computer, überspringt Setup die Seite **Installationstyp**, und die Installation wechselt direkt zur Seite **Funktionsauswahl**. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereits auf dem System installiert ist, legen Sie auf der Seite **Installationstyp** entweder fest, dass eine Neuinstallation durchgeführt werden soll oder dass Funktionen zu einer vorhandenen Installation hinzugefügt werden sollen. Wählen Sie zum Fortsetzen des Vorgangs **Weiter** aus.
   
-1. Wählen Sie auf der Seite **Funktionsauswahl** die Komponenten für die Installation aus. Um eine neue Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu installieren, wählen Sie die **Datenbank-Engine-Dienste** aus.
+1. Wählen Sie auf der Seite **Funktionsauswahl** die Komponenten für die Installation aus. Wählen Sie **Datenbank-Engine-Dienste** aus, um eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu installieren.
 
     Nach Auswahl des Funktionsnamens wird im Abschnitt **Funktionsbeschreibung** eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können jede beliebige Kombination von Kontrollkästchen aktivieren. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) oder unter [Editionen und Komponenten für SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
   
@@ -402,7 +402,7 @@ Dies gilt nicht für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
   
 Zum Reduzieren der Angriffsfläche eines Systems werden zentrale Dienste und Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selektiv installiert und aktiviert. Weitere Informationen finden Sie unter [Oberflächenkonfiguration](../../relational-databases/security/surface-area-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
   
 * [Überprüfen einer SQL Server-Installation](../../database-engine/install-windows/validate-a-sql-server-installation.md)  
 * [Reparieren von Fehlern bei einer SQL Server-Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)

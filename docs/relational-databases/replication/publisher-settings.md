@@ -1,6 +1,7 @@
 ---
-title: Dialogfeld „Verlegereinstellungen“ für die SQL Server-Replikation | Microsoft-Dokumentation
-ms.custom: ''
+title: Verlegereinstellungen (SSMS)| Microsoft-Dokumentation
+descripton: Describes the 'Publisher Settings' dialog box found in Replication Monitor within SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,18 +16,18 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 79685cf22fc0adda979611c23111ab28074de386
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 78379320056698874e53a299af84044440863a9e
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763959"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320494"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>Dialogfeld „Verlegereinstellungen“ für die SQL Server-Replikation
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Im Dialogfeld **Verlegereinstellungen** können Sie die Einstellungen für Verleger ändern, die dem linken Bereich des Replikationsmonitors hinzugefügt wurden.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Verlegerverbindung**  
  Klicken Sie auf diese Option, um das Dialogfeld **Verbindung mit dem Server herstellen** zu starten. In diesem Dialogfeld können Sie die Verbindungseigenschaften und Anmeldeinformationen anzeigen und ändern, die vom Replikationsmonitor für die Verbindung mit einem Verleger verwendet werden.  
   

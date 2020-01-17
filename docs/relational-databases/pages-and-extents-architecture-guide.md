@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586780"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325492"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ Wie bereits erwähnt, beträgt in [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
 Die folgende Tabelle zeigt die Seitentypen, die in Datendateien einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank verwendet werden.
 
-|Seitentyp | Inhalt |
+|Seitentyp | Contents |
 |-------|-------|
 |Data |Datenzeilen mit allen Daten, ausgenommen Daten der Typen text, ntext, image, nvarchar(max), varchar(max), varbinary(max) und xml, wenn „text in row“ auf ON festgelegt wurde. |
 |Index |Indexeinträge |
@@ -54,7 +54,7 @@ Die folgende Tabelle zeigt die Seitentypen, die in Datendateien einer [!INCLUDE[
 > [!NOTE]
 > Protokolldateien enthalten keine Seiten; sie enthalten eine Folge von Protokolldatensätze.
 
-Datenzeilen werden unmittelbar nach dem Header nacheinander auf der Seite gespeichert. Eine Zeilenoffsettabelle beginnt am Ende der Seite, und jede Zeilenoffsettabelle enthält einen Eintrag für jede Zeile auf der Seite. Jeder dieser Einträge zeichnet auf, wie weit das erste Byte der Zeile vom Beginn der Seite entfernt ist. Die Einträge in der Zeilenoffsettabelle befinden sich in umgekehrter Reihenfolge zur Reihenfolge der Zeilen auf der Seite.
+Datenzeilen werden unmittelbar nach dem Header nacheinander auf der Seite gespeichert. Eine Zeilenoffsettabelle beginnt am Ende der Seite, und jede Zeilenoffsettabelle enthält einen Eintrag für jede Zeile auf der Seite. Jeder dieser Zeilenoffseteinträge zeichnet auf, wie weit das erste Byte der Zeile vom Beginn der Seite entfernt ist. Die Funktion einer Zeilenoffsettabelle besteht also darin, Zeilen auf einer Seite sehr schnell zu finden. Die Einträge in der Zeilenoffsettabelle befinden sich in umgekehrter Reihenfolge zur Reihenfolge der Zeilen auf der Seite.
 
 ![page_architecture](../relational-databases/media/page-architecture.gif)
 
@@ -68,7 +68,7 @@ Dieser Vorgang wird immer ausgeführt, wenn die Gesamtgröße der Zeile durch ei
 
 ##### <a name="row-overflow-considerations"></a>Überlegungen zum Zeilenüberlauf 
 
-Wenn Sie Spalten der Datentypen „varchar“, „nvarchar“, „nvarchar“, „sql_variant“ oder Spalten mit CLR-benutzerdefinierten Datentypen miteinander kombinieren, die pro Zeile 8.060 Bytes überschreiten, muss Folgendes berücksichtigt werden: 
+Wie bereits erwähnt, darf sich eine Zeile nicht auf mehreren Seiten befinden, da bei Überschreiten des Grenzwerts von 8.060 Bytes für die Gesamtgröße der Datentypfelder mit variabler Länger ein Überlauf erzeugt werden kann. Dies kann anhand einer Tabelle mit zwei Spalten veranschaulicht werden: Eine Spalte besitzt varchar (7000), die andere varchar (2000). Einzeln ist keine der beiden Spalten größer als 8.060 Bytes. Doch zusammengenommen könnten sie den Wert überschreiten, wenn die gesamte Breite beider Spalten ausgefüllt ist. SQL Server kann die Spalte mit variabler Länge von varchar (7000) dynamisch auf Seiten der Zuordnungseinheit ROW_OVERFLOW_DATA verschieben. Wenn Sie Spalten der Datentypen „varchar“, „nvarchar“, „nvarchar“, „sql_variant“ oder Spalten mit CLR-benutzerdefinierten Datentypen miteinander kombinieren, die pro Zeile 8.060 Bytes überschreiten, muss Folgendes berücksichtigt werden:
 -  Das Verschieben großer Datensätze zu einer anderen Seite geschieht dynamisch, wenn die Datensätze im Ergebnis von Updatevorgängen verlängert wurden. Updatevorgänge, die zu einer Verkürzung von Datensätzen führen, können hingegen bewirken, dass Datensätze wieder zurück zur ursprünglichen Seite in der IN_ROW_DATA-Zuordnungseinheit verschoben werden. Abfragen und andere Auswahlvorgänge, wie z. B. Sortierungen oder Joins von großen Datensätzen mit Daten, bei denen Zeilenüberlauf vorkommt, bewirken eine Herabsetzung der Verarbeitungsgeschwindigkeit, weil diese Datensätze nicht asynchron, sondern synchron verarbeitet werden.   
    Deshalb sollten Sie beim Entwerfen einer Tabelle mit mehreren Spalten der Datentypen „varchar“, „nvarchar“, „varbinary“, „sql_variant“ oder mit CLR-benutzerdefinierten Datentypen auf den Prozentsatz der Zeilen achten, bei denen es wahrscheinlich zum Überlauf kommt. Außerdem sollten Sie die Häufigkeit berücksichtigen, mit der diese Überlaufdaten wahrscheinlich abgefragt werden. Wenn es wahrscheinlich häufig zu Abfragen von vielen Zeilen mit überlaufenden Daten kommt, sollten Sie eine Normalisierung der Tabelle in Betracht ziehen, damit einige Spalten in eine andere Tabelle verschoben werden. Diese können dann in einer asynchronen JOIN-Operation abgefragt werden. 
 -  Die Länge der einzelnen Spalten muss bei den Datentypen „varchar“, „nvarchar“, „varbinary“, „sql_variant“ und CLR-benutzerdefinierten Datentypen weiterhin innerhalb des 8.000-Byte-Limits liegen. Lediglich ihre kombinierten Längen dürfen das Zeilenlimit von 8.060 Byte einer Tabelle überschreiten.
@@ -98,7 +98,7 @@ Bis einschließlich [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ordnet [!INCL
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Verwalten von Blockzuordnungen und freiem Speicherplatz 
 
-Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenstrukturen, die Blockzuordnungen verwalten und freien Speicherplatz nachverfolgen, weisen eine relativ einfache Struktur auf. Dies bringt folgende Vorteile mit sich: 
+Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenstrukturen, die Blockzuordnungen verwalten und freien Speicherplatz nachverfolgen, weisen eine relativ einfache Struktur auf. Das hat folgende Vorteile: 
 
 * Die Informationen zum freien Speicherplatz sind dicht gepackt, sodass nur relativ wenig Seiten benötigt werden, um diese Informationen aufzunehmen.   
   Auf diese Weise wird die Geschwindigkeit erhöht, da die Anzahl der Lesevorgänge vom Datenträger reduziert wird, die erforderlich sind, um Zuordnungsinformationen abzurufen. Hierdurch wird auch die Wahrscheinlichkeit erhöht, dass die Zuordnungsseiten im Arbeitsspeicher verbleiben und somit keine weiteren Lesevorgänge erforderlich sind. 
@@ -136,7 +136,7 @@ Dies führt zu einfachen Algorithmen für die Blockverwaltung.
 
 Nachdem ein Block einem Objekt zugeordnet wurde, verwendet [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die PFS-Seiten, um aufzuzeichnen, welche Seiten in dem jeweiligen Block zugeordnet und welche Seiten frei sind. Diese Informationen werden verwendet, wenn [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine neue Seite zuordnen muss. Die Menge des freien Speicherplatzes auf einer Seite wird nur für Heap- und Text/Image-Seiten verwaltet. Diese Information wird verwendet, wenn [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine Seite mit verfügbarem freien Speicherplatz sucht, um eine neu eingefügte Zeile aufzunehmen. Indizes erfordern nicht, dass der Page Free Space nachverfolgt werden soll, da die Stelle, an der eine neue Zeile eingefügt werden soll, von den Indexschlüsselwerten festgelegt wird.
 
-Eine PFS-Seite ist nach der Dateiheaderseite die erste Seite in einer Datendatei (Seiten-ID 1). Auf diese folgt eine GAM-Seite (Seiten-ID 2) und anschließend eine SGAM-Seite (Seiten-ID 3). Nach der ersten PFS-Seite folgt etwa alle 8.000 Seiten eine neue PFS-Seite. 64.000 Blöcke nach der ersten GAM-Seite auf Seite 2 folgt eine weitere GAM-Seite. 64.000 Blöcke nach der ersten SGAM-Seite auf Seite 3 folgt eine weitere SGAM-Seite. Nach jeweils 64.000 Blöcken folgen weitere GAM- und SGAM-Seiten. Folgende Abbildung veranschaulicht die Abfolge der Seiten, die von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] für das Zuordnen und Verwalten von Blöcken verwendet werden.
+In der Datendatei wird für jeden zusätzlichen Bereich, der nachverfolgt wird, eine neue PFS-, GAM- oder SGAM-Seite hinzugefügt. Nach der ersten PFS-Seite folgt also alle 8.088 Seiten eine neue PFS-Seite. So stellen also die Seiten mit Seiten-ID 1, Seiten-ID 8088 und Seiten-ID 16176 PFS-Seiten dar. Nach der ersten GAM-Seite folgt jeweils im Abstand von 64.000 Blöcken eine neue GAM-Seite, die die nächsten 64.000 Blöcke nachverfolgt. Dementsprechend folgt nach der ersten SGAM-Seite im Abstand von 64.000 Blöcken jeweils eine neue SGAM-Seite. Folgende Abbildung veranschaulicht die Abfolge der Seiten, die von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] für das Zuordnen und Verwalten von Blöcken verwendet werden.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 

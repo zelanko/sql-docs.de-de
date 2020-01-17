@@ -1,7 +1,7 @@
 ---
-title: Konfigurieren von RHEL-Clustern für eine SQL Server-Verfügbarkeitsgruppe
-titleSuffix: SQL Server
-description: Informationen zu Verfügbarkeitsgruppenclustern beim Ausführen von Red Hat Enterprise Linux (RHEL)
+title: 'RHEL: Konfigurieren von Verfügbarkeitsgruppen für SQL Server unter Linux'
+description: Erfahren Sie, wie Sie eine Verfügbarkeitsgruppe konfigurieren, wenn Sie Red Hat Enterprise Linux (RHEL) für SQL Server ausführen.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 7e401a53b07d5a71ccafb38f6edb2f80bcf1e274
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910803"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558495"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren von RHEL-Clustern für eine SQL Server-Verfügbarkeitsgruppe
 
@@ -48,7 +48,7 @@ Die Schritte zum Erstellen einer Verfügbarkeitsgruppe auf Linux-Servern für Ho
    >[!IMPORTANT]
    >In Produktionsumgebungen wird zur Gewährleistung vonHochverfügbarkeit ein Fencing-Agent wie STONITH benötigt. In den Demos dieser Dokumentation werden keine Fencing-Agents verwendet. Die Demos dienen lediglich zu Testzwecken und Überprüfungen.
    
-   >Ein Linux-Cluster verwendet Fencing, um den Cluster in einen bekannten Zustand zurückzusetzen. Die Art und Weise des Konfigurierens von Fencing hängt von der Distribution und der Umgebung ab. Derzeit ist Fencing in einigen Cloudumgebungen nicht verfügbar. Weitere Informationen finden Sie unter [Supportrichtlinien für RHEL-Hochverfügbarkeitscluster – Virtualisierungsplattformen](https://access.redhat.com/articles/29440).
+   >Ein Linux-Cluster verwendet Fencing, um den Cluster in einen bekannten Zustand zurückzusetzen. Wie das Fencing konfiguriert wird, hängt von der Verteilung und der Umgebung ab. Derzeit ist Fencing in einigen Cloudumgebungen nicht verfügbar. Weitere Informationen finden Sie unter [Supportrichtlinien für RHEL-Hochverfügbarkeitscluster – Virtualisierungsplattformen](https://access.redhat.com/articles/29440).
 
 5. [Fügen Sie die Verfügbarkeitsgruppe als Ressource im Cluster hinzu](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
 
@@ -108,7 +108,7 @@ Ein STONITH-Gerät stellt einen Fencing-Agent bereit. Ein Beispiel für das Erst
 
 Durch Fencing auf Ressourcenebene wird sichergestellt, dass im Falle eines Ausfalls durch die Konfiguration einer Ressource keine Daten beschädigt werden. Sie können Fencing auf Ressourcenebene beispielsweise dazu verwenden, den Datenträger auf einem Knoten bei einem Ausfall der Kommunikationsverbindung als veraltet zu markieren. 
 
-Mit Fencing auf Knotenebene wird sichergestellt, dass ein Knoten keine Ressourcen ausführt. Dies erfolgt durch Zurücksetzen des Knotens. Pacemaker unterstützt eine Vielzahl von Fencinggeräten. Beispiele hierfür sind eine unterbrechungsfreie Stromversorgung oder Verwaltungsschnittstellenkarten für Server.
+Mit dem Fencing auf Knotenebene wird sichergestellt, dass ein Knoten keine Ressourcen ausführt. Dies erfolgt durch Zurücksetzen des Knotens. Pacemaker unterstützt eine Vielzahl von Fencinggeräten. Beispiele hierfür sind eine unterbrechungsfreie Stromversorgung oder Verwaltungsschnittstellenkarten für Server.
 
 Weitere Informationen zu STONITH und Fencing finden Sie in den folgenden Artikeln:
 

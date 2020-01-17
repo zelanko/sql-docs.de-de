@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b08c5653243bce5852bab54bee267a43cc3b16e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000583"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245301"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Jede Datenbank weist einen Zähler auf, der für jeden Einfüge- oder Updatevorg
   
 **timestamp** ist das Synonym für den **rowversion**-Datentyp und unterliegt der Verhaltensweise von Datentypsynonymen. Verwenden Sie in DDL-Anweisungen nach Möglichkeit stets **rowversion** anstelle von **timestamp**. Weitere Informationen finden Sie unter [Data Type Synonyms &#40;Transact-SQL&#41; (Synonyme für Datentypen &#40;Transact-SQL&#41;)](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-Der **timestamp**-Datentyp von [!INCLUDE[tsql](../../includes/tsql-md.md)] unterscheidet sich vom **timestamp**-Datentyp gemäß dem ISO-Standard.
+Der **timestamp**-Datentyp von [!INCLUDE[tsql](../../includes/tsql-md.md)] unterscheidet sich vom **timestamp**-Datentyp, der im ISO-Standard definiert ist.
   
 > [!NOTE]  
 >  Die **timestamp**-Syntax ist veraltet. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -65,7 +65,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
   
 Eine **rowversion**-Spalte, die keine NULL-Werte zulässt, ist semantisch gleichwertig mit einer **binary(8)** -Spalte. Eine **rowversion**-Spalte, die NULL-Werte zulässt, ist semantisch gleichwertig mit einer **varbinary(8)** -Spalte.
   
-Sie können die **rowversion**-Spalte einer Zeile verwenden, um einfach zu bestimmen, ob für die Zeile seit dem letzten Lesevorgang eine UPDATE-Anweisung ausgeführt wurde. Wenn eine UPDATE-Anweisung für die Zeile ausgeführt wurde, wird der rowversion-Wert aktualisiert. Falls keine UPDATE-Anweisung ausgeführt wurde, bleibt der rowversion-Wert unverändert, seitdem die Zeile zuletzt gelesen wurde. Verwenden Sie [@@DBTS](../../t-sql/functions/dbts-transact-sql.md), um den aktuellen rowversion-Wert für eine Datenbank zurückzugeben.
+Sie können die **rowversion**-Spalte einer Zeile verwenden, um einfach zu bestimmen, ob für die Zeile seit dem letzten Lesevorgang eine UPDATE-Anweisung ausgeführt wurde. Wenn eine UPDATE-Anweisung für die Zeile ausgeführt wird, wird der rowversion-Wert aktualisiert. Falls keine UPDATE-Anweisung ausgeführt wurde, bleibt der rowversion-Wert wie beim letzten Lesevorgang. Verwenden Sie [@@DBTS](../../t-sql/functions/dbts-transact-sql.md), um den aktuellen rowversion-Wert für eine Datenbank zurückzugeben.
   
 Sie können einer Tabelle eine **rowversion**-Spalte hinzufügen, um die Integrität der Datenbank sicherzustellen, wenn mehrere Benutzer gleichzeitig Zeilen aktualisieren. Außerdem können Sie feststellen, wie viele und welche Zeilen aktualisiert wurden, ohne die Tabelle erneut abzufragen.
   
@@ -128,7 +128,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

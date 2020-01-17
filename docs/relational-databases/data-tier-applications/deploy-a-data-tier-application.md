@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907888"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190116"
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72907888"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>Mehrfaches Bereitstellen desselben DAC-Pakets 
  Dasselbe DAC-Paket kann mehrmals an eine einzelne [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz bereitgestellt werden, die Bereitstellungen müssen jedoch einzeln ausgeführt werden. Der für die einzelnen Bereitstellungen angegebene DAC-Instanzname muss innerhalb der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]eindeutig sein.  
   
- Beim Bereitstellen einer DAC für eine Instanz der Datenbank-Engine wird die bereitgestellte DAC in das **SQL Server-Hilfsprogramm** integriert, wenn der Sammlungssatz des Hilfsprogramms das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenschichtanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenschichtanwendungen** details page.  
+ Beim Bereitstellen einer DAC für eine Instanz der Datenbank-Engine wird die bereitgestellte DAC in das **SQL Server-Hilfsprogramm** integriert, wenn der Sammlungssatz des Hilfsprogramms das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann im Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Hilfsprogramm-Explorer**von** vorhanden und wird auf der Detailseite **Bereitgestellte Datenebenenanwendungen** aufgeführt.  
   
 ###  <a name="database-options-and-settings"></a>Datenbankoptionen und -einstellungen  
  Die während der Bereitstellung erstellte Datenbank verfügt standardmäßig über alle Standardeinstellungen der CREATE DATABASE-Anweisung mit folgenden Ausnahmen:  
@@ -81,7 +81,7 @@ Im Folgenden erfahren Sie mehr über einige Seiten des Assistenten:
   
  **Version** : Ein schreibgeschütztes Feld mit der Version, die beim Erstellen oder Extrahieren der DAC aus einer Datenbank zugewiesen wurde.  
   
- **Beschreibung** : Ein schreibgeschütztes Feld mit der Beschreibung, die beim Erstellen oder Extrahieren der DAC aus einer Datenbank erstellt wurde.  
+ **Beschreibung**: Ein schreibgeschütztes Feld mit der Beschreibung, die beim Erstellen oder Extrahieren der DAC aus einer Datenbank erstellt wurde.  
   
 ### <a name="validating-the-dac-package"></a>Überprüfen des DAC-Pakets  
  Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt. Wenn das DAC-Paket überprüft wird, geht der Assistent zur abschließenden Version der Seite **Paket auswählen** über. Dort können Sie die Ergebnisse der Überprüfung einsehen. Wenn die Datei kein gültiges DAC-Paket ist, verbleibt der Assistent auf der Seite **DAC-Paket auswählen**. Wählen Sie entweder ein anderes gültiges DAC-Paket aus, oder brechen Sie den Assistenten ab, und generieren Sie ein neues DAC-Paket.  
@@ -145,6 +145,10 @@ Im Folgenden erfahren Sie mehr über einige Seiten des Assistenten:
 
 Im folgenden Beispiel wird eine DAC mit dem Namen "MyApplication" auf einer Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]bereitgestellt, wobei eine DAC-Definition aus einem MyApplication.dacpac-Paket verwendet wird.  
   
+## <a name="powershell-examples"></a>PowerShell-Beispiele  
+
+Im folgenden Beispiel wird eine DAC mit dem Namen "MyApplication" auf einer Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]bereitgestellt, wobei eine DAC-Definition aus einem MyApplication.dacpac-Paket verwendet wird.  
+
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  

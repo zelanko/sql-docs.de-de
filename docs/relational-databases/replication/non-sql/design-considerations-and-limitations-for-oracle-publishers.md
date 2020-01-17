@@ -1,6 +1,7 @@
 ---
-title: Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger | Microsoft-Dokumentation
-ms.custom: ''
+title: Überlegungen und Einschränkungen (Oracle-Verleger)
+description: Hier werden die Überlegungen und Einschränkungen bei der Konfiguration eines SQL Server-Abonnenten mit einem Oracle-Verleger beschrieben.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 9b45f787bf590eb3d4b29aa3d02f9ba8a2fd2934
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710935"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321907"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Das Veröffentlichen aus Oracle-Datenbanken erfolgt nahezu auf die gleiche Weise wie das Veröffentlichen aus [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken. Beachten Sie jedoch die folgenden Punkte und Einschränkungen:  
+  Das Veröffentlichen über Oracle-Datenbanken erfolgt nahezu auf die gleiche Weise wie das Veröffentlichen über [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken. Beachten Sie jedoch die folgenden Punkte und Einschränkungen:  
   
 -   Die Option Oracle (Gateway) bietet eine bessere Leistung im Vergleich zur Option Oracle (Vollständig), allerdings ist es mit dieser Option nicht möglich, dieselbe Tabelle in mehreren Transaktionsveröffentlichungen zu veröffentlichen. Eine Tabelle kann in höchstens eine Transaktionsveröffentlichung und in beliebig viele Momentaufnahmeveröffentlichungen aufgenommen werden. Wenn Sie dieselbe Tabelle in mehreren Transaktionsveröffentlichungen veröffentlichen müssen, wählen Sie die Option Oracle (Vollständig) aus.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "71710935"
   
 -   Funktionsbasierte Indizes  
   
--   Standardwerte  
+-   Standardeinstellungen  
   
 -   Check-Einschränkungen  
   
@@ -143,7 +144,7 @@ ms.locfileid: "71710935"
 -   Schemaänderungen an veröffentlichten Oracle-Tabellen werden nicht unterstützt. Wenn Sie das Schema ändern möchten, löschen Sie zuerst die Veröffentlichung, nehmen Sie die Änderungen vor, und erstellen Sie dann die Veröffentlichung und alle Abonnements neu.  
   
     > [!NOTE]  
-    >  Wenn die Schemaänderungen und das anschließende Löschen sowie Neuerstellen der Veröffentlichung und Abonnements dann vorgenommen werden, wenn keine Aktivität an den veröffentlichten Tabellen stattfindet, können Sie die Option 'Nur Replikationsunterstützung' für die Abonnements angeben. Die Abonnements werden dann synchronisiert, ohne dass eine Momentaufnahme auf jeden Abonnenten kopiert werden muss. Weitere Informationen finden Sie unter [Initialisieren eines Transaktionsabonnements ohne Momentaufnahme](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+    >  Wenn die Schemaänderungen und das anschließende Löschen sowie Neuerstellen der Veröffentlichung und Abonnements dann vorgenommen werden, wenn keine Aktivität an den veröffentlichten Tabellen stattfindet, können Sie die Option 'Nur Replikationsunterstützung' für die Abonnements angeben. Die Abonnements werden dann synchronisiert, ohne dass eine Momentaufnahme auf jeden Abonnenten kopiert werden muss. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
 ### <a name="replication-security-model"></a>Replikationssicherheitsmodell  
  Das Sicherheitsmodell für das Veröffentlichen mit Oracle ist mit dem der Standardtransaktionsreplikation identisch. Ausnahmen:  

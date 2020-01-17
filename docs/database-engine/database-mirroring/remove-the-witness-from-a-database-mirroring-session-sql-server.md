@@ -1,6 +1,7 @@
 ---
-title: Entfernen des Zeugen aus einer Datenbank-Spiegelungssitzung (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Entfernen des Zeugen für die Datenbankspiegelung
+description: In diesem Artikel wird beschrieben, wie ein Zeuge aus einer Datenbankspiegelungssitzung mit SQL Server Management Studio (SSMS) oder Transact-SQL (T-SQL) entfernt wird.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 75a0363d376a16a19fa0c4a07dd0ed2ad0e71fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025271"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822524"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Entfernen des Zeugen aus einer Datenbank-Spiegelungssitzung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +90,7 @@ ms.locfileid: "68025271"
 -   Wenn die Transaktionssicherheit auf OFF festgelegt ist, wird die Sitzung asynchron (im Modus für hohe Leistung) ausgeführt, ohne dass ein Quorum erforderlich ist. Bei deaktivierter Transaktionssicherheit wird stets dringend empfohlen, den Zeugen ebenfalls zu deaktivieren.  
   
 > [!TIP]  
->  Die Transaktionssicherheitseinstellung der Datenbank wird auf jedem Partner in der [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) -Katalogsicht in der **mirroring_safety_level** -Spalte und der **mirroring_safety_level_desc** -Spalte aufgezeichnet.  
+>  Die Transaktionssicherheitseinstellung der Datenbank wird auf jedem Partner in der [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)-Katalogsicht in der **mirroring_safety_level**-Spalte und der **mirroring_safety_level_desc**-Spalte aufgezeichnet.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   

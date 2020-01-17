@@ -1,6 +1,7 @@
 ---
-title: 'Konfigurieren einer Failoverclusterinstanz: SQL Server für Linux (RHEL)'
-description: ''
+title: Konfigurieren von FCI – SQL Server für Linux (RHEL)
+description: Hier erfahren Sie, wie Sie eine Failoverclusterinstanz (FCI) unter Red Hat Enterprise Linux (RHEL) für SQL Server konfigurieren.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032301"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558325"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Konfigurieren einer Failoverclusterinstanz: SQL Server für Linux (RHEL)
 
@@ -25,7 +26,7 @@ Eine SQL Server-Failoverclusterinstanz mit zwei Knoten auf einem freigegebenen D
 > [!div class="checklist"]
 > * Einrichten und Konfigurieren von Linux
 > * Installieren und Konfigurieren von SQL Server
-> * Konfigurieren der Hostdatei
+> * Konfigurieren der Datei „hosts“
 > * Konfigurieren von freigegebenem Speicher und Verschieben der Datenbankdateien
 > * Installieren und Konfigurieren von Pacemaker auf jedem Clusterknoten
 > * Konfigurieren der Failoverclusterinstanz
@@ -46,7 +47,7 @@ Der erste Schritt besteht darin, das Betriebssystem auf den Clusterknoten zu kon
 
 ## <a name="install-and-configure-sql-server"></a>Installieren und Konfigurieren von SQL Server
 
-1. Installieren Sie SQL Server auf beiden Knoten, und richten Sie ihn ein.  Ausführliche Anweisungen finden Sie unter [Install SQL Server on Linux (Installieren von SQL Server für Linux)](sql-server-linux-setup.md).
+1. Installieren Sie SQL Server auf beiden Knoten, und richten Sie ihn ein.  Ausführliche Anweisungen finden Sie unter [Installieren von SQL Server für Linux](sql-server-linux-setup.md).
 1. Legen Sie für die Konfiguration einen Knoten als primär und den anderen als sekundär fest. Verwenden Sie diese Begriffe für den weiteren Verlauf dieses Leitfadens.  
 1. Beenden und deaktivieren Sie SQL Server auf dem sekundären Knoten.
     Im folgenden Beispiel wird SQL Server beendet und deaktiviert: 
@@ -77,7 +78,7 @@ Der erste Schritt besteht darin, das Betriebssystem auf den Clusterknoten zu kon
 
 1. Beenden und deaktivieren Sie SQL Server auf dem primären Knoten. 
 
-## <a name="configure-the-hosts-file"></a>Konfigurieren der Hostdatei
+## <a name="configure-the-hosts-file"></a>Konfigurieren der Datei „hosts“
 
 Konfigurieren Sie auf jedem Clusterknoten die Hostdatei. Die Hostdatei muss die IP-Adresse und den Namen jedes Clusterknotens enthalten.
 
@@ -113,7 +114,7 @@ Sie müssen einen Speicher bereitstellen, auf den beide Knoten zugreifen können
 
 1. Erstellen Sie auf beiden Clusterknoten eine Datei zum Speichern von Benutzername und Kennwort für SQL Server für die Pacemaker-Anmeldung. 
 
-    Der folgende Befehl erstellt und füllt diese Datei:
+    Der folgende Code erstellt und füllt diese Tabelle:
 
     ```bash
     sudo touch /var/opt/mssql/secrets/passwd
@@ -285,7 +286,7 @@ In diesem Tutorial haben Sie die folgenden Aufgaben abgeschlossen.
 > [!div class="checklist"]
 > * Einrichten und Konfigurieren von Linux
 > * Installieren und Konfigurieren von SQL Server
-> * Konfigurieren der Hostdatei
+> * Konfigurieren der Datei „hosts“
 > * Konfigurieren von freigegebenem Speicher und Verschieben der Datenbankdateien
 > * Installieren und Konfigurieren von Pacemaker auf jedem Clusterknoten
 > * Konfigurieren der Failoverclusterinstanz

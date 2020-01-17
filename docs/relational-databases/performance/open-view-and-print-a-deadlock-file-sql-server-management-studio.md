@@ -1,6 +1,6 @@
 ---
-title: Öffnen, Anzeigen und Drucken einer Deadlockdatei (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Öffnen, Anzeigen und Drucken einer Deadlockdatei (SSMS)
+ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,14 +16,15 @@ ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bce30e52ab3c79953ae3ccaff1d95def441d8c66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c305d9fd08ffcdd1c4b66d90d834c8f0fb6dead5
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018738"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165766"
 ---
-# <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>Öffnen, Anzeigen und Drucken einer Deadlockdatei (SQL Server Management Studio)
+# <a name="open-view-and-print-a-deadlock-file-in-sql-server-management-studio-ssms"></a>Öffnen, Anzeigen und Drucken einer Deadlockdatei in SQL Server Management Studio (SSMS)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Wenn von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ein Deadlock generiert wird, können Sie die entsprechenden Informationen in einer Datei speichern. Nach dem Speichern können Sie die Deadlockdatei zum Anzeigen oder Drucken in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68018738"
   
 4. Wählen Sie im Menü **Datei** die Option **Drucken** aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Speichern von Deadlockdiagrammen &#40;SQL Server Profiler&#41;](../../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)  
   
   

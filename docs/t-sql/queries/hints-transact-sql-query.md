@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982280"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002335"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Abfragehinweise geben an, dass die angezeigten Hinweise in der gesamten Abfrage 
 > [!CAUTION]  
 > Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer in der Regel den besten Ausführungsplan für eine Abfrage auswählt, wird empfohlen, dass nur erfahrene Entwickler und Datenbankadministratoren Hinweise verwenden, wenn alle anderen Möglichkeiten sich als unbefriedigend erwiesen haben.  
   
-**Gilt für:**  
+**Anwendungsbereich:**  
   
 [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -92,7 +92,8 @@ Abfragehinweise geben an, dass die angezeigten Hinweise in der gesamten Abfrage 
   | EXPAND VIEWS   
   | FAST number_rows   
   | FORCE ORDER   
-  | { FORCE | DISABLE } EXTERNALPUSHDOWN  
+  | { FORCE | DISABLE } EXTERNALPUSHDOWN
+  | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
@@ -168,7 +169,9 @@ Gibt an, dass die von der Abfragesyntax angegebene Joinreihenfolge während der 
   
 { FORCE | DISABLE } EXTERNALPUSHDOWN  
 Erzwingen oder Deaktivieren der Weitergabe der Berechnung von qualifizierenden Ausdrücken in Hadoop. Gilt nur für Abfragen mit PolyBase. Wird nicht in den Azure-Speicher weitergegeben.  
-  
+
+{ FORCE | DISABLE } SCALEOUTEXECUTION: Hiermit wird die Ausführung des horizontalen Hochskalierens von PolyBase-Abfragen erzwungen oder deaktiviert, die externe Tabellen in SQL Server 2019-Big Data Clustern verwenden. Dieser Hinweis wird nur von einer Abfrage berücksichtigt, die die Masterinstanz eines SQL-Big Data-Clusters verwendet. Das horizontale Hochskalieren erfolgt über den Computepool des Big Data-Clusters. 
+
 KEEP PLAN  
 Zwingt den Abfrageoptimierer, den geschätzten Neukompilierungsschwellenwert für eine Abfrage zu lockern. Der geschätzte Recompile-Neukompilierungsschwellenwert startet ein automatisches Neukompilieren für die Abfrage, wenn die geschätzte Anzahl von indizierten Spaltenänderungen in einer Tabelle durch Ausführen einer der folgenden Anweisungen vorgenommen wurde:
 
@@ -275,7 +278,7 @@ Die folgenden Hinweisnamen werden unterstützt:
    Deaktiviert das Feedback zur Speicherzuweisung im Batchmodus. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Batchmodus](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).     
    **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  Deaktiviert die verzögerte Kompilierung von Tabellenvariablen. Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvariablen](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).     
+  Deaktiviert die verzögerte Kompilierung von Tabellenvariablen. Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvariablen](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).     
   **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    Deaktiviert die verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen. Weitere Informationen finden Sie unter [Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).     
@@ -340,7 +343,7 @@ Die Liste aller unterstützten USE HINT-Namen kann über die dynamische Verwaltu
 <a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
  Zwingt den Abfrageoptimierer, einen vorhandenen Abfrageplan für eine Abfrage zu verwenden, die mit **'** _xml\_plan_ **'** angegeben wird. USE PLAN kann nicht für die Anweisungen INSERT, UPDATE, MERGE oder DELETE angegeben werden.  
   
-TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Wendet den angegebenen Tabellenhinweis auf die Tabelle oder die Ansicht an, die _exposed\_object\_name_ entspricht. Es wird empfohlen, einen Tabellenhinweis nur im Kontext einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md) als Abfragehinweis zu verwenden.  
+TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Hiermit wird der angegebene Tabellenhinweis auf die Tabelle oder die Ansicht angewendet, die _exposed\_object\_name_ entspricht. Es wird empfohlen, einen Tabellenhinweis nur im Kontext einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md) als Abfragehinweis zu verwenden.  
   
  _exposed\_object\_name_ kann einer der folgenden Verweise sein:  
   
@@ -357,7 +360,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
 > [!CAUTION] 
 > Bei Angabe von FORCESEEK mit Parametern wird die Anzahl von Plänen, die vom Optimierer berücksichtigt werden können, stärker eingeschränkt als bei Angabe von FORCESEEK ohne Parameter. Dies kann in mehreren Fällen zu dem Fehler führen, dass der Plan nicht generiert werden kann. In zukünftigen Versionen können durch interne Änderungen des Optimierers möglicherweise mehr Pläne berücksichtigt werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Abfragehinweise können nur dann in einer INSERT-Anweisung angegeben werden, wenn eine SELECT-Klausel innerhalb der Anweisung verwendet wird.  
   
  Abfragehinweise können nur in der Abfrage der obersten Ebene angegeben werden, nicht in Unterabfragen. Wenn ein Tabellenhinweis als Abfragehinweis angegeben wird, kann der Hinweis in der Abfrage der obersten Ebene oder in einer Unterabfrage angegeben werden. Der Wert, der für _exposed\_object\_name_ in der TABLE HINT-Klausel angegeben wird, muss jedoch genau mit dem verfügbar gemachten Namen in der Abfrage oder Unterabfrage übereinstimmen.  
@@ -433,7 +436,7 @@ GO
   
  Sobald der Fehler im Code behoben wurde, wird MAXRECURSION nicht mehr benötigt.  
   
-### <a name="d-using-merge-union"></a>D. Verwenden von MERGE UNION  
+### <a name="d-using-merge-union"></a>D: Verwenden von MERGE UNION  
  Im folgenden Beispiel wird der MERGE UNION-Abfragehinweis verwendet. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
 ```sql  

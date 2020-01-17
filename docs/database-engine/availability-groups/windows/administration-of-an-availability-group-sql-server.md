@@ -1,7 +1,7 @@
 ---
-title: Referenz zur Verwaltung einer Verfügbarkeitsgruppe
-description: Eine Referenzseite mit Links zu den grundlegenden Informationen zu Verwaltungsoptionen von Always On-Verfügbarkeitsgruppen wie der Änderung von Eigenschaften, dem Hinzufügen oder Entfernen von Replikaten, dem Hinzufügen oder Entfernen von Datenbanken, dem Ausführen von Failovers, dem Konfigurieren des Listeners.
-ms.custom: seodec18
+title: Verwaltung einer Verfügbarkeitsgruppe (Inhaltsverzeichnis)
+description: Eine Referenzverzeichnis mit Links zu grundlegenden Informationen zu Verwaltungsoptionen für Always On-Verfügbarkeitsgruppen wie der Änderung von Eigenschaften, dem Hinzufügen oder Entfernen von Replikaten, dem Hinzufügen oder Entfernen von Datenbanken, dem Ausführen von Failovers oder dem Konfigurieren des Listeners.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b25b7ae6396c32e3b3698c57010b9d043adb97c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 515ca03f795901327b59871b1f6d78ef81a17d92
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014849"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241981"
 ---
 # <a name="administration-of-an-availability-group"></a>Verwalten einer Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,6 +130,6 @@ ms.locfileid: "68014849"
  [Überwachen von Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [Always On-Verfügbarkeitsgruppen: Interoperabilität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Übersicht über Transact-SQL-Anweisungen für Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
- [Übersicht über PowerShell-Cmdlets für Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [Übersicht der PowerShell-Cmdlets für Always On-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
    

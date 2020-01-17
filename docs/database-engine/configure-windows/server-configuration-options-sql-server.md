@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85ebb4419cd81786fcfc58f7c7342e353c90d1f1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981863"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001971"
 ---
 # <a name="server-configuration-options-sql-server"></a>Serverkonfigurationsoptionen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "73981863"
   
 -   Unmittelbar nach dem Festlegen der Option und dem Ausgeben der **RECONFIGURE** -Anweisung (oder in einigen Fällen der **RECONFIGURE WITH OVERRIDE**-Anweisung). Durch die Neukonfiguration bestimmter Optionen werden Pläne im Plancache für ungültig erklärt, was zum Kompilieren neuer Pläne führt. Weitere Informationen finden Sie unter [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
   
-     -oder-  
+     Oder  
   
 -   Nach dem Ausführen der obigen Aktionen und dem Neustarten der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -69,7 +69,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
   
 -   SC (Self-Configuring) = Selbstkonfigurierende Optionen.  
   
-    |Konfigurationsoption|Mindestwert|Höchstwert|Default|  
+    |Konfigurationsoption|Mindestwert|Maximalwert|Standard|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[AccessCheckCache-Bucketanzahl](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[AccessCheckCache-Kontingent](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -83,10 +83,10 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
     |[automatic soft-NUMA disabled](soft-numa-sql-server.md)|0|1|0|  
     |[Standardeinstellung der Sicherungsprüfsumme](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
     |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0| 
-    |[Schwellenwert für blockierte Prozesse](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
+    |[Schwellenwert für blockierte Prozesse](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86.400|0|  
     |[C2-Überwachungsmodus](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
-    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] und höher)|0|1|0|  
+    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] und höher).|0|1|0|  
     |[Common Criteria-Kompatibilität aktiviert](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
     |[contained database authentication](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
     |[Kostenschwellenwert für Parallelität](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
@@ -105,11 +105,11 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
     |Minimale Bandbreite für Volltextdurchforstung, siehe [Bandbreite für Volltextdurchforstung](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
     |Maximale Bandbreite für Volltextbenachrichtigung, siehe [Bandbreite für Volltextbenachrichtigung](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
     |Minimale Bandbreite für Volltextbenachrichtigung, siehe [Bandbreite für Volltextbenachrichtigung](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
-    |[Hadoop-Konnektivität](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)|0|7|0|   
+    |[Hadoop-Konnektivität](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher).|0|7|0|   
     |[Speicher für Indexerstellung](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) (A, SC)|704|2147483647|0|  
     |[Lösung für unklare Transaktion](../../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
     |[Lightweightpooling](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md) (A, RR)|0|1|0|  
-    |[Sperren](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md) (A, RR, SC)|5000|2147483647|0|  
+    |[Sperren](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md) (A, RR, SC)|5\.000|2147483647|0|  
     |[Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
     |[Max. Bereich für Volltextdurchforstung](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[Max. Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
@@ -124,6 +124,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
     |[Geöffnete Objekte](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, veraltet)|0|2147483647|0|  
     |[Für Ad-hoc-Arbeitsauslastungen optimieren](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH-Timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[PolyBase aktiviert](../../relational-databases/polybase/polybase-installation.md#enable) (RR) **Gilt für**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)])|0|1|0|
     |[Rang vorausberechnen](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[Prioritätserhöhung](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
     |[Kostenbeschränkung der Abfragekontrolle](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
@@ -147,7 +148,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
     |[user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)  
  [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)

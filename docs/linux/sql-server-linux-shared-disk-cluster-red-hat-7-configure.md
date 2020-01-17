@@ -1,6 +1,7 @@
 ---
-title: Konfigurieren eines freigegebenen Clusters mit Red Hat Enterprise Linux für SQL Server
-description: Implementieren Sie Hochverfügbarkeit, indem Sie einen freigegebenen Datenträgercluster mit Red Hat Enterprise Linux für SQL Server konfigurieren.
+title: Konfigurieren von RHEL-FCI für SQL Server für Linux
+description: Informieren Sie sich, wie Sie eine RHEL-Failoverclusterinstanz auf einem freigegebenen Datenträger für SQL Server unter Linux (Hochverfügbarkeit) konfigurieren.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252243"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656627"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren eines freigegebenen Datenträgerclusters mit Red Hat Enterprise Linux für SQL Server
+# <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>Konfigurieren eines RHEL-FCI-Clusters (Failoverclusterinstanz) für SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Diese Anleitung enthält Anweisungen zum Erstellen eines freigegebenen Datenträgerclusters mit zwei Knoten für SQL Server unter Red Hat Enterprise Linux. Die Clusteringebene basiert auf einem [Hochverfügbarkeits-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) für Red Hat Enterprise Linux (RHEL), das auf [Pacemaker](https://clusterlabs.org/) aufbaut. Die SQL Server-Instanz ist auf einem der beiden Knoten aktiv.
+Diese Anleitung enthält Anweisungen zum Erstellen eines freigegebenen Datenträgerfailoverclusters mit zwei Knoten für SQL Server unter Red Hat Enterprise Linux. Die Clusteringebene basiert auf einem [Hochverfügbarkeits-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) für Red Hat Enterprise Linux (RHEL), das auf [Pacemaker](https://clusterlabs.org/) aufbaut. Die SQL Server-Instanz ist auf einem der beiden Knoten aktiv.
 
 > [!NOTE] 
 > Für den Zugriff auf das Red Hat-Hochverfügbarkeits-Add-On und die Dokumentation ist ein Abonnement erforderlich. 
@@ -202,7 +203,7 @@ Weitere Informationen zur Verwendung von NFS finden Sie unter folgenden Quellen:
 
 * [NFS servers and firewalld | Stack Exchange (NFS-Server und firewalld | Stack Exchange)](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Mounting an NFS Volume | Linux Network Administrators Guide (Einbinden eines NFS-Volumes | Leitfaden für Linux-Netzwerkadministratoren)](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS server configuration | Red Hat Customer Portal (NFS-Serverkonfiguration | Red Hat-Kundenportal)](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [NFS server configuration | Red Hat Customer Portal (NFS-Serverkonfiguration | Red Hat-Kundenportal)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Einbinden des Datenbankdateiverzeichnisses zum Zeigen auf den freigegebenen Speicher
 

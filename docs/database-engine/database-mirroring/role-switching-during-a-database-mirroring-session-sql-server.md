@@ -1,6 +1,7 @@
 ---
-title: Rollenwechsel während einer Datenbank-Spiegelungssitzung (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Wechseln von Rollen bei der Datenbankspiegelung
+description: Weitere Informationen zum Wechseln von Datenbankspiegelungsrollen.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 662510b04b9bc5be9b94a5ffe149bf9eebcbf13a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025284"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252785"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Rollenwechsel während einer Datenbank-Spiegelungssitzung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68025284"
   
  Die folgende Abbildung zeigt die Spiegelungspartner **Partner_A** und **Partner_B**, die die Prinzipal- und Spiegelrollen bei einer Reihe automatischer oder manueller Failover wechseln.  
   
- ![Partner, die zweimal zwischen Rollen wechseln](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "Partners switching twice between roles")  
+ ![Zweifacher Rollenwechsel von Partnern](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "Zweifacher Rollenwechsel von Partnern")  
   
 > [!IMPORTANT]  
 >  Nach einem Rollenwechsel müssen Aufträge, die für die ehemalige Prinzipaldatenbank ausgeführt wurden, auf dem neuen Prinzipalserver erneut erstellt werden, damit sie dort ausgeführt werden können. Weitere Informationen finden Sie unter [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
@@ -95,7 +96,7 @@ ms.locfileid: "68025284"
   
  Die folgende Abbildung veranschaulicht ein manuelles Failover, bei dem während des Upgrades einer Datenbankserverinstanz die Datenbank verfügbar bleibt. Nach dem Abschluss des Upgrades kann vom Administrator optional ein Failover zurück zur Originalserverinstanz durchgeführt werden. Dies ist nützlich, wenn der Administrator die Spiegelungssitzung beenden und den Spiegelserver anderweitig verwenden möchte. Auf diese Weise kann eine einzelne Serverinstanz wiederholt beim Aktualisieren einer Reihe von Datenbankserverinstanzen verwendet werden.  
   
- ![Geplantes manuelles Failover](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "Planned manual failover")  
+ ![Geplantes manuelles Failover:](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "|::ref2::|")  
   
 ###  <a name="ConditionsForManualFo"></a> Für ein manuelles Failover erforderliche Bedingungen  
  Für das manuelle Failover ist die Transaktionssicherheitseinstellung FULL erforderlich (d. h., der Modus für hohe Sicherheit). Wenn die Partner verbunden sind und die Datenbank bereits synchronisiert ist, wird das manuelle Failover unterstützt.  
@@ -241,7 +242,7 @@ ms.locfileid: "68025284"
 ###  <a name="TypicalCaseFS"></a> Typischer Fall eines erzwungenen Dienstes  
  Die folgende Abbildung veranschaulicht einen typischen Fall eines erzwungenen Dienstes (mit möglichem Datenverlust).  
   
- ![Erzwingen des Diensts mit potenziellem Datenverlust](../../database-engine/database-mirroring/media/dbm-forced-service.gif "Forcing service with possible data loss")  
+ ![Diensterzwingung mit möglichem Datenverlust](../../database-engine/database-mirroring/media/dbm-forced-service.gif "Diensterzwingung mit möglichem Datenverlust")  
   
  In der Abbildung fällt der ursprüngliche Prinzipalserver ( **Partner_A**) aus und steht dem Spiegelserver ( **Partner_B**) nicht mehr zur Verfügung, wodurch die Spiegeldatenbank getrennt wird. Nachdem sichergestellt wurde, dass **Partner_A** Clients nicht zur Verfügung steht, erzwingt der Datenbankadministrator den Dienst, mit möglichem Datenverlust, auf **Partner_B**. **Partner_B** wird zum Prinzipalserver, und die Datenbank wird *ungeschützt* (d.h. ungespiegelt) ausgeführt. An diesem Punkt können Clients die Verbindung mit **Partner_B**wieder herstellen.  
   
@@ -313,7 +314,7 @@ ms.locfileid: "68025284"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Mögliche Fehler während der Datenbankspiegelung](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

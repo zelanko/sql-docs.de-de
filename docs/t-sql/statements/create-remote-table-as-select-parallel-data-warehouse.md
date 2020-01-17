@@ -1,6 +1,6 @@
 ---
-title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft-Dokumentation
-ms.custom: ''
+title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,12 +10,12 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbebdf4b35b10e584c023e0d34eb8a652d15c1cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117319"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401705"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68117319"
   
  Informationen zum Konfigurieren des Remoteservers finden Sie unter „Remotetabellenkopie“ in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -67,16 +67,16 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  Name des Remoteservercomputers oder IPv4-Adresse des Remoteservers. IPv6-Adressen werden nicht unterstützt. Sie können eine benannte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz im Format **Computer_Name\Instance_Name** oder **IP_address\Instance_Name** angeben. Der Server muss remote sein und kann daher nicht als „(local)“ angegeben werden.  
   
  TCP *port* number  
- Die für die Verbindung verwendete TCP-Portnummer. Sie können eine TCP-Portnummer zwischen 0 und 65535 für eine Instanz von SQL Server angeben, die nicht am Standardport 1433 lauscht. Beispiel: **ServerA,1450** oder **10.192.14.27,1435**  
+ Die für die Verbindung verwendete TCP-Portnummer. Sie können eine TCP-Portnummer zwischen 0 und 65535 für eine Instanz von SQL Server angeben, die nicht am Standardport 1433 lauscht. Beispiel:  **ServerA,1450** oder **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  Es wird empfohlen, die Verbindung mit dem Remoteserver über die IP-Adresse herzustellen. Je nach Netzwerkkonfiguration sind zur Herstellung einer Verbindung unter Angabe des Computernamens möglicherweise weitere Schritte erforderlich, damit Ihr nicht zur Appliance gehörender DNS-Server zum Auflösen des Namens in den korrekten Server verwendet werden kann. Dieser Schritt ist nicht erforderlich, wenn Sie die Verbindung mit einer IP-Adresse herstellen. Weitere Informationen finden Sie unter "Verwenden einer DNS-Weiterleitung zum Auflösen von DNS-Namen, die nicht zu Appliances gehören (Analytics Platform System)" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  *user_name*  
- Eine gültige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmelde-ID für die Authentifizierung. Es können maximal 128 Zeichen eingegeben werden.  
+ Eine gültige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmelde-ID für die Authentifizierung. Die maximale Anzahl von Zeichen ist 128.  
   
  *password*  
- Das Anmeldekennwort. Es können maximal 128 Zeichen eingegeben werden.  
+ Das Anmeldekennwort. Die maximale Anzahl von Zeichen ist 128.  
   
  *batch_size*  
  Die maximale Anzahl der Zeilen pro Batch. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sendet Zeilen in Batches an den Zielserver. *Batch_size* ist eine positive ganze Zahl >=0. Standard ist "0".  
@@ -143,7 +143,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. Abfragen der sys.dm_pdw_dms_workers-DMV nach dem Kopierstatus der Remotetabelle  
+### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. Abfragen der sys.dm_pdw_dms_workers-DMV nach dem Kopierstatus der Remotetabelle  
  Diese Abfrage zeigt, wie der Kopierstatus für eine Remotetabellenkopie angezeigt wird.  
   
 ```  

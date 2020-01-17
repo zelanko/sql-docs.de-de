@@ -1,6 +1,6 @@
 ---
-title: Behandlung von Problemen bei Hashindizes für speicheroptimierte Tabellen | Microsoft-Dokumentation
-ms.custom: ''
+title: Behandlung von Problemen bei Hashindizes für speicheroptimierte Tabellen
+ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e3ab81700ca9fed1870a6a98d0aab704b2c1db
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909279"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412656"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Behandlung von Problemen bei Hashindizes für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,8 +113,8 @@ Der folgende T-SQL-Codeblock bietet Ihnen eine einfache Möglichkeit zum Testen 
   
 1. Erstellen einer speicheroptimiertem Tabelle mit wenigen Hashindizes.  
 2. Ausfüllen der Tabelle mit Tausenden von Zeilen.  
-    A. Es wird ein modulo-Operator verwendet, um die Rate der duplizierten Werte in der StatusCode-Spalte zu konfigurieren.  
-    B. Die Schleife fügt 262.144 Zeilen in etwa einer Minute ein.  
+    a. Es wird ein modulo-Operator verwendet, um die Rate der duplizierten Werte in der StatusCode-Spalte zu konfigurieren.  
+    b. Die Schleife fügt 262.144 Zeilen in etwa einer Minute ein.  
 3. Ausdrucken einer Meldung (PRINT), mit der Sie aufgefordert werden, die frühere SELECT-Anweisung aus **sys.dm_db_xtp_hash_index_stats**auszuführen.  
 
 ```sql

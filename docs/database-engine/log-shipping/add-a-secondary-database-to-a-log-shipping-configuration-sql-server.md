@@ -1,6 +1,7 @@
 ---
-title: Hinzufügen einer sekundären Datenbank zu einer Protokollversandkonfiguration (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen des sekundären Partners für den Protokollversand
+description: In diesem Artikel wird erläutert, wie Sie einer vorhandenen Protokollversandkonfiguration eine sekundäre Datenbank hinzufügen.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,30 +15,17 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f1a2f3c2149a089b4fe62564fae1278690ba4420
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66a194a26529834a3d77229a21b7556b03da635e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057905"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822150"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Hinzufügen einer sekundären Datenbank zu einer Protokollversandkonfiguration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird erläutert, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]einer vorhandenen Protokollversandkonfiguration eine sekundäre Datenbank hinzufügen.  
   
- **In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-     [Security](#Security)  
-  
--   **So fügen Sie eine sekundäre Datenbank für den Protokollversand hinzu mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -92,7 +80,7 @@ ms.locfileid: "68057905"
   
 4.  Führen Sie auf dem primären Server [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) aus, um die erforderlichen Informationen über die neue sekundäre Datenbank dem primären Server hinzuzufügen.  
   
-5.  Aktivieren Sie auf dem sekundären Server den Kopier- und den Wiederherstellungsauftrag. Weitere Informationen finden Sie unter [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+5.  Aktivieren Sie auf dem sekundären Server den Kopier- und den Wiederherstellungsauftrag. Weitere Informationen finden sie unter [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   

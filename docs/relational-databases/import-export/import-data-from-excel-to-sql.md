@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708140"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245269"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importieren von Daten aus Excel in SQL Server oder Azure SQL-Datenbank
 
@@ -31,7 +31,7 @@ Sie können die folgenden Tools verwenden, um Daten aus Excel zu importieren:
 | :------------------------------------------------- |:------------------------------------------------- |
 | [Assistent zum Importieren von Flatfiles](#import-wiz)             |[SQL Server-Import/Export-Assistent](#wiz)        |
 | [BULK INSERT](#bulk-insert)-Anweisung              |[SQL Server Integration Services (SSIS)](#ssis)    |
-| [bcp](#bcp)                                        |[OPENROWSET](#openrowset)-Funktion <br>            |
+| [BCP](#bcp)                                        |[OPENROWSET](#openrowset)-Funktion <br>            |
 | [ Kopier-Assistent (Azure Data Factory)](#adf-wiz)       |                                                   |
 | [Azure Data Factory](#adf)                         |                                                   |
 | &nbsp; | &nbsp; |
@@ -49,7 +49,7 @@ Wenn Sie SQL Server nicht installiert haben, bzw. SQL Server installiert haben, 
 
 Importen Sie Daten direkt aus Excel-Dateien, indem Sie den Schritten des Assistenten für SQL Server-Import und -Export folgen. Optional können Sie die Einstellungen als SQL Server Integration Services-Paket (SSIS) speichern, das Sie später anpassen und wiederverwenden können.
 
-1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.
+1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] her.
 
 2. Erweitern Sie **Datenbanken**.
 3. Klicken Sie mit der rechten Maustaste auf eine Datenbank.
@@ -251,7 +251,7 @@ Wie zuvor im Abschnitt [Voraussetzung](#prereq) beschrieben, müssen Sie Ihre Ex
 
 Weitere Informationen zum Kopier-Assistenten finden Sie in den folgenden Themen:
 
-- [Data Factory-Kopier-Assistent](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
+- [Assistent zum Kopieren in Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 - [Tutorial: Erstellen einer Pipeline mit Kopieraktivität mithilfe des Data Factory-Kopier-Assistenten](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)
 
 ## <a name="adf"></a> Azure Data Factory
@@ -262,7 +262,7 @@ Wie zuvor im Abschnitt [Voraussetzung](#prereq) beschrieben, müssen Sie Ihre Ex
 
 Weitere Informationen zu diesen Data Factory-Quellen und -Senken finden Sie in folgenden Themen:
 
-- [File system](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
+- [Dateisystem](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
 - [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
 - [Azure SQL-Datenbank](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
 
@@ -275,7 +275,7 @@ Informationen zum Kopieren von Daten mit Azure Data Factory finden Sie in folgen
 
 ### <a name="microsoftaceoledb120-has-not-been-registered"></a>Microsoft.ACE.OLEDB.12.0 wurde nicht registriert
 
-Dieser Fehler tritt auf, weil der OLE DB-Anbieter nicht installiert ist. Installieren Sie ihn aus [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=13255). Achten Sie darauf, die 64-Bit-Version zu installieren, wenn Windows und SQL Server beides 64-Bit-Versionen sind.
+Dieser Fehler tritt auf, weil der OLE DB-Anbieter nicht installiert ist. Installieren Sie ihn aus [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). Achten Sie darauf, die 64-Bit-Version zu installieren, wenn Windows und SQL Server beides 64-Bit-Versionen sind.
 
 Der vollständige Fehler besagt:
 
@@ -284,7 +284,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Eine Instanz des OLE DB-Anbieters „Microsoft.ACE.OLEDB.12.0“ für den Verbindungsserver „(null)“ kann nicht erstellt werden.
+### <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Eine Instanz des OLE DB-Anbieters „Microsoft.ACE.OLEDB.12.0“ für den Verbindungsserver „(null)“ kann nicht erstellt werden.
 
 Dieser Fehler gibt an, dass Microsoft OLEDB nicht ordnungsgemäß konfiguriert wurde. Führen Sie den folgenden Transact-SQL-Code aus, um das Problem zu beheben:
 

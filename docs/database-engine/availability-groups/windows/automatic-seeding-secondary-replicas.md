@@ -1,8 +1,7 @@
 ---
-title: Verwenden von automatischem Seeding zum Initialisieren eines sekundären Replikats für eine Verfügbarkeitsgruppe
-description: Verwenden Sie automatisches Seeding zum Initialisieren sekundärer Replikate als Teil einer Always On-Verfügbarkeitsgruppe mit SQL 2016 oder höher.
-services: data-lake-analytics
-ms.custom: seodec18
+title: Automatisches Seeding für sekundäre Replikate
+description: Erfahren Sie, wie automatisches Seeding sekundäre Replikate als Teil einer Always On-Verfügbarkeitsgruppe mit SQL 2016 oder höher initialisieren kann.
+ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -13,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53e1651766e653c2444a9e454756017d552ce323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934924"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254105"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Verwenden von automatischem Seeding zum Initialisieren eines sekundären Replikats für eine Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Bei SQL Server 2012 und 2014 ist die einzige Möglichkeit, ein sekundäres Replikat in einer SQL Server Always On-Verfügbarkeitsgruppe zu initialisieren, die Verwendung von Sicherung, Kopieren und Wiederherstellung. SQL Server 2016 führt eine neue Funktion zum Initialisieren eines sekundären Replikats ein – das *automatische Seeding*. Das automatische Seeding verwendet die Übermittlung durch Protokollstream, um die Sicherung mit VDI für jede Datenbank der Verfügbarkeitsgruppe mit konfigurierten Endpunkten an das sekundäre Replikat zu streamen. Diese neue Funktion kann verwendet werden, wenn eine Verfügbarkeitsgruppe erstellt wird oder wenn ihr eine Datenbank hinzugefügt wird. Das automatische Seeding ist in allen Versionen von SQL Server verfügbar, die Always On-Verfügbarkeitsgruppen unterstützen, und kann sowohl mit herkömmlichen als auch mit [verteilten Verfügbarkeitsgruppen](distributed-availability-groups.md) verwendet werden.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 Die Sicherheitsberechtigungen variieren je nach Art des Replikats, das initialisiert wird:
 
@@ -231,7 +230,7 @@ GO
 
 Die folgende Tabelle enthält erweiterte Ereignisse, die sich auf automatisches Seeding beziehen.
 
-|Name|und Beschreibung|
+|Name|BESCHREIBUNG|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Seedinganforderungsnachricht.|
 |hadr_physical_seeding_backup_state_change|Statusänderung auf der Sicherungsseite für das physische Seeding.|
@@ -248,7 +247,7 @@ Die folgende Tabelle enthält erweiterte Ereignisse, die sich auf automatisches 
 |hadr_automatic_seeding_failure|Tritt bei einem Fehler eines automatischen Seedingvorgangs auf.|
 |hadr_automatic_seeding_timeout|Tritt beim Timeout eines automatischen Seedingvorgangs auf.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 

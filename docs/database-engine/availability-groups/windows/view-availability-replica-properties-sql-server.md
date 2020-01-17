@@ -1,6 +1,7 @@
 ---
-title: Anzeigen von Verfügbarkeitsreplikateigenschaften (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Anzeigen von Verfügbarkeitsreplikateigenschaften
+description: Hier finden Sie Anweisungen zum Anzeigen der Eigenschaften eines Verfügbarkeitsgruppenreplikats in SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) oder SQL PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f569074893a5894c0823f1a1af7864bacceb9eda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bcebebf2f426aec660b77699461bdce110f628c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013368"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821760"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Anzeigen von Verfügbarkeitsreplikateigenschaften (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "68013368"
  Bestimmt, ob das aktuelle Replikat das bevorzugte Sicherungsreplikat ist. Gibt 1 zurück, wenn die Datenbank auf der aktuellen Serverinstanz das bevorzugte Replikat ist. Andernfalls wird 0 zurückgegeben.  
   
 > [!NOTE]  
->  Weitere Informationen zu Leistungsindikatoren für Verfügbarkeitsreplikate (das Leistungsobjekt **SQLServer:Availability Replica**  ) finden Sie unter [SQL Server, Verfügbarkeitsreplikat](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
+>  Weitere Informationen zu Leistungsindikatoren für Verfügbarkeitsreplikate (das **SQLServer:Verfügbarkeitsreplikat**  -Leistungsobjekt) finden Sie unter [SQL Server, Verfügbarkeitsreplikat](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
@@ -125,6 +126,6 @@ ms.locfileid: "68013368"
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Always On Policies for Operational Issues with Always On Availability Groups (SQL Server) (Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQL Server))](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
- [Verwaltung einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)  
+ [Verwaltung einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)  
   
   

@@ -18,16 +18,16 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f69d57fd4d81e150df3694386ebe44650a13a9a8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3d0d6fd90b9ec4c933da13d2a3780213095de721
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769874"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542060"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Wenn Sie eine der folgenden Schemaänderungen am entsprechenden veröffentlichten Objekt auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger vornehmen, wird diese Änderung standardmäßig an alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten weitergegeben:  
+  Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Wenn Sie eine der folgenden Schemaänderungen am entsprechenden veröffentlichten Objekt auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verleger vornehmen, wird diese Änderung standardmäßig an alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten weitergegeben:  
   
 -   ALTER TABLE  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68769874"
   
 -   Alle Objekte auf dem Abonnenten, auf die beim Hinzufügen eines Fremdschlüssels verwiesen wird, müssen denselben Namen und Besitzer aufweisen wie das entsprechende Objekt auf dem Verleger.  
   
--   Ein explizites Hinzufügen, Löschen oder Ändern von Indizes wird nicht unterstützt. Implizit für Einschränkungen erstellte Indizes (wie z. B. Primärschlüsseleinschränkungen) werden unterstützt.  
+-   Das explizite Hinzufügen, Löschen oder Ändern von Indizes wird nicht repliziert, und jede Änderung mit einem expliziten Index muss für jede Replikatgruppe einzeln ausgeführt werden. Implizit für Einschränkungen erstellte Indizes (wie z. B. Primärschlüsseleinschränkungen) werden unterstützt.  
   
 -   Das Ändern oder Löschen von Identitätsspalten, die von der Replikation verwaltet werden, wird nicht unterstützt. Weitere Informationen zur automatischen Verwaltung von Identitätsspalten finden Sie unter [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   

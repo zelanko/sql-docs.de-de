@@ -1,20 +1,21 @@
 ---
 title: Herstellen einer Verbindung mit einer ODBC-Datenquelle (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie für die Verwendung mit dem SQL Server-Import/Export-Assistent einen ODBC-DSN konfigurieren oder eine ODBC-Verbindungszeichenfolge erstellen.
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 12/31/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd4dbec9e08b19a0c06c991a7007b449dff02485
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
+ms.sourcegitcommit: ab7209b5856537bfef0a6e9d0527d9002bd0a528
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285493"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75608029"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer ODBC-Datenquelle (SQL Server-Import/Export-Assistent)
 
@@ -28,7 +29,7 @@ Möglicherweise müssen Sie den ODBC-Treiber bei Microsoft oder einem Drittanbie
 Außerdem müssen Sie gegebenenfalls nachsehen, welche Verbindungsinformationen erforderlich sind. Auf der Website [The Connection Strings Reference (Verweis auf Verbindungszeichenfolgen)](https://www.connectionstrings.com/) eines Drittanbieters sind Beispielverbindungszeichenfolgen aufgelistet, und es werden Informationen zu Datenanbietern und den erforderlichen Verbindungsinformationen gegeben.
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>Sicherstellen, dass der gewünschte Treiber installiert ist
-1.  Suchen Sie in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)** . Wenn Sie nur über einen 32-Bit-Treiber verfügen, oder Sie wissen, dass Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)** .
+1.  Suchen Sie im Startmenü oder in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)** . Wenn Sie nur über einen 32-Bit-Treiber verfügen, oder Sie wissen, dass Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)** .
 2.  Starten Sie das Applet. Das Fenster **ODBC-Datenquellen-Administrator** wird geöffnet.
 3.  Auf der Registerkarte **Treiber** finden Sie eine Liste aller auf Ihrem Computer installierten ODBC-Treiber. (Die Namen einiger Treiber werden möglicherweise in mehreren Sprachen aufgeführt.)
 
@@ -49,8 +50,8 @@ In der folgenden Abbildung wird die generische Anzeige dargestellt, die Ihnen un
 ![Herstellen einer Verbindung mit SQL mithilfe von ODBC](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
 ## <a name="step-2---provide-the-connection-info"></a>Schritt 2: Bereitstellen der Verbindungsinformationen
-Im nächsten Schritt stellen Sie die Verbindungsinformationen für Ihren ODBC-Treiber und die Datenquelle bereit. Hierfür stehen zwei Möglichkeiten zur Verfügung:
-1.  Geben Sie einen **DSN** (Datenquellennamen) ein, der bereits vorhanden ist, oder den Sie in den Einstellungen mithilfe des Applets **ODBC-Datenquellen-Administrator** erstellen. Ein Datenquellenname ist eine gespeicherte Auflistung von Einstellungen, die zum Herstellen einer Verbindung mit einer ODBC-Datenquelle erforderlich sind.
+Im nächsten Schritt stellen Sie die Verbindungsinformationen für Ihren ODBC-Treiber und die Datenquelle bereit. Sie haben zwei Möglichkeiten.
+1.  Geben Sie einen **DSN** (Datenquellennamen) ein, der bereits vorhanden ist, oder den Sie mithilfe des Applets **ODBC-Datenquellen-Administrator** erstellen. Ein Datenquellenname ist eine gespeicherte Auflistung von Einstellungen, die zum Herstellen einer Verbindung mit einer ODBC-Datenquelle erforderlich sind.
 
     Wenn Sie den DSN-Namen bereits kennen, oder Sie wissen, wie man einen neuen DSN erstellt, können Sie die restliche Seite überspringen. Geben Sie in das Feld **DSN** auf den Seiten **Datenquelle auswählen** oder **Ziel auswählen** einen DSN ein, und fahren Sie dann im Assistenten mit dem nächsten Schritt fort.
 
@@ -66,7 +67,7 @@ Wenn Sie eine Verbindungszeichenfolge eingegeben haben, werden auf den Seiten **
 
 ## <a name="odbc_dsn"></a> Option 1: Bereitstellen eines DSN
 Wenn Sie die Verbindungsinformationen über einen Datenquellennamen bereitstellen möchten, verwenden Sie das Applet **ODBC-Datenquellen-Administrator**, um den Namen des bestehenden DSN zu finden oder einen neuen zu erstellen.
-1.  Suchen Sie in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)** . Wenn Sie nur über einen 32-Bit-Treiber verfügen oder Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)** .
+1.  Suchen Sie im Startmenü oder in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)** . Wenn Sie nur über einen 32-Bit-Treiber verfügen oder Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)** .
 2.  Starten Sie das Applet. Das Fenster **ODBC-Datenquellen-Administrator** wird geöffnet. Das Applet sieht wie folgt aus.
 
     ![Applet „ODBC-Administratoreinstellungen“](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -90,7 +91,7 @@ Wenn Sie die Verbindungsinformationen über einen Datenquellennamen bereitstelle
 ## <a name="odbc_connstring"></a> Option 2: Bereitstellen einer Verbindungszeichenfolge
 Wenn Sie die Verbindungsinformationen über eine Verbindungszeichenfolge bereitstellen möchten, lesen Sie diesem Artikel, um zu erfahren, wie Sie die notwendige Verbindungzeichenfolge abrufen.
 
-In diesem Beispiel wir die folgende Verbindungszeichenfolge verwendet, die eine Verbindung mit Microsoft SQL Server herstellt.
+In diesem Beispiel wir die folgende Verbindungszeichenfolge verwendet, die eine Verbindung mit Microsoft SQL Server herstellt. Das hier verwendete Datenbankbeispiel ist **WideWorldImporters**, und es wird auf dem lokalen Computer eine Verbindung zu SQL Server hergestellt.
 
     ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
@@ -111,7 +112,7 @@ Auf der Website [The Connection Strings Reference (Verweis auf Verbindungszeiche
 ## <a name="get-the-connection-string-with-an-app"></a>Abrufen der Verbindungszeichenfolge über eine App
 Sie können das Applet **ODBC-Datenquellen-Administrator** in den Einstellungen verwenden, um eine Verbindungszeichenfolge für Ihren ODBC-Treiber auf Ihrem Computer zu erstellen und zu testen. Erstellen Sie einen Datei-DSN für Ihre Verbindung, und kopieren Sie die Einstellungen des Datei-DSN anschließend, um die Verbindungszeichenfolge zu assemblieren. Dafür müssen Sie zwar mehrere Schritte ausführen, aber dieser Vorgang hilft Ihnen dabei, eine gültige Verbindungszeichenfolge zu erstellen.
 
-1.  Suchen Sie in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)** . Wenn Sie nur über einen 32-Bit-Treiber verfügen oder Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)** .
+1.  Suchen Sie im Startmenü oder in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)** . Wenn Sie nur über einen 32-Bit-Treiber verfügen oder Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)** .
 2.  Starten Sie das Applet. Das Fenster **ODBC-Datenquellen-Administrator** wird geöffnet.
 3.  Gehen Sie jetzt zur Registerkarte **Datei-DSN** des Applets. Klicken Sie auf **Hinzufügen**.
 
@@ -160,14 +161,14 @@ Sie können das Applet **ODBC-Datenquellen-Administrator** in den Einstellungen 
 
     Sie benötigen nicht alle Einstellungen in einem DSN, der vom ODBC-Datenquellen-Administrator erstellt wurde, um eine funktionierende Verbindungszeichenfolge zu erstellen.  
     -   Sie müssen stets den ODBC-Treiber angeben.
-    -   Für eine serverbasierte Datenquelle wie SQL Server benötigen Sie in der Regel Server-, Datenbank- und Anmeldeinformationen. Das heißt, Sie benötigen im Beispiel-DSN weder TrustServerCertificate noch WSID noch APP.
+    -   Für eine serverbasierte Datenquelle wie SQL Server benötigen Sie in der Regel Server-, Datenbank- und Anmeldeinformationen. Sie benötigen im Beispiel-DSN weder TrustServerCertificate noch WSID noch APP.
     -   Für eine dateibasierte Datenquelle benötigen Sie mindestens den Dateinamen und den -speicherort.
     
 12. Fügen Sie die Verbindungszeichenfolge in das **ConnectionString**-Feld auf den Seiten **Datenquelle auswählen** oder **Ziel auswählen** des Assistenten ein. Der Assistent analysiert die Zeichenfolge. Damit ist der Vorgang abgeschlossen, und Sie können fortfahren.
 
     ![Herstellen einer Verbindung mit SQL mithilfe von ODBC](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Auswählen einer Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Auswählen eines Ziels](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

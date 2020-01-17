@@ -1,6 +1,7 @@
 ---
-title: Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln | Microsoft-Dokumentation
-ms.custom: ''
+title: Angeben der Weitergabemethode für Änderungen (Transaktionen)
+description: Hier erfahren Sie, wie Sie die Weitergabemethode für Änderungen für eine Transaktionsveröffentlichung in SQL Server festlegen.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c7f499c813f31717e5932cf0b78b4699b72b2a85
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0dc3afaa0492bc80b79bf72b695aec880d6808c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769343"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321387"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Transaktionsartikel – Angeben der Weitergabemethode für Änderungen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,9 +40,9 @@ ms.locfileid: "68769343"
 ## <a name="default-and-custom-stored-procedures"></a>Standardmäßige und benutzerdefinierte gespeicherte Prozeduren  
  Die folgenden drei Prozeduren werden von der Replikation standardmäßig für jeden Tabellenartikel erstellt:  
   
--   **sp_MSins_\<** *Tabellenname* **>** behandelt Einfügungen.  
+-   **sp_MSins_\<** *Tabellenname* **>** behandelt Einfügevorgänge.  
   
--   **sp_MSupd_\<** *Tabellenname* **>** behandelt Updates.  
+-   **sp_MSupd_\<** *Tabellenname* **>** behandelt Updatevorgänge.  
   
 -   **sp_MSdel_\<** *Tabellenname* **>** behandelt Löschvorgänge.  
   

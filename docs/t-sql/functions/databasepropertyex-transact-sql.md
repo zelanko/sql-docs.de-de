@@ -20,19 +20,19 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 033756cb65cc217e6c9d915715f5740596694147
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982177"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256097"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Für eine angegebene Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt diese Funktion die aktuelle Einstellung der angegebenen Datenbankoption oder -eigenschaft zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,11 +52,11 @@ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft angibt. *
 > [!NOTE]  
 >  Wenn die Datenbank noch nicht gestartet wurde, wird für Aufrufe von `DATABASEPROPERTYEX` NULL zurückgegeben, wenn `DATABASEPROPERTYEX` diese Werte durch direkten Datenbankzugriff abruft, statt sie aus den Metadaten abzurufen. Eine Datenbank, für die AUTO_CLOSE auf ON festgelegt ist, ist als „nicht gestartet“ definiert.  
   
-|Eigenschaft|und Beschreibung|Zurückgegebener Wert|  
+|Eigenschaft|BESCHREIBUNG|Zurückgegebener Wert|  
 |---|---|---|
 |Sortierung|Standardsortierungsname der Datenbank|Sortierungsname<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |ComparisonStyle|Die Windows-Vergleichsart der Sortierung. Verwenden Sie die folgenden Stilwerte, um eine Bitmap für den schlussendlichen ComparisonStyle-Wert zu erstellen:<br /><br /> Groß-/Kleinschreibung ignorieren: 1<br /><br /> Akzente ignorieren: 2<br /><br /> Kana ignorieren: 65536<br /><br /> Breite ignorieren: 131072<br /><br /> <br /><br /> Der Standardwert 196.609 ist beispielsweise das Ergebnis der Kombination der Optionen Groß-/Kleinschreibung ignorieren, Kana ignorieren und Breite ignorieren.|Gibt die Vergleichsart zurück.<br /><br /> Gibt für alle binären Sortierungen 0 zurück.<br /><br /> Basisdatentyp: **int**|  
-|Edition|Die Edition oder Dienstebene der Datenbank.|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Universell<br /><br /> Unternehmenskritisch<br /><br /> Standard<br /><br /> Standard<br /><br /> Premium<br /><br /> System (für die master-Datenbank)<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **nvarchar**(64)|  
+|Edition|Die Edition oder Dienstebene der Datenbank.|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Universell<br /><br /> Unternehmenskritisch<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> System (für die master-Datenbank)<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **nvarchar**(64)|  
 |IsAnsiNullDefault|Die Datenbank befolgt ISO-Regeln für das Zulassen von NULL-Werten.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
 |IsAnsiNullsEnabled|Alle Vergleiche mit einem NULL-Wert werden zu einem unbekannten Wert ausgewertet.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
 |IsAnsiPaddingEnabled|Zeichenfolgen werden vor dem Vergleich oder Einfügen auf dieselbe Länge aufgefüllt.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
@@ -89,13 +89,13 @@ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft angibt. *
 |LCID|Der zur Sortierung verwendete Windows-Gebietsschemabezeichner (LCID, Locale Identifier).|LCID-Wert (im Dezimalformat).<br /><br /> Basisdatentyp: **int**|  
 |MaxSizeInBytes|Maximale Datenbankgröße in Bytes.|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **bigint**|  
 |Wiederherstellung|Datenbank-Wiederherstellungsmodell|FULL: Vollständiges Wiederherstellungsmodell<br /><br /> BULK_LOGGED: Massenprotokolliertes Modell<br /><br /> SIMPLE: Einfaches Wiederherstellungsmodell<br /><br /> Basisdatentyp: **nvarchar(128)**|  
-|ServiceObjective|Beschreibt die Leistungsstufe der Datenbank in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] oder [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Einer der folgenden Typen:<br /><br /> NULL = Die Datenbank wurde nicht gestartet.<br /><br /> Freigegeben (für Web/Business-Editionen)<br /><br /> Standard<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> System (für die master-Datenbank)<br /><br /> Basisdatentyp: **nvarchar(32)**|  
+|ServiceObjective|Beschreibt die Leistungsstufe der Datenbank in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] oder [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Einer der folgenden:<br /><br /> NULL = Die Datenbank wurde nicht gestartet.<br /><br /> Freigegeben (für Web/Business-Editionen)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> System (für die master-Datenbank)<br /><br /> Basisdatentyp: **nvarchar(32)**|  
 |ServiceObjectiveId|Die ID des Dienstziels in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier**, die das Dienstziel identifiziert.|  
 |SQLSortOrder|Die ID der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierreihenfolge, die in früheren Versionen von SQL Server unterstützt wurde.|0: In der Datenbank wird Windows-Sortierung verwendet.<br /><br /> >0: ID der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierreihenfolge<br /><br /> NULL: Ungültige Eingabe, oder die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **tinyint**|  
-|Status|Der Status der Datenbank.|ONLINE: Die Datenbank ist für Abfragen verfügbar.<br /><br /> **Hinweis:** Der ONLINE-Status kann zurückgegeben werden, während die Datenbank geöffnet wird und noch nicht wiederhergestellt wurde. Um zu ermitteln, wann eine Datenbank Verbindungen akzeptieren kann, fragen Sie die Collation-Eigenschaft von **DATABASEPROPERTYEX** ab. Die Datenbank kann Verbindungen akzeptieren, wenn die Datenbanksortierung einen Wert ungleich NULL zurückgibt. Fragen Sie bei Always On-Datenbanken die „database_state“- oder die „database_state_desc“-Spalte von `sys.dm_hadr_database_replica_states` ab.<br /><br /> OFFLINE: Die Datenbank wurde explizit offline geschaltet.<br /><br /> RESTORING: Die Wiederherstellung der Datenbank wurde gestartet.<br /><br /> RECOVERING: Die Wiederherstellung der Datenbank wurde gestartet, aber die Datenbank ist noch nicht für Abfragen bereit.<br /><br /> SUSPECT: Die Datenbank wurde nicht wiederhergestellt.<br /><br /> EMERGENCY: Die Datenbank befindet sich im schreibgeschützten Notfallmodus. Der Zugriff ist auf sysadmin-Mitglieder beschränkt.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
+|Status|Der Status der Datenbank.|ONLINE: Die Datenbank ist für Abfragen verfügbar.<br /><br /> **Hinweis:** Die Funktion gibt möglicherweise den ONLINE-Status zurück, während die Datenbank geöffnet wird und noch nicht wiederhergestellt wurde. Fragen Sie die Collation-Eigenschaft von **DATABASEPROPERTYEX** ab, um zu ermitteln, ob eine ONLINE-Datenbank Verbindungen akzeptieren kann. Die ONLINE-Datenbank kann Verbindungen akzeptieren, wenn die Datenbanksortierung einen Wert ungleich NULL zurückgibt. Fragen Sie bei Always On-Datenbanken die „database_state“- oder die „database_state_desc“-Spalte von `sys.dm_hadr_database_replica_states` ab.<br /><br /> OFFLINE: Die Datenbank wurde explizit offline geschaltet.<br /><br /> RESTORING: Die Wiederherstellung der Datenbank wurde gestartet.<br /><br /> RECOVERING: Die Wiederherstellung der Datenbank wurde gestartet, aber die Datenbank ist noch nicht für Abfragen bereit.<br /><br /> SUSPECT: Die Datenbank wurde nicht wiederhergestellt.<br /><br /> EMERGENCY: Die Datenbank befindet sich im schreibgeschützten Notfallmodus. Der Zugriff ist auf sysadmin-Mitglieder beschränkt.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |Updateability|Zeigt an, ob Daten geändert werden können.|READ_ONLY: Für die Datenbank werden Datenlese- aber keine Datenänderungsvorgänge unterstützt.<br /><br /> READ_WRITE: Für die Datenbank werden Datenlese- und Datenänderungsvorgänge unterstützt.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |UserAccess|Zeigt an, welche Benutzer auf die Datenbank zugreifen können.|SINGLE_USER: Immer nur jeweils ein „db_owner“-, „dbcreator“- oder „sysadmin“-Benutzer<br /><br /> RESTRICTED_USER: Nur Mitglieder aus einer der Rollen „db_owner“, „dbcreator“ oder „sysadmin“<br /><br /> MULTI_USER: Alle Benutzer<br /><br /> Basisdatentyp: **nvarchar(128)**|  
-|Versionsoptionen|Die interne Versionsnummer des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Codes, mit dem die Datenbank erstellt wurde. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Versionsnummer: Die Datenbank ist geöffnet.<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **int**| 
+|Version|Die interne Versionsnummer des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Codes, mit dem die Datenbank erstellt wurde. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Versionsnummer: Die Datenbank ist geöffnet.<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **int**| 
 
 <br/>   
 
@@ -110,7 +110,7 @@ Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigu
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z.B. `OBJECT_ID`, möglicherweise NULL zurückgeben, wenn der Benutzer keine Berechtigungen für das Objekt hat. Weitere Informationen finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `DATABASEPROPERTYEX` gibt immer nur jeweils eine Eigenschaftseinstellung zurück. Verwenden Sie die [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht, um mehrere Eigenschaftseinstellungen anzuzeigen.
   
 ## <a name="examples"></a>Beispiele  
@@ -148,7 +148,7 @@ Collation                     Edition        ServiceObjective  MaxSizeInBytes
 SQL_Latin1_General_CP1_CI_AS  DataWarehouse  DW1000            5368709120  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [Datenbankstatus](../../relational-databases/databases/database-states.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

@@ -1,6 +1,7 @@
 ---
-title: Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung | Microsoft-Dokumentation
-ms.custom: ''
+title: Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
+description: Die richtlinienbasierte Verwaltung stellt eine Reihe von Richtliniendateien bereit, die Sie als Richtlinien für Best Practices importieren und für die Auswertung der Richtlinien für einen Zielsatz mit Instanzen, Objekten, Datenbanken oder Datenbankobjekten verwenden können.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d261f84f23131ab9bce11081e1c9d6d1c8dda8d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087089"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557656"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ ms.locfileid: "68087089"
 |E/A-Timeoutfehler des Speichersystems im Windows-Ereignisprotokoll|[Speichersystem – E/A-Timeout](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Fehler aufgrund eines Systemfehlers im Windows-Ereignisprotokoll|[Unerwartete Systemfehler](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit Facets der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: 'GRANT-, DENY-, REVOKE-Berechtigungen: Azure SQL Data Warehouse und Parallel Data Warehouse | Microsoft-Dokumentation'
-ms.custom: ''
+title: GRANT-DENY-REVOKE-Berechtigungen
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
@@ -13,12 +14,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095590"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255468"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "74095590"
   
 -   **REVOKE** entfernt vorhandene **GRANT**- oder **DENY**-Berechtigungen.  
   
- ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -289,7 +290,7 @@ GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
-### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. Erteilen, Verweigern und Widerrufen einer Berechtigung für ein Schema  
+### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D: Erteilen, Verweigern und Widerrufen einer Berechtigung für ein Schema  
  Die folgende **GRANT**-Anweisung erteilt dem Benutzer Yuen die Berechtigung, Daten aus einer beliebigen Tabelle oder Sicht im dbo-Schema auszuwählen.  
   
 ```  

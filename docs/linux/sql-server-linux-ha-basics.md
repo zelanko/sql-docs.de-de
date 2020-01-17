@@ -1,6 +1,7 @@
 ---
-title: Grundlagen zur SQL Server-Verfügbarkeit für Linux-Bereitstellungen
-description: ''
+title: Hochverfügbarkeit von SQL Server für Linux-Bereitstellungen
+description: Hier erfahren Sie mehr über die verschiedenen Optionen für Hochverfügbarkeit, die für SQL Server für Linux verfügbar sind, z. B. Always On-Verfügbarkeitsgruppen, Failoverclusterinstanzen (FCI) und Protokollversand.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75243585"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656609"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Grundlagen zur SQL Server-Verfügbarkeit für Linux-Bereitstellungen
 
@@ -57,7 +58,7 @@ In diesem Abschnitt werden Aufgaben beschrieben, die für alle Linux-basierten [
 Jeder [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Benutzer unter Linux sollte in der Lage sein, Dateien eines Servers auf einen anderen Server zu kopieren. Diese Aufgabe ist für die Konfiguration von Verfügbarkeitsgruppen sehr wichtig.
 
 Sowohl unter Linux als auch bei Windows-basierten Installationen können beispielsweise Probleme mit Berechtigungen auftreten. Wenn Windows-Benutzer Dateien von einem Server auf den anderen kopieren können, bedeutet das jedoch nicht, dass sie diese Aufgabe auch unter Linux durchführen können. Oft wird das Befehlszeilen-Hilfsprogramm `scp` (Secure Copy, sicheres Kopieren) verwendet. Im Hintergrund verwendet `scp` OpenSSH (Secure Shell). Abhängig von der Linux-Distribution ist OpenSSH möglicherweise nicht installiert. In diesem Fall muss das Tool zuerst installiert werden. Weitere Informationen zum Konfigurieren von OpenSSH finden Sie unter den folgenden Links für verschiedene Distributionen:
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -83,7 +84,7 @@ Eine weitere Option ist eine NFS-Freigabe (Network File System). Diese kann alle
 ### <a name="configure-the-firewall"></a>Konfigurieren der Firewall
 Linux-Distributionen verfügen ähnlich wie Windows über eine integrierte Firewall. Wenn Ihr Unternehmen eine externe Firewall für Server verwendet, ist es möglicherweise akzeptabel, die Linux-Firewall zu deaktivieren. Unabhängig davon, welche Firewall wo aktiviert wird, müssen bestimmte Ports geöffnet werden. In der folgenden Tabelle werden die Ports aufgeführt, die üblicherweise für hochverfügbare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Bereitstellungen unter Linux erforderlich sind.
 
-| Portnummer | type     | BESCHREIBUNG                                                                                                                 |
+| Portnummer | type     | Beschreibung                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS: `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (falls verwendet): Endpunktzuordnung                                                                                          |
@@ -116,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Firewalldokumentation:**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installieren von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Verfügbarkeitspaketen

@@ -1,6 +1,7 @@
 ---
-title: Seite „Überprüfung“ (Always On-Verfügbarkeitsgruppen-Assistenten) | Microsoft-Dokumentation
-ms.custom: ''
+title: 'Assistent für Verfügbarkeitsgruppen: Überprüfung (Seite)'
+description: In diesem Artikel werden die Optionen beschrieben, die sich auf der Seite „Überprüfung“ des Assistenten für Always on-Verfügbarkeitsgruppen befinden.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 243109e2c9d93db71c59a852a594a411c40c47dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f22ac0e249e693b7bcd102f6d9242c601e14331f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013455"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821847"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>Seite „Überprüfung“ (Always On-Verfügbarkeitsgruppen-Assistenten)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +38,12 @@ ms.locfileid: "68013455"
  **Ergebnis**  
  Zeigt einen der folgenden Linktexte an. Klicken Sie auf den Link, um weitere Informationen zum Ergebnis eines bestimmten Überprüfungsschritts anzuzeigen.  
   
-|Ergebnis|und Beschreibung|  
+|Ergebnis|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Fehler**|Gibt an, dass der Überprüfungsschritt fehlgeschlagen ist. Klicken Sie auf den Link, um die Fehlermeldung anzuzeigen.|  
-|**Ausgelassen**|Gibt an, dass der Überprüfungsschritt ausgelassen wurde, da er für die Optionen nicht erforderlich ist. Klicken Sie auf den Link, um die Ursache für das Auslassen eines Schritts anzuzeigen.|  
-|**Success**|Gibt an, dass der Überprüfungsschritt erfolgreich abgeschlossen wurde.|  
-|**Warnung**|Zeigt ein potenzielles Problem mit der Verfügbarkeitsgruppenkonfiguration an.  Klicken Sie auf den Link, um die Warnmeldung anzuzeigen.|  
+|**Übersprungen**|Gibt an, dass der Überprüfungsschritt ausgelassen wurde, da er für die Optionen nicht erforderlich ist. Klicken Sie auf den Link, um die Ursache für das Auslassen eines Schritts anzuzeigen.|  
+|**Erfolgreich**|Gibt an, dass der Überprüfungsschritt erfolgreich abgeschlossen wurde.|  
+|**Warning**|Zeigt ein potenzielles Problem mit der Verfügbarkeitsgruppenkonfiguration an.  Klicken Sie auf den Link, um die Warnmeldung anzuzeigen.|  
   
  **Überprüfung erneut ausführen**  
  Klicken Sie, um die Überprüfungsschritte zu wiederholen, wenn Sie außerhalb des Assistenten als Reaktion auf einen Überprüfungsfehler eine Änderung vornehmen.  
@@ -57,6 +58,6 @@ ms.locfileid: "68013455"
   
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

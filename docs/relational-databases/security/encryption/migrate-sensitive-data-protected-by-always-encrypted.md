@@ -1,6 +1,7 @@
 ---
-title: Massenladen von verschlüsselten Daten in Spalten mithilfe von Always Encrypted | Microsoft-Dokumentation
-ms.custom: ''
+title: Massenladen von verschlüsselten Daten in Spalten mithilfe von Always Encrypted
+description: In diesem Artikel erfahren Sie, wie Sie mithilfe von Always Encrypted mit SQL Server ein Massenladen von Daten in Spalten ausführen.
+ms.custom: seo-lt-2019
 ms.date: 11/04/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594165"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558201"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Massenladen von verschlüsselten Daten in Spalten mithilfe von Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ Das folgende Szenario zeigt, wie nicht ordnungsgemäß importierte Daten zur Dat
  
 4.  Die gleiche oder eine andere Anwendung stellt mithilfe eines durch Always Encrypted aktivierten Treibers und mit **column encryption setting=enabled** in der Verbindungszeichenfolge eine Verbindung mit der Datenbank her und ruft die Daten ab. Die Anwendung erwartet, dass die Daten transparent entschlüsselt werden. Der Treiber kann die Daten jedoch nicht entschlüsseln, da es sich dabei um falschen Chiffretext handelt.  
 
-## <a name="best-practice"></a>Bewährte Methoden  
+## <a name="best-practice"></a>Bewährte Methode  
  
 Verwenden Sie vorgesehene Benutzerkonten für Workloads mit langer Ausführungszeit, die diese Option verwenden.  
  
@@ -71,8 +72,8 @@ Legen Sie die Option bei Massenkopieranwendungen oder -tools, die verschlüsselt
  
 Verwenden Sie diese Option nicht zum Entwickeln neuer Anwendungen. Verwenden Sie stattdessen einen Clienttreiber, der eine API zum Unterdrücken kryptografischer Metadatenüberprüfungen für eine einzelne Sitzung bietet. Ein Beispiel hierfür ist die Option „AllowEncryptedValueModifications“ im .NET Framework-Datenanbieter für SQL Server. Weitere Informationen finden Sie unter [Kopieren verschlüsselter Daten mithilfe von SqlBulkCopy](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy). 
 
-## <a name="next-steps"></a>Next Steps
-- [Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>Nächste Schritte
+- [Abfragen von Spalten mit Always Encrypted und SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Entwickeln von Anwendungen mit Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Weitere Informationen  

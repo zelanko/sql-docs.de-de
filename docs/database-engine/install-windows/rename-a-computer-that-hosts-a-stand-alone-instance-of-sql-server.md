@@ -1,7 +1,7 @@
 ---
-title: Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 09/08/2017
+title: Umbenennen der Computerhostinginstanz
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -19,12 +19,12 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84e72edb7aade19cb0daa0b3d9c1282d3bfc84aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 297452f0367bbd1a757c3ea29124d7ccf91c4409
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990859"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258586"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet
 
@@ -34,7 +34,7 @@ Wenn Sie den Namen des Computers ändern, auf dem [!INCLUDE[ssNoVersion](../../i
   
 Die folgenden Schritte können nicht verwendet werden, um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]umzubenennen. Die Schritte können nur verwendet werden, um den Teil des Instanznamens umzubenennen, der dem Computernamen entspricht. Sie können beispielsweise einen Computer mit dem Namen MB1 umbenennen (z. B. in MB2), der eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem Namen Instance1 hostet. Der Teil des Namens, der sich auf die Instanz bezieht, Instance1, bleibt jedoch unverändert. In diesem Beispiel wird \\\\*ComputerName*\\*InstanceName* von \\\MB1\Instance1 in \\\MB2\Instance1 geändert.  
   
- **Vorbereitungen**  
+ **Voraussetzungen**  
   
  Bevor Sie den Umbenennungsprozess beginnen, überprüfen Sie die folgenden Informationen:  
   
@@ -112,7 +112,7 @@ Die folgenden Schritte können nicht verwendet werden, um eine Instanz von [!INC
   
  **Clientaliasnamen**: Das Umbenennen von Computern wirkt sich auf Clientaliasnamen aus, die Named Pipes verwenden. Wenn z. B. ein Alias "PROD_SRVR" erstellt wurde, um auf SRVR1 zu verweisen, und dieser das Named Pipes-Protokoll verwendet, lautet der Pipe-Name `\\SRVR1\pipe\sql\query`. Nachdem der Computer umbenannt wurde, ist der Pfad der Named Pipe nicht mehr gültig. Weitere Informationen zu Named Pipes finden Sie unter [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes](https://go.microsoft.com/fwlink/?LinkId=111063).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von SQL Server](../../database-engine/install-windows/install-sql-server.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 235dc20ca94affa5f022bc242aa0ef6726f1542c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 0dbf983f044118a5d59812f1183d0733b20cb449
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594447"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74492021"
 ---
 # <a name="develop-applications-using-always-encrypted"></a>Entwickeln von Anwendungen mithilfe von Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,5 +30,5 @@ Weitere Informationen zum Entwickeln von Anwendungen, die durch Always Encrypted
 - [Verwenden von „Immer verschlüsselt“ mit dem JDBC-Treiber](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
 - [Verwenden von Always Encrypted mit dem ODBC-Treiber](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [Verwenden von Always Encrypted mit den PHP-Treibern](../../../connect/php/using-always-encrypted-php-drivers.md)
-- [Verwenden von Always Encrypted mit dem Microsoft.Data.SqlClient in .NET Core- und .NET Framework-Anwendungen](https://github.com/dotnet/sqlclient/tree/master/release-notes)
+- [Verwenden von Always Encrypted mit dem Microsoft .NET-Datenanbieter für SQL Server in .NET Core- und .NET Framework-Anwendungen](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

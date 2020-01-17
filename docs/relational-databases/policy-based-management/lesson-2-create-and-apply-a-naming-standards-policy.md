@@ -1,6 +1,7 @@
 ---
-title: 'Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards'
+description: In diesem Tutorial erfahren Sie, wie Sie eine Richtlinie für Benennungsstandards für die richtlinienbasierte Verwaltung in SQL Server erstellen und anwenden.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: security
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bd3b1b4d07b68ae693cd741e471dd5f53efae6e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907057"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558695"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +154,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio s
 ## <a name="summary"></a>Zusammenfassung  
 Dieses Lernprogramm hat gezeigt, wie Sie Bedingungen, Richtlinien und Richtliniengruppen der richtlinienbasierten Verwaltung erstellen und die Kompatibilität der Ziele der richtlinienbasierten Verwaltung überprüfen können.  
   
-## <a name="next"></a>Weiter  
+## <a name="next"></a>Next (Weiter)  
 Dieses Lernprogramm ist beendet. Um zum Anfang zurückzukehren, wechseln Sie zu [Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md).  
   
 Eine Liste der Tutorials finden Sie unter [Tutorials für SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  

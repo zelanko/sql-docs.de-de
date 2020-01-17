@@ -1,6 +1,7 @@
 ---
-title: Ändern der Optionen für die Initialisierung von Momentaufnahmen für die SQL-Replikation | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern der Optionen für die Initialisierung von Momentaufnahmen
+description: Ändern Sie unterschiedliche Optionen für die Initialisierung von Replikationsmomentaufnahmen, z. B. das Momentaufnahmeformat und den Speicherort des Momentaufnahmeordners in SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3a3dfb5804c49ae3a5c2c78d985aa548f710dab2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 81816333d8933e91d78c811a43293b5ca2452106
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907070"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321690"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Ändern der Optionen für die Initialisierung von Momentaufnahmen für die SQL-Replikation 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "72907070"
     > [!NOTE]  
     >  Sie sollten das native Format auswählen, sofern diese Veröffentlichung keine Abonnements für eine SQL Server Compact-Datenbank und keine Nicht-SQL Server-Datenbank unterstützen muss.  
   
-2.  Wählen Sie **OK**.   
+2.  Klicken Sie auf **OK**.   
 
 ## <a name="snapshot-folder-locations"></a>Speicherorte für Momentaufnahmeordner
 
@@ -80,7 +81,7 @@ Wenn Sie einen alternativen Speicherort für Momentaufnahmeordner angeben oder M
   
      Zum Komprimieren von Momentaufnahmedateien aktivieren Sie **Momentaufnahmedateien in diesem Ordner komprimieren**. Die Komprimierung wird in der Regel für Verbindungen mit niedriger Bandbreite und für alternative Momentaufnahmespeicherorte auf Wechselmedien verwendet, z. B. einer CD-ROM.  
   
-2.  Wählen Sie **OK**.  
+2.  Klicken Sie auf **OK**.  
   
 #### <a name="use-transact-sql"></a>Verwenden von Transact-SQL 
 
@@ -102,7 +103,7 @@ Geben Sie beim [Konfigurieren von Momentaufnahmeeigenschaften &#40;Replikationsp
     1.  Aktivieren Sie **Dateien im folgenden Ordner speichern**, und klicken Sie dann auf **Durchsuchen** , um ein Verzeichnis auszuwählen, oder geben Sie den Pfad zu dem Verzeichnis ein, in dem Sie die Momentaufnahmedateien speichern möchten.  
   
         > [!NOTE]  
-        >  Der Momentaufnahme-Agent muss Schreibberechtigungen für das angegebene Verzeichnis und der Verteilungs-Agent oder Merge-Agent muss Leseberechtigungen besitzen. Bei Verwendung von Pullabonnements müssen Sie ein freigegebenes Verzeichnis als UNC-Pfad (Universal Naming Convention) angeben, wie z.B. \\\Computername\Momentaufnahme. Weitere Informationen finden Sie unter [Sichern des Momentaufnahmeordners](security/secure-the-snapshot-folder.md).  
+        >  Der Momentaufnahme-Agent muss Schreibberechtigungen für das angegebene Verzeichnis und der Verteilungs-Agent oder Merge-Agent muss Leseberechtigungen besitzen. Bei Verwendung von Pullabonnements müssen Sie ein freigegebenes Verzeichnis als UNC-Pfad angeben, wie z.B. \\\Computername\Momentaufnahme. Weitere Informationen finden Sie unter [Sichern des Momentaufnahmeordners](security/secure-the-snapshot-folder.md).  
   
     2.  Deaktivieren Sie **Dateien im Standardordner speichern** , es sei denn Momentaufnahmedateien müssen in beide Speicherorte geschrieben werden.  
   
@@ -110,7 +111,7 @@ Geben Sie beim [Konfigurieren von Momentaufnahmeeigenschaften &#40;Replikationsp
         >  Wenn dieses Kontrollkästchen aktiviert ist, werden die im Standardordner gespeicherten Dateien nicht komprimiert. Komprimierte Dateien können nur im alternativen im vorigen Schritt angegebenen Speicherort gespeichert werden.  
   
 2.  Wählen Sie **Momentaufnahmedateien in diesem Ordner komprimieren**aus.    
-3.  Wählen Sie **OK**.   
+3.  Klicken Sie auf **OK**.   
 
 ### <a name="use-transact-sql"></a>Verwenden von Transact-SQL
 

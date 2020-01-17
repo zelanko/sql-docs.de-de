@@ -1,7 +1,7 @@
 ---
-title: Kombinieren einer Failoverclusterinstanz mit Verfügbarkeitsgruppen
+title: Failoverclusterinstanz mit Verfügbarkeitsgruppen
 description: Verbessern Sie Ihre Hochverfügbarkeit und Notfallwiederherstellbarkeit, indem Sie die Funktionen einer SQL Server-Failoverclusterinstanz und einer Always On-Verfügbarkeitsgruppe kombinieren.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,18 +18,18 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a1e9f29db3c9aec7dc86520c502cc3fdbea7a86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988390"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822253"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], die in [!INCLUDE[sssql11](../../../includes/sssql11-md.md)] eingeführte Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, erfordert WSFC (Windows Server-Failoverclustering). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist zwar nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclustering abhängig, Sie können aber dennoch eine FCI (Failoverclusterinstanz) verwenden, um ein Verfügbarkeitsreplikat für eine Verfügbarkeitsgruppe zu hosten. Es ist wichtig, dass Sie die Rolle jeder Clusteringtechnologie kennen, und wissen, welche Überlegungen Sie für den Entwurf Ihrer [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Umgebung anstellen müssen.  
+   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], die in [!INCLUDE[sssql11](../../../includes/sssql11-md.md)] eingeführte Lösung für Hochverfügbarkeit und Notfallwiederherstellung, erfordert WSFC (Windows Server-Failoverclustering). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist zwar nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclustering abhängig, Sie können aber dennoch eine FCI (Failoverclusterinstanz) verwenden, um ein Verfügbarkeitsreplikat für eine Verfügbarkeitsgruppe zu hosten. Es ist wichtig, dass Sie die Rolle jeder Clusteringtechnologie kennen, und wissen, welche Überlegungen Sie für den Entwurf Ihrer [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Umgebung anstellen müssen.  
   
 > [!NOTE]  
 >  Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Konzepten finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "67988390"
 |**Speichertyp**|Shared|Nicht freigegeben<br /><br /> Obwohl die Replikate in einer Verfügbarkeitsgruppe keinen Speicher gemeinsam verwenden, verwendet ein Replikat, das von einer FCI gehostet wird, gemäß der Anforderung dieser FCI eine gemeinsame Speicherlösung. Die Speicherlösung wird nur von Knoten in dieser FCI verwendet und nicht zwischen den Replikaten der Verfügbarkeitsgruppe.|  
 |**Speicherlösungen**|Direkt angefügt, SAN, Einbindungspunkte, SMB|Hängt von Knotentyp ab|  
 |**Lesbare sekundäre**|Nein*|Ja|  
-|**Anwendbare Failoverrichtlinieneinstellungen**|WSFC-Quorum<br /><br /> FCI-spezifisch<br /><br /> Verfügbarkeitsgruppeneinstellungen**|WSFC-Quorum<br /><br /> Verfügbarkeitsgruppeneinstellungen|  
+|**Anwendbare Failoverrichtlinieneinstellungen**|WSFC-Quorum<br /><br /> FCI-spezifisch<br /><br /> Verfügbarkeitsgruppeneinstellungen**|WSFC-Quorum<br /><br /> Einstellungen der Verfügbarkeitsgruppe|  
 |**Failoverressourcen**|Server, Instanz und Datenbank|Nur Datenbank|  
   
  *Während synchrone sekundäre Replikate in einer Verfügbarkeitsgruppe stets in ihren jeweiligen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen ausgeführt werden, haben Sekundärknoten in einer FCI ihre jeweiligen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen tatsächlich nicht gestartet und sind daher nicht lesbar. In einer FCI startet ein sekundärer Knoten seine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz nur, wenn der Ressourcengruppenbesitz während eines FCI-Failovers an ihn übergeben wird. Wenn jedoch auf dem aktiven FCI-Knoten eine FCI-gehostete Datenbank zu einer Verfügbarkeitsgruppe gehört, ist die Datenbank lesbar, wenn das lokale Verfügbarkeitsreplikat als lesbares sekundäres Replikat ausgeführt wird.  
@@ -132,7 +132,7 @@ ms.locfileid: "67988390"
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
- [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Überwachen von Verfügbarkeitsgruppen (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn-Failoverclusterinstanzen &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   

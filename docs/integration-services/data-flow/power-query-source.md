@@ -1,7 +1,7 @@
 ---
 title: Power Query-Quelle | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie die Power Query-Quelle im SQL Server Integration Services-Datenfluss konfigurieren.
-ms.date: 02/12/2019
+ms.date: 12/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
@@ -16,23 +16,21 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: efefe16b7c5180ed0ae0dd853737c2182f335f61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
+ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034405"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75501919"
 ---
 # <a name="power-query-source-preview"></a>Power Query-Quelle (Preview)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-
 Dieser Artikel beschreibt, wie Sie die Eigenschaften der Power Query-Quelle im SQL Server Integration Services-Datenfluss konfigurieren. Power Query ist eine Technologie, mit der Sie eine Verbindung mit verschiedenen Datenquellen herstellen und Daten mithilfe von Excel/Power BI Desktop transformieren können. Weitere Informationen finden Sie in dem Artikel [Power Query – Übersicht und Schulung](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d). Das von Power Query generierte Skript kann kopiert und in die Power Query-Quelle im SSIS-Datenfluss eingefügt werden, um sie zu konfigurieren.
   
 > [!NOTE]
-> Für das aktuelle Preview-Release kann die Power Query-Quelle zur Erleichterung des schnellen Sammelns von Feedback und regelmäßiger Funktionsverbesserungen nur in SQL Server Data Tools (SSDT) und Azure-SSIS Integration Runtime (IR) in Azure Data Factory (ADF) verwendet werden. Sie können die neuesten SSDT, die die Power Query-Quelle unterstützen, [hier](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017) herunterladen. Informationen zum Bereitstellen von Azure-SSIS IR finden Sie unter [Bereitstellen von SSIS in ADF](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+> Für die aktuelle Vorschauversion können Power Query-Quellen nur in SQL Server 2017, SQL Server 2019 und in Azure-SSIS Integration Runtime (IR) in Azure Data Factory (ADF) verwendet werden. Sie können die neueste Power Query-Quelle für SQL Server 2017 und SQL Server 2019 [hier](https://www.microsoft.com/download/details.aspx?id=100619) herunterladen und installieren. Die Power Query-Quelle für Azure-SSIS IR ist bereits vorinstalliert. Informationen zum Bereitstellen von Azure-SSIS IR finden Sie unter [Bereitstellen von SSIS in ADF](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="configure-the-power-query-source"></a>Konfigurieren der Power Query-Quelle
 
@@ -84,9 +82,9 @@ Schließlich können Sie als **Authentifizierungsart** **Anonym**/**Windows-Auth
 
 ### <a name="current-limitations"></a>Aktuelle Einschränkungen
 
--   Die Datenquelle **Oracle** kann zurzeit nicht verwendet werden, da der Oracle ADO.NET-Treiber nicht in der Azure-SSIS IR installiert werden. Installieren Sie daher stattdessen den Oracle ODBC-Treiber, und verwenden Sie vorerst die **ODBC**-Datenquelle, um eine Verbindung mit Oracle herzustellen. Weitere Informationen finden Sie im **ORACLE STANDARD ODBC**-Beispiel in dem Artikel [Anpassen von Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+-   Die Datenquelle **Oracle** kann zurzeit nicht in Azure-SSIS IR verwendet werden, da der Oracle-ADO.NET-Treiber nicht in Azure-SSIS IR installiert werden kann. Installieren Sie daher stattdessen den Oracle-ODBC-Treiber, und verwenden Sie vorerst die **ODBC**-Datenquelle, um eine Verbindung mit Oracle herzustellen. Weitere Informationen finden Sie im **ORACLE STANDARD ODBC**-Beispiel im Artikel [Anpassen von Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
--   Die Datenquelle **Web** kann zurzeit nicht mit einem benutzerdefinierten Setup in der Azure-SSIS IR verwendet werden, verwenden Sie diese daher vorerst ohne benutzerdefiniertes Setup in der Azure-SSIS IR.
+-   Die Datenquelle **Web** kann zurzeit nicht mit einem benutzerdefinierten Setup in Azure-SSIS IR verwendet werden. Verwenden Sie diese daher vorerst ohne benutzerdefiniertes Setup in Azure-SSIS IR.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Erfahren Sie, wie Sie SSIS-Pakete in der Azure-SSIS IR als Aktivitäten erster Klasse in ADF-Pipelines ausführen. Siehe hierzu im Artikel [Ausführen der SSIS-Paket-Aktivitätslaufzeit](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).

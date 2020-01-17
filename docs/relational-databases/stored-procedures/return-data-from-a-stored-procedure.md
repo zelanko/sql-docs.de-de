@@ -13,20 +13,20 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 013efa03767302144e7c54967b6aee8b9230d661
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f9ee8851ce00c429ba277dd6e0be3286284f548
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136664"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74307983"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Zurückgeben von Daten von einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Es gibt drei Methoden, Daten aus einer Prozedur an ein aufrufendes Programm zurückzugeben: Resultsets, Ausgabeparameter und Rückgabecodes. Dieses Thema enthält Informationen zu diesen drei Ansätzen.  
   
-  ## <a name="returning-data-using-result-sets"></a>Zurückgeben von Daten mithilfe von Resultsets
- Wenn Sie eine SELECT-Anweisung im Textkörper einer gespeicherten Prozedur (jedoch nicht die Anweisungen SELECT... INTO oder INSERT... SELECT) einfügen, werden die Zeilen, die durch die SELECT-Anweisung angegeben werden, direkt an den Client gesendet.  Bei großen Resultsets wird die Ausführung der gespeicherten Prozedur nicht mit der nächsten Anweisung fortgesetzt, bis das Resultset vollständig an den Client gesendet wurde.  Bei kleinen Resultsets werden die Ergebnisse für die Rückgabe an den Client gespoolt und die Ausführung wird fortgesetzt.  Wenn mehrere dieser SELECT-Anweisungen während der Ausführung der gespeicherten Prozedur ausgeführt werden, werden mehrere Resultsets an den Client gesendet.  Dieses Verhalten gilt auch für geschachtelte TSQL-Batches, geschachtelte gespeicherte Prozeduren und allgemeine TSQL-Batches.
+## <a name="returning-data-using-result-sets"></a>Zurückgeben von Daten mithilfe von Resultsets
+Wenn Sie eine SELECT-Anweisung im Textkörper einer gespeicherten Prozedur (jedoch nicht die Anweisungen SELECT... INTO oder INSERT... SELECT) einfügen, werden die Zeilen, die durch die SELECT-Anweisung angegeben werden, direkt an den Client gesendet.  Bei großen Resultsets wird die Ausführung der gespeicherten Prozedur erst mit der nächsten Anweisung fortgesetzt, wenn das Resultset vollständig an den Client gesendet wurde.  Bei kleinen Resultsets werden die Ergebnisse für die Rückgabe an den Client gespoolt und die Ausführung wird fortgesetzt.  Wenn mehrere dieser SELECT-Anweisungen während der Ausführung der gespeicherten Prozedur ausgeführt werden, werden mehrere Resultsets an den Client gesendet.  Dieses Verhalten gilt auch für geschachtelte TSQL-Batches, geschachtelte gespeicherte Prozeduren und allgemeine TSQL-Batches.
  
  
  ### <a name="examples-of-returning-data-using-a-result-set"></a>Beispiele für das Zurückgeben von Daten mithilfe eines Resultsets 

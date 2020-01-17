@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9db1b4b1e08bae56a65a45d6c096f701f4172203
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123511"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325512"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
 
@@ -54,19 +54,19 @@ Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md
 Um sicherzustellen, dass die Sichten ordnungsgemäß verwaltet werden können und konsistente Ergebnisse zurückgeben, sind für indizierte Sichten feste Werte für mehrere SET-Optionen erforderlich. Die SET-Optionen in der folgenden Tabelle müssen auf die in der Spalte **Erforderlicher Wert** angezeigten Werte festgelegt werden, wenn eine der folgenden Bedingungen zutrifft:
 
 - Die Sicht und nachfolgende Indizes für die Sicht werden erstellt.
-- Die Basistabellen, auf die beim Erstellen der Tabelle in der Sicht verwiesen wird.
+- Die Basistabellen, auf die beim Erstellen der Ansicht in dieser verwiesen wird.
 - Für eine Tabelle, die Teil der indizierten Sicht ist, wird ein Einfüge-, Update- oder Löschvorgang durchgeführt. Dazu gehören Vorgänge wie Massenkopieren, Replikation und verteilte Abfragen.
 - Die indizierte Sicht wird vom Abfrageoptimierer verwendet, um den Abfrageplan zu erstellen.
 
-|SET-Optionen|Erforderlicher Wert|Standardserverwert|Default<br /><br /> OLE DB- und ODBC-Wert|Default<br /><br /> DB-Library-Wert|
+|SET-Optionen|Erforderlicher Wert|Standardserverwert|Standard<br /><br /> OLE DB- und ODBC-Wert|Standard<br /><br /> DB-Library-Wert|
 |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-|ANSI_NULLS|ON|ON|ON|OFF|
-|ANSI_PADDING|ON|ON|ON|OFF|
-|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|
-|ARITHABORT|ON|ON|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
+|ANSI_NULLS|EIN|EIN|EIN|OFF|
+|ANSI_PADDING|EIN|EIN|EIN|OFF|
+|ANSI_WARNINGS<sup>1</sup>|EIN|EIN|EIN|OFF|
+|ARITHABORT|EIN|EIN|OFF|OFF|
+|CONCAT_NULL_YIELDS_NULL|EIN|EIN|EIN|OFF|
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+|QUOTED_IDENTIFIER|EIN|EIN|EIN|OFF|
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
 <sup>1</sup> Durch das Festlegen von `ANSI_WARNINGS` auf ON wird `ARITHABORT` implizit auf ON festgelegt.

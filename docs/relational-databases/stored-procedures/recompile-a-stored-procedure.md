@@ -1,7 +1,7 @@
 ---
 title: Erneutes Kompilieren einer gespeicherten Prozedur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/28/2019
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115516dec13c971d774d0848cf39f847f6db0d6c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909003"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564795"
 ---
 # <a name="recompile-a-stored-procedure"></a>Erneutes Kompilieren einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,76 +60,59 @@ ms.locfileid: "72909003"
   
  Wenn diese Option in einer EXECUTE-Anweisung verwendet wird, erfordert sie EXECUTE-Berechtigungen für die Prozedur. Berechtigungen für die EXECUTE-Anweisung selbst sind nicht erforderlich, es sind jedoch Ausführungsberechtigungen für die Prozedur erforderlich, auf die in der EXECUTE-Anweisung verwiesen sind. Weitere Informationen finden Sie unter [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
- **RECOMPILE**-Abfragehinweis  
+ **RECOMPILE** -Abfragehinweis  
  Diese Funktion wird beim Erstellen der Prozedur verwendet, und der Hinweis wird in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in der Prozedur eingeschlossen. Daher erfordert sie die CREATE PROCEDURE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema, in dem die Prozedur erstellt wird.  
   
  Gespeicherte Systemprozedur**sp_recompile**  
  Erfordert die ALTER-Berechtigung für die angegebene Prozedur.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>So kompilieren Sie eine gespeicherte Prozedur mithilfe der WITH RECOMPILE-Option erneut  
-  
-1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
-  
-2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
-  
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird die Prozedurdefinition erstellt.  
 
-```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
-    DROP PROCEDURE dbo.uspProductByVendor;  
-GO  
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
-WITH RECOMPILE  
-AS  
-    SET NOCOUNT ON;  
-    SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
-    FROM Purchasing.Vendor AS v   
-    JOIN Purchasing.ProductVendor AS pv   
-      ON v.BusinessEntityID = pv.BusinessEntityID   
-    JOIN Production.Product AS p   
-      ON pv.ProductID = p.ProductID  
-    WHERE v.Name LIKE @Name;  
+1. Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
-```  
+1. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>So kompilieren Sie eine gespeicherte Prozedur mithilfe der WITH RECOMPILE-Option erneut  
+1. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird die Prozedurdefinition erstellt.  
+
+   ```sql
+   USE AdventureWorks2012;  
+   GO  
+   IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
+       DROP PROCEDURE dbo.uspProductByVendor;  
+   GO  
+   CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
+   WITH RECOMPILE  
+   AS  
+       SET NOCOUNT ON;  
+       SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
+       FROM Purchasing.Vendor AS v   
+       JOIN Purchasing.ProductVendor AS pv   
+         ON v.BusinessEntityID = pv.BusinessEntityID   
+       JOIN Production.Product AS p   
+         ON pv.ProductID = p.ProductID  
+       WHERE v.Name LIKE @Name;  
+   ```  
   
-1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
+### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>So kompilieren Sie eine gespeicherte Prozedur mithilfe der WITH RECOMPILE-Option erneut   
   
-2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
-  
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird eine einfache Prozedur erstellt, die alle Mitarbeiter (mit Vor- und Nachnamen), ihre Stellenbezeichnungen und ihre Abteilungsnamen aus einer Sicht zurückgibt.  
-  
-     Kopieren Sie anschließend das zweite Codebeispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie dann auf **Ausführen**. Dadurch wird die Prozedur ausgeführt und der Abfrageplan der Prozedur erneut kompiliert.  
-  
-```sql  
-USE AdventureWorks2012;  
-GO  
-EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
-GO  
-  
-```  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>So kompilieren Sie eine gespeicherte Prozedur mithilfe von sp_recompile erneut  
-  
-1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
-  
-2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
-  
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird eine einfache Prozedur erstellt, die alle Mitarbeiter (mit Vor- und Nachnamen), ihre Stellenbezeichnungen und ihre Abteilungsnamen aus einer Sicht zurückgibt.  
-  
-     Kopieren Sie anschließend das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie dann auf **Ausführen**. Dadurch wird die Prozedur nicht ausgeführt, aber für die erneute Kompilierung markiert, sodass ihr Abfrageplan bei der nächsten Ausführung der Prozedur aktualisiert wird.  
+Wählen Sie **Neue Abfrage** aus, und kopieren Sie anschließend das folgende Codebeispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie dann auf **Ausführen**. Dadurch wird die Prozedur ausgeführt und der Abfrageplan der Prozedur erneut kompiliert.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
-GO  
+EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
+GO
+```  
   
+### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>So kompilieren Sie eine gespeicherte Prozedur mithilfe von sp_recompile erneut  
+
+Wählen Sie **Neue Abfrage** aus, und kopieren Sie anschließend das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie dann auf **Ausführen**. Dadurch wird die Prozedur nicht ausgeführt, aber für die erneute Kompilierung markiert, sodass ihr Abfrageplan bei der nächsten Ausführung der Prozedur aktualisiert wird.  
+
+```sql  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_recompile N'dbo.uspProductByVendor';   
+GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  

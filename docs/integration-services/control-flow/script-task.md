@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44c8739327d84999456302bf2a21fd6858658d4c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 1cb9ca9739ca6f50a2424d9d68ee66263edf08f3
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71293999"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542301"
 ---
 # <a name="script-task"></a>Skripttask
 
@@ -47,11 +47,11 @@ ms.locfileid: "71293999"
  Nachdem Sie entschieden haben, dass die Skriptkomponente für Ihr Paket geeignet ist, müssen Sie das Skript entwickeln, das vom Task verwendet wird, und den Task konfigurieren.  
   
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>Erstellen und Ausführen des Skripts, das vom Task verwendet wird  
- Der Skripttask verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Tools für Anwendungen (VSTA) als Umgebung zum Erstellen der Skripts und der Engine, mit der die Skripts ausgeführt werden.  
+ Der Skripttask verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Tools für Anwendungen (VSTA) als Umgebung zum Erstellen der Skripts und der Engine, mit der die Skripts ausgeführt werden.  
   
  VSTA enthält alle Standardfunktionen der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Umgebung, z.B. den [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Editor mit Farbcodierung, IntelliSense und den **Objekt-Explorer**. VSTA verwendet zudem den Debugger, der auch von anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Entwicklungstools verwendet wird. Breakpoints im Skript sind vollständig mit Breakpoints in Tasks und Containern von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] kompatibel. VSTA unterstützt die Programmiersprachen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
- Zum Ausführen eines Skripts muss VSTA auf dem Computer installiert sein, auf dem das Paket ausgeführt wird. Wenn das Paket ausgeführt wird, lädt der Task die Skript-Engine und führt das Skript aus. Sie können auf externe .NET-Assemblys zugreifen, indem Sie Verweise auf die Assemblys im Projekt hinzufügen.  
+ Zum Ausführen eines Skripts muss VSTA auf dem Computer installiert sein, auf dem das Paket ausgeführt wird. Wenn das Paket ausgeführt wird, lädt der Task die Skript-Engine und führt das Skript aus. Sie können auf externe .NET-Assemblys zugreifen, indem Sie Verweise auf die Assemblys im Projekt hinzufügen. Zurzeit werden .NET Core-Referenzen und .NET-Standardassemblyreferenzen nicht unterstützt.  
   
 > [!NOTE]  
 >  Anders als in früheren Versionen, in denen Sie angeben konnten, ob die Skripts vorkompiliert sind, werden in [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] und nachfolgenden Versionen alle Skripts vorkompiliert. Wenn ein Skript vorkompiliert ist, wird die Sprach-Engine zur Laufzeit nicht geladen, und das Paket wird schneller ausgeführt. Kompilierte binäre Dateien belegen jedoch erheblich mehr Speicherplatz.  
@@ -72,7 +72,7 @@ ms.locfileid: "71293999"
 ### <a name="configuring-the-script-task-in-the-designer"></a>Konfigurieren des Skripttasks im Designer  
  In der folgenden Tabelle wird das **ScriptTaskLogEntry** -Ereignis beschrieben, das für den Skripttask protokolliert werden kann. Das **ScriptTaskLogEntry** -Ereignis wird für die Protokollierung auf der Registerkarte **Details** des Dialogfelds **SSIS-Protokolle konfigurieren** ausgewählt. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|Gibt die Ergebnisse des Implementierens der Protokollierung innerhalb des Skripts an. Der Task schreibt für jeden Aufruf der **Log** -Methode des **Dts** -Objekts einen Protokolleintrag. Der Task schreibt diese Einträge, wenn der Code ausgeführt wird. Weitere Informationen finden Sie unter [Logging in the Script Task](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
@@ -98,7 +98,7 @@ ms.locfileid: "71293999"
   
  Weitere Informationen zum Skripttask finden Sie unter [Script Task](../../integration-services/control-flow/script-task.md) und [Konfigurieren des Skripttasks im Skripttask-Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Skripttask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "71293999"
   
  Weitere Informationen zum Skripttask finden Sie unter [Script Task](../../integration-services/control-flow/script-task.md) und [Konfigurieren des Skripttasks im Skripttask-Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **ScriptLanguage**  
  Wählen Sie die Skriptsprache für den Task aus, entweder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71293999"
  Um die Standardskriptsprache für den Skripttask festzulegen, verwenden Sie im Dialogfeld **Optionen** auf der Seite **Allgemein** die Option **Skriptsprache** . Weitere Informationen finden Sie unter [General Page](../../integration-services/control-flow/script-task-editor-general-page.md).  
   
  **EntryPoint**  
- Geben Sie die Methode an, die die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Laufzeit als Einstiegspunkt in den Code des Skripttasks aufruft. Die angegebene Methode muss in der ScriptMain-Klasse des Projekts der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Tools für Anwendungen (VSTA) angegeben werden. ScriptMain ist die Standardklasse, die von den Skriptvorlagen generiert wird.  
+ Geben Sie die Methode an, die die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Laufzeit als Einstiegspunkt in den Code des Skripttasks aufruft. Die angegebene Methode muss in der ScriptMain-Klasse des Projekts der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Tools für Anwendungen (VSTA) angegeben werden. ScriptMain ist die Standardklasse, die von den Skriptvorlagen generiert wird.  
   
  Wenn Sie den Namen der Methode im VSTA-Projekt geändert haben, müssen Sie den Wert der **EntryPoint** -Eigenschaft ändern.  
   
@@ -146,6 +146,6 @@ ms.locfileid: "71293999"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Technischer Artikel [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Gewusst wie: Senden von E-Mails mit Zustellungsbenachrichtigung in C#) auf shareourideas.com  
+-   Technischer Artikel [Vorgehensweise: Senden von E-Mails mit Zustellungsbenachrichtigung in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Gewusst wie: Senden von E-Mails mit Zustellungsbenachrichtigung in C#) auf shareourideas.com  
   
   

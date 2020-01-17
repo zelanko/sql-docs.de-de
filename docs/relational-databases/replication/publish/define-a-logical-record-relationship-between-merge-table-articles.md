@@ -1,6 +1,7 @@
 ---
-title: Definieren einer logischen Datensatzbeziehung zwischen Mergetabellenartikeln | Microsoft-Dokumentation
-ms.custom: ''
+title: Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln
+description: Erfahren Sie, wie Sie eine logische Datensatzbeziehung zwischen verknüpften Tabellen definieren, die für Mergereplikationsartikel verwendet werden.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846611"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321230"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "70846611"
   
 3.  Definieren Sie im Dialogfeld **Join hinzufügen** einen Joinfilter, und aktivieren Sie dann das Kontrollkästchen **Logischer Datensatz**.  
   
-4.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** befinden, klicken Sie auf **OK**, um eine Speicherung vorzunehmen und das Dialogfeld zu schließen.  
+4.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften.-.\<Veröffentlichung>** befinden, klicken Sie auf **OK**, um zu speichern und das Dialogfeld zu schließen.  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>So löschen Sie eine logische Datensatzbeziehung  
   
@@ -105,7 +106,7 @@ ms.locfileid: "70846611"
   
     -   Geben Sie zur Verwendung der Standardkonflikterkennung und -lösung auf Zeilen- oder Spaltenebene für **\@logical_record_level_conflict_detection** und **\@logical_record_level_conflict_resolution** den Wert **false** an.  
   
-3.  Wiederholen Sie Schritt 2 für jeden Artikel, der den logischen Datensatz umfasst. Sie müssen für jeden Artikel im logischen Datensatz die gleiche Konflikterkennung und Konfliktlösungsoption verwenden. Weitere Informationen finden Sie unter [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+3.  Wiederholen Sie Schritt 2 für jeden Artikel, der den logischen Datensatz umfasst. Sie müssen für jeden Artikel im logischen Datensatz die gleiche Konflikterkennung und Konfliktlösungsoption verwenden. Weitere Informationen finden Sie unter [Ermitteln und Lösen von Konflikten in logischen Datensätzen](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
 4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)aus. Geben Sie **\@publication** an sowie den Namen des ersten an der Beziehung beteiligten Artikels für **\@article**, den Namen des zweiten an der Beziehung beteiligten Artikels für **\@join_articlename**, einen Namen für die Beziehung für **\@filtername**, eine Klausel zur Definition der Beziehung zwischen den beiden Artikeln für **\@join_filterclause**, den Jointyp für **\@join_unique_key** und einen der folgenden Werte für **\@filter_type**:  
   

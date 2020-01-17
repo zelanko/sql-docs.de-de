@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6babf3d10d6f391d3002e7094d7b8fe6b32b261b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056030"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401586"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>Bemerkungen  
  Indem Sie SINGLE_BLOB verwenden, können Sie vermeiden, dass die Codierung des XML-Dokuments (wie in der XML-Codierungsdeklaration angegeben) und die Codierung der vom Server implizierten Codepage nicht übereinstimmen.  
   
  Wenn beim Verwenden der Datentypen NCLOB oder CLOB Codepage- oder Codierungskonflikte auftreten, führen Sie einen der folgenden Schritte aus:  
@@ -253,7 +253,7 @@ GO
  [&#91;Nach oben&#93;](#top)  
   
 ## <a name="bulk_export_xml_data"></a> Massenexport von XML-Daten  
- Im folgenden Beispiel werden XML-Daten mithilfe von `bcp` per Massenexport aus der im vorherigen Beispiel erstellten Tabelle exportiert. Dabei wird dieselbe XML-Formatdatei verwendet. Im folgenden `bcp` -Befehl stellen `<server_name>` und `<instance_name>` Platzhalter dar, die durch die entsprechenden Werte ersetzt werden müssen:  
+ Im folgenden Beispiel werden XML-Daten mithilfe von [bcp](../../tools/bcp-utility.md) per Massenexport aus der im vorherigen Beispiel erstellten Tabelle exportiert. Dabei wird dieselbe XML-Formatdatei verwendet. Im folgenden `bcp` -Befehl stellen `<server_name>` und `<instance_name>` Platzhalter dar, die durch die entsprechenden Werte ersetzt werden müssen:  
   
 ```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  
@@ -265,7 +265,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 
 ## <a name="see-also"></a>Weitere Informationen  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [SELECT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
+ [FOR-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Massenimport und -export von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   

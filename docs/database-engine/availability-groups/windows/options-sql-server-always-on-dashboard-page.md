@@ -1,6 +1,6 @@
 ---
-title: Optionen (SQL Server Always On, Dashboardseite) | Microsoft-Dokumentation
-description: Eine Beschreibung der Seite „Optionen“ auf dem SQL Server-Always On-Dashboard.
+title: Dashboard „Verfügbarkeitsgruppe“ in SSMS
+description: Eine Beschreibung der Seite „Optionen“ auf dem SQL Server-Always On-Dashboard in SQL Server Management Studio.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 887ed12836ca3581e40c6c6831906def6c0d0e5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae4c5aae76c41b642d445e92844efa2ddf36fdcc
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014646"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822540"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>Optionen (SQL Server Always On, Dashboardseite)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68014646"
   
 ## <a name="on-this-page"></a>Auf dieser Seite  
  **Automatische Aktualisierung aktivieren**  
- Klicken Sie, um die automatische Aktualisierung zu aktivieren. Folgende Optionen sind verfügbar:  
+ Klicken Sie, um die automatische Aktualisierung zu aktivieren. Die Optionen sind:  
   
 -   Das Feld **Aktualisierungsintervall (in Sekunden)** zeigt die Anzahl der Sekunden an, bei der das Dashboard aktualisiert wird. Der Standardwert ist 30. Wenn die automatische Aktualisierung aktiviert ist, können Sie dieses Feld bearbeiten, um das Aktualisierungsintervall zu ändern.  
   

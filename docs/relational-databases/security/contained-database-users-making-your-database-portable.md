@@ -1,6 +1,7 @@
 ---
-title: Eigenständige Datenbankbenutzer – machen Sie Ihre Datenbank portabel | Microsoft-Dokumentation
-ms.custom: ''
+title: Eigenständiger Benutzerzugriff auf eigenständige Datenbanken
+description: Hier erfahren Sie, wie Sie den eigenständigen Benutzerzugriff auf eigenständige Datenbanken einrichten. Zudem werden die Unterschiede zu einem herkömmlichen Anmelde-/Benutzermodell erläutert.
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f568d57f84397f0ebc4b636c4911cc51b197ebf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 028ab6917a8d41a2231e94253ff353910e65b865
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116739"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557885"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel
 
@@ -40,7 +41,7 @@ ms.locfileid: "68116739"
 
  Die Anmeldung in der Masterdatenbank ist im eigenständigen Datenbankbenutzermodell nicht vorhanden. Stattdessen findet der Authentifizierungsprozess in der Benutzerdatenbank statt, und in der Masterdatenbank ist keine zugeordnete Anmeldung für den Datenbankbenutzer in der Benutzerdatenbank vorhanden. Das eigenständige Datenbankbenutzermodell unterstützt sowohl die Windows-Authentifizierung als auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung und kann sowohl in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als auch in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]verwendet werden. Um als eigenständiger Datenbankbenutzer eine Verbindung herzustellen, muss die Verbindungszeichenfolge immer einen Parameter für die Benutzerdatenbank enthalten, damit das [!INCLUDE[ssDE](../../includes/ssde-md.md)] weiß, welche Datenbank für die Verwaltung des Authentifizierungsprozesses verantwortlich ist. Die Aktivität des eigenständigen Datenbankbenutzers ist auf den Authentifizierungsserver beschränkt. Beim Herstellen einer Verbindung als eigenständiger Datenbankbenutzer muss das Datenbankbenutzerkonto also unabhängig in jeder Datenbank erstellt werden, die der Benutzer benötigt. Um die Datenbanken zu ändern, müssen [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Benutzer eine neue Verbindung erstellen. Eigenständige Datenbankbenutzer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Datenbanken ändern, wenn ein identischer Benutzer in einer anderen Datenbank vorhanden ist.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] - und [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] unterstützen Azure Active Directory-Identitäten als Benutzer einer eigenständigen Datenbank. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] unterstützt Benutzer einer eigenständigen Datenbank mit [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] aber [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] dies nicht. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Wird Azure Active Directory-Authentifizierung verwendet, können Verbindungen von SSMS über die universelle Active Directory-Authentifizierung hergestellt werden.  Administratoren können die universelle Authentifizierung so konfigurieren, dass Multi-Factor Authentication verwendet wird, bei der die Identität mit einem Telefonanruf, einer SMS, einer Smartcard mit PIN oder einer Benachrichtigung über mobile App überprüft wird. Weitere Informationen hierzu finden Sie unter [SSMS-Unterstützung für Azure AD MFA mit SQL-Datenbank und SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] unterstützen Azure Active Directory-Identitäten als Benutzer einer eigenständigen Datenbank. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] unterstützt Benutzer einer eigenständigen Datenbank mit [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] aber [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] dies nicht. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Wird Azure Active Directory-Authentifizierung verwendet, können Verbindungen von SSMS über die universelle Active Directory-Authentifizierung hergestellt werden.  Administratoren können die universelle Authentifizierung so konfigurieren, dass Multi-Factor Authentication verwendet wird, bei der die Identität mit einem Telefonanruf, einer SMS, einer Smartcard mit PIN oder einer Benachrichtigung über mobile App überprüft wird. Weitere Informationen finden Sie unter [SSMS-Unterstützung für Azure AD MFA mit SQL-Datenbank und SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
  Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]sind, weil der Datenbankname in der Verbindungszeichenfolge immer erforderlich ist, beim Wechseln vom traditionellen Modell auf das eigenständige Datenbankbenutzermodell keine Änderungen an der Verbindungszeichenfolge erforderlich. Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindungen muss der Name der Datenbank zur Verbindungszeichenfolge hinzugefügt werden, falls nicht bereits geschehen.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68116739"
   
  Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Firewall-Regeln finden Sie unter den folgenden Themen:  
   
-- [Azure SQL-Datenbank-Firewall](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
+- [Firewall für die Azure SQL-Datenbank](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
 - [Vorgehensweise: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
 - [sp_set_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
@@ -76,7 +77,7 @@ ms.locfileid: "68116739"
   
 ## <a name="remarks"></a>Bemerkungen  
   
-- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]müssen eigenständige Datenbankbenutzer für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktiviert werden. Weitere Informationen finden Sie unter [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
+- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]müssen eigenständige Datenbankbenutzer für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktiviert werden. Weitere Informationen finden Sie unter [Serverkonfigurationsoption für die Authentifizierung der eigenständigen Datenbank](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
 - Eigenständige Datenbankbenutzer und Anmeldungen mit nicht überlappenden Namen können in Ihren Anwendungen gemeinsam vorliegen.  
 - Wenn es in der Masterdatenbank eine Anmeldung unter dem Namen **name1** gibt und Sie einen eigenständigen Datenbankbenutzer namens **name1**erstellen und ein Datenbankname in der Verbindungszeichenfolge angegeben wird, wird der Kontext des Datenbankbenutzers bei der Datenbankverbindung über den Anmeldekontext gewählt. D. h. eigenständige Datenbankbenutzer haben Vorrang vor Anmeldungen mit demselben Namen.  
 - Der Name des eigenständigen Datenbankbenutzers darf in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nicht mit dem Namen des Serveradmin-Kontos identisch sein.  

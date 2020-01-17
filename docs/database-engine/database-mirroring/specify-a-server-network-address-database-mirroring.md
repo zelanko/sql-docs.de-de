@@ -1,6 +1,7 @@
 ---
-title: Angeben einer Servernetzwerkadresse (Datenbankspiegelung) | Microsoft-Dokumentation
-ms.custom: ''
+title: Angeben einer Servernetzwerkadresse (Datenbankspiegelung)
+description: Geben Sie die Servernetzwerkadresse für einen Datenbankspiegelungsendpunkt an.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1db02ef90af9e014e3481961daf08a1ce10a54c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048079"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252762"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Angeben einer Servernetzwerkadresse (Datenbankspiegelung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68048079"
   
  TCP<strong>://</strong> *\<Systemadresse>* <strong>:</strong> *\<Port>*  
   
- Dabei gilt:  
+ Hierbei gilt:  
   
 -   *\<system-address>* ist eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert. In der Regel handelt es sich bei der Serveradresse um einen Systemnamen (wenn sich die Systeme in derselben Domäne befinden), einen vollqualifizierten Domänennamen oder eine IP-Adresse:  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68048079"
   
      In der Server-Netzwerkadresse einer Serverinstanz unterscheidet nur die Nummer des Ports, die ihrem Spiegelungsendpunkt zugeordnet ist, diese Instanz von anderen Instanzen auf dem Computer. Die folgende Abbildung veranschaulicht die Server-Netzwerkadresse von zwei Serverinstanzen auf einem Computer. In der Standardinstanz wird Port `7022` verwendet, und in der benannten Instanz wird Port `7033`verwendet. Die Server-Netzwerkadressen für diese beiden Serverinstanzen lauten `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` bzw. `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Beachten Sie, dass die Adresse nicht den Namen der Serverinstanz enthält.  
   
-     ![Server network addresses of a default instance (Servernetzwerkadressen einer Standardinstanz)](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Server network addresses of a default instance (Servernetzwerkadressen einer Standardinstanz)")  
+     ![Servernetzwerkadressen einer Standardinstanz](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Servernetzwerkadressen einer Standardinstanz")  
   
      Verwenden Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, um den Port zu identifizieren, der derzeit dem Endpunkt der Datenbankspiegelung einer Serverinstanz zugeordnet ist:  
   
@@ -94,7 +95,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://DBSERVER8.manufacturing.Advent
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://10.193.9.134:7023';  
 ```  
   
-#### <a name="d-using-ipv6"></a>D. Verwenden von IPv6  
+#### <a name="d-using-ipv6"></a>D: Verwenden von IPv6  
  Die folgende Server-Netzwerkadresse gibt die IPv6-Adresse `2001:4898:23:1002:20f:1fff:feff:b3a3`und Port `7022`an.  
   
 ```  
@@ -108,7 +109,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  Wenn Sie den vollqualifizierten Domänennamen bilden möchten, verketten Sie die Werte von *<host_name>* bzw. *<Primary_Dns_Suffix>* wie folgt:  
   
- _&lt;host_name&gt;_ **.** _<Primary_Dns_Suffix>_  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  Beispielsweise entspricht die IP-Konfiguration  
   

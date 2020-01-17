@@ -1,6 +1,8 @@
 ---
-title: Konfigurieren der SQL Server-Replikation von Momentaufnahmeordner-Freigaben unter Linux
-description: In diesem Artikel wird beschrieben, wie Sie die SQL Server-Replikation von Momentaufnahmeordner-Freigaben unter Linux konfigurieren.
+title: Konfigurieren von Momentaufnahmeordnerfreigaben
+titleSuffix: SQL Server on Linux
+description: Hier erfahren Sie, wie Sie Momentaufnahmeordnerfreigaben für die SQL Server-Replikation unter Linux konfigurieren.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +11,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2513511889c4bc22757f0970269fa9ee7b51857d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c5deaf7fbe62b30140f476a37ad096d080e00c49
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68093117"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558352"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>Konfigurieren der Replikation eines Momentaufnahmeordners mit Freigaben
 
@@ -141,6 +143,6 @@ Fügen Sie auf beiden Computern `mssql.conf` den folgenden Abschnitt hinzu. Erse
 
 [Konzepte: SQL Server-Replikation unter Linux](sql-server-linux-replication.md)
 
-[Gespeicherte Prozeduren für die Replikation](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)
+[Gespeicherte Prozeduren für die Replikation](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
 [1]: ./media/sql-server-linux-replication-snapshot-shares/image1.png

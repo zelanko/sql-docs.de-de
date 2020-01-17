@@ -1,6 +1,7 @@
 ---
-title: Replikationskonflikt-Viewer von Microsoft (Mergereplikation) | Microsoft-Dokumentation
-ms.custom: ''
+title: Replikationskonflikt-Viewer (Merge)
+description: In diesem Artikel wird der Replikationskonflikt-Viewer erläutert, der für Mergereplikationen in SQL Server verwendet wird.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dc4df167c1bc8cf68edf062b294022247041f0b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025811"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321957"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Replikationskonflikt-Viewer von Microsoft (Mergereplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68025811"
 > [!NOTE]  
 >  Konflikte, die logische Datensätze einschließen, werden im Konflikt-Viewer nicht angezeigt. Mit den gespeicherten Replikationsprozeduren können Informationen zu diesen Konflikten angezeigt werden. Weitere Informationen finden Sie unter [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Der Replikationskonflikt-Viewer ist in zwei Abschnitte unterteilt. Der obere Abschnitt des Dialogfelds zeigt die Konfliktliste für die ausgewählte Tabelle. Wenn Sie auf ein Element in der Konfliktliste klicken, werden die Details des Konflikts im unteren Abschnitt des Dialogfelds angezeigt.  
   
  Informationen zur Ursache des Konflikts (dieselbe Zeile wurde z. B. auf dem Verleger und auf dem Abonnenten aktualisiert) werden im unteren Abschnitt des Dialogfelds angezeigt. Die Konfliktdaten im unteren Abschnitt werden in zwei entsprechenden Spalten angezeigt (**Konfliktgewinner** und **Konfliktverlierer**). Wenn ein Konflikt zwischen aktualisierten und gelöschten Daten vorhanden ist, können möglicherweise keine Daten für die gelöschte Seite des Konflikts angezeigt werden. In diesem Fall zeigt der Replikationskonflikt-Viewer eine Meldung in einer der beiden Spalten an, die anzeigt, dass die Zeile an einem Speicherort gelöscht und an einem anderen aktualisiert wurde. Sie gibt außerdem die vorgeschlagene Lösung an.  
@@ -47,7 +48,7 @@ ms.locfileid: "68025811"
  **Veröffentlichung**  
  Wählen Sie eine Veröffentlichung aus, die Tabellen mit Konflikten enthält.  
   
- **Tabelle**  
+ **Table**  
  Wählen Sie eine Tabelle aus, die Konflikte enthält.  
   
  **Filter definieren**  
@@ -56,13 +57,13 @@ ms.locfileid: "68025811"
  **Filter anwenden oder entfernen**  
  Klicken Sie auf diese Option, um einen Filter anzuwenden oder zu entfernen, der im Dialogfeld **Filter definieren** definiert wurde.  
   
- **Alles auswählen**  
+ **Alles markieren**  
  Wählt alle Konflikte aus, die im Raster aufgeführt sind.  
   
  **Keine auswählen**  
  Macht die Auswahl für alle Konflikte rückgängig, die im Raster aufgeführt sind.  
   
- **Entfernen**  
+ **Remove**  
  Entfernt die ausgewählten Konflikte aus dem Viewer und die zugeordneten Metadaten aus den Replikationssystemtabellen. Gleichbedeutend mit dem Klicken auf die Schaltfläche Gewinner absenden (ohne an den Daten Änderungen vorzunehmen) für jeden ausgewählten Konflikt.  
   
  **Alle Spalten anzeigen**  

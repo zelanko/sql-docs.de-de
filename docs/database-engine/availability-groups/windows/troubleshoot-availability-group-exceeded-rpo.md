@@ -1,6 +1,7 @@
 ---
-title: 'Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten (SQL Server) | Microsoft-Dokumentation'
-ms.custom: ag-guide
+title: Verfügbarkeitsgruppe hat RPO überschritten
+description: Häufige Probleme und Lösungen für den Fall, dass die Always On-Verfügbarkeitsgruppe die Recovery Point Objective (RPO) überschreitet.
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef5ec5b9bd72fbda8c5a57547c1e1b74f9538a6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013737"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822183"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

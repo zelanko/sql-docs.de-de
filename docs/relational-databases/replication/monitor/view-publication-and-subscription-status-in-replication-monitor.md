@@ -1,6 +1,7 @@
 ---
-title: Anzeigen des Veröffentlichungs- und Abonnementstatus im Replikationsmonitor | Microsoft-Dokumentation
-ms.custom: ''
+title: Anzeigen des Veröffentlichungs- und Abonnementstatus (Replikationsmonitor)
+description: In diesem Artikel erfahren Sie, wie Sie in SQL Server Management Studio (SSMS) mithilfe des Replikationsmonitors Angaben zum Veröffentlichungs- und Abonnementstatus abrufen können.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -22,16 +23,16 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 51dafccba54e66ff9f6ed9d7fd6c7e4159c8ef19
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bc233524eed394001b0b3fb087d7273c8ead8009
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770540"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322267"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Anzeigen des Veröffentlichungs- und Abonnementstatus im Replikationsmonitor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Im Replikationsmonitor von[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt:  
+  Im Replikationsmonitor von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt.  
   
 -   Der Status einer Veröffentlichung wird durch den Status mit höchster Priorität der zugehörigen Abonnements bestimmt. Wenn beispielsweise ein Abonnement einer Veröffentlichung einen Fehler aufweist und bei einem anderen Abonnement ein leistungsbezogenes Problem vorliegt, wird für die Veröffentlichung ein Statusfehler gemeldet.  
   
@@ -66,9 +67,9 @@ ms.locfileid: "68770540"
   
 |Status|Symbol|  
 |------------|----------|  
-|Fehler|![UI-Symbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
-|Leistung ist kritisch|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
-|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholung Replikations-Agent](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI icon: replication agent retry")|  
+|Fehler|![Benutzeroberflächensymbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Benutzeroberflächensymbol: Fehler")|  
+|Leistung ist kritisch|![Benutzeroberflächensymbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|fehlerhafter Befehl wird wiederholt|![Benutzeroberflächensymbol: Wiederholungsversuch des Replikations-Agents](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Benutzeroberflächensymbol: Wiederholungsversuch des Replikations-Agents")|  
 |OK|none|  
   
 ## <a name="subscription-status-values"></a>Abonnementstatuswerte  
@@ -80,37 +81,37 @@ ms.locfileid: "68770540"
   
 |Status|Symbol|  
 |------------|----------|  
-|Fehler|![UI-Symbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
-|Leistung ist kritisch|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
-|Läuft demnächst ab/Abgelaufen|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
-|Nicht initialisiertes Abonnement|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
-|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholung Replikations-Agent](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|Wird nicht ausgeführt|![UI-Symbol: Replikations-Agent beendet](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
-|Wird ausgeführt|![UI-Symbol: Replikations-Agent Ausführung](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI icon: replication agent running")|  
+|Fehler|![Benutzeroberflächensymbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Benutzeroberflächensymbol: Fehler")|  
+|Leistung ist kritisch|![Benutzeroberflächensymbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|Läuft demnächst ab/Abgelaufen|![Benutzeroberflächensymbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|Nicht initialisiertes Abonnement|![Benutzeroberflächensymbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|fehlerhafter Befehl wird wiederholt|![Benutzeroberflächensymbol: Wiederholungsversuch des Replikations-Agents](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Benutzeroberflächensymbol: Wiederholungsversuch des Replikations-Agents")|  
+|Wird nicht ausgeführt|![Benutzeroberflächensymbol: Replikations-Agent beendet](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Benutzeroberflächensymbol: Replikations-Agent beendet")|  
+|Wird ausgeführt|![Benutzeroberflächensymbol: Replikations-Agent wird ausgeführt](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Benutzeroberflächensymbol: Replikations-Agent wird ausgeführt")|  
   
 ### <a name="merge-subscriptions"></a>Mergeabonnements  
   
 |Status|Symbol|  
 |------------|----------|  
-|Fehler|![UI-Symbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
-|Leistung ist kritisch|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
-|Langer Mergevorgang|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
-|Läuft demnächst ab/Abgelaufen|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
-|Nicht initialisiertes Abonnement|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
-|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholung Replikations-Agent](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|Wird synchronisiert|![UI-Symbol: Replikations-Agent Ausführung](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI icon: replication agent running")|  
-|Synchronisierung wird nicht ausgeführt|![UI-Symbol: Replikations-Agent beendet](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
+|Fehler|![Benutzeroberflächensymbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Benutzeroberflächensymbol: Fehler")|  
+|Leistung ist kritisch|![Benutzeroberflächensymbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|Langer Mergevorgang|![Benutzeroberflächensymbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|Läuft demnächst ab/Abgelaufen|![Benutzeroberflächensymbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|Nicht initialisiertes Abonnement|![Benutzeroberflächensymbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|fehlerhafter Befehl wird wiederholt|![Benutzeroberflächensymbol: Wiederholungsversuch des Replikations-Agents](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Benutzeroberflächensymbol: Wiederholungsversuch des Replikations-Agents")|  
+|Wird synchronisiert|![Benutzeroberflächensymbol: Replikations-Agent wird ausgeführt](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Benutzeroberflächensymbol: Replikations-Agent wird ausgeführt")|  
+|Synchronisierung wird nicht ausgeführt|![Benutzeroberflächensymbol: Replikations-Agent beendet](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Benutzeroberflächensymbol: Replikations-Agent beendet")|  
   
 ### <a name="snapshot-subscriptions"></a>Momentaufnahmeabonnements  
   
 |Status|Symbol|  
 |------------|----------|  
-|Fehler|![UI-Symbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
-|Läuft demnächst ab/Abgelaufen|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
-|Nicht initialisiertes Abonnement|![UI-Symbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
-|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholung Replikations-Agent](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|Wird synchronisiert|![UI-Symbol: Replikations-Agent Ausführung](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI icon: replication agent running")|  
-|Synchronisierung wird nicht ausgeführt|![UI-Symbol: Replikations-Agent beendet](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
+|Fehler|![Benutzeroberflächensymbol: Fehler](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Benutzeroberflächensymbol: Fehler")|  
+|Läuft demnächst ab/Abgelaufen|![Benutzeroberflächensymbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|Nicht initialisiertes Abonnement|![Benutzeroberflächensymbol: Warnung](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|fehlerhafter Befehl wird wiederholt|![Benutzeroberflächensymbol: Wiederholungsversuch des Replikations-Agents](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Benutzeroberflächensymbol: Wiederholungsversuch des Replikations-Agents")|  
+|Wird synchronisiert|![Benutzeroberflächensymbol: Replikations-Agent wird ausgeführt](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Benutzeroberflächensymbol: Replikations-Agent wird ausgeführt")|  
+|Synchronisierung wird nicht ausgeführt|![Benutzeroberflächensymbol: Replikations-Agent beendet](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Benutzeroberflächensymbol: Replikations-Agent beendet")|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication.md)  

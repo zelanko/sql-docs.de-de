@@ -1,6 +1,6 @@
 ---
-title: Sichern einer Datenbank mit speicheroptimierten Tabellen | Microsoft-Dokumentation
-ms.custom: ''
+title: Datenbanksicherung mit speicheroptimierten Tabellen
+ms.custom: seo-dt-2019
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22a1a5d0a4a1e3bc9e1b7afad1aafeaa01e63ac5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c08f3c1ba1c31b0f6a1d34faeb5c6e2f77e404f8
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951209"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412786"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sichern einer Datenbank mit speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67951209"
 ## <a name="full-database-backup"></a>Vollständige Datenbanksicherung  
  Diese Erläuterung bezieht sich auf Datenbanksicherungen für Datenbanken, die ausschließlich über dauerhafte speicheroptimierte Tabellen verfügen, da die Sicherung für datenträgerbasierte Tabellen identisch ist. Die Prüfpunktdateipaare in der speicheroptimierten Dateigruppe können unterschiedliche Statusphasen aufweisen. In der folgenden Tabelle wird beschrieben, welcher Teil der Dateien gesichert wird.  
   
-|Status des Prüfpunktdateipaars|Sicherung|  
+|Status des Prüfpunktdateipaars|Backup|  
 |--------------------------------|------------|  
 |PRECREATED|Nur Dateimetadaten|  
 |UNDER CONSTRUCTION|Nur Dateimetadaten|  

@@ -1,7 +1,7 @@
 ---
-title: Erstellen und Analysieren der Protokolldatei „CLUSTER.LOG“ für eine Verfügbarkeitsgruppe
+title: Erstellen und Analysieren von „CLUSTER.LOG“ für Verfügbarkeitsgruppen
 description: 'Informationen zum Erstellen und Analysieren des Clusterprotokolls für eine Always On-Verfügbarkeitsgruppe '
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240757"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244383"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Erstellen und Analysieren der Protokolldatei „CLUSTER.LOG“ für eine Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf die Verfügbarkeitsgruppenressource, und klicken Sie auf **Eigenschaften**.  
   
-4.  Klicken Sie auf die Registerkarte **Eigenschaften** .  
+4.  Klicken Sie auf die Registerkarte **Eigenschaften**.  
   
 5.  Ändern Sie die Eigenschaft **VerboseLogging**. Standardmäßig wird **VerboseLogging**, das Informationen, Warnungen und Fehler meldet, auf `0` festgelegt. **VerboseLogging** kann von `0` in `2` geändert werden.  
   
@@ -57,9 +57,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 ## <a name="availability-group-resource-events"></a>Ereignisse der Verfügbarkeitsgruppenressource  
  Die folgende Tabelle zeigt die verschiedenen Arten von Ereignissen in CLUSTER.LOG, die die Verfügbarkeitsgruppenressource betreffen. Weitere Informationen zum Ressourcenhosting-Subsystem (RHS) und dem Ressourcensteuerungsmonitor (RCM) in WSFC finden Sie unter [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx) (Ressourcenhosting-Subsystem (RHS) In Windows Server 2008-Failoverclustern).  
   
-|Bezeichner|Quelle|Beispiel aus CLUSTER.LOG|  
+|Bezeichner|`Source`|Beispiel aus CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
-|Nachrichten mit dem Präfix `[RES]` und `[hadrag]`|hadrres.dll (Always On-Ressourcen-DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request. (00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] SQL Server-Verfügbarkeitsgruppe ag>:`[hadrag]` Offlineanforderung.)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated (00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server-Verfügbarkeitsgruppe ag>:`[hadrag]` Leasethread beendet)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement (00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server-Verfügbarkeitsgruppe ag>: `[hadrag]`Freie SQL-Anweisung)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server (00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server-Verfügbarkeitsgruppe ag>: `[hadrag]` Verbindung mit SQL Server trennen)|  
+|Nachrichten mit dem Präfix `[RES]` und `[hadrag]`|hadrres.dll (Always On-Ressourcen-DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request. (00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>:`[hadrag]` Offlineanforderung.)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated (00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server-Verfügbarkeitsgruppe \<ag>:`[hadrag]` Leasethread beendet)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement (00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>: `[hadrag]`Freie SQL-Anweisung)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server (00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>: `[hadrag]` Verbindung mit SQL Server trennen)|  
 |Nachrichten mit dem Präfix `[RHS]`|RHS.EXE (Ressourcenhosting-Subsystem, Hostprozess von „hadrres.dll“)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] Resource ag has come offline. RHS is about to report resource status to RCM.|  
 |Nachrichten mit dem Präfix `[RCM]`|Ressourcensteuerungsmonitor (Clusterdienst)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: Bringing group 'ag' offline first... (000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: Zuerst wird die Gruppe 'ag' offline geschaltet.<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|Ein API-Aufruf, der hauptsächlich bedeutet, dass SQL Server die Aktion anfordert|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6c259066aca1a4302fcd1a0caeb7fb3122c97147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8266791ae6621dbf81f16b2eb5c83ef8c9a3c1b5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084558"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244587"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68084558"
 > [!IMPORTANT]  
 >  Führen Sie CREATE AVAILABILITY GROUP auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, die als ursprüngliches primäres Replikat der neuen Verfügbarkeitsgruppe verwendet werden soll. Diese Serverinstanz muss sich in einem WSFC-Knoten (Windows Server Failover Clustering) befinden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -220,7 +220,7 @@ CREATE AVAILABILITY GROUP group_name
  Ist der Netzwerkname, der verwendet wird, um auf einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failovercluster zuzugreifen. Verwenden Sie diesen Namen, wenn die Serverinstanz als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverpartner beteiligt ist. Wenn SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) in einer FCI-Serverinstanz ausgeführt wird, wird die gesamte '*FCI_network_name*[\\*instance_name*]'-Zeichenfolge zurückgegeben (dabei handelt es sich um den vollständigen Replikatnamen).  
   
  *instance_name*  
- Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die von *system_name* oder *FCI_network_name* gehostet wird und für die der HADR-Dienst aktiviert ist. Bei einer Standardserverinstanz ist *instance_name* optional. Bei dem Instanznamen wird die Groß-/Kleinschreibung berücksichtigt. In einer eigenständigen Serverinstanz stimmt der Name dieses Werts mit dem Wert überein, der beim Ausführen von SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) zurückgegeben wird.  
+ Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die von *system_name* oder *FCI_network_name* gehostet wird und für die der HADR-Dienst aktiviert ist. Bei einer Standardserverinstanz ist *instance_name* optional. Bei dem Instanznamen wird die Groß-/Kleinschreibung berücksichtigt. In einer benannten Serverinstanz stimmt der Name dieses Werts mit dem Wert überein, der beim Ausführen von `select ServerProperty(N'InstanceName');` zurückgegeben wird.  
   
  \  
  Ist eine Trennzeichen, das nur bei der Angabe von *instance_name* verwendet wird, um dieses Element von *system_name* oder *FCI_network_name* zu trennen.  
@@ -334,7 +334,7 @@ CREATE AVAILABILITY GROUP group_name
  Gibt den Verbindungstyp an, den die Datenbanken eines bestimmten Verfügbarkeitsreplikats, das die primäre Rolle einnimmt (das heißt, als primäres Replikat dient), von Clients akzeptieren können, z. B.:  
   
  READ_WRITE  
- Verbindungen, bei denen die Verbindungseigenschaft für die Anwendungsabsicht auf **ReadOnly** festgelegt ist, werden nicht zugelassen.  Wenn die Eigenschaft für die Anwendungsabsicht auf **ReadWrite** festgelegt ist oder keine Verbindungseigenschaft für die Anwendungsabsicht festgelegt wurde, wird die Verbindung zugelassen. Weitere Informationen zur Verbindungseigenschaft für die Anwendungsabsicht finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Verbindungen, bei denen die Verbindungseigenschaft für den Anwendungszweck auf **ReadOnly** festgelegt ist, werden nicht zugelassen.  Wenn die Eigenschaft für die Anwendungsabsicht auf **ReadWrite** festgelegt ist oder keine Verbindungseigenschaft für die Anwendungsabsicht festgelegt wurde, wird die Verbindung zugelassen. Weitere Informationen zur Verbindungseigenschaft für die Anwendungsabsicht finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  ALL  
  Für die Datenbanken im primären Replikat sind alle Verbindungen zugelassen. Dies ist das Standardverhalten.  
@@ -413,7 +413,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  Gibt das manuelle Seeding an (Standard). Bei dieser Methode müssen Sie eine Sicherungskopie der Datenbank auf dem primären Replikat erstellen und diese manuell auf dem Replikat/den Replikaten der sekundären Verfügbarkeitsgruppe wiederherstellen.  
   
- LISTENER **´**_dns\_name_**´(** \<listener_option\> **)** definiert einen neuen Verfügbarkeitsgruppenlistener für diese Verfügbarkeitsgruppe. LISTENER ist ein optionales Argument.  
+ LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** definiert einen neuen Verfügbarkeitsgruppenlistener für diese Verfügbarkeitsgruppe. LISTENER ist ein optionales Argument.  
   
 > [!IMPORTANT]
 >  Vor dem Erstellen Ihres ersten Listeners wird dringend empfohlen, den Artikel [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md) zu lesen.  
@@ -473,7 +473,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Informationen zu Einschränkungen bei den AVAILABILITY GROUP-Transact-SQL-Anweisungen finden Sie unter [Übersicht über Transact-SQL-Anweisungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.  
@@ -483,7 +483,7 @@ CREATE AVAILABILITY GROUP group_name
 ### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. Konfigurieren der Sicherung für sekundäre Replikate, flexible Failoverrichtlinien und Verbindungszugriff  
  Im folgenden Beispiel wird eine Verfügbarkeitsgruppe mit dem Namen `MyAg` für die zwei Benutzerdatenbanken `ThisDatabase` und `ThatDatabase` erstellt. In der folgenden Tabelle werden die Werte zusammengefasst, die für die Optionen angegeben wurden, die für die Verfügbarkeitsgruppe als Ganzes festgelegt sind.  
   
-|Gruppenoption|Einstellung|und Beschreibung|  
+|Gruppenoption|Einstellung|BESCHREIBUNG|  
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|Diese automatisierte Sicherungseinstellung gibt an, dass Sicherungen auf einem sekundären Replikat erfolgen sollen, außer wenn das primäre Replikat das einzige Replikat online ist (dies ist das Standardverhalten). Damit die AUTOMATED_BACKUP_PREFERENCE-Einstellung in Kraft tritt, müssen Sicherungsaufträge in Verfügbarkeitsdatenbanken so verfasst werden, dass die automatische Sicherungseinstellung berücksichtigt wird.|  
 |FAILURE_CONDITION_LEVEL|3|Diese Einstellung für die Fehlerbedingungsebene gibt an, dass ein automatisches Failover bei kritischen internen SQL Server-Fehlern initiiert werden soll, z. B. verwaisten Spinlocks, ernsten Schreibzugriffsverletzungen oder zu vielen Sicherungen.|  
@@ -491,7 +491,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Drei Verfügbarkeitsreplikate müssen von den Standardserverinstanzen auf Computern mit der Bezeichnung `COMPUTER01`, `COMPUTER02` und `COMPUTER03` gehostet werden. In der folgenden Tabelle werden die für die Replikatoptionen jedes Replikats angegebenen Werte zusammengefasst.  
   
-|Replikatoption|Einstellung auf `COMPUTER01`|Einstellung auf `COMPUTER02`|Einstellung auf `COMPUTER03`|und Beschreibung|  
+|Replikatoption|Einstellung auf `COMPUTER01`|Einstellung auf `COMPUTER02`|Einstellung auf `COMPUTER03`|BESCHREIBUNG|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
 |ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|In diesem Beispiel weisen die Systeme dieselbe Domäne auf. Daher können die Endpunkt-URLs den Namen des Computersystems als Systemadresse verwenden.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|Zwei der Replikate verwenden den Modus mit synchronem Commit. Nach der Synchronisierung unterstützen sie Failover ohne Datenverlust. Das dritte Replikat verwendet den Verfügbarkeitsmodus mit asynchronem Commit.|  
@@ -574,7 +574,7 @@ GO
  [DROP AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Problembehandlung für die Always On-Verfügbarkeitsgruppenkonfiguration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
 

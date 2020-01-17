@@ -1,6 +1,7 @@
 ---
-title: Synchronisieren eines Abonnements mit der Synchronisierungsverwaltung von Windows | Microsoft-Dokumentation
-ms.custom: ''
+title: Synchronisieren von Abonnements (Synchronisierungsverwaltung von Windows)
+description: In diesem Artikel erfahren Sie, wie Sie Abonnements mithilfe der Synchronisierungsverwaltung von Windows synchronisieren.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 81899227c470ece81f01338e4e873e2f40cd015c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bcdf5cee07666509722a591410431b00f82dc27b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768302"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321454"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Synchronisieren eines Abonnements mit der Synchronisierungsverwaltung von Windows
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "68768302"
   
     -   Klicken Sie auf **Start**, zeigen Sie auf **Programme** oder **Alle Programme**, zeigen Sie auf **Zubehör**, und klicken Sie dann auf **Synchronisieren**.  
   
-    -   Klicken Sie auf **Start**und anschließend auf **Ausführen** . Geben Sie im Dialogfeld **Ausführen**  **mobsync.exe** in the **Öffnen** ein, und klicken Sie dann auf **OK**.  
+    -   Klicken Sie auf **Start**und anschließend auf **Ausführen** . Geben Sie im Dialogfeld **Ausführen** **mobsync.exe** in the **Öffnen** ein, und klicken Sie dann auf **OK**.  
   
 2.  Wählen Sie im Dialogfeld **Zu synchronisierende Objekte** die Abonnements aus, die Sie synchronisieren möchten. Die Abonnements werden unter den auf dem Computer installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen aufgeführt.  
   
@@ -119,6 +120,6 @@ ms.locfileid: "68768302"
 >  Bearbeitungen werden nur dann angewendet, wenn sie zur Zeile gehören, die für die Lösung ausgewählt wurde. Wenn Sie z. B. Bearbeitungen unter **Verleger**vornehmen und dann auf **Abonnenten akzeptieren**klicken, werden die Bearbeitungen verworfen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Interaktive Konfliktlösung](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

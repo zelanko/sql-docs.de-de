@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b943d8e169b589f45c612dccc710e174759ca0ca
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 43820f44e789330ed437c104e385090a8179a2b3
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295649"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947115"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Bereitstellen eines SSIS-Projekts mit C#-Code in einer .NET-App
 
@@ -36,7 +36,7 @@ Mithilfe der Informationen in diesem Schnellstart können Sie auf den folgenden 
 
 -   SQL Server unter Windows
 
--   Azure SQL-Datenbank Weitere Informationen zum Bereitstellen und Ausführen von Paketen in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   Azure SQL-Datenbank. Weitere Informationen zum Bereitstellen und Ausführen von Paketen in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 Dieser Schnellstart enthält keine Anleitung zum Bereitstellen von SSIS-Paketen in SQL Server unter Linux. Weitere Informationen zum Ausführen von Paketen finden Sie unter [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
@@ -50,6 +50,10 @@ Um das Paket in Azure SQL-Datenbank bereitzustellen, rufen Sie die Verbindungsin
 4. Wenn Sie die Anmeldeinformationen für Ihren Azure SQL-Datenbank-Server vergessen, navigieren Sie zur Seite „SQL Datenbank-Server“, damit der Serveradministratorname angezeigt wird. Sie können das Kennwort falls erforderlich zurücksetzen.
 5. Klicken Sie auf **Datenbank-Verbindungszeichenfolgen anzeigen**.
 6. Überprüfen Sie die vollständige **ADO.NET**-Verbindungszeichenfolge. Der Beispielcode kann mithilfe von `SqlConnectionStringBuilder` die Verbindungszeichenfolge mit den von Ihnen angegebenen individuellen Parameterwerten neu erstellen.
+
+## <a name="supported-authentication-method"></a>Unterstützte Authentifizierungsmethode
+
+Weitere Informationen hierzu finden Sie unter [Authentifizierungsmethoden im Bereitstellungs-Assistenten](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="create-a-new-visual-studio-project"></a>Erstellen eines neuen Visual Studio-Projekts
 
@@ -136,7 +140,7 @@ namespace deploy_ssis_project
     - [Deploy an SSIS package with PowerShell (Bereitstellen eines SSIS-Pakets mit PowerShell)](ssis-quickstart-deploy-powershell.md)
 - Führen Sie ein bereitgestelltes Paket aus. Für die Ausführung eines Pakets können Sie aus mehreren Tools und Sprachen auswählen. Weitere Informationen finden Sie in den folgenden Artikeln:
     - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md) (Ausführen eines SSIS-Pakets mit SSMS)
-    - [Run an SSIS package with Transact-SQL (SSMS) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
+    - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])
     - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])
     - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md) (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)
     - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md) (Ausführen eines SSIS-Pakets mit PowerShell)

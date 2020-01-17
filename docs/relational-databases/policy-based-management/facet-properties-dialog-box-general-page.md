@@ -1,6 +1,7 @@
 ---
-title: Dialogfeld „Facet-Eigenschaften“, Seite „Allgemein“ | Microsoft-Dokumentation
-ms.custom: ''
+title: Dialogfeld „Eigenschaften des Facets“, Seite „Allgemein“
+description: In diesem Artikel wird die Seite „Allgemein“ des Dialogfelds „Eigenschaften des Facets“ für die richtlinienbasierte Verwaltung in SQL Server Management Studio (SSMS) beschrieben.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 788240d2c6fef4bd080af3d18a6a41453ecc27a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 83eacf49b6653f7faba016c9f07a7adb88a09cb1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087284"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557975"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Dialogfeld 'Facet-Eigenschaften', Seite 'Allgemein'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieses Dialogfelds können Sie die Eigenschaften eines Facets der richtlinienbasierten Verwaltung anzeigen. Jedes Facet kann auf ein oder mehrere Zieltypen angewendet werden, z. B.: auf Server, Datenbank oder Tabelle. Mit dieser Seite können Sie anzeigen, welche Zieltypen sich auf dieses Facet beziehen. Die Eigenschaften eines Facets werden bei der Erstellung des Facets definiert und können mit dieser Seite nicht geändert werden.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Beschreibung**  
  Liefert eine allgemeine Beschreibung des Facets.  
   

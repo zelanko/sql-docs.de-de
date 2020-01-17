@@ -1,6 +1,7 @@
 ---
-title: Bestimmen von Nutzungsstatistiken und der Leistung von Ansichten mit DMV
+title: 'DMVs: Verwendungsstatistiken und der Leistung von Sichten'
 description: Bestimmen von Nutzungsstatistiken und der Leistung von Ansichten mit DMV
+ms.custom: seo-dt-2019
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -8,17 +9,17 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e80ba0a8252881b7447dda721f02fc9c3e545917
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986671"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165886"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Bestimmen von Nutzungsstatistiken und der Leistung von Ansichten mit DMV
 Dieser Artikel behandelt Methoden und Skripts, mit denen Sie Informationen zur **Leistung von Abfragen, die Sichten verwenden** abrufen können. Der Zweck dieser Skripts besteht darin, Indikatoren für die Nutzung und Leistung verschiedener Sichten in einer Datenbank zu liefern. 
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+## <a name="sysdm_exec_query_optimizer_info"></a>sys.dm_exec_query_optimizer_info
 Die dynamische Verwaltungssicht (DMV) [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) stellt Statistiken zu den Optimierungen durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer bereit. Diese Werte sind kumulativ und werden erfasst, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird. Weitere Informationen zum Abfrageoptimierer finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md).   
 
 Der common_table_expression (CTE, allgemeiner Tabellenausdruck) unten verwendet diese DMV, um Informationen zur Workload bereitzustellen, z.B. den Prozentsatz der Abfragen, die auf eine Sicht verweisen. Die von dieser Abfrage zurückgegebenen Ergebnisse deuten an sich nicht auf ein Leistungsproblem hin, sondern weisen ggf. auf zugrunde liegende Probleme hin, wenn sie mit Benutzerbeschwerden über langsame Abfragen kombiniert werden. 
@@ -164,7 +165,7 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+## <a name="sysdmv_exec_cached_plans"></a>sys.dmv_exec_cached_plans
 Die letzte Abfrage stellt mithilfe der DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) Informationen zu unbenutzte Ansichten bereit. Der Ausführungsplancache ist jedoch dynamisch und die Ergebnisse können variieren. Führen Sie diese Abfrage daher im Laufe der Zeit aus, um festzustellen, ob eine Ansicht tatsächlich verwendet wird. 
 
 ```sql
@@ -192,5 +193,5 @@ WHERE
 GO
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Dynamische Verwaltungssichten und -funktionen](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 

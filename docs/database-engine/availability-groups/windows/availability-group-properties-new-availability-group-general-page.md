@@ -1,8 +1,8 @@
 ---
-title: 'Eigenschaften von Verfügbarkeitsgruppen: Neue Verfügbarkeitsgruppen (Seite „Allgemein“)'
+title: Seite „Allgemein“ (Dialogfelder „Neue Verfügbarkeitsgruppe“ und „Eigenschaften der Verfügbarkeitsgruppe“)
 titleSuffix: SQL Server
-description: Eine Beschreibung der verschiedenen Eigenschaften finden Sie auf der Seite „Allgemein“ im Assistenten „Neue Verfügbarkeitsgruppe“ in SQL Server Management Studio.
-ms.custom: seodec18
+description: In diesem Artikel werden die verschiedenen Eigenschaften beschrieben, die Sie auf der Seite „Allgemein“ der Dialogfelder „Neue Verfügbarkeitsgruppe“ und „Eigenschaften der Verfügbarkeitsgruppe“ in SQL Server Management Studio (SSMS) finden.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0f5e7c7ad7fe916b2203b2d1815e50602d30e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f379d55d2728d19a3321e99b342d8597622a6fc0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934870"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254081"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Eigenschaften von Verfügbarkeitsgruppen: Neue Verfügbarkeitsgruppen (Seite „Allgemein“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67934870"
   
 -   [Anzeigen von Verfügbarkeitsgruppeneigenschaften &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
   
--   [Verwenden des Always On-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Name der Verfügbarkeitsgruppe**  
@@ -38,10 +38,10 @@ ms.locfileid: "67934870"
  **Database Name**  
  Name einer Datenbank, die der Verfügbarkeitsgruppe hinzugefügt wurde.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Klicken Sie, um der Verfügbarkeitsgruppe eine Datenbank hinzuzufügen.  
   
- **Entfernen**  
+ **Remove**  
  Klicken Sie, um eine ausgewählte Datenbank aus der Verfügbarkeitsgruppe zu entfernen.  
   
 ## <a name="availability-replicas"></a>Verfügbarkeitsreplikate  
@@ -49,10 +49,10 @@ ms.locfileid: "67934870"
  Entspricht dem Servernamen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz, die dieses Replikat hostet, sowie bei einer nicht standardmäßigen Instanz dem Instanznamen.  
   
  **Rolle**  
- **Primär**  
+ **Primärer Server/verwaltete Instanz**  
  Derzeit das primäre Replikat.  
   
- **Secondary**  
+ **Sekundärer Server/verwaltete Instanz**  
  Derzeit ein sekundäres Replikat.  
   
  **Wird aufgelöst**  
@@ -72,7 +72,7 @@ ms.locfileid: "67934870"
  **Failovermodus**  
  Der Failovermodus des Replikats. Folgende Werte sind möglich:  
   
- **Automatic**  
+ **Automatisch**  
  Automatisches Failover. Das Replikat ist ein Ziel für automatische Failover. Diese Option wird nur unterstützt, wenn der Verfügbarkeitsmodus auf synchrone Commits festgelegt wird.  
   
  **Manuell**  
@@ -96,7 +96,7 @@ ms.locfileid: "67934870"
  **Nur beabsichtigte Lesevorgänge**  
  Es sind nur direkte, schreibgeschützte Verbindungen mit sekundären Datenbanken dieses Replikats zulässig. Die sekundären Datenbanken sind alle für Lesezugriff verfügbar.  
   
- **ja**  
+ **Ja**  
  Alle Verbindungen zu sekundären Datenbanken dieses Replikats sind zugelassen, aber nur für Lesezugriff. Die sekundären Datenbanken sind alle für Lesezugriff verfügbar.  
   
  **Sitzungstimeout (Sekunden)**  
@@ -105,13 +105,13 @@ ms.locfileid: "67934870"
  **Endpunkt-URL**  
  Die URL des Endpunkts. Informationen über das Format dieser URLs finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Klicken Sie, um ein sekundäres Replikat zur Verfügbarkeitsgruppe hinzuzufügen.  
   
- **Entfernen**  
+ **Remove**  
  Klicken Sie, um ein sekundäres Replikat aus der Verfügbarkeitsgruppe zu entfernen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

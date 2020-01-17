@@ -1,7 +1,7 @@
 ---
 title: Azure Feature Pack für Integration Services (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/17/2019
+ms.date: 12/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e6531e05a3f800bbd4c1563c53c4b4d18eb0eea
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659586"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329952"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack für Integration Services (SSIS)
 
@@ -50,7 +50,7 @@ Die Downloadseiten enthalten auch Informationen zu erforderlichen Komponenten. S
     
     -   [Azure Storage-Verbindungs-Manager](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
-    -   [Azure-Abonnementverbindungs-Manager](../integration-services/connection-manager/azure-subscription-connection-manager.md)
+    -   [Verbindungs-Manager für Azure-Abonnements](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
 -   Aufgaben
 
@@ -66,7 +66,7 @@ Die Downloadseiten enthalten auch Informationen zu erforderlichen Komponenten. S
 
     -   [Azure HDInsight-Delete Cluster-Task](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
-    -   [Azure HDInsight Hive-Task](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Hive-Aufgabe in Azure HDInsight](../integration-services/control-flow/azure-hdinsight-hive-task.md)
 
     -   [Azure HDInsight Pig-Task](../integration-services/control-flow/azure-hdinsight-pig-task.md)
 
@@ -100,8 +100,8 @@ Wenn Sie TLS 1.2 verwenden möchten, fügen Sie einen `REG_DWORD`-Wert mit dem N
 
 ## <a name="dependency-on-java"></a>Abhängigkeit von Java
 
-Java ist erforderlich, um ORC/Parquet-Dateiformate mit Azure Data Lake Store/Flatfile-Connectors zu verwenden.  
-Die Architektur (32/64 Bit) des Java-Builds muss mit der der zu verwendenden SSIS-Runtime übereinstimmen.
+Java ist erforderlich, um ORC-/Parquet-Dateiformate mit Azure Data Lake Store/flexiblen Dateiconnectors zu verwenden.  
+Die Architektur (32 oder 64 Bit) des Java-Builds muss mit der zu verwendenden SSIS-Runtime übereinstimmen.
 Die folgenden Java-Builds wurden getestet.
 
 - [OpenJDK 8u192 für Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
@@ -119,6 +119,13 @@ Die folgenden Java-Builds wurden getestet.
 7. Klicken Sie auf **OK**, um das Dialogfeld **New System Variable** (Neue Systemvariable) zu schließen.
 8. Klicken Sie auf **OK**, um das Dialogfeld **Umgebungsvariablen** zu schließen.
 9. Klicken Sie auf **OK**, um das Dialogfeld **Systemeigenschaften** zu schließen.
+
+> [!TIP]
+> Wenn Sie das Parquet-Format verwenden und die Fehlermeldung "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**" (Beim Aufrufen von Java ist ein Fehler aufgetreten. Meldung: java.lang.OutOfMemoryError:Java heap space) auftritt, können Sie die Umgebungsvariable *`_JAVA_OPTIONS`* hinzufügen, um die minimale/maximale Heapgröße für JVM anzupassen.
+>
+>![JVM-Heap](media/azure-feature-pack-jvm-heap-size.png)
+>
+> Beispiel: Legen Sie für die Variable *`_JAVA_OPTIONS`* den Wert *`-Xms256m -Xmx16g`* fest. Das Flag „Xms“ gibt den anfänglichen Speicherzuweisungspool für eine Java Virtual Machine (JVM) an, während Xmx den maximalen Speicherzuweisungspool angibt. Das bedeutet, dass die JVM mit einer Speichergröße von *`Xms`* gestartet wird und eine maximale Speichergröße von *`Xmx`* verwenden kann. Die Standardwerte sind mindestens 64 MB und maximal 1 GB.
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Einrichten des Zulu OpenJDK in Azure-SSIS Integration Runtime
 
@@ -139,6 +146,13 @@ Als Einstiegspunkt löst `main.cmd` die Ausführung des PowerShell-Skripts `inst
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> Wenn Sie das Parquet-Format verwenden und die Fehlermeldung "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**" (Beim Aufrufen von Java ist ein Fehler aufgetreten. Meldung: java.lang.OutOfMemoryError:Java heap space) auftritt, können Sie einen Befehl in *`main.cmd`* hinzufügen, um die minimale/maximale Heapgröße für JVM anzupassen. Beispiel:
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> Das Flag „Xms“ gibt den anfänglichen Speicherzuweisungspool für eine Java Virtual Machine (JVM) an, während Xmx den maximalen Speicherzuweisungspool angibt. Das bedeutet, dass die JVM mit einer Speichergröße von *`Xms`* gestartet wird und eine maximale Speichergröße von *`Xmx`* verwenden kann. Die Standardwerte sind mindestens 64 MB und maximal 1 GB.
 
 **install_openjdk.ps1**
 
@@ -178,7 +192,7 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
-## <a name="release-notes"></a>Versionsanmerkungen
+## <a name="release-notes"></a>Versionsinformationen
 
 ### <a name="version-1160"></a>Version 1.16.0
 

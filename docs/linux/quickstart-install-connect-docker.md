@@ -1,7 +1,7 @@
 ---
-title: Erste Schritte mit Linux-Containern von SQL Server in Docker
-titleSuffix: SQL Server
+title: 'Docker: Installieren von Containern für SQL Server für Linux'
 description: In diesem Schnellstart wird erläutert, wie Sie die Containerimages von SQL Server 2017 und 2019 mit Docker ausführen können. Anschließend erstellen Sie mit dem Hilfsprogramm „sqlcmd“ eine Datenbank und fragen diese ab.
+ms.custom: seo-lt-2019
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -9,17 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sqlfreshmay19
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 29a7905f70446f79d27e9766488e536ccd1c0c91
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 40c1573fb16bbf6d7cdbb98a168dcda064b59087
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531375"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558673"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Schnellstart: Ausführen von SQL Server-Containerimages mit Docker
 
@@ -31,7 +30,7 @@ ms.locfileid: "73531375"
 In diesem Schnellstart wird Docker verwendet, um das SQL Server 2017-Containerimage [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) mithilfe von Pull zu übertragen und auszuführen. Stellen Sie anschließend eine Verbindung mit **sqlcmd** her, um Ihre erste Datenbank zu erstellen und Abfragen auszuführen.
 
 > [!TIP]
-> Wenn Sie SQL Server 2019-Container erstellen möchten, erhalten Sie weitere Informationen in der [SQL Server 2019-Version dieses Artikels](quickstart-install-connect-docker.md?view=sql-server-linux-ver15).
+> Wenn Sie SQL Server 2019-Container erstellen möchten, erhalten Sie in der [SQL Server 2019-Version dieses Artikels](quickstart-install-connect-docker.md?view=sql-server-linux-ver15) weitere Informationen.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -45,11 +44,11 @@ In diesem Schnellstart wird Docker verwendet, um das SQL Server 2019-Containerim
 
 Dieses Image enthält SQL Server für Linux (basierend auf Ubuntu 16.04). Es kann unter Linux mit der Docker-Engine 1.8 und höher und in Docker für Mac bzw. Windows verwendet werden. In diesem Schnellstart liegt der Fokus auf der Verwendung von SQL Server auf dem **linux**-Image. Das Windows-Image wird hier zwar nicht behandelt, aber auf der [Docker-Hubseite zu „mssql-server-windows-developer“](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) erhalten Sie weitere Informationen.
 
-## <a id="requirements"></a> Erforderliche Komponenten
+## <a id="requirements"></a> Voraussetzungen
 
 - Docker-Engine 1.8 und höher auf unterstütztem Linux-Betriebssystem oder Docker für Mac bzw. Windows. Weitere Informationen finden Sie unter [Install Docker (Installieren von Docker)](https://docs.docker.com/engine/installation/).
 - Docker-Speichertreiber **overlay2**. Dies ist die Standardeinstellung für die meisten Benutzer. Wenn Sie feststellen, dass Sie diesen Speichertreiber nicht verwenden und wechseln müssen, finden Sie weitere Informationen und Warnungen in der [Docker-Dokumentation zur Konfiguration von „overlay2“](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
-- Mindestens 2 GB freier Speicherplatz auf dem Datenträger
+- Mindestens 2GB freier Speicherplatz auf dem Datenträger.
 - Mindestens 2GB RAM.
 - [Systemanforderungen von SQL Server unter Linux](sql-server-linux-setup.md#system)
 
@@ -124,7 +123,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
 
    In der folgenden Tabelle finden Sie Beschreibungen der Parameter des vorangegangenen Beispiels für `docker run`:
 
-   | Parameter | und Beschreibung |
+   | Parameter | BESCHREIBUNG |
    |-----|-----|
    | **-e „ACCEPT_EULA = Y“** |  Legen Sie für die Variable **ACCEPT_EULA** einen beliebigen Wert fest, um Ihre Zustimmung zum [End-User Licensing Agreement (Benutzerlizenzvertrag)](https://go.microsoft.com/fwlink/?LinkId=746388) zu geben. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
    | **-e „SA_PASSWORD=\<YourStrong@Passw0rd\>“** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
@@ -243,7 +242,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
 
    In der folgenden Tabelle finden Sie Beschreibungen der Parameter des vorangegangenen Beispiels für `docker run`:
 
-   | Parameter | und Beschreibung |
+   | Parameter | BESCHREIBUNG |
    |-----|-----|
    | **-e „ACCEPT_EULA = Y“** |  Legen Sie für die Variable **ACCEPT_EULA** einen beliebigen Wert fest, um Ihre Zustimmung zum [End-User Licensing Agreement (Benutzerlizenzvertrag)](https://go.microsoft.com/fwlink/?LinkId=746388) zu geben. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
    | **-e „SA_PASSWORD=\<YourStrong@Passw0rd\>“** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
@@ -424,7 +423,7 @@ Führen Sie nun eine Abfrage zum Zurückgeben von Daten aus der `Inventory`-Tabe
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-2. Führen Sie den Befehl aus:
+2. Führen Sie den folgenden Befehl aus:
 
    ```sql
    GO

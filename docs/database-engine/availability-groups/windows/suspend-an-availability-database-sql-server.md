@@ -1,6 +1,7 @@
 ---
-title: Anhalten einer Verfügbarkeitsdatenbank (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Anhalten einer Verfügbarkeitsdatenbank
+description: Hier erfahren Sie, wie Sie die Datenverschiebung für eine Datenbank in einer Always On-Verfügbarkeitsgruppe über SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) oder PowerShell anhalten können.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3be8b96e35dda7d5a1037543d750b2ccd020e64
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517960"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251274"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Anhalten einer Verfügbarkeitsdatenbank (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "72517960"
   
      [Einschränkungen](#Restrictions)  
   
-     [Erforderliche Komponenten](#Prerequisites)  
+     [Voraussetzungen](#Prerequisites)  
   
      [Empfehlungen](#Recommendations)  
   
@@ -64,7 +65,7 @@ ms.locfileid: "72517960"
 ###  <a name="Restrictions"></a> Einschränkungen  
  Ein SUSPEND-Befehl gibt einen Wert zurück, sobald es vom Replikat akzeptiert wurde, das die Zieldatenbank hostet. Das Anhalten der Datenbank ist jedoch dadurch asynchron.  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Sie müssen mit der Serverinstanz verbunden sein, die die Datenbank hostet, die angehalten werden soll. Um eine primäre Datenbank und die entsprechenden sekundären Datenbanken anzuhalten, stellen Sie eine Verbindung mit der Serverinstanz her, die das primäre Replikat hostet. Um eine sekundäre Datenbank anzuhalten und die primäre Datenbank verfügbar zu lassen, stellen Sie eine Verbindung mit dem sekundären Replikat her.  
   
 ###  <a name="Recommendations"></a> Empfehlungen  

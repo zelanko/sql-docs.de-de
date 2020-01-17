@@ -1,6 +1,7 @@
 ---
-title: Richtige Überlappung von „Affinity Mask“ und „Affinity I/O Mask“ | Microsoft-Dokumentation
-ms.custom: ''
+title: Richtlinie für richtige Überlappung der Affinitätsmaske und E/A-Affinitätsmaske
+description: Informieren Sie sich über das Aktivieren einer Richtlinie, die überprüft, ob eine SQL Server-Instanz über einen oder mehrere Prozessoren verfügt, die sowohl für Affinitätsmaske als auch für die E/A-Affinitätsmaske für die richtlinienbasierte Verwaltung in SQL Server verwendet werden.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4864bd6c5f1f34843c9e44c3cf3c2e72777f13b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b225710aaadf3ea605e3cffd91a5a4fea2a51e62
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109761"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557792"
 ---
-# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Richtige Überlappung von „Affinity Mask“ und „Affinity I/O Mask“
+# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Correct Affinity Mask and Affinity Input and Output Mask Overlap
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Diese Regel überprüft, ob die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über einen oder mehrere Prozessoren verfügt, die sowohl für die Verwendung mit der Option Affinity Mask als auch mit der Option Affinity I/O Mask zugeordnet wurde. Auf einem Computer, der über einen oder mehrere Prozessoren verfügt, bestimmen die Optionen Affinity Mask und Affinity I/O Mask, welche CPUs von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden. Das Aktivieren einer CPU mit den beiden Optionen Affinity Mask und Affinity I/O Mask kann die Leistung beeinträchtigen, da die Prozessoren übermäßig beansprucht werden.  
   

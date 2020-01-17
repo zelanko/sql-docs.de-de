@@ -1,6 +1,8 @@
 ---
-title: DENY (Berechtigungen für Datenbankprinzipal) (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: DENY – Berechtigungen für Datenbankprinzipal
+description: Verweigert Berechtigungen für einen Datenbankbenutzer, eine Datenbankrolle oder Anwendungsrolle.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fddca390aa40d36b126cf113c6b8f56bd42f1131
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3e9cb1d12dd65b813ae7cc6139a1d48925ab05f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982517"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244582"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (Berechtigungen für Datenbankprinzipal) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.locfileid: "73982517"
   Verweigert Berechtigungen, die einem Datenbankbenutzer, einer Datenbankrolle oder Anwendungsrolle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt wurden.  
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -76,7 +78,7 @@ DENY permission [ ,...n ]
  Gibt die Klasse und den Namen der Rolle an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer ( **::** ) ist erforderlich.  
   
  APPLICATION ROLE ::*application_role*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gibt die Klasse und den Namen der Anwendungsrolle an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer ( **::** ) ist erforderlich.  
   
@@ -93,7 +95,7 @@ DENY permission [ ,...n ]
  Gibt eine Datenbankrolle an.  
   
  *Application_role*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gibt eine Anwendungsrolle an.  
   
@@ -112,7 +114,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="database-user-permissions"></a>Berechtigungen für Datenbankbenutzer  
  Ein Datenbankbenutzer ist ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für einen Datenbankbenutzer verweigert werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
@@ -172,7 +174,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Verweigern der IMPERSONATE-Berechtigung eines Benutzers für eine Anwendungsrolle  
  Im folgenden Beispiel wird die `IMPERSONATE`-Berechtigung für den Benutzer `HamithaL` der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Anwendungsrolle `AccountsPayable17` verweigert.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  

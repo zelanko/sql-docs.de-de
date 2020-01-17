@@ -1,5 +1,5 @@
 ---
-title: Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP | Microsoft-Dokumentation
+title: 'Nicht unterstützte Features: In-Memory-OLTP'
 ms.custom: ''
 ms.date: 05/29/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 720b10e5f4cd7c7ba5676f9dddc2f64e632d64cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912134"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412514"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktio
 | Replikation | Replikationskonfigurationen, die keine Transaktionsreplikation in speicheroptimierten Tabellen von Abonnenten darstellen, sind mit Tabellen oder Ansichten, die auf speicheroptimierte Tabellen verweisen, nicht kompatibel.<br /><br />Die Replikation mit sync_mode='database snapshot' wird bei Vorhandensein speicheroptimierter Dateigruppen nicht unterstützt.<br /><br />Weitere Informationen finden Sie unter [Replikation mit Abonnenten von speicheroptimierten Tabellen](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
 |Spiegelung|Die Datenbankspiegelung wird für Datenbanken mit einer MEMORY_OPTIMIZED_DATA-Dateigruppe nicht unterstützt. Weitere Informationen zur Spiegelung finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Protokollneuerstellung|Die Neuerstellung des Protokolls, entweder durch Anfügen oder mithilfe von ALTER DATABASE, wird für Datenbanken mit einer MEMORY_OPTIMIZED_DATA-Dateigruppe nicht unterstützt.|  
-|Verbindungsserver|Sie können auf verknüpfte Server nicht in der gleichen Abfrage oder Transaktion als speicheroptimierte Tabellen zugreifen. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbank-Engine &#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
+|Verknüpfter Server|Sie können auf verknüpfte Server nicht in der gleichen Abfrage oder Transaktion als speicheroptimierte Tabellen zugreifen. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbank-Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |Massenprotokollierung|Unabhängig vom Wiederherstellungsmodell der Datenbank werden alle Vorgänge in dauerhaften speicheroptimierten Tabellen immer vollständig protokolliert.|  
 |Minimale Protokollierung|Die minimale Protokollierung wird für speicheroptimierte Tabellen nicht unterstützt. Weitere Informationen zur minimalen Protokollierung finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) und [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
 |Änderungsnachverfolgung|Die Änderungsnachverfolgung kann für eine Datenbank mit In-Memory-OLTP-Objekten nicht aktiviert werden. |
@@ -51,7 +51,7 @@ Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktio
 Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unterstützt. In der folgenden Tabelle werden unterstützte Szenarien und entsprechende Einschränkungen beschrieben. (Siehe auch [Datenbankübergreifende Abfragen](../../relational-databases/in-memory-oltp/cross-database-queries.md).)  
 
 
-|Datenbanken|Zulässig|und Beschreibung|  
+|Datenbanken|Zulässig|BESCHREIBUNG|  
 |---------------|-------------|-----------------|  
 | Benutzerdatenbanken, **Modell**- und **msdb**-Datenbanken | Nein | In den meisten Fällen werden datenbankübergreifende Abfragen und Transaktionen *nicht* unterstützt.<br /><br />Ein Abfrage kann nicht auf andere Datenbanken zugreifen, wenn die Abfrage eine speicheroptimierte Tabelle oder eine nativ kompilierte gespeicherte Prozedur verwendet. Diese Einschränkung gilt für Transaktionen und Abfragen.<br /><br />Ausgenommen sind die Systemdatenbanken **tempdb** und **master**. Hier steht die **master**-Datenbank nur für den schreibgeschützten Zugriff zur Verfügung. |
 | Datenbank **Resource**, **tempdb** | Ja | Bei einer Transaktion, die speicherinterne OLTP-Objekte betrifft, können die Systemdatenbanken **Resource** und **tempdb** ohne zusätzliche Einschränkungen verwendet werden.
@@ -63,8 +63,8 @@ Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unte
   
 - Keysetgesteuerte und dynamische Cursor für Abfragen, die auf speicheroptimierte Tabellen zugreifen. Diese Cursor werden auf "static" und "read-only" heruntergestuft.  
   
-- Das Verwenden von **MERGE INTO** _ziel_, wobei *ziel* eine speicheroptimierte Tabelle ist, wird nicht unterstützt.
-    - **MERGE USING** _quelle_ wird für speicheroptimierte Tabellen unterstützt.  
+- Das Verwenden von **MERGE INTO** _target_, wobei *target* eine speicheroptimierte Tabelle ist, wird nicht unterstützt.
+    - **MERGE USING** _source_ wird für speicheroptimierte Tabellen unterstützt.  
   
 - Der Datentyp ROWVERSION (TIMESTAMP) wird nicht unterstützt. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL &#41;](../../t-sql/queries/from-transact-sql.md).
   

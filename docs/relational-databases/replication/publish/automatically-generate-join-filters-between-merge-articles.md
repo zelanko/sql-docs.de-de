@@ -1,6 +1,7 @@
 ---
-title: Automatisches Generieren einer Reihe von Joinfiltern zwischen Mergeartikeln | Microsoft-Dokumentation
-ms.custom: ''
+title: Automatisches Generieren von Verknüpfungsfiltern (Merge)
+description: In diesem Artikel wird erläutert, wie Sie auf der Seite „Tabellenzeilen filtern“ des Assistenten für neue Veröffentlichungen automatisch mehrere Verknüpfungsfilter für eine Mergeveröffentlichung in SQL Server Management Studio (SSMS) erstellen.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b3d21e2dcecf965e82ea5a88a51d6eb64ebfb88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907975"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321278"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>Automatisches Generieren einer Reihe von Joinfiltern zwischen Mergeartikeln
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.locfileid: "67907975"
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>So ändern Sie einen automatisch generierten Filter  
   
-1.  Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Tabellenzeilen filtern** oder im Dialogfeld **Veröffentlichungseigenschaften –** Veröffentlichung> **auf der Seite \<Zeilen filtern** im Bereich **Gefilterte Tabellen** einen Filter aus, und klicken Sie dann auf **Bearbeiten**.  
+1.  Wählen Sie auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Filterzeilen** von **Veröffentlichungseigenschaften - \<Veröffentlichung>** einen Filter im Bereich **gefilterte Tabellen**, und klicken Sie dann auf **Bearbeiten**.  
   
 2.  Ändern Sie den Filter im Dialogfeld **Filter bearbeiten** oder **Join bearbeiten** .  
   
@@ -78,10 +79,10 @@ ms.locfileid: "67907975"
   
 ### <a name="to-delete-a-filter-that-was-automatically-generated"></a>So löschen Sie einen automatisch generierten Filter  
   
-1.  Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Tabellenzeilen filtern** oder im Dialogfeld **Veröffentlichungseigenschaften –** Veröffentlichung> **auf der Seite \<Zeilen filtern** im Bereich **Gefilterte Tabellen** einen Filter aus, und klicken Sie dann auf **Löschen**.  
+1.  Wählen Sie auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder der Seite **Filterzeilen** von **Veröffentlichungseigenschaften - \<Veröffentlichung>** einen Filter im Bereich **gefilterte Tabellen**, und klicken Sie dann auf **Löschen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Festlegen oder Ändern der Spaltensortierung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,44 +13,78 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d49dbce19b0d2c7ce1fa1337eb6cbdc58da08f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0880ce366c2db15f7e751c9493bebf5f97d4240a
+ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140859"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74908706"
 ---
 # <a name="set-or-change-the-column-collation"></a>Festlegen oder Ändern der Spaltensortierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Sie können die Datenbanksortierung für **char**-, **varchar**-, **text**-, **nchar**-, **nvarchar**- und **ntext** -Daten überschreiben, indem Sie eine andere Sortierung für eine bestimmte Spalte einer Tabelle angeben und dann eine der folgenden Optionen verwenden:  
   
--   Die COLLATE-Klausel von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) und [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Beispiel:  
+-   Die COLLATE-Klausel von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) und [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) (wie in den folgenden Beispielen) 
+
+    -   **Direkte Konvertierung:** Orientieren Sie sich an einer der folgenden Tabellen:
+
+        ```sql
+        -- NVARCHAR column is encoded in UTF-16 because a supplementary character enabled collation is used
+        CREATE TABLE dbo.MyTable (CharCol NVARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC);
+
+        -- VARCHAR column is encoded the Latin code page and therefore is not Unicode capable
+        CREATE TABLE dbo.MyTable (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI);
+        ```
+
+        Sie können die Spalte direkt in UTF-8 konvertieren, indem Sie eine `ALTER COLUMN`-Anweisung ausführen, die den erforderlichen Datentyp und eine UTF-8-fähige Sortierung festlegt:
+
+        ```sql 
+        ALTER TABLE dbo.MyTable 
+        ALTER COLUMN CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8
+        ```
+
+        Diese Methode lässt sich leicht implementieren, es handelt sich jedoch um einen möglicherweise blockierenden Vorgang, der für große Tabellen und ausgelastete Anwendungen zum Problem werden kann.
+
+    -   **Kopieren und ersetzen:** Orientieren Sie sich an einer der folgenden Tabellen:
+
+        ```sql
+        -- NVARCHAR column is encoded in UTF-16 because a supplementary character enabled collation is used
+        CREATE TABLE dbo.MyTable (CharCol NVARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC);
+        GO
+
+        -- VARCHAR column is encoded using the Latin code page and therefore is not Unicode capable
+        CREATE TABLE dbo.MyTable (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI);
+        GO
+        ```
+
+        Sie können die Spalte in UTF-8 konvertieren, indem Sie die Daten in eine neue Tabelle kopieren, in der für die Zielspalte bereits der erforderliche Datentyp und eine UTF-8-fähige Sortierung festgelegt sind. Anschließend können Sie die alte Tabelle ersetzen:
+
+        ```sql
+        CREATE TABLE dbo.MyTableNew (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8);
+        GO
+        INSERT INTO dbo.MyTableNew 
+        SELECT * FROM dbo.MyTable;
+        GO
+        DROP TABLE dbo.MyTable;
+        GO
+        EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable’;
+        GO
+        ```
+
+        Diese Methode ist viel schneller als die direkte Konvertierung, aber die Verarbeitung komplexer Schemas mit vielen Abhängigkeiten (FS, PS, Trigger, DF) und das Synchronisieren des Tabellenendes (wenn die Datenbank gerade verwendet wird) erfordert mehr Planung.
+        
+    Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
   
-    ```  
-    CREATE TABLE dbo.MyTable  
-      (PrimaryKey   int PRIMARY KEY,  
-       CharCol      varchar(10) COLLATE French_CI_AS NOT NULL  
-      );  
-    GO  
-    ALTER TABLE dbo.MyTable ALTER COLUMN CharCol  
-                varchar(10)COLLATE Latin1_General_CI_AS NOT NULL;  
-    GO  
-    ```  
-  
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Ändern von Spalten (Datenbank-Engine)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure).  
   
 -   Die **Column.Collation** -Eigenschaft in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
  Sie können die Sortierung einer Spalte nicht ändern, wenn folgende Objekte aktuell auf die Spalte verweisen:  
   
 -   Eine berechnete Spalte.  
-  
 -   Ein Index.  
-  
--   Verteilungsstatistiken, die entweder automatisch oder mithilfe der CREATE STATISTICS-Anweisung generiert wurden.  
-  
+-   Verteilungsstatistiken, die entweder automatisch oder mithilfe der `CREATE STATISTICS`-Anweisung generiert wurden  
 -   Eine CHECK-Einschränkung.  
-  
 -   Eine FOREIGN KEY-Einschränkung.  
   
  Wenn Sie **tempdb**verwenden, enthält die [COLLATE](~/t-sql/statements/collations.md) -Klausel eine *database_defauls* -Option, mit der angegeben werden kann, dass für eine Spalte einer temporären Tabelle anstelle der Sortierung von **tempdb**die Standardsortierung der aktuellen Benutzerdatenbank für die Verbindung verwendet wird.  
@@ -63,7 +97,7 @@ ms.locfileid: "68140859"
   
  Dies kann zu Problemen hinsichtlich einer Nichtübereinstimmung in Sortierungen zwischen benutzerdefinierten Datenbanken und Systemdatenbankobjekten führen. Eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet z. B. die Latin1_General_CS_AS-Sortierung, und Sie führen die folgenden Anweisungen aus:  
   
-```  
+```sql  
 CREATE DATABASE TestDB COLLATE Estonian_CS_AS;  
 USE TestDB;  
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
@@ -71,7 +105,7 @@ CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );
   
  In diesem System verwendet die **tempdb** -Datenbank die Latin1_General_CS_AS-Sortierung mit Codepage 1252, und `TestDB` und `TestPermTab.Col1` verwenden die `Estonian_CS_AS` -Sortierung mit Codepage 1257. Beispiel:  
   
-```  
+```sql  
 USE TestDB;  
 GO  
 -- Create a temporary table with the same column declarations  
@@ -84,7 +118,7 @@ GO
   
  Im vorherigen Beispiel verwendet die **tempdb** -Datenbank die Latin1_General_CS_AS-Sortierung, und `TestDB` und `TestTab.Col1` verwenden die `Estonian_CS_AS` -Sortierung. Beispiel:  
   
-```  
+```sql  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
@@ -94,7 +128,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
 -   Geben Sie an, dass für die Spalte der temporären Tabelle die Standardsortierung der Benutzerdatenbank und nicht die Standardsortierung von **tempdb**verwendet wird. Auf diese Weise kann die temporäre Tabelle mit ähnlich formatierten Tabellen in mehreren Datenbanken arbeiten, wenn dies in dem System erforderlich ist.  
   
-    ```  
+    ```sql  
     CREATE TABLE #TestTempTab  
        (PrimaryKey int PRIMARY KEY,  
         Col1 nchar COLLATE database_default  
@@ -103,7 +137,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
 -   Geben Sie die richtige Sortierung für die `#TestTempTab` -Spalte an:  
   
-    ```  
+    ```sql  
     CREATE TABLE #TestTempTab  
        (PrimaryKey int PRIMARY KEY,  
         Col1 nchar COLLATE Estonian_CS_AS  

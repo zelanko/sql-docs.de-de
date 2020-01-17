@@ -1,6 +1,7 @@
 ---
-title: Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers | Microsoft-Dokumentation
-ms.custom: ''
+title: Ausgabe von DTA
+description: Zeigen Sie die Ausgabe des Datenbankoptimierungsratgebers (DAT) an, und verwenden Sie sie.
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -25,17 +26,18 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907040"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165483"
 ---
-# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
+# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Wenn der Datenbankoptimierungsratgeber Datenbanken optimiert, erstellt er Zusammenfassungen, Empfehlungen, Berichte und Optimierungsprotokolle. Sie können die Optimierungsprotokollausgabe dazu verwenden, Probleme bei Optimierungssitzungen des Datenbankoptimierungsratgebers zu beheben. Mithilfe der Zusammenfassungen, Empfehlungen und Berichte können Sie bestimmen, ob Sie Optimierungsempfehlungen implementieren möchten oder die Optimierung fortsetzen möchten, bis Sie die Abfrageleistungsverbesserungen erreicht haben, die Sie für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation benötigen. Informationen über die Verwendung des Datenbankoptimierungsratgebers zum Erstellen von Arbeitslasten und zum Optimieren einer Datenbank finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+  Wenn der Datenbankoptimierungsratgeber Datenbanken optimiert, erstellt er Zusammenfassungen, Empfehlungen, Berichte und Optimierungsprotokolle. Sie können die Optimierungsprotokollausgabe dazu verwenden, Probleme bei Optimierungssitzungen des Datenbankoptimierungsratgebers zu beheben. Mithilfe der Zusammenfassungen, Empfehlungen und Berichte können Sie bestimmen, ob Sie Optimierungsempfehlungen implementieren oder die Optimierung fortsetzen möchten, bis Sie die Abfrageleistungsverbesserungen erreicht haben, die Sie für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation benötigen. Informationen über die Verwendung des Datenbankoptimierungsratgebers zum Erstellen von Arbeitslasten und zum Optimieren einer Datenbank finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="View"></a> Anzeigen der Optimierungsausgabe  
  Die folgenden Verfahren beschreiben das Anzeigen von Optimierungsempfehlungen, -zusammenfassungen, -berichten und -protokollen mithilfe der grafischen Benutzeroberfläche (GUI, Graphical User Interface) des Datenbankoptimierungsratgebers. Weitere Informationen zu den Benutzeroberflächenoptionen finden Sie später in diesem Thema unter [Benutzeroberflächenbeschreibungen](#UI) .  
@@ -168,7 +170,7 @@ ms.locfileid: "72907040"
   
 4.  Speichern Sie die Eingabedatei mit der Dateinamenerweiterung **XML**.  
   
-5.  Überprüfen Sie die in Schritt 4 gespeicherte XML-Eingabedatei mit dem XML-Schema des Datenbankoptimierungsratgebers. Bei der Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird dieses Schema unter dem folgenden Pfad installiert:  
+5.  Überprüfen Sie die in Schritt 4 gespeicherte XML-Eingabedatei mit dem XML-Schema des Datenbankoptimierungsratgebers. Bei der Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird dieses Schema unter dem folgenden Pfad installiert:  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
@@ -183,7 +185,7 @@ ms.locfileid: "72907040"
 7.  Wiederholen Sie die Schritte 6 und 7, bis Sie die hypothetische Konfiguration erstellen, mit der die erforderlichen Abfrageleistungsverbesserungen erzielt werden. Dann können Sie die neue Konfiguration implementieren. Weitere Informationen finden Sie unter [Implementieren von Optimierungsempfehlungen](#Implement) weiter oben in diesem Thema.  
   
 ##  <a name="ReviewEvaluateClone"></a> Überprüfen, Auswerten und Klonen von Optimierungssitzungen  
- Der Datenbankoptimierungsratgeber erstellt jeweils eine neue Optimierungssitzung, wenn Sie die Auswirkungen einer Arbeitsauslastung auf die Datenbank(en) analysieren. Sie können den **Sitzungsmonitor** der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers dazu verwenden, alle Optimierungssitzungen anzuzeigen und neu zu laden, die für eine bestimmte Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wurden. Dadurch, dass Ihnen alle vorhandenen Optimierungssitzungen zur Verfügung stehen, werden Ihnen die folgenden Operationen erleichtert: Klonen von Sitzungen auf der Grundlage vorhandener Sitzungen, Bearbeiten bestehender Optimierungsempfehlungen und Auswerten der bearbeiteten Sitzungen mit dem Datenbankoptimierungsratgeber sowie Ausführen von Optimierungen in regelmäßigen Abständen zur Überwachung des physischen Entwurfs der Datenbanken. So können Sie Datenbanken beispielsweise einmal im Monat optimieren.  
+ Der Datenbankoptimierungsratgeber erstellt jeweils eine neue Optimierungssitzung, wenn Sie die Auswirkungen einer Arbeitsauslastung auf die Datenbank(en) analysieren. Sie können den **Sitzungsmonitor** der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers dazu verwenden, alle Optimierungssitzungen anzuzeigen und neu zu laden, die für eine bestimmte Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wurden. Dadurch, dass Ihnen alle vorhandenen Optimierungssitzungen zur Verfügung stehen, werden Ihnen die folgenden Operationen erleichtert: Klonen von Sitzungen auf der Grundlage vorhandener Sitzungen, Bearbeiten bestehender Optimierungsempfehlungen und Auswerten der bearbeiteten Sitzungen mit dem Datenbankoptimierungsratgeber sowie Ausführen von Optimierungen in regelmäßigen Abständen zur Überwachung des physischen Entwurfs der Datenbanken. So können Sie Datenbanken beispielsweise einmal im Monat optimieren.  
   
  Bevor Sie die Optimierungssitzungen für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]überprüfen können, müssen Sie durch das Optimieren von Arbeitsauslastungen mit dem Datenbankoptimierungsratgeber Optimierungssitzungen erstellen. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -251,7 +253,7 @@ ms.locfileid: "72907040"
  Die Spalte **Definition** enthält die Definition der empfohlenen Partition oder des empfohlenen Indexes als einen Link. In den meisten Fällen ist die Spalte für die Anzeige der gesamten Definition zu eng. Klicken Sie auf den Link, um ein Dialogfeld mit der vollständigen Definition und der Schaltfläche **In Zwischenablage kopieren** zu öffnen.  
   
 #### <a name="partition-recommendations"></a>Partitionsempfehlungen  
- **Datenbankname**  
+ **Database Name**  
  Datenbank mit den Objekten, für die Änderungen empfohlen wurden.  
   
  **Empfehlung**  
@@ -309,10 +311,10 @@ ms.locfileid: "72907040"
  **Spätere Ausführung planen**  
  Generiert ein Skript für die Empfehlungen und speichert die Aktionen als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag.  
   
- **Datum**  
+ **Date**  
  Gibt das Datum für die Ausführung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags an, mit dem die Empfehlungen angewendet werden.  
   
- **Uhrzeit**  
+ **Time**  
  Gibt die Uhrzeit für die Ausführung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags an, mit dem die Empfehlungen angewendet werden.  
   
 ### <a name="reports-tab-options"></a>Optionen auf der Registerkarte "Berichte"  
@@ -321,10 +323,10 @@ ms.locfileid: "72907040"
  **Optimierungszusammenfassung**  
  Zeigt eine Zusammenfassung der Empfehlungen des Datenbankoptimierungsratgebers an.  
   
- **Datum**  
+ **Date**  
  Das Datum, an dem der Bericht durch den Datenbankoptimierungsratgeber erstellt wurde.  
   
- **Uhrzeit**  
+ **Time**  
  Die Uhrzeit, zu der der Bericht durch den Datenbankoptimierungsratgeber erstellt wurde.  
   
  **Server**  
@@ -339,7 +341,7 @@ ms.locfileid: "72907040"
  **Arbeitauslastungstabelle**  
  Wird angezeigt, wenn die Arbeitsauslastung eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ist.  
   
- **Arbeitsauslastung**  
+ **Workload**  
  Wird angezeigt, wenn die Arbeitsauslastung aus dem Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]importiert wurde.  
   
  **Maximale Optimierungszeit**  

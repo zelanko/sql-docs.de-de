@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531343"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721556"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Konfigurieren von SQL Server-Containerimages in Docker
 
@@ -35,7 +35,12 @@ Dieses Image enthält SQL Server für Linux (basierend auf Ubuntu 16.04). Es kan
 > In diesem Artikel liegt der Fokus auf dem Image „mssql-sever-linux“. Das Windows-Image wird hier zwar nicht behandelt, aber auf der [Docker Hub-Seite zu „mssql-server-windows“](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) erhalten Sie weitere Informationen.
 
 > [!IMPORTANT]
-> Bevor Sie sich für die Ausführung eines SQL Server-Containers für Anwendungsfälle in der Produktion entscheiden, lesen Sie unsere [Richtlinie zur Unterstützung von SQL Server-Containern](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server), um sicherzustellen, dass Sie mit einer unterstützten Konfiguration arbeiten.
+> Bevor Sie sich für die Ausführung eines SQL Server-Containers für Anwendungsfälle in der Produktion entscheiden, lesen Sie unsere [Richtlinie zur Unterstützung von SQL Server-Containern](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server), um sicherzustellen, dass Sie mit einer unterstützten Konfiguration arbeiten.
+
+Dieses 6-minütige Video enthält eine Einführung in die Ausführung von SQL Server in Containern:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2019-in-Containers/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="pull-and-run-the-container-image"></a>Übertragen mithilfe von Pull und Ausführen von Containerimages
 
@@ -257,7 +262,10 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Mit dieser Methode können Sie die Dateien auch außerhalb von Docker auf dem Host freigeben und anzeigen.
 
 > [!IMPORTANT]
-> Die Hostvolumezuordnung für Docker unter Mac mit dem SQL Server für Linux-Image wird zurzeit nicht unterstützt. Verwenden Sie stattdessen Datenvolumecontainer. Diese Einschränkung gilt nur für das Verzeichnis `/var/opt/mssql`. Das Lesen aus einem bereitgestellten Verzeichnis funktioniert ordnungsgemäß. Sie können beispielsweise ein Hostverzeichnis mithilfe von-v auf einem Mac einbinden und eine Sicherung aus einer BAK-Datei wiederherstellen, die sich auf dem Host befindet.
+> Die Hostvolumezuordnung für **Docker unter Windows** unterstützt derzeit nicht die Zuordnung des kompletten `/var/opt/mssql`-Verzeichnisses. Sie können dem Hostcomputer jedoch ein Unterverzeichnis wie `/var/opt/mssql/data` zuordnen.
+
+> [!IMPORTANT]
+> Die Hostvolumezuordnung für **Docker unter Mac** mit dem SQL Server für Linux-Image wird derzeit nicht unterstützt. Verwenden Sie stattdessen Datenvolumecontainer. Diese Einschränkung gilt nur für das Verzeichnis `/var/opt/mssql`. Das Lesen aus einem bereitgestellten Verzeichnis funktioniert ordnungsgemäß. Sie können beispielsweise ein Hostverzeichnis mithilfe von-v auf einem Mac einbinden und eine Sicherung aus einer BAK-Datei wiederherstellen, die sich auf dem Host befindet.
 
 ### <a name="use-data-volume-containers"></a>Verwenden von Datenvolumecontainern
 
@@ -615,7 +623,7 @@ Führen Sie einen der folgenden Befehle aus, wenn SQL Server keinen Zugriff auf 
 Erteilen Sie die Root-Gruppenberechtigungen für die folgenden Verzeichnisse, damit der SQL Server-Container ohne Root-Berechtigungen Zugriff auf Datenbankdateien hat.
 
 ```bash
-chgroup -R 0 <database file dir>
+chgrp -R 0 <database file dir>
 chmod -R g=u <database file dir>
 ```
 

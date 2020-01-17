@@ -1,6 +1,7 @@
 ---
-title: Ausführen des manuellen Failovers einer Datenbank-Spiegelungssitzung (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: Manuelles Ausführen des Failovers einer Datenbankspiegelung an einen Partner
+description: In diesem Artikel finden Sie eine Anleitung, wie Sie das Failover einer Datenbankspiegelung an einen sekundären Partner mithilfe von Transact-SQL (T-SQL) manuell ausführen.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ddfaec9f9192af98f8b3580554f8c89d757af566
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92f9040cdc8181b1546d7a04e9b0eaf265fc7012
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041743"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822104"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>Ausführen des manuellen Failovers einer Datenbank-Spiegelungssitzung (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68041743"
   
 3.  Führen Sie auf dem Prinzipalserver die folgende Anweisung aus:  
   
-     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *Name der Datenbank* SET PARTNER FAILOVER, wobei *Name der Datenbank* die gespiegelte Datenbank darstellt.  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET PARTNER FAILOVER, wobei *database_name* die gespiegelte Datenbank darstellt.  
   
      Hierdurch wird die sofortige Übertragung des Spiegelservers in die Prinzipalrolle initiiert.  
   

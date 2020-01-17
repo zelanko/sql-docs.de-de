@@ -1,6 +1,7 @@
 ---
-title: Konfigurieren einer SQL Server-Verteilungsdatenbank in einer Verfügbarkeitsgruppe | Microsoft-Dokumentation
-ms.custom: ''
+title: Konfigurieren einer Verteilungsdatenbank in einer Verfügbarkeitsgruppe
+description: In diesem Artikel erfahren Sie, wie Sie die Verteilungsdatenbank für die SQL Server-Replikation mit einer Always On-Verfügbarkeitsgruppe konfigurieren.
+ms.custom: seo-lt-2019
 ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13a883d71262a044555fe3d0a59a945461de426e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d5f721d589354d5e7f4ec970bf0ea086895df129
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908475"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320001"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Einrichten der Verteilungsdatenbank für die Replikation in einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -263,7 +264,7 @@ DIST1 ist das aktuelle primäre Replikat in der Verfügbarkeitsgruppe der `distr
 
 1. Zu diesem Zeitpunkt kann es verwaiste Aufträge geben, die im Zusammenhang mit PUB1 auf DIST2 oder DIST3 stehen. Wann immer ein Failover auf DIST2 und DIST3 eintritt, werden alle verwaisten Aufträge, die zu allen Veröffentlichungen von PUB1 gehören, vom `Monitor and sync replication agent jobs`-Auftrag entfernt.
 
-## <a name="add-subscription"></a>Hinzufügen eines Abonnements
+## <a name="add-subscription"></a>Abonnement hinzufügen
 
 In diesem Beispiel geht es um die ordnungsgemäße Konfiguration der Abonnenteninformationen auf Verteilern. In diesem Beispiel wird ein Abonnent hinzugefügt. DIST1 ist das aktuelle primäre Replikat in der Verfügbarkeitsgruppe und DIST2 und DIST3 die entsprechenden sekundären Replikate. Der Name des Abonnenten lautet SUB.
 

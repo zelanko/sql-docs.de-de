@@ -1,25 +1,25 @@
 ---
-title: 'Lernprogramm: Verwenden der Active Directory-Authentifizierung für SQL Server für Linux'
+title: 'Tutorial: Verwenden der Active Directory-Authentifizierung für SQL Server für Linux'
 titleSuffix: SQL Server
-description: In diesem Tutorial werden die Konfigurationsschritte für die Active Directory-Authentifizierung für SQL Server für Linux beschrieben.
+description: In diesem Tutorial werden die Konfigurationsschritte für die Active Directory-Authentifizierung für SQL Server unter Linux beschrieben.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 12/18/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 69bbeb31f8da4023bd0630ae0d944165407e2dec
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 72a1a554203349e9e6bd8cee43d2a6fe9d093ad8
+ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027329"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755860"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Lernprogramm: Verwenden der Active Directory-Authentifizierung für SQL Server für Linux
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Verwenden der Active Directory-Authentifizierung für SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -41,14 +41,14 @@ Dieses Tutorial umfasst die folgenden Aufgaben:
 Bevor Sie die AD-Authentifizierung konfigurieren können, müssen Sie Folgendes tun:
 
 * Richten Sie einen AD-Domänencontroller (Windows) auf Ihrem Netzwerk ein.  
-* Installieren Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+* Installieren von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 ## <a id="join"></a> Verknüpfen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hosts mit der AD-Domäne
 
-Sie müssen Ihren Linux-Host für SQL Server mit einem AD-Domänencontroller verknüpfen. Informationen dazu finden Sie unter [Verknüpfen von eines Linux-Hosts für SQL Server mit einer Active Directory-Domäne](sql-server-linux-active-directory-join-domain.md).
+Verknüpfen Sie Ihren Linux-Host für SQL Server mit einem Active Directory-Domänencontroller. Informationen dazu finden Sie unter [Verknüpfen von eines Linux-Hosts für SQL Server mit einer Active Directory-Domäne](sql-server-linux-active-directory-join-domain.md).
 
 ## <a id="createuser"></a> Erstellen eines AD-Benutzers (oder -MSA) für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Festlegen eines SPN
 
@@ -74,7 +74,7 @@ Sie müssen Ihren Linux-Host für SQL Server mit einem AD-Domänencontroller ve
    ```
 
    > [!NOTE]
-   > Wenn Sie die Fehlermeldung `Insufficient access rights` erhalten, prüfen Sie zusammen mit Ihrem Domänenadministrator, ob Sie über die nötigen Berechtigungen verfügen, um einen SPN für dieses Konto festzulegen.
+   > Wenn Sie die Fehlermeldung `Insufficient access rights` erhalten, prüfen Sie zusammen mit Ihrem Domänenadministrator, ob Sie über die nötigen Berechtigungen verfügen, um einen SPN für dieses Konto festzulegen. Für das Konto, das zum Registrieren des SPN verwendet wird, benötigen Sie die Schreibberechtigungen für **servicePrincipalName**. Weitere Informationen finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
    >
    > Wenn Sie den TCP-Port später ändern, müssen Sie den Befehl **setspn** noch einmal mit der neuen Portnummer ausführen. Außerdem müssen Sie den neuen SPN zur KEYTAB-Datei des SQL Server-Diensts hinzufügen, indem Sie die im nächsten Abschnitt beschriebenen Schritte ausführen.
 
@@ -82,174 +82,86 @@ Weitere Informationen finden Sie unter [Registrieren eines Dienstprinzipalnamens
 
 ## <a id="configurekeytab"></a> Konfigurieren der KEYTAB-Datei für den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienst
 
-Es gibt zwei Möglichkeiten, KEYTAB-Dateien für den SQL Server-Dienst zu konfigurieren. Sie können entweder ein Computerkonto (User Principal Name, UPN) oder ein verwaltetes Dienstkonto (Managed Service Account, MSA) für die KEYTAB-Konfiguration verwenden. Beide Methoden funktionieren gleich gut. Daher können Sie die Option auswählen, die für Ihre Umgebung am besten geeignet ist.
-
-Für beide Methoden benötigen Sie den SPN, der im vorherigen Schritt erstellt wurde. Dieser muss in der KEYTAB-Datei registriert sein.
-
-So konfigurieren Sie die KEYTAB-Datei für den SQL Server-Dienst:
-
-1. Konfigurieren Sie die [KEYTAB-Einträge für den SPN](#spn) im nächsten Abschnitt.
-
-1. Fügen Sie dann entweder [UPN](#upn)- (Methode 1) oder [MSA](#msa)-Einträge (Methode 2) zur KEYTAB-Datei hinzu. Führen Sie dazu die Schritte aus, die in den entsprechenden Abschnitten beschrieben werden.
+Zum Konfigurieren der AD-Authentifizierung für SQL Server unter Linux benötigen Sie ein AD-Konto (MSA oder AD-Benutzerkonto) sowie den im vorherigen Abschnitt erstellten SPN.
 
 > [!IMPORTANT]
-> Wenn das Kennwort für den UPN bzw. das MSA oder das Kennwort für das Konto geändert wird, dem die SPNs zugewiesen sind, müssen Sie die KEYTAB-Datei mit dem neuen Kennwort und der Schlüsselversionsnummer (Key Version Number, KVNO) aktualisieren. Einige Dienste rotieren die Kennwörter möglicherweise auch automatisch. Überprüfen Sie sämtliche Richtlinien für die Kennwortrotation, die für die betreffenden Konten gelten, und passen Sie geplante Wartungsaktivitäten an diese an, um unerwartete Ausfallzeiten zu vermeiden.
+> Wird das Kennwort für das AD-Konto oder für das Konto, dem die SPN zugewiesen sind, geändert, müssen Sie die KEYTAB-Datei mit dem neuen Kennwort und der Schlüsselversionsnummer (Key Version Number, KVNO) aktualisieren. Einige Dienste rotieren die Kennwörter möglicherweise auch automatisch. Überprüfen Sie sämtliche Richtlinien für die Kennwortrotation, die für die betreffenden Konten gelten, und passen Sie geplante Wartungsaktivitäten an diese an, um unerwartete Ausfallzeiten zu vermeiden.
 
 ### <a id="spn"></a> KEYTAB-Einträge für den SPN
 
 1. Überprüfen Sie die KVNO des AD-Kontos, das Sie im vorherigen Schritt erstellt haben. Normalerweise lautet diese 2, aber es kann auch ein anderer Integerwert sein, wenn Sie das Kennwort des Kontos mehrmals geändert haben. Führen Sie auf dem Hostcomputer für SQL Server die folgenden Befehle aus:
 
+    - In den folgenden Beispielen wird davon ausgegangen, dass sich `user` in der Domäne `@CONTOSO.COM` befindet. Ändern Sie den Benutzer- und Domänennamen in Ihren Benutzer- und Domänennamen.
+
    ```bash
    kinit user@CONTOSO.COM
+   kvno user@CONTOSO.COM
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
    ```
 
    > [!NOTE]
-   > Es kann einige Minuten dauern, bis die SPNs für Ihre Domäne übernommen werden, insbesondere, wenn die Domäne groß ist. Wenn Sie die Fehlermeldung `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM` erhalten, warten Sie einige Minuten, und versuchen Sie es noch mal.  
+   > Es kann einige Minuten dauern, bis die SPNs für Ihre Domäne übernommen werden, insbesondere, wenn die Domäne groß ist. Wenn Sie die Fehlermeldung `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM` erhalten, warten Sie einige Minuten, und versuchen Sie es noch mal.</br></br> Die obigen Befehle funktionieren nur, wenn der Server, wie im vorherigen Abschnitt beschrieben, einer AD-Domäne hinzugefügt wurde.
 
-1. Starten Sie das Tool **ktutil**:
+1. Fügen Sie über [**ktpass**](/windows-server/administration/windows-commands/ktpass) für jeden SPN KEYTAB-Einträge hinzu, indem Sie in der Eingabeaufforderung eines Windows-Computers die folgenden Befehle eingeben:
 
-   ```bash
-   sudo ktutil
-   ```
-
-1. Fügen Sie mithilfe der folgenden Befehle KEYTAB-Einträge für jeden SPN hinzu:
-
-   ```bash
-   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
-   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
-   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
-   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
-   ```
-
-1. Schreiben Sie die Einträge in eine Datei, und beenden Sie dann das Tool ktutil:
+    - `<DomainName>\<UserName>`: Ein MSA oder AD-Benutzerkonto.
+    - `@CONTOSO.COM`: Verwenden Sie Ihren Domänennamen.
+    - `/kvno <#>`: Ersetzen Sie `<#>` durch die KVNO, die Sie in einem vorherigen Schritt erhalten haben.
+    - `<StrongPassword>`: Verwenden Sie ein sicheres Kennwort.
 
    ```bash
-   wkt /var/opt/mssql/secrets/mssql.keytab
-   quit
-   ```
+   ktpass /princ MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   > [!NOTE]
-   > Das Tool **ktutil** überprüft das Kennwort nicht. Vergewissern Sie sich daher, dass Sie es bei entsprechender Aufforderung korrekt eingeben.
+   ktpass /princ MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-### <a id="upn"></a> Option 1: Verwenden des UPN zum Konfigurieren der KEYTAB-Datei
+   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-Fügen Sie mithilfe von **ktutil** das Computerkonto zu Ihrer KEYTAB-Datei. Das Computerkonto (auch als UPN bezeichnet) ist in der Datei **/etc/krb5.keytab** in der Form `<hostname>$@<realm.com>` enthalten (z. B. `sqlhost$@CONTOSO.COM`). Kopieren Sie diese Einträge aus der Datei **/etc/krb5.keytab** in die Datei **mssql.keytab**.
+   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-1. Starten Sie **ktuil** mithilfe des folgenden Befehls:
+   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ```bash
-   sudo ktutil
-   ```
-
-1. Verwenden Sie den Befehl **rkt**, um alle Einträge aus der Datei **/etc/krb5.keytab** zu lesen.
-
-   ```bash
-   rkt /etc/krb5.keytab
-   ```
-
-1. Listen Sie als Nächstes die Einträge auf.
-
-   ```bash
-   list
-   ```
-
-1. Löschen Sie alle Einträge anhand ihrer Slotnummern (nicht der UPN). Löschen Sie einen Eintrag nach dem anderen, indem Sie den folgenden Befehl wiederholen:
-
-   ```bash
-   delent <slot num>
-   ```
-
-   > [!IMPORTANT]
-   > Wenn ein Eintrag gelöscht wird, z. B. Slot 1, rücken alle Werte um einen Platz nach oben. Das heißt: Der Eintrag in Slot 2 wechselt zu Slot 1, wenn der Eintrag in Slot 1 gelöscht wird.
-
-1. Listen Sie die Einträge so lange neu auf, bis nur noch UPN-Einträge übrig sind.
-
-   ```bash
-   list
-   ```
-
-1. Wenn nur noch UPN-Einträge übrig sind, sollten Sie diese Werte an die Datei **mssql.keytab** anfügen:
-
-   ```bash
-   wkt /var/opt/mssql/secrets/mssql.keytab
-   ```
-
-1. Beenden Sie **ktutil**.
-
-   ```bash
-   quit
-   ```
-
-### <a id="msa"></a> Option 2:  Verwenden des MSA zum Konfigurieren der KEYTAB-Datei
-
-Wenn Sie sich für die MSA-Methode entscheiden, müssen Sie die Kerberos-KEYTAB-Datei für SQL Server erstellen. In dieser sollten alle [im ersten Schritt registrierten SPNs](#spn) und die Anmeldeinformationen für das MSA enthalten sein, für das die SPNs registriert sind. 
-
-1. Führen Sie nach dem Erstellen der KEYTAB-Einträge für die SPNs die folgenden Befehle auf einem Linux-Computer aus, der in eine Domäne eingebunden ist:
-
-   ```bash
-   kinit <AD user>
-   kvno <any SPN registered in step 1>
-      <spn>@CONTOSO.COM: kvno = <KVNO>
-   ```
-
-   In diesem Schritt wird die KVNO für das Benutzerkonto angezeigt, das dem SPN als Besitzer zugewiesen ist. Damit dieser Schritt funktioniert, muss der SPN bei seiner Erstellung dem MSA zugewiesen worden sein. Wenn der SPN nicht dem MSA zugewiesen wurde, stammt die angezeigte KVNO vom aktuellen SPN-Besitzerkonto und kann nicht für die Konfiguration verwendet werden.  
-
-1. Starten Sie das Tool **ktutil**:
-
-   ```bash
-   sudo ktutil
-   ```
-
-1. Fügen Sie das MSA mithilfe der folgenden zwei Befehlen hinzu:
-
-   ```bash
-   addent -password -p <MSA> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
-   addent -password -p <MSA> -k <kvno from command above> -e rc4-hmac
-   ```
-
-1. Schreiben Sie die Einträge in eine Datei, und beenden Sie dann das Tool ktutil:
-
-   ```bash
-   wkt /var/opt/mssql/secrets/mssql.keytab
-   quit
-   ```
-
-1. Wenn Sie sich für die MSA-Methode entscheiden, muss mithilfe des Tools **mssql-conf** eine Konfigurationsoption festgelegt werden, um das MSA anzugeben, das beim Zugreifen auf die KEYTAB-Datei verwendet werden soll. Stellen Sie sicher, dass die folgenden Werte in der Datei **/var/opt/mssql/mssql.conf** enthalten sind.
-
-   ```bash
-   sudo mssql-conf set network.privilegedadaccount <MSA_Name>
+   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
    ```
 
    > [!NOTE]
-   > Fügen Sie nur den MSA-Namen und nicht den Namen oder Domäne oder des Kontos ein.
+   > Mit den obigen Befehlen werden für die AD-Authentifizierung sowohl AES- als auch RC4-Verschlüsselungsmethoden zugelassen. RC4 ist eine ältere Verschlüsselungsmethode. Ist ein höherer Sicherheitsgrad erforderlich, können Sie die KEYTAB-Einträge auch nur mithilfe der AES-Verschlüsselung erstellen.
 
-## <a id="securekeytab"></a> Sichern der KEYTAB-Datei
+1. Nach dem Ausführen des obigen Befehls sollte eine KEYTAB-Datei namens „mssql.keytab“ vorhanden sein. Kopieren Sie die Datei auf den SQL Server-Computer in den Ordner `/var/opt/mssql/secrets`.
 
-Jeder Benutzer mit Zugriff auf diese KEYTAB-Datei kann die Identität von SQL Server in der Domäne annehmen. Stellen Sie daher sicher, dass Sie den Zugriff auf die Datei so einschränken, dass nur das MSSQL-Konto über Lesezugriff verfügt:
+1. Schützen Sie die KEYTAB-Datei.
 
-```bash
-sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
-sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
-```
+    Jeder Benutzer mit Zugriff auf diese KEYTAB-Datei kann die Identität von SQL Server in der Domäne annehmen. Stellen Sie daher sicher, dass Sie den Zugriff auf die Datei so einschränken, dass nur das MSSQL-Konto über Lesezugriff verfügt:
 
-## <a id="keytabkerberos"></a> Konfigurieren von SQL Server für die Verwendung der KEYTAB-Datei für die Kerberos-Authentifizierung
+    ```bash
+    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
+    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
+    ```
 
-Gehen Sie wie im Folgenden beschrieben vor, um die SQL Server-Instanz so zu konfigurieren, dass die KEYTAB-Datei für die Kerberos-Authentifizierung verwendet werden kann.
+1. Legen Sie mithilfe des Tools **mssql-conf** die folgende Konfigurationsoption fest, um das Konto anzugeben, das für den Zugriff auf die KEYTAB-Datei verwendet werden soll.
 
-```bash
-sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
-sudo systemctl restart mssql-server
-```
+   ```bash
+   sudo mssql-conf set network.privilegedadaccount <username>
+   ```
 
-Optional können Sie die UDP-Verbindungen mit dem Domänencontroller deaktivieren, um die Leistung zu verbessern. In vielen Fällen schlagen UDP-Verbindungen beim Herstellen einer Verbindung mit einem Domänencontroller immer wieder fehl. Sie können deshalb in den Konfigurationsoptionen in der Datei **/etc/krb5.conf** festlegen, dass UDP-Aufrufe übersprungen werden sollen. Bearbeiten Sie die Datei **/etc/krb5.conf**, und legen Sie die folgenden Optionen fest:
+   > [!NOTE]
+   > Geben Sie nur den Benutzernamen an und nicht etwa „Domänenname\Benutzername“ oder username@domain. SQL Server fügt den Domänennamen nach Bedarf intern hinzu, wenn dieser Benutzername verwendet wird.
 
-```/etc/krb5.conf
-[libdefaults]
-udp_preference_limit=0
-```
+1. Gehen Sie wie im Folgenden beschrieben vor, um die SQL Server-Instanz so zu konfigurieren, dass die KEYTAB-Datei für die Kerberos-Authentifizierung verwendet wird.
 
-Nun können Sie AD-basierte Anmeldeinformationen in SQL Server verwenden. Gehen Sie dafür wie im Folgenden Abschnitt beschrieben vor.
+    ```bash
+    sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
+    sudo systemctl restart mssql-server
+    ```
+
+    > [!TIP]
+    > Optional können Sie die UDP-Verbindungen mit dem Domänencontroller deaktivieren, um die Leistung zu verbessern. In vielen Fällen schlagen UDP-Verbindungen beim Herstellen einer Verbindung mit einem Domänencontroller immer wieder fehl. Sie können deshalb in den Konfigurationsoptionen in der Datei **/etc/krb5.conf** festlegen, dass UDP-Aufrufe übersprungen werden sollen. Bearbeiten Sie die Datei **/etc/krb5.conf**, und legen Sie die folgenden Optionen fest:
+    > ```bash
+    > /etc/krb5.conf
+    > [libdefaults]
+    > udp_preference_limit=0
+    > ```
+
+Nun können Sie AD-basierte Anmeldeinformationen in SQL Server verwenden.
 
 ## <a id="createsqllogins"></a> Erstellen von AD-basierten Anmeldeinformationen in Transact-SQL
 
@@ -284,6 +196,7 @@ Stellen Sie sicher, dass das Paket [mssql-tools](sql-server-linux-setup-tools.md
 ```bash
 sqlcmd -S mssql-host.contoso.com
 ```
+Im Gegensatz zu SQL Windows können Sie die Kerberos-Authentifizierung für lokale Verbindungen in SQL Linux verwenden. Dafür ist jedoch die Bereitstellung des FQDN des Linux-Hosts für SQL Server erforderlich. Die AD-Authentifizierung funktioniert nicht beim Herstellen einer Verbindung mit „.“, „localhost“, „127.0.0.1“ usw.
 
 ### <a name="ssms-on-a-domain-joined-windows-client"></a>SSMS auf einem in die Domäne eingebundenen Windows-Client
 
@@ -326,7 +239,7 @@ Ab SQL Server 2017 CU14, können Sie auch die Option **enablekdcfromkrb5** ve
 
 Dies kann in Szenarios nützlich sein, in denen Sie die Domänencontroller, mit denen die SQL Server-Instanz kommuniziert, manuell konfigurieren möchten. Sie können den OpenLDAP-Bibliotheksmechanismus mithilfe der KDC-Liste in der Datei **krb5.conf** verwenden.
 
-Legen Sie zunächst die Optionen **disablessd** und **enablekdcfromkrb5conf** auf TRUE fest, und starten Sie dann die SQL Server-Instanz neu:
+Legen Sie zunächst die Optionen **disablesssd** und **enablekdcfromkrb5conf** auf TRUE fest, und starten Sie dann die SQL Server-Instanz neu:
 
 ```bash
 sudo mssql-conf set network.disablesssd true

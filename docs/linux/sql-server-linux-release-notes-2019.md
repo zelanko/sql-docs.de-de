@@ -7,12 +7,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8edcbf91c827ea2afafa0830aad5a26423102f17
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: b16c753b5640baacadc9a13b75ebb7a9d48a74fe
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594540"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822147"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Versionshinweise für SQL Server 2019 für Linux
 
@@ -25,7 +25,7 @@ Die folgenden Versionshinweise gelten für SQL Server 2019 bei Ausführung unter
 
 ## <a name="supported-platforms"></a>Unterstützte Plattformen
 
-| Platform | Dateisystem | Installationshandbuch |
+| Plattform | Dateisystem | Installationshandbuch |
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3-, 7.4-, 7.5- oder 7.6-Server | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2, SP3 oder SP4 | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-suse.md) |
@@ -43,9 +43,9 @@ Die meisten Clienttools für SQL Server können mühelos für SQL Server für Li
 
 In der folgenden Tabelle wird der Releaseverlauf für die Releases von SQL Server 2019 aufgelistet.
 
-| Release                   | Versionsoptionen       | Veröffentlichungsdatum |
+| Release                   | Version       | Veröffentlichungsdatum |
 |---------------------------|---------------|--------------|
-| [GA](#ga)                 | 15.0.2000.5  | 4\.11.2019    |
+| [GA](#ga)                 | 15.0.2000.5  | 2019-11-04    |
 | [Release Candidate](#rc)  | 15.0.1900.25  | 21.8.2019   |
 
 ## <a id="cuinstall"></a> Installieren der Updates
@@ -93,7 +93,7 @@ Für manuelle oder offline durchgeführte Paketinstallationen können Sie die RP
 
 In den folgenden Abschnitten werden bekannte Probleme mit dem allgemein verfügbaren Release von SQL Server 2019 (15.x) für Linux beschrieben.
 
-#### <a name="general"></a>Allgemein
+### <a name="general"></a>Allgemein
 
 - Der Name des Hosts, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installiert ist, darf maximal 15 Zeichen lang sein. 
 
@@ -101,11 +101,11 @@ In den folgenden Abschnitten werden bekannte Probleme mit dem allgemein verfügb
 
 - Wenn Sie die Systemzeit manuell auf einen früheren Zeitpunkt festlegen, aktualisiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die interne Systemzeit in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht mehr.
 
-    - **Lösung:** Starten Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]neu.
+    - **Lösung:** Starten Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] neu.
 
 - Nur Installationen mit einzelner Instanz werden unterstützt.
 
-    - **Lösung:** Wenn Sie mehrere Instanzen auf einem bestimmten Host verwenden möchten, ziehen Sie die Verwendung von VMs (virtuelle Computer) oder Docker-Containern in Betracht. 
+    - **Lösung:** Wenn Sie mehrere Instanzen auf einem bestimmten Host verwenden möchten, ziehen Sie die Verwendung von virtuellen Computern oder Docker-Containern in Betracht. 
 
 - Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurations-Manager kann keine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux herstellen.
 
@@ -113,7 +113,11 @@ In den folgenden Abschnitten werden bekannte Probleme mit dem allgemein verfügb
 
     - **Lösung:** Ändern Sie die Sprache für die **sa**-Anmeldung mithilfe der Anweisung **ALTER LOGIN**.
 
-#### <a name="databases"></a>Datenbanken
+- Der OLEDB-Anbieter protokolliert folgende Warnung: `Failed to verify the Authenticode signature of 'C:\binn\msoledbsql.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.`
+
+   - **Lösung:** Keine Aktion erforderlich. Der OLEDB-Anbieter wird mit SHA256 signiert. Die SQL Server-Datenbank-Engine überprüft die signierte DLL-Datei nicht ordnungsgemäß.
+
+### <a name="databases"></a>Datenbanken
 
 - Die Masterdatenbank kann nicht mit dem Hilfsprogramm „mssql-conf“ verschoben werden. Andere Systemdatenbanken können mit „mssql-conf“ verschoben werden.
 
@@ -143,7 +147,7 @@ In den folgenden Abschnitten werden bekannte Probleme mit dem allgemein verfügb
 
 - Unter Linux wird die Benutzerberechtigung **ADMINISTER BULK OPERATIONS** zurzeit nicht unterstützt.
 
-#### <a name="networking"></a>Netzwerk
+### <a name="networking"></a>Netzwerk
 
 Features, die ausgehende TCP-Verbindungen aus dem sqlservr-Prozess nutzen, z. B. Verbindungsserver oder Verfügbarkeitsgruppen, funktionieren möglicherweise nicht, wenn beide der folgenden Bedingungen erfüllt werden:
 
@@ -170,7 +174,7 @@ Wenn Sie **NFS-Remotefreigaben (Network File System)** in der Produktion verwend
 - Verwenden Sie nur die Verzeichnisse vom Typ **/var/opt/mssql** in der NFS-Bereitstellung. Andere Dateien, wie z. B. die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Systembinärdateien, werden nicht unterstützt.
 - Stellen Sie sicher, dass NFS-Clients beim Einbinden der Remotefreigabe die Option „NOLOCK“ verwenden.
 
-#### <a name="localization"></a>Lokalisierung
+### <a name="localization"></a>Lokalisierung
 
 - Wenn Ihr Gebietsschema während des Setups nicht Englisch (en_us) ist, müssen Sie die UTF-8-Codierung in Ihrer Bash-Sitzung bzw. Ihrem Terminal verwenden. Wenn Sie die ASCII-Codierung verwenden, kann ein Fehler ähnlich dem Folgenden auftreten:
 
@@ -190,7 +194,7 @@ Wenn Sie **NFS-Remotefreigaben (Network File System)** in der Produktion verwend
 
 - In diesem Release sind nicht alle Filter verfügbar, einschließlich Filter für Office-Dokumente. Eine Liste aller unterstützten Filter finden Sie unter [Install SQL Server Full-Text Search on Linux (Installieren der SQL Server-Volltextsuche unter Linux)](sql-server-linux-setup-full-text-search.md#filters).
 
-#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
+### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
 - Das Paket **mssql-server-is** wird in diesem Release nicht für SUSE unterstützt. Es wird derzeit für Ubuntu und Red Hat Enterprise Linux (RHEL) unterstützt.
 
@@ -198,7 +202,7 @@ Wenn Sie **NFS-Remotefreigaben (Network File System)** in der Produktion verwend
 
 - Die folgenden Features werden in diesem Release nicht unterstützt, wenn Sie SSIS-Pakete unter Linux ausführen:
   - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Katalogdatenbank
-  - Geplante Paketausführung des SQL Agent-Diensts
+  - Geplante Paketausführung des SQL Agent
   - Windows-Authentifizierung
   - Drittanbieterkomponenten
   - Change Data Capture (CDC)
@@ -211,10 +215,10 @@ Eine Liste der integrierten SSIS-Komponenten, die derzeit nicht unterstützt ode
 
 Weitere Informationen zu SSIS unter Linux finden Sie in den folgenden Artikeln:
 -   [Blog post announcing SSIS support for Linux (Blogbeitrag mit Ankündigung der SSIS-Unterstützung für Linux)](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
--   [Install SQL Server Integration Services (SSIS) on Linux (Installieren von SSIS (SQL Server Integration Services) unter Linux)](sql-server-linux-setup-ssis.md)
--   [Extract, transform, and load data on Linux with SSIS (Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS)](sql-server-linux-migrate-ssis.md)
+-   [Installieren von SSIS (SQL Server Integration Services) unter Linux](sql-server-linux-setup-ssis.md)
+-   [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
+### <a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 Die folgenden Einschränkungen gelten für [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] unter Windows mit Verbindung zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux.
 
@@ -230,11 +234,11 @@ Die folgenden Einschränkungen gelten für [!INCLUDE[ssManStudioFull](../include
 
 In den folgenden Schnellstarts finden Sie Informationen zu den ersten Schritten:
 
-- [Installieren unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Installation unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installation unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Ausführen unter Docker](quickstart-install-connect-ubuntu.md)
+- [Ausführung in Docker](quickstart-install-connect-ubuntu.md)
 - [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Ausführen und Verbinden – Cloud](quickstart-install-connect-clouds.md)
 
-Antworten auf häufig gestellte Fragen finden Sie unter [Häufig gestellte Fragen zu SQL Server unter Linux](sql-server-linux-faq.md).
+Antworten auf häufig gestellte Fragen finden Sie unter [Häufig gestellte Fragen zu SQL Server für Linux](sql-server-linux-faq.md).

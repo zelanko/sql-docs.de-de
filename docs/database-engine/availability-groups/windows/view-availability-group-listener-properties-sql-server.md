@@ -1,6 +1,7 @@
 ---
-title: Anzeigen von Eigenschaften des Verfügbarkeitsgruppenlisteners (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Anzeigen der Eigenschaften eines Verfügbarkeitsgruppenlisteners
+description: 'Hier wird beschrieben, wie Sie die Eigenschaften eines Always On-Verfügbarkeitsgruppenlisteners mit SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) oder SQL PowerShell anzeigen können. '
+ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55603d6dba2a5f688ce07d1f071019f101d9e955
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013382"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821770"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Anzeigen von Eigenschaften des Verfügbarkeitsgruppenlisteners (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68013382"
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Serverinstanz her, die die Verfügbarkeitsreplikate der Verfügbarkeitsgruppe hostet, deren Listener Sie anzeigen möchten. Klicken Sie auf den Servernamen, um die Serverstruktur zu erweitern.  
   
-2.  Erweitern Sie die Knoten **Hohe Verfügbarkeit mit Always On** und den Knoten **Verfügbarkeitsgruppen** .  
+2.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** und den Knoten **Verfügbarkeitsgruppen** .  
   
 3.  Erweitern Sie den Knoten der Verfügbarkeitsgruppe, und erweitern Sie den Knoten **Verfügbarkeitsgruppenlistener** .  
   

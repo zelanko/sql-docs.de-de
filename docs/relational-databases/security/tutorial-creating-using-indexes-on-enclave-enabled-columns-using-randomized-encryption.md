@@ -1,7 +1,8 @@
 ---
-title: 'Lernprogramm: Erstellen und Verwenden von Indizes für Enclave-fähige Spalten mit zufälliger Verschlüsselung | Microsoft-Dokumentation'
-ms.custom: ''
-ms.date: 10/15/2019
+title: Indizes für Enclave-fähige Spalten mit zufälliger Verschlüsselung (Tutorial)
+description: In diesem Tutorial erfahren Sie, wie Sie Indizes auf Enclave-fähigen Spalten erstellen und verwenden, indem Sie eine zufällige Verschlüsselung verwenden, die in Always Encrypted mit Secure Enclaves für SQL Server unterstützt wird.
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,14 +13,14 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592332"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557756"
 ---
-# <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Lernprogramm: Erstellen und Verwenden von Indizes für Enclave-fähige Spalten mit zufälliger Verschlüsselung
+# <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutorial: Erstellen und Verwenden von Indizes für Enclave-fähige Spalten mit zufälliger Verschlüsselung
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 In diesem Tutorial erfahren Sie, wie Sie Indizes auf Enclave-fähigen Spalten erstellen und verwenden, indem Sie eine zufällige Verschlüsselung verwenden, die in [Always Encrypted mit Secure Enclaves](encryption/always-encrypted-enclaves.md) unterstützt wird. Es wird Folgendes gezeigt:
@@ -33,7 +34,7 @@ Dieses Tutorial ist die Fortsetzung von [Tutorial: Erste Schritte mit Always Enc
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>Schritt 1: Aktivieren von verbesserten Wiederherstellung von Datenbanken (ADR) in Ihrer Datenbank
 
-Microsoft empfiehlt dringend, ADR in Ihrer Datenbank zu aktivieren, bevor Sie den ersten Index in einer Enclave-fähigen Spalte mit zufälliger Verschlüsselung erstellen. Weitere Informationen finden Sie im Abschnitt [Datenbankwiederherstellung](./encryption/always-encrypted-enclaves.md##database-recovery) in [Always Encrypted mit Secure Enclaves](./encryption/always-encrypted-enclaves.md).
+Microsoft empfiehlt dringend, ADR in Ihrer Datenbank zu aktivieren, bevor Sie den ersten Index in einer Enclave-fähigen Spalte mit zufälliger Verschlüsselung erstellen. Weitere Informationen finden Sie im Abschnitt [Datenbankwiederherstellung](./encryption/always-encrypted-enclaves.md#database-recovery) in [Always Encrypted mit Secure Enclaves](./encryption/always-encrypted-enclaves.md).
 
 1. Schließen Sie alle SSMS-Instanzen, die Sie im vorherigen Tutorial verwendet haben. Dadurch werden die von Ihnen geöffneten Datenbankverbindungen geschlossen. Dies ist für die Aktivierung von ADR erforderlich.
 1. Öffnen Sie eine neue SSMS-Instanz, und verbinden Sie sich per SSMS als „sysadmin“ mit Ihrer SQL Server-Instanz, **ohne** dass Always Encrypted für die Datenverbindung aktiviert ist.
@@ -64,7 +65,7 @@ In diesem Schritt werden Sie einen Index für eine verschlüsselte Spalte erstel
    2. Wählen Sie **Optionen...** aus.
    3. Navigieren Sie zu **Abfrageausführung** > **SQL Server** > **Erweitert**.
    4. Stellen Sie sicher, dass **Parametrisierung für Always Encrypted aktivieren** aktiviert ist.
-   5. Wählen Sie **OK**.
+   5. Klicken Sie auf **OK**.
 1. Öffnen Sie ein Abfragefenster, und führen Sie die folgenden Anweisungen aus, um die Spalte **LastName** in der Tabelle **Employees** zu verschlüsseln. Sie werden in späteren Schritten einen Index auf dieser Spalte erstellen und verwenden.
 
    ```sql
@@ -104,7 +105,7 @@ In diesem Schritt werden Sie einen Index für eine verschlüsselte Spalte erstel
 
    1. Achten Sie auf der Registerkarte **Live-Abfragestatistik einschließen** (im unteren Teil des Abfragefensters) darauf, dass die Abfrage den Index verwendet.
 
-## <a name="step-3-create-an-index-with-role-separation"></a>Schritt 3: Erstellen eines Index mit Rollentrennung
+## <a name="step-3-create-an-index-with-role-separation"></a>Schritt 3: Erstellen eines Index mit Rollentrennung
 
 In diesem Schritt erstellen Sie einen Index auf einer verschlüsselten Spalte, der vorgibt, zwei verschiedene Benutzer zu sein. Ein Benutzer ist ein DBA, der einen Index erstellen muss, aber keinen Zugriff auf die Schlüssel hat. Der andere Benutzer ist ein Datenbesitzer, der Zugriff auf die Schlüssel hat.
 
@@ -174,5 +175,5 @@ In diesem Schritt erstellen Sie einen Index auf einer verschlüsselten Spalte, d
 ## <a name="next-steps"></a>Nächste Schritte
 - [Tutorial: Entwickeln einer .NET Framework-Anwendung mithilfe von Always Encrypted mit Secure Enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Erstellen und Verwenden von Indizes in Spalten mithilfe von Always Encrypted mit Secure Enclaves](encryption/always-encrypted-enclaves-create-use-indexes.md)

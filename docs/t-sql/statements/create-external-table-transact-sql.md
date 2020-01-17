@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/29/2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7db5211191f714b977c8d103328fdb48882df6a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057657"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656637"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL-Datenbank](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -109,7 +109,7 @@ In diesem Beispiel gibt eine PolyBase-Abfrage Zeilen aus „mydata.txt“ und �
 
 Um den Standardordner zu ändern, und nur aus dem Stammordner zu lesen, legen Sie das Attribut \<polybase.recursive.traversal> in der Konfigurationsdatei „core-site.xml“ auf FALSE fest. Diese Datei befindet sich unter `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Beispiel: `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
-DATA_SOURCE = *external_data_source_name*: Gibt den Namen der externen Datenquelle an, die den Speicherort der externen Daten enthält. Dieser Speicherort ist entweder eine Hadoop oder ein Azure Blob Storage. Verwenden Sie zum Erstellen einer externen Datenquelle [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+DATA_SOURCE = *external_data_source_name*: Gibt den Namen der externen Datenquelle an, die den Speicherort der externen Daten enthält. Bei diesem Speicherort handelt es sich um ein Hadoop-Dateisystem (HDFS), einen Azure Store-Blobcontainer oder Azure Data Lake Store. Verwenden Sie zum Erstellen einer externen Datenquelle [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FILE_FORMAT = *external_file_format_name*: Gibt den Namen des externen Dateiformatobjekts an, das den Dateityp und die Komprimierungsmethode für die externen Daten enthält. Verwenden Sie zum Erstellen eines externen Dateiformats [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
@@ -142,15 +142,13 @@ Ist beispielsweise REJECT_SAMPLE_VALUE = 1000, dann berechnet PolyBase den Proze
 
 Beispiel:
 
-In diesem Beispiel wird verdeutlicht, wie die drei REJECT-Optionen interagieren. Gilt beispielsweise: REJECT_TYPE = Prozentsatz, REJECT_VALUE = 30 und REJECT_SAMPLE_VALUE = 100, dann könnte das folgende Szenario auftreten:
+In diesem Beispiel wird verdeutlicht, wie die drei REJECT-Optionen interagieren. Gilt beispielsweise REJECT_TYPE = Prozentsatz, REJECT_VALUE = 30 und REJECT_SAMPLE_VALUE = 100, dann könnte das folgende Szenario auftreten:
 
 - PolyBase versucht, die ersten 100 Zeilen abzurufen. Davon sind 25 fehlerhaft und 75 erfolgreich.
 - Der berechnete Prozentsatz fehlerhafter Zeilen ist mit 25 % kleiner als der REJECT-Wert von 30 %. Aus diesem Grund wird PolyBase weiterhin versuchen, Daten aus der externen Datenquelle abzurufen.
 - PolyBase versucht, die nächsten 100 Zeilen zu laden. Dieses Mal sind 25 Zeilen erfolgreich und 75 Zeilen fehlerhaft.
 - Der Prozentsatz fehlerhafter Zeilen wird mit 50 % neu berechnet. Der Prozentsatz fehlerhafter Zeilen hat den REJECT-Wert von 30 % überschritten.
 - Die PolyBase-Abfrage schlägt fehl, da nach der Rückgabe der ersten 200 Zeilen 50 % der Zeilen abgelehnt werden. Beachten Sie, dass übereinstimmende Zeilen zurückgegeben wurden, bevor die PolyBase-Abfrage erkennt, dass der Schwellenwert zum Zurückweisen überschritten wurde.
-
-DATA_SOURCE: Eine externe Datenquelle wie Daten, die in einem Hadoop-Dateisystem, Azure Blob Storage oder in einem [Shardzuordnungs-Manager](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/) gespeichert sind.
 
 SCHEMA_NAME: Die SCHEMA_NAME-Klausel bietet die Möglichkeit, die externe Tabellendefinition einer Tabelle in einem anderen Schema auf der Remotedatenbank zuzuordnen. Verwenden Sie diese Klausel, um zwischen Schemas zu unterscheiden, die auf den lokalen und Remotedatenbanken vorhanden sind.
 
@@ -216,7 +214,7 @@ PolyBase in SQL Server 2016 verfügt über eine Begrenzung für die Zeilenbreite
 
 Freigegebene Sperre für das SCHEMARESOLUTION-Objekt.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 Die Datendateien für eine externe Tabelle werden in Hadoop oder Azure Blob Storage gespeichert. Diese Datendateien werden von Ihrem eigenen Prozess erstellt und verwaltet. Die Sicherheit der externen Daten liegt in Ihrer Verantwortung.
 
@@ -314,7 +312,7 @@ WITH (
 ;
 ```
 
-### <a name="d-querying-hadoop-data"></a>D. Abfragen von Hadoop-Daten
+### <a name="d-querying-hadoop-data"></a>D: Abfragen von Hadoop-Daten
 
 Clickstream ist eine externe Tabelle, die mit der durch Tabstopps getrennte Textdatei „employee.tbl“ in einem Hadoop-Cluster verbunden ist. Die folgende Abfrage sieht wie eine Abfrage für eine Standardtabelle aus. Allerdings ruft diese Abfrage Daten aus Hadoop ab und berechnet dann die Ergebnisse.
 
@@ -367,8 +365,8 @@ WITH
 (
   DATA_SOURCE = MyExtSrc,
   SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
+  OBJECT_NAME = 'dm_exec_requests',
+  DISTRIBUTION=ROUND_ROBIN
 );
 ```
 
@@ -566,7 +564,7 @@ WITH
 ## <a name="see-also"></a>Weitere Informationen
 
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
-- [ERSTELLEN EINES EXTERNEN DATEIFORMATS](../../t-sql/statements/create-external-file-format-transact-sql.md)
+- [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
@@ -578,7 +576,7 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>Übersicht: Azure SQL-Datenbank
+## <a name="overview-azure-sql-database"></a>Übersicht: Azure SQL-Datenbank
 
 Erstellt in Azure SQL-Datenbank eine externe Tabelle für [elastische Abfragen (in der Vorschau)](/azure/sql-database/sql-database-elastic-query-overview/).
 
@@ -621,30 +619,21 @@ Die Spaltendefinitionen, einschließlich der Datentypen und der Anzahl der Spalt
 
 Externe Shardtabellenoptionen
 
-Gibt die externe Datenquelle (eine nicht-SQL Server-Datenquelle) und eine Verteilungsmethode für die [elastische Datenbankabfrage](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) an.
+Hiermit wird die externe Datenquelle (eine nicht-SQL Server-Datenquelle) und eine Verteilungsmethode für die [elastische Datenbankabfrage](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) angegeben.
 
-DATA_SOURCE: Eine externe Datenquelle wie Daten, die in einem Hadoop-Dateisystem, Azure Blob Storage oder in einem [Shardzuordnungs-Manager](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/) gespeichert sind.
+DATA_SOURCE: Die DATA_SOURCE-Klausel definiert die externe Datenquelle (eine Shardzuordnung), die für die externe Tabelle verwendet wird. Ein Beispiel finden Sie unter [Erstellen externer Tabellen](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-SCHEMA_NAME: Die SCHEMA_NAME-Klausel bietet die Möglichkeit, die externe Tabellendefinition einer Tabelle in einem anderen Schema auf der Remotedatenbank zuzuordnen. Verwenden Sie diese Klausel, um zwischen Schemas zu unterscheiden, die auf den lokalen und Remotedatenbanken vorhanden sind.
+SCHEMA_NAME und OBJECT_NAME: Die Klauseln SCHEMA_NAME und OBJECT_NAME ordnen die Definition der externen Tabelle einer Tabelle in einem anderen Schema zu. Falls nicht angegeben, wird davon ausgegangen, dass das Schema des Remoteobjekts „dbo“ und sein Name mit dem definierten Namen der externen Tabelle identisch ist. Dies ist nützlich, wenn der Name der Remotetabelle bereits in der Datenbank verwendet wird, in der Sie die externe Tabelle erstellen möchten. Sie möchten z. B. eine externe Tabelle zum Abrufen einer aggregierten Sicht von Katalogsichten oder DMVs für Ihre horizontal hochskalierte Datenebene definieren. Da Katalogsichten und DMVs bereits lokal vorhanden sind, können Sie ihre Namen nicht für die Definition der externen Tabelle verwenden. Verwenden Sie stattdessen in den Klauseln SCHEMA_NAME und/oder OBJECT_NAME einen anderen Namen und den Namen der Katalogsicht oder DMV. Ein Beispiel finden Sie unter [Erstellen externer Tabellen](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-OBJECT_NAME: Die OBJECT_NAME-Klausel bietet die Möglichkeit, die externe Tabellendefinition einer Tabelle mit einem anderen Namen auf der Remotedatenbank zuzuordnen. Verwenden Sie diese Klausel, um zwischen Objektnamen zu unterscheiden, die auf den lokalen und Remotedatenbanken vorhanden sind.
+DISTRIBUTION: Die DISTRIBUTION-Klausel gibt die Datenverteilung für diese Tabelle an. Der Abfrageprozessor nutzt die Informationen in der DISTRIBUTION-Klausel, um die effizientesten Abfragepläne zu erstellen.
 
-DISTRIBUTION ist optional. Dieses Argument ist für Datenbanken des Typs SHARD_MAP_MANAGER erforderlich. Dieses Argument steuert, ob eine Tabelle wie eine Tabelle mit Shards oder replizierte Tabelle behandelt wird. Mit Tabellen des Typs **SHARDED** (*Spaltenname*) überlappen die Daten aus verschiedenen Tabellen nicht. **REPLICATED** gibt an, dass Tabellen dieselben Daten auf jeder Shard enthalten. **ROUND_ROBIN** gibt an, dass eine anwendungsspezifische Methode zum Verteilen von Daten verwendet wird.
+- SHARDED bedeutet, dass Daten datenbankübergreifend horizontal partitioniert werden. Der Partitionierungsschlüssel für die Datenverteilung ist der Parameter <sharding_column_name>.
+- REPLICATED bedeutet, dass identische Kopien der Tabelle in jeder Datenbank vorhanden sind. Sie müssen sicherstellen, dass die Replikate in allen Datenbanken identisch sind.
+- ROUND_ROBIN bedeutet, dass die Tabelle mit einer anwendungsabhängigen Verteilungsmethode horizontal partitioniert wird.
 
 ## <a name="permissions"></a>Berechtigungen
 
-Folgende Benutzerberechtigungen sind erforderlich:
-
-- **CREATE TABLE**
-- **ALTER ANY SCHEMA**
-- **ALTER ANY EXTERNAL DATA SOURCE**
-- **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
-
-Beachten Sie, dass die Anmeldung, die die externe Datenquelle erstellt, die Berechtigung zum Lesen und Schreiben in der externen Datenquelle, die in Hadoop oder Azure Blob Storage gespeichert ist, benötigt.
-
-> [!IMPORTANT]
-> Mit der Berechtigung ALTER ANY EXTERNAL DATA SOURCE besitzt jeder Prinzipal die Fähigkeit, beliebige externe Datenquellenobjekte zu erstellen und zu ändern. Damit ist auch der Zugriff auf alle datenbankweit gültigen Anmeldeinformationen der Datenbank möglich. Da es sich hierbei um eine weitreichende Berechtigung handelt, darf sie nur vertrauenswürdigen Prinzipalen innerhalb des Systems erteilt werden.
+Benutzer mit Zugriff auf die externe Tabelle erhalten automatisch Zugriff auf die zugrunde liegenden Remotetabellen gemäß den Anmeldeinformationen, die in der externen Datenquellendefinition angegeben sind. Vermeiden Sie eine unerwünschte Erhöhung von Berechtigungen durch die Anmeldeinformationen der externen Datenquelle. Verwenden Sie GRANT oder REVOKE für eine externe Tabelle, als handele es sich um eine normale Tabelle. Nachdem Sie die externe Datenquelle und die externen Tabellen definiert haben, können Sie jetzt vollständiges T-SQL in den externen Tabellen verwenden.
 
 ## <a name="error-handling"></a>Fehlerbehandlung
 
@@ -674,7 +663,7 @@ Nicht unterstützte Konstruktionen und Operationen:
 - Die DEFAULT-Einschränkung auf externen Tabellenspalten
 - DML-Vorgänge (Data Manipulation Language): DELETE, INSERT und UPDATE
 
-Nur die in einer Abfrage definierten Literalprädikate können per Push an die externe Datenquelle übertragen werden. Darin unterscheiden sie sich von verknüpften Servern und dem Zugriff darauf. Dort können Prädikate verwendet werden, die während der Abfrageausführung bestimmt werden, d. h. bei einer Verwendung in Verbindung mit einer geschachtelten Schleife in einem Abfrageplan. Dadurch wird häufig die gesamte externe Tabelle lokal kopiert und anschließend verknüpft.    
+Nur die in einer Abfrage definierten Literalprädikate können per Push an die externe Datenquelle übertragen werden. Darin unterscheiden sie sich von verknüpften Servern und dem Zugriff darauf. Dort können Prädikate verwendet werden, die während der Abfrageausführung bestimmt wurden. Ein Beispiel hierfür ist die Verwendung in Verbindung mit einer geschachtelten Schleife in einem Abfrageplan. Dadurch wird häufig die gesamte externe Tabelle lokal kopiert und anschließend verknüpft.
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table. 
@@ -690,7 +679,7 @@ Nur die in einer Abfrage definierten Literalprädikate können per Push an die e
 
 Mit externen Tabellen kann die Verwendung von Parallelität im Abfrageplan verhindert werden.
 
-Externe Tabellen werden als Remoteabfrage implementiert, wodurch die geschätzte Anzahl der zurückgegebenen Zeilen in der Regel 1.000 beträgt. Weitere Regeln basierend auf dem Prädikatstyp können zum Filtern der externen Tabelle verwendet werden. Dabei handelt es sich um Regeln basierend auf Schätzungen und nicht um Schätzwerte, die auf den tatsächlichen Daten der externen Tabelle beruhen. Der Optimierer greift nicht auf die Remotedatenquelle zu, um genauere Schätzungen zu erhalten.
+Externe Tabellen werden als Remoteabfrage implementiert, wodurch die geschätzte Anzahl der zurückgegebenen Zeilen in der Regel 1.000 beträgt. Weitere Regeln basierend auf dem Prädikatstyp können zum Filtern der externen Tabelle verwendet werden. Dabei handelt es sich um regelbasierte Schätzungen und nicht um Schätzwerte, die auf den tatsächlichen Daten der externen Tabelle beruhen. Der Optimierer greift nicht auf die Remotedatenquelle zu, um genauere Schätzungen zu erhalten.
 
 ## <a name="locking"></a>Sperren
 
@@ -711,7 +700,9 @@ WITH
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[ERSTELLEN EINER EXTERNEN DATENQUELLE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [Übersicht über elastische Abfragen in Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
+- [Erstellen von Berichten für horizontal hochskalierte Clouddatenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [Erste Schritte mit datenbankübergreifenden Abfragen (vertikale Partitionierung)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -815,7 +806,7 @@ Ist beispielsweise REJECT_SAMPLE_VALUE = 1000, dann berechnet PolyBase den Proze
 
 Beispiel:
 
-In diesem Beispiel wird verdeutlicht, wie die drei REJECT-Optionen interagieren. Gilt beispielsweise: REJECT_TYPE = Prozentsatz, REJECT_VALUE = 30 und REJECT_SAMPLE_VALUE = 100, dann könnte das folgende Szenario auftreten:
+In diesem Beispiel wird verdeutlicht, wie die drei REJECT-Optionen interagieren. Gilt beispielsweise REJECT_TYPE = Prozentsatz, REJECT_VALUE = 30 und REJECT_SAMPLE_VALUE = 100, dann könnte das folgende Szenario auftreten:
 
 - PolyBase versucht, die ersten 100 Zeilen abzurufen. Davon sind 25 fehlerhaft und 75 erfolgreich.
 - Der berechnete Prozentsatz fehlerhafter Zeilen ist mit 25 % kleiner als der REJECT-Wert von 30 %. Aus diesem Grund wird PolyBase weiterhin versuchen, Daten aus der externen Datenquelle abzurufen.
@@ -1040,7 +1031,7 @@ Ist beispielsweise REJECT_SAMPLE_VALUE = 1000, dann berechnet PolyBase den Proze
 
 Beispiel:
 
-In diesem Beispiel wird verdeutlicht, wie die drei REJECT-Optionen interagieren. Gilt beispielsweise: REJECT_TYPE = Prozentsatz, REJECT_VALUE = 30 und REJECT_SAMPLE_VALUE = 100, dann könnte das folgende Szenario auftreten:
+In diesem Beispiel wird verdeutlicht, wie die drei REJECT-Optionen interagieren. Gilt beispielsweise REJECT_TYPE = Prozentsatz, REJECT_VALUE = 30 und REJECT_SAMPLE_VALUE = 100, dann könnte das folgende Szenario auftreten:
 
 - PolyBase versucht, die ersten 100 Zeilen abzurufen. Davon sind 25 fehlerhaft und 75 erfolgreich.
 - Der berechnete Prozentsatz fehlerhafter Zeilen ist mit 25 % kleiner als der REJECT-Wert von 30 %. Aus diesem Grund wird PolyBase weiterhin versuchen, Daten aus der externen Datenquelle abzurufen.
@@ -1108,7 +1099,7 @@ Diese Einschränkung wurde in SQL Data Warehouse auf 1 MB erhöht.
 
 Freigegebene Sperre für das SCHEMARESOLUTION-Objekt.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 Die Datendateien für eine externe Tabelle werden in Hadoop oder Azure Blob Storage gespeichert. Diese Datendateien werden von Ihrem eigenen Prozess erstellt und verwaltet. Die Sicherheit der externen Daten liegt in Ihrer Verantwortung.
 

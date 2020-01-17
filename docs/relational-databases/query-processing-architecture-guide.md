@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
+ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096936"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74866076"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Weitere Informationen zu Columnstore-Indizes finden Sie unter [Columnstore-Indiz
 > Die Batchmodusausführung ist in Data Warehousing-Szenarios, bei denen große Datenmengen gelesen und aggregiert werden, sehr effizient.
 
 ## <a name="sql-statement-processing"></a>Verarbeiten von SQL-Anweisungen
-Die Verarbeitung einer einzelnen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ist das grundlegendste Verfahren, nach dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen ausführt. Die Schritte, die zur Verarbeitung einer einzelnen `SELECT` -Anweisung verwendet werden, die nur auf lokale Basistabellen verweist (keine Sichten oder Remotetabellen), sollen das zugrunde liegende Verfahren veranschaulichen.
+Die Verarbeitung einer einzelnen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ist das grundlegendste Verfahren, nach dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen ausführt. Die Schritte, die zur Verarbeitung einer einzelnen `SELECT` -Anweisung verwendet werden, die nur auf lokale Basistabellen verweist (keine Sichten oder Remotetabellen), sollen das zugrunde liegende Verfahren veranschaulichen.
 
 ### <a name="logical-operator-precedence"></a>Rangfolge logischer Operatoren
 Wenn mehr als ein logischer Operator in einer Anweisung verwendet wird, wird `NOT` zuerst ausgewertet, dann `AND` und schließlich `OR`. Arithmetische (und bitweise) Operatoren werden vor logischen Operatoren verarbeitet. Weitere Informationen finden Sie unter [Operator Precedence (Operatorrangfolge)](../t-sql/language-elements/operator-precedence-transact-sql.md).
@@ -92,7 +92,7 @@ Die Ein- und Ausgaben des Abfrageoptimierers während der Optimierung einer einz
 
 ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
-Eine `SELECT`-Anweisung definiert lediglich Folgendes:  
+Eine `SELECT` -Anweisung definiert lediglich Folgendes:  
 * Das Format des Resultsets. Dieses wird meistens in der Auswahlliste angegeben. Das endgültige Format des Resultsets wird jedoch auch von anderen Klauseln, wie z.B. `ORDER BY` und `GROUP BY` , beeinflusst.
 * Die Tabellen, die die Quelldaten enthalten. Dies wird in der `FROM` -Klausel angegeben.
 * Die logischen Beziehungen zwischen den Tabellen, die im Rahmen der `SELECT` -Anweisung relevant sind. Diese werden in den Joinspezifikationen definiert, die in der `WHERE` -Klausel oder in einer `ON` -Klausel, die auf `FROM`folgt, auftreten können.
@@ -422,7 +422,7 @@ Der Ausführungsplan für gespeicherte Prozeduren und Trigger wird getrennt von 
 - **Abfrageausführungsplan**     
   Bei dem größten Teil des Ausführungsplans handelt es sich um eine eintrittsinvariante, schreibgeschützte Datenstruktur, die von einer beliebigen Anzahl von Benutzern verwendet werden kann. Man bezeichnet diesen Teil als Abfrageplan. Im Abfrageplan wird kein Benutzerkontext gespeichert. Im Arbeitsspeicher befinden sich immer nur eine oder zwei Kopien des Abfrageplans: eine Kopie für alle seriellen Ausführungen und eine weitere für alle parallelen Ausführungen. Die parallele Kopie deckt alle parallelen Ausführungen ab, und zwar unabhängig von ihrem Grad an Parallelität. 
 - **Ausführungskontext**     
-  Jeder Benutzer, der die Abfrage zurzeit ausführt, verfügt über eine Datenstruktur mit den Daten, die für diese Ausführung spezifisch sind, z.B. Parameterwerte. Diese Datenstruktur wird als Ausführungskontext bezeichnet. Die Datenstrukturen des Ausführungskontexts werden wiederverwendet. Wenn ein Benutzer eine Abfrage ausführt und eine der Strukturen nicht verwendet wird, wird diese Struktur erneut initialisiert, und zwar diesmal mit dem Kontext für den neuen Benutzer. 
+  Jeder Benutzer, der die Abfrage zurzeit ausführt, verfügt über eine Datenstruktur mit den Daten, die für diese Ausführung spezifisch sind, z. B. Parameterwerte. Diese Datenstruktur wird als Ausführungskontext bezeichnet. Die Datenstrukturen des Ausführungskontexts werden wiederverwendet. Wenn ein Benutzer eine Abfrage ausführt und eine der Strukturen nicht verwendet wird, wird diese Struktur erneut initialisiert, und zwar diesmal mit dem Kontext für den neuen Benutzer. 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
@@ -483,7 +483,7 @@ Bestimmte Änderungen in einer Datenbank können dazu führen, dass ein Ausführ
 
 Die meisten Neukompilierungen sind erforderlich, um die Richtigkeit der Anweisungen sicherzustellen oder um möglicherweise schnellere Abfrageausführungspläne zu erhalten.
 
-Jedes Mal, wenn in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 eine in einem Batch vorhandene Anweisung eine Neukompilierung auslöst, wird der gesamte durch eine gespeicherte Prozedur, einen Trigger, einen Ad-hoc-Batch oder eine vorbereitete Anweisung übermittelte Batch neu kompiliert. Ab [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] wird nur die Anweisung innerhalb des Batches, der die Neukompilierung auslöst, erneut kompiliert. Aufgrund dieses Unterschieds kann die Anzahl der Neukompilierungen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 und späteren Versionen nicht für die Anzahl der Neukompilierungen als Vergleich herangezogen werden. Des Weiteren gibt es in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] und höheren Versionen aufgrund der erweiterten Funktionsgruppe mehr Neukompilierungstypen.
+Jedes Mal, wenn in früheren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Versionen als 2005 eine in einem Batch vorhandene Anweisung eine Neukompilierung ausgelöst hat, wurde der gesamte durch eine gespeicherte Prozedur, einen Trigger, einen Ad-hoc-Batch oder eine vorbereitete Anweisung übermittelte Batch noch mal kompiliert. Ab [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] wird nur die Anweisung innerhalb des Batches, der die Neukompilierung auslöst, noch mal kompiliert. Zudem gibt es in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] und höheren Versionen aufgrund der erweiterten Features zusätzliche Neukompilierungstypen.
 
 Die Neukompilierung auf Anweisungsebene wirkt sich positiv auf die Leistung aus, da in den meisten Fällen wenige Anweisungen Neukompilierungen und die damit verbundenen Sanktionen in Bezug auf die CPU-Zeit und die Sperren verursachen. Diese Sanktionen werden daher für die anderen Anweisungen innerhalb des Batchs vermieden, für die keine Neukompilierung erforderlich ist.
 
@@ -507,7 +507,7 @@ Die `recompile_cause`-Spalte von `sql_statement_recompile` xEvent enthält einen
 > Die *EventSubClass*-Spalte von `SP:Recompile` und `SQL:StmtRecompile` enthält einen ganzzahligen Code, der den Grund für die Neukompilierung angibt. Die Codes sind [hier](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) beschrieben.
 
 > [!NOTE]
-> Wenn die Datenbankoption `AUTO_UPDATE_STATISTICS` auf `ON` festgelegt wird, werden Abfragen neu kompiliert, wenn sie Tabellen oder indizierte Sichten betreffen, deren Statistiken aktualisiert wurden oder deren Kardinalitäten sich seit der letzten Ausführung signifikant geändert haben. Dieses Verhalten gilt für standardmäßige benutzerdefinierte Tabellen, temporäre Tabellen und die durch DML-Trigger erstellten eingefügten und gelöschten Tabellen. Wenn sich sehr viele Neukompilierungen auf die Abfrageleistung auswirken, können Sie diese Einstellung in `OFF`ändern. Wenn die `AUTO_UPDATE_STATISTICS`-Datenbankoption auf `OFF` festgelegt wird, werden auf der Grundlage von Statistiken oder wegen Änderungen der Kardinalität keine Neukompilierungen durchgeführt, mit Ausnahme der durch DML `INSTEAD OF`-Trigger erstellten eingefügten und gelöschten Tabellen. Da diese Tabellen in „tempdb“ erstellt wurden, hängt die Neukompilierung von Abfragen, die auf diese Tabellen zugreifen, von der `AUTO_UPDATE_STATISTICS` -Einstellung in „tempdb“ ab. Beachten Sie, dass, auch wenn diese Einstellung auf `OFF` festgelegt ist, Abfragen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 weiterhin auf der Grundlage der Kardinalitätsänderungen in den durch DML-Trigger eingefügten und gelöschten Tabellen erneut kompiliert werden.
+> Wenn die Datenbankoption `AUTO_UPDATE_STATISTICS` auf `ON` festgelegt wird, werden Abfragen neu kompiliert, wenn sie Tabellen oder indizierte Sichten betreffen, deren Statistiken aktualisiert wurden oder deren Kardinalitäten sich seit der letzten Ausführung signifikant geändert haben. Dieses Verhalten gilt für standardmäßige benutzerdefinierte Tabellen, temporäre Tabellen und die durch DML-Trigger erstellten eingefügten und gelöschten Tabellen. Wenn sich sehr viele Neukompilierungen auf die Abfrageleistung auswirken, können Sie diese Einstellung in `OFF`ändern. Wenn die `AUTO_UPDATE_STATISTICS`-Datenbankoption auf `OFF` festgelegt wird, werden auf der Grundlage von Statistiken oder wegen Änderungen der Kardinalität keine Neukompilierungen durchgeführt, mit Ausnahme der durch DML `INSTEAD OF`-Trigger erstellten eingefügten und gelöschten Tabellen. Da diese Tabellen in „tempdb“ erstellt wurden, hängt die Neukompilierung von Abfragen, die auf diese Tabellen zugreifen, von der `AUTO_UPDATE_STATISTICS` -Einstellung in „tempdb“ ab. Beachten Sie, dass, auch wenn diese Einstellung auf `OFF` festgelegt ist, Abfragen in früheren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Versionen als 2005 weiterhin auf der Grundlage der Kardinalitätsänderungen in den durch DML-Trigger eingefügten und gelöschten Tabellen noch mal kompiliert werden.
 
 ### <a name="PlanReuse"></a> Parameter und Wiederverwendung von Ausführungsplänen
 
@@ -585,7 +585,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird durch das Verwend
 > [!WARNING] 
 > Es ist sicherer, Parameter oder Parametermarkierungen zu verwenden, die vom Endbenutzer eingegebene Werte enthalten, als die Werte in einer Zeichenfolge zu verketten, die dann mithilfe einer API-Datenzugriffsmethode, einer `EXECUTE` -Anweisung oder einer gespeicherten `sp_executesql` -Prozedur ausgeführt werden.
 
-Wenn eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ohne Parameter ausgeführt wird, parametrisiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Anweisung intern, um die Wahrscheinlichkeit zu erhöhen, dass ein übereinstimmender Ausführungsplan gefunden wird. Dieser Prozess wird als einfache Parametrisierung bezeichnet. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 wurde dieser Prozess als Auto-Parametrisierung bezeichnet.
+Wenn eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ohne Parameter ausgeführt wird, parametrisiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Anweisung intern, um die Wahrscheinlichkeit zu erhöhen, dass ein übereinstimmender Ausführungsplan gefunden wird. Dieser Prozess wird als einfache Parametrisierung bezeichnet. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Versionen vor 2005 wurde dieser Prozess als automatische Parametrisierung bezeichnet.
 
 Angenommen, die folgende Anweisung wird ausgeführt:
 
@@ -942,7 +942,7 @@ Die relationale Engine verwendet die OLE DB-API (Application Programming Interfa
 
 Auf dem Server, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, muss für jede OLE DB-Datenquelle, auf die als Verbindungsserver zugegriffen wird, ein OLE DB-Anbieter vorhanden sein. Der Reihe von [!INCLUDE[tsql](../includes/tsql-md.md)]-Vorgängen, die für eine bestimmte OLE DB-Datenquelle angewendet werden können, wird durch die Funktionalität des OLE DB-Anbieters bestimmt.
 
-Mitglieder der festen Serverrolle `sysadmin` können mithilfe der `DisallowAdhocAccess`-Eigenschaft in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Ad-hoc-Konnektornamen für einen OLE DB-Anbieter in jeder Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aktivieren oder deaktivieren. Bei aktiviertem Ad-hoc-Zugriff kann ein beliebiger Benutzer, der bei der Instanz angemeldet ist, [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen mit Ad-hoc-Konnektornamen ausführen, die auf eine beliebige Datenquelle im Netzwerk verweisen, und mithilfe dieses OLE DB-Anbieters auf diese Datenquellen zugreifen. Mitglieder der `sysadmin` -Rolle können zum Steuern des Zugriffs auf Datenquellen den Ad-hoc-Zugriff auf diesen OLE DB-Anbieter deaktivieren. Auf diese Weise können Benutzer lediglich auf diejenigen Datenquellen zugreifen, auf die mit den von den Administratoren definierten Verbindungsservernamen verwiesen wird. Standardmäßig ist der Ad-hoc-Zugriff für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-OLE DB-Anbieter aktiviert und für alle anderen OLE DB-Anbieter deaktiviert.
+Mitglieder der festen Serverrolle `sysadmin` können mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Eigenschaft `DisallowAdhocAccess` die Ad-hoc-Connectornamen für einen OLE DB-Anbieter in jeder Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aktivieren oder deaktivieren. Bei aktiviertem Ad-hoc-Zugriff kann ein beliebiger Benutzer, der bei der Instanz angemeldet ist, [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen mit Ad-hoc-Konnektornamen ausführen, die auf eine beliebige Datenquelle im Netzwerk verweisen, und mithilfe dieses OLE DB-Anbieters auf diese Datenquellen zugreifen. Mitglieder der `sysadmin` -Rolle können zum Steuern des Zugriffs auf Datenquellen den Ad-hoc-Zugriff auf diesen OLE DB-Anbieter deaktivieren. Auf diese Weise können Benutzer lediglich auf diejenigen Datenquellen zugreifen, auf die mit den von den Administratoren definierten Verbindungsservernamen verwiesen wird. Standardmäßig ist der Ad-hoc-Zugriff für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-OLE DB-Anbieter aktiviert und für alle anderen OLE DB-Anbieter deaktiviert.
 
 Mithilfe von verteilten Abfragen kann Benutzern der Zugriff auf andere Datenquellen gewährt werden (z.B. auf Dateien, nicht relationale Datenquellen wie Active Directory usw.). Dies geschieht innerhalb des Sicherheitskontexts des Microsoft Windows-Kontos, mit dem der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienst ausgeführt wird. Bei Windows-Anmeldungen nimmt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Identität der Anmeldung ordnungsgemäß an; dies ist jedoch bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Anmeldungen nicht möglich. Auf diese Weise ist es einem Benutzer, der verteilte Abfragen ausführt, potenziell möglich, auf eine andere Datenquelle zuzugreifen, für die er selbst keine Berechtigungen hat, wohl aber das Konto, unter dem der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienst ausgeführt wird. Verwenden Sie `sp_addlinkedsrvlogin` , um spezifische Anmeldungen mit Zugriffsrechten für die entsprechenden Verbindungsserver zu definieren. Diese Steuerung ist nicht für Ad-hoc-Namen verfügbar. Sie sollten daher sehr sorgfältig beim Aktivieren eines OLE DB-Anbieters für den Ad-hoc-Zugriff sein.
 
@@ -983,7 +983,7 @@ Die folgende Abbildung ist eine logische Darstellung des Skip-Scan-Vorgangs. Sie
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>Anzeigen von Partitionierungsinformationen in Abfrageausführungsplänen
 
-Sie können die Ausführungspläne für Abfragen in partitionierten Tabellen und Indizes überprüfen, indem Sie die [!INCLUDE[tsql](../includes/tsql-md.md)] `SET`-Anweisungen `SET SHOWPLAN_XML` bzw. `SET STATISTICS XML` ausführen oder den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio ausgegebenen grafischen Ausführungsplan verwenden. So können Sie zum Beispiel den Ausführungsplan für die Kompilierzeit anzeigen, indem Sie auf der Abfrage-Editor-Symbolleiste auf *Geschätzten Ausführungsplan anzeigen* klicken, und den Laufzeitplan, indem Sie auf *Tatsächlichen Ausführungsplan einschließen*klicken. 
+Sie können die Ausführungspläne für Abfragen in partitionierten Tabellen und Indizes überprüfen, indem Sie die `SET`-Anweisungen von [!INCLUDE[tsql](../includes/tsql-md.md)], `SET SHOWPLAN_XML` bzw. `SET STATISTICS XML`, ausführen oder den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio ausgegebenen grafischen Ausführungsplan verwenden. So können Sie zum Beispiel den Ausführungsplan für die Kompilierzeit anzeigen, indem Sie auf der Abfrage-Editor-Symbolleiste auf *Geschätzten Ausführungsplan anzeigen* klicken, und den Laufzeitplan, indem Sie auf *Tatsächlichen Ausführungsplan einschließen*klicken. 
 
 Mit diesen Tools können Sie die folgenden Informationen abrufen:
 

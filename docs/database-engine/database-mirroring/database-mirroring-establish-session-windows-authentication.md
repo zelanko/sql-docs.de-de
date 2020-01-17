@@ -1,6 +1,7 @@
 ---
-title: 'Datenbankspiegelung: Einrichtung der Sitzung – Windows-Authentifizierung | Microsoft-Dokumentation'
-ms.custom: ''
+title: Konfigurieren der Datenbankspiegelung
+description: Hier finden Sie Schritte zum Konfigurieren einer Datenbankspiegelungsbeziehung zwischen einem Prinzipal und einem Spiegel mithilfe der Windows-Authentifizierung.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db81b9dc854a5b753db2b59da35ffcec6d719dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdf7d05c25aad00e084c15929cce857cb6614d3
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006439"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822292"
 ---
-# <a name="database-mirroring---establish-session---windows-authentication"></a>Datenbankspiegelung: Einrichtung der Sitzung – Windows-Authentifizierung
+# <a name="configure-database-mirroring"></a>Konfigurieren der Datenbankspiegelung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
@@ -36,7 +37,7 @@ ms.locfileid: "68006439"
   
 ### <a name="to-establish-a-database-mirroring-session"></a>So richten Sie eine Datenbank-Spiegelungssitzung ein  
   
-1.  Erstellen Sie die Spiegeldatenbank. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Erstellen Sie die Spiegeldatenbank. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
   
 2.  Richten Sie die Sicherheit auf jeder Serverinstanz ein.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "68006439"
   
      TCP<b>\://</b> _\<system-address\>_ <b>\:</b> _\<port\>_  
   
-     Dabei ist _\<Systemadresse>_ eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und _\<Port>_ ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)verwendet.  
+     Dabei ist _\<Systemadresse>_ eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und _\<Port>_ ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
      Auf der Spiegelserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Prinzipalserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist „DBSERVER1“ (der Name des Partnersystems) und der vom Endpunkt für die Datenbankspiegelung des Partners verwendete Port ist 7022:  
   

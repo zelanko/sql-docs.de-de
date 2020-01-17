@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 903ff234d0e29f6f9c8f6d1acb5c5ce658c59338
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285706"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308005"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer SQL Server-Datenquelle (SQL Server-Import/Export-Assistent)
 
@@ -34,6 +34,7 @@ Nachdem Sie **.NET Framework-Datenanbieter für SQL Server** auf der Seite **Dat
 
 |Erforderliche Informationen|Eigenschaft „.NET Framework-Datenanbieter für SQL Server“|
 |---|---|
+|Authentication|Geben Sie standardmäßig **NotSpecified** als „Integrierte Sicherheit“ an, oder wählen sie einen anderen Authentifizierungsmodus aus. Die interaktive Active Directory-Authentifizierung wird nicht unterstützt. |
 |Servername|**Data Source**|
 |Authentifizierungsinformationen (Anmeldung)|**Integrierte Sicherheit** oder **Benutzer-ID** und **Kennwort**<br/>Wenn eine Dropdownliste mit den Datenbanken auf dem Server angezeigt werden soll, müssen Sie zunächst gültige Anmeldeinformationen eingeben.|
 |Datenbankname|**Anfangskatalog**|
@@ -124,7 +125,7 @@ In der folgenden Abbildung wird die Ansicht dargestellt, die Ihnen angezeigt wir
 ## <a name="other-data-providers-and-more-info"></a>Andere Datenanbieter und weitere Informationen
 Weitere Informationen zum Herstellen einer Verbindung mit SQL Server mithilfe eines nicht hier aufgeführten Datenanbieters finden Sie unter [SQL Server connection strings (SQL Server-Verbindungszeichenfolgen)](https://www.connectionstrings.com/sql-server/). Diese Drittanbieterseite enthält Informationen über die Datenanbieter und die auf dieser Seite beschriebenen Verbindungsparameter.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Auswählen einer Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Auswählen eines Ziels](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

@@ -1,29 +1,30 @@
 ---
-title: Häufige Fehler bei Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln in Azure Key Vault | Microsoft-Dokumentation
-description: Problembehandlung von Transparent Data Encryption (TDE) einer mit Azure Key Vault-Konfiguration.
+title: Häufige Fehler bei von kundenseitig verwalteten Schlüsseln in Azure Key Vault
+description: Erfahren Sie, wie Sie häufige Fehler bei Transparent Data Encryption (TDE) und vom Kunden verwalteten Schlüsseln im Azure Key Vault beheben.
+ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
 - tde troubleshooting
-author: aliceku
+author: jaszymas
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: aliceku
+ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727766"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558465"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Häufige Fehler bei Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln in Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-In diesem Artikel wird beschrieben, wie Sie Probleme mit dem Azure Key Vault-Schlüsselzugriff identifizieren und beheben, die dazu geführt haben, dass eine für die Verwendung von [Transparent Data Encryption (TDE) mit kundenseitig verwalteten Schlüsseln in Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) konfigurierte Datenbank nicht mehr zugänglich ist.
+In diesem Artikel wird beschrieben, wie Sie Probleme mit dem Azure Key Vault-Schlüsselzugriff identifizieren und beheben, die dazu geführt haben, dass eine für die Verwendung von [Transparent Data Encryption (TDE) mit kundenseitig verwalteten Schlüsseln in Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql) konfigurierte Datenbank nicht mehr zugänglich ist.
 
 ## <a name="introduction"></a>Einführung
 Wenn TDE zur Verwendung eines kundenseitig verwalteten Schlüssels in Azure Key Vault konfiguriert ist, muss fortlaufender Zugriff auf diesen TDE-Schutz gewährleistet sein, damit die Datenbank online bleibt.  Wenn die logische SQL Server-Instanz den Zugriff auf den kundenseitig verwalteten TDE-Schutz in Azure Key Vault verliert, beginnt eine Datenbank alle Verbindungen mit der entsprechenden Fehlermeldung abzulehnen. Zudem wird im Azure-Portal der Status in *Nicht zugänglich* geändert.
@@ -83,7 +84,7 @@ Navigieren Sie im Azure-Portal zum Schlüsseltresor und anschließend zu **Zugri
  1. Verwenden Sie die Schaltfläche **Neues Element hinzufügen**, um die im vorherigen Schritt erstellte AppId für den Server hinzuzufügen. 
  1. Weisen Sie die folgenden Schlüsselberechtigungen zu: „Get (Abrufen)“, „Wrap (Packen)“ und „Unwrap (Entpacken)“. 
 
-Weitere Informationen finden Sie unter [Zuweisen einer Azure AD-Identität zu einem Server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+Weitere Informationen finden Sie unter [Zuweisen einer Azure AD-Identität zu einem Server](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
 > Wurde die logische SQL Server-Instanz nach der TDE-Erstkonfiguration mit Key Vault in einen neuen Mandanten verschoben, wiederholen Sie den Schritt zum Konfigurieren der Azure AD-Identität, um eine neue AppId zu erstellen. Fügen Sie die AppId dann dem Schlüsseltresor hinzu, und weisen Sie dem Schlüssel die richtigen Berechtigungen zu. 

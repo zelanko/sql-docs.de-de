@@ -1,6 +1,7 @@
 ---
-title: Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor aus | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor aus (SSMS)
+description: Hier erfahren Sie, wie Sie Verleger vom Replikationsmonitor in SQL Server Management Studio (SSMS) aus hinzufügen oder entfernen.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 28d0a979e6cf4d76dd338f139f5c48887aed988e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d46f710bfae73527f414017108954bf4e9129f8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770686"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320759"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor aus
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "68770686"
   
 2.  Klicken Sie im Dialogfeld **Verleger hinzufügen** auf **Hinzufügen**, und klicken Sie dann auf **Oracle-Verleger hinzufügen**.  
   
-3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteilers ein, der dem Oracle-Verleger zugeordnet ist, und wählen Sie dann den Authentifizierungstyp aus. Wenn Sie **SQL Server-Authentifizierung**auswählen, geben Sie einen Anmeldenamen und ein Kennwort ein. Die von Ihnen angegebenen Anmeldeinformationen werden vom Replikationsmonitor für künftige Verbindungen mit diesem Server gespeichert. Das angegebene Windows-Konto bzw. der angegebene SQL Server-Anmeldename muss Mitglied der festen **sysadmin** -Serverrolle bzw. Mitglied der festen **replmonitor** -Datenbankrolle in der Verteilungsdatenbank sein.  
+3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verteilers ein, der dem Oracle-Verleger zugeordnet ist, und wählen Sie dann den Authentifizierungstyp aus. Wenn Sie **SQL Server-Authentifizierung**auswählen, geben Sie einen Anmeldenamen und ein Kennwort ein. Die von Ihnen angegebenen Anmeldeinformationen werden vom Replikationsmonitor für künftige Verbindungen mit diesem Server gespeichert. Das angegebene Windows-Konto bzw. der angegebene SQL Server-Anmeldename muss Mitglied der festen **sysadmin** -Serverrolle bzw. Mitglied der festen **replmonitor** -Datenbankrolle in der Verteilungsdatenbank sein.  
   
 4.  Klicken Sie auf **Verbinden**.  
   

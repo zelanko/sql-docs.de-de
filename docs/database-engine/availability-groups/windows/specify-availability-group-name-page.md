@@ -1,7 +1,7 @@
 ---
-title: Seite „Optionen der Verfügbarkeitsgruppe angeben“ (Assistent für Verfügbarkeitsgruppen), SQL Server | Microsoft-Dokumentation
+title: 'Assistent für Verfügbarkeitsgruppen: Angeben von Optionen für Verfügbarkeitsgruppen'
 ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da34edca55f4f21c3323e621eecf2aa6983cbf79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014024"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822575"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Seite „Optionen der Verfügbarkeitsgruppe angeben“ für eine Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,5 +54,5 @@ Select Databases Page (New Availability Group Wizard and Add Database Wizard)
 -   [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   

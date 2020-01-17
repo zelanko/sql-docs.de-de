@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: aliceku
-ms.openlocfilehash: af336d2946dbb0b96d3ebdc64c14ce9e1eb6012e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: jaszymas
+ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127206"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246128"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Bewährte Methoden für die Sicherheit eigenständiger Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68127206"
   Eigenständige Datenbanken bergen einige eindeutige Risiken. Diese müssen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Administratoren erkannt und gemindert werden. Die meisten Bedrohungen betreffen den Authentifizierungsprozess **USER WITH PASSWORD** , durch den die Authentifizierungsgrenze von der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Ebene auf die Datenbankebene verschoben wird.  
   
 ## <a name="threats-related-to-users"></a>Bedrohungen in Bezug auf Benutzer  
- Benutzer in einer eigenständigen Datenbank, die über die Berechtigung **ALTER ANY USER** verfügen (z.B. Mitglieder der festen Datenbankrollen **db_owner** und **db_securityadmin** ), können ohne Wissen und Erlaubnis des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administrators den Zugriff auf die Datenbank gewähren. Wenn Benutzern der Zugriff auf eine eigenständige Datenbank gewährt wird, vergrößert dies die potenzielle Angriffsfläche der gesamten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Administratoren müssen diese Delegierung der Zugriffssteuerung verstehen, und sie sollten Benutzern die **ALTER ANY USER** -Berechtigung in der eigenständigen Datenbank nur mit großer Vorsicht gewähren. Alle Datenbankbesitzer verfügen über die **ALTER ANY USER** -Berechtigung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren sollten die Benutzer in einer eigenständigen Datenbank in regelmäßigen Abständen überwachen.  
+ Benutzer in einer eigenständigen Datenbank, die über die Berechtigung **BELIEBIGEN BENUTZER ÄNDERN** verfügen (z. B. Mitglieder der festen Datenbankrollen **db_owner** und **db_acessadmin** ), können ohne Wissen und Erlaubnis des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Administrators den Zugriff auf die Datenbank gewähren. Wenn Benutzern der Zugriff auf eine eigenständige Datenbank gewährt wird, vergrößert dies die potenzielle Angriffsfläche der gesamten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Administratoren müssen diese Delegierung der Zugriffssteuerung verstehen, und sie sollten Benutzern die **ALTER ANY USER** -Berechtigung in der eigenständigen Datenbank nur mit großer Vorsicht gewähren. Alle Datenbankbesitzer verfügen über die **ALTER ANY USER** -Berechtigung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren sollten die Benutzer in einer eigenständigen Datenbank in regelmäßigen Abständen überwachen.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Zugreifen auf andere Datenbanken mit dem guest-Konto  
  Datenbankbesitzer und Datenbankbenutzer mit der **ALTER ANY USER** -Berechtigung können Benutzer für die eigenständige Datenbank erstellen. Nach dem Herstellen einer Verbindung mit einer eigenständigen Datenbank in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann ein Benutzer der eigenständigen Datenbank auf andere Datenbanken in [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugreifen, wenn für die anderen Datenbanken das **guest** -Konto aktiviert ist.  
@@ -84,7 +84,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="escaping-a-contained-database"></a>Versehen einer eigenständigen Datenbank mit Escapezeichen  
  Wenn eine Datenbank teilweise eigenständig ist, sollten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren die Berechtigungen von Benutzern und Modulen in eigenständigen Datenbanken regelmäßig überwachen.  
   
-## <a name="denial-of-service-through-autoclose"></a>Denial-of-Service-Angriff durch AUTO_CLOSE  
+## <a name="denial-of-service-through-auto_close"></a>Denial-of-Service-Angriff durch AUTO_CLOSE  
  Konfigurieren Sie eigenständige Datenbanken nicht so, dass sie automatisch geschlossen werden. Wenn die Datenbank nach dem Schließen geöffnet wird, um einen Benutzer zu authentifizieren, werden zusätzliche Ressourcen belegt, und dies kann in einem Denial-of-Service-Angriff ausgenutzt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  

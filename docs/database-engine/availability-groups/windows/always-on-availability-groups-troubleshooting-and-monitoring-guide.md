@@ -1,7 +1,7 @@
 ---
-title: Referenz zum Überwachen und Beheben von Problemen von Always On-Verfügbarkeitsgruppen
-description: Dieser Leitfaden dient als Referenz zur Unterstützung bei den ersten Schritten mit der Überwachung und der Behandlung einiger gängiger Probleme von Always On-Verfügbarkeitsgruppen.
-ms.custom: ag-guide, seodec18
+title: Leitfaden zu Überwachung und Problembehandlung bei Verfügbarkeitsgruppen
+description: Ein Inhaltsverzeichnis für den Einstieg in die Überwachung und Behandlung einiger gängiger Probleme von Always On-Verfügbarkeitsgruppen
+ms.custom: seo-lt-2019
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94430d6b32567f7f185f1a515f8391d4ee01b3a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991571"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822047"
 ---
-# <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Leitfaden zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen
+# <a name="monitor-and-troubleshoot-availability-groups"></a>Überwachung und Problembehandlung bei Verfügbarkeitsgruppen
  Dieser Leitfaden unterstützt Sie bei den ersten Schritten mit der Überwachung von Always On-Verfügbarkeitsgruppen und der Behandlung einiger gängiger Probleme in Bezug auf Verfügbarkeitsgruppen. Zudem bietet der Leitfaden Originalinhalte sowie eine Angebotsseite mit nützlichen Informationen, die an anderer Stelle veröffentlicht wurden. Im Rahmen dieses Leitfadens können zwar nicht alle Probleme, die auf dem umfassenden Gebiet der Verfügbarkeitsgruppen auftreten können, im Detail erläutert werden, allerdings kann auf die richtige Richtung bezüglich der Ursachenanalyse und Problemlösung gewiesen werden. 
  
  Da Verfügbarkeitsgruppen eine integrierte Technologie darstellen, sind viele der auftretenden Probleme möglicherweise Anzeichen für andere Probleme in Ihrem Datenbanksystem. Einige Probleme werden durch Einstellungen in einer Verfügbarkeitsgruppe verursacht, z.B. eine angehaltene Verfügbarkeitsdatenbank. Darüber hinaus können Probleme mit anderen Aspekten von SQL Server auftreten, z.B. SQL Server-Einstellungen und Bereitstellungen von Datenbankdateien, sowie systemische Leistungsprobleme, die unabhängig von der Verfügbarkeit bestehen. Dennoch können andere Probleme außerhalb von SQL Server auftreten, z.B. Probleme mit Netzwerk-E/As, TCP/IP, Active Directory und Windows Server Failover Clustering (WSFC). Oftmals muss bei Problemen, die sich bei einer Verfügbarkeitsgruppe, einem Replikat oder einer Datenbank abzeichnen, an mehreren Technologien Korrekturen vorgenommen werden, um die Ursache zu ermitteln.  
@@ -26,7 +26,7 @@ ms.locfileid: "67991571"
 ##  <a name="BKMK_SCENARIOS"></a> Problembehandlungsszenarien  
  Die folgende Tabelle enthält Links zu allgemeinen Problembehandlungsszenarien für Verfügbarkeitsgruppen. Sie werden nach den jeweiligen Szenariotypen kategorisiert, z.B. Konfiguration, Clientkonnektivität, Failover und Leistung.  
   
-|Szenario|Szenariotyp|und Beschreibung|  
+|Szenario|Szenariotyp|Beschreibung|  
 |--------------|-------------------|-----------------|  
 |[Behandlung von Problemen bei der Konfiguration von Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Konfiguration|Enthält Informationen, um Sie bei der Behandlung typischer Probleme mit der Konfiguration von Serverinstanzen für Verfügbarkeitsgruppen zu unterstützen. Zu typischen Konfigurationsproblemen zählen Folgende: Verfügbarkeitsgruppen sind deaktiviert, Konten sind falsch konfiguriert, Datenbankspiegelungsendpunkte sind nicht vorhanden, es kann nicht auf Endpunkte zugegriffen werden (SQL Server-Fehler 1418), es ist kein Netzwerkzugriff vorhanden und bei dem Befehl zum Verknüpfen einer Datenbank tritt ein Fehler auf (SQL Server-Fehler 35250).|  
 |[Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei &#40;Always On-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Konfiguration|Ein Vorgang zum Hinzufügen einer Datei hat dazu geführt, dass die sekundäre Datenbank angehalten wird und sich im Zustand SYNCHRONISIERUNG WIRD NICHT AUSGEFÜHRT befindet.|  
@@ -40,14 +40,14 @@ ms.locfileid: "67991571"
 ##  <a name="BKMK_TOOLS"></a> Hilfreiche Tools für die Problembehandlung  
  Bei der Konfiguration oder Ausführung von Verfügbarkeitsgruppen können Sie mithilfe verschiedener Tools unterschiedliche Arten von Problemen diagnostizieren. Die folgende Tabelle enthält Links zu nützlichen Informationen über die Tools.  
   
-|Tool|und Beschreibung|  
+|Tool|Beschreibung|  
 |----------|-----------------|  
 |[Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|Bietet auf einer benutzerfreundlichen Oberfläche einen prägnanten Überblick über die Integrität der Verfügbarkeitsgruppe.|  
 |[Always On-Richtlinien](always-on-policies.md)|Werden vom Always On-Dashboard verwendet.|  
 |[SQL Server-Fehlerprotokoll &#40;Always On-Verfügbarkeitsgruppen&#41;](sql-server-error-log-always-on-availability-groups.md)|Protokolliert Statusübergangsereignisse für Verfügbarkeitsgruppen, -replikate und -datenbanken, Status von anderen Always On-Komponenten und Always On-Fehler.|  
-|[CLUSTER.LOG &#40;Always On-Verfügbarkeitsgruppen&#41;](cluster-log-always-on-availability-groups.md)|Protokolliert Clusterereignisse wie Statusübergänge der Verfügbarkeitsgruppenressource sowie Ereignisse und Fehler der SQL Server-Ressourcen-DLL.|  
+|[CLUSTER.LOG &#40;Always On Availability Groups&#41; (CLUSTER.LOG (Always On-Verfügbarkeitsgruppen))](cluster-log-always-on-availability-groups.md)|Protokolliert Clusterereignisse wie Statusübergänge der Verfügbarkeitsgruppenressource sowie Ereignisse und Fehler der SQL Server-Ressourcen-DLL.|  
 |[Always On-Integritätsdiagnoseprotokoll](always-on-health-diagnostics-log.md)|Protokolliert die SQL Server-Integritätsdiagnose, die dem WSFC-Cluster (SQL Server-Ressourcen-DLL) mit [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) gemeldet wird.|  
-|[Dynamische Verwaltungssichten und Systemkatalogsichten &#40;Always On-Verfügbarkeitsgruppen&#41;](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)|Meldet Informationen zu den Verfügbarkeitsgruppen wie Konfiguration, Integritätsstatus und Leistungsmetriken.|  
+|[Dynamic management views and system catalog views &#40;Always On Availability Groups&#41; (Dynamische Verwaltungssichten und Systemkatalogsichten (Always On-Verfügbarkeitsgruppen))](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)|Meldet Informationen zu den Verfügbarkeitsgruppen wie Konfiguration, Integritätsstatus und Leistungsmetriken.|  
 |[Erweiterte Always On-Ereignisse](always-on-extended-events.md)|Stellt ausführliche Diagnoseinformationen zu den Verfügbarkeitsgruppen bereit und ist für Ursachenanalysen geeignet.|  
 |[Always On-Wartetypen](always-on-wait-types.md)|Stellt die Wartestatistik speziell für Verfügbarkeitsgruppen bereit und ist für die Leistungsoptimierung geeignet.|  
 |Always On-Leistungsindikatoren|Überwachen die im Systemmonitor dargestellte Verfügbarkeitsgruppenaktivität und sind für die Leistungsoptimierung geeignet. Weitere Informationen finden Sie unter [SQL Server-Verfügbarkeitsreplikat](~/relational-databases/performance-monitor/sql-server-availability-replica.md) und [SQL Server-Datenbankreplikat](~/relational-databases/performance-monitor/sql-server-database-replica.md).|  
@@ -60,10 +60,10 @@ ms.locfileid: "67991571"
   
  Die untenstehende Tabelle verweist auf Themen, mit denen Sie die Integrität Ihrer Verfügbarkeitsgruppenlösung überwachen können.  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Überwachen der Leistung von Always On-Verfügbarkeitsgruppen](monitor-performance-for-always-on-availability-groups.md)|In diesem Thema werden der Datensynchronisierungsprozess für Verfügbarkeitsgruppen, die Flusssteuerungsgates und nützliche Metriken für die Überwachung einer Verfügbarkeitsgruppe sowie der Prozess zum Erfassen der Metriken RTO und RPO beschrieben.|  
-|[Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Dieses Thema enthält Informationen zu Tools für die Überwachung einer Verfügbarkeitsgruppe.|  
+|[Tools zum Überwachen von Always On-Verfügbarkeitsgruppen](monitoring-of-availability-groups-sql-server.md)|Dieses Thema enthält Informationen zu Tools für die Überwachung einer Verfügbarkeitsgruppe.|  
 |[The Always On health model, part 1: Health model architecture (Das Always On-Zustandsmodell, Teil 1: Architektur des Zustandsmodells)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Dieses Thema enthält eine Übersicht über das Always On-Integritätsmodell.|  
 |[The Always On health model, part 2: Extending the health model (Das Always On-Zustandsmodell, Teil 2: Erweitern des Zustandsmodells)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|In diesem Thema wird erläutert, wie das Always On-Integritätsmodell und das Always On-Dashboard zur Anzeige weiterer Informationen angepasst werden.|  
 |[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview (Überwachen des Always On-Zustands mit PowerShell, Teil 1: allgemeine Übersicht zu Cmdlets)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Dieses Thema enthält eine grundlegende Übersicht über die PowerShell-Cmdlets, die zur Überwachung der Integrität einer Verfügbarkeitsgruppe verwendet werden können.|  

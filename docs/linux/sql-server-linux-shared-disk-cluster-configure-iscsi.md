@@ -1,6 +1,7 @@
 ---
-title: Konfigurieren einer Failoverclusterinstanz mit iSCSI-Speicher – SQL Server für Linux
-description: ''
+title: 'Konfigurieren des iSCSI-Speichers für Failoverclusterinstanzen: SQL Server für Linux'
+description: Hier erfahren Sie, wie Sie eine Failoverclusterinstanz mithilfe von iSCSI für SQL Server für Linux konfigurieren.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032404"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558581"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>SQL Server für Linux: Konfigurieren einer Failoverclusterinstanz mit iSCSI
 
@@ -297,7 +298,7 @@ Weitere Informationen zum iSCSI-Initiator für die unterstützten Verteilungen f
     chown mssql <FolderName>
     ```
 
-    \<FolderName> ist der Name des erstellten Ordners. Das folgende Beispiel soll dies erläutern:
+    \<FolderName> ist der Name des erstellten Ordners. Ein entsprechendes Beispiel ist nachfolgend dargestellt.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -309,7 +310,7 @@ Weitere Informationen zum iSCSI-Initiator für die unterstützten Verteilungen f
     chown mssql <FolderName>
     ```
 
-    \<FolderName> ist der Name des erstellten Ordners. Das folgende Beispiel soll dies erläutern:
+    \<FolderName> ist der Name des erstellten Ordners. Ein entsprechendes Beispiel ist nachfolgend dargestellt.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -351,7 +352,7 @@ Weitere Informationen zum iSCSI-Initiator für die unterstützten Verteilungen f
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker> ist die Liste der Volumegruppen aus der Ausgabe von Schritt 20, die nicht von der Failoverclusterinstanz verwendet wird. Setzen Sie sie in Anführungszeichen, und trennen Sie sie durch Kommas. Das folgende Beispiel soll dies erläutern:
+    \<ListOfVGsNotUsedByPacemaker> ist die Liste der Volumegruppen aus der Ausgabe von Schritt 20, die nicht von der Failoverclusterinstanz verwendet wird. Setzen Sie sie in Anführungszeichen, und trennen Sie sie durch Kommas. Ein entsprechendes Beispiel ist nachfolgend dargestellt.
 
     ![55-ListOfVGs][11]
  
@@ -392,12 +393,12 @@ Sie können die Failoverclusterinstanz nun konfigurieren.
 
 |Distribution |Thema 
 |----- |-----
-|**Red Hat Enterprise Linux mit Add-On für Hochverfügbarkeit** |[Konfigurieren](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Operate (Ausführen)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+|**Red Hat Enterprise Linux mit Add-On für Hochverfügbarkeit** |[Konfigurieren](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Ausführen](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server mit Add-On für Hochverfügbarkeit** |[Konfigurieren](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[SQL Server für Linux: Konfigurieren einer Failoverclusterinstanz](sql-server-linux-shared-disk-cluster-configure.md)
+[Konfigurieren einer Failoverclusterinstanz – SQL Server für Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/05-initiator.png

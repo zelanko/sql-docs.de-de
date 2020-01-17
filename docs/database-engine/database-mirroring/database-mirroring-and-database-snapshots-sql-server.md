@@ -1,5 +1,6 @@
 ---
-title: Datenbankspiegelung und Datenbankmomentaufnahmen (SQL Server) | Microsoft-Dokumentation
+title: Datenbankspiegelung und Datenbankmomentaufnahmen
+description: Hier erfahren Sie mehr zur Interoperabilität bei der Verwendung von Datenbankmomentaufnahmen mit Datenbankspiegelung.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 637cc13f10869fffbd50638169aad983c8b51951
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a184bdf227b412ea5464c86058d33903fa7d8d7a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951925"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258816"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Datenbankspiegelung und Datenbankmomentaufnahmen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "67951925"
   
 -   [Erstellen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
--   [Anzeigen einer Datenbankmomentaufnahme &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [Anzeigen einer Datenbank-Momentaufnahme &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
 -   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   

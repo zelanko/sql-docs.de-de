@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91711ce160dcb653d9e05e8b0a445214a247d337
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
+ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981886"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681781"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **\* _SQL Server \*_** &nbsp; | [SQL-Datenbank](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| **_\* SQL Server \*_** &nbsp; | [SQL-Datenbank](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -114,7 +114,7 @@ Zusätzliche Hinweise und Anweisungen für das Festlegen des Speicherorts:
 
 Gibt zusätzliche Optionen bei einer Verbindung über `ODBC` mit einer externen Datenquelle an.
 
-Es ist mindestens der Name des Treibers erforderlich. Allerdings empfiehlt es sich zur Unterstützung bei der Problembehandlung andere Optionen wie beispielsweise `APP='<your_application_name>'` oder `ApplicationIntent= ReadOnly|ReadWrite` festzulegen.
+Es ist mindestens der Name des Treibers erforderlich. Allerdings sind auch Optionen wie `APP='<your_application_name>'` oder `ApplicationIntent= ReadOnly|ReadWrite` bei der Problembehandlung nützlich.
 
 Weitere Informationen erhalten Sie in der `ODBC`-Produktdokumentation für eine Liste zulässiger [CONNECTION_OPTIONS][connection_options].
 
@@ -138,7 +138,7 @@ Zusätzliche Hinweise und Anweisungen für das Erstellen der Anmeldeinformatione
   - Für die zu ladende Datei (z. B. `srt=o&sp=r`) benötigen Sie mindestens eine Leseberechtigung.
   - Verwenden Sie einen gültigen Ablaufzeitraum (alle Daten in UTC-Zeit).
 
-Ein Beispiel für das Verwenden von `CREDENTIAL` mit `SHARED ACCESS SIGNATURE` und `TYPE` = `BLOB_STORAGE` finden Sie unter [Erstellen einer externe Datenquelle zum Ausführen von Massenvorgängen und Abrufen von Daten von Azure Blob Storage in SQL-Datenbank](#f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
+Ein Beispiel für das Verwenden von `CREDENTIAL` mit `SHARED ACCESS SIGNATURE` und `TYPE` = `BLOB_STORAGE` finden Sie unter [Erstellen einer externe Datenquelle zum Ausführen von Massenvorgängen und Abrufen von Daten von Azure Blob Storage in SQL-Datenbank](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
 
 Weitere Informationen zum Erstellen datenbankweit gültiger Anmeldeinformationen finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -152,7 +152,7 @@ Gibt den Typ der externe Datenquelle an, die konfiguriert wird. Dieser Parameter
 > [!IMPORTANT]
 > Legen Sie `TYPE` nicht fest, wenn Sie eine andere externe Datenquelle verwenden.
 
-Ein Beispiel der Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus Azure Blob Storage finden Sie unter [Erstellen externer Datenquellen zum Verweisen auf Azure Blob Storage](#e-create-external-data-source-to-reference-azure-blob-storage).
+Ein Beispiel der Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus Azure Blob Storage finden Sie unter [Erstellen externer Datenquellen zum Verweisen auf Azure Blob Storage](#e-create-external-data-source-to-reference-azure-blob-storage).
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -189,7 +189,7 @@ Erfordert die CONTROL-Berechtigung für die Datenbank in SQL Server.
 
 Akzeptiert eine gemeinsame Sperre für das EXTERNAL DATA SOURCE-Objekt.  
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 PolyBase unterstützt die proxybasierte Authentifizierung für die meisten externen Datenquellen. Erstellen Sie datenbankweit gültige Anmeldeinformationen, um das Proxykonto zu erstellen.
 
@@ -256,7 +256,7 @@ WITH
 ;
 ```
 
-### <a name="d-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>D. Erstellen einer externen Datenquelle, um auf Kerberos-gesicherte Hadoop-Software zu verweisen
+### <a name="d-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>D: Erstellen einer externen Datenquelle, um auf Kerberos-gesicherte Hadoop-Software zu verweisen
 
 Um sicherzustellen, dass das Hadoop-Cluster mit Kerberos gesichert ist, können Sie den Wert der hadoop.security.authentication-Eigenschaft in „Hadoop-Core-site.xml“ überprüfen. Um auf ein Kerberos-gesichertes Hadoop-Cluster zu verweisen, müssen Sie datenbankweit gültige Anmeldeinformationen angeben, die Ihren Kerberos-Benutzernamen und Ihr Kennwort enthalten. Der Hauptschlüssel der Datenbank wird verwendet, um datenbankspezifische Anmeldeinformationen zu verschlüsseln.
 
@@ -311,14 +311,38 @@ WITH
 ;
 ```
 
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-2019"></a>F. Erstellen einer externen Datenquelle als Verweis auf eine benannte SQL Server-Instanz über die PolyBase-Konnektivität (SQL Server 2019)
+
+Sie können eine externe Datenquelle erstellen, die auf eine benannte SQL Server-Instanz verweist, indem Sie den Instanznamen mit CONNECTION_OPTIONS angeben. Im folgenden Beispiel ist WINSQL2019 der Hostname und SQL2019 der Instanzname.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019',
+  CONNECTION_OPTIONS = 'Server=%s\SQL2019',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+Alternativ können Sie einen Port verwenden, um eine Verbindung mit einer SQL Server-Instanz herzustellen.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019:58137',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+
 ## <a name="examples-bulk-operations"></a>Beispiele: Massenvorgänge
 
 > [!NOTE]
 > An das Ende der `LOCATION`-URL darf kein **/** , Dateiname oder Shared Access Signature-Parameter hinzugefügt werden, wenn Sie eine externe Datenquelle für Massenvorgänge konfigurieren.
 
-### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Erstellen einer externen Datenquelle für Massenvorgänge, die Daten aus Azure Blob Storage abruft
+### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. Erstellen einer externen Datenquelle für Massenvorgänge, die Daten aus Azure Blob Storage abruft
 
-**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
 Verwenden Sie die folgende Datenquelle für Massenvorgänge mit [BULK INSERT][bulk_insert] oder [OPENROWSET][openrowset]. Die Anmeldeinformationen müssen `SHARED ACCESS SIGNATURE` als Identität festgelegt haben, dürfen kein führendes `?` im SAS-Token aufweisen, müssen mindestens Leseberechtigung für die zu ladende Datei besitzen (z. B. `srt=o&sp=r`), und ihr Ablaufdatum muss gültig sein (alle Datumsangaben sind in UTC-Zeit). Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)][sas_token].
 
 ```sql
@@ -384,7 +408,7 @@ Sie finden dieses Beispiel unter [BULK INSERT][bulk_insert_example].
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>Übersicht: Azure SQL-Datenbank
+## <a name="overview-azure-sql-database"></a>Übersicht: Azure SQL-Datenbank
 
 Erstellt eine externe Datenquelle für elastische Abfragen. Externe Datenquellen werden zum Herstellen von Verbindungen verwendet und unterstützen diese primären Anwendungsfälle:
 
@@ -444,7 +468,7 @@ Zusätzliche Hinweise und Anweisungen für das Erstellen der Anmeldeinformatione
   - Für die zu ladende Datei (z. B. `srt=o&sp=r`) benötigen Sie mindestens eine Leseberechtigung.
   - Verwenden Sie einen gültigen Ablaufzeitraum (alle Daten in UTC-Zeit).
 
-Ein Beispiel für das Verwenden von `CREDENTIAL` mit `SHARED ACCESS SIGNATURE` und `TYPE` = `BLOB_STORAGE` finden Sie unter [Erstellen einer externe Datenquelle zum Ausführen von Massenvorgängen und Abrufen von Daten von Azure Blob Storage in SQL-Datenbank](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
+Ein Beispiel für das Verwenden von `CREDENTIAL` mit `SHARED ACCESS SIGNATURE` und `TYPE` = `BLOB_STORAGE` finden Sie unter [Erstellen einer externe Datenquelle zum Ausführen von Massenvorgängen und Abrufen von Daten von Azure Blob Storage in SQL-Datenbank](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
 
 Weitere Informationen zum Erstellen datenbankweit gültiger Anmeldeinformationen finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -468,13 +492,13 @@ Konfigurieren Sie dieses Argument, wenn der `TYPE` auf `RDBMS` oder `SHARD_MAP_M
 | RDBMS             | Der Name der Remotedatenbank auf dem mit `LOCATION` bereitgestellten Server. |
 | SHARD_MAP_MANAGER | Der Name der Datenbank, die als Shardzuordnungs-Manager fungiert.      |
 
-Ein Beispiel zum Erstellen einer externe Datenquelle, bei der `TYPE` = `RDBMS` ist, finden Sie unter [Erstellen einer externen RDBMS-Datenquelle](#b-create-an-rdbms-external-data-source).
+Ein Beispiel zum Erstellen einer externe Datenquelle, bei der `TYPE` = `RDBMS` ist, finden Sie unter [Erstellen einer externen RDBMS-Datenquelle](#b-create-an-rdbms-external-data-source).
 
 ### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = *shard_map_name*
 
 Wird verwendet, wenn das `TYPE`-Argument auf `SHARD_MAP_MANAGER` festgelegt wird, nur um den Namen der Shardzuordnung festzulegen.
 
-Ein Beispiel zum Erstellen einer externe Datenquelle, bei der `TYPE` = `SHARD_MAP_MANAGER` ist, finden Sie unter [Erstellen einer externen Datenquelle mithilfe des Shardzuordnungs-Managers](#a-create-a-shard-map-manager-external-data-source).
+Ein Beispiel zum Erstellen einer externe Datenquelle, bei der `TYPE` = `SHARD_MAP_MANAGER` ist, finden Sie unter [Erstellen einer externen Datenquelle mithilfe des Shardzuordnungs-Managers](#a-create-a-shard-map-manager-external-data-source).
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -653,7 +677,7 @@ Speicherortpfad:
 
 Zusätzliche Hinweise und Anweisungen für das Festlegen des Speicherorts:
 
-- Beim Bereitstellen von Azure Data Lake Storage Gen2 ist die Standardoption, sichere SSL-Verbindungen zu aktivieren. Wenn diese Option aktiviert ist, müssen Sie `abfss` verwenden, wenn eine sichere SSL-Verbindung ausgewählt ist. Beachten Sie, dass `abfss` auch für unsichere SSL-Verbindungen funktioniert. 
+- Bei der Bereitstellung von Azure Data Lake Storage Gen2 ist die Standardoption `enable secure SSL connections`. Wenn diese Option aktiviert ist, müssen Sie `abfss` verwenden, wenn eine sichere SSL-Verbindung ausgewählt ist. Beachten Sie, dass `abfss` auch für unsichere SSL-Verbindungen funktioniert. 
 - Die SQL Data Warehouse-Engine überprüft die Existenz der externen Datenquelle nicht, wenn das Objekt erstellt wird. Erstellen Sie zum Überprüfen mithilfe der externe Datenquelle eine externe Tabelle.
 - Verwenden Sie beim Abfragen von Hadoop für alle Tabellen die gleiche externe Datenquelle, um eine konsistente Abfragesemantik zu ermöglichen.
 - `wasb` ist das Standardprotokoll für Azure Blob Storage. `wasbs` ist optional, wird allerdings empfohlen, da Daten mithilfe einer sicheren SSL-Verbindung gesendet werden.
@@ -678,7 +702,7 @@ Gibt den Typ der externe Datenquelle an, die konfiguriert wird. Dieser Parameter
 > [!IMPORTANT]
 > Legen Sie `TYPE` nicht fest, wenn Sie eine andere externe Datenquelle verwenden.
 
-Ein Beispiel der Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus Azure Blob Storage finden Sie unter [Erstellen externer Datenquellen zum Verweisen auf Azure Blob Storage](#a-create-external-data-source-to-reference-azure-blob-storage).
+Ein Beispiel der Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus Azure Blob Storage finden Sie unter [Erstellen externer Datenquellen zum Verweisen auf Azure Blob Storage](#a-create-external-data-source-to-reference-azure-blob-storage).
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -688,7 +712,7 @@ Erfordert die „CONTROL“-Berechtigung für die Datenbank in SQL Data Warehous
 
 Akzeptiert eine gemeinsame Sperre für das EXTERNAL DATA SOURCE-Objekt.  
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 PolyBase unterstützt die proxybasierte Authentifizierung für die meisten externen Datenquellen. Erstellen Sie datenbankweit gültige Anmeldeinformationen, um das Proxykonto zu erstellen.
 
@@ -796,7 +820,7 @@ WITH
 [;]
 ```
 
-### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>D. Erstellen einer externen Datenquelle für Verweise auf PolyBase-Verbindungen mit Azure Data Lake Storage Gen 2
+### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>D: Erstellen einer externen Datenquelle für Verweise auf PolyBase-Verbindungen mit Azure Data Lake Storage Gen 2
 
 Wenn eine Verbindung mit einem Konto in Azure Data Lake Storage Gen 2 mithilfe einer [verwalteten Identität](/azure/active-directory/managed-identities-azure-resources/overview
 ) hergestellt wird, muss SECRET nicht angegeben werden.
@@ -930,7 +954,7 @@ Gibt den Typ der externe Datenquelle an, die konfiguriert wird. Dieser Parameter
 > [!IMPORTANT]
 > Legen Sie `TYPE` nicht fest, wenn Sie eine andere externe Datenquelle verwenden.
 
-Ein Beispiel der Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus Azure Blob Storage finden Sie unter [Erstellen externer Datenquellen zum Verweisen auf Azure Blob Storage](#d-create-external-data-source-to-reference-azure-blob-storage).
+Ein Beispiel der Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus Azure Blob Storage finden Sie unter [Erstellen externer Datenquellen zum Verweisen auf Azure Blob Storage](#d-create-external-data-source-to-reference-azure-blob-storage).
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -970,7 +994,7 @@ Erfordert die „CONTROL“-Berechtigung für die Datenbank in Analytics Platfor
 
 Akzeptiert eine gemeinsame Sperre für das EXTERNAL DATA SOURCE-Objekt.  
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 PolyBase unterstützt die proxybasierte Authentifizierung für die meisten externen Datenquellen. Erstellen Sie datenbankweit gültige Anmeldeinformationen, um das Proxykonto zu erstellen.
 
@@ -1034,7 +1058,7 @@ WITH
 ;
 ```
 
-### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D. Erstellen einer externen Datenquelle, um auf Azure Blob Storage zu verweisen
+### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D: Erstellen einer externen Datenquelle, um auf Azure Blob Storage zu verweisen
 
 In diesem Beispiel ist die externe Datenquelle ein Azure Blob Storage-Container namens `daily` im Azure-Speicherkonto`logs`. Die externe Datenquelle für Azure Storage steht nur für die Datenübertragung zur Verfügung. Die Prädikatweitergabe wird nicht unterstützt.
 

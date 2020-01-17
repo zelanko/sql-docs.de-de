@@ -17,17 +17,17 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a24105ff8deb7e3b2dea54d6c1cb859736ae6f5f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593998"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254830"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
+  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "|::ref1::|")  
   
  Always Encrypted ist eine Funktion zum Schutz sensibler Daten, wie Kreditkartennummern oder Personalausweisnummern (z.B. US-Sozialversicherungsnummern), die in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbanken gespeichert sind. Always Encrypted ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) weiterzugeben. Daher bietet Always Encrypted eine Trennung zwischen denjenigen, die die Daten besitzen und sie ansehen können, und denjenigen, die die Daten verwalten, aber keinen Zugriff haben sollten. Always Encrypted stellt sicher, dass Administratoren lokaler Datenbanken, Clouddatenbank-Operatoren oder andere nicht autorisierte Benutzer mit umfangreichen Rechten nicht auf die verschlüsselten Daten zugreifen können. So können Kunden ihre vertraulichen Daten ruhigen Gewissens außerhalb ihres direkten Kontrollbereichs speichern. Dies ermöglicht Organisationen, Daten in Azure zu speichern. Daraufhin können die lokale Datenbankverwaltung an Drittanbieter delegiert oder die Anforderungen an die Sicherheitsfreigaben der eigenen Datenbankadministrationsmitarbeiter reduziert werden.
 
@@ -36,7 +36,7 @@ ms.locfileid: "73593998"
   > [!NOTE] 
   > In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] ermöglicht Secure Enclaves eine erhebliche Erweiterung des vertraulichen Computings von Always Encrypted mit Musterabgleich, anderen Vergleichsoperatoren und direkter Verschlüsselung. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md).
 
- Always Encrypted macht die Verschlüsselung den Anwendungen gegenüber transparent. Ein auf dem Clientcomputer installierter Treiber, bei dem Always Encrypted aktiviert ist, erreicht dies durch die automatische Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber verschlüsselt die Daten in vertraulichen Spalten, bevor er sie an [!INCLUDE[ssDE](../../../includes/ssde-md.md)]weitergibt, und schreibt Abfragen automatisch neu, sodass die Semantik der Anwendung beibehalten wird. Auf ähnliche Weise entschlüsselt der Treiber transparent Daten, die in verschlüsselten Datenbankspalten in Abfrageergebnissen gespeichert sind.  
+ Always Encrypted macht die Verschlüsselung den Anwendungen gegenüber transparent. Ein auf dem Clientcomputer installierter Treiber, bei dem Always Encrypted aktiviert ist, erreicht dies durch die automatische Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber verschlüsselt die Daten in vertraulichen Spalten, bevor er sie an [!INCLUDE[ssDE](../../../includes/ssde-md.md)]weitergibt, und schreibt Abfragen automatisch neu, sodass die Semantik der Anwendung beibehalten wird. Analog dazu werden in verschlüsselten Datenbankspalten gespeicherte Daten aus Abfrageergebnissen durch den Treiber transparent entschlüsselt.  
   
  Always Encrypted ist in allen Editionen von [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] verfügbar, beginnend mit [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] und allen Dienstebenen von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (Vor [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 war Always Encrypted auf die Enterprise Edition beschränkt.) Eine Channel 9-Präsentation zu Always Encrypted finden Sie unter [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted).  
 
@@ -68,11 +68,11 @@ Der Server berechnet das Resultset, und für jede verschlüsselte Spalte im Resu
 
 Weitere Informationen zur Entwicklung von Anwendungen mit Always Encrypted mit bestimmten Clienttreibern finden Sie unter [Always Encrypted (Cliententwicklung)](always-encrypted-client-development.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
-Die Entschlüsselung findet über den Client statt. Das bedeutet, dass einige Aktionen, die nur serverseitig auftreten, nicht ausgeführt werden können, wenn Always Encrypted verwendet wird. 
+Die Verschlüsselung und Entschlüsselung erfolgt über den Clienttreiber. Das bedeutet, dass einige Aktionen, die nur serverseitig auftreten, nicht funktionieren, wenn Always Encrypted verwendet wird. Beispiele hierfür sind das Kopieren von Daten aus einer Spalte in eine andere über die Anweisungen UPDATE, BULK INSERT(T-SQL), SELECT INTO, INSERT..SELECT. 
 
-Hier sehen Sie ein Beispiel eines Updates, das versucht, Daten von einer verschlüsselten Spalte in eine nicht verschlüsselte Spalte ohne die Rückgabe eines Resultsets an den Client zu verschieben: 
+Hier sehen Sie ein Beispiel einer UPDATE-Anweisung, die versucht, Daten von einer verschlüsselten Spalte in eine nicht verschlüsselte Spalte ohne die Rückgabe eines Resultsets an den Client zu verschieben: 
 
 ```sql
 update dbo.Patients set testssn = SSN
@@ -107,7 +107,7 @@ Informationen zu kryptografischen Algorithmen von Always Encrypted finden Sie un
 
  Die Erstinstallation von Always Encrypted in einer Datenbank umfasst die Generierung von Always Encrypted-Schlüsseln, das Erstellen von Schlüsselmetadaten, die Konfigurierung von Verschlüsselungseigenschaften von ausgewählten Datenbankspalten, und/oder das Verschlüsseln von Daten, die möglicherweise bereits in Spalten vorhanden sind, die verschlüsselt werden müssen. Bitte beachten Sie, dass einige dieser Aufgaben nicht in Transact-SQL unterstützt werden und die Verwendung von clientseitigen Tools erfordern. Da Always Encrypted-Schlüssel und geschützte sensible Daten nie dem Server in Klartext offengelegt werden, kann die Datenbank-Engine nicht an der Schlüsselbereitstellung oder der Ausführung von Vorgängen zur Datenverschlüsselung oder -entschlüsselung beteiligt werden. Sie können SQL Server Management Studio oder PowerShell verwenden, um solche Aufgaben auszuführen. 
 
-|Task|SSMS|PowerShell|T-SQL|
+|Aufgabe|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
 |Bereitstellung von Spaltenhauptschlüsseln, Spaltenverschlüsselungsschlüsseln und Verschlüsselungsschlüsseln für verschlüsselte Spalten mit dem entsprechenden Spaltenhauptschlüssel|Ja|Ja|Nein|
 |Erstellen von Schlüsselmetadaten in der Datenbank|Ja|Ja|Ja|

@@ -1,6 +1,7 @@
 ---
-title: Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen | Microsoft-Dokumentation
-ms.custom: ''
+title: 'Transportsicherheit: Verfügbarkeitsgruppen und Datenbankspiegelung'
+description: In diesem Artikel erfahren Sie, wie Sie für Transportsicherheit für Nachrichten sorgen, die zwischen Datenbanken ausgetauscht werden, die Mitglied in einer Always On-Verfügbarkeitsgruppe oder Datenbankspiegelungssitzung sind, die auf SQL Server gehostet wird.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f360f60727e91407c1993c18d9548dbefd46a388
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047978"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252747"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,9 +72,9 @@ ms.locfileid: "68047978"
   
  Sie können auch die Verschlüsselungsalgorithmen steuern, die von einem Endpunkt verwendet werden können, indem Sie einen der folgenden Werte für die ALGORITHM-Option in einer CREATE ENDPOINT- oder ALTER ENDPOINT-Anweisung angeben:  
   
-|ALGORITHM-Wert|und Beschreibung|  
+|ALGORITHM-Wert|BESCHREIBUNG|  
 |---------------------|-----------------|  
-|RC4|Gibt an, dass der Endpunkt den RC4-Algorithmus verwenden muss. Dies ist die Standardeinstellung.<br /><br /> <strong>\*\* Warnung \*\*</strong> Der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.|  
+|RC4|Gibt an, dass der Endpunkt den RC4-Algorithmus verwenden muss. Dies ist die Standardoption.<br /><br /> <strong>\*\* Warnung \*\*</strong> Der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.|  
 |AES|Gibt an, dass der Endpunkt den AES-Algorithmus verwenden muss.|  
 |AES RC4|Gibt an, dass die beiden Endpunkte einen Verschlüsselungsalgorithmus aushandeln, wobei dieser Endpunkt dem AES-Algorithmus den Vorzug gibt.|  
 |RC4 AES|Gibt an, dass die beiden Endpunkte einen Verschlüsselungsalgorithmus aushandeln, wobei dieser Endpunkt dem RC4-Algorithmus den Vorzug gibt.|  
@@ -107,7 +108,7 @@ ms.locfileid: "68047978"
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections (Transact-SQL)](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
- [Problembehandlung für die Datenbankspiegelungskonfiguration &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Problembehandlung für die Always On-Verfügbarkeitsgruppenkonfiguration (SQL Server)](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [Problembehandlung für die Datenbankspiegelungskonfiguration (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [Problembehandlung für die AlwaysOn-Verfügbarkeitsgruppenkonfiguration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

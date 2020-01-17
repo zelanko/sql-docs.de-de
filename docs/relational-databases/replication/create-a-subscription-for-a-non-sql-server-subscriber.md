@@ -1,6 +1,7 @@
 ---
-title: Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten
+description: In diesem Artikel wird erläutert, wie ein Abonnent für einen Nicht-SQL Server-Abonnenten in SQL Server mithilfe von SQL Server Management Studio (SSMS) oder Transact-SQL (T-SQL) erstellt wird.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710431"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322010"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +104,7 @@ ms.locfileid: "71710431"
   
     -   Geben Sie in den Feldern **Prozesskonto**, **Kennwort**und **Kennwort bestätigen** das Konto und Kennwort von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows  an, unter dem der Verteilungs-Agent ausgeführt werden soll und unter dem er lokale Verbindungen mit dem Verteiler herstellen soll.  
   
-         Für das Konto müssen folgende Mindestberechtigungen erfüllt werden: Mitglied der festen Datenbankrolle **db_owner** in der Verteilungsdatenbank, Mitglied der Veröffentlichungszugriffsliste (PAL, Publication Access List); Leseberechtigungen für die Momentaufnahmefreigabe sowie Leseberechtigungen für das Installationsverzeichnis des OLE DB-Anbieters. Weitere Informationen zu PAL finden Sie unter [Sichern des Verlegers](../../relational-databases/replication/security/secure-the-publisher.md).  
+         Für das Konto müssen folgende Mindestberechtigungen erfüllt werden: Mitglied der festen Datenbankrolle **db_owner** in der Verteilungsdatenbank, Mitglied der Veröffentlichungszugriffsliste (PAL, Publication Access List); Leseberechtigungen für die Momentaufnahmefreigabe sowie Leseberechtigungen für das Installationsverzeichnis des OLE DB-Anbieters. Weitere Informationen zur PAL finden Sie unter [Sichern des Verlegers](../../relational-databases/replication/security/secure-the-publisher.md).  
   
     -   Geben Sie unter **Verbindung mit dem Abonnenten herstellen**, in den Feldern **Anmeldung**, **Kennwort**und **Kennwort bestätigen** die Anmeldung und das Kennwort ein, die zum Verbindungsaufbau mit dem Abonnenten verwendet werden sollen. Diese Anmeldung sollte bereits konfiguriert sein und für das Erstellen von Objekten in der Abonnementdatenbank ausreichende Berechtigungen aufweisen.  
   
@@ -130,7 +131,7 @@ ms.locfileid: "71710431"
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>So behalten Sie Tabellen auf dem Abonnenten bei  
   
--   Standardmäßig wird durch das Aktivieren einer Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten der Wert der **pre_creation_cmd** -Artikeleigenschaft auf 'drop' festgelegt. Mit dieser Einstellung wird angegeben, dass bei der Replikation auf dem Abonnenten eine Tabelle gelöscht werden soll, wenn sie mit dem Namen der Tabelle in dem Artikel übereinstimmt. Wenn auf dem Abonnenten Tabellen vorhanden sind, die Sie beibehalten möchten, verwenden Sie für jeden Artikel die gespeicherte Prozedur [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) . Geben Sie für **pre_creation_cmd**den Wert 'none' an. `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
+-   Standardmäßig wird durch das Aktivieren einer Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten der Wert der **pre_creation_cmd** -Artikeleigenschaft auf 'drop' festgelegt. Mit dieser Einstellung wird angegeben, dass bei der Replikation auf dem Abonnenten eine Tabelle gelöscht werden soll, wenn sie mit dem Namen der Tabelle in dem Artikel übereinstimmt. Wenn auf dem Abonnenten Tabellen vorhanden sind, die Sie beibehalten möchten, verwenden Sie für jeden Artikel die gespeicherte Prozedur [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) . Geben Sie für **pre_creation_cmd**den Wert 'none' an. [https://login.microsoftonline.com/consumers/](`sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`).  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>So generieren Sie eine Momentaufnahme für die Veröffentlichung  
   
@@ -138,7 +139,7 @@ ms.locfileid: "71710431"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, und klicken Sie dann auf **Status des Momentaufnahme-Agents anzeigen**.  
   
-3.  Klicken Sie im Dialogfeld **Status des Momentaufnahme-Agents anzeigen - \<Veröffentlichung>** auf **Start**.  
+3.  Klicken Sie im Dialogfeld **Status des Momentaufnahme-Agents anzeigen - \<Publication>** auf **Start**.  
   
  Nachdem der Momentaufnahme-Agent die Momentaufnahme generiert hat, wird eine Meldung angezeigt, die beispielsweise wie folgt lautet: "[100%] Es wurde eine Momentaufnahme mit 17 Artikel(n) generiert."  
   
@@ -178,7 +179,7 @@ ms.locfileid: "71710431"
   
     -   Den Wert **0** für `@subscriber_security_mode` und die Anmeldeinformationen des OLE DB-Anbieters für `@subscriber_login` und `@subscriber_password`.  
   
-    -   Einen Zeitplan für den Verteilungs-Agentauftrag für dieses Abonnement. Weitere Informationen finden Sie unter [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
+    -   Einen Zeitplan für den Verteilungs-Agentauftrag für dieses Abonnement. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
     >  Beim Erstellen eines Pushabonnements auf einem Verleger mit einem Remoteverteiler werden die angegebenen Werte für alle Parameter, einschließlich *job_login* und *job_password*, an den Verteiler als Nur-Text gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

@@ -1,6 +1,7 @@
 ---
-title: 'Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Tutorial: Always Encrypted mit Secure Enclaves mithilfe von SSMS'
+description: In diesem Tutorial erfahren Sie, wie Sie eine grundlegende Always Encrypted-Umgebung mit einer Secure Enclaves-Umgebung erstellen, wie Sie Daten direkt verschlüsseln und umfassende Abfragen für verschlüsselte Spalten mithilfe von SQL Server Management Studio (SSMS) ausgeben.
+ms.custom: seo-lt-2019
 ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,14 +13,14 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592343"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557479"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS
+# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Always Encrypted mit Secure Enclaves mithilfe von SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 In diesem Tutorial werden Ihnen die erste Schritte mit [Always Encrypted mit Secure Enclaves](encryption/always-encrypted-enclaves.md) vermittelt. Es wird Folgendes gezeigt:
@@ -157,7 +158,7 @@ Ein Fehler vom Typ „UnauthorizedHost“ weist darauf hin, dass der öffentlich
 
 Wenn andere Fehler auftreten, führen Sie „Remove-HgsClientHostKey“ aus, und wiederholen Sie die Schritte 4 bis 7.
 
-## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Schritt 3: Aktivieren von Always Encrypted mit Secure Enclaves in SQL Server
+## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Schritt 3: Aktivieren von Always Encrypted mit Secure Enclaves in SQL Server
 
 In diesem Schritt aktivieren Sie die Funktionen von Always Encrypted mithilfe von Enclaves in Ihrer SQL Server-Instanz.
 
@@ -186,7 +187,7 @@ In diesem Schritt aktivieren Sie die Funktionen von Always Encrypted mithilfe vo
 
     Die Abfrage sollte folgendes Ergebnis haben:  
 
-    | NAME                           | Wert | value_in_use |
+    | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 1     | 1              |
 
@@ -265,7 +266,7 @@ In diesem Schritt erstellen Sie einen Spaltenhauptschlüssel und einen Spaltenve
     4. Wählen Sie **Enclave-Berechnungen zulassen**.
     5. Wenn Sie Azure Key Vault ausgewählt haben, melden Sie sich bei Azure an, und wählen Sie Ihren Schlüsseltresor. Weitere Informationen zum Erstellen eines Schlüsseltresors für Always Encrypted finden Sie unter [Verwalten Ihrer Schlüsseltresore im Azure-Portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
     6. Wählen Sie Ihr Zertifikat oder Ihren Azure-Schlüsselwertschlüssel aus, wenn bereits vorhanden, oder klicken Sie auf die Schaltfläche **Zertifikat generieren**, um ein neues zu erstellen.
-    7. Wählen Sie **OK**.
+    7. Klicken Sie auf **OK**.
 
         ![Enclave-Berechnungen zulassen](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
 
@@ -274,7 +275,7 @@ In diesem Schritt erstellen Sie einen Spaltenhauptschlüssel und einen Spaltenve
     1. Klicken Sie mit der rechten Maustaste auf **Always Encrypted-Schlüssel**, und wählen Sie **Neuer Spaltenverschlüsselungsschlüssel**.
     2. Geben Sie einen Namen für den neuen Spaltenverschlüsselungsschlüssel ein: **CEK1**.
     3. Wählen Sie in der Dropdownliste **Spaltenhauptschlüssel** den in den vorherigen Schritten erstellten Spaltenhauptschlüssel.
-    4. Wählen Sie **OK**.
+    4. Klicken Sie auf **OK**.
 
 ## <a name="step-6-encrypt-some-columns-in-place"></a>Schritt 6: Direktes Verschlüsseln einiger Spalten
 
@@ -327,7 +328,7 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
     2. Wählen Sie **Optionen...** aus.
     3. Navigieren Sie zu **Abfrageausführung** > **SQL Server** > **Erweitert**.
     4. Stellen Sie sicher, dass **Parametrisierung für Always Encrypted aktivieren** aktiviert ist.
-    5. Wählen Sie **OK**.
+    5. Klicken Sie auf **OK**.
 2. Öffnen Sie ein neues Abfragefenster, fügen Sie die folgenden Abfrage ein, und führen Sie sie anschließend aus. Die Abfrage sollte Klartextwerte und Zeilen zurückgeben, die den angegebenen Suchkriterien entsprechen.
 
     ```sql
@@ -339,7 +340,7 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
 
 3. Versuchen Sie dieselbe Abfrage erneut in der SSMS-Instanz, in der Always Encrypted nicht aktiviert ist, und notieren Sie den auftretenden Fehler.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie dieses Tutorial abgeschlossen haben, können Sie mit einem der folgenden Tutorials fortfahren:
 - [Tutorial: Entwickeln einer .NET Framework-Anwendung mithilfe von Always Encrypted mit Secure Enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Tutorial: Erstellen und Verwenden von Indizes für Enclave-fähige Spalten mit zufälliger Verschlüsselung](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
@@ -348,4 +349,4 @@ Nachdem Sie dieses Tutorial abgeschlossen haben, können Sie mit einem der folge
 - [Konfigurieren des Enclave-Typs für die Always Encrypted-Serverkonfigurationsoption](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
 - [Bereitstellen Enclave-fähiger Schlüssel](encryption/always-encrypted-enclaves-provision-keys.md)
 - [Direkte Konfiguration der Spaltenverschlüsselung mit Transact-SQL](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
-- [Abfragen von Spalten mit Always Encrypted mit Secure Enclaves](encryption/always-encrypted-enclaves-query-columns.md)
+- [Abfragen von Spalten mithilfe von Always Encrypted mit Secure Enclaves](encryption/always-encrypted-enclaves-query-columns.md)

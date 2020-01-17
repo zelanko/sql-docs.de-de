@@ -1,7 +1,8 @@
 ---
-title: FILESTREAM-Kompatibilität mit anderen SQL Server-Funktionen | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: FILESTREAM-Kompatibilität | Microsoft-Dokumentation
+description: FILESTREAM-Kompatibilität mit anderen SQL Server-Features
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fd160a4149e69a28f27f72876121a9a0552abdd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085364"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245398"
 ---
-# <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM-Kompatibilität mit anderen SQL Server-Funktionen
+# <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM-Kompatibilität mit anderen SQL Server-Features
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Da sich die FILESTREAM-Daten im Dateisystem befinden, werden in diesem Thema Informationen, Richtlinien und Einschränkungen in Bezug auf die Verwendung von FILESTREAM mit den folgenden Funktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beschrieben.  
   
@@ -66,7 +68,7 @@ ms.locfileid: "68085364"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> Replikation  
+##  <a name="Replication"></a> Replication  
  Eine **varbinary(max)** -Spalte, für die das FILESTREAM-Attribut auf dem Verleger aktiviert ist, kann für einen Abonnenten mit oder ohne FILESTREAM-Attribut repliziert werden. Verwenden Sie das Dialogfeld **Artikeleigenschaften - \<Artikel>** oder den @schema_option-Parameter von [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) oder [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), um die Methode für die Replikation der Spalte anzugeben. Daten, die in einer **varbinary(max)** -Spalte ohne FILESTREAM-Attribute repliziert werden, dürfen den Grenzwert von 2 GB für diesen Datentyp nicht überschreiten, da anderenfalls ein Laufzeitfehler ausgelöst wird. Wir empfehlen, dass Sie das FILESTREAM-Attribut replizieren, außer wenn Sie Daten für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]replizieren. Das Replizieren von Tabellen mit FILESTREAM-Spalten auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Abonnenten wird unabhängig von der festgelegten Schemaoption nicht unterstützt.  
   
 > [!NOTE]  

@@ -1,6 +1,6 @@
 ---
-title: Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung | Microsoft-Dokumentation
-ms.custom: ''
+title: Schnellere temporäre Tabellen und Tabellenvariablen
+ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713250"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412679"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "71713250"
   
 Wenn Sie temporäre Tabellen, Tabellenvariablen oder Tabellenwertparameter verwenden, sollten Sie die Konvertierungen auf Speicheroptimierte Tabellen und Tabellenvariablen zur Verbesserung der Leistung nutzen. Die Codeänderungen sind normalerweise minimal.  
   
-Dieser Artikel beschreibt:  
+Dieser Artikel beschreibt Folgendes:  
   
 - Szenarios, die für die Konvertierung zu In-Memory sprechen.  
 - Technische Schritte für die Implementierung der Konvertierungen zu In-Memory.  
@@ -57,7 +57,7 @@ In-Memory-OLTP stellt die folgenden Objekte bereit, die für speicheroptimierte 
 - Speicheroptimierte Tabellenvariablen  
   - Muss in zwei Schritten (statt inline) deklariert werden:  
     - `CREATE TYPE my_type AS TABLE ...;` , dann  
-    - `DECLARE @mytablevariable my_type;`(Indizes für speicheroptimierte Tabellen).  
+    - [https://login.microsoftonline.com/consumers/](`DECLARE @mytablevariable my_type;`).  
   
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Szenario: Ersetzen von globaler tempd &#x23;&#x23;table  
@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-Erstellen Sie zunächst die folgende Tabellenwertfunktion zum Filtern nach **@@spid** . Die Funktion kann von allen SCHEMA_ONLY-Tabellen verwendet werden, die Sie aus temporären Sitzungstabellen konvertieren.  
+Erstellen Sie zunächst die folgende Tabellenwertfunktion zum Filtern nach **\@\@spid**. Die Funktion kann von allen SCHEMA_ONLY-Tabellen verwendet werden, die Sie aus temporären Sitzungstabellen konvertieren.  
   
   
   
@@ -190,7 +190,7 @@ Drittens: Im allgemeinen T-SQL-Code:
   
   
   
-## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. Szenario: Eine Tabellenvariable kann MEMORY_OPTIMIZED=ON sein  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D: Szenario: Eine Tabellenvariable kann MEMORY_OPTIMIZED=ON sein  
   
   
 Eine herkömmliche Tabellenvariable stellt eine Tabelle in der tempdb-Datenbank dar. Für eine schnellere Leistung können Sie den Speicher Ihrer Tabellenvariable optimieren.  
@@ -426,7 +426,7 @@ Nicht gruppierte Indizes nutzen für größere Tabellenvariablen mehr Arbeitsspe
   
 Wenn auf die speicheroptimierten Tabellenvariablen nur mit einem exakten Schlüsselwert pro Zugriff zugegriffen wird, sollten Sie eher ein Hashindex als einen nicht gruppierten Index verwenden. Wenn Sie den erforderlichen BUCKET_COUNT-Wert nicht abschätzen können, wäre ein NONCLUSTERED-Index eine gute zweite Wahl.  
   
-## <a name="h-see-also"></a>H. Siehe auch  
+## <a name="h-see-also"></a>H. Weitere Informationen  
   
 - [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 

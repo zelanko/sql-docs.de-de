@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: daa68b80718903051fdb2cfd9dd8b15b64b68b23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014592"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822495"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Ausführen eines geplanten manuellen Failovers einer Always On-Verfügbarkeitsgruppe (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Ein geplantes manuelles Failover wird nur unterstützt, wenn das primäre Replik
 > [!NOTE]  
 >  Wenn das sekundäre und primäre Replikat für den automatischen Failovermodus konfiguriert sind, kann das sekundäre Replikat nach der Synchronisierung auch als Ziel für ein automatisches Failover dienen. Weitere Informationen finden Sie unter [Verfügbarkeitsmodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
    
-##  <a name="BeforeYouBegin"></a> Vorbereitungen 
+##  <a name="BeforeYouBegin"></a> Voraussetzungen 
 
 >[!IMPORTANT]
 >Für das Failover einer schreibgeschützten Verfügbarkeitsgruppe ohne Cluster-Manager gibt es bestimmte Vorgehensweisen. Wenn für eine Verfügbarkeitsgruppe CLUSTER_TYPE = NONE gilt, führen Sie die Schritte unter [Ausführen eines Failovers des primären Replikats auf schreibgeschützten Verfügbarkeitsgruppen](#fail-over-the-primary-replica-on-a-read-scale-availability-group) aus.
@@ -50,7 +50,7 @@ Ein geplantes manuelles Failover wird nur unterstützt, wenn das primäre Replik
 -   Das sekundäre Zielreplikat muss aktuell mit dem primären Replikat synchronisiert sein. Alle sekundären Datenbanken in diesem sekundären Replikat müssen mit der Verfügbarkeitsgruppe verknüpft sein. Ebenso müssen sie mit ihren entsprechenden primären Datenbanken synchronisiert sein (d.h., die lokalen sekundären Datenbanken müssen SYNCHRONIZED sein). 
   
     > [!TIP] 
-    >  Um die Failoverbereitschaft eines sekundären Replikats zu ermitteln, fragen Sie die **is_failover_ready**-Spalte in der dynamischen Verwaltungssicht [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) ab. Alternativ können Sie sich die Spalte **Failoverbereitschaft** des [AlwaysOn-Gruppendashboards](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) ansehen. 
+    >  Sie können die Failoverbereitschaft eines sekundären Replikats ermitteln, indem Sie die Spalte **is_failover_ready** in der dynamischen Verwaltungssicht [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) abfragen. Alternativ können Sie sich die Spalte **Failoverbereitschaft** des [AlwaysOn-Gruppendashboards](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) ansehen. 
 -   Dieser Task wird nur für das sekundäre Zielreplikat unterstützt. Sie müssen mit der Serverinstanz verbunden sein, auf der das sekundäre Zielreplikat gehostet wird. 
   
 ###  <a name="Security"></a> Sicherheit 
@@ -116,7 +116,7 @@ Ein geplantes manuelles Failover wird nur unterstützt, wenn das primäre Replik
 
 [!INCLUDE[Force failover](../../../includes/ss-force-failover-read-scale-out.md)]
 
-## <a name="see-also"></a>Siehe auch 
+## <a name="see-also"></a>Weitere Informationen 
 
  * [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 

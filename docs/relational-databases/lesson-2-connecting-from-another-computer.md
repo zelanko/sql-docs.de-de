@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8389d11868108725a676e9196861c7302241a407
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909709"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546551"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Wenn Sie planen, die Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] von
   
 #### <a name="how-to-enable-tcpip-connections-from-another-computer"></a>So aktivieren Sie TCP/IP-Verbindungen von einem anderen Computern  
   
-1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, dann auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], danach auf **Konfigurationstools**, und klicken Sie auf **SQL Server-Konfigurations-Manager**.  
+1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
     > [!NOTE]  
     > Möglicherweise steht sowohl die 32-Bit- als auch die 64-Bit-Option zur Verfügung.  
@@ -49,13 +49,13 @@ Wenn Sie planen, die Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] von
     > Da der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ein Snap-In für das [!INCLUDE[msCoName](../includes/msconame-md.md)] -Verwaltungskonsolenprogramm und kein eigenständiges Programm ist, wird der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager in neueren Versionen von Windows nicht als Anwendung angezeigt. Der Dateiname enthält eine Zahl, die die Versionsnummer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]darstellt. Mit dem Befehl „Ausführen“ können Sie den Konfigurations-Manager öffnen. Nachfolgend finden Sie die Pfade zu den letzten vier Versionen, wenn Windows auf dem Laufwerk C: installiert ist.  
   
     |||  
-    |-|-|  
-    |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
+    |-|-|
+    |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
+    |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
     |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-    |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
-2.  Erweitern Sie im **SQL Server-Konfigurations-Manager**den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie anschließend auf **Protokolle für** _<InstanceName>_ .  
+2.  Erweitern Sie im **SQL Server-Konfigurations-Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie anschließend auf **Protokolle für** _<InstanceName>_ .  
   
     Die Standardinstanz (eine unbenannte Instanz) wird als **MSSQLSERVER**aufgelistet. Wenn Sie eine benannte Instanz installiert haben, wird der von Ihnen angegebene Name aufgeführt. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] wird als **SQLEXPRESS**installiert, es sei denn, der Name wurde während des Setups geändert.  
   
@@ -108,7 +108,7 @@ Nachdem Sie [!INCLUDE[ssDE](../includes/ssde-md.md)] so konfiguriert haben, dass
   
 6.  Wählen Sie im Dialogfeld **Profil** beliebige Profile aus, die die Verbindungsumgebung des Computers beschreiben, wenn Sie eine Verbindung zum [!INCLUDE[ssDE](../includes/ssde-md.md)]herstellen möchten, und klicken Sie dann auf **Weiter**.  
   
-7.  Geben Sie im Dialogfeld **Name** einen Namen und eine Beschreibung für die Regel ein, und klicken Sie dann auf **Fertig stellen**.  
+7.  Geben Sie im Dialogfeld **Name** einen Namen und eine Beschreibung für diese Regel ein, und klicken Sie dann auf **Fertig stellen**.  
   
 Weitere Informationen zur Konfiguration der Firewall, einschließlich Anweisungen für [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Weitere Informationen zu den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbank-Engine, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
@@ -131,9 +131,9 @@ Wenn der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst 
 4.  Bestätigen Sie im Feld **Authentifizierung** die **Windows-Authentifizierung**, und klicken Sie anschließend auf **Verbinden**.  
   
 ## <a name="browser"></a>Herstellen einer Verbindung mithilfe des SQL Server-Browserdiensts  
-Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst lauscht auf eingehende Anforderungen für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ressourcen und stellt Informationen zu den auf dem Computer installierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen bereit. Wenn der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst ausgeführt wird, können Benutzer Verbindungen mit benannten Instanzen herstellen, indem sie den Computer- und Instanznamen angeben, anstatt den Computernamen und die Portnummer. Da der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Browser nicht authentifizierte UDP-Anforderungen empfängt, ist er während der Installation nicht immer eingeschaltet. Eine Beschreibung des Diensts und eine Erklärung dazu, wann er eingeschaltet ist, finden Sie unter [SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
+Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst lauscht auf eingehende Anforderungen für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ressourcen und stellt Informationen zu den auf dem Computer installierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen bereit. Wenn der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst ausgeführt wird, können Benutzer Verbindungen mit benannten Instanzen herstellen, indem sie den Computer- und Instanznamen angeben, anstatt den Computernamen und die Portnummer. Da der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser nicht authentifizierte UDP-Anforderungen empfängt, ist er während der Installation nicht immer eingeschaltet. Eine Beschreibung des Diensts und eine Erklärung dazu, wann er eingeschaltet ist, finden Sie unter [SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
   
-Um den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Browser zu verwenden, müssen Sie dieselben Schritte wie zuvor ausführen und UDP-Port 1434 in der Firewall öffnen.  
+Um den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser zu verwenden, müssen Sie dieselben Schritte wie zuvor ausführen und UDP-Port 1434 in der Firewall öffnen.  
   
 Diese Ausführungen beenden das kurze Lernprogramm zur Konnektivität.  
   

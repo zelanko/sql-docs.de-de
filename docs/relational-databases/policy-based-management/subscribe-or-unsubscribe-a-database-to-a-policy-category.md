@@ -1,6 +1,7 @@
 ---
-title: Abonnieren einer Richtlinienkategorie für eine Datenbank bzw. Kündigen des Abonnements | Microsoft Dokumentation
-ms.custom: ''
+title: Abonnieren oder Abbestellen einer Richtlinienkategorie für eine Datenbank
+description: In diesem Artikel wird erläutert, wie Sie eine Richtlinienkategorie für eine Datenbank für die richtlinienbasierte Verwaltung mithilfe von SQL Server Management Studio und Transact-SQL (T-SQL) abonnieren oder abbestellen.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d653db8d1fcc6b2344763ed6f3988a33a297fd69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6425834958f88e86726f1ec2137bc6917a889671
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021547"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558228"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Abonnieren einer Richtlinienkategorie für eine Datenbank bzw. Kündigen des Abonnements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema wird beschrieben, wie mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Richtlinienkategorie für eine Datenbank in [!INCLUDE[tsql](../../includes/tsql-md.md)]abonniert bzw. das Abonnement gekündigt wird.  
+  In diesem Thema wird beschrieben, wie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] eine Richtlinienkategorie für eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] abonniert bzw. das Abonnement gekündigt wird.  
   
  **In diesem Thema**  
   
@@ -66,13 +67,13 @@ ms.locfileid: "68021547"
      **Richtlinie**  
      Wenn Richtliniengruppen erweitert werden, werden die Richtlinien in der Richtlinienkategorie angezeigt.  
   
-     **Enabled**  
+     **Aktiviert**  
      Gibt an, ob die Richtlinien aktiviert oder deaktiviert sind.  
   
      **Ausführungsmodus**  
      Zeigt den Ausführungsmodus der Richtlinie an.  
   
-     **Verlauf**  
+     **History**  
      Klicken Sie auf den Link Verlauf anzeigen, um den Protokolldatei-Viewer zu öffnen und den Richtlinienverlauf anzuzeigen.  
   
 4.  Um eine Kategorie der richtlinienbasierten Verwaltung zu abonnieren, aktivieren Sie das Kontrollkästchen der Kategorie unter der Spalte **Abonniert** . Um das Abonnement einer Kategorie zu kündigen, deaktivieren Sie das Kontrollkästchen.  

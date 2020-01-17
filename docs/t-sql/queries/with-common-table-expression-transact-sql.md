@@ -27,19 +27,19 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62fe54a6bbdd7287c46f103f9963302727a1077
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948084"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564813"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt ein temporäres benanntes Resultset an, das als allgemeiner Tabellenausdruck (CTE, Common Table Expression) bezeichnet wird. Dieser wird von einer einfachen Abfrage abgeleitet und innerhalb des Ausführungsbereichs einer einzelnen SELECT-, INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung definiert. Diese Klausel kann auch in einer CREATE VIEW-Anweisung als Teil der definierenden SELECT-Anweisung verwendet werden. Ein allgemeiner Tabellenausdruck kann auch Verweise auf sich selbst enthalten. In diesem Fall handelt es sich um einen rekursiven allgemeinen Tabellenausdruck.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -260,7 +260,7 @@ SalesPersonID SalesYear   TotalSales    SalesQuotaYear SalesQuota  Amt_Above_or_
 274           2008        $281,123.55   2008           $271,000.00  $10,123.55  
 ```  
   
-### <a name="d-using-a-recursive-common-table-expression-to-display-multiple-levels-of-recursion"></a>D. Verwenden eines rekursiven allgemeinen Tabellenausdrucks, um mehrere Rekursionsebenen anzuzeigen  
+### <a name="d-using-a-recursive-common-table-expression-to-display-multiple-levels-of-recursion"></a>D: Verwenden eines rekursiven allgemeinen Tabellenausdrucks, um mehrere Rekursionsebenen anzuzeigen  
  Im folgenden Beispiel werden Vorgesetzte in einer Hierarchieliste sowie die Mitarbeiter angezeigt, die diesen unterstellt sind. In diesem Beispiel wird zunächst die `dbo.MyEmployees`-Tabelle erstellt und aufgefüllt.  
   
 ```sql  
@@ -288,9 +288,7 @@ INSERT INTO dbo.MyEmployees VALUES
 ,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);  
 ```  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -307,12 +305,10 @@ FROM DirectReports
 ORDER BY ManagerID;   
 ```  
   
-### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>E. Verwenden eines rekursiven allgemeinen Tabellenausdrucks, um zwei Rekursionsebenen anzuzeigen  
+#### <a name="using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>Verwenden eines rekursiven allgemeinen Tabellenausdrucks, um zwei Rekursionsebenen anzuzeigen  
  Im folgenden Beispiel werden Vorgesetzte sowie die Mitarbeiter angezeigt, die diesen unterstellt sind. Die Anzahl der zurückgegebenen Ebenen wird auf zwei Ebenen eingeschränkt.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -329,12 +325,10 @@ FROM DirectReports
 WHERE EmployeeLevel <= 2 ;  
 ```  
   
-### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>F. Verwenden eines rekursiven allgemeinen Tabellenausdrucks, um eine Hierarchieliste anzuzeigen  
- Das folgende Beispiel baut auf Beispiel D auf, indem die Namen der Vorgesetzten und Mitarbeiter und deren Titel hinzugefügt werden. Die Hierarchieebenen von Vorgesetzten und Mitarbeitern werden zusätzlich hervorgehoben, indem die einzelnen Ebenen jeweils eingerückt werden.  
+#### <a name="using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>Verwenden eines rekursiven allgemeinen Tabellenausdrucks, um eine Hierarchieliste anzuzeigen  
+ Im folgenden Beispiel werden die Namen des Vorgesetzten und der Mitarbeiter sowie deren Titel hinzugefügt. Die Hierarchieebenen von Vorgesetzten und Mitarbeitern werden zusätzlich hervorgehoben, indem die einzelnen Ebenen jeweils eingerückt werden.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
 AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),  
         e.Title,  
@@ -359,12 +353,10 @@ FROM DirectReports
 ORDER BY Sort;  
 ```  
   
-### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>G. Verwenden von MAXRECURSION zum Abbrechen einer Anweisung  
+#### <a name="using-maxrecursion-to-cancel-a-statement"></a>Verwenden von MAXRECURSION zum Abbrechen einer Anweisung  
  Mit `MAXRECURSION` kann verhindert werden, dass ein rekursiver allgemeiner Tabellenausdruck, der fehlerhaft formuliert ist, in eine Endlosschleife gerät. Im folgenden Beispiel wird absichtlich eine Endlosschleife erstellt. Außerdem wird `MAXRECURSION` verwendet, um die Anzahl der Rekursionsebenen auf zwei zu beschränken.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 --Creates an infinite loop  
 WITH cte (EmployeeID, ManagerID, Title) as  
 (  
@@ -385,9 +377,7 @@ OPTION (MAXRECURSION 2);
   
  Sobald der Fehler im Code behoben wurde, wird MAXRECURSION nicht mehr benötigt. Das folgende Beispiel zeigt den korrigierten Code.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH cte (EmployeeID, ManagerID, Title)  
 AS  
 (  
@@ -403,7 +393,7 @@ SELECT EmployeeID, ManagerID, Title
 FROM cte;  
 ```  
   
-### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>H. Verwenden eines allgemeinen Tabellenausdrucks, um eine rekursive Beziehung in einer SELECT-Anweisung selektiv zu durchlaufen  
+### <a name="e-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>E. Verwenden eines allgemeinen Tabellenausdrucks, um eine rekursive Beziehung in einer SELECT-Anweisung selektiv zu durchlaufen  
  Im folgenden Beispiel wird die Hierarchie von Produktgruppen und Komponenten gezeigt, die erforderlich sind, um das Fahrrad für `ProductAssemblyID = 800` zu montieren.  
   
 ```sql  
@@ -432,7 +422,7 @@ FROM Parts AS p
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
 ```  
   
-### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>I. Verwenden eines rekursiven allgemeinen Tabellenausdrucks in einer UPDATE-Anweisung  
+### <a name="f-using-a-recursive-cte-in-an-update-statement"></a>F. Verwenden eines rekursiven allgemeinen Tabellenausdrucks in einer UPDATE-Anweisung  
  Im folgenden Beispiel wird der Wert `PerAssemblyQty` für alle Teile aktualisiert, die zur Erstellung des Produkts "Road-550-W Yellow, 44" `(ProductAssemblyID``800` verwendet werden. Der allgemeine Tabellenausdruck gibt eine hierarchische Liste mit Teilen zurück, die zum Erstellen der `ProductAssemblyID 800` verwendet werden, sowie mit Komponenten, die zum Erstellen dieser Teile verwendet werden, usw. Nur die Zeilen, die vom allgemeinen Tabellenausdruck zurückgegeben werden, werden geändert.  
   
 ```sql  
@@ -460,7 +450,7 @@ JOIN Parts AS d ON c.ProductAssemblyID = d.AssemblyID
 WHERE d.ComponentLevel = 0;  
 ```  
   
-### <a name="j-using-multiple-anchor-and-recursive-members"></a>J. Verwenden mehrerer Ankerelemente und rekursiver Elemente  
+### <a name="h-using-multiple-anchor-and-recursive-members"></a>H. Verwenden mehrerer Ankerelemente und rekursiver Elemente  
  Im folgenden Beispiel werden mehrere Ankerelemente und rekursive Elemente verwendet, um alle Vorfahren einer bestimmten Person zurückzugeben. Eine Tabelle wird erstellt und mit Werten aufgefüllt, um den Familienstammbaum zu erstellen, der vom rekursiven allgemeinen Tabellenausdruck zurückgegeben wird.  
   
 ```sql  
@@ -507,7 +497,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. Verwenden von Analysefunktionen in einem rekursiven allgemeinen Tabellenausdruck  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. Verwenden von Analysefunktionen in einem rekursiven allgemeinen Tabellenausdruck  
  Im folgenden Beispiel wird ein Fehler gezeigt, der beim Verwenden einer Analyse- oder Aggregatfunktion im rekursiven Teil eines allgemeinen Tabellenausdrucks auftreten kann.  
   
 ```sql  
@@ -578,9 +568,9 @@ Lvl  N
   
  `N` gibt 1 für jede Übergabe des rekursiven Teils des allgemeinen Tabellenausdrucks zurück, da nur die Teilmenge der Daten für diese Rekursionsebene an `ROWNUMBER` übergeben wird. Für jede Iteration des rekursiven Teils der Abfrage wird nur eine Zeile an `ROWNUMBER` übergeben.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. Verwenden eines allgemeinen Tabellenausdrucks in einer CTAS-Anweisung  
+### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. Verwenden eines allgemeinen Tabellenausdrucks in einer CTAS-Anweisung  
  Im folgenden Beispiel wird eine neue Tabelle mit der Gesamtanzahl der Verkäufe pro Jahr für jeden Vertriebsmitarbeiter von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] angezeigt.  
   
 ```sql  
@@ -609,7 +599,7 @@ AS
 GO  
 ```  
   
-### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. Verwenden eines allgemeinen Tabellenausdrucks in einer CETAS-Anweisung  
+### <a name="k-using-a-common-table-expression-within-a-cetas-statement"></a>K. Verwenden eines allgemeinen Tabellenausdrucks in einer CETAS-Anweisung  
  Im folgenden Beispiel wird eine neue externe Tabelle mit der Gesamtanzahl der Verkäufe pro Jahr für jeden Vertriebsmitarbeiter von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] angezeigt.  
   
 ```sql  
@@ -639,7 +629,7 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. Verwenden mehrerer, durch Kommas getrennter allgemeiner Tabellenausdrücke in einer Anweisung  
+### <a name="l-using-multiple-comma-separated-ctes-in-a-statement"></a>L. Verwenden mehrerer, durch Kommas getrennter allgemeiner Tabellenausdrücke in einer Anweisung  
  Im folgenden Beispiel wird veranschaulicht, wie zwei allgemeine Tabellenausdrücke in eine einzige Anweisung eingeschlossen werden. Die allgemeinen Tabellenausdrücke dürfen nicht verschachtelt werden (keine Rekursion).  
   
 ```sql  

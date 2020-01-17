@@ -1,6 +1,5 @@
 ---
-title: Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes | Microsoft-Dokumentation
-ms.custom: ''
+title: Pfad- und Optimierungshinweise für selektive XML-Indizes | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +9,13 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905237"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257612"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "72905237"
   
 -   In der **FOR** -Klausel einer **CREATE** -Anweisung. Weitere Informationen finden Sie unter [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
--   In der **ADD** -Klausel einer **ALTER** -Anweisung. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
+-   In der **ADD** -Klausel einer **ALTER** -Anweisung. Weitere Informationen finden Sie unter [ALTER INDEX &#40;selektive XML-Indizes&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
   
  Weitere Informationen über selektive XML-Indizes finden Sie unter [Selektive XML-Indizes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -154,7 +154,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
 -   **xs:double**  
   
--   **xs:float**  
+-   **xs: float**  
   
 -   **xs:int**  
   
@@ -274,7 +274,7 @@ FOR
 ### <a name="examples"></a>Beispiele  
  Hier sind einige weitere Beispiele zum Auswählen der richtigen Knoten, die für verschiedene XQuery-Typen zu indizieren sind.  
   
- **Beispiel 1**  
+ **Beispiel 1**  
   
  Hier ist eine einfache XQuery aufgeführt, die die exist()-Methode verwendet:  
   
@@ -289,7 +289,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
 |----------------------------------|-----------------------------------|  
 |**/a/b/c/d/e/h**|Das Vorhandensein des Knotens `h` wird in der exist()-Methode ausgewertet.|  
   
- **Beispiel 2**  
+ **Beispiel 2**  
   
  Hier ist eine komplexere Variante der vorherigen XQuery mit einem angewendeten Prädikat aufgeführt:  
   
@@ -305,7 +305,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
 |**/a/b/c/d/e**|Ein Prädikat wird auf den Knoten `e`angewendet.|  
 |**/a/b/c/d/e/f**|Der Wert des Knotens `f` wird innerhalb des Prädikats ausgewertet.|  
   
- **Beispiel 3**  
+ **Beispiel 3**  
   
  Hier ist eine komplexe Abfrage mit einer value()-Klausel aufgeführt:  
   
@@ -373,11 +373,11 @@ WHERE T.xmldata.exist('
 |**MAXLENGTH**|Ja|Nein|  
   
 ### <a name="node-optimization-hint"></a>node()-Optimierungshinweis  
- Betrifft: XQuery-Datentypen  
+ Gilt für: XQuery-Datentypen  
   
  Sie können mithilfe der node()-Optimierung einen Knoten angeben, dessen Wert nicht erforderlich ist, um die typische Abfrage auszuwerten. Dieser Hinweis reduziert Speicheranforderungen, wenn die typische Abfrage nur das Vorhandensein des Knotens auswerten muss. (Standardmäßig speichert ein selektiver XML-Index den Wert für alle höher gestuften Knoten, außer komplexen Knotentypen.)  
   
- Betrachten Sie das folgende Beispiel:  
+ Betrachten Sie das folgenden Beispiel:  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  
@@ -391,7 +391,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Wenn eine Abfrage den Wert eines Knotens erfordert, der mit dem node()-Hinweis indiziert wurde, dann kann der selektive XML-Index nicht verwendet werden.  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON-Optimierungshinweis  
- Betrifft: XQuery- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen  
+ Gilt für: XQuery- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen  
   
  Der SINGLETON-Optimierungshinweis gibt die Kardinalität eines Knotens an. Dieser Hinweis verbessert die Abfrageleistung, da im Voraus bekannt ist, dass ein Knoten höchstens einmal in seinem übergeordneten Element oder Vorgänger angezeigt wird.  
   
@@ -402,14 +402,14 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Wenn der SINGLETON-Hinweis angegeben wurde, ein Knoten jedoch mehr als einmal in seinem übergeordneten Element oder Vorgänger vorkommt, dann wird ein Fehler ausgelöst, wenn Sie den Index (für vorhandene Daten) erstellen, oder wenn Sie eine Abfrage (für neue Daten) ausführen.  
   
 ### <a name="data-type-optimization-hint"></a>DATA TYPE-Optimierungshinweis  
- Betrifft: XQuery-Datentypen  
+ Gilt für: XQuery-Datentypen  
   
  Mit dem DATA TYPE-Optimierungshinweis können Sie eine XQuery oder einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp für den indizierten Knoten angeben. Der Datentyp wird in der Datentabelle des selektiven XML-Indexes für die Spalte verwendet, die dem indizierten Knoten entspricht.  
   
  Wenn es bei der Umwandlung eines vorhandenen Werts in den angegebenen Datentyp zu einem Fehler kommt, verursacht der Einfügevorgang (in den Index) keinen Fehler. Es wird jedoch ein NULL-Wert in die Datentabelle des Index eingefügt.  
   
 ### <a name="maxlength-optimization-hint"></a>MAXLENGTH-Optimierungshinweis  
- Betrifft: XQuery-Datentypen  
+ Gilt für: XQuery-Datentypen  
   
  Mit dem MAXLENGTH-Optimierungshinweis können Sie die Länge der xs:string-Daten einschränken. MAXLENGTH ist nicht relevant für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen, da Sie die Länge angeben, wenn Sie den VARCHAR- oder NVARCHAR-Datentyp angeben.  
   

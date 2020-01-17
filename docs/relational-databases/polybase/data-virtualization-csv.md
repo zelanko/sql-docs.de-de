@@ -1,20 +1,21 @@
 ---
-title: Virtualisieren externer Daten in SQL Server 2019 CTP 2.0 | Microsoft-Dokumentation
+title: 'Virtualisieren externer Daten: durch Trennzeichen getrennte Werte (CSV)'
 description: Auf dieser Seite wird die Verwendung des Assistenten zum Erstellen externer Tabellen für eine CSV-Datei detailliert beschrieben.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8ce50e4e359c8ce8dc2b0015300f9a7afb88d1
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: b1bb5f2e807731e1020729e045c017b6f1524ae1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710600"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256166"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Verwenden des Assistenten für externe Tabellen mit CSV-Dateien
 
@@ -22,7 +23,7 @@ SQL Server 2019 ermöglicht auch das Virtualisieren von Daten aus einer CSV-Date
 
 ## <a name="prerequisite"></a>Voraussetzung
 
-Ab CTP 2.4 werden Datenpools und Speicherpools nicht mehr standardmäßig als externe Datenquellen in Ihrem Big Data-Cluster erstellt. Bevor Sie den Assistenten verwenden, erstellen Sie die externe Standarddatenquelle **SqlStoragePool** in Ihrer Zieldatenbank mit der folgenden Transact-SQL-Abfrage. Stellen Sie sicher, dass Sie zunächst den Kontext der Abfrage gemäß Ihrer Zieldatenbank ändern.
+Die externen Datenquellen „Datenpools“ und „Speicherpools“ werden in einer Datenbank nicht standardmäßig in Ihrem Big Data-Cluster erstellt. Bevor Sie den Assistenten verwenden, erstellen Sie die externe Standarddatenquelle **SqlStoragePool** in Ihrer Zieldatenbank mit der folgenden Transact-SQL-Abfrage. Stellen Sie sicher, dass Sie zunächst den Kontext der Abfrage gemäß Ihrer Zieldatenbank ändern.
 
 ```sql
 -- Create default data sources for SQL Big Data Cluster

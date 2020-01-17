@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b9e1151d5a757f42420c90519c79c3793cfef16
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: c54ec57756ca2f840ac3f15771143cf697798e9f
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250953"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002041"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Konfigurieren verteilter Always On-Verfügbarkeitsgruppen  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Zum Erstellen einer verteilten Verfügbarkeitsgruppe müssen Sie zwei Verfügbarkeitsgruppen mit eigenen Listenern erstellen. Anschließend kombinieren Sie diese Verfügbarkeitsgruppen zu einer verteilten Verfügbarkeitsgruppe. Die folgenden Schritte stellen ein einfaches Beispiel in Transact-SQL dar. Dieses Beispiel deckt nicht alle Details zum Erstellen von Verfügbarkeitsgruppen und Listenern ab, stattdessen legt es den Schwerpunkt auf die Herausarbeitung der wichtigsten Anforderungen.
+Sie müssen zwei Verfügbarkeitsgruppen mit eigenen Listenern erstellen, um eine verteilte Verfügbarkeitsgruppe zu erstellen. Anschließend kombinieren Sie diese Verfügbarkeitsgruppen zu einer verteilten Verfügbarkeitsgruppe. Die folgenden Schritte stellen ein einfaches Beispiel in Transact-SQL dar. Dieses Beispiel deckt nicht alle Details zum Erstellen von Verfügbarkeitsgruppen und Listenern ab, stattdessen legt es den Schwerpunkt auf die Herausarbeitung der wichtigsten Anforderungen.
 
 Eine technische Übersicht über verteilte Verfügbarkeitsgruppen finden Sie unter [Verteilte Verfügbarkeitsgruppen](distributed-availability-groups.md).
 

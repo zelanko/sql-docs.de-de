@@ -1,8 +1,8 @@
 ---
-title: Verwenden von Erkenntniswidgets in Azure Data Studio zum Überwachen von Servern und Datenbanken
+title: Verwenden von Erkenntniswidgets zum Überwachen von Servern und Datenbanken
 titleSuffix: Azure Data Studio
 description: Weitere Informationen zu Erkenntniswidgets in Azure Data Studio
-ms.custom: seodec18, sqlfreshmay19
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959523"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957054"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Verwalten von Servern und Datenbanken mit Erkenntniswidgets in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -27,14 +27,12 @@ Sie können beeindruckende Dashboards für die Server- und Datenbankverwaltung e
 
 ![Datenbankdashboard](media/insight-widgets/database-dashboard.png)
 
-
 In den folgenden Tutorials erfahren Sie, wie Sie damit beginnen, verschiedene Arten von Erkenntniswidgets zu erstellen:
 
 - [Erstellen eines benutzerdefinierten Erkenntniswidgets](tutorial-build-custom-insight-sql-server.md)
 - *Aktivieren integrierter Erkenntniswidgets*
   - [Aktivieren der Leistungsüberwachungserkenntnis](tutorial-qds-sql-server.md)
   - [Aktivieren der Tablespacenutzungs-Erkenntnis](tutorial-table-space-sql-server.md)
-
 
 ## <a name="sql-queries"></a>SQL-Abfragen
 
@@ -56,6 +54,6 @@ Die T-SQL-Abfrage und ihr Resultset bestimmen das Verhalten des Erkenntniswidget
 
 
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 - [Abfrage-Editor](tutorial-sql-editor.md)
 

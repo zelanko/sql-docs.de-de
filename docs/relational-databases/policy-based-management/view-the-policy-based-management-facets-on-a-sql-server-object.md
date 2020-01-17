@@ -1,6 +1,7 @@
 ---
-title: Anzeigen der Facets der richtlinienbasierten Verwaltung für ein SQL Server-Objekt | Microsoft-Dokumentation
-ms.custom: ''
+title: Anzeigen von Facets der richtlinienbasierten Verwaltung für ein Objekt
+description: In diesem Artikel wird erläutert, wie Sie in SQL Server Management Studio (SSMS) alle Facets der richtlinienbasierten Verwaltung anzeigen, die auf ein bestimmtes SQL Server-Objekt angewendet wurden.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 82acf976fef80f62059b5a433bb74e3fbbadec80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9284388a56014084b2478d6d805ff3fc917459d1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021427"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558112"
 ---
-# <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Anzeigen der Facets der richtlinienbasierten Verwaltung für ein SQL Server-Objekt
+# <a name="view-policy-based-management-facets-on-a-sql-server-object"></a>Anzeigen der Facets der richtlinienbasierten Verwaltung für ein SQL Server-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie Sie alle Facets der richtlinienbasierten Verwaltung, die auf ein bestimmtes SQL Server-Objekt in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angewendet wurden, mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen.  
   

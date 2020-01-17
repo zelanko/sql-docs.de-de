@@ -1,5 +1,5 @@
 ---
-title: 'Schnellstart: Sicherung und Wiederherstellung von SQL Server mit dem Azure Blob Storage-Dienst'
+title: 'Schnellstart: Sichern und Wiederherstellen im Azure Blob Storage-Dienst'
 ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 709aecfba4f73f0ef1d2c805e84d8a2113998e82
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095487"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165523"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Schnellstart: Sicherung und Wiederherstellung von SQL Server mit dem Azure Blob Storage-Dienst
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Führen Sie die folgenden Schritte aus, um einen Container zu erstellen:
 1. Wählen Sie das Speicherkonto aus, und scrollen Sie zu **Blobdienste**.
 1. Wählen Sie **Blobs** und dann **+ Container** aus, um einen neuen Container hinzuzufügen. 
 1. Geben Sie den Namen für den Container ein, und notieren Sie sich diesen. Diese Informationen werden in der URL (Pfad der Sicherungsdatei) der T-SQL-Anweisungen im späteren Verlauf dieses Schnellstarts verwendet. 
-1. Wählen Sie **OK**. 
+1. Klicken Sie auf **OK**. 
     
     ![Neuer Container](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
@@ -229,9 +229,9 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
 ---
 
 
-## <a name="see-also"></a>Siehe auch 
+## <a name="see-also"></a>Weitere Informationen 
 Die folgenden Themen werden empfohlen, um das Verständnis der Konzepte und bewährten Verfahren zu verbessern, die Sie bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Sicherungen im Azure Blob Storage-Dienst verwenden.  
   
--   [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
--   [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+-   [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+-   [SQL Server-Sicherung über URLs – bewährte Methoden und Problembehandlung](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   

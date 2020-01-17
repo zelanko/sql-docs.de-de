@@ -1,7 +1,7 @@
 ---
-title: Übersicht über Always On-Verfügbarkeitsgruppen
+title: Was ist eine Always On-Verfügbarkeitsgruppe?
 description: Dieser Artikel stellt eine Einführung in die Konzepte dar, die zum Konfigurieren und Verwalten von Always On-Verfügbarkeitsgruppen wichtig sind.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 994d7f21df09f49329e7547c4330aa95b5745873
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974381"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75236301"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- In diesem Thema werden die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Konzepte eingeführt, die zum Konfigurieren und Verwalten von einer oder mehr Verfügbarkeitsgruppen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] wichtig sind. Eine Zusammenfassung der Vorteile von Verfügbarkeitsgruppen und eine Übersicht über die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Terminologie finden Sie unter [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ In diesem Thema werden die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Konzepte eingeführt, die zum Konfigurieren und Verwalten von einer oder mehr Verfügbarkeitsgruppen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]wichtig sind. Eine Zusammenfassung der Vorteile von Verfügbarkeitsgruppen und eine Übersicht über die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Terminologie finden Sie unter [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  Eine *Verfügbarkeitsgruppe* unterstützt eine replizierte Umgebung für einen diskreten Satz von Benutzerdatenbanken (als *Verfügbarkeitsdatenbanken*bezeichnet). Sie können eine Verfügbarkeitsgruppe zur Hochverfügbarkeit (HA) oder Leseskalierung einrichten. Eine HA-Verfügbarkeitsgruppe ist eine Gruppe von Datenbanken, die zusammen ein Failover ausführen. Eine Verfügbarkeitsgruppe zur Leseskalierung ist eine Gruppe von Datenbanken, die für eine schreibgeschützte Arbeitsauslastung auf andere Instanzen von SQL Server kopiert werden. Eine Verfügbarkeitsgruppe unterstützt einen Satz primärer Datenbanken und einen bis acht Sätze entsprechender sekundärer Datenbanken. Sekundäre Datenbanken stellen *keine* Sicherungen dar. Die Datenbanken und deren Transaktionsprotokolle sollten weiterhin regelmäßig gesichert werden.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "71974381"
   
  In der folgenden Abbildung ist eine Verfügbarkeitsgruppe dargestellt, die ein primäres Replikat und vier sekundäre Replikate enthält. Es werden bis zu acht sekundäre Replikate unterstützt, einschließlich eines primären Replikats und zwei sekundärer Replikate mit synchronem Commit.  
   
- ![Verfügbarkeitsgruppe mit fünf Replikaten](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Availabilty group with five replicas")  
+ ![Verfügbarkeitsgruppe mit fünf Replikaten](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Verfügbarkeitsgruppe mit fünf Replikaten")  
   
 ##  <a name="AvDbs"></a> Availability Databases  
  Zum Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe muss die Datenbank eine Onlinedatenbank mit Lese-/Schreibzugriff auf der Serverinstanz sein, die das primäre Replikat hostet. Wenn Sie eine Datenbank hinzufügen, wird sie als primäre Datenbank mit der Verfügbarkeitsgruppe verknüpft, wobei sie für Clients verfügbar bleibt. Es ist keine entsprechende sekundäre Datenbank vorhanden, bis Sicherungen der neuen primären Datenbank mithilfe von RESTORE WITH NORECOVERY auf der Serverinstanz wiederhergestellt werden, die das sekundäre Replikat hostet. Die neue sekundäre Datenbank befindet sich im Status RESTORING, bis sie der Verfügbarkeitsgruppe hinzugefügt wird. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
@@ -84,7 +84,7 @@ ms.locfileid: "71974381"
   
      Ein Verfügbarkeitsreplikat, das diesen Verfügbarkeitsmodus verwendet, wird als *Replikat mit synchronem Commit*bezeichnet. Im Modus für synchrone Commits wartet ein primäres Replikat mit synchronen Commits vor dem Commit für Transaktionen auf ein sekundäres Replikat mit synchronen Commits, um zu bestätigen, dass das Schreiben des Protokolls abgeschlossen wurde. Im Modus für synchrone Commits wird sichergestellt, dass Transaktionen, für die ein Commit ausgeführt wird, vollständig geschützt sind, sobald eine angegebene sekundäre Datenbank mit der primären Datenbank synchronisiert wird. Dieser Schutz führt jedoch zu einer erhöhten Transaktionswartezeit.  
   
- Weitere Informationen finden Sie unter [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)wichtig sind.  
+ Weitere Informationen finden Sie unter [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)ausgetauscht werden.  
   
 ##  <a name="FormsOfFailover"></a> Failovertypen  
  Im Kontext einer Sitzung zwischen dem primären Replikat und einem sekundären Replikat sind die primären und sekundären Rollen in einem als *Failover*bezeichneten Prozess potenziell austauschbar. Während eines Failovers geht das sekundäre Zielreplikat in die primäre Rolle über und wird dadurch zum neuen primären Replikat. Das neue primäre Replikat schaltet seine Datenbanken als primäre Datenbanken online. Clientanwendungen können eine Verbindung mit ihnen herstellen. Wenn das zuvor primäre Replikat verfügbar ist, geht es in die sekundäre Rolle über und wird dadurch zu einem sekundären Replikat. Die zuvor primären Datenbanken werden sekundäre Datenbanken, und die Datensynchronisierung wird fortgesetzt.  
@@ -109,7 +109,7 @@ ms.locfileid: "71974381"
   
 -   Im Modus für asynchrone Commits ist die einzige Form des Failovers ein erzwungenes manuelles Failover (mit möglichem Datenverlust), das in der Regel als *erzwungenes Failover*bezeichnet wird. Erzwungenes Failover wird als eine Art manuelles Failover angesehen, da es nur manuell initiiert werden kann. Erzwungenes Failover ist eine Option zur Notfallwiederherstellung. Es ist auch der einzig mögliche Failovertyp, wenn das sekundäre Zielreplikat nicht mit dem primären Replikat synchronisiert ist.  
   
- Weitere Informationen finden Sie unter [Failover und Failovermodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)wichtig sind.  
+ Weitere Informationen finden Sie weiter unten in diesem Thema unter [Failover und Failovermodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
 ##  <a name="ClientConnections"></a> Clientverbindungen  
  Sie können Clientkonnektivität für das primäre Replikat einer angegebenen Verfügbarkeitsgruppe bereitstellen, indem Sie einen Verfügbarkeitsgruppenlistener erstellen. Ein *Verfügbarkeitsgruppenlistener* stellt einen Satz von Ressourcen bereit, der an eine bestimmte Verfügbarkeitsgruppe angefügt wird, um Clientverbindungen an das entsprechende Verfügbarkeitsreplikat umzuleiten.  
@@ -169,7 +169,7 @@ ms.locfileid: "71974381"
   
 -   **Whitepaper:**  
   
-     [Microsoft SQL Server AlwaysOn-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Microsoft-Whitepapers für SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   

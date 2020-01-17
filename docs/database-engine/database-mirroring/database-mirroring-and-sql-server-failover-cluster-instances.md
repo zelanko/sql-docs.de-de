@@ -1,6 +1,7 @@
 ---
-title: Datenbankspiegelung und SQL Server-Failoverclusterinstanzen | Microsoft-Dokumentation
-ms.custom: ''
+title: Datenbankspiegelung und Failoverclusterinstanzen
+description: Informationen zum Kombinieren der Datenbankspiegelung mit SQL Server-Failoverclusterinstanzen
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 760994c4b8b9ed137e9e0d221e2f473c5fdbdb70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 04d0864d07eeb741690df26fb9aee02c3f0bc547
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006446"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254173"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Datenbankspiegelung und SQL Server-Failoverclusterinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Ein Failovercluster ist eine Kombination eines oder mehrerer physischer Datenträger in einer Clustergruppe der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Clusterdienste (MSCS, Microsoft Cluster Service), auch als Ressourcengruppe bezeichnet, die teilnehmende Knoten des Clusters sind. Die Ressourcengruppe ist als Failoverclusterinstanz konfiguriert, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hostet. Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz wird im Netzwerk wie ein einzelner Computer angezeigt, besitzt jedoch Funktionalität, die ein Failover von einem Knoten zu einem anderen ermöglicht, falls ein Knoten nicht mehr verfügbar ist. Weitere Informationen finden Sie unter [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)hostet.  
+  Ein Failovercluster ist eine Kombination eines oder mehrerer physischer Datenträger in einer Clustergruppe der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Clusterdienste (MSCS, Microsoft Cluster Service), auch als Ressourcengruppe bezeichnet, die teilnehmende Knoten des Clusters sind. Die Ressourcengruppe ist als Failoverclusterinstanz konfiguriert, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hostet. Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz wird im Netzwerk wie ein einzelner Computer angezeigt, besitzt jedoch Funktionalität, die ein Failover von einem Knoten zu einem anderen ermöglicht, falls ein Knoten nicht mehr verfügbar ist. Weitere Informationen finden Sie unter [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)unterstützt.  
   
- Failovercluster stellen Unterstützung für hohe Verfügbarkeit für eine gesamte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz bereit, während die Datenbankspiegelung Unterstützung für hohe Verfügbarkeit für eine einzelne Datenbank bereitstellt. Datenbankspiegelung kann zwischen Failoverclustern, aber auch zwischen einem Failovercluster und einem nicht zu einem Cluster gehörenden Host ausgeführt werden.  
+ Failovercluster unterstützen die Hochverfügbarkeit einer gesamten Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], während die Datenbankspiegelung die Hochverfügbarkeit einzelner Datenbanken unterstützt. Datenbankspiegelung kann zwischen Failoverclustern, aber auch zwischen einem Failovercluster und einem nicht zu einem Cluster gehörenden Host ausgeführt werden.  
   
 > [!NOTE]  
->  Eine Einführung in die Datenbankspiegelung finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)hostet.  
+>  Eine Einführung in die Datenbankspiegelung finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ## <a name="mirroring-and-clustering"></a>Spiegelung und Clusterunterstützung  
  Wenn die Spiegelung zusammen mit Clustern verwendet wird, befinden sich sowohl der Prinzipalserver als auch der Spiegelserver auf Clustern, wobei der Prinzipalserver auf der Failoverclusterinstanz eines Clusters und der Spiegelserver auf der Failoverclusterinstanz eines anderen Clusters ausgeführt wird. Sie können aber auch eine Spiegelungssitzung einrichten, in der sich ein Partner auf der Failoverclusterinstanz eines Clusters und der andere Partner auf einem separaten, nicht zu einem Cluster gehörenden Computer befindet.  
@@ -42,7 +43,7 @@ ms.locfileid: "68006446"
   
  In der folgenden Abbildung wird ein automatisches Failover zwischen Clustern in einer Spiegelungssitzung dargestellt, die im Hochsicherheitsmodus mit einem Zeugen (der ein automatisches Failover unterstützt) ausgeführt wird.  
   
- ![Ein Failover auf einem Cluster](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "A failover on a cluster")  
+ ![Failover auf einem Cluster](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "Failover auf einem Cluster")  
   
  Die drei Serverinstanzen in der Spiegelungssitzung befinden sich auf drei verschiedenen Clustern: **Cluster_A**, **Cluster_B** und **Cluster_C**. Auf jedem Cluster wird eine Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz ausgeführt. Wenn die Spiegelungssitzung beginnt, ist die Failoverclusterinstanz auf **Cluster_A** der Prinzipalserver, die Failoverclusterinstanz auf **Cluster_B** ist der Spiegelserver, und die Failoverclusterinstanz auf **Cluster_C** ist der Zeuge in der Spiegelungssitzung. Schließlich fällt der aktive Knoten auf **Cluster_A** aus, sodass der Prinzipalserver nicht mehr verfügbar ist.  
   
@@ -67,6 +68,6 @@ ms.locfileid: "68006446"
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Betriebsmodi der Datenbankspiegelung](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
- [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
+ [AlwaysOn-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   

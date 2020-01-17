@@ -1,6 +1,7 @@
 ---
-title: Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen | Microsoft-Dokumentation
-ms.custom: ''
+title: Aktivieren aktualisierbarer Abonnements für Transaktionsveröffentlichungen
+description: In diesem Artikel erhalten Sie Informationen zum Aktivieren aktualisierbarer Abonnements für Transaktionsveröffentlichungen in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3b599ac576a71438fb13505521eff24b6c7e3fc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8afde3ebd4082df0c1fc0065b2aa058095905ead
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907964"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321255"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.locfileid: "72907964"
   
     -   Wenn Sie sich nicht sicher sind, ob ein Protokolllese-Agentauftrag für die Veröffentlichungsdatenbank vorhanden ist, dann führen Sie [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Wenn das Resultset leer ist, muss ein Protokolllese-Agentauftrag erstellt werden.  
   
-    -   Führen Sie auf dem Verleger [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) aus. Geben Sie für **\@job_name** und **\@password** die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Anmeldeinformationen an, unter denen der Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem für **\@publisher_security_mode** den Wert **0** und für **\@publisher_login** und **\@publisher_password** die [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen angeben.  
+    -   Führen Sie auf dem Verleger [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) aus. Geben Sie für **\@job_name** und **\@password** die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Anmeldeinformationen an, unter denen der Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem für **\@publisher_security_mode** den Wert **0** und für **\@publisher_login** und **\@publisher_password** die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen angeben.  
   
 2.  Führen Sie [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) aus. Geben Sie dabei für den Parameter **\@allow_sync_tran** den Wert **true** an.  
   
@@ -87,7 +88,7 @@ ms.locfileid: "72907964"
   
 3.  Führen Sie [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) aus. Geben Sie dabei den Wert **true** für den Parameter **\@allow_queued_tran** und einen der Werte **pub wins**, **sub reinit** oder **sub wins** für **\@conflict_policy** an.  
   
-4.  Führen Sie auf dem Verleger [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie den in Schritt 3 für **\@publication** verwendeten Veröffentlichungsnamen und für **\@snapshot_job_name** und **\@password** die Windows-Anmeldeinformationen an, unter denen der Momentaufnahmen-Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem für **\@publisher_security_mode** den Wert **0** und für **\@publisher_login** und **\@publisher_password** die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
+4.  Führen Sie auf dem Verleger [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie für **\@publication** den in Schritt 3 verwendeten Veröffentlichungsnamen und für **\@snapshot_job_name** und **\@password** die Windows-Anmeldeinformationen an, unter denen der Momentaufnahme-Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem für **\@publisher_security_mode** den Wert **0** und für **\@publisher_login** und **\@publisher_password** die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
 5.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -106,9 +107,9 @@ ms.locfileid: "72907964"
  [Festlegen der Konfliktlösungsoptionen für verzögerte Updates über eine Warteschlange &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Transaktionsreplikation](../../../relational-databases/replication/transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
  [Create an Updatable Subscription to a Transactional Publication](create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Verwenden von „sqlcmd“ mit Skriptvariablen](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
+ [Verwenden von sqlcmd mit Skriptvariablen](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

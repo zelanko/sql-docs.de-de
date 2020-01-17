@@ -10,23 +10,22 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/15/2019
-ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545052"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241749"
 ---
 # <a name="what-is-azure-data-studio"></a>Was ist Azure Data Studio?
 
 Azure Data Studio ist ein plattformübergreifendes Datenbanktool für Datenexperten, das die Microsoft-Produktfamilie der lokalen und cloudbasierten Datenplattformen unter Windows, macOS und Linux nutzt.
 
-Azure Data Studio wurde zuvor in einer Vorschauversion unter dem Namen SQL Operations Studio veröffentlicht und bietet eine moderne Editor-Benutzeroberfläche mit IntelliSense, Codeausschnitten und Integration der Quellcodeverwaltung sowie ein integriertes Terminal. Das Tool wurde speziell für die Bedürfnisse der Benutzer von Datenplattformen konzipiert und bietet eine integrierte Diagrammdarstellung von Abfrageresultsets sowie anpassbare Dashboards.
+Azure Data Studio bietet eine moderne Editor-Benutzeroberfläche mit IntelliSense, Codeausschnitten und Integration der Quellcodeverwaltung sowie ein integriertes Terminal. Das Tool wurde speziell für die Bedürfnisse der Benutzer von Datenplattformen konzipiert und bietet eine integrierte Diagrammdarstellung von Abfrageresultsets sowie anpassbare Dashboards.
 
 Der Quellcode für Azure Data Studio und den dazugehörigen Datenanbietern ist auf GitHub verfügbar und Gegenstand eines Lizenzvertrags für Quellcode, gemäß dem die Software zwar geändert und verwendet, aber nicht weitervertrieben oder auf einem Clouddienst gehostet werden darf. Weitere Informationen finden Sie in den [Häufig gestellten Fragen zu Azure Data Studio](faq.md).
 
 **[Herunterladen und Installieren von [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
-
 
 ## <a name="sql-code-editor-with-intellisense"></a>SQL-Code-Editor mit IntelliSense
 
@@ -37,7 +36,6 @@ Der Quellcode für Azure Data Studio und den dazugehörigen Datenanbietern ist a
 SQL-Codeausschnitte generieren die richtige SQL-Syntax zum Erstellen von Datenbanken, Tabellen, Ansichten, gespeicherten Prozeduren, Benutzern, Anmeldungen, Rollen usw. und zum Aktualisieren vorhandener Datenbankobjekte. Verwenden Sie intelligente Codeausschnitte, um zu Entwicklungs- oder Testzwecken schnell Kopien Ihrer Datenbank zu erstellen und um Skripts für CREATE- und INSERT-Vorgänge zu generieren und auszuführen.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] stellt auch Funktionen zum Erstellen benutzerdefinierter SQL-Codeausschnitte bereit. Weitere Informationen finden Sie unter [Erstellen und Verwenden von Codeausschnitten](code-snippets.md).
-
 
 ## <a name="customizable-server-and-database-dashboards"></a>Anpassbare Server- und Datenbankdashboards
 
@@ -61,6 +59,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>Featurevergleich mit SQL Server Management Studio (SSMS)
 
 **Verwenden Sie Azure Data Studio in folgenden Fällen**:
+
 - Sie müssen macOS oder Linux verwenden.
 - Sie stellen eine Verbindung mit einem SQL Server 2019-Big Data-Cluster her.
 - Sie verbringen einen Großteil Ihrer Zeit mit der Bearbeitung oder Ausführung von Abfragen.
@@ -68,9 +67,9 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 - Sie können die meisten administrativen Aufgaben mit sqlcmd oder PowerShell über das integrierte Terminal ausführen.
 - Sie benötigen nur selten die Funktionen eines Assistenten.
 - Sie müssen keine umfassende oder detaillierte administrative Konfiguration durchführen.
-- Ziel 
 
 **Verwenden Sie SQL Server Management Studio in folgenden Fällen**:
+
 - Sie verbringen einen Großteil Ihrer Zeit mit Aufgaben für die Datenbankverwaltung.
 - Sie führen umfassende oder detaillierte administrative Konfigurationsaufgaben durch.
 - Sie sind für die Sicherheitsverwaltung zuständig, einschließlich der Benutzerverwaltung, der Sicherheitsrisikobewertung und der Konfiguration von Sicherheitsfeatures.
@@ -100,7 +99,6 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 |DACPACs importieren/exportieren||Ja|
 |Objekteigenschaften||Ja|
 |Tabellen-Designer||Ja|
-
 
 ### <a name="query-editor"></a>Abfrage-Editor
 

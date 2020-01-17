@@ -1,6 +1,7 @@
 ---
-title: Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel | Microsoft-Dokumentation
-ms.custom: ''
+title: Implementieren eines benutzerdefinierten Konfliktlösers (Merge)
+description: Hier erfahren Sie, wie Sie einen benutzerdefinierten Konfliktlöser für eine Mergeveröffentlichung in SQL Server implementieren.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905118"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322157"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "72905118"
   
 1.  Erstellen Sie auf dem Verleger entweder in der Veröffentlichungs- oder der **msdb** -Datenbank eine neue gespeicherte Systemprozedur, welche die folgenden erforderlichen Parameter implementiert:  
   
-    |Parameter|Datentyp|und Beschreibung|  
+    |Parameter|Datentyp|BESCHREIBUNG|  
     |---------------|---------------|-----------------|  
     |**\@tableowner**|**sysname**|Name des Besitzers der Tabelle, für die ein Konflikt gelöst wird. Dies ist der Besitzer der Tabelle der Veröffentlichungsdatenbank.|  
     |**\@tablename**|**sysname**|Name der Tabelle, für die ein Konflikt gelöst wird.|  
@@ -63,14 +64,14 @@ ms.locfileid: "72905118"
 #### <a name="use-a-custom-conflict-resolver-with-a-new-table-article"></a>Verwenden eines benutzerdefinierten Konfliktlösers mit einem neuen Tabellenartikel  
   
 1. Führen Sie [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus, um einen Artikel zu definieren. 
-1. Geben Sie einen Wert des **MicrosoftSQL** **Server Stored Procedure Resolver** für den **\@article_resolver**-Parameter an. 
+1. Geben Sie den Wert **MicrosoftSQL** **Server Stored Procedure Resolver** für den Parameter **\@article_resolver** an. 
 1. Geben Sie den Namen der gespeicherten Prozedur an, mit der die Konfliktlöserlogik für den **\@resolver_info**-Parameter implementiert wird. 
 
    Weitere Informationen finden Sie unter [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md).
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>So verwenden Sie einen benutzerdefinierten Konfliktlöser mit einem vorhandenen Tabellenartikel  
   
-1.  Führen Sie [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, wobei Sie **\@publication**, **\@article**, den Wert **article_resolver** für **\@propertyund** einen Wert des **MicrosoftSQL**-**Konfliktlösers für gespeicherte Prozeduren** für **\@value** angeben.  
+1.  Führen Sie [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, wobei Sie **\@publication**, **\@article**, den Wert **article_resolver** für **\@property** und den Wert **MicrosoftSQL** **Server Stored ProcedureResolver** für **\@value** angeben.  
   
 2.  Führen Sie [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, wobei Sie **\@publication**, **\@article**, den Wert **resolver_info** für **\@property** und den Namen der gespeicherten Prozedur, mit der die Konfliktlöserlogik implementiert wird, für **\@value** angeben.  
   
@@ -122,7 +123,7 @@ ms.locfileid: "72905118"
 2.  Führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie dabei **\@publication** , **\@article**, den Wert **article_resolver** für **\@property** und den Anzeigenamen des Artikelkonfliktlösers aus Schritt 1 für **\@value** an.  
   
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Konflikterkennung und -lösung der Mergereplikation](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-basierte, benutzerdefinierte Konfliktlöser](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)  

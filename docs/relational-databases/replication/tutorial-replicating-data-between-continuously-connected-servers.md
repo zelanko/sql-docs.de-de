@@ -1,6 +1,7 @@
 ---
-title: 'Lernprogramm: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Tutorial: Konfigurieren der Transaktionsreplikation'
+description: In diesem Tutorial erfahren Sie, wie Sie die Transaktionsreplikation zwischen zwei vollständig verbundenen SQL Server-Instanzen konfigurieren.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907704"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321927"
 ---
-# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Lernprogramm: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation)
+# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Die Transaktionsreplikation stellt eine bewährte Lösung für das Problem des Verschiebens von Daten zwischen Servern mit kontinuierlicher Verbindung dar. Mithilfe des Replikations-Assistenten können Sie eine Replikationstopologie auf einfache Weise konfigurieren und verwalten. 
 
@@ -93,7 +94,7 @@ In diesem Abschnitt erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../
   
    ![Seite „Tabellenzeilen filtern“ und Dialogfeld „Filter hinzufügen“](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
   
-8. Wählen Sie **OK**, und wählen Sie anschließend **Weiter**aus.  
+8. Wählen Sie **OK** und anschließend **Weiter** aus.  
   
 9. Aktivieren Sie das Kontrollkästchen **Momentaufnahme sofort erstellen und zum Initialisieren von Abonnements verfügbar halten**, und wählen Sie **Weiter** aus:  
 
@@ -144,8 +145,8 @@ Wenn Ihnen hier ein Fehler angezeigt wird, finden Sie unter [Troubleshooting Sna
   
 2. Klicken Sie im Ordner **Lokale Veröffentlichungen** mit der rechten Maustaste auf **AdvWorksProductTrans**, und wählen Sie anschließend **Eigenschaften** aus.  Das Dialogfeld **Veröffentlichungseigenschaften** wird angezeigt.    
   
-   A. Wählen Sie die Seite **Veröffentlichungszugriffsliste** und anschließend **Hinzufügen** aus.  
-   B. Klicken Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** zuerst auf <*Name_des_Verlegercomputers*> **\repl_distribution** und anschließend auf **OK**.
+   a. Wählen Sie die Seite **Veröffentlichungszugriffsliste** und anschließend **Hinzufügen** aus.  
+   b. Klicken Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** zuerst auf <*Name_des_Verlegercomputers*> **\repl_distribution** und anschließend auf **OK**.
    
    ![Optionsauswahl zum Hinzufügen einer Anmeldung zur Veröffentlichungszugriffsliste](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -189,11 +190,11 @@ In diesem Abschnitt fügen Sie der zuvor erstellten Veröffentlichung einen Abon
   
 ### <a name="set-database-permissions-at-the-subscriber"></a>Festlegen der Datenbankberechtigungen auf dem Abonnenten  
   
-1. Stellen Sie eine Verbindung mit dem Abonnenten in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] her. Erweitern Sie den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und klicken Sie anschließend auf **Neue Anmeldung**.     
+1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Abonnenten her. Erweitern Sie den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und klicken Sie anschließend auf **Neue Anmeldung**.     
   
-   A. Klicken Sie auf der Seite **Allgemein** unter **Anmeldename** auf **Suche**, und fügen Sie <*Subscriber_Machine_Name>* > **\repl_distribution** die Anmeldung hinzu.
+   a. Klicken Sie auf der Seite **Allgemein** unter **Anmeldename** auf **Suche**, und fügen Sie <*Subscriber_Machine_Name>* > **\repl_distribution** die Anmeldung hinzu.
 
-   B. Weisen Sie auf der Seite **Benutzerzuordnungen** die **db_owner**-Anmeldungsmitgliedschaft der Datenbank **ProductReplica** zu. 
+   b. Weisen Sie auf der Seite **Benutzerzuordnungen** die **db_owner**-Anmeldungsmitgliedschaft der Datenbank **ProductReplica** zu. 
 
    ![Optionsauswahl zum Konfigurieren der Anmeldung beim Abonnenten](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
@@ -209,7 +210,7 @@ In diesem Abschnitt fügen Sie der zuvor erstellten Veröffentlichung einen Abon
    ![Optionsauswahl zum Öffnen des Dialogfelds „Synchronisierungsstatus anzeigen“](media/tutorial-replicating-data-between-continuously-connected-servers/viewsyncstatus.png)
 3. Wenn das Abonnement unter **AdvWorksProductTrans** nicht angezeigt wird, drücken Sie F5, um die Liste zu aktualisieren.  
   
-Weitere Informationen finden Sie in den folgenden Themen:  
+Weitere Informationen finden Sie unter  
 - [Initialisieren eines Abonnements mit einer Momentaufnahme](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [Erstellen eines Pushabonnements](../../relational-databases/replication/create-a-push-subscription.md)  
 - [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)  
@@ -223,14 +224,14 @@ In diesem Abschnitt verwenden Sie Überwachungstoken, um zu überprüfen, ob die
 
 2. Erweitern Sie im linken Bereich zuerst eine Verlegergruppe und dann die Verlegerinstanz. Klicken Sie anschließend auf die Veröffentlichung **AdvWorksProductTrans**.  
   
-   A. Wählen Sie die Registerkarte **Überwachungstoken** aus.  
-   B. Wählen Sie **Überwachung einfügen** aus.    
+   a. Wählen Sie die Registerkarte **Überwachungstoken** aus.  
+   b. Wählen Sie **Überwachung einfügen** aus.    
    c. Zeigen Sie die verstrichene Zeit für das Überwachungstoken in den folgenden Spalten an: **Verleger zu Verteiler**, **Verteiler zu Abonnent**, **Gesamtlatenzzeit**. Der Wert **Ausstehend** gibt an, dass das Token einen bestimmten Punkt noch nicht erreicht hat.
 
    ![Informationen zum Überwachungstoken](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
 
-Weitere Informationen finden Sie in den folgenden Themen: 
+Weitere Informationen finden Sie unter 
 - [Messen der Wartezeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 - [Suchen nach Fehlern bei Transaktionsreplikation-Agents](troubleshoot-tran-repl-errors.md)
 

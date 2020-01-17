@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531198"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721805"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Docker-Container in Linux
 
@@ -84,8 +84,8 @@ In diesem Tutorial erfahren Sie, wie Sie eine SQL Server-Sicherungsdatei in ein 
 
    Mit diesem Befehl wird ein Container von SQL Server 2017 erstellt, der standardmäßig die Developer Edition enthält. Der SQL Server-Port **1433** wird auf dem Host als Port **1401** bereitgestellt. Mit dem optionalen Parameter `-v sql1data:/var/opt/mssql` wird ein Datenvolumecontainer namens **sql1ddata** erstellt. Dieser wird verwendet, um die von SQL Server erstellten Daten permanent zu speichern.
 
-   > [!NOTE]
-   > Die Vorgehensweise zum Ausführen von SQL Server-Produktionseditionen in Containern weicht hiervon minimal ab. Weitere Informationen finden Sie unter [Run production container images (Ausführen von Containerimages für Produktionsumgebungen)](sql-server-linux-configure-docker.md#production). Bei Verwendung derselben Containernamen und Ports können Sie die restlichen Schritte dieser exemplarischen Vorgehensweise auch mit Containern für Produktionsumgebungen ausführen.
+   > [!IMPORTANT]
+   > In diesem Beispiel wird ein Datenvolumecontainer innerhalb von Docker verwendet. Wenn Sie stattdessen die Zuordnung eines Hostverzeichnisses gewählt haben, beachten Sie, dass es für diesen Ansatz Einschränkungen in Docker für Mac und Windows gibt. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server-Containerimages in Docker](sql-server-linux-configure-docker.md#persist).
 
 1. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
 

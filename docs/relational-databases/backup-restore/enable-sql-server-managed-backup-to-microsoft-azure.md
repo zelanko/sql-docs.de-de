@@ -1,7 +1,8 @@
 ---
-title: Aktivieren von SQL Server Managed Backup in Azure | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 10/03/2016
+title: Verwenden von Managed Backup für Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
+ms.description: Enable SQL Server managed backup to Azure
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,21 +11,22 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238736"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257954"
 ---
-# <a name="enable-sql-server-managed-backup-to-azure"></a>Aktivieren von SQL Server Managed Backup in Azure
+# <a name="enable-sql-server-managed-backup-to-azure"></a>Aktivieren von SQL Server Managed Backup für Azure
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sowohl auf Datenbank- als auch auf Instanzebene mit Standardeinstellungen aktiviert wird. Außerdem wird erläutert, wie E-Mail-Benachrichtigungen aktiviert und Sicherungsaktivitäten überwacht werden.  
   
  In diesem Tutorial wird Azure PowerShell verwendet. Bevor Sie das Tutorial starten, müssen Sie [Azure PowerShell herunterladen und installieren](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Wenn Sie auch erweiterte Optionen aktivieren oder einen benutzerdefinierten Zeitplan verwenden möchten, konfigurieren Sie diese Einstellungen zuerst, bevor Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]aktivieren. Weitere Informationen finden Sie unter [Konfigurieren der erweiterten Optionen für SQL Server Managed Backup in Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Wenn Sie auch erweiterte Optionen aktivieren oder einen benutzerdefinierten Zeitplan verwenden möchten, konfigurieren Sie diese Einstellungen zuerst, bevor Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]aktivieren. Weitere Informationen finden Sie unter [Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="create-the-azure-blob-container"></a>Erstellen des Azure-Blobcontainers
 
@@ -32,7 +34,7 @@ Für den Prozess ist ein Azure-Konto erforderlich. Überspringen Sie diesen Schr
 
 Weitere Informationen zu Speicherkonten finden Sie unter [Informationen zu Azure-Speicherkonten](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
 
-#### <a name="azure-clitabazure-cli"></a>[Azure CLI](#tab/azure-cli)
+#### <a name="azure-clitabazure-cli"></a>[Azure-Befehlszeilenschnittstelle](#tab/azure-cli)
 
 1. Melden Sie sich bei Ihrem Azure-Konto an.
 
@@ -104,7 +106,7 @@ Wenn die URL enthalten ist, trennen Sie sie an der Stelle des Fragezeichens vom 
 |**SAS-Token**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-Speichern Sie die Container-URL und die SAS, um sie beim Erstellen von SQL-Anmeldeinformationen zu verwenden. Weitere Informationen zur SAS finden Sie unter [Shared Access Signatures, Teil 1: Grundlagen zum SAS-Modell](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+Speichern Sie die Container-URL und die SAS, um sie beim Erstellen von SQL-Anmeldeinformationen zu verwenden. Weitere Informationen zu SAS finden Sie unter [Shared Access Signatures, Teil 1: Grundlegendes zum SAS-Modell](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 ## <a name="enable-managed-backup-to-azure"></a>Aktivieren von Managed Backup für Azure
   
@@ -208,5 +210,5 @@ Speichern Sie die Container-URL und die SAS, um sie beim Erstellen von SQL-Anmel
   
 Die in diesem Abschnitt beschriebenen Schritte sind speziell für die erste Konfiguration von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Datenbank vorgesehen. Mithilfe derselben gespeicherten Systemprozeduren können Sie vorhandene Konfigurationen bearbeiten und neue Werte festlegen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Managed Backup für Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  

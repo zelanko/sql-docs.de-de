@@ -1,7 +1,7 @@
 ---
-title: Konfigurieren eines Verfügbarkeitsgruppenlisteners
+title: Konfigurieren des Verfügbarkeitsgruppenlisteners
 description: 'Beschreibt die erforderlichen Schritte zum Konfigurieren eines Listeners für eine Always On-Verfügbarkeitsgruppe mithilfe von PowerShell oder SQL Server Management Studio. '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f97f9814192077dfbe8d361c34b3cf7424f19920
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 918619afd0b07c6d7b8e5d3ccef526da5f4d8fad
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264690"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822122"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Konfigurieren eines Listeners für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68264690"
 ##  <a name="Recommendations"></a> Empfehlungen  
  Die Verwendung einer statischen IP-Adresse wird zwar empfohlen, ist für Multisubnetz-Konfigurationen jedoch nicht unbedingt erforderlich.  
   
-##  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat hostet.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "68264690"
   
 ##  <a name="SqlPermissions"></a> SQL Server-Berechtigungen  
   
-|Task|Berechtigungen|  
+|Aufgabe|Berechtigungen|  
 |----------|-----------------|  
-|So erstellen Sie einen Verfügbarkeitsgruppenlistener|Erfordert die Mitgliedschaft in der festen **sysadmin** -Serverrolle und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.|  
+|So erstellen Sie einen Verfügbarkeitsgruppenlistener|Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.|  
 |So ändern Sie einen vorhandenen Verfügbarkeitsgruppenlistener|Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.|  
   
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
@@ -90,7 +90,7 @@ ms.locfileid: "68264690"
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Replikat der Verfügbarkeitsgruppe hostet, und klicken Sie zum Erweitern der Serverstruktur auf den Servernamen.  
   
-2.  Erweitern Sie die Knoten **Always On High Availability** (Always On Hochverfügbarkeit) und **Verfügbarkeitsgruppen** .  
+2.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** und den Knoten **Verfügbarkeitsgruppen** .  
   
 3.  Klicken Sie auf die Verfügbarkeitsgruppe, deren Listener Sie konfigurieren möchten, und wählen Sie eine der folgenden Alternativen aus:  
   
@@ -129,10 +129,10 @@ ms.locfileid: "68264690"
  **IP-Adresse**  
  Zeigt die IP-Adresse eines bestimmten Subnetzes an.  Für ein bestimmtes Subnetz ist die IP-Adresse entweder eine IPv4-Adresse oder eine IPv6-Adresse.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Klicken Sie zum Hinzufügen einer statischen IP-Adresse zu einem ausgewählten Subnetz oder einem anderen Subnetz für diesen Listener auf diese Option. Das Dialogfeld **IP-Adresse hinzufügen** wird geöffnet. Weitere Informationen finden Sie im Hilfethema [Dialogfeld IP-Adresse hinzufügen&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Entfernen**  
+ **Remove**  
  Klicken Sie, um das ausgewählte Subnetz von diesem Listener zu entfernen.  
   
  **OK**  
@@ -290,7 +290,7 @@ Start-ClusterResource yourListenerName
   
 -   Geben Sie den DNS-Hostnamen des Listeners an Anwendungsentwickler weiter, damit diese den Namen in Verbindungszeichenfolgen zum Anfordern von Clientverbindungen mit dieser Verfügbarkeitsgruppe verwenden.  
   
--   Ermutigen Sie Entwickler, Clientverbindungszeichenfolgen wenn möglich auf `MultiSubnetFailover = True` zu aktualisieren. Weitere Informationen zur Treiberunterstützung für Multisubnetzfailover finden Sie unter [Always On-Clientkonnektivität (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
+-   Ermutigen Sie Entwickler, Clientverbindungszeichenfolgen wenn möglich auf `MultiSubnetFailover = True`zu aktualisieren. Weitere Informationen zur Treiberunterstützung für Multisubnetzfailover finden Sie unter [Always On-Clientkonnektivität (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
 ###  <a name="CreateAdditionalListener"></a> Erstellen eines zusätzlichen Listeners für eine Verfügbarkeitsgruppe (optional)  
  Nachdem Sie mit SQL Server einen Listener erstellt haben, können Sie wie folgt einen zusätzlichen Listener hinzufügen:  

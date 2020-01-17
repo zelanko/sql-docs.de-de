@@ -1,8 +1,7 @@
 ---
-title: Mediensätze, Medienfamilien und Sicherungssätze (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 07/18/2016
-ms.prod: sql
+title: Mediensätze, Medienfamilien und Sicherungssätze
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.technology: backup-restore
@@ -23,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13ae1c4ae17bca661289d044217f63c4bebb9a9c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155583"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258679"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Mediensätze, Medienfamilien und Sicherungssätze (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **Dieses Thema bietet eine Einführung zur grundlegenden Terminologie bezüglich der Sicherungsmedien für Sicherungen und Wiederherstellungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ist für Leser gedacht, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]noch nicht kennen.** 
   
@@ -71,7 +71,7 @@ In einem gespiegelten Mediensatz werden alle Medienfamilien gespiegelt. Wenn bei
 ## <a name="the-media-header"></a>Der Medienheader  
  Jedes Volume eines Sicherungsmediums (Datenträgerdatei oder Band) enthält einen Medienheader, der beim ersten Sicherungsvorgang erstellt wird, der das Band (oder den Datenträger) verwendet. Dieser Header bleibt unverändert, bis das Medium neu formatiert wird.  
   
- Der Medienheader enthält alle zum Identifizieren des Mediums (Datenträgerdatei oder Band) erforderlichen Informationen sowie seine Position innerhalb der entsprechenden Medienfamilie. Diese Informationen umfassen Folgendes:  
+ Der Medienheader enthält alle zum Identifizieren des Mediums (Datenträgerdatei oder Band) erforderlichen Informationen sowie seine Position innerhalb der entsprechenden Medienfamilie. Folgende Informationen sind vorhanden:  
   
 -   Den Namen des Mediums.  
   
@@ -118,7 +118,7 @@ WITH
   
  Das Ergebnis eines erfolgreichen Sicherungsvorgangs sind ein neuer Mediensatz, der einen neuen Medienheader enthält, sowie ein auf drei Bänder aufgeteilter Sicherungssatz. Die folgende Abbildung veranschaulicht diese Ergebnisse:  
   
- ![Medienheader und erster Sicherungssatz auf 3 Bändern](../../relational-databases/backup-restore/media/bnr-mediaset-new.gif "Medienheader und erster Sicherungssatz auf 3 Bändern")  
+ ![Medienheader und erster Sicherungssatz auf drei Bändern](../../relational-databases/backup-restore/media/bnr-mediaset-new.gif "Medienheader und erster Sicherungssatz auf drei Bändern")  
   
  Nach dem Erstellen eines Mediensatzes werden die Sicherungssätze nachfolgender Sicherungsvorgänge normalerweise nacheinander an den Mediensatz angehängt. Die Gesamtheit aller von einem Sicherungssatz verwendeten Medien bildet den Mediensatz, unabhängig von der Anzahl der beteiligten Medien oder Sicherungsmedien. Sicherungssätze werden ihrer Position im Mediensatz entsprechend sequenziell nummeriert. Auf diese Weise können Sie angeben, welcher Sicherungssatz wiederhergestellt werden soll.  
   
@@ -137,7 +137,7 @@ WITH
   
  Wenn der zweite Sicherungsvorgang erfolgreich ist, wird ein zweiter Sicherungssatz in den Mediensatz geschrieben. Dabei wird der Sicherungsinhalt folgendermaßen verteilt:  
   
- ![Zweiter Sicherungssatz verteilt auf 3 Mediensatzbänder](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "Zweiter Sicherungssatz verteilt auf 3 Mediensatzbänder")  
+ ![Zweiter Sicherungssatz verteilt auf drei Mediensatzbänder](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "Zweiter Sicherungssatz verteilt auf drei Mediensatzbänder")  
   
  Beim Wiederherstellen von Sicherungen können Sie mit der Option FILE angeben, welche Sicherungen Sie verwenden möchten. Im folgenden Beispiel werden die FILE **=** _backup_set_file_number_ -Klauseln verwendet, um eine vollständige Datenbanksicherung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank wiederherzustellen. Im Anschluss daran wird für denselben Mediensatz eine differenzielle Datenbanksicherung durchgeführt. Es werden bis zu drei Sicherungsbänder vom Mediensatz verwendet. Diese befinden sich auf den Bandlaufwerken `\\.\tape0`, `tape1`und `tape2`.  
   
@@ -293,7 +293,7 @@ Das Anfügen (standardmäßiges Verhalten von BACKUP) kann explizit mithilfe der
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Sicherungsverlauf und Headerinformationen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   

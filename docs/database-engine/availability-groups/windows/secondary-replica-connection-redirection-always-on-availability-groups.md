@@ -1,6 +1,7 @@
 ---
-title: Umleitung von Lese-/Schreib-Verbindungen vom sekundären zum primären Replikat in SQL Server (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation
-ms.custom: ''
+title: Weiterleiten von Lese-/Schreibverbindungen mit primären Replikaten
+description: In diesem Artikel erfahren Sie, wie Lese-/Schreibverbindungen immer und unabhängig vom in der Verbindungszeichenfolge angegebenen Zielserver an das primäre Replikat einer Always On-Verfügbarkeitsgruppe weitergeleitet werden.
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014197"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235196"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat (Always On-Verfügbarkeitsgruppen)
 
@@ -32,7 +33,7 @@ In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 wird eine *
 
 In der Verbindungszeichenfolge kann beispielsweise ein sekundäres Replikat als Ziel angegeben sein. Je nach Konfiguration des Verfügbarkeitsgruppenreplikats und den Einstellungen in der Verbindungszeichenfolge kann die Verbindung automatisch an das primäre Replikat umgeleitet werden. 
 
-## <a name="use-cases"></a>Einsatzgebiete
+## <a name="use-cases"></a>Anwendungsfälle
 
 Vor [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] leiten der Verfügbarkeitgruppenlistener und die entsprechende Clusterressource den Benutzerdatenverkehr an das primäre Replikat weiter, um die Verbindungswiederherstellung nach einem Failover sicherzustellen. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] unterstützt die Funktion des Verfügbarkeitgruppenlisteners weiterhin und fügt die Umleitung von Replikatverbindungen für Szenarien hinzu, in denen keine Listener verwendet werden kann. Beispiel:
 
@@ -47,7 +48,7 @@ Damit ein sekundäres Replikat Lese-/Schreibverbindungsanforderungen umleiten ka
 * Die Replikatspezifikation `PRIMARY_ROLE` muss `READ_WRITE_ROUTING_URL` enthalten.
 * Die Verbindungszeichenfolge muss `ApplicationIntent` als `ReadWrite` definieren – dies ist die Standardeinstellung.
 
-## <a name="set-readwriteroutingurl-option"></a>Festlegen der READ_WRITE_ROUTING_URL-Option
+## <a name="set-read_write_routing_url-option"></a>Festlegen der READ_WRITE_ROUTING_URL-Option
 
 Um die Umleitung von Lese-/Schreibverbindungen zu konfigurieren, legen Sie beim Erstellen der Verfügbarkeitsgruppe `READ_WRITE_ROUTING_URL` für das primäre Replikat fest. 
 
@@ -57,24 +58,24 @@ In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] wurde `READ_WRITE_R
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
-### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) nicht festgelegt (Standardeinstellung) 
+### <a name="primary_roleread_write_routing_url-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) nicht festgelegt (Standardeinstellung) 
 
 Standardmäßig ist die Umleitung von Lese-/Schreibverbindungen für ein Replikat nicht festgelegt. Wie ein sekundäres Replikat Verbindungsanforderungen behandelt, richtet sich danach, ob das Zulassen von Verbindungen für das sekundäre Replikat festgelegt ist, und nach den `ApplicationIntent`-Einstellung in der Verbindungszeichenfolge. Die folgende Tabelle zeigt, wie ein sekundäres Replikat basierend auf `SECONDARY_ROLE (ALLOW CONNECTIONS = )` und `ApplicationIntent` Verbindungen behandelt.
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/> Default|Verbindungen werden nicht hergestellt|Verbindungen werden nicht hergestellt|Verbindungen werden erfolgreich hergestellt<br/>Lesevorgänge werden erfolgreich durchgeführt<br/>Schreibvorgänge werden nicht durchgeführt|
+|`ApplicationIntent=ReadWrite`<br/> Standard|Verbindungen werden nicht hergestellt|Verbindungen werden nicht hergestellt|Verbindungen werden erfolgreich hergestellt<br/>Lesevorgänge werden erfolgreich durchgeführt<br/>Schreibvorgänge werden nicht durchgeführt|
 |`ApplicationIntent=ReadOnly`|Verbindungen werden nicht hergestellt|Verbindungen werden erfolgreich hergestellt|Verbindungen werden erfolgreich hergestellt
 
 Die oben gezeigte Tabelle veranschaulicht das Standardverhalten – dies ist das gleiche Verwalten wie in den SQL Server-Versionen vor[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]. 
 
-### <a name="primaryrolereadwriteroutingurl-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) festgelegt 
+### <a name="primary_roleread_write_routing_url-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) festgelegt 
 
 Nachdem Sie die Umleitung von Lese-/Schreibverbindungen festgelegt haben, behandelt das Replikat Verbindungsanforderungen anders. Das Verbindungsverhalten richtet sich weiterhin nach den Einstellungen für `SECONDARY_ROLE (ALLOW CONNECTIONS = )` und `ApplicationIntent`. Die folgende Tabelle zeigt, wie ein sekundäres Replikat mit festgelegtem `READ_WRITE_ROUTING` basierend auf `SECONDARY_ROLE (ALLOW CONNECTIONS = )` und `ApplicationIntent` Verbindungen behandelt.
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/>Default|Verbindungen werden nicht hergestellt|Verbindungen werden nicht hergestellt|Verbindungen werden an das primäre Replikat geleitet|
+|`ApplicationIntent=ReadWrite`<br/>Standard|Verbindungen werden nicht hergestellt|Verbindungen werden nicht hergestellt|Verbindungen werden an das primäre Replikat geleitet|
 |`ApplicationIntent=ReadOnly`|Verbindungen werden nicht hergestellt|Verbindungen werden erfolgreich hergestellt|Verbindungen werden erfolgreich hergestellt
 
 Die oben stehende Tabelle zeigt Folgendes: Bei festgelegter `READ_WRITE_ROUTING_URL`-Option für das primäre Replikat leitet das sekundäre Replikat Verbindungen an das primäre Replikat um, wenn `SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)` festgelegt ist. Die Verbindung gibt `ReadWrite` an.
@@ -84,7 +85,7 @@ Die oben stehende Tabelle zeigt Folgendes: Bei festgelegter `READ_WRITE_ROUTING_
 In diesem Beispiel weist die Verfügbarkeitsgruppe drei Replikat auf:
 * Ein primäres Replikat auf COMPUTER01
 * Ein synchrones sekundäres Replikat auf COMPUTER02
-* Ein synchrones sekundäres Replikat auf COMPUTER03
+* Ein asynchrones sekundäres Replikat auf COMPUTER03
 
 Die folgende Abbildung zeigt die Verfügbarkeitsgruppe.
 
@@ -124,7 +125,7 @@ CREATE AVAILABILITY GROUP MyAg
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
@@ -158,7 +159,7 @@ Wenn die in der Verbindungszeichenfolge angegebene SQL Server-Instanz nicht verf
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+[Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 

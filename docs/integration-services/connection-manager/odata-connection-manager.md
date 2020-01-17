@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a643d35b6f9c31060e2c0404a6042be8b1c87abb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 39499e36568d64f92d3608f610d64193c93389e6
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298456"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542185"
 ---
 # <a name="odata-connection-manager"></a>OData-Verbindungs-Manager
 
@@ -51,7 +51,7 @@ ms.locfileid: "71298456"
   
 Für den anonymen Zugriff wählen Sie die Option „Windows-Authentifizierung“ aus.  
 
-Sie können die **Microsoft Online Services**-Authentifizierungsoption nicht verwenden, um mit Microsoft Dynamics AX Online oder Microsoft Dynamics CRM Online eine Verbindung herzustellen. Sie können auch keine Option verwenden, die für Multi-Factor Authentication konfiguriert ist.
+Sie können die **Microsoft Online Services**-Authentifizierungsoption nicht verwenden, um mit Microsoft Dynamics AX Online oder Microsoft Dynamics CRM Online eine Verbindung herzustellen. Sie können auch keine Option verwenden, die für Multi-Factor Authentication konfiguriert ist. Die moderne Authentifizierung wird derzeit nicht unterstützt. 
   
 ### <a name="specifying-and-securing-credentials"></a>Festlegen und Sichern von Anmeldeinformationen  
  Wenn der OData-Dienst die Standardauthentifizierung erfordert, können Sie im [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)einen Benutzernamen und ein Kennwort angeben. Die Werte, die Sie in den Editor eingeben, werden im Paket beibehalten. Der Kennwortwert wird gemäß der Schutzebene des Pakets verschlüsselt.  
@@ -63,8 +63,8 @@ Sie können die **Microsoft Online Services**-Authentifizierungsoption nicht ver
   
 |||  
 |-|-|  
-|Eigenschaft|und Beschreibung|  
-|URL|Die URL zum Dienstdokument.|  
+|Eigenschaft|BESCHREIBUNG|  
+|url|Die URL zum Dienstdokument.|  
 |UserName|Benutzername für die Authentifizierung, falls erforderlich.|  
 |Kennwort|Kennwort für die Authentifizierung, falls erforderlich.|  
 |ConnectionString|Enthält weitere Eigenschaften des Verbindungs-Managers.|  
@@ -72,7 +72,7 @@ Sie können die **Microsoft Online Services**-Authentifizierungsoption nicht ver
 ## <a name="odata-connection-manager-editor"></a>OData-Verbindungs-Manager-Editor
   Verwenden Sie das Dialogfeld **OData-Verbindungs-Manager-Editor**, um eine Verbindung hinzufügen oder eine vorhandene Verbindung mit einer OData-Datenquelle zu bearbeiten.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name des Verbindungs-Managers**  
  Name des Verbindungs-Managers.  
   

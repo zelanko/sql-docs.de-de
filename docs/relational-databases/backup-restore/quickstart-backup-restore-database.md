@@ -1,22 +1,22 @@
 ---
-title: 'Schnellstart: Lokales Sichern und Wiederherstellen einer SQL Server-Datenbank'
+title: 'Schnellstart: Sichern und Wiederherstellen einer Datenbank'
 titleSuffix: SQL Server
-description: Dieser Schnellstart veranschaulicht das Ausführen von SQL Server unter Linux in einer Cloud Ihrer Wahl.
+description: In dieser Schnellstartanleitung erfahren Sie, wie Sie eine SQL Server-Datenbank lokal sichern und wiederherstellen.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 05/25/2019
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: ''
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: dedadc89cd10da6f00ac768c3e15e151d0028e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033620"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258646"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Schnellstart: Lokales Sichern und Wiederherstellen einer SQL Server-Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ Eine ausführlichere Anleitung finden Sie unter [Erstellen einer vollständigen 
 ## <a name="prerequisites"></a>Voraussetzungen
 Um diesen Schnellstart abzuschließen, benötigen Sie Folgendes: 
 
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 ## <a name="create-a-test-database"></a>Erstellen einer Testdatenbank 

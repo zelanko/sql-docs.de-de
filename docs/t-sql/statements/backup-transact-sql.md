@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982849"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249727"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -69,7 +69,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 ||||
 |---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -190,7 +190,7 @@ Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung*) erstellte Sicherung wi
 > [!NOTE]
 > Für die **Masterdatenbank** kann nur eine vollständige Datenbanksicherung ausgeführt werden.
 
-LOG
+PROTOKOLL
 
 Gibt an, dass nur das Transaktionsprotokoll gesichert wird. Das Protokoll wird von der letzten erfolgreich ausgeführten Protokollsicherung bis zum aktuellen Ende des Protokolls gesichert. Bevor Sie die erste Protokollsicherung erstellen können, müssen Sie eine vollständige Sicherung erstellen.
 
@@ -416,7 +416,7 @@ FORMAT Gibt an, dass ein neuer Mediensatz erstellt werden kann. FORMAT bewirkt, 
 
 Durch die Angabe von FORMAT ist `SKIP` impliziert. `SKIP` muss nicht explizit angegeben werden.
 
-MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Gibt die freie Textbeschreibung des Mediensatzes an, die aus maximal 255 Zeichen bestehen kann.
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Gibt die freie Textbeschreibung des Mediensatzes an, die aus maximal 255 Zeichen bestehen kann.
 
 MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ } Gibt den Mediennamen für den gesamten Sicherungsmediensatz an. Der Medienname darf nicht mehr als 128 Zeichen umfassen. Wird `MEDIANAME` angegeben, muss dieser Name dem vorher angegebenen Mediennamen auf den Sicherungsvolumes entsprechen. Wird er nicht angegeben, oder ist die Option SKIP festgelegt, findet keine Prüfung des Mediennamens statt.
 
@@ -475,7 +475,7 @@ RESTART Hat ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] keine Auswirk
 
 **Überwachungsoptionen**
 
-STATS [ **=** _percentage_ ] Zeigt nach jedem abgeschlossenen *Prozentsatz* eine Meldung an und wird als Statusanzeige verwendet. Wird *Prozentsatz* nicht angegeben, zeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jedes Mal eine Meldung an, wenn weitere 10 Prozent des Vorgangs abgeschlossen sind.
+STATS [ **=** _percentage_ ] Zeigt nach jedem abgeschlossenen *Prozentsatz* eine Meldung an, und wird als Statusanzeige verwendet. Wird *Prozentsatz* nicht angegeben, zeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jedes Mal eine Meldung an, wenn weitere 10 Prozent des Vorgangs abgeschlossen sind.
 
 Mit der Option STATS wird der Prozentsatz gemeldet, der beim Erreichen des Schwellenwertes für das nächste Meldungsintervall abgeschlossen ist. Bei dem angegebenen Prozentsatz handelt es sich um einen ungefähren Wert. Wird beispielsweise STATS=10 festgelegt und sind 40 Prozent des Vorgangs abgeschlossen, dann zeigt die Option u. U. 43 Prozent an. Bei größeren Sicherungssätzen stellt dies kein Problem dar, da sich der Wert für den abgeschlossenen Prozentsatz zwischen abgeschlossenen E/A-Aufrufen nur sehr langsam verändert.
 
@@ -655,7 +655,7 @@ Weitere Informationen über gespiegelte Mediensätze finden Sie unter [Gespiegel
 
 ### <a name="Restoring_Backups"></a>Wiederherstellen von SQL Server-Sicherungen
 
-Um eine Datenbank wiederherzustellen und (optional) wieder online zu schalten, oder um eine Datei oder Dateigruppe wiederherzustellen, können Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)-Anweisung oder die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Restore**-Tasks verwenden. Weitere Informationen finden Sie unter [Übersicht über Wiederherstellungsvorgänge](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
+Sie können die [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)-Anweisung von [!INCLUDE[tsql](../../includes/tsql-md.md)] oder die **Restore**-Tasks von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um eine Datenbank wiederherzustellen und optional wieder online zu schalten, oder um eine Datei oder Dateigruppe wiederherzustellen. Weitere Informationen finden Sie unter [Übersicht über Wiederherstellungsvorgänge](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
 ## <a name="Additional_Considerations"></a>Weitere Überlegungen zu BACKUP-Optionen
 
@@ -727,7 +727,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind folgende Tabel
 
 Wird eine Wiederherstellung durchgeführt, wenn der Sicherungssatz noch nicht in der **msdb**-Datenbank erfasst ist, werden möglicherweise die Tabellen mit Sicherungsverläufen verändert.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden die Optionen `PASSWORD` und `MEDIAPASSWORD` nicht mehr für die Erstellung von Sicherungen verwendet. Es ist weiterhin möglich, mit Kennwörtern erstellte Sicherungen wiederherzustellen.
 
@@ -739,12 +739,12 @@ Besitz- und Berechtigungsprobleme im Zusammenhang mit der physischen Datei des S
 
 ## <a name="examples"></a> Beispiele
 
-Dieser Abschnitt enthält die folgenden Beispiele:
+Dieser Abschnitt enthält folgende Beispiele:
 
 - A. [Sichern einer vollständigen Datenbank](#backing_up_db)
 - B. [Sichern der Datenbank und des Protokolls](#backing_up_db_and_log)
 - C. [Erstellen einer vollständigen Dateisicherung der sekundären Dateigruppen](#full_file_backup)
-- D. [Erstellen einer differenziellen Dateisicherung der sekundären Dateigruppen](#differential_file_backup)
+- D: [Erstellen einer differenziellen Dateisicherung der sekundären Dateigruppen](#differential_file_backup)
 - E. [Erstellen eines gespiegelten Mediensatzes für eine Medienfamilie und Sichern auf einen gespiegelten Mediensatz für eine Medienfamilie](#create_single_family_mirrored_media_set)
 - F. [Erstellen eines gespiegelten Mediensatzes für mehrere Medienfamilien und Sichern auf einen gespiegelten Mediensatz für mehrere Medienfamilien](#create_multifamily_mirrored_media_set)
 - G. [Sichern auf einen vorhandenen gespiegelten Mediensatz](#existing_mirrored_media_set)
@@ -889,7 +889,7 @@ WITH
 
 ### <a name="url"></a> I. Sichern in den Microsoft Azure BLOB-Speicherdienst
 
-In dem Beispiel wird eine vollständige Sicherung der `Sales`-Datenbank in den Microsoft Azure BLOB-Speicherdienst ausgeführt. Der Speicherkontoname lautet `mystorageaccount`. Der Container heißt `myfirstcontainer`. Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Auflistungsrechten erstellt. Die Anmeldeinformation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` wurde mit einer Shared Access Signature (SAS) erstellt, die der gespeicherten Zugriffsrichtlinie zugeordnet ist. Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherung in Microsoft Azure Blob Storage finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) und [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+In dem Beispiel wird eine vollständige Sicherung der `Sales`-Datenbank in den Microsoft Azure BLOB-Speicherdienst ausgeführt. Der Speicherkontoname lautet `mystorageaccount`. Der Container heißt `myfirstcontainer`. Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Auflistungsrechten erstellt. Die Anmeldeinformation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`https://mystorageaccount.blob.core.windows.net/myfirstcontainer` wurde mit einer Shared Access Signature (SAS) erstellt, die der gespeicherten Zugriffsrichtlinie zugeordnet ist. Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherung in Microsoft Azure Blob Storage finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) und [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql
 BACKUP DATABASE Sales
@@ -936,7 +936,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL-Datenbank – Verwaltete Instanz
 
 Sichert eine SQL-Datenbank, die sich in einer verwalteten Azure SQL-Datenbank-Instanz befindet bzw. gehostet wird. Die [verwaltete Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) wird automatisch gesichert und ermöglicht Benutzern, vollständige `COPY_ONLY`-Datensicherungen zu erstellen. Differenzielle Sicherungen, Protokollsicherungen und Dateimomentaufnahmesicherungen werden nicht unterstützt.
 
@@ -1029,7 +1029,7 @@ DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ } Gibt den fre
 
 NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ } Gibt den Namen des Sicherungssatzes an. Namen können maximal 128 Zeichen haben. Wird NAME nicht angegeben, erhält der Sicherungssatz einen leeren Namen.
 
-MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Gibt die freie Textbeschreibung des Mediensatzes an, die aus maximal 255 Zeichen bestehen kann.
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Gibt die freie Textbeschreibung des Mediensatzes an, die aus maximal 255 Zeichen bestehen kann.
 
 MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ } Gibt den Mediennamen für den gesamten Sicherungsmediensatz an. Der Medienname darf nicht mehr als 128 Zeichen umfassen. Wird `MEDIANAME` angegeben, muss dieser Name dem vorher angegebenen Mediennamen auf den Sicherungsvolumes entsprechen. Wird er nicht angegeben, oder ist die Option SKIP festgelegt, findet keine Prüfung des Mediennamens statt.
 
@@ -1079,7 +1079,7 @@ RESTART hat keine Auswirkungen. Die Option wird von der Version aus Gründen der
 
 **Überwachungsoptionen**
 
-STATS [ **=** _percentage_ ] Zeigt nach jedem abgeschlossenen *Prozentsatz* eine Meldung an und wird als Statusanzeige verwendet. Wird *Prozentsatz* nicht angegeben, zeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jedes Mal eine Meldung an, wenn weitere 10 Prozent des Vorgangs abgeschlossen sind.
+STATS [ **=** _percentage_ ] Zeigt nach jedem abgeschlossenen *Prozentsatz* eine Meldung an, und wird als Statusanzeige verwendet. Wird *Prozentsatz* nicht angegeben, zeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jedes Mal eine Meldung an, wenn weitere 10 Prozent des Vorgangs abgeschlossen sind.
 
 Mit der Option STATS wird der Prozentsatz gemeldet, der beim Erreichen des Schwellenwertes für das nächste Meldungsintervall abgeschlossen ist. Bei dem angegebenen Prozentsatz handelt es sich um einen ungefähren Wert. Wird beispielsweise STATS=10 festgelegt und sind 40 Prozent des Vorgangs abgeschlossen, dann zeigt die Option u. U. 43 Prozent an. Bei größeren Sicherungssätzen stellt dies kein Problem dar, da sich der Wert für den abgeschlossenen Prozentsatz zwischen abgeschlossenen E/A-Aufrufen nur sehr langsam verändert.
 
@@ -1087,7 +1087,7 @@ Mit der Option STATS wird der Prozentsatz gemeldet, der beim Erreichen des Schwe
 
 Die max. Streifengröße bei der Speicherung beträgt 195 GB (maximale Blob-Größe). Erhöhen Sie die Streifenanzahl im Backup-Befehl, um die einzelne Streifengröße zu reduzieren und innerhalb dieser Einschränkungen zu bleiben.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 ### <a name="permissions"></a>Berechtigungen
 
@@ -1097,7 +1097,7 @@ Besitz- und Berechtigungsprobleme im Zusammenhang mit der URL können den Sicher
 
 ## <a name="examples"></a> Beispiele
 
-In dem Beispiel wird eine COPY_ONLY-Sicherung von `Sales` in Microsoft Azure Blob Storage ausgeführt. Der Speicherkontoname lautet `mystorageaccount`. Der Container heißt `myfirstcontainer`. Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Auflistungsrechten erstellt. Die Anmeldeinformation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` wurde mit einer Shared Access Signature (SAS) erstellt, die der gespeicherten Zugriffsrichtlinie zugeordnet ist. Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherung in Microsoft Azure Blob Storage finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) und [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+In dem Beispiel wird eine COPY_ONLY-Sicherung von `Sales` in Microsoft Azure Blob Storage ausgeführt. Der Speicherkontoname lautet `mystorageaccount`. Der Container heißt `myfirstcontainer`. Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Auflistungsrechten erstellt. Die Anmeldeinformation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`https://mystorageaccount.blob.core.windows.net/myfirstcontainer` wurde mit einer Shared Access Signature (SAS) erstellt, die der gespeicherten Zugriffsrichtlinie zugeordnet ist. Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherung in Microsoft Azure Blob Storage finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) und [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql
 BACKUP DATABASE Sales
@@ -1260,7 +1260,7 @@ Das DATABASE-Objekt wird mit einer ExclusiveUpdate-Sperre gesperrt.
 
 **Verwalten von Anmeldeinformationen für das Netzwerk**
 
-Der Netzwerkzugriff auf das Sicherungsverzeichnis basiert auf der Windows-Standarddateifreigabesicherheit. Vor dem Ausführen einer Sicherung müssen Sie ein Windows-Konto erstellen oder reservieren, das für die Authentifizierung von [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] beim Sicherungsverzeichnis verwendet wird. Dieses Windows-Konto benötigt die Berechtigung, auf das Sicherungsverzeichnis zuzugreifen, es zu erstellen und auf es zu schreiben.
+Der Netzwerkzugriff auf das Sicherungsverzeichnis basiert auf der Datei für die Standardfreigabesicherheit des Betriebssystems. Vor dem Ausführen einer Sicherung müssen Sie ein Windows-Konto erstellen oder reservieren, das für die Authentifizierung von [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] beim Sicherungsverzeichnis verwendet wird. Dieses Windows-Konto benötigt die Berechtigung, auf das Sicherungsverzeichnis zuzugreifen, es zu erstellen und auf es zu schreiben.
 
 > [!IMPORTANT]
 > Um Sicherheitsrisiken in Verbindung mit Ihren Daten zu reduzieren, empfehlen wir, dass Sie ein Windows-Konto ausschließlich zum Ausführen der Sicherungs- und Wiederherstellungsvorgänge festlegen. Definieren Sie das Konto so, dass es nur Berechtigungen für den Sicherungsspeicherort besitzt.
@@ -1300,7 +1300,7 @@ Im folgenden Beispiel wird eine vollständige Sicherung der Invoices-Benutzerdat
 BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 ```
 
-### <a name="d-create-a-differential-backup-of-a-user-database"></a>D. Erstellen Sie eine differenzielle Sicherung einer Benutzerdatenbank
+### <a name="d-create-a-differential-backup-of-a-user-database"></a>D: Erstellen Sie eine differenzielle Sicherung einer Benutzerdatenbank
 
 Das folgende Beispiel erstellt eine differenzielle Sicherung, die alle Änderungen seit der letzten vollständigen Sicherung der Invoices-Datenbank enthält. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] erstellt das Verzeichnis \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff, in dem die Dateien gespeichert werden. Die Beschreibung "Invoices 2013 differential backup" wird mit den Headerinformationen für die Sicherung gespeichert.
 

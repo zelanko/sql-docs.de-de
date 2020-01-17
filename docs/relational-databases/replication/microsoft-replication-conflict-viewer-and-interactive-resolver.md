@@ -1,6 +1,7 @@
 ---
-title: Replikationskonflikt-Viewer und interaktiver Konfliktlöser von Microsoft | Microsoft-Dokumentation
-ms.custom: ''
+title: Replikationskonflikt-Viewer und Replikationskonfliktauflöser
+description: Dies ist eine Referenz für Artikel, in denen der Replikationskonflikt-Viewer von Microsoft und der interaktive Microsoft-Replikationskonfliktlöser für SQL Server erläutert werden.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f16148e5f48ebf36d0a4a03ef9f0c67485623740
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca0a64c6e7c9859ccb3f6d8697fb123134c3f31f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075859"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321967"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Replikationskonflikt-Viewer und interaktiver Konfliktlöser von Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

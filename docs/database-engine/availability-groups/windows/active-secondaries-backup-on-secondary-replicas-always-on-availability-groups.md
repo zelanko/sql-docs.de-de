@@ -1,7 +1,7 @@
 ---
-title: Auslagern von unterstützten Sicherungen auf sekundäre Replikate einer Verfügbarkeitsgruppe
-description: Erfahren Sie, welche verschiedenen Sicherungstypen unterstützt werden bei der Abladung von Sicherungskopien auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe.
-ms.custom: seodec18
+title: Auslagern der Sicherung zu sekundären Verfügbarkeitsgruppenreplikaten
+description: Erfahren Sie, welche verschiedenen Sicherungstypen beim Auslagern von Sicherungskopien auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe unterstützt werden.
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 19118cde56109895213a733127b202c49feb23c1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807426"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822416"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Auslagern von unterstützten Sicherungen auf sekundäre Replikate einer Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Die Funktionen für aktive sekundäre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Replikate umfassen auch die Unterstützung von Sicherungsvorgängen auf sekundären Replikaten. Sicherungsvorgänge können E/A und CPU (mit Sicherungskomprimierung) erheblich belasten. Durch die Auslagerung von Sicherungen auf ein sekundäres Replikat mit dem Status SYNCHRONIZED oder SYNCHRONIZING können Sie die Ressourcen auf der Serverinstanz verwenden, die das primäre Replikat für Arbeitsauslastungen erster Ebene hostet.  
+  Die Funktionen für aktive sekundäre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] umfassen auch die Unterstützung von Sicherungen auf sekundären Replikaten. Sicherungsvorgänge können E/A und CPU (mit Sicherungskomprimierung) erheblich belasten. Durch die Auslagerung von Sicherungen auf ein sekundäres Replikat mit dem Status SYNCHRONIZED oder SYNCHRONIZING können Sie die Ressourcen auf der Serverinstanz verwenden, die das primäre Replikat für Arbeitsauslastungen erster Ebene hostet.  
 
 > [!NOTE]  
 >  RESTORE-Anweisungen sind in den primären und sekundären Datenbanken einer Verfügbarkeitsgruppe nicht zulässig.  
@@ -36,7 +36,7 @@ ms.locfileid: "72807426"
  
 ##  <a name="SupportedBuTypes"></a> Auf sekundären Replikaten unterstützte Sicherungstypen  
   
--   **BACKUP DATABASE** unterstützt vollständige Kopiesicherungen von Datenbanken, Dateien oder Dateigruppen nur bei der Ausführung auf sekundären Replikaten. Beachten Sie, dass sich Kopiesicherungen nicht auf die Protokollkette auswirken bzw. kein differenzielles Bitmuster löschen.  
+-   **BACKUP DATABASE** unterstützt vollständige Kopiesicherungen von Datenbanken, Dateien oder Dateigruppen nur bei der Ausführung auf sekundären Replikaten. Kopiesicherungen wirken sich nicht auf die Protokollkette aus bzw. löschen das differenzielle Bitmuster nicht.  
   
 -   Differenzielle Sicherungen werden auf sekundären Replikaten nicht unterstützt.
 

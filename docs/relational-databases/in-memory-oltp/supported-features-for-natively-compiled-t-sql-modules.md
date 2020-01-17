@@ -1,6 +1,6 @@
 ---
-title: Unterstützte Funktionen für nativ kompilierte T-SQL-Module | Microsoft Dokumentation
-ms.custom: ''
+title: Features für nativ kompilierte T-SQL-Module
+ms.custom: seo-dt-2019
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025083"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412521"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Unterstützte Funktionen für nativ kompilierte T-SQL-Module
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68025083"
 
 -   [Integrierte Funktionen in nativ kompilierten Modulen](#bfncsp)  
 
--   [Überwachen](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
+-   [Überwachung](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
 
 -   [Tabellen- und Abfragehinweise](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
 
@@ -49,7 +49,7 @@ ms.locfileid: "68025083"
 Die folgenden Abfragekonstrukte werden unterstützt:  
 
 CASE-Ausdruck: CASE kann in einer beliebigen Anweisung oder Klausel verwendet werden, die einen gültigen Ausdruck zulässt.
-   - **Gilt für:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+   - **Gilt für:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
     Ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] werden CASE-Anweisungen für nativ kompilierte T-SQL-Module unterstützt.
 
 SELECT-Klausel:  
@@ -57,19 +57,19 @@ SELECT-Klausel:
 -   Aliase für Spalten und Namen (entweder mithilfe von AS oder = Syntax).  
 
 -   Skalare Unterabfragen
-    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]
       Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] werden skalare Unterabfragen für nativ kompilierte T-SQL-Module unterstützt.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]
       Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] CTP 1.1 wird der DISTINCT-Operator in nativ kompilierten Modulen unterstützt.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION und UNION ALL
-    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]
       Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] CTP 1.1 werden die Operatoren UNION und UNION ALL in nativ kompilierten Modulen unterstützt.
 
 -   Variablenzuweisungen  
@@ -81,11 +81,11 @@ FROM-Klausel:
 -   FROM \<nativ kompilierte Inline-TVF  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN und INNER JOIN.
-    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]
       Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] werden JOINS für nativ kompilierte T-SQL-Module unterstützt.
 
 -   Unterabfragen `[AS] table_alias`. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL &#41;](../../t-sql/queries/from-transact-sql.md). 
-    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]
       Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] werden Unterabfragen für nativ kompilierte T-SQL-Module unterstützt.
 
 WHERE-Klausel:  
@@ -94,7 +94,7 @@ WHERE-Klausel:
 
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]
       Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] werden die Operatoren OR, NOT, IN und EXISTS für nativ kompilierte T-SQL-Module unterstützt.
 
 
@@ -107,7 +107,7 @@ WHERE-Klausel:
 [ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md) -Klausel:
 
 
-- Es gibt keine Unterstützung für **DISTINCT** in der **ORDER BY**-Klausel.
+- Es gibt keine Unterstützung für **DISTINCT** in der **ORDER BY** -Klausel.
 
 
 - Wird mit [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md) unterstützt, wenn ein Ausdruck in der ORDER BY-Liste wörtlich in der GROUP BY-Liste angezeigt wird.
@@ -191,7 +191,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Bitweise Operatoren ~, &, |, und ^  
 
 -   APPLY-Operator
-    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  
       Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] wird der APPLY-Operator in nativ kompilierten Modulen unterstützt.
 
 ##  <a name="bfncsp"></a> Integrierte Funktionen in nativ kompilierten Modulen  
@@ -202,7 +202,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Datumsfunktionen: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME und YEAR.  
 
 -   Zeichenfolgenfunktionen: LEN, LTRIM, RTRIM und SUBSTRING.  
-    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  
       Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] werden die folgenden integrierten Funktionen ebenfalls unterstützt: TRIM, TRANSLATE und CONCAT_WS.  
 
 -   Identitätsfunktionen: SCOPE_IDENTITY  
@@ -212,7 +212,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Uniqueidentifier-Funktionen: NEWID und NEWSEQUENTIALID  
 
 -   JSON-Funktionen  
-    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  
       Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] werden die JSON-Funktionen in nativ kompilierten Modulen unterstützt.
 
 -   Fehlerfunktionen: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE  

@@ -1,6 +1,7 @@
 ---
-title: Replikationsabonnenten und Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Replikationsabonnenten und Verfügbarkeitsgruppen (SQL Server)
+description: In diesem Artikel erfahren Sie, wie Sie einen Replikationsabonnenten mit einer SQL Server-Always On-Verfügbarkeitsgruppe konfigurieren.
+ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5635d4ce579e01d88079e3a813cddaf3391addc
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: eefcde46b462718cefbc7f4dc53f055f34834694
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969435"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235569"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Replikationsabonnenten und Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

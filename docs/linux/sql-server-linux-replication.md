@@ -4,51 +4,48 @@ description: In diesem Artikel ist SQL Server Replikation unter Linux beschriebe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 10/17/2018
+ms.date: 12/09/2019
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b049866d9752485cb1b9eb609404a3bd86f28a41
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
+ms.openlocfilehash: f0e1acd5af76f5b0b075879fc1c5122713caed55
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065192"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002039"
 ---
 # <a name="sql-server-replication-on-linux"></a>SQL Server-Replikation unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Mit [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] wird SQL Server-Replikation für Instanzen von SQL Server für Linux eingeführt.
+[!INCLUDE[SQL Server 2017](../includes/sssqlv14-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) und später unterstützen SQL Server-Replikation für Instanzen von SQL Server für Linux eingeführt.
 
 Sie konfigurieren Replikation unter Linux mit [gespeicherten Replikationsprozeduren ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md) von SQL Server Management Studio (SSMS).
 
 Eine Instanz von SQL Server kann an jeder Replikationsrolle mitwirken:
 
-* Verleger
+* Herausgeber
 * Verteiler
-* Abonnent
+* Subscriber
 
 In einem Replikationsschema können Betriebssystemplattformen gemischt und kombiniert werden. Beispielsweise kann ein Replikationsschema eine Instanz von SQL Server für Linux für Verleger und Verteiler enthalten, und die Abonnenten enthalten Instanzen von SQL Server für Windows und für Linux.
 
 SQL Server-Instanzen für Linux können an jeder Art von Replikation beteiligt werden.
 
-* Transaktion
-* Merge
+* Transaktionsreplikation
 * Momentaufnahme
 
 Ausführliche Informationen über Replikation finden Sie unter [SQL Server-Replikation](../relational-databases/replication/sql-server-replication.md).
 
 ## <a name="supported-features"></a>Unterstützte Features
 
-Für [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] werden die folgenden Replikationsfeatures unterstützt:
+Die folgenden Replikationsfeatures werden unterstützt:
 
 * Momentaufnahmereplikation
 * Transaktionsreplikation
-* Mergereplikation
-* Peer-zu-Peer-Replikation
 * Replikation mit Nicht-Standardports <!--Add link to explanation-->
 * Replikation mit AD-Authentifizierung
 * Replikationskonfigurationen mit Windows und Linux
@@ -56,9 +53,10 @@ Für [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] werden die folgende
 
 ## <a name="limitations"></a>Einschränkungen
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] unterstützt die folgenden Features nicht:
+Folgende Funktionen werden nicht unterstützt:
 
-* Abonnenten mit sofortigem Update
+* Mergereplikation
+* Peer-zu-Peer-Replikation
 * Veröffentlichungen mit Oracle
 
 ## <a name="next-steps"></a>Nächste Schritte

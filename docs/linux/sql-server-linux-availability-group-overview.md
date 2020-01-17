@@ -1,6 +1,7 @@
 ---
-title: Always On-Verfügbarkeitsgruppen für SQL Server für Linux
-description: ''
+title: Verfügbarkeitsgruppen für SQL Server unter Linux
+description: Hier erfahren Sie mehr über die Merkmale von Always On-Verfügbarkeitsgruppen für SQL Server unter Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794991"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558630"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On-Verfügbarkeitsgruppen unter Linux
 
@@ -113,7 +114,7 @@ Wenn ein reines Konfigurationsreplikat verwendet wird, weist es folgendes Verhal
 -   Wenn die reinen Konfigurationsreplikate ausfallen, funktioniert die Verfügbarkeitsgruppe wie gewohnt, es ist jedoch kein automatisches Failover möglich.
 -   Wenn ein synchrones sekundäres Replikat und das reine Konfigurationsreplikat ausfallen, kann das primäre Replikat keine Transaktionen akzeptieren, und das primäre Replikat kann kein Failover durchführen.
 
-In CU1 gibt es einen bekannten Fehler bei der Protokollierung in der Datei „corosync.log“, die über `mssql-server-ha` generiert wird. Wenn ein sekundäres Replikat aufgrund der Anzahl erforderlicher verfügbarer Replikate nicht zum primären Replikat werden kann, enthält die Meldung aktuell den Text „Expected to receive 1 sequence numbers but only received 2. Not enough replicas are online to safely promote the local replica.“ (Es wird erwartet, 1 Sequenznummer zu empfangen, es wurden jedoch nur 2 empfangen. Es sind nicht genügend Replikate online, um das lokale Replikat sicher höher zu stufen.) Die Zahlen sollten umgekehrt eingefügt werden. Der Text sollte also lauten: „Expected to receive 2 sequence numbers but only received 1. Not enough replicas are online to safely promote the local replica.“ (Es wird erwartet, 2 Sequenznummern zu empfangen, es wurden jedoch nur 1 empfangen. Es sind nicht genügend Replikate online, um das lokale Replikat sicher höher zu stufen.) 
+In CU1 gibt es einen bekannten Fehler bei der Protokollierung in der Datei „corosync.log“, die über `mssql-server-ha` generiert wird. Wenn ein sekundäres Replikat aufgrund der Anzahl erforderlicher verfügbarer Replikate nicht zum primären Replikat werden kann, enthält die Meldung aktuell den Text „Expected to receive 1 sequence numbers but only received 2. Not enough replicas are online to safely promote the local replica.“ (Es wird erwartet, 1 Sequenznummer zu empfangen, es wurden jedoch nur 2 empfangen. Es sind nicht genügend Replikate online, um das lokale Replikat sicher höher zu stufen.) Die Zahlen sollten umgekehrt eingefügt werden. Der Text sollte also lauten: „Expected to receive 2 sequence numbers but only received 1. Not enough replicas are online to safely promote the local replica.“ (Es wird erwartet, 1 Sequenznummer zu empfangen, es wurden jedoch nur 2 empfangen. Es sind nicht genügend Replikate online, um das lokale Replikat sicher höher zu stufen.) 
 
 ## <a name="multiple-availability-groups"></a>Mehrere Verfügbarkeitsgruppen 
 
@@ -146,7 +147,7 @@ Eine Verfügbarkeitsgruppe mit dem Clustertyp „NONE“ kann Replikate auf unte
 
 ![Hybride Replikate unter „NONE“](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Auch eine verteilte Verfügbarkeitsgruppe kann betriebssystemübergreifende Replikate besitzen. Die zugrunde liegenden Verfügbarkeitsgruppen sind an die Regeln der entsprechenden Konfiguration gebunden. So können beispielsweise eine für Linux konfigurierte Verfügbarkeitsgruppe mit dem Clustertyp „EXTERNAL“ und eine mithilfe eines WSFC konfigurierte Verfügbarkeitsgruppe miteinander verknüpft sein. Betrachten Sie das folgende Beispiel:
+Auch eine verteilte Verfügbarkeitsgruppe kann betriebssystemübergreifende Replikate besitzen. Die zugrunde liegenden Verfügbarkeitsgruppen sind an die Regeln der entsprechenden Konfiguration gebunden. So können beispielsweise eine für Linux konfigurierte Verfügbarkeitsgruppe mit dem Clustertyp „EXTERNAL“ und eine mithilfe eines WSFC konfigurierte Verfügbarkeitsgruppe miteinander verknüpft sein. Betrachten Sie das folgenden Beispiel:
 
 ![Hybride verteilte Verfügbarkeitsgruppe](./media/sql-server-linux-availability-group-overview/image2.png)
 

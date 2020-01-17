@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f265d2af5ad6fc30708d57f162c8d6395858673f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71284830"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491953"
 ---
 # <a name="install-integration-services-ssis"></a>Installieren von Integration Services (SSIS)
 
@@ -117,7 +117,7 @@ Für eine vollständige Installation von [!INCLUDE[ssISnoversion](../../includes
 
 - **Integration Services-Feature Pack für Azure**. Sie können das Feature Pack hier herunterladen: [Microsoft SQL Server 2017 Integration Services Feature Pack für Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017). Indem Sie das Feature Pack installieren, können Sie eine Verbindung mit den Speicher- und Analysediensten in der Azure-Cloud herstellen und damit u.a. die folgenden Dienste nutzen:
 
-  - Azure Blob Storage.
+  - „Azure Blob Storage“.
 
   - Azure HDInsight.
 
@@ -133,7 +133,7 @@ Für eine vollständige Installation von [!INCLUDE[ssISnoversion](../../includes
 
   - Microsoft Connector Version 5.0 für Oracle von Attunity und Microsoft Connector Version 5.0 für Teradata von Attunity. Sie können diese Komponenten hier herunterladen: [Microsoft Connectors v5.0 für Oracle und Teradata](https://www.microsoft.com/download/details.aspx?id=55179).
 
-## <a name="nest-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 - [Paralleles Installieren von Integration Services-Versionen](installing-integration-services-versions-side-by-side.md)
 

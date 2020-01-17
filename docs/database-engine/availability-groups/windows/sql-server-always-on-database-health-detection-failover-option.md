@@ -1,6 +1,7 @@
 ---
-title: Failoveroption zur Datenbank-Integritätserkennung | Microsoft-Dokumentation
-ms.custom: ''
+title: Integritätserkennung auf Datenbankebene
+description: Erfahren Sie mehr über das Feature zur Integritätserkennung auf Datenbankebene, die für Always On-Verfügbarkeitsgruppen von SQL Server verfügbar ist.
+ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 357d99a61f226162433f7d5fb1bbdfd41990cc8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013957"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251264"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ select name, db_failover from sys.availability_groups
 
 Beispielausgabe für DMV:
 
-|NAME  |  db_failover|
+|name  |  db_failover|
 |---------|---------|
 | Contoso-ag | 1  |
 
@@ -125,7 +126,7 @@ Dieser Auszug aus dem Fehlerprotokoll zeigt beispielsweise, dass das Schreiben e
 >
 >2016-04-25 12:20:21.21 spid75      Der Status des lokalen Verfügbarkeitsreplikats in der Verfügbarkeitsgruppe „ag“ wurde von „PRIMARY_NORMAL“ in „RESOLVING_NORMAL“ geändert.  Der Status hat sich geändert, weil die Verfügbarkeitsgruppe offline geschaltet wird.  Das Replikat wird offline geschaltet, weil die zugeordnete Verfügbarkeitsgruppe gelöscht wurde, der Benutzer die zugeordnete Verfügbarkeitsgruppe in der WSFC (Windows Server Failover Clustering)-Verwaltungskonsole offline geschaltet hat, oder die Verfügbarkeitsgruppe einen Failover auf eine andere Instanz von SQL Server ausführt.  Weitere Informationen finden Sie im SQL Server-Fehlerprotokoll, in der WSFC-Verwaltungskonsole (Windows Server Failover Clustering) oder im WSFC-Protokoll.
 
-### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>Erweiterte Ereignis sqlserver.availability_replica_database_fault_reporting
+### <a name="extended-event-sqlserveravailability_replica_database_fault_reporting"></a>Erweiterte Ereignis sqlserver.availability_replica_database_fault_reporting
 
 Ab SQL Server 2016 ist ein neues erweitertes Ereignis definiert, das von der Integritätserkennung auf Datenbankebene ausgelöst wird.  Der Ereignisname lautet **sqlserver.availability_replica_database_fault_reporting**
 
@@ -151,7 +152,7 @@ Wenn Sie SQL Server Management Studio verwenden, stellen Sie eine Verbindung mit
 
 Eine Erläuterung der Felder finden Sie im Folgenden:
 
-|Spaltendaten | und Beschreibung|
+|Spaltendaten | BESCHREIBUNG|
 |---------|---------|
 |availability_group_id |Die ID der Verfügbarkeitsgruppe.|
 |availability_group_name |Der Name der Verfügbarkeitsgruppe.|
@@ -176,7 +177,7 @@ In dieser Beispielausgabe zeigt „fault_type“, dass ein kritisches Ereignis a
 |database_replica_id | 39971379-8161-4607-82E7-098590E5AE00|
 |failover_ready_replicas | 1|
 |fault_type | 2|
-|is_critical | Wahr|
+|is_critical | True|
 
 
 ### <a name="related-references"></a>Verwandte Verweise

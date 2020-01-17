@@ -1,6 +1,7 @@
 ---
-title: Dialogfeld „Richtlinien auswerten“, Seite „Richtlinienauswahl“ | Microsoft-Dokumentation
-ms.custom: ''
+title: Seite „Richtlinienauswahl“ des Dialogfelds „Richtlinien auswerten“
+description: In diesem Artikel wird die Seite „Richtlinienauswahl“ des Dialogfelds „Richtlinien auswerten“ für die richtlinienbasierte Verwaltung in SQL Server Management Studio (SSMS) beschrieben.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbcedf14cc2046314c28972c3332df42d70c4539
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84e9e7577f74aa3ea43d99bc6b3c12cd5637c9ec
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901138"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558215"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Dialogfeld 'Richtlinien auswerten', Seite 'Richtlinienauswahl'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieses Dialogfelds können Sie richtlinienbasierte Verwaltungsrichtlinien auswerten. Durch Auswahl der Seite **Auswertungsergebnisse** können Sie Richtlinien auf die Elemente in einem Zielsatz anwenden, die mit den Richtlinien nicht übereinstimmen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Quelle**  
  Gibt die Quelle der Richtlinien an. Um die Quelle zu ändern, klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Quelle auswählen** zu öffnen.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "67901138"
  **Richtlinien: Facet**  
  Das von der Richtlinie implementierte Facet. Dieses Feld ist schreibgeschützt.  
   
- **Auswerten**  
+ **Evaluieren**  
  Führt die Richtlinie im Auswertungsmodus aus. Dadurch wird ein Kompatibilitätsbericht für den Zielsatz generiert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird jedoch nicht neu konfiguriert, und es wird auch keine zukünftige Kompatibilität durchgesetzt.  
   
 ## <a name="possible-errors"></a>Mögliche Fehler  

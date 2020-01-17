@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von SLES-Clustern für eine SQL Server-Verfügbarkeitsgruppe
+title: 'SUSE: Konfigurieren von Verfügbarkeitsgruppen für SQL Server für Linux'
 titleSuffix: SQL Server
 description: Hier erfahren Sie, wie Sie Verfügbarkeitsgruppencluster für SQL Server unter SUSE Linux Enterprise Server (SLES) erstellen können.
 author: MikeRayMSFT
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809827"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558445"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Konfigurieren von SLES-Clustern für eine SQL Server-Verfügbarkeitsgruppe
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Diese Anleitung enthält Anweisungen zum Erstellen eines Clusters mit drei Knoten für SQL Server unter SuSE Linux Enterprise Server (SLES) 12 SP2. Zur Gewährleistung von Hochverfügbarkeit benötigt eine Verfügbarkeitsgruppe unter Linux drei Knoten. Weitere Informationen hierzu finden Sie unter [Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die Clusteringebene basiert auf SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability), die auf [Pacemaker](https://clusterlabs.org/) aufbaut. 
+Diese Anleitung enthält Anweisungen zum Erstellen eines Clusters mit drei Knoten für SQL Server unter SuSE Linux Enterprise Server (SLES) 12 SP2. Zur Gewährleistung von Hochverfügbarkeit benötigt eine Verfügbarkeitsgruppe unter Linux drei Knoten. Weitere Informationen hierzu finden Sie unter [Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die Clusteringebene basiert auf der SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability), die auf [Pacemaker](https://clusterlabs.org/) aufbaut. 
 
 Weitere Informationen zu Clusterkonfiguration, Ressourcen-Agent-Optionen, Verwaltung, Best Practices und Empfehlungen finden Sie unter [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
@@ -58,7 +58,7 @@ Der erste Schritt besteht darin, das Betriebssystem auf den Clusterknoten zu kon
 
 ### <a name="install-and-configure-sql-server-service-on-each-cluster-node"></a>Installieren und Konfigurieren des SQL Server-Diensts auf den einzelnen Clusterknoten
 
-1. Installieren Sie den SQL Server-Dienst auf allen Knoten, und richten Sie ihn ein. Ausführliche Anweisungen finden Sie unter [Install SQL Server on Linux (Installieren von SQL Server für Linux)](sql-server-linux-setup.md).
+1. Installieren Sie den SQL Server-Dienst auf allen Knoten, und richten Sie ihn ein. Ausführliche Anweisungen finden Sie unter [Installieren von SQL Server für Linux](sql-server-linux-setup.md).
 
 1. Legen Sie einen Knoten als primäres Replikat und andere Knoten als sekundäre Replikate fest. Verwenden Sie diese Begriffe in der gesamten Anleitung.
 
@@ -73,7 +73,7 @@ Der erste Schritt besteht darin, das Betriebssystem auf den Clusterknoten zu kon
    10.128.16.22 SLES3
    ```
 
-   Alle Clusterknoten müssen in der Lage sein, über SSH aufeinander zugreifen. Tools wie `hb_report`oder `crm_report` (zur Problembehandlung) und Hawk's History Explorer erfordern kennwortlosen SSH-Zugriff zwischen den Knoten, andernfalls können sie nur Daten vom aktuellen Knoten sammeln. Falls Sie keinen nicht-standardmäßigen SSH-Port verwenden, nutzen Sie die Option „-X“ (siehe Seite `man`). Wenn Ihr SSH-Port z. B. 3479 ist, rufen Sie `crm_report` mit Folgendem auf:
+   Alle Clusterknoten müssen in der Lage sein, über SSH aufeinander zuzugreifen. Tools wie `hb_report`oder `crm_report` (zur Problembehandlung) und Hawk's History Explorer erfordern kennwortlosen SSH-Zugriff zwischen den Knoten, andernfalls können sie nur Daten vom aktuellen Knoten sammeln. Falls Sie keinen nicht-standardmäßigen SSH-Port verwenden, nutzen Sie die Option „-X“ (siehe Seite `man`). Wenn Ihr SSH-Port z. B. 3479 ist, rufen Sie `crm_report` mit Folgendem auf:
 
    ```bash
    sudo crm_report -X "-p 3479" [...]
@@ -118,9 +118,9 @@ Konfigurieren auf Linux-Servern zunächst die Verfügbarkeitsgruppe und anschlie
 
 3. So konfigurieren Sie die Clusterkommunikationsebene (Corosync): 
 
-   A. Geben Sie eine Netzwerkadresse für die Bindung ein. Standardmäßig schlägt das Skript die Netzwerkadresse von eth0 vor. Geben Sie alternativ eine andere Netzwerkadresse ein, z. B. die Adresse von bond0. 
+   a. Geben Sie eine Netzwerkadresse für die Bindung ein. Standardmäßig schlägt das Skript die Netzwerkadresse von eth0 vor. Geben Sie alternativ eine andere Netzwerkadresse ein, z. B. die Adresse von bond0. 
 
-   B. Geben Sie eine Multicastadresse ein. Das Skript schlägt eine zufällige Adresse vor, die Sie als Standard verwenden können. 
+   b. Geben Sie eine Multicastadresse ein. Das Skript schlägt eine zufällige Adresse vor, die Sie als Standard verwenden können. 
 
    c. Geben Sie einen Multicastport ein. Das Skript schlägt 5405 als Standardwert vor. 
 
@@ -218,9 +218,9 @@ Bei Anbietern von Pacemaker-Clustern muss für eine unterstützte Clustereinrich
 
 Durch das Fencing auf Ressourcenebene wird vor allem sichergestellt, dass während eines Ausfalls durch die Konfiguration einer Ressource keine Daten beschädigt werden. Das Fencing auf Ressourcenebene können Sie beispielsweise mit DRBD (Distributed Replicated Block Device) verwenden, damit die Festplatte auf einem Knoten bei einem Ausfall der Kommunikationsverbindung als veraltet markiert wird.
 
-Mit dem Fencing auf Knotenebene wird sichergestellt, dass ein Knoten keine Ressourcen ausführt. Dies erfolgt durch Zurücksetzen des Knotens. Die zugehörige Pacemaker-Implementierung wird als STONITH bezeichnet (was für „Shoot the Other Node in the Head“ [Schieß dem anderen Knoten in den Kopf] steht). Pacemaker unterstützt eine Vielzahl von Fencinggeräten, z. B. eine unterbrechungsfreie Stromversorgung oder Verwaltungsschnittstellenkarten für Server.
+Mit dem Fencing auf Knotenebene wird sichergestellt, dass ein Knoten keine Ressourcen ausführt. Dies erfolgt durch Zurücksetzen des Knotens. Die zugehörige Pacemaker-Implementierung wird als STONITH bezeichnet (was für „Shoot the Other Node in the Head“ (Schieß dem anderen Knoten in den Kopf) steht). Pacemaker unterstützt eine Vielzahl von Fencinggeräten, z. B. eine unterbrechungsfreie Stromversorgung oder Verwaltungsschnittstellenkarten für Server.
 
-Weitere Informationen finden Sie in den folgenden Themen:
+Weitere Informationen finden Sie unter
 
 - [Grundlegendes zu Pacemaker-Clustern](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)
 - [Fencing und STONITH](https://clusterlabs.org/doc/crm_fencing.html)
@@ -330,7 +330,7 @@ crm crm configure \
 Führen Sie für die Verfügbarkeitsgruppe ein Failover mit `crm` aus. Initiieren Sie kein Failover mit Transact-SQL. Weitere Informationen finden Sie unter [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
 
 
-Weitere Informationen finden Sie in den folgenden Themen:
+Weitere Informationen finden Sie unter
 - [Managing cluster resources (Verwalten von Clusterressourcen)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm).   
 - [HA Concepts (Hochverfügbarkeitskonzepte)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Pacemaker Quick Reference (Kurzübersicht über Pacemaker)](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 

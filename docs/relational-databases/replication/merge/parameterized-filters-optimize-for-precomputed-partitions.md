@@ -1,6 +1,7 @@
 ---
-title: Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen | Microsoft-Dokumentation
-ms.custom: ''
+title: Optimieren parametrisierter Filter mithilfe vorausberechneter Partitionen (Merge)
+description: In diesem Artikel erfahren Sie, wie Sie mithilfe von vorausberechneten Partitionen die Leistung von parametrisierten Filtern für Mergeveröffentlichungen optimieren.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d4c2062662e07e35366d5bdccbf544d893568ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018694"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321463"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Parametrisierte Filter - Optimierung für vorausberechnete Partitionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68018694"
   
  Wenn ein Abonnement eine Synchronisierung mit einem Verleger ausführt, muss der Verleger die Filter des Abonnenten auswerten. Dabei werden die Zeilen ermittelt, die zu dieser Abonnentenpartition oder zum Dataset gehören. Dieses Ermitteln der Partitionsmitgliedschaft von Änderungen auf dem Verleger für jeden Abonnenten, der ein gefiltertes Dataset erhält, wird *Partitionsauswertung*genannt. Ohne vorausberechnete Partitionen muss die Partitionsauswertung für jede Änderung an einer gefilterten Spalte ausgeführt werden, die auf dem Verleger vorgenommen wurde, seit der Merge-Agent zuletzt für einen bestimmten Abonnenten ausgeführt wurde. Außerdem muss dieser Vorgang dann für jeden Abonnenten wiederholt werden, der eine Synchronisierung mit dem Verleger ausführt.  
   
- Wenn der Verleger und der Abonnent jedoch mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder einer höheren Version ausgeführt werden und vorausberechnete Partitionen verwenden, wird die Partitionsmitgliedschaft für alle Änderungen auf dem Verleger im Voraus berechnet und persistent gespeichert, während die Änderungen vorgenommen werden. Als Folge kann ein Abonnent beim Synchronisieren mit dem Verleger sofort mit dem Download von Änderungen beginnen, die seine Partition betreffen, ohne die Partitionsauswertung durchlaufen zu müssen. Das kann zu einer erheblichen Verbesserung der Leistung führen, wenn eine Veröffentlichung eine große Zahl von Änderungen, Abonnenten oder Artikeln aufweist.  
+ Wenn der Verleger und der Abonnent jedoch mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder einer höheren Version ausgeführt werden und Sie vorausberechnete Partitionen verwenden, wird die Partitionsmitgliedschaft für alle Änderungen auf dem Verleger im Voraus berechnet und persistent gespeichert, während die Änderungen vorgenommen werden. Als Folge kann ein Abonnent beim Synchronisieren mit dem Verleger sofort mit dem Download von Änderungen beginnen, die seine Partition betreffen, ohne die Partitionsauswertung durchlaufen zu müssen. Das kann zu einer erheblichen Verbesserung der Leistung führen, wenn eine Veröffentlichung eine große Zahl von Änderungen, Abonnenten oder Artikeln aufweist.  
   
  Neben dem Verwenden von vordefinierten Partitionen generieren Sie vorab Momentaufnahmen und/oder ermöglichen Abonnenten das Anfordern der Momentaufnahmegenerierung und -anwendung beim ersten Synchronisieren. Verwenden Sie eine oder beide dieser Optionen, um Momentaufnahmen für Veröffentlichungen bereitzustellen, die parametrisierte Filter verwenden. Wenn Sie keine dieser beiden Optionen angeben, werden die Abonnements mit einer Reihe von SELECT- und INSERT-Anweisungen statt mit dem **bcp** -Hilfsprogramm initialisiert, wodurch sich der Prozess deutlich verlangsamt. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   

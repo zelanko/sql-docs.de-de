@@ -1,6 +1,7 @@
 ---
-title: 'Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Assistent für Verfügbarkeitsgruppen: Seite „Replikate angeben“'
+description: In diesem Artikel werden die Optionen der Seite „Replikate angeben“ des Assistenten für neue Verfügbarkeitsgruppen in SQL Server Management Studio (SSMS) erläutert.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,18 +14,18 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 190ff2f2f7fe510722f73c03bdc4beba18273d2b
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176220"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822562"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema werden die Optionen auf der Seite **Replikate angeben** beschrieben. Diese Seite gilt für: **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** und **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** . Verwenden Sie die Seite **Replikate angeben** , um mindestens ein Verfügbarkeitsreplikat anzugeben und zu konfigurieren und die Verfügbarkeitsgruppe hinzuzufügen. Diese Seite enthält vier Registerkarten, die in der folgenden Tabelle vorgestellt werden. Klicken Sie auf den Namen einer Registerkarte in der Tabelle, um zum entsprechenden Abschnitt weiter unten in diesem Thema zu wechseln.  
   
-|Registerkarte|Kurze Beschreibung|  
+|Registerkarte|Kurzbeschreibung|  
 |---------|-----------------------|  
 |[Replikate](#ReplicasTab)|Geben Sie mit dieser Registerkarte jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die ein sekundäres Replikat hosten wird oder derzeit hostet. Beachten Sie, dass die Serverinstanz, mit der Sie gerade verbunden sind, das primäre Replikat hosten muss.<br /><br /> Bevor Sie zu den anderen Registerkarten übergehen, sollten Sie alle Replikate auf der Registerkarte **Replikate** angegeben haben.<br/><br/> Beachten Sie, dass das **automatische Failover** deaktiviert ist, wenn der Clustertyp **NONE** ist. SQL Server unterstützt nur das manuelle Failover, wenn sich eine Verfügbarkeitsgruppe nicht in einem Cluster befindet. <br/><br/> Wenn der Clustertyp „EXTERNAL“ ist, ist der Failovermodus **External**. <br/><br/> Wenn Sie ein Replikat hinzufügen, müssen alle Replikate auf demselben Betriebssystemtyp wie das vorhandene Replikat gehostet werden. <br/><br/>Wenn Sie ein Replikat hinzufügen, muss sich das sekundäre Replikat im selben Cluster befinden, wenn sich das primäre Replikat in einem WSFC befindet.|
 |[Endpunkte](#EndpointsTab)|Auf dieser Registerkarte können Sie vorhandene Endpunkte für die Datenbankspiegelung überprüfen und automatisch einen Endpunkt erstellen, falls er auf einer Serverinstanz fehlt, deren Dienstkonten die Windows-Authentifizierung nutzen.|  
@@ -59,7 +60,7 @@ ms.locfileid: "70176220"
  **Nur beabsichtigte Lesevorgänge**  
  Es sind nur direkte, schreibgeschützte Verbindungen mit sekundären Datenbanken dieses Replikats zulässig. Die sekundären Datenbanken sind alle für Lesezugriff verfügbar.  
   
- **ja**  
+ **Ja**  
  Alle Verbindungen zu sekundären Datenbanken dieses Replikats sind zugelassen, aber nur für Lesezugriff. Die sekundären Datenbanken sind alle für Lesezugriff verfügbar.  
   
  **Replikat hinzufügen**  
@@ -110,12 +111,12 @@ ms.locfileid: "70176220"
  Wählen Sie eine der folgenden Optionen aus, um anzugeben, wo Sicherungen erfolgen sollen:  
   
  **Sekundär bevorzugen**  
- Gibt an, dass Sicherungen auf einem sekundären Replikat erfolgen müssen, außer wenn es sich beim primären Replikat um das einzige Onlinereplikat handelt. In diesem Fall muss die Sicherung auf dem primären Replikat erfolgen. Diese Option ist die Standardeinstellung.  
+ Gibt an, dass Sicherungen auf einem sekundären Replikat erfolgen müssen, außer wenn es sich beim primären Replikat um das einzige Onlinereplikat handelt. In diesem Fall muss die Sicherung auf dem primären Replikat erfolgen. Dies ist die Standardoption.  
   
  **Nur sekundär**  
  Gibt an, dass Sicherungen nie auf dem primären Replikat ausgeführt werden dürfen. Wenn es sich beim primären Replikat um das einzige Onlinereplikat handelt, darf keine Sicherung erfolgen.  
   
- **Primär**  
+ **Primärer Server/verwaltete Instanz**  
  Gibt an, dass die Sicherungen immer auf dem primären Replikat erfolgen müssen. Diese Option ist hilfreich, wenn Sie Sicherungsfunktionen benötigen, z. B. das Erstellen differenzieller Sicherungen, die nicht unterstützt werden, wenn die Sicherung auf einem sekundären Replikat ausgeführt wird.  
   
  **Beliebiges Replikat**  
@@ -131,7 +132,7 @@ ms.locfileid: "70176220"
  Zeigt den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, auf der das Verfügbarkeitsreplikat gehostet wird.  
   
  **Sicherungspriorität (niedrigste = 1, höchste = 100)**  
- Weisen Sie die Priorität für die Ausführung von Sicherungen auf diesem Replikat in Relation zu den anderen Replikaten in derselben Verfügbarkeitsgruppe zu. Der Standardwert lautet "50". Sie können im Bereich von 0 bis 100 eine beliebige andere ganze Zahl auswählen. 1 gibt die niedrigste Priorität und 100 die höchste Priorität an. Wenn Sie **Sicherungspriorität** auf 1 festlegen, wird das Verfügbarkeitsreplikat für die Ausführung von Sicherungen nur ausgewählt, wenn derzeit kein Verfügbarkeitsreplikat mit höherer Priorität verfügbar ist.  
+ Weisen Sie die Priorität für die Ausführung von Sicherungen auf diesem Replikat in Relation zu den anderen Replikaten in derselben Verfügbarkeitsgruppe zu. Der Standardwert lautet "50". Sie können im Bereich von 0 bis 100 eine beliebige andere ganze Zahl auswählen. 1 gibt die niedrigste Priorität und 100 die höchste Priorität an. Wenn Sie die **Sicherungspriorität** auf 1 festlegen, wird das Verfügbarkeitsreplikat für die Ausführung von Sicherungen nur ausgewählt, wenn derzeit kein Verfügbarkeitsreplikat mit höherer Priorität verfügbar ist.  
   
  **Replikat ausschließen**  
  Mit dieser Option wird verhindert, dass dieses Verfügbarkeitsreplikat je zum Ausführen von Sicherungen ausgewählt wird. Dies ist zum Beispiel für ein Remoteverfügbarkeitsreplikat hilfreich, für das keine Failover bei Sicherungen auftreten sollen.  
@@ -163,7 +164,7 @@ ms.locfileid: "70176220"
  **Statische IP**  
  Wählen Sie diese Option aus, wenn der Listener an mehr als einem Subnetz lauschen soll. Zur Verwendung des Netzwerkmodus mit statischer IP muss ein Verfügbarkeitsgruppenlistener an allen Subnetzen lauschen, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hosten. Klicken Sie für jedes Subnetz auf **Hinzufügen** , um eine Subnetzadresse auszuwählen und eine IP-Adresse anzugeben.  
   
- Wenn **Statische IP** als Netzwerkmodus ausgewählt wird (Standardauswahl), werden in einem Raster die Spalten **Subnetz** und **IP-Adresse** sowie die zugehörigen Schaltflächen **Hinzufügen** und **Entfernen** angezeigt. Beachten Sie, dass das Raster leer ist, bis Sie das erste Subnetz hinzufügen.  
+ Wenn **Statische IP** als Netzwerkmodus ausgewählt wird (Standardauswahl), werden in einem Raster die Spalten **Subnetz** und **IP-Adresse** sowie die zugehörigen Schaltflächen **Hinzufügen** und **Entfernen** angezeigt. Das Raster ist leer, bis Sie das erste Subnetz hinzufügen.  
   
  Spalte**Subnetz**  
  Zeigt die Subnetzadresse an, die Sie für alle Subnetze ausgewählt haben, die Sie für den Listener hinzugefügt haben.  
@@ -171,10 +172,10 @@ ms.locfileid: "70176220"
  Spalte**IP-Adresse**  
  Zeigt die IPv4- oder IPv6-Adresse an, die Sie für ein bestimmtes Subnetz angegeben haben.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Klicken Sie hier, um diesem Listener ein Subnetz hinzuzufügen. Das Dialogfeld **IP-Adresse hinzufügen** wird geöffnet. Weitere Informationen finden Sie im Hilfethema [Dialogfeld IP-Adresse hinzufügen&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Entfernen**  
+ **Remove**  
  Klicken Sie hier, um das derzeit im Raster ausgewählte Subnetz zu entfernen.  
   
  **DHCP**  

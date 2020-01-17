@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 13c306c1fbd83b2fde5783daeba4201cf5d862d9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9da237047e7b42b83cc8aa039d6bd04aaca9549a
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532850"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191075"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -32,7 +32,7 @@ ms.locfileid: "73532850"
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R, Python und externe Sprachen werden für die Windows- und die Linux-Plattform in SQL Server 2019 und höher unterstützt.
+> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. Ab SQL Server 2019 werden R, Python und externe Programmiersprachen auf Windows- und Linux-Plattformen unterstützt.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current"
@@ -156,7 +156,7 @@ Gibt den Inhalt des Pakets für eine bestimmte Plattform an. Nur ein Dateiartefa
 
 Die Datei kann in Form eines lokalen Pfads oder eines Netzwerkpfads angegeben werden. Wenn die Datenquellenoption angegeben ist, kann der Dateiname ein relativer Pfad zu dem Container sein, auf den in `EXTERNAL DATA SOURCE` verwiesen wird.
 
-Optional kann eine Betriebssystemplattform für die Datei angegeben werden. Für jede Betriebssystemplattform für eine bestimmte Sprache oder Runtime ist nur ein Darteiartefakt oder Inhalt erlaubt.
+Optional kann eine Betriebssystemplattform für die Datei angegeben werden. Für jede Betriebssystemplattform für eine bestimmte Sprache oder Runtime ist nur jeweils ein Darteiartefakt oder Inhalt erlaubt.
 
 ::: moniker-end
 
@@ -169,14 +169,14 @@ Diese Option ist nützlich, wenn Sie die erforderliche Berechtigung zum Ändern 
 Stattdessen können Sie den Paketinhalt als Variable im Binärformat übergeben.
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
+**platform = WINDOWS**
 
 Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen.
 Für SQL Server 2017 ist Windows die einzige unterstützte Plattform.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**PLATFORM**
+**platform**
 
 Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen. 
 Für SQL Server 2019 werden die Plattformen Windows und Linux unterstützt.
@@ -200,7 +200,7 @@ gibt die Sprache des Pakets an. R wird in Azure SQL-Datenbank unterstützt.
 gibt die Sprache des Pakets an. Der Wert kann **R**, **Python** oder der Name einer externen Programmiersprache (siehe [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)) sein.
 ::: moniker-end
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 Bei der R-Sprache müssen Pakete in Form von gezippten Archivdateien mit der Dateiendung .zip für Windows vorbereitet werden. Für SQL Server 2017 wird nur die Windows-Plattform unterstützt.  
@@ -264,7 +264,7 @@ Das Beispiel funktioniert auch für Python in SQL Server 2019, wenn Sie `'R'` du
 > [!NOTE]
 > Dieses Codebeispiel zeigt nur die Syntax; der Binärwert in `CONTENT =` wurde zur besseren Lesbarkeit gekürzt und erstellt keine funktionierende Bibliothek. Der tatsächliche Inhalt der binären Variable wäre wesentlich länger.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  

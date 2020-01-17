@@ -1,6 +1,7 @@
 ---
-title: Konfigurieren von vordefinierten Replikationswarnungen (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Konfigurieren vordefinierter Replikationswarnungen (SSMS)
+description: Hier erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS) vordefinierte Replikationswarnungen konfigurieren.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d5ff652d5817242ad5e77ed42b5839d97389056c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 9bf49c5892dd22b417df7aeec50f20c0f81b410b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906817"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322067"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Konfigurieren von vordefinierten Replikationswarnungen (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ ms.locfileid: "72906817"
   
 2.  Wählen Sie im Dialogfeld **Replikationswarnungen konfigurieren** eine Warnung aus, und klicken Sie dann auf **Konfigurieren**.  
   
-3.  Legen Sie im Dialogfeld **\<Eigenschaften von Warnung <AlertName>** die gewünschten Optionen fest:  
+3.  Legen Sie im Dialogfeld **\<Eigenschaften von Warnung AlertName>** die gewünschten Optionen fest:  
   
     -   Klicken Sie auf der Seite **Allgemein** auf **Aktivieren**, und geben Sie an, für welche Datenbank die Warnung gelten soll.  
   

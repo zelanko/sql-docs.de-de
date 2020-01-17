@@ -1,6 +1,6 @@
 ---
-title: Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten | Microsoft-Dokumentation
-ms.custom: ''
+title: Aktualisieren von Datenbanken mithilfe des Abfrageoptimierungs-Assistenten
+ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c09d18bc2b9413eb324e75abfb52e6fa361c357
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163904"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165685"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und mit jeder ne
 
 Diese Gatingfunktion, die durch den Datenbank-Kompatibilitätsgrad bereitgestellt wird, bietet Ihnen in Kombination mit dem Abfragespeicher große Kontrolle über die Abfrageleistung im Upgradeprozess, wenn das Upgrade dem empfohlenen Workflow folgt, der unten gezeigt wird. Weitere Informationen zum empfohlenen Workflow für das Aktualisieren des Kompatibilitätsgrads finden Sie unter [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). 
 
-![Empfohlener Datenbank-Upgradeworkflow mit dem Abfragespeicher](../../relational-databases/performance/media/query-store-usage-5.png "Empfohlener Datenbank-Upgradeworkflow mit dem Abfragespeicher") 
+![Empfohlener Datenbankupgradeworkflow mit dem Abfragespeicher](../../relational-databases/performance/media/query-store-usage-5.png "Empfohlener Datenbankupgradeworkflow mit dem Abfragespeicher") 
 
 Diese Kontrolle über Upgrades wurde mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] weiter verbessert. In dieser Version wurde [Automatische Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md) eingeführt und die Automatisierung des letzten Schritts im oben empfohlenen Workflow ermöglicht.
 
@@ -56,7 +56,7 @@ Weitere Informationen zum Anfügen einer Datenbank finden Sie unter [Anfügen un
 
 Im Folgenden erfahren Sie, wie QTA im Wesentlichen nur die letzten Schritte des empfohlenen Workflows zur Aktualisierung des Kompatibilitätsgrads mithilfe des Abfragespeichers wie oben beschrieben ändert. QTA bietet nicht nur die Möglichkeit, zwischen dem zurzeit ineffizienten Ausführungsplan und dem letzten bekannten funktionierenden Ausführungsplan zu wählen, sondern auch Optimierungsoptionen speziell für die ausgewählten zurückgestellten Abfragen, um einen neuen verbesserten Zustand mit optimierten Ausführungsplänen zu erstellen.
 
-![Empfohlener Datenbank-Upgradeworkflow mit QTA](../../relational-databases/performance/media/qta-usage.png "Empfohlener Datenbank-Upgradeworkflow mit QTA")
+![Empfohlener Datenbankupgradeworkflow mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/media/qta-usage.png "Empfohlener Datenbankupgradeworkflow mit dem Abfrageoptimierungs-Assistenten")
 
 ### <a name="qta-tuning-internal-search-space"></a>Optimieren des internen Suchbereichs durch QTA
 QTA bezieht sich nur auf `SELECT`-Abfragen, die aus dem Abfragespeicher ausgeführt werden können. Parametrisierte Abfragen sind zulässig, wenn der kompilierte Parameter bekannt ist. Abfragen, die von Laufzeitkonstrukten wie temporären Tabellen oder Tabellenvariablen abhängen, sind zurzeit nicht zulässig. 
@@ -87,16 +87,16 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
     1.  Konfigurieren Sie im Fenster **Setup** den Abfragespeicher so, dass er das Äquivalent eines vollständigen Geschäftszyklus von Workloaddaten erfasst, die analysiert und optimiert werden sollen. 
         -  Geben Sie die erwartete Workloaddauer in Tagen ein (der Mindestwert ist 1 Tag). Diese Angabe wird verwendet, um empfohlene Abfragespeichereinstellungen vorzuschlagen, um vorläufig die gesamte Baseline zu erfassen. Die Erfassung einer guten Baseline ist wichtig, um sicherzustellen, dass alle zurückgestellten Abfragen, die nach einer Änderung des Kompatibilitätsgrads der Datenbank gefunden wurden, analysiert werden können. 
         -  Legen Sie den vorgesehenen Zieldatenbank-Kompatibilitätsgrad fest, den die Benutzerdatenbank verwenden soll, nachdem der QTA-Workflow abgeschlossen wurde.
-        Klicken Sie dann auf **Weiter**.
+        Klicken Sie anschließend auf **Weiter**.
     
-       ![Fenster für das Einrichten einer neuen Datenbank-Upgradesitzung](../../relational-databases/performance/media/qta-new-session-setup.png "Fenster für das Einrichten einer neuen Datenbank-Upgradesitzung")  
+       ![Fenster zum Einrichten einer neuen Datenbankupgradesitzung](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
   
     2.  Im Fenster **Einstellungen** zeigen zwei Spalten den Status **Aktuell** des Abfragespeichers in der Zieldatenbank sowie die **empfohlenen** Einstellungen an. 
         -  Die empfohlenen Einstellungen sind standardmäßig ausgewählt. Wenn Sie jedoch auf das Optionsfeld über der Spalte „Aktuell“ klicken, werden die aktuellen Einstellungen akzeptiert, und Sie können auch die aktuelle Konfiguration des Abfragespeichers optimieren. 
         -  Die vorgeschlagene Einstellung *Schwellenwert für veraltete Abfragen* ist zwei Mal so groß wie die erwartete Workloaddauer in Tagen. Dies liegt daran, dass der Abfragespeicher Informationen zur Baselineworkload und zur Workload nach dem Datenbankupgrade speichern muss.
         Klicken Sie anschließend auf **Weiter**.
 
-       ![Fenster für neue Datenbankupgradeeinstellungen](../../relational-databases/performance/media/qta-new-session-settings.png "Fenster für neue Datenbankupgradeeinstellungen")
+       ![Fenster für Einstellungen eines neuen Datenbankupgrades](../../relational-databases/performance/media/qta-new-session-settings.png "Fenster für Einstellungen eines neuen Datenbankupgrades")
 
        > [!IMPORTANT]
        > Die vorgeschlagene *Maximale Größe* ist ein beliebiger Wert, der ggf. für eine Workload mit kurzer Ausführungszeit geeignet ist.   
@@ -105,7 +105,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
 
 4.  Im Fenster **Optimierung** wird die Sitzungskonfiguration abgeschlossen, und die nächsten Schritte zum Öffnen und Fortsetzen der Sitzung werden eingeleitet. Klicken Sie nach Abschluss des Vorgangs auf **Fertig stellen**.
 
-    ![Fenster für Optimierung des neuen Datenbankupgrades](../../relational-databases/performance/media/qta-new-session-tuning.png "Fenster für Optimierung des neuen Datenbankupgrades")
+    ![Fenster zum Optimieren des neuen Datenbankupgrades](../../relational-databases/performance/media/qta-new-session-tuning.png "Fenster zum Optimieren des neuen Datenbankupgrades")
 
 > [!NOTE]
 > Ein mögliches alternatives Szenario beginnt damit, dass eine Datenbanksicherung vom Produktionsserver, auf dem eine Datenbank bereits den empfohlenen Workflow für das Upgrade der Datenbankkompatibilität durchlaufen hat, auf einem Testserver wiederhergestellt wird.
@@ -125,7 +125,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
     -  **Beschreibung**: Vom System generierte Beschreibung, bestehend aus dem vom Benutzer ausgewählten Kompatibilitätsgrad der Zieldatenbank und der Anzahl der Tage für die Geschäftszyklusworkload.
     -  **Startzeit:** Das Datum und die Uhrzeit der Sitzungserstellung.
 
-    ![QTA-Sitzungsverwaltungsseite](../../relational-databases/performance/media/qta-session-management.png "QTA-Sitzungsverwaltungsseite")
+    ![Seite für Sitzungsverwaltung mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/media/qta-session-management.png "Seite für Sitzungsverwaltung mit dem Abfrageoptimierungs-Assistenten")
 
     > [!NOTE]
     > **Sitzung löschen** löscht alle Daten, die für die ausgewählte Sitzung gespeichert wurden.    
@@ -145,19 +145,19 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
         > [!NOTE]
         > Das QTA Fenster kann geschlossen werden, während die Workload ausgeführt wird. Die Rückkehr zur Sitzung (die im aktiven Zustand verbleibt) zu einem späteren Zeitpunkt wird mit dem gleichen Schritt fortgesetzt, bei dem sie unterbrochen wurde. 
 
-        ![QTA-Schritt 2, Teilschritt 1](../../relational-databases/performance/media/qta-step2-substep1.png "QTA-Schritt 2, Teilschritt 1")
+        ![Abfrageoptimierungs-Assistent Schritt 2, Teilschritt 1](../../relational-databases/performance/media/qta-step2-substep1.png "Abfrageoptimierungs-Assistent Schritt 2, Teilschritt 1")
 
     2.  **Upgrade der Datenbank** fordert zur Erteilung der Berechtigung auf, den Kompatibilitätsgrad der Datenbank in den gewünschten Zielwert zu aktualisieren. Um mit dem nächsten Teilschritt fortzufahren, klicken Sie auf **Ja**.
 
-        ![QTA-Schritt 2, Teilschritt 2: Upgrade des Datenbank-Kompatibilitätsgrads](../../relational-databases/performance/media/qta-step2-substep2-prompt.png "QTA-Schritt 2, Teilschritt 2: Upgrade des Datenbank-Kompatibilitätsgrads")
+        ![Abfrageoptimierungs-Assistent Schritt 2, Teilschritt 2: Upgrade des Datenbankkompatibilitätsgrads](../../relational-databases/performance/media/qta-step2-substep2-prompt.png "Abfrageoptimierungs-Assistent Schritt 2, Teilschritt 2: Upgrade des Datenbankkompatibilitätsgrads")
 
         Die folgende Seite bestätigt, dass der Datenbank-Kompatibilitätsgrad erfolgreich aktualisiert wurde.
 
-        ![QTA-Schritt 2, Teilschritt 2](../../relational-databases/performance/media/qta-step2-substep2.png "QTA-Schritt 2, Teilschritt 2")
+        ![Abfrageoptimierungs-Assistent Schritt 2, Teilschritt 2](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
 
     3.  **Beobachtete Datenerfassung** fordert den Benutzer auf, den repräsentativen Workloadzyklus erneut auszuführen, sodass der Abfragespeicher eine vergleichende Baseline erfassen kann, die für die Suche nach Optimierungsmöglichkeiten verwendet wird. Verwenden Sie während der Ausführung der Workload die Schaltfläche **Aktualisieren**, um die Liste der zurückgestellten Abfragen zu aktualisieren, falls solche gefunden wurden. Ändern Sie den Wert für **Anzuzeigende Abfragen**, um die Anzahl der angezeigten Abfragen zu beschränken. Die Reihenfolge der Liste wird durch die **Metrik** (Dauer oder CpuTime) und die **Aggregation** („Mittelwert“ ist Standard) beeinflusst. Wählen Sie auch aus, wie viele **Abfragen angezeigt werden sollen**. Nachdem die Workload abgeschlossen wurde, überprüfen Sie **Workloadausführung abgeschlossen**, und klicken Sie dann auf **Weiter**.
 
-        ![QTA-Schritt 2, Teilschritt 3](../../relational-databases/performance/media/qta-step2-substep3.png "QTA-Schritt 2, Teilschritt 3")
+        ![Abfrageoptimierungs-Assistent Schritt 2, Teilschritt 3](../../relational-databases/performance/media/qta-step2-substep3.png "Abfrageoptimierungs-Assistent Schritt 2, Teilschritt 3")
 
         Die Liste enthält die folgenden Informationen:
         -  **Abfrage-ID** 
@@ -177,7 +177,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
     > Eine Eingabeaufforderung weist darauf hin, dass die Rückkehr zur Seite „Analyse anzeigen“ nicht möglich ist, sobald QTA in die Experimentierphase übergeht.   
     > Wenn Sie nicht alle geeigneten Abfragen auswählen, bevor Sie zur Experimentierphase übergehen, müssen Sie zu einem späteren Zeitpunkt eine neue Sitzung erstellen und den Workflow wiederholen. Dies erfordert das Zurücksetzen des Datenbank-Kompatibilitätsgrads auf den vorherigen Wert.
 
-    ![QTA-Schritt 3](../../relational-databases/performance/media/qta-step3.png "QTA-Schritt 3")
+    ![Abfrageoptimierungs-Assistent Schritt 3](../../relational-databases/performance/media/qta-step3.png "Abfrageoptimierungs-Assistent Schritt 3")
 
 5.  **Ergebnisse anzeigen** ermöglicht die Auswahl, für welche Abfragen die vorgeschlagene Optimierung als Planhinweisliste bereitgestellt werden soll. 
 
@@ -191,15 +191,15 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
     -  **Abfrageoption:** Link zum vorgeschlagenen Hinweis, der die Abfrageausführungsmetrik verbessert.
     -  **Bereitstellung möglich:** *TRUE* oder *FALSE*, abhängig davon, ob die vorgeschlagene Abfrageoptimierung als Planhinweisliste bereitgestellt werden kann.
 
-    ![QTA-Schritt 4](../../relational-databases/performance/media/qta-step4.png "QTA-Schritt 4")
+    ![Abfrageoptimierungs-Assistent Schritt 4](../../relational-databases/performance/media/qta-step4.png "Abfrageoptimierungs-Assistent Schritt 4")
 
 6.  **Überprüfung** zeigt den Bereitstellungsstatus zuvor ausgewählter Abfragen für diese Sitzung an. Die Liste auf dieser Seite unterscheidet sich von der vorherigen Seite durch Ändern der Spalte **Kann bereitgestellt werden** in **Rollback kann ausgeführt werden**. Diese Spalte kann *TRUE* oder *FALSE* abhängig davon sein, ob für die bereitgestellte Abfrageoptimierung ein Rollback ausgeführt und ihre Planhinweisliste entfernt werden kann.
 
-    ![QTA-Schritt 5](../../relational-databases/performance/media/qta-step5.png "QTA-Schritt 5")
+    ![Abfrageoptimierungs-Assistent Schritt 5](../../relational-databases/performance/media/qta-step5.png "Abfrageoptimierungs-Assistent Schritt 5")
 
     Wenn zu einem späteren Zeitpunkt ein Rollback für eine vorgeschlagene Optimierung erforderlich ist, wählen Sie die entsprechende Abfrage aus, und klicken Sie dann auf **Rollback**. Diese Abfrageplan-Hinweisliste wird entfernt und die Liste aktualisiert, um die Abfrage zu entfernen, für die ein Rollback ausgeführt wurde. Beachten Sie in der folgenden Abbildung, dass Abfrage 8 entfernt wurde.
 
-    ![QTA-Schritt 5: Rollback](../../relational-databases/performance/media/qta-step5-rollback.png "QTA-Schritt 5: Rollback") 
+    ![Abfrageoptimierungs-Assistent Schritt 5: Rollback](../../relational-databases/performance/media/qta-step5-rollback.png "Abfrageoptimierungs-Assistent Schritt 5: Rollback") 
 
     > [!NOTE]
     > Durch das Löschen einer geschlossenen Sitzung werden zuvor bereitgestellte Planhinweislisten **nicht** gelöscht.   

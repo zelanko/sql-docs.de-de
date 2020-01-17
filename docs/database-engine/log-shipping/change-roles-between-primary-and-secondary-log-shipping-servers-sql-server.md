@@ -1,6 +1,7 @@
 ---
-title: Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern der primären und sekundären Protokollversandrollen
+description: Erfahren Sie, wie Sie die sekundäre Datenbank so konfigurieren, dass diese für Ihre Protokollversandlösungen von SQL Server als primäre Datenbank agiert.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b7924bc8d7dfc8a3460ca4beb989fd0daf0e85a8
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.openlocfilehash: e06d382258d6d98b7f54ff9dd3f4840a04274d81
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008447"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259005"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

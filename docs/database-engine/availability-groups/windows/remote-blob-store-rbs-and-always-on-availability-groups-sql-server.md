@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Remote Blob Store (RBS) mit Verfügbarkeitsgruppen
+title: Remote Blob Store (RBS) mit Verfügbarkeitsgruppen
 description: 'Eine Beschreibung der Verwendung von Remote Blob Store (RBS) mit Datenbanken, die Teil einer Always On-Verfügbarkeitsgruppe sind. '
 ms.custom: seodec18
 ms.date: 05/17/2016
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2d98c64e94904ddf883f5f7f1a4ce22d3f81c88b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 864ed8080c3978ec272f5212fa0a5e8dc40c2350
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014431"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822480"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>Verwenden von Remote Blob Store (RBS) mit Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,6 @@
 ---
-title: Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte | Microsoft-Dokumentation
-ms.custom: ''
+title: Von In-Memory OLTP nicht unterstützte T-SQL
+ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e39f991982fbde13259039e8794218819f366b89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e1052544d1243dea4e6c3da377de2dbbe36d5af
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081831"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412485"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68081831"
   
 -   [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   
--   [Transact-SQL-Unterstützung für In-Memory-OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
+-   [Transact-SQL-Unterstützung für OLTP im Arbeitsspeicher](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
 -   [Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68081831"
 ## <a name="databases-that-use-in-memory-oltp"></a>Datenbanken, die In-Memory OLTP verwenden  
  In der folgenden Tabelle werden die nicht unterstützten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen und -Schlüsselwörter aufgelistet, die im Meldungstext eines In-Memory OLTP-Datenbankfehlers angezeigt werden können. In der Tabelle werden auch Hinweise zur Fehlerbehebung aufgeführt.  
   
-|Typ|Name|Lösung|  
+|type|Name|Lösung|  
 |----------|----------|----------------|  
 |Option|AUTO_CLOSE|Die Datenbankoption AUTO_CLOSE=ON wird für Datenbanken, die eine MEMORY_OPTIMIZED_DATA-Dateigruppe enthalten, nicht unterstützt.|  
 |Option|ATTACH_REBUILD_LOG|Die CREATE-Datenbankoption ATTACH_REBUILD_LOG wird für Datenbanken, die eine MEMORY_OPTIMIZED_DATA-Dateigruppe enthalten, nicht unterstützt.|  
@@ -49,11 +49,11 @@ ms.locfileid: "68081831"
 ## <a name="memory-optimized-tables"></a>Speicheroptimierte Tabellen  
  In der folgenden Tabelle werden die nicht unterstützten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen und -Schlüsselwörter aufgelistet, die im Meldungstext eines Fehlers einer speicheroptimierten Tabelle angezeigt werden können. In der Tabelle werden auch Hinweise zur Fehlerbehebung aufgeführt.  
   
-|Typ|Name|Lösung|  
+|type|Name|Lösung|  
 |----------|----------|----------------|  
-|Funktion|ON|Speicheroptimierte Tabellen können nicht in einer Dateigruppe oder einem Partitionsschema platziert werden. Entfernen Sie die ON-Klausel aus der **CREATE TABLE** -Anweisung.<br /><br /> Alle speicheroptimierten Tabellen sind speicheroptimierten Dateigruppen zugeordnet.|  
+|Funktion|EIN|Speicheroptimierte Tabellen können nicht in einer Dateigruppe oder einem Partitionsschema platziert werden. Entfernen Sie die ON-Klausel aus der **CREATE TABLE** -Anweisung.<br /><br /> Alle speicheroptimierten Tabellen sind speicheroptimierten Dateigruppen zugeordnet.|  
 |Datentyp|*Datentypname*|Der angegebene Datentyp wird nicht unterstützt. Ersetzen Sie den Typ durch einen der unterstützten Datentypen. Weitere Informationen finden Sie unter [Unterstützte Datentypen für In-Memory OLTP](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Funktion|Berechnete Spalten|**Gilt für:**  [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Berechnete Spalten werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die berechneten Spalten aus der **CREATE TABLE** -Anweisung.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] unterstützen berechnete Spalten in speicheroptimierten Tabellen und Indizes.|  
+|Funktion|Berechnete Spalten|**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Berechnete Spalten werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die berechneten Spalten aus der **CREATE TABLE** -Anweisung.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] unterstützen berechnete Spalten in speicheroptimierten Tabellen und Indizes.|  
 |Funktion|Replikation|Replikation wird für speicheroptimierte Tabellen nicht unterstützt.|  
 |Funktion|FILESTREAM|Die FILESTREAM-Speicherung wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie das **FILESTREAM** -Schlüsselwort aus der Spaltendefinition.|  
 |Funktion|SPARSE|Spalten aus speicheroptimierten Tabellen können nicht als SPARSE definiert werden. Entfernen Sie das **SPARSE** -Schlüsselwort aus der Spaltendefinition.|  
@@ -80,7 +80,7 @@ ms.locfileid: "68081831"
 ## <a name="indexes-on-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen  
  In der folgenden Tabelle werden die möglichen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen und -Schlüsselwörter im Meldungstext eines Fehlers mit dem Index einer speicheroptimierten Tabelle sowie die Korrekturmaßnahmen zum Beheben des Fehlers aufgelistet.  
   
-|Typ|Name|Lösung|  
+|type|Name|Lösung|  
 |----------|----------|----------------|  
 |Funktion|Gefilterter Index|Gefilterte Indizes werden nicht mit speicheroptimierten Tabellen unterstützt. Lassen Sie die **WHERE** -Klausel in der Indexspezifikation aus.|  
 |Funktion|Eingeschlossene Spalten|Bei speicheroptimierten Tabellen müssen keine eingeschlossenen Spalten angegeben werden. Alle Spalten der speicheroptimierten Tabelle werden implizit in jeden speicheroptimierten Index eingeschlossen.|  
@@ -90,14 +90,14 @@ ms.locfileid: "68081831"
 ## <a name="nonclustered-hash-indexes"></a>Nicht gruppierte Hashindizes  
  In der folgenden Tabelle werden die möglichen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen und -Schlüsselwörter im Meldungstext eines Fehlers mit einem nicht gruppierten Hashindex sowie die Korrekturmaßnahmen zum Beheben des Fehlers aufgelistet.  
   
-|Typ|Name|Lösung|  
+|type|Name|Lösung|  
 |----------|----------|----------------|  
 |Option|ASC/DESC|Nicht gruppierte Hashindizes werden nicht sortiert. Entfernen Sie die Schlüsselwörter **ASC** und **DESC** aus der Indexschlüsselspezifikation.|  
   
 ## <a name="natively-compiled-stored-procedures-and-user-defined-functions"></a>Nativ kompilierte gespeicherte Prozeduren und benutzerdefinierte Funktionen  
  In der folgenden Tabelle werden die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen und -Schlüsselwörter aufgelistet, die im Meldungstext eines Fehlers mit nativ kompilierten gespeicherten Prozeduren und benutzerdefinierten Funktionen auftreten können. Sie enthält außerdem die Korrekturmaßnahmen zum Beheben des Fehlers.  
   
-|Typ|Funktion|Lösung|  
+|type|Funktion|Lösung|  
 |----------|-------------|----------------|  
 |Funktion|Inline-Tabellenvariablen|Tabellentypen können nicht inline mit Variablendeklarationen deklariert werden. Tabellentypen müssen explizit mit einer **CREATE TYPE** -Anweisung deklariert werden.|  
 |Funktion|Cursor|Cursor werden nicht von oder in systemintern kompilierten gespeicherten Prozeduren unterstützt.<br /><br /> Wenn Sie die Prozedur von einem Client aus ausführen, verwenden Sie RPC anstelle der Cursor-API. Vermeiden Sie bei ODBC die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung **EXECUTE**, und geben Sie stattdessen den Namen der Prozedur direkt an.<br /><br /> Wenn Sie die Prozedur aus einem [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batch oder einer anderen gespeicherten Prozedur ausführen, vermeiden Sie es, einen Cursor mit der systemintern kompilierten gespeicherten Prozedur zu verwenden.<br /><br /> Wenn Sie eine systemintern kompilierte gespeicherte Prozedur erstellen und keinen Cursor verwenden, verwenden Sie setbasierte Logik oder eine **WHILE** -Schleife.|  
@@ -109,9 +109,9 @@ ms.locfileid: "68081831"
 |Funktion|COMPUTE|Die **COMPUTE** -Klausel wird nicht unterstützt. Entfernen Sie sie aus der Abfrage.|  
 |Funktion|SELECT INTO|Die **INTO** -Klausel wird mit der **SELECT** -Anweisung nicht unterstützt. Schreiben Sie die Abfrage als **INSERT INTO** _Tabelle_ **SELECT** neu.|  
 |Funktion|Unvollständige Einfügespaltenliste|Generell müssen Werte in INSERT-Anweisungen für alle Spalten in der Tabelle angegeben werden.<br /><br /> Allerdings unterstützen wir DEFAULT-Einschränkungen und IDENTITY(1,1)-Spalten in speicheroptimierten Tabellen. Diese Spalten können in der INSERT-Spaltenliste ausgelassen werden. IDENTITY-Spalten müssen sogar ausgelassen werden.|  
-|Funktion|*Funktion*|Einige integrierte Funktionen werden in nativ kompilierten gespeicherten Prozeduren nicht unterstützt. Entfernen Sie die abgelehnte Funktion aus der gespeicherten Prozedur. Weitere Informationen zu unterstützten integrierten Funktionen finden Sie unter<br />[Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)oder<br />[Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Funktion|*Function*|Einige integrierte Funktionen werden in nativ kompilierten gespeicherten Prozeduren nicht unterstützt. Entfernen Sie die abgelehnte Funktion aus der gespeicherten Prozedur. Weitere Informationen zu unterstützten integrierten Funktionen finden Sie unter<br />[Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)oder<br />[Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Funktion|CASE|**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**CASE**-Ausdrücke werden in Abfragen innerhalb von nativ kompilierten gespeicherten Prozeduren nicht unterstützt. Erstellen Sie Abfragen für jeden einzelnen Fall. Weitere Informationen finden Sie unter [Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen CASE-Ausdrücke.|  
-|Funktion|INSERT EXECUTE|Entfernt den Verweis.|  
+|Funktion|INSERT EXECUTE|Entfernen Sie den Verweis.|  
 |Funktion|Führen Sie|Nur unterstützt, um nativ kompilierte gespeicherte Prozeduren und benutzerdefinierte Funktionen auszuführen|  
 |Funktion|Benutzerdefinierte Aggregate|Benutzerdefinierte Aggregatfunktionen können nicht in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie den Verweis auf die Funktion aus der Prozedur.|  
 |Funktion|Metadaten des Durchsuchenmodus|Systemintern kompilierte gespeicherte Prozeduren unterstützen keine Metadaten des Durchsuchenmodus. Stellen Sie sicher, dass die **NO_BROWSETABLE** -Sitzungsoption auf OFF festgelegt ist.|  
@@ -156,10 +156,10 @@ ms.locfileid: "68081831"
 |Jointipp|HASH, MERGE|Systemintern kompilierte Prozeduren unterstützen nur den Nested Loops-Joins. Hash- und Zusammenführungsjoins werden nicht unterstützt. Entfernen Sie den Jointipp.|  
 |Abfragetipp|*Abfragetipp*|Dieser Abfragetipp befindet sich nicht in systemintern kompilierten gespeicherten Prozeduren. Unterstützte Abfragetipps finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).|  
 |Option|PERCENT|Diese Option wird nicht für **TOP** -Klauseln unterstützt. Entfernen Sie **PERCENT** aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.|  
-|Option|WITH TIES|**Gilt für:**  [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Diese Option wird nicht für **TOP** -Klauseln unterstützt. Entfernen Sie **WITH TIES** aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen **TOP WITH TIES**.|  
+|Option|WITH TIES|**Gilt für:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Diese Option wird nicht für **TOP** -Klauseln unterstützt. Entfernen Sie **WITH TIES** aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen **TOP WITH TIES**.|  
 |Aggregate-Funktion|*Aggregatfunktion*|Nicht alle Aggregatfunktionen werden unterstützt. Weitere Informationen zu den unterstützten Aggregatfunktionen in nativ kompilierten T-SQL-Modulen finden Sie unter [Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
 |Rangfolgefunktion|*Rangfolgefunktion*|Rangfolgefunktionen werden nicht in systemintern kompilierten gespeicherten Prozeduren unterstützt. Entfernen Sie sie aus der Prozedurdefinition.|  
-|Funktion|*Funktion*|Diese Funktion wird nicht unterstützt. Weitere Informationen zu den unterstützten Funktionen in nativ kompilierten T-SQL-Modulen finden Sie unter [Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
+|Funktion|*Function*|Diese Funktion wird nicht unterstützt. Weitere Informationen zu den unterstützten Funktionen in nativ kompilierten T-SQL-Modulen finden Sie unter [Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
 |-Anweisung.|*Anweisung*|Diese Anweisung wird nicht unterstützt. Weitere Informationen zu den unterstützten Funktionen in nativ kompilierten T-SQL-Modulen finden Sie unter [Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
 |Funktion|MIN und MAX verwendet mit Binär- und Zeichenfolgen|Die Aggregatfunktionen **MIN** und **MAX** können nicht für Zeichenwerte oder binäre Zeichenfolgenwerte in systemintern kompilierten gespeicherten Prozeduren verwendet werden.|  
 |Funktion|GROUP BY ALL|ALL kann nicht mit GROUP BY-Klauseln in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie ALL aus der GROUP BY-Klausel.|  
@@ -179,7 +179,7 @@ ms.locfileid: "68081831"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transaktionen, die auf speicheroptimierte Tabellen zugreifen  
  In der folgenden Tabelle werden die möglichen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen und -Schlüsselwörter im Meldungstext eines Fehlers mit Transaktionen, die auf speicheroptimierte Tabellen zugreifen sowie die Korrekturmaßnahmen zum Beheben des Fehlers aufgelistet.  
   
-|Typ|Name|Lösung|  
+|type|Name|Lösung|  
 |----------|----------|----------------|  
 |Funktion|Sicherungspunkt|Das Erstellen von expliziten Sicherungspunkten in Transaktionen, die auf speicheroptimierte Tabellen zugreifen, wird nicht unterstützt.|  
 |Funktion|Gebundene Transaktion|Gebundene Sitzungen können nicht an Transaktionen teilnehmen, die auf speicheroptimierte Tabellen zugreifen. Binden Sie die Sitzung nicht, bevor Sie die Prozedur ausführen.|  

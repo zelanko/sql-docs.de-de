@@ -1,6 +1,7 @@
 ---
-title: Auswerten einer Richtlinie der richtlinienbasierten Verwaltung von einem Objekt aus | Microsoft-Dokumentation
-ms.custom: ''
+title: Auswerten einer Richtlinie der richtlinienbasierten Verwaltung von einem Objekt aus
+description: Erfahren Sie, wie Sie eine Richtlinie aus einer SQL Server-Instanz, -Datenbank oder einem -Datenbankobjekt mithilfe von SQL Server Management Studio (SSMS) auswerten.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9e9d646-4894-4dee-a02a-0c71a8dc020e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e50d06fcd76950ff885a22af67534b5006b6a1e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6d57bbeca2d5393504192683bcf1738374fbc4c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137866"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558295"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-an-object"></a>Auswerten einer Richtlinie der richtlinienbasierten Verwaltung von einem Objekt aus
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

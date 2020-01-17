@@ -1,6 +1,7 @@
 ---
-title: Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen | Microsoft-Dokumentation
-ms.custom: ''
+title: Anzeigen und Lösen von Datenkonflikten (Merge)
+description: Erfahren Sie, wie Sie Datenkonflikte für Mergeveröffentlichungen für SQL Server anzeigen und lösen.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db445d9c80c6a6e2552160dcff721c06d5c107e6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907790"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321887"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Konfliktlösung für die Mergereplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "72907790"
   
 ## <a name="resolve-conflicts"></a>Auflösen von Konflikten  
   
-1.  Stellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger (oder gegebenenfalls Abonnenten) her, und erweitern Sie dann den Serverknoten.  
+1.  Stellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger (oder gegebenenfalls Abonnenten) her, und erweitern Sie dann den Serverknoten.  
   
 2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .  
   
@@ -87,7 +88,7 @@ Wenn Konflikte während einer Mergereplikations aufgelöst werden, werden die Da
   
      In der folgenden Tabelle werden die Werte dieser Spalten basierend auf dem für `@conflict_logging` festgelegten Wert beschrieben.  
   
-    |@conflict_logging-Wert|centralized_conflicts|decentralized_conflicts|  
+    |Wert vom Typ @conflict_logging|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
     |**publisher**|1|0|  
     |**subscriber**|0|1|  

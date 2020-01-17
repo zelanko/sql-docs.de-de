@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 50c5edee93747c98060d664f1edd2d42036aa9b2
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: bed396bf39b4b621c5b333a7b13218998264675a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982655"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165899"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -37,7 +37,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 > |||||
 > |---|---|---|---|
-> |**\* _SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+> |**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 
 &nbsp;
 
@@ -45,7 +45,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 Erstellt eine Arbeitsauslastungsgruppe unter Ressourcenkontrolle und verknüpft die Arbeitsauslastungsgruppe mit einem Ressourcenpool der Ressourcenkontrolle. Resource Governor ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -124,14 +124,14 @@ MAX_DOP = *value*
 Gibt den **maximalen Grad an Parallelität (MAXDOP)** für die parallele Ausführung von Abfragen an. *value* muss 0 (null) oder ein positiver Integer sein. Der zulässige Bereich für *value* liegt zwischen 0 und 64. Die *value*-Standardeinstellung 0 verwendet die globale Einstellung. MAX_DOP wird wie folgt behandelt:
 
 > [!NOTE]
-> MAX_DOP für die Arbeitsauslastungsgruppe überschreibt die [Serverkonfiguration des maximalen Grads an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) und **MAXDOP** für die auf die [Datenbank beschränkte Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+> MAX_DOP für die Arbeitsauslastungsgruppe überschreibt die [Serverkonfiguration des maximalen Grads an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) und den **MAXDOP**-Wert der auf die [Datenbank beschränkten Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 > [!TIP]
 > Verwenden Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**, um dies auf Abfrageebene zu erreichen. Die Festlegung des maximalen Grads an Parallelität als Abfragehinweis gilt, solange der MAX_DOP-Wert der Arbeitsauslastungsgruppe nicht überschritten wird. Wenn der MAXDOP-Wert des Abfragehinweises den von Resource Governor konfigurierten Wert überschreitet, verwendet [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den `MAX_DOP`-Wert von Resource Governor. Der [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) für MAXDOP überschreibt stets die [Serverkonfiguration des maximalen Grads an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).      
 >   
-> Um dies auf Datenbankebene zu erreichen, verwenden Sie den **MAXDOP**-Wert der auf die [Datenbank beschränkten Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).      
+> Verwenden Sie den **MAXDOP**-Wert der auf die [Datenbank beschränkten Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), um dies auf Datenbankebene zu erreichen.      
 >   
-> Verwenden Sie die [Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **Max. Grad an Parallelität (MAXDOP)** , um dies auf Serverebene zu erreichen.     
+> Verwenden Sie den **MAXDOP**-Wert (maximaler Parallelitätsgrad) der [Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), um dies auf Serverebene zu erreichen.     
 
 GROUP_MAX_REQUESTS = *value*     
 Gibt die maximale Anzahl gleichzeitiger Anforderungen an, die in der Arbeitsauslastungsgruppe ausgeführt werden können. *value* muss 0 (null) oder ein positiver Integer sein. Der Standardwert von *value* ist 0 (null) und lässt eine unbegrenzte Anzahl von Anforderungen zu. Wenn die maximale Anzahl gleichzeitiger Anforderungen erreicht wird, kann sich ein Benutzer dieser Gruppe zwar anmelden, wird jedoch in den Wartezustand versetzt, bis die Anzahl gleichzeitiger Anforderungen unter den angegebenen Wert gefallen ist.
@@ -145,14 +145,14 @@ Ordnet die Arbeitsauslastungsgruppe dem benutzerdefinierten Ressourcenpool zu, d
 > Für vordefinierte Arbeitsauslastungsgruppen und Ressourcenpools werden ausschließlich kleingeschriebene Namen verwendet, z. B. "default". Dies sollte bei Servern beachtet werden, die bei der Sortierung zwischen Groß-/Kleinschreibung unterscheiden. Server, die bei der Sortierung keine Groß- und Kleinschreibung unterscheiden, z. B. SQL_Latin1_General_CP1_CI_AS, behandeln "default" und "Default" gleich.
 
 EXTERNAL external_pool_name | "default"     
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher).
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher).
 
 Die Arbeitsauslastungsgruppe kann einen externen Ressourcenpool angeben. Sie können eine Arbeitsauslastungsgruppe definieren und zwei Pools zuordnen:
 
 - Ein Ressourcenpool für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Arbeitsauslastungen und Abfragen
 - Ein externer Ressourcenpool für externe Prozesse. Weitere Informationen finden Sie unter [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Wenn `REQUEST_MEMORY_GRANT_PERCENT` verwendet wird, kann die Indexerstellung verwendet werden, um mehr Arbeitsbereichsspeicher als ursprünglich zugewiesen zu verwenden, damit eine bessere Leistung erzielt wird. Diese besondere Behandlung wird von der Ressourcenkontrolle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt. Die Zuweisung anfänglichen und zusätzlichen Arbeitsspeichers wird jedoch durch den Ressourcenpool und die Einstellungen der Arbeitsauslastungsgruppe begrenzt.
 
 Der Grenzwert `MAX_DOP` wird [taskbezogen](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) festgelegt. Es handelt sich nicht um einen [anforderungs](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)- oder abfragebezogenen Grenzwert. Das bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Abfrage mehrere Tasks erzeugen kann, die einem [Planer](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md).
@@ -194,11 +194,11 @@ GO
 
 &nbsp;
 
-## <a name="sql-data-warehouse"></a>SQL Data Warehouse 
+## <a name="sql-data-warehouse-preview"></a>SQL Data Warehouse (Vorschau)
 
-CREATE WORKLOAD GROUP (Transact-SQL) (Vorschauversion) erstellt eine Arbeitsauslastungsgruppe.  Arbeitsauslastungsgruppen sind Container für eine Reihe von Anforderungen und die Grundlage für die Konfiguration der Workloadverwaltung auf einem System.  Mit Arbeitsauslastungsgruppen können Sie Ressourcen für die Workloadisolation reservieren und Ressourcen beibehalten, pro Anforderung definieren oder Ausführungsregeln durchsetzen.  Sobald die Anweisung abgeschlossen ist, sind die Einstellungen wirksam.
+Erstellt eine Arbeitsauslastungsgruppe  Arbeitsauslastungsgruppen sind Container für eine Reihe von Anforderungen und die Grundlage für die Konfiguration der Workloadverwaltung auf einem System.  Mit Arbeitsauslastungsgruppen können Sie Ressourcen für die Workloadisolation reservieren und Ressourcen beibehalten, pro Anforderung definieren oder Ausführungsregeln durchsetzen.  Sobald die Anweisung abgeschlossen ist, sind die Einstellungen wirksam.
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
 ```
 CREATE WORKLOAD GROUP group_name  
@@ -216,13 +216,13 @@ CREATE WORKLOAD GROUP group_name
 Gibt den Namen an, mit dem die Arbeitsauslastungsgruppe identifiziert werden kann.  Der Name group_name ist vom Datentyp sysname.  Dieses Argument kann bis zu 128 Zeichen lang sein und muss innerhalb der Instanz einen eindeutigen Namen haben.
 
 *MIN_PERCENTAGE_RESOURCE* = value</br>
-Diese Zeile gibt eine garantierte minimale Ressourcenzuordnung für diese Arbeitsauslastungsgruppe an, die nicht mit anderen Arbeitsauslastungsgruppen geteilt wird.  Dabei entspricht „value“ einem Integer zwischen 0 und 100.  Die Summe von min_percentage_resource darf für alle Auslastungsgruppen nicht 100 überschreiten.  Der Wert für min_percentage_resource darf den von cap_percentage_resource nicht übersteigen.  Es gibt effektive Mindestwerte, die pro Dienstebene zulässig sind.  Weitere Informationen finden Sie unter „Effektive Werte“<link>.
+Diese Zeile gibt eine garantierte minimale Ressourcenzuordnung für diese Arbeitsauslastungsgruppe an, die nicht mit anderen Arbeitsauslastungsgruppen geteilt wird.  Dabei entspricht „value“ einem Integer zwischen 0 und 100.  Die Summe von min_percentage_resource darf für alle Auslastungsgruppen nicht 100 überschreiten.  Der Wert für min_percentage_resource darf den von cap_percentage_resource nicht übersteigen.  Es gibt effektive Mindestwerte, die pro Dienstebene zulässig sind.  Weitere Informationen finden Sie unter [Effektive Werte](#effective-values).
 
 *CAP_PERCENTAGE_RESOURCE* = value</br>
-Diese Zeile gibt die maximale Ressourcenverwendung für alle Anforderungen in einer Arbeitsauslastungsgruppe an.  Der zulässige Bereich für value liegt zwischen 1 und 100.  Der Wert für cap_percentage_resource muss den von min_percentage_resource übersteigen.  Der effektive Wert für cap_percentage_resource kann reduziert werden, wenn min_percentage_resource in anderen Arbeitsauslastungsgruppen auf 0 oder höher festgelegt wird.
+Diese Zeile gibt die maximale Ressourcenverwendung für alle Anforderungen in einer Arbeitsauslastungsgruppe an.  Der zulässige Integerbereich für value liegt zwischen 1 und 100.  Der Wert für cap_percentage_resource muss den von min_percentage_resource übersteigen.  Der effektive Wert für cap_percentage_resource kann reduziert werden, wenn min_percentage_resource in anderen Arbeitsauslastungsgruppen auf 0 oder höher festgelegt wird.
 
 *REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
-Diese Zeile legt die Mindestmenge der Ressourcen fest, die pro Anforderung zugeordnet werden.  Hierbei ist value ein erforderlicher Parameter mit einem Gleitkommawert zwischen 0.75 und 100.00.  Der Wert für request_min_resource_grant_percent muss ein Vielfaches von 0,25, ein Faktor von min_percentage_resource und weniger als cap_percentage_resource sein.  Es gibt effektive Mindestwerte, die pro Dienstebene zulässig sind.  Weitere Informationen finden Sie unter „Effektive Werte“<link>.
+Diese Zeile legt die Mindestmenge der Ressourcen fest, die pro Anforderung zugeordnet werden.  Hierbei ist value ein erforderlicher Parameter mit einem Gleitkommawert zwischen 0.75 und 100.00.  Der Wert für request_min_resource_grant_percent muss ein Vielfaches von 0,25, ein Faktor von min_percentage_resource und weniger als cap_percentage_resource sein.  Es gibt effektive Mindestwerte, die pro Dienstebene zulässig sind.  Weitere Informationen finden Sie unter [Effektive Werte](#effective-values).
 
 Beispiel:
 
@@ -244,7 +244,7 @@ Sehen Sie sich die Werte an, die für die Ressourcenklassen als Richtlinie für 
 |||
 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>
-Diese Zeile legt die Maximalmenge der Ressourcen fest, die pro Anforderung zugeordnet werden.  Dabei ist value ein optionaler Parameter mit einem Standardwert, der request_min_resource_grant_percent entspricht.  Der Wert von value muss größer oder gleich request_min_resource_grant_percent sein.  Wenn der Wert von request_max_resource_grant_percent größer als request_min_resource_grant_percent ist und Systemressourcen verfügbar sind, werden einer Anforderung zusätzliche Ressourcen zugeordnet.
+Diese Zeile legt die Maximalmenge der Ressourcen fest, die pro Anforderung zugeordnet werden.  Dabei ist value ein optionaler Dezimalparameter mit einem Standardwert, der request_min_resource_grant_percent entspricht.  Der Wert von value muss größer oder gleich request_min_resource_grant_percent sein.  Wenn der Wert von request_max_resource_grant_percent größer als request_min_resource_grant_percent ist und Systemressourcen verfügbar sind, werden einer Anforderung zusätzliche Ressourcen zugeordnet.
 
 *IMPORTANCE* = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
 Diese Zeile gibt die Standardwichtigkeit einer Anforderung für die Arbeitsauslastungsgruppe an.  Für die Wichtigkeit sind folgende Einstellungen möglich, wobei NORMAL die Standardeinstellung ist:
@@ -257,48 +257,54 @@ Diese Zeile gibt die Standardwichtigkeit einer Anforderung für die Arbeitsausla
 Die Wichtigkeit, die für eine Arbeitsauslastungsgruppe festgelegt wird, entspricht der Standardwichtigkeit für alle Anforderungen in der Arbeitsauslastungsgruppe.  Benutzer können die Wichtigkeit auch auf Klassifizierungsebene festlegen und somit die festgelegte Wichtigkeit der Arbeitsauslastungsgruppe überschreiben.  Dadurch wird eine Differenzierung der Wichtigkeit für Anforderungen innerhalb einer Arbeitsauslastungsgruppe ermöglicht, um schneller auf nicht reservierte Ressourcen zugreifen zu können.  Wenn die Summe von min_percentage_resource in den Arbeitsauslastungsgruppen weniger als 100 ist, sind nicht reservierte Ressourcen vorhanden, die nach Wichtigkeit zugewiesen werden.
 
 *QUERY_EXECUTION_TIMEOUT_SEC* = value</br>
-Diese Zeile gibt die maximale Zeit in Sekunden an, für deren Dauer eine Abfrage ausgeführt werden kann, bevor sie abgebrochen wird.  Hierbei muss value 0 (null) oder ein positiver Integer sein.  Die Standardeinstellung für value ist 0 (null), also unbegrenzt.  Die Wartezeit in der Anforderungswarteschlange wird nicht für die Ausführung der Abfrage gezählt.
+Diese Zeile gibt die maximale Zeit in Sekunden an, für deren Dauer eine Abfrage ausgeführt werden kann, bevor sie abgebrochen wird.  Hierbei muss value 0 (null) oder ein positiver Integer sein.  Die Standardeinstellung für value ist 0 (null). Das bedeutet, dass für die Abfrage kein Timeout eintritt.  QUERY_EXECUTION_TIMEOUT_SEC zählt, sobald die Abfrage als ausgeführt erkannt wird, nicht jedoch, wenn die Abfrage in die Warteschlange eingereiht wird.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Die entsprechenden Arbeitsauslastungsgruppen für Ressourcenklassen werden aufgrund der Abwärtskompatibilität automatisch generiert.  Diese vom System definierten Arbeitsauslastungsgruppen können nicht gelöscht werden.  Es können acht zusätzliche benutzerdefinierte Arbeitsauslastungsgruppen erstellt werden.
+
+Wenn eine Arbeitsauslastungsgruppe mit min_percentage_resource größer als 0 (null) erstellt wird, wird die `CREATE WORKLOAD GROUP`-Anweisung in die Warteschlange eingereiht, bis genügend Ressourcen zum Erstellen der Arbeitsauslastungsgruppe vorhanden sind.
 
 ## <a name="effective-values"></a>Effektive Werte
 
 Die Parameter min_percentage_resource, cap_percentage_resource, request_min_resource_grant_percent und request_max_resource_grant_percent besitzen effektive Werte, die im Kontext der aktuellen Dienstebene und der Konfiguration anderer Arbeitsauslastungsgruppen angepasst werden.
 
-Die unterstützte Parallelität pro Dienstebene bleibt so, als würden Ressourcenklassen verwendet werden, um Ressourcenzuweisungen pro Abfrage zu definieren. Die unterstützten Werte für request_min_resource_grant_percent hängen also von der Dienstebene ab, auf die die Instanz festgelegt ist.  Auf der niedrigsten Dienstebene, DW100c, wird der Parallelitätsgrad 4 unterstützt.  Der effektive Wert von request_min_resource_grant_percent für eine konfigurierte Arbeitsauslastungsgruppe kann bei 25 % oder höher liegen.  Ausführlichere Informationen finden Sie in der folgenden Tabelle.
+Die unterstützte Parallelität pro Dienstebene bleibt so, als würden Ressourcenklassen verwendet werden, um Ressourcenzuweisungen pro Abfrage zu definieren. Die unterstützten Werte für request_min_resource_grant_percent hängen also von der Dienstebene ab, auf die die Instanz festgelegt ist.  Auf dem niedrigsten Servicelevel (DW100c) sind mindestens 25 % der Ressourcen pro Anforderung erforderlich.  Bei DW100c kann der effektive Wert von request_min_resource_grant_percent für eine konfigurierte Arbeitsauslastungsgruppe bei 25 % oder höher liegen.  In der folgenden Tabelle finden Sie weitere Informationen dazu, wie effektive Werte abgeleitet werden.
 
-|Dienstebene|Maximale Anzahl gleichzeitiger Abfragen|Mindestens unterstützter Prozentsatz für REQUEST_MIN_RESOURCE_GRANT_PERCENT und MIN_PERCENTAGE_RESOURCE|
+|Dienstebene|Niedrigster effektiver Wert für REQUEST_MIN_RESOURCE_GRANT_PERCENT|Maximale Anzahl gleichzeitiger Abfragen|
 |---|---|---|
-|DW100c|4|25 %|
-|DW200c|8|12,5 %|
-|DW300c|12|8 %|
-|DW400c|16|6,25 %|
-|DW500c|20|5%|
-|DW1000c|32|3 %|
-|DW1500c|32|3 %|
-|DW2000c|48|2 %|
-|DW2500c|48|2 %|
-|DW3000c|64|1,5 %|
-|DW5000c|64|1,5 %|
-|DW6000c|128|0,75 %|
-|DW7500c|128|0,75 %|
-|DW10000c|128|0,75 %|
-|DW15000c|128|0,75 %|
-|DW30000c|128|0,75 %|
+|DW100c|25 %|4|
+|DW200c|12,5 %|8|
+|DW300c|8 %|12|
+|DW400c|6,25 %|16|
+|DW500c|5 %|20|
+|DW1000c|3 %|32|
+|DW1500c|3 %|32|
+|DW2000c|2 %|48|
+|DW2500c|2 %|48|
+|DW3000c|1,5 %|64|
+|DW5000c|1,5 %|64|
+|DW6000c|0,75 %|128|
+|DW7500c|0,75 %|128|
+|DW10000c|0,75 %|128|
+|DW15000c|0,75 %|128|
+|DW30000c|0,75 %|128|
 ||||
 
 Ebenso müssen request_min_resource_grant_percent und min_percentage_resource größer oder gleich dem effektiven Wert von request_min_resource_grant_percent sein.  Bei einer Arbeitsauslastungsgruppe, deren Wert für min_percentage_resource geringer als der effektive Wert von min_percentage_resource ist, wird der Wert zur Laufzeit auf 0 angepasst.  In diesem Fall sind die für min_percentage_resource konfigurierten Ressourcen für alle Arbeitsauslastungsgruppen freigegeben.  Beispielsweise hätte die Arbeitsauslastungsgruppe wgAdHoc mit einem min_percentage_resource-Wert von 10 % unter DW1000c einen effektiven min_percentage_resource-Wert von 10 % (3,25 % ist der Mindestwert bei DW1000c).  Unter DW100c hätte wgAdhoc einen effektiven min_percentage_resource-Wert von 0 %.  Die für wgAdhoc konfigurierten 10 % würden für alle Arbeitsauslastungsgruppen freigegeben werden.
 
 Auch cap_percentage_resource besitzt einen effektiven Wert.  Wenn die Arbeitsauslastungsgruppe wgAdhoc mit einem cap_percentage_resource-Wert von 100 % konfiguriert ist und eine weitere Arbeitsauslastungsgruppe, wgDashboard, mit einem min_percentage_resource-Wert von 25 % generiert wird, ist der effektive Wert von cap_percentage_resource für wgAdhoc 75 %.
 
-Sie können die Laufzeitwerte für Ihre Arbeitsauslastungsgruppen am einfachsten abrufen, indem Sie die Systemansicht abfragen [sys.dm_workload_management_workload_groups_stats] (../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md?view=azure-sqldw-latest).
+Die Laufzeitwerte für Ihre Arbeitsauslastungsgruppe lassen sich am einfachsten erklären, indem Sie die Systemsicht [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) abfragen.
+
 
 ## <a name="permissions"></a>Berechtigungen
 
 Erfordert die CONTROL DATABASE-Berechtigung
 
-## <a name="see-also"></a>Siehe auch
-[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
+## <a name="see-also"></a>Weitere Informationen
+[DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md) <br>
+[sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) <br>
+[sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) <br>
+Schnellstart zum Erstellen und Verwenden einer [Arbeitsauslastungsgruppe](https://docs.microsoft.com/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
 
 ::: moniker-end

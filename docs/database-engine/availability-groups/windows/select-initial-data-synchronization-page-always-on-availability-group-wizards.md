@@ -1,6 +1,7 @@
 ---
-title: Seite „Anfängliche Datensynchronisierung auswählen“ und Always On-Verfügbarkeitsgruppen-Assistent | Microsoft-Dokumentation
-ms.custom: ''
+title: Seite „Anfängliche Datensynchronisierung auswählen“ (Verfügbarkeitsgruppen-Assistent)
+description: Hier finden Sie eine Beschreibung der Seite „Anfängliche Datensynchronisierung auswählen“ des Assistenten für Always On-Verfügbarkeitsgruppen in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014178"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235340"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Seite „Anfängliche Datensynchronisierung auswählen“ (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,6 +127,6 @@ ms.locfileid: "68014178"
 -   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

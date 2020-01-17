@@ -1,6 +1,7 @@
 ---
-title: Festlegen des Kompatibilitätsgrads von Mergeveröffentlichungen | Microsoft-Dokumentation
-ms.custom: ''
+title: Festlegen des Kompatibilitätsgrads von Mergeveröffentlichungen
+description: In diesem Artikel erfahren Sie, wie Sie den Kompatibilitätsgrad für Mergeveröffentlichungen mithilfe von SQL Server Management Studio (SSMS) oder Transact-SQL (T-SQL) festlegen.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3506974f6eb1bc22aa6a20833b9205c3507c113c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ac82c951c3e65c1d26891f802d19b8522f22a6e9
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904903"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321215"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Festlegen des Kompatibilitätsgrads von Mergeveröffentlichungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,6 +131,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

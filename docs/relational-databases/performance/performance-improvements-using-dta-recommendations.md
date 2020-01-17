@@ -1,6 +1,6 @@
 ---
-title: Leistungsverbesserungen mit DTA-Empfehlungen | Microsoft-Dokumentation
-ms.custom: ''
+title: Empfohlene DTA-Leistungsverbesserungen
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 700deff13eba1ce6320a49f997c20a9b40769eee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48614ea63ab56974e3eafb55b0f43dd83436ec85
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915204"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164920"
 ---
-# <a name="performance-improvements-using-dta-recommendations"></a>Leistungsverbesserungen mit DTA-Empfehlungen
+# <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>Leistungsverbesserungen mithilfe von Empfehlungen des Datenbankoptimierungsratgebers (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 

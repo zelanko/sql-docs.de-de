@@ -1,24 +1,30 @@
 ---
-title: Virtualisieren externer Daten in SQL Server 2019 | Microsoft-Dokumentation
+title: Virtualisieren externer Daten
 description: Auf dieser Seite wird die Verwendung des Assistenten zum Erstellen externer Tabellen für relationale Datenquellen detailliert beschrieben.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 719584bda1a289694c6e5ff7483e320073323be4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710592"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75227514"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Verwenden des Assistenten für externe Tabellen mit relationalen Datenquellen
 
 Eine der wichtigsten Funktionen in SQL Server 2019 ist die Datenvirtualisierung. Dabei können die Daten ihren ursprünglichen Speicherort beibehalten. Diese Daten können Sie in einer SQL Server-Instanz *virtualisieren*, sodass sie wie in jeder anderen Tabelle in SQL Server abgefragt werden können. Dadurch werden weniger ETL-Vorgänge benötigt. Dieser Prozess wird durch die Verwendung von PolyBase-Connectors ermöglicht. Weitere Informationen finden Sie unter [Erste Schritte mit PolyBase](polybase-guide.md).
+
+Dieses Video bietet eine Einführung in die Datenvirtualisierung:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-Data-Virtualization/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="start-the-external-table-wizard"></a>Starten des Assistenten für externe Tabellen
 

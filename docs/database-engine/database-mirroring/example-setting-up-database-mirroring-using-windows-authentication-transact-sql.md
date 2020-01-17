@@ -1,6 +1,7 @@
 ---
-title: 'Beispiel: Einrichten einer Datenbankspiegelung mit Windows-Authentifizierung (T-SQL) | Microsoft-Dokumentation'
-ms.custom: ''
+title: Konfigurieren der Datenbankspiegelung mithilfe der Windows-Authentifizierung (T-SQL)
+description: In diesem Beispiel werden sämtliche Schritte erläutert, die für die Erstellung einer Datenbankspiegelungssitzung mit einem Zeugen mithilfe der Windows-Authentifizierung mit Transact-SQL (T-SQL) erforderlich sind.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b30804974d472f06dc2ab5971d4d3f7674c61e16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a263cd161370a4d3f87c673209e82296ec2a28c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997891"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822264"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)
+# <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>Beispiel: Konfigurieren der Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Beispiel werden sämtliche Schritte erläutert, die für die Erstellung einer Datenbank-Spiegelungssitzung mit einem Zeugen mithilfe der Windows-Authentifizierung erforderlich sind. In den Beispielen in diesem Thema wird [!INCLUDE[tsql](../../includes/tsql-md.md)]verwendet. Beachten Sie Folgendes: Anstelle der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritte können Sie für die Einrichtung von Datenbankspiegelungen den Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung verwenden. Weitere Informationen finden Sie unter [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   

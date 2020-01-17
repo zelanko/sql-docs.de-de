@@ -1,7 +1,7 @@
 ---
 title: Ändern des Verfügbarkeitsmodus eines Replikats innerhalb einer Verfügbarkeitsgruppe
 description: In diesem Artikel finden Sie eine Anleitung dafür, wie Sie den Verfügbarkeitsmodus eines Verfügbarkeitsreplikats in einer Always On-Verfügbarkeitsgruppe mit Transact-SQL (T-SQL), PowerShell oder SQL Server Management Studio ändern.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c17beebfd689e5e768450d92353b87f8fcfa1ae2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1a3b5d1dfdf3a5e8556058cee750a4e2e08476a
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988589"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822441"
 ---
-# <a name="change-the-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Ändern des Verfügbarkeitsmodus eines Replikats innerhalb einer Always On-Verfügbarkeitsgruppe
+# <a name="change-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Ändern des Verfügbarkeitsmodus eines Replikats innerhalb einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie der Verfügbarkeitsmodus eines Verfügbarkeitsreplikats in einer Always On-Verfügbarkeitsgruppe in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell geändert wird. Der Verfügbarkeitsmodus ist eine Replikateigenschaft, die steuert, ob das Replikat einen asynchronen oder synchronen Commit ausführt. Der*asynchrone Commitmodus* maximiert die Leistung auf Kosten der Hochverfügbarkeit und unterstützt nur erzwungene manuelle Failovervorgänge (mit möglichem Datenverlust), in der Regel *erzwungenes Failover*genannt. Der*synchrone Commitmodus* bevorzugt Hochverfügbarkeit gegenüber Leistung und unterstützt, sobald das sekundäre Replikat synchronisiert ist, manuelle Failovervorgänge und optional automatische Failovervorgänge.  
     
-##  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Voraussetzungen  
   
 Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat hostet.  
   

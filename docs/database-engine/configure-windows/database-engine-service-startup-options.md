@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4518428d6dd583e5d9fe2a4da06f052b8b75da70
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763231"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252873"
 ---
 # <a name="database-engine-service-startup-options"></a>Startoptionen für den Datenbank-Engine-Dienst
 
@@ -51,7 +51,7 @@ Startoptionen legen bestimmte während des Starts benötigte Speicherorte fest u
 ## <a name="list-of-startup-options"></a>Liste von Startoptionen  
 ### <a name="default-startup-options"></a>Standardstartoptionen  
 
-|enthalten|und Beschreibung|  
+|Tastatur|BESCHREIBUNG|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|Der vollqualifizierte Pfad der master-Datenbankdatei (in der Regel C:\Programme\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). Wenn diese Option nicht bereitgestellt wird, werden die vorhandenen Registrierungsparameter verwendet.|  
 |**-e**  *error_log_path*|Der vollqualifizierte Pfad der Fehlerprotokolldatei (in der Regel C:\Programme\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG). Wenn diese Option nicht bereitgestellt wird, werden die vorhandenen Registrierungsparameter verwendet.|  
@@ -59,11 +59,11 @@ Startoptionen legen bestimmte während des Starts benötigte Speicherorte fest u
   
 ### <a name="other-startup-options"></a>Sonstige Startoptionen   
 
-|enthalten |und Beschreibung|   
+|Tastatur |BESCHREIBUNG|   
 |---------------------------|-----------------|  
 |**-c**|Verkürzt die Startzeit, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an der Eingabeaufforderung gestartet wird. In der Regel wird [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] als Dienst gestartet, indem der Dienstkontroll-Manager aufgerufen wird. Da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nicht als Dienst gestartet wird, wenn die Anwendung an der Eingabeaufforderung gestartet wird, sollten Sie diesen Schritt mithilfe von **-c** überspringen.|  
 |**-f**|Startet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz mit Minimalkonfiguration. Dies ist hilfreich, wenn der Server aufgrund der Einstellung eines Konfigurationswerts (z. B. aufgrund von Arbeitsspeichermangel) nicht gestartet werden kann. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im minimalen Konfigurationsmodus gestartet wird, befindet sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus. Weitere Informationen finden Sie in der weiter unten folgenden Beschreibung für **-m** .|  
-|**-kDecimalNumber**| Dieser Startparameter begrenzt die Anzahl der E/A-Anforderungen für Prüfpunkte pro Sekunde, während **DecimalNumber** die Prüfpunktgeschwindigkeit in MB pro Sekunde angibt.  Beachten Sie, dass eine Änderung dieses Wertes sich darauf auswirken kann, wie schnell Sicherungen erstellt werden oder der Wiederherstellungsprozess ausgeführt wird. Hier sollte also vorsichtig gehandelt werden. Weitere Informationen zu diesem Startparameter finden Sie in dem Hotfix, in dem der Parameter [-k](https://support.microsoft.com/en-us/help/929240/fix-i-o-requests-that-are-generated-by-the-checkpoint-process-may-caus) vorgestellt wurde.| 
+|**-kDecimalNumber**| Dieser Startparameter begrenzt die Anzahl der E/A-Anforderungen für Prüfpunkte pro Sekunde, während **DecimalNumber** die Prüfpunktgeschwindigkeit in MB pro Sekunde angibt.  Beachten Sie, dass eine Änderung dieses Wertes sich darauf auswirken kann, wie schnell Sicherungen erstellt werden oder der Wiederherstellungsprozess ausgeführt wird. Hier sollte also vorsichtig gehandelt werden. Weitere Informationen zu diesem Startparameter finden Sie in dem Hotfix, in dem der Parameter [-k](https://support.microsoft.com/help/929240/fix-i-o-requests-that-are-generated-by-the-checkpoint-process-may-caus) vorgestellt wurde.| 
 |**-m**|Startet eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus. Wenn Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus starten, kann nur ein einziger Benutzer eine Verbindung herstellen, und der CHECKPOINT-Prozess wird nicht gestartet. Durch CHECKPOINT wird sichergestellt, dass die abgeschlossenen Transaktionen regelmäßig vom Datenträgercache auf das Datenbankmedium geschrieben werden. (In der Regel verwenden Sie diese Option bei Problemen mit Systemdatenbanken, die repariert werden sollten.) Diese Option aktiviert die Option „sp_configure allow updates“ (Updates zulassen). Standardmäßig ist allow updates deaktiviert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus zu starten, ermöglicht einem beliebigen Mitglied der lokalen Administratorengruppe des Computers, eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Mitglied der festen Serverrolle "sysadmin" herzustellen. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren gesperrt sind](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md). Weitere Informationen zum Einzelbenutzermodus finden Sie unter [Starten von SQL Server im Einzelbenutzermodus](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).|  
 |**-mName der Clientanwendung**|Beschränkt die Verbindungen auf eine angegebene Clientanwendung. `-mSQLCMD`  beschränkt Verbindungen z. B. auf eine einzelne Verbindung, und diese Verbindung muss sich als SQLCMD-Clientprogramm identifizieren. Verwenden Sie diese Option, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus starten und eine unbekannte Clientanwendung die einzige verfügbare Verbindung belegt. Verwenden Sie `"Microsoft SQL Server Management Studio - Query"` , um eine Verbindung mit dem SSMS Abfrage-Editor herzustellen. Die Option „SSMS Abfrage-Editor“ kann nicht über [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Konfigurations-Manager konfiguriert werden, weil sie den Bindestrich enthält, der vom Tool abgelehnt wird.<br /><br /> Beim Clientanwendungsnamen wird zwischen Groß- und Kleinschreibung unterschieden. Doppelte Anführungszeichen sind erforderlich, wenn der Anwendungsname Leerzeichen oder Sonderzeichen enthält.<br /><br />**Beispiele für ein Starten von der Befehlszeile aus:**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -mSQLCMD` <br /><br /> **Sicherheitshinweis:** Verwenden Sie diese Option nicht als Sicherheitsfunktion. Die Clientanwendung gibt den Clientanwendungsnamen an und kann als Teil der Verbindungszeichenfolge einen falschen Namen angeben.|  
 |**-n**|Zeichnet keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse mithilfe des Windows-Anwendungsprotokolls auf. Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz mit der Option **-n**starten, sollten Sie auch die Startoption **-e** verwenden. Andernfalls werden keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse protokolliert.|  
@@ -92,6 +92,6 @@ Optionen, die aus früheren Releases entfernt wurden, finden Sie unter [sqlservr
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
- [sqlservr (Anwendung)](../../tools/sqlservr-application.md)  
+ [sqlservr](../../tools/sqlservr-application.md)  
   
   

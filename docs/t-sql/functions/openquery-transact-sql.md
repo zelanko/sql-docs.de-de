@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1276b80c4a668173f5a0b7055e789ab3f521dd9e
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 5c2f1a1b1060ff2ce659ed87db9fabb5c6c5346a
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313736"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542271"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Führt die angegebene Pass-Through-Abfrage auf dem angegebenen Verbindungsserver aus. Bei diesem Server handelt es sich um eine OLE DB-Datenquelle. Auf OPENQUERY kann in der FROM-Klausel einer Abfrage so verwiesen werden, als ob es ein Tabellenname wäre. Auf OPENQUERY kann auch als Zieltabelle einer INSERT-, UPDATE- oder DELETE-Anweisung verwiesen werden. Dies hängt von den Funktionen des OLE DB-Anbieters ab. Obwohl die Abfrage möglicherweise mehrere Resultsets zurückgibt, gibt OPENQUERY nur das erste zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,7 +49,7 @@ OPENQUERY ( linked_server ,'query' )
  **'** *query* **'**  
  Ist die Zeichenfolge der Abfrage, die auf dem Verbindungsserver ausgeführt wird. Die maximale Länge der Zeichenfolge beträgt 8 KB.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Für die Argumente von OPENQUERY können keine Variablen verwendet werden.  
   
  Mit OPENQUERY können keine erweiterten gespeicherten Prozeduren für einen Verbindungsserver ausgeführt werden. Eine erweiterte gespeicherte Prozedur kann jedoch auf einem Verbindungsserver ausgeführt werden, wenn der vierteilige Name verwendet wird. Beispiel:  
@@ -88,7 +88,7 @@ VALUES ('NewTitle');
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
-### <a name="d-executing-a-select-pass-through-query"></a>D. Ausführen einer SELECT-Pass-Through-Abfrage  
+### <a name="d-executing-a-select-pass-through-query"></a>D: Ausführen einer SELECT-Pass-Through-Abfrage  
  Im folgenden Beispiel wird eine `SELECT`-Pass-Through-Abfrage verwendet, um die in Beispiel C eingefügte Zeile auszuwählen.  
   
 ```sql  
@@ -101,7 +101,6 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE (Transact-SQL)](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Rowset-Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   

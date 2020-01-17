@@ -1,6 +1,7 @@
 ---
-title: Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von Zertifikaten für einen Datenbankspiegelungsendpunkt
+descriptoin: Steps to configure the use of a certificate on both inbound and outbound connections for a SQL Server database mirroring endpoint.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e1635e680fcd68de1f4877a1ffc713e526e862ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d263276c392ef4fb40682b832cf94237694d94ac
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050611"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822322"
 ---
 # <a name="use-certificates-for-a-database-mirroring-endpoint-transact-sql"></a>Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "68050611"
   
  Weitere Informationen finden Sie unter [Ermöglichen des Verwendens von Zertifikaten für eingehende Verbindungen für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Sofern Sie nicht garantieren können, dass Ihr Netzwerk sicher ist, wird das Verschlüsseln bei Verbindungen zur Datenbankspiegelung empfohlen. Weitere Informationen finden Sie unter [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
  Verwenden Sie zum Kopieren eines Zertifikats zu einem anderen System eine sichere Kopiermethode. Seien Sie äußerst vorsichtig, um Ihre Zertifikate zu schützen.  

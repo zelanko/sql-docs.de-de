@@ -1,9 +1,8 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/10/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -26,19 +25,20 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983239"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548281"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Entfernt mindestens eine Zeile aus einer Tabelle oder Sicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -82,7 +82,8 @@ DELETE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DELETE FROM [database_name . [ schema ] . | schema. ] table_name    
+DELETE 
+    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
     [ WHERE <search_condition> ]   
     [ OPTION ( <query_options> [ ,...n ]  ) ]  
 [; ]  
@@ -119,7 +120,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  In ihrem Gültigkeitsbereich kann eine Tabellenvariable auch als Quelltabelle in einer DELETE-Anweisung verwendet werden.  
   
- Die Sicht, auf die *table_or_view_name* verweist, muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Sichtdefinition verweisen. Weitere Informationen zu aktualisierbaren Sichten finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+ Die Sicht, auf die *table_or_view_name* verweist, muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Sichtdefinition verweisen. Weitere Informationen zu aktualisierbaren Ansichten finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
@@ -209,7 +210,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
  Die DELETE-Anweisung wird immer vollständig protokolliert.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Für die Zieltabelle sind DELETE-Berechtigungen erforderlich. SELECT-Berechtigungen werden ebenfalls benötigt, wenn die Anweisung eine WHERE-Klausel enthält.  
@@ -218,7 +219,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 ## <a name="examples"></a>Beispiele  
   
-|Kategorie|Funktionssyntaxelemente|  
+|Category|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
 |[Grundlegende Syntax](#BasicSyntax)|Delete|  
 |[Beschränken von zu löschenden Zeilen](#LimitRows)|WHERE • FROM • Cursor •|  
@@ -240,7 +241,7 @@ GO
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie die Anzahl von Zeilen beschränkt wird, die gelöscht werden.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Löschen einer Reihe von Zeilen mithilfe der WHERE-Klausel  
- Im folgenden Beispiel werden alle Zeilen der `ProductCostHistory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank gelöscht, bei denen der Wert in der `StandardCost` -Spalte `1000.00`überschreitet.  
+ Im folgenden Beispiel werden alle Zeilen der Tabelle `ProductCostHistory` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gelöscht, bei denen der Wert `1000.00` in der Spalte `StandardCost` überschritten wird.  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -258,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. Bestimmen der zu löschenden Zeile mithilfe eines Cursors  
- Im folgenden Beispiel wird eine einzelne Zeile der `EmployeePayHistory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank gelöscht, bei der ein Cursor mit dem Namen `my_cursor`. Von der Löschoperation ist nur die Zeile betroffen, die aktuell durch den Cursor abgerufen wird.  
+ Im folgenden Beispiel wird eine einzelne Zeile aus der Tabelle `EmployeePayHistory` in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] mithilfe eines Cursors namens `complex_cursor` gelöscht. Von der Löschoperation ist nur die Zeile betroffen, die aktuell durch den Cursor abgerufen wird.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -277,7 +278,7 @@ DEALLOCATE complex_cursor;
 GO  
 ```  
   
-#### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. Verwenden von Joins und Unterabfragen für Daten in einer Tabelle, um Zeilen in einer anderen Tabelle zu löschen  
+#### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D: Verwenden von Joins und Unterabfragen für Daten in einer Tabelle, um Zeilen in einer anderen Tabelle zu löschen  
  In den folgenden Beispielen werden zwei Möglichkeiten veranschaulicht, Zeilen in einer Tabelle anhand von Daten in einer anderen Tabelle zu löschen. In beiden Beispielen werden Zeilen aus der Tabelle `SalesPersonQuotaHistory` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] anhand der Verkaufszahlen des laufenden Jahres gelöscht, die in der Tabelle `SalesPerson` gespeichert sind. Die erste Anweisung `DELETE` zeigt die Lösung mit einer ISO-kompatiblen Unterabfrage, die zweite Anweisung `DELETE` zeigt die FROM-Erweiterung [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Verknüpfen der beiden Tabellen an.  
   
 ```sql
@@ -366,7 +367,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. Löschen von Daten aus einer Remotetabelle mithilfe der OPENQUERY-Funktion  
- Im folgenden Beispiel werden durch Angabe der [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) -Rowsetfunktion Zeilen aus einer Remotetabelle gelöscht. Der im vorherigen Beispiel erstellte Name des Verbindungsservers wird hier verwendet.  
+ Im folgenden Beispiel werden durch Angabe der Rowsetfunktion [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) Zeilen aus einer Remotetabelle gelöscht. Der im vorherigen Beispiel erstellte Name des Verbindungsservers wird hier verwendet.  
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -430,7 +431,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>K. Löschen aller Zeilen einer Tabelle  
  Im folgenden Beispiel werden alle Zeilen aus der `Table1`-Tabelle gelöscht, da keine WHERE-Klausel verwendet wird, um die Anzahl der gelöschten Zeilen zu begrenzen.  
@@ -470,6 +471,16 @@ WHERE ProductKey IN (
     WHERE T2.EnglishProductSubcategoryName = 'Road Bikes' )  
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
+
+### <a name="o-delete-using-a-where-clause"></a>O. Löschen mithilfe einer WHERE-Klausel
+
+Diese Abfrage zeigt, wie Sie mithilfe einer WHERE-Klausel und ohne eine FROM-Klausel löschen.
+
+```sql
+DELETE tableA WHERE EXISTS (
+SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
+)
+```
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

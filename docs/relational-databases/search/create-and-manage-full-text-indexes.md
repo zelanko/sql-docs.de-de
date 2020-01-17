@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082934"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257658"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
 ##  <a name="view"></a> Anzeigen der Eigenschaften eines Volltextindexes
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Anzeigen der Eigenschaften eines Volltextindexes mit Transact-SQL
 
-|Katalogsicht oder dynamische Verwaltungssicht|und Beschreibung|  
+|Katalogsicht oder dynamische Verwaltungssicht|BESCHREIBUNG|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Gibt eine Zeile für jeden Verweis zwischen Volltextkatalog und Volltextindex zurück.|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|Enthält eine Zeile für jede Spalte, die Teil eines Volltextindexes ist.|  
@@ -72,7 +72,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
   
 5.  Im Bereich **Seite auswählen** können Sie eine der folgenden Seiten auswählen:  
   
-    |Seite|und Beschreibung|  
+    |Seite|BESCHREIBUNG|  
     |----------|-----------------|  
     |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**|  
     |**Spalten**|Zeigt die Tabellenspalten an, die für die Volltextindizierung verfügbar sind. Die ausgewählte Spalte bzw. die Spalten werden volltextindiziert. Sie können beliebig viele verfügbare Spalten auswählen und in den Volltextindex aufnehmen. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](populate-full-text-indexes.md).|
@@ -85,7 +85,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
   
  Die folgende Tabelle enthält die Volltexteigenschaften, die sich auf indizierte Tabellen und Spalten beziehen, sowie die zugehörigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen.  
   
-|Eigenschaft|und Beschreibung|Funktion|  
+|Eigenschaft|BESCHREIBUNG|Funktion|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|TYPE COLUMN in der Tabelle, die die Dokumenttypinformationen der Spalte enthält.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|Gibt an, ob eine Spalte für die Volltextindizierung aktiviert wurde.|COLUMNPROPERTY|  
@@ -183,7 +183,7 @@ Zum Erstellen eines Volltextindexes für eine **varbinary(max)** -Spalte benöti
   
  Weitere Informationen zum Indizieren und Abfragen einer **xml**-Spalte finden Sie unter [Verwenden der Volltextsuche mit XML-Spalten](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
-##  <a name="disable"></a> Deaktivieren oder erneutes Aktivieren der Volltextindizierung für eine Tabelle   
+##  <a name="disable"></a> Deaktivieren oder Reaktivieren der Volltextindizierung für eine Tabelle   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind standardmäßig alle von Benutzern erstellten Datenbanken volltextfähig. Zudem wird eine einzelne Tabelle automatisch für die Volltextindizierung aktiviert, sobald ein Volltextindex für die Tabelle erstellt wird und dem Index eine Spalte hinzugefügt wird. Eine Tabelle wird für die Volltextindizierung automatisch deaktiviert, wenn die letzte Spalte aus dem Volltextindex der Tabelle entfernt wird.  
   
  Für eine Tabelle mit einem Volltextindex können Sie mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Tabelle für die Volltextindizierung manuell deaktivieren und erneut aktivieren.  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708510"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252858"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ Die von TLS verwendete Verschlüsselungsstufe, 40 Bit oder 128 Bit, hängt von d
 > Die Verwendung der 40-Bit-Verschlüsselungsstufe gilt als unsicher.
 
 > [!WARNING]
-> TLS-Verbindungen, die mithilfe eines selbstsignierten Zertifikats verschlüsselt werden, bieten keine hohe Sicherheit. Sie sind anfällig für "Man-in-the-Middle"-Angriffe. In einer Produktionsumgebung oder auf Servern, die mit dem Internet verbunden sind, sollten Sie sich nicht auf TLS mit Verwendung selbstsignierter Zertifikate verlassen.
+> TLS-Verbindungen, die mithilfe eines selbstsignierten Zertifikats verschlüsselt werden, bieten keine hohe Sicherheit. Sie sind anfällig für Man-in-the-Middle-Angriffe. In einer Produktionsumgebung oder auf Servern, die mit dem Internet verbunden sind, sollten Sie sich nicht auf TLS mit Verwendung selbstsignierter Zertifikate verlassen.
 
 Das Aktivieren der TLS-Verschlüsselung erhöht die Sicherheit von Daten, die netzwerkübergreifend zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Anwendungen übertragen werden. Wenn der gesamte Datenverkehr jedoch zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einer Clientanwendung mithilfe von TLS verschlüsselt wird, sind die folgenden zusätzlichen Verarbeitungsschritte erforderlich:
 -  Ein zusätzlicher Netzwerkroundtrip ist zum Zeitpunkt des Verbindungsaufbaus erforderlich.
 -  Die von der Anwendung an die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz gesendeten Pakete müssen vom Client-TLS-Stapel verschlüsselt und vom Server-TLS-Stapel entschlüsselt werden.
 -  Die von der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an die Anwendung gesendeten Pakete müssen vom Server-TLS-Stapel verschlüsselt und vom Client-TLS-Stapel entschlüsselt werden.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
  Das Zertifikat muss für die **Serverauthentifizierung**ausgegeben sein. Der Name des Zertifikats muss der vollqualifizierte Domänenname (FQDN) des Computers sein.  
   
  Zertifikate werden lokal für diesen Benutzer auf dem Computer gespeichert. Sie müssen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Configuration Manager mit einem Konto mit lokalen Administratorberechtigungen ausführen, um ein Zertifikat zu installieren, das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden soll.
@@ -82,7 +82,7 @@ Damit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein TLS-Zerti
 
 - Mit der **Subject**-Eigenschaft des Zertifikats muss angegeben werden, dass der allgemeine Name (Common Name, CN) mit dem Hostnamen oder dem vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) des Servercomputers übereinstimmt. Wenn Sie den Hostnamen verwenden, muss das DNS-Suffix im Zertifikat angegeben werden. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Failovercluster ausgeführt wird, muss der allgemeine Name mit dem Hostnamen oder FQDN des virtuellen Servers übereinstimmen, und die Zertifikate müssen auf allen Knoten im Failovercluster bereitgestellt werden.
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] und der [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) unterstützen Platzhalterzertifikate. SNAC wurde als veraltet markiert und durch den [Microsoft OLE DB-Treiber für SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) und [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) ersetzt. Andere Clients unterstützen möglicherweise keine Platzhalterzertifikate. Weitere Informationen finden Sie in der Clientdokumentation und in [KB 258858](http://support.microsoft.com/kb/258858).       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] und der [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) unterstützen Platzhalterzertifikate. SNAC wurde als veraltet markiert und durch den [Microsoft OLE DB-Treiber für SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) und [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) ersetzt. Andere Clients unterstützen möglicherweise keine Platzhalterzertifikate. Weitere Informationen finden Sie in der Clientdokumentation und in [KB 258858](https://support.microsoft.com/kb/258858).       
   Platzhalterzertifikate können nicht mithilfe des SQL Server-Konfigurations-Managers ausgewählt werden. Sie müssen den Registrierungsschlüssel `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` bearbeiten und den Fingerabdruck des Zertifikats ohne Leerraum zum Wert des **Zertifikats** hinzufügen, um ein Platzhalterzertifikat zu verwenden.  
 
   > [!WARNING]  
@@ -129,7 +129,7 @@ Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL
 > [!IMPORTANT]
 > Das SQL Server-Dienstkonto muss über Leseberechtigungen für das Zertifikat verfügen, das zum Erzwingen der Verschlüsselung auf dem SQL Server verwendet wird. Für ein nicht privilegiertes Dienstkonto müssen dem Zertifikat Leseberechtigungen hinzugefügt werden. Ist dies nicht der Fall, kann beim Neustart des SQL Server-Diensts ein Fehler auftreten.
   
-1. Erweitern Sie im **SQL Server Configuration Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<Serverinstanz>_ , und wählen Sie dann **Eigenschaften**.  
+1. Erweitern Sie im **SQL Server-Konfigurations-Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<Serverinstanz>_ , und klicken Sie dann auf **Eigenschaften**.  
   
 2. Wählen Sie im Dialogfeld **Eigenschaften** von **Protokolle für** _\<Instanzname>_ auf der Registerkarte **Zertifikat** das gewünschte Zertifikat aus der Dropdownliste für das Feld **Zertifikat** aus, und klicken Sie dann auf **OK**.  
   
@@ -163,5 +163,4 @@ Mithilfe von IPSec können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 ## <a name="see-also"></a>Weitere Informationen
 [TLS 1.2-Unterstützung für Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
-[Configure the Windows Firewall to Allow SQL Server Access (Konfigurieren der Windows-Firewall für den SQL Server-Zugriff)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-[SQL Server-Verschlüsselung](../../relational-databases/security/encryption/sql-server-encryption.md)
+[Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     

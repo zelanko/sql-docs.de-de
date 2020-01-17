@@ -1,6 +1,7 @@
 ---
-title: Verwenden des Dashboards „AlwaysOn-Verfügbarkeitsgruppen“ (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden des Verfügbarkeitsgruppendashboards in SSMS
+description: Hier wird beschrieben, wie Sie das Always On-Verfügbarkeitsgruppendashboard zum Überwachen der Integrität ihrer Verfügbarkeitsgruppe in SQL Server Management Studio (SSMS) verwenden.
+ms.custom: seo-lt-2019
 ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 802fcd6ad0bead99a56f3bd5f8c71639a42a0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013530"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822674"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Verwenden des Dashboards „AlwaysOn-Verfügbarkeitsgruppen“ (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +124,7 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
 -   **Manuell**. Gibt an, dass kein Replikat im automatischen Failovermodus ist.  
   
  **Synchronisierungsstatus**  
- Gibt an, ob ein sekundäres Replikat gerade mit dem primärem Replikat synchronisiert wird. Diese Spalte wird standardmäßig angezeigt. Die folgenden Werte sind möglich:  
+ Gibt an, ob ein sekundäres Replikat gerade mit dem primärem Replikat synchronisiert wird. Diese Spalte wird standardmäßig angezeigt. Mögliche Werte:  
   
 -   **Nicht synchronisiert**. Mindestens eine Datenbank im Replikat ist nicht synchronisiert oder wurde noch nicht mit der Verfügbarkeitsgruppe verknüpft.  
   
@@ -140,7 +141,7 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
  Listet den Namen des Problems auf. Dieser Wert wird standardmäßig angezeigt. Eine Liste aller Always On-Richtlinienprobleme finden sie unter [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Verfügbarkeitsmodus**  
- Gibt die Replikateigenschaft an, die Sie für jedes Verfügbarkeitsreplikat einzeln festgelegt haben. Dieser Wert wird standardmäßig ausgeblendet. Die folgenden Werte sind möglich:  
+ Gibt die Replikateigenschaft an, die Sie für jedes Verfügbarkeitsreplikat einzeln festgelegt haben. Dieser Wert wird standardmäßig ausgeblendet. Mögliche Werte:  
   
 -   **Asynchron**. Das sekundäre Replikat wird nie mit dem primären Replikat synchronisiert.  
   
@@ -153,7 +154,7 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
  Gibt den Modus an, der zum Herstellen einer Verbindung mit dem sekundären Replikat verwendet wird.  Dieser Wert wird standardmäßig ausgeblendet.  
   
  **Verbindungsstatus**  
- Gibt an, ob ein sekundäres Replikat derzeit mit dem primären Replikat verbunden ist. Diese Spalte wird standardmäßig ausgeblendet. Die folgenden Werte sind möglich:  
+ Gibt an, ob ein sekundäres Replikat derzeit mit dem primären Replikat verbunden ist. Diese Spalte wird standardmäßig ausgeblendet. Mögliche Werte:  
   
 -   **Getrennt**. Gibt bei einem Remoteverfügbarkeitsreplikat an, dass es vom lokalen Verfügbarkeitsreplikat getrennt ist. Die Antwort des lokalen Replikats auf den Status "Getrennt" hängt wie folgt von dessen Rolle ab:  
   
@@ -164,7 +165,7 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
 -   **Verbunden**. Ein Remoteverfügbarkeitsreplikat, das derzeit mit dem lokalen Replikat verbunden ist.  
   
  **Betriebszustand**  
- Gibt den aktuellen Betriebszustand des sekundären Replikats an. Dieser Wert wird standardmäßig ausgeblendet. Die folgenden Werte sind möglich:  
+ Gibt den aktuellen Betriebszustand des sekundären Replikats an. Dieser Wert wird standardmäßig ausgeblendet. Mögliche Werte:  
   
  **0**. Ausstehendes Failover    
  **1**. Ausstehend    
@@ -237,14 +238,14 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
     > [!CAUTION]  
     >  Wenn eine Datenbank den Status INITIALIZING aufweist, befindet sich die Datenbank nach einem erzwungenen Failover zum sekundären Replikat immer in einem Status, in dem sie nicht gestartet werden kann.  
   
- **Failover Readiness**  
- Gibt an, für welches Verfügbarkeitsreplikat ein Failover mit oder ohne potenziellen Datenverlust ausgeführt werden kann. Diese Spalte wird standardmäßig angezeigt. Die folgenden Werte sind möglich:  
+ **Failoverbereitschaft**  
+ Gibt an, für welches Verfügbarkeitsreplikat ein Failover mit oder ohne potenziellen Datenverlust ausgeführt werden kann. Diese Spalte wird standardmäßig angezeigt. Mögliche Werte:  
   
 -   **Datenverlust**   
 -   **Kein Datenverlust**  
   
  **Probleme**  
- Listet den Namen des Problems auf. Diese Spalte wird standardmäßig angezeigt. Die folgenden Werte sind möglich:  
+ Listet den Namen des Problems auf. Diese Spalte wird standardmäßig angezeigt. Mögliche Werte:  
   
 -   **Warnungen**. Klicken Sie, um die Schwellenwerte und Warnungen anzuzeigen.   
 -   **Kritisch**. Klicken Sie, um die kritischen Probleme anzuzeigen.  

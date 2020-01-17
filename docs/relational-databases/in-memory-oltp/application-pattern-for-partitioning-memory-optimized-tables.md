@@ -1,6 +1,6 @@
 ---
-title: Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen | Microsoft-Dokumentation
-ms.custom: ''
+title: Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f23f65299365b0716cd2a94f48e3a050fb18b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c871da0fcd20cffc2c6510d7084f79faefa2d50
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951233"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412799"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67951233"
   
 -   Fügen Sie die aktive Partition hinzu.  
   
- ![Partitionswechsel](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch")  
+ ![Partitionswechsel.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "|::ref1::|")  
 Pflege aktiver Daten  
   
  Die Aktionen ab dem Löschen von "ActiveOrders" müssen während eines Wartungsfensters durchgeführt werden, damit Abfragen im Zeitraum zwischen der Datenlöschung und Übertragung in die Stagingtabelle immer auf alle Daten zugreifen können.  

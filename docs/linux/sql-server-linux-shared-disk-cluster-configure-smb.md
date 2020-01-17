@@ -1,6 +1,6 @@
 ---
-title: 'Konfigurieren eines SMB-Speichers für eine Failoverclusterinstanz: SQL Server für Linux'
-description: ''
+title: Konfigurieren einer Failoverclusterinstanz mithilfe von SMB-Speicher – SQL Server für Linux
+description: In diesem Artikel erfahren Sie, wie Sie eine Failoverclusterinstanz (FCI) mithilfe von SMB-Speicher für SQL Server für Linux konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e93b7fac2f75758a0a95a4053ee0a989e410c70e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 498518fbc119629d2e7da7717b1f6e41c68984ce
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032323"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558579"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Konfigurieren einer Failoverclusterinstanz (SMB): SQL Server für Linux
 
@@ -96,7 +96,7 @@ Im Folgenden finden Sie einige Tipps und Hinweise für eine erfolgreiche Verwend
       ls <TempDir>
       ```
       
-      \<TempDir> ist der Name des Ordners aus Schritt d.
+      \<TempDir> ist der Name des Ordners aus Schritt d.
       
    1. Löschen Sie die Dateien aus dem vorhandenen SQL Server-Datenverzeichnis. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
       
@@ -132,7 +132,7 @@ Im Folgenden finden Sie einige Tipps und Hinweise für eine erfolgreiche Verwend
       
       \<mssqlGID> ist die Gruppen-ID des mssql-Benutzers.
       
-   1. Überprüfen Sie, ob die Einbindung erfolgreich war, indem Sie „mount“ ohne Switches ausgeben.
+   1. Überprüfen Sie, ob die Einbindung erfolgreich war, indem Sie „mount“ ohne Parameter ausgeben.
       
       ```bash
       mount
@@ -230,7 +230,7 @@ Im Folgenden finden Sie einige Tipps und Hinweise für eine erfolgreiche Verwend
       
       \<mssqlGID> ist die Gruppen-ID des mssql-Benutzers.
       
-   1. Überprüfen Sie, ob die Einbindung erfolgreich war, indem Sie „mount“ ohne Switches ausgeben.
+   1. Überprüfen Sie, ob die Einbindung erfolgreich war, indem Sie „mount“ ohne Parameter ausgeben.
    
    1. Geben Sie „exit“ ein, um nicht mehr der Superuser zu sein.
    
@@ -250,11 +250,11 @@ Im Folgenden finden Sie einige Tipps und Hinweise für eine erfolgreiche Verwend
    
 1. Wiederholen Sie die Schritte auf dem oder den anderen Knoten.
 
-Nun können Sie die FCI konfigurieren.
+Sie können die Failoverclusterinstanz nun konfigurieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Configure failover cluster instance – SQL Server on Linux (Konfigurieren einer Failoverclusterinstanz – SQL Server für Linux)](sql-server-linux-shared-disk-cluster-configure.md)
+[Konfigurieren einer Failoverclusterinstanz – SQL Server für Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-smb/05-smbsource.png 

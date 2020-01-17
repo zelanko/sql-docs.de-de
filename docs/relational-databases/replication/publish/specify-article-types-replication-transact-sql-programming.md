@@ -1,6 +1,7 @@
 ---
-title: Angeben von Artikeltypen (Replikationsprogrammierung mit Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: Angeben von Artikeltypen (gespeicherte Prozeduren für die Replikation)
+description: Sie können gespeicherte Prozeduren für die Replikation verwenden, um einen Artikeltyp beim Definieren eines Artikels für die SQL Server-Replikation programmgesteuert anzugeben.
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfa3710648e381dbd142c57180bf5395d9eee18f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 3adcfa7c18259df1b063ff95f86d4f7721b45091
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904623"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321189"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Angeben von Artikeltypen (Replikationsprogrammierung mit Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +46,9 @@ ms.locfileid: "72904623"
   
      Damit wird ein neuer Artikel für die Veröffentlichung definiert. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
-2.  Führen Sie für die Artikel `logbased manualboth` und `logbased manualfilter` [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus, um die gespeicherte Filterprozedur für einen horizontal gefilterten Artikel zu generieren. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+2.  Führen Sie für die Artikel `logbased manualboth` und `logbased manualfilter`[sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus, um die gespeicherte Filterprozedur für einen horizontal gefilterten Artikel zu generieren. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-3.  Führen Sie für die Artikel `logbased manualboth`, `logbased manualview` und `logbased manualfilter` [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus, um die Sicht zu generieren, die den vertikal gefilterten Artikel definiert. Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+3.  Führen Sie für die Artikel `logbased manualboth`, `logbased manualview` und `logbased manualfilter`[sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus, um die Sicht zu generieren, die den vertikal gefilterten Artikel definiert. Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
 
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>So veröffentlichen Sie einen Artikel für eine Sicht oder eine indizierte Sicht in einer Transaktions- oder Momentaufnahmeveröffentlichung  
   
@@ -69,7 +70,7 @@ ms.locfileid: "72904623"
   
 2.  Führen Sie für **logbased manualboth** -Artikel und **logbased manualfilter** -Artikel [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus, um die gespeicherte Filterprozedur für einen horizontal gefilterten Artikel zu generieren. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-3.  Führen Sie für Artikel vom Typ **logbased manualboth**, **logbased manualview**und **logbased manualfilter** [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus, um die Sicht zu generieren, die den vertikal gefilterten Artikel definiert. Weitere Informationen finden Sie unter [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+3.  Führen Sie für Artikel vom Typ **logbased manualboth**, **logbased manualview**und **logbased manualfilter**[sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus, um die Sicht zu generieren, die den vertikal gefilterten Artikel definiert. Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>So veröffentlichen Sie einen Artikel für eine gespeicherte Prozedur, für die Ausführung einer gespeicherten Prozedur oder für eine benutzerdefinierte Funktion in einer Transaktions- oder Momentaufnahmeveröffentlichung  
   

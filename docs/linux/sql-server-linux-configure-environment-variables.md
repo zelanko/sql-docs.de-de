@@ -1,6 +1,7 @@
 ---
-title: Konfigurieren von SQL Server-Einstellungen mit Umgebungsvariablen
+title: Konfigurieren von Umgebungsvariablen für SQL Server für Linux
 description: In diesem Artikel wird beschrieben, wie Sie Umgebungsvariablen verwenden, um bestimmte SQL Server 2017-Einstellungen unter Linux zu konfigurieren.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 11f8926ede3c4bcd1f0350be79add16c5ae52249
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531321"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558371"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Konfigurieren von SQL Server-Einstellungen mit Umgebungsvariablen unter Linux
 
@@ -43,13 +44,13 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, um SQL Server 201
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Umgebungsvariable | und Beschreibung |
+| Umgebungsvariable | BESCHREIBUNG |
 |-----|-----|
 | **ACCEPT_EULA** | Legen Sie für die Variable **ACCEPT_EULA** einen beliebigen Wert fest, um Ihre Zustimmung zum [End-User Licensing Agreement (Benutzerlizenzvertrag)](https://go.microsoft.com/fwlink/?LinkId=746388) zu geben. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
 | **MSSQL_SA_PASSWORD** | Konfigurieren des Benutzerkennworts des Systemadministrators. |
-| **MSSQL_PID** | Festlegen von SQL Server-Edition oder Product Key. Zulässige Werte: </br></br>**Evaluation**</br>**Entwickler**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Ein Product Key**</br></br>Wenn ein Product Key angegeben wird, muss er das Format #####-#####-#####-#####-##### aufweisen, wobei „#“ eine Ziffer oder ein Buchstabe ist.|
-| **MSSQL_LCID** | Festlegen der Sprachen-ID, die für SQL Server verwendet werden soll. Beispiel: 1036 ist Französisch. |
-| **MSSQL_COLLATION** | Festlegen der Standardsortierung für SQL Server. Dadurch wird die Standardzuordnung der Sprachen-ID (LCID) zur Sortierung überschrieben. |
+| **MSSQL_PID** | Festlegen von SQL Server-Edition oder Product Key. Mögliche Werte sind: </br></br>**Auswertung**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Ein Product Key**</br></br>Wenn ein Product Key angegeben wird, muss er das Format #####-#####-#####-#####-##### aufweisen, wobei „#“ eine Ziffer oder ein Buchstabe ist.|
+| **MSSQL_LCID** | Legt die Sprach-ID fest, die für SQL Server verwendet werden soll. Beispiel: 1036 ist Französisch. |
+| **MSSQL_COLLATION** | Legt die Standardsortierung für SQL Server fest. Dadurch wird die Standardzuordnung der Sprachen-ID (LCID) zur Sortierung überschrieben. |
 | **MSSQL_MEMORY_LIMIT_MB** | Festlegen der maximalen Größe des Arbeitsspeichers (in MB), der von SQL Server verwendet werden kann. Der Standardwert ist 80% des gesamten physischen Speichers. |
 | **MSSQL_TCP_PORT** | Konfigurieren des TCP-Ports, auf dem SQL Server lauscht (standardmäßig 1433). |
 | **MSSQL_IP_ADDRESS** | Festlegen der IP-Adresse. Derzeit muss die IP-Adresse das IPv4-Format (0.0.0.0) aufweisen. |
@@ -67,13 +68,13 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, um SQL Server 201
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Umgebungsvariable | und Beschreibung |
+| Umgebungsvariable | BESCHREIBUNG |
 |-----|-----|
 | **ACCEPT_EULA** | Legen Sie für die Variable **ACCEPT_EULA** einen beliebigen Wert fest, um Ihre Zustimmung zum [End-User Licensing Agreement (Benutzerlizenzvertrag)](https://go.microsoft.com/fwlink/?LinkId=746388) zu geben. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
 | **MSSQL_SA_PASSWORD** | Konfigurieren des Benutzerkennworts des Systemadministrators. |
-| **MSSQL_PID** | Festlegen von SQL Server-Edition oder Product Key. Zulässige Werte: </br></br>**Evaluation**</br>**Entwickler**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Ein Product Key**</br></br>Wenn ein Product Key angegeben wird, muss er das Format #####-#####-#####-#####-##### aufweisen, wobei „#“ eine Ziffer oder ein Buchstabe ist.|
-| **MSSQL_LCID** | Festlegen der Sprachen-ID, die für SQL Server verwendet werden soll. Beispiel: 1036 ist Französisch. |
-| **MSSQL_COLLATION** | Festlegen der Standardsortierung für SQL Server. Dadurch wird die Standardzuordnung der Sprachen-ID (LCID) zur Sortierung überschrieben. |
+| **MSSQL_PID** | Festlegen von SQL Server-Edition oder Product Key. Mögliche Werte sind: </br></br>**Auswertung**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Ein Product Key**</br></br>Wenn ein Product Key angegeben wird, muss er das Format #####-#####-#####-#####-##### aufweisen, wobei „#“ eine Ziffer oder ein Buchstabe ist.|
+| **MSSQL_LCID** | Legt die Sprach-ID fest, die für SQL Server verwendet werden soll. Beispiel: 1036 ist Französisch. |
+| **MSSQL_COLLATION** | Legt die Standardsortierung für SQL Server fest. Dadurch wird die Standardzuordnung der Sprachen-ID (LCID) zur Sortierung überschrieben. |
 | **MSSQL_MEMORY_LIMIT_MB** | Festlegen der maximalen Größe des Arbeitsspeichers (in MB), der von SQL Server verwendet werden kann. Der Standardwert ist 80% des gesamten physischen Speichers. |
 | **MSSQL_TCP_PORT** | Konfigurieren des TCP-Ports, auf dem SQL Server lauscht (standardmäßig 1433). |
 | **MSSQL_IP_ADDRESS** | Festlegen der IP-Adresse. Derzeit muss die IP-Adresse das IPv4-Format (0.0.0.0) aufweisen. |

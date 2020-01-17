@@ -1,6 +1,7 @@
 ---
-title: Betreiben eines freigegebenen Clusters mit Red Hat Enterprise Linux für SQL Server
-description: Implementieren Sie Hochverfügbarkeit, indem Sie einen freigegebenen Datenträgercluster mit Red Hat Enterprise Linux für SQL Server konfigurieren.
+title: Ausführen von RHEL-FCI für SQL Server für Linux
+description: In diesem Artikel erfahren Sie, wie Sie in Red Hat Enterprise Linux (RHEL) eine SQL Server-Failoverclusterinstanz (FCI) für die Hochverfügbarkeit eines freigegebenen Datenträgers ausführen, z. B. um ein Failover für die FCI manuell auszuführen oder um dem Cluster Knoten hinzuzufügen oder sie daraus zu entfernen.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032240"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558525"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Betreiben eines freigegebenen Datenträgerclusters mit Red Hat Enterprise Linux für SQL Server
+# <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Ausführen einer RHEL-Failoverclusterinstanz für SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -30,13 +31,13 @@ In diesem Artikel wird beschrieben, wie Sie die folgenden Aufgaben für SQL Serv
 
 ## <a name="architecture-description"></a>Beschreibung der Architektur
 
-Die Clusteringebene basiert auf einem [Hochverfügbarkeits-Add-On](https://clusterlabs.org/) für Red Hat Enterprise Linux (RHEL), das auf [Pacemaker](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) aufbaut. Corosync und Pacemaker koordinieren die Clusterkommunikation und die Ressourcenverwaltung. Die SQL Server-Instanz ist auf einem der beiden Knoten aktiv.
+Die Clusteringebene basiert auf einem [Hochverfügbarkeits-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) für Red Hat Enterprise Linux (RHEL), das auf [Pacemaker](https://clusterlabs.org/) aufbaut. Corosync und Pacemaker koordinieren die Clusterkommunikation und die Ressourcenverwaltung. Die SQL Server-Instanz ist auf einem der beiden Knoten aktiv.
 
 Das folgende Diagramm veranschaulicht die Komponenten in einem Linux-Cluster mit SQL Server. 
 
 ![Freigegebener SQL-Datenträgercluster mit Red Hat Enterprise Linux 7](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Weitere Informationen zu Clusterkonfiguration, Optionen für Ressourcen-Agents und Verwaltung finden Sie in der [Referenzdokumentation von RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zur Clusterkonfiguration, den Optionen für Ressourcen-Agents und der Verwaltung finden Sie in der [Referenzdokumentation von RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## <a name = "failManual"></a>Durchführen eines manuellen Clusterfailovers
 
@@ -72,13 +73,13 @@ Die Protokolle des Ressourcen-Agents können Sie unter `/var/log/cluster/corosyn
 
 ## <a name="add-a-node-to-a-cluster"></a>Hinzufügen eines Knotens zu einem Cluster
 
-1. Überprüfen Sie die IP-Adresse für jeden Knoten. Das folgende Skript zeigt die IP-Adresse des aktuellen Knotens an. 
+1. Überprüfen Sie die IP-Adresse jedes Knotens. Das folgende Skript zeigt die IP-Adresse des aktuellen Knotens an. 
 
    ```bash
    ip addr show
    ```
 
-3. Der neue Knoten benötigt einen eindeutigen Namen, der höchstens 15 Zeichen lang ist. In Red Hat Enterprise Linux ist der Computername standardmäßig `localhost.localdomain`. Dieser Standardname ist möglicherweise nicht eindeutig und außerdem zu lang. Legen Sie den Computernamen für den neuen Knoten fest. Fügen Sie den Computernamen dafür zu `/etc/hosts` hinzu. Mithilfe des folgenden Skripts können Sie `/etc/hosts` mit `vi` bearbeiten. 
+3. Der neue Knoten benötigt einen eindeutigen Namen, der höchstens 15 Zeichen lang ist. In Red Hat Enterprise Linux ist der Computername standardmäßig `localhost.localdomain`. Dieser Standardname ist möglicherweise nicht eindeutig und außerdem zu lang. Legen Sie den Computernamen für den neuen Knoten fest. Legen Sie den Computernamen fest, indem Sie diesen zu `/etc/hosts` hinzufügen. Mithilfe des folgenden Skripts können Sie `/etc/hosts` mit `vi` bearbeiten. 
 
    ```bash
    sudo vi /etc/hosts
@@ -106,7 +107,7 @@ Die Protokolle des Ressourcen-Agents können Sie unter `/var/log/cluster/corosyn
    sudo yum -y install nfs-utils 
    ``` 
 
-   Öffnen Sie die Firewall auf Clients und dem NFS-Server: 
+   Öffnen Sie die Firewall auf Clients und dem NFS-Server. 
 
    ```bash
    sudo firewall-cmd --permanent --add-service=nfs
@@ -209,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 Für die Behandlung von Problemen mit dem Cluster kann es hilfreich sein, zu verstehen, wie die drei Daemons bei der Verwaltung von Clusterressourcen zusammenarbeiten. 
 
-| Daemon | und Beschreibung 
+| Daemon | BESCHREIBUNG 
 | ----- | -----
 | Corosync | Ermöglicht Quorum-Mitgliedschaft und Messaging zwischen Clusterknoten
 | Pacemaker | Baut auf Corosync auf und bietet Zustandsautomaten für Ressourcen 
@@ -246,9 +247,9 @@ corosync: active/disabled
 pacemaker: active/enabled 
 ```
 
-Im Beispiel bedeutet `partition with quorum`, dass ein Mehrheitsquorum von Knoten online ist. Wenn der Cluster ein Mehrheitsquorum von Knoten verliert, gibt `pcs status` `partition WITHOUT quorum` zurück, und alle Ressourcen werden angehalten. 
+Im Beispiel bedeutet `partition with quorum`, dass ein Mehrheitsquorum von Knoten online ist. Wenn der Cluster ein Mehrheitsquorum von Knoten verliert, gibt `pcs status``partition WITHOUT quorum` zurück, und alle Ressourcen werden angehalten. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` gibt die Namen aller Knoten zurück, die aktuell am Cluster beteiligt sind. Wenn ein oder mehrere Knoten nicht beteiligt sind, gibt `pcs status` `OFFLINE: [<nodename>]` zurück.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` gibt die Namen aller Knoten zurück, die aktuell am Cluster beteiligt sind. Wenn ein oder mehrere Knoten nicht beteiligt sind, gibt `pcs status``OFFLINE: [<nodename>]` zurück.
 
 `PCSD Status` zeigt den Clusterstatus für jeden Knoten an.
 
@@ -268,7 +269,7 @@ Im Beispiel bedeutet `partition with quorum`, dass ein Mehrheitsquorum von Knote
 
 - **Zuordnungen von Knotennamen**
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 * [Detaillierte Anleitung für das Erstellen von Clustern](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) von Pacemaker
 

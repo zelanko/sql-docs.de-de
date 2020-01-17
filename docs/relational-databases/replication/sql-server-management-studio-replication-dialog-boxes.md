@@ -1,6 +1,7 @@
 ---
-title: Dialogfelder für die Replikation in SQL Server Management Studio | Microsoft-Dokumentation
-ms.custom: ''
+title: Dialogfelder für die Replikation in SQL Server Management Studio
+description: In diesem Artikel finden Sie Verweise auf andere Artikel, in denen die verschiedenen Dialogfelder für Replikation in SQL Server Management Studio erläutert werden.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -11,16 +12,16 @@ ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5f932a5729b039436f952aeab8ad78f8d220d22e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 51ad6849489392483dba8db7c3f7688e939d53c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768338"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320018"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Dialogfelder für die Replikation in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Dieser Abschnitt enthält Informationen zu einer Reihe von Dialogfeldern für die Replikation, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar sind:  
+  Dieser Abschnitt enthält Informationen zu einer Reihe von Dialogfeldern für die Replikation, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbar sind:  
   
 -   [Sicherheit für den Momentaufnahme-Agent](../../relational-databases/replication/snapshot-agent-security.md)  
   

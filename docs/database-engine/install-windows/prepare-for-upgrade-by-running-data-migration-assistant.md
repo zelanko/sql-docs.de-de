@@ -1,7 +1,7 @@
 ---
-title: Vorbereiten der Aktualisierung durch Ausführen von Data Migration Assistant | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Vorbereitung auf das Upgrade: Datenmigrations-Assistent'
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +10,12 @@ ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 85846c2e4a9989533d89a4e448d6d31831555ca6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 982ca86d373cde6b37faa8a88ae93cd3cb2d6702
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990850"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258820"
 ---
 # <a name="prepare-for-upgrade-by-running-data-migration-assistant"></a>Vorbereiten der Aktualisierung durch Ausführen von Data Migration Assistant
 
@@ -23,7 +23,7 @@ ms.locfileid: "67990850"
   
 Bereiten Sie die Aktualisierung Ihrer OLTP-Datenbanken und die Übernahme neuer Funktionen in [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] vor, indem Sie Microsoft Data Migration Assistant herunterladen und ausführen.  
   
-## <a name="download-and-install-data-migration-assistant"></a>Herunterladen und Installieren von Data Migration Assistant  
+## <a name="download-and-install-data-migration-assistant"></a>Herunterladen und Installieren des Datenmigrations-Assistenten  
 Laden Sie Data Migration Assistant [hier](https://go.microsoft.com/fwlink/?LinkID=613421)herunter, und installieren Sie ihn. Dieses Tool ist in den [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] -Installationsmedien nicht enthalten.  
 
   

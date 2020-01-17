@@ -1,6 +1,7 @@
 ---
-title: Starten und Beenden eines Replikations-Agents (SQL Server Management Studio) | Microsoft Dokumentation
-ms.custom: ''
+title: Starten und Beenden eines Replikations-Agents (SSMS)
+description: Hier erfahren Sie, wie Sie einen Replikations-Agent in SQL Server Management Studio und im Replikationsmonitor beenden und starten.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 339da4b5d9112aa10aa52e12c8a39f6a2adaa30b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 70f876d9152e836e12ad0c28e640362b23197190
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770702"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321624"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Starten und Beenden eines Replikations-Agents (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Starten oder beenden Sie **Agents** in oder im Replikationsmonitor über den Ordner **Aufträge** oder den Ordner [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from Aufträge Monitor. Starten oder beenden Sie die folgenden Agents und Aufträge:  
+  Starten oder beenden Sie Agents in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder im Replikationsmonitor über den Ordner **Aufträge** oder den Ordner **Replikation**. Starten oder beenden Sie die folgenden Agents und Aufträge:  
   
 -   Momentaufnahme-Agent, der von allen Veröffentlichungen verwendet wird.  
   
@@ -68,8 +69,8 @@ ms.locfileid: "68770702"
 3.  Klicken Sie mit der rechten Maustaste auf einen Agent, und klicken Sie dann auf **Agent starten** oder **Agent beenden**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Überwachen (Replikation)](../../../relational-databases/replication/monitor/monitoring-replication.md)   
+ [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Ausführbare Konzepte für den Replikations-Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Übersicht über Replikations-Agents](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

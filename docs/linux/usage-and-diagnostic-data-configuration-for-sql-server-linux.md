@@ -1,20 +1,21 @@
 ---
-title: Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server unter Linux
+title: Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server für Linux
 description: Hier wird beschrieben, wie Kundennutzungs- und Diagnosedaten von SQL Server unter Linux gesammelt und konfiguriert werden.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: effc3ad0b693752eedc0f5dc478d17fbfdd5b35e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531291"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558541"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server unter Linux
+# <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -26,7 +27,7 @@ Microsoft sendet nicht die folgenden Informationen mit diesem Mechanismus:
 
 - Werte aus Benutzertabellen
 - Anmeldeinformationen oder andere Authentifizierungsinformationen
-- personenbezogene Informationen (PII)
+- Personenbezogene Informationen (Personally Identifiable Information, PII)
 
 SQL Server 2017 erfasst und sammelt kontinuierlich Informationen zur Installationserfahrung des Einrichtungsvorgangs, damit wir schnell Installationsprobleme erkennen und beheben können, die der Kunde hat. SQL Server 2017 kann so konfiguriert werden, dass keine Informationen (pro Serverinstanz) mit **mssql-conf** an Microsoft gesendet werden. „mssql-conf“ ist ein Konfigurationsskript, das mit SQL Server 2017 für Red Hat Enterprise Linux, SUSE Linux Enterprise Server und Ubuntu installiert wird.
 

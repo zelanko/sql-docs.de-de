@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cfbd77901ab2a8a834fe5a9efc4c272845e02c87
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903144"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721355"
 ---
 # <a name="choose-an-authentication-mode"></a>Auswählen eines Authentifizierungsmodus
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "72903144"
   
 -   Ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Umgebungen mit gemischten Betriebssystemen zu unterstützen, in denen nicht alle Benutzer von einer Windows-Domäne authentifiziert werden.  
   
--   Ermöglicht es Benutzern, eine Verbindung von unbekannten oder nicht vertrauenswürdigen Domänen herzustellen. Zum Beispiel von einer Anwendung, bei der bestehende Kunden Verbindungen mit zugewiesenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen herstellen, um den Status Ihrer Bestellungen abzufragen.  
+-   Ermöglicht es Benutzern, von unbekannten oder nicht vertrauenswürdigen Domänen aus eine Verbindung herzustellen. Zum Beispiel von einer Anwendung, bei der bestehende Kunden Verbindungen mit zugewiesenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen herstellen, um den Status Ihrer Bestellungen abzufragen.  
   
 -   Ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , webbasierte Anwendungen zu unterstützen, bei denen Benutzer ihre eigenen Identitäten erstellen.  
   

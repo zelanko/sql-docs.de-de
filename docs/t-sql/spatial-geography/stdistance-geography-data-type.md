@@ -1,7 +1,7 @@
 ---
 title: STDistance (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d739e9a6320781725f3cc498c9bc68e8ade8d684
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45f0b6f9524c4877c669bfec8c5ab7bcfec198bb
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042294"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200506"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,10 +49,11 @@ ms.locfileid: "68042294"
  CLR-Rückgabetyp: **SqlDouble**  
   
 ## <a name="remarks"></a>Bemerkungen  
- STDistance() gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geography**-Instanzen nicht übereinstimmen.  
+ Das Ergebnis wird in der Maßeinheit ausgedrückt, die der [räumliche Verweisbezeichner &#40; Spatial Reference Identifier, SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) der räumlichen Daten festlegt.
+STDistance() gibt immer *NULL* zurück, wenn die SRIDs der **geography**-Instanzen nicht übereinstimmen.  
   
 > [!NOTE]  
->  Methoden für den **geography** -Datentyp, mit denen eine Fläche oder eine Entfernung berechnet wird, geben abhängig vom SRID der in der jeweiligen Methode verwendeten Instanz unterschiedliche Ergebnisse zurück.   Weitere Informationen über SRIDs finden Sie unter [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  Methoden für den **geography** -Datentyp, mit denen eine Fläche oder eine Entfernung berechnet wird, geben abhängig vom SRID der in der jeweiligen Methode verwendeten Instanz unterschiedliche Ergebnisse zurück. Weitere Informationen über SRIDs finden Sie unter [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Abstand zwischen zwei **geography** -Instanzen gesucht.  

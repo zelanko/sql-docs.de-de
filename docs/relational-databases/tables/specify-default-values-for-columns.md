@@ -14,18 +14,18 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909876"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200495"
 ---
 # <a name="specify-default-values-for-columns"></a>Angeben von Standardwerten für Spalten
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-Sie können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Standardwert angeben, der in die Tabellenspalte eingegeben wird. Sie können den Objekt-Explorer auf der Benutzeroberfläche verwenden oder [!INCLUDE[tsql](../../includes/tsql-md.md)] mit der allgemeinen Steuerung übermitteln.
+Sie können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Standardwert angeben, der in die Tabellenspalte eingegeben wird. Sie können einen Standardwert festlegen, indem Sie entweder den Objekt-Explorer auf der Benutzeroberfläche verwenden oder [!INCLUDE[tsql](../../includes/tsql-md.md)] übermitteln.
 
 Wenn Sie der Spalte keinen Standardwert zuweisen und der Benutzer die Spalte leer lässt, passiert Folgendes:
 
@@ -64,7 +64,7 @@ Sie können im Objekt-Explorer einen Standardwert für eine Tabellenspalte angeb
    > [!NOTE]
    > Um einen numerischen Standardwert einzugeben, geben Sie die Zahl ein. Geben Sie bei einem Objekt oder einer Funktion den entsprechenden Namen ein. Geben Sie für einen alphanumerischen Standardwert den Wert in einfachen Anführungszeichen ein.
 
-4. Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.
+4. Klicken Sie im Menü **Datei** auf _Tabellenname_ **speichern**.
 
 ## <a name="TsqlProcedure"></a> Angeben eines Standardwerts mit Transact-SQL
 

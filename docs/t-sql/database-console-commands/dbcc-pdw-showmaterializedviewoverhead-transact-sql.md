@@ -1,6 +1,6 @@
 ---
-title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2ab2a5ff60abbd098cb93d5c85cd75527f49805
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 669c6274301c09f260badfb354c8add67ae86791
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729874"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401635"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -25,7 +25,7 @@ ms.locfileid: "73729874"
 
 Zeigt die Anzahl inkrementeller Änderungen in den Basistabellen an, die für die materialisierten Sichten in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] gespeichert werden. Das Overheadverhältnis wird als TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS) berechnet.
 
-![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 Der Name der materialisierten Sicht.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Die Data Warehouse-Engine fügt zu jeder betroffenen Sicht Nachverfolgungszeilen zur Darstellung der Änderungen hinzu, damit materialisierte Sichten stets mit Datenänderungen in Basistabellen aktualisiert werden. Die Auswahl einer materialisierten Sicht schließt das Überprüfen des gruppierten Columnstore-Index der Sicht und das Anwenden inkrementeller Änderungen ein.  Die Nachverfolgungszeilen (TOTAL_ROWS - BASE_VIEW_ROWS) werden erst gelöscht, wenn Benutzer die materialisierte Sicht neu erstellen (REBUILD).  
 
@@ -139,13 +139,13 @@ ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
 go
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ```
-Ausgabe
+Output
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  
 |587149137|2|2 |1,00000000000000000 |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Leistungsoptimierung durch materialisierte Sicht](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   

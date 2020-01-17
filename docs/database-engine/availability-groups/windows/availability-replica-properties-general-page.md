@@ -1,7 +1,7 @@
 ---
-title: Eigenschaften des Verfügbarkeitsreplikats (Seite „Allgemein“) für Verfügbarkeitsgruppen
+title: Seite „Allgemein“ (Eigenschaften des Verfügbarkeitsreplikats)
 description: Eine Beschreibung der verschiedenen Eigenschaften finden Sie auf der Seite „Allgemein“ der Seite „Eigenschaften des Verfügbarkeitsreplikats“ in SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9c2dceee5ebda0b6039a2614b3ae3d9b0dd356e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b708c987f1e9d0bbaf069a5d105e6feab57b9b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988659"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241738"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Eigenschaften des Verfügbarkeitsreplikats (Seite „Allgemein“) für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "67988659"
  Entspricht dem Servernamen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz, die dieses Replikat hostet, sowie bei einer nicht standardmäßigen Instanz dem Instanznamen.  
   
  **Rolle**  
- **Primär**  
+ **Primärer Server/verwaltete Instanz**  
  Derzeit das primäre Replikat.  
   
- **Secondary**  
+ **Sekundärer Server/verwaltete Instanz**  
  Derzeit ein sekundäres Replikat.  
   
  **Wird aufgelöst**  
@@ -56,12 +56,12 @@ ms.locfileid: "67988659"
  **Synchroner Commit**  
  Das primäre Replikat wartet mit dem Ausführen des Commits für eine bestimmte Transaktion, bis das sekundäre Replikat die Transaktion auf den Datenträger geschrieben hat.  
   
- Weitere Informationen finden Sie unter [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)ausgeführt wird.  
+ Weitere Informationen finden Sie unter [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)ausgetauscht werden.  
   
  **Failover mode**  
  Der Failovermodus des Replikats. Folgende Werte sind möglich:  
   
- **Automatic**  
+ **Automatisch**  
  Automatisches Failover. Das Replikat ist ein Ziel für automatische Failover. Diese Option wird nur unterstützt, wenn der Verfügbarkeitsmodus auf synchrone Commits festgelegt wird.  
   
  **Manuell**  
@@ -85,7 +85,7 @@ ms.locfileid: "67988659"
  **Nur beabsichtigte Lesevorgänge**  
  Es sind nur direkte, schreibgeschützte Verbindungen mit sekundären Datenbanken dieses Replikats zulässig. Die sekundären Datenbanken sind alle für Lesezugriff verfügbar.  
   
- **ja**  
+ **Ja**  
  Alle Verbindungen zu sekundären Datenbanken dieses Replikats sind zugelassen, aber nur für Lesezugriff. Die sekundären Datenbanken sind alle für Lesezugriff verfügbar.  
   
  Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
@@ -100,6 +100,6 @@ ms.locfileid: "67988659"
  Entspricht der Zeichenfolgendarstellung des vom Benutzer angegebenen Datenbankspiegelungs-Endpunkts, der von Verbindungen zwischen primären und sekundären Replikaten für die Datensynchronisierung verwendet wird. Informationen zur Syntax von Endpunkt-URLs finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

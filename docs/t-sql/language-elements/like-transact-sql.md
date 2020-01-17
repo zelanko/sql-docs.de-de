@@ -31,19 +31,19 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 7ff1197307cebb563fbb8cc173b0edbf1ef6aa76
+ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816822"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74550217"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator. Wenn eins der Argumente kein Zeichenfolgen-Datentyp ist, wird es von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in einen Zeichenfolgen-Datentyp konvertiert, sofern dies möglich ist.  
   
- ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Artikellinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,7 +66,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  Ist die bestimmte Zeichenfolge, nach der in *match_expression* gesucht werden soll, und kann die folgenden gültigen Platzhalterzeichen enthalten. *pattern* darf maximal 8.000 Bytes umfassen.  
   
-|Platzhalter|und Beschreibung|Beispiel|  
+|Platzhalter|BESCHREIBUNG|Beispiel|  
 |------------------------|-----------------|-------------|  
 |%|Eine Zeichenfolge aus null oder mehr Zeichen|WHERE title LIKE '%Computer%' findet alle Buchtitel, die das Wort 'Computer' enthalten.|  
 |_ (Unterstrich)|Ein einzelnes Zeichen.|WHERE au_fname LIKE '_ean' findet alle Vornamen mit vier Buchstaben, die auf ean enden (Dean, Sean usw.).|  
@@ -77,12 +77,12 @@ match_expression [ NOT ] LIKE pattern
  Ist ein Zeichen, das vor einem Platzhalterzeichen eingefügt wird, um anzuzeigen, dass der Platzhalter als reguläres Zeichen und nicht als Platzhalter interpretiert wird. *excape_character* ist ein Zeichenausdruck ohne Standard und muss zu einem einzelnen Zeichen ausgewertet werden.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- **Boolean**  
+ **Boolescher Wert**  
   
 ## <a name="result-value"></a>Ergebniswert  
  LIKE gibt TRUE zurück, wenn *match_expression* dem angegebenen *pattern* entspricht.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Bei Zeichenfolgenvergleichen mithilfe von LIKE werden alle Zeichen in der Musterzeichenfolge berücksichtigt. Die zu berücksichtigenden Zeichen umfassen alle führenden oder nachfolgenden Leerzeichen. Wenn in einer Vergleichsabfrage LIKE 'abc ' (abc, gefolgt von einem Leerzeichen) verwendet wird, um Zeilen zurückzugeben, die dem Muster abc ähnlich sind, werden keine Zeilen zurückgegeben, die den Wert abc (abc ohne Leerzeichen) enthalten. Nachfolgende Leerzeichen in dem Ausdruck, der mit dem Muster verglichen wird, werden jedoch ignoriert. Wenn in einer Abfrage LIKE 'abc' (abc ohne Leerzeichen) verwendet wird, um Zeilen zurückzugeben, die dem Muster abc ähnlich sind, werden alle Zeilen zurückgegeben, die mit abc anfangen und null oder mehr nachfolgende Leerzeichen enthalten.  
   
  Ein Zeichenfolgenvergleich mithilfe eines Musters, das Daten der Typen **char** und **varchar** enthält, ist bei Verwendung des LIKE-Operators möglicherweise aufgrund der Art und Weise, in der die Daten für jeden Datentyp gespeichert werden, nicht erfolgreich. Im folgenden Beispiel wird eine lokale **char**-Variable an eine gespeicherte Prozedur übergeben. Mit einem Mustervergleich sollen dann alle Mitarbeiter gefunden werden, deren Nachnamen mit den angegebenen Zeichen beginnen.  
@@ -182,7 +182,7 @@ GO
   
 |Symbol|Bedeutung|  
 |------------|-------------|  
-|LIKE '5[%]'|5%|  
+|LIKE '5[%]'|5 %|  
 |LIKE '[_]n'|_n|  
 |LIKE '[a-cdf]'|a, b, c, d oder f|  
 |LIKE '[-acdf]'|-, a, c, d oder f|  
@@ -216,8 +216,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
  FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
@@ -232,10 +232,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
- 
-### B. Using NOT LIKE with the % wildcard character  
- The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
+```
+
+### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
+ Im folgenden Beispiel werden alle Telefonnummern in der Tabelle `PersonPhone` gefunden, die nicht die Vorwahl `415` aufweisen.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -250,8 +250,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
 FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
@@ -263,10 +263,10 @@ Gail                  Moore                155-555-0169
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
 (8 row(s) affected)  
-```  
+```
 
-### C. Using the ESCAPE clause  
- The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
+### <a name="c-using-the-escape-clause"></a>C. Verwenden der ESCAPE-Klausel  
+ Im folgenden Beispiel werden die `ESCAPE`-Klausel und das Escapezeichen verwendet, um die exakte Zeichenfolge `10-15%` in der Spalte `c1` der Tabelle `mytbl2` zu suchen.  
   
 ```sql
 USE tempdb;  
@@ -290,7 +290,7 @@ WHERE c1 LIKE '%10-15!% off%' ESCAPE '!';
 GO  
 ```  
   
-### <a name="d-using-the---wildcard-characters"></a>D. Verwenden des []-Platzhalterzeichens  
+### <a name="d-using-the---wildcard-characters"></a>D: Verwenden des []-Platzhalterzeichens  
  Im folgenden Beispiel werden Mitarbeiter in der `Person`-Tabelle mit dem Vornamen `Cheryl` oder `Sheryl` gesucht.  
   
 ```sql  
@@ -314,7 +314,7 @@ ORDER BY LastName ASC, FirstName ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
  Im folgenden Beispiel werden alle Mitarbeiter in der `DimEmployee`-Tabelle mit Telefonnummern gefunden, die mit `612` beginnen.  

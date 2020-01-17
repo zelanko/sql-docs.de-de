@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 663e4bca1dc607cbdf4b19849701bea24461b600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081538"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255931"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Dieses Handbuch behandelt folgende Typen von Indizes:
 -   Gruppiert
 -   Nicht gruppiert
 -   Eindeutig
--   Gefiltert
+-   Filtered
 -   columnstore
 -   Hash
 -   Speicheroptimiert, nicht gruppiert
@@ -53,9 +53,11 @@ Weitere Informationen zu räumlichen Indizes finden Sie unter [Übersicht über 
 Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Volltextindizes](../relational-databases/search/populate-full-text-indexes.md).
   
 ##  <a name="Basics"></a> Grundlagen des Indexentwurfs  
- Ein Index ist eine Struktur auf dem Datenträger oder im Arbeitsspeicher, die einer Tabelle oder einer Sicht zugeordnet ist und durch die das Abrufen von Zeilen aus der Tabelle oder Sicht beschleunigt wird. Ein Index enthält Schlüssel, die aus einer oder mehreren Spalten in der Tabelle oder Sicht erstellt werden. Bei Indizes auf Datenträgern werden diese Schlüssel in einer Struktur (B-Struktur) gespeichert, die es SQL Server ermöglicht, die den Schlüsselwerten zugeordneten Zeilen schnell und effizient zu finden.  
+ Am Ende eines guten Sachbuchs befindet sich meist ein Index, über den bestimmte Informationen schnell und zielsicher innerhalb des Buchs ausfindig gemacht werden können. Ein Index ist eine sortierte Liste von Schlüsselwörtern, neben denen jeweils eine oder mehrere Seitenzahlen auf die Seiten verweisen, auf denen das jeweilige Schlüsselwort gefunden werden kann. Der SQL Server-Index macht da keinen Unterschied: Er stellt eine sortierte Liste mit Werten dar, bei der jeweils Zeiger auf die [Datenseiten](../relational-databases/pages-and-extents-architecture-guide.md) hinweisen, auf denen sich diese Werte befinden. Der Index selbst wird auf Seiten gespeichert, die die Indexseiten in SQL Server bilden. In einem Buch umfasst der Index meist mehrere Seiten. Wenn Sie nun beispielsweise nach Verweisen auf alle Seiten mit dem Wort „SQL“ suchen, müssen Sie den Index bis zu der Seite durchblättern, die das Schlüsselwort „SQL“ enthält. Von dort gelangen Sie dann über die Verweise zu den angegebenen Buchseiten.  Dies ließe sich durch Hinzufügen einer Seite vor dem Index optimieren, auf der die Seitenzahlen für die einzelnen Buchstaben des Alphabets angegeben werden. Beispiel:  „A bis D: Seite 121“, „E bis G: Seite 122“ usw. Mit dieser zusätzlichen Seite entfiele der Schritt, den Index nach dem Ausgangspunkt durchsuchen zu müssen. Eine solche Seite existiert in einem Buch meist nicht, in einem SQL Server-Index jedoch schon. Sie wird als Stammseite des Index bezeichnet. Die Stammseite stellt die Startseite der Baumstruktur dar, die von einem SQL Server-Index verwendet wird. Folgt man der Baumanalogie, so werden die Seiten mit den Zeigern auf die jeweiligen Daten als „Blattseiten“ der Baumstruktur bezeichnet. 
 
- Ein Index speichert Daten logisch in als Tabelle mit Zeilen und Spalten organisierter Form und physisch in einem zeilenbezogenen Format namens *Rowstore*<sup>1</sup> oder in einem spaltenbezogenen Format namens *[Columnstore](#columnstore_index)* .  
+ Ein SQL Server-Index ist eine Struktur auf dem Datenträger oder im Arbeitsspeicher, die einer Tabelle oder einer Sicht zugeordnet ist und durch die das Abrufen von Zeilen aus der Tabelle oder Sicht beschleunigt wird. Ein Index enthält Schlüssel, die aus einer oder mehreren Spalten in der Tabelle oder Sicht erstellt werden. Bei Indizes auf Datenträgern werden diese Schlüssel in einer Baumstruktur (B-Struktur) gespeichert, die es SQL Server ermöglicht, die den Schlüsselwerten zugeordnete(n) Zeile(n) schnell und effizient zu finden.  
+
+ In einem Index werden Daten logisch in Form einer Tabelle mit Zeilen und Spalten gespeichert und physisch in einem zeilenbezogenen Format namens *Rowstore*<sup>1</sup> oder in einem spaltenbezogenen Format namens *[Columnstore](#columnstore_index)* .  
     
  Das Auswählen der richtigen Indizes für eine Datenbank und ihre Arbeitsauslastung ist ein komplexer Vorgang, bei dem ein ausgewogenes Verhältnis zwischen gewünschter Abfragegeschwindigkeit und vertretbaren Updatekosten erzielt werden muss. Schmale Indizes (Indizes mit wenigen Spalten im Indexschlüssel) erfordern weniger Speicherplatz und Wartungsaufwand. Breite Indizes decken jedoch eine größere Anzahl an Abfragen ab. Möglicherweise müssen Sie mit verschiedenen Entwürfen experimentieren, bevor Sie den effizientesten Index ermitteln. Indizes können ohne Auswirkungen auf das Datenbankschema oder den Anwendungsentwurf hinzugefügt, geändert und gelöscht werden. Daher sollten Sie in jedem Fall mit verschiedenen Indizes experimentieren.  
   
@@ -79,7 +81,7 @@ Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Vollte
 4.  Ermitteln, welche Indexoptionen die Leistung steigern können, wenn der Index erstellt oder gewartet wird. Für das Erstellen eines gruppierten Indexes für eine vorhandene Tabelle ist z.B. die `ONLINE`-Indexoption nützlich. Die ONLINE-Option ermöglicht, dass gleichzeitige Aktivitäten für die zugrunde liegenden Daten fortgesetzt werden können, während der Index erstellt oder neu erstellt wird. Weitere Informationen finden Sie unter [Festlegen von Indexoptionen](../relational-databases/indexes/set-index-options.md).  
   
 5.  Angeben des optimalen Speicherorts für den Index. Ein nicht gruppierter Index kann in derselben Dateigruppe wie die zugrunde liegende Tabelle oder in einer anderen Dateigruppe gespeichert werden. Der Speicherort von Indizes kann die Abfrageleistung durch Optimieren der Datenträger-E/A-Leistung verbessern. Wenn Sie z. B. einen nicht gruppierten Index in einer Dateigruppe speichern, die sich auf einem anderen Datenträger als die Tabellendateigruppe befindet, kann dies die Leistung verbessern, weil mehrere Datenträger gleichzeitig gelesen werden können.  
-     Alternativ können gruppierte und nicht gruppierte Indizes ein dateigruppenübergreifendes Partitionsschema verwenden. Durch die Partitionierung sind große Tabellen oder Indizes leichter zu verwalten, denn Sie können dadurch schnell und effizient auf Datenteilmengen zugreifen und sie verwalten, während die Integrität der gesamten Sammlung erhalten bleibt. Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Wenn Sie Partitionierung in Erwägung ziehen, müssen Sie festlegen, ob der Index ausgerichtet sein soll, d. h., ob er weitgehend wie die Tabelle oder unabhängig davon partitioniert werden soll.   
+     Alternativ können gruppierte und nicht gruppierte Indizes ein dateigruppenübergreifendes Partitionsschema verwenden. Durch die Partitionierung sind große Tabellen oder Indizes leichter zu verwalten, denn Sie können dadurch schnell und effizient auf Datenteilmengen zugreifen und sie verwalten, während die Integrität der gesamten Sammlung erhalten bleibt. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Wenn Sie Partitionierung in Erwägung ziehen, müssen Sie festlegen, ob der Index ausgerichtet sein soll, d. h., ob er weitgehend wie die Tabelle oder unabhängig davon partitioniert werden soll.   
 
 ##  <a name="General_Design"></a> Allgemeine Richtlinien zum Indexentwurf  
  Erfahrene Datenbankadministratoren sind in der Lage, einen geeigneten Satz an Indizes zu entwerfen. Es handelt sich jedoch selbst bei gemäßigt komplexen Datenbanken und Arbeitsauslastungen um eine sehr komplexe, zeitintensive und fehleranfällige Aufgabe. Das Verständnis der Merkmale der Datenbank, Abfragen und Datenspalten kann Sie beim Entwerfen optimaler Indizes unterstützen.  
@@ -484,7 +486,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Durch das Erstellen einer PRIMARY KEY- oder einer UNIQUE-Einschränkung wird automatisch ein eindeutiger Index für die angegebenen Spalten erstellt. Es gibt keine deutlichen Unterschiede zwischen dem Erstellen einer UNIQUE-Einschränkung und dem Erstellen eines eindeutigen Indexes unabhängig von einer Einschränkung. Die Datenüberprüfung erfolgt auf dieselbe Weise, und der Abfrageoptimierer macht keinen Unterschied zwischen einem durch eine Einschränkung erstellten eindeutigen Index und einem manuell erstellten Index. Allerdings sollten sie eine UNIQUE- oder PRIMARY KEY-Einschränkung für die Spalte erstellen, wenn Datenintegrität das Ziel ist. Dadurch wird das Ziel des Indexes klar.  
   
-### <a name="considerations"></a>Weitere Überlegungen  
+### <a name="considerations"></a>Überlegungen  
   
 -   Ein eindeutiger Index, die UNIQUE-Einschränkung oder die PRIMARY KEY-Einschränkung kann nicht erstellt werden, wenn in den Daten doppelte Schlüsselwerte vorhanden sind.  
   
@@ -583,7 +585,7 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
  In einigen Fällen deckt ein gefilterter Index die Abfrage ab, ohne die Spalten im gefilterten Indexausdruck als Schlüsselspalten oder eingeschlossene Spalten in der Definition des gefilterten Indexes einzuschließen. Die folgenden Richtlinien erläutern, wann eine Spalte im gefilterten Indexausdruck eine Schlüsselspalte oder eingeschlossene Spalte in der Definition des gefilterten Indexes sein sollte. Die Beispiele beziehen sich auf den gefilterten Index `FIBillOfMaterialsWithEndDate` , der zuvor erstellt wurde.  
   
- Eine Spalte im gefilterten Indexausdruck muss in der gefilterten Indexdefinition keine Schlüsselspalte oder eingeschlossene Spalte sein, wenn der gefilterte Indexausdruck dem Abfrageprädikat entspricht und die Abfrage die Spalte im gefilterten Indexausdruck mit den Abfrageergebnissen nicht zurückgibt. Zum Beispiel deckt `FIBillOfMaterialsWithEndDate` die folgende Abfrage ab, da das Abfrageprädikat dem Filterausdruck entspricht und `EndDate` nicht mit den Abfrageergebnissen zurückgegeben wird. `FIBillOfMaterialsWithEndDate` erfordert nicht, dass `EndDate` eine Schlüsselspalte oder eingeschlossene Spalte in der Definition des gefilterten Indexes ist.  
+ Eine Spalte im gefilterten Indexausdruck muss in der Definition des gefilterten Indexes keine Schlüsselspalte oder eingeschlossene Spalte sein, wenn der gefilterte Indexausdruck dem Abfrageprädikat entspricht und die Abfrage die Spalte im gefilterten Indexausdruck mit den Abfrageergebnissen nicht zurückgibt. Zum Beispiel deckt `FIBillOfMaterialsWithEndDate` die folgende Abfrage ab, da das Abfrageprädikat dem Filterausdruck entspricht und `EndDate` nicht mit den Abfrageergebnissen zurückgegeben wird. `FIBillOfMaterialsWithEndDate` erfordert nicht, dass `EndDate` eine Schlüsselspalte oder eingeschlossene Spalte in der Definition des gefilterten Indexes ist.  
   
 ```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -604,7 +606,7 @@ SELECT ComponentID, StartDate, EndDate FROM Production.BillOfMaterials
 WHERE EndDate IS NOT NULL;  
 ```  
   
- Der Schlüssel des gruppierten Indexes für die Tabelle muss in der gefilterten Indexdefinition keine Schlüsselspalte oder eingeschlossene Spalte sein. Der Schlüssel des gruppierten Indexes ist automatisch in allen nicht gruppierten Indizes enthalten, dazu zählen auch gefilterte Indizes.  
+ Der Schlüssel des gruppierten Indexes für die Tabelle muss in der Definition des gefilterten Indexes keine Schlüsselspalte oder eingeschlossene Spalte sein. Der Schlüssel des gruppierten Indexes ist automatisch in allen nicht gruppierten Indizes enthalten, wozu auch gefilterte Indizes zählen.  
   
 #### <a name="data-conversion-operators-in-the-filter-predicate"></a>Datenkonvertierungsoperatoren im Filterprädikat  
  Wenn der im gefilterten Indexausdruck der gefilterten Indexergebnisse angegebene Vergleichsoperator eine implizite oder explizite Datenkonvertierung ergibt, kommt es zu einem Fehler, wenn die Konvertierung auf der linken Seite eines Vergleichsoperators auftritt. Eine mögliche Lösung besteht darin, den gefilterten Indexausdruck mit dem Datenkonvertierungsoperator (CAST oder CONVERT) auf die rechte Seite des Vergleichsoperators zu schreiben.  
@@ -646,7 +648,7 @@ Die Kenntnis dieser Grundlagen erleichtert es die anderen Columnstore-Artikel zu
 #### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>Die Datenspeicherung verwendet die Columnstore- und Rowstore-Komprimierung
 Im Zusammenhang mit Columnstore-Indizes werden die Begriffe *Rowstore* und *Columnstore* verwendet, um das Format für die Datenspeicherung zu bezeichnen. Columnstore-Indizes verwenden beide Arten der Datenspeicherung.
 
- ![Clustered Columnstore Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")
+ ![Gruppierter Columnstore-Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Gruppierter Columnstore-Index")
 
 - Ein **Columnstore** enthält Daten, die logisch als Tabelle mit Zeilen und Spalten organisiert und physisch in einem Spaltendatenformat gespeichert sind.
   
@@ -673,7 +675,7 @@ Der Deltastore besteht aus mindestens einer Zeilengruppe, die **Delta-Zeilengrup
 
 Jede Spalte weist einige ihrer Werte in jeder Zeilengruppe auf. Diese Werte werden als **Spaltensegmente** bezeichnet. Jede Zeilengruppe enthält ein Spaltensegment für jede Spalte in der Tabelle. Jede Spalte besitzt ein Spaltensegment in jeder Zeilengruppe.
 
-![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
+![Spaltensegment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "|::ref2::|") 
  
 Wenn der Columnstore-Index eine Zeilengruppe komprimiert, wird jedes Spaltensegment separat komprimiert. Um eine ganze Spalte zu dekomprimieren, muss der Columnstore-Index nur ein Spaltensegment von jeder Zeilengruppe dekomprimieren.   
 
@@ -755,7 +757,7 @@ Die Hashfunktion, die für Hashindizes verwendet wird, weist die folgenden Merkm
   
 Die Interaktion zwischen dem Hashindex und den Buckets wird im folgenden Bild zusammengefasst.  
   
-![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Indexschlüssel, in die Hash-Funktion eingegeben, die Ausgabe ist die Adresse eines Hashbuckets, der auf den Anfang der Kette verweist.")  
+![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Indexschlüssel, als Eingabe in die Hash-Funktion. Die Ausgabe stellt die Adresse eines Hashbuckets dar, der auf den Anfang der Kette verweist.")  
 
 ### <a name="configuring_bucket_count"></a> Konfigurieren der Bucketanzahl eines Hashindexes
 Die Bucketanzahl des Hashindexes wird während der Indexerstellung angegeben und kann mit der Syntax `ALTER TABLE...ALTER INDEX REBUILD` geändert werden.  
@@ -853,7 +855,7 @@ Eine Indexseite in einer Bw-Struktur wächst je nach Bedarf, beginnend bei der S
 
 Ein Teilungsvorgang wird in zwei unteilbaren Schritten ausgeführt. Gehen Sie in der folgenden Abbildung davon aus, dass eine Blattseite eine Teilung erzwingt, da ein Schlüssel mit dem Wert 5 eingefügt wird und eine Seite auf der inneren Knotenebene vorhanden ist, die auf das Ende der aktuellen Seite auf Blattebene zeigt (Schlüsselwert 4).
 
-![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Teilung von Seiten")
+![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Teilen von Seiten")
 
 **Schritt 1:** Ordnen Sie zwei neue Seiten namens P1 und P2 zu, und teilen Sie die Zeilen der alten Seite namens P1, einschließlich der neu eingefügten Zeile, auf diese neuen Seiten auf. Ein neuer Slot in der Seitenzuordnungstabelle wird verwendet, um die physische Adresse der Seite P2 zu speichern. Auf die Seiten P1 und P2 kann derzeit noch nicht durch gleichzeitige Vorgänge zugegriffen werden. Darüber hinaus wird der logische Zeiger von P1 auf P2 festgelegt. Aktualisieren Sie die Seitenzuordnungstabelle anschließend in einem unteilbaren Schritt, um den Zeiger von der alten Seite P1 auf die neue Seite P1 zu ändern. 
 
@@ -866,7 +868,7 @@ Wenn eine Zeile aus einer Seite gelöscht wird, wird ein Änderungsdatensatz fü
 
 Gehen Sie in der folgenden Abbildung davon aus, dass ein `DELETE`-Vorgang den Schlüsselwert 10 löscht. 
 
-![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Merge von Seiten")
+![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Zusammenführen von Seiten")
 
 **Schritt 1:** Eine Änderungsseite, die den Schlüsselwert 10 darstellt, (blaues Dreieck) wird erstellt, und deren Zeiger auf die Seite Pp1 auf der inneren Knotenebene wird auf die neue Änderungsseite festgelegt. Darüber hinaus wird eine besondere Änderungsseite für den Merge (orangefarbenes Dreieck) erstellt und mit dem Zeiger zur Änderungsseite verknüpft. Zu diesem Zeitpunkt sind beide Seiten (die Änderungsseite und die Änderungsseite für den Merge) nicht für gleichzeitige Transaktionen sichtbar. In einem unteilbaren Schritt wird der Zeiger zur Seite P1 auf Blattebene in der Seitenzuordnungstabelle aktualisiert, damit dieser auf die Änderungsseite für den Merge zeigt. Nach diesem Schritt zeigt der Eintrag für den Schlüsselwert 10 in Pp1 auf die Änderungsseite für den Merge. 
 
@@ -891,7 +893,7 @@ Die Leistung eines nicht gruppierten Indexes ist beim Abfragen von speicheroptim
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Neuorganisieren und Neuerstellen von Indizes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Partitionierte Tabellen und Indizes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Erstellen eines Primärschlüssels](../relational-databases/tables/create-primary-keys.md)    
 [Indizes für speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [Columnstore-Indizes: Übersicht](../relational-databases/indexes/columnstore-indexes-overview.md)  

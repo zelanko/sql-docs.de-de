@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE-Optionen für Dateien und Dateigruppen (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: ALTER DATABASE für Dateien und Dateigruppen
+description: Aktualisieren von Datenbankdateien und -dateigruppen mithilfe von Transact-SQL
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-database
@@ -42,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982840"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244431"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE-Optionen für Dateien und Dateigruppen (Transact-SQL)
 
@@ -63,7 +65,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -176,7 +178,7 @@ NEWNAME *new_logical_file_name* Gibt einen neuen logischen Namen für die Datei 
 
 *new_logical_file_name* Der Name, der den vorhandenen logischen Dateinamen ersetzen soll. Der Name muss in der Datenbank eindeutig sein und den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Der Name kann eine Zeichen- oder Unicodekonstante, ein regulärer Bezeichner oder ein Begrenzungsbezeichner sein.
 
-FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'** _memory\_optimized\_data\_path_ **'** } Gibt einen Betriebssystem-Dateinamen (physischer Dateiname) an.
+FILENAME { **'** _betriebssystem\_datei\_name_ **'** | **'** _filestream\_pfad_ **'** | **'** _arbeitsspeicher\_optimierter\_daten\_pfad_ **'** } Gibt einen Betriebssystemdateinamen (physischer Dateiname) an.
 
 ' *os_file_name* ' Bei einer Standarddateigruppe (ROWS) ist dies der Pfad und der Dateiname, die vom Betriebssystem beim Erstellen der Datei verwendet werden. Die Datei muss sich auf dem Server befinden, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Der angegebene Pfad muss vorhanden sein, bevor die ALTER DATABASE-Anweisung ausgeführt wird.
 
@@ -189,12 +191,12 @@ Datendateien sollten nicht in komprimierten Dateisystemen abgelegt werden, es se
 
 Wenn sich die Datei auf einer Rawpartition befindet, darf *os_file_name* nur den Laufwerkbuchstaben einer vorhandenen Rawpartition angeben. Auf jeder Rawpartition kann nur eine Datei abgelegt werden.
 
-**'** *filestream_path* **'** Bei einer FILESTREAM-Dateigruppe verweist FILENAME auf einen Pfad, unter dem FILESTREAM-Daten gespeichert werden. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein. Wenn Sie z. B. den Pfad `C:\MyFiles\MyFilestreamData` angeben, muss `C:\MyFiles` vor der Ausführung von ALTER DATABASE vorhanden sein, der Ordner `MyFilestreamData` muss jedoch noch nicht vorhanden sein.
+**'** *filestream_pfad* **'** Bei einer FILESTREAM-Dateigruppe verweist FILENAME auf einen Pfad, unter dem FILESTREAM-Daten gespeichert werden. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein. Wenn Sie z. B. den Pfad `C:\MyFiles\MyFilestreamData` angeben, muss `C:\MyFiles` vor der Ausführung von ALTER DATABASE vorhanden sein, der Ordner `MyFilestreamData` muss jedoch noch nicht vorhanden sein.
 
 > [!NOTE]
 > Die Eigenschaften SIZE und FILEGROWTH gelten nicht für eine FILESTREAM-Dateigruppe.
 
-**'** *memory_optimized_data_path* **'** Bei einer speicheroptimierten Dateigruppe verweist FILENAME auf einen Pfad, unter dem speicheroptimierte Daten gespeichert werden. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein. Wenn Sie z. B. den Pfad `C:\MyFiles\MyData` angeben, muss `C:\MyFiles` vor der Ausführung von ALTER DATABASE vorhanden sein, der Ordner `MyData` muss jedoch noch nicht vorhanden sein.
+**'** *arbeitsspeicher_optimierter_daten_pfad* **'** Bei einer speicheroptimierten Dateigruppe verweist FILENAME auf einen Pfad, unter dem speicheroptimierte Daten gespeichert werden. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein. Wenn Sie z. B. den Pfad `C:\MyFiles\MyData` angeben, muss `C:\MyFiles` vor der Ausführung von ALTER DATABASE vorhanden sein, der Ordner `MyData` muss jedoch noch nicht vorhanden sein.
 
 Die Dateigruppe und die Datei (`<filespec>`) müssen in derselben Anweisung erstellt werden.
 
@@ -238,7 +240,7 @@ Der Wert 0 gibt an, dass die automatische Vergrößerung deaktiviert und kein zu
 
 Wenn FILEGROWTH nicht angegeben ist, lauten die Standardwerte wie folgt:
 
-|Versionsoptionen|Standardwerte|
+|Version|Standardwerte|
 |-------------|--------------------|
 |Seit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Daten: 64 MB, Protokolldateien: 64 MB|
 |Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 1 MB, Protokolldateien: 10 %|
@@ -263,7 +265,7 @@ Hinzufügen, Ändern oder Entfernen einer Dateigruppe aus der Datenbank.
 
 ADD FILEGROUP *filegroup_name* Fügt der Datenbank eine Dateigruppe hinzu.
 
-CONTAINS FILESTREAM Gibt an, dass die Dateigruppe FILESTREAM-BLOBs (Binary Large Objects) im Dateisystem speichert.
+CONTAINS FILESTREAM Gibt an, dass die Dateigruppe FILESTREAM-Blobs (Binary Large Objects) im Dateisystem speichert.
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
@@ -286,7 +288,7 @@ NAME = *new_filegroup_name* Ändert den Namen der Dateigruppe in *new_filegroup_
 
 AUTOGROW_SINGLE_FILE **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
 
-Wenn sich eine Datei in der Dateigruppe dem Schwellenwert für die automatische Vergrößerung nähert, wird nur diese Datei vergrößert. Dies ist die Standardeinstellung.
+Wenn sich eine Datei in der Dateigruppe dem Schwellenwert für die automatische Vergrößerung nähert, wird nur diese Datei vergrößert. Dies ist die Standardoption.
 
 AUTOGROW_ALL_FILES
 
@@ -310,7 +312,7 @@ Da in einer schreibgeschützten Datenbank keine Datenänderungen vorgenommen wer
 - In schreibgeschützten Datenbanken werden keine Daten gesperrt. Dies kann zu einer schnelleren Ausführung von Abfragen führen.
 
 > [!NOTE]
-> Das Schlüsselwort `READONLY` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READONLY` bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, in denen `READONLY` aktuell verwendet wird. Verwenden Sie stattdessen `READ_ONLY` .
+> Das Schlüsselwort `READONLY` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READONLY` bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, in denen `READONLY` aktuell verwendet wird. Verwenden Sie stattdessen `READ_ONLY`.
 
 READ_WRITE | READWRITE Gibt an, dass die Gruppe den Status READ_WRITE hat. Updates sind für die Objekte in der Dateigruppe möglich. Sie müssen über exklusiven Zugriff auf die Datenbank verfügen, um diesen Status zu ändern. Weitere Informationen finden Sie unter der SINGLE_USER-Klausel.
 
@@ -319,7 +321,7 @@ READ_WRITE | READWRITE Gibt an, dass die Gruppe den Status READ_WRITE hat. Updat
 > [!TIP]
 > Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases**-Katalogsicht oder der **Updateability**-Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
 
@@ -336,7 +338,7 @@ Die Parameter SIZE, MAXSIZE und FILEGROWTH können nicht festgelegt werden, wenn
 
 Die Parameter SIZE und FILEGROWTH können nicht für speicheroptimierte Dateigruppen festgelegt werden.
 
-Das Schlüsselwort `READONLY` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READONLY` bei neuen Entwicklungsprojekten, und planen Sie die Änderung von Anwendungen, in denen READONLY aktuell verwendet wird. Verwenden Sie stattdessen `READ_ONLY` .
+Das Schlüsselwort `READONLY` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READONLY` bei neuen Entwicklungsprojekten, und planen Sie die Änderung von Anwendungen, in denen READONLY aktuell verwendet wird. Verwenden Sie stattdessen `READ_ONLY`.
 
 Das Schlüsselwort `READWRITE` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READWRITE` bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, in denen derzeit `READWRITE` verwendet wird, sodass diese stattdessen `READ_WRITE` verwenden.
 
@@ -450,7 +452,7 @@ ADD LOG FILE
 GO
 ```
 
-### <a name="d-removing-a-file-from-a-database"></a>D. Entfernen einer Datei aus einer Datenbank
+### <a name="d-removing-a-file-from-a-database"></a>D: Entfernen einer Datei aus einer Datenbank
 
 Im folgenden Beispiel wird eine der in Beispiel B hinzugefügten Dateien entfernt.
 
@@ -685,7 +687,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL-Datenbank – Verwaltete Instanz
 
 Verwenden Sie diese Anweisung mit einer Datenbank in einer verwalteten Azure SQL-Datenbank-Instanz.
 
@@ -819,7 +821,7 @@ NAME = *new_filegroup_name* Ändert den Namen der Dateigruppe in *new_filegroup_
 
 AUTOGROW_SINGLE_FILE
 
-Wenn sich eine Datei in der Dateigruppe dem Schwellenwert für die automatische Vergrößerung nähert, wird nur diese Datei vergrößert. Dies ist die Standardeinstellung.
+Wenn sich eine Datei in der Dateigruppe dem Schwellenwert für die automatische Vergrößerung nähert, wird nur diese Datei vergrößert. Dies ist die Standardoption.
 
 AUTOGROW_ALL_FILES
 
@@ -847,7 +849,7 @@ READ_WRITE | READWRITE Gibt an, dass die Gruppe den Status READ_WRITE hat. Updat
 
 Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases**-Katalogsicht oder der **Updateability**-Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
 
@@ -916,7 +918,7 @@ REMOVE FILE test1dat4;
 GO
 ```
 
-### <a name="d-modifying-a-file"></a>D. Ändern einer Datei
+### <a name="d-modifying-a-file"></a>D: Ändern einer Datei
 
 Im folgenden Beispiel wird die Größe einer der in Beispiel B hinzugefügten Dateien erhöht. Über den Befehl ALTER DATABASE mit MODIFY FILE kann die Dateigröße nur erhöht werden. Wenn Sie die Dateigröße hingegen verringern möchten, müssen Sie DBCC SHRINKFILE verwenden.
 

@@ -1,7 +1,7 @@
 ---
 title: Unterstützung von Sortierungen und Unicode | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/18/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982820"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901946"
 ---
 # <a name="collation-and-unicode-support"></a>Unterstützung von Sortierungen und Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ Sie können diese Optionen festlegen, indem Sie sie an den Namen der Sortierung 
 
 In der folgenden Tabelle wird das den verschiedenen Optionen zugeordnete Verhalten beschrieben:    
     
-|Option|und Beschreibung|    
+|Option|BESCHREIBUNG|    
 |------------|-----------------|    
 |Unterscheidung nach Groß-/Kleinschreibung (\_CS)|Unterscheidet zwischen Groß- und Kleinbuchstaben. Wenn diese Option aktiviert wird, stehen Kleinbuchstaben in der Sortierreihenfolge vor ihren entsprechenden Großbuchstaben. Wenn diese Option nicht aktiviert wird, wird die Groß- und Kleinschreibung bei der Sortierung nicht berücksichtigt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] betrachtet also beim Sortieren die groß- und die kleingeschriebenen Versionen von Buchstaben als identisch. Sie können die Nichtunterscheidung nach Groß-/Kleinbuchstaben durch Angeben von „\_CI“ explizit auswählen.|   
 |Unterscheidung nach Akzent (\_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Beispielsweise entspricht „a“ nicht „ấ“. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung nicht nach Akzenten unterschieden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] betrachtet also beim Sortieren die Versionen von Buchstaben mit und ohne Akzent als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angeben von „\_AI“ explizit auswählen.|    
@@ -463,7 +463,7 @@ Wenn Sie Zeichendaten speichern, die mehrere Sprachen in [!INCLUDE[ssNoVersion](
 > [!NOTE]
 > Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] kann bei Unicode-Datentypen bis zu 65.535 Zeichen mit UCS-2 oder den gesamten Unicode-Bereich (1.114.111 Zeichen) darstellen, wenn ergänzende Zeichen verwendet werden. Weitere Informationen zum Aktivieren von ergänzenden Zeichen finden Sie unter [Ergänzende Zeichen](#Supplementary_Characters).
 
-Alternativ dazu gilt ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] Folgendes: Wenn eine für UTF-8 aktivierte Sortierung (\_UTF8) verwendet wird, werden Datentypen, die zuvor kein Unicode waren (**char** und **varchar**) zu Unicode-Datentypen (UTF-8). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ändert das Verhalten der bereits vorhandenen Unicode-UTF-16-Datentypen (**nchar**, **nvarchar** und **ntext**) nicht. Weitere Informationen finden Sie unter [Speicherunterschiede zwischen UTF-8 und UTF-16](#storage_differences).
+Alternativ dazu gilt ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] Folgendes: Wenn eine für UTF-8 aktivierte Sortierung (\_UTF8) verwendet wird, werden Datentypen, die zuvor kein Unicode waren (**char** und **varchar**) zu Unicode-Datentypen mit UTF-8-Codierung. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ändert das Verhalten der bereits vorhandenen Unicode-Datentypen (**nchar**, **nvarchar** und **ntext**) nicht, die weiterhin USC-2- oder UTF-16-Codierung verwenden. Weitere Informationen finden Sie unter [Speicherunterschiede zwischen UTF-8 und UTF-16](#storage_differences).
 
 ### <a name="unicode-considerations"></a>Weitere Überlegungen
 Nicht-Unicode-Datentypen verfügen über umfassende Einschränkungen. Das liegt daran, dass ein Nicht-Unicode-Computer auf die Verwendung einer einzelnen Codepage beschränkt ist. Es kann sein, dass Sie mit Unicode eine bessere Systemleistung erzielen, da weniger Codepagekonvertierungen erforderlich sind. Unicode-Sortierungen müssen auf der Datenbank-, Spalten- oder Ausdrucksebene einzeln ausgewählt werden, weil sie auf Serverebene nicht unterstützt werden.    
@@ -516,7 +516,7 @@ Aber das Unicode Consortium hat 16 zusätzliche „Ebenen“ von Zeichen eingeri
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Datentypen wie **nchar** und **nvarchar** bereit, um Unicode-Daten im BMP-Bereich (000000 bis 00FFFF) zu speichern, die die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mit UCS-2 codiert. 
 
-Mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde eine neue Gruppe von Sortierungen von ergänzenden Zeichen (\_SC) eingeführt, die nur mit den Datentypen **nchar**, **nvarchar** und **sql_variant** verwendet werden können, um den gesamten Unicode-Zeichenbereich (000000 bis 10FFFF) darzustellen. Beispiel: **Latin1_General_100_CI_AS_SC** oder **Japanese_Bushu_Kakusu_100_CI_AS_SC**, wenn Sie eine japanische Sortierung verwenden. 
+Mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde eine neue Gruppe von Sortierungen von ergänzenden Zeichen (\_SC) eingeführt, die nur mit den Datentypen **nchar**, **nvarchar** und **sql_variant** verwendet werden können, um den gesamten Unicode-Zeichenbereich (000000 bis 10FFFF) darzustellen. Beispiel:  **Latin1_General_100_CI_AS_SC** oder **Japanese_Bushu_Kakusu_100_CI_AS_SC**, wenn Sie eine japanische Sortierung verwenden. 
  
 Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wurde die Unterstützung für ergänzende Zeichen mit den neuen UTF-8-fähigen Sortierungen ([\_UTF8](#utf8)) auf die Datentypen **char** und **varchar** erweitert. Diese Datentypen können auch den gesamten Unicode-Zeichenbereich darstellen.   
 
@@ -622,12 +622,23 @@ Bevor Sie entscheiden, ob Sie UTF-8- oder UTF-16-Codierung für eine Datenbank o
 
 Weitere Überlegungen zur finden Sie unter [Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
+### <a name="converting"></a> Konvertieren in UTF-8
+Da das *n* in [CHAR(*n*) und VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) oder in [NCHAR(*n*) und NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) die Größe des Bytespeichers und nicht die Anzahl der Zeichen definiert, die gespeichert werden können, ist es wichtig, die Größe des Datentyps zu ermitteln, in den konvertiert werden soll, um das Abschneiden von Daten zu verhindern. 
+
+Nehmen wir zum Beispiel eine Spalte, die als **NVARCHAR(100)** definiert ist und in der 180 Bytes japanischer Zeichen gespeichert werden. In diesem Beispiel werden die Spaltendaten derzeit mithilfe von UCS-2 oder UTF-16 codiert, wobei 2 Bytes pro Zeichen verwendet werden. Das Umstellen des Spaltentyps in **VARCHAR(200)** reicht nicht aus, um das Abschneiden von Daten zu verhindern, da der neue Datentyp nur 200 Bytes speichern kann, in UTF-8 codierte japanische Zeichen jedoch 3 Bytes benötigen. Daher muss die Spalte als **VARCHAR(270)** definiert werden, um Datenverluste durch das Abschneiden von Daten zu vermeiden.
+
+Deshalb müssen Sie die voraussichtliche Bytegröße für die Spaltendefinition wissen, bevor Sie die vorhandenen Daten in UTF-8 konvertieren, und die Größe des neuen Datentyps entsprechend anpassen. Weitere Informationen finden Sie im [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript oder im SQL-Notebook in den [GitHub-Datenstichproben](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode), die die Funktion [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) und die Anweisung [COLLATE](../../t-sql/statements/collations.md) verwenden, um die Anforderungen an die richtige Datenlänge für UTF-8-Konvertierungsvorgänge in einer vorhandenen Datenbank zu bestimmen.
+
+Verwenden Sie eine der in [Festlegen oder Ändern der Spaltensortierung](../../relational-databases/collations/set-or-change-the-column-collation.md) beschriebenen Methoden, um die Spaltensortierung und den Datentyp in einer vorhandenen Tabelle zu ändern.
+
+Informationen zum Ändern der Datenbanksortierung, sodass neue Objekte die Datenbanksortierung standardmäßig erben können, oder zum Ändern der Serversortierung, sodass neue Datenbanken die Systemsortierung standardmäßig erben können, finden Sie im Abschnitt [Verwandte Aufgaben](#Related_Tasks) in diesem Artikel. 
+
 ##  <a name="Related_Tasks"></a> Related tasks    
     
-|Task|Thema|    
+|Aufgabe|Thema|    
 |----------|-----------|    
-|Beschreibt, wie die Sortierung der Instanz von SQL Server festgelegt oder geändert wird.|[Festlegen oder Ändern der Serversortierung](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
-|Beschreibt, wie die Sortierung einer Benutzerdatenbank festgelegt oder geändert wird.|[Festlegen oder Ändern der Datenbanksortierung](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
+|Beschreibt, wie die Sortierung der Instanz von SQL Server festgelegt oder geändert wird. Beachten Sie, dass die Änderung der Serversortierung die Sortierung vorhandener Datenbanken nicht ändert.|[Festlegen oder Ändern der Serversortierung](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
+|Beschreibt, wie die Sortierung einer Benutzerdatenbank festgelegt oder geändert wird. Beachten Sie, dass die Änderung der Datenbanksortierung die Sortierung vorhandener Tabellenspalten nicht ändert.|[Festlegen oder Ändern der Datenbanksortierung](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
 |Beschreibt, wie die Sortierung einer Spalte in der Datenbank festgelegt oder geändert wird.|[Festlegen oder Ändern der Spaltensortierung](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |Beschreibt, wie Sortierungsinformationen auf Server-, Datenbank- oder Spaltenebene zurückgegeben werden.|[Anzeigen von Sortierungsinformationen](../../relational-databases/collations/view-collation-information.md)|    
 |Beschreibt, wie Transact-SQL-Anweisungen geschrieben werden, die die Übertragung von einer Sprache in eine andere verbessern, oder wie mehrere Sprachen einfacher unterstützt werden.|[Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
@@ -646,9 +657,9 @@ Weitere Informationen finden Sie in folgenden verwandten Inhalten:
 * [Name der Windows-Sortierung (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)  
 * [Einführung der UTF-8-Unterstützung für SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
     
-## <a name="see-also"></a>Siehe auch    
+## <a name="see-also"></a>Weitere Informationen    
 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)     
 [Auswählen einer Sprache beim Erstellen eines Volltextindex](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
-[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
-    
+[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
+[Einzelbyte- und Mehrbyte-Zeichensätze](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
  

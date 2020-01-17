@@ -1,7 +1,7 @@
 ---
-title: Unterschiede zwischen den Verfügbarkeitsmodi von Verfügbarkeitsgruppen
+title: Verfügbarkeitsmodi von Verfügbarkeitsgruppen
 description: In diesem Artikel werden die verschiedenen Verfügbarkeitsmodi für Always On-Verfügbarkeitsgruppen beschrieben.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8764ffb829f684b996d22c6ea604fad970a1a30f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934846"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241782"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Unterschiede zwischen den Verfügbarkeitsmodi von Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "67934846"
   
  In der folgenden Abbildung wird eine Verfügbarkeitsgruppe mit fünf Verfügbarkeitsreplikaten angezeigt. Das primäre Replikat und ein sekundäres Replikat sind für den Modus für synchrone Commits mit automatischem Failover konfiguriert. Ein weiteres sekundäres Replikat ist für den Modus für synchrone Commits ausschließlich mit geplantem manuellen Failover konfiguriert, und zwei sekundäre Replikate sind für den Modus für asynchrone Commits konfiguriert, der nur erzwungene manuelle Failover (normalerweise als *erzwungene Failover*bezeichnet) unterstützt.  
   
- ![Verfügbarkeit und Failovermodi von Replikaten](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "Availability and failover modes of replicas")  
+ ![Verfügbarkeits- und Failovermodi von Replikaten](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "Verfügbarkeits- und Failovermodi von Replikaten")  
   
  Das Synchronisierungs- und Failoververhalten zwischen zwei Verfügbarkeitsreplikaten hängt vom Verfügbarkeitsmodus beider Replikate ab. Beispiel: Damit ein synchroner Commit ausgeführt werden kann, muss sowohl das aktuelle primäre Replikat als auch das entsprechende sekundäre Replikat für synchrone Commits konfiguriert sein. Das Gleiche gilt für automatische Failover, weil beide Replikate in diesem Fall für automatische Failover konfiguriert sein müssen. Das Verhalten des oben beschriebenen Bereitstellungsszenarios ist in der folgenden Tabelle zusammengefasst, die das Verhalten je nach verwendetem primären Replikat aufschlüsselt:  
   
@@ -122,7 +122,7 @@ ms.locfileid: "67934846"
  Wenn diese Replikate verbunden sind und die Datenbank synchronisiert ist, wird das manuelle Failover unterstützt. Ein Ausfall des sekundären Replikats wirkt sich nicht auf das primäre Replikat aus. Das primäre Replikat wird ungeschützt ausgeführt, wenn keine Replikate mit dem Status SYNCHRONIZED vorhanden sind (das heißt, ohne Daten an ein sekundäres Replikat zu senden). Wenn das primäre Replikat verloren geht, wechseln die sekundären Replikate in den Status RESOLVING, aber der Datenbankbesitzer kann ein Failover zum sekundären Replikat (mit möglichem Datenverlust) erzwingen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Failover und Failovermodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
 ###  <a name="SyncCommitWithAuto"></a> Modus für synchrone Commits mit automatischem Failover  
- Das automatische Failover bietet eine hohe Verfügbarkeit, indem sichergestellt wird, dass die Datenbank nach dem Ausfall des primären Replikats schnell wieder verfügbar gemacht wird. Um eine Verfügbarkeitsgruppe für ein automatisches Failover zu konfigurieren, müssen Sie sowohl das aktuelle primäre Replikat als auch mindestens ein sekundäres Replikat für den Modus für synchrone Commits mit automatischem Failover festlegen. Sie können bis zu drei Replikate für automatisches Failover haben.  
+ Das automatische Failover bietet Hochverfügbarkeit, indem sichergestellt wird, dass die Datenbank nach dem Ausfall des primären Replikats schnell wieder verfügbar gemacht wird. Um eine Verfügbarkeitsgruppe für ein automatisches Failover zu konfigurieren, müssen Sie sowohl das aktuelle primäre Replikat als auch mindestens ein sekundäres Replikat für den Modus für synchrone Commits mit automatischem Failover festlegen. Sie können bis zu drei Replikate für automatisches Failover haben.  
   
  Damit ein automatisches Failover innerhalb einer bestimmten Zeit ausgeführt werden kann, muss dieses sekundäre Replikat darüber hinaus mit dem primären Replikat synchronisiert werden (Synchronisierung aller sekundären Datenbanken), und der WSFC (Windows Server Failover Clustering)-Cluster muss über ein Quorum verfügen. Wenn das primäre Replikat unter diesen Bedingungen ausfällt, findet ein automatisches Failover statt. Das sekundäre Replikat wechselt in die Rolle des primären Replikats und bietet seine Datenbank als primäre Datenbank an. Weitere Informationen finden Sie im Abschnitt „Automatisches Failover“ des Themas [Failover und Failovermodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   

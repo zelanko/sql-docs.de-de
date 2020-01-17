@@ -1,6 +1,7 @@
 ---
-title: Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen oder Löschen von Artikeln (vorhandene Veröffentlichung)
+description: Hier erfahren Sie, wie Sie Artikel zu vorhandenen Veröffentlichungen für SQL Server hinzufügen oder aus diesen löschen.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5432d4456bf20f73a799726edd53e31f8707a067
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e996ccfd6f6930b4741f15b3da82c1f2856bd4db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907802"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321324"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,16 +52,16 @@ ms.locfileid: "72907802"
   
 3.  Synchronisieren Sie nach Abschluss der Momentaufnahmeerstellung das Abonnement, um das Schema und die Daten für den neuen Artikel zu kopieren.  
 
-    -   Informationen zum Synchronisieren eines Pushabonnements finden Sie unter [Synchronisieren eines Pushabonnements](../../../relational-databases/replication/synchronize-a-push-subscription.md).  
+    -   Informationen zum Synchronisieren eines Pushabonnements finden Sie unter [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-    -   Informationen zum Synchronisieren eines Pullabonnements finden Sie unter [Synchronisieren eines Pullabonnements](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+    -   Informationen zum Synchronisieren eines Pullabonnements finden Sie unter [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="dropping-articles"></a>Löschung von Artikeln  
  Artikel können jederzeit aus einer Veröffentlichung gelöscht werden, wobei jedoch Folgendes zu beachten ist:  
   
 -   Durch das Löschen eines Artikels aus einer Veröffentlichung wird weder das Objekt aus der Veröffentlichungsdatenbank noch das zugehörige Objekt aus der Abonnementdatenbank entfernt. Verwenden Sie DROP \<Objekt>, um diese Objekte ggf. zu entfernen. Wenn Sie einen Artikel löschen möchten, der über Fremdschlüsseleinschränkungen mit anderen veröffentlichten Artikeln verknüpft ist, sollten Sie die Tabelle auf dem Abonnenten manuell oder mithilfe einer bedarfsgesteuerten Skriptausführung löschen. Geben Sie ein Skript an, dass die entsprechenden DROP \<Objekt>-Anweisungen enthält. Weitere Informationen finden Sie unter [Ausführen von Skripts während der Synchronisierung &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
--   Bei Mergeveröffentlichungen mit einem Kompatibilitätsgrad von 90RTM oder höher können Artikel jederzeit gelöscht werden. Es ist jedoch eine neue Momentaufnahme erforderlich. Darüber hinaus gilt:  
+-   Bei Mergeveröffentlichungen mit einem Kompatibilitätsgrad von 90RTM oder höher können Artikel jederzeit gelöscht werden. Es ist jedoch eine neue Momentaufnahme erforderlich. Außerdem zu beachten:  
   
     -   Wenn der Artikel ein übergeordneter Artikel in einer Joinfilter- oder logischen Datensatzbeziehung ist, müssen zunächst die Beziehungen gelöscht werden, was eine erneute Initialisierung erforderlich macht.  
   

@@ -1,6 +1,7 @@
 ---
-title: Anzeigen oder Ändern der Eigenschaften einer Richtlinie der richtlinienbasierten Verwaltung | Microsoft-Dokumentation
-ms.custom: ''
+title: Anzeigen oder Ändern der Eigenschaften einer Richtlinie der richtlinienbasierten Verwaltung
+description: Hier erfahren Sie, wie Sie die Eigenschaften einer Richtlinie der richtlinienbasierten Verwaltung für SQL Server mithilfe von SQL Server Management Studio (SSMS) oder Transact-SQL (T-SQL) anzeigen oder ändern.
+ms.custom: seo-lt-2019
 ms.date: 10/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cadd1acbe5092aee4460a9ffe1d36bfa50a3a9f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a51ca391fe8cc27ad9447e6b4d18b88787532e34
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908153"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558015"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Anzeigen oder Ändern der Eigenschaften einer Richtlinie der richtlinienbasierten Verwaltung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

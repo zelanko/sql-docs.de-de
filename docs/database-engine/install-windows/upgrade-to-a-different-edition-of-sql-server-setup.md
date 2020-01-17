@@ -1,7 +1,7 @@
 ---
-title: Aktualisieren auf eine andere Edition von SQL Server 2016 (Setup) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 07/24/2017
+title: Durchführen eines Upgrades auf eine andere Edition
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2e224e5949fd3f166789e72f7f70d8ca44392179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934679"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258793"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Aktualisieren auf eine andere Edition von SQL Server (Setup)
 
@@ -63,7 +63,7 @@ Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. W
   
 11. Auf der Seite Abgeschlossen finden Sie einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise.  
   
-12. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Nachdem das Setup abgeschlossen ist, sollten Sie unbedingt die vom Installations-Assistenten ausgegebene Meldung lesen. Weitere Informationen über Setupprotokolldateien finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+12. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Nachdem das Setup abgeschlossen ist, sollten Sie unbedingt die vom Installations-Assistenten ausgegebene Meldung lesen. Weitere Informationen finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 13. Wenn Sie ein Upgrade von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]durchgeführt haben, müssen Sie zusätzliche Schritte ausführen, bevor Sie die aktualisierte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden können:  
   
@@ -73,7 +73,7 @@ Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. W
   
  Wenn Sie von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]aktualisiert haben, müssen Sie zusätzlich zu den oben beschriebenen Schritten möglicherweise die folgenden Schritte ausführen:  
   
--   Benutzer, die in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] bereitgestellt wurden, stehen auch nach dem Upgrade zur Verfügung. Dies gilt insbesondere für die Gruppe BUILTIN\Users. Deaktivieren oder entfernen Sie diese Konten nach Bedarf, oder stellen Sie sie erneut bereit. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Benutzer, die in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] bereitgestellt wurden, stehen auch nach dem Upgrade zur Verfügung. Dies gilt insbesondere für die Gruppe BUILTIN\Users. Deaktivieren oder entfernen Sie diese Konten nach Bedarf, oder stellen Sie sie erneut bereit. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)betreffen.  
   
 -   Die Größe und der Wiederherstellungsmodus für tempdb und Systemdatenbanken bleiben nach dem Upgrade unverändert. Konfigurieren Sie diese Einstellungen bei Bedarf neu. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
@@ -81,6 +81,6 @@ Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. W
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Upgrade von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Abwärtskompatibilität_gelöscht](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Abwärtskompatibilität](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

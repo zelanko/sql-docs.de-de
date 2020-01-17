@@ -1,34 +1,51 @@
 ---
-title: Installieren des SQL Server-Agent unter Linux
-description: In diesem Artikel ist beschrieben, wie der SQL Server-Agent unter Linux installiert wird.
+title: Konfigurieren des SQL Server-Agent unter Linux
+description: In diesem Artikel wird beschrieben, wie der SQL Server-Agent unter Linux aktiviert oder installiert wird.
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/20/2018
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: c27a31a5e6b9ed771df82e942087d7be88270038
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b281c60248d86daba36a2cf5628e1ae729d227fe
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032468"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258390"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Installieren des SQL Server-Agent unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
- Der [SQL Server-Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) führt geplante SQL Server-Aufträge aus. Ab SQL Server 2017 CU4 ist der SQL Server-Agent im **mssql-server**-Paket enthalten und standardmäßig deaktiviert. Informationen zu den Funktionen, die in dieser Version des SQL Server-Agent unterstützt werden, sowie Versionsinformationen finden Sie in den [Versionshinweisen](sql-server-linux-release-notes.md).
+In diesem Artikel wird beschrieben, wie der SQL Server-Agent unter Linux aktiviert oder installiert wird.
 
- Installieren/aktivieren Sie den SQL Server-Agent:
-- [Bei einer Version ab 2017 CU4: „Aktivieren“ des SQL Server-Agent](#EnableAgentAfterCU4)
-- [Bei einer Version bis einschließlich 2017 CU3: „Installieren“ des SQL Server-Agent](#InstallAgentBelowCU4)
+Der [SQL Server-Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) führt geplante SQL Server-Aufträge aus. Ab SQL Server 2017 CU4 ist der SQL Server-Agent im **mssql-server**-Paket enthalten und standardmäßig deaktiviert. Informationen zu den Funktionen, die in dieser Version des SQL Server-Agent unterstützt werden, sowie Versionsinformationen finden Sie in den [Versionshinweisen](sql-server-linux-release-notes.md).
 
+## <a name="instructions"></a>Instructions
 
-## <a name="EnableAgentAfterCU4">Bei einer Version ab 2017 CU4: „Aktivieren“ des SQL Server-Agent</a>
+Führen Sie die folgenden Schritte aus, bevor Sie den SQL Server-Agent unter Linux verwenden, um diesen zu aktivieren oder zu installieren.
 
- Um den SQL Server-Agent zu aktivieren, führen Sie die folgenden Schritte aus.
+1. Fügen Sie den Hostnamen (mit und ohne Domäne) in den `/etc/hosts`-Dateien hinzu. In den folgenden Zeilen sehen Sie ein Beispiel für das Format für diese Einträge:
+
+   ```bash
+   "IP Address" "hostname"
+   "IP Address" "hostname.domain.com"
+   ```
+
+1. Befolgen Sie die Anweisungen in dem Abschnitt, der auf Ihrer Version von SQL Server basiert:
+
+   | Versionen | Instructions |
+   |---|---|
+   | SQL Server 2017 CU4 und höher</br>SQL Server 2019 | [Aktivieren des SQL Server-Agent](#EnableAgentAfterCU4) |
+   | SQL Server 2017 CU3 und niedriger | [Installieren des SQL Server-Agent](#InstallAgentBelowCU4) |
+
+## <a id="EnableAgentAfterCU4"></a>Aktivieren des SQL Server-Agent
+
+Bei SQL Server 2019 und SQL Server 2017 CU4 und höher müssen Sie den SQL Server-Agent nur aktivieren. Sie müssen kein separates Paket installieren.
+
+Um den SQL Server-Agent zu aktivieren, führen Sie die folgenden Schritte aus.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
@@ -38,7 +55,9 @@ sudo systemctl restart mssql-server
 > [!NOTE]
 > Wenn Sie von 2017 CU3 oder darunter mit installiertem Agent ein Upgrade durchführen, wird der SQL Server-Agent automatisch aktiviert, und frühere Agent-Pakete werden deinstalliert.  
 
-## <a name="InstallAgentBelowCU4">Bei einer Version bis einschließlich 2017 CU3: „Installieren“ des SQL Server-Agent</a>
+## <a name="InstallAgentBelowCU4"></a>Installieren des SQL Server-Agent
+
+Für SQL Server 2017 CU3 und früher müssen Sie das Paket für den SQL Server-Agent installieren.
 
 > [!NOTE]
 > Die folgenden Installationsanweisungen gelten für die SQL Server-Versionen bis einschließlich 2017 CU3. Bevor Sie die den SQL Server-Agent installieren, müssen Sie zunächst [SQL Server installieren](sql-server-linux-setup.md#platforms). Dadurch werden die Schlüssel und Repositorys konfiguriert, die Sie verwenden, wenn Sie das **mssql-server-agent**-Paket installieren.

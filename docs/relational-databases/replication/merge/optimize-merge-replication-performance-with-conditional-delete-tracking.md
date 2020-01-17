@@ -1,6 +1,7 @@
 ---
-title: Optimieren der Mergereplikationsleistung durch bedingtes Nachverfolgen von Löschvorgängen | Microsoft Dokumentation
-ms.custom: ''
+title: Optimieren der Leistung durch bedingte Nachverfolgung von Löschvorgängen (Merge)
+description: Hier erfahren Sie, wie Sie die Mergereplikationsleistung durch die bedingte Nachverfolgung von Löschvorgängen für SQL Server optimieren.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3466c0ec73f78ef6e67d86f4be48e8c7b8bfe943
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 972a1e200a2025261c6a9fb6e0ffd80f0dc4f219
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018752"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321491"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Optimieren der Mergereplikationsleistung durch bedingtes Nachverfolgen von Löschvorgängen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "68018752"
 -   Replikationsprogrammierung ([!INCLUDE[tsql](../../../includes/tsql-md.md)]): [Specify Merge Replication properties (Angeben von Mergereplikationseigenschaften)](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Artikeloptionen für die Mergereplikation](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
+ [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Verwenden von Always Encrypted mit dem .NET Framework-Datenanbieter für SQL Server | Microsoft-Dokumentation
-ms.custom: ''
+title: Always Encrypted mit .NET Framework-Datenanbieter
+description: In diesem Artikel erfahren Sie, wie Sie .NET-Anwendungen mithilfe des Always Encrypted-Features für SQL Server entwickeln.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database
@@ -11,12 +12,12 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07351f5fe839f8304e56b5a94818c93255149fa5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594450"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558069"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Verwenden von Always Encrypted mit dem .NET Framework-Datenanbieter für SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ Konfigurieren der Anwendung:
 2. Aktualisieren Sie die Anwendungskonfiguration (z. B. in der Datei „web.config“ oder „app.config“), um die Zuordnung zu einem Enclave-Typ zu definieren, mit dem Ihre [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Instanz konfiguriert wurde. (Weitere Informationen finden Sie unter [Serverkonfigurationsoption „column encryption enclave type“](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).) [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] unterstützt VBS-Enclaves und den Host-Überwachungsdienst für den Nachweis. Daher müssen Sie den VBS-Enclave-Typ der Klasse Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider aus dem NuGet-Paket zuordnen. 
 3. Aktivieren Sie Enclave-Berechnungen für eine Verbindung von Ihrer Anwendung zur Datenbank, indem Sie das Schlüsselwort der Enclave-Nachweis-URL in der Verbindungszeichenfolge auf einen Nachweisendpunkt festlegen. Der Wert des Schlüsselworts sollte auf den Nachweisendpunkt des HGS-Servers festgelegt werden, der in Ihrer Umgebung konfiguriert ist. 
 
-Ein Schritt-für-Schritt-Tutorial finden Sie unter [Tutorial: Entwickeln einer .NET Framework-Anwendung mithilfe von Always Encrypted mit Secure Enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md).
+Ein Schritt-für-Schritt-Tutorial finden Sie unter [Tutorial: Entwickeln einer .NET Framework-Anwendung mithilfe von Always Encrypted mit Secure Enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Abrufen und Ändern von Daten in verschlüsselten Spalten
 
@@ -294,7 +295,7 @@ Vorgang zum Abrufen eines Spaltenverschlüsselungsschlüssels:
 Der .NET Framework-Datenanbieter für SQL Server enthält die folgenden integrierten Spaltenhauptschlüssel-Speicheranbieter, die mit den bestimmten Anbieternamen vorab registriert wurden (um den Anbieter zu suchen).
 
 
-| Class | und Beschreibung | Anbietername (Suche) |
+| Klasse | BESCHREIBUNG | Anbietername (Suche) |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider-Klasse| Ein Anbieter für den Windows-Zertifikatspeicher. | MSSQL_CERTIFICATE_STORE |
 |[SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Hinweis:** Dieser Anbieter ist in .NET Framework 4.6.1 und höheren Versionen verfügbar. |Ein Anbieter für einen Schlüsselspeicher, der die [Microsoft Cryptography API unterstützt: Next Generation (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt.  | MSSQL_CNG_STORE|
@@ -303,7 +304,7 @@ Der .NET Framework-Datenanbieter für SQL Server enthält die folgenden integrie
 Sie müssen keine Änderungen am Anwendungscode vornehmen, um diese Anbieter zu verwenden, aber beachten Sie Folgendes:
 
 - Sie (oder der Datenbankadministrator) müssen sicherstellen, dass der in den Metadaten des Spaltenhauptschlüssels konfigurierte Anbietername richtig ist und der Pfad des Spaltenhauptschlüssels dem Schlüsselpfadformat entspricht, das für einen angegebenen Anbieter gültig ist. Es wird empfohlen, dass Sie die Schlüssel mithilfe von Tools wie SQL Server Management Studio konfigurieren, die die gültigen Anbieternamen und Schlüsselpfade automatisch generieren, wenn die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) ausgegeben wird. Weitere Informationen finden Sie unter [Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) und [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
-- Stellen Sie sicher, dass die Anwendung auf den Schlüssel im Schlüsselspeicher zugreifen kann. Dies kann das Gewähren des Zugriffs auf den Schlüssel und/oder Schlüsselspeicher für die Anwendung (abhängig vom Schlüsselspeicher) oder das Ausführen anderer wichtiger speicherspezifischer Konfigurationsschritte einbeziehen. Für den Zugriff auf einen Schlüsselspeicher, der eine CNG oder CAPI implementiert (z. B. ein Hardwaresicherheitsmodul), müssen Sie sicherstellen, dass eine Bibliothek auf dem Anwendungscomputer installiert ist, die eine CNG oder CAPI für den Speicher implementiert. Ausführliche Informationen finden Sie unter [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+- Stellen Sie sicher, dass die Anwendung auf den Schlüssel im Schlüsselspeicher zugreifen kann. Dies kann das Gewähren des Zugriffs auf den Schlüssel und/oder Schlüsselspeicher für die Anwendung (abhängig vom Schlüsselspeicher) oder das Ausführen anderer wichtiger speicherspezifischer Konfigurationsschritte einbeziehen. Für den Zugriff auf einen Schlüsselspeicher, der eine CNG oder CAPI implementiert (z. B. ein Hardwaresicherheitsmodul), müssen Sie sicherstellen, dass eine Bibliothek auf dem Anwendungscomputer installiert ist, die eine CNG oder CAPI für den Speicher implementiert. Ausführliche Informationen finden Sie unter [Erstellen und Speichern von Spaltenhauptschlüsseln für Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### <a name="using-azure-key-vault-provider"></a>Verwenden des Azure Key Vault-Anbieters
 
@@ -522,7 +523,7 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 
 ## <a name="copying-encrypted-data-using-sqlbulkcopy"></a>Kopieren von verschlüsselten Daten mithilfe von „SqlBulkCopy“
 
-Mit „SqlBulkCopy“ können Sie Daten, die bereits verschlüsselt sind und in einer Tabelle gespeichert werden, in eine andere Tabelle kopieren, ohne die Daten zu entschlüsseln. Gehen Sie dazu wie folgt vor:
+Mit „SqlBulkCopy“ können Sie Daten, die bereits verschlüsselt sind und in einer Tabelle gespeichert werden, in eine andere Tabelle kopieren, ohne die Daten zu entschlüsseln. Gehen Sie dafür folgendermaßen vor:
 
 - Stellen Sie sicher, dass die Verschlüsselungskonfiguration der Zieltabelle mit der Konfiguration der Quelltabelle identisch ist. Insbesondere müssen für beide Tabellen dieselben Spalten verschlüsselt sein. Zudem müssen die Spalten mithilfe derselben Verschlüsselungstypen und mit denselben Verschlüsselungsschlüsseln verschlüsselt werden. Hinweis: Wenn eine der Zielspalten anders als die entsprechende Quellspalte verschlüsselt wurde, können Sie die Daten in der Zieltabelle nach dem Kopiervorgang nicht entschlüsseln. Die Daten werden beschädigt.
 - Konfigurieren Sie beide Datenbankverbindungen, zur Quelltabelle und zur Zieltabelle, ohne Always Encrypted zu aktivieren. 
@@ -564,7 +565,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Name|und Beschreibung|In .NET Version eingeführt
+|Name|BESCHREIBUNG|In .NET Version eingeführt
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Ein Schlüsselspeicheranbieter für den Windows-Zertifikatspeicher.|  4.6
 |[SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Eine Schlüsselspeicheranbieter für Microsoft Cryptography API: Next Generation (CNG).|  4.6.1
