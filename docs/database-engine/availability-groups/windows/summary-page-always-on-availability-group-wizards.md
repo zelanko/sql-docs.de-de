@@ -1,6 +1,7 @@
 ---
-title: Seite „Zusammenfassung“ (Always On-Verfügbarkeitsgruppen-Assistenten) | Microsoft-Dokumentation
-ms.custom: ''
+title: 'Assistent für Verfügbarkeitsgruppen: Seite "Zusammenfassung"'
+description: In diesem Artikel werden die Optionen der Seite „Zusammenfassung“ des Always On-Verfügbarkeitsgruppen-Assistenten in SQL Server Management Studio erläutert.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a8f18c72deffc33878de95ebc07a80c07cd49d67
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892263"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822556"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Seite „Zusammenfassung“ (Always On-Verfügbarkeitsgruppen-Assistenten)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +33,16 @@ ms.locfileid: "68892263"
  **Skript**  
  Klicken Sie, um ein [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript für die im Zusammenfassungsraster aufgeführten Aktionen zu generieren. Sie werden aufgefordert, ein Ziel für das Skript anzugeben.  
   
- **Zurück**  
+ **Previous**  
  Klicken Sie, um zur Seite zurückzukehren, die der aktuellen Seite unmittelbar vorausgeht. Sie können die Schaltfläche **Zurück** verwenden, um zurück zu einer vorausgehenden Seiten zu navigieren und optional einen angegebenen Wert ändern.  
   
  **Fertig stellen**  
  Wenn Sie mit der Auswahl zufrieden sind, klicken Sie, damit der Assistent mit dem Erstellen der Verfügbarkeitsgruppe fortfährt.  
   
  **Abbrechen**  
- Klicken Sie, um den Assistenten abzubrechen. Auf der Seite **Zusammenfassung** wird durch Abbrechen des Assistenten dieser beendet, ohne Aktionen auszuführen.  
+ Klicken Sie, um den Assistenten abzubrechen. Auf der Seite **Zusammenfassung** kann der Assistent durch Abbrechen beendet werden, ohne Aktionen auszuführen.  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [&#91;Top&#93;](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [&#91;Top&#93;](#Top) verwendet wird  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -53,9 +54,9 @@ ms.locfileid: "68892263"
   
 -   [Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [&#91;Top&#93;](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [&#91;Top&#93;](#Top) verwendet wird  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Implementieren eines Geschäftslogikhandlers für einen Mergeartikel | Microsoft-Dokumentation
-ms.custom: ''
+title: Einrichten eines Geschäftslogikhandlers für Mergeartikel
+description: Verwenden Sie Replikationsprogrammierung oder Replikationsverwaltungsobjekte, um einen Geschäftslogikhandler für die Synchronisierung der Mergereplikation zu konfigurieren.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17a7c0e27dbb6cb80cb0069a2ea76036654280e3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846682"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322147"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "70846682"
   
 2.  Fügen Sie Verweise auf das Projekt für die folgenden Namespaces hinzu.  
   
-    |Assemblyverweis|Speicherort|  
+    |Assemblyverweis|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (Standardinstallation)|  
     |<xref:System.Data>|GAC (Komponente von .NET Framework)|  
@@ -132,7 +133,7 @@ ms.locfileid: "70846682"
   
 2.  Fügen Sie Verweise auf das Projekt für die folgenden Namespaces hinzu.  
   
-    |Assemblyverweis|Speicherort|  
+    |Assemblyverweis|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (Standardinstallation)|  
     |<xref:System.Data>|GAC (Komponente von .NET Framework)|  
@@ -171,11 +172,11 @@ ms.locfileid: "70846682"
   
 1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse. Übergeben Sie <xref:Microsoft.SqlServer.Management.Common.ServerConnection> von Schritt 1.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Klasse. Übergeben Sie <xref:Microsoft.SqlServer.Management.Common.ServerConnection> von Schritt 1.  
   
 3.  Rufen Sie <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> auf, und überprüfen Sie das zurückgegebene <xref:System.Collections.ArrayList> -Objekt, um sicherzustellen, dass die Assembly noch nicht als Geschäftslogikhandler registriert wurde.  
   
-4.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> -Klasse. Geben Sie die folgenden Eigenschaften an:  
+4.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler>-Klasse. Geben Sie die folgenden Eigenschaften an:  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> &ndash; der Name der .NET-Assembly. Sie müssen den vollständigen Pfad mit dem Assemblynamen angeben, falls die Assembly nicht im gleichen Verzeichnis wie die ausführbare Datei für den Merge-Agent, im gleichen Verzeichnis wie die Anwendung, mit der der Merge-Agent synchron gestartet wird, oder im GAC bereitgestellt wird. Sie müssen den vollständigen Pfad mit dem Assemblynamen angeben, wenn Sie einen Geschäftslogikhandler mit der Websynchronisierung verwenden.  
   
@@ -193,7 +194,7 @@ ms.locfileid: "70846682"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle> -Klasse. Legen Sie die folgenden Eigenschaften fest:  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle>-Klasse. Legen Sie die folgenden Eigenschaften fest:  
   
     -   Den Namen des Artikels für <xref:Microsoft.SqlServer.Replication.Article.Name%2A>  
   
@@ -209,7 +210,7 @@ ms.locfileid: "70846682"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle> -Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle>-Klasse.  
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>und <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> fest.  
   

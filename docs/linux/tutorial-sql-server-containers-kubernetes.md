@@ -1,20 +1,20 @@
 ---
-title: Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes Service
+title: Bereitstellen eines SQL Server-Containers mit Azure Kubernetes Service (AKS)
 description: In diesem Tutorial wird gezeigt, wie Sie eine SQL Server-Hochverfügbarkeitslösung mit Kubernetes in Azure Kubernetes Service bereitstellen.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653707"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558346"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes Service
 
@@ -250,7 +250,7 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container zu beschreiben, d
 
    ![Screenshot: Befehl „get pod“](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
 
-   In der vorangehenden Abbildung weist der Pod den Status `Running` auf. Dieser Status gibt an, dass der Container bereit ist. Dies kann einige Minuten dauern.
+   In der vorangehenden Abbildung weist der Pod den Status `Running` auf. Dieser Status gibt an, dass der Container bereit ist. Dieser Vorgang kann einige Minuten dauern.
 
    >[!NOTE]
    >Nachdem die Bereitstellung erstellt wurde, kann es einige Minuten dauern, bis der Pod sichtbar ist. Die Verzögerung liegt daran, dass der Cluster das Image [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) per Pull aus dem Docker-Hub abruft. Nachdem das Image zum ersten Mal per Pull abgerufen wurde, können nachfolgende Bereitstellungen schneller sein, wenn die Bereitstellung einen Knoten nutzt, auf dem bereits ein Image zwischengespeichert wurde. 

@@ -1,6 +1,7 @@
 ---
-title: Upgraden von Always On-Verfügbarkeitsgruppen-Replikatinstanzen | Microsoft-Dokumentation
-ms.custom: ''
+title: Upgrade von Replikaten von Verfügbarkeitsgruppen
+dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910784"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822189"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ Beachten Sie folgende Richtlinien, wenn Sie Serverupgrades oder -updates durchf�
 ## <a name="rolling-upgrade-process"></a>Prozess des parallelen Upgrades  
  Die genauen Schritte hängen von Faktoren wie der Bereitstellungstopologie Ihrer Verfügbarkeitsgruppen und dem Commitmodus der einzelnen Replikate ab. Im einfachsten Szenario ist ein paralleles Upgrade jedoch ein mehrstufiger Prozess, der in seiner einfachsten Form aus den folgenden Schritten besteht:  
   
- ![Upgrade von Verfügbarkeitsgruppen in HADR-Szenarios](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "AG Upgrade in HADR Scenario")  
+ ![Upgrade von Verfügbarkeitsgruppen in einem HADR-Szenario](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Upgrade von Verfügbarkeitsgruppen in einem HADR-Szenario")  
   
 1.  Deaktivieren des automatischen Failovers für alle Replikate mit synchronem Commit  
   
@@ -100,7 +101,7 @@ Beachten Sie folgende Richtlinien, wenn Sie Serverupgrades oder -updates durchf�
 ## <a name="ag-with-one-remote-secondary-replica"></a>Verfügbarkeitsgruppe mit einem sekundären Remotereplikat  
  Wenn Sie eine Verfügbarkeitsgruppe ausschließlich zur Notfallwiederherstellung bereitgestellt haben, müssen Sie für die Verfügbarkeitsgruppe möglicherweise ein Failover auf ein sekundäres Replikat mit asynchronem Commit ausführen. Diese Konfiguration wird in der folgenden Abbildung dargestellt:  
   
- ![Upgrade von Verfügbarkeitsgruppen in DR-Szenarios](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "AG Upgrade in DR Scenario")  
+ ![Upgrade von Verfügbarkeitsgruppen in einem DR-Szenario](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Upgrade von Verfügbarkeitsgruppen in einem DR-Szenario")  
   
  In diesem Fall müssen Sie für die Verfügbarkeitsgruppe während des parallelen Upgrades ein Failover auf das sekundäre Replikat mit asynchronem Commit ausführen. Ändern Sie den Commitmodus zur Vermeidung von Datenverlusten in den synchronen Commitmodus, und warten Sie mit dem Failover der Verfügbarkeitsgruppe, bis das sekundäre Replikat synchronisiert ist. Der Prozess zum Durchführen eines parallelen Upgrades kann somit folgendermaßen aussehen:  
   
@@ -127,7 +128,7 @@ Beachten Sie folgende Richtlinien, wenn Sie Serverupgrades oder -updates durchf�
 ## <a name="ag-with-failover-cluster-instance-nodes"></a>Verfügbarkeitsgruppe mit Failoverclusterinstanz-Knoten  
  Falls eine Verfügbarkeitsgruppe Failoverclusterinstanz-Knoten (Failover Cluster Instance, FCI) enthält, sollten Sie die inaktiven Knoten vor den aktiven Knoten upgraden. In der folgenden Abbildung ist ein gängiges Szenario für Verfügbarkeitsgruppen mit FCIs dargestellt. Es basiert auf FCIs, die auf lokale Hochverfügbarkeit und asynchrone Commits zur Remotenotfallwiederherstellung ausgelegt sind, und veranschaulicht die Schritte zum Ausführen des Upgrades.  
   
- ![Upgrade von Verfügbarkeitsgruppen mit FCIs](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "AG Upgrade with FCIs")  
+ ![Upgrade von Verfügbarkeitsgruppen bei Failovercluster-Instanzen](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Upgrade von Verfügbarkeitsgruppen bei Failovercluster-Instanzen")  
   
 1.  Upgraden oder Aktualisieren von REMOTE2 (Remote2)  
   

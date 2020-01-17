@@ -1,5 +1,6 @@
 ---
-title: Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse' | Microsoft-Dokumentation
+title: Seite ‚Auswertungsergebnisse‘ des Dialogfelds ‚Richtlinien auswerten‘
+description: In diesem Artikel wird die Seite „Auswertungsergebnisse“ des Dialogfelds „Richtlinien auswerten“ für die richtlinienbasierte Verwaltung in SQL Server Management Studio (SSMS) beschrieben.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0e6d5c9d558b65e091dfb9ef0901d15ffb0ac282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137798"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558252"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieses Dialogfelds können Sie die Ergebnisse der Richtlinienauswertung anzeigen und richtlinienbasierte Verwaltungsrichtlinien auf einen Satz von Zielen anwenden, die mit den Richtlinien nicht übereinstimmen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Ergebnisse: Richtlinie**  
  Der Name der Richtlinie, die ausgewertet wird. Dieses Feld ist schreibgeschützt.  
   

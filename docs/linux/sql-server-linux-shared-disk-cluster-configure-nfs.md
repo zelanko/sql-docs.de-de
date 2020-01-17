@@ -1,6 +1,7 @@
 ---
-title: 'Konfigurieren einer Failoverclusterinstanz (NFS-Speicher): SQL Server für Linux'
-description: ''
+title: Konfigurieren einer Failoverclusterinstanz mithilfe von NFS-Speicher – SQL Server für Linux
+description: In diesem Artikel erfahren Sie, wie Sie eine Failoverclusterinstanz (FCI) mithilfe von NFS-Speicher für SQL Server unter Linux konfigurieren.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1088060b8f1af418f14210b7e09a6641fc3a62d8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 35f6dc79756c192419dbe3a8962d5dcdfeea8aef
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032365"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558335"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Konfigurieren einer Failoverclusterinstanz (NFS): SQL Server für Linux
 
@@ -51,7 +52,7 @@ Stellen Sie sicher, dass Ihre Sicherheitsstandards für den Zugriff erzwungen we
 
 3. Befolgen Sie für Systemdatenbanken oder Daten, die am Standardspeicherort gespeichert sind, die folgenden Schritte. Fahren Sie andernfalls mit Schritt 4 fort.
  
-   * Stellen Sie sicher, dass SQL Server auf dem Server, auf dem Sie arbeiten, angehalten wurde.
+   * Stellen Sie sicher, dass SQL Server auf dem Server beendet wurde, auf dem Sie arbeiten.
 
     ```bash
     sudo systemctl stop mssql-server
@@ -133,7 +134,7 @@ Stellen Sie sicher, dass Ihre Sicherheitsstandards für den Zugriff erzwungen we
 
     ![10-mountnoswitches][2]
 
-   * Wechseln Sie zum Benutzer „mssql“. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
+   * Wechseln Sie zum mssql-Benutzer. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
 
     ```bash
     su mssql
@@ -145,7 +146,7 @@ Stellen Sie sicher, dass Ihre Sicherheitsstandards für den Zugriff erzwungen we
     cp /var/opt/mssql/tmp/* /var/opt/mssqldata
     ```
 
-   * Überprüfen Sie, ob die Dateien vorhanden sind.
+   * Stellen Sie sicher, dass die Dateien vorhanden sind.
 
     ```bash
     ls /var/opt/mssql/data
@@ -241,12 +242,12 @@ Stellen Sie sicher, dass Ihre Sicherheitsstandards für den Zugriff erzwungen we
 
     \<FolderMountedIn> ist der Ordner, der im vorherigen Schritt erstellt wurde. Unten finden Sie ein Beispiel. 
  
-5. Wiederholen Sie die Schritte auf dem/den anderen Knoten.
+5. Wiederholen Sie die Schritte auf dem oder den anderen Knoten.
 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Configure failover cluster instance – SQL Server on Linux (Konfigurieren einer Failoverclusterinstanz – SQL Server unter Linux)](sql-server-linux-shared-disk-cluster-configure.md)
+[Konfigurieren einer Failoverclusterinstanz – SQL Server für Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/05-nfsacl.png

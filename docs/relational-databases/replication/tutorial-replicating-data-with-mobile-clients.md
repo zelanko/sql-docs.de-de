@@ -1,6 +1,7 @@
 ---
-title: 'Lernprogramm: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Tutorial: Konfigurieren der Mergereplikation'
+description: In diesem Tutorial erfahren Sie, wie Sie die Mergereplikation zwischen einem SQL Server und einem mobilen Client konfigurieren.
+ms.custom: seo-lt-2019
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +14,14 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517969"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321852"
 ---
-# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Lernprogramm: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)
+# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Die Mergereplikation stellt eine geeignete Lösung für das Problem des Verschiebens von Daten zwischen einem zentralen Server und mobilen Clients dar, die nur gelegentlich miteinander verbunden sind. Mithilfe der Replikations-Assistenten können Sie eine Mergereplikationstopologie auf einfache Weise konfigurieren und verwalten. 
 
@@ -109,21 +110,21 @@ In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull
   
 10. Klicken Sie erst auf der Seite **Tabellenzeilen filtern** auf **Employee (Human Resources)** , dann auf **Hinzufügen** und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
   
-    A. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** den Eintrag **Sales.SalesOrderDetail** aus. Klicken Sie auf **Write the join statement manually** (Joinanweisung manuell schreiben), und schließen Sie den Vorgang wie folgt ab:  
+    a. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** den Eintrag **Sales.SalesOrderDetail** aus. Klicken Sie auf **Write the join statement manually** (Joinanweisung manuell schreiben), und schließen Sie den Vorgang wie folgt ab:  
   
     ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    B. Klicken Sie unter **Geben Sie Joinoptionen an** auf die Option **Eindeutiger Schlüssel**, und klicken Sie anschließend auf **OK**.
+    b. Klicken Sie unter **Geben Sie Joinoptionen an** auf die Option **Eindeutiger Schlüssel**, und klicken Sie anschließend auf **OK**.
 
     ![Optionsauswahl zum Hinzufügen eines Joins zum Filter](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
   
 13. Klicken Sie erst auf der Seite **Tabellenzeilen filtern** auf **SalesOrderHeader**, dann auf **Hinzufügen** und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
   
-    A. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** den Eintrag **Sales.SalesOrderDetail**aus.    
-    B. Klicken Sie auf **Anweisung mit dem Generator erstellen**.  
+    a. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** den Eintrag **Sales.SalesOrderDetail**aus.    
+    b. Klicken Sie auf **Anweisung mit dem Generator erstellen**.  
     c. Überprüfen Sie im Feld **Vorschau**, dass die Joinanweisung wie folgt lautet:  
   
     ```sql  
@@ -164,14 +165,14 @@ In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull
   
 2. Klicken Sie im Ordner **Lokale Veröffentlichungen** erst mit der rechten Maustaste auf **AdvWorksSalesOrdersMerge** und anschließend mit der linken auf **Eigenschaften**.  
   
-   A. Wählen Sie die Seite **Veröffentlichungszugriffsliste** und anschließend **Hinzufügen** aus. 
+   a. Wählen Sie die Seite **Veröffentlichungszugriffsliste** und anschließend **Hinzufügen** aus. 
   
-   B. Klicken Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** auf <*Name_des_Verlegercomputers*> **\repl_merge** und anschließend auf **OK**. Wählen Sie erneut **OK** aus. 
+   b. Klicken Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** auf <*Name_des_Verlegercomputers*> **\repl_merge** und anschließend auf **OK**. Wählen Sie erneut **OK** aus. 
 
    ![Optionsauswahl zum Hinzufügen der Anmeldung des Merge-Agents](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
   
-Weitere Informationen finden Sie in den folgenden Themen:  
+Weitere Informationen finden Sie unter  
 - [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md) 
 - [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 - [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md)  
@@ -200,7 +201,7 @@ In diesem Abschnitt erfahren Sie, wie Sie der zuvor erstellten Mergeveröffentli
   
 6. Wählen Sie auf der Seite **Abonnenten** den Instanznamen des Abonnentenservers aus. Wählen Sie unter **Abonnementdatenbank** die Option **Neue Datenbank** in der Liste aus.  
   
-   Geben Sie im Dialogfeld **Neue Datenbank** den Namen **SalesOrdersReplica** in das Feld **Datenbankname** ein. Wählen Sie **OK**, und wählen Sie anschließend **Weiter**aus. 
+   Geben Sie im Dialogfeld **Neue Datenbank** den Namen **SalesOrdersReplica** in das Feld **Datenbankname** ein. Wählen Sie **OK** und anschließend **Weiter** aus. 
 
    ![Optionsauswahl zum Hinzufügen einer Datenbank zum Abonnenten](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
@@ -230,7 +231,7 @@ In diesem Abschnitt erfahren Sie, wie Sie der zuvor erstellten Mergeveröffentli
     
    ![Optionsauswahl zum Festlegen der Anmeldung](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   
-1. Wählen Sie auf der Seite **Benutzerzuordnung** die Datenbank **SalesOrdersReplica** und die Rolle **db_owner** aus. Erteilen Sie auf der Seite **Sicherungsfähige Elemente** die Berechtigung **Explizit** für **Ablaufverfolgung ändern**. Wählen Sie **OK**.
+1. Wählen Sie auf der Seite **Benutzerzuordnung** die Datenbank **SalesOrdersReplica** und die Rolle **db_owner** aus. Erteilen Sie auf der Seite **Sicherungsfähige Elemente** die Berechtigung **Explizit** für **Ablaufverfolgung ändern**. Klicken Sie auf **OK**.
 
    ![Seiten „Benutzerzuordnung“ und „Sicherungsfähige Elemente“](media/tutorial-replicating-data-with-mobile-clients/setdbo.png)
   
@@ -240,14 +241,14 @@ In diesem Abschnitt erfahren Sie, wie Sie der zuvor erstellten Mergeveröffentli
   
 2. Klicken Sie im Ordner **Lokale Veröffentlichungen** erst mit der rechten Maustaste auf die **AdvWorksSalesOrdersMerge**-Veröffentlichung und anschließend mit der linken auf **Eigenschaften**.  
    
-   A. Klicken Sie erst auf die Seite **Datenpartitionen** und dann auf **Hinzufügen**.   
-   B. Geben Sie im Dialogfeld **Datenpartition hinzufügen** im Feld **HOST_NAME-Wert** den Wert **adventure-works\pamela0** ein, und klicken Sie anschließend auf **OK**.  
+   a. Klicken Sie erst auf die Seite **Datenpartitionen** und dann auf **Hinzufügen**.   
+   b. Geben Sie im Dialogfeld **Datenpartition hinzufügen** im Feld **HOST_NAME-Wert** den Wert **adventure-works\pamela0** ein, und klicken Sie anschließend auf **OK**.  
    c. Wählen Sie die neu hinzugefügte Partition aus, klicken Sie erst auf **Die ausgewählten Momentaufnahmen jetzt generieren** und anschließend auf **OK**. 
 
    ![Optionsauswahl zum Hinzufügen einer Partition](media/tutorial-replicating-data-with-mobile-clients/partition.png)
   
   
-Weitere Informationen finden Sie in den folgenden Themen:  
+Weitere Informationen finden Sie unter  
 - [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)  
 - [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
@@ -276,7 +277,7 @@ Nun wissen Sie, wie Sie ihren Verleger und Ihren Abonnenten erfolgreich für Ihr
 2. Dieses Verfahren wiederholen, wenn Netzwerkkonnektivität zum Synchronisieren von Daten zwischen Verleger und Abonnent verfügbar ist
 3. Die Tabelle **SalesOrderHeader** oder **SalesOrderDetail** auf dem anderen Server abfragen, um die replizierten Änderungen anzuzeigen  
   
-Weitere Informationen finden Sie in den folgenden Themen:   
+Weitere Informationen finden Sie unter   
 - [Initialisieren eines Abonnements mit einer Momentaufnahme](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [Synchronisieren von Daten](../../relational-databases/replication/synchronize-data.md)  
 - [Synchronisieren eines Pullabonnements](../../relational-databases/replication/synchronize-a-pull-subscription.md)  

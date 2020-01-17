@@ -1,6 +1,7 @@
 ---
-title: Spiegelserverinstanz (Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung) | Microsoft-Dokumentation
-ms.custom: ''
+title: 'Konfigurieren des Sicherheits-Assistenten: Spiegelserverinstanz'
+description: Hier finden Sie eine Beschreibung der Seite ‚Spiegelserverinstanz‘ des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung in SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8a311d8792468909fe00f02a051e33326f2483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d52fa3912bffd084a8f95e79963abcd99158cdd4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045628"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822394"
 ---
-# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Spiegelserverinstanz (Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung)
+# <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung: Spiegelserverinstanz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Auf dieser Seite können Informationen zu der Serverinstanz der Spiegeldatenbank angegeben werden.  
   
@@ -32,13 +33,13 @@ ms.locfileid: "68045628"
   
 -   [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Spiegelserverinstanz**  
  Wenn bereits eine Spiegelserverinstanz angegeben ist (auf der Seite **Spiegelung** im Dialogfeld **Datenbankeigenschaften** ), wird diese Instanz angezeigt. Weitere Informationen finden Sie unter [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md).  
   
  Geben Sie andernfalls den Namen der Spiegelserverinstanz ein. Beachten Sie, dass die Spiegelserverinstanz nicht mit der Prinzipalserverinstanz identisch sein kann.  
   
- **Verbinden**  
+ **Herstellen einer Verbindung**  
  Wenn keine Spiegelserverinstanz festgelegt wurde, klicken Sie auf **Verbinden**. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** angezeigt, mit dem Sie die Serverinstanz festlegen und eine Verbindung herstellen können.  
   
  Klicken Sie auf **Verbinden**, wenn eine Instanz angegeben wurde, der Assistent aber keine Verbindung mit ausreichenden Berechtigungen zum Überprüfen eines vorhandenen Endpunkts herstellen konnte. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** mit einer vorausgewählten und nicht änderbaren Serverinstanz angezeigt. Geben Sie ein Domänenkonto mit ausreichender Berechtigung an, und stellen Sie eine Verbindung zur Serverinstanz her.  
@@ -46,7 +47,7 @@ ms.locfileid: "68045628"
 > [!NOTE]  
 >  Beim Herstellen der Verbindung mit der Serverinstanz verwendet der Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung die Anmeldeinformationen, die im Dialogfeld **Verbindung mit Server herstellen** bereitgestellt werden. Diese unterscheiden sich von den Anmeldeinformationen einer Spiegelungssitzung, bei der die Anmeldeinformationen des Startkontos verwendet werden, unter dem die Serverinstanz als Dienst ausgeführt wird.  
   
- **Überwachungsport**  
+ **Listenerport**  
  Das Verhalten dieser Option hängt auf folgende Weise davon ab, ob für diese Serverinstanz der Spiegelungsendpunkt vorhanden ist:  
   
 -   Wenn für die Serverinstanz ein Überwachungsport nicht vorhanden ist, wird im Textfeld **Port** die Portnummer 5022 angezeigt. Sie können jede verfügbare Portnummer verwenden, wie z. B. 7022.  
@@ -66,7 +67,7 @@ ms.locfileid: "68045628"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Datenbankeigenschaften &#40;Seite „Wird gespiegelt“&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

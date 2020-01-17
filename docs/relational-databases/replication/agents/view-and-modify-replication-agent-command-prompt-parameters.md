@@ -1,6 +1,7 @@
 ---
-title: Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents | Microsoft-Dokumentation
-ms.custom: ''
+title: Anzeigen und Ändern von Agent-Befehlszeilenparametern
+description: Erfahren Sie, wie Sie die Befehlszeilenparameter anzeigen und ändern, die von den verschiedenen Replikations-Agents in SQL Server verwendet werden.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 38d86590da144386077b170433c52dcd1cc18d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085911"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321634"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Replikations-Agents sind ausführbare Dateien, die Befehlszeilenparameter akzeptieren. Standardmäßig werden Agents unter Auftragsschritten des [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agents ausgeführt. Deshalb können diese Parameter im Dialogfeld **Auftragseigenschaften – \<Job>** angezeigt und geändert werden. Dieses Dialogfeld steht über den Ordner **Aufträge** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sowie über die Registerkarte **Agents** im Replikationsmonitor zur Verfügung. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+  Replikations-Agents sind ausführbare Dateien, die Befehlszeilenparameter akzeptieren. Standardmäßig werden Agents unter Auftragsschritten des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agents ausgeführt. Deshalb können diese Parameter im Dialogfeld **Auftragseigenschaften – \<Job>** angezeigt und geändert werden. Dieses Dialogfeld steht über den Ordner **Aufträge** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sowie über die Registerkarte **Agents** im Replikationsmonitor zur Verfügung. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 > [!NOTE]  
 >  Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten.  
@@ -35,12 +36,12 @@ ms.locfileid: "68085911"
 |Momentaufnahme-Agent|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Ganzzahl>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |Momentaufnahme-Agent für eine Mergeveröffentlichungspartition|**Dyn_\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |Protokolllese-Agent|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Ganzzahl>**|[Replikationsprotokolllese-Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
-|Merge-Agent für Pullabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Abonnementdatenbank>-\<Integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Merge-Agent für Pushabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Merge-Agent für Pullabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Abonnementdatenbank>-\<Ganzzahl>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Merge-Agent für Pushabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
 |Verteilungs-Agent für Pushabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Verteilungs-Agent für Pullabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Abonnementdatenbank>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Verteilungs-Agent für Pushabonnements für Nicht-SQL Server-Abonnenten|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Warteschlangenlese-Agent|**[\<Verteiler>].\<Ganzzahl>**|[Warteschlangenlese-Agent der Microsoft SQL Server-Replikation](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
+|Warteschlangenlese-Agent|**[\<Verteiler>].\<Ganzzahl>**|[Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
  \*Bei Pushabonnements für Oracle-Veröffentlichungen lautet der Name **\<Verleger>-\<Verleger**> und nicht **\<Verleger>-\<Veröffentlichungsdatenbank>** .  
   
@@ -97,6 +98,6 @@ ms.locfileid: "68085911"
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwaltung des Replikations-Agents](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Ausführbare Konzepte für den Replikations-Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Übersicht über Replikations-Agents](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

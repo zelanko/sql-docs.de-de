@@ -10,17 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014461"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720830"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Verwenden von schreibgeschützten Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Eine Verfügbarkeitsgruppe ist eine umfassende Lösung, die hohe Verfügbarkeit für SQL Server bereitstellt und darüber hinaus integrierte Skalierungslösungen bietet. In einer typischen Datenbankanwendung führen mehrere Clients verschiedene Arten von Arbeitsauslastung aus. Manchmal können sich Engpässe aufgrund von Ressourceneinschränkungen entwickeln. Sie können Ressourcen freigeben und einen höheren Durchsatz für den OLTP-Workload erreichen. Ferner können Sie höhere Leistung und Skalierung für schreibgeschützte Workloads bereitstellen. Nutzen Sie dazu die schnellste Technologie zur Replikation für SQL Server, und erstellen Sie eine Gruppe replizierter Datenbanken, um die Berichterstellung und Analyseworkloads in schreibgeschützte Replikate auszulagern.
+Eine Verfügbarkeitsgruppe ist eine umfassende Lösung, die hohe Verfügbarkeit für SQL Server bereitstellt und darüber hinaus integrierte Skalierungslösungen bietet. In einer typischen Datenbankanwendung führen mehrere Clients verschiedene Arten von Arbeitsauslastung aus. Manchmal können sich Engpässe aufgrund von Ressourceneinschränkungen entwickeln. 
+
+Im Kontext einer Verfügbarkeitsgruppe verlagert die Leseskalierung Leseworkloads auf die sekundären Replikate. Sie können Ressourcen freigeben und einen höheren Durchsatz für den OLTP-Workload erreichen. Ferner können Sie höhere Leistung und Skalierung für schreibgeschützte Workloads bereitstellen. Nutzen Sie dazu die schnellste Technologie zur Replikation für SQL Server, und erstellen Sie eine Gruppe replizierter Datenbanken, um die Berichterstellung und Analyseworkloads in schreibgeschützte Replikate auszulagern.
 
 Mit Verfügbarkeitsgruppen kann mindestens ein sekundäres Replikat so konfiguriert werden, dass es den schreibgeschützten Zugriff auf sekundäre Datenbanken unterstützt.
 
@@ -52,6 +54,6 @@ Eine einzelne verteilte Verfügbarkeitsgruppe kann bis zu 17 lesbare sekundäre 
 
 [Konfigurieren von schreibgeschützten Verfügbarkeitsgruppen unter Windows](../../../database-engine/availability-groups/windows/configure-read-scale-availability-groups.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

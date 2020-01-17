@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5b9f57b15f1a46aefad2387eb63b0d2cb14dbe38
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
+ms.sourcegitcommit: 93012fddda7b778be414f31a50c0f81fe42674f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916033"
+ms.lasthandoff: 12/26/2019
+ms.locfileid: "75493582"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,15 +103,15 @@ Um zu vermeiden, dass nur noch wenig Speicherplatz vorhanden ist, erfolgt die K�
   
  Die Protokollkürzung kann tatsächlich aus verschiedenen Gründen verzögert werden. Sie können ermitteln, wodurch die Protokollkürzung verhindert wird, indem Sie die Spalten **log_reuse_wait** und **log_reuse_wait_desc** der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) abfragen. In der folgenden Tabelle werden die Werte dieser Spalten beschrieben.  
   
-|log_reuse_wait value|log_reuse_wait_desc value|und Beschreibung|  
+|log_reuse_wait value|log_reuse_wait_desc value|BESCHREIBUNG|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Derzeit ist mindestens eine wiederverwendbare [virtuelle Protokolldatei (Virtual Log File, VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) vorhanden.|  
-|1|CHECKPOINT|Seit der letzten Protokollkürzung ist kein Prüfpunkt aufgetreten, oder der Kopf des Protokolls wurde noch nicht über eine [virtuelle Protokolldatei (Virtual Log File, VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) hinaus verschoben. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger Grund für das verzögerte Kürzen von Protokollen. Weitere Informationen finden Sie unter [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
+|1|CHECKPOINT|Seit der letzten Protokollkürzung ist kein Prüfpunkt aufgetreten, oder der Kopf des Protokolls wurde noch nicht über eine [virtuelle Protokolldatei (Virtual Log File, VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) hinaus verschoben. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger Grund für das verzögerte Kürzen von Protokollen. Weitere Informationen finden Sie unter [Datenbankprüfpunkte &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Eine Protokollsicherung ist erforderlich, bevor das Transaktionsprotokoll gekürzt werden kann. (nur vollständiges bzw. massenprotokolliertes Wiederherstellungsmodell)<br /><br /> Bei Abschluss der nächsten Protokollsicherung wird möglicherweise ein Teil des Protokollspeicherplatzes zur Wiederverwendung freigegeben.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Es findet gerade eine Datensicherung oder eine Wiederherstellung statt (alle Wiederherstellungsmodelle).<br /><br /> Verhindert eine Datensicherung die Protokollkürzung, kann das unmittelbare Problem u. U. durch Abbrechen des Sicherungsvorgangs behoben werden.|  
 |4|ACTIVE_TRANSACTION|Eine Transaktion ist aktiv (alle Wiederherstellungsmodelle):<br /><br /> Möglicherweise ist beim Starten der Protokollsicherung eine Transaktion mit langer Ausführungszeit vorhanden. In diesem Fall ist zum Freigeben von Speicherplatz möglicherweise eine weitere Protokollsicherung erforderlich. Hinweis: Transaktionen mit langer Laufzeit verhindern die Protokollkürzung unter allen Wiederherstellungsmodellen, einschließlich des einfachen Wiederherstellungsmodells, unter dem im Allgemeinen das Transaktionsprotokoll an jedem automatischen Prüfpunkt gekürzt wird.<br /><br /> Eine Transaktion wird verzögert. Eine *verzögerte Transaktion* ist tatsächlich eine aktive Transaktion, deren Rollback aufgrund einer nicht verfügbaren Ressource blockiert ist. Weitere Informationen zu den Ursachen für verzögerte Transaktionen und zum Auflösen ihres verzögerten Zustands finden Sie unter [Verzögerte Transaktionen &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).<br /> <br /> Lang andauernde Transaktionen können auch das Transaktionsprotokoll von „tempdb“ füllen. „tempdb“ wird implizit von Benutzertransaktionen für interne Objekte wie z.B. Arbeitstabellen zum Sortieren, Arbeitsdateien für Hashverfahren, Cursorarbeitstabellen und Zeilenversionsverwaltung verwendet. Selbst wenn die Benutzertransaktion nur das Lesen von Daten umfasst (`SELECT`-Abfragen), werden möglicherweise interne Objekte erstellt und unter Benutzertransaktionen verwendet. Anschließend kann das tempdb-Transaktionsprotokoll gefüllt werden.|  
 |5|DATABASE_MIRRORING|Die Datenbankspiegelung wurde angehalten, oder im Modus für hohe Leistung befindet sich die Spiegeldatenbank deutlich hinter der Prinzipaldatenbank. (nur vollständiges Wiederherstellungsmodell)<br /><br /> Weitere Informationen finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
-|6|REPLICATION|Während der Transaktionsreplikationen wurden für die Veröffentlichungen relevante Transaktionen noch immer nicht für die Verteilungsdatenbank bereitgestellt. (nur vollständiges Wiederherstellungsmodell)<br /><br /> Weitere Informationen zur Transaktionsreplikation finden Sie unter [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).|  
+|6|REPLIKATION|Während der Transaktionsreplikationen wurden für die Veröffentlichungen relevante Transaktionen noch immer nicht für die Verteilungsdatenbank bereitgestellt. (nur vollständiges Wiederherstellungsmodell)<br /><br /> Weitere Informationen zur Transaktionsreplikation finden Sie unter [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).|  
 |7|DATABASE_SNAPSHOT_CREATION|Eine Datenbank-Momentaufnahme wird erstellt. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger, im Allgemeinen jedoch nur kurz andauernder Grund für ein verzögertes Kürzen eines Protokolls.|  
 |8|LOG_SCAN|Ein Protokollscan wird ausgelöst. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger, im Allgemeinen jedoch nur kurz andauernder Grund für ein verzögertes Kürzen eines Protokolls.|  
 |9|AVAILABILITY_REPLICA|Ein sekundäres Replikat einer Verfügbarkeitsgruppe wendet Transaktionsprotokoll-Datensätze dieser Datenbank auf eine zugehörige sekundäre Datenbank an. (vollständiges Wiederherstellungsmodell)<br /><br /> Weitere Informationen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
@@ -120,6 +120,7 @@ Um zu vermeiden, dass nur noch wenig Speicherplatz vorhanden ist, erfolgt die K�
 |12|-|Nur interne Verwendung|  
 |13|OLDEST_PAGE|Ist eine Datenbank zur Verwendung von indirekten Prüfpunkten konfiguriert, ist die älteste Seite in der Datenbank u.U. älter als die [Protokollfolgenummer (Log Sequence Number, LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch). In diesem Fall kann die älteste Seite die Protokollkürzung verzögern. (Alle Wiederherstellungsmodelle)<br /><br /> Weitere Informationen zu indirekten Prüfpunkten finden Sie unter [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Dieser Wert wird derzeit nicht verwendet.|  
+|16|XTP_CHECKPOINT|Es muss ein In-Memory OLTP-Prüfpunkt ausgeführt werden. Für speicheroptimierte Tabellen wird ein automatischer Prüfpunkt erstellt, wenn die Transaktionsprotokolldatei seit dem letzten Prüfpunkt größer als 1,5 GB geworden ist (bezieht sich sowohl auf datenträgerbasierte als auch auf speicheroptimierte Tabellen).<br /> Weitere Informationen finden Sie unter [Prüfpunktvorgang für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) und [Protokollierungs- und Prüfpunktprozess für speicheroptimierte Tabellen] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
 ##  <a name="MinimallyLogged"></a> Vorgänge, für die eine minimale Protokollierung verfügbar ist  
 Bei der*minimalen Protokollierung* werden nur die Informationen protokolliert, die zum Wiederherstellen der Transaktion ohne Unterstützung der Zeitpunktwiederherstellung erforderlich sind. In diesem Thema werden die Vorgänge aufgeführt, die unter dem massenprotokollierten [Wiederherstellungsmodell](../backup-restore/recovery-models-sql-server.md) minimal protokolliert werden (sowie unter dem einfachen Wiederherstellungsmodell, es sei denn, es wird eine Sicherung ausgeführt).  
@@ -175,7 +176,7 @@ Wenn die Transaktionsreplikation aktiviert ist, werden `SELECT INTO`-Vorgänge a
   
 -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md)   
 [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   

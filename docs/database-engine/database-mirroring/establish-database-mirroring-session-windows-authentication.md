@@ -1,6 +1,7 @@
 ---
-title: 'Datenbankspiegelung: Einrichtung der Sitzung – Windows-Authentifizierung | Microsoft-Dokumentation'
-ms.custom: ''
+title: Einrichten von Datenbankspiegelung (Windows-Authentifizierung)
+description: Erfahren Sie, wie Sie eine Datenbank-Spiegelungssitzung mithilfe von Windows-Authentifizierung und SQL Server Management Studio einrichten.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6e778d9c02e9cc0a877ef0804b1e95772e5f51cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f59dc7745f63b208b1a2a55361913a6eb290e08e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997897"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253582"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Datenbankspiegelung: Einrichtung der Sitzung – Windows-Authentifizierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "67997897"
   
 -   Die Spiegeldatenbank muss vorhanden sein und sich auf dem neuesten Stand befinden.  
   
-     Zum Erstellen einer Spiegeldatenbank muss auf der Spiegelserverinstanz eine aktuelle Sicherung der Prinzipaldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Nach der vollständigen Sicherung müssen außerdem eine oder mehrere Protokollsicherungen erstellt und der Reihe nach auf der Spiegeldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Weitere Informationen finden Sie unter [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     Zum Erstellen einer Spiegeldatenbank muss auf der Spiegelserverinstanz eine aktuelle Sicherung der Prinzipaldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Nach der vollständigen Sicherung müssen außerdem eine oder mehrere Protokollsicherungen erstellt und der Reihe nach auf der Spiegeldatenbank (mit der Option WITH NORECOVERY) wiederhergestellt werden. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
   
 -   Wenn die Serverinstanzen unter unterschiedlichen Domänenbenutzerkonten ausgeführt werden, ist für jede Instanz in der **master** -Datenbank der anderen Instanzen ein Anmeldename erforderlich. Sofern kein Anmeldename vorhanden ist, müssen Sie vor dem Konfigurieren der Spiegelung einen erstellen. Weitere Informationen finden Sie unter [Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
@@ -56,7 +57,7 @@ ms.locfileid: "67997897"
     > [!IMPORTANT]  
     >  Beim Erstellen eines Endpunkts verwendet der Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung immer die Windows-Authentifizierung. Bevor Sie den Assistenten mit der zertifikatbasierten Authentifizierung verwenden können, muss der Spiegelungsendpunkt auf jeder der Serverinstanzen bereits für die Verwendung von Zertifikaten konfiguriert worden sein. Außerdem müssen alle Felder im Dialogfeld **Dienstkonten** des Assistenten leer bleiben. Informationen zum Erstellen eines Datenbank-Spiegelungsendpunkts für die Verwendung von Zertifikaten finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
-6.  Sie können optional den Betriebsmodus ändern. Die Verfügbarkeit von bestimmten Betriebsmodi hängt davon ab, ob Sie eine TCP-Adresse für einen Zeugen angegeben haben. Folgende Optionen stehen zur Verfügung:  
+6.  Sie können optional den Betriebsmodus ändern. Die Verfügbarkeit von bestimmten Betriebsmodi hängt davon ab, ob Sie eine TCP-Adresse für einen Zeugen angegeben haben. Die folgenden Optionen sind verfügbar:  
   
     |Option|Zeuge?|Erklärung|  
     |------------|--------------|-----------------|  
@@ -81,8 +82,8 @@ ms.locfileid: "67997897"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Datenbankeigenschaften &#40;Seite wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung (SQL Server)](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)   
  [Einrichten der TRUSTWORTHY-Eigenschaft für eine Spiegeldatenbank (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
  [Entfernen der Datenbankspiegelung (SQL Server)](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)   

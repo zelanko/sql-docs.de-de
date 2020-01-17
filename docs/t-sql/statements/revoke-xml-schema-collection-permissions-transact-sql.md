@@ -1,6 +1,7 @@
 ---
-title: REVOKE XML (Berechtigungen für Schemaauflistungen) (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: REVOKE XML – Schemasammlungsberechtigungen
+description: Verwenden von Transact-SQL für ein REVOKE von Berechtigungen für XML-Schemaauflistungen.
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: pdw, sql-database
@@ -17,19 +18,19 @@ ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db84729a448ce1d90c016696aef85d2580ede913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df4f6cb9ed29d5efb5c943d140591c5c97bf124d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913964"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255460"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE (Berechtigungen für XML-Schemaauflistungen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Hebt Berechtigungen auf, die für eine XML-Schemaauflistung erteilt oder verweigert wurden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +65,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  Gibt an, dass das Recht zum Erteilen der angegebenen Berechtigung für andere Prinzipale aufgehoben wird. Die Berechtigung selbst wird nicht aufgehoben.  
   
 > [!IMPORTANT]  
->  Falls der Prinzipal die angegebene Berechtigung ohne GRANT OPTION besitzt, wird die Berechtigung selbst aufgehoben.  
+>  Falls der Prinzipal die angegebene Berechtigung ohne GRANT-Option besitzt, wird die Berechtigung selbst aufgehoben.  
   
  CASCADE  
  Gibt an, dass die aufgehobene Berechtigung auch für andere Prinzipale aufgehoben wird, denen sie von diesem Prinzipal erteilt oder verweigert wurde.  

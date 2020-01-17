@@ -2,7 +2,7 @@
 title: COPY INTO – Transact-SQL (Vorschau)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Verwenden Sie die COPY-Anweisung in Azure SQL Data Warehouse zum Laden von externen Speicherkonten.
-ms.date: 11/07/2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055136"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321833"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY – Transact-SQL (Vorschau)
 
@@ -65,7 +65,7 @@ WITH
 Ist optional, wenn das Standardschema des Benutzers, der den Vorgang ausführt, das Schema der angegebenen Tabelle ist. Wenn *schema* nicht angegeben wird und das Standardschema des Benutzers, der den COPY-Vorgang ausführt, sich von der angegebenen Tabelle unterscheidet, wird der COPY-Vorgang abgebrochen und eine Fehlermeldung zurückgegeben.  
 
 *table_name*  
-Der Name der Tabelle, in die mit COPY Daten kopiert werden sollen. Bei der Zieltabelle kann es sich um eine temporäre oder permanente Tabelle handeln.
+Der Name der Tabelle, in die mit COPY Daten kopiert werden sollen. Bei der Zieltabelle kann es sich um eine temporäre oder eine dauerhafte Tabelle handeln, die bereits in der Datenbank vorhanden sein muss. 
 
 *(Spaltenliste)*  
 Eine optionale Liste mit einer oder mehreren Spalten, mit denen Quelldatenfelder zum Laden von Daten Zieltabellenspalten zugeordnet werden. *column_list* muss in Klammern eingeschlossen und durch ein Trennzeichen getrennt werden. Die Spaltenliste liegt im folgenden Format vor:
@@ -131,7 +131,7 @@ Es können nur mehrere Dateispeicherorte aus demselben Speicherkonto und Contain
 Bei der Authentifizierung mit AAD oder bei einem öffentlichen Speicherkonto muss CREDENTIAL nicht angegeben werden. 
 
 - Authentifizieren mit Shared Access Signature (SAS) *IDENTITY: Eine Konstante mit dem Wert von „Shared Access Signature“* 
-  *SECRET: Die * [*Signatur für den gemeinsamen Zugriff*](/azure/storage/common/storage-sas-overview) *ermöglicht den delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
+  *SECRET: Die* [*Shared Access Signature (SAS)* ](/azure/storage/common/storage-sas-overview) *bietet delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
   Erforderliche Mindestberechtigungen: READ und LIST
 
 - Authentifizieren mit [*Dienstprinzipalen*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -164,7 +164,7 @@ Wenn ERRORFILE den vollständigen Pfad des Speicherkontos definiert hat, wird ER
   
 - Authentifizieren mit Shared Access Signatures (SAS)
   - *IDENTITY: Eine Konstante mit dem Wert von „Shared Access Signature“*
-  - *SECRET: Die* [*Signatur für den gemeinsamen Zugriff*](/azure/storage/common/storage-sas-overview) *ermöglicht den delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
+  - *SECRET: Die* [*Shared Access Signature (SAS)* ](/azure/storage/common/storage-sas-overview) *bietet delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
   - Erforderliche Mindestberechtigungen: READ, LIST, WRITE, CREATE, DELETE
   
 - Authentifizieren mit [*Dienstprinzipalen*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -214,11 +214,11 @@ Mit dem COPY-Befehl wird der Komprimierungstyp automatisch auf Grundlage der Dat
 > FIELDQUOTE-Zeichen werden in Zeichenfolgenspalten mit Escapezeichen versehen, wenn ein doppeltes FIELDQUOTE-Zeichen (Trennzeichen) vorhanden ist. 
 
 *FIELDTERMINATOR = 'Feldabschlusszeichen'*</br>
-*FIELDTERMINATOR* Gilt nur für CSV. Gibt das Feldabschlusszeichen an, das in der CSV-Datei verwendet wird. Das Feldabschlusszeichen kann mehrere Zeichen aufweisen. Das Standard-Feldabschlusszeichen ist ein (,).
+*FIELDTERMINATOR* Gilt nur für CSV. Gibt das Feldabschlusszeichen an, das in der CSV-Datei verwendet wird. Das Feldabschlusszeichen kann in hexadezimaler Schreibweise angegeben werden. Das Feldabschlusszeichen kann mehrere Zeichen aufweisen. Das Standard-Feldabschlusszeichen ist ein (,).
 Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
 
 ROW TERMINATOR = 'Zeilenabschlusszeichen'</br>
-*ROW TERMINATOR* gilt nur für CSV. Gibt das Zeilenabschlusszeichen an, das in der CSV-Datei verwendet wird. Das Zeilenabschlusszeichen kann mehrere Zeichen aufweisen. Standardmäßig ist das Zeilenabschlusszeichen „\r\n“. 
+*ROW TERMINATOR* gilt nur für CSV. Gibt das Zeilenabschlusszeichen an, das in der CSV-Datei verwendet wird. Das Zeilenabschlusszeichen kann in hexadezimaler Schreibweise angegeben werden. Das Zeilenabschlusszeichen kann mehrere Zeichen aufweisen. Standardmäßig ist das Zeilenabschlusszeichen „\r\n“. 
 
 Der COPY-Befehl stellt beim Angeben von „\n“ (Zeilenumbruch) das \r-Zeichen voran, woraus „\r\n“ resultiert. Um nur das Zeichen „\n“ anzugeben, verwenden Sie die Hexadezimalschreibweise (0x0A). Geben Sie bei der Angabe von Zeilenabschlusszeichen aus mehreren Zeichen in Hexadezimalschreibweise nicht „0x“ zwischen den einzelnen Zeichen an.
 
@@ -259,7 +259,7 @@ Erfordert die Berechtigungen INSERT und ADMINISTER BULK OPERATIONS. In Azure SQL
 Das folgende Beispiel ist die einfachste Form des COPY-Befehls, bei der Daten aus einem öffentlichen Speicherkonto geladen werden. In diesem Beispiel entsprechen die Standardwerte der COPY-Anweisung dem Format der Zeilenelement-CSV-Datei.
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 Die Standardwerte des COPY-Befehls lauten wie folgt:
@@ -306,7 +306,7 @@ WITH (
     DATEFORMAT = 'ymd',
     MAXERRORS = 10,
     ERRORFILE = '/errorsfolder/',--path starting from the storage container
-    IDENTITY_INSERT = ‘ON’
+    IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -331,7 +331,7 @@ WITH (
 )
 ```
 
-### <a name="d-load-parquet-or-orc-using-existing-file-format-object"></a>D. Laden von Parquet oder ORC mithilfe eines vorhandenen Dateiformatobjekts
+### <a name="d-load-parquet-or-orc-using-existing-file-format-object"></a>D: Laden von Parquet oder ORC mithilfe eines vorhandenen Dateiformatobjekts
 
  In diesem Beispiel wird ein Platzhalter verwendet, um alle Parquet-Dateien in einem Ordner zu laden. 
 
@@ -358,6 +358,46 @@ WITH (
 )
 ```
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="faq"></a>Häufig gestellte Fragen
+
+### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Wie hoch ist die Leistung des COPY-Befehls im Vergleich zu PolyBase?
+Der COPY-Befehl wird bei Erreichen der allgemeinen Verfügbarkeit eine bessere Leistung aufweisen. Für eine optimale Ladeleistung während der öffentlichen Vorschau empfiehlt es sich, Ihre Eingaben beim Laden von CSV in mehrere Dateien aufzuteilen. Derzeit liegt COPY mit PolyBase bei der Verwendung von INSERT SELECT hinsichtlich der Leistung gleichauf. 
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Welche Anweisungen gibt es zur Dateiaufteilung für den COPY-Befehl beim Laden von CSV-Dateien?
+Anweisungen zur Anzahl der Dateien sind in der Tabelle unten aufgeführt. Sobald die empfohlene Dateianzahl erreicht ist, erzielen Sie eine umso bessere Leistung, je größer die Dateien sind. Bei Erreichen der allgemeinen Verfügbarkeit des COPY-Befehls wird es nicht erforderlich sein, unkomprimierte Dateien aufzuteilen. 
+
+| **DWU** | **Nr. Dateien** |
+| :-----: | :--------: |
+|   100   |     60     |
+|   200   |     60     |
+|   300   |     60     |
+|   400   |     60     |
+|   500   |     60     |
+|  1\.000  |    120     |
+|  1\.500  |    180     |
+|  2\.000  |    240     |
+|  2\.500  |    300     |
+|  3,000  |    360     |
+|  5\.000  |    600     |
+|  6\.000  |    720     |
+|  7\.500  |    900     |
+| 10.000  |    1200    |
+| 15.000  |    1800    |
+| 30.000  |    3600    |
+
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Welche Anweisungen gibt es zur Dateiaufteilung für den COPY-Befehl beim Laden von Parquet- oder ORC-Dateien?
+Das Aufteilen von Parquet- und ORC-Dateien ist nicht erforderlich, da der COPY-Befehl Dateien automatisch aufteilt. Die Parquet- und ORC-Dateien im Azure Storage-Konto sollten mindestens 256 MB groß sein, um optimale Leistung zu erzielen. 
+
+### <a name="when-will-the-copy-command-be-generally-available"></a>Wann wird der COPY-Befehl allgemein verfügbar sein?
+Der COPY-Befehl wird die allgemeine Verfügbarkeit früh im Jahr 2020 erreichen. 
+
+### <a name="are-there-any-known-issues-with-the-copy-command"></a>Gibt es bekannte Probleme beim COPY-Befehl?
+
+- LOB-Unterstützung wie etwa (n)varchar(max) steht in der COPY-Anweisung nicht zur Verfügung. Diese wird früh im nächsten Jahr verfügbar sein.
+
+Senden Sie Feedback oder Probleme an die folgende Verteilerliste: sqldwcopypreview@service.microsoft.com
+
+## <a name="see-also"></a>Weitere Informationen  
 
  [Datenladestrategien für Azure SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)

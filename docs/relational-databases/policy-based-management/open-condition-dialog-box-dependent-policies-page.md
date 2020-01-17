@@ -1,6 +1,7 @@
 ---
-title: Dialogfeld „Bedingung öffnen“, Seite „Abhängige Richtlinien“ | Microsoft-Dokumentation
-ms.custom: ''
+title: Seite ‚Abhängige Richtlinien‘ des Dialogfelds ‚Bedingung öffnen‘
+description: In diesem Artikel wird die Seite „Abhängige Richtlinien“ des Dialogfelds „Bedingung öffnen“ für die richtlinienbasierte Verwaltung in SQL Server Management Studio (SSMS) beschrieben.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,25 +13,25 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f1f89570284ecee36ea998a82f7b9dbb966d2683
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d732c555ad470ff01d469f44d27a264abb2f891
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087043"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557781"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Dialogfeld 'Bedingung öffnen', Seite 'Abhängige Richtlinien'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Mithilfe dieses Dialogfelds können Sie eine Liste von Richtlinien anzeigen, die derzeit auf diese richtlinienbasierte Verwaltungsbedingung verweisen. Weitere Informationen darüber, wie Bedingungen mit Facets und Richtlinien zusammenhängen, finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+  Mithilfe dieses Dialogfelds können Sie eine Liste von Richtlinien anzeigen, die derzeit auf diese richtlinienbasierte Verwaltungsbedingung verweisen. Weitere Informationen darüber, wie Bedingungen mit Facets und Richtlinien zusammenhängen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Name**  
  Listet den Namen jeder Richtlinie auf, die auf diese aktuelle Bedingung verweist.  
   
- **Enabled**  
+ **Aktiviert**  
  Ein Häkchen gibt an, dass die Richtlinie derzeit aktiviert ist. Ist leer, wenn die Richtlinie nicht aktiviert ist.  
   
- **Verlauf**  
+ **History**  
  Klicken Sie auf den Link Verlauf anzeigen, um den Bericht zum Ausführungsverlauf anzuzeigen.  
   
  **Erstellt**  
