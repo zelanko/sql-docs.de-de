@@ -1,6 +1,7 @@
 ---
-title: Aktualisieren von Replikationsskripts (Replikationsprogrammierung mit Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+title: Aktualisieren von Replikationsskripts (gespeicherte Prozedur für die Replikation)
+description: Erfahren Sie, wie Sie gespeicherte Prozeduren für die Replikation verwenden, um ein Upgrade der Skripts auszuführen, die zum programmgesteuerten Konfigurieren einer Replikationstopologie verwendet werden.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a7104b2ecf2b74b9ad6a2521d7fff9fe09b500f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0d582af912f94fe0e0755340eb4d5ace892e72da
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710375"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320043"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Aktualisieren von Replikationsskripts (Replikationsprogrammierung mit Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "71710375"
   
 3.  (Optional) Aktualisieren Sie die Ausführung von [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), um alle Nichtstandardwerte für Parameter festzulegen, die neue Replikationsfunktionen implementieren.  
   
-4.  Führen Sie nach [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie `@publication` und die Windows-Anmeldeinformationen, unter denen der Momentaufnahmen-Agent ausgeführt wird, für `@job_name` und `@job_password` an. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung verwendet, müssen Sie zudem den Wert **0** für `@publisher_security_mode` und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen für `@publisher_login` und `@publisher_password` angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
+4.  Führen Sie nach [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie `@publication` und die Windows-Anmeldeinformationen, unter denen der Momentaufnahmen-Agent ausgeführt wird, für `@job_name` und `@job_password` an. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung verwendet, müssen Sie zudem den Wert **0** für `@publisher_security_mode` und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen für `@publisher_login` und `@publisher_password` angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
 5.  (Optional) Aktualisieren Sie die Ausführung von [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), um alle Nichtstandardwerte für Parameter festzulegen, die neue Replikationsfunktionen implementieren.  
   
@@ -99,7 +100,7 @@ ms.locfileid: "71710375"
   
 1.  (Optional) Aktualisieren Sie im vorhandenen Skript die Ausführung von [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), um alle Nichtstandardwerte für Parameter festzulegen, die neue Replikationsfunktionen implementieren.  
   
-2.  Führen Sie nach [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie `@publication` und die Windows-Anmeldeinformationen, unter denen der Momentaufnahmen-Agent ausgeführt wird, für `@job_name` und `@job_password` an. Wenn der Agent die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung beim Herstellen der Verbindung mit dem Verleger verwendet, müssen Sie auch den Wert **0** für `@publisher_security_mode` und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen für `@publisher_login` und `@publisher_password` angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
+2.  Führen Sie nach [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie `@publication` und die Windows-Anmeldeinformationen, unter denen der Momentaufnahmen-Agent ausgeführt wird, für `@job_name` und `@job_password` an. Wenn der Agent die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung beim Herstellen der Verbindung mit dem Verleger verwendet, müssen Sie auch den Wert **0** für `@publisher_security_mode` und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen für `@publisher_login` und `@publisher_password` angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
 3.  (Optional) Aktualisieren Sie die Ausführung von [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), um alle Nichtstandardwerte für Parameter festzulegen, die neue Replikationsfunktionen implementieren.  
   

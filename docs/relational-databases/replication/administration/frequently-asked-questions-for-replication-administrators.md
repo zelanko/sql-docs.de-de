@@ -1,6 +1,7 @@
 ---
-title: Häufig gestellte Fragen für Replikationsadministratoren | Microsoft-Dokumentation
-ms.custom: ''
+title: Häufig gestellte Fragen für Replikationsadministratoren
+description: Eine Liste mit häufig gestellten Fragen für Replikationsadministratoren für SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041200"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322030"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "72041200"
   
 -   Die Websynchronisierungsoption für die Mergereplikation. Weitere Informationen finden Sie unter [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
- Bei allen Typen der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation können Daten über ein VPN repliziert werden. Sie sollten jedoch die Websynchronisierung in Betracht ziehen, falls Sie die Mergereplikation verwenden.  
+ Bei allen Arten der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation können Daten über ein VPN repliziert werden. Falls Sie eine Mergereplikation verwenden, sollten Sie jedoch die Websynchronisierung in Betracht ziehen.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>Wird die Replikation fortgesetzt, wenn eine Verbindung getrennt wird?  
  Ja. Die Replikationsverarbeitung wird an der Stelle fortgesetzt, an der sie beim Trennen der Verbindung unterbrochen wurde. Wenn Sie eine Mergereplikation über ein unzuverlässiges Netzwerk ausführen, sollten Sie die Verwendung logischer Datensätze in Betracht ziehen, mit denen sichergestellt wird, dass aufeinander bezogene Änderungen als Einheit verarbeitet werden. Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -119,7 +120,7 @@ ms.locfileid: "72041200"
  Nein. Sie können ein SSIS-Paket erstellen, um Anmeldungen und Passwörter von einem Verleger an einen oder mehrere Abonnenten zu übertragen.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>Was sind Schemas, und wie werden sie repliziert?  
- Ab [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *Schema* zwei Bedeutungen:  
+ Ab [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] hat *Schema* zwei Bedeutungen:  
   
 -   Die Definition eines Objekts, beispielsweise als `CREATE TABLE`-Anweisung. Bei der Replikation werden standardmäßig die Definitionen aller replizierten Objekte auf den Abonnenten kopiert.  
   

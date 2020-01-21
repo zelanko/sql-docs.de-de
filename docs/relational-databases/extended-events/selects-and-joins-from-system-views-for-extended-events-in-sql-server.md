@@ -1,6 +1,5 @@
 ---
-title: SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server | Microsoft-Dokumentation
-ms.custom: ''
+title: SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,20 +9,21 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903462"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242901"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-Dieser Artikel beschreibt die zwei Gruppen von Systemsichten, die mit erweiterten Ereignissen in Microsoft SQL Server und im Azure SQL Database-Clouddienst zusammenhängen. Dieser Artikel beschreibt:
+Dieser Artikel beschreibt die beiden Arten von Systemsichten, die mit erweiterten Ereignissen in SQL Server und Azure SQL-Datenbank zusammenhängen. Dieser Artikel beschreibt:
 
 - wie mithilfe der JOIN-Anweisung verschiedene Systemsichten zusammengefügt werden.
 - wie eine SELECT-Anweisung für bestimmte Informationen der Systemsichten durchgeführt wird.
@@ -55,7 +55,7 @@ Es gibt zwei Sammlungen von Systemsichten für erweiterte Ereignisse:
 
 - Speichern Informationen über die *aktuelle Aktivität* beim Ausführen von Ereignissitzungen. Aber diese DMVs wissen nur wenig über die Definition der Sitzungen.
     - Auch wenn derzeit alle Eventsitzungen beendet werden, würde aus der Ansicht *sys.dm_xe_packages* SELECT weiterhin Zeilen zurückgegeben, da verschiedene Pakete beim Serverstart in den aktiven Arbeitsspeicher geladen werden.
-    - Aus demselben Grund würden *sys.dm_xe_objects* *sys.dm_xe_object_columns* would also still return rows.
+    - Aus demselben Grund würde *sys.dm_xe_objects* *sys.dm_xe_object_columns* ebenfalls weiterhin Zeilen zurückgeben.
 
 
 - Namenspräfix für erweiterte Ereignisse DMVs ist:
@@ -74,7 +74,7 @@ Die folgende Berichtigung ist notwendig, um SELECT für Systemsichten ausführen
 
 <a name="section_B_catalog_views"></a>
 
-## <a name="b-catalog-views"></a>B. Katalogsichten
+## <a name="b-catalog-views"></a>B. Katalogansichten
 
 
 Dieser Abschnitt stimmt mit drei verschiedenen technologischen Perspektiven auf der gleichen definierten Ereignissitzung überein und bezieht sich auf sie. Die Sitzung wurde definiert und kann im **Objekt-Explorer** von SQL Server Management Studio (SSMS.exe) angezeigt werden. Diese Sitzung wird derzeit jedoch nicht ausgeführt.
@@ -345,7 +345,7 @@ ORDER BY
 ```
 
 
-#### <a name="output"></a>Ausgabe
+#### <a name="output"></a>Output
 
 
 Als nächstes wird die tatsächliche Ausgabe nach dem Ausführen von SELECT JOIN UNION angezeigt. Der Ausgabeparameter benennt und bewertet die Zuordnung von dem, was schlicht in der vorherigen CREATE EVENT SESSION-Anweisung zu sehen ist.
@@ -419,7 +419,7 @@ SELECT  --C.1
 ```
 
 
-#### <a name="output"></a>Ausgabe
+#### <a name="output"></a>Output
 
 Hier ist die Liste der Pakete.
 
@@ -477,7 +477,7 @@ SELECT  --C.2
 ```
 
 
-#### <a name="output"></a>Ausgabe
+#### <a name="output"></a>Output
 
 Hier ist die Anzahl der Objekte pro Objekttyp. Es gibt ungefähr 1915 Objekte.
 
@@ -532,7 +532,7 @@ SELECT  --C.3
 ```
 
 
-#### <a name="output"></a>Ausgabe
+#### <a name="output"></a>Output
 
 Als nächstes könnten für Sie das willkürliche Sampling der Objekte, die von der vorhergehenden SELECT-Anweisung zurückgegeben wurde, interessant sein.
 
@@ -605,7 +605,7 @@ SELECT  -- C.4
 ```
 
 
-#### <a name="output"></a>Ausgabe
+#### <a name="output"></a>Output
 
 Die folgenden Zeilen wurden von der vorhergehenden SELECT-Anweisung zurückgegeben, wobei WHERE `o.name = 'lock_deadlock'`:
 
@@ -644,7 +644,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* und Ereignisfelder
+### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* und Ereignisfelder
 
 
 Die folgende SELECT-Anweisung erhält die JOIN-Klausel mit der schwierigen Sicht *sys.dm_xe_map_values*.
@@ -693,7 +693,7 @@ SELECT  --C.5
 ```
 
 
-#### <a name="output"></a>Ausgabe
+#### <a name="output"></a>Output
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -765,7 +765,7 @@ SELECT  --C.6
 ```
 
 
-#### <a name="output"></a>Ausgabe
+#### <a name="output"></a>Output
 
 Die folgenden Zeilen der Parameter sind eine Teilmenge von denen, die in SQL Server 2016 von der vorhergehenden SELECT-Anweisung zurückgegeben wurden.
 
@@ -786,7 +786,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 Typumwandlung der target_data-Spalte nach XML durch DMV SELECT
+### <a name="c7-dmv-select-casting-target_data-column-to-xml"></a>C.7 Typumwandlung der target_data-Spalte nach XML durch DMV SELECT
 
 
 Diese DMV SELECT-Anweisung gibt Datenzeilen des Ziels Ihrer aktiven Ereignissitzung zurück. Die Daten werden in XML umgewandelt. Dadurch kann die zurückgegebene Zelle zum einfachen Anzeigen in SSMS geklickt werden.
@@ -854,7 +854,7 @@ Wenn die Zelle „XML-Cast“ (XML-Umwandlung) ausgewählt wird, erscheint folge
 
 <a name="section_C_8_select_function_disk"></a>
 
-### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 Auswählen aus einer Funktion zum Abrufen von event_file-Daten vom Laufwerk durch SELECT
+### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 Auswählen aus einer Funktion zum Abrufen von event_file-Daten vom Laufwerk durch SELECT
 
 
 Angenommen, Ihre Ereignissitzungen haben Daten erfasst und wurden später beendet. Wenn Ihre Sitzung definiert wurde, das Ziel „event_file“ zu benutzen, können Sie die Daten immer noch abrufen, indem Sie die Funktion *sys.fn_xe_target_read_file*aufrufen.

@@ -1,6 +1,7 @@
 ---
-title: Erstellen und Speichern von Spaltenhauptschlüsseln für Always Encrypted | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen und Speichern von Spaltenhauptschlüsseln für Always Encrypted
+description: Erfahren Sie, wie Sie für SQL Server Always Encrypted einen Schlüsselspeicher auswählen und Spaltenhauptschlüssel erstellen.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
@@ -11,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594436"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557835"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Erstellen und Speichern von Spaltenhauptschlüsseln für Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -220,7 +221,7 @@ Siehe [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Ma
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Verfügbarmachen von CNG-Schlüsseln für Anwendungen und Benutzer
 Informieren Sie sich in der Dokumentation zu Ihrem HSM und CSP, wie Sie den CSP auf einem Computer konfigurieren und Anwendungen und Benutzern Zugriff auf das HSM gewähren.
  
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 - [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
 - [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von PowerShell](configure-always-encrypted-keys-using-powershell.md)
   

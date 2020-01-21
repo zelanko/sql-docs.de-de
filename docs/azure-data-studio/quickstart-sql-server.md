@@ -10,12 +10,12 @@ ms.author: alayu
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: a218c2afa89c8798c46b305e80e677693509e7ab
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810802"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884054"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Herstellen einer Verbindung mit und Abfragen von SQL Server mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -47,7 +47,7 @@ Wenn Sie nicht auf eine SQL Server-Instanz zugreifen können, wählen Sie Ihre P
 - **Authentifizierungstyp:** SQL-Anmeldung
 - **Benutzername:** Benutzername für die SQL Server-Instanz
 - **Kennwort:** Kennwort für die SQL Server-Instanz
-- **Datenbankname:** Lassen Sie dieses Feld leer.
+- **Datenbankname:** \<Standard\>
 - **Servergruppe:** \<Standard\>
 
    ![Bildschirm „Neue Verbindung“](media/quickstart-sql-server/new-connection-screen.png)

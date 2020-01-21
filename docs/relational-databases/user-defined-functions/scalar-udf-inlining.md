@@ -2,7 +2,7 @@
 title: Inlining benutzerdefinierter Skalarfunktionen in Datenbanken von Microsoft SQL Server | Microsoft-Dokumentation
 description: In diesem Artikel wird das Inlining benutzerdefinierter Skalarfunktionen erläutert, um die Leistung von Abfragen zu verbessern, die benutzerdefinierte Skalarfunktionen in SQL Server (2019 und höher) und Azure SQL-Datenbank aufrufen.
 ms.custom: ''
-ms.date: 09/13/2019
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926052"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831771"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
@@ -40,7 +40,7 @@ Die Leistung von benutzerdefinierten Skalarfunktionen ist aus folgenden Gründen
 
 - **Interpretierte Ausführung:** Benutzerdefinierte Funktionen werden als Anweisungsbatch ausgewertet und Anweisung für Anweisung ausgeführt. Jede Anweisung wird kompiliert, und der kompilierte Plan wird zwischengespeichert. Die Zwischenspeicherung spart zwar Zeit, da Neukompilierungen vermieden werden, aber jede Anweisung wird isoliert ausgeführt. Es können keine anweisungsübergreifenden Optimierungen durchgeführt werden.
 
-- **Serielle Ausführung:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt in Abfragen, die benutzerdefinierte Funktionen aufrufen, keinen abfrageinternen Parallelismus zu. 
+- **Serielle Ausführung:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt in Abfragen, die benutzerdefinierte Funktionen aufrufen, keine abfrageinterne Parallelität zu. 
 
 ## <a name="automatic-inlining-of-scalar-udfs"></a>Automatisches Inlining von benutzerdefinierrten Skalarfunktionen
 Mit dem Feature für das Inlining benutzerdefinierter Skalarfunktionen soll die Leistung von Abfragen verbessert werden, die benutzerdefinierte T-SQL-Skalarfunktionen ausführen, bei denen die Ausführung der benutzerdefinierten Funktion den entscheidenden Engpass darstellt.
@@ -154,8 +154,9 @@ Je nach Komplexität der Logik in der benutzerdefinierten Funktion kann der resu
 - Die benutzerdefinierte Funktion verweist nicht auf benutzerdefinierte Typen.
 - Zur benutzerdefinierten Funktion werden keine Signaturen hinzugefügt.
 - Bei der benutzerdefinierten Funktion handelt es sich nicht um eine Partitionsfunktion.
+- Die UDF enthält keine Verweise auf allgemeine Tabellenausdrücke (Common Table Expressions, CTEs).
 
-<sup>1</sup> Für `SELECT` mit einer Variablenakkumulation bzw. -aggregation (z.B. `SELECT @val += col1 FROM table1`) wird das Inlining nicht unterstützt.
+<sup>1</sup> Für `SELECT` mit einer Variablenakkumulation bzw. -aggregation (z. B. `SELECT @val += col1 FROM table1`) wird das Inlining nicht unterstützt.
 
 <sup>2</sup> Für rekursive benutzerdefinierte Funktionen wird das Inlining nur bis zu einem bestimmten Grad durchgeführt.
 

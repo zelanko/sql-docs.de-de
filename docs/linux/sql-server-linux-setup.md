@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593669"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884010"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Leitfaden für die Installation von SQL Server unter Linux
 
@@ -36,7 +36,7 @@ Informationen zu weiteren Bereitstellungsszenarios finden Sie unter:
 > - [Ubuntu-Schnellstart](quickstart-install-connect-ubuntu.md)
 > - [Docker-Schnellstart](quickstart-install-connect-docker.md)
 
-Antworten auf häufig gestellte Fragen finden Sie unter [SQL Server on Linux FAQ (Häufig gestellte Fragen zu SQL Server unter Linux)](../linux/sql-server-linux-faq.md).
+Antworten auf häufig gestellte Fragen finden Sie unter [Häufig gestellte Fragen zu SQL Server für Linux](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Unterstützte Plattformen
 
@@ -45,7 +45,7 @@ SQL Server wird unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Ser
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Platform | Unterstützte Version(en) | Herunterladen
+| Plattform | Unterstützte Version(en) | Herunterladen
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 herunterladen](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 herunterladen](https://www.suse.com/products/server)
@@ -57,9 +57,9 @@ SQL Server wird unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Ser
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Platform | Unterstützte Version(en) | Herunterladen
+| Plattform | Unterstützte Version(en) | Herunterladen
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 herunterladen](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [RHEL 8.0 herunterladen](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4 | [SLES v12 herunterladen](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 herunterladen](http://releases.ubuntu.com/xenial/)
 | **Docker-Engine** | ab 1.8 | [Docker herunterladen](https://www.docker.com/get-started)
@@ -77,14 +77,14 @@ Für SQL Server gelten die folgenden Systemanforderungen unter Linux:
 
 |||
 |-----|-----|
-| **Speicher** | 2 GB |
+| **Memory** | 2 GB |
 | **Dateisystem** | **XFS** oder **EXT4** (andere Dateisysteme wie z. B. **BTRFS** werden nicht unterstützt) |
 | **Speicherplatz** | 6 GB |
 | **Prozessorgeschwindigkeit** | 2 GHz |
 | **Prozessorkerne** | 2 Kerne |
 | **Prozessortyp** | Nur x64-kompatibel |
 
-Wenn Sie **NFS-Remotefreigaben (Network File System)** in der Produktion verwenden, beachten Sie die folgenden Supportanforderungen:
+Wenn Sie **NFS-Remotefreigaben (Network File System)** in der Produktion verwenden, beachten Sie die folgenden Anforderungen für die Unterstützung:
 
 - Verwenden Sie NFS in der Version **4.2 oder höher**. Ältere NFS-Versionen unterstützen nicht die erforderlichen Features, wie das Erstellen von Fallocate- oder Sparsedateien, die häufig in modernen Dateisystemen enthalten sind.
 - Verwenden Sie nur die Verzeichnisse vom Typ **/var/opt/mssql** in der NFS-Bereitstellung. Andere Dateien, wie z. B. die SQL Server-Systembinärdateien, werden nicht unterstützt.
@@ -98,7 +98,7 @@ Beim Installieren oder Aktualisieren von SQL Server erhalten Sie die aktuelle SQ
 
 Sie können SQL Server 2017 oder SQL Server 2019 unter Linux über die Befehlszeile installieren. Eine ausführliche Anleitung mit den einzelnen Schritten finden Sie jeweils unter den folgenden Schnellstarts:
 
-| Platform | Installationsschnellstarts |
+| Plattform | Installationsschnellstarts |
 |---|---|
 | Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
 | SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |
@@ -113,7 +113,7 @@ Nach der Installation sollten Sie zusätzliche Konfigurationsänderungen vornehm
 
 Wenn Sie das Paket **mssql-server** auf die neueste Version aktualisieren möchten, verwenden Sie je nach Plattform einen der folgenden Befehle:
 
-| Platform | Befehl(e) für das Paketupdate |
+| Plattform | Befehl(e) für das Paketupdate |
 |-----|-----|
 | RHEL | `sudo yum update mssql-server` |
 | SLES | `sudo zypper update mssql-server` |
@@ -131,7 +131,7 @@ Wenn Sie SQL Server auf eine frühere Version zurücksetzen oder herabstufen mö
 
 1. Führen Sie ein Downgrade auf eine frühere Version von SQL Server aus. Ersetzen Sie `<version_number>` in den folgenden Befehlen durch die in Schritt 1 ermittelte Versionsnummer von SQL Server.
 
-   | Platform | Befehl(e) für das Paketupdate |
+   | Plattform | Befehl(e) für das Paketupdate |
    |-----|-----|
    | RHEL | `sudo yum downgrade mssql-server-<version_number>.x86_64` |
    | SLES | `sudo zypper install --oldpackage mssql-server=<version_number>` |
@@ -156,7 +156,7 @@ Gehen Sie zum Überprüfen Ihrer aktuellen Version und Edition von SQL Server un
 
 Wenn Sie das Paket **mssql-server** unter Linux entfernen möchten, verwenden Sie je nach Plattform einen der folgenden Befehle:
 
-| Platform | Befehl(e) zum Entfernen eines Pakets |
+| Plattform | Befehl(e) zum Entfernen eines Pakets |
 |-----|-----|
 | RHEL | `sudo yum remove mssql-server` |
 | SLES | `sudo zypper remove mssql-server` |
@@ -168,12 +168,12 @@ Durch Entfernen des Pakets werden die generierten Datenbankdateien nicht automat
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a> Unbeaufsichtigtes Installieren
+## <a id="unattended"></a>Unbeaufsichtigtes Installieren
 
 Gehen Sie für eine unbeaufsichtigte Installation folgendermaßen vor:
 
 - Führen Sie die ersten Schritte der [Schnellstarts](#platforms) aus, mit denen die Repositorys registriert und SQL Server installiert wird.
-- Legen Sie beim Ausführen von `mssql-conf setup` [Umgebungsvariablen](sql-server-linux-configure-environment-variables.md) fest, und verwenden Sie die Option `-n` (keine Aufforderung).
+- Legen Sie beim Ausführen von `mssql-conf setup`[Umgebungsvariablen](sql-server-linux-configure-environment-variables.md) fest, und verwenden Sie die Option `-n` (keine Aufforderung).
 
 Im folgenden Beispiel wird die Developer Edition von SQL Server mit der Umgebungsvariablen **MSSQL_PID** konfiguriert. Zudem werden die Lizenzbedingungen akzeptiert (**ACCEPT_EULA**) und das SA-Benutzerkennwort festgelegt (**MSSQL_SA_PASSWORD**). Mit dem Parameter `-n` wird eine unangekündigte Installation durchgeführt, bei der die Konfigurationswerte aus den Umgebungsvariablen abgerufen werden.
 
@@ -202,7 +202,7 @@ Wenn Ihr Linux-Computer keinen Zugriff auf die Onlinerepositorys hat, die in den
 
 1. **Installieren Sie das Paket für die Datenbank-Engine**: Verwenden Sie je nach Plattform einen der folgenden Befehle. Ersetzen Sie den Dateinamen des Pakets in diesem Beispiel durch den genauen Namen des Pakets, das Sie heruntergeladen haben.
 
-   | Platform | Befehl zur Paketinstallation |
+   | Plattform | Befehl zur Paketinstallation |
    |-----|-----|
    | RHEL | `sudo yum localinstall mssql-server_versionnumber.x86_64.rpm` |
    | SLES | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |
@@ -213,7 +213,7 @@ Wenn Ihr Linux-Computer keinen Zugriff auf die Onlinerepositorys hat, die in den
 
 1. **Lösen Sie fehlende Abhängigkeiten auf**: Zu diesem Zeitpunkt fehlen möglicherweise Abhängigkeiten. Falls nicht, können Sie diesen Schritt überspringen. Wenn Sie unter Ubuntu Zugriff auf genehmigte Repositorys mit diesen Abhängigkeiten haben, ist die einfachste Lösung die Verwendung des Befehls `apt-get -f install`. Mit diesem Befehl wird auch die Installation von SQL Server abgeschlossen. Verwenden Sie zum manuellen Überprüfen von Abhängigkeiten je nach Plattform einen der folgenden Befehle:
 
-   | Platform | Befehl zum Auflisten von Abhängigkeiten |
+   | Plattform | Befehl zum Auflisten von Abhängigkeiten |
    |-----|-----|
    | RHEL | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
    | SLES | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
@@ -244,4 +244,4 @@ Nach der Installation können Sie optionale SQL Server-Funktionen installieren o
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
 > [!TIP]
-> Antworten auf häufig gestellte Fragen finden Sie unter [SQL Server on Linux FAQ (Häufig gestellte Fragen zu SQL Server unter Linux)](sql-server-linux-faq.md).
+> Antworten auf häufig gestellte Fragen finden Sie unter [Häufig gestellte Fragen zu SQL Server für Linux](sql-server-linux-faq.md).

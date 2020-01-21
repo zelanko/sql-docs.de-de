@@ -1,7 +1,7 @@
 ---
 title: Beispieldatenbank für In-Memory OLTP | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 12/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,25 +11,25 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111803"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258784"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Beispieldatenbank für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
 ## <a name="overview"></a>Übersicht  
- In diesem Beispiel wird das In-Memory OLTP-Feature vorgestellt. Gezeigt werden die neuen speicheroptimierten Tabellen und nativ kompilierten gespeicherten Prozeduren. Darüber hinaus kann es verwendet werden, um die Leistungsvorteile von In-Memory OLTP zu veranschaulichen.  
+ In diesem Beispiel wird das In-Memory OLTP-Feature vorgestellt. Es zeigt speicheroptimierte Tabellen sowie nativ kompilierte gespeicherte Prozeduren und kann verwendet werden, um die Leistungsvorteile von In-Memory OLTP zu veranschaulichen.  
   
 > [!NOTE]  
 >  Informationen zum Anzeigen dieses Themas für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]finden Sie unter [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx).  
   
  Im Beispiel werden fünf Tabellen aus der AdventureWorks-Datenbank zu speicheroptimierten Tabellen migriert. Zusätzlich enthält es eine exemplarische Arbeitsauslastung zur Abwicklung von Verkaufsaufträgen. Die exemplarische Arbeitsauslastung veranschaulicht die Leistungsvorteile von In-Memory OLTP auf dem Server.  
   
- In der Beschreibung des Beispiels wird erläutert, welche Funktionen bei der Migration der Tabellen zu In-Memory OLTP nicht ausgeschöpft werden konnten, weil sie für speicheroptimierte Tabellen derzeit (noch) nicht unterstützt werden.  
+ In der Beschreibung des Beispiels wird erläutert, welche Features bei der Migration der Tabellen zu In-Memory OLTP nicht ausgeschöpft werden konnten, weil sie für speicheroptimierte Tabellen derzeit (noch) nicht unterstützt werden.  
   
  Die Dokumentation dieses Beispiels ist wie folgt gegliedert:  
   
@@ -37,17 +37,17 @@ ms.locfileid: "68111803"
   
 -   Anweisungen für [Installieren des auf AdventureWorks basierenden InMemory OLTP-Beispiels](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
--   [Beschreibung der Beispieltabellen und -prozeduren](#Descriptionofthesampletablesandprocedures) einschließlich der Tabellen und der Verfahren, die AdventureWorks durch das Beispiel In-Memory OLTP hinzugefügt werden, sowie Überlegungen zur Migration einiger ursprünglicher AdventureWorks-Tabellen zu speicheroptimierten Tabellen  
+-   [Beschreibung der Beispieltabellen und -prozeduren](#Descriptionofthesampletablesandprocedures) einschließlich einer Beschreibung der Tabellen und Verfahren, die AdventureWorks durch das Beispiel für In-Memory OLTP hinzugefügt werden, sowie Überlegungen zur Migration einiger ursprünglicher AdventureWorks-Tabellen zu speicheroptimierten Tabellen  
   
 -   Anweisungen zur Ausführung von [Leistungsmessungen anhand der exemplarischen Arbeitsauslastung](#PerformanceMeasurementsusingtheDemoWorkload), einschließlich Anweisungen zur Installation und Ausführung von OSTRESS (einem Tool zum Steuern der Arbeitsauslastung) sowie zur Ausführung der exemplarischen Arbeitsauslastung selbst  
   
 -   [Arbeitsspeicher- und Datenträgernutzung im Beispiel](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten SQL Server mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für In-Memory-OLTP finden Sie in folgendem Blogbeitrag: [Aspekte zur Hardware für In-Memory-OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md).
+-   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten SQL Server mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für In-Memory-OLTP finden Sie in folgendem Blogbeitrag: [Aspekte zur Hardware für In-Memory-OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md).
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installieren des auf AdventureWorks basierenden InMemory OLTP-Beispiels  
  Führen Sie die folgenden Schritte aus, um das Beispiel zu installieren:  
@@ -68,7 +68,7 @@ ms.locfileid: "68111803"
   
      T-SQL-Beispielskript:  
   
-    ```  
+    ```sql
     RESTORE DATABASE [AdventureWorks2016CTP3]   
       FROM DISK = N'C:\temp\AdventureWorks2016CTP3.bak'   
         WITH FILE = 1,    
@@ -85,7 +85,7 @@ ms.locfileid: "68111803"
   
  Die neuen speicheroptimierten Tabellen haben das Suffix „_inmem“. Zusätzlich umfasst das Beispiel entsprechende Tabellen mit dem Suffix „_ondisk“. Mithilfe dieser Tabellen können 1:1-Vergleiche zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen im System angestellt werden.  
   
- Beachten Sie, dass die in der Arbeitsauslastung für Leistungsvergleiche verwendeten speicheroptimierten Tabellen vollständig dauerhaft und vollständig protokolliert sind, d. h., dass Leistungsvorteile nicht auf Kosten der Dauerhaftigkeit oder Zuverlässigkeit erzielt werden.  
+ Die in der Arbeitsauslastung für Leistungsvergleiche verwendeten speicheroptimierten Tabellen sind vollständig dauerhaft und vollständig protokolliert, d. h., dass Leistungsvorteile nicht auf Kosten der Dauerhaftigkeit oder Zuverlässigkeit erzielt werden.  
   
  Die Zielarbeitsauslastung in diesem Beispiel dient der Abwicklung von Verkaufsaufträgen. Dabei fließen auch Produkt- und Rabattinformationen aus den Tabellen SalesOrderHeader, SalesOrderDetail, Product, SpecialOffer und SpecialOfferProduct ein.  
   
@@ -139,15 +139,15 @@ ms.locfileid: "68111803"
   
  Sales.SalesOrderHeader_inmem  
   
--   Da*Standardeinschränkungen* bei speicheroptimierten Tabellen unterstützt werden, wurden die meisten Standardeinschränkungen unverändert migriert. Die ursprüngliche Tabelle Sales.SalesOrderHeader enthält jedoch zwei Standardeinschränkungen, durch die für die Spalten OrderDate und ModifiedDate das aktuelle Datum abgerufen wird. In einer durchsatzstarken Arbeitsauslastung für die Auftragsverarbeitung, in der zahlreiche Vorgänge parallel ausgeführt werden, können globale Ressourcen zu Konflikten führen. Die Systemzeit ist beispielsweise eine solche globale Ressource und kann bei einer In-Memory OLTP-Arbeitsauslastung, durch die Verkaufsaufträge eingefügt werden, erfahrungsgemäß einen Engpass verursachen. Dies gilt insbesondere, wenn die Systemzeit für mehrere Spalten sowohl in der Auftragskopfzeile als auch in den Auftragsdetails abgerufen werden muss. In diesem Beispiel wird das Problem umgangen, indem die Systemzeit für jeden eingefügten Verkaufsauftrag nur einmal abgerufen und dieser Wert in der gespeicherten Prozedur Sales.usp_InsertSalesOrder_inmem für die datetime-Spalten in SalesOrderHeader_inmem und SalesOrderDetail_inmem verwendet wird.  
+-   Da*Standardeinschränkungen* bei speicheroptimierten Tabellen unterstützt werden, wurden die meisten Standardeinschränkungen unverändert migriert. Die ursprüngliche Tabelle Sales.SalesOrderHeader enthält jedoch zwei Standardeinschränkungen, durch die für die Spalten OrderDate und ModifiedDate das aktuelle Datum abgerufen wird. In einer Arbeitsauslastung für die Auftragsverarbeitung mit hohem Durchsatz und einem hohen Maß an Parallelität können globale Ressourcen zu Konflikten führen. Die Systemzeit ist beispielsweise eine solche globale Ressource und kann bei einer In-Memory OLTP-Arbeitsauslastung, durch die Verkaufsaufträge eingefügt werden, erfahrungsgemäß einen Engpass verursachen. Dies gilt insbesondere, wenn die Systemzeit für mehrere Spalten sowohl in der Auftragskopfzeile als auch in den Auftragsdetails abgerufen werden muss. In diesem Beispiel wird das Problem umgangen, indem die Systemzeit für jeden eingefügten Verkaufsauftrag nur einmal abgerufen und dieser Wert in der gespeicherten Prozedur Sales.usp_InsertSalesOrder_inmem für die datetime-Spalten in SalesOrderHeader_inmem und SalesOrderDetail_inmem verwendet wird.  
   
--   *Alias-UDTs* : In der ursprünglichen Tabelle werden die beiden Alias-UDTs (User-defined Data Types, benutzerdefinierte Datentypen) dbo.OrderNumber und dbo.AccountNumber für die Spalten „PurchaseOrderNumber“ bzw. „AccountNumber“ verwendet. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] unterstützt keine Alias-UDTs für speicheroptimierte Tabellen, daher verwenden die neuen Tabellen die Systemdatentypen nvarchar(25) bzw. nvarchar(15).  
+-   *Alias-UDTs*: In der ursprünglichen Tabelle werden die beiden Alias-UDTs (User-defined Data Types, benutzerdefinierte Datentypen) „dbo.OrderNumber“ und „dbo.AccountNumber“ für die Spalten „PurchaseOrderNumber“ bzw. „AccountNumber“ verwendet. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] unterstützt keine Alias-UDTs für speicheroptimierte Tabellen, daher verwenden die neuen Tabellen die Systemdatentypen nvarchar(25) bzw. nvarchar(15).  
   
--   *Spalten mit NULL-Werten in Indexschlüsseln* : In der ursprünglichen Tabelle sind für die Spalte „SalesPersonID“ NULL-Werte zulässig, während die Spalte in den neuen Tabellen keine NULL-Werte zulässt und über eine Standardeinschränkung mit dem Wert (-1) verfügt. Dies liegt daran, dass Indizes für speicheroptimierte Tabellen im Indexschlüssel keine Spalten aufweisen dürfen, die NULL-Werte zulassen. Daher dient -1 in diesem Fall als Ersatz für NULL.  
+-   *Spalten mit NULL-Werten in Indexschlüsseln* : In der ursprünglichen Tabelle sind für die Spalte „SalesPersonID“ NULL-Werte zulässig, während die Spalte in den neuen Tabellen keine NULL-Werte zulässt und über eine Standardeinschränkung mit dem Wert (-1) verfügt. Dieser Umstand ist darin begründet, dass Indizes für speicheroptimierte Tabellen im Indexschlüssel keine Spalten aufweisen dürfen, die Nullwerte zulassen. Daher dient -1 in diesem Fall als Ersatz für NULL.  
   
 -   *Berechnete Spalten* : Auf die berechneten Spalten SalesOrderNumber und TotalDue wurde verzichtet, da berechnete Spalten in speicheroptimierten Tabellen von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] nicht unterstützt werden. In der neuen Sicht Sales.vSalesOrderHeader_extended_inmem sind die Spalten SalesOrderNumber und TotalDue enthalten. Falls diese Spalten benötigt werden, können Sie diese Sicht verwenden.  
 
-    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Anwendungsbereich:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in speicheroptimierten Tabellen und Indizes berechnete Spalten unterstützt.
 
   
@@ -159,7 +159,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
 -   *Standardeinschränkungen*: Ähnlich wie SalesOrderHeader wird die Standardeinschränkung, die das Systemdatum bzw. die Systemzeit erfordert, nicht migriert. Stattdessen wird das aktuelle Systemdatum bzw. die aktuelle Systemzeit von der gespeicherten Prozedur, die Verkaufsaufträge einfügt, beim ersten Einfügevorgang hinzugefügt.  
   
--   *Berechnete Spalten*: Die berechnete Spalte „LineTotal“ wurde nicht migriert, weil berechnete Spalten bei speicheroptimierten Tabellen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]nicht unterstützt werden. Um auf diese Spalte zuzugreifen, verwenden Sie die Sicht Sales.vSalesOrderDetail_extended_inmem.  
+-   *Berechnete Spalten*: Die berechnete Spalte „LineTotal“ wurde nicht migriert, weil berechnete Spalten bei speicheroptimierten Tabellen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]nicht unterstützt werden. Um auf diese Spalte zuzugreifen, verwenden Sie die Sicht „Sales.vSalesOrderDetail_extended_inmem“.  
   
 -   *Rowguid* : Die rowguid-Spalte wird nicht verwendet. Ausführliche Informationen finden Sie in der Beschreibung zur Tabelle SalesOrderHeader.  
   
@@ -182,21 +182,26 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
  Mit HASH-Indizes kann die Arbeitsauslastung weiter optimiert werden, da sie speziell für Punktsuchen und Zeileneinfügungen optimiert sind. Allerdings unterstützen sie keine Bereichsscans, sortierte Scans oder Suchen in führenden Indexschlüsselspalten. Daher sollten diese Indizes mit Vorsicht verwendet werden. Außerdem muss während der Erstellung der bucket_count-Wert angegeben werden. Die Bucketanzahl sollte normalerweise auf einen Wert zwischen der einfachen und doppelten Anzahl von Indexschlüsselwerten festgelegt werden. Ein zu hoher Wert stellt in der Regel aber auch kein Problem dar.  
   
- Weitere Informationen zu [Indexrichtlinien](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) und Richtlinien zum [Auswählen des geeigneten bucket_count-Werts](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)finden Sie in der Onlinedokumentation.  
-  
+Weitere Informationen zu [Indexrichtlinien](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) und Richtlinien zum [Auswählen des geeigneten bucket_count-Werts](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) finden Sie in der Onlinedokumentation.  
+
+
+Die Onlinedokumentation bietet weitere Informationen zu folgenden Themen:
+- [Indexrichtlinien](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [Auswählen des geeigneten bucket_count-Werts](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+
  Die Indizes der migrierten Tabellen wurden für die exemplarische Arbeitsauslastung, die zur Abwicklung von Verkaufsaufträgen eingesetzt wird, optimiert. Die Arbeitsauslastung basiert auf Einfügungen und Punktsuchen in den Tabellen Sales.SalesOrderHeader_inmem und Sales.SalesOrderDetail_inmem sowie auf Punktsuchen in den Primärschlüsselspalten der Tabellen Production.Product_inmem und Sales.SpecialOffer_inmem.  
   
  Sales.SalesOrderHeader_inmem verfügt über drei Indizes, die aus Leistungsgründen und weil für die Arbeitsauslastung keine sortierten oder Bereichsscans erforderlich sind, alle HASH-Indizes sind.  
   
 -   HASH-Index für (SalesOrderID): bucket_count hat einen Wert von 10 Millionen (und wird auf 16 Millionen aufgerundet), da die erwartete Anzahl von Verkaufsaufträgen 10 Millionen beträgt.  
   
--   HASH-Index für (SalesPersonID): bucket_count beträgt 1 Million. Dem bereitgestellten Dataset sind nur eine geringe Anzahl von Vertriebsmitarbeitern zugeordnet, sodass es zukünftig anwachsen kann. Außerdem tritt bei Punktsuchen keine Leistungsbeeinträchtigung auf, falls eine zu hohe Bucketanzahl ausgewählt wird.  
+-   HASH-Index für (SalesPersonID): bucket_count beträgt 1 Million. Das bereitgestellte Dataset enthält nicht viele Vertriebsmitarbeiter. Dieser große bucket_count-Wert bietet jedoch genügend Platz für zukünftiges Wachstum. Und Sie müssen keine Leistungseinbußen für Punktsuchen in Kauf nehmen, wenn bucket_count überdimensioniert ist.  
   
 -   HASH-Index für (CustomerID): bucket_count beträgt 1 Million. Dem bereitgestellten Dataset ist nur eine geringe Anzahl von Kunden zugeordnet, sodass es zukünftig anwachsen kann.  
   
  Sales.SalesOrderDetail_inmem verfügt über drei Indizes, die aus Leistungsgründen und weil für die Arbeitsauslastung keine sortierten oder Bereichsscans erforderlich sind, alle HASH-Indizes sind.  
   
--   HASH-Index für (SalesOrderID, SalesOrderDetailID): Dies ist der Primärschlüsselindex. Obwohl für (SalesOrderID, SalesOrderDetailID) nur selten Suchen ausgeführt werden, lassen sich Zeileneinfügungen beschleunigen, indem ein HASH-Index für den Schlüssel verwendet wird. bucket_count hat einen Wert von 50 Millionen (und wird auf 67 Millionen aufgerundet): Die erwartete Anzahl von Verkaufsaufträgen beträgt 10 Millionen mit durchschnittlich fünf Einzelposten pro Auftrag.  
+-   HASH-Index für (SalesOrderID, SalesOrderDetailID): Dies ist der Primärschlüsselindex. Obwohl für (SalesOrderID, SalesOrderDetailID) nur selten Suchen ausgeführt werden, lassen sich Zeileneinfügungen beschleunigen, indem ein HASH-Index für den Schlüssel verwendet wird. Der bucket_count-Wert ist auf 50 Millionen festgelegt (und wird auf 67 Millionen aufgerundet): Die erwartete Anzahl von Verkaufsaufträgen beträgt 10 Millionen mit durchschnittlich fünf Einzelposten pro Auftrag.  
   
 -   HASH-Index für (SalesOrderID): Es werden häufig Suchen nach Verkaufsaufträgen ausgeführt, und Sie möchten alle Einzelposten ermitteln, die sich auf einen einzelnen Auftrag beziehen.  bucket_count hat einen Wert von 10 Millionen (und wird auf 16 Millionen aufgerundet), da die erwartete Anzahl von Verkaufsaufträgen 10 Millionen beträgt.  
   
@@ -308,11 +313,11 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
  OSTRESS ist ein Befehlszeilentool, das vom Microsoft CSS SQL Server-Supportteam entwickelt wurde. Mit diesem Tool können Abfragen ausgeführt oder gespeicherte Prozeduren parallel aufgerufen werden. Sie können die Anzahl der Threads zur parallelen Ausführung einer bestimmten T-SQL-Anweisung konfigurieren und angeben, wie oft die Anweisung in diesem Thread ausgeführt werden soll. OSTRESS bündelt die Threads und führt die Anweisung in allen Threads gleichzeitig aus. Nachdem die Ausführung aller Threads beendet wurde, meldet OSTRESS die zur Beendigung sämtlicher Threads benötigte Dauer.  
   
 ### <a name="installing-ostress"></a>Installieren von OSTRESS  
- OSTRESS wird nicht eigenständig, sondern als Teil der RML-Hilfsprogramme installiert.  
+ OSTRESS wird nicht eigenständig, sondern als Teil der RML-Hilfsprogramme (Remote Markup Language) installiert.  
   
  Installationsschritte:  
   
-1.  Laden Sie die x64-Version des Installationspakets für die RML-Hilfsprogramme von folgender Seite herunter, und führen Sie das Paket aus: [Download Report Markup Language (RML) for SQL Server (Report Markup Language (RML) für SQL Server herunterladen)](https://www.microsoft.com/en-us/download/details.aspx?id=4511).
+1.  Laden Sie die x64-Version des Installationspakets für die RML-Hilfsprogramme von folgender Seite herunter, und führen Sie das Paket aus: [Herunterladen von RML für SQL Server](https://www.microsoft.com/download/details.aspx?id=4511)
 
 2.  Falls Sie in einem Dialogfeld darauf hingewiesen werden, dass bestimmte Dateien gerade verwendet werden, klicken Sie auf „Weiter“.  
   
@@ -340,7 +345,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
 -   -r: Die Anzahl der Iterationen für jede Verbindung, über die die einzelnen Eingabedateien/Abfragen verarbeitet werden.  
   
 ### <a name="demo-workload"></a>Exemplarische Arbeitsauslastung  
- Die wichtigste in der exemplarischen Arbeitsauslastung verwendete gespeicherte Prozedur ist Sales.usp_InsertSalesOrder_inmem/ondisk. Im folgenden Skript wird ein Tabellenwertparameter (Table-valued Parameter, TVP) mit Beispieldaten erstellt. Anschließend wird die Prozedur aufgerufen, um einen Verkaufsauftrag mit fünf Einzelpositionen einzufügen.  
+ Die wichtigste in der exemplarischen Arbeitsauslastung verwendete gespeicherte Prozedur ist Sales.usp_InsertSalesOrder_inmem/ondisk. Das folgende Skript erstellt einen Tabellenwertparameter (Table-valued Parameter, TVP) mit Beispieldaten und ruft anschließend die Prozedur auf, um einen Verkaufsauftrag mit fünf Einzelpositionen einzufügen.  
   
  Das OSTRESS-Tool wird verwendet, um die Aufrufe der gespeicherten Prozedur parallel auszuführen und Clients zu simulieren, die zeitgleich Verkaufsaufträge einfügen.  
   
@@ -348,7 +353,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
  Das folgende Skript wird gleichzeitig ausgeführt, um eine Arbeitsauslastung zur Auftragsabwicklung zu simulieren:  
   
-```  
+```sql
 DECLARE   
       @i int = 0,   
       @od Sales.SalesOrderDetailType_inmem,   
@@ -368,8 +373,7 @@ WHILE (@i < 20)
 BEGIN;   
       EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od;   
       SET @i += 1   
-END  
-  
+END
 ```  
   
  Mit diesem Skript wird jeder erstellte Beispielauftrag durch 20 in einer WHILE-Schleife ausgeführte gespeicherte Prozeduren 20 Mal eingefügt. Die Schleife wird verwendet, weil die Datenbank zum Erstellen des Beispielauftrags verwendet wird. In einer typischen Produktionsumgebung wird der einzufügende Verkaufsauftrag durch die Mid-Tier-Anwendung erstellt.  
@@ -392,7 +396,7 @@ END
   
  Klicken Sie auf die Schaltfläche zum Kopieren, um den Befehl zu kopieren, und fügen Sie ihn in die Eingabeaufforderung der RML-Hilfsprogramme ein.  
   
-```  
+```console
 ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
@@ -401,13 +405,13 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
  Beobachten Sie bei der Ausführung der Arbeitsauslastung die CPU-Auslastung, beispielsweise mit dem Task-Manager. Sie werden feststellen, dass die CPU-Auslastung bei fast 100 % liegt. Andernfalls verursachen E/A-Protokollvorgänge einen Engpass. Weitere Informationen finden Sie auch unter [Problembehandlung bei langsamer Testausführung](#Troubleshootingslow-runningtests).  
   
 ##### <a name="disk-based-tables"></a>Datenträgerbasierte Tabellen  
- Mit dem folgenden Befehl wird die Arbeitsauslastung für datenträgerbasierte Tabellen ausgeführt. Beachten Sie, dass die Ausführung dieser Arbeitsauslastung einige Zeit dauern kann, was hauptsächlich auf Latchkonflikte im System zurückzuführen ist. Dieses Problem tritt bei speicheroptimierten Tabellen nicht auf, da sie ohne Latches auskommen.  
+ Mit dem folgenden Befehl wird die Arbeitsauslastung für datenträgerbasierte Tabellen ausgeführt. Die Ausführung dieser Arbeitsauslastung kann einige Zeit dauern, was hauptsächlich auf Latchkonflikte im System zurückzuführen ist. Dieses Problem tritt bei speicheroptimierten Tabellen nicht auf, da sie ohne Latches auskommen.  
   
  Öffnen Sie die RML-Eingabeaufforderung, und führen Sie folgenden Befehl aus:  
   
  Klicken Sie auf die Schaltfläche zum Kopieren, um den Befehl zu kopieren, und fügen Sie ihn in die Eingabeaufforderung der RML-Hilfsprogramme ein.  
   
-```  
+```console
 ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
@@ -422,11 +426,11 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
 #### <a name="resetting-the-demo"></a>Zurücksetzen der exemplarischen Arbeitsauslastung  
  Um die exemplarische Arbeitsauslastung zurückzusetzen, öffnen Sie die RML-Eingabeaufforderung und führen folgenden Befehl aus:  
   
-```  
+```console
 ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"  
 ```  
   
- Abhängig von der Hardware kann die Ausführung einige Minuten dauern.  
+ Je nach Hardware kann die Ausführung einige Minuten dauern.  
   
  Es wird empfohlen, die Arbeitsauslastung nach jedem Durchgang zurückzusetzen. Da bei dieser Arbeitsauslastung nur Einfügungen stattfinden, wird bei jedem Durchgang mehr Arbeitsspeicher belegt. Durch das Zurücksetzen wird verhindert, dass der Arbeitsspeicher knapp wird. Der Abschnitt [Arbeitsspeichernutzung nach dem Ausführen der Arbeitsauslastung](#Memoryutilizationafterrunningtheworkload)enthält Informationen darüber, wie viel Arbeitsspeicher nach einer Ausführung belegt ist.  
   
@@ -451,7 +455,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 #### <a name="overall-utilization-of-the-database"></a>Gesamtnutzung der Datenbank  
  Mithilfe der folgenden Abfrage kann die gesamte Arbeitsspeichernutzung für In-Memory OLTP im System ermittelt werden.  
   
-```  
+```sql
 SELECT type  
    , name  
 , pages_kb/1024 AS pages_MB   
@@ -463,17 +467,18 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|94|  
+|MEMORYCLERK_XTP|Standard|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Standard|0|  
+||||
   
- Die standardmäßigen Arbeitsspeicherclerks basieren auf systemweiten Strukturen und sind relativ klein. Der Arbeitsspeicherclerk für die Benutzerdatenbank, d. h. die Datenbank mit der ID 5, umfasst etwa 900 MB.  
+ Die standardmäßigen Arbeitsspeicherclerks basieren auf systemweiten Strukturen und sind relativ klein. Der Arbeitsspeicherclerk für die Benutzerdatenbank, d. h. die Datenbank mit der ID 5, umfasst etwa 900 MB.  
   
 #### <a name="memory-utilization-per-table"></a>Arbeitsspeichernutzung pro Tabelle  
  Mithilfe der folgenden Abfrage kann ein Drilldown ausgeführt werden, um die Arbeitsspeichernutzung der einzelnen Tabellen und ihrer Indizes zu ermitteln:  
   
-```  
+```sql
 SELECT object_name(t.object_id) AS [Table Name]  
      , memory_allocated_for_table_kb  
  , memory_allocated_for_indexes_kb  
@@ -482,7 +487,7 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
- Im Folgenden die Ergebnisse, die diese Abfrage bei einer Neuinstallation des Beispiels zurückgibt:  
+ Die folgende Tabelle zeigt die Ergebnisse, die diese Abfrage bei einer Neuinstallation des Beispiels zurückgibt:  
   
 ||||  
 |-|-|-|  
@@ -494,15 +499,16 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-  
- Sie sehen, dass die Tabellen relativ klein sind: SalesOrderHeader_inmem umfasst ca. 7 MB und SalesOrderDetail_inmem ca. 15 MB.  
+||||
+
+ Sie sehen, dass die Tabellen relativ klein sind: „SalesOrderHeader_inmem“ umfasst ca. 7 MB und „SalesOrderDetail_inmem“ ca. 15 MB.  
   
  Hier fällt auf, dass die den Indizes zugeordnete Arbeitsspeicherkapazität deutlich über der Kapazität der Tabellendaten liegt. Dies liegt daran, dass die Datengröße für die Hashindizes im Beispiel vorab auf einen höheren Wert festgelegt wurde. Da Hashindizes über eine feste Größe verfügen, wachsen sie nicht mit der Größe der Daten in der Tabelle mit.  
   
 ####  <a name="Memoryutilizationafterrunningtheworkload"></a> Arbeitsspeichernutzung nach dem Ausführen der Arbeitsauslastung  
  Nach 10 Millionen eingefügten Verkaufsaufträgen stellt sich die Arbeitsspeichernutzung insgesamt wie folgt dar:  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -512,16 +518,17 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|146|  
+|MEMORYCLERK_XTP|Standard|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
-  
- Sie sehen, dass SQL Server etwas weniger als 8 GB für die speicheroptimierten Tabellen und Indizes in der Beispieldatenbank belegt.  
+|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Standard|0|  
+||||
+
+ Wie Sie sehen, belegt SQL Server etwas weniger als 8 GB für die speicheroptimierten Tabellen und Indizes in der Beispieldatenbank.  
   
  Nach einem Testlauf ergibt sich die folgende Arbeitsspeichernutzung nach Tabellen:  
   
-```  
+```sql
 SELECT object_name(t.object_id) AS [Table Name]  
      , memory_allocated_for_table_kb  
  , memory_allocated_for_indexes_kb  
@@ -540,15 +547,16 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-  
- Es sind insgesamt etwa 6,5 GB Daten angegeben. Beachten Sie, dass die Größe der Indizes für die Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem der Größe der Indizes vor dem Einfügen der Verkaufsaufträge entspricht. Die Indexgröße hat sich nicht geändert, weil beide Tabellen Hashindizes verwenden, die wiederum statisch sind.  
+||||
+
+ Die Gesamtmenge an Daten beträgt etwa 6,5 GB. Beachten Sie, dass die Größe der Indizes für die Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem der Größe der Indizes vor dem Einfügen der Verkaufsaufträge entspricht. Die Indexgröße hat sich nicht geändert, weil beide Tabellen Hashindizes verwenden, die wiederum statisch sind.  
   
 #### <a name="after-demo-reset"></a>Nach dem Zurücksetzen der exemplarischen Arbeitauslastung  
  Die gespeicherte Prozedur Demo.usp_DemoReset kann verwendet werden, um die exemplarische Arbeitsauslastung zurückzusetzen. Durch sie werden die Daten in den Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem gelöscht und mit neuen Ausgangsdaten aus den urspünglichen Tabellen SalesOrderHeader und SalesOrderDetail aufgefüllt.  
   
  Obwohl die Zeilen in den Tabellen gelöscht wurden, bedeutet dies nicht, dass der Arbeitsspeicher sofort freigegeben wird. SQL Server gibt den Arbeitsspeicher, der von den aus speicheroptimierten Tabellen gelöschten Zeilen belegt wurde, nach Bedarf im Hintergrund frei. Wenn im System keine Transaktionen ausgeführt werden, werden Sie feststellen, dass der von den gelöschten Zeilen belegte Arbeitsspeicher unmittelbar nach dem Zurücksetzen der exemplarischen Arbeitsauslastung noch nicht freigegeben wurde:  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -558,16 +566,17 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|2261|  
+|MEMORYCLERK_XTP|Standard|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
-  
+|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Standard|0|  
+||||
+
  Erwartetes Verhalten: Der Arbeitsspeicher wird beim Ausführen der Transaktionsarbeitsauslastung freigegeben.  
   
  Wenn Sie die exemplarische Arbeitsauslastung ein zweites Mal ausführen, werden Sie anfänglich einen Rückgang der Arbeitsspeichernutzung feststellen, da die zuvor gelöschten Zeilen bereinigt werden. Gleichzeitig nimmt die Arbeitsspeichergröße wieder zu, bis die Arbeitsauslastung abgeschlossen wurde. Nachdem die exemplarische Arbeitsauslastung zurückgesetzt und 10 Millionen Zeilen eingefügt wurden, entspricht die Arbeitsspeichernutzung weitestgehend der Nutzung nach der ersten Ausführung. Beispiel:  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -577,15 +586,16 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|1863|  
+|MEMORYCLERK_XTP|Standard|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
-  
+|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Standard|0|  
+||||
+
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Datenträgernutzung für speicheroptimierte Tabellen  
  Mithilfe der folgenden Abfrage können Sie ermitteln, wie viel Gesamtspeicherplatz die Prüfpunktdateien einer Datenbank zu einem bestimmten Zeitpunkt auf dem Datenträger belegen:  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -596,9 +606,9 @@ WHERE f.type=N'FX'
 #### <a name="initial-state"></a>Anfangszustand  
  Bei der Erstellung der Beispieldateigruppe und der speicheroptimierten Beispieltabellen werden eine Reihe von Prüfpunktdateien vorab erstellt, und das System beginnt, die Dateien mit Daten aufzufüllen. Wie viele Prüfpunktdateien vorab erstellt werden, hängt von der Anzahl der logischen Prozessoren im System ab. Da das Beispiel zunächst noch sehr klein ist, sind die vorab erstellten Dateien anfänglich überwiegend leer.  
   
- Im Folgenden wird die anfängliche Größe des Beispiels auf dem Datenträger angezeigt. Der verwendete Computer verfügt über 16 logische Prozessoren:  
+ Der folgende Code zeigt die anfängliche Größe des Beispiels auf dem Datenträger eines Computers mit 16 logischen Prozessoren:  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -609,12 +619,13 @@ WHERE f.type=N'FX'
 |-|  
 |**Größe auf dem Datenträger (MB)**|  
 |2312|  
-  
- Wie Sie sehen, besteht eine große Diskrepanz zwischen der Größe der Prüfpunktdateien auf dem Datenträger (2,3 GB) und der tatsächlichen Datengröße, die näher bei 30 MB liegt.  
+||
+
+ Wie Sie sehen, besteht eine große Diskrepanz zwischen der Größe der Prüfpunktdateien auf dem Datenträger, die 2,3 GB beträgt, und der tatsächlichen Datengröße, die eher bei 30 MB liegt.  
   
  Mithilfe der folgenden Abfrage können Sie untersuchen, worauf die Datenträgerbelegung zurückzuführen ist. Die Größe auf dem Datenträger, die von dieser Abfrage zurückgegeben wird, stellt bei Dateien mit Status 5 (REQUIRED FOR BACKUP/HA), 6 (IN TRANSITION TO TOMBSTONE) oder 7 (TOMBSTONE) einen Schätzwert dar.  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -638,15 +649,16 @@ ORDER BY state, file_type
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-  
- Wie Sie sehen, wird der meiste Speicherplatz durch vorab erstellte Daten- und Änderungsdateien belegt. SQL Server hat vorab ein Dateipaar (bestehend aus Daten- und Änderungsdatei) pro logischem Prozessor erstellt. Darüber hinaus wird für Datendateien vorab eine Größe von 128 MB und für Änderungsdateien eine Größe von 8 MB festgelegt. So können Daten effizienter in diese Dateien eingefügt werden.  
+|||||
+
+ Wie Sie sehen, wird der meiste Speicherplatz durch vorab erstellte Daten- und Änderungsdateien belegt. SQL Server hat vorab ein Dateipaar (bestehend aus Daten- und Änderungsdatei) pro logischem Prozessor erstellt. Darüber hinaus wird für Datendateien vorab eine Größe von 128 MB und für Änderungsdateien eine Größe von 8 MB festgelegt. So können Daten effizienter in diese Dateien eingefügt werden.  
   
  Die tatsächlichen Daten der speicheroptimierten Tabellen sind in einer einzelnen Datendatei gespeichert.  
   
 #### <a name="after-running-the-workload"></a>Nach dem Ausführen der Arbeitsauslastung  
  Nach einem einzelnen Testlauf, bei dem 10 Millionen Verkaufsaufträge eingefügt wurden, wird in etwa folgender Gesamtspeicherplatz auf dem Datenträger belegt (Testserver mit 16 Kernen):  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -656,13 +668,14 @@ WHERE f.type=N'FX'
 ||  
 |-|  
 |**Größe auf dem Datenträger (MB)**|  
-|8828|  
+|8828|
+||
   
- Die Größe auf dem Datenträger liegt nahe bei 9 GB. Dies entspricht weitestgehend der Größe der Daten im Arbeitsspeicher.  
+ Die Größe auf dem Datenträger liegt bei etwa 9 GB. Dies entspricht weitestgehend der Größe der Daten im Arbeitsspeicher.  
   
  Im Folgenden sind die Größen der Prüfpunktdateien in den einzelnen Phasen aufgeschlüsselt:  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -684,17 +697,18 @@ ORDER BY state, file_type
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-  
+|||||
+
  Es sind weiterhin 16 vorab erstellte Dateipaare verfügbar, die nach dem Schließen der Prüfpunkte sofort einsatzbereit sind.  
   
- Ein Paar wird gerade erstellt, das bis zum Schließen des aktuellen Prüfpunkts verwendet wird. Zusammen mit den aktiven Prüfpunktdateien ergeben 6,5 GB Daten im Arbeitsspeicher eine Datenträgernutzung von ca. 6,5 GB. Wie Sie wissen, werden Indizes nicht dauerhaft auf dem Datenträger gespeichert. Folglich ist die Gesamtgröße auf dem Datenträger in diesem Fall kleiner als die Datengröße im Arbeitsspeicher.  
+ Ein Paar wird gerade erstellt, das bis zum Schließen des aktuellen Prüfpunkts verwendet wird. Zusammen mit den aktiven Prüfpunktdateien ergeben 6,5 GB Daten im Arbeitsspeicher eine Datenträgernutzung von ca. 6,5 GB. Wie Sie wissen, werden Indizes nicht dauerhaft auf dem Datenträger gespeichert. Folglich ist die Gesamtgröße auf dem Datenträger in diesem Fall kleiner als die Datengröße im Arbeitsspeicher.  
   
 #### <a name="after-demo-reset"></a>Nach dem Zurücksetzen der exemplarischen Arbeitauslastung  
  Nach dem Zurücksetzen der exemplarischen Arbeitsauslastung wird der Speicherplatz auf dem Datenträger nicht sofort freigegeben, wenn das System keine Transaktionen ausführt und keine Datenbank-Prüfpunkte vorhanden sind. Damit Prüfpunktdateien die verschiedenen Phasen durchlaufen und schließlich entfernt werden können, müssen eine Reihe von Prüfpunkten sowie Protokollkürzungen vorangegangen sein. Das ist erforderlich, um die Zusammenführung von Prüfpunktdateien sowie die Garbage Collection zu initiieren. Wenn das System Transaktionen ausführt (und Sie bei Verwendung des vollständigen Wiederherstellungsmodells regelmäßige Protokollsicherungen vornehmen), erfolgt dieser Schritt automatisch. Befindet sich das System wie im Beispielszenario jedoch im Leerlauf, wird dieser Schritt nicht ausgeführt.  
   
  Nach dem Zurücksetzen der exemplarischen Arbeitauslastung sehen Sie in etwa folgende Ergebnisse  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -704,11 +718,12 @@ WHERE f.type=N'FX'
 ||  
 |-|  
 |**Größe auf dem Datenträger (MB)**|  
-|11839|  
+|11839|
+||
   
- Mit fast 12 GB liegen die Ergebnisse deutlich über den 9 GB vor dem Zurücksetzen der exemplarischen Arbeitsauslastung. Dies ist darauf zurückzuführen, dass die Zusammenführung einiger Prüfpunktdateien zwar bereits gestartet, einige der Zusammenführungsziele jedoch noch nicht installiert wurden. Darüber hinaus wurden einige der zusammengeführten Quelldateien noch nicht bereinigt, wie im Folgenden ersichtlich:  
+ Mit fast 12 GB liegen die Ergebnisse deutlich über den 9 GB vor dem Zurücksetzen der exemplarischen Arbeitsauslastung. Dies ist darauf zurückzuführen, dass die Zusammenführung einiger Prüfpunktdateien zwar bereits gestartet, einige der Zusammenführungsziele jedoch noch nicht installiert wurden. Darüber hinaus wurden einige der zusammengeführten Quelldateien noch nicht bereinigt, wie im Folgenden ersichtlich:  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -734,14 +749,15 @@ ORDER BY state, file_type
 |MERGE TARGET|DELTA|7|56|  
 |MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
-  
+|||||
+
  Sobald Transaktionsaktivitäten im System auftreten, werden Zusammenführungsziele installiert und zusammengeführte Quelldateien bereinigt.  
   
  Nachdem die exemplarische Arbeitsauslastung ein zweites Mal ausgeführt, zurückgesetzt und 10 Millionen Verkaufsaufträge eingefügt wurden, werden Sie feststellen, dass die während der ersten Ausführung der Arbeitsauslastung erstellten Dateien bereinigt wurden. Wenn Sie die vorangehende Abfrage bei aktiver Arbeitsauslastung mehrere Male ausführen, können Sie beobachten, wie die Prüfpunktdateien die verschiedenen Phasen durchlaufen.  
   
  Nachdem die Arbeitsauslastung zum zweiten Mal ausgeführt und 10 Millionen Verkaufsaufträge eingefügt wurden, ist die Datenträgernutzung ähnlich (wenn auch nicht identisch) mit der Nutzung nach der ersten Ausführung. Dies liegt an der Dynamik des Systems. Beispiel:  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -765,11 +781,10 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DELTA|2|16|  
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
-  
+|||||
+
  In diesem Fall gibt es zwei Prüfpunktdateipaare mit dem Status „under construction“. Das legt die Vermutung nahe, dass aufgrund des hohen Parallelitätsgrads der Arbeitsauslastung mehrere Dateipaare in den Status „under construction“ versetzt wurden. Mehrere gleichzeitige Threads erforderten also zur selben Zeit ein neues Dateipaar, wodurch sich der Status eines Paares von „precreated“ in „under construction“ geändert hat.  
   
-## <a name="see-also"></a>Weitere Informationen  
- [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen
 
+[In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](in-memory-oltp-in-memory-optimization.md)  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffc7da76c7291bbf8e0d4dd6003c572cd9610e92
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: aa5d978126807e1fb83c08a1d1b8d9d7b74d8368
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294375"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687165"
 ---
 # <a name="ole-db-connection-manager"></a>Teilcache
 
@@ -73,7 +73,7 @@ Sie haben folgende Möglichkeiten, um den OLE DB-Verbindungs-Manager zu konfigur
   
  Weitere Informationen zum OLE DB-Verbindungs-Manager finden Sie unter [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Datenverbindungen**  
  Wählen Sie aus der Liste eine vorhandene OLE DB-Datenverbindung aus.  
   
@@ -94,54 +94,40 @@ Beim Ausführen von SSIS-Paketen in [Azure-SSIS Integration Runtime in Azure Dat
 
 Damit Sie die Authentifizierung der verwalteten Identität für die Azure SQL-Datenbank verwenden können, führen Sie die folgenden Schritte zum Konfigurieren der Datenbank aus:
 
-1. Erstellen Sie eine Gruppe in Azure AD. Geben Sie die verwaltete Identität als ein Mitglied der Gruppe an.
-    
-   1. [Suchen Sie die verwaltete Identität für Data Factory im Azure-Portal](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Wechseln Sie zu den **Eigenschaften** der Data Factory. Kopieren Sie die **Objekt-ID der verwalteten Identität**.
-    
-   1. Installieren Sie das [Azure AD PowerShell](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2)-Modul. Melden Sie sich mit dem Befehl `Connect-AzureAD` an. Führen Sie die folgenden Befehle zum Erstellen einer Gruppe und Hinzufügen der verwalteten Identität als Mitglied aus.
-      ```powershell
-      $Group = New-AzureADGroup -DisplayName "<your group name>" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
-      Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
-      ```
-    
-1. [Stellen Sie einen Azure Active Directory-Administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) für Ihren Azure SQL-Server im Azure-Portal bereit, wenn dies noch nicht geschehen ist. Der Azure AD-Administrator kann ein Azure AD-Benutzer oder eine Azure AD-Gruppe sein. Wenn Sie der Gruppe mit der verwalteten Identität eine Administratorrolle zuweisen, überspringen Sie die Schritte 3 und 4. Der Administrator hat vollen Zugriff auf die Datenbank.
+1. [Stellen Sie einen Azure Active Directory-Administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) für Ihren Azure SQL-Server im Azure-Portal bereit, wenn dies noch nicht geschehen ist. Der Azure AD-Administrator kann ein Azure AD-Benutzer oder eine Azure AD-Gruppe sein. Wenn Sie der Gruppe mit der verwalteten Identität eine Administratorrolle zuweisen, überspringen Sie die Schritte 2 und 3. Der Administrator hat vollen Zugriff auf die Datenbank.
 
-1. [Erstellen Sie eigenständige Datenbankbenutzer](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) für die Azure AD-Gruppe. Stellen Sie eine Verbindung mit der Datenbank her, aus der oder in die Sie Daten kopieren möchten. Verwenden Sie dazu Tools wie SSMS und eine Azure AD-Identität, die mindestens über ALTER ANY USER-Berechtigung verfügt. Führen Sie folgenden T-SQL-Code aus: 
+1. [Erstellen Sie für eine eigenständige Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) Benutzer für die verwaltete Data Factory-Identität. Stellen Sie eine Verbindung mit der Datenbank her, aus der oder in die Sie Daten kopieren möchten. Verwenden Sie dazu Tools wie SSMS und eine Azure AD-Identität, die mindestens über ALTER ANY USER-Berechtigung verfügt. Führen Sie folgenden T-SQL-Code aus: 
     
     ```sql
-    CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Gewähren Sie der Azure AD-Gruppe die notwendigen Berechtigungen, wie Sie es normalerweise für SQL-Benutzer und andere tun. Informationen zu den entsprechenden Rollen finden Sie unter [Rollen auf Datenbankebene](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Führen Sie beispielsweise den folgenden Code aus:
+1. Gewähren Sie der verwalteten Data Factory-Identität die notwendigen Berechtigungen, und gehen Sie dabei so vor wie für SQL-Benutzer und andere Benutzer. Informationen zu den entsprechenden Rollen finden Sie unter [Rollen auf Datenbankebene](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Führen Sie den folgenden Code aus. Weitere Optionen finden Sie in [diesem Dokument](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql).
 
     ```sql
-    ALTER ROLE [role name] ADD MEMBER [your AAD group name];
+    EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
 Damit Sie die Authentifizierung der verwalteten Identität für die verwaltete Azure SQL-Datenbankinstanz verwenden können, führen Sie die folgenden Schritte zum Konfigurieren der Datenbank aus:
     
-1. [Stellen Sie einen Azure Active Directory-Administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) für Ihre verwaltete Instanz im Azure-Portal bereit, wenn dies noch nicht geschehen ist. Der Azure AD-Administrator kann ein Azure AD-Benutzer oder eine Azure AD-Gruppe sein. Wenn Sie der Gruppe mit der verwalteten Identität eine Administratorrolle zuweisen, überspringen Sie die Schritte 2 bis 5. Der Administrator hat vollen Zugriff auf die Datenbank.
+1. [Stellen Sie einen Azure Active Directory-Administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) für Ihre verwaltete Instanz im Azure-Portal bereit, wenn dies noch nicht geschehen ist. Der Azure AD-Administrator kann ein Azure AD-Benutzer oder eine Azure AD-Gruppe sein. Wenn Sie der Gruppe mit der verwalteten Identität eine Administratorrolle zuweisen, überspringen Sie die Schritte 2 bis 4. Der Administrator hat vollen Zugriff auf die Datenbank.
 
-1. [Suchen Sie die verwaltete Identität für Data Factory im Azure-Portal](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Wechseln Sie zu den **Eigenschaften** der Data Factory. Kopieren Sie die **Anwendungs-ID der verwalteten Identität** (nicht die **Objekt-ID der verwalteten Identität**).
+1. [Erstellen Sie Anmeldungen](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current) für die verwaltete Data Factory-Identität. Stellen Sie in SQL Server Management Studio (SSMS) über ein SQL Server-Konto (ein **Sysadmin**-Konto) eine Verbindung mit Ihrer verwalteten Instanz her. Führen Sie in der **Masterdatenbank** den folgenden T-SQL-Befehl aus:
 
-1. Konvertieren Sie die verwaltete Identität für Data Factory in den Binärtyp. Stellen Sie eine Verbindung mit der **master**-Datenbank in Ihrer verwalteten Instanz her. Verwenden Sie dazu Tools wie SSMS und Ihr SQL- oder Active Directory-Administratorkonto. Führen Sie den folgenden T-SQL-Code für die **master**-Datenbank aus, um die Anwendungs-ID der verwalteten Identität im Binärformat zu erhalten:
-    
     ```sql
-    DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
-    select CAST(@applicationId AS varbinary)
+    CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Fügen Sie die verwaltete Identität für Data Factory als einen Benutzer in der verwalteten Azure SQL-Datenbankinstanz hinzu. Führen Sie den folgenden T-SQL-Code für die **master**-Datenbank aus:
-    
+1. [Erstellen Sie für eine eigenständige Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) Benutzer für die verwaltete Data Factory-Identität. Stellen Sie eine Verbindung mit der Datenbank her, aus der bzw. in die Sie Daten kopieren möchten, und führen Sie den folgenden T-SQL-Befehl aus: 
+  
     ```sql
-    CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Gewähren Sie der verwalteten Identität für Data Factory die notwendigen Berechtigungen. Informationen zu den entsprechenden Rollen finden Sie unter [Rollen auf Datenbankebene](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Führen Sie den folgenden T-SQL-Code für die Datenbank aus, aus der oder in die Daten kopiert werden sollen:
+1. Gewähren Sie der verwalteten Data Factory-Identität die notwendigen Berechtigungen, und gehen Sie dabei so vor wie für SQL-Benutzer und andere Benutzer. Führen Sie den folgenden Code aus. Weitere Optionen finden Sie in [diesem Dokument](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current).
 
     ```sql
-    CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
     ```
 
 Dann konfigurieren Sie den OLE DB-Anbieter für den OLE DB-Verbindungs-Manager. Es gibt dafür folgende Optionen:
@@ -168,7 +154,7 @@ Abschließend konfigurieren Sie die Authentifizierung der verwalteten Identität
 > [!NOTE]
 >  Um die Authentifizierung von verwalteten Identitäten für vorhandene Pakete zu konfigurieren, besteht die bevorzugte Methode darin, das SSIS-Projekt mindestens einmal mit dem [neuesten SSIS-Designer](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) neu zu erstellen. Stellen Sie dieses SSIS-Projekt erneut in ihrer Azure-SSIS Integration Runtime bereit, sodass die neue Eigenschaft `ConnectUsingManagedIdentity` des Verbindungs-Managers automatisch allen OLE DB-Verbindungs-Managern in Ihrem SSIS-Projekt hinzugefügt wird. Die alternative Methode besteht darin, eine Eigenschaftsüberschreibung direkt mit dem Eigenschaftenpfad **\Package.Connections[{Name Ihres Verbindungs-Managers}].Properties[ConnectUsingManagedIdentity]** zur Runtime zu verwenden.
 
-## <a name="see-also"></a>Siehe auch    
+## <a name="see-also"></a>Weitere Informationen    
  [OLE DB-Quelle](../../integration-services/data-flow/ole-db-source.md)     
  [OLE DB-Ziel](../../integration-services/data-flow/ole-db-destination.md)     
  [SQL ausführen (Task)](../../integration-services/control-flow/execute-sql-task.md)     

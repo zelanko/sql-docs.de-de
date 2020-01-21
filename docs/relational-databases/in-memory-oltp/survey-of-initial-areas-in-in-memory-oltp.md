@@ -1,6 +1,6 @@
 ---
-title: 'Schnelle Umfrage 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung | Microsoft Dokumentation'
-ms.custom: ''
+title: In-Memory-OLTP für höhere T-SQL-Leistung
+ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712939"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412502"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Überblick des Anfangsbereichs in In-Memory OLTP
 
@@ -253,7 +253,7 @@ ALTER TABLE...ADD/DROP können eine Spalte aus einer speicheroptimierten Tabelle
   
   
 - [Indizes für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
-- [Von In-Memory-OLTP nicht unterstützte Transact-SQL-Konstrukte](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+- [Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte.](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
   
@@ -403,7 +403,7 @@ Im Rest dieses Abschnitts werden einige der wichtigsten Aspekte hinsichtlich Pla
 - [Tabellen- und Zeilengröße in speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**Partitionieren der großen Tabelle:** Eine Möglichkeit, den Bedarf an einer großen Menge an aktivem Arbeitsspeicher zu decken, ist das Partitionieren Ihrer große Tabelle in Teile im Arbeitsspeicher, die im Vergleich zu *kalten veralteten* Datenzeilen, die auf der Festplatte gespeichert werden (z. B. Aufträge, die vollständig ausgeliefert und abgeschlossen wurden), *heiße aktuelle* Datenzeilen enthalten. Diese Partitionierung ist ein manueller Prozess von Entwurf und Implementierung. Weitere Informationen:  
+**Partitionieren der großen Tabelle:** Eine Möglichkeit, den Bedarf an einer großen Menge an aktivem Arbeitsspeicher zu decken, ist das Partitionieren Ihrer große Tabelle in Teile im Arbeitsspeicher, die im Vergleich zu *kalten veralteten* Datenzeilen, die auf der Festplatte gespeichert werden (z. B. Aufträge, die vollständig ausgeliefert und abgeschlossen wurden), *heiße aktuelle* Datenzeilen enthalten. Diese Partitionierung ist ein manueller Prozess von Entwurf und Implementierung. Siehe:  
   
 - [Partitionierung auf Anwendungsebene](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -424,7 +424,7 @@ Im Rest dieses Abschnitts werden einige der wichtigsten Aspekte hinsichtlich Pla
 - [Hashindizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index)
 - [Nicht gruppierter Index für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
-Sie müssen planen, um sicherzustellen, dass genügend aktiver Speicher für Ihre geplante speicheroptimierte Tabelle und ihre Indizes vorhanden sein wird. Weitere Informationen:  
+Sie müssen planen, um sicherzustellen, dass genügend aktiver Speicher für Ihre geplante speicheroptimierte Tabelle und ihre Indizes vorhanden sein wird. Siehe:  
   
 - [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
@@ -434,7 +434,7 @@ Eine speicheroptimierte Tabelle kann mit DURABILITY = SCHEMA_ONLY deklariert wer
 - Wenn die Datenbank wieder online geschaltet wird, wird die speicheroptimierte Tabelle ohne Daten zurück in den aktiven Arbeitsspeicher geladen.  
 - SCHEMA_ONLY-Tabellen können eine übergeordnete [Alternative zu #temporären Tabellen](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) in tempdb darstellen, wenn tausende Zeilen involviert sind.  
   
-Tabellenvariablen können auch als speicheroptimiert deklariert werden. Weitere Informationen:  
+Tabellenvariablen können auch als speicheroptimiert deklariert werden. Siehe:  
   
 - [Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
@@ -477,7 +477,7 @@ Weitere Informationen finden Sie in diesen Artikeln, in denen spezielle Überleg
   - Der von speicheroptimierten Tabellen genutzte Speicher kann wesentlich größer als die belegte Arbeitsspeicherkapazität sein, was sich auf die Größe der Datenbanksicherung auswirkt.  
 - [Transaktionen mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Enthält Informationen zur Wiederholungslogik in T-SQL für Transaktionen in speicheroptimierten Tabellen.  
-- [Transact-SQL-Unterstützung für In-Memory-OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
+- [Transact-SQL-Unterstützung für OLTP im Arbeitsspeicher](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - Unterstützte und nicht unterstützte T-SQL-Funktionen und Datentypen für speicheroptimierte Tabellen und native Prozeduren.  
 - Der Artikel[Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)(eine Datenbank mithilfe speicheroptimierter Tabellen an einen Ressourcenpool binden) erläutert einen optionalen erweiterten Aspekt.  
 
@@ -493,7 +493,7 @@ Im folgenden Artikel und dessen untergeordneten Artikel im Inhaltsverzeichnis si
   
 ## <a name="related-links"></a>Verwandte Links  
   
-- Ursprünglicher Artikel: [In-Memory OLTP (Arbeitsspeicheroptimierung)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Ursprünglicher Artikel: [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 Hier finden Sie Artikel, die Code zum Veranschaulichen der Leistungsverbesserungen bieten, die Sie mit In-Memory-OLTP erreichen können.  
   

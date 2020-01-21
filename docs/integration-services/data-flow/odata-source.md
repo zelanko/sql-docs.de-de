@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3972714722b800cdd4400739f40d8eb8c6c3eff7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298229"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546536"
 ---
 # <a name="odata-source"></a>OData-Quelle
 
@@ -41,13 +41,15 @@ Die Komponente unterstützt die OData v3 und v4-Protokolle.
 
 Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
 -   Microsoft Dynamics AX Online und Microsoft Dynamics CRM Online
--   SharePoint-Listen. Damit alle Listen auf einem SharePoint-Server angezeigt werden, verwenden Sie die folgende URL: „https://\<Server>/_vti_bin/ListData.svc“. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](https://msdn.microsoft.com/library/ff521587.aspx).
+-   SharePoint-Listen. Um alle Listen auf einem SharePoint-Server anzuzeigen, verwenden Sie die folgende URL: `https://<server>/_vti_bin/ListData.svc`. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## <a name="supported-data-types"></a>Unterstützte Datentypen
 
 Die OData-Datenquelle unterstützt die folgenden einfachen Datentypen: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string und TimeSpan.
 
 Um die Datentypen der Spalten in der Datenquelle zu ermitteln, lesen Sie die `https://<OData feed endpoint>/$metadata`-Seite.
+
+Beim Datentyp **Decimal** werden Genauigkeit und Skalierung durch die Quellmetadaten bestimmt. Wenn die Quellmetadaten die Eigenschaften **Precision** und **Scale** nicht angeben, werden die Daten möglicherweise abgeschnitten.
 
 > [!IMPORTANT]
 > Die OData-Quellkomponente unterstützt keine komplexen Typen wie Multiple-Choice-Elemente in SharePoint-Listen.
@@ -83,9 +85,9 @@ Um die Datentypen der Spalten in der Datenquelle zu ermitteln, lesen Sie die `ht
  **Auflistung oder Ressourcenpfad verwenden**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|und Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|Auflistung|Rufen Sie mithilfe eines Auflistungsnamens Daten aus der OData-Quelle ab.|  
+|Collection|Rufen Sie mithilfe eines Auflistungsnamens Daten aus der OData-Quelle ab.|  
 |Ressourcenpfad|Rufen Sie mithilfe eines Ressourcenpfads Daten aus der OData-Quelle ab.|  
   
  **Abfrageoptionen**  
@@ -100,17 +102,17 @@ Um die Datentypen der Spalten in der Datenquelle zu ermitteln, lesen Sie die `ht
 ### <a name="dynamic-options"></a>Dynamische Optionen  
   
 #### <a name="use-collection-or-resource-path--collection"></a>Auflistung oder Ressourcenpfad verwenden = Auflistung  
- **Auflistung**  
+ **Sammlung**  
  Wählen Sie eine Auflistung aus dem Dropdownlistenfeld aus.  
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Auflistung oder Ressourcenpfad verwenden = Ressourcenpfad  
  **Resource path**  
- Geben Sie einen Ressourcenpfad ein. Beispiel: Employees  
+ Geben Sie einen Ressourcenpfad ein. Beispiel:  Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Quellen-Editor für OData (Seite 'Spalten')
-  Verwenden Sie die Seite **Spalten** im Dialogfeld **Quellen-Editor für OData**, um externe (Quell-)Spalten auszuwählen, die in der Ausgabe enthalten sein sollen, und um die Spalten und Ausgabespalten einander zuzuordnen.  
+  Verwenden Sie die Seite **Spalten** im Dialogfeld **Quellen-Editor für OData** , um externe (Quell-)Spalten auszuwählen, die in der Ausgabe enthalten sein sollen, und um die Spalten und Ausgabespalten einander zuzuordnen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren Quellspalten an. Verwenden Sie Kontrollkästchen in der Liste, um in der Tabelle am Ende der Seite Spalten hinzuzufügen bzw. Spalten zu entfernen. Die ausgewählten Spalten werden der Ausgabe hinzugefügt.  
   
@@ -123,7 +125,7 @@ Um die Datentypen der Spalten in der Datenquelle zu ermitteln, lesen Sie die `ht
 ## <a name="odata-source-editor-error-output-page"></a>Quellen-Editor für OData (Seite 'Fehlerausgabe')
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für OData** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   

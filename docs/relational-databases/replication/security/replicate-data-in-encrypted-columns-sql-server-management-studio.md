@@ -1,6 +1,7 @@
 ---
-title: Replizieren von Daten in verschlüsselten Spalten (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Replizieren von verschlüsselten Spalten (SSMS)
+description: Erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS) Daten in verschlüsselten Spalten replizieren.
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,18 +16,18 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: cbaf7db0d5c0e4588f22d0048c96e1f7c88d87b0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 740c66805b7f1e204604f3747882faa843e638b4
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907439"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321647"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replizieren von Daten in verschlüsselten Spalten (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Mithilfe der Replikation können Sie verschlüsselte Spaltendaten veröffentlichen. Zum Entschlüsseln und Verwenden dieser Daten auf dem Abonnenten muss der zum Verschlüsseln der Daten auf dem Verleger verwendete Schlüssel auch auf dem Abonnenten vorhanden sein. Die Replikation bietet keinen sicheren Mechanismus zum Transportieren von Verschlüsselungsschlüsseln. Sie müssen den Verschlüsselungsschlüssel auf dem Abonnenten manuell neu erstellen. In diesem Thema wird veranschaulicht, wie Sie eine Spalte auf dem Verleger verschlüsseln und wie Sie sicherstellen, dass der Verschlüsselungsschlüssel auf dem Abonnenten verfügbar ist.  
   
- Dazu müssen die folgenden grundlegenden Schritte ausgeführt werden:  
+ Die grundlegenden Schritte lauten wie folgt:  
   
 1.  Erstellen Sie den symmetrischen Schlüssel auf dem Verleger.  
   

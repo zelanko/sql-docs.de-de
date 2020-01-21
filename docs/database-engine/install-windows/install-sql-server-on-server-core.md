@@ -1,5 +1,5 @@
 ---
-title: Installieren von SQL Server 2016 unter Server Core | Microsoft-Dokumentation
+title: Installieren von SQL Server unter Server Core | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6054c8a7f7fc4c9c6580d2d84f438d376b4bd61b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991083"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325458"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installieren von SQL Server unter Server Core
 
@@ -31,18 +31,18 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
   
 |Anforderung|So führen Sie die Installation durch|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |Für alle Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (außer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) installiert Setup das [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core-Profil. SQL Server Setup installiert dieses automatisch, wenn es nicht bereits installiert ist. Durch die Installation ist ein Neustart erforderlich. Sie können [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] installieren, bevor Sie Setup ausführen, um einen Neustart zu verhindern.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |Für alle Editionen von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (außer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) installiert Setup das [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core-Profil. SQL Server Setup installiert dieses automatisch, wenn es nicht bereits installiert ist. Durch die Installation ist ein Neustart erforderlich. Sie können [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] installieren, bevor Sie Setup ausführen, um einen Neustart zu verhindern.|  
 |Windows Installer 4.5|Im Lieferumfang der Server Core-Installation enthalten.|  
-|Windows PowerShell|Im Lieferumfang der Server Core-Installation enthalten.|  
+|Windows PowerShell|Im Lieferumfang der Server Core-Installation enthalten.|  
 |Java Runtime |Um PolyBase verwenden zu können, müssen Sie die entsprechende Java Runtime installieren. Weitere Informationen finden Sie im [PolyBase-Installation](../../relational-databases/polybase/polybase-installation.md).|
   
 ##  <a name="BK_SupportedFeatures"></a> Unterstützte Funktionen  
- In der folgenden Tabelle finden Sie die Funktionen, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bei einer Server Core-Installation unterstützt werden.  
+ In der folgenden Tabelle finden Sie die Funktionen, die in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] bei einer Server Core-Installation unterstützt werden.  
   
-|Funktion|Supported|Zusätzliche Informationen|  
+|Funktion|Unterstützt|Zusätzliche Informationen|  
 |-------------|---------------|----------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|Ja||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation|Ja||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replikation|Ja||  
 |Volltextsuche|Ja||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Ja||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|Ja||  
@@ -58,16 +58,16 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
 |Distributed Replay Controller|Nein||  
 |Distributed Replay Client|Ausschließlich remote|Die Installation dieser Funktionen unter Server Core wird nicht unterstützt. Diese Komponenten können auf einem anderen Server installiert werden, der nicht Server Core ist und nicht mit den auf Server Core installierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensten verbunden ist.|  
 |SQL Client Connectivity SDK|Ja||  
-|Microsoft Sync Framework|Ja|Microsoft Sync Framework ist im Installationspaket von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht enthalten. Sie können die geeignete Sync Framework-Version aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) ) herunterladen und auf einem Computer mit Server Core installieren.|  
+|Microsoft Sync Framework|Ja|Microsoft Sync Framework ist im Installationspaket von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] nicht enthalten. Sie können die geeignete Sync Framework-Version aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) ) herunterladen und auf einem Computer mit Server Core installieren.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Nein||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|Nein||  
   
 ## <a name="supported-scenarios"></a>Unterstützte Szenarios  
- In der folgenden Tabelle wird die Matrix unterstützter Szenarios zum Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf einer Server Core-Installation veranschaulicht.  
+ In der folgenden Tabelle wird die Matrix unterstützter Szenarios zum Installieren von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] auf einer Server Core-Installation veranschaulicht.  
   
 |||  
 |-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editionen|Alle 64-Bit-Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editionen|Alle 64-Bit-Editionen von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sprache|Alle Sprachen|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sprache auf Betriebssystem Sprache/Gebietsschema (Kombination)|ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf JPN (Japanisch) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf GER (Deutsch) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf CHS (Chinesisch-China) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf ARA (Arabisch (SA)) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf THA (Thai) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf TRK (Türkisch) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf pt-PT (Portugiesisch Portugal) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf ENG (Englisch) Windows|  
 |Windows-Edition|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
@@ -75,8 +75,8 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
 ## <a name="upgrade"></a>Aktualisieren 
  In Server Core-Installationen werden Upgrades von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] unterstützt.  
   
-## <a name="install"></a>Install  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt kein Setup mit dem Installations-Assistenten unter dem Server Core-Betriebssystem. Beim Installieren unter Server Core unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup mithilfe des /Q-Parameters den vollständigen stillen Modus oder mithilfe des /QS-Parameters den einfachen stillen Modus. Weitere Informationen finden Sie unter [Installieren von SQL Server 2016 über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+## <a name="install"></a>Installieren  
+ [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] unterstützt kein Setup mit dem Installations-Assistenten unter dem Server Core-Betriebssystem. Beim Installieren unter Server Core unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup mithilfe des /Q-Parameters den vollständigen stillen Modus oder mithilfe des /QS-Parameters den einfachen stillen Modus. Weitere Informationen finden Sie unter [Installieren von SQL Server über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
  Unabhängig von der Installationsmethode ist es erforderlich, dass Sie den Softwarelizenzbedingungen als Einzelperson oder im Auftrag einer juristischen Person zustimmen, sofern die Verwendung der Software in keiner separaten Vereinbarung geregelt ist, z. B. einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Volumenlizenzvertrag oder einem Vertrag eines Drittanbieters mit einem ISV oder OEM.  
   
@@ -89,10 +89,10 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
   
 ### <a name="feature-parameters"></a>Funktionsparameter  
   
-|Funktionsparameter|und Beschreibung|  
+|Funktionsparameter|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |SQLENGINE|Installiert nur [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
-|-Replikation|Installiert die Replikationskomponente und das [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|REPLIKATION|Installiert die Replikationskomponente und das [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |FULLTEXT|Installiert die FullText-Komponente und das [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |AS|Installiert alle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Komponenten.|  
 |IS|Installiert alle [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten.|  
@@ -102,7 +102,7 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
 
  Vergleichen Sie die folgenden Beispiele für die Verwendung von Funktionsparametern:  
   
-|Parameter und Werte|und Beschreibung|  
+|Parameter und Werte|BESCHREIBUNG|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|Installiert nur [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |/FEATURES=SQLEngine,FullText|Installiert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] und Volltext.|  
@@ -112,7 +112,7 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
 
   
 ### <a name="installation-options"></a>Installationsoptionen  
- Beim Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unter einem Server Core-Betriebssystem unterstützt das Setup die folgenden Installationsoptionen:  
+ Beim Installieren von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] unter einem Server Core-Betriebssystem unterstützt das Setup die folgenden Installationsoptionen:  
   
 1.  **Installation über die Befehlszeile**  
   
@@ -186,7 +186,7 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
   
     -   Installieren aller unterstützten Funktionen  
   
-        Im folgenden Beispiel wird gezeigt, wie alle unterstützten Funktionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unter Server Core installiert werden:  
+        Im folgenden Beispiel wird gezeigt, wie alle unterstützten Funktionen von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] unter Server Core installiert werden:  
   
         ```  
         ; SQL Server Configuration File  
@@ -259,7 +259,7 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
          Wenn die Datei DefaultSetup.ini nicht vorhanden ist, können Sie sie erstellen und sie in die Ordner \x86 und \x64 auf der Stammebene der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellmedien kopieren.  
   
 ## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Konfigurieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Remotezugriff in Server Core  
- Führen Sie die unten beschriebenen Aktionen aus, um den Remotezugriff auf eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Instanz zu konfigurieren, die auf Server Core ausgeführt wird.  
+ Führen Sie die unten beschriebenen Aktionen aus, um den Remotezugriff auf eine [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]-Instanz zu konfigurieren, die auf Server Core ausgeführt wird.  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Aktivieren von Remoteverbindungen auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -285,7 +285,7 @@ Um Remoteverbindungen zu aktivieren, verwenden Sie SQLCMD.exe lokal, und führen
  Um Ausnahmen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zugriff in der Windows-Firewall zu erstellen, führen Sie die in [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)angegebenen Schritte aus.  
   
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Aktivieren von TCP/IP auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Das TCP/IP-Protokoll kann durch Windows PowerShell für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf Server Core aktiviert werden. Führen Sie die folgenden Schritte aus:  
+ Das TCP/IP-Protokoll kann durch Windows PowerShell für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf Server Core aktiviert werden. Folgen Sie diesen Schritten:  
   
 1.  Starten Sie den Task-Manager auf dem Server.  
   
@@ -308,7 +308,7 @@ $Tcp
   
 ## <a name="uninstall"></a>Deinstallieren
 
- Nachdem Sie sich an einem Computer angemeldet haben, auf dem Server Core ausgeführt wird, sehen Sie eine beschränkte Desktopumgebung mit einer Administratoreingabeaufforderung. Sie können diese Eingabeaufforderung verwenden, um die Deinstallation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zu starten. Um eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu deinstallieren, starten Sie die Deinstallation im vollständigen stillen Modus mit dem /Q-Parameter oder im stillen einfachen Modus mit dem /QS-Parameter von der Eingabeaufforderung aus. Der /QS-Parameter zeigt den Status durch die Benutzeroberfläche an, akzeptiert jedoch keine Eingabe. /Q gibt an, dass Setup ohne Benutzeroberfläche in einem stillen Modus ausgeführt wird.  
+ Nachdem Sie sich an einem Computer angemeldet haben, auf dem Server Core ausgeführt wird, sehen Sie eine beschränkte Desktopumgebung mit einer Administratoreingabeaufforderung. Sie können diese Eingabeaufforderung verwenden, um die Deinstallation von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] zu starten. Um eine Instanz von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]zu deinstallieren, starten Sie die Deinstallation im vollständigen stillen Modus mit dem /Q-Parameter oder im stillen einfachen Modus mit dem /QS-Parameter von der Eingabeaufforderung aus. Der /QS-Parameter zeigt den Status durch die Benutzeroberfläche an, akzeptiert jedoch keine Eingabe. /Q gibt an, dass Setup ohne Benutzeroberfläche in einem stillen Modus ausgeführt wird.  
   
  So deinstallieren Sie eine vorhandene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -326,7 +326,7 @@ Wenn Sie die Eingabeaufforderung unbeabsichtigt schließen, können Sie eine neu
 2.  Klicken Sie auf der Registerkarte **Anwendungen** auf **Neuer Task**.  
 3.  Geben Sie im Dialogfeld **Neuen Task erstellen** im Feld **Öffnen** den Wert **cmd** ein, und [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von SQL Server mithilfe einer Konfigurationsdatei](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Editionen und unterstützten Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   

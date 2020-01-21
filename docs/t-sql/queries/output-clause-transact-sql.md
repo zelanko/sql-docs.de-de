@@ -1,7 +1,7 @@
 ---
 title: OUTPUT-Klausel (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901871"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952441"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "67901871"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -211,7 +211,7 @@ DELETE Sales.ShoppingCartItem
   
 -   Die SELECT-Klausel und die WHERE-Klausel dürfen in der \<dml_table_source>-Klausel keine Unterabfragen, Aggregatfunktionen, Rangfolgefunktionen, Volltextprädikate oder benutzerdefinierten Funktionen für den Datenzugriff enthalten; die TEXTPTR-Funktion darf ebenfalls nicht enthalten sein.  
 
-## <a name="parallelism"></a>Parallelism
+## <a name="parallelism"></a>Parallelität
  Eine OUTPUT-Klausel, die Ergebnisse an den Client zurückgibt, verwendet immer einen seriellen Plan.
 
 Wenn im Kontext einer Datenbank, für die ein Kompatibilitätsgrad von mindestens 130 festgelegt wurde, ein INSERT...SELECT-Vorgang einen WITH (TABLOCK)-Hinweis für die SELECT-Anweisung und darüber hinaus auch OUTPUT...INTO zum Einfügen einer temporären oder Benutzertabelle verwendet, erfüllt die Zieltabelle für den INSERT...SELECT-Vorgang je nach Unterstrukturkosten die Kriterien für Parallelität.  Die Zieltabelle, die in der OUTPUT INTO-Klausel referenziert wird, erfüllt die Kriterien für Parallelität nicht. 
@@ -387,7 +387,7 @@ GO
   
 ```  
   
-### <a name="d-using-output-into-to-return-an-expression"></a>D. Verwenden von OUTPUT INTO zum Zurückgeben eines Ausdrucks  
+### <a name="d-using-output-into-to-return-an-expression"></a>D: Verwenden von OUTPUT INTO zum Zurückgeben eines Ausdrucks  
  Das folgende Beispiel baut auf Beispiel C auf, indem ein Ausdruck in der `OUTPUT`-Klausel definiert wird, der die Differenz zwischen dem aktualisierten `VacationHours`-Wert und dem `VacationHours`-Wert vor dem Update beschreibt. Der Wert dieses Ausdrucks wird an die `@MyTableVar``table`-Variable in der `VacationHoursDifference`-Spalte zurückgegeben.  
   
 ```  
@@ -576,9 +576,11 @@ DECLARE @MyTableVar table(
   );  
   
 INSERT INTO dbo.EmployeeSales (LastName, FirstName, CurrentSales)  
-  OUTPUT INSERTED.LastName,   
+  OUTPUT INSERTED.EmployeeID,
+         INSERTED.LastName,   
          INSERTED.FirstName,   
-         INSERTED.CurrentSales  
+         INSERTED.CurrentSales,
+         INSERTED.ProjectedSales
   INTO @MyTableVar  
     SELECT c.LastName, c.FirstName, sp.SalesYTD  
     FROM Sales.SalesPerson AS sp  

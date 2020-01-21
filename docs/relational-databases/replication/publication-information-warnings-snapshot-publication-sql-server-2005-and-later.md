@@ -1,6 +1,7 @@
 ---
-title: Veröffentlichungsinformationen, Warnungen (Momentaufnahmeveröffentlichung, SQL Server 2005 und höher) | Microsoft-Dokumentation
-ms.custom: ''
+title: Warnungen (Momentaufnahme – Replikationsmonitor)
+decription: Describes the 'Warnings' tab for a Snapshot Publication in the Replication Monitor found in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a9657fd76e48848035cac74acac1b0f723e07d31
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 058ad1dea883b2b5b9d5066bd1eedac0114f3d02
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769970"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321317"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>Veröffentlichungsinformationen, Warnungen (Momentaufnahmeveröffentlichung, SQL Server 2005 und höher)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,17 +36,17 @@ ms.locfileid: "68769970"
   
  Neben der Warnung im Replikationsmonitor kann bei Erreichen eines Schwellenwerts auch ein Warnhinweis ausgelöst werden. Zum Definieren eines Warnhinweises klicken Sie auf **Warnungen konfigurieren** , und stellen Sie im Dialogfeld **Replikationswarnungen konfigurieren** die entsprechenden Informationen bereit.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Aktiviert**  
  Wählen Sie diese Option aus, um eine Warnung zu aktivieren und einen Schwellenwert anzugeben.  
   
- **Warnung**  
+ **Warning**  
  Eine Beschreibung der Warnung, die einem Schwellenwert zugeordnet ist.  
   
  **Schwellenwert**  
  Geben Sie einen Wert für den Schwellenwert an.  
   
- **Warnungen konfigurieren**  
+ **Konfigurieren von Warnungen**  
  Wählen Sie im Raster **Warnungen** die gewünschte Zeile aus, und klicken Sie auf **Warnungen konfigurieren** , um das Dialogfeld **Replikationswarnungen konfigurieren** zu öffnen. In dem Dialogfeld können Sie einen Warnhinweis definieren, der dem ausgewählten Schwellenwert und der Warnung zugeordnet wird.  
   
  **Änderungen verwerfen**  
@@ -54,7 +55,7 @@ ms.locfileid: "68769970"
 > [!NOTE]  
 >  Die Schaltfläche **Änderungen verwerfen** hat keine Auswirkungen auf die im Dialogfeld **Replikationswarnungen konfigurieren** definierten Warnungen.  
   
- **Änderungen speichern**  
+ **Save Changes**  
  Klicken Sie hier, um die Änderungen an Warnungen und Schwellenwerten zu speichern.  
   
 ## <a name="see-also"></a>Weitere Informationen  

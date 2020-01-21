@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58b73e5bd1f82d619f00e50d554d2043196d7884
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: f9ce3042bedd23c5ee173b1df7669a09cce35351
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298549"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831753"
 ---
 # <a name="excel-connection-manager"></a>Excel-Verbindungs-Manager
 
@@ -56,7 +56,7 @@ ms.locfileid: "71298549"
 ## <a name="excel-connection-manager-editor"></a>Verbindungs-Manager-Editor für Excel
   Mithilfe des Dialogfelds **Verbindungs-Manager-Editor für Excel** können Sie einer vorhandenen oder neuen [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Arbeitsmappendatei eine Verbindung hinzufügen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Excel-Dateipfad**  
  Geben Sie den Pfad und den Dateinamen einer vorhandenen oder neuen Excel-Arbeitsmappendatei ein.  
    
@@ -68,7 +68,35 @@ ms.locfileid: "71298549"
   
  **Erste Zeile enthält Spaltennamen**  
  Geben Sie an, ob die erste Zeile der Daten in der ausgewählten Arbeitsmappe Spaltennamen enthält. Der Standardwert für diese Option ist **True**.  
+
+## <a name="solution-to-import-data-with-mixed-data-types-from-excel"></a>Lösung zum Importieren von Daten mit gemischten Datentypen aus Excel
+
+Wenn Sie Daten mit gemischten Datentypen verwenden, liest der Excel-Treiber standardmäßig die ersten acht Zeilen (diese Einstellung wird durch den Registrierungsschlüssel **TypeGuessRows** konfiguriert). Basierend auf den ersten acht Datenzeilen versucht der Excel-Treiber den Datentyp jeder Spalte zu erraten. Ein Beispiel: Ihre Excel-Datenquelle enthält in einer Spalte Zahlen und Text. Wenn die ersten acht Zeilen Zahlen enthalten, bestimmt der Treiber anhand dieser Zeilen möglicherweise, dass die Daten in der Spalte Integerwerte sein müssen. In diesem Fall überspringt SSIS Textwerte und importiert diese als NULL in das Ziel.
+
+Um dieses Problem zu beheben, können Sie eine der folgenden Lösungen ausprobieren:
+
+* Ändern Sie den Spaltentyp in der Excel-Datei in **Text**.
+* Fügen Sie die erweiterte IMEX-Eigenschaft zur Verbindungszeichenfolge hinzu, um das Standardverhalten des Treibers außer Kraft zu setzen. Wenn Sie die erweiterte Eigenschaft „;IMEX=1“ am Ende der Verbindungszeichenfolge einfügen, behandelt Excel alle Daten als Text. Sehen Sie sich folgendes Beispiel an:
+    
+  ```ACE OLEDB connection string:
+  Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\ExcelFileName.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES;IMEX=1";
+  ```
+
+   Damit diese Lösung zuverlässig funktioniert, müssen Sie möglicherweise auch die Registrierungseinstellungen ändern. Die main.cmd-Datei lautet wie folgt:
   
+   ```cmd
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   ```
+
+* Speichern Sie die Datei im CSV-Format, und ändern Sie das SSIS-Paket so, dass ein CSV-Import unterstützt wird.
+
 ## <a name="related-tasks"></a>Related Tasks  
 [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md)  
 [Excel-Quelle](../data-flow/excel-source.md)  

@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
+ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710475"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623238"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase-Erweiterungsgruppen
 
@@ -28,7 +28,7 @@ Eine eigenständige SQL Server-Instanz mit PolyBase kann bei der Verarbeitung vo
   
 Siehe [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) (Erste Schritte mit PolyBase) und [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)(PolyBase-Handbuch).
   
-![PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase-Erweiterungsgruppen")  
+![PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
   
 ## <a name="head-node"></a>Hauptknoten  
 
@@ -47,7 +47,7 @@ Beispiel: Angenommen, Sie verfügen über eine externe SQL Server-Tabelle mit 12
 > [!NOTE]
 >  Dieser Vorgang darf nicht mit der horizontalen Leseskalierung über Hadoop verwechselt werden. 
 
-![PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase-Erweiterungsgruppen")
+![PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
   
 ## <a name="distributed-query-processing"></a>Verarbeiten verteilter Abfragen  
 
@@ -66,3 +66,10 @@ Nach dem Setup von SQL Server kann die Instanz entweder als Hauptknoten oder als
 Um eine PolyBase-Erweiterungsgruppe konfigurieren zu können, lesen Sie den folgenden Leitfaden:
 
 [Verbessern von PolyBase-Erweiterungsgruppen unter Windows](configure-scale-out-groups-windows.md)
+
+## <a name="see-also"></a>Weitere Informationen
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+

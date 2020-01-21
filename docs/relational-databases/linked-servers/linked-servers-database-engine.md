@@ -1,6 +1,6 @@
 ---
-title: Verbindungsserver
-ms.date: 05/29/2019
+title: Verbindungsserver (Datenbank-Engine) | Microsoft-Dokumentation
+ms.date: 10/14/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74094776"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165341"
 ---
 # <a name="linked-servers-database-engine"></a>Verbindungsserver (Datenbank-Engine)
 
@@ -56,7 +56,7 @@ Ein Verbindungsserver kann mit [!INCLUDE[ssManStudioFull](../../includes/ssmanst
   
 Ein *OLE DB-Anbieter* ist eine DLL (Dynamic Link Library), die mit einer bestimmten Datenquelle interagiert und sie verwaltet. Eine *OLE DB-Datenquelle* identifiziert die spezielle Datenbank, auf die über OLE DB zugegriffen werden kann. Obwohl es sich bei Datenquellen, die über Verbindungsserverdefinitionen abgefragt werden, normalerweise um Datenbanken handelt, sind OLE DB-Anbieter für eine Vielzahl von Dateien und Dateiformaten verfügbar. Dazu gehören Textdateien, Kalkulationstabellendaten und die Ergebnisse aus Volltextsuchläufen.  
   
-Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter (PROGID: SQLNCLI11) ist der offizielle OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Der OLE DB-Anbieter von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (PROGID: SQLNCLI11) ist der offizielle OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind jedoch so entworfen, dass sie mit jedem OLE DB-Anbieter zusammenarbeiten, der die erforderlichen OLE DB-Schnittstellen implementiert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde jedoch nur für den OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und bestimmte andere Anbieter getestet.  
@@ -64,16 +64,19 @@ Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 ## <a name="linked-server-details"></a>Einzelheiten zu Verbindungsservern  
  Die folgende Abbildung zeigt die Grundlagen einer Verbindungsserverkonfiguration.  
   
- ![Client-, Server- und Datenbankserverebene](../../relational-databases/linked-servers/media/lsvr.gif "Client-, Server- und Datenbankserverebene")  
+ ![Client-, Server- und Datenbankserverebene](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
   
 Verbindungsserver werden in der Regel für die Verarbeitung verteilter Abfragen verwendet. Führt eine Clientanwendung eine verteilte Abfrage über einen Verbindungsserver aus, analysiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Befehl und sendet Anforderungen an OLE DB. Für eine Rowsetanforderung kann eine Abfrage für den Anbieter ausgeführt oder eine Basistabelle vom Anbieter geöffnet werden.  
-  
+
 > [!NOTE]
 > Damit eine Datenquelle Daten über einen Verbindungsserver zurückgibt, muss der OLE DB-Anbieter (DLL) für diese Datenquelle auf demselben Server wie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorhanden sein.  
-  
-> [!IMPORTANT] 
-> Wenn ein OLE DB-Anbieter verwendet wird, müssen dem Konto, mit dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst ausgeführt wird, Lese- und Ausführungsberechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt worden sein, in dem der Anbieter installiert ist. Dies schließt den Anbieter von Microsoft und alle Anbieter von Drittanbietern ein. 
-  
+ 
+> [!IMPORTANT]
+> Wenn ein OLE DB-Anbieter verwendet wird, müssen dem Konto, mit dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst ausgeführt wird, Lese- und Ausführungsberechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt worden sein, in dem der Anbieter installiert ist. Dies schließt den Anbieter von Microsoft und alle Anbieter von Drittanbietern ein.
+
+> [!NOTE]
+> Verbindungsserver unterstützen bei der vollständigen Delegierung die Passthrough-Authentifizierung von Active Directory. Ab SQL Server 2017 CU17 wird auch die Passthrough-Authentifizierung mit eingeschränkter Delegierung unterstützt; die [ressourcenbasierte eingeschränkte Delegierung](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) wird jedoch nicht unterstützt.
+
 ## <a name="managing-providers"></a>Verwalten von Anbietern  
 Eine Gruppe von Optionen steuert, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB-Anbieter lädt und verwendet, die in der Registrierung angegeben werden.  
   
