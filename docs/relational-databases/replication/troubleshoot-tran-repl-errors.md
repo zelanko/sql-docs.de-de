@@ -1,6 +1,7 @@
 ---
-title: 'Problembehandlung: Suchen von Fehlern bei SQL Server-Transaktionsreplikationen | Microsoft-Dokumentation'
-ms.custom: ''
+title: Suchen nach Fehlern bei der Transaktionsreplikation
+description: Hier wird beschrieben, wie Sie Fehler bei der Transaktionsreplikation identifizieren. Der Artikel erläutert auch die Methodik für die Behandlung von Problemen bei der Replikation.
+ms.custom: seo-lt-2019
 ms.date: 04/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c8b363be7cd8f160cb7317e6a90d109cc1ad3ccb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907288"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321938"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Problembehandlung: Suchen von Fehlern bei SQL Server-Transaktionsreplikationen 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,17 +57,17 @@ Der Momentaufnahmen-Agent generiert die Momentaufnahme und schreibt diese in den
 
 1. Zeigen Sie den Status des Momentaufnahmen-Agents an:
 
-    A. Erweitern Sie im Objekt-Explorer den Knoten **Lokale Veröffentlichung** unter **Replikation**.
+    a. Erweitern Sie im Objekt-Explorer den Knoten **Lokale Veröffentlichung** unter **Replikation**.
 
-    B. Klicken Sie mit der rechten Maustaste auf Ihre Veröffentlichung **AdvWorksProductTransView**, und wählen Sie **Status des Momentaufnahmen-Agents anzeigen** aus. 
+    b. Klicken Sie mit der rechten Maustaste auf Ihre Veröffentlichung **AdvWorksProductTransView**, und wählen Sie **Status des Momentaufnahmen-Agents anzeigen** aus. 
 
     ![Befehl „Status des Momentaufnahmen-Agents anzeigen“ im Kontextmenü](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
 1. Wenn im Status des Momentaufnahmen-Agents ein Fehler gemeldet wird, finden Sie im Auftragsverlauf des Momentaufnahmen-Agents weitere Einzelheiten:
 
-    A. Erweitern Sie **SQL Server-Agent** im Objekt-Explorer, und öffnen Sie den Auftragsaktivitätsmonitor. 
+    a. Erweitern Sie **SQL Server-Agent** im Objekt-Explorer, und öffnen Sie den Auftragsaktivitätsmonitor. 
 
-    B. Legen Sie eine Sortierung nach **Kategorie** fest, und identifizieren Sie den Momentaufnahmen-Agent nach der Kategorie **REPL-Snapshot**.
+    b. Legen Sie eine Sortierung nach **Kategorie** fest, und identifizieren Sie den Momentaufnahmen-Agent nach der Kategorie **REPL-Snapshot**.
 
     c. Klicken Sie mit der rechten Maustaste auf den Momentaufnahmen-Agent, und wählen Sie **Verlauf anzeigen** aus. 
 
@@ -114,9 +115,9 @@ Der Protokolllese-Agent stellt eine Verbindung mit Ihrer Verlegerdatenbank her u
 
 6. Dieser Fehler tritt üblicherweise auf, wenn der Besitzer der Verlegerdatenbank nicht ordnungsgemäß festgelegt ist. Dies kann beim Wiederherstellen einer Datenbank geschehen. So überprüfen Sie, ob dies der Fall ist:
 
-    A. Erweitern Sie **Datenbanken** im Objekt-Explorer.
+    a. Erweitern Sie **Datenbanken** im Objekt-Explorer.
 
-    B. Klicken Sie mit der rechten Maustaste auf **AdventureWorks2012**, und wählen Sie **Eigenschaften** aus. 
+    b. Klicken Sie mit der rechten Maustaste auf **AdventureWorks2012**, und wählen Sie **Eigenschaften** aus. 
 
     c. Überprüfen Sie, ob auf der Seite **Dateien** ein Besitzer vorhanden ist. Wenn dieses Feld leer ist, ist dies der wahrscheinliche Grund für Ihr Problem. 
 
@@ -133,9 +134,9 @@ Der Protokolllese-Agent stellt eine Verbindung mit Ihrer Verlegerdatenbank her u
 
 8. Möglicherweise müssen Sie den Protokolllese-Agent neu starten:
 
-    A. Erweitern Sie den Knoten **SQL Server-Agent** im Objekt-Explorer, und öffnen Sie den Auftragsaktivitätsmonitor.
+    a. Erweitern Sie den Knoten **SQL Server-Agent** im Objekt-Explorer, und öffnen Sie den Auftragsaktivitätsmonitor.
 
-    B. Legen Sie eine Sortierung nach **Kategorie** fest, und identifizieren Sie den Protokolllese-Agent nach der Kategorie **REPL-LogReader**. 
+    b. Legen Sie eine Sortierung nach **Kategorie** fest, und identifizieren Sie den Protokolllese-Agent nach der Kategorie **REPL-LogReader**. 
 
     c. Klicken Sie mit der rechten Maustaste auf den Auftrag des **Protokolllese-Agents**, und wählen Sie **Auftrag starten bei Schritt...** aus. 
 
@@ -163,9 +164,9 @@ Der Verteilungs-Agent sucht Daten in der Verteilungsdatenbank und wendet diese a
 
 3. Die Fehlermeldung gibt an, dass der Verteilungs-Agent den Vorgang wiederholt. Überprüfen Sie den Auftragsverlauf des Verteilungs-Agents, um weitere Informationen zu erhalten: 
 
-    A. Erweitern Sie **SQL Server-Agent** im Objekt-Explorer, und öffnen Sie den **Auftragsaktivitätsmonitor**. 
+    a. Erweitern Sie **SQL Server-Agent** im Objekt-Explorer, und öffnen Sie den **Auftragsaktivitätsmonitor**. 
     
-    B. Sortieren Sie die Aufträge nach **Kategorie**. 
+    b. Sortieren Sie die Aufträge nach **Kategorie**. 
 
     c. Identifizieren Sie den Verteilungs-Agent nach der Kategorie **REPL-Verteilung**. Klicken Sie mit der rechten Maustaste auf den Agent und anschließend auf **Verlauf anzeigen**.
 
@@ -180,9 +181,9 @@ Der Verteilungs-Agent sucht Daten in der Verteilungsdatenbank und wendet diese a
 
 6. Dieser Fehler gibt an, dass das vom Verteilungs-Agent verwendete Kennwort falsch ist. So beheben Sie dieses Problem:
 
-    A. Erweitern Sie im Objekt-Explorer den Knoten **Replikation**.
+    a. Erweitern Sie im Objekt-Explorer den Knoten **Replikation**.
     
-    B. Klicken Sie mit der rechten Maustaste auf das Abonnement, und wählen Sie **Eigenschaften** aus.
+    b. Klicken Sie mit der rechten Maustaste auf das Abonnement, und wählen Sie **Eigenschaften** aus.
     
     c. Klicken Sie auf die Auslassungspunkte (...) neben dem **Agent-Prozesskonto**, und ändern Sie das Kennwort.
 
@@ -227,7 +228,7 @@ Sie können die ausführliche Protokollierung verwenden, um detailliertere Infor
 
     ![Schritte zum Öffnen der Agent-Eigenschaften](media/troubleshooting-tran-repl-errors/log-agent-properties.png)
 
-1. Wählen Sie die Seite **Schritte** aus, und markieren Sie den Schritt **Agent ausführen**. Klicken Sie auf **Bearbeiten**. 
+1. Wählen Sie die Seite **Schritte** aus, und markieren Sie den Schritt **Agent ausführen**. Wählen Sie **Bearbeiten** aus. 
 
     ![Schritte zum Bearbeiten des Schritts „Agent ausführen“](media/troubleshooting-tran-repl-errors/edit-steps.png)
 
@@ -257,7 +258,7 @@ Sie können die ausführliche Protokollierung verwenden, um detailliertere Infor
 Weitere Informationen finden Sie unter [Enabling verbose logging for replication agents (Aktivieren der ausführlichen Protokollierung für Replikations-Agents)](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 <br>[Transaktionsreplikation (Übersicht)](../../relational-databases/replication/transactional/transactional-replication.md)
 <br>[Tutorials zur Replikation](../../relational-databases/replication/replication-tutorials.md)
 <br>[REPLTalk-Blog](https://blogs.msdn.microsoft.com/repltalk)
