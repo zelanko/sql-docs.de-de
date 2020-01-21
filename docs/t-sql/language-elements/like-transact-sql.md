@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ff1197307cebb563fbb8cc173b0edbf1ef6aa76
-ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
+ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74550217"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884005"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,9 @@ match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
   
 match_expression [ NOT ] LIKE pattern  
 ```  
-  
+>[!NOTE]
+> ESCAPE und STRING_ESCAPE werden in Azure SQL Data Warehouse oder Parallel Data Warehouse momentan nicht unterstützt.
+
 ## <a name="arguments"></a>Argumente  
  *match_expression*  
  Ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines Zeichendatentyps.  
@@ -66,7 +68,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  Ist die bestimmte Zeichenfolge, nach der in *match_expression* gesucht werden soll, und kann die folgenden gültigen Platzhalterzeichen enthalten. *pattern* darf maximal 8.000 Bytes umfassen.  
   
-|Platzhalter|BESCHREIBUNG|Beispiel|  
+|Platzhalter|Beschreibung|Beispiel|  
 |------------------------|-----------------|-------------|  
 |%|Eine Zeichenfolge aus null oder mehr Zeichen|WHERE title LIKE '%Computer%' findet alle Buchtitel, die das Wort 'Computer' enthalten.|  
 |_ (Unterstrich)|Ein einzelnes Zeichen.|WHERE au_fname LIKE '_ean' findet alle Vornamen mit vier Buchstaben, die auf ean enden (Dean, Sean usw.).|  

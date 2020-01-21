@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 10/15/2019
-ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.date: 01/15/2020
+ms.openlocfilehash: 943ff8fdcf2eadd428d1ec6ceb5d15fe34ad9291
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241749"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952413"
 ---
 # <a name="what-is-azure-data-studio"></a>Was ist Azure Data Studio?
 
@@ -33,7 +33,7 @@ Der Quellcode für Azure Data Studio und den dazugehörigen Datenanbietern ist a
 
 ## <a name="smart-sql-code-snippets"></a>Intelligente SQL-Codeausschnitte
 
-SQL-Codeausschnitte generieren die richtige SQL-Syntax zum Erstellen von Datenbanken, Tabellen, Ansichten, gespeicherten Prozeduren, Benutzern, Anmeldungen, Rollen usw. und zum Aktualisieren vorhandener Datenbankobjekte. Verwenden Sie intelligente Codeausschnitte, um zu Entwicklungs- oder Testzwecken schnell Kopien Ihrer Datenbank zu erstellen und um Skripts für CREATE- und INSERT-Vorgänge zu generieren und auszuführen.
+SQL-Codeausschnitte generieren die richtige SQL-Syntax zum Erstellen von Datenbanken, Tabellen, Ansichten, gespeicherten Prozeduren, Benutzern, Anmeldungen, Rollen und zum Aktualisieren vorhandener Datenbankobjekte. Verwenden Sie intelligente Codeausschnitte, um zu Entwicklungs- oder Testzwecken schnell Kopien Ihrer Datenbank zu erstellen und um Skripts für CREATE- und INSERT-Vorgänge zu generieren und auszuführen.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] stellt auch Funktionen zum Erstellen benutzerdefinierter SQL-Codeausschnitte bereit. Weitere Informationen finden Sie unter [Erstellen und Verwenden von Codeausschnitten](code-snippets.md).
 
@@ -96,7 +96,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 |Dunkler Modus|Ja||
 |Azure-Ressourcen-Explorer|Vorschau||
 |Assistent zum Generieren von Skripts||Ja|
-|DACPACs importieren/exportieren||Ja|
+|Importieren/Exportieren von DACPAC||Ja|
 |Objekteigenschaften||Ja|
 |Tabellen-Designer||Ja|
 
@@ -131,9 +131,9 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 
 |Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Assistent zum Erstellen externer Tabellen|Vorschau||
-|HDFS-Integration|Vorschau||
-|Notebooks|Vorschau||
+|Assistent zum Erstellen externer Tabellen|Ja||
+|HDFS-Integration|Ja||
+|Notebooks|Ja||
 
 ### <a name="database-administration"></a>Datenbankverwaltung
 
@@ -147,7 +147,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 |Always On||Ja|
 |Always Encrypted||Ja|
 |Assistent zum Kopieren von Daten||Ja|
-|Ratgeber für die Datenoptimierung||Ja|
+|Datenbankoptimierungsratgeber||Ja|
 |Fehlerprotokollanzeige||Ja|
 |Wartungspläne||Ja|
 |Abfrage mehrerer Server||Ja|

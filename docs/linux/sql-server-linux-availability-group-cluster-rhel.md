@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 03/12/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558495"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884037"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren von RHEL-Clustern für eine SQL Server-Verfügbarkeitsgruppe
 
@@ -163,7 +163,10 @@ Verwenden Sie den Befehl `pcs resource create`, und legen Sie die Ressourceneige
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
-``` 
+```
+
+> [!NOTE]
+> Mit der Verfügbarkeit von **RHEL 8** hat sich die Syntax für das Erstellen geändert. Wenn Sie **RHEL 8** verwenden, ist die Terminologie nun nicht mehr `master`, sondern `promotable`. Verwenden Sie den folgenden Befehl zum Erstellen anstelle des obigen Befehls: `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`.
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
@@ -187,8 +190,20 @@ Auf einem Pacemaker-Cluster können Sie die Entscheidungen des Clusters mit Eins
 
 Definieren Sie eine Kollokationseinschränkung mit der Bewertung INFINITY, um sicherzustellen, dass das primäre Replikat und die virtuellen IP-Ressourcen auf demselben Host ausgeführt werden. Führen Sie den folgenden Befehl auf einem Knoten aus, um eine Kollokationseinschränkung hinzuzufügen.
 
+### <a name="rhel-7"></a>RHEL 7
+
+Beim Erstellen der `ag_cluster`-Ressource in RHEL 7 wird die Ressource als `ag_cluster-master` erstellt. Verwenden Sie den folgenden Befehl für RHEL 7:
+
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+Beim Erstellen der `ag_cluster`-Ressource in RHEL 8 wird die Ressource als `ag_cluster-clone` erstellt. Verwenden Sie den folgenden Befehl für RHEL 8:
+
+```bash
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY with-rsc-role=Master
 ```
 
 ## <a name="add-ordering-constraint"></a>Hinzufügen einer Sortierungseinschränkung
@@ -209,8 +224,16 @@ Fügen Sie eine Sortierungseinschränkung hinzu, um zu vermeiden, dass die IP-Ad
 
 Führen Sie den folgenden Befehl auf einem Knoten aus, um eine Sortierungseinschränkung hinzuzufügen:
 
+### <a name="rhel-7"></a>RHEL 7
+
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+```bash
+sudo pcs constraint order promote ag_cluster-clone then start virtualip
 ```
 
 >[!IMPORTANT]

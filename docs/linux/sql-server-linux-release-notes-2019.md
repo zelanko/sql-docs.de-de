@@ -3,16 +3,16 @@ title: Versionshinweise für SQL Server 2019 für Linux
 description: Dieser Artikel enthält Versionshinweise und Beschreibungen der unterstützten Features für SQL Server 2019 für Linux. Es werden sowohl Versionshinweise zum neuesten Release als auch zu einigen früheren Releases aufgeführt.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b16c753b5640baacadc9a13b75ebb7a9d48a74fe
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.openlocfilehash: 136c1d9ab7f8f361972520432dd0c2b293be5a36
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74822147"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776573"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Versionshinweise für SQL Server 2019 für Linux
 
@@ -27,7 +27,7 @@ Die folgenden Versionshinweise gelten für SQL Server 2019 bei Ausführung unter
 
 | Plattform | Dateisystem | Installationshandbuch |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3-, 7.4-, 7.5- oder 7.6-Server | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3-, 7.4-, 7.5-, 7.6- oder 8-Server | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2, SP3 oder SP4 | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04 LTS | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-ubuntu.md) | 
 | Docker-Engine 1.8+ für Windows, Mac oder Linux | – | [Installationshandbuch](quickstart-install-connect-docker.md) | 
@@ -45,7 +45,8 @@ In der folgenden Tabelle wird der Releaseverlauf für die Releases von SQL Serve
 
 | Release                   | Version       | Veröffentlichungsdatum |
 |---------------------------|---------------|--------------|
-| [GA](#ga)                 | 15.0.2000.5  | 2019-11-04    |
+| [CU1](#cu1)               | 15.0.4003.23  | 01.07.2020   |
+| [GA](#ga)                 | 15.0.2000.5   | 2019-11-04   |
 | [Release Candidate](#rc)  | 15.0.1900.25  | 21.8.2019   |
 
 ## <a id="cuinstall"></a> Installieren der Updates
@@ -60,6 +61,23 @@ Führen Sie den entsprechenden Updatebefehl für jedes Paket durch, wenn Sie vor
 - [Installieren von SQL Server 2019 Machine Learning Services (R und Python) unter Linux](sql-server-linux-setup-machine-learning.md)
 - [Installieren des PolyBase-Pakets](../relational-databases/polybase/polybase-linux-setup.md)
 - [Aktivieren des SQL Server-Agents](sql-server-linux-setup-sql-agent.md)
+
+## <a id="cu1"></a> Kumulatives Update 1 (Januar 2020)
+
+Dies ist das Release des kumulativen Update 1 (CU1) von SQL Server 2019 (15.x). Die Version der SQL Server-Datenbank-Engine für dieses Release ist 15.0.4003.23. Informationen zu den Fehlerbehebungen und Verbesserungen in diesem Release finden Sie unter <https://support.microsoft.com/en-us/help/4527376>.
+
+### <a name="package-details"></a>Paketdetails
+
+Für manuelle oder offline durchgeführte Paketinstallationen können Sie die RPM- und Debian-Pakete herunterladen, die in der folgenden Tabelle aufgeführt werden:
+
+> [!NOTE]
+> Ab CU1 verweisen die Links zu Paketen für die Offlineinstallation von Red Hat auf RHEL 8-Pakete. Wenn Sie Pakete für RHEL 7 benötigen, können Sie sie unter dem Downloadpfad <https://packages.microsoft.com/rhel/7/mssql-server-2019/> herunterladen.
+
+| Paket | Paketversion | Downloads |
+|-----|-----|-----|
+| Red Hat RPM-Paket | 15.0.4003.23-3 | [RPM-Engine-Paket](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4003.23-3.x86_64.rpm)</br>[RPM-Hochverfügbarkeitspaket](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4003.23-3.x86_64.rpm)</br>[RPM-Paket für Volltextsuche](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4003.23-3.x86_64.rpm)</br>[RPM-Erweiterbarkeitspaket](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4003.23-3.x86_64.rpm)</br>[RPM-Paket für Java-Erweiterbarkeit](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4003.23-3.x86_64.rpm)</br>[RPM-PolyBase-Paket](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4003.23-3.x86_64.rpm)|
+| SLES RPM-Paket | 15.0.4003.23-3 | [RPM-Engine-Paket (mssql-server)](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4003.23-3.x86_64.rpm)</br>[RPM-Hochverfügbarkeitspaket](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4003.23-3.x86_64.rpm)</br>[RPM-Paket für Volltextsuche](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4003.23-3.x86_64.rpm)</br>[RPM-Erweiterbarkeitspaket](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4003.23-3.x86_64.rpm)</br>[RPM-Paket für Java-Erweiterbarkeit](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4003.23-3.x86_64.rpm)</br>[RPM-PolyBase-Paket](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4003.23-3.x86_64.rpm)|
+| Debian-Paket für Ubuntu 16.04 | 15.0.4003.23-3 | [Debian-Engine-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4003.23-3_amd64.deb)</br>[Debian-Hochverfügbarkeitspaket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4003.23-3_amd64.deb)</br>[Debian-Paket für Volltextsuche](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4003.23-3_amd64.deb)</br>[Debian-Erweiterbarkeitspaket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4003.23-3_amd64.deb)</br>[Debian-Paket für Java-Erweiterbarkeit](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4003.23-3_amd64.deb)</br>[RPM-PolyBase-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4003.23-3_amd64.deb)|
 
 ## <a id="ga"></a> Allgemeine Verfügbarkeit (November 2019)
 
@@ -105,7 +123,7 @@ In den folgenden Abschnitten werden bekannte Probleme mit dem allgemein verfügb
 
 - Nur Installationen mit einzelner Instanz werden unterstützt.
 
-    - **Lösung:** Wenn Sie mehrere Instanzen auf einem bestimmten Host verwenden möchten, ziehen Sie die Verwendung von virtuellen Computern oder Docker-Containern in Betracht. 
+    - **Lösung:** Wenn Sie mehrere Instanzen auf einem bestimmten Host verwenden möchten, ziehen Sie die Verwendung von VMs (virtuelle Computer) oder Docker-Containern in Betracht. 
 
 - Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurations-Manager kann keine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux herstellen.
 
@@ -165,7 +183,7 @@ Führen Sie einen der folgenden Schritte aus, um dieses Problem zu umgehen:
 
 1. Verwenden Sie IP-Adressen anstelle von Hostnamen, um das Ziel der TCP-Verbindung anzugeben.
 
-1. Aktivieren Sie IPv6 im Kernel, indem Sie `ipv6.disable=1` aus der boot-Befehlszeile entfernen. Die Vorgehensweise hierfür hängt von der Linux-Verteilung und dem Bootloader (z. B. GRUB) ab. Wenn Sie IPv6 deaktivieren möchten, können Sie dennoch deaktivieren, indem Sie `net.ipv6.conf.all.disable_ipv6 = 1` in der `sysctl`-Konfiguration festlegen (z. B. `/etc/sysctl.conf`). Dadurch wird weiterhin verhindert, dass der Netzwerkadapter des Systems eine IPv6-Adresse erhält, und ermöglicht dennoch die Funktion der sqlservr-Features.
+1. Aktivieren Sie IPv6 im Kernel, indem Sie `ipv6.disable=1` aus der boot-Befehlszeile entfernen. Die Vorgehensweise hierfür hängt von der Linux-Verteilung und dem Bootloader (z. B. GRUB) ab. Wenn Sie IPv6 deaktivieren möchten, können Sie dennoch deaktivieren, indem Sie `net.ipv6.conf.all.disable_ipv6 = 1` in der `sysctl`-Konfiguration festlegen (z.B. `/etc/sysctl.conf`). Dadurch wird weiterhin verhindert, dass der Netzwerkadapter des Systems eine IPv6-Adresse erhält, und ermöglicht dennoch die Funktion der sqlservr-Features.
 
 #### <a name="network-file-system-nfs"></a>Network File System (NFS)
 Wenn Sie **NFS-Remotefreigaben (Network File System)** in der Produktion verwenden, beachten Sie die folgenden Anforderungen für die Unterstützung:

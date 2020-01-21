@@ -1,1 +1,1 @@
-<Token>**Gilt für:** ![Ja](media/yes.png)SQL Server ![Ja](media/yes.png)Bereitstellen der Azure-SSIS Integration Runtime in Azure Data Factory</Token>
+<Token>**GILT FÜR:** ![Ja](media/yes.png)SQL Server ![Ja](media/yes.png)SSIS Integration Runtime in Azure Data Factory</Token> ![Ja](media/yes.png)Azure Synapse Analytics (SQL DW)

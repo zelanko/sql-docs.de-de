@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74901946"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831817"
 ---
 # <a name="collation-and-unicode-support"></a>Unterstützung von Sortierungen und Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ Sie können diese Optionen festlegen, indem Sie sie an den Namen der Sortierung 
 
 In der folgenden Tabelle wird das den verschiedenen Optionen zugeordnete Verhalten beschrieben:    
     
-|Option|BESCHREIBUNG|    
+|Option|Beschreibung|    
 |------------|-----------------|    
 |Unterscheidung nach Groß-/Kleinschreibung (\_CS)|Unterscheidet zwischen Groß- und Kleinbuchstaben. Wenn diese Option aktiviert wird, stehen Kleinbuchstaben in der Sortierreihenfolge vor ihren entsprechenden Großbuchstaben. Wenn diese Option nicht aktiviert wird, wird die Groß- und Kleinschreibung bei der Sortierung nicht berücksichtigt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] betrachtet also beim Sortieren die groß- und die kleingeschriebenen Versionen von Buchstaben als identisch. Sie können die Nichtunterscheidung nach Groß-/Kleinbuchstaben durch Angeben von „\_CI“ explizit auswählen.|   
 |Unterscheidung nach Akzent (\_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Beispielsweise entspricht „a“ nicht „ấ“. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung nicht nach Akzenten unterschieden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] betrachtet also beim Sortieren die Versionen von Buchstaben mit und ohne Akzent als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angeben von „\_AI“ explizit auswählen.|    
@@ -478,16 +478,12 @@ Wenn Sie Daten von einem Server auf einen Client verschieben, wird die Serversor
 Sie müssen Sortierungen mit UTF-8-Codierung (\_UTF8) auswählen, um die in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] verfügbaren UTF-8-Sortierungen verwenden zu können und die Suche und Sortierung einiger Unicode-Zeichen (nur Windows-Sortierungen) zu verbessern.
  
 -   Das UTF8-Flag kann auf folgende Sortierungen angewendet werden:    
-    -   Sortierungen von Version 90 
-        > [!NOTE]
-        > Nur wenn in dieser Version bereits Sortierungen mit ergänzenden Zeichen (\_SC) oder Variierungsauswahlzeichen (\_VSS) vorhanden sind.
-    -   Sortierungen von Version 100    
-    -   Sortierungen der Version 140   
+    -   Linguistische Sortierungen, die bereits ergänzende Zeichen (\_SC) oder Variierungsauswahlzeichen (\_VSS) unterstützen
     -   Die binäre Sortierung BIN2<sup>1</sup>
     
 -   Das UTF8-Flag kann auf folgende Sortierungen nicht angewendet werden:    
-    -   Sortierungen der Version 90, die keine ergänzenden Zeichen (\_SC) oder Variierungsauswahlzeichen (\_VSS) unterstützen    
-    -   Die binären Sortierungen BIN und BIN2<sup>2</sup>    
+    -   Linguistische Sortierungen, die keine ergänzenden Zeichen (\_SC) oder Variierungsauswahlzeichen (\_VSS) unterstützen
+    -   Die binären Sortierungen BIN und BIN2<sup>2</sup>
     -   Die SQL\_*-Sortierungen  
     
 <sup>1</sup> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 hat die Sortierung **UTF8_BIN2** durch **Latin1_General_100_BIN2_UTF8** ersetzt.        
@@ -528,8 +524,6 @@ Bei Verwendung ergänzender Zeichen:
 -   Ergänzende Zeichen können bei Sortier- und Vergleichsvorgängen für Sortierungsversionen ab 90 verwendet werden.    
 -   Alle Sortierungen von Version 100 unterstützen die linguistische Sortierung mit ergänzenden Zeichen.    
 -   Die Verwendung von ergänzenden Zeichen wird in Metadaten nicht unterstützt, z. B. in Namen von Datenbankobjekten.    
--   Datenbanken, die Sortierungen mit ergänzenden Zeichen (\_SC) verwenden, können nicht für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikation verwendet werden. Das liegt daran, dass manche der Systemtabellen und gespeicherten Prozeduren, die für die Replikation erstellt wurden, den Legacydatentyp **ntext** verwenden, der keine ergänzenden Zeichen unterstützt.  
-
 -   Das SC-Flag kann in folgenden Versionen angewendet werden:    
     -   Sortierungen von Version 90    
     -   Sortierungen von Version 100    

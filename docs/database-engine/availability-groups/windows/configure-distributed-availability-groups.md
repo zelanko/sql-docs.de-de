@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c54ec57756ca2f840ac3f15771143cf697798e9f
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75002041"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952487"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Konfigurieren verteilter Always On-Verfügbarkeitsgruppen  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +180,8 @@ GO
 >  Die **LISTENER_URL** gibt den Listener für jede Verfügbarkeitsgruppe zusammen mit dem Datenbankspiegelungs-Endpunkt der Verfügbarkeitsgruppe an. In diesem Beispiel ist das Port `5022` (nicht Port `60173` , der zum Erstellen des Listeners verwendet wurde). Wenn Sie beispielsweise in Azure einen Lastenausgleich verwenden, [fügen Sie eine Regel für den Lastenausgleich für den Port der verteilten Verfügbarkeitsgruppe hinzu](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Fügen Sie zusätzlich zum SQL Server-Instanzport die Regel für den Listenerport hinzu. 
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>Abbrechen des automatischen Seedings für die Weiterleitung
-Falls es erforderlich ist, die Initialisierung der Weiterleitung abzubrechen, bevor die zwei Verfügbarkeitsgruppen synchronisiert werden, ändern Sie die verteilte Verfügbarkeitsgruppe mit ALTER, indem Sie den SEEDING_MODE-Parameter der Weiterleitung auf MANUAL festlegen und das Seeding sofort abbrechen. Führen Sie den Befehl für die globale primäre Datenbank aus: 
+
+Falls es aus unterschiedlichsten Gründen erforderlich ist, die Initialisierung der Weiterleitung abzubrechen, _bevor_ die zwei Verfügbarkeitsgruppen synchronisiert werden, ändern Sie die verteilte Verfügbarkeitsgruppe mit ALTER, indem Sie den SEEDING_MODE-Parameter der Weiterleitung auf MANUAL festlegen und das Seeding sofort abbrechen. Führen Sie den Befehl für die globale primäre Datenbank aus: 
 
 ```sql
 -- Cancel automatic seeding.  Connect to global primary but specify DAG AG2

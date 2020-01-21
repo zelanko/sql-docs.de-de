@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11ed5aa2ddcd675d201fc86abf595055828d7621
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: 4cf79aade8e74277ef7b5cbaa6e1bd3ae612e94b
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681771"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924920"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>DevOps-Tools für SQL Server Integration Services (Vorschau)
 
@@ -133,11 +133,18 @@ Folgende Szenarios werden vom SSIS-Bereitstellungstask zurzeit nicht unterstütz
 
 ## <a name="release-notes"></a>Versionshinweise
 
+### <a name="version-012-preview"></a>Version 0.1.2 (Vorschauversion)
+
+Veröffentlichungsdatum: 13. Januar 2020
+
+- Im Protokoll für den SSIS-Bereitstellungstask werden nun detailliertere Informationen zu Ausnahmen angezeigt, wenn das Ziel eine SSIS-Datenbank ist.
+- Der fehlerhafte Beispielzielpfad im Hilfetext für die Eigenschaft „Zielpfad“ des SSIS-Bereitstellungstask wurde korrigiert.
+
 ### <a name="version-011-preview"></a>Version 0.1.1 (Vorschau)
 
 Veröffentlichungsdatum: 6. Januar 2020
 
-- Einschränkung der Mindestanforderung für die Agent-Version wurde hinzugefügt. Die minimale Agent-Version für dieses Produkt ist derzeit 2.144.0.
+- Es wurde eine Einschränkung der Mindestanforderung für die Agent-Version hinzugefügt. Die minimale Agent-Version für dieses Produkt ist derzeit 2.144.0.
 - Ein falscher Anzeigetext für den SSIS-Bereitstellungstask wurde korrigiert.
 - Einige Fehlermeldungen wurden präzisiert.
 
