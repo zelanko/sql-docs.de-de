@@ -13,16 +13,16 @@ ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a7690e7d703ad5d7973d276741b40c7765d39b3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284443"
 ---
 # <a name="report-history-methods"></a>Berichtsverlaufsmethoden
   Mit diesen Methoden können Sie Momentaufnahmen zum Elementverlauf erstellen und verwalten.  
   
-|Methode|Aktion|  
+|Methode|Action|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateItemHistorySnapshot%2A>|Generiert eine Momentaufnahme des Verlaufs eines angegebenen Katalogelements.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItemHistorySnapshot%2A>|Löscht eine einzelne Momentaufnahme des Verlaufs eines angegebenen Katalogelements.|  
