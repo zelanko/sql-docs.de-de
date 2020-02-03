@@ -16,10 +16,10 @@ ms.assetid: e1d7e267-d9de-407a-b1a9-abdc2623478d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2139a25c4032f4f95b173d4cb5e78fbbc62495f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973538"
 ---
 # <a name="setnull-method-javalangstring-int"></a>setNull-Methode (java.lang.String, int)

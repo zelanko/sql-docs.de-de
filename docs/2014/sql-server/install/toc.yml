@@ -27,17 +27,17 @@
 - name: Themen zur Vorgehensweise für den Upgrade Advisor
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: 'Gewusst wie: Installieren des Upgrade Advisors'
+    - name: 'Vorgehensweise: Installieren des Upgrade Advisors'
       href: how-to-install-upgrade-advisor.md
-    - name: 'Gewusst wie: Starten des Upgrade Advisors'
+    - name: 'Vorgehensweise: Starten des Upgrade Advisors'
       href: how-to-launch-upgrade-advisor.md
-    - name: 'Gewusst wie: Ausführen des Analyse-Assistenten des Upgrade Advisors'
+    - name: 'Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisors'
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: 'Gewusst wie: Anzeigen eines Berichts des Upgrade Advisors'
+    - name: 'Vorgehensweise: Anzeigen eines Berichts des Upgrade Advisors'
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: 'Gewusst wie: Filtern von Berichten'
+    - name: 'Vorgehensweise: Filtern von Berichten'
       href: how-to-filter-reports.md
-    - name: 'Gewusst wie: Exportieren von Berichten'
+    - name: 'Vorgehensweise: Exportieren von Berichten'
       href: how-to-export-reports.md
 - name: Referenz zur Benutzeroberfläche
   href: upgrade-advisor-user-interface-reference.md
@@ -114,7 +114,7 @@
           href: nested-after-trigger-fires-even-when-trigger-nesting-is-off.md
         - name: Neue Spalte in der Ausgabe von 'sp_helptrigger' kann möglicherweise Auswirkungen auf Anwendungen haben
           href: new-column-in-output-of-sp-helptrigger-may-impact-applications.md
-        - name: osql unterstützt nicht länger 'ED'- und '!!'- Befehle
+        - name: osql unterstützt nicht länger 'ED'- und '!!'- commands
           href: osql-no-longer-supports-the-ed-and-commands.md
         - name: Die Operatoren für äußere Joins *= und =* werden im Kompatibilitätsmodus 90 oder höher nicht unterstützt
           href: outer-join-operators-and-are-not-supported-in-90-or-later-compatibility-modes.md
@@ -335,11 +335,11 @@
       href: failover-cluster-report.md
     - name: Überprüfung der Funktionen
       href: feature-review.md
-    - name: Installationsregeln
+    - name: Installation Rules
       href: installation-rules.md
     - name: Funktionsregeln
       href: feature-rules.md
-    - name: Funktionsauswahl
+    - name: Featureauswahl
       href: feature-selection.md
     - name: Funktionsauswahl (Deinstallieren)
       href: feature-selection-uninstall.md
@@ -349,7 +349,7 @@
       href: full-text-search-upgrade-options.md
     - name: Installation abgeschlossen
       href: complete-installation.md
-    - name: Installationsvoraussetzungen
+    - name: Voraussetzungen für die Installation
       href: installation-prerequisites.md
     - name: Installationsstatus
       href: installation-progress.md
@@ -432,7 +432,7 @@
       href: welcome.md
     - name: Lizenzbedingungen
       href: license-terms.md
-    - name: Funktionen auswählen
+    - name: Auswählen von Features
       href: select-features.md
     - name: Verwendete Dateien überprüfen
       href: check-files-in-use.md

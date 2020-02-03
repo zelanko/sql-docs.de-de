@@ -132,7 +132,7 @@
           href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
         - name: Upgrade und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust
           href: upgrading-always-on-availability-group-replica-instances.md
-    - name: Connectivity
+    - name: Konnektivität
       items:
         - name: Clientverbindung
           href: about-client-connection-access-to-availability-replicas-sql-server.md
@@ -221,7 +221,7 @@
       items:
         - name: Eigenschaften des Verfügbarkeitsreplikats (Seite Allgemein)
           href: availability-replica-properties-general-page.md
-        - name: 'Eigenschaften von Verfügbarkeitsgruppen: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen)'
+        - name: 'Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen)'
           href: availability-group-properties-new-availability-group-backup-preferences-page.md
     - name: Assistent für Verfügbarkeitsgruppen
       items:

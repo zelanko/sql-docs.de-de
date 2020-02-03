@@ -1,6 +1,6 @@
 ---
-title: Erstellen einer neuen Projektmappe | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen einer neuen Projektmappe
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b8f05d883896e4d027a34afb1d7849c8c9368b01
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1988a31f085619604198b889138bb8e62eb8f28b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258285"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251931"
 ---
 # <a name="create-a-new-solution"></a>Erstellen einer neuen Projektmappe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Wenn Sie ein Projekt erstellen, wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Projektmappe dafür erstellt. Sie können jeweils nur eine Projektmappe öffnen. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gestattet es nicht, dass Sie Ordner innerhalb von Projekten erstellen. Erstellen Sie mehrere Projekte, um Ihre Arbeit zu organisieren.  
+Wenn Sie ein Projekt erstellen, wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Projektmappe dafür erstellt. Sie können jeweils nur eine Projektmappe öffnen. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gestattet es Ihnen nicht, Ordner innerhalb von Projekten zu erstellen. Erstellen Sie mehrere Projekte, um Ihre Arbeit zu organisieren.  
   
 Klicken Sie zum Öffnen des Projektmappen-Explorers im Menü **Ansicht** auf **Projektmappen-Explorer** .  
   
@@ -40,6 +40,6 @@ Klicken Sie zum Öffnen des Projektmappen-Explorers im Menü **Ansicht** auf **P
 6.  Klicken Sie auf **OK**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Ansicht](../../ssms/solution/solution-explorer.md)  
+[Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
 [Öffnen von Projektmappen aus der Quellcodeverwaltung](https://msdn.microsoft.com/library/ms174216.aspx)  
   

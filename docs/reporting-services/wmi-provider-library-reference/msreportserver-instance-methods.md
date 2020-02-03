@@ -16,13 +16,13 @@ ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ceb89253cea8feac0b4255984b30aa7fd74216d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571118"
 ---
-# <a name="msreportserverinstance-methods"></a>MSReportServer_Instance-Methoden
+# <a name="msreportserver_instance-methods"></a>MSReportServer_Instance-Methoden
   Die MSReportServer_Instance-Klasse stellt grundlegende Informationen bereit, die ein Client benötigt, um eine Verbindung mit einem installierten Berichtsserver herzustellen.  
   
 ## <a name="public-methods"></a>Öffentliche Methoden  
@@ -32,6 +32,6 @@ ms.locfileid: "65571118"
 |[GetReportServerUrls-Methode &#40;WMI: MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Listet die URLs auf, über die Benutzer auf den Berichtsserver und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]zugreifen können.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MSReportServer_Instance-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+ [MSReportServer_Instance Members (MSReportServer_Instance-Member)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

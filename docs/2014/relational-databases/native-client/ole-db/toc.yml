@@ -179,7 +179,7 @@
       href: ../../native-client-ole-db-transactions/supporting-distributed-transactions.md
     - name: Isolationsstufen (OLE DB)
       href: ../../native-client-ole-db-transactions/isolation-levels-ole-db.md
-- name: Fehler
+- name: Errors
   href: ../../native-client-ole-db-errors/errors.md
   items:
     - name: Rückgabecodes

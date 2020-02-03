@@ -66,7 +66,7 @@
           href: report-server/verifying-a-report-run.md
     - name: 'Leistung, Momentaufnahmen, Zwischenspeichern (Reporting Services) +'
       href: report-server/performance-snapshots-caching-reporting-services.md
-    - name: Hohe Verfügbarkeit
+    - name: Hochverfügbarkeit
       href: high-availability-reporting-services.md
     - name: Aktivieren und Deaktivieren von RDL-Sandkasten
       href: enable-and-disable-rdl-sandboxing.md
@@ -79,7 +79,7 @@
       href: what-s-new-in-report-builder-for-sql-server-2014.md
     - name: Starten des Berichts-Generators
       href: report-builder/start-report-builder.md
-    - name: 'Lernprogramm: Erstellen eines schnellen Diagrammberichts offline'
+    - name: 'Tutorial: Erstellen eines Quick-Diagrammberichts offline'
       href: report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
     - name: Planen eines Berichts
       href: report-design/planning-a-report-report-builder.md
@@ -186,7 +186,7 @@
       href: report-builder/print-reports-report-builder-and-ssrs.md
     - name: Speichern von Berichten +
       href: report-builder/saving-reports-report-builder.md
-    - name: Security
+    - name: Sicherheit
       href: report-builder/security-report-builder.md
     - name: 'Installation, Deinstallation und Unterstützung des Berichts-Generators'
       href: install-uninstall-and-report-builder-support.md

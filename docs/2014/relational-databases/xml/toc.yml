@@ -104,7 +104,7 @@
       href: example-retrieving-binary-data.md
     - name: 'Beispiel: Umbenennen des <row>-Elements'
       href: example-renaming-the-row-element.md
-    - name: 'Beispiel: Angeben eines Stammelements für den durch FOR XML generierten XML-Code'
+    - name: 'Beispiel: Angeben eines Stammelements für das durch FOR XML generierte XML'
       href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
     - name: 'Beispiel: Abfragen von Spalten des Typs XML'
       href: example-querying-xmltype-columns.md
@@ -126,17 +126,17 @@
       href: example-specifying-the-elementxsinil-directive.md
     - name: 'Beispiel: Erstellen von gleichgeordneten Elementen im EXPLICIT-Modus'
       href: example-constructing-siblings-with-explicit-mode.md
-    - name: 'Beispiel: Angeben der ID- und IDREF-Anweisungen'
+    - name: 'Beispiel: Angeben der ID- und der IDREF-Direktive'
       href: example-specifying-the-id-and-idref-directives.md
-    - name: 'Beispiel: Angeben der ID- und IDREFS-Anweisungen'
+    - name: 'Beispiel: Angeben der ID- und der IDREFS-Direktive'
       href: example-specifying-the-id-and-idrefs-directives.md
     - name: 'Beispiel: Angeben der HIDE-Direktive'
       href: example-specifying-the-hide-directive.md
-    - name: 'Beispiel: Angeben der ELEMENT-Anweisung und Entitätscodierung'
+    - name: 'Beispiel: Angeben der ELEMENT-Direktive und Entitätscodierung'
       href: example-specifying-the-element-directive-and-entity-encoding.md
-    - name: 'Beispiel: Angeben der CDATA-Anweisung'
+    - name: 'Beispiel: Angeben der CDATA-Direktive'
       href: example-specifying-the-cdata-directive.md
-    - name: 'Beispiel: Angeben der XMLTEXT-Anweisung'
+    - name: 'Beispiel: Angeben der XMLTEXT-Direktive'
       href: example-specifying-the-xmltext-directive.md
     - name: Verwenden des PATH-Modus mit FOR XML
       href: use-path-mode-with-for-xml.md

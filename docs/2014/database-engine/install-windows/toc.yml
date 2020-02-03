@@ -222,7 +222,7 @@
       items:
         - name: 'Prüfliste: Reporting Services, Power View und PowerPivot für SharePoint'
           href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
-        - name: 'Prüfliste: Horizontales Skalieren durch Hinzufügen von PowerPivot-Servern zu einer SharePoint 2010-Farm'
+        - name: 'Prüfliste: Horizontale Skalierung durch Hinzufügen von PowerPivot-Servern zu einer SharePoint 2010-Farm'
           href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
         - name: 'Prüfliste: Installieren von Reporting Services in eine vorhandene SharePoint-Farm'
           href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md

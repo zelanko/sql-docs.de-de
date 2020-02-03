@@ -41,7 +41,7 @@
       href: ../../native-client-odbc-queries/executing-statements/direct-execution.md
     - name: Vorbereitete Ausführung
       href: ../../native-client-odbc-queries/executing-statements/prepared-execution.md
-    - name: Vorgehensweisen
+    - name: Prozeduren
       href: ../../native-client-odbc-queries/executing-statements/procedures.md
     - name: Batches von Anweisungen
       href: ../../native-client-odbc-queries/executing-statements/batches-of-statements.md
@@ -148,9 +148,9 @@
 - name: Verwalten von Text und Imagespalten
   href: ../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md
   items:
-    - name: Vergleich von gebundenen und ungebundenen Text- und Image-Spalten
+    - name: Gebundene im Vergleich zu ungebundenen Text- und Image-Spalten
       href: ../../native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
-    - name: Vergleich von protokollierten und nicht protokollierten Änderungen
+    - name: Protokollierte und nicht protokollierte Änderungen
       href: ../../native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md
     - name: 'Data-at-Execution und Text-, ntext- oder Imagespalten'
       href: ../../native-client-odbc-text-image-columns/data-at-execution-and-text-ntext-or-image-columns.md
@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: Aufrufen von SQLColumns für eine Tabelle mit Spalten mit geringer Dichte
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: 'Gewusst wie: Einfügen von Zeilen in eine Geografiespalte (ODBC)'
+    - name: 'Vorgehensweise: Einfügen von Zeilen in eine Geografiespalte (ODBC)'
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: Einrichten der gegenseitigen Kerberos-Authentifizierung
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

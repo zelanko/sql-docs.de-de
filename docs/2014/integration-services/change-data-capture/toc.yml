@@ -59,7 +59,7 @@
           href: generate-and-run-the-supplemental-logging-script.md
         - name: Generieren von Spiegeltabellen und CDC-Aufzeichnungsinstanzen
           href: generate-mirror-tables-and-cdc-capture-instances.md
-        - name: Fertig stellen
+        - name: Finish
           href: finish.md
         - name: Bearbeiten von Instanzeigenschaften
           href: edit-instance-properties.md
@@ -82,7 +82,7 @@
           href: how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
         - name: Erstellen der Instanz für die SQL Server-Änderungsdatenbank
           href: how-to-create-the-sql-server-change-database-instance.md
-        - name: Verwalten einer CDC-Instanz
+        - name: How to Manage a CDC Instance
           href: how-to-manage-a-cdc-instance.md
         - name: Bearbeiten der CDC-Instanzeigenschaften
           href: how-to-edit-the-cdc-instance-properties.md
@@ -92,7 +92,7 @@
       href: sql-server-connection-for-instance-creation.md
     - name: Erweiterte Verbindungseigenschaften
       href: advanced-connection-properties.md
-    - name: Oracle-Anmeldeinformationen zum Ausführen von Skripts
+    - name: Oracle Credentials for Running Script
       href: oracle-credentials-for-running-script.md
     - name: Ergänzendes Oracle-Protokollierungsskript
       href: oracle-supplemental-logging-script.md
@@ -124,7 +124,7 @@
           href: connection-to-sql-server-for-delete.md
         - name: Erstellen und Bearbeiten eines Oracle CDC Service
           href: create-and-edit-an-oracle-cdc-service.md
-        - name: Verwalten eines Oracle CDC Service
+        - name: Manage an Oracle CDC Service
           href: manage-an-oracle-cdc-service.md
         - name: Vorbereiten von SQL Server für CDC
           href: prepare-sql-server-for-cdc.md

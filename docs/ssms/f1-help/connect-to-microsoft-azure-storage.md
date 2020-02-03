@@ -1,6 +1,6 @@
 ---
-title: Mit Microsoft Azure Storage verbinden | Microsoft-Dokumentation
-ms.custom: ''
+title: Mit Microsoft Azure Storage verbinden
+ms.custom: seo-lt-2019
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,18 +13,18 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155683"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245022"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Mit Microsoft Azure Storage verbinden
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Verwenden Sie das Dialogfeld **Azure Storage-Verbindung**, um ein Speicherkonto anzugeben und die Verbindung mit Azure zu überprüfen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 Geben Sie die folgenden Informationen zu Ihrem Azure-Konto an, und klicken Sie dann auf **Weiter**, um fortzufahren.  
   
 1.  **Speicherkonto** – Geben Sie den Speicherkontonamen an.
@@ -32,9 +32,9 @@ Geben Sie die folgenden Informationen zu Ihrem Azure-Konto an, und klicken Sie d
    >[!NOTE]
    > Sie können nur Verbindungen zu [allgemeinen Speicherkonten](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services) herstellen. Die Verbindungserstellung zu anderen Arten von Speicherkonten kann zu einem Fehler wie dem folgenden führen:
    >
-   >  The value for one of the HTTP headers is not in the correct format. (Das Format von einem der Werte des HTTP-Headers ist nicht korrekt.) (Microsoft.SqlServer.StorageClient).
+   >  Der Wert eines der HTTP-Header weist nicht das richtige Format auf. (Microsoft.SqlServer.StorageClient).
    >
-   >  The remote server returned an error: (400) Bad Request (400 (Ungültige Anforderung)). (System)
+   >  The remote server returned an error: (400) Bad Request. (Der Remoteserver hat einen Fehler zurückgegeben: (400) Ungültige Anforderung.) (System)
 
 2.  **Kontoschlüssel** – Geben Sie den Kontoschlüssel für das angegebene Speicherkonto an.  
   

@@ -22,7 +22,7 @@
       href: modified-features-contained-database.md
     - name: Enthaltene Datenbanksortierungen
       href: contained-database-collations.md
-    - name: Security Best Practices with Contained Databases
+    - name: Bewährte Methoden für die Sicherheit eigenständiger Datenbanken
       href: security-best-practices-with-contained-databases.md
     - name: Migrate to a Partially Contained Database
       href: migrate-to-a-partially-contained-database.md

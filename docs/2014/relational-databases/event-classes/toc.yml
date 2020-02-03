@@ -148,9 +148,9 @@
       href: oledb-call-event-class.md
     - name: OLEDB DataRead-Ereignisklasse
       href: oledb-dataread-event-class.md
-    - name: OLEDB Errors (Ereignisklasse)
+    - name: OLEDB Errors-Ereignisklasse
       href: oledb-errors-event-class.md
-    - name: OLEDB Provider Information (Ereignisklasse)
+    - name: OLEDB Provider Information-Ereignisklasse
       href: oledb-provider-information-event-class.md
     - name: OLEDB QueryInterface-Ereignisklasse
       href: oledb-queryinterface-event-class.md
@@ -188,7 +188,7 @@
 - name: Fortschrittsbericht-Ereigniskategorie
   href: progress-report-event-category.md
   items:
-    - name: 'Statusbericht: Online Index Operation-Ereignisklasse'
+    - name: 'Progress Report: Online Index Operation-Ereignisklasse'
       href: progress-report-online-index-operation-event-class.md
 - name: Abfragebenachrichtigungen (Ereigniskategorie)
   href: query-notifications-event-category.md
@@ -295,7 +295,7 @@
       href: audit-server-principal-management-event-class.md
     - name: Audit Server Scope GDR-Ereignisklasse
       href: audit-server-scope-gdr-event-class.md
-    - name: Audit Server Starts and Stops (Ereignisklasse)
+    - name: Audit Server Starts and Stops-Ereignisklasse
       href: audit-server-starts-and-stops-event-class.md
     - name: Audit Statement Permission-Ereignisklasse
       href: audit-statement-permission-event-class.md
@@ -322,7 +322,7 @@
       href: preconnect-starting-event-class.md
     - name: 'RPC:Completed-Ereignisklasse'
       href: rpc-completed-event-class.md
-    - name: RPC Output Parameter (Ereignisklasse)
+    - name: RPC Output Parameter-Ereignisklasse
       href: rpc-output-parameter-event-class.md
     - name: 'RPC:Starting (Ereignisklasse)'
       href: rpc-starting-event-class.md
@@ -332,7 +332,7 @@
       href: sp-cacheinsert-event-class.md
     - name: 'SP:CacheMiss-Ereignisklasse'
       href: sp-cachemiss-event-class.md
-    - name: 'SP:CacheRemove (Ereignisklasse)'
+    - name: 'SP:CacheRemove-Ereignisklasse'
       href: sp-cacheremove-event-class.md
     - name: 'SP:Completed-Ereignisklasse'
       href: sp-completed-event-class.md
@@ -351,25 +351,25 @@
       href: dtctransaction-event-class.md
     - name: SQLTransaction (Ereignisklasse)
       href: sqltransaction-event-class.md
-    - name: 'TM: Begin Tran Completed (Ereignisklasse)'
+    - name: 'TM: Begin Tran Completed-Ereignisklasse'
       href: tm-begin-tran-completed-event-class.md
     - name: 'TM: Begin Tran Starting (Ereignisklasse)'
       href: tm-begin-tran-starting-event-class.md
-    - name: 'TM: Commit Tran Completed (Ereignisklasse)'
+    - name: 'TM: Commit Tran Completed-Ereignisklasse'
       href: tm-commit-tran-completed-event-class.md
     - name: 'TM: Commit Tran Starting (Ereignisklasse)'
       href: tm-commit-tran-starting-event-class.md
-    - name: 'TM: Promote Tran Completed (Ereignisklasse)'
+    - name: 'TM: Promote Tran Completed-Ereignisklasse'
       href: tm-promote-tran-completed-event-class.md
     - name: 'TM: Promote Tran Starting (Ereignisklasse)'
       href: tm-promote-tran-starting-event-class.md
-    - name: 'TM: Rollback Tran Completed (Ereignisklasse)'
+    - name: 'TM: Rollback Tran Completed-Ereignisklasse'
       href: tm-rollback-tran-completed-event-class.md
     - name: 'TM: Rollback Tran Starting (Ereignisklasse)'
       href: tm-rollback-tran-starting-event-class.md
-    - name: 'TM: Save Tran Completed (Ereignisklasse)'
+    - name: 'TM: Save Tran Completed-Ereignisklasse'
       href: tm-save-tran-completed-event-class.md
-    - name: 'TM: Save Tran Starting (Ereignisklasse)'
+    - name: 'TM: Save Tran Starting-Ereignisklasse'
       href: tm-save-tran-starting-event-class.md
     - name: TransactionLog-Ereignisklasse
       href: transactionlog-event-class.md
@@ -382,13 +382,13 @@
       href: prepare-sql-event-class.md
     - name: 'SQL:BatchCompleted (Ereignisklasse)'
       href: sql-batchcompleted-event-class.md
-    - name: 'SQL:BatchStarting (Ereignisklasse)'
+    - name: 'SQL:BatchStarting-Ereignisklasse'
       href: sql-batchstarting-event-class.md
-    - name: 'SQL:StmtCompleted (Ereignisklasse)'
+    - name: 'SQL:StmtCompleted-Ereignisklasse'
       href: sql-stmtcompleted-event-class.md
     - name: 'SQL:StmtRecompile (Ereignisklasse)'
       href: sql-stmtrecompile-event-class.md
-    - name: 'SQL:StmtStarting (Ereignisklasse)'
+    - name: 'SQL:StmtStarting-Ereignisklasse'
       href: sql-stmtstarting-event-class.md
     - name: Unprepare SQL-Ereignisklasse
       href: unprepare-sql-event-class.md

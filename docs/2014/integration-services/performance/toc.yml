@@ -21,7 +21,7 @@
       href: ../enable-package-logging-in-sql-server-data-tools.md
     - name: Aktivieren der Protokollierung für die Paketausführung auf dem SSIS-Server
       href: ../enable-logging-for-package-execution-on-the-ssis-server.md
-- name: Performance Counters
+- name: Leistungsindikatoren
   href: performance-counters.md
   items:
     - name: Hinzufügen eines Protokolls für Datenfluss-Leistungsindikatoren

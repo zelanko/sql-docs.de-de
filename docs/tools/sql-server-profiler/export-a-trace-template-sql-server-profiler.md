@@ -1,29 +1,28 @@
 ---
-title: Exportieren einer Ablauf Verfolgungs Vorlage (SQL Server Profiler) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/01/2017
+title: Exportieren einer Ablaufverfolgungsvorlage
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], traces
-- trace templates [SQL Server]
-- exporting trace templates
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60218ad4bd1d50c95764f0191bb42860b1e06107
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 82e3bab1f7042029462e3d50b3c7e550fe9eba86
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930025"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307273"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Exportieren einer Ablaufverfolgungsvorlage (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Dieses Thema beschreibt, wie eine vorhandene Ablaufverfolgungsvorlage mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]exportiert wird, um sie als Vorlagedatei (TDF-Datei) zu speichern. Wenn Sie eine Vorlagedatei exportieren und als Datei speichern, können Sie die Vorlage für andere Instanzen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwenden.  
+
+Dieses Thema beschreibt, wie eine vorhandene Ablaufverfolgungsvorlage mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]exportiert wird, um sie als Vorlagedatei (TDF-Datei) zu speichern. Wenn Sie eine Vorlagedatei exportieren und als Datei speichern, können Sie die Vorlage für andere Instanzen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwenden.  
   
 ### <a name="to-export-a-trace-template"></a>So exportieren Sie eine Ablaufverfolgungsvorlage  
   

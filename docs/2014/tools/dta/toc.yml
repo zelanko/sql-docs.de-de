@@ -99,7 +99,7 @@
           href: lesson-1-2-viewing-tuning-recommendations.md
         - name: Anzeigen von Optimierungsberichten
           href: lesson-1-3-viewing-tuning-reports.md
-    - name: 'Lektion 3: Verwenden des dta-Befehlszeilenprogramms'
+    - name: 'Lektion 3: Verwenden des Befehlszeilenprogramms dta'
       href: lesson-3-using-the-dta-command-prompt-utility.md
       items:
         - name: Starten des Befehlzeilenprogramms dta und Optimieren einer Arbeitsauslastung

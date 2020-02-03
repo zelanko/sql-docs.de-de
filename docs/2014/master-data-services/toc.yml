@@ -76,7 +76,7 @@
 - name: Modelle
   href: models-master-data-services.md
   items:
-    - name: Erstellen eines Modells
+    - name: Modellerstellung
       href: create-a-model-master-data-services.md
     - name: Ändern eines Modellnamens
       href: change-a-model-name-master-data-services.md
@@ -93,7 +93,7 @@
       href: edit-an-entity-master-data-services.md
     - name: Löschen einer Entität
       href: delete-an-entity-master-data-services.md
-- name: Attribute
+- name: Attributes
   href: attributes-master-data-services.md
   items:
     - name: Erstellen eines Textattributs
@@ -146,7 +146,7 @@
       href: staging-process-errors-master-data-services.md
     - name: Importstatus
       href: import-statuses-master-data-services.md
-- name: Member
+- name: Members
   href: members-master-data-services.md
   items:
     - name: Erstellen eines Blattelements
@@ -194,7 +194,7 @@
       href: business-rule-conditions-master-data-services.md
     - name: Geschäftsregelaktionen
       href: business-rule-actions-master-data-services.md
-- name: Änderungsnachverfolgung
+- name: Change Tracking
   href: change-tracking-master-data-services.md
   items:
     - name: Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe
@@ -279,7 +279,7 @@
       href: copy-a-version-master-data-services.md
     - name: Löschen einer Version
       href: delete-a-version-master-data-services.md
-- name: Überprüfung
+- name: Überprüfen
   href: validation-master-data-services.md
   items:
     - name: Überprüfen einer Version anhand von Geschäftsregeln
@@ -308,7 +308,7 @@
       href: deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md
     - name: Bearbeiten eines Modellbereitstellungspakets
       href: edit-a-model-deployment-package.md
-- name: Security
+- name: Sicherheit
   href: security-master-data-services.md
 - name: Administratoren
   href: administrators-master-data-services.md
@@ -320,7 +320,7 @@
 - name: Benutzer und Gruppen
   href: users-and-groups-master-data-services.md
   items:
-    - name: Hinzufügen eines Benutzers
+    - name: Benutzer hinzufügen
       href: add-a-user-master-data-services.md
     - name: Hinzufügen einer Gruppe
       href: add-a-group-master-data-services.md

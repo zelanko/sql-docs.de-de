@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658834"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Von Java und SQL Server unterstützte Datentypen
@@ -23,32 +23,32 @@ In diesem Artikel werden SQL Server-Datentypen für Datenstrukturen und Paramete
 
 Die folgenden SQL- und Java-Datentypen werden derzeit für Eingabe-/Ausgabedatasets und Eingabe-/Ausgabeparameter unterstützt.
 
-| SQL-Datentyp        | Java-Datentyp | Anmerkung | |
+| SQL-Datentyp        | Java-Datentyp | Comment | |
 | ------------- |-------------|-|-|
 | bit      | boolean | | |
 | Tinyint      | short      | | |
 | Smallint | short      | | |
-| int | INT      | | |
-| Real | FLOAT      | | |
+| Int | INT      | | |
+| Real | float      | | |
 | Bigint | long      | | |
-| FLOAT | double      | | |
-| nchar(n) | Zeichenfolge      | | |
-| nvarchar(n) | Zeichenfolge      | | |
+| float | double      | | |
+| nchar(n) | String      | | |
+| nvarchar(n) | String      | | |
 | binary(n) | byte[]      | | |
 | varbinary(n) | byte[]      | | |
-| nvarchar(max) | Zeichenfolge      | | |
+| nvarchar(max) | String      | | |
 | varbinary(max) | byte[]      | | |
-| UNIQUEIDENTIFIER | Zeichenfolge | | |
-| char(n) | Zeichenfolge | Nur UTF8-Zeichenfolgen werden unterstützt. | |
-| varchar(n) | Zeichenfolge | Nur UTF8-Zeichenfolgen werden unterstützt. | |
-| varchar(max) | Zeichenfolge | Nur UTF8-Zeichenfolgen werden unterstützt. | |
+| UNIQUEIDENTIFIER | String | | |
+| char(n) | String | Nur UTF8-Zeichenfolgen werden unterstützt. | |
+| varchar(n) | String | Nur UTF8-Zeichenfolgen werden unterstützt. | |
+| varchar(max) | String | Nur UTF8-Zeichenfolgen werden unterstützt. | |
 | date | java.sql.date  | | |
 | NUMERIC | java.math.BigDecimal  | | |
 | Decimal | java.math.BigDecimal  | | |
 | money | java.math.BigDecimal  | | |
 | SMALLMONEY | java.math.BigDecimal  | | |
 | smalldatetime | java.sql.timestamp  | | |
-| DATETIME | java.sql.timestamp  | | |
+| datetime | java.sql.timestamp  | | |
 | datetime2 | java.sql.timestamp  | | |
 
 

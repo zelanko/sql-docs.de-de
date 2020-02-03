@@ -29,7 +29,7 @@
       href: ../analytics-platform-system/hardware-configurations.md
     - name: Verarbeitung und Speicherkapazität
       href: ../analytics-platform-system/processing-and-storage-capacity-planning.md
-    - name: Hohe Verfügbarkeit
+    - name: Hochverfügbarkeit
       href: ../analytics-platform-system/high-availability.md
 - name: Sicherung und Laden von Hardware
   items:
@@ -53,7 +53,7 @@
       href: ../analytics-platform-system/monitoring-active-queries.md
     - name: Entfernen gemeinsamer Teilausdrücke
       href: ../analytics-platform-system/common-sub-expression-elimination.md
-- name: Load
+- name: Laden
   items:
     - name: Übersicht
       href: ../analytics-platform-system/load-overview.md
@@ -82,7 +82,7 @@
     - name: Parallel Data Warehouse-Berechtigungen
       href: ../analytics-platform-system/pdw-permissions.md
       items:
-        - name: Berechtigungen erteilen
+        - name: Erteilen von Berechtigungen
           href: ../analytics-platform-system/grant-permissions.md
     - name: Fehlermeldungen
       href: ../analytics-platform-system/error-messages.md
@@ -104,7 +104,7 @@
           href: ../analytics-platform-system/reserved-database-names.md
         - name: tempdb-Datenbank
           href: ../analytics-platform-system/tempdb-database.md
-        - name: master-Datenbank
+        - name: Masterdatenbank
           href: ../analytics-platform-system/master-database.md
     - name: Benutzersitzungen
       href: ../analytics-platform-system/user-sessions.md
@@ -113,7 +113,7 @@
       items:
         - name: Tasks zum Verwalten von Arbeitsauslastungen
           href: ../analytics-platform-system/workload-management-tasks.md
-- name: Security
+- name: Sicherheit
   items:
     - name: Transparente Datenverschlüsselung
       href: ../analytics-platform-system/transparent-data-encryption.md

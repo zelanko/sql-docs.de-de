@@ -1,6 +1,6 @@
 ---
-title: Toolfenster in SQL Server Management Studio | Microsoft-Dokumentation
-ms.custom: ''
+title: Toolfenster in SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbb2464faa8620b7642dbd01affe3f9de318a8eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266710"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243891"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Toolfenster in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "68266710"
 |**Tool**|**Zweck**|  
 |[Objekt-Explorers](../ssms/object/object-explorer.md)|Durchsucht Server, erstellt und sucht Objekte, verwaltet Datenquellen, und zeigt Protokolle an. Auf dieses Tool kann über das Menü **Ansicht** zugegriffen werden.|  
 |[Projektmappen-Explorer](../ssms/solution/solution-explorer.md)|Speichert und organisiert Skripts und zugehörige Verbindungsinformationen in Projekten, die als [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Skripts bezeichnet werden. Sie können mehrere [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Skripts als Projektmappen speichern und mit der Quellcodeverwaltung Skripts verwalten, die sich im Laufe der Zeit ändern. Auf dieses Tool kann über das Menü **Ansicht** zugegriffen werden.|  
-|[Vorlagen-Explorer](../ssms/template/template-explorer.md)|Erstellt Abfragen auf Grundlage von vorhandenen Vorlagen. Sie können auch eigene benutzerdefinierte Abfragen erstellen oder die vorhandenen Vorlagen so ändern, dass sie für Ihre Szenarien geeignet sind. Auf dieses Tool kann über das Menü **Ansicht** zugegriffen werden.|  
+|[Template Explorer](../ssms/template/template-explorer.md)|Erstellt Abfragen auf Grundlage von vorhandenen Vorlagen. Sie können auch eigene benutzerdefinierte Abfragen erstellen oder die vorhandenen Vorlagen so ändern, dass sie für Ihre Szenarien geeignet sind. Auf dieses Tool kann über das Menü **Ansicht** zugegriffen werden.|  
 |[Dynamische Hilfe](../ssms/user-assistance-in-sql-server-management-studio.md)|Zeigt eine Liste der zugehörigen Hilfethemen an, wenn Sie auf eine Komponente klicken oder Code eingeben.|  
   
-Die Tools in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] arbeiten zusammen. So können Sie z. B. Folgendes tun:  
+Die Tools in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] arbeiten zusammen. Beispielsweise können Sie folgende Aktionen ausführen:  
   
 -   Registrieren eines Servers mit dem Objekt-Explorer.  
   

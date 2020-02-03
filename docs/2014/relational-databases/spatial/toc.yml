@@ -3,7 +3,7 @@
   items:
     - name: Übersicht über räumliche Datentypen
       href: spatial-data-types-overview.md
-    - name: Punkt
+    - name: Point
       href: point.md
     - name: LineString
       href: linestring.md

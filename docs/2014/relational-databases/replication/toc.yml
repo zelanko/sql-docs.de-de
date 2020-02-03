@@ -11,7 +11,7 @@
       href: administration/best-practices-for-replication-administration.md
     - name: Häufig gestellte Fragen
       href: administration/frequently-asked-questions-for-replication-administrators.md
-- name: Anleitungen
+- name: Gewusst-wie-Anleitungen
   items:
     - name: Verwalten
       items:
@@ -54,13 +54,13 @@
               href: agents/start-and-stop-a-replication-agent-sql-server-management-studio.md
             - name: Befehlszeilenparameter
               href: agents/view-and-modify-replication-agent-command-prompt-parameters.md
-    - name: Monitor
+    - name: Überwachen
       href: monitoring-replication.md
       items:
         - name: Replikationsmonitor
           href: monitor/overview-of-the-replication-monitor-interface.md
           items:
-            - name: Berechtigungen verwalten
+            - name: Verwalten von Berechtigungen
               href: monitor/allow-non-administrators-to-use-replication-monitor.md
             - name: Hinzufügen oder Entfernen von Verlegern
               href: monitor/add-and-remove-publishers-from-replication-monitor.md
@@ -128,7 +128,7 @@
               href: publish/set-the-expiration-period-for-subscriptions.md
             - name: Angeben von Schemaoptionen
               href: publish/specify-schema-options.md
-            - name: Schemaänderungen replizieren
+            - name: Replizieren von Schemaänderungen
               href: publish/replicate-schema-changes.md
             - name: Verwalten von Identitätsspalten
               href: publish/manage-identity-columns.md
@@ -211,13 +211,13 @@
               href: merge/parameterized-filters-optimize-for-precomputed-partitions.md
         - name: Transaktionsreplikation
           href: administration/enhance-transactional-replication-performance.md
-    - name: Security
+    - name: Sicherheit
       items:
         - name: Verteiler
           href: security/secure-the-distributor.md
-        - name: Verleger
+        - name: Herausgeber
           href: security/secure-the-publisher.md
-        - name: Abonnent
+        - name: Subscriber
           href: security/secure-the-subscriber.md
         - name: Momentaufnahmeordner
           href: security/secure-the-snapshot-folder.md
@@ -399,7 +399,7 @@
           href: concepts/replication-system-stored-procedures-concepts.md
     - name: Veröffentlichen von Objekten
       href: publish/replication-publishing-model-overview.md
-    - name: Security
+    - name: Sicherheit
       items:
         - name: Minderung von Bedrohungen und Sicherheitsrisiken
           href: security/threat-and-vulnerability-mitigation-replication.md
@@ -471,7 +471,7 @@
               href: publication-properties-subscription-options.md
         - name: Artikeleigenschaften
           href: article-properties-article.md
-        - name: Abonnementeigenschaften
+        - name: Eigenschaften Abonnement
           href: subscription-properties-subscriber.md
     - name: Toolreferenz
       items:
@@ -540,7 +540,7 @@
               href: snapshot-folder.md
             - name: Verteilungsdatenbank
               href: distribution-database.md
-            - name: Verleger
+            - name: Herausgeber
               href: publishers.md
             - name: Verteilerkennwort
               href: distributor-password.md

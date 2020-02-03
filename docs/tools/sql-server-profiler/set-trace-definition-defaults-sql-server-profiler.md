@@ -1,27 +1,28 @@
 ---
-title: Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen (SQL Server Profiler) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], defaults
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3e8f627e7aeac05d418345ded1a069e63e8d116
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 76144d1e3b115bca73683b198abb328ac72fae8a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104161"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307412"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In der Standardeinstellung wird für Ablaufverfolgungsdefinitionen die Standardvorlage für die Ablaufverfolgung für jeden Anbieter oder Server verwendet. Sie können Standardvorlagen für die Ablaufverfolgung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]festlegen.  
+
+In der Standardeinstellung wird für Ablaufverfolgungsdefinitionen die Standardvorlage für die Ablaufverfolgung für jeden Anbieter oder Server verwendet. Sie können Standardvorlagen für die Ablaufverfolgung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]festlegen.  
   
 ### <a name="to-set-trace-definition-defaults"></a>So legen Sie die Standardeinstellungen für Ablaufverfolgungsdefinitionen fest  
   

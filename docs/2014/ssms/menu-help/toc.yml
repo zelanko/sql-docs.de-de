@@ -23,7 +23,7 @@
   items:
     - name: Optionen (Seite „Umgebung“/„Allgemein“)
       href: options-environment-general-page.md
-    - name: 'Optionen (Umgebung: Seite zu Schriftarten und Farben)'
+    - name: 'Optionen (Umgebung: Seite „Schriftarten und Farben“)'
       href: options-environment-fonts-and-colors-page.md
     - name: Optionen (Seite Umgebung/Tastatur)
       href: options-environment-keyboard-page.md

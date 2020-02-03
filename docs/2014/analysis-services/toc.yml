@@ -161,7 +161,7 @@
       href: instances/monitor-analysis-services-with-sql-server-extended-events.md
     - name: Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services
       href: instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
-- name: Performance Counters
+- name: Leistungsindikatoren
   href: instances/performance-counters-ssas.md
 - name: Löschen des Zwischenspeichers von Analysis Services
   href: instances/clear-the-analysis-services-caches.md
@@ -350,9 +350,9 @@
           href: lesson-2-add-data.md
         - name: 'Lektion 3: Umbenennen von Spalten'
           href: rename-columns.md
-        - name: 'Lektion 4: Als Datumstabelle markieren'
+        - name: 'Lektion 4: Markieren als Datumstabelle'
           href: lesson-3-mark-as-date-table.md
-        - name: 'Lektion 5: Beziehungen erstellen'
+        - name: 'Lektion 5: Erstellen von Beziehungen'
           href: lesson-4-create-relationships.md
         - name: 'Lektion 6: Erstellen von berechneten Spalten'
           href: lesson-5-create-calculated-columns.md
@@ -364,13 +364,13 @@
           href: lesson-8-create-perspectives.md
         - name: 'Lektion 10: Erstellen von Hierarchien'
           href: lesson-9-create-hierarchies.md
-        - name: "Lektion\_11: Erstellen von Partitionen"
+        - name: 'Lektion 11: Erstellen von Partitionen'
           href: lesson-10-create-partitions.md
-        - name: "Lektion\_12: Erstellen von Rollen"
+        - name: 'Lektion 12: Erstellen von Rollen'
           href: lesson-11-create-roles.md
-        - name: "Lektion\_13: In Excel analysieren"
+        - name: 'Lektion 13: Analysieren in Excel'
           href: lesson-12-analyze-in-excel.md
-        - name: "Lektion\_14: Bereitstellen"
+        - name: 'Lektion 14: Bereitstellen'
           href: lesson-13-deploy.md
         - name: Ergänzende Lektionen
           href: ../tutorials/supplemental-lessons.md
@@ -412,7 +412,7 @@
               href: lesson-2-5-deploying-an-analysis-services-project.md
             - name: Durchsuchen des Cubes
               href: lesson-2-6-browsing-the-cube.md
-        - name: 'Lektion 3: Ändern von Measures, Attributen und Hierarchien'
+        - name: 'Lektion 3: Ändern von Maßen, Attributen und Hierarchien'
           href: lesson-3-modifying-measures-attributes-and-hierarchies.md
           items:
             - name: Ändern von Measures

@@ -59,7 +59,7 @@
           href: upgrading-mirrored-instances.md
         - name: Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken
           href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
-    - name: Security
+    - name: Sicherheit
       items:
         - name: Einrichten von Anmeldekonten für die Datenbankspiegelung oder AlwaysOn-Verfügbarkeitsgruppen
           href: set-up-login-accounts-database-mirroring-always-on-availability.md
@@ -103,7 +103,7 @@
           href: troubleshoot-database-mirroring-configuration-sql-server.md
         - name: Installieren eines Service Packs auf einem System mit minimaler Downtime der gespiegelten Datenbanken
           href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
-    - name: Security
+    - name: Sicherheit
       items:
         - name: Endpunkte
           href: the-database-mirroring-endpoint-sql-server.md
