@@ -1,23 +1,24 @@
 ---
-title: 'Gewusst wie: Erstellen von neuen Datenbankobjekten mit Abfragen | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Erstellen von neuen Datenbankobjekten mithilfe von Abfragen
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 778783c61be2d3b9cfac784d271bce584ef37f68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 38a7165eb1145c6da08902d06a8483b0e26abf5b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897189"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241492"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>Gewusst wie: Erstellen von neuen Datenbankobjekten mithilfe von Abfragen
+# <a name="how-to-create-new-database-objects-using-queries"></a>Gewusst wie: Erstellen von neuen Datenbankobjekten mit Abfragen
+
 Falls Sie es vorziehen, Sichten, gespeicherte Prozeduren, Funktionen, Trigger oder benutzerdefinierte Typen mithilfe von Skripts zu erstellen oder zu bearbeiten, können Sie den Transact\-SQL-Editor verwenden. Der Transact\-SQL-Editor bietet Unterstützung für IntelliSense und andere Sprachen. Weitere Informationen finden Sie unter [Verwenden des Transact-SQL-Editors zum Bearbeiten und Ausführen von Skripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   
 Der Transact\-SQL-Editor wird aufgerufen, wenn Sie eine Datenbankentität in einer verbundenen Datenbank oder einem Projekt über das Kontextmenü **Code anzeigen** öffnen. Er wird auch automatisch geöffnet, wenn Sie das Kontextmenü **Neue Abfrage** im SQL Server-Objekt-Explorer aufrufen und wenn Sie einem Datenbankprojekt ein neues Skriptobjekt hinzufügen. Wenn Sie mit keiner Datenbank verbunden sind, aber eine Abfrage für eine Datenbank ausführen möchten, können Sie auch das Dialogfeld **Neue Abfrageverbindung** verwenden, indem Sie im Menü **SQL** das Menü **Transact-SQL-Editor** auswählen, um eine Verbindung mit einer Datenbank herzustellen und den Transact\-SQL-Editor zu starten.  
@@ -41,7 +42,7 @@ Der Transact\-SQL-Editor wird aufgerufen, wenn Sie eine Datenbankentität in ein
     );  
     ```  
   
-3.  Klicken Sie auf der Transact\-SQL-Editor-Symbolleiste auf die Schaltfläche **Abfrage ausführen**, um diese Abfrage auszuführen.  
+3.  Klicken Sie auf der Transact**SQL-Editor-Symbolleiste auf die Schaltfläche** Abfrage ausführen\-, um diese Abfrage auszuführen.  
   
 4.  Klicken Sie mit der rechten Maustaste auf die Datenbank **Trade** im **SQL Server-Objekt-Explorer**, und klicken Sie auf **Aktualisieren**. Beachten Sie, dass der Datenbank die neue Tabelle **Fruits** hinzugefügt wurde.  
   
@@ -72,7 +73,7 @@ Der Transact\-SQL-Editor wird aufgerufen, wenn Sie eine Datenbankentität in ein
     END  
     ```  
   
-    Diese Funktion gibt alle Zeilen in der Tabelle `Products` zurück, deren `SupplierId` gleich dem angegebenen Parameter ist. Klicken Sie auf der Transact\-SQL-Editor-Symbolleiste auf die Schaltfläche **Abfrage ausführen**, um diese Abfrage auszuführen.  
+    Diese Funktion gibt alle Zeilen in der Tabelle `Products` zurück, deren `SupplierId` gleich dem angegebenen Parameter ist. Klicken Sie auf der Transact**SQL-Editor-Symbolleiste auf die Schaltfläche** Abfrage ausführen\-, um diese Abfrage auszuführen.  
   
 2.  Erweitern Sie im SQL Server-Objekt-Explorer unter dem Knoten **Trade** die Knoten **Programmierung** und **Funktionen**. Sie finden die neue Funktion, die Sie soeben erstellt haben, unter **Tabellenwertfunktionen**.  
   

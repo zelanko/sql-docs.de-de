@@ -1,6 +1,6 @@
 ---
-title: SQL Server-Eigenschaften (Registerkarte „Erweitert“) | Microsoft-Dokumentation
-ms.custom: ''
+title: SQL Server-Eigenschaften (Registerkarte Erweitert)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,18 +11,18 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b64a1c1b9d40061d5319d1e629d0f2215df72e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023970"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306837"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server-Eigenschaften (Registerkarte Erweitert)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Die folgenden Eigenschaften werden standardmäßig auf der Registerkarte **Erweitert** angezeigt. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auch auf dieser Registerkarte angezeigt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Gruppiert**  
  Zeigt an, ob dieser Dienst als Ressource eines gruppierten Servers installiert ist.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68023970"
  Zeigt den Speicherort für Speicherauszüge für Fehler an.  
   
  **Fehlerberichterstellung**  
- Mit der Einstellung **Ja** werden vom Programm Dr. Watson Informationen an [!INCLUDE[msCoName](../../includes/msconame-md.md)] oder den Fehlerberichtsserver weitergeleitet, wenn ein schwerwiegender Fehler auftritt. Weitere Informationen zur Fehlerberichterstellung finden Sie in der Onlinedokumentation unter "Einstellungen für Fehler- und Verwendungsberichte". Klicken Sie zum Ändern dieses Werts im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Objekt-Explorer mit der rechten Maustaste auf Ihren Server, klicken Sie auf **Eigenschaften**, und klicken Sie anschließend auf die Seite **Sonstige Servereinstellungen**. Die Optionen werden im Bereich für die **Informationsberichterstellung** angezeigt.  
+ Mit der Einstellung **Ja**werden vom Programm Dr. Watson Informationen an [!INCLUDE[msCoName](../../includes/msconame-md.md)] oder den Fehlerberichtsserver weitergeleitet, wenn ein schwerwiegender Fehler auftritt. Weitere Informationen zur Fehlerberichterstellung finden Sie in der Onlinedokumentation unter "Einstellungen für Fehler- und Verwendungsberichte". Klicken Sie zum Ändern dieses Werts im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Objekt-Explorer mit der rechten Maustaste auf Ihren Server, klicken Sie auf **Eigenschaften**, und klicken Sie anschließend auf die Seite **Sonstige Servereinstellungen** . Die Optionen werden im Bereich für die **Informationsberichterstellung** angezeigt.  
   
  **Dateiversion**  
  Zeigt die Version der ausführbaren Datei von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  

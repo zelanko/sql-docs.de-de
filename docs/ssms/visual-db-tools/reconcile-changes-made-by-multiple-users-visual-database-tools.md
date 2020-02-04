@@ -1,10 +1,9 @@
 ---
-title: Abstimmen der Änderungen von mehreren Benutzern (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
+title: Abstimmen von Änderungen, die von mehreren Benutzern vorgenommen wurden
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b4eee47ea3e15b869909e66818bddf655f63ea3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b85d852b4eee542632af0afbbf561fec47fac35a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266240"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255280"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Abstimmen der Änderungen von mehreren Benutzern (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ In diesem Dialogfeld finden Sie auch eine Liste der Datenbankobjekte, die durch 
   
 -   Wählen Sie **Ja** aus, um die Tabelle zu speichern und die Datenbank mit allen Änderungen in der Liste zu aktualisieren.  
   
-    Diese Aktion kann sich auch auf Tabellen auswirken, die dieselben Datenbankobjekte nutzen. Angenommen, Sie ändern beispielsweise in der Tabelle`titleauthors` die Spalte `au_id` während ein anderer Benutzer an der Tabelle `authors` arbeitet, die über die Spalte `au_id` mit der Tabelle `titleauthors` verknüpft ist. Wenn Sie Ihre Tabelle speichern, wirkt sich dies auf die Tabelle des anderen Benutzers aus. Ein ähnlicher Fall liegt vor, wenn ein anderer Benutzer in der Tabelle `qty` eine CHECK-Einschränkung für die Spalte `sales` definiert hat. Wenn Sie die Spalte `qty` löschen und die Tabelle `sales` speichern, wirkt sich dies auf die CHECK-Einschränkung des anderen Benutzers aus.  
+    Diese Aktion kann sich auch auf Tabellen auswirken, die dieselben Datenbankobjekte nutzen. Angenommen, Sie ändern beispielsweise in der Tabelle`au_id` die Spalte `titleauthors` während ein anderer Benutzer an der Tabelle `authors` arbeitet, die über die Spalte `titleauthors` mit der Tabelle `au_id` verknüpft ist. Wenn Sie Ihre Tabelle speichern, wirkt sich dies auf die Tabelle des anderen Benutzers aus. Ein ähnlicher Fall liegt vor, wenn ein anderer Benutzer in der Tabelle `qty` eine CHECK-Einschränkung für die Spalte `sales` definiert hat. Wenn Sie die Spalte `qty` löschen und die Tabelle `sales` speichern, wirkt sich dies auf die CHECK-Einschränkung des anderen Benutzers aus.  
   
 -   Wählen Sie **Nein** aus, um den Speichervorgang abzubrechen.  
   

@@ -1,6 +1,6 @@
 ---
-title: TCP/IP-Eigenschaften (Registerkarte IP-Adressen) | Microsoft-Dokumentation
-ms.custom: ''
+title: TCP/IP-Eigenschaften
+ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 927f732d4f04c43b5e2973a82509e4da7970a448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023807"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307564"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP-Eigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "68023807"
 ## <a name="dynamic-ports"></a>Dynamische Ports  
  Wenn eine Instanz beim Starten von SQL Server zur Überwachung von dynamischen Ports konfiguriert ist, wird das Betriebssystem auf einen verfügbaren Port überprüft und ein Endpunkt für diesen Port geöffnet. Eingehende Verbindungen müssen diese Portnummer zum Verbinden angeben. Da sich die Portnummer bei jedem Start von SQL Server ändern kann, stellt SQL Server den SQL Server-Browser-Dienst bereit, um an den Ports zu lauschen und eingehende Verbindungen an den aktuellen Port für diese Instanz zu leiten. Das Verwenden von dynamischen Ports macht das Herstellen von Verbindungen mit SQL Server durch eine Firewall schwierig, da die Portnummer sich bei einem Neustart von SQL Server ändern kann. Dies erfordert Änderungen an den Firewalleinstellungen. Konfigurieren Sie SQL Server zum Verwenden eines statischen Ports, um Verbindungsprobleme durch eine Firewall zu vermeiden.  
   
-## <a name="options"></a>enthalten  
- **Active**  
+## <a name="options"></a>Tastatur  
+ **Aktiv**  
  Gibt an, dass die IP-Adresse auf dem Computer aktiviert ist. Nicht verfügbar für **IPAll**.  
   
- **Enabled**  
+ **Aktiviert**  
  Wenn die Eigenschaft **Auf Alle lauschen** unter **TCP/IP-Eigenschaften** (Registerkarte Protokoll) auf **Nein**festgelegt ist, gibt diese Eigenschaft an, ob SQL Server auf die IP-Adresse lauscht. Wenn die Eigenschaft **Auf Alle Lauschen** unter **TCP/IP-Eigenschaften** (Registerkarte Protokoll) auf **Ja**festgelegt ist, wird die Eigenschaft ignoriert. Nicht verfügbar für **IPAll**.  
   
  **IP-Adresse**  

@@ -9,10 +9,10 @@ ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63316600"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Hinzufügen von Visualisierungen zu mobilen Reporting Services-Berichten
@@ -187,10 +187,10 @@ Wasserfalldiagramme sind in folgenden Fällen eine gute Wahl:
    Monate mit einem Verlust, wie Februar, Juni und Juli, sind rot dargestellt. 
    Monate mit einem Gewinn, wie September, Oktober und November, sind grün dargestellt. 
 
-## <a name="see-also"></a>Siehe auch 
+## <a name="see-also"></a>Weitere Informationen 
 * [Karten in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
-* [Hinzufügen von Navigatoren zu mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
-* [Datenblätter zu mobilen Berichten hinzufügen](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
-* [Messgeräte mobilen Berichten hinzufügen](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
+* [Navigationen in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
+* [Datenraster in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
+* [Messgeräte in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   
 
