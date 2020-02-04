@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531943"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>Verwalten von Big Data-Clustern mit dem Controllerdashboard von SQL Server
@@ -36,7 +36,7 @@ Zusätzlich sind für Big Data-Cluster für SQL Server 2019 folgende Komponenten
     - [Windows Installer](deploy-install-azdata-installer.md)
     - [Linux-Paket-Manager](deploy-install-azdata-linux-package.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [Azure CLI](/cli/azure/install-azure-cli)
+* [Azure-Befehlszeilenschnittstelle](/cli/azure/install-azure-cli)
 
 ## <a name="add-sql-server-big-data-cluster-controller"></a>Hinzufügen des Big Data-Clustercontrollers für SQL Server
 
@@ -78,6 +78,6 @@ Zusätzlich sind für Big Data-Cluster für SQL Server 2019 folgende Komponenten
 
 1. Wird eine fehlerhafte Komponente angezeigt, klicken Sie in der Symbolleiste auf **Problembehandlung**, um Jupyter Book mit einem Notebook zum Diagnostizieren des Problems zu starten.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zum Controller finden Sie in der [Controller-Dokumentation](concept-controller.md).

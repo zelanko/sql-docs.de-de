@@ -11,10 +11,10 @@ ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9c041a300e9d64e5446f43a68f675f2290dd8963
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581648"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Diagrammtypen (Berichts-Generator und SSRS)
@@ -33,18 +33,18 @@ Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Da
   
 |Diagrammtyp|Verhältnisdaten anzeigen|Börsendaten anzeigen|Lineare Daten anzeigen|Mehrwertige Daten anzeigen|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
-|[Flächendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[Datenbalken](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[Säulendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[Liniendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||||  
-|[Polardiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||||  
-|[Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|[Punktdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||  
-|[Formdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||||  
-|[Sparklines](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-|[Kursdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md)||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")|  
+|[Flächendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||  
+|[Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||  
+|[Datenbalken](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||  
+|[Säulendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||  
+|[Liniendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||  
+|[Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||||  
+|[Polardiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||||  
+|[Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")|  
+|[Punktdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||  
+|[Formdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||||  
+|[Sparklines](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")|  
+|[Kursdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md)||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")|  
 
 ## <a name="next-steps"></a>Nächste Schritte
 

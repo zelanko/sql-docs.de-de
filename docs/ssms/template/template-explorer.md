@@ -1,5 +1,5 @@
 ---
-title: Vorlagen-Explorer | Microsoft-Dokumentation
+title: Template Explorer
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -17,14 +17,14 @@ ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 67a1ba1d5f94703004a4a90d380cf7dd7c795a79
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 22864ca365917d295f8111580cb833097fb31c46
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988086"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247191"
 ---
 # <a name="template-explorer"></a>Template Explorer
 
@@ -45,7 +45,7 @@ Der [!INCLUDE[ssDE](../../includes/ssde_md.md)] -Abfrage-Editor unterstützt dar
 ## <a name="related-tasks"></a>Related Tasks  
 Erste Schritte mit Vorlagen finden Sie in den folgenden Themen:  
   
-|**Description**|**Thema**|  
+|**Beschreibung**|**Thema**|  
 |-------------------|-------------|  
 |Beschreibt, wie der Code aus einer Vorlage in ein Code-Editorfenster integriert wird.|[Öffnen einer Vorlage](../../ssms/template/open-a-template.md)|  
 |Beschreibt, wie Vorlagenparameterwerte nach dem Öffnen einer Vorlage in einem Code-Editor ersetzt werden.|[Vorlagenparameter ersetzen](../../ssms/template/replace-template-parameters.md)|  

@@ -1,6 +1,6 @@
 ---
-title: Detailbereich des Objekt-Explorers | Microsoft-Dokumentation
-ms.custom: ''
+title: Detailbereich des Objekt-Explorers
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51309850e4e36083dbbf5fa228746dac18968ef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fea000eb9b428c58fa01afdd9724b7b4418789cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264079"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257155"
 ---
 # <a name="object-explorer-details-pane"></a>Detailbereich des Objekt-Explorers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,15 +39,15 @@ Mithilfe von Details zum Objekt-Explorer können Sie in Ihrer [!INCLUDE[ssNoVers
   
 Details zum Objekt-Explorer verfügt über eine Symbolleiste, die die in der folgenden Tabelle beschriebenen Symbole enthält. Die Symbole sind nur verfügbar, wenn die entsprechenden Aktionen anwendbar sind.  
   
-|Symbol|Aktion|  
+|Symbol|Action|  
 |--------|----------|  
 |**Zurück**|Wechselt zu den vorherigen in Details zum Objekt-Explorer angezeigten Elementen. Wiederholt eine Suche, wenn die vorherige Anzeige das Ergebnis eines Suchvorgangs ist.|  
 |**Vorwärts**|Wechselt zum nächsten Bildschirm, nachdem eine **Zurück** -Aktion ausgewählt wurde.|  
-|**Nach oben**|Wechselt zum übergeordneten Objekt oder Ordner.|  
-|**Synchronisieren**|Legt den Fokus von Objekt-Explorer auf das in Details zum Objekt-Explorer ausgewählte Objekt fest.|  
+|**Up**|Wechselt zum übergeordneten Objekt oder Ordner.|  
+|**Synchronize**|Legt den Fokus von Objekt-Explorer auf das in Details zum Objekt-Explorer ausgewählte Objekt fest.|  
 |**Filter**|Zeigt, soweit verfügbar, eine konfigurierbare Teilmenge von Objekten an.|  
 |**Aktualisieren**|Aktualisiert die Anzeige in Details zum Objekt-Explorer.|  
-|**Suchen**|Stellt einen Bereich bereit, um einen Suchbegriff für bestimmte Datenbankobjekte einzugeben.|  
+|**Suchen,**|Stellt einen Bereich bereit, um einen Suchbegriff für bestimmte Datenbankobjekte einzugeben.|  
   
 ### <a name="column-header-selections"></a>Spaltenheaderauswahl  
 Details zum Objekt-Explorer verfügt über auswählbare Spalten. Sie können in jedem Spaltenheader mit der rechten Maustaste klicken und die Elemente aktivieren, die Sie anzeigen möchten. Ihre Auswahl wird für alle Objekte, durch die Sie navigieren, beibehalten. Die Auswahl wird für jeden Benutzer individuell beibehalten, wenn [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]beendet und neu gestartet wird.  
@@ -88,7 +88,7 @@ Details zum Objekt-Explorer unterstützt die Mehrfachauswahl von Objekten. Wenn 
 ## <a name="sql-server-object-search"></a>SQL Server-Objektsuche  
 Platzhalter  
   
--   Standardmäßige Platzhalterzeichen werden unterstützt. Beispielsweise gibt eine Suche nach **dm_os%counters** die beiden Ergebnisse „dm_os_memory_cache_counters“ und „dm_os_performance_counters“ zurück. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen von Text mit Platzhaltern](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Standardmäßige Platzhalterzeichen werden unterstützt. Beispielsweise gibt eine Suche nach **dm_os%counters** die beiden Ergebnisse „dm_os_memory_cache_counters“ und „dm_os_performance_counters“ zurück. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen mit Platzhaltern](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Suchbereich  
   

@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707436"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neuerungen in SQL Server-Machine Learning Services
@@ -59,7 +59,7 @@ Zu den neuen Funktionen für R zählen die [**Paketverwaltung**](r/install-addit
 
 ### <a name="r-libraries"></a>R-Bibliotheken
 
-| Paket | und Beschreibung |
+| Paket | BESCHREIBUNG |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | In diesem Release ist MicrosoftML in einer Standard-R-Installation integriert, wodurch der in den vorherigen SQL Server 2016 R Services erforderliche Upgradeschritt entfällt. MicrosoftML bietet modernste maschinelle Lernalgorithmen und Datentransformationen, die skaliert oder in Remotecomputekontexten ausgeführt werden können. Zu den Algorithmen gehören anpassbare Deep Neural Networks, Schnellentscheidungsstrukturen und -entscheidungswälder, lineare Regression und logistische Regression.  |
 
@@ -75,7 +75,7 @@ Sie können die T-SQL-Funktion [PREDICT](../t-sql/queries/predict-transact-sql.m
 
 ### <a name="python-libraries"></a>Python-Bibliotheken
 
-| Paket | und Beschreibung |
+| Paket | BESCHREIBUNG |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| Dies ist die Python-Entsprechung zu RevoScaleR. Sie können Python-Modelle für lineare und logistische Regressionen, Entscheidungsstrukturen, verstärkte Strukturen und zufällige Gesamtstrukturen erstellen, die alle parallelisierbar sind und in Remotecomputekontexten ausgeführt werden können. Dieses Paket unterstützt die Verwendung mehrerer Datenquellen und Remotecomputekontexte. Der Datenanalyst oder -entwickler kann Python-Code auf einer SQL-Server-Remoteinstanz ausführen, um Daten zu untersuchen oder Modelle zu erstellen, ohne Daten zu verschieben. |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Dies ist die Python-Entsprechung zum MicrosoftML R-Paket. |

@@ -1,24 +1,22 @@
 ---
-title: Erstellen eines Transact-SQL-Skripts zum Ausführen einer Ablaufverfolgung (SQL Server Profiler) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/01/2017
+title: Erstellen eines Transact-SQL-Skripts zum Ausführen einer Ablaufverfolgung
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], running
-- scripts [SQL Server], traces
 ms.assetid: 6b0e2519-998d-40d5-b8ba-5e6a773f91a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1a7554d2d8e23ac62c28a154fa2f84bb8ea32fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 3324980dd331ed8211c2480415e430ee1fcd0821
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930068"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307308"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Erstellen eines Transact-SQL-Skripts zum Ausführen einer Ablaufverfolgung (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +24,7 @@ ms.locfileid: "67930068"
   
 ### <a name="to-create-a-transact-sql-script-to-run-a-trace"></a>So erstellen Sie ein Transact-SQL-Skript für die Ausführung einer Ablaufverfolgung  
   
-1.  Öffnen Sie eine Ablaufverfolgungsdatei oder -tabelle. Weitere Informationen finden Sie unter [Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) oder unter [Öffnen einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md).  
+1.  Öffnen Sie eine Ablaufverfolgungsdatei oder -tabelle. Weitere Informationen finden Sie unter [Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) oder den Optimierungsratgeber von [Öffnen einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)die richtigen Ereignisse und Spalten aufgezeichnet werden.  
   
 2.  Zeigen Sie im Menü**Datei**auf **Exportieren**und auf **Skript für Ablaufverfolgungsdefinition erstellen**, und klicken Sie dann auf die Version, die dem für die Ablaufverfolgung vorgesehenen Server entspricht.  
   

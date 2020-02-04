@@ -10,10 +10,10 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4ced679315a8e682a438f2ab99ca610219768172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049118"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navigieren in SQL Server PowerShell-Pfaden
@@ -30,7 +30,7 @@ Windows PowerShell implementiert Cmdlets, um in der Pfadstruktur zu navigieren, 
   
  Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Anbieter implementiert eine Teilmenge der Anbieter-Cmdlets, die in der folgenden Tabelle aufgeführt sind:  
   
-|Cmdlet|Kanonischer Alias|Cmd-Alias|UNIX-Shell-Alias|und Beschreibung|  
+|Cmdlet|Kanonischer Alias|Cmd-Alias|UNIX-Shell-Alias|BESCHREIBUNG|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Ruft den aktuellen Knoten ab.|  
 |**Set-Location**|**sl**|**cd, chdir**|**cd, chdir**|Ändert den aktuellen Knoten.|  

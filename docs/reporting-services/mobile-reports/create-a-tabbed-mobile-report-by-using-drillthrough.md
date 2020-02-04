@@ -9,10 +9,10 @@ ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63061781"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Erstellen eines mobilen Berichts im Registerkartenformat mithilfe eines Drillthroughs
@@ -33,7 +33,7 @@ In diesem Beispiel werden folgende Schritte ausgeführt:
     * Sales
     * Transport
     * Treibstoff
-    * Speicherung
+    * Storage
     * Verschiedene Ausgaben
 
    ![01-Umsatz-Publisher-für-mobile-Berichte](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
@@ -50,7 +50,7 @@ In diesem Beispiel werden folgende Schritte ausgeführt:
 
     * Transport
     * Treibstoff
-    * Speicherung
+    * Storage
     * Verschiedene Ausgaben
 
 3. Speichern Sie die Berichte auf dem [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Berichtsserver.
@@ -97,7 +97,7 @@ In diesem Abschnitt legen Sie jedes Messgerät (im Gegensatz zu dem Messgerät �
 
    ![06-mobile-Berichte-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen
     
 * [Add parameters to a mobile report (Hinzufügen von Parametern zu einem mobilen Bericht)](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Add drillthrough from a mobile report to other mobile reports or URLs (Drillthrough zu anderen mobilen Berichten oder URLs aus einem mobilen Bericht hinzufügen)](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)

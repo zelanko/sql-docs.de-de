@@ -11,10 +11,10 @@ ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727601"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Loopbackverbindung zu SQL Server über ein Python- oder R-Skript
@@ -56,7 +56,7 @@ Sie können die API **rx_get_sql_loopback_connection_string()** in [revoscalepy]
 
 Dabei werden die folgenden Argumente akzeptiert:
 
-| Argument | und Beschreibung |
+| Argument | BESCHREIBUNG |
 |-|-|
 | name_of_database | Name der Datenbank, mit der die Verbindung hergestellt wird |
 | odbc_driver | Name des ODBC-Treibers |
@@ -104,7 +104,7 @@ Sie können die API **rxGetSqlLoopbackConnectionString()** in [RevoScaleR](../r/
 
 Dabei werden die folgenden Argumente akzeptiert:
 
-| Argument | und Beschreibung |
+| Argument | BESCHREIBUNG |
 |-|-|
 | nameOfDatabase | Name der Datenbank, mit der die Verbindung hergestellt wird |
 | odbcDriver | Name des ODBC-Treibers |

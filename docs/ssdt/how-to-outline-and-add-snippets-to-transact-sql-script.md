@@ -1,24 +1,25 @@
 ---
-title: 'Gewusst wie: Gliedern und Hinzufügen von Ausschnitten zu Transact-SQL-Skripts | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Gliedern und Hinzufügen von Ausschnitten zu Transact-SQL-Skripts
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035118"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241360"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Gewusst wie: Gliedern und Hinzufügen von Ausschnitten zu Transact-SQL-Skripts
-SQL Server Data Tools enthält eine Codebibliothek mit Codeausschnitten, die in die Anwendung eingefügt werden können. Jeder Ausschnitt führt einen kompletten Skripttask aus, z. B. das Erstellen einer Funktion, einer Tabelle, eines Triggers, eines Index, einer Ansicht, eines benutzerdefinierten Datentyps usw. Sie können mit wenigen Mausklicks einen Codeausschnitt in Ihren Quellcode einfügen. Diese Ausschnitte erhöhen die Produktivität, da Sie weniger Zeit für die Eingabe benötigen.  
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Vorgehensweise: Gliedern und Hinzufügen von Ausschnitten zu Transact-SQL-Skripts
+
+SQL Server Data Tools enthält eine Codebibliothek mit Codeausschnitten, die in die Anwendung eingefügt werden können. Jeder Ausschnitt führt einen kompletten Skripttask aus, z. B. das Erstellen einer Funktion, einer Tabelle, eines Triggers, eines Index, einer Sicht, eines benutzerdefinierten Datentyps usw. Mit wenigen Mausklicks können Sie einen Ausschnitt in den Quellcode einfügen. Diese Ausschnitte erhöhen die Produktivität, da Sie weniger Zeit für die Eingabe benötigen.  
   
 Wenn Sie nach dem geeigneten Ausschnitt suchen müssen, können Sie die Ausschnittauswahl verwenden, in der kategorisierte Listen von Ausschnitten zur Auswahl stehen. Sobald Sie dem Code den Ausschnitt hinzugefügt haben, müssen möglicherweise Teile des Codes angepasst werden, indem z. B. Variablennamen durch besser geeignete Namen ersetzt werden oder die tatsächliche Logik einer gespeicherten Prozedur eingefügt wird. Sie werden feststellen, dass zu diesem Zweck im eingefügten Codeausschnitt ein oder mehrere Ersetzungspunkte hervorgehoben werden. Wenn Sie den Mauszeiger auf den Ersetzungspunkt setzen, wird in einer QuickInfo erläutert, wie Sie den Code ändern können.  
   

@@ -3,19 +3,19 @@ title: Installieren neuer R-Pakete
 description: Hier erfahren Sie, wie Sie mit sqlmlutils neue R-Pakete in einer Instanz von SQL Server Machine Learning Services oder SQL Server R Services installieren können.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 827e83a0d1b363d3b91477b9ae85fec156ee4fc9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727498"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479430"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installieren von neuen R-Paketen mit sqlmlutils
 
@@ -146,7 +146,7 @@ Wenn der Clientcomputer, mit dem Sie sich mit SQL Server verbinden, über einen 
 ### <a name="add-the-package-offline"></a>Hinzufügen des Pakets ohne Internetverbindung
 
 Wenn der Clientcomputer keine Internetverbindung hat, können Sie das **glue**-Paket mit **miniCRAN** und einem Computer mit Internetzugang herunterladen. Anschließend kopieren Sie das Paket auf den Clientcomputer, auf dem Sie das Paket offline installieren können.
-Informationen zum Installieren von **miniCRAN** finden Sie unter [Installieren von miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
+Informationen zum Installieren von [miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) finden Sie unter **Installieren von miniCRAN**.
 
 Auf einem Computer mit Internetzugriff:
 

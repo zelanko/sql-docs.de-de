@@ -1,25 +1,26 @@
 ---
-title: SQL Server Data Tools | Microsoft-Dokumentation
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server Data Tools
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.errortask.generichelp
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bd026b76a7ce6e891c4267ad2c11b4e869a4d35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 2049550374569d10631239419cd380c115022ff2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110693"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256344"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
+
 SQL Server Data Tools (SSDT) ermöglichen durch die Einführung eines universellen deklarativen Modells, das sämtliche Phasen der Datenbankentwicklung in Visual Studio umfasst, eine neue Art der Datenbankentwicklung. Mit den Transact\-SQL-Entwurfsfunktionen von SSDT können Sie Datenbanken erstellen, debuggen, verwalten und umgestalten. Dies gilt unabhängig davon, ob Sie mit einem Datenbankprojekt oder direkt mit einer verbundenen lokalen oder nicht lokalen Datenbankinstanz arbeiten.  
   
 Entwickler haben Zugriff auf vertraute Visual Studio-Tools für die Datenbankentwicklung. Die Tools umfassen: Codenavigation, IntelliSense, Sprachunterstützung entsprechend den verfügbaren Funktionen für C# und Visual Basic, plattformspezifische Überprüfung, Debugging und deklaratives Bearbeiten im Transact\-SQL-Editor. SSDT bietet außerdem einen visuellen Tabellen-Designer zum Erstellen und Bearbeiten von Tabellen in Datenbankprojekten oder verbundene Datenbankinstanzen. Während Sie in einer teambasierten Umgebung an den Datenbankprojekten arbeiten, können Sie die Versionskontrolle für alle Dateien nutzen. Sie können das Projekt auf allen unterstützten SQL-Plattformen veröffentlichen, einschließlich SQL-Datenbank und SQL Server. Die Plattformüberprüfungsfunktion von SSDT stellt sicher, dass die Skripts ordnungsgemäß auf dem von Ihnen festgelegten Ziel ausgeführt werden.  
@@ -28,7 +29,7 @@ Der SQL Server-Objekt-Explorer in Visual Studio bietet eine Ansicht Ihrer Datenb
   
 In den folgenden Themen und Abschnitten wird erläutert, wie SSDT zur Datenbankentwicklung beiträgt. Anhand exemplarischer Vorgehensweisen werden Sie durch die Schritte zur Fertigstellung des Datenbankprojekts geführt. Diese im Stil eines Lernprogramms beschriebenen und nacheinander ausgeführten Aufgaben sind im Kontext von Northwind Traders angesiedelt, einer fiktiven, weltweit tätigen Import- und Exportfirma für Lebensmittel und Feinkost.  
   
-|Themen/Abschnitt|und Beschreibung|  
+|Themen/Abschnitt|BESCHREIBUNG|  
 |-------------------|---------------|  
 |[Projektorientierte Offlinedatenbankentwicklung](../ssdt/project-oriented-offline-database-development.md)|In den Themen dieses Abschnitts werden die SQL Server Data Tools-Funktionen zum Erstellen, Debuggen und Veröffentlichen von Datenbankprojekten beschrieben.|  
 |[Projektorientierte Datenbankentwicklung mit Befehlszeilentools](../ssdt/project-oriented-database-development-using-command-line-tools.md)|In den Themen dieses Abschnitts werden die Befehlszeilentools beschrieben, die eine Reihe von Szenarien für die projektorientierte Datenbankentwicklung ermöglichen.|  

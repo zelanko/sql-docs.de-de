@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844609"
 ---
-# <a name="manage-and-troubleshoot-stretch-database"></a>Verwalten und Problembehandlung von Stretch Database
+# <a name="manage-and-troubleshoot-stretch-database"></a>Verwalten von Stretch Database und Behandeln von Problemen
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
@@ -42,10 +42,10 @@ GO
 ## <a name="manage-data-migration"></a>Verwalten der Datenmigration  
   
 ### <a name="check-the-filter-function-applied-to-a-table"></a>Überprüfen der auf eine Tabelle angewendeten Filterfunktion  
- Öffnen Sie die Katalogsicht **sys.remote_data_archive_tables** , und überprüfen Sie den Wert der **filter_predicate** -Spalte, um die Funktion zu identifizieren, die von Stretch Database verwendet wird, um die zu migrierenden Zeilen auszuwählen. Falls der Wert NULL ist, ist die gesamte Tabelle für die Migration geeignet. Weitere Informationen finden Sie unter [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) und [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
+ Öffnen Sie die Katalogsicht **sys.remote_data_archive_tables** , und überprüfen Sie den Wert der **filter_predicate** -Spalte, um die Funktion zu identifizieren, die von Stretch Database verwendet wird, um die zu migrierenden Zeilen auszuwählen. Wenn der Wert null ist, ist die gesamte Tabelle für eine Migration berechtigt. Weitere Informationen finden Sie unter [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) und [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
 ###  <a name="Migration"></a> Überprüfen des Status der Datenmigration  
- Wählen Sie, zum Überwachen der Datenmigration in der Stretch Database-Überwachung **Aufgaben | Stretch | Überwachen** für eine Datenbank in SQL Server Management Studio aus. Weitere Informationen finden Sie unter [Überwachung und Problembehandlung bei der Datenmigration &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
+ Wählen Sie **Aufgaben | Stretch | Überwachung** für eine Datenbank in SQL Server Management Studio, um die Datenmigration im Stretch Database-Monitor zu überwachen. Weitere Informationen finden Sie unter [Überwachung und Problembehandlung bei der Datenmigration &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
  Oder öffnen Sie die dynamische Verwaltungssicht **sys.dm_db_rda_migration_status** , um anzuzeigen, wie viele Batches und Datenzeilen migriert wurden.  
   
@@ -72,7 +72,7 @@ Wenn Sie bereits zu Azure migrierte Daten löschen möchten, befolgen Sie die in
 ## <a name="manage-table-schema"></a>Verwalten von Tabellenschemas
 
 ### <a name="dont-change-the-schema-of-the-remote-table"></a>Verändern Sie das Schema der Remotetabelle nicht  
- Ändern Sie das Schema einer Remote-Azure-Tabelle nicht, wenn diese mit einer SQL Server-Tabelle verknüpft ist, die für Stretch Database konfiguriert ist. Ändern Sie insbesondere nicht den Namen oder den Datentyp einer Spalte. Die Stretch Database-Funktion trifft diverse Annahmen über das Schema der Remotetabelle in Bezug auf das Schema der SQL Server-Tabelle. Falls Sie das Remoteschema ändern, funktioniert Stretch Database nicht mehr für die geänderte Tabelle.  
+ Ändern Sie nicht das Schema einer Azure-Remotetabelle, die mit einer SQL Server-Tabelle verknüpft ist, die für Stretch Database konfiguriert wurde. Ändern Sie insbesondere nicht den Namen oder den Datentyp einer Spalte. Für die Stretch Database-Funktion gelten verschiedene Annahmen hinsichtlich des Schemas einer Remotetabelle in Bezug auf das Schema der SQL Server-Tabelle. Wenn Sie das Remoteschema ändern, funktioniert Stretch Database nicht mehr für die geänderte Tabelle.  
 
 ### <a name="reconcile-table-columns"></a>Abstimmen von Tabellenspalten  
 Wenn Sie Spalten aus der Remotetabelle versehentlich gelöscht haben, führen Sie **sp_rda_reconcile_columns** aus, um Spalten zur Remotetabelle hinzuzufügen, die in der Stretch-aktivierten SQL Server-Tabelle, aber nicht in der Remotetabelle vorhanden sind. Weitere Informationen finden Sie unter [sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md).  
@@ -80,7 +80,7 @@ Wenn Sie Spalten aus der Remotetabelle versehentlich gelöscht haben, führen Si
   > [!IMPORTANT]
   > Wenn **sp_rda_reconcile_columns** Spalten neu erstellt, die Sie versehentlich aus der Remotetabelle gelöscht haben, dann werden nicht die zuvor in den gelöschten Spalten enthaltenen Daten wiederhergestellt.
   
-**sp_rda_reconcile_columns** löscht keine Spalten aus der Remotetabelle, die in der Remotetabelle, aber nicht in der Stretch-aktivierten SQL Server-Tabelle vorhanden sind. Wenn Spalten in der Azure-Remotetabelle enthalten sind, die in der Stretch-aktivierten SQL Server-Tabelle nicht mehr vorhanden sind, dann verhindern diese zusätzlichen Spalten nicht, dass Stretch Database ordnungsgemäß arbeitet. Sie können die zusätzlichen Spalten optional manuell entfernen.  
+**sp_rda_reconcile_columns** löscht keine Spalten aus der Remotetabelle, die in der Remotetabelle, aber nicht in der Stretch-aktivierten SQL Server-Tabelle vorhanden sind. Wenn die Azure-Remotetabelle Spalten enthält, die in der Stretch-fähigen SQL Server-Tabelle nicht mehr vorhanden sind, verhindern diese zusätzlichen Spalten nicht die normale Funktionsweise von Stretch Database. Sie können die zusätzlichen Spalten optional manuell entfernen.  
  
 ## <a name="manage-performance-and-costs"></a>Verwalten von Leistung und Kosten  
   
@@ -92,7 +92,7 @@ Wenn Sie Spalten aus der Remotetabelle versehentlich gelöscht haben, führen Si
 -   Möglicherweise haben sich Ihre Netzwerkbedingungen verschlechtert. Wenden Sie sich an Ihren Netzwerkadministrator, um Informationen über aktuelle Probleme oder Ausfälle zu erhalten.  
   
 ### <a name="increase-azure-performance-level-for-resource-intensive-operations-such-as-indexing"></a>Erhöhen der Azure-Leistungsstufe für ressourcenintensive Vorgänge wie z.B. Indizierung  
- Wenn Sie einen Index für eine große Tabelle, die für Stretch Database konfiguriert ist, erstellen, neuerstellen, oder neuorganisieren und Sie während dieses Zeitraums zahlreiche Abfragen für die migrierten Daten in Azure erwarten, dann ziehen Sie in Betracht, die Leistungsstufe der entsprechenden Azure-Remotedatenbank für die Dauer des Vorganges zu erhöhen. Weitere Informationen zu Leistungsstufen und Preisen finden Sie unter [SQL Server Stretch Database – Preise](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
+ Wenn Sie einen Index für eine große Tabelle, die für Stretch Database konfiguriert ist, erstellen, neu erstellen oder neu organisieren, und während des Vorgangs umfangreiche Abfragen der migrierten Daten in Azure erwarten, sollten Sie die Steigerung der Leistung der entsprechenden Azure-Remotedatenbank für die Dauer des Vorgangs in Betracht ziehen. Weitere Informationen zu Leistungsstufen und Preisen finden Sie unter [SQL Server Stretch Database – Preise](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
   
 ### <a name="you-cant-pause-the-sql-server-stretch-database-service-on-azure"></a>Sie können den SQL Server Stretch Database-Dienst in Azure nicht anhalten.  
  Stellen Sie sicher, dass Sie die entsprechenden Leistungs- und Preisstufen auswählen. Wenn Sie die Leistungsstufe für einen ressourcenintensiver Vorgang vorübergehend erhöhen, stellen Sie die vorherige Stufe nach Abschluss des Vorgangs wieder her. Weitere Informationen zu Leistungsstufen und Preisen finden Sie unter [SQL Server Stretch Database – Preise](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
@@ -103,13 +103,13 @@ Wenn Sie Spalten aus der Remotetabelle versehentlich gelöscht haben, führen Si
  ### <a name="change-the-scope-of-queries-for-all-queries-by-all-users"></a>Ändern des Bereichs von Abfragen für alle Abfragen von allen Benutzern  
  Um den Bereich aller Abfragen von allen Benutzern zu ändern, führen Sie die gespeicherte Prozedur **sys.sp_rda_set_query_mode**aus. Sie können den Bereich eingrenzen, sodass nur lokale Daten abgefragt werden, und Sie können alle Abfragen deaktivieren oder die Standardeinstellung wiederherstellen. Weitere Informationen finden Sie unter [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md).  
    
- ### <a name="queryHints"></a>Ändern des Bereichs von Abfragen für eine einzelne Abfrage von einem Administrator  
+ ### <a name="queryHints"></a>Ändern des Abfragebereichs für eine einzelne Abfrage durch einen Administrator  
  Zum Ändern des Bereichs einer einzelnen Abfrage von einem Mitglied der Rolle „db_owner“ fügen Sie den Abfragehinweis ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =* value)** zur SELECT-Anweisung hinzu. Der REMOTE_DATA_ARCHIVE_OVERRIDE-Abfragehinweis kann die folgenden Werte enthalten.  
  -   **LOCAL_ONLY**. Es werden nur lokale Daten abgefragt.  
    
  -   **REMOTE_ONLY**. Es werden nur Remotedaten abgefragt.  
    
- -   **STAGE_ONLY**. Es werden nur die Daten in der Tabelle abgefragt, für die Stretch Database für die Migration geeignete Zeilen bereitstellt und migrierte Zeilen für den angegebenen Zeitraum nach der Migration beibehält. Dieser Abfragehinweis ist die einzige Möglichkeit zum Abfragen der Stagingtabelle.  
+ -   **STAGE_ONLY**. Es werden nur die Daten in der Tabelle abgefragt, in der Stretch Database für die Migration berechtigte Zeilen bereitstellt und migrierte Zeilen für den angegebenen Zeitraum nach der Migration beibehält. Dieser Abfragehinweis ist die einzige Möglichkeit zum Abfragen der Stagingtabelle.  
   
 Die folgende Abfrage gibt z. B. nur lokale Ergebnisse zurück.  
   
@@ -120,13 +120,13 @@ SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = 
 GO
 ```  
    
- ## <a name="adminHints"></a>Durchführen administrativer Aktualisierungs- und Löschvorgänge  
- Standardmäßig können Sie Zeilen, die für die Migration geeignet sind oder bereits migriert wurden, in einer Stretch-aktivierten Tabelle nicht aktualisieren oder löschen. Wenn Sie ein Problem beheben müssen, kann ein Mitglied der Rolle „db_owner“ einen UPDATE- oder DELETE-Vorgang durch Hinzufügen des Abfragehinweises ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =* value)** zur Anweisung ausführen. Der REMOTE_DATA_ARCHIVE_OVERRIDE-Abfragehinweis kann die folgenden Werte enthalten.  
+ ## <a name="adminHints"></a>Ausführen administrativer Updates und Löschvorgänge  
+ Die Befehle UPDATE oder DELETE können standardmäßig nicht für zur Migration berechtigte Zeilen oder für bereits migrierte Zeilen in einer Stretch-fähigen Tabelle ausgeführt werden. Wenn Sie ein Problem beheben müssen, kann ein Mitglied der Rolle „db_owner“ einen UPDATE- oder DELETE-Vorgang durch Hinzufügen des Abfragehinweises ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =* value)** zur Anweisung ausführen. Der REMOTE_DATA_ARCHIVE_OVERRIDE-Abfragehinweis kann die folgenden Werte enthalten.  
  -   **LOCAL_ONLY**. Aktualisieren oder löschen Sie nur lokale Daten.  
    
  -   **REMOTE_ONLY**. Aktualisieren oder löschen Sie nur Remotedaten.  
    
- -   **STAGE_ONLY**. Aktualisieren oder löschen Sie nur die Daten in der Tabelle, für die Stretch Database für die Migration geeignete Zeilen bereitstellt und migrierte Zeilen für den angegebenen Zeitraum nach der Migration beibehält.  
+ -   **STAGE_ONLY**. Es werden nur die Daten in der Tabelle aktualisiert oder gelöscht, in der Stretch Database für die Migration berechtigte Zeilen bereitstellt und migrierte Zeilen für den angegebenen Zeitraum nach der Migration beibehält.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachung und Problembehandlung bei der Datenmigration &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)   

@@ -22,10 +22,10 @@ ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 96f1fd480d0260c24bf534dec80eef2e4ff6fda2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572333"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
@@ -145,7 +145,7 @@ ms.locfileid: "65572333"
   
 -   Zeigt Linien- oder Polygonenoptionen auf jeder Ebene an. Dies gilt, wenn der Bericht verarbeitet wird, ob die Kartenelemente dynamisch abgerufen werden, oder ob sie die Kartenelemente in die Berichtsdefinition einbetten. Sie geben z. B. auf einer Ebene eine Füllfarbe für alle Elemente an.  
   
--   Regeln Sie können Regeln festlegen, um Farbe, Größe, Breite oder Markertyp für alle Kartenelemente auf einer Ebene zu steuern. Die Regeln, die Sie festlegen können, hängen vom Typ des Kartenelements ab.  
+-   Regeln – Sie können Regeln festlegen, um Farbe, Größe, Breite oder Markertyp für alle Kartenelemente auf einer Ebene zu steuern. Die Regeln, die Sie festlegen können, hängen vom Typ des Kartenelements ab.  
   
     -   Farbregeln Wird auf Marken für Punkte, Linien, Polygone und Marker für Polygonmittelpunkte angewendet.  
   

@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727689"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Erweiterbarkeitsarchitektur in SQL Server-Machine Learning Services 
@@ -46,11 +46,11 @@ Ein externes Skript kann durch Aufrufen einer gespeicherten Prozedur ausgeführt
 
 Die Architektur ist so konzipiert, dass externe Skripts in einem separaten Prozess von SQL Server ausgeführt werden, jedoch mit Komponenten, die intern die Kette von Anforderungen für Daten und Vorgänge auf SQL Server verwalten. Abhängig von der Version von SQL Server enthalten die unterstützten Spracherweiterungen [R](extension-r.md), [Python](extension-python.md) und Sprachen von Drittanbietern wie Java und .NET.
 
-  ***Komponentenarchitektur in Windows:***
+  ***Komponentenarchitektur unter Windows:***
   
   ![Windows-Komponentenarchitektur](../media/generic-architecture-windows.png "Komponentenarchitektur")
   
-  ***Komponentenarchitektur in Linux:***
+  ***Komponentenarchitektur unter Linux:***
 
   ![Linux-Komponentenarchitektur](../media/generic-architecture-linux.png "Komponentenarchitektur")
   
@@ -64,7 +64,7 @@ Unter Linux verwendet SQL einen **launchpadd**-Dienst, um mit einem separaten La
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] ist ein Dienst, der die Ausführung externer Skripts verwaltet und unterstützt, ganz ähnlich wie die Volltextindizierung und der Abfragedienst einen separaten Host für die Verarbeitung von Volltextabfragen starten. Der Launchpaddienst startet nur vertrauenswürdige Startprogramme, die von Microsoft veröffentlicht wurden oder die durch Microsoft zertifiziert wurden, da sie die Anforderungen für Leistung und Ressourcenverwaltung erfüllen.
 
-| Vertrauenswürdige Startprogramme | Erweiterung | SQL Server-Versionen |
+| Vertrauenswürdige Startprogramme | Durchwahl | SQL Server-Versionen |
 |-------------------|-----------|---------------------|
 | „RLauncher.dll“ für die R-Sprache für Windows | [R-Erweiterung](extension-r.md) | SQL Server 2016 und höher |
 | „Pythonlauncher.dll“ für Python 3.5 für Windows | [Python-Erweiterung](extension-python.md) | SQL Server 2017 und höher |

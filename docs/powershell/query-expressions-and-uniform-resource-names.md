@@ -14,10 +14,10 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0eca650c1e499c54715204637306485280938707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049109"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Abfrageausdrücke und eindeutige Ressourcennamen
@@ -53,7 +53,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Objekt*  
+ *Object*  
  Gibt den Typ des Objekts an, der an diesem Knoten der Ausdruckszeichenfolge dargestellt wird. Jedes Objekt stellt eine Auflistungsklasse von diesen SMO-Objektmodellnamespaces dar:  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -147,7 +147,7 @@ Server[@Name='MYCOMPUTER']/Database[@CaseSensitive=false() and contains(@Name, '
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[not(@Schema='Production') and contains(@Name, 'History')]  
 ```  
   
-### <a name="d-not-supplying-a-filter-expression-for-the-final-node"></a>D. Keine Angabe eines Filterausdrucks für den abschließenden Knoten  
+### <a name="d-not-supplying-a-filter-expression-for-the-final-node"></a>D: Keine Angabe eines Filterausdrucks für den abschließenden Knoten  
  Dieser Abfrageausdruck listet alle Spalten in der **AdventureWorks2012.Sales.SalesPerson** -Tabelle auf:  
   
 ```  

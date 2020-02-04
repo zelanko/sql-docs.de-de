@@ -1,23 +1,24 @@
 ---
-title: 'Gewusst wie: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6406c2e2ff709e163057163424719169cb2b9787
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911792"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241478"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Gewusst wie: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Vorgehensweise: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer
+
 Mit der erweiterbaren [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)-Klasse können neue Testbedingungen erstellt werden. Beispielsweise können Sie eine neue Testbedingung erstellen, mit der die Anzahl der Spalten oder die Werte in einem Resultset überprüft werden.  
   
 ## <a name="to-create-a-test-condition"></a>So erstellen Sie eine Testbedingung  
@@ -48,7 +49,7 @@ Im folgenden Verfahren wird erläutert, wie Sie eine Testbedingung erstellen, di
   
 10. Leiten Sie die Klasse von der [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)-Klasse ab.  
   
-11. Signieren Sie die Assembly mit einem starken Namen. Weitere Informationen finden Sie unter [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Signieren Sie die Assembly mit einem starken Namen. Weitere Informationen finden Sie unter [Gewusst wie: Signieren einer Assembly mit einem starken Namen](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Erstellen Sie die Klassenbibliothek.  
   
@@ -175,7 +176,7 @@ Die Klasse für die benutzerdefinierte Testbedingung erbt von der [TestCondition
   
 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) muss Klassen zur Erweiterung von [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) hinzugefügt werden. Durch dieses Attribut kann die Klasse von SQL Server Data Tools ermittelt und während des Entwurfs und der Ausführung von Komponententests verwendet werden. Das Attribut verwendet zwei Parameter:  
   
-|Attributparameter|Position|und Beschreibung|  
+|Attributparameter|Position|BESCHREIBUNG|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|Gibt die Zeichenfolge im Kombinationsfeld „Testbedingungen“ an. Dieser Name muss eindeutig sein. Wenn zwei Bedingungen über denselben Anzeigenamen verfügen, wird die erste gefundene Bedingung angezeigt, und im Fehler-Manager von Visual Studio wird eine Warnung ausgegeben.|  
 |ImplementingType|2|Dieser Parameter wird verwendet, um die Erweiterung eindeutig zu identifizieren. Er muss in Anpassung an den Typ geändert werden, für den das Attribut verwendet wird. In diesem Beispiel wird der Typ **ResultSetColumnCountCondition** verwendet. Verwenden Sie daher **typeof(ResultSetColumnCountCondition)** . Falls Sie den Typ **NewTestCondition** verwenden, verwenden Sie **typeof(NewTestCondition)** .|  

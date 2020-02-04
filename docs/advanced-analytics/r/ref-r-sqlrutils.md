@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715031"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (R-Bibliothek in SQL Server)
@@ -41,7 +41,7 @@ Die **sqlrutils**-Bibliothek wird in mehreren Microsoft-Produkten bereitgestellt
 
 Der folgende Abschnitt bietet eine Übersicht über die Funktionen, die Sie aus dem **sqlrutils**-Paket aufrufen können, um eine gespeicherte Prozedur mit eingebettetem R-Code zu entwickeln. Weitere Informationen über die Parameter für jede Methode oder Funktion finden Sie in der R-Hilfe für das Paket: `help(package="sqlrutils")`
 
-|Funktion | und Beschreibung |
+|Funktion | BESCHREIBUNG |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Führt eine gespeicherte Prozedur aus.|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Ruft eine Liste der Eingabeparameter in der gespeicherten Prozedur ab.| 
@@ -104,7 +104,7 @@ Dem Objekt für die gespeicherte Prozedur sind üblicherweise weder Daten noch W
 > [!NOTE]
 > Die *executeStoredProcedure* -Funktion erfordert einen ODBC 3.8-Anbieter, z.B. ODBC Driver 13 for SQL Server.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils](how-to-create-a-stored-procedure-using-sqlrutils.md)
 

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843752"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identifizieren von Datenbanken und Tabellen für Stretch Database von Data Migration Assistant
@@ -37,7 +37,7 @@ ms.locfileid: "73843752"
 
 3.  Wählen Sie **SQL Server** sowohl als **Source server type** (Quellservertyp) als auch als **Target server type** (Zielservertyp) aus.
 
-4.  Wählen Sie **Erstellen**aus. 
+4.  Klicken Sie auf **Erstellen**. 
 
 5. Klicken Sie auf der Seite **Optionen** (Schritt 1) auf **New features recommendation** (Empfehlungen neuer Funktionen). Deaktivieren Sie gegebenenfalls die Auswahl für **Kompatibilitätsprobleme**.
 
@@ -45,7 +45,7 @@ ms.locfileid: "73843752"
 
 7.  Klicken Sie auf **Start Assessment** (Bewertung starten).
 
-## <a name="review-the-results"></a>Auswerten der Ergebnisse  
+## <a name="review-the-results"></a>Überprüfen der Ergebnisse  
   
 1.  Wenn die Analyse abgeschlossen wurde, wählen Sie auf der Seite **Ergebnisse überprüfen** (Schritt 3) die Option **Featureempfehlungen** aus, und klicken Sie dann auf die Registerkarte **Speicher**.
 
@@ -59,13 +59,13 @@ Mit der Veröffentlichung von Data Migration Assistant, das den Upgrade Advisor 
 ## <a name="next-step"></a>Nächster Schritt  
  Aktivieren Sie Stretch Database.  
   
--   Informationen zum aktivieren von Stretch Database für eine **Datenbank**finden Sie unter [Aktivieren von Stretch Database für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
+-   Informationen zum Aktivieren von Stretch Database für eine **Datenbank**finden Sie unter [Aktivieren von Stretch Database für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   
--   Informationen darüber, wie Sie Stretch Database auf einer anderen **Tabelle**aktivieren, wenn Stretch bereits auf der Datenbank aktiviert ist, finden Sie unter [Aktivieren von Stretch Database für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). 
+-   Informationen zum Aktivieren von Stretch Database für eine andere **Tabelle**, wenn Stretch bereits für die Datenbank aktiviert ist, finden Sie unter [Aktivieren von Stretch Database für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). 
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Einschränkungen für Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
- [Aktivieren von Stretch-Datenbank für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [Aktivieren von Stretch-Datenbank für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [Aktivieren von Stretch Database für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Aktivieren von Stretch Database für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

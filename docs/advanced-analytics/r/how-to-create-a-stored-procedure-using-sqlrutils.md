@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727468"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils
@@ -51,7 +51,7 @@ Die Ausgabe der Funktion kann eines der folgenden Objekte sein:
 - Eine benannte Liste, die höchstens einen Datenrahmen enthält. Jedes Element der Liste muss einen der unterstützten Datentypen haben.
 - NULL, wenn die Funktion kein Ergebnis zurückgibt.
 
-## <a name="step-2-generate-required-objects"></a>Schritt 2: Generieren der benötigten Objekte
+## <a name="step-2-generate-required-objects"></a>Schritt 2: Generieren der benötigten Objekte
 
 Nachdem Ihr R-Code bereinigt wurde und als Einzelfunktion aufgerufen werden kann, verwenden Sie die Funktionen im **sqlrutils**-Paket, um die Ein- und Ausgaben so vorzubereiten, dass sie an den Konstruktor übergeben werden können, der die gespeicherte Prozedur tatsächlich erstellt.
 
@@ -79,11 +79,11 @@ Beim Konvertieren einer Liste oder beim Abrufen eines bestimmten Elements aus ei
 
 Wenn Sie die einzelnen Funktionsaufrufe ausführen, wird jeweils ein R-Objekt erstellt, das Sie später als Argument an `StoredProcedure` übergeben, um die komplette gespeicherte Prozedur zu erstellen.
 
-## <a name="step-3-generate-the-stored-procedure"></a>Schritt 3: Generieren der gespeicherten Prozedur
+## <a name="step-3-generate-the-stored-procedure"></a>Schritt 3: Generieren der gespeicherten Prozedur
 
 Sobald alle Eingabe- und Ausgabeparameter bereit sind, führen Sie einen Aufruf des `StoredProcedure`-Konstruktors aus.
 
-**Usage**
+**Verwendung**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

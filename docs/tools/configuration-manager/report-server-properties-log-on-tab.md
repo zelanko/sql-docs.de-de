@@ -1,6 +1,6 @@
 ---
-title: Berichtsserver-Eigenschaften (Registerkarte „Anmelden“) | Microsoft-Dokumentation
-ms.custom: ''
+title: Berichtsserver-Eigenschaften (Registerkarte Anmelden)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,18 +11,18 @@ ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 85b62a07b691492f9980574f1607fbb302071497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 1dda864021df72f2e45e2db08fec0c66765fb0a4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058391"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306345"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Berichtsserver-Eigenschaften (Registerkarte Anmelden)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Verwenden Sie im Dialogfeld **Berichtsservereigenschaften** die Registerkarte **Anmelden** , um das vom Berichtsserverdienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Lokales System**  
  Geben Sie ein lokales Systemkonto an, das kein Kennwort erfordert. Das lokale Systemkonto kann sich allerdings einschränkend auf die Zusammenarbeit mit anderen Servern auswirken. Dies hängt von den Privilegien ab, die dem Konto erteilt wurden.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68058391"
  **Kennwort bestätigen**  
  Geben Sie das Kennwort des Kontos erneut ein.  
   
- **Start**  
+ **Starten**  
  Starten Sie den Dienst.  
   
  **Beenden**  

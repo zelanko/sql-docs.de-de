@@ -1,6 +1,6 @@
 ---
-title: TCP/IP-Eigenschaften (Registerkarte Protokolle) | Microsoft-Dokumentation
-ms.custom: ''
+title: TCP/IP-Eigenschaften (Registerkarte Protokoll)
+ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef748c0b53ecd4812816bfc021567e91fbc10c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 32054dfc368a358370abe4b3a5213305fe815afb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023794"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307586"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP-Eigenschaften (Registerkarte Protokoll)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,8 +25,8 @@ ms.locfileid: "68023794"
   
  Microsoft SQL Server muss neu gestartet werden, damit die Änderungen in Kraft treten.  
   
-## <a name="options"></a>enthalten  
- **Enabled**  
+## <a name="options"></a>Tastatur  
+ **Aktiviert**  
  Mögliche Werte sind **Yes** und **No**.  
   
  **Keep Alive**  

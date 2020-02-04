@@ -1,23 +1,24 @@
 ---
-title: 'Gewusst wie: Konfigurieren der Ausführung von SQL Server-Komponententests | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Konfigurieren der Ausführung von SQL Server-Komponententests
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da9a53fa2811589b58ec3001ae5b92d46b4c1aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911844"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241566"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>Gewusst wie: Konfigurieren der Ausführung von SQL Server-Komponententests
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>Vorgehensweise: Konfigurieren der Ausführung von SQL Server-Komponententests
+
 Indem Sie das Testprojekt konfigurieren, können Sie mehrere Einstellungen zur Steuerung der Ausführung von SQL Server-Komponententests angeben. Diese Konfigurationseinstellungen werden in der Datei app.config des Testprojekts gespeichert. Wenn Sie diese Datei direkt bearbeiten, werden die neuen Werte im Dialogfeld Testkonfiguration angezeigt.  
   
 Eine Projektmappe kann mehrere Testprojekte enthalten. Jedes Testprojekt enthält eine Datei app.config (also einen Satz von Konfigurationseinstellungen). Folglich kann eine Projektmappe verschiedene Sätze von Komponententests (einen Satz für jedes Testprojekt) enthalten, deren Ausführung unterschiedlich konfiguriert ist.  

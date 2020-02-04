@@ -9,10 +9,10 @@ ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8c05a90f2d077e76bbbdebb9f285c3f2e8b3f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581917"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile (Berichts-Generator und SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "65581917"
   
     -   **Rechteck**  
   
-    -   **Bild**  
+    -   **Image**  
   
 3.  Klicken Sie mit der rechten Maustaste auf den Seitenkopf, und klicken Sie anschließend auf **Seitenkopfeigenschaften** , um Rahmen, Hintergrundbilder oder Farben hinzuzufügen oder die Breite des Seitenkopfes anzupassen. Klicken Sie dann auf **OK**.  
   

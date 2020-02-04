@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 507bd04140880a3c15f1e72eed49c29ade56769c
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715007"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR (R-Bibliothek in SQL Server)
@@ -40,7 +40,7 @@ Die **olapR**-Bibliothek wird in mehreren Microsoft-Produkten bereitgestellt. Di
 
 Dieses Paket wird in den folgenden Produkten sowie in mehreren VM-Images in Azure bereitgestellt. Der Speicherort des Pakets variiert entsprechend.
 
-Product | Speicherort |
+Produkt | Location |
 --------|----------|
 SQL Server Machine Learning Services (mit R-Integration) | C:\Programme\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R Services | C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
@@ -52,6 +52,6 @@ Data Science Virtual Machine (in Azure) <sup>1</sup> | C:\Programme\Microsoft SQ
 <sup>1</sup> R-Integration ist in SQL Server optional. Die olapR-Bibliothek wird installiert, wenn Sie während der VM-Konfiguration die Machine Learning- oder R-Funktion hinzufügen.
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Erstellen von MDX-Abfragen mit olapR](how-to-create-mdx-queries-using-olapr.md)

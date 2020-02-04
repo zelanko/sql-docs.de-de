@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67957688"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Data Wrangling mithilfe von PROSE Code Accelerator
@@ -45,7 +45,7 @@ Häufig umfasst das Lesen von Dateien in einen Dataframe eine Untersuchung des I
 
 Der PROSE Code Accelerator löst dieses Problem, indem die Struktur der Datendatei analysiert und der Code zum Laden der Datei automatisch generiert wird. In den meisten Fällen analysiert der generierte Code die Daten richtig. Ein einigen wenigen Fällen müssen Sie den Code möglicherweise anpassen, um Ihre Anforderungen zu erfüllen.
 
-Betrachten Sie das folgende Beispiel:
+Betrachten Sie das folgenden Beispiel:
 
  ```python
 import prose.codeaccelerator as cx

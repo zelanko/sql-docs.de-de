@@ -22,10 +22,10 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
-ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72359407"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Veröffentlichen von Berichten auf einem Berichtsserver
@@ -44,7 +44,7 @@ Die Berechtigung wird durch rollenbasierte Sicherheit bestimmt, die vom Berichts
  ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png) 
   
  Weitere Informationen finden Sie unter:
- + [Eigenschaftsseiten für Projekt (Dialogfeld)](../../reporting-services/tools/project-property-pages-dialog-box.md)
+ + [Project Property Pages Dialog Box (Projekt (Eigenschaftenseiten, Dialogfeld))](../../reporting-services/tools/project-property-pages-dialog-box.md)
  + [Bereitstellung und Versionsunterstützung in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)
  + [Festlegen von Bereitstellungseigenschaften für Reporting Services-Projekte in SSDT](../../reporting-services/tools/set-deployment-properties-reporting-services.md)
   
@@ -69,6 +69,6 @@ Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Bericht,
 ## <a name="see-also"></a>Weitere Informationen  
  [Eigenschaftsseiten für Projekt (Dialogfeld)](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Aktualisieren von Berichten](../../reporting-services/install-windows/upgrade-reports.md)  
+ [Upgrade Reports (Aktualisieren von Berichten)](../../reporting-services/install-windows/upgrade-reports.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 57560f0a-0fb8-40dd-bbe5-49feb502b9bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 983d1f9c670801995d8a29d82cf71500605bf7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954103"
 ---
 # <a name="getasciistream-method-sqlserverresultset"></a>getAsciiStream-Methode (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67954103"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[getAsciiStream (int)](../../../connect/jdbc/reference/getasciistream-method-int.md)|Ruft den Wert des angegebenen Spaltenindexes in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als ASCII-Zeichendatenstrom ab.|  
 |[getAsciiStream (java.lang.String)](../../../connect/jdbc/reference/getasciistream-method-java-lang-string.md)|Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als ASCII-Zeichendatenstrom ab.|  

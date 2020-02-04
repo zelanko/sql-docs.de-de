@@ -10,15 +10,15 @@ ms.author: mathoma
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d9b834d94469adf8394dc12f3b812a0dfd1fbbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067583"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>SQL Server-Includedateien für die Versionsverwaltung und „Applies-to“
 
-Mithilfe von Includedateien in Markdown können Verweise in der Dokumentation auf einfache Weise geändert werden, ohne den tatsächlichen Text der jeweiligen Artikel zu ändern. Für SQL-Inhalte gibt es drei Arten von Includedateien: SQL-Version, applies-to und Referenztext. Includedateien für die **SQL Server-Version** werden verwendet, um anzugeben, von welcher SQL-Version (z. B. SQL Server 2016 oder 2017) gesprochen wird. Die **applies-to**-Includedateien geben an, für welche SQL-Produkte und -Dienste die Dokumentation gilt (z. B. SQL Server für Linux oder Azure SQL-Datenbank). **Referenztexte** sind Includedateien, die nicht in die anderen beiden Kategorien fallen, z. B. die Includedatei „Get Help“, eine Liste mit Links, die Kunden verwenden können, um Hilfe zu SQL Server zu erhalten.
+Mithilfe von Includedateien in Markdown können Verweise in der Dokumentation auf einfache Weise geändert werden, ohne den tatsächlichen Text der jeweiligen Artikel zu ändern. Es gibt drei Arten von Includedateien für SQL-Inhalte: SQL-Version, „Applies-to“ und Referenztext. Includedateien für die **SQL Server-Version** werden verwendet, um anzugeben, von welcher SQL-Version (z. B. SQL Server 2016 oder 2017) gesprochen wird. Die **applies-to**-Includedateien geben an, für welche SQL-Produkte und -Dienste die Dokumentation gilt (z. B. SQL Server für Linux oder Azure SQL-Datenbank). **Referenztexte** sind Includedateien, die nicht in die anderen beiden Kategorien fallen, z. B. die Includedatei „Get Help“, eine Liste mit Links, die Kunden verwenden können, um Hilfe zu SQL Server zu erhalten.
 
 Dieser Artikel soll als Anhaltspunkt für die ersten beiden Arten von Includedateien dienen. Sie können die vollständige Liste der Includedateien im Repository [sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) durchsuchen.
 
@@ -26,7 +26,7 @@ Dieser Artikel soll als Anhaltspunkt für die ersten beiden Arten von Includedat
 
 Autoren von SQL-Inhalten müssen häufig den Produktnamen und die Version von SQL Server per Include einschließen. Auf diese Weise wird bei einer Namensänderung die Includedatei geändert, statt den Wert in jedem einzelnen Artikel ändern zu müssen. Diese Includedateien werden als Platzhalter für Produktnamen eingesetzt, wurden aber nicht konsistent in der gesamten SQL-Dokumentation verwendet. SQL Server vNext bezieht sich auf eine zukünftige Version von SQL Server, die noch keine Versionsnummer besitzt, und stellt eine Ausnahme dar.  
 
-|SQL-Version| Dateiname| Markdownbeispiel |Textmodus|
+|SQL-Version| Dateiname| Markdownbeispiel |Text|
 | :------------  | :-------------| :----------| :-------------------|
 | SQL | ssnoversion-md.md | `[!INCLUDE[ssSQL11](../includes/ssnoversion-md.md)]` | SQL Server |
 | SQL 2000 | ssversion2000-md.md | `[!INCLUDE[ssSQL11](../includes/ssversion2000-md.md)]` | SQL Server 2000 (8.x) |
@@ -44,7 +44,7 @@ Autoren von SQL-Inhalten müssen häufig den Produktnamen und die Version von SQ
 
 Bei diesen „applies-to“-Includedateien wird die SQL Server-Version ausgelassen.
 
-| Dateiname| Markdownbeispiel |image|
+| Dateiname| Markdownbeispiel |Image|
 | :-------------| :----------| :-------------------|
 | appliesto-ss-asdb-asdw-xxx-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] |
 | appliesto-ss-asdb-asdw-pdw-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] |
@@ -66,7 +66,7 @@ Bei diesen „applies-to“-Includedateien wird die SQL Server-Version ausgelass
 
 Diese „applies-to“-Includedateien geben an, für welche Versionen von SQL die Dokumentation gilt.
 
-| Dateiname| Markdownbeispiel |image|
+| Dateiname| Markdownbeispiel |Image|
 | :-------------| :----------| :-------------------|
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
@@ -110,7 +110,7 @@ Diese „applies-to“-Includedateien geben an, für welche Versionen von SQL di
 
 Diese „applies-to“-Includedateien werden mit der Analysis Services-Dokumentation verwendet.
 
-| Dateiname| Markdownbeispiel |image|
+| Dateiname| Markdownbeispiel |Image|
 | :-------------| :----------| :-------------------|
 | ssas-appliesto-sql2016.md | `[!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)]` | [!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)] |
 | ssas-appliesto-sql2016-later.md | `[!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)]` | [!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)] |
@@ -127,7 +127,7 @@ Diese „applies-to“-Includedateien werden mit der Analysis Services-Dokumenta
 
 Diese „applies-to“-Includedateien werden mit der Reporting Services-Dokumentation verwendet.
 
-| Dateiname| Markdownbeispiel |image|
+| Dateiname| Markdownbeispiel |Image|
 | :-------------| :----------| :-------------------|
 | ssrs-appliesto-2017-and-later.md | `[!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)]` | [!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)] |
 | ssrs-appliesto-not-pbirs.md | `[!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)]` | [!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)] |

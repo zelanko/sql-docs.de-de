@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71952744"
 ---
 # <a name="install-sql-server-reporting-services"></a>Installieren von SQL Server Reporting Services
@@ -33,7 +33,7 @@ Laden Sie [SQL Server 2017 Reporting Services](https://www.microsoft.com/downl
 > [!NOTE]
 > Interessieren Sie sich für Power BI-Berichtsserver? Weitere Informationen finden Sie unter [Install Power BI Report Server (Installieren von Power BI-Berichtsserver)](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
 
-## <a name="before-you-begin"></a>Vorbereitungen
+## <a name="before-you-begin"></a>Voraussetzungen
 
 Prüfen Sie vor der Installation von Reporting Services [Hardware and software requirements for installing SQL Server (Hardware- und Softwareanforderungen für die Installation von SQL Server)](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
@@ -85,7 +85,7 @@ Sie können das Dienstkonto entweder in „Netzwerkdienst“ oder „Domänenkon
 
 Weitere Informationen finden Sie unter [Configure the report server service account (Konfigurieren des Dienstkontos für den Berichtsserver)](configure-the-report-server-service-account-ssrs-configuration-manager.md).
 
-## <a name="windows-service"></a>Windows-Dienst
+## <a name="windows-service"></a>&Windows-Dienst
 
 Als Teil der Installation wird ein Windows-Dienst erstellt. Dieser Dienst wird als **SQL Server Reporting Services** angezeigt. Der Name des Dienstes lautet **SQLServerReportingServices**.
 
@@ -93,7 +93,7 @@ Als Teil der Installation wird ein Windows-Dienst erstellt. Dieser Dienst wird a
 
 URL-Reservierungen bestehen aus Präfix, Hostname, Port und virtuellem Verzeichnis:
 
-|Teil|und Beschreibung|
+|Teil|BESCHREIBUNG|
 |----------|-----------------|
 |Präfix|Das Standardpräfix ist http. Wenn Sie zuvor ein SSL-Zertifikat (Secure Sockets Layer) installiert haben, versucht das Setup, die URL-Reservierungen mit dem Präfix HTTPS zu erstellen.|
 |Hostname|Der Standardhostname ist ein Platzhalter (+). Dieses gibt an, dass der Berichtsserver eine beliebige HTTP-Anforderung an den angegebenen Port für einen beliebigen Hostnamen akzeptiert, der für den Computer steht, einschließlich `https://<computername>/reportserver`, `https://localhost/reportserver` oder `https://<IPAddress>/reportserver.`.|

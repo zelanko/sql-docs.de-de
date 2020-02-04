@@ -1,23 +1,24 @@
 ---
-title: 'Gewusst wie: Erstellen und Bereitstellen in einer lokalen Datenbank | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Erstellen und Bereitstellen in einer lokalen Datenbank
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 612ed6750946dfa5e77970bf6e3a4859cbb0045b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c3c079ddc375c1fa252975c419aff587d324dd1b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911871"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241610"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>Gewusst wie: Erstellen und Bereitstellen in einer lokalen Datenbank
+
 Microsoft SQL Server 2012 stellt eine lokale bedarfsgesteuerte Serverinstanz bereit, die als „SQL Server Express Local Database Runtime“ bezeichnet wird. Diese wird beim Debuggen eines SQL Server-Datenbankprojekts aktiviert. Diese lokale Serverinstanz kann als Sandkasten zum Erstellen, Testen und Debuggen von Projekten genutzt werden. Sie ist unabhängig von installierten SQL Server-Instanzen, und außerhalb von SQL Server Data Tools (SSDT) kann nicht darauf zugegriffen werden. Eine solche Anordnung eignet sich ideal für Entwickler, die nur über eingeschränkten oder überhaupt keinen Zugriff auf Produktionsdatenbanken verfügen, die jedoch ihre Projekte lokal testen möchten, bevor sie von entsprechend berechtigten Mitarbeitern in der Produktionsumgebung bereitgestellt werden. Wenn Sie eine Datenbanklösung für SQL Azure entwickeln, können Sie zudem die Vorteile dieses lokalen Servers nutzen, um das Datenbankprojekt vor dem Bereitstellen in der Cloud lokal zu entwickeln und zu testen.  
   
 > [!WARNING]  

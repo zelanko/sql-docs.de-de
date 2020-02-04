@@ -16,10 +16,10 @@ ms.assetid: 3050c836-fbb3-4475-99e5-05637a48a932
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d395e016ad6d84edb17fc826f39036be95b6815
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996857"
 ---
 # <a name="updatebytes-method-sqlserverresultset"></a>updateBytes-Methode (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67996857"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[updateBytes (int, byte&#91;&#93;)](../../../connect/jdbc/reference/updatebytes-method-int-byte.md)|Aktualisiert die angegebene Spalte mit einem Array von **byte**-Werten unter Berücksichtigung des Spaltenindexes.|  
 |[updateBytes (java.lang.String, byte&#91;&#93;)](../../../connect/jdbc/reference/updatebytes-method-java-lang-string-byte.md)|Aktualisiert die angegebene Spalte mit einem Array von **byte**-Werten unter Berücksichtigung des Spaltennamens.|  

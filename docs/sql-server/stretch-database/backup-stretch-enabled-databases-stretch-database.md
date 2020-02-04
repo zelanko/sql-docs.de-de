@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843827"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Sichern von Stretch-fähigen Datenbanken (Stretch Database)
@@ -26,10 +26,10 @@ ms.locfileid: "73843827"
   
  -   Daher sollten Sie die SQL Server-Datenbanken mit aktivierter Stretch-Datenbank-Funktion sichern.  
       
- -   Microsoft Azure sichert automatisch die Remotedaten, die Stretch Database von SQL Server zu Azure migriert hat.  
+ -   Microsoft Azure sichert automatisch die Remotedaten, die von Stretch Database von SQL Server zu Azure migriert wurden.  
 
 > [!TIP]
-> Backup ist nur ein Teil einer umfassenden Lösung für Hochverfügbarkeit und Geschäftskontinuität. Weitere Informationen zu Hochverfügbarkeit finden Sie unter [Lösungen mit Hochverfügbarkeit](../../database-engine/sql-server-business-continuity-dr.md).
+> Die Datensicherung ist nur ein Teil einer vollständigen Lösung für Hochverfügbarkeit und Geschäftskontinuität. Weitere Informationen zu Hochverfügbarkeit finden Sie unter [Lösungen für Hochverfügbarkeit](../../database-engine/sql-server-business-continuity-dr.md).
    
 ## <a name="back-up-your-sql-server-data"></a>Sichern Ihrer SQL Server-Daten  
   
@@ -39,31 +39,31 @@ Zum Sichern Ihrer SQL Server-Datenbanken, für die Stretch-Datenbank aktiviert w
   
 ## <a name="back-up-your-remote-azure-data"></a>Sichern Ihrer Azure-Remotedaten   
   
-Microsoft Azure sichert automatisch die Remotedaten, die Stretch Database von SQL Server zu Azure migriert hat.    
+Microsoft Azure sichert automatisch die Remotedaten, die von Stretch Database von SQL Server zu Azure migriert wurden.    
 ### <a name="azure-reduces-the-risk-of-data-loss-with-automatic-backup"></a>Azure reduziert das Risiko eines Datenverlusts durch das automatische Sichern  
-Der SQL Server Stretch Database-Dienst in Azure schützt Ihre Remotedatenbanken durch automatische Speichermomentaufnahmen, die mindestens alle acht Stunden aufgenommen werden. Jede Momentaufnahme wird sieben Tage lang beibehalten, um den größtmöglichen Bereich von möglichen Wiederherstellungspunkten für Sie bereitzustellen.  
+Der Azure-Dienst SQL Server Stretch Database schützt Ihre Remotedatenbanken mindestens alle acht Stunden durch automatische Speichermomentaufnahmen. Jede Momentaufnahme wird sieben Tage lang beibehalten, um den größtmöglichen Bereich von möglichen Wiederherstellungspunkten für Sie bereitzustellen.  
   
 ### <a name="azure-reduces-the-risk-of-data-loss-with-geo-redundancy"></a>Azure reduziert das Risiko eines Datenverlusts durch Georedundanz  
 Datenbanksicherungen in Azure werden im georedundanten Azure-Speicher (Read-Access Geo Redundant-Speicher; RA-GRS) gespeichert und sind daher standardmäßig georedundant. Georedundanter Speicher repliziert Ihre Daten in eine sekundäre Region, die Hunderte von Meilen von der primären Region entfernt ist. In primären und sekundären Regionen werden Ihre Daten jeweils dreimal in separaten Fehler- und Upgradedomänen repliziert. Dadurch wird sichergestellt, dass Ihre Daten erhalten bleiben, sogar im Falle eines vollständigen, regionalen Stromausfalls oder eines Notfalls, der eine ganze Region unzugänglich macht.
 
 ### <a name="stretchRPO"></a>Stretch Database reduziert das Risiko eines Verlusts Ihrer Azure-Daten, indem migrierte Zeilen vorübergehend beibehalten werden.
-Nachdem Stretch Database geeignete Zeilen aus SQL Server zu Azure migriert hat, behält es diese Zeilen für mindestens 8 Stunden in der Stagingtabelle bei. Wenn Sie eine Sicherung Ihrer Azure-Datenbank wiederherstellen, nutzt Stretch Database die Zeilen in der Stagingtabelle, um SQL Server- und Azure-Datenbanken abzustimmen.
+Nachdem Stretch Database relevante Zeilen aus SQL Server zu Azure migriert hat, behält sie diese Zeilen mindestens acht Stunden lang in der Stagingtabelle bei. Wenn Sie eine Sicherungskopie Ihrer Azure-Datenbank wiederherstellen, verwendet Stretch Database die in der Stagingtabelle gespeicherten Zeilen, um die SQL Server- und die Azure-Datenbanken abzustimmen.
 
-Nach der Wiederherstellung einer Ihrer Azure-Datenbanksicherungen müssen Sie die gespeicherte Prozedur [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) ausführen, um eine SQL Server-Datenbank, für die Stretch-Datenbank aktiviert wurde, wieder mit der Azure-Remotedatenbank zu verbinden. Beim Ausführen von **sys.sp_rda_reauthorize_db** stimmt Stretch Database automatisch die SQL Server- mit den Azure-Datenbanken ab.
+Nach der Wiederherstellung einer Ihrer Azure-Datenbanksicherungen müssen Sie die gespeicherte Prozedur [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) ausführen, um eine SQL Server-Datenbank, für die Stretch-Datenbank aktiviert wurde, wieder mit der Azure-Remotedatenbank zu verbinden. Wenn Sie **sys.sp_rda_reauthorize_db** ausführen, stimmt Stretch Database automatisch die SQL Server- und die Azure-Datenbanken ab.
 
-Führen Sie zum Erhöhen der Stundenzahl, in der Stretch Database migrierte Daten vorübergehend in der Stagingtabelle beibehält, die gespeicherte Prozedur [sys.sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md) aus, und geben Sie eine größere Zahl als 8 Stunden an. Bedenken Sie bei der Entscheidung, wie viele Daten beibehalten werden sollen, die folgenden Faktoren:
+Um die Anzahl von Stunden zu erhöhen, für die migrierte Daten von Stretch Database vorübergehend in der Stagingtabelle beibehalten werden, führen Sie die gespeicherte Prozedur [sys.sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md) aus, und geben Sie eine Stundenanzahl von über acht an. Bedenken Sie bei der Entscheidung, wie viele Daten beibehalten werden sollen, die folgenden Faktoren:
 -   Die Häufigkeit der automatischen Azure-Sicherungen (mindestens alle 8 Stunden)
 -   Die erforderliche Zeit, um ein Problem zu erkennen und zu entscheiden, ob eine Sicherung wiederhergestellt werden soll
 -   Die Dauer des Azure-Wiederherstellungsvorgangs
 
 > [!NOTE]
-> Eine Erhöhung der Datenmenge, die Stretch Database vorübergehend in der Stagingtabelle beibehält, erhöht die Menge des auf dem SQL Server erforderlichen Speicherplatzes.
+> Wird die Datenmenge erhöht, die Stretch Database vorübergehend in der Stagingtabelle beibehält, erhöht sich dadurch auch der erforderliche Speicherplatz auf dem SQL Server-Computer.
 
-Führen Sie zum Überprüfen der Stundenzahl, in der Stretch Database Daten vorübergehend in der Stagingtabelle beibehält, die gespeicherte Prozedur [sys.sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)aus.
+Um die Anzahl von Stunden zu überprüfen, für die Daten von Stretch Database vorübergehend in der Stagingtabelle beibehalten werden, führen Sie die gespeicherte Prozedur [sys.sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md) aus.
 
 ## <a name="see-also"></a>Weitere Informationen  
-[Restore Stretch-enabled databases (Wiederherstellen von für die Streckung aktivierten Datenbanken)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
- [Verwalten und Problembehandlung von Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
+[Wiederherstellen von Stretch-fähigen Datenbanken](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
+ [Verwalten von Stretch Database und Behandeln von Problemen](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
    
   
   

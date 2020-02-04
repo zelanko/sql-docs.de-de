@@ -12,10 +12,10 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037858"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Tastenkombinationen (Berichts-Generator)
@@ -30,7 +30,7 @@ ms.locfileid: "67037858"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Tastenkombinationen im Berichts-Generator  
   
-|und Beschreibung|Tastenkombination|  
+|BESCHREIBUNG|Tastenkombination|  
 |-----------------|---------------------|  
 |Öffnet das Menü Berichts-Generator.|ALT+F|  
 |Erstellt einen Bericht.|STRG+N|  
@@ -57,7 +57,7 @@ ms.locfileid: "67037858"
 |Kopieren|STRG+C, ALT+H+C|  
 |Ausschneiden|STRG+X, ALT+H+X|  
 |Einfügen|STRG+V, ALT+H+V|  
-|Alles auswählen|CTRL+A|  
+|Alles auswählen|STRG+A|  
 |Rückgängig|STRG+Z, ALT+Z|  
 |Wiederholen|STRG+Y, ALT+Y|  
 |Vergrößern|STRG+Pluszeichen (+)|  

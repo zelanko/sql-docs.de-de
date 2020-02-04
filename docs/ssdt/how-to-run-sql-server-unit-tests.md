@@ -1,23 +1,24 @@
 ---
-title: 'Gewusst wie: Ausführen von SQL Server-Komponententests | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Ausführen von SQL Server-Komponententests
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d17120b0c13ab1910d4636a376963f5ec74813eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3ee95885dc1696fd7fba80342dc8c582a79056cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035019"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244283"
 ---
-# <a name="how-to-run-sql-server-unit-tests"></a>Gewusst wie: Ausführen von SQL Server-Komponententests
+# <a name="how-to-run-sql-server-unit-tests"></a>Vorgehensweise: Ausführen von SQL Server-Komponententests
+
 Sie können einen SQL Server-Komponententest auf verschiedene Weisen ausführen, indem Sie z.B. das Eingabeaufforderungsfenster oder verschiedene andere Fenster verwenden.  
   
 > [!NOTE]  
@@ -33,7 +34,7 @@ Welche Möglichkeiten verfügbar sind, hängt von der installierten Software ab,
   
 2.  Klicken Sie im Fenster **Testansicht** auf die Tests, die Sie ausführen möchten. Durch Verwendung der STRG- oder UMSCHALTTASTE können Sie zusammenhängende oder unzusammenhängende Testblöcke angeben.  
   
-3.  Führen Sie eine der folgenden Aktionen aus:  
+3.  Führen Sie einen der folgenden Schritte aus:  
   
     -   Klicken Sie mit der rechten Maustaste auf die Fläche des Fensters **Testansicht**, und klicken Sie dann auf **Auswahl ausführen**.  
   
@@ -57,7 +58,7 @@ Durch diesen Schritt werden alle Tests im aktuellen Testlauf ausgeführt. Sobald
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Ausführen von SQL Server-Komponententests](../ssdt/running-sql-server-unit-tests.md)  
-[Vorgehensweise: Ausführen von automatisierten Tests in Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[Gewusst wie: Ausführen von automatisierten Tests in Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
 [Ausführen von automatisierten Tests in der Befehlszeile (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
 [Testen der Anwendung (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

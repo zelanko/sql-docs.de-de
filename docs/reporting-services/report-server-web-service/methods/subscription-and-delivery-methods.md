@@ -14,16 +14,16 @@ ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 474a54a5233b8d96b060f73dc33dfd4a6f86bcda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284481"
 ---
 # <a name="subscription-and-delivery-methods"></a>Abonnement und Übermittlungsmethoden
   Mit diesen Methoden können Sie Abonnements und die Übermittlung von Katalogelementen erstellen und verwalten.  
   
-|Methode|Aktion|  
+|Methode|Action|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|Erstellt für ein bestimmtes Element ein datengesteuertes Abonnement.|  
 |<xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|Gibt die Eigenschaften für ein datengesteuertes Abonnement zurück.|  

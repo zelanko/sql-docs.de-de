@@ -13,10 +13,10 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194840"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
@@ -39,7 +39,7 @@ Dieses Lernprogramm ist in drei Lektionen aufgeteilt:
 
 Im folgenden Diagramm wird der im Tutorial verwendete grundlegende Workflow veranschaulicht:
 
-| Schritt    | und Beschreibung |
+| Schritt    | BESCHREIBUNG |
 | --------|------------ |
 | (1)     | Die Abonnementkonfiguration schreibt den Quellbericht, den Zeitplan und die Feldzuordnung in die Datenbank des Abonnenten. |
 | (2)     | Die OrderInfo-Tabelle enthält 4 Bestellnummern, die für das Filtern verwendet werden, – eine pro Datei. Die Tabelle enthält auch die Dateiformate für die generierten Berichte. |
@@ -50,7 +50,7 @@ Im folgenden Diagramm wird der im Tutorial verwendete grundlegende Workflow vera
 
    ![ssrs_tutorial_datengesteuert_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Datengesteuerte Abonnements werden normalerweise von einem Berichtsserveradministrator erstellt und verwaltet. Die Schritte für das Anlegen von datengesteuerten Abonnements erfordern das Erstellen von Abfragen, Kenntnisse darüber, welche Datenquellen Abonnentendaten enthalten, und erhöhte Berechtigungen auf einem Berichtsserver.  
   
 Das Tutorial verwendet den Bericht *Sales order* , der im Tutorial [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) erstellt wurde sowie Daten aus der Beispieldatenbank **AdventureWorks2014**.  
@@ -67,14 +67,14 @@ Auf Ihrem Computer müssen für die Verwendung dieses Lernprogramms folgende Anw
   
 -   Die **AdventureWorks2014** -Beispieldatenbank, die Daten für den Beispielbericht bereitstellt.  
   
--   Eine [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Rollenzuordnung, welche die Aufgabe Alle Abonnements verwalten für den Beispielbericht umfasst. Diese Aufgabe ist für das Definieren eines datengesteuerten Abonnements erforderlich. Wenn Sie als Administrator am Computer angemeldet sind, gewährt die standardmäßige Rollenzuweisung für lokale Administratoren die zum Erstellen datengesteuerter Abonnements erforderlichen Berechtigungen. Weitere Informationen finden Sie unter [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Eine [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Rollenzuordnung, welche die Aufgabe Alle Abonnements verwalten für den Beispielbericht umfasst. Diese Aufgabe ist für das Definieren eines datengesteuerten Abonnements erforderlich. Wenn Sie als Administrator am Computer angemeldet sind, gewährt die standardmäßige Rollenzuweisung für lokale Administratoren die zum Erstellen datengesteuerter Abonnements erforderlichen Berechtigungen. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Ein freigegebener Ordner, für den Sie Schreibberechtigungen besitzen. Auf den freigegebenen Ordner muss über eine Netzwerkverbindung zugegriffen werden können.  
   
 **Ungefähre Dauer dieses Tutorials:** 30 Minuten. Zusätzliche 30 Minuten werden benötigt, wenn Sie das Lernprogramm für grundlegende Berichte nicht abgeschlossen haben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+[Datengesteuerte Abonnements](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
 

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658873"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Erweiterbarkeitsarchitektur in SQL Server-Spracherweiterungen
@@ -54,7 +54,7 @@ Zu den Komponenten gehört ein **Launchpad**-Dienst, der zum Aufrufen externer R
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] ist ein Dienst, der die Lebensdauer, Ressourcen und Sicherheitsgrenzen des externen Prozesses verwaltet, der für die Skriptausführung verantwortlich ist. Dies ähnelt der Art und Weise, wie die Volltextindizierung und der Abfragedienst einen separaten Host für die Verarbeitung von Volltextabfragen starten. Der Launchpad-Dienst kann nur vertrauenswürdige Startprogramme starten, die von Microsoft veröffentlicht oder durch Microsoft zertifiziert wurden, da sie die Anforderungen hinsichtlich der Leistung und der Ressourcenverwaltung erfüllen.
 
-| Vertrauenswürdige Startprogramme | Erweiterung | SQL Server-Versionen |
+| Vertrauenswürdige Startprogramme | Durchwahl | SQL Server-Versionen |
 |-------------------|-----------|---------------------|
 | JavaLauncher.dll für Java | Java-Erweiterung | SQL Server 2019 |
 
@@ -70,7 +70,7 @@ Im folgenden Abschnitt werden die Kommunikationsprotokolle zwischen Komponenten 
 
 + **TCP/IP**
 
-  Für die interne Kommunikation zwischen SQL Server und dem SQL-Satelliten wird standardmäßig TCP/IP verwendet.
+  Standardmäßig wird für die interne Kommunikation zwischen SQL Server und SQL Satellite TCP/IP verwendet.
 
 + **ODBC**
 

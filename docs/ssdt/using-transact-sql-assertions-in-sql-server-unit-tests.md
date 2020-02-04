@@ -1,23 +1,24 @@
 ---
-title: Verwenden von Transact-SQL-Assertionen in SQL Server-Komponententests | Microsoft-Dokumentation
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Verwenden von Transact-SQL-Assertionen in SQL Server-Komponententests
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b4ff76e7d980081208f310dcae2a498f857151df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140961"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243514"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Verwenden von Transact-SQL-Assertionen in SQL Server-Komponententests
+
 In einem SQL Server-Komponententest wird ein Transact\-SQL-Testskript ausgeführt, von dem ein Ergebnis zurückgegeben wird. In einigen Fällen werden die Ergebnisse als Resultset zurückgegeben. Sie können die Ergebnisse mithilfe von Testbedingungen überprüfen. Beispielsweise können Sie eine Testbedingung verwenden, um zu überprüfen, wie viele Zeilen in einem bestimmten Resultset zurückgegeben wurden, bzw. um zu ermitteln, wie lange ein bestimmter Test gedauert hat. Weitere Informationen zu Testbedingungen finden Sie unter [Verwenden von Testbedingungen in SQL Server-Komponententests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
   
 Anstelle von Testbedingungen können Sie auch Transact\-SQL-Assertionen verwenden. Dabei handelt es sich um THROW- oder RAISERROR-Anweisungen in einem Transact\-SQL-Skript. Unter bestimmten Bedingungen ist eine Transact\-SQL-Assertion einer Testbedingung vorzuziehen.  
@@ -46,7 +47,7 @@ Um eine SQL Server-Komponententestmethode mit erwarteten Ausnahmen zu kennzeichn
 [ExpectedSqlException(MessageNumber=nnnnn, Severity=x, MatchFirstError=false, State=y)]  
 ```  
   
-Erläuterungen:  
+Hierbei gilt:  
   
 -   *nnnnn* ist die Nummer der erwarteten Meldung, z. B. 14025.  
   
@@ -56,7 +57,7 @@ Erläuterungen:
   
 Nicht festgelegte Parameter werden ignoriert. Sie übergeben diese Parameter an die RAISERROR-Anweisung im Datenbankcode. Wenn Sie MatchFirstError = true angeben, entspricht das Attribut jedem SqlError in der Ausnahme. Das Standardverhalten („MatchFirstError = true“) besteht darin, dass nur der erste aufgetretene Fehler vom Attribut verglichen wird.  
   
-Ein Beispiel zur Verwendung erwarteter Ausnahmen und einen negativen SQL Server-Komponententest finden Sie unter [Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Ein Beispiel dafür, wie erwartete Ausnahmen und ein negativer SQL Server-Komponententest verwendet werden, finden Sie unter [Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="the-raiserror-statement"></a>Die RAISERROR-Anweisung  
   
@@ -78,11 +79,11 @@ Dabei gilt:
   
 @ErrorState ist eine willkürliche ganze Zahl zwischen 1 und 127. Sie können diese ganze Zahl verwenden, um Vorkommen eines einzelnen Fehlers zu unterscheiden, die an verschiedenen Stellen im Code vorkommen.  
   
-Weitere Informationen finden Sie unter [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Ein Beispiel für die Verwendung von RAISERROR in einem SQL Server-Komponententest finden Sie im Thema [Vorgehensweise: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Weitere Informationen finden Sie unter [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Ein Beispiel zur Verwendung von RAISERROR in einem SQL Server-Komponententest finden Sie im Thema [Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Verwenden von Testbedingungen in SQL Server-Komponententests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Vorgehensweise: Öffnen eines SQL Server-Komponententests zur Bearbeitung](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[Gewusst wie: Öffnen eines SQL Server-Komponententests zur Bearbeitung](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

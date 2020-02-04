@@ -9,10 +9,10 @@ ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e12b16ecf8df3452d327152638b794c58e2ec67
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62503010"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>Beibehalten der Datumsformatierung für Analysis Services in mobilen Berichten
@@ -36,7 +36,7 @@ Um dieses Problem zu umgehen, fügen Sie ein berechnetes Element hinzu, wenn Sie
 
    ![ssas-query-designer-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
    
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen
 
--  [Daten für mobile Berichte von Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
--  [Vorbereiten von Daten für mobile Berichte von Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
+-  [Data for Reporting Services mobile reports (Daten für mobile Berichte von Reporting Services)](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
+-  [Prepare data for Reporting Services mobile reports (Vorbereiten von Daten für mobile Berichte von Reporting Services)](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)

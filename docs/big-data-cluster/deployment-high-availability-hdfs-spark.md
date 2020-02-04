@@ -5,22 +5,22 @@ description: Erfahren Sie, wie Sie Big Data-Cluster in SQL Server mit Hochverfü
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc93fbeb3cf02b205cadba92b6d528701ec53cbe
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706340"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720826"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>Bereitstellen des HDFS-Namenknotens und gemeinsamer Spark-Dienste in einer Hochverfügbarkeitskonfiguration
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Zusätzlich zur Bereitstellung der SQL Server-Masterinstanz in einer Hochverfügbarkeitskonfiguration mithilfe von Verfügbarkeitsgruppen können Sie auch andere erfolgskritische Dienste im Big Data-Cluster bereitstellen, um eine höhere Zuverlässigkeit sicherzustellen. Sie können `HDFS name node` und die gemeinsamen Spark-Dienste konfigurieren, die unter `SparkHead` mit einem zusätzlichen Replikat gruppiert sind. In diesem Fall wird `Zookeeper` ebenfalls im Big Data-Cluster bereitgestellt, um als Clusterkoordinator und als Metadatenspeicher für folgende Dienste zu dienen: 
+Zusätzlich zur Bereitstellung der SQL Server-Masterinstanz in einer Hochverfügbarkeitskonfiguration mithilfe von Verfügbarkeitsgruppen können Sie auch andere erfolgskritische Dienste im Big Data-Cluster bereitstellen, um eine höhere Zuverlässigkeit sicherzustellen. Sie können `HDFS name node` und die gemeinsamen Spark-Dienste konfigurieren, die unter `sparkhead` mit einem zusätzlichen Replikat gruppiert sind. In diesem Fall wird `Zookeeper` ebenfalls im Big Data-Cluster bereitgestellt, um als Clusterkoordinator und als Metadatenspeicher für folgende Dienste zu dienen: 
 
 - HDFS-Namenknoten
 - Livy und Yarn Resource Manager. 

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e03ae1a8c4cdab87f46f63da6271886b4518b5e3
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715017"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>Verwenden von R-Code-Profilerstellungsfunktionen
@@ -61,7 +61,7 @@ help("Sys.time")
 
 Die Dokumentation für Microsoft R Open, die standardmäßig installiert ist, enthält ein Handbuch zum Entwickeln von Erweiterungen für die R-Sprache, in dem [Profilerstellung und Debuggen](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) im Detail erläutert werden. Sie finden dieselbe Dokumentation auf Ihrem Computer im Verzeichnis C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 + [utils R-Paket](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
 + [„Advanced R“ von Hadley Wickham](http://adv-r.had.co.nz)

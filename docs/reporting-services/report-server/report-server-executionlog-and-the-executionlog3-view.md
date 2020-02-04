@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65619690"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Berichtsserver-Sichten ExecutionLog und ExecutionLog3
@@ -28,7 +28,7 @@ ms.locfileid: "65619690"
   
  Das Berichtsausführungsprotokoll wird in der Berichtsserver-Datenbank gespeichert, die standardmäßig **ReportServer**genannt wird. Die SQL-Ansichten enthalten die Ausführungsprotokollinformationen. Die Ansichten „2“ und „3“ wurden in aktuelleren Versionen hinzugefügt und enthalten neue Felder, oder sie enthalten Felder mit benutzerfreundlicheren Namen als die vorherigen Versionen. Die älteren Ansichten bleiben im Produkt, sodass es keinerlei Auswirkungen auf benutzerdefinierte Anwendungen, die von ihnen abhängen, gibt. Wenn keine Abhängigkeit von einer älteren Sicht vorliegt, z.B. ExecutionLog, wird empfohlen, die neueste Sicht, ExecutionLog**3**, zu verwenden.  
   
- In diesem Thema:  
+ Inhalte dieses Themas:  
   
 -   [Konfigurationseinstellungen für einen Berichtsserver im SharePoint-Modus](#bkmk_sharepoint)  
   
@@ -106,22 +106,22 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  In der folgenden Tabelle werden die Daten beschrieben, die im Berichtsausführungsprotokoll aufgezeichnet werden  
   
-|Spalte|und Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat. Wenn die Umgebung mehr als einen Berichtsserver hat, können Sie die zu überwachende InstanceName-Verteilung analysieren und bestimmen, ob der Netzwerklastenausgleich Anforderungen auf der anderen Seite von Berichtsservern wie erwartet verteilt.|  
 |ItemPath|Pfad, in dem ein Bericht oder Berichtselement gespeichert wird.|  
 |UserName|Benutzer-ID.|  
 |ExecutionID|Der interne einer Anforderung zugeordnete Bezeichner. Anforderungen für die selben Benutzersitzungen besitzen dieselbe Ausführungs-ID.|  
-|RequestType|Mögliche Werte:<br /><br /> Interaktiv<br /><br /> Abonnement<br /><br /> <br /><br /> Das Analysieren von nach RequestType=Subscription gefilterten und nach TimeStart sortierten Protokolldaten enthüllt möglicherweise Zeiträume starker Abonnementnutzung und Sie möchten vielleicht einige der Berichtsabonnements in eine andere Zeit ändern.|  
+|RequestType|Mögliche Werte:<br /><br /> Interactive<br /><br /> Subscription<br /><br /> <br /><br /> Das Analysieren von nach RequestType=Subscription gefilterten und nach TimeStart sortierten Protokolldaten enthüllt möglicherweise Zeiträume starker Abonnementnutzung und Sie möchten vielleicht einige der Berichtsabonnements in eine andere Zeit ändern.|  
 |Format|Renderingformat.|  
 |Parameter|Parameterwerte, die für die Berichtsausführung verwendet werden.|  
-|ItemAction|Mögliche Werte:<br /><br /> Render<br /><br /> Sort<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
+|ItemAction|Mögliche Werte:<br /><br /> Rendern<br /><br /> Sortieren<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
 |TimeStart|Anfangs- und Beendigungszeit für die Verarbeitung eines Berichts.|  
 |TimeEnd||  
 |TimeDataRetrieval|Anzahl von Millisekunden, die zum Abrufen der Daten benötigt werden.|  
 |TimeProcessing|Anzahl von Millisekunden, die zum Verarbeiten des Berichts benötigt werden.|  
 |TimeRendering|Anzahl von Millisekunden, die zum Rendern des Berichts benötigt werden.|  
-|Quelle|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> Live<br /><br /> Cache: Gibt eine zwischengespeicherte Ausführung an, Datasetabfragen werden z. B. nicht live ausgeführt.<br /><br /> Momentaufnahme<br /><br /> Verlauf<br /><br /> Ad-hoc: Gibt entweder einen auf einem dynamisch erstellten Berichtsmodell basierenden Drillthroughbericht oder einen Berichts-Generator-Bericht an, von dem eine Vorschau auf einem Client mithilfe des Berichtsservers zum Verarbeiten und Rendern angezeigt wird.<br /><br /> Sitzung: Gibt eine Anschlussanforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> RDCE: Gibt eine Berichtsdefinitionsanpassungs-Erweiterung (Report Definition Customization Extension, RDCE) an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
+|`Source`|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> Live<br /><br /> Cache: Gibt eine zwischengespeicherte Ausführung an, Datasetabfragen werden z. B. nicht live ausgeführt.<br /><br /> Momentaufnahme<br /><br /> Verlauf<br /><br /> Ad-hoc: Gibt entweder einen auf einem dynamisch erstellten Berichtsmodell basierenden Drillthroughbericht oder einen Berichts-Generator-Bericht an, von dem eine Vorschau auf einem Client mithilfe des Berichtsservers zum Verarbeiten und Rendern angezeigt wird.<br /><br /> Sitzung: Gibt eine Anschlussanforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> RDCE: Gibt eine Berichtsdefinitionsanpassungs-Erweiterung (Report Definition Customization Extension, RDCE) an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
 |Status|Status (entweder rsSuccess oder ein Fehlercode; beim Auftreten mehrerer Fehler wird nur der erste Fehler aufgezeichnet).|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
@@ -317,7 +317,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  In der folgenden Tabelle werden die Daten beschrieben, die im Berichtsausführungsprotokoll aufgezeichnet werden  
   
-|Spalte|und Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|------------------------------------------------------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat.|  
 |ReportPath|Die Pfadstruktur zum Bericht. Ein Bericht, der im Stammordner als „Test“ gespeichert ist, besitzt den ReportPath „/test“.<br /><br /> Ein Bericht mit dem Namen „Test“, der im Ordner „Samples“ gespeichert ist, würde den ReportPath „/Samples/test/“ aufweisen.|  
@@ -332,7 +332,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|Zeitaufwand (in Millisekunden) für das Abfragen der Daten, das Verarbeiten des Berichts und das Rendern des Berichts.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Quelle|Quelle der Berichtsausführung (1=Live, 2=Cache, 3=Snapshot 4=History).|  
+|`Source`|Quelle der Berichtsausführung (1=Live, 2=Cache, 3=Snapshot 4=History).|  
 |Status|Status (entweder rsSuccess oder ein Fehlercode; beim Auftreten mehrerer Fehler wird nur der erste Fehler aufgezeichnet).|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
@@ -349,7 +349,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  In der folgenden Tabelle werden die Daten beschrieben, die im Berichtsausführungsprotokoll aufgezeichnet werden  
   
-|Spalte|und Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat.|  
 |ReportID|Berichts-ID.|  
@@ -362,7 +362,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|Zeitaufwand (in Millisekunden) für das Abfragen der Daten, das Verarbeiten des Berichts und das Rendern des Berichts.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Quelle|Quelle der Berichtsausführung. Mögliche Werte: (1=Live, 2=Cache, 3=Snapshot, 4=History, 5=Adhoc, 6=Session, 7=RDCE).|  
+|`Source`|Quelle der Berichtsausführung. Mögliche Werte: (1=Live, 2=Cache, 3=Snapshot, 4=History, 5=Adhoc, 6=Session, 7=RDCE).|  
 |Status|Mögliche Werte: rsSuccess, rsProcessingAborted oder ein Fehlercode. Wenn mehrere Fehler auftreten, wird nur der erste Fehler aufgezeichnet.|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  

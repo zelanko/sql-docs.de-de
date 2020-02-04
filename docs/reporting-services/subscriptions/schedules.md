@@ -16,10 +16,10 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578097"
 ---
 # <a name="schedules"></a>Zeitpläne
@@ -35,7 +35,7 @@ ms.locfileid: "65578097"
   
   
 ##  <a name="bkmk_whatyoucando"></a> Verwenden von Zeitplänen  
- Sie können das [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und den [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] im einheitlichen Modus und Seiten für die SharePoint-Websiteverwaltung im SharePoint-Modus verwenden, um Zeitpläne zu erstellen und zu verwalten. Folgende Aktionen sind möglich:  
+ Sie können das [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und den [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] im einheitlichen Modus und Seiten für die SharePoint-Websiteverwaltung im SharePoint-Modus verwenden, um Zeitpläne zu erstellen und zu verwalten. Ihre Möglichkeiten:  
   
 -   Planen der Berichtsübermittlung in einem standardmäßigen oder datengesteuerten Abonnement.  
   
@@ -81,10 +81,10 @@ ms.locfileid: "65578097"
 ##  <a name="bkmk_credentials"></a> Speichern von Anmeldeinformationen und Verarbeitungskonten  
  Ihre Arbeitsweise mit Zeitplänen hängt von Aufgaben ab, die Bestandteil Ihrer Rollenzuweisung sind. Bei der Verwendung vordefinierter Rollen können Inhalts-Manager und Systemadministratoren beliebige Zeitpläne erstellen und verwalten. Wenn Sie benutzerdefinierte Rollenzuweisungen verwenden, muss die Rollenzuweisung Aufgaben für geplante Vorgänge enthalten.  
   
-|Zweck|Verwendete Aufgabe|Vordefinierte Rollen im einheitlichen Modus|Gruppen im SharePoint-Modus|  
+|Aufgabe|Verwendete Aufgabe|Vordefinierte Rollen im einheitlichen Modus|Gruppen im SharePoint-Modus|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |Erstellen, Ändern oder Löschen freigegebener Zeitpläne|Freigegebene Zeitpläne verwalten|Systemadministrator|Besitzer|  
-|Auswählen freigegebener Zeitpläne|Freigegebene Zeitpläne anzeigen|Systembenutzer|Member|  
+|Auswählen freigegebener Zeitpläne|Freigegebene Zeitpläne anzeigen|Systembenutzer|Members|  
 |Erstellen, Ändern oder Löschen berichtsspezifischer Zeitpläne in einem benutzerdefinierten Abonnement|Einzelne Abonnements verwalten|Browser, Berichts-Generator, Meine Berichte, Inhalts-Manager|Besucher, Mitglieder|  
 |Erstellen, Ändern oder Löschen berichtsspezifischer Zeitpläne für alle anderen geplanten Vorgänge|Berichtsverlauf verwalten, Alle Abonnements verwalten, Berichte verwalten|Inhalts-Manager|Besitzer|  
   
@@ -134,7 +134,7 @@ ms.locfileid: "65578097"
  [Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Zwischenspeichern von Berichten (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   

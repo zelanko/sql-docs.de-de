@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 07/16/2019
-ms.openlocfilehash: cd8f8e05e9be4bcd7a48c5e2fb800c2ebbc9e308
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.date: 12/11/2019
+ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329273"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244401"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Konfigurieren eines Berichtsservers in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68329273"
 
  Beachten Sie beim Installieren und Konfigurieren der Bereitstellung die folgenden Richtlinien:  
   
-|Schritt|und Beschreibung|Weitere Informationen|  
+|Schritt|BESCHREIBUNG|Weitere Informationen|  
 |----------|-----------------|----------------------|  
 |1|Überprüfen Sie vor der Installation von Reporting Services auf Serverknoten in einem NLB-Cluster die Anforderungen für die Bereitstellung für horizontales Skalieren.|[Konfigurieren der Bereitstellung für horizontales Skalieren für Berichtsserver im einheitlichen Modus](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|Konfigurieren Sie den NLB-Cluster, und überprüfen Sie, ob er ordnungsgemäß arbeitet.<br /><br /> Ordnen Sie unbedingt der virtuellen Server-IP-Adresse des NLB-Clusters einen Hostheadernamen zu. Der Hostheadername wird in der Berichtsserver-URL verwendet, und er ist leichter zu behalten als eine IP-Adresse.|Weitere Informationen finden Sie in der Windows Server-Produktdokumentation für die Version des verwendeten Windows-Betriebssystems.|  
@@ -56,21 +56,21 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-1. Generieren Sie mithilfe der von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]bereitgestellten Funktionalität zum automatischen Generieren einen Überprüfungsschlüssel und einen Entschlüsselungsschlüssel. Letztlich benötigen Sie einen einzigen <`MachineKey`>-Eintrag, den Sie für jede Berichtsserverinstanz in der Bereitstellung für horizontales Skalieren in die Datei „Web.config“ einfügen können.  
+1. Generieren Sie mithilfe der von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]bereitgestellten Funktionalität zum automatischen Generieren einen Überprüfungsschlüssel und einen Entschlüsselungsschlüssel. Letztlich benötigen Sie einen einzigen <`machineKey`>-Eintrag, den Sie für jede Berichtsserverinstanz in der Bereitstellung für horizontales Skalieren in die Datei „Web.config“ einfügen können.  
   
     Das folgende Beispiel zeigt den Wert, den Sie benötigen. Kopieren Sie das Beispiel nicht in die Konfigurationsdateien, denn die Schlüsselwerte sind ungültig.  
   
     ```xml
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Öffnen Sie die Datei „Web.config“ für den Berichtsserver, und fügen Sie im Abschnitt <`system.web`> das <`MachineKey`>-Element ein, das Sie generiert haben. Standardmäßig befindet sich die Datei Web.config für den Berichts-Manager unter \Programme\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Öffnen Sie die Datei „Web.config“ für den Berichtsserver, und fügen Sie im Abschnitt <`system.web`> das <`machineKey`>-Element ein, das Sie generiert haben. Standardmäßig befindet sich die Datei Web.config für den Berichts-Manager unter \Programme\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
-3. Speichern Sie die Datei.  
+3. Speichern Sie die Datei .  
   
 4. Wiederholen Sie den vorherigen Schritt für alle Berichtsserver in der Bereitstellung für horizontales Skalieren.  
   
-5. Überprüfen Sie, ob alle „Web.Config“-Dateien in den \Reporting Services\Reportserver-Ordnern identische <`MachineKey`>-Elemente im Abschnitt <`system.web`> enthalten.  
+5. Überprüfen Sie, ob alle „Web.Config“-Dateien in den \Reporting Services\Reportserver-Ordnern identische <`machineKey`>-Elemente im Abschnitt <`system.web`> enthalten.  
 
 ::: moniker-end
 
@@ -84,7 +84,7 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
     <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
-2. Speichern Sie die Datei.
+2. Speichern Sie die Datei .
 
 3. Wiederholen Sie den vorherigen Schritt für alle Berichtsserver in der Bereitstellung für horizontales Skalieren.  
 
@@ -118,7 +118,7 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
   
 4. Geben Sie für **UrlRoot** einen Wert ein, der den virtuellen Namen des Clusters im folgenden Format enthält: „https://“ oder `https://<virtual_server>/<reportserver>`.  
   
-5. Speichern Sie die Datei.  
+5. Speichern Sie die Datei .  
   
 6. Wiederholen Sie diese Schritte jeweils in der Datei RSReportServer.config für alle Berichtsserver in der Bereitstellung für horizontales Skalieren.  
   
@@ -144,5 +144,5 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
 
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Manage a Reporting Services Native Mode Report Server (Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus)](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

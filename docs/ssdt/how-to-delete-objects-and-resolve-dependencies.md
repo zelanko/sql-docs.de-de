@@ -1,11 +1,7 @@
 ---
-title: 'Gewusst wie: Löschen von Objekten und Auflösen von Abhängigkeiten | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Löschen von Objekten und Auflösen von Abhängigkeiten
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae25dbc584e564130348507e5aef657823502923
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9f2bd6ed462004d76750fb2328d1615a51c2c84
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026614"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241426"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>Gewusst wie: Löschen von Objekten und Auflösen von Abhängigkeiten
+
 Wenn Sie ein Objekt im **SQL Server-Objekt-Explorer** umbenennen oder löschen, erkennt SQL Server Data Tools automatisch alle zugehörigen Abhängigkeitsobjekte und bereitet ein ALTER-Skript vor, um die Abhängigkeit entsprechend umzubenennen oder zu löschen.  
   
 > [!WARNING]  
@@ -46,7 +47,7 @@ Wenn Sie ein Objekt im **SQL Server-Objekt-Explorer** umbenennen oder löschen, 
     > [!WARNING]  
     > Skriptbasierte Abhängigkeiten (z. B. Verweise aus einer Sicht auf eine Tabelle) und gespeicherte Prozeduren werden von SSDT nicht automatisch aktualisiert. Nach dem Umbenennen können Sie anhand des Bereichs **Fehlerliste** alle anderen Abhängigkeiten suchen und diese manuell korrigieren.  
   
-5.  Übernehmen Sie die Änderungen, indem Sie die Schritte in der vorherigen Prozedur [Vorgehensweise: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) ausführen.  
+5.  Wenden Sie die Änderung gemäß den Schritten im vorherigen Verfahren [Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) an.  
   
 6.  Klicken Sie im **SQL Server-Objekt-Explorer** erneut mit der rechten Maustaste auf die Tabelle **Customers**, und wählen Sie die Option **Daten anzeigen** aus. Beachten Sie, dass Tabellendaten nach dem Umbenennungsvorgang unverändert beibehalten sind.  
   

@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041246"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
@@ -31,7 +31,7 @@ Wenn in einem Kreisdiagramm zu viele Datenpunkte vorhanden sind, können die Dat
   
 Ungefähre Dauer dieses Lernprogramms: 10 Minuten  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Erstellen eines Kreisdiagramms im Diagramm-Assistenten  
@@ -113,7 +113,7 @@ Sie können für jeden Slice des Kreisdiagramms den Prozentsatz des Slices im Ve
   
 3.  Klicken Sie mit der rechten Maustaste auf eine Bezeichnung, und klicken Sie anschließend auf **Reihenbezeichnungseigenschaften**.  
   
-4.  Geben Sie **#PERCENT** für die Option **Bezeichnungsdaten** ein.  
+4.  Geben Sie **#PERCENT** für die Option **Bezeichnungsdaten**ein.  
     
 5.  (Optional) Wenn Sie die Anzahl von Dezimalstellen in der Bezeichnung angeben möchten, tippen Sie im Feld **Bezeichnungsdaten** nach **#PERCENT** **{Pn}** ein, wobei *n* die Anzahl der anzuzeigenden Dezimalstellen darstellt. Geben Sie z.B. **#PERCENT{P0}** ein, um keine Dezimalstellen anzuzeigen.  
 
@@ -211,7 +211,7 @@ Da das Kreisdiagramm die einzige Visualisierung im Bericht ist, muss für das Di
   
 Der Bericht wird auf dem Berichtsserver gespeichert.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 Sie haben das Lernprogramm "Hinzufügen eines Kreisdiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme (Berichts-Generator und SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken (Berichts-Generator und SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

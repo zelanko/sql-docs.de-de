@@ -11,18 +11,18 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028894"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise
 Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und ihrer Anzeige in mobilen Power BI-Apps.
 
-Erstellen Sie mobile Berichte auf einer Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten sowie flexiblen Elementen für mobile Berichte. Verbinden Sie sich mit einer Vielzahl lokaler Datenquellen, oder laden Sie Excel-Arbeitsmappen hoch, um mobile Berichte zu erstellen. Speichern Sie Ihre Berichte in einem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal, und zeigen Sie sie in einem Browser oder mobilen Power BI-Apps an.  
+Das Tool bietet eine Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten und flexiblen Elementen für mobile Berichte. Verbinden Sie sich mit einer Vielzahl lokaler Datenquellen, oder laden Sie Excel-Arbeitsmappen hoch, um mobile Berichte zu erstellen. Speichern Sie Ihre Berichte in einem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal, und zeigen Sie sie in einem Browser oder mobilen Power BI-Apps an.  
   
-Dieser Artikel begleitet Sie durch die folgenden Aufgaben:   
+In diesem Artikel wird Folgendes beschrieben:   
   
 - Erstellen einer freigegebenen Datenquelle und eines Datasets im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal mithilfe der AdventureWorks-Datenbank als Beispieldatenquelle  
 - Erstellen eines mobilen Reporting Services-Berichts in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
@@ -44,7 +44,7 @@ Um folgen zu können, benötigen Sie diese Produkte:
   
 ## <a name="create-a-shared-data-source"></a>Erstellen einer freigegebenen Datenquelle  
   
-Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der Datenquellen erstellen, die Reporting Services unterstützt. Sehen Sie sich die [Liste unterstützter Datenquellen](../report-data/data-sources-supported-by-reporting-services-ssrs.md)an.  
+Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der Datenquellen erstellen, die Reporting Services unterstützt. [Eine Liste unterstützter Datenquellen finden Sie hier](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal auf **Neu** > **Datenquelle**.  
   
@@ -133,7 +133,7 @@ Sie erstellen KPIs direkt im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversio
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="create-mobile-report">Erstellen eines mobilen Berichts in Reporting Services</a>  
+## <a name="create-mobile-report">Create a Reporting Services mobile report (Erstellen eines mobilen Berichts in Reporting Services)</a>  
    
 Zum Erstellen eines mobilen Reporting Services-Berichts [installieren Sie Publisher für mobile Berichte von SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766)oder starten das Tool im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal. 
 
@@ -165,7 +165,7 @@ Beim ersten Öffnen von [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-
   
    ![PBI_SSMRP_TreeMapDataProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapdataprops.png)  
   
-6. Klicken Sie auf die Registerkarte **Layout** .  
+6. Klicken Sie auf die Registerkarte **Layout**.  
   
 7. Klicken Sie auf das Rädchen „Optionen“ ![PBI_SSMRP_Cog](../../reporting-services/mobile-reports/media/pbi-ssmrp-cog.png) rechts oben in der Strukturzuordnung, um das enthaltene Menü einzublenden.   
   
@@ -301,7 +301,7 @@ Tippen Sie auf die Registerkarte **KPIs** oder **Mobile Berichte** .
   
 Die KPIs und mobilen Berichte werden in denselben Ordnern angezeigt, in denen sie sich im Reporting Services-Webportal befinden.   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  
 -  Informationen zu iOS- und Android-Geräten finden Sie unter [Anzeigen lokaler Berichte und KPIs eines Berichtsservers in den mobilen Power BI-Apps](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports).
 -  Informationen zu iOS- und Android-Geräten finden Sie unter [Anzeigen von mobilen SSRS-Berichten (Reporting Services) und -KPIs in der mobilen Power BI-App für Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/).    

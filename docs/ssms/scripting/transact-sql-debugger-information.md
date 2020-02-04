@@ -1,10 +1,8 @@
 ---
-title: Transact-SQL-Debuggerinformationen | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Transact-SQL-Debuggerinformationen
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -16,20 +14,28 @@ helpviewer_keywords:
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6329776bd998a8d90cbadd577132a500020515b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82f5caaa772ab21ce5e36165fcc46665c99a4ea5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253559"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253040"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL-Debuggerinformationen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Jedes Mal, wenn der Debugger bei einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung die Ausführung unterbricht, können Sie den aktuellen Ausführungsstatus in den verschiedenen Debuggerfenstern anzeigen.  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Jedes Mal, wenn der Debugger bei einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung die Ausführung unterbricht, können Sie den aktuellen Ausführungsstatus in den verschiedenen Debuggerfenstern anzeigen. 
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="debugger-windows"></a>Debuggerfenster  
- Im Debuggermodus öffnet der Debugger zwei Fenster am unteren Rand des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Fensters. Der Debugger zeigt alle seine Informationen in diesen zwei Fenstern an. Jedes Debuggerfenster enthält Registerkarten, durch deren Auswahl Sie bestimmen können, welcher Satz von Informationen im Fenster angezeigt wird. Das linke Debuggerfenster enthält die Registerkarten **Lokal**, **Überwachen 1**, **Überwachen 2**, **Überwachen 3**und **Überwachen 4** . Das rechte Debuggerfenster enthält die Registerkarten **Aufrufliste**, **Threads**, **Breakpoints**, **Befehlsfenster**und **Ausgabe** .  
+
+Im Debuggermodus öffnet der Debugger zwei Fenster am unteren Rand des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Fensters. Der Debugger zeigt alle seine Informationen in diesen zwei Fenstern an. Jedes Debuggerfenster enthält Registerkarten, durch deren Auswahl Sie bestimmen können, welcher Satz von Informationen im Fenster angezeigt wird. Das linke Debuggerfenster enthält die Registerkarten **Lokal**, **Überwachen 1**, **Überwachen 2**, **Überwachen 3**und **Überwachen 4** . Das rechte Debuggerfenster enthält die Registerkarten **Aufrufliste**, **Threads**, **Breakpoints**, **Befehlsfenster**und **Ausgabe** .  
   
 > [!NOTE]  
 >  Die vorherigen Beschreibungen gelten für die Standardpositionen der Debuggerfenster. Sie können eine Registerkarte ziehen, um sie von einem Fenster in ein anderes zu verschieben, oder Sie können die Verankerung einer Registerkarte aufheben, um ein neues Fenster zu erstellen, das Sie beliebig platzieren können.  
@@ -41,7 +47,7 @@ ms.locfileid: "68253559"
 -   Klicken Sie auf der Symbolleiste **Debuggen** auf **Breakpoints**, und wählen Sie dann das gewünschte Fenster aus.  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL-Ausdrücke  
- Ausdrücke sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Klauseln, die einen einzelnen Skalarwert ergeben, z. B. Variablen oder Parameter. Im linken Debuggerfenster können die Datenwerte anzeigt werden, die derzeit Ausdrücken auf bis zu fünf dieser Registerkarten oder Fenster zugeordnet sind: **Lokal, Überwachen 1**, **Überwachen 2**, **Überwachen 3** und **Überwachen 4**.  
+ Ausdrücke sind [!INCLUDE[tsql](../../includes/tsql-md.md)] -Klauseln, die einen einzelnen Skalarwert ergeben, z. B. Variablen oder Parameter. Im linken Debuggerfenster können die Datenwerte anzeigt werden, die derzeit Ausdrücken auf bis zu fünf dieser Registerkarten oder Fenster zugeordnet sind: **Lokal, Überwachen 1**, **Überwachen 2**, **Überwachen 3**und **Überwachen 4**.  
   
  Das Fenster **Lokal** zeigt Informationen über die lokalen Variablen im aktuellen Bereich des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers an. Der Satz von Ausdrücken, die im Fenster **Lokal** aufgeführt sind, ändert sich, wenn der Debugger die verschiedenen Teile des Codes durchläuft.  
   

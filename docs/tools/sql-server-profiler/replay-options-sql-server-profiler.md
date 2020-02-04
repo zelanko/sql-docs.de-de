@@ -1,30 +1,28 @@
 ---
-title: Wiedergabe Optionen (SQL Server Profiler) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Wiedergabeoptionen
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- replaying traces
-- health monitor [SQL Server]
-- Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a79c932739fa8d9d5d9125cdd93cc3564d16f55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 649bf543417c0772c23c6338862e33b6bac9bad1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031439"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307496"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Wiedergabeoptionen (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Vor der Wiedergabe einer aufgezeichneten Ablaufverfolgung mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]können Sie im Dialogfeld **Wiedergabekonfiguration** Wiedergabeoptionen festlegen. Um dieses Dialogfeld zu starten, öffnen Sie die Datei oder Tabelle für die Ablaufverfolgungswiedergabe in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], und klicken Sie im Menü **Wiedergeben** auf **Starten**. Informationen zu den Berechtigungen, die zum Wiedergeben einer Ablaufverfolgung erforderlich sind, finden Sie unter [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
+
+Vor der Wiedergabe einer aufgezeichneten Ablaufverfolgung mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]können Sie im Dialogfeld **Wiedergabekonfiguration** Wiedergabeoptionen festlegen. Um dieses Dialogfeld zu starten, öffnen Sie die Datei oder Tabelle für die Ablaufverfolgungswiedergabe in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], und klicken Sie im Menü **Wiedergeben** auf **Starten**. Informationen zu den Berechtigungen, die zum Wiedergeben einer Ablaufverfolgung erforderlich sind, finden Sie unter [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
  In diesem Thema werden die im Dialogfeld **Wiedergabekonfiguration** angegebenen Optionen beschrieben.  
   
@@ -51,14 +49,14 @@ ms.locfileid: "68031439"
  Optimiert die Leistung und deaktiviert das Debuggen. Die Ereignisse werden in der Reihenfolge wiedergegeben, in der sie für eine bestimmte Serverprozess-ID (SPID) aufgezeichnet wurden, aber die Reihenfolge der SPIDs ist nicht sichergestellt.  
   
  **Wiedergabeergebnisse anzeigen**  
- Hiermit wird das Ergebnis der Wiedergabe angezeigt. Diese Option ist die Standardeinstellung. Wenn die wiedergegebene Ablaufverfolgung sehr groß ist, sollten Sie diese Option eventuell deaktivieren, um Datenträgerspeicher zu sparen.  
+ Hiermit wird das Ergebnis der Wiedergabe angezeigt. Dies ist die Standardoption. Wenn die wiedergegebene Ablaufverfolgung sehr groß ist, sollten Sie diese Option eventuell deaktivieren, um Datenträgerspeicher zu sparen.  
   
 > [!NOTE]  
 >  Für eine optimale Wiedergabeleistung wird empfohlen, Ereignisse mithilfe mehrerer Threads wiederzugeben und die Wiedergabeergebnisse nicht anzuzeigen.  
   
 ## <a name="advanced-replay-options"></a>Erweiterte Wiedergabeoptionen  
  **System-SPIDs wiedergeben**  
- Alle System-SPIDs wiedergeben. Diese Option ist die Standardeinstellung.  
+ Alle System-SPIDs wiedergeben. Dies ist die Standardoption.  
   
  **Nur eine SPID wiedergeben**  
  Gibt die SPID-Nummer wieder, die Sie aus der Liste auswählen.  
@@ -80,7 +78,7 @@ ms.locfileid: "68031439"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Wiedergeben von Ablaufverfolgungen](../../tools/sql-server-profiler/replay-traces.md)   
- [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Anforderungen für die Wiedergabe](../../tools/sql-server-profiler/replay-requirements.md)   
  [Überlegungen zum Wiedergeben von Ablaufverfolgungen &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

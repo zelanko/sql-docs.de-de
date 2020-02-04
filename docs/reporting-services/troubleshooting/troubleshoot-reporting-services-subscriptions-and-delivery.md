@@ -9,17 +9,17 @@ ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572115"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services
   
     
 Dieses Thema soll Ihnen beim Behandeln von Problemen helfen, die beim Arbeiten mit Berichtsabonnements, -plänen und -übermittlung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] auftreten können.  
-## <a name="log-information"></a>Protokollinformationen
+## <a name="log-information"></a>Protokollieren von Informationen
  
 Die Abonnementseite in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] enthält den Status eines Abonnements. Wenn jedoch ein Problem mit dem Abonnement auftritt, befinden sich die detaillierten Informationen in den [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Protokollen. 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
@@ -46,7 +46,7 @@ Wenn Sie eine E-Mail-Anwendung ausführen und dafür Post Office Protocol Versio
   
 Hierbei steht \<error message> für zusätzliche Fehlermeldungsinformationen, die von Datenobjekten für die Zusammenarbeit (Collaboration Data Objects, CDO) zurückgegeben werden.  
   
-### <a name="to-resolve-this-problem"></a>So lösen Sie dieses Problem  
+### <a name="to-resolve-this-problem"></a>Dieses Problem lässt sich wie folgt beheben:  
 * Legen Sie den Wert des `SendUsing` -Elements in der Datei **Rsreportserver.config** auf 1 fest.  
 * Löschen Sie den Wert der `SMTPServer` -Eigenschaft, sodass diese leer ist. Darüber hinaus müssen Sie einen Wert für die `SMTPServerPickupDirectory` -Eigenschaft angeben.   
   

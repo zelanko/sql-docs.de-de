@@ -1,6 +1,6 @@
 ---
-title: Öffnen einer Vorlage | Microsoft-Dokumentation
-ms.custom: ''
+title: Öffnen einer Vorlage
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c52d9b58a3fb738222c78dd57e9d45634963fbde
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dd59b435c1c0fbd3461333305824aca61c68d296
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266765"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245692"
 ---
 # <a name="open-a-template"></a>Öffnen einer Vorlage
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +44,6 @@ Sobald die Vorlage geöffnet ist, können Sie im Dialogfeld **Vorlagenparameter 
 Wird durch das Öffnen einer Vorlage ein neues Editor-Fenster geöffnet, erfolgt dies mit den Anmeldeinformationen der aktuellen aktiven Verbindung. Ist beispielsweise beim Öffnen einer CREATE DATABASE-Vorlage eine [!INCLUDE[ssDE](../../includes/ssde_md.md)] -Instanz im Objekt-Explorer fokussiert, wird ein neues Editor-Fenster mit einer Verbindung zu dieser Instanz geöffnet. Ist keine aktive Verbindung vorhanden, gibt [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein Anmeldedialogfeld zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Vorlagen-Explorer](../../ssms/template/template-explorer.md)  
+[Template Explorer](../../ssms/template/template-explorer.md)  
 [Vorlagenparameter ersetzen](../../ssms/template/replace-template-parameters.md)  
   

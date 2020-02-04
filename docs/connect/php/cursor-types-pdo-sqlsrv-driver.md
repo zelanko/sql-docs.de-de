@@ -11,20 +11,20 @@ ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c62c2a35123e77f5366dd5348fd51b3c50c85605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993690"
 ---
-# <a name="cursor-types-pdosqlsrv-driver"></a>Cursortypen (PDO_SQLSRV-Treiber)
+# <a name="cursor-types-pdo_sqlsrv-driver"></a>Cursortypen (PDO_SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Mit dem PDO_SQLSRV-Treiber können Sie scrollbare Resultsets mit einem von mehreren Cursor erstellen.
 
 Informationen zum Angeben eines Cursors mithilfe des PDO_SQLSRV-Treibers sowie Codebeispiele finden Sie unter [PDO::prepare](../../connect/php/pdo-prepare.md).
 
-## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV und serverseitige Cursor
+## <a name="pdo_sqlsrv-and-server-side-cursors"></a>PDO_SQLSRV und serverseitige Cursor
 Vor Version 3.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] war es möglich, mit dem PDO_SQLSRV-Treiber ein Resultset mit einem serverseitigen Vorwärtscursor oder einem statischen Cursor zu erstellen. Ab Version 3.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] sind auch Keyset- und dynamische Cursor verfügbar.
 
 Mit [PDO::prepare](../../connect/php/pdo-prepare.md) können Sie den Typ des serverseitigen Cursors angeben, indem Sie einen der folgenden Cursortypen auswählen:
@@ -41,7 +41,7 @@ Sie können einen dynamischen, statischen oder Keysetcursor anfordern, indem Sie
 
 -   `PDO::SQLSRV_CURSOR_KEYSET`
 
-## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV und clientseitige Cursor
+## <a name="pdo_sqlsrv-and-client-side-cursors"></a>PDO_SQLSRV und clientseitige Cursor
 Clientseitige Cursor wurden ab Version 3.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] hinzugefügt. Mit ihnen kann ein komplettes Resultset im Arbeitsspeicher zwischengespeichert werden. Ein Vorteil besteht darin, dass die Zeilenanzahl nach dem Ausführen einer Abfrage verfügbar ist.
 
 Clientseitige Cursor eignen sich für kleine bis mittelgroße Resultsets. Für große Resultsets sollten serverseitige Cursor verwendet werden.

@@ -1,10 +1,8 @@
 ---
-title: Angeben einer Trefferanzahl | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Angeben einer Trefferanzahl
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.hitcount
@@ -13,19 +11,27 @@ helpviewer_keywords:
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862d99fd57b22e1643ce2591fccfb0478b664074
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 03eed65b3295f1b9a1cc5b33de8809ce1d1c5c90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267693"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243540"
 ---
 # <a name="specify-a-hit-count"></a>Angeben einer Trefferanzahl
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Die Breakpoint-Trefferanzahl bildet einen Leistungsindikator, der bei jedem Erreichen des Breakpoints vom [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger inkrementiert wird. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.  
-  
-## <a name="hit-count-considerations"></a>Überlegungen zur Trefferanzahl  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Die Breakpoint-Trefferanzahl bildet einen Leistungsindikator, der bei jedem Erreichen des Breakpoints vom [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger inkrementiert wird. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="hit-count-considerations"></a>Überlegungen zur Trefferanzahl
+
  Standardmäßig wird die Ausführung stets unterbrochen, wenn ein Breakpoint erreicht wird. Folgende Optionen sind verfügbar:  
   
 -   Immer anhalten (Standard).  
@@ -46,7 +52,7 @@ ms.locfileid: "68267693"
   
 1.  Klicken Sie im Editor-Fenster mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   
-     -oder-  
+     Oder  
   
      Klicken Sie im Fenster **Breakpoints** mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   
@@ -60,7 +66,7 @@ ms.locfileid: "68267693"
   
 1.  Klicken Sie im Editor-Fenster mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   
-     -oder-  
+     Oder  
   
      Klicken Sie im Fenster **Breakpoints** mit der rechten Maustaste auf das Breakpointsymbol, und klicken Sie dann im Kontextmenü auf **Trefferanzahl** .  
   

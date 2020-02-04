@@ -10,10 +10,10 @@ author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1aa12da4a138ea8f292fa8b64db00456d3c35fe3
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70000446"
 ---
 # <a name="get-python-package-information"></a>Abrufen von Paketinformationen für Python
@@ -57,7 +57,7 @@ Weitere Informationen zur Variablen `sys.path`, und wie sie zum Festlegen des Su
 
 Wenn Sie bei der Installation die Python-Funktion auswählen, werden die folgenden Python-Pakete mit SQL Server Machine Learning Services installiert.
 
-| Pakete | Versionsoptionen |  und Beschreibung |
+| Pakete | Version |  BESCHREIBUNG |
 | ---------|---------|--------------|
 | [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | Wird für Remotecomputekontexte, Streaming, parallele Ausführung von RX-Funktionen für Datenimport und Transformation, Modellierung, Visualisierung und Analyse verwendet. |
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Fügt Machine Learning-Algorithmen in Python hinzu. |
@@ -130,6 +130,6 @@ print(sys.version)
 ## <a name="next-steps"></a>Nächste Schritte
 
 + [Neue Python-Pakete installieren](../python/install-additional-python-packages-on-sql-server.md)
-+ [Abrufen von Paketinformationen für R](r-package-information.md)
++ [Abrufen von R-Paketinformationen](r-package-information.md)
 + [Neue R-Pakete installieren](../r/install-additional-r-packages-on-sql-server.md)
 + [R- und Python-Tutorials](../tutorials/machine-learning-services-tutorials.md)

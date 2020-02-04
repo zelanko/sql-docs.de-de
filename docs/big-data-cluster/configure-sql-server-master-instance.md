@@ -10,10 +10,10 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 205f849310ffe2f6139e76783ba7fa6ac315b214
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73532359"
 ---
 # <a name="configure-master-instance-of-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Konfigurieren der Masterinstanz von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -67,4 +67,4 @@ Führen Sie die folgenden Schritte aus, um diese Einstellungen zu konfigurieren:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zur Bereitstellung von SQL Server-Big Data-Clustern finden Sie unter [Erste Schritte mit SQL Server-Big Data-Clustern](deploy-get-started.md).
+Weitere Informationen zur Bereitstellung von Big Data-Clustern für SQL Server finden Sie unter [Erste Schritte mit Big Data-Clustern für SQL Server](deploy-get-started.md).

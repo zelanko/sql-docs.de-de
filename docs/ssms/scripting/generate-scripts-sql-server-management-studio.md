@@ -1,6 +1,6 @@
 ---
-title: Erstellen von Skripts (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen von Skripts (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,18 +11,18 @@ ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 800153a20651b649d644fecfeacf11d48958fab8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265446"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253862"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Erstellen von Skripts (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt zwei Mechanismen zum Generieren von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts bereit. Verwenden Sie zum Erstellen von Skripts für mehrere Objekte den **Assistenten zum Generieren und Veröffentlichen von Skripts**. Sie können ein Skript für einzelne Objekte oder mehrere Objekte auch über das Menü **Skript für** im **Objekt-Explorer**generieren.  
 
-Ein ausführliches Tutorial zur Skripterstellung für verschiedene Objekte mithilfe von SQL Server Management Studio finden Sie unter [Tutorial: Scripting in SSMS (Skripterstellung in SSMS)](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+Ein ausführliches Tutorial zur Skripterstellung für verschiedene Objekte mithilfe von SQL Server Management Studio finden Sie unter [Tutorial: Scripting in SSMS (Tutorial: Skripterstellung in SSMS)](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
 
   
 ## <a name="before-you-begin"></a>Vorbereitungen  

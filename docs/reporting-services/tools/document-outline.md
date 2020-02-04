@@ -11,10 +11,10 @@ ms.assetid: 521f3772-043a-4bfa-a3d6-d5e3405ac09c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1e7b98cb6ffedcf5427ccafbc10d8b8f6f6e604a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580330"
 ---
 # <a name="document-outline"></a>Dokumentgliederung
@@ -23,7 +23,7 @@ ms.locfileid: "65580330"
 Wenn das Fenster **Dokumentgliederung** nicht angezeigt wird, klicken Sie im Menü **Ansicht**auf **Weitere Fenster**und anschließend auf Dokumentgliederung.
 Oder verwenden Sie STRG+ALT+T.
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Alle erweitern**  
  Klicken Sie, um alle Knoten in der Hierarchie zu erweitern.  
   

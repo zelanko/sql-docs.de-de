@@ -9,10 +9,10 @@ ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63280469"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Hinzufügen von Datenrastern zu mobilen Berichten | Reporting Services
@@ -76,7 +76,7 @@ Wenn Sie einem Datenraster eine Diagrammspalte hinzufügen, müssen Sie eine get
    * **Zielsuche** ist das Feld in der Datentabelle **Referenzdaten für Diagrammvisualisierungen**. Die Daten für das Diagramm in den einzelnen Zeilen werden in diesen beiden Feldern verknüpft.   
    * **Diagrammdatenfeld** bestimmt, welche Metrik in der Datentabelle **Referenzdaten für Diagrammvisualisierungen** als Wert oder Reihe der Y-Achse im Diagramm in den einzelnen Zeilen verwendet wird.  
 
-## <a name="see-also"></a>Siehe auch 
+## <a name="see-also"></a>Weitere Informationen 
 * [Karten in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Navigationen in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualisierungen in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

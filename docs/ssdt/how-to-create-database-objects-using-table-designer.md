@@ -1,11 +1,7 @@
 ---
-title: 'Gewusst wie: Erstellen von Datenbankobjekten mit dem Tabellen-Designer | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Erstellen von Datenbankobjekten mit dem Tabellen-Designer
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897174"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241504"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Gewusst wie: Erstellen von Datenbankobjekten mit dem Tabellen-Designer
+# <a name="how-to-create-database-objects-using-table-designer"></a>Vorgehensweise: Erstellen von Datenbankobjekten mit dem Tabellen-Designer
+
 Der neue Knoten **SQL Server** im **SQL Server-Objekt-Explorer** ähnelt dem in SSMS nicht nur visuell. Sie können neue Objekte auch mit Kontextmenüs erstellen, die wie ihre Äquivalente in SSMS funktionieren.  
   
 Sie können z.B. unter dem Knoten **Datenbanken** eine neue Datenbank erstellen. Ebenso können Sie im neuen Tabellen-Designer eine bestimmte Datenbank auswählen und erstellen sowie Tabellendefinitionen und die zugehörigen Programmierobjekte direkt bearbeiten. Vom Tabellen-Designer können Sie in einen Skriptbereich wechseln, in dem Sie das Skript direkt bearbeiten können, von dem diese Tabelle definiert wird.  
@@ -56,24 +57,24 @@ Sie können z.B. unter dem Knoten **Datenbanken** eine neue Datenbank erstellen.
 5.  Fügen Sie eine weitere neue Spalte hinzu. Geben Sie **Address** im Feld **Name** und **nvarchar (MAX)** im Feld **Datentyp** ein, und deaktivieren Sie die Option **NULL-Werte zulassen**.  
   
     > [!WARNING]  
-    > Wenn Sie Objekte aus einer verbundenen Datenbank bearbeiten, speichern Sie sie nicht auf dem lokalen Laufwerk. Speichern Sie die Änderungen an der Datenbank ordnungsgemäß, indem Sie die Schritte in der nächsten Prozedur [Vorgehensweise: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) ausführen.  
+    > Wenn Sie Objekte aus einer verbundenen Datenbank bearbeiten, speichern Sie sie nicht auf dem lokalen Laufwerk. Um die Änderungen ordnungsgemäß in der Datenbank zu speichern, führen Sie die Schritte im nächsten Verfahren [Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) aus.  
   
 6.  Führen Sie die obigen Schritte erneut aus, um eine weitere Tabelle mit dem Namen **Customer** zu erstellen. Fügen Sie der Tabelle "Customer" mithilfe des Spaltenrasters die folgenden Spalten hinzu. Achten Sie darauf, dass Sie das Skript so ändern, dass der Name der Tabelle `[dbo].[Customer]` lautet.  
   
     |Name|Datentyp|**NULL-Werte zulassen**|  
     |--------|-------------|-------------------|  
-    |ID|INT|Nicht aktiviert|  
-    |Name|nvarchar (128)|Nicht aktiviert|  
+    |Id|INT|Deaktiviert|  
+    |Name|nvarchar (128)|Deaktiviert|  
   
 7.  Erstellen Sie eine weitere Tabelle mit dem Namen **Products**. Fügen Sie der Tabelle "Products" mithilfe des Spaltenrasters die folgenden Spalten hinzu. Achten Sie darauf, dass Sie das Skript so ändern, dass der Name der Tabelle `[dbo].[Products]` lautet.  
   
     |Name|Datentyp|**NULL-Werte zulassen**|  
     |--------|-------------|-------------------|  
-    |ID|INT|Nicht aktiviert|  
-    |Name|nvarchar (128)|Nicht aktiviert|  
-    |ShelfLife|INT|Überprüft|  
-    |SupplierId|INT|Überprüft|  
-    |CustomerId|INT|Überprüft|  
+    |Id|INT|Deaktiviert|  
+    |Name|nvarchar (128)|Deaktiviert|  
+    |ShelfLife|INT|Aktiviert|  
+    |SupplierId|INT|Aktiviert|  
+    |CustomerId|INT|Aktiviert|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>So erstellen Sie mithilfe des Tabellen-Designers eine neue CHECK-Einschränkung  
   

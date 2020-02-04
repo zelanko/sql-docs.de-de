@@ -9,10 +9,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
 ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028936"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server (CEIP)
@@ -26,7 +26,7 @@ Microsoft SQL Server erfasst standardmäßig Informationen darüber, wie Kunden 
 Microsoft sendet nicht die folgenden Informationen mit diesem Mechanismus:
 - Werte aus Benutzertabellen
 - Anmeldeinformationen oder andere Authentifizierungsinformationen
-- personenbezogene Informationen (PII)
+- Personenbezogene Informationen (Personally Identifiable Information, PII)
 
 Die folgenden Beispielszenarios beinhalten Informationen zur Nutzung von Funktionen, die zur Verbesserung des Produkts beitragen.
 
@@ -84,7 +84,7 @@ Enterprise-Kunden können die Einstellungen für Gruppenrichtlinien konfiguriere
     
     Name des Registrierungseintrags = CustomerFeedback
     
-    DWORD-Eintrag: 0 bedeutet „deaktiviert“, 1 bedeutet „aktiviert“
+    Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
     
     {InstanzID} ist der Instanztyp und die Instanz, wie in folgendem Beispiel:
 
@@ -98,7 +98,7 @@ Enterprise-Kunden können die Einstellungen für Gruppenrichtlinien konfiguriere
     
     Name des Registrierungseintrags = CustomerFeedback
     
-    DWORD-Eintrag: 0 bedeutet „deaktiviert“, 1 bedeutet „aktiviert“
+    Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
 
 > [!NOTE]
 > {Hauptversion} ist die Version von SQL Server, z. B. 140 für SQL Server 2017
@@ -115,7 +115,7 @@ Kunden von SQL Server 2017 Enterprise können, ähnlich zum Verhalten früherer 
 
     Name des Registrierungseintrags = EnableErrorReporting
 
-    DWORD-Eintrag: 0 bedeutet „deaktiviert“, 1 bedeutet „aktiviert“
+    Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
  
     {InstanzID} ist der Instanztyp und die Instanz, wie in folgendem Beispiel: 
 
@@ -130,7 +130,7 @@ Kunden von SQL Server 2017 Enterprise können, ähnlich zum Verhalten früherer 
 
     Name des Registrierungseintrags = EnableErrorReporting
 
-    DWORD-Eintrag: 0 bedeutet „deaktiviert“, 1 bedeutet „aktiviert“
+    Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
 
 > [!NOTE]
 > {Hauptversion} ist die Version von SQL Server. „140“ ist z.B. SQL Server 2017.

@@ -9,10 +9,10 @@ ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222648"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Arbeiten mit paginierten Berichten (Webportal)
@@ -62,7 +62,7 @@ Sie können vorhandene Parameter eines paginierten Berichts ändern. Um einen ne
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## <a name="data-source"></a>Datenquelle  
+## <a name="data-source"></a>Data source  
 Sie können auf eine freigegebene Datenquelle verweisen oder Verbindungsinformationen für eine benutzerdefinierte Datenquelle eingeben.  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
@@ -137,7 +137,7 @@ Zum Zwischenspeichern von Daten für einen paginierten Bericht stehen Ihnen mehr
   
 ![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
-Wenn Sie **Kopien von diesem Bericht zwischenspeichern und bei Verfügbarkeit verwenden** auswählen, können Sie einige zusätzliche Optionen festlegen.  
+Die Wahl von **Kopien dieses Berichts zwischenspeichern und wenn verfügbar verwenden** bieten Ihnen einige zusätzliche Optionen.  
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
@@ -179,7 +179,7 @@ Wenn Sie eine Momentaufnahme generieren möchten, muss der Bericht unbeaufsichti
   
 Klicken Sie auf eine Momentaufnahme zum Berichtsverlauf, um diese anzuzeigen. Die im Berichtsverlauf angezeigten Momentaufnahmen unterscheiden sich nur durch das Datum und die Uhrzeit ihrer Erstellung. Es gibt keinen grafischen Hinweis, ob eine Momentaufnahme als Folge eines Zeitplans oder durch einen manuellen Vorgang generiert wurde.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
 Mithilfe der Eigenschaftenseite „Sicherheit“ können Sie die Sicherheitseinstellungen für den Zugriff auf den Bericht anzeigen und ändern. Diese Seite steht für Elemente zur Verfügung, für die Sie die Berechtigung zur Änderung der Sicherheitseinstellungen besitzen.  
   
 Der Zugriff auf Elemente wird durch Rollenzuweisungen definiert, in denen die Aufgaben angegeben sind, die eine Gruppe oder ein Benutzer ausführen kann. Eine Rollenzuweisung besteht aus einem Benutzer- oder Gruppennamen und einer oder mehreren Rollendefinitionen, die eine Sammlung von Aufgaben angeben.  

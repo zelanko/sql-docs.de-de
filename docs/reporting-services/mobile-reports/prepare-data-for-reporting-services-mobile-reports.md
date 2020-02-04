@@ -9,10 +9,10 @@ ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499923"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Vorbereiten von Daten für mobile Berichte von Reporting Services
@@ -81,9 +81,9 @@ In dieser Tabelle werden die ParentKey-Elemente zunächst in der ItemKey-Spalte 
 | Technologie-Hardware und -Geräte   | Informationstechnologie |  
 | Telekommunikationsdienste |Informationstechnologie |  
   
-### <a name="see-also"></a>Siehe auch  
-- [Vorbereiten von Excel-Daten für mobile Berichte von Reporting Services](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
-- [Retain date formatting for Analysis Services in mobile reports](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
+### <a name="see-also"></a>Weitere Informationen  
+- [Prepare Excel data for Reporting Services mobile reports (Vorbereiten von Excel-Daten für mobile Berichte von Reporting Services)](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
+- [Retain date formatting for Analysis Services in mobile reports (Beibehalten der Datumsformatierung für Analysis Services in mobilen Berichten)](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
   
   

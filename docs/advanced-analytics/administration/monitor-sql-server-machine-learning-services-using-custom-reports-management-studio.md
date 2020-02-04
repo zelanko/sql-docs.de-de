@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: afc90985fc7c0c6d7a04cb575ee9e93a4b7b4c51
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727745"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Überwachen der Python- und R-Skriptausführung mithilfe von benutzerdefinierten Berichten in SQL Server Management Studio
@@ -65,7 +65,7 @@ Führen Sie die folgenden Schritte aus, um diese Berichte zu verwenden:
 
 Das [Repository für benutzerdefinierte SSMS-Berichte auf GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) enthält die folgenden Berichte:
 
-| Bericht | und Beschreibung |
+| Bericht | BESCHREIBUNG |
 |-|-|
 | Aktive Sitzungen | In diesem Bericht werden die Benutzer aufgeführt, die derzeit mit der SQL Server-Instanz verbunden sind und ein Python- oder R-Skript ausführen. |
 | Konfiguration | In diesem Bericht werden die Installationseinstellungen von Machine Learning Services und die Eigenschaften der Python- oder R-Runtime aufgeführt. |

@@ -1,23 +1,24 @@
 ---
-title: Erforderliche Berechtigungen für SQL Server Data Tools | Microsoft-Dokumentation
-ms.custom:
-- SSDT
+title: Erforderliche Berechtigungen
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4199109ef0492a23206233c82b6051b88564cc26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110763"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256995"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Erforderliche Berechtigungen für SQL Server Data Tools
+
 Bevor Sie eine Aktion für eine Datenbank in Visual Studio ausführen können, müssen Sie sich mit einem Konto anmelden, das für diese Datenbank über bestimmte Berechtigungen verfügt. Welche Berechtigungen Sie benötigen, hängt von der Aktion ab, die Sie ausführen möchten. In den folgenden Abschnitten werden die einzelnen Aktionen beschrieben, die Sie ausführen können, sowie die dafür benötigten Berechtigungen.  
   
 -   [Berechtigungen zum Erstellen oder Bereitstellen einer Datenbank](#DatabaseCreationAndDeploymentPermissions)  
@@ -44,7 +45,7 @@ Zum Erstellen oder Bereitstellen einer Datenbank müssen Sie über folgende Bere
 |Importieren von Serverobjekten und -einstellungen|Sie müssen sich mit der Masterdatenbank auf dem angegebenen Server verbinden können.<br /><br />Wenn auf dem Server SQL Server 2005 ausgeführt wird, müssen Sie für den Server über die Berechtigung **VIEW ANY DEFINITION** verfügen.<br /><br />Wenn die Quelldatenbank auf SQL Server 2008 oder höher basiert, müssen Sie für den Server über die Berechtigung **VIEW ANY DEFINITION** verfügen. Für Ihre Anmeldung muss die Berechtigung **VIEW SERVER STATE** vorliegen (für Datenbankverschlüsselungsschlüssel).|  
 |Erstellen oder Aktualisieren eines Datenbankprojekts|Zum Erstellen oder Ändern eines Datenbankprojekts benötigen Sie keine Datenbankberechtigungen.|  
 |Bereitstellen einer neuen Datenbank oder Bereitstellen mit der Option **Datenbank immer neu erstellen**|Sie müssen entweder die Berechtigung **CREATE DATABASE** besitzen oder Mitglied der Rolle **dbcreator** auf dem Zielserver sein.<br /><br />Wenn Sie eine Datenbank erstellen, stellt Visual Studio eine Verbindung mit der Modelldatenbank her und kopiert deren Inhalt. Für die erste Anmeldung (z.B. *MeineAnmeldung*), mit der Sie sich mit der Zieldatenbank verbinden, müssen die Berechtigungen **db_creator** und **CONNECT SQL** vorliegen. Diese Anmeldung muss über eine Benutzerzuordnung in der Modelldatenbank verfügen. Wenn Sie **sysadmin**-Berechtigungen besitzen, können Sie die Zuordnung durch Ausgabe der folgenden Transact\-SQL-Anweisungen erstellen:<br /><br />`USE [model] CREATE USER yourUser FROM LOGIN yourLogin`<br /><br />Der Benutzer (in diesem Beispiel yourUser) muss über die Berechtigungen **CONNECT** und **VIEW DEFINITION** für die Modelldatenbank verfügen. Wenn Sie **sysadmin**-Berechtigungen besitzen, können Sie diese Berechtigungen durch Ausgabe der folgenden Transact\-SQL-Anweisungen gewähren:<br /><br />`USE [model] GRANT CONNECT to yourUser GRANT VIEW DEFINITION TO yourUser`<br /><br />Wenn Sie eine Datenbank bereitstellen, die unbenannte Einschränkungen enthält, und wenn die Option **CheckNewContraints** aktiviert ist (standardmäßig aktiviert), müssen Sie die Berechtigungen **db_owner** oder **sysadmin** besitzen, andernfalls schlägt die Bereitstellung fehl. Dies gilt nur für unbenannte Einschränkungen. Weitere Informationen zur Option **CheckNewConstraints** finden Sie unter [Database Project Settings](../ssdt/database-project-settings.md).|  
-|Bereitstellen von Aktualisierungen für eine vorhandene Datenbank|Sie müssen ein gültiger Datenbankbenutzer sein. Sie müssen außerdem Mitglied der Rolle **db_ddladmin**, Besitzer des Schemas oder der Objekte sein, die Sie für die Zieldatenbank erstellen oder ändern möchten. Sie benötigen zusätzliche Berechtigungen, um mit erweiterten Merkmalen zu arbeiten, wie z. B. Anmeldungen oder verknüpfte Server in Ihren Skripts vor oder nach der Bereitstellung.<br /><br />**HINWEIS:** Wenn Sie eine Bereitstellung an die Masterdatenbank vornehmen, müssen Sie auch über die Berechtigung **VIEW ANY DEFINITION** für den betreffenden Server verfügen.|  
+|Bereitstellen von Aktualisierungen für eine vorhandene Datenbank|Sie müssen ein gültiger Datenbankbenutzer sein. Sie müssen außerdem Mitglied der Rolle **db_ddladmin**, Besitzer des Schemas oder der Objekte sein, die Sie für die Zieldatenbank erstellen oder ändern möchten. Sie benötigen zusätzliche Berechtigungen, um mit erweiterten Merkmalen zu arbeiten, wie z. B. Anmeldungen oder verknüpfte Server in Ihren Skripts vor oder nach der Bereitstellung.<br /><br />**HINWEIS:** Wenn Sie eine Bereitstellung für die Masterdatenbank vornehmen, müssen Sie auch über die Berechtigung **VIEW ANY DEFINITION** für den betreffenden Server verfügen.|  
 |Verwenden einer Assembly mit der Option EXTERNAL_ACCESS in einem Datenbankprojekt|Sie müssen die Eigenschaft TRUSTWORTHY für Ihr Datenbankprojekt festlegen. Für Ihre SQL Server-Anmeldung muss die Berechtigung EXTERNAL ACCESS ASSEMBLY vorliegen.|  
 |Bereitstellen von Assemblys für eine neue oder vorhandene Datenbank|Sie müssen Mitglied der sysadmin-Rolle auf dem Zielserver der Bereitstellung sein.|  
   

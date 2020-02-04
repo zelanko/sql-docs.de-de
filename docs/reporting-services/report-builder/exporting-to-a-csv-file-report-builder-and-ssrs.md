@@ -9,10 +9,10 @@ ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581207"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportieren als CSV-Datei (Berichts-Generator und SSRS)
@@ -53,9 +53,9 @@ ms.locfileid: "65581207"
   
 -   Benutzerdefinierte Berichtselemente  
   
--   Linie  
+-   Zeile  
   
--   image  
+-   Image  
   
 -   Rechteck  
   
@@ -70,12 +70,12 @@ ms.locfileid: "65581207"
 |Textfeld|Der Inhalt des Textfelds wird gerendert. Im Standardmodus werden Elemente auf Grundlage der Formatierungseigenschaften des Elements formatiert. Im kompatiblen Modus kann die Formatierung durch die Geräteinformationseinstellungen geändert werden. Weitere Informationen zu den CSV-Renderingmodi finden Sie weiter unten.|  
 |Tabelle|Das Rendering erfolgt durch Erweitern der Tabelle und Erstellen einer Zeile und Spalte für jede Zeile und Spalte auf der untersten Detailebene. Teilergebniszeilen und -spalten weisen keine Zeilen- und Spaltenüberschriften auf. Drillthroughberichte werden nicht unterstützt.|  
 |Matrix|Das Rendering erfolgt durch Erweitern der Matrix und Erstellen einer Zeile und Spalte für jede Zeile und Spalte auf der untersten Detailebene. Teilergebniszeilen und -spalten weisen keine Zeilen- und Spaltenüberschriften auf.|  
-|Liste|Für jede Detailzeile oder Instanz in der Liste wird ein Datensatz gerendert.|  
+|List|Für jede Detailzeile oder Instanz in der Liste wird ein Datensatz gerendert.|  
 |Unterbericht|Das übergeordnete Element wird für jede Instanz des Inhalts wiederholt.|  
 |Diagramm|Wird gerendert, indem eine Zeile für jeden Diagrammwert und jede Elementbezeichnung erstellt wird. Bezeichnungen aus Reihen und Kategorien in Hierarchien werden vereinfacht und in die Zeile für einen Diagrammwert eingeschlossen.|  
 |Datenbalken|Wird wie ein Diagramm gerendert. Ein Datenbalken enthält normalerweise keine Hierarchien oder Bezeichnungen.|  
 |Sparkline|Wird wie ein Diagramm gerendert. Eine Sparkline enthält üblicherweise keine Hierarchien oder Bezeichnungen.|  
-|Messgerät|Wird als einzelner Datensatz mit dem Minimal- und Maximalwert der linearen Skala, dem Start- und Endwert des Bereichs und dem Wert des Zeigers gerendert.|  
+|Maßstab|Wird als einzelner Datensatz mit dem Minimal- und Maximalwert der linearen Skala, dem Start- und Endwert des Bereichs und dem Wert des Zeigers gerendert.|  
 |Indikator|Es wird als einzelnes Element mit dem Namen des aktiven Zustands, den verfügbaren Zuständen und dem Datenwert als Attribute gerendert.|  
 |Karte|Rendert eine Zeile mit den Bezeichnungen und Werten der einzelnen Kartenelemente einer Kartenebene.<br /><br /> Wenn die Karte über mehrere Ebenen verfügt, variieren die Werte in den Zeilen abhängig davon, ob die Kartenebenen die gleichen oder unterschiedliche Kartendatenbereiche verwenden. Wenn mehrere Kartenebenen den gleichen Datenbereich verwenden, enthalten die Zeilen Daten aus allen Ebenen.|  
   
@@ -92,7 +92,7 @@ ms.locfileid: "65581207"
   
 -   Peerdatenbereiche sind Datenbereiche oder dynamische Gruppen, die einen allgemeinen Datenbereich oder einen dynamischen Vorgänger gemeinsam nutzen. Peerdaten werden durch Verzweigen der vereinfachten Struktur identifiziert.  
   
- Weitere Informationen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)zurück.  
+ Weitere Informationen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
   
 ##  <a name="RenderingModes"></a> Renderermodi  
@@ -122,7 +122,7 @@ ms.locfileid: "65581207"
 ##  <a name="Interactivity"></a> Interaktivität  
  Interaktivität wird von keinem der durch diesen Renderer generierten CSV-Formate unterstützt. Die folgenden interaktiven Elemente werden nicht gerendert:  
   
--   Hyperlinks  
+-   Links  
   
 -   Anzeigen oder ausblenden  
   
@@ -143,7 +143,7 @@ ms.locfileid: "65581207"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

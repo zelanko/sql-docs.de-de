@@ -11,10 +11,10 @@ ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140455"
 ---
 # <a name="report-server-http-log"></a>Berichtsserver-HTTP-Protokoll
@@ -28,7 +28,7 @@ ms.locfileid: "67140455"
 |||  
 |-|-|  
 |Dateiname|Der Standarddateiname lautet „ReportServerService_HTTP_\<Zeitstempel>.log“. Sie können das Präfix des Dateinamens anpassen, indem Sie das HttpTraceFileName-Attribut in der Datei ReportingServicesService.exe.config ändern. Der Timestamp basiert auf der koordinierten Weltzeit (UTC).|  
-|Dateispeicherort|Die Datei befindet sich unter \Microsoft SQL Server\\*\<SQL Server-Instanz>* \Reporting Services\LogFiles.|  
+|Dateispeicherort|Die Datei befindet sich unter \Microsoft SQL Server\\ *\<SQL Server-Instanz>* \Reporting Services\LogFiles.|  
 |Dateiformat|Die Datei liegt im Format EN-US vor. Es handelt sich um eine ASCII-Textdatei.|  
 |Dateierstellung und -beibehaltung|Das HTTP-Protokoll wird erstellt, nachdem Sie es in der Konfigurationsdatei aktiviert und den Dienst neu gestartet haben und der Berichtsserver eine HTTP-Anforderung verarbeitet hat. Wenn Sie die Einstellungen konfiguriert haben, die Protokolldatei jedoch nicht sehen können, öffnen Sie einen Bericht, oder starten Sie eine Berichtsserveranwendung (wie das Webportal), um eine HTTP-Anforderung zum Erstellen der Datei zu generieren.<br /><br /> Es wird ein neues Exemplar der Protokolldatei nach jedem Neustart des Diensts und einer nachfolgenden HTTP-Anforderung an den Berichtsserver erstellt.<br /><br /> Standardmäßig sind Ablaufverfolgungsprotokolle auf 32 Megabyte begrenzt und werden nach 14 Tagen gelöscht.|  
   
@@ -54,12 +54,12 @@ ms.locfileid: "67140455"
 ## <a name="log-file-fields"></a>Protokolldateifelder  
  In der folgenden Tabelle sind die im Protokoll verfügbaren Felder beschrieben. Die Feldliste kann konfiguriert werden; Sie können mit der **HTTPTraceSwitches** -Konfigurationseinstellung angeben, welche Felder einbezogen werden sollen. Die Spalte **Standard** gibt an, ob das Feld automatisch in die Protokolldatei aufgenommen wird, wenn Sie **HTTPTraceSwitches**nicht festlegen.  
   
-|Feld|und Beschreibung|Default|  
+|Feld|BESCHREIBUNG|Standard|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Dieser Wert ist optional. Der Standardwert ist ReportServerServiceHTTP_. Sie können einen anderen Wert angeben, wenn Sie eine andere Dateinamenkonvention verwenden möchten. (Sie können zum Beispiel den Servernamen einbeziehen, wenn Protokolldateien zentral gespeichert werden).|Ja|  
 |HTTPTraceSwitches|Dieser Wert ist optional. Wenn Sie diesen Wert angeben, können Sie die in der Protokolldatei verwendeten Felder im durch Trennzeichen getrennten Format konfigurieren.|Nein|  
-|date|Das Datum des Auftretens der Aktivität.|Nein|  
-|Uhrzeit|Die Uhrzeit des Auftretens der Aktivität.|Nein|  
+|Date|Das Datum des Auftretens der Aktivität.|Nein|  
+|Time|Die Uhrzeit des Auftretens der Aktivität.|Nein|  
 |ClientIp|Die IP-Adresse des Clients, der auf den Berichtsserver zugreift.|Ja|  
 |UserName|Der Name des Benutzers, der auf den Berichtsserver zugreift.|Nein|  
 |ServerPort|Die für die Verbindung verwendete Portnummer.|Nein|  
@@ -76,7 +76,7 @@ ms.locfileid: "67140455"
 |CookieSent|Der Inhalt des vom Server gesendeten Cookies.|Nein|  
 |Referrer|Die vorherige vom Client aufgerufene Website.|Nein|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Fehler- und Ereignisreferenz &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

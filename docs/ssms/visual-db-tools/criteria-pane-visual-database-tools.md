@@ -1,10 +1,9 @@
 ---
-title: Kriterienbereich (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
+title: Kriterienbereich
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,14 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf5d5f7a306b443fd01f9112b4197485ce3ce2ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2e7bc19ea897e370617aeb8e0e0995e857489464
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263896"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258703"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Kriterienbereich (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,14 +55,14 @@ Welche Informationen genau im Kriterienbereich angezeigt werden, ist abhängig v
   
 Wenn der Kriterienbereich nicht sichtbar ist, klicken Sie mit der rechten Maustaste auf den Designer, zeigen Sie auf **Bereich**, und klicken Sie dann auf **Kriterien**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 |**Spalte**|**Abfragetyp**|**Beschreibung**|  
 |--------------|------------------|-------------------|  
-|Spalte|All|Zeigt entweder den Namen einer in der Abfrage verwendeten Datenspalte oder den Ausdruck für eine berechnete Spalte an. Diese Spalte ist gesperrt und bleibt somit bei einem horizontalen Bildlauf immer sichtbar.|  
+|Column|All|Zeigt entweder den Namen einer in der Abfrage verwendeten Datenspalte oder den Ausdruck für eine berechnete Spalte an. Diese Spalte ist gesperrt und bleibt somit bei einem horizontalen Bildlauf immer sichtbar.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Gibt entweder einen alternativen Namen für eine Spalte an oder den Namen, den Sie für eine berechnete Spalte verwenden können.|  
 |Tabelle|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Gibt den Namen der Tabelle oder des Objekts mit Tabellenstruktur für die zugeordnete Datenspalte an. Diese Spalte ist bei berechneten Spalten leer.|  
-|Ausgabe|SELECT, INSERT FROM, MAKE TABLE|Gibt an, ob eine Datenspalte in der Abfrageausgabe aufgeführt wird oder nicht.<br /><br />Hinweis: Wenn dies in der Datenbank zulässig ist, können Sie eine Datenspalte für Sortier- oder Suchklauseln verwenden, ohne die Spalte im Resultset anzuzeigen.|  
+|Output|SELECT, INSERT FROM, MAKE TABLE|Gibt an, ob eine Datenspalte in der Abfrageausgabe aufgeführt wird oder nicht.<br /><br />Hinweis: Wenn dies in der Datenbank zulässig ist, können Sie eine Datenspalte in Sortier- oder Suchklauseln verwenden, ohne die Spalte im Resultset anzuzeigen.|  
 |Sortiertyp|SELECT, INSERT FROM|Gibt an, dass die zugeordnete Datenspalte zum Sortieren der Abfrageergebnisse verwendet wird. Zeigt außerdem an, ob aufsteigend oder absteigend sortiert wird.|  
 |Sortierreihenfolge|SELECT, INSERT FROM|Gibt die Sortierpriorität für Datenspalten an, die zum Sortieren des Resultsets verwendet werden. Wenn Sie die Sortierreihenfolge für eine Datenspalte ändern, wird die Sortierreihenfolge für alle anderen Spalten entsprechend aktualisiert.|  
 |Gruppieren nach|SELECT, INSERT FROM, MAKE TABLE|Gibt an, dass die zugeordnete Datenspalte zum Erstellen einer Aggregatabfrage verwendet wird. Diese Datenblattspalte wird nur angezeigt, wenn Sie im Menü **Extras** die Option **Gruppieren nach** ausgewählt oder im SQL-Bereich eine GROUP BY-Klausel hinzugefügt haben.<br /><br />In der Standardeinstellung ist der Wert dieser Spalte auf **Gruppieren nach**gesetzt, und die Spalte ist Teil der GROUP BY-Klausel.<br /><br />Wenn Sie in eine Zelle in dieser Spalte wechseln und eine Aggregatfunktion auf die zugeordnete Datenspalte anwenden, wird für den sich ergebenden Ausdruck eine Ausgabespalte zum Resultset hinzugefügt.|  

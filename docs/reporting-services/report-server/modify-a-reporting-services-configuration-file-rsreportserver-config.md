@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581130"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)
@@ -23,7 +23,7 @@ ms.locfileid: "65581130"
 > [!IMPORTANT]
 >  Gehen Sie beim Ändern der Konfigurationsdateien vorsichtig vor. Wenn Sie eine Einstellung ändern, die für die interne Verwendung reserviert ist, wird möglicherweise die Installation deaktiviert. Im Allgemeinen sollten Sie Konfigurationseinstellungen nur ändern, wenn ein bestimmtes Problem behoben werden muss. Weitere Informationen darüber, welche Einstellungen problemlos geändert werden können, finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) oder [RSReportDesigner-Konfigurationsdatei](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Weitere Informationen zu Konfigurationsdateien finden Sie in der [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Produktdokumentation.  
   
- In diesem Thema:  
+ Inhalte dieses Themas:  
   
 -   [Lesen und Verwenden von Konfigurationswerten](#bkmk_read_values)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "65581130"
   
     -   [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
-5.  Speichern Sie die Datei.  
+5.  Speichern Sie die Datei .  
   
 6.  Überprüfen Sie die Ablaufverfolgungs-Protokolldateien, um zu überprüfen, dass keine Fehler aufgetreten sind. Wenn Fehlerbedingungen auftreten, wurde eine Einstellung oder ihr Wert falsch angegeben. Gültige Werte für die Einstellungen, die Fehler verursachen, finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) . Weitere Informationen zum Anzeigen von Ablaufverfolgungsprotokollen finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md).  
   

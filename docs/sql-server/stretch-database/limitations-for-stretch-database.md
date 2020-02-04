@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843786"
 ---
 # <a name="limitations-for-stretch-database"></a>Einschränkungen für Stretch Database
@@ -26,7 +26,7 @@ ms.locfileid: "73843786"
 
   Erfahren Sie mehr zu Einschränkungen für Stretch-aktivierten Tabellen und zu Einschränkungen, die derzeit verhindern, Stretch für eine Tabelle zu aktivieren.  
   
-##  <a name="Caveats"></a> Einschränkungen für Stretch-aktivierte Tabellen  
+##  <a name="Caveats"></a> Einschränkungen für Tabellen, für die Stretch aktiviert ist  
   
 Die folgenden Einschränkungen für Stretch-aktivierte Tabellen sind zu beachten.  
   
@@ -43,7 +43,7 @@ Die folgenden Einschränkungen für Stretch-aktivierte Tabellen sind zu beachten
   
 -   Filter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Indizes werden nicht an die Remotetabelle weitergegeben.  
   
-##  <a name="Limitations"></a> Einschränkungen, die derzeit die Aktivierung von Stretch für eine Tabelle verhindern  
+##  <a name="Limitations"></a> Einschränkungen, die Sie derzeit vom Aktivieren von Stretch für eine Tabelle abhalten  
    
  Die folgenden Elemente verhindern derzeit die Aktivierung von Stretch für eine Tabelle.  
   
@@ -89,6 +89,6 @@ Die folgenden Einschränkungen für Stretch-aktivierte Tabellen sind zu beachten
 ## <a name="see-also"></a>Weitere Informationen  
  [Identifizieren von Datenbanken und Tabellen für Stretch Database durch Ausführen des Ratgebers für Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
  [Aktivieren von Stretch Database für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [Aktivieren von Stretch-Datenbank für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [Aktivieren von Stretch Database für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

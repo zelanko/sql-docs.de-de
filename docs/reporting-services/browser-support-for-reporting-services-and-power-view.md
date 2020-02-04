@@ -18,10 +18,10 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574820"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Browserunterstützung für Reporting Services und Power View
@@ -98,7 +98,7 @@ Im Folgenden finden Sie die aktuelle Liste der unterstützten Browser für das W
 |**Microsoft Internet Explorer**|Negotiate, Kerberos, NTLM, Basic|Aushandeln|Ja. Die Standardauthentifizierungseinstellungen können mit Internet Explorer verwendet werden.|
 |**Google Chrome**(+)|Negotiate, NTLM, Basic|Aushandeln|Ja. Die Standardauthentifizierungseinstellungen können mit Chrome verwendet werden.|
 |**Mozilla Firefox**(+)|NTLM, Standard|NTLM|Ja. Die Standardauthentifizierungseinstellungen können mit Firefox verwendet werden.|
-|**Apple Safari**(+)|NTLM, Standard|Standard|Ja. Die Standardauthentifizierungseinstellungen können mit Safari verwendet werden.|
+|**Apple Safari**(+)|NTLM, Standard|Basic|Ja. Die Standardauthentifizierungseinstellungen können mit Safari verwendet werden.|
 
  **(+)** neueste öffentlich freigegebene Version
 
@@ -157,7 +157,7 @@ Im Folgenden finden Sie die aktuelle Liste der unterstützten Browser für das W
 [Finding and Viewing Reports in the web portal (Suchen und Anzeigen von Berichten im Webportal)](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services-Tools](../reporting-services/tools/reporting-services-tools.md)  
 [Webportal (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
-[HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+[HTML Viewer and the Report Toolbar (HTML-Viewer und die Berichtssymbolleiste)](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL Access Parameter Reference (URL-Zugriffsparameterverweis)](../reporting-services/url-access-parameter-reference.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

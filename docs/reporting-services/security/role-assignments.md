@@ -15,10 +15,10 @@ ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570568"
 ---
 # <a name="role-assignments"></a>Rollenzuweisungen
@@ -33,7 +33,7 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bestimmen *Rolle
   - **Browser**
   - **Inhalts-Manager**
   - **Meine Berichte**
-  - **Verleger**
+  - **Herausgeber**
   - **Report Builder (Berichts-Generator)**
   - **Systemadministrator**
   - **Systembenutzer**
@@ -49,7 +49,7 @@ Sie können die geerbte Sicherheit überschreiben, indem Sie Rollenzuweisungen f
   
  Das folgende Diagramm veranschaulicht eine Rollenzuweisung, die einer Gruppe und einem bestimmten Benutzer die **Verleger** -Rolle für den Ordner B zuordnet.  
   
- ![Rollenzuweisungsdiagramm](../../reporting-services/security/media/report-securityarch.gif "Role assignments diagram")  
+ ![Rollenzuweisungsdiagramm](../../reporting-services/security/media/report-securityarch.gif "Rollenzuweisungsdiagramm")  
 Rollenzuweisungsdiagramm  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>Rollenzuweisungen auf System- und Elementebene
@@ -57,7 +57,7 @@ Rollenzuweisungsdiagramm
  Die rollenbasierte Sicherheit in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird anhand der folgenden Ebenen organisiert:
 
 - Rollenzuweisung auf Elementebene steuern den Zugriff auf Elemente in der Ordnerhierarchie des Berichtsservers, z B.:
-  - Berichte
+  - reports
   - Ordner
   - Berichtsmodelle
   - Freigegebene Datenquellen

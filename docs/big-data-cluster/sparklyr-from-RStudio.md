@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531616"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Verwenden von sparklyr in SQL Server-Big Data-Clustern
@@ -80,7 +80,7 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>Verteilte R-Berechnungen
 
-Ein Feature von sparklyr ist die Möglichkeit, [spark_apply](https://spark.rstudio.com/reference/spark_apply/) zum [Verteilen von R-Berechnungen](https://spark.rstudio.com/guides/distributed-r/) zu verwenden.
+Ein Feature von sparklyr ist die Möglichkeit, [spark_apply](https://spark.rstudio.com/guides/distributed-r/) zum [Verteilen von R-Berechnungen](https://spark.rstudio.com/reference/spark_apply/) zu verwenden.
 
 Da Big Data-Cluster Livy-Verbindungen verwenden, müssen Sie `packages = FALSE` im Aufruf von **spark_apply** festlegen. Weitere Informationen finden Sie im [Abschnitt zu Livy](https://spark.rstudio.com/guides/distributed-r/#livy) in der sparklyr-Dokumentation zu verteilten R-Berechnungen. Mit dieser Einstellung können Sie in dem an **spark_apply** übergebenen R-Code nur die R-Pakete verwenden, die bereits in Ihrem Spark-Cluster installiert sind. Das folgende Beispiel veranschaulicht diese Funktion:
 

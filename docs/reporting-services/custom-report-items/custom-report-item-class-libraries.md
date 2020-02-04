@@ -12,10 +12,10 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194108"
 ---
 # <a name="custom-report-item-class-libraries"></a>Klassenbibliotheken für ein benutzerdefiniertes Berichtselement
@@ -40,9 +40,9 @@ ms.locfileid: "63194108"
 |**CustomProperties**|Eine Auflistung benutzerdefinierter Eigenschaften für das benutzerdefinierte Berichtselement.|  
 |**Height**|Die Höhe der Steuerung für ein benutzerdefiniertes Berichtselement.|  
 |**Width**|Die Breite der Steuerung für ein benutzerdefiniertes Berichtselement.|  
-|**Bericht**|Ein Container für die Eigenschaften auf Berichtsebene, z. B. die Liste der Datasets in dem Bericht.|  
+|**Report**|Ein Container für die Eigenschaften auf Berichtsebene, z. B. die Liste der Datasets in dem Bericht.|  
 |**AltReportItem**|Das alternative Berichtselementobjekt, das verwendet werden muss, wenn die Laufzeitsteuerung für das benutzerdefinierte Berichtselement nicht unterstützt wird.|  
-|**Style**|Die Stileigenschaften für das benutzerdefinierte Berichtselement.|  
+|**style**|Die Stileigenschaften für das benutzerdefinierte Berichtselement.|  
 |**Adornment**|Ein Gestaltungsfenster für die interaktive Bearbeitung der Steuerung.|  
 |**Site**|Die **ISite** der Komponente.|  
 |**DesignerVerbCollection**|Ein Array von benutzerdefinierten Verben für das Kontextmenü der Steuerung.|  

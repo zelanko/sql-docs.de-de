@@ -1,10 +1,9 @@
 ---
-title: Entfernen von Spalten aus Abfragen (Visual Database Tools)| Microsoft-Dokumente
-ms.custom: ''
+title: Entfernen von Spalten aus Abfragen
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54f99801992ba804861d6712edaadae24720c8bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: e548479b98b6495ed61582a5a6fcef8b8878154a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266232"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255268"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Entfernen von Spalten aus Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ Wenn Sie in einer Abfrage eine Spalte nicht länger verwenden möchten, können 
   
 -   Wählen Sie im **Kriterienbereich**die Rasterzeile mit der zu entfernenden Spalte aus, und drücken Sie ENTF.  
   
-    -oder-  
+    Oder  
   
 -   Entfernen Sie im [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)alle Verweise auf die Spalte.  
   
