@@ -22,10 +22,10 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902848"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
@@ -36,7 +36,7 @@ Erstellt ein Objekt, das als Standardwert bezeichnet wird. Wenn ein Standardwert
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen Standarddefinitionen, die mithilfe des DEFAULT-Schlüsselworts von ALTER TABLE oder CREATE TABLE erstellt werden.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -80,7 +80,7 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der n
 |Spaltendefinition|Kein Eintrag, kein Standardwert|Kein Eintrag, Standardwert|Eingabe von NULL, kein Standardwert|Eingabe von NULL, Standardwert|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
 |**NULL**|NULL|default|NULL|NULL|  
-|**NOT NULL**|Fehler|default|Fehler|Fehler|  
+|**NOT NULL**|Fehler|default|error|error|  
   
  Um einen Standardwert umzubenennen, verwenden Sie **sp_rename**. Um einen Bericht über einen Standardwert zu erhalten, verwenden Sie **sp_help**.  
   

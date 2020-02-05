@@ -11,10 +11,10 @@ ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c4580c6b6b4dc6ea0d7ab9bb93f9614b90feb1d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295178"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
@@ -26,7 +26,7 @@ ms.locfileid: "71295178"
 
   Zeigt die von einer Datenflusskomponente in jeder Ausführungsphase benötigte Zeit an.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|Eindeutiger Bezeichner (ID) der Phase.|  
 |execution_id|**bigint**|Eindeutige ID für die Instanz der Ausführung.|  
@@ -38,7 +38,7 @@ ms.locfileid: "71295178"
 |end_time|**datetimeoffset(7)**|Der Zeitpunkt, zu dem die Phase beendet wurde.|  
 |execution_path|**nvarchar(max)**|Der Ausführungspfad der Datenflusstask.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird für jede Ausführungsphase einer Datenflusskomponente eine Zeile angezeigt, z. B. Überprüfen, Vor der Ausführung, Nach der Ausführung, PrimeOutput und ProcessInput. Jede Zeile zeigt die Start- und Endzeit einer bestimmten Ausführungsphase an.  
   
 ## <a name="example"></a>Beispiel  

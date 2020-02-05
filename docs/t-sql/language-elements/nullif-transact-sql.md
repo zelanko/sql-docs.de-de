@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 28c331cd810e905a14fa17d6e212fee331da74f9
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844380"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73844380"
 
   Gibt einen NULL-Wert zurück, wenn die beiden angegebenen Ausdrücke gleich sind. Beispielsweise gibt `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` für die erste Spalte (4 und 4) NULL zurück, da die zwei Eingabewerte identisch sind. Die zweite Spalte gibt den ersten Wert (5) zurück, da die beiden Werte sich unterscheiden. 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ NULLIF ( expression , expression )
   
  NULLIF gibt den ersten *Ausdruck* zurück, wenn sich die zwei Ausdrücke voneinander unterscheiden. Wenn die Ausdrücke identisch sind, gibt NULLIF einen NULL-Wert mit dem Typ des ersten *Ausdrucks* zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  NULLIF entspricht einem komplexen CASE-Ausdruck, in dem die beiden Ausdrücke gleich sind und der sich ergebende Ausdruck NULL ist.  
   
  Es empfiehlt sich nicht, zeitabhängige Funktionen wie RAND() innerhalb einer NULLIF-Funktion zu verwenden. Dies könnte dazu führen, dass die Funktion zweimal ausgewertet wird und aus den beiden Aufrufen unterschiedliche Ergebnisse zurückgibt.  

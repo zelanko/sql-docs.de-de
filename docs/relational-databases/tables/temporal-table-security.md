@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b22210bdcabf1972e7fa76d7871ebd94e1f23ff5
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72452898"
 ---
 # <a name="temporal-table-security"></a>Sicherheit bei temporale Tabellen
@@ -28,7 +28,7 @@ Um die Sicherheitsaspekte zu verstehen, die für temporale Tabellen relevant sin
 
  Die folgende Tabelle beschreibt die Sicherheitsprinzipien, die für temporäre Tabellen gelten:
 
-|Prinzip|und Beschreibung|
+|Prinzip|BESCHREIBUNG|
 |---------------|-----------------|
 |Das Aktivieren bzw. Deaktivieren der Systemversionsverwaltung erfordert die höchsten Berechtigungen für betroffene Objekte|Das Aktivieren und Deaktivieren von SYSTEM_VERSIONING erfordert die CONTROL-Berechtigung sowohl für die aktuelle Tabelle als auch für die Verlaufstabelle|
 |Verlaufsdaten können nicht direkt geändert werden|Wenn SYSTEM_VERSIONING ON ist, können die Benutzer Verlaufsdaten nicht ändern, unabhängig davon, über welche tatsächlichen Berechtigungen sie für die aktuelle Tabelle oder die Verlaufstabelle verfügen. Das umfasst sowohl Daten- als auch Schemaänderungen|
@@ -61,14 +61,14 @@ Wenn SYSTEM_VERSIONING auf ON festgelegt ist, werden Schemaänderungsvorgänge b
 ||Erstellen einer neuen Verlaufstabelle|Wiederverwenden einer vorhandenen Verlaufstabelle|
 |-|------------------------------|----------------------------------|
 |Berechtigung erforderlich|**CREATE TABLE** -Berechtigung in der Datenbank<br /><br /> **ALTER** -Berechtigung für die Schemas, in denen die aktuellen Tabellen und Verlaufstabellen erstellt werden|**CREATE TABLE** -Berechtigung in der Datenbank<br /><br /> **ALTER** -Berechtigung für das Schema, in dem die aktuelle Tabelle erstellt wird<br /><br /> **CONTROL** -Berechtigung für die Verlaufstabelle, die als Teil der **CREATE TABLE** -Anweisung zum Erstellen der temporalen Tabelle angegeben wurde|
-|Überwachen von|Die Überwachung zeigt, dass Benutzer versucht haben, zwei Objekte zu erstellen. Der Vorgang kann fehlschlagen, entweder aufgrund fehlender Berechtigungen zum Erstellen einer Tabelle in der Datenbank, oder aufgrund fehlender Berechtigungen für das Ändern von Schemas in einer der Tabellen.|Die Überwachung zeigt, dass eine temporale Tabelle erstellt wurde. Der Vorgang kann fehlschlagen, entweder aufgrund fehlender Berechtigungen zum Erstellen einer Tabelle in der Datenbank, aufgrund der fehlenden Berechtigungen zum Ändern des Schemas für die temporale Tabelle, oder aufgrund der fehlenden Berechtigungen für die Verlaufstabelle.|
+|Audit|Die Überwachung zeigt, dass Benutzer versucht haben, zwei Objekte zu erstellen. Der Vorgang kann fehlschlagen, entweder aufgrund fehlender Berechtigungen zum Erstellen einer Tabelle in der Datenbank, oder aufgrund fehlender Berechtigungen für das Ändern von Schemas in einer der Tabellen.|Die Überwachung zeigt, dass eine temporale Tabelle erstellt wurde. Der Vorgang kann fehlschlagen, entweder aufgrund fehlender Berechtigungen zum Erstellen einer Tabelle in der Datenbank, aufgrund der fehlenden Berechtigungen zum Ändern des Schemas für die temporale Tabelle, oder aufgrund der fehlenden Berechtigungen für die Verlaufstabelle.|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>Sicherheit der Anweisung ALTER Temporal TABLE SET (SYSTEM_VERSIONING ON/OFF)
 
 ||Erstellen einer neuen Verlaufstabelle|Wiederverwenden einer vorhandenen Verlaufstabelle|
 |-|------------------------------|----------------------------------|
 |Berechtigung erforderlich|**CONTROL** -Berechtigung in der Datenbank<br /><br /> **CREATE TABLE** -Berechtigung in der Datenbank<br /><br /> **ALTER** -Berechtigung für die Schemas, in dem die Verlaufstabelle erstellt wird|**CONTROL** -Berechtigung für die ursprüngliche Tabelle, die geändert wird<br /><br /> **CONTROL** -Berechtigung für die Verlaufstabelle, die als Teil der **ALTER TABLE** -Anweisung angegeben wurde|
-|Überwachen von|Die Überwachung zeigt, dass die temporale Tabelle geändert und die Verlaufstabelle zur gleichen Zeit erstellt wurde. Der Vorgang kann fehlschlagen, entweder aufgrund fehlender Berechtigungen zum Erstellen einer Tabelle in der Datenbank, aufgrund der fehlenden Berechtigungen zum Ändern des Schemas für die Verlaufstabelle, oder aufgrund der fehlenden Berechtigungen zum Ändern der temporalen Tabelle.|Die Überprüfung zeigt, dass die temporale Tabelle geändert wurde, aber der Vorgang erforderte Zugriff auf die Verlaufstabelle. Der Vorgang kann möglicherweise nicht ausgeführt werden, da Berechtigungen für die Verlaufstabelle oder für die aktuelle Tabelle fehlen.|
+|Audit|Die Überwachung zeigt, dass die temporale Tabelle geändert und die Verlaufstabelle zur gleichen Zeit erstellt wurde. Der Vorgang kann fehlschlagen, entweder aufgrund fehlender Berechtigungen zum Erstellen einer Tabelle in der Datenbank, aufgrund der fehlenden Berechtigungen zum Ändern des Schemas für die Verlaufstabelle, oder aufgrund der fehlenden Berechtigungen zum Ändern der temporalen Tabelle.|Die Überprüfung zeigt, dass die temporale Tabelle geändert wurde, aber der Vorgang erforderte Zugriff auf die Verlaufstabelle. Der Vorgang kann möglicherweise nicht ausgeführt werden, da Berechtigungen für die Verlaufstabelle oder für die aktuelle Tabelle fehlen.|
 
 ## <a name="security-of-select-statement"></a>Sicherheit der SELECT-Anweisung
 

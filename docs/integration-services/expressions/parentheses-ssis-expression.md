@@ -15,10 +15,10 @@ ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 968ab3afbdb5d184364758797180102d65293eb7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288522"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (Klammern) (SSIS-Ausdruck)
@@ -40,7 +40,7 @@ ms.locfileid: "71288522"
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ein gültiger Ausdruck.  
+ Ist ein beliebiger gültiger Ausdruck.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp von *expression*. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  

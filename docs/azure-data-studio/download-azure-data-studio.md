@@ -10,12 +10,12 @@ ms.author: maghan
 ms.custom: seodec18
 ms.date: 12/26/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: e0094ffaaa1be646b470547277026385c9dae24e
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.openlocfilehash: c5c75b2fda96d970b243161636d791029e311330
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727027"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516491"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
@@ -57,13 +57,11 @@ Das *Benutzer-Installationsprogramm* wird empfohlen, da dafür keine Administrat
 2. Navigieren Sie zur heruntergeladenen Datei, und extrahieren Sie sie.
 3. Ausführen von `\azuredatastudio-windows\azuredatastudio.exe`
 
-
 ## <a name="get-azure-data-studio-for-macos"></a>Azure Data Studio für macOS
 
 1. Laden Sie [[!INCLUDE[name-sos](../includes/name-sos-short.md)] für macOS](https://go.microsoft.com/fwlink/?linkid=2113528) herunter.
 2. Doppelklicken Sie auf die ZIP-Datei, um die Inhalte zu erweitern.
 3. Wenn Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] im *Launchpad* verfügbar machen wollen, können Sie *Azure Data Studio.app* in den Ordner *Programme* ziehen.
-
 
 ## <a name="get-azure-data-studio-for-linux"></a>Azure Data Studio für Linux
 
@@ -146,10 +144,12 @@ Wenn Sie [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] mit einem ZIP
 - Windows Server 2008 R2 (64-Bit)
 
 ### <a name="macos"></a>macOS
+
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
+
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2
@@ -164,6 +164,7 @@ Wenn Sie [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] mit einem ZIP
 |             |           |            |
 
 ## <a name="check-for-updates"></a>Suchen nach Updates
+
 Klicken Sie unten links im Fenster auf das Zahnradsymbol und dann auf **Check for Updates** (Nach Updates suchen), um nach aktuellen Updates zu suchen.
 
 ## <a name="supported-sql-offerings"></a>Unterstützte SQL-Angebote
@@ -173,9 +174,8 @@ Klicken Sie unten links im Fenster auf das Zahnradsymbol und dann auf **Check fo
 ## <a name="upgrade-from-sql-operations-studio"></a>Upgrade von SQL Operations Studio
 
 Wenn Sie noch immer SQL Operations Studio verwenden, müssen Sie ein Upgrade auf Azure Data Studio durchführen. SQL Operations Studio war der Name der Vorschauversion von Azure Data Studio. Im September 2018 haben wir [den Namen in Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) geändert und die allgemein verfügbare Version veröffentlicht. Da SQL Operations Studio nicht länger aktualisiert und unterstützt wird, bitten wir alle Benutzer von SQL Operations Studio, die neueste Version von Azure Data Studio herunterzuladen, um die aktuellen Funktionen, Sicherheitsupdates und Problembehebungen nutzen zu können.
- 
-Beim Upgrade von der alten Vorschauversion zur neuesten Version von Azure Data Studio gehen Ihre aktuellen Einstellungen und Erweiterungen verloren. Befolgen Sie die Anweisungen im nächsten Abschnitt *Übernehmen von Benutzereinstellungen*, um Ihre Einstellungen zu übernehmen:
 
+Beim Upgrade von der alten Vorschauversion zur neuesten Version von Azure Data Studio gehen Ihre aktuellen Einstellungen und Erweiterungen verloren. Befolgen Sie die Anweisungen im nächsten Abschnitt *Übernehmen von Benutzereinstellungen*, um Ihre Einstellungen zu übernehmen:
 
 ## <a name="move-user-settings"></a>Übernehmen von Benutzereinstellungen
 
@@ -203,6 +203,7 @@ Mit den Schritten unten können Sie Ihre benutzerdefinierten Einstellungen, Tast
 ## <a name="next-steps"></a>Nächste Schritte
 
 In den folgenden Schnellstarts finden Sie Hinweise zu den ersten Schritten:
+
 - [Herstellen einer Verbindung mit und Abfragen von SQL Server](quickstart-sql-server.md)
 - [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank](quickstart-sql-database.md)
 - [Herstellen einer Verbindung mit und Abfragen von Azure SQL Data Warehouse](quickstart-sql-dw.md)

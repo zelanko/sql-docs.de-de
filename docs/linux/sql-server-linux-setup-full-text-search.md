@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874767"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren der SQL Server-Volltextsuche unter Linux
@@ -123,7 +123,7 @@ Bei der Volltextsuche werden [Wörtertrennungen](../relational-databases/search/
 | Marathi | 1102 |
 | Polnisch | 1045 |
 | Portugiesisch | 2070 |
-| Punjabi | 1094 |
+| Pandschabi | 1094 |
 | Rumänisch | 1048 |
 | Russisch | 1049 |
 | Serbisch (Kyrillisch) | 3098 |
@@ -133,11 +133,11 @@ Bei der Volltextsuche werden [Wörtertrennungen](../relational-databases/search/
 | Slowenisch | 1060 |
 | Spanisch | 3082 |
 | Schwedisch | 1053 |
-| Tamil | 1097 |
-| Telugu | 1098 |
-| Thai | 1054 |
+| Tamilisch | 1097 |
+| Telugu | 1\.098 |
+| Thailändisch | 1054 |
 | Chinesisch (traditionell) | 1028 |
-| Türkisch | 1055 |
+| Türkisch | 1\.055 |
 | Ukrainisch | 1058 |
 | Urdu | 1056 |
 | Vietnamesisch | 1066 |
@@ -148,7 +148,7 @@ Die Volltextsuche funktioniert auch mit Text, der in Binärdateien gespeichert i
 
 Eine Liste installierter Filter wird durch Aufrufen von **sp_help_fulltext_system_components 'filter'** angezeigt. Für SQL Server werden die folgenden Filter installiert:
 
-| Komponentenname | Klassen-ID | Versionsoptionen |
+| Komponentenname | Klassen-ID | Version |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

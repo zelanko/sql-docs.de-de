@@ -21,10 +21,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71711067"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Parametrisierte Filter – Parametrisierte Zeilenfilter
@@ -125,7 +125,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>Festlegen von 'partition options'  
  Der Wert für die **partition options** -Eigenschaft wird angegeben, wenn Sie einen Artikel erstellen. Ausschlaggebend für den Wert ist dabei die Art und Weise, wie die Daten in der gefilterten Tabelle für mehrere Abonnenten freigegeben werden. Die Eigenschaft kann mithilfe von [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)und dem Dialogfeld **Artikeleigenschaften** auf einen von vier Werten festgelegt werden. Wird das Dialogfeld **Filter hinzufügen** oder **Filter bearbeiten** verwendet, kann aus zwei Werten ausgewählt werden. Diese beiden Dialogfelder stehen über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Die folgende Tabelle gibt einen Überblick über die verfügbaren Werte für diese Eigenschaft:  
   
-|und Beschreibung|Wert in Filter hinzufügen und Filter bearbeiten|Wert in Artikeleigenschaften|Wert in gespeicherten Prozeduren|  
+|BESCHREIBUNG|Wert in Filter hinzufügen und Filter bearbeiten|Wert in Artikeleigenschaften|Wert in gespeicherten Prozeduren|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |Daten in den Partitionen überlappen sich. Der Abonnent kann die Spalten, auf die im parametrisierten Filter verwiesen wird, aktualisieren.|**Eine Zeile aus dieser Tabelle wird an mehrere Abonnements gesendet**|**Überlappend**|**0**|  
 |Daten in den Partitionen überlappen sich. Der Abonnent kann die Spalten, auf die in parametrisierten Filtern verwiesen wird, nicht aktualisieren.|Nicht zutreffend*|**Überlappend, Datenänderungen außerhalb der Partition nicht zulassen**|**1**|  

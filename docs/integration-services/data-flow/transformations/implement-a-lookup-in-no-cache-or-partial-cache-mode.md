@@ -16,10 +16,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0f04255feb2eec4b7cc8fc2fd9df0eed67ef25f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297901"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"
@@ -64,11 +64,11 @@ ms.locfileid: "71297901"
   
     -   Klicken Sie auf **Ergebnisse einer SQL-Abfrage verwenden**, und erstellen Sie dann eine Abfrage im Fenster **SQL-Befehl** .  
   
-         -oder-  
+         Oder  
   
          Klicken Sie auf **Abfrage erstellen** , um mit den vom **Abfrage-Generator** bereitgestellten grafischen Tools eine Abfrage zu erstellen.  
   
-         -oder-  
+         Oder  
   
          Klicken Sie auf **Durchsuchen** , um eine SQL-Anweisung aus einer Datei zu importieren.  
   

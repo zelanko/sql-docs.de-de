@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810966"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Spezifikation des VDI-Client SDK für SQL Server für Linux
@@ -217,7 +217,7 @@ Wenn diese Routine blockiert werden muss, um auf einen Befehl zu warten, wird de
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| |None | Nicht verfügbar
+| |Keine | Nicht verfügbar
         
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
@@ -237,7 +237,7 @@ Wenn diese Routine blockiert werden muss, um auf einen Befehl zu warten, wird de
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| |None |Nicht verfügbar
+| |Keine |Nicht verfügbar
         
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |

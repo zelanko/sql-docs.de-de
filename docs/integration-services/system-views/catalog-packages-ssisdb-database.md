@@ -14,10 +14,10 @@ ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aea0d3c07482c7c54dc5adb8956b290791f29111
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295167"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB-Datenbank)
@@ -29,10 +29,10 @@ ms.locfileid: "71295167"
 
   Zeigt die Details für alle Pakete an, die im **SSISDB** -Katalog angezeigt werden.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|Der eindeutige Bezeichner (ID) des Pakets.|  
-|NAME|**nvarchar(256)**|Der eindeutige Name des Pakets.|  
+|name|**nvarchar(256)**|Der eindeutige Name des Pakets.|  
 |package_guid|**uniqueidentifier**|Der global eindeutige Bezeichner (Globally Unique Identifier, GUID) für das Paket.|  
 |description|**nvarchar(1024)**|Eine optionale Beschreibung des Pakets.|  
 |package_format_version|**int**|Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der das Paket entwickelt wurde.|  
@@ -42,11 +42,11 @@ ms.locfileid: "71295167"
 |version_comments|**nvarchar(1024)**|Optionale Kommentare zur Paketversion.|  
 |version_guid|**uniqueidentifier**|Die GUID, die die Paketversion eindeutig identifiziert.|  
 |project_id|**bigint**|Die eindeutige ID des Projekts.|  
-|entry_point|**bit**|Der Wert `1` gibt an, dass das Paket direkt gestartet werden soll. Der Wert `0` gibt an, dass das Paket von einem anderen Paket mit dem Task Paket ausführen gestartet werden soll. Der Standardwert lautet `1`.|  
+|entry_point|**bit**|Der Wert `1` gibt an, dass das Paket direkt gestartet werden soll. Der Wert `0` gibt an, dass das Paket von einem anderen Paket mit dem Task Paket ausführen gestartet werden soll. Standardwert: `1`.|  
 |validation_status|**char(1)**|Der Status der Überprüfung.|  
 |last_validation_time|**datetimeoffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jedes Paket im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
