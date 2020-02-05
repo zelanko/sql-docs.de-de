@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 94d617f0da60b73ecfc7a0dcdd4530a3a36f3ca7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927365"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>Arithmetische Operatoren (Transact-SQL)
@@ -31,9 +31,9 @@ Arithmetische Operatoren führen mathematische Operationen für zwei Ausdrücke 
   
 |Operator|Bedeutung|  
 |--------------|-------------|  
-|[+ (Add) (+ (Addieren))](../../t-sql/language-elements/add-transact-sql.md)|Addition|  
-|[- (Subtract) (- (Subtrahieren))](../../t-sql/language-elements/subtract-transact-sql.md)|Subtraktion|  
-|[* (Multiply) (* (Multiplizieren))](../../t-sql/language-elements/multiply-transact-sql.md)|Multiplikation|  
+|[+ (Addition)](../../t-sql/language-elements/add-transact-sql.md)|Addition|  
+|[- (Subtraktion)](../../t-sql/language-elements/subtract-transact-sql.md)|Subtraktion|  
+|[* (Multiplikation)](../../t-sql/language-elements/multiply-transact-sql.md)|Multiplikation|  
 |[/ (Dividieren)](../../t-sql/language-elements/divide-transact-sql.md)|Division|  
 |[% (Modulus)](../../t-sql/language-elements/modulo-transact-sql.md)|Gibt den ganzzahligen Rest einer Division zurück. Beispiel: 12 % 5 = 2 (der Rest von 12 geteilt durch 5 ist 2).|  
   
