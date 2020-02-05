@@ -19,10 +19,10 @@ ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ac25131e24aa89253abfc13eac69a4a60d0b7aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040290"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68040290"
 
 Diese Funktion gibt Informationen zu einer Eigenschaft einer Assembly zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ Der Name der Assembly.
 *property_name*  
 Der Name einer Eigenschaft, zu der Informationen abgerufen werden sollen. *property_name* kann einen der folgenden Werte enthalten:
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |---|---|
 |**CultureInfo**|Gebietsschema der Assembly.|  
 |**PublicKey**|Öffentlicher Schlüssel oder öffentlicher Schlüsseltoken der Assembly.|  
@@ -70,7 +70,7 @@ GO
 SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
 [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)
   

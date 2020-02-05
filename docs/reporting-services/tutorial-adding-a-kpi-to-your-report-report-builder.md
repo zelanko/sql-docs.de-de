@@ -9,14 +9,14 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041886"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)
-In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial fügen Sie eine Leistungskennzahl (key performance indicator; KPI) zu einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht hinzu.  
+In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]-Tutorial fügen Sie eine Leistungskennzahl (Key Performance Indicator; KPI) einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht hinzu.  
 
 KPIs sind für Unternehmen bedeutende, messbare Werte. In diesem Szenario ist die Verkaufszusammenfassung nach Produktunterkategorien der KPI. Der aktuelle Status der KPI wird mithilfe von Farben, Messgeräten und Indikatoren angezeigt.
   
@@ -29,7 +29,7 @@ Die folgende Abbildung ähnelt dem Bericht, den Sie erstellen werden.
   
 Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Table"></a>1. Erstellen eines Tabellenberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten  
@@ -335,10 +335,10 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
   
 2.  Klicken Sie auf **Speichern**.  
   
-## <a name="next-steps"></a>Next Steps  
-Sie haben das Lernprogramm "Hinzufügen eines KPI zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen finden Sie in den folgenden Themen:
-*  [Messgeräte](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
-* [Indikatoren](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+## <a name="next-steps"></a>Nächste Schritte  
+Sie haben das Lernprogramm "Hinzufügen eines KPI zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen finden Sie unter
+*  [Gauges (Messgeräte)](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
+* [Indicators (Indikatoren)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
 * [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)

@@ -15,10 +15,10 @@ ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b3d06da6d6f972c64d4bf196699b55a611b0f992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042470"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (geography-Datentyp)
@@ -64,7 +64,7 @@ ms.locfileid: "68042470"
  ```  
   
 ### <a name="c-finding-the-convex-hull-of-a-non-convex-polygon-instance"></a>C. Suchen der konvexen Hülle einer nicht konvexen Polygoninstanz  
- Im folgenden Beispiel wird `STConvexHull()` verwendet, um die konvexe Hülle einer nicht-konvexen `Polygon` -Instanz zu finden.  
+ Im folgenden Beispiel wird `STConvexHull()` verwendet, um die konvexe Hülle einer nicht-konvexen `Polygon`-Instanz zu suchen.  
   
 ```  
  DECLARE @g geography;  
@@ -72,7 +72,7 @@ ms.locfileid: "68042470"
  SELECT @g.STConvexHull().ToString();  
 ```  
   
-### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. Suchen der konvexen Hülle in einer geography-Instanz mit einem Umschlagwinkel größer als 90 Grad  
+### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D: Suchen der konvexen Hülle in einer geography-Instanz mit einem Umschlagwinkel größer als 90 Grad  
  Im folgenden Beispiel wird `STConvexHull()` in einer **geography** -Instanz mit einem Umschlagwinkel größer als 90 Grad verwendet.  
   
 ```

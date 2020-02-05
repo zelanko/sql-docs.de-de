@@ -18,10 +18,10 @@ ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1feffb9116294c6dc77af5bae2552362fd8e532b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107840"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (geometry-Datentyp)
@@ -58,7 +58,7 @@ FROM @temp;
   
  Im Beispiel werden dann die Dimensionen jeder `geometry` -Instanz zurückgegeben.  
   
-|NAME|dim|  
+|name|dim|  
 |----------|---------|  
 |Point|0|  
 |LineString|1|  

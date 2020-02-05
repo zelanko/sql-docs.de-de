@@ -26,10 +26,10 @@ ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3f821e16baa3853926da1323457385365ea64807
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141255"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68141255"
 
   Importiert einen Datenbank-Hauptschlüssel aus einer Sicherungsdatei.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

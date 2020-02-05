@@ -22,10 +22,10 @@ ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad8f9e49ea1dd22184384b337d036991d9dc7f9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044115"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68044115"
 
   Entfernt eine Partitionsfunktion aus der aktuellen Datenbank. Partitionsfunktionen werden mithilfe von CREATE PARTITION FUNCTION erstellt und mithilfe von ALTER PARTITION FUNCTION geändert.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

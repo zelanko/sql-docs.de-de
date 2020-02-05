@@ -9,10 +9,10 @@ ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62683702"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Karten in mobilen Reporting Services-Berichten
@@ -77,8 +77,8 @@ Um echte Daten in Ihrer Karte anzuzeigen, müssen Sie Werte für mindestens zwei
      
 8. Wählen Sie in der oberen linken Ecke das Symbol **Speichern** und dann entweder **Lokal speichern** zum Speichern auf Ihrem Computer oder **Auf Server speichern**.  
   
-### <a name="see-also"></a>Siehe auch  
--  [Benutzerdefinierte Karten in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+### <a name="see-also"></a>Weitere Informationen  
+-  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   

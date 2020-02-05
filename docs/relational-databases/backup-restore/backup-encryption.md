@@ -11,10 +11,10 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19a8597136f073d609c7a9cc77ce8e2b73c72004
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71688288"
 ---
 # <a name="backup-encryption"></a>Verschlüsseln der Sicherung
@@ -26,14 +26,14 @@ ms.locfileid: "71688288"
   
  Um während der Sicherung eine Verschlüsselung durchzuführen, müssen Sie einen Verschlüsselungsalgorithmus und eine Verschlüsselungsmethode angeben, um den Verschlüsselungsschlüssel zu sichern. Folgende Verschlüsselungsoptionen werden unterstützt:  
   
-- **Verschlüsselungsalgorithmus:** Die folgenden Verschlüsselungsalgorithmen werden unterstützt: AES 128, AES 192, AES 256 und Triple DES  
+- **Verschlüsselungsalgorithmus:** Die unterstützten Verschlüsselungsalgorithmen sind: AES 128, AES, AES 192 256 und Triple DES  
   
-- **Verschlüsselung:** Ein Zertifikat oder asymmetrischer Schlüssel  
+- **Verschlüsselung:** ein Zertifikat oder ein asymmetrischer Schlüssel  
   
 > [!CAUTION]  
 > Es ist sehr wichtig, das Zertifikat oder den asymmetrischen Schlüssel zu sichern – vorzugsweise an einem anderen Speicherort als die Sicherungsdatei, die zum Verschlüsseln verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel können Sie keine Sicherung wiederherstellen, sodass die Sicherungsdatei unbrauchbar ist.  
   
- **Wiederherstellen der verschlüsselten Sicherung:** Die SQL Server-Wiederherstellung erfordert keine Angabe von Verschlüsselungsparametern während der Wiederherstellung. Sie setzt aber voraus, dass das Zertifikat oder der asymmetrische Schlüssel, die zum Verschlüsseln der Sicherungsdatei verwendet werden, in der Instanz verfügbar ist, auf der Sie die Wiederherstellung ausführen. Das Benutzerkonto, unter dem die Wiederherstellung ausgeführt wird, muss über **VIEW DEFINITION** -Berechtigungen für das Zertifikat oder den Schlüssel verfügen. Wenn Sie die verschlüsselte Sicherung in einer anderen Instanz wiederherstellen, müssen Sie sicherstellen, dass das Zertifikat für diese Instanz verfügbar ist.  
+ **Wiederherstellen der verschlüsselten Sicherung:** Die SQL Server-Wiederherstellung erfordert keine Verschlüsselungsparameter, die während der Wiederherstellung angegeben werden müssen. Sie setzt aber voraus, dass das Zertifikat oder der asymmetrische Schlüssel, die zum Verschlüsseln der Sicherungsdatei verwendet werden, in der Instanz verfügbar ist, auf der Sie die Wiederherstellung ausführen. Das Benutzerkonto, unter dem die Wiederherstellung ausgeführt wird, muss über **VIEW DEFINITION** -Berechtigungen für das Zertifikat oder den Schlüssel verfügen. Wenn Sie die verschlüsselte Sicherung in einer anderen Instanz wiederherstellen, müssen Sie sicherstellen, dass das Zertifikat für diese Instanz verfügbar ist.  
   
  Wenn Sie eine Sicherung von einer TDE-verschlüsselten Datenbank wiederherstellen, sollte das TDE-Zertifikat auf der Instanz verfügbar sein, auf der die Wiederherstellung erfolgen soll.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "71688288"
   
 1. Sie können Verschlüsselungsschlüssel in EKM-Anbieter (Extended Key Management) integrieren.  
  
-##  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Voraussetzungen  
  Voraussetzungen zum Verschlüsseln einer Sicherung:  
   
-1. **Erstellen eines Datenbankhauptschlüssels für die Masterdatenbank:** Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von privaten Schlüsseln der in der Datenbank vorhandenen Zertifikate und asymmetrischen Schlüssel verwendet wird. Weitere Informationen finden Sie unter [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1. **Erstellen eines Datenbank-Hauptschlüssels für die Masterdatenbank:** Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von in der Datenbank vorhandenen privaten Schlüsseln von Zertifikaten und asymmetrischen Schlüsseln verwendet wird. Weitere Informationen finden Sie unter [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 1. Erstellen Sie ein Zertifikat oder einen asymmetrischen Schlüssel, der für die Sicherungsverschlüsselung verwendet wird. Weitere Informationen zum Erstellen eines Zertifikats finden Sie unter [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md). Weitere Informationen zum Erstellen eines asymmetrischen Schlüssels finden Sie unter [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md).  
   
@@ -126,7 +126,7 @@ Backup-SqlDatabase -ServerInstance . -Database "<myDatabase>" -BackupFile "<myDa
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
-|Thema/Aufgabe|und Beschreibung|  
+|Thema/Aufgabe|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |[Erstellen einer verschlüsselten Sicherung](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Beschreibt die grundlegenden Schritte, die erforderlich sind, um eine verschlüsselte Sicherung zu erstellen.|  
 |[Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Enthält ein Beispiel zum Erstellen einer verschlüsselten Sicherung, die durch Schlüssel im Azure-Schlüsseltresor geschützt ist.|  

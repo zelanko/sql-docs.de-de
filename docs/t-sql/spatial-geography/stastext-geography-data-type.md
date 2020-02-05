@@ -18,10 +18,10 @@ ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9050e529cd851d5b6785e3e167c1c081a2079dd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042498"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText (geography-Datentyp)

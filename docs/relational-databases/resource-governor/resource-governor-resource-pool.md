@@ -14,10 +14,10 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 0a65cb01d34082e59d85198505740c345bb7bd08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942664"
 ---
 # <a name="resource-governor-resource-pool"></a>Ressourcenpool für die Ressourcenkontrolle
@@ -54,7 +54,7 @@ Wenn bei einem Pool ein MIN-Wert definiert ist, der nicht 0 (null) entspricht, w
   
 In der folgenden Tabelle werden einige der obigen Konzepte erläutert. Die Tabelle zeigt die Einstellungen für den internen Pool, den Standardpool und zwei benutzerdefinierte Pools. 
   
-|Poolname|Einstellung für MIN %|Einstellung für MAX %|Berechneter effektiver MAX %|Berechneter Shared %|Anmerkung|  
+|Poolname|Einstellung für MIN %|Einstellung für MAX %|Berechneter effektiver MAX %|Berechneter Shared %|Comment|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |Interner Pool (internal)|0|100|100|0|Effektiver MAX % und Shared % gelten nicht für den internen Pool.|  
 |default|0|100|30|30|Der effektive MAX-Wert wird berechnet als: min(100,100-(20+50)) = 30. Der berechnete Shared % ist der effektive MAX - MIN = 30.|  
@@ -75,7 +75,7 @@ Die folgenden Formeln werden in der Tabelle oben zum Berechnen der Prozentwerte 
 
 Anhand der obigen Tabelle als Beispiel können wir zeigen, welche Anpassungen vorgenommen werden, wenn ein weiterer Pool erstellt wird. Dieser Pool ist Pool 3 mit einer MIN %-Einstellung von 5.  
   
-|Poolname|Einstellung für MIN %|Einstellung für MAX %|Berechneter effektiver MAX %|Berechneter Shared %|Anmerkung|  
+|Poolname|Einstellung für MIN %|Einstellung für MAX %|Berechneter effektiver MAX %|Berechneter Shared %|Comment|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |Interner Pool (internal)|0|100|100|0|Effektiver MAX % und Shared % gelten nicht für den internen Pool.|  
 |default|0|100|25|25|Der effektive MAX-Wert wird berechnet als: min(100,100-(20+50+5)) = 25. Der berechnete Shared % ist der effektive MAX - MIN = 25.|  

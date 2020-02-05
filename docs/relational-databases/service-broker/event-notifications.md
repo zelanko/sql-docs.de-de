@@ -14,10 +14,10 @@ ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048863"
 ---
 # <a name="event-notifications"></a>Ereignisbenachrichtigungen
@@ -69,7 +69,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |DML-Trigger weisen den gleichen Besitzer wie die Tabellen auf, auf die sie angewendet werden.|Der Besitzer einer Ereignisbenachrichtigung für eine Warteschlange kann einen anderen Besitzer als das Objekt aufweisen, auf das diese angewendet wird.|  
 |Trigger unterstützen die EXECUTE AS-Klausel.|Ereignisbenachrichtigungen unterstützen die EXECUTE AS-Klausel nicht.|  
 |Die Ereignisinformationen von DDL-Triggern können mit der EVENTDATA-Funktion aufgezeichnet werden, die einen **xml** -Datentyp zurückgibt.|Ereignisbenachrichtigungen senden **xml** -Ereignisinformationen an einen Service Broker-Dienst. Die Informationen werden für das gleiche Schema formatiert, das auch die EVENTDATA-Funktion verwendet.|  
-|Metadaten zu Triggern sind in den **sys.triggers** - und **sys.server_triggers** -Katalogsichten enthalten.|Metadaten zu Ereignisbenachrichtigungen sind in den **sys.event_notifications**- und **sys.server_event_notifications**-Katalogsichten enthalten.|  
+|Metadaten zu Triggern sind in den **sys.triggers** - und **sys.server_triggers** -Katalogsichten enthalten.|Metadaten zu Ereignisbenachrichtigungen sind in den **sys.event_notifications** - und **sys.server_event_notifications** -Katalogsichten enthalten.|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Ereignisbenachrichtigungen im Vergleich zur SQL-Ablaufverfolgung  
  Die folgende Tabelle vergleicht das Verwenden von Ereignisbenachrichtigungen mit der SQL-Ablaufverfolgung zum Überwachen von Serverereignissen und führt die jeweiligen Merkmale auf.  
@@ -90,7 +90,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
   
 ## <a name="event-notification-tasks"></a>Tasks der Ereignisbenachrichtigung  
   
-|Task|Thema|  
+|Aufgabe|Thema|  
 |----------|-----------|  
 |Beschreibt, wie Ereignisbenachrichtigungen erstellt und implementiert werden.|[Implementieren von Ereignisbenachrichtigungen](../../relational-databases/service-broker/implement-event-notifications.md)|  
 |Beschreibt, wie für Ereignisbenachrichtigungen, die Nachrichten an eine Service Broker-Instanz auf einem Remoteserver senden, die Dialogsicherheit von [!INCLUDE[ssSB](../../includes/sssb-md.md)] konfiguriert wird.|[Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  

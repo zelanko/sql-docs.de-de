@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a1266097e82f5db84f5a91951adc784d6d9580ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901853"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION-Klausel (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67901853"
   
  Diese Klausel kann in den Anweisungen SELECT, DELETE, UPDATE und MERGE angegeben werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -83,7 +83,7 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. SELECT-Anweisung mit einer Bezeichnung in der OPTION-Klausel  
  Im folgenden Beispiel wird eine einfache [!INCLUDE[ssDW](../../includes/ssdw-md.md)]-SELECT-Anweisung mit einer Bezeichnung in der OPTION-Klausel dargestellt.  
@@ -107,7 +107,7 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. SELECT-Anweisung mit einer Bezeichnung und mehreren Abfragehinweisen in der OPTION-Klausel  
+### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D: SELECT-Anweisung mit einer Bezeichnung und mehreren Abfragehinweisen in der OPTION-Klausel  
  Beim folgenden Beispiel handelt es sich um eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)]-SELECT-Anweisung, die eine Bezeichnung und mehrere Abfragehinweise enthält. Bei der Ausführung der Abfrage auf den Computeknoten wendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Hashjoin oder Merge Join an, je nachdem, welche Strategie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als optimal auswählt.  
   
 ```  

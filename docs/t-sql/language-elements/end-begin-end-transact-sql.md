@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e7aff4c7bdc1ec9edb93f8a207bd2166bcb3b084
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075304"
 ---
 # <a name="end-beginend-transact-sql"></a>END (BEGIN...END) (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68075304"
 
   Schließt eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen ein, die als Gruppe ausgeführt werden. BEGIN...END-Blöcke können geschachtelt werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,9 +48,9 @@ END
  Eine beliebige gültige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder -Anweisungsgruppierung, die als Anweisungsblock definiert ist. Um einen Anweisungsblock (Batch) zu definieren, verwenden Sie die Schlüsselwörter BEGIN und END aus den Sprachkonstrukten zur Ablaufsteuerung. Obwohl sämtliche [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem BEGIN...END-Block gültig sind, sollten bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nicht in demselben Batch (Anweisungsblock) gruppiert werden.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- **Boolean**  
+ **Boolescher Wert**  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel wird durch `BEGIN` und `END` eine Reihe von [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisungen definiert, die gemeinsam ausgeführt werden. Wenn der `BEGIN...END`-Block nicht vorhanden wäre, würde das folgende Beispiel in einer Endlosschleife ausgeführt werden.  
   
 ```  

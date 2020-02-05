@@ -22,10 +22,10 @@ ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a71d0fd96519550d52016bf8e951e18755b3c341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914443"
 ---
 # <a name="x40x40packet_errors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67914443"
 
   Gibt die Anzahl der Netzwerkpaket-Fehler zurück, die bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen seit dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetreten sind.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,10 +46,10 @@ ms.locfileid: "67914443"
  **integer**  
   
 ## <a name="remarks"></a>Bemerkungen  
- Führen Sie **sp_monitor** aus, um einen Bericht anzuzeigen, der mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken enthält (einschließlich Paketfehlern).  
+ Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_monitor**aus, um einen Bericht anzuzeigen, der mehrere**-Statistiken enthält (einschließlich Paketfehlern).  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die Verwendung von `@@PACKET_ERRORS` gezeigt.  
+ Im folgenden Beispiel wird `@@PACKET_ERRORS` veranschaulicht:  
   
 ```  
 SELECT @@PACKET_ERRORS AS 'Packet Errors';  

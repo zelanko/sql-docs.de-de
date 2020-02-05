@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel: Angeben der ID- und IDREFS-Anweisungen | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der ID- und der IDREFS-Direktive | Microsoft-Dokumentation'
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1574f3336ae06b8bfb368de7eff37d1bc4286af0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006688"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>Beispiel: Angeben der ID- und IDREFS-Anweisungen
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>Beispiel: Angeben der ID- und der IDREFS-Direktive
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 

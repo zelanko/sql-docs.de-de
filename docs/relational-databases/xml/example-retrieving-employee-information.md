@@ -13,10 +13,10 @@ ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3e123a5195d9eb6a5dd489c635cdd687b42f720
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006775"
 ---
 # <a name="example-retrieving-employee-information"></a>Beispiel: Abrufen von Informationen zu Mitarbeitern
@@ -32,7 +32,7 @@ ms.locfileid: "68006775"
 ...  
 ```  
   
- Nachdem die Hierarchie zwei Ebenen aufweist, schreiben Sie zwei `SELECT`-Abfragen und wenden UNION ALL an. Im Folgenden wird die erste Abfrage gezeigt, die die Werte für das <`Employee`>-Element sowie dessen Attribute abruft. In der Abfrage wird dem <`Employee`>-Element der `1`-Wert `Tag` und der `Parent`-Wert NULL zugewiesen, da es sich um das Element auf oberster Ebene handelt.  
+ Nachdem die Hierarchie zwei Ebenen aufweist, schreiben Sie zwei `SELECT` -Abfragen und wenden UNION ALL an. Im Folgenden wird die erste Abfrage gezeigt, die die Werte für das <`Employee`>-Element sowie dessen Attribute abruft. In der Abfrage wird dem <`1`>-Element der `Tag`-Wert `Employee` und der `Parent`-Wert NULL zugewiesen, da es sich um das Element auf oberster Ebene handelt.  
   
 ```  
 SELECT 1    as Tag,  
@@ -58,7 +58,7 @@ INNER JOIN Person.Person AS P
 ON  E.BusinessEntityID = P.BusinessEntityID;  
 ```  
   
- Kombinieren Sie diese Abfragen nun mit `UNION AL`L, wenden Sie `FOR XML EXPLICIT` an, und geben Sie die erforderliche `ORDER BY`-Klausel an. Sie müssen das Rowset zuerst nach `BusinessEntityID` und dann nach Namen sortieren, sodass die NULL-Werte in den Namen an erster Stelle aufgeführt werden. Führen Sie die folgende Abfrage ohne FOR XML-Klausel aus, um die generierte Universaltabelle anzuzeigen.  
+ Kombinieren Sie diese Abfragen nun mit `UNION AL`L, wenden Sie `FOR XML EXPLICIT`an, und geben Sie die erforderliche `ORDER BY` -Klausel an. Sie müssen das Rowset zuerst nach `BusinessEntityID` und dann nach Namen sortieren, sodass die NULL-Werte in den Namen an erster Stelle aufgeführt werden. Führen Sie die folgende Abfrage ohne FOR XML-Klausel aus, um die generierte Universaltabelle anzuzeigen.  
   
  So sieht die endgültige Abfrage aus:  
   
@@ -96,7 +96,7 @@ FOR XML EXPLICIT;
 ...
 ```
   
- Die erste `SELECT` -Anweisung gibt die Spaltennamen des Rowsets des Ergebnisses an. Diese Namen bilden zwei Spaltengruppen. Die Gruppe mit dem `Tag`-Wert `1` im Spaltennamen identifiziert `Employee` als Element und `EmpID` als Attribut. Die andere Spaltengruppe besitzt den `Tag`-Wert `2` im Spaltennamen und identifiziert <`Name`> als Element und `FName` und `LName` als Attribute.  
+ Die erste `SELECT` -Anweisung gibt die Spaltennamen des Rowsets des Ergebnisses an. Diese Namen bilden zwei Spaltengruppen. Die Gruppe mit dem `Tag` -Wert `1` im Spaltennamen identifiziert `Employee` als Element und `EmpID` als Attribut. Die andere Spaltengruppe besitzt den `Tag`-Wert `2` im Spaltennamen und identifiziert <`Name`> als Element und `FName` und `LName` als Attribute.  
   
  In der folgenden Tabelle wird das von der Abfrage generierte partielle Rowset gezeigt:  
   

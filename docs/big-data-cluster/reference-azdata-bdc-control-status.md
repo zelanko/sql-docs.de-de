@@ -1,26 +1,26 @@
 ---
 title: 'azdata bdc control status: Referenz'
-titleSuffix: SQL Server big data clusters
 description: Referenzartikel zu azdata bdc control status-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed3c104b9aea6eae06ad5f5acebb892660ca8886
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1a617b57e4a73db83d88573b77f7058e0aab3889
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531834"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75233931"
 ---
 # <a name="azdata-bdc-control-status"></a>azdata bdc control status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den `bdc control`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |

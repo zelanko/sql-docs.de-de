@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056134"
 ---
 # <a name="dml-triggers"></a>DML-Trigger
@@ -60,7 +60,7 @@ ms.locfileid: "68056134"
 |Anwendbarkeit|Tabellen|Tabellen und Sichten|  
 |Anzahl pro Tabelle oder Sicht|Mehrere Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|Ein Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|  
 |Kaskadierende Verweise|Keine Einschränkungen|INSTEAD OF UPDATE- und DELETE-Trigger sind nicht für Tabellen zulässig, die Ziel von kaskadierenden Einschränkungen für die referenzielle Integrität sind.|  
-|Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br /><br /> Deklarativen referenziellen Aktionen<br /><br /> Erstellung der**inserted** - und **deleted** -Tabellen<br /><br /> Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle:  Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
+|Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br /><br /> Deklarativen referenziellen Aktionen<br /><br /> Erstellung der**inserted** - und **deleted** -Tabellen<br /><br /> Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle: Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
 |Ausführungsreihenfolge|Der zuerst und zuletzt auszuführende Trigger kann angegeben werden.|Nicht verfügbar|  
 |**varchar(max)** -, **nvarchar(max)** -, und **varbinary(max)** -Spaltenverweise in **eingefügten** und **gelöschten** Tabellen|Zulässig|Zulässig|  
 |Verweise auf**text**, **ntext**- und **image** -Spalten in **inserted** - und **deleted** -Tabellen|Nicht zulässig|Zulässig|  
@@ -70,7 +70,7 @@ ms.locfileid: "68056134"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Task|Thema|  
+|Aufgabe|Thema|  
 |----------|-----------|  
 |Beschreibt, wie ein DML-Trigger erstellt wird.|[Erstellen von DML-Triggern](../../relational-databases/triggers/create-dml-triggers.md)|  
 |Beschreibt, wie ein CLR-Trigger erstellt wird.|[Erstellen von CLR-Triggern](../../relational-databases/triggers/create-clr-triggers.md)|  

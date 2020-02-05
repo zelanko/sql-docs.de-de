@@ -24,10 +24,10 @@ ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b3d48de1a5feef4a00b087fded311a2b57169047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131931"
 ---
 # <a name="set-statistics-profile-transact-sql"></a>SET STATISTICS PROFILE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68131931"
 
   Zeigt die Profilinformationen für eine Anweisung an. STATISTICS PROFILE unterstützt Ad-hoc-Abfragen, Sichten und gespeicherte Prozeduren.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,7 +49,7 @@ SET STATISTICS PROFILE { ON | OFF }
   
  Das zusätzliche Resultset enthält neben den SHOWPLAN_ALL-Spalten für die Abfrage die folgenden weiteren Spalten.  
   
-|Spaltenname|und Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**Zeilen**|Tatsächliche Anzahl der Zeilen, die jeder Operator erzeugt.|  
 |**Executes**|Häufigkeit, mit der der Operator ausgeführt wurde.|  

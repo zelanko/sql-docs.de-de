@@ -25,10 +25,10 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094576"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68094576"
 
 Diese Funktion gibt Informationen zu Server- oder Datenbankereignissen zurück. Beim Auslösen einer Ereignisbenachrichtigung und, wenn der angegebene Service Broker die Ergebnisse empfängt, wird `EVENTDATA` aufgerufen. Ein DDL- oder LOGON-Trigger unterstützt auch die interne Verwendung von `EVENTDATA`.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -73,7 +73,7 @@ Von `EVENTDATA` zurückgegebene Daten sind ungültig, nachdem eine Transaktion
 Kennwörter werden nicht angezeigt, wenn `CREATE LOGIN`- oder `ALTER LOGIN`-Anweisungen ausgeführt werden. Dies dient dem Schutz der Anmeldeinformationen.  
   
 ## <a name="schemas-returned"></a>Zurückgegebene Schemas  
-EVENTDATA gibt einen Wert vom Datentyp **xml** zurück. Standardmäßig wird die Schemadefinition für alle Ereignisse im folgenden Verzeichnis installiert: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
+EVENTDATA gibt einen Wert vom Datentyp **xml** zurück. Standardmäßig wird die Schemadefinition für alle Ereignisse in diesem Verzeichnis installiert: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
 Auf der Webseite [Microsoft SQL Server: XML-Schemas](https://go.microsoft.com/fwlink/?LinkID=31850) ist ebenfalls das Ereignisschema veröffentlicht.  
   

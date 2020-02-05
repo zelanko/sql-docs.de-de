@@ -18,10 +18,10 @@ ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 53cac5548d231896b72e0786516c1e32c994869a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050839"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT (Endpunktberechtigungen) (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68050839"
   Erteilt Berechtigungen für einen Endpunkt.  
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

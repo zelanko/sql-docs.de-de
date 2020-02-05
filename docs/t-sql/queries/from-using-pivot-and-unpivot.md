@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305177"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM: Verwenden von PIVOT und UNPIVOT
@@ -62,7 +62,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die Spaltenbezeichner in der `UNPIVOT`-Klausel folgen der Katalogsortierung. Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] wird immer die Sortierung `SQL_Latin1_General_CP1_CI_AS` verwendet. Bei teilweise eigenständigen [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Datenbanken wird immer die Sortierung `Latin1_General_100_CI_AS_KS_WS_SC` verwendet. Wenn die Spalte mit anderen Spalten kombiniert wird, ist eine COLLATE-Klausel (`COLLATE DATABASE_DEFAULT`) erforderlich, um Konflikte zu vermeiden.  
 
   

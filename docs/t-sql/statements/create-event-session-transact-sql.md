@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5033bbb939c2c6237e82683fba4e32defef69281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 089725c52c2f65a9e1edb45a6afadd01ff2ace79
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902802"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910193"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "67902802"
 
 Erstellt eine Sitzung für erweiterte Ereignisse, die die Quelle der Ereignisse, die Ereignissitzungsziele und die Ereignissitzungsoptionen bestimmt.
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 

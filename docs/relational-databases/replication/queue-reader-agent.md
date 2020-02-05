@@ -15,17 +15,17 @@ ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2987497ade73542890b0e90e6c09c1fdd44870ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021249"
 ---
 # <a name="queue-reader-agent"></a>Warteschlangenlese-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Im Dialogfeld **Warteschlangenlese-Agent** werden detaillierte Informationen zum Warteschlangenlese-Agent, wie Status, Verlauf, Informationsmeldungen und alle Fehlermeldungen, angezeigt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Wählen Sie im Menü **Ansicht** aus, welche Sitzungen des Warteschlangenlese-Agents angezeigt werden, und wählen Sie dann eine bestimmte Sitzung aus dem Raster mit der Bezeichnung **Sitzungen des Warteschlangenlese-Agents**aus. Detaillierte Informationen zu dieser Sitzung werden im Raster mit der Bezeichnung **Aktionen in der ausgewählten Sitzung**angezeigt. Wenn die ausgewählte Sitzung mit einem Fehler beendet wurde, wird auch der Textbereich mit der Bezeichnung **Fehlerdetails oder Meldung der ausgewählten Sitzung** angezeigt.  
   
  **Ansicht**  
@@ -48,7 +48,7 @@ ms.locfileid: "68021249"
  **Beendigungszeit**  
  Beendigungszeit der Sitzung. Wenn der Agent noch nicht beendet wurde, ist dieses Feld leer.  
   
- **Dauer**  
+ **Duration**  
  Zeitspanne, für die der Warteschlangenlese-Agent in dieser Sitzung ausgeführt wurde. Dieser Wert stellt die bisher abgelaufene Zeit dar, wenn der Agent immer noch ausgeführt wird, und die Gesamtzeit, wenn die Agentsitzung beendet ist.  
   
  **Fehlermeldung**  

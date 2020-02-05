@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 29008af0f2584322b180a82b20268c452c603baa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982931"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982931"
 
   Gibt den MD2-, MD4-, MD5-, SHA-, SHA1- oder SHA2-Hash der zugehörigen Eingabe in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,14 +62,14 @@ Gibt einen Ausdruck an, der zu einer Zeichenfolge oder Binärzeichenfolge ausgew
 ## <a name="return-value"></a>Rückgabewert  
  **varbinary** (maximal 8.000 Byte)  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Erwägen Sie die Verwendung von `CHECKSUM` oder `BINARY_CHECKSUM` als Alternativen zur Berechnung eines Hashwerts.
 
 Die Algorithmen MD2, MD4, MD5, SHA und SHA1 sind ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] veraltet. Verwenden Sie stattdessen SHA2_256 oder SHA2_512. Ältere Algorithmen funktionieren weiterhin, lösen jedoch ein Ereignis aus, das auf die Veraltung hinweist.
 
 ## <a name="examples"></a>Beispiele  
 ### <a name="return-the-hash-of-a-variable"></a>Zurückgeben des Hashcodes einer Variablen  
- Im folgenden Beispiel wird der `SHA2_256`-Hash der in der `@HashThis`-Variablen gespeicherten **nvarchar**-Daten zurückgegeben.  
+ Im folgenden Beispiel wird der `SHA2_256`-Hash der in der **-Variablen gespeicherten** nvarchar`@HashThis`-Daten zurückgegeben.  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  

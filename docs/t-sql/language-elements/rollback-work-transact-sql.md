@@ -23,10 +23,10 @@ ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 72426dddcab7c0250b6ef0d744f9ede0a19f1550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072354"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68072354"
   Führt für eine benutzerdefinierte Transaktion einen Rollback zum Anfang der Transaktion aus.  
   
  
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

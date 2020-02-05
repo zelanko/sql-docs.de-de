@@ -19,10 +19,10 @@ ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: eaad7e6f3e66bb39ec43f402c531b7f89bdcf980
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251385"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72251385"
 
 Gibt Syntaxinformationen für den angegebenen DBCC-Befehl zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   

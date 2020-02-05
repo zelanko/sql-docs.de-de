@@ -20,10 +20,10 @@ ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5e67b62ec00e2dd98ff4289c1f725892592340e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024759"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Erstellen von Diagrammen, Warnungen, Protokollen und Berichten
@@ -49,7 +49,7 @@ ms.locfileid: "68024759"
   
  Diagramme sind für das kurzfristige Überwachen in Echtzeit von lokalen Computern oder Remotecomputern nützlich, z. B. wenn Sie ein Ereignis überwachen möchten, während es eintritt.  
   
-## <a name="alerts"></a>Warnungen  
+## <a name="alerts"></a>Alerts  
  Mithilfe von Warnungen kann der Systemmonitor bestimmte Ereignisse nachverfolgen und Sie ggf. von diesen Ereignissen in Kenntnis setzen. Ein Warnungsprotokoll kann die aktuelle Leistung ausgewählter Leistungsindikatoren und Instanzen für Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]überwachen. Wenn ein Leistungsindikator einen bestimmten Wert überschreitet, zeichnet das Protokoll das Datum und den Zeitpunkt des Ereignisses auf. Ein Ereignis kann auch eine Netzwerkwarnung generieren. Sie können ein angegebenes Programm ausführen lassen, wenn ein Ereignis zum ersten Mal eintritt, oder jedes Mal, wenn das Ereignis eintritt. So kann eine Warnung beispielsweise eine Netzwerknachricht an alle Systemadministratoren senden, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur noch wenig Speicherplatz aufweist.  
   
 ## <a name="logs"></a>Protokolle  

@@ -9,10 +9,10 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651360"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht
@@ -40,11 +40,11 @@ Nachdem Sie den übergeordneten Bericht entworfen haben, erstellen Sie im nächs
   
     3.  Wählen Sie aus **AdventureWorks2014** aus der Dropdownliste **Datenbanknamen eingeben oder auswählen**aus.  
   
-    4.  Wählen Sie **OK**, und wählen Sie anschließend **Weiter**aus.  
+    4.  Wählen Sie **OK** und anschließend **Weiter** aus.  
   
 6.  Wenn Sie in Schritt 5 (b) **SQL Server-Authentifizierung verwenden** ausgewählt haben, legen Sie fest, ob die vertraulichen Daten in die Zeichenfolge eingeschlossen oder ob die Informationen im Anwendungscode festgelegt werden sollen.  
   
-7.  Geben Sie auf der Seite **Verbindungszeichenfolge in der Anwendungskonfigurationsdatei speichern** den Namen der Verbindungszeichenfolge ein, oder übernehmen Sie den Standardwert **AdventureWorks2014ConnectionString**. Wählen Sie **Weiter**aus.  
+7.  Geben Sie auf der Seite **Verbindungszeichenfolge in der Anwendungskonfigurationsdatei speichern** den Namen der Verbindungszeichenfolge ein, oder übernehmen Sie den Standardwert **AdventureWorks2014ConnectionString**. Wählen Sie **Weiter** aus.  
   
 8.  Wählen Sie auf der Seite **Wählen Sie einen Befehlstyp aus** die Option **SQL-Anweisungen verwenden**aus, und klicken Sie anschließend auf **Weiter**.  
   
@@ -63,7 +63,7 @@ Nachdem Sie den übergeordneten Bericht entworfen haben, erstellen Sie im nächs
   
     Die Konfiguration der ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) als Datenquelle für Ihren Bericht ist jetzt abgeschlossen. Auf der DataSet-Designer-Seite in Visual Studio sollte die hinzugefügte **DataTable** jetzt mit den in der Abfrage angegebenen Spalten aufgeführt werden. DataSet2 enthält die auf der Abfrage basierenden Daten aus der PurchaseOrderDetail-Tabelle.  
   
-11. Speichern Sie die Datei.  
+11. Speichern Sie die Datei .  
   
 12. Wählen Sie im Menü **Daten** die Option **Datenvorschau** aus, und klicken Sie anschließend auf **Vorschau**.  
   

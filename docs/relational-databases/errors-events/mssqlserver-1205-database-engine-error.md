@@ -12,13 +12,13 @@ ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 402d3a3cdb3d1c8eb52feaede9ff1115e745c563
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116030"
 ---
-# <a name="mssqlserver1205"></a>MSSQLSERVER_1205
+# <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -33,7 +33,7 @@ ms.locfileid: "68116030"
 |Meldungstext|Die Transaktion (Prozess-ID %d) befand sich auf %.*ls Ressourcen aufgrund eines anderen Prozesses in einer Deadlocksituation und wurde als Deadlockopfer ausgewählt. Führen Sie die Transaktion erneut aus.|  
   
 ## <a name="explanation"></a>Erklärung  
-Durch separate Transaktionen wird in einer zu Konflikten führenden Reihenfolge auf Ressourcen zugegriffen, was zu einem Deadlock führt. Beispiel:  
+Auf Ressourcen wird für separate Transaktionen in einer Reihenfolge zugegriffen, die zu einem Konflikt führt und einen Deadlock verursacht. Beispiel:  
   
 -   Transaction1 aktualisiert **Table1.Row1** und Transaction2 aktualisiert **Table2.Row2**.  
   
@@ -43,7 +43,7 @@ Durch separate Transaktionen wird in einer zu Konflikten führenden Reihenfolge 
   
 -   Es kommt zu einem Deadlock, weil von Transaction1 auf die Beendigung von Transaction2 gewartet wird, während gleichzeitig von Transaction2 auf die Beendigung von Transaction1 gewartet wird.  
   
-Dieser Deadlock wird vom System erkannt und eine der beteiligten Transaktionen als "Opfer" ausgewählt. Anschließend wird diese Meldung ausgegeben und für die Transaktion des Opfers ein Rollback ausgeführt.  
+Das System erkennt diesen Deadlock und wählt eine der beteiligten Transaktionen als „Opfer“ aus. Es wird diese Meldung ausgegeben, und für die Transaktion des Opfers wird ein Rollback ausgeführt.  
   
 ## <a name="user-action"></a>Benutzeraktion  
 Führen Sie die Transaktion erneut aus. Sie können auch die Anwendung überarbeiten, um Deadlocks zu vermeiden. Die Transaktion, die als Opfer ausgewählt wurde, kann erneut ausgeführt werden und wird wahrscheinlich erfolgreich verlaufen, je nachdem, welche Vorgänge gleichzeitig ausgeführt werden.  

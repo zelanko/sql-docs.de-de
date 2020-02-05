@@ -21,10 +21,10 @@ ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 27f6d8f947dc0ad5e25ddf53ac63e5f40b332c2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013210"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Affinitätsmaske (Serverkonfigurationsoption)
@@ -126,10 +126,10 @@ GO
 ## <a name="licensing-issues"></a>Lizenzierungsprobleme  
  Die dynamische Affinität wird durch die CPU-Lizenzierung streng reguliert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind keine Konfigurationen von Affinitätsmaskenoptionen zulässig, die gegen die Lizenzierungsrichtlinien verstoßen.  
   
-### <a name="startup"></a>Starten  
+### <a name="startup"></a>Start  
  Wenn eine angegebene Affinitätsmaske während des Starts von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder während des Anfügens einer Datenbank gegen die Lizenzierungsrichtlinien verstößt, führt die Engine-Schicht den Startprozess oder das Anfügen einer Datenbank bzw. den Wiederherstellungsvorgang aus. Anschließend wird der Wert von sp_configure für die Affinitätsmaske auf 0 zurückgesetzt, wodurch eine Fehlermeldung an das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll ausgegeben wird.  
   
-### <a name="reconfigure"></a>Neukonfigurieren  
+### <a name="reconfigure"></a>Neu konfigurieren  
  Wenn eine angegebene Affinitätsmaske beim Ausführen des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehls RECONFIGURE gegen die Lizenzierungsrichtlinien verstößt, wird eine Fehlermeldung an die Clientsitzung und an das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll gesendet. Der Datenbankadministrator muss dann die Affinitätsmaske neu konfigurieren. In diesem Fall ist der Befehl RECONFIGURE WITH OVERRIDE nicht zulässig.  
   
 ## <a name="see-also"></a>Weitere Informationen  

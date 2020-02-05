@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2d6a7318c8d45da6c6c029dcacc315fdd1b36460
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1fa2265ec7f53372eac007ecb668cb6801e50d21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809959"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287727"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68809959"
 ## <a name="user-action"></a>Benutzeraktion  
  Überprüfen Sie, ob die Verteilerinstanz ordnungsgemäß registriert ist. Wenn der Netzwerkname des Computers und der Name der SQL Server-Instanz nicht identisch sind, gehen Sie wie folgt vor:  
   
--   Fügen Sie den SQL Server-Instanznamen als gültigen Netzwerknamen hinzu. Eine Möglichkeit, einen alternativen Netzwerknamen festzulegen, besteht darin, diesen Namen der lokalen Hostdatei hinzuzufügen. Die lokale Hostdatei befindet sich standardmäßig in WINDOWS\system32\drivers\etc oder WINNT\system32\drivers\etc. Weitere Informationen finden Sie in der Windows-Dokumentation.  
+-   Fügen Sie den SQL Server-Instanznamen als gültigen Netzwerknamen hinzu. Eine Möglichkeit, einen alternativen Netzwerknamen festzulegen, besteht darin, diesen Namen der lokalen Hostdatei hinzuzufügen. Die lokale Hostdatei befindet sich im Verzeichnis WINDOWS\system32\drivers\usw. oder WINNT\system32\drivers\usw. Weitere Informationen finden Sie in der Windows-Dokumentation.  
   
      Wenn der Computername z. B. comp1 ist und die IP-Adresse des Computers 10.193.17.129 lautet und wenn der Instanzname inst1/instname ist, ist der Hostdatei der folgende Eintrag hinzuzufügen:  
   

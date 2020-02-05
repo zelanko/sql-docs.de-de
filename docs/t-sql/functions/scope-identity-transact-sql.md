@@ -21,10 +21,10 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111336"
 ---
 # <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68111336"
 
   Gibt den letzten Identitätswert zurück, der in eine Identitätsspalte im selben Gültigkeitsbereich eingefügt wurde. Ein Gültigkeitsbereich ist ein Modul: eine gespeicherte Prozedur, ein Trigger, eine Funktion oder ein Batch. Wenn sich daher zwei Anweisungen in der selben gespeicherten Prozedur, in derselben Funktion oder im selben Batch befinden, bindenden sie sich im selben Gültigkeitsbereich.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -92,7 +92,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-Resultset: So sieht die Tabelle TY aus:  
+Resultset: So sieht die TY aus:  
 ```  
 Y_id  Y_name  
 ---------------  

@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: a1edfb7566d47b8c02dbd53fcccbd7441239a949
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959309"
 ---
 # <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>Servergruppen in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -23,7 +23,7 @@ Servergruppen stellen eine Möglichkeit dar, Ihre Verbindungen zu Servern und Da
 
 ## <a name="create-and-edit-server-groups"></a>Erstellen und Bearbeiten von Servergruppen
 
-1. Klicken Sie ganz oben auf der Randleiste *SERVER* auf **Neue Servergruppe**.
+1. Klicken Sie ganz oben auf der Randleiste **SERVER** auf *Neue Servergruppe*.
 2. Geben Sie einen Gruppennamen ein, und wählen Sie eine Farbe für die Gruppe aus. Geben Sie optional eine Beschreibung ein.
 
    ![Hinzufügen der Servergruppe](./media/server-groups/add-server-group.png)
@@ -37,5 +37,5 @@ Wenn Sie die Farben verfügbarer Servergruppen bearbeiten möchten, bearbeiten S
 
 
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 - [Arbeitsbereich- und Benutzereinstellungen](settings.md)

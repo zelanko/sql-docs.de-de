@@ -1,10 +1,7 @@
 ---
-title: Server-Element für Konfiguration (DTA) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/01/2017
+title: Server-Element für Konfiguration (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f5ce7a8d8cda4c130da96a68e9cbdbacd8b5fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 9bb781ac08e8dc8a7750dfbcea874287fb5c2241
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105992"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307600"
 ---
 # <a name="server-element-for-configuration-dta"></a>Server-Element für Konfiguration (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Enthält die Identifikationsinformationen für den Server, auf dem der Datenbankoptimierungsratgeber die hypothetische Konfiguration auswerten soll (wird durch das **Configuration**-Element angegeben).  
+
+Enthält die Identifikationsinformationen für den Server, auf dem der Datenbankoptimierungsratgeber die hypothetische Konfiguration auswerten soll (wird durch das **Configuration**-Element angegeben).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68105992"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|und Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  

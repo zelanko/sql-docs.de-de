@@ -16,10 +16,10 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125167"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
@@ -127,10 +127,10 @@ ms.locfileid: "68125167"
  Beschreibt allgemeine administrative Tasks zum Verwalten von FileTables.  
   
 ##  <a name="relcontent"></a> Verwandte Inhalte  
- [FileTable Schema](../../relational-databases/blob/filetable-schema.md)  
+ [FileTable-Schema](../../relational-databases/blob/filetable-schema.md)  
  Beschreibt das vordefinierte und feste Schema einer FileTable.  
   
- [FileTable-Kompatibilität mit anderen SQL Server-Funktionen](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)  
+ [FileTable-Kompatibilität mit anderen SQL Server-Features](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)  
  Beschreibt, wie FileTables mit anderen Funktionen von SQL Server funktionieren.  
   
  [FileTable-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  

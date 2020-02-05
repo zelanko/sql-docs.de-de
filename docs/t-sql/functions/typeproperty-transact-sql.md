@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fc6da38a122f2397c41232cb1a0ec5ad0831cd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098634"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68098634"
 
   Gibt Informationen zu einem Datentyp zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,12 +47,12 @@ TYPEPROPERTY (type , property)
  *property*  
  Der Informationstyp, der für den Datentyp zurückgegeben werden soll. Für*property* sind die folgenden Werte möglich.  
   
-|Eigenschaft|und Beschreibung|Zurückgegebener Wert|  
+|Eigenschaft|BESCHREIBUNG|Zurückgegebener Wert|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|Datentyp lässt NULL-Werte zu.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Datentyp nicht gefunden.|  
-|**OwnerID**|Besitzer des Typs.<br /><br /> Hinweis: Der Schemabesitzer ist nicht notwendigerweise der Typbesitzer.|Nicht NULL = Die Datenbankbenutzer-ID des Typbesitzers.<br /><br /> NULL = Nicht unterstützter Typ oder ungültige Typ-ID.|  
+|**OwnerID**|Besitzer des Typs.<br /><br /> Hinweis: Der Schemabesitzer ist nicht notwendigerweise auch der Typbesitzer.|Nicht NULL = Die Datenbankbenutzer-ID des Typbesitzers.<br /><br /> NULL = Nicht unterstützter Typ oder ungültige Typ-ID.|  
 |**Genauigkeit**|Genauigkeit für diesen Datentyp.|Die Anzahl von Stellen oder Zeichen.<br /><br /> -1 = **xml** oder hoher Wertdatentyp<br /><br /> NULL = Datentyp nicht gefunden.|  
-|**Dezimalstellen**|Dezimalstellen für diesen Datentyp.|Die Anzahl der Dezimalstellen für den Datentyp.<br /><br /> NULL = Datentyp ist nicht **numerisch** oder wurde nicht gefunden.|  
+|**Skalieren**|Dezimalstellen für diesen Datentyp.|Die Anzahl der Dezimalstellen für den Datentyp.<br /><br /> NULL = Datentyp ist nicht **numerisch** oder wurde nicht gefunden.|  
 |**UsesAnsiTrim**|Die Einstellung für ANSI-Auffüllung war aktiviert, als der Datentyp erstellt wurde.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Datentyp nicht gefunden oder kein binärer oder Zeichenfolgen-Datentyp.|  
   
 ## <a name="return-types"></a>Rückgabetypen  

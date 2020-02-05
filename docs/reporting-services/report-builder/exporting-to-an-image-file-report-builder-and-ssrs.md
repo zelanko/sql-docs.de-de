@@ -9,10 +9,10 @@ ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 25b7f94d9e8fcb1fa7ae2c3034286515e51c7fdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581221"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Exportieren in eine Bilddatei (Berichts-Generator und SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "65581221"
 |BMP|BMP|image/bmp|  
 |GIF|GIF|image/gif|  
 |JPEG|JPEG|image/jpeg|  
-|PNG|PNG|image/png|  
+|PNG|png|image/png|  
 |TIFF|tif|image/tiff|  
 |EMF|EMF|image/emf|  
 |EMFPlus|EMF|image/emf|  
@@ -44,7 +44,7 @@ ms.locfileid: "65581221"
 ##  <a name="Interactivity"></a> Interaktivität  
  Interaktivität wird von keinem der durch diesen Renderer generierten Bildformate unterstützt. Die folgenden interaktiven Elemente werden nicht gerendert:  
   
--   Hyperlinks  
+-   Links  
   
 -   Anzeigen oder ausblenden  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65581221"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

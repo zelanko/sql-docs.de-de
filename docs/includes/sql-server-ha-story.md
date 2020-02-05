@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68212213"
----
 Dieser Artikel bietet eine Übersicht über Lösungen für Geschäftskontinuität für Hochverfügbarkeit und Notfallwiederherstellung in SQL Server. 
 
 Eine allgemeine Aufgabe, die jeder berücksichtigen sollte, der SQL Server bereitstellt, ist das Sicherstellen der Verfügbarkeit aller unternehmenskritischen SQL Server-Instanzen und der darin enthaltenen Datenbanken, wenn das Unternehmen oder die Benutzer diese benötigen, ob von 9 bis 17 Uhr oder rund um die Uhr. Das Ziel ist, das Unternehmen mit minimaler oder ohne Unterbrechung aufrechtzuerhalten. Dieses Konzept wird auch als Geschäftskontinuität bezeichnet.
@@ -18,7 +10,7 @@ Dieser Artikel konzentriert sich auf die Verfügbarkeitsszenarios sowie auf die 
 
 Verfügbarkeitsgruppen, FCIs und der Protokollversand können auf verschiedene Arten verwendet werden und nicht nur aus Gründen der Verfügbarkeit. Verfügbarkeitsfunktionen können auf vier verschiedene Arten verwendet werden:
 
-* Hohe Verfügbarkeit
+* Hochverfügbarkeit
 * Notfallwiederherstellung
 * Migrationen und Upgrades
 * Horizontales Hochskalieren von lesbaren Kopien von einer oder mehreren Datenbanken
@@ -28,7 +20,7 @@ In jedem Abschnitt werden die relevanten Funktionen erläutert, die für ein bes
 > [!IMPORTANT] 
 > Die SQL Server-Verfügbarkeitsfunktionen ersetzen keine stabile, gut getestete Sicherungs- und Wiederherstellungsstrategie, bei der es sich um den grundlegendsten Baustein jeder Verfügbarkeitslösung handelt.
 
-### <a name="high-availability"></a>Hohe Verfügbarkeit
+### <a name="high-availability"></a>Hochverfügbarkeit
 
 Es ist wichtig, sicherzustellen, dass SQL Server-Instanzen oder -Datenbanken im Fall eines lokalen Problems eines Rechenzentrums oder einer einzelnen Region in der Cloudregion verfügbar sind. Dieser Abschnitt erläutert, wie die SQL Server-Verfügbarkeitsfunktionen Sie bei dieser Aufgabe unterstützen können. Alle beschriebenen Funktionen sind für Windows Server und Linux verfügbar. 
 
@@ -75,8 +67,8 @@ Zwischen WSFC und Pacemaker liegen mehr Gemeinsamkeiten als Unterschiede vor. Be
 Aufgrund der Unterschiede im Clusterstapel müssen einige Änderungen für Verfügbarkeitsgruppen vorgenommen werden, da SQL Server einige der Metadaten behandeln muss, die nativ von einem WSFC behandelt werden. Die wichtigste [!IMPORTANT] Änderung ist die Einführung eines Clustertyps für Verfügbarkeitsgruppen. Dieser wird in „sys.availability_groups“ in den Spalten „cluster_type“ und „cluster_type_desc“ gespeichert. Es gibt drei Clustertypen:
 
 * WSFC 
-* External
-* None
+* Extern
+* Keine
 
 Alle Verfügbarkeitsgruppen, die Verfügbarkeit erfordern, müssen einen zugrunde liegenden Cluster verwenden. Dies ist im Fall von SQL Server 2017 ein WSFC oder Pacemaker. Für Windows Server-basierte Verfügbarkeitsgruppen, die einen zugrunde liegenden WSFC verwenden, ist der Standardclustertyp WSFC und muss nicht festgelegt werden. Für Linux-basierte Verfügbarkeitsgruppen muss der Clustertyp beim Erstellen der Verfügbarkeitsgruppe auf „Extern“ festgelegt werden. Die Integration mit Pacemaker wird nach der Erstellung der Verfügbarkeitsgruppe konfiguriert, während dies bei einem WSFC während der Erstellungszeit geschieht.
 
@@ -91,11 +83,11 @@ Der folgende Screenshot zeigt die Unterstützung für die verschiedenen Arten vo
 
 ![SSMS AG-Optionen](media/sql-server-ha-story/image2.png)
  
-##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+##### <a name="required_synchronized_secondaries_to_commit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 In SQL Server 2016 wurde die Unterstützung für die Anzahl von synchronen Replikaten in der Enterprise Edition von zwei auf drei erhöht. Wenn jedoch ein sekundäres Replikat synchronisiert wurde und bei einem anderen ein Problem auftrat, konnte das Verhalten nicht gesteuert werden, um dem primären Replikat mitzuteilen, entweder auf das sich falsch verhaltende Replikat zu warten oder fortzufahren. Dadurch erhält das primäre Replikat ab einem bestimmten Punkt weiterhin Schreibdatenverkehr, obwohl das sekundäre Replikat sich nicht in einem synchronisierten Zustand befindet. Dies bedeutet, dass es zu Datenverlust auf dem sekundären Replikat kommt.
 In SQL Server 2017 gibt es nun eine Option, um das Verhalten zu steuern, das auftritt, wenn es synchronisierte Replikate namens REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT gibt. Diese Optionen funktionieren folgendermaßen:
-* Es gibt drei mögliche Werte: 0, 1 und 2
+* Es gibt drei mögliche Werte: 0, 1 und 2.
 * Der Wert entspricht der Anzahl von sekundären Replikaten, die synchronisiert werden müssen, und hat Auswirkungen auf den Datenverlust, die Verfügbarkeit von Verfügbarkeitsgruppen und auf Failover.
 * Für WSFCs und den Clustertyp „Keiner“ ist der Standardwert 0 und kann manuell auf 1 oder 2 festgelegt werden.
 * Für den Clustertyp „Extern“ wird dies standardmäßig durch den Clustermechanismus festgelegt und kann manuell überschrieben werden. Bei drei synchronen Replikaten ist der Standardwert 1.

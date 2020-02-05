@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f4136ac-3784-4a41-a98c-8a02308e4883
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2c1939933c87ffe9519b0ca0656c83a02d952ec5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9c2e22fb15576e58d56adb79ddad5f9e31f418f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766549"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287847"
 ---
-# <a name="mssqleng002627"></a>MSSQL_ENG002627
+# <a name="mssql_eng002627"></a>MSSQL_ENG002627
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Meldungsdetails  
@@ -32,7 +32,7 @@ ms.locfileid: "68766549"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolischer Name|–|  
-|Meldungstext|Verletzung der %1!s!-Einschränkung '%2!s!'. Ein doppelter Schlüssel kann nicht in das '%.\*ls'-Objekt eingefügt werden.|  
+|Meldungstext|Verletzung der %1!s!-Einschränkung '%2!s!'. Ein doppelter Schlüssel kann in das „%.\*ls“-Objekt nicht eingefügt werden.|  
   
 ## <a name="explanation"></a>Erklärung  
  Das ist ein allgemeiner Fehler, der unabhängig davon ausgelöst werden kann, ob eine Datenbank repliziert wird. Bei replizierten Datenbanken wird der Fehler in der Regel ausgelöst, weil Primärschlüssel in der Topologie nicht richtig verwaltet wurden. In einer verteilten Umgebung muss unbedingt sichergestellt werden, dass in mehreren Knoten nicht der gleiche Wert in eine Primärschlüsselspalte oder eine andere eindeutige Spalte eingefügt wird. Die folgenden Ursachen können zugrunde liegen:  
@@ -62,6 +62,6 @@ ms.locfileid: "68766549"
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Mergereplikation](../../relational-databases/replication/merge/merge-replication.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [Aktualisierbare Abonnements für die Transaktionsreplikation](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

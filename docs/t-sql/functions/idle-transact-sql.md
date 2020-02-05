@@ -22,10 +22,10 @@ ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 272af8e89dfdf313e24017edd615401bc2a35362
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68097466"
 ---
 # <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68097466"
 > [!NOTE]  
 >  Wenn die Zeit, die in @@CPU_BUSY oder @@IO_BUSY zurückgegeben wird, die kumulierte CPU-Zeit um etwa 49 Tage überschreitet, wird eine Warnung zu einem arithmetischen Überlauf ausgegeben. In diesem Fall sind die Werte der Variablen @@CPU_BUSY, @@IO_BUSY und @@IDLE nicht zutreffend.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

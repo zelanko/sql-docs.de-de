@@ -18,18 +18,18 @@ ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bd2246ed1a6c2c03e3a9f5c1989ce9e544c8b199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109334"
 ---
-# <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
+# <a name="key_name-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den Namen des symmetrischen Schlüssels entweder aus einer GUID eines symmetrischen Schlüssels oder aus verschlüsseltem Text zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,7 +53,7 @@ KEY_NAME ( ciphertext | key_guid )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. Anzeigen des Namens eines symmetrischen Schlüssels mit der key_guid  
+### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-key_guid"></a>A. Anzeigen des Namens eines symmetrischen Schlüssels mit der key_guid  
  Die **master**-Datenbank enthält einen symmetrischen Schlüssel mit der Bezeichnung ##MS_ServiceMasterKey##. Das folgende Beispiel ruft die GUID dieses Schlüssels aus der dynamischen Verwaltungssicht sys.symmetric_keys ab, weist sie einer Variablen zu und übergibt dann diese Variable an die KEY_NAME-Funktion, um zu veranschaulichen, wie der Name zurückgegeben wird, der der GUID entspricht.  
   
 ```  

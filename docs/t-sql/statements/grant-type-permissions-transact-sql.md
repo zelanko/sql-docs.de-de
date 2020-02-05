@@ -18,10 +18,10 @@ ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7695fda9dd287239f4ef88ea5c279e11a0b5abdd
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982498"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT (Typberechtigungen) (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982498"
 
   Erteilt die Berechtigungen für einen Typ.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -99,7 +99,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein Typ ist ein sicherungsfähiges Element auf Schemaebene in dem Schema, das das übergeordnete Element in der Berechtigungshierarchie ist.  
   
 > [!IMPORTANT]  

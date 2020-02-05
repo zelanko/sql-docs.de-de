@@ -17,10 +17,10 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284167"
 ---
 # <a name="integration-services-user-interface"></a>SQL Server Integration Services-Benutzeroberfläche
@@ -46,10 +46,10 @@ ms.locfileid: "71284167"
 |Dialogfeld|Zweck|Zugriff|  
 |----------------|-------------|------------|  
 |**Erste Schritte**|Zugriffsbeispiele, Lernprogramme und Videos.|Klicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** oder der Registerkarte **Datenfluss** mit der rechten Maustaste, und klicken Sie dann auf **Erste Schritte**.<br /><br /> Um das Fenster **Erste Schritte** automatisch anzuzeigen, wenn Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt erstellen, wählen Sie im unteren Bereich des Fensters die Option **In neuem Projekt immer anzeigen** aus.|  
-|**SSIS-Protokolle konfigurieren**|Konfigurieren der Protokollierung für ein Paket und dessen Tasks durch Hinzufügen von Protokollen und Festlegen von Protokollierungsinformationen.|Klicken Sie im Menü **SSIS** auf **Protokollierung**.<br /><br /> -oder-<br /><br /> Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** , und klicken Sie dann auf **Protokollierung**.|  
-|**Paketkonfigurationsplaner**|Hinzufügen und Bearbeiten von Paketkonfigurationen. In diesem Dialogfeld führen Sie den Paketkonfigurations-Assistenten aus.|Klicken Sie im Menü **SSIS** auf **Paketkonfigurationen**.<br /><br /> -oder-<br /><br /> Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** , und klicken Sie dann auf **Paketkonfigurationen**.|  
-|**Digitale Signatur**|Signieren eines Pakets oder Entfernen der Signatur aus dem Paket.|Klicken Sie im Menü **SSIS** auf **Digitale Signatur**.<br /><br /> -oder-<br /><br /> Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** , und klicken Sie dann auf **Digitale Signatur**.|  
-|**Breakpoints festlegen**|Aktivieren von Breakpoints für Tasks und Festlegen von Breakpointeigenschaften.|Klicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** mit der rechten Maustaste auf einen Task oder Container, und klicken Sie dann auf **Breakpoints bearbeiten**. Klicken Sie zum Festlegen eines Breakpoints für das Paket mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** , und klicken Sie dann auf **Breakpoints bearbeiten**.|  
+|**SSIS-Protokolle konfigurieren**|Konfigurieren der Protokollierung für ein Paket und dessen Tasks durch Hinzufügen von Protokollen und Festlegen von Protokollierungsinformationen.|Klicken Sie im Menü **SSIS** auf **Protokollierung**.<br /><br /> Oder<br /><br /> Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** , und klicken Sie dann auf **Protokollierung**.|  
+|**Paketkonfigurationsplaner**|Hinzufügen und Bearbeiten von Paketkonfigurationen. In diesem Dialogfeld führen Sie den Paketkonfigurations-Assistenten aus.|Klicken Sie im Menü **SSIS** auf **Paketkonfigurationen**.<br /><br /> Oder<br /><br /> Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** , und klicken Sie dann auf **Paketkonfigurationen**.|  
+|**Digitale Signatur**|Signieren eines Pakets oder Entfernen der Signatur aus dem Paket.|Klicken Sie im Menü **SSIS** auf **Digitale Signatur**.<br /><br /> Oder<br /><br /> Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** , und klicken Sie dann auf **Digitale Signatur**.|  
+|**Festlegen von Breakpoints für das Debuggen**|Aktivieren von Breakpoints für Tasks und Festlegen von Breakpointeigenschaften.|Klicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** mit der rechten Maustaste auf einen Task oder Container, und klicken Sie dann auf **Breakpoints bearbeiten**. Klicken Sie zum Festlegen eines Breakpoints für das Paket mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** , und klicken Sie dann auf **Breakpoints bearbeiten**.|  
   
  Im Fenster **Erste Schritte** werden Links zu Beispielen, Lernprogrammen und Videos bereitgestellt. Sie können Verknüpfungen zu zusätzlichen Inhalten hinzuzufügen, indem Sie die Datei "SamplesSites.xml" ändern, die in der aktuellen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Der Wert des \<GettingStartedSamples>-Elements, der die URL des RSS-Feeds angibt, sollte nicht geändert werden. Die Datei befindet sich im Ordner *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\DTS\Binn. Auf einem 64-Bit-Computer befindet sich die Datei im Ordner *\<Laufwerk>* :\Programme (x86)\Microsoft SQL Server\110\DTS\Binn.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "71284167"
   
 |Fenster|Zweck|Zugriff|  
 |------------|-------------|------------|  
-|**Variablen**|Hinzufügen und Verwalten benutzerdefinierter Variablen.|Klicken Sie im Menü **SSIS** auf **Variablen**.<br /><br /> -oder-<br /><br /> Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarten **Ablaufsteuerung** und **Datenfluss** , und klicken Sie dann auf **Variablen**.<br /><br /> -oder-<br /><br /> Zeigen Sie im Menü **Ansicht** auf **Weitere Fenster**, und klicken Sie dann auf **Variablen**.|  
-|**Protokollereignisse**|Anzeigen von Protokolleinträgen zur Laufzeit.|Klicken Sie im Menü **SSIS** auf **Protokollereignisse**.<br /><br /> -oder-<br /><br /> Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarten **Ablaufsteuerung** und **Datenfluss** , und klicken Sie dann auf **Protokollereignisse**.<br /><br /> -oder-<br /><br /> Zeigen Sie im Menü **Ansicht** auf **Weitere Fenster**, und klicken Sie dann auf **Protokollereignisse**.|  
+|**Variablen**|Hinzufügen und Verwalten benutzerdefinierter Variablen.|Klicken Sie im Menü **SSIS** auf **Variablen**.<br /><br /> Oder<br /><br /> Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarten **Ablaufsteuerung** und **Datenfluss** , und klicken Sie dann auf **Variablen**.<br /><br /> Oder<br /><br /> Zeigen Sie im Menü **Ansicht** auf **Weitere Fenster**, und klicken Sie dann auf **Variablen**.|  
+|**Protokollereignisse**|Anzeigen von Protokolleinträgen zur Laufzeit.|Klicken Sie im Menü **SSIS** auf **Protokollereignisse**.<br /><br /> Oder<br /><br /> Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarten **Ablaufsteuerung** und **Datenfluss** , und klicken Sie dann auf **Protokollereignisse**.<br /><br /> Oder<br /><br /> Zeigen Sie im Menü **Ansicht** auf **Weitere Fenster**, und klicken Sie dann auf **Protokollereignisse**.|  
   
 ## <a name="custom-editors"></a>Benutzerdefinierte Editoren  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt ein benutzerdefiniertes Dialogfeld für die meisten Container, Tasks, Quellen, Transformationen und Ziele bereit.  
@@ -84,10 +84,10 @@ ms.locfileid: "71284167"
 |Editor-Typ|Zugriff|  
 |-----------------|------------|  
 |Container. Weitere Informationen finden Sie unter [Integration Services-Container](../integration-services/control-flow/integration-services-containers.md).|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** auf den Container.|  
-|Task. Weitere Informationen finden Sie unter [Integration Services Tasks](../integration-services/control-flow/integration-services-tasks.md).|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** auf den Task.|  
-|Quelle.|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Datenfluss** auf die Quelle.|  
+|Task. Weitere Informationen finden Sie unter [Integration Services-Tasks](../integration-services/control-flow/integration-services-tasks.md).|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** auf den Task.|  
+|Source.|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Datenfluss** auf die Quelle.|  
 |Transformation. Weitere Informationen finden Sie unter [Integration Services Transformations](../integration-services/data-flow/transformations/integration-services-transformations.md).|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Datenfluss** auf die Transformation.|  
-|Ziel.|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Datenfluss** auf das Ziel.|  
+|Destination.|Doppelklicken Sie in der Entwurfsoberfläche der Registerkarte **Datenfluss** auf das Ziel.|  
   
 ## <a name="advanced-editor"></a>Erweiterter Editor  
  Das Dialogfeld **Erweiterter Editor** ist eine Benutzeroberfläche zum Konfigurieren von Datenflusskomponenten. Die Eigenschaften der Komponente werden mithilfe eines allgemeinen Layouts dargestellt. Das Dialogfeld **Erweiterter Editor** ist für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Transformationen mit mehreren Eingaben nicht verfügbar.  

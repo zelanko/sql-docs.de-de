@@ -15,10 +15,10 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66733b12bbf3b4723449eb09f93182efb1f6462c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290175"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS-Ausdruck)
@@ -39,7 +39,7 @@ DATEADD(datepart, number, date)
  *datepart*  
  Der Parameter, der angibt, welcher Datumseinheit eine Zahl hinzugefügt werden soll.  
   
- *number*  
+ *Zahl*  
  Der Wert, um den *datepart*inkrementiert wird. Dieser Wert muss ein ganzzahliger Wert sein, der beim Analysieren des Ausdrucks bekannt ist.  
   
  *date*  
@@ -48,21 +48,21 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle sind die datepart-Werte und Abkürzungen aufgeführt, die von der Ausdrucksauswertung erkannt werden. Bei datepart-Namen wird die Groß-/Kleinschreibung nicht berücksichtigt.  
   
 |datepart|Abkürzungen|  
 |--------------|-------------------|  
-|Year|yy, yyyy|  
+|Jahr|yy, yyyy|  
 |Quarter|qq, q|  
-|Month|mm, m|  
+|Month (Monat)|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|Day (Tag)|dd, d|  
 |Week|wk, ww|  
-|Arbeitstag|dw, w|  
+|Wochentag|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|Zweimal|ss, s|  
+|Sekunde|ss, s|  
 |Millisekunde|Ms|  
   
  Das *number* -Argument muss beim Analysieren des Ausdrucks verfügbar sein. Bei diesem Argument kann es sich um eine Konstante oder eine Variable handeln. Spaltenwerte können nicht verwendet werden, weil diese Werte beim Analysieren des Ausdrucks nicht bekannt sind.  

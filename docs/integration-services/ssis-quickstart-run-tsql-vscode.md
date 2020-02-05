@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cdd1dc130efb795b957911c51d5d8c2243522d38
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281620"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Ausführen eines SSIS-Pakets aus Visual Studio Code mit Transact-SQL
@@ -27,7 +27,7 @@ Visual Studio Code ist ein Code-Editor für Windows, macOS und Linux, der Erweit
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Prüfen Sie, bevor Sie beginnen, ob Sie die neueste Version von Visual Studio Code installiert haben und die `mssql`-Erweiterung geladen ist. Informationen zum Herunterladen dieser Tools finden Sie auf den folgenden Seiten:
--   [Herunterladen von Visual Studio Code](https://code.visualstudio.com/Download)
+-   [Visual Studio Code herunterladen](https://code.visualstudio.com/Download)
 -   [mssql extension (mssql-Erweiterung)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="supported-platforms"></a>Unterstützte Plattformen
@@ -36,7 +36,7 @@ Mithilfe der Informationen in diesem Schnellstart können Sie auf den folgenden 
 
 -   SQL Server unter Windows
 
--   Azure SQL-Datenbank Weitere Informationen zum Bereitstellen und Ausführen von Paketen in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   Azure SQL-Datenbank. Weitere Informationen zum Bereitstellen und Ausführen von Paketen in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 Anhand der Informationen in diesem Schnellstart können Sie unter Linux keine SSIS-Pakete ausführen. Weitere Informationen zum Ausführen von Paketen finden Sie unter [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
@@ -70,7 +70,7 @@ Verwenden Sie Visual Studio Code, um eine Verbindung mit dem SSIS-Katalog herzus
 
 2. Geben Sie **sqlcon** ein, und drücken Sie die **EINGABETASTE**.
 
-3. Drücken Sie die **EINGABETASTE**, um **Create Connection Profile** (Verbindungsprofil erstellen) auszuwählen. Mithilfe dieses Schritts wird ein Verbindungsprofil für Ihre SQL Server-Instanz erstellt.
+3. Drücken Sie die **EINGABETASTE**, um die Option **Create Connection Profile** (Verbindungsprofil erstellen) auszuwählen. Mithilfe dieses Schritts wird ein Verbindungsprofil für Ihre SQL Server-Instanz erstellt.
 
 4. Befolgen Sie die Anweisungen, um die Verbindungseigenschaften für das neue Verbindungsprofil anzugeben. Nachdem Sie sämtliche Werte angegeben haben, drücken Sie die **EINGABETASTE**, um fortzufahren. 
 
@@ -79,14 +79,14 @@ Verwenden Sie Visual Studio Code, um eine Verbindung mit dem SSIS-Katalog herzus
    | **Servername** | Der vollqualifizierte Servername | Wenn Sie eine Verbindung mit einem Azure SQL-Datenbank-Server herstellen, ist der Name im Format `<server_name>.database.windows.net`. |
    | **Datenbankname** | **SSISDB** | Dies ist der Name der Datenbank, mit der eine Verbindung hergestellt werden soll. |
    | **Authentifizierung** | SQL-Anmeldung | Mit der SQL Server-Authentifizierung können Sie eine Verbindung zu SQL Server oder Azure SQL-Datenbank herstellen. Wenn Sie eine Verbindung mit einem Azure SQL-Datenbank-Server herstellen, können Sie keine Windows-Authentifizierung verwenden. |
-   | **User name** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
-   | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Konto des Serveradministrators | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
+   | **Benutzername** | Das Serveradministratorkonto | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
+   | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Serveradministratorkonto | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort speichern** | Ja oder Nein | Wenn Sie nicht bei jedem Neustart Ihr Kennwort eingeben möchten, wählen Sie „Ja“ aus. |
    | **Namen für dieses Profil eingeben** | Ein Profilname wie **mySSISServer** | Wenn Sie den Profilnamen speichern, wird bei späteren Anmeldungen schneller eine Verbindung hergestellt. | 
 
-5. Drücken Sie die **ESC**-Taste, um die Meldung zu schließen, in der Sie darüber informiert werden, dass das Profil erstellt und eine Verbindung hergestellt wurde.
+5. Drücken Sie die Taste **ESC**, um die Meldung mit dem Hinweis, dass das Profil erstellt und die Verbindung dafür hergestellt wurde, zu schließen.
 
-6. Überprüfen Sie Ihre Verbindung in der Statusleiste.
+6. Überprüfen Sie die Verbindung in der Statusleiste.
 
 ## <a name="run-the-t-sql-code"></a>Ausführen des T-SQL-Codes
 Führen Sie den folgenden Transact-SQL-Code aus, um ein SSIS-Paket auszuführen.
@@ -118,7 +118,7 @@ GO
 ## <a name="next-steps"></a>Nächste Schritte
 - Erfahren Sie mehr über weitere Möglichkeiten, ein Paket auszuführen.
     - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md) (Ausführen eines SSIS-Pakets mit SSMS)
-    - [Ausführen eines SSIS-Pakets mit Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Run an SSIS package from the command prompt (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)](./ssis-quickstart-run-cmdline.md)
+    - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])
+    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md) (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)
     - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md) (Ausführen eines SSIS-Pakets mit PowerShell)
     - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) (Ausführen eines SSIS-Pakets mit C#) 

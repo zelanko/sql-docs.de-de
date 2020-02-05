@@ -15,10 +15,10 @@ ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc1a9b8b91d37359ce7dc2a4845d0d83e81f996a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044152"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (selektive XML-Indizes)
@@ -26,7 +26,7 @@ ms.locfileid: "68044152"
 
   Löscht einen vorhandenen selektiven XML-Index oder sekundären selektiven XML-Index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Selektive XML-Indizes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ DROP INDEX index_name ON <object>
 }  
 ```  
   
-##  <a name="Arguments"></a> Argumente  
+##  <a name="Arguments"></a>Argumente  
  *index_name*  
  Der Name des vorhandenen, zu löschenden Indexes.  
   
@@ -60,7 +60,7 @@ DROP INDEX index_name ON <object>
   
  *\<drop_index_option>* Informationen zu den DROP INDEX-Optionen finden Sie unter [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Die ALTER-Berechtigung für die Tabelle oder Ansicht ist erforderlich, um DROP INDEX auszuführen. Über diese Berechtigung verfügen standardmäßig die Mitglieder der festen Serverrolle sysadmin und die Mitglieder der festen Datenbankrollen db_ddladmin und db_owner.  

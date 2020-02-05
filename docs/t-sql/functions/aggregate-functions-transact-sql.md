@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 935d0b9bd98c9be5bb1fa4c7000a26fcd4299035
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040390"
 ---
 # <a name="aggregate-functions-transact-sql"></a>Aggregatfunktionen (Transact-SQL)
@@ -49,7 +49,7 @@ Verwenden Sie Aggregatfunktionen nur in folgenden Fällen als Ausdrücke:
 |[GROUPING_ID](../../t-sql/functions/grouping-id-transact-sql.md)|[VARP](../../t-sql/functions/varp-transact-sql.md)|
 |[MAX](../../t-sql/functions/max-transact-sql.md)||
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Integrierte Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)  
 [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   

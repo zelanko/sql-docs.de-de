@@ -18,10 +18,10 @@ ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 991d27258b37895ebb2bf54e267fd07fbe87d78e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892499"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68892499"
 
   Gibt das Ergebnis eines Ausdrucks zurück, der in den angeforderten Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umgewandelt wurde.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -72,23 +72,23 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  Die Werte für den *data_type*-Parameter sind auf die in der folgenden Tabelle dargestellten Typen sowie die zugehörigen Formate beschränkt. Die Formatinformationen werden bereitgestellt, um die Ermittlung der zulässigen Mustertypen zu unterstützen. Weitere Informationen zu Formaten finden Sie in der .NET Framework-Dokumentation für die Enumerationen **System.Globalization.NumberStyles** und **DateTimeStyles**.  
   
-|Kategorie|Typ|.NET Framework-Typ|Verwendete Formate|  
+|Category|type|.NET Framework-Typ|Verwendete Formate|  
 |--------------|----------|-------------------------|-----------------|  
-|Numerisch|BIGINT|Int64|NumberStyles.Number|  
-|Numerisch|INT|Int32|NumberStyles.Number|  
-|Numerisch|SMALLINT|Int16|NumberStyles.Number|  
-|Numerisch|TINYINT|Byte|NumberStyles.Number|  
-|Numerisch|Decimal|Decimal|NumberStyles.Number|  
-|Numerisch|NUMERIC|Decimal|NumberStyles.Number|  
-|Numerisch|FLOAT|Double|NumberStyles.Float|  
-|Numerisch|REAL|Single|NumberStyles.Float|  
-|Numerisch|SMALLMONEY|Decimal|NumberStyles.Currency|  
-|Numerisch|money|Decimal|NumberStyles.Currency|  
-|Datum und Uhrzeit|date|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Numeric|BIGINT|Int64|NumberStyles.Number|  
+|Numeric|INT|Int32|NumberStyles.Number|  
+|Numeric|SMALLINT|Int16|NumberStyles.Number|  
+|Numeric|TINYINT|Byte|NumberStyles.Number|  
+|Numeric|Decimal|Decimal|NumberStyles.Number|  
+|Numeric|NUMERIC|Decimal|NumberStyles.Number|  
+|Numeric|float|Double|NumberStyles.Float|  
+|Numeric|real|Single|NumberStyles.Float|  
+|Numeric|SMALLMONEY|Decimal|NumberStyles.Currency|  
+|Numeric|money|Decimal|NumberStyles.Currency|  
+|Datum und Uhrzeit|date|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Datum und Uhrzeit|DateTime|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Datum und Uhrzeit|smalldatetime|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Datum und Uhrzeit|datetime2|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|datetime|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|smalldatetime|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|datetime2|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
  **Weitere Informationen zum culture-Parameter**  
@@ -97,7 +97,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 |Vollständiger Name|Alias|LCID|Bestimmte Kultur|  
 |---------------|-----------|----------|----------------------|  
-|us_english|Englisch|1033|en-US|  
+|us_english|Englisch|1033|de-DE|  
 |Deutsch|Deutsch|1031|de-DE|  
 |Français|Französisch|1036|fr-FR|  
 |日本語|Japanisch|1041|ja-JP|  
@@ -119,7 +119,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |ελληνικά|Griechisch|1032|El-GR|  
 |български|Bulgarisch|1026|bg-BG|  
 |русский|Russisch|1049|Ru-RU|  
-|Türkçe|Türkisch|1055|Tr-TR|  
+|Türkçe|Türkisch|1\.055|Tr-TR|  
 |British|Englisch (britisch)|2057|en-GB|  
 |eesti|Estnisch|1061|Et-EE|  
 |latviešu|Lettisch|1062|lv-LV|  
@@ -129,7 +129,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |한국어|Koreanisch|1042|Ko-KR|  
 |简体中文|Chinesisch (vereinfacht)|2052|zh-CN|  
 |Arabisch|Arabisch|1025|ar-SA|  
-|ไทย|Thai|1054|Th-TH|  
+|ไทย|Thailändisch|1054|Th-TH|  
   
 ## <a name="examples"></a>Beispiele  
   

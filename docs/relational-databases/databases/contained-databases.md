@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137328"
 ---
 # <a name="contained-databases"></a>Eigenständige Datenbanken
@@ -55,7 +55,7 @@ ms.locfileid: "68137328"
  Ein Element, das die Datenbankbegrenzung überschreitet.  
   
  Nicht enthaltene Datenbank  
- Eine Datenbank, deren Eigenständigkeit auf **NONE**festgelegt ist. Alle Datenbanken in Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sind nicht enthalten. Die Kapselung aller Datenbanken von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher ist standardmäßig auf **NONE**festgelegt.  
+ Eine Datenbank, deren Eigenständigkeit auf **NONE** festgelegt ist. Alle Datenbanken in Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sind nicht enthalten. Die Kapselung aller Datenbanken von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher ist standardmäßig auf **NONE** festgelegt.  
   
  Teilweise enthaltene Datenbank  
  Eine teilweise eigenständige Datenbank ist eine eigenständige Datenbank, die einige Funktionen zulassen kann, die die Datenbankbegrenzung überschreiten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält die Fähigkeit ein zu bestimmen, wann die Kapselungsbegrenzung überschritten wird.  
@@ -84,7 +84,7 @@ ms.locfileid: "68137328"
  Außerhalb der Datenbankbegrenzung befindet sich das *Verwaltungsmodell*, das sich auf Funktionen auf Instanzebene und auf die Verwaltung bezieht. Beispiele für Entitäten, die sich außerhalb der Datenbankbegrenzung befinden, sind Systemtabellen wie **sys.endpoints**, zu Anmeldungen zugeordnete Benutzer und Benutzertabellen in einer anderen Datenbank, auf die mit einem dreiteiligen Namen verwiesen wird.  
   
 ##  <a name="containment"></a> Eigenständigkeit  
- Benutzerentitäten, die sich vollständig innerhalb der Datenbank befinden, werden als *enthalten*angesehen. Alle Benutzerentitäten, die sich außerhalb der Datenbank befinden oder sich auf die Interaktion mit Funktionen außerhalb der Datenbank stützen, werden als *nicht enthalten*angesehen.  
+ Benutzerentitäten, die sich vollständig innerhalb der Datenbank befinden, werden als *enthalten* angesehen. Alle Benutzerentitäten, die sich außerhalb der Datenbank befinden oder sich auf die Interaktion mit Funktionen außerhalb der Datenbank stützen, werden als *nicht enthalten* angesehen.  
   
  Im Allgemeinen sind Benutzerentitäten folgenden Kapselungskategorien zuzuordnen:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68137328"
  Geben Sie Informationen zu nicht eigenständigen Objekten und Funktionen mithilfe von [sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) und [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) zurück. Durch Bestimmen des Kapselungsstatus der Elemente von Datenbanken können Sie ermitteln, welche Objekte und Funktionen ersetzt oder geändert werden müssen, um eine Kapselung zu erzielen.  
   
 > [!IMPORTANT]  
->  Da bestimmte Objekte bei der Eigenständigkeit die Standardeinstellung **NONE**aufweisen, werden von dieser Sicht möglicherweise falsch positive Ergebnisse zurückgegeben.  
+>  Da bestimmte Objekte bei der Eigenständigkeit die Standardeinstellung **NONE** aufweisen, werden von dieser Sicht möglicherweise falsch positive Ergebnisse zurückgegeben.  
   
  Das Verhalten teilweise eigenständiger Datenbanken unterscheidet sich von dem abhängiger Datenbanken am deutlichsten hinsichtlich der Sortierung. Weitere Informationen zu Sortierungsaspekten finden Sie unter [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
   
@@ -143,17 +143,17 @@ ms.locfileid: "68137328"
 ##  <a name="Identifying"></a> Identifizieren der Datenbankkapselung  
  Es sind zwei Tools verfügbar, mit denen der Einschlussstatus der Datenbank bestimmt werden kann. [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) ist eine Sicht, in der alle möglicherweise nicht eigenständigen Entitäten in der Datenbank angezeigt werden. Das database_uncontained_usage-Ereignis wird ausgelöst, wenn eine tatsächliche nicht enthaltene Entität zur Laufzeit bestimmt wird.  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
- In dieser Sicht werden alle Entitäten in der Datenbank angezeigt, bei denen es sich um nicht enthaltene Entitäten handeln könnte, weil sie beispielsweise die Datenbankbegrenzung überschreiten. Hierzu zählen die Benutzerentitäten, die Objekte außerhalb des Datenbankmodells verwenden können. Da die Kapselung einiger Entitäten (z. B. der Entitäten mit dynamischem SQL) jedoch erst zur Laufzeit bestimmt werden kann, werden in der Sicht möglicherweise einige Entitäten angezeigt, die eigentlich keine nicht enthaltenen Entitäten sind. Weitere Informationen finden Sie unter [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
+ In dieser Sicht werden alle Entitäten in der Datenbank angezeigt, bei denen es sich um nicht enthaltene Entitäten handeln könnte, weil sie beispielsweise die Datenbankbegrenzung überschreiten. Hierzu zählen die Benutzerentitäten, die Objekte außerhalb des Datenbankmodells verwenden können. Da die Kapselung einiger Entitäten (z. B. der Entitäten mit dynamischem SQL) jedoch erst zur Laufzeit bestimmt werden kann, werden in der Sicht möglicherweise einige Entitäten angezeigt, die eigentlich keine nicht enthaltenen Entitäten sind. Weitere Informationen finden Sie unter [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
-### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage-Ereignis  
+### <a name="database_uncontained_usage-event"></a>database_uncontained_usage-Ereignis  
  Dieses XEvent wird ausgelöst, wenn nicht enthaltene Entität zur Laufzeit bestimmt wird. Dies schließt in Clientcode ausgelöste Entitäten ein. Dieses Xevent wird nur für tatsächliche nicht enthaltene Entitäten ausgelöst. Das Ereignis wird jedoch nur zur Laufzeit ausgelöst. Daher werden alle nicht enthaltenen Benutzerentitäten, die nicht ausgeführt wurden, von diesem XEvent nicht identifiziert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Geänderte Funktionen &#40;Enthaltene Datenbank&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
+ [Bewährte Methoden für die Sicherheit eigenständiger Datenbanken](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
+ [Eigenständige Datenbankbenutzer – Generieren einer portablen Datenbank](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   

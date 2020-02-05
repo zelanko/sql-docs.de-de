@@ -17,10 +17,10 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 94b495bf507dcbe67c305dbb69454bad943d2003
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014441"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server)
@@ -78,7 +78,7 @@ ms.locfileid: "68014441"
   
 1.  Wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das sekundäre Replikat hostet.  
   
-2.  Verwenden Sie das Cmdlet **Remove-SqlAvailabilityDatabase** , und geben Sie dabei den Namen der Verfügbarkeitsdatenbank an, die aus der Verfügbarkeitsgruppe entfernt werden soll. Wenn Sie mit einer Serverinstanz verbunden sind, auf der ein sekundäres Replikat gehostet wird, wird nur die lokale sekundäre Datenbank aus der Verfügbarkeitsgruppe entfernt.  
+2.  Verwenden Sie das **Remove-SqlAvailabilityDatabase** -Cmdlet, und geben Sie dabei den Namen der Verfügbarkeitsdatenbank an, die aus der Verfügbarkeitsgruppe entfernt werden soll. Wenn Sie mit einer Serverinstanz verbunden sind, auf der ein sekundäres Replikat gehostet wird, wird nur die lokale sekundäre Datenbank aus der Verfügbarkeitsgruppe entfernt.  
   
      Beispielsweise wird durch den folgenden Befehl die sekundäre Datenbank `MyDb8` aus dem sekundären Replikat entfernt, das von der Serverinstanz `SecondaryComputer\Instance`gehostet wird. Die Daten der entfernten sekundären Datenbanken werden nicht mehr synchronisiert. Dieser Befehl wirkt sich nicht auf die primäre Datenbank oder andere sekundäre Datenbanken aus.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68014441"
   
 -   [SQL Server PowerShell-Anbieter](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe  
+##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe  
  Wenn eine sekundäre Datenbank entfernt wird, wird sie nicht mehr der Verfügbarkeitsgruppe hinzugefügt, und alle Informationen zur entfernten sekundären Datenbank werden von der Verfügbarkeitsgruppe verworfen. Die entfernte sekundäre Datenbank wechselt in den Status RESTORING.  
   
 > [!TIP]  

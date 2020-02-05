@@ -18,10 +18,10 @@ ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 20f1521091a295d1293c9f3e06958f36930ba4e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930201"
 ---
 # <a name="long-geography-data-type"></a>Long (geography-Datentyp)

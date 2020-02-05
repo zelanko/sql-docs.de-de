@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495471"
 ---
 # <a name="set-operators---union-transact-sql"></a>Mengenoperatoren - UNION (Transact-SQL)
@@ -47,7 +47,7 @@ Für die Kombination der Resultsets von zwei Abfragen mit **UNION** gelten die f
   
 -   Die Datentypen müssen kompatibel sein.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -175,7 +175,7 @@ ORDER BY Name;
 GO  
 ```  
   
-### <a name="d-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>D. Verwenden von UNION mit drei SELECT-Anweisungen, wobei die Auswirkung von ALL und Klammern gezeigt wird  
+### <a name="d-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>D: Verwenden von UNION mit drei SELECT-Anweisungen, wobei die Auswirkung von ALL und Klammern gezeigt wird  
 In den folgenden Beispielen wird `UNION` verwendet, um die Ergebnisse aus drei Tabellen zu kombinieren, wobei in allen Tabellen 5 identische Datenzeilen vorhanden sind. Im ersten Beispiel wird `UNION ALL` verwendet, um doppelte Datensätze anzuzeigen, und alle 15 Zeilen zurückgegeben. Im zweiten Beispiel wird `UNION` ohne `ALL` verwendet, um die doppelten Zeilen aus den kombinierten Ergebnissen der drei `SELECT`-Anweisungen zu löschen, und 5 Zeilen zurückgegeben.  
   
 Im dritten Beispiel wird `ALL` mit dem ersten `UNION` verwendet; das zweite `UNION` verwendet `ALL` nicht und ist in Klammern eingeschlossen. Da die zweite `UNION`-Anweisung in Klammern steht, wird sie zuerst verarbeitet; sie gibt 5 Zeilen zurück, weil die Option `ALL` nicht verwendet wird und Duplikate gelöscht werden. Diese 5 Zeilen werden mit den Ergebnissen der ersten `SELECT`-Anweisung mithilfe der `UNION ALL`-Schlüsselwörter kombiniert. In diesem Beispiel werden die Duplikate in den beiden aus fünf Zeilen bestehenden Resultsets nicht gelöscht. Das Endergebnis enthält 10 Zeilen.  
@@ -246,7 +246,7 @@ GO
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-simple-union"></a>E. Verwenden einer einfachen UNION-Klausel  
 Das Resultset im folgenden Beispiel enthält den Inhalt der `CustomerKey`-Spalten der Tabellen `FactInternetSales` und `DimCustomer`. Da das ALL-Schlüsselwort nicht verwendet wird, werden Duplikate aus den Ergebnissen ausgeschlossen.  

@@ -14,17 +14,17 @@ ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8a6a8bc83c1842676220f384d39179c74c47a336
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987065"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server, Broker/DBM-Transport-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Das **Broker/DBM-Transport**-Leistungsobjekt enthält Leistungsindikatoren, die Netzwerkinformationen für Service Broker und die Datenbankspiegelung melden. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
+  Das **Broker/DBM-Transport** -Leistungsobjekt enthält Leistungsindikatoren, die Netzwerkinformationen für Service Broker und die Datenbankspiegelung melden. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
-|SQL Server, Broker/DBM-Transport-Leistungsindikator|und Beschreibung|  
+|SQL Server, Broker/DBM-Transport-Leistungsindikator|BESCHREIBUNG|  
 |------------------------------------------------|-----------------|  
 |**Aktuelle Bytes für E/A-Empfangsvorgänge**|Dieser Leistungsindikator gibt die Anzahl der Bytes an, die von den aktuell ausgeführten Transportempfangsvorgängen gelesen werden müssen.|  
 |**Aktuelle Bytes für E/A-Sendungen**|Dieser Leistungsindikator gibt die Anzahl der Bytes in Nachrichtenfragmenten an, die aktuell über das Netzwerk gesendet werden.|  

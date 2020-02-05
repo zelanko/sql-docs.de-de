@@ -22,10 +22,10 @@ ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8aaae44a73bc7cd7ccf41bf1c33823664044a2e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086732"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext, text und image (Transact-SQL)
@@ -49,7 +49,7 @@ Binärdaten variabler Länge von 0 bis 2^31-1 (2.147.483.647) Byte.
 ## <a name="remarks"></a>Bemerkungen  
 Die folgenden Funktionen und Anweisungen können mit **ntext**, **text** oder **image**-Daten verwendet werden.
   
-|Funktionen|Anweisungen|  
+|Functions|Anweisungen|  
 |---|---|
 |[DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)|[READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)|  
 |[PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)|[SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)|  
@@ -57,7 +57,7 @@ Die folgenden Funktionen und Anweisungen können mit **ntext**, **text** oder **
 |[TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)|[WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)|  
 |[TEXTVALID &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)||  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

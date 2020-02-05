@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 6874c34c70b562ef726bda5abbda2aebe615cc08
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72890543"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Neuigkeiten zu SQL Server 2017 für Linux
@@ -57,10 +57,10 @@ In diesem Artikel sind die wichtigsten Features und Dienste beschrieben, die fü
 
 Um SQL Server für Linux zu installieren, gehen Sie gemäß einem der folgenden Tutorials vor:
 
-- [Installieren unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Installation unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installation unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Ausführen unter Docker](quickstart-install-connect-docker.md)
+- [Ausführung in Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 Antworten auf häufig gestellte Fragen finden Sie unter [Häufig gestellte Fragen zu SQL Server für Linux](sql-server-linux-faq.md). Weitere Verbesserungen, die in SQL Server 2017 eingeführt wurden, finden Sie unter [Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).

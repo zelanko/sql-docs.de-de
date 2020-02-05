@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111764"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP
@@ -91,7 +91,7 @@ END
   
 -   Können nicht gelöscht oder geändert werden, wenn von einer schemagebundenen gespeicherten Prozedur oder einer benutzerdefinierten Funktion auf sie verwiesen wird.  
   
-## <a name="showplanxml"></a>SHOWPLAN_XML  
+## <a name="showplan_xml"></a>SHOWPLAN_XML  
  Nativ kompilierte benutzerdefinierte Skalarfunktionen unterstützen SHOWPLAN_XML. Es entspricht dem allgemeinen SHOWPLAN_XML-Schema, wie bei nativ kompilierten gespeicherten Prozeduren. Das Basiselement für die benutzerdefinierten Funktionen ist `<UDF>`.  
   
  STATISTICS XML wird für nativ kompilierte benutzerdefinierte Skalarfunktionen nicht unterstützt. Beim Ausführen einer Abfrage mit Verweis auf die benutzerdefinierte Funktion mit aktivierter STATISTICS XML-Anweisung wird der XML-Inhalt ohne den Teil für die benutzerdefinierte Funktion zurückgegeben.  

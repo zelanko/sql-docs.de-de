@@ -18,10 +18,10 @@ ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 320118e7844dfe40e45be9a893ad7bf45faff8bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120903"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (geography-Datentyp)

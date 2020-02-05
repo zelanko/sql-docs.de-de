@@ -1,5 +1,5 @@
 ---
-title: HÄUFIG GESTELLTE FRAGEN
+title: Häufig gestellte Fragen
 titleSuffix: Azure Data Studio
 description: Häufig gestellte Fragen (Frequently Asked Questions, FAQ) zu Azure Data Studio
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959546"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
 ## <a name="what-is-azure-data-studio"></a>Was ist Azure Data Studio?
 
-Azure Data Studio ist eine neue plattformübergreifende Open-Source-Desktopumgebung für Datenexperten, die zu den Azure Data-Produkten lokaler und cloudbasierter Datenplattformen unter Windows, macOS und Linux gehören. Azure Data Studio wurde zuvor in einer Vorschauversion unter dem Namen SQL Operations Studio veröffentlicht und bietet eine moderne Editor-Funktion mit einem integrierten Terminal sowie einer schnellen Integration von IntelliSense, Codeausschnitten und der Quellcodeverwaltung. Bei der Entwicklung wurde der Fokus auf den Benutzer der Datenplattform gelegt und die Darstellung von Abfrageergebnissen und anpassbaren Dashboards integriert.
+Azure Data Studio ist eine neue plattformübergreifende Open-Source-Desktopumgebung für Datenexperten, die zu den Azure Data-Produkten lokaler und cloudbasierter Datenplattformen unter Windows, macOS und Linux gehören. Azure Data Studio wurde zuvor in einer Vorschauversion unter dem Namen SQL Operations Studio veröffentlicht und bietet eine moderne Editor-Funktion mit einem integrierten Terminal sowie einer schnellen Integration von IntelliSense, Codeausschnitten und der Quellcodeverwaltung. Das Tool wurde speziell für die Bedürfnisse der Benutzer von Datenplattformen konzipiert und bietet eine integrierte Diagrammdarstellung von Abfrageresultsets sowie anpassbare Dashboards.
 
 Studien haben ergeben, dass die Benutzer von SQL Server Management Studio (SSMS) viel mehr Zeit mit der Bearbeitung von Abfragen verbringen als mit jeder anderen Aufgabe. Aus diesem Grund standen bei der Entwicklung von Azure Data Studio die Funktionen im Mittelpunkt, die am meisten verwendet werden. Zusätzliche Funktionen stehen als optionale Erweiterungen für das Produkt zur Verfügung. Dadurch kann jeder Benutzer seine Umgebung an die Workflows anpassen, die er am häufigsten verwendet.
 
@@ -56,7 +56,7 @@ Nein. Wir werden zusätzlich zur nächsten Generation der CLI für mehrere Betri
 
 ## <a name="when-should-i-use-azure-data-studio-vs-sql-server-management-studio"></a>Wann sollte ich Azure Data Studio und wann besser SQL Server Management Studio verwenden?
 
-*Verwenden Sie Azure Data Studio, wenn Folgendes der Fall ist:*
+*Verwenden Sie Azure Data Studio in folgenden Fällen*:
 
 - Sie verbringen einen Großteil Ihrer Zeit mit der Bearbeitung oder Ausführung von Abfragen.
 - Sie benötigen eine Funktion, mit der Sie Resultsets schnell visualisieren und in Diagrammen darstellen können.
@@ -65,7 +65,7 @@ Nein. Wir werden zusätzlich zur nächsten Generation der CLI für mehrere Betri
 - Sie müssen keine detaillierten administrativen oder plattformbezogenen Konfiguration durchführen.
 - Sie verwenden macOS oder Linux.
 
-*Verwenden Sie SQL Server Management Studio, wenn Folgendes der Fall ist:*
+*Verwenden Sie SQL Server Management Studio in folgenden Fällen*:
 
 - Sie verbringen einen Großteil Ihrer Zeit mit Aufgaben für die Datenbankverwaltung.
 - Sie führen komplexe administrative Konfigurationen oder Plattformkonfigurationen durch.
@@ -89,14 +89,14 @@ Nein. Wir werden zusätzlich zur nächsten Generation der CLI für mehrere Betri
 |Objekt-Explorer|Ja|Ja|
 |Skripterstellung für Objekte|Ja|Ja|
 |Projektsystem|Ja||
-|Select from Table (Aus Tabelle auswählen)|Ja|Ja|
+|Aus Tabelle auswählen|Ja|Ja|
 |Quellcodeverwaltung|Ja||
 |Aufgabenbereich|Ja||
-|Design|Ja||
+|Designs|Ja||
 |Dunkler Modus|Ja||
 |Azure-Ressourcen-Explorer|Vorschau||
 |Assistent zum Generieren von Skripts||Ja
-|Import/Export DACPAC (DACPAC importieren/exportieren)||Ja|
+|DACPACs importieren/exportieren||Ja|
 |Objekteigenschaften||Ja|
 |Tabellen-Designer||Ja|
 
@@ -104,17 +104,17 @@ Nein. Wir werden zusätzlich zur nächsten Generation der CLI für mehrere Betri
 
 |Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Chart Viewer (Diagrammviewer)|Ja||
-|Export Results to CSV, JSON, XLSX (Ergebnissen als CSV-, JSON- oder XLSX-Datei exportieren)|Ja||
+|Diagrammviewer|Ja||
+|Ergebnisse im CSV-, JSON- oder XLSX-Format exportieren|Ja||
 |IntelliSense|Ja|Ja|
-|Ausschnitte|Ja|Ja|
+|Codeausschnitte|Ja|Ja|
 |Plan anzeigen|Vorschau|Ja|
 |Clientstatistiken||Ja|
-|Live Query Stats (Live-Abfragestatistiken)||Ja|
+|Liveabfragestatistiken||Ja|
 |Abfrageoptionen||Ja|
 |Ergebnisse in Datei||Ja|
 |Ergebnisse in Text||Ja|
-|Spatial Viewer (Räumlicher Viewer)||Ja|
+|Räumlicher Viewer||Ja|
 |SQLCMD||Ja|
 |T-SQL-Debugger||Ja|
 
@@ -139,17 +139,17 @@ Nein. Wir werden zusätzlich zur nächsten Generation der CLI für mehrere Betri
 |Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Sicherung/Wiederherstellung|Ja|Ja|
-|Flat File Import (Flatfileimport)|Vorschau|Ja|
+|Flatfile-Import|Vorschau|Ja|
 |SQL-Agent|Vorschau|Ja|
 |SQL Profiler|Vorschau|Ja|
 |Always On||Ja|
 |Always Encrypted||Ja|
-|Copy Data Wizard (Assistent zum Kopieren von Daten)||Ja|
-|Data Tuning Advisor (Ratgeber für die Datenoptimierung)||Ja|
+|Assistent zum Kopieren von Daten||Ja|
+|Ratgeber für die Datenoptimierung||Ja|
 |Datenbankdiagramme||Ja|
-|Error Log Viewer (Fehlerprotokollanzeige)||Ja|
+|Fehlerprotokollanzeige||Ja|
 |Wartungspläne||Ja|
-|Multi-Server Query (Multiserverabfrage)||Ja|
+|Abfrage mehrerer Server||Ja|
 |Richtlinienbasierte Verwaltung||Ja|
 |PolyBase||Ja|
 |Abfragespeicher||Ja|
@@ -160,7 +160,7 @@ Nein. Wir werden zusätzlich zur nächsten Generation der CLI für mehrere Betri
 |SQL Mail||Ja|
 |Template Explorer||Ja|
 |Sicherheitsrisikobewertung||Ja|
-|XEvent Management (XEvent-Verwaltung)||Ja|
+|XEvent-Verwaltung||Ja|
 
 
 ## <a name="azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>In Azure Data Studio fehlt eine Funktion, die in SSMS bzw. SQL Server Data Tools (SSDT) enthalten ist. Soll das in Zukunft geändert werden?

@@ -13,10 +13,10 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b408951b0a1f32bda0920260aae18ab93350fdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986713"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQLServer:Catalog Metadata-Objekt
@@ -26,7 +26,7 @@ Das **SQLServer:Catalog Metadata** Leistungsobjekt enthält Leistungsindikatoren
 In der folgenden Tabelle sind die **Catalog Metadata** .
 
 
-|**SQLServer Catalog Metadata-Leistungsindikatoren**|und Beschreibung|  
+|**SQLServer Catalog Metadata-Leistungsindikatoren**|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Anzahl der Cacheeinträge**|Die Anzahl der Einträge im Katalogmetadaten-Cache.|
 |**Anzahl der fixierten Cacheeinträge**|Anzahl der Einträge im Katalogmetadaten-Cache, die fixiert sind.|

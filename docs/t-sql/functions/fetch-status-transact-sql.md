@@ -20,10 +20,10 @@ ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d07892e1a47025107205f590d6a41aebebbb571a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071564"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68071564"
 
 Diese Funktion gibt den Status der letzten Cursor-FETCH-Anweisung zurück, die für einen beliebigen der aktuell von der Verbindung geöffneten Cursor ausgegeben wurde.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ Diese Funktion gibt den Status der letzten Cursor-FETCH-Anweisung zurück, die f
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|BESCHREIBUNG|  
 |------------------|-----------------|  
 |&nbsp;0|Die FETCH-Anweisung war erfolgreich.|  
 |-1|Die FETCH-Anweisung ist fehlgeschlagen, oder die Zeile war außerhalb des Resultsets.|  
