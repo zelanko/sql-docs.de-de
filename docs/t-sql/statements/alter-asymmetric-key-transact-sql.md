@@ -20,10 +20,10 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 06263499babe005bca36a982bc863dfa24356b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066075"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68066075"
 
   Ändert die Eigenschaften eines asymmetrischen Schlüssels.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -73,9 +73,9 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
   
 |Ändern des Schutzes|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|Altes Kennwort wird geändert zu neuem Kennwort|Required|Required|  
-|Kennwort wird geändert zu Hauptschlüssel|Auslassen|Required|  
-|Hauptschlüssel wird geändert zu Kennwort|Required|Auslassen|  
+|Altes Kennwort wird geändert zu neuem Kennwort|Erforderlich|Erforderlich|  
+|Kennwort wird geändert zu Hauptschlüssel|Auslassen|Erforderlich|  
+|Hauptschlüssel wird geändert zu Kennwort|Erforderlich|Auslassen|  
   
  Der Datenbank-Hauptschlüssel muss geöffnet werden, bevor er zum Schutz eines privaten Schlüssels verwendet werden kann. Weitere Informationen finden Sie unter [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md).  
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843711"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Was sind SQL-Datenbankfunktionen?
@@ -34,7 +34,7 @@ Informationen zu den Kategorien von integrierten Funktionen, die Sie mit SQL-Dat
   
 ## <a name="aggregate-functions"></a>Aggregatfunktionen
 
-Aggregatfunktionen führen Berechnungen für eine Wertemenge durch und geben einen einzelnen Wert zurück. Sie sind in der SELECT-Auswahlliste oder der HAVING-Klausel einer SELECT-Anweisung zulässig. Sie können eine Aggregation in Kombination mit der GROUP BY-Klausel verwenden, um die Aggregation auf Kategorien von Zeilen zu berechnen. Verwenden Sie die OVER-Klausel, um die Aggregation auf einen bestimmten Wertebereich zu berechnen. Die OVER-Klausel darf nicht den Aggregationen GROUPING und GROUPING_ID folgen.
+Aggregatfunktionen führen eine Berechnung für eine Gruppe von Werten durch und geben einen einzelnen Wert zurück. Sie sind in der SELECT-Auswahlliste oder der HAVING-Klausel einer SELECT-Anweisung zulässig. Sie können eine Aggregation in Kombination mit der GROUP BY-Klausel verwenden, um die Aggregation auf Kategorien von Zeilen zu berechnen. Verwenden Sie die OVER-Klausel, um die Aggregation auf einen bestimmten Wertebereich zu berechnen. Die OVER-Klausel darf nicht den Aggregationen GROUPING und GROUPING_ID folgen.
 
 Alle Aggregatfunktionen sind deterministisch, d.h. sie geben immer denselben Wert zurück, wenn sie mit den gleichen Eingabewerten ausgeführt werden. Weitere Informationen finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
 
@@ -47,12 +47,12 @@ Rangfolgefunktionen geben für jede Partitionszeile einen Rangfolgenwert zurück
 ## <a name="rowset-functions"></a>Rowsetfunktionen
 Rowsetfunktionen geben ein Objekt zurück, das wie Tabellenverweise in einer SQL-Anweisung verwendet werden kann.
 
-## <a name="scalar-functions"></a>Skalare Funktionen
+## <a name="scalar-functions"></a>Skalarfunktionen
 Verarbeiten einen einzelnen Wert und geben einen einzelnen Wert zurück. Skalare Funktionen können überall dort verwendet werden, wo ein Ausdruck zulässig ist.
 
 ### <a name="categories-of-scalar-functions"></a>Kategorien von skalaren Funktionen
   
-|Funktionskategorie|und Beschreibung|  
+|Funktionskategorie|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |[Konfigurationsfunktionen](configuration-functions-transact-sql.md)|Geben Informationen zur aktuellen Konfiguration zurück.|  
 |[Konvertierungsfunktionen](conversion-functions-transact-sql.md)|Unterstützen die Umwandlung und Konvertierung von Datentypen.|  

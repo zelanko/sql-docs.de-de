@@ -22,10 +22,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211439"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70211439"
 
   Ruft eine oder mehrere Nachrichten aus einer Warteschlange ab. Je nach den Einstellungen für die Warteschlange wird entweder die Nachricht aus der Warteschlange entfernt oder der Status der Nachricht in der Warteschlange aktualisiert.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -105,7 +105,7 @@ ms.locfileid: "70211439"
  TIMEOUT *timeout*  
  Gibt in Millisekunden an, wie lange die Anweisung auf eine Nachricht warten soll. Diese Klausel kann nur zusammen mit der WAITFOR-Klausel verwendet werden. Wenn die Klausel nicht angegeben wird oder das Timeout den Wert –**1** hat, dann ist die Wartezeit unbegrenzt. Läuft das Timeout ab, gibt RECEIVE ein leeres Resultset zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
 >  Wenn es sich bei der RECEIVE-Anweisung nicht um die erste Anweisung in einem Batch oder in einer gespeicherten Prozedur handelt, muss die vorhergehende Anweisung mit einem Semikolon (;) abgeschlossen werden.  
@@ -155,7 +155,7 @@ ms.locfileid: "70211439"
 ## <a name="queue-columns"></a>Spalten in der Warteschlange  
  In der folgenden Tabelle werden die Spalten einer Warteschlange aufgelistet.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|Status der Nachricht. Für Nachrichten, die vom RECEIVE-Befehl zurückgegeben werden, ist der Status immer **0**. Nachrichten in der Warteschlange können einen der folgenden Werte enthalten:<br /><br /> **0**=Bereit **1**=Nachricht empfangen **2**=Noch nicht abgeschlossen **3**=Gesendete Nachricht wurde beibehalten|  
 |**priority**|**tinyint**|Die Prioritätsebene der Konversation, die auf die Nachricht angewendet wird.|  
@@ -199,7 +199,7 @@ FROM ExpenseQueue ;
 RECEIVE TOP (1) * FROM ExpenseQueue ;  
 ```  
   
-### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>D. Empfangen aller Nachrichten für eine angegebene Konversation  
+### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>D: Empfangen aller Nachrichten für eine angegebene Konversation  
  Im folgenden Beispiel werden alle verfügbaren Nachrichten für die angegebene Konversation aus der `ExpenseQueue`-Warteschlange als Resultset empfangen.  
   
 ```  

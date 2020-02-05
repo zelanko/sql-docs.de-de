@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215637"
----
 ## <a name="connect-locally"></a>Lokal verbinden
 
 Die folgenden Schritte verwenden **sqlcmd**, um sich lokal mit Ihrer neuen SQL Server-Instanz zu verbinden.
@@ -52,7 +44,7 @@ Mit den folgenden Schritten wird eine neue Datenbank mit dem Namen `TestDB` erst
    ```
 
 > [!TIP]
-> Um mehr über das Schreiben von Transact-SQL-Anweisungen und -Abfragen zu erfahren, lesen Sie das[Tutorial: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Um mehr über das Schreiben von Transact-SQL-Anweisungen und -Abfragen zu erfahren, schauen Sie sich dieses [Tutorial: Writing Transact-SQL Statements (Tutorial: Schreiben von Transact-SQL-Anweisungen)](../t-sql/tutorial-writing-transact-sql-statements.md) an.
 
 ### <a name="insert-data"></a>Einfügen von Daten
 
@@ -92,7 +84,7 @@ Führen Sie nun eine Abfrage zum Zurückgeben von Daten aus der `Inventory`-Tabe
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-1. Führen Sie den Befehl aus:
+1. Führen Sie den folgenden Befehl aus:
 
    ```sql
    GO

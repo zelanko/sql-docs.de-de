@@ -16,10 +16,10 @@ ms.assetid: 16f5f09a-51b5-423a-b52d-8c2eaa04e9ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31e42f5f4f0a165dd15a072f38bc158b939f74a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973359"
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int-int"></a>setObject-Methode (java.lang.String, java.lang.Object, int, int)
