@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d835e68c767866a130ebb62c26fd315f5448416e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947764"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67947764"
 
   Gibt einen zu testenden Bereich an.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,16 +51,16 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  Gibt an, dass das Ergebnis des Prädikats negiert wird.  
   
  *begin_expression*  
- Ein gültiger Ausdruck. *begin_expression* muss denselben Datentyp wie *test_expression* und *end_expression* aufweisen.  
+ Ist ein beliebiger gültiger Ausdruck. *begin_expression* muss denselben Datentyp wie *test_expression* und *end_expression* aufweisen.  
   
  *end_expression*  
- Ein gültiger Ausdruck. *end_expression* muss denselben Datentyp wie *test_expression* und *begin_expression* aufweisen.  
+ Ist ein beliebiger gültiger Ausdruck. *end_expression* muss denselben Datentyp wie *test_expression* und *begin_expression* aufweisen.  
   
  AND  
  Fungiert als Platzhalter, der angibt, dass sich *test_expression* innerhalb des von *begin_expression* und *end_expression* angegebenen Bereichs befinden sollte.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- **Boolean**  
+ **Boolescher Wert**  
   
 ## <a name="result-value"></a>Ergebniswert  
  BETWEEN gibt **TRUE** zurück, wenn der Wert von *test_expression* größer oder gleich dem Wert von *begin_expression* und kleiner oder gleich dem Wert von *end_expression* ist.  
@@ -158,7 +158,7 @@ ORDER BY ep.Rate;
 GO  
 ```  
   
-### <a name="d-using-between-with-datetime-values"></a>D. Verwenden von BETWEEN mit datetime-Werten  
+### <a name="d-using-between-with-datetime-values"></a>D: Verwenden von BETWEEN mit datetime-Werten  
  Im folgenden Beispiel werden Zeilen abgerufen, die **datetime**-Werte zwischen `'20011212'` und `'20020105'` (inklusiv) enthalten.  
   
 ```sql  

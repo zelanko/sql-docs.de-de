@@ -19,10 +19,10 @@ ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129385"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68129385"
 
   Entschlüsselt einen symmetrischen Schlüssel und stellt ihn zur Verwendung zur Verfügung.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -81,9 +81,9 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ## <a name="permissions"></a>Berechtigungen  
  Der Aufrufer benötigt bestimmte Berechtigungen für den Schlüssel, und die VIEW DEFINITION-Berechtigung für den Schlüssel darf ihm nicht verweigert worden sein. Zusätzliche Anforderungen hängen vom Entschlüsselungsmechanismus ab:  
   
--   DECRYPTION BY CERTIFICATE: CONTROL-Berechtigung für das Zertifikat und Kenntnis des Kennworts, mit dem dessen privater Schlüssel verschlüsselt wird.  
+-   DECRYPTION BY CERTIFICATE: CONTROL-Berechtigung für das Zertifikat und Kenntnis des Kennworts, mit dem der private Schlüssel verschlüsselt wird.  
   
--   DECRYPTION BY ASYMMETRIC KEY: CONTROL-Berechtigung für den asymmetrischen Schlüssel und Kenntnis des Kennworts, mit dem dessen privater Schlüssel verschlüsselt wird.  
+-   DECRYPTION BY ASYMMETRIC KEY: CONTROL-Berechtigung für den asymmetrischen Schlüssel und Kenntnis des Kennworts, mit dem der private Schlüssel verschlüsselt wird.  
   
 -   DECRYPTION BY PASSWORD: Kenntnis eines der Kennwörter, mit denen der symmetrische Schlüssel verschlüsselt wird.  
   

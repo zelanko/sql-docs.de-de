@@ -13,10 +13,10 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: beba1f54c4eae683e6b35eb44408d84c5d812b84
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293231"
 ---
 # <a name="cdc-splitter"></a>CDC-Splitter
@@ -26,13 +26,13 @@ ms.locfileid: "71293231"
 
   Der CDC-Splitter teilt einen einzelnen Fluss von Änderungszeilen aus einem CDC-Quelldatenfluss in unterschiedliche Datenflüsse für Einfüge-, Update und Löschvorgänge auf. Der Datenfluss wird basierend auf der erforderlichen Spalte `__$operation` und seinen Standardwerten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Änderungstabellen geteilt.  
   
-|Wert des Vorgangs|Ausgabe|und Beschreibung|  
+|Wert des Vorgangs|Output|BESCHREIBUNG|  
 |------------------------|------------|-----------------|  
-|1|DELETE|Gelöschte Zeile|  
-|2|Insert|Eingefügte Zeile (nicht verfügbar bei Verwendung des CDC-Modus **Net with merge** )|  
-|3|Update|Zeile vor Update (nur bei Verwendung des CDC-Modus **All with Old Values** verfügbar)|  
-|4|Update|Zeile nach Update (folgt auf die Zeile vor Update)|  
-|5|Update|Mergezeile (nur bei Verwendung des CDC-Modus **Net with merge** verfügbar)|  
+|1|Löschen|Gelöschte Zeile|  
+|2|Einfügen|Eingefügte Zeile (nicht verfügbar bei Verwendung des CDC-Modus **Net with merge** )|  
+|3|Aktualisieren|Zeile vor Update (nur bei Verwendung des CDC-Modus **All with Old Values** verfügbar)|  
+|4|Aktualisieren|Zeile nach Update (folgt auf die Zeile vor Update)|  
+|5|Aktualisieren|Mergezeile (nur bei Verwendung des CDC-Modus **Net with merge** verfügbar)|  
 |Andere|Fehler||  
   
  Sie können den Splitter verwenden, um vordefinierte INSERT-, DELETE- und UPDATE-Ausgaben zur weiteren Verarbeitung zu verbinden.  
@@ -44,9 +44,9 @@ ms.locfileid: "71293231"
   
  Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
--   **Fehlercode**: Auf 1 festlegen.  
+-   **Fehlercode**: Auf 1 festgelegt.  
   
--   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (bei Konvertierungsfehlern).  
+-   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (für Konvertierungsfehler).  
   
 -   **Fehlerzeilenspalten**: Die Eingabespalten der Zeile, die den Fehler verursacht hat.  
   

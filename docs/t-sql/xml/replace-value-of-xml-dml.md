@@ -18,10 +18,10 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b7bfc41b827cdfc2584c50a44e4e1f1e7c60be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051229"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
@@ -134,7 +134,7 @@ SELECT x.query(' /Root/ProductDescription')
 FROM T  
 ```  
   
-### <a name="d-updating-xml-stored-in-a-typed-xml-column"></a>D. Aktualisieren von XML, das in einer typisierten XML-Spalte gespeichert ist  
+### <a name="d-updating-xml-stored-in-a-typed-xml-column"></a>D: Aktualisieren von XML, das in einer typisierten XML-Spalte gespeichert ist  
 Dieses Beispiel ersetzt Werte in einem Dokument mit Fertigungsanweisungen, das in einer typisierten XML-Spalte gespeichert ist.  
   
 In diesem Beispiel erstellen Sie zuerst eine Tabelle (T) mit einer typisierten XML-Spalte in der AdventureWorks-Datenbank. Anschließend kopieren Sie eine XML-Instanz mit Fertigungsanweisungen aus der Instructions-Spalte in der ProductModel-Tabelle in Tabelle T. Die Einfügungen werden dann am XML in Tabelle T vorgenommen.  

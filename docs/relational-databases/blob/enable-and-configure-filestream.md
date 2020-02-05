@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908772"
 ---
 # <a name="enable-and-configure-filestream"></a>Aktivieren und Konfigurieren von FILESTREAM
@@ -77,9 +77,9 @@ ms.locfileid: "72908772"
   
 ||||||  
 |-|-|-|-|-|  
-|RAID-Stufe|Schreibleistung|Leseleistung|Fehlertoleranz|Remarks|  
+|RAID-Stufe|Schreibleistung|Leseleistung|Fehlertoleranz|Bemerkungen|  
 |RAID 5|Normal|Normal|Hervorragend|Die Leistung ist besser als bei einem einzelnen Datenträger oder JBOD und geringer als bei RAID 0 oder RAID 5 mit Striping.|  
-|RAID 0|Hervorragend|Hervorragend|None||  
+|RAID 0|Hervorragend|Hervorragend|Keine||  
 |RAID 5 + Striping|Hervorragend|Hervorragend|Hervorragend|Die aufwendigste Option.|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
