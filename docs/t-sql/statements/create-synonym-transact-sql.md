@@ -23,10 +23,10 @@ ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3682c9faa66252f4e578fe75b41b010380409fc6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982584"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982584"
 
   Erstellt ein neues Synonym.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -82,9 +82,9 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  *object_name*  
  Der Name des Basisobjekts, auf das das Synonym verweist.  
   
- Die Azure SQL-Datenbank unterstützt das aus drei Teilen bestehende Format database_name.[schema_name].object_name, wenn database_name die aktuelle Datenbank bzw. database_name tempdb ist und object_name mit # beginnt.  
+ Die Azure SQL-Datenbank unterstützt das aus drei Teilen bestehende Format „database_name.[schema_name].object_name“, wenn „database_name“ die aktuelle Datenbank bzw. „database_name tempdb“ ist und „object_name“ mit „#“ beginnt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das Basisobjekt muss zur Erstellungszeit des Synonyms nicht notwendigerweise vorhanden sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft das Vorhandensein des Basisobjekts zur Laufzeit.  
   
  Synonyme können für die folgenden Objekttypen erstellt werden:  

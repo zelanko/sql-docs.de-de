@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982408"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
@@ -36,7 +36,7 @@ Stellt Statistiken bezüglich der Nutzung von Speicherplatz für das Transaktion
   
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Vorschauversion in einigen Regionen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -82,14 +82,14 @@ Nutzen Sie ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] die [sys.dm_db_l
 Im Transaktionsprotokoll wird jede in der Datenbank vorgenommene Transaktion aufgezeichnet. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) und im [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
 ## <a name="permissions"></a>Berechtigungen  
-Um in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `DBCC SQLPERF(LOGSPACE)` auszuführen, ist die `VIEW SERVER STATE`-Berechtigung auf dem Server erforderlich. Wenn Sie Warte- und Latchstatistiken zurücksetzen möchten, ist die `ALTER SERVER STATE`-Berechtigung auf dem Server erforderlich.
+Um in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`DBCC SQLPERF(LOGSPACE)` auszuführen, ist die `VIEW SERVER STATE`-Berechtigung auf dem Server erforderlich. Wenn Sie Warte- und Latchstatistiken zurücksetzen möchten, ist die `ALTER SERVER STATE`-Berechtigung auf dem Server erforderlich.
   
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium-Tarifen und unternehmenskritischen Tarifen ist die `VIEW DATABASE STATE`-Berechtigung für die Datenbank erforderlich. Für die [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Tarife Standard, Basic und Universell ist das [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Administratorkonto erforderlich. Das Zurücksetzen der Warte- und Latchstatistiken wird nicht unterstützt.
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-displaying-log-space-information-for-all-databases"></a>A. Anzeigen von Informationen zum Protokollspeicherplatz für alle Datenbanken  
-Das folgende Beispiel zeigt `LOGSPACE` -Informationen für alle in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthaltenen Datenbanken an.
+Im folgenden Beispiel werden `LOGSPACE`-Informationen für alle in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthaltenen Datenbanken angezeigt.
   
 ```sql  
 DBCC SQLPERF(LOGSPACE);  

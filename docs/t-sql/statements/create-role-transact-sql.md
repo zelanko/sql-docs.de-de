@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5a8e03235614ce9ae5b2461154c97a2bb5f67f1
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064618"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73064618"
 
   Erstellt eine neue Datenbankrolle in der aktuellen Datenbank.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,7 +54,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  AUTHORIZATION *owner_name*  
  Der Datenbankbenutzer oder die Datenbankrolle, der bzw. die die neue Rolle besitzen soll. Wenn kein Benutzer angegeben wird, besitzt der Benutzer, der CREATE ROLE ausführt, diese Rolle. Der Besitzer der Rolle oder ein beliebiges Mitglied einer besitzenden Rolle kann der Rolle Mitglieder hinzufügen oder Mitglieder aus dieser entfernen.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Rollen sind auf Datenbankebene sicherungsfähige Elemente. Nachdem Sie eine Rolle erstellt haben, konfigurieren Sie die Berechtigungen der Rolle auf Datenbankebene mithilfe von GRANT, DENY und REVOKE. Um einer Datenbankrolle Elemente hinzuzufügen, verwenden Sie [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Weitere Informationen finden Sie unter [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  Datenbankrollen werden in den Katalogsichten sys.database_role_members und sys.database_principals angezeigt.  

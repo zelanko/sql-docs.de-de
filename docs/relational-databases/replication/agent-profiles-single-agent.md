@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 08a8362ab1cdf55af1c3735ee9ab27fb9991b07e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0c0ad89bed910450618c043e7ab5dd2d96fff342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770830"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288303"
 ---
 # <a name="agent-profiles-single-agent"></a>Agentprofile (einzelner Agent)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Mithilfe des Dialogfelds **Agentprofile** können Sie Agentprofile verwalten. Agentprofile stellen eine einfache Möglichkeit dar, die Laufzeitparameter jedes Agents zu verwalten. Jeder Agent verfügt über ein Standardprofil, und einige Agents verfügen über zusätzliche vordefinierte Profile. Der Merge-Agent verfügt z. B. über ein Profil für langsame Verbindungen, das für Verbindungen mit geringer Bandbreite angelegt wurde. Die vordefinierten Profile reichen für die meisten Anwendungen aus, aber Sie können auch benutzerdefinierte Profile erstellen, mit denen Sie das Verhalten der Agents je nach Bedarf anpassen können.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Standardwert für Neu**  
  Wählen Sie das Profil aus, das verwendet werden soll, wenn für einen Agent des angegebenen Typs Aufträge erstellt werden. Wenn Sie z. B. mehrere Abonnements für eine Mergeveröffentlichung erstellen, wird für den Auftrag des Merge-Agents für jedes Abonnement das ausgewählte Profil verwendet. Wenn Sie das Profil für vorhandene Aufträge ändern möchten, wählen Sie ein Profil aus, und klicken Sie auf **Vorhandene Agents ändern**.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68770830"
  Der Name des Profils.  
   
  **Typ**  
- Der Profiltyp: **Benutzer** (benutzerdefiniert) oder **System** (vordefiniert).  
+ Der Typ des Profils: **Benutzer** (benutzerdefiniert) oder **System** (vordefiniert).  
   
  **Eigenschaften (...)**  
  Klicken Sie auf diese Option, um die Werte anzuzeigen, die für jeden Parameter im Agentprofil verwendet werden.  

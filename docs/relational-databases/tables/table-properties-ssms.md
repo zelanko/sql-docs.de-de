@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905952"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -68,7 +68,7 @@ ms.locfileid: "72905952"
  Gibt an, ob das Objekt mit der Option „Bezeichner in Anführungszeichen“ auf ON erstellt wurde. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
  **Sperrenausweitung**  
- Gibt die Granularität der Sperrenausweitung der Tabelle an. Weitere Informationen zum Sperren in der Datenbank-Engine finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Folgende Werte sind möglich:  
+ Gibt die Granularität der Sperrenausweitung der Tabelle an. Weitere Informationen zum Sperren in der Datenbank-Engine finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Mögliche Werte:  
   
  AUTO  
  Mit dieser Option kann von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die für das Tabellenschema geeignete Granularität der Sperrenausweitung ausgewählt werden.  
@@ -155,7 +155,7 @@ ms.locfileid: "72905952"
  Der Speicherplatz in Megabytes, der von den Daten in der Tabelle belegt wird.  
   
 ### <a name="partitioning"></a>Partitionierung  
- Dieser Abschnitt ist nur verfügbar, wenn die Tabelle partitioniert ist. Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Dieser Abschnitt ist nur verfügbar, wenn die Tabelle partitioniert ist. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Partitionsspalte**  
  Der Name der Spalte, nach der die Tabelle partitioniert ist.  

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09f32949faca6994d460284a56e2b08315f1b43b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072253"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Verketten von Zeichenfolgen) (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072253"
 
   Ein Operator in einem Zeichenfolgenausdruck, der zwei oder mehr Zeichenfolgen, binäre Zeichenfolgen oder Spalten oder eine Kombination aus Zeichenfolgen und Spaltennamen zu einem Ausdruck verkettet (ein Zeichenfolgenoperator).  `SELECT 'book'+'case';` gibt beispielsweise `bookcase` zurück.
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -86,7 +86,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ```  
   
 ### <a name="b-combining-numeric-and-date-data-types"></a>B. Kombinieren von numerischen Datentypen und Datumsdatentypen  
- Im folgenden Beispiel werden die Datentypen **numeric** und **date** mithilfe der `CONVERT`-Funktion verkettet.  
+ Im folgenden Beispiel werden die Datentypen `CONVERT`numeric**und**date**mithilfe der**-Funktion verkettet.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -132,7 +132,7 @@ GO
  (3 row(s) affected)
  ```  
  
-### <a name="d-using-large-strings-in-concatenation"></a>D. Verwenden von langen Zeichenfolgen bei Verkettungen
+### <a name="d-using-large-strings-in-concatenation"></a>D: Verwenden von langen Zeichenfolgen bei Verkettungen
 Im folgenden Beispiel werden mehrere Zeichenfolgen zu einer langen Zeichenfolge verkettet. Anschließend wird versucht, die Länge der endgültigen Zeichenfolge zu berechnen. Die endgültige Länge des Resultsets beträgt 16000, da die Auswertung des Ausdrucks links beginnt, d.h. @x + @z + @y = > (@x + @z) + @y. In diesem Fall wird das Ergebnis von (@x + @z) bei 8000 Byte abgeschnitten. Anschließend wird @y dem Resultset hinzugefügt, sodass sich die endgültige Zeichenfolgenlänge 16000 ergibt. Da @y eine Zeichenfolge vom Typ für hohe Werte ist, werden keine Daten abgeschnitten.
 
 ```sql
@@ -153,7 +153,7 @@ GO
   
  (1 row(s) affected)
  ```  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-multiple-string-concatenation"></a>E. Verwenden der Verkettung mehrerer Zeichenfolgen  
  Im folgenden Beispiel werden mehrere Zeichenfolgen verkettet, um eine lange Zeichenfolge zu bilden. Dabei wird der Nachname und der Anfangsbuchstabe des Vornamens der Vizepräsidenten in einer Beispieldatenbank angezeigt. Nach dem Nachnamen wird ein Komma hinzugefügt. Nach dem Anfangsbuchstaben des Vornamens wird ein Punkt hinzugefügt.  

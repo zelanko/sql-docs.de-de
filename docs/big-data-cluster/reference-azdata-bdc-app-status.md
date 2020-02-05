@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4435a1683b42b48e83aa2902aaba59c4b7a2ab22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 8322db228d67fc4341e3138c8a79079114065ba5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531872"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820943"
 ---
 # <a name="azdata-bdc-app-status"></a>azdata bdc app status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Der folgende Artikel enthält Referenzinformationen zu `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den `bdc app status`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |
@@ -47,9 +47,9 @@ azdata bdc app status show --resource appproxy
 ```
 ### <a name="optional-parameters"></a>Optionale Parameter
 #### `--resource -r`
-Ruft diese Ressource in diesem Dienst ab
+Abrufen dieser Ressource in diesem Dienst
 #### `--all -a`
-Zeigt alle Instanzen jeder Ressource im Dienst an
+Anzeigen aller Instanzen jeder Ressource im Dienst
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
 Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.

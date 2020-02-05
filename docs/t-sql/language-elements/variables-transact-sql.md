@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d452d0e342d9b8241ee79882970e65c74a26d77
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325480"
 ---
 # <a name="variables-transact-sql"></a>Variablen (Transact-SQL)
@@ -30,7 +30,7 @@ Eine lokale Transact-SQL-Variable ist ein Objekt, das einen einzelnen Datenwert 
 * Zum Speichern eines Datenwerts, der vom Rückgabecode einer gespeicherten Prozedur oder vom Funktionsrückgabewert zurückgegeben werden soll.
 
 > [!NOTE]
-> Die Namen einiger Transact-SQL-Systemfunktionen beginnen mit zwei *@* -Zeichen (\@\@). Obwohl die \@\@-Funktionen in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als globale Variablen bezeichnet wurden, handelt es sich dabei keineswegs um Variablen, und sie verhalten sich auch nicht wie Variablen. Die \@\@-Funktionen sind Systemfunktionen, deren Syntaxverwendung den Regeln für Funktionen entspricht.
+> Die Namen einiger Transact-SQL-Systemfunktionen beginnen mit zwei *@* -Zeichen (\@\@). Obwohl die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\@-Funktionen in früheren Versionen von \@ als globale Variablen bezeichnet wurden, handelt es sich dabei keineswegs um Variablen, und sie verhalten sich auch nicht wie Variablen. Die \@\@-Funktionen sind Systemfunktionen, deren Syntaxverwendung den Regeln für Funktionen entspricht.
 
 > [!NOTE]
 > Variablen können in Sichten nicht verwendet werden.

@@ -1,10 +1,9 @@
 ---
-title: Neuer Auftragszeitplan – Eigenschaften des Auftragszeitplans | Microsoft-Dokumentation
-ms.custom: ''
+title: Neuer Auftragszeitplan – Eigenschaften des Auftragszeitplans
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,13 +12,15 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4e7500e61be6167271388f688428b6c1530e8d58
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ace04d16e537e50c10e0eaa5c4fa432d1db7055f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262998"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245205"
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Neuer Auftragszeitplan – Eigenschaften des Auftragszeitplans
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68262998"
 
 Mithilfe dieser Seite können Sie die Eigenschaften des Zeitplans anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Name**  
 Geben Sie einen neuen Namen für den Zeitplan ein.  
   
@@ -39,7 +40,7 @@ Zeigt die Aufträge an, die diesen Zeitplan verwenden.
 **Zeitplantyp**  
 Wählen Sie den Zeitplantyp aus.  
   
-**Enabled**  
+**Aktiviert**  
 Klicken Sie zum Aktivieren oder Deaktivieren des Zeitplans auf das Kontrollkästchen.  
   
 ## <a name="recurring-schedule-types-options"></a>Zeitplantypoptionen für wiederkehrende Aufträge  
@@ -95,10 +96,10 @@ Legen Sie fest, ab welchem Datum der Zeitplan nicht mehr gültig ist.
 Geben Sie an, dass der Zeitplan für unbestimmte Zeit gültig bleibt.  
   
 ## <a name="one-time-schedule-types-options"></a>Zeitplantypoptionen für einmalige Aufträge  
-**Datum**  
+**Date**  
 Wählen Sie das Datum aus, an dem der Auftrag ausgeführt wird.  
   
-**Zeit**  
+**Time**  
 Wählen Sie die Uhrzeit aus, zu der der Auftrag ausgeführt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  

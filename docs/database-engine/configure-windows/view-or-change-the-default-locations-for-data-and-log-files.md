@@ -14,10 +14,10 @@ ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 933d15e789e0d069822f657ff09cff0e2b4aaf8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67945758"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files"></a>Anzeigen oder Ändern der Standardspeicherorte für Datenbankdateien
@@ -36,7 +36,7 @@ ms.locfileid: "67945758"
   
 >**HINWEIS:** Nach dem Ändern der Standardspeicherorte müssen Sie den SQL Server-Dienst beenden und wieder starten, um die Änderung abzuschließen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Erstellen einer Datenbank](../../relational-databases/databases/create-a-database.md)  
   

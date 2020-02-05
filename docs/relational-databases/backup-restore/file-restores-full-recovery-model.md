@@ -20,10 +20,10 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c4ca01f461d3013482ceca066a6ce141adf0aaae
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908931"
 ---
 # <a name="file-restores-full-recovery-model"></a>Dateiwiederherstellungen (vollständiges Wiederherstellungsmodell)
@@ -52,7 +52,7 @@ ms.locfileid: "72908931"
      Informationen zur Unterstützung von Onlinewiederherstellungen von Seiten und Dateien finden Sie unter [Editionen und unterstützte Funktionen für SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Weitere Informationen zur Onlinewiederherstellung finden Sie unter [Onlinewiederherstellung(SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).
   
     > [!TIP]  
-    >  Wenn Sie möchten, dass die Datenbank für eine Dateiwiederherstellung offline ist, können Sie die Datenbank vor dem Starten der Wiederherstellungssequenz offline schalten, indem Sie die folgende [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)-Anweisung ausführen: ALTER DATABASE *Datenbankname* SET OFFLINE  
+    >  Wenn Sie die Datenbank für eine Dateiwiederherstellung offline schalten möchten, tun Sie dies vor dem Starten der Wiederherstellungssequenz, indem Sie die folgende [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) -Anweisung ausführen: ALTER DATABASE *Datenbankname* SET OFFLINE.  
   
   
 ##  <a name="Overview"></a> Wiederherstellen von beschädigten Dateien aus Dateisicherungen  
@@ -132,7 +132,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Sicherung und Wiederherstellung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Vollständige Dateisicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   

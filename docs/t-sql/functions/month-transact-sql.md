@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d9fc2c8718fd643e5838172831858c51aea6fd47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130226"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68130226"
   
  Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL))](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,13 +66,13 @@ MONTH ( date )
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');  
 ```  
   
- Die folgende Anweisung gibt `1900, 1, 1` zurück. Das Argument für *date* ist die Zahl `0`. `0` wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als 1. Januar 1900 interpretiert.  
+ Die folgende Anweisung gibt `1900, 1, 1` zurück. Das Argument für *date* ist die Zahl `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird von `0` als 1. Januar 1900 interpretiert.  
   
 ```  
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel wird `4` zurückgegeben. Dies ist die Monatszahl.  
   
 ```  
@@ -82,7 +82,7 @@ SELECT TOP 1 MONTH('2007-04-30T01:01:01.1234')
 FROM dbo.DimCustomer;  
 ```  
   
- Im folgenden Beispiel wird `1900, 1, 1` zurückgegeben. Das Argument für *date* ist die Zahl `0`. `0` wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als 1. Januar 1900 interpretiert.  
+ Im folgenden Beispiel wird `1900, 1, 1` zurückgegeben. Das Argument für *date* ist die Zahl `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird von `0` als 1. Januar 1900 interpretiert.  
   
 ```  
 -- Uses AdventureWorks  

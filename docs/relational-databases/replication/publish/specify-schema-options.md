@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e2ac7116c1d7c402ac2b15e4168c64339da34998
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1ce8df82856f7a6a495fdd026dec0d46eaba4c89
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908116"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287525"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>Angeben von Schemaoptionen für die SQL Server-Replikation
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "72908116"
 -   Die vollständige Liste der Schemaoptionen finden Sie im Parameter `@schema_option` von [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) und [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Auf der Registerkarte **Eigenschaften** im Dialogfeld **Artikeleigenschaften - \<Artikel>** können Sie Schemaoptionen angeben, beispielsweise, ob Einschränkungen und Trigger auf Abonnenten kopiert werden sollen. Diese Registerkarte ist im Assistenten für neue Veröffentlichung sowie über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Eine Veröffentlichung erstellen](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Auf der Registerkarte **Eigenschaften** im Dialogfeld **Artikeleigenschaften - \<Artikel>** können Sie Schemaoptionen angeben, beispielsweise, ob Einschränkungen und Trigger auf Abonnenten kopiert werden sollen. Diese Registerkarte ist im Assistenten für neue Veröffentlichung sowie über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-schema-options"></a>So geben Sie Schemaoptionen an  
   
@@ -124,6 +124,6 @@ ms.locfileid: "72908116"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Artikeloptionen für die Transaktionsreplikation](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
+ [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

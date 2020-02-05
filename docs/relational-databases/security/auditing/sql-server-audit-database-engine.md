@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d9319ef90263e6513661c4d9a24be7f530b917f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903851"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
@@ -112,7 +112,7 @@ ms.locfileid: "72903851"
 
  Weitere Informationen zur Überwachung finden Sie unter [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) sowie [Erstellen einer Server- und Datenbank-Überwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
-## <a name="considerations"></a>Weitere Überlegungen  
+## <a name="considerations"></a>Überlegungen  
  Wenn während der Überwachungseinleitung ein Fehler auftritt, wird der Server nicht gestartet. In diesem Fall kann der Server gestartet werden, indem Sie in die Befehlszeile die Option **-f** eingeben.  
   
  Wenn aufgrund eines Überwachungsfehlers der Server heruntergefahren wird oder nicht startet, da für die Überwachung ON_FAILURE=SHUTDOWN festgelegt wurde, wird das Ereignis MSG_AUDIT_FORCED_SHUTDOWN in das Protokoll geschrieben. Da der Server schon beim ersten Auftreten dieser Einstellung heruntergefahren wird, wird das Ereignis nur einmal im Protokoll aufgezeichnet. Das Ereignis wird erst nach der Fehlermeldung für die Überwachung, die das Herunterfahren verursacht, geschrieben. Ein Administrator kann ein durch eine Überwachung verursachtes Herunterfahren umgehen, indem er [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **-m** im Einzelbenutzermodus startet. Wenn Sie sich im Einzelbenutzermodus anmelden, wird jede Überwachung herabgestuft, für die festgelegt wurde, dass ON_FAILURE=SHUTDOWN in dieser Sitzung als ON_FAILURE=CONTINUE ausgeführt wird. Wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **-m** gestartet wird, wird die Meldung MSG_AUDIT_SHUTDOWN_BYPASSED im Fehlerprotokoll aufgezeichnet.  
@@ -142,7 +142,7 @@ ms.locfileid: "72903851"
 ### <a name="data-definition-language-statements"></a>DDL-Anweisungen (Data Definition Language, Datendefinitionssprache)  
  Sie können die folgenden DDL-Anweisungen zum Erstellen, Ändern und Löschen von Überwachungsspezifikationen verwenden:  
   
-|DDL-Anweisungen|und Beschreibung| 
+|DDL-Anweisungen|BESCHREIBUNG| 
 |-|-|  
 |[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|Ändert den Besitz eines sicherungsfähigen Elements.|  
 |[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|Ändert die Spezifikation eines Datenbanküberwachungsobjekts mithilfe der SQL Server Audit-Funktion.|  
@@ -158,7 +158,7 @@ ms.locfileid: "72903851"
 ### <a name="dynamic-views-and-functions"></a>Dynamische Sichten und Funktionen  
  In der folgenden Tabelle werden die dynamischen Sichten und Funktion aufgelistet, die Sie für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung verwenden können.  
   
-|Dynamische Sichten und Funktionen|und Beschreibung|  
+|Dynamische Sichten und Funktionen|BESCHREIBUNG|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|Gibt eine Zeile für jede Überwachungsaktion zurück, die im Überwachungsprotokoll festgehalten werden kann, und für jede Überwachungsaktionsgruppe, die als Teil von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit konfiguriert werden kann.|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|Stellt Informationen über den aktuellen Status der Überwachung bereit.|  
@@ -168,7 +168,7 @@ ms.locfileid: "72903851"
 ### <a name="catalog-views"></a>Katalogsichten  
  In der folgenden Tabelle werden die Katalogsichten aufgeführt, die Sie für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung verwenden können.  
   
-|Katalogsichten|und Beschreibung|  
+|Katalogansichten|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Enthält Informationen über die Datenbanküberwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Enthält Informationen über die Datenbank-Überwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz für alle Datenbanken.|  
@@ -214,7 +214,7 @@ ms.locfileid: "72903851"
  [DDL-Trigger](../../../relational-databases/triggers/ddl-triggers.md)  
  Erklärt, wie Sie DDL-Trigger (Data Definition Language) zum Nachverfolgen von Änderungen an den Datenbanken verwenden können.  
   
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005, Sicherheit und Schutz](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server-TechCenter: SQL Server 2005 – Sicherheit und Schutz](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Stellt aktuelle Informationen zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit bereit.  
   
 ## <a name="see-also"></a>Weitere Informationen  

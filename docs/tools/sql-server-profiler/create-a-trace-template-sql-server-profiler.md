@@ -1,27 +1,25 @@
 ---
-title: Erstellen einer Ablauf Verfolgungs Vorlage (SQL Server Profiler) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/01/2017
+title: Erstellen einer Ablaufverfolgungsvorlage
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], traces
-- trace templates [SQL Server]
-- saving trace template
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 90e0563fac5a8ff1619abb946d7b35207d47f706
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 2944e21afee17f66eef51723f4e552c947f43db8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223767"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307312"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>Erstellen einer Ablaufverfolgungsvorlage (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]eine neue Ablaufverfolgungsvorlage erstellen.  
   
@@ -49,7 +47,7 @@ ms.locfileid: "68223767"
   
     -   Um Filter hinzuzufügen, klicken Sie auf den Namen der Datenspalte, und geben Sie die Filterkriterien im Dialogfeld **Filter bearbeiten** an. Sie können auch mit der rechten Maustaste auf den Namen der Datenspalte und anschließend auf **Spaltenfilter bearbeiten** klicken, um das Dialogfeld **Filter bearbeiten** zu öffnen. Klicken Sie auf **OK** , um den Filter hinzuzufügen.  
   
-8.  Klicken Sie auf **Speichern.**  
+8.  Klicken Sie auf **Speichern**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Angeben von Ereignissen und Datenspalten für eine Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   

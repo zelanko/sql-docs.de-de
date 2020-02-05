@@ -14,10 +14,10 @@ ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9053a5ab4ac64bea8104ce7d9079bf891ffa887a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296769"
 ---
 # <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission (SSISDB-Datenbank)
@@ -65,7 +65,7 @@ catalog.grant_permission [ @object_type = ] object_type
  5 (anderer Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -78,14 +78,14 @@ catalog.grant_permission [ @object_type = ] object_type
 
 Dieses Verfahren kann nicht durch Anmeldevorgänge aufgerufen werden, die von SQL Server authentifiziert wurden. Es kann nicht durch die SA-Anmeldung aufgerufen werden.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit dieser gespeicherten Prozedur können Sie die in der folgenden Tabelle beschriebenen Typen von Berechtigungen gewähren:  
   
 |permission_type-Wert|Berechtigungsname|Berechtigungsbeschreibung|Anwendbare Objekttypen|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Ermöglicht es dem Prinzipal, Informationen zu lesen, die als Teil des Objekts angesehen werden, z. B. Eigenschaften. Ermöglicht es dem Prinzipal nicht, den Inhalt von anderen Objekten innerhalb des Objekts aufzuzählen oder zu lesen.|Ordner, Projekt, Umgebung, Vorgang|  
 |`2`|MODIFY|Ermöglicht es dem Prinzipal, Informationen zu ändern, die als Teil des Objekts angesehen werden, z. B. Eigenschaften. Ermöglicht es dem Prinzipal nicht, andere Objekte innerhalb des Objekts zu ändern.|Ordner, Projekt, Umgebung, Vorgang|  
-|`3`|Führen Sie|Ermöglicht es dem Prinzipal, alle Pakete im Projekt auszuführen.|Projekt|  
+|`3`|Führen Sie|Ermöglicht es dem Prinzipal, alle Pakete im Projekt auszuführen.|Project|  
 |`4`|MANAGE_PERMISSIONS|Ermöglicht es dem Prinzipal, den Objekten Berechtigungen zuzuweisen.|Ordner, Projekt, Umgebung, Vorgang|  
 |`100`|CREATE_OBJECTS|Ermöglicht es dem Prinzipal, Objekte im Ordner zu erstellen.|Ordner|  
 |`101`|READ_OBJECTS|Ermöglicht es dem Prinzipal, alle Objekte im Ordner zu lesen.|Ordner|  

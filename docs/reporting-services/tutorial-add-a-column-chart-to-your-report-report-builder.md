@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041396"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
@@ -32,7 +32,7 @@ In der folgenden Abbildung sehen Sie das zu erstellende Säulendiagramm mit eine
   
 Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Erstellen eines Diagrammberichts mithilfe des Diagramm-Assistenten  
@@ -215,7 +215,7 @@ Standardmäßig werden die Werte auf der vertikalen Achse in einem allgemeinen F
 
     ![Berichts-Generator-Säulendiagramm-Format-Y-Achse](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Anzeigen aller Bezeichnungen auf der horizontalen Achse (x-Achse)
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Anzeigen aller Bezeichnungen auf der horizontalen Achse (X-Achse)
 
 Sie sehen, dass nur einige der Bezeichnungen auf der X-Achse angezeigt werden. In diesem Abschnitt legen Sie eine Eigenschaft im Bereich „Eigenschaften“ fest, damit alle Bezeichnungen angezeigt werden.
 
@@ -225,7 +225,7 @@ Sie sehen, dass nur einige der Bezeichnungen auf der X-Achse angezeigt werden. I
 
 3. Legen Sie im Eigenschaftenbereich LabelInterval auf 1 fest.
 
-    ![Berichts-Generator-Säulendiagramm-festlegen-von-Bezeichnungsintervall](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![report-builder-column-chart-set-label-interval](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     Das Diagramm sieht genauso aus wie in der Entwurfsansicht. 
     
@@ -297,7 +297,7 @@ Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den 
   
 4.  Klicken Sie auf **Speichern**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 Sie haben das Lernprogramm "Hinzufügen eines Säulendiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme (Berichts-Generator und SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken (Berichts-Generator und SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

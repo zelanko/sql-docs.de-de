@@ -1,6 +1,6 @@
 ---
-title: Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +23,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a6e67287c7a2effdd62604fa492a532ed636bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1a21b567232bf24b561e014de231268632cc4b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263505"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253945"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,15 +50,15 @@ ms.locfileid: "68263505"
     -   Der Name einer im System gespeicherten Prozedurtabelle oder einer Sicht, z. B. "sys.data_spaces" oder "sp_tableoption".  
   
 ## <a name="working-with-the-database-engine-query-editor"></a>Arbeiten mit dem Datenbank-Engine-Abfrage-Editor  
- Der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor ist einer von vier in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] implementierten Editoren. Eine Beschreibung der im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor implementierten Funktionalität und der Hauptaufgaben, die Sie mit dem Editor ausführen können, finden Sie unter [Abfrage-Editor des Datenbankmoduls &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
+ Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor ist einer von vier in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]implementierten Editoren. Eine Beschreibung der im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor implementierten Funktionalität und der Hauptaufgaben, die Sie mit dem Editor ausführen können, finden Sie unter [Abfrage-Editor des Datenbankmoduls &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
   
 ## <a name="sql-editor-toolbar"></a>SQL-Editor-Symbolleiste  
  Wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet ist, wird die SQL-Editor-Symbolleiste mit den folgenden Schaltflächen angezeigt:  
   
- **Verbinden**  
+ **Herstellen einer Verbindung**  
  Öffnet das Dialogfeld **Verbindung mit Server herstellen** . Mithilfe dieses Dialogfelds können Sie eine Verbindung mit einem Server herstellen.  
   
- **Trennen**  
+ **Disconnect** (Trennen)  
  Trennt den aktuellen Abfrage-Editor vom Server.  
   
  **Verbindung ändern**  
@@ -70,7 +70,7 @@ ms.locfileid: "68263505"
  **Verfügbare Datenbanken**  
  Wechselt die Verbindung zu einer anderen Datenbank auf demselben Server.  
   
- **Execute**  
+ **Ausführen**  
  Führt den ausgewählten bzw. (wenn kein Code ausgewählt ist) den gesamten Code im Abfrage-Editor aus.  
   
  **Debuggen**  
@@ -126,7 +126,7 @@ ms.locfileid: "68263505"
 ## <a name="sql-editor-toolbar"></a>SQL-Editor-Symbolleiste  
  Wenn ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster geöffnet ist, können Sie die Symbolleiste Debuggen hinzufügen, indem Sie im Menü **Ansicht** zuerst **Symbolleisten**und dann **Debuggen**auswählen. Wenn Sie die Symbolleiste Debuggen hinzufügen, ohne dass ein Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors geöffnet ist, steht keine der Schaltflächen zur Verfügung.  
   
- **Continue**  
+ **Fortsetzen**  
  Führt den Code im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster bis zu einem Breakpoint aus.  
   
  **Alle unterbrechen**  
@@ -141,7 +141,7 @@ ms.locfileid: "68263505"
  **Einzelschritt**  
  Die nächste Anweisung wird ausgeführt. Wenn die nächste Anweisung eine gespeicherte Transact-SQL-Prozedur, eine Funktion oder einen Trigger aufruft, zeigt der Debugger ein neues **Abfrage-Editor** -Fenster an, das den Code des Moduls enthält. Das Fenster befindet sich im Debuggingmodus, und die Ausführung hält bei der ersten Anweisung im Modul an. Sie können sich dann durch das Modul bewegen, indem Sie z. B. Breakpoints festlegen oder den Code schrittweise durchlaufen.  
   
- **Prozedurschritt**  
+ **Überspringen**  
  Die nächste Anweisung wird ausgeführt. Wenn die Anweisung eine gespeicherte Transact-SQL-Prozedur, eine Funktion oder einen Trigger aufruft, wird das Modul bis zum Ende ausgeführt, und die Ergebnisse werden an den aufrufenden Code zurückgegeben. Wenn Sie sicher sind, dass im Modul keine Fehler vorliegen, können Sie es überspringen. Die Ausführung hält bei der Anweisung an, die dem Aufruf des Moduls folgt.  
   
  **Rücksprung**  

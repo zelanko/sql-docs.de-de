@@ -22,22 +22,22 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843803"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
- Um eine Datenbank für Stretch-Datenbank zu konfigurieren, führen Sie den Assistenten zum Aktivieren von Stretch für eine Datenbank aus.  Dieser Artikel beschreibt die Informationen und Entscheidungen, die Sie im Assistenten angeben bzw. treffen müssen.  
+ Führen Sie zum Konfigurieren einer Datenbank für Stretch Database den Assistenten zum Aktivieren einer Datenbank für Stretch aus.  Dieser Artikel beschreibt die Informationen und Entscheidungen, die Sie im Assistenten angeben bzw. treffen müssen.  
   
- Weitere Informationen zu Stretch-Datenbank finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md). 
+ Weitere Informationen zu Stretch Database finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md). 
  
  > [!NOTE] 
- > Wenn Sie Stretch-Datenbank später deaktivieren, sollten Sie daran denken, dass durch die Deaktivierung von Stretch-Datenbank für eine Tabelle oder Datenbank das Remoteobjekt nicht gelöscht wird. Wenn Sie die Remotetabelle oder Remotedatenbank löschen möchten, müssen Sie sie mithilfe des Azure-Verwaltungsportals löschen. Die Remoteobjekte erzeugen weiterhin Azure-Kosten, bis Sie die Objekte manuell löschen. 
+ > Bedenken Sie später beim Deaktivieren von Stretch Database Folgendes: Wenn Sie Stretch Database für eine Tabelle oder eine Datenbank deaktivieren, wird das Remoteobjekt nicht gelöscht. Wenn Sie die Remotetabelle oder Remotedatenbank löschen möchten, müssen Sie sie mithilfe des Azure-Verwaltungsportals löschen. Die Remoteobjekte erzeugen weiterhin Azure-Kosten, bis Sie die Objekte manuell löschen. 
   
 ## <a name="launch-the-wizard"></a>Starten des Assistenten  
   
@@ -56,30 +56,30 @@ ms.locfileid: "73843803"
  ![Seite „Einführung“ des Stretch Database-Assistenten](../../sql-server/stretch-database/media/stretch-wizard-1.png "Seite „Einführung“ des Stretch Database-Assistenten")  
   
 ##  <a name="Tables"></a> Tabellen auswählen  
- Wählen Sie die Tabellen aus, die Sie für Stretch aktivieren möchten.  
+ Wählen Sie die Tabellen, die Sie für Stretch aktivieren möchten.  
  
-Oben in der sortierten Liste werden Tabellen mit einer Vielzahl von Zeilen angezeigt. Bevor der Assistent die Tabellenliste anzeigt, analysiert er die Tabellen, um Datentypen zu ermitteln, die derzeit von der Stretch-Datenbank nicht unterstützt werden. 
+Oben in der sortierten Liste werden Tabellen mit einer Vielzahl von Zeilen angezeigt. Bevor der Assistent die Liste mit den Tabellen anzeigt, werden diese in Bezug auf Datentypen analysiert, die derzeit von Stretch Database nicht unterstützt werden. 
   
  ![Seite „Tabellen auswählen“ des Stretch Database-Assistenten](../../sql-server/stretch-database/media/stretch-wizard-2.png "Seite „Tabellen auswählen“ des Stretch Database-Assistenten")  
   
-|Spalte|und Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |(kein Titel)|Aktivieren Sie das Kontrollkästchen in dieser Spalte, um die ausgewählte Tabelle für Stretch zu aktivieren.|  
 |**Name**|Gibt den Namen der Tabelle in der Datenbank an.|  
-|(kein Titel)|Ein Symbol in dieser Spalte kann auf eine Warnung hinweisen, die Sie nicht daran hindert, die ausgewählte Tabelle für Stretch zu aktivieren. Es kann auch auf ein blockierendes Problem hinweisen, die verhindert, dass Sie die ausgewählte Tabelle für Stretch aktivieren können – z.B. weil die Tabelle einen nicht unterstützten Datentyp verwendet. Zeigen Sie auf das Symbol, um weitere Informationen in einer QuickInfo anzuzeigen. Weitere Informationen finden Sie unter [Einschränkungen für Stretch-Datenbank](../../sql-server/stretch-database/limitations-for-stretch-database.md).|  
-|**Gestreckt**|Gibt an, ob die Tabelle bereits für Stretch aktiviert ist.|  
-|**Migrieren**|Sie können eine vollständige Tabelle migrieren (**Gesamte Tabelle**) oder einen Filter für eine vorhandene Spalte in der Tabelle angeben. Wenn Sie eine andere Filterfunktion verwenden möchten, um zu migrierende Zeilen auszuwählen, führen Sie nach dem Schließen des Assistenten die Anweisung ALTER TABLE aus, um die Filterfunktion anzugeben. Weitere Informationen zur Filterfunktion finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Informationen zum Anwenden der Funktion finden Sie unter [Aktivieren von Stretch-Datenbank für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) oder [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).|  
-|**Zeilen**|Gibt die Zeilenanzahl in der Tabelle an.|  
+|(kein Titel)|Ein Symbol in dieser Spalte kann auf eine Warnung hinweisen, die Sie nicht daran hindert, die ausgewählte Tabelle für Stretch zu aktivieren. Es kann auch auf ein blockierendes Problem hinweisen, die verhindert, dass Sie die ausgewählte Tabelle für Stretch aktivieren können – z.B. weil die Tabelle einen nicht unterstützten Datentyp verwendet. Zeigen Sie auf das Symbol, um weitere Informationen in einer QuickInfo anzuzeigen. Weitere Informationen finden Sie unter [Einschränkungen für Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).|  
+|**Durchgeführtes Stretching**|Gibt an, ob die Tabelle bereits für Stretch aktiviert ist.|  
+|**Migrieren**|Sie können eine vollständige Tabelle migrieren (**Gesamte Tabelle**) oder einen Filter für eine vorhandene Spalte in der Tabelle angeben. Wenn Sie eine andere Filterfunktion verwenden möchten, um zu migrierende Zeilen auszuwählen, führen Sie nach dem Schließen des Assistenten die Anweisung ALTER TABLE aus, um die Filterfunktion anzugeben. Weitere Informationen zur Filterfunktion finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Informationen zum Anwenden der Funktion finden Sie unter [Aktivieren von Stretch Database für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) oder [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).|  
+|**Zeilen**|Gibt die Anzahl der Zeilen in der Tabelle an.|  
 |**Größe (KB)**|Gibt die Größe der Tabelle in KB an.|  
   
 ## <a name="optionally-provide-a-row-filter"></a>Optionales Angeben eines Zeilenfilters  
  Wenn Sie zum Auswählen zu migrierender Zeilen eine Filterfunktion verwenden möchten, führen Sie auf der Seite **Tabellen auswählen** die folgenden Schritte aus.  
   
-1.  Klicken Sie in der Liste **Wählen Sie die Tabellen aus, für die Sie ein Stretching durchführen möchten.** in der Zeile für die Tabelle auf **Gesamte Tabelle** . Das Dialogfeld **Wählen Sie die Zeilen für das Stretching aus.** wird geöffnet.  
+1.  Klicken Sie in der Liste **Wählen Sie die Tabellen aus, für die Sie Stretching durchführen möchten.** , in der Spalte für die Tabelle auf **Ganze Tabelle**. Das Dialogfeld **Wählen Sie die Zeilen aus, für die Stretching durchgeführt werden soll.** wird geöffnet.  
   
      ![Definieren eines datumsbasierten Filterprädikats](../../sql-server/stretch-database/media/stretch-wizard-2a.png "Definieren eines datumsbasierten Filterprädikats")  
   
-2.  Wählen Sie im Dialogfeld **Wählen Sie die Zeilen für das Stretching aus.** die Option **Zeilen auswählen**.  
+2.  Klicken Sie im Dialogfeld **Wählen Sie die Zeilen aus, für die Stretching durchgeführt werden soll.** auf **Zeilen auswählen**.  
   
 3.  Geben Sie im Feld **Namensfeld**einen Namen für die Filterfunktion an.  
   
@@ -98,7 +98,7 @@ Die Filterfunktion wird in SQL Server erst erstellt, wenn Sie den Assistenten be
 
 Wenn Sie zum Auswählen zu migrierender Zeilen eine andere Art von Filterfunktion verwenden möchten, führen Sie einen der folgenden Schritte aus.  
   
--   Beenden Sie den Assistenten, und führen Sie die ALTER TABLE-Anweisung aus, um Stretch für die Tabelle zu aktivieren und eine Filterfunktion anzugeben. Weitere Informationen finden Sie unter [Aktivieren von Stretch-Datenbank für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
+-   Beenden Sie den Assistenten, und führen Sie die ALTER TABLE-Anweisung aus, um Stretch für die Tabelle zu aktivieren und eine Filterfunktion anzugeben. Weitere Informationen finden Sie unter [Aktivieren von Stretch Database für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
   
 -   Führen Sie die ALTER TABLE-Anweisung aus, um eine Filterfunktion anzugeben, nachdem Sie den Assistenten beendet haben. Die erforderlichen Schritte finden Sie unter [Hinzufügen einer Filterfunktion nach Ausführen des Assistenten](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).  
   
@@ -108,12 +108,12 @@ Wenn Sie zum Auswählen zu migrierender Zeilen eine andere Art von Filterfunktio
   
      ![Anmelden bei Azure – Stretch Database-Assistent](../../sql-server/stretch-database/media/stretch-wizard-3.png "Anmelden bei Azure – Stretch Database-Assistent")  
   
-2.  Wählen Sie das für Stretch Database zu verwendende vorhandene Azure-Abonnement aus. 
+2.  Wählen Sie das vorhandene Azure-Abonnement aus, das für Stretch Database verwendet werden soll. 
 
 > [!NOTE] 
 > Zum Aktivieren von Stretch für eine Datenbank benötigen Sie Administratorrechte für das verwendete Abonnement. Der Stretch-Datenbank-Assistent zeigt nur Abonnements an, für die der Benutzer über Administratorrechte verfügt.
   
-3.  Wählen Sie die für Stretch-Datenbank zu verwendende Azure-Region aus.
+3.  Wählen Sie die für Stretch Database zu verwendende Azure-Region aus.
     -   Wenn Sie einen neuen Server erstellen, wird der Server in dieser Region erstellt.  
     -   Wenn in der ausgewählten Region Server vorhanden sind, führt der Assistent diese auf, nachdem Sie **Vorhandener Server**ausgewählt haben.
   
@@ -144,7 +144,7 @@ Wenn Sie zum Auswählen zu migrierender Zeilen eine andere Art von Filterfunktio
          ![Auswählen eines vorhandenen Azure-Servers – Stretch Database-Assistent](../../sql-server/stretch-database/media/stretch-wizard-5.png "Auswählen eines vorhandenen Azure-Servers – Stretch Database-Assistent")  
   
 ##  <a name="Credentials"></a> Sichern der Anmeldeinformationen  
- Sie benötigen einen Datenbank-Hauptschlüssel zum Sichern der Anmeldeinformationen, die Stretch-Datenbank für die Verbindung mit der Remotedatenbank verwendet.  
+ Sie brauchen einen Datenbankhauptschlüssel, um die Anmeldeinformationen zu sichern, die Stretch Database für die Verbindung mit der Remotedatenbank verwendet.  
   
  Wenn der Datenbank-Hauptschlüssel bereits vorhanden ist, geben Sie das zugehörige Kennwort ein.  
   
@@ -176,26 +176,26 @@ Wenn Sie zum Auswählen zu migrierender Zeilen eine andere Art von Filterfunktio
  ![Seite „Ergebnisse“ des Stretch Database-Assistenten](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Seite „Ergebnisse“ des Stretch Database-Assistenten")  
   
 ##  <a name="KnownIssues"></a> Problembehandlung für den Assistenten  
- **Fehler beim Stretch-Datenbank-Assistenten.**  
- Wenn Stretch-Datenbank noch nicht auf Serverebene aktiviert ist und Sie den Assistenten ohne die Systemadministratorberechtigungen zum Aktivieren des Assistenten ausführen, tritt ein Fehler auf. Bitten Sie den Systemadministrator, Stretch-Datenbank auf der lokalen Serverinstanz zu aktivieren, und führen Sie den Assistenten dann erneut aus. Weitere Informationen finden Sie unter [Voraussetzung: Die Berechtigung, Stretch Database auf einem Server zu aktivieren](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
+ **Der Stretch Database-Assistent ist fehlgeschlagen.**  
+ Wenn Stretch Database noch nicht auf Serverebene aktiviert ist und Sie den Assistenten ohne Systemadministratorberechtigungen zum Aktivieren ausführen, schlägt der Assistent fehl. Bitten Sie den Systemadministrator, Stretch-Datenbank auf der lokalen Serverinstanz zu aktivieren, und führen Sie den Assistenten dann erneut aus. Weitere Informationen finden Sie unter [Voraussetzung: Die Berechtigung, Stretch-Datenbank auf einem Server zu aktivieren](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Aktivieren Sie zusätzliche Tabellen für Stretch-Datenbank. Überwachen Sie die Datenmigration, und verwalten Sie für Stretch aktivierte Datenbanken und Tabellen.  
+ Aktivieren von zusätzlichen Tabellen für Stretch Database Überwachen Sie die Datenmigration, und verwalten Sie für Stretch aktivierte Datenbanken und Tabellen.  
   
--   Aktivieren zusätzlicher Tabellen mithilfe des Artikels[Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) .  
+-   [Aktivieren von Stretch Database für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) zum Aktivieren zusätzlicher Tabellen  
   
--   [Überwachung und Problembehandlung bei der Datenmigration &#40;Stretch-Datenbank&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) zum Anzeigen des Status der Datenmigration.  
+-   [Überwachung und Problembehandlung bei der Datenmigration &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) zum Anzeigen des Status der Datenmigration.  
   
--   [Anhalten und Fortsetzen der Datenmigration &#40;Stretch-Datenbank&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
+-   [Anhalten und Fortsetzen der Datenmigration &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [Verwalten und Problembehandlung von Stretch-Datenbank](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [Verwalten von Stretch Database und Behandeln von Problemen](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
--   [Sichern von Stretch-aktivierten Datenbanken](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
+-   [Sichern von Stretch-fähigen Datenbanken](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   
--   [Restore Stretch-enabled databases (Wiederherstellen von für die Streckung aktivierten Datenbanken)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
+-   [Wiederherstellen von Stretch-fähigen Datenbanken](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Aktivieren von Stretch-Datenbank für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Aktivieren von Stretch Database für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Aktivieren von Stretch Database für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

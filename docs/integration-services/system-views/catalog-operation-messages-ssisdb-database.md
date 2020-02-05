@@ -14,10 +14,10 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bfad11f3bcba41160fcb46ede37f6e7ea3c5ece4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295163"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (SSISDB-Datenbank)
@@ -29,7 +29,7 @@ ms.locfileid: "71295163"
 
   Zeigt Meldungen an, die während der Vorgänge im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog protokolliert werden.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|Der eindeutige Bezeichner (ID) der Meldung.|  
 |operation_id|**bigint**|Die eindeutige ID des Vorgangs.|  
@@ -39,12 +39,12 @@ ms.locfileid: "71295163"
 |message|**nvarchar(max)**|Der Text der Meldung.|  
 |extended_info_id|**bigint**|Die ID weiterer Informationen, die sich auf die Vorgangsmeldung beziehen. Diese ist in der Sicht [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) enthalten.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jede Meldung angezeigt, die während eines Vorgangs im Katalog protokolliert wird. Die Meldung kann durch den Server, den Paketausführungsprozess oder die Ausführungs-Engine generiert werden.  
   
  In dieser Sicht werden die folgenden Meldungstypen angezeigt:  
   
-|Wert von **message_type**|und Beschreibung|  
+|Wert von **message_type**|BESCHREIBUNG|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|Fehler|  
@@ -66,7 +66,7 @@ ms.locfileid: "71295163"
   
  In dieser Sicht werden die folgenden Meldungsquelltypen angezeigt:  
   
-|**message_source_type**|und Beschreibung|  
+|**message_source_type**|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
 |10|Eintrag-APIs, z. B. T-SQL und gespeicherte CLR-Prozeduren|  
 |20|Externer Prozess, der verwendet wurde, um das Paket (ISServerExec.exe) auszuführen|  

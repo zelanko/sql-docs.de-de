@@ -18,10 +18,10 @@ ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f81b5ba7ba6de057dd82090775013db55e4275b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066494"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (geography-Datentyp)
@@ -85,7 +85,7 @@ SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649),(-
 SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
 ```  
   
-### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Festlegen des relativen Werts für eine aufrufende CurvePolygon-Instanz auf true  
+### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D: Festlegen des relativen Werts für eine aufrufende CurvePolygon-Instanz auf true  
 Im folgenden Beispiel wird eine Instanz von `CurvePolygon` verwendet, um `CurveToLineWithTolerance()` mit *relative* und dem Wert true aufzurufen:  
   
 ```

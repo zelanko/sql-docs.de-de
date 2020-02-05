@@ -19,10 +19,10 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d81c961600eca7dddd1ecd5995dbb488094aafb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294927"
 ---
 # <a name="creating-a-package-programmatically"></a>Programmgesteuertes Erstellen eines Pakets
@@ -75,7 +75,7 @@ End Module
   
  **vbc /target:library /out: \<Ausgabedateiname>.dll \<Dateiname>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- Sie können auch ein Paket erstellen, indem Sie ein vorhandenes Paket, das auf der Festplatte gespeichert wurde, in das Dateisystem oder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] laden. Der Unterschied besteht darin, dass das <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Objekt zuerst erstellt wird und dann das Paketobjekt mit einer der überladenen Methoden der Anwendung gefüllt wird: **LoadPackage** bei Flatfiles, **LoadFromSQLServer** bei Paketen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind, oder <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> bei Paketen, die im Dateisystem gespeichert sind. Im folgenden Beispiel wird ein vorhandenes Paket von der Festplatte geladen. Anschließend werden die verschiedenen Eigenschaften des Pakets betrachtet.  
+ Sie können auch ein Paket erstellen, indem Sie ein vorhandenes Paket, das auf der Festplatte gespeichert wurde, in das Dateisystem oder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] laden. Der Unterschied besteht darin, dass das <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Objekt zuerst erstellt wird und dann das Paketobjekt mit einer der überlasteten Methoden der Anwendung gefüllt wird: **LoadPackage** für Flatfiles, **LoadFromSQLServer** für Pakete, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind, oder <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> für Pakete, die im Dateisystem gespeichert sind. Im folgenden Beispiel wird ein vorhandenes Paket von der Festplatte geladen. Anschließend werden die verschiedenen Eigenschaften des Pakets betrachtet.  
   
 ```csharp  
 using System;  

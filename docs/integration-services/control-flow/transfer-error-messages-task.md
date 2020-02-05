@@ -17,10 +17,10 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 363a2761472f544e2c995fba25f4650ee6242b36
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293884"
 ---
 # <a name="transfer-error-messages-task"></a>Fehlermeldungen übertragen (Task)
@@ -46,13 +46,13 @@ ms.locfileid: "71293884"
   
  Der Task "Fehlermeldungen übertragen" unterstützt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quelle und ein Ziel. Es gibt keinerlei Beschränkungen, welche Version Sie als Quelle oder Ziel verwenden.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Der Task löst ein Informationsereignis aus, das die Anzahl der übertragenen Fehlermeldungen meldet.  
   
  Der Task "Fehlermeldungen übertragen" meldet keinen schrittweisen Fortschritt der Fehlermeldungsübertragung; er meldet nur 0 % und 100 % der Ausführung.  
   
 ## <a name="execution-value"></a>Ausführungswert  
- Der in der **ExecutionValue** -Eigenschaft des Tasks definierte Ausführungswert gibt die Anzahl der zu übertragenden Fehlermeldungen zurück. Indem der **ExecValueVariable**-Eigenschaft des Tasks „Fehlermeldung übertragen“ eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Fehlermeldungsübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Der in der **ExecutionValue** -Eigenschaft des Tasks definierte Ausführungswert gibt die Anzahl der zu übertragenden Fehlermeldungen zurück. Indem der **ExecValueVariable** -Eigenschaft des Tasks „Fehlermeldung übertragen“ eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Fehlermeldungsübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Protokolleinträge  
  Der Task "Fehlermeldungen übertragen" enthält die folgenden benutzerdefinierten Protokolleinträge:  
@@ -85,7 +85,7 @@ ms.locfileid: "71293884"
 ## <a name="transfer-error-messages-task-editor-general-page"></a>Editor für den Task Fehlermeldungen übertragen (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task Fehlermeldungen übertragen** können Sie den Task Fehlermeldungen übertragen benennen und beschreiben. Der Task „Fehlermeldungen übertragen“ überträgt eine oder mehrere benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlermeldungen zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie für den Task Fehlermeldungen übertragen einen eindeutigen Namen ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "71293884"
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>Editor für den Task Fehlermeldungen übertragen (Seite Meldungen)
   Verwenden Sie die Seite **Meldungen** im Dialogfeld **Editor für den Task „Fehlermeldungen übertragen“** , um die Eigenschaften für das Kopieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlermeldungen von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere anzugeben. 
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **SourceConnection**  
  Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>** , um eine neue Verbindung mit dem Quellserver herzustellen.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "71293884"
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Wahr**|Alle benutzerdefinierten Meldungen kopieren.|  
+|**True**|Alle benutzerdefinierten Meldungen kopieren.|  
 |**False**|Nur die angegebenen benutzerdefinierten Meldungen kopieren.|  
   
  **ErrorMessagesList**  

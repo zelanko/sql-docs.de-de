@@ -24,10 +24,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252858"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine
@@ -89,7 +89,7 @@ Damit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein TLS-Zerti
   > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
 ## <a name="to-provision-install-a-certificate-on-a-single-server"></a>So stellen Sie ein Zertifikat auf einem einzelnen Server bereit bzw. installieren Sie ein Zertifikat  
-Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ist die Zertifikatverwaltung im SQL Server-Konfigurations-Manager integriert. Der SQL Server-Konfigurations-Manager für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] kann mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Informationen zum Hinzufügen eines Zertifikats auf einer einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz finden Sie unter [Zertifikatverwaltung (SQL Server-Konfigurations-Manager)](../../database-engine/configure-windows/manage-certificates.md).
+Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ist die Zertifikatverwaltung im SQL Server-Konfigurations-Manager integriert. Der SQL Server-Konfigurations-Manager für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] kann mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Informationen zum Hinzufügen eines Zertifikats auf einer einzelnen [-Instanz finden Sie unter ](../../database-engine/configure-windows/manage-certificates.md)Zertifikatverwaltung (SQL Server-Konfigurations-Manager)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] verwenden und der SQL Server-Konfigurations-Manager für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] nicht verfügbar ist, führen Sie die folgenden Schritte aus:
 
@@ -131,7 +131,7 @@ Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL
   
 1. Erweitern Sie im **SQL Server-Konfigurations-Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<Serverinstanz>_ , und klicken Sie dann auf **Eigenschaften**.  
   
-2. Wählen Sie im Dialogfeld **Eigenschaften** von **Protokolle für** _\<Instanzname>_ auf der Registerkarte **Zertifikat** das gewünschte Zertifikat aus der Dropdownliste für das Feld **Zertifikat** aus, und klicken Sie dann auf **OK**.  
+2. Wählen Sie im Dialogfeld **Eigenschaften** von _Protokolle für\<_ **Instanzname>** auf der Registerkarte **Zertifikat** das gewünschte Zertifikat aus der Dropdownliste für das Feld **Zertifikat** aus, und klicken Sie dann auf **OK**.  
   
 3. Aktivieren Sie auf der Registerkarte **Flags** im Feld **ForceEncryption** die Option **Ja**, und klicken Sie dann auf **OK** , um das Dialogfeld zu schließen.  
   

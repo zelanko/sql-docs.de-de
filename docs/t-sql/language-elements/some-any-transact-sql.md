@@ -22,10 +22,10 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a5b722f37fb6a5e30a50307a5d7828868ecd1fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072265"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072265"
 
   Vergleicht einen Skalarwert mit Werten, die sich in einer einzelnen Spalte befinden. SOME und ANY sind identisch.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
   
 ## <a name="arguments"></a>Argumente  
  *scalar_expression*  
- Ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md)  
+ Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  Ein gültiger Vergleichsoperator.  
@@ -57,7 +57,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  Ist eine Unterabfrage mit einem Resultset, das aus einer Spalte besteht. Der Datentyp der zurückgegebenen Spalte muss mit dem Datentyp von *scalar_expression* übereinstimmen.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- **Boolean**  
+ **Boolescher Wert**  
   
 ## <a name="result-value"></a>Ergebniswert  
  SOME oder ANY geben **TRUE** zurück, wenn der angegebene Vergleich für ein Paar (_scalar_expression_ **,** _x_) TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird **FALSE** zurückgegeben.  

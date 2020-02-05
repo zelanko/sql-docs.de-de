@@ -1,6 +1,6 @@
 ---
-title: In Dateien ersetzen | Microsoft-Dokumentation
-ms.custom: ''
+title: In Dateien ersetzen
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b53a95f29495388f31ca833b992f8afe3fd9450c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 787ab0e852055b7dcc53a16f14580f7e184500bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265985"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253707"
 ---
 # <a name="replace-in-files"></a>In Dateien ersetzen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68265985"
 ## <a name="find-what"></a>Suchen nach  
  Die folgenden Steuerelemente auf der Registerkarte **In Dateien ersetzen** ermöglichen es Ihnen, die Zeichenfolge oder den Ausdruck anzugeben, für die/den nach Übereinstimmungen gesucht werden soll.  
   
- **Find what**  
+ **Suchen nach**  
  Geben Sie den Suchtext ein. Im Dialogfeld wird ein wahrscheinlicher Suchtext eingetragen. Dabei wird entweder auf den Text zurückgegriffen, der vor dem Öffnen des Dialogfelds mit dem Cursor markiert wurde, oder auf in der Nähe befindlichen Text oder auf zuvor verwendeten Suchtext. Sie können aus der Dropdownliste eine der letzten 20 Suchzeichenfolgen zur Wiederverwendung auswählen.  
   
  **[Zeichenfolge mit Platzhaltern]**  
@@ -49,7 +49,7 @@ ms.locfileid: "68265985"
  **Ausdrucks-Generator**  
  Die dreieckige Schaltfläche neben dem Feld **Ersetzen durch** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen**aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Ersetzen durch** angegeben wurde.  
   
- **Ersetzen**  
+ **Replace**  
  Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der in **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der in **Suchen in**angegeben ist.  
   
  **Alle ersetzen**  
@@ -99,7 +99,7 @@ ms.locfileid: "68265985"
  **Nur ganzes Wort suchen**  
  Wenn dieses Kontrollkästchen aktiviert ist, werden im Suchergebnisfenster nur Instanzen der unter **Suchen nach** angegebenen Zeichenfolge angezeigt, bei denen jeweils das ganze Wort übereinstimmt. Eine Suche nach **MyObject** gibt beispielsweise "MyObject", nicht aber "CMyObject" oder "MyObjectC" zurück.  
   
- **Suchoptionen**  
+ **Verwenden Sie**  
  Gibt an, wie in den Textfeldern **Suchen nach** oder **Ersetzen durch** eingegebene Sonderzeichen interpretiert werden sollen. Zur Auswahl stehen **Platzhalter** und **Reguläre Ausdrücke**.  
   
  **Regular Expressions**  
