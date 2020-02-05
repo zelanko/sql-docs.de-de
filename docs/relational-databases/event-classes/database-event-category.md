@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf3fd2a6cd222320e55b7336272bf9f662b81694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009568"
 ---
 # <a name="database-event-category"></a>Datenbank (Ereigniskategorie)
@@ -27,7 +27,7 @@ ms.locfileid: "68009568"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Data File Auto Grow-Ereignisklasse](../../relational-databases/event-classes/data-file-auto-grow-event-class.md)|Zeigt an, dass die Datendatei automatisch vergrößert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Datendatei explizit mit ALTER DATABASE vergrößert wird.|  
 |[Data File Auto Shrink-Ereignisklasse](../../relational-databases/event-classes/data-file-auto-shrink-event-class.md)|Zeigt an, dass die Datendatei verkleinert wurde.|  

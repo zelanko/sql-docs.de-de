@@ -17,10 +17,10 @@ ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e49ef1ad379f675ca457f8cd9c82a5e4ecc3fd04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107133"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Speicherplatzanforderungen für Index-DDL-Vorgänge
@@ -80,7 +80,7 @@ ms.locfileid: "68107133"
  Onlineindexvorgänge verwenden die Zeilenversionsverwaltung, um den Indexvorgang von den Auswirkungen der Änderungen zu isolieren, die von anderen Transaktionen vorgenommen wurden. Auf diese Weise ist es nicht erforderlich, freigegebene Sperren für Zeilen anzufordern, die gelesen wurden. Gleichzeitige Update- und Löschvorgänge durch Benutzer während Onlineindexvorgänge erfordern Speicherplatz für Versionsdatensätze in **tempdb**. Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
+ [Beispiel für den zum Speichern eines Indexes belegten Speicherplatz](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Transaktionsprotokollspeicherplatz für Indexvorgänge](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

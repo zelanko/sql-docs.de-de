@@ -16,10 +16,10 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298215"
 ---
 # <a name="odbc-destination"></a>ODBC-Ziel
@@ -38,14 +38,14 @@ ms.locfileid: "71298215"
   
 -   **Batch**: In diesem Modus versucht das ODBC-Ziel, basierend auf den erkannten Funktionen des ODBC-Anbieters die effizienteste Einfügemethode zu verwenden. Für die meisten modernen ODBC-Anbieter umfasst dies das Vorbereiten einer INSERT-Anweisung mit Parametern und das anschließende Verwenden einer Arrayparameterbindung pro Zeile (wobei die Arraygröße über die **BatchSize** -Eigenschaft gesteuert wird). Wenn Sie **Batch** auswählen und der Anbieter diese Methode nicht unterstützt, wechselt das ODBC-Ziel automatisch zum Modus **Zeile für Zeile** .  
   
--   **Zeile für Zeile**: In diesem Modus bereitet das ODBC-Ziel eine INSERT-Anweisung mit Parametern vor und verwendet **SQL Execute**, um Zeilen einzeln einzufügen.  
+-   **Zeile für Zeile**: In diesem Modus bereitet das ODBC-Ziel eine INSERT-Anweisung mit Parametern vor und verwendet **SQL Execute** , um Zeilen einzeln einzufügen.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Das ODBC-Ziel verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
--   **Fehlercode**: Der Wert, der dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Quelldatenbank. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
+-   **Fehlercode**: Ruft die Zahl ab, die dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Quelldatenbank. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
   
--   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (bei Konvertierungsfehlern).  
+-   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (für Konvertierungsfehler).  
   
 -   Die Spalten mit den Standardausgabedaten.  
   
@@ -99,23 +99,23 @@ ms.locfileid: "71298215"
   
 -   Klicken Sie im **Ziel-Editor für ODBC**auf **Verbindungs-Manager**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
 #### <a name="connection-manager"></a>Ziel-Editor für Dimensionsverarbeitung  
  Wählen Sie in der Liste einen vorhandenen ODBC-Verbindungs-Manager aus, oder klicken Sie auf Neu, um eine neue Verbindung zu erstellen. Sie können eine Verbindung mit jeder von ODBC unterstützten Datenbank erstellen.  
   
-#### <a name="new"></a>eine neue  
+#### <a name="new"></a>Neu  
  Klicken Sie auf **Neu**. Das Dialogfeld **ODBC-Verbindungs-Manager konfigurieren** , in dem Sie einen neuen Verbindungs-Manager erstellen können, wird geöffnet.  
   
 #### <a name="data-access-mode"></a>Datenzugriffsmodus  
  Wählen Sie die Methode zum Laden von Daten in das Ziel aus. Die Optionen sind in der folgenden Tabelle aufgeführt:  
   
-|Option|und Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Tabellenname - Batch|Wählen Sie diese Option aus, um das ODBC-Ziel im Batchmodus zu konfigurieren. Bei Auswahl dieser Option sind die folgenden Optionen verfügbar:|  
 ||**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht aus.<br /><br /> Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (\*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.<br /><br /> **Batchgröße**: Geben Sie die Größe des Batches für das Massenladen ein. Dies ist die Anzahl von Zeilen, die als Batch geladen werden.|  
 |Tabellenname - Zeile für Zeile|Wählen Sie diese Option aus, um das ODBC-Ziel so zu konfigurieren, dass jede Zeile einzeln in die Zieltabelle eingefügt wird. Bei Auswahl dieser Option ist die folgende Option verfügbar:|  
-||**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine in der Datenbank verfügbare Tabelle oder Sicht aus.<br /><br /> Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.|  
+||**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht in der Datenbank aus.<br /><br /> Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.|  
   
 #### <a name="preview"></a>Vorschau  
  Klicken Sie auf **Vorschau** , um die ersten 200 Zeilen (max.) für die ausgewählte Tabelle anzuzeigen.  
@@ -123,7 +123,7 @@ ms.locfileid: "71298215"
 ## <a name="odbc-destination-editor-mappings-page"></a>Ziel-Editor für ODBC (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für ODBC** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
 #### <a name="available-input-columns"></a>Verfügbare Eingabespalten  
  Die Liste der verfügbaren Eingabespalten. Ordnen Sie die Eingabespalten per Drag & Drop den verfügbaren Zielspalten zu.  
@@ -150,12 +150,12 @@ ms.locfileid: "71298215"
   
 -   Klicken Sie im **Ziel-Editor für ODBC**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
 #### <a name="inputoutput"></a>Eingabe/Ausgabe  
  Zeigt den Namen der Datenquelle an.  
   
-#### <a name="column"></a>Spalte  
+#### <a name="column"></a>Column  
  Wird nicht verwendet.  
   
 #### <a name="error"></a>Fehler  
@@ -164,7 +164,7 @@ ms.locfileid: "71298215"
 #### <a name="truncation"></a>Abschneiden  
  Wählen Sie aus, wie das ODBC-Ziel Kürzungen in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
   
-#### <a name="description"></a>und Beschreibung  
+#### <a name="description"></a>BESCHREIBUNG  
  Zeigt eine Beschreibung des Fehlers an.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Diesen Wert für ausgewählte Zellen festlegen  

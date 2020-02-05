@@ -12,13 +12,13 @@ ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6eb560fb30d71ba16a153b3101c6f85a2194ca3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908448"
 ---
-# <a name="mssqlserver33085"></a>MSSQLSERVER_33085
+# <a name="mssqlserver_33085"></a>MSSQLSERVER_33085
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -35,7 +35,7 @@ ms.locfileid: "67908448"
 ## <a name="explanation"></a>Erklärung  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konnte den in der Fehlermeldung aufgelisteten Kryptografieanbieter nicht verwenden. Der Kryptografieanbieter hat eine erforderliche Methode nicht unterstützt. Der Status des Fehlers gibt an, welche Methode nicht gefunden wurde.  
   
-|Status|und Beschreibung|  
+|State|BESCHREIBUNG|  
 |---------|---------------|  
 |1|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  

@@ -13,10 +13,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809841"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
@@ -26,7 +26,7 @@ Zeigt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ausführungs
   
 Sobald Sie verstanden haben, wodurch Leistungsprobleme bei Abfragen für SMP-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfragen auf den Computeknoten entstehen, können Sie diese Probleme auf verschiedene Weisen verbessern. Beispielsweise können Sie die Abfrageleistung auf Computeknoten verbessern, indem Sie Statistiken mit mehreren Spalten oder nicht gruppierte Indizes erstellen bzw. Abfragehinweise verwenden.
   
-![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
 Syntax für Azure SQL Data Warehouse:
@@ -95,6 +95,6 @@ Verwenden Sie anhand des Ergebnisses der vorherigen Abfrage sql_spid und pdw_nod
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  
 ```  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)

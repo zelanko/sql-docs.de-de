@@ -18,10 +18,10 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47e3c79bacbd75ca6761bdb250b05084caf2832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991728"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Typen von Clientverbindungen zu Replikaten in einer Always On-Verfügbarkeitsgruppe
@@ -62,20 +62,20 @@ ms.locfileid: "67991728"
   
  Weitere Informationen zu dieser Verbindungseigenschaft finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)besitzen.  
   
 ##  <a name="HowConnectionAccessAffectsConnectivity"></a> Auswirkungen der Verbindungszugriffskonfiguration auf die Clientkonnektivität  
  Die Verbindungszugriffseinstellungen eines Replikats bestimmen, ob ein Verbindungsversuch fehlschlägt oder erfolgreich ist. In der folgenden Tabelle wird für jede Verbindungszugriffseinstellung zusammengefasst, ob ein bestimmter Verbindungsversuch erfolgreich ist oder fehlschlägt.  
   
 |Replikatrolle|Auf Replikat unterstützter Verbindungszugriff|Verbindungsabsicht|Ergebnis des Verbindungsversuchs|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secondary|All|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Success|  
-|Secondary|Keine (dies ist der sekundäre Standardverhalten)|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Failure|  
-|Secondary|Nur beabsichtigte Lesevorgänge|Beabsichtigte Lesevorgänge|Success|  
-|Secondary|Nur beabsichtigte Lesevorgänge|Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Failure|  
-|Primär|Alle (dies ist das primäre Standardverhalten)|Schreibgeschützt, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Success|  
-|Primär|Lese-/Schreibzugriff|Nur beabsichtigte Lesevorgänge|Failure|  
-|Primär|Lese-/Schreibzugriff|Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Success|  
+|Secondary|All|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolg|  
+|Secondary|Keine (dies ist der sekundäre Standardverhalten)|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Fehler|  
+|Secondary|Nur beabsichtigte Lesevorgänge|Beabsichtigte Lesevorgänge|Erfolg|  
+|Secondary|Nur beabsichtigte Lesevorgänge|Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Fehler|  
+|Primär|Alle (dies ist das primäre Standardverhalten)|Schreibgeschützt, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolg|  
+|Primär|Lese-/Schreibzugriff|Nur beabsichtigte Lesevorgänge|Fehler|  
+|Primär|Lese-/Schreibzugriff|Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolg|  
   
  Informationen darüber, wie Sie die Verfügbarkeitsgruppe konfigurieren müssen, damit diese Clientverbindungen zu ihren Replikaten akzeptiert, finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
@@ -86,8 +86,8 @@ ms.locfileid: "67991728"
   
 |Replikat|Commit-Modus|Anfangsrolle|Verbindungszugriff für sekundäre Rolle|Verbindungszugriff für primäre Rolle|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replikat1|Synchron|Primär|None|Lese-/Schreibzugriff|  
-|Replikat2|Synchron|Secondary|None|Lese-/Schreibzugriff|  
+|Replikat1|Synchron|Primär|Keine|Lese-/Schreibzugriff|  
+|Replikat2|Synchron|Secondary|Keine|Lese-/Schreibzugriff|  
 |Replikat3|Asynchron|Secondary|Nur beabsichtigte Lesevorgänge|Lese-/Schreibzugriff|  
 |Replikat4|Asynchron|Secondary|Nur beabsichtigte Lesevorgänge|Lese-/Schreibzugriff|  
   
@@ -109,7 +109,7 @@ ms.locfileid: "67991728"
   
 -   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

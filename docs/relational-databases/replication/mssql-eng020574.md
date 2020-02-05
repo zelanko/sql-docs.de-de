@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1de402650df0f3e9181750fb17d74c4329e4ca93
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d59d9f277c027b0c10f578016348062de32aa47d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770397"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288044"
 ---
-# <a name="mssqleng020574"></a>MSSQL_ENG020574
+# <a name="mssql_eng020574"></a>MSSQL_ENG020574
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Meldungsdetails  
@@ -37,7 +37,7 @@ ms.locfileid: "68770397"
  Die Daten des Abonnenten wurden gegen die Daten des Verlegers abgeglichen, und es wurde keine Übereinstimmung der Daten festgestellt. Daher konnte die Überprüfung nicht erfolgreich abgeschlossen werden. Weitere Informationen zur Überprüfung finden Sie unter [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 ## <a name="user-action"></a>Benutzeraktion  
- Es wird empfohlen, folgendermaßen vorzugehen:  
+ Folgendes Vorgehen wird empfohlen:  
   
 -   Ermitteln Sie den Grund für den Fehler bei der Überprüfung.  
   

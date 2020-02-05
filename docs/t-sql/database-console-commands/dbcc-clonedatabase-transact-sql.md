@@ -38,10 +38,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262320"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68262320"
 
 Generiert einen reinen Schemaklon einer Datenbank, um Leistungsprobleme zu untersuchen, die mit dem Abfrageoptimierer zu tun haben.
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -153,7 +153,7 @@ Nur die folgenden Objekte können in die Zieldatenbank geklont werden. Verschlü
 - Volltext (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2)
 - FUNCTION
 - INDEX
-- Anmeldung
+- LOGIN
 - PARTITION FUNCTION
 - PARTITION SCHEME
 - PROCEDURE   
@@ -177,7 +177,7 @@ Nur die folgenden Objekte können in die Zieldatenbank geklont werden. Verschlü
 - TRIGGER
 - TYPE
 - UPGRADED DB
-- Benutzer
+- USER
 - VIEW
 - XML INDEX
 - XML SCHEMA COLLECTION  
@@ -235,7 +235,7 @@ DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS, NO
 GO 
 ```  
 
-### <a name="d-creating-a-clone-of-a-database-that-is-verified-for-production-use"></a>D. Erstellen eines Klons einer Datenbank, der zur Verwendung als Produktionsdatenbank überprüft wird
+### <a name="d-creating-a-clone-of-a-database-that-is-verified-for-production-use"></a>D: Erstellen eines Klons einer Datenbank, der zur Verwendung als Produktionsdatenbank überprüft wird
 Im folgenden Beispiel wird ein reiner Schemaklon der AdventureWorks-Datenbank ohne Statistiken und Abfragespeicherdaten erstellt, der zur Verwendung als Produktionsdatenbank überprüft wird ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und höhere Versionen).
 
 ```sql  

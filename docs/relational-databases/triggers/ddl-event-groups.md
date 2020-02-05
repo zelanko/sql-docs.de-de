@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 388a9d8e11cc738b13df752868568cd4cea556d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68074162"
 ---
 # <a name="ddl-event-groups"></a>DDL-Ereignisgruppen
@@ -28,10 +28,10 @@ ms.locfileid: "68074162"
 > [!NOTE]  
 >  Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger oder Ereignisbenachrichtigungen auslösen. Testen Sie die DDL-Trigger oder Ereignisbenachrichtigungen, um ihre Reaktion auf gespeicherte Systemprozeduren, die ausgeführt werden, zu bestimmen. Die CREATE TYPE-Anweisung und die gespeicherte Prozedur **sp_addtype** lösen z.B. beide einen DDL-Trigger oder eine Ereignisbenachrichtigung aus, die für ein CREATE_TYPE-Ereignis erstellt wird.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Die unter DDL_DATABASE_LEVEL_EVENTS aufgeführten Ereignisse werden auf der Server- (Instanz) oder Datenbankebene ausgeführt. Die unter DDL_SERVER_LEVEL_EVENTS aufgeführten Ereignisse werden nur auf der Serverebene ausgeführt.  
   
-|parent_type|Typ|NAME|  
+|parent_type|type|name|  
 |-|-|-|
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  

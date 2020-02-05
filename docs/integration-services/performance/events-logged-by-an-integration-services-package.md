@@ -14,10 +14,10 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4ed4722261ca83d95345c8d8fc5024f1076be839
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282506"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Durch ein Integration Services-Paket protokollierte Ereignisse
@@ -39,7 +39,7 @@ ms.locfileid: "71282506"
 > [!NOTE]  
 >  Das Paket protokolliert die Meldungen in der folgenden Tabelle, auch wenn Sie die Protokollfunktion für das Paket nicht aktiviert haben.  
   
-|Ereignis-ID|Symbolischer Name|Textmodus|Hinweise|  
+|Ereignis-ID|Symbolischer Name|Text|Notizen|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|Das Paket "" wurde gestartet.|Die Ausführung des Pakets wurde begonnen.|  
 |12289|DTS_MSG_PACKAGESUCCESS|Das Paket "" wurde erfolgreich beendet.|Das Paket wurde erfolgreich ausgeführt und wird zurzeit nicht mehr ausgeführt.|  
@@ -59,7 +59,7 @@ ms.locfileid: "71282506"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>Meldungen zu den Phasen der Paketausführung  
   
-|Ereignis-ID|Symbolischer Name|Textmodus|Hinweise|  
+|Ereignis-ID|Symbolischer Name|Text|Notizen|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|Ereignisname: %1%r Meldung: %9%r Operator: %2%r Quellenname: %3%r Quellen-ID: %4%r Ausführungs-ID: %5%r Startzeit: %6%r Beendigungszeit: %7%r Datencode: %8|Dieses generische Format wird von verschiedenen Meldungen verwendet, wenn Sie die Paketprotokollierung für das Anwendungsereignisprotokoll konfigurieren.|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|Ereignisname: %1%r Meldung: %9%r Operator: %2%r Quellenname: %3%r Quellen-ID: %4%r Ausführungs-ID: %5%r Startzeit: %6%r Beendigungszeit: %7%r Datencode: %8|Das Paket wurde gestartet.|  
@@ -72,7 +72,7 @@ ms.locfileid: "71282506"
 ### <a name="messages-about-events-that-occur"></a>Meldungen über Ereignisse, die auftreten  
  In der folgenden Tabelle werden nur einige der Meldungen aufgeführt, die aus Ereignissen resultieren. Eine umfangreichere Liste von Fehler-, Warnungs- und Informationsmeldungen, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet werden, finden Sie unter [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md).  
   
-|Ereignis-ID|Symbolischer Name|Textmodus|Hinweise|  
+|Ereignis-ID|Symbolischer Name|Text|Notizen|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|Ereignisname: %1%r Meldung: %9%r Operator: %2%r Quellenname: %3%r Quellen-ID: %4%r Ausführungs-ID: %5%r Startzeit: %6%r Beendigungszeit: %7%r Datencode: %8|Der Task ist fehlgeschlagen.|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|Ereignisname: %1%r Meldung: %9%r Operator: %2%r Quellenname: %3%r Quellen-ID: %4%r Ausführungs-ID: %5%r Startzeit: %6%r Beendigungszeit: %7%r Datencode: %8|Diese Meldung meldet einen Fehler, der aufgetreten ist.|  
@@ -86,7 +86,7 @@ ms.locfileid: "71282506"
   
 ### <a name="to-view-log-entries"></a>So zeigen Sie Protokolleinträge an  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Menü **SSIS** auf **Protokollereignisse**. Sie können das Fenster **Protokollereignisse** auch anzeigen, indem Sie im Dialogfeld **Optionen** auf der Seite **Tastatur** den Befehl View.LogEvents einer beliebigen Tastenkombination zuordnen.  
   

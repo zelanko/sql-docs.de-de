@@ -18,10 +18,10 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115308"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Funktionen und Tasks im SQL Server-Hilfsprogramm
@@ -59,6 +59,6 @@ ms.locfileid: "68115308"
 |Beschreibt, wie ein UCP entfernt wird.|[Entfernen eines Steuerungspunkts für das Hilfsprogramm &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
 |Beschreibt, wie Fehler des SQL Server-Hilfsprogramms behoben werden.|[Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
 |Beschreibt, wie Fehler der SQL Server-Ressourcenintegrität behoben werden.|[Fehlerbehebung für die SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
-|Stellt Links zu UtilityExplorer-F1-Hilfethemen bereit.|[Hilfsprogramm-Explorer (F1-Hilfe)](../../relational-databases/manage/utility-explorer-f1-help.md)|  
+|Stellt Links zu UtilityExplorer-F1-Hilfethemen bereit.|[Hilfsprogramm-Explorer „F1-Hilfe“](../../relational-databases/manage/utility-explorer-f1-help.md)|  
   
   

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 688db496825af348183e195bfd4003cfcfb53d81
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69653387"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>Hochverfügbarkeit für SQL Server-Container
@@ -32,7 +32,7 @@ In dieser Konfiguration spielt Kubernetes die Rolle des Containerorchestrators.
 
 ![Diagramm eines Kubernetes-SQL Server-Clusters](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-Im obigen Diagramm ist `mssql-server` eine SQL Server-Instanz (Container) in einem [*Pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod/). Eine [Replikatgruppe](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) stellt sicher, dass der Pod nach dem Ausfall eines Knotens automatisch wiederhergestellt wird. Anwendungen stellen eine Verbindung zum Dienst her. In diesem Fall stellt der Dienst einen Lastenausgleich dar, der eine IP-Adresse hostet, die sich nach dem Ausfall des `mssql-server` nicht ändert.
+Im obigen Diagramm ist `mssql-server` eine SQL Server-Instanz (Container) in einem [*Pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod/). Eine [Replikatgruppe](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) stellt sicher, dass der Pod nach dem Ausfall eines Knotens automatisch wiederhergestellt wird. Anwendungen stellen eine Verbindung zum Dienst her. In diesem Fall stellt der Dienst einen Lastenausgleich dar, der eine IP-Adresse hostet, die sich nach dem Ausfall von `mssql-server` nicht ändert.
 
 Kubernetes orchestriert die Ressourcen im Cluster. Wenn ein Knoten, der einen SQL Server-Instanzcontainer hostet, fehlschlägt, startet er einen neuen Container mit einer SQL Server-Instanz und fügt sie an denselben beständigen Speicher an.
 

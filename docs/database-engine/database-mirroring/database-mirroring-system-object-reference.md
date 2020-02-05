@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e61f8d9df3cb6dcaf545819d630c70bc18709d15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041783"
 ---
 # <a name="database-mirroring-system-object-reference"></a>Systemobjektreferenz für die Datenbankspiegelung
@@ -21,14 +21,14 @@ ms.locfileid: "68041783"
   
 ## <a name="system-catalog-views"></a>Systemkatalogsichten
 
-| Systemkatalogsicht | und Beschreibung|
+| Systemkatalogsicht | BESCHREIBUNG|
 | :------ | :----------------------------- |
 | [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   | Enthält eine Zeile für jede Zeugenrolle, die ein Server in einer Datenbankspiegelungspartnerschaft spielt. |
 | &nbsp; | &nbsp; |
 
 ## <a name="system-dynamic-management-views"></a>Dynamische Systemverwaltungssichten
 
-| Dynamische Systemverwaltungssicht | und Beschreibung|
+| Dynamische Systemverwaltungssicht | BESCHREIBUNG|
 | :------ | :----------------------------- |
 | [sys.dm_db_mirroring_auto_page_repair](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)   | Gibt eine Zeile für jede automatische Seitenreparatur für jede gespiegelte Datenbank der Serverinstanz zurück.  |
 | [sys.dm_db_mirroring_connections](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)    | Gibt für jede für die Datenbankspiegelung hergestellte Verbindung eine Zeile zurück. |
@@ -36,7 +36,7 @@ ms.locfileid: "68041783"
 
 ## <a name="system-tables"></a>Systemtabellen
 
-| Systemtabelle | und Beschreibung|
+| Systemtabelle | BESCHREIBUNG|
 | :------ | :----------------------------- |
 | [sysdbmaintplan_databases](../../relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md)   | Gibt Informationen zu Wartungsplänen für die Datenbankspiegelung zurück. |
 | [sysdbmaintplan_history](../../relational-databases/system-tables/sysdbmaintplan-history-transact-sql.md)    | Gibt Informationen zum Verlauf von Wartungsplänen für die Datenbankspiegelung zurück. |

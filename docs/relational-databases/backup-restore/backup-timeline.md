@@ -16,10 +16,10 @@ ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 30bf006998ac543b732b4aecac97280f07d36a99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68081436"
 ---
 # <a name="backup-timeline"></a>Sicherungszeitachse
@@ -33,10 +33,10 @@ ms.locfileid: "68081436"
   
  Mit**Bestimmtes Datum und bestimmte Uhrzeit** können Sie die Wiederherstellung zu einem bestimmten ausgewählten Datum und einer bestimmten Uhrzeit beenden. Die Zeitachse zeigt die Sicherungsvorgänge in den 24 Stunden um das ausgewählte Datum und die Uhrzeit an.  
   
- **Datum**  
+ **Date**  
  Wählen Sie in der Dropdownliste ein Datum aus, oder geben Sie ein Datum ein.  
   
- **Zeit**  
+ **Time**  
  Geben Sie ein Datum ein, oder wählen Sein ein Datum aus, um den bestimmten Zeitpunkt anzugeben, bis zu dem die Wiederherstellung durchgeführt werden soll.  
   
  **Zeitachsenintervall**  

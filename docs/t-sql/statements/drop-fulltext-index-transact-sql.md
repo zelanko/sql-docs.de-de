@@ -22,10 +22,10 @@ ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 09fe23c827b1d3d4561a4333180ad3eb508a3adc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044246"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68044246"
 
   Entfernt einen Volltextindex aus einer angegebenen Tabelle oder einer indizierten Sicht.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

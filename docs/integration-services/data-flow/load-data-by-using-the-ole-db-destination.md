@@ -15,10 +15,10 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 235491b5a3595098b42689f77fdc9077efd9b758
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292342"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Laden von Daten mithilfe des OLE DB-Ziels
@@ -30,7 +30,7 @@ ms.locfileid: "71292342"
   
 ### <a name="to-load-data-using-an-ole-db-destination"></a>So laden Sie Daten mithilfe eines OLE DB-Zieles  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "71292342"
   
     -   **Tabelle oder Sicht** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält.  
   
-    -   **Tabelle oder Sicht – schnelles Laden** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält, und legen Sie dann Optionen für schnelles Laden fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **CHECK-Einschränkung**, **Zeilen pro Batch** oder **Maximale Einfügungscommitgröße**.  
+    -   **Tabelle oder Sicht – schnelles Laden** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält, und legen Sie dann die Optionen für schnelles Laden fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Einschränkungen überprüfen**, **Zeilen pro Batch**oder **Maximale Einfügungscommitgröße**.  
   
     -   **Variable für Tabellenname oder Sichtname** Wählen Sie die benutzerdefinierte Variable aus, die den Namen einer Tabelle oder Sicht in der Datenbank enthält.  
   

@@ -10,10 +10,10 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285216"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten
@@ -24,7 +24,7 @@ ms.locfileid: "71285216"
 Erfahren Sie, was Sie von dem Import/Export-Assistenten von SQL Server im Hinblick auf alltägliche Szenarios erwarten können. In diesem Artikel geht es um das Importieren von Daten aus einem Excel-Arbeitsblatt in eine SQL Server-Datenbank. Selbst wenn Sie planen, eine andere Quelle und ein anderes Ziel zu verwenden, werden Ihnen trotzdem in diesem Artikel nützliche Informationen zum Ausführen des Assistenten zur Verfügung gestellt.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Voraussetzung: Installation des Assistenten auf dem Computer
-Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten mit den SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den Import- und Export-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>In diesem Beispiel verwendete Excel-Quelldaten
 In der folgenden Abbildung werden die Quelldaten dargestellt, die kopiert werden sollen. Dabei handelt es sich um eine kleine Tabelle mit zwei Spalten im WizardWalkthrough-Arbeitsblatt der Excel-Arbeitsmappe „WizardWalkthrough.xlsx“.
@@ -44,7 +44,7 @@ Starten Sie den Assistenten über die Microsoft SQL Server 2016-Gruppe im Window
 > [!NOTE]
 > In diesem Beispiel wird der 32-Bit-Assistent ausgewählt, da die 32-Bit-Version von Microsoft Office installiert ist. Aus diesem Grund muss auch der 32-Bit-Datenanbieter verwendet werden, um eine Verbindung mit Excel herzustellen. Für viele andere Datenquellen kann in der Regel auch der 64-Bit-Assistent ausgewählt werden.
 >
-> Sie müssen SQL Server installieren, um die 64-Bit-Version des Import/Export-Assistenten von SQL Server verwenden zu können. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen und installieren daher auch nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten.
+> Sie müssen SQL Server installieren, um die 64-Bit-Version des SQL Server-Import/Export-Assistenten verwenden zu können. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen und installieren daher auch nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten.
 
 Weitere Informationen finden Sie unter [Starten des SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 

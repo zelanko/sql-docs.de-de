@@ -19,10 +19,10 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137399"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank
@@ -35,7 +35,7 @@ ms.locfileid: "68137399"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So fügen Sie einer Datenbank Daten- oder Protokolldateien hinzu mit:**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68137399"
   
 8.  Geben Sie die Anfangsgröße der Datei an. Legen Sie die Datendatei so groß wie möglich aus. Orientieren Sie sich dabei an dem maximal zu erwartenden Umfang der Datei, die in der Datenbank gespeichert werden soll.  
   
-9. Klicken Sie auf ( **…** ) in der Spalte **Automatische Vergrößerung**, um anzugeben, wie die Datei wachsen soll. Wählen Sie eine der folgenden Optionen aus:  
+9. Klicken Sie auf ( **…** ) in der Spalte **Automatische Vergrößerung**, um anzugeben, wie die Datei wachsen soll. Sie können zwischen folgenden Optionen wählen:  
   
     1.  Um ein Anwachsen der aktuell ausgewählten Datei zuzulassen, wenn mehr Datenspeicherplatz benötigt wird, aktivieren Sie das Kontrollkästchen **Automatische Vergrößerung aktivieren** , und wählen Sie dann eine der folgenden Optionen aus:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68137399"
 11. Geben Sie den Pfad für den Dateispeicherort an. Der angegebene Pfad muss vorhanden sein, bevor die Datei hinzugefügt wird.  
   
     > [!NOTE]  
-    >  Standardmäßig werden die Daten und Transaktionsprotokolle auf demselben Laufwerk und unter demselben Pfad gespeichert, um Systeme mit nur einem Datenträger zu berücksichtigen. Diese Variante kann jedoch für bestimmte Produktionsumgebungen nicht optimal sein. Weitere Informationen finden Sie unter [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
+    >  Standardmäßig werden die Daten und Transaktionsprotokolle auf demselben Laufwerk und unter demselben Pfad gespeichert, um Systeme mit nur einem Datenträger zu berücksichtigen. Diese Variante kann jedoch für bestimmte Produktionsumgebungen nicht optimal sein. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md).  
   
 12. Klicken Sie auf **OK**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "68137399"
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird eine Dateigruppe mit zwei Dateien einer Datenbank hinzugefügt. Im Beispiel wird die Dateigruppe `Test1FG1` in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank erstellt, und der Dateigruppe werden zwei 5-MB-Dateien hinzugefügt.  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird eine Dateigruppe mit zwei Dateien einer Datenbank hinzugefügt. Im Beispiel wird die Dateigruppe `Test1FG1` in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank erstellt, und der Dateigruppe werden zwei 5-MB-Dateien hinzugefügt.  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   

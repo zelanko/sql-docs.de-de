@@ -15,10 +15,10 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822235"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Verwalten von Anmeldungen für Aufträge mithilfe von Datenbanken in einer Always On-Verfügbarkeitsgruppe
@@ -31,7 +31,7 @@ ms.locfileid: "74822235"
   
      Die Serverinstanzen, die die Verfügbarkeitsreplikate einer Verfügbarkeitsgruppe hosten, könnten unterschiedlich konfiguriert sein, z. B. mit anderen Bandlaufwerkbuchstaben. Bei den Aufträgen für die einzelnen Verfügbarkeitsreplikate müssen derartige Unterschiede berücksichtigt werden.  
   
-     Beachten Sie, dass Sicherungsaufträge die [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) -Funktion verwenden können, um zu identifizieren, ob das lokale Replikat entsprechend den Sicherungseinstellungen der Verfügbarkeitsgruppe das bevorzugte Replikat für Sicherungen ist. Mit dem [Wartungsplanungs-Assistenten](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) erstellte Sicherungsaufträge verwenden diese Funktion systemintern. Für andere Sicherungsaufträge empfiehlt es sich, diese Funktion in den Sicherungsaufträgen als Bedingung zu verwenden, sodass sie nur auf dem bevorzugten Replikat ausgeführt werden. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Beachten Sie, dass Sicherungsaufträge die [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) -Funktion verwenden können, um zu identifizieren, ob das lokale Replikat entsprechend den Sicherungseinstellungen der Verfügbarkeitsgruppe das bevorzugte Replikat für Sicherungen ist. Mit dem [Wartungsplanungs-Assistenten](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) erstellte Sicherungsaufträge verwenden diese Funktion systemintern. Für andere Sicherungsaufträge empfiehlt es sich, diese Funktion in den Sicherungsaufträgen als Bedingung zu verwenden, sodass sie nur auf dem bevorzugten Replikat ausgeführt werden. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)wichtig sind.  
   
 -   **Anmeldungen**  
   

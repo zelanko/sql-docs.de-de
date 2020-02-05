@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6d4f387317da407d74f90fb7280639851cf6aaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087634"
 ---
 # <a name="user-configurable-event-category"></a>Benutzerkonfigurierbar-Ereigniskategorie
@@ -27,7 +27,7 @@ ms.locfileid: "68087634"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Benutzerkonfigurierbar-Ereignisklasse](../../relational-databases/event-classes/user-configurable-event-class.md)|Zum Überwachen von benutzerdefinierten Ereignissen, die nicht mithilfe der vom System in anderen Ereigniskategorien bereitgestellten Ereignisse überwacht werden können.|  
   

@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 552394db26a1b236a4d6997f6dbfba77d12086ee
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847221"
 ---
 # <a name="iservervirtualdeviceset2open-vdi"></a>IServerVirtualDeviceSet2::Open (VDI)
@@ -44,7 +44,7 @@ HRESULT IServerVirtualDeviceSet2::Open (
 | NOERROR | Die Funktion wurde erfolgreich ausgeführt. |
 | VD_E_INVALID | Der angegebene Name hat keine Gruppe virtueller Geräte identifiziert, auf den der Server zugreifen kann. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Nachdem diese Funktion erfolgreich aufgerufen wurde, kann der Server die Konfiguration der Gruppe virtueller Geräte mithilfe von "GetConfiguration" und "SetConfiguration" fortsetzen.
 

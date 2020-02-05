@@ -17,10 +17,10 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c84997d8ec11a4eb620daf7bf34af7adf3e8de1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293241"
 ---
 # <a name="comparing-string-data"></a>Vergleichen von Zeichenfolgendaten
@@ -37,7 +37,7 @@ ms.locfileid: "71293241"
   
 -   Die Transformation für bedingtes Teilen kann Zeichenfolgenvergleiche in Ausdrücken verwenden, um zu bestimmen, welche Ausgabe an die Datenzeile gesendet werden soll. Weitere Informationen finden Sie unter [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
   
--   Die Transformation für abgeleitete Spalten kann Zeichenfolgenausdrücke in Ausdrücken verwenden, um neue Spaltenwerte zu generieren. Weitere Informationen finden Sie unter [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+-   Die Transformation für abgeleitete Spalten kann Zeichenfolgenausdrücke in Ausdrücken verwenden, um neue Spaltenwerte zu generieren. Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
  Variablen, Variablenzuordnungen und Rangfolgeneinschränkungen verwenden ebenfalls Ausdrücke, die Zeichenfolgenausdrücke einschließen können. Weitere Informationen zu Ausdrücken finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71293241"
   
  In der folgenden Tabelle werden die Vergleichsoptionen und eine Sortiermethode beschrieben.  
   
-|Vergleichsoption|und Beschreibung|  
+|Vergleichsoption|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |Groß-/Kleinschreibung ignorieren|Gibt an, ob beim Vergleichen zwischen Groß- und Kleinbuchstaben unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich die Groß-/Kleinschreibung. Beispielsweise ist dann "ABC" mit "abc" identisch.|  
 |Kanatyp ignorieren|Gibt an, ob beim Vergleichen zwischen den beiden Typen japanischer Kanazeichen unterschieden wird: Hiragana und Katakana. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich den Kanatyp.|  

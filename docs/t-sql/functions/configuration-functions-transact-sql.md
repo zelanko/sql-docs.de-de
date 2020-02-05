@@ -18,10 +18,10 @@ ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5db26c5c4efa1398cf5a958279cb75d84cb3bb13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086166"
 ---
 # <a name="configuration-functions-transact-sql"></a>Konfigurationsfunktionen (Transact-SQL)
@@ -42,7 +42,7 @@ Diese skalaren Funktionen geben Informationen zu den aktuellen Einstellungen der
   
 Alle Konfigurationsfunktionen arbeiten in nicht deterministischer Weise. Das heißt, dass diese Funktionen nicht stets dasselbe Ergebnis zurückgeben, selbst wenn sie mit denselben Eingabewerten aufgerufen werden. Weitere Informationen zu Funktionsdeterminismus finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Functions &#40;Transact-SQL&#41; (Funktionen (Transact-SQL))](../../t-sql/functions/functions.md)
   
   

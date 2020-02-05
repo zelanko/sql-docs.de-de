@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 19ac88cbc9db29dfeb06614a50869adfe8d3cc6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048793"
 ---
 # <a name="circularstring"></a>CircularString
@@ -131,7 +131,7 @@ Perimeter = 5.65685
   
 Beachten Sie, dass der Wert für das **CircularString** -Beispiel annähernd 2∏ beträgt (der tatsächliche Umfang des Kreises).  
   
-### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Deklarieren und Instanziieren einer Geometry-Instanz mit einem CircularString in derselben Anweisung  
+### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D: Deklarieren und Instanziieren einer Geometry-Instanz mit einem CircularString in derselben Anweisung  
  In diesem Codeausschnitt wird veranschaulicht, wie eine **geometry** -Instanz mit einem **CircularString** in derselben Anweisung deklariert und instanziiert wird:  
   
 ```sql  

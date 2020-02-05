@@ -29,10 +29,10 @@ ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745463"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "70745463"
 
   Erstellt einen neuen Nachrichtentyp. Mit einem Nachrichtentyp wird der Name einer Nachricht und die Überprüfung festgelegt, die [!INCLUDE[ssSB](../../includes/sssb-md.md)] für Nachrichten mit diesem Namen ausführt. Auf beiden Seiten einer Konversation müssen dieselben Nachrichtentypen definiert sein.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -77,7 +77,7 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  Gibt an, dass der Nachrichtentext XML-Daten enthalten muss, die einem Schema in der angegebenen Schemaauflistung entsprechen. *schema_collection_name* muss der Name einer vorhandenen XML-Schemaauflistung sein.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] überprüft eingehende Nachrichten. Enthält eine Nachricht Text, der nicht dem angegebenen Überprüfungstyp entspricht, verwirft [!INCLUDE[ssSB](../../includes/sssb-md.md)] die ungültige Nachricht und gibt eine Fehlermeldung an den Dienst zurück, der die Nachricht gesendet hat.  
   
  Auf beiden Seiten einer Konversation muss derselbe Name für einen Nachrichtentyp definiert sein. Zur Vereinfachung der Problembehandlung geben beide Seiten einer Konversation in der Regel die gleiche Überprüfung für den Nachrichtentyp an, obwohl [!INCLUDE[ssSB](../../includes/sssb-md.md)] dies nicht voraussetzt.  
@@ -150,7 +150,7 @@ CREATE MESSAGE TYPE
     VALIDATION = EMPTY ;  
 ```  
   
-### <a name="d-creating-a-message-type-containing-binary-data"></a>D. Erstellen eines Nachrichtentyps, der Binärdaten enthält  
+### <a name="d-creating-a-message-type-containing-binary-data"></a>D: Erstellen eines Nachrichtentyps, der Binärdaten enthält  
  Im folgenden Beispiel wird ein neuer Nachrichtentyp erstellt, der Binärdaten enthalten soll. Da in der Nachricht keine XML-Daten enthalten sind, wird der Überprüfungstyp vom Nachrichtentyp auf `NONE` festgelegt. Beachten Sie, dass in diesem Fall die Anwendung, die eine Nachricht von diesem Typ empfängt, überprüfen muss, dass die Nachricht Daten enthält und dass die Daten vom erwarteten Typ sind.  
   
 ```  

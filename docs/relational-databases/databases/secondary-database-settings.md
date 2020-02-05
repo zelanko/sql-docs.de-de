@@ -13,10 +13,10 @@ ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82a8df3e80a851de5fb09cda3e28620f163a3de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127221"
 ---
 # <a name="secondary-database-settings"></a>Einstellungen für die sekundäre Datenbank
@@ -25,18 +25,18 @@ ms.locfileid: "68127221"
   
  Eine Erläuterung zu den Konzepten des Protokollversands finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Sekundäre Serverinstanz**  
  Zeigt den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die in der Protokollversandkonfiguration derzeit als sekundärer Server konfiguriert ist.  
   
  **Sekundäre Datenbank**  
  Zeigt den Namen der sekundären Datenbank für die Protokollversandkonfiguration an. Wenn Sie einer Protokollversandkonfiguration eine neue sekundäre Datenbank hinzufügen, können Sie eine Datenbank aus der Liste auswählen oder den Namen einer neuen Datenbank in das Feld eingeben. Wenn Sie den Namen einer neuen Datenbank in das Feld eingeben, müssen Sie auf der Registerkarte **Initialisierung** eine Option auswählen, die eine vollständige Datenbanksicherung der primären Datenbank in der sekundären Datenbank wiederherstellt. Die neue Datenbank wird im Verlauf des Wiederherstellungsvorgangs erstellt.  
   
- **Verbinden**  
+ **Herstellen einer Verbindung**  
  Stellen Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Verwendung als sekundärer Server in der Protokollversandkonfiguration her. Das zum Verbinden verwendete Konto muss Mitglied der festen Serverrolle sysadmin auf der sekundären Serverinstanz sein.  
   
  **Registerkarte Initialisieren**  
- Folgende Optionen stehen zur Verfügung:  
+ Die folgenden Optionen sind verfügbar:  
   
  **Ja, eine vollständige Sicherung der primären Datenbank generieren und diese Sicherung in der sekundären Datenbank wiederherstellen**  
  Veranlassen Sie, dass [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] die sekundäre Datenbank konfiguriert, indem die primäre Datenbank gesichert und auf dem sekundären Server wiederhergestellt wird. Wenn Sie in das Feld **Sekundäre Datenbank** den Namen einer neuen Datenbank eingegeben haben, wird die Datenbank im Verlauf des Wiederherstellungsvorgangs erstellt.  
@@ -63,7 +63,7 @@ ms.locfileid: "68127221"
  Gibt an, dass die sekundäre Datenbank bereits initialisiert ist und in ihr die Sicherungen der Transaktionsprotokolle aus der primären Datenbank wiederhergestellt werden können. Diese Option ist nicht verfügbar, wenn Sie in das Feld **Sekundäre Datenbank** den Namen einer neuen Datenbank eingegeben haben.  
   
  **Registerkarte Dateien kopieren**  
- Folgende Optionen stehen zur Verfügung:  
+ Die folgenden Optionen sind verfügbar:  
   
  **Zielordner für kopierte Dateien**  
  Geben Sie den Pfad ein, in den Transaktionsprotokollsicherungen zur Wiederherstellung in der sekundären Datenbank kopiert werden sollen. Dies ist in der Regel der lokale Pfad zu einem Ordner auf dem sekundären Server. Wenn sich der Ordner auf einem anderen Server befindet, müssen Sie jedoch einen UNC-Pfad zu dem Ordner angeben. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto der sekundären Serverinstanz muss über Leseberechtigungen für diesen Ordner verfügen. Außerdem müssen Sie für die Proxykonten dieser Netzwerkfreigabe, unter denen die Kopier- und Wiederherstellungsaufträge auf den sekundären Serverinstanzen ausgeführt werden, Lese- und Schreibberechtigungen erteilen. Standardmäßig ist dies das SQL Server Agent-Dienstkonto der sekundären Serverinstanz. Ein Systemadministrator kann jedoch für die Aufträge andere Proxykonten auswählen.  
@@ -84,7 +84,7 @@ ms.locfileid: "68127221"
  Hält den vom SQL Server-Agent bereitgestellten Kopierauftrag an.  
   
  **Registerkarte Transaktionsprotokoll wiederherstellen**  
- Folgende Optionen stehen zur Verfügung:  
+ Die folgenden Optionen sind verfügbar:  
   
  **Beim Wiederherstellen von Sicherungen Verbindungen mit Benutzern in der Datenbank trennen**  
  Trennt Benutzer automatisch von der sekundären Datenbank, solange Transaktionsprotokollsicherungen wiederhergestellt werden.  

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 24c005d2b9b95827dce28bc78303a75828270143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105044"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68105044"
 
 Mit dieser Funktion können Sie in einem Zeichenausdruck nach einem anderen Zeichenausdruck suchen. Bei erfolgreicher Suche wird die Startposition des gesuchten Ausdrucks zurückgegeben.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -73,7 +73,7 @@ Bei Verwendung von SC-Sortierungen werden Ersatzzeichenpaare sowohl von *start_l
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-returning-the-starting-position-of-an-expression"></a>A. Zurückgeben der Startposition eines Ausdrucks  
-In diesem Beispiel wird in der Variablen des gesuchten Zeichenfolgenwerts `@document` nach `bicycle` gesucht.
+In diesem Beispiel wird in der Variablen des gesuchten Zeichenfolgenwerts `bicycle` nach `@document` gesucht.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -132,7 +132,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="d-performing-a-case-sensitive-search"></a>D. Ausführen einer Suche unter Beachtung der Groß-/Kleinschreibung  
+### <a name="d-performing-a-case-sensitive-search"></a>D: Ausführen einer Suche unter Beachtung der Groß-/Kleinschreibung  
 In diesem Beispiel wird eine Suche nach der Zeichenfolge `'TEST'` in der gesuchten Zeichenfolge `'This is a Test``'` dargestellt, wobei die Groß-/Kleinschreibung berücksichtigt wird.
   
 ```sql
@@ -189,7 +189,7 @@ GO
 11
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-searching-from-the-start-of-a-string-expression"></a>F. Suche ab dem Beginn eines Zeichenfolgenausdrucks  
 Dieses Beispiel gibt den ersten Speicherort der Zeichenfolge `is` in der Zeichenfolge `This is a string` ab Position 1 (also ab dem ersten Zeichen) von `This is a string` zurück.
@@ -233,10 +233,10 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 0
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
- [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/string-functions-transact-sql.md)  
  [+ &#40;Verketten von Zeichenfolgen&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   

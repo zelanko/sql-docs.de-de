@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: e6230ee4efebc4b1af873a61e9f2ebfc191df171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943816"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS
@@ -111,7 +111,7 @@ Weitere Informationen zu SSIS erhalten Sie in den folgenden Artikeln:
 - [Integration Services-Tutorials](../integration-services/integration-services-tutorials.md)
 
 ## <a name="related-content-about-ssis-on-linux"></a>Verwandte Inhalte zu SSIS unter Linux
--   [Install SQL Server Integration Services (SSIS) on Linux (Installieren von SSIS (SQL Server Integration Services) unter Linux)](sql-server-linux-setup-ssis.md)
--   [Configure SQL Server Integration Services on Linux with ssis-conf (Konfigurieren von SQL Server Integration Services unter Linux mit ssis-conf)](sql-server-linux-configure-ssis.md)
--   [Limitations and known issues for SSIS on Linux (Einschränkungen und bekannte Probleme bei SSIS unter Linux)](sql-server-linux-ssis-known-issues.md)
--   [Schedule SQL Server Integration Services package execution on Linux with cron (Zeitliches Planen der Ausführung von SSIS-Paketen mit Cron)](sql-server-linux-schedule-ssis-packages.md)
+-   [Installieren von SSIS (SQL Server Integration Services) unter Linux](sql-server-linux-setup-ssis.md)
+-   [Konfigurieren von SQL Server Integration Services unter Linux mit ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Einschränkungen und bekannte Probleme bei SSIS unter Linux](sql-server-linux-ssis-known-issues.md)
+-   [Zeitliches Planen der Ausführung von SSIS-Paketen unter Linux mit Cron](sql-server-linux-schedule-ssis-packages.md)

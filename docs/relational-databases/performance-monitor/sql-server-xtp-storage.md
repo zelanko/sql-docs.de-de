@@ -11,10 +11,10 @@ ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8273d3c86cbfa6774458d40a964e64ba415f1de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114042"
 ---
 # <a name="sql-server-xtp-storage"></a>SQL Server-XTP-Speicher
@@ -24,7 +24,7 @@ ms.locfileid: "68114042"
   
  In dieser Tabelle werden die Leistungsindikatoren von **SQL Server-XTP-Speicher** beschrieben.  
   
-|Leistungsindikator|und Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Geschlossene Prüfpunkte**|Die Anzahl der vom Online-Agent geschlossenen Prüfpunkte.|  
 |**Verarbeitete Prüfpunkte**|Die Anzahl der vom Offline-Prüfpunktthread verarbeiteten Prüfpunkte.|  
@@ -36,6 +36,6 @@ ms.locfileid: "68114042"
 |**Gesamtanzahl zusammengeführter Dateien**|Die Gesamtanzahl der zusammengeführten Quelldateien. Diese Anzahl kann verwendet werden, um die durchschnittliche Anzahl von Quelldateien in der Zusammenführung zu ermitteln.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Leistungsindikatoren für SQL Server XTP &#40;In-Memory OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
+ [Leistungsindikatoren für SQL Server XTP &#40;In-Memory-OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085445"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Vergleichen von Optionen zum Speichern von Blobs (SQL Server)
@@ -52,13 +52,13 @@ Das FileTable-Feature basiert auf den vorhandenen FILESTREAM-Funktionen. Das Fil
 
 |Funktion|Dateiserver und Datenbanklösung|FILESTREAM-Lösung|FileTable-Lösung|
 |:------|:--------------------------------|:------------------|:-----------------|
-|**Einzelne Story für Verwaltungstasks**|Nein|Ja|**ja**|
-|**Einzelner Satz von Diensten**: Suche, Berichterstellung, Abfrage usw.|Nein|Ja|**ja**|
+|**Einzelne Story für Verwaltungstasks**|Nein|Ja|**Ja**|
+|**Einzelner Satz von Diensten**: Suche, Berichterstellung, Abfrage usw.|Nein|Ja|**Ja**|
 |**Integriertes Sicherheitsmodell**|Nein|Ja|**Ja**|
-|**Direkte Updates der FILESTREAM-Daten**|Ja|Nein|**ja**|
-|**In der Datenbank beibehaltene Datei- und Verzeichnishierarchie**|Nein|Nein|**ja**|
+|**Direkte Updates der FILESTREAM-Daten**|Ja|Nein|**Ja**|
+|**In der Datenbank beibehaltene Datei- und Verzeichnishierarchie**|Nein|Nein|**Ja**|
 |**Windows-Anwendungskompatibilität**|Ja|Nein|**Ja**|
-|**Relationaler Zugriff auf Dateiattribute**|Nein|Nein|**ja**|
+|**Relationaler Zugriff auf Dateiattribute**|Nein|Nein|**Ja**|
 
 ## <a name="CompareRBS"></a> Vergleichen von FILESTREAM und Remote BLOB-Speicher (RBS)
 
@@ -68,4 +68,4 @@ Eine weitere Option für das Speichern unstrukturierter Daten schließt einen Re
 
 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  
-[Remoteblobspeicher &#40;RBS&#41; &#40;SQL Server&#41;](../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)
+[Remote Blob Store &#40;RBS&#41; &#40;SQL Server&#41;](../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)

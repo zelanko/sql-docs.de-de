@@ -16,10 +16,10 @@ ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70809948"
 ---
 # <a name="database-mail-messaging-objects"></a>Messagingobjekte für Datenbank-E-Mail
@@ -33,13 +33,13 @@ ms.locfileid: "70809948"
   
  Diese Objekte sind die Schnittstelle für Datenbank-E-Mail innerhalb der Mailhost-Datenbank. Andere Objekte werden installiert, um die Funktionalität zu implementieren, die von den oben aufgeführten Objekten bereitgestellt wird. Diese Objekte sind jedoch für die interne Verwendung reserviert.  
   
-|Name|Typ|und Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Ansicht**|Listet alle an Datenbank-E-Mail übergebenen Nachrichten auf.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Ansicht**|Listet Meldungen über das Verhalten von [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)auf.|  
 |[sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**Ansicht**|Informationen über Nachrichten, die Datenbank-E-Mail nicht senden konnte.|  
 |[sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**Ansicht**|Informationen über Anlagen von Datenbank-E-Mail-Nachrichten.|  
-|[sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|**Sicht**|Informationen über Nachrichten, die mit Datenbank-E-Mail gesendet wurden.|  
+|[sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|**Ansicht**|Informationen über Nachrichten, die mit Datenbank-E-Mail gesendet wurden.|  
 |[sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**Ansicht**|Informationen über Nachrichten, die Datenbank-E-Mail gerade zu senden versucht.|  
 |[sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)|**Gespeicherte Prozedur**|Sendet E-Mail-Nachrichten mithilfe von Datenbank-E-Mail.|  
 |[sysmail_delete_log_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|**Gespeicherte Prozedur**|Löscht Nachrichten aus dem Datenbank-E-Mail-Protokoll.|  

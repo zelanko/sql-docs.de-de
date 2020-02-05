@@ -15,10 +15,10 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 78f61b21ae2399a3aa5d0b5432a4047c3f4fd4b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991489"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Die Always On-Verfügbarkeitsgruppe ist nicht für das automatische Failover bereit.
@@ -30,10 +30,10 @@ ms.locfileid: "67991489"
 |-|-|  
 |**Richtlinienname**|Bereitschaft der Verfügbarkeitsgruppe für automatisches Failover|  
 |**Problem**|Die Verfügbarkeitsgruppe ist nicht für das automatische Failover bereit.|  
-|**Kategorie**|**Kritisch**|  
+|**Kategorie**|**Critical** (Kritisch)|  
 |**Facet**|Verfügbarkeitsgruppe|  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Diese Richtlinie überprüft, ob die Verfügbarkeitsgruppe über mindestens ein sekundäres Replikat verfügt, das bereit für das Failover ist. Die Richtlinie befindet sich in einem fehlerhaften Zustand, und es wird eine Warnung ausgelöst, wenn für das primäre Replikat der automatische Failovermodus aktiviert ist, aber keines der sekundären Replikate in der Verfügbarkeitsgruppe für das Failover bereit ist.  
   
  Die Richtlinie befindet sich in einem ordnungsgemäßen Zustand, wenn mindestens ein sekundäres Replikat bereit für das automatische Failover ist.  

@@ -23,10 +23,10 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 569486f5806ac6f0d62f32fa9ac17efc1d43a85a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904372"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67904372"
 
 Diese Funktion gibt die Zeilennummer des Fehlers zurück, der die Ausführung des CATCH-Blocks eines TRY...CATCH-Konstrukts ausgelöst hat.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -21,10 +21,10 @@ ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a1cc6427e01055a3aa97f8f79f9270dc22579255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140259"
 ---
 # <a name="comparison-operators-transact-sql"></a>Vergleichsoperatoren (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68140259"
 ## <a name="boolean-data-type"></a>Boolesche Datentypen  
  Das Ergebnis eines Vergleichsoperators weist den Datentyp **Boolean** auf. Es kann drei Werte annehmen: TRUE, FALSE und UNKNOWN. Ausdrücke, die einen Wert vom Datentyp **Boolean** zurückgeben, werden auch als boolesche Ausdrücke bezeichnet.  
   
- Ein **Boolean**-Datentyp kann nicht wie die anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen als Datentyp für eine Tabellenspalte oder eine Variable angegeben werden. Boolesche Werte können auch nicht in einem Resultset zurückgegeben werden.  
+ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Boolean **-Datentyp kann nicht wie die anderen** -Datentypen als Datentyp für eine Tabellenspalte oder eine Variable angegeben werden. Boolesche Werte können auch nicht in einem Resultset zurückgegeben werden.  
   
  Wenn SET ANSI_NULLS auf ON festgelegt ist, gibt ein Operator mit einem oder zwei NULL-Ausdrücken UNKNOWN zurück. Wenn SET ANSI_NULLS auf OFF festgelegt ist, gelten die gleichen Regeln mit Ausnahme der Operatoren gleich (=) und ungleich (<>). Wenn SET ANSI_NULLS auf OFF festgelegt ist, behandeln diese Operatoren NULL als bekannten Wert, der jedem anderen NULL entspricht, und geben entweder TRUE oder FALSE zurück (aber nie UNKNOWN).  
   
@@ -64,7 +64,7 @@ IF (@MyProduct <> 0)
    WHERE ProductID = @MyProduct;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
  [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   

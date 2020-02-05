@@ -14,10 +14,10 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1ef859193b0a2410b7057365c64506976d7ee8ab
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294262"
 ---
 # <a name="cdc-control-task"></a>CDC-Steuerungstask
@@ -33,7 +33,7 @@ ms.locfileid: "71294262"
   
  Die folgenden Vorgänge behandeln die Synchronisierung von erstmaligem Laden und Änderungsverarbeitung:  
   
-|Vorgang|und Beschreibung|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |ResetCdcState|Dieser Vorgang wird verwendet, um den persistenten CDC-Status zurückzusetzen, der dem aktuellen CDC-Kontext zugeordnet ist. Nachdem dieser Vorgang ausgeführt wurde, wird die aktuelle höchste LSN aus der LSN-Zeitstempeltabelle `sys.fn_cdc_get_max_lsn` zum Startpunkt für den nächsten Verarbeitungsbereich. Für diesen Vorgang ist eine Verbindung zur Quelldatenbank erforderlich.|  
 |MarkInitialLoadStart|Dieser Vorgang wird zu Beginn eines Pakets für das erstmalige Laden verwendet, um die aktuelle LSN in der Quelldatenbank aufzuzeichnen, bevor das Paket für das erstmalige Laden mit dem Lesen der Quelltabellen beginnt. Dies erfordert eine Verbindung zur Quelldatenbank, damit `sys.fn_cdc_get_max_lsn`aufgerufen werden kann.<br /><br /> Wenn Sie bei der Verwendung von CDC in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (d.h. nicht in Oracle) die Option MarkInitialLoadStart auswählen, muss der im Verbindungs-Manager angegebene Benutzer über die Rolle db_owner oder sysadmin verfügen.|  
@@ -42,10 +42,10 @@ ms.locfileid: "71294262"
   
  Die folgenden Vorgänge werden verwendet, um den Verarbeitungsbereich zu verwalten:  
   
-|Vorgang|und Beschreibung|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |GetProcessingRange|Dieser Vorgang wird vor dem Aufrufen des Datenflusses verwendet, der den CDC-Quelldatenfluss nutzt. Dabei wird ein Bereich von LSNs eingerichtet, der vom CDC-Quelldatenfluss nach dem Aufrufen gelesen wird. Der Bereich wird in einer SSIS-Paketvariablen gespeichert, die von der CDC-Quelle während der Datenflussverarbeitung verwendet wird.<br /><br /> Weitere Informationen zu den gespeicherten Status finden Sie unter [Definieren einer Statusvariablen](../../integration-services/data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|decodiert werden: Dieser Vorgang wird nach jeder CDC-Ausführung ausgeführt (nachdem der CDC-Datenfluss erfolgreich abgeschlossen wurde), um die letzte LSN aufzuzeichnen, die bei der CDC-Ausführung vollständig verarbeitet wurde. Bei der nächsten Ausführung von GetProcessingRange dient diese Position als Startpunkt für den Verarbeitungsbereich.|  
+|MarkProcessedRange|Dieser Vorgang wird nach jeder CDC-Ausführung ausgeführt (nachdem der CDC-Datenfluss erfolgreich abgeschlossen wurde), um die letzte LSN aufzuzeichnen, die bei der CDC-Ausführung vollständig verarbeitet wurde. Bei der nächsten Ausführung von GetProcessingRange dient diese Position als Startpunkt für den Verarbeitungsbereich.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Behandeln von CDC-Statuspersistenz  
  Der CDC-Steuerungstask behält zwischen Aktivierungen einen persistenten Status bei. Die im CDC-Status gespeicherten Informationen werden verwendet, um den Verarbeitungsbereich für das CDC-Paket zu bestimmen und zu verwalten und Fehlerzustände zu erkennen. Der persistente Status wird als Zeichenfolge gespeichert. Weitere Informationen finden Sie unter [Definieren einer Statusvariablen](../../integration-services/data-flow/define-a-state-variable.md).  
@@ -98,14 +98,14 @@ ms.locfileid: "71294262"
   
 2.  Doppelklicken Sie auf der Registerkarte **Ablaufsteuerung** auf den CDC-Steuerungstask.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **ADO.NET-Verbindungs-Manager für die SQL Server-CDC-Datenbank**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Die Verbindung muss zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank hergestellt werden, die für CDC aktiviert ist und in der sich die ausgewählte Änderungstabelle befindet.  
   
  **CDC-Steuerungsvorgang**  
  Wählen Sie den Vorgang aus, der für diesen Task ausgeführt werden soll. Für alle Vorgänge wird die Statusvariable verwendet, die in einer SSIS-Paketvariable gespeichert wird, die den Status speichert und zwischen verschiedenen Komponenten im Paket übergibt.  
   
--   **Start des anfänglichen Ladevorgangs kennzeichnen**: Dieser Vorgang wird verwendet, wenn der anfängliche Ladevorgang aus einer aktiven Datenbank ohne Momentaufnahme erfolgt. Er wird zu Beginn eines Pakets für das anfängliche Laden verwendet, um die aktuelle LSN in der Quelldatenbank aufzuzeichnen, bevor das Paket für das anfängliche Laden mit dem Lesen der Quelltabellen beginnt. Für diesen Vorgang ist eine Verbindung mit der Quelldatenbank erforderlich.  
+-   **Beginn des anfänglichen Ladevorgangs kennzeichnen**: Dieser Vorgang wird verwendet, wenn der anfängliche Ladevorgang aus einer aktiven Datenbank ohne Momentaufnahme erfolgt. Er wird zu Beginn eines Pakets für das anfängliche Laden verwendet, um die aktuelle LSN in der Quelldatenbank aufzuzeichnen, bevor das Paket für das anfängliche Laden mit dem Lesen der Quelltabellen beginnt. Für diesen Vorgang ist eine Verbindung mit der Quelldatenbank erforderlich.  
   
      Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** Beginn des anfänglichen Ladevorgangs kennzeichnen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin**angegeben sein.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71294262"
   
 -   **Verarbeiteten Bereich kennzeichnen**: Dieser Vorgang wird in einem Änderungsverarbeitungspaket am Ende einer CDC-Ausführung (nachdem der CDC-Datenfluss erfolgreich abgeschlossen wurde) verwendet, um die letzte LSN aufzuzeichnen, die vollständig in der CDC-Ausführung verarbeitet wurde. Bei der nächsten Ausführung von `GetProcessingRange` bestimmt diese Position den Startpunkt für den nächsten Verarbeitungsbereich.  
   
--   **CDC-Status zurücksetzen**: Dieser Vorgang wird verwendet, um den persistenten CDC-Status zurückzusetzen, der dem aktuellen CDC-Kontext zugeordnet ist. Nachdem dieser Vorgang ausgeführt wurde, wird die aktuelle höchste LSN aus der LSN-Zeitstempeltabelle `sys.fn_cdc_get_max_lsn` zum Startpunkt für den nächsten Verarbeitungsbereich. Für diesen Vorgang ist eine Verbindung zur Quelldatenbank erforderlich.  
+-   **CDC-Status zurücksetzen**: Dieser Vorgang wird verwendet, um den beständigen CDC-Status zurückzusetzen, der dem aktuellen CDC-Kontext zugeordnet ist. Nachdem dieser Vorgang ausgeführt wurde, wird die aktuelle höchste LSN aus der LSN-Zeitstempeltabelle `sys.fn_cdc_get_max_lsn` zum Startpunkt für den nächsten Verarbeitungsbereich. Für diesen Vorgang ist eine Verbindung zur Quelldatenbank erforderlich.  
   
      Dieser Vorgang wird z. B. verwendet, wenn Sie nur die neu erstellten Änderungsdatensätze verarbeiten und alle alten Änderungsdatensätze ignorieren möchten.  
   

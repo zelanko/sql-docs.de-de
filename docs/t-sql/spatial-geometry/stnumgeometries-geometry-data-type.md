@@ -18,10 +18,10 @@ ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5a0c123b367fa2a85a1a3732200452a474b032c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68088922"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (geometry-Datentyp)

@@ -15,10 +15,10 @@ ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8a0b9e7d163de73a2bb08d1095a0bb0c600bb0fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066525"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (geography-Datentyp)
@@ -40,7 +40,7 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="return-types"></a>Rückgabetypen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
-## <a name="exception"></a>Exception  
+## <a name="exception"></a>Ausnahme  
  Löst eine `FormatException` aus, wenn ungültige Eingabewerte vorhanden sind. Weitere Informationen finden Sie unter [STIsValid &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md).  
   
 ## <a name="remarks"></a>Bemerkungen  

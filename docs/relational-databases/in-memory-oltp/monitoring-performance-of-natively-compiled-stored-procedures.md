@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e16276b7b514d921261ea9b53af13162d0aa3b8b
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412617"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Überwachen der Leistung von systemintern kompilierten gespeicherten Prozeduren
@@ -47,7 +47,7 @@ Ausführungsstatistiken werden in den Systemansichten [sys.dm_exec_procedure_sta
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : Aktivieren oder Deaktivieren der Sammlung von Statistiken auf nativ kompilierten gespeicherten Prozeduren auf Prozedurebene mithilfe der [datenbankweit gültigen Konfigurationsoption](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_PROCEDURE_EXECUTION_STATISTICS`. Die folgende Anweisung aktiviert die Sammlung von Ausführungsstatistiken auf Prozedurebene für alle nativ kompilierten T-SQL-Module auf der aktuellen Datenbank:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : Aktivieren oder Deaktivieren der Sammlung von Statistiken auf nativ kompilieren gespeicherten Prozeduren auf Prozedurebene mithilfe der [datenbankweit gültigen Konfigurationsoption](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_PROCEDURE_EXECUTION_STATISTICS`. Die folgende Anweisung aktiviert die Sammlung von Ausführungsstatistiken auf Prozedurebene für alle nativ kompilierten T-SQL-Module auf der aktuellen Datenbank:
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -61,7 +61,7 @@ ALTER DATABASE
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : Aktivieren oder Deaktivieren der Sammlung von Statistiken auf nativ kompilierten gespeicherten Prozeduren auf Anweisungsebene mithilfe der [datenbankweit gültigen Konfigurationsoption](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_QUERY_EXECUTION_STATISTICS`. Die folgende Anweisung aktiviert die Sammlung von Ausführungsstatistiken auf Abfrageebene für alle nativ kompilierten T-SQL-Module auf der aktuellen Datenbank:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : Aktivieren oder Deaktivieren der Sammlung von Statistiken auf nativ kompilieren gespeicherten Prozeduren auf Anweisungsebene mithilfe der [datenbankweit gültigen Konfigurationsoption](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_QUERY_EXECUTION_STATISTICS`. Die folgende Anweisung aktiviert die Sammlung von Ausführungsstatistiken auf Abfrageebene für alle nativ kompilierten T-SQL-Module auf der aktuellen Datenbank:
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION

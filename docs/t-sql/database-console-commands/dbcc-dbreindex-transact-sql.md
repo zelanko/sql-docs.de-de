@@ -23,10 +23,10 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101990"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
@@ -38,7 +38,7 @@ Erstellt einen oder mehrere Indizes einer Tabelle in der angegeben Datenbank neu
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -75,7 +75,7 @@ Im Gegensatz zu DBCC INDEXDEFRAG, oder ALTER INDEX mit der Option REORGANIZE, is
 
 Weitere Informationen zum Auswählen einer Methode zum Neuerstellen oder Neuorganisieren eines Indexes finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
 Die Verwendung von DBCC DBREINDEX wird für die folgenden Objekte nicht unterstützt.
 -   Systemtabellen  
 -   Räumlichkeitsindizes  

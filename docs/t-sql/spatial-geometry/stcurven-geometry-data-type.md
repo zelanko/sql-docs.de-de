@@ -15,10 +15,10 @@ ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930135"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (geometry-Datentyp)
@@ -96,7 +96,7 @@ Gibt die von einer Instanz von **geometry** angegebene Kurve zurück, bei der es
   
  Die Ergebnisse sind für die vorherigen drei Beispiele gleich. Unabhängig vom WKT (Well-known Text)-Format, das bei der Eingabe der gleichen Kurvensequenz verwendet wird, die von `STCurveN()` zurückgegebenen Ergebnisse sind bei Verwendung einer `CompoundCurve` -Instanz gleich.  
   
-### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. Überprüfen des Parameters vor Aufruf von STCurveN()  
+### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D: Überprüfen des Parameters vor Aufruf von STCurveN()  
  Im folgenden Beispiel wird gezeigt, wie die Gültigkeit von `@n` vor dem Aufruf der `STCurveN()`-Methode sichergestellt wird:  
   
 ```

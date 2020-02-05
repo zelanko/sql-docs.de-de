@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: ff7b069ebde75185b0e500bc7052edc6e99fc927
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68265351"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>Datensynchronisierungsstatus der Verfügbarkeitsdatenbank einer Always On-Verfügbarkeitsgruppe ist nicht fehlerfrei
@@ -31,10 +31,10 @@ ms.locfileid: "68265351"
 |-|-|  
 |**Richtlinienname**|Datensynchronisierungsstatus der Verfügbarkeitsdatenbank|  
 |**Problem**|Der Datensynchronisierungsstatus der Verfügbarkeitsdatenbank ist nicht fehlerfrei.|  
-|**Kategorie**|**Warnung**|  
+|**Kategorie**|**Warning**|  
 |**Facet**|Verfügbarkeitsdatenbank|  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Diese Richtlinie führt ein Rollup des Datensynchronisierungsstatus aller Verfügbarkeitsdatenbanken (auch bekannt als "Datenbankreplikate") im Verfügbarkeitsreplikat aus. Die Richtlinie befindet sich in einem fehlerhaften Zustand, wenn ein beliebiges Datenbankreplikat nicht den erwarteten Datensynchronisierungsstatus aufweist. Die Richtlinie befindet sich andernfalls in einem ordnungsgemäßen Zustand.  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "68265351"
  Verwenden Sie die Datenbankreplikatrichtlinie zum Suchen nach dem Datenbankreplikat mit einem fehlerhaften Datensynchronisierungsstatus, und beheben Sie das Problem für das Datenbankreplikat.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

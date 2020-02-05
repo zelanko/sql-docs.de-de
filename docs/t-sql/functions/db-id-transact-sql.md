@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995739"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68995739"
 
 Diese Funktion gibt die Datenbank-ID für eine angegebene Datenbank zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="arguments"></a>Argumente  
 '*database_name*'  
-Der Name der Datenbank, deren Datenbank-ID von `DB_ID` zurückgegeben wird. Wenn *database_name* beim Aufruf von `DB_ID` ausgelassen wird, gibt `DB_ID` die ID der aktuellen Datenbank zurück.
+Der Name der Datenbank, deren Datenbank-ID von `DB_ID` zurückgegeben wird. Wenn `DB_ID`database_name*beim Aufruf von* ausgelassen wird, gibt `DB_ID` die ID der aktuellen Datenbank zurück.
   
 ## <a name="return-types"></a>Rückgabetypen
 **int**
@@ -57,10 +57,10 @@ Der Name der Datenbank, deren Datenbank-ID von `DB_ID` zurückgegeben wird. Wenn
 > Bei der Verwendung mit Azure SQL-Datenbank gibt `DB_ID` möglicherweise nicht dasselbe Ergebnis zurück wie das Abfragen von `database_id` in **sys.databases**. Wenn der Aufrufer von `DB_ID` das Ergebnis mit anderen **sys**-Ansichten vergleicht, sollte stattdessen **sys.databases** abgefragt werden.
   
 ## <a name="permissions"></a>Berechtigungen  
-Wenn der Aufrufer von `DB_ID` keine spezifische Nicht-**Master**- oder Nicht-**tempdb**-Datenbank besitzt, sind mindestens die Berechtigungen `ALTER ANY DATABASE` oder `VIEW ANY DATABASE` auf Serverebene erforderlich, um die entsprechende `DB_ID`-Zeile anzuzeigen. `DB_ID` benötigt zumindest die Berechtigung `CREATE DATABASE` für die **Master**-Datenbank. Die Datenbank, mit der der Aufrufer eine Verbindung herstellt, wird immer in **sys.databases** angezeigt.
+Wenn der Aufrufer von `DB_ID` keine spezifische Nicht-**Master**- oder Nicht-**tempdb**-Datenbank besitzt, sind mindestens die Berechtigungen `ALTER ANY DATABASE` oder `VIEW ANY DATABASE` auf Serverebene erforderlich, um die entsprechende `DB_ID`-Zeile anzuzeigen. **benötigt zumindest die Berechtigung** für die `DB_ID`Master`CREATE DATABASE`-Datenbank. Die Datenbank, mit der der Aufrufer eine Verbindung herstellt, wird immer in **sys.databases** angezeigt.
   
 > [!IMPORTANT]  
->  Standardmäßig verfügt die öffentliche Rolle über die Berechtigung `VIEW ANY DATABASE`, sodass alle Anmeldenamen auf Datenbankinformationen zugreifen können. Verhindern Sie, dass ein Anmeldename eine Datenbank erkennt, indem Sie die Berechtigung `VIEW ANY DATABASE` mit `REVOKE` widerrufen, sodass sie nicht mehr öffentlich ist, oder die Berechtigung `VIEW ANY DATABASE` mit `DENY` für individuelle Anmeldungen verweigern.  
+>  Standardmäßig verfügt die öffentliche Rolle über die Berechtigung `VIEW ANY DATABASE`, sodass alle Anmeldenamen auf Datenbankinformationen zugreifen können. Verhindern Sie, dass ein Anmeldename eine Datenbank erkennt, indem Sie die Berechtigung `REVOKE` mit `VIEW ANY DATABASE` widerrufen, sodass sie nicht mehr öffentlich ist, oder die Berechtigung `DENY` mit `VIEW ANY DATABASE` für individuelle Anmeldungen verweigern.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -103,9 +103,9 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-return-the-id-of-the-current-database"></a>D. Rückgabe der ID der aktuellen Datenbank  
+### <a name="d-return-the-id-of-the-current-database"></a>D: Rückgabe der ID der aktuellen Datenbank  
 Im folgenden Beispiel wird die Datenbank-ID der aktuellen Datenbank zurückgegeben.
   
 ```sql
@@ -119,7 +119,7 @@ Im folgenden Beispiel wird die Datenbank-ID der AdventureWorksDW2012-Datenbank z
 SELECT DB_ID('AdventureWorksPDW2012');  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
 [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen (Transact-SQL))](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

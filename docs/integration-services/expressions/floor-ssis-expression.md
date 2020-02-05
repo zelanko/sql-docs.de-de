@@ -14,10 +14,10 @@ ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 56f69743e8bbfb8290e492613daeb07885f5ed7d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289615"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS-Ausdruck)
@@ -41,7 +41,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  Der numerische Datentyp des expression-Arguments. Das Ergebnis ist der ganzzahlige Teil des berechneten Werts mit dem gleichen Datentyp wie *numeric_expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  FLOOR gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  

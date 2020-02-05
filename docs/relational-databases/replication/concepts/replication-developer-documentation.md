@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 82b2d2401ed86609fde72c83b7111946a7a828dc
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: aa10d72d9b634ad2e7270566a6e6f43da26b4040
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768709"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287885"
 ---
 # <a name="replication-developer-documentation"></a>Entwicklerhandbuch (Replikation)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ ms.locfileid: "68768709"
  [Konzepte für die Replikationsprogrammierung](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
  Beschreibt die Planungsschritte zur Entwicklung einer Anwendung, die die Replikation verwendet.  
   
- [Replication System Stored Procedures Concepts (Konzepte für gespeicherte Systemprozeduren für die Replikation)](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
  Beschreibt, wie gespeicherte Systemprozeduren verwendet werden können, um programmgesteuerten Zugriff in einer Replikationstopologie bereitzustellen.  
   
- [Konzepte für Replikationsverwaltungsobjekte (RMO)](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
+ [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
  Erläutert die Konzepte zum Verwenden von Replikationsverwaltungsobjekten (RMO). Hierbei handelt es sich um eine verwaltete Codeassembly, die Replikationsfunktionen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kapselt.  
   
- [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+ [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
  Beschreibt die Verwendung von ausführbaren Dateien von Replikations-Agents.  
   
   

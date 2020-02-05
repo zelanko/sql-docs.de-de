@@ -23,10 +23,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072380"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68072380"
 
   Aktualisiert den derzeit konfigurierten Wert (die **config_value**-Spalte im **sp_configure**-Resultset) einer Konfigurationsoption, die mit der gespeicherten Systemprozedur **sp_configure** geändert wurde. Da einige Konfigurationsoptionen einen Serverstopp und -neustart erfordern, um den derzeit wirksamen Wert zu aktualisieren, aktualisiert RECONFIGURE nicht immer den derzeit wirksamen Wert (die **run_value**-Spalte im **sp_configure**-Resultset) mit einem geänderten Konfigurationswert.    
     
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Syntax    
     

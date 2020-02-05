@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095597"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Verwenden von Dienst-SIDs zum Erteilen von Berechtigungen für Dienste in SQL Server
@@ -32,7 +32,7 @@ Nachdem die Dienst-SID erstellt und bestätigt wurde, muss ihr in SQL Server ein
 > [!TIP]
 > Tritt der Fehler `Login failed for user 'NT AUTHORITY\SYSTEM'` auf, vergewissern Sie sich, dass die Dienst-SID für den gewünschten Dienst vorhanden ist, der Anmeldename für die Dienst-SID in SQL Server erstellt wurde und der Dienst-SID die entsprechenden Berechtigungen in SQL Server erteilt wurden.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 ### <a name="eliminate-service-accounts"></a>Entfernen von Dienstkonten
 
@@ -77,7 +77,7 @@ CREATE LOGIN [NT SERVICE\HealthService] FROM WINDOWS
 GO
 ```
 
-### <a name="d-add-an-existing-service-sid-as-a-login"></a>D. Hinzufügen einer vorhandenen Dienst-SID als Anmeldename
+### <a name="d-add-an-existing-service-sid-as-a-login"></a>D: Hinzufügen einer vorhandenen Dienst-SID als Anmeldename
 
 Im folgenden Beispiel wird ein Anmeldename für den Clusterdienst mithilfe von T-SQL erstellt. Indem Sie dem Clusterdienst Berechtigungen erteilen, ist es nicht mehr erforderlich, dem Systemkonto übermäßige Berechtigungen zu erteilen.
 

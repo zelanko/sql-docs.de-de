@@ -18,10 +18,10 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 01d7b5277e0711f5297e00d7b08b12e105b7f78b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930364"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry-Datentyp)
@@ -97,7 +97,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
 > [!NOTE]  
 >  Anstelle einer Instanz von `Polygon` wird eine Instanz von `CurvePolygon` zurückgegeben.  Informationen zum Zurückgeben einer `CurvePolygon`-Instanz finden Sie unter [BufferWithCurves &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
-### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. Aufrufen von STBuffer() mit einem negativen Parameterwert zur Rückgabe einer leeren Instanz  
+### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D: Aufrufen von STBuffer() mit einem negativen Parameterwert zur Rückgabe einer leeren Instanz  
  Im folgenden Beispiel wird gezeigt, was geschieht, wenn der *distance* -Parameter aus dem vorangehenden Beispiel -2 entspricht.  
   
 ```
@@ -160,7 +160,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- Von den ersten beiden **SELECT** -Anweisungen wird eine Instanz von `MultiPolygon` zurückgegeben, da der *distance* -Parameter kleiner oder gleich 1/2 des Abstands zwischen den beiden Punkten (1 1) und (1 4) ist. Von der dritten **SELECT**-Anweisung gibt `Polygon` zurückgegeben, da sich die zwischengespeicherten Instanzen der beiden Punkte (1 1) und (1 4) überschneiden.  
+ Von den ersten beiden **SELECT**-Anweisungen wird eine Instanz von `MultiPolygon` zurückgegeben, da der *distance*-Parameter kleiner oder gleich 1/2 des Abstands zwischen den beiden Punkten (1 1) und (1 4) ist. Von der dritten **SELECT**-Anweisung gibt `Polygon` zurückgegeben, da sich die zwischengespeicherten Instanzen der beiden Punkte (1 1) und (1 4) überschneiden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [BufferWithTolerance &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   

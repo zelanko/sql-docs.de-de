@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f5510d6c75380e48008740ab8a0f5b1c9f500fe5
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064544"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
@@ -35,7 +35,7 @@ ms.locfileid: "73064544"
   
 -   Zum Ersetzen einer gespeicherten Prozedur  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -153,7 +153,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Metadaten  
  In diesem Abschnitt werden die Systemkatalogsichten aufgelistet, die Sie verwenden können, um Metadaten zu benutzerdefinierten Funktionen zurückzugeben.  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): Zeigt die Definition von benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen an. Beispiel:  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): Zeigt die Definition von [!INCLUDE[tsql](../../includes/tsql-md.md)] benutzerdefinierten Funktionen an. Beispiel:  
   
 ```sql  
 SELECT definition, type   
@@ -167,12 +167,12 @@ GO
   
  [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): Zeigt Informationen zu den Parametern an, die in benutzerdefinierten Funktionen definiert sind.  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Zeigt die zugrunde liegenden Objekte an, auf die von einer Funktion verwiesen wird.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Zeigt die zugrunde liegenden Objekte an, auf die eine Funktion verweist.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CREATE FUNCTION-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Funktion erstellt wird.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Verwenden einer benutzerdefinierten Skalarwertfunktion zum Ändern eines Datentyps  
  Diese einfache Funktion verwendet einen **int**-Datentyp als Eingabe und gibt einen **decimal(10,2)** -Datentyp als Ausgabe zurück.  

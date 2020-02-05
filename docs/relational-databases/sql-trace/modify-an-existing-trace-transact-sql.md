@@ -14,10 +14,10 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2d1f0eeb0591bd4a51b79b8e83fbbd8d6023535f
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73632997"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Ändern einer vorhandenen Ablaufverfolgung (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73632997"
   
 ### <a name="to-modify-an-existing-trace"></a>So ändern Sie eine vorhandene Ablaufverfolgung  
   
-1.  Wenn die Ablaufverfolgung bereits ausgeführt wird, führen Sie **sp_trace_setstatus** aus, indem Sie mit **@status= 0** angeben, um die Ablaufverfolgung zu beenden.  
+1.  Wenn die Ablaufverfolgung bereits ausgeführt wird, führen Sie **sp_trace_setstatus** mit **@status = 0** aus, um die Ablaufverfolgung zu beenden.  
   
 2.  Um Ablaufverfolgungsereignisse zu ändern, führen Sie **sp_trace_setevent** aus, wobei Sie die Änderungen über die Parameter angeben. Der Reihenfolge nach sortiert stehen die folgenden Parameter zur Verfügung:  
 
@@ -40,7 +40,7 @@ ms.locfileid: "73632997"
   
      Beim Ändern des **\@on**-Parameters sollten Sie dessen Interaktion mit dem **\@columnid**-Parameter beachten:  
   
-    |ON|Column ID|Ergebnis|  
+    |EIN|Column ID|Ergebnis|  
     |--------|---------------|------------|  
     |ON (**1**)|NULL|Das Ereignis ist aktiviert. Alle Spalten werden gelöscht.|  
     ||NOT NULL|Die Spalte ist für das angegebene Ereignis aktiviert.|  

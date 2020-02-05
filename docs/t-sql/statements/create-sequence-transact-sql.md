@@ -23,10 +23,10 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2772440c98d103790808564b5cdddcde4c2dfd42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117184"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68117184"
   
  Informationen und Szenarien, in denen die **CREATE SEQUENCE** -Funktion und die **NEXT VALUE FOR** -Funktion verwendet werden, finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -151,7 +151,7 @@ Bei Erstellung mit der **CACHE**-Option kann ein unerwartetes Herunterfahren (z.
 ## <a name="metadata"></a>Metadaten  
  Weitere Informationen zu Sequenzen erhalten Sie durch Abfragen von [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die Berechtigung **CREATE SEQUENCE**, **ALTER**oder **CONTROL** für das SCHEMA.  
@@ -170,7 +170,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  Wenn eine Sequenz einen benutzerdefinierten Datentyp verwendet, muss der Ersteller der Sequenz über die REFERENCES-Berechtigung für den Typ verfügen.  
   
-### <a name="audit"></a>Überwachen von  
+### <a name="audit"></a>Audit  
  Überwachen Sie die **SCHEMA_OBJECT_CHANGE_GROUP**, um **CREATE SEQUENCE** zu überwachen.  
   
 ## <a name="examples"></a>Beispiele  
@@ -215,7 +215,7 @@ CREATE SEQUENCE Test.CountBy1
 GO  
 ```  
   
-### <a name="d-creating-a-sequence-that-starts-with-a-designated-number"></a>D. Erstellen einer Sequenz, die mit einer festgelegten Zahl beginnt  
+### <a name="d-creating-a-sequence-that-starts-with-a-designated-number"></a>D: Erstellen einer Sequenz, die mit einer festgelegten Zahl beginnt  
  Nachdem Thierry eine Tabelle importiert hat, stellt er fest, dass die höchste verwendete ID-Nummer 24,328 ist. Thierry benötigt eine Sequenz, die Zahlen generiert, die mit 24,329 starten. Im folgenden Code wird eine Sequenz erstellt, die mit 24,329 startet und um 1 inkrementiert wird.  
   
 ```sql  

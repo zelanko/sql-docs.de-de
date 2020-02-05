@@ -13,10 +13,10 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 01336bc87411fec167a3f78dfd3bf397a93b6d2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947798"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP-Datenbanken
@@ -29,7 +29,7 @@ Das Leistungsobjekt **SQL Server XTP-Datenbanken** spezifische In-Memory-OLTP-Da
 
 Diese Tabelle beschreibt die **SQL Server XTP-Datenbanken** -Leistungsindikatoren.
 
-|Leistungsindikator|und Beschreibung| 
+|Leistungsindikator|BESCHREIBUNG| 
 |-------------|-----------------|  
 |**Durchschnittliches Transaktionssegment – großer Datenumfang**|Mittlere Größe von Transaktionssegmenten bei großer Datennutzlast. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|
 |**Durchschnittliche Transaktionssegmentgröße**|Mittlere Größe von Transaktionssegmenten der Nutzlast. Wenn dieser Wert gegen null tendiert, werden mehr Seiten aus der Back-End-Zuweisung zugewiesen. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|
@@ -66,4 +66,4 @@ Diese Tabelle beschreibt die **SQL Server XTP-Datenbanken** -Leistungsindikatore
 
 
 ## <a name="see-also"></a>Weitere Informationen  
-[Leistungsindikatoren für SQL Server XTP &#40;In-Memory OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
+[Leistungsindikatoren für SQL Server XTP &#40;In-Memory-OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

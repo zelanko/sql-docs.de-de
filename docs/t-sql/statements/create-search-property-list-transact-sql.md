@@ -24,10 +24,10 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117280"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68117280"
 
   Erstellt eine neue Sucheigenschaftenliste. Mit einer Sucheigenschaftenliste können eine oder mehrere Sucheigenschaften angegeben werden, die Sie in einen Volltextindex einschließen möchten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -96,7 +96,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. Erstellen einer leeren Eigenschaftenliste und Zuordnen zu einem Index  
- Im folgenden Beispiel wird die neue Sucheigenschaftenliste `DocumentPropertyList` erstellt. Im Beispiel wird dann dem Volltextindex der `Production.Document`-Tabelle in der `AdventureWorks`-Datenbank die neue Eigenschaftenliste mithilfe einer [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)-Anweisung zugewiesen, ohne eine Auffüllung zu starten.  
+ Im folgenden Beispiel wird die neue Sucheigenschaftenliste `DocumentPropertyList` erstellt. Im Beispiel wird dann dem Volltextindex der [-Tabelle in der ](../../t-sql/statements/alter-fulltext-index-transact-sql.md)-Datenbank die neue Eigenschaftenliste mithilfe einer `Production.Document`ALTER FULLTEXT INDEX`AdventureWorks`-Anweisung zugewiesen, ohne eine Auffüllung zu starten.  
   
 > [!NOTE]  
 >  Ein Beispiel, in dem dieser Sucheigenschaftenliste mehrere vordefinierte, bekannte Sucheigenschaften hinzugefügt werden, finden Sie unter [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md). Wenn der Liste Sucheigenschaften hinzugefügt wurden, muss der Datenbankadministrator eine weitere ALTER FULLTEXT INDEX-Anweisung mit der START FULL POPULATION-Klausel verwenden.  

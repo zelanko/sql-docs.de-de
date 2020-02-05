@@ -11,10 +11,10 @@ ms.assetid: 614f07b5-f221-4013-9f8d-22964cf42270
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4a6ca39149d6b14276e4a98384f266bb666ed10d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115550"
 ---
 # <a name="troubleshoot-sql-server-resource-health-sql-server-utility"></a>Fehlerbehebung für die SQL Server-Ressourcenintegrität (SQL Server-Hilfsprogramm)
@@ -29,6 +29,6 @@ ms.locfileid: "68115550"
   
 -   [So identifizieren Sie die SQL Server-Version und -Edition](https://go.microsoft.com/fwlink/?LinkID=178504)  
   
--   [Beheben von Leistungsproblemen in SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=151354)  
+-   [Behandlung von Leistungsproblemen in SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=151354)  
   
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 400de28e3191b953c1f44dfdf0777678f031e140
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119125"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68119125"
 
 Diese Funktion gibt einen **datetime2**-Wert für die angegebenen Argumente für Datum und Zeit zurück. Der zurückgegebene Wert verfügt über eine Genauigkeit, die durch das precision-Argument angegeben wird.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ Ein ganzzahliger Ausdruck, der einen Wert für Sekundenbruchteile angibt.
 Ein ganzzahliger Ausdruck, der die Genauigkeit des **datetime2**-Werts angibt, der von `DATETIME2FROMPARTS` zurückgegeben wird.
   
 ## <a name="return-types"></a>Rückgabetypen
-**datetime2(** *precision* **)**
+**datetime2 (** *Genauigkeit* **)**
   
 ## <a name="remarks"></a>Bemerkungen  
 `DATETIME2FROMPARTS` gibt einen vollständig initialisierten **datetime2**-Wert zurück. `DATETIME2FROMPARTS` löst einen Fehler aus, wenn mindestens ein erforderliches Argument über einen ungültigen Wert verfügt. `DATETIME2FROMPARTS` gibt NULL zurück, wenn mindestens ein erforderliches Argument den Wert NULL enthält. Wenn das *precision*-Argument jedoch einen NULL-Wert enthält, löst `DATETIME2FROMPARTS` einen Fehler aus.
@@ -126,7 +126,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)
   
   

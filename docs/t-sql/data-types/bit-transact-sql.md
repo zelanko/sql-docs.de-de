@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e5ff96f07db7b368acc7ee36296516e047bc0475
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126000"
 ---
 # <a name="bit-transact-sql"></a>bit (Transact-SQL)
@@ -33,11 +33,11 @@ ms.locfileid: "68126000"
 ## <a name="remarks"></a>Bemerkungen  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] optimiert das Speichern von **bit**-Spalten. Wenn in einer Tabelle 8 oder weniger **bit**-Spalten vorhanden sind, werden die Spalten als 1 Byte gespeichert. Sind zwischen 9 und 16 **bit** -Spalten vorhanden, werden diese als 2 Byte gespeichert usw.
   
-Die Zeichenfolgenwerte TRUE und FALSE können in **bit**-Werte konvertiert werden: TRUE wird in 1 konvertiert, und FALSE wird in 0 konvertiert.
+Die Zeichenfolgenwerte TRUE und FALSE können in **bit** -Werte konvertiert werden: TRUE wird in 1 konvertiert, und FALSE wird in 0 konvertiert.
   
 Die Konvertierung in den bit-Datentyp ergibt für alle Werte ungleich 0 den Wert 1.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

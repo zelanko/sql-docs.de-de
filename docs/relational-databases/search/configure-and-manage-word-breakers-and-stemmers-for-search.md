@@ -22,17 +22,17 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056262"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wörtertrennung und Wortstammerkennung führen eine linguistische Analyse aller volltextindizierten Daten aus. Die linguistische Analyse führt die folgenden beiden Schritte aus:
 
--   **Suchen von Wortgrenzen (Wörtertrennung)** . Die *Wörtertrennung* identifiziert einzelne Wörter, indem die Wortgrenzen basierend auf den lexikalischen Regeln der Sprache ermittelt werden. Jedes Wort (auch bezeichnet als *Token*) wird zur Größenreduzierung in einer komprimierten Darstellung in den Volltextindex eingefügt.
+-   **Suchen von Wortgrenzen (Wörtertrennung)** . Die *Wörtertrennung* einzelne Wörter, indem die Wortgrenzen basierend auf den lexikalischen Regeln der Sprache ermittelt werden. Jedes Wort (auch bezeichnet als *Token*) wird zur Größenreduzierung in einer komprimierten Darstellung in den Volltextindex eingefügt.
 
 -   **Konjugieren von Verben (Wortstammerkennung)** . Die *Wortstammerkennung* generiert Flexionsformen eines bestimmten Worts basierend auf den jeweiligen Regeln der Sprache. (Zum Beispiel sind „laufend“, „lief“ und „gelaufen“ verschiedene Formen des Worts „laufen“.)
 
@@ -47,7 +47,7 @@ Um Wörtertrennungen und Wortstammerkennungen für alle von SQL Server unterstü
 
 ## <a name="get-the-list-of-supported-languages"></a>Anzeigen der vollständigen Liste der unterstützten Sprachen
 
-Verwenden Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, um die Liste der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuche unterstützten Sprachen anzuzeigen. Das Vorhandensein einer Sprache in der Liste gibt an, dass Wörtertrennungen für diese Sprache registriert sind. 
+Verwenden Sie die folgende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anweisung, um die Liste der von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Volltextsuche unterstützten Sprachen anzuzeigen. Das Vorhandensein einer Sprache in der Liste gibt an, dass Wörtertrennungen für diese Sprache registriert sind. 
   
 ```sql
 SELECT * FROM sys.fulltext_languages
@@ -70,7 +70,7 @@ Zusätzliche Optionen und weitere Informationen finden Sie unter [sp_help_fullte
 Wenn Sie eine Wörtertrennung hinzufügen, entfernen oder ändern, müssen Sie die Liste der Microsoft Windows-Gebietsschemabezeichner (LCID) aktualisieren, die bei Volltextindizierung und -abfrage unterstützt werden. Weitere Informationen finden Sie unter [anzeigen oder Ändern von registrierten filtern und Wörtertrennungen](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="default"></a> Festlegen der Option für die Volltext-Standardsprache  
- Bei einer lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die Option [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltext-Standardsprache **vom** -Setup auf die Sprache des Servers festgelegt, falls eine geeignete Übereinstimmung vorhanden ist. Bei einer nicht lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird Englisch für die Option **Volltext-Standardsprache** verwendet.  
+ Bei einer lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die Option [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default full-text language **vom** -Setup auf die Sprache des Servers festgelegt, falls eine geeignete Übereinstimmung vorhanden ist. Bei einer nicht lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird Englisch für die Option **Standard-Volltextsprache** verwendet.  
   
  Beim Erstellen oder Ändern eines Volltextindexes können Sie für jede volltextindizierte Spalte eine andere Sprache angeben. Ist für eine Spalte keine Sprache angegeben, wird standardmäßig der Wert der Konfigurationsoption **Volltext-Standardsprache**verwendet.  
   

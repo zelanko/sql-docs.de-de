@@ -12,13 +12,13 @@ ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f880cd41cdde662913099e06ef93eacc17d94265
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007034"
 ---
-# <a name="mssqlserver802---database-engine-error"></a>Datenbank-Engine-Fehler MSSQLSERVER_802
+# <a name="mssqlserver_802---database-engine-error"></a>Datenbank-Engine-Fehler MSSQLSERVER_802
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -40,7 +40,7 @@ In der folgenden Liste werden allgemeine Schritte erläutert, die bei der Proble
   
 1.  Überprüfen Sie, ob andere Anwendungen oder Dienste Arbeitsspeicher auf dem Server beanspruchen. Rekonfigurieren Sie weniger kritische Anwendungen oder Dienste, damit sie weniger Speicher beanspruchen.  
   
-2.  Beginnen Sie die Sammlung der Leistungsindikatoren für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Puffer-Manager**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Speicher-Manager**.  
+2.  Beginnen Sie die Sammlung der Leistungsindikatoren für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Puffer-Manager** und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Speicher-Manager**.  
   
 3.  Überprüfen Sie die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicherkonfigurationsparameter:  
   

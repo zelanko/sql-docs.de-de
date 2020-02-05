@@ -22,10 +22,10 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682054"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Genauigkeit, Dezimalstellen und Länge (Transact-SQL)
@@ -84,7 +84,7 @@ select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10
 In diesem Fall beträgt die Genauigkeit 61 und die Dezimalstellen betragen 20.
 Die Dezimalstellen sind größer als 6 und der integrale Bestandteil (`precision-scale = 41`) größer als 32. Dies entspricht also Fall (3) in den Multiplikationsregeln, und der Ergebnistyp ist `decimal(38,6)`.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   

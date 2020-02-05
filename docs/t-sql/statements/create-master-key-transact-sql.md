@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 64e05a3498a489cfa16d913b953b39c0d0ccb251
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816848"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "71816848"
 
 Erstellen Sie einen Datenbankhauptschlüssel in der Masterdatenbank.
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 PASSWORD ='*password*': Ist das zum Verschlüsseln des Hauptschlüssels in der Datenbank verwendete Kennwort. *password* muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. *password* ist in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] optional.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von privaten Schlüsseln der in der Datenbank vorhandenen Zertifikate und asymmetrischen Schlüssel verwendet wird. Beim Erstellen wird der Hauptschlüssel mithilfe des AES_256-Algorithmus und eines vom Benutzer angegebenen Kennworts verschlüsselt. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]wird der Triple DES-Algorithmus verwendet. Die automatische Entschlüsselung für den Hauptschlüssel kann aktiviert werden, indem eine Kopie des Schlüssels mit dem Diensthauptschlüssel verschlüsselt und sowohl in der Datenbank als auch in master gespeichert wird. In der Regel wird die in master gespeicherte Kopie im Hintergrund aktualisiert, sobald der Hauptschlüssel geändert wird. Dieses Standardverhalten kann mithilfe der DROP ENCRYPTION BY SERVICE MASTER KEY-Option von [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md) geändert werden. Ein Hauptschlüssel, der nicht mit dem Diensthauptschlüssel verschlüsselt ist, muss mithilfe der [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md)-Anweisung und eines Kennworts geöffnet werden.
 

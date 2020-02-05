@@ -13,10 +13,10 @@ ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892894"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services mit Always On-Verfügbarkeitsgruppen
@@ -27,7 +27,7 @@ ms.locfileid: "68892894"
   
  Das Verarbeiten und Abfragen sind schreibgeschützte Arbeitsauslastungen. Sie können die Leistung verbessern, indem Sie diese Arbeitsauslastungen in ein lesbares sekundäres Replikat auslagern. Dieses Szenario erfordert zusätzliche Konfiguration. Stellen Sie mithilfe der Prüfliste in diesem Thema sicher, dass Sie alle Schritte ausführen.  
   
-##  <a name="bkmk_prereq"></a> Erforderliche Komponenten  
+##  <a name="bkmk_prereq"></a> Voraussetzungen  
  Sie benötigen auf allen Replikaten eine SQL Server-Anmeldung. Verfügbarkeitsgruppen, Listener und Datenbanken müssen von einem Mitglied der **sysadmin** -Rolle konfiguriert werden. Benutzer benötigen jedoch für den Zugriff auf die Datenbank von einem Analysis Services-Client aus lediglich **db_datareader** -Berechtigungen.  
   
  Verwenden Sie einen Datenanbieter, der das TDS (Tabular Data Stream)-Protokoll, Version 7.4 oder höher, unterstützt, z. B. SQL Server Native Client 11.0 oder den Datenanbieter für SQL Server in .NET Framework 4.02.  
@@ -49,7 +49,7 @@ ms.locfileid: "68892894"
     > [!NOTE]  
     >  Diese Schritte sind unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md) beschrieben. Dort finden Sie weitere Informationen und alternative Anweisungen zum Ausführen dieser Aufgabe.  
   
-2.  Erweitern Sie die Knoten **Always On High Availability** (Always On Hochverfügbarkeit) und **Verfügbarkeitsgruppen**.  
+2.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** und den Knoten **Verfügbarkeitsgruppen** .  
   
 3.  Klicken Sie auf die Verfügbarkeitsgruppe, deren Replikat geändert werden soll. Erweitern Sie **Verfügbarkeitsreplikate**.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "68892894"
   
     -   Wählen Sie in der Dropdownliste **Lesbare sekundäre Rolle** den Eintrag **Nur beabsichtigte Lesevorgänge**aus.  
   
-    -   Wählen Sie in der Dropdownliste **Verbindungen in primärer Rolle** den Eintrag **Alle Verbindungen zulassen**aus. Dies ist die Standardeinstellung.  
+    -   Wählen Sie in der Dropdownliste **Verbindungen in primärer Rolle** den Eintrag **Alle Verbindungen zulassen**aus. Dies ist die Standardoption.  
   
     -   Optional können Sie in der Dropdownliste **Verfügbarkeitsmodus** den Eintrag **Synchroner Commit**auswählen. Dieser Schritt ist nicht erforderlich, jedoch wird durch das Festlegen dieser Option Datenparität zwischen dem primären und sekundären Replikat sichergestellt.  
   
          Diese Eigenschaft ist auch eine Voraussetzung für geplantes Failover. Wenn Sie zu Testzwecken ein geplantes manuelles Failover ausführen möchten, legen Sie für das primäre und das sekundäre Replikat **Verfügbarkeitsmodus** auf **Synchroner Commit** fest.  
   
-#### <a name="step-2-configure-read-only-routing"></a>Schritt 2: Konfigurieren des schreibgeschützten Routings  
+#### <a name="step-2-configure-read-only-routing"></a>Schritt 2: Konfigurieren von schreibgeschütztem Routing  
   
 1.  Stellen Sie eine Verbindung mit dem primären Replikat her.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "68892894"
 ##  <a name="bkmk_test"></a> Testen der Konfiguration  
  Nachdem Sie das sekundäre Replikat konfiguriert und in Analysis Services eine Datenquellenverbindung erstellt haben, können Sie überprüfen, ob Verarbeitungs- und Abfragebefehle an das sekundäre Replikat umgeleitet werden. Sie können auch ein geplantes manuelles Failover ausführen, um den Wiederherstellungsplan für dieses Szenario zu überprüfen.  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Schritt 1: Überprüfen, ob die Datenquellenverbindung auf das sekundäre Replikat umgeleitet wird  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Schritt 1: Überprüfen, ob die Datenquellenverbindung an das sekundäre Replikat umgeleitet wird  
   
 1.  Starten Sie SQL Server Profiler, und stellen Sie eine Verbindung mit der SQL Server-Instanz her, die das sekundäre Replikat hostet.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "68892894"
 ##  <a name="bkmk_whathappens"></a> Vorgänge nach einem Failover  
  Während eines Failovers geht ein sekundäres Zielreplikat in die primäre Rolle über, und das frühere primäre Replikat geht in die sekundäre Rolle über. Alle Clientverbindungen werden beendet, der Besitz am Verfügbarkeitsgruppenlistener wechselt mit der primären Replikatrolle zu einer neuen SQL Server-Instanz, und der Listenerendpunkt wird an die virtuellen IP-Adressen und TCP-Ports der neuen Instanz gebunden. Weitere Informationen finden Sie unter [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Wenn es bei der Verarbeitung zu einem Failover kommen sollte, wird die folgende Fehlermeldung in der Protokolldatei oder im Ausgabefenster in Analysis Services zurückgegeben: "OLE DB error: OLE DB or ODBC error: Communication link failure; 08S01; TPC Provider: An existing connection was forcibly closed by the remote host. ; 08S01.“  
+ Wenn während der Verarbeitung ein Failover erfolgt, wird in Analysis Services in der Protokolldatei oder im Ausgabefenster der folgende Fehler angezeigt „OLE DB-Fehler: OLE DB- oder ODBC-Fehler: Kommunikationslinkfehler; 08S01; TPC-Anbieter: Eine vorhandene Verbindung wurde vom Remotehost geschlossen. ; 08S01.“  
   
  Dieser Fehler sollte behoben sein, wenn Sie eine Minute lang warten und es dann erneut versuchen. Sofern die Verfügbarkeitsgruppe ordnungsgemäß für ein lesbares sekundäres Replikat konfiguriert ist, wird die Verarbeitung auf dem neuen sekundären Replikat fortgesetzt, wenn Sie die Verarbeitung erneut starten.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "68892894"
 ##  <a name="bkmk_writeback"></a> Rückschreiben mithilfe einer Always On-Verfügbarkeitsdatenbank  
  Rückschreiben ist eine Analysis Services-Funktion, die Was-wäre-wenn-Analysen in Excel unterstützt. Sie wird auch häufig für Budgetierungs- und Prognosetasks in benutzerdefinierten Anwendungen verwendet.  
   
- Die Unterstützung für Rückschreiben erfordert eine READWRITE-Clientverbindung. Wenn Sie in Excel versuchen, in eine schreibgeschützte Verbindung zurückzuschreiben, tritt der folgende Fehler auf: „Daten konnten nicht aus der externen Datenquelle abgerufen werden.“ „Daten konnten nicht aus der externen Datenquelle abgerufen werden.“  
+ Die Unterstützung für Rückschreiben erfordert eine READWRITE-Clientverbindung. Wenn Sie in Excel versuchen, in eine schreibgeschützte Verbindung zurückzuschreiben, tritt der folgende Fehler auf: „Daten konnten nicht aus der externen Datenquelle abgerufen werden“. „Daten konnten nicht aus der externen Datenquelle abgerufen werden.“  
   
  Wenn Sie eine Verbindung ausschließlich für den Zugriff auf ein lesbares sekundäres Replikat konfiguriert haben, müssen Sie jetzt eine neue Verbindung als READWRITE-Verbindung mit dem primären Replikat konfigurieren.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "68892894"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Always On Policies for Operational Issues with Always On Availability Groups (SQL Server) (Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQL Server))](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Erstellen einer Datenquelle (SSAS: mehrdimensional)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [Rückschreiben von Dimensionen aktivieren](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  

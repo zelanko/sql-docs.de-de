@@ -16,10 +16,10 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0001806e1a8f0cba9a879297b4dab49367dd84a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297013"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Erfassen einer Liste für die ForEach-Schleife mit dem Skripttask
@@ -32,11 +32,11 @@ ms.locfileid: "71297013"
 > [!NOTE]  
 >  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Im folgenden Beispiel werden Methoden des **System.IO**-Namespace verwendet, um eine Liste von Excel-Arbeitsmappen auf dem Computer zu sammeln, die älter oder neuer als eine vom Benutzer in der Variablen definierte Anzahl von Tagen sind. Verzeichnisse des Laufwerks C werden rekursiv nach Dateien durchsucht, die eine .xls-Erweiterung aufweisen. Anschließend wird das Datum der letzten Änderung der Datei überprüft, um festzustellen, ob die Datei in die Liste gehört. Geeignete Dateien werden einer **ArrayList** hinzugefügt, und die **ArrayList** wird für die spätere Verwendung in einem Foreach-Schleifencontainer in einer Variablen gespeichert. Der Foreach-Schleifencontainer wird für die Verwendung des Foreach-Enumerators für Daten aus Variable konfiguriert.  
   
 > [!NOTE]  
->  Variablen, die Sie mit dem Foreach-Enumerator für Daten aus Variable verwenden, müssen den Typ **Object** aufweisen. Objekte, die Sie in den Variablen platzieren, müssen eine der folgenden Schnittstellen implementieren: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** oder **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Ein **Array** oder eine **ArrayList** wird häufig verwendet. Die **ArrayList** erfordert einen Verweis und eine **Imports**-Anweisung für den **System.Collections**-Namespace.  
+>  Variablen, die Sie mit dem Foreach-Enumerator für Daten aus Variable verwenden, müssen den Typ **Object** aufweisen. Das Objekt, das Sie in der Variablen platzieren, muss eine der folgenden Schnittstellen implementieren: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** oder **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Ein **Array** oder eine **ArrayList** wird häufig verwendet. Die **ArrayList** erfordert einen Verweis und eine **Imports**-Anweisung für den **System.Collections**-Namespace.  
   
  Sie können mit diesem Task experimentieren, indem Sie verschiedene positive und negative Werte für die Paketvariable `FileAge` einsetzen. Sie können z. B. den Wert 5 eingeben, um nach Dateien zu suchen, die in den letzten fünf Tagen erstellt wurden, oder den Wert -3 für Dateien, die vor mehr als drei Tagen angelegt wurden. Diese Aufgabe kann bei Laufwerken, die viele zu durchsuchende Ordner enthalten, ein bis zwei Minuten in Anspruch nehmen.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71297013"
   
 1.  Erstellen Sie eine Paketvariable vom Typ integer mit dem Namen `FileAge`, und geben Sie einen positiven oder negativen ganzzahligen Wert ein. Ist der Wert positiv, sucht der Code nach Dateien, die neuer als die angegebene Anzahl von Tagen ist. Bei negativen Werten wird nach Dateien gesucht, die älter als die genannte Anzahl von Tagen sind.  
   
-2.  Erstellen Sie eine Paketvariable vom Typ **Object** mit dem Namen `FileList`, um zur späteren Verwendung mit dem Foreach-Enumerator für Daten aus Variable die Liste der Dateien aufzunehmen, die vom Skripttask erfasst wurden.  
+2.  Erstellen Sie eine Paketvariable vom Typ `FileList`Object**mit dem Namen**, um zur späteren Verwendung mit dem Foreach-Enumerator für Daten aus Variable die Liste der Dateien aufzunehmen, die vom Skripttask erfasst wurden.  
   
 3.  Fügen Sie die `FileAge`-Variable der **ReadOnlyVariables**-Eigenschaft des Skripttasks sowie die `FileList`-Variable der **ReadWriteVariables**-Eigenschaft hinzu.  
   

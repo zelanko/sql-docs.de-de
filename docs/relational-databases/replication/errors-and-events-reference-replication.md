@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a42dc8a023e1d44e911907cc96a77017dfc69eaf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 813607ed006fb38120fd4a6f565fb9d6280f10b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768505"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286414"
 ---
 # <a name="errors-and-events-reference-replication"></a>Fehler- und Ereignisreferenz (Replikation)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Dieser Abschnitt der Dokumentation enthält Informationen zu Ursachen und Lösungen für eine Reihe von Fehlern, die im Zusammenhang mit der Replikation auftreten können.  
   
-|Fehler|MessageBox|  
+|Fehler|`Message`|  
 |-----------|-------------|  
 |[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Eine Zeile mit doppeltem Schlüssel kann in das „%1!s!“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
 |[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Verletzung der %1!s!-Einschränkung '%2!s!'. Ein doppelter Schlüssel kann in das „%.\*ls“-Objekt nicht eingefügt werden.|  
@@ -53,7 +53,7 @@ ms.locfileid: "68768505"
 |[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
 |[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
 |[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|Der Schwellenwert [%s:%s] für die [%s]-Veröffentlichung wurde festgelegt. Stellen Sie sicher, dass der Merge-Agent ausgeführt wird und die erwartete Anforderung erfüllen kann.|  
-|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Fehler bei der Anmeldung für den Benutzer „%.*ls'.%.\*ls“|  
+|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Fehler bei der Anmeldung für den Benutzer '%.*ls'.%.\*ls|  
 |[MSSQL_ENG018752](../../relational-databases/replication/mssql-eng018752.md)|Nur jeweils ein Protokolllese-Agent oder eine protokollbezogene Prozedur (sp_repldone, sp_replcmds oder sp_replshowcmds) kann eine Verbindung mit einer Datenbank herstellen. Falls Sie eine protokollbezogene Prozedur ausgeführt haben, löschen Sie vor dem Starten des Protokolllese-Agents oder dem Ausführen einer weiteren protokollbezogenen Prozedur die Verbindung, über die sie ausgeführt wurde, oder führen Sie 'sp_replflush' über diese Verbindung aus.|  
 |[MSSQL_ENG020554](../../relational-databases/replication/mssql-eng020554.md)|Vom Replikations-Agent wurde in %ld Minuten keine Statusmeldung protokolliert. Möglicherweise reagiert der Agent nicht mehr, oder das System ist stark ausgelastet. Überprüfen Sie, ob Datensätze an das Ziel repliziert werden und ob die Verbindungen mit dem Abonnenten, Verleger und Verteiler noch aktiv sind.|  
 |[MSSQL_ENG020557](../../relational-databases/replication/mssql-eng020557.md)|Der Agent wird heruntergefahren. Weitere Informationen finden Sie im Auftragsverlauf des SQL Server-Agents für den Auftrag '%s'.|  
@@ -78,7 +78,7 @@ ms.locfileid: "68768505"
 |MSSQL_ENG021642. Siehe [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungsserver mit dem Namen '%1!s!' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus.|  
 |MSSQL_ENG021663. Siehe [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Für die [%1!s!].[%2!s!]-Quelltabelle wurde kein gültiger Primärschlüssel gefunden.|  
 |MSSQL_ENG021684. Siehe [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Der Administratoranmeldung für den '%s'-Oracle-Verleger sind unzureichende Berechtigungen zugeordnet.|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|„%s“ muss eine gültige Windows-Anmeldung der folgenden Form sein: "MACHINE Login" oder "DOMAIN Login". Lesen Sie die Dokumentation zu '%3!s!'.|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%1!s!' muss eine gültige Windows-Anmeldung der folgenden Form sein: 'MACHINE\Login' oder 'DOMAIN\Login'. Lesen Sie die Dokumentation zu '%3!s!'.|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|Der %1!s!-Agent-Auftrag muss vor dem Fortsetzen des Vorgangs über '%2!s!' hinzugefügt werden. Lesen Sie die Dokumentation zu '%3!s!'.|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|Der Prozess konnte '%1' nicht auf '%2' ausführen.|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|Vom Mergeprozess konnte der Generierungsverlauf auf '%1' nicht geändert werden. Führen Sie zur Problembehandlung einen Neustart der Synchronisierung mit ausführlicher Verlaufsprotokollierung aus, und geben Sie eine Ausgabedatei an, in die geschrieben werden soll.|  

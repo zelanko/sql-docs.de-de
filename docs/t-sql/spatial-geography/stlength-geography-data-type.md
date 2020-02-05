@@ -18,10 +18,10 @@ ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 61487b976322f8725f9398e54f8292919ff0ca58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139110"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (geography-Datentyp)

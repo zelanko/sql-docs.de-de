@@ -13,10 +13,10 @@ ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a280477dbc8a41292ff3ee3519ec74df4d5c7ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943412"
 ---
 # <a name="examples-using-auto-mode"></a>Beispiele: Verwenden des AUTO-Modus
@@ -137,7 +137,7 @@ FOR XML AUTO;
 <SOH Name="Eugene Huang" SalesOrderID="43767" />  
 ```  
   
- Um die <`IndividualCustomer`>-Elemente abzurufen, die das `Name`-Attribut besitzen, das die Kopfzeileninformationen zu jeder Bestellung als ein Unterelement enthält, wird die Abfrage mithilfe eines untergeordneten SELECT-Ausdrucks umgeschrieben. Der innere SELECT-Ausdruck erstellt eine temporäre `IndividualCustomer`-Tabelle mit der berechneten Spalte, die die Namen der einzelnen Kunden enthält. Diese Tabelle wird anschließend mit der `SalesOrderHeader` -Tabelle verknüpft, um das Resultset zu erzielen.  
+ Um die <`IndividualCustomer`>-Elemente abzurufen, die das `Name`-Attribut besitzen, das die Kopfzeileninformationen zu jeder Bestellung als ein Unterelement enthält, wird die Abfrage mithilfe eines untergeordneten SELECT-Ausdrucks umgeschrieben. Der innere SELECT-Ausdruck erstellt eine temporäre `IndividualCustomer` -Tabelle mit der berechneten Spalte, die die Namen der einzelnen Kunden enthält. Diese Tabelle wird anschließend mit der `SalesOrderHeader` -Tabelle verknüpft, um das Resultset zu erzielen.  
   
  Beachten Sie, dass die `Sales.Customer` -Tabelle individuelle Kundeninformationen speichert, wozu auch der `PersonID` -Wert für den Kunden gehört. Diese `PersonID` wird dann zum Suchen des Kontaktnamens in der `Person.Person` -Tabelle verwendet.  
   

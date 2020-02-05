@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f3e07e6762a288fe646477ad0218e5f54eb3b2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951063"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Prüfpunktvorgang für speicheroptimierte Tabellen
@@ -30,7 +30,7 @@ ms.locfileid: "67951063"
   
  Für datenträgerbasierte Tabellen wird ein automatischer Prüfpunkt basierend auf der Konfigurationsoption Wiederherstellungsintervall erstellt. (Weitere Informationen finden Sie unter [Ändern der Zielwiederherstellungszeit einer Datenbank &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).)  
   
- Für speicheroptimierte Tabellen wird ein automatischer Prüfpunkt erstellt, wenn die Größe der Transaktionsprotokolldatei seit dem letzten Prüfpunkt um 1,5 GB gestiegen ist. In dieser Größe von 1,5 GB sind Transaktionsprotokolldatensätze sowohl für datenträgerbasierte als auch für speicheroptimierte Tabellen enthalten.  
+ Für speicheroptimierte Tabellen wird ein automatischer Prüfpunkt erstellt, wenn die Größe der Transaktionsprotokolldatei seit dem letzten Prüfpunkt um 1,5 GB gestiegen ist. In dieser Größe von 1,5 GB sind Transaktionsprotokolldatensätze sowohl für datenträgerbasierte als auch für speicheroptimierte Tabellen enthalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

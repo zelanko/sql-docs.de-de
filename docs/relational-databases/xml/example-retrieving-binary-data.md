@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
 ms.openlocfilehash: c168c76d33ac90bc658fad86404aea45b322d037
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71199467"
 ---
 # <a name="example-retrieving-binary-data"></a>Beispiel: Abrufen von Binärdaten

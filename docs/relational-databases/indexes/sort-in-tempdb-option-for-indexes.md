@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03dbb54a41ef319b7a44185cee00d5de7d46b126
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909544"
 ---
-# <a name="sortintempdb-option-for-indexes"></a>SORT_IN_TEMPDB-Option für Indizes
+# <a name="sort_in_tempdb-option-for-indexes"></a>SORT_IN_TEMPDB-Option für Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Wenn Sie einen Index erstellen oder neu erstellen, indem Sie die SORT_IN_TEMPDB-Option auf ON setzen, wird [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] angewiesen, zum Speichern der Zwischenergebnisse der Sortierung für die Erstellung eines Indexes **tempdb** zu verwenden. Obwohl durch diese Option die Menge an Speicherplatz erhöht wird, die zur Indexerstellung verwendet wird, kann dadurch die Zeit verringert werden, die zum Erstellen eines Indexes erforderlich ist, wenn **tempdb** auf einer anderen Gruppe von Datenträgern gespeichert ist als die Benutzerdatenbank. Weitere Informationen zu **tempdb**finden Sie unter [Konfigurieren der Serverkonfigurationsoption Speicher für Indexerstellung](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "67909544"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] führt die sortierten Läufe der Indexzeilen auf Blattebene in einem einzelnen, sortierten Strom zusammen. Die Komponente von [!INCLUDE[ssDE](../../includes/ssde-md.md)] für das Zusammenführen der Sortierung beginnt mit der ersten Seite jedes Sortierlaufs, sucht nach dem niedrigsten Schlüssel in allen Seiten und gibt die Blattzeile an die Indexerstellungskomponente weiter. Danach wird der nächste niedrigste Schlüssel verarbeitet, dann der darauf folgende usw. Wenn die letzte Indexzeile auf Blattebene aus einer Sortierlaufseite extrahiert wurde, wechselt der Prozess zur nächsten Seite dieses Sortierlaufs. Wenn alle Seiten in einem Sortierlaufblock verarbeitet worden sind, wird der Block freigegeben. Bei der Übergabe jeder Blattindexzeile an die Indexerstellungskomponente wird diese Zeile in einer Blattindexseite im Puffer eingeschlossen. In jede Blattseite wird geschrieben, wenn sie aufgefüllt wird. Während des Beschreibens von Blattseiten erstellt [!INCLUDE[ssDE](../../includes/ssde-md.md)] außerdem die oberen Ebenen des Indexes. In jede Indexseite einer oberen Ebene wird geschrieben, wenn sie aufgefüllt wird.  
   
-## <a name="sortintempdb-option"></a>SORT_IN_TEMPDB-Option  
+## <a name="sort_in_tempdb-option"></a>SORT_IN_TEMPDB-Option  
  Wenn die SORT_IN_TEMPDB-Option auf OFF gesetzt ist (Standardeinstellung), werden die Sortierläufe in der Zieldateigruppe gespeichert. Während der ersten Phase der Indexerstellung werden durch die sich abwechselnden Lesevorgänge in den Basistabellenseiten und den Schreibvorgängen der Sortierläufe die Schreib-/Leseköpfe des Datenträgers von einem Bereich des Datenträgers in einen anderen Bereich verschoben. Die Köpfe befinden sich in dem Bereich der Datenseiten, während die Datenseiten gescannt werden. Sie werden in einen Bereich mit freiem Speicherplatz verschoben, wenn die Sortierpuffer aufgefüllt werden und der aktuelle Sortierlauf auf den Datenträger geschrieben werden muss. Anschließend werden sie wieder in den Bereich der Datenseiten verschoben, wenn der Seitenscanvorgang in der Tabelle fortgesetzt wird. Das Verschieben der Schreib-/Leseköpfe nimmt in der zweiten Phase zu. Zu dieser Zeit wechselt der Sortierprozess in der Regel die Lesevorgänge in jedem Sortierlaufbereich. Sowohl die Sortierläufe als auch die neuen Indexseiten werden in der Zieldateigruppe erstellt. Dies bedeutet, dass zur gleichen Zeit, wenn das [!INCLUDE[ssDE](../../includes/ssde-md.md)] Lesevorgänge auf die Sortierläufe verteilt, ein regelmäßiges Springen zu den Indexblöcken erforderlich ist, um neue Indexseiten zu schreiben, während sie aufgefüllt werden.  
   
  Falls die Option SORT_IN_TEMPDB auf ON festgelegt ist und **tempdb** auf einer anderen Datenträgergruppe als der Zieldateigruppe gespeichert ist, finden die Lesevorgänge der Datenseiten während der ersten Phase auf einem anderen Datenträger statt als die Schreibvorgänge in den Bereich der Sortierarbeit in **tempdb**. Dies bedeutet, dass die Lesevorgänge der Datenschlüssel auf dem Datenträger eher seriell auf dem Datenträger verlaufen und dass die Schreibvorgänge auf dem Datenträger mit **tempdb** ebenfalls seriell sind, genauso wie die Schreibvorgänge zum Erstellen des endgültigen Indexes. Auch wenn andere Benutzer die Datenbank verwenden und auf unterschiedliche Datenträgeradressen zugreifen, ist die Gesamtstruktur der Lese- und Schreibvorgänge viel effizienter, wenn die Option SORT_IN_TEMPDB angegeben ist.  

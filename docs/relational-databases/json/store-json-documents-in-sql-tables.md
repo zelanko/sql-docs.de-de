@@ -10,10 +10,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ea43d88fea017c723177e4b83c86b5c8165b734b
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096026"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank
@@ -159,7 +159,7 @@ END
 
 Diese nativ kompilierte Prozedur erstellt anhand der Abfrage einen DLL-Code, der die Abfrage ausführt. Mit einer nativ kompilierten Prozedur können Sie schneller Daten abfragen und aktualisieren.
 
-## <a name="conclusion"></a>Fazit
+## <a name="conclusion"></a>Zusammenfassung
 
 Durch native JSON-Funktionen in SQL Server und SQL-Datenbank können JSON-Dokumente wie in NoSQL-Datenbanken verarbeitet werden. Datenbanken – ganz gleich, ob relationale oder NoSQL-Datenbanken – weisen Vor- und Nachteile hinsichtlich der Verarbeitung von JSON-Daten auf. Der größte Vorteil bei der Speicherung von JSON-Dokumenten in SQL Server oder SQL-Datenbank besteht in der vollständigen Unterstützung für SQL-Sprachen. Sie können mithilfe der umfangreichen Transact-SQL-Sprache Daten verarbeiten und eine Vielzahl von Speicheroptionen konfigurieren (von Columnstore-Indizes für umfangreiche Komprimierungen und schnelle Analysen bis hin zu speicheroptimierten Tabellen für eine Verarbeitung ohne Sperren). Gleichzeitig profitieren Sie von ausgereiften Sicherheits- und Internationalisierungsfeatures, die Sie in Ihrem NoSQL-Szenario einfach wiederverwenden können. Die in diesem Artikel beschriebenen Gründe sind überzeugende Argumente dafür, die Speicherung von JSON-Dokumenten in SQL Server oder SQL-Datenbank in Erwägung zu ziehen.
 

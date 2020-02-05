@@ -13,10 +13,10 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2532ca83c063d029015560b22e1a89317b90b5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115809"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Auftragsaktivitätsmonitor (Filtereinstellungen)
@@ -43,7 +43,7 @@ ms.locfileid: "68115809"
  **Ergebnis der letzten Ausführung**  
  Filtert Aufträge nach dem Status, der nach der letzten Ausführung gegeben war.  
   
- **Enabled**  
+ **Aktiviert**  
  Zeigt nur aktivierte bzw. nicht aktivierte Aufträge an.  
   
  **Kategorie**  
@@ -62,7 +62,7 @@ ms.locfileid: "68115809"
  **Filter anwenden**  
  Klicken Sie auf **Filter anwenden**, und klicken Sie dann auf **OK**, um den Filter anzuwenden. Wenn Sie die Filtereinstellungen im Dialogfeld **Filtereinstellungen** beibehalten, aber nicht anwenden möchten, deaktivieren Sie **Filter anwenden**, und klicken Sie auf **OK**, um alle Zeilen anzuzeigen.  
   
- **Löschen**  
+ **Clear**  
  Setzt die Filtereinstellungen auf die Standardeinstellungen zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  

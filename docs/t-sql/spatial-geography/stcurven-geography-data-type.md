@@ -18,10 +18,10 @@ ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042452"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (geography-Datentyp)
@@ -99,7 +99,7 @@ ms.locfileid: "68042452"
   
  `STCurveN()` gibt unabhängig vom verwendeten WKT-Format (Well-Known Text) die gleichen Ergebnisse zurück.  
   
-### <a name="d-testing-for-validity-before-calling-stcurve"></a>D. Testen auf Gültigkeit vor dem Aufrufen von STCurve()  
+### <a name="d-testing-for-validity-before-calling-stcurve"></a>D: Testen auf Gültigkeit vor dem Aufrufen von STCurve()  
  Im folgenden Beispiel wird gezeigt, wie Sie sicherstellen, dass *n* gültig ist, bevor Sie die Methode STCurve() aufrufen:  
   
 ```

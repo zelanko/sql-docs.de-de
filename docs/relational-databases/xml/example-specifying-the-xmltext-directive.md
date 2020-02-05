@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel: Angeben der XMLTEXT-Anweisung | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der XMLTEXT-Direktive | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006673"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Beispiel: Angeben der XMLTEXT-Anweisung
+# <a name="example-specifying-the-xmltext-directive"></a>Beispiel: Angeben der XMLTEXT-Direktive
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Dieses Beispiel veranschaulicht, wie Daten in der Überlaufspalte mithilfe der **XMLTEXT** -Direktive in einer `SELECT` -Anweisung im EXPLICIT-Modus verarbeitet werden.  
   
@@ -49,7 +49,7 @@ FOR XML EXPLICIT;
   
  Im resultierenden XML-Dokument:  
   
--   Da für die `Overflow`-Spalte kein *AttributeName*, sondern die `xmltext`-Direktive angegeben ist, werden die Attribute des <`overflow`>-Elements der Attributliste des einschließenden <`Parent`>-Elements angehängt.  
+-   Da für die *-Spalte kein* AttributeName`Overflow`, sondern die `xmltext`-Direktive angegeben ist, werden die Attribute des <`overflow`>-Elements der Attributliste des einschließenden <`Parent`>-Elements angehängt.  
   
 -   Da das `PersonID`-Attribut des <`xmltext`>-Elements in Konflikt zu dem auf der gleichen Elementebene abgerufenen `PersonID`-Attribut steht, wird das Attribut des <`xmltext`>-Elements ignoriert, sogar wenn `PersonID` NULL ist. Im Allgemeinen überschreibt ein Attribut ein Attribut mit demselben Namen in der Überlaufspalte.  
   
@@ -63,7 +63,7 @@ FOR XML EXPLICIT;
   
  Wird dieselbe Abfrage angegeben, und die Überlaufdaten besitzen Unterelemente, werden die Unterelemente in der `Overflow`-Spalte als Unterelemente des einschließenden <`Parent`>-Elements hinzugefügt.  
   
- So werden in diesem Beispiel die Daten in der `Person`-Tabelle so geändert, dass die `Overflow`-Spalte nun Unterelemente besitzt:  
+ So werden in diesem Beispiel die Daten in der `Person` -Tabelle so geändert, dass die `Overflow` -Spalte nun Unterelemente besitzt:  
   
 ```  
 USE tempdb;  

@@ -14,13 +14,13 @@ ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 47392f77ac3131a47a6f2a5f02f71d6a07e103be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68068312"
 ---
-# <a name="mssqlserver10061"></a>MSSQLSERVER_10061
+# <a name="mssqlserver_10061"></a>MSSQLSERVER_10061
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -32,7 +32,7 @@ ms.locfileid: "68068312"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name||  
-|Meldungstext|Fehler beim Herstellen einer Verbindung mit dem Server.  Beim Herstellen einer Verbindung mit SQL Server kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (Anbieter: TCP-Anbieter, Fehler: 0 - No connection could be made because the target machine actively refused it. (Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigert.)) (Microsoft SQL Server, Fehler: 10061)|  
+|Meldungstext|Fehler beim Herstellen einer Verbindung mit dem Server.  Beim Herstellen einer Verbindung mit SQL Server kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (Anbieter: TCP-Anbieter, Fehler: 0 – Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigert.) (Microsoft SQL Server, Fehler: 10061)|  
   
 ## <a name="explanation"></a>Erklärung  
 Der Server hat nicht auf die Clientanforderung reagiert. Dieser Fehler ist möglicherweise darauf zurückzuführen, dass der Server nicht gestartet wurde.  

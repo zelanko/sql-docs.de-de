@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 786729a6bfcae37e3c2fb1aa9a9e85839ca9c127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119106"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68119106"
 
 Gibt einen **datetimeoffset**-Wert für die angegebenen Argumente für Datum und Zeit zurück. Die Genauigkeit des Rückgabewerts wird vom precision-Argument angegeben, und Offsets werden von den Offsetargumenten bestimmt.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -75,7 +75,7 @@ Ein ganzzahliger literaler Wert, der die Genauigkeit des **datetimeoffset**-Wert
   
 ## <a name="remarks"></a>Bemerkungen  
 
-`DATETIMEOFFSETFROMPARTS` gibt einen vollständig initialisierten **datetimeoffset**-Datentyp zurück. Die Offsetargumente stellen den Zeitzonenoffset dar. Bei ausgelassenen Offsetargumenten geht `DATETIMEOFFSETFROMPARTS` von einem Zeitzonenoffset von `00:00` (also kein Zeitzonenoffset) aus. Bei angegebenen Offsetargumenten erwartet `DATETIMEOFFSETFROMPARTS` Werte für beide Argumente, und beide Werte müssen entweder positiv oder negativ sein. Wenn *minute_offset* einen Wert und *hour_offset* keinen Wert aufweist, löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus. `DATETIMEOFFSETFROMPARTS` löst einen Fehler aus, wenn andere Argumente über ungültige Werte verfügen. Wenn mindestens ein erforderliches Argument über einen `NULL`-Wert verfügt, dann gibt `DATETIMEOFFSETFROMPARTS` `NULL` zurück. Wenn das *precision*-Argument jedoch einen `NULL`-Wert enthält, löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus.  
+`DATETIMEOFFSETFROMPARTS` gibt einen vollständig initialisierten **datetimeoffset**-Datentyp zurück. Die Offsetargumente stellen den Zeitzonenoffset dar. Bei ausgelassenen Offsetargumenten geht `DATETIMEOFFSETFROMPARTS` von einem Zeitzonenoffset von `00:00` (also kein Zeitzonenoffset) aus. Bei angegebenen Offsetargumenten erwartet `DATETIMEOFFSETFROMPARTS` Werte für beide Argumente, und beide Werte müssen entweder positiv oder negativ sein. Wenn *minute_offset* einen Wert und *hour_offset* keinen Wert aufweist, löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus. `DATETIMEOFFSETFROMPARTS` löst einen Fehler aus, wenn andere Argumente über ungültige Werte verfügen. Wenn mindestens ein erforderliches Argument über einen `NULL`-Wert verfügt, dann gibt `DATETIMEOFFSETFROMPARTS``NULL` zurück. Wenn das *precision*-Argument jedoch einen `NULL`-Wert enthält, löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus.  
   
 Das *fractions*-Argument ist vom „precision“-Argument abhängig. Wenn „precision“ beispielsweise den Wert 7 aufweist, stellt jeder Bruchteil 100 Nanosekunden dar. Wenn „precision“ jedoch den Wert 3 aufweist, stellt jeder Bruchteil eine Millisekunde dar. Wenn der Wert von „precision“ 0 (null) ist, muss auch der Wert von „fractions“ 0 (null) sein; andernfalls löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus.  
   
@@ -135,7 +135,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
 [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   

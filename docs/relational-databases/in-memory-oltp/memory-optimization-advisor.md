@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050194"
 ---
 # <a name="memory-optimization-advisor"></a>Ratgeber für die Speicheroptimierung
@@ -53,7 +53,7 @@ ms.locfileid: "68050194"
   
  Warnungen, die eine Aktion erfordern, sind in der linken Spalte mit einem gelben Dreieck gekennzeichnet. Wenn solche Warnungen vorliegen, sollten Sie die Migration beenden, die Ursache der Warnungen beseitigen und den Vorgang neu starten. Wenn die Warnungen nicht aufgelöst werden, kann die migrierte Tabelle einen Fehler verursachen.  
   
- Klicken Sie auf **Bericht generieren** , um einen HTML-Bericht dieser Warnungen zu generieren. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+ Klicken Sie auf **Bericht generieren** , um einen HTML-Bericht dieser Warnungen zu generieren. Klicken Sie zum Fortfahren auf **Weiter** .  
   
 ### <a name="review-optimization-options"></a>Optimierungsoptionen überprüfen  
  Auf dem folgenden Bildschirm können Sie Optionen für die Migration zu In-Memory OLTP ändern:  
@@ -91,7 +91,7 @@ ms.locfileid: "68050194"
 > [!WARNING]  
 >  Wählen Sie diese Option nur aus, wenn Sie das mit nicht dauerhaften Tabellen verbundene Datenverlustrisiko in Kauf nehmen.  
   
- Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+ Klicken Sie auf zum Fortfahren auf **Weiter**.  
   
 ### <a name="review-primary-key-conversion"></a>Konvertierung des primären Schlüssels überprüfen  
  Der nächste Bildschirm lautet **Konvertierung des primären Schlüssels überprüfen**. Der Ratgeber für die Speicheroptimierung stellt fest, ob die Tabelle einen oder mehrere primäre Schlüssel enthält und füllt die Spaltenliste anhand von Primärschlüssel-Metadaten auf. Wenn Sie eine Migration zu einer dauerhaften speicheroptimierten Tabelle ausführen möchten, müssen Sie einen Primärschlüssel erstellen.  

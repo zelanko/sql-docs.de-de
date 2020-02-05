@@ -11,10 +11,10 @@ ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: efc8ce0a541a508f88e7b1122b561008e25f4d51
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292670"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extrahieren von Daten mithilfe der ODBC-Quelle
@@ -40,7 +40,7 @@ ms.locfileid: "71292670"
   
          Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.  
   
-    -   **SQL-Befehl**: Geben Sie einen SQL-Befehl ein, oder klicken Sie auf **Durchsuchen**, um die SQL-Abfrage aus einer Textdatei zu laden.  
+    -   **SQL-Befehl**: Geben Sie einen SQL-Befehl ein, oder klicken Sie auf **Durchsuchen** , um die SQL-Abfrage aus einer Textdatei zu laden.  
   
 6.  Sie können auf **Vorschau** klicken, um bis zu 200 Datenzeilen anzuzeigen, die von der ODBC-Quelle extrahiert werden.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71292670"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Quellen-Editor für ODBC &#40;Seite Verbindungs-Manager&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [Quellen-Editor für ODBC &#40;Seite Spalten&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [Quellen-Editor für ODBC &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
  [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

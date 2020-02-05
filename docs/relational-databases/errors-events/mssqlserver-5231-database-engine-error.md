@@ -12,13 +12,13 @@ ms.assetid: 6954ae84-ed0b-4f4c-9d0a-e73f3d71476c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2cd4a8208925f6e0fe0a0fed4b162b4eb7361009
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122964"
 ---
-# <a name="mssqlserver5231"></a>MSSQLSERVER_5231
+# <a name="mssqlserver_5231"></a>MSSQLSERVER_5231
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -30,11 +30,11 @@ ms.locfileid: "68122964"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC4_DEADLOCK_SKIPPED_OBJECT|  
-|Meldungstext|Objekt-ID „O_ID“ (Objekt „NAME“): Deadlock beim Versuch, dieses Objekt für die Überprüfung zu sperren. Das Objekt wurde ausgelassen und wird nicht verarbeitet.|  
+|Meldungstext|Objekt-ID O_ID (Objekt 'NAME'): Deadlock beim Versuch, dieses Objekt für die Überprüfung zu sperren. Das Objekt wurde ausgelassen und wird nicht verarbeitet.|  
   
 ## <a name="explanation"></a>Erklärung  
 Es kam zu einem Deadlock, als von DBCC versucht wurde, das Objekt zu sperren. DBCC wurde als Deadlockopfer ausgewählt. Das Objekt wird nicht verarbeitet.  
   
 ## <a name="user-action"></a>Benutzeraktion  
-None  
+Keine  
   

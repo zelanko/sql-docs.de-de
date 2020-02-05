@@ -15,10 +15,10 @@ ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bfdee182770e24896796bc3837d5c17d3d73da9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67998047"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>Lösung für unklare Transaktion (Serverkonfigurationsoption)
@@ -28,7 +28,7 @@ ms.locfileid: "67998047"
   
  Die nachstehende Tabelle enthält die möglichen Ergebniswerte für das Auflösen einer unsicheren Transaktion.  
   
-|Ergebniswert|und Beschreibung|  
+|Ergebniswert|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |0|Keine Annahme. Die Wiederherstellung erzeugt einen Fehler, falls der MS DTC keine unsicheren Transaktionen auflösen kann.|  
 |1|Commit annehmen. Alle unsicheren MS DTC-Transaktionen werden als übermittelt angesehen.|  

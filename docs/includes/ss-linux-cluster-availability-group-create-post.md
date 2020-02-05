@@ -10,7 +10,7 @@ BACKUP DATABASE [db1]
    TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
-Führen Sie auf dem primären SQL Server-Replikat das folgende Transact-SQL-Skript aus, um einer Verfügbarkeitsgruppe mit dem Namen `ag1` eine Datenbank mit dem Namen `db1` hinzuzufügen:
+Führen Sie auf dem primären SQL Server-Replikat das folgende Transact-SQL-Skript aus, um einer Verfügbarkeitsgruppe mit dem Namen `db1` eine Datenbank mit dem Namen `ag1` hinzuzufügen:
 
 ```sql
 ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];

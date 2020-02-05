@@ -12,13 +12,13 @@ ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e386bad0a14c99b2a1ce82b9db6790534a8473c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007016"
 ---
-# <a name="mssqlserver824"></a>MSSQLSERVER_824
+# <a name="mssqlserver_824"></a>MSSQLSERVER_824
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -33,7 +33,7 @@ ms.locfileid: "68007016"
 |Meldungstext|SQL Server hat einen logischen, konsistenzbasierten E/A-Fehler gefunden: %ls Der Fehler ist beim %S_MSG von Seite %S_PGID in der Datenbank mit der ID %d bei Offset %#016I64x in der Datei '%ls' aufgetreten.  Weitere Informationen finden Sie möglicherweise in anderen Fehlermeldungen im SQL Server-Fehlerprotokoll oder im Systemereignisprotokoll.|  
   
 ## <a name="explanation"></a>Erklärung  
-Mit diesem Fehler wird angegeben, dass in Windows eine Meldung ausgegeben wurde, gemäß der die Seite erfolgreich vom Datenträger gelesen, aber in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Fehler auf der Seite festgestellt wurde. Dieser Fehler ist mit dem Fehler 823 vergleichbar, nur wurde er nicht von Windows erkannt. Dies führt in der Regel zu einem Problem im E/A-Subsystem. Dazu gehören beispielsweise der Ausfall von Festplattenlaufwerken, Firmwareprobleme auf Datenträgern, fehlerhafte Gerätetreiber usw. Weitere Informationen zu E/A-Fehlern finden Sie unter [Microsoft SQL Server I/O Basics, Chapter 2 (Microsoft SQL Server - Grundlagen zur E/A, Kapitel 2)](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).  
+Mit diesem Fehler wird angegeben, dass in Windows eine Meldung ausgegeben wurde, gemäß der die Seite erfolgreich vom Datenträger gelesen, aber in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Fehler auf der Seite festgestellt wurde. Dieser Fehler ist mit dem Fehler 823 vergleichbar, nur wurde er nicht von Windows erkannt. Dies führt in der Regel zu einem Problem im E/A-Subsystem. Dazu gehören beispielsweise der Ausfall von Festplattenlaufwerken, Firmwareprobleme auf Datenträgern, fehlerhafte Gerätetreiber usw. Weitere Informationen zu E/A-Fehlern finden Sie unter [Microsoft SQL Server I/O Basics, Chapter 2 (E/A-Grundlagen von Microsoft SQL Server, Kapitel 2)](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).  
   
 ## <a name="user-action"></a>Benutzeraktion  
   

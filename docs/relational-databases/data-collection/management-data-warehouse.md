@@ -14,10 +14,10 @@ ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133621"
 ---
 # <a name="management-data-warehouse"></a>Verwaltungs-Data Warehouse
@@ -39,7 +39,7 @@ ms.locfileid: "68133621"
   
  In der folgenden Tabelle werden die Datenbanktabellen im core-Schema beschrieben. Mithilfe dieser Datenbanktabellen kann der Datensammler nachverfolgen, woher die Daten kamen, wer sie eingefügt hat und wann sie in das Data Warehouse hochgeladen wurden.  
   
-|Tabellenname|und Beschreibung|  
+|Tabellenname|BESCHREIBUNG|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Speichert Informationen darüber, wie die Leistungsindikatoren in den Berichten des Verwaltungs-Data Warehouse gruppiert und aggregiert werden sollen.|  
 |core.snapshots_internal|Identifiziert jede neue Momentaufnahme. Immer dann, wenn ein neues Uploadpaket beginnt, einen neuen Datenbatch in ein Data Warehouse hochzuladen, wird in diese Tabelle eine neue Zeile eingefügt.|  

@@ -16,10 +16,10 @@ ms.assetid: 7d9daa10-4c50-4212-9400-42120222b2b8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4f7e49dc39d95e4d5bcce285040f8a598e6935ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026289"
 ---
 # <a name="cursor-functions-transact-sql"></a>Cursorfunktionen (Transact-SQL)
@@ -34,7 +34,7 @@ Diese Skalarfunktionen geben Informationen über Cursor zurück:
   
 Alle Cursorfunktionen sind nicht deterministisch. Das heißt, dass diese Funktionen nicht bei jeder Ausführung stets dieselben Ergebnisse zurückgeben, selbst wenn sie mit denselben Eingabewerten aufgerufen wurden. Weitere Informationen zu Funktionsdeterminismus finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)
   
   

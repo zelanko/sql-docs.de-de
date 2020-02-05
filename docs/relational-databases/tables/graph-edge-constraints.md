@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70873885"
 ---
 # <a name="edge-constraints"></a>Edgeeinschränkungen
@@ -59,7 +59,7 @@ Wenn ein Knoten aus der Datenbank gelöscht wird, werden auch die verbundenen Ed
 
 ## <a name="working-with-edge-constraints"></a>Arbeiten mit Edgeeinschränkungen
 
-Sie können mit [!INCLUDE[tsql](../../includes/tsql-md.md)] eine Edgeeinschränkung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definieren. Eine Edgeeinschränkung kann nur in einer Graph-Edgetabelle definiert werden. Zum Erstellen, Löschen oder Ändern einer Edgeeinschränkung müssen Sie über die **ALTER**-Berechtigung für die Tabelle verfügen.
+Sie können mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Edgeeinschränkung in [!INCLUDE[tsql](../../includes/tsql-md.md)] definieren. Eine Edgeeinschränkung kann nur in einer Graph-Edgetabelle definiert werden. Zum Erstellen, Löschen oder Ändern einer Edgeeinschränkung müssen Sie über die **ALTER**-Berechtigung für die Tabelle verfügen.
 
 ### <a name="create-edge-constraints"></a>Erstellen von Edgeeinschränkungen
 
@@ -337,7 +337,7 @@ FROM sys.edge_constraints EC
 WHERE EC.parent_object_id = object_id('bought');
 ```  
 
-## <a name="related-tasks"></a>Verwandte Aufgaben
+## <a name="related-tasks"></a>Zugehörige Aufgaben
 
 [CREATE TABLE (SQL-Graph)](../../t-sql/statements/create-table-sql-graph.md)  
 [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  

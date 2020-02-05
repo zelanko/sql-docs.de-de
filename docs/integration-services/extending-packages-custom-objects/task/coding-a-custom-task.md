@@ -19,10 +19,10 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23cea7d670916db9dfd13fa37170967a3c19d11c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297130"
 ---
 # <a name="coding-a-custom-task"></a>Codieren eines benutzerdefinierten Tasks
@@ -161,19 +161,19 @@ End Class
  In diesem Abschnitt wird beschrieben, wie die **Execute**-Methode verwendet wird, die von Tasks geerbt und überschrieben wird. In diesem Abschnitt werden auch verschiedene Methoden zum Bereitstellen von Informationen zu den Ergebnissen der Taskausführung erläutert.  
   
 ### <a name="execute-method"></a>Execute-Methode  
- In einem Paket enthaltene Tasks werden ausgeführt, wenn ihre **Execute**-Methode von der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Runtime aufgerufen wird. Die grundlegende Geschäftslogik und Funktionalität von Tasks ist in dieser Methode implementiert. Die Ergebnisse der Ausführung werden durch Ausgeben von Meldungen, Zurückgeben eines Werts aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Enumeration und Überschreiben der **get**-Eigenschaft der **ExecutionValue**-Eigenschaft bereitgestellt.  
+ In einem Paket enthaltene Tasks werden ausgeführt, wenn ihre [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]Execute **-Methode von der** -Runtime aufgerufen wird. Die grundlegende Geschäftslogik und Funktionalität von Tasks ist in dieser Methode implementiert. Die Ergebnisse der Ausführung werden durch Ausgeben von Meldungen, Zurückgeben eines Werts aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Enumeration und Überschreiben der **get**-Eigenschaft der **ExecutionValue**-Eigenschaft bereitgestellt.  
   
  Die <xref:Microsoft.SqlServer.Dts.Runtime.Task>-Basisklasse stellt eine Standardimplementierung der <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>-Methode bereit. Die benutzerdefinierten Tasks überschreiben diese Methode, um ihre Laufzeitfunktionalität zu definieren. Das <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>-Objekt umschließt den Task, sodass dieser von der Runtime-Engine und den anderen Objekten in dem Paket isoliert wird. Aufgrund dieser Isolation erkennt der Task seine Stelle in dem Paket bezüglich der Ausführungsreihenfolge nicht und wird nur ausgeführt, wenn er durch die Laufzeit aufgerufen wird. Durch diese Architektur werden Probleme verhindert, die auftreten können, wenn Tasks während der Ausführung das Paket ändern. Der Task erhält nur durch die Objekte, die ihm in der <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>-Methode als Parameter bereitgestellt werden, Zugriff auf die anderen Objekte in dem Paket. Mithilfe dieser Parameter können Tasks Ereignisse auslösen, Einträge in das Ereignisprotokoll schreiben, auf die Variablenauflistung zugreifen und Verbindungen zu Datenquellen in Transaktionen eintragen, während gleichzeitig die Isolation beibehalten wird, die erforderlich ist, um die Stabilität und Zuverlässigkeit des Pakets zu garantieren.  
   
  In der folgenden Tabelle sind die für den Task in der <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>-Methode bereitgestellten Parameter aufgeführt.  
   
-|Parameter|und Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|Enthält eine Auflistung von <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekten, die für den Task verfügbar sind.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Enthält die Variablen, die für den Task verfügbar sind. Die Tasks verwenden Variablen durch den VariableDispenser; die Tasks verwenden keine Variablen direkt. Der VariableDispenser sperrt und entsperrt Variablen und verhindert Deadlocks oder Überschreibungen.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|Enthält die Methoden, die von dem Task zum Auslösen von Ereignissen in der Runtime-Engine aufgerufen werden.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|Enthält Methoden und Eigenschaften, die von dem Task zum Schreiben von Ereignissen in das Ereignisprotokoll verwendet werden.|  
-|Objekt|Enthält ggf. das Transaktionsobjekt, von dem der Container ein Teil ist. Dieser Wert wird als Parameter an die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A>-Methode eines <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekts übergeben.|  
+|Object|Enthält ggf. das Transaktionsobjekt, von dem der Container ein Teil ist. Dieser Wert wird als Parameter an die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A>-Methode eines <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekts übergeben.|  
   
 ### <a name="providing-execution-feedback"></a>Bereitstellen von Feedback zur Ausführung  
  Bei Tasks wird der Code in **try/catch**-Blöcke eingebunden, um zu verhindern, dass Ausnahmen in der Runtime-Engine ausgelöst werden. Dadurch wird sichergestellt, dass das Paket die Ausführung abschließt und nicht unerwartet beendet wird. Die Runtime-Engine bietet jedoch andere Mechanismen zur Behandlung von Fehlerbedingungen, die während der Ausführung eines Tasks auftreten können. Dazu gehört das Ausgeben von Fehler- und Warnmeldungen, das Zurückgeben eines Werts aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Struktur, das Ausgeben von Meldungen, das Zurückgeben des <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Werts sowie das Offenlegen von Informationen zu den Ergebnissen der Taskausführung durch die <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A>-Eigenschaft.  

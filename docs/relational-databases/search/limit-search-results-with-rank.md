@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132278"
 ---
 # <a name="limit-search-results-with-rank"></a>Einschränken von Suchergebnissen mit RANK
@@ -38,7 +38,7 @@ ms.locfileid: "68132278"
   
 ##  <a name="examples"></a> Beispiele zur Verwendung von RANK zum Einschränken der Suchergebnisse  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Ausschließliches Suchen nach den drei häufigsten Übereinstimmungen  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Suchen nach ausschließlich den obersten drei Übereinstimmungen  
  Im folgenden Beispiel werden mit CONTAINSTABLE nur die obersten drei Übereinstimmungen zurückgegeben.  
   
 ```  
@@ -69,7 +69,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Beispiel B: Ausschließliches Suchen nach den zehn häufigsten Übereinstimmungen  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Beispiel B: Suchen nach ausschließlich den obersten zehn Übereinstimmungen  
  Im folgenden Beispiel wird CONTAINSTABLE verwendet, um die Beschreibung der ersten 5 Produkte zurückzugeben, bei denen die `Description` -Spalte das Wort "aluminium" in der Nähe des Worts "light" oder "lightweight" enthält.  
   
 ```  
@@ -142,7 +142,7 @@ GO
 ### <a name="rank-computation-issues"></a>Gesichtspunkte bei der Rangberechnung  
  Der Vorgang der Rangberechnung hängt von mehreren Faktoren ab.  Die Wörtererkennung für unterschiedliche Sprachen zerlegt Text unterschiedlich in Wörter. So könnte z. B. die Zeichenfolge "dog-house" von einer Wörtererkennung in "dog" "house" und von einer anderen in "dog-house" zerlegt werden. Dies bedeutet, dass Vergleiche und Rangfolgenberechnung je nach der angegebenen Sprache unterschiedliche Ergebnisse liefern, da nicht nur die Wörter unterschiedlich sind, sondern auch die Dokumentlänge. Die unterschiedliche Dokumentlänge kann sich auf die Rangfolgenberechnung für alle Abfragen auswirken.  
   
- Statistiken wie **IndexRowCount** können stark variieren. Hat z. B. ein Katalog 2 Milliarden Zeilen im Masterindex, wird ein einzelnes neues Dokument in einen im Arbeitsspeicher befindlichen Zwischenindex indiziert, und die Ränge für das Dokument, die auf der Anzahl der Dokumente im Index im Arbeitsspeicher basieren, können im Vergleich zu den Rängen für Dokumente aus dem Masterindex verfälscht sein. Daher wird empfohlen, dass die Indizes nach jeder Auffüllung, durch die viele Zeilen indiziert oder neu indiziert werden, in einen Masterindex zusammengeführt werden, mithilfe der ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung. Entsprechend bestimmten Parametern, wie Anzahl und Größe der Zwischenindizes, werden die Indizes auch automatisch von der Volltextsuch-Engine zusammengeführt.  
+ Statistiken wie **IndexRowCount** können stark variieren. Hat z. B. ein Katalog 2 Milliarden Zeilen im Masterindex, wird ein einzelnes neues Dokument in einen im Arbeitsspeicher befindlichen Zwischenindex indiziert, und die Ränge für das Dokument, die auf der Anzahl der Dokumente im Index im Arbeitsspeicher basieren, können im Vergleich zu den Rängen für Dokumente aus dem Masterindex verfälscht sein. Daher wird empfohlen, dass die Indizes nach jeder Auffüllung, durch die viele Zeilen indiziert oder neu indiziert werden, in einen Masterindex zusammengeführt werden, mithilfe der ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung. Entsprechend bestimmten Parametern, wie Anzahl und Größe der Zwischenindizes, werden die Indizes auch automatisch von der Volltextsuch-Engine zusammengeführt.  
   
  **MaxOccurrence** -Werte werden in den Bereich 1 bis 32 normalisiert. Das heißt, dass z. B. ein 50 Wörter langes Dokument genau so behandelt wird wie ein 100 Wörter langes. Die zur Normalisierung verwendete Tabelle ist unten aufgeführt. Da die Dokumentlängen im Bereich zwischen den benachbarten Tabellenwerten 32 und 128 liegen, werden sie behandelt, als hätten sie dieselbe Länge, nämlich 128 (32 < **docLength** <= 128).  
   

@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981786"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73981786"
 
   Gibt den einer Sicherheits-ID (SID) zugeordneten Anmeldenamen zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,7 +55,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SUSER_SNAME kann als DEFAULT-Einschränkung in ALTER TABLE oder CREATE TABLE verwendet werden. SUSER_SNAME kann in einer Auswahlliste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. SUSER_SNAME muss immer von Klammern gefolgt sein, selbst wenn kein Parameter angegeben wird.  
   
  Wenn SUSER_SNAME ohne Argument aufgerufen wird, wird der Name des aktuellen Sicherheitskontexts zurückgegeben. Wenn SUSER_SNAME ohne Argument innerhalb eines Batches aufgerufen wird, der den Kontext mithilfe von EXECUTE AS gewechselt hat, wird der Name des Kontexts zurückgegeben, dessen Identität angenommen wurde. Wenn ORIGINAL_LOGIN aus einem Kontext aufgerufen wird, dessen Identität angenommen wurde, wird der Name des ursprünglichen Kontexts zurückgegeben.  
@@ -102,7 +102,7 @@ INSERT sname_example DEFAULT VALUES;
 GO  
 ```  
   
-### <a name="d-calling-suser_sname-in-combination-with-execute-as"></a>D. Aufrufen von SUSER_SNAME in Verbindung mit EXECUTE AS  
+### <a name="d-calling-suser_sname-in-combination-with-execute-as"></a>D: Aufrufen von SUSER_SNAME in Verbindung mit EXECUTE AS  
  Dieses Beispiel zeigt das Verhalten von SUSER_SNAME beim Aufrufen aus einem Kontext, dessen Identität angenommen wurde.  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
@@ -127,7 +127,7 @@ WanidaBenShoof
 sa
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-suser_sname"></a>E. Verwenden von SUSER_SNAME  
  Im folgenden Beispiel wird der Anmeldename für die Sicherheits-ID mit einem Wert von `0x01` zurückgegeben.  

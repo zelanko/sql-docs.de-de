@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: fea109e55b9efa5619bdccb11d692ffebd1a6847
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847481"
 ---
 # <a name="iservervirtualdeviceset2beginconfiguration-vdi"></a>IServerVirtualDeviceSet2::BeginConfiguration (VDI)
@@ -54,7 +54,7 @@ HRESULT IServerVirtualDeviceSet2::BeginConfiguration (
 | VD_E_ABORT | „SignalAbort“ wurde aufgerufen. |
 | VD_E_PROTOCOL | Die Gruppe virtueller Geräte befindet sich nicht im verbundenen Zustand. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Nach Aufrufen dieser Funktion wechselt die Gruppe der virtuellen Geräte in den konfigurierbaren Zustand, in dem das Pufferlayout festgelegt wird.
 Nach Festlegen der Basiskonfiguration (gemäß den Parametern) bleiben diese Werte für die Lebensdauer der Gruppe der virtuellen Geräte unverändert. Die Eigenschaft „Ausrichtung“ der Gruppe virtueller Geräte wird verwendet, um die Ausrichtung von Datenpuffern zu steuern. Dieser Wert legt einen minimalen Ausrichtungswert fest, der auf Puffer-für-Puffer-Basis überschrieben werden kann.

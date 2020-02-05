@@ -11,10 +11,10 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292941"
 ---
 # <a name="define-a-state-variable"></a>Definieren einer Statusvariablen
@@ -30,7 +30,7 @@ ms.locfileid: "71292941"
   
  Die folgende Tabelle enthält eine allgemeine Beschreibung der Komponenten von CDC-Statusvariablenwerten.  
   
-|Komponente|und Beschreibung|  
+|Komponente|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**\<Statusname>**|Der Name des aktuellen CDC-Status.|  
 |**CS**|Kennzeichnet den aktuellen Startpunkt für den Verarbeitungsbereich (aktueller Start).|  
@@ -49,7 +49,7 @@ ms.locfileid: "71292941"
   
  In der folgenden Tabelle werden die möglichen CDC-Statuswerte beschrieben.  
   
-|Status|und Beschreibung|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |(INITIAL)|Der ursprüngliche Status, bevor ein Paket für die aktuelle CDC-Gruppe ausgeführt wurde. Dieser Status liegt auch vor, wenn der CDC-Status leer ist.|  
 |ILSTART (Initial Load Started)|Der Status beim Start des anfänglich geladenen Pakets, nachdem der CDC-Steuerungstask durch den **MarkInitialLoadStart** -Vorgang aufgerufen wurde.|  

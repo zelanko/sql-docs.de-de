@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.openlocfilehash: 5abd2db590a89350f45497d7f94b81940a0ec5bc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065152"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Erstellen und Ausführen eines SQL Server-Agent-Auftrags unter Linux
@@ -41,7 +41,7 @@ Die folgenden Voraussetzungen sind optional:
 * Windows-Computer mit SSMS:
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) für optionale SSMS-Schritte.
 
-## <a name="enable-sql-server-agent"></a>Aktivieren des SQL Server-Agent
+## <a name="enable-sql-server-agent"></a>Aktivieren des SQL Server-Agents.
 
 Um den SQL Server-Agent unter Linux verwenden zu können, müssen Sie den SQL Server-Agent zuerst auf einem Computer aktivieren, auf dem bereits SQL Server installiert ist.
 
@@ -187,7 +187,7 @@ Sie können Aufträge mithilfe von SQL Server Management Studio (SSMS) auch remo
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png" alt="Start the SQL Server Agent job" style="width: 550px;"/>
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 
 In diesem Tutorial haben Sie Folgendes gelernt:
 

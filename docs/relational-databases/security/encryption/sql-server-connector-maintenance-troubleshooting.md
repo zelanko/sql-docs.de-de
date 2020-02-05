@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557935"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server-Connector – Verwaltung und Problembehandlung
@@ -44,7 +44,7 @@ ms.locfileid: "75557935"
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Mit [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] oder „sqlcmd.exe“:** Verwenden Sie die folgenden Anweisungen, wie in Schritt 3, Abschnitt 3 dargestellt.  
+-   **Mithilfe von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] oder „sqlcmd.exe“:** Verwenden Sie die folgenden Anweisungen, wie in Schritt 3, Abschnitt 3 dargestellt.  
   
      Importieren Sie den neuen asymmetrischen Schlüssel.  
   
@@ -153,7 +153,7 @@ Zusammengefasst ergeben sich folgende Schritte:
 * Erteilen Sie dem SQL Server-Dienstprinzipal Berechtigungen zum Verwenden dieses neuen Tresors.  
 * Ändern Sie die von der Datenbank-Engine verwendeten SQL Server-Anmeldeinformationen so, dass sie den neuen Tresornamen widerspiegeln (falls erforderlich).  
   
-Schlüsselsicherungen können in Azure-Regionen wiederhergestellt werden, solange sie in derselben geografischen Region oder nationalen Cloud verbleiben: USA, Kanada, Japan, Australien, Indien, APAC, Europa, Brasilien, China, US-Regierung oder Deutschland.  
+Schlüsselsicherungen können übergreifend über Azure-Regionen wiederhergestellt werden, sofern sie in der gleichen geografischen Region oder nationalen Cloud bleiben: USA, Kanada, Japan, Australien, Indien, APAC, Europa, Brasilien, China, US-Regierung oder Deutschland.  
   
   
 ##  <a name="AppendixB"></a> B. Häufig gestellte Fragen  

@@ -11,18 +11,18 @@ ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23d700f7886b046896397eb1cce4eb21f9c32850
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296004"
 ---
-# <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lektion 2: Erstellen des Bereitstellungspakets in SSIS
+# <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lesson 2: Create the Deployment Bundle in SSIS
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-In [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md) haben Sie das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit Namen „Deployment Tutorial“ erstellt, diesem die Pakete und Unterstützungsdateien hinzugefügt und Konfigurationen in Paketen implementiert.  
+In [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)haben Sie das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit Namen „Deployment Tutorial“ erstellt, diesem die Pakete und Unterstützungsdateien hinzugefügt und Konfigurationen in Paketen implementiert.  
   
 In dieser Lektion erstellen Sie das Bereitstellungspaket. Dabei handelt es sich um einen Ordner, der die Elemente enthält, die Sie benötigen, um Pakete auf einem anderen Computer zu installieren. Das Bereitstellungspaket enthält ein Bereitstellungsmanifest, Kopien der Pakete und Kopien der Unterstützungsdateien aus dem Deployment Tutorial-Projekt. Im Bereitstellungsmanifest werden die Pakete, verschiedene Dateien und Konfigurationen im Bereitstellungspaket aufgelistet.  
   

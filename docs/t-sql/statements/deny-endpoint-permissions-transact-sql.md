@@ -18,10 +18,10 @@ ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114847"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY (Endpunktberechtigungen) (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68114847"
   Verweigert Berechtigungen für einen Endpunkt.  
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

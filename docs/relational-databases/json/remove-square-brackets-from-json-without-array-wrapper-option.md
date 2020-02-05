@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7de18ecb5bf47c8d1fc03f95716bbebfb27cf7ae
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096091"
 ---
 # <a name="remove-square-brackets-from-json---without_array_wrapper-option"></a>Entfernen von rechteckigen Klammern von JSON-Ausgabe mit der Option WITHOUT_ARRAY_WRAPPER
@@ -29,7 +29,7 @@ Wenn Sie diese Option mit einem mehrzeiligen Resultat verwenden, ist die resulti
 ## <a name="example-single-row-result"></a>Beispiel (einzeiliges Resultat)  
 Die folgende Tabelle zeigt die Ausgabe der **FOR JSON** -Klausel mit und ohne Option **WITHOUT_ARRAY_WRAPPER** an.  
   
- **Dataseteigenschaften**  
+ **Abfrage**  
   
 ```sql  
 SELECT 2015 as year, 12 as month, 15 as day  
@@ -59,7 +59,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 ## <a name="example-multiple-row-result"></a>Beispiel (mehrzeiliges Resultat)
 Hier finden Sie ein weiteres Beispiel für eine **FOR JSON** -Klausel mit und ohne Option **WITHOUT_ARRAY_WRAPPER** an. In diesem Beispiel wird ein mehrzeiliges Resultat erzeugt. Die Ausgabe ist wegen mehrerer Elemente und fehlenden eckigen Klammern kein gültiges JSON.
   
- **Dataseteigenschaften**  
+ **Abfrage**  
   
 ```sql  
 SELECT TOP 3 SalesOrderNumber, OrderDate, Status  

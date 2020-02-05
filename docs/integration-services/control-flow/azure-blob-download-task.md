@@ -14,10 +14,10 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc83e4d8e39c5521fd897ceeec07755f62b5765d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294317"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob-Download-Task
@@ -40,5 +40,5 @@ Um einen **Azure Blob-Download-Task**hinzuzufügen, legen Sie ihn mittels Drag &
 |BlobDirectory|Gibt das Blob-Verzeichnis an, das die herunterzuladenden Blob-Dateien enthält. Das Blobverzeichnis ist eine virtuelle hierarchische Struktur.|  
 |SearchRecursively|Gibt an, ob in Unterverzeichnissen rekursiv gesucht werden soll.|  
 |LocalDirectory|Gibt das lokale Verzeichnis an, in dem die heruntergeladenen Blobdateien gespeichert werden sollen.|  
-|FileName|Legt einen Namensfilter an, um Dateien mit dem angegebenen Namensmuster auszuwählen. Beispielsweise enthält `MySheet*.xls\*` Dateien wie `MySheet001.xls` und `MySheetABC.xlsx`.|  
-|TimeRangeFrom/TimeRangeTo|Legt einen Filter für den Zeitbereich fest. Dateien, die nach **TimeRangeFrom** und vor **TimeRangeTo** geändert wurden, sind eingeschlossen.|  
+|FileName|Gibt einen Namensfilter an, um Dateien mit dem angegebenen Namensmuster auszuwählen. Beispielsweise enthält `MySheet*.xls\*` Dateien wie `MySheet001.xls` und `MySheetABC.xlsx`.|  
+|TimeRangeFrom/TimeRangeTo|Gibt einen Zeitbereichsfilter an. Dateien, die nach **TimeRangeFrom** und vor **TimeRangeTo** geändert wurden, sind eingeschlossen.|  

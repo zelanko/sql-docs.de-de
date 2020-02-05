@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6f56e354023c869fb04d296b63ac748abec763e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126781"
 ---
 # <a name="sequence-numbers"></a>Sequenznummern
@@ -233,7 +233,7 @@ GO
   
  `7        2009-11-02 15:00:51.180  Central feed in bypass mode.`  
   
-### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D. Generieren von wiederholten Sequenznummern in einem Resultset  
+### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D: Generieren von wiederholten Sequenznummern in einem Resultset  
  Im folgenden Beispiel werden zwei Eigenschaften von Sequenznummern veranschaulicht: die zyklische Verwendung und das Verwenden von `NEXT VALUE FOR` in einer SELECT-Anweisung.  
   
 ```  
@@ -271,7 +271,7 @@ WHERE Name LIKE '%nut%' ;
 ```  
   
 ### <a name="f-resetting-the-sequence-number"></a>F. Zurücksetzen der Sequenznummer  
- In Beispiel E wurden die ersten 79 der `Samples.IDLabel`-Sequenznummern verbraucht. (Ihre Version von `AdventureWorks2012` gibt möglicherweise eine andere Anzahl von Ergebnissen zurück.) Führen Sie Folgendes aus, um die nächsten 79 Sequenznummern (80 bis 158) zuzuweisen.  
+ In Beispiel E wurden die ersten 79 der `Samples.IDLabel`-Sequenznummern verbraucht. (Ihre Version von `AdventureWorks2012` gibt möglicherweise eine andere Anzahl von Ergebnissen zurück.) Führen Sie Folgendes aus, um die nächsten 79 Sequenznummern (80 bis 158) zuzuweisen.  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  

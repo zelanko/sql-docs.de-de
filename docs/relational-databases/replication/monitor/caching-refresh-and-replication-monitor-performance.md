@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0661822f2c39d197460d19bb01adc847151dfa35
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 45cad9f38fadd8280b6cb155c0e44643448ac4bf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320633"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286348"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Zwischenspeichern, Aktualisieren und Leistung des Replikationsmonitors
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "75320633"
   
  Die Aktualisierung des Cache wird durch einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentauftrag ausgeführt: **Aktualisierung für die Replikationsüberwachung**. Der Auftrag wird fortlaufend ausgeführt. Der Zeitplan für die Aktualisierung des Cache hängt von einer bestimmten Wartedauer nach der vorhergehenden Aktualisierung ab:  
   
--   Wenn seit der letzten Cacheerstellung Änderungen am Agent-Verlauf vorgenommen wurden, beträgt die Wartezeit mindestens 4 Sekunden oder aber den Zeitraum, der zum Erstellen des vorherigen Caches erforderlich war.  
+-   Wenn seit dem letzten Erstellen des Cache Änderungen des Agent-Verlaufs stattgefunden haben, beträgt die Wartezeit mindestens 4 Sekunden oder die Zeitspanne, die das Erstellen des vorherigen Cache gedauert hat.  
   
--   Wenn seit der letzten Cacheerstellung keine Änderungen am Agent-Verlauf vorgenommen wurden (andere Änderungen sind jedoch möglich), beträgt die Wartezeit höchstens 30 Sekunden oder aber den Zeitraum, der zum Erstellen des vorherigen Caches erforderlich war.  
+-   Wenn seit dem letzten Erstellen des Cache keine Änderungen des Agent-Verlaufs stattgefunden haben (es könnten andere Änderungen eingetreten sein), beträgt die Wartezeit maximal 30 Sekunden oder die Zeitspanne, die das Erstellen des vorherigen Cache gedauert hat.  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>Aktualisieren der Benutzeroberfläche des Replikationsmonitors  
  Die Benutzeroberfläche des Replikationsmonitors kann folgendermaßen aktualisiert werden:  

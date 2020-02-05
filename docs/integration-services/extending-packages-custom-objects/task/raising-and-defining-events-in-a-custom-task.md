@@ -25,10 +25,10 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 461750eee78c631adef9b012b971c9bab60bf29f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286896"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Auslösen und Definieren von Ereignissen in einem benutzerdefinierten Task
@@ -47,7 +47,7 @@ ms.locfileid: "71286896"
   
  Im folgenden Codebeispiel ist die **InitializeTask**-Methode eines benutzerdefinierten Tasks dargestellt. Es werden zwei benutzerdefinierte Ereignisse erstellt und deren Eigenschaften festgelegt. Die neuen Ereignisse werden dann der <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>-Auflistung hinzugefügt.  
   
- Das erste benutzerdefinierte Ereignis hat den Ereignisnamen (*eventName*) **OnBeforeIncrement** und die Beschreibung (*description* **Fires after the initial value is updated.** Der nächste Parameter, der **true**-Wert, gibt an, dass dieses Ereignis die Erstellung eines Ereignishandlercontainers zulässt, um das Ereignis zu verarbeiten. Bei dem Ereignishandler handelt es sich um einen Container für die Strukturen in Paketen und Dienste für Tasks, wie andere Container, z. B. Paketcontainer, Sequenzcontainer, For-Schleifencontainer und ForEach-Schleifencontainer. Wenn der *allowEventHandlers*-Parameter **true** ist, werden <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekte für das Ereignis erstellt. Alle Parameter, die für das Ereignis definiert wurden, sind nun für den <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> in der Variablenauflistung des <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> verfügbar.  
+ Das erste benutzerdefinierte Ereignis hat den Ereignisnamen (*eventName*) **OnBeforeIncrement** und die Beschreibung (*description***Fires after the initial value is updated.** Der nächste Parameter, der **true**-Wert, gibt an, dass dieses Ereignis die Erstellung eines Ereignishandlercontainers zulässt, um das Ereignis zu verarbeiten. Bei dem Ereignishandler handelt es sich um einen Container für die Strukturen in Paketen und Dienste für Tasks, wie andere Container, z. B. Paketcontainer, Sequenzcontainer, For-Schleifencontainer und ForEach-Schleifencontainer. Wenn der *allowEventHandlers*-Parameter **true** ist, werden <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekte für das Ereignis erstellt. Alle Parameter, die für das Ereignis definiert wurden, sind nun für den <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> in der Variablenauflistung des <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> verfügbar.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  

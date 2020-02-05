@@ -15,10 +15,10 @@ ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c5947d1793b39a0bf6aba9729b9f4b1ca7305fab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042466"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (geography-Datentyp)
@@ -46,7 +46,7 @@ ms.locfileid: "68042466"
  Gibt 1 zurück, wenn die aufrufende **geography**-Instanz die an die Methode übergebene **geography**-Instanz räumlich enthält, und gibt andernfalls 0 (null) zurück. Gibt **NULL** zurück, wenn die SRID der beiden **geography**-Instanzen nicht übereinstimmt.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STContains()` verwendet, um zwei `geography` -Instanzen daraufhin zu überprüfen, ob die erste Instanz die zweite Instanz enthält.  
+ Im folgenden Beispiel wird `STContains()` verwendet, um zwei `geography`-Instanzen daraufhin zu überprüfen, ob die erste Instanz die zweite Instanz enthält.  
   
 ```  
 DECLARE @g geography;  

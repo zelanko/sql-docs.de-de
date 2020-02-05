@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ee5905259958b1b396b1b9c2726ca3a74b24a7d6
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f0451d8fcd55cc3d33616452109a5e5ff95081e0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320622"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287742"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>Zulassen, dass Nichtadministratoren den Replikationsmonitor verwenden
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "75320622"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So ermöglichen Sie Nichtadministratoren die Verwendung des Replikationsmonitors mit:**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "75320622"
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>So entfernen Sie einen Benutzer aus der festen Datenbankrolle "replmonitor"  
   
-1.  Führen Sie auf dem Verteiler für die Verteilungsdatenbank [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) aus, und geben Sie den Wert **replmonitor** für `@rolename` an, um zu überprüfen, ob der Benutzer zur Rolle **replmonitor** gehört. Wenn der Benutzer unter **MemberName** im Resultset nicht aufgeführt wird, gehört der Benutzer aktuell nicht zu der Rolle.  
+1.  Führen Sie auf dem Verteiler für die Verteilungsdatenbank **sp_helprolemember &#40;Transact-SQL&#41;** aus, und geben Sie den Wert [replmonitor](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) für **an, um zu überprüfen, ob der Benutzer zur Rolle**replmonitor`@rolename` gehört. Wenn der Benutzer unter **MemberName** im Resultset nicht aufgeführt wird, gehört der Benutzer aktuell nicht zu der Rolle.  
   
 2.  Wenn der Benutzer zur Rolle **replmonitor** gehört, führen Sie auf dem Verteiler für die Verteilungsdatenbank [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) aus. Geben Sie einen **replmonitor**-Wert für `@rolename` und den Namen des Datenbankbenutzers oder den Windows-Anmeldenamen an, der für `@membername` entfernt wird. 
   

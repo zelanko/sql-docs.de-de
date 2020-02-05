@@ -13,17 +13,17 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137381"
 ---
 # <a name="contained-database-collations"></a>Enthaltene Datenbanksortierungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Auf die Sortierreihenfolge und die Gleichheitssemantik von Textdaten wirken sich verschiedene Eigenschaften aus, u. a. die Berücksichtigung der Groß- und Kleinschreibung, die Berücksichtigung von Akzenten sowie die verwendete Basissprache. Diese Eigenschaften werden für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die ausgewählte Sortierung der Daten ausgedrückt. Eine ausführliche Erläuterung zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- Sortierungen gelten nicht nur für in Benutzertabellen gespeicherte Daten, sondern für jeden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behandelten Text, einschließlich Metadaten, temporäre Objekte, Variablennamen usw. Deren Behandlung variiert in eigenständigen und abhängigen Datenbanken Diese Änderung wirkt sich nicht auf viele Benutzer aus. Stattdessen trägt sie zu Unabhängigkeit von Instanzen und Einheitlichkeit bei. Dies verursacht jedoch möglicherweise auch etwas Verwirrung sowie Probleme bei Sitzungen, in denen sowohl auf enthaltene als auch auf nicht enthaltene Datenbanken zugegriffen wird.  
+ Sortierungen gelten nicht nur für in Benutzertabellen gespeicherte Daten, sondern für jeden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]behandelten Text, einschließlich Metadaten, temporäre Objekte, Variablennamen usw. Deren Behandlung variiert in eigenständigen und abhängigen Datenbanken Diese Änderung wirkt sich nicht auf viele Benutzer aus. Stattdessen trägt sie zu Unabhängigkeit von Instanzen und Einheitlichkeit bei. Dies verursacht jedoch möglicherweise auch etwas Verwirrung sowie Probleme bei Sitzungen, in denen sowohl auf enthaltene als auch auf nicht enthaltene Datenbanken zugegriffen wird.  
   
  In diesem Thema wird das Wesen der Änderung erläutert. Zudem werden einige Bereiche beschrieben, in denen sie möglicherweise Probleme verursacht.  
   
@@ -132,7 +132,7 @@ END;
 |Temp-Daten (Standard)|TempDB-Sortierung|DATABASE_DEFAULT|  
 |Metadaten|DATABASE_DEFAULT/CATALOG_DEFAULT|CATALOG_DEFAULT|  
 |Temporäre Metadaten|TempDB-Sortierung|CATALOG_DEFAULT|  
-|Variablen|Instanzsortierung|CATALOG_DEFAULT|  
+|Variables|Instanzsortierung|CATALOG_DEFAULT|  
 |Goto-Bezeichnungen|Instanzsortierung|CATALOG_DEFAULT|  
 |Cursornamen|Instanzsortierung|CATALOG_DEFAULT|  
   
@@ -276,7 +276,7 @@ GO
   
  Der Verweis auf den Namen '#a' der temporären Tabelle ist mehrdeutig und kann nicht aufgelöst werden. Verwenden Sie entweder '#a' oder '#A'.  
   
-## <a name="conclusion"></a>Fazit  
+## <a name="conclusion"></a>Zusammenfassung  
  Das Sortierungsverhalten enthaltener Datenbanken unterscheidet sich leicht von dem nicht enthaltener Datenbanken. Dieses Verhalten ist im Allgemeinen vorteilhaft und trägt zu Unabhängigkeit von Instanzen sowie Einfachheit bei. Für einige Benutzer können Probleme auftreten, insbesondere dann, wenn in einer Sitzung sowohl auf enthaltene als auch auf nicht enthaltene Datenbanken zugegriffen wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  

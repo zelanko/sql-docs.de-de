@@ -11,10 +11,10 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2293f8cf40bcd5b3d104f63df80abacf282686ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096895"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML-Datentyp und -Spalten (SQL Server)
@@ -115,7 +115,7 @@ ms.locfileid: "68096895"
   
  Die systemeigene XML-Speicherung ist nützlich, wenn Sie über XML-Dokumente mit vielfältigen Strukturen verfügen oder wenn Sie über XML-Dokumente verfügen, die verschiedenen oder komplexen Schemas entsprechen, sodass sie keinen relationalen Strukturen zugeordnet werden können.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Beispiel: Modellieren von XML-Daten mit dem XML-Datentyp  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Beispiel: Modellieren von XML-Daten mit dem xml-Datentyp  
  Stellen wir uns ein Produkthandbuch im XML-Format vor, das aus einem getrennten Kapitel für jedes Thema besteht und bei dem jedes Kapitel wiederum mehrere Abschnitte umfasst. Ein Abschnitt kann jeweils Unterabschnitte enthalten. Deshalb ist \<section> (Abschnitt) ein rekursives Element. Produkthandbücher enthalten eine riesige Menge gemischter Inhalte, Diagramme und technischer Materialien; die Daten sind deshalb halbstrukturiert. Benutzer wollen möglicherweise eine Kontextsuche nach Themen von Interesse durchführen. So könnten sie z. B. nach dem Abschnitt zum Thema "gruppierter Index" innerhalb des Kapitels zum Thema "Indizieren" suchen und technische Mengen abfragen.  
   
  Ein geeignetes Speichermodell für die XML-Dokumente ist eine **xml** -Datentypspalte. Dabei bleibt der InfoSet-Inhalt Ihrer XML-Daten erhalten. Durch Indizieren der XML-Spalte wird die Abfrageleistung gesteigert.  

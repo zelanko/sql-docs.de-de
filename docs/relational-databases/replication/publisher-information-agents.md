@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b006eac4981866bbadadaf47bc6d895e3abd0f9e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c0670e972dfb3c93a3b41dea67ebe5300c534843
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769733"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287489"
 ---
 # <a name="publisher-information-agents"></a>Verlegerinformationen, Agents
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ ms.locfileid: "68769733"
   
  Weitere Informationen zu diesen Aufträgen finden Sie unter [Replikations-Agent-Verwaltung](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Wählen Sie zum Anzeigen von Informationen zu einem Agent oder Auftrag eine Option im Dropdownmenü **Agent- und Auftragstypen** aus. Ausführliche Informationen und die Tasks für einen Agent oder Auftrag können Sie anzeigen, indem Sie mit der rechten Maustaste in die Zeile des jeweiligen Agents oder Auftrags klicken und eine Option im Kontextmenü auswählen. Wenn Sie die Anzeige der Daten im Raster ändern möchten, klicken Sie mit der rechten Maustaste auf das Raster, und klicken Sie anschließend auf eine der folgenden Optionen:  
   
--   **Sortieren:** Sortieren Sie nach einer oder mehreren Spalten im Dialogfeld **Spalten sortieren**.  
+-   **Sortieren**: Sortieren Sie nach einer oder mehreren Spalten im Dialogfeld **Spalten sortieren** .  
   
--   **Anzuzeigende Spalten auswählen:** Wählen Sie die anzuzeigenden Spalten sowie die Reihenfolge aus, in der diese im Dialogfeld **Spalten auswählen** angezeigt werden sollen.  
+-   **Anzuzeigende Spalten auswählen**: Wählen Sie die anzuzeigenden Spalten sowie die Reihenfolge aus, in der diese im Dialogfeld **Spalten auswählen** angezeigt werden sollen.  
   
--   **Filtern:** Filtern Sie Zeilen im Raster auf Grundlage der Spaltenwerte im Dialogfeld **Filtereinstellungen**.  
+-   **Filtern**: Filtern Sie Zeilen im Raster auf Grundlage der Spaltenwerte im Dialogfeld **Filtereinstellungen** .  
   
--   **Filter löschen:** Löschen Sie alle Filtereinstellungen für das Raster.  
+-   **Filter löschen**: Löschen Sie alle Filtereinstellungen für das Raster.  
   
  Filtereinstellungen sind rasterspezifisch. Die Spaltenauswahl und -sortierung wird auf alle Raster desselben Typs angewendet, z. B. das Veröffentlichungsraster für jeden Verleger.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68769733"
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Agent beim letzten Mal gestartet wurde.  
   
- **Dauer**  
+ **Duration**  
  Zeitdauer, für die der Agent ausgeführt wurde. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Agents oder die Gesamtzeit des zuvor ausgeführten Agents an.  
   
  **Letzte Aktion**  
@@ -112,7 +112,7 @@ ms.locfileid: "68769733"
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Agent beim letzten Mal gestartet wurde.  
   
- **Dauer**  
+ **Duration**  
  Zeitdauer, für die der Agent ausgeführt wurde. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Agents oder die Gesamtzeit des zuvor ausgeführten Agents an.  
   
  **Letzte Aktion**  
@@ -121,7 +121,7 @@ ms.locfileid: "68769733"
  **Übermittlungsrate**  
  Die Rate (in Befehlen pro Sekunde), mit der für Änderungen ein Commit in der Verteilungsdatenbank ausgeführt wird.  
   
- **Latenzzeit**  
+ **Latenz**  
  Die verstrichene Zeit in Sekunden zwischen dem Commit der letzten Änderung in der Veröffentlichungsdatenbank und dem Commit des zugehörigen Befehls in der Verteilungsdatenbank.  
   
  **#Trans**  
@@ -151,7 +151,7 @@ ms.locfileid: "68769733"
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Agent beim letzten Mal gestartet wurde.  
   
- **Dauer**  
+ **Duration**  
  Zeitdauer, für die der Agent ausgeführt wurde. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Agents oder die Gesamtzeit des zuvor ausgeführten Agents an.  
   
  **Letzte Aktion**  
@@ -160,7 +160,7 @@ ms.locfileid: "68769733"
  **Übermittlungsrate**  
  Die Rate (in Befehlen pro Sekunde), mit der für Änderungen ein Commit in der Verteilungsdatenbank ausgeführt wird.  
   
- **Latenzzeit**  
+ **Latenz**  
  Die verstrichene Zeit in Sekunden zwischen dem Commit der letzten Änderung in einer Abonnementdatenbank und dem Commit des zugehörigen Befehls in der Veröffentlichungsdatenbank.  
   
  **#Trans**  
@@ -184,13 +184,13 @@ ms.locfileid: "68769733"
   
 -   Wird nicht ausgeführt  
   
- **Auftrag**  
+ **Job**  
  Der Name des Auftrags.  
   
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Auftrag beim letzten Mal gestartet wurde.  
   
- **Dauer**  
+ **Duration**  
  Dauer der Auftragsausführung. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Auftrags oder die Gesamtzeit eines zuvor ausgeführten Auftrags an.  
   
  **Letzte Aktion**  

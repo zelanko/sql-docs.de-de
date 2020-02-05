@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67916038"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Betreiben von Always On-Verfügbarkeitsgruppen unter Linux
@@ -76,13 +76,13 @@ Bevor Sie beginnen, sichern Sie jede Datenbank.
 
    Wenn der Clustertyp der Verfügbarkeitsgruppe `NONE` lautet, führen Sie ein manuelles Failover aus. Führen Sie die folgenden Schritte wie folgt aus:
 
-      A. Der folgende Befehl legt das primäre Replikat als sekundäres Replikat fest. Ersetzen Sie `AG1` durch den Namen Ihrer Verfügbarkeitsgruppe. Führen Sie den Transact-SQL-Befehl auf der SQL Server-Instanz aus, die das primäre Replikat hostet.
+      a. Der folgende Befehl legt das primäre Replikat als sekundäres Replikat fest. Ersetzen Sie `AG1` durch den Namen Ihrer Verfügbarkeitsgruppe. Führen Sie den Transact-SQL-Befehl auf der SQL Server-Instanz aus, die das primäre Replikat hostet.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. Der folgende Befehl legt ein synchrones sekundäres Replikat als primäres Replikat fest. Führen Sie den folgenden Transact-SQL-Befehl in der Zielinstanz von SQL Server aus, also der Instanz, die das synchrone sekundäre Replikat hostet.
+      b. Der folgende Befehl legt ein synchrones sekundäres Replikat als primäres Replikat fest. Führen Sie den folgenden Transact-SQL-Befehl in der Zielinstanz von SQL Server aus, also der Instanz, die das synchrone sekundäre Replikat hostet.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

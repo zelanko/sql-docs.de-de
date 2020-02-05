@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: a39e0a743053db694efc2d0e8176e659d7e376d1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995877"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Konfigurieren von Microsoft Distributed Transaction Coordinator (MS DTC) unter Linux
@@ -29,7 +29,7 @@ Verteilte Transaktionen sind für SQL Server für Linux aktiviert, indem MS DTC 
 
 MS DTC verwendet zwei Konfigurationsparameter für das mssql-conf-Hilfsprogramm:
 
-| mssql-conf-Einstellung | und Beschreibung |
+| mssql-conf-Einstellung | BESCHREIBUNG |
 |---|---|
 | **network.rpcport** | Der TCP-Port, an den der RPC-Endpunktzuordnungsprozess gebunden wird. |
 | **distributedtransaction.servertcpport** | Der Port, an dem der MS DTC-Server lauscht. Wenn dieser nicht festgelegt ist, verwendet der MS DTC-Dienst bei Neustarts des Diensts einen zufälligen kurzlebigen Port. Firewallausnahmen müssen neu konfiguriert werden, um sicherzustellen, dass die Kommunikation mit dem MS DTC-Dienst fortgesetzt werden kann. |
@@ -184,7 +184,7 @@ Nach einem Neustart beginnt SQL Server jedoch bis zur ersten verteilten Transakt
 
 MS DTC für SQL Server für Linux verwendet standardmäßig keine Authentifizierung für die RPC-Kommunikation. Wenn der Hostcomputer jedoch einer Active Directory-Domäne (AD) hinzugefügt wird, ist es möglich, MS DTC mithilfe der folgenden **mssql-conf**-Einstellungen für die Verwendung der authentifizierten RPC-Kommunikation zu konfigurieren:
 
-| Einstellung | und Beschreibung |
+| Einstellung | BESCHREIBUNG |
 |---|---|
 | **distributedtransaction.allowonlysecurerpccalls**          | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. Der Standardwert ist 0 (null). |
 | **distributedtransaction.fallbacktounsecurerpcifnecessary** | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. Der Standardwert ist 0 (null). |

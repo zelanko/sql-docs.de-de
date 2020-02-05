@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594503"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten
@@ -101,8 +101,8 @@ Weitere Informationen zum Erstellen und Speichern von Spaltenhauptschlüsseln im
 > [!TIP]
 > Mit dem Assistenten können Sie Schlüssel nur im Windows-Zertifikatspeicher und in Azure Key Vault suchen und erstellen. Außerdem werden die Namen der neuen Schlüssel und der Metadatenobjekte, die die Schlüssel in der Datenbank beschreiben, automatisch generiert. Wenn Sie mehr Kontrolle über die Bereitstellungsweise der Schlüssel wünschen (und mehr Auswahlmöglichkeiten beim Schlüsselspeicher für Ihren Spaltenhauptschlüssel), können Sie mithilfe der Dialogfelder **Neuer Spaltenhauptschlüssel** und **Neuer Spaltenverschlüsselungsschlüssel** zunächst die Schlüssel erstellen und anschließend den Assistenten ausführen, um die erstellten Schlüssel auszuwählen. Weitere Informationen finden Sie unter [Bereitstellen von Spaltenhauptschlüsseln mit dem Dialogfeld „Neuer Spaltenhauptschlüssel“](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) und [Bereitstellen von Spaltenverschlüsselungsschlüsseln mit dem Dialogfeld „Neuer Spaltenverschlüsselungsschlüssel“](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog). 
 
-## <a name="next-steps"></a>Next Steps
-- [Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>Nächste Schritte
+- [Abfragen von Spalten mit Always Encrypted und SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Entwickeln von Anwendungen mit Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Weitere Informationen  

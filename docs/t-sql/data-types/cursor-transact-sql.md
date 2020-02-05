@@ -15,10 +15,10 @@ ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c25550ed5e985f643f81b0b41e749f007eef0df3
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682078"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "71682078"
 
 Ein Datentyp für Variablen oder für OUTPUT-Parameter von gespeicherten Prozeduren, die einen Verweis auf einen Cursor enthalten.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Folgende Vorgänge können auf Variablen und Parameter vom Datentyp **cursor** verweisen:
 -   Die Anweisungen DECLARE *\@local_variable* und SET *\@local_variable*.  
 -   Die Cursoranweisungen OPEN, FETCH, CLOSE und DEALLOCATE.  
@@ -40,7 +40,7 @@ Alle Variablen, die mit dem **cursor** -Datentyp erstellt wurden, lassen NULL zu
   
 Der **cursor** -Datentyp kann nicht für eine Spalte in einer CREATE TABLE-Anweisung verwendet werden.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
 [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  

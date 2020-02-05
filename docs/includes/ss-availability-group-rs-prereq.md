@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 336162ea06533901107c83dd47f062fc94fdd869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213326"
----
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Bevor Sie die Verfügbarkeitsgruppe erstellen, müssen Sie:
@@ -24,7 +16,7 @@ Aktivieren Sie Always On-Verfügbarkeitsgruppen auf jedem Replikat, das eine SQL
 Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
 ```
 
-## <a name="enable-an-alwaysonhealth-event-session"></a>Aktivieren einer AlwaysOn_health-Ereignissitzung
+## <a name="enable-an-alwayson_health-event-session"></a>Aktivieren einer AlwaysOn_health-Ereignissitzung
 
  Sie können optional eine Sitzung für erweiterte Ereignisse der Always On-Verfügbarkeitsgruppen (XEvents-Sitzung) aktivieren, die Ihnen bei der Ursachendiagnose helfen, wenn Sie Probleme in einer Verfügbarkeitsgruppe behandeln. Führen Sie hierfür auf jeder SQL Server-Instanz den folgenden Befehl aus:
 

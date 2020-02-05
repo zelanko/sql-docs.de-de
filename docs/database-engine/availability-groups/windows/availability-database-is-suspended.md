@@ -15,10 +15,10 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7a0a6d1fa10576eab5e515031e8233af95c2d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934914"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>Verfügbarkeitsdatenbank angehalten
@@ -30,10 +30,10 @@ ms.locfileid: "67934914"
 |-|-|  
 |**Richtlinienname**|Verfügbarkeitsdatenbank im angehaltenen Zustand|  
 |**Problem**|Die Verfügbarkeitsdatenbank wurde angehalten.|  
-|**Kategorie**|**Warnung**|  
+|**Kategorie**|**Warning**|  
 |**Facet**|Verfügbarkeitsdatenbank|  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Diese Richtlinie überprüft den Status der Datenverschiebung für die sekundäre Datenbank (auch bekannt als "sekundäres Datenbankreplikat"). Die Richtlinie befindet sich in einem fehlerhaften Zustand, wenn die Datenverschiebung angehalten wird. Die Richtlinie befindet sich andernfalls in einem ordnungsgemäßen Zustand.  
   
 > [!NOTE]  

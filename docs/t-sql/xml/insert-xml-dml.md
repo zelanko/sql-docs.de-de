@@ -17,10 +17,10 @@ ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051289"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
@@ -166,7 +166,7 @@ SELECT @myDoc;
 GO  
 ```  
   
-### <a name="d-inserting-a-comment-node"></a>D. Einfügen eines Kommentarknotens  
+### <a name="d-inserting-a-comment-node"></a>D: Einfügen eines Kommentarknotens  
  In dieser Abfrage wird ein XML-Dokument zuerst einer Variablen des Typs **xml** zugewiesen. Anschließend wird XML DML zum Einfügen eines Kommentarknotens nach dem ersten <`step`>-Element verwendet.  
   
 ```  

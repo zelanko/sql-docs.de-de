@@ -20,10 +20,10 @@ ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 11fe7041212c668855c86664362d555696f36bbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017568"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml (geometry-Datentyp)

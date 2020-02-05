@@ -22,10 +22,10 @@ ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816674"
 ---
 # <a name="sql-writer-service"></a>SQL Writer-Dienst
@@ -53,7 +53,7 @@ ms.locfileid: "71816674"
 ## <a name="permissions"></a>Berechtigungen  
  Der SQL Writer-Dienst muss unter dem Konto **Lokales System** ausgeführt werden. Der SQL Writer-Dienst verwendet die Anmeldung für **NT-Dienst\SQLWriter** , um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen. Mithilfe der Anmeldung für **NT-Dienst\SQLWriter** kann der SQL Writer-Prozess mit einer niedrigeren Berechtigungsstufe unter einem Konto ausgeführt werden, das **nicht als Anmeldekonto**geführt wird. Auf diese Weise wird das Sicherheitsrisiko verringert. Wenn der SQL Writer-Dienst deaktiviert ist, werden Hilfsprogramme, die auf VSS-Momentaufnahmen basieren, z. B. System Center Data Protection Manager sowie einige andere Drittanbieterprodukte, funktionsunfähig. Im schlimmsten Fall besteht die Gefahr, dass Sicherungen von inkonsistenten Datenbanken erstellt werden. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], das System, auf dem die Software ausgeführt wird, und das Hostsystem (im Falle eines virtuellen Computers) keine anderen Komponenten als die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sicherung erfordern, kann der SQL Writer-Dienst gefahrlos deaktiviert und die Anmeldung entfernt werden.  Beachten Sie, dass der SQL Writer-Dienst durch eine Sicherung auf Volume- oder Systemebene initiiert werden kann, unabhängig davon, ob die Sicherung direkt auf einer Momentaufnahme basiert oder nicht. Einige Systemsicherungsprodukte verwenden VSS, um Blockierungen durch geöffnete oder gesperrte Dateien zu verhindern. Der SQL Writer-Dienst erfordert erhöhte Berechtigungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , da im Verlauf der Dienstaktivitäten sämtliche E/A-Vorgänge für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kurzzeitig eingefroren werden.  
   
-## <a name="features"></a>Funktionen  
+## <a name="features"></a>Features  
  SQL Writer unterstützt:  
   
 -   Vollständige Sicherung und Wiederherstellung von Datenbanken, einschließlich der Volltextkataloge  
@@ -76,6 +76,6 @@ ms.locfileid: "71816674"
   
 -   Seitenwiederherstellung  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Der SQL Writer-Dienst ist ein von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Engine separater Dienst, der in den verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen und in verschiedenen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Server gemeinsam genutzt wird.  Die SQL Writer-Dienstdatei ist im Lieferumfang des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationspakets enthalten und mit derselben Versionsnummer versehen wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Engine, mit der sie geliefert wird.  Wenn eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Server installiert oder eine vorhandene Instanz aktualisiert wird und die Versionsnummer der installierten oder aktualisierten Instanz höher als die Versionsnummer des auf dem Server befindlichen SQL Writer-Diensts ist, wird diese Datei durch die Datei aus dem Installationspaket ersetzt.  Wenn der SQL Writer-Dienst durch ein Service Pack oder ein kumulatives Update aktualisiert wurde und eine RTM-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wird, kann eine neuere Version des SQL Writer-Diensts durch eine ältere ersetzt werden. Die Voraussetzung hierfür ist, dass die Installation eine höhere Hauptversionsnummer aufweist.  Beispiel: Der SQL Writer-Dienst wurde in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 aktualisiert.  Wenn diese Instanz auf [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM aktualisiert wird, wird der aktualisierte SQL Writer-Dienst durch eine ältere Version ersetzt.  In diesem Fall müssten Sie das neueste kumulative Update auf die neue Instanz anwenden, um die neuere Version des SQL Writer-Dienst zu erhalten.
 

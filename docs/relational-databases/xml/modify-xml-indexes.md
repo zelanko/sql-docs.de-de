@@ -14,10 +14,10 @@ ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a579fcf8809c8c05838dad70126421362cd8048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042678"
 ---
 # <a name="modify-xml-indexes"></a>Ändern von XML-Indizes

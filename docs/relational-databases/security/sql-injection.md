@@ -14,15 +14,15 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126860"
 ---
-# <a name="sql-injection"></a>SQL Injection
+# <a name="sql-injection"></a>Einschleusung von SQL-Befehlen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Bei einem SQL-Injection-Angriff wird ein bösartiger Code in Zeichenfolgen eingefügt, die später zur Analyse und Ausführung an eine Instanz von SQL Server übergeben werden. Sie sollten jede Prozedur, die SQL-Anweisungen erstellt, nach Injection-Anfälligkeiten überprüfen, denn SQL Server führt alle empfangenen gültigen Abfragen aus. Auch parametrisierte Daten können von einem technisch versierten Angreifer manipuliert werden.  
+  Eine Einschleusung von SQL-Befehlen ist ein Angriff, bei dem Schadcode in Zeichenfolgen eingefügt wird, die später zur Analyse und Ausführung an eine Instanz von SQL Server übergeben werden. Sie sollten jede Prozedur, die SQL-Anweisungen erstellt, nach Injection-Anfälligkeiten überprüfen, denn SQL Server führt alle empfangenen gültigen Abfragen aus. Auch parametrisierte Daten können von einem technisch versierten Angreifer manipuliert werden.  
   
 ## <a name="how-sql-injection-works"></a>Funktionsweise von SQL Injection  
  Die Primärform von SQL-Injection besteht aus dem direkten Einfügen des Codes in Benutzereingabevariablen, die mit SQL-Befehlen verkettet und ausgeführt werden. Bei einem weniger direkten Angriff wird bösartiger Code in Zeichenfolgen eingefügt, die in einer Tabelle oder als Metadaten gespeichert werden sollen. Wenn die gespeicherten Zeichenfolgen später in einem dynamischen SQL-Befehl verkettet werden, wird der bösartige Code ausgeführt.  
@@ -85,15 +85,15 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   Verketten Sie niemals Benutzereingaben, die nicht überprüft wurden. Die Zeichenfolgenverkettung ist der primäre Eingangspunkt für Script-Injection.  
   
--   Folgende Zeichenfolge dürfen in Feldern, aus denen Dateiname erstellt werden können, nicht zugelassen werden: AUX, CLOCK$, COM1 bis COM8, CON, CONFIG$, LPT1 bis LPT8, NUL und PRN.  
+-   Akzeptieren Sie in Feldern, aus denen Dateinamen erstellt werden können, keine der folgenden Zeichenfolgen: AUX, CLOCK$, COM1 bis COM8, CON, CONFIG$, LPT1 bis LPT8, NUL und PRN.  
   
  Weisen Sie, wenn möglich, Eingaben mit den folgenden Zeichen zurück.  
   
 |Eingabezeichen|Bedeutung in Transact-SQL|  
 |---------------------|------------------------------|  
 |**;**|Abfragetrennzeichen|  
-|**'**|Trennzeichen für Datenzeichenfolgen.|  
-|**--**|Trennzeichen für Datenzeichenfolgen.<br />gilt.|  
+|**“**|Trennzeichen für Datenzeichenfolgen.|  
+|**--**|Trennzeichen für Datenzeichenfolgen.<br />erforderlich.|  
 |**/\*** ... **\*/**|Kommentartrennzeichen. Text zwischen **/\*** und **\*/** wird vom Server nicht ausgewertet.|  
 |**xp_**|Wird am Anfang des Namens von erweiterten gespeicherten Katalogprozeduren verwendet, wie z.B. `xp_cmdshell`.|  
   

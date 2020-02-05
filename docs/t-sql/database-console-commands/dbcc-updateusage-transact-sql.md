@@ -34,10 +34,10 @@ ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040464"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68040464"
 
 Meldet und behebt Ungenauigkeiten bei den Seiten- und Zeilenzahlen in den Katalogsichten. Diese Ungenauigkeiten können falsche Berichte über die Speicherplatzverwendung verursachen, die von der gespeicherten Systemprozedur sp_spaceused zurückgegeben werden.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -67,7 +67,7 @@ Name oder ID der Tabelle oder indizierten Sicht, deren Statistiken zur Speicherv
 *index_id* | *index_name*  
 ID oder Name des zu verwendenden Indexes. Falls nicht angegeben, werden von der Anweisung alle Indizes der angegebenen Tabelle oder Sicht verarbeitet.  
   
-mit  
+WITH  
 Ermöglicht die Angabe von Optionen.  
   
 NO_INFOMSGS  
@@ -120,7 +120,7 @@ DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');
 GO  
 ```  
   
-### <a name="d-updating-page-or-row-counts-or-both-for-a-specific-index-in-a-table"></a>D. Aktualisieren von Seiten- oder Zeilenzahlen oder beidem für einen bestimmten Index in einer Tabelle  
+### <a name="d-updating-page-or-row-counts-or-both-for-a-specific-index-in-a-table"></a>D: Aktualisieren von Seiten- oder Zeilenzahlen oder beidem für einen bestimmten Index in einer Tabelle  
  Im folgenden Beispiel wird `IX_Employee_ManagerID` als Indexname angegeben.  
   
 ```sql

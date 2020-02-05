@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15d684788ee14713c0a6fb2e8d742d7a81a6eed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026410"
 ---
 # <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
@@ -50,7 +50,7 @@ Diese Funktion ist die ANSI SQL-Entsprechung zu [GETDATE](../../t-sql/functions/
   
 Unter [Datums- und Uhrzeitdatentypen und Funktionen ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) finden Sie eine Übersicht über alle Datums- und Uhrzeitdatentypen und -funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -67,7 +67,7 @@ Diese Funktion akzeptiert keine Argumente.
 ## <a name="remarks"></a>Bemerkungen  
 [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen können an jeder Stelle auf `CURRENT_TIMESTAMP` verweisen, an der sie auf einen **datetime**-Ausdruck verweisen können.
   
-`CURRENT_TIMESTAMP` ist eine nicht deterministische Funktion. Sichten und Ausdrücke, die auf diese Spalte verweisen, können nicht indiziert werden.
+`CURRENT_TIMESTAMP` ist eine nichtdeterministische Funktion. Sichten und Ausdrücke, die auf diese Spalte verweisen, können nicht indiziert werden.
   
 ## <a name="examples"></a>Beispiele  
 In diesen Beispielen werden die sechs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemfunktionen, die aktuelle Datums- und Uhrzeitwerte zurückgeben, dazu verwendet, das Datum, die Uhrzeit oder beides zurückzugeben. In den Beispielen werden die Werte der Reihe nach zurückgegeben, sodass sich deren Sekundenbruchteile unterscheiden können. Beachten Sie, dass die tatsächlich zurückgegebenen Werte dem tatsächlichen Zeitpunkt (Tag und Uhrzeit) der Ausführung entsprechen.
@@ -131,13 +131,13 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT CURRENT_TIMESTAMP;  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

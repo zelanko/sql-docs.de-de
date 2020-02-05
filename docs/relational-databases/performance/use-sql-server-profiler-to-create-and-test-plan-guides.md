@@ -24,10 +24,10 @@ ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165930"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten
@@ -68,7 +68,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Öffnen Sie die Batchtextdatei in Editor, und kopieren Sie den Text in die Zwischenablage.  
   
-8.  Erstellen Sie die Planhinweisliste, und fügen Sie den kopierten Text zwischen die Anführungszeichen (**''**) ein, die für das **\@stmt**-Argument angegeben sind. Sie müssen alle einfachen Anführungszeichen im **\@stmt**-Argument abgrenzen, indem Sie ihnen ein weiteres einfaches Anführungszeichen voranstellen. Achten Sie darauf, beim Einfügen dieser einfachen Anführungszeichen keine weiteren Zeichen hinzuzufügen oder zu entfernen. So muss z. B. das Datumsliteral **'** 20000101 **'** als **''** 20000101 **''** abgegrenzt werden.  
+8.  Erstellen Sie die Planhinweisliste, und fügen Sie den kopierten Text zwischen die Anführungszeichen ( **''** ) ein, die für das **\@stmt**-Argument angegeben sind. Sie müssen alle einfachen Anführungszeichen im **\@stmt**-Argument abgrenzen, indem Sie ihnen ein weiteres einfaches Anführungszeichen voranstellen. Achten Sie darauf, beim Einfügen dieser einfachen Anführungszeichen keine weiteren Zeichen hinzuzufügen oder zu entfernen. So muss z. B. das Datumsliteral **'** 20000101 **'** als **''** 20000101 **''** abgegrenzt werden.  
   
  Die Planhinweisliste sieht dann folgendermaßen aus:  
   

@@ -8,10 +8,10 @@ ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
 ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70963574"
 ---
 Jede Verfügbarkeitsgruppe hat nur ein primäres Replikat. Das primäre Replikat lässt Lese- und Schreibvorgänge zu. Sie können ein Failover ausführen, um das primäre Replikat zu ändern. In einer Verfügbarkeitsgruppe für Hochverfügbarkeit automatisiert der Cluster-Manager den Failovervorgang. In einer Verfügbarkeitsgruppe mit dem Clustertyp „NONE“ erfolgt der Failovervorgang manuell. 
@@ -64,7 +64,7 @@ So führen ein manuelles Failover ohne Datenverlust aus:
    WHERE drs.group_id = ag.group_id; 
    ```
 
-   Das sekundäre Replikat wird synchronisiert, wenn `synchronization_state_desc` `SYNCHRONIZED` ist.
+   Das sekundäre Replikat wird synchronisiert, wenn `synchronization_state_desc``SYNCHRONIZED` ist.
 
 3. Aktualisieren Sie `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` auf 1.
 

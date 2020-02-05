@@ -13,10 +13,10 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f152f3c0115ad2af67a1b258ff19aa0142b277d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294051"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services-Paketen
@@ -54,12 +54,12 @@ ms.locfileid: "71294051"
  Die FactBuyingHabits-Tabelle im Data Warehouse erfasst das letzte Datum, an dem ein Kunde ein bestimmtes Produkt gekauft hat. Die Tabelle besteht aus den Spalten ProductID, CustomerID und PurchaseDate. Jede Woche generiert die Transaktionsdatenbank eine PurchaseRecords-Tabelle, in der die während dieser Woche getätigten Käufe enthalten sind. Das Ziel ist, mit einer einzigen MERGE-Anweisung die Informationen der PurchaseRecords-Tabelle in die FactBuyingHabits-Tabelle einzufügen. Für Produkt/Kunde-Paare, die nicht vorhanden sind, fügt die MERGE-Anweisung neue Zeilen ein. Für Produkt/Kunde-Paare, die vorhanden sind, aktualisiert die MERGE-Anweisung das letzte Kaufdatum.  
   
 ###### <a name="track-price-history"></a>Nachverfolgen der Preisentwicklung  
- Die DimBook-Tabelle repräsentiert die Liste der Bücher im Bestand eines Buchhändlers und identifiziert die Preisentwicklung für jedes Buch. Diese Tabelle hat folgende Spalten: ISBN, ProductID, Price, Shelf und IsCurrent. Außerdem enthält die Tabelle eine Zeile für jeden Preis des Buchs in der Vergangenheit. Eine dieser Zeilen enthält den aktuellen Preis. Um anzugeben, welche Zeile den aktuellen Preis enthält, wird der Wert der "IsCurrent"-Spalte für diese Zeile auf 1 gesetzt.  
+ Die DimBook-Tabelle repräsentiert die Liste der Bücher im Bestand eines Buchhändlers und identifiziert die Preisentwicklung für jedes Buch. Diese Tabelle enthält folgende Spalten: ISBN, ProductID, Price, Shelf und IsCurrent. Außerdem enthält die Tabelle eine Zeile für jeden Preis des Buchs in der Vergangenheit. Eine dieser Zeilen enthält den aktuellen Preis. Um anzugeben, welche Zeile den aktuellen Preis enthält, wird der Wert der "IsCurrent"-Spalte für diese Zeile auf 1 gesetzt.  
   
  Jede Woche generiert die Datenbank eine WeeklyChanges-Tabelle, in der Preisänderungen und neue Bücher, die während der Woche in den Bestand aufgenommen wurden, enthalten sind. Mit einer einzigen MERGE-Anweisung können Sie die Änderungen der WeeklyChanges-Tabelle in die DimBook-Tabelle übernehmen. Die MERGE-Anweisung fügt neue Zeilen für neu hinzugefügte Bücher hinzu und aktualisiert die IsCurrent-Spalte für Zeilen vorhandener Bücher, deren Preis sich geändert hat, auf 0. Außerdem fügt die MERGE-Anweisung neue Zeilen für Bücher hinzu, deren Preis sich geändert hat, und legt den Wert der IsCurrent-Spalte für diese neuen Zeilen auf 1 fest.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>Zusammenführen einer Tabelle mit neuen Daten aus der alten Tabelle  
- Die Datenbank formt die Eigenschaften eines Objekts mit einem „offenen Schema“, das heißt, eine Tabelle enthält Name/Wert-Paare für jede Eigenschaft. Die Tabelle „Properties“ hat drei Spalten: EntityID, PropertyID und Value. Eine NewProperties-Tabelle, bei der es sich um eine neuere Version der Tabelle handelt, muss mit der Properties-Tabelle synchronisiert werden. Um diese beiden Tabellen zu synchronisieren, können Sie eine einzelne MERGE-Anweisung verwenden, um die folgenden Vorgänge auszuführen:  
+ Die Datenbank formt die Eigenschaften eines Objekts mit einem „offenen Schema“, das heißt, eine Tabelle enthält Name/Wert-Paare für jede Eigenschaft. Die Properties-Tabelle enthält drei Spalten: EntityID,  PropertyID und Value. Eine NewProperties-Tabelle, bei der es sich um eine neuere Version der Tabelle handelt, muss mit der Properties-Tabelle synchronisiert werden. Um diese beiden Tabellen zu synchronisieren, können Sie eine einzelne MERGE-Anweisung verwenden, um die folgenden Vorgänge auszuführen:  
   
 -   Löschen Sie Eigenschaften aus der Properties-Tabelle, wenn sie in der NewProperties-Tabelle fehlen.  
   

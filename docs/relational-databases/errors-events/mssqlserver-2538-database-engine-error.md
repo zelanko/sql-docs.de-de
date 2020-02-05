@@ -12,13 +12,13 @@ ms.assetid: 0a0f7d79-f1ba-4749-8804-fb660cca3492
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 942195ea546c43d6d41230020f793935ca614d6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103630"
 ---
-# <a name="mssqlserver2538"></a>MSSQLSERVER_2538
+# <a name="mssqlserver_2538"></a>MSSQLSERVER_2538
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -36,5 +36,5 @@ ms.locfileid: "68103630"
 Diese Informationen sind Teil der Ausgabe des Befehls DBCC CHECKALLOC. Bei diesen Informationen handelt es sich um die Zusammenfassung von zugeordneten Blöcken, verwendeten Seiten und reservierten Seiten pro Datei für die angegebene Datenbank.  
   
 ## <a name="user-action"></a>Benutzeraktion  
-None  
+Keine  
   

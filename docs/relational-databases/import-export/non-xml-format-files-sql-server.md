@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3581d9247979702a7c1e9af409b43121c4158334
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111892"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Nicht-XML-Formatdateien (SQL Server)
@@ -58,14 +58,14 @@ ms.locfileid: "68111892"
   
  Die Felder **Version** und **Anzahl der Spalten** kommen nur einmal vor. Die Bedeutung dieser Felder wird in der folgenden Tabelle beschrieben.  
   
-|Feld in der Formatdatei|und Beschreibung|  
+|Feld in der Formatdatei|BESCHREIBUNG|  
 |------------------------|-----------------|  
-|Versionsoptionen|Versionsnummer des Hilfsprogramms **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Die Versionsnummer wird nur von **bcp**erkannt, nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)].<br /><br /> <br /><br /> Hinweis: Die Version des zum Lesen einer Formatdatei verwendeten Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, übereinstimmen oder höher sein. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** liest z.B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** liest keine Formatdateien der Version 12.0, die von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] **bcp** generiert wurden.|  
-|Anzahl der Spalten|Anzahl der Felder in der Datendatei. Diese Anzahl muss für alle Zeilen identisch sein.|  
+|Version|Versionsnummer des Hilfsprogramms **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Die Versionsnummer wird nur von **bcp**erkannt, nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)].<br /><br /> <br /><br /> Hinweis: Die Version des zum Lesen der Formatdatei verwendeten Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, übereinstimmen oder höher sein. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** liest z.B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** liest keine Formatdateien der Version 12.0, die von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp** generiert wurden.|  
+|Anzahl von Spalten|Anzahl der Felder in der Datendatei. Diese Anzahl muss für alle Zeilen identisch sein.|  
   
  Die anderen Felder der Formatdatei beschreiben die Datenfelder, die massenimportiert bzw. exportiert werden sollen. Jedes Datenfeld nimmt eine eigene Zeile in der Formatdatei ein. Jede Zeile der Formatdatei enthält Werte für die Felder der Formatdatei. Diese Felder werden in der folgenden Tabelle beschrieben.  
   
-|Feld in der Formatdatei|und Beschreibung|  
+|Feld in der Formatdatei|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |**Reihenfolge der Felder der Hostdatei**|Eine Zahl, die die Position jedes Felds in der Datendatei angibt. Das erste Feld in der Zeile ist 1 usw.|  
 |**Datentyp in der Hostdatei**|Gibt den Datentyp an, der in einem bestimmten Feld der Datendatei gespeichert wird. Bei ASCII-Datendateien verwenden Sie SQLCHAR, bei Datendateien im systemeigenen Format verwenden Sie Standarddatentypen. Weitere Informationen finden Sie unter [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).|  

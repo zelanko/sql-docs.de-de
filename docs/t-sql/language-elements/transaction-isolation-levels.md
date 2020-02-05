@@ -17,10 +17,10 @@ ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28a8de0654fe6e083b52e83d85653a0d9856d351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072206"
 ---
 # <a name="transaction-isolation-levels"></a>Transaktionsisolationsstufen
@@ -30,7 +30,7 @@ ms.locfileid: "68072206"
   
  Intern berücksichtigt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] beim Zugriff auf Metadaten nur die Isolationsstufe READ COMMITTED. Wenn eine Transaktion beispielsweise die Isolationsstufe SERIALIZABLE besitzt und innerhalb der Transaktion versucht wird, über Katalogsichten oder Metadaten ausgebende integrierte Funktionen auf Metadaten zuzugreifen, werden die entsprechenden Abfragen ausgeführt, bis sie als READ COMMITTED abgeschlossen sind. Bei der Momentaufnahmeisolation kann der Zugriff auf Metadaten jedoch aufgrund von gleichzeitigen DDL-Vorgängen einen Fehler erzeugen. Der Grund dafür ist, dass Metadaten nicht versionsspezifisch sind. Daher besteht das Risiko, dass bei der Momentaufnahmeisolation der Zugriff über folgende Sichten und Funktionen zu einem Fehler führt:  
   
--   Katalogsichten  
+-   Katalogansichten  
   
 -   Kompatibilitätssichten  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68072206"
   
  Die folgende Tabelle fasst den Zugriff auf Metadaten bei verschiedenen Isolationsstufen zusammen.  
   
-|Isolationsstufe|Supported|Berücksichtigt|  
+|Isolationsstufe|Unterstützt|Berücksichtigt|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|Nein|Nicht mit Sicherheit berücksichtigt|  
 |READ COMMITTED|Ja|Ja|  

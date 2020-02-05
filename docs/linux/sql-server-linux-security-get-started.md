@@ -9,17 +9,17 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68019497"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Sicherheitsfeatures von SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Wenn Sie ein Linux-Benutzer sind, der noch nicht mit SQL Server vertraut ist, lernen Sie mit den folgenden Aufgaben einige der Sicherheitsaufgaben kennen. Diese sind nicht eindeutig oder spezifisch für Linux, aber es hilft Ihnen, einen Überblick über die Bereiche zu erhalten, die Sie näher untersuchen sollten. In jedem Beispiel wird ein Link zu der ausführlichen Dokumentation für diesen Bereich bereitgestellt.
+Wenn Sie ein Linux-Benutzer sind, der noch nicht mit SQL Server vertraut ist, lernen Sie mit den folgenden Aufgaben einige der Sicherheitsaufgaben kennen. Diese Features gelten nicht ausschließlich und speziell nur für Linux, aber mit diesem Artikel können Sie sich einen Überblick über die Bereiche verschaffen, die Sie näher untersuchen sollten. In jedem Beispiel wird ein Link zu der ausführlichen Dokumentation für diesen Bereich bereitgestellt.
 
 > [!NOTE]
 >  In den folgenden Beispielen wird die Beispieldatenbank **AdventureWorks2014** verwendet. Anweisungen zum Abrufen und Installieren dieser Beispieldatenbank finden Sie unter [Migrieren einer SQL Server-Datenbank-Instanz von Windows zu Linux mit Sicherung und Wiederherstellung](sql-server-linux-migrate-restore-database.md).
@@ -259,7 +259,7 @@ SQL Server has the ability to encrypt the data while creating a backup. By speci
 The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
 USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Database backups';   GO BACKUP DATABASE [AdventureWorks2014]   TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
-mit  
+WITH  
   COMPRESSION,  
   ENCRYPTION   
    (  

@@ -12,13 +12,13 @@ ms.assetid: ae64276c-4e1e-4ef3-9ee9-ebeb2f61e565
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 23772a43a6786f7570542ebd5d11bcfba5e53790
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007073"
 ---
-# <a name="mssqlserver7986"></a>MSSQLSERVER_7986
+# <a name="mssqlserver_7986"></a>MSSQLSERVER_7986
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -30,7 +30,7 @@ ms.locfileid: "68007073"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_PRE_CHECKS_CROSS_OBJECT_LINKAGE|  
-|Meldungstext|Vorabüberprüfungen für Systemtabelle: Die Objekt-ID „O_ID“ besitzt eine objektübergreifende Kettenverknüpfung. Die Seite P_ID1 zeigt auf P_ID2 in der Zuordnungseinheit mit der ID A_ID1 (sollte A_ID2 sein). Die CHECK-Anweisung wurde aufgrund eines irreparablen Fehlers beendet.|  
+|Meldungstext|Vorabüberprüfungen für Systemtabelle: Die Objekt-ID O_ID besitzt eine objektübergreifende Kettenverknüpfung. Die Seite P_ID1 zeigt auf P_ID2 in der Zuordnungseinheit mit der ID A_ID1 (sollte A_ID2 sein). Die CHECK-Anweisung wurde aufgrund eines irreparablen Fehlers beendet.|  
   
 ## <a name="explanation"></a>Erklärung  
 Die erste Phase eines DBCC CHECKDB beinhaltet einfache Überprüfungen der Datenseiten kritischer Systemtabellen. Gefundene Fehler können nicht repariert werden. Daher wird DBCC CHECKDB sofort beendet. Der Zeiger für die nächste Seite *P_ID1* in der Datenebene des angegebenen Objekts verweist auf die Seite *P_ID2* in einem anderen Objekt.  
@@ -48,5 +48,5 @@ Letztendlich kann es vorteilhaft sein, wenn Sie zu einem neuen Hardwaresystem we
 Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
   
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
-Nicht verfügbar. Dieser Fehler kann nicht automatisch repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+Nicht zutreffend Dieser Fehler kann nicht automatisch repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   

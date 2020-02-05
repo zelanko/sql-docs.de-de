@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68045188"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Konfigurieren einer SQL Server Always On-Verfügbarkeitsgruppe unter Windows und Linux (plattformübergreifend)
@@ -23,7 +23,7 @@ ms.locfileid: "68045188"
 
 In diesem Artikel werden die Schritte zum Erstellen einer Always On-Verfügbarkeitsgruppe (VG) mit einem Replikat auf einem Windows-Server und dem anderen Replikat auf einem Linux-Server erläutert. Diese Konfiguration ist plattformübergreifend, da die Replikate unter unterschiedlichen Betriebssystemen ausgeführt werden. Verwenden Sie diese Konfiguration für die Migration von einer Plattform zur anderen oder zur Notfallwiederherstellung. Diese Konfiguration unterstützt keine Hochverfügbarkeit, da keine Clusterlösung vorhanden ist, um eine plattformübergreifende Konfiguration zu verwalten. 
 
-![Hybrid NONE](./media/sql-server-linux-availability-group-overview/image1.png)
+![Hybride Replikate unter „NONE“](./media/sql-server-linux-availability-group-overview/image1.png)
 
 Bevor Sie fortfahren, sollten Sie mit der Installation und Konfiguration für SQL Server-Instanzen unter Windows und Linux vertraut sein. 
 
@@ -210,7 +210,7 @@ Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind identisch mit den Schr
 
    Aktualisieren Sie vor dem Ausführen des Skripts die Werte für die Datenbank.
 
-      * Ersetzen Sie `<TestDB>` durch den Namen der Datenbank.
+      * Ersetzen Sie `<TestDB>` durch den Namen Ihrer Datenbank.
 
       * Ersetzen Sie `<F:\Path>` durch den Pfad der Datenbank und der Protokolldateien. Verwenden Sie für die Datenbank- und Protokolldateien denselben Pfad. 
 
@@ -230,7 +230,7 @@ Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind identisch mit den Schr
 
 1. Wenn Sie kein automatisches Seeding verwenden, stellen Sie die Datenbank auf dem sekundären Replikatserver (Linux) wieder her. [Migrieren einer SQL Server-Datenbank von Windows zu Linux mithilfe der Funktion Sichern und Wiederherstellen](sql-server-linux-migrate-restore-database.md) Stellen Sie die Datenbank `WITH NORECOVERY` auf dem sekundären Replikat wieder her. 
 
-1. Fügen Sie die Datenbank der Verfügbarkeitsgruppe hinzu. Aktualisieren Sie das Beispielskript. Ersetzen Sie `<TestDB>` durch den Namen der Datenbank. Führen Sie auf dem primären Replikat die SQL-Abfrage aus, um der Verfügbarkeitsgruppe die Datenbank hinzuzufügen.
+1. Fügen Sie die Datenbank der Verfügbarkeitsgruppe hinzu. Aktualisieren Sie das Beispielskript. Ersetzen Sie `<TestDB>` durch den Namen Ihrer Datenbank. Führen Sie auf dem primären Replikat die SQL-Abfrage aus, um der Verfügbarkeitsgruppe die Datenbank hinzuzufügen.
 
    ```sql
    ALTER AG [ag1] ADD DATABASE <TestDB>

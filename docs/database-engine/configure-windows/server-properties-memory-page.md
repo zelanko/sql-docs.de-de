@@ -13,17 +13,17 @@ ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6eb32d81ccab79efa044ed4a21798bebe6ee3fd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025478"
 ---
 # <a name="server-properties---memory-page"></a>Servereigenschaften (Seite „Speicher“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Auf dieser Seite können Sie die Arbeitsspeichereinstellungen für den Server anzeigen und bearbeiten. Wenn für **Minimaler Serverarbeitsspeicher** 0 und für **Maximaler Serverarbeitsspeicher** 2147483647 MB festgelegt sind, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu jeder Zeit die optimale Menge an Arbeitsspeicher nutzen, abhängig davon, wie viel Arbeitsspeicher vom Betriebssystem und von anderen Anwendungen aktuell verwendet wird. Mit der wechselnden Auslastung des Computers und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert sich auch der zugeordnete Arbeitsspeicher. Sie können außerdem diese dynamische Arbeitsspeicherbelegung mit den unten angegebenen Minimal- und Maximalwerten begrenzen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Minimaler Serverarbeitsspeicher (in MB)**  
  Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der angegebenen Mindestgröße des zugeordneten Speichers beginnen und unterhalb dieses Werts keinen Speicher freigeben sollte. Legen Sie diesen Wert auf der Basis der Größe und Aktivität Ihrer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fest. Diese Option sollte immer auf einen geeigneten Wert festgelegt werden, um sicherzustellen, dass das Betriebssystem nicht zu viel Arbeitsspeicher von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anfordert und dadurch die Leistung von Windows beeinträchtigt.  
   

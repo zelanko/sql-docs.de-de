@@ -52,12 +52,12 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a58f211c1a838cb0089cbc2f3e5e156936d1c7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fd8173f0c29855fc4553dedcd9ac47ddc909f57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914741"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909830"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC-Skalarfunktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,12 +67,12 @@ ms.locfileid: "67914741"
 ## <a name="usage"></a>Verwendung  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
-## <a name="functions"></a>Funktionen  
+## <a name="functions"></a>Functions  
  In den folgenden Tabellen werden ODBC-Skalarfunktionen aufgelistet, die nicht in [!INCLUDE[tsql](../../includes/tsql-md.md)] dupliziert werden.  
   
 ### <a name="string-functions"></a>Zeichenfolgenfunktionen  
   
-|Funktion|und Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|Gibt die Länge des Zeichenfolgenausdrucks in Bits zurück.<br /><br /> Gibt die interne Größe des angegebenen Datentyps zurück, ohne „string_exp“ in „string“ zu konvertieren.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Gibt eine Zeichenfolge zurück, die das Ergebnis der Verkettung von string_exp2 und string_exp1 darstellt. Die Ergebniszeichenfolge hängt vom DBMS ab. Wenn die durch string_exp1 dargestellte Spalte z. B. einen NULL-Wert enthält, wird DB2 NULL zurückgeben. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hingegen gibt eine Zeichenfolge ungleich NULL zurückgeben.|  
@@ -80,13 +80,13 @@ ms.locfileid: "67914741"
   
 ### <a name="numeric-function"></a>Numerische Funktion  
   
-|Funktion|und Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Gibt numeric_exp abgeschnitten auf integer_exp-Positionen rechts vom Dezimaltrennzeichen zurück. Wenn „integer_exp“ negativ ist, wird „numeric_exp“ auf die Positionen „&#124;integer_exp&#124;“ links vom Dezimaltrennzeichen abgeschnitten.|  
   
 ### <a name="time-date-and-interval-functions"></a>Uhrzeit-, Datums- und Intervallfunktionen  
   
-|Funktion|und Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Gibt das aktuelle Datum zurück.|  
 |CURDATE( ) (ODBC 3.0)|Gibt das aktuelle Datum zurück.|  
@@ -177,9 +177,9 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. Verwenden einer ODBC-Funktion in einer gespeicherten Prozedur  
+### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D: Verwenden einer ODBC-Funktion in einer gespeicherten Prozedur  
  Im folgenden Beispiel wird eine ODBC-Funktion in einer gespeicherten Prozedur verwendet:  
   
 ```  
@@ -223,7 +223,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 SELECT {fn CONCAT( 'CONCAT ','returns a character string')};  
 -- Returns CONCAT returns a character string  
 SELECT {fn CURRENT_DATE( )};  
--- Returns todays date  
+-- Returns today's date  
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   

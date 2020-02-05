@@ -13,10 +13,10 @@ ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ea77000e660405d9be5086d7d85625bcdd7ed99
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293988"
 ---
 # <a name="select-objects-to-transfer"></a>Objekte auswählen (Übertragungsdialogfeld)
@@ -35,7 +35,7 @@ ms.locfileid: "71293988"
  [Editor für den Task „Aufträge übertragen“ &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)   
  [Editor für den Task „Anmeldungen übertragen“ &#40;Seite „Anmeldungen“&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)   
  [Editor für den Task „SQL Server-Objekte übertragen“ &#40;Seite „Objekte“&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-objects-page.md)   
- [Editor für den Task „In ,master‘ gespeicherte Prozeduren übertragen“ &#40;Seite „Gespeicherte Prozeduren“&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [Editor für den Task „Fehlermeldungen übertragen“ &#40;Seite „Meldungen“&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
+ [Editor für den Task „In master gespeicherte Prozeduren übertragen“ &#40;Seite „Gespeicherte Prozeduren“&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
+ [Editor für den Task „Fehlermeldungen übertragen“ &#40;Seite „Nachrichten“&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
   
   

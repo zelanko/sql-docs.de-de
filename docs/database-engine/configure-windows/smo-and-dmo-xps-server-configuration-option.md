@@ -11,10 +11,10 @@ ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a0c867d9acba6542d90f72595fa0f71ab6d62e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026052"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO and DMO XPs (Serverkonfigurationsoption)
@@ -29,7 +29,7 @@ ms.locfileid: "68026052"
 |value|Bedeutung|  
 |-----------|-------------|  
 |0|SMO-XPs sind nicht verfügbar.|  
-|1|SMO-XPS sind verfügbar. Dies ist die Standardeinstellung.|  
+|1|SMO-XPS sind verfügbar. Dies ist die Standardoption.|  
   
  Diese Einstellung wird sofort wirksam.  
   

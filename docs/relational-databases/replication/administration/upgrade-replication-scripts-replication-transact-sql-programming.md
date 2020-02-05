@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0d582af912f94fe0e0755340eb4d5ace892e72da
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d5c50143bd5bb9e7891e92b6b539446e9df6b652
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320043"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288357"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Aktualisieren von Replikationsskripts (Replikationsprogrammierung mit Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,12 +72,12 @@ ms.locfileid: "75320043"
   
 ### <a name="to-upgrade-scripts-that-configure-a-snapshot-or-transactional-publication"></a>So aktualisieren Sie Skripts, mit denen eine Momentaufnahme- oder eine Transaktionsveröffentlichung konfiguriert werden  
   
-1.  Führen Sie im vorhandenen Skript [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) vor [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie die Windows-Anmeldeinformationen für `@job_name` und `@job_password` an, unter denen der Protokolllese-Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung verwendet, müssen Sie zudem den Wert **0** für `@publisher_security_mode` und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen für `@publisher_login` und `@publisher_password` angeben. Dadurch wird ein Auftrag des Protokolllese-Agents für die Veröffentlichungsdatenbank erstellt.  
+1.  Führen Sie im vorhandenen Skript [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) vor [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie die Windows-Anmeldeinformationen für `@job_name` und `@job_password` an, unter denen der Protokolllese-Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung verwendet, müssen Sie zudem den Wert **0** für `@publisher_security_mode` und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen für `@publisher_login` und `@publisher_password` angeben. Dadurch wird ein Auftrag des Protokolllese-Agents für die Veröffentlichungsdatenbank erstellt.  
   
     > [!NOTE]  
     >  Dieser Schritt muss nur bei Transaktionsveröffentlichungen, nicht bei Momentaufnahmeveröffentlichungen ausgeführt werden.  
   
-2.  (Optional) Führen Sie [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) vor [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) auf dem Verteiler für die Verteilungsdatenbank aus. Geben Sie die Windows-Anmeldeinformationen, unter denen der Warteschlangenlese-Agent ausgeführt wird, für `@job_name` und `@job_password` an. Dadurch wird ein Auftrag des Warteschlangenlese-Agents für den Verteiler erstellt.  
+2.  (Optional) Führen Sie [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) vor [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) auf dem Verteiler für die Verteilungsdatenbank aus. Geben Sie die Windows-Anmeldeinformationen, unter denen der Warteschlangenlese-Agent ausgeführt wird, für `@job_name` und `@job_password` an. Dadurch wird ein Auftrag des Warteschlangenlese-Agents für den Verteiler erstellt.  
   
     > [!NOTE]  
     >  Dieser Schritt muss nur bei Transaktionsveröffentlichungen ausgeführt werden, die Abonnenten mit verzögertem Update über eine Warteschlange unterstützen.  

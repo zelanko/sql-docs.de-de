@@ -13,10 +13,10 @@ ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8eaed6e70ad457f33dc9587e3004e433da43ae1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298089"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Quellen-Editor für SAP BW (Seite Erweitert)
@@ -42,7 +42,7 @@ ms.locfileid: "71298089"
   
 3.  Klicken Sie im **Quellen-Editor für SAP BW**auf **Erweitert** , um die Seite **Erweitert** des Editors zu öffnen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration der Quelle erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -50,7 +50,7 @@ ms.locfileid: "71298089"
  **Zeichenfolgenkonvertierung**  
  Geben Sie die Regel an, die für die Zeichenfolgenkonvertierung angewendet werden soll.  
   
-|Option|und Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Automatische Zeichenfolgenkonvertierung**|Konvertieren Sie alle Zeichenfolgen in **nvarchar** , wenn das SAP NetWeaver BW-System ein Unicode-System ist. Konvertieren Sie andernfalls alle Zeichenfolgen in **varchar**.|  
 |**Zeichenfolgen in varchar konvertieren**|Konvertieren Sie alle Zeichenfolgen in **varchar**.|  
@@ -62,7 +62,7 @@ ms.locfileid: "71298089"
 > [!NOTE]  
 >  Diese Option ist nur gültig, wenn Sie auf der Seite **Verbindungs-Manager** des Editors **W – Benachrichtigung abwarten** als Wert für den **Ausführungsmodus** ausgewählt haben. Informationen hierzu finden Sie unter [Quellen-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md).  
   
- **Anforderungs-ID**  
+ **Anfrage-ID**  
  Geben Sie die Anforderungs-ID an, deren Status Sie auf „G – Grün“ zurücksetzen möchten, wenn Sie auf **Zurücksetzen**klicken.  
   
  **Zurücksetzen**  
@@ -71,7 +71,7 @@ ms.locfileid: "71298089"
 ## <a name="see-also"></a>Weitere Informationen  
  [Quellen-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [Quellen-Editor für SAP BW &#40;Seite Fehlerausgabe&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [Quellen-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

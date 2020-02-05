@@ -13,10 +13,10 @@ ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: fff8aa7a2e37f66470798b2772ed00d0298708a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093415"
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQLServer, Speicherbrokerclerks (Objekt)
@@ -25,7 +25,7 @@ Das Leistungsobjekt **SQLServer: Speicherbrokerclerks** enthält Leistungsindika
 
 In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **Speicherbrokerclerks** beschrieben.
 
-|**SQL Server-Speicherbrokerclerks (Leistungsindikatoren)**|und Beschreibung|  
+|**SQL Server-Speicherbrokerclerks (Leistungsindikatoren)**|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Interner Nutzen**|Der interne Wert des Arbeitsspeichers für eine unzureichende Eintragsanzahl (in ms pro Seite pro ms) multipliziert mit 10 Milliarden und auf eine ganze Zahl gekürzt.|
 |**Größe des Speicherbrokerclerks**|Die Clerkgröße in Seiten.|

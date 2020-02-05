@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a5df90640dc9ebdd2d59593c4b2a82a0f7daa00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094655"
 ---
 # <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68094655"
 
 Diese Funktion gibt den Wert des Schweregrads für den Fehler zurück, an dem der Fehler auftritt, wenn durch diesen die Ausführung des CATCH-Blocks eines TRY...CATCH-Konstrukts verursacht wurde.  
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +57,7 @@ Wenn diese Funktion in einem CATCH-Block aufgerufen wird, in dem ein Fehler auft
   
 `ERROR_SEVERITY` arbeitet in der Regel in einem geschachtelten `CATCH`-Block. `ERROR_SEVERITY` gibt den Wert des Fehlerschweregrads für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_SEVERITY` die Wert des Schweregrads für den Fehler zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_SEVERITY` im äußeren `CATCH`-Block ausgeführt wird, wird der Wert des Schweregrads für den Fehler zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-error_severity-in-a-catch-block"></a>A. Verwenden von ERROR_SEVERITY in einem CATCH-Block  
 Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 (null) generiert wird. `ERROR_SEVERITY` gibt den Wert für den Schweregrad des Fehlers zurück.  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b9cdb3ce08f32c6b73ae1558ed2a9b3b8bf34871
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089400"
 ---
 # <a name="full-text-event-category"></a>Volltext (Ereigniskategorie)
@@ -27,7 +27,7 @@ ms.locfileid: "68089400"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[FT:Crawl Aborted (Ereignisklasse)](../../relational-databases/event-classes/ft-crawl-aborted-event-class.md)|Gibt an, dass beim Volltextdurchforsten eine Ausnahme aufgetreten ist.|  
 |[FT:Crawl Started (Ereignisklasse)](../../relational-databases/event-classes/ft-crawl-started-event-class.md)|Gibt an, dass ein Volltextdurchforsten gestartet wurde.|  

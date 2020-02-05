@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2847ef10bd52d69375fa4f13f1d003eb4159961f
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847471"
 ---
 # <a name="iservervirtualdeviceset2close-vdi"></a>IServerVirtualDeviceSet2::Close (VDI)
@@ -34,7 +34,7 @@ HRESULT IServerVirtualDeviceSet2::Close ();
 |---|---|
 | VD_E_PROTOCOL | Die Geräte waren noch geöffnet. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Die virtuellen Geräte sollten nicht vor dem Schließen der Geräte geschlossen werden. In diesem Fall wird „VD_E_PROTOCOL“ zurückgegeben. Diese Aktion führt dazu, dass ein sofortiges Schließen erfolgt und dabei die Zuordnung von gemeinsam genutztem Speicherbereich freigegeben wird. Der Server unterliegt Zugriffsverletzungen, wenn er weiterhin mit dem Besitz von Ressourcen rechnet, die von der virtuellen Geräteschnittstelle zurückgegeben werden. Die Schnittstelle führt die SignalAbort-Verarbeitung aus.
 

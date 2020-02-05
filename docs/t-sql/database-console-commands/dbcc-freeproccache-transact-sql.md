@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101906"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -40,7 +40,7 @@ Entfernt alle Elemente aus dem Plancache, entfernt einen bestimmten Plan aus dem
 >[!NOTE]
 >Die Ausführungsstatistik für systemintern kompilierte gespeicherte Prozeduren wird durch DBCC FREEPROCCACHE nicht gelöscht. Der Prozedurcache enthält keine Informationen zu systemintern kompilierten gespeicherten Prozeduren. Jede Ausführungsstatistik, die aus Prozedurausführungen erfasst wird, wird in den DMVs der Ausführungsstatistik angezeigt: [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) und [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
 Syntax für SQL Server:
@@ -112,7 +112,7 @@ Der Prozedurcache wird außerdem durch die folgenden Neukonfigurierungsvorgänge
 -   user options  
   
 ## <a name="result-sets"></a>Resultsets  
-Wenn die WITH NO_INFOMSGS-Klausel nicht angegeben ist, gibt DBCC FREEPROCCACHE folgende Meldung zurück: "Die DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."
+Wenn die WITH NO_INFOMSGS-Klausel nicht angegeben ist, gibt DBCC FREEPROCCACHE folgende Meldung zurück: „Die DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."
   
 ## <a name="permissions"></a>Berechtigungen  
 Gilt für: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -128,7 +128,7 @@ In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../inc
 DBCC FREEPROCCACHE (COMPUTE) bewirkt nur, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfragen neu kompiliert werden, wenn sie auf den Compute-Knoten ausgeführt werden. Es führt nicht dazu, dass [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] den parallelen Abfrageplan kompilieren, der auf dem Control-Knoten generiert wird.
 DBCC FREEPROCCACHE kann während der Ausführung abgebrochen werden.
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beschränkungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Einschränkungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC FREEPROCCACHE kann nicht ohne eine Transaktion ausgeführt werden.
 DBCC FREEPROCCACHE wird in EXPLAIN-Anweisungen nicht unterstützt.
   
@@ -187,9 +187,9 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. Beispiele für die grundlegende DBCC FREEPROCCACHE-Syntax  
+### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D: Beispiele für die grundlegende DBCC FREEPROCCACHE-Syntax  
 Im folgende Beispiel werden alle vorhandenen Abfrageplancaches aus den Compute-Knoten entfernt. Obwohl der Kontext auf „UserDbSales“ festgelegt ist, werden die Abfrageplan-Caches des Compute-Knotens für alle Datenbanken entfernt. Die WITH NO_INFOMSGS-Klausel verhindert, dass Informationsmeldungen in den Ergebnissen angezeigt werden.  
   
 ```sql

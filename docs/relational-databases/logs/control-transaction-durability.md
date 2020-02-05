@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084102"
 ---
 # <a name="control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit
@@ -134,7 +134,7 @@ AS BEGIN ATOMIC WITH
 END    
 ```    
     
-### <a name="table-1-durability-in-atomic-blocks"></a>Tabelle 1: Dauerhaftigkeit in Atomic-Blöcken    
+### <a name="table-1-durability-in-atomic-blocks"></a>Tabelle 1: Dauerhaftigkeit in Atomic-Blöcken    
     
 |Dauerhaftigkeitsoption für Atomic-Block|Keine Transaktion vorhanden|Transaktion wird ausgeführt (vollständig oder verzögert dauerhaft)|    
 |------------------------------------|-----------------------------|---------------------------------------------------------|    
@@ -172,7 +172,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
     
 -   Durch Ausführen der gespeicherten Systemprozedur `sp_flush_log`. Durch diese Prozedur wird erzwungen, dass die Protokolldatensätze aller vorherigen verzögert dauerhaften Transaktionen, für die ein Commit ausgeführt wurde, auf den Datenträger geleert werden. Weitere Informationen finden Sie unter [sys.sp_flush_log &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md).    
     
-##  <a name="bkmk_OtherSQLFeatures"></a>Verzögerte Dauerhaftigkeit und andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen    
+##  <a name="bkmk_OtherSQLFeatures"></a> Verzögerte Dauerhaftigkeit und andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen    
  **Änderungsnachverfolgung und Change Data Capture**    
  Alle Transaktionen mit Änderungsnachverfolgung sind vollständig dauerhaft. Eine Transaktion verfügt über die Eigenschaft für das Nachverfolgen von Änderungen, wenn sie Schreibvorgänge in Tabellen ausführt, für die die Änderungsnachverfolgung aktiviert ist. Die Verwendung der verzögerten Dauerhaftigkeit wird für Datenbanken, die Change Data Capture (CDC) verwenden, nicht unterstützt.    
     

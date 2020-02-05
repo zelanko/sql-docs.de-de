@@ -21,10 +21,10 @@ ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 33a8623c3e098589015a00185c8ab2a895b1410b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050759"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT (Berechtigungen von Service Broker) (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68050759"
 
   Erteilt Berechtigungen für einen Vertrag, einen Nachrichtentyp, eine Remotebindung, eine Route oder einen Dienst für einen Service Broker.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,7 +71,7 @@ GRANT permission  [ ,...n ] ON
  Gibt den Dienst an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
- Gibt den Prinzipal an, für den die Berechtigung erteilt wird. Einer der folgenden Typen:  
+ Gibt den Prinzipal an, für den die Berechtigung erteilt wird. Einer der folgenden:  
   
 -   Datenbankbenutzer  
   
@@ -93,7 +93,7 @@ GRANT permission  [ ,...n ] ON
  Gibt an, dass der Prinzipal die angegebene Berechtigung auch anderen Prinzipalen erteilen kann.  
   
  *granting_principal*  
- Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet. Einer der folgenden Typen:  
+ Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet. Einer der folgenden:  
   
 -   Datenbankbenutzer  
   

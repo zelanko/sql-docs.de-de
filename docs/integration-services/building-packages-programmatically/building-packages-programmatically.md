@@ -11,10 +11,10 @@ ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b8704464f9921b441ddca6040503ca5a8a910502
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299083"
 ---
 # <a name="building-packages-programmatically"></a>Programmgesteuertes Erstellen von Paketen
@@ -22,7 +22,7 @@ ms.locfileid: "71299083"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Wenn Sie Pakete dynamisch erstellen oder [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete außerhalb der Entwicklungsumgebung verwalten und ausführen müssen, können Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine breite Palette von Optionen:  
+  Wenn Sie Pakete dynamisch erstellen oder [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete außerhalb der Entwicklungsumgebung verwalten und ausführen müssen, können Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine breite Palette von Optionen:  
   
 -   Laden und Ausführen eines vorhandenen Pakets ohne Änderung  
   
@@ -30,7 +30,7 @@ ms.locfileid: "71299083"
   
 -   Erstellen eines neuen Pakets, Hinzufügen und Konfigurieren von Komponenten Objekt um Objekt und Eigenschaft um Eigenschaft, Speichern und Ausführen des Pakets  
   
- Sie können das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell verwenden, um in einer beliebigen verwalteten Programmiersprache Code zu schreiben, mit dem Pakete erstellt, konfiguriert und ausgeführt werden. Möglicherweise möchten Sie metadatengesteuerte Pakete erstellen, die ihre Verbindungen oder Datenquellen, Transformationen und Ziele basierend auf der gewählten Datenquelle und ihren Tabellen und Spalten konfigurieren.  
+ Sie können das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Objektmodell verwenden, um in einer beliebigen verwalteten Programmiersprache Code zu schreiben, mit dem Pakete erstellt, konfiguriert und ausgeführt werden. Möglicherweise möchten Sie metadatengesteuerte Pakete erstellen, die ihre Verbindungen oder Datenquellen, Transformationen und Ziele basierend auf der gewählten Datenquelle und ihren Tabellen und Spalten konfigurieren.  
   
  In diesem Abschnitt wird beschrieben und veranschaulicht, wie Pakete programmgesteuert Zeile um Zeile erstellt und konfiguriert werden. Als einfache Möglichkeit der Paketprogrammierung bietet es sich an, ein vorhandenes Paket ohne Änderungen zu laden und auszuführen. Dies wird unter [Programmgesteuerte Ausführung und Verwaltung von Paketen](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md) beschrieben.  
   

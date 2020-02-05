@@ -20,10 +20,10 @@ ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b4639ac643e1a7650a55ad9415b3ebd5f02d4388
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745345"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70745345"
 
   Entfernt ein Serverüberwachungsspezifikations-Objekt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit-Funktion. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Name eines vorhandenen Serverüberwachungsspezifikations-Objekts.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  DROP SERVER AUDIT SPECIFICATION entfernt die Metadaten für die Überwachungsspezifikation, jedoch nicht die Überwachungsdaten, die vor der Ausgabe des DROP-Befehls gesammelt wurden. Sie müssen den Status einer Serverüberwachungsspezifikation mithilfe von ALTER SERVER AUDIT SPECIFICATION auf OFF festlegen, bevor diese entfernt werden kann.  
   
 ## <a name="permissions"></a>Berechtigungen  

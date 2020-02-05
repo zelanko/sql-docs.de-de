@@ -14,10 +14,10 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558510"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
@@ -165,14 +165,14 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
      Standardmäßig werden während des Trennvorgangs alle der Datenbank zugeordneten Volltextkataloge beibehalten. Um sie zu entfernen, deaktivieren Sie das Kontrollkästchen **Volltextkataloge beibehalten** . Diese Option wird nur beim Aktualisieren einer Datenbank von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]angezeigt.  
   
      **Status**  
-     Zeigt einen der folgenden Statuswerte an: **Ready** (Bereit) der **Not ready** (Nicht bereit).  
+     Zeigt für den Status einen der folgenden Werte an: **Bereit** oder **Nicht bereit**.  
   
      **Meldung**  
      Unter **Meldung** können folgende Informationen zur Datenbank angezeigt werden:  
   
     -   Wenn eine Datenbank an einer Replikation beteiligt ist, hat der **Status** den Wert **Nicht bereit** , und unter **Meldung** wird **Die Datenbank wurde repliziert**angezeigt.  
   
-    -   Wenn eine Datenbank über mindestens eine Verbindung verfügt, weist der **Status** den Wert **Nicht bereit** auf, und in der Spalte **Nachricht** wird _\<number\_of\_active\_connections\>_ **Aktive Verbindung(en)** angezeigt, z. B.:1 **1 Aktive Verbindung(en)** . Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
+    -   Wenn eine Datenbank über mindestens eine Verbindung verfügt, weist der **Status** den Wert **Nicht bereit** auf, und in der Spalte **Nachricht** wird _\<number\_of\_active\_connections\>_ **Aktive Verbindung(en)** angezeigt, z. B.: **1 Aktive Verbindung(en)** . Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
   
      Weitere Informationen zu einer Meldung erhalten Sie, indem Sie auf den Linktext klicken, um den Aktivitätsmonitor zu öffnen.  
   

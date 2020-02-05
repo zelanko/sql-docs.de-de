@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: 01f86c0d100ef176cbd94e955d5919c031a9ac95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951355"
 ---
-# <a name="mssqlserver7911"></a>MSSQLSERVER_7911
+# <a name="mssqlserver_7911"></a>MSSQLSERVER_7911
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -37,5 +37,5 @@ ms.locfileid: "67951355"
 Dies ist eine Informationsmeldung von REPAIR, die besagt, dass die Zuordnung einer Seite zu dem einseitigen Slotarray einer IAM-Seite (Index Allocation Map) aufgehoben wurde.  
   
 ## <a name="user-action"></a>Benutzeraktion  
-None  
+Keine  
   

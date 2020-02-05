@@ -11,10 +11,10 @@ ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dbfeb117d22e468bdae8b9e2ebe598b099588bfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68112931"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>Erstellen, Ändern und Löschen selektiver XML-Indizes
@@ -25,7 +25,7 @@ ms.locfileid: "68112931"
   
 ##  <a name="create"></a> Erstellen eine selektiven XML-Indexes  
   
-### <a name="how-to-create-a-selective-xml-index"></a>Gewusst wie: Erstellen eines selektiven XML-Index  
+### <a name="how-to-create-a-selective-xml-index"></a>Vorgehensweise: Erstellen eines selektiven XML-Indexes  
  **Erstellen eines selektiven XML-Indexes mit Transact-SQL**  
  Erstellen Sie einen selektiven XML-Index, indem Sie die CREATE SELECTIVE XML INDEX-Anweisung aufrufen. Weitere Informationen finden Sie unter [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
@@ -48,7 +48,7 @@ FOR(
   
 ##  <a name="alter"></a> Ändern eines selektiven XML-Indexes  
   
-### <a name="how-to-alter-a-selective-xml-index"></a>Gewusst wie: Ändern eines selektiven XML-Index  
+### <a name="how-to-alter-a-selective-xml-index"></a>Vorgehensweise: Ändern eines selektiven XML-Indexes  
  **Ändern eines selektiven XML-Indexes mit Transact-SQL**  
  Ändern Sie einen vorhandenen selektiven XML-Index, indem Sie die ALTER INDEX-Anweisung aufrufen. Weitere Informationen finden Sie unter [ALTER INDEX &#40;selektive XML-Indizes&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
   
@@ -69,7 +69,7 @@ FOR
   
 ##  <a name="drop"></a> Löschen eines selektiven XML-Indexes  
   
-### <a name="how-to-drop-a-selective-xml-index"></a>Gewusst wie: Löschen eines selektiven XML-Index  
+### <a name="how-to-drop-a-selective-xml-index"></a>Vorgehensweise: Löschen eines selektiven XML-Indexes  
  **Löschen eines selektiven XML-Indexes mit Transact-SQL**  
  Löschen Sie einen selektiven XML-Index, indem Sie die DROP INDEX-Anweisung aufrufen. Weitere Informationen finden Sie unter [DROP INDEX &#40;selektive XML-Indizes&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md).  
   

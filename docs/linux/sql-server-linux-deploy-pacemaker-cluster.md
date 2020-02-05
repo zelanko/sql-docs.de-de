@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077473"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Bereitstellen eines Pacemaker-Clusters für SQL Server für Linux
@@ -200,7 +200,7 @@ Der Prozess zum Bereitstellen eines Pacemaker-Clusters unterscheidet sich unter 
 Verwenden Sie die folgenden Befehle, um das SQL Server-Hochverfügbarkeits- und das [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Agent-Paket zu installieren, wenn diese noch nicht installiert sind. Wenn Sie das Hochverfügbarkeitspaket nach [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] installieren, ist ein Neustart von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] erforderlich. In diesen Anweisungen wird vorausgesetzt, dass die Repositorys für die Microsoft-Pakete bereits eingerichtet wurden, da [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] bereits installiert sein sollte.
 > [!NOTE]
 > - Wenn Sie den [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Agent nicht für den Protokollversand oder einen anderen Zweck verwenden, müssen Sie ihn nicht installieren. Das Paket *mssql-server-agent* kann also übersprungen werden.
-> - Die anderen optionalen Pakete für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] für Linux, für die [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Volltextsuche (*mssql-server-fts*) und für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Integration Services (*mssql-server-is*) sind nicht für Hochverfügbarkeit erforderlich, und zwar weder für Failoverclusterinstanzen noch für Verfügbarkeitsgruppen.
+> - Die anderen optionalen Pakete für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] für Linux, für die [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Volltextsuche (*mssql-server-fts*) und für die [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Integration Services (*mssql-server-is*) sind nicht für Hochverfügbarkeit erforderlich, und zwar weder für Failoverclusterinstanzen noch für Verfügbarkeitsgruppen.
 
 **RHEL**
 

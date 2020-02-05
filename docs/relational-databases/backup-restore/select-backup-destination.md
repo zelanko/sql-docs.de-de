@@ -13,10 +13,10 @@ ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4bc7ed2ad628e404cd13da1760e74ee8d0a5850d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041449"
 ---
 # <a name="select-backup-destination"></a>Sicherungsziel auswählen
@@ -34,7 +34,7 @@ ms.locfileid: "68041449"
   
 -   [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Die Optionen in diesem Dialogfeld sind davon abhängig, ob Sie ein Ziel auf einem Datenträger oder einem Band auswählen.  
   
  **Ziele auf dem Datenträger**  
@@ -42,7 +42,7 @@ ms.locfileid: "68041449"
   
 |||  
 |-|-|  
-|**Dateiname**|Wählen Sie diese Option aus, um eine lokale Datei oder Remotedatei als Sicherungsziel im Textfeld einzugeben.<br /><br /> Klicken Sie zum Angeben einer lokalen Datei rechts vom Textfeld auf die Schaltfläche zum Durchsuchen, und wählen Sie dann auf den Festplatten des Computers, auf dem der Server ausgeführt wird, eine Datei aus. Sie können auch den vollständigen Pfad und Dateinamen direkt eingeben, z. B. `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Zum Angeben einer Remotedatei als Sicherungsziel geben Sie ihren vollqualifizierten UNC-Namen (Universal Naming Convention) ein. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).<br /><br /> <br /><br /> **\*\* Wichtig \*\*** Beim Sichern von Daten über ein Netzwerk können Netzwerkfehler auftreten. Aus diesem Grund wird empfohlen, dass Sie den Sicherungsvorgang nach der Fertigstellung überprüfen. Weitere Informationen finden Sie unter [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).|  
+|**Dateiname**|Wählen Sie diese Option aus, um eine lokale Datei oder Remotedatei als Sicherungsziel im Textfeld einzugeben.<br /><br /> Klicken Sie zum Angeben einer lokalen Datei rechts vom Textfeld auf die Schaltfläche zum Durchsuchen, und wählen Sie dann auf den Festplatten des Computers, auf dem der Server ausgeführt wird, eine Datei aus. Sie können auch den vollständigen Pfad und Dateinamen direkt eingeben, z. B. `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Zum Angeben einer Remotedatei als Sicherungsziel geben Sie ihren vollqualifizierten UNC-Namen (Universal Naming Convention) ein. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.<br /><br /> <br /><br /> **\*\* Wichtig \*\*** Beim Sichern von Daten über ein Netzwerk können Netzwerkfehler auftreten. Aus diesem Grund wird empfohlen, dass Sie den Sicherungsvorgang nach der Fertigstellung überprüfen. Weitere Informationen finden Sie unter [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).|  
 |**Sicherungsmedium**|Wählen Sie diese Option aus, um ein logisches Sicherungsmedium auszuwählen.<br /><br /> Hinweis: Informationen zum Erstellen eines Datenträgersicherungsmediums finden Sie unter [Definieren eines logischen Sicherungsmediums für eine Datenträgerdatei &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md).|  
   
  **Ziele auf Band**  

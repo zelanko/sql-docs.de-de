@@ -19,10 +19,10 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137321"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Kopieren von Datenbanken durch Sichern und Wiederherstellen
@@ -65,7 +65,7 @@ Einige zusätzliche Aspekte, die diesen Vorgang beeinflussen können:
  Um Fehler und Unannehmlichkeiten zu vermeiden, können Sie vor dem Wiederherstellungsvorgang anhand der [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) -Verlaufstabelle die Datenbank und die Protokolldateien in der Sicherung ermitteln, die Sie wiederherstellen möchten.  
   
 ## <a name="moving-the-database-files"></a>Verschieben der Datenbankdateien  
- Wenn die Dateien in der Datenbanksicherung auf dem Zielcomputer nicht wiederhergestellt werden können, ist es notwendig, die Dateien während des Wiederherstellens an einen neuen Standort zu verschieben. Zum Beispiel:  
+ Wenn die Dateien in der Datenbanksicherung auf dem Zielcomputer nicht wiederhergestellt werden können, ist es notwendig, die Dateien während des Wiederherstellens an einen neuen Standort zu verschieben. Beispiel:  
   
 -   Sie möchten eine Datenbank aus Sicherungen wiederherstellen, die am Standardspeicherort der früheren Version erstellt wurden.  
   
@@ -133,7 +133,7 @@ Einige zusätzliche Aspekte, die diesen Vorgang beeinflussen können:
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Kopieren von Datenbanken auf andere Server](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   

@@ -22,10 +22,10 @@ ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7720324915ea147cf5cac938c196957a6cb04c51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116460"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68116460"
 
 Zeigt Informationen zum Prozedurcache in tabellarischer Form an.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- mit  
+ WITH  
  Lässt die Angabe von Optionen zu.  
   
  NO_INFOMSGS  
@@ -58,7 +58,7 @@ Mit dem Prozedurcache werden kompilierte und ausführbare Pläne zwischengespeic
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle werden die Spalten des Resultsets beschrieben.
   
-|Spaltenname|und Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**num proc buffs**|Gesamtanzahl von Seiten, die von allen Einträgen im Prozedurcache verwendet werden.|  
 |**num proc buffs used**|Gesamtanzahl von Seiten, die von allen zurzeit verwendeten Einträgen verwendet werden.|  

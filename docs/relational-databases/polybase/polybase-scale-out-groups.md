@@ -14,10 +14,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
-ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75623238"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase-Erweiterungsgruppen
@@ -28,7 +28,7 @@ Eine eigenständige SQL Server-Instanz mit PolyBase kann bei der Verarbeitung vo
   
 Siehe [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) (Erste Schritte mit PolyBase) und [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)(PolyBase-Handbuch).
   
-![PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
+![PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase-Erweiterungsgruppen")  
   
 ## <a name="head-node"></a>Hauptknoten  
 
@@ -47,7 +47,7 @@ Beispiel: Angenommen, Sie verfügen über eine externe SQL Server-Tabelle mit 12
 > [!NOTE]
 >  Dieser Vorgang darf nicht mit der horizontalen Leseskalierung über Hadoop verwechselt werden. 
 
-![PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
+![PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase-Erweiterungsgruppen")
   
 ## <a name="distributed-query-processing"></a>Verarbeiten verteilter Abfragen  
 

@@ -13,10 +13,10 @@ ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c4eb20f4492e3550ffdbfca5a649684e28685c1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68216183"
 ---
 # <a name="select-backup-device"></a>Sicherungsmedium auswählen
@@ -34,7 +34,7 @@ ms.locfileid: "68216183"
   
 -   [Anzeigen der Eigenschaften und des Inhalts eines logischen Sicherungsmediums &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Sicherungsmedium**  
  Wählen Sie im Listenfeld den Namen eines logischen Sicherungsmediums aus, von dem die Wiederherstellung erfolgen soll.  
   

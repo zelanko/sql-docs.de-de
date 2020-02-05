@@ -24,10 +24,10 @@ ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a07518edbdfce618fa8bfcff15a49df70f029ee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098964"
 ---
 # <a name="x40x40total_errors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68098964"
 
   Gibt die Anzahl der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seit dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetretenen Schreibfehler auf dem Datenträger zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68098964"
  **integer**  
   
 ## <a name="remarks"></a>Bemerkungen  
- Nicht alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetretenen Schreibfehler werden von dieser Funktion berücksichtigt. Gelegentlich werden nicht als schwerwiegend geltende Schreibfehler vom Server selbst bearbeitet und nicht als Fehler eingestuft. Führen Sie **sp_monitor** aus, um einen Bericht anzuzeigen, der mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken enthält (einschließlich der Gesamtanzahl von Fehlern).  
+ Nicht alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetretenen Schreibfehler werden von dieser Funktion berücksichtigt. Gelegentlich werden nicht als schwerwiegend geltende Schreibfehler vom Server selbst bearbeitet und nicht als Fehler eingestuft. Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_monitor**aus, um einen Bericht anzuzeigen, der mehrere**-Statistiken enthält (einschließlich der Gesamtanzahl von Fehlern).  
   
 ## <a name="examples"></a>Beispiele  
  Dieses Beispiel zeigt die Anzahl der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetretenen Fehler bis zum aktuellen Datum und der aktuellen Uhrzeit an.  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4384164d7baa79559d8810114494473435894f8c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 96de733839deb644968303e58bcf069894aae160
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770513"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286330"
 ---
 # <a name="mssql_eng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68770513"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolischer Name|–|  
-|Meldungstext|Eine Zeile mit doppeltem Schlüssel kann nicht in das '%.*ls'-Objekt mit dem eindeutigen '%.\*ls'-Index eingefügt werden.|  
+|Meldungstext|Eine Zeile mit doppeltem Schlüssel kann in das „%1!s!“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
   
 ## <a name="explanation"></a>Erklärung  
  Das ist ein allgemeiner Fehler, der unabhängig davon ausgelöst werden kann, ob eine Datenbank repliziert wird. Bei replizierten Datenbanken wird der Fehler in der Regel ausgelöst, weil Primärschlüssel in der Topologie nicht richtig verwaltet wurden. In einer verteilten Umgebung muss unbedingt sichergestellt werden, dass in mehreren Knoten nicht der gleiche Wert in eine Primärschlüsselspalte oder eine andere eindeutige Spalte eingefügt wird. Die folgenden Ursachen können zugrunde liegen:  
@@ -43,7 +43,7 @@ ms.locfileid: "68770513"
   
 -   Es wird eine Tabelle mit einer Identitätsspalte verwendet, die Spalte wird jedoch nicht ordnungsgemäß verwaltet.  
   
--   Bei der Mergereplikation kann dieser Fehler auch während eines Einfügens in die Systemtabelle **MSmerge_contents** auftreten. Der Fehler sieht in etwa wie folgt aus: Die doppelte Schlüsselzeile kann nicht in das MSmerge_contents-Objekt mit dem eindeutigen Index „ucl1SycContents“ eingefügt werden.  
+-   Bei der Mergereplikation kann dieser Fehler auch während eines INSERTs in die **MSmerge_contents**-Systemtabelle ausgelöst werden; die Fehlermeldung lautet dann ungefähr folgendermaßen: Eine Zeile mit doppeltem Schlüssel kann in das 'MSmerge_contents'-Objekt mit dem eindeutigen 'ucl1SycContents'-Index nicht eingefügt werden.  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Die erforderliche Aktion hängt davon ab, weshalb der Fehler ausgelöst wurde:  

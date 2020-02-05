@@ -15,10 +15,10 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc0df82879f835428640b403a5d9b2befa66e34a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294497"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Dateiverbindungs-Manager hinzufügen
@@ -33,11 +33,11 @@ ms.locfileid: "71294497"
 > [!NOTE]  
 >  Die integrierten Tasks und Datenflusskomponenten in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwenden keinen Verbindungs-Manager für mehrere Dateien. Sie können den Verbindungs-Manager jedoch im Skripttask oder in der Skriptkomponente verwenden.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Verwendungstyp**  
  Geben Sie den Dateityp an, der vom Verbindungs-Manager für mehrere Dateien verwendet werden soll.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Dateien erstellen**|Der Verbindungs-Manager erstellt die Dateien.|  
 |**Vorhandene Dateien**|Der Verbindungs-Manager verwendet vorhandene Dateien.|  
@@ -47,13 +47,13 @@ ms.locfileid: "71294497"
  **Dateien / Ordner**  
  Zeigen Sie die hinzugefügten Dateien oder Ordner an, indem Sie die im Folgenden beschriebenen Schaltflächen verwenden.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügen Sie eine Datei hinzu, indem Sie das Dialogfeld **Dateien auswählen** verwenden, oder fügen Sie mithilfe des Dialogfelds **Ordner suchen** einen Ordner hinzu.  
   
  **Bearbeiten**  
  Wählen Sie eine Datei oder einen Ordner aus, und ersetzen Sie diese(n) dann mithilfe des Dialogfelds **Dateien auswählen** bzw. **Ordner suchen** durch eine andere Datei oder einen anderen Ordner.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie eine Datei oder einen Ordner aus, und klicken Sie auf die Schaltfläche **Entfernen** , um das betreffende Objekt aus der Liste zu entfernen.  
   
  **Pfeilschaltflächen**  

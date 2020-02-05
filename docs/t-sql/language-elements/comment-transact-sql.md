@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495481"
 ---
 # <a name="---comment-transact-sql"></a>-- (Kommentar) (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68495481"
 
   Gibt vom Benutzer bereitgestellten Text an. Kommentare können in einer eigenen Zeile eingefügt werden, geschachtelt am Ende einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehlszeile oder innerhalb einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung. Der Kommentar wird vom Server nicht ausgewertet.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68495481"
 ## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie zwei Bindestriche ( **--** ) für einzeilige oder geschachtelte Kommentare. Kommentare, die mit **--** eingefügt werden, werden von einer neuen Zeile beendet, die durch ein Wagenrücklaufzeichen (U+000A), ein Zeilenvorschubzeichen (U+000D) oder eine Kombination der beiden Zeichen angegeben ist. Es gibt keine Maximallänge für Kommentare. In der folgenden Tabelle sind die Tastenkombinationen aufgeführt, die Sie verwenden können, um Text als Kommentar zu kennzeichnen oder auszukommentieren.
   
-|Aktion|Standard|  
+|Action|Standard|  
 |------------|--------------|  
 |Umwandeln des markierten Texts in einen Kommentar|STRG+K, STRG+C|  
 |Kommentierung des ausgewählten Texts entfernen|STRG+K, STRG+U|  

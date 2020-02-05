@@ -24,10 +24,10 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73637955"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
@@ -151,9 +151,9 @@ ms.locfileid: "73637955"
   
  In der Regel sind die langsamsten Komponenten in der Transformation für langsam veränderliche Dimensionen die Transformationen für OLE DB-Befehl, die UPDATEs für jeweils eine Zeile ausführen. Daher ist die effizienteste Methode zur Verbesserung der Leistung der Transformation für langsam veränderliche Dimensionen das Ersetzen der Transformationen für OLE DB-Befehl. Sie können diese Transformationen durch Zielkomponenten ersetzen, die alle zu aktualisierenden Zeilen in eine Stagingtabelle speichern. Sie können dann einen Task "SQL ausführen" hinzufügen, der für alle Zeilen gleichzeitig ein einzelnes setbasiertes Transact-SQL-UPDATE ausführt.  
   
- Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt „Unique dimension scenario“ im Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
+ Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt "Unique dimension scenario" im Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)(in Englisch).  
   
-### <a name="destinations"></a>Ziele  
+### <a name="destinations"></a>Destinations  
  Wenn Sie die Leistung von Zielen erhöhen möchten, sollten Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel verwenden und die Leistung des Ziels testen.  
   
 #### <a name="sql-server-destination"></a>SQL Server-Ziel  
@@ -174,9 +174,9 @@ ms.locfileid: "73637955"
 ## <a name="related-content"></a>Verwandte Inhalte  
  **Artikel und Blogbeiträge**  
   
--   Technischer Artikel, [SQL Server 2005 Integration Services: Eine Leistungsstrategie](https://go.microsoft.com/fwlink/?LinkId=98899), auf technet.microsoft.com  
+-   Technischer Artikel [SQL Server 2005 Integration Services: Eine Leistungsstrategie](https://go.microsoft.com/fwlink/?LinkId=98899)auf technet.microsoft.com  
   
--   Technischer Artikel, [Integration Services: Leistungsoptimierungstechniken](https://go.microsoft.com/fwlink/?LinkId=98900), auf technet.microsoft.com  
+-   Technischer Artikel [Integration Services: Leistungsoptimierungstechniken](https://go.microsoft.com/fwlink/?LinkId=98900)auf technet.microsoft.com  
   
 -   Technischer Artikel [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks (Erhöhen des Durchsatzes von Pipelines durch Aufteilen synchroner Transformationen in mehreren Tasks)](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf) in _SQLCATs Handbuch zu BI und Analytics_
   

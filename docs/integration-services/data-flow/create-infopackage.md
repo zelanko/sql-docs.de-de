@@ -11,10 +11,10 @@ ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 25f1497b7801c7891681324b12fa9a5eda4eb842
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293214"
 ---
 # <a name="create-infopackage"></a>InfoPackage erstellen
@@ -39,11 +39,11 @@ ms.locfileid: "71293214"
   
 4.  Wählen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** die Option **InfoPackage**aus, und klicken Sie dann auf **Erstellen**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **InfoSource**  
  Geben Sie den Namen der InfoSource ein, auf der das neue InfoPackage basieren soll.  
   
- **Kurze Beschreibung**  
+ **Kurzbeschreibung**  
  Geben Sie eine Beschreibung für das neue InfoPackage ein.  
   
  **Quellsystem**  
@@ -55,7 +55,7 @@ ms.locfileid: "71293214"
  **Texte**  
  Gibt an, dass vom InfoPackage Textdaten geladen werden.  
   
- **Transaction**  
+ **Transaktion**  
  Gibt an, dass vom InfoPackage Transaktionsdaten geladen werden.  
   
  **Speichern und aktivieren**  

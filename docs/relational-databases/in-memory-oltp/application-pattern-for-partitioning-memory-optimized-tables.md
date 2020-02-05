@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c871da0fcd20cffc2c6510d7084f79faefa2d50
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412799"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen
@@ -37,7 +37,7 @@ ms.locfileid: "74412799"
   
 -   Fügen Sie die aktive Partition hinzu.  
   
- ![Partitionswechsel.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "|::ref1::|")  
+ ![Partitionswechsel.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partitionswechsel.")  
 Pflege aktiver Daten  
   
  Die Aktionen ab dem Löschen von "ActiveOrders" müssen während eines Wartungsfensters durchgeführt werden, damit Abfragen im Zeitraum zwischen der Datenlöschung und Übertragung in die Stagingtabelle immer auf alle Daten zugreifen können.  

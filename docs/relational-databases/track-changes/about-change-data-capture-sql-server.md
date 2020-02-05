@@ -15,10 +15,10 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952456"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Über Change Data Capture (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "75952456"
 ## <a name="change-data-capture-data-flow"></a>Change Data Capture &ndash; Datenfluss  
  Die folgende Abbildung zeigt den Hauptdatenfluss für Change Data Capture.  
   
- ![Change Data Capture – Datenfluss](../../relational-databases/track-changes/media/cdcdataflow.gif "|::ref1::|")  
+ ![Change Data Capture – Datenfluss](../../relational-databases/track-changes/media/cdcdataflow.gif "Change Data Capture &ndash; Datenfluss")  
   
  Die Quelle der Änderungsdaten ist für Change Data Capture das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll. Bei Einfügungen, Aktualisierungen und Löschungen in den nachverfolgten Quelltabellen werden diesem Protokoll entsprechende Einträge hinzugefügt, die diese Änderungen beschreiben. Das Protokoll dient als Eingabe für den Erfassungsvorgang. Der Prozess liest das Protokoll und fügt der Änderungstabelle, die mit der nachverfolgten Tabelle verknüpft ist, Informationen über die Änderungen hinzu. Zur Aufzählung der Änderungen in den Änderungstabellen innerhalb eines angegebenen Bereichs werden Funktionen bereitgestellt, und die Informationen werden in Form eines gefilterten Resultsets zurückgegeben. Das gefilterte Resultset wird typischerweise von einem Anwendungsprozess verwendet, um die Darstellung der Quelle in einer externen Umgebung zu aktualisieren.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75952456"
   
  Jeder auf die Quelltabelle angewendete Einfüge- oder Löschvorgang erscheint als einzelne Zeile in der Änderungstabelle. Die Datenspalten der Zeile, die sich aus einem Einfügevorgang ergibt, enthalten die Spaltenwerte nach dem Einfügevorgang. Die Datenspalten der Zeile, die sich aus einem Löschvorgang ergibt, enthalten die Spaltenwerte vor dem Löschvorgang. Ein Updatevorgang erfordert einen Zeileneintrag, der die Spaltenwerte vor dem Updatevorgang angibt, und einen Zeileneintrag, der die Spaltenwerte nach dem Updatevorgang angibt.  
   
- Darüber hinaus enthält jede Zeile in einer Änderungstabelle zusätzliche Metadaten, die eine Interpretation der Änderungsaktivitäten erlauben. Die Spalte __$start_lsn identifiziert die Commit-Protokollfolgenummer (Log Sequence Number, LSN), die der Änderung zugewiesen wurde. Die Commit-LSN identifiziert sowohl die Änderungen, die innerhalb der gleichen Transaktion ausgeführt wurden, als auch die Reihenfolge der Transaktionen. Die Spalte \_\_$seqval kann verwendet werden, um die Reihenfolge weiterer Änderungen festzulegen, die innerhalb der gleichen Transaktion ausgeführt wurden. Die Spalte „\_\_$operation“ zeichnet den Vorgang auf, der der Änderung zugeordnet ist: 1 = löschen, 2 = einfügen, 3 = aktualisieren (vor dem Image) und 4 = aktualisieren (nach dem Image). Die Spalte \_\_$update_mask ist eine variable Bitmaske mit einem definierten Bit für jede aufgezeichnete Spalte. Bei Einträgen für Einfüge- und Löschvorgänge werden alle Bits in der Updatemaske gesetzt. Bei Einträgen für Updatevorgänge sind dagegen nur jene Bits gesetzt, die den geänderten Spalten entsprechen.  
+ Darüber hinaus enthält jede Zeile in einer Änderungstabelle zusätzliche Metadaten, die eine Interpretation der Änderungsaktivitäten erlauben. Die Spalte __$start_lsn identifiziert die Commit-Protokollfolgenummer (Log Sequence Number, LSN), die der Änderung zugewiesen wurde. Die Commit-LSN identifiziert sowohl die Änderungen, die innerhalb der gleichen Transaktion ausgeführt wurden, als auch die Reihenfolge der Transaktionen. Die Spalte \_\_$seqval kann verwendet werden, um die Reihenfolge weiterer Änderungen festzulegen, die innerhalb der gleichen Transaktion ausgeführt wurden. In der Spalte \_\_$operation wird der mit der Änderung verbundene Vorgang aufgezeichnet: 1 = Löschung, 2 = Einfügung, 3 = Update (Anfangsimage) und 4 = Update (Endimage). Die Spalte \_\_$update_mask ist eine variable Bitmaske mit einem definierten Bit für jede aufgezeichnete Spalte. Bei Einträgen für Einfüge- und Löschvorgänge werden alle Bits in der Updatemaske gesetzt. Bei Einträgen für Updatevorgänge sind dagegen nur jene Bits gesetzt, die den geänderten Spalten entsprechen.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Change Data Capture-Gültigkeitsintervall für eine Datenbank  
  Beim Change Data Capture-Gültigkeitsintervall für eine Datenbank handelt es sich um dem Zeitraum, in dem Änderungsdaten für Aufzeichnungsinstanzen verfügbar sind. Das Gültigkeitsintervall beginnt mit der Erstellung der ersten Aufzeichnungsinstanz für eine Datenbanktabelle und dauert bis zum aktuellen Zeitpunkt.  

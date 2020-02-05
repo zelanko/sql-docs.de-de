@@ -15,10 +15,10 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b1f4f85fbd4806c164faef0c8bcac7a982cc4fe
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288493"
 ---
 # <a name="property-expressions-editor"></a>Eigenschaftsausdrucks-Editor
@@ -28,11 +28,11 @@ ms.locfileid: "71288493"
 
   Verwenden Sie das Dialogfeld **Eigenschaftsausdrucks-Editor** , um die Eigenschaftsausdrücke, durch die Eigenschaftswerte aktualisiert werden, zu erstellen, zu bearbeiten oder zu löschen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Eigenschaft**  
  Wählen Sie eine Objekteigenschaft aus der Liste aus.  
   
- **expression**  
+ **Ausdruck**  
  Geben Sie ein Literal oder einen Ausdruck für das Update der Eigenschaft ein.  
   
 > [!NOTE]  

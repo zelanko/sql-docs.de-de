@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532467"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Sichern und Wiederherstellen von Datenbanken mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -29,9 +29,9 @@ In diesem Tutorial lernen, wie Sie [!INCLUDE[name-sos](../includes/name-sos-shor
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Für dieses Tutorial ist die SQL Server-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB*-Datenbank zu erstellen, führen Sie einen der folgenden Schnellstarts vollständig aus:
+Für dieses Tutorial ist die SQL Server-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB*-Datenbank zu erstellen, führen Sie eine der folgenden Schnellstartanleitungen vollständig aus:
 
-* [Herstellen einer Verbindung mit und Abfragen von SQL Server mit [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+* [Herstellen einer Verbindung mit und Abfragen von SQL Server mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
 In diesem Tutorial muss eine Verbindung mit einer SQL Server-Datenbank hergestellt werden. In Azure SQL-Datenbank gibt es automatisierte Sicherungen, sodass Azure Data Studio keine Azure SQL-Datenbank-Sicherung und -Wiederherstellung ausführt. Ausführliche Informationen finden Sie unter [Automatisierte Sicherungen](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
@@ -72,8 +72,8 @@ Nachdem Sie auf **Sichern** geklickt haben, wird das Dialogfeld **Datenbank sich
 
 5. Geben Sie **TutorialDB_Restored** in das Feld **Zieldatenbank** im Abschnitt **Ziel** ein, um die Sicherungsdatei in einer neuen Datenbank wiederherzustellen. Dann wählen Sie **Wiederherstellen** aus.
 
-   ![Wiederherstellungsprozess](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![Wiederherstellen](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. Um den Status des Wiederherstellungsvorgangs anzuzeigen, drücken Sie **STRG+T**, um den **Taskverlauf** zu öffnen.
 
-   ![Wiederherstellungsprozess](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![Wiederherstellen](./media/tutorial-backup-restore-sql-server/task-history-restore.png)

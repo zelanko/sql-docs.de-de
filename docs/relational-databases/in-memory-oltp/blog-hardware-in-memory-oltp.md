@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 21293308f2b21d0a41cca901a084d65ca0250573
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951139"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>Überlegungen zur Hardware für In-Memory-OLTP in SQL Server
@@ -39,7 +39,7 @@ In-Memory-OLTP erfordert keinen High-End-Server, um eine OLTP-Workload mit hohem
 
 Es wird empfohlen, Hyperthreading mit In-Memory-OLTP zu aktivieren. Bei einigen OLTP-Workloads konnten wir bei Verwendung von Hyperthreading Leistungssteigerungen von bis zu 40 % verzeichnen.
 
-## <a name="memory"></a>Speicher
+## <a name="memory"></a>Arbeitsspeicher
 
 Alle speicheroptimierten Tabellen befinden sich vollständig im Arbeitsspeicher. Daher müssen Sie über genügend physischen Arbeitsspeicher für die Tabellen selbst verfügen, um die in der Datenbank ausgeführte Workload zu unterstützen. Wie viel Arbeitsspeicher Sie tatsächlich benötigen, hängt ganz von der Workload ab. Als Ausgangspunkt benötigen Sie jedoch wahrscheinlich genügend verfügbaren Arbeitsspeicher für etwa die doppelte Datengröße. Sie benötigen auch genügend Arbeitsspeicher für den Pufferpool, falls die Workload auch mit herkömmlichen datenträgerbasierten Tabellen arbeitet.
 
@@ -73,6 +73,6 @@ Um strenge RTO-Anforderungen zu erfüllen, empfehlen wir, die Prüfpunktdateien 
 
 Hinsichtlich der Datenträgerkapazität empfehlen wir die zwei- bis dreifache Größe der speicheroptimierten Tabellen zur Verfügung zu haben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Beispieldatenbank für In-Memory OLTP](sample-database-for-in-memory-oltp.md)

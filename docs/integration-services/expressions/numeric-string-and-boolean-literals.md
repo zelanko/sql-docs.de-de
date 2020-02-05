@@ -18,10 +18,10 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: de9df087cd068ad27029cb17ae553390b054a2f8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297453"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Numerische, Zeichenfolgen- und boolesche Literale
@@ -38,7 +38,7 @@ ms.locfileid: "71297453"
   
  In der folgenden Tabelle sind Suffixe für numerische Literale aufgeführt.  
   
-|Suffix|und Beschreibung|  
+|Suffix|BESCHREIBUNG|  
 |------------|-----------------|  
 |L oder l|Ein langes numerisches Literal.|  
 |U oder u|Ein numerisches Literal ohne Vorzeichen.|  
@@ -46,7 +46,7 @@ ms.locfileid: "71297453"
   
  In der folgenden Tabelle sind numerische Ausdruckselemente und deren reguläre Ausdrücke aufgeführt.  
   
-|Ausdruckselement|Regulärer Ausdruck|und Beschreibung|  
+|Ausdruckselement|Regulärer Ausdruck|BESCHREIBUNG|  
 |------------------------|------------------------|-----------------|  
 |Ziffern, ausgedrückt als D.|[0-9]|Eine beliebige Ziffer.|  
 |Wissenschaftliche Schreibweise, ausgedrückt als E.|[Ee][+-]?{D}+|e (Groß- oder Kleinbuchstabe), optional + oder -, und mindestens eine Ziffer gemäß der Definition in D.|  
@@ -56,14 +56,14 @@ ms.locfileid: "71297453"
   
  In der folgenden Tabelle sind gültige numerische Literale mithilfe der regulären Ausdruckssprache beschrieben.  
   
-|Regulärer Ausdruck|und Beschreibung|  
+|Regulärer Ausdruck|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |{D}+{IS}|Ein integrales numerisches Literal mit mindestens einer Ziffer (D) und optional dem Suffix long und/oder unsigned (IS).  Beispiele: 457, 785u, 986L und 7945ul.|  
 |{D}+{E}{FS}|Ein integrales numerisches Literal mit mindestens einer Ziffer (D) in wissenschaftlicher Schreibweise und dem Suffix long oder float.  Beispiele: 4E8l, 13e-2f und 5E+L.|  
 |{D}*"."{D}+{E}?{FS}|Ein nicht integrales numerisches Literal mit einer Dezimalstelle, einem Dezimalbruch mit mindestens einer Ziffer (D), einem optionalen Exponenten (E) und einem float- oder einem long-Bezeichner (FS). Dieses numerische Literal weist den Datentyp DT_R4 oder DT_R8 auf.  Beispiele: 6,45E3f, 0,89E-2l und 1,05E+7F.|  
 |{D}+"."{D}*{E}?{FS}|Ein nicht integrales numerisches Literal mit mindestens einer signifikanten Ziffer (D), einer Dezimalstelle, einem Exponenten (E) und einem float- oder einem long-Bezeichner (FS). Dieses numerische Literal weist den Datentyp DT_R4 oder DT_R8 auf.  Beispiele: 1,E-4f, 4,6E6L und 8,365E+2f.|  
 |{D}*.{D}+|Ein nicht integrales numerisches Literal mit Genauigkeit und Dezimalstellenanzahl. Es weist eine Dezimalstelle und einen Dezimalbruch mit mindestens einer Ziffer (D) auf. Dieses numerische Literal weist den Datentyp DT_NUMERIC auf.  Beispiele: 0,9, 5,8 und 0,346.|  
-|{D}+.{D}*|Ein nicht integrales numerisches Literal mit Genauigkeit und Dezimalstellenanzahl. Es weist mindestens eine signifikante Ziffer (D) und eine Dezimalstelle auf. Dieses numerische Literal weist den Datentyp DT_NUMERIC auf.  Beispiele: 6,, 0,2 und 8,0.|  
+|{D}+.{D}*|Ein nicht integrales numerisches Literal mit Genauigkeit und Dezimalstellenanzahl. Es weist mindestens eine signifikante Ziffer (D) und eine Dezimalstelle auf. Dieses numerische Literal weist den Datentyp DT_NUMERIC auf.  Beispiele: 6,0, 0,2 und 8,0.|  
 |#{D}+|Ein Herkunftsbezeichner. Er besteht aus dem Nummernzeichen (#) und mindestens einer Ziffer (D). Beispiele: #123.|  
 |0[xX]{H}+{uU}|Ein numerisches Literal im Hexadezimalformat. Es schließt eine Null, ein x (Groß- oder Kleinbuchstabe), mindestens ein H (Großbuchstabe) und optional das unsigned-Suffix ein. Beispiele: 0xFF0A und 0X000010000U.|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71297453"
   
  Ausdrücke können numerische Literale mit verschiedenen Datentypen einschließen. Wenn die Ausdrucksauswertung diese Ausdrücke auswertet, werden die Daten in kompatible Typen konvertiert. Weitere Informationen finden Sie unter [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
- Für die Konvertierung bestimmter Datentypen ist jedoch eine explizite Umwandlung erforderlich. Die Ausdrucksauswertung stellt den Umwandlungsoperator für die explizite Datentypkonvertierung bereit. Weitere Informationen finden Sie unter [CAST &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
+ Für die Konvertierung bestimmter Datentypen ist jedoch eine explizite Umwandlung erforderlich. Die Ausdrucksauswertung stellt den Umwandlungsoperator für die explizite Datentypkonvertierung bereit. Weitere Informationen finden Sie unter [Umwandlung &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
 ### <a name="mapping-numeric-literals-to-integration-services-data-types"></a>Zuordnen numerischer Literale zu SQL Server Integration Services-Datentypen  
  Die Ausdrucksauswertung führt beim Auswerten numerischer Literale die folgenden Konvertierungen aus:  
@@ -80,7 +80,7 @@ ms.locfileid: "71297453"
   
     |Suffix|Ergebnistyp|  
     |------------|-----------------|  
-    |None|DT_I4|  
+    |Keine|DT_I4|  
     |U|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  
@@ -100,7 +100,7 @@ ms.locfileid: "71297453"
   
  Zeichenfolgen können andere Zeichen einschließen, die eine Escapesequenz erfordern. In der folgenden Tabelle sind Escapesequenzen für Zeichenfolgenliterale aufgeführt.  
   
-|Escapesequenz|und Beschreibung|  
+|Escapesequenz|BESCHREIBUNG|  
 |---------------------|-----------------|  
 |\a|Warnung|  
 |\b|Rücktaste|  

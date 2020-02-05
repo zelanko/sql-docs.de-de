@@ -18,10 +18,10 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: f072ed3e73b7dacd10254c04aaa34e5466b582b8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262222"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Common Criteria-Kompatibilität aktiviert (Serverkonfigurationsoption)
@@ -29,11 +29,11 @@ ms.locfileid: "68262222"
 
 Mit der Option „“Common Criteria-Kompatibilität aktiviert“ werden die folgenden Elemente aktiviert, die für die [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org/) erforderlich sind.  
   
-|Kriterien|und Beschreibung|  
+|Kriterien|BESCHREIBUNG|  
 |--------------|-----------------|  
 |RIP (Residual Information Protection)|Bei RIP muss eine Speicherbelegung mit einem bekannten Muster von Bits überschrieben werden, bevor der Arbeitsspeicher wieder einer neuen Quelle zugewiesen wird. Durch Einhalten des RIP-Standards kann die Sicherheit erhöht werden. Beim Überschreiben der Speicherbelegung kann jedoch die Leistung beeinträchtigt werden. Das Überschreiben wird erst ausgeführt, nachdem die Option Common Criteria-Kompatibilität aktiviert aktiviert wurde.|  
 |Die Möglichkeit zum Anzeigen von Anmeldestatistiken|Die Anmeldungsüberwachung wird erst aktiviert, nachdem die Option Common Criteria-Kompatibilität aktiviert aktiviert wurde. Immer wenn sich ein Benutzer erfolgreich bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anmeldet, werden Informationen zum Zeitpunkt der letzten erfolgreichen Anmeldung, zum Zeitpunkt der letzten erfolglosen Anmeldung sowie zur Anzahl der Versuche zwischen dem Zeitpunkt der letzten erfolgreichen Anmeldung und dem der aktuellen Anmeldung bereitgestellt. Diese Anmeldestatistiken können angezeigt werden, indem die dynamische Verwaltungssicht [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) abgefragt wird.|  
-|`DENY` auf Tabellenebene sollte nicht durch `GRANT` auf Spaltenebene außer Kraft gesetzt werden|Nachdem die Option Common Criteria-Kompatibilität aktiviert wurde, hat `DENY` auf Tabellenebene Vorrang vor `GRANT` auf Spaltenebene. Wenn die Option nicht aktiviert ist, hat `GRANT` auf Spaltenebene Vorrang vor `DENY` auf Tabellenebene.|  
+|`GRANT` auf Tabellenebene sollte nicht durch `DENY` auf Spaltenebene außer Kraft gesetzt werden|Nachdem die Option Common Criteria-Kompatibilität aktiviert wurde, hat `DENY` auf Tabellenebene Vorrang vor `GRANT` auf Spaltenebene. Wenn die Option nicht aktiviert ist, hat `GRANT` auf Spaltenebene Vorrang vor `DENY` auf Tabellenebene.|  
   
  Die Option „Common Criteria-Kompatibilität aktiviert“ ist eine erweiterte Option. Allgemeine Kriterien werden nur für die Enterprise Edition und die Datacenter Edition ausgewertet und zertifiziert. Informationen zum aktuellen Status der Common Criteria-Zertifizierung finden Sie auf der Website [Microsoft SQL Server Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319) (in Englisch).  
   
@@ -42,7 +42,7 @@ Mit der Option „“Common Criteria-Kompatibilität aktiviert“ werden die fol
   
  Wenn Sie die Einstellung mithilfe der gespeicherten Systemprozedur `sp_configure` ändern, können Sie die Option Common Criteria-Kompatibilität aktiviert nur ändern, wenn für Erweiterte Optionen anzeigen der Wert 1 festgelegt ist. Diese Einstellung wird wirksam, nachdem der Server neu gestartet wurde. Die möglichen Werte lauten 0 und 1:  
   
--   Mit 0 wird angegeben, dass die Common Criteria-Kompatibilität nicht aktiviert ist. Dies ist die Standardeinstellung.  
+-   Mit 0 wird angegeben, dass die Common Criteria-Kompatibilität nicht aktiviert ist. Dies ist die Standardoption.  
   
 -   Mit 1 wird angegeben, dass die Common Criteria-Kompatibilität aktiviert ist.  
   

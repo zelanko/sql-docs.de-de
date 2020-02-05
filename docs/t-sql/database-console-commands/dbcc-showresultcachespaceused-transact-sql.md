@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 4a701a56ba5a71037317f6c404fa394a466febba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729883"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "73729883"
 
 Zeigt den verwendeten Speicherplatz im Resultsetcache für eine Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Datenbank.
   
-![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,7 +33,7 @@ Zeigt den verwendeten Speicherplatz im Resultsetcache für eine Azure [!INCLUDE[
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Der `DBCC SHOWRESULTCACHESPACEUSED`-Befehl akzeptiert keine Parameter und gibt den verwendeten Speicherplatz der Datenbank zurück, für die der Befehl ausgeführt wird.
 
@@ -43,7 +43,7 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spalte|Datentyp|und Beschreibung|  
+|Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|Insgesamt durch die Datenbank belegter Speicherplatz in KB. Diese Zahl ändert sich, wenn das zwischengespeicherte Resultset größer wird.|  
 |data_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.|  
@@ -51,9 +51,9 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
 |unused_space|BIGINT|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.|  
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Leistungsoptimierung mit Resultsetcaching](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
+[Leistungsoptimierung mit Zwischenspeichern von Resultsets](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

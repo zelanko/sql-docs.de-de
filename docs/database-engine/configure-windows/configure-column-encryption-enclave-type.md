@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593823"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Konfigurieren des Enclave-Typs für die Always Encrypted-Serverkonfigurationsoption
@@ -24,7 +24,7 @@ In diesem Artikel wird beschrieben, wie Sie eine Secure Enclave für Always Encr
 
 Die Serverkonfigurationsoption **column encryption enclave type** steuert den Typ einer für Always Encrypted verwendeten Secure Enclave. Die Option kann auf einen der folgenden Werte festgelegt werden:  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-------------------|-----------------| 
 |0|**Keine Secure Enclave**. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann die Secure Enclave für Always Encrypted nicht initialisieren. Aus diesem Grund ist die Funktionalität von Always Encrypted mit Secure Enclaves nicht verfügbar.|  
 |1|**Virtualisierungsbasierte Sicherheit (VBS)** . Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht, eine Enclave mit virtualisierungsbasierter Sicherheit (VBS) zu initialisieren.
@@ -34,7 +34,7 @@ Die Serverkonfigurationsoption **column encryption enclave type** steuert den Ty
    
 Sie können den konfigurierten Wert für den Enclave-Typ und den aktiven Wert für den Enclave-Typ über die Sicht [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) überprüfen. 
 
-Überprüfen Sie die Sicht [sys.dm_column_encryption_enclave (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md), um zu bestätigen, dass eine Enclave des aktiven Typs (größer 0) nach dem letzten Neustart von [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] ordnungsgemäß initialisiert wurde:
+Überprüfen Sie die Sicht [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]sys.dm_column_encryption_enclave (Transact-SQL)[, um zu bestätigen, dass eine Enclave des aktiven Typs (größer 0) nach dem letzten Neustart von ](../../relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md) ordnungsgemäß initialisiert wurde:
  - Wenn die Sicht genau eine Zeile enthält, wurde die Enclave ordnungsgemäß initialisiert. 
  - Wenn die Sicht keine Zeilen enthält, überprüfen Sie das SQL Server-Fehlerprotokoll auf Enclave-Initialisierungsfehler. Informationen hierzu finden Sie unter [Anzeigen des SQL Server-Fehlerprotokolls (SQL Server Management Studio)](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md).
 
@@ -72,7 +72,7 @@ SELECT
 FROM sys.configurations
 WHERE [name] = 'column encryption enclave type'; 
 ```  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
  [Verwalten von Schlüsseln für Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
 
 ## <a name="see-also"></a>Weitere Informationen  

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68823113"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken für Linux
@@ -107,7 +107,7 @@ Die folgenden Schritte führen Sie durch die Wiederherstellung einer Datenbank m
 
 1. SQL Server stellt die Datenbank wieder her. 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Erstellen einer vollständigen Datenbanksicherung (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [Sichern eines Transaktionsprotokolls (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)

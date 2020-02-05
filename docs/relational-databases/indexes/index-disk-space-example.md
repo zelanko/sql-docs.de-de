@@ -18,10 +18,10 @@ ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816692"
 ---
 # <a name="index-disk-space-example"></a>Beispiel für den zum Speichern eines Indexes belegten Speicherplatz
@@ -50,21 +50,21 @@ ms.locfileid: "71816692"
   
 1.  Ermitteln der Größe der Quellstrukturen  
   
-     Heap: 1 Million × 200 Byte ~ 200 MB  
+     Heap: 1 Million * 200 Byte ~ 200 MB  
   
-     Nicht gruppierter Index A: 1 Million × 50 Byte / 80% ~ 63 MB  
+     Nicht gruppierter Index A: 1 Million * 50 Byte / 80% ~ 63 MB  
   
-     Nicht gruppierter Index B: 1 Million × 80 Byte / 80% ~ 100 MB  
+     Nicht gruppierter Index B: 1 Million * 80 Byte / 80% ~ 100 MB  
   
      Gesamtgröße der vorhandenen Strukturen: 363 MB  
   
 2.  Ermitteln der Größe der Indexstrukturen (Zielstrukturen) Nehmen Sie an, dass der neue Schlüssel des gruppierten Indexes 24 Byte lang ist (einschließlich Uniqueifier). Der Zeilenindikator (Länge von 8 Byte) in beiden nicht gruppierten Indizes wird durch diesen gruppierten Schlüssel ersetzt.  
   
-     Gruppierter Index: 1 Million × 200 Byte / 80% ~ 250 MB  
+     Gruppierter Index: 1 Million * 200 Byte / 80% ~ 250 MB  
   
-     Nicht gruppierter Index A: 1 Million × (50 - 8 + 24) Byte / 80% ~ 83 MB  
+     Nicht gruppierter Index A: 1 Million * (50 - 8 + 24) Byte / 80% ~ 83 MB  
   
-     Nicht gruppierter Index B: 1 Million × (80 - 8 + 24) Byte / 80% ~ 120 MB  
+     Nicht gruppierter Index B: 1 Million * (80 - 8 + 24) Byte / 80% ~ 120 MB  
   
      Gesamtgröße der neuen Strukturen: 453 MB  
   
@@ -110,17 +110,17 @@ ms.locfileid: "71816692"
   
 |Indexvorgang|Speicherplatzanforderungen für die Speicherorte der folgenden Strukturen|  
 |---------------------|---------------------------------------------------------------------------|  
-|Offlineindexvorgang mit SORT_IN_TEMPDB = ON|Gesamtspeicherplatz während des Vorgangs: 1018 MB<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Erforderlicher Gesamtspeicherplatz nach Vorgang: 453 MB|  
-|Offlineindexvorgang mit SORT_IN_TEMPDB = OFF|Gesamtspeicherplatz während des Vorgangs: 816 MB<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Erforderlicher Gesamtspeicherplatz nach Vorgang: 453 MB|  
-|Onlineindexvorgang mit SORT_IN_TEMPDB = ON|Gesamtspeicherplatz während des Vorgangs: 1058 MB<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB\*<br /><br /> -<br />                    **tempdb** (einschließlich Zuordnungsindex): 242 MB*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Erforderlicher Gesamtspeicherplatz nach Vorgang: 453 MB|  
-|Onlineindexvorgang mit SORT_IN_TEMPDB = OFF|Gesamtspeicherplatz während des Vorgangs: 856 MB<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB*<br /><br /> – Temporärer Zuordnungsindex: 40 MB\*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Erforderlicher Gesamtspeicherplatz nach Vorgang: 453 MB|  
+|Offlineindexvorgang mit SORT_IN_TEMPDB = ON|Gesamtspeicherplatz während des Vorgangs: 1018 MB<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Erforderlicher Gesamtspeicherplatz nach der Operation: 453 MB|  
+|Offlineindexvorgang mit SORT_IN_TEMPDB = OFF|Gesamtspeicherplatz während des Vorgangs: 816 MB<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Erforderlicher Gesamtspeicherplatz nach der Operation: 453 MB|  
+|Onlineindexvorgang mit SORT_IN_TEMPDB = ON|Gesamtspeicherplatz während des Vorgangs: 1058 MB<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB\*<br /><br /> -<br />                    **tempdb** (einschließlich Zuordnungsindex): 242 MB*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Erforderlicher Gesamtspeicherplatz nach der Operation: 453 MB|  
+|Onlineindexvorgang mit SORT_IN_TEMPDB = OFF|Gesamtspeicherplatz während der Operation: 856 MB<br /><br /> – Vorhandene Tabelle und Indizes: 363 MB*<br /><br /> – Temporärer Zuordnungsindex: 40 MB\*<br /><br /> – Neue Indizes: 453 MB<br /><br /> Erforderlicher Gesamtspeicherplatz nach der Operation: 453 MB|  
   
  *Die Zuordnung dieses Speicherplatzes wird aufgehoben, nachdem ein Commit für den Indexvorgang ausgeführt wurde.  
   
  Dieses Beispiel berücksichtigt keinen zusätzlichen temporären Speicherplatz, der in **tempdb** für Versionsdatensätze erforderlich ist, die durch gleichzeitige Update- und Löschvorgänge von Benutzern erstellt werden.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Speicherplatzanforderungen für Index-DDL-Vorgänge](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [Transaktionsprotokollspeicherplatz für Indexvorgänge](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

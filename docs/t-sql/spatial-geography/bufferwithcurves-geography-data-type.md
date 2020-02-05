@@ -18,10 +18,10 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066551"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography-Datentyp)
@@ -97,7 +97,7 @@ ms.locfileid: "68066551"
   
  Diese **SELECT**-Anweisung gibt `GEOMETRYCOLLECTION EMPTY` zurück.  
   
-### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. Aufrufen von BufferWithCurves() mit einem Parameterwert = 0  
+### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D: Aufrufen von BufferWithCurves() mit einem Parameterwert = 0  
  Im folgenden Beispiel wird eine Kopie der aufrufenden Instanz von **geography** zurückgegeben:  
 
  ```sql

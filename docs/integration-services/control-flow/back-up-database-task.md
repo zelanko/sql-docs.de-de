@@ -19,10 +19,10 @@ ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e45060a494fad2fbd0310a31bdf433e624becdc2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294301"
 ---
 # <a name="back-up-database-task"></a>Datenbank sichern (Task)
@@ -30,7 +30,7 @@ ms.locfileid: "71294301"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Der Task Datenbank sichern führt verschiedene Arten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanksicherungen aus. Weitere Informationen finden Sie unter [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+  Der Task Datenbank sichern führt verschiedene Arten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanksicherungen aus. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  Mithilfe des Tasks Datenbank sichern kann ein Paket eine einzelne Datenbank oder mehrere Datenbanken sichern. Wenn mit dem Task nur eine einzelne Datenbank gesichert wird, können Sie die Sicherungskomponente auswählen: die Datenbank, oder ihre Dateien und Dateigruppen.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "71294301"
   
 |Wiederherstellungsmodell|Datenbank|Datenbank - differenziell|Transaktionsprotokoll|Datei oder differenzielle Datei|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Einfach|Required|Optional|Nicht unterstützt|Nicht unterstützt|  
-|Vollständig|Required|Optional|Required|Optional|  
-|Massenprotokolliert|Required|Optional|Required|Optional|  
+|Einfach|Erforderlich|Optional|Nicht unterstützt|Nicht unterstützt|  
+|Vollständig|Erforderlich|Optional|Erforderlich|Optional|  
+|Massenprotokolliert|Erforderlich|Optional|Erforderlich|Optional|  
   
  Der Task Datenbank sichern kapselt eine BACKUP-Anweisung von Transact-SQL. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   

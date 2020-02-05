@@ -16,10 +16,10 @@ ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 89d2da02b841edd85d58798ca4c7c1745332d536
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093641"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, Datenbankreplikat
@@ -27,7 +27,7 @@ ms.locfileid: "68093641"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Das **SQLServer:Datenbankreplikat** -Leistungsobjekt enthält Leistungsindikatoren, die Informationen zu den sekundären Datenbanken einer Always On-Verfügbarkeitsgruppe in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]bereitstellen. Dieses Objekt ist auf nur einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz gültig, die ein sekundäres Replikat hostet.  
   
-|Indikatorname|und Beschreibung|Anzeige für...|  
+|Name des Leistungsindikators|BESCHREIBUNG|Anzeige für...|  
 |------------------|-----------------|--------------|  
 |**Empfangene Dateibytes/s**|Die Menge der FILESTREAM-Daten, die vom sekundären Replikat für die sekundäre Datenbank in der letzten Sekunde empfangen wurde.|Sekundäres Replikat|  
 |**Warteschlange für ausstehende Protokollanwendung**|Anzahl der Protokollblöcke, die darauf warten, in das Datenbankreplikat übernommen zu werden.|Sekundäres Replikat|

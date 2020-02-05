@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f166963f1325379d4545f9d8a334e7b77590a14f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075484"
 ---
 # <a name="ddl-events"></a>DDL-Ereignisse
@@ -26,7 +26,7 @@ ms.locfileid: "68075484"
   Die folgenden Tabellen geben einen Überblick über die DDL-Ereignisse, die verwendet werden können, um einen DDL-Trigger oder eine Ereignisbenachrichtigung auszuführen. Beachten Sie, dass jedes Ereignis einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder einer gespeicherten Prozedur entspricht. Dabei wird die Anweisungssyntax so geändert, dass Unterstriche (_) zwischen Schlüsselwörtern eingefügt werden.  
   
 > [!IMPORTANT]  
->  Gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können auch DDL-Trigger und Ereignisbenachrichtigungen auslösen. Testen Sie die DDL-Trigger oder Ereignisbenachrichtigungen, um ihre Reaktion auf gespeicherte Systemprozeduren, die ausgeführt werden, zu bestimmen. Die CREATE TYPE-Anweisung und die gespeicherte Prozedur **sp_addtype** lösen z. B. beide einen DDL-Trigger oder eine Ereignisbenachrichtigung aus, die für ein CREATE_TYPE-Ereignis erstellt wird.  
+>  Gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können auch DDL-Trigger und Ereignisbenachrichtigungen auslösen. Testen Sie die DDL-Trigger oder Ereignisbenachrichtigungen, um ihre Reaktion auf gespeicherte Systemprozeduren, die ausgeführt werden, zu bestimmen. Die CREATE TYPE-Anweisung und die gespeicherte Prozedur **sp_addtype** lösen z.B. beide einen DDL-Trigger oder eine Ereignisbenachrichtigung aus, die für ein CREATE_TYPE-Ereignis erstellt wird.  
   
 ## <a name="ddl-statements-that-have-server-or-database-scope"></a>DDL-Anweisungen, die für Server- oder Datenbankbereich gültig sind  
  DDL-Trigger oder Ereignisbenachrichtigungen können erstellt werden, um als Antwort auf die folgenden Ereignisse ausgelöst zu werden, wenn sie in der Datenbank, in der der Trigger oder die Ereignisbenachrichtigung erstellt wurden, oder irgendwo in der Serverinstanz auftreten.  

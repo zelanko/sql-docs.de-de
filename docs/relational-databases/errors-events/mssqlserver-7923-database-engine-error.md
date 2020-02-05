@@ -12,13 +12,13 @@ ms.assetid: b09a95e2-0ffe-4847-aa77-51e6639259f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5b4872e87ffa3c84be8a93e5faeb597d90c722c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087615"
 ---
-# <a name="mssqlserver7923"></a>MSSQLSERVER_7923
+# <a name="mssqlserver_7923"></a>MSSQLSERVER_7923
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -36,5 +36,5 @@ ms.locfileid: "68087615"
 Dies ist eine Informationsmeldung vom DBCC CHECKALLOC-Befehl. Sie weist den Tabellennamen und die zugehörige ID oben in einer Liste mit Zuordnungsinformationen für alle Zuordnungseinheiten in der Tabelle auf.  
   
 ## <a name="user-action"></a>Benutzeraktion  
-None  
+Keine  
   

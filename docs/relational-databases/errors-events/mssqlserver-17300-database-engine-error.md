@@ -12,13 +12,13 @@ ms.assetid: c1d6bfb6-28af-4df6-8087-25807602d282
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1d6b4f7cdabc8688fda5ad21cc40e6c5f11fa39e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131661"
 ---
-# <a name="mssqlserver17300"></a>MSSQLSERVER_17300
+# <a name="mssqlserver_17300"></a>MSSQLSERVER_17300
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -48,7 +48,7 @@ Führen Sie die folgenden Tasks entsprechend aus:
   
 ## <a name="see-also"></a>Weitere Informationen  
 [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-[Serverkonfigurationsoptionen &#40;Transact-SQL&#41;](~/database-engine/configure-windows/server-configuration-options-sql-server.md)  
+[Serverkonfigurationsoptionen &#40;SQL Server&#41;](~/database-engine/configure-windows/server-configuration-options-sql-server.md)  
 [sys.dm_exec_sessions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 [Konfigurieren der Serverkonfigurationsoption Benutzerverbindungen](~/database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  
 [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md)  

@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082902"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
@@ -43,7 +43,7 @@ ms.locfileid: "68082902"
   
 -   Sie können einen semantischen Index für Spalten erstellen, die einen der für Volltextindizierung unterstützten Datentypen aufweisen. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextindizes](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
--   Sie können einen beliebigen Dokumenttyp angeben, der für Volltextindizierung für **varbinary(max)** -Spalten unterstützt wird. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Ermitteln, welche Dokumenttypen indiziert werden können](#doctypes).  
+-   Sie können einen beliebigen Dokumenttyp angeben, der für Volltextindizierung für **varbinary(max)** -Spalten unterstützt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Ermitteln, welche Dokumenttypen indiziert werden können](#doctypes) .  
   
 -   Bei der semantischen Indizierung werden zwei Typen von Indizes für die ausgewählten Spalten erstellt: ein Index mit Schlüsselausdrücken und ein Index für Dokumentähnlichkeit. Wenn Sie die semantische Indizierung aktivieren, können Sie nur einen Indextyp auswählen. Sie können diese beiden Indizes jedoch unabhängig voneinander abfragen. Weitere Informationen finden Sie unter [Suchen von Schlüsselausdrücken in Dokumenten mit der semantischen Suche](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) und [Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68082902"
   
  **Beispiel 1: Erstellen eines eindeutigen Indexes, eines Volltextindexes und eines semantischen Indexes**  
   
- Im folgenden Beispiel wird der Standardvolltextkatalog **ft** erstellt. Im folgenden Beispiel wird ein eindeutiger Index für die **JobCandidateID**-Spalte der **HumanResources.JobCandidate**-Tabelle der AdventureWorks2012-Beispieldatenbank erstellt. Dieser eindeutige Index ist als Schlüsselspalte für einen Volltextindex erforderlich. Im Beispiel werden dann ein Volltextindex und ein semantischer Index in der **Resume** -Spalte erstellt.  
+ Im folgenden Beispiel wird der Standardvolltextkatalog **ft**erstellt. Im folgenden Beispiel wird ein eindeutiger Index für die **JobCandidateID** -Spalte der **HumanResources.JobCandidate** -Tabelle der AdventureWorks2012-Beispieldatenbank erstellt. Dieser eindeutige Index ist als Schlüsselspalte für einen Volltextindex erforderlich. Im Beispiel werden dann ein Volltextindex und ein semantischer Index in der **Resume** -Spalte erstellt.  
   
 ```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
@@ -265,7 +265,7 @@ GO
 |Portugiesisch (Brasilien)|1046|  
 |Russisch|1049|  
 |Schwedisch|1053|  
-|Englisch (Großbritannien)|2057|  
+|English (UK)|2057|  
 |Portugiesisch (Portugal)|2070|  
 |Spanisch|3082|  
   
@@ -274,7 +274,7 @@ GO
   
  Wenn der zu indizierende Dokumenttyp nicht in der Liste der unterstützten Typen aufgeführt wird, müssen Sie möglicherweise zusätzliche Filter suchen, herunterladen und installieren. Weitere Informationen finden Sie unter [anzeigen oder Ändern von registrierten filtern und Wörtertrennungen](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Bewährte Methode: Erwägen Sie die Erstellung einer separaten Dateigruppe für die Volltext- und semantischen Indizes  
+##  <a name="BestPracticeFilegroup"></a> Bewährte Methode: erwägen Sie eine separate Dateigruppe für die Volltext- und semantischen Indizes erstellen  
  Erwägen Sie, eine separate Dateigruppe für den Volltext- und den semantischen Index zu erstellen, wenn Sie Bedenken im Hinblick auf die Speicherplatzzuordnung haben. Die semantischen Indizes werden in derselben Dateigruppe wie der Volltextindex erstellt. Ein vollständig aufgefüllter semantischer Index kann eine große Datenmenge enthalten.  
  
 ##  <a name="IssueNoResults"></a> Problem: Das Durchsuchen einer bestimmten Spalte gibt keine Ergebnisse zurück  

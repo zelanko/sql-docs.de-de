@@ -14,10 +14,10 @@ ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0fa4abf575c847bae10342a3870fc2c3785d16a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014234"
 ---
 # <a name="secondary-database-is-not-joined"></a>Sekundäre Datenbank ist nicht verknüpft
@@ -29,10 +29,10 @@ ms.locfileid: "68014234"
 |-|-|  
 |**Richtlinienname**|Joinzustand der Verfügbarkeitsdatenbank|  
 |**Problem**|Die sekundäre Datenbank ist nicht verknüpft.|  
-|**Kategorie**|**Warnung**|  
+|**Kategorie**|**Warning**|  
 |**Facet**|Verfügbarkeitsdatenbank|  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Diese Richtlinie überprüft den Joinstatus der sekundären Datenbank (auch bekannt als "sekundäres Datenbankreplikat"). Die Richtlinie befindet sich in einem fehlerhaften Zustand, wenn das Datenbankreplikat nicht verknüpft wird. Die Richtlinie befindet sich andernfalls in einem ordnungsgemäßen Zustand.  
   
 > [!NOTE]  

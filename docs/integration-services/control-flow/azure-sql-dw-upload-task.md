@@ -14,10 +14,10 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947199"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW-Uploadtask
@@ -46,11 +46,11 @@ Im Folgenden sind die Eigenschaften für jeden Quelltyp aufgeführt.
 
 ### <a name="filesystem"></a>FileSystem
 
-Feld|und Beschreibung
+Feld|BESCHREIBUNG
 -----|-----------
 LocalDirectory|Gibt das lokale Verzeichnis mit den Datendateien an, die hochgeladen werden sollen.
 Rekursiv|Gibt an, ob Unterverzeichnisse rekursiv durchsucht werden sollen.
-FileName|Geben Sie einen Namensfilter zum Auswählen von Dateien mit einem bestimmten Namensmuster an. Beispiel: „MeinArbeitsblatt*.xsl\* “ schließt „MeinArbeitsblatt001.xsl“ und „MeinArbeitsblattABC.xslx“ ein.
+FileName|Geben Sie einen Namensfilter zum Auswählen von Dateien mit einem bestimmten Namensmuster an. Beispiel: „MeinArbeitsblatt\*.xsl\* “ schließt „MeinArbeitsblatt001.xsl“ und „MeinArbeitsblattABC.xslx“ ein.
 RowDelimiter|Gibt ein oder mehrere Zeichen an, die das Ende jeder Zeile markieren.
 ColumnDelimiter|Gibt ein oder mehrere Zeichen an, die das Ende jeder Spalte markieren. Beispiel: &#124; (senkrechter Strich), \t (Tabulator), ' (einfaches Anführungszeichen), " (doppeltes Anführungszeichen) und 0x5c (umgekehrter Schrägstrich).
 IsFirstRowHeader|Gibt an, ob die erste Zeile in jeder Datendatei Spaltennamen statt tatsächlicher Daten enthält.
@@ -67,7 +67,7 @@ HashColumnName|Gibt an, welche Spalte für die Verteilung der Hashtabelle verwen
 
 ### <a name="blobstorage"></a>BlobStorage
 
-Feld|und Beschreibung
+Feld|BESCHREIBUNG
 -----|-----------
 AzureStorageConnection|Gibt einen Azure Storage-Verbindungs-Manager an.
 BlobContainer|Gibt den Namen des Blobcontainers an, in dem sich die Quelldaten befinden.

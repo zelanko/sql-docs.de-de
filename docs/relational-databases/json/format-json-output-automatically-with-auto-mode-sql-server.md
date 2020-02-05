@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1472c05c2ac4a9308a0fc941ed706d155203ca03
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095809"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Automatisches Formatieren der JSON-Ausgabe im AUTO-Modus (SQL Server)
@@ -37,7 +37,7 @@ Nachstehend finden Sie einige Beispiele für die **FOR JSON** -Klausel mit der O
 ## <a name="examples"></a>Beispiele
 
 ### <a name="example-1"></a>Beispiel 1
- **Dataseteigenschaften**  
+ **Abfrage**  
   
 Die Ergebnisse der FOR JSON AUTO-Klausel ähneln den Ergebnissen von FOR JSON PATH, wenn nur eine Tabelle in der Abfrage verwendet wird. In diesem Fall erstellt FOR JSON AUTO keine geschachtelten Objekte. Der einzige Unterschied besteht darin, dass FOR JSON AUTO durch Punkt getrennte Aliase (z.B. `Info.MiddleName` im folgenden Beispiel) als Schlüssel mit Punkten ausgibt, nicht als geschachtelte Objekte.  
   
@@ -83,7 +83,7 @@ SELECT TOP 5
 
 ### <a name="example-2"></a>Beispiel 2
 
-**Dataseteigenschaften**  
+**Abfrage**  
   
 Wenn Sie Tabellen verknüpfen, werden die Spalten der ersten Tabelle als Eigenschaften des Stammobjekts generiert. Die Spalten der zweiten Tabelle werden als Eigenschaften eines geschachtelten Objekts generiert. Der Tabellenname oder Alias der zweiten Tabelle (z.B. `D` im folgenden Beispiel) wird als Name des geschachtelten Arrays verwendet.  
   
@@ -121,7 +121,7 @@ FOR JSON AUTO
 
 ### <a name="example-3"></a>Beispiel 3
  
-**Dataseteigenschaften**  
+**Abfrage**  
 Statt FOR JSON AUTO zu verwenden, können Sie eine FOR JSON PATH-Unterabfrage in der SELECT-Anweisung schachteln, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird das gleiche Ergebnis ausgegeben wie im vorherigen Beispiel.  
   
 ```sql  

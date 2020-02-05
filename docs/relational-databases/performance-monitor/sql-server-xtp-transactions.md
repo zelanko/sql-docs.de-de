@@ -11,10 +11,10 @@ ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c00e408454b4bf5b4b907e517fa430212739734e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006986"
 ---
 # <a name="sql-server-xtp-transactions"></a>SQL Server-XTP-Transaktionen
@@ -24,7 +24,7 @@ ms.locfileid: "68006986"
   
  In dieser Tabelle werden die Leistungsindikatoren für **SQL Server-XTP-Transaktionen** beschrieben.  
   
-|Leistungsindikator|und Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Abbruchweitergaben/s**|Die durchschnittliche Anzahl der Transaktionen, für die pro Sekunde aufgrund eines Commitabhängigkeits-Rollbacks ein Rollback durchgeführt wurde.|  
 |**Übernommene Commitabhängigkeiten/s**|Die durchschnittliche Anzahl der Commitabhängigkeiten, die pro Sekunde von Transaktionen übernommen werden.|  
@@ -38,6 +38,6 @@ ms.locfileid: "68006986"
 |**Erstellte Transaktionen/s**|Die durchschnittliche Anzahl der pro Sekunde im System erstellten Transaktionen.<br /><br /> XTP-Transaktionen werden anders als datenträgerbasierte Transaktionen gezählt (wie aus Datenbanken:Transaktionen/Sekunde ersichtlich). Beispielsweise zählt Erstellte Transaktionen/s schreibgeschützte Transaktionen, Datenbanken:Transaktionen/Sekunde hingegen nicht.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Leistungsindikatoren für SQL Server XTP &#40;In-Memory OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
+ [Leistungsindikatoren für SQL Server XTP &#40;In-Memory-OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

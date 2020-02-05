@@ -11,10 +11,10 @@ ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8347b0b1860041c6bd2a9241e015e2bfd71e5135
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298147"
 ---
 # <a name="raw-file-custom-properties"></a>Benutzerdefinierte Eigenschaften der Rohdatendatei
@@ -28,10 +28,10 @@ ms.locfileid: "71298147"
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Rohdatendatei-Quelle beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|und Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Ganze Zahl (Enumeration)|Der zum Zugreifen auf die Rohdaten verwendete Modus. Die möglichen Werte sind **Dateiname** (0) und **Dateiname aus Variable** (1). Der Standardwert ist **Dateiname** (0).|  
-|FileName|Zeichenfolge|Der Pfad und der Dateiname der Quelldatei.|  
+|FileName|String|Der Pfad und der Dateiname der Quelldatei.|  
   
  Die Ausgabe und die Ausgabespalten der Rohdatendatei-Quelle verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "71298147"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften des Rohdatendatei-Ziels. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|und Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob die FileName-Eigenschaft einen Dateinamen oder den Namen einer Variablen enthält, die einen Dateinamen enthält. Die möglichen Werte sind **Dateiname** (0) und **Dateiname aus Variable** (1).|  
-|FileName|Zeichenfolge|Der Name der Datei, in die das Rohdatendatei-Ziel schreibt.|  
+|FileName|String|Der Name der Datei, in die das Rohdatendatei-Ziel schreibt.|  
 |WriteOption|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob das Rohdatendatei-Ziel eine vorhandene Datei mit demselben Namen löscht. Die Optionen sind **Immer erstellen** (0), **Einmal erstellen** (1), **Abschneiden und anfügen** (3) und **Anfügen** (2). Der Standardwert dieser Eigenschaft ist **Immer erstellen** (0).|  
   
 > [!NOTE]  

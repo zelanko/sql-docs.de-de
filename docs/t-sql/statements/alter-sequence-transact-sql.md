@@ -19,10 +19,10 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070334"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68070334"
   
  Eine Sequenz ist ein benutzerdefiniertes schemagebundenes Objekt, das anhand einer Spezifikation eine Reihe von numerischen Werten generiert. Neue Werte werden aus einer Sequenz generiert, indem die NEXT VALUE FOR-Funktion aufgerufen wird. Mit **sp_sequence_get_range** können Sie mehrere Sequenznummern gleichzeitig abrufen. Informationen und Szenarios, in denen die CREATE SEQUENCE-Funktion, **sp_sequence_get_range** und die NEXT VALUE FOR-Funktion verwendet werden, finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -85,7 +85,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ## <a name="metadata"></a>Metadaten  
  Weitere Informationen zu Sequenzen erhalten Sie durch Abfragen von [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die **ALTER**-Berechtigung für die Sequenz oder die **ALTER**-Berechtigung für das Schema. Die **ALTER**-Berechtigung für die Sequenz kann mit **ALTER ON OBJECT** im folgenden Format erteilt werden:  
@@ -96,7 +96,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
   
  Der Besitz eines Sequenzobjekts kann mit der **ALTER AUTHORIZATION**-Anweisung übertragen werden.  
   
-### <a name="audit"></a>Überwachen von  
+### <a name="audit"></a>Audit  
  Überwachen Sie **SCHEMA_OBJECT_CHANGE_GROUP**, um **ALTER SEQUENCE** zu überwachen.  
   
 ## <a name="examples"></a>Beispiele  

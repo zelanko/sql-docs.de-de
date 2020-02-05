@@ -17,10 +17,10 @@ ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050668"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT (Berechtigungen für Systemobjekte) (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68050668"
 
   Erteilt Berechtigungen für Systemobjekte wie z. B. im System gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Funktionen und Sichten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

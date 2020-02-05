@@ -22,10 +22,10 @@ ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 70f3b23244095b79dc8340d3060e6d30d5009a2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121928"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68121928"
 
   Öffnet einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor und füllt den Cursor auf, indem die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ausgeführt wird, die in der DECLARE - oder SET-*cursor_variable*-Anwendung angegeben ist.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -19,10 +19,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077915"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Methodenverweis für den Datentyp „hierarchyid“
@@ -35,7 +35,7 @@ Ein Wert des **hierarchyid** -Datentyps stellt eine Position in einer Strukturhi
 -   Äußerst komprimiert  
      Die durchschnittliche Zahl der Bits, die erforderlich sind, um einen Knoten in einer Struktur mit *n* Knoten darzustellen, hängt von der durchschnittlichen Anzahl der Verzweigungen (der durchschnittlichen Anzahl untergeordneter Knoten) eines Knotens ab. Bei wenigen Verzweigungen (0–7) entspricht diese Zahl etwa 6\*logA*n* Bit, wobei A die durchschnittliche Anzahl von Verzweigungen angibt. Ein Knoten in einer 100.000 Leute umfassenden Organisationshierarchie mit durchschnittlich 6 Verzweigungen benötigt etwa 38 Bit. Dieser Wert wird bei der Speicherung auf 40 Bit oder 5 Byte aufgerundet.  
 -   Vergleiche erfolgen in Tiefensuchreihenfolge  
-     Bei den beiden **hierarchyid**-Werten **a** und **b** bedeutet **a<b**, dass beim Durchlaufen der Struktur in der Tiefensuchreihenfolge a vor b kommt. Indizes für **hierarchyid**-Datentypen verwenden die Tiefensuchreihenfolge, und einander benachbarte Knoten werden bei der Tiefensuchreihenfolge nahe beieinander gespeichert. Einem Datensatz untergeordnete Datensätze werden zum Beispiel angrenzend an diesen Datensatz gespeichert. Weitere Informationen finden Sie unter [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
+     Bei den beiden **hierarchyid**-Werten **a** und **b** bedeutet **a<b**, dass beim Durchlaufen der Struktur in der Tiefensuchreihenfolge a vor b kommt. Indizes für **hierarchyid** -Datentypen verwenden die Tiefensuchreihenfolge, und einander benachbarte Knoten werden bei der Tiefensuchreihenfolge nahe beieinander gespeichert. Einem Datensatz untergeordnete Datensätze werden zum Beispiel angrenzend an diesen Datensatz gespeichert. Weitere Informationen finden Sie unter [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
 -   Unterstützung willkürlicher Einfüge- und Löschvorgänge  
      Mithilfe der [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) -Methode ist es immer möglich, rechts oder links von einem gegebenen Knoten einen gleichgeordneten Knoten zu generieren oder ihn auch zwischen zwei gleichgeordneten Knoten einzufügen. Die Vergleichseigenschaft bleibt auch dann gewahrt, wenn eine beliebige Anzahl von Knoten in die Hierarchie eingefügt oder aus ihr gelöscht wird. Die meisten Einfüge- und Löschoperationen behalten die Kompaktheitseigenschaft bei. Einfügungen zwischen zwei Knoten erzeugen jedoch hierarchyid-Werte in einer etwas weniger komprimierten Darstellung.  
 -   Die im **hierarchyid**-Typ verwendete Codierung ist auf 892 Bytes beschränkt. Knoten, die zu viele Ebenen in ihrer Darstellung haben, um in 892 Bytes zu passen, können nicht vom **hierarchyid**-Typ dargestellt werden.  
@@ -90,7 +90,7 @@ Zur bidirektionalen Replikation gehören die Transaktionsreplikation mit aktuali
 -   Spaltenfilter können **hierarchyid**-Spalten, die nicht auf Null festgelegt werden können, nicht filtern: Einfügevorgänge vom Abonnenten schlagen fehl, da es keinen Standardwert für die **hierarchyid**-Spalte auf dem Verleger gibt.  
 -   Die Zeilenfilterung wird unterstützt, wenn der Filter keine **hierarchyid**-Spalte enthält.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   
