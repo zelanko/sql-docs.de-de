@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: e50fd6037b10008029d5373348605d11726b6199
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148037"
 ---
 # <a name="install-sql-server-database-engine"></a>Installieren der SQL Server-Datenbank-Engine
@@ -31,7 +31,7 @@ Bei der Komponente [!INCLUDE[ssDE](../../includes/ssde-md.md)] von [!INCLUDE[ssN
 >[!IMPORTANT]
 >Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.  
 
-## <a name="features"></a>Funktionen
+## <a name="features"></a>Features
 Wenn Sie im Installations-Assistenten von **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf der Seite Zu installierende Komponenten die Option** -Datenbank-Engine[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen, werden folgenden Funktionen installiert:  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -65,7 +65,7 @@ Wenn Sie im Installations-Assistenten von **[!INCLUDE[ssNoVersion](../../include
 -   Data Quality Client
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]
 -   Konnektivitätskomponenten
--   Programmiermodelle
+-   Programmmodelle
 -   Verwaltungstools
 -   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 -   Dokumentationskomponenten  
@@ -75,7 +75,7 @@ Wenn Sie im Installations-Assistenten von **[!INCLUDE[ssNoVersion](../../include
 >  Standardmäßig werden Beispieldatenbanken und Beispielcode nicht als Teil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups installiert. Informationen zur Installation von Beispieldatenbanken und Beispielcode finden Sie unter [Microsoft SQL Server Samples (Beispiele für Microsoft SQL Server)](../../sample/microsoft-sql-server-samples.md). Ältere Beispiele finden Sie auf der [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843)-Seite.  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Editionen und unterstützten Funktionen von SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   

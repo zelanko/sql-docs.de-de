@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68425932"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68425932"
 
   Gibt den Wert für die angegebene erweiterte Dateieigenschaft zurück, wenn ein Dateiname in der aktuellen Datenbank und ein Eigenschaftsname angegeben sind. Gibt für Dateien, die es in der aktuellen Datenbank nicht gibt, oder für erweiterte Dateieigenschaften, die nicht vorhanden sind, den Wert NULL zurück. Derzeit gibt es erweiterte Dateieigenschaften nur für Datenbanken, die sich in Azure Blob-Speicher befinden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ FILEPROPERTYEX ( name , property )
 
 
   
-|value|und Beschreibung|
+|value|BESCHREIBUNG|
 |-----------|-----------------|  
 |**BlobTier**|Die Ebene des Azure-Zielseitenblobs. Gilt nur für Standard- und GeneralPurpose-Datenbanken, in denen Azure-Seitenblob-Speicher verwendet wird.|
 |**AccountType**|Der Speicherkontotyp, der angibt, ob es sich um Blobspeicher oder Dateispeicher handelt und ob der Speicher Premium- oder Standard-Speicher ist.|

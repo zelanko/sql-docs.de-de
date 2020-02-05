@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075061"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68075061"
 
   Ermittelt, ob ein angegebener Wert mit einem Wert aus einer Unterabfrage oder Liste übereinstimmt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ test_expression [ NOT ] IN
   
 ## <a name="arguments"></a>Argumente  
  *test_expression*  
- Ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *subquery*  
  Ist eine Unterabfrage mit einem Resultset, das aus einer Spalte besteht. Diese Spalte muss denselben Datentyp besitzen wie *test_expression*.  
@@ -56,7 +56,7 @@ test_expression [ NOT ] IN
  Eine Liste mit Ausdrücken, die auf Übereinstimmungen geprüft werden sollen. Alle Ausdrücke müssen denselben Datentyp besitzen wie *test_expression*.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- **Boolean**  
+ **Boolescher Wert**  
   
 ## <a name="result-value"></a>Ergebniswert  
  Wenn der Wert von *test_expression* einem von der *Unterabfrage* zurückgegebenen Wert oder einem *Ausdruck* aus der durch Trennzeichen getrennten Liste entspricht, ist der Ergebniswert TRUE. Andernfalls ist der Ergebniswert FALSE.  
@@ -171,9 +171,9 @@ WHERE p.BusinessEntityID NOT IN
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-in-and-not-in"></a>D. Verwenden von IN und NOT IN  
+### <a name="d-using-in-and-not-in"></a>D: Verwenden von IN und NOT IN  
  Im folgenden Beispiel werden alle Einträge in der Tabelle `FactInternetSales` gefunden, die den Werten von `SalesReasonKey` in der Tabelle `DimSalesReason` entsprechen.  
   
 ```  

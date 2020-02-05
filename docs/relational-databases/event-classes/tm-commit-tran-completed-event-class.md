@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef239d0cf2aaf495daa4af273128dc43246ad52e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085971"
 ---
-# <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed (Ereignisklasse)
+# <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Die TM: Commit Tran Completed-Ereignisklasse zeigt an, dass eine COMMIT TRANSACTION-Anforderung abgeschlossen wurde. Die Anforderung wurde vom Client über die Schnittstelle zur Transaktionsverwaltung gesendet. Die EventSubClass-Spalte zeigt an, ob eine neue Transaktion nach dem Commit der aktuellen Transaktion gestartet wird.  
   
-## <a name="tm-commit-tran-completed-event-class-data-columns"></a>TM: Commit Tran Completed-Ereignisklasse (Datenspalten)  
+## <a name="tm-commit-tran-completed-event-class-data-columns"></a>Datenspalten der TM: Commit Tran Completed-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Ja|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Ja|  
 |----------------------|---------------|-----------------|---------------|---------|  
 |ApplicationName|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|9|Ja|  
@@ -47,7 +47,7 @@ ms.locfileid: "68085971"
 |SessionLoginName|**nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie beispielsweise mithilfe von Login1 eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und eine Anweisung als Login2 ausführen, zeigt SessionLoginName den Wert Login1 an und LoginName den Wert Login2. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |SPID|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  
 |StartTime|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
-|Success|**int**|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|23|Ja|  
+|Erfolg|**int**|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|23|Ja|  
 |TextData|**ntext**|Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|1|Ja|  
 |TransactionID|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
 |XactSequence|**bigint**|Das Token, das die aktuelle Transaktion beschreibt.|50|Ja|  

@@ -20,10 +20,10 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa922a5a850a6cee9b782d894994835d8e1d9a1c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291758"
 ---
 # <a name="aggregate-transformation"></a>Transformation für das Aggregieren
@@ -36,17 +36,17 @@ ms.locfileid: "71291758"
 ## <a name="operations"></a>Operationen (Operations)  
  Die Transformation für das Aggregieren unterstützt die folgenden Vorgänge.  
   
-|Vorgang|und Beschreibung|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
-|Group By|Unterteilt Datasets in Gruppen. Spalten eines beliebigen Datentyps können für das Gruppieren verwendet werden. Weitere Informationen finden Sie unter [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
+|Gruppieren nach|Unterteilt Datasets in Gruppen. Spalten eines beliebigen Datentyps können für das Gruppieren verwendet werden. Weitere Informationen finden Sie unter [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
 |SUM|Summiert die Werte einer Spalte. Summiert werden können nur Spalten mit einem numerischen Datentyp. Weitere Informationen finden Sie unter [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
-|Mittelwert|Gibt den Mittelwert der Werte in einer Spalte zurück. Der Mittelwert kann nur für Spalten mit einem numerischen Datentyp ermittelt werden. Weitere Informationen finden Sie unter [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
-|Count|Gibt die Anzahl von Elementen in einer Gruppe zurück. Weitere Informationen finden Sie unter [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
+|Average|Gibt den Mittelwert der Werte in einer Spalte zurück. Der Mittelwert kann nur für Spalten mit einem numerischen Datentyp ermittelt werden. Weitere Informationen finden Sie unter [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
+|Anzahl|Gibt die Anzahl von Elementen in einer Gruppe zurück. Weitere Informationen finden Sie unter [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
 |Count distinct|Gibt die Anzahl eindeutiger Werte ungleich null in einer Gruppe zurück.|  
 |Minimum|Gibt den kleinsten Wert in einer Gruppe zurück. Weitere Informationen finden Sie unter [MIN &#40;Transact-SQL&#41;](../../../t-sql/functions/min-transact-sql.md). Im Gegensatz zur MIN-Funktion von Transact-SQL kann dieser Vorgang nur mit numerischen, Datums- und Zeitdatentypen verwendet werden.|  
 |Maximum|Gibt den größten Wert in einer Gruppe zurück. Weitere Informationen finden Sie unter [MAX &#40;Transact-SQL&#41;](../../../t-sql/functions/max-transact-sql.md). Im Gegensatz zur MAX-Funktion von Transact-SQL kann dieser Vorgang nur mit numerischen, Datums- und Zeitdatentypen verwendet werden.|  
   
- Die Transformation für das Aggregieren behandelt NULL-Werte auf die gleiche Weise wie die relationale Datenbank-Engine von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dieses Verhalten ist im SQL-92-Standard definiert. Dabei gelten die folgenden Regeln:  
+ Die Transformation für das Aggregieren behandelt NULL-Werte auf die gleiche Weise wie die relationale Datenbank-Engine von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dieses Verhalten ist im SQL-92-Standard definiert. Es gelten die folgenden Regeln:  
   
 -   In einer GROUP BY-Klausel werden NULL-Werte wie andere Spaltenwerte behandelt. Enthält die Gruppierungsspalte mehrere NULL-Werte, werden diese in einer Gruppe zusammengefasst.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "71291758"
 ## <a name="performance-considerations"></a>Überlegungen zur Leistung  
  Die Transformation für das Aggregieren enthält Eigenschaften, die Sie festlegen können, um die Leistung der Transformation zu optimieren.  
   
--   Wenn Sie einen **GROUP BY** -Vorgang ausführen, legen Sie die Keys-Eigenschaft oder die KeysScale-Eigenschaft für die Komponente und die Komponentenausgaben fest. Mithilfe von Keys können Sie die genaue Anzahl von Schlüsseln festlegen, die von der Transformation behandelt werden sollen. (In diesem Kontext bezeichnet Keys die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY**-Vorgangs erwartet werden.) Mit KeysScale können Sie eine ungefähre Anzahl von Schlüsseln angeben. Wenn Sie einen entsprechenden Wert für Keys oder KeyScale angeben, verbessern Sie damit die Leistung, da von der Transformation den zwischengespeicherten Daten eine ausreichende Menge an Arbeitsspeicher zugewiesen werden kann.  
+-   Wenn Sie einen **GROUP BY** -Vorgang ausführen, legen Sie die Keys-Eigenschaft oder die KeysScale-Eigenschaft für die Komponente und die Komponentenausgaben fest. Mithilfe von Keys können Sie die genaue Anzahl von Schlüsseln festlegen, die von der Transformation behandelt werden sollen. (In diesem Kontext bezeichnet Keys die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY** -Vorgangs erwartet werden.) Mit KeysScale können Sie eine ungefähre Anzahl von Schlüsseln angeben. Wenn Sie einen entsprechenden Wert für Keys oder KeyScale angeben, verbessern Sie damit die Leistung, da von der Transformation den zwischengespeicherten Daten eine ausreichende Menge an Arbeitsspeicher zugewiesen werden kann.  
   
--   Legen Sie beim Durchführen eines **DISTINCT COUNT** -Vorgangs die CountDistinctKeys-Eigenschaft oder die CountDistinctScale-Eigenschaft der Komponente fest. Mithilfe von CountDistinctKeys können Sie die genaue Anzahl von Schlüsseln festlegen, die von der Transformation für einen COUNT DISTINCT-Vorgang behandelt werden sollen. (In diesem Kontext bezeichnet CountDistinctKeys die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT**-Vorgangs erwartet werden.) Mithilfe von CountDistinctScale können Sie eine ungefähre Anzahl von Schlüsseln für einen COUNT DISTINCT-Vorgang festlegen. Wenn Sie einen entsprechenden Wert für CountDistinctKeys oder CountDistinctScale angeben, verbessern Sie damit die Leistung, da von der Transformation den zwischengespeicherten Daten eine ausreichende Menge an Arbeitsspeicher zugewiesen werden kann.  
+-   Legen Sie beim Durchführen eines **DISTINCT COUNT** -Vorgangs die CountDistinctKeys-Eigenschaft oder die CountDistinctScale-Eigenschaft der Komponente fest. Mithilfe von CountDistinctKeys können Sie die genaue Anzahl von Schlüsseln festlegen, die von der Transformation für einen COUNT DISTINCT-Vorgang behandelt werden sollen. (In diesem Kontext bezeichnet CountDistinctKeys die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT** -Vorgangs erwartet werden.) Mithilfe von CountDistinctScale können Sie eine ungefähre Anzahl von Schlüsseln für einen COUNT DISTINCT-Vorgang festlegen. Wenn Sie einen entsprechenden Wert für CountDistinctKeys oder CountDistinctScale angeben, verbessern Sie damit die Leistung, da von der Transformation den zwischengespeicherten Daten eine ausreichende Menge an Arbeitsspeicher zugewiesen werden kann.  
   
 ## <a name="aggregate-transformation-configuration"></a>Konfiguration der Transformation für das Aggregieren  
  Die Transformation für das Aggregieren konfigurieren Sie auf der Transformations-, Ausgabe- und Spaltenebene.  
@@ -106,7 +106,7 @@ ms.locfileid: "71291758"
   
  Die Transformation für das Aggregieren ist asynchron. Das heißt, sie verwendet und veröffentlicht Daten nicht zeilenweise. Vielmehr verwendet sie das gesamte Rowset, führt Gruppierungen und Aggregationen aus und veröffentlicht dann die Ergebnisse.  
   
- Diese Transformation übergibt keine Spalten, sondern erstellt im Datenfluss für die veröffentlichten Daten neue Spalten. Nur die Eingabespalten, für die Aggregatfunktionen gelten, oder die Eingabespalten, die die Transformation zum Gruppieren verwendet, werden in die Transformationsausgabe kopiert. Angenommen, eine Transformation für das Aggregieren weist drei Spalten auf: **CountryRegion**, **City** und **Population**. Die Transformation gruppiert nach der **CountryRegion** -Spalte und wendet die SUM-Funktion auf die **Population** -Spalte an. Deshalb ist in der Ausgabe die **City** -Spalte nicht enthalten.  
+ Diese Transformation übergibt keine Spalten, sondern erstellt im Datenfluss für die veröffentlichten Daten neue Spalten. Nur die Eingabespalten, für die Aggregatfunktionen gelten, oder die Eingabespalten, die die Transformation zum Gruppieren verwendet, werden in die Transformationsausgabe kopiert. Angenommen, eine Transformation für das Aggregieren weist drei Spalten auf: **CountryRegion**, **City**und **Population**. Die Transformation gruppiert nach der **CountryRegion** -Spalte und wendet die SUM-Funktion auf die **Population** -Spalte an. Deshalb ist in der Ausgabe die **City** -Spalte nicht enthalten.  
   
  Sie können der Transformation für das Aggregieren auch mehrere Ausgaben hinzufügen und jede Aggregation an eine andere Ausgabe weiterleiten. Wendet beispielsweise die Transformation für das Aggregieren die Funktionen Sum und Average an, kann jede Aggregation an eine andere Ausgabe geleitet werden.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71291758"
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71291758"
 >   
 >  In der Transformation für das Aggregieren beziehen sich **Schlüssel** und **Schlüsselskala** auf die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY** -Vorgangs erwartet werden. **COUNT DISTINCT-Schlüssel** und **COUNT DISTINCT-Skala** beziehen sich auf die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT** -Vorgangs erwartet werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Erweitert/Standard**  
  Blenden Sie die Optionen ein oder aus, um mehrere Aggregationen für mehrere Ausgaben zu konfigurieren. Die erweiterten Optionen sind standardmäßig ausgeblendet.  
   
@@ -154,10 +154,10 @@ ms.locfileid: "71291758"
  **Schlüsselskala**  
  Geben Sie in der erweiterten Anzeige optional die ungefähre Anzahl der Schlüssel an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn die Eigenschaften **Schlüsselskala** und **Schlüssel** festgelegt sind, wird der Wert von **Schlüssel** vorrangig behandelt.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Keine Angabe|Die Eigenschaft Schlüsselskala wird nicht verwendet.|  
-|Low|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
+|Unspecified|Die Eigenschaft Schlüsselskala wird nicht verwendet.|  
+|Niedrig|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 Schlüssel schreiben.|  
 |High|Die Aggregation kann mehr als 25.000.000 Schlüssel schreiben.|  
   
@@ -176,14 +176,14 @@ ms.locfileid: "71291758"
  **Vorgang**  
  Wählen Sie einen Vorgang aus der Liste der verfügbaren Vorgänge aus, indem Sie die folgende Tabelle zurate ziehen.  
   
-|Vorgang|und Beschreibung|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**GroupBy**|Unterteilt Datasets in Gruppen. Zum Gruppieren können Spalten aller Datentypen verwendet werden. Weitere Informationen finden Sie unter GROUP BY.|  
 |**Sum**|Summiert die Werte einer Spalte. Summiert werden können nur Spalten mit einem numerischen Datentyp. Weitere Informationen finden Sie unter SUM.|  
 |**Mittelwert**|Gibt den Mittelwert der Werte in einer Spalte zurück. Der Mittelwert kann nur für Spalten mit einem numerischen Datentyp ermittelt werden. Weitere Informationen finden Sie unter AVG.|  
 |**Count**|Gibt die Anzahl von Elementen in einer Gruppe zurück. Weitere Informationen finden Sie unter COUNT.|  
 |**CountDistinct**|Gibt die Anzahl eindeutiger Werte ungleich null in einer Gruppe zurück. Weitere Informationen finden Sie unter COUNT und Distinct.|  
-|**Minimum**|Gibt den kleinsten Wert in einer Gruppe zurück. Ist auf numerische Datentypen beschränkt.|  
+|**Mindestanforderungen**|Gibt den kleinsten Wert in einer Gruppe zurück. Ist auf numerische Datentypen beschränkt.|  
 |**Maximum**|Gibt den größten Wert in einer Gruppe zurück. Ist auf numerische Datentypen beschränkt.|  
   
  **Vergleichsflags**  
@@ -192,10 +192,10 @@ ms.locfileid: "71291758"
  **Count Distinct Scale**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **CountDistinctScale** und **CountDistinctKeys** angegeben werden, wird **CountDistinctKeys** vorrangig behandelt.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Keine Angabe|Die **CountDistinctScale** -Eigenschaft wird nicht verwendet.|  
-|Low|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
+|Unspecified|Die **CountDistinctScale** -Eigenschaft wird nicht verwendet.|  
+|Niedrig|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 unterschiedliche Werte schreiben.|  
 |High|Die Aggregation kann mehr als 25.000.000 unterschiedliche Werte schreiben.|  
   
@@ -210,14 +210,14 @@ ms.locfileid: "71291758"
 >   
 >  In der Transformation für das Aggregieren beziehen sich **Schlüssel** und **Schlüsselskala** auf die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY** -Vorgangs erwartet werden. **COUNT DISTINCT-Schlüssel** und **COUNT DISTINCT-Skala** beziehen sich auf die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT** -Vorgangs erwartet werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Schlüsselskala**  
  Gibt optional die ungefähre Anzahl an Schlüsseln an, die von der Aggregation erwartet werden. Für die Transformation wird diese Information verwendet, um die anfängliche Cachegröße zu optimieren. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **Schlüsselskala** als auch **Anzahl von Schlüsseln** angegeben wurden, hat **Anzahl von Schlüsseln** Vorrang.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Keine Angabe|Die Eigenschaft **Schlüsselskala** wird nicht verwendet.|  
-|Low|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
+|Unspecified|Die Eigenschaft **Schlüsselskala** wird nicht verwendet.|  
+|Niedrig|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 Schlüssel schreiben.|  
 |High|Die Aggregation kann mehr als 25.000.000 Schlüssel schreiben.|  
   
@@ -227,10 +227,10 @@ ms.locfileid: "71291758"
  **COUNT DISTINCT-Skala**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **COUNT DISTINCT-Skala** als auch **COUNT DISTINCT-Schlüssel** angegeben wurden, hat **COUNT DISTINCT-Schlüssel** Vorrang.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Keine Angabe|Die CountDistinctScale-Eigenschaft wird nicht verwendet.|  
-|Low|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
+|Unspecified|Die CountDistinctScale-Eigenschaft wird nicht verwendet.|  
+|Niedrig|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 unterschiedliche Werte schreiben.|  
 |High|Die Aggregation kann mehr als 25.000.000 unterschiedliche Werte schreiben.|  
   

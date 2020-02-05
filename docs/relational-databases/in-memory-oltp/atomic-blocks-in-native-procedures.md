@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951223"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>ATOMIC-Blöcke in nativen Prozeduren
@@ -126,21 +126,21 @@ ORDER BY c1
 GO  
 ```  
   
- Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines atomischen Blocks auftreten, wird die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332, 41333 und 41839.  
+ Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines ATOMIC-Blocks auftreten, wird die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332, 41333, und 41839.  
   
 ## <a name="session-settings"></a>Sitzungseinstellungen  
  Die Sitzungseinstellungen in ATOMIC-Blöcken werden bei der Kompilierung der gespeicherte Prozedur fest definiert. Einige Einstellungen können mit **BEGIN ATOMIC** angegeben werden, während andere immer denselben festen Wert aufweisen.  
   
  Die folgenden Optionen sind für **BEGIN ATOMIC**erforderlich:  
   
-|Erforderliche Einstellung|und Beschreibung|  
+|Erforderliche Einstellung|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|Unterstützte Werte sind **SNAPSHOT**, **REPEATABLEREAD**und **SERIALIZABLE**.|  
 |**LANGUAGE**|Bestimmt Datums- und Uhrzeitformate sowie Systemmeldungen. Alle Sprachen und Aliase in [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) werden unterstützt.|  
   
  Die folgenden Einstellungen sind optional:  
   
-|Optionale Einstellung|und Beschreibung|  
+|Optionale Einstellung|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|Alle Datumsformate von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden unterstützt. Falls angegeben, überschreibt **DATEFORMAT** das Standarddatumsformat, das **LANGUAGE**zugeordnet ist.|  
 |**DATEFIRST**|Falls angegeben, überschreibt **DATEFIRST** den Standardwert, der **LANGUAGE**zugeordnet ist.|  
@@ -150,21 +150,21 @@ GO
   
 |SET-Option|Systemstandard für ATOMIC-Blöcke|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNING|ON|  
-|ARITHABORT|ON|  
+|ANSI_NULLS|EIN|  
+|ANSI_PADDING|EIN|  
+|ANSI_WARNING|EIN|  
+|ARITHABORT|EIN|  
 |ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|CONCAT_NULL_YIELDS_NULL|EIN|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ON|  
+|NOCOUNT|EIN|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|EIN|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Nicht abgefangene Ausnahmen bewirken ein Rollback für den ATOMIC-Block, führen jedoch nicht zu einem Abbruch der Transaktion, solange die Transaktion durch den Fehler nicht fehlschlägt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

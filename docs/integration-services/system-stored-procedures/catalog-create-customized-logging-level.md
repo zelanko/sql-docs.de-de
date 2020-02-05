@@ -11,10 +11,10 @@ ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 87acb8f9b15fa2b22f4a7f1dbe01669eff08b92e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281020"
 ---
 # <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
@@ -76,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  Das Argument *level_id* ist vom Typ **bigint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Gehen Sie zum Kombinieren mehrerer Werte in Transact-SQL für das Argument *profile_value* oder *events_value* wie im folgenden Beispiel vor. Verwenden Sie zur Erfassung der Ereignisse OnError (8) und DiagnosticEx (15) als Berechnungsformel für *events_value* die Formel `2^8 + 2^15 = 33024`.  
   
 ## <a name="return-codes"></a>Rückgabecodes  
@@ -85,7 +85,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  Wenn die gespeicherte Prozedur fehlschlägt, wird ein Fehler ausgelöst.  
   
 ## <a name="result-set"></a>Resultset  
- None  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  

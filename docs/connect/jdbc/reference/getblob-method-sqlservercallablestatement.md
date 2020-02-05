@@ -1,5 +1,5 @@
 ---
-title: getBlob-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
+title: getBlob Method (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e609b336-d40e-4d89-9130-6db7e6853541
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61a6eeb405018c2b9eebc01039b0b49a14e6d910
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953587"
 ---
 # <a name="getblob-method-sqlservercallablestatement"></a>getBlob-Methode (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953587"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[getBlob (int)](../../../connect/jdbc/reference/getblob-method-int.md)|Ruft den Wert des angegebenen JDBC-BLOB-Parameters unter Berücksichtigung des Parameterindexes als Blobobjekt in der Programmiersprache Java ab.|  
 |[getBlob (java.lang.String)](../../../connect/jdbc/reference/getblob-method-java-lang-string.md)|Ruft den Wert des angegebenen JDBC-BLOB-Parameters unter Berücksichtigung des Parameternamens als Blobobjekt in der Programmiersprache Java ab.|  

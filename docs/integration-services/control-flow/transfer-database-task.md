@@ -19,10 +19,10 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8badd727143d80db08eed45ddbf5102c635ddeeb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293896"
 ---
 # <a name="transfer-database-task"></a>Datenbanken übertragen (Task)
@@ -40,13 +40,13 @@ ms.locfileid: "71293896"
 ## <a name="transfer-of-databases-between-versions-of-sql-server"></a>Übertragung von Datenbanken zwischen verschiedenen Versionen von SQL Server  
  Der Task "Datenbank übertragen" kann eine Datenbank zwischen Instanzen verschiedener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen übertragen.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Der Task "Datenbanken übertragen" meldet keinen schrittweisen Fortschritt der Fehlermeldungsübertragung; er meldet nur 0 % und 100 % der Ausführung.  
   
 ## <a name="execution-value"></a>Ausführungswert  
  Der in der **ExecutionValue** -Eigenschaft des Tasks definierte Ausführungswert gibt den Wert 1 zurück, da der Task "Datenbank übertragen" im Gegensatz zu anderen Übertragungstasks nur eine Datenbank übertragen kann.  
   
- Indem der **ExecValueVariable**-Eigenschaft des Tasks „Datenbanken übertragen“ eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Fehlermeldungsübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Indem der **ExecValueVariable** -Eigenschaft des Tasks „Datenbanken übertragen“ eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Fehlermeldungsübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Protokolleinträge  
  Der Task "Datenbanken übertragen" enthält die folgenden benutzerdefinierten Protokolleinträge:  
@@ -93,7 +93,7 @@ ms.locfileid: "71293896"
 ## <a name="transfer-database-task-editor-general-page"></a>Editor für den Task Datenbanken übertragen (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task 'Datenbanken übertragen'** können Sie den Task Datenbanken übertragen benennen und beschreiben. Der Task Datenbanken übertragen kopiert oder verschiebt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dieser Task kann auch verwendet werden, um eine Datenbank innerhalb desselben Servers zu kopieren.   
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task Datenbanken übertragen ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "71293896"
 ## <a name="transfer-database-task-editor-databases-page"></a>Editor für den Task Datenbanken übertragen (Seite Datenbanken)
   Verwenden Sie die Seite **Datenbanken** des Dialogfelds **Editor für den Task Datenbanken übertragen** , um die Eigenschaften für die im Task Datenbanken übertragen verwendeten Quell- und Zieldatenbanken anzugeben. Der Task Datenbanken übertragen kopiert oder verschiebt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dieser Task kann auch verwendet werden, um eine Datenbank innerhalb desselben Servers zu kopieren.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **SourceConnection**  
  Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>** , um eine neue Verbindung mit dem Quellserver herzustellen.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "71293896"
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Wahr**|Zielserverdatenbank überschreiben.|  
+|**True**|Zielserverdatenbank überschreiben.|  
 |**False**|Zielserverdatenbank nicht überschreiben.|  
   
 > [!CAUTION]  
@@ -164,9 +164,9 @@ ms.locfileid: "71293896"
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Wahr**|Quelldatenbank wieder anfügen.|  
+|**True**|Quelldatenbank wieder anfügen.|  
 |**False**|Quelldatenbank nicht wieder anfügen.|  
 
 ## <a name="source-database-files"></a>Quelldatenbankdateien
@@ -174,7 +174,7 @@ ms.locfileid: "71293896"
   
  Um dieses Dialogfeld mit den Datenbankdateinamen und -speicherorten des Quellservers aufzufüllen, geben Sie zuerst auf der Seite **Datenbanken** des Dialogfelds **Editor für den Task 'Datenbanken übertragen'** die Parameter **SourceConnection** und **SourceDatabaseName** an.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Quelldatei**  
  Die Namen der zu übertragenden Datenbankdateien auf dem Quellserver. **Quelldatei** ist schreibgeschützt.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "71293896"
   
  Um dieses Dialogfeld automatisch mit den Datenbankdateinamen und -speicherorten des Quellservers aufzufüllen, geben Sie zuerst auf der Seite **Datenbanken**des Dialogfelds **Editor für den Task 'Datenbanken übertragen'** die Parameter **SourceConnection** , **SourceDatabaseName** und **SourceDatabaseFiles** an.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Zieldatei**  
  Namen der übertragenen Datenbankdateien auf dem Zielserver.  
   

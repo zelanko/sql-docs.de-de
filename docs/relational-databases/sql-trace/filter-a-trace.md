@@ -17,10 +17,10 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909486"
 ---
 # <a name="filter-a-trace"></a>Filtern einer Ablaufverfolgung
@@ -61,11 +61,11 @@ ms.locfileid: "72909486"
   
  Ob Filter verfügbar sind, ist von der Datenspalte abhängig. Einige Datenspalten können nicht gefiltert werden. Filterbare Datenspalten können nur durch bestimmte relationale Operatoren gefiltert werden, wie Sie der folgenden Tabelle entnehmen können.  
   
-|Relationaler Operator|Operatorsymbol|und Beschreibung|  
+|Relationaler Operator|Operatorsymbol|BESCHREIBUNG|  
 |-------------------------|---------------------|-----------------|  
-|Wie|Wie|Die Ereignisablaufverfolgungsdaten müssen dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  
+|Wie|LIKE|Die Ereignisablaufverfolgungsdaten müssen dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  
 |Nicht wie|Nicht wie|Die Ereignisablaufverfolgungsdaten dürfen nicht dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  
-|Ist gleich|=|Die Ereignisablaufverfolgungsdaten müssen dem eingegebenen Wert entsprechen. Mehrere Werte sind zulässig.|  
+|Equals|=|Die Ereignisablaufverfolgungsdaten müssen dem eingegebenen Wert entsprechen. Mehrere Werte sind zulässig.|  
 |Ungleich|<>|Die Ereignisablaufverfolgungsdaten dürfen dem eingegebenen Wert nicht entsprechen. Mehrere Werte sind zulässig.|  
 |Größer als|>|Die Ereignisablaufverfolgungsdaten müssen größer als der eingegebene Wert sein.|  
 |Größer als oder gleich|>=|Die Ereignisablaufverfolgungsdaten müssen mindestens so groß wie der eingegebene Wert sein.|  
@@ -86,7 +86,7 @@ ms.locfileid: "72909486"
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE, NOT LIKE|  
 |**DBUserName**|LIKE, NOT LIKE|  
-|**Dauer**|=, <>, >=, \<=|  
+|**Duration**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
 |**Fehler**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
@@ -127,8 +127,8 @@ ms.locfileid: "72909486"
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um die Ereignisse in dieser Datenspalte zu filtern. Weitere Informationen finden Sie unter [Filtern von Ablaufverfolgungen mit SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
-|**Status**|=, <>, >=, <=|  
-|**Success**|=, <>, >=, <=|  
+|**State**|=, <>, >=, <=|  
+|**Erfolgreich**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um die Ereignisse in dieser Datenspalte zu filtern. Weitere Informationen finden Sie unter [Filtern von Ablaufverfolgungen mit SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  

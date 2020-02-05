@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70929698"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
@@ -215,11 +215,11 @@ Genauso wenig ist der Indextyp nützlich, wenn die `WHERE`-Klausel nur die zweit
   
 Die folgende Tabelle enthält alle Vorgänge, die von den verschiedenen Indextypen unterstützt werden. *Ja* bedeutet, dass der Index die Anforderung effizient verarbeiten kann, und *Nein* bedeutet, dass der Index die Anforderung nicht effizient erfüllen kann. 
   
-| Vorgang | Speicheroptimiert, <br/> Hashindizes | Speicheroptimiert, <br/> Nicht gruppiert | Datenträgerbasiert, <br/> (nicht) gruppiert |  
+| Vorgang | Speicheroptimiert, <br/> hash | Speicheroptimiert, <br/> Nicht gruppiert | Datenträgerbasiert, <br/> (nicht) gruppiert |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Indexscan, alle Tabellenzeilen abrufen. | Ja | Ja | Ja |  
 | Indexsuche nach Gleichheitsprädikaten (=). | Ja <br/> (Vollständiger Schlüssel ist erforderlich.) | Ja  | Ja |  
-| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, <=, >=, `BETWEEN`). | Nein <br/> (Führt zu einem Indexscan.) | Ja <sup>1</sup> | Ja |  
+| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, <=, >=, `BETWEEN`). | Nein <br/> (Führt zu einem Indexscan.) | Ja<sup>1</sup> | Ja |  
 | Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | Nein | Ja | Ja |  
 | Abrufen von Zeilen in einer Sortierreihenfolge, die der umgekehrten Indexdefinition entspricht. | Nein | Nein | Ja |  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

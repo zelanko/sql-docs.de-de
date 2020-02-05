@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e129ce11414f27c5502279b392f88204b502bd32
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095419"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Verwalten der Änderungsnachverfolgung (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "74095419"
   
  Zusätzlich werden in der [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) -Katalogsicht die internen Tabellen aufgeführt, die bei aktivierter Änderungsnachverfolgung für eine Benutzertabelle erstellt werden.  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicherheit  
  Für den Zugriff auf Änderungsnachverfolgungsinformationen mit den [Änderungsnachverfolgungsfunktionen](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)muss der Prinzipal über die folgenden Berechtigungen verfügen:  
   
 -   SELECT-Berechtigung mindestens für die wichtigsten Schlüsselspalten der änderungsnachverfolgten Tabelle zur abgefragten Tabelle.  
@@ -107,7 +107,7 @@ sp_spaceused 'sys.syscommittab'
 ## <a name="see-also"></a>Weitere Informationen  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [Datenbankeigenschaften &#40;ChangeTracking-Seite&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
+ [Datenbankeigenschaften &#40;Seite Änderungsnachverfolgung&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
  [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126988"
 ---
 # <a name="sequence-properties-general-page"></a>Sequenzeigenschaften (Seite "Allgemein")
@@ -28,9 +28,9 @@ ms.locfileid: "68126988"
   
  Informationen und Szenarien, in denen die **CREATE SEQUENCE** -Funktion und die **NEXT VALUE FOR** -Funktion verwendet werden, finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- Auf diese Seite kann auf zwei Arten zugegriffen werden: Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **Sequenzen** und anschließend auf **Neue Sequenz**, oder klicken Sie mit der rechten Maustaste auf eine vorhandene Sequenz und anschließend auf **Eigenschaften**. Wenn Sie mit der rechten Maustaste auf eine vorhandene Sequenz und anschließend auf **Eigenschaften** klicken, können Sie die Optionen nicht bearbeiten. Zum Ändern der Sequenzoptionen verwenden Sie die [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)-Anweisung, oder erstellen Sie das Sequenzobjekt durch Ziehen erneut.  
+ Auf diese Seite kann auf zwei Arten zugegriffen werden: Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **Sequenzen** und anschließend auf **Neue Sequenz**, oder klicken Sie mit der rechten Maustaste auf eine vorhandene Sequenz und anschließend auf **Eigenschaften**. Wenn Sie mit der rechten Maustaste auf eine vorhandene Sequenz und anschließend auf **Eigenschaften**klicken, können Sie die Optionen nicht bearbeiten. Zum Ändern der Sequenzoptionen verwenden Sie die [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)-Anweisung, oder erstellen Sie das Sequenzobjekt durch Ziehen erneut.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Sequenzname**  
  Geben Sie hier den Sequenznamen ein.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68126988"
  **Datentyp**  
  Eine Sequenz kann als beliebiger ganzzahliger Typ definiert werden. Dies schließt Folgendes ein:  
   
-|Datentyp|Bereich|  
+|Datentyp|Range|  
 |---------------|-----------|  
 |**tinyint**|0 bis 255|  
 |**smallint**|-32.768 bis 32.767|  
@@ -81,7 +81,7 @@ ms.locfileid: "68126988"
   
 -   Cachegröße – Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Sequenzwerte zwischengespeichert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert lediglich den aktuellen Wert und die Anzahl der im Cache verbleibenden Werte. Daher ist der zum Speichern des Caches erforderliche Arbeitsspeicher immer doppelt so groß wie zwei Instanzen des Sequenzobjekt-Datentyps.  
   
- Bei Erstellung mit der CACHE-Option können die Sequenznummern im Cache durch unerwartetes Herunterfahren, z. B. bei einem Stromausfall, verloren gehen.  
+ Bei Erstellung mit der CACHE-Option können die Sequenznummern im Cache durch unerwartetes Herunterfahren, z. B. bei einem Stromausfall, verloren gehen.  
   
  Weitere Informationen zum Erstellen von Sequenzoptionen finden Sie unter [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   

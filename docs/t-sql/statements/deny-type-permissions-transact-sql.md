@@ -18,10 +18,10 @@ ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fd74479464d23ab6ce85a92babf6ba92fa8baf49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984347"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY (Typberechtigungen) (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67984347"
 
   Verweigert die Berechtigungen für einen Typ in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

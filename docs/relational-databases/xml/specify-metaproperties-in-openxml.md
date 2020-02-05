@@ -17,10 +17,10 @@ ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000698"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Angeben von Metaeigenschaften in OPENXML
@@ -38,7 +38,7 @@ ms.locfileid: "68000698"
 > [!NOTE]  
 >  Sie können in XPath-Navigationen nicht auf diese Metaeigenschaften verweisen.  
   
-|Metaeigenschaftsattribut|und Beschreibung|  
+|Metaeigenschaftsattribut|BESCHREIBUNG|  
 |----------------------------|-----------------|  
 |**\@mp:id**|Stellt einen systemgenerierten, dokumentweiten Bezeichner des DOM-Knotens bereit. Dieser Bezeichner verweist auf denselben XML-Knoten, solange das Dokument nicht erneut analysiert wird.<br /><br /> Eine XML-ID von **0** zeigt an, dass es sich bei dem Element um ein Stammelement handelt. Die übergeordnete XML-ID ist NULL.|  
 |**\@mp:localname**|Speichert den lokalen Teil des Knotennamens. Die Metaeigenschaft wird mit einem Präfix und einem Namespace-URI (Uniform Resource Identifier) zur Benennung von Element- oder Attributknoten verwendet.|  
@@ -49,7 +49,7 @@ ms.locfileid: "68000698"
   
  In dieser Tabelle werden die zusätzlichen Eigenschaften übergeordneter Metaeigenschaftsattribute dargestellt, die Ihnen das Abrufen von Hierarchieinformationen ermöglichen.  
   
-|Übergeordnetes Metaeigenschaftsattribut|und Beschreibung|  
+|Übergeordnetes Metaeigenschaftsattribut|BESCHREIBUNG|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|Entspricht **../\@mp:id**|  
 |**\@mp:parentlocalname**|Entspricht **../\@mp:localname**|  

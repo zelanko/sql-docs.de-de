@@ -12,10 +12,10 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 52b3154649a06bfb899e6993eb875a04190c59d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946942"
 ---
 # <a name="database-engine-tuning-advisor"></a>Datenbankoptimierungsratgeber
@@ -111,7 +111,7 @@ Der Datenbankoptimierungsratgeber ist für die folgenden Typen von Abfragearbeit
   
 -   Geben Sie nur die Strukturen für den physischen Datenbankentwurf an, die der Datenbankoptimierungsratgeber analysieren soll. Der Datenbankoptimierungsratgeber stellt zahlreiche Optionen zur Verfügung, gibt jedoch nur die wirklich erforderlichen an.  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Abhängigkeit von der erweiterten gespeicherten Prozedur xp_msver  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>Abhängigkeit von der erweiterten gespeicherten Prozedur xp_msver  
  Der Datenbankoptimierungsratgeber ist von der erweiterten gespeicherten Prozedur **xp_msver** abhängig, um vollständige Funktionalität bereitzustellen. Diese erweiterte gespeicherte Prozedur wird standardmäßig aktiviert. Der Datenbankoptimierungsratgeber verwendet diese erweiterte gespeicherte Prozedur, um die Anzahl der Prozessoren und den verfügbaren Speicher auf dem Computer abzurufen, auf dem sich die zu optimierende Datenbank befindet. Wenn **xp_msver** nicht verfügbar ist, übernimmt der Datenbankoptimierungsratgeber die Hardwaremerkmale des Computers, auf dem er ausgeführt wird. Wenn die Hardwaremerkmale des Computers, auf dem der Datenbankoptimierungsratgeber ausgeführt wird, nicht zur Verfügung stehen, geht der Ratgeber von einem Prozessor und 1024 MB (Megabyte) Speicher aus.  
   
  Diese Abhängigkeit hat Auswirkungen auf die Partitionierungsempfehlungen, da die Anzahl der empfohlenen Partitionen von diesen beiden Werten (Anzahl der Prozessoren und verfügbarer Speicher) abhängt. Diese Abhängigkeit hat auch Auswirkungen auf die Optimierungsergebnisse, wenn Sie einen Testserver verwenden, um Ihren Produktionsserver zu optimieren. In diesem Szenario verwendet der Datenbankoptimierungsratgeber **xp_msver** , um Hardwareeigenschaften vom Produktionsserver abzurufen. Nach dem Optimieren der Arbeitsauslastung auf dem Testserver verwendet der Datenbankoptimierungsratgeber diese Hardwareeigenschaften dazu, eine Empfehlung zu generieren. Weitere Informationen finden Sie unter [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  

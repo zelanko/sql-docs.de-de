@@ -30,10 +30,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06f36ff1e8891ad3753f3899fd5696d5e6ea365a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934442"
 ---
 # <a name="file-states"></a>Dateistatus
@@ -45,7 +45,7 @@ ms.locfileid: "67934442"
 ## <a name="file-state-definitions"></a>Dateistatusdefinitionen  
  Die folgende Tabelle definiert den Dateistatus.  
   
-|Status|Definition|  
+|State|Definition|  
 |-----------|----------------|  
 |ONLINE|Die Datei ist für alle Vorgänge verfügbar. Dateien in der primären Dateigruppe sind immer online, wenn die Datenbank selbst online ist. Wenn eine Datei in der primären Dateigruppe nicht online ist, ist die Datenbank nicht online, und der Status der sekundären Dateien ist nicht definiert.|  
 |OFFLINE|Die Datei ist nicht für den Zugriff verfügbar und ist möglicherweise nicht auf dem Datenträger vorhanden. Dateien werden durch explizite Benutzeraktionen offline geschaltet und bleiben offline, bis weitere Benutzeraktionen durchgeführt werden.<br /><br /> **\*\* Vorsicht \*\*** Der Status einer Datei kann offline geschaltet werden, wenn sie beschädigt ist, jedoch wiederhergestellt werden kann. Eine offline geschaltete Datei kann nur durch Wiederherstellen der Datei aus der Sicherung erneut online geschaltet werden. Weitere Informationen zum Wiederherstellen einer einzelnen Datei finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md). <br /><br /> Eine Datenbankdatei wird auch auf OFFLINE festgelegt,wenn eine Datenbank sich in einem vollständigen oder massenprotokollierten Wiederherstellungsmodell befindet und eine Datei gelöscht wurde. Der Eintrag in „sys.master_files“ wird beibehalten, bis ein Transaktionsprotokoll hinter dem Wert „drop_lsn“ abgeschnitten wird. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation) im Abschnitt „Kürzung des Transaktionsprotokolls“. |  

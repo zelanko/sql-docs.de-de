@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72796640"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Verwenden von Tabellenwertparameter (Datenbank-Engine)
@@ -39,7 +39,7 @@ Tabellenwertparameter entsprechen Parameterarrays in OLE DB und ODBC, bieten jed
 
 [Einschränkungen](#Restrictions)
 
-[Tabellenwertparameter im Vergleich zu BULK INSERT-Vorgängen](#BulkInsert)
+[Tabellenwertparameter und BULK INSERT-Vorgänge](#BulkInsert)
 
 [Beispiel](#Example)
 
@@ -69,7 +69,7 @@ Für Tabellenwertparameter gelten die folgenden Einschränkungen:
 - Tabellenwertparameter müssen als READONLY-Eingabeparameter an [!INCLUDE[tsql](../../includes/tsql-md.md)] -Routinen übergeben werden. Für Tabellenwertparameter im Hauptteil einer Routine können keine DML-Vorgänge wie UPDATE, DELETE oder INSERT durchgeführt werden.
 - Tabellenwertparameter können nicht als Ziel einer SELECT INTO-Anweisung oder einer INSERT EXEC-Anweisung verwendet werden. Tabellenwertparameter können in der FROM-Klausel von SELECT INTO oder in der Zeichenfolge oder gespeicherten Prozedur von INSERT EXEC enthalten sein.
 
-## <a name="BulkInsert"></a> Tabellenwertparameter vs. BULK INSERT-Vorgänge
+## <a name="BulkInsert"></a> Tabellenwertparameter und BULK INSERT-Vorgänge
 
 Die Verwendung von Tabellenwertparametern ist mit anderen Methoden zur Verwendung setbasierter Variablen vergleichbar. Sehr große Datasets können mit Tabellenwertparametern jedoch häufig schneller verarbeitet werden. Im Vergleich zu Massenvorgängen, bei denen die Startkosten höher sind, eignen sich Tabellenwertparameter optimal zum Einfügen von weniger als 1000 Zeilen.
 
@@ -117,7 +117,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 ## <a name="see-also"></a>Weitere Informationen
 
 - [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
-- [DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
 - [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)
 - [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)

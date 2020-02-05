@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7da76d948774ecbedfc363bdcff3404698d5cf43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085733"
 ---
 # <a name="create-check-constraints"></a>Erstellen von CHECK-Einschränkungen
@@ -33,7 +33,7 @@ ms.locfileid: "68085733"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine neue CHECK-Einschränkung mit:**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68085733"
   
 6.  In der **Tabellen-Designer**-Kategorie können Sie festlegen, unter welchen Bedingungen die Einschränkung erzwungen werden soll.  
   
-    |**Zweck:**|**Wählen Sie in den folgenden Feldern Ja aus:**|  
+    |**An:**|**Wählen Sie in den folgenden Feldern Ja aus:**|  
     |-------------|---------------------------------------------|  
     |Einschränkung für Daten überprüfen, die vorhanden waren, bevor Sie die Einschränkung erstellt haben|**Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen**|  
     |Die Einschränkung jedes Mal erzwingen, wenn ein Replikationsvorgang mit dieser Tabelle auftritt|**Für Replikation erzwingen**|  

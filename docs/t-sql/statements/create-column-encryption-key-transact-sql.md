@@ -29,10 +29,10 @@ ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593907"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73593907"
 
 Erstellt ein Metadatenobjekt für Spaltenverschlüsselungsschlüssel für [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) oder [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Ein Metadatenobjekt des Spaltenverschlüsselungsschlüssels enthält einen oder zwei verschlüsselte Werte eines Spaltenverschlüsselungsschlüssels, der zum Verschlüsseln von Daten in einer Spalte verwendet wird. Jeder Wert wird mit einem Spaltenhauptschlüssel verschlüsselt. 
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -75,7 +75,7 @@ Der verschlüsselte Wert BLOB des Spaltenverschlüsselungsschlüssels.
 > [!WARNING]  
 >  Verwenden Sie diese Anweisung nie mit Werten des Spaltenverschlüsselungsschlüssels im Klartext. Hierdurch wird die Wirksamkeit des Features beeinträchtigt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die `CREATE COLUMN ENCRYPTION KEY`-Anweisung muss mindestens einen oder zwei Werte enthalten. Sie können mit der Anweisung [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) später einen zweiten Wert hinzufügen. Außerdem können Sie mithilfe der `ALTER COLUMN ENCRYPTION KEY`-Anweisung einen Wert entfernen.  
   
 In der Regel wird ein CEK nur mit einem verschlüsselten Wert erstellt. Manchmal müssen Sie einen Spaltenhauptschlüssel rotieren, um den aktuellen durch den neuen Spaltenhauptschlüssel zu ersetzen. Wenn Sie den Schlüssel rotieren müssen, fügen Sie einen neuen Wert des Spaltenverschlüsselungsschlüssels hinzu, verschlüsselt mit dem neuen Spaltenhauptschlüssel. Diese Rotation stellt sicher, dass Clientanwendungen auf Daten zugreifen können, die mit dem Spaltenverschlüsselungsschlüssel verschlüsselt wurden, während der neue Spaltenhauptschlüssel den Clientanwendungen zur Verfügung gestellt wird. Ein Treiber, für den Always Encrypted aktiviert ist, kann in einer Clientanwendung, die keinen Zugriff auf den neuen Hauptschlüssel hat, für den Zugriff auf vertrauliche Daten den Wert des Spaltenverschlüsselungsschlüssel verwenden, der mit dem alten Spaltenhauptschlüssel verschlüsselt wurde.  

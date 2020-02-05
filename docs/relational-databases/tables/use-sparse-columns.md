@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12bcff24be2bf0a722375fa6f7c06444ba818e9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140357"
 ---
 # <a name="use-sparse-columns"></a>Verwenden von Spalten mit geringer Dichte
@@ -63,7 +63,7 @@ ms.locfileid: "68140357"
 |||  
 |-|-|  
 |**geography**|**text**|  
-|**Geometrie**|**timestamp**|  
+|**geometry**|**timestamp**|  
 |**image**|**Benutzerdefinierte Datentypen**|  
 |**ntext**||  
   
@@ -74,17 +74,17 @@ ms.locfileid: "68140357"
   
 |Datentyp|Bytes ohne geringe Dichte|Bytes mit geringer Dichte|NULL-Prozentwert|  
 |---------------|---------------------|------------------|---------------------|  
-|**bit**|0.125|5|98%|  
+|**bit**|0,125|5|98%|  
 |**tinyint**|1|5|86%|  
-|**smallint**|2|6|76%|  
+|**smallint**|2|6|76 %|  
 |**int**|4|8|64%|  
-|**bigint**|8|12|52%|  
+|**bigint**|8|12|52 %|  
 |**real**|4|8|64%|  
-|**float**|8|12|52%|  
+|**float**|8|12|52 %|  
 |**smallmoney**|4|8|64%|  
-|**money**|8|12|52%|  
+|**money**|8|12|52 %|  
 |**smalldatetime**|4|8|64%|  
-|**datetime**|8|12|52%|  
+|**datetime**|8|12|52 %|  
 |**uniqueidentifier**|16|20|43%|  
 |**date**|3|7|69%|  
   
@@ -93,10 +93,10 @@ ms.locfileid: "68140357"
 |Datentyp|Bytes ohne geringe Dichte|Bytes mit geringer Dichte|NULL-Prozentwert|  
 |---------------|---------------------|------------------|---------------------|  
 |**datetime2(0)**|6|10|57%|  
-|**datetime2(7)**|8|12|52%|  
+|**datetime2(7)**|8|12|52 %|  
 |**time(0)**|3|7|69%|  
 |**time(7)**|5|9|60%|  
-|**datetimetoffset(0)**|8|12|52%|  
+|**datetimetoffset(0)**|8|12|52 %|  
 |**datetimetoffset(7)**|10|14|49%|  
 |**decimal/numeric(1,s)**|5|9|60%|  
 |**decimal/numeric(38,s)**|17|21|42%|  
@@ -175,7 +175,7 @@ ms.locfileid: "68140357"
   
      Änderungsnachverfolgung unterstützt Sparsespalten und Spaltensätze. Wenn ein Spaltensatz in einer Tabelle aktualisiert wird, behandelt die Änderungsnachverfolgung diese als Update für die gesamte Zeile. Es steht keine detaillierte Änderungsnachverfolgung zur Verfügung, um den exakten Satz an Sparsespalten abzurufen, die über den Spaltensatz-Updatevorgang aktualisiert werden. Wenn die Sparsespalten explizit über eine DML-Anweisung aktualisiert werden, arbeitet die Änderungsnachverfolgung wie gewohnt und identifiziert den exakten Satz an geänderten Spalten.  
   
--   Change Data Capture  
+-   Erfassung geänderter Daten  
   
      Change Data Capture unterstützt Sparsespalten, aber keine Spaltensätze.  
   

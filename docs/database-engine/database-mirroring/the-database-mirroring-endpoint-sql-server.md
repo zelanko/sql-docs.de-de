@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68047988"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Der Datenbankspiegelungs-Endpunkt (SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "68047988"
   
  In der folgenden Abbildung wird veranschaulicht, wie zwei Serverinstanzen auf demselben Server eindeutig identifiziert werden. Die Server-Netzwerkadressen beider Serverinstanzen enthalten denselben Systemnamen, `MYSYSTEM`, und Domänennamen, `Adventure-Works.MyDomain.com`. Damit das System Verbindungen an eine Serverinstanz routen kann, enthält eine Server-Netzwerkadresse die dem Spiegelungsendpunkt einer bestimmten Serverinstanz zugeordnete Portnummer.  
   
- ![Server network addresses of a default instance (Server-Netzwerkadressen einer Standardinstanz)](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Server network addresses of a default instance (Server-Netzwerkadressen einer Standardinstanz)")  
+ ![Servernetzwerkadressen einer Standardinstanz](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Servernetzwerkadressen einer Standardinstanz")  
   
  Standardmäßig enthält eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen Datenbank-Spiegelungsendpunkt. Diese müssen manuell als Teil des Einrichtungsprozesses einer Datenbankspiegelungssitzung erstellt werden. Der Systemadministrator muss einen separaten Endpunkt in jeder Serverinstanz erstellen, die an der Datenbankspiegelung teilnehmen soll. Hinweis: Wenn mehr als eine Serverinstanz auf einem angegebenen Computer einen Datenbank-Spiegelungsendpunkt erfordert, müssen Sie für jeden Endpunkt eine andere Portnummer angeben.  
   

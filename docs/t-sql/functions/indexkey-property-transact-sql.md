@@ -22,13 +22,13 @@ ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: edaa3069bece2d6acf7f28ab32da5f5639f49be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024270"
 ---
-# <a name="indexkeyproperty-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
+# <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen über den Indexschlüssel zurück. Gibt für XML-Indizes NULL zurück.  
@@ -36,7 +36,7 @@ ms.locfileid: "68024270"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,7 +58,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  *property*  
  Der Name der Eigenschaft, für die Informationen zurückgegeben werden. *property* ist eine Zeichenfolge und kann einen der folgenden Werte aufweisen.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**ColumnId**|Die Spalten-ID an der *key_ID*-Position des Index.|  
 |**IsDescending**|Die Reihenfolge, in der die Indexspalte gespeichert wird.<br /><br /> 1 = Absteigend 0 = Aufsteigend|  

@@ -12,10 +12,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: d340d362301698f7dfaef28476ea659b948163bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109384"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "68109384"
 
   Aktualisiert den Wert einer Eigenschaft in einer JSON-Zeichenfolge und gibt die aktualisierte JSON-Zeichenfolge zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -94,7 +94,7 @@ JSON_MODIFY versieht alle Sonderzeichen im neuen Wert mit Escapezeichen, wenn de
 
  Das folgende Beispiel zeigt die grundlegenden Vorgänge, die mit JSON-Text ausgeführt werden können.  
   
- **Dataseteigenschaften**
+ **Abfrage**
   
 ```sql  
 
@@ -153,7 +153,7 @@ PRINT @info
 
  Mit JSON_MODIFY können Sie nur eine Eigenschaft aktualisieren. Wenn Sie mehrere Updates ausführen müssen, können Sie mehrere Aufrufe von JSON_MODIFY verwenden.  
   
- **Dataseteigenschaften**
+ **Abfrage**
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -183,7 +183,7 @@ PRINT @info
 ### <a name="example---rename-a-key"></a>Beispiel: Einen Schlüssel umbenennen  
  Im folgenden Beispiel wird die Vorgehensweise beim Umbenennen einer Eigenschaft in JSON-Text mit der JSON_MODIFY-Funktion gezeigt. Zunächst können Sie den Wert einer vorhandenen Eigenschaft annehmen. Fügen Sie ihn als neues Schlüssel-Wert-Paar ein. Anschließend können Sie den alten Schlüssel löschen, indem Sie den Wert der alten Eigenschaft auf NULL festlegen.  
   
- **Dataseteigenschaften**
+ **Abfrage**
   
 ```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
@@ -218,7 +218,7 @@ PRINT @product
 
  Im folgenden Beispiel wird die Vorgehensweise beim Erhöhen eines Eigenschaftswerts in JSON-Text mit der JSON_MODIFY-Funktion gezeigt. Zunächst können Sie den Wert der vorhandenen Eigenschaft annehmen. Fügen Sie ihn als neues Schlüssel-Wert-Paar ein. Anschließend können Sie den alten Schlüssel löschen, indem Sie den Wert der alten Eigenschaft auf NULL festlegen.  
   
- **Dataseteigenschaften**
+ **Abfrage**
   
 ```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
@@ -247,7 +247,7 @@ PRINT @stats
 
  JSON_MODIFY behandelt das *newValue*-Argument als Nur-Text, auch wenn ordnungsgemäß formatierter JSON-Text enthalten ist. Daher ist die JSON-Ausgabe der Funktion von doppelten Anführungszeichen eingeschlossen. Alle Sonderzeichen werden mit Escapezeichen versehen, wie im folgenden Beispiel gezeigt.  
   
- **Dataseteigenschaften**  
+ **Abfrage**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -275,7 +275,7 @@ PRINT @info
   
  Geben Sie zum Vermeiden der automatischen Escapezeichen *newValue* mithilfe der JSON_QUERY-Funktion an. JSON_MODIFY weiß, dass der von JSON_MODIFY zurückgegebene Wert ein ordnungsgemäß formatierter JSON ist, damit der Wert nicht mit einem Escapezeichen versehen wird.  
   
- **Dataseteigenschaften**  
+ **Abfrage**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'

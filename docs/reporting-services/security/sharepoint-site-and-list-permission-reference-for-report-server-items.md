@@ -14,10 +14,10 @@ ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570682"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente
@@ -29,7 +29,7 @@ ms.locfileid: "65570682"
   
 |Berechtigungsstufe|Abkürzung|  
 |----------------------|------------------|  
-|Vollzugriff|**V**|  
+|Vollzugriff|**F**|  
 |Mitwirken|**C**|  
 |Besucher|**B**|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65570682"
 ## <a name="list-permissions"></a>Listenberechtigungen  
  Mit den Berechtigungen, die Sie für die Bibliothek festlegen, die Berichtsserverelemente enthält, legen Sie fest, wie Benutzer auf diese Elemente zugreifen.  
   
-|Berechtigung|und Beschreibung|V|c|B|Berichtsservervorgang|  
+|Berechtigung|BESCHREIBUNG|F|C|V|Berichtsservervorgang|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Listen verwalten|Listen erstellen oder löschen, Spalten einer Liste erstellen oder löschen und öffentliche Sichten einer Liste hinzufügen oder löschen.|X|||Während eines Veröffentlichungsvorgangs von einem Erstellungstool aus einen Ordner in einer SharePoint-Bibliothek erstellen. Diese Berechtigung wird auch zum Verwalten des Berichtsverlaufs benötigt.|  
 |Elemente hinzufügen|Listen Elemente hinzufügen, Dokumentbibliotheken Dokumente hinzufügen und Webdiskussionskommentare hinzufügen.|X|X||SharePoint-Bibliotheken Berichte, Berichtsmodelle, freigegebene Datenquellen und Ressourcen (externe Bilddateien) hinzufügen. Freigegebene Datenquellen erstellen. Berichtsmodelle aus freigegebenen Datenquellen generieren. Den Berichts-Generator starten und einen neuen Bericht erstellen oder ein Modell in den Berichts-Generator laden.|  
@@ -59,7 +59,7 @@ ms.locfileid: "65570682"
 ## <a name="site-permissions"></a>Websiteberechtigungen  
  Websiteberechtigungen steuern den Zugriff auf Berichtsservervorgänge, die nicht direkt mit den in einer spezifischen Bibliothek gespeicherten Elementen verbunden sind. Zu den Beispielen gehören das Erstellen und Verwalten freigegebener Zeitpläne, die von Elementen in einer Vielzahl von Bibliotheken verwendet werden können, und das Konfigurieren des Berichts-Viewer-Webparts, das in einer Website verwendet werden kann.  
   
-|Berechtigung|und Beschreibung|V|c|B|Berichtsservervorgang|  
+|Berechtigung|BESCHREIBUNG|F|C|V|Berichtsservervorgang|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Berechtigungen verwalten|Berechtigungsebenen für die Website erstellen und ändern und Benutzern und Gruppen Berechtigungen zuweisen.|X|||Sie können Berechtigungen für alle Berichtsserverelemente und -vorgänge verwalten. Sie können Einstellungen für die Modellelementsicherheit festlegen.|  
 |Website verwalten|Alle Verwaltungsaufgaben für die Website ausführen und Inhalte verwalten.|X|||Freigegebene Zeitpläne erstellen, ändern und löschen.|  
@@ -68,7 +68,7 @@ ms.locfileid: "65570682"
 |Berechtigungen auflisten|Berechtigungen für die Website, die Liste, den Ordner, das Dokument oder das Listenelement auflisten.|X|||Berechtigungen für alle Berichtsserverelemente lesen. Einen Bericht mit Durchklicken anzeigen, in dem ein Berichtsmodell mit Sicherheitseinstellungen für Modellelemente verwendet wird.|  
 |Benachrichtigungen verwalten|Benachrichtigungen für alle Benutzer der Website verwalten.|X|||Abonnements auf einer Website erstellen, ändern und löschen.|  
 |Remoteschnittstellen verwenden|Mit SOAP-, Web DAV- oder SharePoint Designer-Schnittstellen auf die Website zugreifen.|X|X|X|Wird zum Aufrufen des URL-Proxy-Endpunktes für den Berichtsserver verwendet.|  
-|Datei|Eine Website, eine Liste oder einen Ordner öffnen und auf im Container enthaltene Elemente zugreifen.|X|X|X|Zeitpläne und Elementeigenschaften lesen.|  
+|Öffnen|Eine Website, eine Liste oder einen Ordner öffnen und auf im Container enthaltene Elemente zugreifen.|X|X|X|Zeitpläne und Elementeigenschaften lesen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   

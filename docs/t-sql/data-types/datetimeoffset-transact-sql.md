@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148833"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
@@ -71,7 +71,7 @@ Definiert ein auf dem 24-Stunden-Format basierendes Datum, das mit einer Uhrzeit
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Unterstützte Formate der Zeichenfolgenliterale für datetimeoffset
 In der folgenden Tabelle werden die unterstützten ISO 8601-Zeichenfolgenliterale für **datetimeoffset** aufgelistet. Informationen zu alphabetischen, numerischen und unstrukturierten Formaten sowie zu Zeitformaten für die Datums- und Uhrzeitteile von **datetimeoffset** finden Sie unter [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) und [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).
   
-|ISO 8601|und Beschreibung|  
+|ISO 8601|BESCHREIBUNG|  
 |---|---|
 |JJJJ-MM-TTThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|Diese beiden Formate werden nicht von den Gebietsschemaeinstellungen für Sitzungen SET LANGUAGE und SET DATEFORMAT beeinflusst. Leerzeichen zwischen **datetimeoffset**- und **datetime**-Teilen sind nicht zulässig.|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|Dieses Format gibt gemäß ISO-Definition an, dass der **datetime**-Teil in koordinierter Weltzeit (Coordinated Universal Time; UTC) ausgedrückt werden soll. Beispiel: 1999-12-12 12:30:30.12345 -07:00 soll als 1999-12-12 19:30:30.12345Z dargestellt werden.|  
@@ -232,16 +232,16 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|Datentyp|Ausgabe|  
+|Datentyp|Output|  
 |---|---|
-|**Zeit**|12:35:29. 1234567|  
-|**Datum**|2007-05-08|  
+|**Time**|12:35:29. 1234567|  
+|**Date**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**Datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   

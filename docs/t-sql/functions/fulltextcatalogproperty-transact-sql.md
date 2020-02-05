@@ -20,10 +20,10 @@ ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2f5a83635d9c608d779631b61859082a6dccadc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940224"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67940224"
 
 Gibt Informationen zu Volltextkatalog-Eigenschaften in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zurück.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>Argumente  
   
 > [!NOTE]  
->  Die folgenden Eigenschaften werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt: **LogSize** und **PopulateStatus**. Vermeiden Sie die Verwendung dieser Eigenschaften in Neuentwicklungen, und planen Sie die Änderung von Anwendungen, die diese Eigenschaften derzeit verwenden.  
+>  Die folgenden Eigenschaften werden in einem künftigen Release von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr unterstützt: **LogSize** und **PopulateStatus**. Vermeiden Sie die Verwendung dieser Eigenschaften in Neuentwicklungen, und planen Sie die Änderung von Anwendungen, die diese Eigenschaften derzeit verwenden.  
   
 _catalog\_name_  
 Ein Ausdruck, der den Namen des Volltextkatalogs enthält.  
@@ -51,7 +51,7 @@ Ein Ausdruck, der den Namen des Volltextkatalogs enthält.
 _property_  
 Ein Ausdruck, der den Namen der Volltext-Katalogeigenschaft enthält. In der folgenden Tabelle finden Sie eine Liste der Eigenschaften und eine Beschreibung der zurückgegebenen Informationen.  
   
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Einstellung für die Unterscheidung nach Akzent.<br /><br /> 0 = Keine Unterscheidung nach Akzent<br /><br /> 1 = Unterscheidung nach Akzent|  
 |**IndexSize**|Logische Größe des Volltextkatalogs in Megabyte (MB). Enthält die Größe des semantischen Schlüsselausdrucks und von Dokumentähnlichkeitsindizes.<br /><br /> Weitere Informationen finden Sie unter "Hinweise" weiter unten in diesem Thema.|  

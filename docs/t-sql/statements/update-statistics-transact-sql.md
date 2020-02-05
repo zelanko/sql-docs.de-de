@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca8f97c98ec94ca021f025ffc5b67152e8253ad6
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982557"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971449"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ Aktualisiert eine Abfrageoptimierungsstatistik für eine Tabelle oder indizierte
   
 Durch das Update von Statistiken wird sichergestellt, dass Abfragen anhand aktueller Statistiken kompiliert werden. Dies führt jedoch dazu, dass Abfragen neu kompiliert werden. Es empfiehlt sich, Statistiken nicht zu oft zu aktualisieren und die Vorteile optimierter Abfragepläne gegen den Zeitaufwand für die Neukompilierung von Abfragen abzuwägen. Die Entscheidung hängt von der verwendeten Anwendung ab. `UPDATE STATISTICS`-Vorgänge können mithilfe von tempdb die Stichprobenzeilen zum Erstellen von Statistiken sortieren.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -111,7 +111,7 @@ Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] werden Datenstic
   
  Bei den meisten Arbeitsauslastungen ist keine vollständige Überprüfung erforderlich und Standardstichproben sind ausreichend.  
 Allerdings sind bestimmte Arbeitsauslastungen gegenüber stark variierenden Datenverteilungen empfindlich und können deshalb eine erhöhte Anzahl an Stichproben oder sogar eine vollständige Überprüfung erfordern.  
-Weitere Informationen finden Sie in diesem Eintrag im [CSS SQL Escalation Services-Blog](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx).  
+Weitere Informationen finden Sie in diesem Eintrag im [CSS SQL Escalation Services-Blog](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
   
  RESAMPLE  
  Aktualisieren Sie alle Statistiken mithilfe ihrer letzten Samplingraten.  
@@ -166,7 +166,7 @@ Bei **ON** behalten die Statistiken den festgelegten Prozentsatz für die Stichp
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher
 
 MAXDOP = *max_degree_of_parallelism*  
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)  
   
  Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Statistikvorgangs. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
@@ -183,7 +183,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ### <a name="when-to-use-update-statistics"></a>Wann UPDATE STATISTICS verwendet werden sollte  
  Weitere Informationen zur Verwendung von `UPDATE STATISTICS` finden Sie unter [Statistiken](../../relational-databases/statistics/statistics.md).  
@@ -268,7 +268,7 @@ UPDATE STATISTICS Production.Product(Products)
     WITH SAMPLE 50 PERCENT;  
 ```  
   
-### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>D. Aktualisieren von Statistiken mit FULLSCAN und NORECOMPUTE  
+### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>D: Aktualisieren von Statistiken mit FULLSCAN und NORECOMPUTE  
  Im folgenden Beispiel wird die `Products`-Statistik in der `Product`-Tabelle aktualisiert, ein vollständiger Scan aller Zeilen in der `Product`-Tabelle erzwungen und alle automatischen Statistiken für die `Products`-Statistik deaktiviert.  
   
 ```sql  
@@ -279,7 +279,7 @@ UPDATE STATISTICS Production.Product(Products)
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. Aktualisieren aller Statistiken für eine Tabelle  
  Im folgenden Beispiel wird die Statistik `CustomerStats1` in der Tabelle `Customer` aktualisiert.  

@@ -10,10 +10,10 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893084"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutorials für SQL Server
@@ -27,13 +27,13 @@ ms.locfileid: "68893084"
  
 ## <a name="current-tutorials"></a>Aktuelle Tutorials  
   
-|Technologie|und Beschreibung|  
+|Technologie|BESCHREIBUNG|  
 |--------------|---------------|  
 |[Analysis Services-Tutorials &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
 |[Lernprogramme zur Datenbank-Engine](../relational-databases/database-engine-tutorials.md)|Hier erfahren Sie, wie Sie eine Verbindung mit einer Datenbank-Engine-Instanz herstellen und dann Transact-SQL-Anweisungen erstellen und ausführen.|  
 |[Enterprise Information Management-Lernprogramme](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Hier erfahren Sie, wie Informationen in einem Unternehmen mit EIM-Technologien von Microsoft verwaltet werden.|  
 |[Integration Services-Lernprogramme](../integration-services/integration-services-tutorials.md)|Hier erfahren Sie, wie [!INCLUDE[ssIS](../includes/ssis-md.md)] -Pakete erstellt und bereitgestellt werden.|  
-|[Lernprogramme zur Replikation](../relational-databases/replication/replication-tutorials.md)|Hier erfahren Sie, wie Sie Replikationstopologien mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]einrichten und ausführen.|  
+|[Tutorials zur Replikation](../relational-databases/replication/replication-tutorials.md)|Hier erfahren Sie, wie Sie Replikationstopologien mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]einrichten und ausführen.|  
 |[Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Hier erfahren Sie, wie grundlegende Berichte und Abonnements erstellt werden.|  
 |[SQL Server-Machine Learning-Tutorial](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Erhalten Sie Informationen zum Arbeiten mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Daten mithilfe von R oder Python. Führen Sie R- oder Python-Skripts von [!INCLUDE[tsql](../includes/tsql-md.md)] aus.|  
   

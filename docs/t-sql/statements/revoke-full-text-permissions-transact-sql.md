@@ -17,10 +17,10 @@ ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f52dd565f634061468a0eee4fbfbb2855da99c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082224"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE-Berechtigungen für Volltext (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68082224"
 
   Hebt Berechtigungen für einen Volltextkatalog oder eine Volltext-Stoppliste auf.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,14 +56,14 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Der Name einer Berechtigung. Die gültigen Zuordnungen von Berechtigungen zu sicherungsfähigen Elementen werden im Abschnitt mit den Hinweisen weiter unten in diesem Thema beschrieben.  
   
- ON FULLTEXT CATALOG **::** _full-text_catalog_name_  
+ ON FULLTEXT CATALOG **::** _Volltext-Katalogname_  
  Gibt den Volltextkatalog an, für den die Berechtigung aufgehoben wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- ON FULLTEXT STOPLIST **::** _full-text_stoplist_name_  
+ ON FULLTEXT STOPLIST **::** _Volltext-Stopplistenname_  
  Gibt die Volltext-Stoppliste an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
- Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird. Einer der folgenden Typen:  
+ Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird. Einer der folgenden:  
   
 -   Datenbankbenutzer  
   
@@ -88,7 +88,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit WITH GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
   
  AS *revoking_principal*  
- Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet. Einer der folgenden Typen:  
+ Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet. Einer der folgenden:  
   
 -   Datenbankbenutzer  
   

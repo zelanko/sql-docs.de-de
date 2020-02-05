@@ -1,6 +1,6 @@
 ---
-title: Eigenschaften von SQL Server (Registerkarte „Anmelden“) | Microsoft-Dokumentation
-ms.custom: ''
+title: SQL Server-Eigenschaften (Registerkarte Anmelden)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 894340be93ff6865fc7671407b9aea76d3a310c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 042a0bcf0b0a078b87219a4371d7cb890b4abab6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023929"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306817"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server-Eigenschaften (Registerkarte Anmelden)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68023929"
 >   
 >  Weitere Informationen über das Auswählen eines Kontos zum Ausführen des Dienstes finden Sie unter "Einrichten von Windows-Dienstkonten" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Integriertes Konto**  
  **Lokales System**  
  -   Geben Sie das lokale Systemkonto an. Dieses Konto erfordert kein Kennwort. Das lokale Systemkonto kann die Zusammenarbeit mit anderen Servern verhindern. Dies hängt von den Privilegien ab, die dem Konto erteilt wurden.  
@@ -50,7 +50,7 @@ ms.locfileid: "68023929"
  **Kennwort bestätigen**  
  Geben Sie das Kennwort des Kontos erneut ein.  
   
- **Start**  
+ **Starten**  
  Starten Sie den Dienst.  
   
  **Beenden**  

@@ -1,10 +1,9 @@
 ---
-title: Volltextindex (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
+title: Das Dialogfeld „Volltextindex“
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 926e3d42d21e24d9a3e76d10966e3d90381ca843
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3056ebfc960b26dd3035f1aefd1932151bad207a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254614"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247259"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Volltextindex (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,11 +30,11 @@ Mit diesem Dialogfeld können Sie einen Volltextindex für Volltextsuchen in tex
 > [!NOTE]
 > Eine Volltextindex-Funktionalität ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Ausgewählter Volltextindex**  
 Listet vorhandene Volltextindizes auf. Wählen Sie einen Index aus, um seine Eigenschaften im Datenblatt rechts anzuzeigen. Wenn die Liste leer ist, wurden bisher keine Volltextbeziehungen für die Tabelle definiert.  
   
-**Hinzufügen**  
+**Add (Hinzufügen)**  
 Erstellen Sie einen neuen Volltextindex.  
   
 **Löschen**  
@@ -60,7 +61,7 @@ Zeigt den systemspezifischen Namen für diesen Volltextindex an.
 **Kategorie Tabellen-Designer**  
 Wenn die Kategorie erweitert ist, werden Eigenschaften angezeigt, die das Verhalten des Indexes festlegen.  
   
-**Active**  
+**Aktiv**  
 Gibt an, ob Sie zurzeit mit diesem Volltextindex eine Volltextsuche ausführen können.  
   
 **Einstellung für das Nachverfolgen von Änderungen**  

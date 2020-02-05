@@ -15,10 +15,10 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ccabb3d2964d1a2a5d4de6beab7e299eb9befb03
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297725"
 ---
 # <a name="transform-data-with-transformations"></a>Transformieren von Daten mit Transformationen
@@ -30,7 +30,7 @@ ms.locfileid: "71297725"
   
  Im folgenden Diagramm wird ein einfacher Datenfluss mit einer Quelle, zwei Transformationen und einem Ziel dargestellt.  
   
- ![Data flow](../../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![Datenfluss](../../../integration-services/data-flow/media/mw-dts-08.gif "Datenfluss")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Transformationen stellen die folgende Funktionalität bereit:  
   

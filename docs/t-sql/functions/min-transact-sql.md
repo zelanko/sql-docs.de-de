@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 68f9d07a2129424a59890f50b884b4fe5f4f70e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130242"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68130242"
 
   Gibt den kleinsten Wert im Ausdruck zurück. Darauf folgt möglicherweise die [OVER-Klausel](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -134,7 +134,7 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-min"></a>C. Verwenden von MIN  
  Im folgenden Beispiel wird die MIN-Aggregatfunktion verwendet, um den Preis des günstigsten Produkts in einer angegebenen Menge von Verkaufsaufträgen zurückzugeben.  
@@ -154,7 +154,7 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
  5.1865
  ```  
   
-### <a name="d-using-min-with-over"></a>D. Verwenden von MIN mit OVER  
+### <a name="d-using-min-with-over"></a>D: Verwenden von MIN mit OVER  
  Im folgenden Beispiel wird die analytische MIN OVER()-Funktion verwendet, um den Preis des günstigsten Produkts in jedem Verkaufsauftrag zurückzugeben. Das Resultset wird durch die `SalesOrderID`-Spalte partitioniert.  
   
 ```  
