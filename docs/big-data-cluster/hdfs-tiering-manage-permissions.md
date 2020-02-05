@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 758338618a312d8efe92503581ae82d49d353e51
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531972"
 ---
 # <a name="manage-hdfs-permissions-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Verwalten von HDFS-Berechtigungen für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -74,7 +74,7 @@ acl modify: Change completed.
 
 ## <a name="create-a-directory-in-hdfs-using-azdata"></a>Erstellen eines Verzeichnisses in HDFS mit `azdata`
 
-Erstellen Sie im Pfad `/sales` ein Verzeichnis mit dem Namen `data`.
+Erstellen Sie im Pfad `data` ein Verzeichnis mit dem Namen `/sales`.
 
 ```bash
 azdata bdc hdfs mkdir --path '/sales/data'

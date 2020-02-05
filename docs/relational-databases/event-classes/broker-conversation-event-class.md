@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3330b9b44f2794daf8e9cd45e9806991a6a815de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999767"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation-Ereignisklasse
@@ -27,7 +27,7 @@ ms.locfileid: "67999767"
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Datenspalten der Broker:Conversation-Ereignisklasse  
   
-|Datenspalte|Typ|und Beschreibung|Spaltennummer|Filterbar|  
+|Datenspalte|type|BESCHREIBUNG|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|9|Ja|  
@@ -54,14 +54,14 @@ ms.locfileid: "67999767"
 |||**SI**. Started Inbound (Eingehend gestartet). Eine andere Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hat eine neue Konversation mit der aktuellen Instanz begonnen, die aktuelle Instanz hat den Empfang der ersten Nachricht jedoch noch nicht beendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die Konversation in diesem Status starten, wenn die erste Meldung fragmentiert ist oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nachrichten in falscher Reihenfolge empfängt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] könnte die Konversation jedoch im Status CO erstellen, wenn die erste empfangene Übertragung für die Konversation die erste Nachricht vollständig enthält.|||  
 |||**CO**. Conversing (Konversation begonnen). Die Konversation ist eingerichtet, und beide Seiten der Konversation können Meldungen senden. Der Großteil der Kommunikation für einen typischen Dienst findet statt, wenn sich die Konversation in diesem Status befindet.|||  
 |||**DI**. Disconnected Inbound (Eingehend getrennt). Die Remoteseite der Konversation hat eine END CONVERSATION-Anweisung ausgegeben. Die Konversation verbleibt in diesem Status, bis die lokale Seite der Konversation eine END CONVERSATION-Anweisung ausgibt. Eine Anwendung kann weiter Nachrichten für die Konversation empfangen. Da die Remoteseite der Konversation die Konversation beendet hat, kann eine Anwendung in dieser Konversation keine Nachrichten mehr senden. Wenn eine Anwendung eine END CONVERSATION-Anweisung ausgibt, geht die Konversation in den CD-Status (Geschlossen) über.|||  
-|||**DO**. Disconnected Outbound (Ausgehend getrennt). Die lokale Seite der Konversation hat eine END CONVERSATION-Anweisung ausgegeben. Die Konversation bleibt so lange in diesem Status, bis die Remoteseite der Konversation END CONVERSATION anerkennt. Eine Anwendung kann keine Nachrichten für die Konversation senden oder empfangen. Wenn die Remoteseite der Konversation die END CONVERSATION-Anweisung bestätigt, geht die Konversation in den CD-Status (Geschlossen) über.|||  
-|||**ER**. Error (Fehler). An diesem Endpunkt ist ein Fehler aufgetreten. Die Error-, Severity- und State-Spalten enthalten Informationen zu dem aufgetretenen Fehler.|||  
+|||**DO (DURCHFÜHREN)** . Disconnected Outbound (Ausgehend getrennt). Die lokale Seite der Konversation hat eine END CONVERSATION-Anweisung ausgegeben. Die Konversation bleibt so lange in diesem Status, bis die Remoteseite der Konversation END CONVERSATION anerkennt. Eine Anwendung kann keine Nachrichten für die Konversation senden oder empfangen. Wenn die Remoteseite der Konversation die END CONVERSATION-Anweisung bestätigt, geht die Konversation in den CD-Status (Geschlossen) über.|||  
+|||**ER**. Fehler. An diesem Endpunkt ist ein Fehler aufgetreten. Die Error-, Severity- und State-Spalten enthalten Informationen zu dem aufgetretenen Fehler.|||  
 |||**CD**. Closed (Geschlossen). Der Konversationsendpunkt wird nicht mehr verwendet.|||  
 |**Transaction ID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgeführt.  
   
-|im Elementknoten &lt;Customer ID="1"|Unterklasse|und Beschreibung|  
+|id|Unterklasse|BESCHREIBUNG|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **SEND Message** -Ereignis, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine SEND-Anweisung ausführt.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **END CONVERSATION** -Ereignis, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine END CONVERSATION-Anweisung ausführt, die keine WITH ERROR-Klausel enthält.|  

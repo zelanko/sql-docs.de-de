@@ -9,10 +9,10 @@ ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 255201c7f24f013becd8230e9329e41a6d6a8d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576395"
 ---
 # <a name="report-builder-functions---avg-function"></a>Funktionen des Berichts-Generators: Avg-Funktion
@@ -32,10 +32,10 @@ Avg(expression, scope, recursive)
  *expression*  
  (**Float**) Der Ausdruck, für den die Aggregation ausgeführt werden soll.  
   
- *Bereich*  
+ *scope*  
  (**Zeichenfolge**) Optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
- *Rekursiv*  
+ *recursive*  
  (**Enumerationstyp**) Optional. **Simple** (Standard) oder **RdlRecursive**. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return-type"></a>Rückgabetyp  

@@ -9,10 +9,10 @@ ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0fbab9fbc037d2266d86a0af5c1919ee333e596e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577438"
 ---
 # <a name="report-builder-functions---max-function"></a>Funktionen des Berichts-Generators: Max-Funktion
@@ -32,10 +32,10 @@ Max(expression, scope, recursive)
  *expression*  
  (**Variant**) Der Ausdruck, für den die Aggregation ausgeführt werden soll.  
   
- *Bereich*  
+ *scope*  
  (**Zeichenfolge**) Optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
- *Rekursiv*  
+ *recursive*  
  (**Enumerationstyp**) Optional. **Simple** (Standard) oder **RdlRecursive**. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return-type"></a>Rückgabetyp  

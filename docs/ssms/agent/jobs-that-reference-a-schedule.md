@@ -1,10 +1,9 @@
 ---
-title: Aufträge mit Verweisen auf einen Zeitplan | Microsoft-Dokumentation
-ms.custom: ''
+title: Aufträge mit Verweisen auf einen Zeitplan
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 872073d09b98ac2075d6221263043b073713023e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e79eb5c5a3d556d0c5887da32967165efb5da94
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258111"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242230"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Aufträge mit Verweisen auf einen Zeitplan
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68258111"
 
 Mithilfe dieses Dialogfelds können Sie Informationen zu Aufträgen anzeigen, die auf einen bestimmten Zeitplan verweisen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Zeitplan**  
 Zeigt den Namen des angezeigten Zeitplans an.  
   
@@ -41,7 +42,7 @@ Schreibgeschützt.
 **Name**  
 Name eines Auftrags, der diesen Zeitplan verwendet.  
   
-**Enabled**  
+**Aktiviert**  
 Schreibgeschützt. Zeigt an, ob dieser Auftrag aktuell aktiviert ist.  
   
 **Kategorie**  

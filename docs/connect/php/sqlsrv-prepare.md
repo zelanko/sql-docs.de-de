@@ -18,10 +18,10 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014979"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
@@ -58,7 +58,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     In der folgenden Tabelle sind die Elemente des Arrays beschrieben.  
   
-    |Element|und Beschreibung|  
+    |Element|BESCHREIBUNG|  
     |-----------|---------------|  
     |*&$value*|Ein Literalwert oder ein Verweis auf eine PHP-Variable.|  
     |*$direction*[OPTIONAL]|Eine der folgenden verwendeten **SQLSRV_PARAM_\*** -Konstanten, um die Parameterrichtung anzugeben: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Der Standardwert ist **SQLSRV_PARAM_IN**.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
@@ -67,15 +67,15 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$options* [OPTIONAL]: Ein assoziatives Array, das <a name="properties">Abfrageeigenschaften</a> festlegt. In der folgenden Tabelle sind die unterstützten Schlüssel und die entsprechenden Werte aufgeführt:
 
-|Key|Unterstützte Werte|und Beschreibung|  
+|Key|Unterstützte Werte|BESCHREIBUNG|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|Positive Ganzzahl|Konfiguriert die Größe des Puffers, der das Resultset für einen clientseitigen Cursor enthält.<br /><br />Die Standardeinstellung ist 10240 KB. Weitere Informationen finden Sie unter [Festlegen eines Cursortyps und Auswählen von Zeilen](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
 |Dezimalstellenanzeige|Eine ganze Zahl zwischen 0 und 4|Gibt die Dezimalstellen beim Formatieren abgerufener Geldwerte (Werte des Datentyps „money“) an.<br /><br />Negative ganze Zahlen oder Werte größer als 4 werden ignoriert.<br /><br />Diese Option funktioniert nur, wenn „FormatDecimals“ auf **true** festgelegt ist.|
-|FormatDecimals|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **false**.|Gibt an, ob Dezimalzeichenfolgen gegebenenfalls führende Nullen hinzugefügt werden sollen, und aktiviert die Option `DecimalPlaces` zum Formatieren von Datentypen der Kategorie „money“.<br /><br />Weitere Informationen finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
+|FormatDecimals|**true** oder **false**<br /><br />Der Standardwert ist **false**.|Gibt an, ob Dezimalzeichenfolgen gegebenenfalls führende Nullen hinzugefügt werden sollen, und aktiviert die Option `DecimalPlaces` zum Formatieren von Datentypen der Kategorie „money“.<br /><br />Weitere Informationen finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
 |QueryTimeout|Positive Ganzzahl|Legt das Abfragetimeout in Sekunden fest. Standardmäßig wartet der Treiber unbegrenzt auf Ergebnisse.|  
-|ReturnDatesAsStrings|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **false**.|Konfiguriert die Anweisung zum Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen (**true**). Weitere Informationen finden Sie unter [Gewusst wie: Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
+|ReturnDatesAsStrings|**true** oder **false**<br /><br />Der Standardwert ist **false**.|Konfiguriert die Anweisung zum Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen (**true**). Weitere Informationen finden Sie unter [Gewusst wie: Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |Bildlauffähigkeit|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
-|SendStreamParamsAtExec|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **true**.|Konfiguriert den Treiber, um alle Streamdaten bei der Ausführung zu senden (**TRUE**) oder Streamdaten in Blöcken (**FALSE**) zu senden. In der Standardeinstellung ist dieser Wert mit **true**festgelegt. Weitere Informationen finden Sie unter [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
+|SendStreamParamsAtExec|**true** oder **false**<br /><br />Der Standardwert lautet **true**.|Konfiguriert den Treiber, um alle Streamdaten bei der Ausführung zu senden (**TRUE**) oder Streamdaten in Blöcken (**FALSE**) zu senden. In der Standardeinstellung ist dieser Wert mit **true**festgelegt. Weitere Informationen finden Sie unter [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
 ## <a name="return-value"></a>Rückgabewert  
 Eine Anweisungsressource. Wenn die Anweisungsressource nicht erstellt werden kann, wird **false** zurückgegeben.  

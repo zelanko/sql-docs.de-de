@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df3c1f79b4612f8c004796419551cc57e67db721
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910353"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel-Ereignisklasse
@@ -25,14 +25,14 @@ ms.locfileid: "67910353"
   
 ## <a name="lockcancel-event-class-data-columns"></a>Datenspalten der Lock:Cancel-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |**BinaryData**|**image**|ID der LOCK-Ressource.|2|Ja|  
 |**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  
 |**DatabaseID**|**int**|Die ID der Datenbank, in der die Sperre eingerichtet wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |**DatabaseName**|**nvarchar**|Der Name der Datenbank, in der eine Sperre angefordert wurde.|35|Ja|  
-|**Dauer**|**bigint**|Die Wartezeit (in Mikrosekunden) zwischen dem Zeitpunkt, zu dem die Sperranforderung ausgegeben wurde, und dem Zeitpunkt, zu dem die Sperre aufgehoben wurde.|13|Ja|  
+|**Duration**|**bigint**|Die Wartezeit (in Mikrosekunden) zwischen dem Zeitpunkt, zu dem die Sperranforderung ausgegeben wurde, und dem Zeitpunkt, zu dem die Sperre aufgehoben wurde.|13|Ja|  
 |**EndTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis beendet wurde.|15|Ja|  
 |**EventClass**|**int**|Ereignistyp = 26.|27|Nein|  
 |**EventSequence**|**int**|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  

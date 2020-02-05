@@ -1,10 +1,7 @@
 ---
-title: DiagnosticInformation-Element (ssbdiagnose) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: DiagnosticInformation-Element
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d20ef070a390eb942b29498381da9e2479d0218
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 06d67e0a20067390c14837221725fd4b27c8c337
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986180"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257795"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation-Element (ssbdiagnose)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Das **DiagnosticInformation** -Element enthält alle Elemente, die die vom Hilfsprogramm gefundenen Diagnoseinformationen melden. **DiagnosticInformation** ist das Stammelement einer XML-Ausgabedatei von **ssbdiagnostic** .  
+
+Das **DiagnosticInformation** -Element enthält alle Elemente, die die vom Hilfsprogramm gefundenen Diagnoseinformationen melden. **DiagnosticInformation** ist das Stammelement einer XML-Ausgabedatei von **ssbdiagnostic** .  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +39,13 @@ ms.locfileid: "67986180"
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|attribute|und Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**None**|–|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|und Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  

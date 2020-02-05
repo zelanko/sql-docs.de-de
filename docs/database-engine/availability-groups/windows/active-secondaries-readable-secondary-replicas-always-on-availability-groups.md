@@ -18,10 +18,10 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822402"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Auslagern von schreibgeschützten Arbeitsauslastungen auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe
@@ -130,7 +130,7 @@ ms.locfileid: "74822402"
  Dies weist auf eine gewisse Latenz zwischen den primären und sekundären Replikaten hin, wobei es sich in der Regel nur um wenige Sekunden handelt. In außergewöhnlichen Fällen, beispielsweise bei Netzwerkproblemen, die den Durchsatz reduzieren, kann die Latenz jedoch signifikant werden. Die Latenz nimmt bei E/A-Engpässen und bei angehaltener Datenverschiebung zu. Zur Überwachung einer angehaltenen Datenverschiebung können Sie das [AlwaysOn-Dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) oder die dynamische Verwaltungssicht [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) verwenden.  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Datenlatenz bei Datenbanken mit speicheroptimierten Tabellen  
- In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] galten besondere Überlegungen zur Datenlatenz für aktive sekundäre Replikate. Informationen dazu finden Sie unter [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). Ab [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] gelten keine Besonderheiten mehr bezüglich der Datenlatenz für speicheroptimierte Tabellen. Die erwartete Datenlatenz für speicheroptimierte Tabellen ist mit der Latenz für datenträgerbasierte Tabellen vergleichbar.  
+ In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] galten besondere Überlegungen zur Datenlatenz für aktive sekundäre Replikate. Informationen dazu finden Sie unter [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Aktive sekundäre Replikate: Lesbare sekundäre Replikate](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). Ab [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] gelten keine Besonderheiten mehr bezüglich der Datenlatenz für speicheroptimierte Tabellen. Die erwartete Datenlatenz für speicheroptimierte Tabellen ist mit der Latenz für datenträgerbasierte Tabellen vergleichbar.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> Auswirkungen auf schreibgeschützte Arbeitsauslastungen  
  Wenn Sie ein sekundäres Replikat für schreibgeschützten Zugriff konfigurieren, belegen die schreibgeschützten Arbeitsauslastungen in den sekundären Datenbanken Systemressourcen, z. B. CPU und E/A-Vorgänge (für datenträgerbasierte Tabellen) aus REDO-Threads, insbesondere wenn die schreibgeschützten Arbeitsauslastungen für datenträgerbasierte Tabellen äußerst E/A-intensiv sind. Der Zugriff auf speicheroptimierte Tabellen hat keine Auswirkungen auf die E/A-Leistung, weil alle Zeilen im Arbeitsspeicher enthalten sind.  
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

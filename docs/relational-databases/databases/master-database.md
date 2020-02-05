@@ -14,10 +14,10 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133600"
 ---
 # <a name="master-database"></a>master-Datenbank
@@ -32,7 +32,7 @@ ms.locfileid: "68133600"
 
 Die folgende Tabelle zeigt die Anfangskonfigurationswerte der **master**-Daten und -Protokolldateien für SQL Server und eine verwaltete Azure SQL-Datenbank-Instanz. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geringfügig unterscheiden.  
   
-|File|Logischer Name (logical name)|Physischer Name (physical name)|Dateivergrößerung (file growth)|  
+|Datei|Logischer Name (logical name)|Physischer Name (physical name)|Dateivergrößerung (file growth)|  
 |----------|------------------|-------------------|-----------------|  
 |Primäre Daten|master|master.mdf|Automatische Vergrößerung um 10 Prozent, bis der Speicherplatz auf dem Datenträger erschöpft ist.|  
 |Log|mastlog|mastlog.ldf|Automatische Vergrößerung um 10 %, bis der Maximalwert von 2 TB erreicht wird.|  
@@ -51,16 +51,16 @@ Die folgende Tabelle zeigt den Standardwert jeder Datenbankoption in der **maste
 
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Nein|  
+|ALLOW_SNAPSHOT_ISOLATION|EIN|Nein|  
 |ANSI_NULL_DEFAULT|OFF|Ja|  
 |ANSI_NULLS|OFF|Ja|  
 |ANSI_PADDING|OFF|Ja|  
 |ANSI_WARNINGS|OFF|Ja|  
 |ARITHABORT|OFF|Ja|  
 |AUTO_CLOSE|OFF|Nein|  
-|AUTO_CREATE_STATISTICS|ON|Ja|  
+|AUTO_CREATE_STATISTICS|EIN|Ja|  
 |AUTO_SHRINK|OFF|Nein|  
-|AUTO_UPDATE_STATISTICS|ON|Ja|  
+|AUTO_UPDATE_STATISTICS|EIN|Ja|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Ja|  
 |CHANGE_TRACKING|OFF|Nein|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
@@ -68,9 +68,9 @@ Die folgende Tabelle zeigt den Standardwert jeder Datenbankoption in der **maste
 |CURSOR_DEFAULT|GLOBAL|Ja|  
 |Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Nein<br /><br /> Nein|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
-|DB_CHAINING|ON|Nein|  
+|DB_CHAINING|EIN|Nein|  
 |ENCRYPTION|OFF|Nein|  
-|MIXED_PAGE_ALLOCATION|ON|Nein|  
+|MIXED_PAGE_ALLOCATION|EIN|Nein|  
 |NUMERIC_ROUNDABORT|OFF|Ja|  
 |PAGE_VERIFY|CHECKSUM|Ja|  
 |PARAMETERIZATION|SIMPLE|Ja|  
@@ -83,7 +83,7 @@ Die folgende Tabelle zeigt den Standardwert jeder Datenbankoption in der **maste
   
 Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
 Die folgenden Operationen können an der **master** -Datenbank nicht ausgeführt werden:  
   
 - Hinzufügen von Dateien oder Dateigruppen.  

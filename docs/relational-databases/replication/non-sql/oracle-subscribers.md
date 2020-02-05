@@ -17,10 +17,10 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907986"
 ---
 # <a name="oracle-subscribers"></a>Oracle-Abonnenten
@@ -32,7 +32,7 @@ ms.locfileid: "72907986"
   
 1.  Installieren und konfigurieren Sie die Oracle-Clientnetzwerksoftware sowie den Oracle OLE DB-Anbieter auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler, damit dieser die Verbindung mit dem Oracle-Abonnenten herstellen kann. Sie sollten dazu die aktuellste verfügbare Version der Oracle-Clientnetzwerksoftware verwenden. Oracle empfiehlt Benutzern, die aktuellste Version der Clientsoftware zu installieren. Dabei ist die Clientsoftware häufig aktueller als die Datenbanksoftware. Am einfachsten lässt sich die Software mithilfe des Oracle Universal Installer von der Oracle-Client-CD installieren. Im Oracle Universal Installer müssen Sie folgende Informationen angeben:  
   
-    |Information|und Beschreibung|  
+    |Information|BESCHREIBUNG|  
     |-----------------|-----------------|  
     |Oracle-Homeverzeichnis|Der Pfad zum Installationsverzeichnis für die Oracle-Software. Übernehmen Sie die Standardeinstellung (C:\oracle\ora90 oder Ähnliches), oder geben Sie einen anderen Pfad ein. Weitere Informationen zum Oracle-Homeverzeichnis finden Sie im Abschnitt zu Überlegungen zum Oracle-Homeverzeichnis weiter unten in diesem Thema.|  
     |Oracle-Homeverzeichnisname|Alias für den Pfad zum Oracle-Homeverzeichnis.|  
@@ -42,7 +42,7 @@ ms.locfileid: "72907986"
   
      Wenn der Oracle Universal Installer abgeschlossen ist, konfigurieren Sie die Netzwerkkonnektivität mit Net Configuration Assistant. Zur Konfiguration der Netzwerkkonnektivität müssen Sie vier Informationen eingeben. Der Oracle-Datenbankadministrator, der die Netzwerkkonfiguration beim Einrichten der Datenbank und der Überwachung (Listener) konfiguriert, kann Ihnen diese Informationen geben, falls Sie sie nicht selbst besitzen. Führen Sie folgende Schritte aus:  
   
-    |Aktion|und Beschreibung|  
+    |Action|BESCHREIBUNG|  
     |------------|-----------------|  
     |Identifizieren Sie die Datenbank.|Es gibt zwei Methoden, mit denen Sie die Datenbank identifizieren können. Die erste Methode besteht darin, die Oracle SID (System Identifier) zu verwenden. Die SID ist in jeder Oracle-Version verfügbar. Die zweite Methode besteht darin, den Dienstnamen zu verwenden, der ab Oracle Version 8.0 verfügbar ist. Beide Methoden basieren auf einem Wert, der beim Erstellen der Datenbank konfiguriert wird. Wichtig ist dabei, dass Sie bei der Clientnetzwerkkonfiguration dieselbe Benennungsmethode verwenden wie der Administrator beim Konfigurieren des Listeners der Datenbank.|  
     |Identifizieren Sie den Datenbankalias.|Für den Zugriff auf die Oracle-Datenbank müssen Sie einen Netzwerkalias angeben. Der Netzwerkalias ist im Wesentlichen ein Zeiger auf die während der Erstellung der Datenbank konfigurierte Remote-SID bzw. den Service Name. In manchen Oracle-Versionen und -Produkten wird er u. a. auch als "Net Service Name" oder "TNS Alias" bezeichnet. SQL*Plus fordert bei der Anmeldung zur Eingabe dieses Netzwerkalias als Parameter "Host String" auf.|  
@@ -112,7 +112,7 @@ ms.locfileid: "72907986"
 |**float(53)**|GLEITKOMMAZAHL|  
 |**float**|GLEITKOMMAZAHL|  
 |**geography**|BLOB|  
-|**Geometrie**|BLOB|  
+|**geometry**|BLOB|  
 |**hierarchyid**|BLOB|  
 |**image**|BLOB|  
 |**int**|NUMBER(10,0)|  

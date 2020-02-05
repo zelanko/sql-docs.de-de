@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72251913"
 ---
 # <a name="branding-the-web-portal"></a>Branding des Webportals
@@ -91,9 +91,9 @@ Die Datei colors.json für Reporting Services ist in zwei Hauptkategorien untert
   
 Der Schnittstellen-Abschnitt ist in folgenden Gruppierungen unterteilt.  
   
-|Abschnitt|und Beschreibung|  
+|`Section`|BESCHREIBUNG|  
 |---|---|  
-|primary|Schaltflächen- und Hoverfarben.|  
+|Primär|Schaltflächen- und Hoverfarben.|  
 |Secondary|Titelleiste, Suchleiste, linkes Menü (sofern angezeigt) und die Textfarbe für diese Elemente|  
 |Neutral Primary|Hintergründe für Startseiten- und Berichtsbereich.|  
 |Neutral Secondary|Hintergründe für Textfeld- und Ordneroptionen sowie das Menü „Einstellungen“.|  
@@ -123,7 +123,7 @@ Um ein Markenpaket hinzuzufügen, herunterzuladen oder zu entfernen, können Sie
   
     ![SSR-Menü nach Klick auf Zahnradsymbol](../reporting-services/media/ssrsgearmenu.png)  
   
-3.  Wählen Sie **Branding**aus.  
+3.  Wählen Sie **Branding** aus.  
   
     ![SSRS-Branding](../reporting-services/media/ssrsbranding.png)  
   

@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 28d2bdcf08e73fb6477fecf1d2cac76430e7d55e
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874653"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Ändern eines SQL Server-Authentifizierungsbenutzerkennworts (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "70874653"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dieses Beispiel veranschaulicht die Verwendung von OLE DB zum Ändern des Kennworts eines Benutzerkontos unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung.  
+  Dieses Beispiel veranschaulicht die Verwendung von OLE DB zum Ändern des Kennworts eines Benutzerkontos mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -34,7 +34,7 @@ ms.locfileid: "70874653"
   
  Kompilieren Sie mit ole32.lib und oleaut32.lib.  
   
- Um dieses Beispiel zu erstellen, benötigen Sie ein Benutzerkonto mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung, für das Sie das Kennwort kennen. Wenn Sie Anmeldungen unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung zulassen möchten, öffnen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Knoten Server, und wählen Sie Eigenschaften aus. Wählen Sie Sicherheit aus, und aktivieren Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Modus und den Windows-Authentifizierungsmodus. Um ein Benutzerkonto unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung hinzuzufügen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Knoten Sicherheit, und wählen Sie Hinzufügen aus.  
+ Sie benötigen ein Benutzerkonto mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung, für das Sie das Kennwort kennen, um dieses Beispiel zu erstellen. Wenn Sie Anmeldungen unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung zulassen möchten, öffnen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Knoten Server, und wählen Sie Eigenschaften aus. Klicken Sie auf „Sicherheit“, und aktivieren Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Modus und den Windows-Authentifizierungsmodus. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Knoten „Sicherheit“, und wählen Sie „Hinzufügen“ aus, um ein Benutzerkonto unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung hinzuzufügen.  
   
  Auf dem Server, auf dem Sie dieses Beispiel ausführen, muss mindestens eine Anmeldung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung aktiviert sein. Der Server muss außerdem Anmeldungen über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung zulassen.  
   

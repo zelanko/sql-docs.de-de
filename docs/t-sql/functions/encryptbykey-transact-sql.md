@@ -21,10 +21,10 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 94f179d9c1b8342e5c1cdfd7fcb62e6673634e7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135845"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68135845"
 
   Verschlüsselt Daten mithilfe eines symmetrischen Schlüssels.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -95,7 +95,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  Das Verwenden der Veschlüsselungsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zusammen mit der ANSI_PADDING OFF-Einstellung kann aufgrund implizierter Konvertierungen zu Datenverlust führen. Weitere Informationen zu ANSI_PADDING finden Sie unter [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
- Die in den folgenden Beispielen veranschaulichte Funktionalität beruht auf Schlüsseln und Zertifikaten. Diese werden erstellt unter [Vorgehensweise: Verschlüsseln einer Datenspalte](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ Die in den folgenden Beispielen veranschaulichte Funktionalität beruht auf Schlüsseln und Zertifikaten, die unter [Vorgehensweise: Verschlüsseln einer Spalte mit Daten](../../relational-databases/security/encryption/encrypt-a-column-of-data.md) erstellt werden.  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Verschlüsseln einer Zeichenfolge mithilfe eines symmetrischen Schlüssels  
  Im folgenden Beispiel wird der `Employee`-Tabelle eine Spalte hinzugefügt und dann der Wert der Sozialversicherungsnummer in der `NationalIDNumber`-Spalte verschlüsselt.  

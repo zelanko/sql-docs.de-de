@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63294659"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator)
@@ -24,7 +24,7 @@ Sie erstellen außerdem eine angrenzende Spaltengruppe, formatieren Spalten und 
    
 Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Voraussetzungen finden Sie unter [Voraussetzungen für Tutorials](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
   
 ## <a name="CreateMatrix"></a>1. Erstellen eines Matrixberichts und eines Datasets mit dem Assistenten für neue Tabellen oder Matrix  
@@ -352,12 +352,12 @@ In einem Textfeld kann Text auch horizontal und vertikal (von oben nach unten) a
   
 Der Gebietsname wird vertikal geschrieben (von unten nach oben). Die Höhe der Zeilengruppe "Territory" ändert sich abhängig von der Länge des Gebietsnamens.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 Hiermit ist das Lernprogramm für die Erstellung eines Matrixberichts abgeschlossen. Weitere Informationen zu Matrizen finden Sie unter: 
--    [Tabellen, Matrizen und Listen](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
--    [Erstellen einer Matrix (Berichts-Generator und SSRS)](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
--    [Zonen des Tablix-Datenbereichs](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
--    [Zellen, Zeilen und Spalten des Tablix-Datenbereichs](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
+-    [Tables, Matrices, and Lists (Tabellen, Matrizen und Listen)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
+-    [Create a Matrix (Erstellen einer Matrix)](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
+-    [Tablix Data Region Areas (Zonen des Tablix-Datenbereichs)](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
+-    [Tablix Data Region Cells, Rows, and Columns (Zellen, Zeilen und Spalten des Tablix-Datenbereichs)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  

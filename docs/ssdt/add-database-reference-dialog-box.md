@@ -1,21 +1,23 @@
 ---
-title: Dialogfeld „Datenbankverweis hinzufügen“ | Microsoft-Dokumentation
+title: Datenbankverweis hinzufügen (Dialogfeld)
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ''
-ms.custom: SSDT
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e8ff16ab27f47cd283c81606a4db9b580db523d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984701"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256144"
 ---
 # <a name="add-database-reference-dialog-box"></a>Datenbankverweis hinzufügen (Dialogfeld)
+
 In diesem Thema werden die Verfahren beschrieben, die Sie im Dialogfeld **Datenbankverweis hinzufügen** ausführen können.  
   
 Datenbankverweise ermöglichen folgende Verfahren:  
@@ -28,7 +30,8 @@ In einem zusammengesetzten Projekt wird eine große Datenbank mithilfe von Daten
   
 Datenbankverweise können auf ein Datenbankprojekt in der aktuellen Projektmappe oder auf eine DACPAC-Datei verweisen. Durch Hinzufügen eines Datenbankverweises zu einem Projekt werden Projektabhängigkeiten und Buildreihenfolge geändert.  
   
-## <a name="selecting-the-database-to-reference"></a>Auswählen der Datenbank für den Verweis  
+## <a name="selecting-the-database-to-reference"></a>Auswählen der Datenbank für den Verweis
+
 Sie können auf ein anderes Datenbankprojekt in derselben Projektmappe, eine Systemdatenbank oder eine DACPAC-Datei verweisen.  
   
 Wenn die Projektmappe mehrere Datenbankprojekte enthält, ist **Datenbankprojekte in der aktuellen Projektmappe** aktiviert. Sie können auf eine andere Datenbank in der Projektmappe verweisen.  
@@ -37,7 +40,8 @@ Wählen Sie **Systemdatenbank** aus, wenn Sie eine der Systemdatenbanken als Dat
   
 Wählen Sie **Datenschichtanwendung (DACPAC)** aus, wenn Sie auf eine Datenbank in einer DACPAC-Datei verweisen möchten, und navigieren Sie zu dem Verzeichnis mit der DACPAC-Datei.  
   
-## <a name="selecting-the-databases-relative-location"></a>Auswählen des relativen Speicherorts der Datenbank  
+## <a name="selecting-the-databases-relative-location"></a>Auswählen des relativen Speicherorts der Datenbank
+
 Nachdem Sie die Datenbank ausgewählt haben, auf die verwiesen werden soll, können Sie den voraussichtlichen Speicherort eines Datenbankobjekts relativ zum verweisenden Projekt angeben.  
   
 Verweise können für Objekte an einem der folgenden Orte aufgelöst werden:  
@@ -59,7 +63,8 @@ Wenn Sie **Andere Datenbank, anderer Server** ausgewählt haben, ist eine (SQLCM
 > [!IMPORTANT]  
 > In bestimmten Situationen können Sie einen Datenbankverweis erstellen, der den gleichen Namen wie ein vorhandener Datenbankverweis besitzt. Wenn zwei Datenbankverweise den gleichen Namen besitzen, kann dies zu unerwartetem Verhalten führen. In diesem Fall löschen Sie beide Datenbankverweise.  
   
-## <a name="common-procedures"></a>Allgemeine Verfahren  
+## <a name="common-procedures"></a>Allgemeine Verfahren
+
 Im Folgenden sind allgemeine Verfahren aufgeführt:  
   
 ### <a name="to-create-a-reference-to-a-database-on-the-same-server"></a>So erstellen Sie einen Verweis auf eine Datenbank auf dem gleichen Server  
@@ -112,6 +117,6 @@ Wenn Sie dieses Projekt veröffentlichen, können Sie zusammengesetzte Projekte 
   
 3.  Stellen Sie im Dialogfeld **Erweiterte Veröffentlichungseinstellungen** sicher, dass **Zusammengesetzte Objekte einschließen** in der Liste **Erweiterte Bereitstellungsoptionen** aktiviert ist.  
   
-## <a name="see-also"></a>Weitere Informationen  
-[Projektorientierte Offlinedatenbankentwicklung](../ssdt/project-oriented-offline-database-development.md)  
-  
+## <a name="see-also"></a>Weitere Informationen
+
+[Projektorientierte Offlinedatenbankentwicklung](../ssdt/project-oriented-offline-database-development.md)

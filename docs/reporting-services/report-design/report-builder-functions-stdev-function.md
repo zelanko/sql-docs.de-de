@@ -9,10 +9,10 @@ ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c6d6a9890f5115042290b4ea59486f13cec10976
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577210"
 ---
 # <a name="report-builder-functions---stdev-function"></a>Funktionen des Berichts-Generators: StDev-Funktion
@@ -32,10 +32,10 @@ StDev(expression, scope, recursive)
  *expression*  
  (**Integer** oder **Float**) Der Ausdruck, für den die Aggregation ausgeführt werden soll.  
   
- *Bereich*  
+ *scope*  
  (**Zeichenfolge**) Optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
- *Rekursiv*  
+ *recursive*  
  (**Enumerationstyp**) Optional. **Simple** (Standard) oder **RdlRecursive**. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return-type"></a>Rückgabetyp  

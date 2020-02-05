@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: fd6c55f439b9d95473c5e36ea88cc7c5e1fb555e
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72915991"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Überprüfen von in Azure bereitgestellten SSIS-Paketen
@@ -47,7 +47,7 @@ Der Assistent führt die folgenden Überprüfungen für die in der Liste aufgef�
 | AdoNet             | âœ“        |           |     | âœ“         | âœ“                 |
 | Cache              |          | âœ“         | âœ“   |           |                   |
 | Excel              |          | âœ“         | âœ“   |           |                   |
-| File               |          | âœ“         | âœ“   |           |                   |
+| Datei               |          | âœ“         | âœ“   |           |                   |
 | FlatFile           |          | âœ“         | âœ“   |           |                   |
 | FTP                |          |           |     | âœ“         |                   |
 | MSOLAP100          |          |           |     | âœ“         | âœ“                 |

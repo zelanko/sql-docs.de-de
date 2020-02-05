@@ -16,10 +16,10 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75235392"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replikation, Änderungsnachverfolgung und Change Data Capture (Always On-Verfügbarkeitsgruppen)
@@ -196,9 +196,9 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
 -   Verwendung der Mergereplikation, während die Veröffentlichungsdatenbank einer Verfügbarkeitsgruppe angehört:  
   
-    -   Pushabonnement: Sowohl auf dem Verleger als auch auf dem Verteiler muss mindestens [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ausgeführt werden.  
+    -   Pushabonnement: Sowohl auf dem Verleger als auch auf dem Verteiler muss mindestens [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ausgeführt werden.  
   
-    -   Pullabonnement: Die Verleger-, Verteiler- und Abonnentendatenbanken müssen mindestens unter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ausgeführt werden. Das liegt daran, dass der Merge-Agent des Abonnenten verstehen muss, wie eine Verfügbarkeitsgruppe ein Failover auf die sekundäre Datenbank ausführen kann.  
+    -   Pullabonnement: Die Verleger-, Verteiler- und Abonnentendatenbank müssen mindestens unter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ausgeführt werden. Das liegt daran, dass der Merge-Agent des Abonnenten verstehen muss, wie eine Verfügbarkeitsgruppe ein Failover auf die sekundäre Datenbank ausführen kann.  
   
 -   Die Verlegerinstanzen erfüllen alle zur Teilnahme an einer Always On-Verfügbarkeitsgruppe erforderlichen Voraussetzungen. Weitere Informationen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)unterstützt.  
   
@@ -252,7 +252,7 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
  [Replikationsabonnenten und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On-Verfügbarkeitsgruppen: Interoperabilität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Always On-Verfügbarkeitsgruppen: Interoperabilität (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Always On-Failoverclusterinstanzen (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

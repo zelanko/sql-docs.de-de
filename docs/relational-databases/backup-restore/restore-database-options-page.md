@@ -13,10 +13,10 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041569"
 ---
 # <a name="restore-database-options-page"></a>Datenbank wiederherstellen (Seite Optionen)
@@ -32,7 +32,7 @@ ms.locfileid: "68041569"
 > [!NOTE]  
 >  Wenn Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]einen Wiederherstellungstask angeben, können Sie ein entsprechendes [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript generieren, das die RESTORE-Anweisungen für diesen Wiederherstellungsvorgang enthält. Zum Generieren des Skripts klicken Sie auf **Skript** , und wählen Sie dann ein Ziel für das Skript aus. Informationen zur RESTORE-Syntax finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="restore-options"></a>Wiederherstellungsoptionen  
  Verwenden Sie die Optionen des Bereichs **Wiederherstellungsoptionen** , um die Aspekte des Verhaltens des Wiederherstellungsvorgangs zu ändern.  
@@ -99,7 +99,7 @@ ms.locfileid: "68041569"
  **Bestehende Verbindungen schließen**  
  Bei Wiederherstellungsvorgängen treten möglicherweise Fehler auf, wenn aktive Verbindungen zur Datenbank bestehen. Aktivieren Sie die Option **Bestehende Verbindungen schließen** , um sicherzustellen, dass alle aktiven Verbindungen zwischen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und der Datenbank geschlossen werden. Durch die Aktivierung dieses Kontrollkästchens wechselt die Datenbank in einen Einzelbenutzermodus, bevor Wiederherstellungsvorgänge ausgeführt werden. Außerdem wird dadurch die Datenbank auf einen Multibenutzermodus festgelegt, wenn der Vorgang abgeschlossen ist.  
   
-### <a name="prompt"></a>Eingabeaufforderung  
+### <a name="prompt"></a>Prompt  
  **Bestätigung vor Wiederherstellen jeder einzelnen Sicherung**  
  Gibt an, dass nach der Wiederherstellung der einzelnen Sicherungen das Dialogfeld **Wiederherstellung fortsetzen** angezeigt wird, um anzufragen, ob Sie die Wiederherstellungssequenz fortsetzen möchten. In diesem Dialogfeld werden der Name des nächsten Mediensatzes (wenn bekannt) und der Name sowie die Beschreibung des nächsten Sicherungssatzes angezeigt.  
   

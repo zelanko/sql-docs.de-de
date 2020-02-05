@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1cfd06fd881c4749879365feda14e3cfcb877a9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727510"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>R-Skripterstellungsfehler in SQL Server
@@ -37,7 +37,7 @@ Wenn die R-Laufzeit funktionsfähig ist, das Skript jedoch Fehler zurückgibt, e
 
 Außerdem wird empfohlen, das Skript zu überprüfen und leicht umzuschreiben, um Probleme mit Datentypen zu vermeiden, die beim Verschieben von Daten zwischen R und der Datenbank-Engine auftreten können. Weitere Informationen finden Sie unter [R-Bibliotheken und Datentypen](r/r-libraries-and-data-types.md).
 
-Darüber hinaus können Sie das sqlrutils-Paket verwenden, um Ihr R-Skript in einem Format zu bündeln, das einfacher als gespeicherte Prozedur verwendet werden kann. Weitere Informationen finden Sie in den folgenden Themen:
+Darüber hinaus können Sie das sqlrutils-Paket verwenden, um Ihr R-Skript in einem Format zu bündeln, das einfacher als gespeicherte Prozedur verwendet werden kann. Weitere Informationen finden Sie unter
 * [sqlrutils-Paket](r/ref-r-sqlrutils.md)
 * [Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
@@ -65,7 +65,7 @@ Um die sichere Übermittlung der Windows-Anmeldeinformationen aus einem Skript z
 
 1. Öffnen Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] als Administrator auf der Instanz, auf der Sie R-Code ausführen möchten.
 
-2. Führen Sie das folgende Skript aus: Achten Sie darauf, den Namen der Benutzergruppe zu bearbeiten, wenn Sie die Standardeinstellung geändert haben. Bearbeiten Sie außerdem den Namen des Computers und der Instanz.
+2. Führen Sie das folgende Skript aus. Achten Sie darauf, den Namen der Benutzergruppe zu bearbeiten, wenn Sie die Standardeinstellung geändert haben. Bearbeiten Sie außerdem den Namen des Computers und der Instanz.
 
     ```sql
     USE [master]

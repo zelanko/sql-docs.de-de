@@ -16,10 +16,10 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1dfb6540724cf3dae9b39c4e388b4f2e2aacb734
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934886"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Hinzufügen einer Datenbank zu einer Always On-Verfügbarkeitsgruppe mit dem Assistenten für Verfügbarkeitsgruppen
@@ -56,7 +56,7 @@ ms.locfileid: "67934886"
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Replikat der Verfügbarkeitsgruppe hostet, und erweitern Sie die Serverstruktur.  
   
-2.  Erweitern Sie die Knoten für **Hohe Verfügbarkeit mit AlwaysOn** und **Verfügbarkeitsgruppen** .  
+2.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** und den Knoten **Verfügbarkeitsgruppen** .  
   
 3.  Klicken Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe, der Sie eine Datenbank hinzufügen, und wählen Sie den Befehl **Datenbank hinzufügen** aus. Dieser Befehl startet den Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "67934886"
       
       Wählen Sie diese Option aus, um das automatische Seeding zu verwenden. Das automatische Seeding verwendet die Übermittlung durch Protokollstream, um die Sicherung mit VDI für jede Datenbank der Verfügbarkeitsgruppe mit konfigurierten Endpunkten an das sekundäre Replikat zu streamen. Damit wird die Sicherung der Datenbank auf dem sekundären Replikat wiederhergestellt, ohne dass dafür manuelle Schritte erforderlich sind. Weitere Informationen zum automatischen Seeding finden Sie unter [Automatisches Seeding](automatic-seeding-secondary-replicas.md).
   
-    -   **Full**  
+    -   **Vollständig**  
   
          Aktivieren Sie diese Option, wenn Ihre Umgebung die Anforderungen zum automatischen Starten der anfänglichen Datensynchronisierung erfüllt. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen, Einschränkungen und Empfehlungen](#Prerequisites).  
   
@@ -93,9 +93,9 @@ ms.locfileid: "67934886"
   
 6.  Klicken Sie auf der Seite **Mit vorhandenen sekundären Replikaten verbinden** auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Alle verbinden **, wenn die Instanzen von**, die die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, als ein Dienst unter demselben Benutzerkonto ausgeführt werden. Wenn eine der Serverinstanzen als Dienst unter verschiedenen Konten ausgeführt wird, klicken Sie rechts neben jedem Serverinstanznamen jeweils auf die Schaltfläche **Verbinden** .  
   
-     Weitere Informationen finden Sie unter [Seite „Mit vorhandenen sekundären Replikaten verbinden“ &#40;Assistent zum Hinzufügen von Replikaten: Assistent zum Hinzufügen von Datenbanken&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
+     Weitere Informationen finden Sie unter [Mit vorhandenen sekundären Replikaten verbinden &#40;Seite, Assistent zum Hinzufügen von Replikaten/Assistent zum Hinzufügen von Datenbanken&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
-7.  Auf der Seite **Überprüfung** wird überprüft, ob die in diesem Assistenten angegebenen Werte die Anforderungen des Assistenten für neue Verfügbarkeitsgruppen erfüllen. Um eine Änderung vorzunehmen, können Sie auf **Zurück** klicken, um zu einer vorherigen Assistentenseite zurückzukehren und Werte zu ändern. Klicken Sie anschließend auf **Weiter**, um auf die Seite **Überprüfung** zurückzukehren, und klicken Sie auf **Überprüfung erneut ausführen**.  
+7.  Auf der Seite **Überprüfung** wird überprüft, ob die in diesem Assistenten angegebenen Werte die Anforderungen des Assistenten für neue Verfügbarkeitsgruppen erfüllen. Um eine Änderung vorzunehmen, können Sie auf **Zurück** klicken, um zu einer vorherigen Assistentenseite zurückzukehren und Werte zu ändern. Klicken Sie anschließend auf **Weiter** , um auf die Seite **Überprüfung** zurückzukehren, und klicken Sie auf **Überprüfung erneut ausführen**.  
   
      Weitere Informationen finden Sie unter [Seite „Überprüfung“ &#40;AlwaysOn-Verfügbarkeitsgruppen-Assistenten&#41;](../../../database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards.md).  
   
@@ -113,7 +113,7 @@ ms.locfileid: "67934886"
   
      Klicken Sie nach Abschluss des Assistenten auf **Schließen** , um den Assistenten zu beenden.  
   
-     Weitere Informationen finden Sie unter der [Seite „Ergebnisse“ &#40;AlwaysOn-Verfügbarkeitsgruppen-Assistenten&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md).  
+     Weitere Informationen finden Sie unter [Seite „Ergebnisse“ &#40;Always On-Verfügbarkeitsgruppen-Assistenten&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)ausgeführt wird.  
   
 11. Wenn die anfängliche Datensynchronisierung nicht automatisch auf allen sekundären Datenbanken gestartet wurde, müssen Sie noch nicht verknüpfte Datenbanken konfigurieren. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
@@ -125,7 +125,7 @@ ms.locfileid: "67934886"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)   
  [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
  [Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)  

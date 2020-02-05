@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107146"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deaktivieren von Indizes und Einschränkungen
@@ -42,7 +42,7 @@ ms.locfileid: "68107146"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So deaktivieren Sie einen Index mithilfe von:**  
   
@@ -130,7 +130,7 @@ ms.locfileid: "68107146"
  Zeigt den Namen der Tabelle oder Sicht an, für die der Index erstellt wurde.  
   
  **Indextyp**  
- Zeigt den Typ des Indexes an: **Gruppiert**, **Nicht gruppiert**, **Räumlich** oder **XML**.  
+ Zeigt den Typ des Indexes an: **Gruppiert**, **Nicht gruppiert**, **Räumlich**oder **XML**.  
   
  **Status**  
  Zeigt den Status des Deaktivierungsvorgangs an. Mögliche Werte nach der Ausführung:  
@@ -143,7 +143,7 @@ ms.locfileid: "68107146"
   
      Die Deaktivierung der Indizes wurde gestartet, ist aber noch nicht abgeschlossen.  
   
--   **Success**  
+-   **Erfolgreich**  
   
      Der Deaktivierungsvorgang ist erfolgreich abgeschlossen.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68107146"
   
      Die Deaktivierung des Indexes wurde nicht erfolgreich abgeschlossen, weil der Benutzer den Vorgang gestoppt hat.  
   
- **MessageBox**  
+ **Meldung**  
  Stellt den Text der Fehlermeldungen während des Deaktivierungsvorgangs bereit. Während der Ausführung werden die Fehler als Links angezeigt. Der Text der Links beschreibt den Hauptteil des Fehlers. Die Spalte **Meldung** ist meist nicht breit genug, um den vollständigen Meldungstext lesen zu können. Der vollständige Text kann auf zwei Arten abgerufen werden:  
   
 -   Bewegen Sie den Mauszeiger über die Meldungszelle, um eine QuickInfo mit dem Fehlertext anzuzeigen.  

@@ -18,10 +18,10 @@ ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 578026f567fc844cf2d0fdd13ce53d83e23f24ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898198"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67898198"
 
   Löscht einen Kryptographieanbieter in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
   
  Ein EKM-Anbieter kann nur gelöscht werden, wenn ihm keine Anmeldeinformationen zugeordnet sind.  
   
- Wenn dem EKM-Anbieter beim Löschen Schlüssel zugeordnet sind, bleiben die GUIDs für die Schlüssel weiterhin in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert. Wenn ein Anbieter später mit den gleichen Schlüssel-GUIDs erstellt wird, werden die Schlüssel wiederverwendet.  
+ Wenn dem EKM-Anbieter beim Löschen Schlüssel zugeordnet sind, bleiben die GUIDs für die Schlüssel weiterhin in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert. Wenn ein Anbieter später mit den gleichen Schlüssel-GUIDs erstellt wird, werden die Schlüssel wiederverwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für den symmetrischen Schlüssel.  

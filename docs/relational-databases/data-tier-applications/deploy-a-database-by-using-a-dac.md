@@ -20,10 +20,10 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134809"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Bereitstellen einer Datenbank mit DAC
@@ -78,12 +78,12 @@ ms.locfileid: "68134809"
   
     -   [Seite "Zusammenfassung"](#Summary)  
   
-    -   [Status](#Progress)  
+    -   [Progress](#Progress)  
     
     -   [Ergebnisse](#Results)  
   
 ##  <a name="Introduction"></a> Seite "Einführung"  
- Auf dieser Seite werden die Schritte des Assistenten zum **Bereitstellen von Datenbanken** beschrieben.  
+ Auf dieser Seite werden die Schritte des Assistenten zum **Bereitstellen von Datenbanken**  beschrieben.  
   
  **Optionen**  
   

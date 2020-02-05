@@ -19,15 +19,15 @@ ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01ac569b82d382850343af0a35b16c676720097c
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 471a69f76a9cb663267e6d1b8c5e8c10614912bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097894"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253793"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ausführen des Transact-SQL-Debuggers
 
@@ -83,7 +83,7 @@ Um den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger zu starten, müssen
   
  Die folgende Tabelle enthält die Menübefehle, Symbolleistenschaltflächen und Tastenkombinationen für den Debugger.  
   
-|Menübefehle für das Debuggen|Editor-Verknüpfungsbefehl|Symbolleistenschaltfläche|Tastenkombination|Aktion|  
+|Menübefehle für das Debuggen|Editor-Verknüpfungsbefehl|Symbolleistenschaltfläche|Tastenkombinationen|Action|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
 |**Fenster/Breakpoints**|Nicht verfügbar|**Breakpoints**|STRG+ALT+B|Zeigt das Fenster **Breakpoints** an, in dem Sie Breakpoints anzeigen und verwalten können.|  
 |**Fenster/Überwachung/Überwachen 1**|Nicht verfügbar|**Breakpoints/Überwachung/Überwachen 1**|STRG+ALT+W, 1|Zeigt das Fenster **Überwachen 1** an.|  
@@ -93,17 +93,17 @@ Um den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger zu starten, müssen
 |**Fenster/Lokal**|Nicht verfügbar|**Breakpoints/Lokal**|STRG+ALT+V, L|Anzeigen des Fensters **Lokal**|  
 |**Fenster/Aufrufliste**|Nicht verfügbar|**Breakpoints/Aufrufliste**|STRG+ALT+C|Anzeigen des Fensters **Aufrufliste**|  
 |**Fenster/Threads**|Nicht verfügbar|**Breakpoints/Threads**|STRG+ALT+H|Anzeigen des Fensters **Threads**|  
-|**Continue**|Nicht verfügbar|**Continue**|ALT+F5|Den Vorgang bis zum nächsten Breakpoint ausführen **Weiter** ist erst dann aktiv, wenn der Fokus auf ein Abfrage-Editor-Fenster verschoben wird, das sich im Debugmodus befindet.|  
+|**Fortsetzen**|Nicht verfügbar|**Fortsetzen**|ALT+F5|Den Vorgang bis zum nächsten Breakpoint ausführen **Weiter** ist erst dann aktiv, wenn der Fokus auf ein Abfrage-Editor-Fenster verschoben wird, das sich im Debugmodus befindet.|  
 |**Debuggen**|Nicht verfügbar|**Debuggen**|ALT+F5|Versetzt ein Abfrage-Editor-Fenster in den Debugmodus und führt den Vorgang bis zum ersten Breakpoint aus. Wenn sich Ihr Fokus auf ein Abfrage-Editor-Fenster richtet, das sich im Debugmodus befindet, wird **Debuggen starten** durch **Weiter**ersetzt.|  
 |**Alle unterbrechen**|Nicht verfügbar|**Alle unterbrechen**|STRG+ALT+UNTBR|Diese Funktion wird vom [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger nicht verwendet.|  
 |**Debuggen beenden**|Nicht verfügbar|**Debuggen beenden**|UMSCHALT+F5|Deaktiviert den Debugmodus für ein Abfrage-Editor-Fenster und stellt den normalen Modus wieder her.|  
 |**Debuggen**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Beendet den Debugmodus, führt jedoch die übrigen Anweisungen im Abfrage-Editor-Fenster aus.|  
 |**Einzelschritt**|Nicht verfügbar|**Einzelschritt**|F11|Führt die nächste Anweisung aus und öffnet außerdem ein neues Abfrage-Editor-Fenster im Debugmodus, wenn die nächste Anweisung eine gespeicherte Prozedur, einen Trigger oder eine Funktion ausführt.|  
-|**Prozedurschritt**|Nicht verfügbar|**Prozedurschritt**|F10|Wie **Einzelschritt**, mit dem Unterschied, dass keine Funktionen, gespeicherten Prozeduren oder Trigger debuggt werden.|  
+|**Überspringen**|Nicht verfügbar|**Überspringen**|F10|Wie **Einzelschritt**, mit dem Unterschied, dass keine Funktionen, gespeicherten Prozeduren oder Trigger debuggt werden.|  
 |**Rücksprung**|Nicht verfügbar|**Rücksprung**|UMSCHALT+F11|Führt den restlichen Code in einem Trigger, einer Funktion oder einer gespeicherten Prozedur aus, ohne bei Breakpoints anzuhalten. Der normale Debugmodus wird fortgesetzt, wenn die Steuerung an den Code, der das Modul aufgerufen hat, zurückgegeben wird.|  
 |Nicht verfügbar|**Ausführen bis** Cursorposition|Nicht verfügbar|STRG+F10|Führt den gesamten Code von der letzten Halteposition bis zur aktuellen Cursorposition aus, ohne bei Breakpoints anzuhalten.|  
 |**Schnellüberwachung**|**Schnellüberwachung**|Nicht verfügbar|STRG+ALT+Q|Zeigt das Fenster **Schnellüberwachung** an.|  
-|**Breakpoint ein/aus**|**Breakpoint/Breakpoint einfügen**|Nicht verfügbar|F9|Positioniert einen Breakpoint bei der aktuellen oder ausgewählten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|  
+|**Haltepunkt umschalten**|**Breakpoint/Breakpoint einfügen**|Nicht verfügbar|F9|Positioniert einen Breakpoint bei der aktuellen oder ausgewählten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|  
 |Nicht verfügbar|**Breakpoint/Breakpoint löschen**|Nicht verfügbar|Nicht verfügbar|Löscht den Breakpoint aus der ausgewählten Zeile.|  
 |Nicht verfügbar|**Breakpoint/Breakpoint deaktivieren**|Nicht verfügbar|Nicht verfügbar|Deaktiviert den Breakpoint in der ausgewählten Zeile. Der Breakpoint bleibt in der Codezeile, beendet aber keine Ausführung, bis er erneut aktiviert wird.|  
 |Nicht verfügbar|**Breakpoint/Breakpoint aktivieren**|Nicht verfügbar|Nicht verfügbar|Aktiviert den Breakpoint in der ausgewählten Zeile.|  

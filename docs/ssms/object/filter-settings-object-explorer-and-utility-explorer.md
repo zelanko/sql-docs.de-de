@@ -1,6 +1,6 @@
 ---
-title: Filtereinstellungen (Objekt-Explorer und Hilfsprogramm-Explorer) | Microsoft-Dokumentation
-ms.custom: ''
+title: Filtereinstellungen (Objekt-Explorer und Hilfsprogramm-Explorer)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3a5cfecc4bf111e16da6451b56637abe9214c65
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe88e33261171b0c1584c89561e9fac2f081b816
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264110"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257183"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Filtereinstellungen (Objekt-Explorer und Hilfsprogramm-Explorer)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,14 +28,14 @@ Mithilfe dieses Dialogfelds können Sie einen Filter angeben. Mit einem Filter k
 **Eigenschaft**  
 Zeigt die Eigenschaft an, nach der gefiltert werden soll.  
   
-**Ist gleich**  
+**Operator**  
 Wählen Sie die Art aus, in der der Filter den Wert auf die Eigenschaft anwendet. Folgende Optionen stehen zur Verfügung:  
   
 -   **Ist gleich**  
   
     Der Filter zeigt Elemente an, bei denen die Eigenschaft und der Wert genau übereinstimmen.  
   
--   **Enthält**  
+-   **Contains**  
   
     Der Filter zeigt die Elemente an, bei denen die Eigenschaft den Wert enthält. Die Eigenschaft kann noch weiteren Text enthalten.  
   
@@ -67,7 +67,7 @@ Wählen Sie die Art aus, in der der Filter den Wert auf die Eigenschaft anwendet
   
     Verfügbar für Datumsangaben. Dieser Filter zeigt Elemente an, deren Datum vor oder nach den beiden eingegebenen Datumsangaben liegt. Wählen Sie **Nicht zwischen** aus, und fügen Sie der **Operator** -Spalte mit TAB eine neue Zeile für die Eingabe des zweiten Datums hinzu.  
   
-**ReplTest1**  
+**Wert**  
 Geben Sie den Wert ein, mit dem die Eigenschaft verglichen werden soll. Bei Datumsangaben klicken Sie auf den nach unten zeigenden Pfeil, um einen Kalender für die Auswahl des Datums anzuzeigen.  
   
 **Filter löschen**  

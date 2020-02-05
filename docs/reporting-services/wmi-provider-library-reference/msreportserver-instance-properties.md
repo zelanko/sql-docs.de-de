@@ -16,13 +16,13 @@ ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1b8de8961ef9001c7ef94356a2b82bb248271af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569136"
 ---
-# <a name="msreportserverinstance-properties"></a>MSReportServer_Instance-Eigenschaften
+# <a name="msreportserver_instance-properties"></a>MSReportServer_Instance-Eigenschaften
   Die MSReportServer_Instance-Klasse stellt grundlegende Informationen bereit, die ein Client benötigt, um eine Verbindung mit einem installierten Berichtsserver herzustellen.  
   
 ## <a name="public-properties"></a>Öffentliche Eigenschaften  
@@ -37,6 +37,6 @@ ms.locfileid: "65569136"
 |[Version](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md)|Gibt die Version des Berichtsservers zurück|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MSReportServer_Instance-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+ [MSReportServer_Instance Members (MSReportServer_Instance-Member)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

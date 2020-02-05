@@ -17,10 +17,10 @@ ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8cf804f934a08db335c55b15ab23b9e42a7ee9c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051320"
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
@@ -37,7 +37,7 @@ delete Expression
   
 ## <a name="arguments"></a>Argumente  
  *Ausdruck*  
- Ein XQuery-Ausdruck, der die zu löschenden Knoten identifiziert. Alle durch den Ausdruck ausgewählten Knoten sowie alle Knoten oder Werte, die darin enthalten sind, werden gelöscht. Wie unter [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md)beschrieben, muss dabei auf einen in dem Dokument vorhandenen Knoten verwiesen werden. Es darf sich nicht um einen konstruierten Knoten handeln. Der Ausdruck darf nicht der Stammknoten (/) sein. Wenn der Ausdruck eine leere Sequenz zurückgibt, wird nichts gelöscht, und es werden keine Fehler zurückgegeben.  
+ Ein XQuery-Ausdruck, der die zu löschenden Knoten identifiziert. Alle durch den Ausdruck ausgewählten Knoten sowie alle Knoten oder Werte, die darin enthalten sind, werden gelöscht. Wie unter [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md) beschrieben, muss dabei auf einen im Dokument vorhandenen Knoten verwiesen werden. Es darf sich nicht um einen konstruierten Knoten handeln. Der Ausdruck darf nicht der Stammknoten (/) sein. Wenn der Ausdruck eine leere Sequenz zurückgibt, wird nichts gelöscht, und es werden keine Fehler zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -111,7 +111,7 @@ FROM T
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die [modify()-Methode (xml-Datentyp)](../../t-sql/xml/modify-method-xml-data-type.md) wird verwendet, um das **delete** -XML DML-Schlüsselwort anzugeben.  
+-   Die [modify()-Methode (XML-Datentyp)](../../t-sql/xml/modify-method-xml-data-type.md) wird verwendet, um das XML DML-Schlüsselwort für **delete** anzugeben.  
   
 -   Die [query()-Methode (xml-Datentyp)](../../t-sql/xml/query-method-xml-data-type.md) wird verwendet, um das Dokument abzufragen.  
   

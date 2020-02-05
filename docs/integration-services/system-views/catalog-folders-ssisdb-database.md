@@ -11,10 +11,10 @@ ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 14930bfd90b242f30a8b3f265f6ed3b367bd07f9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296540"
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (SSISDB-Datenbank)
@@ -26,16 +26,16 @@ ms.locfileid: "71296540"
 
   Zeigt die Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog an.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |id|**bigint**|Der eindeutige Bezeichner des Ordners.|  
-|NAME|**sysname(nvarchar(128))**|Der Name des Ordners, der innerhalb des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalogs eindeutig ist.|  
+|name|**sysname(nvarchar(128))**|Der Name des Ordners, der innerhalb des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalogs eindeutig ist.|  
 |description|**nvarchar(1024)**|Die Beschreibung des Ordners.|  
 |created_by_sid|**varbinary(85)**|Die Sicherheits-ID (SID) des Benutzers, der den Ordner erstellt hat|  
 |created_by_name|**nvarchar(128)**|Der Name des Benutzers, der den Ordner erstellt hat.|  
 |created_time|**datetimeoffset(7)**|Datum und Uhrzeit der Ordnererstellung.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jeden Ordner im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

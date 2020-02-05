@@ -23,10 +23,10 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252176"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "72252176"
 
   Wechselt den Ausführungskontext zurück zum Aufrufer der letzten EXECUTE AS-Anweisung.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ REVERT
  WITH COOKIE = @*varbinary_variable*  
  Gibt das Cookie an, das in einer entsprechenden eigenständigen [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)-Anweisung erstellt wurde. *\@varbinary_variable* entspricht **varbinary(100)** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  REVERT kann in einem Modul, wie einer gespeicherten Prozedur oder benutzerdefinierten Funktion, oder in einer eigenständigen Anweisung angegeben werden. Innerhalb eines Moduls kann REVERT nur auf EXECUTE AS-Anweisungen angewendet werden, die im Modul definiert sind. So gibt beispielsweise die folgende gespeicherte Prozedur eine `EXECUTE AS`-Anweisung aus, gefolgt von einer `REVERT`-Anweisung.  
   
 ```  
@@ -72,7 +72,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- Die in `usp_myproc` definierte `REVERT`-Anweisung wechselt den im Modul festgelegten Ausführungskontext, wirkt sich jedoch nicht auf den außerhalb des Moduls festgelegten Ausführungskontext aus. Der Ausführungskontext für die Sitzung bleibt also auf `login1` festgelegt.  
+ Die in `REVERT` definierte `usp_myproc`-Anweisung wechselt den im Modul festgelegten Ausführungskontext, wirkt sich jedoch nicht auf den außerhalb des Moduls festgelegten Ausführungskontext aus. Der Ausführungskontext für die Sitzung bleibt also auf `login1` festgelegt.  
   
  Als eigenständige Anweisung wird REVERT auf EXECUTE AS-Anweisungen angewendet, die in einem Batch oder einer Sitzung definiert sind. REVERT hat keinerlei Auswirkungen, wenn die entsprechende EXECUTE AS-Anweisung die WITH NO REVERT-Klausel enthält. In diesem Fall bleibt der Ausführungskontext so lange wirksam, bis die Sitzung gelöscht wird.  
   

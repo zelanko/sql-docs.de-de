@@ -9,10 +9,10 @@ ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579720"
 ---
 # <a name="report-builder-functions---count-function"></a>Funktionen des Berichts-Generators: Count-Funktion
@@ -32,10 +32,10 @@ Count(expression, scope, recursive)
  *expression*  
  (**Variant** oder **Binär**) Der Ausdruck, für den die Aggregation auszuführen ist. Beispiel: `=Fields!FieldName.Value`.  
   
- *Bereich*  
+ *scope*  
  (**Zeichenfolge**) Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
- *Rekursiv*  
+ *recursive*  
  (**Enumerationstyp**) Optional. **Simple** (Standard) oder **RdlRecursive**. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return-type"></a>Rückgabetyp  
@@ -60,7 +60,7 @@ Count(expression, scope, recursive)
   
  Beispiel  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Das folgende Codebeispiel zeigt einen Ausdruck, der die Anzahl von Werten ungleich NULL von `Size` für den Standardbereich oder für einen übergeordneten Gruppenbereich berechnet. Der Ausdruck wird einer Zelle in einer Zeile, die zur untergeordneten Gruppe `GroupbySubcategory`gehört, hinzugefügt. Die übergeordnete Gruppe ist `GroupbyCategory`. Der Ausdruck zeigt die Ergebnisse für `GroupbySubcategory` (Standardbereich) und anschließend für `GroupbyCategory` (übergeordneter Gruppenbereich) an.  
   
 > [!NOTE]  

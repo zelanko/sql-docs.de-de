@@ -9,10 +9,10 @@ ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577783"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
@@ -29,7 +29,7 @@ ms.locfileid: "65577783"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Datenzeile in der Tabelle, und klicken Sie anschließend auf **Gruppe hinzufügen** > **Übergeordnete Gruppe** , um eine äußere Tabellengruppe hinzuzufügen.  
   
-     ![Wählen Sie die übergeordnete Gruppe](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Select the Parent Group")  
+     ![Select the Parent Group](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Select the Parent Group")  
   
 3.  Geben Sie die folgende Formel im Ausdrucksfeld **Gruppieren nach** ein, und klicken Sie dann auf **OK** , um die übergeordnete Gruppe hinzuzufügen.  
   
@@ -41,19 +41,19 @@ ms.locfileid: "65577783"
   
 4.  Löschen Sie die Gruppenspalte, indem Sie mit der rechten Maustaste auf die Spaltenüberschrift klicken, auf **Spalten löschen**klicken, **Nur Spalten löschen**auswählen und anschließend auf **OK**klicken.  
   
-     ![Löschen einer Gruppenspalte](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Delete a group column")  
+     ![Delete a group column](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Delete a group column")  
   
 5.  Klicken Sie mit der rechten Maustaste im Bereich **Zeilengruppen** auf **Gruppe 1** , und klicken Sie dann auf **Gruppeneigenschaften**.  
   
-     ![Anzeigen von Gruppeneigenschaften](../../reporting-services/report-builder/media/groupproperties-updated.png "View group properties")  
+     ![View group properties](../../reporting-services/report-builder/media/groupproperties-updated.png "View group properties")  
   
 6.  Wählen Sie im Dialogfeld **Gruppeneigenschaften** auf der Seite **Sortierung** die Standardsortierungsoption aus, und klicken Sie auf **Löschen**.  
   
-     ![Löschen der Standardsortierung](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "Delete default sorting")  
+     ![Delete default sorting](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "Delete default sorting")  
   
 7.  Klicken Sie auf der Seite **Seitenumbrüche** auf **Zwischen den einzelnen Instanzen einer Gruppe** , und klicken Sie auf **OK**.  
   
-     ![Festlegen von Seitenumbrüchen](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Set page breaks")  
+     ![Set page breaks](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Set page breaks")  
   
 8.  Speichern Sie den Bericht. Beim Exportieren des Berichts nach Excel wird dieser in mehrere Arbeitsblätter exportiert. Jedes Arbeitsblatt enthält maximal 65.000 Zeilen.  
   

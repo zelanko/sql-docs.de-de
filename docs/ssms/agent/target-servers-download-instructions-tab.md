@@ -1,10 +1,9 @@
 ---
-title: Zielserver (Registerkarte „Anweisungen zum Herunterladen“) | Microsoft-Dokumentation
-ms.custom: ''
+title: Zielserver (Registerkarte Anweisungen zum Herunterladen)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7609b8f6dd7e5ab4b63b04fe2c559aae10745a3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dd210b4c51707da7350ff83fd9b9c51566109c1e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256252"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257874"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Zielserver (Registerkarte Anweisungen zum Herunterladen)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,11 +29,11 @@ ms.locfileid: "68256252"
 
 Mithilfe dieser Seite können Sie die Downloadanweisungen für einen oder mehrere Zielserver anzeigen und aktualisieren.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Zielserver**  
 Wählt den Server aus, für den Anweisungen angezeigt oder geändert werden sollen.  
   
-**Auftrag**  
+**Job**  
 Wählt den Auftrag aus, für den Anweisungen angezeigt oder geändert werden sollen.  
   
 **Zielserver**  
@@ -41,7 +42,7 @@ Zeigt den Namen des Servers an, auf den die Downloadanweisungen angewendet werde
 **Vorgang**  
 Zeigt den Vorgang an, den die Downloadanweisung ausführen wird.  
   
-**Objektname**  
+**Objektnamen**  
 Zeigt den Namen des Objekts an, auf das sich die Downloadanweisung auswirkt.  
   
 **Bereitstellungsdatum**  
@@ -56,7 +57,7 @@ Zeigt den letzten Status für die ausgewählte Downloadanweisung an.
 **Löschen**  
 Löscht die ausgewählte Downloadanweisung.  
   
-**Löschen**  
+**Clear**  
 Entfernt den Status der ausgewählten Downloadanweisung.  
   
 ## <a name="see-also"></a>Weitere Informationen  

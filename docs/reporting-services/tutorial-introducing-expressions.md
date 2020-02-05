@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63295591"
 ---
 # <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
@@ -28,7 +28,7 @@ Diese Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den S
   
 Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Setup"></a>1. Erstellen eines Tabellenberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten  
@@ -535,7 +535,7 @@ Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen 
   
 7.  Klicken Sie auf **Hinzufügen**.  
   
-8.  Geben Sie im Feld **Bezeichnung**  **Gelb**ein.  
+8.  Geben Sie im Feld **Bezeichnung** **Gelb**ein.  
   
 9. Geben Sie im Feld **Wert** Folgendes ein: **Gelb**  
   
@@ -583,7 +583,7 @@ Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen 
   
 8.  Klicken Sie unter **Allgemeine Funktionen**auf **Verschiedenes**, und doppelklicken Sie in der Liste **Element** auf **RowNumber**.  
 
-9. Geben Sie unmittelbar hinter **RowNumber(**  **Nothing) MOD 2,** ein.
+9. Geben Sie unmittelbar hinter **RowNumber(** **Nothing) MOD 2,** ein.
   
 8. Klicken Sie auf **Parameter** und doppelklicken Sie in der Liste **Werte** auf **Spaltenfarbe**.  
   

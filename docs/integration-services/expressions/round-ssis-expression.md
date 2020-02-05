@@ -14,10 +14,10 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 74b18ed725b70e1086b22515a0a051d2521383b7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288322"
 ---
 # <a name="round-ssis-expression"></a>ROUND (SSIS-Ausdruck)
@@ -44,7 +44,7 @@ ROUND(numeric_expression,length)
 ## <a name="result-types"></a>Ergebnistypen  
  Der Typ entspricht dem Typ von *numeric*_*expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das *length* -Argument muss zu einer positiven ganzen Zahl oder 0 (null) ausgewertet werden.  
   
  ROUND gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  

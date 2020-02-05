@@ -12,10 +12,10 @@ ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503104"
 ---
 # <a name="html-device-information-settings"></a>HTML-Geräteinformationseinstellungen
@@ -35,7 +35,7 @@ In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern
 |**GetImage (\*)**|Ruft ein bestimmtes Symbol für die Benutzeroberfläche des HTML-Viewers ab.|  
 |**HTMLFragment**|Gibt an, ob anstelle eines vollständigen HTML-Dokuments ein HTML-Fragment erstellt wird. Ein HTML-Fragment enthält den Berichtsinhalt in einem TABLE-Element und lässt das HTML-Element und das BODY-Element aus. Der Standardwert ist **false**. Wenn Sie mit der **M:ReportExecution2005.ReportExecutionService.Render(System.String,System.String,System.String@,System.String@,System.String@, ReportExecution2005.Warning[]@,System.String[]@)** -Methode der SOAP-API HTML rendern, müssen Sie diese Geräteinformationen auf **TRUE** festlegen, sofern Sie einen Bericht mit Bildern rendern. Wenn Sie mithilfe von SOAP rendern und die **HTMLFragment** -Eigenschaft auf **true** festgelegt ist, werden URLs mit Sitzungsinformationen erstellt, die verwendet werden können, um Bilder ordnungsgemäß anzufordern. Die Bilder müssen hochgeladene Ressourcen in der Berichtsserver-Datenbank sein.|  
 |**ImageConsolidation**|Gibt an, ob das gerenderte Diagramm, die gerenderte Karte, das gerenderte Messgerät und die gerenderten Indikatorbilder in ein großes Bild konsolidiert werden. Die Konsolidierung von Bildern hilft, die Leistung des Berichts im Clientbrowser zu verbessern, wenn der Bericht viele Datenvisualisierungselemente enthält. Der Standardwert für die meisten modernen Browser ist **true** .|  
-|**JavaScript**|Gibt an, ob JavaScript im gerenderten Bericht unterstützt wird. Der Standardwert ist **true**.|  
+|**JavaScript**|Gibt an, ob JavaScript im gerenderten Bericht unterstützt wird. Der Standardwert lautet **true**.|  
 |**LinkTarget**|Das Ziel für Links im Bericht. Sie können ein Fenster oder einen Bereich als Ziel auswählen, indem Sie den Namen des Fensters angeben, z.B. **LinkTarget**=*Fenstername*, oder Sie können ein neues Fenster als Ziel wählen, indem Sie **LinkTarget**=_blank verwenden. Andere gültige Zielnamen sind beispielsweise _self, _parent und _top.|  
 |**OnlyVisibleStyles(\*)**|Gibt an, dass für die gerade gerenderte Seite nur freigegebene Formate generiert werden|  
 |**OutlookCompat**|Gibt an, ob beim Rendern zusätzliche Metadaten verwendet werden sollen, um die Darstellung des Berichts in Outlook zu optimieren. Der Standardwert ist **false**.|  
@@ -53,7 +53,7 @@ In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)  
   
   

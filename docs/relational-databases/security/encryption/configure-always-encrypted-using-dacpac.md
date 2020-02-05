@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df18a2ca6f79982db41b5188283bf1721b518e31
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595745"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Konfigurieren der Spaltenverschlüsselung unter Verwendung von Always Encrypted mit einem DAC-Paket 
@@ -26,7 +26,7 @@ Ein [DAC-Paket (data-tier application, Datenschichtanwendung)](../../data-tier-a
 
 In diesem Artikel werden spezielle Überlegungen zum Aktualisieren einer Datenbank behandelt, wenn die DACPAC-Datei oder/und die Zieldatenbank mit [Always Encrypted](always-encrypted-database-engine.md) geschützte Spalten enthält. Wenn das Verschlüsselungsschema für eine Spalte in der DACPAC-Datei vom Verschlüsselungsschema für eine vorhandene Spalte in der Zieldatenbank abweicht, führt die Veröffentlichung der DACPAC-Datei dazu, dass die in der Spalte gespeicherte Daten verschlüsselt, entschlüsselt oder erneut verschlüsselt werden. Ausführlichere Informationen finden Sie in der folgenden Tabelle.
 
-| Bedingung|Aktion|
+| Bedingung|Action|
 |:---|:---|
 |Die Spalte wird in der DACPAC-Datei verschlüsselt, nicht in der Datenbank.| Die Daten in der Spalte werden verschlüsselt.|
 |Die Spalte wird in der DACPAC-Datei verschlüsselt, nicht in der Datenbank.| Die Daten in der Spalte werden entschlüsselt (die Verschlüsselung wird für die Spalte entfernt).|
@@ -60,9 +60,9 @@ Wenn der Upgradevorgang eine Datenverschlüsselung auslöst, müssen Sie auch au
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)). 
 
  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 - [Entwickeln von Anwendungen mit Always Encrypted](always-encrypted-client-development.md)
-- [Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Abfragen von Spalten mit Always Encrypted und SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 
 ## <a name="see-also"></a>Weitere Informationen  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

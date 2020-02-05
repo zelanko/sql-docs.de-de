@@ -1,6 +1,6 @@
 ---
-title: Anpassen von Menüs und Tastenkombinationen | Microsoft-Dokumentation
-ms.custom: ''
+title: Anpassen von Menüs und Tastenkombinationen
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6492b85430ac29fe690de9c41cd7a1625e409b20
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e2b398a1acd5e91a55e18f25b2094f9b671c70b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532889"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243921"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Anpassen von Menüs und Tastenkombinationen
 
@@ -107,7 +107,7 @@ Zugriffstasten für gespeicherte Prozeduren mit der STRG-TASTE können über die
   
 4.  Wechseln Sie mit der TAB-TASTE zur Liste **Steuerelemente** , und wählen Sie mit den Pfeiltasten die zu ändernde Schaltfläche aus.  
   
-5.  Drücken Sie **ALT+A**, um die Option **Auswahl ändern** auszuwählen.  
+5.  Drücken Sie **ALT+A**, um die Option **Auswahl ändern**auszuwählen.  
   
 6.  Wechseln Sie im Kontextmenü mit der TAB-TASTE zum Feld **Name**, und geben Sie einen Namen für die Symbolleistenschaltfläche ein. Geben Sie dabei vor dem Buchstaben, den Sie als Zugriffstaste verwenden möchten, ein kaufmännisches Und-Zeichen (&) ein.  
   
@@ -125,7 +125,7 @@ Zugriffstasten für gespeicherte Prozeduren mit der STRG-TASTE können über die
   
 3.  Wechseln Sie mit der TAB-TASTE zur Liste **Steuerelemente** , und wählen Sie mit den Pfeiltasten die zu ändernde Schaltfläche aus.  
   
-4.  Drücken Sie ALT+A, um die Option **Auswahl ändern** auszuwählen.  
+4.  Drücken Sie ALT+A, um die Option **Auswahl ändern**auszuwählen.  
   
 5.  Wechseln Sie im Kontextmenü mit der TAB-TASTE zum Feld **Name**, und geben Sie einen Namen für die Symbolleistenschaltfläche ein. Geben Sie dabei vor dem Buchstaben, den Sie als Zugriffstaste verwenden möchten, ein kaufmännisches Und-Zeichen (&) ein.  
   

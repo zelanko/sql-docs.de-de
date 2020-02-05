@@ -1,10 +1,9 @@
 ---
-title: Verwalten von Ereignissen | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwalten von Ereignissen
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,13 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a777dc834e835f7f06bc301158e4967d9c8117e1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 4c7acceed73fdc902fc384f6f7b81fa39e1bfbc5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258177"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254127"
 ---
 # <a name="manage-events"></a>Verwalten von Ereignissen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ Das Einrichten eines Warnungsverwaltungsservers hat u. a. folgende Vorteile:
   
 -   **Skalierbarkeit**. Viele physische Server können als ein einziger logischer Server verwaltet werden. Sie können nach Bedarf Server zur Gruppe der physischen Server hinzufügen oder Server aus dieser Gruppe entfernen.  
   
--   **Effizienz**. Der Konfigurationsaufwand wird reduziert, da Warnungen und Operatoren nur einmal definiert werden müssen.  
+-   **Effizienz:** Der Konfigurationsaufwand wird reduziert, da Warnungen und Operatoren nur einmal definiert werden müssen.  
   
 ## <a name="disadvantages-of-using-an-alerts-management-server"></a>Nachteile der Verwendung eines Warnungsverwaltungsservers  
 Das Einrichten eines Warnungsverwaltungsservers hat u. a. folgende Nachteile:  

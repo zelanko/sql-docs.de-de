@@ -1,6 +1,6 @@
 ---
 title: Fenster 'Threads'
-titleSuffix: T-SQL Debugger
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -10,15 +10,15 @@ ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba4f72bc5848f14e2bfd9821c43f024a129092e1
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 057178568ef12c6de42cde518c02db1ae137a0ae
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119243"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253010"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL-Debugger – Fenster „Threads“
 
@@ -34,7 +34,7 @@ Im Fenster **Threads** werden Informationen zu dem [!INCLUDE[ssDE](../../include
   
 -   Klicken Sie im Menü **Debuggen** auf **Fenster**und dann auf **Threads**.  
   
-## <a name="columns"></a>Spalte  
+## <a name="columns"></a>Spalten  
  **ID**  
  Ist eine eindeutig kennzeichnende Zahl, die der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger dem Thread zuweist. Um weitere Informationen zum Thread anzuzeigen, wählen Sie in der dynamischen Verwaltungssicht sys.dm_os_threads eine Zeile aus.  
   
@@ -52,7 +52,7 @@ Im Fenster **Threads** werden Informationen zu dem [!INCLUDE[ssDE](../../include
  **[SPID]**  
  Die Prozess-ID der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sitzung, die diese Sitzung eindeutig kennzeichnet. Weitere Informationen über die Sitzung können Sie abrufen, indem Sie in der sys.sysprocesses-Sicht die Zeile auswählen, die in der Spalte spid denselben Wert enthält.  
   
- **Speicherort**  
+ **Location**  
  Zeigt den Namen der Skriptdatei an, die von der gerade gedebuggten Abfrage-Editor-Sitzung verwendet wird.  
   
  **Priority**  

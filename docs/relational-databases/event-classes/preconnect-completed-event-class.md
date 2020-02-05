@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2d674bf516dbdf25f940e9b14792d71c01d44806
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940665"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed (Ereignisklasse)
@@ -25,7 +25,7 @@ ms.locfileid: "67940665"
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>Datenspalten der PreConnect:Completed-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|**int**|216|27|Nein|  
 |SPID|**int**|Die ID des Serverprozesses, von dem das Ereignis ausgelöst wird.|12|Ja|  
@@ -35,11 +35,11 @@ ms.locfileid: "67940665"
 |Duration|**bigint**|Die von der Klassifizierungsfunktion benötigte Zeit (in Mikrosekunden)|13|Ja|  
 |ObjectID|**int**|Die ID des benutzerdefinierten Klassifizierungsobjekts.|22|Ja|  
 |CPU|**int**|CPU-Verwendung in Millisekunden|18|Ja|  
-|Reads|**int**|Die Anzahl der logischen Lesevorgänge|16|Ja|  
-|Writes|**int**|Die Anzahl der logischen Schreibvorgänge|17|Ja|  
+|Lesevorgänge|**int**|Die Anzahl der logischen Lesevorgänge|16|Ja|  
+|Schreibvorgänge|**int**|Die Anzahl der logischen Schreibvorgänge|17|Ja|  
 |GroupID|**int**|Die ID der klassifizierten Arbeitsauslastungsgruppe|66|Ja|  
 |Fehler|**int**|Die letzte Fehlernummer, falls die benutzerdefinierte Klassifizierungsfunktion nicht ausgeführt wird|31|Ja|  
-|Status|**int**|Der Status des letzten Fehlers|30|Ja|  
+|State|**int**|Der Status des letzten Fehlers|30|Ja|  
 |TargetUserName|**sysname**|Der Rückgabewert (Name der Arbeitsauslastungsgruppe) für die benutzerdefinierte Klassifizierungsfunktion, falls das System keine entsprechende aktive Gruppe finden kann. Andernfalls wird diese Spalte auf NULL gesetzt.|39|Ja|  
 |ObjectName|**nvarchar(256)**|Der zweiteilige Name der benutzerdefinierten Klassifizierungsfunktion. Beispiel: dbo.classifier.|34|Ja|  
   

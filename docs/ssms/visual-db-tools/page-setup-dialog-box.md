@@ -1,10 +1,9 @@
 ---
-title: Seite einrichten (Dialogfeld) | Microsoft-Dokumentation
-ms.custom: ''
+title: Seite einrichten (Dialogfeld)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,18 +11,20 @@ f1_keywords:
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a3354661aa51978bce2381553c978cac9a8fec9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: bc09dffbff93e45ded3ed3fa4689ad88eb780f46
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263271"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252119"
 ---
 # <a name="page-setup-dialog-box"></a>Seite einrichten (Dialogfeld)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Mithilfe der Optionen im Dialogfeld **Seite einrichten** können Sie den Entwurf der Seite anpassen. Die Verfügbarkeit einiger Optionen hängt von den Sprachen ab, die installiert und für die Bearbeitung aktiviert sind.  
   
-## <a name="paper"></a>Papier  
+## <a name="paper"></a>Dokument  
 **Größe**  
 Wählen Sie in der Liste eine Größe aus.  
   

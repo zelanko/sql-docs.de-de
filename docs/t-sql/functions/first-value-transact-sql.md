@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5954a1b090be1749c07c09a83d4c2cfbf441f6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071384"
 ---
-# <a name="firstvalue-transact-sql"></a>FIRST_VALUE (Transact-SQL)
+# <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Gibt den ersten Wert in einer geordneten Menge von Werten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ FIRST_VALUE ( [scalar_expression ] )
  Der zurückzugebende Wert. *scalar_expression* kann eine Spalte, eine Unterabfrage oder ein anderer willkürlicher Ausdruck sein, durch die sich ein einzelner Wert ergibt. Andere analytische Funktionen sind nicht zulässig.  
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. *order_by_clause* ist erforderlich. *order_by_clause* schränkt die Zeilen innerhalb der Partition weiter ein, indem Ausgangs- und Endpunkte angegeben werden. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. *order_by_clause* ist erforderlich. *rows_range_clause* schränkt die Zeilen innerhalb der Partition weiter ein, indem Ausgangs- und Endpunkte angegeben werden. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Entspricht dem Typ von *scalar_expression*.  
@@ -56,7 +56,7 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-firstvalue-over-a-query-result-set"></a>A. Verwenden von FIRST_VALUE für ein Abfrageresultset  
+### <a name="a-using-first_value-over-a-query-result-set"></a>A. Verwenden von FIRST_VALUE für ein Abfrageresultset  
  Im folgenden Beispiel wird der Name des günstigsten Produkts in einer bestimmten Produktkategorie mithilfe von FIRST_VALUE zurückgegeben.  
   
 ```  
@@ -88,7 +88,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
   
 ```  
   
-### <a name="b-using-firstvalue-over-partitions"></a>B. Verwenden von FIRST_VALUE über Partitionen  
+### <a name="b-using-first_value-over-partitions"></a>B. Verwenden von FIRST_VALUE über Partitionen  
  Im folgenden Beispiel werden die Mitarbeiter mit der geringsten Anzahl von Urlaubsstunden im Vergleich zu anderen Angestellten mit der gleichen Berufsbezeichnung mithilfe von FIRST_VALUE zurückgegeben. Die PARTITION BY-Klausel partitioniert die Mitarbeiter nach Berufsbezeichnung, und die FIRST_VALUE-Funktion wird unabhängig auf jede Partition angewendet. Die in der OVER-Klausel angegebene ORDER BY-Klausel bestimmt die logische Reihenfolge, in der die FIRST_VALUE-Funktion auf die Zeilen in jeder Partition angewendet wird. Die ROWS UNBOUNDED PRECEDING-Klausel gibt den Ausgangspunkt des Fensters als erste Zeile jeder Partition an.  
   
 ```  

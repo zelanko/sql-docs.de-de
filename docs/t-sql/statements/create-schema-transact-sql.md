@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117301"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117301"
 
   Erstellt ein Schema in der aktuellen Datenbank. Mit der CREATE SCHEMA-Transaktion können auch Tabellen und Sichten innerhalb des neuen Schemas erstellt und GRANT-, DENY- oder REVOKE-Berechtigungen für diese Objekte festgelegt werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -112,7 +112,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  **Implizites Schema und Benutzererstellung**  
   
- In bestimmten Fällen kann ein Benutzer eine Datenbank verwenden, ohne ein Datenbankbenutzerkonto (einen Datenbankprinzipal in der Datenbank) zu besitzen. Das ist in den folgenden Situationen möglich:  
+ In bestimmten Fällen kann ein Benutzer eine Datenbank verwenden, ohne ein Datenbankbenutzerkonto (einen Datenbankprinzipal in der Datenbank) zu besitzen. Dies kann in den folgenden Situationen auftreten:  
   
 -   Eine Anmeldung verfügt über **CONTROL SERVER**-Berechtigungen.  
   
@@ -154,7 +154,7 @@ CREATE SCHEMA Sprockets AUTHORIZATION Annik
 GO   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. Erstellen eines Schemas und einer Tabelle in diesem Schema  
  Im folgenden Beispiel wird das Schema `Sales` erstellt, und anschließend in diesem Schema die Tabelle `Sales.Region`.  

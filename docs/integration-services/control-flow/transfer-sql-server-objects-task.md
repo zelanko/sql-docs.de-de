@@ -17,10 +17,10 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f1a2e2122c4d141d8d702d027bf30d65db93f9c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293840"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)
@@ -35,13 +35,13 @@ ms.locfileid: "71293840"
   
  Die folgende Tabelle enthält eine Liste der Objekttypen, die kopiert werden können.  
   
-|Objekt|  
+|Object|  
 |------------|  
 |Tabellen|  
 |Sichten|  
 |Gespeicherte Prozeduren|  
 |Benutzerdefinierte Funktionen|  
-|Standardwerte|  
+|Standardeinstellungen|  
 |Benutzerdefinierte Datentypen|  
 |Partitionsfunktionen|  
 |Partitionsschemas|  
@@ -79,13 +79,13 @@ ms.locfileid: "71293840"
 ## <a name="transfer-objects-between-instances-of-sql-server"></a>Übertragen von Objekten zwischen den Instanzen von SQL Server  
  Der Task ' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen' unterstützt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quelle bzw. ein -Ziel.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Der Task löst ein Informationsereignis aus, das das übertragene Objekt meldet, sowie ein Warnungsereignis, wenn ein Objekt überschrieben wird. Es wird auch ein Informationsereignis für Aktionen ausgelöst, z. B. das Kürzen von Datenbanktabellen.  
   
  Der Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ meldet keinen schrittweisen Fortschritt der Objektübertragung, sondern nur 0 % und 100 % der Ausführung.  
   
 ## <a name="execution-value"></a>Ausführungswert  
- Der in der **ExecutionValue** -Eigenschaft des Tasks gespeicherte Ausführungswert gibt die Anzahl der übertragenen Objekte zurück. Indem der **ExecValueVariable**-Eigenschaft des Tasks „SQL Server-Objekte übertragen“ eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Objektübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Der in der **ExecutionValue** -Eigenschaft des Tasks gespeicherte Ausführungswert gibt die Anzahl der übertragenen Objekte zurück. Indem der **ExecValueVariable** -Eigenschaft des Tasks „SQL Server-Objekte übertragen“ eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Objektübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Protokolleinträge  
  Der Task "SQL Server-Objekte übertragen" enthält die folgenden benutzerdefinierten Protokolleinträge:  
@@ -130,7 +130,7 @@ ms.locfileid: "71293840"
 > [!NOTE]  
 >  Der Benutzer, der den Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ erstellt, benötigt die Berechtigung, die Quellserverobjekte zum Kopieren auszuwählen sowie die Berechtigung, auf die Datenbank des Zielservers zuzugreifen, auf den die Objekte übertragen werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie für den Task [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen einen eindeutigen Namen ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -171,10 +171,10 @@ ms.locfileid: "71293840"
  **ExistingData**  
  Bestimmen Sie, wie die Daten auf den Zielserver kopiert werden sollen. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Ersetzen**|Daten auf dem Zielserver werden überschrieben.|  
-|**Anfügen**|Die vom Quellserver kopierten Daten werden an die vorhandenen Daten auf dem Zielserver angehängt.|  
+|**Replace**|Daten auf dem Zielserver werden überschrieben.|  
+|**Append**|Die vom Quellserver kopierten Daten werden an die vorhandenen Daten auf dem Zielserver angehängt.|  
   
 > [!NOTE]  
 >  Die Option **ExistingData** ist nur verfügbar, wenn **CopyData** auf **True**festgelegt ist.  
@@ -330,7 +330,7 @@ ms.locfileid: "71293840"
 ## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor für den Task SQL Server-Objekte übertragen &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Editor für den Task „SQL Server-Objekte übertragen“ &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
  [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)   
  [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

@@ -9,10 +9,10 @@ ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222719"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Arbeiten mit freigegebenen Datasets (Webportal)
@@ -37,7 +37,7 @@ Sie können Folgendes tun, um ein neues freigegebenes Dataset zu erstellen.
   
 4.  Wählen Sie im Dialog **Neuer Bericht oder neues Dataset** eine Datenquellenverbindung aus, die für dieses Dataset verwendet werden soll. Möglicherweise ist es erforderlich, dass Sie an den Speicherort der freigegebenen Datenquelle navigieren.  
   
-5.  Wählen Sie **Erstellen**aus.  
+5.  Klicken Sie auf **Erstellen**.  
   
 6.  Erstellen Sie Ihr Dataset, und wählen Sie dann das **Speichern** -Symbol in der oberen linken Ecke aus, um das Dataset zurück an den Berichtsserver zu speichern.  
   

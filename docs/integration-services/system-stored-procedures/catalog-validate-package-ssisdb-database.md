@@ -14,10 +14,10 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a7ecbe24971e4138dfc55c847d07efa5e901f1f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295255"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package (SSISDB-Datenbank)
@@ -67,7 +67,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -95,7 +95,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   In den Paketparametern wird auf Variablen verwiesen, aber in der Überprüfung wurden keine Umgebungen eingeschlossen, auf die verwiesen wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Überprüfung vereinfacht das Identifizieren von Problemen, die das erfolgreiche Ausführen des Pakets verhindern. Verwenden Sie die [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md)- oder [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)-Sicht, um den Überprüfungszustand zu überwachen.  
   
   

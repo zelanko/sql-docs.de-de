@@ -1,6 +1,6 @@
 ---
-title: Suchordner auswählen (Dialogfeld in Visual Studio) | Microsoft-Dokumentation
-ms.custom: ''
+title: Suchordner auswählen (Dialogfeld in Visual Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dfe3339bfe2b965c46e2abd212a09b50021814ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a31e9e898101c15c032db1be5f348bf28267d52c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265021"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253289"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Suchordner auswählen (Dialogfeld in Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -23,13 +23,13 @@ Ermöglicht es Ihnen, eigene benannte Sätze mit Suchordnern zusammenzustellen, 
   
 Fügen Sie der Liste **Ausgewählte Ordner** Ordner hinzu, geben Sie im Feld **Ordnersatz** einen Namen für diesen Ordner ein, und klicken Sie auf **Übernehmen** , um ihn zu speichern. Dieser benutzerdefinierte Suchbereich kann danach anhand des Namens aus den Dropdownlisten **Suchen in** in den Fenstern **Suchen in Dateien** und **Ersetzen in Dateien**ausgewählt werden. Wenn Sie einen benutzerdefinierten Ordnersatz aus den Listen **Suchen in** entfernen möchten, wählen Sie seinen Namen im Feld **Ordnersatz** aus, und klicken Sie auf **Löschen**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 Mithilfe der folgenden Steuerelemente können Sie eigene Sätze mit Suchordnern zusammenstellen, speichern und überarbeiten.  
   
 **Ordnersatz**  
 Führt die für die Suche verfügbaren Verzeichnisse auf. Zum Erstellen eines neuen Ordnersatzes geben Sie dessen Namen ein, fügen Sie der Liste **Ausgewählte Ordner** einen Satz mit Suchordnern hinzu, und klicken Sie dann auf **Übernehmen**.  
   
-**Übernehmen**  
+**Anwenden**  
 Speichert den Satz mit Suchordnern, die in der Liste **Ausgewählte Ordner** aufgeführt sind, als einen benannten Ordnersatz. Dieser Ordnersatz kann dann im Feld **Suchen in** aller Registerkarten im Fenster **Suchen und Ersetzen** ausgewählt werden. Das Dialogfeld Suchordner auswählen bleibt offen.  
   
 **Löschen**  
@@ -53,5 +53,5 @@ Entfernt die ausgewählten Ordner aus der Liste **Ausgewählte Ordner** .
 **Ausgewählte Ordner**  
 Führt die hinzugefügten Ordner aus der **Ordnerliste**auf. Diese Ordner werden in den benannten **Ordnersatz**eingeschlossen.  
   
-**Übernehmen**  
+**Anwenden**  
 Speichert den Satz mit Suchordnern, die in der Liste **Ausgewählte Ordner** aufgeführt sind, als einen benannten Ordnersatz. Dieser Ordnersatz kann dann im Feld **Suchen in** aller Registerkarten im Fenster **Suchen und Ersetzen** ausgewählt werden. Schließt das Dialogfeld Suchordner auswählen.  

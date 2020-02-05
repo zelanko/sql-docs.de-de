@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582052"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern
@@ -60,7 +60,7 @@ ms.locfileid: "65582052"
   
  In den folgenden Abschnitten werden die einzelnen Bestandteile der Filtergleichung vorgestellt.  
   
-### <a name="expression"></a>expression  
+### <a name="expression"></a>Ausdruck  
  Wenn die Filtergleichung zur Laufzeit vom Berichtsprozessor ausgewertet wird, müssen Ausdruck und Wert denselben Datentyp aufweisen. Der Datentyp des unter **Ausdruck** ausgewählten Felds wird durch die Datenverarbeitungserweiterung oder den Datenanbieter, über den die Daten aus der Datenquelle abgerufen werden, vorgegeben. Der Datentyp des unter **Wert** eingegebenen Ausdrucks wird durch [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Standards vorgegeben. Die verfügbaren Datentypen sind abhängig von den für eine Berichtsdefinition unterstützten Datentypen. Die Werte aus der Datenbank werden ggf. vom Datenanbieter in einen CLR-Typ konvertiert.  
   
 ### <a name="data-type"></a>Datentyp  
@@ -68,7 +68,7 @@ ms.locfileid: "65582052"
   
 |**Datentyp des Berichtsdefinitionsschemas**|**CLR-Typ(en)**|  
 |--------------------------------------------|-----------------------|  
-|**Boolean**|**Boolean**|  
+|**Boolescher Wert**|**Boolescher Wert**|  
 |**DateTime**|**DateTime**, **DateTimeOffset**|  
 |**Integer**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
 |**Float**|**Single**, **Double**, **Decimal**|  
@@ -79,7 +79,7 @@ ms.locfileid: "65582052"
 ### <a name="operator"></a>Operator  
  Die folgende Tabelle enthält die Operatoren, die in Filtergleichungen verwendet werden können, und beschreibt, welche Elemente zur Auswertung der Filtergleichung vom Berichtsprozessor verwendet werden.  
   
-|Operator|Aktion|  
+|Operator|Action|  
 |--------------|------------|  
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Vergleicht den Ausdruck mit einem Wert.|  
 |**TopN, BottomN**|Vergleicht den Ausdruck mit einem **Integer** -Wert.|  

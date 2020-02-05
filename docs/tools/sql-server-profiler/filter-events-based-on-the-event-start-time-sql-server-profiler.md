@@ -1,30 +1,28 @@
 ---
-title: Filtern von Ereignissen anhand der Ereignisstartzeit (SQL Server Profiler) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Filtern von Ereignissen basierend auf der Startzeit des Ereignisses
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- event start times [SQL Server]
-- filters [SQL Server], traces
-- traces [SQL Server], filters
-- traces [SQL Server], events
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1e0dddb26a2ea89635f995c5d1c270d1454b3b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: afdf2b5058e03e4539c46faa30fae1f7a2d6c98a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930000"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307245"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>Filtern von Ereignissen nach Ereignisstartzeit (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Ablaufverfolgungsereignisse basierend auf der Ereignisstartzeit filtern.  
+
+In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Ablaufverfolgungsereignisse basierend auf der Ereignisstartzeit filtern.  
   
 ### <a name="to-filter-an-event-based-on-the-event-start-time"></a>So filtern Sie ein Ereignis basierend auf der Ereignisstartzeit  
   
