@@ -13,10 +13,10 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c85d6e423c63337be4d2eaf2f96c420a4f6ad33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067343"
 ---
 # <a name="modified-features-contained-database"></a>Geänderte Funktionen (Enthaltene Datenbank)
@@ -46,13 +46,13 @@ ms.locfileid: "68067343"
  Temporäre Tabellen dürfen nicht auf benutzerdefinierte Typen, XML-Schemaauflistungen und benutzerdefinierte Funktionen verweisen.  
   
 ## <a name="collation"></a>Sortierung  
- Im Modell der nicht enthaltenen Datenbank sind drei separate Sortierungstypen vorhanden: Datenbanksortierung, Instanzsortierung und TempDB-Sortierung. In enthaltenen Datenbanken hingegen werden nur zwei Sortierungen verwendet: die Datenbanksortierung und die neue Katalogsortierung. Weitere Details zur Sortierung in eigenständigen Datenbanken finden Sie unter [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) .  
+ Im abhängigen Datenbankmodell sind drei separate Sortierungstypen vorhanden: Datenbanksortierung, Instanzsortierung und tempdb-Sortierung. In enthaltenen Datenbanken hingegen werden nur zwei Sortierungen verwendet: die Datenbanksortierung und die neue Katalogsortierung. Weitere Details zur Sortierung in eigenständigen Datenbanken finden Sie unter [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) .  
   
 ## <a name="user-options"></a>user options  
  Beim Aktivieren eigenständiger Datenbanken muss die [Benutzeroptionen-Option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auf 0 (null) festgelegt sein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Contained Databases](../../relational-databases/databases/contained-databases.md)  
+ [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)  
   
   

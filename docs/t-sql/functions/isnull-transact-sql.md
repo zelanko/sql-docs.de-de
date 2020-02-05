@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843637"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73843637"
 
 Ersetzt NULL durch den angegebenen Ersatzwert.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,7 +52,7 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt denselben Typ wie der Ausdruck *check_expression* zurück. Wenn ein literaler NULL-Wert als *check_expression* bereitgestellt wird, wird der Datentyp des Ersatzwerts *replacement_value* zurückgegeben. Wenn ein literaler NULL-Wert als *check_expression* bereitgestellt wird und kein *replacement_value* bereitgestellt wird, wird **int** zurückgegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Wert von *check_expression* wird zurückgegeben, wenn er nicht NULL ist, andernfalls wird *replacement_value* zurückgegeben, nachdem er implizit in den Typ von *check_expression* konvertiert wurde, falls die Typen unterschiedlich sind. *replacement_value* kann gekürzt werden, wenn *replacement_value* länger als *check_expression* ist.  
   
 > [!NOTE]  
@@ -93,23 +93,23 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|  und Beschreibung       |  DiscountPct    |   MinQty    |   Höchstmenge       |
+|  BESCHREIBUNG       |  DiscountPct    |   MinQty    |   Höchstmenge       |
 |  ---------------   |  -------------  |   --------  |   ---------------    |
 |  No Discount       |  0.00           |   0         |   0                  |
 |  Volume Discount   |  0,02           |   11        |   14                 |
 |  Volume Discount   |  0.05           |   15        |   4                  |
 |  Volume Discount   |  0,10           |   25        |   0                  |
-|  Volume Discount   |  0.15           |   41        |   0                  |
+|  Volume Discount   |  0,15           |   41        |   0                  |
 |  Volume Discount   |  0,20           |   61        |   0                  |
 |  Mountain-100 Cl   |  0,35           |   0         |   0                  |
 |  Sport Helmet Di   |  0,10           |   0         |   0                  |
 |  Road-650 Overst   |  0,30           |   0         |   0                  |
-|  Mountain Tire S   |  0.50           |   0         |   0                  |
-|  Sport Helmet Di   |  0.15           |   0         |   0                  |
+|  Mountain Tire S   |  0,50           |   0         |   0                  |
+|  Sport Helmet Di   |  0,15           |   0         |   0                  |
 |  LL Road Frame S   |  0,35           |   0         |   0                  |
-|  Touring-3000 Pr   |  0.15           |   0         |   0                  |
+|  Touring-3000 Pr   |  0,15           |   0         |   0                  |
 |  Touring-1000 Pr   |  0,20           |   0         |   0                  |
-|  Half-Price Peda   |  0.50           |   0         |   0                  |
+|  Half-Price Peda   |  0,50           |   0         |   0                  |
 |  Mountain-500 Si   |  0,40           |   0         |   0                  |
 
  `(16 row(s) affected)`  
@@ -126,9 +126,9 @@ WHERE Weight IS NULL;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-isnull-with-avg"></a>D. Verwenden von ISNULL mit AVG  
+### <a name="d-using-isnull-with-avg"></a>D: Verwenden von ISNULL mit AVG  
  Im folgenden Beispiel wird das Durchschnittsgewicht aller Produkte in der selben Tabelle gesucht. Alle NULL-Einträge in der `50`-Spalte der `Weight`-Tabelle werden durch den Wert `Product` ersetzt.  
   
 ```  
@@ -170,7 +170,7 @@ ORDER BY ResellerName;
 |  Acceptable Sales & Service  |     0,0000         |
   
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. Verwenden von IS NULL für die Überprüfung auf NULL in einer WHERE-Klausel  
- Im folgenden Beispiel werden alle Produkte gesucht, die in der `Weight`-Spalte `NULL` enthalten. Beachten Sie den Leerraum zwischen `IS` und `NULL`.  
+ Im folgenden Beispiel werden alle Produkte gesucht, die in der `NULL`-Spalte `Weight` enthalten. Beachten Sie den Leerraum zwischen `IS` und `NULL`.  
   
 ```  
 -- Uses AdventureWorks  

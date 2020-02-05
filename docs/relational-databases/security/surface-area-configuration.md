@@ -18,10 +18,10 @@ ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d366634dcfc81fc62dded3205320fca53b193b52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127065"
 ---
 # <a name="surface-area-configuration"></a>Oberflächenkonfiguration
@@ -61,7 +61,7 @@ ms.locfileid: "68127065"
   
  Verwenden Sie die richtlinienbasierte Verwaltung, um die Konfiguration eines Facets in regelmäßigen Abständen zu überprüfen. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
- Sie können [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Optionen auch mit der gespeicherten Prozedur **sp_configure** festlegen. Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
+ Sie können [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optionen auch mit der gespeicherten Prozedur **sp_configure** festlegen. Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
  Verwenden Sie die Eigenschaftseinstellungen in **, um die** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs.md)]-Eigenschaft von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu ändern. Bearbeiten Sie die Konfigurationsdatei **RSReportServer.config** , um die Eigenschaften **Geplante Ereignisse und Berichtsübermittlung** und **Webdienst und HTTP-Zugriff** zu ändern.  
   

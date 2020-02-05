@@ -23,10 +23,10 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982954"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982954"
 
   Wertet die gültige Berechtigung des aktuellen Benutzers für ein sicherungsfähiges Element aus. Eine verwandte Funktion ist [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -72,7 +72,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  Gibt NULL zurück, wenn die Abfrage einen Fehler erzeugt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese integrierte Funktion testet, ob der aktuelle Prinzipal eine bestimmte gültige Berechtigung für ein bestimmtes sicherungsfähiges Element aufweist. HAS_PERMS_BY_NAME gibt 1 zurück, wenn der Benutzer über eine gültige Berechtigung für das sicherungsfähige Element verfügt, 0, wenn der Benutzer über keine gültige Berechtigung für das sicherungsfähige Element verfügt, und NULL, wenn die sicherungsfähige Klasse oder die Berechtigung nicht gültig ist. Bei einer gültigen Berechtigung kann es sich um Folgendes handeln:  
   
 -   Eine Berechtigung, die dem Prinzipal direkt gewährt und nicht verweigert wurde.  
@@ -125,7 +125,7 @@ SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
 ```  
   
-### <a name="d-does-database-principal-pd-have-any-permission-in-the-current-database"></a>D. Hat der Pd-Datenbankprinzipal Berechtigungen in der aktuellen Datenbank?  
+### <a name="d-does-database-principal-pd-have-any-permission-in-the-current-database"></a>D: Hat der Pd-Datenbankprinzipal Berechtigungen in der aktuellen Datenbank?  
  Angenommen, der Aufrufer hat die IMPERSONATE-Berechtigung für den `Pd`-Prinzipal.  
   
 ```  

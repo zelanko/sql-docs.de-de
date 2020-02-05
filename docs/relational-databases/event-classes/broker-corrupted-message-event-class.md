@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0cd8504379475bd14e873c0d499a0c2c64d17928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999734"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message-Ereignisklasse
@@ -27,7 +27,7 @@ ms.locfileid: "67999734"
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Datenspalten der Broker:Corrupted Message-Ereignisklasse  
   
-|Datenspalte|Typ|und Beschreibung|Spaltennummer|Filterbar|  
+|Datenspalte|type|BESCHREIBUNG|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |**BigintData1**|**bigint**|Die Sequenznummer dieser Nachricht.|52|Nein|  
@@ -46,14 +46,14 @@ ms.locfileid: "67999734"
 |**NTDomainName**|**nvarchar**|Die Windows-Domäne, der der Benutzer angehört.|7|Ja|  
 |**NTUserName**|**nvarchar**|Der Name des Benutzers, der Besitzer der Verbindung ist, die dieses Ereignis generiert hat.|6|Ja|  
 |**ObjectName**|**nvarchar**|Der Dienstname der anderen Seite der Konversation und die Verbindungszeichenfolge, die die Remotedatenbank verwendet hat, um eine Verbindung mit dieser Datenbank herzustellen.|34|Nein|  
-|**RoleName**|**nvarchar**|Die Rolle des Endpunktes, der diese Nachricht empfängt. Einer der folgenden Werte:<br /><br /> **Initiator**: Der empfangende Endpunkt ist der Initiator der Konversation.<br /><br /> **Ziel**:                 Der empfangende Endpunkt ist das Ziel der Konversation.|38|Nein|  
+|**RoleName**|**nvarchar**|Die Rolle des Endpunktes, der diese Nachricht empfängt. Einer der folgenden Werte:<br /><br /> **Initiator**: Der empfangende Endpunkt ist der Initiator der Konversation.<br /><br /> **Ziel**: Der empfangende Endpunkt ist das Ziel der Konversation.|38|Nein|  
 |**ServerName**|**nvarchar**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
 |**Severity**|**int**|Wenn ein Fehler bewirkt hat, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Nachricht gelöscht hat, der Schweregrad des Fehlers.|29|Nein|  
 |**SPID**|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|Ja|  
 |**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|Ja|  
-|**Status**|**int**|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann mithilfe dieses Statuscodes herausfinden, wo das Ereignis generiert wurde.|30|Nein|  
+|**State**|**int**|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann mithilfe dieses Statuscodes herausfinden, wo das Ereignis generiert wurde.|30|Nein|  
 |**TextData**|**ntext**|Beschreibung der erkannten Beschädigung|1|Ja|  
-|**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
+|**Transaction ID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
   
  Die **TextData** -Spalte dieses Ereignisses enthält eine Nachricht, die das Problem mit der Nachricht beschreibt.  
   

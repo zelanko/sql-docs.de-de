@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228430"
 ---
 # <a name="common-errors-with-database-mail"></a>Häufige Fehler mit Datenbank-E-Mail 
@@ -44,7 +44,7 @@ EXEC dbo.sp_send_dbmail ...
 Verwenden Sie den [Assistenten zum Konfigurieren von Datenbank-E-Mail](configure-database-mail.md) zum Aktivieren und Konfigurieren von Datenbank-E-Mail.
 
 ## <a name="profile-not-valid"></a>Profil nicht gültig
-Für diese Fehlermeldung gibt es zwei mögliche Ursachen. Entweder ist das angegebene Profil nicht vorhanden, oder der Benutzer, der [sp_send_dbmail (Transact-SQL)](../system-stored-procedures/sp-send-dbmail-transact-sql.md) ausführt, hat keine Zugriffsberechtigung für das Profil.
+Für diese Fehlermeldung gibt es zwei mögliche Ursachen: Entweder ist das angegebene Profil nicht vorhanden, oder der Benutzer, der [sp_send_dbmail (Transact-SQL)](../system-stored-procedures/sp-send-dbmail-transact-sql.md) ausführt, hat keine Zugriffsberechtigung für das Profil.
 
 Um Berechtigungen für ein Profil zu überprüfen, führen Sie die gespeicherte Prozedur [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) mit dem Namen des Profils aus. Verwenden Sie die gespeicherte Prozedur [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) oder den [Assistenten zum Konfigurieren von Datenbank-E-Mail](configure-database-mail.md), um einem msdb-Benutzer oder einer msdb-Gruppe die Berechtigung zum Zugriff auf ein Profil zu gewähren.
 

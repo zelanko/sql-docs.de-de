@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 918619afd0b07c6d7b8e5d3ccef526da5f4d8fad
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822122"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Konfigurieren eines Listeners für Always On-Verfügbarkeitsgruppen
@@ -68,8 +68,8 @@ ms.locfileid: "74822122"
   
 |Berechtigungen|Link|  
 |-----------------|----------|  
-|Das Clusternamenobjekt (CNO) des WSFC-Clusters, der die Verfügbarkeitsgruppe hostet, muss über die Berechtigung zum **Erstellen von Computerobjekten** verfügen.<br /><br /> Standardmäßig weist ein CNO in Active Directory die Berechtigung zum **Erstellen von Computerobjekten** nicht explizit auf und kann 10 virtuelle Computerobjekte (Virtual Computer Objects, VCOs) erstellen. Nach der Erstellung von 10 VCOs können keine weiteren VCOs erstellt werden. Sie können das vermeiden, indem Sie dem CNO des WSFC-Clusters die Berechtigung explizit erteilen. Beachten Sie, dass VCOs gelöschter Verfügbarkeitsgruppen in Active Directory nicht automatisch gelöscht werden. Sie werden auf die Standardbeschränkung von 10 VCOs angerechnet, sofern sie nicht manuell gelöscht werden.<br /><br /> Hinweis: In einigen Organisationen verhindert die Sicherheitsrichtlinie, dass einzelnen Benutzerkonten die Berechtigung zum **Erstellen von Computerobjekten** erteilt wird.|*Schritte für die Konfiguration des Kontos für den Benutzer, der den Cluster installiert* unter [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Ausführliche Anleitung zu Failoverclustern: Konfigurieren von Konten in Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Schritte für die Vorabbereitstellung des Clusternamenkontos* unter [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Ausführliche Anleitung zu Failoverclustern: Konfigurieren von Konten in Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|Falls in der Organisation erforderlich ist, dass das Computerkonto für den Namen eines virtuellen Listenernetzwerks vorab bereitgestellt wird, müssen Sie Mitglied der Gruppe **Account Operator** sein oder den Domänenadministrator um Unterstützung bitten.|*Schritte für die Vorabbereitstellung eines Kontos für einen Clusterdienst oder eine Clusteranwendung* unter [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Ausführliche Anleitung zu Failoverclustern: Konfigurieren von Konten in Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)|  
+|Das Clusternamenobjekt (CNO) des WSFC-Clusters, der die Verfügbarkeitsgruppe hostet, muss über die Berechtigung zum **Erstellen von Computerobjekten** verfügen.<br /><br /> Standardmäßig weist ein CNO in Active Directory die Berechtigung zum **Erstellen von Computerobjekten** nicht explizit auf und kann 10 virtuelle Computerobjekte (Virtual Computer Objects, VCOs) erstellen. Nach der Erstellung von 10 VCOs können keine weiteren VCOs erstellt werden. Sie können das vermeiden, indem Sie dem CNO des WSFC-Clusters die Berechtigung explizit erteilen. Beachten Sie, dass VCOs gelöschter Verfügbarkeitsgruppen in Active Directory nicht automatisch gelöscht werden. Sie werden auf die Standardbeschränkung von 10 VCOs angerechnet, sofern sie nicht manuell gelöscht werden.<br /><br /> Hinweis: In einigen Organisationen verhindert die Sicherheitsrichtlinie, dass einzelnen Benutzerkonten die Berechtigung zum **Erstellen von Computerobjekten** erteilt wird.|*Schritte für die Konfiguration des Kontos für den Benutzer, der den Cluster installiert* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Schritte für die Vorabbereitstellung des Clusternamenkontos* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|Falls in der Organisation erforderlich ist, dass das Computerkonto für den Namen eines virtuellen Listenernetzwerks vorab bereitgestellt wird, müssen Sie Mitglied der Gruppe **Account Operator** sein oder den Domänenadministrator um Unterstützung bitten.|*Schritte für die Vorabbereitstellung eines Kontos für einen gruppierten Dienst oder eine gruppierte Anwendung* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)(Schritt-für-Schritt-Anleitung für Failover Cluster: Konfigurieren von Konten in Active Directory).|  
   
 > [!TIP]  
 >  Im Allgemeinen ist es am einfachsten, das Computerkonto für den Namen eines virtuellen Listenernetzwerks nicht vorab bereitzustellen. Lassen Sie bei der Ausführung des Assistenten für die hohe WSFC-Verfügbarkeit nach Möglichkeit die automatische Erstellung und Konfiguration des Kontos zu.  
@@ -211,7 +211,7 @@ ms.locfileid: "74822122"
   
 -   [Active Directory-Kontingente](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="FollowUp"></a> Nächster Schritt: Nach dem Erstellen eines Verfügbarkeitsgruppenlisteners  
+##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen eines Verfügbarkeitsgruppenlisteners  
   
 ###  <a name="MultiSubnetFailover"></a> MultiSubnetFailover-Schlüsselwort und zugehörige Funktionen  
  **MultiSubnetFailover** ist ein neues Schlüsselwort für Verbindungszeichenfolgen, das ein schnelleres Failover bei Always On-Verfügbarkeitsgruppen und Always On-Failoverclusterinstanzen in SQL Server 2012 ermöglicht. Wenn in der Verbindungszeichenfolge `MultiSubnetFailover=True` festgelegt wird, werden die folgenden drei Teilfunktionen aktiviert:  
@@ -242,7 +242,7 @@ ms.locfileid: "74822122"
   
      **Vorteile:** Sie müssen den Clientverbindungs-Timeoutwert nicht erhöhen.  
   
-     **Nachteile:** Beim Auftreten eines subnetzübergreifenden Failovers kann die Clientwiederherstellungszeit 15 Minuten oder länger betragen, je nach Einstellung für **HostRecordTTL** bzw. siteübergreifendem DNS/AD-Replikationszeitplan.  
+     **Nachteile:** Beim Auftreten eines subnetzübergreifenden Failovers kann die Clientwiederherstellungszeit 15 Minuten oder länger betragen, je nach **HostRecordTTL** -Einstellung bzw. der Einstellung Ihres siteübergreifenden DNS/AD-Replikationszeitplans.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Einstellung RegisterAllProvidersIP  
  Bei der Erstellung eines Verfügbarkeitsgruppenlisteners über [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell, wird der Client Access Point in WSFC mit Festlegung der Eigenschaft **RegisterAllProvidersIP** auf 1 (TRUE) erstellt. Der Effekt dieses Eigenschaftswerts hängt gemäß den folgenden Angaben von der Clientverbindungszeichenfolge ab:  
@@ -305,7 +305,7 @@ Start-ClusterResource yourListenerName
   
         3.  Fügen Sie der WSCF-Verfügbarkeitsgruppenressource eine Abhängigkeit hinzu.  
   
-         Informationen zu den Dialogfeldern und Registerkarten im Failovercluster-Manager finden Sie unter [User Interface: The Failover Cluster Manager Snap-In (Benutzeroberfläche: das Failovercluster-Manager-Snap-In)](https://technet.microsoft.com/library/cc772502.aspx).  
+         Informationen zu den Dialogfeldern und Registerkarten im Failovercluster-Manager finden Sie unter [Benutzeroberfläche: Failovercluster-Manager (Snap-In)](https://technet.microsoft.com/library/cc772502.aspx).  
   
     -   **Windows PowerShell für Failovercluster:**  
   
@@ -331,7 +331,7 @@ Start-ClusterResource yourListenerName
   
 -   [How to create multiple listeners for same availability group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72304954"
 ---
 # <a name="hierarchical-data-sql-server"></a>Hierarchische Daten (SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "72304954"
   
 -   Vergleiche erfolgen in Tiefensuchreihenfolge  
   
-     Bei den beiden **hierarchyid**-Werten **a** und **b** bedeutet **a<b**, dass beim Durchlaufen der Struktur in der Tiefensuchreihenfolge a vor b kommt. Indizes für **hierarchyid**-Datentypen verwenden die Tiefensuchreihenfolge, und einander benachbarte Knoten werden bei der Tiefensuchreihenfolge nahe beieinander gespeichert. Einem Datensatz untergeordnete Datensätze werden zum Beispiel angrenzend an diesen Datensatz gespeichert.  
+     Bei den beiden **hierarchyid**-Werten **a** und **b** bedeutet **a<b**, dass beim Durchlaufen der Struktur in der Tiefensuchreihenfolge a vor b kommt. Indizes für **hierarchyid** -Datentypen verwenden die Tiefensuchreihenfolge, und einander benachbarte Knoten werden bei der Tiefensuchreihenfolge nahe beieinander gespeichert. Einem Datensatz untergeordnete Datensätze werden zum Beispiel angrenzend an diesen Datensatz gespeichert.  
   
 -   Unterstützung willkürlicher Einfüge- und Löschvorgänge  
   
@@ -163,7 +163,7 @@ GO
   
      In einem Breitensuchindex sind alle einem Knoten untergeordneten Knoten zusammen angeordnet. Daher sind Breitensuchindizes besonders effizient bei der Abfrage von unmittelbar untergeordneten Elementen, etwa bei Abfragen des Typs "Ermittle alle Angestellten, die direkt diesem Manager berichten".  
   
- Ob Sie einen Tiefen- oder Breitensuchindex verwenden und welchen Sie (wenn überhaupt) als Gruppierungsschlüssel definieren, hängt von der relativen Wichtigkeit der oben genanten Abfragetypen ab sowie von der relativen Wichtigkeit von SELECT- gegenüber DML-Vorgängen. Ein ausführliches Beispiel zu Indizierungsstrategien finden Sie unter [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Ob Sie einen Tiefen- oder Breitensuchindex verwenden und welchen Sie (wenn überhaupt) als Gruppierungsschlüssel definieren, hängt von der relativen Wichtigkeit der oben genanten Abfragetypen ab sowie von der relativen Wichtigkeit von SELECT- gegenüber DML-Vorgängen. Ein ausführliches Beispiel zu Indizierungsstrategien finden Sie unter [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Erstellen von Indizes  
@@ -540,7 +540,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [hierarchyid-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

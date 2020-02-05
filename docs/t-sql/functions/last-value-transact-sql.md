@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53053b4f2176a01970f433072634a49ec0d21eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109190"
 ---
-# <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
+# <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Gibt den letzten Wert in einer geordneten Wertemenge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,7 +58,7 @@ LAST_VALUE ( [ scalar_expression ] )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-lastvalue-over-partitions"></a>A. Partitionsweise Verwendung von LAST_VALUE  
+### <a name="a-using-last_value-over-partitions"></a>A. Partitionsweise Verwendung von LAST_VALUE  
  Im folgenden Beispiel wird das Einstellungsdatum des letzten Mitarbeiters in jeder Abteilung für das angegebene Gehalt ("Rate") zurückgegeben. Die PARTITION BY-Klausel partitioniert die Mitarbeiter nach Abteilung, und die LAST_VALUE-Funktion wird auf jede Partition separat angewendet. Die in der OVER-Klausel angegebene ORDER BY-Klausel bestimmt die logische Reihenfolge, in der die LAST_VALUE-Funktion auf die Zeilen in jeder Partition angewendet wird.  
   
 ```  
@@ -99,7 +99,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
 ```  
   
-### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. Verwenden von FIRST_VALUE und LAST_VALUE in einem berechneten Ausdruck  
+### <a name="b-using-first_value-and-last_value-in-a-computed-expression"></a>B. Verwenden von FIRST_VALUE und LAST_VALUE in einem berechneten Ausdruck  
  Im folgenden Beispiel werden die FIRST_VALUE-Funktion und die LAST_VALUE-Funktion in berechneten Ausdrücken verwendet, um den Unterschied zwischen den Verkaufszahlen für das laufende Quartal und das erste bzw. letzte Quartal des Jahres für eine bestimmte Anzahl von Mitarbeitern aufzuzeigen. Die FIRST_VALUE-Funktion gibt den Verkaufszahlenwert für das erste Quartal des Jahres zurück und subtrahiert diesen von den Verkaufszahlen für das aktuelle Quartal. Der Wert wird in der abgeleiteten Spalte mit dem Titel "DifferenceFromFirstQuarter" zurückgegeben. Für das erste Quartal eines Jahres ist der Wert der Spalte "DifferenceFromFirstQuarter" 0. Die LAST_VALUE-Funktion gibt den Verkaufszahlenwert für das letzte Quartal des Jahres zurück und subtrahiert diesen von den Verkaufszahlen für das aktuelle Quartal. Der Wert wird in der abgeleiteten Spalte mit dem Titel "DifferenceFromLastQuarter" zurückgegeben. Für das letzte Quartal eines Jahres ist der Wert der Spalte "DifferenceFromLastQuarter" 0.  
   
  Die Klausel „RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING“ muss in diesem Beispiel wie unten dargestellt für die Werte ungleich NULL in der Spalte „DifferenceFromLastQuarter“ zurückgegeben werden. Der Standardbereich lautet „RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW“. In diesem Beispiel führt die Verwendung dieses Standardbereichs (oder ausschließlich eines Bereichs, wodurch der Standardbereich verwendet wird) dazu, dass Nullen (0) in der Spalte "DifferenceFromLastQuarter" zurückgegeben werden. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  

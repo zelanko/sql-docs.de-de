@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e2f549af8bd9e594d14407fe16186ee5d308e546
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117630"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68117630"
 
   Gibt die Summe aller Werte oder nur der DISTINCT-Werte im Ausdruck zurück. SUM kann nur bei numerischen Spalten verwendet werden. NULL-Werte werden ignoriert.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -178,7 +178,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-a-simple-sum-example"></a>C. Ein einfaches SUM-Beispiel  
  Im folgenden Beispiel wird die Gesamtanzahl der einzelnen verkauften Produkte im Jahr 2003 zurückgegeben.  
@@ -206,7 +206,7 @@ ProductKey  TotalPerProduct
 225          7956.1500
  ```
   
-### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. Berechnen von Gesamtsummen für Gruppen mit mehr als einer Spalte  
+### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D: Berechnen von Gesamtsummen für Gruppen mit mehr als einer Spalte  
  Im folgenden Beispiel wird die Summe von `ListPrice` und `StandardCost` für jede in der `Product`-Tabelle aufgeführte Farbe berechnet.  
   
 ```  

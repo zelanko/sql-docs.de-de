@@ -11,10 +11,10 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 36d73a0248be0bd8f9a0873e5ae8445ee68af2e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295281"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB-Datenbank)
@@ -64,7 +64,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -88,9 +88,9 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
--   Wenn kein *value_type* angegeben ist, wird standardmäßig ein Literalwert für *parameter_value* verwendet. Wenn ein Literalwert verwendet wird, wird *value_set* in der [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) -Sicht auf `1`. Ein NULL-Parameterwert ist nicht zulässig.  
+-   Wenn kein *value_type* angegeben ist, wird standardmäßig ein Literalwert für *parameter_value* verwendet. Wenn ein Literalwert verwendet wird, wird *value_set* in der Sicht [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) auf `1` festgelegt. Ein NULL-Parameterwert ist nicht zulässig.  
   
 -   Wenn *value_type* das Zeichen `R`enthält, das einen Wert bezeichnet, auf den verwiesen wird, verweist *parameter_value* auf den Namen einer Umgebungsvariablen.  
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009421"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten
@@ -53,13 +53,13 @@ ms.locfileid: "70009421"
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] fügt diese neuen Funktionen hinzu.
 
-### <a name="functional"></a>Funktionell
+### <a name="functional"></a>Funktionen
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützt nichtpersistierte berechnete Spalten in gruppierten Columnstore-Indexen. Persistierte berechnete Spalten werden in gruppierten Columnstore-Indizes nicht unterstützt. Sie können keinen nicht gruppierten Index für einen Columnstore-Index erstellen, der berechnete Spalten umfasst. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fügt wichtige Verbesserungen hinzu, um die Leistung und Flexibilität von Columnstore-Indizes zu erhöhen. Dies verbessert die Data Warehouse-Szenarios und ermöglicht operative Echtzeitanalysen.  
   
-### <a name="functional"></a>Funktionell  
+### <a name="functional"></a>Funktionen  
   
 -   Eine Rowstore-Tabelle kann über einen aktualisierbaren nicht gruppierten Columnstore-Index verfügen. Bisher war der nicht gruppierte Columnstore-Index schreibgeschützt.  
   

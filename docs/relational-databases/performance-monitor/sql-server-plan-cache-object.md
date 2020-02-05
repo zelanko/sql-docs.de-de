@@ -14,10 +14,10 @@ ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a181919a40ce2e53c9fef9887f5c7ec6ff93fc5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130846"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, Plancache-Objekt
@@ -26,7 +26,7 @@ ms.locfileid: "68130846"
   
  In dieser Tabelle werden die **SQLServer:Plancache**Leistungsindikatoren beschrieben.  
   
-|SQL Server, Plancache-Leistungsindikatoren|und Beschreibung|  
+|SQL Server, Plancache-Leistungsindikatoren|BESCHREIBUNG|  
 |------------------------------------|-----------------|  
 |**Cachetrefferquote**|Das Verhältnis zwischen Cachetreffern und -suchvorgängen.|  
 |**Basis für Cachetrefferquote**|Nur zur internen Verwendung.| 
@@ -36,7 +36,7 @@ ms.locfileid: "68130846"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Plancache-Instanz|und Beschreibung|  
+|Plancache-Instanz|BESCHREIBUNG|  
 |-------------------------|-----------------|  
 |**_Total**|Informationen zu allen Typen von Cacheinstanzen.|  
 |**Sql-Pläne**|Abfragepläne, die von einer Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, einschließlich automatisch parametrisierten Abfragen, oder durch [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen generiert wurden, die mit **sp_prepare** oder **sp_cursorprepare**vorbereitet wurden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert die Pläne für Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen für die spätere Wiederverwendung zwischen, wenn die identische [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung später ausgeführt wird. Vom Benutzer parametrisierte Abfragen (selbst wenn sie nicht ausdrücklich vorbereitet sind) werden ebenfalls mit Prepared SQL Plans überwacht.|  

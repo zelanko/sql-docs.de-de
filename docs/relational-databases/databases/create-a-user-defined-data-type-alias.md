@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909118"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Erstellen eines benutzerdefinierten Datentypalias
@@ -33,7 +33,7 @@ ms.locfileid: "72909118"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie einen benutzerdefinierten Datentypalias mit:**  
   
@@ -61,10 +61,10 @@ ms.locfileid: "72909118"
      **NULL-Werte zulassen**  
      Geben Sie an, ob der benutzerdefinierte Datentyp NULL-Werte akzeptieren kann. Die NULL-Zulässigkeit eines vorhandenen benutzerdefinierten Datentyps ist nicht bearbeitbar.  
   
-     **Data type**  
+     **Datentyp**  
      Wählen Sie den Basisdatentyp aus dem Listenfeld aus. Im Listenfeld werden alle Datentypen mit Ausnahme der Datentypen **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** und **xml** angezeigt. Der Datentyp eines vorhandenen benutzerdefinierten Datentyps ist nicht bearbeitbar.  
   
-     **Default**  
+     **Standard**  
      Wählen Sie optional einen Standardwert aus, um den benutzerdefinierten Datentypalias zu binden.  
   
      **Länge/Genauigkeit**  
@@ -75,16 +75,16 @@ ms.locfileid: "72909118"
      **Name**  
      Wenn Sie einen neuen benutzerdefinierten Datentypalias erstellen, geben Sie einen eindeutigen Namen ein, der in der gesamten Datenbank verwendet werden soll, um den benutzerdefinierten Datentyp darzustellen. Die maximale Zeichenanzahl muss dem Systemdatentyp **sysname** entsprechen. Der Name eines vorhandenen benutzerdefinierten Datentypalias ist nicht bearbeitbar.  
   
-     **Rule**  
+     **Regel**  
      Wählen Sie optional eine Regel zum Binden an den benutzerdefinierten Datentypalias aus.  
   
-     **Dezimalstellen**  
+     **Skalieren**  
      Gibt an, wie viele Dezimalstellen (Ziffern nach dem Dezimalzeichen) maximal gespeichert werden können.  
   
      **Schema**  
      Wählen Sie ein Schema aus einer Liste mit allen für den aktuellen Benutzer verfügbaren Schemas aus. Die Standardauswahl ist das Standardschema für den aktuellen Benutzer.  
   
-     **Speicherung**  
+     **Storage**  
      Zeigt die maximale Speichergröße für den benutzerdefinierten Datentypalias an. Die maximalen Speicherplatzgrößen variieren in Abhängigkeit von der Genauigkeit.  
   
     |||  

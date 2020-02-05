@@ -13,10 +13,10 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1ae22daf218c65bc0aa95068d6162a7b966c838c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298521"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Suchtransformation im Vollcachemodus – Cacheverbindungs-Manager
@@ -53,7 +53,7 @@ ms.locfileid: "71298521"
   
 -   Konfigurieren Sie die Cacheverbindungs-Manager in verschiedenen Paketen, um die gleiche Cachedatei zu verwenden.  
   
- Weitere Informationen finden Sie in folgenden Themen:  
+ Weitere Informationen finden Sie in den folgenden Themen:  
   
 -   [Cachetransformation](../../integration-services/data-flow/transformations/cache-transform.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71298521"
   
 -   [Sequenzcontainer](../../integration-services/control-flow/sequence-container.md)  
   
- Ein Video zur Veranschaulichung der Implementierung einer Transformation für Suche im Vollcachemodus mithilfe des Cacheverbindungs-Managers finden Sie unter [Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Ein Video zur Veranschaulichung der Implementierung einer Transformation für Suche im Vollcachemodus mithilfe des Cacheverbindungs-Managers finden Sie unter [Gewusst wie: Implementieren einer Suchtransformation im Vollcachemodus (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>So implementieren Sie eine Transformation für Suche im Vollcachemodus in einem Paket mit dem Cacheverbindungs-Manager und einer Datenquelle im Datenfluss  
   
@@ -126,7 +126,7 @@ ms.locfileid: "71298521"
   
     8.  Wählen Sie Spalten aus der Liste **Verfügbare Suchspalten** aus. Geben Sie dann in der Liste **Suchvorgang** an, ob die Werte aus den Suchspalten Werte in der Eingabespalte ersetzen oder in eine neue Spalte geschrieben werden.  
   
-    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
   
     10. Klicken Sie auf **OK** , um die Änderungen an der Transformation für Suche zu speichern.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71298521"
   
     8.  Wählen Sie Spalten aus der Liste **Verfügbare Suchspalten** aus. Geben Sie dann in der Liste **Suchvorgang** an, ob die Werte aus den Suchspalten Werte in der Eingabespalte ersetzen oder in eine neue Spalte geschrieben werden.  
   
-    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
   
     10. Klicken Sie auf **OK** , um die Änderungen an der Transformation für Suche zu speichern.  
   
@@ -277,7 +277,7 @@ ms.locfileid: "71298521"
   
     8.  Wählen Sie Spalten aus der Liste **Verfügbare Suchspalten** aus. Geben Sie dann in der Liste **Suchvorgang** an, ob die Werte aus den Suchspalten Werte in der Eingabespalte ersetzen oder in eine neue Spalte geschrieben werden.  
   
-    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
   
     10. Klicken Sie auf **OK** , um die Änderungen an der Transformation für Suche zu speichern.  
   

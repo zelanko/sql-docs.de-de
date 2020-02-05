@@ -22,10 +22,10 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 52acb1db548f6425dcfaf6339d38a4b55e57b76e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297949"
 ---
 # <a name="export-column-transformation"></a>Transformation für das Exportieren von Spalten
@@ -38,16 +38,16 @@ ms.locfileid: "71297949"
 ## <a name="append-and-truncate-options"></a>Optionen zum Anfügen und Abschneiden  
  In der folgenden Tabelle wird beschrieben, wie die Einstellungen für die Optionen zum Anfügen und Abschneiden die Ergebnisse beeinflussen.  
   
-|Anfügen|Abschneiden|Die Datei ist vorhanden|Ergebnisse|  
+|Anfügen|Truncate|Die Datei ist vorhanden|Ergebnisse|  
 |------------|--------------|-----------------|-------------|  
 |False|False|Nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
-|Wahr|False|Nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
-|False|Wahr|Nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
-|Wahr|Wahr|Nein|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
+|True|False|Nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
+|False|True|Nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
+|True|True|Nein|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
 |False|False|Ja|Ein Laufzeitfehler tritt auf. Die Datei ist vorhanden, aber die Transformation kann nicht in diese schreiben.|  
-|False|Wahr|Ja|Die Transformation löscht die Datei und erstellt sie neu und schreibt die Daten in diese Datei.|  
-|Wahr|False|Ja|Die Transformation öffnet die Datei und fügt die Daten am Dateiende an.|  
-|Wahr|Wahr|Ja|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
+|False|True|Ja|Die Transformation löscht die Datei und erstellt sie neu und schreibt die Daten in diese Datei.|  
+|True|False|Ja|Die Transformation öffnet die Datei und fügt die Daten am Dateiende an.|  
+|True|True|Ja|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>Konfiguration der Transformation für das Exportieren von Spalten  
  Es gibt folgende Möglichkeiten, um die Transformation für das Exportieren von Spalten zu konfigurieren:  
@@ -61,7 +61,7 @@ ms.locfileid: "71297949"
     > [!NOTE]  
     >  Eine BOM wird nur geschrieben, wenn die Daten nicht an eine vorhandene Datei angefügt werden und die Daten vom DT_NTEXT-Datentyp sind.  
   
- Die Transformation verwendet Eingabespaltenpaare: Eine Spalte enthält einen Dateinamen, die andere Daten. In jeder Zeile des Datasets kann eine andere Datei angegeben sein. Beim Verarbeiten einer Zeile durch die Transformation werden die Daten in die angegebene Datei eingefügt. Zur Laufzeit erstellt die Transformation die Dateien, falls sie noch nicht vorhanden sind. Anschließend schreibt die Transformation die Daten in die Dateien. Die zu schreibenden Daten müssen den Datentyp DT_TEXT, DT_NTEXT oder DT_IMAGE aufweisen. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Die Transformation verwendet Eingabespaltenpaare: Eine Spalte enthält einen Dateinamen, die andere Spalte enthält Daten. In jeder Zeile des Datasets kann eine andere Datei angegeben sein. Beim Verarbeiten einer Zeile durch die Transformation werden die Daten in die angegebene Datei eingefügt. Zur Laufzeit erstellt die Transformation die Dateien, falls sie noch nicht vorhanden sind. Anschließend schreibt die Transformation die Daten in die Dateien. Die zu schreibenden Daten müssen den Datentyp DT_TEXT, DT_NTEXT oder DT_IMAGE aufweisen. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Diese Transformation weist eine Eingabe, eine Ausgabe und eine Fehlerausgabe auf.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "71297949"
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71297949"
 ## <a name="export-column-transformation-editor-columns-page"></a>Transformations-Editor für das Exportieren von Spalten (Seite Spalten)
   Auf der Seite **Spalten** des Dialogfelds **Transformations-Editor für das Exportieren von Spalten** können Sie die Spalten im Datenfluss angeben, die in Dateien extrahiert werden sollen. Sie können angeben, ob die Daten durch die Transformation für das Exportieren von Spalten an eine Datei angefügt werden, oder ob eine vorhandene Datei mit den Daten überschrieben wird.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Spalte extrahieren**  
  Wählen Sie Spalten aus der Liste der Eingabespalten aus, die Text- oder Bilddaten enthalten. Alle Zeilen sollten Definitionen für **Spalte extrahieren** und **Dateipfadspalte**aufweisen.  
   
@@ -86,10 +86,10 @@ ms.locfileid: "71297949"
  Wählen Sie Spalten aus der Liste der Eingabespalten aus, die Dateipfade und Dateinamen enthalten. Alle Zeilen sollten Definitionen für **Spalte extrahieren** und **Dateipfadspalte**aufweisen.  
   
  **Anfügen zulassen**  
- Geben Sie an, ob Daten durch die Transformation an vorhandene Dateien angefügt werden sollen. Der Standardwert ist **false**.  
+ Geben Sie an, ob Daten durch die Transformation an vorhandene Dateien angefügt werden sollen. Die Standardeinstellung ist **false**.  
   
  **Abschneiden erzwingen**  
- Geben Sie an, ob die Inhalte vorhandener Dateien vor dem Schreiben der Daten durch die Transformation gelöscht werden sollen. Der Standardwert ist **false**.  
+ Geben Sie an, ob die Inhalte vorhandener Dateien vor dem Schreiben der Daten durch die Transformation gelöscht werden sollen. Die Standardeinstellung ist **false**.  
   
  **Bytereihenfolge-Marke schreiben**  
  Geben Sie an, ob eine Bytereihenfolge-Marke in die Datei geschrieben werden soll. Eine Bytereihenfolge-Marke wird nur geschrieben, wenn die Daten den Datentyp **DT_NTEXT** oder DT_WSTR aufweisen und nicht an eine vorhandene Datendatei angefügt werden.  
@@ -97,7 +97,7 @@ ms.locfileid: "71297949"
 ## <a name="export-column-transformation-editor-error-output-page"></a>Transformations-Editor für das Exportieren von Spalten (Seite Fehlerausgabe)
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Transformations-Editor für das Exportieren von Spalten** geben Sie Optionen für die Fehlerbehandlung an.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigen Sie den Namen der Ausgabe an. Klicken Sie auf den Namen, um die Sicht zu erweitern und Spalten einzuschließen.  
   

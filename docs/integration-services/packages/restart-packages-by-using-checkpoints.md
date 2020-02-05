@@ -15,10 +15,10 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 88893b16dcb6e0529f166ab3c6e3f255110b6f71
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295776"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Neustarten von Paketen mit Prüfpunkten
@@ -57,7 +57,7 @@ ms.locfileid: "71295776"
   
  In der folgenden Tabelle sind die Paketeigenschaften aufgeführt, die Sie zum Implementieren von Prüfpunkten festlegen können.  
   
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |CheckpointFileName|Gibt den Namen der Prüfpunktdatei an.|  
 |CheckpointUsage|Gibt an, ob Prüfpunkte verwendet werden.|  
@@ -70,14 +70,14 @@ ms.locfileid: "71295776"
 ### <a name="checkpoint-usage"></a>Syntax von Prüfpunkten  
  Die CheckpointUsage-Eigenschaft kann auf die folgenden Werte festgelegt werden:  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Never**|Gibt an, dass die Prüfpunktdatei nicht verwendet wird und dass das Paket vom Beginn des Paketworkflows aus ausgeführt wird.|  
 |**Always**|Gibt an, dass die Prüfpunktdatei immer verwendet wird und dass das Paket von dem Punkt aus neu gestartet wird, an dem bei der letzten Ausführung ein Fehler aufgetreten ist. Wenn die Prüfpunktdatei nicht gefunden wird, schlägt das Paket fehl.|  
 |**IfExists**|Gibt an, dass die Prüfpunktdatei verwendet wird, falls sie vorhanden ist. Wenn die Prüfpunktdatei vorhanden ist, wird das Paket an dem Punkt neu gestartet, an dem bei der letzten Ausführung ein Fehler aufgetreten ist; anderenfalls wird das Paket vom Beginn des Paketworkflows aus ausgeführt.|  
   
 > [!NOTE]  
->  Das Festlegen der Prüfpunktausführungsoption **/CheckPointing** von dtexec auf „on“ entspricht der **SaveCheckpoints** -Eigenschaft des Pakets **TRUE**oder der **CheckpointUsage** -Eigenschaft „Immer“. Weitere Informationen finden Sie unter [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+>  Das Festlegen der Prüfpunktausführungsoption **/CheckPointing** von dtexec auf „on“ entspricht der **SaveCheckpoints** -Eigenschaft des Pakets **TRUE**oder der **CheckpointUsage** -Eigenschaft „Immer“. Weitere Informationen finden Sie [hier](../../integration-services/packages/dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Sichern von Prüfpunktdateien  
  Der Schutz auf Paketebene schließt nicht den Schutz von Prüfpunktdateien ein. Daher müssen diese Dateien separat gesichert werden. Prüfpunktdaten können nur im Dateisystem gespeichert werden. Sie sollten daher eine Zugriffssteuerungsliste (ACL, Access Control List) des Betriebssystems verwenden, um den Speicherort der Datei bzw. den Ordner, in dem die Datei gespeichert wird, zu sichern. Prüfpunktdateien sollten unbedingt gesichert werden, da sie Informationen zum Paketstatus enthalten, einschließlich der aktuellen Variablenwerte. Beispielsweise kann eine Variable ein Recordset mit mehreren Zeilen privater Daten, wie z. B. Telefonnummern, enthalten. Weitere Informationen finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../../integration-services/security/security-overview-integration-services.md#files).  

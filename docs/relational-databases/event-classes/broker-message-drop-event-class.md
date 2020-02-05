@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad62ae2b8e9b62e209900df47dfbba9d30557cb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999636"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable-Ereignisklasse
@@ -27,9 +27,9 @@ ms.locfileid: "67999636"
   
 ## <a name="brokermessage-undeliverable-event-class-data-columns"></a>Broker:Message Undeliverable-Ereignisklasse – Datenspalten  
   
-|Datenspalte|Typ|und Beschreibung|Spaltennummer|Filterbar|  
+|Datenspalte|type|BESCHREIBUNG|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|**nvarchar**|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
+|**Anwendungsname**|**nvarchar**|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |**BigintData1**|**bigint**|Die Sequenznummer der unzustellbaren Nachricht.|52|Nein|  
 |**BigintData2**|**bigint**|Die Sequenznummer der Nachricht, die zuletzt erfolgreich bestätigt wurde.|53|Nein|  
 |**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|9|Ja|  
@@ -53,7 +53,7 @@ ms.locfileid: "67999636"
 |**Severity**|**int**|Schweregradnummer für den Text im Ereignis.|29|Nein|  
 |**SPID**|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|Ja|  
 |**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|Ja|  
-|**Status**|**int**|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann anhand dieses Statuscodes ermitteln, wo das Ereignis erstellt wurde.|30|Nein|  
+|**State**|**int**|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann anhand dieses Statuscodes ermitteln, wo das Ereignis erstellt wurde.|30|Nein|  
 |**TextData**|**ntext**|Der Grund, aus dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Nachricht nicht übermitteln konnte.|1|Ja|  
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
   
