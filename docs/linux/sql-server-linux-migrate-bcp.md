@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127322"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Massenkopieren von Daten mit BCP in SQL Server für Linux
@@ -134,8 +134,8 @@ Im Terminalfenster sollte Folgendes angezeigt werden:
 3,Tom,Germany
 ```
 
-## <a name="see-also"></a>Siehe auch
-- [bcp (Hilfsprogramm)](../tools/bcp-utility.md)
+## <a name="see-also"></a>Weitere Informationen
+- [bcp-Hilfsprogramm](../tools/bcp-utility.md)
 - [Datenformate für die Kompatibilität bei Verwendung von BCP](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [Importieren von Massendaten mithilfe von BULK INSERT](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 - [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)

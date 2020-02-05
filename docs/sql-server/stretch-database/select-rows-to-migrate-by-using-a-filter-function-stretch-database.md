@@ -14,20 +14,20 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844551"
 ---
-# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch Database)
+# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Auswählen von Zeilen für die Migration mit einer Filterfunktion (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  Wenn Sie kalte Daten in einer separaten Tabelle speichern, können Sie Stretch-Datenbank zum Migrieren der gesamten Tabelle konfigurieren. Wenn Ihre Tabelle sowohl heiße als auch kalte Daten enthält, können Sie ein Filterprädikat zum Auswählen der zu migrierenden Zeilen angeben. Das Filterprädikat ist eine Inline-Tabellenwertfunktion. Dieser Artikel beschreibt, wie Sie eine Inline-Tabellenwertfunktion schreiben, um die zu migrierenden Zeilen auszuwählen.  
+  Wenn Sie inaktive Daten in einer separaten Tabelle speichern, können Sie Stretch Database so konfigurieren, dass die gesamte Tabelle migriert wird. Wenn Ihre Tabelle sowohl heiße als auch kalte Daten enthält, können Sie ein Filterprädikat zum Auswählen der zu migrierenden Zeilen angeben. Das Filterprädikat ist eine Inline-Tabellenwertfunktion. Dieser Artikel beschreibt, wie Sie eine Inline-Tabellenwertfunktion schreiben, um die zu migrierenden Zeilen auszuwählen.  
   
 > [!IMPORTANT]
-> Wenn Sie eine schwache Filterfunktion angeben, wird die Datenmigration ebenfalls unzureichend ausgeführt. Stretch-Datenbank wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an.  
+> Wenn Sie eine schwache Filterfunktion angeben, wird die Datenmigration ebenfalls unzureichend ausgeführt. Stretch Database wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an.  
   
  Wenn Sie keine Filterfunktion angeben, wird die gesamte Tabelle migriert.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "73844551"
  Die ALTER TABLE-Syntax zum Hinzufügen einer Funktion wird weiter unten in diesem Artikel beschrieben.  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>Grundlegende Anforderungen für die Filterfunktion  
- Die Inline-Tabellenwertfunktion, die für ein Filterprädikat einer Stretch-Datenbank erforderlich ist, sieht wie im folgenden Beispiel aus.  
+ Die für ein Stretch Database-Filterprädikat erforderliche Inline-Tabellenwertfunktion sieht wie das folgende Beispiel aus.  
   
 ```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 [, ...n])  
@@ -197,7 +197,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="addafterwiz"></a>Hinzufügen einer Filterfunktion nach Ausführen des Assistenten  
+## <a name="addafterwiz"></a>Hinzufügen einer Filterfunktion nach dem Ausführen des Assistenten  
   
 Wenn Sie eine Funktion verwenden möchten, die Sie im Assistenten **zum Aktivieren von Stretch für eine Datenbank** nicht erstellen können, können Sie die **ALTER TABLE** -Anweisung ausführen, um nach Beenden des Assistenten eine Funktion anzugeben. Bevor eine Funktion angewendet werden kann, müssen Sie jedoch die Datenmigration anhalten, die bereits in Bearbeitung ist, und migrierte Daten zurückbringen. (Weitere Informationen dazu, warum dies notwendig ist, finden Sie im Abschnitt [Ersetzen einer vorhandenen Filterfunktion](#replacePredicate)).
   
@@ -208,7 +208,7 @@ Wenn Sie eine Funktion verwenden möchten, die Sie im Assistenten **zum Aktivier
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. Warten Sie, bis die Migration abgeschlossen ist. Sie können den Status unter **Stretch Database-Überwachung** in SQL Server Management Studio überprüfen oder die Sicht **sys.dm_db_rda_migration_status** abfragen. Weitere Informationen finden Sie unter [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (Überwachung und Problembehandlung für die Datenmigration) oder [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
+2. Warten Sie, bis die Migration abgeschlossen ist. Sie können den Status in SQL Server Management Studio im **Stretch Database-Monitor** überprüfen oder die Sicht **sys.dm_db_rda_migration_status** abfragen. Weitere Informationen finden Sie unter [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (Überwachung und Problembehandlung für die Datenmigration) oder [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 3. Erstellen Sie die Filterfunktion, die auf die Tabelle angewendet werden soll.  
   
@@ -483,8 +483,8 @@ COMMIT ;
   
     ```  
   
-## <a name="how-stretch-database-applies-the-filter-function"></a>So wendet Stretch-Datenbank die Filterfunktion an  
- Stretch-Datenbank wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an und bestimmt geeignete Zeilen. Beispiel:  
+## <a name="how-stretch-database-applies-the-filter-function"></a>Anwenden der Filterfunktion durch Stretch Database  
+ Stretch Database wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an und bestimmt berechtigte Zeilen. Beispiel:  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  

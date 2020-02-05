@@ -11,10 +11,10 @@ ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9026edfafeb24eae766e9d42634512a565b6934b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296676"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
@@ -26,7 +26,7 @@ ms.locfileid: "71296676"
 
   Zeigt Informationen zu den Bedingungen an, die Ausführungsereignismeldungen für Ausführungen auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server zugeordnet sind.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |Context_id|BIGINT|Eindeutige ID für den Fehlerkontext.|  
 |Event_message_id|BIGINT|Eindeutige ID für die Meldung, auf die sich der Kontext bezieht.|  
@@ -38,13 +38,13 @@ ms.locfileid: "71296676"
 |Property_name|Nvarchar(4000)|Der Name der Eigenschaft, die der Quelle des Kontexts zugeordnet ist.|  
 |Property_value|Sql_variant|Der Eigenschaftswert, der der Quelle des Kontexts zugeordnet ist.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle sind die Kontexttypen aufgeführt.  
   
 ||||  
 |-|-|-|  
-|Wert des Kontexttyps|Typname|und Beschreibung|  
-|10|Task|Status einer Aufgabe beim Auftreten eines Fehlers.|  
+|Wert des Kontexttyps|Typname|BESCHREIBUNG|  
+|10|Aufgabe|Status einer Aufgabe beim Auftreten eines Fehlers.|  
 |20|Pipeline|Fehler in einer Pipelinekomponente: Quelle, Ziel oder Transformationskomponente.|  
 |30|Sequenz|Status einer Sequenz.|  
 |40|For-Schleife|Status einer For-Schleife.|  

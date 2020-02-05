@@ -20,10 +20,10 @@ ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314521"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314521"
 
 Diese Funktion entschlüsselt Daten, die ursprünglich mit einer Passphrase verschlüsselt wurden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -81,7 +81,7 @@ Eine Variable, die Daten enthält, die als Grundlage für die Generierung der Au
 ## <a name="return-types"></a>Rückgabetypen  
 **varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `DECRYPTBYPASSPHRASE` erfordert keine Berechtigungen für die Ausführung. `DECRYPTBYPASSPHRASE` gibt NULL zurück, wenn die falsche Passphrase oder falsche Authentifikatorinformationen übergeben werden.  
   
 `DECRYPTBYPASSPHRASE` verwendet die Passphrase zum Generieren eines Entschlüsselungsschlüssels. Der Entschlüsselungsschlüssel bleibt nicht erhalten.  

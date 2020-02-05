@@ -1,10 +1,9 @@
 ---
-title: Spalten für Volltextindex (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
+title: Spalten für Volltextindex (Dialogfeld)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,18 +11,20 @@ f1_keywords:
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 304854a203b4c8e57a9dde003448c526de98bf24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 28426680f0627753ba26a6aba4b36bb2041487bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254570"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247232"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>Spalten für Volltextindex (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 In diesem Dialogfeld werden die Spalten aufgelistet, die in den Volltextindex für die im Tabellen-Designer geöffnete Tabelle einbezogen sind. Klicken Sie zum Zugreifen auf dieses Dialogfeld mit der rechten Maustaste auf die Tabelle im Tabellen-Designer, und wählen Sie **Volltextindex** aus. Klicken Sie im Dialogfeld **Volltextindex** auf den Index mit den anzuzeigenden bzw. zu bearbeitenden Spalten, klicken Sie im rechten Datenblatt auf das Feld **Spalten**, und klicken Sie auf die Auslassungspunkte ( **...** ).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Spalte**  
 Zeigt die Namen der Spalten an, die in den Volltextindex einbezogen werden. Um eine Spalte hinzuzufügen, klicken Sie auf die erste leere Zelle, und wählen Sie eine Spalte aus der Dropdownliste aus. Sie können nur auf Spalten zugreifen, die textbasierte Datentypen bzw. Imagedatentypen enthalten.  
   

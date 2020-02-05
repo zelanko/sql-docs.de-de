@@ -31,10 +31,10 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982185"
 ---
 # <a name="use-sql-server-objects"></a>Verwenden von SQL Server-Objekten
@@ -71,7 +71,7 @@ ms.locfileid: "73982185"
 ##  <a name="SQLServerAgentPOs"></a> Leistungsobjekte für den SQL Server-Agent  
  In der folgenden Tabelle sind die Leistungsobjekte für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent aufgeführt:  
   
-|Leistungsobjekt|und Beschreibung|  
+|Leistungsobjekt|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |[SQLAgent:Warnungen](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Stellt Informationen zu Warnungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
 |[SQLAgent:Aufträge](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Stellt Informationen zu Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
@@ -81,7 +81,7 @@ ms.locfileid: "73982185"
 ##  <a name="ServiceBrokerPOs"></a> Service Broker-Leistungsobjekte  
  In der folgenden Tabelle sind die Leistungsobjekte für [!INCLUDE[ssSB](../../includes/sssb-md.md)]aufgeführt.  
   
-|Leistungsobjekt|und Beschreibung|  
+|Leistungsobjekt|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |[SQLServer:Broker-Aktivierung](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|Stellt Informationen zu aktivierten [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Tasks bereit.|  
 |[SQLServer:Broker-Statistik](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|Stellt allgemeine Informationen zu [!INCLUDE[ssSB](../../includes/sssb-md.md)] bereit.|  
@@ -90,7 +90,7 @@ ms.locfileid: "73982185"
 ##  <a name="SQLServerPOs"></a> SQL Server-Leistungsobjekte  
  In der folgenden Tabelle werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte beschrieben.  
   
-|Leistungsobjekt|und Beschreibung|  
+|Leistungsobjekt|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |[SQLServer:Zugriffsmethoden](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|Durchsucht und misst die Anzahl der Zuordnungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten (z.B. die Anzahl von Indexsuchläufen oder die Anzahl von Seiten, die Indizes und Daten zugeordnet sind).|  
 |[SQLServer:Sicherungsmedium](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|Stellt Informationen über Sicherungsmedien bereit, die von Sicherungs- und Wiederherstellungsvorgängen verwendet werden, z. B. über den Durchsatz des Sicherungsmediums.|  
@@ -119,18 +119,18 @@ ms.locfileid: "73982185"
 |[SQLServer:Speicher-Manager](../../relational-databases/performance-monitor/sql-server-memory-manager-object.md)|Stellt Informationen zur Speicherauslastung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereit, z.B. die Gesamtanzahl der aktuell zugewiesenen Sperrstrukturen.|  
 |[SQLServer:Plancache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)|Stellt Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Cache bereit, der zum Speichern von Objekten wie gespeicherten Prozeduren, Triggern und Abfrageplänen verwendet wird.|  
 |[SQLServer: Abfragespeicher](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|Stellt Informationen zum Abfragespeicher bereit.|  
-|[SQLServer: Ressourcenpool-ID](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|Stellt Informationen über Statistiken für Ressourcenpools in der Ressourcenkontrolle bereit.|  
+|[SQLServer:Statistiken für Ressourcenpools](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|Stellt Informationen über Statistiken für Ressourcenpools in der Ressourcenkontrolle bereit.|  
 |[SQLServer:SQL-Fehler](../../relational-databases/performance-monitor/sql-server-sql-errors-object.md)|Stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlern bereit.|  
 |[SQLServer:SQL-Statistik](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)|Stellt Informationen zu Aspekten von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen bereit, z.B. die Anzahl von Batches von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]empfangen hat.|  
 |[SQLServer:Transaktionen](../../relational-databases/performance-monitor/sql-server-transactions-object.md)|Stellt Informationen zu den aktiven Transaktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit, z.B. die Gesamtanzahl von Transaktionen und die Anzahl von Momentaufnahmetransaktionen.|  
 |[SQLServer:Benutzerdefinierbar](../../relational-databases/performance-monitor/sql-server-user-settable-object.md)|Führt eine benutzerdefinierte Überwachung aus. Jeder Leistungsindikator kann eine benutzerdefinierte gespeicherte Prozedur oder eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung sein, die einen Wert zurückgibt, der überwacht werden soll.|  
-|[SQLServer: Wartestatistik](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|Stellt Informationen zu Wartezeiten bereit.|  
-|[SQLServer: Statistiken für Arbeitsauslastungsgruppen](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|Stellt Informationen zur Ressourcenkontrollen-Arbeitsauslastungsgruppenstatistik bereit.|  
+|[SQLSERVER: Wartestatistik](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|Stellt Informationen zu Wartezeiten bereit.|  
+|[SQLServer:Statistiken für Arbeitsauslastungsgruppen](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|Stellt Informationen zur Ressourcenkontrollen-Arbeitsauslastungsgruppenstatistik bereit.|  
   
 ##  <a name="SQLServerReplicationPOs"></a> Leistungsobjekte für die SQL Server-Replikation  
  In der folgenden Tabelle sind die Leistungsobjekte für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation aufgeführt:  
   
-|Leistungsobjekt|und Beschreibung|  
+|Leistungsobjekt|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |**SQLServer:Replikations-Agents**<br /><br /> **SQLServer:Replikationsmomentaufnahme**<br /><br /> **SQLServer:Replikationsprotokollleser**<br /><br /> **SQLServer:Replikationsverteilung**<br /><br /> **SQLServer:Replikationsmerge**<br /><br /> Weitere Informationen finden Sie unter [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).|Stellt Informationen zur Aktivität des Replikations-Agents bereit.|  
   

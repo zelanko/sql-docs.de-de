@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 371321c8b91d3d7c56ac2721deb29a664209f004
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 7cb67f55af03fc8c948df6f17ee2924dea12825f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531909"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820972"
 ---
 # <a name="azdata-app"></a>azdata app
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den `app`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |
@@ -28,7 +28,7 @@ Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `az
 [azdata app template](reference-azdata-app-template.md) | Vorlagen.
 [azdata app init](#azdata-app-init) | Starten eines neuen Anwendungsgerüsts.
 [azdata app create](#azdata-app-create) | Erstellen einer Anwendung.
-[azdata app update](#azdata-app-update) | Ausführen eines Updates einer Anwendung.
+[azdata app update](#azdata-app-update) | Aktualisieren einer Anwendung.
 [azdata app list](#azdata-app-list) | Auflisten von Anwendungen.
 [azdata app delete](#azdata-app-delete) | Löschen einer Anwendung.
 [azdata app run](#azdata-app-run) | Ausführen einer Anwendung.
@@ -64,7 +64,7 @@ azdata app init --name reduce --template ssis
 #### `--spec -s`
 Generieren von lediglich einer Anwendung „spec.yaml“.
 #### `--name -n`
-Anwendungsname
+Der Anwendungsname.
 #### `--version -v`
 Anwendungsversion
 #### `--template -t`
@@ -83,7 +83,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-create"></a>azdata app create
 Erstellen einer Anwendung.
 ```bash
@@ -107,7 +107,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-update"></a>azdata app update
 Aktualisieren einer Anwendung.
 ```bash
@@ -134,7 +134,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-list"></a>azdata app list
 Auflisten von Anwendungen.
 ```bash
@@ -156,7 +156,7 @@ azdata app list
 ```
 ### <a name="optional-parameters"></a>Optionale Parameter
 #### `--name -n`
-Anwendungsname
+Der Anwendungsname.
 #### `--version -v`
 Anwendungsversion
 ### <a name="global-arguments"></a>Globale Argumente
@@ -169,7 +169,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-delete"></a>azdata app delete
 Löschen einer Anwendung.
 ```bash
@@ -183,7 +183,7 @@ azdata app delete --name reduce --version v1
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--name -n`
-Anwendungsname
+Der Anwendungsname.
 #### `--version -v`
 Anwendungsversion
 ### <a name="global-arguments"></a>Globale Argumente
@@ -196,7 +196,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-run"></a>azdata app run
 Ausführen einer Anwendung.
 ```bash
@@ -219,7 +219,7 @@ azdata app run --name reduce --version v1 --inputs x=10,y5.6
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--name -n`
-Anwendungsname
+Der Anwendungsname.
 #### `--version -v`
 Anwendungsversion
 ### <a name="optional-parameters"></a>Optionale Parameter
@@ -235,7 +235,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-describe"></a>azdata app describe
 Beschreiben einer Anwendung.
 ```bash
@@ -252,7 +252,7 @@ azdata app describe --name reduce --version v1
 #### `--spec -s`
 Der Pfad zu einem Verzeichnis mit einer YAML-Spezifikationsdatei, in der die Anwendung beschrieben ist.
 #### `--name -n`
-Anwendungsname
+Der Anwendungsname.
 #### `--version -v`
 Anwendungsversion
 ### <a name="global-arguments"></a>Globale Argumente

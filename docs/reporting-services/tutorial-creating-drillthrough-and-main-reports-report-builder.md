@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73637985"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
@@ -24,7 +24,7 @@ Die folgende Abbildung zeigt die Berichte, die Sie erstellen werden und wie der 
    
 Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Das Tutorial erfordert Zugriff auf den Contoso Sales-Cube jeweils für den Drillthrough- und den Hauptbericht. Dieses Dataset umfasst das Data Warehouse „ContosoDW“ und die OLAP -Datenbank (Online Analytical Processing) „Contoso_Retail“. Die Berichte, die Sie in diesem Lernprogramm erstellen, rufen Berichtsdaten aus dem Contoso Sales-Cube ab. Die OLAP-Datenbank Contoso_Retail kann vom [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=18279)heruntergeladen werden. Sie brauchen lediglich die Datei ContosoBIdemoABF.exe herunterzuladen. Diese Datei enthält die OLAP-Datenbank.  
   
 Die andere Datei, ContosoBIdemoBAK.exe, ist für das Data Warehouse ContosoDW bestimmt, das in diesem Lernprogramm nicht verwendet wird.  

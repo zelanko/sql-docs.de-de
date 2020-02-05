@@ -12,10 +12,10 @@ ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f76c6f4f4d65273c35dffb1cb17e664fceac0328
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113336"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>Einrichten einer SQL Server-Datenbankwarnung (Windows)
@@ -50,7 +50,7 @@ ms.locfileid: "68113336"
   
 10. Legen Sie auf der Registerkarte **Zeitplan** den Beginn und das Ende des Zeitplans für die Warnungssuche fest.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer SQL Server-Datenbankwarnung](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)  
   
   

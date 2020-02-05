@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024987"
 ---
 # <a name="create-clustered-indexes"></a>Erstellen gruppierter Indizes
@@ -37,7 +37,7 @@ ms.locfileid: "68024987"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Erstellen eines gruppierten Indexes für eine Tabelle mit:**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68024987"
   
 -   Wenn ein gruppierter Index in einem Heap mit mehreren nicht gruppierten Indizes erstellt wird, müssen alle nicht gruppierten Indizes neu erstellt werden, damit sie statt der Zeilen-ID (RID) den Gruppierungsschlüsselwert enthalten. Entsprechend gilt, dass beim Löschen eines gruppierten Indexes in einer Tabelle mit mehreren nicht gruppierten Indizes alle nicht gruppierten Indizes beim Ausführen der DROP-Anweisung neu erstellt werden. Dies kann bei umfangreichen Tabellen sehr lange dauern.  
   
-     Beim Erstellen von Indizes für umfangreiche Tabellen sollten Sie möglichst mit dem gruppierten Index beginnen und dann die nicht gruppierten Indizes erstellen. Legen Sie gegebenenfalls die ONLINE-Option auf ON fest, wenn Sie Indizes für vorhandene Tabellen erstellen. Beim Wert ON werden keine lang andauernden Tabellensperren aufrechterhalten. Damit wird die Fortsetzung von Abfragen oder Updates für die zugrunde liegende Tabelle ermöglicht. Weitere Informationen finden Sie unter [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
+     Beim Erstellen von Indizes für umfangreiche Tabellen sollten Sie möglichst mit dem gruppierten Index beginnen und dann die nicht gruppierten Indizes erstellen. Legen Sie gegebenenfalls die ONLINE-Option auf ON fest, wenn Sie Indizes für vorhandene Tabellen erstellen. Beim Wert ON werden keine lang andauernden Tabellensperren aufrechterhalten. Damit wird die Fortsetzung von Abfragen oder Updates für die zugrunde liegende Tabelle ermöglicht. Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
 -   Der Indexschlüssel eines gruppierten Indexes kann keine Spalten des Datentyps **varchar** enthalten, bei denen Daten in der Zuordnungseinheit ROW_OVERFLOW_DATA vorhanden sind. Wird ein gruppierter Index für eine **varchar**-Spalte erstellt, bei der in der Zuordnungseinheit IN_ROW_DATA Daten vorhanden sind, erzeugen alle nachfolgenden Einfügungen und Updates der Spalte einen Fehler, bei der diese Daten aus der Zeile entfernt werden. Zum Abrufen von Informationen zu Tabellen, die ggf. Daten mit Zeilenüberlauf enthalten, verwenden Sie die dynamische Verwaltungsfunktion [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   

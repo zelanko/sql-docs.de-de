@@ -20,10 +20,10 @@ ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314532"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314532"
 
 Diese Funktion verwendet den privaten Schlüssel eines Zertifikats zum Entschlüsseln verschlüsselter Daten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ Eine Variable vom Typ **nchar** oder **nvarchar**, die das Kennwort enthält, mi
 ## <a name="return-types"></a>Rückgabetypen  
 **varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Diese Funktion entschlüsselt Daten mithilfe des privaten Schlüssels eines Zertifikats. Kryptografische Umwandlungen, die asymmetrische Schlüssel verwenden, nehmen umfangreiche Ressourcen in Anspruch. Deshalb wird empfohlen, dass Entwickler die Verwendung von [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) und DECRYPTBYCERT bei der routinemäßigen Verschlüsselung und Entschlüsselung von Benutzerdaten vermeiden.  
 
 ## <a name="permissions"></a>Berechtigungen  

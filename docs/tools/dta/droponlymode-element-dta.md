@@ -1,10 +1,7 @@
 ---
-title: DropOnlyMode-Element (DTA) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/01/2017
+title: DropOnlyMode-Element (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e7c6648cdc3257b0fecef77ed4c09b27a52f2c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: a0cd0d9511e3a2791231f1cfa39aa4c8e5999eec
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132781"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305591"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode-Element (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Gibt an, dass der Datenbankoptimierungsratgeber während der Optimierungssitzung nur vorhandene Indizes, indizierte Sichten oder Partitionen löschen soll. Wenn diese Optimierungsoption angegeben ist, werden keine neuen physischen Entwurfsstrukturen berücksichtigt.  
+
+Gibt an, dass der Datenbankoptimierungsratgeber während der Optimierungssitzung nur vorhandene Indizes, indizierte Sichten oder Partitionen löschen soll. Wenn diese Optimierungsoption angegeben ist, werden keine neuen physischen Entwurfsstrukturen berücksichtigt.  
   
 ## <a name="syntax"></a>Syntax  
   

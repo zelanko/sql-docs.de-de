@@ -25,10 +25,10 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dbeccf07c052eb99c3a110cc5f3d8811cf9529ce
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299096"
 ---
 # <a name="adding-connections-programmatically"></a>Programmgesteuertes Hinzufügen von Verbindungen
@@ -49,7 +49,7 @@ ms.locfileid: "71299096"
   
  In der folgenden Tabelle sind die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthaltenen Verbindungs-Manager sowie die Zeichenfolge aufgeführt, die in der `package.Connections.Add("xxx")`-Anweisung verwendet wird. Eine Liste aller Verbindungs-Manager finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-|Zeichenfolge|Ziel-Editor für Dimensionsverarbeitung|  
+|String|Ziel-Editor für Dimensionsverarbeitung|  
 |------------|------------------------|  
 |„OLEDB“|Verbindungs-Manager für OLE DB-Verbindungen.|  
 |„ODBC“|Verbindungs-Manager für ODBC-Verbindungen.|  

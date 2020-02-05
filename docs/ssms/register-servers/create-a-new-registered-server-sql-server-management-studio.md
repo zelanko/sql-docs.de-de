@@ -1,10 +1,7 @@
 ---
-title: Erstellen eines neu registrierten Servers (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Erstellen von neuen registrierten Servern
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2fd57edd00e2e5cd6a8921f324b1de20260bfa9f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267795"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246572"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Erstellen eines neu registrierten Servers (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  In diesem Thema wird beschrieben, wie Sie die Verbindungsinformationen für Server speichern, auf die Sie häufig zugreifen, indem Sie den Server in der Komponente Registrierte Server von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]registrieren. Ein Server kann vor dem Herstellen einer Verbindung oder bei der Verbindungsherstellung über den Objekt-Explorer registriert werden. Es gibt eine spezielle Menüoption zum Registrieren der Serverinstanzen auf dem lokalen Computer.  
+
+In diesem Thema wird beschrieben, wie Sie die Verbindungsinformationen für Server speichern, auf die Sie häufig zugreifen, indem Sie den Server in der Komponente Registrierte Server von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]registrieren. Ein Server kann vor dem Herstellen einer Verbindung oder bei der Verbindungsherstellung über den Objekt-Explorer registriert werden. Es gibt eine spezielle Menüoption zum Registrieren der Serverinstanzen auf dem lokalen Computer.  
   
  Es gibt zwei Arten von registrierten Servern:  
   
@@ -67,10 +70,10 @@ ms.locfileid: "68267795"
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md).  
   
-     **User name**  
+     **Benutzername**  
      Zeigt den aktuellen Benutzernamen an, zu dem die Verbindung hergestellt wird. Diese schreibgeschützte Option ist nur verfügbar, wenn Sie zum Herstellen der Verbindung die Windows-Authentifizierung ausgewählt haben. Um **Benutzername**zu ändern, melden Sie sich bei dem Computer als ein anderer Benutzer an.  
   
-     **Anmeldename**  
+     **Anmeldung**  
      Geben Sie den Anmeldenamen für die Verbindung ein. Diese Option ist nur verfügbar, wenn Sie zum Verbinden die Authentifizierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgewählt haben.  
   
      **Kennwort**  

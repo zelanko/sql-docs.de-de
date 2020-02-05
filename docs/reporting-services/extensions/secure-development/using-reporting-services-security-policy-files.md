@@ -17,10 +17,10 @@ ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae971989342ca6d3fda121b0559bebb681f07fb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193316"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Verwenden von Reporting Services-Sicherheitsrichtliniendateien
@@ -34,7 +34,7 @@ ms.locfileid: "63193316"
 ## <a name="policy-files-in-reporting-services"></a>Richtliniendateien in Reporting Services  
  In der nachstehenden Tabelle werden die Richtlinienkonfigurationsdateien in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ihre Speicherorte (bei einer Standardinstallation) und die entsprechenden Funktionen aufgelistet.  
   
-|Dateiname|Speicherort (Standardinstallation)|und Beschreibung|  
+|Dateiname|Speicherort (Standardinstallation)|BESCHREIBUNG|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|Die Berichtsserverrichtlinien-Konfigurationsdatei. Diese Sicherheitsrichtlinien wirken sich vorwiegend auf Berichtsausdrücke und benutzerdefinierte Assemblys aus, nachdem ein Bericht für einen Berichtsserver bereitgestellt wurde. Diese Richtliniendatei beeinflusst auch benutzerdefinierte Daten, Übermittlung, Rendering und Sicherheitserweiterungen, die für den Berichtsserver bereitgestellt wurden.|  
 |rsmgrpolicy.config|C:\Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Richtlinienkonfigurationsdatei des Berichts-Managers. Diese Sicherheitsrichtlinien wirken sich auf alle Assemblys aus, die eine Erweiterung für den Berichts-Manager darstellen, wie zum Beispiel Abonnementbenutzeroberflächen-Erweiterungen für benutzerdefinierte Übermittlung.|  

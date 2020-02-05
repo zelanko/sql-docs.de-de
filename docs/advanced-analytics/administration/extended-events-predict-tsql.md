@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9e891ee16ce664e12f12b16c9deda957d0fa2263
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727723"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Überwachen von PREDICT-T-SQL-Anweisungen mit erweiterten Ereignissen in SQL Server Machine Learning Services
@@ -24,7 +24,7 @@ Erfahren Sie, wie Sie erweiterte Ereignisse verwenden, um [PREDICT](../../t-sql/
 
 Die folgenden erweiterten Ereignisse sind in allen Versionen von SQL Server verfügbar, die die [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)-T-SQL-Anweisung unterstützen. 
 
-|NAME |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
 |predict_function_completed |Ereignis  |Integrierte Aufschlüsselung der Ausführungszeit|
 |predict_model_cache_hit |Ereignis|Tritt auf, wenn ein Modell aus dem Modellcache der PREDICT-Funktion abgerufen wird. Verwenden Sie dieses Ereignis zusammen mit anderen predict_model_cache_*-Ereignissen zur Behandlung von Problemen, die vom Modellcache der PREDICT-Funktion verursacht werden.|

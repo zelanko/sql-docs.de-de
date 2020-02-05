@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326136"
 ---
 # <a name="use-column-sets"></a>Verwenden von Spaltensätzen
@@ -112,9 +112,9 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>Verwenden des sql_variant-Datentyps  
  Der **sql_variant** -Datentyp kann mehrere unterschiedliche Datentypen speichern, z.B. **int**, **char**und **date**. Spaltensätze geben Datentypinformationen zu Dezimalstellen, Genauigkeit und Gebietsschema, die mit einem **sql_variant** -Wert verknüpft sind, in der generierten XML-Spalte als Attribute aus. Wenn Sie versuchen, diese Attribute in einer benutzerdefinierten XML-Anweisung als Eingabe für einen INSERT- oder UPDATE-Vorgang für einen Spaltensatz bereitzustellen, sind einige dieser Attribute obligatorisch, und anderen wird ein Standardwert zugewiesen. In der folgenden Tabelle sind die Datentypen und die Standardwerte aufgeführt, die vom Server generiert werden, wenn der Wert nicht angegeben wird.  
   
-|Datentyp|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Maximale Länge|Genauigkeit|Dezimalstellen|  
+|Datentyp|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Maximale Länge|Precision|Skalieren|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
-|**char**, **varchar**, **binary**|-1|'Standardwert'|0|0|8000|Nicht zutreffend**|Nicht verfügbar|  
+|**char**, **varchar**, **binary**|-1|'Standardwert'|0|0|8\.000|Nicht zutreffend**|Nicht verfügbar|  
 |**nvarchar**|-1|'Standardwert'|0|0|4000|Nicht verfügbar|Nicht verfügbar|  
 |**decimal**, **float**, **real**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|18|0|  
 |**integer**, **bigint**, **tinyint**, **smallint**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|  
@@ -128,7 +128,7 @@ GO
   
  **  Nicht zutreffend = Bei einem SELECT-Vorgang für den Spaltensatz werden für diese Attribute keine Werte ausgegeben. Gibt eine Fehlermeldung zurück, wenn für dieses Attribut von dem Aufrufer in der für einen Spaltensatz in einem INSERT- oder UPDATE-Vorgang bereitgestellten XML-Darstellung ein Wert angegeben wird.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Das Sicherheitsmodell für Spaltensätze funktioniert ähnlich wie das Sicherheitsmodell zwischen Tabellen und Spalten. Spaltensätze können als Minitabellen visualisiert werden, und die SELECT-Vorgänge entsprechen den SELECT *-Vorgängen für diese Minitabellen. Bei der Beziehung zwischen Spaltensatz und Sparsespalten handelt es sich jedoch nicht um einen Container, sondern um eine Gruppenbeziehung. Das Sicherheitsmodell prüft die Sicherheit der Spaltensatz-Spalte, wobei die DENY-Vorgänge für die zugrunde liegenden Sparsespalten berücksichtigt werden. Für das Sicherheitsmodell gelten die folgenden zusätzlichen Eigenschaften:  
   
 -   Wie bei anderen Spalten in der Tabelle können Sicherheitsberechtigungen für den Spaltensatz erteilt und aufgehoben werden.  
@@ -185,7 +185,7 @@ VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecific
 GO  
 ```  
   
-### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Prüfen der Ergebnisse eines Spaltensatzes bei Verwendung von SELECT *  
+### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D: Prüfen der Ergebnisse eines Spaltensatzes bei Verwendung von SELECT *  
  Im folgenden Beispiel werden alle Spalten der Tabelle ausgewählt, die einen Spaltensatz enthält. Es wird eine XML-Spalte mit den kombinierten Werten der Sparsespalten zurückgegeben. Die Sparsespalten werden nicht einzeln zurückgegeben.  
   
 ```sql  

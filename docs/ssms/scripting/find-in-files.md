@@ -1,6 +1,6 @@
 ---
-title: In Dateien suchen | Microsoft-Dokumentation
-ms.custom: ''
+title: In Dateien suchen
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45121de07c89603f4de8f2d97ddd7d92d500879b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 4acfec737fb3ba0779c825e294315183ec463cf2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265461"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253878"
 ---
 # <a name="find-in-files"></a>In Dateien suchen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68265461"
 ## <a name="find-what"></a>Suchen nach  
  Die folgenden Steuerelemente auf der Registerkarte **In Dateien suchen** ermöglichen es Ihnen, die Zeichenfolge oder den Ausdruck anzugeben, für die/den nach Übereinstimmungen gesucht werden soll.  
   
- **Find what**  
+ **Suchen nach**  
  Geben Sie den Suchtext ein. Im Dialogfeld wird ein wahrscheinlicher Suchtext eingetragen. Dabei wird entweder auf den Text zurückgegriffen, der vor dem Öffnen des Dialogfelds mit dem Cursor markiert wurde, oder auf in der Nähe befindlichen Text oder auf zuvor verwendeten Suchtext. Sie können aus der Dropdownliste eine der letzten 20 Suchzeichenfolgen zur Wiederverwendung auswählen.  
   
  **[Zeichenfolge mit Platzhaltern]**  
@@ -79,7 +79,7 @@ ms.locfileid: "68265461"
  **Nur ganzes Wort suchen**  
  Wenn dieses Kontrollkästchen aktiviert ist, werden im Suchergebnisfenster nur Instanzen der unter **Suchen nach** angegebenen Zeichenfolge angezeigt, bei denen jeweils das ganze Wort übereinstimmt. Eine Suche nach **MyObject** gibt beispielsweise "MyObject", nicht aber "CMyObject" oder "MyObjectC" zurück.  
   
- **Suchoptionen**  
+ **Verwenden Sie**  
  Gibt an, wie in den Textfeldern **Suchen nach** oder **Ersetzen durch** eingegebene Sonderzeichen interpretiert werden sollen. Zur Auswahl stehen **Platzhalter** und **Reguläre Ausdrücke**.  
   
  **Regular Expressions**  

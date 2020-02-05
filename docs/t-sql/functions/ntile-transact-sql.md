@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914907"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67914907"
 
   Verteilt die Zeilen in einer sortierten Partition in eine angegebene Anzahl von Gruppen. Die Gruppen sind nummeriert. Die Nummerierung beginnt bei 1. Für jede Zeile gibt NTILE die Nummer der Gruppe zurück, der die Zeile angehört.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -150,7 +150,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-dividing-rows-into-groups"></a>C. Unterteilen von Zeilen in Gruppen  
  Im folgenden Beispiel wird die NTILE-Funktion verwendet, um eine Gruppe von Vertriebsmitarbeitern basierend auf den ihnen zugewiesenen Sollvorgaben für den Verkauf im Jahr 2003 in vier Gruppen zu unterteilen. Da die Gesamtanzahl der Zeilen nicht durch die Anzahl von Gruppen teilbar ist, enthält die erste Gruppe fünf Zeilen, und die übrigen Gruppen enthalten jeweils vier Zeilen.  
@@ -192,7 +192,7 @@ Jiang             4          544,000.00
 Tsoflias          4          867,000.00
 ```  
   
-### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. Aufteilen des Resultsets mithilfe von PARTITION BY  
+### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D: Aufteilen des Resultsets mithilfe von PARTITION BY  
  Im folgenden Beispiel wird das PARTITION BY-Argument dem Code in Beispiel A hinzugefügt. Die Zeilen werden zunächst durch `SalesTerritoryCountry` partitioniert und anschließend in jedem `SalesTerritoryCountry` in vier Gruppen aufgeteilt. Beachten Sie, dass über die Anweisung ORDER BY in der OVER-Klausel NTILE und über die Anweisung SELECT ein Resultset angefordert wird.  
   
 ```  

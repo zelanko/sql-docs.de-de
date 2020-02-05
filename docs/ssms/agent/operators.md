@@ -1,10 +1,9 @@
 ---
-title: Operatoren | Microsoft-Dokumentation
-ms.custom: ''
+title: Operatoren
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,13 +22,15 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4059bda6f761171292f2977f7d8e6a3f6896451
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260080"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247629"
 ---
 # <a name="operators"></a>Operatoren
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +78,7 @@ Die Kontaktinformationen eines Operators definieren, wie der Operator benachrich
   
         Wenn der gleiche Pageranbieter für alle Operatoren freigegeben wird, können Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] spezielle E-Mail-Formatierungen angeben, die das Umwandlungssystem vom E-Mail-Format zum Pagerformat benötigt. Die spezielle Formatierung kann dabei aus einem Präfix oder einem Suffix bestehen und in die folgenden Zeilen der E-Mail eingefügt werden:  
   
-        **Betreff:**  
+        **:**  
   
         **Cc**:  
   
