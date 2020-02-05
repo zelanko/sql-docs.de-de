@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: c10f92bcb0f8b64441ad4b088c4b8b3e2f62236b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727702"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Skalieren der gleichzeitigen Ausführung externer Skripts in SQL Server Machine Learning Services
@@ -68,4 +68,4 @@ Die Ressourcen, die von Python- oder R-Skripts verwendet werden können, werden 
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [Überwachen der Python- und R-Skriptausführung mithilfe von benutzerdefinierten Berichten in SQL Server Management Studio](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
-- [Überwachen von SQL Server Machine Learning Services mithilfe von dynamischen Verwaltungssichten (DMVs)](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
+- [Überwachen von SQL Server Machine Learning Services mithilfe von dynamischen Verwaltungssichten](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
