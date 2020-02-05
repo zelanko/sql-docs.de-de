@@ -16,10 +16,10 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef2e4b408dabf7b054465149b2489e07fbdefef8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295031"
 ---
 # <a name="variables-window"></a>Variablen (Fenster)
@@ -36,8 +36,8 @@ ms.locfileid: "71295031"
 > [!NOTE]
 >  Die Werte der Eigenschaften **Name** und **Namespace** müssen mit einem Buchstaben beginnen, wie in Unicode-Standard 2.0 definiert ist, oder mit einem Unterstrich (_). Bei den nachfolgenden Zeichen kann es sich um Buchstaben oder Zahlen gemäß Unicode-Standard 2.0 oder um einem Unterstrich (\_) handeln.  
   
-## <a name="options"></a>enthalten  
- **Variable hinzufügen**  
+## <a name="options"></a>Tastatur  
+ **Hinzufügen von Variablen**  
  Fügt eine benutzerdefinierte Variable hinzu.  
   
  **Variable verschieben**  
@@ -54,7 +54,7 @@ ms.locfileid: "71295031"
  **Name**  
  Zeigt den Variablennamen an. Bei benutzerdefinierten Variablen können Sie den Namen der Variablen aktualisieren.  
   
- **Scope**  
+ **Umfang**  
  Zeigt den Bereich der Variablen an. Eine Variable verfügt entweder über den Bereich des gesamten Pakets oder den Bereich eines Containers bzw. Tasks. Der Bereich der Variable muss ausreichend sein, sodass die Variable für alle anderen Tasks oder Komponenten sichtbar ist, die ihren Wert lesen oder festlegen müssen.  
   
  Sie können den Bereich ändern, indem Sie auf die Variable klicken und dann im Fenster **Variablen** auf **Variable verschieben** klicken.  
@@ -65,7 +65,7 @@ ms.locfileid: "71295031"
 > [!NOTE]  
 >  Wenn Sie der Variable einen Ausdruck zuweisen, können Sie den Datentyp nicht ändern.  
   
- **ReplTest1**  
+ **Wert**  
  Zeigt den Wert der Variablen an. Bei benutzerdefinierten Variablen können Sie den Wert aktualisieren. Dieser Wert kann ein Literal oder ein Ausdruck sein, und der Wert kann eine mehrzeilige Zeichenfolge sein. Um der Variable einen Ausdruck zuzuweisen, klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben der Spalte **Ausdruck** im Fenster **Variablen** .  
   
  **Namespace**  
@@ -99,11 +99,11 @@ ms.locfileid: "71295031"
 ### <a name="options-for-columns"></a>Optionen für Spalten  
  Wählen Sie die Spalten aus, die im Fenster **Variablen** angezeigt werden sollen.  
   
--   **Scope**  
+-   **Umfang**  
   
--   **Data type**  
+-   **Datentyp**  
   
--   **ReplTest1**  
+-   **Wert**  
   
 -   **Namespace**  
   

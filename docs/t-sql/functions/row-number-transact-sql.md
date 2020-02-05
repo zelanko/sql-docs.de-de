@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095382"
 ---
-# <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
+# <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Nummeriert die Ausgabe eines Resultsets. Genauer gesagt wird die fortlaufende Nummer einer Zeile innerhalb einer Partition eines Resultsets zurückgegeben, beginnend mit 1 für die erste Zeile in jeder Partition. 
@@ -38,7 +38,7 @@ Nummeriert die Ausgabe eines Resultsets. Genauer gesagt wird die fortlaufende Nu
 > [!NOTE]
 > `ROW_NUMBER` ist ein temporärer Wert, der berechnet wird, wenn die Abfrage ausgeführt wird. Unter [IDENTITY-Eigenschaft](../../t-sql/statements/create-table-transact-sql-identity-property.md) und [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) finden Sie weitere Informationen zum dauerhaften Speichern von Zahlen in einer Tabelle. 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
   
 ## <a name="syntax"></a>Syntax  
@@ -85,7 +85,7 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|NAME    |recovery_model_desc |  
+|name    |recovery_model_desc |  
 |-----------  |------------ |  
 |master |SIMPLE |
 |model |FULL |
@@ -104,7 +104,7 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |master |SIMPLE |
 |2 |model |FULL |
@@ -123,7 +123,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
 |1 |master |SIMPLE |
@@ -182,7 +182,7 @@ FROM OrderedOrders
 WHERE RowNumber BETWEEN 50 AND 60;  
 ```  
   
-### <a name="d-using-rownumber-with-partition"></a>D. Verwenden von ROW_NUMBER () mit PARTITION  
+### <a name="d-using-row_number-with-partition"></a>D: Verwenden von ROW_NUMBER () mit PARTITION  
  Im folgenden Beispiel wird das Argument `PARTITION BY` zum Partitionieren des Abfrageresultset nach der Spalte `TerritoryName` verwendet. Durch die `ORDER BY`-Klausel in der `OVER`-Klausel werden die Zeilen in jeder Partition nach der Spalte `SalesYTD` sortiert. Die `ORDER BY`-Klausel in der `SELECT`-Anweisung sortiert das gesamte Abfrageresultset nach `TerritoryName`.  
   
 ```sql  
@@ -218,7 +218,7 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. Zurückgeben der Zeilennummer für Vertriebsmitarbeiter  
  Im folgenden Beispiel wird `ROW_NUMBER` für die Vertriebsmitarbeiter (basierend auf der zugewiesenen Sollvorgabe für den Verkauf) zurückgegeben.  
@@ -249,7 +249,7 @@ RowNumber  FirstName  LastName            SalesQuota
 4          Jae        Pak                 10,514,000.00  
 ```
 
-### <a name="f-using-rownumber-with-partition"></a>F. Verwenden von ROW_NUMBER () mit PARTITION  
+### <a name="f-using-row_number-with-partition"></a>F. Verwenden von ROW_NUMBER () mit PARTITION  
  Im folgenden Beispiel wird die Verwendung der `ROW_NUMBER`-Funktion mit dem `PARTITION BY`-Argument dargestellt. Dadurch nummeriert die `ROW_NUMBER`-Funktion die Zeilen in jeder Partition.  
   
 ```sql  

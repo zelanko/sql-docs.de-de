@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070273"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68070273"
 
 Ändert die Mitgliedschaft einer Serverrolle oder ändert Namen einer benutzerdefinierten Serverrolle. Feste Serverrollen können nicht umbenannt werden.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. Hinzufügen eines Domänenkontos zu einer Serverrolle  
-Im folgenden Beispiel wird der benutzerdefinierten Serverrolle `Production` das Domänenkonto `adventure-works\roberto0` hinzugefügt.  
+Im folgenden Beispiel wird der benutzerdefinierten Serverrolle `adventure-works\roberto0` das Domänenkonto `Production` hinzugefügt.  
   
 ```  
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
@@ -119,7 +119,7 @@ ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;
 GO  
 ```  
   
-### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. Entfernen eines Domänenkontos aus einer Serverrolle  
+### <a name="d-removing-a-domain-account-from-a-server-role"></a>D: Entfernen eines Domänenkontos aus einer Serverrolle  
 Im folgenden Beispiel wird das Domänenkonto `adventure-works\roberto0` aus der benutzerdefinierten Serverrolle `Production` entfernt.  
   
 ```  

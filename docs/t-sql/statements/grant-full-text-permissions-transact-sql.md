@@ -19,10 +19,10 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050834"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT-Berechtigungen für Volltext (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68050834"
   
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,14 +53,14 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Der Name einer Berechtigung. Die gültigen Zuordnungen von Berechtigungen zu sicherungsfähigen Elementen werden im Abschnitt mit den Hinweisen weiter unten in diesem Thema beschrieben.  
   
- ON FULLTEXT CATALOG **::** _full-text_catalog_name_  
+ ON FULLTEXT CATALOG **::** _Volltext-Katalogname_  
  Gibt den Volltextkatalog an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- ON FULLTEXT STOPLIST **::** _full-text_stoplist_name_  
+ ON FULLTEXT STOPLIST **::** _Volltext-Stopplistenname_  
  Gibt die Volltextstoppliste an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
- Gibt den Prinzipal an, für den die Berechtigung erteilt wird. Einer der folgenden Typen:  
+ Gibt den Prinzipal an, für den die Berechtigung erteilt wird. Einer der folgenden:  
   
 -   Datenbankbenutzer  
 -   Datenbankrolle (database role)  
@@ -75,7 +75,7 @@ GRANT OPTION
  Gibt an, dass der Prinzipal die angegebene Berechtigung auch anderen Prinzipalen erteilen kann.  
   
 AS *granting_principal*  
- Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet. Einer der folgenden Typen:  
+ Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet. Einer der folgenden:  
   
 -   Datenbankbenutzer  
 -   Datenbankrolle (database role)  

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874466"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Name der Windows-Sortierung (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70874466"
 
 Gibt den Namen der Windows-Sortierung in der COLLATE-Klausel in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Der Name der Windows-Sortierung besteht aus dem Sortierungskennzeichner und den Vergleichsarten.
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,12 +49,12 @@ CollationDesignator_<ComparisonStyle>
 ## <a name="arguments"></a>Argumente
 
 *CollationDesignator*   
-Gibt die grundlegenden bei der Windows-Sortierung verwendeten Sortierungsregeln an. Zu den grundlegenden Sortierungsregeln zählen:
+Gibt die grundlegenden in der Windows-Sortierung verwendeten Sortierungsregeln an. Zu den grundlegenden Sortierungsregeln zählen:
 
 - Die Sortier- und Vergleichsregeln, die angewendet werden, wenn Wörterbuchsortierung angegeben wird. Sortierregeln basieren auf Alphabet oder Sprache.
 - Die Codepage, die verwendet wird, um **varchar**-Daten zu speichern.
 
-Im Folgenden finden Sie einige Beispiele:
+Beispiele:
 
 - Latin1\_General oder French: Beide verwenden Codepage 1252.
 - Turkish: verwendet die Codepage 1254.
@@ -72,12 +72,12 @@ Bei Weglassen dieser Option erfolgt keine Unterscheidung nach Kanatyp. Bei **KS*
 Bei Weglassen dieser Option erfolgt keine Unterscheidung nach Breite. Bei **WS** erfolgt eine Unterscheidung.
 
 *VariationSelectorSensitivity*  
-- **Gilt für**: Seit [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Gilt für:** ab [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - Bei Weglassen dieser Option erfolgt keine Unterscheidung nach Variantenselektor. Bei **VSS** erfolgt eine Unterscheidung.
 
 **UTF8**  
-- **Gilt für**: Seit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Gilt für:** ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Gibt an, dass für geeignete Datentypen UTF-8-Codierung verwendet werden soll. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -87,7 +87,7 @@ Gibt die zu verwendende abwärtskompatible binäre Sortierreihenfolge an.
 **BIN2**  
 Gibt die binäre Sortierreihenfolge an, die die Semantik für den Codepunktvergleich verwendet.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Je nach Sortierungsversion sind für manche Codeelemente möglicherweise keine Gewichtungen und/oder Großschreibung/Kleinschreibung-Mappings angegeben. Vergleichen Sie z.B. die Ausgabe der `LOWER`-Funktion bei gleichem Zeichen, aber unterschiedlichen Versionen derselben Sortierung:
 
 ```sql
@@ -199,7 +199,7 @@ In der folgenden Tabelle werden alle Windows-Sortierungen aufgelistet, die in [!
 |Lule-Sami (Norwegen)|Sami_Norway_100_|Nicht verfügbar|
 |Lule-Sami (Schweden)|Sami_Sweden_Finland_100_|Nicht verfügbar|
 |Nord-Sami (Finnland)|Sami_Sweden_Finland_100_|Nicht verfügbar|
-|Nordsamisch (Norwegen)|Sami_Norway_100_|Nicht verfügbar|
+|Nord-Sami (Norwegen)|Sami_Norway_100_|Nicht verfügbar|
 |Nord-Sami (Schweden)|Sami_Sweden_Finland_100_|Nicht verfügbar|
 |Skolt-Sami (Finnland)|Sami_Sweden_Finland_100_|Nicht verfügbar|
 |Süd-Sami (Norwegen)|Sami_Norway_100_|Nicht verfügbar|
@@ -233,7 +233,7 @@ In der folgenden Tabelle werden alle Windows-Sortierungen aufgelistet, die in [!
 |Veraltet, nicht verfügbar auf Serverebene in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher|Hindi|Hindi|
 |Veraltet, nicht verfügbar auf Serverebene in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |Veraltet, nicht verfügbar auf Serverebene in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher|Lithuanian_Classic|Lithuanian_Classic|
-|Veraltet, nicht verfügbar auf Serverebene in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher|Macedonian|Macedonian|
+|Veraltet, nicht verfügbar auf Serverebene in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher|Mazedonisch|Mazedonisch|
 
 <sup>1</sup> Nur-Unicode-Sortierungen unterstützen in Windows nur Daten auf Spalten- oder Ausdrucksebene. Sie können nicht für Sortierungen auf Server- oder Datenbankebene verwendet werden.
 
@@ -246,6 +246,6 @@ In der folgenden Tabelle werden alle Windows-Sortierungen aufgelistet, die in [!
 - [Konstanten](../../t-sql/data-types/constants-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
-- [table](../../t-sql/data-types/table-transact-sql.md)
+- [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [Tabelle](../../t-sql/data-types/table-transact-sql.md)
 - [sys.fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)

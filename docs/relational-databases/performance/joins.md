@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68419587"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
@@ -229,7 +229,7 @@ Wenn ein adaptiver Join zu einem Vorgang geschachtelter Schleifen wechselt, verw
 ### <a name="tracking-adaptive-join-activity"></a>Nachverfolgen der Aktivität adaptiver Joins
 Der Operator für adaptive Joins verfügt über folgende Planoperatorattribute:
 
-|Planattribut|und Beschreibung|
+|Planattribut|BESCHREIBUNG|
 |---|---|
 |AdaptiveThresholdRows|Gibt den beim Wechsel von einem Hashjoin zu einem Nested Loop-Join zu verwendenden Schwellenwert an|
 |EstimatedJoinType|Gibt den erwarteten Jointyp an|
