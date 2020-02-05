@@ -20,10 +20,10 @@ ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4264aabaca1fe1b13427fc11cf3cd1b7ccc59e99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066612"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml (geography-Datentyp)
@@ -31,7 +31,7 @@ ms.locfileid: "68066612"
 
   Gibt die GML (Geography Markup Language)-Darstellung einer **geography** -Instanz zurück.  
   
- Weitere Informationen zu GML finden Sie in der OGC-Spezifikation (Open Geospatial Consortium): [OGC Specifications, Geography Markup Language (OGC-Spezifikationen, Geography Markup Language)](https://go.microsoft.com/fwlink/?LinkId=93629)  
+ Weitere Informationen über Geography Markup Language finden Sie in der OGC (Open Geospatial Consortium)-Spezifikation: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="syntax"></a>Syntax  
   

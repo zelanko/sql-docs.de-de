@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c0d069601c36ba46be3c1950300c16b8808c264f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013353"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC-Clusterdienst ist offline
@@ -31,10 +31,10 @@ ms.locfileid: "68013353"
 |-|-|  
 |**Richtlinienname**|WSFC-Clusterstatus|  
 |**Problem**|Der WSFC-Clusterdienst ist offline.|  
-|**Kategorie**|**Kritisch**|  
+|**Kategorie**|**Critical** (Kritisch)|  
 |**Facet**|SQL Server-Instanz|  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Diese Richtlinie überprüft den Status des Windows Server-Failoverclusters (WSFC). Die Richtlinie befindet sich in einem fehlerhaften Zustand und löst eine Warnung aus, wenn der WSFC-Cluster offline ist oder sich im erzwungenen Quorumstatus befindet. Alle innerhalb dieses Clusters gehosteten Verfügbarkeitsgruppen sind offline, oder eine Notfallwiederherstellungsaktion ist erforderlich.  
   
  Der Richtlinienstatus ist fehlerfrei, wenn der Clusterstatus das normale Quorum aufweist.  

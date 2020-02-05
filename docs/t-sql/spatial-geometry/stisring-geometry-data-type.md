@@ -18,10 +18,10 @@ ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a9aa9b1b8e97f78887710309019e80ff4276c732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030882"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (geometry-Datentyp)
@@ -33,7 +33,7 @@ Gibt 1 zurück, wenn eine **geometry** -Instanz die folgenden Anforderungen erf�
 -   Sie ist einfach.  
 -   Gibt 0 zurück, wenn die **LineString** -Instanz die Anforderungen nicht erfüllt.  
 
- Damit eine **geometry** -Instanz als geschlossen und einfach betrachtet werden kann, müssen sowohl [STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md) als auch [STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md) 1 zurückgeben, wenn Sie für die Instanz aufgerufen werden. Sie können den Instanztyp einer **geometry** mithilfe von [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) ermitteln.  
+ Damit eine **geometry**-Instanz als geschlossen und einfach betrachtet werden kann, müssen sowohl [STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md) als auch [STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md) 1 zurückgeben, wenn sie für die Instanz aufgerufen werden. Sie können den Instanztyp einer **geometry** mithilfe von [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) ermitteln.  
   
 ## <a name="syntax"></a>Syntax  
   

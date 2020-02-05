@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c17c44916a84fe1e3beedd8ee850bc7534788813
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040405"
 ---
 # <a name="analytic-functions-transact-sql"></a>Analytische Funktionen (Transact-SQL)
@@ -34,7 +34,7 @@ SQL Server unterstützt diese analytischen Funktionen:
   
 Analytische Funktionen berechnen auf Grundlage einer Gruppe von Zeilen einen Aggregatwert. Sie können jedoch im Gegensatz zu Aggregatfunktionen mehrere Zeilen für jede Gruppe zurückgeben. Verwenden Sie analytische Funktionen, um gleitende Durchschnitte, laufende Summen, Prozentsätze oder die ersten N-Ergebnisse innerhalb einer Gruppe zu berechnen.
  
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

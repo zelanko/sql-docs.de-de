@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908934"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Löschen von Blob-Sicherungsdateien mit aktiven Leases
@@ -40,7 +40,7 @@ In den folgenden Schritten wird beschrieben, wie nach einem fehlerhaften Sicheru
     > [!TIP]  
     > SQL Server gibt eine Lease-ID aus, um während des Wiederherstellungsvorgangs einen exklusiven Zugriff zu gewährleisten. Die ID für die Wiederherstellungslease lautet BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-1. **Löschen des Blobs:** Um ein BLOB mit einer aktiven Lease zu löschen, müssen Sie zunächst die Lease unterbrechen.  
+1. **Löschen des Blobs:** Um ein Blob mit einer aktiven Lease zu löschen, müssen Sie zunächst die Lease unterbrechen.  
 
 ###  <a name="Code_Example"></a> Beispiel für ein PowerShell-Skript  
   
@@ -125,6 +125,6 @@ if($lockedBlobs.Count -gt 0)
 } else { Write-Host " There are no blobs with locked lease status." }
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[SQL Server-Sicherung über URLs – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

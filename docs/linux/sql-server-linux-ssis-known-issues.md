@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032217"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Einschränkungen und bekannte Probleme bei SSIS unter Linux
@@ -53,7 +53,7 @@ Die folgenden integrierten Integration Services-Komponenten werden unter Linux u
 
 ## <a name="control-flow-tasks-supported-with-limitations"></a>Unterstützte Ablaufsteuerungsaufgaben mit Einschränkungen
 
-| Task | Einschränkungen |
+| Aufgabe | Einschränkungen |
 |------------|---|
 | Task Prozess ausführen | Nur im In-Process-Modus unterstützt. |
 | Dateisystem (Task) | Die Aktionen *Verzeichnis verschieben* und *Dateiattribute festlegen* werden nicht unterstützt. |
@@ -72,7 +72,7 @@ Die folgenden Wartungsplantasks werden unter Linux nicht unterstützt:
 
 Die folgenden Wartungsplantasks werden unter Linux unterstützt:
 - Datenbankintegrität überprüfen
-- Datenbank verkleinern
+- Verkleinern der Datenbank
 - Index neu organisieren
 - Index neu erstellen
 - Statistikaktualisierung
@@ -102,7 +102,7 @@ Die folgenden Wartungsplantasks werden unter Linux unterstützt:
 
 ## <a name="supported-data-flow-transformations"></a>Unterstützte Datenflusstransformationen
 - Aggregat
-- Überwachen von
+- Audit
 - Balanced Data Distributor
 - Zeichenzuordnung
 - Bedingtes Teilen
@@ -113,14 +113,14 @@ Die folgenden Wartungsplantasks werden unter Linux unterstützt:
 - Fuzzygruppierung
 - Fuzzysuche
 - Importieren von Spalten
-- Suche
+- Nachschlagen
 - Merge
 - Merge Join
 - Multicast
 - Pivotieren
 - Zeilenanzahl
 - Langsam veränderliche Dimensionen
-- Sort
+- Sortieren
 - Ausdruckssuche
 - Union All
 - Entpivotieren

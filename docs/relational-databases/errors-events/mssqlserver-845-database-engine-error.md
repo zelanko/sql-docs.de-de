@@ -12,13 +12,13 @@ ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce297a1c2bc782a82a322618acedb102bb9e18eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101497"
 ---
-# <a name="mssqlserver845"></a>MSSQLSERVER_845
+# <a name="mssqlserver_845"></a>MSSQLSERVER_845
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -33,7 +33,7 @@ ms.locfileid: "68101497"
 |Meldungstext|Timeout beim Warten auf Pufferlatchtyp %d für Seite %S_PGID, Datenbank-ID %d.|  
   
 ## <a name="explanation"></a>Erklärung  
-Ein Prozess hat darauf gewartet, einen Latch abzurufen, doch der Prozess hat so lange gewartet, bis die Zeitgrenze überschritten wurde und kein Latch abgerufen werden konnte. Dies kann auftreten, wenn das Ausführen eines E/A-Vorgangs zu lange dauert, was normalerweise daraus resultiert, dass Systemprozesse durch andere Tasks blockiert werden. In manchen Fällen kann dieser Fehler auch das Ergebnis eines Hardwarefehlers sein.  
+Ein Prozess hat auf die Beschaffung eines Latchs gewartet, aber für den Prozess wurde so lange gewartet, bis das Zeitlimit abgelaufen und die Beschaffung nicht mehr möglich war. Dies kann auftreten, wenn das Ausführen eines E/A-Vorgangs zu lange dauert, was normalerweise daraus resultiert, dass Systemprozesse durch andere Tasks blockiert werden. In manchen Fällen kann dieser Fehler auch das Ergebnis eines Hardwarefehlers sein.  
   
 ## <a name="user-action"></a>Benutzeraktion  
 Durch folgende Aktionen kann dieser Fehler verhindert werden:  

@@ -20,18 +20,18 @@ ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 892e4c09154e93ded7718819c86dfe91c18c85ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026252"
 ---
-# <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
+# <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Für einen bestimmten Parameter gibt `CURSOR_STATUS` an, ob eine Cursordeklaration einen Cursor und ein Resultset zurückgegeben hat oder nicht.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,7 +68,7 @@ Der Name der Cursorvariablen. Eine Cursorvariable muss mithilfe des **cursor**-D
 |1|Das Resultset des Cursors hat mindestens eine Zeile.<br /><br /> Für INSENSITIVE- und KEYSET-Cursor hat das Resultset mindestens eine Zeile.<br /><br /> Für dynamische Cursor kann das Resultset keine, eine oder mehrere Zeilen haben.|Der für diese Variable zugeordnete Cursor ist geöffnet.<br /><br /> Für INSENSITIVE- und KEYSET-Cursor hat das Resultset mindestens eine Zeile.<br /><br /> Für dynamische Cursor kann das Resultset keine, eine oder mehrere Zeilen haben.|  
 |0|Das Resultset des Cursors ist leer.*|Der dieser Variable zugeordnete Cursor ist geöffnet, das Resultset ist jedoch definitiv leer.*|  
 |-1|Der Cursor ist geschlossen.|Der dieser Variable zugeordnete Cursor ist geschlossen.|  
-|-2|Nicht verfügbar.|Eine der folgenden Möglichkeiten trifft zu:<br /><br /> Die zuvor aufgerufene Prozedur hat dieser OUTPUT-Variablen keinen Cursor zugewiesen.<br /><br /> Die zuvor zugewiesene Prozedur hat dieser OUTPUT-Variablen einen Cursor zugewiesen, aber der Cursor war bei Abschluss der Prozedur geschlossen. Deshalb wird die Zuordnung des Cursors aufgehoben, und der Cursor wird nicht an die aufrufende Prozedur zurückgegeben.<br /><br /> Der deklarierten Cursorvariablen wird kein Cursor zugewiesen.|  
+|-2|Nicht zutreffend|Eine der folgenden Möglichkeiten trifft zu:<br /><br /> Die zuvor aufgerufene Prozedur hat dieser OUTPUT-Variablen keinen Cursor zugewiesen.<br /><br /> Die zuvor zugewiesene Prozedur hat dieser OUTPUT-Variablen einen Cursor zugewiesen, aber der Cursor war bei Abschluss der Prozedur geschlossen. Deshalb wird die Zuordnung des Cursors aufgehoben, und der Cursor wird nicht an die aufrufende Prozedur zurückgegeben.<br /><br /> Der deklarierten Cursorvariablen wird kein Cursor zugewiesen.|  
 |-3|Ein Cursor mit dem angegebenen Namen ist nicht vorhanden.|Eine Cursorvariable mit dem angegebenen Namen ist nicht vorhanden, oder ihr wurde, wenn sie vorhanden ist, noch kein Cursor zugeordnet.|  
   
 \* Dynamische Cursor geben dieses Ergebnis nie zurück.
@@ -126,7 +126,7 @@ After Close
 -1
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Cursor Functions &#40;Transact-SQL&#41; (Cursorfunktionen (Transact-SQL))](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   

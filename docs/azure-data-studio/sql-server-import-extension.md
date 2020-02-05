@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959124"
 ---
 # <a name="sql-server-import-extension-preview"></a>Erweiterung „SQL Server Import“ (Vorschau)
@@ -39,16 +39,16 @@ Informationen über die SSMS-Version dieses Features finden Sie in [diesem Artik
 1. Um SQL Server Import zu starten, stellen Sie zunächst auf der Registerkarte „Server“ eine Verbindung mit einem Server her.
 2. Wenn die Verbindung hergestellt ist, zeigen Sie die Detailinformationen zu der Zieldatenbank an, aus der Sie eine Datei in eine SQL-Tabelle importieren möchten.
 3. Klicken Sie mit der rechten Maustaste auf die Datenbank, und klicken Sie auf **Import-Assistent**.
-    ![Öffnen des Import-Assistenten](media/sql-server-import-extension/open-import-wizard.png)
+    ![Offener Import-Assistent](media/sql-server-import-extension/open-import-wizard.png)
 
 ## <a name="importing-a-file"></a>Importieren einer Datei
 1. Wenn Sie mit der rechten Maustaste klicken, um den Assistenten zu starten, sind Server und Datenbank bereits automatisch ausgefüllt. Wenn weitere aktive Verbindungen bestehen, können Sie diese in der Dropdownliste auswählen. 
     
     Wählen Sie eine Datei aus, indem Sie auf **Durchsuchen** klicken. Der Tabellenname sollte basierend auf dem Dateinamen bereits automatisch ausgefüllt sein, Sie können den Namen aber auch selbst ändern.
 
-    Das Schema lautet standardmäßig „dbo“, Sie können es jedoch ändern. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.
+    Das Schema lautet standardmäßig „dbo“, Sie können es jedoch ändern. Klicken Sie zum Fortfahren auf **Weiter** .
     ![Eingabedatei](media/sql-server-import-extension/import-wizard-input-file.png)
-1. Der Assistent generiert eine Vorschau basierend auf den ersten 50 Zeilen. Auf dieser Seite sind keine weiteren Aktionen erforderlich, außer, dass Sie überprüfen müssen, ob die Daten richtig aussehen. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.
+1. Der Assistent generiert eine Vorschau basierend auf den ersten 50 Zeilen. Auf dieser Seite sind keine weiteren Aktionen erforderlich, außer, dass Sie überprüfen müssen, ob die Daten richtig aussehen. Klicken Sie zum Fortfahren auf **Weiter** .
     ![Offener Import-Assistent](media/sql-server-import-extension/import-wizard-preview-data.png)
 2. Auf dieser Seite können Sie einige Änderungen vornehmen, z.B. für den Spaltennamen, den Datentyp, die Angabe, ob es sich um einen Primärschlüssel handelt, und Angaben dazu, ob NULL-Werte zugelassen sin. Sie können so viele Änderungen vornehmen, wie Sie wünschen. Klicken Sie auf **Daten importieren**, um fortzufahren.
     ![Offener Import-Assistent](media/sql-server-import-extension/import-wizard-modify-columns.png)

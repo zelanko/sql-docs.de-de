@@ -26,10 +26,10 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907196"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Vergleichen von typisiertem XML mit nicht typisiertem XML
@@ -68,14 +68,14 @@ ms.locfileid: "72907196"
   
  Im folgenden Beispiel wird eine zweiteilige Benennungskonvention zum Angeben des Namens der XML-Schemaauflistung verwendet. Der erste Teil ist der Schemaname, der zweite Teil der Name der XML-Schemaauflistung.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Beispiel: Verknüpfen einer Schemasammlung mit einer XML-Variable  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Beispiel: Verknüpfen einer Schemaauflistung mit einer Variablen vom Typ xml  
  Im folgenden Beispiel wird eine Variable vom Typ **xml** erstellt und eine Schemaauflistung mit dieser verknüpft. Die im Beispiel angegebene Schemaauflistung wurde bereits in die **AdventureWorks** -Datenbank importiert.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Beispiel: Angeben eines Schemas für eine XML-Spalte  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Beispiel: Angeben eines Schemas für eine Spalte vom Typ xml  
  Im folgenden Beispiel wird eine Tabelle mit einer Spalte vom Typ **xml** erstellt und ein Schema für die Spalte angegeben:  
   
 ```  
@@ -84,7 +84,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Beispiel: Übergeben eines XML-Parameters an eine gespeicherte Prozedur  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Beispiel: Übergeben eines Parameters vom Typ xml an eine gespeicherte Prozedur  
  Im folgenden Beispiel wird ein Parameter vom Typ **xml** an eine gespeicherte Prozedur übergeben und ein Schema für die Variable angegeben:  
   
 ```  
@@ -106,7 +106,7 @@ AS
   
  In der Datentyphierarchie nimmt der **xml** -Datentyp einen Platz unter **sql_variant** und benutzerdefinierten Typen ein, steht jedoch über allen integrierten Typen.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Beispiel: Angeben von Facets zum Einschränken einer typisierten XML-Spalte  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Beispiel: Angeben von Facets zum Einschränken einer typisierten xml-Spalte  
  Typisierte **xml** -Spalten können so eingeschränkt werden, dass nur einzelne Elemente der obersten Ebene für jede darin gespeicherte Instanz zulässig sind. Sie geben zu diesem Zweck beim Erstellen der Tabelle den optionalen `DOCUMENT` -Facet an, wie das folgende Beispiel zeigt:  
   
 ```  
@@ -158,7 +158,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;Data Modification Language&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

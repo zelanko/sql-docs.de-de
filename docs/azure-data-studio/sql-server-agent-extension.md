@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 05356cc815fdba22d55ee339d60994f2c9423373
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959186"
 ---
 # <a name="sql-server-agent-extension-preview"></a>SQL Server-Agent-Erweiterung (Vorschau)
@@ -28,13 +28,13 @@ Zu den wichtigsten Aktionen gehören:
 
 ## <a name="install-the-sql-server-agent-extension"></a>Installieren der SQL Server-Agent-Erweiterung
 
-1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, wählen Sie das Symbol für Erweiterungen aus, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
+1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, klicken Sie auf das Symbol für Erweiterungen, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
 2. Wählen Sie eine verfügbare Erweiterung aus, um deren Details anzuzeigen.
 
    ![Agent installieren](media/extensions/sql-server-agent-extension/install-sql-agent.png)
 
-1. Wählen Sie die gewünschte Erweiterung aus, und **Installieren** Sie diese.
-2. Wählen Sie **Neu laden** aus, um die Erweiterung zu aktivieren (nur bei der ersten Installation einer Erweiterung erforderlich).
+1. Wählen Sie die gewünschte Erweiterung aus, und **installieren** Sie diese.
+2. Klicken Sie auf **Erneut laden**, um die Erweiterung zu aktivieren (nur bei der Erstinstallation einer Erweiterung erforderlich).
 1. Navigieren Sie zu Ihrem Management-Dashboard, indem Sie mit der rechten Maustaste auf Ihren Server oder Ihre Datenbank klicken und **Verwalten** auswählen.
 2. Die installierten Erweiterungen werden als Registerkarten auf dem Management-Dashboard angezeigt:
 

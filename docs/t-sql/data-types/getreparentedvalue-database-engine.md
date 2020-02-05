@@ -18,10 +18,10 @@ ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278367"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Datenbank-Engine)
@@ -53,7 +53,7 @@ Ein **hierarchyid**-Wert, der den Knoten darstellt. Ersetzen Sie den _OldRoot_ A
   
 **CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wird verwendet, um die Struktur durch Verschieben von Knoten von _oldRoot_ nach _newRoot_ zu ändern. „GetReparentedValue“ wird zum Verschieben eines Hierarchieknotens an eine neue Position in der Hierarchie verwendet. Der **hierarchyid**-Datentyp stellt die hierarchische Struktur dar, setzt sie jedoch nicht durch. Benutzer müssen sicherstellen, dass der hierarchyid-Wert für die neue Position angemessen strukturiert ist. Mit einem eindeutigen Index für den **hierarchyid**-Datentyp können Sie doppelte Einträge vermeiden. Ein Beispiel für die Verschiebung einer vollständigen Teilstruktur finden Sie unter [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Beispiele  
@@ -109,7 +109,7 @@ Im folgenden Codeausschnitt wird die GetReparentedValue ()-Methode aufgerufen:
 this. GetReparentedValue(oldParent, newParent)  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [hierarchyid-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

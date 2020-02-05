@@ -19,10 +19,10 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8211045a72ae56b04bb93b7be7e83f296f2467e5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291667"
 ---
 # <a name="character-map-transformation"></a>Transformation zum Zuordnen der Zeichen
@@ -41,7 +41,7 @@ ms.locfileid: "71291667"
 ## <a name="mapping-operations"></a>Zuordnungsvorgänge  
  In der folgenden Tabelle sind die Zuordnungsvorgänge beschrieben, die von der Transformation zum Zuordnen der Zeichen unterstützt werden.  
   
-|Vorgang|und Beschreibung|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Byteumkehrung|Kehrt die Bytereihenfolge um.|  
 |Normale Breite|Ordnet Zeichen halber Breite Zeichen normaler Breite zu.|  
@@ -49,22 +49,22 @@ ms.locfileid: "71291667"
 |Hiragana|Ordnet Katakanazeichen Hiraganazeichen zu.|  
 |Katakana|Ordnet Hiraganazeichen Katakanazeichen zu.|  
 |Linguistische Schreibweise|Wendet die linguistische Schreibweise anstelle der Systemregeln an. Die linguistische Schreibweise bezieht sich auf die Funktionalität der Win32 API für die einfache Unicode-Schreibweisenzuordnung von Türkisch und anderen Gebietsschemas.|  
-|Kleinschreibung|Konvertiert Zeichen in Kleinbuchstaben.|  
+|Kleinbuchstaben|Konvertiert Zeichen in Kleinbuchstaben.|  
 |Chinesisch (vereinfacht)|Ordnet Zeichen in traditionellem Chinesisch Zeichen in vereinfachtem Chinesisch zu.|  
 |Chinesisch (traditionell)|Ordnet Zeichen in vereinfachtem Chinesisch Zeichen in traditionellem Chinesisch zu.|  
-|Großschreibung|Konvertiert Zeichen in Großbuchstaben.|  
+|Großbuchstaben|Konvertiert Zeichen in Großbuchstaben.|  
   
 ## <a name="mutually-exclusive-mapping-operations"></a>Zuordnungsvorgänge, die sich gegenseitig ausschließen  
  In einer Transformation können mehrere Vorgänge ausgeführt werden. Manche Zuordnungsvorgänge schließen sich jedoch gegenseitig aus. In der folgenden Tabelle sind die Einschränkungen aufgeführt, die bei der Verwendung mehrerer Vorgänge in derselben Spalte gelten. Vorgänge in den Spalten Vorgang A und Vorgang B schließen sich gegenseitig aus.  
   
 |Vorgang A|Vorgang B|  
 |-----------------|-----------------|  
-|Kleinschreibung|Großschreibung|  
+|Kleinbuchstaben|Großbuchstaben|  
 |Hiragana|Katakana|  
 |Halbe Breite|Normale Breite|  
 |Chinesisch (traditionell)|Chinesisch (vereinfacht)|  
-|Kleinschreibung|Hiragana, Katakana, halbe Breite, normale Breite|  
-|Großschreibung|Hiragana, Katakana, halbe Breite, normale Breite|  
+|Kleinbuchstaben|Hiragana, Katakana, halbe Breite, normale Breite|  
+|Großbuchstaben|Hiragana, Katakana, halbe Breite, normale Breite|  
   
 ## <a name="configuration-of-the-character-map-transformation"></a>Konfiguration der Transformation zum Zuordnen der Zeichen  
  Es gibt folgende Möglichkeiten, um die Transformation zum Zuordnen der Zeichen zu konfigurieren:  
@@ -77,7 +77,7 @@ ms.locfileid: "71291667"
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "71291667"
 ## <a name="character-map-transformation-editor"></a>Transformations-Editor für Zeichenzuordnung
   Im Dialogfeld **Transformations-Editor für Zeichenzuordnung** können Sie die auf Spaltendaten anwendbaren Zeichenfolgenfunktionen auswählen und angeben, ob eine Zuordnung direkt geändert oder als neue Spalte hinzugefügt werden soll.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die Spalten aus, die mithilfe von Zeichenfolgenfunktionen transformiert werden sollen. Die getroffene Auswahl wird in der nachfolgenden Tabelle angezeigt.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "71291667"
  **Ziel**  
  Geben Sie an, ob Sie die Ergebnisse der Zeichenfolgenfunktionen direkt in der vorhandenen Spalte speichern möchten, oder ob Sie die geänderten Daten in einer neuen Spalte speichern möchten.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Neue Spalte|Speichern Sie die Daten in einer neuen Spalte. Weisen Sie der Spalte unter **Ausgabealias**einen Namen zu.|  
 |Direkte Änderung|Speichern Sie die geänderten Daten in der vorhandenen Spalte.|  
@@ -108,10 +108,10 @@ ms.locfileid: "71291667"
  **Vorgang**  
  Wählen Sie in der Liste die Zeichenfolgenfunktionen aus, die auf Spaltendaten angewendet werden sollen.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Kleinschreibung|In Kleinschreibung konvertieren.|  
-|Großschreibung|In Großschreibung konvertieren.|  
+|Kleinbuchstaben|In Kleinschreibung konvertieren.|  
+|Großbuchstaben|In Großschreibung konvertieren.|  
 |Byteumkehrung|In umgekehrte Bytereihenfolge konvertieren.|  
 |Hiragana|Japanische Katakana-Zeichen in Hiragana-Zeichen konvertieren.|  
 |Katakana|Japanische Hiragana-Zeichen in Katakana-Zeichen konvertieren.|  

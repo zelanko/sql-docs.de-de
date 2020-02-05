@@ -15,10 +15,10 @@ ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4bb425d07d566f4bb06d18a8f74f493a649fa8b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101021"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (geometry-Datentyp)

@@ -15,17 +15,17 @@ ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a511e977975ad0e23c9cf553de000b32bad24e69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039137"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Verwenden der value()-Methode und der nodes()-Methode mit OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Sie können mehrere **value()** -Methoden für den **xml** -Datentyp in einer **SELECT** -Klausel verwenden, um ein Rowset aus extrahierten Werten zu generieren. Die **nodes()** -Methode ergibt einen internen Verweis für jeden ausgewählten Knoten, der für zusätzliche Abfragen verwendet werden kann. Die Kombination der Methoden **nodes()** und **value()** kann beim Generieren des Rowsets effizienter sein, wenn es über mehrere Spalten verfügt und möglicherweise auch, wenn die zu seiner Generierung verwendeten Pfadausdrücke komplex sind.  
   
- Die **nodes()** -Methode ergibt Instanzen eines speziellen **xml**-Datentyps, wobei bei jedem der Kontext auf einen unterschiedlichen ausgewählten Knoten festgelegt ist. Diese Art der XML-Instanz unterstützt **query()** -, **value()** -, **nodes()** - und **exist()** -Methoden und kann in **count(\*)** -Aggregationen verwendet werden. Alle anderen Verwendungen verursachen einen Fehler.  
+ Die **nodes()** -Methode ergibt Instanzen eines speziellen **xml** -Datentyps, wobei bei jedem der Kontext auf einen unterschiedlichen ausgewählten Knoten festgelegt ist. Diese Art der XML-Instanz unterstützt **query()** -, **value()** -, **nodes()** - und **exist()** -Methoden und kann in **count(\*)** -Aggregationen verwendet werden. Alle anderen Verwendungen verursachen einen Fehler.  
   
 ## <a name="example-using-nodes"></a>Beispiel: Verwenden von nodes()  
  Angenommen, Sie wollen die Vornamen und Nachnamen von Autoren extrahieren, und der Vorname soll nicht "David" sein. Außerdem wollen Sie diese Informationen als ein Rowset extrahieren, das die beiden Spalten FirstName und LastName enthält. Durch Verwenden der Methoden **nodes()** und **value()** können Sie dieses Ziel erreichen, wie im folgenden Beispiel gezeigt:  
@@ -41,7 +41,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 bietet die Möglichkeit zum Generieren eines Rowsets aus einer XML-Instanz durch Verwenden von **OpenXml()** . Sie können das relationale Schema für das Rowset angeben sowie, wie die Werte in der XML-Instanz den Spalten im Rowset zugeordnet sind.  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>Beispiel: Verwenden von OpenXml() für den XML-Datentyp  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>Beispiel: Verwenden von OpenXml() für den xml-Datentyp  
  Die Abfrage aus dem vorherigen Beispiel kann mithilfe von **OpenXml()** umgeschrieben werden, wie im folgenden Beispiel gezeigt. Dies geschieht durch Erstellen eines Cursors, der jede XML-Instanz in eine XML-Variable einliest und dann für OpenXML auf sie anwendet:  
   
 ```  

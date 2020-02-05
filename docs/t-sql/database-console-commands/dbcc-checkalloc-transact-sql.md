@@ -27,10 +27,10 @@ ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056356"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "74056356"
 
 Überprüft die Konsistenz von Strukturen der Speicherplatzzuordnung für eine bestimmte Datenbank.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -79,10 +79,10 @@ Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/d
  Die Syntax wird nur aus Gründen der Abwärtskompatibilität beibehalten. Es werden keine Reparaturaktionen ausgeführt.
 
  REPAIR_REBUILD  
- Nicht verfügbar.  
+ Nicht zutreffend  
  Verwenden Sie die REPAIR-Optionen nur als letzte Möglichkeit. Zum Reparieren von Fehlern empfiehlt sich das Wiederherstellen mithilfe einer Sicherung. Bei Reparaturvorgängen werden keine Einschränkungen berücksichtigt, die möglicherweise in oder zwischen Tabellen vorhanden sind. Wenn die angegebene Tabelle an einer oder mehreren Einschränkungen beteiligt ist, ist es empfehlenswert, nach einem Reparaturvorgang DBCC CHECKCONSTRAINTS auszuführen. Wenn Sie REPAIR verwenden müssen, sollten Sie DBCC CHECKDB ohne Reparaturoption ausführen, um die zu verwendende Reparaturstufe zu ermitteln. Wenn Sie die REPAIR_ALLOW_DATA_LOSS-Ebene verwenden, empfiehlt es sich, die Datenbank vor dem Ausführen von DBCC CHECKDB zu sichern.
 
- mit  
+ WITH  
  Aktiviert anzugebende Optionen.
 
  ALL_ERRORMSGS  
@@ -97,7 +97,7 @@ Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/d
  ESTIMATEONLY  
  Zeigt den tempdb-Speicherplatz an, der schätzungsweise erforderlich ist, um DBCC CHECKALLOC auszuführen, wenn alle anderen Optionen angegeben sind.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 DBCC CHECKALLOC überprüft die Zuordnung aller Seiten in der Datenbank, unabhängig vom Typ der Seite oder des Objekts, zu dem sie gehören. Außerdem überprüft der Befehl die verschiedenen internen Strukturen, mit deren Hilfe diese Seiten und die Beziehungen zwischen ihnen nachverfolgt werden.
 Wird NO_INFOMSGS nicht angegeben, sammelt DBCC CHECKALLOC Informationen zur Speicherplatzverwendung für alle Objekte in der Datenbank. Diese Informationen werden anschließend zusammen mit den gefundenen Fehlern ausgegeben.
   
@@ -113,7 +113,7 @@ DBCC CHECKALLOC verwendet eine internen Datenbankmomentaufnahme, um die für die
 ## <a name="understanding-dbcc-error-messages"></a>Grundlegendes zu DBCC-Fehlermeldungen  
 Nach Abschluss des Befehls DBCC CHECKALLOC wird eine Meldung im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll verzeichnet. Wurde der DBCC-Befehl erfolgreich ausgeführt, zeigt die Meldung den erfolgreichen Abschluss und die Ausführungsdauer des Befehls an. Wurde der DBCC-Befehl aufgrund eines Fehlers vor Abschluss der Überprüfung beendet, zeigt die Meldung an, dass der Befehl beendet wurde. Außerdem wird ein Statuswert und die Ausführungsdauer des Befehls angegeben. In der folgenden Tabelle sind die Statuswerte aufgeführt und beschrieben, die in der Meldung enthalten sein können.
   
-|Status|und Beschreibung|  
+|State|BESCHREIBUNG|  
 |---|---|  
 |0|Fehlernummer 8930 wurde ausgelöst. Dies weist auf beschädigte Metadaten hin, die die Beendigung des DBCC-Befehls verursacht haben.|  
 |1|Fehlernummer 8967 wurde ausgelöst. Ein interner DBCC-Fehler ist aufgetreten.|  
@@ -133,7 +133,7 @@ Eine Reparatur kann in einer Benutzertransaktion ausgeführt werden. Dies ermög
 ## <a name="result-sets"></a>Resultsets  
 In den folgenden Tabellen werden die von DBCC CHECKALLOC zurückgegebenen Informationen beschrieben.
   
-|Element|und Beschreibung|  
+|Element|BESCHREIBUNG|  
 |---|---|  
 |FirstIAM|Nur interne Verwendung.|  
 |Root|Nur interne Verwendung.|  
@@ -143,7 +143,7 @@ In den folgenden Tabellen werden die von DBCC CHECKALLOC zurückgegebenen Inform
   
 DBCC CHECKALLOC meldet außerdem eine Zuordnungszusammenfassung für jeden Index und jede Partition in jeder Datei. In dieser Zusammenfassung wird die Verteilung der Daten beschrieben.
   
-|Element|und Beschreibung|  
+|Element|BESCHREIBUNG|  
 |---|---|  
 |Zugeordnete Seiten|Seiten, die für den Index zugeordnet wurden, und nicht verwendete Seiten in zugeordneten Blöcken.|  
 |Verwendete Seiten|Zugeordnete Seiten, die vom Index verwendet werden.|  

@@ -18,10 +18,10 @@ ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8880c5287d65e91ccca3c223d93c7b7b070a8df3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107749"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (geometry-Datentyp)

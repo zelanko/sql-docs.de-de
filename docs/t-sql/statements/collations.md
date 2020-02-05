@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71271914"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "71271914"
 
 Definiert eine Sortierung einer Datenbank oder Tabellenspalte, oder einen Umwandlungsvorgang für eine Sortierung, wenn er für einen Zeichenfolgenausdruck angewendet wird. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Wenn Sie während der Datenbankerstellung keine Sortierung angeben, wird der Datenbank die Standardsortierung der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugewiesen. Wenn Sie während der Tabellenspaltenerstellung keine Sortierung angeben, wird der Spalte die Standardsortierung der Datenbank zugewiesen.
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,7 +52,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** Bewirkt, dass die COLLATE-Klausel die Sortierung der aktuellen Datenbank erbt.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Die COLLATE-Klausel kann auf mehreren Ebenen angegeben werden. Dabei handelt es sich z. B. um:
 
@@ -148,7 +148,7 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>B. Zusätzliche Beispiele
+### <a name="b-additional-examples"></a>B. Weitere Beispiele
 
 Zusätzliche Beispiele zur Verwendung von **COLLATE** finden Sie unter [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) in Beispiel **G. Erstellen einer Datenbank und Angeben eines Sortierungsnamens und von Optionen**, und unter [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) in Beispiel **V. Ändern der Spaltensortierung**.
 
@@ -160,5 +160,5 @@ Zusätzliche Beispiele zur Verwendung von **COLLATE** finden Sie unter [CREATE D
 - [Konstanten](../../t-sql/data-types/constants-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [Table-Datentyp](../../t-sql/data-types/table-transact-sql.md)

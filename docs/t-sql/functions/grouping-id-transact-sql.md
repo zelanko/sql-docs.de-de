@@ -19,10 +19,10 @@ ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910657"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67910657"
 
   Ist eine Funktion, die die Ebene der Gruppierung berechnet. GROUPING_ID kann in der SELECT-\<Auswahlliste>, der HAVING- oder der ORDER BY-Klausel nur verwendet werden, wenn GROUP BY angegeben wurde.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,7 +63,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`abc`|`111`|`7`|  
   
 ## <a name="technical-definition-of-grouping_id-"></a>Technische Definition von GROUPING_ID ()  
- Jedes GROUPING_ID-Argument muss ein Element der GROUP BY-Liste sein. GROUPING_ID () gibt eine **ganzzahlige** Bitmap zurück, deren niedrigste N-Bits hervorgehoben sein können. Ein hervorgehobenes **Bit** gibt an, dass das zugehörige Argument keine Gruppierungsspalte für die entsprechende Ausgabezeile ist. Das niedrigste **Bit** in der Reihenfolge entspricht Argument N, und das N-1<sup>te</sup> **Bit** der Reihenfolge entspricht Argument 1.  
+ Jedes GROUPING_ID-Argument muss ein Element der GROUP BY-Liste sein. GROUPING_ID () gibt eine **ganzzahlige** Bitmap zurück, deren niedrigste N-Bits hervorgehoben sein können. Ein hervorgehobenes **Bit** gibt an, dass das zugehörige Argument keine Gruppierungsspalte für die entsprechende Ausgabezeile ist. Das niedrigste **Bit** in der Reihenfolge entspricht Argument N, und das N-1<sup>te</sup>**Bit** der Reihenfolge entspricht Argument 1.  
   
 ## <a name="grouping_id--equivalents"></a>GROUPING_ID ()-Entsprechungen  
  Für eine einzelne Gruppierungsabfrage entspricht GROUPING (\<column_expression>) GROUPING_ID (\<column_expression>), und beide geben 0 zurück.  
@@ -117,7 +117,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle);
 ### <a name="b-using-grouping_id-to-filter-a-result-set"></a>B. Verwenden von GROUPING_ID zum Filtern eines Resultsets  
   
 #### <a name="simple-example"></a>Einfaches Beispiel  
- Um nur die Zeilen zurückzugeben, die die Anzahl der Mitarbeiter nach Titel enthalten, entfernen Sie im folgenden Code in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank die Kommentierungszeichen von `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0`. Um nur die Zeilen zurückzugeben, die die Anzahl der Mitarbeiter nach Abteilung enthalten, entfernen Sie die Kommentierungszeichen aus `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
+ Um nur die Zeilen zurückzugeben, die die Anzahl der Mitarbeiter nach Titel enthalten, entfernen Sie im folgenden Code in der `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0`-Datenbank die Kommentierungszeichen von [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Um nur die Zeilen zurückzugeben, die die Anzahl der Mitarbeiter nach Abteilung enthalten, entfernen Sie die Kommentierungszeichen aus `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
   
 ```  
 SELECT D.Name  
@@ -304,7 +304,7 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
   
  Dies ist ein Auszug aus dem Resultset.  
   
-|Year|Month|Day|Total Due|Bitvektor (Basis-2)|Ganzzahlige Entsprechung|Gruppierungsebene|  
+|Jahr|Month (Monat)|Day (Tag)|Total Due|Bitvektor (Basis-2)|Ganzzahlige Entsprechung|Gruppierungsebene|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
 |2007|1|1|1\.497.452,6066|000|0|Jahr, Monat, Tag|  
 |2007|1|2|21.772,3494|000|0|Jahr, Monat, Tag|  
@@ -318,8 +318,8 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
 |2007|2|NULL|2\.727.337,9981|100|1|Year Month|  
 |2008|1|NULL|1954580,1658|100|1|Year Month|  
 |2008|2|NULL|3\.163.370,5217|100|1|Year Month|  
-|2007|NULL|NULL|4\.246.562,9541|110|3|Year|  
-|2008|NULL|NULL|5\.117.950,6875|110|3|Year|  
+|2007|NULL|NULL|4\.246.562,9541|110|3|Jahr|  
+|2008|NULL|NULL|5\.117.950,6875|110|3|Jahr|  
 |NULL|NULL|NULL|9\.364.513,6416|111|7|Grand Total|  
   
 #### <a name="cube-example"></a>CUBE-Beispiel  
@@ -385,7 +385,7 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
   
  Dies ist ein Auszug aus dem Resultset.  
   
-|Year|Month|Day|Total Due|Bitvektor (Basis-2)|Ganzzahlige Entsprechung|Gruppierungsebene|  
+|Jahr|Month (Monat)|Day (Tag)|Total Due|Bitvektor (Basis-2)|Ganzzahlige Entsprechung|Gruppierungsebene|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
 |2007|1|1|1\.497.452,6066|000|0|Jahr, Monat, Tag|  
 |2007|1|2|21.772,3494|000|0|Jahr, Monat, Tag|  
@@ -403,16 +403,16 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
 |2007|NULL|2|43456,7562|010|2|Jahr und Tag|  
 |2008|NULL|1|5\.016.894,0696|010|2|Jahr und Tag|  
 |2008|NULL|2|101.056,6179|010|2|Jahr und Tag|  
-|2007|NULL|NULL|4\.246.562,9541|110|3|Year|  
-|2008|NULL|NULL|5\.117.950,6875|110|3|Year|  
+|2007|NULL|NULL|4\.246.562,9541|110|3|Jahr|  
+|2008|NULL|NULL|5\.117.950,6875|110|3|Jahr|  
 |NULL|1|1|3\.405.574,7033|001|4|Monat und Tag|  
 |NULL|1|2|68.230,4185|001|4|Monat und Tag|  
 |NULL|2|1|5\.814.425,5642|001|4|Monat und Tag|  
 |NULL|2|2|76.282,9556|001|4|Monat und Tag|  
-|NULL|1|NULL|3\.473.805,1218|101|5|Month|  
-|NULL|2|NULL|5\.890.708,5198|101|5|Month|  
-|NULL|NULL|1|9\.220.000,2675|011|6|Day|  
-|NULL|NULL|2|144.513,3741|011|6|Day|  
+|NULL|1|NULL|3\.473.805,1218|101|5|Month (Monat)|  
+|NULL|2|NULL|5\.890.708,5198|101|5|Month (Monat)|  
+|NULL|NULL|1|9\.220.000,2675|011|6|Day (Tag)|  
+|NULL|NULL|2|144.513,3741|011|6|Day (Tag)|  
 |NULL|NULL|NULL|9\.364.513,6416|111|7|Grand Total|  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: c4649a591f7261943d2d5393678f63888930c01f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982036"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982036"
 
   Ändert ein Serverüberwachungsobjekt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit-Funktion. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -135,7 +135,7 @@ Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
  Entweder eine ANSI- oder Unicode-Zeichenfolge, die vom Prädikatvergleich verlangt wird. Für die Prädikatvergleichsfunktionen wird keine implizite Zeichenfolgentypkonvertierung ausgeführt. Die Übergabe des falschen Typs führt zu einem Fehler.  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen mindestens eine der Klauseln TO, WITH oder MODIFY NAME angeben, wann Sie ALTER AUDIT aufrufen.  
   
  Sie müssen den Status einer Überwachung auf OFF festlegen, um Änderungen an der Überwachung vornehmen zu können. Wenn ALTER AUDIT ausgeführt wird, während eine Überwachung mit einer anderen Option als STATE=OFF aktiviert ist, erhalten Sie die Fehlermeldung MSG_NEED_AUDIT_DISABLED.  
@@ -202,7 +202,7 @@ ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="d-removing-a-where-clause"></a>D. Entfernen einer WHERE-Klausel  
+### <a name="d-removing-a-where-clause"></a>D: Entfernen einer WHERE-Klausel  
  Im folgenden Beispiel wird ein WHERE-Klausel-Prädikatausdruck entfernt.  
   
 ```sql  

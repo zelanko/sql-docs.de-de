@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115888"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType (Spalte für Ablaufverfolgungsereignisse)
@@ -34,7 +34,7 @@ ms.locfileid: "68115888"
 |8260|Standard (Einschränkung oder eigenständig)|  
 |8262|FOREIGN KEY-Einschränkung|  
 |8272|Gespeicherte Prozedur|  
-|8274|Rule|  
+|8274|Regel|  
 |8275|Systemtabelle|  
 |8276|Trigger für Server|  
 |8277|Tabelle (benutzerdefiniert)|  
@@ -42,7 +42,7 @@ ms.locfileid: "68115888"
 |8280|Erweiterte gespeicherte Prozeduren|  
 |16724|CLR-Trigger|  
 |16964|Datenbank|  
-|16975|Objekt|  
+|16975|Object|  
 |17222|Volltextkatalog|  
 |17232|CLR-gespeicherte Prozedur|  
 |17235|Schema|  
@@ -64,7 +64,7 @@ ms.locfileid: "68115888"
 |19283|ObfusKey|  
 |19521|Anmeldung mit asymmetrischem Schlüssel|  
 |19523|Anmeldung mit Zertifikat|  
-|19538|Rolle|  
+|19538|Role|  
 |19539|SQL-Anmeldung|  
 |19543|Windows-Anmeldung|  
 |20034|Remotedienstbindung|  
@@ -100,7 +100,7 @@ ms.locfileid: "68115888"
 |22601|Index|  
 |22604|Anmeldung mit Zertifikat|  
 |22611|XML-Schema|  
-|22868|Typ|  
+|22868|type|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

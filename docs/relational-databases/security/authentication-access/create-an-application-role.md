@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 09f90bcf10db6d5a1406aa7a68f90b4704270d95
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903148"
 ---
 # <a name="create-an-application-role"></a>Erstellen einer Anwendungsrolle
@@ -33,7 +33,7 @@ ms.locfileid: "72903148"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine Anwendungsrolle mit**  
   
@@ -64,14 +64,14 @@ ms.locfileid: "72903148"
   
 6.  Geben Sie im Feld **Standardschema** das Schema an, das Objekte besitzen soll, die von dieser Rolle durch Eingabe der Objektnamen erstellt wurden. Klicken Sie alternativ auf die Auslassungspunkte **(...)** , um das Dialogfeld **Schema suchen** zu öffnen.  
   
-7.  Geben Sie im Feld **Kennwort** ein Kennwort für die neue Rolle ein. Geben Sie im Feld **Kennwort bestätigen** das Kennwort erneut ein.  
+7.  Geben Sie im Feld **Kennwort** ein Kennwort für die neue Rolle ein. Geben Sie dieses Kennwort erneut im Feld **Kennwort bestätigen** ein.  
   
 8.  Wählen Sie unter **Schemas im Besitz dieser Rolle**die Schemas aus, die diese Rolle besitzen soll, oder zeigen Sie sie an. Jedes Schema kann immer nur im Besitz eines einzelnen Schemas oder einer einzelnen Rolle sein.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ### <a name="additional-options"></a>Zusätzliche Optionen  
- Im Dialogfeld **Anwendungsrolle – Neu** sind auch Optionen auf zwei zusätzlichen Seiten verfügbar: **Sicherungsfähige Elemente** und **Erweiterte Eigenschaften**.  
+ Das Dialogfeld **Anwendungsrolle – Neu** verfügt zudem über Optionen auf zwei zusätzlichen Seiten: **Sicherungsfähige Elemente** und **Erweiterte Eigenschaften**.  
   
 -   Auf der Seite **Sicherungsfähige Elemente** werden alle möglichen sicherungsfähigen Elemente und die Berechtigungen für diese sicherungsfähigen Elemente aufgelistet, die für die Anmeldung gewährt werden können.  
   

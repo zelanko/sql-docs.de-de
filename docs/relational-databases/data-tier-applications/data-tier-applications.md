@@ -15,10 +15,10 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278285"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
@@ -107,14 +107,14 @@ ms.locfileid: "72278285"
   
 -   **IMPORT**: Der Benutzer kann das Schema und die Daten in eine neue Datenbank auf dem Hostserver importieren.  
   
- Diese Funktionen werden beide von den folgenden Datenbankverwaltungstools unterstützt: SQL Server Management Studio, vom Azure-Portal und der DACFx-API.  
+ Beide Funktionen werden von den Datenbankverwaltungstools unterstützt: SQL Server Management Studio, das Azure-Portal und die DACFx-API.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss Mitglied der **dbmanager**-Rolle sein oder **CREATE DATABASE**-Berechtigungen erhalten haben, um eine Datenbank erstellen zu können. Dies gilt auch für das Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Der Benutzer muss Mitglied der **dbmanager**-Rolle sein oder **DROP DATABASE**-Berechtigungen erhalten haben, um eine Datenbank löschen zu können.  
   
 ## <a name="data-tier-application-tasks"></a>Tasks der Datenebenenanwendung  
   
-|Task|Themenlink|  
+|Aufgabe|Themenlink|  
 |----------------------|-----------|  
 |Beschreibt, wie eine DAC-Paketdatei zum Erstellen einer neuen DAC-Instanz verwendet wird.|[Bereitstellen einer Datenebenenanwendung](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)|  
 |Beschreibt, wie eine neue DAC-Paketdatei zum Aktualisieren einer Instanz auf eine neue Version der DAC verwendet wird.|[Upgrade einer Datenebenenanwendung](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)|  
@@ -123,12 +123,12 @@ ms.locfileid: "72278285"
 |Beschreibt, wie eine BACPAC-Datei erstellt wird, die ein Archiv der Daten und Metadaten einer DAC enthält.|[Exportieren einer Datenebenenanwendung](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)|  
 |Beschreibt, wie mit einer DAC-Archivdatei (.bacpac) entweder eine logische Wiederherstellung einer DAC ausgeführt wird oder die DAC auf einer anderen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] migriert wird.|[Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |Beschreibt, wie eine BACPAC-Datei importiert wird, um eine neue Benutzerdatenbank innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu erstellen.|[Extrahieren einer DAC aus einer Datenbank](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)|  
-|Beschreibt, wie eine vorhandene Datenbank auf eine DAC-Instanz heraufgestuft wird. Eine DAC-Definition wird in der Systemdatenbank erstellt und gespeichert.|[Registrieren einer Datenbank als DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)|  
+|Beschreibt, wie eine vorhandene Datenbank auf eine DAC-Instanz heraufgestuft wird. Eine DAC-Definition wird in der Systemdatenbank erstellt und gespeichert.|[Registrieren einer Datenbank als eine DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)|  
 |Beschreibt, wie vor der Verwendung eines DAC-Pakets in einem Produktionssystem sein Inhalt und die Aktionen überprüft werden, die bei einem DAC-Upgrade ausgeführt werden.|[Überprüfen eines DAC-Pakets](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
 |Beschreibt, wie der Inhalt eines DAC-Pakets in einem Ordner abgelegt wird, in dem ein Datenbankadministrator vor der Bereitstellung auf einem Produktionsserver überprüfen kann, was die DAC bewirkt.|[Entpacken eines DAC-Pakets](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |Beschreibt die Verwendung eines Assistenten, um eine vorhandene Datenbank bereitzustellen. Der Assistent führt die Bereitstellung mithilfe von DACs aus.|[Bereitstellen einer Datenbank mit DAC](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DAC-Unterstützung für SQL Server-Objekte und -Versionen](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   

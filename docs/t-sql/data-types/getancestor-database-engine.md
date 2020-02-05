@@ -18,10 +18,10 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f13f076309cfc1b78ab5b76676cbf7ec3eb82f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077984"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Datenbank-Engine)
@@ -98,7 +98,7 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetAncestor(0) = @CurrentEmployee ;  
 ```  
   
-### <a name="d-returning-a-hierarchy-level-if-a-table-isnt-present"></a>D. Zurückgeben einer Hierarchieebene, wenn keine Tabelle vorhanden ist  
+### <a name="d-returning-a-hierarchy-level-if-a-table-isnt-present"></a>D: Zurückgeben einer Hierarchieebene, wenn keine Tabelle vorhanden ist  
 `GetAncestor` gibt die ausgewählte Ebene in der Hierarchie zurück, auch wenn keine Tabelle vorhanden ist. Beispiel: Mit dem folgenden Code wird ein aktueller Mitarbeiter festgelegt, und das `hierarchyid`-Element des Vorgängers des aktuellen Mitarbeiters wird ohne Verweis auf eine Tabelle zurückgegeben.
   
 ```sql
@@ -116,7 +116,7 @@ Im folgenden Codeausschnitt wird die `GetAncestor()`-Methode aufgerufen.
 this.GetAncestor(1)  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [IsDescendantOf &#40;Database Engine&#41; (IsDescendantOf (Datenbank-Engine))](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [hierarchyid-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  

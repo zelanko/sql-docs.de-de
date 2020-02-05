@@ -13,10 +13,10 @@ ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 241cd0e4ec225c6627bb47ff6a4312f42aba26d1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908632"
 ---
 # <a name="export-a-policy-based-management-policy"></a>Exportieren einer Richtlinie der richtlinienbasierten Verwaltung
@@ -27,7 +27,7 @@ ms.locfileid: "72908632"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Exportieren einer Richtlinie mit:**  
   
@@ -56,5 +56,5 @@ ms.locfileid: "72908632"
   
 6.  Geben Sie im Dialogfeld **Richtlinie exportieren** den Pfad und den Namen der Datei in der Adressleiste ein. Suchen Sie alternativ im Navigationsbereich des Dialogfelds einen geeigneten Speicherort für die Datei, und geben Sie den Namen der XML-Datei in das Feld **Dateiname** ein.  
   
-7.  Wenn Sie fertig sind, klicken Sie auf **Speichern**.  
+7.  Klicken Sie abschließend auf **Speichern**.  
 

@@ -11,10 +11,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d3177a3fc8b0b88e3cd65e8675041be3250a3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907347"
 ---
 # <a name="modify-a-partition-function"></a>Ändern einer Partitionsfunktion
@@ -30,7 +30,7 @@ ms.locfileid: "72907347"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So ändern Sie eine Partitionsfunktion mit:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "72907347"
   
 -   ALTER PARTITION FUNCTION kann nur verwendet werden, um eine Partition in zwei aufzuteilen bzw. um zwei Partitionen in eine zusammenzuführen. Um die Partitionierung von Tabellen bzw. Indizes zu ändern (beispielsweise von 10 in 5 Partitionen), können Sie eine der folgenden Optionen verwenden:  
   
-    -   Erstellen Sie eine neue partitionierte Tabelle mit der gewünschten Partitionsfunktion, und fügen Sie dann die Daten aus der alten Tabelle in die neue Tabelle ein, indem Sie entweder eine INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder den **Assistenten zum Verwalten von Partitionen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden.  
+    -   Erstellen Sie eine neue partitionierte Tabelle mit der gewünschten Partitionsfunktion, und fügen Sie dann die Daten aus der alten Tabelle in die neue Tabelle ein, indem Sie entweder eine INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder den **Assistenten zum Verwalten von Partitionen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwenden.  
   
     -   Erstellen Sie einen partitionierten gruppierten Index für einen Heap.  
   

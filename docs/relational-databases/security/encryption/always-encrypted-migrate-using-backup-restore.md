@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9176052b413293d25acd7696701e4f118adba03f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595725"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>Sichern und Wiederherstellen von Datenbanken mit Always Encrypted 
@@ -32,8 +32,8 @@ Weitere Informationen zum Sichern und Wiederherstellen einer Datenbank finden Si
 - [Übersicht zur Sicherung (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [Wiederherstellen einer Datenbank in eine verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
-## <a name="next-steps"></a>Next Steps
-- [Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>Nächste Schritte
+- [Abfragen von Spalten mit Always Encrypted und SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Entwickeln von Anwendungen mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-client-development.md) 
 
 ## <a name="see-also"></a>Weitere Informationen

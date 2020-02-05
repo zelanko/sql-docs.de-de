@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119852"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Nicht deterministische Konvertierung von Datumsliteralen in DATE-Werte
@@ -27,7 +27,7 @@ Sie steuern diese nicht deterministischen Konvertierungen, indem Sie die Einstel
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>SET LANGUAGE-Beispiel: Monatsname auf Polnisch
+## <a name="set-language-example-month-name-in-polish"></a>Beispiel für SET LANGUAGE: Monatsname in polnischer Sprache
 
 - `SET LANGUAGE Polish;`
 
@@ -119,12 +119,12 @@ YMD-Interpretation--?--NotGuaranteed
 
 Im vorhergehenden Codebeispiel weist das letzte Beispiel eine Nichtübereinstimmung zwischen dem Format **ymd** und der Eingabezeichenfolge auf. Der dritte Knoten der Eingabezeichenfolge stellt einen Zahlenwert dar, der für einen Tag zu groß ist. Bei solchen Nichtübereinstimmungen garantiert Microsoft nicht den Ausgabewert.
 
-#### <a name="convert-offers-explicit-codes-for-deterministic-control-of-date-formats"></a>CONVERT bietet explizite Codes für die _deterministische_ Steuerung von Datumsformaten.
+#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT bietet explizite Codes für die _deterministische_ Steuerung von Datumsformaten.
 
 Unser Dokumentationsartikel zu CAST und CONVERT enthält explizite Codes, die Sie mit der CONVERT-Funktion verwenden können, um Datumskonvertierungen _deterministisch_ zu steuern. Jeden Monat hat der Artikel eine der höchsten Zugriffszahlen.
 
 - [CAST und CONVERT (Transact-SQL): Datums- und Uhrzeitformate](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
-- [CAST und CONVERT (Transact-SQL): Bestimmte datetime-Konvertierungen sind nicht deterministisch](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
+- [CAST und CONVERT (Transact-SQL): Bestimmte DATETIME-Konvertierungen sind nicht deterministisch](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 
@@ -142,7 +142,7 @@ Die Konvertierung von Nicht-Unicode-Zeichendaten zwischen Sortierungen wird auch
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Festlegen einer Sitzungssprache](../../relational-databases/collations/set-a-session-language.md)
 - [Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)

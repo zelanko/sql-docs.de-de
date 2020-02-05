@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532418"
 ---
 # <a name="sql-server-dacpac-extension"></a>Die DACPAC-Erweiterung für SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "73532418"
 **Der Datenschichtanwendungs-Assistent**  macht die Bereitstellung und Extrahierung von DACPAC-Dateien und das Importieren und Exportieren von BACPAC-Dateien einfach.
 
 
-## <a name="features"></a>Funktionen
+## <a name="features"></a>Features
 
 * Bereitstellen eines DACPACs in einer SQL Server-Instanz
 * Extrahieren einer SQL Server-Instanz in ein DACPAC

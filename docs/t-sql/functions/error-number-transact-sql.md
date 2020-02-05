@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 085832fdb8d0918c76dbbcadb759c2fdf1169b5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094713"
 ---
 # <a name="error_number-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68094713"
 
 Diese Funktion gibt die Fehlernummer des Fehlers zurück, der die Ausführung des CATCH-Blocks eines TRY...CATCH-Konstrukts ausgelöst hat.  
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,9 +53,9 @@ Wenn `ERROR_NUMBER` in einem CATCH-Block aufgerufen wird, wird die Fehlernummer 
 ## <a name="remarks"></a>Bemerkungen  
 `ERROR_NUMBER` kann überall im Bereich eines CATCH-Blocks aufgerufen werden.  
   
-`ERROR_NUMBER` gibt unabhängig von der Anzahl der Aufrufe und dem Bereich des `CATCH`-Blocks eine relevante Fehlernummer zurück. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf der Anweisung folgt, die einen Fehler auslöst.  
+`ERROR_NUMBER` gibt unabhängig von der Anzahl der Aufrufe und dem Bereich des `CATCH`-Blocks eine relevante Fehlernummer zurück. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf die Anweisung folgt, die einen Fehler auslöst.  
 
-`ERROR_NUMBER` gibt in einem geschachtelten `CATCH`-Block die Fehlernummer für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_NUMBER` die Nummer des Fehlers zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_NUMBER` im äußeren `CATCH`-Block ausgeführt wird, wird die Nummer des Fehlers zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
+`CATCH` gibt in einem geschachtelten `ERROR_NUMBER`-Block die Fehlernummer für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_NUMBER` die Nummer des Fehlers zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_NUMBER` im äußeren `CATCH`-Block ausgeführt wird, wird die Nummer des Fehlers zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
   
 ## <a name="examples"></a>Beispiele  
   

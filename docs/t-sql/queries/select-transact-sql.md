@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948284"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
@@ -51,7 +51,7 @@ ms.locfileid: "67948284"
   
  Die Operatoren UNION, EXCEPT und INTERSECT können zwischen Abfragen verwendet werden, um deren Ergebnisse in einem Resultset zu kombinieren oder zu vergleichen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -124,7 +124,7 @@ SELECT <select_criteria>
  Die folgenden Schritte beschreiben die logische Verarbeitungs- oder Bindungsreihenfolge der SELECT-Anweisung. Diese Reihenfolge bestimmt, wann die in einem Schritt definierten Objekte in nachfolgenden Schritten für die Klauseln verfügbar gemacht werden. Wenn der Abfrageprozessor z. B. eine Bindung mit den in der FROM-Klausel definierten Tabellen oder Sichten herstellen (bzw. darauf zugreifen) kann, werden diese Objekte und die dazugehörigen Spalten für alle nachfolgenden Schritten verfügbar gemacht. Umgekehrt kann auf die in dieser Klausel definierten Spaltenaliase oder abgeleiteten Spalten nicht durch vorhergehende Klauseln verwiesen werden, da die SELECT-Klausel Schritt 8 ist. Allerdings kann durch nachfolgende Klauseln wie der ORDER BY-Klausel darauf verwiesen werden. Die tatsächliche physische Ausführung der Anweisung wird durch den Abfrageprozessor bestimmt, und die Reihenfolge kann von dieser Liste abweichen.  
   
 1.  FROM  
-2.  ON  
+2.  EIN  
 3.  JOIN  
 4.  WHERE  
 5.  GROUP BY  
@@ -199,7 +199,7 @@ FROM DimEmployee
 ORDER BY Title;  
 ```  
   
-### <a name="d-using-group-by"></a>D. Verwenden von GROUP BY  
+### <a name="d-using-group-by"></a>D: Verwenden von GROUP BY  
  Im folgenden Beispiel wird die Gesamtsumme aller Verkäufe pro Tag gesucht.  
   
 ```sql  
@@ -265,6 +265,6 @@ ORDER BY OrderDateKey;
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SELECT-Beispiele &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
- [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
+ [Hints &#40;Transact-SQL&#41; (Hinweise (Transact-SQL))](../../t-sql/queries/hints-transact-sql.md)
   
 

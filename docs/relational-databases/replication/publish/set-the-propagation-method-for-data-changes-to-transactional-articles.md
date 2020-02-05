@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7b3b335a347dea69f7741d348ae3d30dd1ba2c8f
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 00ab2a45675b237e3e15e340cc3789b1b79cdafc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321179"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287543"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "75321179"
 -   Gehen Sie bei der Bearbeitung der bei der Replikation generierten Momentaufnahmedateien mit Bedacht vor. Sie müssen die benutzerdefinierte Logik in den benutzerdefinierten gespeicherten Prozeduren testen und unterstützen. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] bietet keine Unterstützung für benutzerdefinierte Logik.  
   
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Geben Sie die Propagierungsmethode im Dialogfeld **Artikeleigenschaften - \<Artikel>** auf der Registerkarte **Eigenschaften** an. Diese Registerkarte steht sowohl im Assistenten für neue Veröffentlichung als auch im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** zur Verfügung. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Geben Sie die Propagierungsmethode im Dialogfeld **Artikeleigenschaften -** Artikel> **auf der Registerkarte \<Eigenschaften** an. Diese Registerkarte steht sowohl im Assistenten für neue Veröffentlichung als auch im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** zur Verfügung. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-the-propagation-method"></a>So geben Sie die Propagierungsmethode an  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75321179"
   
 2.  Klicken Sie auf die Option **Eigenschaften des hervorgehobenen Tabelle-Artikels festlegen**.  
   
-3.  Geben Sie im Dialogfeld **Artikeleigenschaften - \<Article>** auf der Registerkarte **Eigenschaften** im Abschnitt **Anweisungsübermittlung** die Propagierungsmethode für die einzelnen Vorgänge an. Verwenden Sie hierzu die Menüs **INSERT-Übermittlungsformat**, **UPDATE-Übermittlungsformat** und **DELETE-Übermittlungsformat**.  
+3.  Geben Sie im Dialogfeld **Artikeleigenschaften -** Article> **auf der Registerkarte \<Eigenschaften** im Abschnitt **Anweisungsübermittlung** die Propagierungsmethode für die einzelnen Vorgänge an. Verwenden Sie hierzu die Menüs **INSERT-Übermittlungsformat**, **UPDATE-Übermittlungsformat** und **DELETE-Übermittlungsformat**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75321179"
   
 2.  Klicken Sie auf die Option **Eigenschaften des hervorgehobenen Tabelle-Artikels festlegen**.  
   
-     Wählen Sie im Dialogfeld **Artikeleigenschaften - \<Article>** auf der Registerkarte **Eigenschaften** im Abschnitt **Anweisungsübermittlung** die CALL-Syntax im Menü des entsprechenden Übermittlungsformats (**INSERT-Übermittlungsformat**, **UPDATE-Übermittlungsformat** oder **DELETE-Übermittlungsformat**) aus, und geben Sie dann den Namen der Prozedur ein, die in **gespeicherter Prozedur INSERT**, in **gespeicherter Prozedur DELETE** oder **in gespeicherter Prozedur UPDATE** verwendet werden soll. Weitere Informationen zur CALL-Syntax finden Sie im Abschnitt „Aufrufsyntax für gespeicherte Prozeduren“ in [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
+     Wählen Sie im Dialogfeld **Artikeleigenschaften -** Article> **auf der Registerkarte \<Eigenschaften** im Abschnitt **Anweisungsübermittlung** die CALL-Syntax im Menü des entsprechenden Übermittlungsformats (**INSERT-Übermittlungsformat**, **UPDATE-Übermittlungsformat** oder **DELETE-Übermittlungsformat**) aus, und geben Sie dann den Namen der Prozedur ein, die in **gespeicherter Prozedur INSERT**, in **gespeicherter Prozedur DELETE** oder **in gespeicherter Prozedur UPDATE** verwendet werden soll. Weitere Informationen zur CALL-Syntax finden Sie im Abschnitt „Aufrufsyntax für gespeicherte Prozeduren“ in [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

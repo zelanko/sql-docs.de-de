@@ -22,10 +22,10 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c51d65dabef5efa4de7ecb4c62b633e62ed0b082
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297887"
 ---
 # <a name="percentage-sampling-transformation"></a>Transformation für Prozentwert-Stichproben
@@ -55,7 +55,7 @@ ms.locfileid: "71297887"
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71297887"
 ## <a name="percentage-sampling-transformation-editor"></a>Transformations-Editor für Prozentwertstichprobe
   Im Dialogfeld **Transformations-Editor für Prozentwertstichprobe** können Sie einen Teil der Eingabe mithilfe des angegebenen Prozentsatzes von Zeilen als Stichprobe entnehmen. Durch diese Transformation wird die Eingabe in zwei getrennte Ausgaben geteilt.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Prozentsatz der Zeilen**  
  Geben Sie den Prozentsatz der Zeilen in der Eingabe an, die als Stichprobe verwendet werden sollen.  
   

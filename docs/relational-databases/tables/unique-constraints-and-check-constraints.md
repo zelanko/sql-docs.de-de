@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017660"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE- und CHECK-Einschränkungen
@@ -48,7 +48,7 @@ ms.locfileid: "68017660"
   
  Sie können mehrere CHECK-Einschränkungen auf eine einzelne Spalte anwenden. Es ist auch möglich, eine einzelne CHECK-Einschränkung auf mehrere Spalten anzuwenden, indem die Einschränkung auf Tabellenebene erstellt wird. So könnte z. B. eine CHECK-Einschränkung für mehrere Spalten verwendet werden, um sicherzustellen, dass jede Zeile mit dem Wert **USA** in der **country_region** -Spalte auch einen aus zwei Zeichen bestehenden Wert in der **state** -Spalte aufweist. Auf diese Weise können mehrere Bedingungen an einer Stelle überprüft werden.  
   
- CHECK-Einschränkungen sind insofern FOREIGN KEY-Einschränkungen ähnlich, als sie die Werte kontrollieren, die in eine Spalte geschrieben werden. Der Unterschied besteht darin, wie sie bestimmen, welche Werte gültig sind: FOREIGN KEY-Einschränkungen rufen die Liste der gültigen Werte von einer anderen Tabelle ab, und CHECK-Einschränkungen ermitteln die gültigen Werte anhand eines logischen Ausdrucks.  
+ CHECK-Einschränkungen sind insofern FOREIGN KEY-Einschränkungen ähnlich, als sie die Werte kontrollieren, die in eine Spalte geschrieben werden. Sie unterscheiden sich jedoch in der Methode, mit der die gültigen Werte bestimmt werden: FOREIGN KEY-Einschränkungen rufen die Liste der gültigen Werte von einer anderen Tabelle ab, und CHECK-Einschränkungen ermitteln die gültigen Werte anhand eines logischen Ausdrucks.  
   
 > [!CAUTION]  
 >  Einschränkungen, die implizite oder explizite Datentypkonvertierungen einschließen, können bei bestimmten Vorgängen einen Fehler erzeugen. So können z. B. Einschränkungen, die für Tabellen definiert werden, die ihrerseits die Quellen von Partitionswechseln sind, bei einer ALTER TABLE...SWITCH-Operation zu einem Fehler führen. Vermeiden Sie deshalb die Datentypkonvertierung in Einschränkungsdefinitionen.  
@@ -92,7 +92,7 @@ DELETE CheckTbl WHERE col1 = 10;
 > [!NOTE]  
 >  Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
   
-|Task|Thema|  
+|Aufgabe|Thema|  
 |----------|-----------|  
 |Beschreibt, wie eine eindeutige Einschränkung erstellt wird.|[Erstellen von Unique-Einschränkungen](../../relational-databases/tables/create-unique-constraints.md)|  
 |Beschreibt, wie eine eindeutige Einschränkung geändert wird.|[Ändern von UNIQUE-Einschränkungen](../../relational-databases/tables/modify-unique-constraints.md)|  

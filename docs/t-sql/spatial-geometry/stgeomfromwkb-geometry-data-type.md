@@ -18,10 +18,10 @@ ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 769b48c99e59c8bfcf38fa96cd60d6ef11cd3237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950145"
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (geometry-Datentyp)

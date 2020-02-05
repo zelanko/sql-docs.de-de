@@ -11,10 +11,10 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 03974bc83cb9c7d9b6202f04db84ae96fe791eb3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908441"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Wiederherstellen von speicheroptimierten Tabellen
@@ -66,7 +66,7 @@ Speicheroptimierte Tabellen können generell mit der Geschwindigkeit des E/A-Vor
   
 -   Große speicheroptimierte Tabellen mit mindestens einem nicht gruppierten Index können zu einer hohen CPU-Auslastung führen. Im Gegensatz zu einem Hashindex, dessen Bucketanzahl beim Erstellen festgelegt wird, wachsen nicht gruppierte Indizes dynamisch.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen speicheroptimierter Tabellen](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0eef24cbeac94a6447c2cd6b4f5a43fd0ca93657
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292292"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Zuordnen von Abfrageparametern zu Variablen in einer Datenflusskomponente
@@ -33,7 +33,7 @@ ms.locfileid: "71292292"
   
 ### <a name="to-map-a-query-parameter-to-a-variable"></a>So ordnen Sie einer Variablen einen Abfrageparameter zu  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -58,6 +58,6 @@ ms.locfileid: "71292292"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Quelle](../../integration-services/data-flow/ole-db-source.md)   
- [Transformation für Suche](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Suchtransformation](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

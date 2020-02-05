@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982565"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73982565"
   
  Weitere Informationen finden Sie unter [Statistiken](../../relational-databases/statistics/statistics.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -199,7 +199,7 @@ CREATE STATISTICS statistics_name
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
   
 MAXDOP = *max_degree_of_parallelism*  
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)  
   
  Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Statistikvorgangs. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
@@ -277,7 +277,7 @@ WITH SAMPLE 50 PERCENT;
 GO  
 ```  
   
-### <a name="d-create-statistics-on-an-external-table"></a>D. Erstellen von Statistiken für eine externe Tabelle  
+### <a name="d-create-statistics-on-an-external-table"></a>D: Erstellen von Statistiken für eine externe Tabelle  
  Sie müssen beim Erstellen von Statistiken für eine externe Tabelle abgesehen von der Bereitstellung einer Liste der Spalten lediglich entscheiden, ob die Statistiken durch Stichprobenentnahme aus den Zeilen oder durch einen Scan aller Zeilen erstellt werden soll.  
   
  Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten aus der externen Tabelle in eine temporäre Tabelle importiert, um Statistiken zu erstellen, nimmt die FULL SCAN-Option wesentlich mehr Zeit in Anspruch. Bei einer großen Tabelle ist die Standardmethode für die Stichprobenentnahme in der Regel ausreichend.  

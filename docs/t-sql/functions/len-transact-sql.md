@@ -20,11 +20,11 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7fa3d9db220dcacf425399600166858300489dc
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72798423"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
@@ -35,7 +35,7 @@ Gibt die Anzahl von Zeichen im angegebenen Zeichenfolgenausdruck zurück, wobei 
 > [!NOTE]  
 > Verwenden Sie die [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md)-Funktion, um die Anzahl von Bytes zurückzugeben, die zur Darstellung eines Ausdrucks verwendet werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,7 +52,7 @@ LEN ( string_expression )
   
  Wenn Sie SC-Sortierungen verwenden, betrachtet der zurückgegebene ganzzahlige Wert UTF-16-Ersatzpaare als einzelne Zeichen. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Durch LEN werden nachstehende Leerzeichen ausgeschlossen. Wenn dies ein Problem darstellt, erwägen Sie die Verwendung der Funktion [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md), die die Zeichenfolge nicht abtrennt. Wenn eine Unicode-Zeichenfolge verarbeitet wird, gibt DATALENGTH eine Zahl zurück, die möglicherweise nicht der Anzahl von Zeichen entspricht. Im folgenden Beispiel werden LEN und DATALENGTH mit nachfolgenden Leerräumen veranschaulicht.  
   
 ```sql  
@@ -66,7 +66,7 @@ SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];
 ```  
 
 > [!NOTE]
-> Wenn Sie [LEN](../../t-sql/functions/len-transact-sql.md) verwenden, um die Anzahl der für einen bestimmten Zeichenfolgenausdruck codierten Zeichen zurückzugeben, oder [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md), um für einen angegebenen Zeichenfolgenausdruck die Größe in Bytes zurückzugeben, können sich die Ausgaben je nach dem in der Spalte verwendeten Daten- und Codierungstyp unterscheiden. Weitere Informationen zu Speicherunterschieden zwischen verschiedenen Codierungstypen finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).
+> Verwenden Sie [LEN](../../t-sql/functions/len-transact-sql.md), um die Anzahl von Zeichen zurückzugeben, die in einem angegebenen Zeichenfolgenausdruck codiert sind. Mit [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) geben Sie die Größe in Byte für einen angegebenen Zeichenfolgenausdruck zurück. Diese Ausgaben können sich unterscheiden, je nachdem, welcher Datentyp und welche Art von Codierung in der Spalte verwendet werden. Weitere Informationen zu Speicherunterschieden zwischen verschiedenen Codierungstypen finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).
 
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel wählt die Anzahl von Zeichen und die Daten in `FirstName` für Personen in `Australia` aus. In diesem Beispiel wird die AdventureWorks-Datenbank verwendet.  
@@ -78,7 +78,7 @@ WHERE CountryRegionName = 'Australia';
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel wird die Anzahl von Zeichen in der Spalte `FirstName` zurückgegeben, und die Vor- und Nachnamen der Mitarbeiter werden in `Australia` zurückgegeben.  
   
 ```sql  

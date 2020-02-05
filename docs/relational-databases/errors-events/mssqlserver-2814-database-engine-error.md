@@ -12,13 +12,13 @@ ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c36c06ad91cb9082f06d57f622db4209ac94212
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001974"
 ---
-# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
+# <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -37,7 +37,7 @@ Eine oder mehrere Anweisungen haben bewirkt, dass der Abfragebatch mindestens 50
   
 In der folgenden Tabelle werden die Ursachen für die Neukompilierung aufgelistet.  
   
-|Ursachencode|und Beschreibung|  
+|Ursachencode|BESCHREIBUNG|  
 |---------------|---------------|  
 |1|Schema geändert|  
 |2|Statistiken geändert|  
@@ -71,5 +71,5 @@ In der folgenden Tabelle werden die Ursachen für die Neukompilierung aufgeliste
 3.  Wenn das Problem wiederholt auftritt, wenden Sie sich an den Microsoft-Kundendienst.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[SQL:StmtRecompile Event Class](../event-classes/sql-stmtrecompile-event-class.md)  
+[SQL:StmtRecompile (Ereignisklasse)](../event-classes/sql-stmtrecompile-event-class.md)  
   

@@ -13,18 +13,18 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116492"
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+# <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Zeigt die Anzahl von Reihen, den reservierten Speicherplatz und den durch eine bestimmte Tabelle oder durch alle Tabellen in einer [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]- oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbank belegten Speicherplatz an.
   
-![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
 ## <a name="result-sets"></a>Resultsets  
 Im Folgenden wird das Resultset für alle Tabellen aufgeführt.
   
-|Spalte|Datentyp|und Beschreibung|  
+|Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|Insgesamt durch die Datenbank belegter Speicherplatz in KB.|  
 |data_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.|  
@@ -58,7 +58,7 @@ Im Folgenden wird das Resultset für alle Tabellen aufgeführt.
   
 Im Folgenden wird das Resultset für eine Tabelle aufgeführt.
   
-|Spalte|Datentyp|und Beschreibung|Bereich|  
+|Column|Datentyp|BESCHREIBUNG|Range|  
 |------------|---------------|-----------------|-----------|  
 |rows|BIGINT|Anzahl von Zeilen.||  
 |reserved_space|BIGINT|Gesamtspeicherplatz in KB, der für das Objekt reserviert ist.||  
@@ -68,8 +68,8 @@ Im Folgenden wird das Resultset für eine Tabelle aufgeführt.
 |pdw_node_id|INT|Computeknoten, der zum Erstellen von Berichten zum Speicherplatz verwendet wird.||  
 |distribution_id|INT|Verteilung, die zum Erstellen von Berichten zum Speicherplatz verwendet wird.|Der Wert für replizierte Tabellen ist –1.|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. Grundlegende DBCC-PDW_SHOWSPACEUSED-Syntax  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. Grundlegende DBCC-PDW_SHOWSPACEUSED-Syntax  
 Das folgende Beispiel zeigt verschiedene Möglichkeiten zum Anzeigen der Anzahl von Reihen, des reservierten Speicherplatzes und des Speicherplatzes, der durch die FactInternetSales-Tabellen in der [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]-Datenbank belegt ist.
   
 ```sql
@@ -89,7 +89,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
   
 DBCC PDW_SHOWSPACEUSED;  
 ```  
- ## <a name="see-also"></a>Siehe auch
+ ## <a name="see-also"></a>Weitere Informationen
 [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 

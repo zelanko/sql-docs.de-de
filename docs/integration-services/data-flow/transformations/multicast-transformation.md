@@ -19,10 +19,10 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fca2fd4670fae2838eb0512c68483024bdb4dee
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297837"
 ---
 # <a name="multicast-transformation"></a>Transformation für Multicast
@@ -49,7 +49,7 @@ ms.locfileid: "71297837"
 ## <a name="multicast-transformation-editor"></a>Transformations-Editor für Multicast
   Mithilfe des Dialogfelds **Transformations-Editor für Multicast** können Sie die Eigenschaften für die einzelnen Transformationsausgaben anzeigen und festlegen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Ausgaben**  
  Wählen Sie auf der linken Seite eine Ausgabe, um die entsprechenden Eigenschaften in der Tabelle auf der rechten Seite anzuzeigen.  
   

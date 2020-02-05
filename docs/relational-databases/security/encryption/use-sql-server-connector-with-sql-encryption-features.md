@@ -14,10 +14,10 @@ ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558509"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen
@@ -116,7 +116,7 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
   
      Überprüfen Sie mithilfe von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], dass TDE aktiviert wurde, indem Sie eine Verbindung mit Ihrer Datenbank mithilfe des Objekt-Explorers herstellen. Klicken Sie mit der rechten Maustaste auf Ihre Datenbank, zeigen Sie auf **Aufgaben**, und klicken Sie anschließend auf **Datenbankverschlüsselung verwalten**.  
   
-     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "|::ref2::|")  
+     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
      Prüfen Sie im Dialogfeld **Datenbankverschlüsselung verwalten** , nach, ob TDE aktiviert ist und welcher Schlüssel für die Verschlüsselung des DEKs verwendet wird.  
   

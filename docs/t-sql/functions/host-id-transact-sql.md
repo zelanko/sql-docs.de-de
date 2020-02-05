@@ -21,10 +21,10 @@ ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cce09ec0e34aec88755eaeac0449bd5f75138d6f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843732"
 ---
 # <a name="host_id-transact-sql"></a>HOST_ID (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73843732"
 
   Gibt die Arbeitsstation-ID zurück. Die Arbeitsstation-ID ist die Prozess-ID (PID) der Anwendung auf dem Clientcomputer, die eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ HOST_ID ()
 ## <a name="return-types"></a>Rückgabetypen  
  **char(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn der Parameter für eine Systemfunktion optional ist, wird von der aktuellen Datenbank, dem aktuellen Hostcomputer, dem aktuellen Serverbenutzer oder dem aktuellen Datenbankbenutzer ausgegangen. Auf integrierte Funktionen müssen immer runde Klammern folgen.  
   
  Systemfunktionen können in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist.  

@@ -14,17 +14,17 @@ ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 34223d46b9c66f28f1dad82bda0125c06d0e08ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940510"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>Dialogfeld 'Neue Bedingung erstellen' oder 'Bedingung öffnen', Seite 'Beschreibung'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieses Dialogfelds können Sie einer richtlinienbasierten Verwaltungsbedingung eine Beschreibung hinzufügen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Beschreibung**  
  Geben Sie eine Beschreibung der Bedingung ein.  
   

@@ -15,10 +15,10 @@ ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ddebe254c44d1577b2da5200cec02011c5bca89f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101206"
 ---
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (geometry-Datentyp)
@@ -44,7 +44,7 @@ Gibt den minimalen Datenbankkompatibilitätsgrad zurück, der die **geometry** -
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>A. Testen der Kompatibilität des CircularString-Typs mit Kompatibilitätsgrad 110  
- Im folgenden Beispiel wird die Kompatibilität einer `CircularString` -Instanz mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]getestet:  
+ Im folgenden Beispiel wird die Kompatibilität einer `CircularString`-Instanz mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] getestet:  
   
 ```
  DECLARE @g geometry = 'CIRCULARSTRING(3 4, 8 9, 5 6)'; 

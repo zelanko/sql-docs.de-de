@@ -15,10 +15,10 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cb86b202db40fb3bde858a43fb5dac550a2aaada
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299112"
 ---
 # <a name="add-copy-of-existing-package"></a>Kopie des vorhandenen Pakets hinzufügen
@@ -28,7 +28,7 @@ ms.locfileid: "71299112"
 
   Verwenden Sie das Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** , um einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Projekt eine Kopie eines Pakets hinzuzufügen, das in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , im Dateisystem oder im SSIS-Paketspeicher gespeichert ist.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes aus, aus dem das Paket kopiert werden soll.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71299112"
  **Authentifizierungstyp**  
  Wenn Sie aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]kopieren, wählen Sie einen Authentifizierungstyp aus.  
   
- **User name**  
+ **Benutzername**  
  Wenn Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwenden, stellen Sie einen Benutzernamen bereit.  
   
  **Kennwort**  

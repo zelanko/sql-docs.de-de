@@ -17,10 +17,10 @@ ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 249b9d920a15e9eb2b3e85532df7df144b9d4c84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995285"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Verweisen auf die integrierte XML-Schemaauflistung (sys)
@@ -148,7 +148,7 @@ data(/ns:root[1]) instance of sqltypes:varchar?')
 GO  
 ```  
   
- Der Ausdruck `instance of sqltypes:varchar?`gibt TRUE zurück, weil der Wert des Elements <`root`> einem Typ entspricht, der gemäß dem Schema, das der `@var`-Variablen zugeordnet ist, von **varchar** abgeleitet wurde.  
+ Der Ausdruck `instance of sqltypes:varchar?`gibt TRUE zurück, weil der Wert des Elements <`root`> einem Typ entspricht, der gemäß dem Schema, das der **-Variablen zugeordnet ist, von** varchar`@var` abgeleitet wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [XML-Schemaauflistungen &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

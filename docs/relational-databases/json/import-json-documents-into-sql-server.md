@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de1dc6567603b0b16324aa798527a0b79282fa83
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095741"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importieren von JSON-Dokumenten in SQL Server
@@ -89,7 +89,7 @@ Weitere Informationen zu Azure File Storage finden Sie unter [File Storage](http
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>Importieren von JSON-Dokumenten aus Azure BLOB-Speicher
 
-Sie können Dateien mit dem Befehl T-SQL BULK INSERT oder der OPENROWSET-Funktion direkt aus Azure Blob Storage in die Azure SQL-Datenbank laden.
+Sie können Dateien mit dem Befehl T-SQL BULK INSERT oder der OPENROWSET-Funktion direkt aus Azure Blob Storage in Azure SQL-Datenbank laden.
 
 Erstellen Sie zunächst eine externe Datenquelle, wie im folgenden Beispiel gezeigt.
 
@@ -110,7 +110,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Analysieren von JSON-Dokumenten in Zeilen und Spalten
 
-Möglicherweise möchten Sie eine JSON-Datei analysieren und die Bücher in der Tabelle sowie die Eigenschaften in Reihen und Zeilen zurückgeben, anstatt die gesamte JSON-Datei als einzelnen Wert zu lesen. Im folgenden Beispiel wird eine JSON-Datei mit einer Liste von Büchern von [dieser Website](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) verwendet.
+Statt die gesamte JSON-Datei als einzelnen Wert zu lesen, sollten Sie sie analysieren und die Bücher in der Tabelle sowie die Eigenschaften in Reihen und Zeilen zurückgeben. Im folgenden Beispiel wird eine JSON-Datei mit einer Liste von Büchern von [dieser Website](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) verwendet.
 
 ### <a name="example-1"></a>Beispiel 1
 
@@ -145,11 +145,11 @@ SELECT book.*
 
 In diesem Beispiel liest OPENROWSET(BULK) den Inhalt der Datei und übergibt den Inhalt mit einem definierten Schema für die Ausgabe an die OPENJSON-Funktion. OPENJSON vergleicht Eigenschaften in JSON-Objekten mithilfe der Spaltennamen. Die Eigenschaft `price` wird z.B. als `price`-Spalte zurückgegeben und in den float-Datentyp konvertiert. Dies sind die Ergebnisse:
 
-|ID|Name|Preis|Seiten_i|Author|
+|Id|Name|Preis|Seiten_i|Autor|
 |---|---|---|---|---|
-|978-0641723445|The Lightning Thief (Diebe im Olymp)|12.5|384|Rick Riordan| 
+|978-0641723445|The Lightning Thief (Diebe im Olymp)|12,5|384|Rick Riordan| 
 |978-1423103349|The Sea of Monsters (Im Bann des Zyklopen)|6.49|304|Rick Riordan| 
-|978-1857995879|Sophie's World : The Greek Philosophers (Roman über die Geschichte der Philosophie)|3.07|64|Jostein Gaarder| 
+|978-1857995879|Sophie’s World : The Greek Philosophers (Sofies Welt: Roman über die Geschichte der Philosophie)|3.07|64|Jostein Gaarder| 
 |978-1933988177|Lucene in Action, Zweite Auflage (nur englisch)|30.5|475|Michael McCandless|
 ||||||
 

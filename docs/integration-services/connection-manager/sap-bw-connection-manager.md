@@ -13,10 +13,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f0ebc393c48562c5fcd783b4c056aa218e8ffaa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298478"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW-Verbindungs-Manager
@@ -40,7 +40,7 @@ ms.locfileid: "71298478"
   
 -   Geben Sie die Host- und Systemnummer für einen Einzelanwendungsserver oder Nachrichtenserver, Gruppe und SID für eine Gruppe von Servern mit Lastenausgleich an.  
   
--   Aktivieren Sie die benutzerdefinierte Protokollierung von RFC-Funktionsaufrufen für Komponenten von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. (Diese Protokollierung wird separat von der optionalen Protokollierung ausgeführt, die Sie für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete aktivieren können.) Um die Protokollierung von RFC-Funktionsaufrufen zu aktivieren, geben Sie ein Verzeichnis an, in dem Sie die Protokolldateien speichern, die vor und nach jedem RFC-Funktionsaufruf erstellt werden. (Durch diese Protokollierungsfunktion werden viele Protokolldateien im XML-Format erstellt. Da diese Protokolldateien auch alle übertragenen Datenzeilen enthalten, können sie viel Speicherplatz auf dem Datenträger beanspruchen.) Wenn Sie kein Protokollverzeichnis auswählen, wird die Protokollierung nicht aktiviert.  
+-   Aktivieren Sie die benutzerdefinierte Protokollierung von RFC-Funktionsaufrufen für Komponenten von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. (Diese Protokollierung wird separat von der optionalen Protokollierung ausgeführt, die Sie für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete aktivieren können.) Um die Protokollierung von RFC-Funktionsaufrufen zu aktivieren, geben Sie ein Verzeichnis an, in dem Sie die Protokolldateien speichern, die vor und nach jedem RFC-Funktionsaufruf erstellt werden. (Durch diese Protokollierungsfunktion werden viele Protokolldateien im XML-Format erstellt. Da diese Protokolldateien auch alle übertragenen Datenzeilen enthalten, können sie viel Speicherplatz auf dem Datenträger beanspruchen.) Wenn Sie kein Protokollverzeichnis auswählen, wird die Protokollierung nicht aktiviert.  
   
     > [!IMPORTANT]  
     >  Wenn die übertragenen Daten vertrauliche Informationen enthalten, sind diese auch in den Protokolldateien enthalten.  
@@ -72,11 +72,11 @@ ms.locfileid: "71298478"
   
     -   Doppelklicken Sie auf den SAP BW-Verbindungs-Manager.  
   
-         -oder-  
+         Oder  
   
     -   Klicken Sie mit der rechten Maustaste auf den SAP BW-Verbindungs-Manager, und wählen Sie dann **Bearbeiten**aus.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Verbindungs-Managers erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -87,7 +87,7 @@ ms.locfileid: "71298478"
  **Sprache**  
  Geben Sie die Sprache an, die vom System verwendet wird. Geben Sie beispielsweise **EN** für Englisch an.  
   
- **User name**  
+ **Benutzername**  
  Geben Sie den Benutzernamen an, über den eine Verbindung mit dem System hergestellt wird.  
   
  **Kennwort**  
@@ -121,7 +121,7 @@ ms.locfileid: "71298478"
 > [!NOTE]  
 >  Diese Option ist nur verfügbar, wenn Sie die Option **Lastenausgleich verwenden** ausgewählt haben.  
   
- **Gruppieren**  
+ **Gruppe**  
  Beim Herstellen einer Verbindung mit einer Gruppe von Servern mit Lastenausgleich geben Sie den Namen der Servergruppe an.  
   
 > [!NOTE]  
@@ -152,6 +152,6 @@ ms.locfileid: "71298478"
  Testen Sie die Verbindung mithilfe der Werte, die Sie eingegeben haben. Nachdem Sie auf **Verbindung testen**geklickt haben, wird in einem Meldungsfeld angezeigt, ob die Verbindung erfolgreich war oder nicht.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Komponenten von Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903744"
 ---
 # <a name="create-a-database-schema"></a>Erstellen eines Datenbankschemas
@@ -65,7 +65,7 @@ ms.locfileid: "72903744"
 > Es wird kein Dialogfeld angezeigt, wenn Sie mithilfe von SSMS ein Schema für eine **Azure SQL-Datenbank** oder **Azure SQL Data Warehouse** erstellen. Sie müssen die generierte T-SQL-Anweisung zum Erstellen eines Schemas ausführen.
   
 ### <a name="additional-options"></a>Zusätzliche Optionen  
- Im Dialogfeld **Schema – Neu** sind auch Optionen auf zwei zusätzlichen Seiten verfügbar: **Berechtigungen** und **Erweiterte Eigenschaften**.  
+ Das Dialogfeld **Schema > Neu** verfügt zudem über Optionen auf zwei zusätzlichen Seiten: **Berechtigungen** und **Erweiterte Eigenschaften**.  
   
 -   Auf der Seite **Berechtigungen** werden alle möglichen sicherungsfähigen Elemente und die Berechtigungen für diese sicherungsfähigen Elemente aufgelistet, die für die Anmeldung gewährt werden können.  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cdb24eff5efa62058aa2c20ecec0a85d43c83ae0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251549"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Ändern des Datenbank-Kompatibilitätsgrads und Verwenden des Abfragespeichers
@@ -45,7 +45,7 @@ Der Upgradevorgang zum Aktivieren neuer Abfrageprozessorfunktionen steht im Zusa
   
 Der empfohlene Workflow für eine Aktualisierung des Abfrageprozessors auf die neueste Version des Codes ist in den „Verwendungsszenarien für den Abfragespeicher“ unter [Aufrechterhalten einer stabilen Leistung während des Upgrades auf das neuere SQL Server](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) dokumentiert (siehe weiter unten).  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "|::ref1::|") 
+![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
 
 Ab [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 können Benutzer im Abfrageoptimierungs-Assistenten durch den empfohlenen Workflow geführt werden. Weitere Informationen finden Sie unter [Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

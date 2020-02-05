@@ -16,10 +16,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19a234b8c2939730a6c5a815885606dac15d0a0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298168"
 ---
 # <a name="odbc-source"></a>ODBC-Quelle
@@ -44,9 +44,9 @@ ms.locfileid: "71298168"
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Die ODBC-Quelle verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
--   **Fehlercode**: Der Wert, der dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Datenbank mit ODBC-Unterstützung. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
+-   **Fehlercode**: Ruft die Zahl ab, die dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Datenbank mit ODBC-Unterstützung. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
   
--   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (bei Konvertierungsfehlern).  
+-   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (für Konvertierungsfehler).  
   
 -   Die Spalten mit den Standardausgabedaten.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71298168"
   
  Weitere Informationen zur **FetchMethod** -Eigenschaft finden Sie unter [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Parallelism  
+## <a name="parallelism"></a>Parallelität  
  Es gilt keine Einschränkung in Bezug auf die Anzahl von ODBC-Quellkomponenten, die parallel für dieselbe Tabelle oder verschiedene Tabellen, auf demselben Computer oder auf unterschiedlichen Computern ausgeführt werden können (mit Ausnahme normaler Einschränkungen für globale Sitzungen).  
   
  Aufgrund von Einschränkungen in Verbindung mit dem verwendeten ODBC-Anbieter kann die Anzahl gleichzeitiger Verbindungen über den Anbieter möglicherweise trotzdem eingeschränkt sein. Diese Einschränkungen begrenzen die Anzahl der unterstützten parallelen Instanzen, die für die ODBC-Quelle möglich sind. Der SSIS-Entwickler muss sich über die Einschränkungen im Klaren sein, die für verwendete ODBC-Anbieter gelten, und diese beim Erstellen von SSIS-Paketen beachten.  
@@ -99,18 +99,18 @@ ms.locfileid: "71298168"
   
 -   Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ODBC-Quelle.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
 #### <a name="connection-manager"></a>Ziel-Editor für Dimensionsverarbeitung  
  Wählen Sie in der Liste einen vorhandenen ODBC-Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Sie können eine Verbindung mit jeder von ODBC unterstützten Datenbank erstellen.  
   
-#### <a name="new"></a>eine neue  
+#### <a name="new"></a>Neu  
  Klicken Sie auf **Neu**. Das Dialogfeld **ODBC-Verbindungs-Manager konfigurieren** , in dem Sie einen neuen ODBC-Verbindungs-Manager erstellen können, wird geöffnet.  
   
 #### <a name="data-access-mode"></a>Datenzugriffsmodus  
  Wählen Sie die Methode für die Auswahl von Daten aus der Quelle aus. Die Optionen sind in der folgenden Tabelle aufgeführt:  
   
-|Option|und Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Tabellenname|Ruft Daten aus einer Tabelle oder Sicht in der ODBC-Datenquelle ab. Bei Auswahl dieser Option wählen Sie einen der folgenden Werte in der Liste aus:|  
 ||**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht aus, oder geben Sie einen regulären Ausdruck ein, um die Tabelle zu identifizieren.|  
@@ -135,7 +135,7 @@ ms.locfileid: "71298168"
   
 3.  Klicken Sie im **Quellen-Editor für ODBC**auf **Spalten**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
 #### <a name="available-external-columns"></a>Verfügbare externe Spalten  
  Eine Liste der in der Datenquelle verfügbaren externen Spalten. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden. Wählen Sie die zu verwendenden Spalten aus der Datenquelle aus. Die ausgewählten Spalten werden der Liste **Externe Spalte** in der Reihenfolge hinzugefügt, in der Sie sie auswählen.  
@@ -160,12 +160,12 @@ ms.locfileid: "71298168"
   
 -   Klicken Sie im **Quellen-Editor für ODBC**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
 #### <a name="inputoutput"></a>Eingabe/Ausgabe  
  Zeigt den Namen der Datenquelle an.  
   
-#### <a name="column"></a>Spalte  
+#### <a name="column"></a>Column  
  Wird nicht verwendet.  
   
 #### <a name="error"></a>Fehler  
@@ -174,7 +174,7 @@ ms.locfileid: "71298168"
 #### <a name="truncation"></a>Abschneiden  
  Wählen Sie aus, wie die ODBC-Quelle Kürzungen in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
   
-#### <a name="description"></a>und Beschreibung  
+#### <a name="description"></a>BESCHREIBUNG  
  Wird nicht verwendet.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Diesen Wert für ausgewählte Zellen festlegen  

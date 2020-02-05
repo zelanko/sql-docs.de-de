@@ -15,10 +15,10 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6382de8778e5f11e76f4481519284d50b7b52e0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282169"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Programmgesteuertes Laden und Ausführen eines Remotepakets
@@ -160,7 +160,7 @@ namespace LaunchSSISPackageAgent_CS
  In den folgenden Codebeispielen wird gezeigt, wie der Webdienst erstellt und getestet wird.  
   
 #### <a name="creating-the-web-service"></a>Erstellen des Webdiensts  
- Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket kann direkt aus einer Datei, direkt aus SQL Server oder aus dem SSIS-Paketspeicher geladen werden, der die Paketspeicherung sowohl in SQL Server-Ordnern als auch in speziellen Dateisystemordnern verwaltet. Dieses Beispiel unterstützt alle verfügbaren Optionen mithilfe eines **Select Case**- oder eines **switch**-Konstrukts, damit die geeignete Syntax zum Starten des Pakets ausgewählt wird und die Eingabeargumente entsprechend verkettet werden können. Die LaunchPackage<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>-Webdienstmethode gibt das Ergebnis der Paketausführung als ganze Zahl zurück und nicht als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Wert, sodass Clientcomputers keinen Verweis auf -Assemblys benötigen.  
+ Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket kann direkt aus einer Datei, direkt aus SQL Server oder aus dem SSIS-Paketspeicher geladen werden, der die Paketspeicherung sowohl in SQL Server-Ordnern als auch in speziellen Dateisystemordnern verwaltet. Dieses Beispiel unterstützt alle verfügbaren Optionen mithilfe eines **Select Case**- oder eines **switch**-Konstrukts, damit die geeignete Syntax zum Starten des Pakets ausgewählt wird und die Eingabeargumente entsprechend verkettet werden können. Die <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>LaunchPackage[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Webdienstmethode gibt das Ergebnis der Paketausführung als ganze Zahl zurück und nicht als {3}-Wert, sodass Clientcomputers keinen Verweis auf {4}-Assemblys benötigen.  
   
 ###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>So erstellen Sie einen Webdienst zum programmgesteuerten Ausführen von Paketen auf dem Server  
   
@@ -170,7 +170,7 @@ namespace LaunchSSISPackageAgent_CS
   
 3.  Fügen Sie den Beispielcode für die LaunchPackage-Webdienstmethode in die Klasse ein. (Im Beispiel ist der gesamte Inhalt des Codefensters dargestellt.)  
   
-4.  Erstellen und testen Sie den Webdienst. Stellen Sie hierzu eine Reihe gültiger Werte für die Eingabeargumente der LaunchPackage-Methode bereit, die auf ein vorhandenes Paket zeigen. Beispiel: Wenn package1.dtsx auf dem Server im Verzeichnis C:\My Packages gespeichert ist, übergeben Sie "file" als Wert von sourceType, "C:\My Packages" als Wert von sourceLocation und "package1" (ohne Erweiterung) als Wert von packageName.  
+4.  Erstellen und testen Sie den Webdienst. Stellen Sie hierzu eine Reihe gültiger Werte für die Eingabeargumente der LaunchPackage-Methode bereit, die auf ein vorhandenes Paket zeigen. Beispiel: Wenn {1}package1.dtsx{2} auf dem Server im Verzeichnis {3}C:\My Packages{4} gespeichert ist, übergeben Sie "file" als Wert von {5}sourceType{6}, "C:\My Packages" als Wert von {7}sourceLocation{8} und "package1" (ohne Erweiterung) als Wert von {9}packageName{10}.  
   
 ```vb  
 Imports System.Web  
@@ -420,7 +420,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Video, [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit dem SQL Server-Agent (SQL Server-Video)](https://technet.microsoft.com/sqlserver/ff686764.aspx) auf technet.microsoft.com  
+-   Video [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit dem SQL Server-Agent (SQL Server-Video)](https://technet.microsoft.com/sqlserver/ff686764.aspx) auf technet.microsoft.com  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

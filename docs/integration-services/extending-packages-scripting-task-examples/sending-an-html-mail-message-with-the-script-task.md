@@ -17,10 +17,10 @@ ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb1de7efdc8592551343a9424e4ab3b1dd1f69f9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286745"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Senden einer HTML-E-Mail mit dem Skripttask
@@ -33,7 +33,7 @@ ms.locfileid: "71286745"
 > [!NOTE]  
 >  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Im folgenden Beispiel wird der **System.Net.Mail**-Namespace verwendet, um eine HTML-E-Mail zu konfigurieren und zu senden. Das Skript ruft den Empfänger, den Absender, den Betreff und den Text der E-Mail aus Paketvariablen ab, verwendet diese zur Erstellung einer neuen **MailMessage** und legt deren **IsBodyHtml**-Eigenschaft auf **True** fest. Es ruft dann den SMTP-Servernamen aus einer weiteren Paketvariablen ab, initialisiert eine Instanz von **System.Net.Mail.SmtpClient** und ruft die **Send**-Methode zum Senden der HTML-Nachricht auf. Im Beispiel wird die Funktionalität zum Senden der Nachricht in eine Unterroutine gekapselt, die in anderen Skripts wiederverwendet werden kann.  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>So konfigurieren Sie dieses Skripttaskbeispiel ohne einen SMTP-Verbindungs-Manager  

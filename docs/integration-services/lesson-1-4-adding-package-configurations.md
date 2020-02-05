@@ -11,10 +11,10 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ca9674a5bb3128e86d9cceaca4a971066da0fef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283680"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lektion 1-4: Hinzufügen von Paketkonfigurationen
@@ -134,7 +134,7 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
   
 12. Überprüfen Sie im Dialogfeld **Paketkonfigurationsplaner** , ob „LoadXMLData EV Configuration“ als Erstes und „LoadXMLData Configuration“ als Zweites aufgeführt wird, und klicken Sie anschließend auf **Schließen**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
 [Schritt 5: Testen der aktualisierten Pakete](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  

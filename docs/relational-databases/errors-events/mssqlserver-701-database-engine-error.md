@@ -12,10 +12,10 @@ ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907719"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
@@ -33,7 +33,7 @@ ms.locfileid: "72907719"
 |Meldungstext|Nicht genügend Systemarbeitsspeicher vorhanden, um diese Abfrage auszuführen.|  
   
 ## <a name="explanation"></a>Erklärung  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konnte nicht genügend Arbeitsspeicher zuordnen, um die Abfrage auszuführen. Dies kann mehrere Ursachen haben, einschließlich der Betriebssystemeinstellungen, der Verfügbarkeit des physischen Arbeitsspeichers oder der Arbeitsspeicherbegrenzung der aktuellen Arbeitsauslastung. In den meisten Fällen ist die Transaktion, die den Fehler erzeugt hat, nicht die Ursache für den Fehler.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konnte nicht genügend Arbeitsspeicher zuordnen, um die Abfrage auszuführen. Dies kann viele unterschiedliche Gründe haben, z. B. Betriebssystemeinstellungen, Verfügbarkeit des physischen Arbeitsspeichers oder Speicherlimits für die aktuelle Workload. In den meisten Fällen ist die fehlgeschlagene Transaktion nicht die Ursache dieses Fehlers.  
   
 Diagnoseabfragen, wie beispielsweise DBCC-Anweisungen, erzeugen möglicherweise einen Fehler, da dem Server nicht genügend Arbeitsspeicher zur Verfügung steht.  
   
@@ -46,7 +46,7 @@ In der folgenden Liste werden allgemeine Schritte erläutert, die bei der Proble
   
 1.  Überprüfen Sie, ob andere Anwendungen oder Dienste Arbeitsspeicher auf dem Server beanspruchen. Rekonfigurieren Sie weniger kritische Anwendungen oder Dienste, damit sie weniger Speicher beanspruchen.  
   
-2.  Beginnen Sie die Sammlung der Systemmonitorzähler für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Puffer-Manager**, **SQL Server: Speicher-Manager**.  
+2.  Starten Sie die Sammlung der Leistungsindikatoren für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Puffer-Manager**, **SQL Server: Speicher-Manager**.  
   
 3.  Überprüfen Sie die folgenden SQL Server-Speicherkonfigurationsparameter:  
   

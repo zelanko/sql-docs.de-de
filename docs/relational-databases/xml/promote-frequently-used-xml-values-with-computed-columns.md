@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 156ed5549daa8129ff17d1b2827d798521c8a88b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257628"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
@@ -29,7 +29,7 @@ ms.locfileid: "75257628"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Berechnete Spalte auf der Basis des xml-Datentyps  
  Eine berechnete Spalte kann mithilfe einer benutzerdefinierten Funktion erstellt werden, die **xml** -Datentypmethoden aufruft. Der Typ der berechneten Spalte kann jeder SQL-Typ sein, einschließlich XML. Dies wird im folgenden Beispiel veranschaulicht.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Beispiel: Berechnete Spalten basierend auf der XML-Datentypmethode  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Beispiel: Berechnete Spalte auf der Basis der xml-Datentypmethode  
  Erstellen Sie die benutzerdefinierte Funktion für die ISBN-Nummer eines Buchs:  
   
 ```  
@@ -51,7 +51,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  Die berechnete Spalte kann auf gewöhnliche Weise indiziert werden.  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Beispiel: Abfragen für eine berechnete Spalte basierend auf XML-Datentypmethoden  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Beispiel: Abfragen für eine berechnete Spalte auf der Basis der xml-Datentypmethoden  
  So erhalten Sie das <`book`>-Element, dessen ISBN 0-7356-1588-2 ist:  
   
 ```  
@@ -164,7 +164,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Beispiel: Lösung mit der Streaming-Tabellenwertfunktion in CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Beispiel: Projektmappe mit Verwendung der Streaming-Tabellenwertfunktion in CLR  
  Diese Projektmappe umfasst die folgenden Schritte:  
   
 1.  Definieren Sie eine CLR-Klasse (SqlReaderBase), die ISqlReader implementiert und eine Tabellenwert-Streaming-Ausgabe generiert, indem ein Pfadausdruck auf eine XML-Instanz angewendet wird.  

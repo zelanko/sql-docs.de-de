@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594106"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Übersicht über die Schlüsselverwaltung für Always Encrypted
@@ -73,7 +73,7 @@ Always Encrypted-Schlüssel können mithilfe von [SQL Server Management Studio (
     - [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
     - [Rotieren von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
 
-- **SQL Server PowerShell** enthält Cmdlets zum Verwalten von Always Encrypted-Schlüsseln mit und ohne Rollentrennung. Weitere Informationen finden Sie in den folgenden Themen:
+- **SQL Server PowerShell** enthält Cmdlets zum Verwalten von Always Encrypted-Schlüsseln mit und ohne Rollentrennung. Weitere Informationen finden Sie unter
     - [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [Rotieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -92,7 +92,7 @@ Ihr Schlüsselverwaltungsprozess muss sicherstellen, dass die Spaltenhauptschlü
 - Generieren Sie niemals Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel auf einem Computer, der Ihre Datenbank hostet. Generieren Sie die Schlüssel stattdessen auf einem separaten Computer, der entweder für die Schlüsselverwaltung vorgesehen ist oder auf dem Anwendungen gehostet werden, die ohnehin Zugriff auf die Schlüssel benötigen. Dies bedeutet, dass Sie **niemals Tools ausführen sollten, die für das Generieren der Schlüssel auf dem Computer verwendet werden, der die Datenbank hostet**. Wenn nämlich ein Angreifer auf einen Computer zugreift, der für die Bereitstellung oder Verwaltung Ihrer Always Encrypted-Schlüssel verwendet wird, kann er Ihre Schlüssel möglicherweise abrufen, selbst wenn die Schlüssel nur für kurze Zeit im Arbeitsspeicher des Tools angezeigt werden.
 - Es ist wichtig, potenzielle Angreifer und Sicherheitsbedrohungen zu identifizieren, bevor ein Schlüsselverwaltungprozess definiert und implementiert wird, um sicherzustellen, dass ihr Schlüsselverwaltungsprozess nicht aus Versehen Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel offenlegt. Wenn Sie z.B. möchten, dass DBAs keinen Zugriff auf sensible Daten haben, darf ein DBA nicht für das Generieren von Schlüsseln verantwortlich sein. Ein DBA *kann* jedoch Schlüsselmetadaten in der Datenbank verwalten, da die Nur-Text-Schlüssel in den Metadaten nicht enthalten sind.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 - [Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten](always-encrypted-wizard.md)
 - [Erstellen und Speichern von Spaltenhauptschlüsseln für Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
 - [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)

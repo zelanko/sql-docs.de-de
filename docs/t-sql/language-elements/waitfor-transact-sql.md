@@ -27,10 +27,10 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086113"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68086113"
 
   Blockiert die Ausführung eines Batches, einer gespeicherten Prozedur oder einer Transaktion, bis eine bestimmte Zeit oder ein bestimmtes Zeitintervall verstrichen ist oder bis eine angegebene Anweisung mindestens eine Zeile ändert oder zurückgibt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

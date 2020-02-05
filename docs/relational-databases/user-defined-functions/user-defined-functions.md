@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8a659583df74cdc2e5100fcc25aa25e90af3bf22
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843843"
 ---
 # <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
@@ -69,7 +69,7 @@ Gründe für die Verwendung benutzerdefinierter Funktionen
  Wie oft eine in einer Abfrage angegebene Funktion tatsächlich ausgeführt wird, kann bei den vom Abfrageoptimierer erstellten Ausführungsplänen variieren. Ein Beispiel hierfür ist eine Funktion, die von einer Unterabfrage in einer `WHERE`-Klausel aufgerufen wird. Wie oft die Unterabfrage und deren Funktion ausgeführt wird, kann bei den verschiedenen Zugriffsmethoden variieren, die der Abfrageoptimierer auswählt.  
  
 > [!IMPORTANT]   
-> Weitere Informationen und Leistungsüberlegungen zu benutzerdefinierten Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &#40;Datenbank-Engine &#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
+> Weitere Informationen und Leistungsüberlegungen zu benutzerdefinierten Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
   
 ##  <a name="ValidStatements"></a> Gültige Anweisungen in einer Funktion  
 Die folgenden Anweisungstypen sind in einer Funktion zulässig:  
@@ -103,7 +103,7 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- Die folgenden nicht deterministischen integrierten Funktionen können in benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen **nicht** verwendet werden.  
+ Die folgenden nicht deterministischen integrierten Funktionen können in benutzerdefinierten **-Funktionen** nicht[!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet werden.  
   
 |||  
 |-|-|  
@@ -133,7 +133,7 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
 |||  
 |-|-|  
 |**Taskbeschreibung**|**Thema**|  
-|Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion erstellt wird.|[Erstellen benutzerdefinierter Funktionen &a#40;Datenbank-Engine &#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
+|Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion erstellt wird.|[Erstellen benutzerdefinierter Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Beschreibt, wie eine CLR-Funktion erstellt wird.|[Erstellen von CLR-Funktionen](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
 |Beschreibt, wie eine benutzerdefinierte Aggregatfunktion erstellt wird.|[Erstellen benutzerdefinierter Aggregate](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
 |Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion geändert wird.|[Ändern benutzerdefinierter Funktionen](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  

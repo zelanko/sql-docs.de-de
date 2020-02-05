@@ -18,10 +18,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: a8912a290723e3f0e1d0a0b951a6a5d1ce04b725
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710516"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase-Abfrageszenarien
@@ -60,7 +60,7 @@ ORDER BY SensorData.Speed DESC
   
 ```  
 
-## <a name="import-data"></a>Importieren von Daten
+## <a name="import-data"></a>Daten importieren
 
 Importieren Sie Daten aus Hadoop oder Azure Storage in SQL Server für den beständigen Speicher. Verwenden Sie SELECT INTO, um Daten, auf die eine externe Tabelle verweist, zu importieren und dauerhaft in SQL Server zu speichern. Erstellen Sie dynamisch eine relationale Tabelle, und erstellen Sie dann in einem zweiten Schritt einen Columnstore-Index am oberen Rand der Tabelle.
 

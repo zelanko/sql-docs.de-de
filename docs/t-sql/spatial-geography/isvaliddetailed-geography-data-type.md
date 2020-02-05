@@ -18,10 +18,10 @@ ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c769b2e5fa5de94770d556264b82c81e28d43363
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930217"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (geography-Datentyp)
@@ -44,7 +44,7 @@ ms.locfileid: "67930217"
 ## <a name="remarks"></a>Bemerkungen  
  Die folgende Tabelle enthält mögliche Rückgabewerte:  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|BESCHREIBUNG|  
 |------------------|-----------------|  
 |24400|Gültig|  
 |24401|Ungültig, die Ursache ist unbekannt.|  
@@ -62,7 +62,7 @@ ms.locfileid: "67930217"
 |24413|Ungültig aufgrund von zwei überlappenden Kanten in Kurve {0}.|  
 |24414|Ungültig, weil sich eine Kante der Kurve {0} und eine Kante der Kurve {1} überschneiden.|  
 |24415|Ungültig, weil ein Polygon über eine ungültige Ringstruktur verfügt.|  
-|24416|Ungültig, weil die Kante, die an Punkt {1} beginnt, in Kurve {0} entweder eine Linie oder ein degenerierter Bogen mit entgegengesetzten Endpunkten ist.|  
+|24416|Ungültig, weil die Kante, die an Punkt {0} beginnt, in Kurve {1} entweder eine Linie oder ein degenerierter Bogen mit entgegengesetzten Endpunkten ist.|  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel für ein ungültiges räumliches Objekt wird veranschaulicht, wie sich die **IsValidDetailed()** -Methoden verhalten.  

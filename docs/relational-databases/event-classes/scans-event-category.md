@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4aad7f741d5a2a509c9be67cea7636942204399b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911241"
 ---
 # <a name="scans-event-category"></a>Scans-Ereigniskategorie
@@ -27,9 +27,9 @@ ms.locfileid: "67911241"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Scan:Started (Ereignisklasse)](../../relational-databases/event-classes/scan-started-event-class.md)|Zeigt an, dass ein Tabellen- oder Indexscan gestartet wurde.|  
-|[Scan:Stopped (Ereignisklasse)](../../relational-databases/event-classes/scan-stopped-event-class.md)|Zeigt an, dass ein Tabellen- oder Indexscan beendet wurde.|  
+|[Scan:Started-Ereignisklasse](../../relational-databases/event-classes/scan-started-event-class.md)|Zeigt an, dass ein Tabellen- oder Indexscan gestartet wurde.|  
+|[Scan:Stopped-Ereignisklasse](../../relational-databases/event-classes/scan-stopped-event-class.md)|Zeigt an, dass ein Tabellen- oder Indexscan beendet wurde.|  
   
   

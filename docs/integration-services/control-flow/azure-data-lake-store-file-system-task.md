@@ -13,10 +13,10 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: cab5a97beb9f1bfe4d47844e2d0acdb49b28b924
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947349"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store-Task „Dateisystem“
@@ -35,8 +35,8 @@ Ziehen Sie den Azure Data Lake Store-Task „Dateisystem“ von der SSIS-Toolbox
 
 Mit der **Operation**-Eigenschaft wird der auszuführende Dateisystemvorgang angegeben. Wählen Sie einen der folgenden Vorgänge aus:
 
-- **CopyToADLS:** Dateien in ADLS hochladen.
-- **CopyFromADLS:** Dateien aus ADLS herunterladen.
+- **CopyToADLS:** Hochladen von Dateien in ADLS.
+- **CopyFromADLS:** Herunterladen von Dateien von ADLS.
 
 ## <a name="configure-the-properties-for-the-operation"></a>Konfigurieren der Eigenschaften für den Vorgang
 Sie müssen für jeden Vorgang einen Azure Data Lake-Verbindungs-Manager angeben.
@@ -44,13 +44,13 @@ Sie müssen für jeden Vorgang einen Azure Data Lake-Verbindungs-Manager angeben
 Im Folgenden werden die Eigenschaften der jeweiligen Vorgänge beschrieben:
 
 ### <a name="copytoadls"></a>CopyToADLS
-- **LocalDirectory:** Gibt das lokale Quellverzeichnis an, das die hochzuladenden Dateien enthält.
-- **FileNamePattern:** Legt einen Dateinamensfilter für Quelldateien fest. Nur Dateien, deren Namen dem angegebenen Muster entsprechen, werden hochgeladen. Die Platzhalterzeichen `*` und `?` werden unterstützt.
-- **SearchRecursively:** Gibt an, ob das Quellverzeichnis rekursiv nach hochzuladenden Dateien durchsucht werden soll.
-- **AzureDataLakeDirectory:** Gibt das ADLS-Zielverzeichnis an, in das Dateien hochgeladen werden.
-- **FileExpiry:** Gibt ein Ablaufdatum und die Uhrzeit an, an dem bzw. zu der die Dateien in ADLS hochgeladen werden. Geben Sie für diese Eigenschaft keinen Wert an, um festzulegen, dass Dateien über kein Ablaufdatum verfügen.
+- **LocalDirectory:** gibt das lokale Quellverzeichnis an, das die hochzuladenden Dateien enthält
+- **FileNamePattern:** legt einen Dateinamensfilter für Quelldateien fest Nur Dateien, deren Namen dem angegebenen Muster entsprechen, werden hochgeladen. Die Platzhalterzeichen `*` und `?` werden unterstützt.
+- **SearchRecursively:** gibt an, ob das Quellverzeichnis rekursiv nach hochzuladenden Dateien durchsucht werden soll
+- **AzureDataLakeDirectory:** gibt das ADLS-Zielverzeichnis an, in das Dateien hochgeladen werden
+- **FileExpiry:** gibt ein Ablaufdatum und die Uhrzeit an, an dem bzw. zu der die Dateien in ADLS hochgeladen werden Geben Sie für diese Eigenschaft keinen Wert an, um festzulegen, dass Dateien über kein Ablaufdatum verfügen.
 
 ### <a name="copyfromadls"></a>CopyFromADLS
-- **AzureDataLakeDirectory:** Gibt das ADLS-Quellverzeichnis an, das die herunterzuladenden Dateien enthält.
-- **SearchRecursively:** Gibt an, ob das Quellverzeichnis rekursiv nach herunterzuladende Dateien durchsucht werden soll.
-- **LocalDirectory:** Gibt das Zielverzeichnis an, in dem heruntergeladene Dateien gespeichert werden.
+- **AzureDataLakeDirectory:** gibt das ADLS-Quellverzeichnis an, das die herunterzuladenden Dateien enthält
+- **SearchRecursively:** gibt an, ob das Quellverzeichnis rekursiv nach herunterzuladenden Dateien durchsucht werden soll
+- **LocalDirectory:** gibt das Zielverzeichnis an, in dem heruntergeladene Dateien gespeichert werden

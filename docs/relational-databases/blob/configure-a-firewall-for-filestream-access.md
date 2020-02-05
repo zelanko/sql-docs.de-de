@@ -14,10 +14,10 @@ ms.assetid: fc52007f-c26f-4f8e-b9d8-55a7978f4d56
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 94df8085482c48d02e1e174ade2207ddad494acb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085433"
 ---
 # <a name="configure-a-firewall-for-filestream-access"></a>Konfigurieren einer Firewall für FILESTREAM-Zugriff
@@ -28,7 +28,7 @@ ms.locfileid: "68085433"
   
 1.  Öffnen Sie in der Systemsteuerung **Windows-Firewall**.  
   
-2.  Klicken Sie im linken Bereich auf **Erweiterte Einstellungen**. Wenn Sie zum Eingeben eines Administratorkennworts oder zu einer Bestätigung aufgefordert werden, geben Sie das Kennwort ein, oder nehmen Sie die Bestätigung vor.  
+2.  Klicken Sie im linken Bereich auf **Erweiterte Einstellungen**. Wenn Sie zur Eingabe eines Administratorkennworts oder einer Bestätigung aufgefordert werden, geben Sie das Kennwort oder eine entsprechende Bestätigung ein.  
   
 3.  Klicken Sie im Dialogfeld **Windows-Firewall mit erweiterter Sicherheit** im linken Bereich auf **Eingehende Regeln**, und klicken Sie dann im rechten Bereich auf **Neue Regel**.  
   

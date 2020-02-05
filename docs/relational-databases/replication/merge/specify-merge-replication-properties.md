@@ -15,10 +15,10 @@ ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908160"
 ---
 # <a name="specify-merge-replication-properties"></a>Angeben von Mergereplikationseigenschaften
@@ -28,7 +28,7 @@ In diesem Artikel wird beschrieben, wie Sie verschiedene Eigenschaften für Ihre
 ## <a name="merge-article-is-download-only"></a>Der Artikel zu Mergereplikationen ist nur herunterladbar
 Nur herunterladbare Artikel sind für Anwendungen vorgesehen, deren Daten nicht auf den Abonnenten aktualisiert werden. Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
    
-###  <a name="considerations"></a>Weitere Überlegungen   
+###  <a name="considerations"></a>Überlegungen   
 -   Wenn Sie nach der Initialisierung von Abonnements angeben, dass ein Artikel nur herunterladbar sein soll, müssen sämtliche Clientabonnements, die den Artikel erhalten, erneut initialisiert werden. Serverabonnements müssen nicht erneut initialisiert werden. Weitere Informationen über die Auswirkungen von Eigenschaftsänderungen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ### <a name="use-sql-server-management-studio"></a>Verwenden von SQL Server Management Studio  
@@ -93,7 +93,7 @@ Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Artikel**
   
 #### <a name="specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Angeben, dass ein Abonnement die interaktive Konfliktlösung verwendet  
   
-1.  Geben Sie im Dialogfeld **Abonnementeigenschaften – \<Abonnent>: \<SubscriptionDatabase>** für die Option **Konflikte interaktiv lösen** den Wert **TRUE** an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) und [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).   
+1.  Geben Sie im Dialogfeld **Abonnementeigenschaften - \<Subscriber>: \<SubscriptionDatabase>** für die Option **Konflikte interaktiv lösen** den Wert **Wahr** an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) und [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ###  <a name="use-transact-sql"></a>Verwenden von Transact-SQL  
@@ -133,7 +133,7 @@ In diesem Thema wird beschrieben, wie die Konfliktnachverfolgung und die Auflös
   
 1.  Wählen Sie auf der Seite **Artikel** des Assistenten für neue Veröffentlichung bzw. des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** eine Tabelle aus.  
 2.  Klicken Sie auf **Artikeleigenschaften**und anschließend auf **Eigenschaften des hervorgehobenen Tabellenartikels festlegen** bzw. **Eigenschaften aller Tabellenartikel festlegen**.   
-3.  Wählen Sie im Dialogfeld **Artikeleigenschaften \<Article>** auf der Registerkarte **Eigenschaften** einen der folgenden Werte für die Eigenschaft **Nachverfolgungsebene** aus: **Nachverfolgung auf Zeilenebene** oder **Nachverfolgung auf Spaltenebene**.   
+3.  Wählen Sie im Dialogfeld **Artikeleigenschaften** Article> **auf der Registerkarte \<Eigenschaften** einen der folgenden Werte für die Eigenschaft **Nachverfolgungsebene** aus: **Nachverfolgung auf Zeilenebene** oder **Nachverfolgung auf Spaltenebene**.   
 4.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften.-.\<Veröffentlichung>** befinden, klicken Sie auf **OK**, um zu speichern und das Dialogfeld zu schließen.  
   
 ### <a name="use-transact-sql"></a>Verwenden von Transact-SQL  
@@ -204,7 +204,7 @@ Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergear
 ### <a name="existing-article"></a>Bereits vorhandener Artikel
   
 1.  Um die Verarbeitungsreihenfolge eines Artikels zu ermitteln, führen Sie [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) aus, und betrachten den Wert von **processing_order** im Resultset.   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie für `@property` den Wert **processing_order** und für `@value` einen ganzzahligen Wert an, der die Verarbeitungsreihenfolge darstellt.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie für **den Wert**processing_order`@property` und für `@value` einen ganzzahligen Wert an, der die Verarbeitungsreihenfolge darstellt.  
 
 
 ## <a name="see-also"></a>Weitere Informationen  

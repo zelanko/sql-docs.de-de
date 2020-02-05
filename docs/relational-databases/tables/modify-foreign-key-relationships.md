@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139601"
 ---
 # <a name="modify-foreign-key-relationships"></a>Ändern von Fremdschlüsselbeziehungen
@@ -35,7 +35,7 @@ ms.locfileid: "68139601"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So ändern Sie einen Fremdschlüssel mit:**  
   
@@ -72,10 +72,10 @@ ms.locfileid: "68139601"
      **Ausgew. Beziehung**  
      Listet bestehende Beziehungen auf. Wählen Sie eine Beziehung aus, um ihre Eigenschaften im Datenblatt rechts anzuzeigen. Wenn die Liste leer ist, wurden bisher keine Beziehungen für die Tabelle definiert.  
   
-     **Hinzufügen**  
+     **Add (Hinzufügen)**  
      Erstellt eine neue Beziehung. Die **Tabellen- und Spaltenspezifikation** muss festgelegt werden, bevor die Beziehung gültig wird.  
   
-     **Delete**  
+     **Löschen**  
      Löscht die in der Liste **ausgewählte Beziehung** ausgewählte Beziehung. Verwenden Sie diese Schaltfläche zum Entfernen der Beziehung, um das Hinzufügen einer Beziehung abzubrechen.  
   
      **Kategorie Allgemein**  
@@ -111,7 +111,7 @@ ms.locfileid: "68139601"
      **Kategorie Tabellen-Designer**  
      Wenn die Kategorie erweitert ist, werden Informationen über **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen** und **Für Replikation erzwingen**angezeigt.  
   
-     **Enforce For Replication**  
+     **Für Replikation erzwingen**  
      Gibt an, ob die Einschränkung erzwungen wird, wenn durch den Replikations-Agent in der Tabelle eine INSERT-, ein UPDATE- oder DELETE-Anweisung ausgeführt wird.  
   
      **Fremdschlüsseleinschränkung erzwingen**  
@@ -142,7 +142,7 @@ ms.locfileid: "68139601"
   
     -   **Standard festlegen** Legt den Wert auf den für die Spalte definierten Standardwert fest, wenn für alle Fremdschlüsselspalten der Tabelle Standardwerte definiert sind.  
   
-4.  Klicken Sie im Menü **Datei** auf **Speichern**_table name_.  
+4.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So ändern Sie einen Fremdschlüssel**  

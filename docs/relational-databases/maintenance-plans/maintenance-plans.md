@@ -17,10 +17,10 @@ ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115878"
 ---
 # <a name="maintenance-plans"></a>Wartungspläne
@@ -28,7 +28,7 @@ ms.locfileid: "68115878"
   Mit Wartungsplänen wird ein Workflow der Tasks erstellt, die erforderlich sind, um sicherzustellen, dass Ihre Datenbank optimiert und regelmäßig gesichert wird und dass sie keine Inkonsistenzen aufweist. Mit dem Wartungsplanungs-Assistenten werden zudem zentrale Wartungspläne erstellt, doch durch das manuelle Erstellen von Plänen steht Ihnen eine sehr viel höhere Flexibilität zur Verfügung.  
   
 ## <a name="benefits-of-maintenance-plans"></a>Vorteile von Wartungsplänen  
- In [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]wird mit Wartungsplänen ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket erstellt, das durch einen Auftrag des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt wird. Wartungspläne können manuell oder automatisch in bestimmten Zeitabständen ausgeführt werden.  
+ In [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] wird mit Wartungsplänen ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket erstellt, das durch einen Auftrag des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt wird. Wartungspläne können manuell oder automatisch in bestimmten Zeitabständen ausgeführt werden.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Wartungspläne bieten folgende Funktionen:  
   

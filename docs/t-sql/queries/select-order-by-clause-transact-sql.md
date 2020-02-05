@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981713"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY-Klausel (Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "73981713"
   
 -   Bestimmen Sie die Reihenfolge, in der Werte der [Rangfolgenfunktion](../../t-sql/functions/ranking-functions-transact-sql.md) auf das Resultset angewendet werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  ORDER BY wird in SELECT/INTO- oder CREATE TABLE AS SELECT (CTAS)-Anweisungen in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nicht unterstützt.
@@ -127,7 +127,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  Gibt die Anzahl der Zeilen an, die zurückgegeben werden sollen, nachdem die OFFSET-Klausel verarbeitet wurde. Der Wert kann eine ganzzahlige Konstante oder ein Ausdruck größer oder gleich 1 sein.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *fetch_row_count_expression* kann eine Variable, ein Parameter oder eine konstante skalare Unterabfrage sein. Bei einer Unterabfrage sind keine Verweise auf Spalten möglich, die im äußeren Abfragebereich definiert wurden. Dies bedeutet, das keine Korrelation mit der äußeren Abfrage möglich ist.  
   
@@ -199,7 +199,7 @@ ORDER BY SchemaName + ''; -- wrong
   
 ## <a name="examples"></a>Beispiele  
   
-|Kategorie|Funktionssyntaxelemente|  
+|Category|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
 |[Grundlegende Syntax](#BasicSyntax)|ORDER BY|  
 |[Angeben der auf- und absteigenden Sortierreihenfolge](#SortOrder)|DESC • ASC|  
@@ -248,7 +248,7 @@ ORDER BY SchemaName;
   
 ```  
   
-#### <a name="d-specifying-an-expression-as-the-sort-column"></a>D. Angeben eines Ausdrucks als Sortierspalte  
+#### <a name="d-specifying-an-expression-as-the-sort-column"></a>D: Angeben eines Ausdrucks als Sortierspalte  
  Im folgenden Beispiel wird ein Ausdruck als Sortierspalte verwendet. Der Ausdruck wird mit der DATEPART-Funktion definiert, um das Resultset nach dem Jahr zu sortieren, in dem ein Mitarbeiter eingestellt wurde.  
   
 ```sql
@@ -364,7 +364,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> Beschränken der Anzahl der zurückgegebenen Zeilen  
  In den folgenden Beispielen wird die Anzahl der Zeilen, die von einer Abfrage zurückgegeben werden, mit OFFSET und FETCH eingeschränkt.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Angeben von ganzzahligen Konstanten für OFFSET- und FETCH-Werte  
  Im folgenden Beispiel wird eine ganzzahlige Konstante als Wert für die OFFSET- und die FETCH-Klausel angegeben. Die erste Abfrage gibt alle Zeilen nach der `DepartmentID`-Spalte sortiert zurück. Vergleichen Sie die von dieser Abfrage zurückgegebenen Ergebnisse mit denen der beiden folgenden Abfragen. In der folgenden Abfrage werden mit der `OFFSET 5 ROWS`-Klausel die ersten 5 Zeilen übersprungen und alle verbleibenden Zeilen zurückgegeben. In der letzten Abfrage wird mit der `OFFSET 0 ROWS`-Klausel bei der ersten Zeile begonnen, und anschließend wird mit `FETCH NEXT 10 ROWS ONLY` die Anzahl der zurückgegebenen Zeilen vom sortierten Resultset auf 10 begrenzt.  
@@ -427,7 +427,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
   
 ```  
   
-#### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>D. Angeben einer konstanten skalaren Unterabfrage für OFFSET- und FETCH-Werte  
+#### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>D: Angeben einer konstanten skalaren Unterabfrage für OFFSET- und FETCH-Werte  
  Im folgenden Beispiel wird der Wert für die FETCH-Klausel mit einer konstanten skalaren Unterabfrage definiert. Die Unterabfrage gibt einen einzelnen Wert von der Spalte `PageSize` in der Tabelle `dbo.AppSettings` zurück.  
   
 ```sql
@@ -506,7 +506,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Das folgende Beispiel veranschaulicht ein Resultset sortiert nach der numerischen `EmployeeKey`-Spalte in aufsteigender Reihenfolge.  
   
 ```sql

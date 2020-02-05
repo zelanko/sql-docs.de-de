@@ -15,10 +15,10 @@ ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d913a0e7bbe29ab6f6f303519c73304238afd7df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127397"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (geography-Datentyp)
@@ -48,7 +48,7 @@ ms.locfileid: "68127397"
  In Fällen, in denen die ungültige räumliche Instanz den Äquator schneidet und einen EnvelopeAngle() = 180 aufweist, wird eine Instanz von **FullGlobe** zurückgegeben. Die `MakeValid()`**geography**-Datentypmethode versucht, gültige Instanzen zurückzugeben. Die Richtigkeit oder Vollständigkeit der Ergebnisse kann jedoch nicht garantiert werden.  
   
 > [!NOTE]  
->  Objekte, die nicht gültig sind, können in der Datenbank gespeichert werden. Für ungültige Instanzen (für die von STIsValid() der Wert False zurückgegeben wird) können Methoden verwendet werden, die die Gültigkeit überprüfen oder Exporte ermöglichen: STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() und AsGml().  
+>  Objekte, die nicht gültig sind, können in der Datenbank gespeichert werden. Für ungültige Instanzen (für die von STIsValid() FALSE zurückgegeben wird) können Methoden verwendet werden, die die Gültigkeit überprüfen oder Exporte ermöglichen: STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() und AsGml().  
   
  Diese Methode ist nicht exakt.  
   

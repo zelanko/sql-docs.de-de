@@ -18,10 +18,10 @@ ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2b42f879a238e1c1e9a44c92c8683a91c9021600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030860"
 ---
 # <a name="stlength-geometry-data-type"></a>STLength (geometry-Datentyp)

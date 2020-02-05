@@ -29,10 +29,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073163"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68073163"
 
 Reduziert die Größe der Daten- und Protokolldateien in der angegebenen Datenbank.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -78,7 +78,7 @@ Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:
   
-|Spaltenname|und Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**DbId**|Die Datenbank-ID der Datei, die das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
 |**FileId**|Datei-ID der Datei, die das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
@@ -116,13 +116,13 @@ DBCC SHRINKDATABASE verkleinert Datendateien pro Datei, Protokolldateien jedoch 
   
 Angenommen Sie verfügen über mehrere Protokolldateien, eine Datendatei und eine Datenbank namens **mydb**. Die Datendatei und die Protokolldateien sind jeweils 10 MB groß, die Datendatei enthält 6 MB an Daten. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] berechnet für jede Datei eine Zielgröße. Auf diesen Wert soll die Datei verkleinert werden. Wenn DBCC SHRINKDATABASE mit _target\_percent_ angegeben wird, dann berechnet die [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen prozentualen Anteil von _target\_percent_ als Zielgröße des freien Speicherplatzes der Datei nach der Verkleinerung. 
 
-Wenn Sie für die Verkleinerung von **mydb** beispielsweise den Wert 25 für _target\_percent_ angeben, dann berechnet die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Zielgröße für die Datendatei mit 8 MB (6 MB Daten plus 2 MB freier Speicherplatz). Daher verschiebt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle Daten aus den letzten 2 MB der Datendatei in beliebigen freien Speicherplatz in den ersten 8 MB der Datendatei und verkleinert dann die Datei.
+Wenn Sie für die Verkleinerung von _mydb\_ beispielsweise den Wert 25 für_ target**percent** angeben, dann berechnet die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Zielgröße für die Datendatei mit 8 MB (6 MB Daten plus 2 MB freier Speicherplatz). Daher verschiebt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle Daten aus den letzten 2 MB der Datendatei in beliebigen freien Speicherplatz in den ersten 8 MB der Datendatei und verkleinert dann die Datei.
   
 Angenommen, die Datendatei von **mydb** enthält 7 MB Daten. Durch die Angabe eines _target\_percent_-Werts von 30 kann diese Datendatei auf einen freien Prozentsatz von 30 % verkleinert werden. Durch die Angabe eines _target\_percent_-Werts von 40 wird die Datendatei jedoch nicht verkleinert, da die [!INCLUDE[ssDE](../../includes/ssde-md.md)] Dateien nicht auf eine Größe verkleinert, die unter dem von den Daten belegten Speicherplatz liegt. 
 
-Sie können sich das Problem auch wie folgt vorstellen: 40 % erwünschter freier Speicherplatz plus eine zu 70 % volle Datendatei (7 MB von 10 MB) ergeben mehr als 100 %. Bei jedem _target\_size_-Wert, der über 30 liegt, wird die Datendatei nicht verkleinert. Sie wird nicht verkleinert, weil der gewünschte freie Prozentsatz plus dem aktuell von der Datendatei belegten Prozentsatz einen Wert über 100 % ergibt.
+Sie können dieses Problem auch anders betrachten: 40 Prozent erwünschter freier Speicherplatz plus eine zu 70 Prozent volle Datendatei (7 MB von 10 MB) ergeben mehr als 100 Prozent. Bei jedem _target\_size_-Wert, der über 30 liegt, wird die Datendatei nicht verkleinert. Sie wird nicht verkleinert, weil der gewünschte freie Prozentsatz plus dem aktuell von der Datendatei belegten Prozentsatz einen Wert über 100 % ergibt.
   
-Für Protokolldateien verwendet die [!INCLUDE[ssDE](../../includes/ssde-md.md)] _target\_percent_, um die Zielgröße für das gesamte Protokoll zu berechnen. Deshalb entspricht _target\_percent_ nach dem Verkleinerungsvorgang dem freien Speicherplatz im Protokoll. Die Zielgröße für das gesamte Protokoll wird dann in eine Zielgröße für jede Protokolldatei umgewandelt.
+Für Protokolldateien verwendet die [!INCLUDE[ssDE](../../includes/ssde-md.md)]_target\_percent_, um die Zielgröße für das gesamte Protokoll zu berechnen. Deshalb entspricht _target\_percent_ nach dem Verkleinerungsvorgang dem freien Speicherplatz im Protokoll. Die Zielgröße für das gesamte Protokoll wird dann in eine Zielgröße für jede Protokolldatei umgewandelt.
   
 DBCC SHRINKDATABASE versucht, jede physische Protokolldatei sofort auf ihre Zielgröße zu verkleinern. Angenommen, abgesehen von der Dateigröße der Protokolldatei bleiben keine Bestandteile des logischen Protokolls in den virtuellen Protokollen zurück. Die Datei wird dann erfolgreich gekürzt, und der Vorgang DBCC SHRINKDATABASE wird ohne Meldungen abgeschlossen. Wenn sich dagegen ein Teil des logischen Protokolls in den virtuellen Protokollen befindet, die außerhalb der Zielgröße liegen, gibt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] so viel Speicherplatz wie möglich frei und gibt dann eine Informationsmeldung aus. Die Meldung beschreibt, welche Aktionen erforderlich sind, um das logische Protokoll aus den virtuellen Protokollen am Ende der Datei zu verschieben. Nachdem diese Aktionen ausgeführt wurden, kann der verbleibende Speicherplatz mit DBCC SHRINKDATABASE freigegeben werden.
   
@@ -171,7 +171,7 @@ Im folgenden Beispiel werden die Daten- und Protokolldateien in der `AdventureWo
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  

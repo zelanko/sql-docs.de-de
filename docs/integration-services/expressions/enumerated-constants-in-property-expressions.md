@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297639"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Aufgezählte Konstanten in Eigenschaftsausdrücken
@@ -45,7 +45,7 @@ ms.locfileid: "71297639"
   
  [Wartungsplantasks](#MaintenancePlanTasks)  
   
- [Allgemeine Eigenschaften](#CommonProperties)  
+ [Common Properties](#CommonProperties)  
   
 ##  <a name="Package"></a> Paket  
  In den folgenden Tabellen finden Sie eine Auflistung der Anzeigenamen und der entsprechenden numerischen Werte für Eigenschaften von Paketen, die Sie mithilfe von Werten eines Enumerators festlegen.  
@@ -54,7 +54,7 @@ ms.locfileid: "71297639"
   
 |Anzeigename in DTSPackageType|Numerischer Wert|  
 |-------------------------------------|-------------------|  
-|Default|0|  
+|Standard|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -65,7 +65,7 @@ ms.locfileid: "71297639"
   
 |Anzeigename in DTSCheckpointUsage|Numerischer Wert|  
 |-----------------------------------------|-------------------|  
-|Never|0|  
+|Nie|0|  
 |IfExists|1|  
 |Always|2|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "71297639"
   
 |Anzeigename in DTSPriorityClass|Numerischer Wert|  
 |---------------------------------------|-------------------|  
-|Default|0|  
+|Standard|0|  
 |AboveNormal|1|  
 |Normal|2|  
 |BelowNormal|3|  
@@ -95,7 +95,7 @@ ms.locfileid: "71297639"
   
 |Anzeigename in DTSPrecedenceEvalOp|Numerischer Wert|  
 |------------------------------------------|-------------------|  
-|expression|1|  
+|Ausdruck|1|  
 |Einschränkung|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
@@ -104,8 +104,8 @@ ms.locfileid: "71297639"
   
 |Anzeigename|Numerischer Wert|  
 |-------------------|-------------------|  
-|Success|0|  
-|Failure|1|  
+|Erfolg|0|  
+|Fehler|1|  
 |Completion|2|  
 |Canceled|3|  
   
@@ -208,7 +208,7 @@ ms.locfileid: "71297639"
 |Anzeigename in DTSFileSystemAttributes|Numerischer Wert|  
 |----------------------------------------------|-------------------|  
 |Normal|0|  
-|Archive|1|  
+|Archivieren|1|  
 |Ausgeblendet|2|  
 |ReadOnly|4|  
 |System|8|  
@@ -219,7 +219,7 @@ ms.locfileid: "71297639"
 |Anzeigename in DTSFTPOp|Numerischer Wert|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Receive|1|  
+|Empfangen|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -268,7 +268,7 @@ ms.locfileid: "71297639"
 |-----------------------------------|-------------------|  
 |High|1|  
 |Normal|3|  
-|Low|5|  
+|Niedrig|5|  
   
 ### <a name="transfer-database-task"></a>Datenbanken übertragen (Task)  
  **Action**-Eigenschaft: Festlegung mithilfe von Werten der **TransferAction**-Enumeration.  
@@ -276,7 +276,7 @@ ms.locfileid: "71297639"
 |Anzeigename in TransferAction|Numerischer Wert|  
 |-------------------------------------|-------------------|  
 |Kopieren|0|  
-|Verschieben|1|  
+|Move|1|  
   
  **Method**-Eigenschaft: Festlegung mithilfe von Werten der **TransferMethod**-Enumeration.  
   
@@ -334,7 +334,7 @@ ms.locfileid: "71297639"
   
 |Anzeigename in ExistingData|Numerischer Wert|  
 |-----------------------------------|-------------------|  
-|Ersetzen|0|  
+|Replace|0|  
 |Anfügen|1|  
   
 ### <a name="web-service-task"></a>Webdienst (Task)  
@@ -342,7 +342,7 @@ ms.locfileid: "71297639"
   
 |Anzeigename in DTSOutputType|Numerischer Wert|  
 |------------------------------------|-------------------|  
-|File|0|  
+|Datei|0|  
 |Variable|1|  
   
 ### <a name="wmi-data-reader-task"></a>WMI-Datenleser (Task)  
@@ -453,7 +453,7 @@ ms.locfileid: "71297639"
   
 |Anzeigename in DTSXMLXPathOperation|Numerischer Wert|  
 |-------------------------------------------|-------------------|  
-|Evaluation|0|  
+|Auswertung|0|  
 |Werte|1|  
 |NodeList|2|  
   
@@ -461,7 +461,7 @@ ms.locfileid: "71297639"
   
 |Anzeigename in DTSXMLDiffOptions|Numerischer Wert|  
 |----------------------------------------|-------------------|  
-|None|0|  
+|Keine|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -491,19 +491,19 @@ ms.locfileid: "71297639"
   
 |Anzeigename in DatabaseSelection|Numerischer Wert|  
 |----------------------------------------|-------------------|  
-|None|0|  
+|Keine|0|  
 |All|1|  
 |System|2|  
 |Benutzer|3|  
-|Specific|4|  
+|Spezifisch|4|  
   
  **TableSelectionType**-Eigenschaft: Festlegung mithilfe von Werten der **TableSelection**-Enumeration.  
   
 |Anzeigename in TableSelection|Numerischer Wert|  
 |-------------------------------------|-------------------|  
-|None|0|  
+|Keine|0|  
 |All|1|  
-|Specific|2|  
+|Spezifisch|2|  
   
  **ObjectTypeSelection**-Eigenschaft: Festlegung mithilfe von Werten der **ObjectType**-Enumeration.  
   
@@ -542,7 +542,7 @@ ms.locfileid: "71297639"
 |---------------------------------|-------------------|  
 |LogicalDevice|0|  
 |Band|1|  
-|File|2|  
+|Datei|2|  
 |Pipe|3|  
 |VirtualDevice|4|  
   
@@ -558,17 +558,17 @@ ms.locfileid: "71297639"
   
 |Anzeigename in TimeUnitType|Numerischer Wert|  
 |-----------------------------------|-------------------|  
-|Day|0|  
+|Day (Tag)|0|  
 |Week|1|  
-|Month|2|  
-|Year|3|  
+|Month (Monat)|2|  
+|Jahr|3|  
   
 ### <a name="update-statistics-task"></a>Statistiken aktualisieren (Task)  
  **UpdateType**-Eigenschaft: Festlegung mithilfe von Werten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] StatisticsTarget **-Enumeration von SMO (** Management Objects).  
   
 |Anzeigename in StatisticsTarget|Numerischer Wert|  
 |---------------------------------------|-------------------|  
-|Spalte|1|  
+|Column|1|  
 |Index|2|  
 |All|3|  
   
@@ -579,9 +579,9 @@ ms.locfileid: "71297639"
   
 |Anzeigename in DTSForcedExecResult|Numerischer Wert|  
 |------------------------------------------|-------------------|  
-|None|-1|  
-|Success|0|  
-|Failure|1|  
+|Keine|-1|  
+|Erfolg|0|  
+|Fehler|1|  
 |Completion|2|  
   
  **IsolationLevel**-Eigenschaft: Festlegung mithilfe der **IsolationLevel**-Enumeration von .NET Framework. Weitere Informationen finden Sie in der .NET Framework-Klassenbibliothek unter der [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
@@ -591,7 +591,7 @@ ms.locfileid: "71297639"
 |Anzeigename in DTSLoggingMode|Numerischer Wert|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Aktiviert|1|  
+|Enabled|1|  
 |Disabled|2|  
   
  **TransactionOption**-Eigenschaft: Festlegung mithilfe von Werten der **DTSTransactionOption**-Enumeration.  
@@ -599,8 +599,8 @@ ms.locfileid: "71297639"
 |Anzeigename in DTSTransactionOption|Numerischer Wert|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|Supported|1|  
-|Required|2|  
+|Unterstützt|1|  
+|Erforderlich|2|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md)  
@@ -608,7 +608,7 @@ ms.locfileid: "71297639"
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [SQL Server Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
+ [Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md)  
   

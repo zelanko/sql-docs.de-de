@@ -11,10 +11,10 @@ ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75924986"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Laden von Daten in SQL Server oder Azure SQL-Datenbank mit SQL Server Integration Services (SSIS)
@@ -173,9 +173,9 @@ Glückwunsch! Sie haben mit SQL Server Integration Services erfolgreich Daten in
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Erfahren Sie mehr über das Debuggen und Behandeln von Problemen mit Ihren Paketen direkt in der Entwurfsumgebung. Beginnen Sie mit dem folgenden Artikel: [Tools zur Problembehandlung für die Paketentwicklung][Troubleshooting Tools for Package Development].
+- Erfahren Sie mehr über das Debuggen und Behandeln von Problemen mit Ihren Paketen direkt in der Entwurfsumgebung. Beginnen Sie hier: [Tools zur Problembehandlung für die Paketentwicklung][Troubleshooting Tools for Package Development].
 
-- Erfahren Sie, wie Sie Ihre SSIS-Projekte und -Pakete in Integration Services Server oder an einem anderen Speicherort bereitstellen. Beginnen Sie mit dem folgenden Artikel: [Bereitstellung von Projekten und Paketen][Deployment of Projects and Packages].
+- Erfahren Sie, wie Sie Ihre SSIS-Projekte und -Pakete in Integration Services Server oder an einem anderen Speicherort bereitstellen. Beginnen Sie hier: [Bereitstellung von Projekten und Paketen][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

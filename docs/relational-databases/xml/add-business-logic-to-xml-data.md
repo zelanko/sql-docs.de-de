@@ -13,10 +13,10 @@ ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a282e3e9493bb1cfbcc57186a8e1b9f53faf22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095460"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Hinzufügen von Geschäftslogik zu XML-Daten
@@ -31,7 +31,7 @@ ms.locfileid: "68095460"
   
 -   Sie können gespeicherte Transact-SQL-Prozeduren und -Funktionen schreiben, mit denen das Verarbeiten der XML-Spalte für Ihre Unternehmensanforderungen gestartet wird.  
   
-## <a name="example-applying-xsl-transformation"></a>Beispiel: Anwenden von XSL-Transformationen  
+## <a name="example-applying-xsl-transformation"></a>Beispiel: Anwenden der XSL-Transformation  
  Angenommen, eine CLR-Funktion **TransformXml()** nimmt eine **xml** -Datentypinstanz und eine in einer Datei gespeicherte XSL-Transformation an, wendet die Transformation auf die XML-Daten an und gibt dann den transformierten XML-Code im Ergebnis zurück. Es folgt eine Skeleton-Funktion, die in C# geschrieben ist:  
   
 ```  

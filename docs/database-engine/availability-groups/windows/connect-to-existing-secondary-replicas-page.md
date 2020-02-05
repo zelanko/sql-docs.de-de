@@ -14,10 +14,10 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d891c38cecd1132fc5b3779c082a69c72e407b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991138"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>Seite „Verbinden mit vorhandenen sekundären Replikaten“ – Always On-Verfügbarkeitsgruppen
@@ -31,7 +31,7 @@ ms.locfileid: "67991138"
  **Verbunden als**  
  Zeigt das Konto an, das mit der Serverinstanz verbunden ist, nachdem die Verbindung hergestellt wurde. Wenn in dieser Spalte für eine bestimmte Serverinstanz "**Nicht verbunden**" angezeigt wird, müssen Sie auf die Schaltfläche **Verbinden** bzw. **Alle verbinden** klicken.  
   
- **Verbinden**  
+ **Herstellen einer Verbindung**  
  Klicken Sie auf diese Schaltfläche, wenn diese Serverinstanz unter einem anderen Konto als andere Serverinstanzen ausgeführt wird, mit denen Sie eine Verbindung herstellen müssen.  
   
  **Alle verbinden**  
@@ -47,6 +47,6 @@ ms.locfileid: "67991138"
 -   [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

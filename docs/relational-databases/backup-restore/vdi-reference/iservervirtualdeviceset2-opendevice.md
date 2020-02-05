@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: af24aff4bbb8f0eefa14363453e962c0a90d610e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847211"
 ---
 # <a name="iservervirtualdeviceset2opendevice-vdi"></a>IServerVirtualDeviceSet2::OpenDevice (VDI)
@@ -44,7 +44,7 @@ HRESULT IServerVirtualDeviceSet2::OpenDevice (
 | NOERROR | Die Funktion wurde erfolgreich ausgeführt. |
 | VD_E_OPEN |Alle Geräte wurden geöffnet. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Mit jedem Aufruf wird das nächste nicht geöffnete Gerät zurückgegeben. Die Anzahl der möglichen Aufrufe der Funktion entspricht der Anzahl der Geräte, die in der Konfiguration der Gruppe virtueller Geräte angegeben wurde.
 

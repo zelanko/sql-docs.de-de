@@ -18,10 +18,10 @@ ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0713ba46d6d99a8ed325d37d11396b46618f92ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101772"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (geography-Datentyp)
@@ -59,7 +59,7 @@ ms.locfileid: "68101772"
   
  Der Douglas-Peucker-Algorithmus kann für jede Kurve oder jeden Ring in der **geography** -Instanz verwendet werden, indem alle Punkte mit Ausnahme des Start- und Endpunkts entfernt werden. Anschließend wird jeder entfernte Punkt erneut hinzugefügt, beginnend mit dem äußersten Punkt, bis kein Punkt mehr als *tolerance* vom Ergebnis entfernt ist. Das Ergebnis wird dann gegebenenfalls gültig gemacht, da ein gültiges Ergebnis garantiert wird.  
   
- In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]wurde diese Methode für **FullGlobe** -Instanzen.  
+ In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde diese Methode auf **FullGlobe**-Instanzen erweitert.  
   
  Diese Methode ist nicht exakt.  
   

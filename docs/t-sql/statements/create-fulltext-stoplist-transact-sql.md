@@ -26,10 +26,10 @@ ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064655"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73064655"
 > [!IMPORTANT]  
 >  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST und DROP FULLTEXT STOPLIST werden nur bei einem Kompatibilitätsgrad von 100 unterstützt. Bei Kompatibilitätsgraden von 80 und 90 werden diese Anweisungen nicht unterstützt. Bei allen Kompatibilitätsgraden wird die Systemstopliste jedoch automatisch neuen Volltextindizes zugeordnet.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -72,7 +72,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  Gibt den Namen eines Datenbankprinzipals als Besitzer der Stoppliste an. *owner_name* muss der Name eines Prinzipals sein, dessen Mitglied der aktuelle Benutzer ist, oder der aktuelle Benutzer benötigt die IMPERSONATE-Berechtigung für *owner_name*. Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Ersteller einer Stoppliste ist deren Besitzer.  
   
 ## <a name="permissions"></a>Berechtigungen  

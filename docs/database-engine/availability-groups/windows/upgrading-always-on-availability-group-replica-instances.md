@@ -11,10 +11,10 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822189"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen
@@ -28,15 +28,15 @@ Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, 
 ## <a name="prerequisites"></a>Voraussetzungen  
 Lesen Sie die folgenden wichtigen Informationen, bevor Sie beginnen:  
   
-- [Unterstützte Versions- und Editionsupgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Überprüfen Sie, ob ein Upgrade von Ihrer Version des Windows-Betriebssystems und Ihrer SQL Server-Version auf SQL Server 2016 möglich ist. Sie können beispielsweise nicht direkt von einer SQL Server 2005-Instanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]upgraden.  
+- [Unterstützte Versions- und Editionsupgrades:](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md) Überprüfen Sie, ob Sie von Ihrer Version des Windows-Betriebssystems und Ihrer Version von SQL Server auf SQL Server 2016 upgraden können. Sie können beispielsweise nicht direkt von einer SQL Server 2005-Instanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]upgraden.  
   
-- [Auswählen einer Upgrademethode für die Datenbank-Engine](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Wählen Sie basierend auf Ihrer Überprüfung der unterstützten Versions- und Editionsupgrades sowie basierend auf den anderen in Ihrer Umgebung installierten Komponenten die passende Upgrademethode und die passenden Upgradeschritte aus, um das Upgrade der Komponenten in der richtigen Reihenfolge durchzuführen.  
+- [Auswählen einer Methode zum Upgraden der Datenbank-Engine:](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Wählen Sie die passende Upgrademethode und die passenden Schritte aus, die auf Ihrer Überprüfung der unterstützten Versions- und Editionsupgrades sowie auf den anderen Komponenten basieren, die in Ihrer Umgebung installiert sind, um das Upgrade in der richtigen Reihenfolge durchzuführen.  
   
-- [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie dann den Upgradeplan.  
+- [Planen und Testen des Upgradeplans für die Datenbank-Engine:](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie dann den Upgradeplan.  
   
-- [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
+- [Hardware- und Softwareanforderungen für die Installation von SQL Server:](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
 
-- [Überprüfen, ob Change Data Capture oder Replikation für Datenbanken der Verfügbarkeitsgruppe verwendet wird](#special-steps-for-change-data-capture-or-replication): Wurden Datenbanken in der Verfügbarkeitsgruppe für Change Data Capture (CDC) aktiviert, befolgen Sie diese [Anweisungen](#special-steps-for-change-data-capture-or-replication).
+- [Überprüfen, ob Change Data Capture oder die Replikation für Datenbanken in Verfügbarkeitsgruppen verwendet wird:](#special-steps-for-change-data-capture-or-replication) Wenn Datenbanken in der Verfügbarkeitsgruppe für Change Data Capture aktiviert sind, befolgen Sie diese [Anweisungen](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
 >Das Mischen verschiedener SQL Server-Instanzen innerhalb einer Verfügbarkeitsgruppe wird außerhalb von parallelen Upgrades nicht unterstützt und sollten in diesem Zustand nicht länger bestehen, da das Upgrade schnell ausgeführt werden sollte. Alternativ können Sie auch eine verteilte Verfügbarkeitsgruppe verwenden, um SQL Server 2016 upzugraden.
@@ -202,7 +202,7 @@ Wenn Sie ein paralleles Upgrade für eine verteilte Verfügbarkeitsgruppe durchf
 
 >[!IMPORTANT]
 >- Überprüfen Sie die Synchronisierung zwischen jedem Schritt. Bevor Sie mit dem nächsten Schritt fortfahren, sollten Sie sicherstellen, dass Ihre Replikate für synchronen Commit mit der Verfügbarkeitsgruppe synchronisiert sind und dass Ihr globales primäres Replikat mit der Weiterleitung in der verteilten Verfügbarkeitsgruppe synchronisiert ist. 
->- **Empfehlung**: Aktualisieren Sie den Datenbankknoten und den Knoten der verteilten Verfügbarkeitsgruppe in SQL Server Management Studio bei jeder Überprüfung der Synchronisierung. Wenn alles synchronisiert wurde, sollten Sie einen Screenshot speichern, auf dem der Status jedes Replikats angezeigt wird. Dadurch können Sie nachverfolgen, in welchem Schritt Sie sich befinden und sichergehen, dass alle Komponenten vor dem nächsten Schritt ordnungsgemäß ausgeführt wurden. Wenn ein Fehler auftritt, können Sie den Screenshot zur Problembehandlung verwenden. 
+>- **Empfehlung:** Immer, wenn Sie die Synchronisierung überprüfen, sollten Sie den Datenbankknoten und den Knoten der verteilten Verfügbarkeitsgruppe in SQL Server Management Studio aktualisieren. Wenn alles synchronisiert wurde, sollten Sie einen Screenshot speichern, auf dem der Status jedes Replikats angezeigt wird. Dadurch können Sie nachverfolgen, in welchem Schritt Sie sich befinden und sichergehen, dass alle Komponenten vor dem nächsten Schritt ordnungsgemäß ausgeführt wurden. Wenn ein Fehler auftritt, können Sie den Screenshot zur Problembehandlung verwenden. 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>Beispieltabelle für ein paralleles Upgrade einer verteilten Verfügbarkeitsgruppe
@@ -234,7 +234,7 @@ Wenn ein drittes Replikat in jeder Verfügbarkeitsgruppe vorhanden wäre, würde
 
 >[!IMPORTANT]
 >- Überprüfen Sie die Synchronisierung zwischen jedem Schritt. Bevor Sie mit dem nächsten Schritt fortfahren, sollten Sie sicherstellen, dass Ihre Replikate für synchronen Commit mit der Verfügbarkeitsgruppe synchronisiert sind und dass Ihr globales primäres Replikat mit der Weiterleitung in der verteilten Verfügbarkeitsgruppe synchronisiert ist. 
->- Empfehlung: Aktualisieren Sie den Datenbankknoten und den Knoten der verteilten Verfügbarkeitsgruppe in SQL Server Management Studio bei jeder Überprüfung der Synchronisierung. Wenn alles synchronisiert wurde, sollten Sie einen Screenshot speichern. Dadurch können Sie nachverfolgen, in welchem Schritt Sie sich befinden und sichergehen, dass alle Komponenten vor dem nächsten Schritt ordnungsgemäß ausgeführt wurden. Wenn ein Fehler auftritt, können Sie den Screenshot zur Problembehandlung verwenden. 
+>- Empfehlung: Immer, wenn Sie die Synchronisierung überprüfen, sollten Sie den Datenbankknoten und den Knoten der verteilten Verfügbarkeitsgruppe in SQL Server Management Studio aktualisieren. Wenn alles synchronisiert wurde, sollten Sie einen Screenshot speichern. Dadurch können Sie nachverfolgen, in welchem Schritt Sie sich befinden und sichergehen, dass alle Komponenten vor dem nächsten Schritt ordnungsgemäß ausgeführt wurden. Wenn ein Fehler auftritt, können Sie den Screenshot zur Problembehandlung verwenden. 
 
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>Spezielle Schritte für Change Data Capture oder die Replikation

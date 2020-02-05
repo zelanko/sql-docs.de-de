@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011949"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Standard-Netzwerkkonfiguration von SQL Server
@@ -33,14 +33,14 @@ In der folgenden Tabelle wird die Konfiguration nach der Installation beschriebe
 
 |Edition | Neuinstallation/vorherige Installation vorhanden | Shared Memory | TCP/IP | Named Pipes|
 | -------- | -- | -- | -- | --  |  
-|Enterprise | Neue Installation | Aktiviert | Aktiviert | Deaktiviert für Netzwerkverbindungen|
-|Standard | Neue Installation | Aktiviert | Aktiviert | Deaktiviert für Netzwerkverbindungen|
-|Web | Neue Installation | Aktiviert | Aktiviert | Deaktiviert für Netzwerkverbindungen|
-|Entwickler | Neue Installation | Aktiviert | Disabled | Deaktiviert für Netzwerkverbindungen|
-|Evaluation | Neue Installation | Aktiviert | Aktiviert | Deaktiviert für Netzwerkverbindungen|
-|SQL Server Express | Neue Installation | Aktiviert | Disabled | Deaktiviert für Netzwerkverbindungen|
+|Enterprise | Neue Installation | Enabled | Enabled | Deaktiviert für Netzwerkverbindungen|
+|Standard | Neue Installation | Enabled | Enabled | Deaktiviert für Netzwerkverbindungen|
+|Web | Neue Installation | Enabled | Enabled | Deaktiviert für Netzwerkverbindungen|
+|Entwickler | Neue Installation | Enabled | Disabled | Deaktiviert für Netzwerkverbindungen|
+|Auswertung | Neue Installation | Enabled | Enabled | Deaktiviert für Netzwerkverbindungen|
+|SQL Server Express | Neue Installation | Enabled | Disabled | Deaktiviert für Netzwerkverbindungen|
 |Alle Editionen | Vorherige Installation ist vorhanden, wird aber nicht aktualisiert. | Wie für Neuinstallation | Wie für Neuinstallation | Wie für Neuinstallation|
-|Alle Editionen | Aktualisieren | Aktiviert | Einstellungen aus früherer Installation werden beibehalten. | Einstellungen aus früherer Installation werden beibehalten.|
+|Alle Editionen | Aktualisieren | Enabled | Einstellungen aus früherer Installation werden beibehalten. | Einstellungen aus früherer Installation werden beibehalten.|
 
 
 >[!NOTE]
@@ -57,7 +57,7 @@ Beispiele für Verbindungszeichenfolgen finden Sie in den folgenden Themen:
 
 
 
-## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browsereinstellungen
+## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browsereinstellungen
 
 Der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Browserdienst kann während der Installation so konfiguriert werden, dass er automatisch gestartet wird. Standardmäßig wird er unter folgenden Bedingungen automatisch gestartet:
 

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095425"
 ---
 # <a name="track-data-changes-sql-server"></a>Nachverfolgen von Datenänderungen (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "74095425"
 ## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>Funktionsunterschiede zwischen Change Data Capture und Änderungsnachverfolgung  
  In der folgenden Tabelle sind die Funktionsunterschiede zwischen Change Data Capture und Änderungsnachverfolgung aufgelistet. Der Nachverfolgungsmechanismus in Change Data Capture umfasst die asynchrone Erfassung der Änderungen aus dem Transaktionsprotokoll, sodass die Änderungen nach Abschluss des jeweiligen DML-Vorgangs verfügbar sind. Der Nachverfolgungsmechanismus bei der Änderungsnachverfolgung umfasst die synchrone Erfassung der Änderungen im Einklang mit den DML-Vorgängen, sodass die Änderungen unmittelbar verfügbar sind.  
   
-|Funktion|Change Data Capture|Änderungsnachverfolgung|  
+|Funktion|Erfassung geänderter Daten|Änderungsnachverfolgung|  
 |-------------|-------------------------|---------------------|  
 |**Nachverfolgte Änderungen**|||  
 |DML-Änderungen|Ja|Ja|  
@@ -65,7 +65,7 @@ ms.locfileid: "74095425"
 ##  <a name="Capture"></a> Change Data Capture  
  Change Data Capture stellt Änderungsverlaufsinformationen für Benutzertabellen bereit, indem sowohl die Tatsache, dass DML-Änderungen vorgenommen wurden, als auch die geänderten Daten erfasst werden. Die Änderungen werden über einen asynchronen Prozess durch Lesen des Transaktionsprotokolls erfasst, der keine großen Auswirkungen auf die Systemleistung hat.  
   
- Wie in der folgenden Abbildung gezeigt, werden die an Benutzertabellen vorgenommenen Änderungen in entsprechenden Änderungstabellen aufgezeichnet. Diese Änderungstabellen stellen eine Übersicht über den Änderungsverlauf dar. Die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellten [Change Data Capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)-Funktionen ermöglichen die einfache und systematische Verarbeitung der Änderungsdaten.  
+ Wie in der folgenden Abbildung gezeigt, werden die an Benutzertabellen vorgenommenen Änderungen in entsprechenden Änderungstabellen aufgezeichnet. Diese Änderungstabellen stellen eine Übersicht über den Änderungsverlauf dar. Die von [ bereitgestellten ](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)Change Data Capture[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen ermöglichen die einfache und systematische Verarbeitung der Änderungsdaten.  
   
  ![Konzeptdarstellung von Change Data Capture](../../relational-databases/track-changes/media/cdcart1.gif "Konzeptdarstellung von Change Data Capture")  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74095425"
 |Spalten mit geringer Dichte|Ja|Bei Verwendung eines Spaltensatzes wird das Aufzeichnen von Änderungen nicht unterstützt.|  
 |Berechnete Spalten|Nein|Änderungen an berechneten Spalten werden nicht nachverfolgt. Die Spalte wird in der Änderungstabelle mit dem entsprechenden Typ angezeigt, hat aber einen Wert von NULL.|  
 |XML|Ja|Änderungen an einzelnen XML-Elementen werden nicht nachverfolgt.|  
-|timestamp|Ja|Der Datentyp in der Änderungstabelle wird in Binärformat umgewandelt.|  
+|Timestamp|Ja|Der Datentyp in der Änderungstabelle wird in Binärformat umgewandelt.|  
 |BLOB-Datentypen|Ja|Das vorherige Image der BLOB-Spalte wird nur gespeichert, wenn die Spalte selbst geändert wird.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture und andere SQL Server-Funktionen  
@@ -137,7 +137,7 @@ ms.locfileid: "74095425"
   
  Sie können [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) verwenden, um Change Data Capture aus einer wiederhergestellten oder angefügten Datenbank zu entfernen.  
   
-##  <a name="Tracking"></a> Change Tracking  
+##  <a name="Tracking"></a> Änderungsnachverfolgung  
  Bei der Änderungsnachverfolgung wird die Tatsache erfasst, dass Zeilen in einer Tabelle geändert wurden. Die geänderten Daten werden nicht erfasst. Hierdurch können Anwendungen die geänderten Zeilen ermitteln, wobei die aktuellen Zeilendaten direkt von den Benutzertabellen abgerufen werden. Im Hinblick auf den Verlauf ist die Änderungsnachverfolgung also nicht so aussagekräftig wie Change Data Capture. Der Vorteil für die Anwendungen, die keine Verlaufsinformationen erfordern, liegt darin, dass viel weniger Speicherplatz benötigt wird, da die Änderungsdaten nicht aufgezeichnet werden. Zur Nachverfolgung der Änderungen wird ein synchroner Nachverfolgungsmechanismus verwendet. Dieser wurde so konzipiert, dass er sich minimal auf die Leistung der DML-Vorgänge auswirkt.  
   
  Die folgende Abbildung zeigt ein Synchronisierungsszenario, in dem die Verwendung der Änderungsnachverfolgung vorteilhaft ist. In diesem Szenario erfordert eine Anwendung folgende Informationen: alle Zeilen in der Tabelle, die seit der letzten Synchronisierung der Tabelle geändert wurden, und nur die aktuellen Zeilendaten. Da zur Nachverfolgung der Änderungen ein synchroner Mechanismus verwendet wird, kann eine Anwendung die bidirektionale Synchronisierung anwenden und eventuelle Konflikte zuverlässig ermitteln.  
@@ -155,13 +155,13 @@ ms.locfileid: "74095425"
   
 -   [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Stellt vollständige Dokumentation für [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] und [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]bereit. In der [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]-Dokumentation finden Sie im Thema „How to: Use SQL Server Change Tracking“ (Vorgehensweise: Verwenden der SQL Server-Änderungsnachverfolgung) detaillierte Informationen und Codebeispiele.  
+     Stellt vollständige Dokumentation für [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] und [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]bereit. Das Kapitel „Vorgehensweise: Verwenden der SQL Server-Änderungsnachverfolgung“ in der Dokumentation zu [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]enthält genaue Informationen und Codebeispiele.  
   
 ## <a name="related-tasks-required"></a>Verwandte Aufgaben (erforderlich)  
   
 |||  
 |-|-|  
-|**Task**|**Thema**|  
+|**Aufgabe**|**Thema**|  
 |Bietet eine Übersicht über Change Data Capture.|[Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)|  
 |Beschreibt das Aktivieren und Deaktivieren von Change Data Capture für eine Datenbank und eine Tabelle|[Aktivieren und Deaktivieren von Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |Beschreibt, wie Sie Change Data Capture verwalten und überwachen können.|[Verwalten und Überwachen von Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  

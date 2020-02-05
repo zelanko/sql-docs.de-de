@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed3026ae450e50bcb2d9debf93c4b90eab3afad0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905535"
 ---
 # <a name="create-dml-triggers"></a>Erstellen von DML-Triggern
@@ -59,10 +59,10 @@ ms.locfileid: "72905535"
   
     |Parameter|value|  
     |---------------|-----------|  
-    |Author|*Ihr Name*|  
+    |Autor|*Ihr Name*|  
     |Erstellt am|*Das heutige Datum*|  
-    |und Beschreibung|Überprüft die Anbieterbonität, bevor eine neue Bestellung mit dem einzufügenden Anbieter zugelassen wird.|  
-    |Schema_Name|Purchasing|  
+    |BESCHREIBUNG|Überprüft die Anbieterbonität, bevor eine neue Bestellung mit dem einzufügenden Anbieter zugelassen wird.|  
+    |Schema_Name|Erwerb|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|UPDATE und DELETE aus der Liste entfernen.|  

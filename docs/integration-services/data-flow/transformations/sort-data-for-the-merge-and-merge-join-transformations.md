@@ -14,10 +14,10 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297787"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin
@@ -42,7 +42,7 @@ ms.locfileid: "71297787"
   
      Die Transformation zum Sortieren verwendet die Windows-Sortierung, um Zeichenfolgenwerte zu sortieren.  
   
-     -oder-  
+     Oder  
   
 -   Verwenden Sie den Transact-SQL-Umwandlungsoperator (CAST), um die **varchar** -Werte zuerst in **nvarchar** -Werte umzuwandeln, und sortieren Sie die Daten anschließend mit der ORDER BY-Klausel in Transact-SQL.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71297787"
   
 #### <a name="to-manually-set-sort-attributes-on-a-source-or-transformation-component"></a>So legen Sie Sortierattribute für eine Quelle oder Transformationskomponente manuell fest  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   

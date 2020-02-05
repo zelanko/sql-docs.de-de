@@ -14,10 +14,10 @@ ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce157b3d188f7841df4f7dc626928029219c3088
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014076"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>Einige Verfügbarkeitsreplikate haben keine fehlerfreie Rolle
@@ -29,10 +29,10 @@ ms.locfileid: "68014076"
 |-|-|  
 |**Richtlinienname**|Verfügbarkeitsreplikat-Rollenstatus|  
 |**Problem**|Einige Verfügbarkeitsreplikate haben keine fehlerfreie Rolle.|  
-|**Kategorie**|**Warnung**|  
+|**Kategorie**|**Warning**|  
 |**Facet**|Verfügbarkeitsgruppe|  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Diese Richtlinie führt ein Rollup des Verbindungsstatus aller Verfügbarkeitsreplikate aus und überprüft, ob Verfügbarkeitsreplikate vorhanden sind, die keine fehlerfreie Rolle aufweisen. Die Richtlinie befindet sich in einem fehlerhaften Zustand, wenn jedes Verfügbarkeitsreplikat weder primär noch sekundär ist. Die Richtlinie befindet sich andernfalls in einem ordnungsgemäßen Zustand.  
   
 > [!NOTE]  

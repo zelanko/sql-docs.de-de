@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d74d1907b0f96275658c716a7a08061f0eec8995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999564"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded (Ereignisklasse)
@@ -28,7 +28,7 @@ ms.locfileid: "67999564"
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>Datenspalten der CPU Threshold Exceeded-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|**int**|CPU-Verwendung in Millisekunden|18|Ja|  
 |EventClass|**int**|214|27|Nein|  

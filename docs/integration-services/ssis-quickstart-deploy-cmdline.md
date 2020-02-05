@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8fd6ed8e0831c6dc0699ddd1efa13ba1d46a3633
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74947159"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Bereitstellen eines SSIS-Projekts über die Eingabeaufforderung mit ISDeploymentWizard.exe
@@ -51,7 +51,7 @@ Um das Paket in Azure SQL-Datenbank bereitzustellen, rufen Sie die Verbindungsin
 
 ## <a name="supported-authentication-method"></a>Unterstützte Authentifizierungsmethode
 
-Weitere Informationen finden Sie unter [Authentifizierungsmethoden für die Bereitstellung](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+Weitere Informationen hierzu finden Sie unter [Authentifizierungsmethoden im Bereitstellungs-Assistenten](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Starten des Bereitstellungs-Assistenten für Integration Services
 1. Öffnen Sie ein Eingabeaufforderungsfenster.

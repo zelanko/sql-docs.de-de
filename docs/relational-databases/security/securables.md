@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986563"
 ---
 # <a name="securables"></a>Sicherungsfähige Elemente
@@ -82,7 +82,7 @@ ms.locfileid: "67986563"
 ## <a name="securable-scope-schema"></a>Sicherungsfähiger Bereich: Schema  
  Der sicherungsfähige Bereich **Schema** enthält die folgenden sicherungsfähigen Elemente:  
   
--   Typ  
+-   type  
   
 -   XML-Schemaauflistung  
   

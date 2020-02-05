@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Erstellen des Bereitstellungshilfsprogramms | Microsoft-Dokumentation'
+title: 'Schritt 1: Erstellen des Bereitstellungs-Hilfsprogramms | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: edb7f78fd1d1d64980e7874f953a91030e7ecdc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296038"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lektion 2-1: Erstellen des Bereitstellungshilfsprogramms
@@ -52,7 +52,7 @@ Vor dem Erstellen des Bereitstellungshilfsprogramms müssen Sie die Eigenschafte
   
 4.  Überprüfen Sie im Ausgabefenster die folgenden Informationen:  
   
-    Build started: SQL Integration Services project: Incremental ...  
+    Erstellung gestartet: SQL Integration Services-Projekt: Inkrementell ...  
   
     Bereitstellungshilfsprogramm wird erstellt...  
   
@@ -60,11 +60,11 @@ Vor dem Erstellen des Bereitstellungshilfsprogramms müssen Sie die Eigenschafte
   
     Erstellung abgeschlossen -- 0 Fehler, 0 Warnungen  
   
-    ========== Build: 0 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========  
+    ========== Erstellen: 0 erfolgreich, Fehler bei 0, 1 aktuell, 0 übersprungen ==========  
   
 5.  Klicken Sie im Menü **Datei** auf **Beenden**. Wenn Sie zum Speichern der Änderungen an Deployment Tutorial-Elementen aufgefordert werden, klicken Sie auf **Ja**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
 [Schritt 2: Überprüfen des Bereitstellungspakets](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  

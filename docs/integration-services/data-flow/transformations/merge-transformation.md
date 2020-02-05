@@ -20,10 +20,10 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5badfcd6c8b9603e30e2a413bb6486fcf9d2c6b8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291234"
 ---
 # <a name="merge-transformation"></a>Transformation für Zusammenführen
@@ -80,7 +80,7 @@ ms.locfileid: "71291234"
 > [!IMPORTANT]  
 >  Die Transformation für Zusammenführen erfordert als Eingabe sortierte Daten. Weitere Informationen zu dieser wichtigen Anforderung finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name der Ausgabespalte**  
  Geben Sie den Namen der Ausgabespalte an.  
   

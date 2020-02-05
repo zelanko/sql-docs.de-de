@@ -12,13 +12,13 @@ ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e094c571498c315ec57471f216b65376f76eb2aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987747"
 ---
-# <a name="mssqlserver7936"></a>MSSQLSERVER_7936
+# <a name="mssqlserver_7936"></a>MSSQLSERVER_7936
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -30,7 +30,7 @@ ms.locfileid: "67987747"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Meldungstext|Tabellenfehler: Das Filestream-Verzeichnis ist für die Spalten-ID „C_ID“ der Objekt-ID „O_ID“, Index-ID „I_ID“ und Partitions-ID „PN_ID“ vorhanden. Hierbei handelt es sich allerdings um keine Filestream-Spalte.|  
+|Meldungstext|Tabellenfehler: Das FileStream-Verzeichnis ist für die Spalten-ID C_ID der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID vorhanden, aber diese Spalte ist keine FileStream-Spalte.|  
   
 ## <a name="explanation"></a>Erklärung  
 Während DBCC CHECKDB wurde ein FILESTREAM-Verzeichnis für die angegebene Spalte gefunden; bei der Spalte handelt es sich jedoch nicht um eine Spalte vom Typ **FILESTREAM**.  
@@ -48,5 +48,5 @@ Letztendlich kann es vorteilhaft sein, wenn Sie zu einem neuen Hardwaresystem we
 Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
   
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
-Nicht verfügbar. Dieser Fehler kann nicht automatisch repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+Nicht zutreffend Dieser Fehler kann nicht automatisch repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   

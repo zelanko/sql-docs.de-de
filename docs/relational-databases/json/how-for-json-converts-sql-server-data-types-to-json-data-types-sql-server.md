@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 537ad4d796792c7d4fce56eda25adcca8b1fea01
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095799"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>So konvertiert FOR JSON SQL Server-Datentypen in JSON-Datentypen (SQL Server)
@@ -24,15 +24,15 @@ ms.locfileid: "74095799"
 
   Die **FOR JSON** -Klausel verwendet die folgenden Regeln, um SQL Server-Datentypen in JSON-Typen in der JSON-Ausgabe zu konvertieren.  
   
-|Kategorie|SQL Server-Datentyp|JSON-Datentyp|  
+|Category|SQL Server-Datentyp|JSON-Datentyp|  
 |--------------|--------------|---------------|  
-|Zeichen- und Zeichenfolgetypen|char, nchar, varchar, nvarchar|Zeichenfolge|  
+|Zeichen- und Zeichenfolgetypen|char, nchar, varchar, nvarchar|string|  
 |Numerische Typen|int, bigint, float, decimal, numeric|number|  
 |Bit-Typ|bit|Boolesche Werte ("true" oder "false")|  
-|Datum- und Uhrzeittypen|date, datetime, datetime2, time, datetimeoffset|Zeichenfolge|  
+|Datum- und Uhrzeittypen|date, datetime, datetime2, time, datetimeoffset|string|  
 |Binärtypen|varbinary, binary, image, timestamp, rowversion|BASE64-codierte Zeichenfolge|  
 |CLR-Typen|geometry, geography, andere CLR-Typen|Wird nicht unterstützt. Diese Typen geben einen Fehler zurück.<br /><br /> Verwenden Sie in der SELECT-Anweisung CAST oder CONVERT, oder verwenden Sie eine CLR-Eigenschaft oder -Methode, um die Quelldaten in einen SQL Server-Datentyp zu konvertieren, der erfolgreich in einen JSON-Typ konvertiert werden kann. Verwenden Sie z.B. **STAsText()** für den Geometrietyp oder **ToString()** für alle CLR-Typen. Der Typ des JSON-Ausgabewerts wird dann abgeleitet aus dem Rückgabetyp der Konvertierung, die Sie auf die SELECT-Anweisung anwenden.|  
-|Andere Typen|uniqueidentifier, money|Zeichenfolge|  
+|Andere Typen|uniqueidentifier, money|string|  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Weitere Informationen zu JSON in SQL Server und Azure SQL-Datenbank  
   
@@ -47,6 +47,6 @@ Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azur
 -   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Formatieren von Abfrageergebnisse als JSON mit FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
+ [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41; (Formatieren von Abfrageergebnissen als JSON mit FOR JSON [SQL Server])](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
   
   

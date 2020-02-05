@@ -21,10 +21,10 @@ ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7d39f716717fe517fb3274e4c5519606916afb7b
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064673"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73064673"
 
   Ändert den Namen, das Kennwort oder das Standardschema einer Anwendungsrolle.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA = *schema_name*  
  Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten durchsucht wird. *schema_name* kann ein Schema sein, das in der Datenbank nicht vorhanden ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Falls der neue Anwendungsrollenname bereits in der Datenbank vorhanden ist, wird für die Anweisung ein Fehler gemeldet. Wenn der Name, das Kennwort oder das Standardschema einer Anwendungsrolle geändert wird, wird die der Rolle zugeordnete ID nicht geändert.  
   
 > [!IMPORTANT]  
@@ -69,7 +69,7 @@ ALTER APPLICATION ROLE application_role_name
  Anwendungsrollen werden in der sys.database_principals-Katalogsicht angezeigt.  
   
 > [!CAUTION]  
->  Das Verhalten der Schemas in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterscheidet sich von dem in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Code, in dem vorausgesetzt wird, dass Schemas Datenbankbenutzern entsprechen, gibt möglicherweise nicht die richtigen Ergebnisse zurück. Alte Katalogsichten, einschließlich „sysobjects“, sollten nicht in einer Datenbank verwendet werden, in der bereits irgendeine der folgenden DDL-Anweisungen verwendet wurde: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In einer Datenbank, in der jemals eine dieser Anweisungen verwendet wurde, müssen Sie die neuen Katalogsichten verwenden. In den neuen Katalogsichten wird die Trennung zwischen Prinzipalen und Schemas berücksichtigt, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wird. Weitere Informationen zu Katalogansichten finden Sie unter [Catalog Views &#40;Transact-SQL&#41; (Katalogansichten (Transact-SQL))](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+>  Das Verhalten der Schemas in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterscheidet sich von dem in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Code, in dem vorausgesetzt wird, dass Schemas Datenbankbenutzern entsprechen, gibt möglicherweise nicht die richtigen Ergebnisse zurück. Alte Katalogsichten, einschließlich sysobjects, sollten nicht in einer Datenbank verwendet werden, in der eine der folgenden DDL-Anweisungen bereits verwendet wurde: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In einer Datenbank, in der jemals eine dieser Anweisungen verwendet wurde, müssen Sie die neuen Katalogsichten verwenden. In den neuen Katalogsichten wird die Trennung zwischen Prinzipalen und Schemas berücksichtigt, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wird. Weitere Informationen zu Katalogansichten finden Sie unter [Catalog Views &#40;Transact-SQL&#41; (Katalogansichten (Transact-SQL))](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY APPLICATION ROLE-Berechtigung in der Datenbank. Zum Ändern des Standardschemas benötigt der Benutzer auch die ALTER-Berechtigung für die Anwendungsrolle. Eine Anwendungsrolle kann ihr eigenes Standardschema ändern, jedoch nicht den Namen oder das Kennwort.  

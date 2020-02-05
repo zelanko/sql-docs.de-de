@@ -14,10 +14,10 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c0e005ee8dbb1c01cdaf5d3af031fd9ffba31ac
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288255"
 ---
 # <a name="syntax-ssis"></a>Syntax (SSIS)
@@ -30,7 +30,7 @@ ms.locfileid: "71288255"
 > [!NOTE]  
 >  In vorherigen Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]galt eine maximale Zeichenlänge von 4000 Zeichen für das Auswertungsergebnis eines Ausdrucks, wenn das Ergebnis vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp DT_WSTR oder DT_STR war. Diese Begrenzung wurde aufgehoben.  
   
- Beispielausdrücke, in denen bestimmte Operatoren und Funktionen verwendet werden, finden Sie in den Themen zu den einzelnen Operatoren und Funktionen: [Operatoren &#40;SSIS-Ausdruck&#41&#41;](../../integration-services/expressions/operators-ssis-expression.md) und [Funktionen &#40;SSIS-Ausdruck&#41&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
+ Beispielausdrücke, in denen bestimmte Operatoren und Funktionen verwendet werden, finden Sie in den Themen zu den einzelnen Operatoren und Funktionen unter [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md) und [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
  Beispielausdrücke, in denen mehrere Operatoren und Funktionen sowie Bezeichner und Literale verwendet werden, finden Sie unter [Beispiele für erweiterte SQL Server Integration Services-Ausdrücke](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "71288255"
 ###### <a name="equality-operators"></a>Gleichheitsoperatoren  
  Die Ausdrucksauswertungsgrammatik enthält den Gleichheitsoperator (==). Dieser Operator ist das Äquivalent zum =-Operator in Transact-SQL bzw. zum ==-Operator in C#.  
   
-## <a name="functions"></a>Funktionen  
+## <a name="functions"></a>Functions  
  Die Ausdruckssprache enthält Datums- und Zeitfunktionen, mathematische Funktionen und Zeichenfolgenfunktionen, die mit Transact-SQL-Funktionen und C#-Methoden vergleichbar sind.  
   
  Einige Funktionen besitzen zwar denselben Namen wie Transact-SQL-Funktionen, weisen jedoch in der Ausdrucksauswertung eine etwas andere Funktionalität auf.  

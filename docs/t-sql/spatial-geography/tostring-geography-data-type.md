@@ -17,10 +17,10 @@ ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 3e4ca89d9fa8dccf2e819e76db188f84b25f0b59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120684"
 ---
 # <a name="tostring-geography-data-type"></a>ToString (geography-Datentyp)
@@ -43,7 +43,7 @@ ms.locfileid: "68120684"
  CLR-Rückgabetyp: **SqlString**  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode gibt die Zeichenfolge "NULL" zurück, wenn sie für NULL-Instanzen aufgerufen wird. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]wurden die Ergebnisse, die auf dem Server zurückgegeben werden können, um **FullGlobe** -Instanzen erweitert. Diese Methode gibt den gleichen Wert wie `AsTextZM()`zurück.  
+ Diese Methode gibt die Zeichenfolge "NULL" zurück, wenn sie für NULL-Instanzen aufgerufen wird. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurden die Ergebnisse, die auf dem Server zurückgegeben werden können, um **FullGlobe**-Instanzen erweitert. Diese Methode gibt den gleichen Wert wie `AsTextZM()`zurück.  
   
  Diese Methode ist nicht exakt.  
   

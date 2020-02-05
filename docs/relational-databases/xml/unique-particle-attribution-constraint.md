@@ -18,10 +18,10 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b09c2392f49bdfb8a86c33ce16679ec02c232310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078012"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Einschränkung für eindeutige Partikelzuordnung
@@ -81,11 +81,11 @@ ms.locfileid: "68078012"
 ## <a name="finding-more-information"></a>Weitere Informationsquellen  
  Das folgende Dokument wird vom W3C (World Wide Web Consortium) veröffentlicht; es enthält die technische Beschreibung der UPA-Einschränkung:  
   
- "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation" (XML Schema Part 1: Strukturen 2. Ausgabe, vom W3C empfohlene Ausgabe):  
+ "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation":  
   
--   Abschnitt 3.8.6: Constraints on Model Group Schema Components (Einschränkungen für Komponenten des Modellgruppenschemas)  
+-   Section 3.8.6: Constraints on Model Group Schema Components  
   
--   Anhang H: Analysis of the Unique Particle Attribution Constraint (non-normative) (Analyse der Einschränkung für die eindeutige Partikelzuordnung (nicht-normativ))  
+-   Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
  Besuchen Sie [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881), um das Dokument anzuzeigen.  
   

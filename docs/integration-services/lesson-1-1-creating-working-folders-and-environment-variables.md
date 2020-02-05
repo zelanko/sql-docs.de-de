@@ -11,10 +11,10 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 08de88d45b31e4c00c9ce5a7790405c6da1542a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284137"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lektion 1-1: Erstellen von Arbeitsordnern und Umgebungsvariablen
@@ -86,7 +86,7 @@ Wenn Sie planen, die Pakete auf einem anderen Computer bereitzustellen, müssen 
   
 10. Führen Sie optional einen Neustart des Computers aus.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
 [Schritt 2: Erstellen des Bereitstellungsprojekts](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
   

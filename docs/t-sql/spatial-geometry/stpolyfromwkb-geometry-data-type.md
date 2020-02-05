@@ -18,10 +18,10 @@ ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 358553f62952c9bea60076ea34e85387b95bf543
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066331"
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB (geometry-Datentyp)

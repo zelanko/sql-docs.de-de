@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051111"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Schätzen der Größe eines gruppierten Indexes
@@ -119,7 +119,7 @@ ms.locfileid: "68051111"
   
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
-## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Schritt 2: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen verwendet wird  
+## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Schritt 2: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen verwendet wird  
  Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern der oberen Ebenen des Indexes erforderlich ist:  
   
 1.  Geben Sie die Anzahl der Spalten mit fester und mit variabler Länge im Indexschlüssel an, und berechnen Sie den Speicherplatz, der für deren Speicherung erforderlich ist:  
@@ -198,7 +198,7 @@ ms.locfileid: "68051111"
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## <a name="step-3-total-the-calculated-values"></a>Schritt 3: Addieren der berechneten Werte  
+## <a name="step-3-total-the-calculated-values"></a>Schritt 3: Addieren der berechneten Werte  
  Addieren Sie die Werte, die in den beiden vorherigen Schritten erzielt wurden:  
   
  Größe des gruppierten Indexes (in Bytes) = ***Leaf_Space_Used*** + ***Index_Space_used***  

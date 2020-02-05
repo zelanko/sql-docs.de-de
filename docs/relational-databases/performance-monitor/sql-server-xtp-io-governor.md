@@ -11,10 +11,10 @@ ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 975dca6fe0151b5bd1fc1d72b9d14e47a57413d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67915211"
 ---
 # <a name="sql-server-xtp-io-governor"></a>SQL Server XTP IO Governor
@@ -24,7 +24,7 @@ Das Leistungsobjekt „SQL Server XTP IO Governor“ enthält Leistungsindikator
 
 In dieser Tabelle werden die Leistungsindikatoren für **SQL Server XTP IO Governor** beschrieben.
 
-|Leistungsindikator|und Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Nicht genügend Guthabenwartezeiten/Sekunde**|Anzahl von Wartevorgängen aufgrund unzureichenden Guthabens in den Ratenobjekten (pro Sekunde).|
 |**E/A ausgestellt/Sekunde**|Anzahl der durch Leerungsthreads ausgegeben E/A pro Sekunde.|
@@ -35,4 +35,4 @@ In dieser Tabelle werden die Leistungsindikatoren für **SQL Server XTP IO Gover
  
 
 ## <a name="see-also"></a>Weitere Informationen  
-[Leistungsindikatoren für SQL Server XTP &#40;In-Memory OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
+[Leistungsindikatoren für SQL Server XTP &#40;In-Memory-OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

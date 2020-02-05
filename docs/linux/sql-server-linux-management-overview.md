@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.openlocfilehash: e38e51eb1db6c335175b2fc55636532df88ac27d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000053"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Auswählen des richtigen Tools zum Verwalten von SQL Server für Linux
@@ -23,7 +23,7 @@ Es gibt mehrere Möglichkeiten, SQL Server für Linux zu verwalten. Der folgende
 
 ## <a name="mssql-conf"></a>mssql-conf 
 
-Mit dem **mssql-conf**-Tool wird SQL Server für Linux konfiguriert. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server für Linux mit dem mssql-conf-Tool](sql-server-linux-configure-mssql-conf.md).
+Mit dem **mssql-conf**-Tool wird SQL Server für Linux konfiguriert. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server für Linux mithilfe von mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="transact-sql"></a>Transact-SQL
 

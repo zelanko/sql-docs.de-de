@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898597"
 ---
 # <a name="create-unique-indexes"></a>Erstellen eindeutiger Indizes
@@ -45,7 +45,7 @@ ms.locfileid: "67898597"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie einen eindeutigen Index auf einer Tabelle mithilfe von:**  
   
@@ -123,7 +123,7 @@ ms.locfileid: "67898597"
   
 11. Wählen Sie im Raster unter **(Allgemein)** **Ist eindeutig** aus, und wählen Sie anschließend **Ja** aus der Liste aus.  
   
-12. Optional: Wählen Sie im Hauptraster unter **Tabellen-Designer** die Option **Doppelte Schlüssel ignorieren** aus, und wählen Sie dann **Ja** aus der Liste aus. Auf diese Weise ignorieren Sie Versuche, Daten hinzuzufügen, die im eindeutigen Index einen doppelten Schlüssel erstellen würden.  
+12. Optional: wählen Sie im Hauptraster unter **Tabellen-Designer** **Doppelte Schlüssel ignorieren** aus, und wählen Sie dann **Ja** aus der Liste aus. Auf diese Weise ignorieren Sie Versuche, Daten hinzuzufügen, die im eindeutigen Index einen doppelten Schlüssel erstellen würden.  
   
 13. Klicken Sie auf **Schließen**.  
   

@@ -14,10 +14,10 @@ ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c690c2cd19acae2fb3a6bde8b2dcd6d72b3acf18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947886"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server, Wartestatistik-Objekt
@@ -26,7 +26,7 @@ ms.locfileid: "67947886"
   
  In der folgenden Tabelle werden die im Wartestatistik-Objekt enthaltenen Leistungsindikatoren aufgelistet.  
   
-|Leistungsindikatoren des SQLServer:Wartestatistik-Objekts|und Beschreibung|  
+|Leistungsindikatoren des SQLServer:Wartestatistik-Objekts|BESCHREIBUNG|  
 |-----------------------------------------|-----------------|  
 |**Sperrenwartevorgänge**|Statistik für Prozesse, die auf eine Sperre warten|  
 |**Protokollpuffer-Wartevorgänge**|Statistik für Prozesse, die auf die Verfügbarkeit des Protokollpuffers warten|  
@@ -43,7 +43,7 @@ ms.locfileid: "67947886"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Element|und Beschreibung|  
+|Element|BESCHREIBUNG|  
 |----------|-----------------|  
 |**Durchschnittliche Wartezeit (ms)**|Durchschnittliche Zeit für den ausgewählten Wartetyp|  
 |**Kumulierte Wartezeit (ms) pro Sekunde**|Aggregierte Wartezeit für den ausgewählten Typ pro Sekunde|  

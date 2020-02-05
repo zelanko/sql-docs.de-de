@@ -25,10 +25,10 @@ ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211427"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "70211427"
 
 Sendet eine Nachricht mit einer oder mehreren vorhandenen Konversation.  
   
-![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Artikellinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,7 +59,7 @@ Gibt den Nachrichtentyp der gesendeten Nachricht an. Der Nachrichtentyp muss in 
 *message_body_expression*  
 Stellt einen Ausdruck bereit, der den Nachrichtentext darstellt. *message_body_expression* ist optional. Wenn *message_body_expression* jedoch angegeben wird, muss der Ausdruck von einem Typ sein, der in **varbinary(max)** konvertiert werden kann. Der Ausdruck darf nicht NULL sein. Wird diese Klausel ausgelassen, ist der Nachrichtentext leer.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
 >  Wenn es sich bei der SEND-Anweisung nicht um die erste Anweisung in einem Batch oder in einer gespeicherten Prozedur handelt, muss die vorhergehende Anweisung mit einem Semikolon (;) abgeschlossen werden.  

@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056518"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschafts-IDs für Sucheigenschaften
@@ -40,11 +40,11 @@ ms.locfileid: "74056518"
 ##  <a name="wellknown"></a> Suchen von Informationen zu häufig verwendeten, bekannten Microsoft-Eigenschaften  
  Microsoft definiert Hunderte von Dokumenteigenschaften, die in vielen Kontexten verwendet werden können. Es wird jedoch nur eine kleine Teilmenge der verfügbaren Eigenschaften für jedes Dateiformat verwendet. Zu den häufig verwendeten Windows-Eigenschaften zählen auch einige wenige generische Eigenschaften. Einige Beispiele für bekannte generische Eigenschaften werden in der folgenden Tabelle aufgelistet. In der Tabelle werden der bekannte Name, der kanonische Windows-Name (aus der von Microsoft veröffentlichten Eigenschaftenbeschreibung), die Eigenschaftensatz-GUID, der ganzzahlige Eigenschaftsbezeichner und eine kurze Beschreibung aufgelistet.  
   
-|Bekannter Name|Kanonischer Windows-Name|Eigenschaftensatz-GUID|Ganzzahlige ID|und Beschreibung|  
+|Bekannter Name|Kanonischer Windows-Name|Eigenschaftensatz-GUID|Ganzzahlige ID|BESCHREIBUNG|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autor oder Autoren eines angegebenen Elements.|  
-|Tags|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Satz von Schlüsselwörtern (die auch als Tags bezeichnet werden), die dem Element zugewiesen sind.|  
-|Typ|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Auf der Grundlage des zugehörigen kanonischen Typs erkannter Dateityp.|  
+|`Tags`|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Satz von Schlüsselwörtern (die auch als Tags bezeichnet werden), die dem Element zugewiesen sind.|  
+|type|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Auf der Grundlage des zugehörigen kanonischen Typs erkannter Dateityp.|  
 |Titel|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titel des Elements. Dabei kann es sich z. B. um den Titel eines Dokuments, den Betreff einer Nachricht, die Beschriftung eines Fotos oder den Namen eines Musiktitels handeln.|  
   
  Um die Einheitlichkeit unter den Dateiformaten zu fördern, hat Microsoft Teilmengen von häufig verwendeten Dokumenteigenschaften mit hoher Priorität für verschiedene Kategorien von Dokumenten angegeben. Hierzu zählen Nachrichten, Kontakte, Dokumente, Musikdateien, Bilder und Videos. Weitere Informationen zu den wichtigsten Eigenschaften für die einzelnen Kategorien finden Sie unter [Systemdefinierte Eigenschaften für benutzerdefinierte Dateiformate](https://go.microsoft.com/fwlink/?LinkId=144336) in der Windows Search-Dokumentation.  

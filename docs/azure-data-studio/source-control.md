@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959287"
 ---
 #  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Verwenden von Quellcodeverwaltung in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -49,5 +49,5 @@ ms.locfileid: "67959287"
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] erbt seine Git-Implementierung von VS Code, unterstützt derzeit jedoch keine weiteren SCM-Anbieter. Ausführliche Informationen über das Arbeiten mit Git, nachdem Sie ein Repository geöffnet oder initialisiert haben, finden Sie unter [Git support in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
 
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 - [Git-Dokumentation](https://git-scm.com/documentation)

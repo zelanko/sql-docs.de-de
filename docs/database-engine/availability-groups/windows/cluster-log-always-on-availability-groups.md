@@ -11,10 +11,10 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244383"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Erstellen und Analysieren der Protokolldatei „CLUSTER.LOG“ für eine Always On-Verfügbarkeitsgruppe
@@ -59,9 +59,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |Bezeichner|`Source`|Beispiel aus CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
-|Nachrichten mit dem Präfix `[RES]` und `[hadrag]`|hadrres.dll (Always On-Ressourcen-DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request. (00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>:`[hadrag]` Offlineanforderung.)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated (00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server-Verfügbarkeitsgruppe \<ag>:`[hadrag]` Leasethread beendet)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement (00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>: `[hadrag]`Freie SQL-Anweisung)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server (00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>: `[hadrag]` Verbindung mit SQL Server trennen)|  
+|Nachrichten mit dem Präfix `[RES]` und `[hadrag]`|hadrres.dll (Always On-Ressourcen-DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server|  
 |Nachrichten mit dem Präfix `[RHS]`|RHS.EXE (Ressourcenhosting-Subsystem, Hostprozess von „hadrres.dll“)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] Resource ag has come offline. RHS is about to report resource status to RCM.|  
-|Nachrichten mit dem Präfix `[RCM]`|Ressourcensteuerungsmonitor (Clusterdienst)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: Bringing group 'ag' offline first... (000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: Zuerst wird die Gruppe 'ag' offline geschaltet.<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
+|Nachrichten mit dem Präfix `[RCM]`|Ressourcensteuerungsmonitor (Clusterdienst)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: Bringing group 'ag' offline first...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|Ein API-Aufruf, der hauptsächlich bedeutet, dass SQL Server die Aktion anfordert|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>Debuggen einer isolierten Always On-Ressourcen-DLL  
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  Um eine Verfügbarkeitsgruppe von den anderen Clusterressourcen-DLLs wie anderen Verfügbarkeitsgruppen zu isolieren, gehen Sie wie folgt vor, um „hadrres.dll“ in einem separaten „rhs.exe“-Prozess auszuführen:  
   
-1.  Öffnen Sie den **Registrierungs-Editor**, und navigieren Sie zum folgenden Registrierungsschlüssel: HKEY_LOCAL_MACHINE\Cluster\Resources. Dieser Schlüssel enthält die Schlüssel für alle Ressourcen, jeweils mit einer anderen GUID.  
+1.  Öffnen Sie den **Registrierungs-Editor**, und navigieren Sie zum folgenden Schlüssel: HKEY_LOCAL_MACHINE\Cluster\Resources. Dieser Schlüssel enthält die Schlüssel für alle Ressourcen, jeweils mit einer anderen GUID.  
   
 2.  Suchen Sie den Ressourcenschlüssel mit einem **Name**-Wert, der dem Namen Ihrer Verfügbarkeitsgruppe entspricht.  
   

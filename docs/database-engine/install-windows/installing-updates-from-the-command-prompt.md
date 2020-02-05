@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 933d8ae26522800326c88a8ba28dbd99c5688fc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67990911"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Installieren von Updates an der Eingabeaufforderung
@@ -26,7 +26,7 @@ Testen und ändern Sie die Installationsskripts, um die Anforderungen Ihrer Orga
 ## <a name="sample-syntax-for-installation"></a>Beispielsyntax zur Installation 
 Der Name des Updatepakets kann variieren und enthält möglicherweise Komponenten zu Sprache, Version und Prozessor. Anwenden eines Updates über eine Eingabeaufforderung. Dabei wird <Paketname> mit dem Namen des Updatepakets ersetzt: 
  
-- Aktualisieren einer einzelnen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und aller freigegebenen Komponenten wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und Verwaltungstools: Sie können die Instanz entweder mit dem InstanceName-Parameter oder dem InstanceID-Parameter angeben. Sie müssen den Parameter „InstanceID“ angeben, um eine vorbereitete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu aktualisieren.
+- Aktualisieren Sie eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und aller freigegebenen Komponenten wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und Verwaltungstools: Sie können entweder die Instanz mit dem InstanceName-Parameter oder dem InstanceID-Parameter angeben. Sie müssen den Parameter „InstanceID“ angeben, um eine vorbereitete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu aktualisieren.
 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
@@ -74,7 +74,7 @@ Der Name des Updatepakets kann variieren und enthält möglicherweise Komponente
 > [!IMPORTANT] 
 > Anmeldeinformationen sollten nach Möglichkeit zur Laufzeit angegeben werden. Wenn Sie Anmeldeinformationen in einer Skriptdatei speichern müssen, sollten Sie die Datei schützen, um nicht autorisierten Zugriff zu verhindern. 
  
-|Schalter|und Beschreibung| 
+|Schalter|BESCHREIBUNG| 
 |------------|-----------------| 
 |**/?**|Zeigt Hilfe zur unbeaufsichtigten Installation an der Eingabeaufforderung an.| 
 |**/action=Patch oder /action=RemovePatch**|Gibt die Installationsaktion an: Patch oder RemovePatch.| 
@@ -88,7 +88,7 @@ Der Name des Updatepakets kann variieren und enthält möglicherweise Komponente
  
  *Sie können diesen Parameter nicht angeben, um ein Update auf eine vorbereitete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anzuwenden. Sie müssen stattdessen den /instanceID-Parameter angeben. 
  
-## <a name="see-also"></a>Siehe auch 
+## <a name="see-also"></a>Weitere Informationen 
  [Übersicht über die SQL Server-Wartungsinstallation](https://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
  
  

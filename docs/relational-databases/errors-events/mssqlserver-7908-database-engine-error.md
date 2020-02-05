@@ -12,13 +12,13 @@ ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 72cab4cc129690b5e544a979f0b18892454dfcef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951426"
 ---
-# <a name="mssqlserver7908"></a>MSSQLSERVER_7908
+# <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -30,7 +30,7 @@ ms.locfileid: "67951426"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|Meldungstext|Tabellenfehler: Die Datei 'FILE' in Partitions-ID PN_ID ist keine gültige Filestream-Datei.|  
+|Meldungstext|Tabellenfehler: Die Datei 'FILE' in Partitions-ID PN_ID ist keine gültige FileStream-Datei.|  
   
 ## <a name="explanation"></a>Erklärung  
 Beim Namen einer FILESTREAM-Datei in einem Spaltenverzeichnis handelt es sich um eine ROWGUID. Wenn ein Dateiname in einem Spaltenverzeichnis nicht in eine ROWGUID konvertiert werden kann, ist die Datei keine gültige Datei.  
@@ -48,5 +48,5 @@ Letztendlich kann es vorteilhaft sein, wenn Sie zu einem neuen Hardwaresystem we
 Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
   
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
-Nicht verfügbar. Dieser Fehler kann nicht repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+Nicht zutreffend Dieser Fehler kann nicht repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   

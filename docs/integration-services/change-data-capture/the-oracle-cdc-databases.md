@@ -11,10 +11,10 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298631"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
@@ -22,7 +22,7 @@ ms.locfileid: "71298631"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  
+  Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  
   
  Die CDC-Datenbank wird mit der Oracle CDC Designer Console erstellt und konfiguriert und enthält die folgenden Elemente:  
   
@@ -98,24 +98,24 @@ ms.locfileid: "71298631"
   
  In der folgenden Tabelle werden die Spalten der Tabelle **cdc.xdbcdc_config** beschrieben.  
   
-|Element|und Beschreibung|  
+|Element|BESCHREIBUNG|  
 |----------|-----------------|  
 |version|Hiermit wird die Version der CDC-Instanzkonfiguration verfolgt. Sie wird bei jeder Aktualisierung der Tabelle und bei jeder Hinzufügung einer neuen Aufzeichnungsinstanz oder Entfernung einer vorhandenen Aufzeichnungsinstanz aktualisiert.|  
 |connect_string|Eine Oracle-Verbindungszeichenfolge. Ein grundlegendes Beispiel ist:<br /><br /> `<server>:<port>/<instance>` (z. B. `erp.contoso.com:1521/orcl`).<br /><br /> In der Verbindungszeichenfolge kann auch ein Oracle Net-Verbindungsdeskriptor angegeben werden, z. B. `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Wenn Sie einen Verzeichnisserver oder tnsnames verwenden, kann die Verbindungszeichenfolge der Name der Verbindung sein.<br /><br /> Weitere Informationen zu Oracle-Verbindungszeichenfolgen finden Sie unter [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153). Sie erhalten dort ausführliche Informationen zu Verbindungszeichenfolgen der Oracle-Datenbank für den Oracle Instant Client, der von Oracle CDC Service verwendet wird.|  
-|use_windows_authentication|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Ein Oracle-Benutzername und dazugehöriges Kennwort werden zur Authentifizierung bereitgestellt (Standardeinstellung).<br /><br /> **1**: Zum Herstellen einer Verbindung mit der Oracle-Datenbank wird die Windows-Authentifizierung verwendet. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.|  
+|use_windows_authentication|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Ein Oracle-Benutzername und ein dazugehöriges Kennwort werden zur Authentifizierung bereitgestellt (Standardeinstellung).<br /><br /> **1**: Zum Herstellen einer Verbindung mit der Oracle-Datenbank wird die Windows-Authentifizierung verwendet. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.|  
 |username|Der Name des Oracle-Datenbankbenutzers mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  
-|Kennwort|Das Kennwort für den Oracle Datenbankbenutzer mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  
+|password|Das Kennwort für den Oracle Datenbankbenutzer mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Der Zeitraum in Sekunden, während dessen eine nicht mit Commit bestätigte Oracle-Transaktion im Arbeitsspeicher verbleibt, bevor sie in die Tabelle **cdc.xdbcdc_staged_transactions** geschrieben wird. Der Standardwert ist 120 Sekunden.|  
 |memory_limit|Der Arbeitsspeicher-Höchstwert in MB, der zum Zwischenspeichern von Daten im Arbeitsspeicher verwendet werden kann. Ein niedrigere Einstellung führt dazu, dass mehr Transaktionen in die Tabelle **cdc.xdbcdc_staged_transactions** geschrieben werden. Die Standardeinstellung ist 50 MB.|  
 |Optionen|Eine Liste der Optionen der Form name[=value][; ]. Wird zum Angeben von sekundären Optionen verwendet (z. B. Ablaufverfolgung, Optimierung). Eine Beschreibung der verfügbaren Optionen finden Sie unten in der Tabelle.|  
   
  In der folgenden Tabelle werden die verfügbaren Optionen beschrieben.  
   
-|Name|Default|Min|Max|STATIC-Cursor|und Beschreibung|  
+|Name|Standard|Min|Max|statischen|BESCHREIBUNG|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|Ablaufverfolgung|False|-|-|False|Die verfügbaren Werte sind:<br /><br /> Wahr<br /><br /> False<br /><br /> on<br /><br /> off|  
+|Ablaufverfolgung|False|-|-|False|Die verfügbaren Werte sind:<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> aus|  
 |cdc_update_state_interval|10|1|120|False|Die Größe von Arbeitsspeichersegmenten (in KB), die für eine Transaktion zugeordnet werden (eine Transaktion kann mehr als ein Segment zuordnen). Siehe Spalte „memory_limit“ in der [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) -Tabelle.|  
-|target_max_batched_transactions|100|1|1000|Wahr|Die maximale Anzahl von Oracle-Transaktionen, die beim Update von SQL Server CT-Tabellen zusammengefasst zu einer Transaktion verarbeitet werden können.|  
+|target_max_batched_transactions|100|1|1000|True|Die maximale Anzahl von Oracle-Transaktionen, die beim Update von SQL Server CT-Tabellen zusammengefasst zu einer Transaktion verarbeitet werden können.|  
 |target_idle_lsn_update_interval|10|0|1|False|Das Intervall (in Sekunden) zum Aktualisieren der Tabelle **lsn_time_mapping** , wenn die aufgezeichneten Tabellen keine Aktivität aufweisen.|  
 |trace_retention_period|24|1|24*31|False|Der Zeitraum (in Stunden), wie lange Meldungen in der Ablaufverfolgungstabelle beibehalten werden.|  
 |sql_reconnect_interval|2|2|3600|False|Der Zeitraum (in Sekunden), wie lange gewartet wird, bevor eine neue Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt wird. Dieses Intervall wird zusätzlich zum Verbindungstimeout des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients verwendet.|  
@@ -123,16 +123,16 @@ ms.locfileid: "71298631"
 |cdc_restart_limit|6|-1|3600|False|In den meisten Fällen startet der CDC-Dienst eine abnormal beendete CDC-Instanz automatisch neu. Diese Eigenschaft definiert, nach wie vielen Fehlern pro Stunde der Dienst das Neustarten der Instanz beendet. Der Wert -1 bedeutet, dass die Instanz immer neu gestartet werden soll.<br /><br /> Der Dienst fährt dann nach jedem Update der Konfigurationstabelle damit fort, die Instanz neu zu starten.|  
 |cdc_memory_report|0|0|1000|False|Wenn der Wert des Parameters geändert wurde, gibt die CDC-Instanz den zugehörigen Arbeitsspeicherbericht in der Ablaufverfolgungstabelle aus.|  
 |target_command_timeout|600|1|3600|False|Befehlstimeout bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|source_character_set|-|-|-|Wahr|Kann auf eine bestimmte Oracle-Codierung festgelegt werden, die anstelle der Codepage der Oracle-Datenbank verwendet werden soll. Dies kann nützlich sein, wenn sich die tatsächliche Codierung, die für die Zeichendaten verwendet wird, von der Codierung unterscheidet, die von der Codepage der Oracle-Datenbank vorgegeben wird.|  
+|source_character_set|-|-|-|True|Kann auf eine bestimmte Oracle-Codierung festgelegt werden, die anstelle der Codepage der Oracle-Datenbank verwendet werden soll. Dies kann nützlich sein, wenn sich die tatsächliche Codierung, die für die Zeichendaten verwendet wird, von der Codierung unterscheidet, die von der Codepage der Oracle-Datenbank vorgegeben wird.|  
 |source_error_retry_interval|30|1|3600|False|Wird bei mehreren Fehlern verwendet, z. B. einem Verbindungsfehler oder einer vorübergehenden fehlenden Synchronisierung zwischen Systemtabellen, bevor der Vorgang wiederholt wird.|  
-|source_prefetch_size|100|1|10000|Wahr|Größe des Vorabruf-Batch.|  
-|source_max_tables_in_query|100|1|10000|Wahr|Maximale Anzahl von Tabellen in der WHERE-Klausel, bevor zum Lesen des Oracle-Protokolls ohne Tabellenfilterung gewechselt wird.|  
+|source_prefetch_size|100|1|10000|True|Größe des Vorabruf-Batch.|  
+|source_max_tables_in_query|100|1|10000|True|Maximale Anzahl von Tabellen in der WHERE-Klausel, bevor zum Lesen des Oracle-Protokolls ohne Tabellenfilterung gewechselt wird.|  
 |source_read_retry_interval|2|1|3600|False|Der Zeitraum, wie lange die Quelle wartet, bis sie versucht, die Oracle-Transaktionsprotokolle bei EOF erneut zu lesen.|  
 |source_reconnect_interval|30|1|3600|False|Der Zeitraum (in Sekunden), wie lange vor dem Versuch, eine neue Verbindung mit der Quelldatenbank herzustellen, gewartet wird.|  
 |source_reconnect_limit|-1|-1||False|Die maximale Anzahl der versuchten Verbindungsversuche mit der Quelldatenbank. Die Standardeinstellung -1 bedeutet, dass der Prozess so lange versucht, erneut eine Verbindung herzustellen, bis er beendet wird.|  
 |source_command_timeout|30|1|3600|False|Verbindungstimeout beim Verwenden von Oracle.|  
 |source_connection_timeout|30|1|3600|False|Verbindungstimeout bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|trace_data_errors|Wahr|-|-|False|Boolesch. **True** gibt an, dass Fehler beim Konvertieren und Abschneiden von Daten protokolliert werden.|  
+|trace_data_errors|True|-|-|False|Boolesch. **True** gibt an, dass Fehler beim Konvertieren und Abschneiden von Daten protokolliert werden.|  
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Boolesch. **True** gibt an, dass der Vorgang beendet werden soll, wenn fehlerhafte Schemaänderungen erkannt werden.<br /><br /> **False** gibt an, dass die Spiegeltabelle und die Aufzeichnungsinstanz gelöscht werden sollen.|  
 |source_oracle_home||-|-|False|Kann auf einen bestimmten Oracle Home-Pfad oder einen Oracle Home-Namen festgelegt werden, der von der CDC-Instanz zum Herstellen einer Verbindung zu Oracle verwendet wird.|  
   
@@ -141,12 +141,12 @@ ms.locfileid: "71298631"
   
  In der folgenden Tabelle werden die Spalten der Tabelle **cdc.xdbcdc_state** beschrieben.  
   
-|Element|und Beschreibung|  
+|Element|BESCHREIBUNG|  
 |----------|-----------------|  
 |status|Der aktuelle Statuscode für die aktuelle Oracle CDC-Instanz. Der Status beschreibt den aktuellen Zustand für die CDC.|  
 |sub_status|Status der zweiten Ebene, der zusätzliche Informationen zum aktuellen Status liefert.|  
-|active|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-Instanzprozess ist nicht aktiv.<br /><br /> **1**: Der Oracle CDC-Instanzprozess ist aktiv.|  
-|Fehler|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-Instanzprozess hat keinen Fehlerzustand.<br /><br /> **1**: Die Oracle CDC-Instanz hat einen Fehlerzustand.|  
+|aktiv|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-Instanzprozess ist nicht aktiv.<br /><br /> **1**: Der Oracle CDC-Instanzprozess ist aktiv.|  
+|error|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-Instanzprozess befindet sich nicht in einem Fehlerzustand.<br /><br /> **1**: Die Oracle CDC-Instanz befindet sich in einem Fehlerzustand.|  
 |status_message|Eine Zeichenfolge, die eine Beschreibung des Fehlers oder des Status darstellt.|  
 |timestamp|Der Zeitstempel mit der Uhrzeit (UTC), zu der der Aufzeichnungsstatus zuletzt aktualisiert wurde.|  
 |active_capture_node|Der Name des Hosts (der Host kann ein Knoten auf einem Cluster sein), auf dem momentan der Oracle CDC Service und die Oracle CDC-Instanz (auf der die Oracle-Transaktionsprotokolle verarbeitet werden) ausgeführt werden.|  
@@ -166,10 +166,10 @@ ms.locfileid: "71298631"
   
  In der folgenden Tabelle werden die Spalten der Tabelle cdc.xdbcdc_trace beschrieben.  
   
-|Element|und Beschreibung|  
+|Element|BESCHREIBUNG|  
 |----------|-----------------|  
 |timestamp|Der genaue UTC-Zeitstempel mit der Uhrzeit, zu der der Ablaufverfolgungsdatensatz geschrieben wurde.|  
-|Typ|Enthält einen der folgenden Werte.<br /><br /> Fehler<br /><br /> INFO<br /><br /> Ablaufverfolgung|  
+|type|Enthält einen der folgenden Werte.<br /><br /> ERROR<br /><br /> INFO<br /><br /> TRACE|  
 |Knoten|Der Name des Knotens, unter dem der Datensatz geschrieben wurde.|  
 |status|Der Statuscode, der von der Statustabelle verwendet wird.|  
 |sub_status|Der Unterstatuscode, der von der Statustabelle verwendet wird.|  
@@ -181,7 +181,7 @@ ms.locfileid: "71298631"
   
  In der folgenden Tabelle werden die Spalten der Tabelle **cdc.xdbcdc_staged_transactions** beschrieben.  
   
-|Element|und Beschreibung|  
+|Element|BESCHREIBUNG|  
 |----------|-----------------|  
 |transaction_id|Der eindeutige Transaktionsbezeichner der bereitgestellten Transaktion.|  
 |seq_num|Die Nummer der Zeile **xcbcdc_staged_transactions** für die aktuelle Transaktion (beginnend mit 0).|  

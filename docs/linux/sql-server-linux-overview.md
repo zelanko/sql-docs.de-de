@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.openlocfilehash: 31904a43dba642c73620a66bcf4abaa066b5ef82
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73531281"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server unter Linux
@@ -44,12 +44,12 @@ SQL Server 2019 wird unter Linux ausgeführt. Dabei handelt es sich unabhängig 
 
 ## <a name="install"></a>Installieren
 
-Installieren Sie als erstes SQL Server für Linux mithilfe einer der nachfolgenden Schnellstarts:
+Installieren Sie zunächst SQL Server für Linux mithilfe einer der nachfolgenden Schnellstarts:
 
 - [Installation unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installation unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Ausführen unter Docker](quickstart-install-connect-docker.md)
+- [Ausführung in Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 > [!NOTE]

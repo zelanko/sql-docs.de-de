@@ -23,18 +23,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5aa5e2a60189a82fb60cd416b7f87b35824e236f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118978"
 ---
-# <a name="dbname-transact-sql"></a>DB_NAME (Transact-SQL)
+# <a name="db_name-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt den Namen einer angegebenen Datenbank zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,17 +45,17 @@ DB_NAME ( [ database_id ] )
 ## <a name="arguments"></a>Argumente  
 *database_id*  
 
-Die Identifikationsnummer (ID) der Datenbank, deren Name von `DB_NAME` zurückgegeben wird. Wenn *database_id* beim Aufruf von `DB_NAME` ausgelassen wird, gibt `DB_NAME` den Namen der aktuellen Datenbank zurück.
+Die Identifikationsnummer (ID) der Datenbank, deren Name von `DB_NAME` zurückgegeben wird. Wenn `DB_NAME`database_id*beim Aufruf von* ausgelassen wird, gibt `DB_NAME` den Namen der aktuellen Datenbank zurück.
   
 ## <a name="return-types"></a>Rückgabetypen
 **nvarchar(128)**
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Wenn der Aufrufer von `DB_NAME` keine spezifische Nicht-**Master**- oder Nicht-**tempdb**-Datenbank besitzt, sind mindestens die Berechtigungen `ALTER ANY DATABASE` oder `VIEW ANY DATABASE` auf Serverebene erforderlich, um die entsprechende `DB_ID`-Zeile anzuzeigen. `DB_ID` benötigt zumindest die Berechtigung `CREATE DATABASE` für die **Master**-Datenbank. Die Datenbank, mit der der Aufrufer eine Verbindung herstellt, wird immer in **sys.databases** angezeigt.
+Wenn der Aufrufer von `DB_NAME` keine spezifische Nicht-**Master**- oder Nicht-**tempdb**-Datenbank besitzt, sind mindestens die Berechtigungen `ALTER ANY DATABASE` oder `VIEW ANY DATABASE` auf Serverebene erforderlich, um die entsprechende `DB_ID`-Zeile anzuzeigen. **benötigt zumindest die Berechtigung** für die `DB_ID`Master`CREATE DATABASE`-Datenbank. Die Datenbank, mit der der Aufrufer eine Verbindung herstellt, wird immer in **sys.databases** angezeigt.
   
 > [!IMPORTANT]  
->  Standardmäßig verfügt die öffentliche Rolle über die Berechtigung `VIEW ANY DATABASE`, sodass alle Anmeldenamen auf Datenbankinformationen zugreifen können. Verhindern Sie, dass ein Anmeldename eine Datenbank erkennt, indem Sie die Berechtigung `VIEW ANY DATABASE` mit `REVOKE` widerrufen, sodass sie nicht mehr öffentlich ist, oder die Berechtigung `VIEW ANY DATABASE` mit `DENY` für individuelle Anmeldungen verweigern.
+>  Standardmäßig verfügt die öffentliche Rolle über die Berechtigung `VIEW ANY DATABASE`, sodass alle Anmeldenamen auf Datenbankinformationen zugreifen können. Verhindern Sie, dass ein Anmeldename eine Datenbank erkennt, indem Sie die Berechtigung `REVOKE` mit `VIEW ANY DATABASE` widerrufen, sodass sie nicht mehr öffentlich ist, oder die Berechtigung `DENY` mit `VIEW ANY DATABASE` für individuelle Anmeldungen verweigern.
   
 ## <a name="examples"></a>Beispiele  
   
@@ -77,7 +77,7 @@ SELECT DB_NAME(3)AS [Database Name];
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-return-the-current-database-name"></a>C. Zurückgeben des aktuellen Datenbanknamens  
   
@@ -85,7 +85,7 @@ GO
 SELECT DB_NAME() AS [Current Database];  
 ```  
   
-### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. Zurückgeben des Namens einer Datenbank unter Verwendung der Datenbank-ID  
+### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D: Zurückgeben des Namens einer Datenbank unter Verwendung der Datenbank-ID  
 Im folgenden Beispiel werden die Datenbanknamen und database_id aller Datenbanken zurückgegeben.
   
 ```sql
@@ -93,7 +93,7 @@ SELECT DB_NAME(database_id) AS [Database], database_id
 FROM sys.databases;  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
 [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen (Transact-SQL))](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

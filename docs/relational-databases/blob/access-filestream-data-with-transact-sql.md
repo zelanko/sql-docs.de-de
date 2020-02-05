@@ -13,10 +13,10 @@ ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e2a9ede7817eb504a5926ee1a7bb6be2019f0b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041232"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>ZUgreifen auf FILESTREAM-Daten mit Transact-SQL
@@ -46,7 +46,7 @@ ms.locfileid: "68041232"
   
  Wenn Sie alle Daten in der Tabelle `Archive.dbo.Records` auswählen, sollten ähnliche Ergebnisse wie in der folgenden Tabelle angezeigt werden. Die `Id` -Spalte enthält jedoch andere GUIDs.  
   
-|ID|SerialNumber|Diagramm|  
+|Id|SerialNumber|Diagramm|  
 |--------|------------------|------------|  
 |`C871B90F-D25E-47B3-A560-7CC0CA405DAC`|`1`|`NULL`|  
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  

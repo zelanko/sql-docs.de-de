@@ -35,10 +35,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981924"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
@@ -48,7 +48,7 @@ Beendet einen Benutzerprozess basierend auf der Sitzungs-ID oder Arbeitseinheit 
   
 KILL beendet eine normale Verbindung, wodurch die der angegebenen Sitzungs-ID zugeordneten Transaktionen intern angehalten werden. Es kann [!INCLUDE[msCoName](../../includes/msconame-md.md)] MS DTC (Microsoft Distributed Transaction Coordinator) verwendet werden. Wenn MS DTC im Einsatz ist, können Sie die Anweisung auch verwenden, um verwaiste und unsichere verteilte Transaktionen zu beenden.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -87,7 +87,7 @@ Verwenden Sie KILL _UOW_ zum Beenden verwaister verteilter Transaktionen. Diese 
 WITH STATUSONLY  
 Generiert einen Fortschrittsbericht für eine angegebene _Sitzungs-ID_ oder _UOW_, für den aufgrund einer früheren KILL-Anweisung ein Rollback ausgeführt wird. „KILL WITH STATUSONLY“ beendet die _Sitzungs-ID_ oder _UOW_ nicht und führt kein Rollback aus. Der Befehl zeigt nur den aktuellen Fortschritt des Rollbacks an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 KILL wird häufig verwendet, um einen Prozess zu beenden, der andere wichtige Prozesse mit Sperren blockiert. KILL kann auch verwendet werden, um einen Prozess zu beenden, der eine Abfrage ausführt, die die notwendigen Systemressourcen benötigt. Systemprozesse und Prozesse, die eine erweiterte gespeicherte Prozedur ausführen, können nicht beendet werden.  
   
 Verwenden Sie KILL sorgfältig, besonders wenn kritische Prozesse ausgeführt werden. Ihren eigenen Prozess können Sie nicht beenden. Sie sollten auch nicht die folgenden Prozesse beenden:  
@@ -123,7 +123,7 @@ Dieser Fehler wird nur ausgegeben, wenn kein Rollback für die Sitzungs-ID oder 
 Der gleiche Statusbericht wird durch Wiederholen der gleichen Anweisung KILL _session ID_|_UOW_ ohne die WITH STATUSONLY-Option erstellt. Es wird allerdings nicht empfohlen, die Option auf diese Weise zu wiederholen. Durch das Wiederholen einer KILL _session ID_-Anweisung wird der neue Prozess möglicherweise beendet, falls das Rollback bereits abgeschlossen war und die Sitzungs-ID vor der Ausführung der neuen KILL-Anweisung einem neuen Task zugewiesen worden ist. Durch die Angabe von WITH STATUSONLY kann verhindert werden, dass der neue Prozess beendet wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Erfordert die ALTER ANY CONNECTION-Berechtigung. ALTER ANY CONNECTION ist mit der Mitgliedschaft in den festen Serverrollen sysadmin und processadmin verbunden.  
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Erfordert die Berechtigung ALTER ANY CONNECTION. ALTER ANY CONNECTION ist mit der Mitgliedschaft in den festen Serverrollen sysadmin und processadmin verbunden.  
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Erfordert die Berechtigung KILL DATABASE CONNECTION. Das Prinzipalkonto auf Serverebene verfügt über die Berechtigung KILL DATABASE CONNECTION.  
   

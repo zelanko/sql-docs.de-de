@@ -15,10 +15,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056203"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
@@ -115,7 +115,7 @@ Eine typische leere Thesaurusdatei enthält den folgenden XML-Text:
 </XML>  
 ```
 
-### <a name="expansion"></a> XML-Struktur eines Erweiterungssatzes  
+### <a name="expansion"></a> XML structure of an expansion set  
   
  Jeder Erweiterungssatz ist in ein `<expansion>`-Element eingeschlossen. Innerhalb dieses Elements geben Sie eine oder mehrere Substitutionen in einem `<sub>`-Element an. Im Erweiterungssatz können Sie eine Gruppe von Substitutionen angeben, die Synonyme zueinander sind.  
   
@@ -131,7 +131,7 @@ Der Erweiterungssatzabschnitt für das oben genannte Beispiel würde wie folgt a
 </expansion>  
 ```  
   
-### <a name="replacement"></a> XML-Struktur eines Ersetzungssatzes  
+### <a name="replacement"></a> XML structure of a replacement set  
   
 Jeder Ersetzungssatz ist in ein `<replacement>`-Element eingeschlossen. Innerhalb dieses Elements können Sie ein oder mehrere Muster in einem `<pat>`-Element und keine oder beliebig viele Substitutionen in `<sub>`-Elementen (einem pro Synonym) angeben. Sie können ein durch einen Substitutionssatz zu ersetzendes Muster angeben. Muster und Substitutionen können ein Wort oder eine Wortfolge enthalten. Wenn für ein Muster keine Substitution angegeben wird, ist die Wirkung dieselbe, als würde das Muster aus der Benutzerabfrage entfernt.  
   
@@ -156,7 +156,7 @@ Wenn zwei Ersetzungssätze mit ähnlichen Mustern für die Übereinstimmung verw
 </replacement>  
 ```  
   
-\- und  
+and  
   
 ```xml  
 <replacement>  

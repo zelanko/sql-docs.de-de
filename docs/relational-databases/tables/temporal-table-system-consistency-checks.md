@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d0957ffb1aa78ee0cbaf3c7c3e5acdb973aa8fb7
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165719"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Systemkonsistenzprüfungen von temporalen Tabellen
@@ -45,7 +45,7 @@ Wenn eine temporale Tabelle erstellt oder eine vorhandene Tabelle dahingehend ge
 
 ### <a name="data-consistency-check"></a>Datenkonsistenzprüfung
 
-Bevor **SYSTEM_VERSIONING** auf **ON** festgelegt wird, führt das System die folgende Überprüfung durch, die auch im Rahmen jedes DML-Vorgangs durchgeführt wird: **SysEndTime** ≥**SysStartTime**
+Bevor **SYSTEM_VERSIONING** auf **ON** festgelegt wird, führt das System die folgende Überprüfung durch: **SysEndTime** ≥**SysStartTime**. Sie wird auch im Rahmen jedes DML-Vorgangs durchgeführt.
 
 Wenn Sie einen Link zu einer vorhandenen Verlaufstabelle erstellen, können Sie eine Datenkonsistenzprüfung durchführen. Diese Datenkonsistenzprüfung stellt sicher, dass vorhandene Einträge sich nicht überlappen, und dass temporale Anforderungen für jeden einzelnen Eintrag erfüllt werden. Die Datenkonsistenzprüfung ist standardmäßig aktiviert. Die Verwendung der Datenkonsistenzprüfung wird generell immer dann empfohlen, wenn Daten zwischen der aktuellen und der Verlaufstabelle möglicherweise nicht mehr synchronisiert sind. Dies geschieht z.B., wenn eine vorhandene Verlaufstabelle mit Verlaufsdaten aufgefüllt wird.
 

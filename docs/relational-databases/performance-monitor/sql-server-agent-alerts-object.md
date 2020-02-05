@@ -14,10 +14,10 @@ ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a5a408ac1329c11054804902f3e751d6126afa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987344"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server-Agent, Warnungen-Objekt
@@ -26,7 +26,7 @@ ms.locfileid: "67987344"
   
  Die folgende Tabelle enthält die Leistungsindikatoren **SQLAgent:Warnungen** .  
   
-|Name|und Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |**Aktivierte Warnungen**|Dieser Leistungsindikator berichtet die Gesamtanzahl der Warnungen, die der SQL Server-Agent seit dem letzten Neustart aktiviert hat.|  
 |**Aktivierte Warnungen/Minute**|Dieser Leistungsindikator berichtet die Anzahl der Warnungen, die der SQL Server-Agent innerhalb der letzten Minute aktiviert hat.|  

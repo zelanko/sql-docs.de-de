@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4832910f00322875c334e16df77975a33106d214
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056425"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Fehler und Warnungen-Ereigniskategorie (Datenbank-Engine)
@@ -27,14 +27,14 @@ ms.locfileid: "74056425"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Attention-Ereignisklasse](../../relational-databases/event-classes/attention-event-class.md)|Zeigt an, dass ein **Attention** -Ereignis aufgetreten ist.|  
 |[Background Job Error-Ereignisklasse](../../relational-databases/event-classes/background-job-error-event-class.md)|Zeigt an, dass ein Hintergrundauftrag fehlerbedingt beendet wurde.|  
 |[Bitmap Warning-Ereignisklasse](../../relational-databases/event-classes/bitmap-warning-event-class.md)|Zeigt an, dass das Filtern von Bitmaps in einer Abfrage deaktiviert wurde.|  
 |[Blocked Process Report-Ereignisklasse](../../relational-databases/event-classes/blocked-process-report-event-class.md)|Zeigt an, dass ein Task länger als die angegebene Zeitspanne blockiert wurde.|  
 |[CPU Threshold Exceeded (Ereignisklasse)](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)|Zeigt an, dass die Ressourcenkontrolle eine Abfrage erkennt, die den angegebenen CPU-Schwellenwert überschreitet.|  
-|[ErrorLog (Ereignisklasse)](../../relational-databases/event-classes/errorlog-event-class.md)|Zeigt an, dass Fehlerereignisse im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll protokolliert wurden.|  
+|[ErrorLog-Ereignisklasse](../../relational-databases/event-classes/errorlog-event-class.md)|Zeigt an, dass Fehlerereignisse im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll protokolliert wurden.|  
 |[EventLog-Ereignisklasse](../../relational-databases/event-classes/eventlog-event-class.md)|Zeigt an, dass Ereignisse im Windows-Ereignisprotokoll protokolliert wurden.|  
 |[Exception-Ereignisklasse](../../relational-databases/event-classes/exception-event-class.md)|Zeigt an, dass in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Ausnahme aufgetreten ist.|  
 |[Exchange Spill (Ereignisklasse)](../../relational-databases/event-classes/exchange-spill-event-class.md)|Zeigt an, dass Kommunikationspuffer in einem parallelen Abfrageplan in die tempdb-Datenbank geschrieben wurden.|  

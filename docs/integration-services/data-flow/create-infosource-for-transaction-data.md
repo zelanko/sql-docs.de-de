@@ -11,10 +11,10 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19c8384a389db2032c36291e669d5dd2885ac8dd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293309"
 ---
 # <a name="create-infosource-for-transaction-data"></a>InfoSource für Transaktionsdaten erstellen
@@ -45,7 +45,7 @@ ms.locfileid: "71293309"
  **InfoSource-Name**  
  Geben Sie einen Namen für die neue InfoSource ein.  
   
- **Kurze Beschreibung**  
+ **Kurzbeschreibung**  
  Geben Sie eine kurze Beschreibung für die neue InfoSource ein.  
   
  **Lange Beschreibung**  
@@ -85,10 +85,10 @@ ms.locfileid: "71293309"
  **Typ**  
  Zeigt den Typ des InfoObject an, das der Datenflussspalte zugeordnet ist. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |CHA|Merkmale|  
-|UNI|Einheiten|  
+|UNI|Units|  
 |KYF|Kennzahlen|  
 |TIM|Zeitmerkmale|  
   

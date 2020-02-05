@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d3968c5c8f04cba8581dfdd44ac847f7010de994
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595625"
 ---
 # <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>Verwalten von Schlüsseln für Always Encrypted mit Secure Enclaves
@@ -32,9 +32,9 @@ Die allgemeinen Richtlinien und Prozesse für die [Verwaltung von Always Encrypt
 In den folgenden Artikeln werden die Aspekte erläutert, die zum Verwalten von Enclave-fähigen Schlüsseln spezifisch sind.
 
 - [Bereitstellen Enclave-fähiger Schlüssel](always-encrypted-enclaves-provision-keys.md)
-- [Drehen von Enclave-fähigen Schlüsseln](always-encrypted-enclaves-rotate-keys.md)
+- [Rotieren Enclave-fähiger Schlüssel](always-encrypted-enclaves-rotate-keys.md)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 - [Bereitstellen Enclave-fähiger Schlüssel](always-encrypted-enclaves-provision-keys.md)
 
 ## <a name="see-also"></a>Weitere Informationen  

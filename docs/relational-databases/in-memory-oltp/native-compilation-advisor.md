@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bc5a4def5c32ffc39c0df58d5a7927a24c90860d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135553"
 ---
 # <a name="native-compilation-advisor"></a>Ratgeber für native Kompilierung
@@ -26,14 +26,14 @@ ms.locfileid: "68135553"
 
   Berichte zur Transaktionsleistungsanalyse informieren Sie darüber, welche interpretierten gespeicherten Prozeduren in der Datenbank von einer Portierung zur nativen Kompilierung profitieren. Details finden Sie unter [Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md).  
   
- Nachdem Sie eine gespeicherte Prozedur identifiziert haben, die Sie zur Verwendung der nativen Kompilierung portieren möchten, können Sie den Ratgeber für native Kompilierung verwenden, um die Migration der interpretierten gespeicherten Prozedur zur nativen Kompilierung zu vereinfachen. Weitere Informationen zu nativen kompilierten gespeicherten Prozeduren finden Sie unter [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Nachdem Sie eine gespeicherte Prozedur identifiziert haben, die Sie zur Verwendung der nativen Kompilierung portieren möchten, können Sie den Ratgeber für native Kompilierung verwenden, um die Migration der interpretierten gespeicherten Prozedur zur nativen Kompilierung zu vereinfachen. Weitere Informationen zu systemintern kompilierten gespeicherten Prozeduren finden Sie unter [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
  In einer bestimmten interpretierten gespeicherten Prozedur können Sie mit dem Ratgeber für native Kompilierung alle Features identifizieren, die in nativen Modulen nicht unterstützt werden. Der Ratgeber für native Kompilierung bietet Links zu Problemumgehungen oder Lösungen an.  
   
  Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Exemplarische Vorgehensweise: Ratgeber für native Kompilierung  
- Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die gespeicherte Prozedur, die Sie konvertieren möchten, und wählen Sie **Ratgeber für native Kompilierung**aus. Daraufhin wird die Willkommensseite für **Ratgeber für die native Kompilierung gespeicherter Prozeduren**angezeigt. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+ Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die gespeicherte Prozedur, die Sie konvertieren möchten, und wählen Sie **Ratgeber für native Kompilierung**aus. Daraufhin wird die Willkommensseite für **Ratgeber für die native Kompilierung gespeicherter Prozeduren**angezeigt. Klicken Sie auf zum Fortfahren auf **Weiter**.  
   
 ### <a name="stored-procedure-validation"></a>Überprüfung der gespeicherten Prozedur  
  Auf dieser Seite wird angezeigt, ob die gespeicherte Prozedur Konstrukte verwendet, die mit der nativen Kompilierung nicht kompatibel sind. Klicken Sie auf **Weiter** , um weitere Details anzuzeigen. Wenn Konstrukte vorhanden sind, die nicht mit der nativen Kompilierung kompatibel sind, können Sie durch Klicken auf **Weiter** zusätzliche Details abrufen.  
@@ -105,6 +105,6 @@ SELECT * from SalesOrders;
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)   
- [Anforderungen für die Verwendung von speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
+ [Anforderungen für die Verwendung speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
   
   

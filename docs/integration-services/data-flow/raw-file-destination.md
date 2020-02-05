@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292178"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -59,7 +59,7 @@ ms.locfileid: "71292178"
   
  In der folgenden Tabelle werden die verfügbaren Optionen für die „WriteOption“-Eigenschaft beschrieben.  
   
-|Option|und Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Anfügen|Fügt Daten an eine vorhandene Datei an. Die Metadaten der angefügten Daten müssen mit dem Dateiformat übereinstimmen.|  
 |Immer erstellen|Erstellt immer eine neue Datei.|  

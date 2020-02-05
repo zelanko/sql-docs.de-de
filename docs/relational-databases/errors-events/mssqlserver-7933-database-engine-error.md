@@ -12,13 +12,13 @@ ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b7cc3e42abfdb31da50b7db329f9c61c2a195111
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087596"
 ---
-# <a name="mssqlserver7933"></a>MSSQLSERVER_7933
+# <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -30,7 +30,7 @@ ms.locfileid: "68087596"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|Meldungstext|Tabellenfehler: Eine Filestream-Verzeichnis-ID F_ID für eine Partition ist vorhanden, die entsprechende Partition ist jedoch nicht in der Datenbank enthalten.|  
+|Meldungstext|Tabellenfehler: Eine FileStream-Verzeichnis-ID F_ID für eine Partition ist vorhanden, die entsprechende Partition ist jedoch nicht in der Datenbank enthalten.|  
   
 ## <a name="explanation"></a>Erklärung  
 Während DBCC CHECKDB wurde ein Rowsetverzeichnis im FILESTREAM-Datenspeicher gefunden; die entsprechende Partition ist jedoch in der Datenbank nicht vorhanden.  
@@ -48,5 +48,5 @@ Letztendlich kann es vorteilhaft sein, wenn Sie zu einem neuen Hardwaresystem we
 Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
   
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
-Nicht verfügbar. Dieser Fehler kann nicht automatisch repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+Nicht zutreffend Dieser Fehler kann nicht automatisch repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   

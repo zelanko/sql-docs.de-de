@@ -24,16 +24,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: a316cb512f3f5e23a7413ab5f5eaa4b15e3d39a7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258761"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>RESTORE-Anweisungen für das Wiederherstellen und Verwalten von Sicherungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
-  In diesem Abschnitt werden die RESTORE-Anweisungen für Sicherungen beschrieben. Neben der RESTORE {DATABASE | LOG}-Hauptanweisung für das Wiederherstellen von Sicherungen unterstützen eine Reihe von RESTORE-Hilfsanweisungen Sie beim Verwalten von Sicherungen und Planen von Wiederherstellungssequenzen. Zu den RESTORE-Hilfsbefehlen gehören: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY und RESTORE VERIFYONLY.  
+  In diesem Abschnitt werden die RESTORE-Anweisungen für Sicherungen beschrieben. Neben der RESTORE {DATABASE | LOG}-Hauptanweisung für das Wiederherstellen von Sicherungen unterstützen eine Reihe von RESTORE-Hilfsanweisungen Sie beim Verwalten von Sicherungen und Planen von Wiederherstellungssequenzen. Zu den RESTORE-Hilfsbefehlen gehören die folgenden Befehle: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY und RESTORE VERIFYONLY.  
   
 > [!IMPORTANT]  
 >  In früheren Versionen von SQL Server konnte jeder Benutzer mit den Transact-SQL-Anweisungen RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY und RESTORE VERIFYONLY Informationen zu Sicherungssätzen und Sicherungsgeräten erhalten. Da diese Anweisungen jedoch Informationen zum Inhalt der Sicherungsdateien zurückgeben, erfordern sie in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und späteren Versionen die CREATE DATABASE-Berechtigung. Dadurch werden Ihre Sicherungsdateien und Sicherungsinformationen umfassender geschützt als in vorherigen Versionen. Informationen über diese Berechtigung finden Sie unter [GRANT (Datenbankberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "75258761"
 |-Anweisung.|BESCHREIBUNG|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|Beschreibt die Transact-SQL-Anweisungen RESTORE DATABASE und RESTORE LOG, die für die Wiederherstellung einer Datenbank mithilfe von mit dem BACKUP-Befehl erstellten Sicherungen verwendet werden. RESTORE DATABASE wird für Datenbanken unter allen Wiederherstellungsmodellen verwendet. RESTORE LOG wird nur unter dem vollständigen und dem massenprotokollierten Wiederherstellungsmodell verwendet. Mithilfe von RESTORE DATABASE kann außerdem eine Datenbank mit einer Datenbankmomentaufnahme wiederhergestellt werden.|  
-|[RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Dokumentiert die Argumente, die in den Abschnitten "Syntax" der RESTORE-Anweisung beschrieben werden, sowie die der zugeordneten Gruppe von Hilfsanweisungen: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY und RESTORE VERIFYONLY. Die meisten der Argumente werden nur von einer Untermenge dieser sechs Anweisungen unterstützt. Die Unterstützung für jedes Argument wird in der Beschreibung des Arguments angezeigt.|  
+|[RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Dokumentiert die Argumente, die in den Abschnitten über die Syntax der RESTORE-Anweisung und der zugeordneten Gruppe der folgenden Hilfsanweisungen beschrieben werden: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY und RESTORE VERIFYONLY. Die meisten der Argumente werden nur von einer Untermenge dieser sechs Anweisungen unterstützt. Die Unterstützung für jedes Argument wird in der Beschreibung des Arguments angezeigt.|  
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|Beschreibt die Transact-SQL-Anweisung RESTORE FILELISTONLY, mit deren Hilfe ein Resultset zurückgegeben wird, das eine Liste der in dem Sicherungssatz enthaltenen Datenbank- und Protokolldateien enthält.|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|Beschreibt die Transact-SQL-Anweisung RESTORE HEADERONLY, mit deren Hilfe ein Resultset zurückgegeben wird, das die gesamten Sicherungsheaderinformationen für alle Sicherungssätze auf einem bestimmten Sicherungsmedium enthält.|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|Beschreibt die Transact-SQL-Anweisung RESTORE LABELONLY, mit deren Hilfe ein Resultset zurückgegeben wird, das Informationen über die durch das Sicherungsmedium identifizierten Sicherungsmedien enthält.|  

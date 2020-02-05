@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768595"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284024"
 ---
 # <a name="distributor-information-publications"></a>Verteilerinformationen, Veröffentlichungen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungs
   
  Weitere Informationen zu Momentaufnahme-, Protokollleser- und Warteschlangenlese-Agents sowie Wartungsaufträgen finden Sie unter [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md). Beachten Sie, dass beim Anzeigen von Agent-Informationen für einen Verteiler auf der Registerkarte **Agents** Verlegerinformationen für den Momentaufnahme- und den Protokollleser-Agent vorhanden sind. Auf der Registerkarte **Agents** für einen Verteiler in der Verteileransicht können Sie auch jedoch **Verteiler-Agent** und **Merge-Agent**auswählen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  In den folgenden Abschnitten werden die Daten beschrieben, die auf dieser Registerkarte für den Verteiler-Agent und den Merge-Agent angezeigt werden.  
   
 ### <a name="distributor-agent"></a>Verteiler-Agent  
@@ -61,7 +61,7 @@ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungs
 -   Wird nicht ausgeführt   
 -   Nie gestartet  
   
- **Verleger**  
+ **Herausgeber**  
  Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz des Verlegers.  
   
  **Veröffentlichung**  
@@ -76,7 +76,7 @@ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungs
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Agent beim letzten Mal gestartet wurde.  
   
- **Dauer**  
+ **Duration**  
  Die Zeitdauer, für die der Agent ausgeführt wurde. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Agents oder die Gesamtzeit des zuvor ausgeführten Agents an.  
   
  **Letzte Aktion**  
@@ -85,7 +85,7 @@ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungs
  **Übermittlungsrate**  
  Die Rate (in Befehlen pro Sekunde), mit der bei der letzten Ausführung des Agents für Initialisierungsbefehle ein Commit in der Verteilungsdatenbank ausgeführt wurde.  
   
- **Latenzzeit**  
+ **Latenz**  
  Die verstrichene Zeit in Sekunden zwischen dem Commit der letzten Änderung in der Veröffentlichungsdatenbank und dem Commit des zugehörigen Befehls in der Verteilungsdatenbank.  
   
  **#Trans**  
@@ -111,7 +111,7 @@ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungs
   
 -   Nie gestartet  
   
- **Verleger**  
+ **Herausgeber**  
  Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz des Verlegers.  
   
  **Veröffentlichung**  
@@ -126,7 +126,7 @@ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungs
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Agent beim letzten Mal gestartet wurde.  
   
- **Dauer**  
+ **Duration**  
  Die Zeitdauer, für die der Agent ausgeführt wurde. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Agents oder die Gesamtzeit des zuvor ausgeführten Agents an.  
   
  **Letzte Aktion**  

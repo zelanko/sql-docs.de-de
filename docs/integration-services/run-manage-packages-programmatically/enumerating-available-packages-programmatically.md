@@ -15,10 +15,10 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295771"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerating Available Packages Programmatically
@@ -43,7 +43,7 @@ ms.locfileid: "71295771"
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [Zurück zum Anfang](#top)    
+ [Nach oben](#top)    
     
 ##  <a name="listing"></a> Auflisten verfügbarer Pakete    
  Rufen Sie eine der folgenden Methoden auf, um eine Liste von gespeicherten Paketen programmgesteuert abzurufen:    
@@ -159,7 +159,7 @@ namespace EnumeratePackagesSSIS_CS
 }    
 ```    
     
- [Zurück zum Anfang](#top)    
+ [Nach oben](#top)    
     
 ###  <a name="listing_sql"></a> Beispiel (SQL Server)    
  Verwenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A>-Methode, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete aufzulisten, die in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind.    
@@ -240,7 +240,7 @@ namespace EnumeratePackagesSql_CS
 }    
 ```    
     
- [Zurück zum Anfang](#top)    
+ [Nach oben](#top)    
    
 ## <a name="see-also"></a>Weitere Informationen    
  [Paketverwaltung &#40;SSIS-Dienst&#41;](../../integration-services/service/package-management-ssis-service.md)    

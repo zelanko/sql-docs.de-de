@@ -14,10 +14,10 @@ ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558252"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse'
@@ -28,7 +28,7 @@ ms.locfileid: "75558252"
  **Ergebnisse: Richtlinie**  
  Der Name der Richtlinie, die ausgewertet wird. Dieses Feld ist schreibgeschützt.  
   
- **Ergebnisse: Nachricht**  
+ **Ergebnisse: Meldung**  
  Ein Link zu Informationen, wenn ein Fehler auftritt.  
   
  **Zieldetails: Server**  
@@ -40,7 +40,7 @@ ms.locfileid: "75558252"
  **Zieldetails: Details**  
  Ein Link zum Dialogfeld **Ergebnisse, Detailansicht** , das Details der Richtlinienauswertung anzeigt.  
   
- **Zieldetails: Nachricht**  
+ **Zieldetails: Meldung**  
  Ein Link zu Informationen, wenn ein Fehler auftritt.  
   
 ## <a name="see-also"></a>Weitere Informationen  

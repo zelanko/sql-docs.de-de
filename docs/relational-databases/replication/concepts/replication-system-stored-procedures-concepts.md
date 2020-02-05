@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f887fdf9aaddf49e5dc2c9f79ed43299f572eb13
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 821a45a08316bfdcf17ab57253b46641568aa4f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768145"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285791"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68768145"
   
 -   Verwenden Sie die Skriptgenerierungsfunktionen, die in den Replikations-Assistenten bereitgestellt werden.  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+-   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]). Weitere Informationen finden Sie unter [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 -   Verwenden Sie Replikationsverwaltungsobjekte (RMO), um das Skript programmgesteuert zu generieren und ein RMO-Objekt zu erstellen.  
   
@@ -162,7 +162,7 @@ SET @publisher = $(DistPubServer);
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
 ```  
   
- In diesem Beispiel gibt der `-E`-Schalter an, dass beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Windows-Authentifizierung verwendet wird. Bei Verwendung der Windows-Authentifizierung entfällt das Speichern des Benutzernamens und Kennworts in der Skriptdatei. Der Name und Pfad der Skriptdatei wird mit dem `-i`-Schalter und der Name der Ausgabedatei mit dem `-o`-Schalter angegeben (bei Verwendung dieses Schalters wird die Ausgabe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in diese Datei statt in die Konsole geschrieben). Mit dem `sqlcmd`-Hilfsprogramm können Sie Skriptvariablen mit dem `-v`-Schalter zur Laufzeit an das [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skript übergeben. In diesem Beispiel ersetzt `sqlcmd` vor der Ausführung jede Instanz von `$(DistPubServer)` im Skript durch den `N'MyDistributorAndPublisher'`-Wert.  
+ In diesem Beispiel gibt der `-E`-Schalter an, dass beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Windows-Authentifizierung verwendet wird. Bei Verwendung der Windows-Authentifizierung entfällt das Speichern des Benutzernamens und Kennworts in der Skriptdatei. Der Name und Pfad der Skriptdatei wird mit dem `-i`-Schalter und der Name der Ausgabedatei mit dem `-o`-Schalter angegeben (bei Verwendung dieses Schalters wird die Ausgabe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in diese Datei statt in die Konsole geschrieben). Mit dem `sqlcmd`-Hilfsprogramm können Sie Skriptvariablen mit dem [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Schalter zur Laufzeit an das `-v`-Skript übergeben. In diesem Beispiel ersetzt `sqlcmd` vor der Ausführung jede Instanz von `$(DistPubServer)` im Skript durch den `N'MyDistributorAndPublisher'`-Wert.  
   
 > [!NOTE]  
 >  Der `-X`-Schalter deaktiviert Skriptvariablen.  

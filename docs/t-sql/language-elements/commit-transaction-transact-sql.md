@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278105"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72278105"
 
   Markiert das Ende einer erfolgreichen impliziten oder expliziten Transaktion. Ist @@TRANCOUNT gleich 1, werden von COMMIT TRANSACTION alle Datenänderungen seit dem Start der Transaktion dauerhaft in der Datenbank gespeichert. Dadurch werden die von der Transaktion belegten Ressourcen freigegeben, und @@TRANCOUNT wird auf 0 (null) herabgesetzt. Ist @@TRANCOUNT größer als 1, wird @@TRANCOUNT von COMMIT TRANSACTION lediglich um den Wert 1 verringert, und die Transaktion bleibt aktiv.  
   
- ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Artikellinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -76,7 +76,7 @@ Ist der Name einer benutzerdefinierten Variablen, die einen gültigen Transaktio
 
  Eine Option, die erfordert, dass für diese Transaktion ein Commit mit verzögerter Dauerhaftigkeit ausgeführt werden sollte. Die Anforderung wird ignoriert, wenn die Datenbank mit `DELAYED_DURABILITY = DISABLED` oder `DELAYED_DURABILITY = FORCED` geändert wurde. Weitere Informationen finden Sie im Thema [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Es liegt in der Verantwortung des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Programmierers, COMMIT TRANSACTION nur zu einem Zeitpunkt auszugeben, zu dem alle Daten, auf die die Transaktion verweist, logisch richtig sind.  
   
  War die Transaktion, für die ein Commit ausgeführt wird, eine verteilte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion, wird MS DTC von COMMIT TRANSACTION veranlasst, mithilfe eines Zweiphasencommit-Protokolls für alle an der Transaktion beteiligten Server ein Commit auszuführen. Erstreckt sich eine lokale Transaktion über mehrere Datenbanken in derselben Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s, verwendet die Instanz einen internen Zweiphasencommit, um für alle an der Transaktion beteiligten Datenbanken einen Commit auszuführen.  

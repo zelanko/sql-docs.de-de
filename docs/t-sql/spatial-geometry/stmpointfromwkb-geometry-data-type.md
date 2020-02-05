@@ -18,10 +18,10 @@ ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 86f995fc650460bdbda6004917c974377cd1b2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894868"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (geometry-Datentyp)

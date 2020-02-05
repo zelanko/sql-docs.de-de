@@ -23,10 +23,10 @@ ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3d44551ead01d3a51cd52501460fbc390b18a438
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251059"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
@@ -54,7 +54,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ## <a name="remarks"></a>Bemerkungen  
  Die KILL QUERY NOTIFICATION SUBSCRIPTION-Anweisung entfernt Abfragebenachrichtigungsabonnements, ohne dass eine Benachrichtigungsmeldung erstellt wird.  
   
- Wie in der dynamischen Verwaltungssicht [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) gezeigt wird, ist *subscription_id* die Abonnement-ID.  
+ Wie in der dynamischen Verwaltungssicht *sys.dm_qn_subscriptions &#40;Transact-SQL&#41;* gezeigt wird, ist [subscription_id](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) die Abonnement-ID.  
   
  Falls die angegebene Abonnement-ID nicht vorhanden ist, gibt die Anweisung einen Fehler zurück.  
   

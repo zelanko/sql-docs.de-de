@@ -12,10 +12,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d2cf30f4f01a30d8171e58cce3052e45fefa6179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930314"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
@@ -23,7 +23,7 @@ ms.locfileid: "67930314"
 
 Reduziert die Größe des Transaktionsprotokolls *anwendungsübergreifend* für die aktuelle [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbank. Die Daten werden defragmentiert, um das Transaktionsprotokoll zu verkleinern. Mit der Zeit kann es sein, dass das Datenbanktransaktionsprotokoll zu viele Bestandteile hat und dadurch nicht effizient verwendet werden kann. Verwenden Sie DBCC SHRINKLOG, um diese Fragmentierung und damit auch die Protokollgröße zu verringern.
   
-![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   

@@ -15,10 +15,10 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0fc0dbd2df2d0383e7fd63eddc941170d4b0a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67988653"
 ---
 # <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>Verfügbarkeitsreplikat ist in einer Always On-Verfügbarkeitsgruppe getrennt
@@ -30,10 +30,10 @@ ms.locfileid: "67988653"
 |-|-|  
 |**Richtlinienname**|Verfügbarkeitsreplikat-Verbindungsstatus|  
 |**Problem**|Das Verfügbarkeitsreplikat wird getrennt.|  
-|**Kategorie**|**Kritisch**|  
+|**Kategorie**|**Critical** (Kritisch)|  
 |**Facet**|Verfügbarkeitsreplikat|  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Diese Richtlinie überprüft den Verbindungsstatus zwischen Verfügbarkeitsreplikaten. Die Richtlinie befindet sich in einem fehlerhaften Zustand, wenn der Verbindungsstatus des Verfügbarkeitsreplikats DISCONNECTED lautet. Die Richtlinie befindet sich andernfalls in einem ordnungsgemäßen Zustand.  
   
 > [!NOTE]  

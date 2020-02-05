@@ -13,18 +13,18 @@ ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d7097c59f77b95a561420183e2e899c0672dc5e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908125"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Veröffentlichung (Peer-zu-Peer-Replikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Auf der Seite **Veröffentlichung** werden Transaktionsveröffentlichungen angezeigt, die für die Peer-zu-Peer-Replikation aktiviert sind. Veröffentlichungen werden auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften** aktiviert.  
   
-## <a name="options"></a>enthalten  
- **Verleger**  
+## <a name="options"></a>Tastatur  
+ **Herausgeber**  
  Zeigt den Server an, mit dem Sie verbunden sind. Um die Verbindung mit einem anderen Server herzustellen, wählen Sie **SQL Server-Verleger suchen**aus.  
   
  **Datenbanken und Veröffentlichungen**  

@@ -12,13 +12,13 @@ ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 278b22983ea339e2bfa9c388c530254aed57c872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087590"
 ---
-# <a name="mssqlserver7931"></a>MSSQLSERVER_7931
+# <a name="mssqlserver_7931"></a>MSSQLSERVER_7931
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -30,7 +30,7 @@ ms.locfileid: "68087590"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|Meldungstext|Datenbankfehler: The FileStream directory ID F_ID for a partition was seen twice. (Die FileStream-Verzeichnis-ID „F_ID“ für eine Partition wurde zweimal erkannt.)|  
+|Meldungstext|Datenbankfehler: Die FILESTREAM-Verzeichnis-ID F_ID für eine Partition wurde zweimal erkannt.|  
   
 ## <a name="explanation"></a>Erklärung  
 Dieselbe Partitions-ID für ein Filestream-Verzeichnis wurde in den Metadaten gefunden.  
@@ -48,5 +48,5 @@ Letztendlich kann es vorteilhaft sein, wenn Sie zu einem neuen Hardwaresystem we
 Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
   
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
-Nicht verfügbar. Dieser Fehler kann nicht automatisch repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+Nicht zutreffend Dieser Fehler kann nicht automatisch repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   

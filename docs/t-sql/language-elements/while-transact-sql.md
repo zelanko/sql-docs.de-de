@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095878"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "74095878"
 
   Legt eine Bedingung für die wiederholte Ausführung einer SQL-Anweisung oder eines Anweisungsblockes fest. Die Anweisungen werden wiederholt ausgeführt, solange die angegebene Bedingung true ist. Sie können die Ausführung der Anweisungen in der WHILE-Schleife mithilfe der Schlüsselwörter BREAK und CONTINUE auch innerhalb der Schleife steuern.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,7 +68,7 @@ WHILE Boolean_expression
  CONTINUE  
  Bewirkt, dass die WHILE-Schleife neu gestartet wird und alle Anweisungen nach dem CONTINUE-Schlüsselwort ignoriert werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn zwei oder mehr WHILE-Schleifen geschachtelt sind, wird mit der inneren BREAK-Anweisung zur nächsten äußersten Schleife gesprungen. Alle Anweisungen nach dem Ende der inneren Schleife werden zuerst ausgeführt, und dann wird die nächste äußerste Schleife neu gestartet.  
   
 ## <a name="examples"></a>Beispiele  
@@ -115,7 +115,7 @@ DEALLOCATE Employee_Cursor;
 GO 
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-simple-while-loop"></a>C: Einfache WHILE-Schleife  
  Im folgenden Beispiel verdoppelt die `$300`-Schleife die Preise und wählt dann den Höchstpreis aus, wenn der durchschnittliche Listenpreis eines Produkts unter `WHILE` liegt. Ist der Höchstpreis niedriger als oder gleich `$500`, wird die `WHILE`-Schleife erneut gestartet und der Preis erneut verdoppelt. Diese Schleife verdoppelt die Preise so lange, bis der Höchstpreis mehr als `$500` beträgt; dann wird die `WHILE`-Schleife beendet.  

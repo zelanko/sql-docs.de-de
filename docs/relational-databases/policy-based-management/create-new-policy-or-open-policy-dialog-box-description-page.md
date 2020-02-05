@@ -12,10 +12,10 @@ ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b3d8afca0504f34d2d78794e5fddb0ffbf1a6562
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558275"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Dialogfeld 'Neue Richtlinie erstellen' oder 'Richtlinie öffnen', Seite 'Beschreibung'
@@ -35,7 +35,7 @@ ms.locfileid: "75558275"
  **Zusätzlicher Hilfelink: Adresse**  
  Geben Sie den Link einer Webseite ein, die geöffnet werden soll, wenn Benutzer auf den Linktext klicken, der auf der Seite **Ergebnisse, Detailansicht** angezeigt wird.  
   
- **Zusätzlicher Hilfelink: Link testen**  
+ **Zusätzlicher Hilfelink: Testlink**  
  Klicken Sie, um den Link zu öffnen und die Gültigkeit des Links zu testen.  
   
  **Erstellt am**  

@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055183"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version (SQL Server-Suche)
@@ -39,9 +39,9 @@ ms.locfileid: "74055183"
   
 |Aktuelle Datei|Vorherige Datei|Anzahl betroffener Sprachen|Aktion für Dateien|Aktion für Registrierungseinträge|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
-|NaturalLanguage6.dll|NaturalLanguage6.dll|34|Erhalten und installieren Sie eine frühere Version von NaturalLanguage6.dll und überschreiben Sie die aktuelle Version der Datei.|Keine Aktion erforderlich.<br /><br /> Die Registrierungsschlüssel und Werte haben sich für diese Version nicht geändert.|  
+|NaturalLanguage6.dll|NaturalLanguage6.dll|34|Erhalten und installieren Sie eine frühere Version von NaturalLanguage6.dll und überschreiben Sie die aktuelle Version der Datei.|Keine weiteren Maßnahmen erforderlich.<br /><br /> Die Registrierungsschlüssel und Werte haben sich für diese Version nicht geändert.|  
 |(Anderer Dateiname)|NaturalLanguage6.dll|5|Erhalten und installieren Sie eine frühere Version von NaturalLanguage6.dll und überschreiben Sie die aktuelle Version der Datei.|Ändern Sie einen Satz von Registrierungseinträgen, um die frühere Version der Komponenten anzugeben.|  
-|(Anderer Dateiname)|(Anderer Dateiname)|6|Keine Aktion erforderlich.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup kopiert sowohl die aktuelle als auch die früheren Versionen der Komponenten in den Ordner "Binn".|Ändern Sie einen Satz von Registrierungseinträgen, um die frühere Version der Komponenten anzugeben.|  
+|(Anderer Dateiname)|(Anderer Dateiname)|6|Keine weiteren Maßnahmen erforderlich.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup kopiert sowohl die aktuelle als auch die früheren Versionen der Komponenten in den Ordner "Binn".|Ändern Sie einen Satz von Registrierungseinträgen, um die frühere Version der Komponenten anzugeben.|  
   
 > [!WARNING]  
 >  Wenn Sie die aktuelle Version der Datei NaturalLanguage6.dll mit einer anderen Version ersetzen, dann ist das Verhalten aller Sprachen, die diese Datei verwenden, davon betroffen.  
@@ -80,17 +80,17 @@ ms.locfileid: "74055183"
 |Malaiisch|msl|1086|  
 |Neutral|Neutral|0000|  
 |Norwegial Bokmaal|nor|1044|  
-|Punjabi|pan|1094|  
+|Pandschabi|Pfanne|1094|  
 |Portugiesisch (Brasilien)|ptb|1046|  
 |Portugiesisch|ptg|2070|  
 |Rumänisch|rom|1048|  
 |Slowakisch|sky|1051|  
 |Slowenisch|slv|1060|  
-|Serbisch - Kyrillisch|srb|3098|  
-|Serbisch - Lateinisch|srl|2074|  
+|Serbisch (Kyrillisch)|srb|3098|  
+|Serbisch (Lateinisch)|srl|2074|  
 |Schwedisch|sve|1053|  
-|Tamil|tam|1097|  
-|Telugu|tel|1098|  
+|Tamilisch|tam|1097|  
+|Telugu|tel|1\.098|  
 |Ukrainisch|ukr|1058|  
 |Urdu|urd|1056|  
 |Vietnamesisch|vit|1066|  
@@ -154,7 +154,7 @@ ms.locfileid: "74055183"
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
+5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\CLSID**.  
   
 6.  Fügen Sie mithilfe der folgenden Schritte für die COM ClassIDs für die Schnittstellen der früheren Wörtertrennung und die Wortstammerkennung für die ausgewählte Sprache neue Schlüssel hinzu:  
   
@@ -166,7 +166,7 @@ ms.locfileid: "74055183"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der vorherigen Wortstammerkennung aus der Tabelle.  
   
-7.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+7.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\Sprache\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 8.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wörtertrennung.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "74055183"
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-3.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
+3.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\CLSID**.  
   
 4.  Wenn die folgenden Schlüssel nicht vorhanden sind, gehen Sie folgendermaßen vor, um neue Schlüssel für die COM ClassIDs für die Schnittstellen der aktuellen Wörtertrennung und der Wortstammerkennung für die ausgewählte Sprache hinzuzufügen:  
   
@@ -195,7 +195,7 @@ ms.locfileid: "74055183"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der aktuellen Wortstammerkennung aus der Tabelle.  
   
-5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\Sprache\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 6.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wörtertrennung.  
   
@@ -214,8 +214,8 @@ ms.locfileid: "74055183"
 |---------------|------------------|-------------|  
 |Vorherige CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|Aktuelle CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
-|Aktueller Dateiname|MSWB7.dll|None|  
+|Aktuelle CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Keine|  
+|Aktueller Dateiname|MSWB7.dll|Keine|  
   
  **Deutsch (deu), LCID 1031**  
   
@@ -232,8 +232,8 @@ ms.locfileid: "74055183"
 |---------------|------------------|-------------|  
 |Vorherige CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|Aktuelle CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
-|Aktueller Dateiname|MsWb70011.dll|None|  
+|Aktuelle CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|Keine|  
+|Aktueller Dateiname|MsWb70011.dll|Keine|  
   
  **Niederländisch (nld), LCID 1043**  
   
@@ -262,7 +262,7 @@ ms.locfileid: "74055183"
 |--------------|---------------------------------------|----------|  
 |Chinesisch (vereinfacht)|chs|2052|  
 |Chinesisch (traditionell)|cht|1028|  
-|Thai|tha|1054|  
+|Thailändisch|tha|1054|  
 |Chinesisch (traditionell)|zh-hk|3076|  
 |Chinesisch (traditionell)|zh-mo|5124|  
 |Chinesisch (vereinfacht)|zh-sg|4100|  
@@ -275,7 +275,7 @@ ms.locfileid: "74055183"
   
 1.  Entfernen Sie die Dateien für die aktuelle Version der Komponenten nicht aus dem Ordner "Binn".  
   
-2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
+2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\CLSID**.  
   
 3.  Fügen Sie mithilfe der folgenden Schritte für die COM ClassIDs für die Schnittstellen der früheren Wörtertrennung und die Wortstammerkennung für die ausgewählte Sprache neue Schlüssel hinzu:  
   
@@ -287,7 +287,7 @@ ms.locfileid: "74055183"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der vorherigen Wortstammerkennung aus der Tabelle.  
   
-4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\Sprache\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 5.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wörtertrennung.  
   
@@ -299,7 +299,7 @@ ms.locfileid: "74055183"
   
 1.  Entfernen Sie die Dateien für die vorherige Version der Komponenten nicht aus dem Ordner "Binn".  
   
-2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
+2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\CLSID**.  
   
 3.  Wenn die folgenden Schlüssel nicht vorhanden sind, gehen Sie folgendermaßen vor, um neue Schlüssel für die COM ClassIDs für die Schnittstellen der aktuellen Wörtertrennung und der Wortstammerkennung für die ausgewählte Sprache hinzuzufügen:  
   
@@ -311,7 +311,7 @@ ms.locfileid: "74055183"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der aktuellen Wortstammerkennung aus der Tabelle.  
   
-4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\Sprache\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 5.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wörtertrennung.  
   
@@ -348,8 +348,8 @@ ms.locfileid: "74055183"
 |---------------|------------------|-------------|  
 |Vorherige CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Vorheriger Dateiname|Thawbrkr.dll|Thawbrkr.dll|  
-|Aktuelle CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
-|Aktueller Dateiname|MsWb7001e.dll|None|  
+|Aktuelle CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|Keine|  
+|Aktueller Dateiname|MsWb7001e.dll|Keine|  
   
  **Chinesisch traditionell (zh-hk), LCID 3076**  
   

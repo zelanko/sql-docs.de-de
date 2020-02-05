@@ -20,10 +20,10 @@ ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0a9954e823ae66017c3a6105f0f0ec27964b7043
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246168"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>Erteilen von Verfügbarkeitsgruppenberechtigungen mit GRANT (Transact-SQL)
@@ -100,7 +100,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>A. Erteilen der VIEW DEFINITION-Berechtigung für eine Verfügbarkeitsgruppe  
- Im folgenden Beispiel wird dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `VIEW DEFINITION` die `MyAg`-Berechtigung für die Verfügbarkeitsgruppe `ZArifin` erteilt.  
+ Im folgenden Beispiel wird dem `VIEW DEFINITION`-Anmeldenamen `MyAg` die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Berechtigung für die Verfügbarkeitsgruppe `ZArifin` erteilt.  
   
 ```  
 USE master;  
@@ -109,7 +109,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Gewähren der TAKE OWNERSHIP-Berechtigung mit der GRANT OPTION  
- Im folgenden Beispiel wird dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer `TAKE OWNERSHIP` die `MyAg`-Berechtigung für die Verfügbarkeitsgruppe `PKomosinski` mit `GRANT OPTION` erteilt.  
+ Im folgenden Beispiel wird dem `TAKE OWNERSHIP`-Benutzer `MyAg` die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Berechtigung für die Verfügbarkeitsgruppe `PKomosinski` mit `GRANT OPTION` erteilt.  
   
 ```  
 USE master;  
@@ -119,7 +119,7 @@ GO
 ```  
   
 ### <a name="c-granting-control-permission-on-an-availability-group"></a>C. Erteilen der CONTROL-Berechtigung für eine Verfügbarkeitsgruppe  
- Im folgenden Beispiel wird dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer `CONTROL` die `MyAg`-Berechtigung für die Verfügbarkeitsgruppe `PKomosinski` erteilt. CONTROL ermöglicht dem Anmeldenamen die umfassende Kontrolle der Verfügbarkeitsgruppe, auch wenn er nicht der Besitzer der Verfügbarkeitsgruppe ist. Informationen zum Ändern des Besitzers finden Sie unter [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Im folgenden Beispiel wird dem `CONTROL`-Benutzer `MyAg` die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Berechtigung für die Verfügbarkeitsgruppe `PKomosinski` erteilt. CONTROL ermöglicht dem Anmeldenamen die umfassende Kontrolle der Verfügbarkeitsgruppe, auch wenn er nicht der Besitzer der Verfügbarkeitsgruppe ist. Informationen zum Ändern des Besitzers finden Sie unter [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
 ```  
 USE master;  

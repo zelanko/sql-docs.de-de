@@ -14,17 +14,17 @@ ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 28fb816554093c78c1ce71d7a3712ca8804fd4af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115662"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Wartungsplan (Unterplaneigenschaften)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Verwenden Sie das Dialogfeld **Wartungsplan (Unterplaneigenschaften)** , um einen Namen, eine Beschreibung und einen Zeitplan für einen Unterplan eines Wartungsplans anzugeben. Klicken Sie auf der Registerkarte **Entwurf** des Wartungsplans auf **Unterplaneigenschaften** , oder doppelklicken Sie auf einen Unterplan im Designer-Raster, um dieses Dialogfeld anzuzeigen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen Namen für den Unterplan ein. Der Name ist auf 128 Zeichen beschränkt.  
   

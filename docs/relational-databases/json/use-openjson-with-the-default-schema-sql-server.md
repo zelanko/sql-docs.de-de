@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3e4aac74ac35fc5d75320b420e85b130be110340
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096038"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>Verwenden von OPENJSON mit dem Standardschema (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "74096038"
  Hier ein paar Beispiele, in denen **OPENJSON** mit dem Standardschema verwendet wird. Weitere Informationen und Beispiele finden Sie unter [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
 ## <a name="example---return-each-property-of-an-object"></a>Beispiel: Rückgabe jeder Eigenschaft eines Objekts  
- **Dataseteigenschaften**  
+ **Abfrage**  
   
 ```sql  
 SELECT *
@@ -38,12 +38,12 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
 |Key|value|  
 |---------|-----------|  
-|NAME|John|  
+|name|John|  
 |surname|Doe|  
 |age|45|  
   
 ## <a name="example---return-each-element-of-an-array"></a>Beispiel: Rückgabe jedes Element eines Arrays  
- **Dataseteigenschaften**  
+ **Abfrage**  
   
 ```sql  
 SELECT [key],value
@@ -85,11 +85,11 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **Ergebnisse**  
   
-|Key|value|Typ|  
+|Key|value|type|  
 |---------|-----------|----------|  
-|Typ|1|0|  
+|type|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
-|Transponder|[ "Sport", "Water polo" ]|4|  
+|tags|[ "Sport", "Water polo" ]|4|  
   
 ## <a name="example---combine-relational-data-and-json-data"></a>Beispiel: Kombinieren relationale Daten und JSON-Daten  
  Im folgenden Beispiel hat die SalesOrderHeader-Tabelle eine SalesReason-Textspalte, die ein Array von SalesOrderReasons im JSON-Format enthält. Die SalesOrderReasons-Objekte enthalten Eigenschaften, z.B. „Manufacturer“ und „Quality“. Das Beispiel erstellt einen Bericht, der jede Zeile der Bestellung und die zugehörigen Verkaufsgründe verknüpft, indem das JSON-Array von Verkaufsgründe erweitert wird, als wären die Gründe in einer separaten untergeordneten Tabelle gespeichert.  

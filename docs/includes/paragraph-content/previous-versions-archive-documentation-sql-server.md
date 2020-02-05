@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 28835571ef6bd3690884ea3e2b916d0c0d237eab
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73057332"
----
 
 Wir sammeln die Dokumentation für sehr alte Versionen von Microsoft SQL Server und bewahren diese in einer Reihe archivierter Webseiten auf. Die archivierten Webseiten werden nicht von Suchmaschinen wie Bing.com und Google.com verarbeitet. Sie können diese Archive jedoch unter der Adresse _previous-versions/sql/_ unserer Dokumentation anzeigen:
 
@@ -14,7 +6,7 @@ Wir sammeln die Dokumentation für sehr alte Versionen von Microsoft SQL Server 
 Diese Archive beinhalten die Dokumentation für mindestens folgende ältere Versionen:
 
 - SQL Server 2012
-- SQL Server 2008 R2
+- SQL Server 2008 R2
 - SQL Server 2008
 - SQL Server 2005
 

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934855"
 ---
 # <a name="upgrade-data-quality-services"></a>Aktualisieren von Data Quality Services
@@ -28,7 +28,7 @@ Dieser Artikel enthält Informationen dazu, wie Sie ein Upgrade der vorhandenen 
 > -   Um eine Verbindung mit dem [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality-Servers herzustellen und Data Quality-Aufgaben auszuführen, können Sie die aktuelle oder eine frühere Version des Data Quality-Clients oder die [DQS-Bereinigungstransformation](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services verwenden.  
 > -   Nachdem Data Quality Services und Master Data Services aktualisiert wurden, wird keine frühere Version des Master Data Services-Add-Ins für Excel mehr funktionieren. Sie können die [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Version des Master Data Services-Add-Ins für Excel [hier](https://go.microsoft.com/fwlink/?LinkID=506665)herunterladen.  
   
-##  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sie müssen als Mitglied der Administratorgruppe auf dem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Computer angemeldet sein.  
   
@@ -56,7 +56,7 @@ Dieser Artikel enthält Informationen dazu, wie Sie ein Upgrade der vorhandenen 
   
     1.  Starten Sie eine -Eingabeaufforderung als Administrator.  
   
-    2.  Wechseln Sie an der Eingabeaufforderung zu dem Verzeichnis, in dem DQSInstaller.exe enthalten ist. Bei Verwendung der Standardinstanz von SQL Server steht die Datei DQSInstaller.exe unter C:\Programme\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn zur Verfügung:  
+    2.  Wechseln Sie an der Eingabeaufforderung zu dem Verzeichnis, in dem {1}DQSInstaller.exe{2} enthalten ist. Bei Verwendung der Standardinstanz von SQL Server steht die Datei DQSInstaller.exe unter C:\Programme\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn zur Verfügung:  
 
       >[!NOTE]
       >Ersetzen Sie [nn] im Ordnerpfad mit der [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Versionsnummer.
@@ -91,7 +91,7 @@ Dieser Artikel enthält Informationen dazu, wie Sie ein Upgrade der vorhandenen 
   
 3.  In der Ausgabe wird ein Eintrag für jedes Upgrade zusammen mit dem Upgradedatum angezeigt. Der höchste VERSION_ID- und ASSEMBLY_VERSION-Wert zum letzten angegebenen Datum entspricht der aktuellen Version. Der Wert 2 in der STATUS-Spalte gibt die erfolgreiche Ausführung an. Falls ein Fehler aufgetreten ist, wird dieser in der ERROR-Spalte aufgeführt. Beispiel für eine Ausgabe:  
   
-    |im Elementknoten &lt;Customer ID="1"|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|Fehler|  
+    |id|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMÄNE\Benutzername>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMÄNE\Benutzername>|2||  

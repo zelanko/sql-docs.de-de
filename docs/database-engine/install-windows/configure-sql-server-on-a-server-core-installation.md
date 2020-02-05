@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251595"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Konfigurieren von SQL Server in einer Server Core-Installation
@@ -39,7 +39,7 @@ Weitere Informationen zur Remotekonfiguration und -verwaltung einer Server Core-
   
 - [Install Server Roles and Features on a Server Core Server Windows Server 2012 R2 (Installieren von Serverrollen und Features auf einem Server Core-Server (Windows Server 2012 R2))](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Verwalten einer Server Core-Installation: Übersicht](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Managing a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
 - [Administering a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=245963)
   
@@ -99,7 +99,7 @@ Die Aktivierung von AlwaysOn-Verfügbarkeitsgruppen ist eine Voraussetzung dafü
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>Remoteverwenden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager  
 Diese Schritte müssen auf einem PC mit der Clientversion von Windows oder Windows Server ausgeführt werden, auf dem die grafische Shell für Server installiert ist.  
   
-1. Öffnen Sie **Computerverwaltung**. Klicken Sie auf **Starten**, geben Sie `compmgmt.msc` ein, und klicken Sie dann auf **OK**, um **Computerverwaltung** zu öffnen.    
+1. Öffnen Sie **Computerverwaltung**. Klicken Sie auf **Starten**, geben Sie **ein, und klicken Sie dann auf**OK`compmgmt.msc`, um **Computerverwaltung** zu öffnen.    
   
 2. Klicken Sie in der Konsolenstruktur mit der rechten Maustaste auf **Computerverwaltung**, und klicken Sie dann auf **Verbindung mit anderem Computer herstellen**.  
   
@@ -225,7 +225,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Verwenden von Tools zur Problembehandlung  
  Mit dem Hilfsprogramm [SQLdiag](../../tools/sqldiag-utility.md) können Sie Protokolle und Datendateien von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen Servertypen sammeln. Dies kann hilfreich sein, um Server für eine gewisse Zeit zu überwachen oder bestimmte Serverprobleme zu behandeln. SQLdiag dient dazu, das Sammeln von Diagnoseinformationen für Microsoft Support Services zu beschleunigen und zu vereinfachen.  
   
- Sie können das Hilfsprogramm in der Administratoreingabeaufforderung auf Server Core mit der Syntax starten, die in folgendem Artikel angegeben wird: [SQLdiag (Hilfsprogramm)](../../tools/sqldiag-utility.md).  
+ Sie können das Hilfsprogramm in der Administrator-Eingabeaufforderung auf dem Server Core-Computer mit der Syntax starten, die im Artikel [SQLdiag Utility](../../tools/sqldiag-utility.md)angegeben ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren von SQL Server unter Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

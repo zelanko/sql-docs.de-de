@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f63cb12399efd7417f9b00695d54b1356f681fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934462"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Schätzen der Größe eines nicht gruppierten Index
@@ -112,7 +112,7 @@ ms.locfileid: "67934462"
   
      Da sich eine Indexzeile nicht auf zwei Seiten erstreckt, muss die Anzahl der Indexzeilen pro Seite auf die nächste ganze Zeile abgerundet werden. Die Angabe 2 in der Formel bezieht sich auf den Eingang der Zeile in das Slotarray der Seite.  
   
-## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>Schritt 2: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen in der Blattebene verwendet wird  
+## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>Schritt 2: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen in der Blattebene verwendet wird  
  Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern der Blattebene des Indexes erforderlich ist. Sie benötigen die in Schritt 1 aufgezeichneten Werte, um diesen Schritt durchführen zu können.  
   
 1.  Geben Sie die Anzahl der Spalten mit fester und mit variabler Länge auf Blattebene an, und berechnen Sie den Speicherplatz, der für deren Speicherung erforderlich ist:  
@@ -121,7 +121,7 @@ ms.locfileid: "67934462"
     >  Sie können einen nicht gruppierten Index erweitern, indem Nichtschlüsselspalten zusätzlich zu Indexschlüsselspalten eingeschlossen werden. Diese zusätzlichen Spalten werden auf der Blattebene des nicht gruppierten Indexes gespeichert. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  Sie können **varchar**-, **nvarchar**-, **varbinary**- oder **sql_variant** -Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8060 Bytes ist. Die Länge jeder einzelnen Spalte unterliegt auch weiterhin der Beschränkung von 8.000 Byte für eine **varchar**-, **varbinary**- oder **sql_variant** -Spalte und von 4.000 Byte für **nvarchar** -Spalten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten. Dies gilt auch für die Zeilen auf Blattebene eines nicht gruppierten Indexes, die eingeschlossene Spalten enthalten.  
+    >  Sie können **varchar**-, **nvarchar**-, **varbinary**- oder **sql_variant** -Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8.060 Byte ist. Die Länge jeder einzelnen Spalte unterliegt auch weiterhin der Beschränkung von 8.000 Byte für eine **varchar**-, **varbinary**- oder **sql_variant** -Spalte und von 4.000 Byte für **nvarchar** -Spalten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten. Dies gilt auch für die Zeilen auf Blattebene eines nicht gruppierten Indexes, die eingeschlossene Spalten enthalten.  
   
      Wenn der nicht gruppierte Index keine eingeschlossenen Spalten besitzt, verwenden Sie die Werte aus Schritt 1 einschließlich aller Änderungen, die ggf. in Schritt 1.3 vorgenommen wurden:  
   
@@ -209,7 +209,7 @@ ms.locfileid: "67934462"
   
      ***Leaf_Space_Used***  = 8192 x ***Num_Leaf_Pages***  
   
-## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>Schritt 3: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen in den inneren Knotenebenen verwendet wird  
+## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>Schritt 3: Berechnen des Speicherplatzes, der zum Speichern der Indexinformationen in den inneren Knotenebenen verwendet wird  
  Befolgen Sie diese Schritte, um abzuschätzen, wie viel Speicherplatz zum Speichern der Zwischen- und Stammebenen des Indexes erforderlich ist. Sie benötigen die in Schritt 2 und 3 errechneten Werte, um diesen Schritt durchführen zu können.  
   
 1.  Berechnen Sie die Anzahl der inneren Knotenebenen im Index:  
@@ -249,7 +249,7 @@ ms.locfileid: "67934462"
   
 -   LOB-Werte (Large Object)  
   
-     Der Algorithmus zum Berechnen des genauen Speicherplatzes, der zum Speichern der Werte der LOB-Datentypen **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**und **image** erforderlich ist, ist komplex. Es ist ausreichend, einfach die durchschnittliche Größe der erwarteten LOB-Werte zu addieren, diese mit ***Num_Rows***zu multiplizieren und das Ergebnis dann zur Gesamtgröße des nicht gruppierten Indexes zu addieren.  
+     Der Algorithmus zum Berechnen des genauen Speicherplatzes, der zum Speichern der Werte der LOB-Datentypen **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**, and **image** erforderlich ist, ist komplex. Es ist ausreichend, einfach die durchschnittliche Größe der erwarteten LOB-Werte zu addieren, diese mit ***Num_Rows***zu multiplizieren und das Ergebnis dann zur Gesamtgröße des nicht gruppierten Indexes zu addieren.  
   
 -   Komprimierung  
   

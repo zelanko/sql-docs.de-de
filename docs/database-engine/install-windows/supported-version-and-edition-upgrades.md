@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 99b6522316928fcd7397d27c1a5c85d927a8e0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934863"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Unterstützte Versions- und Editionsupgrades
@@ -104,7 +104,7 @@ In der nachfolgenden Tabelle sind die unterstützten Szenarien für das Upgrade 
 
  \* Microsoft-Unterstützung zum Aktualisieren von Release Candidate-Software ist speziell für Kunden vorgesehen, die am Technology Adoption Program (TAP) teilgenommen haben. 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]-Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
 In diesem Abschnitt wird die [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] -Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]erläutert. In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]können Sie die folgenden Schritte ausführen:  
   
 -   Anfügen einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank (MDF-/LDF-Dateien) an eine [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]-Instanz der Datenbank-Engine.  

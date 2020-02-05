@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75501984"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
@@ -37,7 +37,7 @@ Der [ring_buffer-Abschnitt](#h2_target_ring_buffer) enthält ein Beispiel zur Ve
 ### <a name="prerequisites"></a>Voraussetzungen
 
 
-- Allgemeine Kenntnisse der Grundlagen von erweiterten Ereignissen. Informationen finden Sie im [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
+- Allgemeine Kenntnisse der Grundlagen von erweiterten Ereignissen, wie in [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)beschrieben.
 
 
 - Vorhandene Installation einer neueren Version des häufig aktualisierten Hilfsprogramms SQL Server Management Studio (SSMS.exe). Einzelheiten dazu finden Sie unter:

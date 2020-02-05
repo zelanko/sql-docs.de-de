@@ -14,17 +14,17 @@ ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5c99e51dd90f17313d146fce2b6b02802a579eb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944822"
 ---
 # <a name="restore-database-files-page"></a>Datenbank wiederherstellen (Seite Dateien)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Auf der Seite **Dateien** des Dialogfelds **Datenbank wiederherstellen** können Sie die Dateien verwalten, die Sie für die Wiederherstellung in der Datenbank ausgewählt haben.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="restore-database-files-as"></a>Datenbankdateien wiederherstellen als  
  Mit dieser Option weisen Sie den wiederhergestellten Dateien den neuen Dateipfad zu und verwalten den Pfad.  
@@ -32,7 +32,7 @@ ms.locfileid: "67944822"
  **Alle Dateien verschieben in Ordner**  
  Wiederhergestellte Dateien werden verschoben.  
   
-|Option|und Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Datendateiordner**|Geben Sie den Namen des Datendateiordners ein, in den die wiederhergestellten Datendateien verschoben werden sollen, oder navigieren Sie zu diesem.|  
 |**Protokolldateiordner**|Geben Sie den Ordner mit den Protokolldateien ein, in den die wiederhergestellte Protokolldatei verschoben werden soll, oder navigieren Sie zu diesem.|  
