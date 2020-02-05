@@ -1,6 +1,6 @@
 ---
 title: Zusammenfassungsstatistiken in RevoScaleR
-description: 'Tutorial: Exemplarische Vorgehensweise zur Berechnung statistischer Zusammenfassungsstatistiken mithilfe der R-Sprache auf SQL Server.'
+description: 'RevoScaleR tutorial 5: How to compute statistical summary statistics using the R language on SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ece8cdac4f39cfd5d4b93484f18b0d415cc2291
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 43745602fc099f1b992eb1d76622ff3d7e6d0916
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727295"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947276"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Berechnen von Zusammenfassungstatistiken in R (SQL Server- und RevoScaleR-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Diese Lerneinheit ist Teil des [RevoScaleR-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zum Verwenden von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+This is tutorial 5 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-Es werden die in vorherigen Lektionen erstellten Datenquellen und Computekontexte verwendet, um in SQL Server leistungsstarke R-Skripts auszuführen. In dieser Lektion verwenden Sie Computekontexte von lokalen und Remoteservern für die folgenden Aufgaben:
+This tutorial uses the established data sources and compute contexts created in previous tutorials to run high-powered R scripts. In this tutorial, you will use local and remote server compute contexts for the following tasks:
 
 > [!div class="checklist"]
 > * Wechseln des Computekontexts auf SQL Server
 > * Abrufen von Zusammenfassungsstatistiken für Remotedatenobjekte
 > * Berechnen einer lokalen Zusammenfassung
 
-Wenn Sie die vorherigen Lektionen abgeschlossen haben, sollten Sie über die folgenden Remotecomputekontexte verfügen: sqlCompute und sqlComputeTrace. Wenn Sie fortfahren, verwenden Sie sqlCompute und den lokalen Computekontext in den nachfolgenden Lektionen.
+If you completed the previous tutorials, you should have these remote compute contexts: sqlCompute and sqlComputeTrace. Moving forward, you use will sqlCompute and the local compute context in subsequent tutorials.
 
-Verwenden Sie in der folgenden Lektion eine R-IDE oder **Rgui** zum Ausführen des R-Skripts.
+Use an R IDE or **Rgui** to run the R script in this tutorial.
 
 ## <a name="compute-summary-statistics-on-remote-data"></a>Berechnen von Zusammenfassungsstatistiken für Remotedaten
 
@@ -38,9 +38,9 @@ Bevor Sie einen R-Code ausführen können, müssen Sie den Remotecomputekontext 
 
 Ein Computekontext bleibt so lange aktiv, bis Sie ihn ändern. Alle R-Skripts, die *nicht* in einem Remoteserverkontext ausgeführt werden können, werden automatisch lokal ausgeführt.
 
-Um die Funktionsweise eines Computekontexts besser zu verstehen, generieren Sie eine Zusammenfassungsstatistik für die sqlFraudDS-Datenquelle auf der SQL Server-Remoteinstanz. Dieses Datenquellenobjekt wurde in [Lektion 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) erstellt und stellt die ccFraudSmall-Tabelle in der RevoDeepDive-Datenbank dar. 
+Um die Funktionsweise eines Computekontexts besser zu verstehen, generieren Sie eine Zusammenfassungsstatistik für die sqlFraudDS-Datenquelle auf der SQL Server-Remoteinstanz. This data source object was created in [tutorial two](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) and represents the ccFraudSmall table in the RevoDeepDive database. 
 
-1. Ändern Sie den Computekontext in sqlCompute, der in der vorherigen Lektion erstellt wurde:
+1. Switch the compute context to sqlCompute created in the previous tutorial:
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -111,7 +111,7 @@ Number of valid observations: 10000
   
    Die tatsächlichen Ergebnisse sollten denen entsprechen, die beim Ausführen von **rxSummary** im Kontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computers ausgegeben werden. Der Vorgang kann jedoch schneller oder langsamer sein. Dies hängt hauptsächlich von der Verbindung zu Ihrer Datenbank ab, da die Daten für die Analyse auf Ihren lokalen Computer übertragen werden.
 
-4. Wechseln Sie für die nächsten Lektionen wieder zum Remotecomputekontext.
+4. Switch back to the remote compute context for the next several tutorials.
 
     ```R
     rxSetComputeContext(sqlCompute)

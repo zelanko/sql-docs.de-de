@@ -11,10 +11,10 @@ ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000705"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Selektive XML-Indizes (SXI)
@@ -120,7 +120,7 @@ FOR
   
 -   Indizieren von Knoten mit binären XS-Typen: z. B. base64Binary und hexBinary.  
   
--   Angeben von Knoten, die mit XPath-Ausdrücken indiziert werden sollen und am Ende das Platzhalterzeichen `*` aufweisen: z. B. `/a/b/c/*`, `/a//b/*` oder `/a/b/*:c`.  
+-   Angeben von Knoten, die mit XPath-Ausdrücken indiziert werden sollen und am Ende das Platzhalterzeichen `*` aufweisen: z. B.  `/a/b/c/*`, `/a//b/*`oder `/a/b/*:c`.  
   
 -   Indizieren einer anderen Achse als untergeordnetes Element, Attribut oder Nachfolger. Der `//<step>` -Fall ist als spezieller Fall zulässig.  
   
@@ -129,7 +129,7 @@ FOR
 -   Angeben und Abrufen des Bezeichners für einen Knoten mit der id()-Funktion.  
   
   
-###  <a name="prereq"></a> Erforderliche Komponenten  
+###  <a name="prereq"></a> Voraussetzungen  
  Die folgenden Voraussetzungen müssen erfüllt sein, bevor Sie einen selektiven XML-Index für eine XML-Spalte in einer Benutzertabelle erstellen können:  
   
 -   Für den Primärschlüssel der Benutzertabelle muss ein gruppierter Index vorhanden sein.  
@@ -195,7 +195,7 @@ FOR
   
 |||  
 |-|-|  
-|**Task**|**Thema**|  
+|**Aufgabe**|**Thema**|  
 |Angeben der zu indizierenden Knotenpfade und optionalen Optimierungshinweise, wenn Sie einen selektiven XML-Index erstellen oder ändern.|[Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |Erstellen, Ändern oder Löschen eines selektiven XML-Indexes.|[Erstellen, Ändern und Löschen selektiver XML-Indizes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |Erstellen, Ändern oder Löschen eines sekundären selektiven XML-Indexes.|[Erstellen, Ändern und Löschen sekundärer, selektiver XML-Indizes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  

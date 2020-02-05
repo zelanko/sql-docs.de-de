@@ -22,10 +22,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: dbf87499f1bc5c23ae272daa393ef981a97e66d5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892564"
 ---
 # <a name="upgrade-analysis-services"></a>Aktualisieren von Analysis Services
@@ -81,14 +81,14 @@ ms.locfileid: "68892564"
 |-|-|-|  
 |Tabellarisch|1400|SQL Server 2017|
 |Tabellarisch|1200|SQL Server 2016|  
-|Tabellarisch|1103|SQLServer 2014|  
+|Tabellarisch|1103|SQL Server 2014|  
 |Tabellarisch|1100|SQL Server 2012|  
-|Multidimensional|1100|SQL Server 2012 und höher|  
-|Multidimensional|1050|SQL Server 2005, 2008, 2008 R2|  
+|Mehrdimensional|1100|SQL Server 2012 und höher|  
+|Mehrdimensional|1050|SQL Server 2005, 2008, 2008 R2|  
   
  Weitere Informationen finden Sie unter [Kompatibilitätsgrad einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services) und [Kompatibilitätsgrad für tabellarische Modelle von Analysis Services](https://docs.microsoft.com/analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Aktualisieren von PowerPivot für SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
   

@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251292"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Verwenden des Abfragespeichers mit In-Memory-OLTP
@@ -35,7 +35,7 @@ Es gibt jedoch einige Aspekte, die Benutzer bei der Verwendung des Abfragespeich
   
 -   Wenn Sie *\@new_collection_value* auf 0 festlegen, erfasst der Abfragespeicher keine Laufzeitstatistiken mehr für die betroffene Prozedur oder für die gesamte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.  
   
--   Der mit [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) konfigurierte Wert wird nicht beibehalten. Stellen Sie nach dem Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicher, dass Sie die Statistikerfassung erneut überprüfen und konfigurieren.  
+-   Der mit [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) konfigurierte Wert wird nicht beibehalten. Stellen Sie nach dem Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sicher, dass Sie die Statistikerfassung erneut überprüfen und konfigurieren.  
   
 -   Wie bei der regulären Statistikerfassung verringert sich die Leistung möglicherweise, wenn Sie den Abfragespeicher zum Nachverfolgen der Arbeitsauslastungsausführung verwenden. Möglicherweise möchten Sie in Betracht ziehen, die Statistikerfassung nur für eine wichtige Teilmenge nativ kompilierter gespeicherter Prozeduren zu aktivieren.  
   
@@ -47,7 +47,7 @@ Es gibt jedoch einige Aspekte, die Benutzer bei der Verwendung des Abfragespeich
     
 -   Wenn Sie den Abfragespeicher in einer Datenbank mit gemischten Arbeitsauslastungen ausführen, können Sie von der nativen Kompilierung des Codes generierte Abfragepläne mithilfe des Felds **is_natively_compiled** in [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) schnell finden.  
   
--   Der Abfragespeicher-Erfassungsmodus (*QUERY_CAPTURE_MODE*-Parameter in der **ALTER TABLE**-Anweisung) beeinflusst keine Abfragen von nativ kompilierten Modulen, da diese unabhängig vom konfigurierten Wert immer erfasst werden. Dies beinhaltet das Festlegen von `QUERY_CAPTURE_MODE = NONE`.  
+-   Der Abfragespeicher-Erfassungsmodus (*QUERY_CAPTURE_MODE* -Parameter in der **ALTER TABLE** -Anweisung) beeinflusst keine Abfragen von nativ kompilierten Modulen, da diese unabhängig vom konfigurierten Wert immer erfasst werden. Dies beinhaltet das Festlegen von `QUERY_CAPTURE_MODE = NONE`.  
   
 -   Die durch den Abfragespeicher erfasste Dauer der Abfragekompilierung enthält nur die Zeit, die für die Optimierung von Abfragen vor dem Generieren des nativen Codes verwendet wurde. Genauer gesagt umfasst es nicht die Zeit für die C-Code-Kompilierung und -Generierung interner Datenstrukturen, die für die Generierung von C-Code erforderlich sind.  
   
@@ -137,7 +137,7 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Erstellen einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
- [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   
+ [Best Practices für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   

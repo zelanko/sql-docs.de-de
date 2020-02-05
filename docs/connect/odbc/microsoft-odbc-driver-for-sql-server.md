@@ -11,10 +11,10 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f8e46dd253514329ee486c940a14f8dc48b4e9b
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68702693"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -31,13 +31,13 @@ Das folgende C++-Beispiel zeigt, wie die ODBC-APIs verwendet werden, um eine Ver
 
 - [C++-Codebeispiel unter Verwendung von ODBC](../../odbc/reference/sample-odbc-program.md)
 
-## <a name="download"></a>Herunterladen
+## <a name="download"></a>Download
 
 - ![Download-Abwärtspfeil-eingekreist](../../ssdt/media/download.png)[So wird der ODBC-Treiber heruntergeladen](download-odbc-driver-for-sql-server.md)
 
 ## <a name="documentation"></a>Dokumentation
 
-### <a name="features"></a>Funktionen
+### <a name="features"></a>Features
 
 - [Benutzerdefinierte Keystore-Anbieter](../../connect/odbc/custom-keystore-providers.md)
 - [Datenklassifizierung](../../connect/odbc/data-classification.md)

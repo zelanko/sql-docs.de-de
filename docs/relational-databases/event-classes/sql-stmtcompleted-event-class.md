@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c82db194aa2cdd0eb0a162ee358512f2023adb58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043342"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted-Ereignisklasse
@@ -25,7 +25,7 @@ ms.locfileid: "68043342"
   
 ## <a name="sqlstmtcompleted-event-class-data-columns"></a>Datenspalten der SQL:StmtCompleted-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  
@@ -48,7 +48,7 @@ ms.locfileid: "68043342"
 |NTDomainName|**nvarchar**|Windows-Domäne, zu der der Benutzer gehört.|7|Ja|  
 |NTUserName|**nvarchar**|Windows-Benutzername.|6|Ja|  
 |Offset|**int**|Der Startoffset der Anweisung in der gespeicherten Prozedur oder im Batch.|61|Ja|  
-|Reads|**bigint**|Anzahl der von der SQL-Anweisung ausgegebenen Seitenlesevorgänge.|16|Ja|  
+|Lesevorgänge|**bigint**|Anzahl der von der SQL-Anweisung ausgegebenen Seitenlesevorgänge.|16|Ja|  
 |RequestID|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
 |RowCounts|**bigint**|Die Anzahl der von einem Ereignis betroffenen Zeilen.|48|Ja|  
 |ServerName|**nvarchar**|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
@@ -57,7 +57,7 @@ ms.locfileid: "68043342"
 |StartTime|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
 |TextData|**ntext**|Text der ausgeführten Anweisung.|1|Ja|  
 |TransactionID|**bigint**|Die ID der Transaktion, wenn die Anweisung innerhalb einer Transaktion ausgeführt wurde.|4|Ja|  
-|Writes|**bigint**|Anzahl der von der SQL-Anweisung ausgegebenen Seitenschreibvorgänge.|17|Ja|  
+|Schreibvorgänge|**bigint**|Anzahl der von der SQL-Anweisung ausgegebenen Seitenschreibvorgänge.|17|Ja|  
 |XactSequence|**bigint**|Das Token, das die aktuelle Transaktion beschreibt.|50|Ja|  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113283"
 ---
 # <a name="subqueries-sql-server"></a>Unterabfragen (SQL Server)
@@ -85,7 +85,7 @@ Anweisungen, die eine Unterabfrage einschließen, besitzen in der Regel eines de
 -   WHERE-Ausdruck comparison_operator \[ANY | ALL] (Unterabfrage)
 -   WHERE \[NOT] EXISTS (Unterabfrage)   
 
-In manchen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen kann die Unterabfrage wie eine unabhängige Abfrage ausgewertet werden. Grundsätzlich werden die Ergebnisse der Unterabfrage in die äußere Abfrage eingesetzt (auch wenn [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen mit Unterabfragen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht unbedingt auf diese Weise verarbeitet werden).    
+In manchen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen kann die Unterabfrage wie eine unabhängige Abfrage ausgewertet werden. Grundsätzlich werden die Ergebnisse der Unterabfrage in die äußere Abfrage eingesetzt (auch wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anweisungen mit Unterabfragen von [!INCLUDE[tsql](../../includes/tsql-md.md)] nicht unbedingt auf diese Weise verarbeitet werden).    
 
 Es gibt drei grundlegende Arten von Unterabfragen. Arten: 
 -   Unterabfragen, die Listen bearbeiten und mit `IN` eingeleitet werden, oder Unterabfragen, die mit einem durch `ANY` oder `ALL` geänderten Vergleichsoperator eingeleitet werden.
@@ -486,7 +486,7 @@ WHERE ProductSubcategoryID NOT IN
 GO
 ```
 
-Diese Anweisung kann nicht in einen Join konvertiert werden. Der analoge Ungleichjoin hat eine andere Bedeutung: Er sucht die Namen von Produkten, die sich in einer Unterkategorie befinden und bei denen es sich nicht um fertige Fahrräder handelt.      
+Diese Anweisung kann nicht in einen Join konvertiert werden. Der analoge Join mit Ungleich hat eine andere Bedeutung: Sie sucht die Namen von Produkten, die sich in einer Unterkategorie befinden, die nicht fertige Fahrräder sind.      
 
 ### <a name="upsert"></a> Unterabfragen in den Anweisungen UPDATE, DELETE und INSERT
 Unterabfragen können in den Anweisungen `UPDATE`, `DELETE`, `INSERT` und `SELECT` der Datenbearbeitungssprache (Data Manipulation Language, DML) geschachtelt werden.    
