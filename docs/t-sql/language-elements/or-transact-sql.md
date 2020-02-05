@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 78e19aa69d5d5141be7b142074a1c4d120ea8519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121872"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68121872"
 
   Kombiniert zwei Bedingungen. Werden in einem Ausdruck mehrere logische Operatoren verwendet, werden OR-Operatoren nach AND-Operatoren ausgewertet. Sie können jedoch die Reihenfolge der Auswertung ändern, indem Sie Klammern verwenden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ boolean_expression OR boolean_expression
  Ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der TRUE, FALSE oder UNKNOWN zurückgibt.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- **Boolean**  
+ **Boolescher Wert**  
   
 ## <a name="result-value"></a>Ergebniswert  
  OR gibt TRUE zurück, falls der Wert für mindestens eine der Bedingungen TRUE ist.  
@@ -80,7 +80,7 @@ WHERE Department = 'Quality Assurance'
  Sootha       Charncherngkha   Night
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel werden die Namen aller Mitarbeiter abgerufen, deren `BaseRate`-Verdienst entweder kleiner als 20 ist oder deren `HireDate`-Datumswert auf den 1. Januar 2001 oder einen späteren Tag fällt.  
   
 ```  
