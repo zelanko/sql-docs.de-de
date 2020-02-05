@@ -1,5 +1,5 @@
 ---
-title: 'Statusbericht: Online Index Operation-Ereignisklasse'
+title: 'Progress Report: Online Index Operation-Ereignisklasse'
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c87be1a2a80f9bd2f31077e6b6154720c58193b0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056123"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Statusbericht: Online Index Operation-Ereignisklasse
+# <a name="progress-report-online-index-operation-event-class"></a>Progress Report: Online Index Operation-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Die Progress Report: Online Index Operation-Ereignisklasse gibt den Status eines Onlineindexvorgangs während des Erstellungsprozesses an.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Statusbericht: Datenspalten der Progress Report: Online Index Operation-Ereignisklasse  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Datenspalten der Progress Report: Online Index Operation-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |BigintData1|**bigint**|Die Anzahl der eingefügten Zeilen.|52|Ja|  

@@ -30,10 +30,10 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006488"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "68006488"
   
  An eine Spalte oder an einen Aliasdatentyp kann jeweils nur eine Regel gebunden sein. Allerdings können einer Spalte sowohl eine Regel als auch eine oder mehrere CHECK-Einschränkungen zugeordnet werden. Ist dies der Fall, werden alle Einschränkungen berücksichtigt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -87,10 +87,10 @@ AS condition_expression
   
  Sie können eine neue Regel an eine Spalte oder einen Datentyp binden, ohne die Bindung der alten aufzuheben; die neue Regel überschreibt die alte. Regeln, die an Spalten gebunden sind, haben immer Vorrang vor Regeln, die an Aliasdatentypen gebunden sind. Wenn Sie eine Regel an eine Spalte binden, wird dabei die Regel ersetzt, die bereits an den Aliasdatentyp jener Spalte gebunden ist. Binden Sie dagegen eine Regel an einen Datentyp, so ersetzt diese nicht die Regel, die an eine Spalte mit diesem Aliasdatentyp gebunden wurde. Die folgende Tabelle zeigt die Rangfolge, die gilt, wenn Regeln an Spalten und Aliasdatentypen, für die bereits Regeln vorhanden sind, gebunden werden:  
   
-|Neue Regel wird gebunden an|Alte Regel ist gebunden an<br /><br /> Aliasdatentyp|Alte Regel ist gebunden an<br /><br /> Spalte|  
+|Neue Regel wird gebunden an|Alte Regel ist gebunden an<br /><br /> Aliasdatentyp|Alte Regel ist gebunden an<br /><br /> Column|  
 |-----------------------|-------------------------------------------|----------------------------------|  
 |Aliasdatentyp|Ersetzt alte Regel|Keine Änderung|  
-|Spalte|Ersetzt alte Regel|Ersetzt alte Regel|  
+|Column|Ersetzt alte Regel|Ersetzt alte Regel|  
   
  Wenn einer Spalte ein Standardwert und eine Regel zugeordnet sind, muss der Standardwert innerhalb der durch die Regel definierten Domäne liegen. Ein Standardwert, der gegen eine Regel verstößt, wird nie eingefügt. Bei jedem Versuch, einen solchen Standardwert einzufügen, generiert die SQL Server-Datenbank-Engine eine Fehlermeldung.  
   

@@ -11,10 +11,10 @@ ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95216c6ecca08c48d845a63fb43486ace9bb44a5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296707"
 ---
 # <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation (SSISDB-Datenbank)
@@ -40,7 +40,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -60,7 +60,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   Der Vorgang wurde bereits beendet.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein Vorgang im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog darf immer nur von jeweils einem Benutzer beendet werden. Wenn mehrere Benutzer versuchen, den Vorgang zu beenden, gibt die gespeicherte Prozedur beim ersten Versuch Erfolg (der Wert `0`) zurück, bei anschließenden Versuchen wird jedoch ein Fehler ausgelöst.  
   
   

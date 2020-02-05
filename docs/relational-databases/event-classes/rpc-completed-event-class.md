@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 771305c30bb4008ee3e4b937296864276cf74b73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908325"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed-Ereignisklasse
@@ -25,7 +25,7 @@ ms.locfileid: "67908325"
   
 ## <a name="rpccompleted-event-class-data-columns"></a>RPC:Completed-Ereignisklasse (Datenspalten)  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |BinaryData|**image**|Binärer Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|2|Ja|  
@@ -46,7 +46,7 @@ ms.locfileid: "67908325"
 |NTDomainName|**nvarchar**|Windows-Domäne, zu der der Benutzer gehört.|7|Ja|  
 |NTUserName|**nvarchar**|Windows-Benutzername.|6|Ja|  
 |ObjectName|**nvarchar**|Name des Objekts, auf das verwiesen wird|34|Ja|  
-|Reads|**bigint**|Anzahl der durch den Remoteprozeduraufruf ausgegebenen Seitenlesevorgänge|16|Ja|  
+|Lesevorgänge|**bigint**|Anzahl der durch den Remoteprozeduraufruf ausgegebenen Seitenlesevorgänge|16|Ja|  
 |RequestID|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
 |RowCounts|**bigint**|Anzahl der Zeilen im RPC-Batch|48|Ja|  
 |ServerName|**nvarchar**|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26||  
@@ -55,7 +55,7 @@ ms.locfileid: "67908325"
 |StartTime|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
 |TextData|**ntext**|Text des Remoteprozeduraufrufs.|1|Ja|  
 |TransactionID|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
-|Writes|**bigint**|Anzahl der durch den Remoteprozeduraufruf ausgegebenen Seitenschreibvorgänge.|17|Ja|  
+|Schreibvorgänge|**bigint**|Anzahl der durch den Remoteprozeduraufruf ausgegebenen Seitenschreibvorgänge.|17|Ja|  
 |XactSequence|**bigint**|Das Token, das die aktuelle Transaktion beschreibt.|50|Ja|  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 427367994418ea7e82288541c89b47cc8bb7ea75
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: eb45cf400b0fe8318d0bef5a99b36f20bff8ef21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958350"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287117"
 ---
 # <a name="sql-server-replication"></a>SQL Server-Replikation
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilit
   
 ## <a name="publications-and-articles"></a>Veröffentlichungen und Artikel 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [Erstellen einer Veröffentlichung](publish/create-a-publication.md)    
 -   [Definieren eines Artikels](publish/define-an-article.md)   
 -   [Anzeigen und Ändern von Veröffentlichungseigenschaften](publish/view-and-modify-publication-properties.md)   
 -   [Anzeigen und Ändern von Artikeleigenschaften](publish/view-and-modify-article-properties.md)    
@@ -128,7 +128,7 @@ Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilit
 -   [Konfigurieren des Transaktionssatzauftrags für einen Oracle-Verleger &#40;Replikationsprogrammierung mit Transact-SQL&#41;](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [Aktualisieren von Replikationsskripts &#40;Replikationsprogrammierung mit Transact-SQL&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>Monitor
+## <a name="monitor"></a>Überwachen
   
 -   [Zulassen, dass Nichtadministratoren den Replikationsmonitor verwenden](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Programmgesteuertes Überwachen der Replikation](monitor/programmatically-monitor-replication.md)    

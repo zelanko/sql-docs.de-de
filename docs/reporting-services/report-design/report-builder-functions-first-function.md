@@ -9,10 +9,10 @@ ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8d7f2db5b2b212dd529ac800819c5aa58b5d121a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579530"
 ---
 # <a name="report-builder-functions---first-function"></a>Funktionen des Berichts-Generators: First-Funktion
@@ -32,7 +32,7 @@ First(expression, scope)
  *expression*  
  (**Variant** oder **Binär**) Der Ausdruck, für den die Aggregation auszuführen ist. Beispiel: `=Fields!FieldName.Value`.  
   
- *Bereich*  
+ *scope*  
  (**Zeichenfolge**) Optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
 ## <a name="return-type"></a>Rückgabetyp  

@@ -30,10 +30,10 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930329"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "67930329"
 
 Reduziert die Größe der angegebenen Daten oder Protokolldateien der aktuellen Datenbank. Damit können Sie Daten von einer Datei in andere Dateien derselben Dateigruppe verschieben. So wird die Datei geleert und die Entfernung der Datenbank ermöglicht. Sie können eine Datei auf weniger als die Größe bei der Erstellung verkleinern, um die minimale Dateigröße auf den neuen Wert zurücksetzen.
   
-![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -96,7 +96,7 @@ Alle Informationsmeldungen werden unterdrückt.
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle sind die Resultsetspalten beschrieben.
   
-|Spaltenname|und Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |---|---|
 |**DbId**|Die Datenbank-ID der Datei, die das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
 |**FileId**|Die Datei-ID der Datei, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
@@ -116,7 +116,7 @@ Wenn ein DBCC SHRINKFILE-Vorgang fehlschlägt, wird ein Fehler ausgelöst.
   
 ## <a name="shrinking-a-log-file"></a>Verkleinern einer Protokolldatei  
 
-Für Protokolldateien verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] *target_size*, um die Zielgröße des gesamten Protokolls zu berechnen. Daher ist *target_size* der freie Speicherplatz des Protokolls nach dem Verkleinern. Die Zielgröße des gesamten Protokolls wird dann in die Zielgröße der einzelnen Protokolldateien umgewandelt. DBCC SHRINKFILE versucht, jede physische Protokolldatei sofort auf ihre Zielgröße zu verkleinern. Wenn sich dagegen ein Teil des logischen Protokolls in den virtuellen Protokollen befindet, die außerhalb der Zielgröße liegen, gibt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] so viel Speicherplatz frei wie möglich und gibt dann eine Informationsmeldung aus. Die Meldung beschreibt, welche Aktionen erforderlich sind, um das logische Protokoll aus den virtuellen Protokollen am Ende der Datei zu verschieben. Nachdem diese Aktionen ausgeführt wurden, kann der verbleibende Speicherplatz mit DBCC SHRINKFILE freigegeben werden.
+Für Protokolldateien verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)]*target_size*, um die Zielgröße des gesamten Protokolls zu berechnen. Daher ist *target_size* der freie Speicherplatz des Protokolls nach dem Verkleinern. Die Zielgröße des gesamten Protokolls wird dann in die Zielgröße der einzelnen Protokolldateien umgewandelt. DBCC SHRINKFILE versucht, jede physische Protokolldatei sofort auf ihre Zielgröße zu verkleinern. Wenn sich dagegen ein Teil des logischen Protokolls in den virtuellen Protokollen befindet, die außerhalb der Zielgröße liegen, gibt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] so viel Speicherplatz frei wie möglich und gibt dann eine Informationsmeldung aus. Die Meldung beschreibt, welche Aktionen erforderlich sind, um das logische Protokoll aus den virtuellen Protokollen am Ende der Datei zu verschieben. Nachdem diese Aktionen ausgeführt wurden, kann der verbleibende Speicherplatz mit DBCC SHRINKFILE freigegeben werden.
   
 Da eine Protokolldatei nur auf eine Grenze einer virtuellen Protokolldatei verkleinert werden kann, ist eine Verkleinerung der Protokolldatei auf eine geringere Größe als die einer virtuellen Protokolldatei u. U. nicht möglich, selbst wenn die Protokolldatei nicht verwendet wird. [!INCLUDE[ssDE](../../includes/ssde-md.md)] wählt dynamisch die Größe des virtuellen Dateiprotokolls, wenn Protokolldateien erstellt oder erweitert werden.
   
@@ -214,7 +214,7 @@ GO
 DBCC SHRINKFILE (1, TRUNCATEONLY);  
 ```  
   
-### <a name="d-emptying-a-file"></a>D. Leeren einer Datei  
+### <a name="d-emptying-a-file"></a>D: Leeren einer Datei  
 Das folgende Beispiel veranschaulicht das Leeren einer Datei, sodass sie aus der Datenbank entfernt werden kann. Für dieses Beispiel wird zunächst eine Datei mit Daten erstellt.
   
 ```sql  

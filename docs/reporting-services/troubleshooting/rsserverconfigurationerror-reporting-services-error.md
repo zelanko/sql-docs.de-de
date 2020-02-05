@@ -11,10 +11,10 @@ ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4291245b101799238412115ced8b114de5a551be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572132"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError – Reporting Services-Fehler
@@ -45,12 +45,12 @@ ms.locfileid: "65572132"
 ## <a name="user-action"></a>Benutzeraktion  
  Wenn dieser Fehler auftritt, nachdem Sie manuell eine Konfigurationsdatei bearbeitet haben, machen Sie die Änderungen rückgängig, indem Sie den ursprünglichen Wert wieder eingeben, oder stellen Sie eine vorherige Version wieder her, wenn eine Sicherung existiert.  
   
- Öffnen Sie die Ablaufverfolgungsprotokolldatei des Berichtsservers unter \Microsoft SQL Server\MSRS12.\<Instanzname>\Reporting Services\LogFiles, um zusätzliche Fehlermeldungsinformationen zu überprüfen, die mit dem **rsServerConfiguration**-Fehler ausgegeben werden. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ Öffnen Sie die Ablaufverfolgungsprotokolldatei des Berichtsservers unter \Microsoft SQL Server\MSRS12.**Instanzname>\Reporting Services\LogFiles, um zusätzliche Fehlermeldungsinformationen zu überprüfen, die mit dem** rsServerConfiguration\<-Fehler ausgegeben werden. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Nur intern  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ [Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
   

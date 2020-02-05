@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 575ca341e19d36055d7780fd1deec8d05e370111
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940619"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics (Ereignisklasse)
@@ -25,15 +25,15 @@ ms.locfileid: "67940619"
   
 ## <a name="qndynamics-event-class-data-columns"></a>Datenspalten der QN:Dynamics-Ereignisklasse  
   
-|Datenspalte|Typ|und Beschreibung|Spaltennummer|Filterbar|  
+|Datenspalte|type|BESCHREIBUNG|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|9|Ja|  
-|DatabaseID|**int**|Die ID der Datenbank, die durch die USE *Datenbank* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *Datenbank*-Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die Server Name-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
+|DatabaseID|**int**|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database*-Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die Server Name-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |DatabaseName|**nvarchar**|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|Ja|  
 |EventClass|**int**|Ereignistyp = 202|27|Nein|  
 |EventSequence|**int**|Die Sequenznummer für dieses Ereignis.|51|Nein|  
-|EventSubClass|**nvarchar**|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> **Clock run started** (Threadausführung gestartet): Gibt an, dass der Hintergrundthread in der [!INCLUDE[ssDE](../../includes/ssde-md.md)], mit der der Cleanup für abgelaufene Parametertabellen geplant wird, gestartet wurde.<br /><br /> **Clock run finished** (Threadausführung abgeschlossen): Gibt an, dass der Hintergrundthread in der [!INCLUDE[ssDE](../../includes/ssde-md.md)], mit der der Cleanup für abgelaufene Parametertabellen geplant wird, abgeschlossen wurde.<br /><br /> **Master cleanup task started** (Mastercleanuptask gestartet): Gibt an, ob der Cleanup (Garbage Collection) zum Entfernen abgelaufener Daten von Abfragebenachrichtigungsabonnements gestartet wurde.<br /><br /> **Master cleanup task finished** (Mastercleanuptask abgeschlossen): Gibt an, ob der Cleanup (Garbage Collection) zum Entfernen abgelaufener Daten von Abfragebenachrichtigungsabonnements abgeschlossen wurde.<br /><br /> **Master cleanup task skipped** (Mastercleanuptask übersprungen): Gibt an, dass von [!INCLUDE[ssDE](../../includes/ssde-md.md)] kein Cleanup (Garbage Collection) zum Entfernen abgelaufener Daten von Abfragebenachrichtigungsabonnements ausgeführt wurde.|21|Ja|  
+|EventSubClass|**nvarchar**|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> **Clock run started**: Gibt an, dass der Hintergrundthread in [!INCLUDE[ssDE](../../includes/ssde-md.md)] , mit dem abgelaufene Parametertabellen für den Cleanup geplant werden, gestartet wurde.<br /><br /> **Clock run finished**: Gibt an, dass der Hintergrundthread in [!INCLUDE[ssDE](../../includes/ssde-md.md)] , mit dem abgelaufene Parametertabellen für den Cleanup geplant werden, beendet wurde.<br /><br /> **Master cleanup task started**: Gibt an, wann der Cleanup (Garbage Collection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements beginnt.<br /><br /> **Master cleanup task finished**: Gibt an, wann der Cleanup (Garbage Collection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements endet.<br /><br /> **Master cleanup task skipped**: Gibt an, dass von [!INCLUDE[ssDE](../../includes/ssde-md.md)] kein Cleanup (Garbage Collection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements ausgeführt wurde.|21|Ja|  
 |GroupID|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |HostName|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IsSystem|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|Nein|  

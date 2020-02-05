@@ -1,10 +1,9 @@
 ---
-title: 'Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen | Microsoft-Dokumentation'
-ms.custom: ''
+title: Hinzufügen und Ändern von Datenbankdiagrammen
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30177e5dc9061fb66bffda6203f0740bcac3b5af
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8333c2120868f8d929d937faa155b7d595abff20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258924"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246245"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folge
   
 3.  Klicken Sie mit der rechten Maustaste auf den Knoten Datenbankdiagramme, und wählen Sie **Neues Datenbankdiagramm** aus.  
   
-    Wenn die Datenbank nicht über die erforderlichen Objekte zum Erstellen von Diagrammen verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
+    Wenn die Datenbank nicht über die zum Erstellen von Diagrammen erforderlichen Objekte verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
   
     Das Dialogfeld **Tabelle hinzufügen** wird angezeigt.  
   
@@ -59,7 +60,7 @@ Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folge
   
 1.  Klicken Sie mit der rechten Maustaste auf die `Address` -Tabelle. Zeigen Sie im Kontextmenü auf **Tabellensicht**, und klicken Sie dann auf **Standard**.  
   
-    Im Tabellenraster werden drei Spalten angezeigt: **Spaltenname**, **Datentyp** und **Null-Werte zulassen**.  
+    Im Tabellenraster werden drei Spalten angezeigt: **Spaltenname**, **Datentyp**und **NULL-Werte zulassen**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die `Address` -Tabelle, klicken Sie auf **Tabellensicht** , und wählen Sie **Schlüssel**aus.  
   
@@ -73,15 +74,15 @@ Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folge
   
 2.  Klicken Sie im Dialogfeld **Namen auswählen** auf **OK** , um den Standardnamen **Table1**zu übernehmen.  
   
-    Es wird ein neues Tabellenraster mit drei Spalten angezeigt: **Spaltenname**, **Datentyp** und **Null-Werte zulassen**.  
+    Ein neues Tabellenraster mit drei Spalten wird angezeigt: **Spaltenname**, **Datentyp**und **NULL-Werte zulassen**.  
   
 3.  Fügen Sie **Table1**folgende Informationen hinzu:  
   
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**int**|Überprüft|  
-    |**T1col2**|**varchar(50)**|Überprüft|  
-    |**T1col3**|**float**|Überprüft|  
+    |**T1col1**|**int**|Aktiviert|  
+    |**T1col2**|**varchar(50)**|Aktiviert|  
+    |**T1col3**|**float**|Aktiviert|  
   
 4.  Klicken Sie mit der rechten Maustaste auf `T1col1` , und wählen Sie **Primärschlüssel festlegen**aus.  
   
@@ -123,8 +124,8 @@ Im Datenbank-Designer können Sie CHECK-Einschränkungen hinzufügen und Beziehu
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|nicht aktiviert|  
-    |**T2col2**|**varchar(50)**|Überprüft|  
-    |**T2col3**|**xml**|Überprüft|  
+    |**T2col2**|**varchar(50)**|Aktiviert|  
+    |**T2col3**|**xml**|Aktiviert|  
   
     > [!NOTE]  
     > Die Spalten in einer Fremdschlüsselbeziehung, die sich auf der Seite des Primärschlüssels befinden, müssen Teil eines Primärschlüssels oder einer Unique-Einschränkung sein.  
@@ -196,7 +197,7 @@ Sämtliche von Ihnen an einem Diagramm vorgenommenen Änderungen werden erst nac
   
 3.  Wenn Fehler aufgetreten sind, wird das Dialogfeld **Benachrichtigung nach dem Speichervorgang** angezeigt, das die Fehler und deren Ursachen enthält. Beheben Sie die Fehler, und speichern Sie das Diagramm anschließend erneut.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 Hierbei handelt es sich um ein einfaches Diagramm, das nur zwei vorhandene und zwei neue Tabellen enthält. Damit wird jedoch das Potenzial zur Diagrammdarstellung einer vorhandenen Datenbank oder zur visuellen Erstellung eines neuen Schemas veranschaulicht. Mit folgenden Funktionen können Sie Ihre Fähigkeiten vertiefen:  
   
 -   Erstellen neuer Diagramme mit Gruppen verbundener Tabellen  

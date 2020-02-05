@@ -14,10 +14,10 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947357"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics-Task
@@ -44,11 +44,11 @@ Geben Sie den Namen und die Beschreibung der Task an.
 
 ### <a name="u-sql-configuration"></a>U-SQL-Konfiguration
 
-Die U-SQL-Konfiguration beinhaltet zwei Einstellungen: **SourceType** und dynamische Optionen basierend auf dem Wert **SourceType**. 
+Für die U-SQL-Konfiguration gibt es zwei Einstellungen: **SourceType** und dynamische Optionen basierend auf dem Wert **SourceType**. 
 
 **SourceType:** Gibt die Quelle des U-SQL-Skripts an. Das Skript wird während der SSIS-Paketausführung an ein Data Lake Analytics-Konto übermittelt. Die Optionen für diese Eigenschaft sind:
 
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**DirectInput**|Gibt das U-SQL-Skript durch den Inline-Editor an. Bei Auswahl dieses Werts wird die dynamische Option **USQLStatement** angezeigt.|  
 |**FileConnection**|Legt eine lokale .usql-Datei fest, die das U-SQL-Skript enthält. Bei Auswahl dieser Option wird die dynamische Option **FileConnection** angezeigt.|  
@@ -72,11 +72,11 @@ In der Auftragskonfiguration werden die Eigenschaften für die U-SQL-Auftragsüb
 - **AnalyticsUnits:** Gibt die Anzahl der Analytics-Einheiten des U-SQL-Auftrags an.
 - **Priority:** Gibt die Priorität des U-SQL-Auftrags an. Sie können einen Wert zwischen 0 und 1.000 angeben. Je niedriger die Zahl ist, desto höher ist die Priorität.
 - **RuntimeVersion:** Gibt die Data Lake Analytics-Runtimeversion des U-SQL-Auftrags an. Die Standardeinstellung lautet „Standard“. In der Regel müssen Sie diese Eigenschaft nicht ändern.
-- **Synchronous:** Ein boolescher Wert gibt an, ob der Task auf den Abschluss der Auftragsausführung wartet oder nicht. Wenn der Wert auf „true“ festgelegt wird, ist die Aufgabe nach Abschluss des Auftrags als **erfolgreich** gekennzeichnet. Wenn der Wert auf „false“ festgelegt wird, ist die Aufgabe nach als **erfolgreich** gekennzeichnet, wenn der Auftrag die Vorbereitungsphase durchlaufen hat.
+- **Synchronous:** Ein boolescher Wert gibt an, ob der Task auf den Abschluss der Auftragsausführung wartet, oder nicht. Wenn der Wert auf „true“ festgelegt wird, ist die Aufgabe nach Abschluss des Auftrags als **erfolgreich** gekennzeichnet. Wenn der Wert auf „false“ festgelegt wird, ist die Aufgabe nach als **erfolgreich** gekennzeichnet, wenn der Auftrag die Vorbereitungsphase durchlaufen hat.
 
-  |value|und Beschreibung|
+  |value|BESCHREIBUNG|
   |-----------|-----------------|
-  |Wahr|Das Taskergebnis basiert auf dem Ausführungsergebnis des U-SQL-Auftrags. Auftragsausführung erfolgreich > Aufgabe erfolgreich. Fehler beim Auftrag > Fehler in der Aufgabe. Aufgabe erfolgreich oder mit Fehler > Aufgabe wird abgeschlossen.|
+  |True|Das Taskergebnis basiert auf dem Ausführungsergebnis des U-SQL-Auftrags. Auftragsausführung erfolgreich > Aufgabe erfolgreich. Fehler beim Auftrag > Fehler in der Aufgabe. Aufgabe erfolgreich oder mit Fehler > Aufgabe wird abgeschlossen.|
   |False|Das Taskergebnis basiert auf dem Übermittlungs- und Vorbereitungsergebnis des U-SQL-Auftrags. Auftragsübermittlung ist erfolgreich und durchläuft die Vorbereitungsphase > Aufgabe ist erfolgreich. Fehler in Auftragsübermittlung oder Fehler in der Vorbereitungsphase des Auftrags > Fehler in Aufgabe. Aufgabe erfolgreich oder mit Fehler > Aufgabe wird abgeschlossen.|
 
 - **TimeOut:** Legt ein Zeitlimit in Sekunden für die Auftragsausführung fest. Wenn beim Auftrag ein Timeout auftritt, wird der Auftrag storniert und als fehlerhaft gekennzeichnet. Diese Eigenschaft ist nicht verfügbar, wenn **Synchronous** auf „false“ gesetzt ist.
@@ -85,7 +85,7 @@ In der Auftragskonfiguration werden die Eigenschaften für die U-SQL-Auftragsüb
 
 Über die Seite **Parameterzuordnung** des Dialogfelds **Azure Data Lake Analytics-Task-Editor** können Sie Variablen zu Parametern (U-SQL-Variablen) im U-SQL-Skript zuordnen.
 
-- **Variablenname:** Nachdem Sie eine Parameterzuordnung hinzugefügt haben, indem Sie auf **Hinzufügen** geklickt haben, wählen Sie eine Systemvariable oder benutzerdefinierte Variable aus der Liste aus. Alternativ können Sie <**Neue Variable...** > auswählen, um über das Dialogfeld **Variable hinzufügen** eine neue Variable hinzuzufügen. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+- **Variable Name:** Nachdem Sie eine Parameterzuordnung durch Auswahl von **Hinzufügen** hinzugefügt haben, wählen Sie eine System- oder benutzerdefinierte Variable aus der Liste aus. Alternativ können Sie <**Neue Variable...** > auswählen, um über das Dialogfeld **Variable hinzufügen** eine neue Variable hinzuzufügen. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
 
 - **Parametername:** Geben Sie einen Parameter- bzw. Variablennamen im U-SQL-Skript an. Stellen Sie sicher, dass der Parametername mit dem \@-Zeichen beginnt, z. B. \@Param1. 
 
@@ -130,7 +130,7 @@ Beachten Sie, dass die Eingabe- und Ausgabepfade in den Parametern **\@in** and 
 
 Alle Eigenschaften in der Konfiguration auf der Seite „Allgemein“ können als Eigenschaftsausdruck zugewiesen werden, um ein dynamisches Update der Eigenschaft zur Runtime zu ermöglichen. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 - [Azure Data Lake Analytics-Verbindungs-Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)
 - [Azure Data Lake Store-Dateisystemtask](../../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 - [Azure Data Lake Store Connection Manager (Azure Data Lake Store-Verbindungs-Manager)](../../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)

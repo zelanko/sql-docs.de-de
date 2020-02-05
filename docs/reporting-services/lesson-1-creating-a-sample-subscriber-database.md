@@ -9,10 +9,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513162"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank
@@ -27,7 +27,7 @@ Für diese Lektion wird angenommen, dass Sie [!INCLUDE[ssManStudioFull_md](../in
   
 2.  Klicken Sie mit der rechten Maustaste auf „Datenbanken“, und wählen Sie **Neue Datenbank...** aus.  
   
-3.  Geben Sie im Dialogfeld „Neue Datenbank“ in das Feld **Datenbankname** *Subscribers*ein. 
+3.  Geben Sie im Dialogfeld „Neue Datenbank“ in das Feld **Datenbankname***Subscribers*ein. 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Neue Abfrage** .  
@@ -55,11 +55,11 @@ Für diese Lektion wird angenommen, dass Sie [!INCLUDE[ssManStudioFull_md](../in
     GO  
     ```  
   
-7.  Klicken Sie auf **! Führen Sie**  in der Symbolleiste aus.  
+7.  Klicken Sie auf **! Ausführen** in der Symbolleiste.  
   
 8.  Verwenden Sie eine SELECT-Anweisung, um sicherzustellen, dass drei Datenzeilen vorhanden sind. Beispiel: `select * from OrderInfo`  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 + Sie haben erfolgreich die Abonnementdaten erstellt, welche die Berichtsverteilung steuern und über die die Berichtsausgabe für jeden Abonnenten angepasst werden kann. 
 + Ändern Sie anschließend die Datenquelleneigenschaften des Berichts, um gespeicherte Anmeldeinformationen zu verwenden. 
 + Sie ändern auch den Berichtsentwurf, um einen Parameter einzuschließen, den das Abonnement mit den Abonnentendaten verwendet. [Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  

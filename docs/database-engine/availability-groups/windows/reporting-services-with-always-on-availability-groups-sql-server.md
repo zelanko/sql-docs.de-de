@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75243622"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "75243622"
   
  Um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 und früher zu verwenden, müssen Sie einen Hotfix für .NET 3.5 SP1 herunterladen und installieren. Der Hotfix fügt Unterstützung für Funktionen des SQL Client für Verfügbarkeitsgruppen und Unterstützung der Verbindungszeichenfolgeneigenschaften **ApplicationIntent** und **MultiSubnetFailover**hinzu. Wenn der Hotfix nicht auf jedem Computer installiert ist, der einen Berichtsserver hostet, dann sehen Benutzer, die versuchen, Berichte in der Vorschau anzuzeigen, eine Fehlermeldung wie die Folgende, und die Fehlermeldung wird in das Ablaufverfolgungsprotokoll des Berichtsservers geschrieben:  
   
-> **Fehlermeldung:** "Keyword not supported 'applicationintent'" (Das Schlüsselwort wird nicht unterstützt: 'applicationintent')  
+> **Fehlermeldung:** „Das Schlüsselwort wird nicht unterstützt: ‚applicationintent‘“  
   
  Die Meldung wird ausgegeben, wenn Sie eine der [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Eigenschaften in die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Verbindungszeichenfolge einschließen, aber der Server die Eigenschaft nicht erkennt. Die angegebene Fehlermeldung wird angezeigt, wenn Sie in den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Benutzeroberflächen auf die Schaltfläche „Verbindung testen“ klicken, und wenn Sie den Bericht in der Vorschau anzeigen, sofern Remotefehler auf den Berichtsservern aktiviert sind.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75243622"
   
  Abhängig davon, wie die Berichte erstellt und veröffentlicht werden, wird bestimmt, wo Sie die Verbindungszeichenfolge bearbeiten:  
   
--   **Einheitlicher Modus :** Verwenden Sie das Webportal [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] für freigegebene Datenquellen und Berichte, die bereits auf einem Berichtsserver im einheitlichen Modus veröffentlicht wurden.  
+-   **Einheitlicher Modus:** Verwenden Sie den [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] für freigegebene Datenquellen und Berichte, die bereits auf einem Berichtsserver im einheitlichen Modus veröffentlicht wurden.  
   
 -   **SharePoint-Modus:** Verwenden Sie die SharePoint-Konfigurationsseiten innerhalb der Dokumentbibliotheken für Berichte, die bereits auf einem SharePoint-Server veröffentlicht wurden.  
   
@@ -96,9 +96,9 @@ ms.locfileid: "75243622"
   
 -   **Lokale Vorschau:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verwenden .NET Framework 4.0 und unterstützen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Verbindungszeichenfolgen-Eigenschaften.  
   
--   **Remote- oder Servermodusvorschau:** Wenn nach dem Veröffentlichen von Berichten auf dem Berichtsserver oder bei einer Vorschau in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ein Fehler wie der Folgende angezeigt wird, ist dies ein Hinweis darauf, dass Sie Berichte vom Berichtsserver in der Vorschau anzeigen und dass der .NET Framework 3.5 SP1-Hotfix für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nicht auf dem Berichtsserver installiert wurde.  
+-   **Remote- oder Servermodusvorschau:** Wenn nach dem Veröffentlichen von Berichten auf dem Berichtsserver oder Anzeigen der Vorschau auf [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]ein Fehler wie der Folgende angezeigt wird, ist dies ein Hinweis darauf, dass Sie Berichte vom Berichtsserver anzeigen, und dass der .NET Framework 3.5 SP1-Hotfix für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nicht auf dem Berichtsserver installiert wurde.  
   
-> **Fehlermeldung:** "Keyword not supported 'applicationintent'" (Das Schlüsselwort wird nicht unterstützt: 'applicationintent')  
+> **Fehlermeldung:** „Das Schlüsselwort wird nicht unterstützt: ‚applicationintent‘“  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Berichtsserver-Datenbanken und Verfügbarkeitsgruppen  
  Reporting Services und Power BI-Berichtsserver bieten eingeschränkte Unterstützung für die Verwendung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit Berichtsserver-Datenbanken. Die Berichtsserver-Datenbanken können in Verfügbarkeitsgruppen als Teil eines Replikats konfiguriert werden, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet bei einem Failover jedoch nicht automatisch ein anderes Replikat für die Berichtsserver-Datenbanken. Die Verwendung von MultiSubnetFailover mit den Berichtsserver-Datenbanken wird nicht unterstützt.  
@@ -139,9 +139,9 @@ ms.locfileid: "75243622"
   
 -   Erstellen Sie die Verfügbarkeitsgruppe, und konfigurieren Sie einen *DNS-Namen des Listeners*.  
   
--   **Primäres Replikat:** Konfigurieren Sie die Berichtsserverdatenbanken als Teil einer einzelnen Verfügbarkeitsgruppe, und erstellen Sie ein primäres Replikat, das alle Berichtsserverdatenbanken einschließt.  
+-   **Primäres Replikat:** Konfigurieren Sie die Berichtsserver-Datenbanken als Teil einer einzelnen Verfügbarkeitsgruppe, und erstellen Sie ein primäres Replikat, das alle Berichtsserver-Datenbanken einschließt.  
   
--   **Sekundäre Replikate:** Erstellen Sie mindestens ein sekundäres Replikat. Die übliche Methode zum Kopieren der Datenbanken vom primären Replikat zum sekundären Replikat besteht darin, die Datenbanken mit „RESTORE WITH NORECOVERY“ auf jedem sekundären Replikat wiederherzustellen. Weitere Informationen zum Erstellen von sekundären Replikaten und zum Überprüfen, ob die Datensynchronisierung funktioniert, finden Sie unter [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+-   **Sekundäre Replikate:** Erstellen Sie ein oder mehrere sekundäre Replikate. Die übliche Methode zum Kopieren der Datenbanken vom primären Replikat zum sekundären Replikat besteht darin, die Datenbanken mit „RESTORE WITH NORECOVERY“ auf jedem sekundären Replikat wiederherzustellen. Weitere Informationen zum Erstellen von sekundären Replikaten und zum Überprüfen, ob die Datensynchronisierung funktioniert, finden Sie unter [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 -   **Berichtsserveranmeldeinformationen:** Sie müssen die entsprechenden Berichtsserveranmeldeinformationen auf den sekundären Replikaten erstellen, die Sie auf dem primären Replikat erstellt haben. Die genauen Schritte hängen davon ab, welchen Authentifizierungstyp Sie in der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Umgebung verwenden; Windows-[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Dienstkonto, Windows-Benutzerkonto oder SQL Server-Authentifizierung. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
