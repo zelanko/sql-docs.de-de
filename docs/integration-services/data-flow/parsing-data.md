@@ -14,10 +14,10 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71582dbdccc331ec4b43d87071952879f304395c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292275"
 ---
 # <a name="parsing-data"></a>Analysieren von Daten
@@ -90,9 +90,9 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   ISO 8601-Formate, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|und Beschreibung|  
+    |Format|BESCHREIBUNG|  
     |------------|-----------------|  
-    |YYYYMMDD<br /><br /> YYYY-MM-DD|Basisformate und erweiterte Formate für eine vierstellige Jahresangabe, eine zweistellige Monatsangabe und eine zweistellige Tagesangabe. Beim erweiterten Format werden die Datumsteile durch einen Bindestrich (-) getrennt.|  
+    |YYYYMMDD<br /><br /> JJJJ-MM-TT|Basisformate und erweiterte Formate für eine vierstellige Jahresangabe, eine zweistellige Monatsangabe und eine zweistellige Tagesangabe. Beim erweiterten Format werden die Datumsteile durch einen Bindestrich (-) getrennt.|  
     |YYYY-MM|Basisformate und erweiterte Formate mit reduzierter Genauigkeit für eine vierstellige Jahresangabe und eine zweistellige Monatsangabe. Beim erweiterten Format werden die Datumsteile durch einen Bindestrich (-) getrennt.|  
     |YYYY|Das Format mit reduzierter Genauigkeit ist eine vierstellige Jahresangabe.|  
   
@@ -112,7 +112,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
  Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
-### <a name="time-data-type"></a>Zeitdatentyp
+### <a name="time-data-type"></a>Time-Datentyp
  Die schnelle Analyse unterstützt die folgenden Zeichenfolgenformate für Zeitdaten:  
   
 -   Zeitformate, die führende Leerstellen einschließen. Beispielsweise ist der Wert " 10:24" gültig.  
@@ -121,7 +121,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   ISO 8601-Zeitformate, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|und Beschreibung|  
+    |Format|BESCHREIBUNG|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|Basisformate und erweiterte Formate für eine zweistellige Stundenangabe, eine zweistellige Minutenangabe und eine zweistellige Sekundenangabe. Beim erweiterten Format werden die Zeitteile durch einen Doppelpunkt (:) getrennt.|  
     |HHMI<br /><br /> HH:MI|Basisformate und erweiterte abgeschnittene Formate für eine zweistellige Stundenangabe und eine zweistellige Minutenangabe. Beim erweiterten Format werden die Zeitteile durch einen Doppelpunkt (:) getrennt.|  
@@ -130,7 +130,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   Zeitformate, die eine Zeitzone angeben, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|und Beschreibung|  
+    |Format|BESCHREIBUNG|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|Basisformate und erweiterte Formate, die die Anzahl von Stunden und Minuten angeben, die zur koordinierten Weltzeit (UTC) addiert werden, um die lokale Zeit zu ermitteln.|  
     |-HH:MI<br /><br /> -HHMI|Basisformate und erweiterte Formate, die die Anzahl von Stunden und Minuten angeben, die von der koordinierten Weltzeit (UTC) subtrahiert werden, um die lokale Zeit zu ermitteln.|  
@@ -148,7 +148,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   Zeitformate, die einen Dezimalbruch enthalten, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|und Beschreibung|  
+    |Format|BESCHREIBUNG|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n ist ein Wert zwischen 0 und 9999999, der einen Stundenbruchteil darstellt. Die Klammern geben an, dass dieser Wert optional ist.<br /><br /> Beispielsweise steht der Wert 12.750 für 12:45.|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n ist ein Wert zwischen 0 und 9999999, der einen Minutenbruchteil darstellt. Die Klammern geben an, dass dieser Wert optional ist.<br /><br /> Beispielsweise steht der Wert 1220.500 für 12:20:30.|  
@@ -178,13 +178,13 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
  Die schnelle Analyse gibt die Zeichenfolgen als DT_DATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 und DT_DBTIMESTAMPOFFSET aus. Datums-/Zeitwerte in abgeschnittenen Formaten werden aufgefüllt. In der folgenden Tabelle werden die Werte aufgeführt, die für fehlende Datums- und Zeitteile hinzugefügt werden.  
   
-|Datums-/Zeitteil|Auffüllung|  
+|Datums-/Zeitteil|Auffüllen|  
 |---------------------|-------------|  
 |Sekunden|00 hinzufügen.|  
 |Minuten|00:00 hinzufügen.|  
 |Hour|00:00:00 hinzufügen.|  
-|Day|01 für den Tag des Monats hinzufügen.|  
-|Month|01 für den Monat des Jahres hinzufügen.|  
+|Day (Tag)|01 für den Tag des Monats hinzufügen.|  
+|Month (Monat)|01 für den Monat des Jahres hinzufügen.|  
   
  Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   

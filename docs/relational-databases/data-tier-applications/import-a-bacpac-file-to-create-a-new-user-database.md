@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094566"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
@@ -44,7 +44,7 @@ ms.locfileid: "74094566"
 2.  Beim Import werden die Daten per Massenkopieren in die Exportdatei kopiert.  
 
 ## <a name="sql-server-utility"></a>SQL Server-Hilfsprogramm  
- Beim Importieren einer DAC in eine Instanz der Datenbank-Engine wird die importierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Sammlungssatz des Hilfsprogramms das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenschichtanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenschichtanwendungen** details page.  
+ Beim Importieren einer DAC in eine Instanz der Datenbank-Engine wird die importierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Sammlungssatz des Hilfsprogramms das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann im Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Hilfsprogramm-Explorer**von** vorhanden und wird auf der Detailseite **Bereitgestellte Datenebenenanwendungen** aufgeführt.  
   
 ## <a name="database-options-and-settings"></a>Datenbankoptionen und -einstellungen  
  Standardmäßig verfügt die während des Imports erstellte Datenbank über alle Standardeinstellungen aus der CREATE DATABASE-Anweisung, mit der Ausnahme, dass die Datenbanksortierung und der Kompatibilitätsgrad auf die in der DAC-Exportdatei festgelegten Werte gesetzt sind. Eine DAC-Exportdatei verwendet die Werte aus der ursprünglichen Datenbank.  
@@ -57,7 +57,7 @@ ms.locfileid: "74094566"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Das Importieren einer DAC-Exportdatei aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Dateien können schädlichen Code enthalten, der möglicherweise unbeabsichtigten Transact-SQL-Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine Exportdatei aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, entpacken Sie die DAC, und untersuchen Sie den Code, z. B. gespeicherte Prozeduren und anderen benutzerdefinierten Code. Weitere Informationen zum Ausführen dieser Tests finden Sie unter [Validate a DAC Package](validate-a-dac-package.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Zur Erhöhung der Sicherheit werden die Anmeldenamen für die SQL Server-Authentifizierung ohne Kennwort in eine DAC-Exportdatei gespeichert. Sobald die Datei importiert wird, wird der Anmeldename als deaktivierter Anmeldename mit einem generierten Kennwort erstellt. Um die Anmeldenamen zu aktivieren, melden Sie sich mit einem Anmeldenamen an, der über die ALTER ANY LOGIN-Berechtigung verfügt, und verwenden Sie ALTER LOGIN, um den Anmeldenamen zu aktivieren und ein neues Kennwort zuzuweisen, das dem Benutzer mitgeteilt werden kann. Dies ist für Anmeldenamen der Windows-Authentifizierung nicht erforderlich, da die zugehörigen Kennwörter nicht von SQL Server verwaltet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -66,7 +66,7 @@ ms.locfileid: "74094566"
 ## <a name="using-the-import-data-tier-application-wizard"></a>Verwenden des Assistenten zum Importieren von Datenebenenanwendungen  
  **Gehen Sie folgendermaßen vor, um den Assistenten zu starten:**  
   
-1.  Stellen Sie entweder lokal oder in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] eine Verbindung zu der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her.  
+1.  Stellen Sie entweder lokal oder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Verbindung zu der Instanz von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] her.  
   
 2.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf **Datenbanken**, und wählen Sie dann den Menübefehl **Datenebenenanwendung importieren** aus, um den Assistenten zu starten.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "74094566"
  **Für eine Azure SQL-Datenbank:**  
   
  - Im Artikel **[Importieren einer BACPAC-Datei zum Erstellen einer neuen Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-import/)** finden Sie ausführliche Anweisungen zur Verwendung des Azure-Portals, von PowerShell, SSMS oder SqlPackage.  
- - Detaillierte Informationen zu den verschiedenen Dienstebenen finden Sie unter **[Kaufmodelle für Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** erhalten Sie einen detaillierten Einblick in die verschiedenen Dienstebenen.  
+ - In **[SQL-Datenbankoptionen und -leistung: Grundlegendes zum Angebot in den einzelnen Tarifen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** erhalten Sie einen detaillierten Einblick in die verschiedenen Dienstebenen.  
 
 ### <a name="validation-page"></a>Überprüfung (Seite)  
  Verwenden Sie diese Seite, um sämtliche Probleme zu überprüfen, die den Vorgang blockieren. Beheben Sie zum Fortfahren die Blockierungsprobleme, und klicken Sie dann auf **Überprüfung erneut ausführen** , um sicherzustellen, dass die Überprüfung erfolgreich ist.  

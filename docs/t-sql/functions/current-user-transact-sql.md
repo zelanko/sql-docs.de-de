@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6901afbb6d0faa26c4977c15a3836bdeab68bb4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844622"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73844622"
 
 Diese Funktion gibt den Namen des aktuellen Benutzers zurück. Diese Funktion ist gleichbedeutend mit `USER_NAME()`.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ CURRENT_USER
 ## <a name="return-types"></a>Rückgabetypen
 **sysname**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `CURRENT_USER` gibt den Namen des aktuellen Sicherheitskontexts zurück. Wird `CURRENT_USER` ausgeführt, nachdem der Kontext über einen Aufruf von `EXECUTE AS` gewechselt wurde, gibt `CURRENT_USER` den Namen des gewechselten Identitätskontexts zurück. Falls ein Windows-Prinzipal über eine Mitgliedschaft in einer Gruppe auf die Datenbank zugegriffen hat, gibt `CURRENT_USER` den Namen des Windows-Prinzipals anstelle des Gruppennamens zurück.
   
 Weitere Informationen dazu, wie der Anmeldename des aktuellen Benutzers zurückgegeben werden kann, finden Sie unter [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) und [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md).
@@ -133,7 +133,7 @@ Arnalfo
 Wanida
 ```
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
 [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  

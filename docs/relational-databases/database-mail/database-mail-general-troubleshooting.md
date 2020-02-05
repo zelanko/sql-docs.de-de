@@ -14,16 +14,16 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094560"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Allgemeine Schritte zur Problembehandlung für Datenbank-E-Mail 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-Beim Behandeln von Problemen mit Datenbank-E-Mail werden die folgenden allgemeinen Bereiche des Datenbank-E-Mail-Systems überprüft. Diese Verfahren sind in logischer Reihenfolge aufgeführt, können jedoch in beliebiger Folge ausgewertet werden.
+Beim Behandeln von Problemen mit der Datenbank-E-Mail werden die folgenden allgemeinen Bereiche des Systems Datenbank-E-Mail überprüft. Diese Verfahren sind in logischer Reihenfolge aufgeführt, können jedoch in beliebiger Folge ausgewertet werden.
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -43,9 +43,9 @@ Sie müssen Mitglied der festen Serverrolle „sysadmin“ sein, um Probleme mit
     ```
 
    Vergewissern Sie sich im Ergebnisbereich, dass „run_value“ für [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) auf „1“ festgelegt ist.
-   Lautet „run_value“ nicht „1“, ist Datenbank-E-Mail nicht aktiviert. Datenbank-E-Mail wird nicht automatisch aktiviert, damit möglichst wenige Funktionen eine Angriffsfläche für böswillige Benutzer bieten. Weitere Informationen finden Sie unter [Grundlegendes zur Oberflächenkonfiguration](../security/surface-area-configuration.md).
+   Lautet „run_value“ nicht „1“, ist Datenbank-E-Mail nicht aktiviert. Die Datenbank-E-Mail wird nicht automatisch aktiviert, damit möglichst wenige Funktionen eine Angriffsfläche für böswillige Benutzer bieten. Weitere Informationen finden Sie unter [Grundlegendes zur Oberflächenkonfiguration](../security/surface-area-configuration.md).
 
-1. Wenn Sie beschließen, Datenbank-E-Mail zu aktivieren, führen Sie den folgenden Code aus:
+1. Wenn Sie beschließen, die Datenbank-E-Mail zu aktivieren, führen Sie den folgenden Code aus:
 
     ```sql
     sp_configure 'Database Mail XPs', 1; 
@@ -87,7 +87,7 @@ Sie müssen Mitglied der festen Serverrolle „sysadmin“ sein, um Probleme mit
     EXEC msdb.dbo.sysmail_help_principalprofile_sp;
     ```
 
-1. Verwenden Sie den Assistenten zum Konfigurieren von Datenbank-E-Mail, um Profile zu erstellen und Benutzern den Zugriff auf Profile zu gewähren.
+1. Verwenden Sie den Assistenten zum Konfigurieren der Datenbank-E-Mail, um Profile zu erstellen und Benutzern den Zugriff auf Profile zu gewähren.
  
 ## <a name="is-database-mail-started"></a>Ist Datenbank-E-Mail gestartet?
 
@@ -96,7 +96,7 @@ Sie müssen Mitglied der festen Serverrolle „sysadmin“ sein, um Probleme mit
     ```sql
     EXEC msdb.dbo.sysmail_help_status_sp;
     ```
-1. Wenn die Datenbank-E-Mail-Aktivierung nicht gestartet wurde, führen Sie zum Starten die folgende Anweisung aus:
+1. Wenn die Datenbank-E-Mail-Aktivierung nicht gestartet wurde, führen Sie zum Aktivieren die folgende Anweisung aus:
 
     ```sql
     EXEC msdb.dbo.sysmail_start_sp;
@@ -125,14 +125,14 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 ## <a name="do-problems-affect-some-or-all-accounts"></a>Wirken sich Probleme auf einige oder alle Konten aus?
 
-1. Wenn Sie festgestellt haben, dass einige, aber nicht alle Profile E-Mails senden können, liegen möglicherweise Probleme mit den von den betroffenen Profilen verwendeten Datenbank-E-Mail-Konten vor. Führen Sie die folgende Anweisung aus, um festzustellen, welche Konten erfolgreich E-Mails senden können:
+1. Wenn Sie festgestellt haben, dass einige, aber nicht alle Profile E-Mails senden können, liegt möglicherweise ein Problem mit den von den betroffenen Profilen verwendeten Konten für Datenbank-E-Mails vor. Führen Sie die folgende Anweisung aus, um festzustellen, welche Konten erfolgreich E-Mails senden können:
 
     ```sql
     SELECT sent_account_id, sent_date FROM msdb.dbo.sysmail_sentitems;
     ```
 
 1. Wenn ein nicht funktionierendes Profil keines der aufgeführten Konten verwendet, ist es möglich, dass alle dem Profil zur Verfügung stehenden Konten nicht einwandfrei arbeiten. Zum Überprüfen einzelner Konten erstellen Sie mit dem Assistenten zum Konfigurieren von Datenbank-E-Mail ein neues Profil mit nur einem Konto, und verwenden Sie dann das Dialogfeld „Test-E-Mail senden“, um mithilfe des neuen Kontos eine E-Mail zu senden. 
-1. Führen Sie die folgende Anweisung aus, um die von Datenbank-E-Mail zurückgegebenen Fehlermeldungen anzuzeigen:
+1. Führen Sie die folgende Anweisung aus, um die Fehlermeldungen der Datenbank-E-Mail anzuzeigen:
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log;
@@ -143,11 +143,11 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 ## <a name="retry-mail-delivery"></a>Wiederholen der E-Mail-Übermittlung
 
-1. Wenn Sie festgestellt haben, dass Datenbank-E-Mail nicht einwandfrei arbeitet, weil der SMTP-Server nicht zuverlässig erreicht werden kann, können Sie die Rate der erfolgreich übermittelten E-Mails erhöhen. Erhöhen Sie dazu die Anzahl der Versuche von Datenbank-E-Mail beim Senden jeder Nachricht. Starten Sie den Assistenten zum Konfigurieren von Datenbank-E-Mail, und aktivieren Sie die Option „Systemparameter anzeigen oder ändern“. Sie können dem Profil wahlweise auch mehrere Konten zuordnen, sodass Datenbank-E-Mail im Falle eines Failovers vom primären Konto das Failoverkonto zum Senden von E-Mails verwendet.
+1. Wenn Sie festgestellt haben, dass die Datenbank-E-Mail nicht einwandfrei arbeitet, weil der SMTP-Server nicht zuverlässig erreicht werden kann, können Sie die Rate der erfolgreich übermittelten E-Mails erhöhen. Erhöhen Sie dazu die Anzahl der Versuche der Datenbank-E-Mail beim Senden jeder Nachricht. Starten Sie den Assistenten zum Konfigurieren von Datenbank-E-Mail, und aktivieren Sie die Option „Systemparameter anzeigen oder ändern“. Sie können dem Profil wahlweise auch mehrere Konten zuordnen, sodass die Datenbank-E-Mail im Falle eines Failovers vom ersten Konto das Failoverkonto zum Senden von E-Mails verwendet.
 1. Auf der Seite „Systemparameter konfigurieren“ bedeuten die Standardwerte von fünf Mal für „Wiederholungsversuche für das Konto“ und 60 Sekunden für „Wiederholungsverzögerung für das Konto“, dass die Nachrichtenübermittlung fehlschlägt, wenn der SMTP-Server nicht innerhalb von fünf Minuten erreicht werden kann. Erhöhen Sie diese Parameter, um die Zeitdauer bis zum Fehlschlagen der Nachrichtenübermittlung zu verlängern.
 
     > [!NOTE]
-    > Wenn eine große Anzahl Nachrichten gesendet wird, kann durch große Standardwerte die Zuverlässigkeit erhöht werden. Dadurch wird jedoch auch die Verwendung von Ressourcen deutlich erhöht, da die Übermittlung vieler Nachrichten immer wieder versucht wird. Beheben Sie das eigentliche Problem, indem Sie das Problem mit dem Netzwerk oder dem SMTP-Server beheben, durch das verhindert wird, dass Datenbank-E-Mail sofort eine Verbindung mit dem SMTP-Server herstellt.
+    > Wenn eine große Anzahl Nachrichten gesendet wird, kann durch große Standardwerte die Zuverlässigkeit erhöht werden. Dadurch wird jedoch auch die Verwendung von Ressourcen deutlich erhöht, da die Übermittlung vieler Nachrichten immer wieder versucht wird. Beheben Sie das eigentliche Problem, indem Sie das Problem mit dem Netzwerk oder dem SMTP-Server beheben, das bzw. der verhindert, dass von der Datenbank-E-Mail sofort eine Verbindung mit dem SMTP-Server hergestellt wird.
 
 
 

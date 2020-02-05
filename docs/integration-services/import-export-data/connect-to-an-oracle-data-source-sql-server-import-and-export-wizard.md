@@ -10,10 +10,10 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285434"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Verbinden mit einer Oracle-Datenquelle (SQL Server-Import/Export-Assistent)
@@ -93,7 +93,7 @@ oder
 ## <a name="other-data-providers-and-more-info"></a>Andere Datenanbieter und weitere Informationen
 Weitere Informationen zum Herstellen einer Verbindung mit Oracle mithilfe eines nicht hier aufgeführten Datenanbieters finden Sie unter [Oracle connection strings (Oracle-Verbindungszeichenfolgen)](https://www.connectionstrings.com/oracle/). Diese Drittanbieterseite enthält Informationen über die Datenanbieter und die auf dieser Seite beschriebenen Verbindungsparameter.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Auswählen einer Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Auswählen eines Ziels](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

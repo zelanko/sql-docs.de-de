@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d42aa77e4ecddf96ee0405645e7f98a52b5823e7
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816741"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
@@ -30,7 +30,7 @@ ms.locfileid: "71816741"
   
 -   Das Innere der **CurvePolygon** -Instanz ist die Fläche zwischen dem äußeren Ring und allen inneren Ringen.  
   
- Eine **CurvePolygon**-Instanz unterscheidet sich von einer **Polygon**-Instanz darin, dass eine **CurvePolygon**-Instanz die folgenden Kreisbogensegmente enthalten kann: **CircularString** und **CompoundCurve**.  
+ Eine **CurvePolygon** -Instanz unterscheidet sich von einer **Polygon** -Instanz darin, dass eine **CurvePolygon** -Instanz die folgenden Kreisbogensegmente enthalten kann: **CircularString** und **CompoundCurve**.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve-Instanzen  
  In der unten stehenden Abbildung werden gültige **CurvePolygon** -Instanzen dargestellt:  
@@ -136,7 +136,7 @@ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
-### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. Speichern eines CurvePolygon mit nur einem äußeren Begrenzungsring  
+### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D: Speichern eines CurvePolygon mit nur einem äußeren Begrenzungsring  
  In diesem Beispiel wird veranschaulicht, wie ein einfacher Kreis in einer **CurvePolygon** -Instanz gespeichert wird (wobei der Kreis lediglich durch einen äußeren Begrenzungsring definiert wird):  
   
 ```sql  

@@ -12,10 +12,10 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86b2cf26c7af957579c5368ed70262e43db005f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285874"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Ziel auswählen (SQL Server-Import/Export-Assistent)
@@ -71,7 +71,7 @@ Weitere Informationen zum Herstellen einer Verbindung mit einem Ziel, das hier n
 ## <a name="whats-next"></a>Wie geht es weiter?  
  Nachdem Sie Informationen zum Ziel Ihrer Daten und darüber, wie Sie eine Verbindung mit ihnen herstellen, bereitgestellt haben, rufen Sie die Seite **Tabelle kopieren oder Datenbank abfragen (SQL Server-Import/Export-Assistent)** auf. Auf dieser Seite geben Sie an, ob eine gesamte Tabelle oder nur bestimmte Zeilen kopiert werden sollen. Weitere Informationen finden Sie unter [Tabelle kopieren oder Datenbank abfragen (SQL Server-Import/Export-Assistent)](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md).  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

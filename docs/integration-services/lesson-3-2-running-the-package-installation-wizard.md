@@ -11,10 +11,10 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b380b56611e72bfd6b0c249792843a6a684813b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283331"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lektion 3-2: Ausführen des Paketinstallations-Assistenten
@@ -85,11 +85,11 @@ In einer früheren Lektion haben Sie die Pakete des Lernprogramms so geändert, 
   
     Da die Werte der Umgebungsvariablen auf dem Zielcomputer von den Werten der Umgebungsvariablen auf dem Entwicklungscomputer abweichen, werden auf der Seite zur Paketüberprüfung mehrere Warnungen angezeigt. Vier Warnungen sollten angezeigt werden:  
   
-    -   Die Konfigurationsdatei: „C:\DeploymentTutorial\DataTransferConfig.dtsConfig“ ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
+    -   Der Konfigurationsdateiname "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
   
     -   Fehler beim Laden von mindestens einem Konfigurationseintrag für das Paket. Überprüfen Sie die Konfigurationseinträge und vorherige Warnungen, um festzustellen, bei welcher Konfiguration der Fehler aufgetreten ist.  
   
-    -   Die Konfigurationsdatei: „C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig“ ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
+    -   Der Konfigurationsdateiname "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig" ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
   
     -   Fehler beim Laden von mindestens einem Konfigurationseintrag für das Paket. Überprüfen Sie die Konfigurationseinträge und vorherige Warnungen, um festzustellen, bei welcher Konfiguration der Fehler aufgetreten ist.  
   
@@ -102,8 +102,8 @@ In einer früheren Lektion haben Sie die Pakete des Lernprogramms so geändert, 
     > [!NOTE]  
     > Es wird eine temporäre Protokolldatei erstellt, die für die Paketüberprüfung verwendet wird. Diese Datei wird bei der Ausführung des Pakets nicht verwendet.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
-[Schritt 3: Testen des bereitgestellten Pakets](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+[Schritt 3: Testen der bereitgestellten Pakete](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../integration-services/service/integration-services-service-ssis-service.md)  

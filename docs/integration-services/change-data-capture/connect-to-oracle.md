@@ -13,10 +13,10 @@ ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e745a2277a01cac3dd120af241e0ae1d7575b562
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294746"
 ---
 # <a name="connect-to-oracle"></a>Herstellen einer Verbindung mit Oracle
@@ -28,11 +28,11 @@ ms.locfileid: "71294746"
   
  **Authentifizierung**  
   
- Wählen Sie eine der folgenden Optionen aus:  
+ Wählen Sie eines der folgenden Szenarien aus:  
   
--   **Windows-Authentifizierung:** Wählen Sie diese Option aus, um die aktuellen Anmeldeinformationen für die Windows-Domäne zu verwenden. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.  
+-   **Windows-Authentifizierung**: Wählen Sie diese Option, um die aktuellen Anmeldeinformationen für die Windows-Domäne zu verwenden. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.  
   
--   **Oracle-Authentifizierung:** Wenn Sie diese Option aktivieren, müssen Sie **Benutzername** und **Kennwort** für den Benutzer der Oracle-Datenbank eingeben, mit der Sie eine Verbindung herstellen.  
+-   **Oracle Authentication**: Wenn Sie diese Option aktivieren, müssen Sie **Benutzername** und **Kennwort** für den Benutzer der Oracle-Datenbank eingeben, mit der Sie eine Verbindung herstellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Tabellen zu einer CDC-Instanz](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  

@@ -16,10 +16,10 @@ ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b374955ea4a07cd94de88202fe02ffbb572d0a1c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293649"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Kopieren eines Pakets in SQL Server-Datentools
@@ -58,7 +58,7 @@ ms.locfileid: "71293649"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Speichern einer Kopie eines Pakets](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
- [Erstellen von Paketen in SQL Server-Datentools](../integration-services/create-packages-in-sql-server-data-tools.md)   
+ [Erstellen von Paketen in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)   
  [Integration Services &#40;SSIS&#41; Packages](../integration-services/integration-services-ssis-packages.md) (Integration Services-Pakete [SSIS])  
   
   

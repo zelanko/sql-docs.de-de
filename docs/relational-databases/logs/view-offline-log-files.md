@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908559"
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
@@ -29,7 +29,7 @@ ms.locfileid: "72908559"
 > [!NOTE]  
 >  Mit diesen Methoden können Sie auch eine Verbindung mit einer Onlineinstanz herstellen, aber aus einem bestimmten Grund nicht über eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindung.  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Voraussetzungen  
  Zum Herstellen einer Verbindung mit Offlineprotokolldateien muss eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer installiert sein, den Sie zum Anzeigen der Offlineprotokolldateien verwenden möchten, und außerdem auf dem Computer, auf dem sich die Protokolldateien befinden, die Sie anzeigen möchten. Wenn auf beiden Computern eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist, können Sie Offlinedateien für Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sowie für Instanzen anzeigen, von denen frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem der Computer ausgeführt werden.  
   
  Wenn Sie Registrierte Server verwenden, muss die Instanz, mit der Sie eine Verbindung herstellen möchten, unter **Lokale Servergruppen** oder **Zentrale Verwaltungsserver**registriert sein. (Die Instanz kann eigenständig oder als Mitglied einer Servergruppe registriert werden.) Weitere Informationen zum Hinzufügen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu Registrierte Server finden Sie in den folgenden Themen:  

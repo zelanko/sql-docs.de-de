@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b16af8c06f6ce1a5ab221f267b5b16dde27b587e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244388"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Gruppieren des DTC-Diensts für eine Always On-Verfügbarkeitsgruppe
@@ -24,14 +24,14 @@ ms.locfileid: "75244388"
 
 In diesem Thema werden die Anforderungen und Schritte zum Gruppieren des Microsoft DTC-Diensts (Distributed Transaction Coordinator) für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] beschrieben. Weitere Informationen zu verteilten Transaktionen und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
- ## <a name="checklist-preliminary-requirements"></a>Prüfliste: Vorläufige Anforderungen
+ ## <a name="checklist-preliminary-requirements"></a>Prüfliste: Vorbereitende Anforderungen
 
 ||Aufgabe|Verweis|  
 |------|-----------------|----------|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Stellen Sie sicher, dass alle Knoten, Dienste und die Verfügbarkeitsgruppe ordnungsgemäß konfiguriert wurden.|[Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Stellen Sie sicher, dass die Anforderungen des Verfügbarkeitsgruppen-DTCs erfüllt wurden.|[Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
-## <a name="checklist-clustered-dtc-resource-dependencies"></a>Prüfliste: Abhängigkeiten von gruppierten DTC-Ressourcen
+## <a name="checklist-clustered-dtc-resource-dependencies"></a>Prüfliste: Ressourcenabhängigkeiten für gruppierte DTCs
 
 ||Aufgabe|Verweis|  
 |------|-----------------|----------|  
@@ -43,7 +43,7 @@ In diesem Thema werden die Anforderungen und Schritte zum Gruppieren des Microso
 Nachdem Sie Ihre Verfügbarkeitsgruppenressource erstellt haben, erstellen Sie eine gruppierte DTC-Ressource, und fügen Sie sie der Verfügbarkeitsgruppe hinzu.  Ein Beispielskript finden Sie unter [Erstellen eines gruppierten DTCs für eine Always On-Verfügbarkeitsgruppe](../../../database-engine/availability-groups/windows/create-clustered-dtc-for-an-always-on-availability-group.md).
 
 
-## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Prüfliste: Konfigurationen nach dem Gruppierten der DTC-Ressourcen
+## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Prüfliste: Bereitstellen von gruppierten DTC-Ressourcenkonfigurationen
 
 ||Aufgabe|Verweis|  
 |------|-----------------|----------|  
@@ -69,4 +69,4 @@ Nachdem Sie Ihre Verfügbarkeitsgruppenressource erstellt haben, erstellen Sie e
 
 [SQL Server 2016 DTC-Unterstützung in Verfügbarkeitsgruppen](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
-[Externer Link: Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2 (Konfigurieren von DTC für eine Clusterinstanz von SQL Server mit Windows Server 2008 R2)](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[Externer Link: Konfigurieren von DTC für eine Clusterinstanz von SQL Server mit Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

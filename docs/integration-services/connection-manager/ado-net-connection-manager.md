@@ -18,10 +18,10 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d3cf4e302df6e28d898a2790d928cf40085f7915
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74687277"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET-Verbindungs-Manager
@@ -38,7 +38,7 @@ Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `ADO.NE
 ## <a name="adonet-connection-manager-troubleshooting"></a>Problembehandlung für den ADO.NET-Verbindungs-Manager  
 Sie können die vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager an externe Datenanbieter gerichteten Aufrufe protokollieren. Anschließend können Sie Probleme bei Verbindungen behandeln, die vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager mit externen Datenquellen hergestellt werden. Aktivieren Sie zum Protokollieren der vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager an externe Datenprovider gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic**-Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-Daten bestimmter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datumsdatentypen generieren beim Lesen durch einen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager die in der folgenden Tabelle dargestellten Ergebnisse.  
+Daten bestimmter [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Datumsdatentypen generieren beim Lesen durch einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungs-Manager die in der folgenden Tabelle dargestellten Ergebnisse.  
   
 |SQL Server-Datentyp|Ergebnis|  
 |--------------------------|------------|  
@@ -92,7 +92,7 @@ Beim Ausführen von SSIS-Paketen in [Azure-SSIS Integration Runtime in Azure Dat
 
 Damit Sie die Authentifizierung der verwalteten Identität für die Azure SQL-Datenbank verwenden können, führen Sie die folgenden Schritte zum Konfigurieren der Datenbank aus:
 
-1. [Stellen Sie einen Azure Active Directory-Administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) für Ihren Azure SQL-Server im Azure-Portal bereit, wenn dies noch nicht geschehen ist. Der Azure AD-Administrator kann ein Azure AD-Benutzer oder eine Azure AD-Gruppe sein. Wenn Sie der Gruppe mit der verwalteten Identität eine Administratorrolle zuweisen, überspringen Sie die Schritte 2 und 3. Der Administrator hat vollen Zugriff auf die Datenbank.
+1. [Stellen Sie einen Azure Active Directory-Administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) für Ihren Azure SQL-Server im Azure-Portal bereit, wenn dies noch nicht geschehen ist. Der Azure AD-Administrator kann ein Azure AD-Benutzer oder eine Azure AD-Gruppe sein. Wenn Sie der Gruppe mit der verwalteten Identität eine Administratorrolle zuweisen, überspringen Sie die Schritte 2 und 3. Der Administrator hat vollen Zugriff auf die Datenbank.
 
 1. [Erstellen Sie für eine eigenständige Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) Benutzer für die verwaltete Data Factory-Identität. Stellen Sie eine Verbindung mit der Datenbank her, aus der oder in die Sie Daten kopieren möchten. Verwenden Sie dazu Tools wie SSMS und eine Azure AD-Identität, die mindestens über ALTER ANY USER-Berechtigung verfügt. Führen Sie folgenden T-SQL-Code aus: 
     
@@ -108,7 +108,7 @@ Damit Sie die Authentifizierung der verwalteten Identität für die Azure SQL-Da
 
 Damit Sie die Authentifizierung der verwalteten Identität für die verwaltete Azure SQL-Datenbankinstanz verwenden können, führen Sie die folgenden Schritte zum Konfigurieren der Datenbank aus:
     
-1. [Stellen Sie einen Azure Active Directory-Administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) für Ihre verwaltete Instanz im Azure-Portal bereit, wenn dies noch nicht geschehen ist. Der Azure AD-Administrator kann ein Azure AD-Benutzer oder eine Azure AD-Gruppe sein. Wenn Sie der Gruppe mit der verwalteten Identität eine Administratorrolle zuweisen, überspringen Sie die Schritte 2 bis 4. Der Administrator hat vollen Zugriff auf die Datenbank.
+1. [Stellen Sie einen Azure Active Directory-Administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) für Ihre verwaltete Instanz im Azure-Portal bereit, wenn dies noch nicht geschehen ist. Der Azure AD-Administrator kann ein Azure AD-Benutzer oder eine Azure AD-Gruppe sein. Wenn Sie der Gruppe mit der verwalteten Identität eine Administratorrolle zuweisen, überspringen Sie die Schritte 2 bis 4. Der Administrator hat vollen Zugriff auf die Datenbank.
 
 1. [Erstellen Sie Anmeldungen](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current) für die verwaltete Data Factory-Identität. Stellen Sie in SQL Server Management Studio (SSMS) über ein SQL Server-Konto (ein **Sysadmin**-Konto) eine Verbindung mit Ihrer verwalteten Instanz her. Führen Sie in der **Masterdatenbank** den folgenden T-SQL-Befehl aus:
 

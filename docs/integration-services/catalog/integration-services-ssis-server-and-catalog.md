@@ -14,10 +14,10 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fa5d6c780ce80e8f6de0493494f736f7049edc16
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298963"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Server und Katalog von Integration Services (SSIS)
@@ -35,7 +35,7 @@ ms.locfileid: "71298963"
   
  Eine Übersicht über die Funktionen des SSISDB-Katalogs finden Sie unter [SSIS-Katalog](../../integration-services/catalog/ssis-catalog.md).  
   
-## <a name="high-availability"></a>Hohe Verfügbarkeit  
+## <a name="high-availability"></a>Hochverfügbarkeit  
  Wie andere Benutzerdatenbanken unterstützt die Datenbank **SSISDB** die Datenbankspiegelung und Replikation. Weitere Informationen zur Spiegelung und Replikation finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
  Sie können auch die hohe Verfügbarkeit von SSISDB und die Inhalte bereitstellen, indem Sie die SSIS- und Always On-Verfügbarkeitsgruppen verwenden. Weitere Informationen finden Sie unter [Always On für den SSIS-Katalog (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Informationen finden Sie auch im folgenden Blogbeitrag von Matt Masson auf blogs.msdn.com: [SSIS with Always On](https://go.microsoft.com/fwlink/?LinkId=255873) (SSIS mit Always On).  

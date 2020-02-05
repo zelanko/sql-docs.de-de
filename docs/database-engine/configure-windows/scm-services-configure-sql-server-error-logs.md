@@ -13,10 +13,10 @@ ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127477"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM-Dienste: Konfigurieren von SQL Server-Fehlerprotokollen
@@ -30,7 +30,7 @@ ms.locfileid: "74127477"
 
 2. Wählen Sie im Dialogfeld **SQL Server-Fehlerprotokolle konfigurieren** zwischen den folgenden Optionen aus.
 
-    A. Anzahl von Protokolldateien
+    a. Anzahl von Protokolldateien
 
       **Beschränken Sie die Anzahl der Fehlerprotokolldateien vor der Wiederverwendung**
 
@@ -40,7 +40,7 @@ ms.locfileid: "74127477"
 
       Gibt die maximale Anzahl der erstellten archivierten Fehlerprotokolldateien vor der Wiederverwendung an. Der Standardwert ist 6 (ohne den aktuellen Wert). Dieser Wert bestimmt die Anzahl der vorhergehenden Sicherungsprotokolle, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor der Wiederverwendung beibehält.
 
-    B. Größe der Protokolldatei
+    b. Größe der Protokolldatei
 
       **Maximale Größe der Fehlerprotokolldatei in KB**
 

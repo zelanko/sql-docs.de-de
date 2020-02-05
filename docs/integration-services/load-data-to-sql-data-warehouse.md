@@ -11,10 +11,10 @@ ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 3609de02157637ec30f7e21ad4426c5001f31a6e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282657"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Laden von Daten in Azure SQL Data Warehouse mit SQL Server Integration Services
@@ -114,7 +114,7 @@ Um das Verfahren abzukürzen, können Sie den SQL Server-Import/Export-Assistent
 
 Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
 
-1. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in SQL Data Warehouse Beispieldaten, die in der AdventureWorks-Beispieldatenbank in SQL Server gespeichert sind. Weitere Informationen zum Abrufen der AdventureWorks-Beispieldatenbank finden Sie unter [AdventureWorks-Beispieldatenbanken][AdventureWorks 2014 Sample Databases].
+1. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in SQL Data Warehouse Beispieldaten, die in der AdventureWorks-Beispieldatenbank in SQL Server gespeichert sind. Die AdventureWorks-Beispieldatenbank können Sie unter [AdventureWorks-Beispieldatenbanken][AdventureWorks 2014 Sample Databases] abrufen.
 
 2. **Eine Firewallregel**. Sie müssen eine Firewallregel für SQL Data Warehouse mit der IP-Adresse Ihres lokalen Computers erstellen, bevor Sie Daten in SQL Data Warehouse hochladen können.
 
@@ -211,13 +211,13 @@ Wenn die Ausführung des Pakets abgeschlossen ist, sehen Sie grüne Häkchen, di
 
 ![][15]
 
-Gratulation! Sie haben mit SQL Server Integration Services erfolgreich Daten in Azure SQL Data Warehouse geladen.
+Glückwunsch! Sie haben mit SQL Server Integration Services erfolgreich Daten in Azure SQL Data Warehouse geladen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Erfahren Sie mehr über das Debuggen und Behandeln von Problemen mit Ihren Paketen direkt in der Entwurfsumgebung. Beginnen Sie mit dem folgenden Artikel: [Tools zur Problembehandlung für die Paketentwicklung][Troubleshooting Tools for Package Development].
+- Erfahren Sie mehr über das Debuggen und Behandeln von Problemen mit Ihren Paketen direkt in der Entwurfsumgebung. Beginnen Sie hier: [Tools zur Problembehandlung für die Paketentwicklung][Troubleshooting Tools for Package Development].
 
-- Erfahren Sie, wie Sie Ihre SSIS-Projekte und -Pakete in Integration Services Server oder an einem anderen Speicherort bereitstellen. Beginnen Sie mit dem folgenden Artikel: [Bereitstellung von Projekten und Paketen][Deployment of Projects and Packages].
+- Erfahren Sie, wie Sie Ihre SSIS-Projekte und -Pakete in Integration Services Server oder an einem anderen Speicherort bereitstellen. Beginnen Sie hier: [Bereitstellung von Projekten und Paketen][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png

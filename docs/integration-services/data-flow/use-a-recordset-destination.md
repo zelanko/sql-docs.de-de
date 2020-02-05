@@ -13,10 +13,10 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 94c1d149dd152a9cf83e5464cde2c56ec9b42af7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290991"
 ---
 # <a name="use-a-recordset-destination"></a>Verwenden eines Recordsetziels
@@ -102,7 +102,7 @@ ms.locfileid: "71290991"
   
 1.  Fügen Sie auf der Registerkarte **Ablaufsteuerung** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers der Entwurfsoberfläche einen Datenflusstask hinzu.  
   
-2.  Fügen Sie dem Datenflusstask auf der Registerkarte **Datenfluss** tab, add an OLE DB source to the Datenfluss task, and then open the **Quellen-Editor für OLE DB**.  
+2.  Fügen Sie dem Datenflusstask auf der Registerkarte **Datenfluss** eine OLE DB-Datenquelle hinzu, und öffnen Sie dann den **Quellen-Editor für OLE DB.**  
   
 3.  Konfigurieren Sie auf der Seite **Verbindungs-Manager** des Editors die Quelle mit den folgenden Einstellungen:  
   

@@ -15,10 +15,10 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 366e307220d08192df04b95201758751cce90112
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297671"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (Verketten) (SSIS-Ausdruck)
@@ -43,7 +43,7 @@ character_expression1 + character_expression2
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Für den Ausdruck können die Datentypen DT_STR und/oder DT_WSTR verwendet werden.  
   
  Die Verkettung der Datentypen DT_STR und DT_WSTR gibt ein Ergebnis vom DT_WSTR-Datentyp zurück. Die Länge der Zeichenfolge ist die Summe der Längen der ursprünglichen Zeichenfolgen, ausgedrückt in Zeichen.  

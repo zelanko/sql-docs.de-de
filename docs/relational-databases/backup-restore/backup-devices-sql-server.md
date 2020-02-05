@@ -26,15 +26,15 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909177"
 ---
 # <a name="backup-devices-sql-server"></a>Sicherungsmedien (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Während eines Sicherungsvorgangs in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank werden die gesicherten Daten (die *Sicherung*) auf ein physisches Sicherungsmedium geschrieben. Dieses physische Sicherungsmedium wird initialisiert, wenn die erste Sicherung in einem Mediensatz darauf geschrieben wird. Die Sicherungen auf einem Satz von einem oder mehreren Sicherungsmedien bilden einen einzelnen Mediensatz.  
+  Während eines Sicherungsvorgangs in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank werden die gesicherten Daten (die *Sicherung*) auf ein physisches Sicherungsmedium geschrieben. Dieses physische Sicherungsmedium wird initialisiert, wenn die erste Sicherung in einem Mediensatz darauf geschrieben wird. Die Sicherungen auf einem Satz von einem oder mehreren Sicherungsmedien bilden einen einzelnen Mediensatz.  
    
 ##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
  Sicherungsdatenträger  
@@ -91,7 +91,7 @@ RESTORE DATABASE AdventureWorks2012
   
   
 ##  <a name="BackupFileDiskPath"></a> Angeben des Dateipfads für die Datenträgersicherung 
- Wenn Sie eine Sicherungsdatei angeben, sollten Sie den vollständigen Pfad und den Dateinamen angeben. Wenn Sie beim Sichern der Datei nur den Dateinamen oder einen relativen Pfad angeben, wird die Sicherungsdatei im Standardsicherungsverzeichnis gespeichert. Das Standardsicherungsverzeichnis lautet „C:\Programme\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup“, wobei mit *n* die Nummer der Serverinstanz angegeben wird. Für die Standardserverinstanz lautet das standardmäßige Sicherungsverzeichnis deshalb: C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup.  
+ Wenn Sie eine Sicherungsdatei angeben, sollten Sie den vollständigen Pfad und den Dateinamen angeben. Wenn Sie beim Sichern der Datei nur den Dateinamen oder einen relativen Pfad angeben, wird die Sicherungsdatei im Standardsicherungsverzeichnis gespeichert. Das Standardsicherungsverzeichnis lautet „C:\Programme\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup“, wobei mit *n* die Nummer der Serverinstanz angegeben wird. Das Standardsicherungsverzeichnis für die Standardserverinstanz lautet daher „C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup“.  
   
  Für eine eindeutige Zuordnung (insbesondere in Skripts) empfiehlt sich die explizite Angabe des Pfads für das Sicherungsverzeichnis in allen DISK-Klauseln. Wenn Sie den Abfrage-Editor verwenden, ist dieser Aspekt weniger wichtig. In diesem Fall, wenn Sie sicherstellen können, dass sich die Sicherungsdatei im Standardsicherungsverzeichnis befindet, können Sie die Pfadangabe in der DISK-Klausel auslassen. Beispielsweise wird die `BACKUP` -Datenbank mithilfe der folgenden [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Anweisung im Standardsicherungsverzeichnis gesichert.  
   
@@ -178,7 +178,7 @@ GO
 ###  <a name="OpenTapes"></a> Verwalten von offenen Bändern  
  Führen Sie eine Abfrage auf die dynamische Verwaltungssicht [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) aus, um eine Liste der offenen Bandmedien und den Status von Einbindungsanforderungen anzuzeigen. In dieser Sicht werden alle offenen Bänder angezeigt. Dies umfasst auch die gerade verwendeten Bänder, die sich bis zum nächsten BACKUP- oder RESTORE-Vorgang vorübergehend im Leerlauf befinden.  
   
- Wenn ein Band versehentlich offengeblieben ist, kann es am schnellsten mithilfe des folgenden Befehls freigegeben werden: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Weitere Informationen finden Sie unter [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
+ Wenn ein Band versehentlich offen geblieben ist, kann es am schnellsten mithilfe des folgenden Befehls freigegeben werden: RESTORE REWINDONLY FROM TAPE **=** _Name des Sicherungsmediums_. Weitere Informationen finden Sie unter [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## <a name="using-the-azure-blob-storage-service"></a>Verwenden des Azure Blob Storage-Dienst  
@@ -264,7 +264,7 @@ GO
   
 -   [Löschen eines Sicherungsmediums &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server, Sicherungsmedium-Objekt](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)   

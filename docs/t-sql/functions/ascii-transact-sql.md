@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74119189"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "74119189"
 
 Gibt den ASCII-Codewert des ersten Zeichens eines Zeichenausdrucks zurück.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Ty
 ## <a name="return-types"></a>Rückgabetypen
  **int**  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Die Abkürzung ASCII steht für **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange. Es dient als ein Zeichencodierungsstandard für moderne Computer. Eine Liste mit ASCII-Zeichen finden Sie im Abschnitt **Printable characters (Darstellbare Zeichen)** des Artikels [ASCII](https://www.wikipedia.org/wiki/ASCII).
 
 ASCII ist ein 7-Bit-Zeichensatz. Erweiterte oder hohe ASCII sind ein 8-Bit-Zeichensatz, der nicht von der `ASCII`-Funktion behandelt wird. 
@@ -113,7 +113,7 @@ Extended_ASCII CHARACTER
 230            æ
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  

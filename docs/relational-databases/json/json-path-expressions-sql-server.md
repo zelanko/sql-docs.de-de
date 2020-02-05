@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095736"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON-Pfadausdrücke (SQL Server)
@@ -65,11 +65,11 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
 -   Der Eigenschaftspfad ist ein Satz an Pfadschritten. Pfadschritte können die folgenden Elemente und Operatoren enthalten.  
   
-    -   Schlüsselnamen. Beispielsweise `$.name` und `$."first name"`. Umschließen Sie den Namen des Schlüssels mit Anführungszeichen, falls er mit einem Dollarzeichen beginnt, oder Sonderzeichen wie z.B. Leerzeichen enthält.   
+    -   Schlüsselnamen. Beispiel: `$.name` und `$."first name"`. Umschließen Sie den Namen des Schlüssels mit Anführungszeichen, falls er mit einem Dollarzeichen beginnt, oder Sonderzeichen wie z.B. Leerzeichen enthält.   
   
     -   Array-Elemente. Beispiel: `$.product[3]`. Arrays sind nullbasiert.  
   
-    -   Der Punktoperator (`.`) zeigt einen Objektmember an. Beispielsweise ist `surname` in `$.people[1].surname` ein untergeordnetes Element von `people`.
+    -   Der Punktoperator (`.`) zeigt einen Objektmember an. Beispielsweise ist `$.people[1].surname` in `surname` ein untergeordnetes Element von `people`.
   
 ## <a name="examples"></a>Beispiele  
  Die Beispiele in diesem Abschnitt verweisen auf den folgenden JSON-Text.  
@@ -92,12 +92,12 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |Pfadausdruck|value|  
 |---------------------|-----------|  
 |$.people[0].name|John|  
-|$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
+|$.people[1]|{ "name": "Jane", "surname": null, "active": true }|  
 |$.people[1].surname|NULL|  
-|$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
+|$|{ „people“: [ { „name“: „John“,  „surname“: „Doe“ },<br />   { „name“: „Jane“,  „surname“: null, „active“: true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>Wie integrierte Funktionen doppelte Pfade behandeln  
- Falls der JSON-Text doppelte Eigenschaften enthält – beispielsweise zwei Schlüssel mit dem gleichen Namen auf der gleichen Stufe – geben die Funktionen **JSON_VALUE** und **JSON_QUERY** nur den ersten Wert zurück, der dem Pfad entspricht. Verwenden Sie **OPENJSON**, wie im folgenden Beispiel gezeigt, um ein JSON-Objekt zu analysieren, das doppelte Schlüssel enthält, und um alle Werte zurückzugeben.  
+ Falls der JSON-Text doppelte Eigenschaften enthält – beispielsweise zwei Schlüssel mit dem gleichen Namen auf der gleichen Stufe –, geben die Funktionen **JSON_VALUE** und **JSON_QUERY** nur den ersten Wert zurück, der dem Pfad entspricht. Verwenden Sie **OPENJSON**, wie im folgenden Beispiel gezeigt, um ein JSON-Objekt zu analysieren, das doppelte Schlüssel enthält, und um alle Werte zurückzugeben.  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)
