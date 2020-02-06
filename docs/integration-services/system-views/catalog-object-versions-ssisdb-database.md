@@ -11,10 +11,10 @@ ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7dac194c0ceb54eeb716b9cf5ec676e7fe120d8f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296516"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions (SSISDB-Datenbank)
@@ -26,7 +26,7 @@ ms.locfileid: "71296516"
 
   Zeigt die Versionen von Objekten im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog an. In dieser Version werden in dieser Sicht nur Versionen von Projekten unterstützt.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |object_version_lsn|**bigint**|Der eindeutige Bezeichner (ID) der Objektversion. Diese Nummer ist nicht unbedingt eine fortlaufende Nummer.|  
 |object_id|**bigint**|Die eindeutige ID des Objekts.|  
@@ -38,7 +38,7 @@ ms.locfileid: "71296516"
 |restored_by|**nvarchar(128)**|Der Name des Benutzers, der das Objekt wiederhergestellt hat.|  
 |last_restored_time|**datetimeoffset**|Datum und Uhrzeit, zu denen das Objekt zuletzt wiederhergestellt wurde.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jede Version eines Objekts im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

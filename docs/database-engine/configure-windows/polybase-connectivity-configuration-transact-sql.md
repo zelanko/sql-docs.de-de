@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997914"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Konfiguration der PolyBase-Netzwerkkonnektivität (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "67997914"
 
   Stellt globale Konfigurationseinstellungen für die PolyBase-Hadoop- und Azure Blob Storage-Konnektivität dar oder ändert diese.
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -74,7 +74,7 @@ RECONFIGURE
   
 -   Option 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 und 5.13 unter Linux  
   
--   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 unter Linux  
+-   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6 und 3.0 unter Linux  
   
 -   Option 7: Hortonworks 2.1, 2.2 und 2.3 unter Windows Server  
   
@@ -86,12 +86,12 @@ RECONFIGURE
  Nach der Ausführung von RECONFIGURE müssen Sie den SQL Server-Dienst beenden und neu starten. Beachten Sie, dass beim Beenden des SQL Server-Diensts die zwei zusätzlichen PolyBase-Engine- und Datenverschiebungsdienste automatisch beendet werden. Starten Sie diese zwei Dienste nach dem Neustart des SQL Server-Engine-Diensts neu (sie starten nicht automatisch).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ##  <a name="ResultSets"></a> Resultsets  
  Bei der Ausführung ohne Parameter gibt **sp_configure** ein Resultset mit fünf Spalten zurück.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
 |**minimum**|**int**|Der Mindestwert der Konfigurationsoption.|  

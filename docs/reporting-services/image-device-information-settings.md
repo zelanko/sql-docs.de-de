@@ -12,10 +12,10 @@ ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 295784ba9f2c14ce0f73f9639ec6ed129e447e76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503082"
 ---
 # <a name="image-device-information-settings"></a>Geräteinformationseinstellungen für Bilder
@@ -42,7 +42,7 @@ ms.locfileid: "65503082"
 ## <a name="see-also"></a>Weitere Informationen  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)  
   
   

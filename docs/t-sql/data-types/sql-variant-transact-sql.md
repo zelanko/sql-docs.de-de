@@ -21,10 +21,10 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6a417d8240bb3360a13367230f0017762b51d659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000502"
 ---
 # <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68000502"
 
 Ein Datentyp, der Werte verschiedener von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützter Datentypen speichert.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -85,8 +85,8 @@ Der **sql_variant**-Datentyp steht im oberen Bereich in der Hierarchieliste der 
 |**nchar**|Unicode|  
 |**varchar**|Unicode|  
 |**char**|Unicode|  
-|**varbinary**|Binär (Binary)|  
-|**binary**|Binär (Binary)|  
+|**varbinary**|Binary|  
+|**binary**|Binary|  
 |**uniqueidentifier**|Uniqueidentifier |  
   
 Für **sql_variant**-Vergleiche gelten die folgenden Regeln:
@@ -97,7 +97,7 @@ Für **sql_variant**-Vergleiche gelten die folgenden Regeln:
 ## <a name="converting-sql_variant-data"></a>Konvertieren von sql_variant-Daten  
 Bei der Verarbeitung von **sql_variant**-Datentypen unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die impliziten Konvertierungen von Objekten mit anderen Datentypen in den Typ **sql_variant**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt jedoch keine impliziten Konvertierungen von **sql_variant**-Daten in ein Objekt mit einem anderen Datentyp.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
 In der folgenden Tabelle werden die Typen von Werten aufgelistet, die nicht mithilfe von **sql_variant** gespeichert werden können:
   
 |||  
@@ -107,7 +107,7 @@ In der folgenden Tabelle werden die Typen von Werten aufgelistet, die nicht mith
 |**text**|**ntext**|  
 |**image**|**rowversion** (**timestamp**)|  
 |**sql_variant**|**geography**|  
-|**hierarchyid**|**Geometrie**|  
+|**hierarchyid**|**geometry**|  
 |Benutzerdefinierte Typen|**datetimeoffset**<sup>1</sup>| 
 
 <sup>1</sup> Bei SQL Server 2012 und höher ist **datetimeoffset** nicht eingeschränkt.
@@ -149,7 +149,7 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 ```    
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [SQL_VARIANT_PROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
   
