@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008891"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68008891"
 
 Bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die ISO-Regeln für Anführungszeichen bei Bezeichnern und Literalzeichenfolgen befolgt. Bei Bezeichnern, die mit Anführungszeichen begrenzt werden, kann es sich um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schlüsselwörter oder um Bezeichner mit Zeichen handeln, die nach den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntaxregeln für Bezeichner sonst nicht zulässig sind.
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 

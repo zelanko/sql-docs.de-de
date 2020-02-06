@@ -11,10 +11,10 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9691deb08bdc6bce05945e1210edd91273f1bc61
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293174"
 ---
 # <a name="create-new-infoobject"></a>Neues InfoObject erstellen
@@ -65,7 +65,7 @@ ms.locfileid: "71293174"
  **InfoObject-Name**  
  Geben Sie einen Namen für das InfoObject ein.  
   
- **Kurze Beschreibung**  
+ **Kurzbeschreibung**  
  Geben Sie eine kurze Beschreibung für das InfoObject ein.  
   
  **Lange Beschreibung**  
@@ -133,17 +133,17 @@ ms.locfileid: "71293174"
  **InfoObject-Typ**  
  Zeigt den InfoObject-Typ an. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |CHA|Merkmale|  
 |KYF|Kennzahlen|  
-|UNI|Einheiten|  
+|UNI|Units|  
 |TIM|Zeitmerkmale|  
   
 ### <a name="attributes-options"></a>Optionen für "Attribute"  
  Verwenden Sie die folgenden Optionen, um Attribute für ein erstelltes InfoObject hinzuzufügen und zu entfernen:  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügen Sie ein bestehendes InfoObject als Attribut hinzu.  
   
  Um ein vorhandenes InfoObject hinzuzufügen, klicken Sie auf Hinzufügen und verwenden dann das Dialogfeld **InfoObject suchen** für die Suche nach dem InfoObject. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
@@ -153,7 +153,7 @@ ms.locfileid: "71293174"
   
  Um ein neues InfoObject zu erstellen und hinzuzufügen, klicken Sie auf Neu und verwenden dann eine neue Instanz des Dialogfelds **Neues InfoObject erstellen** , um das neue InfoObject zu erstellen.  
   
- **Entfernen**  
+ **Remove**  
  Entfernt das ausgewählte InfoObject aus der Liste **Attribute** .  
   
 ## <a name="see-also"></a>Weitere Informationen  

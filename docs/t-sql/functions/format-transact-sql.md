@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155794"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70155794"
 
 Gibt einen mit dem angegebenen Format und der optionalen Kultur formatierten Wert zurück. Verwenden Sie die FORMAT-Funktion für die gebietsschemabasierte Formatierung von Datums-/Uhrzeitwerten sowie numerischen Werten als Zeichenfolgen. Für allgemeine Datentypkonvertierungen verwenden Sie CAST oder CONVERT.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -74,24 +74,24 @@ FORMAT ( value, format [, culture ] )
   
  In der folgenden Tabelle sind zulässige Datentypen für das *value* -Argument sowie die entsprechenden .NET Framework-Zuordnungstypen aufgeführt.  
   
-|Kategorie|Typ|.NET-Typ|  
+|Category|type|.NET-Typ|  
 |--------------|----------|---------------|  
-|Numerisch|BIGINT|Int64|  
-|Numerisch|INT|Int32|  
-|Numerisch|SMALLINT|Int16|  
-|Numerisch|TINYINT|Byte|  
-|Numerisch|Decimal|SqlDecimal|  
-|Numerisch|Numerisch|SqlDecimal|  
-|Numerisch|FLOAT|Double|  
-|Numerisch|REAL|Single|  
-|Numerisch|SMALLMONEY|Decimal|  
-|Numerisch|money|decimal|  
-|Datum und Uhrzeit|date|datetime|  
+|Numeric|BIGINT|Int64|  
+|Numeric|INT|Int32|  
+|Numeric|SMALLINT|Int16|  
+|Numeric|TINYINT|Byte|  
+|Numeric|Decimal|SqlDecimal|  
+|Numeric|NUMERIC|SqlDecimal|  
+|Numeric|float|Double|  
+|Numeric|real|Single|  
+|Numeric|SMALLMONEY|Decimal|  
+|Numeric|money|Decimal|  
+|Datum und Uhrzeit|date|Datetime|  
 |Datum und Uhrzeit|time|TimeSpan|  
-|Datum und Uhrzeit|DateTime|DateTime|  
-|Datum und Uhrzeit|smalldatetime|datetime|  
-|Datum und Uhrzeit|datetime2|datetime|  
-|Datum und Uhrzeit|datetimeoffset|datetimeoffset|  
+|Datum und Uhrzeit|datetime|Datetime|  
+|Datum und Uhrzeit|smalldatetime|Datetime|  
+|Datum und Uhrzeit|datetime2|Datetime|  
+|Datum und Uhrzeit|datetimeoffset|DateTimeOffset|  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -150,7 +150,7 @@ DateTime Result  Custom Number Result
   
 ### <a name="c-format-with-numeric-types"></a>C. FORMAT mit numerischen Typen
 
- Im folgenden Beispiel werden fünf Zeilen aus der **Sales.CurrencyRate** -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank zurückgegeben. Die Spalte **EndOfDateRate** wird als **money** -Typ in der Tabelle gespeichert. In diesem Beispiel wird die Spalte unformatiert zurückgegeben und wird dann durch Angeben der Typen für das .NET-Zahlenformat, das allgemeine Format und das Währungsformat formatiert. Weitere Informationen zu diesen und anderen Zahlenformaten finden Sie unter [Benutzerdefinierte Zahlenformatzeichenfolgen](https://msdn.microsoft.com/library/dwhawy9k.aspx).  
+ Im folgenden Beispiel werden fünf Zeilen aus der **Sales.CurrencyRate**-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben. Die Spalte **EndOfDateRate** wird als **money** -Typ in der Tabelle gespeichert. In diesem Beispiel wird die Spalte unformatiert zurückgegeben und wird dann durch Angeben der Typen für das .NET-Zahlenformat, das allgemeine Format und das Währungsformat formatiert. Weitere Informationen zu diesen und anderen Zahlenformaten finden Sie unter [Benutzerdefinierte Zahlenformatzeichenfolgen](https://msdn.microsoft.com/library/dwhawy9k.aspx).  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  

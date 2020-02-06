@@ -9,10 +9,10 @@ ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577147"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Funktionen des Berichts-Generators: Multilookup-Funktion
@@ -88,12 +88,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Das Dataset "CategoryNames" enthält den Kategoriebezeichner und den Kategorienamen, wie in der folgenden Tabelle gezeigt.  
   
-|im Elementknoten &lt;Customer ID="1"|Name|  
+|id|Name|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Components|  
+|4|Komponenten|  
   
  Verwenden Sie für die Suche der Namen, die der Liste der Bezeichner entsprechen, **Multilookup**. Sie müssen zuerst die Liste in ein Zeichenfolgenarray aufteilen, **Multilookup** aufrufen, um die Kategorienamen abzurufen, und die Ergebnisse zu einer Zeichenfolge verketten.  
   
@@ -108,11 +108,11 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="example"></a>Beispiel  
  Angenommen, ein Dataset "ProductColors" enthält ein Farbbezeichnerfeld "ColorID" und ein Farbwertfeld "Color", wie in der folgenden Tabelle gezeigt.  
   
-|ColorID|Farbe|  
+|ColorID|Color|  
 |-------------|-----------|  
 |1|Red|  
-|2|Blue|  
-|3|Green|  
+|2|Blau|  
+|3|Grün|  
   
  Angenommen, der mehrwertige Parameter *MyColors* ist nicht an ein Dataset für seine verfügbaren Werte gebunden. Die Standardwerte für den Parameter sind auf 2 und 3 festgelegt. Wenn der folgende Ausdruck in einem Textfeld in einer Tabelle platziert wird, werden die ausgewählten Werte für den Parameter zu einer durch Trennzeichen getrennten Liste verkettet, und es wird "Blue, Green" angezeigt.  
   
