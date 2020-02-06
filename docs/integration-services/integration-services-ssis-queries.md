@@ -18,10 +18,10 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d24d4e8bdebca82ec0541132b52ac84de6c9c271
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284482"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services-Abfragen (SSIS)
@@ -90,11 +90,11 @@ Verwenden Sie das Dialogfeld **Abfrage-Generator** , um Abfragen zum Verwenden m
   
  Die Transformationen für Suche und Fuzzysuche können ebenfalls Variablen mit Parametern und Rückgabecodes verwenden. Die Informationen zur OLE DB-Quelle gelten auch für diese beiden Transformationen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Symbolleiste**  
  Mithilfe der Symbolleiste können Sie Datasets verwalten, Bereiche zur Anzeige auswählen und Abfragefunktionen steuern.  
   
-|value|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Diagrammbereich ein-/ausblenden**|Blendet den Bereich **Diagramm** ein oder aus.|  
 |**Rasterbereich ein-/ausblenden**|Blendet den Bereich **Raster** ein oder aus.|  
@@ -111,7 +111,7 @@ Verwenden Sie das Dialogfeld **Abfrage-Generator** , um Abfragen zum Verwenden m
  **Abfragedefinition**  
  Die Abfragedefinition stellt eine Symbolleiste und Bereiche bereit, mit deren Hilfe die Abfrage definiert und getestet werden kann.  
   
-|Bereich|und Beschreibung|  
+|Bereich|BESCHREIBUNG|  
 |----------|-----------------|  
 |Bereich**Diagramm**|Zeigt die Abfrage in einem Diagramm an. Das Diagramm zeigt die in der Abfrage enthaltenen Tabellen sowie die Art, wie diese miteinander verknüpft sind. Aktivieren oder deaktivieren Sie das Kontrollkästchen neben einer Spalte in einer Tabelle, um die entsprechende Spalte der Abfrageausgabe hinzuzufügen bzw. sie daraus zu entfernen.<br /><br /> Wenn Sie der Abfrage Tabellen hinzufügen, erstellt der Abfrage-Generator auf der Grundlage der Tabellen Joins zwischen Tabellen, abhängig von den Schlüsseln in der Tabelle. Um einen Join hinzuzufügen, ziehen Sie ein Feld aus einer Tabelle auf ein Feld in einer anderen Tabelle. Sie können den Join verwalten, indem Sie mit der rechten Maustaste auf den Join klicken und Optionen aus einem Menü wählen.<br /><br /> Klicken Sie mit der rechten Maustaste auf den Bereich **Diagramm** , um Tabellen hinzuzufügen oder zu entfernen, alle Tabellen auszuwählen oder Bereiche ein- oder auszublenden.|  
 |Bereich**Raster**|Zeigt die Abfrage in einem Raster an. Sie können diesen Bereich verwenden, um der Abfrage Spalten hinzuzufügen bzw. Spalten daraus zu entfernen, sowie um die Einstellungen der einzelnen Spalten zu ändern.|  

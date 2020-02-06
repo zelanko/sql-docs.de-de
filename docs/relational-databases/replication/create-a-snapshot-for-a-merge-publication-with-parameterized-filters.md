@@ -16,10 +16,10 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 88c43b8d37861e52b5bda5afc0a38753f2b70d6e
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321827"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern
@@ -59,7 +59,7 @@ Wenn parametrisierte Zeilenfilter in Mergeveröffentlichungen verwendet werden, 
 -   Wenn das Filtern nach einem oder mehreren Artikeln in der Veröffentlichung nicht überlappende Partitionen ergibt, die für jedes Abonnement eindeutig sind, wird für Metadaten bei jedem Ausführen des Merge-Agents einen Cleanup ausgeführt. Das bedeutet, dass die partitionierte Momentaufnahme schneller abläuft. Bei dieser Methode sollten Sie zulassen, dass Abonnenten das Generieren und Übermitteln von Momentaufnahmen einleiten. 
   
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Sie können Momentaufnahmen für Partitionen im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf der Seite **Datenpartitionen** generieren. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Sie können zulassen, dass Abonnenten die Momentaufnahmegenerierung und -übermittlung starten bzw. Momentaufnahmen generieren.  
+ Sie können Momentaufnahmen für Partitionen im Dialogfeld **Veröffentlichungseigenschaften -** Veröffentlichung> **auf der Seite \<Datenpartitionen** generieren. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Sie können zulassen, dass Abonnenten die Momentaufnahmegenerierung und -übermittlung starten bzw. Momentaufnahmen generieren.  
   
  Vor der Generierung von Momentaufnahmen für eine oder mehrere Partitionen müssen Sie folgende Aktionen ausführen:  
   

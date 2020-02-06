@@ -28,10 +28,10 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93571a71662f8d24044b77c2c65dec01778096d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948069"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "67948069"
 > [!NOTE]  
 >  Informationen zum Erstellen eines relationalen Indexes finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md). Informationen zum Erstellen eines räumlichen Indexes finden Sie unter [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -110,7 +110,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  Gibt den Typ des sekundären XML-Indexes an.  
   
- Value  
+ VALUE  
  Erstellt einen sekundären XML-Index für Spalten, bei denen die Schlüsselspalten (Knotenwert und Pfad) vom primären XML-Index stammen.  
   
  PATH  
@@ -139,7 +139,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PAD_INDEX **=** { ON | **OFF** }  
  Gibt die Auffüllung von Indizes an. Der Standardwert ist OFF.  
   
- ON  
+ EIN  
  Der Prozentsatz des mit *fillfactor* angegebenen freien Speicherplatzes wird für die Zwischenebenenseiten des Indexes angewendet.  
   
  OFF oder *fillfactor* ist nicht angegeben  
@@ -163,13 +163,13 @@ CREATE [ PRIMARY ] XML INDEX index_name
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  Gibt an, ob temporäre Ergebnisse des Sortierens in **tempdb** gespeichert werden sollen. Der Standardwert ist OFF.  
   
- ON  
+ EIN  
  Die Zwischenergebnisse von Sortierungen, mit denen der Index erstellt wird, werden in **tempdb** gespeichert. Dadurch kann sich die zum Erstellen eines Index erforderliche Zeit verringern, wenn sich **tempdb** in anderen Datenträgersätzen befindet als die Benutzerdatenbank. Sie erhöht jedoch den Betrag an Speicherplatz, der während der Indexerstellung verwendet wird.  
   
  OFF  
  Die Zwischenergebnisse der Sortierung werden in derselben Datenbank gespeichert wie der Index.  
   
- Zusätzlich zu dem Speicherplatz, der in der Benutzerdatenbank zum Erstellen des Index erforderlich ist, muss **tempdb** ungefähr die gleiche Menge an zusätzlichem Speicherplatz aufweisen, um die Zwischenergebnisse der Sortierung zu speichern. Weitere Informationen finden Sie unter [SORT_IN_TEMPDB-Optionen für Indizes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
+ Zusätzlich zu dem Speicherplatz, der in der Benutzerdatenbank zum Erstellen des Index erforderlich ist, muss **tempdb** ungefähr die gleiche Menge an zusätzlichem Speicherplatz aufweisen, um die Zwischenergebnisse der Sortierung zu speichern. Weitere Informationen finden Sie unter [SORT_IN_TEMPDB-Option für Indizes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
  IGNORE_DUP_KEY **=OFF**  
  Hat keine Auswirkungen für XML-Indizes, da der Indextyp nie eindeutig ist. Legen Sie diese Option nicht auf ON fest, oder es wird ein Fehler ausgelöst.  
@@ -177,7 +177,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  DROP_EXISTING **=** { ON | **OFF** }  
  Gibt an, dass der benannte, bereits vorhandene XML-Index gelöscht und neu erstellt wird. Der Standardwert ist OFF.  
   
- ON  
+ EIN  
  Der vorhandene Index wird gelöscht und neu erstellt. Der angegebene Indexname muss mit dem Namen eines derzeit vorhandenen Index übereinstimmen. Die Indexdefinition kann jedoch geändert werden. Sie können beispielsweise andere Spalten, eine andere Sortierreihenfolge, ein anderes Partitionsschema oder andere Indexoptionen angeben.  
   
  OFF  
@@ -191,12 +191,12 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Ein Offlineindexvorgang, der einen XML-Index erstellt, neu erstellt oder löscht, aktiviert eine Schemaänderungssperre (Sch-M) für die Tabelle. Dadurch wird verhindert, dass Benutzer für die Dauer des Vorgangs auf die zugrunde liegende Tabelle zugreifen können.  
   
 > [!NOTE]
->  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  Gibt an, ob Zeilensperren zulässig sind. Der Standardwert ist ON.  
   
- ON  
+ EIN  
  Zeilensperren sind beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden.  
   
  OFF  
@@ -205,7 +205,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  Gibt an, ob Seitensperren zulässig sind. Der Standardwert ist ON.  
   
- ON  
+ EIN  
  Seitensperren sind beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden.  
   
  OFF  

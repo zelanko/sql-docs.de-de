@@ -21,10 +21,10 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 726b071c222580ec75091477dc68509cdb71e1e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940253"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67940253"
 
   Gibt Informationen über die Eigenschaften der Volltext-Engine zurück. Diese Eigenschaften können mit **sp_fulltext_service** festgelegt und abgerufen werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ FULLTEXTSERVICEPROPERTY ('property')
  Ein Ausdruck, der den Namen der Eigenschaft der Volltextdienstebene enthält. In der folgenden Tabelle finden Sie eine Liste der Eigenschaften und eine Beschreibung der zurückgegebenen Informationen.  
   
 > [!NOTE]
->  Die folgenden Eigenschaften werden in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt: **ConnectTimeout**, **DataTimeout** und **ResourceUsage**. Vermeiden Sie die Verwendung dieser Eigenschaften in Neuentwicklungen, und planen Sie die Änderung von Anwendungen, die diese Eigenschaften derzeit verwenden.  
+>  Die folgenden Eigenschaften werden in einem künftigen Release von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr unterstützt: **ConnectTimeout**, **DataTimeout** und **ResourceUsage**. Vermeiden Sie die Verwendung dieser Eigenschaften in Neuentwicklungen, und planen Sie die Änderung von Anwendungen, die diese Eigenschaften derzeit verwenden.  
   
 |Eigenschaft|value|  
 |--------------|-----------|  

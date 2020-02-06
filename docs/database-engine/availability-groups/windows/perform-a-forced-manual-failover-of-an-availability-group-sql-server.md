@@ -16,10 +16,10 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ff0280b7a3a071a87feb029e6e906eaeace8a2d
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822535"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Ausführen eines erzwungenen manuellen Failovers einer Always On-Verfügbarkeitsgruppe (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "74822535"
  Nach einem erzwungenen Failover wird das Failoverziel, auf das ein Failover der Verfügbarkeitsgruppe ausgeführt wurde, zum neuen primären Replikat. Die sekundären Datenbanken in den verbleibenden sekundären Replikaten werden angehalten, und deren Ausführung muss manuell fortgesetzt werden. Wenn das frühere primäre Replikat verfügbar wird, geht es in die sekundäre Rolle über, sodass die früheren primären Datenbanken zu sekundären Datenbanken werden und in den Status SUSPENDED übergehen. Bevor Sie die Ausführung einer angegebenen sekundären Datenbank fortsetzen, können Sie möglicherweise verlorene Daten wiederherstellen. Beachten Sie jedoch, dass die Transaktionsprotokollkürzung in einer angegebenen primären Datenbank verzögert wird, solange eine ihrer sekundären Datenbanken angehalten ist.  
   
 > [!IMPORTANT]  
->  Die Daten werden erst mit der primären Datenbank synchronisiert, wenn die Ausführung der sekundären Datenbank fortgesetzt wird. Informationen zum Fortsetzen der Ausführung einer sekundären Datenbank finden Sie in diesem Artikel unter [Nächster Schritt: Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp).  
+>  Die Daten werden erst mit der primären Datenbank synchronisiert, wenn die Ausführung der sekundären Datenbank fortgesetzt wird. Informationen zum Fortsetzen der Ausführung einer sekundären Datenbank finden Sie unter [Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp) weiter unten in diesem Artikel.  
   
  Ein erzwungenes Failover ist in den folgenden Notfallsituationen notwendig:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74822535"
     >  Wenn der WSFC-Cluster ein fehlerfreies Quorum aufweist und Sie auf einem synchronisierten sekundären Replikat einen Befehl zum Erzwingen eines Failovers ausgeben, führt das Replikat tatsächlich ein geplantes manuelles Failover aus.  
   
 > [!NOTE]  
->  Weitere Informationen zu den Voraussetzungen und Empfehlungen zum Erzwingen des Failovers sowie ein Beispielszenario, in dem zur Wiederherstellung nach einem schwerwiegenden Fehler ein erzwungenes Failover verwendet wird, finden Sie weiter unten in diesem Artikel unter [Beispielszenario: Wiederherstellen nach einem schwerwiegenden Fehler mithilfe eines erzwungenen Failovers](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy).  
+>  Weitere Informationen zu den Voraussetzungen und Empfehlungen zum Erzwingen des Failovers sowie ein Beispielszenario, in dem zur Wiederherstellung nach einem schwerwiegenden Fehler ein erzwungenes Failover verwendet wird, finden Sie unter [Beispielszenario: Wiederherstellen nach einem schwerwiegenden Fehler mithilfe eines erzwungenen Failovers](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)weiter unten in diesem Thema.  
   
   
 ##  <a name="Restrictions"></a> Einschränkungen  
@@ -125,7 +125,7 @@ ms.locfileid: "74822535"
   
 4.  Dadurch wird der Assistent für das Failover von Verfügbarkeitsgruppen gestartet. Weitere Informationen finden Sie unter [Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)ausgeführt wird.  
   
-5.  Führen Sie nach dem Erzwingen des Failovers für eine Verfügbarkeitsgruppe die notwendigen Nachverfolgungsschritte aus. Weitere Informationen finden Sie in diesem Artikel unter [Nächster Schritt: Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp).  
+5.  Führen Sie nach dem Erzwingen des Failovers für eine Verfügbarkeitsgruppe die notwendigen Nachverfolgungsschritte aus. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp).  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So erzwingen Sie ein Failover (mit möglichem Datenverlust)**  
@@ -144,7 +144,7 @@ ms.locfileid: "74822535"
     ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
     ```  
   
-3.  Führen Sie nach dem Erzwingen des Failovers für eine Verfügbarkeitsgruppe die notwendigen Nachverfolgungsschritte aus. Weitere Informationen finden Sie in diesem Artikel unter [Nächster Schritt: Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp).  
+3.  Führen Sie nach dem Erzwingen des Failovers für eine Verfügbarkeitsgruppe die notwendigen Nachverfolgungsschritte aus. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp).  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So erzwingen Sie ein Failover (mit möglichem Datenverlust)**  
@@ -180,17 +180,17 @@ ms.locfileid: "74822535"
     > [!NOTE]  
     >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help** -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
-3.  Führen Sie nach dem Erzwingen des Failovers für eine Verfügbarkeitsgruppe die notwendigen Nachverfolgungsschritte aus. Weitere Informationen finden Sie in diesem Artikel unter [Nächster Schritt: Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp).  
+3.  Führen Sie nach dem Erzwingen des Failovers für eine Verfügbarkeitsgruppe die notwendigen Nachverfolgungsschritte aus. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   
 -   [SQL Server PowerShell-Anbieter](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Wichtige Aufgaben nach einem erzwungenen Failover  
+##  <a name="FollowUp"></a> Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover  
   
 1.  Nach einem erzwungenen Failover wird das sekundäre Replikat, auf das ein Failover ausgeführt wurde, das neue primäre Replikat. Damit Clients auf dieses Verfügbarkeitsreplikat zugreifen können, müssen Sie das WSFC-Quorum jedoch u. U. neu konfigurieren oder den konfigurierten Verfügbarkeitsmodus der Verfügbarkeitsgruppe wie folgt anpassen:  
   
-    -   **Wenn Sie ein Failover außerhalb des [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] ausgeführt haben:**  Passen Sie die Quorumstimmen der WSFC-Knoten an die neue Konfiguration der Verfügbarkeitsgruppe an. Wenn der WSFC-Knoten, der das sekundäre Zielreplikat hostet, nicht über eine WSFC-Quorumsstimme verfügt, müssen Sie u. U. ein WSFC-Quorum erzwingen.  
+    -   **Wenn Sie ein Failover außerhalb des [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] ausgeführt haben:** Passen Sie die Quorumsstimmen der WSFC-Knoten an die neue Konfiguration der Verfügbarkeitsgruppe an. Wenn der WSFC-Knoten, der das sekundäre Zielreplikat hostet, nicht über eine WSFC-Quorumsstimme verfügt, müssen Sie u. U. ein WSFC-Quorum erzwingen.  
   
         > [!NOTE]  
         >  Ein [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] ist nur vorhanden, wenn zwei Verfügbarkeitsreplikate (einschließlich des vorherigen primären Replikats) für den Modus für synchrone Commits mit automatischem Failover konfiguriert sind.  
@@ -244,7 +244,7 @@ ms.locfileid: "74822535"
   
     -   [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-##  <a name="ExampleRecoveryFromCatastrophy"></a>Beispielszenario: Wiederherstellen nach einem schwerwiegenden Fehler mithilfe eines erzwungenen Failovers  
+##  <a name="ExampleRecoveryFromCatastrophy"></a> Beispielszenario: Wiederherstellen nach einem schwerwiegenden Fehler mithilfe eines erzwungenen Failovers  
  Wenn das primäre Replikat ausfällt und kein synchronisiertes sekundäres Replikat verfügbar ist, kann das Erzwingen eines Failovers für die Verfügbarkeitsgruppe u. U. angemessen sein. Ob das Erzwingen eines Failovers angebracht ist, ist von folgenden Faktoren abhängig: (1) Ob Sie davon ausgehen, dass das primäre Replikat für einen längeren Zeitraum offline ist als die Vereinbarung zum Servicelevel (SLA) vorsieht, und (2) ob Sie bereit sind, einen möglichen Datenverlust zu riskieren, um primäre Datenbanken schnell verfügbar zu machen. Wenn Sie entscheiden, dass ein Failover für eine Verfügbarkeitsgruppe erzwungen werden muss, ist das tatsächliche erzwungene Failover lediglich ein Schritt von vielen.  
   
  Um die Schritte zu erläutern, die für ein erzwungenes Failover zur Wiederherstellung nach einem schwerwiegenden Fehler erforderlich sind, enthält dieses Thema ein mögliches Szenario für die Wiederherstellung im Notfall. Das Beispielszenario umfasst eine Verfügbarkeitsgruppe, deren ursprüngliche Topologie aus einem Hauptrechenzentrum besteht, das drei Verfügbarkeitsreplikate mit synchronem Commit hostet, einschließlich des primären Replikats, und aus einem Remoterechenzentrum, das zwei sekundäre Replikate mit asynchronem Commit hostet. Die folgende Abbildung veranschaulicht die ursprüngliche Topologie dieser beispielhaften Verfügbarkeitsgruppe. Die Verfügbarkeitsgruppe wird von einem Multisubnetz-WSFC-Cluster mit drei Knoten im Hauptrechenzentrum (**Knoten 01**, **Knoten 02**und **Knoten 03**) und zwei Knoten in einem Remoterechenzentrum (**Knoten 04** und **Knoten 05**) gehostet.  
@@ -288,7 +288,7 @@ ms.locfileid: "74822535"
   
 ||Schritt|Links|  
 |-|----------|-----------|  
-|**1.**|Die Knoten im Hauptrechenzentrum werden wieder online geschaltet und stellen die Kommunikation mit dem WSFC-Cluster wieder her. Die Verfügbarkeitsreplikate werden als sekundäre Replikate mit angehaltenen Datenbanken online geschaltet, und der Datenbankadministrator muss die Ausführung jeder Datenbank möglichst bald manuell fortsetzen.|[Fortsetzen einer Verfügbarkeitsdatenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)<br /><br /> Tipp: Wenn Sie Bedenken bezüglich eines möglichen Datenverlusts in den primären Datenbanken nach dem Failover haben, sollten Sie versuchen, von einer der sekundären Datenbanken mit synchronem Commit eine Datenbankmomentaufnahme für die angehaltenen Datenbanken zu erstellen. Bedenken Sie, dass die Transaktionsprotokollkürzung in einer primären Datenbank verzögert wird, solange eine ihrer sekundären Datenbanken angehalten ist. Der Synchronisierungsstatus des sekundären Replikats mit synchronem Commit kann auch nicht in HEALTHY übergehen, solange eine der lokalen Datenbanken angehalten ist.|  
+|**1.**|Die Knoten im Hauptrechenzentrum werden wieder online geschaltet und stellen die Kommunikation mit dem WSFC-Cluster wieder her. Die Verfügbarkeitsreplikate werden als sekundäre Replikate mit angehaltenen Datenbanken online geschaltet, und der Datenbankadministrator muss die Ausführung jeder Datenbank möglichst bald manuell fortsetzen.|[Fortsetzen einer Verfügbarkeitsdatenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)<br /><br /> Tipp: Wenn Sie Bedenken bezüglich eines möglichen Datenverlusts in den primären Datenbanken nach dem Failover haben, sollten Sie versuchen, von einer der sekundären Datenbanken mit synchronem Commit eine Datenbank-Momentaufnahme für die angehaltenen Datenbanken zu erstellen. Bedenken Sie, dass die Transaktionsprotokollkürzung in einer primären Datenbank verzögert wird, solange eine ihrer sekundären Datenbanken angehalten ist. Der Synchronisierungsstatus des sekundären Replikats mit synchronem Commit kann auch nicht in HEALTHY übergehen, solange eine der lokalen Datenbanken angehalten ist.|  
 |**2.**|Sobald die Ausführung der Datenbanken fortgesetzt wird, ändert der Datenbankadministrator das neue primäre Replikat vorübergehend in den Modus für synchrone Commits. Dies umfasst zwei Schritte:<br /><br /> 1) Ändern eines Offlineverfügbarkeitsreplikats in den Modus für asynchrone Commits<br /><br /> 2) Ändern des neuen primären Replikats in den Modus für synchrone Commits Hinweis: Durch diesen Schritt können sekundäre Datenbanken mit synchronem Commit, deren Ausführung fortgesetzt wurde, den Status SYNCHRONIZED annehmen.|[Ändern des Verfügbarkeitsmodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
 |**3.**|Nachdem das sekundäre Replikat mit synchronem Commit auf **Knoten 03** (das ursprüngliche primäre Replikat) den Synchronisierungsstatus HEALTHY annimmt, führt der Datenbankadministrator ein geplantes manuelles Failover auf dieses Replikat aus, damit es wieder zum primären Replikat wird. Das Replikat auf **Knoten 04** wird wieder zu einem sekundären Replikat.|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)<br /><br /> [Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|Der Datenbankadministrator stellt eine Verbindung mit dem neuen primären Replikat her und:<br /><br /> 1) Ändert das frühere primäre Replikat (im Remoterechenzentrum) zurück in den Modus für asynchrone Commits.<br /><br /> 2) Ändert das sekundäre Replikat mit asynchronem Commit im Hauptrechenzentrum zurück in den Modus für synchrone Commits.|[Ändern des Verfügbarkeitsmodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
@@ -318,7 +318,7 @@ ms.locfileid: "74822535"
   
 -   **Blogs:**  
   
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblogs: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server-Technikblogs](https://blogs.msdn.com/b/psssql/)  
   

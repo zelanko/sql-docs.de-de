@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982225"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "73982225"
 
 Fügt einer Tabelle oder Sicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine oder mehrere Zeilen hinzu. Beispiele finden Sie unter [Beispiele](#InsertExamples).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -162,7 +162,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
  Innerhalb ihres Bereichs kann eine [table](../../t-sql/data-types/table-transact-sql.md)-Variable als Tabellenquelle in einer INSERT-Anweisung verwendet werden.  
   
- Die Sicht, auf die *table_or_view_name* verweist, muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Sicht verweisen. Beispielsweise muss eine INSERT-Anweisung für eine auf mehreren Tabellen basierende Sicht eine *column_list* verwenden, die nur auf Spalten einer einzigen Basistabelle verweist. Weitere Informationen zu aktualisierbaren Sichten finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+ Die Ansicht, auf die *table_or_view_name* verweist, muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Ansicht verweisen. Beispielsweise muss eine INSERT-Anweisung für eine auf mehreren Tabellen basierende Sicht eine *column_list* verwenden, die nur auf Spalten einer einzigen Basistabelle verweist. Weitere Informationen zu aktualisierbaren Ansichten finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
@@ -295,7 +295,7 @@ OUTPUT-Klausel
 > [!NOTE]
 >  Ein Syntaxfehler wird ausgelöst, wenn keine Spaltenliste bereitgestellt wird.  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Spezifische Informationen zum Einfügen von Daten in SQL-Graph-Tabellen finden Sie unter [INSERT (SQL-Graph)](../../t-sql/statements/insert-sql-graph.md). 
 
 ## <a name="best-practices"></a>Bewährte Methoden  
@@ -399,7 +399,7 @@ In Parallel Data Warehouse ist die ORDER BY-Klausel in VIEWS, CREATE TABLE AS SE
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
  Die INSERT-Anweisung wird immer vollständig protokolliert, sofern nicht die OPENROWSET-Funktion mit dem BULK-Schlüsselwort oder `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` verwendet wird. Für diese Vorgänge ist eine minimale Protokollierung möglich. Weitere Informationen finden Sie im Abschnitt "Bewährte Methoden zum Massenladen von Daten" weiter oben in diesem Thema.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Im Verlauf der Verbindung mit einem Verbindungsserver stellt der sendende Server einen Benutzernamen und ein Kennwort bereit, um eine Verbindung mit dem empfangenden Server in dessen Auftrag aufzubauen. Damit diese Verbindung funktioniert, müssen Sie mithilfe von [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) eine Anmeldenamenzuordnung zwischen den Verbindungsservern erstellen.  
   
  Für die Verwendung von OPENROWSET(BULK…) ist es wichtig, nachvollziehen zu können, wie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Identitätswechseln umgegangen wird. Weitere Informationen finden Sie im Abschnitt „Überlegungen zur Sicherheit“ unter [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
@@ -413,7 +413,7 @@ In Parallel Data Warehouse ist die ORDER BY-Klausel in VIEWS, CREATE TABLE AS SE
   
 ##  <a name="InsertExamples"></a> Beispiele  
   
-|Kategorie|Funktionssyntaxelemente|  
+|Category|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
 |[Grundlegende Syntax](#BasicSyntax)|INSERT • Tabellenwertkonstruktor|  
 |[Behandeln von Spaltenwerten](#ColumnValues)|IDENTITY • NEWID • Standardwerte • Benutzerdefinierte Typen|  
@@ -456,7 +456,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 ###  <a name="ColumnValues"></a> Behandeln von Spaltenwerten  
  In den Beispielen in diesem Abschnitt werden Methoden zum Einfügen von Werten in Spalten erläutert, die mit einer IDENTITY-Eigenschaft und einem DEFAULT-Wert oder mit Datentypen wie **uniqueidentifier** oder Spalten eines benutzerdefinierten Typs definiert werden.  
   
-#### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. Einfügen von Daten in eine Tabelle mit Spalten, die Standardwerte enthalten  
+#### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D: Einfügen von Daten in eine Tabelle mit Spalten, die Standardwerte enthalten  
  Im folgenden Beispiel wird das Einfügen von Zeilen in eine Tabelle mit Spalten gezeigt, die automatisch einen Wert generieren oder einen Standardwert haben. `Column_1` ist eine berechnete Spalte, die automatisch einen Wert generiert, indem eine Zeichenfolge mit dem in `column_2` eingefügten Wert verkettet wird. `Column_2` wird als Standardeinschränkung definiert. Wenn für diese Spalte kein Wert angegeben ist, wird der Standardwert verwendet. `Column_3` ist mit dem Datentyp **rowversion** definiert, der automatisch eine eindeutige, inkrementelle Binärzahl generiert. `Column_4` generiert nicht automatisch einen Wert. Wird für diese Spalte kein Wert definiert, wird NULL eingefügt. Die INSERT-Anweisungen fügen Zeilen ein, die Werte für einige (aber nicht alle) Spalten enthalten. In der letzten INSERT-Anweisung werden keine Spalten angegeben, und nur die Standardwerte werden mithilfe der DEFAULT VALUES-Klausel eingefügt.  
   
 ```sql

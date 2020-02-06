@@ -13,10 +13,10 @@ ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2f94519318090c85a4885e429c85b314fe92245f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298372"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Profil für NULL-Verhältnis der Spalte (Datenprofilerstellungs-Task)
