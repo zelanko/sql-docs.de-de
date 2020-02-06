@@ -14,10 +14,10 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86bf6dc67143ea539ea0329fc1783629b26aa802
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297655"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS-Ausdruck)
@@ -47,21 +47,21 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle sind die datepart-Werte und Abkürzungen aufgeführt, die von der Ausdrucksauswertung erkannt werden.  
   
 |datepart|Abkürzungen|  
 |--------------|-------------------|  
-|Year|yy, yyyy|  
+|Jahr|yy, yyyy|  
 |Quarter|qq, q|  
-|Month|mm, m|  
+|Month (Monat)|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|Day (Tag)|dd, d|  
 |Week|wk, ww|  
-|Arbeitstag|dw, w|  
+|Wochentag|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|Zweimal|ss, s|  
+|Sekunde|ss, s|  
 |Millisekunde|Ms|  
   
  DATEDIFF gibt ein NULL-Ergebnis zurück, wenn eines der Argumente NULL ist.  

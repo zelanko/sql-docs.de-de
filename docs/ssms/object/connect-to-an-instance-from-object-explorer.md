@@ -1,6 +1,6 @@
 ---
-title: Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank | Microsoft-Dokumentation
-ms.custom: ''
+title: Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aeb46551b33f40ba6c42de705559e20d8c7b0315
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8241bb0edff2a424d42d79ad3e6aa514519e79b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264612"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257214"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank
 
@@ -28,11 +28,11 @@ Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verb
 
 1. Klicken Sie im **Objekt-Explorer** auf **Verbinden &gt; Datenbank-Engine…** .
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![Verbinden](../media/connect-to-server/connect-db-engine.png)
 
 1. Füllen Sie das Formular **Verbindung mit Server herstellen** aus, und klicken Sie auf **Verbinden**:
 
-   ![Verbindung mit Server herstellen](../media/connect-to-server/connect.png)
+   ![Verbindung mit dem Server herstellen](../media/connect-to-server/connect.png)
 
 1. Wenn Sie eine Verbindung zu einem Azure SQL-Server herstellen, werden Sie möglicherweise dazu aufgefordert, sich anzumelden, um eine Firewallregel zu erstellen. Klicken Sie auf **Anmelden…** . Falls dies nicht der Fall ist, fahren Sie mit Schritt 6 fort.
 
@@ -46,9 +46,9 @@ Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verb
 
 1. Nach der Verbindungsherstellung wird der Server im **Objekt-Explorer** angezeigt:
 
-   ![Verbunden](../media/connect-to-server/connected.png)
+   ![connected](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 
 [Entwerfen, Erstellen und Aktualisieren von Tabellen](../visual-db-tools/design-tables-visual-database-tools.md)
 
@@ -58,6 +58,6 @@ Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verb
 [Herunterladen von SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
 [Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
-[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
+[Integrationsdienste](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
 [Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
-[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)  
+[Azure Storage (in englischer Sprache)](../f1-help/connect-to-microsoft-azure-storage.md)  

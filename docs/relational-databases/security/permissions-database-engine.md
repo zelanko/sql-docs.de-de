@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995853"
 ---
 # <a name="permissions-database-engine"></a>Berechtigungen (Datenbank-Engine)
@@ -99,7 +99,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 ##  <a name="_securables"></a> Berechtigungen anwendbar für bestimmte sicherungsfähige Elemente  
  Die folgende Tabelle enthält eine Liste der wichtigsten Berechtigungsklassen und der sicherungsfähigen Elemente, für die sie erteilt werden können.  
   
-|Berechtigung|Gilt für|  
+|Berechtigung|Anwendungsbereich|  
 |----------------|----------------|  
 |ALTER|Alle Objektklassen außer TYPE.|  
 |CONTROL|Alle Objektklassen: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW und<br />XML SCHEMA COLLECTION|  
@@ -247,10 +247,10 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|Anmeldung|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|Anmeldung|CONTROL|CL|SERVER|CONTROL SERVER|  
-|Anmeldung|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|Anmeldung|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
+|LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -318,7 +318,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |SERVER|CONNECT SQL|COSQ|Nicht verfügbar|Nicht verfügbar|  
 |SERVER|CONTROL SERVER|CL|Nicht verfügbar|Nicht verfügbar|  
 |SERVER|CREATE ANY DATABASE|CRDB|Nicht verfügbar|Nicht verfügbar|  
-|SERVER|Erstellen der Verfügbarkeitsgruppe|CRAC|Nicht verfügbar|Nicht verfügbar|  
+|SERVER|CREATE AVAILABILITY GROUP|CRAC|Nicht verfügbar|Nicht verfügbar|  
 |SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|Nicht verfügbar|Nicht verfügbar|  
 |SERVER|CREATE ENDPOINT|CRHE|Nicht verfügbar|Nicht verfügbar|  
 |SERVER|CREATE SERVER ROLE|CRSR|Nicht verfügbar|Nicht verfügbar|  
@@ -350,10 +350,10 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|Benutzer|ALTER|AL|DATABASE|ALTER ANY USER|  
-|Benutzer|CONTROL|CL|DATABASE|CONTROL|  
-|Benutzer|IMPERSONATE|IM|DATABASE|CONTROL|  
-|Benutzer|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|USER|ALTER|AL|DATABASE|ALTER ANY USER|  
+|USER|CONTROL|CL|DATABASE|CONTROL|  
+|USER|IMPERSONATE|IM|DATABASE|CONTROL|  
+|USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|Führen Sie|EX|SCHEMA|Führen Sie|  
@@ -362,7 +362,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="_algorithm"></a> Zusammenfassung des Algorithmus zur Berechtigungsprüfung  
- Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext**, den **Berechtigungsbereich**und die **erforderliche Berechtigung**.  
+ Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext**, den **Berechtigungsbereich**und die **erforderlichen Berechtigung**.  
   
 > [!NOTE]  
 >  Berechtigungen können nicht für sa, dbo, den Entitätsbesitzer, information_schema, sys oder für den Benutzer selbst erteilt, verweigert oder aufgehoben werden.  
@@ -373,7 +373,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
     -   Anmeldenamen  
   
-    -   Benutzer  
+    -   Der Benutzer  
   
     -   Rollenmitgliedschaften  
   
@@ -385,7 +385,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
      Dies sind die sicherungsfähige Entität und alle sicherungsfähigen Klassen, in denen das sicherungsfähige Element enthalten ist. Eine Tabelle (eine sicherungsfähige Entität) ist z. B. in der sicherungsfähigen Klasse des Schemas und in der sicherungsfähigen Klasse der Datenbank enthalten. Berechtigungen auf Tabellen-, Schema-, Datenbank- und Serverebene können sich auf den Zugriff auswirken. Weitere Informationen finden Sie unter [Berechtigungshierarchie &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
--   **Erforderliche Berechtigung**  
+-   **erforderlichen Berechtigung**  
   
      Die Art der erforderlichen Berechtigung. Beispielsweise INSERT, UPDATE, DELETE, SELECT, EXECUTE, ALTER, CONTROL usw.  
   
@@ -402,14 +402,14 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
 2.  Erteilen des Zugriffs, wenn die Besitzverkettung anwendbar ist und die Zugriffsprüfung für das Objekt an früherer Stelle in der Kette die Sicherheitsprüfung erfolgreich war.  
   
-3.  Aggregieren der Identitäten, die dem Aufrufer zum Erstellen des **Sicherheitskontexts**zugeordnet sind, auf Server- und Datenbankebene sowie auf Ebene des signierten Moduls.  
+3.  Aggregieren der Identitäten, die dem Aufrufer zum Erstellen des **Sicherheitskontexts** zugeordnet sind, auf Server- und Datenbankebene sowie auf Ebene des signierten Moduls.  
   
 4.  Sammeln aller Berechtigungen, die für diesen **Berechtigungsbereich**erteilt oder verweigert wurden, in diesem **Sicherheitskontext**. Die Berechtigung kann explizit als GRANT, GRANT WITH GRANT oder DENY angegeben werden; oder die Berechtigungen können als implizite oder abdeckende GRANT-Berechtigung oder DENY-Berechtigung angegeben werden. Die CONTROL-Berechtigung für ein Schema impliziert z. B. CONTROL für eine Tabelle. CONTROL für eine Tabelle impliziert SELECT. Wenn CONTROL für das Schema erteilt wurde, wird folglich SELECT für die Tabelle erteilt. Wenn CONTROL für die Tabelle verweigert wurde, wird SELECT für die Tabelle verweigert.  
   
     > [!NOTE]  
     >  Durch eine GRANT-Berechtigung auf Spaltenebene wird eine DENY-Berechtigung auf Objektebene überschrieben.  
   
-5.  Identifizieren Sie die **erforderliche Berechtigung**.  
+5.  Identifizieren Sie die **erforderlichen Berechtigung**.  
   
 6.  Die Berechtigungsprüfung ist nicht bestanden, wenn die **erforderlichen Berechtigung** für eine der Identitäten im **Sicherheitskontext** der Objekte im **Berechtigungsbereich** direkt oder implizit verweigert werden.  
   
@@ -450,7 +450,7 @@ SELECT * FROM fn_my_permissions('Orders55', 'object');
 GO  
 ```  
   
-### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. Zurückgeben von Berechtigungen, die auf ein angegebenes Objekt angewendet werden können  
+### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D: Zurückgeben von Berechtigungen, die auf ein angegebenes Objekt angewendet werden können  
  Im folgenden Beispiel werden Berechtigungen für ein Objekt namens `Yttrium`zurückgegeben. Beachten Sie, dass die integrierte `OBJECT_ID` -Funktion zum Abrufen der ID des `Yttrium`-Objekts verwendet wird.  
   
 ```sql  
