@@ -23,10 +23,10 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982594"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982594"
 
   Erstellt für eine angegebene Tabelle und Spalte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen räumlichen Index. Ein Index kann erstellt werden, bevor Daten in der Tabelle enthalten sind. Indizes können für Tabellen oder Sichten einer anderen Datenbank durch Angabe eines gekennzeichneten Datenbanknamens erstellt werden. Bei räumlichen Indizes muss die Tabelle einen gruppierten Primärschlüssel aufweisen. Weitere Informationen zu räumlichen Indizes finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -162,8 +162,8 @@ CREATE SPATIAL INDEX index_name
   
 |Datentyp der Spalte|Mosaikschema|  
 |-------------------------|-------------------------|  
-|**Geometrie**|GEOMETRY_GRID|  
-|**Geometrie**|GEOMETRY_AUTO_GRID|  
+|**geometry**|GEOMETRY_GRID|  
+|**geometry**|GEOMETRY_AUTO_GRID|  
 |**geography**|GEOGRAPHY_GRID|  
 |**geography**|GEOGRAPHY_AUTO_GRID|  
   
@@ -205,7 +205,7 @@ CREATE SPATIAL INDEX index_name
  GEOMETRY_AUTO_GRID      
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
- Kann nur für eine Spalte des geometry-Datentyps angegeben werden. Dies ist der Standardwert für diesen Datentyp; eine Angabe ist nicht erforderlich.  
+ Kann nur für eine Spalte des {1}geometry{2}-Datentyps angegeben werden. Dies ist der Standardwert für diesen Datentyp; eine Angabe ist nicht erforderlich.  
   
  GEOGRAPHY_GRID      
  Gibt das Mosaikschema für das Geografieraster an. GEOGRAPHY_GRID kann nur für eine Spalte mit dem Datentyp **geography** angegeben werden.  
@@ -314,7 +314,7 @@ PAD_INDEX = { ON | **OFF** }
   
 Gibt die Auffüllung von Indizes an. Der Standardwert ist OFF.  
   
-ON     
+EIN     
 Gibt an, dass der Prozentsatz des mit *fillfactor* angegebenen freien Speicherplatzes für die Zwischenebenenseiten des Indexes verwendet wird.  
   
 OFF oder *fillfactor* ist nicht angegeben     
@@ -342,7 +342,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
   
  Gibt an, ob temporäre Ergebnisse des Sortierens in tempdb gespeichert werden sollen. Der Standardwert ist OFF.  
   
- ON     
+ EIN     
  Die Zwischenergebnisse von Sortierungen, mit denen der Index erstellt wird, werden in tempdb gespeichert. Diese Option verringert u. U. den Zeitaufwand, der mit der Erstellung eines Indexes verbunden ist, wenn sich tempdb auf einem anderen Datenträgersatz befindet als die Benutzerdatenbank. Sie erhöht jedoch den Betrag an Speicherplatz, der während der Indexerstellung verwendet wird.  
   
  OFF     
@@ -356,7 +356,7 @@ Hat keine Auswirkungen für räumliche Indizes, da der Indextyp nie eindeutig is
 STATISTICS_NORECOMPUTE = { ON | **OFF**}     
 Gibt an, ob Verteilungsstatistiken neu berechnet werden. Der Standardwert ist OFF.  
   
- ON    
+ EIN    
  Veraltete Indexstatistiken werden nicht automatisch neu berechnet.  
   
  OFF    
@@ -372,7 +372,7 @@ DROP_EXISTING = { ON | **OFF** }
   
  Gibt an, dass der benannte, bereits vorhandene räumliche Index gelöscht und neu erstellt wird. Der Standardwert ist OFF.  
   
- ON     
+ EIN     
  Der vorhandene Index wird gelöscht und neu erstellt. Der angegebene Indexname muss mit dem Namen eines derzeit vorhandenen Index übereinstimmen. Die Indexdefinition kann jedoch geändert werden. Sie können beispielsweise andere Spalten, eine andere Sortierreihenfolge, ein anderes Partitionsschema oder andere Indexoptionen angeben.  
   
  OFF     
@@ -393,7 +393,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
   
  Gibt an, ob Zeilensperren zulässig sind. Der Standardwert ist ON.  
   
- ON     
+ EIN     
  Zeilensperren sind beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden.  
   
  OFF     
@@ -404,7 +404,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
   
  Gibt an, ob Seitensperren zulässig sind. Der Standardwert ist ON.  
   
- ON    
+ EIN    
  Seitensperren sind beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden.  
   
  OFF     
@@ -448,7 +448,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE    
  Die Daten werden im Index seitenweise komprimiert.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Jede Option kann pro CREATE SPATIAL INDEX-Anweisung nur einmal angegeben werden. Beim Angeben einer Option, die es schon einmal gibt, wird ein Fehler ausgelöst.  
   
 Sie können bis zu 249 räumliche Indizes für jede räumliche Spalte in einer Tabelle erstellen. Es kann sich als nützlich erweisen, mehrere räumliche Indizes für bestimmte räumliche Spalten zu erstellen, z. B. zum Indizieren verschiedener Mosaikparameter in einer Spalte.  
@@ -526,7 +526,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
     GRIDS = ( LEVEL_4 = HIGH, LEVEL_3 = MEDIUM ) );  
 ```  
   
-### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. Ändern einer für räumliche Indizes spezifischen Option
+### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D: Ändern einer für räumliche Indizes spezifischen Option
 Im folgenden Beispiel wird der räumliche Index neu erstellt, der im vorherigen Beispiel erstellt wurde, nämlich `SIndx_SpatialTable_geography_col3`. Zu diesem Zweck wird eine neue Dichte für `LEVEL_3` mit DROP_EXISTING = ON angegeben.  
   
 ```sql  
@@ -571,7 +571,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)       
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)       
 [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)       
